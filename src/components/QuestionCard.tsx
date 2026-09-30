@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
-import { Edit3, History, User, BookMarked } from 'lucide-react';
+import { Edit3, History, User, BookMarked, ExternalLink } from 'lucide-react';
 
 interface QuestionCardProps {
   question: QuestionItem;

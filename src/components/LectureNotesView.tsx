@@ -75,6 +75,19 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   const [driveSyncFeedback, setDriveSyncFeedback] = useState<string | null>(null);
   const [currentlyRenderingSlide, setCurrentlyRenderingSlide] = useState<string | null>(null);
 
+  // New Note Modal / Form state
+  const [isAddingNote, setIsAddingNote] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
+  const [newDiscipline, setNewDiscipline] = useState('Tıbbi Patoloji');
+  const [newInstructor, setNewInstructor] = useState('');
+  const [newRawContent, setNewRawContent] = useState('');
+  const [pageDelimiter, setPageDelimiter] = useState('--- Sayfa ---');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Matching tool state
+  const [matchingQuestionId, setMatchingQuestionId] = useState<string | null>(null);
+  const [isMatching, setIsMatching] = useState(false);
+
   // Handler for manual trigger of Drive Automation
   const handleTriggerDriveSync = async () => {
     setIsSyncingDrive(true);

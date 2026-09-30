@@ -94,6 +94,15 @@ export interface QuestionItem {
   contributedByName?: string;
   contributedByStudentNumber?: string;
   revisions?: QuestionRevision[];
+  stem?: string;
+  explanation?: string;
+  lectureReference?: {
+    noteTitle: string;
+    pageNumber: number;
+    matchedSnippet?: string;
+    confidenceScore?: number;
+    driveFileUrl?: string;
+  };
   createdAt: string;
   updatedAt: string;
 }
