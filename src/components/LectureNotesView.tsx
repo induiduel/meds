@@ -29,6 +29,7 @@ import { InfoPopover } from './InfoPopover';
 import { 
   TARGET_DRIVE_FOLDER_ID, 
   TARGET_DRIVE_FOLDER_URL, 
+  REAL_KURUL1_DRIVE_SLIDES,
   getAutomationStatus, 
   runDriveSyncAndAutoMatch 
 } from '../services/driveAutomation';
@@ -42,58 +43,7 @@ interface LectureNotesViewProps {
   onUpdateQuestionReference: (questionId: string, reference: QuestionLectureMatch) => Promise<void>;
 }
 
-const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v1';
-
-// Initial pre-seeded clinical lecture notes for Dönem 3
-const INITIAL_LECTURE_NOTES: LectureNote[] = [
-  {
-    id: 'note-pat-1',
-    committeeId: 'donem3-kurul2',
-    discipline: 'Tıbbi Patoloji',
-    title: 'Hücre Hasarı, İskemi ve Nekroz Çeşitleri',
-    instructor: 'Prof. Dr. M. Eren (Patoloji AD)',
-    totalSlides: 3,
-    uploadedAt: new Date(Date.now() - 86400000 * 3).toISOString(),
-    pages: [
-      {
-        pageNumber: 1,
-        content: 'İskemik doku hasarında erken dönem değişiklikleri: Oksijen azlığı -> ATP sentezi durur -> Na+/K+ ATPaz pompası iflas eder -> Hücre içi sodyum ve su birikimi (hidropik dejenerasyon), kalsiyum akışı ve mitokondri membran geçirgenliği artar.',
-        keywords: ['iskemi', 'ATP', 'kalsiyum', 'hidropik dejenerasyon', 'hücre hasarı']
-      },
-      {
-        pageNumber: 2,
-        content: 'Nekroz Tipleri ve Histopatolojik Özellikleri:\n1. Koagülasyon Nekrozu: En sık görülen tip (beyin hariç tüm solid organ enfarktüsleri). Hücre sınırları (hayalet hücreler - tombstone) birkaç gün korunur. Asidofili artışı ve piknoz görülür.\n2. Likefaksiyon Nekrozu: Beyin enfarktüsleri ve bakteriyel/mantar abselerinde görülür.',
-        keywords: ['koagülasyon nekrozu', 'likefaksiyon', 'hayalet hücre', 'tombstone', 'asidofili', 'nekroz']
-      },
-      {
-        pageNumber: 3,
-        content: 'Miyokard Enfarktüsü Zaman Çizelgesi ve Histopatoloji:\n• 0-30 dakika: Işık mikroskobunda belirgin değişiklik yok.\n• 4-12 saat: Dalgalı lifler (wavy fibers), ödem, erken koagülasyon nekrozu.\n• 1-3 gün: Belirgin koagülasyon nekrozu, nükleus kaybı ve yoğun nötrofil infiltrasyonu (sarı-kahverengi yumuşama).\n• 4-7 gün: Makrofaj fagositozu, granülasyon dokusu başlangıcı.\n• 1-2 hafta: Granülasyon dokusu, neovaskülarizasyon.\n• >2 ay: Yoğun kollajen fibröz skar.',
-        keywords: ['miyokard enfarktüsü', 'koagülasyon nekrozu', 'nötrofil', 'dalgalı lifler', 'wavy fibers', 'makrofaj', 'granülasyon', 'skar']
-      }
-    ]
-  },
-  {
-    id: 'note-mikro-1',
-    committeeId: 'donem3-kurul2',
-    discipline: 'Tıbbi Mikrobiyoloji',
-    title: 'Solunum Yolu Enfeksiyonları ve Atipik Pnömoniler',
-    instructor: 'Doç. Dr. S. Yılmaz (Mikrobiyoloji AD)',
-    totalSlides: 2,
-    uploadedAt: new Date(Date.now() - 86400000 * 2).toISOString(),
-    pages: [
-      {
-        pageNumber: 1,
-        content: 'Atipik Pnömoni Etkenleri:\n• Mycoplasma pneumoniae (hücre duvarı yok, soğuk aglütinin pozitifliği, genç erişkinler).\n• Chlamydia pneumoniae (intrasellüler, inklüzyon cisimcikleri).\n• Legionella pneumophila: Su sistemleri, klima kuleleri, termal kaplıcalardan bulaşır. Yaşlı ve immünsüprese bireylerde ağır pnömoni ve ekstrapulmoner bulgular (konfüzyon, ishal, hiponatremi) ile seyreder.',
-        keywords: ['atipik pnömoni', 'Legionella pneumophila', 'Mycoplasma', 'soğuk aglütinin', 'klima', 'su kuleleri', 'hiponatremi']
-      },
-      {
-        pageNumber: 2,
-        content: 'Legionella pneumophila Laboratuvar Tanısı:\nGram boyamada zor görünür (zayıf boyanır). Kültür için zenginleştirilmiş BCYE (Buffered Charcoal Yeast Extract) agar gerekir (demir ve L-sistein esastır). Hızlı tanı: İdrar antijen testi (Legionella serogrup 1). Tedavi: Makrolidler (azitromisin) veya florokinolonlar (levofloksasin).',
-        keywords: ['Legionella', 'BCYE agar', 'L-sistein', 'idrar antijen testi', 'azitromisin', 'levofloksasin']
-      }
-    ]
-  }
-];
+const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v2';
 
 export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   committee,
@@ -106,48 +56,48 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   const [notes, setNotes] = useState<LectureNote[]>(() => {
     try {
       const stored = localStorage.getItem(LOCAL_NOTES_KEY);
-      if (stored) return JSON.parse(stored);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length >= 10) return parsed;
+      }
     } catch (e) {}
-    return INITIAL_LECTURE_NOTES;
+    return REAL_KURUL1_DRIVE_SLIDES.map(s => ({ ...s, committeeId: committee?.id || 'donem3-kurul1' }));
   });
 
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Tümü');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeNote, setActiveNote] = useState<LectureNote | null>(null);
+  const [activeNote, setActiveNote] = useState<LectureNote | null>(() => {
+    return notes[0] || null;
+  });
 
-  // New Note Modal / Form state
-  const [isAddingNote, setIsAddingNote] = useState(false);
-  const [newTitle, setNewTitle] = useState('');
-  const [newDiscipline, setNewDiscipline] = useState('Tıbbi Patoloji');
-  const [newInstructor, setNewInstructor] = useState('');
-  const [newRawContent, setNewRawContent] = useState('');
-  const [pageDelimiter, setPageDelimiter] = useState('--- Sayfa ---');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Matching tool state
-  const [matchingQuestionId, setMatchingQuestionId] = useState<string | null>(null);
-  const [isMatching, setIsMatching] = useState(false);
-
-  // Google Drive Automation State
+  // Google Drive Automation State & Live Rendering Progress
   const [isSyncingDrive, setIsSyncingDrive] = useState(false);
   const [driveSyncFeedback, setDriveSyncFeedback] = useState<string | null>(null);
+  const [currentlyRenderingSlide, setCurrentlyRenderingSlide] = useState<string | null>(null);
 
   // Handler for manual trigger of Drive Automation
   const handleTriggerDriveSync = async () => {
     setIsSyncingDrive(true);
-    setDriveSyncFeedback('Google Drive klasörü (1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W) taranıyor...');
+    setCurrentlyRenderingSlide('Kurul 1 Drive Klasörü Taranıyor (1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W)...');
+    setDriveSyncFeedback('Google Drive klasörü taranıyor...');
     try {
       const result = await runDriveSyncAndAutoMatch(
-        committee?.id || 'donem3-kurul2',
+        committee?.id || 'donem3-kurul1',
         questions,
         notes,
-        (msg) => setDriveSyncFeedback(msg)
+        (msg) => {
+          setDriveSyncFeedback(msg);
+          if (msg.includes('Slayt Render Ediliyor:')) {
+            setCurrentlyRenderingSlide(msg.replace('📄 Slayt Render Ediliyor: ', ''));
+          }
+        }
       );
 
       setNotes(result.newNotes);
       setDriveSyncFeedback(
-        `Drive senkronizasyonu tamamlandı: ${result.newNotes.length} ders notu güncellendi, ${result.matchedQuestionsCount} soru doğrudan ilgili slayt sayfalarıyla eşleştirildi!`
+        `Drive senkronizasyonu tamamlandı: ${result.newNotes.length} ders slaytı başarıyla render edildi, ${result.matchedQuestionsCount} soru doğrudan ilgili slayt sayfalarıyla eşleştirildi!`
       );
+      setCurrentlyRenderingSlide(null);
 
       // Auto update question references if any
       for (const updatedQ of result.updatedQuestions) {
@@ -157,6 +107,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       }
     } catch (err: any) {
       setDriveSyncFeedback('Senkronizasyon hatası: ' + err.message);
+      setCurrentlyRenderingSlide(null);
     } finally {
       setIsSyncingDrive(false);
     }
@@ -379,7 +330,14 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             Drive klasörüne yüklenen PDF'ler çekilir ve soruların hangi ders notunun hangi sayfasından çıktığı otomatik tespit edilir.
           </p>
 
-          {driveSyncFeedback && (
+          {currentlyRenderingSlide && (
+            <div className="mt-2.5 bg-amber-500/15 border border-amber-500/40 text-amber-950 p-2.5 rounded-xl flex items-center gap-2.5 animate-pulse text-xs font-semibold">
+              <div className="w-3.5 h-3.5 border-2 border-amber-600 border-t-transparent rounded-full animate-spin shrink-0" />
+              <span>İşlemde Olan Slayt (Render): <strong>{currentlyRenderingSlide}</strong></span>
+            </div>
+          )}
+
+          {driveSyncFeedback && !currentlyRenderingSlide && (
             <div className="mt-2 text-xs font-semibold text-teal-950 bg-white/80 p-2 rounded-lg border border-teal-300 flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0" />
               <span>{driveSyncFeedback}</span>
@@ -407,7 +365,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             {isSyncingDrive ? (
               <>
                 <RefreshCw className="w-4 h-4 animate-spin text-teal-200" />
-                <span>Senkronize Ediliyor...</span>
+                <span>Slaytlar Render Ediliyor...</span>
               </>
             ) : (
               <>
@@ -421,14 +379,14 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
       {/* Filter and Search Bar */}
       <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div className="flex flex-wrap items-center gap-2">
-          {['Tümü', 'Tıbbi Patoloji', 'Tıbbi Mikrobiyoloji', 'Tıbbi Farmakoloji', 'Tıbbi Biyokimya'].map((disc) => (
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+          {['Tümü', 'Tıbbi Patoloji', 'Tıbbi Genetik', 'Halk Sağlığı', 'Üroloji', 'Enfeksiyon Hastalıkları'].map((disc) => (
             <button
               key={disc}
               onClick={() => setSelectedDiscipline(disc)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+              className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                 selectedDiscipline === disc
-                  ? 'bg-teal-700 text-white shadow-2xs'
+                  ? 'bg-teal-700 text-white shadow-2xs font-bold'
                   : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
               }`}
             >
@@ -496,7 +454,21 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   )}
 
                   <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                    <span>Yükleyen: {note.uploadedBy || 'Öğrenci'}</span>
+                    <div className="flex items-center gap-2">
+                      <span>{note.uploadedBy || 'Drive Slaytı'}</span>
+                      {note.driveFileUrl && (
+                        <a
+                          href={note.driveFileUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-[10px] font-bold text-teal-800 hover:text-teal-950 flex items-center gap-1 bg-teal-50 hover:bg-teal-100 border border-teal-200 px-2 py-0.5 rounded shadow-2xs"
+                        >
+                          <ExternalLink className="w-2.5 h-2.5 text-teal-600" />
+                          <span>Drive'da Aç</span>
+                        </a>
+                      )}
+                    </div>
                     <span className="text-teal-700 font-semibold flex items-center gap-1">
                       Sayfaları Oku <ChevronRight className="w-3.5 h-3.5" />
                     </span>
@@ -603,7 +575,20 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                     Toplam {activeNote.totalSlides} Sayfa / Slayt Render Edildi
                   </span>
                 </div>
-                <h3 className="text-xl font-black text-slate-900 mt-2">{activeNote.title}</h3>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-2">
+                  <h3 className="text-lg sm:text-xl font-black text-slate-900">{activeNote.title}</h3>
+                  {activeNote.driveFileUrl && (
+                    <a
+                      href={activeNote.driveFileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white text-xs font-bold shadow-xs transition-all shrink-0 cursor-pointer active:scale-95"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 text-teal-200" />
+                      <span>Google Drive'da Slaytı Aç (PDF)</span>
+                    </a>
+                  )}
+                </div>
                 {activeNote.instructor && (
                   <p className="text-xs text-slate-600 mt-1">Öğretim Üyesi: {activeNote.instructor}</p>
                 )}

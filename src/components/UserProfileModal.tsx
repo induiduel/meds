@@ -38,7 +38,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const [error, setError] = useState<string | null>(null);
 
   const handleStudentNumberChange = (val: string) => {
-    const numeric = val.replace(/\D/g, '').slice(0, 11);
+    const numeric = val.replace(/\D/g, '').slice(0, 12);
     setStudentNumber(numeric);
   };
 
@@ -55,16 +55,13 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     setError(null);
     setSuccess(null);
 
-    if (studentNumber && studentNumber.length !== 11) {
-      setError('Öğrenci numarası tam 11 haneli olmalıdır (veya boş bırakınız).');
-      return;
-    }
+    const cleanNum = studentNumber.replace(/\D/g, '');
 
     setIsSaving(true);
     try {
       const updated = await updateUserProfileData(currentUser, {
         displayName: displayName.trim() || undefined,
-        studentNumber: studentNumber.trim() || undefined,
+        studentNumber: cleanNum || undefined,
       });
 
       onUpdateUser(updated);
@@ -172,26 +169,28 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
-                11 Haneli Öğrenci Numarası
+              <label className="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
+                <span>Öğrenci Numarası <span className="text-slate-400 font-normal">(İsteğe bağlı)</span></span>
+                {studentNumber && (
+                  <span className={`text-[11px] font-bold px-2 py-0.5 rounded ${studentNumber.length === 11 ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-teal-50 text-teal-800 border border-teal-200'}`}>
+                    {studentNumber.length === 11 ? '✓ 11 Haneli Standart No (Geçerli)' : `${studentNumber.length} Hane (Kabul Edildi ✓)`}
+                  </span>
+                )}
               </label>
               <div className="relative">
                 <Hash className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
                 <input
                   type="text"
                   inputMode="numeric"
-                  maxLength={11}
+                  maxLength={16}
                   value={studentNumber}
                   onChange={(e) => handleStudentNumberChange(e.target.value)}
                   placeholder="Örn: 20241054012"
-                  className="w-full pl-9 pr-14 py-2 text-sm font-mono border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                  className="w-full pl-9 pr-3 py-2 text-sm font-mono border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
                 />
-                <span className="absolute right-3 top-2.5 text-[11px] font-bold text-slate-400">
-                  {studentNumber.length}/11
-                </span>
               </div>
               <p className="text-[11px] text-slate-500 mt-1">
-                Fakülte öğrenci numaranız arşivleme ve tebrik bildirimlerinde saklanır.
+                Boşluklu veya tireli yapıştırsanız bile otomatik temizlenir.
               </p>
             </div>
 

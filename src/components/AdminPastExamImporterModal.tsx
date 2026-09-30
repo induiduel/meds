@@ -47,6 +47,8 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
   // Parsing state
   const [isParsing, setIsParsing] = useState(false);
+  const [isExtractingFile, setIsExtractingFile] = useState(false);
+  const [fileExtractStatus, setFileExtractStatus] = useState<string | null>(null);
   const [parseError, setParseError] = useState<string | null>(null);
   const [parsedQuestions, setParsedQuestions] = useState<any[]>([]);
 
@@ -56,20 +58,68 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
   if (!isOpen) return null;
 
-  // Handle file upload (.txt, .md, .doc, etc.)
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Handle file upload (.pdf, .docx, .txt, .md) with AI text extraction
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
     setFileName(file.name);
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      const content = ev.target?.result as string;
-      if (content) {
-        setRawText(content);
-      }
-    };
-    reader.readAsText(file);
+    setParseError(null);
+    setFileExtractStatus(null);
+
+    const isBinaryDoc = file.name.toLowerCase().endsWith('.pdf') || 
+                        file.name.toLowerCase().endsWith('.docx') || 
+                        file.name.toLowerCase().endsWith('.doc');
+
+    if (isBinaryDoc) {
+      setIsExtractingFile(true);
+      setFileExtractStatus(`Yapay zeka ${file.name} dosyasını okuyor ve metne dönüştürüyor...`);
+
+      const reader = new FileReader();
+      reader.onload = async (ev) => {
+        const base64Data = ev.target?.result as string;
+        try {
+          const res = await fetch('/api/ai/extract-document', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              fileBase64: base64Data,
+              fileName: file.name,
+              fileMimeType: file.type || (file.name.endsWith('.pdf') ? 'application/pdf' : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'),
+            }),
+          });
+
+          const data = await res.json();
+          if (!res.ok) {
+            throw new Error(data.error || 'Dosya okunamadı');
+          }
+
+          if (data.extractedText) {
+            setRawText(data.extractedText);
+            setFileExtractStatus(`✓ ${file.name} başarıyla okundu! (${data.extractedText.length} karakter metin aktarıldı)`);
+          } else {
+            throw new Error('Metin içeriği alınamadı');
+          }
+        } catch (err: any) {
+          setParseError(`Belge okuma hatası: ${err.message}. Lütfen metni doğrudan kopyalayıp yapıştırınız.`);
+          setFileExtractStatus(null);
+        } finally {
+          setIsExtractingFile(false);
+        }
+      };
+      reader.readAsDataURL(file);
+    } else {
+      // Plain text or Markdown
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const content = ev.target?.result as string;
+        if (content) {
+          setRawText(content);
+          setFileExtractStatus(`✓ ${file.name} metin olarak yüklendi.`);
+        }
+      };
+      reader.readAsText(file);
+    }
   };
 
   // Run AI extraction
@@ -299,15 +349,29 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
               <label className="inline-flex items-center gap-1.5 px-3 py-1 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg text-[11px] font-semibold text-slate-700 cursor-pointer shadow-2xs">
                 <Upload className="w-3.5 h-3.5 text-teal-600" />
-                <span>{fileName ? `Yüklendi: ${fileName}` : 'Dosya Seç (.txt / .md / Word)'}</span>
+                <span>{fileName ? `Dosya: ${fileName}` : 'Dosya Seç (.pdf, .docx, .txt)'}</span>
                 <input
                   type="file"
-                  accept=".txt,.md,.text"
+                  accept=".pdf,.docx,.doc,.txt,.md"
                   onChange={handleFileUpload}
                   className="hidden"
                 />
               </label>
             </div>
+
+            {isExtractingFile && (
+              <div className="bg-teal-50 border border-teal-200 text-teal-900 p-2.5 rounded-xl flex items-center gap-2 text-xs font-semibold animate-pulse">
+                <div className="w-3.5 h-3.5 border-2 border-teal-600 border-t-transparent rounded-full animate-spin shrink-0" />
+                <span>Yapay zeka PDF / Word belgesini metne dönüştürüyor...</span>
+              </div>
+            )}
+
+            {fileExtractStatus && !isExtractingFile && (
+              <div className="bg-emerald-50 border border-emerald-200 text-emerald-900 p-2 rounded-xl flex items-center gap-2 text-xs font-medium">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>{fileExtractStatus}</span>
+              </div>
+            )}
 
             <textarea
               value={rawText}

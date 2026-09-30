@@ -42,6 +42,8 @@ import { LectureNotesView } from './components/LectureNotesView';
 import { InfoPopover } from './components/InfoPopover';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { AdminPastExamImporterModal } from './components/AdminPastExamImporterModal';
+import { NotebookLMSyncModal } from './components/NotebookLMSyncModal';
+import { REAL_KURUL1_DRIVE_SLIDES } from './services/driveAutomation';
 import { ApiService } from './services/api';
 import { 
   initAuth, 
@@ -87,6 +89,7 @@ export default function App() {
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
   const [isAdminPanelOpen, setIsAdminPanelOpen] = useState(false);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
+  const [isNotebookLMModalOpen, setIsNotebookLMModalOpen] = useState(false);
   const [contributeDefaultNumber, setContributeDefaultNumber] = useState<number | undefined>(undefined);
 
   // User Auth & Profile Modals
@@ -523,6 +526,7 @@ export default function App() {
         onOpenNewCommitteeModal={() => setIsNewCommitteeModalOpen(true)}
         onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
         onOpenPastExamModal={() => setIsPastExamImporterOpen(true)}
+        onOpenNotebookLMModal={() => setIsNotebookLMModalOpen(true)}
         onOpenProfileModal={() => setIsProfileModalOpen(true)}
         onOpenAuthModal={(m) => {
           setAuthModalInitialMode(m);
@@ -644,6 +648,15 @@ export default function App() {
               >
                 <Printer className="w-3.5 h-3.5 text-slate-600" />
                 <span className="hidden sm:inline">A4 PDF</span>
+              </button>
+
+              <button
+                onClick={() => setIsNotebookLMModalOpen(true)}
+                className="bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200 font-bold px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
+                title="NotebookLM & Gemini Kaynak Eşitleme"
+              >
+                <Brain className="w-3.5 h-3.5 text-purple-700" />
+                <span className="hidden sm:inline">NotebookLM</span>
               </button>
 
               {isAdmin && (
@@ -1018,6 +1031,18 @@ export default function App() {
         committees={committees}
         selectedCommitteeId={selectedCommitteeId}
         onImportSuccess={fetchQuestions}
+      />
+
+      {/* NotebookLM & Gemini Sync Modal */}
+      <NotebookLMSyncModal
+        isOpen={isNotebookLMModalOpen}
+        onClose={() => setIsNotebookLMModalOpen(false)}
+        committee={currentCommittee}
+        questions={questions}
+        lectureNotes={REAL_KURUL1_DRIVE_SLIDES.map((s) => ({ ...s, committeeId: selectedCommitteeId }))}
+        currentUser={currentUser}
+        isAdmin={isAdmin}
+        onQuestionsUpdated={fetchQuestions}
       />
 
       {/* Mobile-First Bottom Navigation Bar */}

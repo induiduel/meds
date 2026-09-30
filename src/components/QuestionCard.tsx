@@ -169,14 +169,27 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 
             {/* Lecture Note & Slide Match Badge */}
             {question.lectureReference && (
-              <div className="mt-2 inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-2.5 py-1 rounded-lg text-xs">
+              <div className="mt-2 inline-flex flex-wrap items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-2.5 py-1 rounded-lg text-xs">
                 <BookMarked className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
                 <span>
-                  <strong>Ders Notu:</strong> {question.lectureReference.noteTitle} • <strong>Sayfa {question.lectureReference.pageNumber}</strong>
+                  <strong>Ders Slaytı:</strong> {question.lectureReference.noteTitle} • <strong>Sayfa {question.lectureReference.pageNumber}</strong>
                 </span>
                 <span className="text-[10px] bg-emerald-200/80 text-emerald-950 font-bold px-1.5 py-0.2 rounded">
-                  %{question.lectureReference.confidenceScore} Doğruluk
+                  %{question.lectureReference.confidenceScore} Eşleşme
                 </span>
+                {question.lectureReference.driveFileUrl && (
+                  <a
+                    href={question.lectureReference.driveFileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1 font-bold text-emerald-800 hover:text-emerald-950 bg-white border border-emerald-300 px-2 py-0.5 rounded text-[11px] shadow-2xs hover:bg-emerald-100 transition-colors"
+                    title="Google Drive'da ilgili slayt PDF dosyasını aç"
+                  >
+                    <ExternalLink className="w-3 h-3 text-emerald-700" />
+                    <span>Drive'da Slaytı Aç</span>
+                  </a>
+                )}
               </div>
             )}
           </div>

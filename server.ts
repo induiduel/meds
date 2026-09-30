@@ -2,6 +2,7 @@ import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, Type } from '@google/genai';
 import nodemailer from 'nodemailer';
+import mammoth from 'mammoth';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
@@ -720,19 +721,34 @@ Lütfen 1 cümlelik olası tam soru kökü ve olası 5 şıkkı JSON olarak dön
 
 // Admin: Parse partial or complete past exam questions from text or files with Gemini AI
 app.post('/api/ai/parse-past-questions', async (req, res) => {
-  const { rawText, examYear, committeeId, defaultDiscipline, adminEmail } = req.body;
-  if (!rawText || !rawText.trim()) {
-    return res.status(400).json({ error: 'Lütfen ayrıştırılacak soru metnini veya dosya içeriğini girin.' });
+  const { rawText, fileBase64, fileMimeType, fileName, examYear, committeeId, defaultDiscipline, adminEmail } = req.body;
+  if ((!rawText || !rawText.trim()) && !fileBase64) {
+    return res.status(400).json({ error: 'Lütfen ayrıştırılacak soru metnini veya PDF/DOCX dosyasını sağlayın.' });
   }
 
   try {
-    const prompt = `Sen tıp fakültesi kurul sınavları uzmanısın. Aşağıda bir tıp fakültesi çıkmış sınav soruları metni verilmiştir.
-Metin kısmi veya tamamlanmış sorular içerebilir (numarasız, karışık şıklı, sadece vaka veya cevap anahtarlı olabilir).
+    let docxText = '';
+    const isDocx = Boolean(fileName?.toLowerCase().endsWith('.docx') || fileMimeType?.includes('word') || fileMimeType?.includes('officedocument'));
+
+    if (fileBase64 && isDocx) {
+      try {
+        const cleanBase64 = fileBase64.replace(/^data:[^;]+;base64,/, '');
+        const buf = Buffer.from(cleanBase64, 'base64');
+        const mammothResult = await mammoth.extractRawText({ buffer: buf });
+        docxText = mammothResult.value || '';
+      } catch (err: any) {
+        console.warn('DOCX extraction warning:', err.message);
+      }
+    }
+
+    const fullTextPayload = [rawText, docxText].filter(Boolean).join('\n\n');
+    const prompt = `Sen tıp fakültesi kurul sınavları uzmanısın. Eklenen belge/metin tıp fakültesi kurul sınavı çıkmış sorularını içermektedir.
+Metin veya PDF/DOCX belgesi kısmi veya tamamlanmış sorular içerebilir (numarasız, karışık şıklı, sadece vaka veya cevap anahtarlı olabilir).
 Hedef Sınav Yılı: ${examYear || 'Geçmiş Yıl Çıkmışları'}
 Hedef Ders / Branş: ${defaultDiscipline || 'İçerikten tespit et (Patoloji, Farmakoloji, Tıbbi Mikrobiyoloji, Dahiliye, Pediatri, Anatomi, Histoloji, Fizyoloji, Biyokimya, vb.)'}
 
 GÖREVİN:
-1. Metindeki her bir soruyu tespit et ve ayır.
+1. Belgedeki her bir soruyu eksiksiz oku, tespit et ve ayır.
 2. Her soru için:
    - questionNumber: Tespit edilen soru numarası (varsa örn. 1, 2, 14; yoksa 1'den başlayarak ardışık tam sayı ver)
    - discipline: Tıbbi branş (ör. Patoloji, Farmakoloji, Tıbbi Mikrobiyoloji, Dahiliye, Anatomi, Fizyoloji, Biyokimya vb.)
@@ -742,15 +758,23 @@ GÖREVİN:
    - claimedAnswer: Doğru veya iddia edilen şık (A, B, C, D, E). Metinde cevap anahtarı veya işaret varsa onu al, yoksa tıbben en doğru şıkkı belirle.
    - explanation: 1-2 cümlelik tıbbi gerekçe ve hangi mekanizmanın sorulduğu.
    - confidenceScore: Soru metninin ve şıkların güvenilirlik oranı (60-98 arası).
+${fullTextPayload ? `\nMetin:\n"""\n${fullTextPayload.slice(0, 35000)}\n"""` : ''}`;
 
-Metin:
-"""
-${rawText.slice(0, 30000)}
-"""`;
+    const contents: any[] = [];
+    if (fileBase64 && !isDocx) {
+      const cleanBase64 = fileBase64.replace(/^data:[^;]+;base64,/, '');
+      contents.push({
+        inlineData: {
+          mimeType: 'application/pdf',
+          data: cleanBase64,
+        },
+      });
+    }
+    contents.push(prompt);
 
     const response = await ai.models.generateContent({
       model: 'gemini-3.8-flash',
-      contents: prompt,
+      contents,
       config: {
         responseMimeType: 'application/json',
         responseSchema: {
@@ -801,6 +825,250 @@ ${rawText.slice(0, 30000)}
   } catch (err: any) {
     console.error('Parse past questions error:', err);
     res.status(500).json({ error: 'Yapay zeka ayrıştırma hatası: ' + err.message });
+  }
+});
+
+// Universal Document Extractor (PDF, DOCX, Images, Text) with Gemini Multimodal
+app.post('/api/ai/extract-document', async (req, res) => {
+  const { fileBase64, fileMimeType, fileName, mode, committeeId } = req.body;
+  if (!fileBase64) {
+    return res.status(400).json({ error: 'Dosya içeriği (base64) gereklidir.' });
+  }
+
+  try {
+    const cleanBase64 = fileBase64.replace(/^data:[^;]+;base64,/, '');
+    const mime = fileMimeType || 'application/pdf';
+    const isDocx = Boolean(fileName?.toLowerCase().endsWith('.docx') || fileMimeType?.includes('word') || fileMimeType?.includes('officedocument'));
+
+    if (isDocx) {
+      try {
+        const buf = Buffer.from(cleanBase64, 'base64');
+        const mammothResult = await mammoth.extractRawText({ buffer: buf });
+        return res.json({ success: true, extractedText: mammothResult.value || '' });
+      } catch (e: any) {
+        console.warn('DOCX mammoth extraction error:', e.message);
+      }
+    }
+
+    if (mode === 'lecture_notes') {
+      const prompt = `Bu tıp fakültesi ders notu veya slayt belgesini ("${fileName || 'Ders Notu'}") incele.
+Her bir sayfayı veya slaytı sırasıyla oku.
+Çıktı formatı JSON olmalı:
+- title: Ders notu ana başlığı (ör. "Akut İnflamasyon ve Hücre Hasarı")
+- discipline: Tıbbi anabilim dalı (ör. "Tıbbi Patoloji", "Tıbbi Farmakoloji", "Tıbbi Mikrobiyoloji")
+- instructor: Belgede geçiyorsa dersi anlatan hoca / profesör
+- pages: Her sayfa için { pageNumber: sayı, content: sayfanın tam metni, keywords: 5-8 adet önemli tıbbi terim/anahtar kelime }`;
+
+      const response = await ai.models.generateContent({
+        model: 'gemini-3.8-flash',
+        contents: [
+          {
+            inlineData: {
+              mimeType: mime,
+              data: cleanBase64,
+            },
+          },
+          prompt,
+        ],
+        config: {
+          responseMimeType: 'application/json',
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: {
+              title: { type: Type.STRING },
+              discipline: { type: Type.STRING },
+              instructor: { type: Type.STRING },
+              pages: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    pageNumber: { type: Type.INTEGER },
+                    content: { type: Type.STRING },
+                    keywords: {
+                      type: Type.ARRAY,
+                      items: { type: Type.STRING },
+                    },
+                  },
+                  required: ['pageNumber', 'content', 'keywords'],
+                },
+              },
+            },
+            required: ['title', 'discipline', 'pages'],
+          },
+        },
+      });
+
+      const parsed = JSON.parse(response.text?.trim() || '{}');
+      return res.json({ success: true, note: parsed });
+    }
+
+    // Default raw text extraction
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.8-flash',
+      contents: [
+        {
+          inlineData: {
+            mimeType: mime,
+            data: cleanBase64,
+          },
+        },
+        'Bu belgedeki tüm metinleri, başlıkları, tabloları ve soruları eksiksiz Türkçe tıp terminolojisiyle metne aktar.',
+      ],
+    });
+
+    res.json({ success: true, extractedText: response.text || '' });
+  } catch (err: any) {
+    console.error('Extract document error:', err);
+    res.status(500).json({ error: 'Belge okuma hatası: ' + err.message });
+  }
+});
+
+// NotebookLM Source Bundle Generator (Returns structured Markdown for NotebookLM and Gemini)
+app.get('/api/notebooklm/bundle', (req, res) => {
+  const committeeId = (req.query.committeeId as string) || db.committees[0]?.id;
+  const committee = db.committees.find((c) => c.id === committeeId) || db.committees[0];
+  const committeeQuestions = db.questions.filter((q) => q.committeeId === committee?.id);
+
+  let md = `# MEDSORU TIP FAKÜLTESİ NOTEBOOKLM & GEMINI ÇALIŞMA KAYNAĞI\n\n`;
+  md += `## KURUL: ${committee?.name || 'Tıp Dönem 3'}\n`;
+  md += `Hedef Soru Sayısı: ${committee?.targetCount || 100} Soru\n`;
+  md += `Açıklama: ${committee?.description || 'Tıp fakültesi dönem 3 kurul sınavı rekonstrüksiyon ve arşiv kaynağı'}\n\n`;
+  md += `---\n\n`;
+
+  md += `### SORULAR VE ÇÖZÜMLÜ REKONSTRÜKSİYONLAR (${committeeQuestions.length} Soru)\n\n`;
+
+  committeeQuestions.forEach((q) => {
+    md += `#### Soru #${q.questionNumber}: ${q.topic} [${q.discipline}]\n`;
+    if (q.reconstruction?.stem) {
+      md += `**Soru Metni:** ${q.reconstruction.stem}\n\n`;
+    } else if (q.fragments && q.fragments.length > 0) {
+      md += `**Hatırlanan Parçalar:** ${q.fragments.map((f) => f.text).join(' ')}\n\n`;
+    }
+
+    if (q.options && q.options.length > 0) {
+      md += `**Şıklar:**\n`;
+      q.options.forEach((opt) => {
+        const isClaimed = q.claimedAnswer === opt.key ? ' (✓ İddia Edilen / Doğru Şık)' : '';
+        md += `- **${opt.key})** ${opt.text}${isClaimed}\n`;
+      });
+      md += `\n`;
+    }
+
+    if (q.reconstruction?.explanation) {
+      md += `**Tıbbi Açıklama & Gerekçe:** ${q.reconstruction.explanation}\n\n`;
+    }
+    if (q.lectureReference) {
+      md += `**Ders Notu Kaynağı:** ${q.lectureReference.noteTitle} (Sayfa/Slayt ${q.lectureReference.pageNumber})\n\n`;
+    }
+    md += `---\n\n`;
+  });
+
+  res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+  res.setHeader('Content-Disposition', `attachment; filename="MedSoru_NotebookLM_${committee?.id || 'kaynak'}.md"`);
+  res.send(md);
+});
+
+// Direct Gemini / NotebookLM Database Sync Webhook
+app.post('/api/gemini/sync-database', async (req, res) => {
+  const { payload, committeeId, updateType, secretKey } = req.body;
+  if (!payload) {
+    return res.status(400).json({ error: 'Lütfen güncellenecek JSON verisini veya NotebookLM metnini gönderin.' });
+  }
+
+  try {
+    let questionsToAdd: QuestionItem[] = [];
+
+    if (Array.isArray(payload)) {
+      questionsToAdd = payload;
+    } else if (typeof payload === 'object' && Array.isArray(payload.questions)) {
+      questionsToAdd = payload.questions;
+    } else if (typeof payload === 'string') {
+      // Parse with Gemini
+      const prompt = `Aşağıdaki metin NotebookLM veya Gemini'den alınmış tıp kurul soruları veya ders notları içermektedir.
+Bunu veritabanımıza uygun JSON formatında çıkar:
+- questions: [ { questionNumber, discipline, topic, stem, options: [{ key, text }], claimedAnswer, explanation } ]`;
+
+      const aiRes = await ai.models.generateContent({
+        model: 'gemini-3.8-flash',
+        contents: [prompt, payload],
+        config: { responseMimeType: 'application/json' },
+      });
+
+      const parsed = JSON.parse(aiRes.text?.trim() || '{"questions":[]}');
+      questionsToAdd = parsed.questions || [];
+    }
+
+    if (questionsToAdd.length > 0) {
+      const targetCommId = committeeId || db.committees[0]?.id || 'donem3-kurul2';
+      questionsToAdd.forEach((q) => {
+        const qNum = Number(q.questionNumber) || (db.questions.length + 1);
+        const existingIdx = db.questions.findIndex(
+          (item) => item.committeeId === targetCommId && item.questionNumber === qNum
+        );
+
+        const formattedItem: QuestionItem = {
+          id: q.id || `q-gemini-${Date.now()}-${qNum}`,
+          committeeId: targetCommId,
+          questionNumber: qNum,
+          discipline: q.discipline || 'Genel Tıp',
+          topic: q.topic || `Soru #${qNum}`,
+          status: q.claimedAnswer ? 'completed' : 'gathering',
+          claimedAnswer: q.claimedAnswer || undefined,
+          tags: ['Gemini/NotebookLM Sync', q.discipline || 'Genel'],
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          contributedByName: 'Gemini & NotebookLM Köprüsü',
+          fragments: [
+            {
+              id: `f-${Date.now()}`,
+              author: 'NotebookLM / Gemini',
+              text: q.stem || (q as any).text || 'Soru metni',
+              type: 'stem',
+              timestamp: new Date().toISOString(),
+              upvotes: 4,
+            },
+          ],
+          options: (q.options || []).map((o: any) => ({
+            key: o.key,
+            text: o.text,
+            upvotes: 2,
+          })),
+          reconstruction: q.stem
+            ? {
+                stem: q.stem,
+                options: (q.options || []).map((o: any) => ({
+                  key: o.key,
+                  text: o.text,
+                  isAiFilled: false,
+                })),
+                correctAnswer: q.claimedAnswer || 'A',
+                explanation: q.explanation || 'NotebookLM üzerinden aktarılmıştır.',
+                confidenceScore: 92,
+                notesAndDiscrepancies: 'NotebookLM senkronizasyonu ile güncellendi.',
+                lastUpdated: new Date().toISOString(),
+              }
+            : undefined,
+        };
+
+        if (existingIdx !== -1) {
+          db.questions[existingIdx] = formattedItem;
+        } else {
+          db.questions.push(formattedItem);
+        }
+      });
+
+      saveDatabase();
+    }
+
+    res.json({
+      success: true,
+      message: `${questionsToAdd.length} adet soru Gemini/NotebookLM köprüsü üzerinden veritabanına başarıyla senkronize edildi.`,
+      updatedCount: questionsToAdd.length,
+    });
+  } catch (err: any) {
+    console.error('Gemini sync error:', err);
+    res.status(500).json({ error: 'Senkronizasyon hatası: ' + err.message });
   }
 });
 

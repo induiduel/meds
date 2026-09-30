@@ -1165,15 +1165,21 @@ export const ApiService = {
     getLocalDb();
   },
 
-  // Admin AI Past Exam Questions Parser
+  // Admin AI Past Exam Questions Parser (Supports text, PDF, Word DOCX, and images)
   async parsePastExamQuestions({
     rawText,
+    fileBase64,
+    fileMimeType,
+    fileName,
     examYear,
     committeeId,
     defaultDiscipline,
     adminEmail,
   }: {
-    rawText: string;
+    rawText?: string;
+    fileBase64?: string;
+    fileMimeType?: string;
+    fileName?: string;
     examYear: string;
     committeeId: string;
     defaultDiscipline?: string;
@@ -1187,6 +1193,9 @@ export const ApiService = {
       },
       body: JSON.stringify({
         rawText,
+        fileBase64,
+        fileMimeType,
+        fileName,
         examYear,
         committeeId,
         defaultDiscipline,
@@ -1197,6 +1206,48 @@ export const ApiService = {
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err.error || 'Yapay zeka soruları ayrıştıramadı.');
+    }
+    return await res.json();
+  },
+
+  // Multimodal Document Extractor for PDF & DOCX (Lecture notes & exam sheets)
+  async extractDocument({
+    fileBase64,
+    fileMimeType,
+    fileName,
+    mode = 'raw',
+    committeeId,
+  }: {
+    fileBase64: string;
+    fileMimeType: string;
+    fileName: string;
+    mode?: 'lecture_notes' | 'past_questions' | 'raw';
+    committeeId?: string;
+  }): Promise<{ success: boolean; note?: any; extractedText?: string }> {
+    const res = await fetch('/api/ai/extract-document', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fileBase64, fileMimeType, fileName, mode, committeeId }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Belge yapay zeka tarafından okunamadı.');
+    }
+    return await res.json();
+  },
+
+  // Gemini & NotebookLM Database Synchronization
+  async syncDatabaseWithGemini(payload: any, committeeId?: string): Promise<{ success: boolean; message: string; updatedCount: number }> {
+    const res = await fetch('/api/gemini/sync-database', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ payload, committeeId }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Veritabanı senkronizasyonu başarısız oldu.');
     }
     return await res.json();
   },

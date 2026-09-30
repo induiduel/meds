@@ -52,6 +52,8 @@ export interface QuestionLectureMatch {
   matchedSnippet: string;
   confidenceScore: number;
   reasoning: string;
+  driveFileId?: string;
+  driveFileUrl?: string;
 }
 
 export interface LectureNotePage {
@@ -70,6 +72,8 @@ export interface LectureNote {
   pages: LectureNotePage[];
   uploadedBy?: string;
   uploadedAt: string;
+  driveFileId?: string;
+  driveFileUrl?: string;
 }
 
 export interface UserLeaderboardEntry {

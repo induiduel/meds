@@ -30,6 +30,7 @@ interface HeaderProps {
   onOpenNewCommitteeModal: () => void;
   onOpenAdminPanel: () => void;
   onOpenPastExamModal?: () => void;
+  onOpenNotebookLMModal?: () => void;
   onOpenProfileModal?: () => void;
   onOpenAuthModal?: (mode: 'login' | 'register' | 'admin') => void;
   completedCount: number;
@@ -57,6 +58,7 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenNewCommitteeModal,
   onOpenAdminPanel,
   onOpenPastExamModal,
+  onOpenNotebookLMModal,
   onOpenProfileModal,
   onOpenAuthModal,
   completedCount,
@@ -155,10 +157,10 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </div>
 
-            {/* High-Quality A4 Exam Booklet & PDF Generator (Visible to all students/users) */}
+            {/* High-Quality A4 Exam Booklet & PDF Generator (Visible to all students/users on desktop/tablet) */}
             <button
               onClick={onOpenPdfModal}
-              className="bg-white hover:bg-slate-50 border border-slate-200 hover:border-teal-400 text-slate-800 px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
+              className="hidden md:inline-flex bg-white hover:bg-slate-50 border border-slate-200 hover:border-teal-400 text-slate-800 px-3 py-2 rounded-lg text-xs font-semibold items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
               title="A4 formatında soru kitapçığı oluştur, yazdır veya PDF olarak indir"
             >
               <FileText className="w-4 h-4 text-teal-600" />
@@ -170,7 +172,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 onClick={onUploadToDrive}
                 disabled={isUploadingToDrive}
-                className={`px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 border shadow-2xs transition-all cursor-pointer ${
+                className={`hidden md:inline-flex px-3 py-2 rounded-lg text-xs font-semibold items-center gap-1.5 border shadow-2xs transition-all cursor-pointer ${
                   driveLastUploadedLink
                     ? 'bg-emerald-50 border-emerald-300 text-emerald-800 hover:bg-emerald-100'
                     : 'bg-teal-50 border-teal-200 text-teal-800 hover:bg-teal-100'
@@ -188,15 +190,27 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             )}
 
+            {/* NotebookLM & Gemini Direct Connect Button */}
+            {onOpenNotebookLMModal && (
+              <button
+                onClick={onOpenNotebookLMModal}
+                className="hidden md:inline-flex bg-purple-50 hover:bg-purple-100 text-purple-950 border border-purple-300 px-3 py-2 rounded-lg text-xs font-bold items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
+                title="NotebookLM ve Gemini ile veritabanı eşitleme ve kaynak dışa aktarımı"
+              >
+                <Brain className="w-3.5 h-3.5 text-purple-700" />
+                <span>NotebookLM / Gemini</span>
+              </button>
+            )}
+
             {/* Admin Past Exam Importer Button */}
             {isAdmin && onOpenPastExamModal && (
               <button
                 onClick={onOpenPastExamModal}
-                className="bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-300 px-3 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
+                className="hidden md:inline-flex bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-300 px-3 py-2 rounded-lg text-xs font-bold items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
                 title="Geçmiş yılların çıkmış sorularını yapay zekayla yükle"
               >
                 <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
-                <span className="hidden sm:inline">Çıkmış Soru Yükle</span>
+                <span>Çıkmış Soru Yükle</span>
               </button>
             )}
 
@@ -204,11 +218,11 @@ export const Header: React.FC<HeaderProps> = ({
             {isAdmin && (
               <button
                 onClick={onOpenAdminPanel}
-                className="bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
+                className="hidden md:inline-flex bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 rounded-lg text-xs font-bold items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
                 title="Veritabanını düzenle, sil, JSON yedek al"
               >
                 <ShieldCheck className="w-4 h-4 text-amber-400" />
-                <span>Database Yönetimi</span>
+                <span>Database</span>
               </button>
             )}
 
