@@ -1,0 +1,257 @@
+{
+  "committees": [
+    {
+      "id": "donem3-kurul2",
+      "name": "Dönem 3 - Kurul 2: Kardiyovasküler & Solunum Sistemi",
+      "year": 3,
+      "term": "2025-2026 Güz",
+      "targetCount": 100,
+      "description": "Patoloji, Farmakoloji, Tıbbi Mikrobiyoloji, Dahiliye, Göğüs Hastalıkları ve Kardiyoloji soruları."
+    },
+    {
+      "id": "donem3-kurul1",
+      "name": "Dönem 3 - Kurul 1: Enfeksiyon & Hematoloji-Onkoloji",
+      "year": 3,
+      "term": "2025-2026 Güz",
+      "targetCount": 100,
+      "description": "Tıbbi Mikrobiyoloji, Parazitoloji, Patoloji ve Farmakoloji ağırlıklı kurul soruları."
+    },
+    {
+      "id": "donem3-kurul3",
+      "name": "Dönem 3 - Kurul 3: Gastrointestinal & Metabolizma",
+      "year": 3,
+      "term": "2025-2026 Bahar",
+      "targetCount": 100,
+      "description": "Gastrointestinal sistem hastalıkları, karaciğer patolojisi ve metabolik bozukluklar."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-101",
+      "committeeId": "donem3-kurul2",
+      "questionNumber": 14,
+      "discipline": "Farmakoloji",
+      "topic": "Antihipertansifler & Yan Etkiler",
+      "status": "completed",
+      "claimedAnswer": "C",
+      "tags": [
+        "ACE İnhibitörleri",
+        "Bradikinin",
+        "Öksürük",
+        "Vaka"
+      ],
+      "createdAt": "2026-09-29T22:58:48.220Z",
+      "updatedAt": "2026-09-30T22:58:48.220Z",
+      "fragments": [
+        {
+          "id": "f-1",
+          "author": "Stj. Dr. Eren",
+          "text": "58 yaşında hipertansiyon tanısıyla yeni ilaç başlanan hastada birkaç hafta sonra inatçı kuru öksürük gelişiyor.",
+          "type": "stem",
+          "timestamp": "2026-09-30T02:58:48.220Z",
+          "upvotes": 9
+        },
+        {
+          "id": "f-2",
+          "author": "Ayşe Tıp-3",
+          "text": "Soru kökü tam olarak: Bu yan etkinin gelişiminden sorumlu olan mediyatör hangisidir? diyordu.",
+          "type": "stem",
+          "timestamp": "2026-09-30T04:58:48.220Z",
+          "upvotes": 12
+        },
+        {
+          "id": "f-3",
+          "author": "Mert (Amfi 1)",
+          "text": "Şıklarda Bradikinin, Substans P, Anjiyotensin 2, Renin vardı. Kesin Bradikinin doğru cevap!",
+          "type": "clue",
+          "timestamp": "2026-09-30T07:58:48.220Z",
+          "upvotes": 14
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Anjiyotensin II azalması",
+          "suggestedBy": "Mert",
+          "upvotes": 3
+        },
+        {
+          "key": "B",
+          "text": "Renin sekresyonunda artış",
+          "suggestedBy": "Mert",
+          "upvotes": 1
+        },
+        {
+          "key": "C",
+          "text": "Bradikinin birikimi",
+          "suggestedBy": "Ayşe Tıp-3",
+          "upvotes": 15
+        },
+        {
+          "key": "D",
+          "text": "Substans P azalması",
+          "suggestedBy": "Kerem",
+          "upvotes": 2
+        },
+        {
+          "key": "E",
+          "text": "Prostasiklin inhibisyonu",
+          "suggestedBy": "AI (Yapay Zeka)",
+          "isAiGenerated": true,
+          "upvotes": 4
+        }
+      ],
+      "reconstruction": {
+        "stem": "58 yaşında esansiyel hipertansiyon tanısıyla bir antihipertansif ajan başlanan erkek hasta, 3 hafta sonra polikliniğe gece uykudan uyandıran, balgamsız inatçı kuru öksürük şikayetiyle başvuruyor. Fizik muayenesinde ve akciğer grafisinde patoloji saptanmıyor. Hastanın kullandığı ilacın etki mekanizması göz önüne alındığında, bu yan etkinin gelişiminden doğrudan sorumlu olan mediyatör birikimi aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Anjiyotensin II düzeyinde aşırı artış",
+            "isAiFilled": false
+          },
+          {
+            "key": "B",
+            "text": "Plazma renin aktivitesinde belirgin supresyon",
+            "isAiFilled": false
+          },
+          {
+            "key": "C",
+            "text": "Bradikinin ve Substans P yıkımının engellenerek birikmesi",
+            "isAiFilled": false
+          },
+          {
+            "key": "D",
+            "text": "Endotelin-1 sentezinin stimüle edilmesi",
+            "isAiFilled": true
+          },
+          {
+            "key": "E",
+            "text": "Noradrenalin geri alımının inhibe edilmesi",
+            "isAiFilled": true
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "ACE inhibitörleri (örneğin kaptopril, enalapril, lisinopril), kininaz II enzimi ile özdeş olan ACE enzimini bloke eder. Kininaz II normalde bradikinin ve substans P'yi yıkar. Enzim inhibe olunca hava yollarında bradikinin ve substans P birikerek akciğer C-liflerini uyarır ve karakteristik inatçı kuru öksürüğe yol açar.",
+        "confidenceScore": 98,
+        "notesAndDiscrepancies": "Tüm öğrenci hafızaları ve şıkları %100 uyumludur. E şıkkı sınav standardında çeldirici olarak AI tarafından dengelenmiştir.",
+        "lastUpdated": "2026-09-30T22:58:48.220Z"
+      }
+    },
+    {
+      "id": "q-102",
+      "committeeId": "donem3-kurul2",
+      "questionNumber": 27,
+      "discipline": "Patoloji",
+      "topic": "Miyokard İnfarktüsü Histopatolojisi",
+      "status": "gathering",
+      "claimedAnswer": "B",
+      "tags": [
+        "Koagülasyon Nekrozu",
+        "Nötrofil İnfiltrasyonu",
+        "Dalgalı Lifler"
+      ],
+      "createdAt": "2026-09-30T10:58:48.220Z",
+      "updatedAt": "2026-09-30T22:58:48.220Z",
+      "fragments": [
+        {
+          "id": "f-4",
+          "author": "Cemre T.",
+          "text": "Patolojide MI süresi sorusu vardı. 1-3. günlerde mikroskopta ne görülür diye sorulmuştu.",
+          "type": "stem",
+          "timestamp": "2026-09-30T12:58:48.220Z",
+          "upvotes": 7
+        },
+        {
+          "id": "f-5",
+          "author": "Ahmet K.",
+          "text": "Şıklarda nötrofil infiltrasyonu ve yoğun koagülasyon nekrozu vardı. 4-7. günde makrofajlar geliyordu, o yüzden cevap nötrofillerdi.",
+          "type": "option",
+          "timestamp": "2026-09-30T14:58:48.220Z",
+          "upvotes": 6
+        },
+        {
+          "id": "f-6",
+          "author": "Zeynep H.",
+          "text": "Hoca slaytta sarı-kahverengi yumuşama ve yoğun nötrofilik infiltrasyon vurgusu yapmıştı.",
+          "type": "clue",
+          "timestamp": "2026-09-30T17:58:48.220Z",
+          "upvotes": 5
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Dalgalı lifler (wavy fibers) ve ödem",
+          "suggestedBy": "Cemre",
+          "upvotes": 2
+        },
+        {
+          "key": "B",
+          "text": "Yoğun koagülasyon nekrozu ve bol nötrofil infiltrasyonu",
+          "suggestedBy": "Ahmet K.",
+          "upvotes": 9
+        },
+        {
+          "key": "C",
+          "text": "Makrofaj fagositozu ve granülasyon dokusu başlangıcı",
+          "suggestedBy": "Zeynep H.",
+          "upvotes": 3
+        }
+      ]
+    },
+    {
+      "id": "q-103",
+      "committeeId": "donem3-kurul2",
+      "questionNumber": 42,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "Atipik Pnömoni Etkenleri",
+      "status": "gathering",
+      "tags": [
+        "Legionella",
+        "Klima",
+        "Hiponatremi",
+        "BCYE Agar"
+      ],
+      "createdAt": "2026-09-30T16:58:48.220Z",
+      "updatedAt": "2026-09-30T22:58:48.220Z",
+      "fragments": [
+        {
+          "id": "f-7",
+          "author": "Onur Med",
+          "text": "Otelde kalan yaşlı adam sorusu! Klimalardan bulaşan, ateşi yüksek, ishal ve bilinç bulanıklığı olan hasta.",
+          "type": "stem",
+          "timestamp": "2026-09-30T18:58:48.220Z",
+          "upvotes": 11
+        },
+        {
+          "id": "f-8",
+          "author": "Selin B.",
+          "text": "Laboratuvarda sodyum 126 mg/dL (hiponatremi) verilmişti. Hoca hangi besiyerinde ürer ya da etken kimdir sormuştu.",
+          "type": "clue",
+          "timestamp": "2026-09-30T19:58:48.220Z",
+          "upvotes": 8
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Streptococcus pneumoniae",
+          "suggestedBy": "Onur Med",
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "Legionella pneumophila (BCYE agar)",
+          "suggestedBy": "Selin B.",
+          "upvotes": 10
+        },
+        {
+          "key": "C",
+          "text": "Mycoplasma pneumoniae",
+          "suggestedBy": "Anonim",
+          "upvotes": 2
+        }
+      ]
+    }
+  ]
+}

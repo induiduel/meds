@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------
+ * A4 Medical School Examination & PDF Print Stylesheet
+ * ------------------------------------------------------------- */
+@page {
+  size: A4 portrait;
+  margin: 10mm 12mm 12mm 12mm;
+}
+
+@media print {
+  /* Reset backgrounds and colors for crisp vector printing */
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide web application layout, modals, headers, footers and navigation */
+  header,
+  nav,
+  footer,
+  aside,
+  button,
+  select,
+  input,
+  .no-print,
+  .print-hidden,
+  [data-no-print="true"] {
+    display: none !important;
+  }
+
+  /* Force print targets to occupy full A4 dimensions */
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* Two-column exam layout in print */
+  .exam-columns-2 {
+    columns: 2 !important;
+    column-gap: 20px !important;
+    column-rule: 1px solid #cbd5e1 !important;
+  }
+
+  /* Avoid cutting questions across page splits */
+  .exam-question-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Force clean page breaks */
+  .page-break-before {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Answer key table in print */
+  .exam-answer-table {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "Committee": {
+      "description": "Tıp fakültesi kurul sınavları (örn. Dönem 3 Kurul 1)",
+      "fields": {
+        "id": { "type": "string", "description": "Benzersiz komite ID" },
+        "name": { "type": "string", "description": "Kurul adı" },
+        "year": { "type": "number", "description": "Dönem / Yıl" },
+        "academicYear": { "type": "string", "description": "Akademik yıl (örn. 2025-2026)" },
+        "targetCount": { "type": "number", "description": "Toplam hedef soru sayısı (örn. 100)" },
+        "createdAt": { "type": "string", "description": "Oluşturulma tarihi ISO" }
+      }
+    },
+    "Question": {
+      "description": "Kurul sınavı soruları, hatırlanan parçalar ve şıklar",
+      "fields": {
+        "id": { "type": "string", "description": "Benzersiz soru ID" },
+        "committeeId": { "type": "string", "description": "Ait olduğu kurul ID" },
+        "questionNumber": { "type": "number", "description": "Soru numarası (1-100)" },
+        "discipline": { "type": "string", "description": "Branş / Anabilim dalı" },
+        "text": { "type": "string", "description": "Hatırlanan soru metni" },
+        "options": { "type": "array", "description": "A, B, C, D, E şıkları" },
+        "correctOption": { "type": "string", "description": "Doğru şık harfi" },
+        "status": { "type": "string", "description": "Eksik, Tamamlandı, Onaylandı" },
+        "confidenceScore": { "type": "number", "description": "Güvenilirlik yüzdesi" },
+        "updatedAt": { "type": "string", "description": "Son güncelleme tarihi ISO" }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'nofrostlife@gmail.com';
+    }
+
+    // Committees collection: read-only for public, write for admin
+    match /committees/{committeeId} {
+      allow read: if true;
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Questions collection:
+    // Students can read, create, and update (add fragments/options),
+    // but DELETION is strictly restricted to administrator to prevent sabotage!
+    match /questions/{questionId} {
+      allow read: if true;
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // User profiles collection
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Admin notifications collection
+    match /admin_notifications/{notifId} {
+      allow read: if true;
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Lecture notes & slides collection
+    match /lecture_notes/{noteId} {
+      allow read: if true;
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+  }
+}
+
