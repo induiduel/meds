@@ -334,62 +334,154 @@ export async function renderSlideVerbatim(params: {
   let sourcePath: string | undefined = undefined;
   let source: 'desktop_folder' | 'drive' = 'desktop_folder';
 
-  // Folders to search in user's meds_database
-  const searchDirs = [
-    path.join(DESKTOP_DATABASE_DIR, 'ders_notlari_pdf'),
-    DESKTOP_DATABASE_DIR,
-    path.join(DESKTOP_DATABASE_DIR, 'meds_sorular'),
-  ];
-
-  // Medical synonyms normalization (e.g. intrasellüler <=> hücre içi)
-  const normalizeQuery = (s: string) => {
+  // Turkish & medical synonym normalization
+  const normalizeForMatch = (s: string) => {
+    if (!s) return '';
     return s
+      .replace(/İ/g, 'i')
+      .replace(/I/g, 'ı')
       .toLowerCase()
       .replace(/intrasell[uü]ler/gi, 'hücre içi')
       .replace(/ekstrasell[uü]ler/gi, 'hücre dışı')
       .replace(/enflamasyon/gi, 'iltihap')
-      .replace(/[^a-z0-9ğüşıöç]/gi, '');
+      .replace(/[^a-z0-9ğüşıöç]/gi, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
   };
 
-  const cleanQuery = normalizeQuery(title);
+  // 1. Find all PDF files recursively inside meds_database (ders_notlari_pdf prioritized)
+  const getAllLocalPdfs = (): { fullPath: string; fileName: string; folder: string }[] => {
+    const results: { fullPath: string; fileName: string; folder: string }[] = [];
+    const searchDirs = [
+      path.join(DESKTOP_DATABASE_DIR, 'ders_notlari_pdf'),
+      DESKTOP_DATABASE_DIR,
+      path.join(DESKTOP_DATABASE_DIR, 'meds_sorular'),
+    ];
+
+    const visitedPaths = new Set<string>();
+
+    const scan = (dir: string) => {
+      if (!fs.existsSync(dir)) return;
+      try {
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+        for (const entry of entries) {
+          const full = path.join(dir, entry.name);
+          if (entry.isDirectory()) {
+            scan(full);
+          } else if (entry.isFile() && entry.name.toLowerCase().endsWith('.pdf')) {
+            const key = full.toLowerCase();
+            if (!visitedPaths.has(key)) {
+              visitedPaths.add(key);
+              results.push({
+                fullPath: full,
+                fileName: entry.name,
+                folder: dir,
+              });
+            }
+          }
+        }
+      } catch (e) {}
+    };
+
+    for (const d of searchDirs) {
+      scan(d);
+    }
+    return results;
+  };
+
+  const localPdfs = getAllLocalPdfs();
+  const cleanTitle = normalizeForMatch(title);
+  const titleTokens = cleanTitle.split(' ').filter(w => w.length > 2 && !TURKISH_STOPWORDS.has(w));
   const numMatch = title.match(/^(\d{1,2})/);
-  const titleNumber = numMatch ? numMatch[1] : null;
+  const titleNum = numMatch ? numMatch[1] : null;
 
-  // 1. Check local folders
-  for (const dir of searchDirs) {
-    if (!fs.existsSync(dir)) continue;
-    const list = fs.readdirSync(dir);
-    for (const f of list) {
-      if (!f.toLowerCase().endsWith('.pdf')) continue;
-      const cleanF = normalizeQuery(f);
-      const fNumMatch = f.match(/^(\d{1,2})/);
-      const fNumber = fNumMatch ? fNumMatch[1] : null;
+  let bestCandidate: { fullPath: string; score: number } | null = null;
 
-      const numberMatch = titleNumber && fNumber && titleNumber === fNumber;
-      const textMatch = cleanF.includes(cleanQuery) || cleanQuery.includes(cleanF);
+  for (const item of localPdfs) {
+    const cleanFileName = normalizeForMatch(item.fileName.replace(/\.pdf$/i, ''));
+    const fileTokens = new Set(cleanFileName.split(' ').filter(w => w.length > 2));
+    const fileNumMatch = item.fileName.match(/^(\d{1,2})/);
+    const fileNum = fileNumMatch ? fileNumMatch[1] : null;
 
-      if (numberMatch || textMatch) {
-        const candidate = path.join(dir, f);
-        try {
-          targetBuffer = fs.readFileSync(candidate);
-          sourcePath = candidate;
-          console.log(`[RenderVerbatim] Yerel klasörde eşleşti (${dir}): ${f}`);
-          break;
-        } catch (e) {}
+    let score = 0;
+
+    // Exact match
+    if (cleanFileName === cleanTitle) {
+      score += 100;
+    } else if (cleanFileName.includes(cleanTitle) || cleanTitle.includes(cleanFileName)) {
+      score += 70;
+    }
+
+    // Number match
+    if (titleNum && fileNum) {
+      if (titleNum === fileNum) {
+        score += 35;
+      } else {
+        score -= 50; // Different starting chapter number
       }
     }
-    if (targetBuffer) break;
+
+    // Token overlap
+    let matchCount = 0;
+    for (const t of titleTokens) {
+      if (fileTokens.has(t) || cleanFileName.includes(t)) {
+        matchCount++;
+      }
+    }
+    if (titleTokens.length > 0) {
+      score += Math.round((matchCount / titleTokens.length) * 50);
+    }
+
+    // Discipline match bonus
+    if (discipline && (item.fullPath.toLowerCase().includes(discipline.toLowerCase()) || cleanFileName.includes(normalizeForMatch(discipline)))) {
+      score += 20;
+    }
+
+    // Prioritize ders_notlari_pdf
+    if (item.folder.toLowerCase().includes('ders_notlari_pdf')) {
+      score += 15;
+    }
+
+    if (score >= 40) {
+      if (!bestCandidate || score > bestCandidate.score) {
+        bestCandidate = { fullPath: item.fullPath, score };
+      }
+    }
   }
 
-  // 2. Fallback: Download from Google Drive if fileId is present
-  if (!targetBuffer && fileId) {
-    console.log(`[RenderVerbatim] Google Drive'dan güvenli indiriliyor (fileId: ${fileId}, title: "${title}")...`);
+  if (bestCandidate) {
     try {
-      const buf = await downloadDriveBuffer(fileId);
+      targetBuffer = fs.readFileSync(bestCandidate.fullPath);
+      sourcePath = bestCandidate.fullPath;
+      console.log(`[RenderVerbatim] Yerel klasörde eşleşti (Skor: ${bestCandidate.score}): ${bestCandidate.fullPath}`);
+    } catch (e) {}
+  }
+
+  // 2. Fallback: Google Drive Download
+  let effectiveFileId = fileId;
+  if (!targetBuffer && !effectiveFileId) {
+    try {
+      const realSlidesPath = path.resolve(DATA_DIR, 'real_drive_slides.json');
+      if (fs.existsSync(realSlidesPath)) {
+        const slides = JSON.parse(fs.readFileSync(realSlidesPath, 'utf8'));
+        const match = slides.find((s: any) => 
+          s.id === id || 
+          normalizeForMatch(s.name).includes(cleanTitle) || 
+          cleanTitle.includes(normalizeForMatch(s.name))
+        );
+        if (match?.id) effectiveFileId = match.id;
+      }
+    } catch (e) {}
+  }
+
+  if (!targetBuffer && effectiveFileId) {
+    console.log(`[RenderVerbatim] Google Drive'dan güvenli indiriliyor (fileId: ${effectiveFileId}, title: "${title}")...`);
+    try {
+      const buf = await downloadDriveBuffer(effectiveFileId);
       if (buf && buf.slice(0, 5).toString() === '%PDF-') {
         targetBuffer = buf;
         source = 'drive';
-        // Cache to local meds_database/ders_notlari_pdf
+        // Cache directly to meds_database/ders_notlari_pdf
         try {
           const cacheDir = path.join(DESKTOP_DATABASE_DIR, 'ders_notlari_pdf');
           if (!fs.existsSync(cacheDir)) {
@@ -405,13 +497,13 @@ export async function renderSlideVerbatim(params: {
         } catch (e) {}
       }
     } catch (e: any) {
-      console.warn(`[RenderVerbatim] Google Drive indirme hatası (${fileId}):`, e.message);
+      console.warn(`[RenderVerbatim] Google Drive indirme hatası (${effectiveFileId}):`, e.message);
     }
   }
 
   if (!targetBuffer) {
     throw new Error(
-      `"${title}" dersine ait PDF dosyası ne yerel C:\\Users\\indui\\Desktop\\meds_database klasöründe ne de Google Drive üzerinde erişilebilir değil. Lütfen PDF dosyasını meds_database klasörüne ekleyiniz veya 'PDF Yükle' butonu ile yükleyiniz.`
+      `"${title}" dersine ait PDF dosyası C:\\Users\\indui\\Desktop\\meds_database\\ders_notlari_pdf klasöründe ve alt dizinlerde bulunamadı. Lütfen ilgili PDF belgesinin ders_notlari_pdf klasörüne eklendiğinden emin olunuz.`
     );
   }
 

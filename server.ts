@@ -227,6 +227,11 @@ export interface QuestionItem {
   claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
   reconstruction?: ReconstructedQuestion;
   tags: string[];
+  examYear?: string;
+  term?: string;
+  instructor?: string;
+  rawStem?: string;
+  isPastExam?: boolean;
   isUnassignedNumber?: boolean;
   suggestedQuestionNumber?: number;
   placementNotes?: string;
@@ -519,6 +524,96 @@ app.get('/api/questions/:id', (req, res) => {
     return res.status(404).json({ error: 'Soru bulunamadı.' });
   }
   res.json({ question });
+});
+
+// Get all past exam questions with complete raw and AI-redacted data
+app.get('/api/past-exams', (req, res) => {
+  try {
+    // 1. Find all past questions in db.questions
+    const pastInDb = db.questions.filter(
+      (q) => q.id?.startsWith('past-') || q.id?.startsWith('civan-') || q.examYear || q.tags?.some((t: string) => t.toLowerCase().includes('çıkmış'))
+    );
+
+    // 2. Load Civan questions from file if available to guarantee complete coverage
+    let civanList: any[] = [];
+    const civanPath = path.resolve(DATA_DIR, 'civanPastQuestions.json');
+    if (fs.existsSync(civanPath)) {
+      try {
+        civanList = JSON.parse(fs.readFileSync(civanPath, 'utf8'));
+      } catch {}
+    }
+
+    // 3. Combine and deduplicate
+    const map = new Map<string, any>();
+    for (const q of pastInDb) {
+      map.set(q.id, {
+        ...q,
+        isPastExam: true,
+        examYear: q.examYear || (q.tags?.find((t: string) => /\d{4}/.test(t)) || 'Çıkmış Soru'),
+      });
+    }
+
+    for (const cq of civanList) {
+      if (!map.has(cq.id)) {
+        map.set(cq.id, {
+          id: cq.id,
+          committeeId: cq.committeeId || 'donem3-kurul1',
+          questionNumber: cq.questionNumber || 1,
+          discipline: cq.discipline || 'Tıbbi Patoloji',
+          topic: cq.topic || 'Genel Tıp Çıkmış Soru',
+          status: 'completed',
+          isPastExam: true,
+          examYear: cq.examYear || 'Civan Arşivi (2020-2026)',
+          claimedAnswer: cq.correctAnswer || (cq.options?.[0]?.key || 'A'),
+          tags: [cq.discipline, 'Civanın Notları', cq.examYear || 'Çıkmış'].filter(Boolean),
+          fragments: [
+            {
+              id: `f-${cq.id}`,
+              author: 'civaninotlari.vercel.app',
+              text: cq.stem || '',
+              type: 'stem',
+              timestamp: new Date().toISOString(),
+              upvotes: 0,
+              likedBy: [],
+            },
+          ],
+          options: (cq.options || []).map((o: any) => ({
+            key: o.key,
+            text: o.text,
+            upvotes: 0,
+            likedBy: [],
+          })),
+          reconstruction: {
+            stem: cq.stem,
+            options: (cq.options || []).map((o: any) => ({
+              key: o.key,
+              text: o.text,
+              isAiFilled: false,
+            })),
+            correctAnswer: cq.correctAnswer || 'A',
+            explanation: cq.explanation || 'Civan Notları klinik analiz ve patofizyolojik açıklama.',
+            confidenceScore: 95,
+            notesAndDiscrepancies: 'Kaynak: civaninotlari.vercel.app KBU Tıp 3. Sınıf 1. Kurul Arşivi',
+            lastUpdated: new Date().toISOString(),
+            isAiRedacted: true,
+          },
+          upvotes: 0,
+          likedBy: [],
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        });
+      }
+    }
+
+    const result = Array.from(map.values());
+    res.json({
+      success: true,
+      totalCount: result.length,
+      questions: result,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Çıkmış sorular alınamadı: ' + err.message });
+  }
 });
 
 // Batch import questions (Past exams, AI parsed questions, desktop sync)

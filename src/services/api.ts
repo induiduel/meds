@@ -310,7 +310,7 @@ export const ApiService = {
     discipline?: string;
     status?: string;
     search?: string;
-  }): Promise<QuestionItem[]> {
+  } = {}): Promise<QuestionItem[]> {
     let questionsList: QuestionItem[] = [];
     let fetchedFromCloud = false;
 
@@ -1685,6 +1685,21 @@ export const ApiService = {
       throw new Error('Google Drive senkronizasyonu başlatılamadı.');
     }
     return await res.json();
+  },
+
+  // Past Exam Questions (Çıkmış Sorular & Civan Arşivi)
+  async getPastQuestions(): Promise<QuestionItem[]> {
+    try {
+      const res = await fetch('/api/past-exams');
+      if (res.ok) {
+        const data = await res.json();
+        return data.questions || [];
+      }
+    } catch (e) {
+      console.warn('API getPastQuestions error:', e);
+    }
+    const all = await this.getQuestions();
+    return all.filter(q => q.id?.startsWith('past-') || q.id?.startsWith('civan-') || q.examYear || q.tags?.some((t: string) => t.toLowerCase().includes('çıkmış')));
   },
 
   // Windows Service, Desktop Shortcut & Startup Management

@@ -10,13 +10,14 @@ import {
   Printer,
   Cloud,
   ShieldCheck,
-  X
+  X,
+  Sparkles
 } from 'lucide-react';
 import { AppUser } from '../services/auth';
 
 interface MobileBottomNavProps {
-  activeTab: 'quick_add' | 'questions' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet';
-  setActiveTab: (tab: 'quick_add' | 'questions' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet') => void;
+  activeTab: 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet';
+  setActiveTab: (tab: 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet') => void;
   questionsCount: number;
   isAdmin: boolean;
   onOpenContributeModal: () => void;
@@ -95,6 +96,21 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-xs">
+              <button
+                onClick={() => {
+                  setActiveTab('past_exams');
+                  setIsMenuOpen(false);
+                }}
+                className={`col-span-2 p-3 rounded-xl border flex items-center justify-center gap-2 font-bold text-xs transition-all ${
+                  activeTab === 'past_exams'
+                    ? 'bg-amber-500 text-white border-amber-600 shadow-xs'
+                    : 'bg-amber-50/90 border-amber-300 text-amber-950 hover:bg-amber-100'
+                }`}
+              >
+                <Sparkles className={`w-4 h-4 ${activeTab === 'past_exams' ? 'text-amber-200' : 'text-amber-600'}`} />
+                <span>Çıkmış Sorular Arşivi (2500+ Soru)</span>
+              </button>
+
               <button
                 onClick={() => {
                   setActiveTab('practice');

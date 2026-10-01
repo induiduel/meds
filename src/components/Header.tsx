@@ -24,8 +24,8 @@ interface HeaderProps {
   committees: Committee[];
   selectedCommitteeId: string;
   onSelectCommittee: (id: string) => void;
-  activeTab: 'quick_add' | 'questions' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet';
-  setActiveTab: (tab: 'quick_add' | 'questions' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet') => void;
+  activeTab: 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet';
+  setActiveTab: (tab: 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet') => void;
   onOpenContributeModal: () => void;
   onOpenNewCommitteeModal: () => void;
   onOpenAdminPanel: () => void;
@@ -328,6 +328,23 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <BookOpen className="w-4 h-4" />
               <span>Soru Havuzu ({totalCount})</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('past_exams')}
+              className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
+                activeTab === 'past_exams'
+                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-xs font-bold'
+                  : 'text-slate-700 hover:bg-amber-50/80 hover:text-amber-800'
+              }`}
+            >
+              <Sparkles className={`w-4 h-4 ${activeTab === 'past_exams' ? 'text-amber-200' : 'text-amber-500'}`} />
+              <span>Çıkmış Sorular</span>
+              <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold uppercase tracking-wider ${
+                activeTab === 'past_exams' ? 'bg-amber-700/80 text-white' : 'bg-amber-100 text-amber-900 border border-amber-300'
+              }`}>
+                Arşiv
+              </span>
             </button>
 
             <button

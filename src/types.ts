@@ -101,6 +101,11 @@ export interface QuestionItem {
   claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
   reconstruction?: ReconstructedQuestion;
   tags: string[];
+  examYear?: string;
+  term?: string;
+  instructor?: string;
+  rawStem?: string;
+  isPastExam?: boolean;
   isUnassignedNumber?: boolean;
   suggestedQuestionNumber?: number;
   placementNotes?: string;

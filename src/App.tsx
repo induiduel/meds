@@ -41,6 +41,7 @@ import { LeaderboardView } from './components/LeaderboardView';
 import { LectureNotesView } from './components/LectureNotesView';
 import { InfoPopover } from './components/InfoPopover';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { PastExamsView } from './components/PastExamsView';
 import { AdminPastExamImporterModal } from './components/AdminPastExamImporterModal';
 import { NotebookLMSyncModal } from './components/NotebookLMSyncModal';
 import { REAL_KURUL1_DRIVE_SLIDES } from './services/driveAutomation';
@@ -73,8 +74,8 @@ export default function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Tab Navigation: 'quick_add' (default simple landing page) | 'questions' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet'
-  const [activeTab, setActiveTab] = useState<'quick_add' | 'questions' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet'>('quick_add');
+  // Tab Navigation: 'quick_add' (default simple landing page) | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet'
+  const [activeTab, setActiveTab] = useState<'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet'>('quick_add');
 
   // Filters & Search
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Tümü');
@@ -905,6 +906,17 @@ export default function App() {
               </div>
             )}
           </div>
+        )}
+
+        {/* TAB: Çıkmış Sorular & AI Redaksiyon Arşivi */}
+        {activeTab === 'past_exams' && (
+          <PastExamsView
+            currentUser={currentUser}
+            onOpenNote={(noteId, pageNumber) => {
+              setActiveTab('notes');
+            }}
+            onUpdateQuestionReference={handleUpdateQuestionReference}
+          />
         )}
 
         {/* TAB 2: 1-100 Question Matrix */}
