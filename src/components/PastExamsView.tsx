@@ -23,7 +23,11 @@ import {
   RefreshCw,
   Clock,
   Tag,
-  Stethoscope
+  Stethoscope,
+  Flag,
+  MessageSquare,
+  Send,
+  AlertCircle
 } from 'lucide-react';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser } from '../services/auth';
@@ -73,6 +77,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 25;
 
+  // Report Modal State
+  const [reportingQuestion, setReportingQuestion] = useState<any | null>(null);
+  const [reportReason, setReportReason] = useState('Hatalı Soru Kökü');
+  const [reportDetails, setReportDetails] = useState('');
+  const [isSubmittingReport, setIsSubmittingReport] = useState(false);
+  const [reportSuccessMsg, setReportSuccessMsg] = useState<string | null>(null);
+
+  // Active Comments Drawer State
+  const [expandedCommentsQuestionId, setExpandedCommentsQuestionId] = useState<string | null>(null);
+  const [newCommentText, setNewCommentText] = useState('');
+  const [isSubmittingComment, setIsSubmittingComment] = useState(false);
+
   // Feedback & Copy state
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
@@ -80,12 +96,63 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const loadPastQuestions = async () => {
     setIsLoading(true);
     try {
-      const data = await ApiService.getPastQuestions(true);
+      const data = await ApiService.getPastQuestions();
       setQuestions(data.filter(q => !q.id?.startsWith('civan-') && !q.tags?.some(t => /civan/i.test(t))));
     } catch (e) {
       console.warn('Could not load past questions:', e);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  // Submit Question Report ("Şikayet Et / Hata Bildir")
+  const handleReportSubmit = async () => {
+    if (!reportingQuestion) return;
+    setIsSubmittingReport(true);
+    try {
+      await ApiService.reportPastQuestion(
+        reportingQuestion.id,
+        reportReason,
+        reportDetails,
+        currentUser?.displayName || 'Tıp Öğrencisi'
+      );
+      setReportSuccessMsg('Geri bildiriminiz ve şikayetiniz incelenmek üzere kaydedildi. Katkınız için teşekkür ederiz!');
+      setTimeout(() => {
+        setReportSuccessMsg(null);
+        setReportingQuestion(null);
+        setReportDetails('');
+      }, 2000);
+    } catch (e: any) {
+      alert('Şikayet kaydedilemedi: ' + (e.message || 'Bilinmeyen hata'));
+    } finally {
+      setIsSubmittingReport(false);
+    }
+  };
+
+  // Submit Question Comment ("Öneri / Çözüm Yolu Ekle")
+  const handleCommentSubmit = async (qId: string) => {
+    if (!newCommentText.trim()) return;
+    setIsSubmittingComment(true);
+    try {
+      const res = await ApiService.commentPastQuestion(
+        qId,
+        currentUser?.displayName || 'Tıp Öğrencisi',
+        newCommentText.trim()
+      );
+      if (res && res.comment) {
+        setQuestions(prev => prev.map(q => {
+          if (q.id === qId) {
+            const comments = (q as any).comments || [];
+            return { ...q, comments: [...comments, res.comment] };
+          }
+          return q;
+        }));
+        setNewCommentText('');
+      }
+    } catch (e: any) {
+      alert('Yorum kaydedilemedi: ' + (e.message || 'Bilinmeyen hata'));
+    } finally {
+      setIsSubmittingComment(false);
     }
   };
 
@@ -572,7 +639,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           <RefreshCw className="w-8 h-8 text-teal-600 animate-spin mx-auto" />
           <h4 className="font-bold text-slate-800 text-sm">Çıkmış Sorular Yükleniyor...</h4>
           <p className="text-xs text-slate-500 max-w-sm mx-auto">
-            Veritabanındaki tüm çıkmış sınav soruları ve Civan'ın Notları arşivi hazırlanıyor...
+            Veritabanındaki tüm çıkmış sınav soruları ve ders notları arşivi hazırlanıyor...
           </p>
         </div>
       ) : paginatedQuestions.length === 0 ? (
@@ -791,29 +858,33 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   /* RAW ORIGINAL VIEW */
                   <div className="space-y-3 bg-slate-50 border border-slate-200 rounded-xl p-4">
                     <div className="flex items-center justify-between text-xs text-slate-500 pb-1 border-b border-slate-200">
-                      <span className="font-semibold">Öğrenci Hafıza Parçaları ({q.fragments?.length || 1})</span>
-                      <span className="text-[11px]">Ham Kaynak Verisi</span>
+                      <span className="font-semibold flex items-center gap-1.5">
+                        <FileText className="w-3.5 h-3.5 text-slate-500" />
+                        Orijinal Sınav Metni
+                      </span>
+                      <span className="text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                        {q.sourceFile || 'PDF Kaynağı'}
+                      </span>
                     </div>
 
                     <div className="text-xs sm:text-sm text-slate-900 leading-relaxed font-sans">
-                      {q.fragments?.map((f, idx) => (
-                        <div key={f.id || idx} className="space-y-1 mb-2 last:mb-0">
-                          <p>{f.text}</p>
-                          <span className="text-[10px] text-slate-400 block">
-                            — Katkı: {f.author || 'Tıp Öğrencisi'} ({new Date(f.timestamp).toLocaleDateString('tr-TR')})
-                          </span>
-                        </div>
-                      ))}
+                      <p className="font-medium whitespace-pre-wrap">
+                        {(q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic}
+                      </p>
                     </div>
 
-                    {q.options && q.options.length > 0 && (
+                    {(((q as any).rawQuestion?.options && (q as any).rawQuestion.options.length > 0) || (q.options && q.options.length > 0)) && (
                       <div className="space-y-1.5 pt-2 border-t border-slate-200">
-                        {q.options.map(opt => (
-                          <div key={opt.key} className="flex items-start gap-2 text-xs text-slate-700">
-                            <span className="font-bold text-slate-500">{opt.key})</span>
-                            <span>{opt.text}</span>
-                          </div>
-                        ))}
+                        {((q as any).rawQuestion?.options || q.options).map((opt: any) => {
+                          const isClaimed = opt.key === (q.claimedAnswer || (q as any).rawQuestion?.claimedAnswer);
+                          return (
+                            <div key={opt.key} className={`flex items-start gap-2 text-xs p-1.5 rounded ${isClaimed ? 'bg-amber-50 text-amber-950 font-bold border border-amber-200' : 'text-slate-700'}`}>
+                              <span className="font-bold text-slate-500">{opt.key})</span>
+                              <span>{opt.text}</span>
+                              {isClaimed && <span className="text-[10px] text-amber-800 ml-auto font-semibold">İşaretlenen</span>}
+                            </div>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
@@ -865,7 +936,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                           <CheckCircle2 className="w-3.5 h-3.5 text-teal-700" />
                           <span>Klinik Patofizyolojik Açıklama & Sınav Notu:</span>
                         </div>
-                        <p className="text-slate-700 leading-relaxed pl-5">
+                        <p className="text-slate-700 leading-relaxed pl-5 whitespace-pre-line">
                           {explanation}
                         </p>
                       </div>
@@ -873,10 +944,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   </div>
                 )}
 
-                {/* Footer Bar: Likes & Matched Slide Preview */}
+                {/* Footer Bar: Likes, Comments, Report & Matched Slide Preview */}
                 <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100 text-xs">
-                  {/* Left: Like & Interaction */}
-                  <div className="flex items-center gap-3">
+                  {/* Left: Like, Comment & Report Interaction */}
+                  <div className="flex items-center gap-2">
                     <button
                       onClick={() => handleToggleLike(q)}
                       className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
@@ -890,7 +961,31 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       <span>{q.upvotes || 0}</span>
                     </button>
 
-                    <span className="text-[11px] text-slate-400">
+                    {/* Comments Toggle Button */}
+                    <button
+                      onClick={() => setExpandedCommentsQuestionId(expandedCommentsQuestionId === q.id ? null : q.id)}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
+                        expandedCommentsQuestionId === q.id
+                          ? 'bg-blue-600 text-white shadow-xs'
+                          : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                      }`}
+                      title="Soruya ait öğrenci öneri ve yorumlarını göster"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>Öneri & Yorum ({(q as any).comments?.length || 0})</span>
+                    </button>
+
+                    {/* Report / Complaint Button ("Şikayet Et / Hata Bildir") */}
+                    <button
+                      onClick={() => setReportingQuestion(q)}
+                      className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg font-semibold text-rose-600 hover:bg-rose-50 border border-transparent hover:border-rose-200 transition-all cursor-pointer"
+                      title="Soru hakkında hata veya şikayet bildir"
+                    >
+                      <Flag className="w-3.5 h-3.5" />
+                      <span className="hidden sm:inline">Hata Bildir</span>
+                    </button>
+
+                    <span className="text-[11px] text-slate-400 hidden md:inline">
                       {q.reconstruction ? '✓ Redakte Doğrulandı' : 'Öğrenci Katkısı'}
                     </span>
                   </div>
@@ -911,6 +1006,59 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     </button>
                   )}
                 </div>
+
+                {/* Expandable Comments & Suggestions Drawer */}
+                {expandedCommentsQuestionId === q.id && (
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 pt-3">
+                    <div className="flex items-center justify-between text-xs font-bold text-slate-800 pb-2 border-b border-slate-200">
+                      <span className="flex items-center gap-1.5">
+                        <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
+                        Öğrenci Tartışmaları, Alternatif Çözümler & Mnemonicler ({(q as any).comments?.length || 0})
+                      </span>
+                    </div>
+
+                    {/* Comments List */}
+                    <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
+                      {((q as any).comments && (q as any).comments.length > 0) ? (
+                        (q as any).comments.map((c: any) => (
+                          <div key={c.id} className="bg-white border border-slate-200 rounded-lg p-2.5 text-xs space-y-1">
+                            <div className="flex items-center justify-between text-[11px] text-slate-500 font-semibold">
+                              <span className="text-slate-800 font-bold">{c.author || 'Tıp Öğrencisi'}</span>
+                              <span>{new Date(c.timestamp).toLocaleString('tr-TR')}</span>
+                            </div>
+                            <p className="text-slate-700 leading-relaxed">{c.text}</p>
+                          </div>
+                        ))
+                      ) : (
+                        <p className="text-xs text-slate-500 italic py-1">
+                          Henüz bir öneri veya yorum eklenmemiş. Bu soruya ait klinik ipucu veya alternatif çözüm yolunu ilk sen ekle!
+                        </p>
+                      )}
+                    </div>
+
+                    {/* New Comment Input */}
+                    <div className="flex items-center gap-2 pt-2 border-t border-slate-200">
+                      <input
+                        type="text"
+                        value={newCommentText}
+                        onChange={(e) => setNewCommentText(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') handleCommentSubmit(q.id);
+                        }}
+                        placeholder="Öneri, pratik çözüm ipucu veya yorumunuzu yazın..."
+                        className="flex-1 bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-900 focus:outline-teal-600"
+                      />
+                      <button
+                        onClick={() => handleCommentSubmit(q.id)}
+                        disabled={isSubmittingComment || !newCommentText.trim()}
+                        className="bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer transition-colors"
+                      >
+                        <Send className="w-3.5 h-3.5" />
+                        <span>Gönder</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             );
           })}
@@ -1177,6 +1325,95 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 <span>Soruyu Kopyala</span>
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Question Report / Complaint Modal */}
+      {reportingQuestion && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="bg-slate-900 text-white p-4 flex items-center justify-between shrink-0">
+              <div className="flex items-center gap-2">
+                <Flag className="w-5 h-5 text-rose-400" />
+                <div>
+                  <h3 className="font-bold text-sm">Soru Hata Bildirimi & Şikayet</h3>
+                  <p className="text-[11px] text-slate-400">
+                    Soru #{reportingQuestion.questionNumber} - {reportingQuestion.discipline} ({reportingQuestion.examYear})
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setReportingQuestion(null)}
+                className="p-1 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-5 space-y-4 overflow-y-auto text-xs">
+              {reportSuccessMsg ? (
+                <div className="bg-emerald-50 border border-emerald-300 rounded-xl p-4 text-emerald-950 flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <p className="font-bold">{reportSuccessMsg}</p>
+                </div>
+              ) : (
+                <>
+                  <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
+                    <span className="text-[11px] font-bold text-slate-500">Bildirilen Soru Kökü:</span>
+                    <p className="text-slate-800 font-medium line-clamp-2">
+                      {reportingQuestion.reconstruction?.stem || reportingQuestion.rawQuestion?.stem || reportingQuestion.topic}
+                    </p>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="font-bold text-slate-700">Şikayet / Bildirim Türü:</label>
+                    <select
+                      value={reportReason}
+                      onChange={(e) => setReportReason(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-900 focus:bg-white focus:outline-teal-600"
+                    >
+                      <option value="Hatalı Soru Kökü">Hatalı veya Eksik Soru Kökü</option>
+                      <option value="Yanlış / Eksik Şıklar">Eksik veya Yanlış Seçenekler</option>
+                      <option value="Hatalı Doğru Cevap">Hatalı Doğru Cevap Anahtarı</option>
+                      <option value="Hatalı Branş / Kurul Eşleşmesi">Hatalı Branş veya Kurul Eşleşmesi</option>
+                      <option value="Yapay Zeka Redaksiyon Hatası">Yapay Zeka Redaksiyonu Yetersiz / Hatalı</option>
+                      <option value="Diğer">Diğer Sorun / İtiraz</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="font-bold text-slate-700">Detaylı Açıklama veya Düzeltme Öneriniz (Opsiyonel):</label>
+                    <textarea
+                      value={reportDetails}
+                      onChange={(e) => setReportDetails(e.target.value)}
+                      rows={3}
+                      placeholder="Örn: Bu sorunun cevabı C şıkkı olmalı çünkü hoca slayt 12'de amiloidozis ile ilişkisini vurgulamıştı..."
+                      className="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 focus:bg-white focus:outline-teal-600"
+                    />
+                  </div>
+                </>
+              )}
+            </div>
+
+            {!reportSuccessMsg && (
+              <div className="bg-slate-50 border-t border-slate-200 p-4 flex items-center justify-between shrink-0 text-xs">
+                <button
+                  onClick={() => setReportingQuestion(null)}
+                  className="px-4 py-2 rounded-xl text-slate-600 font-semibold hover:bg-slate-200 cursor-pointer"
+                >
+                  İptal
+                </button>
+                <button
+                  onClick={handleReportSubmit}
+                  disabled={isSubmittingReport}
+                  className="bg-rose-600 hover:bg-rose-700 disabled:opacity-50 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 cursor-pointer shadow-xs"
+                >
+                  <Flag className="w-3.5 h-3.5" />
+                  <span>{isSubmittingReport ? 'İletiliyor...' : 'Şikayeti İlet'}</span>
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}

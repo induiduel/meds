@@ -73,7 +73,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   // Disciplines of the current committee
   const disciplines = committee?.disciplines && committee.disciplines.length > 0
     ? committee.disciplines
-    : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Mikrobiyoloji', 'Dahiliye', 'Genel Tıp'];
+    : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Genetik', 'Enfeksiyon Hastalıkları', 'İç Hastalıkları'];
 
   const [discipline, setDiscipline] = useState(disciplines[0] || 'Tıbbi Patoloji');
   const [topic, setTopic] = useState('');

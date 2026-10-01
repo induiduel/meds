@@ -250,7 +250,7 @@ function parseQuestionsFromVerbatimText(fullText, sourceFileName, defaultCommitt
   const questions = [];
   const lines = fullText.split('\n').map(l => l.trim()).filter(Boolean);
 
-  let currentDiscipline = 'Genel Tıp';
+  let currentDiscipline = 'Tıbbi Patoloji';
   let currentQNum = null;
   let currentStemLines = [];
   let currentOptions = [];

@@ -39,7 +39,7 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
   const currentStem = question.reconstruction?.stem || question.fragments[0]?.text || '';
   const disciplines = committee?.disciplines && committee.disciplines.length > 0
     ? committee.disciplines
-    : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Mikrobiyoloji', 'Dahiliye', 'Genel Tıp'];
+    : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Genetik', 'Enfeksiyon Hastalıkları', 'İç Hastalıkları'];
 
   const [stem, setStem] = useState(currentStem);
   const [discipline, setDiscipline] = useState(question.discipline || disciplines[0]);

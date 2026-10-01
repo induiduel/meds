@@ -526,63 +526,151 @@ app.get('/api/questions/:id', (req, res) => {
   res.json({ question });
 });
 
-// Get all past exam questions with complete raw and AI-redacted data
+// --- Dedicated Past Questions Archive Database (pastQuestions.json) ---
+const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
+
+function getPastQuestionsDb(): any[] {
+  if (fs.existsSync(PAST_QUESTIONS_FILE)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
+      if (Array.isArray(data)) return data;
+    } catch (e) {
+      console.error('Error reading pastQuestions.json:', e);
+    }
+  }
+  return [];
+}
+
+function savePastQuestionsDb(list: any[]) {
+  try {
+    fs.writeFileSync(PAST_QUESTIONS_FILE, JSON.stringify(list, null, 2), 'utf-8');
+    const srcCopy = path.resolve(__dirname, 'src', 'data', 'pastQuestions.json');
+    if (fs.existsSync(path.dirname(srcCopy))) {
+      fs.writeFileSync(srcCopy, JSON.stringify(list, null, 2), 'utf-8');
+    }
+  } catch (e) {
+    console.error('Error saving pastQuestions.json:', e);
+  }
+}
+
+// Get all past exam questions strictly separated from the 2026-2027 active pool
 app.get('/api/past-exams', (req, res) => {
   try {
-    const includeAmbiguous = req.query.includeAmbiguous === 'true';
+    const list = getPastQuestionsDb();
+    const { committeeId, discipline, year, query } = req.query;
 
-    // 1. Find all past questions in db.questions, strictly excluding Civan notes
-    const pastInDb = db.questions.filter((q) => {
-      if (q.id?.startsWith('civan-')) return false;
-      if (q.tags?.some((t: string) => /civan/i.test(t))) return false;
-      if (q.author && /civan/i.test(q.author)) return false;
-      return (
-        q.id?.startsWith('past-') ||
-        q.id?.startsWith('q-') ||
-        q.examYear ||
-        q.tags?.some((t: string) => t.toLowerCase().includes('çıkmış'))
+    let filtered = list;
+    if (committeeId && committeeId !== 'all') {
+      filtered = filtered.filter(q => q.committeeId === committeeId);
+    }
+    if (discipline && discipline !== 'all') {
+      const dLower = String(discipline).toLowerCase();
+      filtered = filtered.filter(q => q.discipline?.toLowerCase().includes(dLower));
+    }
+    if (year && year !== 'all') {
+      filtered = filtered.filter(q => q.examYear === year);
+    }
+    if (query && String(query).trim()) {
+      const qLower = String(query).toLowerCase().trim();
+      filtered = filtered.filter(q =>
+        q.rawQuestion?.stem?.toLowerCase().includes(qLower) ||
+        q.reconstruction?.stem?.toLowerCase().includes(qLower) ||
+        q.topic?.toLowerCase().includes(qLower) ||
+        q.discipline?.toLowerCase().includes(qLower) ||
+        q.sourceFile?.toLowerCase().includes(qLower)
       );
-    });
-
-    // 2. Normalize and check ambiguity
-    const map = new Map<string, any>();
-    for (const q of pastInDb) {
-      let year = q.examYear;
-      if (!year || year.includes('2026') || year === 'Civan Arşivi (2020-2026)') {
-        const detected = (q.tags || []).find((t: string) => /(?:19\d{2}|20[0-2][0-5])/.test(t));
-        year = detected ? detected.match(/(?:19\d{2}|20[0-2][0-5])/)?.[0] || 'Kategorisiz' : 'Kategorisiz';
-      }
-
-      const stem = (q.reconstruction?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '').trim();
-      const opts = q.reconstruction?.options || q.options || [];
-      const validOpts = opts.filter((o: any) => o && o.text && o.text.trim().length > 0);
-      const isAmbiguous = stem.length < 25 || validOpts.length < 2;
-
-      // Extract source file if available
-      const sourceFile = q.sourceFile || (q.tags || []).find((t: string) => t.toLowerCase().endsWith('.pdf')) || 'Çıkmış Sınav Arşivi';
-
-      const processed = {
-        ...q,
-        isPastExam: true,
-        examYear: year,
-        isAmbiguous,
-        sourceFile,
-        placementNotes: isAmbiguous ? 'Muallak Soru (Eksik Metin / Yetersiz Şık)' : q.placementNotes,
-      };
-
-      if (!isAmbiguous || includeAmbiguous) {
-        map.set(q.id, processed);
-      }
     }
 
-    const result = Array.from(map.values());
     res.json({
       success: true,
-      totalCount: result.length,
-      questions: result,
+      totalCount: filtered.length,
+      questions: filtered,
     });
   } catch (err: any) {
     res.status(500).json({ error: 'Çıkmış sorular alınamadı: ' + err.message });
+  }
+});
+
+// Student comment / suggestion on a past question
+app.post('/api/past-exams/:id/comment', (req, res) => {
+  try {
+    const { author, text } = req.body;
+    if (!text || !text.trim()) {
+      return res.status(400).json({ error: 'Yorum metni zorunludur.' });
+    }
+
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+
+    if (!q.comments) q.comments = [];
+    const newComment = {
+      id: `c-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      author: author?.trim() || 'Tıp Öğrencisi',
+      text: text.trim(),
+      timestamp: new Date().toISOString()
+    };
+    q.comments.push(newComment);
+    savePastQuestionsDb(list);
+
+    res.json({ success: true, comment: newComment });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Yorum kaydedilemedi: ' + err.message });
+  }
+});
+
+// Student report / complaint ("Şikayet Et / Hata Bildir") on a past question
+app.post('/api/past-exams/:id/report', (req, res) => {
+  try {
+    const { reason, details, reportedBy } = req.body;
+    if (!reason || !reason.trim()) {
+      return res.status(400).json({ error: 'Şikayet sebebi belirtilmelidir.' });
+    }
+
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+
+    if (!q.reports) q.reports = [];
+    const newReport = {
+      id: `rep-${Date.now()}`,
+      reason: reason.trim(),
+      details: (details || '').trim(),
+      reportedBy: reportedBy || 'Anonim Öğrenci',
+      timestamp: new Date().toISOString()
+    };
+    q.reports.push(newReport);
+    savePastQuestionsDb(list);
+
+    res.json({
+      success: true,
+      message: 'Geri bildiriminiz ve şikayetiniz incelenmek üzere kaydedildi. Katkınız için teşekkür ederiz.',
+      report: newReport
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Şikayet kaydedilemedi: ' + err.message });
+  }
+});
+
+// Upvote a past question
+app.post('/api/past-exams/:id/upvote', (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+
+    q.upvotes = (q.upvotes || 0) + 1;
+    savePastQuestionsDb(list);
+
+    res.json({ success: true, upvotes: q.upvotes });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Beğeni kaydedilemedi: ' + err.message });
   }
 });
 
@@ -1484,11 +1572,11 @@ Bunu veritabanımıza uygun JSON formatında çıkar:
           id: q.id || `q-gemini-${Date.now()}-${qNum}`,
           committeeId: targetCommId,
           questionNumber: qNum,
-          discipline: q.discipline || 'Genel Tıp',
+          discipline: q.discipline || 'Tıbbi Patoloji',
           topic: q.topic || `Soru #${qNum}`,
           status: q.claimedAnswer ? 'completed' : 'gathering',
           claimedAnswer: q.claimedAnswer || undefined,
-          tags: ['Gemini/NotebookLM Sync', q.discipline || 'Genel'],
+          tags: ['Gemini/NotebookLM Sync', q.discipline || 'Tıbbi Patoloji'],
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString(),
           contributedByName: 'Gemini & NotebookLM Köprüsü',

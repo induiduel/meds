@@ -1696,9 +1696,16 @@ export const ApiService = {
   },
 
   // Past Exam Questions (Çıkmış Sorular)
-  async getPastQuestions(includeAmbiguous = false): Promise<QuestionItem[]> {
+  async getPastQuestions(params: { committeeId?: string; discipline?: string; year?: string; query?: string; includeAmbiguous?: boolean } = {}): Promise<any[]> {
     try {
-      const res = await fetch(`/api/past-exams?includeAmbiguous=${includeAmbiguous}`);
+      const qParams = new URLSearchParams();
+      if (params.committeeId && params.committeeId !== 'all') qParams.set('committeeId', params.committeeId);
+      if (params.discipline && params.discipline !== 'all') qParams.set('discipline', params.discipline);
+      if (params.year && params.year !== 'all') qParams.set('year', params.year);
+      if (params.query) qParams.set('query', params.query);
+      if (params.includeAmbiguous) qParams.set('includeAmbiguous', 'true');
+
+      const res = await fetch(`/api/past-exams?${qParams.toString()}`);
       if (res.ok) {
         const data = await res.json();
         return data.questions || [];
@@ -1709,15 +1716,56 @@ export const ApiService = {
     try {
       const cloudPast = await FirestoreDbService.getAllPastQuestions();
       if (cloudPast && cloudPast.length > 0) {
-        return includeAmbiguous ? cloudPast : cloudPast.filter(q => !q.isAmbiguous);
+        return cloudPast;
       }
     } catch (e) {}
-    const all = await this.getQuestions();
-    return all.filter(q => {
-      if (q.id?.startsWith('civan-')) return false;
-      if (q.tags?.some((t: string) => /civan/i.test(t))) return false;
-      return q.id?.startsWith('past-') || q.id?.startsWith('q-') || q.examYear || q.tags?.some((t: string) => t.toLowerCase().includes('çıkmış'));
+
+    // Fallback: load static past questions
+    try {
+      const staticPast = await import('../data/pastQuestions.json');
+      return (staticPast.default || staticPast) as any[];
+    } catch (e) {}
+
+    return [];
+  },
+
+  async commentPastQuestion(questionId: string, author: string, text: string): Promise<any> {
+    const res = await fetch(`/api/past-exams/${encodeURIComponent(questionId)}/comment`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ author, text }),
     });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: 'Yorum eklenemedi' }));
+      throw new Error(err.error);
+    }
+    return await res.json();
+  },
+
+  async reportPastQuestion(questionId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
+    const res = await fetch(`/api/past-exams/${encodeURIComponent(questionId)}/report`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ reason, details, reportedBy }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: 'Şikayet iletilemedi' }));
+      throw new Error(err.error);
+    }
+    return await res.json();
+  },
+
+  async upvotePastQuestion(questionId: string): Promise<number> {
+    try {
+      const res = await fetch(`/api/past-exams/${encodeURIComponent(questionId)}/upvote`, {
+        method: 'POST',
+      });
+      if (res.ok) {
+        const data = await res.json();
+        return data.upvotes || 1;
+      }
+    } catch (e) {}
+    return 1;
   },
 
   // AI: Generate similar exam question grounded in matched lecture note
