@@ -62,6 +62,16 @@ service cloud.firestore {
       allow create, update: if true;
       allow delete: if isAdmin();
     }
+
+    // System status collection
+    match /system_status/{docId} {
+      allow read, write: if true;
+    }
+
+    // Admin commands collection
+    match /admin_commands/{commandId} {
+      allow read, write: if true;
+    }
   }
 }
 

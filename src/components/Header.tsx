@@ -15,7 +15,8 @@ import {
   LogIn, 
   Trophy, 
   BookMarked,
-  Brain
+  Brain,
+  Cpu
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
@@ -31,6 +32,7 @@ interface HeaderProps {
   onOpenAdminPanel: () => void;
   onOpenPastExamModal?: () => void;
   onOpenNotebookLMModal?: () => void;
+  onOpenSubagentMonitor?: () => void;
   onOpenProfileModal?: () => void;
   onOpenAuthModal?: (mode: 'login' | 'register' | 'admin') => void;
   completedCount: number;
@@ -59,6 +61,7 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenAdminPanel,
   onOpenPastExamModal,
   onOpenNotebookLMModal,
+  onOpenSubagentMonitor,
   onOpenProfileModal,
   onOpenAuthModal,
   completedCount,
@@ -211,6 +214,18 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
                 <span>Çıkmış Soru Yükle</span>
+              </button>
+            )}
+
+            {/* AI Subagent & Worker Monitor Button */}
+            {onOpenSubagentMonitor && (
+              <button
+                onClick={onOpenSubagentMonitor}
+                className="hidden sm:inline-flex bg-slate-900 hover:bg-slate-800 text-teal-300 border border-slate-700 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs font-bold items-center gap-1.5 shadow-xs transition-all cursor-pointer active:scale-95"
+                title="Yapay zeka subagentleri, OCR süreçleri ve yerel sunucu durumunu izle"
+              >
+                <Cpu className="w-3.5 h-3.5 text-teal-400 animate-pulse" />
+                <span className="whitespace-nowrap">AI Subagent</span>
               </button>
             )}
 

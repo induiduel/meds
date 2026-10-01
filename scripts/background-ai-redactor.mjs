@@ -12,7 +12,10 @@
 
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 import { fileURLToPath } from 'url';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, doc, setDoc, onSnapshot, collection, updateDoc, writeBatch } from 'firebase/firestore';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,6 +27,20 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
 const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const STATUS_PATH = path.join(ROOT_DIR, 'data', 'ai-redactor-status.json');
+
+// Initialize Firebase Firestore Bridge
+const cfgPath = path.join(ROOT_DIR, 'firebase-applet-config.json');
+let firestoreDb = null;
+if (fs.existsSync(cfgPath)) {
+  try {
+    const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
+    const app = initializeApp(cfg, 'ai-redactor-worker');
+    firestoreDb = cfg.firestoreDatabaseId ? getFirestore(app, cfg.firestoreDatabaseId) : getFirestore(app);
+    console.log('🔥 [AI Redactor Subagent] Firebase Firestore Bulut Köprüsü bağlandı.');
+  } catch (e) {
+    console.warn('⚠️ [AI Redactor Subagent] Firebase bağlantı uyarısı:', e.message);
+  }
+}
 
 // 1. Resmi Müfredat Kurulları (Karabük Tıp Dönem 3 2026-2027)
 const OFFICIAL_COMMITTEES = [
@@ -494,77 +511,228 @@ function finalizeTableQuestion(current, filename, committeeId, examYear) {
   };
 }
 
-// Tüm Dosyaları Tara ve İyileştir
+// Update Firestore Telemetry and Heartbeat
+async function updateFirestoreTelemetry(statusData) {
+  if (!firestoreDb) return;
+  try {
+    await setDoc(doc(firestoreDb, 'system_status', 'ai_subagent_monitor'), {
+      ...statusData,
+      updatedAt: new Date().toISOString(),
+      timestamp: Date.now()
+    }, { merge: true });
+
+    await setDoc(doc(firestoreDb, 'system_status', 'worker_heartbeat'), {
+      source: 'background_ai_redactor',
+      hostname: `${os.hostname()} (Windows 10/11)`,
+      status: 'online',
+      uptime: Math.round(process.uptime()),
+      pid: process.pid,
+      totalQuestions: statusData.totalQuestions,
+      validQuestions: statusData.validQuestionsCount,
+      suspectQuestions: statusData.suspectQuestionsCount,
+      lectureNotesIndexed: statusData.lectureNotesIndexed,
+      lastHeartbeat: new Date().toISOString(),
+      timestamp: Date.now(),
+      hybridServerPort: 3000,
+    }, { merge: true });
+
+    await setDoc(doc(firestoreDb, 'system_status', 'local_server_config'), {
+      isServerRunning: true,
+      port: 3000,
+      localUrl: 'http://localhost:3000',
+      lastHeartbeat: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    }, { merge: true });
+  } catch (err) {
+    console.warn('⚠️ [AI Redactor] Firestore heartbeat hatası:', err.message);
+  }
+}
+
+// Tüm Dosyaları Tara, İyileştir ve Veritabanını Güncelle
 export async function runFullRedactionCycle() {
-  console.log('🚀 [AI Redactor Subagent] Çıkmış soru arşivi taranıyor ve redakte ediliyor...');
-  const files = fs.readdirSync(EXAM_TXT_DIR).filter(f => f.endsWith('.txt'));
+  console.log('🚀 [AI Redactor Subagent] Çıkmış soru arşivi ve yerel sorular taranıyor...');
+  
+  // 1. Mevcut Veritabanını Oku (Kullanıcı oyları, kilitler, admin redaksiyonları ve yorumları koru)
+  const existingMap = new Map();
+  if (fs.existsSync(DATA_PAST_PATH)) {
+    try {
+      const existingList = JSON.parse(fs.readFileSync(DATA_PAST_PATH, 'utf8'));
+      for (const eq of existingList) {
+        const normKey = (eq.rawQuestion?.stem || eq.reconstruction?.stem || eq.topic || '').toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 45);
+        if (normKey.length >= 8) {
+          existingMap.set(normKey, eq);
+        }
+      }
+      console.log(`   📂 ${existingMap.size} adet mevcut soru önbelleğe alındı (kullanıcı oyları & kilitler korunacak).`);
+    } catch (e) {}
+  }
+
   const allParsed = [];
 
-  for (const f of files) {
-    if (f.toLowerCase().includes('cevap anahtar') || f.toLowerCase().includes('civan')) {
-      console.log(`   ⏭ Atlandı: ${f}`);
-      continue;
+  // 2. meds_sorular_txt Taraması
+  if (fs.existsSync(EXAM_TXT_DIR)) {
+    const files = fs.readdirSync(EXAM_TXT_DIR).filter(f => f.endsWith('.txt'));
+    for (const f of files) {
+      if (f.toLowerCase().includes('cevap anahtar') || f.toLowerCase().includes('civan')) {
+        continue;
+      }
+
+      const fullPath = path.join(EXAM_TXT_DIR, f);
+      const content = fs.readFileSync(fullPath, 'utf8');
+      if (content.length < 400) continue;
+
+      const committeeId = determineCommitteeId(f);
+      const examYear = determineExamYear(f, content);
+
+      let parsed = [];
+      if (content.includes('No \tDers /') || content.includes('Sıra\nNo \tCevap') || content.includes('\tAile Hekimliği') || content.includes('\tTıbbi Patoloji')) {
+        parsed = parseTableFormat(content, f, committeeId, examYear);
+      } else {
+        parsed = parseEnhancedStandardFormat(content, f, committeeId, examYear);
+      }
+
+      if (parsed.length > 0) {
+        allParsed.push(...parsed);
+      }
     }
+  }
 
-    const fullPath = path.join(EXAM_TXT_DIR, f);
-    const content = fs.readFileSync(fullPath, 'utf8');
-    if (content.length < 400) continue;
-
-    const committeeId = determineCommitteeId(f);
-    const examYear = determineExamYear(f, content);
-
-    let parsed = [];
-    if (content.includes('No \tDers /') || content.includes('Sıra\nNo \tCevap') || content.includes('\tAile Hekimliği') || content.includes('\tTıbbi Patoloji')) {
-      parsed = parseTableFormat(content, f, committeeId, examYear);
-    } else {
-      parsed = parseEnhancedStandardFormat(content, f, committeeId, examYear);
-    }
-
-    if (parsed.length > 0) {
-      console.log(`   ✓ ${f} -> ${parsed.length} soru ayrıştırıldı (${examYear} - ${committeeId})`);
+  // 3. local_sorular_txt Taraması (1,375 AI Sorusu)
+  const localTxtDir = path.join(BASE_DIR, 'local_sorular_txt');
+  if (fs.existsSync(localTxtDir)) {
+    const localFiles = fs.readdirSync(localTxtDir).filter(f => f.endsWith('.txt'));
+    for (const lf of localFiles) {
+      const fullPath = path.join(localTxtDir, lf);
+      const content = fs.readFileSync(fullPath, 'utf8');
+      if (content.length < 200) continue;
+      const committeeId = determineCommitteeId(lf);
+      const examYear = determineExamYear(lf, content);
+      const parsed = parseEnhancedStandardFormat(content, lf, committeeId, examYear);
+      for (const p of parsed) {
+        p.aiCategory = 'Yapay Zeka (AI Oluşturulan Soru)';
+      }
       allParsed.push(...parsed);
     }
   }
 
-  // Deduplikasyon ve Temizleme
+  // 4. Deduplikasyon, 90%+ Kabul Kuralı & Akıllı Birleştirme
   const uniqueMap = new Map();
   let suspectCount = 0;
   let validCount = 0;
+  let lockedCount = 0;
 
   for (const q of allParsed) {
     const normKey = q.rawQuestion.stem.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 45);
     if (normKey.length < 10) continue;
 
     if (!uniqueMap.has(normKey)) {
+      // Daha önceden var olan soru verilerini aktar
+      if (existingMap.has(normKey)) {
+        const existing = existingMap.get(normKey);
+        q.upvotes = existing.upvotes || q.upvotes || 0;
+        q.comments = existing.comments || q.comments || [];
+        q.reports = existing.reports || q.reports || [];
+        q.id = existing.id || q.id;
+
+        // %90+ KABUL KURALI: Eğer 10+ beğeni almışsa veya admin özel redakte etmişse, mevcudu KORU!
+        if ((q.upvotes >= 10 && q.reports.length === 0) || existing.customRedactedBy) {
+          q.reconstruction = existing.reconstruction;
+          q.claimedAnswer = existing.claimedAnswer || q.claimedAnswer;
+          q.isLocked = true;
+          q.customRedactedBy = existing.customRedactedBy;
+          q.customRedactedAt = existing.customRedactedAt;
+          q.customRedactionPrompt = existing.customRedactionPrompt;
+          lockedCount++;
+        }
+      }
+
       uniqueMap.set(normKey, q);
       if (q.isSuspect) suspectCount++;
       else validCount++;
     }
   }
 
+  // Also preserve any existing AI questions that weren't re-parsed
+  for (const [key, eq] of existingMap.entries()) {
+    if (!uniqueMap.has(key)) {
+      uniqueMap.set(key, eq);
+      if (eq.isSuspect) suspectCount++;
+      else validCount++;
+    }
+  }
+
   const finalQuestions = Array.from(uniqueMap.values());
-  console.log(`\n✨ [AI Redactor] Toplam Ayrıştırılan: ${finalQuestions.length}`);
+  console.log(`\n✨ [AI Redactor] Toplam Ayrıştırılan & Korunan: ${finalQuestions.length}`);
   console.log(`   ✓ Geçerli & 5 Şıklı Tam Redakte Sorular: ${validCount}`);
   console.log(`   ⚠️ Şüpheli / Muallak (Arkaplanda İşaretli): ${suspectCount}`);
+  console.log(`   🔒 %90+ Kabul Görmüş / Kilitli Sorular: ${lockedCount}`);
 
   // Dosyalara Kaydet
   fs.writeFileSync(DATA_PAST_PATH, JSON.stringify(finalQuestions, null, 2), 'utf8');
   fs.writeFileSync(SRC_PAST_PATH, JSON.stringify(finalQuestions, null, 2), 'utf8');
 
-  // Durum Raporunu Kaydet (Frontend & Server için)
+  // Durum Raporunu Kaydet
   const statusData = {
     isRunning: true,
     lastRunAt: new Date().toISOString(),
     totalQuestions: finalQuestions.length,
     validQuestionsCount: validCount,
     suspectQuestionsCount: suspectCount,
+    lockedQuestionsCount: lockedCount,
     lectureNotesIndexed: lectureNotes.length,
-    statusText: `Arkaplan Redaksiyon Aktif: ${validCount} soru tam redakte edildi, ${suspectCount} şüpheli soru arkaplanda işaretlendi.`
+    statusText: `Arkaplan Redaksiyon Aktif: ${validCount} soru tam redakte edildi, ${suspectCount} şüpheli soru muallak olarak işaretlendi. ${lockedCount} soru öğrenci onayıyla kilitlendi.`
   };
   fs.writeFileSync(STATUS_PATH, JSON.stringify(statusData, null, 2), 'utf8');
   console.log(`💾 [AI Redactor] Veriler ${DATA_PAST_PATH} ve ${SRC_PAST_PATH} dosyalarına başarıyla kaydedildi!`);
 
+  // Firestore Telemetrisini Güncelle
+  await updateFirestoreTelemetry(statusData);
+
   return statusData;
+}
+
+// Admin Commands Listener
+function setupAdminCommandListener() {
+  if (!firestoreDb) return;
+  try {
+    onSnapshot(collection(firestoreDb, 'admin_commands'), async (snapshot) => {
+      for (const change of snapshot.docChanges()) {
+        if (change.type === 'added' || change.type === 'modified') {
+          const cmdData = change.doc.data();
+          if (cmdData.status === 'pending') {
+            console.log(`⚡ [Bulut Köprüsü] Yeni Admin Komutu Alındı: ${cmdData.command} (${change.doc.id})`);
+            try {
+              await updateDoc(doc(firestoreDb, 'admin_commands', change.doc.id), {
+                status: 'running',
+                startedAt: new Date().toISOString()
+              });
+
+              if (cmdData.command === 'run_redactor_cycle' || cmdData.command === 'run_full_local_sync') {
+                const res = await runFullRedactionCycle();
+                await updateDoc(doc(firestoreDb, 'admin_commands', change.doc.id), {
+                  status: 'completed',
+                  completedAt: new Date().toISOString(),
+                  result: res
+                });
+                console.log(`✅ [Bulut Köprüsü] Komut Başarıyla Tamamlandı: ${cmdData.command}`);
+              }
+            } catch (cmdErr) {
+              console.error('Komut çalıştırma hatası:', cmdErr.message);
+              await updateDoc(doc(firestoreDb, 'admin_commands', change.doc.id), {
+                status: 'failed',
+                error: cmdErr.message
+              }).catch(() => {});
+            }
+          }
+        }
+      }
+    }, (err) => {
+      console.warn('⚠️ Admin command listener error:', err.message);
+    });
+    console.log('📡 [AI Redactor] Firestore Admin Komut Kuyruğu dinleniyor.');
+  } catch (e) {
+    console.warn('⚠️ Command listener setup error:', e.message);
+  }
 }
 
 // Ana Başlatıcı
@@ -572,10 +740,23 @@ const isDaemon = process.argv.includes('--daemon');
 
 if (isDaemon) {
   console.log('🔄 [AI Redactor Subagent] Daemon modu aktif: Her 5 dakikada bir otomatik tarama yapacak...');
+  setupAdminCommandListener();
   runFullRedactionCycle().catch(console.error);
+
+  // Periyodik Redaksiyon Döngüsü
   setInterval(() => {
     runFullRedactionCycle().catch(console.error);
   }, 5 * 60 * 1000);
+
+  // Canlı Kalp Atışı (Her 25 saniyede bir)
+  setInterval(() => {
+    if (fs.existsSync(STATUS_PATH)) {
+      try {
+        const currentStatus = JSON.parse(fs.readFileSync(STATUS_PATH, 'utf8'));
+        updateFirestoreTelemetry(currentStatus).catch(() => {});
+      } catch (e) {}
+    }
+  }, 25 * 1000);
 } else {
   runFullRedactionCycle()
     .then(() => {

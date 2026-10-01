@@ -3,11 +3,14 @@ import {
   collection, 
   doc, 
   getDocs, 
+  getDoc,
   setDoc, 
+  addDoc,
   deleteDoc, 
   query, 
   where, 
-  writeBatch
+  writeBatch,
+  onSnapshot
 } from 'firebase/firestore';
 import { auth } from './auth';
 import { Committee, QuestionItem, AdminNotification, LectureNote } from '../types';
@@ -649,6 +652,105 @@ export class FirestoreDbService {
     } catch (e) {
       console.warn('Firestore getAllPastQuestions fallback:', e);
       return [];
+    }
+  }
+
+  /**
+   * Update or create a past exam question in Firestore 'past_questions' collection
+   */
+  static async updatePastQuestion(question: QuestionItem): Promise<boolean> {
+    try {
+      if (!question.id) return false;
+      const docRef = doc(db, 'past_questions', question.id);
+      await setDoc(docRef, cleanForFirestore(question), { merge: true });
+      return true;
+    } catch (err: any) {
+      console.warn('Firestore updatePastQuestion error:', err.message);
+      return false;
+    }
+  }
+
+  /**
+   * Fetches latest local PC background worker heartbeat from Firestore
+   */
+  static async getWorkerHeartbeat(): Promise<any | null> {
+    try {
+      const snap = await withTimeout(getDoc(doc(db, 'system_status', 'worker_heartbeat')), 3500);
+      return snap.exists() ? snap.data() : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /**
+   * Realtime subscription to local PC background worker heartbeat
+   */
+  static subscribeWorkerHeartbeat(callback: (data: any | null) => void): () => void {
+    try {
+      const unsub = onSnapshot(doc(db, 'system_status', 'worker_heartbeat'), (snap) => {
+        callback(snap.exists() ? snap.data() : null);
+      }, (err) => {
+        console.warn('Worker heartbeat subscription error:', err.message);
+      });
+      return unsub;
+    } catch (e) {
+      return () => {};
+    }
+  }
+
+  /**
+   * Fetches latest AI Subagent monitor telemetry from Firestore
+   */
+  static async getSubagentMonitorStatus(): Promise<any | null> {
+    try {
+      const snap = await withTimeout(getDoc(doc(db, 'system_status', 'ai_subagent_monitor')), 3500);
+      return snap.exists() ? snap.data() : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /**
+   * Realtime subscription to AI Subagent monitor telemetry
+   */
+  static subscribeSubagentMonitor(callback: (data: any | null) => void): () => void {
+    try {
+      const unsub = onSnapshot(doc(db, 'system_status', 'ai_subagent_monitor'), (snap) => {
+        callback(snap.exists() ? snap.data() : null);
+      }, (err) => {
+        console.warn('Subagent monitor subscription error:', err.message);
+      });
+      return unsub;
+    } catch (e) {
+      return () => {};
+    }
+  }
+
+  /**
+   * Sends an admin command to the background daemon via Firestore queue
+   * (e.g. 'run_full_local_sync', 'run_redactor_cycle', 'install_service', 'stop_service')
+   */
+  static async sendAdminCommand(command: string, payload: any = {}, requestedBy: string = 'nofrostlife@gmail.com'): Promise<{ success: boolean; commandId?: string; message: string }> {
+    try {
+      const ref = await addDoc(collection(db, 'admin_commands'), {
+        command,
+        payload,
+        requestedBy,
+        status: 'pending',
+        createdAt: new Date().toISOString(),
+        timestamp: Date.now()
+      });
+      return {
+        success: true,
+        commandId: ref.id,
+        message: 'Komut bulut kuyruğuna iletildi. Yerel bilgisayarınızdaki servis işleme alıyor...'
+      };
+    } catch (err: any) {
+      console.warn('sendAdminCommand error:', err.message);
+      return {
+        success: false,
+        message: 'Komut iletilemedi: ' + err.message
+      };
     }
   }
 }

@@ -57,6 +57,7 @@ interface AdminPanelModalProps {
   questions: QuestionItem[];
   selectedCommitteeId: string;
   onRefreshData: () => Promise<void>;
+  onOpenSubagentMonitor?: () => void;
 }
 
 export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
@@ -67,6 +68,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   questions,
   selectedCommitteeId,
   onRefreshData,
+  onOpenSubagentMonitor,
 }) => {
   const [activeTab, setActiveTab] = useState<'questions' | 'automations' | 'database' | 'users'>('questions');
   const [editingQuestion, setEditingQuestion] = useState<QuestionItem | null>(null);
@@ -312,13 +314,12 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setIsSyncingFullLocal(true);
     setFullLocalSyncFeedback('Yerel Drive indirme ve OCR çıkarma motoru başlatılıyor...');
     try {
-      const res = await fetch('/api/automation/run-full-local-sync', { method: 'POST' });
-      const data = await res.json();
+      const data = await ApiService.runFullLocalSync(adminEmail);
       if (data.success) {
-        setFullLocalSyncFeedback(`✓ ${data.message} - PDF'ler yerel CPU ile taranıp metinleri ve soruları veritabanına aktarılıyor.`);
+        setFullLocalSyncFeedback(`✓ ${data.message} - PDF'ler taranıp veritabanına aktarılıyor.`);
         await onRefreshData();
       } else {
-        setFullLocalSyncFeedback(`Hata: ${data.error || 'İşlem başlatılamadı'}`);
+        setFullLocalSyncFeedback(`Hata: ${data.message || 'İşlem başlatılamadı'}`);
       }
     } catch (e: any) {
       setFullLocalSyncFeedback(`Hata: ${e.message}`);
@@ -561,9 +562,15 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const checkWorkerStatus = async () => {
     setIsCheckingWorker(true);
     try {
-      const res = await fetch('/api/worker/heartbeat');
-      const data = await res.json();
-      setWorkerHeartbeat(data);
+      const res = await safeJsonFetch<any>('/api/worker/heartbeat');
+      if (res.ok && res.data) {
+        setWorkerHeartbeat(res.data);
+      } else {
+        const cloudHeartbeat = await FirestoreDbService.getWorkerHeartbeat();
+        if (cloudHeartbeat) {
+          setWorkerHeartbeat(cloudHeartbeat);
+        }
+      }
     } catch (e) {
       // ignore
     } finally {
@@ -833,18 +840,29 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   </div>
                 </div>
 
-                <button
-                  onClick={checkWorkerStatus}
-                  disabled={isCheckingWorker}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
-                    workerHeartbeat?.isOnline
-                      ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950'
-                      : 'bg-amber-600 hover:bg-amber-700 text-white'
-                  }`}
-                >
-                  <RefreshCw className={`w-3.5 h-3.5 ${isCheckingWorker ? 'animate-spin' : ''}`} />
-                  <span>{isCheckingWorker ? 'Kontrol Ediliyor...' : 'Bağlantıyı Test Et'}</span>
-                </button>
+                <div className="flex items-center gap-2">
+                  {onOpenSubagentMonitor && (
+                    <button
+                      onClick={onOpenSubagentMonitor}
+                      className="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-xs shrink-0"
+                    >
+                      <span>🤖 Subagent & Hibrit Paneli</span>
+                    </button>
+                  )}
+
+                  <button
+                    onClick={checkWorkerStatus}
+                    disabled={isCheckingWorker}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
+                      workerHeartbeat?.isOnline
+                        ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950'
+                        : 'bg-amber-600 hover:bg-amber-700 text-white'
+                    }`}
+                  >
+                    <RefreshCw className={`w-3.5 h-3.5 ${isCheckingWorker ? 'animate-spin' : ''}`} />
+                    <span>{isCheckingWorker ? 'Kontrol Ediliyor...' : 'Bağlantıyı Test Et'}</span>
+                  </button>
+                </div>
               </div>
 
               {workerHeartbeat?.isOnline ? (

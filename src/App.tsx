@@ -44,6 +44,7 @@ import { MobileBottomNav } from './components/MobileBottomNav';
 import { PastExamsView } from './components/PastExamsView';
 import { AdminPastExamImporterModal } from './components/AdminPastExamImporterModal';
 import { NotebookLMSyncModal } from './components/NotebookLMSyncModal';
+import { SubagentMonitorModal } from './components/SubagentMonitorModal';
 import { REAL_KURUL1_DRIVE_SLIDES } from './services/driveAutomation';
 import { ApiService } from './services/api';
 import { 
@@ -93,6 +94,7 @@ export default function App() {
   const [isAdminPanelOpen, setIsAdminPanelOpen] = useState(false);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
   const [isNotebookLMModalOpen, setIsNotebookLMModalOpen] = useState(false);
+  const [isSubagentMonitorOpen, setIsSubagentMonitorOpen] = useState(false);
   const [contributeDefaultNumber, setContributeDefaultNumber] = useState<number | undefined>(undefined);
 
   // User Auth & Profile Modals
@@ -603,6 +605,7 @@ export default function App() {
         onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
         onOpenPastExamModal={() => setIsPastExamImporterOpen(true)}
         onOpenNotebookLMModal={isAdmin ? () => setIsNotebookLMModalOpen(true) : undefined}
+        onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
         onOpenProfileModal={() => setIsProfileModalOpen(true)}
         onOpenAuthModal={(m) => {
           setAuthModalInitialMode(m);
@@ -1059,6 +1062,7 @@ export default function App() {
         questions={questions}
         selectedCommitteeId={selectedCommitteeId}
         onRefreshData={fetchQuestions}
+        onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
       />
 
       {/* A4 Medical Exam Booklet & High-Resolution PDF Print Modal */}
@@ -1154,6 +1158,12 @@ export default function App() {
           onQuestionsUpdated={fetchQuestions}
         />
       )}
+
+      {/* AI Subagents & Hybrid Server Monitor Modal */}
+      <SubagentMonitorModal
+        isOpen={isSubagentMonitorOpen}
+        onClose={() => setIsSubagentMonitorOpen(false)}
+      />
 
       {/* Mobile-First Bottom Navigation Bar */}
       <MobileBottomNav

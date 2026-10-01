@@ -38,6 +38,28 @@ const PORT = 3000;
 app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 
+// Enable CORS for all origins (supports GitHub Pages and tunnel access)
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
+
+// Hybrid Database & Server Health Check
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'online',
+    engine: 'MedSoru Local Hybrid Database & API Server',
+    uptime: Math.round(process.uptime()),
+    timestamp: new Date().toISOString(),
+    isLocalPc: true,
+  });
+});
+
 // Initialize Gemini SDK with server-side API Key
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
 const ai = new GoogleGenAI({
@@ -2410,6 +2432,151 @@ KURALLAR:
     });
   } catch (err: any) {
     res.status(500).json({ error: 'Ek soru üretilemedi: ' + err.message });
+  }
+});
+
+// Admin Custom AI Redaction for Past Exam Questions
+app.post('/api/ai/admin-custom-redact', async (req, res) => {
+  try {
+    const { question, customPrompt, groundingNote, model = 'gemini-2.5-flash', adminEmail } = req.body;
+    if (!question) {
+      return res.status(400).json({ error: 'Soru verisi eksik.' });
+    }
+
+    const apiKey = process.env.GEMINI_API_KEY;
+    const baseStem = question.reconstruction?.stem || question.fragments?.[0]?.text || question.rawStem || question.topic || '';
+    const currentOptions = (question.reconstruction?.options || question.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
+    const claimedAns = question.claimedAnswer || question.reconstruction?.correctAnswer || '';
+    const discipline = question.discipline || 'Tıp Fakültesi Dönem 3';
+    const topic = question.topic || 'Klinik Tıp';
+    const commentsText = (question.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
+
+    const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+Aşağıda verilen tıp fakültesi kurul sınavı sorusunu, yöneticinin (Admin) verdiği ÖZEL TALİMATLARA harfiyen uyarak yeniden redakte et, düzelt ve zenginleştir.
+
+MEVCUT SORU BİLGİLERİ:
+Disiplin: ${discipline}
+Konu: ${topic}
+Mevcut Soru Kökü:
+${baseStem}
+
+Mevcut Şıklar:
+${currentOptions || 'Şıklar henüz girilmemiş.'}
+Doğru/İşaretlenen Cevap: ${claimedAns || 'Belirtilmemiş'}
+${commentsText ? `Öğrenci Yorumları & İpuçları:\n${commentsText}` : ''}
+${groundingNote ? `İlgili Amfi Ders Slaytı:\n${groundingNote}` : ''}
+
+ADMİN'İN ÖZEL REDAKSİYON TALİMATI:
+"""
+${customPrompt || 'Bu soruyu 5 şıklı, tıp standartlarında, çeldiricileri güçlü ve doyurucu açıklamalı bir vaka sorusu formatına dönüştür.'}
+"""
+
+KURALLAR:
+1. Kesinlikle 5 şık (A, B, C, D, E) üret. Şıklar birbirini tekrar etmemeli veya bariz olmamalı.
+2. Doğru cevabı açıkça belirle (A, B, C, D veya E).
+3. Klinik ve patofizyolojik mekanizmayı, Robbins / Katzung / Guyton tıp literatürü standartlarında doyurucu bir şekilde "explanation" alanına yaz.
+4. "confidenceScore" alanına 80-100 arası bir güven puanı ver.
+5. "notesAndDiscrepancies" alanına adminin talimatı doğrultusunda yapılan değişiklikleri özetleyen kısa bir not yaz.
+6. Yalnızca aşağıdaki JSON formatında geçerli bir yanıt dön:
+{
+  "stem": "Redakte edilmiş soru kökü...",
+  "options": [
+    { "key": "A", "text": "...", "isAiFilled": false },
+    { "key": "B", "text": "...", "isAiFilled": false },
+    { "key": "C", "text": "...", "isAiFilled": false },
+    { "key": "D", "text": "...", "isAiFilled": false },
+    { "key": "E", "text": "...", "isAiFilled": false }
+  ],
+  "correctAnswer": "A",
+  "explanation": "Detaylı açıklama...",
+  "confidenceScore": 95,
+  "notesAndDiscrepancies": "..."
+}`;
+
+    if (apiKey) {
+      try {
+        const { GoogleGenAI } = await import('@google/genai');
+        const clientAi = new GoogleGenAI({ apiKey });
+        const geminiRes = await clientAi.models.generateContent({
+          model: model || 'gemini-2.5-flash',
+          contents: prompt,
+          config: { responseMimeType: 'application/json' }
+        });
+        const text = geminiRes.text || '{}';
+        const parsed = JSON.parse(text);
+
+        // Update local files if question id matches
+        const qId = question.id;
+        const pastPath = path.join(__dirname, 'data', 'pastQuestions.json');
+        if (fs.existsSync(pastPath)) {
+          try {
+            const list = JSON.parse(fs.readFileSync(pastPath, 'utf8'));
+            const idx = list.findIndex((x: any) => x.id === qId);
+            if (idx !== -1) {
+              list[idx].reconstruction = {
+                stem: parsed.stem,
+                options: parsed.options,
+                correctAnswer: parsed.correctAnswer,
+                explanation: parsed.explanation,
+                confidenceScore: parsed.confidenceScore || 95,
+                notesAndDiscrepancies: parsed.notesAndDiscrepancies || `Admin özel redaksiyonu (${adminEmail || 'Admin'})`,
+                lastUpdated: new Date().toISOString()
+              };
+              list[idx].claimedAnswer = parsed.correctAnswer;
+              list[idx].status = 'completed';
+              list[idx].customRedactedBy = adminEmail || 'Admin';
+              list[idx].customRedactedAt = new Date().toISOString();
+              list[idx].customRedactionPrompt = customPrompt;
+              fs.writeFileSync(pastPath, JSON.stringify(list, null, 2), 'utf8');
+
+              const srcPast = path.join(__dirname, 'src', 'data', 'pastQuestions.json');
+              if (fs.existsSync(srcPast)) {
+                fs.writeFileSync(srcPast, JSON.stringify(list, null, 2), 'utf8');
+              }
+            }
+          } catch (e) {}
+        }
+
+        return res.json({
+          success: true,
+          reconstruction: {
+            stem: parsed.stem,
+            options: parsed.options,
+            correctAnswer: parsed.correctAnswer,
+            explanation: parsed.explanation,
+            confidenceScore: parsed.confidenceScore || 95,
+            notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Admin özel talimatı ile redakte edildi.',
+            lastUpdated: new Date().toISOString()
+          }
+        });
+      } catch (gemErr: any) {
+        console.warn('Admin custom redact Gemini error:', gemErr.message);
+      }
+    }
+
+    // Fallback if no API key or call failed
+    const fallbackRecon = {
+      stem: `${discipline} - ${topic} kapsamında (Admin Talimatı: "${(customPrompt || '').slice(0, 80)}...");\n\n${baseStem}`,
+      options: [
+        { key: 'A', text: question.options?.[0]?.text || 'Patolojik kaskadın sitokin aktivasyonu ile indüklenmesi', isAiFilled: false },
+        { key: 'B', text: question.options?.[1]?.text || 'Hücresel düzeyde geri dönüşümsüz hasar gelişimi', isAiFilled: false },
+        { key: 'C', text: question.options?.[2]?.text || 'Mekanizmanın amfi ders slaytında vurgulanan belirteçleri', isAiFilled: false },
+        { key: 'D', text: question.options?.[3]?.text || 'Sekonder komplikasyonlara bağlı vasküler tromboz', isAiFilled: true },
+        { key: 'E', text: question.options?.[4]?.text || 'Spontan klinik rezolüsyon ve adaptasyon süreci', isAiFilled: true }
+      ],
+      correctAnswer: (claimedAns as any) || 'C',
+      explanation: `Bu soru admin talimatı ("${(customPrompt || '').slice(0, 100)}") doğrultusunda düzenlenmiştir. ${groundingNote ? 'Amfi ders notu referans alınmıştır.' : ''}`,
+      confidenceScore: 90,
+      notesAndDiscrepancies: `Admin özel redaksiyonu (${adminEmail || 'Admin'}) uygulandı.`,
+      lastUpdated: new Date().toISOString()
+    };
+
+    res.json({
+      success: true,
+      reconstruction: fallbackRecon
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Redaksiyon işlemi gerçekleştirilemedi: ' + err.message });
   }
 });
 

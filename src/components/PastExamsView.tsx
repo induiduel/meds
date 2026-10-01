@@ -30,8 +30,9 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
-import { AppUser } from '../services/auth';
+import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
+import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 
 interface PastExamsViewProps {
   currentUser: AppUser | null;
@@ -72,6 +73,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // AI Similar Question Modal State
   const [similarModalQuestion, setSimilarModalQuestion] = useState<any | null>(null);
   const [isGeneratingSimilar, setIsGeneratingSimilar] = useState<string | null>(null);
+
+  // Admin Custom AI Redaction Modal State
+  const [customRedactQuestion, setCustomRedactQuestion] = useState<{ question: QuestionItem; match: any } | null>(null);
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -731,6 +735,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       )}
                       <span>{isGeneratingSimilar === q.id ? 'Üretiliyor...' : 'Ek Soru Sor'}</span>
                     </button>
+
+                    {/* Admin Custom AI Redaction Button */}
+                    {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && (
+                      <button
+                        onClick={() => setCustomRedactQuestion({ question: q, match: slideMatch })}
+                        className="bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border border-indigo-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                        title="Bu soruyu Gemini yapay zekasına özel talimat vererek redakte et (Admin)"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>AI ile Redakte Et</span>
+                      </button>
+                    )}
 
                     {/* Slide Match Reference Badge */}
                     {slideMatch && (
@@ -1416,6 +1432,24 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             )}
           </div>
         </div>
+      )}
+
+      {/* Admin Custom AI Redaction Modal */}
+      {customRedactQuestion && (
+        <AdminCustomRedactModal
+          question={customRedactQuestion.question}
+          isOpen={Boolean(customRedactQuestion)}
+          onClose={() => setCustomRedactQuestion(null)}
+          onSaved={(updated) => {
+            setQuestions(prev => prev.map(q => q.id === updated.id ? updated : q));
+            setCustomRedactQuestion(null);
+          }}
+          matchedSlideNote={customRedactQuestion.match ? {
+            noteTitle: customRedactQuestion.match.note.title,
+            pageNumber: customRedactQuestion.match.page.pageNumber,
+            snippet: customRedactQuestion.match.page.content.substring(0, 300)
+          } : null}
+        />
       )}
     </div>
   );
