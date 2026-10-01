@@ -8,11 +8,16 @@ const STORAGE_KEY = 'medsoru_db_data_v1';
 const API_BASE_URL_KEY = 'medsoru_custom_api_url';
 
 export const getCustomApiUrl = (): string => {
-  return localStorage.getItem(API_BASE_URL_KEY) || '';
+  const url = (typeof localStorage !== 'undefined' ? localStorage.getItem(API_BASE_URL_KEY) : '') || '';
+  if (url && (url.includes('github.io') || url.includes('github.com'))) {
+    try { localStorage.removeItem(API_BASE_URL_KEY); } catch (_) {}
+    return '';
+  }
+  return url;
 };
 
 export const setCustomApiUrl = (url: string) => {
-  if (url) {
+  if (url && !url.includes('github.io') && !url.includes('github.com')) {
     localStorage.setItem(API_BASE_URL_KEY, url.trim().replace(/\/$/, ''));
   } else {
     localStorage.removeItem(API_BASE_URL_KEY);
@@ -233,6 +238,8 @@ export async function safeJsonFetch<T = any>(
           const errObj = await res.json();
           errMsg = errObj.error || errObj.message || errMsg;
         } catch (_) {}
+      } else if (res.status === 405) {
+        errMsg = 'Statik barındırma ortamı (HTTP 405 Method Not Allowed - GitHub Pages). İstemci modu veya yedek veritabanı devreye alınıyor.';
       } else {
         errMsg = `Uç nokta bulunamadı veya statik sayfa döndü (HTTP ${res.status})`;
       }
@@ -384,27 +391,37 @@ export async function callClientResilientAi(options: {
 
   for (let i = 0; i < freeGeminiPool.length; i++) {
     const currentKey = freeGeminiPool[i];
-    try {
-      console.log(`[Client AI] ${currentKey.label} deneniyor... (Sıra: ${i + 1}/${freeGeminiPool.length})`);
-      const ai = new GoogleGenAI({ apiKey: currentKey.key });
-      const geminiRes = await ai.models.generateContent({
-        model: (model && model.startsWith('gemini')) ? model : 'gemini-3.8-flash',
-        contents: prompt,
-        config: { responseMimeType: 'application/json' }
-      });
-      const text = geminiRes.text || '{}';
-      console.log(`[Client AI] ✓ ${currentKey.label} başarıyla yanıt üretti!`);
-      return {
-        text,
-        providerUsed: 'Google Gemini',
-        planUsed: currentKey.label
-      };
-    } catch (err: any) {
-      console.warn(`[Client AI] ⚠️ ${currentKey.label} başarısız:`, err.message);
-      lastAiErr = err;
-      if (i < freeGeminiPool.length - 1) {
-        console.log(`[Client AI Failover] 🔄 ${currentKey.label} yanıt veremedi. Otomatik olarak 2. Ücretsiz plana geçiliyor...`);
+    const candidateModels = (model && model.startsWith('gemini'))
+      ? [model, 'gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-flash-lite-latest', 'gemini-3.1-flash-lite'].filter((v, idx, arr) => arr.indexOf(v) === idx)
+      : ['gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-flash-lite-latest', 'gemini-3.1-flash-lite'];
+
+    for (const m of candidateModels) {
+      try {
+        console.log(`[Client AI] ${currentKey.label} (${m}) deneniyor... (Sıra: ${i + 1}/${freeGeminiPool.length})`);
+        const ai = new GoogleGenAI({ apiKey: currentKey.key });
+        const geminiRes = await ai.models.generateContent({
+          model: m,
+          contents: prompt,
+          config: { responseMimeType: 'application/json' }
+        });
+        const text = geminiRes.text || '{}';
+        console.log(`[Client AI] ✓ ${currentKey.label} (${m}) başarıyla yanıt üretti!`);
+        return {
+          text,
+          providerUsed: 'Google Gemini',
+          planUsed: `${currentKey.label} (${m})`
+        };
+      } catch (err: any) {
+        console.warn(`[Client AI] ⚠️ ${currentKey.label} (${m}) başarısız:`, err.message);
+        lastAiErr = err;
+        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap/i.test(err.message || '');
+        if (isQuota) {
+          break;
+        }
       }
+    }
+    if (i < freeGeminiPool.length - 1) {
+      console.log(`[Client AI Failover] 🔄 ${currentKey.label} yanıt veremedi. Otomatik olarak sıradaki Ücretsiz plana geçiliyor...`);
     }
   }
 
@@ -432,24 +449,32 @@ export async function callClientResilientAi(options: {
   // 4. SIRA: GEMİNİ FATURALANDIRMALI PLAN (ÜCRETLİ PLAN - EN SON ÇARE)
   // ===================================================================
   if (CLIENT_BILLED_GEMINI_KEY && CLIENT_BILLED_GEMINI_KEY.key) {
-    try {
-      console.log(`[Client AI Failover] 💳 4. Sıra Devrede: Ücretsiz planlar ve Groq yanıt vermedi, ${CLIENT_BILLED_GEMINI_KEY.label} deneniyor...`);
-      const ai = new GoogleGenAI({ apiKey: CLIENT_BILLED_GEMINI_KEY.key });
-      const geminiRes = await ai.models.generateContent({
-        model: (model && model.startsWith('gemini')) ? model : 'gemini-3.8-flash',
-        contents: prompt,
-        config: { responseMimeType: 'application/json' }
-      });
-      const text = geminiRes.text || '{}';
-      console.log(`[Client AI] ✓ 4. Sıra (${CLIENT_BILLED_GEMINI_KEY.label}) başarıyla yanıt üretti!`);
-      return {
-        text,
-        providerUsed: 'Google Gemini (Faturalı)',
-        planUsed: CLIENT_BILLED_GEMINI_KEY.label
-      };
-    } catch (billedErr: any) {
-      console.error(`[Client AI Failover] ⚠️ 4. Sıra (${CLIENT_BILLED_GEMINI_KEY.label}) da başarısız:`, billedErr.message);
-      lastAiErr = billedErr;
+    const candidateModels = (model && model.startsWith('gemini'))
+      ? [model, 'gemini-3.8-flash', 'gemini-3.5-flash']
+      : ['gemini-3.8-flash', 'gemini-3.5-flash'];
+
+    for (const m of candidateModels) {
+      try {
+        console.log(`[Client AI Failover] 💳 4. Sıra Devrede: Ücretsiz planlar ve Groq yanıt vermedi, ${CLIENT_BILLED_GEMINI_KEY.label} (${m}) deneniyor...`);
+        const ai = new GoogleGenAI({ apiKey: CLIENT_BILLED_GEMINI_KEY.key });
+        const geminiRes = await ai.models.generateContent({
+          model: m,
+          contents: prompt,
+          config: { responseMimeType: 'application/json' }
+        });
+        const text = geminiRes.text || '{}';
+        console.log(`[Client AI] ✓ 4. Sıra (${CLIENT_BILLED_GEMINI_KEY.label}) başarıyla yanıt üretti!`);
+        return {
+          text,
+          providerUsed: 'Google Gemini (Faturalı)',
+          planUsed: `${CLIENT_BILLED_GEMINI_KEY.label} (${m})`
+        };
+      } catch (billedErr: any) {
+        console.error(`[Client AI Failover] ⚠️ 4. Sıra (${CLIENT_BILLED_GEMINI_KEY.label}) da başarısız:`, billedErr.message);
+        lastAiErr = billedErr;
+        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap/i.test(billedErr.message || '');
+        if (isQuota) break;
+      }
     }
   }
 
@@ -1498,10 +1523,10 @@ JSON FORMATI:
 
     // If both server and client fail, report honest error (never generate fake mock options)
     const combinedErr = `${serverErrorMsg} ${clientErrorMsg}`.trim();
-    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(combinedErr);
+    const cleanServerErr = serverErrorMsg && !serverErrorMsg.includes('405') ? serverErrorMsg : '';
     const finalErr = isQuota
       ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Ayarlar panelinden Groq API anahtarınızı tanımlayarak kotasız kullanıma geçebilir veya yeni bir API anahtarı tanımlayabilirsiniz.'
-      : (serverErrorMsg || clientErrorMsg || 'Yapay zeka rekonstrüksiyonu gerçekleştirilemedi. Lütfen Gemini/Groq API anahtarınızı veya kota durumunuzu kontrol edin.');
+      : (clientErrorMsg || cleanServerErr || 'Yapay zeka rekonstrüksiyonu gerçekleştirilemedi. Lütfen Gemini/Groq API anahtarınızı veya kota durumunuzu kontrol edin.');
 
     throw new Error(finalErr);
   },
@@ -2263,8 +2288,10 @@ JSON FORMATI:
 
     // 1. First try server endpoint (has server-side tiered failover & Groq)
     try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/ai/admin-custom-redact` : '/api/ai/admin-custom-redact';
       const res = await safeJsonFetch<{ success: boolean; reconstruction: ReconstructedQuestion; error?: string }>(
-        '/api/ai/admin-custom-redact',
+        endpoint,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -2396,7 +2423,7 @@ TALİMATLARI ANLAMA VE DOĞRUDAN UYGULAMA KURALLARI:
       console.warn('Client-side resilient AI failed:', clientErr.message);
       return {
         success: false,
-        error: clientErr.message || serverErrorMsg || 'Yapay zeka redaksiyonu başarısız oldu.'
+        error: clientErr.message || (serverErrorMsg && !serverErrorMsg.includes('405') ? serverErrorMsg : 'Yapay zeka redaksiyonu gerçekleştirilemedi. Lütfen internet bağlantınızı kontrol ediniz.')
       };
     }
   },
@@ -2457,16 +2484,20 @@ TALİMATLARI ANLAMA VE DOĞRUDAN UYGULAMA KURALLARI:
       (import.meta as any).env?.VITE_GEMINI_API_KEY ||
       '';
 
+    const customGroqKey = localStorage.getItem('medsoru_groq_api_key') || '';
     let serverErrorMsg = '';
 
     // 1. Try server endpoint first
     try {
-      const res = await safeJsonFetch<any>('/api/ai/optimize-question', {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/ai/optimize-question` : '/api/ai/optimize-question';
+      const res = await safeJsonFetch<any>(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...params,
           apiKey: customApiKey,
+          groqApiKey: customGroqKey,
         }),
       });
 
@@ -2479,18 +2510,15 @@ TALİMATLARI ANLAMA VE DOĞRUDAN UYGULAMA KURALLARI:
       serverErrorMsg = e.message || '';
     }
 
-    // 2. Client-side fallback if custom API key is available
-    if (customApiKey && customApiKey !== 'MY_GEMINI_API_KEY') {
-      try {
-        const { GoogleGenAI } = await import('@google/genai');
-        const clientAi = new GoogleGenAI({ apiKey: customApiKey });
-        const q = params.question;
-        const fragmentsList = q.fragments || [];
-        const baseStem = q.reconstruction?.stem || (q as any).rawQuestion?.stem || q.rawStem || fragmentsList[0]?.text || q.topic || '';
-        const optionsList = (q.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
-        const commentsList = (q.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
+    // 2. Direct client-side resilient AI execution (Tiered Gemini Free 1 -> Free 2 -> Groq Cloud -> Billed Gemini)
+    try {
+      const q = params.question;
+      const fragmentsList = q.fragments || [];
+      const baseStem = q.reconstruction?.stem || (q as any).rawQuestion?.stem || q.rawStem || fragmentsList[0]?.text || q.topic || '';
+      const optionsList = (q.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
+      const commentsList = (q.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
 
-        const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+      const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
 Tıp fakültesi öğrencisi veya kullanıcısı bu soruyu daha iyi bir düzene sokmak için bu aracı çalıştırmıştır.
 
 MEVCUT SORU:
@@ -2506,11 +2534,13 @@ ${commentsList || 'Girilmedi'}
 ${params.studentNotes ? `ÖĞRENCİ TALİMATI / İPUCU:\n"${params.studentNotes}"` : ''}
 
 KURALLAR:
-1. Sorunun hangi derse ("detectedDiscipline") ve hangi konuya ("detectedTopic") ait olduğunu kesinleştir.
-2. Yazım, harf ve OCR hatalarını düzelt.
-3. Soruyu tıp literatürüne uygun saf soru metni ("stem") ve güçlü çeldiricileri olan tam 5 şıkla (A-E) düzenle.
-4. Kesin doğru cevabı ve detaylı patofizyolojik / farmakolojik açıklamayı ("explanation") yaz.
-5. Yaptığın düzenlemeleri ("refinementSummary") özetle.
+1. YAZIM VE İMLA HATALARINI DÜZELT: Kullanıcı talimatlarında veya öğrenci yorumlarında geçen ("biri- kir" yerine "birikir" yazılması vb.) tüm yazım ve imla hatalarını soru kökünde ve şıklarda doğrudan düzelt.
+2. SORU KÖKÜ DÜZENLEMESİ: Talimatta "değildir", "yanlıştır", "olumsuzdur" deniliyorsa soru kökünü mutlaka resmi olumsuz soru formatına ("...hangisi DEĞİLDİR?", "...hangisi YANLIŞTIR?") dönüştür ve doğru cevabı buna göre belirle.
+3. SAF VE TEMİZ SORU KÖKÜ (METİN SAFLIĞI): "stem" alanına sadece resmi sınav kağıdında yer alacak saf soru metnini yaz! Asla idari etiketler, "(Admin Talimatı: ...)", "...kapsamında" gibi meta-ifadeler ekleme!
+4. Sorunun hangi derse ("detectedDiscipline") ve hangi konuya ("detectedTopic") ait olduğunu kesinleştir.
+5. Soruyu tıp literatürüne uygun saf soru metni ("stem") ve güçlü çeldiricileri olan tam 5 şıkla (A-E) düzenle.
+6. Kesin doğru cevabı ve detaylı patofizyolojik / farmakolojik açıklamayı ("explanation") yaz.
+7. Yaptığın düzenlemeleri ("refinementSummary") özetle.
 
 YALNIZCA GEÇERLİ JSON DÖN:
 {
@@ -2530,42 +2560,50 @@ YALNIZCA GEÇERLİ JSON DÖN:
   "refinementSummary": "..."
 }`;
 
-        const geminiRes = await clientAi.models.generateContent({
-          model: params.model || 'gemini-3.8-flash',
-          contents: prompt,
-          config: { responseMimeType: 'application/json' }
-        });
+      const aiRes = await callClientResilientAi({
+        prompt,
+        customGeminiKey: customApiKey,
+        customGroqKey,
+        preferredProvider: params.preferredProvider,
+        model: params.model,
+      });
 
-        const parsed = JSON.parse(geminiRes.text || '{}');
-        if (parsed.stem && parsed.options) {
-          return {
-            success: true,
-            optimizedQuestion: {
-              discipline: parsed.detectedDiscipline || q.discipline || 'Tıp Fakültesi',
-              topic: parsed.detectedTopic || q.topic || 'Kurul Sınav Sorusu',
-              stem: parsed.stem.trim(),
-              options: parsed.options,
-              correctAnswer: parsed.correctAnswer || 'A',
-              explanation: parsed.explanation || '',
-              confidenceScore: parsed.confidenceScore || 94,
-              notesAndDiscrepancies: parsed.refinementSummary || 'İstemci tarafı Gemini ile düzenlendi.'
-            },
-            refinementSummary: parsed.refinementSummary || 'Soru yapay zeka ile düzenlendi.',
-            providerUsed: 'Google Gemini (İstemci)',
-            planUsed: 'Kullanıcı API Anahtarı'
-          };
-        }
-      } catch (clientErr: any) {
-        console.warn('Client-side optimizeQuestionWithAi failed:', clientErr.message);
+      const parsed = JSON.parse(aiRes.text || '{}');
+      let cleanStem = (parsed.stem || '').trim();
+      cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
+
+      if (cleanStem && parsed.options) {
+        return {
+          success: true,
+          optimizedQuestion: {
+            discipline: parsed.detectedDiscipline || q.discipline || 'Tıp Fakültesi',
+            topic: parsed.detectedTopic || q.topic || 'Kurul Sınav Sorusu',
+            stem: cleanStem,
+            options: parsed.options,
+            correctAnswer: parsed.correctAnswer || 'A',
+            explanation: parsed.explanation || '',
+            confidenceScore: parsed.confidenceScore || 94,
+            notesAndDiscrepancies: parsed.refinementSummary || `${aiRes.planUsed} ile doğrudan düzenlendi.`
+          },
+          refinementSummary: parsed.refinementSummary || 'Soru yapay zeka ile düzenlendi.',
+          providerUsed: aiRes.providerUsed,
+          planUsed: aiRes.planUsed
+        };
       }
+    } catch (clientErr: any) {
+      console.warn('Client-side resilient optimizeQuestionWithAi failed:', clientErr.message);
+      const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(clientErr.message || serverErrorMsg);
+      return {
+        success: false,
+        error: isQuota
+          ? 'Tüm yapay zeka planları kotaya takıldı (Hata 429). Lütfen Ayarlar panelinden Groq API anahtarınızı kontrol edin veya yeni bir anahtar tanımlayın.'
+          : (clientErr.message || (serverErrorMsg && !serverErrorMsg.includes('405') ? serverErrorMsg : 'Yapay zeka soru optimizasyonu gerçekleştirilemedi.'))
+      };
     }
 
-    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(serverErrorMsg);
     return {
       success: false,
-      error: isQuota
-        ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429). Lütfen API Studio panelinizden kotanızı kontrol edin veya alternatif sağlayıcı seçin.'
-        : (serverErrorMsg || 'Yapay zeka soru optimizasyonu gerçekleştirilemedi.')
+      error: (serverErrorMsg && !serverErrorMsg.includes('405') ? serverErrorMsg : 'Yapay zeka soru optimizasyonu gerçekleştirilemedi.')
     };
   },
 

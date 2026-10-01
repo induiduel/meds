@@ -451,6 +451,9 @@ class MultiDbManager {
       (async () => {
         try {
           const customUrl = getCustomApiUrl();
+          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
+            return;
+          }
           const endpoint = customUrl ? `${customUrl}/api/questions/${question.id}` : `/api/questions/${question.id}`;
           await safeJsonFetch(endpoint, {
             method: 'PUT',
@@ -508,6 +511,9 @@ class MultiDbManager {
       (async () => {
         try {
           const customUrl = getCustomApiUrl();
+          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
+            return;
+          }
           const endpoint = customUrl ? `${customUrl}/api/past-exams/${question.id}` : `/api/past-exams/${question.id}`;
           await safeJsonFetch(endpoint, {
             method: 'PUT',
