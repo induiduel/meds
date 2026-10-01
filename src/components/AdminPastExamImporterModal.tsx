@@ -44,6 +44,8 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
   const [defaultDiscipline, setDefaultDiscipline] = useState('Otomatik (Yapay Zeka Tespit Etsin)');
   const [rawText, setRawText] = useState('');
   const [fileName, setFileName] = useState<string | null>(null);
+  const [uploadedFileBase64, setUploadedFileBase64] = useState<string | null>(null);
+  const [uploadedFileMime, setUploadedFileMime] = useState<string | null>(null);
 
   // Parsing state
   const [isParsing, setIsParsing] = useState(false);
@@ -73,23 +75,37 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
     if (isBinaryDoc) {
       setIsExtractingFile(true);
-      setFileExtractStatus(`Yapay zeka ${file.name} dosyasını okuyor ve metne dönüştürüyor...`);
+      setFileExtractStatus(`Belge hazırlanıyor: ${file.name}...`);
+
+      const mimeType = file.type || (file.name.endsWith('.pdf') ? 'application/pdf' : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      setUploadedFileMime(mimeType);
 
       const reader = new FileReader();
       reader.onload = async (ev) => {
         const base64Data = ev.target?.result as string;
+        setUploadedFileBase64(base64Data);
+
         try {
+          setFileExtractStatus(`Yapay zeka ${file.name} belgesini inceliyor ve metne döküyor...`);
           const res = await fetch('/api/ai/extract-document', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               fileBase64: base64Data,
               fileName: file.name,
-              fileMimeType: file.type || (file.name.endsWith('.pdf') ? 'application/pdf' : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'),
+              fileMimeType: mimeType,
             }),
           });
 
-          const data = await res.json();
+          const resText = await res.text();
+          let data: any = {};
+          try {
+            data = JSON.parse(resText);
+          } catch (jsonErr) {
+            // Server returned non-JSON error
+            throw new Error(resText.slice(0, 100) || `Sunucu yanıtı geçersiz (${res.status})`);
+          }
+
           if (!res.ok) {
             throw new Error(data.error || 'Dosya okunamadı');
           }
@@ -98,11 +114,11 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
             setRawText(data.extractedText);
             setFileExtractStatus(`✓ ${file.name} başarıyla okundu! (${data.extractedText.length} karakter metin aktarıldı)`);
           } else {
-            throw new Error('Metin içeriği alınamadı');
+            setFileExtractStatus(`✓ ${file.name} doğrudan PDF olarak hazırlandı. Şimdi "Soruları Ayrıştır" butonuna tıklayabilirsiniz.`);
           }
         } catch (err: any) {
-          setParseError(`Belge okuma hatası: ${err.message}. Lütfen metni doğrudan kopyalayıp yapıştırınız.`);
-          setFileExtractStatus(null);
+          // Keep file in memory so direct PDF parsing can still succeed
+          setFileExtractStatus(`ℹ️ ${file.name} yüklendi. Doğrudan PDF analiziyle sorular ayrıştırılacaktır.`);
         } finally {
           setIsExtractingFile(false);
         }
@@ -124,8 +140,8 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
   // Run AI extraction
   const handleParseQuestions = async () => {
-    if (!rawText.trim()) {
-      setParseError('Lütfen çıkmış soru metnini yapıştırın veya bir dosya seçin.');
+    if (!rawText.trim() && !uploadedFileBase64) {
+      setParseError('Lütfen çıkmış soru metnini yapıştırın veya bir PDF/DOCX dosya seçin.');
       return;
     }
 
@@ -135,7 +151,10 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
     try {
       const res = await ApiService.parsePastExamQuestions({
-        rawText,
+        rawText: rawText.trim() || undefined,
+        fileBase64: uploadedFileBase64 || undefined,
+        fileMimeType: uploadedFileMime || undefined,
+        fileName: fileName || undefined,
         examYear,
         committeeId: targetCommitteeId,
         defaultDiscipline: defaultDiscipline.startsWith('Otomatik') ? undefined : defaultDiscipline,
@@ -143,7 +162,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
       });
 
       if (!res.questions || res.questions.length === 0) {
-        throw new Error('Metinde geçerli bir soru formatı tespit edilemedi.');
+        throw new Error('Belgede geçerli bir soru formatı tespit edilemedi.');
       }
 
       setParsedQuestions(res.questions);

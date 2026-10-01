@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { exec } from 'child_process';
 
 dotenv.config();
 
@@ -16,7 +17,8 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json({ limit: '10mb' }));
+app.use(express.json({ limit: '100mb' }));
+app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 
 // Initialize Gemini SDK with server-side API Key
 const ai = new GoogleGenAI({
@@ -27,6 +29,25 @@ const ai = new GoogleGenAI({
     },
   },
 });
+
+// Helper for resilient Gemini API calls with fallback
+async function generateGeminiWithFallback(contents: any, config?: any) {
+  const models = ['gemini-3.8-flash', 'gemini-flash-latest'];
+  let lastErr: any = null;
+  for (const m of models) {
+    try {
+      return await ai.models.generateContent({
+        model: m,
+        contents,
+        config,
+      });
+    } catch (e: any) {
+      console.warn(`[Gemini fallback] Model ${m} failed:`, e.message);
+      lastErr = e;
+    }
+  }
+  throw lastErr;
+}
 
 // Database path & management
 const DATA_DIR = path.resolve(__dirname, 'data');
@@ -781,46 +802,42 @@ ${fullTextPayload ? `\nMetin:\n"""\n${fullTextPayload.slice(0, 35000)}\n"""` : '
     }
     contents.push(prompt);
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
-      contents,
-      config: {
-        responseMimeType: 'application/json',
-        responseSchema: {
-          type: Type.OBJECT,
-          properties: {
-            detectedYear: { type: Type.STRING },
-            detectedTotal: { type: Type.INTEGER },
-            questions: {
-              type: Type.ARRAY,
-              items: {
-                type: Type.OBJECT,
-                properties: {
-                  questionNumber: { type: Type.INTEGER },
-                  discipline: { type: Type.STRING },
-                  topic: { type: Type.STRING },
-                  stem: { type: Type.STRING },
-                  options: {
-                    type: Type.ARRAY,
-                    items: {
-                      type: Type.OBJECT,
-                      properties: {
-                        key: { type: Type.STRING },
-                        text: { type: Type.STRING },
-                      },
-                      required: ['key', 'text'],
+    const response = await generateGeminiWithFallback(contents, {
+      responseMimeType: 'application/json',
+      responseSchema: {
+        type: Type.OBJECT,
+        properties: {
+          detectedYear: { type: Type.STRING },
+          detectedTotal: { type: Type.INTEGER },
+          questions: {
+            type: Type.ARRAY,
+            items: {
+              type: Type.OBJECT,
+              properties: {
+                questionNumber: { type: Type.INTEGER },
+                discipline: { type: Type.STRING },
+                topic: { type: Type.STRING },
+                stem: { type: Type.STRING },
+                options: {
+                  type: Type.ARRAY,
+                  items: {
+                    type: Type.OBJECT,
+                    properties: {
+                      key: { type: Type.STRING },
+                      text: { type: Type.STRING },
                     },
+                    required: ['key', 'text'],
                   },
-                  claimedAnswer: { type: Type.STRING },
-                  explanation: { type: Type.STRING },
-                  confidenceScore: { type: Type.INTEGER },
                 },
-                required: ['questionNumber', 'discipline', 'topic', 'stem', 'options'],
+                claimedAnswer: { type: Type.STRING },
+                explanation: { type: Type.STRING },
+                confidenceScore: { type: Type.INTEGER },
               },
+              required: ['questionNumber', 'discipline', 'topic', 'stem', 'options'],
             },
           },
-          required: ['questions'],
         },
+        required: ['questions'],
       },
     });
 
@@ -868,43 +885,39 @@ Her bir sayfayı veya slaytı sırasıyla oku.
 - instructor: Belgede geçiyorsa dersi anlatan hoca / profesör
 - pages: Her sayfa için { pageNumber: sayı, content: sayfanın tam metni, keywords: 5-8 adet önemli tıbbi terim/anahtar kelime }`;
 
-      const response = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
-        contents: [
-          {
-            inlineData: {
-              mimeType: mime,
-              data: cleanBase64,
-            },
+      const response = await generateGeminiWithFallback([
+        {
+          inlineData: {
+            mimeType: mime,
+            data: cleanBase64,
           },
-          prompt,
-        ],
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: {
-              title: { type: Type.STRING },
-              discipline: { type: Type.STRING },
-              instructor: { type: Type.STRING },
-              pages: {
-                type: Type.ARRAY,
-                items: {
-                  type: Type.OBJECT,
-                  properties: {
-                    pageNumber: { type: Type.INTEGER },
-                    content: { type: Type.STRING },
-                    keywords: {
-                      type: Type.ARRAY,
-                      items: { type: Type.STRING },
-                    },
+        },
+        prompt,
+      ], {
+        responseMimeType: 'application/json',
+        responseSchema: {
+          type: Type.OBJECT,
+          properties: {
+            title: { type: Type.STRING },
+            discipline: { type: Type.STRING },
+            instructor: { type: Type.STRING },
+            pages: {
+              type: Type.ARRAY,
+              items: {
+                type: Type.OBJECT,
+                properties: {
+                  pageNumber: { type: Type.INTEGER },
+                  content: { type: Type.STRING },
+                  keywords: {
+                    type: Type.ARRAY,
+                    items: { type: Type.STRING },
                   },
-                  required: ['pageNumber', 'content', 'keywords'],
                 },
+                required: ['pageNumber', 'content', 'keywords'],
               },
             },
-            required: ['title', 'discipline', 'pages'],
           },
+          required: ['title', 'discipline', 'pages'],
         },
       });
 
@@ -913,18 +926,15 @@ Her bir sayfayı veya slaytı sırasıyla oku.
     }
 
     // Default raw text extraction
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
-      contents: [
-        {
-          inlineData: {
-            mimeType: mime,
-            data: cleanBase64,
-          },
+    const response = await generateGeminiWithFallback([
+      {
+        inlineData: {
+          mimeType: mime,
+          data: cleanBase64,
         },
-        'Bu belgedeki tüm metinleri, başlıkları, tabloları ve soruları eksiksiz Türkçe tıp terminolojisiyle metne aktar.',
-      ],
-    });
+      },
+      'Bu belgedeki tüm metinleri, başlıkları, tabloları ve soruları eksiksiz Türkçe tıp terminolojisiyle metne aktar.',
+    ]);
 
     res.json({ success: true, extractedText: response.text || '' });
   } catch (err: any) {
@@ -1319,6 +1329,174 @@ app.post('/api/admin/db/reset', requireAdmin, (req, res) => {
   }
   db = initializeDatabase();
   res.json({ message: 'Veritabanı sıfırlandı ve başlangıç verileri yüklendi.', totalQuestions: db.questions.length });
+});
+
+// Automation: Get parsed questions from civaninotlari.vercel.app
+app.get('/api/automation/civan-questions', (req, res) => {
+  try {
+    const p1 = path.resolve(__dirname, 'data', 'civanPastQuestions.json');
+    const p2 = path.resolve(__dirname, 'src', 'data', 'civanPastQuestions.json');
+    const targetPath = fs.existsSync(p1) ? p1 : (fs.existsSync(p2) ? p2 : null);
+
+    if (!targetPath) {
+      return res.status(404).json({ error: 'Civan çıkmış soru verisi henüz oluşturulmadı.' });
+    }
+
+    const raw = fs.readFileSync(targetPath, 'utf8');
+    const questions = JSON.parse(raw);
+    res.json({
+      success: true,
+      totalCount: questions.length,
+      source: 'civaninotlari.vercel.app (KBU Tıp 3. Sınıf 1. Kurul)',
+      questions,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Çıkmış soru okuma hatası: ' + err.message });
+  }
+});
+
+// Automation: Sync questions from civaninotlari into main question database
+app.post('/api/automation/civan-sync', (req, res) => {
+  try {
+    const p1 = path.resolve(__dirname, 'data', 'civanPastQuestions.json');
+    const p2 = path.resolve(__dirname, 'src', 'data', 'civanPastQuestions.json');
+    const targetPath = fs.existsSync(p1) ? p1 : (fs.existsSync(p2) ? p2 : null);
+
+    if (!targetPath) {
+      return res.status(404).json({ error: 'Civan çıkmış soru dosyası bulunamadı.' });
+    }
+
+    const raw = fs.readFileSync(targetPath, 'utf8');
+    const civanQuestions = JSON.parse(raw);
+
+    let addedCount = 0;
+    civanQuestions.forEach((cq: any) => {
+      const existingIdx = db.questions.findIndex((q) => q.id === cq.id);
+      if (existingIdx === -1) {
+        db.questions.push({
+          id: cq.id,
+          committeeId: cq.committeeId || 'donem3-kurul1',
+          questionNumber: cq.questionNumber || db.questions.length + 1,
+          discipline: cq.discipline || 'Tıbbi Patoloji',
+          topic: cq.topic || 'Çıkmış Soru',
+          status: 'completed',
+          claimedAnswer: cq.correctAnswer,
+          tags: [cq.discipline, 'Civanın Notları', cq.examYear || 'Çıkmış'].filter(Boolean),
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          fragments: [
+            {
+              id: `f-${cq.id}`,
+              author: 'civaninotlari.vercel.app',
+              text: cq.stem,
+              type: 'stem',
+              timestamp: new Date().toISOString(),
+              upvotes: 15,
+            },
+          ],
+          options: cq.options || [],
+          reconstruction: {
+            stem: cq.stem,
+            options: (cq.options || []).map((o: any) => ({
+              key: o.key,
+              text: o.text,
+              isAiFilled: false,
+            })),
+            correctAnswer: cq.correctAnswer || 'A',
+            explanation: cq.explanation || 'Civan Notları klinik analiz ve patofizyolojik açıklama.',
+            confidenceScore: 95,
+            notesAndDiscrepancies: 'Kaynak: civaninotlari.vercel.app KBU Tıp 3. Sınıf 1. Kurul Arşivi',
+            lastUpdated: new Date().toISOString(),
+          },
+        });
+        addedCount++;
+      }
+    });
+
+    if (addedCount > 0) {
+      saveDatabase();
+    }
+
+    res.json({
+      success: true,
+      message: `${addedCount} yeni çıkmış soru havuza eklendi. Toplam havuz: ${db.questions.length}`,
+      totalCount: db.questions.length,
+      newlyAdded: addedCount,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Civan çıkmış soru senkronizasyon hatası: ' + err.message });
+  }
+});
+
+// Automation: Heartbeat & status tracking from local daemon or Drive worker
+app.post('/api/automation/drive-sync-status', (req, res) => {
+  const { source, status, folderId, timestamp } = req.body;
+  res.json({
+    success: true,
+    message: 'Yerel işleyici sinyali alındı',
+    recordedAt: new Date().toISOString(),
+    status: status || 'active',
+  });
+});
+
+// Admin: Push code & database updates to GitHub
+app.post('/api/admin/git-push', (req, res) => {
+  const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.query?.adminEmail) as string;
+  if (!adminEmail || adminEmail.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+    return res.status(403).json({ error: 'Bu işlem için yetkiniz yok.' });
+  }
+
+  const { githubToken, commitMessage } = req.body;
+  const repoUrl = githubToken
+    ? `https://${githubToken}@github.com/induiduel/meds.git`
+    : 'https://github.com/induiduel/meds.git';
+
+  const msg = commitMessage ? commitMessage.replace(/"/g, '\\"') : 'feat: MedSoru veritabani ve slayt guncellemesi';
+
+  const cmd = `git config user.name "induiduel" && git config user.email "nofrostlife@gmail.com" && git remote set-url origin "${repoUrl}" && git add -A && git commit -m "${msg}" && git push -u origin master`;
+
+  exec(cmd, (error, stdout, stderr) => {
+    if (error) {
+      // Check if it's already up to date
+      if (stderr?.includes('Everything up-to-date') || stdout?.includes('nothing to commit')) {
+        return res.json({
+          success: true,
+          message: 'GitHub deposu zaten en güncel durumda.',
+          stdout,
+          stderr,
+        });
+      }
+      return res.status(500).json({
+        error: 'Git Push hatası: ' + error.message,
+        details: stderr || stdout,
+        hint: 'GitHub Personal Access Token (PAT) girerek push işlemini gerçekleştirebilirsiniz.',
+      });
+    }
+
+    res.json({
+      success: true,
+      message: 'GitHub reposuna başarıyla pushlandı! (https://github.com/induiduel/meds)',
+      stdout,
+      stderr,
+    });
+  });
+});
+
+// Express Error Handling Middleware (Catches PayloadTooLarge, 413, JSON errors, etc. - NEVER returns HTML)
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  console.error('[Express Global Error]:', err);
+  if (res.headersSent) {
+    return next(err);
+  }
+  const status = err.status || err.statusCode || 500;
+  const message = err.type === 'entity.too.large'
+    ? 'Yüklenen belge çok büyük (100MB sınırını aşıyor). Lütfen dosya boyutunu kontrol ediniz.'
+    : (err.message || 'Sunucu hatası oluştu.');
+
+  res.status(status).json({
+    error: message,
+    statusCode: status,
+  });
 });
 
 // Vite middleware for dev or static serving for prod
