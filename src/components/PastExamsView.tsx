@@ -86,14 +86,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   useEffect(() => {
     loadPastQuestions();
-    if (!lectureNotes || lectureNotes.length === 0) {
-      ApiService.getLectureNotes()
-        .then(notes => {
-          if (notes && notes.length > 0) setInternalNotes(notes);
-        })
-        .catch(err => console.warn('Could not fetch lecture notes for past exams:', err));
-    }
-  }, [lectureNotes]);
+    ApiService.getLectureNotes()
+      .then(notes => {
+        if (notes && notes.length > 0) setInternalNotes(notes);
+      })
+      .catch(err => console.warn('Could not fetch lecture notes for past exams:', err));
+  }, []);
 
   // Upvote / Like toggle
   const handleToggleLike = async (q: QuestionItem) => {
