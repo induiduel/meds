@@ -303,18 +303,58 @@ export default function App() {
     }
   };
 
-  // Upvote memory fragment
+  // Toggle Question Upvote
+  const handleUpvoteQuestion = async (questionId: string) => {
+    try {
+      const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+      const res = await ApiService.upvoteQuestion(questionId, currentUserId);
+      setQuestions((prev) =>
+        prev.map((q) => {
+          if (q.id === questionId) {
+            const likedBy = q.likedBy || [];
+            const idx = likedBy.indexOf(currentUserId);
+            const newLikedBy = idx >= 0
+              ? likedBy.filter((u) => u !== currentUserId)
+              : [...likedBy, currentUserId];
+            return {
+              ...q,
+              upvotes: res.upvotes !== undefined ? res.upvotes : (idx >= 0 ? Math.max(0, (q.upvotes || 1) - 1) : (q.upvotes || 0) + 1),
+              likedBy: newLikedBy,
+            };
+          }
+          return q;
+        })
+      );
+    } catch (err) {
+      console.error('Upvote question error:', err);
+    }
+  };
+
+  // Upvote memory fragment (toggle)
   const handleUpvoteFragment = async (questionId: string, fragmentId: string) => {
     try {
-      await ApiService.upvoteFragment(questionId, fragmentId);
+      const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+      await ApiService.upvoteFragment(questionId, fragmentId, currentUserId);
       setQuestions((prev) =>
         prev.map((q) => {
           if (q.id === questionId) {
             return {
               ...q,
-              fragments: q.fragments.map((f) =>
-                f.id === fragmentId ? { ...f, upvotes: (f.upvotes || 0) + 1 } : f
-              ),
+              fragments: q.fragments.map((f) => {
+                if (f.id === fragmentId) {
+                  const likedBy = f.likedBy || [];
+                  const idx = likedBy.indexOf(currentUserId);
+                  const newLikedBy = idx >= 0
+                    ? likedBy.filter((u) => u !== currentUserId)
+                    : [...likedBy, currentUserId];
+                  return {
+                    ...f,
+                    upvotes: idx >= 0 ? Math.max(0, (f.upvotes || 1) - 1) : (f.upvotes || 0) + 1,
+                    likedBy: newLikedBy,
+                  };
+                }
+                return f;
+              }),
             };
           }
           return q;
@@ -344,21 +384,34 @@ export default function App() {
     }
   };
 
-  // Upvote option
+  // Upvote option (toggle)
   const handleUpvoteOption = async (
     questionId: string,
     key: 'A' | 'B' | 'C' | 'D' | 'E'
   ) => {
     try {
-      await ApiService.upvoteOption(questionId, key);
+      const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+      await ApiService.upvoteOption(questionId, key, currentUserId);
       setQuestions((prev) =>
         prev.map((q) => {
           if (q.id === questionId) {
             return {
               ...q,
-              options: q.options.map((o) =>
-                o.key === key ? { ...o, upvotes: (o.upvotes || 0) + 1 } : o
-              ),
+              options: q.options.map((o) => {
+                if (o.key === key) {
+                  const likedBy = o.likedBy || [];
+                  const idx = likedBy.indexOf(currentUserId);
+                  const newLikedBy = idx >= 0
+                    ? likedBy.filter((u) => u !== currentUserId)
+                    : [...likedBy, currentUserId];
+                  return {
+                    ...o,
+                    upvotes: idx >= 0 ? Math.max(0, (o.upvotes || 1) - 1) : (o.upvotes || 0) + 1,
+                    likedBy: newLikedBy,
+                  };
+                }
+                return o;
+              }),
             };
           }
           return q;
@@ -843,6 +896,7 @@ export default function App() {
                     onUpvoteFragment={handleUpvoteFragment}
                     onAddOption={handleAddOption}
                     onUpvoteOption={handleUpvoteOption}
+                    onUpvoteQuestion={handleUpvoteQuestion}
                     onReconstructWithAi={handleReconstructWithAi}
                     onSetClaimedAnswer={handleSetClaimedAnswer}
                     isReconstructing={!!reconstructingMap[q.id]}

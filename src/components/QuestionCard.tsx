@@ -31,6 +31,7 @@ interface QuestionCardProps {
   onUpvoteFragment: (questionId: string, fragmentId: string) => Promise<void>;
   onAddOption: (questionId: string, key: 'A' | 'B' | 'C' | 'D' | 'E', text: string, suggestedBy: string) => Promise<void>;
   onUpvoteOption: (questionId: string, key: 'A' | 'B' | 'C' | 'D' | 'E') => Promise<void>;
+  onUpvoteQuestion?: (questionId: string) => Promise<void>;
   onReconstructWithAi: (questionId: string) => Promise<void>;
   onSetClaimedAnswer: (questionId: string, answer: 'A' | 'B' | 'C' | 'D' | 'E') => Promise<void>;
   isReconstructing: boolean;
@@ -48,6 +49,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   onUpvoteFragment,
   onAddOption,
   onUpvoteOption,
+  onUpvoteQuestion,
   onReconstructWithAi,
   onSetClaimedAnswer,
   isReconstructing,
@@ -55,6 +57,9 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   const [isExpanded, setIsExpanded] = useState(true);
   const [showAddFragment, setShowAddFragment] = useState(false);
   const [showAddOption, setShowAddOption] = useState(false);
+
+  const currentUserId = currentUser?.uid || currentUser?.email || (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_device_token') || 'local_user' : 'local_user');
+  const isQuestionLiked = !!question.likedBy?.includes(currentUserId);
 
   const isMyQuestion = !!currentUser && (
     question.contributedByUid === currentUser.uid ||
@@ -197,6 +202,23 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 
         {/* Action Controls */}
         <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+          {/* Question Upvote / Like Button (Toggle) */}
+          {onUpvoteQuestion && (
+            <button
+              type="button"
+              onClick={() => onUpvoteQuestion(question.id)}
+              className={`text-xs font-semibold px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95 border ${
+                isQuestionLiked
+                  ? 'bg-teal-700 text-white border-teal-800 font-bold'
+                  : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-700 hover:text-teal-700 hover:border-teal-300'
+              }`}
+              title={isQuestionLiked ? 'Sorunun Beğenisini İptal Et' : 'Soruyu Beğen (+1)'}
+            >
+              <ThumbsUp className={`w-3.5 h-3.5 ${isQuestionLiked ? 'fill-current text-white' : 'text-teal-600'}`} />
+              <span>{question.upvotes || 0}</span>
+            </button>
+          )}
+
           {/* Edit Button for Owner or Admin */}
           {(isMyQuestion || isAdmin) && onEditQuestion && (
             <button
@@ -331,14 +353,23 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                             {frag.type === 'stem' ? 'Soru Kökü' : frag.type === 'clue' ? 'İpucu' : 'Şık'}
                           </span>
                         </div>
-                        <button
-                          onClick={() => onUpvoteFragment(question.id, frag.id)}
-                          className="flex items-center gap-1 text-[11px] text-slate-500 hover:text-teal-700 bg-white border border-slate-200 px-1.5 py-0.5 rounded cursor-pointer active:scale-95 transition-all"
-                          title="Ben de böyle hatırlıyorum (+1)"
-                        >
-                          <ThumbsUp className="w-3 h-3 text-teal-600" />
-                          <span>{frag.upvotes || 0}</span>
-                        </button>
+                        {(() => {
+                          const isFragLiked = !!frag.likedBy?.includes(currentUserId);
+                          return (
+                            <button
+                              onClick={() => onUpvoteFragment(question.id, frag.id)}
+                              className={`flex items-center gap-1 text-[11px] border px-2 py-0.5 rounded cursor-pointer active:scale-95 transition-all ${
+                                isFragLiked
+                                  ? 'bg-teal-700 text-white border-teal-800 font-bold'
+                                  : 'text-slate-600 hover:text-teal-700 bg-white border-slate-200 hover:bg-slate-50'
+                              }`}
+                              title={isFragLiked ? "Beğeniyi İptal Et" : "Ben de böyle hatırlıyorum (+1)"}
+                            >
+                              <ThumbsUp className={`w-3 h-3 ${isFragLiked ? 'fill-current text-white' : 'text-teal-600'}`} />
+                              <span>{frag.upvotes || 0}</span>
+                            </button>
+                          );
+                        })()}
                       </div>
                       <p className="text-slate-800 leading-relaxed font-sans">{frag.text}</p>
                     </div>
@@ -428,13 +459,23 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                           {opt.suggestedBy && (
                             <span className="text-[10px] text-slate-400">({opt.suggestedBy})</span>
                           )}
-                          <button
-                            onClick={() => onUpvoteOption(question.id, opt.key)}
-                            className="flex items-center gap-1 text-[10px] text-slate-500 hover:text-teal-700 bg-white border border-slate-200 px-1 py-0.5 rounded cursor-pointer"
-                          >
-                            <ThumbsUp className="w-2.5 h-2.5 text-teal-600" />
-                            <span>{opt.upvotes || 0}</span>
-                          </button>
+                          {(() => {
+                            const isOptLiked = !!opt.likedBy?.includes(currentUserId);
+                            return (
+                              <button
+                                onClick={() => onUpvoteOption(question.id, opt.key)}
+                                className={`flex items-center gap-1 text-[10px] border px-1.5 py-0.5 rounded cursor-pointer transition-colors ${
+                                  isOptLiked
+                                    ? 'bg-teal-700 text-white border-teal-800 font-bold'
+                                    : 'text-slate-600 hover:text-teal-700 bg-white border-slate-200 hover:bg-slate-50'
+                                }`}
+                                title={isOptLiked ? "Beğeniyi İptal Et" : "Şıkkı Beğen (+1)"}
+                              >
+                                <ThumbsUp className={`w-2.5 h-2.5 ${isOptLiked ? 'fill-current text-white' : 'text-teal-600'}`} />
+                                <span>{opt.upvotes || 0}</span>
+                              </button>
+                            );
+                          })()}
                         </div>
                       </div>
                     ))}

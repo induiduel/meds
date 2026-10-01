@@ -94,6 +94,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [isSyncingCivan, setIsSyncingCivan] = useState(false);
   const [civanSyncResult, setCivanSyncResult] = useState<string | null>(null);
 
+  // Full Local Sync state
+  const [isSyncingFullLocal, setIsSyncingFullLocal] = useState(false);
+  const [fullLocalSyncFeedback, setFullLocalSyncFeedback] = useState<string | null>(null);
+
   // Destructive confirmation state
   const [confirmDialog, setConfirmDialog] = useState<{
     isOpen: boolean;
@@ -255,6 +259,26 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       setCivanSyncResult(`Hata: ${err.message}`);
     } finally {
       setIsSyncingCivan(false);
+    }
+  };
+
+  // Full Local Sync Trigger (Drive Crawl, Download, Local OCR & Firebase Sync)
+  const handleTriggerFullLocalSync = async () => {
+    setIsSyncingFullLocal(true);
+    setFullLocalSyncFeedback('Yerel Drive indirme ve OCR çıkarma motoru başlatılıyor...');
+    try {
+      const res = await fetch('/api/automation/run-full-local-sync', { method: 'POST' });
+      const data = await res.json();
+      if (data.success) {
+        setFullLocalSyncFeedback(`✓ ${data.message} - PDF'ler yerel CPU ile taranıp metinleri ve soruları veritabanına aktarılıyor.`);
+        await onRefreshData();
+      } else {
+        setFullLocalSyncFeedback(`Hata: ${data.error || 'İşlem başlatılamadı'}`);
+      }
+    } catch (e: any) {
+      setFullLocalSyncFeedback(`Hata: ${e.message}`);
+    } finally {
+      setIsSyncingFullLocal(false);
     }
   };
 
@@ -819,33 +843,66 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               )}
             </div>
 
-            {/* 3. Local Desktop Background Daemon Card (Zero Token Cost) */}
-            <div className="bg-slate-900 text-white rounded-xl p-4 sm:p-5 space-y-3">
+            {/* 3. Local Desktop Background Daemon Card (Zero Token Cost, Verbatim OCR) */}
+            <div className="bg-slate-900 text-white rounded-xl p-4 sm:p-5 space-y-4">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2">
                   <Terminal className="w-5 h-5 text-emerald-400" />
-                  <h4 className="font-bold text-sm text-white">Yerel Bilgisayar Arka Plan Çalışanı (Desktop Worker)</h4>
+                  <h4 className="font-bold text-sm text-white">Yerel Drive İndirici & CPU Metin/Soru Çıkarıcı</h4>
                   <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                    Sıfır Token / Sınırsız Hız
+                    Yerel CPU / Sıfır AI Hatası / Verbatim
+                  </span>
+                </div>
+                <div className="text-right">
+                  <span className="text-[10px] text-emerald-400 font-bold bg-emerald-950/80 border border-emerald-700/60 px-2 py-1 rounded">
+                    🕒 Hedef Saat: 16:00 - 18:00
                   </span>
                 </div>
               </div>
 
               <p className="text-slate-300 text-xs leading-relaxed">
-                Bilgisayarınızı açık bırakarak yoğun slayt ve çıkmışları yapay zekaya token harcatmadan kendi internetiniz ve işlemciniz üzerinden otomatik taratabilirsiniz.
+                Tüm Google Drive çıkmış klasörleri doğrudan bilgisayarınızdaki <code className="bg-slate-800 text-teal-300 px-1.5 py-0.5 rounded font-mono">C:\Users\indui\Desktop\meds_database</code> klasörüne indirilir. PDF'ler yerel işlemcinizle sayfa sayfa birebir okunur (asla AI özet uydurması yapmaz) ve sorular 0 beğeni ile veritabanına ve Firebase'e aktarılır.
               </p>
 
-              <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-xs text-emerald-400 space-y-1">
-                <div className="text-slate-500">// Terminalde veya Komut Satırında Çalıştırın:</div>
-                <div className="select-all font-bold">node scripts/local-drive-sync-agent.mjs</div>
-                <div className="text-slate-500 pt-1">// Veya Windows'ta çift tıklayarak başlatın:</div>
-                <div className="text-slate-300">start-worker.bat</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1">
+                  <span className="text-slate-400 font-bold block">1. Otomatik Başlatma (Windows Başlangıç):</span>
+                  <p className="text-[11px] text-slate-400">
+                    Bilgisayar her açıldığında arka planda sessizce başlar. Saat 16:00-18:00 arasındaysa doğrudan eşitlemeyi yapar:
+                  </p>
+                  <div className="font-mono text-[11px] text-teal-300 pt-1">start-meds-daemon.vbs</div>
+                </div>
+
+                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1">
+                  <span className="text-slate-400 font-bold block">2. Manuel Çift Tıklama Dosyası:</span>
+                  <p className="text-[11px] text-slate-400">
+                    İstediğiniz an masaüstünden veya proje klasöründen tek tıkla başlatabilirsiniz:
+                  </p>
+                  <div className="font-mono text-[11px] text-emerald-400 pt-1">run-meds-sync.bat</div>
+                </div>
               </div>
 
-              <div className="text-slate-400 text-[11px] flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Drive klasörüne dosya eklediğiniz an otomatik olarak arka planda okunup MedSoru'ya kaydedilir.</span>
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-slate-800">
+                <div className="text-[11px] text-slate-400">
+                  <span>Hedef klasörler: <strong>meds_sorular</strong> & <strong>ders_notlari_pdf</strong></span>
+                </div>
+
+                <button
+                  onClick={handleTriggerFullLocalSync}
+                  disabled={isSyncingFullLocal}
+                  className="bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-slate-950 font-black px-4 py-2 rounded-lg flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
+                >
+                  <RefreshCw className={`w-4 h-4 ${isSyncingFullLocal ? 'animate-spin' : ''}`} />
+                  <span>{isSyncingFullLocal ? 'Eşitleme Başlatılıyor...' : 'Tüm Drive Çıkmışlarını & Slaytları Şimdi Eşitle'}</span>
+                </button>
               </div>
+
+              {fullLocalSyncFeedback && (
+                <div className="p-3 bg-emerald-950/80 border border-emerald-500/50 rounded-lg text-xs font-semibold text-emerald-200 flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>{fullLocalSyncFeedback}</span>
+                </div>
+              )}
             </div>
 
             {/* 4. GitHub Push & Sync Card */}

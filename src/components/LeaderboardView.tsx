@@ -104,8 +104,8 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
           } else {
             entry.totalPoints += 5;
           }
-          entry.upvotesCount += (f.upvotes || 1);
-          entry.totalPoints += (f.upvotes || 1) * 2; // +2 points per upvote
+          entry.upvotesCount += (f.upvotes || 0);
+          entry.totalPoints += (f.upvotes || 0) * 2; // +2 points per upvote
         }
       });
 
@@ -116,8 +116,8 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
           const entry = getEntry(key, opt.suggestedBy);
           entry.optionsCount += 1;
           entry.totalPoints += 5; // +5 points for providing an option
-          entry.upvotesCount += (opt.upvotes || 1);
-          entry.totalPoints += (opt.upvotes || 1) * 2; // +2 points per upvote
+          entry.upvotesCount += (opt.upvotes || 0);
+          entry.totalPoints += (opt.upvotes || 0) * 2; // +2 points per upvote
         }
       });
 

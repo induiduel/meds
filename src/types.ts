@@ -7,6 +7,7 @@ export interface MemoryFragment {
   type: 'stem' | 'option' | 'clue' | 'answer';
   timestamp: string;
   upvotes: number;
+  likedBy?: string[];
 }
 
 export interface QuestionOption {
@@ -16,6 +17,7 @@ export interface QuestionOption {
   suggestedByUid?: string;
   isAiGenerated?: boolean;
   upvotes: number;
+  likedBy?: string[];
 }
 
 export interface ReconstructedQuestion {
@@ -107,6 +109,8 @@ export interface QuestionItem {
   contributedByStudentNumber?: string;
   revisions?: QuestionRevision[];
   lectureReference?: QuestionLectureMatch;
+  upvotes?: number;
+  likedBy?: string[];
   createdAt: string;
   updatedAt: string;
 }

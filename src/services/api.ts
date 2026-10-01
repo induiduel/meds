@@ -883,7 +883,8 @@ export const ApiService = {
       text: text.trim(),
       type: type || 'clue',
       timestamp: new Date().toISOString(),
-      upvotes: 1,
+      upvotes: 0,
+      likedBy: [],
     };
     q.fragments.push(newFrag);
     if (q.status === 'empty') q.status = 'gathering';
@@ -899,19 +900,77 @@ export const ApiService = {
     return q;
   },
 
-  async upvoteFragment(questionId: string, fragmentId: string): Promise<void> {
+  async upvoteQuestion(questionId: string, customUserId?: string): Promise<{ question?: QuestionItem; liked: boolean; upvotes: number }> {
+    const userId = customUserId || (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_device_token') || 'anon_user' : 'anon_user');
+    const db = getLocalDb();
+    const q = db.questions.find((item) => item.id === questionId);
+    let liked = false;
+    let upvotesCount = 0;
+
+    if (q) {
+      q.likedBy = q.likedBy || [];
+      const idx = q.likedBy.indexOf(userId);
+      if (idx >= 0) {
+        q.likedBy.splice(idx, 1);
+        q.upvotes = Math.max(0, (q.upvotes || 1) - 1);
+        liked = false;
+      } else {
+        q.likedBy.push(userId);
+        q.upvotes = (q.upvotes || 0) + 1;
+        liked = true;
+      }
+      upvotesCount = q.upvotes || 0;
+      saveLocalDb(db);
+      try {
+        await FirestoreDbService.saveQuestion(q);
+      } catch (e) {}
+    }
+
+    try {
+      const res = await fetch(`/api/questions/${questionId}/upvote`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        return { question: data.question || q, liked: !!data.liked, upvotes: data.upvotes || upvotesCount };
+      }
+    } catch (e) {}
+
+    return { question: q, liked, upvotes: upvotesCount };
+  },
+
+  async upvoteFragment(questionId: string, fragmentId: string, customUserId?: string): Promise<void> {
+    const userId = customUserId || (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_device_token') || 'anon_user' : 'anon_user');
     const db = getLocalDb();
     const q = db.questions.find((item) => item.id === questionId);
     if (q) {
       const f = q.fragments.find((frag) => frag.id === fragmentId);
       if (f) {
-        f.upvotes = (f.upvotes || 0) + 1;
+        f.likedBy = f.likedBy || [];
+        const idx = f.likedBy.indexOf(userId);
+        if (idx >= 0) {
+          f.likedBy.splice(idx, 1);
+          f.upvotes = Math.max(0, (f.upvotes || 1) - 1);
+        } else {
+          f.likedBy.push(userId);
+          f.upvotes = (f.upvotes || 0) + 1;
+        }
         saveLocalDb(db);
         try {
           await FirestoreDbService.saveQuestion(q);
         } catch (e) {}
       }
     }
+
+    try {
+      await fetch(`/api/questions/${questionId}/fragments/${fragmentId}/upvote`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId }),
+      });
+    } catch (e) {}
   },
 
   async addOption(questionId: string, key: 'A' | 'B' | 'C' | 'D' | 'E', text: string, suggestedBy: string): Promise<QuestionItem> {
@@ -926,19 +985,20 @@ export const ApiService = {
       text: `${key} Şıkkı: "${text.trim()}"`,
       type: 'option',
       timestamp: new Date().toISOString(),
-      upvotes: 1,
+      upvotes: 0,
+      likedBy: [],
     });
 
     const exOpt = q.options.find((o) => o.key === key);
     if (exOpt) {
       if (exOpt.text.trim().toLowerCase() === text.trim().toLowerCase()) {
-        exOpt.upvotes = (exOpt.upvotes || 1) + 1;
+        exOpt.upvotes = (exOpt.upvotes || 0) + 1;
       } else {
         exOpt.text = text.trim();
         if (suggestedBy) exOpt.suggestedBy = suggestedBy;
       }
     } else {
-      q.options.push({ key, text: text.trim(), suggestedBy: suggestedBy || 'Anonim', upvotes: 1 });
+      q.options.push({ key, text: text.trim(), suggestedBy: suggestedBy || 'Anonim', upvotes: 0, likedBy: [] });
     }
     q.options.sort((a, b) => a.key.localeCompare(b.key));
     q.updatedAt = new Date().toISOString();
@@ -953,19 +1013,36 @@ export const ApiService = {
     return q;
   },
 
-  async upvoteOption(questionId: string, key: 'A' | 'B' | 'C' | 'D' | 'E'): Promise<void> {
+  async upvoteOption(questionId: string, key: 'A' | 'B' | 'C' | 'D' | 'E', customUserId?: string): Promise<void> {
+    const userId = customUserId || (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_device_token') || 'anon_user' : 'anon_user');
     const db = getLocalDb();
     const q = db.questions.find((item) => item.id === questionId);
     if (q) {
       const opt = q.options.find((o) => o.key === key);
       if (opt) {
-        opt.upvotes = (opt.upvotes || 0) + 1;
+        opt.likedBy = opt.likedBy || [];
+        const idx = opt.likedBy.indexOf(userId);
+        if (idx >= 0) {
+          opt.likedBy.splice(idx, 1);
+          opt.upvotes = Math.max(0, (opt.upvotes || 1) - 1);
+        } else {
+          opt.likedBy.push(userId);
+          opt.upvotes = (opt.upvotes || 0) + 1;
+        }
         saveLocalDb(db);
         try {
           await FirestoreDbService.saveQuestion(q);
         } catch (e) {}
       }
     }
+
+    try {
+      await fetch(`/api/questions/${questionId}/options/${key}/upvote`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId }),
+      });
+    } catch (e) {}
   },
 
   async setClaimedAnswer(questionId: string, answer: 'A' | 'B' | 'C' | 'D' | 'E'): Promise<void> {

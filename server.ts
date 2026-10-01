@@ -177,6 +177,7 @@ interface MemoryFragment {
   type: 'stem' | 'option' | 'clue' | 'answer';
   timestamp: string;
   upvotes: number;
+  likedBy?: string[];
 }
 
 interface QuestionOption {
@@ -185,6 +186,7 @@ interface QuestionOption {
   suggestedBy?: string;
   isAiGenerated?: boolean;
   upvotes: number;
+  likedBy?: string[];
 }
 
 interface ReconstructedQuestion {
@@ -241,6 +243,8 @@ export interface QuestionItem {
     confidenceScore?: number;
     driveFileUrl?: string;
   };
+  upvotes?: number;
+  likedBy?: string[];
   createdAt: string;
   updatedAt: string;
 }
@@ -538,7 +542,8 @@ app.post('/api/questions', (req, res) => {
       text: fragmentText.trim(),
       type: 'stem',
       timestamp: new Date().toISOString(),
-      upvotes: 1,
+      upvotes: 0,
+      likedBy: [],
     });
   }
 
@@ -569,6 +574,8 @@ app.post('/api/questions', (req, res) => {
     options: [],
     claimedAnswer: claimedAnswer || undefined,
     tags: [discipline || 'Kurul'],
+    upvotes: 0,
+    likedBy: [],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
@@ -576,6 +583,33 @@ app.post('/api/questions', (req, res) => {
   db.questions.push(newQuestion);
   saveDatabase();
   res.status(201).json({ question: newQuestion, isNew: true });
+});
+
+// Toggle Question Upvote (Like / Cancel Like)
+app.post('/api/questions/:id/upvote', (req, res) => {
+  const question = db.questions.find((q) => q.id === req.params.id);
+  if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
+
+  const userId = req.body?.userId || req.headers['x-user-id'] || 'anon';
+  question.likedBy = question.likedBy || [];
+  const idx = question.likedBy.indexOf(userId);
+
+  let liked = false;
+  if (idx >= 0) {
+    // Already liked -> Toggle off (cancel like)
+    question.likedBy.splice(idx, 1);
+    question.upvotes = Math.max(0, (question.upvotes || 1) - 1);
+    liked = false;
+  } else {
+    // First time -> Add like
+    question.likedBy.push(userId);
+    question.upvotes = (question.upvotes || 0) + 1;
+    liked = true;
+  }
+
+  question.updatedAt = new Date().toISOString();
+  saveDatabase();
+  res.json({ success: true, upvotes: question.upvotes, liked, likedBy: question.likedBy, question });
 });
 
 // Add fragment/memory to a question
@@ -596,7 +630,8 @@ app.post('/api/questions/:id/fragments', (req, res) => {
     text: text.trim(),
     type: type || 'clue',
     timestamp: new Date().toISOString(),
-    upvotes: 1,
+    upvotes: 0,
+    likedBy: [],
   };
 
   question.fragments.push(newFragment);
@@ -609,7 +644,7 @@ app.post('/api/questions/:id/fragments', (req, res) => {
   res.json({ fragment: newFragment, question });
 });
 
-// Upvote a fragment
+// Toggle Upvote a fragment (Like / Cancel Like)
 app.post('/api/questions/:id/fragments/:fragmentId/upvote', (req, res) => {
   const question = db.questions.find((q) => q.id === req.params.id);
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
@@ -617,11 +652,27 @@ app.post('/api/questions/:id/fragments/:fragmentId/upvote', (req, res) => {
   const fragment = question.fragments.find((f) => f.id === req.params.fragmentId);
   if (!fragment) return res.status(404).json({ error: 'Katkı bulunamadı.' });
 
-  fragment.upvotes = (fragment.upvotes || 0) + 1;
+  const userId = req.body?.userId || req.headers['x-user-id'] || 'anon';
+  fragment.likedBy = fragment.likedBy || [];
+  const idx = fragment.likedBy.indexOf(userId);
+
+  let liked = false;
+  if (idx >= 0) {
+    // Already liked -> cancel like
+    fragment.likedBy.splice(idx, 1);
+    fragment.upvotes = Math.max(0, (fragment.upvotes || 1) - 1);
+    liked = false;
+  } else {
+    // Add like
+    fragment.likedBy.push(userId);
+    fragment.upvotes = (fragment.upvotes || 0) + 1;
+    liked = true;
+  }
+
   question.updatedAt = new Date().toISOString();
   saveDatabase();
 
-  res.json({ fragment });
+  res.json({ fragment, liked, upvotes: fragment.upvotes });
 });
 
 // Add or update an option
@@ -643,7 +694,8 @@ app.post('/api/questions/:id/options', (req, res) => {
       key: key as 'A' | 'B' | 'C' | 'D' | 'E',
       text: text.trim(),
       suggestedBy: suggestedBy || 'Anonim',
-      upvotes: 1,
+      upvotes: 0,
+      likedBy: [],
     });
   }
 
@@ -655,7 +707,7 @@ app.post('/api/questions/:id/options', (req, res) => {
   res.json({ options: question.options, question });
 });
 
-// Upvote an option
+// Toggle Upvote an option (Like / Cancel Like)
 app.post('/api/questions/:id/options/:key/upvote', (req, res) => {
   const question = db.questions.find((q) => q.id === req.params.id);
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
@@ -663,11 +715,27 @@ app.post('/api/questions/:id/options/:key/upvote', (req, res) => {
   const opt = question.options.find((o) => o.key === req.params.key);
   if (!opt) return res.status(404).json({ error: 'Şık bulunamadı.' });
 
-  opt.upvotes = (opt.upvotes || 0) + 1;
+  const userId = req.body?.userId || req.headers['x-user-id'] || 'anon';
+  opt.likedBy = opt.likedBy || [];
+  const idx = opt.likedBy.indexOf(userId);
+
+  let liked = false;
+  if (idx >= 0) {
+    // Already liked -> cancel like
+    opt.likedBy.splice(idx, 1);
+    opt.upvotes = Math.max(0, (opt.upvotes || 1) - 1);
+    liked = false;
+  } else {
+    // Add like
+    opt.likedBy.push(userId);
+    opt.upvotes = (opt.upvotes || 0) + 1;
+    liked = true;
+  }
+
   question.updatedAt = new Date().toISOString();
   saveDatabase();
 
-  res.json({ option: opt });
+  res.json({ option: opt, liked, upvotes: opt.upvotes });
 });
 
 // Set claimed answer
@@ -1896,14 +1964,60 @@ app.post('/api/automation/civan-sync', (req, res) => {
 });
 
 // Automation: Heartbeat & status tracking from local daemon or Drive worker
+let lastLocalSyncStatus = {
+  status: 'idle',
+  lastRun: null as string | null,
+  questionsCount: 0,
+  notesCount: 0,
+  message: 'Henüz yerel eşitleme çalıştırılmadı',
+};
+
 app.post('/api/automation/drive-sync-status', (req, res) => {
-  const { source, status, folderId, timestamp } = req.body;
+  const { source, status, folderId, timestamp, questionsCount, notesCount } = req.body;
+  lastLocalSyncStatus = {
+    status: status || 'completed',
+    lastRun: timestamp || new Date().toISOString(),
+    questionsCount: questionsCount || lastLocalSyncStatus.questionsCount,
+    notesCount: notesCount || lastLocalSyncStatus.notesCount,
+    message: 'Yerel eşitleme başarıyla bildirildi',
+  };
   res.json({
     success: true,
     message: 'Yerel işleyici sinyali alındı',
     recordedAt: new Date().toISOString(),
     status: status || 'active',
   });
+});
+
+// Automation: Trigger Full Local Sync (Drive + PDF Parser + Database)
+app.post('/api/automation/run-full-local-sync', (req, res) => {
+  try {
+    const { spawn } = require('child_process');
+    const scriptPath = path.join(__dirname, 'scripts', 'meds-local-sync.mjs');
+    
+    lastLocalSyncStatus.status = 'running';
+    lastLocalSyncStatus.message = 'Yerel Google Drive indirme ve PDF çıkarma süreci başlatıldı...';
+
+    const child = spawn('node', [scriptPath], {
+      detached: true,
+      stdio: 'ignore',
+      cwd: __dirname
+    });
+    child.unref();
+
+    res.json({
+      success: true,
+      message: 'Tam yerel eşitleme başarıyla başlatıldı (PID: ' + child.pid + ')',
+      pid: child.pid,
+      startedAt: new Date().toISOString()
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Yerel eşitleme başlatılamadı: ' + err.message });
+  }
+});
+
+app.get('/api/automation/local-sync-status', (req, res) => {
+  res.json(lastLocalSyncStatus);
 });
 
 // Lecture Notes: Get all lecture notes
