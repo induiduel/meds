@@ -10,7 +10,7 @@ import {
   writeBatch
 } from 'firebase/firestore';
 import { auth } from './auth';
-import { Committee, QuestionItem, AdminNotification } from '../types';
+import { Committee, QuestionItem, AdminNotification, LectureNote } from '../types';
 import firebaseConfig from '../../firebase-applet-config.json';
 
 // Initialize Firestore using the configured database ID
@@ -21,6 +21,7 @@ export const db = firestoreDatabaseId
 
 export const COMMITTEES_COLLECTION = 'committees';
 export const QUESTIONS_COLLECTION = 'questions';
+export const LECTURE_NOTES_COLLECTION = 'lecture_notes';
 export const NOTIFICATIONS_COLLECTION = 'admin_notifications';
 
 // Helper to prevent any Firebase network hang from blocking the UI
@@ -587,6 +588,41 @@ export class FirestoreDbService {
       return list;
     } catch (e) {
       console.warn('Firestore getRegisteredUsers fallback:', e);
+      return [];
+    }
+  }
+
+  /**
+   * Fetches all lecture notes from Firestore 'lecture_notes' collection
+   */
+  static async getLectureNotes(): Promise<LectureNote[]> {
+    try {
+      const snap = await withTimeout(getDocs(collection(db, LECTURE_NOTES_COLLECTION)), 8000);
+      const list: LectureNote[] = [];
+      snap.forEach((d) => list.push(d.data() as LectureNote));
+      return list;
+    } catch (e) {
+      console.warn('Firestore getLectureNotes fallback:', e);
+      return [];
+    }
+  }
+
+  /**
+   * Fetches all past exam questions from Firestore
+   */
+  static async getAllPastQuestions(): Promise<QuestionItem[]> {
+    try {
+      const snap = await withTimeout(getDocs(collection(db, QUESTIONS_COLLECTION)), 15000);
+      const list: QuestionItem[] = [];
+      snap.forEach((d) => {
+        const data = d.data() as QuestionItem;
+        if (data.isPastExam || data.id?.startsWith('past-') || data.id?.startsWith('civan-') || data.examYear) {
+          list.push(data);
+        }
+      });
+      return list;
+    } catch (e) {
+      console.warn('Firestore getAllPastQuestions fallback:', e);
       return [];
     }
   }

@@ -1405,9 +1405,17 @@ export const ApiService = {
 
   // Lecture Notes API
   async getLectureNotes(): Promise<any[]> {
-    const res = await fetch('/api/lecture-notes');
-    if (!res.ok) throw new Error('Ders notları alınamadı');
-    return await res.json();
+    try {
+      const res = await fetch('/api/lecture-notes');
+      if (res.ok) return await res.json();
+    } catch (e) {
+      // Fallback for static environments (e.g. GitHub Pages)
+    }
+    try {
+      const cloud = await FirestoreDbService.getLectureNotes();
+      if (cloud && cloud.length > 0) return cloud;
+    } catch (e) {}
+    return [];
   },
 
   async saveLectureNote(note: any): Promise<any> {
@@ -1698,6 +1706,10 @@ export const ApiService = {
     } catch (e) {
       console.warn('API getPastQuestions error:', e);
     }
+    try {
+      const cloudPast = await FirestoreDbService.getAllPastQuestions();
+      if (cloudPast && cloudPast.length > 0) return cloudPast;
+    } catch (e) {}
     const all = await this.getQuestions();
     return all.filter(q => q.id?.startsWith('past-') || q.id?.startsWith('civan-') || q.examYear || q.tags?.some((t: string) => t.toLowerCase().includes('çıkmış')));
   },
