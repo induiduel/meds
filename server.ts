@@ -3650,11 +3650,25 @@ async function startServer() {
       },
       appType: 'spa',
     });
+    app.get(['/meds', '/meds/'], (req, res) => {
+      res.redirect('/');
+    });
     app.use(vite.middlewares);
   } else {
     console.log('[Server] ⚡ Yüksek Hızlı Üretim (Production) modu: dist/ klasörü statik olarak sunuluyor.');
+    app.use('/meds', express.static(path.resolve(__dirname, 'dist')));
     app.use(express.static(path.resolve(__dirname, 'dist')));
+    app.use('/meds', express.static(path.resolve(__dirname, 'public')));
+    app.use(express.static(path.resolve(__dirname, 'public')));
     app.get('*', (req, res) => {
+      // Do not return HTML for static asset requests that were not found (prevents MIME errors)
+      if (
+        req.path.startsWith('/assets/') ||
+        req.path.startsWith('/meds/assets/') ||
+        /\.(js|css|map|json|png|jpg|jpeg|svg|ico|woff|woff2)$/i.test(req.path)
+      ) {
+        return res.status(404).send('Asset not found');
+      }
       res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
     });
   }
