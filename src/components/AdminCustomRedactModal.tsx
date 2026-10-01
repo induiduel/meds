@@ -161,12 +161,8 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
         updatedAt: new Date().toISOString()
       };
 
-      // Save via ApiService (updates Firestore and local file)
-      await ApiService.adminCustomRedactQuestion({
-        question: updatedQuestion,
-        customPrompt: 'Save approved reconstruction',
-        adminEmail: ADMIN_EMAIL
-      });
+      // Save approved question directly across all databases (Local Server + Supabase + Firebase Spark)
+      await ApiService.saveApprovedPastQuestion(updatedQuestion);
 
       onSaved(updatedQuestion);
       onClose();

@@ -744,6 +744,54 @@ app.post('/api/past-exams/:id/upvote', (req, res) => {
   }
 });
 
+// Update past exam question directly (for Admin edits, approvals, and AI Redactions)
+app.put('/api/past-exams/:id', (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const idx = list.findIndex(item => item.id === req.params.id);
+    if (idx === -1) {
+      const newQ = { ...req.body, id: req.params.id, updatedAt: new Date().toISOString() };
+      list.push(newQ);
+      savePastQuestionsDb(list);
+      return res.json({ success: true, question: newQ, created: true });
+    }
+    list[idx] = {
+      ...list[idx],
+      ...req.body,
+      id: req.params.id,
+      updatedAt: new Date().toISOString()
+    };
+    savePastQuestionsDb(list);
+    res.json({ success: true, question: list[idx] });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Çıkmış soru güncellenemedi: ' + err.message });
+  }
+});
+
+// Update regular question directly
+app.put('/api/questions/:id', (req, res) => {
+  try {
+    const idx = db.questions.findIndex(item => item.id === req.params.id);
+    if (idx === -1) {
+      const newQ = { ...req.body, id: req.params.id, updatedAt: new Date().toISOString() };
+      db.questions.push(newQ);
+      saveDatabase();
+      return res.json({ success: true, question: newQ, created: true });
+    }
+    db.questions[idx] = {
+      ...db.questions[idx],
+      ...req.body,
+      id: req.params.id,
+      updatedAt: new Date().toISOString()
+    };
+    saveDatabase();
+    res.json({ success: true, question: db.questions[idx] });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Soru güncellenemedi: ' + err.message });
+  }
+});
+
+
 // Batch import questions (Past exams, AI parsed questions, desktop sync)
 app.post('/api/questions/batch-import', (req, res) => {
   const { committeeId, examYear, questions } = req.body;

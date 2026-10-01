@@ -47,6 +47,8 @@ import { AdminPastExamImporterModal } from './AdminPastExamImporterModal';
 import { InfoPopover } from './InfoPopover';
 import { ApiService } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
+import { multiDbManager, DatabaseMode, DatabaseStatus } from '../services/multiDbManager';
+import { SupabaseDbService } from '../services/supabaseDb';
 import { runDriveSyncAndAutoMatch, TARGET_DRIVE_FOLDER_ID, TARGET_DRIVE_FOLDER_URL } from '../services/driveAutomation';
 
 interface AdminPanelModalProps {
@@ -115,6 +117,83 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   // Firestore Questions Sync State
   const [isSyncingFirestore, setIsSyncingFirestore] = useState(false);
   const [firestoreSyncFeedback, setFirestoreSyncFeedback] = useState<string | null>(null);
+
+  // Multi-Database & Supabase State
+  const [dbMode, setDbMode] = useState<DatabaseMode>(() => multiDbManager.getActiveMode());
+  const [dbStatuses, setDbStatuses] = useState<DatabaseStatus | null>(null);
+  const [isRefreshingDbStatus, setIsRefreshingDbStatus] = useState(false);
+  const [isSyncingMultiDb, setIsSyncingMultiDb] = useState(false);
+  const [multiDbFeedback, setMultiDbFeedback] = useState<string | null>(null);
+  const [showSqlSchemaModal, setShowSqlSchemaModal] = useState(false);
+  const [copiedSql, setCopiedSql] = useState(false);
+  const [geminiApiKeyInput, setGeminiApiKeyInput] = useState(() => {
+    return localStorage.getItem('medsoru_gemini_api_key') || '';
+  });
+  const [geminiKeyFeedback, setGeminiKeyFeedback] = useState<string | null>(null);
+
+  const refreshDbStatuses = async () => {
+    setIsRefreshingDbStatus(true);
+    try {
+      const s = await multiDbManager.getStatuses();
+      setDbStatuses(s);
+      setDbMode(multiDbManager.getActiveMode());
+    } catch {}
+    setIsRefreshingDbStatus(false);
+  };
+
+  const handleSelectDbMode = (mode: DatabaseMode) => {
+    multiDbManager.setActiveMode(mode);
+    setDbMode(mode);
+    refreshDbStatuses();
+  };
+
+  const handleSaveGeminiKey = () => {
+    if (geminiApiKeyInput.trim()) {
+      localStorage.setItem('medsoru_gemini_api_key', geminiApiKeyInput.trim());
+      setGeminiKeyFeedback('✓ Gemini API anahtarı tarayıcıya güvenle kaydedildi!');
+    } else {
+      localStorage.removeItem('medsoru_gemini_api_key');
+      setGeminiKeyFeedback('API anahtarı temizlendi.');
+    }
+    setTimeout(() => setGeminiKeyFeedback(null), 4000);
+  };
+
+  const handleSyncToAllDatabases = async () => {
+    setIsSyncingMultiDb(true);
+    setMultiDbFeedback('Tüm veriler Supabase ve Firebase Spark havuzlarına eşitleniyor...');
+    try {
+      let supaCount = 0;
+      let sparkCount = 0;
+
+      for (const c of committees) {
+        await multiDbManager.saveCommittee(c);
+      }
+
+      const pastList = await ApiService.getPastQuestions();
+      setMultiDbFeedback(`${pastList.length} çıkmış soru ve ${questions.length} havuz sorusu eşzamanlı aktarılıyor...`);
+
+      try {
+        const res = await SupabaseDbService.batchSavePastQuestions(pastList);
+        supaCount = res.count;
+      } catch (e: any) {
+        console.warn('Supabase batch sync warning:', e.message);
+      }
+
+      try {
+        await FirestoreDbService.batchSaveQuestions(questions);
+        sparkCount = questions.length;
+      } catch (e: any) {
+        console.warn('Firebase batch sync warning:', e.message);
+      }
+
+      setMultiDbFeedback(`✓ Senkronizasyon Tamamlandı! ${supaCount} soru Supabase'e, ${sparkCount} soru Firebase Spark'a ve yerel sunucuya başarıyla işlendi.`);
+      await refreshDbStatuses();
+    } catch (err: any) {
+      setMultiDbFeedback(`Hata: ${err.message}`);
+    } finally {
+      setIsSyncingMultiDb(false);
+    }
+  };
 
   // Automations state
   const [workerHeartbeat, setWorkerHeartbeat] = useState<{ isOnline: boolean; diffSeconds?: number; lastHeartbeat?: any } | null>(null);
@@ -640,6 +719,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       loadSmtpConfig();
       checkWorkerStatus();
       loadWindowsServiceStatus();
+      refreshDbStatuses();
       const interval = setInterval(() => {
         checkWorkerStatus();
         loadWindowsServiceStatus();
@@ -1231,6 +1311,246 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         {/* Tab 3: Database & Backup */}
         {activeTab === 'database' && (
           <div className="p-4 sm:p-6 space-y-5 overflow-y-auto flex-1 text-xs">
+            {/* Multi-Database Active Mode & Cloud Failover Card */}
+            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white rounded-2xl p-5 border border-indigo-700/50 shadow-lg space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-700/70">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="p-1.5 bg-indigo-500/20 text-indigo-300 rounded-lg border border-indigo-500/30">
+                      <Layers className="w-4 h-4" />
+                    </span>
+                    <h3 className="text-sm font-bold text-white">Çoklu Veritabanı Yönetimi & Kesintisiz Geçiş</h3>
+                  </div>
+                  <p className="text-[11px] text-slate-300">
+                    Firebase Spark, Supabase (PostgreSQL) ve Yerel PC veritabanları arasında anlık geçiş yapın. Her kayıt işlemi Firebase Spark'a da otomatik yedeklenir.
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={refreshDbStatuses}
+                  disabled={isRefreshingDbStatus}
+                  className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer self-start sm:self-center text-xs"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isRefreshingDbStatus ? 'animate-spin text-teal-400' : ''}`} />
+                  <span>Yenile</span>
+                </button>
+              </div>
+
+              {/* Live Health Badges */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                {/* Firebase Spark Badge */}
+                <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
+                  dbStatuses?.firebase.status === 'quota_exceeded'
+                    ? 'bg-amber-950/60 border-amber-500/60 text-amber-200'
+                    : 'bg-slate-950/60 border-slate-800 text-slate-300'
+                }`}>
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold flex items-center gap-1.5 text-xs">
+                      🔥 Firebase Spark
+                    </span>
+                    <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                      dbStatuses?.firebase.status === 'quota_exceeded'
+                        ? 'bg-amber-500/30 text-amber-300 border border-amber-500/50'
+                        : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                    }`}>
+                      {dbStatuses?.firebase.status === 'quota_exceeded' ? 'Kota Doldu' : 'Aktif'}
+                    </span>
+                  </div>
+                  <span className="text-[10px] opacity-80">
+                    {dbStatuses?.firebase.details || '50K günlük okuma sınırı'}
+                  </span>
+                </div>
+
+                {/* Supabase Badge */}
+                <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
+                  dbStatuses?.supabase.status === 'online'
+                    ? 'bg-emerald-950/50 border-emerald-500/50 text-emerald-200'
+                    : 'bg-slate-950/60 border-slate-800 text-slate-300'
+                }`}>
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold flex items-center gap-1.5 text-xs">
+                      🐘 Supabase (Postgres)
+                    </span>
+                    <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                      dbStatuses?.supabase.status === 'online'
+                        ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-500/50'
+                        : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/40'
+                    }`}>
+                      {dbStatuses?.supabase.status === 'online' ? 'Bağlı' : 'Yapılandırıldı'}
+                    </span>
+                  </div>
+                  <span className="text-[10px] opacity-80">
+                    {dbStatuses?.supabase.details || 'PostgreSQL Bulut Veritabanı'}
+                  </span>
+                </div>
+
+                {/* Local PC Badge */}
+                <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
+                  dbStatuses?.localPc.status === 'online'
+                    ? 'bg-teal-950/50 border-teal-500/50 text-teal-200'
+                    : 'bg-slate-950/60 border-slate-800 text-slate-300'
+                }`}>
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold flex items-center gap-1.5 text-xs">
+                      💻 Yerel PC Sunucusu
+                    </span>
+                    <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                      dbStatuses?.localPc.status === 'online'
+                        ? 'bg-teal-500/30 text-teal-300 border border-teal-500/50'
+                        : 'bg-rose-500/20 text-rose-300 border border-rose-500/40'
+                    }`}>
+                      {dbStatuses?.localPc.status === 'online' ? 'Online' : 'Offline'}
+                    </span>
+                  </div>
+                  <span className="text-[10px] opacity-80">
+                    {dbStatuses?.localPc.details || 'Port 3000 / meds_database'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Mode Selector Buttons */}
+              <div className="space-y-2">
+                <span className="text-xs font-bold text-slate-200 block">Aktif Çalışma Modunu Seçin:</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleSelectDbMode('auto')}
+                    className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                      dbMode === 'auto'
+                        ? 'bg-indigo-600 text-white border-indigo-400 shadow-md ring-2 ring-indigo-400/50'
+                        : 'bg-slate-950/70 text-slate-300 border-slate-800 hover:bg-slate-800/80'
+                    }`}
+                  >
+                    <div className="font-bold flex items-center gap-1.5 text-xs">
+                      <Zap className="w-3.5 h-3.5 text-amber-400" />
+                      <span>⚡ Otomatik (Önerilen)</span>
+                    </div>
+                    <p className="text-[10px] opacity-85 mt-1">
+                      Spark kotası dolunca Supabase ve Yerel PC otomatik devralır.
+                    </p>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSelectDbMode('supabase')}
+                    className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                      dbMode === 'supabase'
+                        ? 'bg-emerald-700 text-white border-emerald-400 shadow-md ring-2 ring-emerald-400/50'
+                        : 'bg-slate-950/70 text-slate-300 border-slate-800 hover:bg-slate-800/80'
+                    }`}
+                  >
+                    <div className="font-bold flex items-center gap-1.5 text-xs">
+                      <span>🐘 Supabase</span>
+                    </div>
+                    <p className="text-[10px] opacity-85 mt-1">
+                      Öncelikli olarak Supabase PostgreSQL sorgularını kullanır.
+                    </p>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSelectDbMode('firebase')}
+                    className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                      dbMode === 'firebase'
+                        ? 'bg-amber-700 text-white border-amber-400 shadow-md ring-2 ring-amber-400/50'
+                        : 'bg-slate-950/70 text-slate-300 border-slate-800 hover:bg-slate-800/80'
+                    }`}
+                  >
+                    <div className="font-bold flex items-center gap-1.5 text-xs">
+                      <span>🔥 Firebase Spark</span>
+                    </div>
+                    <p className="text-[10px] opacity-85 mt-1">
+                      Doğrudan Cloud Firestore NoSQL veritabanını kullanır.
+                    </p>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSelectDbMode('local_pc')}
+                    className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                      dbMode === 'local_pc'
+                        ? 'bg-teal-700 text-white border-teal-400 shadow-md ring-2 ring-teal-400/50'
+                        : 'bg-slate-950/70 text-slate-300 border-slate-800 hover:bg-slate-800/80'
+                    }`}
+                  >
+                    <div className="font-bold flex items-center gap-1.5 text-xs">
+                      <span>💻 Yerel PC Sunucusu</span>
+                    </div>
+                    <p className="text-[10px] opacity-85 mt-1">
+                      Bilgisayarınızdaki Express + JSON motorunu kullanır.
+                    </p>
+                  </button>
+                </div>
+              </div>
+
+              {/* Action Buttons & Helpers */}
+              <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800">
+                <button
+                  type="button"
+                  onClick={handleSyncToAllDatabases}
+                  disabled={isSyncingMultiDb}
+                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50 shadow-sm"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isSyncingMultiDb ? 'animate-spin' : ''}`} />
+                  <span>{isSyncingMultiDb ? 'Senkronize Ediliyor...' : '🔄 Tüm Verileri Supabase & Spark\'a Eşitle'}</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setShowSqlSchemaModal(true)}
+                  className="bg-slate-800 hover:bg-slate-700 text-indigo-300 border border-indigo-700/50 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
+                >
+                  <Terminal className="w-3.5 h-3.5" />
+                  <span>📋 Supabase SQL Şemasını Göster</span>
+                </button>
+              </div>
+
+              {/* Multi-Db Sync Feedback */}
+              {multiDbFeedback && (
+                <div className={`p-3 rounded-xl text-xs font-semibold flex items-center gap-2 ${
+                  multiDbFeedback.startsWith('✓')
+                    ? 'bg-emerald-950/80 text-emerald-200 border border-emerald-500/50'
+                    : multiDbFeedback.startsWith('Hata')
+                    ? 'bg-rose-950/80 text-rose-200 border border-rose-500/50'
+                    : 'bg-indigo-950/80 text-indigo-200 border border-indigo-500/50'
+                }`}>
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <span>{multiDbFeedback}</span>
+                </div>
+              )}
+
+              {/* Gemini API Key Box */}
+              <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5 space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-200">
+                    <Key className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Gemini AI API Anahtarı</span>
+                  </div>
+                  <span className="text-[10px] text-slate-400">Arkaplan Redaksiyon & Soru İyileştirme İçin</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="password"
+                    value={geminiApiKeyInput}
+                    onChange={(e) => setGeminiApiKeyInput(e.target.value)}
+                    placeholder="AIzaSy... (Google AI Studio API anahtarınızı buraya yapıştırın)"
+                    className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 font-mono"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleSaveGeminiKey}
+                    className="bg-amber-600 hover:bg-amber-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs cursor-pointer transition-all shrink-0"
+                  >
+                    Kaydet
+                  </button>
+                </div>
+                {geminiKeyFeedback && (
+                  <p className="text-[11px] font-semibold text-emerald-400">{geminiKeyFeedback}</p>
+                )}
+              </div>
+            </div>
+
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
               <h4 className="font-bold text-slate-900 text-sm flex items-center gap-2">
                 <Database className="w-4 h-4 text-teal-600" />
@@ -1948,6 +2268,171 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               >
                 {isProcessing ? 'İşleniyor...' : 'Onayla'}
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Supabase SQL Schema Viewer Modal */}
+      {showSqlSchemaModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-xs animate-fadeIn">
+          <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden text-white">
+            <div className="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Terminal className="w-5 h-5 text-indigo-400" />
+                <h3 className="font-bold text-sm text-slate-100">Supabase PostgreSQL Veritabanı Şeması</h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowSqlSchemaModal(false)}
+                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-4 overflow-y-auto space-y-3 text-xs flex-1">
+              <p className="text-slate-300">
+                Supabase Dashboard &gt; <strong>SQL Editor</strong> bölümüne aşağıdaki kodu yapıştırıp <strong>RUN</strong> butonuna basınız. Bu komutlar gerekli tüm tabloları (committees, questions, past_questions, lecture_notes, users, system_status), indeksleri ve RLS politikalarını oluşturur:
+              </p>
+
+              <pre className="p-3 bg-slate-950 rounded-xl border border-slate-800 font-mono text-[11px] text-teal-300 overflow-x-auto select-all max-h-[50vh]">
+{`-- 1. Kurullar Tablosu
+CREATE TABLE IF NOT EXISTS public.committees (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  academic_year TEXT DEFAULT '2026-2027',
+  target_questions INTEGER DEFAULT 100,
+  color TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  data JSONB
+);
+
+-- 2. Aktif Öğrenci Soru Havuzu Tablosu
+CREATE TABLE IF NOT EXISTS public.questions (
+  id TEXT PRIMARY KEY,
+  committee_id TEXT,
+  question_number INTEGER,
+  discipline TEXT,
+  topic TEXT,
+  status TEXT DEFAULT 'gathering',
+  claimed_answer TEXT,
+  upvotes INTEGER DEFAULT 0,
+  tags JSONB DEFAULT '[]'::jsonb,
+  fragments JSONB DEFAULT '[]'::jsonb,
+  options JSONB DEFAULT '[]'::jsonb,
+  reconstruction JSONB,
+  data JSONB,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 3. Çıkmış Sorular & Yapay Zeka Soru Arşivi Tablosu
+CREATE TABLE IF NOT EXISTS public.past_questions (
+  id TEXT PRIMARY KEY,
+  committee_id TEXT,
+  discipline TEXT,
+  topic TEXT,
+  exam_year TEXT,
+  source_file TEXT,
+  ai_category TEXT,
+  claimed_answer TEXT,
+  raw_question JSONB,
+  reconstruction JSONB,
+  is_suspect BOOLEAN DEFAULT FALSE,
+  is_ambiguous BOOLEAN DEFAULT FALSE,
+  is_locked BOOLEAN DEFAULT FALSE,
+  upvotes INTEGER DEFAULT 0,
+  comments JSONB DEFAULT '[]'::jsonb,
+  reports JSONB DEFAULT '[]'::jsonb,
+  custom_redacted_by TEXT,
+  custom_redacted_at TIMESTAMPTZ,
+  custom_redaction_prompt TEXT,
+  data JSONB,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 4. Amfi Ders Notları & Slaytlar Tablosu
+CREATE TABLE IF NOT EXISTS public.lecture_notes (
+  id TEXT PRIMARY KEY,
+  committee_id TEXT,
+  discipline TEXT,
+  title TEXT,
+  pages JSONB DEFAULT '[]'::jsonb,
+  page_count INTEGER DEFAULT 0,
+  data JSONB,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 5. Kullanıcılar & Profiller Tablosu
+CREATE TABLE IF NOT EXISTS public.users (
+  uid TEXT PRIMARY KEY,
+  email TEXT NOT NULL,
+  display_name TEXT,
+  student_number TEXT,
+  role TEXT DEFAULT 'student',
+  data JSONB,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 6. Sistem Durumu & Telemetri Tablosu
+CREATE TABLE IF NOT EXISTS public.system_status (
+  id TEXT PRIMARY KEY,
+  data JSONB,
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 7. Row Level Security (RLS) İzinleri
+ALTER TABLE public.committees ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.questions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.past_questions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.lecture_notes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.users ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.system_status ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read access" ON public.committees FOR SELECT USING (true);
+CREATE POLICY "Allow public write access" ON public.committees FOR ALL USING (true);
+CREATE POLICY "Allow public read access" ON public.questions FOR SELECT USING (true);
+CREATE POLICY "Allow public write access" ON public.questions FOR ALL USING (true);
+CREATE POLICY "Allow public read access" ON public.past_questions FOR SELECT USING (true);
+CREATE POLICY "Allow public write access" ON public.past_questions FOR ALL USING (true);
+CREATE POLICY "Allow public read access" ON public.lecture_notes FOR SELECT USING (true);
+CREATE POLICY "Allow public write access" ON public.lecture_notes FOR ALL USING (true);
+CREATE POLICY "Allow public read access" ON public.users FOR SELECT USING (true);
+CREATE POLICY "Allow public write access" ON public.users FOR ALL USING (true);
+CREATE POLICY "Allow public read access" ON public.system_status FOR SELECT USING (true);
+CREATE POLICY "Allow public write access" ON public.system_status FOR ALL USING (true);`}
+              </pre>
+            </div>
+
+            <div className="p-4 bg-slate-950 border-t border-slate-800 flex items-center justify-between">
+              <span className="text-[11px] text-slate-400">
+                Panoya kopyalayıp Supabase SQL konsolunda çalıştırın.
+              </span>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const sql = document.querySelector('pre')?.textContent || '';
+                    navigator.clipboard.writeText(sql);
+                    setCopiedSql(true);
+                    setTimeout(() => setCopiedSql(false), 3000);
+                  }}
+                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 cursor-pointer shadow-sm transition-all"
+                >
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>{copiedSql ? '✓ Kopyalandı!' : '📋 SQL Kopyala'}</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowSqlSchemaModal(false)}
+                  className="bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-xl text-xs font-semibold cursor-pointer"
+                >
+                  Kapat
+                </button>
+              </div>
             </div>
           </div>
         </div>

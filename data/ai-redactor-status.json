@@ -1,10 +1,8 @@
 {
-  "isRunning": true,
-  "lastRunAt": "2026-10-01T17:58:22.976Z",
-  "totalQuestions": 2314,
-  "validQuestionsCount": 2287,
-  "suspectQuestionsCount": 27,
-  "lockedQuestionsCount": 0,
-  "lectureNotesIndexed": 400,
-  "statusText": "Arkaplan Redaksiyon Aktif: 2287 soru tam redakte edildi, 27 şüpheli soru muallak olarak işaretlendi. 0 soru öğrenci onayıyla kilitlendi."
+  "worker": "Deep Medical AI Redactor",
+  "lastUpdated": "2026-10-01T18:30:18.719Z",
+  "processedCount": 5,
+  "totalTarget": 2313,
+  "currentQuestionId": "past-1790877034657-386150",
+  "status": "active_pacing_20s"
 }

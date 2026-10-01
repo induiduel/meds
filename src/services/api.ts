@@ -1,5 +1,6 @@
 import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, db } from './firestoreDb';
+import { multiDbManager } from './multiDbManager';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL } from './auth';
 
@@ -275,15 +276,15 @@ async function checkServer(): Promise<boolean> {
 export const ApiService = {
   async getCommittees(): Promise<Committee[]> {
     try {
-      const cloudCommittees = await FirestoreDbService.getCommittees();
-      if (cloudCommittees && cloudCommittees.length > 0) {
+      const committees = await multiDbManager.getCommittees();
+      if (committees && committees.length > 0) {
         const local = getLocalDb();
-        local.committees = cloudCommittees;
+        local.committees = committees;
         saveLocalDb(local);
-        return cloudCommittees;
+        return committees;
       }
     } catch (e) {
-      console.warn('Firestore getCommittees fallback to local/server', e);
+      console.warn('multiDbManager getCommittees fallback to local/server', e);
     }
 
     const hasServer = await checkServer();
@@ -352,15 +353,17 @@ export const ApiService = {
 
     if (params.committeeId) {
       try {
-        const cloudQuestions = await FirestoreDbService.getQuestions(params.committeeId);
-        questionsList = cloudQuestions;
-        fetchedFromCloud = true;
-        const local = getLocalDb();
-        const other = local.questions.filter((q) => q.committeeId !== params.committeeId);
-        local.questions = [...other, ...cloudQuestions];
-        saveLocalDb(local);
+        const cloudQuestions = await multiDbManager.getQuestions(params.committeeId);
+        if (cloudQuestions && cloudQuestions.length > 0) {
+          questionsList = cloudQuestions;
+          fetchedFromCloud = true;
+          const local = getLocalDb();
+          const other = local.questions.filter((q) => q.committeeId !== params.committeeId);
+          local.questions = [...other, ...cloudQuestions];
+          saveLocalDb(local);
+        }
       } catch (e) {
-        console.warn('Firestore getQuestions fallback', e);
+        console.warn('multiDbManager getQuestions fallback', e);
       }
     }
 
@@ -1903,6 +1906,30 @@ export const ApiService = {
       isAiGenerated: true,
       createdAt: new Date().toISOString()
     };
+  },
+
+  // Save approved past exam question across all databases (Local Server PUT + Supabase + Firebase Spark)
+  async saveApprovedPastQuestion(question: QuestionItem): Promise<QuestionItem> {
+    const updated: QuestionItem = {
+      ...question,
+      status: 'completed',
+      updatedAt: new Date().toISOString(),
+    };
+
+    try {
+      await multiDbManager.savePastQuestion(updated);
+    } catch (e) {
+      console.warn('[ApiService] multiDbManager savePastQuestion fallback', e);
+    }
+
+    const db = getLocalDb();
+    const idx = db.questions.findIndex((item) => item.id === question.id);
+    if (idx !== -1) {
+      db.questions[idx] = updated;
+      saveLocalDb(db);
+    }
+
+    return updated;
   },
 
   // Admin Custom AI Redaction for Past Exam Questions
