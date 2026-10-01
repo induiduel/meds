@@ -273,6 +273,10 @@ function parseQuestionsFromVerbatimText(fullText, sourceFileName, defaultCommitt
       likedBy: []
     }));
 
+    const yearMatch = sourceFileName.match(/(?:19\d{2}|20[0-2][0-5])/);
+    const examYear = yearMatch ? yearMatch[0] : 'Kategorisiz';
+    const isAmbiguous = stemText.length < 25 || optionsObj.length < 2;
+
     questions.push({
       id: qId,
       committeeId: defaultCommitteeId,
@@ -280,12 +284,15 @@ function parseQuestionsFromVerbatimText(fullText, sourceFileName, defaultCommitt
       discipline: currentDiscipline,
       topic: `${currentDiscipline} Çıkmış Soru ${currentQNum}`,
       status: currentOptions.length >= 3 ? 'verified' : 'gathering',
-      tags: [currentDiscipline, 'Çıkmış Sınav', path.basename(sourceFileName)],
+      tags: [currentDiscipline, 'Çıkmış Sınav', path.basename(sourceFileName), examYear],
+      examYear,
+      isAmbiguous,
+      placementNotes: isAmbiguous ? 'Muallak Soru (Eksik Metin / Yetersiz Şık)' : undefined,
       claimedAnswer: currentAnswer,
       officialAnswer: currentAnswer,
       upvotes: 0,
       likedBy: [],
-      sourceFile: sourceFileName,
+      sourceFile: path.basename(sourceFileName),
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       fragments: [
@@ -310,13 +317,17 @@ function parseQuestionsFromVerbatimText(fullText, sourceFileName, defaultCommitt
 
   // Tıp Fakültesi anabilim dalı tespiti için anahtar kelimeler
   const DISCIPLINE_KEYWORDS = [
+    'Tıbbi Biyoloji ve Genetik', 'Tıbbi Biyoloji', 'Biyoloji',
+    'Tıbbi Biyokimya', 'Biyokimya',
+    'Histoloji ve Embriyoloji', 'Histoloji', 'Embriyoloji',
+    'Anatomi', 'Fizyoloji',
     'Tıbbi Patoloji', 'Patoloji', 'Tıbbi Farmakoloji', 'Farmakoloji',
     'İç Hastalıkları', 'Dahiliye', 'Kardiyoloji', 'Göğüs Hastalıkları',
     'Enfeksiyon Hastalıkları', 'Mikrobiyoloji', 'Tıbbi Mikrobiyoloji',
     'Pediatri', 'Çocuk Sağlığı', 'Kadın Hastalıkları ve Doğum',
     'Genel Cerrahi', 'Üroloji', 'Nöroloji', 'Psikiyatri',
-    'Ortopedi ve Travmatoloji', 'Ortopedi', 'Acil Tıp', 'Aile Hekimliği',
-    'Halk Sağlığı', 'Tıbbi Genetik', 'Tıbbi Biyokimya', 'Biyokimya',
+    'Beyin ve Sinir Cerrahisi', 'Ortopedi ve Travmatoloji', 'Ortopedi', 'Acil Tıp', 'Aile Hekimliği',
+    'Halk Sağlığı', 'Tıbbi Genetik',
     'Anesteziyoloji', 'Anestezi', 'FTR', 'Fiziksel Tıp'
   ];
 

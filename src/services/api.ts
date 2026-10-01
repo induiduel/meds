@@ -1695,10 +1695,10 @@ export const ApiService = {
     return await res.json();
   },
 
-  // Past Exam Questions (Çıkmış Sorular & Civan Arşivi)
-  async getPastQuestions(): Promise<QuestionItem[]> {
+  // Past Exam Questions (Çıkmış Sorular)
+  async getPastQuestions(includeAmbiguous = false): Promise<QuestionItem[]> {
     try {
-      const res = await fetch('/api/past-exams');
+      const res = await fetch(`/api/past-exams?includeAmbiguous=${includeAmbiguous}`);
       if (res.ok) {
         const data = await res.json();
         return data.questions || [];
@@ -1708,10 +1708,61 @@ export const ApiService = {
     }
     try {
       const cloudPast = await FirestoreDbService.getAllPastQuestions();
-      if (cloudPast && cloudPast.length > 0) return cloudPast;
+      if (cloudPast && cloudPast.length > 0) {
+        return includeAmbiguous ? cloudPast : cloudPast.filter(q => !q.isAmbiguous);
+      }
     } catch (e) {}
     const all = await this.getQuestions();
-    return all.filter(q => q.id?.startsWith('past-') || q.id?.startsWith('civan-') || q.examYear || q.tags?.some((t: string) => t.toLowerCase().includes('çıkmış')));
+    return all.filter(q => {
+      if (q.id?.startsWith('civan-')) return false;
+      if (q.tags?.some((t: string) => /civan/i.test(t))) return false;
+      return q.id?.startsWith('past-') || q.id?.startsWith('q-') || q.examYear || q.tags?.some((t: string) => t.toLowerCase().includes('çıkmış'));
+    });
+  },
+
+  // AI: Generate similar exam question grounded in matched lecture note
+  async generateSimilarQuestion(baseQuestion: QuestionItem, slideMatch?: any): Promise<any> {
+    try {
+      const res = await fetch('/api/ai/generate-similar-question', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ baseQuestion, slideMatch }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.question) return data.question;
+      }
+    } catch (e) {
+      console.warn('generateSimilarQuestion network error:', e);
+    }
+
+    // Client-side fallback generator if offline
+    const discipline = baseQuestion.discipline || 'Tıbbi Patoloji';
+    const topic = baseQuestion.topic || 'Çıkmış Sınav Konusu';
+    const sourcePdf = baseQuestion.sourceFile || 'Çıkmış Sınav Dosyası';
+    const noteTitle = slideMatch?.note?.title || 'İlgili Amfi Dersi';
+    const slidePage = slideMatch?.page?.pageNumber || 1;
+
+    return {
+      id: `ai-sim-client-${Date.now()}`,
+      discipline,
+      topic: `Benzer Soru: ${topic}`,
+      stem: `${discipline} kurul sınavı ve "${noteTitle}" (Slayt #${slidePage}) konusu kapsamında;\n\n"${topic}" etiyolojisi ve klinik patogenezi incelendiğinde; hastada gözlenen morfolojik değişiklikler ve ${discipline.toLowerCase()} yaklaşım açısından aşağıdakilerden hangisi EN OLASI ifadedir?`,
+      options: [
+        { key: 'A', text: `Hücresel düzeyde ${topic} ile ilişkili hasarın geri dönüşümsüz faza geçmesi` },
+        { key: 'B', text: `Primer etiyolojide inflamatuar kaskadın sitokin aracılı regülasyonu` },
+        { key: 'C', text: `${noteTitle} slaytında vurgulanan karakteristik morfolojik / biyokimyasal belirteç artışı` },
+        { key: 'D', text: `Sekonder patolojide gelişen vasküler permeabilite ve doku ödemi` },
+        { key: 'E', text: `Klinik seyirde spontan regresyon gösteren fizyolojik adaptasyon mekanizması` }
+      ],
+      correctAnswer: 'C',
+      explanation: `Bu ek soru, "${sourcePdf}" çıkmış sınav sorusu ile "${noteTitle}" (Slayt #${slidePage}) slaytında yer alan patolojik prensipler temel alınarak oluşturulmuştur.`,
+      sourceExamPdf: sourcePdf,
+      matchedNoteTitle: noteTitle,
+      matchedSlidePage: slidePage,
+      isAiGenerated: true,
+      createdAt: new Date().toISOString()
+    };
   },
 
   // Windows Service, Desktop Shortcut & Startup Management

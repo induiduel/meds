@@ -14,12 +14,16 @@ console.log('Deploying dist folder to gh-pages branch...');
 process.chdir(distDir);
 
 try {
+  fs.writeFileSync(path.join(distDir, '.nojekyll'), '');
+  if (fs.existsSync(path.join(distDir, 'index.html'))) {
+    fs.copyFileSync(path.join(distDir, 'index.html'), path.join(distDir, '404.html'));
+  }
   execSync(`${gitExe} init`);
   execSync(`${gitExe} config user.name "induiduel"`);
   execSync(`${gitExe} config user.email "nofrostlife@gmail.com"`);
   execSync(`${gitExe} add -A`);
   execSync(`${gitExe} commit -m "Deploy to GitHub Pages"`);
-  execSync(`${gitExe} push -f ${repoUrl} master:gh-pages`);
+  execSync(`${gitExe} push -f ${repoUrl} HEAD:gh-pages`);
   console.log('✅ Successfully deployed dist to gh-pages branch!');
 } catch (e) {
   console.error('Deploy error:', e.message);

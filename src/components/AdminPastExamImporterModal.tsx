@@ -345,6 +345,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
                 onChange={(e) => setExamYear(e.target.value)}
                 className="w-full bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-800"
               >
+                <option value="Kategorisiz">Kategorisiz / Belirtilmemiş Yıl</option>
                 <option value="2024-2025">2024-2025</option>
                 <option value="2023-2024">2023-2024</option>
                 <option value="2022-2023">2022-2023</option>

@@ -208,79 +208,34 @@ async function syncQuestions() {
     } catch (e) {}
   }
 
-  // 2. data/civanPastQuestions.json
-  const civanPath = path.join(rootDir, 'data', 'civanPastQuestions.json');
-  let civanList = [];
-  if (fs.existsSync(civanPath)) {
-    try {
-      civanList = JSON.parse(fs.readFileSync(civanPath, 'utf8'));
-    } catch (e) {}
-  }
-
-  // Deduplicate and combine
+  // Deduplicate and filter (strictly excluding Civan notes)
   const map = new Map();
   for (const q of rawQuestions) {
-    if (q && q.id) {
-      map.set(q.id, {
-        ...q,
-        isPastExam: true,
-        examYear: q.examYear || (q.tags?.find(t => /\d{4}/.test(t)) || 'Çıkmış Soru'),
-        upvotes: typeof q.upvotes === 'number' ? q.upvotes : 0,
-        likedBy: Array.isArray(q.likedBy) ? q.likedBy : [],
-      });
-    }
-  }
+    if (!q || !q.id) continue;
+    if (q.id.startsWith('civan-')) continue;
+    if (q.tags && q.tags.some(t => /civan/i.test(t))) continue;
+    if (q.author && /civan/i.test(q.author)) continue;
 
-  for (const cq of civanList) {
-    if (cq && cq.id && !map.has(cq.id)) {
-      map.set(cq.id, {
-        id: cq.id,
-        committeeId: cq.committeeId || 'donem3-kurul1',
-        questionNumber: cq.questionNumber || 1,
-        discipline: cq.discipline || 'Tıbbi Patoloji',
-        topic: cq.topic || 'Genel Tıp Çıkmış Soru',
-        status: 'completed',
-        isPastExam: true,
-        examYear: cq.examYear || 'Civan Arşivi (2020-2026)',
-        claimedAnswer: cq.correctAnswer || (cq.options?.[0]?.key || 'A'),
-        tags: [cq.discipline, 'Civanın Notları', cq.examYear || 'Çıkmış'].filter(Boolean),
-        fragments: [
-          {
-            id: `f-${cq.id}-1`,
-            author: "Civan'ın Soru Notları",
-            text: cq.rawStem || cq.stem || cq.topic || 'Çıkmış kurul sorusu',
-            type: 'stem',
-            timestamp: new Date().toISOString(),
-            upvotes: 0,
-            likedBy: [],
-          },
-        ],
-        options: (cq.options || []).map(opt => ({
-          key: opt.key || 'A',
-          text: opt.text || '',
-          suggestedBy: "Civan'ın Notları",
-          upvotes: 0,
-          likedBy: [],
-        })),
-        reconstruction: {
-          stem: cq.stem || cq.rawStem || cq.topic || '',
-          options: (cq.options || []).map(opt => ({
-            key: opt.key || 'A',
-            text: opt.text || '',
-            isAiFilled: false,
-          })),
-          correctAnswer: cq.correctAnswer || (cq.options?.[0]?.key || 'A'),
-          explanation: cq.explanation || 'Bu soru Civanın Notları geçmiş tıp kurul sınavları arşivinden aktarılmıştır.',
-          confidenceScore: 92,
-          notesAndDiscrepancies: 'Çıkmış kurul sorusu',
-          lastUpdated: new Date().toISOString(),
-        },
-        upvotes: 0,
-        likedBy: [],
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      });
+    let year = q.examYear;
+    if (!year || year.includes('2026')) {
+      const detected = (q.tags || []).find(t => /(?:19\d{2}|20[0-2][0-5])/.test(t));
+      year = detected ? detected.match(/(?:19\d{2}|20[0-2][0-5])/)?.[0] || 'Kategorisiz' : 'Kategorisiz';
     }
+
+    const stem = (q.reconstruction?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '').trim();
+    const opts = q.reconstruction?.options || q.options || [];
+    const validOpts = opts.filter(o => o && o.text && o.text.trim().length > 0);
+    const isAmbiguous = stem.length < 25 || validOpts.length < 2;
+
+    map.set(q.id, {
+      ...q,
+      isPastExam: true,
+      examYear: year,
+      isAmbiguous,
+      sourceFile: q.sourceFile || (q.tags || []).find(t => t.toLowerCase().endsWith('.pdf')) || 'Çıkmış Sınav Dosyası',
+      upvotes: typeof q.upvotes === 'number' ? q.upvotes : 0,
+      likedBy: Array.isArray(q.likedBy) ? q.likedBy : [],
+    });
   }
 
   const allQuestions = Array.from(map.values());

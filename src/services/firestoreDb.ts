@@ -106,6 +106,8 @@ export const INITIAL_COMMITTEES: Committee[] = [
     description: 'Tıbbi Patoloji (33 saat), Enfeksiyon Hastalıkları (22 saat), Üroloji (13 saat), Tıbbi Genetik (12 saat), Halk Sağlığı (10 saat), Kadın Hastalıkları ve Doğum (4 saat), Tıbbi Farmakoloji (2 saat). Toplam 96 saat.',
     disciplines: [
       'Tıbbi Patoloji',
+      'Tıbbi Biyoloji ve Genetik',
+      'Tıbbi Biyokimya',
       'Enfeksiyon Hastalıkları',
       'Üroloji',
       'Tıbbi Genetik',
@@ -616,7 +618,30 @@ export class FirestoreDbService {
       const list: QuestionItem[] = [];
       snap.forEach((d) => {
         const data = d.data() as QuestionItem;
-        if (data.isPastExam || data.id?.startsWith('past-') || data.id?.startsWith('civan-') || data.examYear) {
+        // Strictly exclude Civan notes
+        if (data.id?.startsWith('civan-')) return;
+        if (data.tags?.some((t: string) => /civan/i.test(t))) return;
+        if (data.author && /civan/i.test(data.author)) return;
+
+        if (data.isPastExam || data.id?.startsWith('past-') || data.id?.startsWith('q-') || data.examYear) {
+          // Normalize year
+          let year = data.examYear;
+          if (!year || year.includes('2026')) {
+            const detected = (data.tags || []).find((t: string) => /(?:19\d{2}|20[0-2][0-5])/.test(t));
+            year = detected ? detected.match(/(?:19\d{2}|20[0-2][0-5])/)?.[0] || 'Kategorisiz' : 'Kategorisiz';
+          }
+          data.examYear = year;
+
+          // Ambiguity check
+          const stem = (data.reconstruction?.stem || data.fragments?.[0]?.text || data.rawStem || data.topic || '').trim();
+          const opts = data.reconstruction?.options || data.options || [];
+          const validOpts = opts.filter((o: any) => o && o.text && o.text.trim().length > 0);
+          data.isAmbiguous = stem.length < 25 || validOpts.length < 2;
+
+          if (!data.sourceFile) {
+            data.sourceFile = (data.tags || []).find((t: string) => t.toLowerCase().endsWith('.pdf')) || 'Çıkmış Sınav Arşivi';
+          }
+
           list.push(data);
         }
       });

@@ -174,24 +174,48 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     return DRIVE_SLIDES_CATALOG.reduce((acc, s) => acc + s.totalRealPages, 0); // 1,353
   }, []);
 
+  const normTitle = (t: string) => (t || '')
+    .toLowerCase()
+    .replace(/\.pdf$/i, '')
+    .replace(/^[0-9]+[\.\)\-\s_]+/, '')
+    .replace(/[^a-zA-Z0-9ğüşıöçĞÜŞİÖÇ]/g, '')
+    .trim();
+
   const renderedNotesMap = useMemo(() => {
     const map = new Map<string, LectureNote>();
     notes.forEach(n => {
       map.set(n.id, n);
       if (n.driveFileId) map.set(n.driveFileId, n);
+      const nKey = normTitle(n.title);
+      if (nKey) map.set(nKey, n);
     });
     return map;
   }, [notes]);
 
-  const renderedSlidesCount = useMemo(() => {
-    return DRIVE_SLIDES_CATALOG.filter(s => renderedNotesMap.has(s.id)).length;
+  const isSlideRendered = useMemo(() => {
+    return (s: DriveSlideMeta): LectureNote | undefined => {
+      if (renderedNotesMap.has(s.id)) return renderedNotesMap.get(s.id);
+      if (s.fileId && renderedNotesMap.has(s.fileId)) return renderedNotesMap.get(s.fileId);
+      const sKey = normTitle(s.title);
+      if (sKey && renderedNotesMap.has(sKey)) return renderedNotesMap.get(sKey);
+      for (const [key, note] of renderedNotesMap.entries()) {
+        if (key.length > 5 && sKey.length > 5 && (key.includes(sKey) || sKey.includes(key))) {
+          return note;
+        }
+      }
+      return undefined;
+    };
   }, [renderedNotesMap]);
+
+  const renderedSlidesCount = useMemo(() => {
+    return DRIVE_SLIDES_CATALOG.filter(s => Boolean(isSlideRendered(s))).length;
+  }, [isSlideRendered]);
 
   const renderedPagesCount = useMemo(() => {
     return DRIVE_SLIDES_CATALOG
-      .filter(s => renderedNotesMap.has(s.id))
+      .filter(s => Boolean(isSlideRendered(s)))
       .reduce((acc, s) => acc + s.totalRealPages, 0);
-  }, [renderedNotesMap]);
+  }, [isSlideRendered]);
 
   const progressPercent = Math.round((renderedPagesCount / TOTAL_CATALOG_PAGES) * 100);
 
@@ -199,7 +223,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   const filteredCatalog = useMemo(() => {
     return DRIVE_SLIDES_CATALOG.filter(s => {
       if (catalogDiscipline !== 'Tümü' && s.discipline !== catalogDiscipline) return false;
-      const isRendered = renderedNotesMap.has(s.id);
+      const isRendered = Boolean(isSlideRendered(s));
       if (catalogStatusFilter === 'unrendered' && isRendered) return false;
       if (catalogStatusFilter === 'rendered' && !isRendered) return false;
       if (catalogSearch.trim()) {
@@ -211,7 +235,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       }
       return true;
     });
-  }, [catalogDiscipline, catalogStatusFilter, catalogSearch, renderedNotesMap]);
+  }, [catalogDiscipline, catalogStatusFilter, catalogSearch, isSlideRendered]);
 
   // Filter rendered notes
   const filteredRenderedNotes = useMemo(() => {
@@ -715,8 +739,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
           {/* Slide Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {filteredCatalog.map((slide) => {
-              const isRendered = renderedNotesMap.has(slide.id);
-              const renderedNote = renderedNotesMap.get(slide.id);
+              const renderedNote = isSlideRendered(slide);
+              const isRendered = Boolean(renderedNote);
               const isProcessing = renderingSlideId === slide.id;
 
               return (

@@ -125,10 +125,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [isSyncingDriveManual, setIsSyncingDriveManual] = useState(false);
   const [driveSyncFeedback, setDriveSyncFeedback] = useState<string | null>(null);
 
-  // Civan's Notes Sync state
-  const [isSyncingCivan, setIsSyncingCivan] = useState(false);
-  const [civanSyncResult, setCivanSyncResult] = useState<string | null>(null);
-
   // Full Local Sync state
   const [isSyncingFullLocal, setIsSyncingFullLocal] = useState(false);
   const [fullLocalSyncFeedback, setFullLocalSyncFeedback] = useState<string | null>(null);
@@ -310,29 +306,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     }
   };
 
-  // Civan's Notes Sync
-  const handleSyncCivan = async () => {
-    setIsSyncingCivan(true);
-    setCivanSyncResult(null);
-    try {
-      const res = await fetch('/api/automation/civan-sync', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-email': adminEmail,
-        },
-        body: JSON.stringify({ adminEmail }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Senkronizasyon başarısız');
-      setCivanSyncResult(`✓ ${data.message}`);
-      await onRefreshData();
-    } catch (err: any) {
-      setCivanSyncResult(`Hata: ${err.message}`);
-    } finally {
-      setIsSyncingCivan(false);
-    }
-  };
 
   // Full Local Sync Trigger (Drive Crawl, Download, Local OCR & Firebase Sync)
   const handleTriggerFullLocalSync = async () => {
@@ -1132,59 +1105,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               )}
             </div>
 
-            {/* 2. Civan'ın Notları (civaninotlari.vercel.app) Integration Card */}
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4 sm:p-5 space-y-3">
-              <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center gap-2">
-                  <BookOpen className="w-5 h-5 text-amber-700" />
-                  <h4 className="font-bold text-sm text-slate-900">Civan'ın Notları Çıkmış Soru Entegrasyonu</h4>
-                  <span className="bg-amber-700 text-white font-bold text-[10px] px-2 py-0.5 rounded-full">
-                    426 Soru
-                  </span>
-                </div>
-
-                <a
-                  href="https://civaninotlari.vercel.app/#/landing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-amber-800 hover:text-amber-950 font-bold text-xs flex items-center gap-1"
-                >
-                  <span>civaninotlari.vercel.app</span>
-                  <ExternalLink className="w-3 h-3 text-slate-400" />
-                </a>
-              </div>
-
-              <div className="bg-white/80 p-3 rounded-lg border border-amber-200 text-slate-700 text-xs leading-relaxed space-y-1.5">
-                <p>
-                  <strong>Maliyet & Kota Tasarrufu Bildirimi:</strong> Kullanıcı talebi doğrultusunda, sunucu depolama ve yapay zeka faturalandırmasında ücrete yakalanmamak için <strong>ders notları veritabanına eklenmemektedir</strong>.
-                </p>
-                <p>
-                  Yalnızca 2020-2026 dönemine ait <strong>426 adet doğrulanmış Kurul 1 çıkmış sorusu</strong> (Patoloji, Farmakoloji, Enfeksiyon Hastalıkları, Genetik, Halk Sağlığı, Üroloji) standart formata dönüştürülmüştür.
-                </p>
-              </div>
-
-              <div className="flex items-center justify-between gap-3 pt-1">
-                <span className="text-slate-600 font-semibold text-xs">
-                  Hazır Durum: 426 çıkmış soru (Şıklar, vaka analizleri ve klinik açıklamalar ile)
-                </span>
-
-                <button
-                  onClick={handleSyncCivan}
-                  disabled={isSyncingCivan}
-                  className="bg-amber-600 hover:bg-amber-700 disabled:opacity-50 text-white font-bold px-4 py-2 rounded-lg flex items-center gap-1.5 shadow-xs cursor-pointer active:scale-95"
-                >
-                  <Sparkles className="w-3.5 h-3.5 text-amber-200" />
-                  <span>{isSyncingCivan ? 'Aktarılıyor...' : '426 Çıkmış Soruyu Soru Havuzuna Aktar'}</span>
-                </button>
-              </div>
-
-              {civanSyncResult && (
-                <div className="p-2.5 bg-white border border-amber-300 rounded-lg text-xs font-semibold text-amber-950 flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>{civanSyncResult}</span>
-                </div>
-              )}
-            </div>
 
             {/* 3. Local Desktop Background Daemon Card (Zero Token Cost, Verbatim OCR) */}
             <div className="bg-slate-900 text-white rounded-xl p-4 sm:p-5 space-y-4">

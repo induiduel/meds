@@ -52,6 +52,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
+  const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'all'>('valid');
   
   // Per-question card override: questionId -> 'redacted' | 'raw' | 'split'
   const [cardViewOverrides, setCardViewOverrides] = useState<Record<string, 'redacted' | 'raw' | 'split'>>({});
@@ -64,6 +65,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     score: number;
   } | null>(null);
 
+  // AI Similar Question Modal State
+  const [similarModalQuestion, setSimilarModalQuestion] = useState<any | null>(null);
+  const [isGeneratingSimilar, setIsGeneratingSimilar] = useState<string | null>(null);
+
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 25;
@@ -75,12 +80,27 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const loadPastQuestions = async () => {
     setIsLoading(true);
     try {
-      const data = await ApiService.getPastQuestions();
-      setQuestions(data);
+      const data = await ApiService.getPastQuestions(true);
+      setQuestions(data.filter(q => !q.id?.startsWith('civan-') && !q.tags?.some(t => /civan/i.test(t))));
     } catch (e) {
       console.warn('Could not load past questions:', e);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  // Generate similar practice question handler
+  const handleGenerateSimilarQuestion = async (q: QuestionItem, slideMatch: any) => {
+    setIsGeneratingSimilar(q.id);
+    try {
+      const generated = await ApiService.generateSimilarQuestion(q, slideMatch);
+      if (generated) {
+        setSimilarModalQuestion(generated);
+      }
+    } catch (e) {
+      console.warn('Generate similar question error:', e);
+    } finally {
+      setIsGeneratingSimilar(null);
     }
   };
 
@@ -181,21 +201,51 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     };
   }, [effectiveNotes]);
 
+  // Curriculum Disciplines List
+  const CURRICULUM_DISCIPLINES = [
+    'Tıbbi Biyoloji ve Genetik',
+    'Tıbbi Biyokimya',
+    'Tıbbi Patoloji',
+    'Tıbbi Farmakoloji',
+    'Tıbbi Mikrobiyoloji',
+    'Histoloji ve Embriyoloji',
+    'Anatomi',
+    'Fizyoloji',
+    'İç Hastalıkları',
+    'Kardiyoloji',
+    'Göğüs Hastalıkları',
+    'Enfeksiyon Hastalıkları',
+    'Pediatri (Çocuk Sağlığı)',
+    'Kadın Hastalıkları ve Doğum',
+    'Genel Cerrahi',
+    'Üroloji',
+    'Nöroloji',
+    'Psikiyatri',
+    'Beyin ve Sinir Cerrahisi',
+    'Ortopedi ve Travmatoloji',
+    'Acil Tıp',
+    'Aile Hekimliği',
+    'Halk Sağlığı',
+    'Tıbbi Genetik',
+    'FTR',
+    'Anesteziyoloji ve Reanimasyon',
+  ];
+
   // Available options for filters derived from data
   const filterOptions = useMemo(() => {
     const committees = new Set<string>();
     const years = new Set<string>();
-    const disciplines = new Set<string>();
+    const disciplines = new Set<string>(CURRICULUM_DISCIPLINES);
 
     questions.forEach(q => {
       if (q.committeeId) committees.add(q.committeeId);
-      if (q.examYear) {
+      if (q.examYear && !q.examYear.includes('2026') && !q.examYear.toLowerCase().includes('civan')) {
         years.add(q.examYear);
-      } else if (q.id?.startsWith('civan-')) {
-        years.add("Civan'ın Notları Arşivi");
       }
       if (q.discipline) disciplines.add(q.discipline);
     });
+
+    years.add('Kategorisiz');
 
     return {
       committees: Array.from(committees).sort(),
@@ -204,10 +254,21 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     };
   }, [questions]);
 
+  // Counts for tabs
+  const tabCounts = useMemo(() => {
+    const validCount = questions.filter(q => !q.isAmbiguous).length;
+    const ambiguousCount = questions.filter(q => q.isAmbiguous).length;
+    return { validCount, ambiguousCount, totalCount: questions.length };
+  }, [questions]);
+
   // Filtered Questions
   const filteredQuestions = useMemo(() => {
     return questions.filter(q => {
-      // Search
+      // 1. Ambiguity Filter (Muallak vs Tam Metin)
+      if (ambiguityTab === 'valid' && q.isAmbiguous) return false;
+      if (ambiguityTab === 'ambiguous' && !q.isAmbiguous) return false;
+
+      // 2. Search
       if (searchQuery.trim()) {
         const query = searchQuery.toLowerCase();
         const inTopic = (q.topic || '').toLowerCase().includes(query);
@@ -217,38 +278,41 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         const inOptions = (q.options || []).some(o => o.text.toLowerCase().includes(query));
         const inNumber = (q.questionNumber?.toString() || '').includes(query);
         const inYear = (q.examYear || '').toLowerCase().includes(query);
+        const inFile = (q.sourceFile || '').toLowerCase().includes(query);
 
-        if (!inTopic && !inDiscipline && !inStem && !inFragments && !inOptions && !inNumber && !inYear) {
+        if (!inTopic && !inDiscipline && !inStem && !inFragments && !inOptions && !inNumber && !inYear && !inFile) {
           return false;
         }
       }
 
-      // Committee filter
+      // 3. Committee filter
       if (selectedCommittee !== 'all') {
-        if (selectedCommittee === 'civan-kategorisiz') {
-          if (!q.id?.startsWith('civan-')) return false;
-        } else if (q.committeeId !== selectedCommittee) {
+        if (q.committeeId !== selectedCommittee) {
           return false;
         }
       }
 
-      // Year filter
+      // 4. Year filter
       if (selectedYear !== 'all') {
-        if (selectedYear === "Civan'ın Notları Arşivi") {
-          if (!q.id?.startsWith('civan-') && q.examYear !== "Civan'ın Notları Arşivi") return false;
+        if (selectedYear === 'Kategorisiz') {
+          if (q.examYear && q.examYear !== 'Kategorisiz' && q.examYear !== 'Çıkmış Soru') return false;
         } else if (q.examYear !== selectedYear) {
           return false;
         }
       }
 
-      // Discipline filter
+      // 5. Discipline filter
       if (selectedDiscipline !== 'all') {
-        if (q.discipline !== selectedDiscipline) return false;
+        const qDisc = (q.discipline || '').toLowerCase();
+        const selDisc = selectedDiscipline.toLowerCase();
+        if (qDisc !== selDisc && !qDisc.includes(selDisc) && !selDisc.includes(qDisc)) {
+          return false;
+        }
       }
 
       return true;
     });
-  }, [questions, searchQuery, selectedCommittee, selectedYear, selectedDiscipline]);
+  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline]);
 
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
@@ -283,10 +347,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               Tıp Fakültesi Çıkmış Sınav Soruları Arşivi
             </span>
             <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold px-3 py-1 rounded-full">
-              {questions.length.toLocaleString('tr-TR')} Çıkmış Soru
+              {tabCounts.validCount.toLocaleString('tr-TR')} Tam Metin Soru
             </span>
             <span className="bg-amber-500/20 text-amber-300 border border-amber-400/30 text-xs font-bold px-3 py-1 rounded-full">
-              426 Civan Notları
+              {tabCounts.ambiguousCount.toLocaleString('tr-TR')} Muallak / İnceleme Bekleyen
             </span>
           </div>
 
@@ -294,16 +358,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             Geçmiş Kurul ve Final Çıkmış Soruları
           </h2>
           <p className="text-sm text-slate-300 leading-relaxed">
-            Dönem 3 kurul sınavlarında çıkmış sorular, Civan'ın Notları arşivi ve Google Drive kaynaklarından toplanan sınav soruları. 
-            Soruların hem <strong className="text-teal-300">orijinal ham metinlerini</strong> hem de yapay zeka ile <strong className="text-teal-300">redakte edilmiş 5 şıklı & gerekçeli</strong> versiyonlarını inceleyebilir, amfi ders slaytlarıyla eşleştirilmiş referansları tek tıkla görüntüleyebilirsiniz.
+            Dönem 3 kurul sınavlarında çıkmış sorular ve yerel meds_sorular arşivinden taranan sınav soruları. 
+            Soruların hem <strong className="text-teal-300">orijinal ham metinlerini</strong> hem de yapay zeka ile <strong className="text-teal-300">redakte edilmiş 5 şıklı & gerekçeli</strong> versiyonlarını inceleyebilir, amfi ders slaytlarıyla eşleştirilmiş referansları tek tıkla görüntüleyebilir ve "Ek Soru Sor" butonu ile yeni deneme soruları üretebilirsiniz.
           </p>
         </div>
 
         {/* Global Statistics Cards */}
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 pt-5 border-t border-white/10 text-xs">
           <div className="bg-white/5 backdrop-blur-xs p-3 rounded-2xl border border-white/10">
-            <span className="text-slate-400 block text-[11px]">Toplam Çıkmış Soru</span>
-            <strong className="text-lg font-black text-white">{questions.length} Soru</strong>
+            <span className="text-slate-400 block text-[11px]">Kaliteli Tam Sorular</span>
+            <strong className="text-lg font-black text-white">{tabCounts.validCount} Soru</strong>
           </div>
           <div className="bg-white/5 backdrop-blur-xs p-3 rounded-2xl border border-white/10">
             <span className="text-slate-400 block text-[11px]">Filtrelenen Sonuç</span>
@@ -337,7 +401,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 setSearchQuery(e.target.value);
                 setCurrentPage(1);
               }}
-              placeholder="Çıkmış soru metni, şık, branş, konu veya yıl ara..."
+              placeholder="Çıkmış soru metni, şık, branş, konu, dosya adı veya yıl ara..."
               className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
             />
             {searchQuery && (
@@ -393,6 +457,42 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           </div>
         </div>
 
+        {/* Quality & Ambiguity Filter Pills */}
+        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
+          <span className="text-[11px] font-bold text-slate-500">Soru Havuzu:</span>
+          <button
+            onClick={() => { setAmbiguityTab('valid'); setCurrentPage(1); }}
+            className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
+              ambiguityTab === 'valid'
+                ? 'bg-emerald-600 text-white shadow-xs'
+                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+            }`}
+          >
+            ✓ Tam Metin Soru Havuzu ({tabCounts.validCount})
+          </button>
+          <button
+            onClick={() => { setAmbiguityTab('ambiguous'); setCurrentPage(1); }}
+            className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
+              ambiguityTab === 'ambiguous'
+                ? 'bg-amber-600 text-white shadow-xs'
+                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+            }`}
+            title="Eksik metin veya şık içeren, arka planda muallak olarak işaretlenen sorular"
+          >
+            ⚠️ Muallak / Parça Sorular ({tabCounts.ambiguousCount})
+          </button>
+          <button
+            onClick={() => { setAmbiguityTab('all'); setCurrentPage(1); }}
+            className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
+              ambiguityTab === 'all'
+                ? 'bg-slate-800 text-white shadow-xs'
+                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+            }`}
+          >
+            Tümü ({tabCounts.totalCount})
+          </button>
+        </div>
+
         {/* Multi-Facet Dropdowns */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-3 border-t border-slate-100">
           {/* Kurul / Sınav Dropdown */}
@@ -409,13 +509,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               }}
               className="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-semibold text-slate-900 focus:bg-white focus:border-teal-500"
             >
-              <option value="all">Tüm Kurul ve Sınavlar ({questions.length})</option>
+              <option value="all">Tüm Kurul ve Sınavlar</option>
               {filterOptions.committees.map(cId => (
                 <option key={cId} value={cId}>
                   {formatCommitteeName(cId)}
                 </option>
               ))}
-              <option value="civan-kategorisiz">Civan'ın Notları (Kategorisiz Çıkmışlar)</option>
             </select>
           </div>
 
@@ -534,15 +633,38 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       </span>
                     )}
 
-                    {q.id?.startsWith('civan-') && (
-                      <span className="bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                        Civan'ın Notları
+                    {/* Exact source file name badge */}
+                    <span className="bg-slate-100 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded-md flex items-center gap-1" title="Sınav sorusunun çıkarıldığı orijinal PDF dosyası">
+                      <FileText className="w-3 h-3 text-slate-500" />
+                      <span className="truncate max-w-[150px] sm:max-w-[220px]">
+                        {q.sourceFile || 'Çıkmış Dosyası'}
+                      </span>
+                    </span>
+
+                    {q.isAmbiguous && (
+                      <span className="bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                        ⚠️ Muallak Parça
                       </span>
                     )}
                   </div>
 
                   {/* Actions & Card Flip */}
                   <div className="flex items-center gap-1.5">
+                    {/* AI Similar Question Generator Button ("Ek Soru Sor") */}
+                    <button
+                      onClick={() => handleGenerateSimilarQuestion(q, slideMatch)}
+                      disabled={isGeneratingSimilar === q.id}
+                      className="bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                      title="Bu çıkmış soru ve ders notu konusundan yola çıkarak yapay zeka ile benzer soru üret"
+                    >
+                      {isGeneratingSimilar === q.id ? (
+                        <RefreshCw className="w-3.5 h-3.5 animate-spin text-teal-600" />
+                      ) : (
+                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+                      )}
+                      <span>{isGeneratingSimilar === q.id ? 'Üretiliyor...' : 'Ek Soru Sor'}</span>
+                    </button>
+
                     {/* Slide Match Reference Badge */}
                     {slideMatch && (
                       <button
@@ -556,7 +678,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         title="Bu sorunun değinildiği amfi ders slaytını aç"
                       >
                         <BookMarked className="w-3.5 h-3.5 text-emerald-700" />
-                        <span>Slayt #{slideMatch.page.pageNumber}</span>
+                        <span className="truncate max-w-[150px]">Slayt #{slideMatch.page.pageNumber}</span>
                       </button>
                     )}
 
@@ -934,6 +1056,126 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   <span>Ders Notunu Tam Ekranda Aç</span>
                 </button>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* AI Generated Similar Practice Question Modal ("Ek Soru Sor") */}
+      {similarModalQuestion && (
+        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[90vh]">
+            {/* Modal Header */}
+            <div className="bg-gradient-to-r from-teal-900 to-slate-900 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
+              <div className="flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 border border-teal-500/30 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm sm:text-base">Yapay Zeka Destekli Ek Pratik Sorusu</h4>
+                  <p className="text-xs text-teal-300">
+                    {similarModalQuestion.discipline} • {similarModalQuestion.topic}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setSimilarModalQuestion(null)}
+                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-white/10 cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-4 sm:p-6 overflow-y-auto space-y-4 flex-1 text-xs sm:text-sm">
+              {/* Origin Badges */}
+              <div className="flex flex-wrap items-center gap-2 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+                <span className="bg-white border border-slate-300 text-slate-700 px-2 py-1 rounded-md font-semibold flex items-center gap-1">
+                  <FileText className="w-3.5 h-3.5 text-slate-500" />
+                  Orijinal Çıkmış: {similarModalQuestion.sourceExamPdf}
+                </span>
+                <span className="bg-emerald-50 border border-emerald-300 text-emerald-900 px-2 py-1 rounded-md font-semibold flex items-center gap-1">
+                  <BookMarked className="w-3.5 h-3.5 text-emerald-600" />
+                  Ders: {similarModalQuestion.matchedNoteTitle} (Slayt #{similarModalQuestion.matchedSlidePage})
+                </span>
+              </div>
+
+              {/* Question Stem */}
+              <div className="space-y-2">
+                <span className="text-xs font-bold text-slate-500 block">Soru Metni:</span>
+                <p className="font-medium text-slate-900 leading-relaxed bg-teal-50/40 p-4 rounded-xl border border-teal-200 whitespace-pre-wrap">
+                  {similarModalQuestion.stem}
+                </p>
+              </div>
+
+              {/* Options */}
+              <div className="space-y-2 pt-2">
+                <span className="text-xs font-bold text-slate-500 block">Seçenekler:</span>
+                <div className="space-y-2">
+                  {similarModalQuestion.options.map((opt: any) => {
+                    const isCorrect = opt.key === similarModalQuestion.correctAnswer;
+                    return (
+                      <div
+                        key={opt.key}
+                        className={`p-3 rounded-xl border flex items-start justify-between gap-3 ${
+                          isCorrect
+                            ? 'bg-emerald-50 border-emerald-400 text-emerald-950 font-bold'
+                            : 'bg-white border-slate-200 text-slate-700'
+                        }`}
+                      >
+                        <div className="flex items-start gap-2.5">
+                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
+                            isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-700'
+                          }`}>
+                            {opt.key}
+                          </span>
+                          <span>{opt.text}</span>
+                        </div>
+                        {isCorrect && (
+                          <span className="text-[10px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded font-extrabold uppercase shrink-0">
+                            ✓ Doğru Cevap
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Clinical Explanation */}
+              {similarModalQuestion.explanation && (
+                <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 text-xs space-y-1">
+                  <div className="flex items-center gap-1.5 font-bold text-teal-900">
+                    <CheckCircle2 className="w-4 h-4 text-teal-700" />
+                    <span>Patofizyolojik & Klinik Gerekçe:</span>
+                  </div>
+                  <p className="text-slate-700 leading-relaxed pl-5">
+                    {similarModalQuestion.explanation}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="bg-slate-50 border-t border-slate-200 p-4 flex items-center justify-between shrink-0 text-xs">
+              <button
+                onClick={() => setSimilarModalQuestion(null)}
+                className="px-4 py-2 rounded-xl text-slate-600 font-semibold hover:bg-slate-200 cursor-pointer"
+              >
+                Kapat
+              </button>
+
+              <button
+                onClick={() => {
+                  const text = `[MedSoru Ek Pratik Sorusu - ${similarModalQuestion.discipline}]\n\n${similarModalQuestion.stem}\n\n${similarModalQuestion.options.map((o: any) => `${o.key}) ${o.text}`).join('\n')}\n\nDoğru Cevap: ${similarModalQuestion.correctAnswer}\n\nAçıklama: ${similarModalQuestion.explanation}`;
+                  navigator.clipboard.writeText(text);
+                  alert('Ek soru panoya kopyalandı!');
+                }}
+                className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 cursor-pointer shadow-xs"
+              >
+                <Copy className="w-3.5 h-3.5 text-teal-200" />
+                <span>Soruyu Kopyala</span>
+              </button>
             </div>
           </div>
         </div>
