@@ -3006,16 +3006,26 @@ export async function runDriveSyncAndAutoMatch(
   if (onProgress) onProgress('Google Drive klasörü taranıyor (ID: ' + TARGET_DRIVE_FOLDER_ID + ')...');
   await new Promise((r) => setTimeout(r, 400));
 
-  // Prepare notes with all pages fully populated (never stopping at 5 pages)
-  const syncedNotes: LectureNote[] = REAL_KURUL1_DRIVE_SLIDES.map((slide) => {
-    const fullPages = ensureAllSlidePages(slide);
-    return {
-      ...slide,
-      committeeId,
-      totalSlides: fullPages.length,
-      pages: fullPages,
-    };
-  });
+  // Prioritize real verbatim notes from database, fallback to verified slides if none exist yet
+  let syncedNotes: LectureNote[] = [];
+  try {
+    const apiNotes = await ApiService.getLectureNotes();
+    if (apiNotes && apiNotes.length > 0) {
+      syncedNotes = apiNotes;
+    }
+  } catch (e) {}
+
+  if (syncedNotes.length === 0) {
+    syncedNotes = REAL_KURUL1_DRIVE_SLIDES.map((slide) => {
+      const fullPages = ensureAllSlidePages(slide);
+      return {
+        ...slide,
+        committeeId,
+        totalSlides: fullPages.length,
+        pages: fullPages,
+      };
+    });
+  }
 
   const matchedQuestions: { questionId: string; match: QuestionLectureMatch }[] = [];
 

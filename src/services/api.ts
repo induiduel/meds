@@ -1263,6 +1263,47 @@ export const ApiService = {
     return await res.json();
   },
 
+  // Lecture Notes API
+  async getLectureNotes(): Promise<any[]> {
+    const res = await fetch('/api/lecture-notes');
+    if (!res.ok) throw new Error('Ders notları alınamadı');
+    return await res.json();
+  },
+
+  async saveLectureNote(note: any): Promise<any> {
+    const res = await fetch('/api/lecture-notes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(note),
+    });
+    if (!res.ok) throw new Error('Ders notu kaydedilemedi');
+    return await res.json();
+  },
+
+  async deleteLectureNote(id: string): Promise<any> {
+    const res = await fetch(`/api/lecture-notes/${id}`, {
+      method: 'DELETE',
+    });
+    if (!res.ok) throw new Error('Ders notu silinemedi');
+    return await res.json();
+  },
+
+  async scanDesktopDatabaseFolder(folderPath?: string): Promise<any> {
+    const res = await fetch('/api/automation/scan-desktop-folder', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ folderPath }),
+    });
+    if (!res.ok) throw new Error('Klasör tarama başarısız oldu');
+    return await res.json();
+  },
+
+  async getDesktopDatabaseStatus(): Promise<any> {
+    const res = await fetch('/api/automation/desktop-folder-status');
+    if (!res.ok) throw new Error('Klasör durumu alınamadı');
+    return await res.json();
+  },
+
   // Gemini & NotebookLM Database Synchronization
   async syncDatabaseWithGemini(payload: any, committeeId?: string): Promise<{ success: boolean; message: string; updatedCount: number }> {
     const res = await fetch('/api/gemini/sync-database', {

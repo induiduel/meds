@@ -1,0 +1,485 @@
+import fs from 'fs';
+import path from 'path';
+import crypto from 'crypto';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const pdfParseModule = require('pdf-parse');
+const PDFParse = pdfParseModule.PDFParse || pdfParseModule.default || pdfParseModule;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Root paths
+const PROJECT_ROOT = path.resolve(__dirname, '..');
+const DATA_DIR = path.resolve(PROJECT_ROOT, 'data');
+const LECTURE_NOTES_FILE = path.resolve(DATA_DIR, 'lecture_notes.json');
+
+// Default target folder on user's Desktop
+export const DESKTOP_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
+
+export interface LecturePageItem {
+  pageNumber: number;
+  content: string;
+  keywords: string[];
+}
+
+export interface LectureNoteRecord {
+  id: string;
+  committeeId: string;
+  title: string;
+  discipline: string;
+  instructor?: string;
+  totalSlides: number;
+  pages: LecturePageItem[];
+  source: 'desktop_folder' | 'web_upload' | 'drive';
+  filePath?: string;
+  fileHash?: string;
+  fileSize?: number;
+  lastScannedAt?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Stopwords to filter out from auto-keyword extraction
+const TURKISH_STOPWORDS = new Set([
+  've', 'ile', 'veya', 'için', 'gibi', 'kadar', 'daha', 'olan', 'olarak', 'bunun',
+  'buna', 'şekilde', 'olarak', 'üzere', 'bir', 'bu', 'şu', 'o', 'her', 'tüm', 'bütün',
+  'sayfa', 'slayt', 'bölüm', 'ders', 'notu', 'konu', 'ünite', 'tablo', 'şekil', 'görsel',
+  'the', 'and', 'for', 'with', 'from', 'that', 'this', 'are', 'was'
+]);
+
+/**
+ * Infer medical discipline from filename or folder path
+ */
+export function inferDiscipline(nameOrPath: string): string {
+  const lower = nameOrPath.toLowerCase();
+  if (lower.includes('patoloji')) return 'Tıbbi Patoloji';
+  if (lower.includes('farmakoloji')) return 'Tıbbi Farmakoloji';
+  if (lower.includes('mikrobiyoloji') || lower.includes('bakteri') || lower.includes('viroloji')) return 'Tıbbi Mikrobiyoloji';
+  if (lower.includes('genetik') || lower.includes('sitogenetik')) return 'Tıbbi Genetik';
+  if (lower.includes('halk sağlığı') || lower.includes('halk sagligi') || lower.includes('epidemiyoloji')) return 'Halk Sağlığı';
+  if (lower.includes('üroloji') || lower.includes('uroloji')) return 'Üroloji';
+  if (lower.includes('enfeksiyon')) return 'Enfeksiyon Hastalıkları';
+  if (lower.includes('biyokimya')) return 'Tıbbi Biyokimya';
+  if (lower.includes('fizyoloji')) return 'Tıbbi Fizyoloji';
+  if (lower.includes('anatomi')) return 'Tıbbi Anatomi';
+  if (lower.includes('dahiliye') || lower.includes('iç hastalıkları') || lower.includes('ic hastaliklari')) return 'İç Hastalıkları';
+  if (lower.includes('kardiyo')) return 'Kardiyoloji';
+  if (lower.includes('pediatri') || lower.includes('çocuk')) return 'Çocuk Sağlığı ve Hastalıkları';
+  if (lower.includes('genel cerrahi')) return 'Genel Cerrahi';
+  if (lower.includes('nöro') || lower.includes('noro')) return 'Nöroloji / Nöroşirürji';
+  return 'Tıp Ders Notu';
+}
+
+/**
+ * Extract meaningful keywords directly from the page text (strictly verbatim, no AI hallucinations)
+ */
+export function extractVerbatimKeywords(text: string): string[] {
+  if (!text) return [];
+  const words = text
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'’“”…\[\]<>|\\]/g, ' ')
+    .split(/\s+/)
+    .map(w => w.trim().toLowerCase())
+    .filter(w => w.length >= 4 && !TURKISH_STOPWORDS.has(w) && !/^\d+$/.test(w));
+
+  const freqMap = new Map<string, number>();
+  for (const w of words) {
+    freqMap.set(w, (freqMap.get(w) || 0) + 1);
+  }
+
+  // Sort by frequency descending and take top 10 unique words
+  return Array.from(freqMap.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(entry => entry[0])
+    .slice(0, 10);
+}
+
+/**
+ * High-fidelity verbatim page-by-page PDF extraction without any AI commentary or 5-page limits
+ */
+export async function extractVerbatimPdfPages(
+  buffer: Buffer,
+  fileName?: string
+): Promise<{
+  pages: LecturePageItem[];
+  totalPages: number;
+  fullText: string;
+  title: string;
+  discipline: string;
+}> {
+  let rawPages: Array<{ num: number; text: string }> = [];
+  let fullText = '';
+
+  if (typeof PDFParse === 'function' && PDFParse.prototype?.getText) {
+    const parser = new PDFParse({ data: buffer });
+    try {
+      const parsed = await parser.getText();
+      if (parsed.pages && Array.isArray(parsed.pages) && parsed.pages.length > 0) {
+        rawPages = parsed.pages.map((p: any) => ({
+          num: p.num || 0,
+          text: (p.text || '').trim(),
+        }));
+      } else if (parsed.text) {
+        fullText = parsed.text;
+        // Split by form feeds or multiple newlines
+        const splits = fullText.split(/\f|\n{4,}/);
+        rawPages = splits.map((s, idx) => ({ num: idx + 1, text: s.trim() }));
+      }
+    } finally {
+      await parser.destroy?.();
+    }
+  } else if (typeof pdfParseModule === 'function') {
+    const parsed = await pdfParseModule(buffer);
+    fullText = parsed.text || '';
+    const splits = fullText.split(/\f|\n{4,}/);
+    rawPages = splits.map((s: string, idx: number) => ({ num: idx + 1, text: s.trim() }));
+  }
+
+  // Sort pages by page number
+  rawPages.sort((a, b) => a.num - b.num);
+
+  // If no pages were parsed at all, provide a single initial page
+  if (rawPages.length === 0) {
+    rawPages = [{ num: 1, text: fullText.trim() }];
+  }
+
+  const cleanTitle = fileName
+    ? fileName.replace(/\.[^/.]+$/, '').trim()
+    : 'Ders Notu Belgesi';
+
+  const discipline = inferDiscipline(fileName || '');
+
+  const pages: LecturePageItem[] = rawPages.map((p, index) => {
+    const pageNum = p.num || index + 1;
+    // Clean null bytes and strange control characters
+    const cleanText = (p.text || '')
+      .replace(/\u0000/g, '')
+      .replace(/[\r\t]+/g, ' ')
+      .trim();
+
+    const content = cleanText.length > 0
+      ? cleanText
+      : `[Sayfa ${pageNum}: Tıbbi Slayt Görseli / Tablo / Şema]`;
+
+    return {
+      pageNumber: pageNum,
+      content,
+      keywords: extractVerbatimKeywords(cleanText),
+    };
+  });
+
+  const assembledFullText = pages.map(p => `--- Sayfa ${p.pageNumber} ---\n${p.content}`).join('\n\n');
+
+  return {
+    pages,
+    totalPages: pages.length,
+    fullText: assembledFullText,
+    title: cleanTitle,
+    discipline,
+  };
+}
+
+/**
+ * Load all lecture notes from data/lecture_notes.json
+ */
+export function getAllLectureNotes(): LectureNoteRecord[] {
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    if (fs.existsSync(LECTURE_NOTES_FILE)) {
+      const raw = fs.readFileSync(LECTURE_NOTES_FILE, 'utf-8');
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    }
+  } catch (err) {
+    console.error('[LectureNotesManager] Error reading lecture_notes.json:', err);
+  }
+  return [];
+}
+
+/**
+ * Save or update a single lecture note in data/lecture_notes.json
+ */
+export function saveLectureNote(note: Partial<LectureNoteRecord> & { title: string }): LectureNoteRecord {
+  const notes = getAllLectureNotes();
+  const id = note.id || `note-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+  const now = new Date().toISOString();
+
+  const record: LectureNoteRecord = {
+    id,
+    committeeId: note.committeeId || 'donem3-kurul1',
+    title: note.title,
+    discipline: note.discipline || inferDiscipline(note.title),
+    instructor: note.instructor || undefined,
+    totalSlides: note.pages?.length || note.totalSlides || 1,
+    pages: note.pages || [],
+    source: note.source || 'web_upload',
+    filePath: note.filePath || undefined,
+    fileHash: note.fileHash || undefined,
+    fileSize: note.fileSize || undefined,
+    lastScannedAt: now,
+    createdAt: note.createdAt || now,
+    updatedAt: now,
+  };
+
+  const existingIndex = notes.findIndex(n => n.id === id || (note.filePath && n.filePath === note.filePath));
+  if (existingIndex >= 0) {
+    notes[existingIndex] = {
+      ...notes[existingIndex],
+      ...record,
+      createdAt: notes[existingIndex].createdAt || record.createdAt,
+      updatedAt: now,
+    };
+  } else {
+    notes.unshift(record);
+  }
+
+  fs.writeFileSync(LECTURE_NOTES_FILE, JSON.stringify(notes, null, 2), 'utf-8');
+  console.log(`[LectureNotesManager] Saved "${record.title}" (${record.totalSlides} pages) to database.`);
+  return record;
+}
+
+/**
+ * Delete a lecture note by ID
+ */
+export function deleteLectureNote(id: string): boolean {
+  try {
+    const notes = getAllLectureNotes();
+    const filtered = notes.filter(n => n.id !== id);
+    if (filtered.length !== notes.length) {
+      fs.writeFileSync(LECTURE_NOTES_FILE, JSON.stringify(filtered, null, 2), 'utf-8');
+      return true;
+    }
+  } catch (err) {
+    console.error('[LectureNotesManager] Error deleting note:', err);
+  }
+  return false;
+}
+
+/**
+ * Scan target folder (C:\Users\indui\Desktop\meds_database) for all PDFs and DOCX files.
+ * Extracts verbatim content from all pages and updates the database.
+ */
+export async function scanDesktopDatabaseFolder(folderPath: string = DESKTOP_DATABASE_DIR): Promise<{
+  success: boolean;
+  folderPath: string;
+  totalFilesFound: number;
+  newlyAdded: number;
+  updated: number;
+  totalNotes: number;
+  processedFiles: string[];
+}> {
+  console.log(`[DesktopSync] 🔍 Taranıyor: ${folderPath}`);
+
+  if (!fs.existsSync(folderPath)) {
+    try {
+      fs.mkdirSync(folderPath, { recursive: true });
+      console.log(`[DesktopSync] Klasör oluşturuldu: ${folderPath}`);
+    } catch (e: any) {
+      console.error(`[DesktopSync] Klasör oluşturulamadı: ${e.message}`);
+      return {
+        success: false,
+        folderPath,
+        totalFilesFound: 0,
+        newlyAdded: 0,
+        updated: 0,
+        totalNotes: getAllLectureNotes().length,
+        processedFiles: [],
+      };
+    }
+  }
+
+  // Find all PDF and DOCX files recursively
+  const findFiles = (dir: string): string[] => {
+    let results: string[] = [];
+    try {
+      const list = fs.readdirSync(dir, { withFileTypes: true });
+      for (const entry of list) {
+        const full = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          results = results.concat(findFiles(full));
+        } else if (entry.isFile()) {
+          const ext = path.extname(entry.name).toLowerCase();
+          if (ext === '.pdf' || ext === '.docx') {
+            results.push(full);
+          }
+        }
+      }
+    } catch (e: any) {
+      console.warn(`[DesktopSync] Dizin okuma uyarısı (${dir}):`, e.message);
+    }
+    return results;
+  };
+
+  const files = findFiles(folderPath);
+  console.log(`[DesktopSync] Bulunan belge sayısı: ${files.length}`);
+
+  let newlyAdded = 0;
+  let updated = 0;
+  const processedFiles: string[] = [];
+  const existingNotes = getAllLectureNotes();
+
+  for (const filePath of files) {
+    try {
+      const fileName = path.basename(filePath);
+      const stats = fs.statSync(filePath);
+      const buffer = fs.readFileSync(filePath);
+
+      // Compute hash to check for changes
+      const hash = crypto.createHash('md5').update(buffer).digest('hex');
+
+      // Check if file already processed with matching hash
+      const existing = existingNotes.find(n => n.filePath === filePath || n.fileHash === hash);
+      if (existing && existing.fileHash === hash && existing.totalSlides > 0 && existing.pages.length > 0) {
+        // Unchanged
+        continue;
+      }
+
+      console.log(`[DesktopSync] ⚙️ İşleniyor: "${fileName}" (${(stats.size / 1024 / 1024).toFixed(2)} MB)...`);
+      const isPdf = fileName.toLowerCase().endsWith('.pdf');
+
+      let pages: LecturePageItem[] = [];
+      let totalSlides = 0;
+      let discipline = inferDiscipline(filePath);
+      const title = fileName.replace(/\.[^/.]+$/, '').trim();
+
+      if (isPdf) {
+        const extracted = await extractVerbatimPdfPages(buffer, fileName);
+        pages = extracted.pages;
+        totalSlides = extracted.totalPages;
+        discipline = extracted.discipline;
+      }
+
+      const noteRecord: Partial<LectureNoteRecord> & { title: string } = {
+        id: existing?.id || `note-${hash.slice(0, 10)}`,
+        committeeId: 'donem3-kurul1',
+        title,
+        discipline,
+        totalSlides,
+        pages,
+        source: 'desktop_folder',
+        filePath,
+        fileHash: hash,
+        fileSize: stats.size,
+      };
+
+      saveLectureNote(noteRecord);
+      processedFiles.push(fileName);
+
+      if (existing) {
+        updated++;
+      } else {
+        newlyAdded++;
+      }
+
+      console.log(`[DesktopSync] ✓ "${fileName}" başarıyla kaydedildi: Toplam ${totalSlides} sayfa birebir metin çıkarıldı.`);
+    } catch (err: any) {
+      console.error(`[DesktopSync] Hata (${filePath}):`, err.message);
+    }
+  }
+
+  const finalNotes = getAllLectureNotes();
+  return {
+    success: true,
+    folderPath,
+    totalFilesFound: files.length,
+    newlyAdded,
+    updated,
+    totalNotes: finalNotes.length,
+    processedFiles,
+  };
+}
+
+// In-memory status for monitoring
+let lastScanResult: any = null;
+let lastScanTime: string | null = null;
+let watcherActive = false;
+
+export function getDesktopFolderStatus() {
+  const filesCount = fs.existsSync(DESKTOP_DATABASE_DIR)
+    ? fs.readdirSync(DESKTOP_DATABASE_DIR).filter(f => f.toLowerCase().endsWith('.pdf') || f.toLowerCase().endsWith('.docx')).length
+    : 0;
+
+  return {
+    folderPath: DESKTOP_DATABASE_DIR,
+    folderExists: fs.existsSync(DESKTOP_DATABASE_DIR),
+    filesCount,
+    lastScanTime,
+    lastScanResult,
+    watcherActive,
+    scheduledHour: 18,
+    scheduleDescription: 'Her gün saat 18:00 (Ayrıca klasöre yeni dosya atıldığında anında otomatik)',
+    totalDatabaseNotes: getAllLectureNotes().length,
+  };
+}
+
+/**
+ * Start the folder watcher and daily 18:00 scheduler
+ */
+export function startDesktopFolderWatcherAndScheduler(folderPath: string = DESKTOP_DATABASE_DIR) {
+  console.log(`[DesktopSync] 🕒 Otomasyon başlatılıyor. Hedef Klasör: ${folderPath}`);
+
+  // 1. Initial scan on server boot
+  setTimeout(async () => {
+    try {
+      console.log(`[DesktopSync] İlk açılış taraması başlatılıyor...`);
+      lastScanResult = await scanDesktopDatabaseFolder(folderPath);
+      lastScanTime = new Date().toISOString();
+    } catch (e: any) {
+      console.error('[DesktopSync] İlk açılış taraması hatası:', e.message);
+    }
+  }, 2000);
+
+  // 2. Watcher for instant detection when user drops a PDF into the folder
+  if (!watcherActive && fs.existsSync(folderPath)) {
+    try {
+      let debounceTimer: NodeJS.Timeout | null = null;
+      fs.watch(folderPath, { recursive: true }, (eventType, filename) => {
+        if (!filename) return;
+        const ext = path.extname(filename).toLowerCase();
+        if (ext === '.pdf' || ext === '.docx') {
+          console.log(`[DesktopSync] 📂 Klasörde değişiklik tespit edildi (${eventType}): ${filename}`);
+          if (debounceTimer) clearTimeout(debounceTimer);
+          debounceTimer = setTimeout(async () => {
+            console.log(`[DesktopSync] 🔄 Otomatik senkronizasyon tetiklendi...`);
+            lastScanResult = await scanDesktopDatabaseFolder(folderPath);
+            lastScanTime = new Date().toISOString();
+          }, 3000);
+        }
+      });
+      watcherActive = true;
+      console.log(`[DesktopSync] 👁️ Gerçek zamanlı dosya izleyici devrede (fs.watch).`);
+    } catch (e: any) {
+      console.warn('[DesktopSync] fs.watch başlatılamadı:', e.message);
+    }
+  }
+
+  // 3. Daily 18:00 Scheduler Check (checked every 30 seconds)
+  let lastRanDateString = '';
+  setInterval(async () => {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const dateStr = now.toDateString();
+
+    // Trigger exactly at 18:00 (runs once per day)
+    if (hours === 18 && minutes === 0 && lastRanDateString !== dateStr) {
+      lastRanDateString = dateStr;
+      console.log(`\n========================================================`);
+      console.log(`[18:00 OTOMASYONU] ⏰ Saat 18:00 - Günlük ders notu senkronizasyonu başlatılıyor...`);
+      console.log(`========================================================\n`);
+      try {
+        lastScanResult = await scanDesktopDatabaseFolder(folderPath);
+        lastScanTime = new Date().toISOString();
+        console.log(`[18:00 OTOMASYONU] Tamamlandı: ${lastScanResult.newlyAdded} yeni, ${lastScanResult.updated} güncellendi.`);
+      } catch (err: any) {
+        console.error('[18:00 OTOMASYONU] Hata:', err.message);
+      }
+    }
+  }, 30000);
+}

@@ -27,6 +27,7 @@ const CONFIG = {
   driveFolderId: process.env.DRIVE_FOLDER_ID || '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W',
   appServerUrl: process.env.APP_SERVER_URL || LOCAL_SERVER_URL,
   fallbackServerUrl: CLOUD_SERVER_URL,
+  desktopFolder: process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database',
   syncIntervalMinutes: parseInt(process.env.SYNC_INTERVAL_MINUTES || '60', 10),
   runAtHour: 18, // Hafta içi her gün 18:00
   adminEmail: 'nofrostlife@gmail.com',
@@ -166,6 +167,20 @@ async function runCivanQuestionsSync() {
   }
 }
 
+// Masaüstü Ders Notları Klasörü (meds_database) Senkronizasyonu
+async function runDesktopFolderSync() {
+  const timestamp = new Date().toLocaleTimeString('tr-TR');
+  console.log(`[${timestamp}] 📁 Masaüstü ders notları taranıyor (${CONFIG.desktopFolder})...`);
+  try {
+    const res = await postJson('/api/automation/scan-desktop-folder', {
+      folderPath: CONFIG.desktopFolder,
+    });
+    console.log(`[${timestamp}] ✓ Masaüstü klasörü senkronize edildi: ${res.totalFilesFound || 0} belge bulundu, ${res.newlyAdded || 0} yeni eklendi, toplam ${res.totalNotes || 0} not veritabanında.`);
+  } catch (err) {
+    console.warn(`[${timestamp}] ⚠️ Masaüstü tarama uyarısı:`, err.message);
+  }
+}
+
 // Düzenli Kalp Atışı (Heartbeat) - Sunucuya online durumu bildirir
 async function sendHeartbeat() {
   try {
@@ -192,6 +207,7 @@ async function sendHeartbeat() {
 async function startDaemon() {
   console.log('\n🚀 [BAŞLADI] Otomasyon servisi aktif. İlk tarama başlatılıyor...');
   await sendHeartbeat();
+  await runDesktopFolderSync();
   await runDriveSync();
   await runCivanQuestionsSync();
 
@@ -202,6 +218,7 @@ async function startDaemon() {
   console.log('   (Durdurmak için klavyeden CTRL + C tuşlarına basabilirsiniz.)\n');
 
   setInterval(async () => {
+    await runDesktopFolderSync();
     await runDriveSync();
   }, CONFIG.syncIntervalMinutes * 60 * 1000);
 }

@@ -14,6 +14,17 @@ const require = createRequire(import.meta.url);
 const pdfParseModule = require('pdf-parse');
 const PDFParse = pdfParseModule.PDFParse || pdfParseModule.default || pdfParseModule;
 
+import {
+  extractVerbatimPdfPages,
+  getAllLectureNotes,
+  saveLectureNote,
+  deleteLectureNote,
+  scanDesktopDatabaseFolder,
+  getDesktopFolderStatus,
+  startDesktopFolderWatcherAndScheduler,
+  DESKTOP_DATABASE_DIR,
+} from './src/serverLectureNotes.ts';
+
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -1066,133 +1077,40 @@ app.post('/api/ai/extract-document', async (req, res) => {
       }
     }
 
-    // High-fidelity verbatim page-by-page PDF extraction using PDFParse engine (Up to 200 pages)
-    let pdfPageTexts: string[] = [];
-    let pdfTotalPages = 0;
-    let pdfFullText = '';
-
+    // High-fidelity verbatim page-by-page PDF extraction without AI hallucinations or 5-page caps
     if (isPdf) {
       try {
         const buf = Buffer.from(cleanBase64, 'base64');
-        if (typeof PDFParse === 'function' && PDFParse.prototype?.getText) {
-          const parser = new PDFParse({ data: buf });
-          const parsedResult = await parser.getText();
-          if (parsedResult.pages && Array.isArray(parsedResult.pages) && parsedResult.pages.length > 0) {
-            const sorted = [...parsedResult.pages].sort((a: any, b: any) => (a.num || 0) - (b.num || 0)).slice(0, 200);
-            pdfTotalPages = sorted.length;
-            for (let i = 0; i < sorted.length; i++) {
-              const p = sorted[i];
-              const t = (p.text || '').trim();
-              pdfPageTexts.push(t || `[Sayfa ${i + 1}: Tıbbi Slayt Görseli / Tablo]`);
-            }
-            pdfFullText = sorted.map((p: any) => p.text || '').join('\n\n--- Sayfa Sonu ---\n\n');
-          } else if (parsedResult.text) {
-            pdfFullText = parsedResult.text;
-            const splitPages = pdfFullText.split(/\f|\n{3,}/).map((s: string) => s.trim()).filter(Boolean);
-            pdfPageTexts = splitPages.slice(0, 200);
-            pdfTotalPages = pdfPageTexts.length;
-          }
-          await parser.destroy?.();
-        } else if (typeof pdfParseModule === 'function') {
-          const parsed = await pdfParseModule(buf);
-          pdfFullText = parsed.text || '';
-          const splitPages = pdfFullText.split(/\f|\n{3,}/).map((s: string) => s.trim()).filter(Boolean);
-          pdfPageTexts = splitPages.slice(0, 200);
-          pdfTotalPages = pdfPageTexts.length;
+        const extracted = await extractVerbatimPdfPages(buf, fileName);
+
+        if (mode === 'lecture_notes') {
+          const cleanTitle = fileName ? fileName.replace(/\.[^/.]+$/, '').trim() : 'Ders Slayt Notu';
+          const savedRecord = saveLectureNote({
+            committeeId: committeeId || 'donem3-kurul1',
+            title: cleanTitle,
+            discipline: req.body.discipline || extracted.discipline,
+            instructor: req.body.instructor || undefined,
+            totalSlides: extracted.totalPages,
+            pages: extracted.pages,
+            source: 'web_upload',
+          });
+
+          return res.json({
+            success: true,
+            totalPages: extracted.totalPages,
+            note: savedRecord,
+          });
         }
+
+        // Return extracted verbatim text for past questions / raw mode
+        return res.json({
+          success: true,
+          extractedText: extracted.fullText,
+          totalPages: extracted.totalPages,
+        });
       } catch (pdfErr: any) {
-        console.warn('PDF extraction notice:', pdfErr.message);
+        console.warn('PDF verbatim extraction error:', pdfErr.message);
       }
-    }
-
-    // If lecture notes mode and pages were extracted verbatim
-    if (mode === 'lecture_notes' && pdfPageTexts.length > 0) {
-      const pages = pdfPageTexts.map((text, idx) => {
-        const words = text
-          .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, ' ')
-          .split(/\s+/)
-          .filter((w) => w.length > 4)
-          .slice(0, 8);
-        return {
-          pageNumber: idx + 1,
-          content: text,
-          keywords: Array.from(new Set(words)),
-        };
-      });
-
-      const cleanTitle = fileName ? fileName.replace(/\.[^/.]+$/, '').trim() : 'Ders Slayt Notu';
-      return res.json({
-        success: true,
-        totalPages: pages.length,
-        note: {
-          id: 'note-upload-' + Date.now(),
-          committeeId: committeeId || 'donem3-kurul1',
-          title: cleanTitle,
-          discipline: req.body.discipline || 'Tıbbi Patoloji',
-          instructor: req.body.instructor || undefined,
-          totalSlides: pages.length,
-          pages,
-        },
-      });
-    }
-
-    // If normal text extraction and pdfParse got the full text
-    if (pdfFullText.trim().length > 10) {
-      return res.json({
-        success: true,
-        extractedText: pdfFullText,
-        totalPages: pdfTotalPages,
-      });
-    }
-
-    // AI Fallback for image-only scanned PDFs or complex handwritten slides
-    if (mode === 'lecture_notes') {
-      const prompt = `Bu tıp fakültesi ders notu belgesini ("${fileName || 'Ders Notu'}") incele.
-Her bir slaytı sırasıyla oku.
-Çıktı formatı JSON olmalı:
-- title: Ders notu ana başlığı (ör. "Akut İnflamasyon ve Hücre Hasarı")
-- discipline: Tıbbi anabilim dalı (ör. "Tıbbi Patoloji", "Tıbbi Farmakoloji", "Tıbbi Mikrobiyoloji")
-- instructor: Belgede geçiyorsa dersi anlatan hoca / profesör
-- pages: Her sayfa için { pageNumber: sayı, content: sayfanın tam metni, keywords: 5-8 adet önemli tıbbi terim }`;
-
-      const response = await generateGeminiWithFallback([
-        {
-          inlineData: {
-            mimeType: mime,
-            data: cleanBase64,
-          },
-        },
-        prompt,
-      ], {
-        responseMimeType: 'application/json',
-        responseSchema: {
-          type: Type.OBJECT,
-          properties: {
-            title: { type: Type.STRING },
-            discipline: { type: Type.STRING },
-            instructor: { type: Type.STRING },
-            pages: {
-              type: Type.ARRAY,
-              items: {
-                type: Type.OBJECT,
-                properties: {
-                  pageNumber: { type: Type.INTEGER },
-                  content: { type: Type.STRING },
-                  keywords: {
-                    type: Type.ARRAY,
-                    items: { type: Type.STRING },
-                  },
-                },
-                required: ['pageNumber', 'content', 'keywords'],
-              },
-            },
-          },
-          required: ['title', 'discipline', 'pages'],
-        },
-      });
-
-      const parsed = JSON.parse(response.text?.trim() || '{}');
-      return res.json({ success: true, note: parsed });
     }
 
     // Default raw text extraction
@@ -1990,13 +1908,8 @@ app.post('/api/automation/drive-sync-status', (req, res) => {
 // Lecture Notes: Get all lecture notes
 app.get('/api/lecture-notes', (req, res) => {
   try {
-    const notesFile = path.resolve(__dirname, 'data/lecture_notes.json');
-    if (!fs.existsSync(notesFile)) {
-      fs.writeFileSync(notesFile, '[]', 'utf-8');
-      return res.json([]);
-    }
-    const data = JSON.parse(fs.readFileSync(notesFile, 'utf-8') || '[]');
-    res.json(data);
+    const notes = getAllLectureNotes();
+    res.json(notes);
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notları yüklenemedi: ' + err.message });
   }
@@ -2006,26 +1919,11 @@ app.get('/api/lecture-notes', (req, res) => {
 app.post('/api/lecture-notes', (req, res) => {
   try {
     const note = req.body;
-    if (!note || !note.id || !note.title) {
+    if (!note || !note.title) {
       return res.status(400).json({ error: 'Geçersiz ders notu verisi' });
     }
-    const notesFile = path.resolve(__dirname, 'data/lecture_notes.json');
-    let notes: any[] = [];
-    if (fs.existsSync(notesFile)) {
-      try {
-        notes = JSON.parse(fs.readFileSync(notesFile, 'utf-8') || '[]');
-      } catch (e) {
-        notes = [];
-      }
-    }
-    const existingIndex = notes.findIndex((n) => n.id === note.id);
-    if (existingIndex >= 0) {
-      notes[existingIndex] = { ...notes[existingIndex], ...note, updatedAt: new Date().toISOString() };
-    } else {
-      notes.unshift({ ...note, createdAt: new Date().toISOString() });
-    }
-    fs.writeFileSync(notesFile, JSON.stringify(notes, null, 2), 'utf-8');
-    res.json({ success: true, note, totalNotes: notes.length });
+    const saved = saveLectureNote(note);
+    res.json({ success: true, note: saved, totalNotes: getAllLectureNotes().length });
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu kaydedilemedi: ' + err.message });
   }
@@ -2035,15 +1933,31 @@ app.post('/api/lecture-notes', (req, res) => {
 app.delete('/api/lecture-notes/:id', (req, res) => {
   try {
     const { id } = req.params;
-    const notesFile = path.resolve(__dirname, 'data/lecture_notes.json');
-    if (fs.existsSync(notesFile)) {
-      let notes = JSON.parse(fs.readFileSync(notesFile, 'utf-8') || '[]');
-      notes = notes.filter((n: any) => n.id !== id);
-      fs.writeFileSync(notesFile, JSON.stringify(notes, null, 2), 'utf-8');
-    }
-    res.json({ success: true, deletedId: id });
+    const ok = deleteLectureNote(id);
+    res.json({ success: ok, deletedId: id });
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu silinemedi: ' + err.message });
+  }
+});
+
+// Desktop Database Folder Automation: Trigger scan manually
+app.post('/api/automation/scan-desktop-folder', async (req, res) => {
+  try {
+    const targetDir = req.body?.folderPath || DESKTOP_DATABASE_DIR;
+    const result = await scanDesktopDatabaseFolder(targetDir);
+    res.json(result);
+  } catch (err: any) {
+    res.status(500).json({ error: 'Masaüstü klasör tarama hatası: ' + err.message });
+  }
+});
+
+// Desktop Database Folder Automation: Status
+app.get('/api/automation/desktop-folder-status', (req, res) => {
+  try {
+    const status = getDesktopFolderStatus();
+    res.json(status);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
   }
 });
 
@@ -2128,6 +2042,8 @@ async function startServer() {
 
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
+    // Start desktop folder watcher and daily 18:00 scheduler
+    startDesktopFolderWatcherAndScheduler(DESKTOP_DATABASE_DIR);
   });
 }
 

@@ -52,7 +52,7 @@ interface LectureNotesViewProps {
   onUpdateQuestionReference: (questionId: string, reference: QuestionLectureMatch) => Promise<void>;
 }
 
-const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v2';
+const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v3';
 
 export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   committee,
@@ -76,12 +76,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         }
       }
     } catch (e) {}
-    return REAL_KURUL1_DRIVE_SLIDES.map(s => ({
-      ...s,
-      committeeId: committee?.id || 'donem3-kurul1',
-      totalSlides: s.pages?.length || 5,
-      pages: s.pages || [],
-    }));
+    return [];
   });
 
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Tümü');
@@ -257,6 +252,29 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       setPdfUploadStatus('Hata: ' + err.message);
     } finally {
       setIsUploadingPdf(false);
+    }
+  };
+
+  // Handler for manual trigger of Desktop Folder (meds_database) Sync
+  const handleTriggerDesktopSync = async () => {
+    setIsSyncingDrive(true);
+    setCurrentlyRenderingSlide('C:\\Users\\indui\\Desktop\\meds_database taranıyor...');
+    setDriveSyncFeedback('Masaüstü klasöründeki PDF ders notları okunuyor...');
+    try {
+      const res = await ApiService.scanDesktopDatabaseFolder();
+      const updatedNotes = await ApiService.getLectureNotes();
+      if (updatedNotes && updatedNotes.length > 0) {
+        setNotes(updatedNotes);
+        setActiveNote(updatedNotes[0]);
+      }
+      setDriveSyncFeedback(
+        `✓ Masaüstü klasörü senkronize edildi: Toplam ${res.totalFilesFound || 0} belge bulundu, ${res.newlyAdded || 0} yeni ders notu eklendi!`
+      );
+    } catch (err: any) {
+      setDriveSyncFeedback('Masaüstü klasör tarama hatası: ' + err.message);
+    } finally {
+      setIsSyncingDrive(false);
+      setCurrentlyRenderingSlide(null);
     }
   };
 
@@ -551,29 +569,29 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             <div className="flex items-center gap-2">
               <span className="bg-teal-700 text-white font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1">
                 <Cloud className="w-3 h-3 text-teal-200" />
-                Drive Otomasyonu (Yönetici)
+                Otomasyon (18:00 & Anlık)
               </span>
               <span className="text-xs text-teal-900 font-semibold">
-                Hafta İçi Her Gün 18:00 Senkronizasyonu
+                Her Gün 18:00 & Yeni PDF Takibi
               </span>
-              <InfoPopover title="Google Drive Otomasyonu Hakkında">
+              <InfoPopover title="Ders Notu Otomasyonu Hakkında">
                 <p>
-                  Sistem, hafta içi her gün saat 18:00'de paylaşılan Google Drive klasörünü otomatik olarak tarar.
+                  Sistem, her gün saat 18:00'de ve <strong>C:\Users\indui\Desktop\meds_database</strong> klasörüne yeni PDF atıldığında otomatik olarak tüm sayfaları birebir okur.
                 </p>
                 <p className="mt-1">
-                  Klasöre yüklenen yeni PDF ders notları doğrudan çekilerek sayfa sayfa taranır ve öğrencilerin eklediği sorularla karşılaştırılır.
+                  Yapay zeka yorumu veya özetleme yapılmaksızın, PDF'teki tüm sayfaların gerçek metinleri veritabanına eksiksiz olarak kaydedilir.
                 </p>
                 <p className="mt-1 font-semibold text-teal-900">
-                  Hedef Klasör ID: {TARGET_DRIVE_FOLDER_ID}
+                  Hedef Klasör: C:\Users\indui\Desktop\meds_database
                 </p>
               </InfoPopover>
             </div>
 
             <h3 className="font-bold text-sm text-slate-900">
-              Ders Notları Google Drive Klasörüyle Otomatik Eşleşiyor
+              Ders Notları Masaüstü Klasörü & Drive ile Birebir Eşleşiyor
             </h3>
             <p className="text-xs text-slate-600 max-w-xl">
-              Drive klasörüne yüklenen PDF'ler çekilir ve soruların hangi ders notunun hangi sayfasından çıktığı otomatik tespit edilir.
+              <strong>C:\Users\indui\Desktop\meds_database</strong> klasörüne eklenen veya Drive'a yüklenen PDF'lerin tüm sayfaları yorumsuz ve eksiksiz olarak okunur, veritabanına kaydedilir.
             </p>
 
             {currentlyRenderingSlide && (
@@ -592,11 +610,21 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
           </div>
 
           <div className="flex flex-wrap items-center gap-2 shrink-0">
+            <button
+              onClick={handleTriggerDesktopSync}
+              disabled={isSyncingDrive}
+              className="bg-indigo-700 hover:bg-indigo-800 disabled:opacity-50 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
+              title="C:\Users\indui\Desktop\meds_database klasörünü şimdi tara ve yeni PDF'leri veritabanına ekle"
+            >
+              <FolderOpen className="w-4 h-4 text-indigo-200" />
+              <span>Masaüstü Klasörünü Tara (meds_database)</span>
+            </button>
+
             <a
               href={TARGET_DRIVE_FOLDER_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white hover:bg-slate-50 text-teal-900 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 border border-teal-300 shadow-2xs transition-all cursor-pointer"
+              className="bg-white hover:bg-slate-50 text-teal-900 font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1.5 border border-teal-300 shadow-2xs transition-all cursor-pointer"
             >
               <FolderOpen className="w-4 h-4 text-teal-700" />
               <span>Drive Klasörünü Aç</span>
@@ -606,17 +634,17 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             <button
               onClick={handleTriggerDriveSync}
               disabled={isSyncingDrive}
-              className="bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer active:scale-95"
+              className="bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer active:scale-95"
             >
               {isSyncingDrive ? (
                 <>
                   <RefreshCw className="w-4 h-4 animate-spin text-teal-200" />
-                  <span>Slaytlar Render Ediliyor...</span>
+                  <span>Slaytlar İşleniyor...</span>
                 </>
               ) : (
                 <>
                   <RefreshCw className="w-4 h-4 text-teal-200" />
-                  <span>Şimdi Tara & Sorularla Eşleştir</span>
+                  <span>Drive Senkronize Et</span>
                 </>
               )}
             </button>
