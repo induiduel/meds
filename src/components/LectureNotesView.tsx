@@ -243,6 +243,13 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         try {
           await setDoc(doc(db, 'lecture_notes', newNote.id), cleanForFirestore(newNote));
         } catch (err) {}
+        try {
+          await fetch('/api/lecture-notes', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newNote),
+          });
+        } catch (err) {}
       } else {
         throw new Error((resp as any).error || 'Belge okunamadı');
       }
@@ -297,9 +304,26 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     } catch (e) {}
   }, [notes]);
 
-  // Load from Firestore if available
+  // Load from Firestore and server API
   useEffect(() => {
-    async function loadFirestoreNotes() {
+    async function loadNotesData() {
+      // 1. Try server API
+      try {
+        const resp = await fetch('/api/lecture-notes');
+        if (resp.ok) {
+          const apiNotes: LectureNote[] = await resp.json();
+          if (apiNotes && apiNotes.length > 0) {
+            setNotes((prev) => {
+              const noteMap = new Map<string, LectureNote>();
+              prev.forEach((n) => noteMap.set(n.id, n));
+              apiNotes.forEach((n) => noteMap.set(n.id, n));
+              return Array.from(noteMap.values());
+            });
+          }
+        }
+      } catch (e) {}
+
+      // 2. Try Firestore if available
       try {
         const colRef = collection(db, 'lecture_notes');
         const snap = await getDocs(colRef);
@@ -307,14 +331,19 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
           const remoteNotes: LectureNote[] = [];
           snap.forEach((d) => remoteNotes.push(d.data() as LectureNote));
           if (remoteNotes.length > 0) {
-            setNotes(remoteNotes);
+            setNotes((prev) => {
+              const noteMap = new Map<string, LectureNote>();
+              prev.forEach((n) => noteMap.set(n.id, n));
+              remoteNotes.forEach((n) => noteMap.set(n.id, n));
+              return Array.from(noteMap.values());
+            });
           }
         }
       } catch (e) {
         console.warn('Firestore lecture notes fetch fallback to local', e);
       }
     }
-    loadFirestoreNotes();
+    loadNotesData();
   }, []);
 
   // Clear or restore default mock slides
@@ -408,12 +437,19 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       setNewInstructor('');
       setNewRawContent('');
 
-      // Save to Firestore
+      // Save to Firestore and Server API
       try {
         await setDoc(doc(db, 'lecture_notes', newNote.id), cleanForFirestore(newNote));
       } catch (err) {
         console.warn('Firestore setDoc lecture note error', err);
       }
+      try {
+        await fetch('/api/lecture-notes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newNote),
+        });
+      } catch (err) {}
     } finally {
       setIsSubmitting(false);
     }

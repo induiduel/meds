@@ -1961,6 +1961,66 @@ app.post('/api/automation/drive-sync-status', (req, res) => {
   });
 });
 
+// Lecture Notes: Get all lecture notes
+app.get('/api/lecture-notes', (req, res) => {
+  try {
+    const notesFile = path.resolve(__dirname, 'data/lecture_notes.json');
+    if (!fs.existsSync(notesFile)) {
+      fs.writeFileSync(notesFile, '[]', 'utf-8');
+      return res.json([]);
+    }
+    const data = JSON.parse(fs.readFileSync(notesFile, 'utf-8') || '[]');
+    res.json(data);
+  } catch (err: any) {
+    res.status(500).json({ error: 'Ders notları yüklenemedi: ' + err.message });
+  }
+});
+
+// Lecture Notes: Save / Update a lecture note
+app.post('/api/lecture-notes', (req, res) => {
+  try {
+    const note = req.body;
+    if (!note || !note.id || !note.title) {
+      return res.status(400).json({ error: 'Geçersiz ders notu verisi' });
+    }
+    const notesFile = path.resolve(__dirname, 'data/lecture_notes.json');
+    let notes: any[] = [];
+    if (fs.existsSync(notesFile)) {
+      try {
+        notes = JSON.parse(fs.readFileSync(notesFile, 'utf-8') || '[]');
+      } catch (e) {
+        notes = [];
+      }
+    }
+    const existingIndex = notes.findIndex((n) => n.id === note.id);
+    if (existingIndex >= 0) {
+      notes[existingIndex] = { ...notes[existingIndex], ...note, updatedAt: new Date().toISOString() };
+    } else {
+      notes.unshift({ ...note, createdAt: new Date().toISOString() });
+    }
+    fs.writeFileSync(notesFile, JSON.stringify(notes, null, 2), 'utf-8');
+    res.json({ success: true, note, totalNotes: notes.length });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Ders notu kaydedilemedi: ' + err.message });
+  }
+});
+
+// Lecture Notes: Delete a lecture note
+app.delete('/api/lecture-notes/:id', (req, res) => {
+  try {
+    const { id } = req.params;
+    const notesFile = path.resolve(__dirname, 'data/lecture_notes.json');
+    if (fs.existsSync(notesFile)) {
+      let notes = JSON.parse(fs.readFileSync(notesFile, 'utf-8') || '[]');
+      notes = notes.filter((n: any) => n.id !== id);
+      fs.writeFileSync(notesFile, JSON.stringify(notes, null, 2), 'utf-8');
+    }
+    res.json({ success: true, deletedId: id });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Ders notu silinemedi: ' + err.message });
+  }
+});
+
 // Admin: Export entire project codebase & databases as ZIP archive
 app.get('/api/admin/export-zip', async (req, res) => {
   try {
