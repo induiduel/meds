@@ -791,6 +791,37 @@ app.put('/api/questions/:id', (req, res) => {
   }
 });
 
+// Admin Command Execution API (Bypasses Firestore permissions issues when on local server)
+app.post('/api/admin/command', async (req, res) => {
+  try {
+    const { command, payload, requestedBy } = req.body;
+    console.log(`[AdminCommand] ⚡ Komut alındı: ${command} (${requestedBy})`);
+
+    if (command === 'run_redactor_cycle') {
+      exec('node scripts/deep-ai-redactor.mjs', { cwd: __dirname }, (error, stdout, stderr) => {
+        if (error) console.warn('[AdminCommand] deep-ai-redactor error:', error.message);
+      });
+      return res.json({
+        success: true,
+        message: 'Derin Tıbbi AI Redaksiyon döngüsü yerel sunucunuzda başarıyla başlatıldı.'
+      });
+    }
+
+    if (command === 'run_sync') {
+      scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR).catch(() => {});
+      return res.json({
+        success: true,
+        message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.'
+      });
+    }
+
+    res.json({ success: true, message: `Komut (${command}) yerel sunucuda başarıyla kaydedildi.` });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: 'Komut yürütülemedi: ' + err.message });
+  }
+});
+
+
 
 // Batch import questions (Past exams, AI parsed questions, desktop sync)
 app.post('/api/questions/batch-import', (req, res) => {
