@@ -1542,9 +1542,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-200">
                     <Key className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Google Gemini AI (3 Kademeli Havuz & Özel Anahtar)</span>
+                    <span>Google Gemini AI (Kademeli Havuz & Özel Anahtar)</span>
                   </div>
-                  <span className="text-[10px] text-emerald-400 font-semibold">1. Ücretsiz → 2. Ücretsiz → 3. Faturalı (Yedek)</span>
+                  <span className="text-[10px] text-emerald-400 font-semibold">1. ve 2. Sıra: Ücretsiz | 4. Sıra: Faturalı Yedek</span>
                 </div>
                 <div className="flex gap-2">
                   <input
@@ -1572,9 +1572,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-200">
                     <Sparkles className="w-3.5 h-3.5 text-orange-400" />
-                    <span>Groq Cloud API Anahtarı (Ücretsiz & Limitsiz Llama 3.3 70B)</span>
+                    <span>Groq Cloud API Anahtarı (3. Sıra: Ücretsiz Llama 3.3 70B & DeepSeek R1)</span>
                   </div>
-                  <span className="text-[10px] text-orange-400 font-semibold">Gemini Kotalarından Bağımsız Alternatif</span>
+                  <span className="text-[10px] text-orange-400 font-semibold">3. Sırada Devreye Girer (Ücretli Plandan Önce)</span>
                 </div>
                 <div className="flex gap-2">
                   <input

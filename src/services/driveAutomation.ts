@@ -93,14 +93,14 @@ export async function renderSingleDriveSlide(
     } catch (err) {}
   }
 
-  // 3. Static bundled JSON fallback
+  // 3. Server API fallback (on demand, prevents bundling 35MB in frontend)
   if (!note) {
     try {
-      const bundledNotes = await import('../data/lecture_notes.json');
-      const list = (bundledNotes.default || bundledNotes) as LectureNote[];
-      const found = list.find(n => n.id === meta.id || n.driveFileId === meta.fileId || n.title.toLowerCase().includes(meta.title.toLowerCase()));
-      if (found) {
-        note = found;
+      const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+      const res = await fetch(`${apiBase}/api/lecture-notes/${encodeURIComponent(meta.id)}`);
+      if (res.ok) {
+        const json = await res.json();
+        if (json.note) note = json.note;
       }
     } catch (err) {}
   }

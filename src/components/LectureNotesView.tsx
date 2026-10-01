@@ -165,16 +165,20 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         }
       } catch (e) {}
 
-      // 3. Static bundled JSON fallback (Offline & GitHub Pages)
+      // 3. Server API fallback (loads on demand instead of bundling 35MB in browser bundle)
       try {
-        const bundled = await import('../data/lecture_notes.json');
-        const list = (bundled.default || bundled) as LectureNote[];
-        if (Array.isArray(list) && list.length > 0) {
-          const valid = list.filter(isPureVerbatimNote);
-          if (valid.length > 0) {
-            setNotes(valid);
-            setActiveNote(valid[0]);
-            return;
+        const apiBase = localStorage.getItem('medsoru_custom_api_url') || (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+        const res = await fetch(`${apiBase}/api/lecture-notes`);
+        if (res.ok) {
+          const json = await res.json();
+          const list = (json.notes || json) as LectureNote[];
+          if (Array.isArray(list) && list.length > 0) {
+            const valid = list.filter(isPureVerbatimNote);
+            if (valid.length > 0) {
+              setNotes(valid);
+              setActiveNote(valid[0]);
+              return;
+            }
           }
         }
       } catch (e) {}

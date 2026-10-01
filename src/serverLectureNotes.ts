@@ -768,15 +768,19 @@ export async function scanDesktopDatabaseFolder(folderPath: string = DESKTOP_DAT
     try {
       const fileName = path.basename(filePath);
       const stats = fs.statSync(filePath);
-      const buffer = fs.readFileSync(filePath);
 
-      // Compute hash to check for changes
+      // Fast check: If file already indexed with identical path and size, skip without reading buffer
+      const existingByPath = existingNotes.find(n => n.filePath === filePath);
+      if (existingByPath && existingByPath.fileSize === stats.size && existingByPath.totalSlides > 0 && existingByPath.pages?.length > 0) {
+        continue;
+      }
+
+      const buffer = fs.readFileSync(filePath);
       const hash = crypto.createHash('md5').update(buffer).digest('hex');
 
       // Check if file already processed with matching hash
-      const existing = existingNotes.find(n => n.filePath === filePath || n.fileHash === hash);
-      if (existing && existing.fileHash === hash && existing.totalSlides > 0 && existing.pages.length > 0) {
-        // Unchanged
+      const existing = existingByPath || existingNotes.find(n => n.fileHash === hash);
+      if (existing && existing.fileHash === hash && existing.totalSlides > 0 && existing.pages?.length > 0) {
         continue;
       }
 

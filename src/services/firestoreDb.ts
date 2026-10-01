@@ -29,7 +29,7 @@ export const LECTURE_NOTES_COLLECTION = 'lecture_notes';
 export const NOTIFICATIONS_COLLECTION = 'admin_notifications';
 
 // Helper to prevent any Firebase network hang from blocking the UI
-export function withTimeout<T>(promise: Promise<T>, timeoutMs = 4500): Promise<T> {
+export function withTimeout<T>(promise: Promise<T>, timeoutMs = 1800): Promise<T> {
   return Promise.race([
     promise,
     new Promise<T>((_, reject) =>

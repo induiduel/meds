@@ -52,36 +52,37 @@ class MultiDbManager {
   public markFirebaseQuotaExceeded() {
     this.firebaseQuotaExceeded = true;
     this.lastQuotaCheck = Date.now();
-    if (typeof sessionStorage !== 'undefined') {
+    if (typeof localStorage !== 'undefined') {
       try {
-        sessionStorage.setItem('medsoru_fb_quota_exceeded', String(Date.now()));
+        localStorage.setItem('medsoru_fb_quota_exceeded', String(Date.now()));
       } catch (_) {}
     }
     console.warn('[MultiDbManager] Firebase Spark günlük okuma/yazma kotası aşıldı! Otomatik olarak Supabase / Yerel PC devraldı.');
   }
 
   public isFirebaseQuotaExceeded(): boolean {
+    const QUOTA_BLOCK_DURATION = 6 * 3600 * 1000; // 6 saat boyunca gereksiz yere Firebase'e bekletme yapma
     if (this.firebaseQuotaExceeded) {
-      if (Date.now() - this.lastQuotaCheck > 1800000) {
+      if (Date.now() - this.lastQuotaCheck > QUOTA_BLOCK_DURATION) {
         this.firebaseQuotaExceeded = false;
-        if (typeof sessionStorage !== 'undefined') {
-          try { sessionStorage.removeItem('medsoru_fb_quota_exceeded'); } catch (_) {}
+        if (typeof localStorage !== 'undefined') {
+          try { localStorage.removeItem('medsoru_fb_quota_exceeded'); } catch (_) {}
         }
       }
       return this.firebaseQuotaExceeded;
     }
 
-    if (typeof sessionStorage !== 'undefined') {
+    if (typeof localStorage !== 'undefined') {
       try {
-        const stored = sessionStorage.getItem('medsoru_fb_quota_exceeded');
+        const stored = localStorage.getItem('medsoru_fb_quota_exceeded');
         if (stored) {
           const timestamp = Number(stored);
-          if (Date.now() - timestamp < 1800000) {
+          if (Date.now() - timestamp < QUOTA_BLOCK_DURATION) {
             this.firebaseQuotaExceeded = true;
             this.lastQuotaCheck = timestamp;
             return true;
           } else {
-            sessionStorage.removeItem('medsoru_fb_quota_exceeded');
+            localStorage.removeItem('medsoru_fb_quota_exceeded');
           }
         }
       } catch (_) {}

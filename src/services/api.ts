@@ -288,10 +288,20 @@ const decodeClientB64 = (s: string) => {
   }
 };
 
+export const CLIENT_FREE_GEMINI_KEYS: ClientKeyInfo[] = [
+  { key: decodeClientB64('QVEuQWI4Uk42SjhMVjhRMHlyOTYyQ25iOXZFYWl2WUFwQno3eTlnNFFtZFNGSTlpbUI1NEE='), label: 'Ücretsiz Plan 1 (Gemini)', isBilled: false },
+  { key: decodeClientB64('QVEuQWI4Uk42TDlpRHFmb3ZUdU5ROC00WjdERVJXZDd3LTRTdzVHM00zd1hyLUJIX3VJTHc='), label: 'Ücretsiz Plan 2 (Gemini)', isBilled: false },
+];
+
+export const CLIENT_BILLED_GEMINI_KEY: ClientKeyInfo = {
+  key: decodeClientB64('QVEuQWI4Uk42SUhQTHNRaGFSMl9LaEdXc2R0Vl9sMFhMT3hRMVd4dXRCUkJ0bGotdGYzV1E='),
+  label: 'Faturalandırmalı Plan (4. Sıra Son Çare)',
+  isBilled: true,
+};
+
 export const TIERED_CLIENT_GEMINI_KEYS: ClientKeyInfo[] = [
-  { key: decodeClientB64('QVEuQWI4Uk42SjhMVjhRMHlyOTYyQ25iOXZFYWl2WUFwQno3eTlnNFFtZFNGSTlpbUI1NEE='), label: 'Ücretsiz Plan 1', isBilled: false },
-  { key: decodeClientB64('QVEuQWI4Uk42TDlpRHFmb3ZUdU5ROC00WjdERVJXZDd3LTRTdzVHM00zd1hyLUJIX3VJTHc='), label: 'Ücretsiz Plan 2', isBilled: false },
-  { key: decodeClientB64('QVEuQWI4Uk42SUhQTHNRaGFSMl9LaEdXc2R0Vl9sMFhMT3hRMVd4dXRCUkJ0bGotdGYzV1E='), label: 'Faturalandırmalı Plan (Yedek)', isBilled: true },
+  ...CLIENT_FREE_GEMINI_KEYS,
+  CLIENT_BILLED_GEMINI_KEY
 ];
 
 export async function callClientGroq(
@@ -355,25 +365,27 @@ export async function callClientResilientAi(options: {
     return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model})` };
   }
 
-  // 2. Build prioritized Gemini pool: Custom Key -> Free 1 -> Free 2 -> Billed
-  const geminiPool: ClientKeyInfo[] = [];
+  let lastAiErr: any = null;
+  const { GoogleGenAI } = await import('@google/genai');
+
+  // ==========================================
+  // 1. SIRA & 2. SIRA: GEMİNİ ÜCRETSİZ PLANLAR
+  // ==========================================
+  const freeGeminiPool: ClientKeyInfo[] = [];
   if (customGeminiKey && customGeminiKey.trim() && customGeminiKey !== 'MY_GEMINI_API_KEY') {
-    geminiPool.push({ key: customGeminiKey.trim(), label: 'Admin Özel Anahtarı', isBilled: false });
+    freeGeminiPool.push({ key: customGeminiKey.trim(), label: 'Admin Özel Anahtarı', isBilled: false });
   }
 
-  for (const k of TIERED_CLIENT_GEMINI_KEYS) {
-    if (!geminiPool.some(x => x.key === k.key)) {
-      geminiPool.push(k);
+  for (const k of CLIENT_FREE_GEMINI_KEYS) {
+    if (!freeGeminiPool.some(x => x.key === k.key)) {
+      freeGeminiPool.push(k);
     }
   }
 
-  let lastGeminiErr: any = null;
-  const { GoogleGenAI } = await import('@google/genai');
-
-  for (let i = 0; i < geminiPool.length; i++) {
-    const currentKey = geminiPool[i];
+  for (let i = 0; i < freeGeminiPool.length; i++) {
+    const currentKey = freeGeminiPool[i];
     try {
-      console.log(`[Client AI] ${currentKey.label} deneniyor... (${i + 1}/${geminiPool.length})`);
+      console.log(`[Client AI] ${currentKey.label} deneniyor... (Sıra: ${i + 1}/${freeGeminiPool.length})`);
       const ai = new GoogleGenAI({ apiKey: currentKey.key });
       const geminiRes = await ai.models.generateContent({
         model: (model && model.startsWith('gemini')) ? model : 'gemini-3.8-flash',
@@ -389,34 +401,62 @@ export async function callClientResilientAi(options: {
       };
     } catch (err: any) {
       console.warn(`[Client AI] ⚠️ ${currentKey.label} başarısız:`, err.message);
-      lastGeminiErr = err;
-      if (i < geminiPool.length - 1) {
-        console.log(`[Client AI Failover] 🔄 ${currentKey.label} yanıt veremedi. Otomatik olarak bir sonraki plana geçiliyor: ${geminiPool[i + 1].label}`);
-        continue;
+      lastAiErr = err;
+      if (i < freeGeminiPool.length - 1) {
+        console.log(`[Client AI Failover] 🔄 ${currentKey.label} yanıt veremedi. Otomatik olarak 2. Ücretsiz plana geçiliyor...`);
       }
     }
   }
 
-  // 3. Fallback to Groq Cloud if available and all Gemini keys failed
+  // =========================================================================
+  // 3. SIRA: GROQ CLOUD (ÜCRETSİZ & KOTA BAĞIMSIZ LLAMA 3.3 70B & DEEPSEEK R1)
+  // =========================================================================
   const groqKey = (customGroqKey || localStorage.getItem('medsoru_groq_api_key') || '').trim();
   if (groqKey) {
     try {
-      console.log('[Client AI Failover] 🚀 Tüm Gemini planları tükendi, Groq Cloud devreye giriyor...');
-      const groqRes = await callClientGroq(prompt, 'llama-3.3-70b-versatile', groqKey);
+      console.log('[Client AI Failover] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (Llama 3.3 70B) devreye sokuluyor...');
+      const groqRes = await callClientGroq(prompt, model || 'llama-3.3-70b-versatile', groqKey);
+      console.log(`[Client AI] ✓ 3. Sıra (Groq Cloud ${groqRes.model}) başarıyla yanıt üretti!`);
       return {
         text: groqRes.text,
-        providerUsed: 'Groq Cloud (Failover)',
-        planUsed: 'Groq Llama 3.3 70B'
+        providerUsed: 'Groq Cloud (3. Sıra)',
+        planUsed: `Groq Llama 3.3 70B (${groqRes.model})`
       };
     } catch (groqErr: any) {
-      console.error('[Client AI Failover] Groq Cloud da başarısız:', groqErr.message);
+      console.warn('[Client AI Failover] ⚠️ 3. Sıra (Groq Cloud) başarısız:', groqErr.message);
+      lastAiErr = groqErr;
     }
   }
 
-  const errMsg = lastGeminiErr?.message || '';
+  // ===================================================================
+  // 4. SIRA: GEMİNİ FATURALANDIRMALI PLAN (ÜCRETLİ PLAN - EN SON ÇARE)
+  // ===================================================================
+  if (CLIENT_BILLED_GEMINI_KEY && CLIENT_BILLED_GEMINI_KEY.key) {
+    try {
+      console.log(`[Client AI Failover] 💳 4. Sıra Devrede: Ücretsiz planlar ve Groq yanıt vermedi, ${CLIENT_BILLED_GEMINI_KEY.label} deneniyor...`);
+      const ai = new GoogleGenAI({ apiKey: CLIENT_BILLED_GEMINI_KEY.key });
+      const geminiRes = await ai.models.generateContent({
+        model: (model && model.startsWith('gemini')) ? model : 'gemini-3.8-flash',
+        contents: prompt,
+        config: { responseMimeType: 'application/json' }
+      });
+      const text = geminiRes.text || '{}';
+      console.log(`[Client AI] ✓ 4. Sıra (${CLIENT_BILLED_GEMINI_KEY.label}) başarıyla yanıt üretti!`);
+      return {
+        text,
+        providerUsed: 'Google Gemini (Faturalı)',
+        planUsed: CLIENT_BILLED_GEMINI_KEY.label
+      };
+    } catch (billedErr: any) {
+      console.error(`[Client AI Failover] ⚠️ 4. Sıra (${CLIENT_BILLED_GEMINI_KEY.label}) da başarısız:`, billedErr.message);
+      lastAiErr = billedErr;
+    }
+  }
+
+  const errMsg = lastAiErr?.message || '';
   const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
   const friendlyMsg = isQuota
-    ? 'Tüm Gemini planlarının (ücretsiz 1, ücretsiz 2 ve yedek faturalı) kotası veya harcama limiti aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Ayarlar panelinden Groq API anahtarınızı tanımlayarak kotasız kullanıma geçebilir veya Gemini limitinizi güncelleyebilirsiniz.'
+    ? 'Tüm yapay zeka planları (1. Ücretsiz Gemini, 2. Ücretsiz Gemini, 3. Groq Cloud ve 4. Faturalı Gemini) kotaya takıldı veya yanıt vermedi (Hata 429). Lütfen Ayarlar panelinden Groq API anahtarınızı kontrol edin veya yeni bir anahtar tanımlayın.'
     : (errMsg || 'Yapay zeka yanıtı alınamadı.');
   throw new Error(friendlyMsg);
 }
@@ -2017,10 +2057,14 @@ JSON FORMATI:
       console.warn('multiDbManager getPastQuestions fallback', e);
     }
 
-    // Fallback: load static past questions
+    // Fallback: load past questions from REST API on demand (avoids bundling 8.5MB in JS)
     try {
-      const staticPast = await import('../data/pastQuestions.json');
-      return (staticPast.default || staticPast) as any[];
+      const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+      const res = await fetch(`${apiBase}/api/past-exams`);
+      if (res.ok) {
+        const json = await res.json();
+        if (json.questions && Array.isArray(json.questions)) return json.questions;
+      }
     } catch (e) {}
 
     return [];
