@@ -11,3 +11,7 @@ data/sent_emails.json
 data/smtp_config.json
 .tmp.driveupload/
 *.traineddata
+
+# Cloudflare tunnel binary & runtime state
+cloudflared.exe
+data/active_tunnel.txt
