@@ -29,6 +29,7 @@ export default defineConfig(({ mode }) => {
       // HMR is disabled in AI Studio iframe environment.
       hmr: false,
       watch: null,
+      allowedHosts: true,
     },
   };
 });

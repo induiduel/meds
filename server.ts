@@ -28,6 +28,13 @@ import {
 
 dotenv.config();
 
+process.on('uncaughtException', (err) => {
+  console.error('[Server UncaughtException Guard]:', err);
+});
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('[Server UnhandledRejection Guard]:', reason);
+});
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -791,6 +798,8 @@ app.put('/api/questions/:id', (req, res) => {
   }
 });
 
+let isRedactorRunning = false;
+
 // Admin Command Execution API (Bypasses Firestore permissions issues when on local server)
 app.post('/api/admin/command', async (req, res) => {
   try {
@@ -798,7 +807,15 @@ app.post('/api/admin/command', async (req, res) => {
     console.log(`[AdminCommand] ⚡ Komut alındı: ${command} (${requestedBy})`);
 
     if (command === 'run_redactor_cycle' || command === 'trigger_redactor') {
+      if (isRedactorRunning) {
+        return res.json({
+          success: true,
+          message: 'Derin Tıbbi AI Redaksiyon işlemi şu anda arkaplanda zaten çalışıyor.',
+        });
+      }
+      isRedactorRunning = true;
       exec('node scripts/deep-ai-redactor.mjs', { cwd: __dirname }, (error, stdout, stderr) => {
+        isRedactorRunning = false;
         if (error) console.warn('[AdminCommand] deep-ai-redactor error:', error.message);
       });
       return res.json({
@@ -3079,7 +3096,10 @@ async function startServer() {
 
   if (!isProd) {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        allowedHosts: true,
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
