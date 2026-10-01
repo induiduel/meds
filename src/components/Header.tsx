@@ -3,18 +3,26 @@ import {
   Plus,
   Search,
   ShieldCheck,
-  Cloud,
+  CloudUpload,
   LogOut,
-  FileText,
+  FileDown,
+  FileUp,
   LogIn,
-  Brain,
-  Cpu,
-  Sparkles,
+  NotebookPen,
+  Activity,
   FolderPlus,
-  Layers,
-  Printer,
+  LayoutGrid,
+  BookCopy,
   UserRound,
+  IdCard,
   ChevronDown,
+  House,
+  Library,
+  Archive,
+  ListChecks,
+  BookOpenText,
+  Trophy,
+  SquarePen,
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
@@ -53,13 +61,13 @@ interface HeaderProps {
   onOpenPdfModal: () => void;
 }
 
-const NAV: { id: AppTab; label: string }[] = [
-  { id: 'quick_add', label: 'Ana sayfa' },
-  { id: 'questions', label: 'Soru havuzu' },
-  { id: 'past_exams', label: 'Çıkmış sorular' },
-  { id: 'practice', label: 'Test çöz' },
-  { id: 'notes', label: 'Ders notları' },
-  { id: 'leaderboard', label: 'Sıralama' },
+export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
+  { id: 'quick_add', label: 'Ana sayfa', icon: House },
+  { id: 'questions', label: 'Soru havuzu', icon: Library },
+  { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
+  { id: 'practice', label: 'Test çöz', icon: ListChecks },
+  { id: 'notes', label: 'Ders notları', icon: BookOpenText },
+  { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
 ];
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
@@ -155,55 +163,69 @@ export const Header: React.FC<HeaderProps> = ({
 
   const currentCommittee = committees.find((c) => c.id === selectedCommitteeId);
 
-  const MenuItem: React.FC<{ icon: React.ElementType; label: string; onClick: () => void; hint?: string; disabled?: boolean }> = ({
-    icon: Icon,
-    label,
-    onClick,
-    hint,
-    disabled,
-  }) => (
+  const MenuItem: React.FC<{
+    icon: React.ElementType;
+    label: string;
+    onClick: () => void;
+    hint?: string;
+    disabled?: boolean;
+    className?: string;
+    tone?: 'default' | 'accent';
+  }> = ({ icon: Icon, label, onClick, hint, disabled, className = '', tone = 'default' }) => (
     <button
       type="button"
       role="menuitem"
       disabled={disabled}
       onClick={run(onClick)}
-      className="w-full min-h-11 px-3 rounded-lg flex items-center gap-3 text-left text-[14px] text-ink hover:bg-canvas disabled:opacity-50 cursor-pointer"
+      className={`w-full min-h-11 px-2 rounded-[10px] flex items-center gap-3 text-left text-[14px] text-ink hover:bg-canvas disabled:opacity-50 cursor-pointer ${className}`}
     >
-      <Icon className="w-4 h-4 text-ink-2 shrink-0" />
-      <span className="flex-1">{label}</span>
-      {hint && <span className="text-[12px] text-ink-3">{hint}</span>}
+      <span
+        className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
+          tone === 'accent' ? 'bg-accent text-white' : 'bg-canvas text-ink-2'
+        }`}
+      >
+        <Icon className="w-4 h-4" strokeWidth={2} />
+      </span>
+      <span className={`flex-1 ${tone === 'accent' ? 'font-semibold' : ''}`}>{label}</span>
+      {hint && <span className="text-[12px] text-ok font-semibold">{hint}</span>}
     </button>
+  );
+
+  const MenuLabel: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <div className="px-2 pt-3 pb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3">{children}</div>
   );
 
   return (
     <header className="bg-white border-b border-line sticky top-0 z-30 print:hidden">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-[60px] sm:h-[68px] flex items-center gap-4 lg:gap-8">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 sm:h-[68px] flex items-center gap-3 lg:gap-4 xl:gap-6">
         <button
           type="button"
           onClick={() => setActiveTab('quick_add')}
           className="flex items-center gap-2.5 cursor-pointer shrink-0"
           aria-label="MedSoru ana sayfa"
         >
-          <BrandMark size={32} />
-          <span className="font-display font-bold text-[19px] sm:text-[20px] tracking-[-0.02em] text-ink">MedSoru</span>
-          <span className="hidden sm:inline font-mono text-[11px] px-[7px] py-[3px] border border-line rounded-md text-ink-2">
+          <BrandMark size={30} />
+          <span className="font-display font-bold text-[18px] sm:text-[20px] tracking-[-0.02em] text-ink">MedSoru</span>
+          <span className="hidden 2xl:inline font-mono text-[11px] px-[7px] py-[3px] border border-line rounded-md text-ink-2">
             DÖNEM {currentCommittee?.year || 3}
           </span>
         </button>
 
-        <nav aria-label="Ana menü" className="hidden lg:flex items-center gap-1 flex-1 min-w-0">
+        <nav aria-label="Ana menü" className="hidden lg:flex items-center gap-0.5 flex-1 min-w-0">
           {NAV.map((item) => {
             const active = activeTab === item.id;
+            const Icon = item.icon;
             return (
               <button
                 key={item.id}
                 type="button"
                 onClick={() => setActiveTab(item.id)}
                 aria-current={active ? 'page' : undefined}
-                className={`px-3 py-2 rounded-lg text-[15px] whitespace-nowrap cursor-pointer transition-colors ${
-                  active ? 'bg-line-soft text-ink font-semibold' : 'text-ink-2 hover:text-accent'
+                className={`h-10 px-2 xl:px-2.5 rounded-lg text-[14px] xl:text-[15px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 ${
+                  active ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
                 }`}
               >
+                <Icon className="w-4 h-4 shrink-0" strokeWidth={active ? 2.3 : 2} />
                 {item.label}
               </button>
             );
@@ -215,7 +237,7 @@ export const Header: React.FC<HeaderProps> = ({
         <form
           onSubmit={submitSearch}
           role="search"
-          className="hidden md:flex items-center gap-2 w-[240px] h-10 px-3 border border-line rounded-[10px] bg-[#F7F8FA] focus-within:border-accent"
+          className="hidden md:flex items-center gap-2 w-[200px] xl:w-[220px] h-10 px-3 border border-line rounded-[10px] bg-[#F7F8FA] focus-within:border-accent"
         >
           <Search className="w-4 h-4 text-ink-2 shrink-0" />
           <input
@@ -234,7 +256,8 @@ export const Header: React.FC<HeaderProps> = ({
           type="button"
           onClick={() => setMobileSearchOpen((v) => !v)}
           aria-label="Ara"
-          className="md:hidden w-11 h-11 rounded-xl bg-canvas flex items-center justify-center cursor-pointer"
+          aria-expanded={mobileSearchOpen}
+          className="md:hidden w-10 h-10 rounded-xl bg-canvas flex items-center justify-center cursor-pointer"
         >
           <Search className="w-[18px] h-[18px] text-ink" />
         </button>
@@ -246,56 +269,63 @@ export const Header: React.FC<HeaderProps> = ({
             aria-haspopup="menu"
             aria-expanded={menuOpen}
             aria-label="Hesap ve araçlar"
-            className="h-10 pl-1 pr-2 rounded-full border border-line bg-white flex items-center gap-1 cursor-pointer hover:border-line-2"
+            className={`h-10 pl-1 pr-2 rounded-full border bg-white flex items-center gap-1 cursor-pointer ${
+              menuOpen ? 'border-accent' : 'border-line hover:border-line-2'
+            }`}
           >
             {currentUser?.photoURL ? (
               <img src={currentUser.photoURL} alt="" className="w-8 h-8 rounded-full" />
             ) : (
-              <span className="w-8 h-8 rounded-full flex items-center justify-center text-[13px] font-semibold text-ink">
+              <span className="w-8 h-8 rounded-full bg-ink text-white flex items-center justify-center text-[12px] font-semibold">
                 {currentUser ? initialsOf(currentUser) : <UserRound className="w-4 h-4" />}
               </span>
             )}
-            <ChevronDown className="w-3.5 h-3.5 text-ink-2" />
+            <ChevronDown className={`w-3.5 h-3.5 text-ink-2 transition-transform ${menuOpen ? 'rotate-180' : ''}`} />
           </button>
 
           {menuOpen && (
             <div
               role="menu"
-              className="absolute right-0 top-12 w-[300px] max-w-[calc(100vw-32px)] bg-white border border-line rounded-2xl shadow-[0_12px_40px_rgba(14,26,38,0.14)] p-2 z-50"
+              className="fixed sm:absolute left-3 right-3 sm:left-auto sm:right-0 top-[60px] sm:top-12 sm:w-[300px] max-h-[calc(100dvh-140px)] sm:max-h-[calc(100vh-96px)] overflow-y-auto bg-white border border-line rounded-2xl shadow-[0_12px_40px_rgba(14,26,38,0.16)] p-2 z-50"
             >
-              <div className="px-3 py-3 border-b border-line-soft mb-1">
-                {currentUser ? (
-                  <>
-                    <div className="font-semibold text-[15px] text-ink truncate">
-                      {currentUser.displayName || currentUser.email?.split('@')[0]}
-                    </div>
-                    <div className="text-[13px] text-ink-3 truncate">
-                      {currentUser.studentNumber ? `No: ${currentUser.studentNumber}` : currentUser.email}
-                      {isAdmin ? ' · Yönetici' : ''}
-                    </div>
-                  </>
-                ) : (
-                  <div className="text-[14px] text-ink-2">Giriş yapmadın. Katkı için isim gerekmez.</div>
-                )}
+              <div className="flex items-center gap-3 px-2 py-2.5">
+                <span className="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center text-[13px] font-semibold shrink-0">
+                  {currentUser ? initialsOf(currentUser) : <UserRound className="w-4 h-4" />}
+                </span>
+                <div className="min-w-0">
+                  {currentUser ? (
+                    <>
+                      <div className="font-semibold text-[15px] text-ink truncate">
+                        {currentUser.displayName || currentUser.email?.split('@')[0]}
+                      </div>
+                      <div className="text-[13px] text-ink-3 truncate">
+                        {currentUser.studentNumber ? `No: ${currentUser.studentNumber}` : currentUser.email}
+                        {isAdmin ? ' · Yönetici' : ''}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="text-[14px] text-ink-2">Giriş yapmadın. Katkı için isim gerekmez.</div>
+                  )}
+                </div>
               </div>
 
-              <MenuItem icon={Plus} label="Soru katkısı yap" onClick={onOpenContributeModal} />
-              <div className="lg:hidden">
-                <MenuItem icon={Sparkles} label="Çıkmış sorular" onClick={() => setActiveTab('past_exams')} />
-                <MenuItem icon={Layers} label="Sıralama" onClick={() => setActiveTab('leaderboard')} />
-              </div>
-              <MenuItem icon={Layers} label="Soru haritası" onClick={() => setActiveTab('matrix')} />
-              <MenuItem icon={Printer} label="A4 kitapçık" onClick={() => setActiveTab('booklet')} />
-              <MenuItem icon={FileText} label="PDF indir" onClick={onOpenPdfModal} />
+              <MenuItem icon={SquarePen} label="Soru katkısı yap" tone="accent" onClick={onOpenContributeModal} />
 
-              <div className="my-1 border-t border-line-soft" />
+              <MenuLabel>Çalış</MenuLabel>
+              <MenuItem icon={Archive} label="Çıkmış sorular" className="lg:hidden" onClick={() => setActiveTab('past_exams')} />
+              <MenuItem icon={Trophy} label="Sıralama" className="lg:hidden" onClick={() => setActiveTab('leaderboard')} />
+              <MenuItem icon={LayoutGrid} label="Soru haritası" onClick={() => setActiveTab('matrix')} />
+              <MenuItem icon={BookCopy} label="A4 kitapçık" onClick={() => setActiveTab('booklet')} />
+              <MenuItem icon={FileDown} label="PDF indir" onClick={onOpenPdfModal} />
+
+              <MenuLabel>Yönetim</MenuLabel>
               <MenuItem icon={ShieldCheck} label="Yönetim paneli" onClick={openAdmin} />
               {isAdmin && (
                 <>
-                  {onOpenPastExamModal && <MenuItem icon={Sparkles} label="Çıkmış soru yükle" onClick={onOpenPastExamModal} />}
-                  {onOpenNotebookLMModal && <MenuItem icon={Brain} label="NotebookLM / Gemini" onClick={onOpenNotebookLMModal} />}
+                  {onOpenPastExamModal && <MenuItem icon={FileUp} label="Çıkmış soru yükle" onClick={onOpenPastExamModal} />}
+                  {onOpenNotebookLMModal && <MenuItem icon={NotebookPen} label="NotebookLM / Gemini" onClick={onOpenNotebookLMModal} />}
                   <MenuItem
-                    icon={Cloud}
+                    icon={CloudUpload}
                     label={isUploadingToDrive ? "Drive'a yükleniyor…" : "Drive'a kaydet"}
                     hint={driveLastUploadedLink ? 'Güncel' : undefined}
                     disabled={isUploadingToDrive}
@@ -304,12 +334,12 @@ export const Header: React.FC<HeaderProps> = ({
                   <MenuItem icon={FolderPlus} label="Yeni kurul ekle" onClick={onOpenNewCommitteeModal} />
                 </>
               )}
-              {onOpenSubagentMonitor && <MenuItem icon={Cpu} label="AI subagent izleme" onClick={onOpenSubagentMonitor} />}
+              {onOpenSubagentMonitor && <MenuItem icon={Activity} label="AI subagent izleme" onClick={onOpenSubagentMonitor} />}
 
-              <div className="my-1 border-t border-line-soft" />
+              <MenuLabel>Hesap</MenuLabel>
               {currentUser ? (
                 <>
-                  {onOpenProfileModal && <MenuItem icon={UserRound} label="Profil ve öğrenci no" onClick={onOpenProfileModal} />}
+                  {onOpenProfileModal && <MenuItem icon={IdCard} label="Profil ve öğrenci no" onClick={onOpenProfileModal} />}
                   <MenuItem icon={LogOut} label="Çıkış yap" onClick={onLogout} />
                 </>
               ) : (

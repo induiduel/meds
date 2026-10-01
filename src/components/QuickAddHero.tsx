@@ -260,9 +260,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const card = 'bg-white border border-line rounded-[18px]';
 
   return (
-    <div className="flex flex-col gap-6 sm:gap-10">
+    <div className="flex flex-col gap-4 sm:gap-10">
       {/* Mobile committee pills */}
-      <div role="tablist" aria-label="Kurul seç" className="sm:hidden flex gap-2 overflow-x-auto no-scrollbar -mx-4 px-4">
+      <div role="tablist" aria-label="Kurul seç" className="sm:hidden flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3">
         {sortedCommittees.map((c) => {
           const sel = c.id === committee?.id;
           return (
@@ -272,7 +272,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               role="tab"
               aria-selected={sel}
               onClick={() => onSelectCommittee(c.id)}
-              className={`shrink-0 h-9 px-3.5 rounded-full text-[14px] cursor-pointer ${
+              className={`shrink-0 h-8 px-3 rounded-full text-[13px] cursor-pointer ${
                 sel ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink'
               }`}
             >
@@ -283,14 +283,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       </div>
 
       {/* HERO: composer + pool */}
-      <section className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] gap-4 sm:gap-6">
-        <div className={`${card} p-5 sm:p-9 flex flex-col gap-5 sm:gap-6`}>
-          <div className="flex flex-col gap-3">
+      <section className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] gap-3 sm:gap-6">
+        <div className={`${card} p-4 sm:p-9 flex flex-col gap-3.5 sm:gap-6`}>
+          <div className="flex flex-col gap-1.5 sm:gap-3">
             <div className={`flex items-center gap-2 text-[12px] sm:text-[13px] font-semibold ${isCollecting ? 'text-ok' : 'text-ink-2'}`}>
               <span className={`w-2 h-2 rounded-full ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} />
               {isCollecting ? `${titleCaseShort} için toplama açık` : `${titleCaseShort} arşivi`}
             </div>
-            <h1 className="m-0 font-display font-bold text-[28px] sm:text-[44px] leading-[1.05] tracking-[-0.03em] text-ink">
+            <h1 className="m-0 font-display font-bold text-[24px] sm:text-[44px] leading-[1.05] tracking-[-0.03em] text-ink">
               <span className="hidden sm:inline">Sınavdan yeni çıktın.<br /></span>Aklında ne kaldı?
             </h1>
             <p className="hidden sm:block m-0 text-ink-2 text-[16px] max-w-[520px]">
@@ -308,9 +308,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
-            <fieldset className="border-0 p-0 m-0 flex gap-2 flex-wrap">
-              <legend className="text-[13px] font-semibold text-ink-2 mb-2">Ne ekliyorsun?</legend>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-3.5">
+            <fieldset className="border-0 p-0 m-0 flex gap-1.5 sm:gap-2 flex-nowrap sm:flex-wrap overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+              <legend className="sr-only sm:not-sr-only text-[13px] font-semibold text-ink-2 mb-2">Ne ekliyorsun?</legend>
               {MODES.map((m) => {
                 const on = mode === m.id;
                 return (
@@ -319,7 +319,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     type="button"
                     aria-pressed={on}
                     onClick={() => setMode(m.id)}
-                    className={`h-9 px-3.5 rounded-full text-[14px] cursor-pointer transition-colors ${
+                    className={`shrink-0 whitespace-nowrap h-8 sm:h-9 px-3 sm:px-3.5 rounded-full text-[13px] sm:text-[14px] cursor-pointer transition-colors ${
                       on ? 'border-[1.5px] border-accent bg-accent-soft text-accent font-semibold' : 'border border-line bg-white text-ink hover:border-line-2'
                     }`}
                   >
@@ -332,7 +332,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             {mode === 'option' ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {KEYS.map((k) => (
-                  <label key={k} className="flex items-center gap-2.5 h-11 pl-1.5 pr-3 border border-line-2 rounded-[10px] bg-field focus-within:border-accent">
+                  <label key={k} className="flex items-center gap-2.5 h-10 sm:h-11 pl-1.5 pr-3 border border-line-2 rounded-[10px] bg-field focus-within:border-accent">
                     <span className="w-8 h-8 rounded-lg bg-white border border-line flex items-center justify-center font-mono text-[13px] text-ink">{k}</span>
                     <input
                       type="text"
@@ -374,13 +374,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   placeholder={PLACEHOLDERS[mode]}
-                  className="resize-none border border-line-2 rounded-xl px-4 py-3.5 text-[16px] leading-[1.5] text-ink bg-field outline-0 focus:border-accent placeholder:text-[#6B7785]"
+                  className="resize-none h-[92px] sm:h-auto border border-line-2 rounded-xl px-3.5 sm:px-4 py-3 sm:py-3.5 text-[16px] leading-[1.5] text-ink bg-field outline-0 focus:border-accent placeholder:text-[#6B7785]"
                 />
               </>
             )}
 
-            <div className="flex flex-wrap sm:flex-nowrap gap-3 items-end">
-              <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ink-2 flex-1 min-w-[160px]">
+            <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3 items-end">
+              <label className="flex flex-col gap-1 sm:gap-1.5 text-[12px] sm:text-[13px] font-semibold text-ink-2 flex-1 min-w-[150px]">
                 Ders
                 <select
                   value={discipline}
@@ -394,7 +394,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   ))}
                 </select>
               </label>
-              <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ink-2 w-[120px]">
+              <label className="flex flex-col gap-1 sm:gap-1.5 text-[12px] sm:text-[13px] font-semibold text-ink-2 w-[112px]">
                 Soru no
                 <input
                   type="text"
@@ -417,20 +417,20 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             {formError ? (
               <p role="alert" className="m-0 text-[13px] text-bad-text">{formError}</p>
             ) : (
-              <p className="m-0 text-[13px] text-ink-3">Benzer bir parça zaten varsa otomatik olarak o soruya bağlanır. İsim gerekmez.</p>
+              <p className="hidden sm:block m-0 text-[13px] text-ink-3">Benzer bir parça zaten varsa otomatik olarak o soruya bağlanır. İsim gerekmez.</p>
             )}
           </form>
         </div>
 
-        <div className="flex flex-col gap-4 sm:gap-6">
+        <div className="flex flex-col gap-3 sm:gap-6">
           {/* Pool card */}
-          <div className="bg-ink text-white rounded-[18px] p-5 sm:p-7 flex flex-col gap-3 sm:gap-5">
+          <div className="bg-ink text-white rounded-[18px] p-4 sm:p-7 flex flex-col gap-2.5 sm:gap-5">
             <div className="flex justify-between items-baseline gap-3">
               <h2 className="m-0 text-[14px] sm:text-[15px] font-semibold">{titleCaseShort} havuzu</h2>
               <span className="font-mono text-[12px] text-[#B8C3CF]">{committee?.examDate || ''}</span>
             </div>
             <div className="flex items-baseline gap-2.5">
-              <span className="font-display text-[44px] sm:text-[64px] font-bold leading-none tracking-[-0.03em]">{completed}</span>
+              <span className="font-display text-[36px] sm:text-[64px] font-bold leading-none tracking-[-0.03em]">{completed}</span>
               <span className="text-[15px] sm:text-[16px] text-[#B8C3CF]">/ {target} soru kuruldu</span>
             </div>
             <div
@@ -452,7 +452,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     <span className="w-2 h-2 rounded-[2px]" style={{ background: s.c }} />
                     {s.label}
                   </span>
-                  <span className="font-mono text-[16px] sm:text-[18px]">{s.n}</span>
+                  <span className="font-mono text-[15px] sm:text-[18px]">{s.n}</span>
                 </div>
               ))}
             </div>
@@ -476,7 +476,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   key={q.id}
                   type="button"
                   onClick={() => onOpenQuestion?.(q)}
-                  className={`flex items-center gap-3 p-3 rounded-xl text-left cursor-pointer border sm:border-0 ${
+                  className={`flex items-center gap-3 px-3 py-2.5 sm:p-3 rounded-xl text-left cursor-pointer border sm:border-0 ${
                     i === 0 ? 'bg-white sm:bg-warn-soft border-line' : 'bg-white sm:bg-[#F4F6F8] border-line'
                   }`}
                 >
@@ -549,10 +549,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       </section>
 
       {/* Recent + archive breakdown */}
-      <section className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] gap-4 sm:gap-6 items-start">
+      <section className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] gap-3 sm:gap-6 items-start">
         <div className={`${card} overflow-hidden`}>
-          <div className="flex flex-wrap justify-between items-center gap-3 px-5 sm:px-6 py-4 sm:py-5 border-b border-line">
-            <h2 className="m-0 font-display text-[20px] sm:text-[22px] font-bold tracking-[-0.02em]">Son hareketler</h2>
+          <div className="flex flex-wrap justify-between items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-5 border-b border-line">
+            <h2 className="m-0 font-display text-[18px] sm:text-[22px] font-bold tracking-[-0.02em]">Son hareketler</h2>
             <div role="group" aria-label="Filtre" className="flex gap-1 bg-canvas rounded-[10px] p-[3px]">
               {(
                 [
@@ -578,12 +578,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           {recent.length === 0 ? (
             <p className="m-0 px-6 py-8 text-[14px] text-ink-2">Bu kurulda henüz hareket yok.</p>
           ) : (
-            recent.map((q) => (
+            recent.map((q, i) => (
               <button
                 key={q.id}
                 type="button"
                 onClick={() => onOpenQuestion?.(q)}
-                className="w-full grid grid-cols-[48px_minmax(0,1fr)] sm:grid-cols-[64px_minmax(0,1fr)_128px] gap-x-4 gap-y-2 items-center px-5 sm:px-6 py-4 sm:py-[18px] border-b border-line-soft text-left cursor-pointer hover:bg-[#FAFBFC]"
+                className={`w-full ${i >= 4 ? "hidden sm:grid" : "grid"} grid-cols-[44px_minmax(0,1fr)] sm:grid-cols-[64px_minmax(0,1fr)_128px] gap-x-3 sm:gap-x-4 gap-y-1.5 items-center px-4 sm:px-6 py-3 sm:py-[18px] border-b border-line-soft text-left cursor-pointer hover:bg-[#FAFBFC]`}
               >
                 <span className="font-mono text-[13px] text-ink-2">{q.isUnassignedNumber ? '—' : `S.${q.questionNumber}`}</span>
                 <span className="flex flex-col gap-1 min-w-0">
@@ -591,7 +591,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     {q.discipline}
                     {q.examYear ? ` · ${q.examYear}` : ''}
                   </span>
-                  <span className="text-[15px] text-ink truncate">{questionStemText(q)}</span>
+                  <span className="text-[14px] sm:text-[15px] text-ink truncate">{questionStemText(q)}</span>
                 </span>
                 <span className="col-start-2 sm:col-start-auto sm:justify-self-end">
                   <StatusPill status={q.status} hasFragments={q.fragments.length > 0} />
@@ -599,22 +599,22 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               </button>
             ))
           )}
-          <button type="button" onClick={() => onNavigateTab('questions')} className="block w-full text-left px-5 sm:px-6 py-4 text-[14px] font-semibold text-accent cursor-pointer">
+          <button type="button" onClick={() => onNavigateTab('questions')} className="block w-full text-left px-4 sm:px-6 py-3 sm:py-4 text-[14px] font-semibold text-accent cursor-pointer">
             Soru havuzunun tamamı
           </button>
         </div>
 
-        <div className="flex flex-col gap-4 sm:gap-6">
-          <div className={`${card} p-5 sm:p-6 flex flex-col gap-4`}>
+        <div className="flex flex-col gap-3 sm:gap-6">
+          <div className={`${card} p-4 sm:p-6 flex flex-col gap-3 sm:gap-4`}>
             <div className="flex flex-col gap-0.5">
-              <h2 className="m-0 font-display text-[20px] sm:text-[22px] font-bold tracking-[-0.02em]">Derslere göre arşiv</h2>
+              <h2 className="m-0 font-display text-[18px] sm:text-[22px] font-bold tracking-[-0.02em]">Derslere göre arşiv</h2>
               <span className="text-[13px] text-ink-3">Tüm kurullar, çıkmış sorular</span>
             </div>
             {archiveByDiscipline.length === 0 ? (
               <p className="m-0 text-[14px] text-ink-2">Arşiv yükleniyor…</p>
             ) : (
-              archiveByDiscipline.map((d) => (
-                <div key={d.ad} className="flex flex-col gap-1.5">
+              archiveByDiscipline.map((d, i) => (
+                <div key={d.ad} className={`${i >= 5 ? "hidden sm:flex" : "flex"} flex-col gap-1.5`}>
                   <div className="flex justify-between text-[14px]">
                     <span>{d.ad}</span>
                     <span className="font-mono text-ink-2">{formatCount(d.n)}</span>
@@ -633,9 +633,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           <button
             type="button"
             onClick={() => onNavigateTab('notes')}
-            className="bg-accent-soft rounded-[18px] p-5 sm:p-6 flex gap-4 items-start text-left cursor-pointer hover:brightness-[0.98]"
+            className="bg-accent-soft rounded-[18px] p-4 sm:p-6 flex gap-3 sm:gap-4 items-start text-left cursor-pointer hover:brightness-[0.98]"
           >
-            <span className="w-11 h-11 shrink-0 rounded-xl bg-white flex items-center justify-center">
+            <span className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl bg-white flex items-center justify-center">
               <BookOpen className="w-[22px] h-[22px] text-accent" />
             </span>
             <span className="flex flex-col gap-1">

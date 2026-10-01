@@ -92,6 +92,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   isReconstructing,
 }) => {
   const [isExpanded, setIsExpanded] = useState(true);
+  // Phones: explanation + side column live behind one toggle to keep the list scannable
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [stemOpen, setStemOpen] = useState(false);
+  const longStem = questionStemText(question).length > 180;
   const [showAddFragment, setShowAddFragment] = useState(false);
   const [showAddOption, setShowAddOption] = useState(false);
 
@@ -203,14 +207,16 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   const lastUpdated = rec?.lastUpdated || question.updatedAt;
   const lastUpdatedText = lastUpdated ? new Date(lastUpdated).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 
-  const btnSecondary = 'h-11 px-[18px] rounded-[10px] border border-line-2 bg-white text-ink text-[15px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-50';
+  const btnSecondary =
+    'shrink-0 whitespace-nowrap h-10 sm:h-11 px-3.5 sm:px-[18px] rounded-[10px] border border-line-2 bg-white text-ink text-[14px] sm:text-[15px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-50';
+  const mobileHidden = detailsOpen ? 'flex' : 'hidden sm:flex';
   const field = 'border border-line-2 rounded-[10px] bg-white px-3 text-[15px] text-ink outline-0 focus:border-accent placeholder:text-[#6B7785]';
 
   return (
     <article className="bg-white border border-line rounded-[18px] overflow-hidden">
       <div className={`grid grid-cols-1 ${isExpanded ? 'lg:grid-cols-[minmax(0,1.75fr)_minmax(0,1fr)]' : ''}`}>
         {/* ---------------- Main column ---------------- */}
-        <div className="p-5 sm:p-9 flex flex-col gap-6 sm:gap-7 min-w-0">
+        <div className="p-4 sm:p-9 flex flex-col gap-4 sm:gap-7 min-w-0">
           <div className="flex items-start gap-3">
             <div className="flex gap-2 flex-wrap flex-1 min-w-0">
               <StatusPill status={question.status} hasFragments={question.fragments.length > 0} />
@@ -219,7 +225,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               </span>
               <span className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center">{question.discipline}</span>
               {question.topic && !/hatırlanan soru|çıkmış sorusu/i.test(question.topic) && (
-                <span className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center max-w-[260px] truncate">
+                <span className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold hidden sm:inline-flex items-center max-w-[260px] truncate">
                   {question.topic}
                 </span>
               )}
@@ -240,11 +246,21 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 
           <h3
             className={`m-0 font-display font-medium leading-[1.3] tracking-[-0.02em] text-ink ${
-              questionStemText(question).length > 180 ? 'text-[19px] sm:text-[22px]' : 'text-[22px] sm:text-[30px]'
-            }`}
+              longStem ? 'text-[17px] sm:text-[22px]' : 'text-[20px] sm:text-[30px]'
+            } ${longStem && !stemOpen ? 'line-clamp-6 sm:line-clamp-none' : ''}`}
           >
             {questionStemText(question)}
           </h3>
+          {longStem && (
+            <button
+              type="button"
+              onClick={() => setStemOpen((v) => !v)}
+              aria-expanded={stemOpen}
+              className="sm:hidden -mt-2 self-start text-[14px] font-semibold text-accent cursor-pointer"
+            >
+              {stemOpen ? 'Kısalt' : 'Tamamını göster'}
+            </button>
+          )}
 
           {isExpanded && (
             <>
@@ -254,29 +270,30 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                     {rows.map((o) => (
                       <li
                         key={o.key}
-                        className={`grid grid-cols-[36px_minmax(0,1fr)] sm:grid-cols-[40px_minmax(0,1fr)_180px] gap-x-4 gap-y-2 items-center px-3 sm:px-4 py-3 rounded-[14px] ${
+                        className={`grid grid-cols-[32px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_180px] gap-x-3 sm:gap-x-4 items-center px-2.5 sm:px-4 py-2 sm:py-3 rounded-xl sm:rounded-[14px] ${
                           o.correct ? 'border-[1.5px] border-ok-bright bg-ok-tint' : o.ai ? 'border border-dashed border-line-2' : 'border border-line'
                         }`}
                       >
                         <span
-                          className={`w-9 h-9 rounded-[10px] flex items-center justify-center font-mono text-[14px] ${
+                          className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-[10px] flex items-center justify-center font-mono text-[13px] sm:text-[14px] ${
                             o.correct ? 'bg-ok text-white' : 'bg-canvas text-ink'
                           }`}
                         >
                           {o.key}
                         </span>
                         <span className="flex flex-col gap-0.5 min-w-0">
-                          <span className="text-[16px] sm:text-[17px] font-medium text-ink">{o.text}</span>
+                          <span className="text-[15px] sm:text-[17px] leading-snug font-medium text-ink">{o.text}</span>
                           {o.ai && (
                             <span className="text-[12px] text-ink-2 inline-flex items-center gap-1">
                               <Sparkles className="w-3 h-3" />
-                              Kimse hatırlamadı, AI tamamladı
+                              <span className="sm:hidden">AI tamamladı</span>
+                              <span className="hidden sm:inline">Kimse hatırlamadı, AI tamamladı</span>
                             </span>
                           )}
                           {o.correct && <span className="text-[12px] text-ok font-semibold">{correctLabel}</span>}
                         </span>
-                        <span className="col-span-2 sm:col-span-1 flex items-center gap-2.5">
-                          <span className="flex-1 h-1.5 rounded-full bg-line-soft">
+                        <span className="flex items-center gap-2.5">
+                          <span className="hidden sm:block flex-1 h-1.5 rounded-full bg-line-soft">
                             <span
                               className="block h-1.5 rounded-full"
                               style={{ width: `${Math.max(2, (o.votes / maxVotes) * 100)}%`, background: o.correct ? '#1F9D55' : '#AEB8C3' }}
@@ -412,14 +429,14 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               )}
 
               {/* Actions */}
-              <div className="flex flex-wrap gap-2.5 border-t border-line-soft pt-5">
+              <div className="flex gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap border-t border-line-soft pt-4 sm:pt-5">
                 <button
                   type="button"
                   onClick={() => {
                     setShowAddFragment((v) => !v);
                     setShowAddOption(false);
                   }}
-                  className="h-11 px-[18px] rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center gap-2 cursor-pointer"
+                  className="shrink-0 whitespace-nowrap h-10 sm:h-11 px-3.5 sm:px-[18px] rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] sm:text-[15px] font-semibold inline-flex items-center gap-2 cursor-pointer"
                 >
                   <Plus className="w-4 h-4" strokeWidth={2.2} />
                   Parça ekle
@@ -456,14 +473,14 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   {isReconstructing ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
                   {isReconstructing ? 'Kuruluyor…' : hasReconstruction ? 'AI ile yeniden kur' : 'AI ile kur'}
                 </button>
-                <span className="flex-1" />
+                <span className="hidden sm:block flex-1" />
                 {onUpvoteQuestion && (
                   <button
                     type="button"
                     onClick={() => onUpvoteQuestion(question.id)}
                     aria-pressed={isQuestionLiked}
                     aria-label="Soruyu beğen"
-                    className={`h-11 min-w-11 px-3 rounded-[10px] border inline-flex items-center justify-center gap-1.5 cursor-pointer font-mono text-[13px] ${
+                    className={`shrink-0 h-10 sm:h-11 min-w-11 px-3 rounded-[10px] border inline-flex items-center justify-center gap-1.5 cursor-pointer font-mono text-[13px] ${
                       isQuestionLiked ? 'border-accent bg-accent-soft text-accent' : 'border-line-2 bg-white text-ink'
                     }`}
                   >
@@ -473,10 +490,24 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 )}
               </div>
 
+              {/* Phone-only disclosure for explanation + details */}
+              <button
+                type="button"
+                onClick={() => setDetailsOpen((v) => !v)}
+                aria-expanded={detailsOpen}
+                className="sm:hidden -mb-1 h-11 px-3 rounded-[10px] bg-canvas text-[14px] font-semibold text-ink flex items-center justify-between cursor-pointer"
+              >
+                <span>
+                  {sections.length > 0 ? 'Açıklama ve ayrıntılar' : 'Ayrıntılar'}
+                  <span className="font-normal text-ink-2"> · {question.fragments.length} parça</span>
+                </span>
+                {detailsOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+              </button>
+
               {/* Explanation */}
               {sections.length > 0 && (
-                <section aria-label="Açıklama" className="flex flex-col gap-6 sm:gap-7 border-t border-line-soft pt-6 sm:pt-8">
-                  <h4 className="m-0 font-display text-[22px] sm:text-[24px] font-bold tracking-[-0.02em]">Açıklama</h4>
+                <section aria-label="Açıklama" className={`${mobileHidden} flex-col gap-5 sm:gap-7 border-t border-line-soft pt-5 sm:pt-8`}>
+                  <h4 className="hidden sm:block m-0 font-display text-[24px] font-bold tracking-[-0.02em]">Açıklama</h4>
                   {sections.map((s, i) => {
                     const distractors = s.label === 'Çeldiriciler' ? parseDistractors(s.body) : null;
                     if (sections.length === 1 && s.label === 'Açıklama') {
@@ -521,8 +552,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 
         {/* ---------------- Side column ---------------- */}
         {isExpanded && (
-          <aside className="bg-[#FAFBFC] border-t lg:border-t-0 lg:border-l border-line p-5 sm:p-6 flex flex-col gap-5">
-            <section className="bg-white border border-line rounded-[18px] p-5 sm:p-6 flex flex-col gap-4">
+          <aside className={`${mobileHidden} bg-[#FAFBFC] border-t lg:border-t-0 lg:border-l border-line p-3 sm:p-6 flex-col gap-3 sm:gap-5`}>
+            <section className="bg-white border border-line rounded-[14px] sm:rounded-[18px] p-4 sm:p-6 flex flex-col gap-4">
               <h4 className="m-0 text-[15px] font-semibold">Yeniden kurulum</h4>
               <ul className="list-none m-0 p-0 flex flex-col gap-3 text-[14px]">
                 {checklist.map((c) => (
@@ -559,7 +590,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             </section>
 
             {question.lectureReference && (
-              <section className="bg-white border border-line rounded-[18px] p-5 sm:p-6 flex flex-col gap-3.5">
+              <section className="bg-white border border-line rounded-[14px] sm:rounded-[18px] p-4 sm:p-6 flex flex-col gap-3.5">
                 <h4 className="m-0 text-[15px] font-semibold">Kaynak slayt</h4>
                 {question.lectureReference.matchedSnippet && (
                   <p className="m-0 rounded-[10px] bg-canvas border border-line px-3.5 py-3 text-[13px] leading-[1.55] text-ink-2 line-clamp-4">
@@ -587,7 +618,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               </section>
             )}
 
-            <section className="bg-white border border-line rounded-[18px] p-5 sm:p-6 flex flex-col gap-4">
+            <section className="bg-white border border-line rounded-[14px] sm:rounded-[18px] p-4 sm:p-6 flex flex-col gap-4">
               <div className="flex justify-between items-baseline">
                 <h4 className="m-0 text-[15px] font-semibold">Hafıza parçaları</h4>
                 <span className="font-mono text-[12px] text-ink-2">{question.fragments.length}</span>

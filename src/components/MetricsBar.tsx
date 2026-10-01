@@ -63,13 +63,13 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
   return (
     <div className="bg-white rounded-[18px] border border-line overflow-hidden">
       {/* Pool status strip */}
-      <div className="px-5 sm:px-6 py-4 sm:py-5 flex flex-col gap-3 border-b border-line">
-        <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
+      <div className="px-4 sm:px-6 py-3 sm:py-5 flex flex-col gap-2.5 sm:gap-3 border-b border-line">
+        <div className="flex flex-wrap items-baseline gap-x-4 sm:gap-x-6 gap-y-1.5">
           <span className="flex items-baseline gap-2">
-            <span className="font-display text-[32px] font-bold leading-none tracking-[-0.03em]">{completedCount}</span>
+            <span className="font-display text-[26px] sm:text-[32px] font-bold leading-none tracking-[-0.03em]">{completedCount}</span>
             <span className="text-[14px] text-ink-2">/ {totalTarget} soru kuruldu</span>
           </span>
-          <span className="flex flex-wrap gap-4 text-[13px] text-ink-2">
+          <span className="flex flex-wrap gap-x-3 sm:gap-x-4 gap-y-1 text-[12px] sm:text-[13px] text-ink-2">
             <span className="inline-flex items-center gap-1.5">
               <Check className="w-3.5 h-3.5 text-ok" strokeWidth={3} />
               Doğrulandı <span className="font-mono text-ink">{completedCount}</span>
@@ -105,9 +105,9 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
       </div>
 
       {/* Search & filters */}
-      <div className="px-5 sm:px-6 py-4 flex flex-col gap-3.5">
-        <div className="flex flex-col md:flex-row md:items-center gap-3">
-          <label className="flex items-center gap-2 h-11 px-3 border border-line-2 rounded-[10px] bg-field flex-1 md:max-w-[440px] focus-within:border-accent">
+      <div className="px-4 sm:px-6 py-3 sm:py-4 flex flex-col gap-2.5 sm:gap-3.5">
+        <div className="flex flex-col md:flex-row md:items-center gap-2.5 sm:gap-3">
+          <label className="flex items-center gap-2 h-10 sm:h-11 px-3 border border-line-2 rounded-[10px] bg-field flex-1 md:max-w-[440px] focus-within:border-accent">
             <Search className="w-4 h-4 text-ink-2 shrink-0" />
             <span className="sr-only">Soru havuzunda ara</span>
             <input
@@ -119,7 +119,7 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
             />
           </label>
 
-          <div className="flex flex-wrap items-center gap-2 md:ml-auto">
+          <div className="flex items-center gap-2 md:ml-auto overflow-x-auto no-scrollbar">
             <div role="group" aria-label="Durum" className="flex gap-1 bg-canvas rounded-[10px] p-[3px]">
               <button type="button" aria-pressed={selectedStatus === 'Tümü'} onClick={() => onSelectStatus('Tümü')} className={segBtn(selectedStatus === 'Tümü')}>
                 Tümü
@@ -137,7 +137,7 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
                 type="button"
                 onClick={onToggleMyQuestionsOnly}
                 aria-pressed={filterMyQuestionsOnly}
-                className={`h-[38px] px-3 rounded-[10px] text-[13px] inline-flex items-center gap-1.5 cursor-pointer ${
+                className={`shrink-0 h-[38px] px-3 rounded-[10px] text-[13px] inline-flex items-center gap-1.5 cursor-pointer ${
                   filterMyQuestionsOnly ? 'border-[1.5px] border-accent bg-accent-soft text-accent font-semibold' : 'border border-line bg-white text-ink'
                 }`}
               >
@@ -148,7 +148,7 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
           {DISCIPLINES.map((d) => {
             const on = selectedDiscipline === d;
             return (
@@ -157,7 +157,7 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
                 type="button"
                 aria-pressed={on}
                 onClick={() => onSelectDiscipline(d)}
-                className={`shrink-0 h-9 px-3.5 rounded-full text-[14px] cursor-pointer whitespace-nowrap ${
+                className={`shrink-0 h-8 sm:h-9 px-3 sm:px-3.5 rounded-full text-[13px] sm:text-[14px] cursor-pointer whitespace-nowrap ${
                   on ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink hover:border-line-2'
                 }`}
               >

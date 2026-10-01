@@ -658,7 +658,7 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-[1280px] w-full mx-auto px-4 sm:px-8 py-5 sm:py-10 flex flex-col gap-5 sm:gap-8 pb-28 sm:pb-16">
+      <main className="flex-1 max-w-[1280px] w-full mx-auto px-3 sm:px-8 py-3 sm:py-10 flex flex-col gap-4 sm:gap-8 pb-24 sm:pb-16">
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
@@ -735,17 +735,17 @@ export default function App() {
 
         {/* TAB 1: Questions List */}
         {activeTab === 'questions' && (
-          <div className="flex flex-col gap-5">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <nav aria-label="Konum" className="flex flex-wrap items-center gap-2 text-[14px] text-ink-2">
-                <span>Soru havuzu</span>
-                <span aria-hidden="true">/</span>
+          <div className="flex flex-col gap-3 sm:gap-5">
+            <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+              <nav aria-label="Konum" className="flex flex-wrap items-center gap-2 text-[14px] text-ink-2 min-w-0 flex-1">
+                <span className="hidden sm:inline">Soru havuzu</span>
+                <span aria-hidden="true" className="hidden sm:inline">/</span>
                 <label className="sr-only" htmlFor="pool-committee">Kurul</label>
                 <select
                   id="pool-committee"
                   value={selectedCommitteeId}
                   onChange={(e) => setSelectedCommitteeId(e.target.value)}
-                  className="h-9 pl-2 pr-7 rounded-lg border border-line bg-white text-ink font-semibold text-[14px] cursor-pointer max-w-[60vw] truncate"
+                  className="h-10 sm:h-9 pl-2 pr-7 rounded-lg border border-line bg-white text-ink font-semibold text-[14px] cursor-pointer w-full sm:w-auto sm:max-w-[60vw] truncate"
                 >
                   {committees.map((c) => (
                     <option key={c.id} value={c.id}>
@@ -773,7 +773,7 @@ export default function App() {
                   setContributeDefaultNumber(undefined);
                   setIsContributeModalOpen(true);
                 }}
-                className="h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] inline-flex items-center gap-2 cursor-pointer"
+                className="hidden sm:inline-flex h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] items-center gap-2 cursor-pointer"
               >
                 <Plus className="w-4 h-4" strokeWidth={2.2} />
                 Soru ekle
@@ -842,7 +842,7 @@ export default function App() {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-3 sm:gap-5">
                 {(filterMyQuestionsOnly ? myQuestions : questions).map((q) => (
                   <QuestionCard
                     key={q.id}
@@ -937,7 +937,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-line bg-white print:hidden mb-[76px] sm:mb-0">
+      <footer className="hidden sm:block border-t border-line bg-white print:hidden">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-5 flex flex-col sm:flex-row sm:justify-between gap-3 text-[13px] text-ink-3">
           <span>
             MedSoru · Tıp Dönem 3 kurul soru havuzu
