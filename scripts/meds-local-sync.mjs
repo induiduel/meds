@@ -16,7 +16,54 @@ import fs from 'fs';
 import path from 'path';
 import https from 'https';
 import http from 'http';
+import os from 'os';
+import { spawn } from 'child_process';
+import { fileURLToPath } from 'url';
 import { PDFParse } from 'pdf-parse';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Windows Masaüstü Bildirimi (Toast / Action Center) Gönderici
+function sendWindowsNotification(title, message) {
+  try {
+    const psScript = path.join(__dirname, 'show-notification.ps1');
+    if (!fs.existsSync(psScript)) return;
+    const child = spawn('powershell.exe', [
+      '-NoProfile',
+      '-ExecutionPolicy', 'Bypass',
+      '-File', psScript,
+      '-Title', title,
+      '-Message', message,
+    ], { stdio: 'ignore', windowsHide: true, detached: true });
+    child.unref();
+  } catch (err) {
+    console.warn('[Bildirim Hatası]:', err.message);
+  }
+}
+
+// MedSoru Sunucusuna Kalp Atışı (Heartbeat) Bildirimi
+async function sendWorkerHeartbeat(status = 'online', lastAction = '16:00 - 18:00 Arası Otomasyon ve Eşitleme Aktif') {
+  try {
+    let questionFilesCount = 0;
+    if (fs.existsSync(DIRS.sorularPdf)) {
+      questionFilesCount = fs.readdirSync(DIRS.sorularPdf).filter(f => f.toLowerCase().endsWith('.pdf')).length;
+    }
+    await postServerJson('/api/worker/heartbeat', {
+      source: 'meds_local_sync',
+      hostname: `${os.hostname()} (Windows 10/11)`,
+      uptime: Math.round(process.uptime()),
+      pid: process.pid,
+      status,
+      lastAction,
+      processedCount: questionFilesCount,
+      driveFolderId: DRIVE_QUESTION_FOLDERS[0]?.id || '18U1LZVvV0VROcWVQTDBeJYwdBWiEIVwS',
+      isStartupConfigured: true,
+    });
+  } catch (e) {
+    // Sunucu geçici olarak kapalıysa yutulur
+  }
+}
 
 // --- YAPILANDIRMA ---
 const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
@@ -359,6 +406,13 @@ export async function runFullSync() {
   console.log(`[Tarih/Saat] ${new Date().toLocaleString('tr-TR')}`);
   console.log('-'.repeat(75));
 
+  // Windows Bildirimi ve Sunucu Kalp Atışı
+  sendWindowsNotification(
+    'MedSoru: Günlük Eşitleme Başladı ⏳',
+    'Google Drive çıkmış soruları ve ders notları taranıyor...'
+  );
+  await sendWorkerHeartbeat('online', 'Google Drive taranıyor ve PDF belgeleri okunuyor...');
+
   ensureDirectories();
 
   // 1. ADIM: Google Drive Çıkmış Soru Klasörlerini Tara
@@ -555,6 +609,13 @@ export async function runFullSync() {
   console.log(`  - Havuzdaki Toplam Soru Sayısı: ${mergedQuestions.length}`);
   console.log(`  - İşlenen Ders Notu Sayısı: ${updatedNotes.length}`);
   console.log('='.repeat(75));
+
+  // Windows Bildirimi ve Kalp Atışı
+  sendWindowsNotification(
+    'MedSoru: Eşitleme Tamamlandı ✅',
+    `${mergedQuestions.length} soru veritabanında güncel, ${updatedNotes.length} ders notu işlendi ve Firestore'a aktarıldı.`
+  );
+  await sendWorkerHeartbeat('online', `Eşitleme tamamlandı (${mergedQuestions.length} soru, ${updatedNotes.length} not)`);
 }
 
 // Saat Kontrolü (16:00 - 18:00 Aralığı)
@@ -564,31 +625,77 @@ function isWithinTargetHours() {
 }
 
 // Daemon / Zamanlayıcı Modu
-async function startDaemon() {
-  console.log('🕒 MedSoru Yerel Otomasyon Daemon Modunda Başlatıldı.');
-  console.log('📌 Hafta içi her gün 16:00 - 18:00 arasında otomatik tam eşitleme yapar.');
+async function startDaemon(forceSyncNow = false) {
+  console.log('='.repeat(75));
+  console.log('  🏥 MEDSORU TIP FAKÜLTESİ - GÜNLÜK YEREL SENKRONİZASYON SERVİSİ');
+  console.log('='.repeat(75));
+  console.log(`[BİLGİ] İşlemci Süreç Numarası (PID): ${process.pid}`);
+  console.log(`[BİLGİ] Bilgisayar Adı: ${os.hostname()}`);
+  console.log(`[BİLGİ] Hedef Saat Aralığı: 16:00 - 18:00 (Her gün)`);
+  console.log(`[BİLGİ] Hedef Klasör: ${DIRS.root}`);
+  console.log('='.repeat(75));
 
-  // Bilgisayar yeni açıldıysa ve saat 16:00 - 18:00 arasındaysa doğrudan çalıştır
-  if (isWithinTargetHours()) {
-    console.log('⏰ Şu an hedef saat aralığındasınız (16:00 - 18:00)! Eşitleme başlatılıyor...');
-    await runFullSync().catch(console.error);
-  } else {
-    console.log(`[Bilgi] Şu anki saat: ${new Date().toLocaleTimeString('tr-TR')}. Hedef aralık (16:00-18:00) bekleniyor.`);
+  // Windows Masaüstü Bildirimi
+  sendWindowsNotification(
+    'MedSoru Otomasyon Servisi Aktif 🚀',
+    'Windows başlangıcına eklendi. Servis arka planda çalışıyor (16:00 - 18:00 arası otomatik eşitlenecektir).'
+  );
+
+  // İlk Kalp Atışı
+  await sendWorkerHeartbeat('online', 'Servis başlatıldı - 16:00-18:00 aralığı bekleniyor');
+
+  // Her 15 saniyede bir kalp atışı gönder (Web panelinde anında yeşil ONLINE yanar)
+  setInterval(() => {
+    sendWorkerHeartbeat('online', isWithinTargetHours() ? '16:00-18:00 aralığında aktif izleme & eşitleme' : 'Boşta - 16:00-18:00 aralığı bekleniyor');
+  }, 15000);
+
+  let hasRunToday = false;
+  let lastRunDate = '';
+
+  const checkAndRunSchedule = async (isManual = false) => {
+    const today = new Date().toISOString().slice(0, 10);
+    if (lastRunDate !== today) {
+      hasRunToday = false;
+      lastRunDate = today;
+    }
+
+    if (isManual || isWithinTargetHours()) {
+      if (isManual || !hasRunToday) {
+        console.log(`\n⏰ [${new Date().toLocaleTimeString('tr-TR')}] Eşitleme başlatılıyor (${isManual ? 'Manuel tetiklendi' : '16:00 - 18:00 zaman aralığı'})...`);
+        hasRunToday = true;
+        try {
+          await runFullSync();
+        } catch (err) {
+          console.error('Eşitleme hatası:', err);
+          sendWindowsNotification(
+            'MedSoru: Eşitleme Uyarısı ⚠️',
+            'Eşitleme sırasında hata oluştu: ' + (err.message || 'Bilinmeyen hata')
+          );
+        }
+      }
+    } else {
+      console.log(`[Beklemede] Saat: ${new Date().toLocaleTimeString('tr-TR')} - 16:00 - 18:00 aralığı bekleniyor...`);
+    }
+  };
+
+  // Eğer --sync-now bayrağı ile başlatıldıysa veya şu an 16:00-18:00 arasındaysa ilk açılışta çalıştır
+  if (forceSyncNow || isWithinTargetHours()) {
+    await checkAndRunSchedule(forceSyncNow);
   }
 
-  // Her 30 dakikada bir kontrol et
-  setInterval(async () => {
-    if (isWithinTargetHours()) {
-      console.log('⏰ 16:00 - 18:00 zaman aralığı tetiklendi! Eşitleme yapılıyor...');
-      await runFullSync().catch(console.error);
-    }
-  }, 30 * 60 * 1000);
+  // Her 1 dakikada bir saati kontrol et
+  setInterval(() => {
+    checkAndRunSchedule(false);
+  }, 60 * 1000);
 }
 
 // Komut satırı argümanları
 const args = process.argv.slice(2);
-if (args.includes('--daemon')) {
-  startDaemon();
+const isDaemon = args.includes('--daemon');
+const forceSyncNow = args.includes('--sync-now');
+
+if (isDaemon) {
+  startDaemon(forceSyncNow).catch(console.error);
 } else {
   // Varsayılan olarak hemen bir kez çalıştır
   runFullSync().catch(console.error);

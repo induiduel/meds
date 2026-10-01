@@ -35,7 +35,11 @@ import {
   Send,
   Server,
   Settings,
-  Lock
+  Lock,
+  Bell,
+  Monitor,
+  Play,
+  Square
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AdminEditQuestionModal } from './AdminEditQuestionModal';
@@ -128,6 +132,24 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   // Full Local Sync state
   const [isSyncingFullLocal, setIsSyncingFullLocal] = useState(false);
   const [fullLocalSyncFeedback, setFullLocalSyncFeedback] = useState<string | null>(null);
+
+  // Windows Service & Desktop Shortcut state
+  const [windowsServiceStatus, setWindowsServiceStatus] = useState<{
+    success?: boolean;
+    isInstalledOnDesktop?: boolean;
+    isRegisteredInStartup?: boolean;
+    isRunning?: boolean;
+    pids?: number[];
+    desktopShortcutPath?: string;
+    startupShortcutPath?: string;
+    nextWindow?: string;
+    lastHeartbeat?: any;
+    error?: string;
+  } | null>(null);
+  const [isLoadingWindowsService, setIsLoadingWindowsService] = useState(false);
+  const [isInstallingWindowsService, setIsInstallingWindowsService] = useState(false);
+  const [isSendingWindowsNotify, setIsSendingWindowsNotify] = useState(false);
+  const [windowsServiceFeedback, setWindowsServiceFeedback] = useState<string | null>(null);
 
   // Destructive confirmation state
   const [confirmDialog, setConfirmDialog] = useState<{
@@ -576,12 +598,72 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     }
   };
 
+  const loadWindowsServiceStatus = async () => {
+    setIsLoadingWindowsService(true);
+    try {
+      const res = await ApiService.getWindowsServiceStatus();
+      setWindowsServiceStatus(res);
+    } catch (err) {
+      console.warn('Windows service status error:', err);
+    } finally {
+      setIsLoadingWindowsService(false);
+    }
+  };
+
+  const handleInstallWindowsService = async () => {
+    setIsInstallingWindowsService(true);
+    setWindowsServiceFeedback('Masaüstü kısayolu oluşturuluyor, Windows başlangıcına ekleniyor...');
+    try {
+      const res = await ApiService.installWindowsService();
+      setWindowsServiceFeedback(`✓ ${res.message}`);
+      await loadWindowsServiceStatus();
+      await checkWorkerStatus();
+    } catch (err: any) {
+      setWindowsServiceFeedback(`Hata: ${err.message}`);
+    } finally {
+      setIsInstallingWindowsService(false);
+    }
+  };
+
+  const handleStopWindowsService = async () => {
+    setIsInstallingWindowsService(true);
+    try {
+      const res = await ApiService.stopWindowsService();
+      setWindowsServiceFeedback(res.message);
+      await loadWindowsServiceStatus();
+      await checkWorkerStatus();
+    } catch (err: any) {
+      setWindowsServiceFeedback(`Hata: ${err.message}`);
+    } finally {
+      setIsInstallingWindowsService(false);
+    }
+  };
+
+  const handleSendWindowsTestNotification = async () => {
+    setIsSendingWindowsNotify(true);
+    try {
+      const res = await ApiService.sendWindowsTestNotification(
+        'MedSoru Test Bildirimi 🔔',
+        'Yönetici panelinden Windows masaüstü bildirimi başarıyla iletildi! Sisteminiz hazır.'
+      );
+      setWindowsServiceFeedback(`✓ ${res.message} (Ekranınızın sağ alt köşesine bakın)`);
+    } catch (err: any) {
+      setWindowsServiceFeedback(`Hata: ${err.message}`);
+    } finally {
+      setIsSendingWindowsNotify(false);
+    }
+  };
+
   useEffect(() => {
     if (isOpen) {
       loadUsersData();
       loadSmtpConfig();
       checkWorkerStatus();
-      const interval = setInterval(checkWorkerStatus, 8000);
+      loadWindowsServiceStatus();
+      const interval = setInterval(() => {
+        checkWorkerStatus();
+        loadWindowsServiceStatus();
+      }, 7000);
       return () => clearInterval(interval);
     }
   }, [isOpen]);
@@ -815,6 +897,142 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <li>Açılan siyah pencerede yeşil renkle <strong>"[BAŞLADI] Otomasyon servisi aktif"</strong> ve <strong>"[Sinyal Gönderildi]"</strong> yazısını görürsünüz.</li>
                     <li>O pencere açık kaldığı sürece bilgisayarınızın işlemcisiyle dosyalar okunur ve buradaki durum <strong>ÇEVRİMİÇİ</strong>'ye döner.</li>
                   </ol>
+                </div>
+              )}
+            </div>
+
+            {/* Windows Desktop Shortcut & Daily 16:00 - 18:00 Automation Card */}
+            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white rounded-2xl p-5 border border-teal-600/40 shadow-xl space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-700/80">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center shrink-0">
+                    <Monitor className="w-5 h-5 text-teal-300" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm sm:text-base text-white flex items-center gap-2 flex-wrap">
+                      <span>Windows Masaüstü Kısayolu & Otomatik Başlangıç</span>
+                      {windowsServiceStatus?.isRunning ? (
+                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <Check className="w-3 h-3 text-emerald-400" />
+                          Servis Aktif (PID: {windowsServiceStatus.pids?.join(', ') || 'Aktif'})
+                        </span>
+                      ) : (
+                        <span className="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <AlertTriangle className="w-3 h-3 text-amber-400" />
+                          Servis Beklemede
+                        </span>
+                      )}
+                    </h4>
+                    <p className="text-xs text-slate-300 mt-0.5">
+                      Bilgisayar her açıldığında ve saat 16:00 - 18:00 aralığında arka planda çalışarak tüm Drive dosyalarını eşitler.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    type="button"
+                    onClick={handleSendWindowsTestNotification}
+                    disabled={isSendingWindowsNotify}
+                    className="bg-slate-800 hover:bg-slate-700 text-teal-300 border border-teal-600/40 font-bold px-3 py-1.5 rounded-xl text-xs flex items-center gap-1.5 transition-all cursor-pointer disabled:opacity-50"
+                    title="Windows Action Center / Bildirim Alanına test bildirimi gönderir"
+                  >
+                    <Bell className={`w-3.5 h-3.5 ${isSendingWindowsNotify ? 'animate-bounce' : ''}`} />
+                    <span>{isSendingWindowsNotify ? 'Gönderiliyor...' : 'Bildirim Testi'}</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleInstallWindowsService}
+                    disabled={isInstallingWindowsService}
+                    className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-black px-4 py-2 rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer active:scale-95 disabled:opacity-50"
+                  >
+                    <Play className={`w-3.5 h-3.5 fill-current ${isInstallingWindowsService ? 'animate-spin' : ''}`} />
+                    <span>{isInstallingWindowsService ? 'Yapılandırılıyor...' : 'Kısayol Kur & Başlat'}</span>
+                  </button>
+
+                  {windowsServiceStatus?.isRunning && (
+                    <button
+                      type="button"
+                      onClick={handleStopWindowsService}
+                      disabled={isInstallingWindowsService}
+                      className="bg-rose-900/60 hover:bg-rose-800 text-rose-200 border border-rose-700/60 font-bold px-3 py-1.5 rounded-xl text-xs flex items-center gap-1 transition-all cursor-pointer"
+                      title="Çalışan arka plan servisini durdurur"
+                    >
+                      <Square className="w-3 h-3 fill-current" />
+                      <span>Durdur</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Status Badges Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+                <div className="bg-slate-950/70 border border-slate-700/60 p-3 rounded-xl space-y-1">
+                  <span className="text-[10px] text-slate-400 block font-semibold">Masaüstü Kısayolu:</span>
+                  <div className="flex items-center gap-2">
+                    <span className={`w-2 h-2 rounded-full ${windowsServiceStatus?.isInstalledOnDesktop ? 'bg-emerald-400' : 'bg-amber-400'}`} />
+                    <strong className="text-white text-xs truncate">
+                      {windowsServiceStatus?.isInstalledOnDesktop ? '✓ Masaüstünde Mevcut' : '⚠️ Kısayol Eksik'}
+                    </strong>
+                  </div>
+                  <span className="text-[10px] text-slate-500 font-mono block truncate">
+                    MedSoru Otomasyon Servisi.lnk
+                  </span>
+                </div>
+
+                <div className="bg-slate-950/70 border border-slate-700/60 p-3 rounded-xl space-y-1">
+                  <span className="text-[10px] text-slate-400 block font-semibold">Windows Başlangıç (Startup):</span>
+                  <div className="flex items-center gap-2">
+                    <span className={`w-2 h-2 rounded-full ${windowsServiceStatus?.isRegisteredInStartup ? 'bg-emerald-400' : 'bg-amber-400'}`} />
+                    <strong className="text-white text-xs truncate">
+                      {windowsServiceStatus?.isRegisteredInStartup ? '✓ Başlangıca Kayıtlı' : '⚠️ Başlangıçta Yok'}
+                    </strong>
+                  </div>
+                  <span className="text-[10px] text-slate-500 font-mono block truncate">
+                    shell:startup (Otomatik Açılış)
+                  </span>
+                </div>
+
+                <div className="bg-slate-950/70 border border-slate-700/60 p-3 rounded-xl space-y-1">
+                  <span className="text-[10px] text-slate-400 block font-semibold">Çalışma Aralığı & Bildirim:</span>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+                    <strong className="text-emerald-300 text-xs">16:00 - 18:00 Arası Günlük</strong>
+                  </div>
+                  <span className="text-[10px] text-teal-400/90 block">
+                    Windows Bildirim Alanı Aktif 🔔
+                  </span>
+                </div>
+              </div>
+
+              {/* Explanatory Guide Box */}
+              <div className="bg-slate-950/50 border border-teal-500/20 p-3 rounded-xl text-[11px] text-slate-300 space-y-1.5 leading-relaxed">
+                <div className="flex items-center gap-1.5 text-teal-300 font-semibold text-xs">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Tek Tıkla Otomatik Çalışma Mantığı:</span>
+                </div>
+                <p>
+                  Masaüstünüzde yer alan <strong className="text-white">"MedSoru Otomasyon Servisi"</strong> kısayoluna çift tıkladığınızda; servis kendisini otomatik olarak Windows başlangıç klasörüne kaydeder, ekranınızın sağ altına Windows bildirimi yollar ve arka planda çalışmaya başlar.
+                </p>
+                <p className="text-slate-400 text-[10px]">
+                  Bilgisayarınız her açıldığında ve her gün saat <strong className="text-teal-300">16:00 - 18:00</strong> arasında Drive çıkmış soruları ve ders slaytları <code className="bg-slate-800 text-teal-300 px-1 py-0.5 rounded">C:\Users\indui\Desktop\meds_database</code> klasörünüze indirilir, CPU ile sayfa sayfa birebir okunarak soru havuzuna ve Firebase'e işlenir.
+                </p>
+              </div>
+
+              {/* Feedback Alert */}
+              {windowsServiceFeedback && (
+                <div className={`p-3 rounded-xl border text-xs flex items-start gap-2 ${
+                  windowsServiceFeedback.startsWith('✓')
+                    ? 'bg-emerald-950/80 border-emerald-500/50 text-emerald-200'
+                    : windowsServiceFeedback.startsWith('Hata')
+                    ? 'bg-rose-950/80 border-rose-500/50 text-rose-200'
+                    : 'bg-teal-950/80 border-teal-500/50 text-teal-200'
+                }`}>
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span>{windowsServiceFeedback}</span>
+                  </div>
                 </div>
               )}
             </div>

@@ -2257,6 +2257,88 @@ app.get('/api/automation/local-sync-status', (req, res) => {
   res.json(lastLocalSyncStatus);
 });
 
+// Automation: Windows Service Status, Desktop Shortcut & Startup Manager
+app.get('/api/automation/windows-service-status', (req, res) => {
+  try {
+    const { execSync } = require('child_process');
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    const stdout = execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action status`, {
+      timeout: 8000,
+      encoding: 'utf8',
+    });
+    const parsed = JSON.parse(stdout.trim());
+    res.json({
+      success: true,
+      ...parsed,
+      nextWindow: '16:00 - 18:00',
+      lastHeartbeat: latestWorkerHeartbeat,
+    });
+  } catch (err: any) {
+    res.json({
+      success: false,
+      error: err.message,
+      isRunning: false,
+      isInstalledOnDesktop: false,
+      isRegisteredInStartup: false,
+    });
+  }
+});
+
+app.post('/api/automation/windows-service-install', (req, res) => {
+  try {
+    const { execSync } = require('child_process');
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    const stdout = execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action install-and-start`, {
+      timeout: 12000,
+      encoding: 'utf8',
+    });
+    res.json({
+      success: true,
+      message: 'Masaüstü kısayolu oluşturuldu, Windows Başlangıç klasörüne eklendi ve bildirim iletildi.',
+      output: stdout,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Kısayol ve başlangıç kurulumu başarısız: ' + err.message });
+  }
+});
+
+app.post('/api/automation/windows-service-stop', (req, res) => {
+  try {
+    const { execSync } = require('child_process');
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    const stdout = execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action stop`, {
+      timeout: 8000,
+      encoding: 'utf8',
+    });
+    res.json({
+      success: true,
+      message: 'Windows arka plan senkronizasyon servisi durduruldu.',
+      output: stdout,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Servis durdurulamadı: ' + err.message });
+  }
+});
+
+app.post('/api/automation/windows-service-notify', (req, res) => {
+  try {
+    const { execSync } = require('child_process');
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    const title = (req.body?.title || 'MedSoru Otomasyon Servisi 🚀').replace(/"/g, '');
+    const message = (req.body?.message || 'Windows bildirim sistemi sorunsuz çalışıyor.').replace(/"/g, '');
+    execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action notify -Title "${title}" -Message "${message}"`, {
+      timeout: 8000,
+      encoding: 'utf8',
+    });
+    res.json({
+      success: true,
+      message: 'Windows bildirimi başarıyla gönderildi.',
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Bildirim gönderilemedi: ' + err.message });
+  }
+});
+
 // Automation: Comprehensive live file & download status visualizer
 app.get('/api/automation/drive-files-status', (req, res) => {
   try {

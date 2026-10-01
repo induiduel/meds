@@ -1686,4 +1686,57 @@ export const ApiService = {
     }
     return await res.json();
   },
+
+  // Windows Service, Desktop Shortcut & Startup Management
+  async getWindowsServiceStatus(): Promise<{
+    success: boolean;
+    isInstalledOnDesktop: boolean;
+    isRegisteredInStartup: boolean;
+    isRunning: boolean;
+    pids: number[];
+    desktopShortcutPath?: string;
+    startupShortcutPath?: string;
+    nextWindow?: string;
+    lastHeartbeat?: any;
+    error?: string;
+  }> {
+    try {
+      const res = await fetch('/api/automation/windows-service-status');
+      return await res.json();
+    } catch (e: any) {
+      return {
+        success: false,
+        isInstalledOnDesktop: false,
+        isRegisteredInStartup: false,
+        isRunning: false,
+        pids: [],
+        error: e.message,
+      };
+    }
+  },
+
+  async installWindowsService(): Promise<{ success: boolean; message: string }> {
+    const res = await fetch('/api/automation/windows-service-install', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    return await res.json();
+  },
+
+  async stopWindowsService(): Promise<{ success: boolean; message: string }> {
+    const res = await fetch('/api/automation/windows-service-stop', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    return await res.json();
+  },
+
+  async sendWindowsTestNotification(title?: string, message?: string): Promise<{ success: boolean; message: string }> {
+    const res = await fetch('/api/automation/windows-service-notify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, message }),
+    });
+    return await res.json();
+  },
 };
