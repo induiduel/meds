@@ -40,22 +40,34 @@ const OFFICIAL_COMMITTEES = [
 // 2. Amfi Ders Slaytlarını Belleğe Al (Grounding Knowledge Base)
 console.log('📚 [AI Redactor] Amfi ders slaytları taranıyor...');
 const lectureNotes = [];
-if (fs.existsSync(NOTES_TXT_DIR)) {
-  const noteFiles = fs.readdirSync(NOTES_TXT_DIR).filter(f => f.endsWith('.txt'));
-  for (const f of noteFiles) {
-    const fullPath = path.join(NOTES_TXT_DIR, f);
-    const content = fs.readFileSync(fullPath, 'utf8');
-    const title = f.replace('.txt', '').trim();
-    lectureNotes.push({
-      filename: f,
-      title,
-      content,
-      lowerContent: content.toLowerCase(),
-      words: content.toLowerCase().split(/\W+/).filter(w => w.length > 4)
-    });
+const noteDirs = [NOTES_TXT_DIR, path.join(BASE_DIR, 'kurul_ders_notlari_txt')];
+
+for (const dir of noteDirs) {
+  if (!fs.existsSync(dir)) continue;
+  function walkDir(curPath) {
+    const entries = fs.readdirSync(curPath, { withFileTypes: true });
+    for (const ent of entries) {
+      const full = path.join(curPath, ent.name);
+      if (ent.isDirectory()) {
+        walkDir(full);
+      } else if (ent.name.endsWith('.txt')) {
+        try {
+          const content = fs.readFileSync(full, 'utf8');
+          const title = ent.name.replace('.txt', '').trim();
+          lectureNotes.push({
+            filename: ent.name,
+            title,
+            content,
+            lowerContent: content.toLowerCase(),
+            words: content.toLowerCase().split(/\W+/).filter(w => w.length > 4)
+          });
+        } catch (e) {}
+      }
+    }
   }
+  walkDir(dir);
 }
-console.log(`   ✓ ${lectureNotes.length} adet amfi ders notu belleğe yüklendi.`);
+console.log(`   ✓ ${lectureNotes.length} adet amfi ders notu belleğe yüklendi (Kurul 1 - 6 dahil).`);
 
 // En uygun ders notu eşleştirme fonksiyonu
 function matchLectureNote(stem, discipline, topic) {
