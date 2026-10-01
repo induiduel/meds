@@ -326,7 +326,7 @@ export async function callClientGroq(
   }
 
   const candidateModels = [
-    model,
+    model && !model.startsWith('gemini') ? model : null,
     'openai/gpt-oss-120b',
     'qwen/qwen3.8-27b',
     'openai/gpt-oss-20b',
