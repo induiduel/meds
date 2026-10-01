@@ -390,14 +390,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Human committee name translator
   const formatCommitteeName = (cId: string) => {
-    if (cId === 'donem3-kurul1') return 'Dönem 3 Kurul 1';
-    if (cId === 'donem3-kurul2') return 'Dönem 3 Kurul 2';
-    if (cId === 'donem3-kurul3') return 'Dönem 3 Kurul 3';
-    if (cId === 'donem3-kurul4') return 'Dönem 3 Kurul 4';
-    if (cId === 'donem3-kurul5') return 'Dönem 3 Kurul 5';
-    if (cId === 'donem3-kurul6') return 'Dönem 3 Kurul 6';
-    if (cId === 'donem3-final') return 'Dönem 3 Final Sınavı';
-    if (cId === 'donem3-butunleme') return 'Dönem 3 Bütünleme';
+    if (cId === 'donem3-kurul1') return 'Kurul 1: TIP 310 - Ürogenital ve Obstetrik';
+    if (cId === 'donem3-kurul2') return 'Kurul 2: TIP 320 - Nöropsikiyatri';
+    if (cId === 'donem3-kurul3') return 'Kurul 3: TIP 330 - Gastrointestinal Sistem';
+    if (cId === 'donem3-kurul4') return 'Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör';
+    if (cId === 'donem3-kurul5') return 'Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem';
+    if (cId === 'donem3-kurul6') return 'Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma';
+    if (cId === 'donem3-final') return 'Dönem 3 Final Sınavı (28.06.2027)';
+    if (cId === 'donem3-butunleme') return 'Dönem 3 Bütünleme Sınavı (16.07.2027)';
     return cId;
   };
 

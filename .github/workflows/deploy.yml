@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -36,21 +39,24 @@ jobs:
           touch ./dist/.nojekyll
           cp ./dist/index.html ./dist/404.html
 
-      # 1. Deploy to gh-pages branch (works if Pages source is "Deploy from a branch")
+      # 1. Deploy to gh-pages branch (for "Deploy from a branch" Pages source)
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           keep_files: false
           force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
 
-      # 2. Direct Pages Deploy (works if Pages source is "GitHub Actions")
+      # 2. Direct Pages Deploy (for modern "GitHub Actions" Pages source)
       - name: Setup Pages
         continue-on-error: true
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
-      - name: Upload Artifact
+      - name: Upload Pages Artifact
         continue-on-error: true
         uses: actions/upload-pages-artifact@v3
         with:
