@@ -21,7 +21,7 @@ import os from 'os';
 
 // Yapılandırma - Hem yerel dev sunucusunu (localhost:3000) hem de bulut adresini otomatik dener
 const LOCAL_SERVER_URL = 'http://localhost:3000';
-const CLOUD_SERVER_URL = 'https://ais-dev-npszzozwuymsemwkvwuime-496312357383.europe-west2.run.app';
+const CLOUD_SERVER_URL = 'https://ais-pre-npszzozwuymsemwkvwuime-496312357383.europe-west2.run.app';
 
 const CONFIG = {
   driveFolderId: process.env.DRIVE_FOLDER_ID || '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W',
