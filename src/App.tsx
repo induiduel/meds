@@ -32,7 +32,7 @@ import { GithubPagesGuideModal } from './components/GithubPagesGuideModal';
 import { AuthErrorModal } from './components/AuthErrorModal';
 import { DriveSaveModal } from './components/DriveSaveModal';
 import { ExamPdfModal } from './components/ExamPdfModal';
-import { QuickAddHero } from './components/QuickAddHero';
+import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { UserAuthModal } from './components/UserAuthModal';
 import { UserProfileModal } from './components/UserProfileModal';
 import { EditMyQuestionModal } from './components/EditMyQuestionModal';
@@ -576,6 +576,16 @@ export default function App() {
         q.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)))
   );
 
+  // Jump to a single question in the pool (home rows, practice "full explanation")
+  const openQuestion = (q: QuestionItem) => {
+    setSelectedDiscipline('Tümü');
+    setSelectedStatus('Tümü');
+    setFilterMyQuestionsOnly(false);
+    setSearchQuery(q.isUnassignedNumber ? questionStemText(q).slice(0, 40) : String(q.questionNumber));
+    setActiveTab('questions');
+    window.scrollTo({ top: 0 });
+  };
+
   const handleUpdateQuestionReference = async (questionId: string, reference: QuestionLectureMatch) => {
     try {
       const updated = await ApiService.updateQuestionLectureMatch(questionId, reference);
@@ -589,9 +599,28 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100/70 text-slate-800 flex flex-col font-sans antialiased selection:bg-teal-500 selection:text-white">
+    <div className="min-h-screen bg-canvas text-ink flex flex-col font-sans antialiased">
+      {activeTab === 'practice' ? (
+        <PracticeMode
+          questions={questions}
+          title={currentCommittee ? `${committeeShortLabel(currentCommittee).charAt(0)}${committeeShortLabel(currentCommittee).slice(1).toLocaleLowerCase('tr-TR')} · Test çöz` : 'Test çöz'}
+          subtitle={currentCommittee?.name.split(':').slice(1).join(':').trim() || currentCommittee?.name}
+          onExit={() => setActiveTab('quick_add')}
+          onOpenQuestion={openQuestion}
+          onOpenContributeModal={() => {
+            setContributeDefaultNumber(undefined);
+            setIsContributeModalOpen(true);
+          }}
+        />
+      ) : (
+      <>
       {/* Navigation Header with Google Auth & Drive */}
       <Header
+        searchQuery={searchQuery}
+        onSearch={(q) => {
+          setSearchQuery(q);
+          setActiveTab('questions');
+        }}
         committees={committees}
         selectedCommitteeId={selectedCommitteeId}
         onSelectCommittee={(id) => setSelectedCommitteeId(id)}
@@ -629,41 +658,36 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6 pb-24 sm:pb-8">
-        
+      <main className="flex-1 max-w-[1280px] w-full mx-auto px-4 sm:px-8 py-5 sm:py-10 flex flex-col gap-5 sm:gap-8 pb-28 sm:pb-16">
+
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
-          <div className="bg-emerald-50 border border-emerald-300 rounded-xl p-3 sm:p-4 text-emerald-950 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs animate-fadeIn">
-            <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-emerald-600 text-white shrink-0">
-                <Cloud className="w-5 h-5" />
-              </div>
+          <div role="status" className="bg-ok-soft rounded-[14px] px-4 py-3 sm:px-5 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold text-sm flex items-center gap-1.5 text-emerald-900">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  PDF Başarıyla Google Drive'a Kaydedildi!
-                </h4>
-                <p className="text-xs text-emerald-800 mt-0.5">
-                  Dosya Adı: <strong>{driveUploadSuccess.fileName}</strong> • Klasör: <strong>"{FOLDER_NAME}"</strong>
+                <p className="m-0 font-semibold text-[15px] text-ok">PDF Google Drive'a kaydedildi</p>
+                <p className="m-0 text-[14px] text-ink">
+                  {driveUploadSuccess.fileName} · “{FOLDER_NAME}” klasörü
                 </p>
               </div>
             </div>
-
-            <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
               {driveUploadSuccess.webViewLink && (
                 <a
                   href={driveUploadSuccess.webViewLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow-2xs transition-all"
+                  className="h-10 px-4 rounded-[10px] bg-white border border-line-2 text-ink font-semibold text-[14px] inline-flex items-center gap-2"
                 >
+                  Drive'da aç
                   <ExternalLink className="w-3.5 h-3.5" />
-                  <span>Google Drive'da Aç</span>
                 </a>
               )}
               <button
+                type="button"
                 onClick={() => setDriveUploadSuccess(null)}
-                className="text-emerald-700 hover:text-emerald-900 text-xs px-2 py-1 cursor-pointer"
+                className="h-10 px-3 rounded-[10px] text-ink-2 font-semibold text-[14px] cursor-pointer"
               >
                 Kapat
               </button>
@@ -671,135 +695,27 @@ export default function App() {
           </div>
         )}
 
-        {/* Compact, Mobile-First Committee & Cloud Archive Strip (Info is tucked into InfoPopover) */}
-        {currentCommittee && (
-          <div className="bg-white rounded-xl p-3 sm:p-4 border border-slate-200/90 shadow-2xs flex flex-col md:flex-row md:items-center justify-between gap-3">
-            <div className="flex items-center gap-2.5 flex-wrap">
-              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-teal-50 text-teal-800 border border-teal-200 px-2 py-0.5 rounded-md">
-                Dönem {currentCommittee.year} • {currentCommittee.term}
-              </span>
-              <h2 className="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight">
-                {currentCommittee.name}
-              </h2>
-              <span className="text-[11px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
-                {questions.length} / {currentCommittee.targetCount} Soru
-              </span>
-
-              {/* Info Popover for Committee description & Drive Archive information */}
-              <InfoPopover title="Kurul & Google Drive Arşiv Bilgisi">
-                <div className="space-y-2">
-                  <div>
-                    <h5 className="font-bold text-slate-800 text-xs">Kurul Hakkında:</h5>
-                    <p className="text-[11px] text-slate-600 mt-0.5">
-                      {currentCommittee.description ||
-                        'Öğrencilerin sınav çıkışı hatırladığı soru parçaları toplanır ve tıp literatürü esas alınarak sınav soru kitapçığı haline getirilir.'}
-                    </p>
-                  </div>
-                  <div className="pt-2 border-t border-slate-100">
-                    <h5 className="font-bold text-teal-900 text-xs flex items-center gap-1">
-                      <Cloud className="w-3.5 h-3.5 text-teal-600" />
-                      Google Drive Bulut Arşivi:
-                    </h5>
-                    <p className="text-[11px] text-slate-600 mt-0.5">
-                      Tüm sorular standart A4 formatında Google Drive hesabınızdaki "{FOLDER_NAME}" klasörüne kaydedilir ve dilediğiniz an PDF olarak indirilebilir.
-                    </p>
-                  </div>
-                </div>
-              </InfoPopover>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2 shrink-0">
-              <button
-                onClick={() => {
-                  setContributeDefaultNumber(undefined);
-                  setIsContributeModalOpen(true);
-                }}
-                className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
-              >
-                <Plus className="w-3.5 h-3.5" />
-                <span>Soru Ekle</span>
-              </button>
-
-              <button
-                onClick={() => setIsPdfModalOpen(true)}
-                className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-2.5 sm:px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 border border-slate-200 transition-all cursor-pointer"
-                title="A4 Sınav Kitapçığını PDF olarak indir"
-              >
-                <Printer className="w-3.5 h-3.5 text-slate-600" />
-                <span className="hidden sm:inline">A4 PDF</span>
-              </button>
-
-              {isAdmin && (
-                <>
-                  <button
-                    onClick={() => setIsNotebookLMModalOpen(true)}
-                    className="bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200 font-bold px-2 sm:px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95"
-                    title="NotebookLM & Gemini Kaynak Eşitleme (Yönetici Özel)"
-                  >
-                    <Brain className="w-3.5 h-3.5 text-purple-700" />
-                    <span className="hidden sm:inline">NotebookLM</span>
-                  </button>
-
-                  <button
-                    onClick={() => setIsPastExamImporterOpen(true)}
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold px-2 sm:px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer transition-all active:scale-95"
-                    title="Geçmiş yılların çıkmış sorularını yapay zekayla yükle"
-                  >
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
-                    <span className="hidden sm:inline">Çıkmış Soru Yükle</span>
-                    <span className="sm:hidden">Çıkmış Yükle</span>
-                  </button>
-
-                  <button
-                    onClick={() => setIsAdminPanelOpen(true)}
-                    className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-2.5 sm:px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95 ring-1 ring-amber-500/50"
-                    title="MedSoru Yönetici & Otomasyon Kontrol Paneli"
-                  >
-                    <ShieldCheck className="w-3.5 h-3.5" />
-                    <span className="font-extrabold">Admin Paneli</span>
-                  </button>
-                </>
-              )}
-
-              {!isAdmin && (
-                <button
-                  onClick={() => {
-                    setAuthModalInitialMode('admin');
-                    setIsAuthModalOpen(true);
-                  }}
-                  className="bg-slate-900 hover:bg-slate-800 text-amber-300 font-bold px-2.5 sm:px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95 border border-slate-700"
-                  title="Yönetici Girişi Yap ve Paneli Aç"
-                >
-                  <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Admin Paneli</span>
-                </button>
-              )}
-            </div>
-          </div>
-        )}
-
         {/* Celebration / Thank You Notification */}
         {congratsToast && (
-          <div className="bg-gradient-to-r from-emerald-700 via-teal-800 to-slate-900 text-white rounded-xl p-4.5 shadow-lg flex items-center justify-between gap-3 animate-fadeIn border border-emerald-400">
-            <div className="flex items-center gap-3">
-              <div className="p-2.5 bg-emerald-500/20 rounded-xl border border-emerald-400/30 text-amber-300 shrink-0">
-                <Sparkles className="w-5 h-5" />
-              </div>
+          <div role="status" className="bg-ink text-white rounded-[14px] px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between gap-3">
+            <div className="flex items-start gap-3">
+              <Sparkles className="w-5 h-5 text-[#FBBF24] shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold text-sm text-emerald-200">Resmi Teşekkür & Tebrik Bildirimi</h4>
-                <p className="text-xs text-white mt-0.5">{congratsToast}</p>
+                <p className="m-0 font-semibold text-[15px]">Teşekkürler!</p>
+                <p className="m-0 text-[14px] text-[#B8C3CF]">{congratsToast}</p>
               </div>
             </div>
             <button
+              type="button"
               onClick={() => setCongratsToast(null)}
-              className="text-emerald-200 hover:text-white text-xs font-semibold px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg transition-colors cursor-pointer shrink-0"
+              className="h-10 px-4 rounded-[10px] bg-white/10 hover:bg-white/20 font-semibold text-[14px] cursor-pointer shrink-0"
             >
               Tamam
             </button>
           </div>
         )}
 
-        {/* TAB 0: Simple Minimal Quick Add Hero (Default Landing View) */}
+        {/* TAB 0: Home — quick add, pool status, committees */}
         {activeTab === 'quick_add' && (
           <QuickAddHero
             committee={currentCommittee}
@@ -808,6 +724,8 @@ export default function App() {
             onSubmitContribution={handleAddQuestionContribution}
             unassignedCount={questions.filter((q) => q.isUnassignedNumber).length}
             totalQuestionsCount={questions.length}
+            questions={questions}
+            onOpenQuestion={openQuestion}
             onNavigateTab={(tab) => setActiveTab(tab)}
             isAdmin={isAdmin}
             currentUser={currentUser}
@@ -817,7 +735,51 @@ export default function App() {
 
         {/* TAB 1: Questions List */}
         {activeTab === 'questions' && (
-          <div className="space-y-5">
+          <div className="flex flex-col gap-5">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <nav aria-label="Konum" className="flex flex-wrap items-center gap-2 text-[14px] text-ink-2">
+                <span>Soru havuzu</span>
+                <span aria-hidden="true">/</span>
+                <label className="sr-only" htmlFor="pool-committee">Kurul</label>
+                <select
+                  id="pool-committee"
+                  value={selectedCommitteeId}
+                  onChange={(e) => setSelectedCommitteeId(e.target.value)}
+                  className="h-9 pl-2 pr-7 rounded-lg border border-line bg-white text-ink font-semibold text-[14px] cursor-pointer max-w-[60vw] truncate"
+                >
+                  {committees.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.name}
+                    </option>
+                  ))}
+                </select>
+                {searchQuery && (
+                  <>
+                    <span aria-hidden="true">/</span>
+                    <span className="text-ink font-semibold">“{searchQuery}”</span>
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      className="h-8 px-2.5 rounded-lg text-accent font-semibold cursor-pointer"
+                    >
+                      Aramayı temizle
+                    </button>
+                  </>
+                )}
+              </nav>
+              <button
+                type="button"
+                onClick={() => {
+                  setContributeDefaultNumber(undefined);
+                  setIsContributeModalOpen(true);
+                }}
+                className="h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] inline-flex items-center gap-2 cursor-pointer"
+              >
+                <Plus className="w-4 h-4" strokeWidth={2.2} />
+                Soru ekle
+              </button>
+            </div>
+
             {/* Filter and Stats Bar */}
             <MetricsBar
               totalTarget={targetCount}
@@ -841,47 +803,46 @@ export default function App() {
 
             {/* Questions Stream */}
             {loading ? (
-              <div className="text-center py-16 bg-white rounded-xl border border-slate-200 shadow-xs">
-                <RefreshCw className="w-7 h-7 text-teal-600 animate-spin mx-auto mb-2" />
-                <p className="text-xs text-slate-500 font-medium">Soru havuzu yükleniyor...</p>
+              <div className="text-center py-16 bg-white rounded-[18px] border border-line">
+                <RefreshCw className="w-6 h-6 text-accent animate-spin mx-auto mb-3" />
+                <p className="m-0 text-[14px] text-ink-2">Soru havuzu yükleniyor…</p>
               </div>
             ) : (filterMyQuestionsOnly ? myQuestions : questions).length === 0 ? (
-              <div className="bg-white rounded-xl border border-slate-200 p-12 text-center space-y-4 shadow-xs">
-                <div className="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 text-teal-600 flex items-center justify-center mx-auto">
-                  <BookOpen className="w-6 h-6" />
-                </div>
+              <div className="bg-white rounded-[18px] border border-line px-6 py-14 text-center flex flex-col items-center gap-4">
                 <div>
-                  <h3 className="text-base font-bold text-slate-900">
-                    {filterMyQuestionsOnly ? 'Henüz katkıda bulunduğunuz soru yok' : 'Arama kriterlerine uygun soru bulunamadı'}
+                  <h3 className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">
+                    {filterMyQuestionsOnly ? 'Henüz katkıda bulunduğun soru yok' : 'Bu kriterlere uyan soru yok'}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
+                  <p className="m-0 mt-1.5 text-[15px] text-ink-2 max-w-[420px]">
                     {filterMyQuestionsOnly
-                      ? 'Hafızanızdaki soru parçalarını ekleyerek kurul arşivine katkı sağlayabilirsiniz.'
-                      : 'Henüz soru girilmemiş olabilir ya da uyguladığınız filtreye uyan soru yok.'}
+                      ? 'Aklında kalan parçaları ekleyerek kurul arşivine katkı sağlayabilirsin.'
+                      : 'Henüz soru girilmemiş olabilir ya da filtreye uyan soru yok.'}
                   </p>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   {filterMyQuestionsOnly && (
                     <button
+                      type="button"
                       onClick={() => setFilterMyQuestionsOnly(false)}
-                      className="text-xs text-slate-600 hover:text-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 cursor-pointer"
+                      className="h-11 px-4 rounded-[10px] border border-line-2 bg-white font-semibold cursor-pointer"
                     >
-                      Tüm Soruları Göster
+                      Tüm soruları göster
                     </button>
                   )}
                   <button
+                    type="button"
                     onClick={() => {
                       setContributeDefaultNumber(undefined);
                       setIsContributeModalOpen(true);
                     }}
-                    className="bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold px-4 py-1.5 rounded-lg cursor-pointer"
+                    className="h-11 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold cursor-pointer"
                   >
-                    İlk Soruyu Ekle
+                    İlk soruyu ekle
                   </button>
                 </div>
               </div>
             ) : (
-              <div className="space-y-4">
+              <div className="flex flex-col gap-5">
                 {(filterMyQuestionsOnly ? myQuestions : questions).map((q) => (
                   <QuestionCard
                     key={q.id}
@@ -938,17 +899,6 @@ export default function App() {
           />
         )}
 
-        {/* TAB 3: Practice & Self Test Mode */}
-        {activeTab === 'practice' && (
-          <PracticeMode
-            questions={questions}
-            onOpenContributeModal={() => {
-              setContributeDefaultNumber(undefined);
-              setIsContributeModalOpen(true);
-            }}
-          />
-        )}
-
         {/* TAB 4: A4 Booklet / Print Mode */}
         {activeTab === 'booklet' && (
           <BookletView
@@ -987,22 +937,36 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-12 print:hidden">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-slate-700 font-semibold">
-            <Stethoscope className="w-4 h-4 text-teal-600" />
-            <span>MedSoru • Tıp Dönem 3 Kurul Soru Havuzu & AI Rekonstrüksiyon</span>
-          </div>
-          <div className="flex items-center gap-4 text-slate-500">
-            {currentUser && (
-              <span className="text-teal-700 font-medium">
-                {currentUser.email} {isAdmin ? '(Yönetici)' : ''}
-              </span>
-            )}
-            <span>Google Drive API v3 & Bulut Arşiv</span>
-          </div>
+      <footer className="border-t border-line bg-white print:hidden mb-[76px] sm:mb-0">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-5 flex flex-col sm:flex-row sm:justify-between gap-3 text-[13px] text-ink-3">
+          <span>
+            MedSoru · Tıp Dönem 3 kurul soru havuzu
+            {currentUser ? ` · ${currentUser.email}${isAdmin ? ' (yönetici)' : ''}` : ''}
+          </span>
+          <span className="flex flex-wrap gap-5">
+            <button type="button" onClick={() => { setContributeDefaultNumber(undefined); setIsContributeModalOpen(true); }} className="text-ink-2 hover:text-accent cursor-pointer">Katkı yap</button>
+            <button type="button" onClick={() => setIsPdfModalOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">PDF kitapçık</button>
+            <button type="button" onClick={() => setIsAdminPanelOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
+          </span>
         </div>
       </footer>
+
+      {/* Mobile-First Bottom Navigation Bar */}
+      <MobileBottomNav
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        questionsCount={questions.length}
+        isAdmin={isAdmin}
+        onOpenContributeModal={() => {
+          setContributeDefaultNumber(undefined);
+          setIsContributeModalOpen(true);
+        }}
+        onOpenPdfModal={() => setIsPdfModalOpen(true)}
+        onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
+        onUploadToDrive={() => handleDriveUpload(false)}
+      />
+      </>
+      )}
 
       {/* Modals */}
       <ContributeModal
@@ -1165,20 +1129,6 @@ export default function App() {
         onClose={() => setIsSubagentMonitorOpen(false)}
       />
 
-      {/* Mobile-First Bottom Navigation Bar */}
-      <MobileBottomNav
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        questionsCount={questions.length}
-        isAdmin={isAdmin}
-        onOpenContributeModal={() => {
-          setContributeDefaultNumber(undefined);
-          setIsContributeModalOpen(true);
-        }}
-        onOpenPdfModal={() => setIsPdfModalOpen(true)}
-        onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
-        onUploadToDrive={() => handleDriveUpload(false)}
-      />
     </div>
   );
 }

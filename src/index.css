@@ -1,10 +1,71 @@
 @import "tailwindcss";
 
+/* -------------------------------------------------------------
+ * MedSoru design tokens
+ * Teal is remapped onto the brand blue so every view that still
+ * uses teal-* utilities picks up the new accent automatically.
+ * ------------------------------------------------------------- */
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Geist", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: "Geist", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0E1A26;
+  --color-ink-2: #4A5868;
+  --color-ink-3: #5F6B79;
+  --color-line: #DCE2E8;
+  --color-line-2: #C9D2DB;
+  --color-line-soft: #EEF1F4;
+  --color-canvas: #F2F4F6;
+  --color-field: #F9FAFB;
+
+  --color-accent: #1E4FD8;
+  --color-accent-hover: #1A43B8;
+  --color-accent-soft: #E8EEFD;
+
+  --color-ok: #157A3E;
+  --color-ok-bright: #1F9D55;
+  --color-ok-soft: #E4F3E9;
+  --color-ok-tint: #F1FAF4;
+  --color-warn: #A6530A;
+  --color-warn-soft: #FCEFE0;
+  --color-bad: #C2410C;
+  --color-bad-text: #B13A0A;
+  --color-bad-soft: #FFF4ED;
+
+  --color-teal-50: #EEF3FE;
+  --color-teal-100: #E0E9FD;
+  --color-teal-200: #C6D5FB;
+  --color-teal-300: #9DB6F6;
+  --color-teal-400: #6A8EEE;
+  --color-teal-500: #3F68E3;
+  --color-teal-600: #1E4FD8;
+  --color-teal-700: #1A43B8;
+  --color-teal-800: #183A96;
+  --color-teal-900: #172F72;
+  --color-teal-950: #0F1D47;
+}
+
 html, body {
   overflow-x: hidden;
   max-width: 100vw;
   -webkit-tap-highlight-color: transparent;
 }
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
 
 /* -------------------------------------------------------------
  * A4 Medical School Examination & PDF Print Stylesheet

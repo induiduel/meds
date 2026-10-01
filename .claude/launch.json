@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "medsoru",
+      "url": "http://localhost:3000",
+      "port": 3000
+    },
+    {
+      "name": "medsoru-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "--config", "node_modules/.medsoru-preview/vite.config.mjs"],
+      "port": 5174
+    }
+  ]
+}

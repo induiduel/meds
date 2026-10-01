@@ -1,259 +1,281 @@
-import React, { useState } from 'react';
-import { 
-  Brain, 
-  CheckCircle2, 
-  XCircle, 
-  ArrowRight, 
-  ArrowLeft, 
-  RotateCcw, 
-  BookOpen, 
-  Sparkles,
-  Trophy,
-  HelpCircle
-} from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { X, ArrowLeft, ArrowRight, BookOpen } from 'lucide-react';
 import { QuestionItem } from '../types';
+import { parseExplanation } from './QuestionCard';
 
 interface PracticeModeProps {
   questions: QuestionItem[];
   onOpenContributeModal: () => void;
+  onExit?: () => void;
+  onOpenQuestion?: (question: QuestionItem) => void;
+  title?: string;
+  subtitle?: string;
 }
+
+const formatElapsed = (s: number) => {
+  const m = Math.floor(s / 60);
+  const ss = String(s % 60).padStart(2, '0');
+  return m >= 60 ? `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}:${ss}` : `${String(m).padStart(2, '0')}:${ss}`;
+};
 
 export const PracticeMode: React.FC<PracticeModeProps> = ({
   questions,
   onOpenContributeModal,
+  onExit,
+  onOpenQuestion,
+  title = 'Test çöz',
+  subtitle,
 }) => {
   // Only reconstructed questions can be practiced
-  const reconstructedQuestions = questions.filter(
-    (q) => q.status === 'completed' && q.reconstruction
-  );
+  const items = useMemo(() => questions.filter((q) => q.status === 'completed' && q.reconstruction), [questions]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
-  const [showExplanations, setShowExplanations] = useState<Record<string, boolean>>({});
+  const [elapsed, setElapsed] = useState(0);
 
-  if (reconstructedQuestions.length === 0) {
+  useEffect(() => {
+    const t = setInterval(() => setElapsed((s) => s + 1), 1000);
+    return () => clearInterval(t);
+  }, []);
+
+  const total = items.length;
+  const currentQ = items[Math.min(currentIndex, Math.max(total - 1, 0))];
+  const rec = currentQ?.reconstruction;
+  const userAnswer = currentQ ? selectedAnswers[currentQ.id] : undefined;
+  const isAnswered = !!userAnswer;
+  const isCorrect = !!rec && userAnswer === rec.correctAnswer;
+
+  const answeredCount = Object.keys(selectedAnswers).length;
+  const correctCount = items.filter((q) => selectedAnswers[q.id] && selectedAnswers[q.id] === q.reconstruction?.correctAnswer).length;
+
+  // Short feedback: the "why correct" section if the redactor wrote one, else the first section
+  const shortExplanation = useMemo(() => {
+    if (!rec?.explanation) return '';
+    const secs = parseExplanation(rec.explanation, rec.correctAnswer);
+    const why = secs.find((s) => s.label.startsWith('Neden')) || secs.find((s) => s.label === 'Mekanizma') || secs[0];
+    return why?.body || '';
+  }, [rec]);
+
+  const handleSelect = (key: string) => {
+    if (!currentQ || isAnswered) return;
+    setSelectedAnswers((prev) => ({ ...prev, [currentQ.id]: key }));
+  };
+
+  const handleReset = () => {
+    if (!currentQ) return;
+    setSelectedAnswers((prev) => {
+      const next = { ...prev };
+      delete next[currentQ.id];
+      return next;
+    });
+  };
+
+  const exitButton = onExit && (
+    <button
+      type="button"
+      onClick={onExit}
+      aria-label="Testten çık"
+      className="w-10 h-10 rounded-[10px] border border-line flex items-center justify-center shrink-0 cursor-pointer hover:border-line-2"
+    >
+      <X className="w-4 h-4 text-ink" />
+    </button>
+  );
+
+  if (!currentQ || !rec) {
     return (
-      <div className="bg-white rounded-xl border border-slate-200 p-10 text-center space-y-4 max-w-xl mx-auto shadow-xs">
-        <div className="w-14 h-14 rounded-2xl bg-teal-50 border border-teal-200 text-teal-600 flex items-center justify-center mx-auto">
-          <Brain className="w-7 h-7" />
-        </div>
-        <div>
-          <h3 className="text-base font-bold text-slate-900">
-            Henüz Çözülecek Rekonstrükte Soru Yok
-          </h3>
-          <p className="text-xs text-slate-500 mt-1 max-w-md mx-auto">
-            Test modunda soru çözebilmek için öğrenci hafıza havuzundaki soruların en az birini "AI ile Rekonstrükte Et" butonuyla tamamlamalısınız.
+      <div className="min-h-screen bg-white flex flex-col">
+        <header className="border-b border-line">
+          <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-16 flex items-center gap-4">
+            {exitButton}
+            <span className="font-semibold text-ink">{title}</span>
+          </div>
+        </header>
+        <main className="flex-1 w-full max-w-[560px] mx-auto px-4 sm:px-8 py-16 flex flex-col gap-4 text-center items-center">
+          <h1 className="m-0 font-display text-[28px] font-bold tracking-[-0.02em]">Çözülecek soru henüz yok</h1>
+          <p className="m-0 text-[16px] text-ink-2">
+            Test modunda yalnızca yeniden kurulup doğrulanan sorular çıkar. Hafıza parçası ekleyip soruların kurulmasına yardım edebilirsin.
           </p>
-        </div>
-        <button
-          onClick={onOpenContributeModal}
-          className="bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold px-4 py-2 rounded-lg inline-flex items-center gap-2 cursor-pointer shadow-xs"
-        >
-          <span>İlk Soru Parçasını Ekle</span>
-        </button>
+          <button
+            type="button"
+            onClick={onOpenContributeModal}
+            className="h-12 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold cursor-pointer"
+          >
+            İlk parçayı ekle
+          </button>
+        </main>
       </div>
     );
   }
 
-  const currentQ = reconstructedQuestions[currentIndex];
-  const rec = currentQ.reconstruction!;
-  const userAnswer = selectedAnswers[currentQ.id];
-  const isAnswered = !!userAnswer;
-  const isCorrect = userAnswer === rec.correctAnswer;
-  const isExplanationShown = showExplanations[currentQ.id];
-
-  // Stats
-  const answeredCount = Object.keys(selectedAnswers).length;
-  const correctCount = Object.entries(selectedAnswers).filter(
-    ([qId, ans]) => {
-      const q = reconstructedQuestions.find((item) => item.id === qId);
-      return q?.reconstruction?.correctAnswer === ans;
-    }
-  ).length;
-
-  const handleSelectOption = (key: string) => {
-    if (isAnswered) return; // Prevent changing answer
-    setSelectedAnswers((prev) => ({ ...prev, [currentQ.id]: key }));
-    setShowExplanations((prev) => ({ ...prev, [currentQ.id]: true }));
-  };
-
-  const handleReset = () => {
-    setSelectedAnswers({});
-    setShowExplanations({});
-    setCurrentIndex(0);
-  };
+  const position = currentIndex + 1;
 
   return (
-    <div className="max-w-3xl mx-auto space-y-5">
-      {/* Top Bar with Score */}
-      <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <Brain className="w-5 h-5 text-teal-600" />
-          <span className="font-bold text-sm text-slate-900">
-            Soru {currentIndex + 1} / {reconstructedQuestions.length}
-          </span>
-          <span className="text-xs bg-teal-50 text-teal-800 border border-teal-200 px-2 py-0.5 rounded-full font-medium">
-            {currentQ.discipline}
-          </span>
-        </div>
-
-        <div className="flex items-center gap-4 text-xs">
-          <div className="flex items-center gap-1.5 font-semibold text-slate-700">
-            <Trophy className="w-4 h-4 text-amber-500" />
-            <span>Doğru: {correctCount} / {answeredCount}</span>
-            {answeredCount > 0 && (
-              <span className="text-slate-400">
-                (%{Math.round((correctCount / answeredCount) * 100)})
-              </span>
-            )}
+    <div className="min-h-screen bg-white text-ink flex flex-col">
+      <header className="border-b border-line sticky top-0 bg-white z-20">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-16 flex items-center gap-3 sm:gap-5">
+          {exitButton}
+          <div className="flex flex-col leading-[1.25] min-w-0">
+            <span className="font-semibold truncate">{title}</span>
+            {subtitle && <span className="text-[13px] text-ink-2 truncate">{subtitle}</span>}
           </div>
-
-          <button
-            onClick={handleReset}
-            className="text-slate-400 hover:text-slate-700 flex items-center gap-1 cursor-pointer"
-            title="Skoru Sıfırla"
-          >
-            <RotateCcw className="w-3.5 h-3.5" />
-            <span>Sıfırla</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Main Question Box */}
-      <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-xs space-y-5">
-        <div className="flex items-center justify-between text-xs text-slate-500 border-b pb-2">
-          <span className="font-bold text-teal-800 bg-teal-50 px-2 py-0.5 rounded">
-            Soru #{currentQ.questionNumber} • {currentQ.topic}
-          </span>
-          <span className="flex items-center gap-1 text-emerald-700 font-medium">
-            <Sparkles className="w-3.5 h-3.5" />
-            Rekonstrüksiyon Güven: %{rec.confidenceScore}
+          <div className="flex-1 hidden sm:flex items-center gap-3 max-w-[420px] ml-auto">
+            <div className="flex-1 h-1.5 rounded-full bg-line-soft">
+              <div className="h-1.5 rounded-full bg-accent transition-all" style={{ width: `${(position / total) * 100}%` }} />
+            </div>
+            <span className="font-mono text-[13px] text-ink-2 whitespace-nowrap">
+              {position} / {total}
+            </span>
+          </div>
+          <span className="ml-auto sm:ml-0 font-mono text-[14px] px-3 py-2 rounded-[10px] bg-canvas" aria-label="Geçen süre">
+            {formatElapsed(elapsed)}
           </span>
         </div>
+        <div className="sm:hidden h-1 bg-line-soft">
+          <div className="h-1 bg-accent" style={{ width: `${(position / total) * 100}%` }} />
+        </div>
+      </header>
 
-        {/* Stem */}
-        <p className="text-sm font-medium text-slate-900 leading-relaxed font-serif">
+      <main className="flex-1 w-full max-w-[760px] mx-auto px-4 sm:px-8 pt-10 sm:pt-14 pb-10 flex flex-col gap-6 sm:gap-7">
+        <div className="flex items-center justify-between gap-3">
+          <span className="font-mono text-[13px] text-ink-2">
+            SORU {position}
+            {currentQ.discipline ? ` · ${currentQ.discipline.toLocaleUpperCase('tr-TR')}` : ''}
+          </span>
+          {answeredCount > 0 && (
+            <span className="font-mono text-[13px] text-ink-2">
+              {correctCount}/{answeredCount} doğru
+            </span>
+          )}
+        </div>
+        <h1
+          className={`m-0 font-display font-medium leading-[1.3] tracking-[-0.02em] ${
+            rec.stem.length > 180 ? 'text-[20px] sm:text-[24px]' : 'text-[24px] sm:text-[32px]'
+          }`}
+        >
           {rec.stem}
-        </p>
+        </h1>
 
-        {/* Options */}
-        <div className="space-y-2.5 pt-2">
+        <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2.5">
           {rec.options.map((opt) => {
-            const isSelected = userAnswer === opt.key;
             const isThisCorrect = rec.correctAnswer === opt.key;
-
-            let btnStyle = 'bg-white border-slate-200 hover:border-teal-400 hover:bg-slate-50 text-slate-800';
-            let circleStyle = 'bg-slate-100 text-slate-700';
-
-            if (isAnswered) {
-              if (isThisCorrect) {
-                btnStyle = 'bg-emerald-50 border-emerald-500 text-emerald-950 font-semibold ring-1 ring-emerald-500/20';
-                circleStyle = 'bg-emerald-600 text-white';
-              } else if (isSelected) {
-                btnStyle = 'bg-rose-50 border-rose-400 text-rose-950 font-semibold';
-                circleStyle = 'bg-rose-600 text-white';
-              } else {
-                btnStyle = 'bg-slate-50/50 border-slate-200 opacity-60 text-slate-600';
-              }
+            const isPicked = userAnswer === opt.key;
+            let box = 'border border-line bg-white hover:border-line-2';
+            let key = 'bg-canvas text-ink';
+            let tag = '';
+            let tagCls = 'text-ink-2';
+            if (isAnswered && isThisCorrect) {
+              box = 'border-[1.5px] border-ok-bright bg-ok-tint';
+              key = 'bg-ok text-white';
+              tag = 'Doğru cevap';
+              tagCls = 'text-ok';
+            } else if (isAnswered && isPicked) {
+              box = 'border-[1.5px] border-bad bg-bad-soft';
+              key = 'bg-bad text-white';
+              tag = 'Senin cevabın';
+              tagCls = 'text-bad-text';
+            } else if (isAnswered) {
+              box = 'border border-line bg-white opacity-70';
             }
-
             return (
               <button
                 key={opt.key}
-                onClick={() => handleSelectOption(opt.key)}
-                disabled={isAnswered}
-                className={`w-full p-3 rounded-lg border text-xs flex items-center justify-between gap-3 text-left transition-all cursor-pointer ${btnStyle}`}
+                type="button"
+                role="radio"
+                aria-checked={isPicked}
+                onClick={() => handleSelect(opt.key)}
+                className={`flex items-center gap-4 min-h-[60px] px-4 py-2.5 rounded-[14px] text-[16px] sm:text-[17px] text-left cursor-pointer transition-colors ${box} ${
+                  isAnswered ? 'cursor-default' : ''
+                }`}
               >
-                <div className="flex items-center gap-2.5">
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${circleStyle}`}>
-                    {opt.key}
-                  </span>
-                  <span>{opt.text}</span>
-                </div>
-
-                {isAnswered && isThisCorrect && (
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                )}
-                {isAnswered && isSelected && !isThisCorrect && (
-                  <XCircle className="w-4 h-4 text-rose-600 shrink-0" />
-                )}
+                <span className={`w-9 h-9 shrink-0 rounded-[10px] flex items-center justify-center font-mono text-[14px] ${key}`}>{opt.key}</span>
+                <span className="flex-1">{opt.text}</span>
+                {tag && <span className={`text-[13px] font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
               </button>
             );
           })}
         </div>
 
-        {/* Feedback & Medical Explanation */}
         {isAnswered && (
-          <div className="mt-4 pt-4 border-t border-slate-100 space-y-3 animate-fadeIn">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                {isCorrect ? (
-                  <span className="text-xs font-bold text-emerald-700 flex items-center gap-1">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    Tebrikler! Doğru cevap ({rec.correctAnswer})
-                  </span>
-                ) : (
-                  <span className="text-xs font-bold text-rose-700 flex items-center gap-1">
-                    <XCircle className="w-4 h-4 text-rose-600" />
-                    Yanlış. Doğru cevap: {rec.correctAnswer}
-                  </span>
-                )}
-              </div>
-
+          <section className={`rounded-2xl px-[22px] py-5 flex flex-col gap-2 ${isCorrect ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
+            <span className={`font-semibold text-[16px] ${isCorrect ? 'text-ok' : 'text-bad-text'}`}>
+              {isCorrect
+                ? `Doğru. ${rec.options.find((o) => o.key === rec.correctAnswer)?.text || ''}`
+                : `Doğru cevap ${rec.correctAnswer} — ${rec.options.find((o) => o.key === rec.correctAnswer)?.text || ''}`}
+            </span>
+            {shortExplanation && <p className="m-0 text-[15px] leading-[1.6] whitespace-pre-line line-clamp-6">{shortExplanation}</p>}
+            {onOpenQuestion && (
               <button
-                onClick={() =>
-                  setShowExplanations((prev) => ({
-                    ...prev,
-                    [currentQ.id]: !prev[currentQ.id],
-                  }))
-                }
-                className="text-xs text-teal-700 hover:text-teal-800 font-semibold cursor-pointer"
+                type="button"
+                onClick={() => onOpenQuestion(currentQ)}
+                className="self-start text-[14px] font-semibold text-accent inline-flex items-center gap-1.5 cursor-pointer"
               >
-                {isExplanationShown ? 'Açıklamayı Gizle' : 'Açıklamayı Göster'}
+                <BookOpen className="w-4 h-4" />
+                Tam açıklama ve kaynak slayt
               </button>
-            </div>
-
-            {isExplanationShown && (
-              <div className="bg-emerald-50/70 border border-emerald-200 rounded-lg p-3.5 text-xs space-y-1.5">
-                <span className="font-bold text-emerald-950 flex items-center gap-1">
-                  <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
-                  Tıbbi Gerekçe & Patofizyoloji:
-                </span>
-                <p className="text-emerald-900 leading-relaxed font-sans">{rec.explanation}</p>
-              </div>
             )}
-          </div>
+          </section>
         )}
 
-        {/* Prev / Next Navigation */}
-        <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+        <div className="flex gap-3 justify-between pt-2">
           <button
-            onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
+            type="button"
+            onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
             disabled={currentIndex === 0}
-            className="px-3.5 py-1.5 rounded-lg border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-30 flex items-center gap-1 cursor-pointer"
+            className="h-12 px-5 rounded-xl border border-line-2 bg-white font-semibold text-ink inline-flex items-center gap-2 cursor-pointer disabled:opacity-40"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Önceki Soru</span>
+            <ArrowLeft className="w-4 h-4" />
+            Önceki
           </button>
-
-          <span className="text-xs text-slate-400">
-            {currentIndex + 1} / {reconstructedQuestions.length}
-          </span>
-
-          <button
-            onClick={() =>
-              setCurrentIndex((prev) =>
-                Math.min(reconstructedQuestions.length - 1, prev + 1)
-              )
-            }
-            disabled={currentIndex === reconstructedQuestions.length - 1}
-            className="px-3.5 py-1.5 rounded-lg bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold disabled:opacity-30 flex items-center gap-1 cursor-pointer"
-          >
-            <span>Sonraki Soru</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          <div className="flex gap-2 sm:gap-3">
+            {isAnswered && (
+              <button type="button" onClick={handleReset} className="h-12 px-4 sm:px-5 rounded-xl font-semibold text-ink-2 cursor-pointer">
+                Sıfırla
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={() => setCurrentIndex((i) => Math.min(total - 1, i + 1))}
+              disabled={currentIndex >= total - 1}
+              className="h-12 px-5 sm:px-6 rounded-xl bg-accent hover:bg-accent-hover font-semibold text-white inline-flex items-center gap-2 cursor-pointer disabled:opacity-40"
+            >
+              Sonraki soru
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
-      </div>
+      </main>
+
+      <footer className="border-t border-line bg-[#F7F8FA]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-4 flex items-start gap-4">
+          <span className="text-[13px] font-semibold text-ink-2 shrink-0 leading-7">Sorular</span>
+          <nav aria-label="Soru gezgini" className="flex gap-1.5 flex-wrap max-h-[132px] overflow-y-auto">
+            {items.map((q, i) => {
+              const ans = selectedAnswers[q.id];
+              const current = i === currentIndex;
+              const right = ans && ans === q.reconstruction?.correctAnswer;
+              const cls = current
+                ? 'bg-white text-accent border-2 border-accent'
+                : ans
+                  ? right
+                    ? 'bg-[#DDF1E4] text-ok'
+                    : 'bg-[#FDE5D8] text-bad-text'
+                  : 'bg-white text-ink-2 border border-line';
+              return (
+                <button
+                  key={q.id}
+                  type="button"
+                  onClick={() => setCurrentIndex(i)}
+                  aria-current={current ? 'step' : undefined}
+                  aria-label={`Soru ${i + 1}${ans ? (right ? ', doğru' : ', yanlış') : ''}`}
+                  className={`w-7 h-7 rounded-[7px] flex items-center justify-center font-mono text-[11px] cursor-pointer ${cls}`}
+                >
+                  {i + 1}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 };

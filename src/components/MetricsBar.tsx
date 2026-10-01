@@ -1,14 +1,5 @@
 import React from 'react';
-import { 
-  Search, 
-  Filter, 
-  CheckCircle, 
-  Clock, 
-  Sparkles, 
-  AlertCircle,
-  Hash,
-  Database
-} from 'lucide-react';
+import { Search, Check, CircleDashed, UserRound } from 'lucide-react';
 
 interface MetricsBarProps {
   totalTarget: number;
@@ -63,157 +54,118 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
   filterMyQuestionsOnly = false,
   onToggleMyQuestionsOnly,
 }) => {
+  const pct = (n: number) => `${Math.min(100, (n / Math.max(totalTarget, 1)) * 100)}%`;
+  const segBtn = (active: boolean) =>
+    `h-8 px-3 rounded-lg text-[13px] cursor-pointer whitespace-nowrap ${
+      active ? 'bg-white font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)] text-ink' : 'text-ink-2'
+    }`;
+
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs space-y-4">
-      {/* Top Stat Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div className="bg-slate-50 border border-slate-200/80 rounded-lg p-3">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-medium text-slate-500">Hedef Kurul Sorusu</span>
-            <Hash className="w-4 h-4 text-slate-400" />
-          </div>
-          <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-slate-900">{totalTarget}</span>
-            <span className="text-xs text-slate-500">soruluk sınav</span>
-          </div>
-        </div>
-
-        <div className="bg-emerald-50/80 border border-emerald-200/80 rounded-lg p-3">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-medium text-emerald-700">AI Rekonstrükte (%90+)</span>
-            <Sparkles className="w-4 h-4 text-emerald-600" />
-          </div>
-          <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-emerald-800">{completedCount}</span>
-            <span className="text-xs text-emerald-600 font-medium">soru hazır</span>
-          </div>
-        </div>
-
-        <div className="bg-amber-50/80 border border-amber-200/80 rounded-lg p-3">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-medium text-amber-700">Taslak & Şık Bekleyen</span>
-            <Clock className="w-4 h-4 text-amber-600" />
-          </div>
-          <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-amber-800">{gatheringCount}</span>
-            <span className="text-xs text-amber-600 font-medium">aktif toplanıyor</span>
-          </div>
-        </div>
-
-        <div className="bg-sky-50/80 border border-sky-200/80 rounded-lg p-3 flex flex-col justify-between">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-medium text-sky-700">1-{totalTarget} Yuva Şablonu</span>
-            <Database className="w-4 h-4 text-sky-600" />
-          </div>
-          <div className="mt-1 flex items-center justify-between gap-1">
-            <span className="text-sm font-semibold text-sky-900">
-              {emptyCount > 0 ? `${emptyCount} boş yuva` : 'Tüm yuvalar hazır'}
+    <div className="bg-white rounded-[18px] border border-line overflow-hidden">
+      {/* Pool status strip */}
+      <div className="px-5 sm:px-6 py-4 sm:py-5 flex flex-col gap-3 border-b border-line">
+        <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
+          <span className="flex items-baseline gap-2">
+            <span className="font-display text-[32px] font-bold leading-none tracking-[-0.03em]">{completedCount}</span>
+            <span className="text-[14px] text-ink-2">/ {totalTarget} soru kuruldu</span>
+          </span>
+          <span className="flex flex-wrap gap-4 text-[13px] text-ink-2">
+            <span className="inline-flex items-center gap-1.5">
+              <Check className="w-3.5 h-3.5 text-ok" strokeWidth={3} />
+              Doğrulandı <span className="font-mono text-ink">{completedCount}</span>
             </span>
-            {isAdmin ? (
-              <button
-                onClick={onGenerateSlots}
-                disabled={isGeneratingSlots}
-                className="text-xs bg-sky-600 hover:bg-sky-700 text-white font-medium px-2 py-1 rounded transition-colors disabled:opacity-50 cursor-pointer"
-                title="Yönetici: 1-100 soru yuvalarını aç"
-              >
-                {isGeneratingSlots ? 'Oluşturuluyor...' : `1-${totalTarget} Aç`}
+            <span className="inline-flex items-center gap-1.5">
+              <CircleDashed className="w-3.5 h-3.5 text-warn" />
+              Taslak <span className="font-mono text-ink">{gatheringCount}</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              Boş yuva <span className="font-mono text-ink">{emptyCount}</span>
+            </span>
+          </span>
+          {isAdmin && emptyCount > 0 && (
+            <button
+              type="button"
+              onClick={onGenerateSlots}
+              disabled={isGeneratingSlots}
+              className="ml-auto h-9 px-3.5 rounded-[10px] border border-line-2 bg-white text-[13px] font-semibold cursor-pointer disabled:opacity-50"
+              title="Yönetici: soru yuvalarını aç"
+            >
+              {isGeneratingSlots ? 'Oluşturuluyor…' : `1–${totalTarget} yuvalarını aç`}
+            </button>
+          )}
+        </div>
+        <div
+          role="img"
+          aria-label={`${completedCount} doğrulandı, ${gatheringCount} taslak`}
+          className="flex h-2 rounded-full overflow-hidden gap-[3px] bg-line-soft"
+        >
+          {completedCount > 0 && <span className="bg-ok-bright" style={{ width: pct(completedCount) }} />}
+          {gatheringCount > 0 && <span className="bg-[#F59E0B]" style={{ width: pct(gatheringCount) }} />}
+        </div>
+      </div>
+
+      {/* Search & filters */}
+      <div className="px-5 sm:px-6 py-4 flex flex-col gap-3.5">
+        <div className="flex flex-col md:flex-row md:items-center gap-3">
+          <label className="flex items-center gap-2 h-11 px-3 border border-line-2 rounded-[10px] bg-field flex-1 md:max-w-[440px] focus-within:border-accent">
+            <Search className="w-4 h-4 text-ink-2 shrink-0" />
+            <span className="sr-only">Soru havuzunda ara</span>
+            <input
+              type="search"
+              placeholder="Soru no, hastalık, ilaç ya da anahtar kelime"
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-[#6B7785]"
+            />
+          </label>
+
+          <div className="flex flex-wrap items-center gap-2 md:ml-auto">
+            <div role="group" aria-label="Durum" className="flex gap-1 bg-canvas rounded-[10px] p-[3px]">
+              <button type="button" aria-pressed={selectedStatus === 'Tümü'} onClick={() => onSelectStatus('Tümü')} className={segBtn(selectedStatus === 'Tümü')}>
+                Tümü
               </button>
-            ) : (
-              <span className="text-[11px] text-slate-500 font-medium">
-                {emptyCount > 0 ? `${emptyCount} Boş` : 'Dolu'}
-              </span>
+              <button type="button" aria-pressed={selectedStatus === 'completed'} onClick={() => onSelectStatus('completed')} className={segBtn(selectedStatus === 'completed')}>
+                Doğrulanan
+              </button>
+              <button type="button" aria-pressed={selectedStatus === 'gathering'} onClick={() => onSelectStatus('gathering')} className={segBtn(selectedStatus === 'gathering')}>
+                Taslak
+              </button>
+            </div>
+
+            {myQuestionsCount !== undefined && onToggleMyQuestionsOnly && (
+              <button
+                type="button"
+                onClick={onToggleMyQuestionsOnly}
+                aria-pressed={filterMyQuestionsOnly}
+                className={`h-[38px] px-3 rounded-[10px] text-[13px] inline-flex items-center gap-1.5 cursor-pointer ${
+                  filterMyQuestionsOnly ? 'border-[1.5px] border-accent bg-accent-soft text-accent font-semibold' : 'border border-line bg-white text-ink'
+                }`}
+              >
+                <UserRound className="w-3.5 h-3.5" />
+                Sorularım <span className="font-mono">{myQuestionsCount}</span>
+              </button>
             )}
           </div>
         </div>
-      </div>
 
-      {/* Search and Filters */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-2 border-t border-slate-100">
-        {/* Search Input */}
-        <div className="relative flex-1 max-w-md">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-          <input
-            type="text"
-            placeholder="Soru no, hastalık, ilaç, etken veya anahtar kelime ara..."
-            value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
-            className="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-4 py-2 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all"
-          />
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
+          {DISCIPLINES.map((d) => {
+            const on = selectedDiscipline === d;
+            return (
+              <button
+                key={d}
+                type="button"
+                aria-pressed={on}
+                onClick={() => onSelectDiscipline(d)}
+                className={`shrink-0 h-9 px-3.5 rounded-full text-[14px] cursor-pointer whitespace-nowrap ${
+                  on ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink hover:border-line-2'
+                }`}
+              >
+                {d}
+              </button>
+            );
+          })}
         </div>
-
-        {/* My Questions Only Toggle (if logged in / has questions) */}
-        {myQuestionsCount !== undefined && onToggleMyQuestionsOnly && (
-          <button
-            onClick={onToggleMyQuestionsOnly}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
-              filterMyQuestionsOnly
-                ? 'bg-amber-400 text-slate-950 shadow-xs'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-            }`}
-            title="Sadece benim eklediğim veya katkıda bulunduğum soruları listele"
-          >
-            <span>👤 Sorularım ({myQuestionsCount})</span>
-          </button>
-        )}
-
-        {/* Status Filter */}
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-          <span className="text-xs font-medium text-slate-500 flex items-center gap-1">
-            <Filter className="w-3.5 h-3.5" /> Durum:
-          </span>
-          <div className="inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs">
-            <button
-              onClick={() => onSelectStatus('Tümü')}
-              className={`px-2 sm:px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
-                selectedStatus === 'Tümü'
-                  ? 'bg-white text-slate-900 shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              Tümü
-            </button>
-            <button
-              onClick={() => onSelectStatus('completed')}
-              className={`px-2 sm:px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
-                selectedStatus === 'completed'
-                  ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <span className="hidden sm:inline">Tamamlanan (%100)</span>
-              <span className="sm:hidden">%100</span>
-            </button>
-            <button
-              onClick={() => onSelectStatus('gathering')}
-              className={`px-2 sm:px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
-                selectedStatus === 'gathering'
-                  ? 'bg-amber-500 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <span className="hidden sm:inline">Taslak / Katkı Bekleyen</span>
-              <span className="sm:hidden">Taslak</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Discipline Chips Filter */}
-      <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs no-scrollbar">
-        <span className="text-slate-400 shrink-0 font-medium mr-1">Dersler:</span>
-        {DISCIPLINES.map((d) => (
-          <button
-            key={d}
-            onClick={() => onSelectDiscipline(d)}
-            className={`px-2.5 py-1 rounded-md transition-colors font-medium whitespace-nowrap cursor-pointer ${
-              selectedDiscipline === d
-                ? 'bg-teal-700 text-white font-semibold shadow-xs'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-            }`}
-          >
-            {d}
-          </button>
-        ))}
       </div>
     </div>
   );
