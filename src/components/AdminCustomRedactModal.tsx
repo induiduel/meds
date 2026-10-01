@@ -32,6 +32,8 @@ interface AdminCustomRedactModalProps {
 }
 
 const PROMPT_SUGGESTIONS = [
+  'Soru kökü ve şıklardaki yazım/harf hatalarını düzelt ve profesyonel sınav diline getir.',
+  'Soru kökünü "aşağıdakilerden hangisi DEĞİLDİR / YANLIŞTIR" şeklinde olumsuz soruya dönüştür ve seçenekleri buna göre uyarla.',
   'Bu soruyu Robbins Temel Patoloji tıp kitabındaki TUS/USMLE formatında 5 şıklı klinik vaka sorusuna dönüştür.',
   'Amfi ders notunda vurgulanan fizyopatolojik mekanizmayı sorgulayacak şekilde soru kökünü ve çeldiricileri revize et.',
   'Çeldiricileri (şıkları) birbirini dışlayan ve ayırıcı tanı gerektiren güçlü tıp seçenekleriyle 5 şık olarak tamamla.',
@@ -106,12 +108,15 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
         ? `Ders Notu: ${matchedSlideNote.noteTitle} (Sayfa #${matchedSlideNote.pageNumber})\nSlayt Özeti: ${matchedSlideNote.snippet}`
         : undefined;
 
+      const customApiKey = localStorage.getItem('medsoru_gemini_api_key') || localStorage.getItem('medsoru_custom_gemini_key') || undefined;
+
       const res = await ApiService.adminCustomRedactQuestion({
         question,
         customPrompt: customPrompt.trim(),
         groundingNote: groundingText,
         model: selectedModel,
         adminEmail: ADMIN_EMAIL,
+        apiKey: customApiKey,
       });
 
       if (res.success && res.reconstruction) {

@@ -1316,10 +1316,15 @@ app.post('/api/questions/:id/ai-reconstruct', async (req, res) => {
   try {
     const committee = db.committees.find((c) => c.id === question.committeeId);
 
+    const commentsList = (question.comments || []);
+    const commentsSummary = commentsList.length > 0
+      ? commentsList.map((c: any) => `- [${c.author || 'Öğrenci Yorumu'}]: "${c.text}"`).join('\n')
+      : 'Henüz ek yorum/düzeltme girilmedi.';
+
     const promptContext = `
 Sen Türkiye'deki Tıp Fakültesi Dönem 3 (veya TUS) kurul sınavı soruları hazırlama ve rekonstrüksiyonunda uzmanlaşmış kıdemli bir tıp akademisyenisin.
-Öğrenciler sınavdan çıktıktan sonra bu soruyu ve şıklarını parça parça hatırlamış ve sisteme girmişlerdir.
-Senin görevin: Öğrencilerin girdiği dağınık hafıza kırıntılarını, ipuçlarını, önerilen şıkları ve tartışmaları analiz ederek;
+Öğrenciler sınavdan çıktıktan sonra bu soruyu, şıklarını ve düzeltme önerilerini parça parça hatırlamış ve sisteme girmişlerdir.
+Senin görevin: Öğrencilerin girdiği dağınık hafıza kırıntılarını, ipuçlarını, önerilen şıkları, tartışmaları ve düzeltme yorumlarını analiz ederek;
 bu soruyu %100 tıbbi akademik doğruluğa ve sınav diline (vaka sorusu, klinik senaryo, patofizyoloji/farmakoloji standardı) uygun TEK BİR TAM SORU VE 5 ŞIK (A, B, C, D, E) haline getirmektir!
 
 Sınav & Kurul Bilgisi:
@@ -1346,13 +1351,16 @@ ${
     : 'Henüz tam şık girilmedi.'
 }
 
-Lütfen şu kurallara kesinlikle uy:
-1. "stem": Dilbilgisi kusursuz, Türkçe tıp fakültesi kurul sınavı veya TUS formatında akıcı, net bir soru kökü oluştur. Vaka sorusu ise yaş, cinsiyet, şikayet süresi, laboratuvar/klinik bulgular ve ardından kesin soru cümlesi ("Aşağıdakilerden hangisidir?", "En olası tanı hangisidir?", "Hangisi yanlıştır?" vb.) olsun.
-2. "options": Tam 5 adet şık (A, B, C, D, E) oluştur. Öğrencilerin hatırladığı geçerli şıkları koru ve düzenle. Eksik şıklar varsa mantıklı tıbbi çeldiricilerle 5 şıkkı tamamla. "isAiFilled" alanını, eğer o şıkkı öğrenci hiç belirtmemişse ve sen sıfırdan eklediysen true yap, öğrencilerin hatırladığı bir şıkkı düzelttiysen false yap.
-3. "correctAnswer": A, B, C, D veya E. Tıbbi literatüre göre kesin doğru cevabı seç.
-4. "explanation": Dönem 3 tıp öğrencisinin hemen anlayacağı, patofizyolojik mekanizma veya farmakolojik etki mekanizmasını içeren doyurucu tıp açıklaması (Robbins Patoloji / Katzung Farmakoloji / Murray Mikrobiyoloji standardında).
-5. "confidenceScore": 0-100 arası bir tam sayı. Öğrencilerin sağladığı ipuçlarının zenginliğine ve kesinliğine göre tahmin edilen rekonstrüksiyon güven oranı. (Eğer çok az veri varsa 60-75, çok net veri varsa 90-99).
-6. "notesAndDiscrepancies": Öğrencilerin hatırladığı veriler arasında çelişki varsa veya hatırlanmayan kritik bir nokta varsa kısa Türkçe not yaz.
+Öğrenci Yorumları, Düzeltme Önerileri ve İpuçları:
+${commentsSummary}
+
+LÜTFEN ŞU KURALLARA KESİNLİKLE UY:
+1. YAZIM VE İMLA HATALARINI DOĞRUDAN DÜZELT: Öğrenci parçalarında veya yorumlarında belirtilen yazım/harf hatalarını ("biri- kir" yerine "birikir" yazılması gibi) doğrudan tespit et ve nihai soru köküne ile şıklara düzeltilmiş olarak yansıt.
+2. SORU KÖKÜ FORMÜLASYONU & OLUMSUZLUK: Eğer yorumlarda veya parçalarda sorunun "değildir" veya "yanlıştır" şeklinde sorulduğu belirtiliyorsa, soru kökünü kesinlikle olumsuz sınav formatında ("...aşağıdakilerden hangisi DEĞİLDİR?", "...hangisi YANLIŞTIR?") kurgula ve doğru yanıtı buna göre belirle.
+3. KUSURSUZ SINAV KÖKÜ (METİN SAFLIĞI): "stem" alanına sadece resmi sınav kağıdında yer alacak saf soru metnini yaz! Asla idari etiketler, "(Öğrenci Notu: ...)", "...kapsamında" gibi meta-metinler ekleme!
+4. 5 ADET ŞIK (A, B, C, D, E): Öğrencilerin hatırladığı geçerli şıkları koru ve dilini düzelt. Eksik şıkları tıp standartlarında mantıklı çeldiricilerle 5'e tamamla. Sıfırdan eklediğin şıklar için "isAiFilled: true", öğrencilerin girdiğini düzelttiklerin için "isAiFilled: false" yap.
+5. DOĞRU CEVAP & AÇIKLAMA: Tıbbi literatüre göre kesin doğru cevabı (A-E) seç. Robbins / Katzung / Guyton standardında patofizyolojik / farmakolojik etki mekanizmasını ve çeldiricilerin neden elendiğini "explanation" alanında açıkla.
+6. GÜVEN SKORU & NOTLAR: "confidenceScore" alanına 0-100 arası puan ver. Öğrencilerin hafıza parçaları arasındaki çelişkileri veya yapılan düzeltmeleri "notesAndDiscrepancies" alanında özetle.
 `;
 
     const response = await ai.models.generateContent({
@@ -1367,7 +1375,7 @@ Lütfen şu kurallara kesinlikle uy:
           properties: {
             stem: {
               type: Type.STRING,
-              description: 'Rekonstrükte edilmiş eksiksiz soru metni ve kökü',
+              description: 'Rekonstrükte edilmiş eksiksiz saf soru metni ve kökü',
             },
             options: {
               type: Type.ARRAY,
@@ -1415,8 +1423,12 @@ Lütfen şu kurallara kesinlikle uy:
 
     const parsed = JSON.parse(response.text?.trim() || '{}');
 
+    // Ensure pure stem without leaked meta-prefixes
+    let cleanStem = (parsed.stem || 'Soru kökü derleniyor...').trim();
+    cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
+
     question.reconstruction = {
-      stem: parsed.stem || 'Soru kökü derleniyor...',
+      stem: cleanStem,
       options: (parsed.options || []).map((o: any) => ({
         key: o.key as 'A' | 'B' | 'C' | 'D' | 'E',
         text: o.text,
@@ -1434,13 +1446,23 @@ Lütfen şu kurallara kesinlikle uy:
     question.updatedAt = new Date().toISOString();
     saveDatabase();
 
+    // Mirror to Supabase if connected
+    syncQuestionToSupabase(question);
+
     res.json({ reconstruction: question.reconstruction, question });
   } catch (error: any) {
     console.error('Gemini Reconstruction Error:', error);
     question.status = 'gathering';
     saveDatabase();
-    res.status(500).json({
-      error: 'Yapay zeka rekonstrüksiyonu sırasında bir hata oluştu: ' + (error?.message || 'Bilinmeyen hata'),
+
+    const errMsg = error?.message || '';
+    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
+    const userMsg = isQuota
+      ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı ekleyin.'
+      : 'Yapay zeka rekonstrüksiyonu sırasında bir hata oluştu: ' + (errMsg || 'Bilinmeyen hata');
+
+    res.status(isQuota ? 429 : 500).json({
+      error: userMsg,
     });
   }
 });
@@ -2663,38 +2685,25 @@ KURALLAR:
           }
         });
       } catch (geminiErr: any) {
-        console.warn('Gemini generate-similar-question error, falling back to rule generator:', geminiErr.message);
+        console.error('Gemini generate-similar-question error:', geminiErr);
+        const errMsg = geminiErr?.message || '';
+        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
+        const userMsg = isQuota
+          ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı tanımlayın.'
+          : `Yapay zeka benzer soru üretemedi: ${errMsg || 'API yanıt vermedi'}`;
+        return res.status(isQuota ? 429 : 502).json({
+          success: false,
+          error: userMsg
+        });
       }
     }
 
-    // Fallback: Rule-based intelligent clinical variant generator
-    const variantStem = `${discipline} kurul sınavı ve "${noteTitle}" (Slayt #${slidePage}) konusu kapsamında;\n\n"${topic}" patolojisi ve klinik bulguları incelenen bir hastada; altta yatan patofizyolojik mekanizma ve ${discipline.toLowerCase()} klinik yaklaşımı açısından aşağıdakilerden hangisi EN OLASI tanıyı / doğru ifadeyi temsil eder?`;
-    
-    res.json({
-      success: true,
-      question: {
-        id: `ai-similar-${Date.now()}`,
-        discipline,
-        topic: `Benzer Ek Soru: ${topic}`,
-        stem: variantStem,
-        options: [
-          { key: 'A', text: `Hücresel düzeyde ${topic} ile ilişkili hasarın geri dönüşümsüz faza geçmesi` },
-          { key: 'B', text: `Primer etiyolojide inflamatuar kaskadın sitokin aracılı regülasyonu` },
-          { key: 'C', text: `${noteTitle} slaytında vurgulanan karakteristik morfolojik / biyokimyasal belirteç artışı` },
-          { key: 'D', text: `Sekonder patolojide gelişen vasküler permeabilite ve doku ödemi` },
-          { key: 'E', text: `Klinik seyirde spontan regresyon gösteren fizyolojik adaptasyon mekanizması` }
-        ],
-        correctAnswer: 'C',
-        explanation: `Bu ek soru, "${sourcePdf}" çıkmış sınav sorusu ile "${noteTitle}" (Slayt #${slidePage}) slaytında yer alan patolojik prensipler temel alınarak oluşturulmuştur. Temel mekanizma ilgili slayt sayfasında ayrıntılı açıklanmaktadır.`,
-        sourceExamPdf: sourcePdf,
-        matchedNoteTitle: noteTitle,
-        matchedSlidePage: slidePage,
-        isAiGenerated: true,
-        createdAt: new Date().toISOString()
-      }
+    return res.status(400).json({
+      success: false,
+      error: 'Gemini API anahtarı (GEMINI_API_KEY) tanımlı değil. Benzer soru üretebilmek için geçerli bir API anahtarı gereklidir.'
     });
   } catch (err: any) {
-    res.status(500).json({ error: 'Ek soru üretilemedi: ' + err.message });
+    res.status(500).json({ success: false, error: 'Ek soru üretilemedi: ' + err.message });
   }
 });
 
@@ -2703,19 +2712,26 @@ app.post('/api/ai/admin-custom-redact', async (req, res) => {
   try {
     const { question, customPrompt, groundingNote, model = 'gemini-3.8-flash', adminEmail } = req.body;
     if (!question) {
-      return res.status(400).json({ error: 'Soru verisi eksik.' });
+      return res.status(400).json({ success: false, error: 'Soru verisi eksik.' });
     }
 
-    const apiKey = process.env.GEMINI_API_KEY || dotenv.config().parsed?.GEMINI_API_KEY;
-    const baseStem = question.reconstruction?.stem || question.fragments?.[0]?.text || question.rawStem || question.topic || '';
+    const apiKey = req.body.apiKey || process.env.GEMINI_API_KEY || dotenv.config().parsed?.GEMINI_API_KEY;
+    if (!apiKey) {
+      return res.status(400).json({
+        success: false,
+        error: 'Gemini API anahtarı (GEMINI_API_KEY) tanımlı değil. Lütfen .env dosyasında geçerli bir API anahtarı tanımlayın veya Ayarlar panelinden anahtarınızı girin.'
+      });
+    }
+
+    const baseStem = question.reconstruction?.stem || question.rawQuestion?.stem || question.fragments?.[0]?.text || question.rawStem || question.topic || '';
     const currentOptions = (question.reconstruction?.options || question.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
     const claimedAns = question.claimedAnswer || question.reconstruction?.correctAnswer || '';
     const discipline = question.discipline || 'Tıp Fakültesi Dönem 3';
     const topic = question.topic || 'Klinik Tıp';
     const commentsText = (question.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
 
-    const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
-Aşağıda verilen tıp fakültesi kurul sınavı sorusunu, yöneticinin (Admin) verdiği ÖZEL TALİMATLARA harfiyen uyarak yeniden redakte et, düzelt ve zenginleştir.
+    const prompt = `Sen Tıp Fakültesi Kurul/Komite ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+Aşağıda verilen tıp fakültesi sınav sorusunu, yöneticinin (Admin) veya öğrencilerin verdiği TALİMAT, DÜZELTME, YORUM ve İPUÇLARINA HARFİYEN UYARAK doğrudan soru üzerinde uygula, düzelt, redakte et ve eksiksiz bir sınav sorusuna dönüştür.
 
 MEVCUT SORU BİLGİLERİ:
 Disiplin: ${discipline}
@@ -2726,23 +2742,40 @@ ${baseStem}
 Mevcut Şıklar:
 ${currentOptions || 'Şıklar henüz girilmemiş.'}
 Doğru/İşaretlenen Cevap: ${claimedAns || 'Belirtilmemiş'}
-${commentsText ? `Öğrenci Yorumları & İpuçları:\n${commentsText}` : ''}
-${groundingNote ? `İlgili Amfi Ders Slaytı:\n${groundingNote}` : ''}
+${commentsText ? `Öğrenci Yorumları & İpuçları & Düzeltme Önerileri:\n${commentsText}` : ''}
+${groundingNote ? `İlgili Amfi Ders Slaytı / Kaynak:\n${groundingNote}` : ''}
 
-ADMİN'İN ÖZEL REDAKSİYON TALİMATI:
+ADMİN / KULLANICI ÖZEL TALİMATI:
 """
 ${customPrompt || 'Bu soruyu 5 şıklı, tıp standartlarında, çeldiricileri güçlü ve doyurucu açıklamalı bir vaka sorusu formatına dönüştür.'}
 """
 
-KURALLAR:
-1. Kesinlikle 5 şık (A, B, C, D, E) üret. Şıklar birbirini tekrar etmemeli veya bariz olmamalı.
-2. Doğru cevabı açıkça belirle (A, B, C, D veya E).
-3. Klinik ve patofizyolojik mekanizmayı, Robbins / Katzung / Guyton tıp literatürü standartlarında doyurucu bir şekilde "explanation" alanına yaz.
-4. "confidenceScore" alanına 80-100 arası bir güven puanı ver.
-5. "notesAndDiscrepancies" alanına adminin talimatı doğrultusunda yapılan değişiklikleri özetleyen kısa bir not yaz.
-6. Yalnızca aşağıdaki JSON formatında geçerli bir yanıt dön:
+TALİMATLARI ANLAMA VE DOĞRUDAN UYGULAMA KURALLARI:
+1. YAZIM / İMLA HATALARINI DOĞRUDAN DÜZELTME:
+   - Eğer talimatta veya yorumda "yazım hatası var", "şu şekilde yaz", "... olarak düzelt" deniliyorsa (örneğin "Vücuda alınan kurşunun çoğu hangi dokuda biri- kir?" sorusuna "birikir şeklinde yaz" veya "yazım hatasını düzelt" denilmişse),
+   - Soru kökündeki veya şıklardaki bu hatayı DOĞRUDAN DÜZELTEREK nihai soru köküne ("Vücuda alınan kurşunun çoğu hangi dokuda birikir?") yansıt.
+2. SORU KÖKÜNÜ TERSİNE ÇEVİRME / OLUMSUZLAŞTIRMA ("DEĞİLDİR", "YANLIŞTIR"):
+   - Eğer talimatta "Soru bize değildir kökü ile soruldu", "hangisi yanlıştır diye soruldu", "olumsuz köktü" veya benzeri bir ifade varsa,
+   - Soru kökünü kesinlikle olumsuz sınav formatına çevir (Örn: "...aşağıdakilerden hangisi DEĞİLDİR?", "...aşağıdaki ifadelerden hangisi YANLIŞTIR?").
+   - Şıkları ve doğru cevabı bu olumsuz mantığa göre yeniden düzenle (doğru cevap bu durumda yanlış/olumsuz olan ifade olmalıdır).
+3. ŞIK VE İÇERİK DÜZELTMELERİ:
+   - Eğer talimat veya yorumda "C şıkkı kemikti", "A şıkkı karaciğer olmalı", "cevap eritrosit olmalı" gibi şık/cevap düzeltmeleri varsa, bu şıkları ve doğru cevabı doğrudan güncelle.
+4. KUSURSUZ VE SAF SINAV KÖKÜ (ÇOK KRİTİK):
+   - "stem" (soru kökü) alanına KESİNLİKLE VE SADECE resmi sınav kağıdında yer alacak saf soru metnini yaz!
+   - KESİNLİKLE YASAKTIR: Soru köküne "(Admin Talimatı: ...)", "[Klinik Değerlendirme]", "...kapsamında" gibi idari etiketler, talimat tekrarları veya kalıp cümleler EKLEME!
+   - Kullanıcının talimatını soru metninin içine asla tırnak içinde kopyalama! Yapılan değişiklikleri sadece "notesAndDiscrepancies" alanında özetle.
+5. 5 ŞIK VE TIBBİ KALİTE:
+   - A, B, C, D, E olmak üzere tam 5 adet bağımsız, mantıklı ve tıp fakültesi Dönem 3 kurul düzeyinde güçlü çeldiricileri olan şık oluştur.
+   - Doğru cevabı net olarak belirt.
+6. AKADEMİK DERİN AÇIKLAMA:
+   - Robbins Tıbbi Patoloji, Katzung Farmakoloji veya Guyton Tıbbi Fizyoloji düzeyinde derin patofizyolojik/farmakolojik mekanizmayı, doğru yanıtın tıbbi kanıtını ve diğer şıkların neden elendiğini "explanation" alanında açıkla.
+7. GÜVEN PUANI VE NOTLAR:
+   - "confidenceScore" alanına 80-100 arası bir güven puanı ver.
+   - "notesAndDiscrepancies" alanına talimat doğrultusunda yapılan değişiklikleri (örn. "Yazım hatası 'biri- kir' -> 'birikir' olarak düzeltildi.", "Soru kökü 'değildir' formatına uyarlandı.") özetleyen kısa bir not yaz.
+
+YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
 {
-  "stem": "Redakte edilmiş soru kökü...",
+  "stem": "Resmi sınav formatında, saf, kusursuz soru kökü...",
   "options": [
     { "key": "A", "text": "...", "isAiFilled": false },
     { "key": "B", "text": "...", "isAiFilled": false },
@@ -2751,95 +2784,91 @@ KURALLAR:
     { "key": "E", "text": "...", "isAiFilled": false }
   ],
   "correctAnswer": "A",
-  "explanation": "Detaylı açıklama...",
+  "explanation": "Detaylı klinik patofizyolojik açıklama...",
   "confidenceScore": 95,
   "notesAndDiscrepancies": "..."
 }`;
 
-    if (apiKey) {
-      try {
-        const { GoogleGenAI } = await import('@google/genai');
-        const clientAi = new GoogleGenAI({ apiKey });
-        const geminiRes = await clientAi.models.generateContent({
-          model: model || 'gemini-3.8-flash',
-          contents: prompt,
-          config: { responseMimeType: 'application/json' }
-        });
-        const text = geminiRes.text || '{}';
-        const parsed = JSON.parse(text);
+    const { GoogleGenAI } = await import('@google/genai');
+    const clientAi = new GoogleGenAI({ apiKey });
+    let text = '{}';
 
-        // Update local files if question id matches
-        const qId = question.id;
-        const pastPath = path.join(__dirname, 'data', 'pastQuestions.json');
-        if (fs.existsSync(pastPath)) {
-          try {
-            const list = JSON.parse(fs.readFileSync(pastPath, 'utf8'));
-            const idx = list.findIndex((x: any) => x.id === qId);
-            if (idx !== -1) {
-              list[idx].reconstruction = {
-                stem: parsed.stem,
-                options: parsed.options,
-                correctAnswer: parsed.correctAnswer,
-                explanation: parsed.explanation,
-                confidenceScore: parsed.confidenceScore || 95,
-                notesAndDiscrepancies: parsed.notesAndDiscrepancies || `Admin özel redaksiyonu (${adminEmail || 'Admin'})`,
-                lastUpdated: new Date().toISOString()
-              };
-              list[idx].claimedAnswer = parsed.correctAnswer;
-              list[idx].status = 'completed';
-              list[idx].customRedactedBy = adminEmail || 'Admin';
-              list[idx].customRedactedAt = new Date().toISOString();
-              list[idx].customRedactionPrompt = customPrompt;
-              fs.writeFileSync(pastPath, JSON.stringify(list, null, 2), 'utf8');
+    try {
+      const geminiRes = await clientAi.models.generateContent({
+        model: model || 'gemini-3.8-flash',
+        contents: prompt,
+        config: { responseMimeType: 'application/json' }
+      });
+      text = geminiRes.text || '{}';
+    } catch (gemErr: any) {
+      console.error('Admin custom redact Gemini error:', gemErr);
+      const errMsg = gemErr?.message || '';
+      const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
+      const userMsg = isQuota
+        ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı tanımlayın.'
+        : `Yapay zeka redaksiyonu başarısız oldu: ${errMsg || 'API yanıt vermedi'}`;
 
-              const srcPast = path.join(__dirname, 'src', 'data', 'pastQuestions.json');
-              if (fs.existsSync(srcPast)) {
-                fs.writeFileSync(srcPast, JSON.stringify(list, null, 2), 'utf8');
-              }
-            }
-          } catch (e) {}
-        }
-
-        return res.json({
-          success: true,
-          reconstruction: {
-            stem: parsed.stem,
-            options: parsed.options,
-            correctAnswer: parsed.correctAnswer,
-            explanation: parsed.explanation,
-            confidenceScore: parsed.confidenceScore || 95,
-            notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Admin özel talimatı ile redakte edildi.',
-            lastUpdated: new Date().toISOString()
-          }
-        });
-      } catch (gemErr: any) {
-        console.warn('Admin custom redact Gemini error:', gemErr.message);
-      }
+      return res.status(isQuota ? 429 : 502).json({
+        success: false,
+        error: userMsg
+      });
     }
 
-    // Fallback if no API key or call failed
-    const fallbackRecon = {
-      stem: `${discipline} - ${topic} kapsamında (Admin Talimatı: "${(customPrompt || '').slice(0, 80)}...");\n\n${baseStem}`,
-      options: [
-        { key: 'A', text: question.options?.[0]?.text || 'Patolojik kaskadın sitokin aktivasyonu ile indüklenmesi', isAiFilled: false },
-        { key: 'B', text: question.options?.[1]?.text || 'Hücresel düzeyde geri dönüşümsüz hasar gelişimi', isAiFilled: false },
-        { key: 'C', text: question.options?.[2]?.text || 'Mekanizmanın amfi ders slaytında vurgulanan belirteçleri', isAiFilled: false },
-        { key: 'D', text: question.options?.[3]?.text || 'Sekonder komplikasyonlara bağlı vasküler tromboz', isAiFilled: true },
-        { key: 'E', text: question.options?.[4]?.text || 'Spontan klinik rezolüsyon ve adaptasyon süreci', isAiFilled: true }
-      ],
-      correctAnswer: (claimedAns as any) || 'C',
-      explanation: `Bu soru admin talimatı ("${(customPrompt || '').slice(0, 100)}") doğrultusunda düzenlenmiştir. ${groundingNote ? 'Amfi ders notu referans alınmıştır.' : ''}`,
-      confidenceScore: 90,
-      notesAndDiscrepancies: `Admin özel redaksiyonu (${adminEmail || 'Admin'}) uygulandı.`,
+    const parsed = JSON.parse(text);
+    if (!parsed.stem || !parsed.options || !Array.isArray(parsed.options)) {
+      return res.status(502).json({
+        success: false,
+        error: 'Yapay zeka geçerli bir soru formatı üretemedi. Lütfen talimatınızı değiştirip tekrar deneyin.'
+      });
+    }
+
+    // Clean pure stem: ensure no "(Admin Talimatı" or similar prefix leaked
+    let cleanStem = parsed.stem.trim();
+    cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
+
+    const reconstruction = {
+      stem: cleanStem,
+      options: parsed.options,
+      correctAnswer: parsed.correctAnswer || 'A',
+      explanation: parsed.explanation || '',
+      confidenceScore: parsed.confidenceScore || 95,
+      notesAndDiscrepancies: parsed.notesAndDiscrepancies || `Admin özel talimatı ile redakte edildi (${adminEmail || 'Admin'})`,
       lastUpdated: new Date().toISOString()
     };
 
-    res.json({
+    // Update local files if question id matches
+    const qId = question.id;
+    const pastPath = path.join(__dirname, 'data', 'pastQuestions.json');
+    if (fs.existsSync(pastPath)) {
+      try {
+        const list = JSON.parse(fs.readFileSync(pastPath, 'utf8'));
+        const idx = list.findIndex((x: any) => x.id === qId);
+        if (idx !== -1) {
+          list[idx].reconstruction = reconstruction;
+          list[idx].claimedAnswer = reconstruction.correctAnswer;
+          list[idx].status = 'completed';
+          list[idx].customRedactedBy = adminEmail || 'Admin';
+          list[idx].customRedactedAt = new Date().toISOString();
+          list[idx].customRedactionPrompt = customPrompt;
+          fs.writeFileSync(pastPath, JSON.stringify(list, null, 2), 'utf8');
+
+          const srcPast = path.join(__dirname, 'src', 'data', 'pastQuestions.json');
+          if (fs.existsSync(srcPast)) {
+            fs.writeFileSync(srcPast, JSON.stringify(list, null, 2), 'utf8');
+          }
+
+          // Mirror update to Supabase
+          syncPastQuestionToSupabase(list[idx]);
+        }
+      } catch (e) {}
+    }
+
+    return res.json({
       success: true,
-      reconstruction: fallbackRecon
+      reconstruction
     });
   } catch (err: any) {
-    res.status(500).json({ error: 'Redaksiyon işlemi gerçekleştirilemedi: ' + err.message });
+    res.status(500).json({ success: false, error: 'Redaksiyon işlemi gerçekleştirilemedi: ' + err.message });
   }
 });
 

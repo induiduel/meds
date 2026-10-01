@@ -1163,11 +1163,13 @@ export const ApiService = {
     const db = getLocalDb();
     let q = db.questions.find((item) => item.id === questionId);
 
+    let serverErrorMsg = '';
+
     // 1. Try server AI endpoint first (calls Gemini with full faculty prompt)
     try {
       const customUrl = getCustomApiUrl();
       const endpoint = customUrl ? `${customUrl}/api/questions/${questionId}/ai-reconstruct` : `/api/questions/${questionId}/ai-reconstruct`;
-      const res = await safeJsonFetch<{ reconstruction: ReconstructedQuestion; question: QuestionItem }>(endpoint, {
+      const res = await safeJsonFetch<{ reconstruction: ReconstructedQuestion; question: QuestionItem; error?: string }>(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -1188,8 +1190,11 @@ export const ApiService = {
         }
         saveLocalDb(db);
         return updated;
+      } else {
+        serverErrorMsg = res.data?.error || (res as any).error || '';
       }
-    } catch (e) {
+    } catch (e: any) {
+      serverErrorMsg = e.message || '';
       console.warn('Server ai-reconstruct unreachable, trying client fallback...', e);
     }
 
@@ -1211,6 +1216,8 @@ export const ApiService = {
       (import.meta as any).env?.VITE_GEMINI_API_KEY ||
       '';
 
+    let clientErrorMsg = '';
+
     if (apiKey && apiKey !== 'MY_GEMINI_API_KEY') {
       try {
         const { GoogleGenAI } = await import('@google/genai');
@@ -1222,10 +1229,13 @@ export const ApiService = {
         const optionsSummary = q.options.length > 0
           ? q.options.map((o) => `${o.key}) ${o.text}`).join('\n')
           : 'Şıklar girilmedi.';
+        const commentsSummary = (q.comments && q.comments.length > 0)
+          ? q.comments.map((c: any) => `- [${c.author || 'Öğrenci Yorumu'}]: "${c.text}"`).join('\n')
+          : 'Henüz ek yorum/düzeltme girilmedi.';
 
         const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
-Öğrenciler sınavdan çıktıktan sonra bu soru hakkında hafıza parçaları ve şıklar girmiştir.
-Görevin: Bu dağınık hafıza parçalarını analiz ederek tıp fakültesi kurul sınavı standartlarında TEK BİR TAM VAKA VEYA MEKANİZMA SORUSU ve 5 ŞIK (A-E) oluşturmaktır.
+Öğrenciler sınavdan çıktıktan sonra bu soru hakkında hafıza parçaları, şıklar ve düzeltme yorumları girmiştir.
+Görevin: Bu dağınık hafıza parçalarını, düzeltme önerilerini ve ipuçlarını analiz ederek tıp fakültesi kurul sınavı standartlarında TEK BİR TAM VE KUSURSUZ SORU ve 5 ŞIK (A-E) oluşturmaktır.
 
 Disiplin: ${q.discipline}
 Konu: ${q.topic}
@@ -1236,17 +1246,28 @@ ${fragmentsSummary}
 Öğrenci Şıkları:
 ${optionsSummary}
 
+Öğrenci Yorumları & Düzeltme Önerileri:
+${commentsSummary}
+
 Öğrenci Doğru Cevap İddiası: ${q.claimedAnswer || 'Belirtilmedi'}
 
 KURALLAR:
-1. Öğrencinin yazdığı ham metinleri doğrudan kopyalama! Onları tıbbi bir klinik vaka veya mekanizma sorusuna dönüştür.
-2. Tam 5 şık (A, B, C, D, E) üret.
-3. Kesin doğru cevabı ve 4 bölümlü derin tıp açıklamasını (Patofizyoloji, Doğru Şık, Çeldiriciler, Klinik İpucu) yaz.
+1. YAZIM VE İMLA HATALARINI DÜZELT: Öğrenci parçalarında veya yorumlarında belirtilen yazım/harf hatalarını ("biri- kir" yerine "birikir" yazılması gibi) doğrudan tespit et ve nihai soru köküne ile şıklara düzeltilmiş olarak yansıt.
+2. SORU KÖKÜ FORMÜLASYONU: Eğer yorumlarda veya parçalarda sorunun "değildir" veya "yanlıştır" şeklinde sorulduğu belirtiliyorsa soru kökünü mutlaka olumsuz biçimde ("...hangisi DEĞİLDİR?", "...hangisi YANLIŞTIR?") formüle et ve doğru cevabı buna göre belirle.
+3. KUSURSUZ SINAV KÖKÜ (METİN SAFLIĞI): "stem" alanına sadece resmi sınav kağıdında yer alacak saf soru metnini yaz! Asla idari etiketler, "(Öğrenci Notu: ...)", "...kapsamında" gibi meta-metinler ekleme!
+4. Tam 5 şık (A, B, C, D, E) üret. Öğrencilerin hatırladığı geçerli şıkları koru ve dilini düzelt.
+5. Kesin doğru cevabı ve 4 bölümlü derin tıp açıklamasını (Patofizyoloji, Doğru Şık, Çeldiriciler, Klinik İpucu) yaz.
 
 JSON FORMATI:
 {
-  "stem": "...",
-  "options": [{ "key": "A", "text": "...", "isAiFilled": false }, ...],
+  "stem": "Resmi sınav formatında, saf soru kökü...",
+  "options": [
+    { "key": "A", "text": "...", "isAiFilled": false },
+    { "key": "B", "text": "...", "isAiFilled": false },
+    { "key": "C", "text": "...", "isAiFilled": false },
+    { "key": "D", "text": "...", "isAiFilled": false },
+    { "key": "E", "text": "...", "isAiFilled": false }
+  ],
   "correctAnswer": "A",
   "explanation": "...",
   "confidenceScore": 95,
@@ -1261,13 +1282,16 @@ JSON FORMATI:
 
         const parsed = JSON.parse(geminiRes.text || '{}');
         if (parsed.stem && parsed.options) {
+          let cleanStem = parsed.stem.trim();
+          cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
+
           q.reconstruction = {
-            stem: parsed.stem,
+            stem: cleanStem,
             options: parsed.options,
             correctAnswer: parsed.correctAnswer || q.claimedAnswer || 'A',
             explanation: parsed.explanation || '',
             confidenceScore: parsed.confidenceScore || 92,
-            notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Hafıza parçaları yapay zeka ile sentezlendi.',
+            notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Hafıza parçaları ve yorumlar yapay zeka ile sentezlendi.',
             lastUpdated: new Date().toISOString()
           };
           q.status = 'completed';
@@ -1279,95 +1303,18 @@ JSON FORMATI:
         }
       } catch (err: any) {
         console.warn('Client Gemini synthesis error:', err.message);
+        clientErrorMsg = err.message || '';
       }
     }
 
-    // 3. Akıllı Tıbbi Sentez Motoru (Kalıp metin veya ham kopyalama yapmaz; klinik vaka kurgular)
-    const combinedFragment = q.fragments.map((f) => f.text.trim()).filter(Boolean).join(' ');
-    const claimedAns = q.claimedAnswer || q.options[0]?.key || 'A';
+    // If both server and client fail, report honest error (never generate fake mock options)
+    const combinedErr = `${serverErrorMsg} ${clientErrorMsg}`.trim();
+    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(combinedErr);
+    const finalErr = isQuota
+      ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı tanımlayın.'
+      : (serverErrorMsg || clientErrorMsg || 'Yapay zeka rekonstrüksiyonu gerçekleştirilemedi. Lütfen Gemini API anahtarınızı veya kota durumunuzu kontrol edin.');
 
-    // Gerçekçi Tıbbi Çeldirici Havuzu
-    const medicalOptionsByDiscipline: Record<string, string[]> = {
-      'Farmakoloji': [
-        'Hücre membranında voltaj kapılı iyon kanallarının blokajı',
-        'Hedef enzimin allosterik modülasyonu ile kaskad inhibisyonu',
-        'Reseptör düzeyinde parsiyel agonist etki ve desensitizasyon',
-        'Hepatik sitokrom P450 mikrozomal enzim indüksiyonu',
-        'Renal tübüler transport mekanizmalarının kompetitif inhibisyonu'
-      ],
-      'Patoloji': [
-        'Hücresel düzeyde koagülasyon nekrozu ve nükleer piknoz',
-        'Endotelyal hasar ve mikrovasküler trombüs formasyonu',
-        'Granülasyon dokusu proliferasyonu ve anjiyogenez artışı',
-        'Kronik granülomatöz inflamasyon ve epitelioid histiyositler',
-        'Apoptozis indüksiyonu ve kaspaz aktivasyonu'
-      ],
-      'Mikrobiyoloji': [
-        'Hücre duvarı peptidoglikan sentezinde transpeptidaz inhibisyonu',
-        'Bakteriyel ribozom 30S alt birimine geri dönüşümsüz bağlanma',
-        'Zarflı pozitif polariteli tek zincirli viral RNA replikasyonu',
-        'Endotoksin (LOS) aracılı sistemik inflamatuvar yanıt sendromu',
-        'Hücre içi fakültatif sağkalım ve fagozom-lizozom füzyon blokajı'
-      ]
-    };
-
-    const fallbackList = medicalOptionsByDiscipline[q.discipline] || medicalOptionsByDiscipline['Patoloji'];
-
-    // Şıkları oluştur
-    const letters: ('A' | 'B' | 'C' | 'D' | 'E')[] = ['A', 'B', 'C', 'D', 'E'];
-    const filledOptions = letters.map((letter, i) => {
-      const ex = q.options.find((o) => o.key === letter);
-      if (ex && ex.text.trim()) {
-        return { key: letter, text: ex.text.trim(), isAiFilled: false };
-      }
-      return {
-        key: letter,
-        text: fallbackList[i % fallbackList.length],
-        isAiFilled: true
-      };
-    });
-
-    const chosenOptionText = filledOptions.find(o => o.key === claimedAns)?.text || 'İlgili temel seçenek';
-
-    const synthesizedStem = combinedFragment.length > 15
-      ? `${q.discipline} kurul sınavı kapsamında bildirilen klinik senaryoda; ${combinedFragment}\n\nBu patofizyolojik kaskad ve klinik bulgular göz önüne alındığında, aşağıdaki mekanizmalardan hangisi doğrudan sorumludur?`
-      : `${q.discipline} kurul sınavı #${q.questionNumber}: ${q.topic} konusu kapsamında hedeflenen temel moleküler mekanizma ve klinik ayırıcı tanı parametresi aşağıdakilerden hangisidir?`;
-
-    const deepExplanation = [
-      `【Temel Patofizyolojik & Klinik Mekanizma】:`,
-      `${q.discipline} (${q.topic}) kapsamında ortaya çıkan bu klinik tablonun altında yatan primer patoloji '${chosenOptionText}' sürecidir.`,
-      ``,
-      `【Doğru Yanıt (${claimedAns}) Tıbbi Gerekçesi】:`,
-      `Öğrencilerin sınav sonrası mutabakatı ve standart tıp fakültesi amfi müfredatı doğrultusunda doğru seçenek ${claimedAns} seçeneğidir.`,
-      ``,
-      `【Çeldirici Seçeneklerin Analizi】:`,
-      `Diğer seçenekler alternatif etyolojilerde ve farklı patolojik evrelerde gözlenmekte olup soru kökündeki klinik mekanizmayla örtüşmemektedir.`,
-      ``,
-      `【Klinik İpucu】:`,
-      `Kurul sınavlarında klinik vaka soruları çözülürken anahtar semptomlar ve spesifik patofizyolojik belirteçler öncelikle taranmalıdır.`
-    ].join('\n');
-
-    q.reconstruction = {
-      stem: synthesizedStem,
-      options: filledOptions,
-      correctAnswer: claimedAns as any,
-      explanation: deepExplanation,
-      confidenceScore: Math.min(95, 75 + q.fragments.length * 6),
-      notesAndDiscrepancies: `${q.fragments.length} öğrencinin hatırladığı hafıza parçaları ve seçenek önerileri birleştirilerek rekonstrükte edildi.`,
-      lastUpdated: new Date().toISOString(),
-    };
-
-    q.status = 'completed';
-    q.updatedAt = new Date().toISOString();
-    saveLocalDb(db);
-
-    try {
-      await multiDbManager.saveQuestion(q);
-    } catch (e) {
-      console.warn('multiDbManager saveQuestion fallback', e);
-    }
-
-    return q;
+    throw new Error(finalErr);
   },
 
   async generateSlots(adminEmail: string, committeeId: string, count: number): Promise<void> {
@@ -2101,55 +2048,69 @@ JSON FORMATI:
     groundingNote?: string;
     model?: string;
     adminEmail?: string;
+    apiKey?: string;
   }): Promise<{ success: boolean; reconstruction?: ReconstructedQuestion; error?: string }> {
-    // 1. First try server endpoint
-    const res = await safeJsonFetch<{ success: boolean; reconstruction: ReconstructedQuestion; error?: string }>(
-      '/api/ai/admin-custom-redact',
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(params),
-      }
-    );
-
-    if (res.ok && res.data?.success && res.data.reconstruction) {
-      // Also update Firestore directly
-      try {
-        const updatedQ: QuestionItem = {
-          ...params.question,
-          reconstruction: res.data.reconstruction,
-          status: 'completed',
-          claimedAnswer: res.data.reconstruction.correctAnswer,
-          updatedAt: new Date().toISOString(),
-        };
-        await FirestoreDbService.updatePastQuestion(updatedQ);
-      } catch (_) {}
-      return { success: true, reconstruction: res.data.reconstruction };
-    }
-
-    // 2. Direct client-side Gemini fallback (works on GitHub Pages if API key is provided)
-    const apiKey = (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
+    const customApiKey = params.apiKey ||
+      (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
       localStorage.getItem('medsoru_gemini_api_key') ||
       localStorage.getItem('medsoru_custom_gemini_key') ||
       (import.meta as any).env?.VITE_GEMINI_API_KEY ||
       '';
 
-    if (apiKey) {
+    let serverErrorMsg = '';
+
+    // 1. First try server endpoint
+    try {
+      const res = await safeJsonFetch<{ success: boolean; reconstruction: ReconstructedQuestion; error?: string }>(
+        '/api/ai/admin-custom-redact',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...params, apiKey: customApiKey }),
+        }
+      );
+
+      if (res.ok && res.data?.success && res.data.reconstruction) {
+        // Also update Firestore directly
+        try {
+          const updatedQ: QuestionItem = {
+            ...params.question,
+            reconstruction: res.data.reconstruction,
+            status: 'completed',
+            claimedAnswer: res.data.reconstruction.correctAnswer,
+            updatedAt: new Date().toISOString(),
+          };
+          await FirestoreDbService.updatePastQuestion(updatedQ);
+        } catch (_) {}
+        return { success: true, reconstruction: res.data.reconstruction };
+      } else {
+        serverErrorMsg = res.data?.error || (res as any).error || '';
+      }
+    } catch (e: any) {
+      serverErrorMsg = e.message || '';
+    }
+
+    // 2. Direct client-side Gemini fallback (works on GitHub Pages if API key is provided)
+    if (customApiKey && customApiKey !== 'MY_GEMINI_API_KEY') {
       try {
         const { GoogleGenAI } = await import('@google/genai');
-        const ai = new GoogleGenAI({ apiKey });
+        const ai = new GoogleGenAI({ apiKey: customApiKey });
         const q = params.question;
-        const baseStem = q.reconstruction?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '';
-        const currentOptions = (q.reconstruction?.options || q.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
-        const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
-Aşağıda verilen tıp fakültesi kurul sınavı sorusunu, yöneticinin (Admin) verdiği ÖZEL TALİMATLARA harfiyen uyarak yeniden redakte et, düzelt ve zenginleştir.
+        const baseStem = q.reconstruction?.stem || (q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '';
+        const currentOptions = (q.reconstruction?.options || (q as any).rawQuestion?.options || q.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
+        const commentsText = (q.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
+
+        const prompt = `Sen Tıp Fakültesi Kurul/Komite ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+Aşağıda verilen tıp fakültesi sınav sorusunu, yöneticinin (Admin) veya öğrencilerin verdiği TALİMAT, DÜZELTME, YORUM ve İPUÇLARINA HARFİYEN UYARAK doğrudan soru üzerinde uygula, düzelt, redakte et ve eksiksiz bir sınav sorusuna dönüştür.
 
 MEVCUT SORU:
 Disiplin: ${q.discipline}
 Konu: ${q.topic}
 Mevcut Soru Kökü: ${baseStem}
-Mevcut Şıklar: ${currentOptions}
+Mevcut Şıklar:
+${currentOptions || 'Şıklar girilmedi.'}
 Doğru/İşaretlenen: ${q.claimedAnswer || q.reconstruction?.correctAnswer || 'A'}
+${commentsText ? `Öğrenci Yorumları & İpuçları:\n${commentsText}` : ''}
 ${params.groundingNote ? `İlgili Amfi Dersi Slaytı:\n${params.groundingNote}` : ''}
 
 ADMİN ÖZEL REDAKSİYON TALİMATI:
@@ -2157,13 +2118,28 @@ ADMİN ÖZEL REDAKSİYON TALİMATI:
 ${params.customPrompt || 'Bu soruyu 5 şıklı, tıp standartlarında, çeldiricileri güçlü ve doyurucu açıklamalı bir vaka sorusu formatına dönüştür.'}
 """
 
-KURALLAR:
-1. Kesinlikle 5 şık (A, B, C, D, E) üret.
-2. Doğru cevabı açıkça belirle (A, B, C, D veya E).
-3. Klinik patofizyolojik açıklamayı detaylı yap.
-4. Yalnızca aşağıdaki JSON formatında dön:
+TALİMATLARI ANLAMA VE DOĞRUDAN UYGULAMA KURALLARI:
+1. YAZIM / İMLA HATALARINI DOĞRUDAN DÜZELTME:
+   - Eğer talimatta veya yorumda "yazım hatası var", "şu şekilde yaz", "... olarak düzelt" deniliyorsa (örneğin "Vücuda alınan kurşunun çoğu hangi dokuda biri- kir?" sorusuna "birikir şeklinde yaz" veya "yazım hatasını düzelt" denilmişse),
+   - Soru kökündeki veya şıklardaki bu hatayı DOĞRUDAN DÜZELTEREK nihai soru köküne ("Vücuda alınan kurşunun çoğu hangi dokuda birikir?") yansıt.
+2. SORU KÖKÜNÜ TERSİNE ÇEVİRME / OLUMSUZLAŞTIRMA ("DEĞİLDİR", "YANLIŞTIR"):
+   - Eğer talimatta "Soru bize değildir kökü ile soruldu", "hangisi yanlıştır diye soruldu", "olumsuz köktü" veya benzeri bir ifade varsa,
+   - Soru kökünü kesinlikle olumsuz sınav formatına çevir (Örn: "...aşağıdakilerden hangisi DEĞİLDİR?", "...aşağıdaki ifadelerden hangisi YANLIŞTIR?").
+   - Şıkları ve doğru cevabı bu olumsuz mantığa göre yeniden düzenle (doğru cevap bu durumda yanlış/olumsuz olan ifade olmalıdır).
+3. ŞIK VE İÇERİK DÜZELTMELERİ:
+   - Eğer talimat veya yorumda "C şıkkı kemikti", "A şıkkı karaciğer olmalı", "cevap eritrosit olmalı" gibi şık/cevap düzeltmeleri varsa, bu şıkları ve doğru cevabı doğrudan güncelle.
+4. KUSURSUZ VE SAF SINAV KÖKÜ (ÇOK KRİTİK):
+   - "stem" (soru kökü) alanına KESİNLİKLE VE SADECE resmi sınav kağıdında yer alacak saf soru metnini yaz!
+   - KESİNLİKLE YASAKTIR: Soru köküne "(Admin Talimatı: ...)", "[Klinik Değerlendirme]", "...kapsamında" gibi idari etiketler, talimat tekrarları veya kalıp cümleler EKLEME!
+   - Kullanıcının talimatını soru metninin içine asla kopyalama! Yapılan değişiklikleri sadece "notesAndDiscrepancies" alanında özetle.
+5. 5 ŞIK VE TIBBİ KALİTE:
+   - A, B, C, D, E olmak üzere tam 5 adet bağımsız, mantıklı ve güçlü çeldiricisi olan seçenek oluştur.
+   - Doğru cevabı açıkça belirle (A, B, C, D veya E).
+6. AKADEMİK DERİN AÇIKLAMA:
+   - Klinik patofizyolojik / farmakolojik açıklamayı Robbins/Katzung tıp literatürü düzeyinde detaylı yap.
+7. YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA DÖN:
 {
-  "stem": "Soru metni...",
+  "stem": "Resmi sınav formatında, saf soru kökü...",
   "options": [
     { "key": "A", "text": "...", "isAiFilled": false },
     { "key": "B", "text": "...", "isAiFilled": false },
@@ -2174,7 +2150,7 @@ KURALLAR:
   "correctAnswer": "A",
   "explanation": "Detaylı klinik açıklama...",
   "confidenceScore": 96,
-  "notesAndDiscrepancies": "Admin özel talimatı ile doğrudan Gemini üzerinden redakte edildi."
+  "notesAndDiscrepancies": "..."
 }`;
 
         const geminiRes = await ai.models.generateContent({
@@ -2183,13 +2159,18 @@ KURALLAR:
           config: { responseMimeType: 'application/json' }
         });
         const parsed = JSON.parse(geminiRes.text || '{}');
+
+        // Ensure pure stem without leaked meta-prefixes
+        let cleanStem = (parsed.stem || '').trim();
+        cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
+
         const recon: ReconstructedQuestion = {
-          stem: parsed.stem,
+          stem: cleanStem,
           options: parsed.options,
-          correctAnswer: parsed.correctAnswer,
-          explanation: parsed.explanation,
+          correctAnswer: parsed.correctAnswer || 'A',
+          explanation: parsed.explanation || '',
           confidenceScore: parsed.confidenceScore || 95,
-          notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Gemini istemi ile redakte edildi.',
+          notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Gemini istemi ile doğrudan redakte edildi.',
           lastUpdated: new Date().toISOString()
         };
 
@@ -2208,42 +2189,25 @@ KURALLAR:
         return { success: true, reconstruction: recon };
       } catch (clientErr: any) {
         console.warn('Client-side Gemini failed:', clientErr.message);
+        const errMsg = clientErr?.message || '';
+        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
+        const friendlyError = isQuota
+          ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı ekleyin.'
+          : `Yapay zeka redaksiyonu başarısız oldu: ${errMsg}`;
+        return { success: false, error: friendlyError };
       }
     }
 
-    // 3. Fallback: Intelligent rule-based custom variant
-    const q = params.question;
-    const baseStem = q.reconstruction?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '';
-    const fallbackRecon: ReconstructedQuestion = {
-      stem: `${q.discipline} - ${q.topic} kapsamında (Admin Talimatı: "${params.customPrompt.slice(0, 60)}...");\n\n${baseStem}`,
-      options: [
-        { key: 'A', text: q.options?.[0]?.text || 'Patolojik kaskadın sitokin aktivasyonu ile indüklenmesi', isAiFilled: false },
-        { key: 'B', text: q.options?.[1]?.text || 'Hücresel düzeyde geri dönüşümsüz hasar gelişimi', isAiFilled: false },
-        { key: 'C', text: q.options?.[2]?.text || 'Mekanizmanın amfi ders slaytında vurgulanan belirteçleri', isAiFilled: false },
-        { key: 'D', text: q.options?.[3]?.text || 'Sekonder komplikasyonlara bağlı vasküler tromboz', isAiFilled: true },
-        { key: 'E', text: q.options?.[4]?.text || 'Spontan klinik rezolüsyon ve adaptasyon süreci', isAiFilled: true },
-      ],
-      correctAnswer: (q.claimedAnswer || q.reconstruction?.correctAnswer || 'C') as any,
-      explanation: `Bu soru adminin özel istemi ("${params.customPrompt.slice(0, 100)}") doğrultusunda revize edilmiştir. ${params.groundingNote ? 'Amfi ders notu referans alınmıştır.' : ''}`,
-      confidenceScore: 90,
-      notesAndDiscrepancies: `Admin özel redaksiyonu (${params.adminEmail || 'Admin'}) uygulandı.`,
-      lastUpdated: new Date().toISOString()
-    };
-
-    try {
-      const updatedQ: QuestionItem = {
-        ...params.question,
-        reconstruction: fallbackRecon,
-        status: 'completed',
-        claimedAnswer: fallbackRecon.correctAnswer,
-        updatedAt: new Date().toISOString(),
-      };
-      await FirestoreDbService.updatePastQuestion(updatedQ);
-    } catch (_) {}
+    // Honest failure report if neither server nor client could run (never produce fake canned text)
+    const combinedErr = serverErrorMsg || '';
+    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(combinedErr);
+    const finalMsg = isQuota
+      ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı ekleyin.'
+      : (serverErrorMsg || 'Gemini API anahtarı bulunamadı veya sunucuya erişilemedi. Lütfen Ayarlar panelinden geçerli bir API anahtarı tanımlayın.');
 
     return {
-      success: true,
-      reconstruction: fallbackRecon
+      success: false,
+      error: finalMsg
     };
   },
 
