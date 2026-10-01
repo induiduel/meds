@@ -33,6 +33,7 @@ interface QuestionCardProps {
   onUpvoteOption: (questionId: string, key: OptionKey) => Promise<void>;
   onUpvoteQuestion?: (questionId: string) => Promise<void>;
   onReconstructWithAi: (questionId: string) => Promise<void>;
+  onOpenAiOptimizer?: (question: QuestionItem) => void;
   onSetClaimedAnswer: (questionId: string, answer: OptionKey) => Promise<void>;
   isReconstructing: boolean;
 }
@@ -88,6 +89,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   onUpvoteOption,
   onUpvoteQuestion,
   onReconstructWithAi,
+  onOpenAiOptimizer,
   onSetClaimedAnswer,
   isReconstructing,
 }) => {
@@ -473,6 +475,17 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   {isReconstructing ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
                   {isReconstructing ? 'Kuruluyor…' : hasReconstruction ? 'AI ile yeniden kur' : 'AI ile kur'}
                 </button>
+                {onOpenAiOptimizer && (
+                  <button
+                    type="button"
+                    onClick={() => onOpenAiOptimizer(question)}
+                    className="h-10 sm:h-11 px-3 sm:px-3.5 rounded-[10px] bg-gradient-to-r from-teal-50 to-cyan-50 hover:from-teal-100 hover:to-cyan-100 text-teal-800 border border-teal-300 font-semibold text-[13px] inline-flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                    title="Amfi ders notları ve tıp literatürüyle bu soruyu yapay zeka ile düzenle"
+                  >
+                    <Sparkles className="w-4 h-4 text-teal-600" />
+                    <span>AI ile Düzenle</span>
+                  </button>
+                )}
                 <span className="hidden sm:block flex-1" />
                 {onUpvoteQuestion && (
                   <button

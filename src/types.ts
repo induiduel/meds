@@ -76,6 +76,8 @@ export interface LectureNote {
   uploadedAt: string;
   driveFileId?: string;
   driveFileUrl?: string;
+  pageCount?: number;
+  renderedAt?: string;
 }
 
 export interface UserLeaderboardEntry {
@@ -116,6 +118,15 @@ export interface QuestionItem {
   lectureReference?: QuestionLectureMatch;
   upvotes?: number;
   likedBy?: string[];
+  sourceFile?: string;
+  isAmbiguous?: boolean;
+  comments?: Array<{ id?: string; author: string; text: string; createdAt?: string }>;
+  reports?: Array<{ id?: string; reason: string; details?: string; reportedBy?: string; reportedAt?: string }>;
+  isLocked?: boolean;
+  author?: string;
+  customRedactedBy?: string;
+  customRedactedAt?: string;
+  customRedactionPrompt?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -152,4 +163,7 @@ export interface Committee {
   code?: string;
   examDate?: string;
   disciplines?: string[];
+  academicYear?: string;
+  targetQuestions?: number;
+  color?: string;
 }

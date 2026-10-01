@@ -300,7 +300,7 @@ class MultiDbManager {
     // 3. Auto / Firebase mode
     if (!this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
       try {
-        const fbPast = await FirestoreDbService.getPastQuestions();
+        const fbPast = await FirestoreDbService.getAllPastQuestions();
         if (fbPast && fbPast.length > 0) return fbPast;
       } catch (err: any) {
         if (

@@ -24,6 +24,7 @@ export const db = firestoreDatabaseId
 
 export const COMMITTEES_COLLECTION = 'committees';
 export const QUESTIONS_COLLECTION = 'questions';
+export const PAST_QUESTIONS_COLLECTION = 'past_questions';
 export const LECTURE_NOTES_COLLECTION = 'lecture_notes';
 export const NOTIFICATIONS_COLLECTION = 'admin_notifications';
 
@@ -273,147 +274,8 @@ export const INITIAL_COMMITTEES: Committee[] = [
   }
 ];
 
-export const INITIAL_QUESTIONS: QuestionItem[] = [
-  {
-    id: 'q-101',
-    committeeId: 'donem3-kurul2',
-    questionNumber: 14,
-    discipline: 'Tıbbi Farmakoloji',
-    topic: 'Antihipertansif İlaçlar & Bradikinin Yolağı',
-    status: 'completed',
-    claimedAnswer: 'D',
-    tags: ['ACE İnhibitörü', 'Kuru Öksürük', 'Bradikinin', 'Substans P', 'Kininaz II'],
-    createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
-    updatedAt: new Date().toISOString(),
-    fragments: [
-      {
-        id: 'f-1',
-        author: 'Dr. Adayı M.',
-        text: 'Farmada kaptopril/enalapril kullanan hastada kuru öksürüğün nedeni soruldu.',
-        type: 'stem',
-        timestamp: new Date(Date.now() - 3600000 * 20).toISOString(),
-        upvotes: 12,
-      },
-      {
-        id: 'f-2',
-        author: 'Sınavzede_99',
-        text: 'Soru kökü tam olarak: "Aşağıdaki mediyatörlerden hangisinin bronşiyal mukozada yıkımının azalması ve birikimi kuru öksürükten primer sorumludur?" gibiydi.',
-        type: 'stem',
-        timestamp: new Date(Date.now() - 3600000 * 18).toISOString(),
-        upvotes: 15,
-      },
-      {
-        id: 'f-3',
-        author: 'Klinisyen35',
-        text: 'Şıklarda Bradikinin ve Substans P vardı. Cevap Bradikinin (D şıkkıydı). Çeldirici olarak Anjiyotensin II, Renin ve Prostoglandin E2 konmuştu.',
-        type: 'option',
-        timestamp: new Date(Date.now() - 3600000 * 14).toISOString(),
-        upvotes: 18,
-      },
-    ],
-    options: [
-      { key: 'A', text: 'Anjiyotensin II sentezinin artması', suggestedBy: 'Klinisyen35', upvotes: 2 },
-      { key: 'B', text: 'Renin salgılanmasının aşırı uyarılması', suggestedBy: 'Klinisyen35', upvotes: 1 },
-      { key: 'C', text: 'Prostaglandin E2 sentezinin selektif blokajı', suggestedBy: 'Klinisyen35', upvotes: 3 },
-      { key: 'D', text: 'Bradikinin ve Substans P yıkımının azalması ve akciğerde birikimi', suggestedBy: 'Klinisyen35', upvotes: 22 },
-      { key: 'E', text: 'Bronşiyal beta-2 adrenerjik reseptör desensitizasyonu', suggestedBy: 'AI Reconstructor', upvotes: 5 },
-    ],
-    reconstruction: {
-      stem: '58 yaşında esansiyel hipertansiyon tanısıyla enalapril tedavisi başlanan erkek hastada 3 hafta sonra tedaviye dirençli, balgamsız inatçı kuru öksürük gelişmiştir.\n\nBu klinik tablonun ortaya çıkmasında akciğer dokusunda yıkımı inhibe edilerek biriken ve C-liflerini uyararak öksürük refleksini tetikleyen temel mediyatör aşağıdakilerden hangisidir?',
-      options: [
-        { key: 'A', text: 'Anjiyotensin II', isAiFilled: false },
-        { key: 'B', text: 'Plazma Renini', isAiFilled: false },
-        { key: 'C', text: 'Tromboksan A2', isAiFilled: false },
-        { key: 'D', text: 'Bradikinin (ve Substans P)', isAiFilled: false },
-        { key: 'E', text: 'Endotelin-1', isAiFilled: true },
-      ],
-      correctAnswer: 'D',
-      explanation: 'ACE inhibitörleri (örneğin kaptopril, enalapril, lisinopril), kininaz II enzimi ile özdeş olan ACE enzimini bloke eder. Kininaz II normalde bradikinin ve substans P\'yi yıkar. Enzim inhibe olunca hava yollarında bradikinin ve substans P birikerek akciğer C-liflerini uyarır ve karakteristik inatçı kuru öksürüğe yol açar.',
-      confidenceScore: 98,
-      notesAndDiscrepancies: 'Tüm öğrenci hafızaları ve şıkları %100 uyumludur. E şıkkı sınav standardında çeldirici olarak AI tarafından dengelenmiştir.',
-      lastUpdated: new Date().toISOString(),
-    },
-  },
-  {
-    id: 'q-102',
-    committeeId: 'donem3-kurul2',
-    questionNumber: 27,
-    discipline: 'Patoloji',
-    topic: 'Miyokard İnfarktüsü Histopatolojisi',
-    status: 'gathering',
-    claimedAnswer: 'B',
-    tags: ['Koagülasyon Nekrozu', 'Nötrofil İnfiltrasyonu', 'Dalgalı Lifler'],
-    createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
-    updatedAt: new Date().toISOString(),
-    fragments: [
-      {
-        id: 'f-4',
-        author: 'Cemre T.',
-        text: 'Patolojide MI süresi sorusu vardı. 1-3. günlerde mikroskopta ne görülür diye sorulmuştu.',
-        type: 'stem',
-        timestamp: new Date(Date.now() - 3600000 * 10).toISOString(),
-        upvotes: 7,
-      },
-      {
-        id: 'f-5',
-        author: 'Ahmet K.',
-        text: 'Şıklarda nötrofil infiltrasyonu ve yoğun koagülasyon nekrozu vardı. 4-7. günde makrofajlar geliyordu, o yüzden cevap nötrofillerdi.',
-        type: 'option',
-        timestamp: new Date(Date.now() - 3600000 * 8).toISOString(),
-        upvotes: 6,
-      },
-      {
-        id: 'f-6',
-        author: 'Zeynep H.',
-        text: 'Hoca slaytta sarı-kahverengi yumuşama ve yoğun nötrofilik infiltrasyon vurgusu yapmıştı.',
-        type: 'clue',
-        timestamp: new Date(Date.now() - 3600000 * 5).toISOString(),
-        upvotes: 5,
-      },
-    ],
-    options: [
-      { key: 'A', text: 'Dalgalı lifler (wavy fibers) ve ödem', suggestedBy: 'Cemre', upvotes: 2 },
-      { key: 'B', text: 'Yoğun koagülasyon nekrozu ve bol nötrofil infiltrasyonu', suggestedBy: 'Ahmet K.', upvotes: 9 },
-      { key: 'C', text: 'Makrofaj fagositozu ve granülasyon dokusu başlangıcı', suggestedBy: 'Zeynep H.', upvotes: 3 },
-    ],
-  },
-  {
-    id: 'q-103',
-    committeeId: 'donem3-kurul2',
-    questionNumber: 42,
-    discipline: 'Tıbbi Mikrobiyoloji',
-    topic: 'Atipik Pnömoni Etkenleri',
-    status: 'gathering',
-    tags: ['Legionella', 'Klima', 'Hiponatremi', 'BCYE Agar'],
-    createdAt: new Date(Date.now() - 3600000 * 6).toISOString(),
-    updatedAt: new Date().toISOString(),
-    fragments: [
-      {
-        id: 'f-7',
-        author: 'Ozan B.',
-        text: 'Otelde kalan yaşlı adam klimalı ortamdan sonra yüksek ateş, ishal ve bilinç bulanıklığı ile geliyor. Sodyumu 126 mg/dL (hiponatremi). Etken soruldu.',
-        type: 'stem',
-        timestamp: new Date(Date.now() - 3600000 * 5).toISOString(),
-        upvotes: 11,
-      },
-      {
-        id: 'f-8',
-        author: 'Deniz S.',
-        text: 'İdrarda antijen testiyle tanı konan sorulmuştu. Cevap kesinlikle Legionella pneumophila.',
-        type: 'clue',
-        timestamp: new Date(Date.now() - 3600000 * 3).toISOString(),
-        upvotes: 14,
-      },
-    ],
-    options: [
-      { key: 'A', text: 'Mycoplasma pneumoniae', suggestedBy: 'Ozan', upvotes: 1 },
-      { key: 'B', text: 'Legionella pneumophila', suggestedBy: 'Deniz S.', upvotes: 16 },
-      { key: 'C', text: 'Chlamydophila pneumoniae', suggestedBy: 'Soru Grubu', upvotes: 0 },
-      { key: 'D', text: 'Streptococcus pneumoniae', suggestedBy: 'Soru Grubu', upvotes: 2 },
-    ],
-    claimedAnswer: 'B',
-  }
-];
+// 2026-2027 dönemine ait kurullarda henüz sınava girilmediği için aktif soru havuzu boştur.
+export const INITIAL_QUESTIONS: QuestionItem[] = [];
 
 export class FirestoreDbService {
   /**
@@ -465,19 +327,13 @@ export class FirestoreDbService {
       if (!snap.empty) {
         const list: QuestionItem[] = [];
         snap.forEach((d) => {
-          list.push(d.data() as QuestionItem);
+          const item = d.data() as QuestionItem;
+          // Sadece sınavı tamamlanmış güncel 2026-2027 sorularını dahil et, çıkmış soruları hariç tut
+          if (!item.isPastExam && item.examYear === '2026-2027') {
+            list.push(item);
+          }
         });
         return list.sort((a, b) => a.questionNumber - b.questionNumber);
-      }
-
-      // If this is donem3-kurul2 and it's empty, seed initial sample questions
-      if (committeeId === 'donem3-kurul2') {
-        console.log('Seeding initial questions for donem3-kurul2 into Firestore...');
-        for (const q of INITIAL_QUESTIONS) {
-          const cleaned = cleanForFirestore(q);
-          await withTimeout(setDoc(doc(db, QUESTIONS_COLLECTION, q.id), cleaned), 3000).catch(() => {});
-        }
-        return INITIAL_QUESTIONS;
       }
 
       return [];
@@ -617,6 +473,22 @@ export class FirestoreDbService {
    */
   static async getAllPastQuestions(): Promise<QuestionItem[]> {
     try {
+      // 1. Önce doğrudan past_questions koleksiyonunu kontrol et
+      try {
+        const pastSnap = await withTimeout(getDocs(collection(db, PAST_QUESTIONS_COLLECTION)), 8000);
+        if (!pastSnap.empty) {
+          const list: QuestionItem[] = [];
+          pastSnap.forEach((d) => {
+            const data = d.data() as QuestionItem;
+            if (data.id?.startsWith('civan-')) return;
+            if (data.tags?.some((t: string) => /civan/i.test(t))) return;
+            list.push(data);
+          });
+          if (list.length > 0) return list;
+        }
+      } catch (_) {}
+
+      // 2. Fallback olarak questions koleksiyonundan çıkmış soruları filtrele
       const snap = await withTimeout(getDocs(collection(db, QUESTIONS_COLLECTION)), 15000);
       const list: QuestionItem[] = [];
       snap.forEach((d) => {

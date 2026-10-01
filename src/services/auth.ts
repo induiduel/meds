@@ -36,6 +36,7 @@ export interface AppUser {
   studentNumber?: string | null;
   photoURL?: string | null;
   congratsSentCommittees?: string[];
+  isAdmin?: boolean;
 }
 
 export const SCOPES = [

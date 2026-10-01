@@ -109,6 +109,8 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
         : undefined;
 
       const customApiKey = localStorage.getItem('medsoru_gemini_api_key') || localStorage.getItem('medsoru_custom_gemini_key') || undefined;
+      const groqApiKey = localStorage.getItem('medsoru_groq_api_key') || undefined;
+      const isGroq = selectedModel.includes('llama') || selectedModel.includes('deepseek');
 
       const res = await ApiService.adminCustomRedactQuestion({
         question,
@@ -117,6 +119,8 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
         model: selectedModel,
         adminEmail: ADMIN_EMAIL,
         apiKey: customApiKey,
+        groqApiKey,
+        preferredProvider: isGroq ? 'groq' : 'auto',
       });
 
       if (res.success && res.reconstruction) {
@@ -271,14 +275,20 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                 <span>Yapay Zekaya Özel Redaksiyon Talimatınız:</span>
               </label>
               <div className="flex items-center gap-2">
-                <span className="text-[11px] font-semibold text-slate-500">Gemini Modeli:</span>
+                <span className="text-[11px] font-semibold text-slate-500">Yapay Zeka Modeli:</span>
                 <select
                   value={selectedModel}
                   onChange={(e) => setSelectedModel(e.target.value)}
                   className="bg-slate-50 border border-slate-300 rounded-md px-2 py-0.5 text-xs font-semibold text-slate-800"
                 >
-                  <option value="gemini-3.8-flash">Gemini 3.8 Flash (Önerilen & Hızlı)</option>
-                  <option value="gemini-2.5-pro">Gemini 2.5 Pro (Gelişmiş Tıbbi Mantık)</option>
+                  <optgroup label="Google Gemini">
+                    <option value="gemini-3.8-flash">Gemini 3.8 Flash (Otomatik Çok Kademeli Havuz)</option>
+                    <option value="gemini-2.5-pro">Gemini 2.5 Pro (Gelişmiş Tıbbi Mantık)</option>
+                  </optgroup>
+                  <optgroup label="Groq Cloud (Ücretsiz & Limitsiz)">
+                    <option value="llama-3.3-70b-versatile">Groq Llama 3.3 70B (Çok Hızlı & Kota Bağımsız)</option>
+                    <option value="deepseek-r1-distill-llama-70b">Groq DeepSeek R1 70B (Derin Akıl Yürütme)</option>
+                  </optgroup>
                 </select>
               </div>
             </div>
@@ -319,12 +329,12 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                 {isGenerating ? (
                   <>
                     <RefreshCw className="w-4 h-4 animate-spin text-teal-200" />
-                    <span>Gemini ile Redakte Ediliyor...</span>
+                    <span>Yapay Zeka ile Redakte Ediliyor...</span>
                   </>
                 ) : (
                   <>
                     <Sparkles className="w-4 h-4 text-teal-200" />
-                    <span>Gemini ile Yeniden Redakte Et</span>
+                    <span>Yapay Zeka ile Yeniden Redakte Et</span>
                   </>
                 )}
               </button>

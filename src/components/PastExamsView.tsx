@@ -33,6 +33,7 @@ import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
+import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
 
 interface PastExamsViewProps {
   currentUser: AppUser | null;
@@ -77,6 +78,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // Admin Custom AI Redaction Modal State
   const [customRedactQuestion, setCustomRedactQuestion] = useState<{ question: QuestionItem; match: any } | null>(null);
 
+  // Student & User AI Question Optimizer Modal State
+  const [optimizeModalQuestion, setOptimizeModalQuestion] = useState<QuestionItem | null>(null);
+
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 25;
@@ -101,7 +105,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setIsLoading(true);
     try {
       const data = await ApiService.getPastQuestions();
-      setQuestions(data.filter(q => !q.id?.startsWith('civan-') && !q.tags?.some(t => /civan/i.test(t))));
+      setQuestions(data.filter(q => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t))));
     } catch (e) {
       console.warn('Could not load past questions:', e);
     } finally {
@@ -734,6 +738,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         <Sparkles className="w-3.5 h-3.5 text-teal-600" />
                       )}
                       <span>{isGeneratingSimilar === q.id ? 'Üretiliyor...' : 'Ek Soru Sor'}</span>
+                    </button>
+
+                    {/* Student & User AI Question Optimizer Button */}
+                    <button
+                      onClick={() => setOptimizeModalQuestion(q)}
+                      className="bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                      title="Bu soruyu amfi ders notları ve tıp literatürüyle yapay zeka ile düzenle / iyileştir"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+                      <span>AI ile Düzenle</span>
                     </button>
 
                     {/* Admin Custom AI Redaction Button */}
@@ -1432,6 +1446,25 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             )}
           </div>
         </div>
+      )}
+
+      {/* Student & User AI Question Optimizer Modal */}
+      {optimizeModalQuestion && (
+        <AiQuestionOptimizerModal
+          question={optimizeModalQuestion}
+          isOpen={Boolean(optimizeModalQuestion)}
+          onClose={() => setOptimizeModalQuestion(null)}
+          currentUser={currentUser}
+          onSaved={(updated) => {
+            setQuestions(prev => prev.map(q => q.id === updated.id ? updated : q));
+            setOptimizeModalQuestion(null);
+          }}
+          onOpenSlideReader={(note, pageNum) => {
+            if (onOpenNote && note?.id) {
+              onOpenNote(note.id, pageNum);
+            }
+          }}
+        />
       )}
 
       {/* Admin Custom AI Redaction Modal */}

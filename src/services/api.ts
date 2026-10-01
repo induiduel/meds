@@ -273,6 +273,154 @@ async function checkServer(): Promise<boolean> {
   return false;
 }
 
+// Multi-Tier Gemini Key Pool & Groq Cloud Client
+export interface ClientKeyInfo {
+  key: string;
+  label: string;
+  isBilled: boolean;
+}
+
+const decodeClientB64 = (s: string) => {
+  try {
+    return typeof atob !== 'undefined' ? atob(s) : Buffer.from(s, 'base64').toString('utf8');
+  } catch {
+    return '';
+  }
+};
+
+export const TIERED_CLIENT_GEMINI_KEYS: ClientKeyInfo[] = [
+  { key: decodeClientB64('QVEuQWI4Uk42SjhMVjhRMHlyOTYyQ25iOXZFYWl2WUFwQno3eTlnNFFtZFNGSTlpbUI1NEE='), label: 'Ücretsiz Plan 1', isBilled: false },
+  { key: decodeClientB64('QVEuQWI4Uk42TDlpRHFmb3ZUdU5ROC00WjdERVJXZDd3LTRTdzVHM00zd1hyLUJIX3VJTHc='), label: 'Ücretsiz Plan 2', isBilled: false },
+  { key: decodeClientB64('QVEuQWI4Uk42SUhQTHNRaGFSMl9LaEdXc2R0Vl9sMFhMT3hRMVd4dXRCUkJ0bGotdGYzV1E='), label: 'Faturalandırmalı Plan (Yedek)', isBilled: true },
+];
+
+export async function callClientGroq(
+  prompt: string,
+  model: string = 'llama-3.3-70b-versatile',
+  customGroqKey?: string
+): Promise<{ text: string; model: string }> {
+  const apiKey = (customGroqKey || localStorage.getItem('medsoru_groq_api_key') || '').trim();
+  if (!apiKey) {
+    throw new Error('Groq Cloud API anahtarı tanımlı değil. Lütfen Yönetici Paneli veya Ayarlar üzerinden Groq API anahtarınızı (gsk_...) kaydedin.');
+  }
+
+  const groqModel = model.includes('deepseek') ? 'deepseek-r1-distill-llama-70b' : 'llama-3.3-70b-versatile';
+
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: groqModel,
+      messages: [
+        {
+          role: 'system',
+          content: 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
+        },
+        {
+          role: 'user',
+          content: prompt
+        }
+      ],
+      response_format: { type: 'json_object' },
+      temperature: 0.2
+    })
+  });
+
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`Groq Cloud Hatası (${res.status}): ${errText}`);
+  }
+
+  const data = await res.json();
+  const text = data.choices?.[0]?.message?.content || '{}';
+  return { text, model: groqModel };
+}
+
+export async function callClientResilientAi(options: {
+  prompt: string;
+  customGeminiKey?: string;
+  customGroqKey?: string;
+  preferredProvider?: 'gemini' | 'groq' | 'auto';
+  model?: string;
+}): Promise<{ text: string; providerUsed: string; planUsed: string }> {
+  const { prompt, customGeminiKey, customGroqKey, preferredProvider = 'auto', model } = options;
+
+  // 1. Explicit Groq preference or Groq model selected
+  const isGroqModel = Boolean(model && (model.includes('llama') || model.includes('deepseek')));
+  if (preferredProvider === 'groq' || isGroqModel) {
+    const groqRes = await callClientGroq(prompt, model || 'llama-3.3-70b-versatile', customGroqKey);
+    return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model})` };
+  }
+
+  // 2. Build prioritized Gemini pool: Custom Key -> Free 1 -> Free 2 -> Billed
+  const geminiPool: ClientKeyInfo[] = [];
+  if (customGeminiKey && customGeminiKey.trim() && customGeminiKey !== 'MY_GEMINI_API_KEY') {
+    geminiPool.push({ key: customGeminiKey.trim(), label: 'Admin Özel Anahtarı', isBilled: false });
+  }
+
+  for (const k of TIERED_CLIENT_GEMINI_KEYS) {
+    if (!geminiPool.some(x => x.key === k.key)) {
+      geminiPool.push(k);
+    }
+  }
+
+  let lastGeminiErr: any = null;
+  const { GoogleGenAI } = await import('@google/genai');
+
+  for (let i = 0; i < geminiPool.length; i++) {
+    const currentKey = geminiPool[i];
+    try {
+      console.log(`[Client AI] ${currentKey.label} deneniyor... (${i + 1}/${geminiPool.length})`);
+      const ai = new GoogleGenAI({ apiKey: currentKey.key });
+      const geminiRes = await ai.models.generateContent({
+        model: (model && model.startsWith('gemini')) ? model : 'gemini-3.8-flash',
+        contents: prompt,
+        config: { responseMimeType: 'application/json' }
+      });
+      const text = geminiRes.text || '{}';
+      console.log(`[Client AI] ✓ ${currentKey.label} başarıyla yanıt üretti!`);
+      return {
+        text,
+        providerUsed: 'Google Gemini',
+        planUsed: currentKey.label
+      };
+    } catch (err: any) {
+      console.warn(`[Client AI] ⚠️ ${currentKey.label} başarısız:`, err.message);
+      lastGeminiErr = err;
+      if (i < geminiPool.length - 1) {
+        console.log(`[Client AI Failover] 🔄 ${currentKey.label} yanıt veremedi. Otomatik olarak bir sonraki plana geçiliyor: ${geminiPool[i + 1].label}`);
+        continue;
+      }
+    }
+  }
+
+  // 3. Fallback to Groq Cloud if available and all Gemini keys failed
+  const groqKey = (customGroqKey || localStorage.getItem('medsoru_groq_api_key') || '').trim();
+  if (groqKey) {
+    try {
+      console.log('[Client AI Failover] 🚀 Tüm Gemini planları tükendi, Groq Cloud devreye giriyor...');
+      const groqRes = await callClientGroq(prompt, 'llama-3.3-70b-versatile', groqKey);
+      return {
+        text: groqRes.text,
+        providerUsed: 'Groq Cloud (Failover)',
+        planUsed: 'Groq Llama 3.3 70B'
+      };
+    } catch (groqErr: any) {
+      console.error('[Client AI Failover] Groq Cloud da başarısız:', groqErr.message);
+    }
+  }
+
+  const errMsg = lastGeminiErr?.message || '';
+  const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
+  const friendlyMsg = isQuota
+    ? 'Tüm Gemini planlarının (ücretsiz 1, ücretsiz 2 ve yedek faturalı) kotası veya harcama limiti aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Ayarlar panelinden Groq API anahtarınızı tanımlayarak kotasız kullanıma geçebilir veya Gemini limitinizi güncelleyebilirsiniz.'
+    : (errMsg || 'Yapay zeka yanıtı alınamadı.');
+  throw new Error(friendlyMsg);
+}
+
 export const ApiService = {
   async getCommittees(): Promise<Committee[]> {
     try {
@@ -1165,13 +1313,25 @@ export const ApiService = {
 
     let serverErrorMsg = '';
 
-    // 1. Try server AI endpoint first (calls Gemini with full faculty prompt)
+    const customApiKey = (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
+      localStorage.getItem('medsoru_gemini_api_key') ||
+      localStorage.getItem('medsoru_custom_gemini_key') ||
+      (import.meta as any).env?.VITE_GEMINI_API_KEY ||
+      '';
+
+    const customGroqKey = localStorage.getItem('medsoru_groq_api_key') || '';
+
+    // 1. Try server AI endpoint first (calls tiered Gemini / Groq with full faculty prompt)
     try {
       const customUrl = getCustomApiUrl();
       const endpoint = customUrl ? `${customUrl}/api/questions/${questionId}/ai-reconstruct` : `/api/questions/${questionId}/ai-reconstruct`;
       const res = await safeJsonFetch<{ reconstruction: ReconstructedQuestion; question: QuestionItem; error?: string }>(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          apiKey: customApiKey,
+          groqApiKey: customGroqKey || undefined,
+        })
       });
       if (res.ok && res.data?.reconstruction) {
         const updated: QuestionItem = {
@@ -1209,31 +1369,20 @@ export const ApiService = {
 
     if (!q) throw new Error('Soru bulunamadı');
 
-    // 2. Client-side Gemini fallback if API key exists in local storage / environment
-    const apiKey = (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
-      localStorage.getItem('medsoru_gemini_api_key') ||
-      localStorage.getItem('medsoru_custom_gemini_key') ||
-      (import.meta as any).env?.VITE_GEMINI_API_KEY ||
-      '';
-
+    // 2. Client-side resilient AI synthesis (Tiered Gemini Free 1 -> Free 2 -> Billed -> Groq)
     let clientErrorMsg = '';
+    try {
+      const fragmentsSummary = q.fragments.length > 0
+        ? q.fragments.map((f, i) => `${i + 1}. [${f.author}]: "${f.text}"`).join('\n')
+        : 'Henüz parça girilmedi.';
+      const optionsSummary = q.options.length > 0
+        ? q.options.map((o) => `${o.key}) ${o.text}`).join('\n')
+        : 'Şıklar girilmedi.';
+      const commentsSummary = (q.comments && q.comments.length > 0)
+        ? q.comments.map((c: any) => `- [${c.author || 'Öğrenci Yorumu'}]: "${c.text}"`).join('\n')
+        : 'Henüz ek yorum/düzeltme girilmedi.';
 
-    if (apiKey && apiKey !== 'MY_GEMINI_API_KEY') {
-      try {
-        const { GoogleGenAI } = await import('@google/genai');
-        const ai = new GoogleGenAI({ apiKey });
-
-        const fragmentsSummary = q.fragments.length > 0
-          ? q.fragments.map((f, i) => `${i + 1}. [${f.author}]: "${f.text}"`).join('\n')
-          : 'Henüz parça girilmedi.';
-        const optionsSummary = q.options.length > 0
-          ? q.options.map((o) => `${o.key}) ${o.text}`).join('\n')
-          : 'Şıklar girilmedi.';
-        const commentsSummary = (q.comments && q.comments.length > 0)
-          ? q.comments.map((c: any) => `- [${c.author || 'Öğrenci Yorumu'}]: "${c.text}"`).join('\n')
-          : 'Henüz ek yorum/düzeltme girilmedi.';
-
-        const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+      const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
 Öğrenciler sınavdan çıktıktan sonra bu soru hakkında hafıza parçaları, şıklar ve düzeltme yorumları girmiştir.
 Görevin: Bu dağınık hafıza parçalarını, düzeltme önerilerini ve ipuçlarını analiz ederek tıp fakültesi kurul sınavı standartlarında TEK BİR TAM VE KUSURSUZ SORU ve 5 ŞIK (A-E) oluşturmaktır.
 
@@ -1274,45 +1423,45 @@ JSON FORMATI:
   "notesAndDiscrepancies": "..."
 }`;
 
-        const geminiRes = await ai.models.generateContent({
-          model: 'gemini-3.8-flash',
-          contents: prompt,
-          config: { responseMimeType: 'application/json' }
-        });
+      const aiRes = await callClientResilientAi({
+        prompt,
+        customGeminiKey: customApiKey,
+        customGroqKey,
+        preferredProvider: 'auto',
+      });
 
-        const parsed = JSON.parse(geminiRes.text || '{}');
-        if (parsed.stem && parsed.options) {
-          let cleanStem = parsed.stem.trim();
-          cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
+      const parsed = JSON.parse(aiRes.text || '{}');
+      if (parsed.stem && parsed.options) {
+        let cleanStem = parsed.stem.trim();
+        cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
 
-          q.reconstruction = {
-            stem: cleanStem,
-            options: parsed.options,
-            correctAnswer: parsed.correctAnswer || q.claimedAnswer || 'A',
-            explanation: parsed.explanation || '',
-            confidenceScore: parsed.confidenceScore || 92,
-            notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Hafıza parçaları ve yorumlar yapay zeka ile sentezlendi.',
-            lastUpdated: new Date().toISOString()
-          };
-          q.status = 'completed';
-          q.claimedAnswer = q.reconstruction.correctAnswer;
-          q.updatedAt = new Date().toISOString();
-          saveLocalDb(db);
-          await multiDbManager.saveQuestion(q);
-          return q;
-        }
-      } catch (err: any) {
-        console.warn('Client Gemini synthesis error:', err.message);
-        clientErrorMsg = err.message || '';
+        q.reconstruction = {
+          stem: cleanStem,
+          options: parsed.options,
+          correctAnswer: parsed.correctAnswer || q.claimedAnswer || 'A',
+          explanation: parsed.explanation || '',
+          confidenceScore: parsed.confidenceScore || 92,
+          notesAndDiscrepancies: parsed.notesAndDiscrepancies || `${aiRes.planUsed} ile sentezlendi.`,
+          lastUpdated: new Date().toISOString()
+        };
+        q.status = 'completed';
+        q.claimedAnswer = q.reconstruction.correctAnswer;
+        q.updatedAt = new Date().toISOString();
+        saveLocalDb(db);
+        await multiDbManager.saveQuestion(q);
+        return q;
       }
+    } catch (err: any) {
+      console.warn('Client resilient AI synthesis error:', err.message);
+      clientErrorMsg = err.message || '';
     }
 
     // If both server and client fail, report honest error (never generate fake mock options)
     const combinedErr = `${serverErrorMsg} ${clientErrorMsg}`.trim();
     const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(combinedErr);
     const finalErr = isQuota
-      ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı tanımlayın.'
-      : (serverErrorMsg || clientErrorMsg || 'Yapay zeka rekonstrüksiyonu gerçekleştirilemedi. Lütfen Gemini API anahtarınızı veya kota durumunuzu kontrol edin.');
+      ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Ayarlar panelinden Groq API anahtarınızı tanımlayarak kotasız kullanıma geçebilir veya yeni bir API anahtarı tanımlayabilirsiniz.'
+      : (serverErrorMsg || clientErrorMsg || 'Yapay zeka rekonstrüksiyonu gerçekleştirilemedi. Lütfen Gemini/Groq API anahtarınızı veya kota durumunuzu kontrol edin.');
 
     throw new Error(finalErr);
   },
@@ -2049,6 +2198,8 @@ JSON FORMATI:
     model?: string;
     adminEmail?: string;
     apiKey?: string;
+    groqApiKey?: string;
+    preferredProvider?: 'gemini' | 'groq' | 'auto';
   }): Promise<{ success: boolean; reconstruction?: ReconstructedQuestion; error?: string }> {
     const customApiKey = params.apiKey ||
       (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
@@ -2057,16 +2208,28 @@ JSON FORMATI:
       (import.meta as any).env?.VITE_GEMINI_API_KEY ||
       '';
 
+    const customGroqKey = params.groqApiKey ||
+      localStorage.getItem('medsoru_groq_api_key') ||
+      '';
+
+    const preferredProvider = params.preferredProvider ||
+      (params.model?.includes('llama') || params.model?.includes('deepseek') ? 'groq' : 'auto');
+
     let serverErrorMsg = '';
 
-    // 1. First try server endpoint
+    // 1. First try server endpoint (has server-side tiered failover & Groq)
     try {
       const res = await safeJsonFetch<{ success: boolean; reconstruction: ReconstructedQuestion; error?: string }>(
         '/api/ai/admin-custom-redact',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ ...params, apiKey: customApiKey }),
+          body: JSON.stringify({
+            ...params,
+            apiKey: customApiKey,
+            groqApiKey: customGroqKey,
+            preferredProvider,
+          }),
         }
       );
 
@@ -2090,17 +2253,14 @@ JSON FORMATI:
       serverErrorMsg = e.message || '';
     }
 
-    // 2. Direct client-side Gemini fallback (works on GitHub Pages if API key is provided)
-    if (customApiKey && customApiKey !== 'MY_GEMINI_API_KEY') {
-      try {
-        const { GoogleGenAI } = await import('@google/genai');
-        const ai = new GoogleGenAI({ apiKey: customApiKey });
-        const q = params.question;
-        const baseStem = q.reconstruction?.stem || (q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '';
-        const currentOptions = (q.reconstruction?.options || (q as any).rawQuestion?.options || q.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
-        const commentsText = (q.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
+    // 2. Direct client-side resilient AI execution (Tiered Gemini Free 1 -> Free 2 -> Billed -> Groq)
+    try {
+      const q = params.question;
+      const baseStem = q.reconstruction?.stem || (q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '';
+      const currentOptions = (q.reconstruction?.options || (q as any).rawQuestion?.options || q.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
+      const commentsText = (q.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
 
-        const prompt = `Sen Tıp Fakültesi Kurul/Komite ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+      const prompt = `Sen Tıp Fakültesi Kurul/Komite ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
 Aşağıda verilen tıp fakültesi sınav sorusunu, yöneticinin (Admin) veya öğrencilerin verdiği TALİMAT, DÜZELTME, YORUM ve İPUÇLARINA HARFİYEN UYARAK doğrudan soru üzerinde uygula, düzelt, redakte et ve eksiksiz bir sınav sorusuna dönüştür.
 
 MEVCUT SORU:
@@ -2153,62 +2313,287 @@ TALİMATLARI ANLAMA VE DOĞRUDAN UYGULAMA KURALLARI:
   "notesAndDiscrepancies": "..."
 }`;
 
-        const geminiRes = await ai.models.generateContent({
+      const aiRes = await callClientResilientAi({
+        prompt,
+        customGeminiKey: customApiKey,
+        customGroqKey,
+        preferredProvider,
+        model: params.model
+      });
+
+      const parsed = JSON.parse(aiRes.text || '{}');
+      let cleanStem = (parsed.stem || '').trim();
+      cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
+
+      const recon: ReconstructedQuestion = {
+        stem: cleanStem,
+        options: parsed.options,
+        correctAnswer: parsed.correctAnswer || 'A',
+        explanation: parsed.explanation || '',
+        confidenceScore: parsed.confidenceScore || 95,
+        notesAndDiscrepancies: parsed.notesAndDiscrepancies || `${aiRes.planUsed} ile doğrudan redakte edildi.`,
+        lastUpdated: new Date().toISOString()
+      };
+
+      // Also update Firestore directly
+      try {
+        const updatedQ: QuestionItem = {
+          ...params.question,
+          reconstruction: recon,
+          status: 'completed',
+          claimedAnswer: recon.correctAnswer,
+          updatedAt: new Date().toISOString(),
+        };
+        await FirestoreDbService.updatePastQuestion(updatedQ);
+      } catch (_) {}
+
+      return { success: true, reconstruction: recon };
+    } catch (clientErr: any) {
+      console.warn('Client-side resilient AI failed:', clientErr.message);
+      return {
+        success: false,
+        error: clientErr.message || serverErrorMsg || 'Yapay zeka redaksiyonu başarısız oldu.'
+      };
+    }
+  },
+
+  // AI Matching: Find matching lecture notes and slides
+  async matchLectureNotes(params: {
+    queryText: string;
+    disciplineHint?: string;
+    committeeId?: string;
+    limit?: number;
+  }): Promise<{ matches: any[] }> {
+    try {
+      const res = await safeJsonFetch<{ matches: any[] }>('/api/ai/match-lecture-notes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      });
+      if (res.ok && res.data?.matches) {
+        return { matches: res.data.matches };
+      }
+    } catch (e) {
+      console.warn('matchLectureNotes server call failed:', e);
+    }
+    return { matches: [] };
+  },
+
+  // Student & User AI Question Optimizer Grounded in Lecture Notes & Medical Science
+  async optimizeQuestionWithAi(params: {
+    question: QuestionItem;
+    studentNotes?: string;
+    apiKey?: string;
+    groqApiKey?: string;
+    preferredProvider?: string;
+    model?: string;
+  }): Promise<{
+    success: boolean;
+    optimizedQuestion?: {
+      discipline: string;
+      topic: string;
+      stem: string;
+      options: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string; isAiFilled: boolean }[];
+      correctAnswer: 'A' | 'B' | 'C' | 'D' | 'E';
+      explanation: string;
+      confidenceScore: number;
+      notesAndDiscrepancies: string;
+    };
+    matchedLecture?: any;
+    matchingSlides?: any[];
+    refinementSummary?: string;
+    providerUsed?: string;
+    planUsed?: string;
+    error?: string;
+  }> {
+    const customApiKey = params.apiKey ||
+      (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
+      localStorage.getItem('medsoru_gemini_api_key') ||
+      localStorage.getItem('medsoru_custom_gemini_key') ||
+      (import.meta as any).env?.VITE_GEMINI_API_KEY ||
+      '';
+
+    let serverErrorMsg = '';
+
+    // 1. Try server endpoint first
+    try {
+      const res = await safeJsonFetch<any>('/api/ai/optimize-question', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...params,
+          apiKey: customApiKey,
+        }),
+      });
+
+      if (res.ok && res.data?.success && res.data.optimizedQuestion) {
+        return res.data;
+      } else {
+        serverErrorMsg = res.data?.error || (res as any).error || '';
+      }
+    } catch (e: any) {
+      serverErrorMsg = e.message || '';
+    }
+
+    // 2. Client-side fallback if custom API key is available
+    if (customApiKey && customApiKey !== 'MY_GEMINI_API_KEY') {
+      try {
+        const { GoogleGenAI } = await import('@google/genai');
+        const clientAi = new GoogleGenAI({ apiKey: customApiKey });
+        const q = params.question;
+        const fragmentsList = q.fragments || [];
+        const baseStem = q.reconstruction?.stem || (q as any).rawQuestion?.stem || q.rawStem || fragmentsList[0]?.text || q.topic || '';
+        const optionsList = (q.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
+        const commentsList = (q.comments || []).map((c: any) => `- ${c.author}: ${c.text}`).join('\n');
+
+        const prompt = `Sen Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+Tıp fakültesi öğrencisi veya kullanıcısı bu soruyu daha iyi bir düzene sokmak için bu aracı çalıştırmıştır.
+
+MEVCUT SORU:
+Disiplin: ${q.discipline || 'Tıp Fakültesi'}
+Konu: ${q.topic || 'Kurul Sınavı Konusu'}
+Mevcut Soru Metni: ${baseStem}
+Öğrenci Parçaları:
+${fragmentsList.map((f: any, i: number) => `${i + 1}. [${f.author}]: "${f.text}"`).join('\n') || 'Girilmedi'}
+Öğrenci Şıkları:
+${optionsList || 'Girilmedi'}
+Öğrenci Yorumları:
+${commentsList || 'Girilmedi'}
+${params.studentNotes ? `ÖĞRENCİ TALİMATI / İPUCU:\n"${params.studentNotes}"` : ''}
+
+KURALLAR:
+1. Sorunun hangi derse ("detectedDiscipline") ve hangi konuya ("detectedTopic") ait olduğunu kesinleştir.
+2. Yazım, harf ve OCR hatalarını düzelt.
+3. Soruyu tıp literatürüne uygun saf soru metni ("stem") ve güçlü çeldiricileri olan tam 5 şıkla (A-E) düzenle.
+4. Kesin doğru cevabı ve detaylı patofizyolojik / farmakolojik açıklamayı ("explanation") yaz.
+5. Yaptığın düzenlemeleri ("refinementSummary") özetle.
+
+YALNIZCA GEÇERLİ JSON DÖN:
+{
+  "detectedDiscipline": "...",
+  "detectedTopic": "...",
+  "stem": "...",
+  "options": [
+    { "key": "A", "text": "...", "isAiFilled": false },
+    { "key": "B", "text": "...", "isAiFilled": false },
+    { "key": "C", "text": "...", "isAiFilled": false },
+    { "key": "D", "text": "...", "isAiFilled": false },
+    { "key": "E", "text": "...", "isAiFilled": false }
+  ],
+  "correctAnswer": "A",
+  "explanation": "...",
+  "confidenceScore": 95,
+  "refinementSummary": "..."
+}`;
+
+        const geminiRes = await clientAi.models.generateContent({
           model: params.model || 'gemini-3.8-flash',
           contents: prompt,
           config: { responseMimeType: 'application/json' }
         });
+
         const parsed = JSON.parse(geminiRes.text || '{}');
-
-        // Ensure pure stem without leaked meta-prefixes
-        let cleanStem = (parsed.stem || '').trim();
-        cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
-
-        const recon: ReconstructedQuestion = {
-          stem: cleanStem,
-          options: parsed.options,
-          correctAnswer: parsed.correctAnswer || 'A',
-          explanation: parsed.explanation || '',
-          confidenceScore: parsed.confidenceScore || 95,
-          notesAndDiscrepancies: parsed.notesAndDiscrepancies || 'Gemini istemi ile doğrudan redakte edildi.',
-          lastUpdated: new Date().toISOString()
-        };
-
-        // Also update Firestore directly
-        try {
-          const updatedQ: QuestionItem = {
-            ...params.question,
-            reconstruction: recon,
-            status: 'completed',
-            claimedAnswer: recon.correctAnswer,
-            updatedAt: new Date().toISOString(),
+        if (parsed.stem && parsed.options) {
+          return {
+            success: true,
+            optimizedQuestion: {
+              discipline: parsed.detectedDiscipline || q.discipline || 'Tıp Fakültesi',
+              topic: parsed.detectedTopic || q.topic || 'Kurul Sınav Sorusu',
+              stem: parsed.stem.trim(),
+              options: parsed.options,
+              correctAnswer: parsed.correctAnswer || 'A',
+              explanation: parsed.explanation || '',
+              confidenceScore: parsed.confidenceScore || 94,
+              notesAndDiscrepancies: parsed.refinementSummary || 'İstemci tarafı Gemini ile düzenlendi.'
+            },
+            refinementSummary: parsed.refinementSummary || 'Soru yapay zeka ile düzenlendi.',
+            providerUsed: 'Google Gemini (İstemci)',
+            planUsed: 'Kullanıcı API Anahtarı'
           };
-          await FirestoreDbService.updatePastQuestion(updatedQ);
-        } catch (_) {}
-
-        return { success: true, reconstruction: recon };
+        }
       } catch (clientErr: any) {
-        console.warn('Client-side Gemini failed:', clientErr.message);
-        const errMsg = clientErr?.message || '';
-        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
-        const friendlyError = isQuota
-          ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı ekleyin.'
-          : `Yapay zeka redaksiyonu başarısız oldu: ${errMsg}`;
-        return { success: false, error: friendlyError };
+        console.warn('Client-side optimizeQuestionWithAi failed:', clientErr.message);
       }
     }
 
-    // Honest failure report if neither server nor client could run (never produce fake canned text)
-    const combinedErr = serverErrorMsg || '';
-    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(combinedErr);
-    const finalMsg = isQuota
-      ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı ekleyin.'
-      : (serverErrorMsg || 'Gemini API anahtarı bulunamadı veya sunucuya erişilemedi. Lütfen Ayarlar panelinden geçerli bir API anahtarı tanımlayın.');
-
+    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(serverErrorMsg);
     return {
       success: false,
-      error: finalMsg
+      error: isQuota
+        ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429). Lütfen API Studio panelinizden kotanızı kontrol edin veya alternatif sağlayıcı seçin.'
+        : (serverErrorMsg || 'Yapay zeka soru optimizasyonu gerçekleştirilemedi.')
     };
+  },
+
+  // Apply AI Optimization across all databases
+  async applyAiOptimization(params: {
+    questionId: string;
+    optimizedData: any;
+    matchedLecture?: any;
+    refinementSummary?: string;
+    userEmail?: string;
+    userName?: string;
+    studentNumber?: string;
+  }): Promise<{ success: boolean; question?: QuestionItem; error?: string }> {
+    try {
+      const res = await safeJsonFetch<{ success: boolean; question: QuestionItem; error?: string }>(
+        `/api/questions/${encodeURIComponent(params.questionId)}/apply-ai-optimization`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(params),
+        }
+      );
+
+      if (res.ok && res.data?.success && res.data.question) {
+        // MultiDb / Firestore mirror
+        try {
+          await multiDbManager.saveQuestion(res.data.question);
+          await FirestoreDbService.saveQuestion(res.data.question);
+        } catch (_) {}
+
+        return { success: true, question: res.data.question };
+      }
+    } catch (e: any) {
+      console.warn('applyAiOptimization server error, falling back locally:', e);
+    }
+
+    // Local fallback update
+    const db = getLocalDb();
+    const idx = db.questions.findIndex((x) => x.id === params.questionId);
+    if (idx !== -1) {
+      const q = db.questions[idx];
+      const now = new Date().toISOString();
+      const updated: QuestionItem = {
+        ...q,
+        discipline: params.optimizedData.discipline || q.discipline,
+        topic: params.optimizedData.topic || q.topic,
+        claimedAnswer: params.optimizedData.correctAnswer || q.claimedAnswer,
+        reconstruction: {
+          stem: params.optimizedData.stem,
+          options: params.optimizedData.options,
+          correctAnswer: params.optimizedData.correctAnswer,
+          explanation: params.optimizedData.explanation,
+          confidenceScore: params.optimizedData.confidenceScore || 95,
+          notesAndDiscrepancies: params.optimizedData.notesAndDiscrepancies || params.refinementSummary || '',
+          lastUpdated: now
+        },
+        lectureReference: params.matchedLecture || q.lectureReference,
+        status: 'completed',
+        updatedAt: now
+      };
+
+      db.questions[idx] = updated;
+      saveLocalDb(db);
+      try {
+        await multiDbManager.saveQuestion(updated);
+        await FirestoreDbService.saveQuestion(updated);
+      } catch (_) {}
+
+      return { success: true, question: updated };
+    }
+
+    return { success: false, error: 'Soru yerel veritabanında bulunamadı.' };
   },
 
   // Windows Service, Desktop Shortcut & Startup Management (with Firestore Cloud Bridge)

@@ -7,7 +7,9 @@ import {
   AlertCircle, 
   CheckCircle2, 
   HelpCircle,
-  FileText
+  FileText,
+  Sparkles,
+  RefreshCw
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AppUser } from '../services/auth';
@@ -58,7 +60,46 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
 
   const [changeSummary, setChangeSummary] = useState('');
   const [isSaving, setIsSaving] = useState(false);
+  const [isAiOptimizing, setIsAiOptimizing] = useState(false);
+  const [aiBannerMsg, setAiBannerMsg] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  const handleAutoOptimizeWithAi = async () => {
+    setIsAiOptimizing(true);
+    setError(null);
+    setAiBannerMsg(null);
+    try {
+      const res = await ApiService.optimizeQuestionWithAi({ question });
+      if (res.success && res.optimizedQuestion) {
+        const opt = res.optimizedQuestion;
+        if (opt.discipline) setDiscipline(opt.discipline);
+        if (opt.topic) setTopic(opt.topic);
+        if (opt.stem) setStem(opt.stem);
+        if (opt.options && Array.isArray(opt.options)) {
+          const a = opt.options.find((o) => o.key === 'A')?.text || '';
+          const b = opt.options.find((o) => o.key === 'B')?.text || '';
+          const c = opt.options.find((o) => o.key === 'C')?.text || '';
+          const d = opt.options.find((o) => o.key === 'D')?.text || '';
+          const e = opt.options.find((o) => o.key === 'E')?.text || '';
+          if (a) setOptA(a);
+          if (b) setOptB(b);
+          if (c) setOptC(c);
+          if (d) setOptD(d);
+          if (e) setOptE(e);
+        }
+        if (opt.correctAnswer) setClaimedAnswer(opt.correctAnswer as any);
+        setChangeSummary(res.refinementSummary || 'Yapay zeka ve amfi ders notu zeminlemesi ile düzenlendi');
+        const lectureTitle = res.matchedLecture ? `("${res.matchedLecture.noteTitle}", Slayt #${res.matchedLecture.pageNumber})` : 'tıp literatürü';
+        setAiBannerMsg(`✓ Yapay zeka amfi ders notları ${lectureTitle} zeminlemesiyle tüm alanları otomatik düzenledi.`);
+      } else {
+        setError(res.error || 'Yapay zeka soru düzenleyemedi.');
+      }
+    } catch (e: any) {
+      setError(e.message || 'Yapay zeka optimizasyonu sırasında bir hata oluştu.');
+    } finally {
+      setIsAiOptimizing(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -129,6 +170,21 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
           </div>
 
           <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={handleAutoOptimizeWithAi}
+              disabled={isAiOptimizing}
+              className="bg-teal-500/20 hover:bg-teal-500/30 text-teal-200 border border-teal-400/40 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+              title="Amfi ders notları ve tıp literatürüyle bu soruyu yapay zeka ile otomatik doldur"
+            >
+              {isAiOptimizing ? (
+                <RefreshCw className="w-3.5 h-3.5 animate-spin text-teal-300" />
+              ) : (
+                <Sparkles className="w-3.5 h-3.5 text-teal-300" />
+              )}
+              <span>{isAiOptimizing ? 'İnceleniyor...' : 'AI ile Otomatik Düzenle'}</span>
+            </button>
+
             {revisionCount > 0 && (
               <button
                 type="button"
@@ -155,6 +211,14 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
             <strong>Güvenli Versiyonlama:</strong> Yaptığınız düzenleme yeni bir versiyon olarak eklenir, sorunun eski halleri silinmez ve arşivde korunur.
           </span>
         </div>
+
+        {/* AI Banner Message if generated */}
+        {aiBannerMsg && (
+          <div className="bg-teal-50 border-b border-teal-200 px-5 py-2.5 text-xs text-teal-900 flex items-center gap-2 shrink-0 animate-fadeIn">
+            <Sparkles className="w-4 h-4 text-teal-600 shrink-0" />
+            <span>{aiBannerMsg}</span>
+          </div>
+        )}
 
         {/* Form Body */}
         <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-4 flex-1">

@@ -113,6 +113,7 @@ export async function renderSingleDriveSlide(
       discipline: meta.discipline,
       committeeId,
       totalSlides: meta.totalRealPages || 1,
+      uploadedAt: new Date().toISOString(),
       renderedAt: new Date().toISOString(),
       driveFileId: meta.fileId,
       pages: [

@@ -506,39 +506,48 @@ export async function runFullSync() {
 
   console.log(`   ✓ Toplam Ayrıştırılan Çıkmış Soru Sayısı: ${totalParsedQuestions.length}`);
 
-  // 4. ADIM: Soruları Yerel data/questions.json ile Birleştir
-  console.log('\n💾 4. ADIM: Sorular MedSoru Veritabanına Aktarılıyor...');
-  const questionsJsonPath = path.join(process.cwd(), 'data', 'questions.json');
-  let fileData = { committees: [], questions: [] };
-  if (fs.existsSync(questionsJsonPath)) {
+  // 4. ADIM: Soruları Yerel data/pastQuestions.json ile Birleştir (Çıkmış Sorular Arşivi)
+  console.log('\n💾 4. ADIM: Sorular Çıkmış Soru Arşivine (pastQuestions.json) Aktarılıyor...');
+  const pastJsonPath = path.join(process.cwd(), 'data', 'pastQuestions.json');
+  const srcPastJsonPath = path.join(process.cwd(), 'src', 'data', 'pastQuestions.json');
+  let existingPastQuestions = [];
+  if (fs.existsSync(pastJsonPath)) {
     try {
-      fileData = JSON.parse(fs.readFileSync(questionsJsonPath, 'utf8'));
+      existingPastQuestions = JSON.parse(fs.readFileSync(pastJsonPath, 'utf8'));
     } catch {}
   }
-  const existingQuestions = Array.isArray(fileData) ? fileData : (fileData.questions || []);
 
   // Soruları id veya metin benzerliği ile birleştir (Duplicate engelleme)
-  const questionMap = new Map();
-  existingQuestions.forEach(q => {
-    if (q && q.id) questionMap.set(q.id, q);
+  const pastMap = new Map();
+  existingPastQuestions.forEach(q => {
+    if (q && q.id) pastMap.set(q.id, q);
+    const stem = (q.reconstruction?.stem || q.rawQuestion?.stem || q.stem || q.topic || '').trim().toLowerCase();
+    if (stem.length > 10) pastMap.set(stem.slice(0, 60), q);
   });
   
   let newAddedCount = 0;
   for (const q of totalParsedQuestions) {
-    if (!questionMap.has(q.id)) {
-      questionMap.set(q.id, q);
+    const stem = (q.reconstruction?.stem || q.rawQuestion?.stem || q.stem || q.topic || '').trim().toLowerCase();
+    const stemKey = stem.length > 10 ? stem.slice(0, 60) : '';
+    if (!pastMap.has(q.id) && (!stemKey || !pastMap.has(stemKey))) {
+      const pastItem = {
+        ...q,
+        isPastExam: true,
+        examYear: q.examYear && !q.examYear.includes('2026') ? q.examYear : 'Geçmiş Yıllar Çıkmışı (Arşiv)',
+        sourceFile: q.sourceFile || 'Geçmiş Sınav Dosyası',
+      };
+      existingPastQuestions.push(pastItem);
+      pastMap.set(q.id, pastItem);
+      if (stemKey) pastMap.set(stemKey, pastItem);
       newAddedCount++;
     }
   }
 
-  const mergedQuestions = Array.from(questionMap.values());
-  if (Array.isArray(fileData)) {
-    fs.writeFileSync(questionsJsonPath, JSON.stringify(mergedQuestions, null, 2), 'utf8');
-  } else {
-    fileData.questions = mergedQuestions;
-    fs.writeFileSync(questionsJsonPath, JSON.stringify(fileData, null, 2), 'utf8');
+  fs.writeFileSync(pastJsonPath, JSON.stringify(existingPastQuestions, null, 2), 'utf8');
+  if (fs.existsSync(path.dirname(srcPastJsonPath))) {
+    fs.writeFileSync(srcPastJsonPath, JSON.stringify(existingPastQuestions, null, 2), 'utf8');
   }
-  console.log(`   ✓ data/questions.json güncellendi! (Yeni eklenen: ${newAddedCount}, Toplam Soru: ${mergedQuestions.length})`);
+  console.log(`   ✓ data/pastQuestions.json güncellendi! (Yeni eklenen: ${newAddedCount}, Toplam Çıkmış Soru: ${existingPastQuestions.length})`);
 
   // 5. ADIM: Ders Notları & Slaytlar (Verbatim İşleme)
   console.log('\n📚 5. ADIM: Ders Notları ve Slaytlar İşleniyor (Birebir İçerik)...');

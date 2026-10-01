@@ -56,20 +56,23 @@ const TURKISH_STOPWORDS = new Set([
 export function inferDiscipline(nameOrPath: string): string {
   const lower = nameOrPath.toLowerCase();
   if (lower.includes('patoloji')) return 'Tıbbi Patoloji';
-  if (lower.includes('farmakoloji')) return 'Tıbbi Farmakoloji';
-  if (lower.includes('mikrobiyoloji') || lower.includes('bakteri') || lower.includes('viroloji')) return 'Tıbbi Mikrobiyoloji';
-  if (lower.includes('genetik') || lower.includes('sitogenetik')) return 'Tıbbi Genetik';
-  if (lower.includes('halk sağlığı') || lower.includes('halk sagligi') || lower.includes('epidemiyoloji')) return 'Halk Sağlığı';
+  if (lower.includes('farmakoloji') || lower.includes('ilac') || lower.includes('ilaç') || lower.includes('antihipertansif') || lower.includes('antibiyotik')) return 'Tıbbi Farmakoloji';
+  if (lower.includes('mikrobiyoloji') || lower.includes('bakteri') || lower.includes('viroloji') || lower.includes('parazit') || lower.includes('mantar')) return 'Tıbbi Mikrobiyoloji';
+  if (lower.includes('genetik') || lower.includes('sitogenetik') || lower.includes('mutasyon')) return 'Tıbbi Genetik';
+  if (lower.includes('halk sağlığı') || lower.includes('halk sagligi') || lower.includes('epidemiyoloji') || lower.includes('istatistik')) return 'Halk Sağlığı';
   if (lower.includes('üroloji') || lower.includes('uroloji')) return 'Üroloji';
   if (lower.includes('enfeksiyon')) return 'Enfeksiyon Hastalıkları';
-  if (lower.includes('biyokimya')) return 'Tıbbi Biyokimya';
+  if (lower.includes('biyokimya') || lower.includes('enzim') || lower.includes('metabolizma')) return 'Tıbbi Biyokimya';
   if (lower.includes('fizyoloji')) return 'Tıbbi Fizyoloji';
-  if (lower.includes('anatomi')) return 'Tıbbi Anatomi';
+  if (lower.includes('anatomi') || lower.includes('histoloji') || lower.includes('embriyoloji')) return 'Tıbbi Anatomi / Histoloji';
   if (lower.includes('dahiliye') || lower.includes('iç hastalıkları') || lower.includes('ic hastaliklari')) return 'İç Hastalıkları';
   if (lower.includes('kardiyo')) return 'Kardiyoloji';
-  if (lower.includes('pediatri') || lower.includes('çocuk')) return 'Çocuk Sağlığı ve Hastalıkları';
+  if (lower.includes('pediatri') || lower.includes('çocuk') || lower.includes('yenidoğan')) return 'Çocuk Sağlığı ve Hastalıkları';
   if (lower.includes('genel cerrahi')) return 'Genel Cerrahi';
-  if (lower.includes('nöro') || lower.includes('noro')) return 'Nöroloji / Nöroşirürji';
+  if (lower.includes('nöro') || lower.includes('noro') || lower.includes('psikiyatri')) return 'Nöroloji / Nöroşirürji';
+  if (lower.includes('göz') || lower.includes('oftalmoloji')) return 'Göz Hastalıkları';
+  if (lower.includes('kbb') || lower.includes('kulak burun')) return 'Kulak Burun Boğaz';
+  if (lower.includes('derma') || lower.includes('cildiye')) return 'Dermatoloji';
   return 'Tıp Ders Notu';
 }
 
@@ -96,9 +99,200 @@ export function extractVerbatimKeywords(text: string): string[] {
     .slice(0, 10);
 }
 
+export interface SlideMatchResult {
+  noteId: string;
+  noteTitle: string;
+  discipline: string;
+  committeeId: string;
+  pageNumber: number;
+  totalSlides: number;
+  score: number;
+  snippet: string;
+  fullContent: string;
+  keywords: string[];
+  reasoning: string;
+  driveFileUrl?: string;
+}
+
+let cachedNotes: LectureNoteRecord[] | null = null;
+let lastNotesMtime = 0;
+
 /**
- * High-fidelity verbatim page-by-page PDF extraction without any AI commentary or 5-page limits
+ * Load all lecture notes from data/lecture_notes.json with high-speed memory caching
  */
+export function getCachedLectureNotes(): LectureNoteRecord[] {
+  try {
+    let targetPath = LECTURE_NOTES_FILE;
+    if (!fs.existsSync(targetPath)) {
+      const srcPath = path.resolve(PROJECT_ROOT, 'src', 'data', 'lecture_notes.json');
+      if (fs.existsSync(srcPath)) targetPath = srcPath;
+    }
+
+    if (fs.existsSync(targetPath)) {
+      const stat = fs.statSync(targetPath);
+      if (!cachedNotes || stat.mtimeMs !== lastNotesMtime) {
+        const raw = fs.readFileSync(targetPath, 'utf-8');
+        cachedNotes = JSON.parse(raw);
+        lastNotesMtime = stat.mtimeMs;
+      }
+      return cachedNotes || [];
+    }
+  } catch (err) {
+    console.error('[LectureNotesManager] Error reading lecture notes cache:', err);
+  }
+  return getAllLectureNotes();
+}
+
+/**
+ * High-speed slide search engine: finds best matching lecture notes & specific slides for a given question
+ */
+export function findBestMatchingLectureSlides(
+  queryText: string,
+  disciplineHint?: string,
+  committeeId?: string,
+  limit: number = 3
+): SlideMatchResult[] {
+  if (!queryText || !queryText.trim()) return [];
+
+  const notes = getCachedLectureNotes();
+  if (!notes || notes.length === 0) return [];
+
+  // Normalize query
+  const cleanQuery = queryText
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'’“”…\[\]<>|\\]/g, ' ')
+    .toLowerCase();
+
+  const words = cleanQuery
+    .split(/\s+/)
+    .map(w => w.trim())
+    .filter(w => w.length >= 3 && !TURKISH_STOPWORDS.has(w));
+
+  if (words.length === 0) return [];
+
+  // Bigrams for high-precision phrases (e.g. "antihipertansif ilac", "papiller karsinom", "kuru oksuruk")
+  const bigrams: string[] = [];
+  for (let i = 0; i < words.length - 1; i++) {
+    bigrams.push(`${words[i]} ${words[i + 1]}`);
+  }
+
+  const results: SlideMatchResult[] = [];
+
+  for (const note of notes) {
+    const noteTitleNorm = (note.title || '').toLowerCase();
+    const effectiveDiscipline = note.discipline && note.discipline !== 'Tıp Ders Notu' 
+      ? note.discipline 
+      : inferDiscipline(note.title);
+    const noteDisciplineNorm = effectiveDiscipline.toLowerCase();
+
+    let noteBaseBonus = 0;
+    if (committeeId && note.committeeId === committeeId) {
+      noteBaseBonus += 15;
+    }
+    if (disciplineHint && (noteDisciplineNorm.includes(disciplineHint.toLowerCase()) || disciplineHint.toLowerCase().includes(noteDisciplineNorm))) {
+      noteBaseBonus += 25;
+    }
+    // Check if words match note title
+    for (const w of words) {
+      if (noteTitleNorm.includes(w)) {
+        noteBaseBonus += 20;
+      }
+    }
+
+    for (const page of note.pages || []) {
+      const content = page.content || '';
+      if (!content || content.length < 10) continue;
+      const contentNorm = content.toLowerCase();
+
+      let pageScore = noteBaseBonus;
+      const matchedTerms: string[] = [];
+
+      // Check bigram matches (very strong signal)
+      for (const bg of bigrams) {
+        if (contentNorm.includes(bg)) {
+          pageScore += 45;
+          matchedTerms.push(bg);
+        }
+      }
+
+      // Check word matches
+      for (const w of words) {
+        if (contentNorm.includes(w)) {
+          pageScore += 12;
+          if (!matchedTerms.includes(w)) matchedTerms.push(w);
+        }
+      }
+
+      // Check keywords list on page
+      for (const kw of page.keywords || []) {
+        const kwNorm = kw.toLowerCase();
+        if (cleanQuery.includes(kwNorm)) {
+          pageScore += 15;
+          if (!matchedTerms.includes(kw)) matchedTerms.push(kw);
+        }
+      }
+
+      if (pageScore >= 35 && matchedTerms.length >= 1) {
+        // Build concise snippet around the best match
+        let bestSnippet = content.slice(0, 240).replace(/\s+/g, ' ');
+        for (const term of matchedTerms) {
+          const idx = contentNorm.indexOf(term.toLowerCase());
+          if (idx !== -1) {
+            const start = Math.max(0, idx - 60);
+            const end = Math.min(content.length, idx + term.length + 120);
+            bestSnippet = (start > 0 ? '...' : '') + content.slice(start, end).replace(/\s+/g, ' ') + (end < content.length ? '...' : '');
+            break;
+          }
+        }
+
+        results.push({
+          noteId: note.id,
+          noteTitle: note.title,
+          discipline: effectiveDiscipline,
+          committeeId: note.committeeId,
+          pageNumber: page.pageNumber,
+          totalSlides: note.totalSlides || (note.pages ? note.pages.length : 1),
+          score: Math.min(100, pageScore),
+          snippet: bestSnippet,
+          fullContent: content.slice(0, 1500),
+          keywords: page.keywords || [],
+          reasoning: `Amfi Slayt Eşleşmesi: "${note.title}" dersinin ${page.pageNumber}. slaytındaki (${matchedTerms.slice(0, 4).join(', ')}) ifadeleri soru içeriği ile örtüşmektedir.`,
+          driveFileUrl: (note as any).driveFileUrl
+        });
+      }
+    }
+  }
+
+  // Sort by score descending and return top matches
+  results.sort((a, b) => b.score - a.score);
+  return results.slice(0, limit);
+}
+
+/**
+ * Load all lecture notes from data/lecture_notes.json
+ */
+export function getAllLectureNotes(): LectureNoteRecord[] {
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    if (fs.existsSync(LECTURE_NOTES_FILE)) {
+      const raw = fs.readFileSync(LECTURE_NOTES_FILE, 'utf-8');
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    }
+    const srcPath = path.resolve(PROJECT_ROOT, 'src', 'data', 'lecture_notes.json');
+    if (fs.existsSync(srcPath)) {
+      const raw = fs.readFileSync(srcPath, 'utf-8');
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return parsed;
+    }
+  } catch (err) {
+    console.error('[LectureNotesManager] Error reading lecture_notes.json:', err);
+  }
+  return [];
+}
 export async function extractVerbatimPdfPages(
   buffer: Buffer,
   fileName?: string
@@ -205,27 +399,6 @@ export async function extractVerbatimPdfPages(
     discipline,
     instructor,
   };
-}
-
-/**
- * Load all lecture notes from data/lecture_notes.json
- */
-export function getAllLectureNotes(): LectureNoteRecord[] {
-  try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
-    if (fs.existsSync(LECTURE_NOTES_FILE)) {
-      const raw = fs.readFileSync(LECTURE_NOTES_FILE, 'utf-8');
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) {
-        return parsed;
-      }
-    }
-  } catch (err) {
-    console.error('[LectureNotesManager] Error reading lecture_notes.json:', err);
-  }
-  return [];
 }
 
 /**

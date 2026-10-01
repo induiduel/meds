@@ -198,13 +198,12 @@ async function syncLectureNotes() {
 async function syncQuestions() {
   console.log('\n3. Çıkmış Sorular (Past Questions) Senkronize Ediliyor...');
   
-  // 1. data/questions.json
-  const questionsPath = path.join(rootDir, 'data', 'questions.json');
+  // data/pastQuestions.json
+  const pastQuestionsPath = path.join(rootDir, 'data', 'pastQuestions.json');
   let rawQuestions = [];
-  if (fs.existsSync(questionsPath)) {
+  if (fs.existsSync(pastQuestionsPath)) {
     try {
-      const parsed = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
-      rawQuestions = Array.isArray(parsed) ? parsed : (parsed.questions || []);
+      rawQuestions = JSON.parse(fs.readFileSync(pastQuestionsPath, 'utf8'));
     } catch (e) {}
   }
 
@@ -219,7 +218,7 @@ async function syncQuestions() {
     let year = q.examYear;
     if (!year || year.includes('2026')) {
       const detected = (q.tags || []).find(t => /(?:19\d{2}|20[0-2][0-5])/.test(t));
-      year = detected ? detected.match(/(?:19\d{2}|20[0-2][0-5])/)?.[0] || 'Kategorisiz' : 'Kategorisiz';
+      year = detected ? detected.match(/(?:19\d{2}|20[0-2][0-5])/)?.[0] || 'Geçmiş Yıllar Çıkmışı (Arşiv)' : 'Geçmiş Yıllar Çıkmışı (Arşiv)';
     }
 
     const stem = (q.reconstruction?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic || '').trim();
@@ -231,7 +230,7 @@ async function syncQuestions() {
       ...q,
       isPastExam: true,
       examYear: year,
-      isAmbiguous,
+      isAmbiguous: q.isAmbiguous ?? isAmbiguous,
       sourceFile: q.sourceFile || (q.tags || []).find(t => t.toLowerCase().endsWith('.pdf')) || 'Çıkmış Sınav Dosyası',
       upvotes: typeof q.upvotes === 'number' ? q.upvotes : 0,
       likedBy: Array.isArray(q.likedBy) ? q.likedBy : [],
@@ -239,7 +238,7 @@ async function syncQuestions() {
   }
 
   const allQuestions = Array.from(map.values());
-  console.log(`   📂 Aktarılacak toplam soru sayısı: ${allQuestions.length}`);
+  console.log(`   📂 Aktarılacak toplam çıkmış soru sayısı: ${allQuestions.length}`);
 
   const BATCH_SIZE = 400; // Firestore batch limiti 500
   let uploadedCount = 0;
@@ -249,7 +248,8 @@ async function syncQuestions() {
     const batch = writeBatch(db);
 
     for (const q of chunk) {
-      const docRef = doc(db, 'questions', q.id);
+      // Çıkmış sorular doğrudan past_questions koleksiyonuna kaydedilir
+      const docRef = doc(db, 'past_questions', q.id);
       batch.set(docRef, cleanForFirestore(q), { merge: true });
     }
 
@@ -258,7 +258,7 @@ async function syncQuestions() {
     process.stdout.write(`   ✓ Aktarılan Soru: ${uploadedCount} / ${allQuestions.length}\r`);
   }
 
-  console.log(`\n   ✓ Toplam ${uploadedCount} soru Firestore 'questions' koleksiyonuna başarıyla aktarıldı!`);
+  console.log(`\n   ✓ Toplam ${uploadedCount} soru Firestore 'past_questions' koleksiyonuna başarıyla aktarıldı!`);
 }
 
 async function main() {

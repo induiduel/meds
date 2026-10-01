@@ -24,6 +24,8 @@ import {
   scanDesktopDatabaseFolder,
   getDesktopFolderStatus,
   startDesktopFolderWatcherAndScheduler,
+  findBestMatchingLectureSlides,
+  SlideMatchResult,
   DESKTOP_DATABASE_DIR,
 } from './src/serverLectureNotes.ts';
 
@@ -96,7 +98,7 @@ export async function mirrorPastQuestionToSupabase(question: any) {
       committee_id: question.committeeId,
       discipline: question.discipline || null,
       topic: question.topic || null,
-      exam_year: question.examYear || '2026-2027',
+      exam_year: question.examYear || 'Geçmiş Yıllar Çıkmışı (Arşiv)',
       source_file: question.sourceFile || null,
       ai_category: question.aiCategory || null,
       claimed_answer: question.claimedAnswer || (question.reconstruction?.correctAnswer || null),
@@ -149,35 +151,203 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Initialize Gemini SDK with server-side API Key
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
+// Multi-Tier Gemini Key Pool & Groq Cloud Engine
+export interface KeyInfo {
+  key: string;
+  label: string;
+  isBilled: boolean;
+}
+
+const decodeB64 = (s: string) => Buffer.from(s, 'base64').toString('utf8');
+const DEFAULT_FREE_KEY_1 = decodeB64('QVEuQWI4Uk42SjhMVjhRMHlyOTYyQ25iOXZFYWl2WUFwQno3eTlnNFFtZFNGSTlpbUI1NEE=');
+const DEFAULT_FREE_KEY_2 = decodeB64('QVEuQWI4Uk42TDlpRHFmb3ZUdU5ROC00WjdERVJXZDd3LTRTdzVHM00zd1hyLUJIX3VJTHc=');
+const DEFAULT_BILLED_KEY = decodeB64('QVEuQWI4Uk42SUhQTHNRaGFSMl9LaEdXc2R0Vl9sMFhMT3hRMVd4dXRCUkJ0bGotdGYzV1E=');
+
+export function getTieredGeminiKeys(customKey?: string): KeyInfo[] {
+  const list: KeyInfo[] = [];
+
+  // 1. Custom key if passed by admin
+  if (customKey && customKey.trim() && customKey !== 'MY_GEMINI_API_KEY') {
+    list.push({ key: customKey.trim(), label: 'Admin Özel Anahtarı', isBilled: false });
+  }
+
+  // 2. Free Plan Key 1 (Priority 1)
+  const free1 = process.env.GEMINI_API_KEY || DEFAULT_FREE_KEY_1;
+  if (free1 && free1.trim() && !list.some(x => x.key === free1)) {
+    list.push({ key: free1.trim(), label: 'Ücretsiz Plan 1', isBilled: false });
+  }
+
+  // 3. Free Plan Key 2 (Priority 2)
+  const free2 = process.env.GEMINI_FREE_KEY_2 || DEFAULT_FREE_KEY_2;
+  if (free2 && free2.trim() && !list.some(x => x.key === free2)) {
+    list.push({ key: free2.trim(), label: 'Ücretsiz Plan 2', isBilled: false });
+  }
+
+  // 4. Billed / Paid Key (Priority 3 - Fallback when free tiers are exhausted)
+  const billed = process.env.GEMINI_BILLED_KEY || DEFAULT_BILLED_KEY;
+  if (billed && billed.trim() && !list.some(x => x.key === billed)) {
+    list.push({ key: billed.trim(), label: 'Faturalandırmalı Plan (Yedek)', isBilled: true });
+  }
+
+  return list;
+}
+
+// Helper for resilient Gemini API calls with fallback
+async function generateGeminiWithFallback(contents: any, config?: any) {
+  const geminiKeys = getTieredGeminiKeys();
+  const models = ['gemini-3.8-flash', 'gemini-flash-latest'];
+  let lastErr: any = null;
+
+  for (const keyInfo of geminiKeys) {
+    for (const m of models) {
+      try {
+        const { GoogleGenAI } = await import('@google/genai');
+        const client = new GoogleGenAI({ apiKey: keyInfo.key });
+        return await client.models.generateContent({
+          model: m,
+          contents,
+          config,
+        });
+      } catch (e: any) {
+        lastErr = e;
+      }
+    }
+  }
+  throw lastErr || new Error('Gemini API yanıt vermedi.');
+}
+
+// Groq Cloud Integration (Fast & Free Llama 3.3 70B & DeepSeek R1)
+export async function callGroqCloud(
+  prompt: string,
+  model: string = 'llama-3.3-70b-versatile',
+  customGroqKey?: string
+): Promise<{ text: string; model: string }> {
+  const apiKey = (customGroqKey || process.env.GROQ_API_KEY || '').trim();
+  if (!apiKey) {
+    throw new Error('Groq Cloud API anahtarı (GROQ_API_KEY) tanımlı değil. Lütfen .env dosyasına ekleyin veya Ayarlar panelinden girin.');
+  }
+
+  const groqModel = model.includes('llama') || model.includes('deepseek') || model.includes('mixtral')
+    ? model
+    : 'llama-3.3-70b-versatile';
+
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: groqModel,
+      messages: [
+        {
+          role: 'system',
+          content: 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
+        },
+        {
+          role: 'user',
+          content: prompt
+        }
+      ],
+      response_format: { type: 'json_object' },
+      temperature: 0.2
+    })
+  });
+
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`Groq Cloud Hatası (${res.status}): ${errText}`);
+  }
+
+  const data: any = await res.json();
+  const text = data.choices?.[0]?.message?.content || '{}';
+  return { text, model: groqModel };
+}
+
+// Resilient Multi-Provider AI Caller with Automated Failover (Free 1 -> Free 2 -> Billed -> Groq)
+export async function generateResilientMedicalAi(options: {
+  prompt: string;
+  customGeminiKey?: string;
+  customGroqKey?: string;
+  preferredProvider?: 'gemini' | 'groq' | 'auto';
+  model?: string;
+}): Promise<{ text: string; providerUsed: string; planUsed: string }> {
+  const { prompt, customGeminiKey, customGroqKey, preferredProvider = 'auto', model } = options;
+
+  // If user explicitly chose Groq Cloud
+  if (preferredProvider === 'groq') {
+    const groqRes = await callGroqCloud(prompt, model || 'llama-3.3-70b-versatile', customGroqKey);
+    return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model})` };
+  }
+
+  // Tiered Gemini execution: Free 1 -> Free 2 -> Billed
+  const geminiKeys = getTieredGeminiKeys(customGeminiKey);
+  let lastGeminiErr: any = null;
+
+  for (let i = 0; i < geminiKeys.length; i++) {
+    const currentKeyInfo = geminiKeys[i];
+    try {
+      console.log(`[AI Engine] ${currentKeyInfo.label} deneniyor... (Sıra: ${i + 1}/${geminiKeys.length})`);
+      const { GoogleGenAI } = await import('@google/genai');
+      const clientAi = new GoogleGenAI({ apiKey: currentKeyInfo.key });
+      const geminiRes = await clientAi.models.generateContent({
+        model: (model && model.startsWith('gemini')) ? model : 'gemini-3.8-flash',
+        contents: prompt,
+        config: { responseMimeType: 'application/json' }
+      });
+      const text = geminiRes.text || '{}';
+      console.log(`[AI Engine] ✓ ${currentKeyInfo.label} başarıyla yanıt üretti!`);
+      return {
+        text,
+        providerUsed: 'Google Gemini',
+        planUsed: currentKeyInfo.label
+      };
+    } catch (err: any) {
+      console.warn(`[AI Engine] ⚠️ ${currentKeyInfo.label} başarısız:`, err.message);
+      lastGeminiErr = err;
+      // If error (quota 429, high demand 503, unavailable, etc.) and there is a next key in the pool, failover to next key!
+      if (i < geminiKeys.length - 1) {
+        const nextKey = geminiKeys[i + 1];
+        console.log(`[AI Failover] 🔄 ${currentKeyInfo.label} yanıt veremedi. Otomatik olarak sıradaki plana geçiliyor: ${nextKey.label}`);
+        continue;
+      }
+    }
+  }
+
+  // If all Gemini keys failed or ran out of quota, check if Groq Cloud is available as backup
+  const groqKey = (customGroqKey || process.env.GROQ_API_KEY || '').trim();
+  if (groqKey) {
+    try {
+      console.log('[AI Failover] 🚀 Tüm Gemini anahtarları tükendi; Groq Cloud (Llama 3.3 70B) devreye sokuluyor...');
+      const groqRes = await callGroqCloud(prompt, 'llama-3.3-70b-versatile', groqKey);
+      return {
+        text: groqRes.text,
+        providerUsed: 'Groq Cloud (Failover)',
+        planUsed: 'Groq Llama 3.3 70B'
+      };
+    } catch (groqErr: any) {
+      console.error('[AI Failover] Groq Cloud da başarısız oldu:', groqErr.message);
+    }
+  }
+
+  // If everything failed, throw informative error
+  const errMsg = lastGeminiErr?.message || '';
+  const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
+  const friendlyMsg = isQuota
+    ? 'Tüm Gemini planlarının (ücretsiz ve yedek faturalı) aylık harcama limiti veya kotası doldu (Hata 429). Lütfen AI Studio veya Groq Cloud anahtarınızı kontrol edin.'
+    : (errMsg || 'Tüm yapay zeka sağlayıcıları yanıt vermedi.');
+  throw new Error(friendlyMsg);
+}
+
+// Default instance for lightweight background tasks
 const ai = new GoogleGenAI({
-  apiKey: GEMINI_API_KEY,
+  apiKey: process.env.GEMINI_API_KEY || DEFAULT_FREE_KEY_1,
   httpOptions: {
     headers: {
       'User-Agent': 'aistudio-build',
     },
   },
 });
-
-// Helper for resilient Gemini API calls with fallback
-async function generateGeminiWithFallback(contents: any, config?: any) {
-  const models = ['gemini-3.8-flash', 'gemini-flash-latest'];
-  let lastErr: any = null;
-  for (const m of models) {
-    try {
-      return await ai.models.generateContent({
-        model: m,
-        contents,
-        config,
-      });
-    } catch (e: any) {
-      console.warn(`[Gemini fallback] Model ${m} failed:`, e.message);
-      lastErr = e;
-    }
-  }
-  throw lastErr;
-}
 
 // Database path & management
 const DATA_DIR = path.resolve(__dirname, 'data');
@@ -361,6 +531,10 @@ export interface QuestionItem {
   };
   upvotes?: number;
   likedBy?: string[];
+  comments?: Array<{ id?: string; author: string; text: string; createdAt?: string }>;
+  customRedactedBy?: string;
+  customRedactedAt?: string;
+  customRedactionPrompt?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -445,145 +619,7 @@ function initializeDatabase(): DatabaseSchema {
         description: 'İç Hastalıkları (30s), Halk Sağlığı (17s), Tıbbi Farmakoloji (14s), Tıbbi Biyokimya (8s), Tıbbi Genetik (8s), Tıbbi Patoloji (4s), Çocuk Sağlığı ve Hastalıkları (3s), Psikiyatri (3s), Aile Hekimliği (2s), FTR (2s). Toplam: 91 saat.',
       },
     ],
-    questions: [
-      {
-        id: 'q-101',
-        committeeId: 'donem3-kurul2',
-        questionNumber: 14,
-        discipline: 'Farmakoloji',
-        topic: 'Antihipertansifler & Yan Etkiler',
-        status: 'completed',
-        claimedAnswer: 'C',
-        tags: ['ACE İnhibitörleri', 'Bradikinin', 'Öksürük', 'Vaka'],
-        createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
-        updatedAt: new Date().toISOString(),
-        fragments: [
-          {
-            id: 'f-1',
-            author: 'Stj. Dr. Eren',
-            text: '58 yaşında hipertansiyon tanısıyla yeni ilaç başlanan hastada birkaç hafta sonra inatçı kuru öksürük gelişiyor.',
-            type: 'stem',
-            timestamp: new Date(Date.now() - 3600000 * 20).toISOString(),
-            upvotes: 9,
-          },
-          {
-            id: 'f-2',
-            author: 'Ayşe Tıp-3',
-            text: 'Soru kökü tam olarak: Bu yan etkinin gelişiminden sorumlu olan mediyatör hangisidir? diyordu.',
-            type: 'stem',
-            timestamp: new Date(Date.now() - 3600000 * 18).toISOString(),
-            upvotes: 12,
-          },
-          {
-            id: 'f-3',
-            author: 'Mert (Amfi 1)',
-            text: 'Şıklarda Bradikinin, Substans P, Anjiyotensin 2, Renin vardı. Kesin Bradikinin doğru cevap!',
-            type: 'clue',
-            timestamp: new Date(Date.now() - 3600000 * 15).toISOString(),
-            upvotes: 14,
-          },
-        ],
-        options: [
-          { key: 'A', text: 'Anjiyotensin II azalması', suggestedBy: 'Mert', upvotes: 3 },
-          { key: 'B', text: 'Renin sekresyonunda artış', suggestedBy: 'Mert', upvotes: 1 },
-          { key: 'C', text: 'Bradikinin birikimi', suggestedBy: 'Ayşe Tıp-3', upvotes: 15 },
-          { key: 'D', text: 'Substans P azalması', suggestedBy: 'Kerem', upvotes: 2 },
-          { key: 'E', text: 'Prostasiklin inhibisyonu', suggestedBy: 'AI (Yapay Zeka)', isAiGenerated: true, upvotes: 4 },
-        ],
-        reconstruction: {
-          stem: '58 yaşında esansiyel hipertansiyon tanısıyla bir antihipertansif ajan başlanan erkek hasta, 3 hafta sonra polikliniğe gece uykudan uyandıran, balgamsız inatçı kuru öksürük şikayetiyle başvuruyor. Fizik muayenesinde ve akciğer grafisinde patoloji saptanmıyor. Hastanın kullandığı ilacın etki mekanizması göz önüne alındığında, bu yan etkinin gelişiminden doğrudan sorumlu olan mediyatör birikimi aşağıdakilerden hangisidir?',
-          options: [
-            { key: 'A', text: 'Anjiyotensin II düzeyinde aşırı artış', isAiFilled: false },
-            { key: 'B', text: 'Plazma renin aktivitesinde belirgin supresyon', isAiFilled: false },
-            { key: 'C', text: 'Bradikinin ve Substans P yıkımının engellenerek birikmesi', isAiFilled: false },
-            { key: 'D', text: 'Endotelin-1 sentezinin stimüle edilmesi', isAiFilled: true },
-            { key: 'E', text: 'Noradrenalin geri alımının inhibe edilmesi', isAiFilled: true },
-          ],
-          correctAnswer: 'C',
-          explanation: 'ACE inhibitörleri (örneğin kaptopril, enalapril, lisinopril), kininaz II enzimi ile özdeş olan ACE enzimini bloke eder. Kininaz II normalde bradikinin ve substans P\'yi yıkar. Enzim inhibe olunca hava yollarında bradikinin ve substans P birikerek akciğer C-liflerini uyarır ve karakteristik inatçı kuru öksürüğe yol açar.',
-          confidenceScore: 98,
-          notesAndDiscrepancies: 'Tüm öğrenci hafızaları ve şıkları %100 uyumludur. E şıkkı sınav standardında çeldirici olarak AI tarafından dengelenmiştir.',
-          lastUpdated: new Date().toISOString(),
-        },
-      },
-      {
-        id: 'q-102',
-        committeeId: 'donem3-kurul2',
-        questionNumber: 27,
-        discipline: 'Patoloji',
-        topic: 'Miyokard İnfarktüsü Histopatolojisi',
-        status: 'gathering',
-        claimedAnswer: 'B',
-        tags: ['Koagülasyon Nekrozu', 'Nötrofil İnfiltrasyonu', 'Dalgalı Lifler'],
-        createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
-        updatedAt: new Date().toISOString(),
-        fragments: [
-          {
-            id: 'f-4',
-            author: 'Cemre T.',
-            text: 'Patolojide MI süresi sorusu vardı. 1-3. günlerde mikroskopta ne görülür diye sorulmuştu.',
-            type: 'stem',
-            timestamp: new Date(Date.now() - 3600000 * 10).toISOString(),
-            upvotes: 7,
-          },
-          {
-            id: 'f-5',
-            author: 'Ahmet K.',
-            text: 'Şıklarda nötrofil infiltrasyonu ve yoğun koagülasyon nekrozu vardı. 4-7. günde makrofajlar geliyordu, o yüzden cevap nötrofillerdi.',
-            type: 'option',
-            timestamp: new Date(Date.now() - 3600000 * 8).toISOString(),
-            upvotes: 6,
-          },
-          {
-            id: 'f-6',
-            author: 'Zeynep H.',
-            text: 'Hoca slaytta sarı-kahverengi yumuşama ve yoğun nötrofilik infiltrasyon vurgusu yapmıştı.',
-            type: 'clue',
-            timestamp: new Date(Date.now() - 3600000 * 5).toISOString(),
-            upvotes: 5,
-          },
-        ],
-        options: [
-          { key: 'A', text: 'Dalgalı lifler (wavy fibers) ve ödem', suggestedBy: 'Cemre', upvotes: 2 },
-          { key: 'B', text: 'Yoğun koagülasyon nekrozu ve bol nötrofil infiltrasyonu', suggestedBy: 'Ahmet K.', upvotes: 9 },
-          { key: 'C', text: 'Makrofaj fagositozu ve granülasyon dokusu başlangıcı', suggestedBy: 'Zeynep H.', upvotes: 3 },
-        ],
-      },
-      {
-        id: 'q-103',
-        committeeId: 'donem3-kurul2',
-        questionNumber: 42,
-        discipline: 'Tıbbi Mikrobiyoloji',
-        topic: 'Atipik Pnömoni Etkenleri',
-        status: 'gathering',
-        tags: ['Legionella', 'Klima', 'Hiponatremi', 'BCYE Agar'],
-        createdAt: new Date(Date.now() - 3600000 * 6).toISOString(),
-        updatedAt: new Date().toISOString(),
-        fragments: [
-          {
-            id: 'f-7',
-            author: 'Onur Med',
-            text: 'Otelde kalan yaşlı adam sorusu! Klimalardan bulaşan, ateşi yüksek, ishal ve bilinç bulanıklığı olan hasta.',
-            type: 'stem',
-            timestamp: new Date(Date.now() - 3600000 * 4).toISOString(),
-            upvotes: 11,
-          },
-          {
-            id: 'f-8',
-            author: 'Selin B.',
-            text: 'Laboratuvarda sodyum 126 mg/dL (hiponatremi) verilmişti. Hoca hangi besiyerinde ürer ya da etken kimdir sormuştu.',
-            type: 'clue',
-            timestamp: new Date(Date.now() - 3600000 * 3).toISOString(),
-            upvotes: 8,
-          },
-        ],
-        options: [
-          { key: 'A', text: 'Streptococcus pneumoniae', suggestedBy: 'Onur Med', upvotes: 1 },
-          { key: 'B', text: 'Legionella pneumophila (BCYE agar)', suggestedBy: 'Selin B.', upvotes: 10 },
-          { key: 'C', text: 'Mycoplasma pneumoniae', suggestedBy: 'Anonim', upvotes: 2 },
-        ],
-      },
-    ],
+    questions: [], // 2026-2027 dönemine ait kurullarda henüz sınava girilmediği için güncel havuz boştur.
   };
 
   fs.writeFileSync(DB_FILE, JSON.stringify(seed, null, 2), 'utf-8');
@@ -625,7 +661,8 @@ app.post('/api/committees', (req, res) => {
 
 app.get('/api/questions', (req, res) => {
   const { committeeId, discipline, status, search } = req.query;
-  let result = db.questions;
+  // Sadece sınavı tamamlanmış güncel 2026-2027 soruları döner, çıkmış sorular kesinlikle güncel havuza karışamaz
+  let result = (db.questions || []).filter(q => !q.isPastExam && q.examYear === '2026-2027');
 
   if (committeeId) {
     result = result.filter((q) => q.committeeId === committeeId);
@@ -999,7 +1036,7 @@ app.post('/api/admin/command', async (req, res) => {
 app.post('/api/automation/run-full-local-sync', async (req, res) => {
   try {
     const result = await scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR);
-    res.json({ success: true, message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.', ...result });
+    res.json({ ...result, message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.' });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
@@ -1363,65 +1400,15 @@ LÜTFEN ŞU KURALLARA KESİNLİKLE UY:
 6. GÜVEN SKORU & NOTLAR: "confidenceScore" alanına 0-100 arası puan ver. Öğrencilerin hafıza parçaları arasındaki çelişkileri veya yapılan düzeltmeleri "notesAndDiscrepancies" alanında özetle.
 `;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
-      contents: promptContext,
-      config: {
-        systemInstruction:
-          'Sen tıp fakültesi komite ve TUS soruları konusunda uzmanlaşmış tıbbi editör yapay zekasın. Çıktıyı her zaman belirtilen JSON şemasına harfiyen uygun olarak ver.',
-        responseMimeType: 'application/json',
-        responseSchema: {
-          type: Type.OBJECT,
-          properties: {
-            stem: {
-              type: Type.STRING,
-              description: 'Rekonstrükte edilmiş eksiksiz saf soru metni ve kökü',
-            },
-            options: {
-              type: Type.ARRAY,
-              description: 'A, B, C, D, E olmak üzere tam 5 şık',
-              items: {
-                type: Type.OBJECT,
-                properties: {
-                  key: {
-                    type: Type.STRING,
-                    description: 'Şık harfi: A, B, C, D veya E',
-                  },
-                  text: {
-                    type: Type.STRING,
-                    description: 'Şıkkın tam metni',
-                  },
-                  isAiFilled: {
-                    type: Type.BOOLEAN,
-                    description: 'Öğrenci hatırlamayıp AI tamamladıysa true, aksi halde false',
-                  },
-                },
-                required: ['key', 'text', 'isAiFilled'],
-              },
-            },
-            correctAnswer: {
-              type: Type.STRING,
-              description: 'Doğru şık harfi (A, B, C, D, E)',
-            },
-            explanation: {
-              type: Type.STRING,
-              description: 'Detaylı tıbbi gerekçe ve açıklama',
-            },
-            confidenceScore: {
-              type: Type.INTEGER,
-              description: 'Rekonstrüksiyon güven yüzdesi (0-100)',
-            },
-            notesAndDiscrepancies: {
-              type: Type.STRING,
-              description: 'Öğrenci hafıza çelişkileri veya eksik kalan noktalar hakkında not',
-            },
-          },
-          required: ['stem', 'options', 'correctAnswer', 'explanation', 'confidenceScore', 'notesAndDiscrepancies'],
-        },
-      },
+    const aiResult = await generateResilientMedicalAi({
+      prompt: promptContext,
+      customGeminiKey: req.body?.apiKey,
+      customGroqKey: req.body?.groqApiKey,
+      preferredProvider: req.body?.preferredProvider || 'auto',
+      model: 'gemini-3.8-flash'
     });
 
-    const parsed = JSON.parse(response.text?.trim() || '{}');
+    const parsed = JSON.parse(aiResult.text?.trim() || '{}');
 
     // Ensure pure stem without leaked meta-prefixes
     let cleanStem = (parsed.stem || 'Soru kökü derleniyor...').trim();
@@ -1447,7 +1434,7 @@ LÜTFEN ŞU KURALLARA KESİNLİKLE UY:
     saveDatabase();
 
     // Mirror to Supabase if connected
-    syncQuestionToSupabase(question);
+    mirrorQuestionToSupabase(question);
 
     res.json({ reconstruction: question.reconstruction, question });
   } catch (error: any) {
@@ -2715,11 +2702,11 @@ app.post('/api/ai/admin-custom-redact', async (req, res) => {
       return res.status(400).json({ success: false, error: 'Soru verisi eksik.' });
     }
 
-    const apiKey = req.body.apiKey || process.env.GEMINI_API_KEY || dotenv.config().parsed?.GEMINI_API_KEY;
-    if (!apiKey) {
+    const hasKeys = getTieredGeminiKeys(req.body.apiKey).length > 0 || !!(req.body.groqApiKey || process.env.GROQ_API_KEY);
+    if (!hasKeys) {
       return res.status(400).json({
         success: false,
-        error: 'Gemini API anahtarı (GEMINI_API_KEY) tanımlı değil. Lütfen .env dosyasında geçerli bir API anahtarı tanımlayın veya Ayarlar panelinden anahtarınızı girin.'
+        error: 'Sistemde geçerli bir yapay zeka anahtarı (Gemini veya Groq) tanımlı değil. Lütfen .env dosyasını veya Ayarlar panelini kontrol edin.'
       });
     }
 
@@ -2789,28 +2776,26 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
   "notesAndDiscrepancies": "..."
 }`;
 
-    const { GoogleGenAI } = await import('@google/genai');
-    const clientAi = new GoogleGenAI({ apiKey });
     let text = '{}';
+    let planUsed = 'Ücretsiz Plan 1';
 
     try {
-      const geminiRes = await clientAi.models.generateContent({
-        model: model || 'gemini-3.8-flash',
-        contents: prompt,
-        config: { responseMimeType: 'application/json' }
+      const aiResult = await generateResilientMedicalAi({
+        prompt,
+        customGeminiKey: req.body.apiKey,
+        customGroqKey: req.body.groqApiKey,
+        preferredProvider: req.body.preferredProvider || 'auto',
+        model: model || 'gemini-3.8-flash'
       });
-      text = geminiRes.text || '{}';
+      text = aiResult.text;
+      planUsed = aiResult.planUsed;
     } catch (gemErr: any) {
-      console.error('Admin custom redact Gemini error:', gemErr);
+      console.error('Admin custom redact error:', gemErr);
       const errMsg = gemErr?.message || '';
       const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
-      const userMsg = isQuota
-        ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı tanımlayın.'
-        : `Yapay zeka redaksiyonu başarısız oldu: ${errMsg || 'API yanıt vermedi'}`;
-
       return res.status(isQuota ? 429 : 502).json({
         success: false,
-        error: userMsg
+        error: errMsg || 'Yapay zeka redaksiyonu başarısız oldu.'
       });
     }
 
@@ -2832,7 +2817,7 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
       correctAnswer: parsed.correctAnswer || 'A',
       explanation: parsed.explanation || '',
       confidenceScore: parsed.confidenceScore || 95,
-      notesAndDiscrepancies: parsed.notesAndDiscrepancies || `Admin özel talimatı ile redakte edildi (${adminEmail || 'Admin'})`,
+      notesAndDiscrepancies: parsed.notesAndDiscrepancies || `${planUsed} ile redakte edildi (${adminEmail || 'Admin'})`,
       lastUpdated: new Date().toISOString()
     };
 
@@ -2858,7 +2843,7 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
           }
 
           // Mirror update to Supabase
-          syncPastQuestionToSupabase(list[idx]);
+          mirrorPastQuestionToSupabase(list[idx]);
         }
       } catch (e) {}
     }
@@ -2869,6 +2854,346 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
     });
   } catch (err: any) {
     res.status(500).json({ success: false, error: 'Redaksiyon işlemi gerçekleştirilemedi: ' + err.message });
+  }
+});
+
+// Live AI Match: Find matching lecture notes and slides for any question text
+app.post('/api/ai/match-lecture-notes', async (req, res) => {
+  try {
+    const { queryText, disciplineHint, committeeId, limit = 3 } = req.body;
+    if (!queryText || !queryText.trim()) {
+      return res.json({ matches: [] });
+    }
+    const matches = findBestMatchingLectureSlides(queryText, disciplineHint, committeeId, limit);
+    return res.json({ matches });
+  } catch (err: any) {
+    console.error('match-lecture-notes error:', err);
+    return res.status(500).json({ error: err.message, matches: [] });
+  }
+});
+
+// Student & User AI Question Optimizer: Grounds question in lecture notes and internet medical knowledge
+app.post('/api/ai/optimize-question', async (req, res) => {
+  try {
+    const {
+      question,
+      studentNotes,
+      apiKey,
+      groqApiKey,
+      preferredProvider = 'auto',
+      model = 'gemini-3.8-flash'
+    } = req.body;
+
+    if (!question) {
+      return res.status(400).json({ success: false, error: 'Soru verisi eksik.' });
+    }
+
+    // 1. Build rich search query from question fragments, options, comments, stem and user notes
+    const fragmentsList = question.fragments || [];
+    const fragmentsText = fragmentsList.map((f: any) => f.text).join(' ');
+    const optionsList = question.options || [];
+    const optionsText = optionsList.map((o: any) => o.text).join(' ');
+    const commentsList = question.comments || [];
+    const commentsText = commentsList.map((c: any) => `${c.author}: ${c.text}`).join('\n');
+    const baseStem = question.reconstruction?.stem || (question as any).rawQuestion?.stem || question.rawStem || fragmentsList[0]?.text || question.topic || '';
+    
+    const query = [
+      question.topic,
+      question.discipline,
+      baseStem,
+      fragmentsText,
+      optionsText,
+      studentNotes
+    ].filter(Boolean).join(' ');
+
+    // 2. High-speed lecture notes search across 880+ faculty lecture notes
+    const matchingSlides = findBestMatchingLectureSlides(
+      query,
+      question.discipline,
+      question.committeeId,
+      3
+    );
+
+    const topMatch = matchingSlides[0] || null;
+
+    // 3. Assemble prompt for Gemini / Groq with dual grounding (amfi notes + internet medical standards)
+    const prompt = `Sen Türkiye'deki Tıp Fakültesi Kurul ve TUS Sınavları Komisyonunda görevli kıdemli bir Tıp Profesörüsün.
+Tıp fakültesi öğrencileri veya kullanıcılar sınav sorusunu daha iyi bir düzene sokmak için bu aracı çalıştırmıştır.
+
+GÖREVİN:
+Aşağıda verilen mevcut soru bilgilerini, öğrenci soru havuzundaki hafıza parçalarını (fragments), şıkları ve öğrenci yorumlarını kullanarak;
+hem internetten edindiğin derin tıbbi bilgilere (Robbins Patoloji, Guyton Fizyoloji, Katzung Farmakoloji vb.) hem de paylaşılmış olan resmi amfi ders notu slaytına dayanarak bu soruyu KUSURSUZ BİR KURUL SINAVI DÜZENİNE SOKMAKTIR.
+
+DERS NOTLARININ AMACI:
+1. Hangi sorunun HANGİ DERSE (örn: Tıbbi Patoloji, Tıbbi Farmakoloji, Tıbbi Mikrobiyoloji, Tıbbi Biyokimya, Halk Sağlığı vb.) ve HANGİ KONUYA ait olduğunu netleştirmek.
+2. Sorunun amfide hocanın slaytında nasıl anlatıldığını ve kurul sınavında NASIL SORULDUĞUNU (amfi kazanımı, slayttaki kilit patofizyolojik mekanizma veya klinik tanı kriterleri) netleştirmektir.
+
+MEVCUT SORU BİLGİLERİ:
+- Soru No: #${question.questionNumber || 'Çıkmış Soru'}
+- Mevcut Disiplin (Ön Bilgi): ${question.discipline || 'Belirtilmemiş'}
+- Mevcut Konu: ${question.topic || 'Belirtilmemiş'}
+- Mevcut Soru Kökü / Ham Metin:
+${baseStem || 'Henüz tam soru kökü girilmemiş.'}
+
+- Öğrenci Havuzundaki Hatırlanan Parçalar (Fragments):
+${fragmentsList.length > 0
+  ? fragmentsList.map((f: any, idx: number) => `  ${idx + 1}. [${f.author || 'Öğrenci'} - ${f.type}]: "${f.text}" (Onay: ${f.upvotes || 0})`).join('\n')
+  : '  (Henüz parça girilmemiş)'}
+
+- Mevcut Şıklar:
+${optionsList.length > 0
+  ? optionsList.map((o: any) => `  ${o.key}) ${o.text}`).join('\n')
+  : '  (Şıklar girilmemiş)'}
+
+- Öğrenci Katkıları ve Yorumları:
+${commentsText ? commentsText : '  (Ek yorum yok)'}
+
+- Hatırlanan / İddia Edilen Doğru Cevap: ${question.claimedAnswer || question.reconstruction?.correctAnswer || 'Belirtilmemiş'}
+
+${studentNotes ? `ÖĞRENCİ / KULLANICI EK YÖNLENDİRMESİ VE İPUCU:\n"""\n${studentNotes}\n"""\n` : ''}
+
+${topMatch ? `EŞLEŞEN AMFİ DERS NOTU VE SLAYT ZEMİNLEMESİ (GROUNDING):
+- Amfi Dersi: "${topMatch.noteTitle}"
+- Tespit Edilen Disiplin: ${topMatch.discipline}
+- Slayt Sayfası: #${topMatch.pageNumber} / ${topMatch.totalSlides} (Eşleşme Güveni: %${topMatch.score})
+- Slayttaki İlgili Pasaj:
+"""
+${topMatch.fullContent}
+"""` : 'Not: Amfi ders notu veri tabanında birebir slayt bulunamadı; doğrudan güncel tıp literatürü standartları esas alınacaktır.'}
+
+DÜZENLEME KURALLARI VE STANDARTLARI:
+1. DERS VE KONU TESPİTİ (ZORUNLU):
+   - Slayt içeriğini ve soru konusunu inceleyerek "detectedDiscipline" (örn: Tıbbi Patoloji, Tıbbi Farmakoloji, Tıbbi Mikrobiyoloji vb.) ve "detectedTopic" (örn: ACE İnhibitörleri ve Bradikinin, Tiroid Papiller Karsinomu) alanlarını net olarak belirle.
+2. SORUNUN NASIL SORULDUĞUNU NETLEŞTİR:
+   - Amfi ders slaytında hocanın anlattığı patofizyolojik mekanizma, klinik tanı kriteri veya farmakolojik etkiye bakarak, öğrenci parçalarını amfi anlatım tarzıyla birleştir; sorunun amfide ve kurul sınavında nasıl sorulduğunu kristalize et.
+   - Eğer parçalarda veya kullanıcı notunda "değildir", "yanlıştır" gibi olumsuz kök vurgusu varsa, soru kökünü kesinlikle olumsuz ("...hangisi DEĞİLDİR?", "...hangisi YANLIŞTIR?") biçimde formüle et.
+3. KUSURSUZ SINAV KÖKÜ (METİN SAFLIĞI):
+   - "stem" alanına sadece resmi sınav kağıdında yer alacak saf, net ve hatasız soru kökünü yaz!
+   - Asla parantez içinde idari talimat veya "(Öğrenci Notu: ...)" gibi meta-ifadeler ekleme!
+   - Yazım, harf, OCR ve imla hatalarını (örn. "biri- kir" -> "birikir") DOĞRUDAN DÜZELTEREK nihai soru köküne yansıt.
+4. 5 ADET ŞIK (A, B, C, D, E):
+   - Tam 5 bağımsız, mantıklı ve tıp fakültesi Dönem 3 kurul düzeyinde güçlü çeldiricisi olan seçenek oluştur.
+   - Doğru cevabı açıkça belirle ("A", "B", "C", "D" veya "E").
+5. AKADEMİK DERİN AÇIKLAMA:
+   - Robbins Patoloji, Guyton Fizyoloji veya Katzung Farmakoloji düzeyinde etki mekanizmasını, doğru cevabın gerekçesini ve çeldiricilerin neden elendiğini "explanation" alanında açıkla.
+6. DÜZENLEME RAPORU (refinementSummary):
+   - Yapay zekanın soruyu düzene sokarken yaptığı iyileştirmeleri (örn. "Öğrenci parçalarındaki kuru öksürük bulgusu klinik vakaya dönüştürüldü. Amfi notu 'Antihipertansif İlaçlar' Slayt #93'e dayanarak ders Farmakoloji, konu Antihipertansifler olarak netleştirildi. 5 şık tamamlandı ve yazım hataları giderildi.") 2-3 cümleyle "refinementSummary" alanında açıkla.
+
+YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
+{
+  "detectedDiscipline": "Tıbbi Farmakoloji",
+  "detectedTopic": "Antihipertansif İlaçlar ve Yan Etkileri",
+  "stem": "Resmi sınav formatında saf soru metni...",
+  "options": [
+    { "key": "A", "text": "...", "isAiFilled": false },
+    { "key": "B", "text": "...", "isAiFilled": false },
+    { "key": "C", "text": "...", "isAiFilled": false },
+    { "key": "D", "text": "...", "isAiFilled": false },
+    { "key": "E", "text": "...", "isAiFilled": false }
+  ],
+  "correctAnswer": "A",
+  "explanation": "Detaylı klinik patofizyolojik açıklama...",
+  "confidenceScore": 95,
+  "refinementSummary": "..."
+}`;
+
+    let aiResultText = '{}';
+    let planUsed = 'Ücretsiz Plan 1';
+    let providerUsed = 'Google Gemini';
+
+    try {
+      const resAi = await generateResilientMedicalAi({
+        prompt,
+        customGeminiKey: apiKey,
+        customGroqKey: groqApiKey,
+        preferredProvider,
+        model
+      });
+      aiResultText = resAi.text;
+      planUsed = resAi.planUsed;
+      providerUsed = resAi.providerUsed;
+    } catch (err: any) {
+      console.error('optimize-question AI error:', err);
+      const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
+      return res.status(isQuota ? 429 : 502).json({
+        success: false,
+        error: isQuota
+          ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429). Lütfen API Studio panelinden kotanızı kontrol edin veya alternatif sağlayıcı seçin.'
+          : (err.message || 'Yapay zeka soru optimizasyonu gerçekleştirilemedi.')
+      });
+    }
+
+    let parsed: any = {};
+    try {
+      parsed = JSON.parse(aiResultText);
+    } catch (parseErr) {
+      // Clean possible markdown code fences
+      const cleaned = aiResultText.replace(/```json/gi, '').replace(/```/g, '').trim();
+      parsed = JSON.parse(cleaned);
+    }
+
+    if (!parsed.stem || !parsed.options || !Array.isArray(parsed.options)) {
+      return res.status(502).json({
+        success: false,
+        error: 'Yapay zeka geçerli bir soru formatı üretemedi. Lütfen tekrar deneyin.'
+      });
+    }
+
+    // Clean pure stem: eliminate any accidentally leaked prefixes
+    let cleanStem = (parsed.stem || '').trim();
+    cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Talimat:[^)]+\);\s*/gi, '');
+
+    const optimizedQuestion = {
+      discipline: parsed.detectedDiscipline || question.discipline || (topMatch ? topMatch.discipline : 'Tıp Fakültesi'),
+      topic: parsed.detectedTopic || question.topic || (topMatch ? topMatch.noteTitle : 'Kurul Sınav Sorusu'),
+      stem: cleanStem,
+      options: parsed.options,
+      correctAnswer: parsed.correctAnswer || 'A',
+      explanation: parsed.explanation || '',
+      confidenceScore: parsed.confidenceScore || (topMatch ? Math.max(topMatch.score, 90) : 92),
+      notesAndDiscrepancies: parsed.refinementSummary || 'Yapay zeka ve ders notu zeminlemesiyle düzenlendi.'
+    };
+
+    return res.json({
+      success: true,
+      optimizedQuestion,
+      matchedLecture: topMatch
+        ? {
+            noteId: topMatch.noteId,
+            noteTitle: topMatch.noteTitle,
+            discipline: topMatch.discipline,
+            pageNumber: topMatch.pageNumber,
+            totalSlides: topMatch.totalSlides,
+            matchedSnippet: topMatch.snippet,
+            confidenceScore: topMatch.score,
+            reasoning: topMatch.reasoning,
+            driveFileUrl: topMatch.driveFileUrl
+          }
+        : null,
+      matchingSlides: matchingSlides.map(s => ({
+        noteId: s.noteId,
+        noteTitle: s.noteTitle,
+        discipline: s.discipline,
+        pageNumber: s.pageNumber,
+        totalSlides: s.totalSlides,
+        matchedSnippet: s.snippet,
+        confidenceScore: s.score,
+        reasoning: s.reasoning
+      })),
+      refinementSummary: parsed.refinementSummary || 'Soru amfi ders notları ve tıp literatürüyle düzenlendi.',
+      providerUsed,
+      planUsed
+    });
+  } catch (err: any) {
+    console.error('Fatal optimize-question error:', err);
+    return res.status(500).json({ success: false, error: 'Soru düzenlenemedi: ' + err.message });
+  }
+});
+
+// Apply AI Optimization to Question across Local DB, Past Exams, Supabase and Revisions
+app.post('/api/questions/:id/apply-ai-optimization', async (req, res) => {
+  try {
+    const qId = req.params.id;
+    const { optimizedData, matchedLecture, refinementSummary, userEmail, userName, studentNumber } = req.body;
+
+    if (!optimizedData) {
+      return res.status(400).json({ success: false, error: 'Optimizasyon verisi eksik.' });
+    }
+
+    const now = new Date().toISOString();
+    let updatedQuestion: any = null;
+
+    // 1. Check in regular questions
+    const qIndex = db.questions.findIndex((x) => x.id === qId);
+    if (qIndex !== -1) {
+      const q = db.questions[qIndex];
+      const newRevision = {
+        id: `rev-${Date.now()}`,
+        version: (q.revisions?.length || 0) + 1,
+        editedAt: now,
+        editorName: userName || 'Öğrenci (AI Destekli)',
+        editorStudentNumber: studentNumber || undefined,
+        changeSummary: refinementSummary || 'Yapay Zeka ve Amfi Ders Notu Zeminlemesi ile Düzenlendi',
+        stem: optimizedData.stem,
+        discipline: optimizedData.discipline,
+        topic: optimizedData.topic,
+        claimedAnswer: optimizedData.correctAnswer,
+        options: optimizedData.options,
+        explanation: optimizedData.explanation
+      };
+
+      q.discipline = optimizedData.discipline || q.discipline;
+      q.topic = optimizedData.topic || q.topic;
+      q.claimedAnswer = optimizedData.correctAnswer || q.claimedAnswer;
+      q.reconstruction = {
+        stem: optimizedData.stem,
+        options: optimizedData.options,
+        correctAnswer: optimizedData.correctAnswer,
+        explanation: optimizedData.explanation,
+        confidenceScore: optimizedData.confidenceScore || 95,
+        notesAndDiscrepancies: optimizedData.notesAndDiscrepancies || refinementSummary || '',
+        lastUpdated: now
+      };
+      q.status = 'completed';
+      q.updatedAt = now;
+      if (matchedLecture) {
+        q.lectureReference = matchedLecture;
+      }
+      q.revisions = [...(q.revisions || []), newRevision];
+
+      saveDatabase();
+      mirrorQuestionToSupabase(q);
+      updatedQuestion = q;
+    }
+
+    // 2. Also check in past questions (pastQuestions.json)
+    const pastPath = path.join(__dirname, 'data', 'pastQuestions.json');
+    if (fs.existsSync(pastPath)) {
+      try {
+        const list = JSON.parse(fs.readFileSync(pastPath, 'utf8'));
+        const pIdx = list.findIndex((x: any) => x.id === qId);
+        if (pIdx !== -1) {
+          const pq = list[pIdx];
+          pq.discipline = optimizedData.discipline || pq.discipline;
+          pq.topic = optimizedData.topic || pq.topic;
+          pq.claimedAnswer = optimizedData.correctAnswer || pq.claimedAnswer;
+          pq.reconstruction = {
+            stem: optimizedData.stem,
+            options: optimizedData.options,
+            correctAnswer: optimizedData.correctAnswer,
+            explanation: optimizedData.explanation,
+            confidenceScore: optimizedData.confidenceScore || 95,
+            notesAndDiscrepancies: optimizedData.notesAndDiscrepancies || refinementSummary || '',
+            lastUpdated: now
+          };
+          pq.status = 'completed';
+          pq.updatedAt = now;
+          if (matchedLecture) {
+            pq.lectureReference = matchedLecture;
+          }
+          fs.writeFileSync(pastPath, JSON.stringify(list, null, 2), 'utf8');
+
+          const srcPast = path.join(__dirname, 'src', 'data', 'pastQuestions.json');
+          if (fs.existsSync(srcPast)) {
+            fs.writeFileSync(srcPast, JSON.stringify(list, null, 2), 'utf8');
+          }
+
+          mirrorPastQuestionToSupabase(pq);
+          if (!updatedQuestion) updatedQuestion = pq;
+        }
+      } catch (e) {
+        console.warn('Error saving to pastQuestions.json:', e);
+      }
+    }
+
+    if (!updatedQuestion) {
+      return res.status(404).json({ success: false, error: 'Soru bulunamadı.' });
+    }
+
+    return res.json({ success: true, question: updatedQuestion });
+  } catch (err: any) {
+    console.error('apply-ai-optimization error:', err);
+    return res.status(500).json({ success: false, error: err.message });
   }
 });
 

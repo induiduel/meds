@@ -172,7 +172,7 @@ async function syncPastQuestions() {
   const list = JSON.parse(fs.readFileSync(pastPath, 'utf8'));
   console.log(`Toplam ${list.length} soru bulundu. Partiler halinde (50'şerli) yükleniyor...`);
 
-  const BATCH_SIZE = 50;
+  const BATCH_SIZE = 25;
   let successCount = 0;
 
   for (let i = 0; i < list.length; i += BATCH_SIZE) {
@@ -182,7 +182,7 @@ async function syncPastQuestions() {
       committee_id: q.committeeId,
       discipline: q.discipline || 'Tıbbi Patoloji',
       topic: q.topic || `Soru #${q.questionNumber || i + 1}`,
-      exam_year: q.examYear || '2026-2027',
+      exam_year: q.examYear || 'Geçmiş Yıllar Çıkmışı (Arşiv)',
       source_file: q.sourceFile || null,
       ai_category: q.aiCategory || null,
       claimed_answer: q.claimedAnswer || q.reconstruction?.correctAnswer || null,

@@ -43,6 +43,7 @@ import { InfoPopover } from './components/InfoPopover';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { PastExamsView } from './components/PastExamsView';
 import { AdminPastExamImporterModal } from './components/AdminPastExamImporterModal';
+import { AiQuestionOptimizerModal } from './components/AiQuestionOptimizerModal';
 import { NotebookLMSyncModal } from './components/NotebookLMSyncModal';
 import { SubagentMonitorModal } from './components/SubagentMonitorModal';
 import { REAL_KURUL1_DRIVE_SLIDES } from './services/driveAutomation';
@@ -105,6 +106,7 @@ export default function App() {
   const [selectedQuestionToEdit, setSelectedQuestionToEdit] = useState<QuestionItem | null>(null);
   const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
   const [selectedQuestionForHistory, setSelectedQuestionForHistory] = useState<QuestionItem | null>(null);
+  const [optimizeQuestion, setOptimizeQuestion] = useState<QuestionItem | null>(null);
 
   // Celebration Toast
   const [congratsToast, setCongratsToast] = useState<string | null>(null);
@@ -863,6 +865,7 @@ export default function App() {
                     onUpvoteOption={handleUpvoteOption}
                     onUpvoteQuestion={handleUpvoteQuestion}
                     onReconstructWithAi={handleReconstructWithAi}
+                    onOpenAiOptimizer={(targetQ) => setOptimizeQuestion(targetQ)}
                     onSetClaimedAnswer={handleSetClaimedAnswer}
                     isReconstructing={!!reconstructingMap[q.id]}
                   />
@@ -1120,6 +1123,24 @@ export default function App() {
           currentUser={currentUser}
           isAdmin={isAdmin}
           onQuestionsUpdated={fetchQuestions}
+        />
+      )}
+
+      {/* Student & User AI Question Optimizer Modal */}
+      {optimizeQuestion && (
+        <AiQuestionOptimizerModal
+          question={optimizeQuestion}
+          isOpen={Boolean(optimizeQuestion)}
+          onClose={() => setOptimizeQuestion(null)}
+          currentUser={currentUser}
+          onSaved={(updated) => {
+            setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
+            setOptimizeQuestion(null);
+          }}
+          onOpenSlideReader={(note, pageNumber) => {
+            setActiveTab('notes');
+            setOptimizeQuestion(null);
+          }}
         />
       )}
 

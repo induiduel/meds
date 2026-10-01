@@ -45,7 +45,7 @@ import { QuestionItem, Committee } from '../types';
 import { AdminEditQuestionModal } from './AdminEditQuestionModal';
 import { AdminPastExamImporterModal } from './AdminPastExamImporterModal';
 import { InfoPopover } from './InfoPopover';
-import { ApiService } from '../services/api';
+import { ApiService, safeJsonFetch } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { multiDbManager, DatabaseMode, DatabaseStatus } from '../services/multiDbManager';
 import { SupabaseDbService } from '../services/supabaseDb';
@@ -131,6 +131,12 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   });
   const [geminiKeyFeedback, setGeminiKeyFeedback] = useState<string | null>(null);
 
+  // Groq Cloud Alternative API Key State
+  const [groqApiKeyInput, setGroqApiKeyInput] = useState(() => {
+    return localStorage.getItem('medsoru_groq_api_key') || '';
+  });
+  const [groqKeyFeedback, setGroqKeyFeedback] = useState<string | null>(null);
+
   const refreshDbStatuses = async () => {
     setIsRefreshingDbStatus(true);
     try {
@@ -156,6 +162,17 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       setGeminiKeyFeedback('API anahtarı temizlendi.');
     }
     setTimeout(() => setGeminiKeyFeedback(null), 4000);
+  };
+
+  const handleSaveGroqKey = () => {
+    if (groqApiKeyInput.trim()) {
+      localStorage.setItem('medsoru_groq_api_key', groqApiKeyInput.trim());
+      setGroqKeyFeedback('✓ Groq Cloud API anahtarı kaydedildi!');
+    } else {
+      localStorage.removeItem('medsoru_groq_api_key');
+      setGroqKeyFeedback('Groq API anahtarı temizlendi.');
+    }
+    setTimeout(() => setGroqKeyFeedback(null), 4000);
   };
 
   const handleSyncToAllDatabases = async () => {
@@ -1520,22 +1537,22 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </div>
               )}
 
-              {/* Gemini API Key Box */}
+              {/* Gemini API Key Box with Tiered Pool Info */}
               <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-200">
                     <Key className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Gemini AI API Anahtarı</span>
+                    <span>Google Gemini AI (3 Kademeli Havuz & Özel Anahtar)</span>
                   </div>
-                  <span className="text-[10px] text-slate-400">Arkaplan Redaksiyon & Soru İyileştirme İçin</span>
+                  <span className="text-[10px] text-emerald-400 font-semibold">1. Ücretsiz → 2. Ücretsiz → 3. Faturalı (Yedek)</span>
                 </div>
                 <div className="flex gap-2">
                   <input
                     type="password"
                     value={geminiApiKeyInput}
                     onChange={(e) => setGeminiApiKeyInput(e.target.value)}
-                    placeholder="AIzaSy... (Google AI Studio API anahtarınızı buraya yapıştırın)"
-                    className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 font-mono"
+                    placeholder="AIzaSy... (Özel veya yedek Gemini API anahtarınızı buraya yapıştırın)"
+                    className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"
                   />
                   <button
                     type="button"
@@ -1547,6 +1564,36 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </div>
                 {geminiKeyFeedback && (
                   <p className="text-[11px] font-semibold text-emerald-400">{geminiKeyFeedback}</p>
+                )}
+              </div>
+
+              {/* Groq Cloud Alternative API Key Box */}
+              <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5 space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-200">
+                    <Sparkles className="w-3.5 h-3.5 text-orange-400" />
+                    <span>Groq Cloud API Anahtarı (Ücretsiz & Limitsiz Llama 3.3 70B)</span>
+                  </div>
+                  <span className="text-[10px] text-orange-400 font-semibold">Gemini Kotalarından Bağımsız Alternatif</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="password"
+                    value={groqApiKeyInput}
+                    onChange={(e) => setGroqApiKeyInput(e.target.value)}
+                    placeholder="gsk_... (console.groq.com adresinden aldığınız ücretsiz API anahtarı)"
+                    className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-orange-500 font-mono"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleSaveGroqKey}
+                    className="bg-orange-600 hover:bg-orange-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs cursor-pointer transition-all shrink-0"
+                  >
+                    Kaydet
+                  </button>
+                </div>
+                {groqKeyFeedback && (
+                  <p className="text-[11px] font-semibold text-emerald-400">{groqKeyFeedback}</p>
                 )}
               </div>
             </div>
