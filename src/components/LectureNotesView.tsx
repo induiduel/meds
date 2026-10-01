@@ -160,6 +160,21 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
           if (remote.length > 0) {
             setNotes(remote);
             setActiveNote(remote[0]);
+            return;
+          }
+        }
+      } catch (e) {}
+
+      // 3. Static bundled JSON fallback (Offline & GitHub Pages)
+      try {
+        const bundled = await import('../data/lecture_notes.json');
+        const list = (bundled.default || bundled) as LectureNote[];
+        if (Array.isArray(list) && list.length > 0) {
+          const valid = list.filter(isPureVerbatimNote);
+          if (valid.length > 0) {
+            setNotes(valid);
+            setActiveNote(valid[0]);
+            return;
           }
         }
       } catch (e) {}

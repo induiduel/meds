@@ -637,9 +637,33 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
       timestamp: new Date().toISOString()
     };
     q.comments.push(newComment);
+
+    // Gerçek Zamanlı Yapay Zeka Redaksiyon Entegrasyonu:
+    // Eğer soru öğrenciler tarafından %90 kabul görmüşse (upvotes >= 10 ve report yoksa) kilitlidir.
+    const isLockedByStudents = (q.upvotes || 0) >= 10 && (!q.reports || q.reports.length === 0);
+
+    if (q.reconstruction) {
+      if (isLockedByStudents) {
+        // Kilitli soru: Yalnızca öğrenci notu olarak ekle, ana redaksiyonu bozma
+        if (!q.reconstruction.explanation.includes(newComment.text)) {
+          q.reconstruction.explanation += `\n\n📌 [Öğrenci Katkısı & Alternatif Not (${newComment.author})]: ${newComment.text}`;
+        }
+      } else {
+        // Açık soru: Yapay zeka redaksiyonunu öğrenci yorumuyla anlık olarak zenginleştir
+        if (!q.reconstruction.explanation.includes(newComment.text)) {
+          q.reconstruction.explanation += `\n\n💡 [Öğrenci Geri Bildirimiyle Güncellendi (${newComment.author})]: ${newComment.text}`;
+        }
+        // Eğer yorumda alternatif bir şık önerisi varsa (örn: "Cevap C", "B şıkkı")
+        const optSuggest = newComment.text.match(/(?:cevap|şıkkı|seçenek)\s*[:\-]?\s*([A-E])/i);
+        if (optSuggest) {
+          q.reconstruction.suggestedCorrection = `Öğrenci önerisi: ${optSuggest[1].toUpperCase()} şıkkı`;
+        }
+      }
+    }
+
     savePastQuestionsDb(list);
 
-    res.json({ success: true, comment: newComment });
+    res.json({ success: true, comment: newComment, updatedReconstruction: q.reconstruction });
   } catch (err: any) {
     res.status(500).json({ error: 'Yorum kaydedilemedi: ' + err.message });
   }
