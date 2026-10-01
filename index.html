@@ -9,6 +9,21 @@
     <meta property="og:description" content="Tıp fakültesi kurul sınavları için kolektif soru hatırlama, şık tamamlama ve yapay zeka ile %100 doğrulukta soru rekonstrüksiyon platformu." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Suppress benign WebSocket/HMR errors in iframe preview
+      window.addEventListener('unhandledrejection', function(event) {
+        var msg = event.reason ? (event.reason.message || String(event.reason)) : '';
+        if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = event.message || '';
+        if (msg.indexOf('WebSocket') !== -1) {
+          event.preventDefault();
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
