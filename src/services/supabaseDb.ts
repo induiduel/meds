@@ -136,6 +136,10 @@ export const SupabaseDbService = {
     }
   },
 
+  async saveCommittee(committee: Committee): Promise<boolean> {
+    return this.saveCommittees([committee]);
+  },
+
   async saveCommittees(committees: Committee[]): Promise<boolean> {
     const client = getSupabaseClient();
     if (!client || committees.length === 0) return false;
@@ -297,6 +301,48 @@ export const SupabaseDbService = {
     } catch (err) {
       console.warn('Supabase savePastQuestion error:', err);
       return false;
+    }
+  },
+
+  async batchSavePastQuestions(questions: QuestionItem[]): Promise<{ success: boolean; count: number }> {
+    const client = getSupabaseClient();
+    if (!client || questions.length === 0) return { success: false, count: 0 };
+
+    let totalSaved = 0;
+    const batchSize = 100;
+    try {
+      for (let i = 0; i < questions.length; i += batchSize) {
+        const chunk = questions.slice(i, i + batchSize);
+        const rows = chunk.map((q) => ({
+          id: q.id,
+          committee_id: q.committeeId,
+          discipline: q.discipline,
+          topic: q.topic,
+          exam_year: q.examYear || '2026-2027',
+          source_file: q.sourceFile || null,
+          ai_category: (q as any).aiCategory || null,
+          claimed_answer: q.claimedAnswer || q.reconstruction?.correctAnswer,
+          raw_question: (q as any).rawQuestion || null,
+          reconstruction: q.reconstruction || null,
+          is_suspect: Boolean((q as any).isSuspect),
+          is_ambiguous: Boolean((q as any).isAmbiguous),
+          is_locked: Boolean((q as any).isLocked),
+          upvotes: q.upvotes || 0,
+          comments: (q as any).comments || [],
+          reports: (q as any).reports || [],
+          custom_redacted_by: (q as any).customRedactedBy || null,
+          custom_redacted_at: (q as any).customRedactedAt || null,
+          custom_redaction_prompt: (q as any).customRedactionPrompt || null,
+          data: q,
+          updated_at: new Date().toISOString(),
+        }));
+        const { error } = await client.from('past_questions').upsert(rows, { onConflict: 'id' });
+        if (!error) totalSaved += chunk.length;
+      }
+      return { success: true, count: totalSaved };
+    } catch (err) {
+      console.warn('Supabase batchSavePastQuestions error:', err);
+      return { success: false, count: totalSaved };
     }
   },
 

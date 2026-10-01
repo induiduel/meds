@@ -2421,7 +2421,7 @@ app.post('/api/ai/generate-similar-question', async (req, res) => {
     const slidePage = slideMatch?.page?.pageNumber || 1;
     const sourcePdf = baseQuestion.sourceFile || 'Çıkmış Sınav Dosyası';
 
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = process.env.GEMINI_API_KEY || dotenv.config().parsed?.GEMINI_API_KEY;
     if (apiKey) {
       try {
         const { GoogleGenAI } = await import('@google/genai');
@@ -2522,7 +2522,7 @@ app.post('/api/ai/admin-custom-redact', async (req, res) => {
       return res.status(400).json({ error: 'Soru verisi eksik.' });
     }
 
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = process.env.GEMINI_API_KEY || dotenv.config().parsed?.GEMINI_API_KEY;
     const baseStem = question.reconstruction?.stem || question.fragments?.[0]?.text || question.rawStem || question.topic || '';
     const currentOptions = (question.reconstruction?.options || question.options || []).map((o: any) => `${o.key}) ${o.text}`).join('\n');
     const claimedAns = question.claimedAnswer || question.reconstruction?.correctAnswer || '';
