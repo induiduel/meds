@@ -5,10 +5,10 @@ const fs = require('fs');
 const gitExe = '"C:\\Program Files\\Git\\cmd\\git.exe"';
 const rootDir = path.resolve(__dirname, '..');
 const distDir = path.join(rootDir, 'dist');
-const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
-const repoUrl = token 
-  ? `https://${token}@github.com/induiduel/meds.git`
-  : 'origin';
+const parentRemote = execSync(`${gitExe} remote get-url origin`, { cwd: rootDir }).toString().trim();
+const repoUrl = process.env.GITHUB_TOKEN
+  ? `https://${process.env.GITHUB_TOKEN}@github.com/induiduel/meds.git`
+  : parentRemote;
 
 console.log('Deploying dist folder to gh-pages branch...');
 process.chdir(distDir);
