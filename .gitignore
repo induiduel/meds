@@ -8,3 +8,4 @@ coverage/
 !.env.example
 .vscode/
 data/sent_emails.json
+data/smtp_config.json

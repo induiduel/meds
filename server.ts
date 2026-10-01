@@ -1522,6 +1522,171 @@ app.delete('/api/questions/:id', requireAdmin, (req, res) => {
   res.json({ success: true });
 });
 
+// --- Persistent SMTP & Email Configuration Management ---
+interface SmtpConfig {
+  enabled: boolean;
+  service?: string; // 'gmail' | 'custom'
+  host: string;
+  port: number;
+  secure: boolean;
+  user: string;
+  pass: string;
+  from: string;
+}
+
+const SMTP_CONFIG_FILE = path.resolve(DATA_DIR, 'smtp_config.json');
+
+function getSmtpConfig(): SmtpConfig {
+  let fileConfig: Partial<SmtpConfig> = {};
+  if (fs.existsSync(SMTP_CONFIG_FILE)) {
+    try {
+      fileConfig = JSON.parse(fs.readFileSync(SMTP_CONFIG_FILE, 'utf-8'));
+    } catch {}
+  }
+
+  const user = fileConfig.user || process.env.SMTP_USER || 'nofrostlife@gmail.com';
+  const pass = fileConfig.pass || process.env.SMTP_PASS || '';
+  const host = fileConfig.host || process.env.SMTP_HOST || 'smtp.gmail.com';
+  const port = fileConfig.port || Number(process.env.SMTP_PORT) || 465;
+  const secure = fileConfig.secure !== undefined ? fileConfig.secure : (port === 465);
+  const service = fileConfig.service || (host.includes('gmail') ? 'gmail' : undefined);
+  const from = fileConfig.from || process.env.EMAIL_FROM || `MedSoru Tıp Fakültesi <${user}>`;
+  const enabled = fileConfig.enabled !== false;
+
+  return { enabled, service, host, port, secure, user, pass, from };
+}
+
+function saveSmtpConfig(config: Partial<SmtpConfig>): SmtpConfig {
+  const current = getSmtpConfig();
+  const updated: SmtpConfig = {
+    ...current,
+    ...config,
+    pass: (config.pass !== undefined && config.pass !== '********') ? config.pass.replace(/\s+/g, '') : current.pass,
+  };
+  fs.writeFileSync(SMTP_CONFIG_FILE, JSON.stringify(updated, null, 2), 'utf-8');
+  return updated;
+}
+
+function createSmtpTransporter() {
+  const cfg = getSmtpConfig();
+  if (!cfg.enabled || !cfg.user || !cfg.pass) {
+    return null;
+  }
+  if (cfg.service === 'gmail' || cfg.host.includes('gmail')) {
+    return nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: cfg.user,
+        pass: cfg.pass.replace(/\s+/g, ''),
+      },
+    });
+  }
+  return nodemailer.createTransport({
+    host: cfg.host,
+    port: cfg.port,
+    secure: cfg.secure,
+    auth: {
+      user: cfg.user,
+      pass: cfg.pass,
+    },
+  });
+}
+
+// Admin: Get SMTP Configuration (Password masked)
+app.get('/api/admin/smtp-config', (req, res) => {
+  const cfg = getSmtpConfig();
+  res.json({
+    enabled: cfg.enabled,
+    service: cfg.service || 'gmail',
+    host: cfg.host,
+    port: cfg.port,
+    secure: cfg.secure,
+    user: cfg.user,
+    from: cfg.from,
+    hasPassword: Boolean(cfg.pass && cfg.pass.length > 0),
+    hasPass: Boolean(cfg.pass && cfg.pass.length > 0),
+    isConfigured: Boolean(cfg.user && cfg.pass && cfg.pass.length > 5),
+    passMasked: cfg.pass ? '••••••••' : '',
+  });
+});
+
+// Admin: Save SMTP Configuration
+app.post('/api/admin/smtp-config', (req, res) => {
+  try {
+    const updated = saveSmtpConfig(req.body);
+    res.json({
+      success: true,
+      message: 'SMTP e-posta sunucu ayarları başarıyla kaydedildi.',
+      config: {
+        enabled: updated.enabled,
+        service: updated.service,
+        host: updated.host,
+        port: updated.port,
+        user: updated.user,
+        from: updated.from,
+        hasPassword: Boolean(updated.pass && updated.pass.length > 0),
+      },
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'SMTP ayarları kaydedilemedi: ' + err.message });
+  }
+});
+
+// Admin: Test SMTP Connection & Send Live Test Email
+app.post('/api/admin/smtp-test', async (req, res) => {
+  const targetEmail = req.body?.to || 'nofrostlife@gmail.com';
+  const cfg = getSmtpConfig();
+  const transporter = createSmtpTransporter();
+
+  if (!transporter) {
+    return res.status(400).json({
+      success: false,
+      error: 'SMTP şifresi (Google Uygulama Şifresi) girilmemiş. Lütfen 16 haneli şifrenizi tanımlayınız.',
+      hint: 'Gmail için: Google Hesabım > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) sayfasından oluşturunuz.'
+    });
+  }
+
+  try {
+    await transporter.verify();
+    const info = await transporter.sendMail({
+      from: cfg.from,
+      to: targetEmail,
+      subject: '🧪 MedSoru Tıp Fakültesi - SMTP Bağlantı Testi',
+      text: `Tebrikler!\nMedSoru SMTP e-posta sunucusu başarıyla bağlandı.\nBu test e-postası ${new Date().toLocaleString('tr-TR')} tarihinde gönderilmiştir.\n\nGönderen: ${cfg.from}\nSunucu: ${cfg.host}`,
+      html: `
+        <div style="font-family: sans-serif; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; max-width: 500px;">
+          <h2 style="color: #0f766e; margin-top: 0;">✅ SMTP E-posta Testi Başarılı!</h2>
+          <p style="color: #334155; font-size: 14px;">MedSoru Tıp Fakültesi e-posta sunucunuz başarıyla bağlandı ve canlı e-posta iletimi aktif.</p>
+          <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 12px; border-radius: 8px; font-size: 13px; color: #065f46;">
+            <strong>Sunucu:</strong> ${cfg.host} (${cfg.port})<br>
+            <strong>Gönderici:</strong> ${cfg.from}<br>
+            <strong>Alıcı:</strong> ${targetEmail}<br>
+            <strong>Tarih:</strong> ${new Date().toLocaleString('tr-TR')}
+          </div>
+        </div>
+      `
+    });
+
+    res.json({
+      success: true,
+      message: `${targetEmail} adresine test e-postası başarıyla iletildi!`,
+      messageId: info.messageId,
+    });
+  } catch (err: any) {
+    console.error('SMTP Test Error:', err);
+    let userFriendly = err.message || 'SMTP sunucusuna bağlanılamadı.';
+    if (err.code === 'EAUTH' || err.responseCode === 535) {
+      userFriendly = 'Gmail Giriş Hatası (535): Normal şifreniz yerine Google 2 Adımlı Doğrulama altındaki 16 haneli "Uygulama Şifresi"ni (App Password) girmelisiniz.';
+    }
+    res.status(500).json({
+      success: false,
+      error: userFriendly,
+      code: err.code || 'SMTP_ERR',
+      hint: 'Google Hesabınız > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) kısmından MedSoru için şifre oluşturup kaydedin.'
+    });
+  }
+});
+
 // Email notification endpoint (congratulations, thank you, and admin alert)
 app.post('/api/send-email', async (req, res) => {
   const { to, subject, html, text, type, committeeId, studentNumber } = req.body;
@@ -1529,25 +1694,16 @@ app.post('/api/send-email', async (req, res) => {
     return res.status(400).json({ error: 'to ve subject alanları zorunludur.' });
   }
 
-  const smtpHost = process.env.SMTP_HOST;
-  const smtpPort = Number(process.env.SMTP_PORT) || 587;
-  const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASS;
-  const emailFrom = process.env.EMAIL_FROM || 'MedSoru Tıp Soru Havuzu <noreply@medsoru.local>';
+  const cfg = getSmtpConfig();
+  const transporter = createSmtpTransporter();
 
   let sentReal = false;
   let logDetail = '';
 
-  if (smtpHost && smtpUser && smtpPass) {
+  if (transporter) {
     try {
-      const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: smtpPort,
-        secure: smtpPort === 465,
-        auth: { user: smtpUser, pass: smtpPass },
-      });
       await transporter.sendMail({
-        from: emailFrom,
+        from: cfg.from,
         to,
         subject,
         text,
@@ -1555,7 +1711,7 @@ app.post('/api/send-email', async (req, res) => {
       });
       sentReal = true;
     } catch (e: any) {
-      console.warn('Real SMTP send failed, falling back to logger:', e.message);
+      console.warn('Real SMTP send failed:', e.message);
       logDetail = e.message;
     }
   }
@@ -1577,15 +1733,19 @@ app.post('/api/send-email', async (req, res) => {
       studentNumber,
       sentReal,
       preview: text || html?.slice(0, 150),
+      error: logDetail || undefined,
     });
     fs.writeFileSync(sentEmailsFile, JSON.stringify(emailLogs, null, 2), 'utf-8');
   } catch (err) {}
 
-  console.log(`[EMAIL DISPATCH] To: ${to} | Subject: ${subject} | Real SMTP: ${sentReal} | Type: ${type || 'general'}`);
+  if (!sentReal && transporter) {
+    return res.status(500).json({ success: false, error: logDetail || 'E-posta iletilemedi.' });
+  }
+
   res.json({ success: true, sentReal, message: 'E-posta bildirimi işlendi.' });
 });
 
-// Dedicated Welcome Email endpoint with rich medical layout & auto-logging
+// Dedicated Welcome Email endpoint with rich medical layout & authentic delivery
 app.post('/api/send-welcome-email', async (req, res) => {
   const { email, displayName, studentNumber } = req.body;
   if (!email) {
@@ -1640,23 +1800,18 @@ app.post('/api/send-welcome-email', async (req, res) => {
   `;
   const text = `Sayın ${cleanName},\nMedSoru Tıp Fakültesi sistemine kaydınız tamamlandı.\n${cleanNum ? `Öğrenci No: ${cleanNum}\n` : ''}Sisteme girerek ders slaytlarını okuyabilir, soru hafızalarını ekleyebilir ve çıkmış soruları çözebilirsiniz.`;
 
-  const smtpHost = process.env.SMTP_HOST;
-  const smtpPort = Number(process.env.SMTP_PORT) || 587;
-  const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASS;
-  const emailFrom = process.env.EMAIL_FROM || 'MedSoru Tıp Fakültesi <noreply@medsoru.local>';
+  const cfg = getSmtpConfig();
+  const transporter = createSmtpTransporter();
 
   let sentReal = false;
-  if (smtpHost && smtpUser && smtpPass) {
+  let deliveryError: string | null = null;
+
+  if (!transporter) {
+    deliveryError = 'SMTP sunucu ayarları (Google Uygulama Şifresi) henüz girilmemiş. Lütfen Yönetici Paneli > E-posta Ayarları sekmesinden 16 haneli şifrenizi tanımlayınız.';
+  } else {
     try {
-      const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: smtpPort,
-        secure: smtpPort === 465,
-        auth: { user: smtpUser, pass: smtpPass },
-      });
       await transporter.sendMail({
-        from: emailFrom,
+        from: cfg.from,
         to: cleanEmail,
         subject,
         text,
@@ -1664,6 +1819,7 @@ app.post('/api/send-welcome-email', async (req, res) => {
       });
       sentReal = true;
     } catch (e: any) {
+      deliveryError = e.message || 'E-posta iletimi başarısız oldu.';
       console.warn('Real SMTP send for welcome email failed:', e.message);
     }
   }
@@ -1683,22 +1839,39 @@ app.post('/api/send-welcome-email', async (req, res) => {
       type: 'welcome',
       studentNumber: cleanNum,
       sentReal,
-      preview: `Hoş geldiniz e-postası iletildi (${cleanName})`,
+      error: deliveryError || undefined,
+      preview: `Hoş geldiniz e-postası (${cleanName})`,
     });
     fs.writeFileSync(sentEmailsFile, JSON.stringify(emailLogs, null, 2), 'utf-8');
   } catch (err) {}
 
-  // Mark welcome email sent in users.json
-  const users = loadUsers();
-  const u = users.find((user) => user.email.toLowerCase() === cleanEmail);
-  if (u) {
-    u.welcomeEmailSent = true;
-    u.welcomeEmailSentAt = new Date().toISOString();
-    saveUsers(users);
+  // Mark welcome email sent in users.json only if actually sent!
+  if (sentReal) {
+    const users = loadUsers();
+    const u = users.find((user) => user.email.toLowerCase() === cleanEmail);
+    if (u) {
+      u.welcomeEmailSent = true;
+      u.welcomeEmailSentAt = new Date().toISOString();
+      saveUsers(users);
+    }
   }
 
-  console.log(`[WELCOME EMAIL DISPATCH] To: ${cleanEmail} | Real SMTP: ${sentReal}`);
-  res.json({ success: true, sentReal, message: `Hoş geldiniz e-postası ${cleanEmail} adresine başarıyla gönderildi.` });
+  console.log(`[WELCOME EMAIL DISPATCH] To: ${cleanEmail} | Real SMTP: ${sentReal} | Error: ${deliveryError || 'None'}`);
+
+  if (!sentReal) {
+    return res.status(400).json({
+      success: false,
+      sentReal: false,
+      error: deliveryError,
+      hint: 'Google Hesabınız > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) kısmından 16 haneli şifre alıp Yönetici Paneli > E-posta Ayarları sekmesinden kaydediniz.'
+    });
+  }
+
+  res.json({
+    success: true,
+    sentReal: true,
+    message: `${cleanEmail} adresine hoş geldiniz e-postası başarıyla iletildi.`
+  });
 });
 
 // User Synchronization Endpoint (syncs from Auth/Firestore to Server Database)

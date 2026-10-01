@@ -853,8 +853,8 @@ export const ApiService = {
     userEmail: string,
     displayName?: string,
     studentNumber?: string
-  ): Promise<boolean> {
-    if (!userEmail) return false;
+  ): Promise<{ success: boolean; error?: string; hint?: string; instructions?: string[] }> {
+    if (!userEmail) return { success: false, error: 'E-posta adresi boş bırakılamaz.' };
     try {
       const res = await fetch('/api/send-welcome-email', {
         method: 'POST',
@@ -865,12 +865,75 @@ export const ApiService = {
           studentNumber,
         }),
       });
-      return res.ok;
-    } catch (e) {
+      const data = await res.json().catch(() => null);
+      if (!res.ok) {
+        return {
+          success: false,
+          error: data?.error || `HTTP ${res.status} Hatası`,
+          hint: data?.hint,
+          instructions: data?.instructions,
+        };
+      }
+      return { success: true };
+    } catch (e: any) {
       console.warn('sendWelcomeEmail network error:', e);
-      return false;
+      return { success: false, error: e.message || 'Ağ bağlantı hatası' };
     }
   },
+
+  async getSmtpConfig(): Promise<{
+    enabled: boolean;
+    service: string;
+    host: string;
+    port: number;
+    secure: boolean;
+    user: string;
+    from: string;
+    hasPass: boolean;
+    passMasked: string;
+  }> {
+    const res = await fetch('/api/admin/smtp-config');
+    if (!res.ok) throw new Error('SMTP ayarları alınamadı.');
+    return res.json();
+  },
+
+  async saveSmtpConfig(config: {
+    enabled?: boolean;
+    service?: string;
+    host?: string;
+    port?: number;
+    secure?: boolean;
+    user?: string;
+    pass?: string;
+    from?: string;
+  }): Promise<{ success: boolean; message: string; config: any }> {
+    const res = await fetch('/api/admin/smtp-config', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(config),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'SMTP ayarları kaydedilemedi.');
+    return data;
+  },
+
+  async testSmtp(to?: string): Promise<{ success: boolean; message?: string; error?: string; hint?: string }> {
+    const res = await fetch('/api/admin/smtp-test', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ to }),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      return {
+        success: false,
+        error: data.error || 'Test e-postası gönderilemedi.',
+        hint: data.hint,
+      };
+    }
+    return data;
+  },
+
 
   async addFragment(questionId: string, text: string, author: string, type: 'stem' | 'clue' | 'option'): Promise<QuestionItem> {
     const db = getLocalDb();

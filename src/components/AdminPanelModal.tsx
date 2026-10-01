@@ -30,7 +30,12 @@ import {
   UserPlus,
   UserCheck,
   Hash,
-  User
+  User,
+  Key,
+  Send,
+  Server,
+  Settings,
+  Lock
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AdminEditQuestionModal } from './AdminEditQuestionModal';
@@ -78,6 +83,28 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [isSyncingAuthDb, setIsSyncingAuthDb] = useState(false);
   const [userSyncMessage, setUserSyncMessage] = useState<string | null>(null);
   const [sendingWelcomeForEmail, setSendingWelcomeForEmail] = useState<string | null>(null);
+
+  // SMTP Configuration State
+  const [smtpConfig, setSmtpConfig] = useState<{
+    enabled: boolean;
+    service: string;
+    host: string;
+    port: number;
+    secure: boolean;
+    user: string;
+    from: string;
+    hasPass: boolean;
+    passMasked: string;
+  } | null>(null);
+  const [smtpUser, setSmtpUser] = useState('nofrostlife@gmail.com');
+  const [smtpPass, setSmtpPass] = useState('');
+  const [smtpFrom, setSmtpFrom] = useState('');
+  const [showSmtpSettings, setShowSmtpSettings] = useState(false);
+  const [isLoadingSmtp, setIsLoadingSmtp] = useState(false);
+  const [isSavingSmtp, setIsSavingSmtp] = useState(false);
+  const [isTestingSmtp, setIsTestingSmtp] = useState(false);
+  const [smtpTestResult, setSmtpTestResult] = useState<{ success: boolean; message: string; hint?: string } | null>(null);
+  const [testEmailTarget, setTestEmailTarget] = useState('nofrostlife@gmail.com');
 
   // Automations state
   const [workerHeartbeat, setWorkerHeartbeat] = useState<{ isOnline: boolean; diffSeconds?: number; lastHeartbeat?: any } | null>(null);
@@ -359,6 +386,73 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     }
   }, [isOpen]);
 
+  const loadSmtpConfig = async () => {
+    setIsLoadingSmtp(true);
+    try {
+      const cfg = await ApiService.getSmtpConfig();
+      setSmtpConfig(cfg);
+      setSmtpUser(cfg.user || 'nofrostlife@gmail.com');
+      setSmtpFrom(cfg.from || `MedSoru Tıp Fakültesi <${cfg.user || 'nofrostlife@gmail.com'}>`);
+    } catch (e) {
+      console.warn('Could not load SMTP config:', e);
+    } finally {
+      setIsLoadingSmtp(false);
+    }
+  };
+
+  const handleSaveSmtp = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    setIsSavingSmtp(true);
+    setSmtpTestResult(null);
+    try {
+      const res = await ApiService.saveSmtpConfig({
+        user: smtpUser.trim(),
+        pass: smtpPass.trim() ? smtpPass.trim() : undefined,
+        from: smtpFrom.trim(),
+      });
+      setSmtpTestResult({
+        success: true,
+        message: res.message || 'SMTP e-posta sunucu ayarları başarıyla kaydedildi.',
+      });
+      setSmtpPass('');
+      await loadSmtpConfig();
+    } catch (e: any) {
+      setSmtpTestResult({
+        success: false,
+        message: e.message || 'SMTP ayarları kaydedilemedi.',
+      });
+    } finally {
+      setIsSavingSmtp(false);
+    }
+  };
+
+  const handleTestSmtp = async () => {
+    setIsTestingSmtp(true);
+    setSmtpTestResult(null);
+    try {
+      const res = await ApiService.testSmtp(testEmailTarget.trim() || smtpUser.trim());
+      if (res.success) {
+        setSmtpTestResult({
+          success: true,
+          message: res.message || 'Canlı SMTP bağlantısı ve test e-postası başarıyla gönderildi!',
+        });
+      } else {
+        setSmtpTestResult({
+          success: false,
+          message: res.error || 'Test e-postası gönderilemedi.',
+          hint: res.hint,
+        });
+      }
+    } catch (e: any) {
+      setSmtpTestResult({
+        success: false,
+        message: e.message || 'Bağlantı hatası.',
+      });
+    } finally {
+      setIsTestingSmtp(false);
+    }
+  };
+
   const handleManualCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newEmail.trim()) return;
@@ -371,9 +465,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         role: newRole,
       });
 
-      await ApiService.sendWelcomeEmail(created.email, created.displayName, created.studentNumber);
+      const welcomeRes = await ApiService.sendWelcomeEmail(created.email, created.displayName, created.studentNumber);
 
-      setUserSyncMessage(`✓ Kullanıcı ${created.email} eklendi ve hoş geldiniz e-postası başarıyla iletildi.`);
+      if (welcomeRes.success) {
+        setUserSyncMessage(`✓ Kullanıcı ${created.email} eklendi ve hoş geldiniz e-postası başarıyla iletildi.`);
+      } else {
+        setUserSyncMessage(`⚠️ Kullanıcı ${created.email} eklendi fakat hoş geldiniz maili gönderilemedi: ${welcomeRes.error || ''}`);
+      }
+
       setIsCreatingUser(false);
       setNewEmail('');
       setNewName('');
@@ -412,12 +511,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const handleSendWelcomeEmail = async (u: any) => {
     setSendingWelcomeForEmail(u.email);
     try {
-      const ok = await ApiService.sendWelcomeEmail(u.email, u.displayName, u.studentNumber);
-      if (ok) {
+      const res = await ApiService.sendWelcomeEmail(u.email, u.displayName, u.studentNumber);
+      if (res.success) {
         setUserSyncMessage(`✓ Hoş geldiniz e-postası ${u.email} adresine iletildi.`);
         await loadUsersData();
       } else {
-        alert('E-posta gönderimi başarısız oldu.');
+        const hintText = res.hint ? `\n\n📌 Çözüm: ${res.hint}` : '';
+        const instruct = res.instructions?.length ? `\n\nAdımlar:\n${res.instructions.join('\n')}` : '';
+        alert(`❌ E-posta Gönderilemedi:\n${res.error || 'Bilinmeyen hata'}${hintText}${instruct}`);
       }
     } catch (e: any) {
       alert('Hata: ' + e.message);
@@ -455,6 +556,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   useEffect(() => {
     if (isOpen) {
       loadUsersData();
+      loadSmtpConfig();
       checkWorkerStatus();
       const interval = setInterval(checkWorkerStatus, 8000);
       return () => clearInterval(interval);
@@ -1029,6 +1131,22 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </button>
 
                 <button
+                  onClick={() => setShowSmtpSettings(!showSmtpSettings)}
+                  className={`font-black px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95 ${
+                    smtpConfig?.hasPass
+                      ? 'bg-teal-800/90 hover:bg-teal-700 text-teal-100 border border-teal-500/60'
+                      : 'bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold border border-amber-300'
+                  }`}
+                  title="Gmail SMTP e-posta sunucusu ve 16 haneli Google Uygulama Şifresi ayarları"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>{showSmtpSettings ? 'SMTP Panelini Gizle' : 'E-posta & SMTP Ayarları'}</span>
+                  {!smtpConfig?.hasPass && (
+                    <span className="w-2 h-2 rounded-full bg-rose-600 animate-ping" />
+                  )}
+                </button>
+
+                <button
                   onClick={() => setIsCreatingUser(!isCreatingUser)}
                   className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
                 >
@@ -1037,6 +1155,208 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </button>
               </div>
             </div>
+
+            {/* Warning if SMTP pass is missing */}
+            {!smtpConfig?.hasPass && !showSmtpSettings && (
+              <div className="bg-amber-50 border border-amber-300 rounded-xl p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-amber-900 shadow-2xs">
+                <div className="flex items-center gap-2.5">
+                  <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
+                  <div>
+                    <strong className="font-bold block text-slate-900">
+                      Önemli: Hoş Geldin E-postaları İçin Google Uygulama Şifresi Tanımlanmamış
+                    </strong>
+                    <span className="text-[11px] text-slate-600">
+                      Yeni kaydolan öğrencilere otomatik hoş geldiniz bildirimi gidebilmesi için 16 haneli Google App Password tanımlanmalıdır.
+                    </span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setShowSmtpSettings(true)}
+                  className="bg-amber-600 hover:bg-amber-700 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 cursor-pointer shrink-0 self-start sm:self-auto"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>Şimdi Tanımla & Test Et</span>
+                </button>
+              </div>
+            )}
+
+            {/* SMTP E-posta Sunucu Yapılandırması Kartı */}
+            {showSmtpSettings && (
+              <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white rounded-2xl p-5 border border-teal-700/50 shadow-xl space-y-4 animate-fade-in">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-700">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sm text-white flex items-center gap-2">
+                        <span>E-posta & SMTP Sunucu Yapılandırması (Gmail Canlı İletim)</span>
+                        {smtpConfig?.hasPass ? (
+                          <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <Check className="w-3 h-3 text-emerald-400" />
+                            Hazır & Yapılandırıldı
+                          </span>
+                        ) : (
+                          <span className="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <AlertTriangle className="w-3 h-3 text-amber-400" />
+                            Şifre Eksik (Mail Gönderilemez)
+                          </span>
+                        )}
+                      </h4>
+                      <p className="text-xs text-slate-400">
+                        Yeni kayıt olan veya onaylanan öğrencilere gönderilecek hoş geldiniz mailleri için Gmail SMTP servisi kullanılır.
+                      </p>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={() => setShowSmtpSettings(false)}
+                    className="self-end sm:self-auto text-slate-400 hover:text-white text-xs px-2.5 py-1 rounded-lg hover:bg-slate-800 cursor-pointer"
+                  >
+                    Gizle
+                  </button>
+                </div>
+
+                {/* Form Fields */}
+                <form onSubmit={handleSaveSmtp} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                    <div>
+                      <label className="block text-[11px] font-bold text-teal-300 mb-1">
+                        Gönderen Gmail Adresi *
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={smtpUser}
+                        onChange={(e) => setSmtpUser(e.target.value)}
+                        placeholder="nofrostlife@gmail.com"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-teal-400 focus:ring-1 focus:ring-teal-400 font-mono"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-teal-300 mb-1 flex items-center justify-between">
+                        <span>16 Haneli Google Uygulama Şifresi *</span>
+                        {smtpConfig?.hasPass && (
+                          <span className="text-[10px] text-emerald-400 font-normal">Kayıtlı: {smtpConfig.passMasked}</span>
+                        )}
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="password"
+                          value={smtpPass}
+                          onChange={(e) => setSmtpPass(e.target.value)}
+                          placeholder={smtpConfig?.hasPass ? 'Yeni şifre girmek için yazınız...' : 'örn: abcd efgh ijkl mnop'}
+                          className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-teal-400 focus:ring-1 focus:ring-teal-400 font-mono"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-teal-300 mb-1">
+                        Görünen Gönderici Başlığı
+                      </label>
+                      <input
+                        type="text"
+                        value={smtpFrom}
+                        onChange={(e) => setSmtpFrom(e.target.value)}
+                        placeholder="MedSoru Tıp Fakültesi <nofrostlife@gmail.com>"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-teal-400 focus:ring-1 focus:ring-teal-400"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Instructions Box */}
+                  <div className="bg-slate-950/80 border border-teal-900/60 rounded-xl p-3.5 text-xs space-y-2 text-slate-300">
+                    <div className="flex items-center gap-2 font-bold text-teal-300">
+                      <Key className="w-4 h-4 text-teal-400" />
+                      <span>Google 16 Haneli Uygulama Şifresi Nasıl Alınır? (Gmail 2022+ Kuralı)</span>
+                    </div>
+                    <ol className="list-decimal list-inside space-y-1 text-[11px] text-slate-400 leading-relaxed">
+                      <li>
+                        Gmail normal e-posta şifrenizle programlardan giriş yapılmasına izin vermez. 
+                        Önce Google hesabınızda <strong className="text-white">2 Adımlı Doğrulama</strong>'nın açık olduğundan emin olun.
+                      </li>
+                      <li>
+                        Tarayıcınızda{' '}
+                        <a
+                          href="https://myaccount.google.com/apppasswords"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-teal-400 hover:text-teal-300 underline font-bold inline-flex items-center gap-0.5"
+                        >
+                          myaccount.google.com/apppasswords
+                          <ExternalLink className="w-3 h-3 inline" />
+                        </a>{' '}
+                        sayfasına gidin.
+                      </li>
+                      <li>
+                        Uygulama adı olarak <strong className="text-teal-300">MedSoru</strong> yazın ve <strong className="text-white">Oluştur</strong> butonuna tıklayın.
+                      </li>
+                      <li>
+                        Google'ın size ekranda gösterdiği 16 haneli sarı kod bloğunu (örnek: <span className="font-mono text-amber-300">abcd efgh ijkl mnop</span>) kopyalayıp yukarıdaki alana yapıştırın ve <strong>Ayarları Kaydet</strong>'e basınız.
+                      </li>
+                    </ol>
+                  </div>
+
+                  {/* Actions & Live Test */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+                    <div className="flex items-center gap-2 flex-1 max-w-md">
+                      <input
+                        type="email"
+                        value={testEmailTarget}
+                        onChange={(e) => setTestEmailTarget(e.target.value)}
+                        placeholder="Test maili alıcısı (örn: nofrostlife@gmail.com)"
+                        className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white placeholder-slate-500 font-mono"
+                      />
+                      <button
+                        type="button"
+                        onClick={handleTestSmtp}
+                        disabled={isTestingSmtp}
+                        className="bg-teal-600 hover:bg-teal-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition-all cursor-pointer disabled:opacity-50 shrink-0"
+                      >
+                        <Send className={`w-3.5 h-3.5 ${isTestingSmtp ? 'animate-pulse' : ''}`} />
+                        <span>{isTestingSmtp ? 'Gönderiliyor...' : 'Canlı Test Gönder'}</span>
+                      </button>
+                    </div>
+
+                    <div className="flex items-center gap-2 self-end sm:self-auto">
+                      <button
+                        type="submit"
+                        disabled={isSavingSmtp}
+                        className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition-all cursor-pointer disabled:opacity-50"
+                      >
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                        <span>{isSavingSmtp ? 'Kaydediliyor...' : 'Ayarları Kaydet'}</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Feedback Message */}
+                  {smtpTestResult && (
+                    <div className={`p-3 rounded-xl border text-xs flex items-start gap-2 ${
+                      smtpTestResult.success
+                        ? 'bg-emerald-950/80 border-emerald-500/50 text-emerald-200'
+                        : 'bg-rose-950/80 border-rose-500/50 text-rose-200'
+                    }`}>
+                      {smtpTestResult.success ? (
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      ) : (
+                        <AlertTriangle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                      )}
+                      <div>
+                        <strong className="block">{smtpTestResult.message}</strong>
+                        {smtpTestResult.hint && (
+                          <p className="text-[11px] text-slate-300 mt-1">
+                            📌 <strong>İpucu:</strong> {smtpTestResult.hint}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </form>
+              </div>
+            )}
 
             {/* Quick Add User Form (Collapsible) */}
             {isCreatingUser && (
