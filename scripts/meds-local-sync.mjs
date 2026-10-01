@@ -531,6 +531,16 @@ export async function runFullSync() {
 
   // 6. ADIM: MedSoru Çalışan Sunucusuna ve Firebase'e Eşitle
   console.log('\n🌐 6. ADIM: Sunucu ve Firebase Senkronizasyonu...');
+  if (totalParsedQuestions.length > 0) {
+    console.log(`   📤 ${totalParsedQuestions.length} soru MedSoru sunucusuna ve veritabanına aktarılıyor...`);
+    await postServerJson('/api/questions/batch-import', {
+      adminEmail: 'nofrostlife@gmail.com',
+      committeeId: 'donem3-kurul1',
+      examYear: 'Çıkmış',
+      questions: totalParsedQuestions,
+    }).catch((e) => console.warn('   ⚠️ Sunucuya aktarım uyarısı:', e.message));
+  }
+
   await postServerJson('/api/automation/drive-sync-status', {
     source: 'meds_local_sync',
     status: 'completed',

@@ -495,19 +495,49 @@ export class FirestoreDbService {
   }
 
   /**
-   * Batch creates or updates multiple questions
+   * Batch creates or updates multiple questions in Firebase Firestore.
+   * Splits into safe chunks of up to 100 questions, applies cleanForFirestore,
+   * ensures zero initial likes, and provides resilient timeouts.
    */
-  static async batchSaveQuestions(questions: QuestionItem[]): Promise<void> {
-    const batch = writeBatch(db);
-    for (const q of questions) {
-      const ref = doc(db, QUESTIONS_COLLECTION, q.id);
-      const cleaned = cleanForFirestore({
-        ...q,
-        updatedAt: new Date().toISOString(),
-      });
-      batch.set(ref, cleaned);
+  static async batchSaveQuestions(questions: QuestionItem[]): Promise<{ success: boolean; count: number }> {
+    if (!questions || questions.length === 0) return { success: true, count: 0 };
+
+    const chunkSize = 100;
+    let savedTotal = 0;
+
+    for (let i = 0; i < questions.length; i += chunkSize) {
+      const chunk = questions.slice(i, i + chunkSize);
+      const batch = writeBatch(db);
+
+      for (const q of chunk) {
+        const ref = doc(db, QUESTIONS_COLLECTION, q.id);
+        const formatted: QuestionItem = {
+          ...q,
+          upvotes: typeof q.upvotes === 'number' ? q.upvotes : 0,
+          likedBy: Array.isArray(q.likedBy) ? q.likedBy : [],
+          options: (q.options || []).map((opt) => ({
+            ...opt,
+            upvotes: typeof opt.upvotes === 'number' ? opt.upvotes : 0,
+            likedBy: Array.isArray(opt.likedBy) ? opt.likedBy : [],
+          })),
+          fragments: (q.fragments || []).map((frag) => ({
+            ...frag,
+            upvotes: typeof frag.upvotes === 'number' ? frag.upvotes : 0,
+            likedBy: Array.isArray(frag.likedBy) ? frag.likedBy : [],
+          })),
+          updatedAt: new Date().toISOString(),
+        };
+
+        const cleaned = cleanForFirestore(formatted);
+        batch.set(ref, cleaned, { merge: true });
+      }
+
+      // Allow 25 seconds per chunk of 100 questions
+      await withTimeout(batch.commit(), 25000);
+      savedTotal += chunk.length;
     }
-    await withTimeout(batch.commit(), 5000);
+
+    return { success: true, count: savedTotal };
   }
 
   /**

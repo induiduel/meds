@@ -16,7 +16,9 @@ import {
   Calendar,
   Check,
   ChevronDown,
-  Info
+  Info,
+  Cloud,
+  Database
 } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { ApiService } from '../services/api';
@@ -53,6 +55,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
   const [fileExtractStatus, setFileExtractStatus] = useState<string | null>(null);
   const [parseError, setParseError] = useState<string | null>(null);
   const [parsedQuestions, setParsedQuestions] = useState<any[]>([]);
+  const [autoSaveToFirebase, setAutoSaveToFirebase] = useState(true);
 
   // Importing state
   const [isImporting, setIsImporting] = useState(false);
@@ -166,6 +169,35 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
       }
 
       setParsedQuestions(res.questions);
+
+      // If Auto-Save to Firebase & Server is enabled, save immediately
+      if (autoSaveToFirebase) {
+        setIsImporting(true);
+        try {
+          const importResult = await ApiService.batchImportPastQuestions(
+            adminEmail,
+            targetCommitteeId,
+            examYear,
+            res.questions
+          );
+
+          const syncTargets = [];
+          if (importResult.serverSynced) syncTargets.push('Yerel Sunucu');
+          if (importResult.firebaseSynced) syncTargets.push('Firebase Firestore Bulut Veritabanı');
+          const syncedStr = syncTargets.length > 0 ? syncTargets.join(' ve ') : 'Veritabanı';
+
+          setImportSuccessMessage(
+            `✓ ${importResult.count} adet çıkmış soru yapay zeka ile ayrıştırıldı ve doğrudan ${syncedStr} üzerine kaydedildi! (Tüm beğeniler 0 olarak başlatıldı)`
+          );
+          await onImportSuccess();
+        } catch (saveErr: any) {
+          setParseError(`Sorular ayrıştırıldı ancak veritabanına otomatik aktarılırken uyarı oluştu: ${saveErr.message}. Aşağıdaki yeşil butondan manuel aktarımı deneyebilirsiniz.`);
+        } finally {
+          setIsImporting(false);
+        }
+      } else {
+        setFileExtractStatus(`✓ ${res.questions.length} adet soru ayrıştırıldı. Şimdi aşağıdaki 'Tümünü Veritabanına ve Firebase'e Aktar' butonuna tıklayarak kaydedebilirsiniz.`);
+      }
     } catch (err: any) {
       setParseError(err.message || 'Yapay zeka ayrıştırma sırasında hata oluştu.');
     } finally {
@@ -197,20 +229,26 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
   };
 
   // Save to database
-  const handleBatchImport = async () => {
-    if (parsedQuestions.length === 0) return;
+  const handleBatchImport = async (questionsOverride?: any[]) => {
+    const listToSave = questionsOverride || parsedQuestions;
+    if (listToSave.length === 0) return;
 
     setIsImporting(true);
     try {
-      await ApiService.batchImportPastQuestions(
+      const result = await ApiService.batchImportPastQuestions(
         adminEmail,
         targetCommitteeId,
         examYear,
-        parsedQuestions
+        listToSave
       );
 
+      const syncTargets = [];
+      if (result.serverSynced) syncTargets.push('Yerel Sunucu');
+      if (result.firebaseSynced) syncTargets.push('Firebase Firestore Bulutu');
+      const syncedStr = syncTargets.length > 0 ? syncTargets.join(' ve ') : 'Veritabanı';
+
       setImportSuccessMessage(
-        `${parsedQuestions.length} adet çıkmış soru başarıyla veritabanına eklendi! Artık tüm öğrenciler tarafından görüntülenebilir ve yeni öneriler ile düzenlenebilir.`
+        `✓ ${result.count} adet çıkmış soru ${syncedStr} üzerine başarıyla kaydedildi! (Beğeniler 0 olarak başlatıldı, çift tıklamayla beğeni iptali devrede)`
       );
       setParsedQuestions([]);
       setRawText('');
@@ -410,17 +448,35 @@ Cevap: A
             />
           </div>
 
-          {/* Action Button: Parse with AI */}
-          <div className="flex justify-end">
+          {/* Action Button & Auto-Save Toggle */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+            <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl hover:bg-slate-100 transition-colors">
+              <input
+                type="checkbox"
+                checked={autoSaveToFirebase}
+                onChange={(e) => setAutoSaveToFirebase(e.target.checked)}
+                className="w-4 h-4 text-teal-600 rounded focus:ring-teal-500"
+              />
+              <span className="flex items-center gap-1.5">
+                <Cloud className="w-3.5 h-3.5 text-teal-600" />
+                <span>Ayrıştırıldığında doğrudan Firebase & Sunucuya Otomatik Kaydet</span>
+              </span>
+            </label>
+
             <button
               onClick={handleParseQuestions}
-              disabled={isParsing || (!rawText.trim() && !uploadedFileBase64)}
-              className="bg-gradient-to-r from-teal-700 to-emerald-700 hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-md cursor-pointer"
+              disabled={isParsing || isImporting || (!rawText.trim() && !uploadedFileBase64)}
+              className="bg-gradient-to-r from-teal-700 to-emerald-700 hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer active:scale-95"
             >
               {isParsing ? (
                 <>
                   <RefreshCw className="w-4 h-4 animate-spin" />
                   <span>Yapay Zeka Soruları Ayrıştırıyor...</span>
+                </>
+              ) : isImporting ? (
+                <>
+                  <RefreshCw className="w-4 h-4 animate-spin" />
+                  <span>Firebase & Sunucuya Kaydediliyor...</span>
                 </>
               ) : (
                 <>
@@ -434,28 +490,36 @@ Cevap: A
           {/* Staging / Parsed Questions List */}
           {parsedQuestions.length > 0 && (
             <div className="space-y-4 pt-4 border-t border-slate-200">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-teal-50/70 p-3 rounded-xl border border-teal-200">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-700" />
-                  <span className="font-bold text-teal-950 text-xs">
-                    {parsedQuestions.length} Soru Tespit Edildi ({examYear})
-                  </span>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-gradient-to-r from-teal-50 to-emerald-50 p-3.5 rounded-xl border border-teal-300 shadow-2xs">
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-teal-700" />
+                    <span className="font-bold text-teal-950 text-xs">
+                      {parsedQuestions.length} Soru Tespit Edildi ({examYear})
+                    </span>
+                    <span className="bg-teal-700 text-white font-mono text-[10px] font-bold px-2 py-0.5 rounded-full">
+                      Beğeniler: 0
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-600">
+                    Aşağıdaki sorularda düzenleme yapabilir veya doğrudan bulut havuzuna aktarabilirsiniz.
+                  </p>
                 </div>
 
                 <button
-                  onClick={handleBatchImport}
+                  onClick={() => handleBatchImport()}
                   disabled={isImporting}
-                  className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-sm cursor-pointer"
+                  className="bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-bold px-4 py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md cursor-pointer active:scale-95 shrink-0"
                 >
                   {isImporting ? (
                     <>
                       <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                      <span>Veritabanına Aktarılıyor...</span>
+                      <span>Firebase & Sunucuya Aktarılıyor...</span>
                     </>
                   ) : (
                     <>
-                      <Check className="w-4 h-4 text-teal-200" />
-                      <span>Tümünü Veritabanına Aktar (Öğrencilerin Düzenlemesine Aç)</span>
+                      <Cloud className="w-4 h-4 text-emerald-200" />
+                      <span>Tümünü Firebase ve Sunucuya Aktar</span>
                     </>
                   )}
                 </button>

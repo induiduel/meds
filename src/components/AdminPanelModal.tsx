@@ -106,6 +106,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [smtpTestResult, setSmtpTestResult] = useState<{ success: boolean; message: string; hint?: string } | null>(null);
   const [testEmailTarget, setTestEmailTarget] = useState('nofrostlife@gmail.com');
 
+  // Firestore Questions Sync State
+  const [isSyncingFirestore, setIsSyncingFirestore] = useState(false);
+  const [firestoreSyncFeedback, setFirestoreSyncFeedback] = useState<string | null>(null);
+
   // Automations state
   const [workerHeartbeat, setWorkerHeartbeat] = useState<{ isOnline: boolean; diffSeconds?: number; lastHeartbeat?: any } | null>(null);
   const [isCheckingWorker, setIsCheckingWorker] = useState(false);
@@ -244,6 +248,25 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         }
       },
     });
+  };
+
+  // Sync all questions from current memory/server to Firestore
+  const handleSyncQuestionsToFirestore = async () => {
+    if (!questions || questions.length === 0) {
+      alert('Soru havuzunda yüklenecek soru bulunmuyor.');
+      return;
+    }
+    setIsSyncingFirestore(true);
+    setFirestoreSyncFeedback(`Firebase Firestore bulutuna aktarılıyor (0 / ${questions.length})...`);
+    try {
+      const res = await FirestoreDbService.batchSaveQuestions(questions);
+      setFirestoreSyncFeedback(`✓ ${res.count} adet soru Firebase Firestore bulutuna başarıyla aktarıldı!`);
+      await onRefreshData();
+    } catch (e: any) {
+      setFirestoreSyncFeedback(`Hata: ${e.message || 'Firebase aktarımı başarısız'}`);
+    } finally {
+      setIsSyncingFirestore(false);
+    }
   };
 
   // Drive sync manual trigger
@@ -1089,6 +1112,61 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   <span>Sıfırla</span>
                 </button>
               </div>
+            </div>
+
+            {/* Cloud Firestore Sync Card */}
+            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white border border-teal-700/50 rounded-xl p-4 sm:p-5 space-y-3 shadow-md">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center">
+                    <Cloud className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm text-white flex items-center gap-2">
+                      <span>Firebase Firestore Bulut Senkronizasyonu</span>
+                      <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                        Canlı Bulut
+                      </span>
+                    </h4>
+                    <p className="text-xs text-slate-400">
+                      Mevcut soru havuzunu ({questions.length} soru) Firebase Firestore bulutuna toplu olarak yazar.
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={handleSyncQuestionsToFirestore}
+                  disabled={isSyncingFirestore || questions.length === 0}
+                  className="bg-teal-600 hover:bg-teal-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50 shadow-sm shrink-0"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isSyncingFirestore ? 'animate-spin' : ''}`} />
+                  <span>{isSyncingFirestore ? 'Buluta Yazılıyor...' : 'Tüm Soruları Firestore\'a Aktar'}</span>
+                </button>
+              </div>
+
+              <div className="bg-slate-950/60 border border-slate-700/50 rounded-lg p-3 text-[11px] text-slate-300 space-y-1.5">
+                <div className="flex items-center gap-1.5 text-teal-300 font-semibold">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>Güvenli & Parçalı (Chunked) Firestore Aktarımı:</span>
+                </div>
+                <p className="leading-relaxed">
+                  Bu işlem tüm çıkmış soruları ve komite sorularını 100'lük güvenli paketlere bölerek Firestore'a kaydeder. Beğeniler (upvotes) 0'dan başlatılır ve tekil beğeni listesi (<code className="text-teal-300">likedBy: []</code>) standartlaştırılır.
+                </p>
+              </div>
+
+              {firestoreSyncFeedback && (
+                <div className={`p-3 rounded-lg border text-xs flex items-start gap-2 ${
+                  firestoreSyncFeedback.startsWith('✓')
+                    ? 'bg-emerald-950/80 border-emerald-500/50 text-emerald-200'
+                    : firestoreSyncFeedback.startsWith('Hata')
+                    ? 'bg-rose-950/80 border-rose-500/50 text-rose-200'
+                    : 'bg-teal-950/80 border-teal-500/50 text-teal-200'
+                }`}>
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <span>{firestoreSyncFeedback}</span>
+                </div>
+              )}
             </div>
           </div>
         )}

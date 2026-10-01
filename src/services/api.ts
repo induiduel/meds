@@ -1465,7 +1465,7 @@ export const ApiService = {
     committeeId: string,
     examYear: string,
     parsedQuestions: any[]
-  ): Promise<QuestionItem[]> {
+  ): Promise<{ success: boolean; count: number; questions: QuestionItem[]; firebaseSynced: boolean; serverSynced: boolean }> {
     if (adminEmail !== ADMIN_EMAIL) {
       throw new Error('Yetkisiz işlem: Soru aktarma yetkisi yalnızca sistem yöneticisine aittir.');
     }
@@ -1477,12 +1477,13 @@ export const ApiService = {
       const qNum = Number(pq.questionNumber) || (db.questions.filter((q) => q.committeeId === committeeId).length + 1);
       const questionId = `past-${committeeId}-${qNum}-${Date.now().toString().slice(-4)}`;
 
-      // Construct options array
+      // Construct options array with zero initial likes
       const options = (pq.options || []).map((opt: any) => ({
         key: opt.key as 'A' | 'B' | 'C' | 'D' | 'E',
         text: opt.text || '',
         suggestedBy: `Çıkmış (${examYear})`,
-        upvotes: 2,
+        upvotes: 0,
+        likedBy: [],
       }));
 
       // If less than 5 options, pad with standard placeholders
@@ -1494,6 +1495,7 @@ export const ApiService = {
             text: `${k} seçeneği (öğrenci katkısı bekleniyor)`,
             suggestedBy: 'AI Taslak',
             upvotes: 0,
+            likedBy: [],
           });
         }
       });
@@ -1506,6 +1508,8 @@ export const ApiService = {
         topic: pq.topic || `Soru #${qNum} (${examYear})`,
         status: pq.claimedAnswer ? 'completed' : 'gathering',
         claimedAnswer: pq.claimedAnswer || undefined,
+        upvotes: 0,
+        likedBy: [],
         tags: [
           `${examYear} Çıkmış`,
           'Çıkmış Soru',
@@ -1521,7 +1525,8 @@ export const ApiService = {
             text: pq.stem || 'Soru kökü metni',
             type: 'stem',
             timestamp: new Date().toISOString(),
-            upvotes: 5,
+            upvotes: 0,
+            likedBy: [],
           },
         ],
         options,
@@ -1554,14 +1559,46 @@ export const ApiService = {
       createdQuestions.push(newQ);
     }
 
+    // 1. Save to local browser state
     saveLocalDb(db);
+
+    // 2. Persist to backend server (data/questions.json)
+    let serverSynced = false;
     try {
-      await FirestoreDbService.batchSaveQuestions(createdQuestions);
-    } catch (e) {
-      console.warn('Firestore batch save past questions error:', e);
+      const serverRes = await fetch('/api/questions/batch-import', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-email': adminEmail,
+        },
+        body: JSON.stringify({
+          adminEmail,
+          committeeId,
+          examYear,
+          questions: createdQuestions,
+        }),
+      });
+      serverSynced = serverRes.ok;
+    } catch (err) {
+      console.warn('Backend server batch save warning:', err);
     }
 
-    return createdQuestions;
+    // 3. Persist to Firebase Firestore cloud database
+    let firebaseSynced = false;
+    try {
+      const firestoreRes = await FirestoreDbService.batchSaveQuestions(createdQuestions);
+      firebaseSynced = firestoreRes.success;
+    } catch (e: any) {
+      console.warn('Firestore batch save past questions warning:', e);
+    }
+
+    return {
+      success: true,
+      count: createdQuestions.length,
+      questions: createdQuestions,
+      firebaseSynced,
+      serverSynced,
+    };
   },
 
   // User Management & Realtime Synchronization

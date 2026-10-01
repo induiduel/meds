@@ -521,6 +521,70 @@ app.get('/api/questions/:id', (req, res) => {
   res.json({ question });
 });
 
+// Batch import questions (Past exams, AI parsed questions, desktop sync)
+app.post('/api/questions/batch-import', (req, res) => {
+  const { committeeId, examYear, questions } = req.body;
+  if (!committeeId || !Array.isArray(questions)) {
+    return res.status(400).json({ error: 'Komite ID ve sorular dizisi zorunludur.' });
+  }
+
+  let addedCount = 0;
+  let updatedCount = 0;
+
+  for (const q of questions) {
+    if (!q) continue;
+    const formattedQuestion = {
+      ...q,
+      id: q.id || `past-${committeeId}-${q.questionNumber || Date.now()}-${Math.random().toString(36).substring(7)}`,
+      committeeId: q.committeeId || committeeId,
+      questionNumber: Number(q.questionNumber) || 1,
+      discipline: q.discipline || 'Tıbbi Patoloji',
+      topic: q.topic || `Soru #${q.questionNumber || 1} (${examYear || 'Çıkmış'})`,
+      status: q.claimedAnswer ? 'completed' : (q.status || 'gathering'),
+      upvotes: typeof q.upvotes === 'number' ? q.upvotes : 0,
+      likedBy: Array.isArray(q.likedBy) ? q.likedBy : [],
+      options: (q.options || []).map((opt: any) => ({
+        ...opt,
+        upvotes: typeof opt.upvotes === 'number' ? opt.upvotes : 0,
+        likedBy: Array.isArray(opt.likedBy) ? opt.likedBy : [],
+      })),
+      fragments: (q.fragments || []).map((frag: any) => ({
+        ...frag,
+        upvotes: typeof frag.upvotes === 'number' ? frag.upvotes : 0,
+        likedBy: Array.isArray(frag.likedBy) ? frag.likedBy : [],
+      })),
+      createdAt: q.createdAt || new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    const existingIdx = db.questions.findIndex(
+      (item) => item.id === formattedQuestion.id || (item.committeeId === committeeId && item.questionNumber === formattedQuestion.questionNumber)
+    );
+
+    if (existingIdx !== -1) {
+      db.questions[existingIdx] = {
+        ...db.questions[existingIdx],
+        ...formattedQuestion,
+        id: db.questions[existingIdx].id || formattedQuestion.id,
+      };
+      updatedCount++;
+    } else {
+      db.questions.push(formattedQuestion);
+      addedCount++;
+    }
+  }
+
+  saveDatabase();
+
+  res.json({
+    success: true,
+    message: `${questions.length} adet çıkmış soru veritabanına kaydedildi (${addedCount} yeni, ${updatedCount} güncellendi).`,
+    addedCount,
+    updatedCount,
+    totalQuestions: db.questions.length,
+  });
+});
+
 // Create a new question slot or contribution
 app.post('/api/questions', (req, res) => {
   const { committeeId, questionNumber, discipline, topic, fragmentText, author, claimedAnswer } = req.body;
