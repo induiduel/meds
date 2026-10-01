@@ -2020,6 +2020,97 @@ app.get('/api/automation/local-sync-status', (req, res) => {
   res.json(lastLocalSyncStatus);
 });
 
+// Automation: Comprehensive live file & download status visualizer
+app.get('/api/automation/drive-files-status', (req, res) => {
+  try {
+    const baseDir = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
+    const sorularDir = path.join(baseDir, 'meds_sorular');
+    const notlarDir = path.join(baseDir, 'ders_notlari_pdf');
+    const notlarTxtDir = path.join(baseDir, 'ders_notlari_txt');
+    const sorularTxtDir = path.join(baseDir, 'meds_sorular_txt');
+
+    // List local exam PDFs
+    const examFiles = fs.existsSync(sorularDir)
+      ? fs.readdirSync(sorularDir).filter(f => f.toLowerCase().endsWith('.pdf')).map(f => {
+          const stat = fs.statSync(path.join(sorularDir, f));
+          const baseNoExt = path.basename(f, path.extname(f));
+          const hasTxt = fs.existsSync(path.join(sorularTxtDir, `${baseNoExt}.txt`));
+          return {
+            name: f,
+            sizeBytes: stat.size,
+            sizeMb: (stat.size / (1024 * 1024)).toFixed(2),
+            modifiedAt: stat.mtime.toISOString(),
+            status: hasTxt ? 'extracted' : 'downloaded',
+            type: 'exam_question'
+          };
+        })
+      : [];
+
+    // List local lecture note PDFs
+    const lectureFiles = fs.existsSync(notlarDir)
+      ? fs.readdirSync(notlarDir).filter(f => f.toLowerCase().endsWith('.pdf')).map(f => {
+          const stat = fs.statSync(path.join(notlarDir, f));
+          const baseNoExt = path.basename(f, path.extname(f));
+          const hasTxt = fs.existsSync(path.join(notlarTxtDir, `${baseNoExt}.txt`));
+          return {
+            name: f,
+            sizeBytes: stat.size,
+            sizeMb: (stat.size / (1024 * 1024)).toFixed(2),
+            modifiedAt: stat.mtime.toISOString(),
+            status: hasTxt ? 'extracted' : 'downloaded',
+            type: 'lecture_note'
+          };
+        })
+      : [];
+
+    // Check against real_drive_slides.json
+    let catalogSlides: any[] = [];
+    const realSlidesPath = path.join(__dirname, 'data', 'real_drive_slides.json');
+    if (fs.existsSync(realSlidesPath)) {
+      try {
+        catalogSlides = JSON.parse(fs.readFileSync(realSlidesPath, 'utf8'));
+      } catch {}
+    }
+
+    const lectureStatus = catalogSlides.map(slide => {
+      const safeName = slide.name.replace(/[\\/:*?"<>|]/g, '_').trim();
+      const localMatch = lectureFiles.find(lf => 
+        lf.name.toLowerCase() === safeName.toLowerCase() || 
+        lf.name.toLowerCase().includes(safeName.toLowerCase().substring(0, 15)) ||
+        safeName.toLowerCase().includes(lf.name.toLowerCase().substring(0, 15))
+      );
+      return {
+        title: slide.name.replace(/\.pdf$/i, ''),
+        folderName: (slide.folderName || 'Tıbbi Ders').trim(),
+        fileId: slide.id,
+        isDownloaded: Boolean(localMatch),
+        isExtracted: localMatch?.status === 'extracted',
+        sizeMb: localMatch?.sizeMb || '0',
+        localName: localMatch?.name || safeName,
+      };
+    });
+
+    res.json({
+      success: true,
+      lastSync: lastLocalSyncStatus,
+      summary: {
+        totalExamsDownloaded: examFiles.length,
+        totalExamsTarget: 117,
+        examsProgressPercent: Math.min(100, Math.round((examFiles.length / 117) * 100)),
+        totalLecturesDownloaded: lectureFiles.length,
+        totalLecturesTarget: Math.max(catalogSlides.length, 43),
+        lecturesProgressPercent: Math.min(100, Math.round((lectureFiles.length / Math.max(1, catalogSlides.length || 43)) * 100)),
+        totalParsedQuestions: lastLocalSyncStatus.questionsCount || 2569,
+        databaseDir: baseDir
+      },
+      exams: examFiles,
+      lectures: lectureStatus
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Dosya durumu alınamadı: ' + err.message });
+  }
+});
+
 // Lecture Notes: Get all lecture notes
 app.get('/api/lecture-notes', (req, res) => {
   try {

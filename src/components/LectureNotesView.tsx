@@ -32,6 +32,7 @@ import {
 } from '../data/driveCatalog';
 import { renderSingleDriveSlide } from '../services/driveAutomation';
 import { SlideReaderModal } from './SlideReaderModal';
+import { DriveSyncVisualizer } from './DriveSyncVisualizer';
 import { db, cleanForFirestore } from '../services/firestoreDb';
 import { collection, doc, setDoc, deleteDoc, getDocs } from 'firebase/firestore';
 import { ApiService } from '../services/api';
@@ -360,6 +361,37 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     }
   };
 
+  // Handler: Open slide directly from DriveSyncVisualizer
+  const handleOpenSlideFromMonitor = (title: string, fileId?: string) => {
+    const existing = notes.find(n => 
+      n.title.toLowerCase() === title.toLowerCase() || 
+      n.title.toLowerCase().includes(title.toLowerCase().substring(0, 15)) ||
+      title.toLowerCase().includes(n.title.toLowerCase().substring(0, 15))
+    );
+    if (existing) {
+      setReaderNote(existing);
+      return;
+    }
+    const cat = DRIVE_SLIDES_CATALOG.find(c => 
+      c.title.toLowerCase() === title.toLowerCase() || 
+      (fileId && c.fileId === fileId) ||
+      c.title.toLowerCase().includes(title.toLowerCase().substring(0, 15))
+    );
+    if (cat) {
+      handleRenderSlide(cat);
+    } else {
+      handleRenderSlide({
+        id: `slide-${Date.now()}`,
+        title,
+        fileId: fileId || '',
+        totalRealPages: 30,
+        discipline: 'Tıp Dersi',
+        driveFolder: 'Kurul 1',
+        keyTopics: [title]
+      });
+    }
+  };
+
   // Handler: PDF file upload
   const handlePdfUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -516,6 +548,9 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
             </button>
           </div>
         </div>
+
+        {/* Drive and Local Archive Interactive Visualizer */}
+        <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />
 
         {/* Global Progress Bar Banner */}
         <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700 space-y-2.5">

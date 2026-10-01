@@ -288,10 +288,37 @@ export function deleteLectureNote(id: string): boolean {
 }
 
 /**
+ * Verbatim rendering of a slide
+ */
+// Helper to download binary buffer from Google Drive with redirect follow
+function downloadDriveBuffer(fileId: string): Promise<Buffer> {
+  return new Promise((resolve, reject) => {
+    const https = require('https');
+    const initialUrl = `https://drive.usercontent.google.com/download?id=${fileId}&export=download&authuser=0&confirm=t`;
+    function makeReq(url: string, redCount = 0) {
+      if (redCount > 5) return reject(new Error('Çok fazla yönlendirme'));
+      https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' } }, (res: any) => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          return makeReq(res.headers.location, redCount + 1);
+        }
+        if (res.statusCode !== 200) {
+          return reject(new Error(`HTTP Durumu: ${res.statusCode}`));
+        }
+        const chunks: Buffer[] = [];
+        res.on('data', (c: Buffer) => chunks.push(c));
+        res.on('end', () => resolve(Buffer.concat(chunks)));
+        res.on('error', reject);
+      }).on('error', reject);
+    }
+    makeReq(initialUrl);
+  });
+}
+
+/**
  * Verbatim rendering of a slide:
- * 1. Checks C:\Users\indui\Desktop\meds_database for matching PDF
- * 2. If not found, attempts downloading from Google Drive if fileId is provided
- * 3. Extracts verbatim text page-by-page using PDFParse without any AI summarization or template text
+ * 1. Checks C:\Users\indui\Desktop\meds_database (and subdirs: ders_notlari_pdf, meds_sorular)
+ * 2. If not found, downloads reliably from Google Drive with redirect support
+ * 3. Extracts verbatim text page-by-page using PDFParse
  * 4. Saves note to database and returns the record
  */
 export async function renderSlideVerbatim(params: {
@@ -307,50 +334,75 @@ export async function renderSlideVerbatim(params: {
   let sourcePath: string | undefined = undefined;
   let source: 'desktop_folder' | 'drive' = 'desktop_folder';
 
-  // 1. Check local meds_database folder first
-  if (fs.existsSync(DESKTOP_DATABASE_DIR)) {
-    const list = fs.readdirSync(DESKTOP_DATABASE_DIR);
-    const cleanQuery = title.toLowerCase().replace(/[^a-z0-9ğüşıöç]/gi, '');
+  // Folders to search in user's meds_database
+  const searchDirs = [
+    path.join(DESKTOP_DATABASE_DIR, 'ders_notlari_pdf'),
+    DESKTOP_DATABASE_DIR,
+    path.join(DESKTOP_DATABASE_DIR, 'meds_sorular'),
+  ];
+
+  // Medical synonyms normalization (e.g. intrasellüler <=> hücre içi)
+  const normalizeQuery = (s: string) => {
+    return s
+      .toLowerCase()
+      .replace(/intrasell[uü]ler/gi, 'hücre içi')
+      .replace(/ekstrasell[uü]ler/gi, 'hücre dışı')
+      .replace(/enflamasyon/gi, 'iltihap')
+      .replace(/[^a-z0-9ğüşıöç]/gi, '');
+  };
+
+  const cleanQuery = normalizeQuery(title);
+  const numMatch = title.match(/^(\d{1,2})/);
+  const titleNumber = numMatch ? numMatch[1] : null;
+
+  // 1. Check local folders
+  for (const dir of searchDirs) {
+    if (!fs.existsSync(dir)) continue;
+    const list = fs.readdirSync(dir);
     for (const f of list) {
       if (!f.toLowerCase().endsWith('.pdf')) continue;
-      const cleanF = f.toLowerCase().replace(/[^a-z0-9ğüşıöç]/gi, '');
-      if (cleanF.includes(cleanQuery) || cleanQuery.includes(cleanF)) {
-        sourcePath = path.join(DESKTOP_DATABASE_DIR, f);
+      const cleanF = normalizeQuery(f);
+      const fNumMatch = f.match(/^(\d{1,2})/);
+      const fNumber = fNumMatch ? fNumMatch[1] : null;
+
+      const numberMatch = titleNumber && fNumber && titleNumber === fNumber;
+      const textMatch = cleanF.includes(cleanQuery) || cleanQuery.includes(cleanF);
+
+      if (numberMatch || textMatch) {
+        const candidate = path.join(dir, f);
         try {
-          targetBuffer = fs.readFileSync(sourcePath);
-          console.log(`[RenderVerbatim] Yerel klasörde eşleşti: ${sourcePath}`);
+          targetBuffer = fs.readFileSync(candidate);
+          sourcePath = candidate;
+          console.log(`[RenderVerbatim] Yerel klasörde eşleşti (${dir}): ${f}`);
           break;
         } catch (e) {}
       }
     }
+    if (targetBuffer) break;
   }
 
   // 2. Fallback: Download from Google Drive if fileId is present
   if (!targetBuffer && fileId) {
-    console.log(`[RenderVerbatim] Google Drive'dan indiriliyor (fileId: ${fileId}, title: "${title}")...`);
+    console.log(`[RenderVerbatim] Google Drive'dan güvenli indiriliyor (fileId: ${fileId}, title: "${title}")...`);
     try {
-      const driveUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
-      const resp = await fetch(driveUrl);
-      if (resp.ok) {
-        const ab = await resp.arrayBuffer();
-        const buf = Buffer.from(ab);
-        if (buf.slice(0, 5).toString() === '%PDF-') {
-          targetBuffer = buf;
-          source = 'drive';
-          // Save a copy to local meds_database so it's cached on user's machine
-          try {
-            if (!fs.existsSync(DESKTOP_DATABASE_DIR)) {
-              fs.mkdirSync(DESKTOP_DATABASE_DIR, { recursive: true });
-            }
-            const safeName = title.replace(/[/\\?%*:|"<>]/g, '_') + '.pdf';
-            const localDest = path.join(DESKTOP_DATABASE_DIR, safeName);
-            if (!fs.existsSync(localDest)) {
-              fs.writeFileSync(localDest, buf);
-              console.log(`[RenderVerbatim] PDF masaüstü klasörüne kaydedildi: ${localDest}`);
-            }
-            sourcePath = localDest;
-          } catch (e) {}
-        }
+      const buf = await downloadDriveBuffer(fileId);
+      if (buf && buf.slice(0, 5).toString() === '%PDF-') {
+        targetBuffer = buf;
+        source = 'drive';
+        // Cache to local meds_database/ders_notlari_pdf
+        try {
+          const cacheDir = path.join(DESKTOP_DATABASE_DIR, 'ders_notlari_pdf');
+          if (!fs.existsSync(cacheDir)) {
+            fs.mkdirSync(cacheDir, { recursive: true });
+          }
+          const safeName = title.replace(/[/\\?%*:|"<>]/g, '_') + '.pdf';
+          const localDest = path.join(cacheDir, safeName);
+          if (!fs.existsSync(localDest)) {
+            fs.writeFileSync(localDest, buf);
+            console.log(`[RenderVerbatim] PDF yerel önbelleğe kaydedildi: ${localDest}`);
+          }
+          sourcePath = localDest;
+        } catch (e) {}
       }
     } catch (e: any) {
       console.warn(`[RenderVerbatim] Google Drive indirme hatası (${fileId}):`, e.message);
