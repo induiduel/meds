@@ -52,15 +52,42 @@ class MultiDbManager {
   public markFirebaseQuotaExceeded() {
     this.firebaseQuotaExceeded = true;
     this.lastQuotaCheck = Date.now();
+    if (typeof sessionStorage !== 'undefined') {
+      try {
+        sessionStorage.setItem('medsoru_fb_quota_exceeded', String(Date.now()));
+      } catch (_) {}
+    }
     console.warn('[MultiDbManager] Firebase Spark günlük okuma/yazma kotası aşıldı! Otomatik olarak Supabase / Yerel PC devraldı.');
   }
 
   public isFirebaseQuotaExceeded(): boolean {
-    // Reset check every 30 minutes in case quota reset
-    if (this.firebaseQuotaExceeded && Date.now() - this.lastQuotaCheck > 1800000) {
-      this.firebaseQuotaExceeded = false;
+    if (this.firebaseQuotaExceeded) {
+      if (Date.now() - this.lastQuotaCheck > 1800000) {
+        this.firebaseQuotaExceeded = false;
+        if (typeof sessionStorage !== 'undefined') {
+          try { sessionStorage.removeItem('medsoru_fb_quota_exceeded'); } catch (_) {}
+        }
+      }
+      return this.firebaseQuotaExceeded;
     }
-    return this.firebaseQuotaExceeded;
+
+    if (typeof sessionStorage !== 'undefined') {
+      try {
+        const stored = sessionStorage.getItem('medsoru_fb_quota_exceeded');
+        if (stored) {
+          const timestamp = Number(stored);
+          if (Date.now() - timestamp < 1800000) {
+            this.firebaseQuotaExceeded = true;
+            this.lastQuotaCheck = timestamp;
+            return true;
+          } else {
+            sessionStorage.removeItem('medsoru_fb_quota_exceeded');
+          }
+        }
+      } catch (_) {}
+    }
+
+    return false;
   }
 
   /**
@@ -144,7 +171,12 @@ class MultiDbManager {
           return fbCommittees;
         }
       } catch (err: any) {
-        if (err?.message?.includes('Quota limit exceeded') || err?.code === 'resource-exhausted') {
+        if (
+          err?.message?.toLowerCase().includes('quota') ||
+          err?.message?.toLowerCase().includes('exceeded') ||
+          err?.code === 'resource-exhausted' ||
+          err?.code === 'permission-denied'
+        ) {
           this.markFirebaseQuotaExceeded();
         } else {
           console.warn('[MultiDbManager] Firebase getCommittees failed, falling back to Supabase/Local', err);
@@ -207,7 +239,12 @@ class MultiDbManager {
         const fbQ = await FirestoreDbService.getQuestions(committeeId);
         if (fbQ && fbQ.length > 0) return fbQ;
       } catch (err: any) {
-        if (err?.message?.includes('Quota limit exceeded') || err?.code === 'resource-exhausted') {
+        if (
+          err?.message?.toLowerCase().includes('quota') ||
+          err?.message?.toLowerCase().includes('exceeded') ||
+          err?.code === 'resource-exhausted' ||
+          err?.code === 'permission-denied'
+        ) {
           this.markFirebaseQuotaExceeded();
         } else {
           console.warn('[MultiDbManager] Firebase getQuestions failed', err);
@@ -266,7 +303,12 @@ class MultiDbManager {
         const fbPast = await FirestoreDbService.getPastQuestions();
         if (fbPast && fbPast.length > 0) return fbPast;
       } catch (err: any) {
-        if (err?.message?.includes('Quota limit exceeded') || err?.code === 'resource-exhausted') {
+        if (
+          err?.message?.toLowerCase().includes('quota') ||
+          err?.message?.toLowerCase().includes('exceeded') ||
+          err?.code === 'resource-exhausted' ||
+          err?.code === 'permission-denied'
+        ) {
           this.markFirebaseQuotaExceeded();
         }
       }
@@ -321,7 +363,12 @@ class MultiDbManager {
         const fbNotes = await FirestoreDbService.getLectureNotes();
         if (fbNotes && fbNotes.length > 0) return fbNotes;
       } catch (err: any) {
-        if (err?.message?.includes('Quota limit exceeded') || err?.code === 'resource-exhausted') {
+        if (
+          err?.message?.toLowerCase().includes('quota') ||
+          err?.message?.toLowerCase().includes('exceeded') ||
+          err?.code === 'resource-exhausted' ||
+          err?.code === 'permission-denied'
+        ) {
           this.markFirebaseQuotaExceeded();
         }
       }
@@ -370,7 +417,12 @@ class MultiDbManager {
         const fbUsers = await FirestoreDbService.getRegisteredUsers();
         if (fbUsers && fbUsers.length > 0) return fbUsers;
       } catch (err: any) {
-        if (err?.message?.includes('Quota limit exceeded') || err?.code === 'resource-exhausted') {
+        if (
+          err?.message?.toLowerCase().includes('quota') ||
+          err?.message?.toLowerCase().includes('exceeded') ||
+          err?.code === 'resource-exhausted' ||
+          err?.code === 'permission-denied'
+        ) {
           this.markFirebaseQuotaExceeded();
         }
       }
@@ -427,7 +479,12 @@ class MultiDbManager {
         try {
           await FirestoreDbService.saveQuestion(question);
         } catch (e: any) {
-          if (e?.message?.includes('Quota limit exceeded')) {
+          if (
+            e?.message?.toLowerCase().includes('quota') ||
+            e?.message?.toLowerCase().includes('exceeded') ||
+            e?.code === 'resource-exhausted' ||
+            e?.code === 'permission-denied'
+          ) {
             this.markFirebaseQuotaExceeded();
           }
           console.warn('[MultiDbManager] Firebase Spark saveQuestion mirror warning', e?.message);
@@ -479,7 +536,12 @@ class MultiDbManager {
         try {
           await FirestoreDbService.updatePastQuestion(question);
         } catch (e: any) {
-          if (e?.message?.includes('Quota limit exceeded')) {
+          if (
+            e?.message?.toLowerCase().includes('quota') ||
+            e?.message?.toLowerCase().includes('exceeded') ||
+            e?.code === 'resource-exhausted' ||
+            e?.code === 'permission-denied'
+          ) {
             this.markFirebaseQuotaExceeded();
           }
           console.warn('[MultiDbManager] Firebase Spark savePastQuestion mirror warning', e?.message);
@@ -513,7 +575,12 @@ class MultiDbManager {
         try {
           await FirestoreDbService.createCommittee(committee);
         } catch (e: any) {
-          if (e?.message?.includes('Quota limit exceeded')) {
+          if (
+            e?.message?.toLowerCase().includes('quota') ||
+            e?.message?.toLowerCase().includes('exceeded') ||
+            e?.code === 'resource-exhausted' ||
+            e?.code === 'permission-denied'
+          ) {
             this.markFirebaseQuotaExceeded();
           }
           console.warn('[MultiDbManager] Firebase Spark saveCommittee mirror warning', e?.message);

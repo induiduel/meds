@@ -32,6 +32,24 @@ if (!SUPABASE_URL || !SUPABASE_KEY) {
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+function cleanForPostgres(data) {
+  if (data === null || data === undefined) return data;
+  if (typeof data === 'string') {
+    return data.replace(/\u0000/g, '').replace(/\x00/g, '');
+  }
+  if (Array.isArray(data)) {
+    return data.map(cleanForPostgres);
+  }
+  if (typeof data === 'object') {
+    const cleaned = {};
+    for (const [k, v] of Object.entries(data)) {
+      cleaned[k] = cleanForPostgres(v);
+    }
+    return cleaned;
+  }
+  return data;
+}
+
 console.log('🚀 [Supabase Sync] Başlatılıyor...');
 console.log(`🔗 Veritabanı: ${SUPABASE_URL}`);
 
@@ -183,7 +201,7 @@ async function syncPastQuestions() {
       updated_at: new Date().toISOString()
     }));
 
-    const { error } = await supabase.from('past_questions').upsert(rows, { onConflict: 'id' });
+    const { error } = await supabase.from('past_questions').upsert(cleanForPostgres(rows), { onConflict: 'id' });
     if (error) {
       console.warn(`Parti [${i} - ${i + chunk.length}] hatası:`, error.message);
     } else {
@@ -228,7 +246,7 @@ async function syncLectureNotes() {
       }
     }));
 
-    const { error } = await supabase.from('lecture_notes').upsert(rows, { onConflict: 'id' });
+    const { error } = await supabase.from('lecture_notes').upsert(cleanForPostgres(rows), { onConflict: 'id' });
     if (error) {
       console.warn(`Ders notu parti [${i}] hatası:`, error.message);
     } else {
@@ -239,11 +257,58 @@ async function syncLectureNotes() {
   console.log(`\n✅ Toplam ${successCount} ders notu Supabase'e başarıyla aktarıldı!`);
 }
 
+// 4. Öğrenci Soru Havuzu (questions)
+async function syncQuestions() {
+  console.log('\n❓ 4/4 Aktif Öğrenci Soru Havuzu Supabase\'e yazılıyor...');
+  const questionsPath = path.join(ROOT_DIR, 'data', 'questions.json');
+  if (!fs.existsSync(questionsPath)) {
+    console.warn('⚠️ questions.json bulunamadı!');
+    return;
+  }
+
+  const raw = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
+  const list = Array.isArray(raw) ? raw : (raw.questions || []);
+  console.log(`Toplam ${list.length} soru bulundu. Partiler halinde (50'şerli) yükleniyor...`);
+
+  const BATCH_SIZE = 50;
+  let successCount = 0;
+
+  for (let i = 0; i < list.length; i += BATCH_SIZE) {
+    const chunk = list.slice(i, i + BATCH_SIZE);
+    const rows = chunk.map((q, idx) => ({
+      id: q.id,
+      committee_id: q.committeeId,
+      question_number: q.questionNumber || (i + idx + 1),
+      discipline: q.discipline || null,
+      topic: q.topic || null,
+      status: q.status || 'gathering',
+      claimed_answer: q.claimedAnswer || q.reconstruction?.correctAnswer || null,
+      upvotes: q.upvotes || 0,
+      tags: q.tags || [],
+      fragments: q.fragments || [],
+      options: q.options || [],
+      reconstruction: q.reconstruction || null,
+      data: q,
+      updated_at: q.updatedAt || new Date().toISOString()
+    }));
+
+    const { error } = await supabase.from('questions').upsert(cleanForPostgres(rows), { onConflict: 'id' });
+    if (error) {
+      console.warn(`Soru parti [${i} - ${i + chunk.length}] hatası:`, error.message);
+    } else {
+      successCount += chunk.length;
+      process.stdout.write(`\rİlerleme: ${successCount} / ${list.length} soru aktarıldı...`);
+    }
+  }
+  console.log(`\n✅ Toplam ${successCount} aktif soru Supabase'e başarıyla aktarıldı!`);
+}
+
 async function main() {
   await syncCommittees();
+  await syncQuestions();
   await syncPastQuestions();
   await syncLectureNotes();
-  console.log('\n🎉 [TAMAMLANDI] Supabase artık tüm kurullar, çıkmış sorular ve ders notları ile hazır!');
+  console.log('\n🎉 [TAMAMLANDI] Supabase artık tüm kurullar, aktif sorular, çıkmış sorular ve ders notları ile hazır!');
   console.log('Firebase Spark devre dışı kaldığında MedSoru otomatik olarak Supabase üzerinden çalışmaya devam edecektir.');
 }
 

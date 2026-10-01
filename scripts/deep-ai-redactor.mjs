@@ -16,6 +16,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
+import { createClient } from '@supabase/supabase-js';
+
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -28,8 +30,27 @@ const LECTURE_NOTES_PATH = path.join(ROOT_DIR, 'data', 'lecture_notes.json');
 const STATUS_PATH = path.join(ROOT_DIR, 'data', 'ai-redactor-status.json');
 
 // Supabase Config
-const SUPABASE_URL = process.env.SUPABASE_URL || '';
-const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || '';
+const SUPABASE_URL = process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
+const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
+const supabase = (SUPABASE_URL && SUPABASE_KEY) ? createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+function cleanForPostgres(data) {
+  if (data === null || data === undefined) return data;
+  if (typeof data === 'string') {
+    return data.replace(/\u0000/g, '').replace(/[\x00]/g, '');
+  }
+  if (Array.isArray(data)) {
+    return data.map(cleanForPostgres);
+  }
+  if (typeof data === 'object') {
+    const cleaned = {};
+    for (const [k, v] of Object.entries(data)) {
+      cleaned[k] = cleanForPostgres(v);
+    }
+    return cleaned;
+  }
+  return data;
+}
 
 // Gemini API Key
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY !== 'MY_GEMINI_API_KEY'
@@ -38,7 +59,7 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY 
 
 console.log('🩺 [Deep AI Redactor] Tıbbi Derin Redaksiyon Motoru Başlatılıyor...');
 console.log(`🔑 Gemini API: ${GEMINI_API_KEY ? 'Mevcut' : 'Yerel Tıbbi Motor Devrede'}`);
-console.log(`🐘 Supabase: ${SUPABASE_URL ? 'Bağlantı Hazır' : 'Devre Dışı'}`);
+console.log(`🐘 Supabase: ${supabase ? 'Bağlantı Hazır' : 'Devre Dışı'}`);
 
 // 1. Verileri Yükle
 function loadPastQuestions() {
@@ -65,32 +86,36 @@ function savePastQuestions(questions) {
 
 // Supabase Single Update
 async function syncToSupabase(q) {
-  if (!SUPABASE_URL || !SUPABASE_KEY) return;
+  if (!supabase || !q?.id) return;
   try {
-    const row = {
+    const row = cleanForPostgres({
       id: q.id,
       committee_id: q.committeeId,
       discipline: q.discipline,
       topic: q.topic,
       exam_year: q.examYear || '2026-2027',
+      source_file: q.sourceFile || null,
+      ai_category: q.aiCategory || null,
       claimed_answer: q.claimedAnswer || q.reconstruction?.correctAnswer,
+      raw_question: q.rawQuestion || null,
       reconstruction: q.reconstruction,
-      is_locked: q.isLocked || false,
+      is_suspect: Boolean(q.isSuspect),
+      is_ambiguous: Boolean(q.isAmbiguous),
+      is_locked: Boolean(q.isLocked),
       upvotes: q.upvotes || 0,
+      comments: q.comments || [],
+      reports: q.reports || [],
+      custom_redacted_by: q.customRedactedBy || null,
+      custom_redacted_at: q.customRedactedAt || null,
+      custom_redaction_prompt: q.customRedactionPrompt || null,
+      data: q,
       updated_at: new Date().toISOString()
-    };
-
-    await fetch(`${SUPABASE_URL}/rest/v1/past_questions?id=eq.${encodeURIComponent(q.id)}`, {
-      method: 'PUT',
-      headers: {
-        'apikey': SUPABASE_KEY,
-        'Authorization': `Bearer ${SUPABASE_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'resolution=merge-duplicates'
-      },
-      body: JSON.stringify(row)
     });
-  } catch (e) {}
+
+    await supabase.from('past_questions').upsert([row], { onConflict: 'id' });
+  } catch (e) {
+    console.warn('[Supabase Sync] Hata:', e.message);
+  }
 }
 
 // 2. Tıbbi Mekanizma Kütüphanesi & Grounding Motoru

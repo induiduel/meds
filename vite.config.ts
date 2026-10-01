@@ -14,8 +14,9 @@ export default defineConfig(({ mode }) => {
     base: mode === 'production' ? '/meds/' : '/',
     plugins: [react(), tailwindcss()],
     define: {
-      'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || ''),
-      'process.env.SUPABASE_PUBLISHABLE_KEY': JSON.stringify(process.env.SUPABASE_PUBLISHABLE_KEY || ''),
+      'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co'),
+      'process.env.SUPABASE_PUBLISHABLE_KEY': JSON.stringify(process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q'),
+      'process.env.SUPABASE_KEY': JSON.stringify(process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q'),
     },
     resolve: {
       alias: {

@@ -9,6 +9,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
 import { exec, execFile } from 'child_process';
+import { createClient } from '@supabase/supabase-js';
 
 const require = createRequire(import.meta.url);
 const pdfParseModule = require('pdf-parse');
@@ -37,6 +38,87 @@ process.on('unhandledRejection', (reason, promise) => {
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Supabase PostgreSQL Client & Cloud Bridge
+const SUPABASE_URL = process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
+const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
+
+export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+function cleanForPostgres<T>(data: T): T {
+  if (data === null || data === undefined) return data;
+  if (typeof data === 'string') {
+    return (data as string).replace(/\u0000/g, '').replace(/[\x00]/g, '') as unknown as T;
+  }
+  if (Array.isArray(data)) {
+    return data.map((item) => cleanForPostgres(item)) as unknown as T;
+  }
+  if (typeof data === 'object') {
+    const cleaned: Record<string, any> = {};
+    for (const [k, v] of Object.entries(data as Record<string, any>)) {
+      cleaned[k] = cleanForPostgres(v);
+    }
+    return cleaned as unknown as T;
+  }
+  return data;
+}
+
+export async function mirrorQuestionToSupabase(question: any) {
+  try {
+    if (!supabase || !question?.id) return;
+    const row = cleanForPostgres({
+      id: question.id,
+      committee_id: question.committeeId,
+      question_number: question.questionNumber || null,
+      discipline: question.discipline || null,
+      topic: question.topic || null,
+      status: question.status || 'gathering',
+      claimed_answer: question.claimedAnswer || (question.reconstruction?.correctAnswer || null),
+      upvotes: question.upvotes || 0,
+      tags: question.tags || [],
+      fragments: question.fragments || [],
+      options: question.options || [],
+      reconstruction: question.reconstruction || null,
+      data: question,
+      updated_at: new Date().toISOString(),
+    });
+    await supabase.from('questions').upsert([row], { onConflict: 'id' });
+  } catch (err: any) {
+    console.warn('[Supabase Mirror] Question save warning:', err.message);
+  }
+}
+
+export async function mirrorPastQuestionToSupabase(question: any) {
+  try {
+    if (!supabase || !question?.id) return;
+    const row = cleanForPostgres({
+      id: question.id,
+      committee_id: question.committeeId,
+      discipline: question.discipline || null,
+      topic: question.topic || null,
+      exam_year: question.examYear || '2026-2027',
+      source_file: question.sourceFile || null,
+      ai_category: question.aiCategory || null,
+      claimed_answer: question.claimedAnswer || (question.reconstruction?.correctAnswer || null),
+      raw_question: question.rawQuestion || null,
+      reconstruction: question.reconstruction || null,
+      is_suspect: Boolean(question.isSuspect),
+      is_ambiguous: Boolean(question.isAmbiguous),
+      is_locked: Boolean(question.isLocked),
+      upvotes: question.upvotes || 0,
+      comments: question.comments || [],
+      reports: question.reports || [],
+      custom_redacted_by: question.customRedactedBy || null,
+      custom_redacted_at: question.customRedactedAt || null,
+      custom_redaction_prompt: question.customRedactionPrompt || null,
+      data: question,
+      updated_at: new Date().toISOString(),
+    });
+    await supabase.from('past_questions').upsert([row], { onConflict: 'id' });
+  } catch (err: any) {
+    console.warn('[Supabase Mirror] Past question save warning:', err.message);
+  }
+}
 
 const app = express();
 // Environment constraint: dev server must run on port 3000. Do not use process.env.PORT which may be 8080 (reserved for nginx).
@@ -760,6 +842,7 @@ app.put('/api/past-exams/:id', (req, res) => {
       const newQ = { ...req.body, id: req.params.id, updatedAt: new Date().toISOString() };
       list.push(newQ);
       savePastQuestionsDb(list);
+      mirrorPastQuestionToSupabase(newQ);
       return res.json({ success: true, question: newQ, created: true });
     }
     list[idx] = {
@@ -769,6 +852,7 @@ app.put('/api/past-exams/:id', (req, res) => {
       updatedAt: new Date().toISOString()
     };
     savePastQuestionsDb(list);
+    mirrorPastQuestionToSupabase(list[idx]);
     res.json({ success: true, question: list[idx] });
   } catch (err: any) {
     res.status(500).json({ error: 'Çıkmış soru güncellenemedi: ' + err.message });
@@ -783,6 +867,7 @@ app.put('/api/questions/:id', (req, res) => {
       const newQ = { ...req.body, id: req.params.id, updatedAt: new Date().toISOString() };
       db.questions.push(newQ);
       saveDatabase();
+      mirrorQuestionToSupabase(newQ);
       return res.json({ success: true, question: newQ, created: true });
     }
     db.questions[idx] = {
@@ -792,6 +877,7 @@ app.put('/api/questions/:id', (req, res) => {
       updatedAt: new Date().toISOString()
     };
     saveDatabase();
+    mirrorQuestionToSupabase(db.questions[idx]);
     res.json({ success: true, question: db.questions[idx] });
   } catch (err: any) {
     res.status(500).json({ error: 'Soru güncellenemedi: ' + err.message });
@@ -800,59 +886,110 @@ app.put('/api/questions/:id', (req, res) => {
 
 let isRedactorRunning = false;
 
+export async function executeAdminCommand(command: string, payload: any = {}, requestedBy: string = 'nofrostlife@gmail.com'): Promise<{ success: boolean; message: string }> {
+  console.log(`[AdminCommand] ⚡ Komut alındı: ${command} (${requestedBy})`);
+
+  if (command === 'run_redactor_cycle' || command === 'trigger_redactor') {
+    if (isRedactorRunning) {
+      return {
+        success: true,
+        message: 'Derin Tıbbi AI Redaksiyon işlemi şu anda arkaplanda zaten çalışıyor.',
+      };
+    }
+    isRedactorRunning = true;
+    exec('node scripts/deep-ai-redactor.mjs', { cwd: __dirname }, (error, stdout, stderr) => {
+      isRedactorRunning = false;
+      if (error) console.warn('[AdminCommand] deep-ai-redactor error:', error.message);
+    });
+    return {
+      success: true,
+      message: 'Derin Tıbbi AI Redaksiyon döngüsü yerel sunucunuzda başarıyla başlatıldı.'
+    };
+  }
+
+  if (command === 'run_sync' || command === 'run_full_local_sync') {
+    scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR).catch(() => {});
+    return {
+      success: true,
+      message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.'
+    };
+  }
+
+  if (command === 'install_service') {
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action install-and-start`, () => {});
+    return { success: true, message: 'Windows Başlangıç ve Masaüstü servisi kuruldu ve başlatıldı.' };
+  }
+
+  if (command === 'stop_service') {
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action stop`, () => {});
+    return { success: true, message: 'Windows senkronizasyon servisi durduruldu.' };
+  }
+
+  if (command === 'notify') {
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    const title = (payload?.title || 'MedSoru Otomasyon Servisi 🚀').replace(/"/g, '');
+    const message = (payload?.message || 'Windows bildirim sistemi sorunsuz çalışıyor.').replace(/"/g, '');
+    exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action notify -Title "${title}" -Message "${message}"`, () => {});
+    return { success: true, message: 'Windows bildirimi başarıyla iletildi.' };
+  }
+
+  return { success: true, message: `Komut (${command}) yerel sunucuda başarıyla kaydedildi.` };
+}
+
+// Poller that checks Supabase system_status for pending commands sent from GitHub Pages / Mobile
+function startSupabaseCommandPoller() {
+  console.log('📡 [Supabase Bridge] Bulut komut kuyruğu dinleyicisi başlatıldı.');
+  setInterval(async () => {
+    try {
+      if (!supabase) return;
+      const { data, error } = await supabase
+        .from('system_status')
+        .select('*')
+        .like('id', 'cmd-%')
+        .limit(10);
+
+      if (error || !data || data.length === 0) return;
+
+      for (const row of data) {
+        const cmdData = row.data;
+        if (cmdData && cmdData.status === 'pending') {
+          console.log(`[Supabase Bridge] ⚡ Buluttan Yeni Komut Alındı: ${cmdData.command} (${row.id})`);
+          
+          await supabase.from('system_status').upsert([{
+            id: row.id,
+            data: { ...cmdData, status: 'running', startedAt: new Date().toISOString() },
+            updated_at: new Date().toISOString()
+          }]);
+
+          try {
+            const result = await executeAdminCommand(cmdData.command, cmdData.payload, cmdData.requested_by);
+            await supabase.from('system_status').upsert([{
+              id: row.id,
+              data: { ...cmdData, status: 'completed', result, completedAt: new Date().toISOString() },
+              updated_at: new Date().toISOString()
+            }]);
+            console.log(`[Supabase Bridge] ✅ Bulut Komutu Tamamlandı: ${cmdData.command}`);
+          } catch (execErr: any) {
+            await supabase.from('system_status').upsert([{
+              id: row.id,
+              data: { ...cmdData, status: 'failed', error: execErr.message },
+              updated_at: new Date().toISOString()
+            }]);
+          }
+        }
+      }
+    } catch (_) {}
+  }, 5000);
+}
+
 // Admin Command Execution API (Bypasses Firestore permissions issues when on local server)
 app.post('/api/admin/command', async (req, res) => {
   try {
     const { command, payload, requestedBy } = req.body;
-    console.log(`[AdminCommand] ⚡ Komut alındı: ${command} (${requestedBy})`);
-
-    if (command === 'run_redactor_cycle' || command === 'trigger_redactor') {
-      if (isRedactorRunning) {
-        return res.json({
-          success: true,
-          message: 'Derin Tıbbi AI Redaksiyon işlemi şu anda arkaplanda zaten çalışıyor.',
-        });
-      }
-      isRedactorRunning = true;
-      exec('node scripts/deep-ai-redactor.mjs', { cwd: __dirname }, (error, stdout, stderr) => {
-        isRedactorRunning = false;
-        if (error) console.warn('[AdminCommand] deep-ai-redactor error:', error.message);
-      });
-      return res.json({
-        success: true,
-        message: 'Derin Tıbbi AI Redaksiyon döngüsü yerel sunucunuzda başarıyla başlatıldı.'
-      });
-    }
-
-    if (command === 'run_sync' || command === 'run_full_local_sync') {
-      scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR).catch(() => {});
-      return res.json({
-        success: true,
-        message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.'
-      });
-    }
-
-    if (command === 'install_service') {
-      const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-      exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action install-and-start`, () => {});
-      return res.json({ success: true, message: 'Windows Başlangıç ve Masaüstü servisi kuruldu ve başlatıldı.' });
-    }
-
-    if (command === 'stop_service') {
-      const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-      exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action stop`, () => {});
-      return res.json({ success: true, message: 'Windows senkronizasyon servisi durduruldu.' });
-    }
-
-    if (command === 'notify') {
-      const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-      const title = (payload?.title || 'MedSoru Otomasyon Servisi 🚀').replace(/"/g, '');
-      const message = (payload?.message || 'Windows bildirim sistemi sorunsuz çalışıyor.').replace(/"/g, '');
-      exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action notify -Title "${title}" -Message "${message}"`, () => {});
-      return res.json({ success: true, message: 'Windows bildirimi başarıyla iletildi.' });
-    }
-
-    res.json({ success: true, message: `Komut (${command}) yerel sunucuda başarıyla kaydedildi.` });
+    const result = await executeAdminCommand(command, payload, requestedBy);
+    res.json(result);
   } catch (err: any) {
     res.status(500).json({ success: false, error: 'Komut yürütülemedi: ' + err.message });
   }
@@ -3114,6 +3251,8 @@ async function startServer() {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
     // Start desktop folder watcher and daily 18:00 scheduler
     startDesktopFolderWatcherAndScheduler(DESKTOP_DATABASE_DIR);
+    // Start Supabase Cloud command poller
+    startSupabaseCommandPoller();
   });
 }
 

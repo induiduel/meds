@@ -11,19 +11,50 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { Committee, QuestionItem, LectureNote } from '../types';
 
+export const DEFAULT_SUPABASE_URL = 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
+export const DEFAULT_SUPABASE_KEY = 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
+
 const STORAGE_URL_KEY = 'medsoru_custom_supabase_url';
 const STORAGE_KEY_KEY = 'medsoru_custom_supabase_key';
 
-export function getSupabaseConfig(): { url: string; key: string } {
-  const localUrl = localStorage.getItem(STORAGE_URL_KEY);
-  const localKey = localStorage.getItem(STORAGE_KEY_KEY);
+export function cleanForPostgres<T>(data: T): T {
+  if (data === null || data === undefined) return data;
+  if (typeof data === 'string') {
+    return (data as string).replace(/\u0000/g, '').replace(/[\x00]/g, '') as unknown as T;
+  }
+  if (Array.isArray(data)) {
+    return data.map((item) => cleanForPostgres(item)) as unknown as T;
+  }
+  if (typeof data === 'object') {
+    const cleaned: Record<string, any> = {};
+    for (const [k, v] of Object.entries(data as Record<string, any>)) {
+      cleaned[k] = cleanForPostgres(v);
+    }
+    return cleaned as unknown as T;
+  }
+  return data;
+}
 
-  const envUrl = (typeof process !== 'undefined' && process.env?.SUPABASE_URL) || '';
-  const envKey = (typeof process !== 'undefined' && (process.env?.SUPABASE_PUBLISHABLE_KEY || process.env?.SUPABASE_SECRET_KEY)) || '';
+export function getSupabaseConfig(): { url: string; key: string } {
+  let localUrl = '';
+  let localKey = '';
+  if (typeof localStorage !== 'undefined') {
+    try {
+      localUrl = localStorage.getItem(STORAGE_URL_KEY) || '';
+      localKey = localStorage.getItem(STORAGE_KEY_KEY) || '';
+    } catch (_) {}
+  }
+
+  let envUrl = '';
+  let envKey = '';
+  try {
+    envUrl = (typeof process !== 'undefined' && process.env && process.env.SUPABASE_URL) || '';
+    envKey = (typeof process !== 'undefined' && process.env && (process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_KEY)) || '';
+  } catch (_) {}
 
   return {
-    url: (localUrl || envUrl || '').trim(),
-    key: (localKey || envKey || '').trim(),
+    url: (localUrl || envUrl || DEFAULT_SUPABASE_URL).trim(),
+    key: (localKey || envKey || DEFAULT_SUPABASE_KEY).trim(),
   };
 }
 
@@ -156,14 +187,14 @@ export const SupabaseDbService = {
     if (!client || committees.length === 0) return false;
 
     try {
-      const rows = committees.map((c) => ({
+      const rows = cleanForPostgres(committees.map((c) => ({
         id: c.id,
         name: c.name,
         academic_year: c.academicYear || '2026-2027',
         target_questions: c.targetQuestions || 100,
         color: c.color || 'teal',
         data: c,
-      }));
+      })));
 
       const { error } = await client.from('committees').upsert(rows, { onConflict: 'id' });
       return !error;
@@ -179,7 +210,7 @@ export const SupabaseDbService = {
     if (!client) return [];
 
     try {
-      let query = client.from('questions').select('*');
+      let query = client.from('questions').select('*').limit(5000);
       if (committeeId && committeeId !== 'all') {
         query = query.eq('committee_id', committeeId);
       }
@@ -187,21 +218,21 @@ export const SupabaseDbService = {
       if (error || !data) return [];
 
       return data.map((row: any) => ({
-        id: row.id,
-        committeeId: row.committee_id,
-        questionNumber: row.question_number,
-        discipline: row.discipline,
-        topic: row.topic,
-        status: row.status,
-        claimedAnswer: row.claimed_answer,
-        upvotes: row.upvotes || 0,
-        tags: row.tags || [],
-        fragments: row.fragments || [],
-        options: row.options || [],
-        reconstruction: row.reconstruction,
-        createdAt: row.created_at,
-        updatedAt: row.updated_at,
         ...(row.data || {}),
+        id: row.id,
+        committeeId: row.committee_id || row.data?.committeeId,
+        questionNumber: row.question_number ?? row.data?.questionNumber,
+        discipline: row.discipline || row.data?.discipline,
+        topic: row.topic || row.data?.topic,
+        status: row.status || row.data?.status || 'gathering',
+        claimedAnswer: row.claimed_answer || row.data?.claimedAnswer,
+        upvotes: row.upvotes ?? row.data?.upvotes ?? 0,
+        tags: row.tags || row.data?.tags || [],
+        fragments: row.fragments || row.data?.fragments || [],
+        options: row.options || row.data?.options || [],
+        reconstruction: row.reconstruction || row.data?.reconstruction || null,
+        createdAt: row.created_at || row.data?.createdAt,
+        updatedAt: row.updated_at || row.data?.updatedAt,
       }));
     } catch (err) {
       console.warn('Supabase getQuestions error:', err);
@@ -214,7 +245,7 @@ export const SupabaseDbService = {
     if (!client || !question.id) return false;
 
     try {
-      const row = {
+      const row = cleanForPostgres({
         id: question.id,
         committee_id: question.committeeId,
         question_number: question.questionNumber,
@@ -229,7 +260,7 @@ export const SupabaseDbService = {
         reconstruction: question.reconstruction,
         data: question,
         updated_at: new Date().toISOString(),
-      };
+      });
 
       const { error } = await client.from('questions').upsert([row], { onConflict: 'id' });
       return !error;
@@ -245,32 +276,32 @@ export const SupabaseDbService = {
     if (!client) return [];
 
     try {
-      const { data, error } = await client.from('past_questions').select('*').limit(3000);
+      const { data, error } = await client.from('past_questions').select('*').limit(5000);
       if (error || !data) return [];
 
       return data.map((row: any) => ({
-        id: row.id,
-        committeeId: row.committee_id,
-        discipline: row.discipline,
-        topic: row.topic,
-        examYear: row.exam_year,
-        sourceFile: row.source_file,
-        aiCategory: row.ai_category,
-        claimedAnswer: row.claimed_answer,
-        rawQuestion: row.raw_question,
-        reconstruction: row.reconstruction,
-        isSuspect: row.is_suspect,
-        isAmbiguous: row.is_ambiguous,
-        isLocked: row.is_locked,
-        upvotes: row.upvotes || 0,
-        comments: row.comments || [],
-        reports: row.reports || [],
-        customRedactedBy: row.custom_redacted_by,
-        customRedactedAt: row.custom_redacted_at,
-        customRedactionPrompt: row.custom_redaction_prompt,
-        createdAt: row.created_at,
-        updatedAt: row.updated_at,
         ...(row.data || {}),
+        id: row.id,
+        committeeId: row.committee_id || row.data?.committeeId,
+        discipline: row.discipline || row.data?.discipline,
+        topic: row.topic || row.data?.topic,
+        examYear: row.exam_year || row.data?.examYear,
+        sourceFile: row.source_file || row.data?.sourceFile,
+        aiCategory: row.ai_category || row.data?.aiCategory,
+        claimedAnswer: row.claimed_answer || row.data?.claimedAnswer,
+        rawQuestion: row.raw_question || row.data?.rawQuestion,
+        reconstruction: row.reconstruction || row.data?.reconstruction,
+        isSuspect: row.is_suspect ?? row.data?.isSuspect ?? false,
+        isAmbiguous: row.is_ambiguous ?? row.data?.isAmbiguous ?? false,
+        isLocked: row.is_locked ?? row.data?.isLocked ?? false,
+        upvotes: row.upvotes ?? row.data?.upvotes ?? 0,
+        comments: row.comments || row.data?.comments || [],
+        reports: row.reports || row.data?.reports || [],
+        customRedactedBy: row.custom_redacted_by || row.data?.customRedactedBy,
+        customRedactedAt: row.custom_redacted_at || row.data?.customRedactedAt,
+        customRedactionPrompt: row.custom_redaction_prompt || row.data?.customRedactionPrompt,
+        createdAt: row.created_at || row.data?.createdAt,
+        updatedAt: row.updated_at || row.data?.updatedAt,
       }));
     } catch (err) {
       console.warn('Supabase getAllPastQuestions error:', err);
@@ -287,7 +318,7 @@ export const SupabaseDbService = {
     if (!client || !question.id) return false;
 
     try {
-      const row = {
+      const row = cleanForPostgres({
         id: question.id,
         committee_id: question.committeeId,
         discipline: question.discipline,
@@ -309,7 +340,7 @@ export const SupabaseDbService = {
         custom_redaction_prompt: (question as any).customRedactionPrompt || null,
         data: question,
         updated_at: new Date().toISOString(),
-      };
+      });
 
       const { error } = await client.from('past_questions').upsert([row], { onConflict: 'id' });
       return !error;
@@ -328,7 +359,7 @@ export const SupabaseDbService = {
     try {
       for (let i = 0; i < questions.length; i += batchSize) {
         const chunk = questions.slice(i, i + batchSize);
-        const rows = chunk.map((q) => ({
+        const rows = cleanForPostgres(chunk.map((q) => ({
           id: q.id,
           committee_id: q.committeeId,
           discipline: q.discipline,
@@ -350,7 +381,7 @@ export const SupabaseDbService = {
           custom_redaction_prompt: (q as any).customRedactionPrompt || null,
           data: q,
           updated_at: new Date().toISOString(),
-        }));
+        })));
         const { error } = await client.from('past_questions').upsert(rows, { onConflict: 'id' });
         if (!error) totalSaved += chunk.length;
       }
@@ -367,18 +398,18 @@ export const SupabaseDbService = {
     if (!client) return [];
 
     try {
-      const { data, error } = await client.from('lecture_notes').select('*');
+      const { data, error } = await client.from('lecture_notes').select('*').limit(5000);
       if (error || !data) return [];
 
       return data.map((row: any) => ({
-        id: row.id,
-        committeeId: row.committee_id,
-        discipline: row.discipline,
-        title: row.title,
-        pages: row.pages || [],
-        pageCount: row.page_count || 0,
-        createdAt: row.created_at,
         ...(row.data || {}),
+        id: row.id,
+        committeeId: row.committee_id || row.data?.committeeId,
+        discipline: row.discipline || row.data?.discipline,
+        title: row.title || row.data?.title,
+        pages: row.pages || row.data?.pages || [],
+        pageCount: row.page_count ?? row.data?.pageCount ?? 0,
+        createdAt: row.created_at || row.data?.createdAt,
       }));
     } catch (err) {
       console.warn('Supabase getLectureNotes error:', err);
@@ -391,7 +422,7 @@ export const SupabaseDbService = {
     if (!client || !note.id) return false;
 
     try {
-      const row = {
+      const row = cleanForPostgres({
         id: note.id,
         committee_id: note.committeeId,
         discipline: note.discipline,
@@ -399,7 +430,7 @@ export const SupabaseDbService = {
         pages: note.pages || [],
         page_count: note.pageCount || (note.pages ? note.pages.length : 0),
         data: note,
-      };
+      });
 
       const { error } = await client.from('lecture_notes').upsert([row], { onConflict: 'id' });
       return !error;
@@ -415,17 +446,17 @@ export const SupabaseDbService = {
     if (!client) return [];
 
     try {
-      const { data, error } = await client.from('users').select('*');
+      const { data, error } = await client.from('users').select('*').limit(2000);
       if (error || !data) return [];
       return data.map((row: any) => ({
+        ...(row.data || {}),
         uid: row.uid,
         email: row.email,
-        displayName: row.display_name,
-        studentNumber: row.student_number,
-        role: row.role,
-        createdAt: row.created_at,
-        updatedAt: row.updated_at,
-        ...(row.data || {}),
+        displayName: row.display_name || row.data?.displayName,
+        studentNumber: row.student_number || row.data?.studentNumber,
+        role: row.role || row.data?.role || 'student',
+        createdAt: row.created_at || row.data?.createdAt,
+        updatedAt: row.updated_at || row.data?.updatedAt,
       }));
     } catch (err) {
       console.warn('Supabase getUsers error:', err);
@@ -438,7 +469,7 @@ export const SupabaseDbService = {
     if (!client || !user.uid) return false;
 
     try {
-      const row = {
+      const row = cleanForPostgres({
         uid: user.uid,
         email: user.email,
         display_name: user.displayName || user.name,
@@ -446,7 +477,7 @@ export const SupabaseDbService = {
         role: user.role || 'student',
         data: user,
         updated_at: new Date().toISOString(),
-      };
+      });
 
       const { error } = await client.from('users').upsert([row], { onConflict: 'uid' });
       return !error;
@@ -472,8 +503,9 @@ export const SupabaseDbService = {
 
     try {
       const id = `cmd-${Date.now()}-${Math.random().toString(36).substring(7)}`;
-      const { error } = await client.from('admin_commands').insert([
-        {
+      const row = cleanForPostgres({
+        id,
+        data: {
           id,
           command,
           payload,
@@ -481,7 +513,9 @@ export const SupabaseDbService = {
           status: 'pending',
           created_at: new Date().toISOString(),
         },
-      ]);
+        updated_at: new Date().toISOString(),
+      });
+      const { error } = await client.from('system_status').upsert([row]);
 
       if (error) {
         console.warn('Supabase sendAdminCommand warning:', error.message);
