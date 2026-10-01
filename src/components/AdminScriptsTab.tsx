@@ -29,6 +29,7 @@ import {
   AdminPipelineItem,
   AdminScriptJob
 } from '../services/api';
+import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 
 interface AdminScriptsTabProps {
   adminEmail: string;
@@ -39,14 +40,20 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
   adminEmail,
   onRefreshAllData,
 }) => {
-  const [scripts, setScripts] = useState<AdminScriptItem[]>([]);
-  const [pipelines, setPipelines] = useState<AdminPipelineItem[]>([]);
+  const [scripts, setScripts] = useState<AdminScriptItem[]>(() => BUNDLED_SCRIPTS);
+  const [pipelines, setPipelines] = useState<AdminPipelineItem[]>(() => BUNDLED_PIPELINES);
   const [activeJobs, setActiveJobs] = useState<Record<string, AdminScriptJob>>({});
   const [historyJobs, setHistoryJobs] = useState<AdminScriptJob[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('Tümü');
-  const [customArgs, setCustomArgs] = useState<Record<string, string>>({});
+  const [customArgs, setCustomArgs] = useState<Record<string, string>>(() => {
+    const init: Record<string, string> = {};
+    for (const s of BUNDLED_SCRIPTS) {
+      if (s.defaultArgs) init[s.name] = s.defaultArgs;
+    }
+    return init;
+  });
   const [feedback, setFeedback] = useState<{ text: string; type: 'success' | 'error' | 'info' } | null>(null);
 
   // Terminal Console Drawer State

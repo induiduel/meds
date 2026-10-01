@@ -5,6 +5,7 @@ import { pastQuestionsCache } from './pastQuestionsCache';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL } from './auth';
 import { systemHealthMonitor } from './systemHealthMonitor';
+import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 
 const STORAGE_KEY = 'medsoru_db_data_v1';
 const API_BASE_URL_KEY = 'medsoru_custom_api_url';
@@ -2845,21 +2846,24 @@ YALNIZCA GEÇERLİ JSON DÖN:
     jobs: { active: AdminScriptJob[]; history: AdminScriptJob[] };
     error?: string;
   }> {
-    const res = await safeJsonFetch<any>('/api/admin/scripts/list');
-    if (res.ok && res.data?.scripts) {
-      return {
-        success: true,
-        scripts: res.data.scripts,
-        pipelines: res.data.pipelines || [],
-        jobs: res.data.jobs || { active: [], history: [] },
-      };
-    }
+    try {
+      const res = await safeJsonFetch<any>('/api/admin/scripts/list');
+      if (res.ok && Array.isArray(res.data?.scripts) && res.data.scripts.length > 0) {
+        return {
+          success: true,
+          scripts: res.data.scripts,
+          pipelines: res.data.pipelines || BUNDLED_PIPELINES,
+          jobs: res.data.jobs || { active: [], history: [] },
+        };
+      }
+    } catch (_) {}
+
+    // Fallback: Always return guaranteed bundled catalog
     return {
-      success: false,
-      scripts: [],
-      pipelines: [],
+      success: true,
+      scripts: BUNDLED_SCRIPTS,
+      pipelines: BUNDLED_PIPELINES,
       jobs: { active: [], history: [] },
-      error: res.error || 'Script listesi alınamadı.',
     };
   },
 
