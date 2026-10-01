@@ -2834,4 +2834,138 @@ YALNIZCA GEÇERLİ JSON DÖN:
   async triggerSubagentRedaction(adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string }> {
     return await multiDbManager.sendAdminCommand('run_redactor_cycle', {}, adminEmail);
   },
+
+  // -------------------------------------------------------------
+  // Dynamic Admin Scripts & Automations
+  // -------------------------------------------------------------
+  async getScriptsList(): Promise<{
+    success: boolean;
+    scripts: AdminScriptItem[];
+    pipelines: AdminPipelineItem[];
+    jobs: { active: AdminScriptJob[]; history: AdminScriptJob[] };
+    error?: string;
+  }> {
+    const res = await safeJsonFetch<any>('/api/admin/scripts/list');
+    if (res.ok && res.data?.scripts) {
+      return {
+        success: true,
+        scripts: res.data.scripts,
+        pipelines: res.data.pipelines || [],
+        jobs: res.data.jobs || { active: [], history: [] },
+      };
+    }
+    return {
+      success: false,
+      scripts: [],
+      pipelines: [],
+      jobs: { active: [], history: [] },
+      error: res.error || 'Script listesi alınamadı.',
+    };
+  },
+
+  async runScript(
+    scriptName: string,
+    args: string = '',
+    adminEmail: string = ADMIN_EMAIL
+  ): Promise<{ success: boolean; message: string; job?: AdminScriptJob }> {
+    // 1. Try local server direct call
+    const res = await safeJsonFetch<any>('/api/admin/scripts/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ scriptName, args, requestedBy: adminEmail }),
+    });
+
+    if (res.ok && res.data?.success) {
+      return { success: true, message: res.data.message, job: res.data.job };
+    }
+
+    // 2. Cloud Fallback: Send command via Supabase bridge
+    const cloudRes = await multiDbManager.sendAdminCommand('run_script', { scriptName, args }, adminEmail);
+    return {
+      success: cloudRes.success,
+      message: cloudRes.message || `${scriptName} bulut kuyruğuna iletildi.`,
+    };
+  },
+
+  async runScriptPipeline(
+    pipelineId: string,
+    adminEmail: string = ADMIN_EMAIL
+  ): Promise<{ success: boolean; message: string; job?: AdminScriptJob }> {
+    const res = await safeJsonFetch<any>('/api/admin/scripts/pipeline/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pipelineId, requestedBy: adminEmail }),
+    });
+
+    if (res.ok && res.data?.success) {
+      return { success: true, message: res.data.message, job: res.data.job };
+    }
+
+    const cloudRes = await multiDbManager.sendAdminCommand('run_pipeline', { pipelineId }, adminEmail);
+    return {
+      success: cloudRes.success,
+      message: cloudRes.message || `Pipeline (${pipelineId}) bulut kuyruğuna iletildi.`,
+    };
+  },
+
+  async getScriptJobStatus(jobId: string): Promise<{ success: boolean; job?: AdminScriptJob; error?: string }> {
+    const res = await safeJsonFetch<any>(`/api/admin/scripts/jobs/${encodeURIComponent(jobId)}`);
+    if (res.ok && res.data?.job) {
+      return { success: true, job: res.data.job };
+    }
+    return { success: false, error: res.error || 'İşlem detayları alınamadı.' };
+  },
+
+  async stopScriptJob(jobId: string, adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string }> {
+    const res = await safeJsonFetch<any>(`/api/admin/scripts/jobs/${encodeURIComponent(jobId)}/kill`, {
+      method: 'POST',
+    });
+    if (res.ok && res.data?.success) {
+      return { success: true, message: res.data.message };
+    }
+    return await multiDbManager.sendAdminCommand('stop_script', { jobId }, adminEmail);
+  },
 };
+
+export interface AdminScriptItem {
+  name: string;
+  title: string;
+  category: string;
+  description: string;
+  defaultArgs?: string;
+  tags?: string[];
+  danger?: boolean;
+  runtime: 'node' | 'tsx' | 'python' | 'batch' | 'powershell';
+  sizeBytes?: number;
+  modifiedAt?: string | null;
+  isCustom?: boolean;
+}
+
+export interface AdminPipelineItem {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  steps: Array<{ script: string; args?: string; title?: string }>;
+}
+
+export interface AdminScriptJob {
+  id: string;
+  name: string;
+  title?: string;
+  type: 'single' | 'pipeline';
+  pipelineId?: string;
+  args?: string;
+  command?: string;
+  status: 'running' | 'completed' | 'failed' | 'cancelled';
+  startedAt: string;
+  completedAt?: string | null;
+  durationMs?: number;
+  exitCode?: number | null;
+  currentStepIndex?: number;
+  totalSteps?: number;
+  logs?: string[];
+  lastLog?: string;
+  requestedBy?: string;
+}
+

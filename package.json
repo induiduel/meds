@@ -11,8 +11,19 @@
     "deploy": "gh-pages -d dist",
     "start": "tsx server.ts",
     "preview": "vite preview",
+    "check:online": "tsx scripts/check-online-status.ts",
+    "check:status": "tsx scripts/check-online-status.ts",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "verify:answers": "node scripts/verify-question-answers.mjs --unverified",
+    "verify:watch": "node scripts/verify-question-answers.mjs --watch",
+    "verify:all": "node scripts/verify-question-answers.mjs --all",
+    "slides:audit": "node scripts/audit-and-disconnect-faulty-slides.mjs",
+    "slides:match": "node scripts/match-and-link-lecture-slides.mjs",
+    "slides:sync": "node scripts/manage-slide-relations.mjs --all",
+    "slides:stats": "node scripts/manage-slide-relations.mjs --stats",
+    "check:updates": "node scripts/detect-database-updates.mjs",
+    "sync:updates": "node scripts/detect-database-updates.mjs --sync"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

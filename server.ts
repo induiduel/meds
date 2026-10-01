@@ -29,6 +29,17 @@ import {
   DESKTOP_DATABASE_DIR,
 } from './src/serverLectureNotes.ts';
 
+// @ts-ignore - dynamic ES module runner
+import {
+  getAllScripts,
+  startScriptJob,
+  startPipelineJob,
+  getJob,
+  getAllJobs,
+  killJob,
+  AUTOMATION_PIPELINES,
+} from './scripts/automation-runner.mjs';
+
 dotenv.config();
 
 process.on('uncaughtException', (err) => {
@@ -1318,12 +1329,29 @@ export async function executeAdminCommand(command: string, payload: any = {}, re
     return { success: true, message: 'Windows senkronizasyon servisi durduruldu.' };
   }
 
-  if (command === 'notify') {
-    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-    const title = (payload?.title || 'MedSoru Otomasyon Servisi 🚀').replace(/"/g, '');
-    const message = (payload?.message || 'Windows bildirim sistemi sorunsuz çalışıyor.').replace(/"/g, '');
-    exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action notify -Title "${title}" -Message "${message}"`, () => {});
-    return { success: true, message: 'Windows bildirimi başarıyla iletildi.' };
+  if (command === 'run_script') {
+    const scriptName = payload?.scriptName;
+    const args = payload?.args || '';
+    if (!scriptName) {
+      return { success: false, message: 'Script adı belirtilmedi.' };
+    }
+    const job = startScriptJob(scriptName, args, requestedBy);
+    return { success: true, message: `Script (${scriptName}) yerel sunucuda başlatıldı. İşlem No: ${job.id}` };
+  }
+
+  if (command === 'run_pipeline') {
+    const pipelineId = payload?.pipelineId;
+    if (!pipelineId) {
+      return { success: false, message: 'Pipeline ID belirtilmedi.' };
+    }
+    const job = await startPipelineJob(pipelineId, requestedBy);
+    return { success: true, message: `Pipeline (${pipelineId}) yerel sunucuda başlatıldı. İşlem No: ${job.id}` };
+  }
+
+  if (command === 'stop_script' || command === 'kill_job') {
+    const jobId = payload?.jobId;
+    const ok = killJob(jobId);
+    return { success: ok, message: ok ? `İşlem (${jobId}) durduruldu.` : 'İşlem bulunamadı veya zaten sonlanmış.' };
   }
 
   return { success: true, message: `Komut (${command}) yerel sunucuda başarıyla kaydedildi.` };
@@ -1396,7 +1424,82 @@ app.post('/api/automation/run-full-local-sync', async (req, res) => {
   }
 });
 
+// -------------------------------------------------------------
+// Dynamic Script & Automation Runner API Endpoints
+// -------------------------------------------------------------
 
+// 1. List all discovered scripts, pipelines, and jobs
+app.get('/api/admin/scripts/list', (req, res) => {
+  try {
+    const scripts = getAllScripts();
+    const pipelines = AUTOMATION_PIPELINES;
+    const jobs = getAllJobs();
+    res.json({ success: true, scripts, pipelines, jobs });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 2. Run a specific script
+app.post('/api/admin/scripts/run', (req, res) => {
+  try {
+    const { scriptName, args, requestedBy } = req.body;
+    if (!scriptName) {
+      return res.status(400).json({ success: false, error: 'Script adı zorunludur.' });
+    }
+    const job = startScriptJob(scriptName, args, requestedBy || 'admin');
+    res.json({ success: true, message: `${scriptName} betiği başlatıldı.`, job });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 3. Run a pipeline (chained automation)
+app.post('/api/admin/scripts/pipeline/run', async (req, res) => {
+  try {
+    const { pipelineId, requestedBy } = req.body;
+    if (!pipelineId) {
+      return res.status(400).json({ success: false, error: 'Pipeline ID zorunludur.' });
+    }
+    const job = await startPipelineJob(pipelineId, requestedBy || 'admin');
+    res.json({ success: true, message: `Pipeline (${pipelineId}) başlatıldı.`, job });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 4. Get active and recent jobs
+app.get('/api/admin/scripts/jobs', (req, res) => {
+  try {
+    const jobs = getAllJobs();
+    res.json({ success: true, ...jobs });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 5. Get status and logs of a specific job
+app.get('/api/admin/scripts/jobs/:id', (req, res) => {
+  try {
+    const job = getJob(req.params.id);
+    if (!job) {
+      return res.status(404).json({ success: false, error: 'İşlem bulunamadı.' });
+    }
+    res.json({ success: true, job });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 6. Kill / Stop a running job
+app.post('/api/admin/scripts/jobs/:id/kill', (req, res) => {
+  try {
+    const ok = killJob(req.params.id);
+    res.json({ success: ok, message: ok ? 'İşlem durduruldu.' : 'İşlem bulunamadı veya zaten sonlanmış.' });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
 
 // Batch import questions (Past exams, AI parsed questions, desktop sync)
 app.post('/api/questions/batch-import', (req, res) => {

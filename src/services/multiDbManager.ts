@@ -1,7 +1,9 @@
 import { Committee, QuestionItem, LectureNote, AdminNotification } from '../types';
 import { FirestoreDbService, db as firestoreDb } from './firestoreDb';
-import { SupabaseDbService } from './supabaseDb';
+import { SupabaseDbService, broadcastLiveEvent } from './supabaseDb';
 import { safeJsonFetch, getCustomApiUrl } from './api';
+import { systemHealthMonitor } from './systemHealthMonitor';
+import { pastQuestionsCache } from './pastQuestionsCache';
 
 export type DatabaseMode = 'auto' | 'supabase' | 'firebase' | 'local_pc';
 
@@ -14,6 +16,14 @@ export interface DatabaseStatus {
   supabase: {
     status: 'online' | 'error' | 'not_configured' | 'offline';
     details?: string;
+    latencyMs?: number;
+    counts?: {
+      questions: number;
+      pastQuestions: number;
+      lectureNotes: number;
+      committees: number;
+      users: number;
+    };
   };
   localPc: {
     status: 'online' | 'offline';
@@ -57,6 +67,7 @@ class MultiDbManager {
         localStorage.setItem('medsoru_fb_quota_exceeded', String(Date.now()));
       } catch (_) {}
     }
+    systemHealthMonitor.recordDatabaseError('firebase', new Error('Firebase Spark günlük okuma/yazma kotası aşıldı!'));
     console.warn('[MultiDbManager] Firebase Spark günlük okuma/yazma kotası aşıldı! Otomatik olarak Supabase / Yerel PC devraldı.');
   }
 
@@ -109,15 +120,18 @@ class MultiDbManager {
       },
     };
 
-    // Test Supabase
+    // Test Supabase with full diagnostics & counts
     try {
-      const supaHealth = await SupabaseDbService.healthCheck();
-      if (supaHealth.connected) {
+      const detailed = await SupabaseDbService.getDetailedStatus();
+      if (detailed.connected) {
         status.supabase.status = 'online';
-        status.supabase.details = `Bağlı (${supaHealth.latencyMs}ms)`;
+        status.supabase.details = `Bağlı (${detailed.latencyMs}ms)`;
+        status.supabase.latencyMs = detailed.latencyMs;
+        status.supabase.counts = detailed.counts;
       } else {
-        status.supabase.status = supaHealth.error?.includes('yapılandırılmamış') ? 'not_configured' : 'error';
-        status.supabase.details = supaHealth.error || 'Bağlantı kurulamadı';
+        status.supabase.status = detailed.error?.includes('yapılandırılmamış') ? 'not_configured' : 'error';
+        status.supabase.details = detailed.error || 'Bağlantı kurulamadı';
+        status.supabase.latencyMs = detailed.latencyMs;
       }
     } catch (e: any) {
       status.supabase.status = 'error';
@@ -278,31 +292,46 @@ class MultiDbManager {
   }
 
   /**
-   * Resilient Past Questions fetcher with failover
+   * Resilient Past Questions fetcher with failover and instant client-side cache
    */
   public async getPastQuestions(): Promise<QuestionItem[]> {
+    // 0. Ultra-Fast Client Device Cache (IndexedDB - < 20ms)
+    try {
+      const cached = await pastQuestionsCache.getCachedQuestions();
+      if (cached && cached.length > 0) {
+        // Trigger non-blocking incremental delta-sync in the background
+        pastQuestionsCache.syncWithRemote().catch((err) => {
+          console.warn('[MultiDbManager] Background delta sync error:', err);
+        });
+        return cached;
+      }
+    } catch (e) {
+      console.warn('[MultiDbManager] Cache check warning:', e);
+    }
+
     const mode = this.activeMode;
+    let fetched: QuestionItem[] = [];
 
     // 1. Explicit Supabase
     if (mode === 'supabase') {
       try {
         const supa = await SupabaseDbService.getPastQuestions();
-        if (supa && supa.length > 0) return supa;
+        if (supa && supa.length > 0) fetched = supa;
       } catch (e) {
         console.warn('[MultiDbManager] Supabase getPastQuestions failed', e);
       }
     }
 
     // 2. Explicit Local PC
-    if (mode === 'local_pc') {
-      return this.getLocalPastQuestions();
+    if (fetched.length === 0 && mode === 'local_pc') {
+      fetched = await this.getLocalPastQuestions();
     }
 
     // 3. Auto / Firebase mode
-    if (!this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
+    if (fetched.length === 0 && !this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
       try {
         const fbPast = await FirestoreDbService.getAllPastQuestions();
-        if (fbPast && fbPast.length > 0) return fbPast;
+        if (fbPast && fbPast.length > 0) fetched = fbPast;
       } catch (err: any) {
         if (
           err?.message?.toLowerCase().includes('quota') ||
@@ -316,13 +345,30 @@ class MultiDbManager {
     }
 
     // 4. Fallback to Supabase
-    try {
-      const supaPast = await SupabaseDbService.getPastQuestions();
-      if (supaPast && supaPast.length > 0) return supaPast;
-    } catch (e) {}
+    if (fetched.length === 0) {
+      try {
+        const supaPast = await SupabaseDbService.getPastQuestions();
+        if (supaPast && supaPast.length > 0) fetched = supaPast;
+      } catch (e) {}
+    }
 
     // 5. Final fallback to Local PC server
-    return this.getLocalPastQuestions();
+    if (fetched.length === 0) {
+      fetched = await this.getLocalPastQuestions();
+    }
+
+    // Populate IndexedDB cache on initial fetch so all subsequent visits are instant
+    if (fetched.length > 0) {
+      pastQuestionsCache.saveBatch(fetched).then(() => {
+        let maxTime = new Date(0).toISOString();
+        for (const q of fetched) {
+          if (q.updatedAt && q.updatedAt > maxTime) maxTime = q.updatedAt;
+        }
+        pastQuestionsCache.setLastSyncTime(maxTime, fetched.length);
+      }).catch(() => {});
+    }
+
+    return fetched;
   }
 
   private async getLocalPastQuestions(): Promise<QuestionItem[]> {
@@ -497,6 +543,7 @@ class MultiDbManager {
     );
 
     await Promise.allSettled(promises);
+    broadcastLiveEvent('questions_changed', { eventType: 'UPDATE', new: question, id: question.id });
   }
 
   /**
@@ -504,6 +551,11 @@ class MultiDbManager {
    * Saves to Local Server, Supabase, AND mirrors to Firebase Spark!
    */
   public async savePastQuestion(question: QuestionItem): Promise<void> {
+    // 0. Immediate local device cache update
+    pastQuestionsCache.saveQuestion(question).catch((e) => {
+      console.warn('[MultiDbManager] Cache saveQuestion error:', e);
+    });
+
     const promises: Promise<any>[] = [];
 
     // 1. Local Server Express API
@@ -557,6 +609,7 @@ class MultiDbManager {
     );
 
     await Promise.allSettled(promises);
+    broadcastLiveEvent('past_questions_changed', { eventType: 'UPDATE', new: question, id: question.id });
   }
 
   /**
@@ -596,6 +649,138 @@ class MultiDbManager {
     );
 
     await Promise.allSettled(promises);
+    broadcastLiveEvent('committees_changed', { eventType: 'UPDATE', new: committee, id: committee.id });
+  }
+
+  /**
+   * Multi-Write / Parallel Sync for Lecture Notes:
+   * Saves to Local PC Server, Supabase, AND mirrors to Firebase Spark!
+   */
+  public async saveLectureNote(note: LectureNote): Promise<void> {
+    const promises: Promise<any>[] = [];
+
+    // 1. Local PC Express API
+    promises.push(
+      (async () => {
+        try {
+          const customUrl = getCustomApiUrl();
+          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
+            return;
+          }
+          const endpoint = customUrl ? `${customUrl}/api/lecture-notes` : '/api/lecture-notes';
+          await safeJsonFetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(note),
+          });
+        } catch (e) {
+          console.warn('[MultiDbManager] Local server saveLectureNote fallback', e);
+        }
+      })()
+    );
+
+    // 2. Supabase PostgreSQL
+    promises.push(
+      (async () => {
+        try {
+          await SupabaseDbService.saveLectureNote(note);
+        } catch (e) {
+          console.warn('[MultiDbManager] Supabase saveLectureNote error', e);
+        }
+      })()
+    );
+
+    // 3. Firebase Spark (Mirror)
+    promises.push(
+      (async () => {
+        try {
+          await FirestoreDbService.saveLectureNote(note);
+        } catch (e: any) {
+          if (
+            e?.message?.toLowerCase().includes('quota') ||
+            e?.message?.toLowerCase().includes('exceeded') ||
+            e?.code === 'resource-exhausted' ||
+            e?.code === 'permission-denied'
+          ) {
+            this.markFirebaseQuotaExceeded();
+          }
+          console.warn('[MultiDbManager] Firebase Spark saveLectureNote mirror warning', e?.message);
+        }
+      })()
+    );
+
+    await Promise.allSettled(promises);
+    broadcastLiveEvent('lecture_notes_changed', { eventType: 'UPDATE', new: note, id: note.id });
+  }
+
+  /**
+   * Delete Lecture Note from all databases
+   */
+  public async deleteLectureNote(id: string): Promise<void> {
+    const promises: Promise<any>[] = [];
+
+    // 1. Local PC Server
+    promises.push(
+      (async () => {
+        try {
+          const customUrl = getCustomApiUrl();
+          const endpoint = customUrl ? `${customUrl}/api/lecture-notes/${id}` : `/api/lecture-notes/${id}`;
+          await safeJsonFetch(endpoint, { method: 'DELETE' });
+        } catch (_) {}
+      })()
+    );
+
+    // 2. Supabase
+    promises.push(SupabaseDbService.deleteLectureNote(id).catch(() => {}));
+
+    // 3. Firebase
+    promises.push(FirestoreDbService.deleteLectureNote(id).catch(() => {}));
+
+    await Promise.allSettled(promises);
+    broadcastLiveEvent('lecture_notes_changed', { eventType: 'DELETE', old: { id }, id });
+  }
+
+  /**
+   * Delete Question from all databases
+   */
+  public async deleteQuestion(id: string): Promise<void> {
+    const promises: Promise<any>[] = [];
+    promises.push(SupabaseDbService.deleteQuestion(id).catch(() => {}));
+    promises.push(FirestoreDbService.deleteQuestion(id).catch(() => {}));
+    await Promise.allSettled(promises);
+    broadcastLiveEvent('questions_changed', { eventType: 'DELETE', old: { id }, id });
+  }
+
+  /**
+   * Delete Past Question from all databases
+   */
+  public async deletePastQuestion(id: string): Promise<void> {
+    const promises: Promise<any>[] = [];
+    promises.push(SupabaseDbService.deletePastQuestion(id).catch(() => {}));
+    promises.push(FirestoreDbService.deleteQuestion(id).catch(() => {}));
+    await Promise.allSettled(promises);
+    broadcastLiveEvent('past_questions_changed', { eventType: 'DELETE', old: { id }, id });
+  }
+
+  // Realtime Subscriptions
+  public subscribeToQuestions(callback: (payload: any) => void): () => void {
+    return SupabaseDbService.subscribeToQuestions(callback);
+  }
+
+  public subscribeToPastQuestions(callback: (payload: any) => void): () => void {
+    return SupabaseDbService.subscribeToPastQuestions(callback);
+  }
+
+  public subscribeToLectureNotes(callback: (payload: any) => void): () => void {
+    return SupabaseDbService.subscribeToLectureNotes(callback);
+  }
+
+  public subscribeToCommittees(callback: (payload: any) => void): () => void {
+    return SupabaseDbService.subscribeToCommittees(callback);
+  }
+
+  public async testRealtimeRoundtrip(timeoutMs?: number) {
+    return SupabaseDbService.testRealtimeRoundtrip(timeoutMs);
   }
 
   /**

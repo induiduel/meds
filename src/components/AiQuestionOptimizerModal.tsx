@@ -28,6 +28,7 @@ import {
 import { QuestionItem, ReconstructedQuestion, LectureNote } from '../types';
 import { ApiService } from '../services/api';
 import { AppUser } from '../services/auth';
+import { AiQuotaAlertModal } from './AiQuotaAlertModal';
 
 interface AiQuestionOptimizerModalProps {
   question: QuestionItem | null;
@@ -108,6 +109,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
   const [hasOptimizedOnce, setHasOptimizedOnce] = useState(false);
   const [refinementReport, setRefinementReport] = useState<string>('');
   const [planUsed, setPlanUsed] = useState<string>('');
+  const [isQuotaModalOpen, setIsQuotaModalOpen] = useState(false);
 
   // Editable Draft States for Generated Result
   const [draftDiscipline, setDraftDiscipline] = useState(question.discipline || 'Tıp Fakültesi');
@@ -212,7 +214,11 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
       }
     } catch (err: any) {
       clearInterval(stepInterval);
-      setErrorMsg(err.message || 'Yapay zeka optimizasyonu sırasında bir hata oluştu.');
+      const msg = err.message || 'Yapay zeka optimizasyonu sırasında bir hata oluştu.';
+      setErrorMsg(msg);
+      if (/429|quota|resource_exhausted|spending cap|limit/i.test(msg)) {
+        setIsQuotaModalOpen(true);
+      }
     } finally {
       setIsOptimizing(false);
     }
@@ -729,6 +735,14 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
         </div>
 
       </div>
+
+      <AiQuotaAlertModal
+        isOpen={isQuotaModalOpen}
+        onClose={() => setIsQuotaModalOpen(false)}
+        onRetry={handleRunOptimization}
+        errorDetails={errorMsg || undefined}
+        sourceFunction="Soru Düzenleme (AI Optimizer)"
+      />
     </div>
   );
 };

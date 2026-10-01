@@ -44,6 +44,7 @@ import {
 import { QuestionItem, Committee } from '../types';
 import { AdminEditQuestionModal } from './AdminEditQuestionModal';
 import { AdminPastExamImporterModal } from './AdminPastExamImporterModal';
+import { AdminScriptsTab } from './AdminScriptsTab';
 import { InfoPopover } from './InfoPopover';
 import { ApiService, safeJsonFetch } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
@@ -72,7 +73,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   onRefreshData,
   onOpenSubagentMonitor,
 }) => {
-  const [activeTab, setActiveTab] = useState<'questions' | 'automations' | 'database' | 'users'>('questions');
+  const [activeTab, setActiveTab] = useState<'questions' | 'scripts' | 'automations' | 'database' | 'users'>('questions');
   const [editingQuestion, setEditingQuestion] = useState<QuestionItem | null>(null);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -826,6 +827,19 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
           </button>
 
           <button
+            onClick={() => setActiveTab('scripts')}
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
+              activeTab === 'scripts'
+                ? 'border-indigo-600 text-indigo-900 bg-white shadow-2xs font-black'
+                : 'border-transparent text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Terminal className="w-3.5 h-3.5 text-indigo-600" />
+            <span>🛠️ Script & Görev Merkezi</span>
+            <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+          </button>
+
+          <button
             onClick={() => setActiveTab('automations')}
             className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
               activeTab === 'automations'
@@ -929,6 +943,13 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Tab: Dynamic Scripts & Tasks Hub */}
+        {activeTab === 'scripts' && (
+          <div className="flex-1 overflow-hidden flex flex-col min-h-0">
+            <AdminScriptsTab adminEmail={adminEmail} onRefreshAllData={onRefreshData} />
           </div>
         )}
 
@@ -2481,12 +2502,13 @@ CREATE POLICY "Allow public read access" ON public.system_status FOR SELECT USIN
 CREATE POLICY "Allow public write access" ON public.system_status FOR ALL USING (true);
 
 -- 8. Supabase Realtime Yayını (Anlık Canlı Akış İçin ŞARTTIR)
-ALTER PUBLICATION supabase_realtime ADD TABLE public.committees;
-ALTER PUBLICATION supabase_realtime ADD TABLE public.questions;
-ALTER PUBLICATION supabase_realtime ADD TABLE public.past_questions;
-ALTER PUBLICATION supabase_realtime ADD TABLE public.lecture_notes;
-ALTER PUBLICATION supabase_realtime ADD TABLE public.users;
-ALTER PUBLICATION supabase_realtime ADD TABLE public.system_status;
+ALTER PUBLICATION supabase_realtime SET TABLE 
+  public.committees, 
+  public.questions, 
+  public.past_questions, 
+  public.lecture_notes, 
+  public.system_status, 
+  public.users;
 
 -- 9. Replica Identity (Güncelleme ve Silmelerde Tüm Veriyi Aktarmak İçin)
 ALTER TABLE public.committees REPLICA IDENTITY FULL;

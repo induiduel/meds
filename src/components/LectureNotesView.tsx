@@ -36,6 +36,7 @@ import { DriveSyncVisualizer } from './DriveSyncVisualizer';
 import { db, cleanForFirestore } from '../services/firestoreDb';
 import { collection, doc, setDoc, deleteDoc, getDocs } from 'firebase/firestore';
 import { ApiService } from '../services/api';
+import { multiDbManager } from '../services/multiDbManager';
 
 interface LectureNotesViewProps {
   committee?: Committee;
@@ -126,65 +127,80 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     } catch (e) {}
   }, [notes]);
 
-  // Load verified notes from Server API and Firestore
+  // Load verified notes from Multi-Database (Supabase / Local / Firestore) and listen for Realtime updates
   useEffect(() => {
-    async function loadSavedNotes() {
-      // 1. Server API
-      try {
-        const res = await fetch('/api/lecture-notes');
-        if (res.ok) {
-          const apiNotes: LectureNote[] = await res.json();
-          if (Array.isArray(apiNotes)) {
-            const valid = apiNotes.filter(isPureVerbatimNote);
-            if (valid.length > 0) {
-              setNotes(valid);
-              setActiveNote(valid[0]);
-              return;
-            }
-          }
-        }
-      } catch (e) {}
+    let isMounted = true;
 
-      // 2. Firestore fallback
+    async function loadSavedNotes() {
       try {
-        const colRef = collection(db, 'lecture_notes');
-        const snap = await getDocs(colRef);
-        if (!snap.empty) {
-          const remote: LectureNote[] = [];
-          snap.forEach(d => {
-            const data = d.data() as LectureNote;
-            if (isPureVerbatimNote(data)) {
-              remote.push(data);
-            }
-          });
-          if (remote.length > 0) {
-            setNotes(remote);
-            setActiveNote(remote[0]);
+        const loaded = await multiDbManager.getLectureNotes();
+        if (isMounted && Array.isArray(loaded) && loaded.length > 0) {
+          const valid = loaded.filter(isPureVerbatimNote);
+          if (valid.length > 0) {
+            setNotes(valid);
+            setActiveNote((prev) => prev || valid[0]);
             return;
           }
         }
-      } catch (e) {}
+      } catch (e) {
+        console.warn('[LectureNotesView] multiDbManager.getLectureNotes error:', e);
+      }
 
-      // 3. Server API fallback (loads on demand instead of bundling 35MB in browser bundle)
+      // Fallback: Local Server API
       try {
         const apiBase = localStorage.getItem('medsoru_custom_api_url') || (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
         const res = await fetch(`${apiBase}/api/lecture-notes`);
         if (res.ok) {
           const json = await res.json();
           const list = (json.notes || json) as LectureNote[];
-          if (Array.isArray(list) && list.length > 0) {
+          if (isMounted && Array.isArray(list) && list.length > 0) {
             const valid = list.filter(isPureVerbatimNote);
             if (valid.length > 0) {
               setNotes(valid);
-              setActiveNote(valid[0]);
-              return;
+              setActiveNote((prev) => prev || valid[0]);
             }
           }
         }
-      } catch (e) {}
+      } catch (_) {}
     }
 
     loadSavedNotes();
+
+    // Supabase Realtime Subscription: Anlık ders notu ekleme, düzenleme ve silmeleri canlı dinle
+    const unsubscribe = multiDbManager.subscribeToLectureNotes((payload) => {
+      if (!isMounted) return;
+      if ((payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') && payload.new) {
+        const newNote: LectureNote = payload.new.data || {
+          id: payload.new.id,
+          committeeId: payload.new.committee_id,
+          discipline: payload.new.discipline,
+          title: payload.new.title,
+          pages: payload.new.pages || [],
+          pageCount: payload.new.page_count,
+          createdAt: payload.new.created_at,
+        };
+
+        if (newNote && isPureVerbatimNote(newNote)) {
+          setNotes((prev) => {
+            const exists = prev.some((n) => n.id === newNote.id);
+            if (exists) {
+              return prev.map((n) => (n.id === newNote.id ? { ...n, ...newNote } : n));
+            }
+            return [newNote, ...prev];
+          });
+        }
+      } else if (payload.eventType === 'DELETE' && payload.old) {
+        const deletedId = (payload.old as any)?.id;
+        if (deletedId) {
+          setNotes((prev) => prev.filter((n) => n.id !== deletedId));
+        }
+      }
+    });
+
+    return () => {
+      isMounted = false;
+      unsubscribe();
+    };
   }, []);
 
   // Compute catalog statistics
@@ -317,11 +333,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     }
 
     try {
-      await fetch(`/api/lecture-notes/${id}`, { method: 'DELETE' });
-    } catch (e) {}
-
-    try {
-      await deleteDoc(doc(db, 'lecture_notes', id));
+      await multiDbManager.deleteLectureNote(id);
     } catch (e) {}
 
     setFeedbackMessage(`"${title}" silindi.`);
@@ -384,18 +396,9 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       setNewRawContent('');
       setActiveTab('rendered_notes');
 
-      // 2. Save Server API
+      // 2. Parallel Dual-Write (Supabase + Local Server + Firebase Spark)
       try {
-        await fetch('/api/lecture-notes', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(newNote),
-        });
-      } catch (err) {}
-
-      // 3. Save Firestore
-      try {
-        await setDoc(doc(db, 'lecture_notes', newNote.id), cleanForFirestore(newNote));
+        await multiDbManager.saveLectureNote(newNote);
       } catch (err) {}
 
       setFeedbackMessage(`✓ "${newNote.title}" başarıyla kaydedildi (${newNote.totalSlides} sayfa).`);
@@ -483,15 +486,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         setPdfUploadStatus(null);
 
         try {
-          await fetch('/api/lecture-notes', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newNote),
-          });
-        } catch (err) {}
-
-        try {
-          await setDoc(doc(db, 'lecture_notes', newNote.id), cleanForFirestore(newNote));
+          await multiDbManager.saveLectureNote(newNote);
         } catch (err) {}
 
         setFeedbackMessage(`✓ "${newNote.title}" belgesinin ${newNote.totalSlides} sayfası eksiksiz render edildi!`);

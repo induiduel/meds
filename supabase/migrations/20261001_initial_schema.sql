@@ -141,3 +141,21 @@ BEGIN
     CREATE POLICY "Allow public update system_status" ON public.system_status FOR UPDATE USING (true);
   END IF;
 END $$;
+
+-- 9. Supabase Realtime Yayını ve REPLICA IDENTITY (Canlı Veri Akışı ve WebSocket Bildirimleri İçin Şarttır)
+ALTER PUBLICATION supabase_realtime SET TABLE 
+  public.committees, 
+  public.questions, 
+  public.past_questions, 
+  public.lecture_notes, 
+  public.users, 
+  public.system_status;
+
+-- Replica Identity ayarı (Update ve Delete işlemlerinde önceki/yeni tüm satır verisinin eksiksiz akması için)
+ALTER TABLE public.committees REPLICA IDENTITY FULL;
+ALTER TABLE public.questions REPLICA IDENTITY FULL;
+ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
+ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
+ALTER TABLE public.users REPLICA IDENTITY FULL;
+ALTER TABLE public.system_status REPLICA IDENTITY FULL;
+

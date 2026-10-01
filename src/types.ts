@@ -56,6 +56,9 @@ export interface QuestionLectureMatch {
   reasoning: string;
   driveFileId?: string;
   driveFileUrl?: string;
+  highlightedText?: string;
+  matchedTerms?: string[];
+  totalSlides?: number;
 }
 
 export interface LectureNotePage {
@@ -127,6 +130,20 @@ export interface QuestionItem {
   customRedactedBy?: string;
   customRedactedAt?: string;
   customRedactionPrompt?: string;
+  matchedNoteTitle?: string | null;
+  matchedSlidePage?: number | null;
+  slideAudit?: {
+    status: 'verified' | 'disconnected' | 'linked' | 'unmatched';
+    auditedAt?: string;
+    linkedAt?: string;
+    reason?: string;
+    score?: number;
+    matchedTermsCount?: number;
+    previousMatch?: {
+      noteTitle?: string | null;
+      pageNumber?: number | null;
+    };
+  };
   createdAt: string;
   updatedAt: string;
 }

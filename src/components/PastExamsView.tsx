@@ -27,13 +27,18 @@ import {
   Flag,
   MessageSquare,
   Send,
-  AlertCircle
+  AlertCircle,
+  Database,
+  HardDrive,
+  Zap
 } from 'lucide-react';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
+import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
+import { renderHighlightedSnippet } from './QuestionCard';
 
 interface PastExamsViewProps {
   currentUser: AppUser | null;
@@ -100,6 +105,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // Feedback & Copy state
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
+  // Client-Side Caching & Delta-Sync State
+  const [cacheStatus, setCacheStatus] = useState<CacheSyncStatus>(pastQuestionsCache.getStatus());
+
   // Load questions
   const loadPastQuestions = async () => {
     setIsLoading(true);
@@ -111,6 +119,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     } finally {
       setIsLoading(false);
     }
+  };
+
+  // Manual Trigger to Check Database Updates
+  const handleManualSync = async () => {
+    await pastQuestionsCache.syncWithRemote();
   };
 
   // Submit Question Report ("Şikayet Et / Hata Bildir")
@@ -181,11 +194,39 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   useEffect(() => {
     loadPastQuestions();
+
+    // Subscribe to incremental cache updates (Soru bazında anlık canlı güncelleme)
+    const unsubscribe = pastQuestionsCache.subscribe((status, updatedList) => {
+      setCacheStatus(status);
+      if (updatedList && updatedList.length > 0) {
+        const updateMap = new Map(updatedList.map(q => [q.id, q]));
+        setQuestions(prev => {
+          let hasChange = false;
+          const next = prev.map(existing => {
+            if (updateMap.has(existing.id)) {
+              hasChange = true;
+              return updateMap.get(existing.id)!;
+            }
+            return existing;
+          });
+          for (const newQ of updatedList) {
+            if (!prev.some(p => p.id === newQ.id)) {
+              next.unshift(newQ);
+              hasChange = true;
+            }
+          }
+          return hasChange ? next : prev;
+        });
+      }
+    });
+
     ApiService.getLectureNotes()
       .then(notes => {
         if (notes && notes.length > 0) setInternalNotes(notes);
       })
       .catch(err => console.warn('Could not fetch lecture notes for past exams:', err));
+
+    return () => unsubscribe();
   }, []);
 
   // Upvote / Like toggle
@@ -427,6 +468,21 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             <span className="bg-amber-500/20 text-amber-300 border border-amber-400/30 text-xs font-bold px-3 py-1 rounded-full">
               {tabCounts.ambiguousCount.toLocaleString('tr-TR')} Muallak / İnceleme Bekleyen
             </span>
+
+            {/* Client-Side Cache (IndexedDB) Status Pill */}
+            <div className="flex items-center gap-1.5 bg-slate-800/80 text-cyan-300 border border-cyan-400/30 text-xs px-2.5 py-1 rounded-full backdrop-blur-xs">
+              <Zap className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+              <span>Cihaz Depolaması: <strong>{questions.length.toLocaleString('tr-TR')} Soru (0ms Açılış)</strong></span>
+              <button
+                onClick={handleManualSync}
+                disabled={cacheStatus.isSyncing}
+                title="Veritabanında soru bazında güncelleme olup olmadığını kontrol et"
+                className="ml-1 hover:text-white p-0.5 rounded transition-all cursor-pointer inline-flex items-center gap-1 text-[11px] text-slate-300 hover:text-cyan-200"
+              >
+                <RefreshCw className={`w-3 h-3 ${cacheStatus.isSyncing ? 'animate-spin text-teal-300' : 'text-slate-400'}`} />
+                <span>{cacheStatus.isSyncing ? 'Senkronize ediliyor...' : 'Kontrol Et'}</span>
+              </button>
+            </div>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -1272,11 +1328,25 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   <FileText className="w-3.5 h-3.5 text-slate-500" />
                   Orijinal Çıkmış: {similarModalQuestion.sourceExamPdf}
                 </span>
-                <span className="bg-emerald-50 border border-emerald-300 text-emerald-900 px-2 py-1 rounded-md font-semibold flex items-center gap-1">
-                  <BookMarked className="w-3.5 h-3.5 text-emerald-600" />
-                  Ders: {similarModalQuestion.matchedNoteTitle} (Slayt #{similarModalQuestion.matchedSlidePage})
-                </span>
+                {similarModalQuestion.matchedNoteTitle && (
+                  <span className="bg-emerald-50 border border-emerald-300 text-emerald-900 px-2 py-1 rounded-md font-semibold flex items-center gap-1">
+                    <BookMarked className="w-3.5 h-3.5 text-emerald-600" />
+                    Ders: {similarModalQuestion.matchedNoteTitle} (Slayt #{similarModalQuestion.matchedSlidePage})
+                  </span>
+                )}
               </div>
+
+              {(similarModalQuestion.lectureReference?.matchedSnippet || similarModalQuestion.matchedSnippet) && (
+                <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs text-amber-950">
+                  <div className="font-bold flex items-center gap-1.5 mb-1 text-amber-900">
+                    <BookOpen className="w-3.5 h-3.5 text-amber-700" />
+                    Slayttaki İlgili Bilgi & Metin:
+                  </div>
+                  <p className="leading-relaxed">
+                    {renderHighlightedSnippet(similarModalQuestion.lectureReference?.matchedSnippet || similarModalQuestion.matchedSnippet)}
+                  </p>
+                </div>
+              )}
 
               {/* Question Stem */}
               <div className="space-y-2">

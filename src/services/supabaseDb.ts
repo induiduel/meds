@@ -642,14 +642,16 @@ export const SupabaseDbService = {
     }
   },
 
-  // Realtime Subscriptions
+  // Realtime Subscriptions (Dual-Layer: PostgreSQL WAL changes + Instant WebSocket Broadcast)
   subscribeToTable(table: string, callback: (payload: any) => void): () => void {
     const client = getSupabaseClient();
     if (!client) return () => {};
 
     const channelName = `realtime:${table}:${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
     const channel = client
-      .channel(channelName)
+      .channel(channelName, {
+        config: { broadcast: { self: false } },
+      })
       .on(
         'postgres_changes',
         { event: '*', schema: 'public', table },
@@ -661,13 +663,41 @@ export const SupabaseDbService = {
           }
         }
       )
+      .on(
+        'broadcast',
+        { event: `${table}_changed` },
+        (payload) => {
+          try {
+            const data = payload?.payload || payload;
+            callback(data);
+          } catch (e) {
+            console.warn(`[Supabase Realtime Broadcast] ${table} callback error:`, e);
+          }
+        }
+      )
       .subscribe((status, err) => {
         if (err) {
           console.warn(`[Supabase Realtime] ${table} subscription error:`, err);
         }
       });
 
+    // Also register on global broadcast live-sync channel
+    const globalChannel = getLiveSyncChannel();
+    let isDisposed = false;
+    if (globalChannel) {
+      globalChannel.on('broadcast', { event: `${table}_changed` }, (payload: any) => {
+        if (isDisposed) return;
+        try {
+          const data = payload?.payload || payload;
+          callback(data);
+        } catch (e) {
+          console.warn(`[Global LiveSync] ${table} callback error:`, e);
+        }
+      });
+    }
+
     return () => {
+      isDisposed = true;
       try {
         client.removeChannel(channel);
       } catch (_) {}
@@ -756,11 +786,15 @@ export const SupabaseDbService = {
     }
   },
 
-  // Active Realtime Verification Test
+  // Active Realtime Verification Test (Dual Probe: WebSocket Broadcast + PostgreSQL WAL Changes)
   async testRealtimeRoundtrip(timeoutMs: number = 4000): Promise<{
     success: boolean;
     latencyMs: number;
     message: string;
+    broadcastActive?: boolean;
+    postgresActive?: boolean;
+    broadcastLatencyMs?: number;
+    postgresLatencyMs?: number;
   }> {
     const client = getSupabaseClient();
     if (!client) {
@@ -771,43 +805,94 @@ export const SupabaseDbService = {
       const testId = `rt-ping-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
       const startTime = Date.now();
       let finished = false;
+      let broadcastReceived = false;
+      let broadcastLatencyMs = 0;
+      let postgresReceived = false;
+      let postgresLatencyMs = 0;
 
-      const timer = setTimeout(() => {
-        if (!finished) {
-          finished = true;
-          try { client.removeChannel(channel); } catch (_) {}
+      const finishTest = () => {
+        if (finished) return;
+        finished = true;
+        try { client.removeChannel(channel); } catch (_) {}
+        // Clean up test row asynchronously
+        client.from('system_status').delete().eq('id', testId).then(() => {});
+
+        if (postgresReceived) {
+          resolve({
+            success: true,
+            latencyMs: postgresLatencyMs,
+            broadcastActive: true,
+            postgresActive: true,
+            broadcastLatencyMs: broadcastLatencyMs || postgresLatencyMs,
+            postgresLatencyMs,
+            message: `✓ Realtime aktiftir ve tam kapasite çalışıyor! (WebSocket: ${broadcastLatencyMs || postgresLatencyMs}ms, DB Değişiklik Yayını: ${postgresLatencyMs}ms)`,
+          });
+        } else if (broadcastReceived) {
+          resolve({
+            success: true,
+            latencyMs: broadcastLatencyMs,
+            broadcastActive: true,
+            postgresActive: false,
+            broadcastLatencyMs,
+            message: `⚡ WebSocket Canlı Yayını Aktif (${broadcastLatencyMs}ms)! Ancak PostgreSQL veritabanı yayınları (WAL) henüz 'supabase_realtime' yayınına eklenmemiş.`,
+          });
+        } else {
           resolve({
             success: false,
             latencyMs: Date.now() - startTime,
-            message: 'Realtime zaman aşımına uğradı (PostgreSQL yayınları supabase_realtime tablosuna eklenmemiş olabilir).',
+            broadcastActive: false,
+            postgresActive: false,
+            message: 'Realtime zaman aşımına uğradı (WebSocket bağlantısı veya PostgreSQL yayını yanıt vermedi).',
           });
         }
+      };
+
+      const timer = setTimeout(() => {
+        finishTest();
       }, timeoutMs);
 
       const channel = client
-        .channel(`rt-test-${testId}`)
+        .channel(`rt-test-${testId}`, {
+          config: { broadcast: { self: true } },
+        })
+        .on(
+          'broadcast',
+          { event: 'rt_ping' },
+          (payload) => {
+            if (payload?.payload?.id === testId && !broadcastReceived) {
+              broadcastReceived = true;
+              broadcastLatencyMs = Date.now() - startTime;
+              if (postgresReceived) {
+                clearTimeout(timer);
+                finishTest();
+              }
+            }
+          }
+        )
         .on(
           'postgres_changes',
           { event: '*', schema: 'public', table: 'system_status' },
           (payload) => {
-            if (payload.new && (payload.new as any).id === testId && !finished) {
-              finished = true;
+            if (payload.new && (payload.new as any).id === testId && !postgresReceived) {
+              postgresReceived = true;
+              postgresLatencyMs = Date.now() - startTime;
               clearTimeout(timer);
-              const roundtrip = Date.now() - startTime;
-              try { client.removeChannel(channel); } catch (_) {}
-              // Clean up test row asynchronously
-              client.from('system_status').delete().eq('id', testId).then(() => {});
-              resolve({
-                success: true,
-                latencyMs: roundtrip,
-                message: `✓ Realtime aktiftir ve çalışıyor! Yankı süresi: ${roundtrip}ms`,
-              });
+              finishTest();
             }
           }
         )
         .subscribe(async (status) => {
           if (status === 'SUBSCRIBED') {
-            // Write ping record
+            // 1. Send broadcast ping (tests instant WebSocket layer)
+            try {
+              channel.send({
+                type: 'broadcast',
+                event: 'rt_ping',
+                payload: { id: testId, timestamp: Date.now() },
+              });
+            } catch (_) {}
+
+            // 2. Write ping record into PostgreSQL system_status (tests WAL postgres_changes layer)
             try {
               await client.from('system_status').upsert([
                 {
@@ -817,16 +902,7 @@ export const SupabaseDbService = {
                 },
               ]);
             } catch (err: any) {
-              if (!finished) {
-                finished = true;
-                clearTimeout(timer);
-                try { client.removeChannel(channel); } catch (_) {}
-                resolve({
-                  success: false,
-                  latencyMs: Date.now() - startTime,
-                  message: 'Yazma hatası: ' + err.message,
-                });
-              }
+              console.warn('Realtime test ping row write error:', err);
             }
           }
         });

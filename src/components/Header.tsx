@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
+import { systemHealthMonitor, SystemOverallHealth } from '../services/systemHealthMonitor';
 
 export type AppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet';
 
@@ -59,6 +60,7 @@ interface HeaderProps {
   isUploadingToDrive: boolean;
   driveLastUploadedLink: string | null;
   onOpenPdfModal: () => void;
+  onOpenDiagnostics?: () => void;
 }
 
 export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
@@ -109,12 +111,19 @@ export const Header: React.FC<HeaderProps> = ({
   isUploadingToDrive,
   driveLastUploadedLink,
   onOpenPdfModal,
+  onOpenDiagnostics,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [query, setQuery] = useState(searchQuery);
+  const [health, setHealth] = useState<SystemOverallHealth>(systemHealthMonitor.getHealth());
   const menuRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const unsub = systemHealthMonitor.subscribe((h) => setHealth(h));
+    return () => unsub();
+  }, []);
 
   useEffect(() => setQuery(searchQuery), [searchQuery]);
 
@@ -163,6 +172,15 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   const currentCommittee = committees.find((c) => c.id === selectedCommitteeId);
+  const healthTone = health.hasCriticalDatabaseError
+      ? { dot: 'bg-[#EF4444]', ring: 'border-[#FCA5A5] bg-[#FEF2F2]', label: 'Veritabanı hatası' }
+      : health.firebase.status === 'quota_exceeded'
+      ? { dot: 'bg-[#F59E0B]', ring: 'border-[#FCD34D] bg-[#FFFBEB]', label: 'Firebase kotası doldu, Supabase devrede' }
+      : health.hasAiQuotaAlert
+      ? { dot: 'bg-[#8B5CF6]', ring: 'border-[#DDD6FE] bg-[#F5F3FF]', label: 'AI kotası uyarısı' }
+      : health.supabase.status === 'online'
+      ? { dot: 'bg-[#10B981]', ring: 'border-line bg-white', label: 'Supabase çevrimiçi' }
+      : { dot: 'bg-[#10B981]', ring: 'border-line bg-white', label: 'Sistem aktif' };
 
   const MenuItem: React.FC<{
     icon: React.ElementType;
@@ -248,6 +266,22 @@ export const Header: React.FC<HeaderProps> = ({
           <Search className="w-[18px] h-[18px]" />
         </button>
 
+        {/* System health: a single status dot; details live in the tooltip and diagnostics modal */}
+        {onOpenDiagnostics && (
+          <button
+            type="button"
+            onClick={onOpenDiagnostics}
+            aria-label={`Sistem durumu: ${healthTone.label}`}
+            title={health.statusMessage || healthTone.label}
+            className={`relative w-10 h-10 rounded-full border flex items-center justify-center cursor-pointer shrink-0 transition-colors hover:border-line-2 ${healthTone.ring}`}
+          >
+            <span className={`w-2.5 h-2.5 rounded-full ${healthTone.dot}`} />
+            {health.hasCriticalDatabaseError && (
+              <span className={`absolute w-2.5 h-2.5 rounded-full animate-ping ${healthTone.dot}`} />
+            )}
+          </button>
+        )}
+
         <div className="relative shrink-0" ref={menuRef}>
           <button
             type="button"
@@ -306,6 +340,7 @@ export const Header: React.FC<HeaderProps> = ({
 
               <MenuLabel>Yönetim</MenuLabel>
               <MenuItem icon={ShieldCheck} label="Yönetim paneli" onClick={openAdmin} />
+              {onOpenDiagnostics && <MenuItem icon={Activity} label="Veritabanı & limit takibi" onClick={onOpenDiagnostics} />}
               {isAdmin && (
                 <>
                   {onOpenPastExamModal && <MenuItem icon={FileUp} label="Çıkmış soru yükle" onClick={onOpenPastExamModal} />}

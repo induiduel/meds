@@ -342,6 +342,16 @@ async function main() {
     fs.writeFileSync(PAST_DB_PATH, JSON.stringify(merged, null, 2), 'utf8');
     fs.writeFileSync(SRC_PAST_DB_PATH, JSON.stringify(merged, null, 2), 'utf8');
     console.log(`💾 Toplam havuz güncellendi: ${merged.length} soru (${newQuestions.length} yeni Yapay Zeka sorusu eklendi).`);
+
+    if (newQuestions.length > 0) {
+      console.log(`\n🩺 [Otomatik Doğrulama] Yeni eklenen ${newQuestions.length} soru için %90 eşleşme kontrolü başlatılıyor...`);
+      try {
+        const { verifyQuestionsBatch } = await import('./verify-question-answers.mjs');
+        await verifyQuestionsBatch({ unverifiedOnly: true, limit: newQuestions.length });
+      } catch (err) {
+        console.warn('[Otomatik Doğrulama Uyarısı]:', err.message);
+      }
+    }
   }
 }
 

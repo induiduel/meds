@@ -1,0 +1,309 @@
+{
+  "executedAt": "2026-10-01T22:29:18.079Z",
+  "totalAuditedForMatch": 778,
+  "newlyMatchedCount": 320,
+  "unmatchedCount": 458,
+  "minScoreThreshold": 60,
+  "sampleMatches": [
+    {
+      "id": "past-1790877034640-638281",
+      "topic": "Tiroid Neoplazmları ve Tanı Kriterleri",
+      "stem": "Tiroid bezi ince iğne aspirasyon biyopsisinde buzlu cam (Ground glass/Orphan Ann",
+      "matchedNote": "D8_D9_tiroid_neopl",
+      "pageNumber": 53,
+      "score": 230,
+      "highlightedText": "(D) Papiller karsinomdan iğne aspirasyonu ile elde edilen hücreler. Aspirasyonla alınan hücrelerin b",
+      "snippet": "...(D) Papiller karsinomdan iğne aspirasyonu ile elde edilen hücreler. Aspirasyonla alınan hücrelerin bazılarında karakteristik intranükleer"
+    },
+    {
+      "id": "past-1790877034702-686847",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Hangisinin mortalitesi en yüksektir?",
+      "matchedNote": "6.%20Kanama%20Bozukluklar%C4%B1%20ve%20Tromboembolizm.pdf",
+      "pageNumber": 47,
+      "score": 86,
+      "highlightedText": "Sistemik Tromboemboli: • %80’i intrakardiyak mural trombüslerden diğerleri de aort anevrizması ve at",
+      "snippet": "...Sistemik Tromboemboli: • %80’i intrakardiyak mural trombüslerden diğerleri de aort anevrizması ve aterosklerotik plaklardan kaynaklanır. "
+    },
+    {
+      "id": "past-1790877034752-706442",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Endometriozisli hastaların, over, fallop tüpü, ve periton gibi dokularında görül",
+      "matchedNote": "1. İmmünofarmakoloji",
+      "pageNumber": 66,
+      "score": 125,
+      "highlightedText": "e ayrıca uygun kemoterapi ile birlikte epitel kökenli over, fallop tüpü veya primer peritoneal kanse",
+      "snippet": "...e ayrıca uygun kemoterapi ile birlikte epitel kökenli over, fallop tüpü veya primer peritoneal kanser tedavisi için de onaylanmıştır. ✓ B"
+    },
+    {
+      "id": "past-1790877034823-25133",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Çocuklarda en sık izlenen primer intraokuler malignite hangisidir?",
+      "matchedNote": "6. dolaşım sistemi patolojisi",
+      "pageNumber": 21,
+      "score": 149,
+      "highlightedText": "BORDERLİNE TÜMÖRLER İntermediate tümörlerdir (malignleşebilir) Hemanjioendotelioma: Çocuklarda en sı",
+      "snippet": "...BORDERLİNE TÜMÖRLER İntermediate tümörlerdir (malignleşebilir) Hemanjioendotelioma: Çocuklarda en sık primer karaciğer tümörü infantil he"
+    },
+    {
+      "id": "past-1790877034912-782365",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Pyeloefrit ile ilgili tanımlardan hangisi yanlıştır?",
+      "matchedNote": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+      "pageNumber": 79,
+      "score": 509,
+      "highlightedText": "Yan ağrısı, ateş ve titremeye eşlik eden bakteriüri ve piyüri ile karakterize olan, böbrek parankimi",
+      "snippet": "...Yan ağrısı, ateş ve titremeye eşlik eden bakteriüri ve piyüri ile karakterize olan, böbrek parankiminin bakteriyel enfeksiyonudur. • Yan "
+    },
+    {
+      "id": "past-1790877034920-987738",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Akut Bakteriyel Prostat ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+      "matchedNote": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+      "pageNumber": 83,
+      "score": 561,
+      "highlightedText": "Akut Bakteriyel Prostatit • Ani başlayan yüksek ateş, terleme, halsizlik, bulantı-kusma, irritatif ü",
+      "snippet": "Akut Bakteriyel Prostatit • Ani başlayan yüksek ateş, terleme, halsizlik, bulantı-kusma, irritatif üriner sistem semptomları ve perineal ya "
+    },
+    {
+      "id": "past-1790877034924-556974",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Hangisi komplike olmayan üriner sistem enfeksiyonu sınıfındadır?",
+      "matchedNote": "43 Beta Laktam Antibiyotikler",
+      "pageNumber": 78,
+      "score": 157,
+      "highlightedText": "✓ Fosfomisin kadınlarda komplike olmayan alt üriner sistem infeksiyonlarının tedavisi için tek bir 3",
+      "snippet": "✓ Fosfomisin kadınlarda komplike olmayan alt üriner sistem infeksiyonlarının tedavisi için tek bir 3 g doz olarak kullanım için onaylanmıştı"
+    },
+    {
+      "id": "past-1790877034983-887192",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "stem": "Aşağıdakilerden hangisi Dünya Sağlık Örgütü (DSÖ) \"Güvenli Annelik\" (Safe Mother",
+      "matchedNote": "YENİÇOCUK SAĞLIĞI DERS",
+      "pageNumber": 78,
+      "score": 154,
+      "highlightedText": "Dünya Sağlık Örgütü tarafından 1974’te başlatılan genişletilmiş bağışıklama programı sayesinde çeşit",
+      "snippet": "...Dünya Sağlık Örgütü tarafından 1974’te başlatılan genişletilmiş bağışıklama programı sayesinde çeşitli hastalıklara karşı bağışıklama ora"
+    },
+    {
+      "id": "past-1790877035000-655618",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "stem": "İmmünosüpresif özellikler gösteren antimalaryal bir ajan olan ilaç aşağıdakilerd",
+      "matchedNote": "1. İmmünofarmakoloji",
+      "pageNumber": 47,
+      "score": 194,
+      "highlightedText": "Hidroksiklorokin immunosupresif özellikler gösteren antimalaryal bir ajandır. Hidroksiklorokinin liz",
+      "snippet": "...Hidroksiklorokin immunosupresif özellikler gösteren antimalaryal bir ajandır. Hidroksiklorokinin lizozomal ve endozomal kompartmanda pH d"
+    },
+    {
+      "id": "past-1790877035022-223980",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Aşağıdakilerden hangisi T.C. Sağlık Bakanlığı Ulusal Çocukluk Dönemi Aşılama Tak",
+      "matchedNote": "3. Bağışıklama",
+      "pageNumber": 66,
+      "score": 154,
+      "highlightedText": "Hac ve Umre ziyaretine giden 2 yaşından büyük bireylere Suudi Arabistan Sağlık Bakanlığı tarafından ",
+      "snippet": "...Hac ve Umre ziyaretine giden 2 yaşından büyük bireylere Suudi Arabistan Sağlık Bakanlığı tarafından belirlenen aşılama şemalarına uygun o"
+    },
+    {
+      "id": "past-1790877035525-212362",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Rete uzantıları (peg) içermeyen 6-8 sıralı uniform döşeyici epitel hücrelerinden",
+      "matchedNote": "D1 D2 deri_1_2",
+      "pageNumber": 237,
+      "score": 125,
+      "highlightedText": "Doğrudan immünfloresans paternleri: – Hücreler arası ağsı IgG birikimi → pemfigus – Bazal membran bo",
+      "snippet": "...Doğrudan immünfloresans paternleri: – Hücreler arası ağsı IgG birikimi → pemfigus – Bazal membran boyunca lineer IgG/C3 birikimi → büllöz"
+    },
+    {
+      "id": "past-1790877035529-544552",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "En sık görülen odontojenik tümör olup histopatolojik ve radyolojik özelliklerine",
+      "matchedNote": "D16 perif_sinir_hast",
+      "pageNumber": 52,
+      "score": 104,
+      "highlightedText": "Toksik, vaskülitik, kalıtsal, amiloid ve idiyopatik formlar: – Klinik ve patolojik özelliklerine gör",
+      "snippet": "...Toksik, vaskülitik, kalıtsal, amiloid ve idiyopatik formlar: – Klinik ve patolojik özelliklerine göre ayırt edilir. • Değerlendirme: – Ay"
+    },
+    {
+      "id": "past-1790877035548-550554",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Gastrointestinal sistemde hamartomatöz polipler ile birlikte tiroid (foliküler k",
+      "matchedNote": "3. Biliyer Atrezi",
+      "pageNumber": 48,
+      "score": 217,
+      "highlightedText": "ile karakterize otozomal dominant geçişli bir sendromdur.",
+      "snippet": "...ile karakterize otozomal dominant geçişli bir sendromdur."
+    },
+    {
+      "id": "past-1790877035559-863807",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Aşağıdakilerden hangisi kronik pankreatitte izlenen karakteristik morfolojik değ",
+      "matchedNote": "LÖSEMİLERDE GENETİK ÖZELLİKLER VE PROGNOSTİK BELİRTEÇLER",
+      "pageNumber": 76,
+      "score": 74,
+      "highlightedText": "oKanda lenfosit sayısında artış, oLenf bezlerinde büyüme, oDalakta büyüme, oKansızlık (Hb < 11 g/dL)",
+      "snippet": "...oKanda lenfosit sayısında artış, oLenf bezlerinde büyüme, oDalakta büyüme, oKansızlık (Hb < 11 g/dL) ve trombositopeni (<100.000/mm3) gib"
+    },
+    {
+      "id": "past-1790877035583-45558",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Alkolik hepatosteatoz patogenezinde aşağıda verilen mekanizmalardan hangileri ro",
+      "matchedNote": "D13_2 D14 adrenal_korteks_hast",
+      "pageNumber": 48,
+      "score": 66,
+      "highlightedText": "Sonuç: – Aldosteron biyosentezinin artması. – Primer hiperaldosteronizm tablosu.",
+      "snippet": "...Sonuç: – Aldosteron biyosentezinin artması. – Primer hiperaldosteronizm tablosu."
+    },
+    {
+      "id": "past-1790877035617-476364",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "stem": "Sitomegalovirus tedavisinde kullanılan antiviral ilaç aşağıdakilerden hangisidir",
+      "matchedNote": "61 Dermatolojik Farmakoloji",
+      "pageNumber": 65,
+      "score": 106,
+      "highlightedText": "Benzoil peroksit akne vulgaris tedavisinde kullanılan efektif topikal bir ajandır. Bu ilaç, stratum ",
+      "snippet": "...Benzoil peroksit akne vulgaris tedavisinde kullanılan efektif topikal bir ajandır. Bu ilaç, stratum korneumdan ya da foliküler açıklıklar"
+    },
+    {
+      "id": "past-1790877035699-593992",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "stem": "MSS penetrasyonu çok iyi olan III. Kuşak sefalosporin aşağıdakilerden hangisidir",
+      "matchedNote": "Dönem 3 - Travma",
+      "pageNumber": 93,
+      "score": 72,
+      "highlightedText": "Kuşak Sefalosporin Açık kırık <80 kg: 600 mg 3×1 >80 kg: 900 mg 3×1 <50 kg: 1g 3×1 50-100 kg: 2g 3×1",
+      "snippet": "...Kuşak Sefalosporin Açık kırık <80 kg: 600 mg 3×1 >80 kg: 900 mg 3×1 <50 kg: 1g 3×1 50-100 kg: 2g 3×1 >100 kg: 3g 3×1 Yara <1 cm, min. kon"
+    },
+    {
+      "id": "past-1790877035803-383070",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "stem": "Aminoglikozidlere ilişkin aşağıdaki ifadelerden hangisi doğrudur?",
+      "matchedNote": "17. Dezenfektan ve Sterilizan Ajanlar",
+      "pageNumber": 61,
+      "score": 131,
+      "highlightedText": "Güçlü bakterisid etkilidirler. • Aminakrin hidroklörür bakterisid+trikomonasid etkilidir. Kükürt • S",
+      "snippet": "...Güçlü bakterisid etkilidirler. • Aminakrin hidroklörür bakterisid+trikomonasid etkilidir. Kükürt • Sodyum tiyosülfat: elementel kükürt sa"
+    },
+    {
+      "id": "past-1790877035820-516301",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "stem": "Aşağıdaki ilaçlardan hangisi tüberküloz tedavisinde kullanılan ilaç değildir?",
+      "matchedNote": "43 Beta Laktam Antibiyotikler",
+      "pageNumber": 80,
+      "score": 100,
+      "highlightedText": "tuberculosis suşlarının neden olduğu tüberküloz tedavisinde kullanılır. ✓ 0,25 g alımından sikloseri",
+      "snippet": "...tuberculosis suşlarının neden olduğu tüberküloz tedavisinde kullanılır. ✓ 0,25 g alımından sikloserin kan düzeyleri mikobakterilerin ve g"
+    },
+    {
+      "id": "past-1790877035857-279090",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Bir hemşirenin eline HbsAg (+) olduğu bilinen bir hastadan kan alınırken iğne ba",
+      "matchedNote": "3. Bağışıklama",
+      "pageNumber": 149,
+      "score": 150,
+      "highlightedText": "Annenin HBsAg (+) olduğu durumlarda, bebek doğduktan sonraki ilk 12 saat içinde Hepatit B aşısı yapı",
+      "snippet": "...Annenin HBsAg (+) olduğu durumlarda, bebek doğduktan sonraki ilk 12 saat içinde Hepatit B aşısı yapılmalı ve tercihen aynı anda HBİG uygu"
+    },
+    {
+      "id": "past-1790877035873-972086",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Aşağıdakilerden hangisinin akut pankreatitin tedavisinde yeri yoktur ?",
+      "matchedNote": "D18 iskelet_kas_hast",
+      "pageNumber": 80,
+      "score": 109,
+      "highlightedText": "Önemli nokta: – Enzim replasman tedavisi mevcuttur. • Özellikle infantil formda: – Yaşam süresini ve",
+      "snippet": "...Önemli nokta: – Enzim replasman tedavisi mevcuttur. • Özellikle infantil formda: – Yaşam süresini ve kalitesini anlamlı biçimde artırabil"
+    },
+    {
+      "id": "past-1790877035911-506679",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Aşağıdakilerden hangisi Akalazya için doğrudur?",
+      "matchedNote": "2. Kısım D20 D21 D22 eritros_hast_pat",
+      "pageNumber": 83,
+      "score": 119,
+      "highlightedText": "Otoimmün mekanizma: – Mide mukozasına T hücre aracılı saldırı – Parietal hücre kaybı – İntrinsik fak",
+      "snippet": "...Otoimmün mekanizma: – Mide mukozasına T hücre aracılı saldırı – Parietal hücre kaybı – İntrinsik faktör üretiminin azalması • Histoloji: "
+    },
+    {
+      "id": "past-1790877035915-498943",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Aşağıdakilerden hangisi Diffüz Özofagiyal Spazm (DÖS)' ın en sık beraber görüldü",
+      "matchedNote": "7. Solunum sistemi patolojisi",
+      "pageNumber": 29,
+      "score": 134,
+      "highlightedText": "Nonkazeifiye granulomla karekterli sistemik hastalıktır. Akciger tutulumu vardir (Göz ve cilt 2. sır",
+      "snippet": "...Nonkazeifiye granulomla karekterli sistemik hastalıktır. Akciger tutulumu vardir (Göz ve cilt 2. sırada tutulur). Çoğu hasta asemptomatik"
+    },
+    {
+      "id": "past-1790877035938-701238",
+      "topic": "Çocuk Sağlığı ve Hastalıkları Çıkmış Sorusu",
+      "stem": "Allagie sendromuyla ilgili yanlış olanı işaretleyiniz.",
+      "matchedNote": "3. Biliyer Atrezi",
+      "pageNumber": 49,
+      "score": 199,
+      "highlightedText": "Alagille sendromlu olguların yaklaşık %97’sinde Jagged1 gen mutasyonu saptanır. • İkinci sıklıkta NO",
+      "snippet": "...Alagille sendromlu olguların yaklaşık %97’sinde Jagged1 gen mutasyonu saptanır. • İkinci sıklıkta NOTCH2 gen mutasyonu saptanır • Her iki"
+    },
+    {
+      "id": "past-1790877036068-771241",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Agonist ortamda varken cevabın azalmasının(desensitizasyon) nedenlerinden biri d",
+      "matchedNote": "D11_D12 diyabet",
+      "pageNumber": 74,
+      "score": 88,
+      "highlightedText": "Diyabetik nefropati: – Amerika Birleşik Devletleri’nde son dönem böbrek yetmezliğinin başlıca nedenl",
+      "snippet": "...Diyabetik nefropati: – Amerika Birleşik Devletleri’nde son dönem böbrek yetmezliğinin başlıca nedenlerinden biri. • Diyabetik enfeksiyonl"
+    },
+    {
+      "id": "past-1790877036216-224363",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Sistemik mikoz etkeni dimorfik mantarlar ile ilgili aşağıdakilerden hangisi yanl",
+      "matchedNote": "DERS 3 -YANGI",
+      "pageNumber": 168,
+      "score": 132,
+      "highlightedText": "2 ALLOTRANSPLANTASYON TRANSPLANTASYON: İnsandan insana ya da hayvandan hayvana yapılan transplantasy",
+      "snippet": "...2 ALLOTRANSPLANTASYON TRANSPLANTASYON: İnsandan insana ya da hayvandan hayvana yapılan transplantasyon çeşididir."
+    },
+    {
+      "id": "past-1790877036256-574631",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Geçirilmiş akciğer tüberkülozu sonucunda oluşmuş kavitelere yerleşerek mantar to",
+      "matchedNote": "DERS 3 -YANGI",
+      "pageNumber": 133,
+      "score": 84,
+      "highlightedText": "Örnek olarak nekrobasilloz, bağırsak ya da akciğer tüberkülozu",
+      "snippet": "...Örnek olarak nekrobasilloz, bağırsak ya da akciğer tüberkülozu"
+    },
+    {
+      "id": "past-1790877036382-733158",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Akut inflamasyonda lökositlerin yuvarlanması sırasında oluşan geçici adezyonlar ",
+      "matchedNote": "D10 artrit",
+      "pageNumber": 90,
+      "score": 74,
+      "highlightedText": "Kurtarma (salvage) yolu: – Pürin nükleotidleri, diyet pürinlerinden veya DNA/RNA yıkımı sırasında ol",
+      "snippet": "...Kurtarma (salvage) yolu: – Pürin nükleotidleri, diyet pürinlerinden veya DNA/RNA yıkımı sırasında oluşan bazlardan yeniden sentezlenir."
+    },
+    {
+      "id": "past-1790877036469-877053",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Bir gen bakımından dipolid olan gamet ile, haploid olan gametin oluşturduğu triz",
+      "matchedNote": "KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA",
+      "pageNumber": 83,
+      "score": 77,
+      "highlightedText": "klılıkları Mosaisizm Fenokopi Çevresel etkiler Antisipasyon Genomik İmprinting",
+      "snippet": "...klılıkları Mosaisizm Fenokopi Çevresel etkiler Antisipasyon Genomik İmprinting"
+    },
+    {
+      "id": "past-1790877036866-73172",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "stem": "Hangisinde kc dokusunda mallory cisimleri görülmez?",
+      "matchedNote": "3.%20Hu%CC%88cre%20Hasar%C4%B1,%20Hu%CC%88cre%20O%CC%88lu%CC%88mu%CC%88%20II.pdf",
+      "pageNumber": 53,
+      "score": 156,
+      "highlightedText": "Mallory cisimleri (alkolik karaciğer hasarı) • Alzheimer hastalığı; nörofibriler yumaklar",
+      "snippet": "...Mallory cisimleri (alkolik karaciğer hasarı) • Alzheimer hastalığı; nörofibriler yumaklar"
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "timestamp": "2026-10-01T21:34:24.975Z",
+  "totalInitial": 2922,
+  "totalKept": 1937,
+  "badOcrCount": 80,
+  "donem2Count": 905,
+  "preservedTumCount": 69,
+  "preservedOtherCount": 1868,
+  "eliminatedSamples": [
+    {
+      "id": "past-1790877039294-257513",
+      "source": "2025-2026 DÖNEM 3 FİNAL SINAVI.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "soru s!stem!k skleroz en çok nerey! tutar --> Der! aşağıdak!lerden hang!s! postat bez!nde bulunması mal!gn!te leh!ne değ!ld!r? Karışık bez Bazal hücre H!ç b!r! Bel!rg!n nukleol Nukleos!tplasm!k oran artışı Hang!s! hücreler! fagos!toz !ç!n hedef hal!ne get!r!r?"
+    },
+    {
+      "id": "past-1790877039301-137058",
+      "source": "2025-2026 DÖNEM 3 FİNAL SINAVI.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (11 adet)",
+      "stem": "psammoma nerede gorulur pap!ller t!ro!d kars!nom 26Pr!mer m!yelof!broz !ç!n en ayırt ed!c! öz?"
+    },
+    {
+      "id": "past-1790877039324-628371",
+      "source": "2025-2026 DÖNEM 3 FİNAL SINAVI.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (32 adet)",
+      "stem": "Soru (Farma) Astımda kullanılan lökotr!enler!n (CysLT-1) t!p! reseptörünü bloke eden oral alınan ajan? Montelukast 120-Feokromas!toma cerrah!s! önces! h!pertans!f! olan hastada a1 ve a2y! ger! dönüşümsüz selekt!f olmayan şek!lde bloke eden !laç ned!r A fentolam!n B projes!n! C fenoks!benzam!n D yoh!mb!n E labetolol -Aşaĝıdak!lerden hang!s! op!o!d antagon!st! olup kron!k alkol baĝımlılığında kullanılır?"
+    },
+    {
+      "id": "past-1790877039338-115385",
+      "source": "2025-2026 DÖNEM 3 FİNAL SINAVI.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (38 adet)",
+      "stem": "LDLy! düşürmek !ç!n bağırsaklardan kolesterol ve b!tk!sel steroller!n em!lmes!n! engeller? ezet!m!b 130-melaton!n agon!st! !laç hang!s!d!r rameltaon 131-d!yabet!k nöropat! yapan ant!ep!lept!k !laç hang!s!d!r? pregabal!n enfeks\"yon (5/8) 41- 30 yaşında erkek hasta üretrasında yanma ve sarı-beyaz akıntı ş!kayetler! !le gel!yor. Hang!s! üretr!t tanısı !ç!n söylenenez?"
+    },
+    {
+      "id": "past-1790877041064-244040",
+      "source": "24.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Boş veya kesilmiş/bağlamsız soru kökü",
+      "stem": "Hangisi yanlıştır?"
+    },
+    {
+      "id": "past-1790877041111-230280",
+      "source": "25-26 dönem 3 kurul 3.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (38 adet)",
+      "stem": "Aşağıdak! OTC !laçlardan çocuklarda uzun süre kullanımı reye sendrom !le !l!şk!l!d!r ? Asp!r!n Kırmızı adam sendormuna sebep olan !laç √ vankom!s!n pp! uzun sure kullan!m!nda ne olur h!pomagnezem! b12 eks!kl!g! !vermekt!n etk! mekan!zması ned!r GABA aracılı klor kanalı !nh!b!syonu paraz!t ve etk!l! olan !laç eşleşt!rmeler!nden doğru olan kloram fen!kol yan etk!s!"
+    },
+    {
+      "id": "past-1790877041118-617430",
+      "source": "25-26 dönem 3 kurul 3.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (25 adet)",
+      "stem": "B!r hastada stat!n kullanılıyor. Terc!h olarak atorvastat!n ver!lm!ş. Bu !laç hang! enz!m üzer!ne etk! yapar? Hmg koa redüktaz k!te oluşturan laktas!f hang!s!d!r pysll!um sülfanaom!dler!n kontreend!kasyonu hang!s!d!r -a)!drar yolu enfeks!yonu"
+    },
+    {
+      "id": "past-1790877041125-290879",
+      "source": "25-26 dönem 3 kurul 3.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Akut gastroenter!t tedav!s!nde temel ve !lk tedav! yaklaşımı?"
+    },
+    {
+      "id": "past-1790877041133-478390",
+      "source": "25-26 dönem 3 kurul 3.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (12 adet)",
+      "stem": "en sık gözlenen gastr!k volvulus t!p! hang!s!d!r mezenteroaks!yel volvulus enfeks!yon Bruselloz !ç!n hang!s! yanlıştır?"
+    },
+    {
+      "id": "past-1790877041138-768789",
+      "source": "25-26 dönem 3 kurul 4.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (18 adet)",
+      "stem": "Hang!s! aterosklerot!k plak gel!smes!nde genet!k r!sk ve yatk!nl!kla !l!şk!l! patoloj!lerden b!r! değ!ld!r?"
+    },
+    {
+      "id": "past-1790877041156-358913",
+      "source": "25-26 dönem 3 kurul 4.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (66 adet)",
+      "stem": "desmozomal gen fonks!yon oluşan kmp cevap ar!tm!yojen!k enfeks!yon (4/4) ARA major kr!terlerden değ!ld!r? Artr!t Kard!t Sydengham kores! Er!tema marg!natum CRP yüksekl!ğ! Ara tedav!s!yle !lg!l!yd! A grubu beta streptokok erad!kasyonunda b!r!nc! seçenek benzat!n pen!s!l!nd!r Ant!!nflamatuar tedav! gerekl!d!r Kard!tte kort!kostero!d kullanılmalıdır Sekonder prof!laks! başlangıcı !ç!n tedav! b!t!m!nden sonra 2 ay beklenmel!d!r Sekonder prof!laks!de de b!r!nc! seçenek benzat!n pen!s!l!nd!r aşağıdak!lerden hang!s! !ngulanzae sezonunda öncel!kl! olarak aşılanması gereken grub değ!ld!r ?"
+    },
+    {
+      "id": "past-1790877041175-365956",
+      "source": "25-26 dönem 3 kurul 4.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (34 adet)",
+      "stem": "delta cevap 2-3-4 -ekg dalgaları anlamları hang!s! doğrudur -h!perkalem! bulgularındandır 1 p ampl!tüdü azalır 2 t dalgası düzleş!r (bu har!ç heps!) 3 qrs gen!şler 4 pr !nterval! uzar skorlamadan soru vardı -hang!s! doğrudur stem! da merkezdeyse en kısa sürede reperfüzuon yapılır -kard!yak tamponat bel!rt!s! değ!ld!r cevap kesk!n y !n!ş! Soru 1: H!pertrof!k obstrukt!f kard!yom!yopat!ye a!t !fadelerden hang!s! doğrudur?"
+    },
+    {
+      "id": "past-1790877041179-693257",
+      "source": "25-26 dönem 3 kurul 4.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "v!nblast!n !n etk! mekan!zması !ç!n hang!s! doğrudur"
+    },
+    {
+      "id": "past-1790877041197-830674",
+      "source": "25-26 dönem 3 kurul 5.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (27 adet)",
+      "stem": "hang!s! ac!l el cerrah!s! müdahales! gerekt!rmez? tendon rüptürü -elekt!rk çarpması vakasında !lk yapılması gereken? -toks!k zeh!rlenmelerde m!de yıkanmasında hang! yöntem kullanılmaz? cevap kusturma -hang!s! doğrudur cevap kompartman sendromu !ç!n kes!n tedav! fasyotom!d!r -80 kg b!r!s!ne !kyd hang!s! uygulanmaz"
+    },
+    {
+      "id": "past-1790877041234-153419",
+      "source": "25-26 dönem 3 kurul 5.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (84 adet)",
+      "stem": "p!yojen!k omurga Enf etken! olmayan ajan ? Mycobacter!um tuberculos!s -en sık görülen uzun kem!k malformasyonu cevap f!bula hem!mel! -konjen!tal musküler kort!kolloz!s !le !lg!l! hang!s! doğrudur -kırıklarla !lg!l! hang!s! doğrudur? cevap stres kırıkları genelde alt ekstrem!tede görülür -hang!s! yanlıştır? cevap mall de pott hastalığında en sık lumbal vertebralar tutulur. dah!l!ye (8/8) -paraks!smal nokturnal hemoglob!nür! mekanızması ned!r -k v!t’e bağlı olmayan faktör hang!s!d!r? 2 7 8 9 10 -glanzman hang!s!n!n eks!kl!ğ!nde cevap gp 2b-3a -hang!s!nde sorun olursa v!tb12 sentez!nde sorun olab!l!r cevap !ntrens!k faktör -per!fer!k yaymada h!persegmentasyon görülüyor hang! hastalık olab!l!r -solukluk dışında başka bulgusu olmayan hastada ne olab!l!r (d!ğer bulgular ver!lm!ş) -42 yaşında vejetaryen erkek hasta, 3 yıldır et ve hayvansal ürünler tüketm!yor. Son 2 aydır yürürken bacaklarında uyuşma, denges!zl!k ve unutkanlık ş!kayet! var. Tam kan sayımında Hb: 9.1 g/dL, MCV: 112 fL, RDW yüksek saptanıyor. Per!fer!k yaymada oval makros!tler ve nötrof!l h!persegmentasyonu görülüyor. Serum B12: 98 pg/mL (N: 200-900), homos!ste!n yüksek, met!lmalon!k as!t yüksek bulunuyor. Bu hasta !ç!n en uygun tedav! yaklaşımı ve gerekçes! aşağıdak!lerden hang!s!d!r?"
+    },
+    {
+      "id": "past-1790877041260-559087",
+      "source": "25-26 dönem 3 kurul 5.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Aşagıdak! !laçlardan hang!s! genet!k yatkınlığı olan erkeklerde adrojen!k alops! yapan testesteronun DHT ye dönüşmes!n! !nh!be eden 5 alfa redüktaz !nh!b!törüdür? cevap f!naster!d 35 yaşında kadın hasta sık baş ağrısı neden!yle ağrı kes!c! kullanmaktadır Zamanla astım ataklarında artış ve nazal pol!p gel!ş!m! saptanmıştır aşağıdak!kerden hang!s! bu tablonun en olası neden!d!r? Metam!zol Meloks!kam Selekoks!b Asp!r!n Parasetamol 45 yaşında erkek hasta kron!k gut allopür!nol başlanıyor. Etk! mekan!zması ned!r? -allopur!nolün uzun etk!l! olmasının sebeb! ned!r 72 yaşında hasta osteoporoz neden!yle tedav! görüyor. Tedav! sırasında h!perkalsem! oluşuyor. Değerlend!r!l!nce kem!k yapımı arttığı ve osteoblast akt!v!tes!nde bel!rg!n artış saptanıyor. Hang!s! olab!l!r? Denosumab Ter!parat!d Alendronat Zoledron!k as!t Kals!ton!n vulvovaj!nal kand!da tedav!s!nde Top!kal ant!fungal"
+    },
+    {
+      "id": "past-1790877041264-372166",
+      "source": "25-26 dönem 3 kurul 6.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "000 k!ş!l!k toplumda prevelans! %5 olarak görülen b!r hastalık !ç!n sens!v!tes! %80, spes!f!tes! %90 olarak ölçülmüş b!r test gel!şt!r!l!yor. B!r!s! bu test! uyguladıktan sonra poz!t!f çıksa bu k!ş!de bu hastalığın olma !ht!mal! kaçtır?"
+    },
+    {
+      "id": "past-1790877041326-286631",
+      "source": "25-26 dönem 3 kurul 1.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Sınav dosyasında Dönem 2 İçeriği",
+      "stem": "soru= aşağıdak#lerden hang#s# yanlıştır ? 1-amn##sentez 15.#le18. haftada yapılır 2-kordosentez 12. Haftadan doğuma kadar yapılır 3- CVS 10. #le 12. 4- CVS'da d#rekt kültür yok CVSde kullanılan hücreler#n köken# hang#s#d#r s#ns#tyotrofoblast s#ns#totrofoblast ✅ ep#tel doku f#broblast deformasyonda görülen hastalık örneğ# kran#ofasyal Ultrasonda k#st#k h#groma, gen#ş ASD ve VSD görülüyor hang# hastalık down 5 p delesyonu hang# hastalıktır cr# du chat sendromu 17h#droks#progesteron defekt# hang# hastalık KAH kadın gelişim genleri hangisidir wnt4 dax1 sf1 pgd endikasyonu olmayan hangisidir oTekrarlayan gebelik kayıpları o35 yaşından sonra IVF yöntemine başvuran çiftler, o2 veya daha fazla IVF başarısızlığı olan çiftler, sadece maternal anomalisi olan çift oHLA uyumlu kardeş isteyen çiftler, 12/12 xe bağlı anomali ve sadece mayoz hatalarının görülebildiği biyopsi tanı yöntemi nedir polar kist biyopsisi minör anomalide gözükmeyen hangisidir yarık damak 11-protozoonlar\"n sebep oldugu hastal\"klarda brucelloz yok. 12-\"nvazyon prodrom tan\"m\". 13-amsel kr\"terler\"nden deg\"ld\"r. gonore tedav\"s\"yle \"lg\"l\" hang\"s\" yanlıştır a tek doz seftr\"akson ve az\"trom\"s\"n ver\"l\"r b tek dok seftr\"akson ve doks\"s\"kl\"n ver\"l\"r c c\"nsel partner tedav\"s\"ne gerek yoktur d e ant\"b\"yot\"klerlerde gel\"şen beta laktamaz d\"renc\"yle \"lg\"l\" hang\"s yanlıştır a gen\"şlet\"lm\"ş spektrumlu beta laktamazlar 3.kuşak sefalospor\"nle tedav\" ed\"leb\"l\"r b karbapenemle tedav\" ed\"leb\"l\"r c karbapenemazlar karbopenemler\" h\"drol\"z ederek etk\"s\"z hale get\"r\"r d enz\"mat\"k d\"renç sık görülür e ? yukarıdak\" hastalığın tedav\"s\"nde \"lk hang\"s\" kullanılır Doks\"s\"kl\"n Sef\"kos\"n Seftr\"akson S\"flofloksas\"n Amoks\"l\"n-kavalon\"k as\"t Hang\"s\" sekonder s\"f\"l\"z etken\" değ\"ld\"r?"
+    },
+    {
+      "id": "past-1790877041332-663062",
+      "source": "25-26 dönem 3 kurul 1.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Ne\"sser\"a Gonore \"ç\"n açağıdak\" \"fadelerden hang\"s\" yanlıştır? Cevap: Partner tedav\"s\"ne gerek yoktur Nötropen\" veya granüloz enf bozukluğu \"ç\"n hang\"s\" doğrudur"
+    },
+    {
+      "id": "past-1790877041362-421012",
+      "source": "25-26 dönem 3 kurul 1.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "apoptoz \"le \"lg\"l\" doğrudur"
+    },
+    {
+      "id": "past-1790877041390-166053",
+      "source": "25-26 dönem 3 kurul 2.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (88 adet)",
+      "stem": "kısa sürel! bellekten uzun sürek! belleğe aktarılamayan antegrod anemnez! kumarda kaybeden adam 20 gündür üzgün stresl! akut stres bozukluğu yaygın anks!yete bozukluğu !le !lg!l! hang!s! yanlıştır En az 1 ay görülmes! gereken semptomlar yazılmış ama 6 ay olmalıydı doğrusu pr!mer sekonder enürez!s !ç!n en doğru tanım hang!s!d!r En az 6 ay boyunca h!ç kuru kalmamıştır depresyon alt t!pler! özell!kler! hang!s! yanlıştır Şıklarda at!p!k mevs!msel melankol!k depresyon özell!kler! var c!nsel uyum sorunlarıyla !lg!l! yanlış h!perv!j!lans en çok hang!s!nde gözükür Tssb transseksüalite kendi cinsine ilgi duymaktır hastanın tıbbi durumu değerlendirilmeli DÖNEM 3 KURUL 2 2025-2026 özgül fob! !le !lg!l! hang!s! yanlıştır Dalgalı g!d!ş !zlen!r !çselleşt!r!lm!ş damgalama hang!s!d!r K!ş!n!n kend!s!n! yeters!z ve tehl!kel! görmes! Genç b!r kız, daha önce !nt!har g!r!ş!m! olmuş.Son zamanlarda okula,derslere g!tmed!ğ!, “ölsem de kurtulsam,her şey b!tse” tarzında söylemler! olduğu b!l!n!yor. Kız, a!les!nden uzakta tek başına evde yaşıyor. İlk olarak nasıl b!r tedav! uygulamaya başlarsınız?"
+    },
+    {
+      "id": "past-1790877041401-323180",
+      "source": "25-26 dönem 3 kurul 2.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (11 adet)",
+      "stem": "DEHB tanısı !ç!n doğru olan ned!r 7 yaşından önce ve 2 ortamda görülmes! lazım 4 yaşında çocuk adına bakmıyor göz teması kurmuyor en olası tanı Ot!zm B!polar !le !lg!l! b!r soru vardı 79-) 42 yaşındaki erkek hasta, iş yerindeki ağır maddi kayıplardan dolayı yaklaşık 20 gündür huzursuzluk , sıkıntı, bunalım, stres , bıkkınlık gibi sorunlar yaşadığını aktariyorsa taniniz ne olur?"
+    },
+    {
+      "id": "past-1790877041414-848885",
+      "source": "25-26 dönem 3 kurul 2.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (46 adet)",
+      "stem": "hasta sözel uyarıyla gözünü açıyor ağrıyı lokal!ze ed!yor !nleme şekl!nde cevap ver!yor glaskow koma skoru kaçtır Tümör derecelend!rme !le !lg!l! soru vardı M!toz Nekroz M!krovasküler prol!ferasyon Nöron hücreler! prol!ferasyonu A!le hek!ml!ğ! s!t!z!n de hang!s! yanlıştır 5r yaklaşımlarındandır Tekrar(cevap) Öğren Ölç Yardım et 3 !la 5 günlük yd topuk kanından bakılmayan test hang!s!d!r Fen!lketonür! K!st!k f!broz KAH Konjen!tal h!potro!d! İnd!rekt coombs test!(cevap) A!le hek!ml!ğ!n!n görev ve sorumluluklarından değ!ld!r"
+    },
+    {
+      "id": "past-1790877041424-252450",
+      "source": "25-26 dönem 3 kurul 2.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (16 adet)",
+      "stem": "DFP, TEPP, D!mefox, M!pafox, Parath!on, Malath!on, dan türet!len G ser!s! Tabun, Sar!n, Soman g!b! b!leş!kler!n zeh!rlenmes!nde tedav! yolu nasıl sağlanır?"
+    },
+    {
+      "id": "past-1790877041428-284160",
+      "source": "25-26 dönem 3 kurul 2.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Ağır font hasarı / ünlem karakter bozulması (14 adet)",
+      "stem": "Alzhe!mer Cevap= Heps! Hang!s! barb!türatların yer!ne benzod!azep!n!n terc!h ed!lmes!nde etken değ!ld!r?"
+    },
+    {
+      "id": "past-1790877041430-591526",
+      "source": "25.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "TH2 aktivasyonu ile salınan"
+    },
+    {
+      "id": "past-1790877041471-222496",
+      "source": "25.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Tümör ve tümördeki belirgin mikroskobik özellik eşleşmesinde yanlış olan? [25.10.2024 13:05] +90 536 299 44 39: T lenfosit zarinda ve makrfajla bağlandığı reseptör →cd40L [25.10.2024 13:06] Nisanur Bayramm: Endometrial hiperplazinin sınıflandırılmasında temel alınan ve bir hiperplaziden karsinom gelişme riskini artıran en önemli özellik?"
+    },
+    {
+      "id": "past-1790877041533-154700",
+      "source": "25.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Kullanılacak antibiyotiğin özellikleri hakkında bilgi sahibi olunmalı ** 5. Ateşi olan her hastaya antibiyotik verilmesi [25.10.2024 13:42] Sude Kasap: 19-)Enfeksiyon etkenine duyarlı konakta hastalık oluşturma yeteneğinin derecesidir Virulans 20-)30 yaşında erkek hasta idrarda yanma ve peniste sarı-beyaz renkte akıntı bulguları var.Hangisi üretrit düşündürmez? A-)Üretral akıntıda gram boyamada her immersiyon alanında >=2 PML görülmesi B-)İlk akım idrarda her büyütme alanında >=10 lökosit görülmesi C-)Üretral akıntının gram boyamasında gr(+)çomak görme D-)Fm’de mükopürülan akıntı E-)Akıntının gram boyamasında lökosit içinde gr(-) diplokok görmek [25.10.2024 13:43] +90 552 355 86 33: Aşağıdakilerden hangi hastalıkta U1RNP denilen bir RNP antijenine yüksek titrelerde antikorlar mecuttur _SLE _sistemik skleroz **_mikst bağ dokusu hastalığı [25.10.2024 13:44] Ayşe Vera Tekeli: Hangisi sekonder sifiliz klinigı degildir Kondilama lata Hepatit Makülipapüler döküntü Menenjit Tabes dorsalis Cevap tabes dorsalis [25.10.2024 13:45] +90 536 568 90 30: Meme/over kanseri olgularında sıklıkla kullanılan hedefe yönelik akıllı ilaçlar hangileleridir? -cevap: Parp inhibitorleri Hangisi böbrek tümorlerinde prognostik belirteç değildir? -aile öyküsü (bence cevap bu emin degilim) Gonadal farklılaşmada erkek gelişme yönünde etkili genler hangileridir? -SRY, SOX9, ST1 [25.10.2024 13:50] +90 545 647 41 42: Hangisi İdrar yolu enfeksiyonunu komplike eden etkenlerden degildir. A)Ateş. B)Gebelik. C)uriner obstruksiyon D) norojenik mesane. E) dirençli mikroorganizma ile enjekte olma [25.10.2024 13:52] +90 545 647 41 42: Hangisi idrar PH sini artıran etkendir. A)urik asit"
+    },
+    {
+      "id": "past-1790877041598-252474",
+      "source": "3. Sınıf 1. Kurul.ocr.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Sınav dosyasında Dönem 2 İçeriği",
+      "stem": "Aşağıdaki ifadelerden hangisi konak parazit ilişkisi için doğrudur? € Tedavi kittin Açilıp bo caltlması VEYA xsizyorüdür"
+    },
+    {
+      "id": "past-1790877041625-319672",
+      "source": "3. Sınıf 1. Kurul.ocr.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Okunamayan anlamsız OCR karakter çöpü",
+      "stem": "-İ KAR Saz ör ŞEV 35 Söse 25 Ea mpsziz- göre ka Egağ ia 5 sa İZA E Aa 8 Eg Star E T 3 o- 5 xe. SAZ ETE AS RondAz Ea rai 2 5BE8 Srg3es EE PEŞER38 E İğ e RAR7 Re Bazg ix Syğsidu a Sg A öğr ERESİR £ dial aact EE S Eze gez A gğizİiş ER 2 56'ĞA 3 Hİ 5 Sör 8 e A5 & £ 2 dd ENLİ El S5 e Af 2 5. a AR AR EF) ZzZ 5 Aş © Fİ 28 E£3Ü ER S5 EÇ 5 2 ğa ABER B ERE 3 & 5g EBA ER 8 EN Z Bi z Ğ Egiş de HA Gi 5 KI izi Ej ö—cğ 3 e vü A ağ ED: FALEMA Fİ “ Z HA ğ NUğ R Eğ Se Er 2 1 3 ASRA 2 3 ka 53 35 & 2 Hi 2. SE 3 Pi, ij DA Si a EE Bi — D ox B © EZ $ ERE e Hİ B Gs Ca 5 5 & arka ER işi R z z 3 5 BE ğ & a ğe El 2 bü Fi Lo: 3 E eee ÇEP Sedye y PAorRA Besen SBRrFRY DADTRM Ha Rd nay ME SEE YE, Ovm>u”t Şpo<sz3, ÜZTESİ> aszoa SEZSE> SZ.B üz ŞE3PJER SERE İz ZEREiŞ3 EREN E RERAFİ 2g SEE SüLteBE üggE ar ER R OL — BözriR SRESERE EERBAZE KAİ Röa HER E&RĞaANRE REK EBS EE” SAgEz Fğdks” YPaEAl OSERGDR Srkktü: 7 5AgEz ARAM BEP Ec RE Cşüz EögELEZ Za3AA dağda Z.S 8g Ek EREBERİ BE: EA O R3ir3 AREREZ EE ME a Sam 25 İS2ps Bü giz Biz -ös- © ZS3 ge Ra > b- Rp KA 2 375 EZ s3a3g << S3 5 OğdASEç ÖR Erk F Si Ze ZzEZ 3 SER Eş ks 3da3 2 38ğe br) Şe £ 3 Seç 33 <Eöml33 BB EsR3 3 gz 23 & > imç 5 EZKNİ3İS Ro gzl NN 538 5 Z 3 S.y $ Ba SE ĞABE 2 GEŞi Sy FALA H SAR SRARa3 S EŞ s3 EZ 5 25€t &£ A AĞAREZ, > 8E s3 —N z ES A Sp DRAMA Ö DE ACA B. o KEDİ ER esü 8 & Z Z 236 35 ERSE s2 BZ ZE 2 Eşi 8 EzS ERE 2 Be ER 2. Be Z ğ a. seda g 5.9 28 ç & RaR 8, Şe 55 gz Ep Se BE; £ KEİ z SkE gü < Eğ BE EH EZ Est ELER ELE sg “$ g.. Z SE 5 ES SE E Bi il; £ BAR 5 va S.E z 2E E 3 b 25 3 EF - E- Çi z e. z 35 Z E RE. & EE 8 9.s E, Z İş 3 Eş AR z Zu B 3 ZE 533 — ki a EZ Z Ki Bg 8 Es EB ng. a Hİ 3 Bİ 5. 5 kala (5 7 KAN Ee İs m & gz E) Za E"
+    },
+    {
+      "id": "past-1790877041625-830706",
+      "source": "3. Sınıf 1. Kurul.ocr.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "2 z Ş £ - EBEs$ z 5 S£ g 55pi İ 5 R & 3 gür? 3 3g 8 2 8 SEBE iŞ Z EL & & ies 8 bi 3 & Eg 853"
+    },
+    {
+      "id": "past-1790877042636-133320",
+      "source": "Enfeksiyon_Hastaliklari_Kurul1_Cikmis_Sorular.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Aşağıdakilerden hangisi kadınlarda sık üriner sistem enfeksiyonu gelişiminden sorumlu değildir?"
+    },
+    {
+      "id": "past-1790877043378-552403",
+      "source": "İSKENDERUN TİMüdürlüğüne0 (1)_230709_230251.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Boş veya kesilmiş/bağlamsız soru kökü",
+      "stem": "Terminal sinir"
+    },
+    {
+      "id": "past-1790877045153-976810",
+      "source": "KURUL 3 2023.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "5; direk bilirubin 0.4; karaciğer fonksiyon testleri normal, ALP ve GGT normal bulunuyor. Bu hastada düşünmemiz gereken en olası tanı aşağıdakilerden hangisidir?"
+    },
+    {
+      "id": "past-1790877045407-399731",
+      "source": "Kurul 6 Çıkmışı (düzeltilmiş).txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Boş veya kesilmiş/bağlamsız soru kökü",
+      "stem": "Hangisi doğrudur?"
+    },
+    {
+      "id": "past-1790877048092-685761",
+      "source": "sorular.ocr.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Osmotik frajlite testi hangi hastaliğın E) Posterior longutidunal ligaments ayına tanisında kullanılır? A) Herediter sferositoz 2. Endurans (dayanıklilık) egzersizleri ile ilgili"
+    },
+    {
+      "id": "past-1790877048180-206305",
+      "source": "sorular.ocr.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Şık içine sıkışmış ayrıştırılamayan tablo yığını (>650 kr)",
+      "stem": "Myeloproliferatif Hastallklar ile ilgili ( 6, aşağıdaki ifadelerden hangisihangileri doğrudur? â ağidakilerden hangisiVanlı 1-Ortalama eritrosit hacmi (MCV), bir insann ŞaB & N 3 P kanındaki eritrositlerin sahip oldukları hacmin ne SK kadar değişkenlik gösterdiğini ap."
+    },
+    {
+      "id": "past-1790877448610-863081",
+      "source": "tüm sorular.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Portal ekran kazıma / URL başlığı",
+      "stem": "06.2021 s\u0000nav.karabuk.edu.tr https://s\u0000nav.karabuk.edu.tr/Ogrenc\u0000/S\u0000nav/Anal\u0000z/1599387 44/44 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 100 Sınav Karnesi İçin Tıklayınız. (/Ogrenci/Sinav/KarneGoruntule/1599387) Reovirüsler-1 Rotavirüsler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır? Sıra No Cevap 1 Zarfsız ikozohedral simetrili çift sarmallı RNA virüsleridir 2 Yalnız insanda hastalık yapar. 3 Çocukluk çağı infantil diyarenin en önemli nedenlerindendir. 4 Sıklıkla Grup A rotavirüs etkendir 5 Hastane enfeksiyonlarına da yol açabilirler  Yalnız insanda hastalık yapar. Paramiksovirüsler- Warthin Finkeldey multinükleer dev hücreleri hangi hastalıkta görülür? Sıra No Cevap 1 Kabakulak 2 Kızamık 3 Suçiçeği 4 Kızamıkçık 5 Eritema infeksiyozum  Kızamık Sınav Karnesi  Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Durum 1 ANATOMİ Aorta, Dalları ve Baş, Boyun Arter ve Venleri"
+    },
+    {
+      "id": "past-1790877450518-481073",
+      "source": "tüm sorular.txt",
+      "category": "Hatalı / Bozuk OCR",
+      "reason": "Portal ekran kazıma / URL başlığı",
+      "stem": "Kalp sesi (S2) için hangisi yanlıştır? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru o il. kalp sesi izovolümetrik gevşeme evresıne uyar Ekg' de Q dalgasından hemen sonra başlar Yüksek, keskin ve tiz bir sesdir Süresi 0,1 2 saniyedir < 1 1 :24 � � Cevabınız Durum 111 Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru '9.', .,ıl %21 _ Ekg' de Q dalgasından hemen sonra başlar Yüksek, keskin ve tiz bir sesdir Süresi 0,1 2 saniyedir Frekansı 50- 70 Hertztir Ekg' de Q dalgasından hemen sonra başlar o < 1 1 :24 � � Soru Cevaplar Cevabınız 111 '9.', .,ıl %21 _ Aşağıdakilerden hangisi arteriyoler dilatasyon ve venöz konstrüksiyonuna neden olur? Sıra No 1 Doğru Sıra No 2 Cevap Laktik asit Doğru Sıra No 3 Cevap NO Doğru Sıra No 4 Doğru Sıra No 5 Cevap Histamin Doğru Laktik asit o < 1 1 :24 � � Soru Cevaplar 111 '9.', .,ıl %21 _ Aşağıdakilerden hangisi bir dokuya giden kan akımının belirlenmesinde en önemli etkiye sahiptir? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap o Kan basıncı Adrenalin düzeyi Metabolik faktörler Sempatik deşarj derecesi Kardiyak debi < 1 1 :24 � � Soru Cevaplar 111 �� .,ıl %21 _ Aşağıdakilerden hangisi ödem oluşumunun nedenleri arasında yer almaz? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap � A o i nterstisyel sıvı kolloid ozmotik basınç artışı Plazma kolloid ozmotik basınç artışı Kapiller hidrostatik basınç artışı interstisyel sıvı hidrostatik basınç < 1 1 :24 � � Cevabınız Durum 111 Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru '9.', .,ıl %21 _ basınç artışı Kapiller hidrostatik basınç artışı interstisyel sıvı hidrostatik basınç düşmesi Böbreklerden albumin kaçağının olması Plazma kolloid ozmotik basınç artışı o < 11 :25 � � Soru Cevaplar 111 '9.', .,ıl %21 _ Aşağıdakilerden kaslardan hangileri inspirasyonda görev alırlar? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap A o Diyafram internal oblik kas internal oblik kas- eksternal oblik kas Skalen kas internal interkostal kaslar Diyafram eksternal interkostal kaslar < 11 :25 � � Cevabınız Durum 111 Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru '9.', .,ıl %21 _ Skalen kas internal interkostal kaslar Diyafram eksternal interkostal kaslar Eksternal oblik kas eksternal interkostal kaslar Diyafram- eksternal interkostal kaslar A ;� t� o < 11 :25 � � Soru Cevaplar 111 '9.', .,ıl %21 _ Bezold-Jarisch Refleksinde aşağıdakilerden hangisi salınana kadar kalp kendini bradikardiye alır? Sıra No 1 Doğru Sıra No 2 Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No NO Tromboksan A2 Cevap � Endotelin Doğru o < 11 :25 � * Cevabınız Durum < > 111 '9.', .,ıl %21 _ i sinav.karabuk.edu.tr □= Sıra No 2 Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru NO Tromboksan A2 Endotelin Tromboksan A2 o < 11 :25 � Soru Cevaplar 111 '9.', .,ıl %21 _ EKG 25 mm/s hızla kaydedildiğinde birbirini izleyen iki T dalgası arası 50 mm ise kalbin dakikadaki atım sayısı nedir? Sıra No 1 Cevap 30 Doğru � Sıra No 2 Cevap 50 Doğru Sıra No 3 Cevap 75 Doğru Sıra No 4 Cevap 1 00 Doğru Sıra No 5 Cevap 1 20 __,......... Doğru o < 11 :25 � Soru Cevaplar 111 �� .,ıl %21 _ EKG' de Dl derivasyonda negatif, aV F derivasyonda pozitif defleksiyon görülmesi hangisini akla getirir? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap o Normal eksen Sol eksen deviyasyonu Sağ eksen deviyasyonu Superior eksen Belirsiz eksen < 11 :25 � Soru Cevaplar Cevabınız 111 '9.', .,ıl %21 _ EKG' de V 1 ' den V4' e doğru olan derivasyonlar ne şekilde adlandırılır? Sıra No 1 Doğru Sıra No 2 Doğru Sıra No 3 Doğru Sıra No 4 Cevap Yüksek lateral Doğru Sıra No 5 Cevap İnferior Doğru Anteroseptal o < 11 :25 � Soru Cevaplar Cevabınız 111 H angi Ca kanal tipinin nöronlardan transmitter salınımında fonksiyonu yoktur? Sıra No 1 Cevap L tip Doğru � Sıra No 2 Cevap N tip Doğru Sıra No 3 Cevap P tip Doğru Sıra No 4 Cevap R tip Doğru Sıra No 5 Cevap Q tip Doğru L tip o < 11 :26 � Soru Cevaplar Cevabınız 111 '9.', .,ıl %20 _ H angi parametre anizositozun objektif bir göstergesidir? o Sıra No 1 Cevap MCV Doğru Sıra No 2 Cevap MCHC Doğru Sıra No 3 Cevap MCH Doğru Sıra No 4 Cevap RDW Doğru � Sıra No 5 Cevap M PV Doğru < 11 :26 � Soru Cevaplar 111 H angisi eritrosit membranında en çok bulunan periferal proteindir? o Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Band-3 proteini Band-4 proteini Spektrin Ankirin Sıra No 5 Doğru < 11 :26 � Soru Cevaplar 111 '9.', .,ıl %20 _ Hangisi eritrositlerde oraklaşmayı arttıran faktörlerden değildir? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No . �evap A o Yüksek rakım Uçakta 02 basıncının azalması Kan pH' sının azalması PC02 artışı Eritrositlerde 2,3 DFG düzeyinin < 11 :26 � Cevabınız Durum Sıra No 111 Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Uçakta 02 basıncının azalması Kan pH' sının azalması PC02 artışı Eritrositlerde 2,3 DFG düzeyinin azalması Doğru � Eritrositlerde 2,3 DFG düzeyinin azalması ., � . JA o < 11 :26 � Soru Cevaplar Cevabınız 111 '9.', .,ıl %20 _ H angisi hem in vitro hem de in vivo antikoagulan maddedir? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Potasyum oksalat Heparin Sodyum sitrat Sodyum florür Sıra No 5 __.......Doğru H eparin o < 11 :26 � Soru Cevaplar 111 '9.', .,ıl %20 _ H angisi yanlıştır? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap A o Hemoliz kanın viskozitesinin azaltır Kanın viskozitesi plazmanın kompozisyonunı bağlıdır Kan akımına karşı olan direnç, suya göre daha fazladır Büyük damarlarda viskozite düşüktür < 11 :26 � Cevabınız Durum 111 Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Kan akımına karşı olan direnç, suya göre daha fazladır Büyük damarlarda viskozite düşüktür immunoglobülin artması kanın viskozitesini arttırır Büyük damarlarda viskozite düşüktür o < 11 :26 � Soru Cevaplar 111 Kalp seslerinden mitral kapağın en iyi dinlendiği bölge (odak) hangisidir? Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No Cevap Doğru Sıra No"
+    },
+    {
+      "id": "past-1790877450582-141075",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Nodus atrioventriculare’nin bulunduğu yer neresidir?"
+    },
+    {
+      "id": "past-1790877450643-654966",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Aşağıdakilerden hangisi/hangileri a. subclavia’nın dalı/dallarıdır? I- Truncus thyrocervicalis II- A. vertebralis III- Truncus costocervicalis IV- A. thoracica interna"
+    },
+    {
+      "id": "past-1790877450691-37753",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Kolda tansiyon alınırken cihazın turnikesinin sıkıştırdığı arter aşağıdakilerden hangisidir?"
+    },
+    {
+      "id": "past-1790877450725-878513",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Aort koarktasyonunda aorttaki kan akımı interkostal arterler ile hangi damara taşınır?"
+    },
+    {
+      "id": "past-1790877450775-49131",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Aşağıdaki lenf yollarından hangisi doğrudan angulus venosus sinistra’ya açılır?"
+    },
+    {
+      "id": "past-1790877450796-179062",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Koniyotomi aşağıdakilerden hangisinin kesilmesidir?"
+    },
+    {
+      "id": "past-1790877450818-650745",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Akciğerde bronşları daraltan sinir hangisidir?"
+    },
+    {
+      "id": "past-1790877450849-752123",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Mediastinum posterius’da yer almayan aşağıdakilerden hangisidir?"
+    },
+    {
+      "id": "past-1790877450910-763610",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Göğüs telegrafisinde kalbin sol kenarındaki en üst kıvrım aşağıdakilerden hangisine aittir?"
+    },
+    {
+      "id": "past-1790877451013-291765",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "Bronchus principalis dexter ve sinister karşılaştırıldığında yabancı cisim aspirasyonlarının daha çok sağ tarafa olmasının sebebi aşağıdaki hangi özelliği/özelliklerinden dolayıdır? I- Daha kısa II- Daha dik III- Daha geniş IV- Daha kıvrımlı"
+    },
+    {
+      "id": "past-1790877451033-158509",
+      "source": "tüm sorular.txt",
+      "category": "Dönem 2 Sorusudur (Dönem 3 Dışı)",
+      "reason": "Dönem 2 İçeriği (Anatomi, Histoloji, Normal Fizyoloji, Biyofizik)",
+      "stem": "hangisi burun boşluğunun dış duvarının yapısına katılmaz?"
+    }
+  ],
+  "eliminatedTotalCount": 985
+}

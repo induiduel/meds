@@ -64,6 +64,26 @@ export const parseExplanation = (raw: string, correct?: string) => {
   return out;
 };
 
+/** Highlights text marked with ==...== using a styled <mark> element */
+export const renderHighlightedSnippet = (snippet: string) => {
+  if (!snippet) return null;
+  const parts = snippet.split(/(==[^=]+==)/g);
+  return parts.map((part, index) => {
+    if (part.startsWith('==') && part.endsWith('==') && part.length > 4) {
+      const text = part.slice(2, -2);
+      return (
+        <mark
+          key={index}
+          className="bg-amber-100 text-amber-950 font-bold px-1 py-0.5 rounded border border-amber-300 shadow-xs"
+        >
+          {text}
+        </mark>
+      );
+    }
+    return <span key={index}>{part}</span>;
+  });
+};
+
 /** "• A) Beyin: …" lines → definition list rows. */
 const parseDistractors = (body: string) => {
   const rows = body
@@ -604,17 +624,32 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 
             {question.lectureReference && (
               <section className="bg-white border border-line rounded-[14px] sm:rounded-[18px] p-4 sm:p-6 flex flex-col gap-3.5">
-                <h4 className="m-0 text-[15px] font-semibold">Kaynak slayt</h4>
+                <h4 className="m-0 text-[15px] font-semibold flex items-center justify-between">
+                  <span>Kaynak slayt</span>
+                  {question.lectureReference.confidenceScore ? (
+                    <span className="text-[12px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                      %{question.lectureReference.confidenceScore} eşleşme
+                    </span>
+                  ) : null}
+                </h4>
+
                 {question.lectureReference.matchedSnippet && (
-                  <p className="m-0 rounded-[10px] bg-canvas border border-line px-3.5 py-3 text-[13px] leading-[1.55] text-ink-2 line-clamp-4">
-                    {question.lectureReference.matchedSnippet}
+                  <p className="m-0 rounded-[10px] bg-canvas border border-line px-3.5 py-3 text-[13px] leading-[1.65] text-ink-2">
+                    {renderHighlightedSnippet(question.lectureReference.matchedSnippet)}
                   </p>
                 )}
+
+                {question.lectureReference.highlightedText && (
+                  <div className="rounded-[10px] bg-amber-50/70 border border-amber-200 p-2.5 text-[12px] leading-relaxed text-amber-950">
+                    <span className="font-bold block text-amber-900 mb-0.5">📌 Slayttaki İlgili Bilgi & Metin:</span>
+                    {renderHighlightedSnippet(question.lectureReference.highlightedText)}
+                  </div>
+                )}
+
                 <div className="flex flex-col gap-0.5">
                   <span className="font-semibold text-[15px]">{question.lectureReference.noteTitle}</span>
                   <span className="text-[14px] text-ink-2">
                     {question.lectureReference.discipline} · sayfa {question.lectureReference.pageNumber}
-                    {question.lectureReference.confidenceScore ? ` · %${question.lectureReference.confidenceScore} eşleşme` : ''}
                   </span>
                 </div>
                 {question.lectureReference.driveFileUrl && (

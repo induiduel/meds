@@ -468,6 +468,22 @@ export class FirestoreDbService {
     }
   }
 
+  static async saveLectureNote(note: LectureNote): Promise<void> {
+    try {
+      await withTimeout(setDoc(doc(db, LECTURE_NOTES_COLLECTION, note.id), cleanForFirestore(note)), 6000);
+    } catch (e) {
+      console.warn('Firestore saveLectureNote fallback:', e);
+    }
+  }
+
+  static async deleteLectureNote(id: string): Promise<void> {
+    try {
+      await withTimeout(deleteDoc(doc(db, LECTURE_NOTES_COLLECTION, id)), 6000);
+    } catch (e) {
+      console.warn('Firestore deleteLectureNote fallback:', e);
+    }
+  }
+
   /**
    * Fetches all past exam questions from Firestore
    */

@@ -46,8 +46,13 @@ import { AdminPastExamImporterModal } from './components/AdminPastExamImporterMo
 import { AiQuestionOptimizerModal } from './components/AiQuestionOptimizerModal';
 import { NotebookLMSyncModal } from './components/NotebookLMSyncModal';
 import { SubagentMonitorModal } from './components/SubagentMonitorModal';
+import { SystemHealthBanner } from './components/SystemHealthBanner';
+import { SystemDiagnosticsModal } from './components/SystemDiagnosticsModal';
+import { AiQuotaAlertModal } from './components/AiQuotaAlertModal';
+import { systemHealthMonitor } from './services/systemHealthMonitor';
 import { REAL_KURUL1_DRIVE_SLIDES } from './services/driveAutomation';
 import { ApiService } from './services/api';
+import { multiDbManager } from './services/multiDbManager';
 import { 
   initAuth, 
   googleSignIn, 
@@ -96,6 +101,8 @@ export default function App() {
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
   const [isNotebookLMModalOpen, setIsNotebookLMModalOpen] = useState(false);
   const [isSubagentMonitorOpen, setIsSubagentMonitorOpen] = useState(false);
+  const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
+  const [isAiQuotaModalOpen, setIsAiQuotaModalOpen] = useState(false);
   const [contributeDefaultNumber, setContributeDefaultNumber] = useState<number | undefined>(undefined);
 
   // User Auth & Profile Modals
@@ -164,17 +171,60 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  // Load committees on mount
+  // Load committees on mount & start real-time health monitoring
   useEffect(() => {
     fetchCommittees();
+    systemHealthMonitor.startAutoMonitoring(60000);
+    return () => {
+      systemHealthMonitor.stopAutoMonitoring();
+    };
   }, []);
 
-  // Load questions when selected committee changes
+  // Supabase Realtime Subscription: Sorulardaki yeni ekleme, oy ve güncellemeleri canlı dinle
   useEffect(() => {
-    if (selectedCommitteeId) {
-      fetchQuestions();
-    }
-  }, [selectedCommitteeId, selectedDiscipline, selectedStatus, searchQuery]);
+    if (!selectedCommitteeId) return;
+
+    const unsub = multiDbManager.subscribeToQuestions((payload) => {
+      if ((payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') && payload.new) {
+        const raw = payload.new;
+        const qData: QuestionItem = raw.data || {
+          id: raw.id,
+          committeeId: raw.committee_id,
+          questionNumber: raw.question_number,
+          discipline: raw.discipline,
+          topic: raw.topic,
+          status: raw.status,
+          claimedAnswer: raw.claimed_answer,
+          upvotes: raw.upvotes,
+          tags: raw.tags || [],
+          fragments: raw.fragments || [],
+          options: raw.options || [],
+          reconstruction: raw.reconstruction,
+          createdAt: raw.created_at,
+          updatedAt: raw.updated_at,
+        };
+
+        if (qData.committeeId === selectedCommitteeId) {
+          setQuestions((prev) => {
+            const exists = prev.some((item) => item.id === qData.id);
+            if (exists) {
+              return prev.map((item) => (item.id === qData.id ? { ...item, ...qData } : item));
+            }
+            return [...prev, qData].sort((a, b) => (a.questionNumber || 0) - (b.questionNumber || 0));
+          });
+        }
+      } else if (payload.eventType === 'DELETE' && payload.old) {
+        const deletedId = (payload.old as any)?.id;
+        if (deletedId) {
+          setQuestions((prev) => prev.filter((item) => item.id !== deletedId));
+        }
+      }
+    });
+
+    return () => {
+      unsub();
+    };
+  }, [selectedCommitteeId]);
 
   const fetchCommittees = async () => {
     try {
@@ -188,6 +238,7 @@ export default function App() {
     } catch (err: any) {
       console.error('Failed to load committees:', err);
       setError('Komite listesi yüklenemedi.');
+      systemHealthMonitor.recordDatabaseError('firebase', err);
     }
   };
 
@@ -205,6 +256,7 @@ export default function App() {
     } catch (err: any) {
       console.error('Failed to load questions:', err);
       setError('Sorular yüklenirken hata oluştu.');
+      systemHealthMonitor.recordDatabaseError('firebase', err);
     } finally {
       setLoading(false);
     }
@@ -616,6 +668,12 @@ export default function App() {
         />
       ) : (
       <>
+      {/* Real-time System Status & Quota Alert Banner */}
+      <SystemHealthBanner
+        onOpenDiagnostics={() => setIsDiagnosticsOpen(true)}
+        onOpenAiQuotaModal={() => setIsAiQuotaModalOpen(true)}
+      />
+
       {/* Navigation Header with Google Auth & Drive */}
       <Header
         searchQuery={searchQuery}
@@ -657,6 +715,7 @@ export default function App() {
         isUploadingToDrive={isUploadingToDrive}
         driveLastUploadedLink={driveUploadSuccess?.webViewLink || null}
         onOpenPdfModal={() => setIsPdfModalOpen(true)}
+        onOpenDiagnostics={() => setIsDiagnosticsOpen(true)}
       />
 
       {/* Main Container */}
@@ -1038,6 +1097,20 @@ export default function App() {
         onClose={() => setIsPdfModalOpen(false)}
         committee={currentCommittee}
         questions={questions}
+      />
+
+      {/* System Diagnostics & Database Troubleshooting Modal */}
+      <SystemDiagnosticsModal
+        isOpen={isDiagnosticsOpen}
+        onClose={() => setIsDiagnosticsOpen(false)}
+        onRefreshParentData={fetchQuestions}
+      />
+
+      {/* Yapay Zeka (AI) Quota & Rate Limit Exceeded Modal */}
+      <AiQuotaAlertModal
+        isOpen={isAiQuotaModalOpen}
+        onClose={() => setIsAiQuotaModalOpen(false)}
+        onRetry={fetchQuestions}
       />
 
       {/* User Login/Register Modal */}

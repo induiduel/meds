@@ -54,15 +54,36 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
   
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [copiedSql, setCopiedSql] = useState(false);
-  const [realtimeTest, setRealtimeTest] = useState<{ running: boolean; result?: { success: boolean; latencyMs: number; message: string } }>({ running: false });
+  const [copiedRealtimeSql, setCopiedRealtimeSql] = useState(false);
+  const [realtimeTest, setRealtimeTest] = useState<{
+    running: boolean;
+    result?: {
+      success: boolean;
+      latencyMs: number;
+      message: string;
+      broadcastActive?: boolean;
+      postgresActive?: boolean;
+      broadcastLatencyMs?: number;
+      postgresLatencyMs?: number;
+    };
+  }>({ running: false });
 
   const handleTestRealtime = async () => {
     setRealtimeTest({ running: true });
     try {
-      const res = await multiDbManager.testRealtimeRoundtrip(4000);
+      const res = await multiDbManager.testRealtimeRoundtrip(4500);
       setRealtimeTest({ running: false, result: res });
     } catch (e: any) {
-      setRealtimeTest({ running: false, result: { success: false, latencyMs: 0, message: e.message } });
+      setRealtimeTest({
+        running: false,
+        result: {
+          success: false,
+          latencyMs: 0,
+          broadcastActive: false,
+          postgresActive: false,
+          message: e.message || 'Bilinmeyen test hatası.',
+        },
+      });
     }
   };
 
@@ -189,22 +210,47 @@ CREATE POLICY "Allow public write questions" ON questions FOR ALL USING (true);
 CREATE POLICY "Allow public read lecture_notes" ON lecture_notes FOR SELECT USING (true);
 CREATE POLICY "Allow public write lecture_notes" ON lecture_notes FOR ALL USING (true);
 
--- Realtime yayınlarını etkinleştir (Canlı veri dinleme ve anlık senkronizasyon için)
-ALTER PUBLICATION supabase_realtime ADD TABLE committees;
-ALTER PUBLICATION supabase_realtime ADD TABLE questions;
-ALTER PUBLICATION supabase_realtime ADD TABLE past_questions;
-ALTER PUBLICATION supabase_realtime ADD TABLE lecture_notes;
-ALTER PUBLICATION supabase_realtime ADD TABLE system_status;
+-- Realtime yayınlarını ve REPLICA IDENTITY ayarını etkinleştir (Canlı dinleme ve anlık senkronizasyon için)
+ALTER PUBLICATION supabase_realtime SET TABLE 
+  public.committees, 
+  public.questions, 
+  public.past_questions, 
+  public.lecture_notes, 
+  public.system_status, 
+  public.users;
 
-ALTER TABLE committees REPLICA IDENTITY FULL;
-ALTER TABLE questions REPLICA IDENTITY FULL;
-ALTER TABLE past_questions REPLICA IDENTITY FULL;
-ALTER TABLE lecture_notes REPLICA IDENTITY FULL;
-ALTER TABLE system_status REPLICA IDENTITY FULL;
+ALTER TABLE public.committees REPLICA IDENTITY FULL;
+ALTER TABLE public.questions REPLICA IDENTITY FULL;
+ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
+ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
+ALTER TABLE public.system_status REPLICA IDENTITY FULL;
+ALTER TABLE public.users REPLICA IDENTITY FULL;
 `;
     navigator.clipboard.writeText(sql);
     setCopiedSql(true);
     setTimeout(() => setCopiedSql(false), 2500);
+  };
+
+  const copyRealtimeSql = () => {
+    const sql = `-- Supabase Realtime Yayınlarını ve REPLICA IDENTITY Ayarını Etkinleştir
+ALTER PUBLICATION supabase_realtime SET TABLE 
+  public.committees, 
+  public.questions, 
+  public.past_questions, 
+  public.lecture_notes, 
+  public.system_status, 
+  public.users;
+
+ALTER TABLE public.committees REPLICA IDENTITY FULL;
+ALTER TABLE public.questions REPLICA IDENTITY FULL;
+ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
+ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
+ALTER TABLE public.system_status REPLICA IDENTITY FULL;
+ALTER TABLE public.users REPLICA IDENTITY FULL;
+`;
+    navigator.clipboard.writeText(sql);
+    setCopiedRealtimeSql(true);
+    setTimeout(() => setCopiedRealtimeSql(false), 2500);
   };
 
   const getStatusBadge = (status: string) => {
@@ -579,40 +625,134 @@ ALTER TABLE system_status REPLICA IDENTITY FULL;
                 </div>
 
                 {/* Realtime Live Test Card */}
-                <div className="p-3.5 rounded-lg border border-line bg-canvas/40 space-y-2">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <div>
-                      <div className="font-bold text-[13px] text-ink flex items-center gap-1.5">
-                        <Zap className="w-4 h-4 text-[#F59E0B]" />
-                        Supabase Realtime (Canlı Çift Yönlü İletişim)
+                {(() => {
+                  const projectRef = (customSupaUrl || '').match(/https:\/\/([^.]+)\.supabase\.co/)?.[1] || 'kgutsltgmqbnlxcnzrtl';
+                  return (
+                    <div className="p-4 rounded-xl border border-line bg-canvas/40 space-y-3">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                          <div className="font-bold text-[14px] text-ink flex items-center gap-1.5">
+                            <Zap className="w-4 h-4 text-[#F59E0B]" />
+                            Supabase Realtime (Anlık Çift Yönlü İletişim & Canlı Eşitleme)
+                          </div>
+                          <div className="text-[12px] text-ink-3">
+                            WebSocket üzerinden canlı veri dinleme, yayınlama ve cihazlar arası anlık senkronizasyon.
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={handleTestRealtime}
+                          disabled={realtimeTest.running}
+                          className="h-8 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-[12px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer disabled:opacity-50 shrink-0"
+                        >
+                          <RefreshCw className={`w-3.5 h-3.5 ${realtimeTest.running ? 'animate-spin' : ''}`} />
+                          {realtimeTest.running ? 'Test Ediliyor…' : '⚡ Realtime Canlı Test Et'}
+                        </button>
                       </div>
-                      <div className="text-[12px] text-ink-3">
-                        WebSocket üzerinden veritabanı anlık veri dinleme ve yayın durumu.
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={handleTestRealtime}
-                      disabled={realtimeTest.running}
-                      className="h-8 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-[12px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer disabled:opacity-50 shrink-0"
-                    >
-                      <RefreshCw className={`w-3 h-3 ${realtimeTest.running ? 'animate-spin' : ''}`} />
-                      {realtimeTest.running ? 'Test Ediliyor…' : '⚡ Realtime Canlı Test Et'}
-                    </button>
-                  </div>
 
-                  {realtimeTest.result && (
-                    <div
-                      className={`p-2.5 rounded-lg text-[12px] font-medium border ${
-                        realtimeTest.result.success
-                          ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
-                          : 'bg-amber-50 text-amber-800 border-amber-200'
-                      }`}
-                    >
-                      {realtimeTest.result.message}
+                      {realtimeTest.result && (
+                        <div className="space-y-3">
+                          <div
+                            className={`p-3 rounded-xl text-[13px] font-medium border flex items-start gap-2.5 ${
+                              realtimeTest.result.postgresActive
+                                ? 'bg-emerald-50 text-emerald-900 border-emerald-200'
+                                : realtimeTest.result.broadcastActive
+                                ? 'bg-amber-50 text-amber-900 border-amber-200'
+                                : 'bg-red-50 text-red-900 border-red-200'
+                            }`}
+                          >
+                            {realtimeTest.result.postgresActive ? (
+                              <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                            ) : (
+                              <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                            )}
+                            <div className="space-y-1">
+                              <div className="font-bold">
+                                {realtimeTest.result.postgresActive
+                                  ? 'Tam Kapasite: Hem WebSocket Hem PostgreSQL Yayını Aktif!'
+                                  : realtimeTest.result.broadcastActive
+                                  ? 'WebSocket Canlı Yayını Aktif — PostgreSQL Yayını Açılmalı'
+                                  : 'Realtime Bağlantı Hatası'}
+                              </div>
+                              <div className="text-[12px] leading-relaxed">
+                                {realtimeTest.result.message}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* If PostgreSQL changes not active yet, show 1-click fix buttons and guide */}
+                          {!realtimeTest.result.postgresActive && (
+                            <div className="p-3.5 bg-white rounded-xl border border-amber-200/90 shadow-xs space-y-2.5">
+                              <div className="text-[12px] text-ink font-bold flex items-center gap-1.5">
+                                <Sparkles className="w-4 h-4 text-amber-500" />
+                                PostgreSQL Realtime Yayınını Açmak İçin (2 Kolay Yol):
+                              </div>
+                              <div className="text-[12px] text-ink-2 space-y-1.5 pl-1">
+                                <div>
+                                  <strong>1. Yöntem (Dashboard - 10 saniye):</strong> Supabase panelinizde{' '}
+                                  <a
+                                    href={`https://supabase.com/dashboard/project/${projectRef}/database/publications`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-indigo-600 font-semibold underline inline-flex items-center gap-0.5"
+                                  >
+                                    Database &gt; Publications &gt; supabase_realtime
+                                    <ExternalLink className="w-3 h-3 inline" />
+                                  </a>{' '}
+                                  menüsüne tıklayın ve <code>questions</code>, <code>past_questions</code>, <code>lecture_notes</code>, <code>committees</code>, <code>system_status</code> anahtarlarını açın.
+                                </div>
+                                <div>
+                                  <strong>2. Yöntem (1 Tıkla SQL):</strong> Aşağıdaki butona tıklayarak SQL komutunu kopyalayın ve{' '}
+                                  <a
+                                    href={`https://supabase.com/dashboard/project/${projectRef}/sql/new`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-indigo-600 font-semibold underline inline-flex items-center gap-0.5"
+                                  >
+                                    Supabase SQL Editöründe
+                                    <ExternalLink className="w-3 h-3 inline" />
+                                  </a>{' '}
+                                  yapıştırıp <strong>Run</strong> butonuna basın.
+                                </div>
+                              </div>
+
+                              <div className="flex flex-wrap items-center gap-2 pt-1">
+                                <button
+                                  type="button"
+                                  onClick={copyRealtimeSql}
+                                  className="h-8 px-3 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-semibold text-[12px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer"
+                                >
+                                  {copiedRealtimeSql ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
+                                  {copiedRealtimeSql ? 'Realtime SQL Kopyalandı!' : '⚡ 1 Tıkla Realtime SQL Kopyala'}
+                                </button>
+
+                                <a
+                                  href={`https://supabase.com/dashboard/project/${projectRef}/sql/new`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-[12px] inline-flex items-center gap-1.5 cursor-pointer"
+                                >
+                                  <ExternalLink className="w-3.5 h-3.5" />
+                                  Supabase SQL Editörü Aç
+                                </a>
+
+                                <a
+                                  href={`https://supabase.com/dashboard/project/${projectRef}/database/publications`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-[12px] inline-flex items-center gap-1.5 cursor-pointer"
+                                >
+                                  <ExternalLink className="w-3.5 h-3.5" />
+                                  Yayınlar (Publications) Menüsü Aç
+                                </a>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
+                  );
+                })()}
 
                 <div className="pt-2 flex flex-wrap items-center gap-3">
                   <button

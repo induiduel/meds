@@ -549,6 +549,16 @@ export async function runFullSync() {
   }
   console.log(`   ✓ data/pastQuestions.json güncellendi! (Yeni eklenen: ${newAddedCount}, Toplam Çıkmış Soru: ${existingPastQuestions.length})`);
 
+  if (newAddedCount > 0) {
+    console.log(`\n🩺 [Otomatik Cevap Doğrulama] Yeni eklenen ${newAddedCount} soru amfi ders notları ve tıp literatürüyle %90 kontrolüne alınıyor...`);
+    try {
+      const { verifyQuestionsBatch } = await import('./verify-question-answers.mjs');
+      await verifyQuestionsBatch({ unverifiedOnly: true, limit: newAddedCount });
+    } catch (verErr) {
+      console.warn('[Otomatik Doğrulama Uyarısı]:', verErr.message);
+    }
+  }
+
   // 5. ADIM: Ders Notları & Slaytlar (Verbatim İşleme)
   console.log('\n📚 5. ADIM: Ders Notları ve Slaytlar İşleniyor (Birebir İçerik)...');
   const lectureNotesFiles = fs.readdirSync(DIRS.notlarPdf).filter(f => f.toLowerCase().endsWith('.pdf'));

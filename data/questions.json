@@ -25,5 +25,98 @@
       "description": "Gastrointestinal sistem hastalıkları, karaciğer patolojisi ve metabolik bozukluklar."
     }
   ],
-  "questions": []
+  "questions": [
+    {
+      "id": "past-1790877034674-813824",
+      "sourceFile": "1. Kurul Sorular.txt",
+      "committeeId": "donem3-kurul1",
+      "examYear": "2021-2022",
+      "questionNumber": 10,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tiroid Neoplazileri ve Epidemiyolojisi",
+      "rawQuestion": {
+        "stem": "Türkiye’de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Meme"
+          },
+          {
+            "key": "B",
+            "text": "Over"
+          },
+          {
+            "key": "C",
+            "text": "Endometrium"
+          },
+          {
+            "key": "D",
+            "text": "Serviks uteri"
+          },
+          {
+            "key": "E",
+            "text": "Tiroid"
+          }
+        ],
+        "claimedAnswer": "A"
+      },
+      "reconstruction": {
+        "stem": "Türkiye'de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser türü aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tiroid karsinomu",
+            "isAiFilled": false
+          },
+          {
+            "key": "B",
+            "text": "Meme karsinomu",
+            "isAiFilled": true
+          },
+          {
+            "key": "C",
+            "text": "Serviks uteri karsinomu",
+            "isAiFilled": true
+          },
+          {
+            "key": "D",
+            "text": "Over malign epitelyal tümörü",
+            "isAiFilled": true
+          },
+          {
+            "key": "E",
+            "text": "Hodgkin lenfoma",
+            "isAiFilled": true
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "Türkiye'deki kanser insidans verilerine (örneğin TÜİK ve Sağlık Bakanlığı Kanser Daire Başkanlığı 2014 raporları) göre, 15-24 yaş arası genç kadın popülasyonda en sık görülen kanser tiroid bezinin maligniteleridir (özellikle papiller tiroid karsinomu). Tiroid kanserleri genel popülasyonda ve özellikle kadınlarda (yaklaşık 3:1 oranında) erkeklere kıyasla belirgin şekilde daha yüksek oranda izlenmektedir.",
+        "confidenceScore": 96,
+        "notesAndDiscrepancies": "Öğrenci sorusundaki yazım hataları ('kadınlarda' kelimesindeki boşluk vb.) giderildi. Amfi ders notu 'D8_D9_tiroid_neopl' verileri ve Türkiye epidemiyolojik verileri ışığında soru kökü resmi kurul sınavı formatına uyarlandı ve 5 şık tamamlandı.",
+        "lastUpdated": "2026-10-01T21:57:04.940Z"
+      },
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "ambiguityReason": null,
+      "matchedNoteTitle": "1",
+      "matchedSlidePage": 3,
+      "upvotes": 0,
+      "comments": [],
+      "reports": [],
+      "createdAt": "2026-10-01T18:23:23.395Z",
+      "claimedAnswer": "A",
+      "status": "completed",
+      "updatedAt": "2026-10-01T21:57:05.042Z",
+      "lectureReference": {
+        "noteId": "note-88be594003",
+        "noteTitle": "D8_D9_tiroid_neopl",
+        "discipline": "Tıp Ders Notu",
+        "pageNumber": 66,
+        "totalSlides": 99,
+        "matchedSnippet": "...Tiroid Karsinomunun Epidemiyolojisi • Kadınlarda erkeklere göre ≈3:1 daha sık görülür. • Papiller tiroid karsinomuna göre daha ileri yaşta ortaya çıkar. • En sık 40–60 yaş aralığınd...",
+        "confidenceScore": 100,
+        "reasoning": "Amfi Slayt Eşleşmesi: \"D8_D9_tiroid_neopl\" dersinin 66. slaytındaki (göre, yaş, dınlarda, sık) ifadeleri soru içeriği ile örtüşmektedir."
+      }
+    }
+  ]
 }

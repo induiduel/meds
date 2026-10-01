@@ -1,0 +1,15 @@
+[
+  {
+    "id": "job_1790895370134_s8wgf",
+    "name": "inspect-sources.mjs",
+    "type": "single",
+    "args": "",
+    "status": "completed",
+    "startedAt": "2026-10-01T22:56:10.134Z",
+    "completedAt": "2026-10-01T22:56:10.219Z",
+    "durationMs": 79,
+    "exitCode": 0,
+    "requestedBy": "cli",
+    "logSummary": "[01:56:10]        Comm: donem3-kurul1 | Disc: FTR\n[01:56:10]        Sample: Aşağıdakilerden hangisi derin ısıtıcı tedavidir? a) Kısa dalga diatermi b) Hot pack c) Wh...\n[01:56:10] [   3] Kurul I Cevap Anahtarı.pdf\n[01:56:10]        Comm: donem3-kurul1 | Disc: Patoloji\n[01:56:10]        Sample: E D C E ÇOCUK SAĞLIĞI VE HASTALIKLARI...\n[01:56:10] [   1] Kurul I Sınavı.pdf\n[01:56:10]        Comm: donem3-kurul1 | Disc: Genel Tıp\n[01:56:10]        Sample: Etkileşimi ve advers etkileri aşağıda sıralanmış tetrasiklinler için hangisi/hangileri doğ...\n[01:56:10] ------------------------------------------------------------\n[01:56:10] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 0.1 sn."
+  }
+]
