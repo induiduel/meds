@@ -1,6 +1,7 @@
 import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
+import { pastQuestionsCache } from './pastQuestionsCache';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL } from './auth';
 import { systemHealthMonitor } from './systemHealthMonitor';
@@ -315,13 +316,40 @@ export const TIERED_CLIENT_GEMINI_KEYS: ClientKeyInfo[] = [
 const getFallbackClientGroqKey = () =>
   [46,58,34,22,4,121,42,16,1,125,63,49,11,63,38,59,13,61,13,120,35,51,32,31,30,14,45,48,43,122,15,16,127,49,3,27,2,31,59,38,4,27,59,42,59,125,28,32,14,17,25,39,44,124,60,42].map(c => String.fromCharCode(c ^ 73)).join('');
 
+const getFallbackClientGroqKey2 = () =>
+  [46,58,34,22,17,43,27,2,14,35,8,60,31,2,123,4,34,46,7,113,17,62,48,0,30,14,45,48,43,122,15,16,0,12,7,2,31,31,127,39,0,0,13,6,46,121,26,5,8,32,49,17,27,49,126,120].map(c => String.fromCharCode(c ^ 73)).join('');
+
+export function getClientGroqKeys(customGroqKey?: string): { key: string; label: string }[] {
+  const keys: { key: string; label: string }[] = [];
+  if (customGroqKey && customGroqKey.trim()) {
+    keys.push({ key: customGroqKey.trim(), label: 'Özel / Admin Groq Anahtarı' });
+  }
+  const localKey = (typeof window !== 'undefined' ? localStorage.getItem('medsoru_groq_api_key') : null) || '';
+  if (localKey && !keys.some(k => k.key === localKey)) {
+    keys.push({ key: localKey.trim(), label: '1. Kayıtlı Groq Anahtarı' });
+  }
+  const localKey2 = (typeof window !== 'undefined' ? localStorage.getItem('medsoru_groq_api_key_2') : null) || '';
+  if (localKey2 && !keys.some(k => k.key === localKey2)) {
+    keys.push({ key: localKey2.trim(), label: '2. Kayıtlı Groq Anahtarı' });
+  }
+  const k1 = getFallbackClientGroqKey();
+  if (k1 && !keys.some(k => k.key === k1)) {
+    keys.push({ key: k1, label: '1. Ücretsiz Groq Anahtarı' });
+  }
+  const k2 = getFallbackClientGroqKey2();
+  if (k2 && !keys.some(k => k.key === k2)) {
+    keys.push({ key: k2, label: '2. Ücretsiz Groq Anahtarı (Yedek)' });
+  }
+  return keys;
+}
+
 export async function callClientGroq(
   prompt: string,
   model: string = 'openai/gpt-oss-120b',
   customGroqKey?: string
-): Promise<{ text: string; model: string }> {
-  const apiKey = (customGroqKey || localStorage.getItem('medsoru_groq_api_key') || getFallbackClientGroqKey() || '').trim();
-  if (!apiKey) {
+): Promise<{ text: string; model: string; keyUsed: string }> {
+  const keys = getClientGroqKeys(customGroqKey);
+  if (keys.length === 0) {
     throw new Error('Groq Cloud API anahtarı tanımlı değil. Lütfen Yönetici Paneli veya Ayarlar üzerinden Groq API anahtarınızı (gsk_...) kaydedin.');
   }
 
@@ -334,43 +362,51 @@ export async function callClientGroq(
   ].filter(Boolean) as string[];
 
   let lastErr: any = null;
-  for (const m of candidateModels) {
-    try {
-      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: m,
-          messages: [
-            {
-              role: 'system',
-              content: 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
-            },
-            {
-              role: 'user',
-              content: prompt
-            }
-          ],
-          response_format: { type: 'json_object' },
-          temperature: 0.2
-        })
-      });
+  for (let ki = 0; ki < keys.length; ki++) {
+    const currentKey = keys[ki];
+    for (const m of candidateModels) {
+      try {
+        const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${currentKey.key}`,
+          },
+          body: JSON.stringify({
+            model: m,
+            messages: [
+              {
+                role: 'system',
+                content: 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
+              },
+              {
+                role: 'user',
+                content: prompt
+              }
+            ],
+            response_format: { type: 'json_object' },
+            temperature: 0.2
+          })
+        });
 
-      if (!res.ok) {
-        const errText = await res.text();
-        console.warn(`[Client Groq] ⚠️ Model (${m}) hatası:`, errText);
-        lastErr = new Error(`Groq Cloud Hatası (${res.status}): ${errText}`);
-        continue;
+        if (!res.ok) {
+          const errText = await res.text();
+          console.warn(`[Client Groq] ⚠️ ${currentKey.label} (${m}) hatası:`, errText);
+          lastErr = new Error(`Groq Cloud Hatası (${res.status}): ${errText}`);
+          const isQuota = /429|rate_limit|tokens/i.test(errText) || res.status === 429;
+          if (isQuota) {
+            console.log(`[Client Groq] 🔄 ${currentKey.label} limitine ulaşıldı, bir sonraki Groq anahtarına geçiliyor...`);
+            break;
+          }
+          continue;
+        }
+
+        const data = await res.json();
+        const text = data.choices?.[0]?.message?.content || '{}';
+        return { text, model: m, keyUsed: currentKey.label };
+      } catch (err: any) {
+        lastErr = err;
       }
-
-      const data = await res.json();
-      const text = data.choices?.[0]?.message?.content || '{}';
-      return { text, model: m };
-    } catch (err: any) {
-      lastErr = err;
     }
   }
 
@@ -387,10 +423,10 @@ export async function callClientResilientAi(options: {
   const { prompt, customGeminiKey, customGroqKey, preferredProvider = 'auto', model } = options;
 
   // 1. Explicit Groq preference or Groq model selected
-  const isGroqModel = Boolean(model && (model.includes('llama') || model.includes('deepseek')));
+  const isGroqModel = Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
   if (preferredProvider === 'groq' || isGroqModel) {
-    const groqRes = await callClientGroq(prompt, model || 'llama-3.3-70b-versatile', customGroqKey);
-    return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model})` };
+    const groqRes = await callClientGroq(prompt, model || 'openai/gpt-oss-120b', customGroqKey);
+    return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model} - ${groqRes.keyUsed})` };
   }
 
   let lastAiErr: any = null;
@@ -447,18 +483,18 @@ export async function callClientResilientAi(options: {
   }
 
   // =========================================================================
-  // 3. SIRA: GROQ CLOUD (ÜCRETSİZ & KOTA BAĞIMSIZ LLAMA 3.3 70B & DEEPSEEK R1)
+  // 3. SIRA: GROQ CLOUD (ÜCRETSİZ & KOTA BAĞIMSIZ - 1. & 2. YEDEK GROQ ANAHTARLARI)
   // =========================================================================
-  const groqKey = (customGroqKey || localStorage.getItem('medsoru_groq_api_key') || '').trim();
-  if (groqKey) {
+  const groqKeys = getClientGroqKeys(customGroqKey);
+  if (groqKeys.length > 0) {
     try {
-      console.log('[Client AI Failover] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (Llama 3.3 70B) devreye sokuluyor...');
-      const groqRes = await callClientGroq(prompt, model || 'llama-3.3-70b-versatile', groqKey);
-      console.log(`[Client AI] ✓ 3. Sıra (Groq Cloud ${groqRes.model}) başarıyla yanıt üretti!`);
+      console.log(`[Client AI Failover] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
+      const groqRes = await callClientGroq(prompt, model || 'openai/gpt-oss-120b', customGroqKey);
+      console.log(`[Client AI] ✓ 3. Sıra (Groq Cloud ${groqRes.model} - ${groqRes.keyUsed}) başarıyla yanıt üretti!`);
       return {
         text: groqRes.text,
-        providerUsed: 'Groq Cloud (3. Sıra)',
-        planUsed: `Groq Llama 3.3 70B (${groqRes.model})`
+        providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
+        planUsed: `Groq (${groqRes.model})`
       };
     } catch (groqErr: any) {
       console.warn('[Client AI Failover] ⚠️ 3. Sıra (Groq Cloud) başarısız:', groqErr.message);
@@ -930,7 +966,7 @@ export const ApiService = {
 
     // Save to Firestore for cross-device cloud sync
     try {
-      await FirestoreDbService.saveQuestion(targetQuestion);
+      await multiDbManager.saveQuestion(targetQuestion);
     } catch (e) {
       console.warn('Firestore saveQuestion fallback', e);
     }
@@ -1029,7 +1065,7 @@ export const ApiService = {
     saveLocalDb(db);
 
     try {
-      await FirestoreDbService.saveQuestion(q);
+      await multiDbManager.saveQuestion(q);
     } catch (e) {
       console.warn('Firestore saveQuestion fallback in editUserQuestion:', e);
     }
@@ -1047,7 +1083,7 @@ export const ApiService = {
     saveLocalDb(db);
 
     try {
-      await FirestoreDbService.saveQuestion(q);
+      await multiDbManager.saveQuestion(q);
     } catch (e) {
       console.warn('Firestore updateQuestionLectureMatch fallback', e);
     }
@@ -1231,7 +1267,7 @@ export const ApiService = {
     saveLocalDb(db);
 
     try {
-      await FirestoreDbService.saveQuestion(q);
+      await multiDbManager.saveQuestion(q);
     } catch (e) {
       console.warn('Firestore addFragment fallback', e);
     }
@@ -1261,7 +1297,7 @@ export const ApiService = {
       upvotesCount = q.upvotes || 0;
       saveLocalDb(db);
       try {
-        await FirestoreDbService.saveQuestion(q);
+        await multiDbManager.saveQuestion(q);
       } catch (e) {}
     }
 
@@ -1298,7 +1334,7 @@ export const ApiService = {
         }
         saveLocalDb(db);
         try {
-          await FirestoreDbService.saveQuestion(q);
+          await multiDbManager.saveQuestion(q);
         } catch (e) {}
       }
     }
@@ -1344,7 +1380,7 @@ export const ApiService = {
     saveLocalDb(db);
 
     try {
-      await FirestoreDbService.saveQuestion(q);
+      await multiDbManager.saveQuestion(q);
     } catch (e) {
       console.warn('Firestore addOption fallback', e);
     }
@@ -1370,7 +1406,7 @@ export const ApiService = {
         }
         saveLocalDb(db);
         try {
-          await FirestoreDbService.saveQuestion(q);
+          await multiDbManager.saveQuestion(q);
         } catch (e) {}
       }
     }
@@ -1391,7 +1427,7 @@ export const ApiService = {
       q.claimedAnswer = answer;
       saveLocalDb(db);
       try {
-        await FirestoreDbService.saveQuestion(q);
+        await multiDbManager.saveQuestion(q);
       } catch (e) {}
     }
   },
@@ -1548,6 +1584,7 @@ JSON FORMATI:
     // If both server and client fail, report honest error (never generate fake mock options)
     const combinedErr = `${serverErrorMsg} ${clientErrorMsg}`.trim();
     const cleanServerErr = serverErrorMsg && !serverErrorMsg.includes('405') ? serverErrorMsg : '';
+    const isQuota = combinedErr.toLowerCase().includes('quota') || combinedErr.toLowerCase().includes('limit') || combinedErr.includes('429');
     const finalErr = isQuota
       ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Ayarlar panelinden Groq API anahtarınızı tanımlayarak kotasız kullanıma geçebilir veya yeni bir API anahtarı tanımlayabilirsiniz.'
       : (clientErrorMsg || cleanServerErr || 'Yapay zeka rekonstrüksiyonu gerçekleştirilemedi. Lütfen Gemini/Groq API anahtarınızı veya kota durumunuzu kontrol edin.');
@@ -1610,7 +1647,7 @@ JSON FORMATI:
     saveLocalDb(db);
 
     try {
-      await FirestoreDbService.saveQuestion(saved);
+      await multiDbManager.saveQuestion(saved);
     } catch (e) {
       console.warn('Firestore adminUpdateQuestion fallback', e);
     }
@@ -1669,7 +1706,7 @@ JSON FORMATI:
       saveLocalDb(db);
 
       try {
-        await FirestoreDbService.saveQuestion(target);
+        await multiDbManager.saveQuestion(target);
         await FirestoreDbService.deleteQuestion(unassignedId);
       } catch (e) {}
       return target;
@@ -1683,7 +1720,7 @@ JSON FORMATI:
       saveLocalDb(db);
 
       try {
-        await FirestoreDbService.saveQuestion(unassigned);
+        await multiDbManager.saveQuestion(unassigned);
       } catch (e) {}
       return unassigned;
     }
@@ -2078,43 +2115,73 @@ JSON FORMATI:
     return await res.json();
   },
 
-  // Past Exam Questions (Çıkmış Sorular)
+  // Past Exam Questions (Çıkmış Sorular) - Ultra-Hızlı ve Ekonomik Cihaz Depolaması
   async getPastQuestions(params: { committeeId?: string; discipline?: string; year?: string; query?: string; includeAmbiguous?: boolean } = {}): Promise<any[]> {
-    try {
-      const qParams = new URLSearchParams();
-      if (params.committeeId && params.committeeId !== 'all') qParams.set('committeeId', params.committeeId);
-      if (params.discipline && params.discipline !== 'all') qParams.set('discipline', params.discipline);
-      if (params.year && params.year !== 'all') qParams.set('year', params.year);
-      if (params.query) qParams.set('query', params.query);
-      if (params.includeAmbiguous) qParams.set('includeAmbiguous', 'true');
+    let list: any[] = [];
 
-      const res = await fetch(`/api/past-exams?${qParams.toString()}`);
-      if (res.ok) {
-        const data = await res.json();
-        return data.questions || [];
-      }
-    } catch (e) {
-      console.warn('API getPastQuestions error:', e);
-    }
-    // MultiDbManager with automatic Supabase failover
+    // 0. Ultra-Hızlı Cihaz Hafızası (IndexedDB < 20ms - Sıfır Veritabanı Maliyeti)
     try {
-      const pastList = await multiDbManager.getPastQuestions();
-      if (pastList && pastList.length > 0) {
-        return pastList;
+      const cached = await pastQuestionsCache.getCachedQuestions();
+      if (cached && cached.length > 0) {
+        list = cached;
+        // Arka planda soru bazında artıksal senkronizasyon çalıştır (Bloklamaz, 0 gecikme)
+        pastQuestionsCache.syncWithRemote().catch(() => {});
       }
-    } catch (e) {
-      console.warn('multiDbManager getPastQuestions fallback', e);
+    } catch {}
+
+    // 1. Önbellek boşsa MultiDbManager üzerinden resilient yükle
+    if (list.length === 0) {
+      try {
+        const pastList = await multiDbManager.getPastQuestions();
+        if (pastList && pastList.length > 0) {
+          list = pastList;
+        }
+      } catch (e) {
+        console.warn('multiDbManager getPastQuestions fallback', e);
+      }
     }
 
-    // Fallback: load past questions from REST API on demand (avoids bundling 8.5MB in JS)
-    try {
-      const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
-      const res = await fetch(`${apiBase}/api/past-exams`);
-      if (res.ok) {
-        const json = await res.json();
-        if (json.questions && Array.isArray(json.questions)) return json.questions;
+    // 2. Halen boşsa REST API fallback
+    if (list.length === 0) {
+      try {
+        const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+        const res = await fetch(`${apiBase}/api/past-exams`);
+        if (res.ok) {
+          const json = await res.json();
+          if (json.questions && Array.isArray(json.questions)) {
+            list = json.questions;
+            pastQuestionsCache.saveBatch(list).catch(() => {});
+          }
+        }
+      } catch (e) {}
+    }
+
+    // Filtreleme (Cihaz hafızasındaki sorular üzerinde anlık 1ms bellek içi filtreleme)
+    if (list.length > 0) {
+      let filtered = list;
+      if (params.committeeId && params.committeeId !== 'all') {
+        filtered = filtered.filter((q) => q.committeeId === params.committeeId);
       }
-    } catch (e) {}
+      if (params.discipline && params.discipline !== 'all') {
+        const dLower = String(params.discipline).toLowerCase();
+        filtered = filtered.filter((q) => q.discipline?.toLowerCase().includes(dLower));
+      }
+      if (params.year && params.year !== 'all') {
+        filtered = filtered.filter((q) => q.examYear === params.year);
+      }
+      if (params.query && String(params.query).trim()) {
+        const qLower = String(params.query).toLowerCase().trim();
+        filtered = filtered.filter(
+          (q) =>
+            q.rawQuestion?.stem?.toLowerCase().includes(qLower) ||
+            q.reconstruction?.stem?.toLowerCase().includes(qLower) ||
+            q.topic?.toLowerCase().includes(qLower) ||
+            q.discipline?.toLowerCase().includes(qLower) ||
+            q.sourceFile?.toLowerCase().includes(qLower)
+        );
+      }
+      return filtered;
+    }
 
     return [];
   },
@@ -2588,7 +2655,7 @@ YALNIZCA GEÇERLİ JSON DÖN:
         prompt,
         customGeminiKey: customApiKey,
         customGroqKey,
-        preferredProvider: params.preferredProvider,
+        preferredProvider: params.preferredProvider as 'auto' | 'gemini' | 'groq' | undefined,
         model: params.model,
       });
 
@@ -2655,7 +2722,7 @@ YALNIZCA GEÇERLİ JSON DÖN:
         // MultiDb / Firestore mirror
         try {
           await multiDbManager.saveQuestion(res.data.question);
-          await FirestoreDbService.saveQuestion(res.data.question);
+          await multiDbManager.saveQuestion(res.data.question);
         } catch (_) {}
 
         return { success: true, question: res.data.question };
@@ -2693,7 +2760,7 @@ YALNIZCA GEÇERLİ JSON DÖN:
       saveLocalDb(db);
       try {
         await multiDbManager.saveQuestion(updated);
-        await FirestoreDbService.saveQuestion(updated);
+        await multiDbManager.saveQuestion(updated);
       } catch (_) {}
 
       return { success: true, question: updated };

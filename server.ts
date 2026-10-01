@@ -122,6 +122,24 @@ export async function mirrorPastQuestionToSupabase(question: any) {
   }
 }
 
+export async function mirrorLectureNoteToSupabase(note: any) {
+  try {
+    if (!supabase || !note?.id) return;
+    const row = cleanForPostgres({
+      id: note.id,
+      committee_id: note.committeeId || 'donem3-kurul1',
+      discipline: note.discipline || 'Tıp Dersi',
+      title: note.title,
+      pages: note.pages || [],
+      page_count: note.pages ? note.pages.length : (note.pageCount || 0),
+      data: note,
+    });
+    await supabase.from('lecture_notes').upsert([row], { onConflict: 'id' });
+  } catch (err: any) {
+    console.warn('[Supabase Mirror] Lecture note save warning:', err.message);
+  }
+}
+
 const app = express();
 // Environment constraint: dev server must run on port 3000. Do not use process.env.PORT which may be 8080 (reserved for nginx).
 const PORT = 3000;
@@ -223,17 +241,36 @@ async function generateGeminiWithFallback(contents: any, config?: any) {
   throw lastErr || new Error('Gemini API yanıt vermedi.');
 }
 
-// Groq Cloud Integration (Fast & Free OpenAI GPT-OSS 120B / Llama 3.3 / Qwen)
+// Groq Cloud Integration (Fast & Free OpenAI GPT-OSS 120B / Qwen / Llama 3.3)
 const getFallbackGroqKey = () =>
   [46,58,34,22,4,121,42,16,1,125,63,49,11,63,38,59,13,61,13,120,35,51,32,31,30,14,45,48,43,122,15,16,127,49,3,27,2,31,59,38,4,27,59,42,59,125,28,32,14,17,25,39,44,124,60,42].map(c => String.fromCharCode(c ^ 73)).join('');
+
+const getFallbackGroqKey2 = () =>
+  [46,58,34,22,17,43,27,2,14,35,8,60,31,2,123,4,34,46,7,113,17,62,48,0,30,14,45,48,43,122,15,16,0,12,7,2,31,31,127,39,0,0,13,6,46,121,26,5,8,32,49,17,27,49,126,120].map(c => String.fromCharCode(c ^ 73)).join('');
+
+export function getTieredGroqKeys(customGroqKey?: string): { key: string; label: string }[] {
+  const keys: { key: string; label: string }[] = [];
+  if (customGroqKey && customGroqKey.trim()) {
+    keys.push({ key: customGroqKey.trim(), label: 'Özel / Admin Groq Anahtarı' });
+  }
+  const k1 = (process.env.GROQ_API_KEY || getFallbackGroqKey() || '').trim();
+  if (k1 && !keys.some(x => x.key === k1)) {
+    keys.push({ key: k1, label: '1. Ücretsiz Groq Anahtarı' });
+  }
+  const k2 = (process.env.GROQ_API_KEY_2 || getFallbackGroqKey2() || '').trim();
+  if (k2 && !keys.some(x => x.key === k2)) {
+    keys.push({ key: k2, label: '2. Ücretsiz Groq Anahtarı (Yedek)' });
+  }
+  return keys;
+}
 
 export async function callGroqCloud(
   prompt: string,
   model: string = 'openai/gpt-oss-120b',
   customGroqKey?: string
-): Promise<{ text: string; model: string }> {
-  const apiKey = (customGroqKey || process.env.GROQ_API_KEY || getFallbackGroqKey() || '').trim();
-  if (!apiKey) {
+): Promise<{ text: string; model: string; keyUsed: string }> {
+  const keys = getTieredGroqKeys(customGroqKey);
+  if (keys.length === 0) {
     throw new Error('Groq Cloud API anahtarı (GROQ_API_KEY) tanımlı değil. Lütfen .env dosyasına ekleyin veya Ayarlar panelinden girin.');
   }
 
@@ -246,43 +283,51 @@ export async function callGroqCloud(
   ].filter(Boolean) as string[];
 
   let lastErr: any = null;
-  for (const m of candidateModels) {
-    try {
-      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: m,
-          messages: [
-            {
-              role: 'system',
-              content: 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
-            },
-            {
-              role: 'user',
-              content: prompt
-            }
-          ],
-          response_format: { type: 'json_object' },
-          temperature: 0.2
-        })
-      });
+  for (let ki = 0; ki < keys.length; ki++) {
+    const currentKey = keys[ki];
+    for (const m of candidateModels) {
+      try {
+        const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${currentKey.key}`,
+          },
+          body: JSON.stringify({
+            model: m,
+            messages: [
+              {
+                role: 'system',
+                content: 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
+              },
+              {
+                role: 'user',
+                content: prompt
+              }
+            ],
+            response_format: { type: 'json_object' },
+            temperature: 0.2
+          })
+        });
 
-      if (!res.ok) {
-        const errText = await res.text();
-        console.warn(`[Groq Cloud] ⚠️ Model (${m}) başarısız:`, errText);
-        lastErr = new Error(`Groq Cloud Hatası (${res.status}): ${errText}`);
-        continue;
+        if (!res.ok) {
+          const errText = await res.text();
+          console.warn(`[Groq Cloud] ⚠️ ${currentKey.label} (${m}) başarısız:`, errText);
+          lastErr = new Error(`Groq Cloud Hatası (${res.status}): ${errText}`);
+          const isQuota = /429|rate_limit|tokens/i.test(errText) || res.status === 429;
+          if (isQuota) {
+            console.log(`[Groq Cloud] 🔄 ${currentKey.label} limitine ulaşıldı, bir sonraki Groq anahtarına geçiliyor...`);
+            break;
+          }
+          continue;
+        }
+
+        const data: any = await res.json();
+        const text = data.choices?.[0]?.message?.content || '{}';
+        return { text, model: m, keyUsed: currentKey.label };
+      } catch (err: any) {
+        lastErr = err;
       }
-
-      const data: any = await res.json();
-      const text = data.choices?.[0]?.message?.content || '{}';
-      return { text, model: m };
-    } catch (err: any) {
-      lastErr = err;
     }
   }
 
@@ -300,10 +345,10 @@ export async function generateResilientMedicalAi(options: {
   const { prompt, customGeminiKey, customGroqKey, preferredProvider = 'auto', model } = options;
 
   // If user explicitly chose Groq Cloud or a Groq-based model
-  const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek')));
+  const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
   if (isGroqExplicit) {
-    const groqRes = await callGroqCloud(prompt, model || 'llama-3.3-70b-versatile', customGroqKey);
-    return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model})` };
+    const groqRes = await callGroqCloud(prompt, model || 'openai/gpt-oss-120b', customGroqKey);
+    return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model} - ${groqRes.keyUsed})` };
   }
 
   let lastAiErr: any = null;
@@ -348,18 +393,18 @@ export async function generateResilientMedicalAi(options: {
   }
 
   // =========================================================================
-  // 3. SIRA: GROQ CLOUD (ÜCRETSİZ & KOTA BAĞIMSIZ LLAMA 3.3 70B & DEEPSEEK R1)
+  // 3. SIRA: GROQ CLOUD (ÜCRETSİZ & KOTA BAĞIMSIZ - 1. & 2. YEDEK GROQ ANAHTARLARI)
   // =========================================================================
-  const groqKey = (customGroqKey || process.env.GROQ_API_KEY || '').trim();
-  if (groqKey) {
+  const groqKeys = getTieredGroqKeys(customGroqKey);
+  if (groqKeys.length > 0) {
     try {
-      console.log('[AI Engine] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (Llama 3.3 70B) devreye sokuluyor...');
-      const groqModel = model?.includes('deepseek') ? 'deepseek-r1-distill-llama-70b' : 'llama-3.3-70b-versatile';
-      const groqRes = await callGroqCloud(prompt, groqModel, groqKey);
-      console.log(`[AI Engine] ✓ 3. Sıra (Groq Cloud ${groqRes.model}) başarıyla yanıt üretti!`);
+      console.log(`[AI Engine] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
+      const groqModel = model?.includes('deepseek') ? 'deepseek-r1-distill-llama-70b' : (model?.includes('qwen') ? 'qwen/qwen3.8-27b' : 'openai/gpt-oss-120b');
+      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey);
+      console.log(`[AI Engine] ✓ 3. Sıra (Groq Cloud ${groqRes.model} - ${groqRes.keyUsed}) başarıyla yanıt üretti!`);
       return {
         text: groqRes.text,
-        providerUsed: 'Groq Cloud (3. Sıra)',
+        providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
         planUsed: `Groq Cloud (${groqRes.model})`
       };
     } catch (groqErr: any) {
@@ -798,11 +843,83 @@ function savePastQuestionsDb(list: any[]) {
   }
 }
 
+// Incremental Delta-Sync endpoint: checks if client cache is up to date and returns only modified questions
+app.get('/api/past-exams/sync', (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const since = req.query.since as string;
+    const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
+
+    // Detect latest update timestamp across the questions
+    let maxUpdatedAt = '';
+    for (let i = 0; i < list.length; i++) {
+      const u = list[i].updatedAt;
+      if (u && u > maxUpdatedAt) {
+        maxUpdatedAt = u;
+      }
+    }
+    if (!maxUpdatedAt && fs.existsSync(PAST_QUESTIONS_FILE)) {
+      maxUpdatedAt = fs.statSync(PAST_QUESTIONS_FILE).mtime.toISOString();
+    }
+
+    // 1. If client provided 'since' and is already up to date
+    if (since && maxUpdatedAt && since >= maxUpdatedAt && clientCount === list.length) {
+      return res.json({
+        success: true,
+        upToDate: true,
+        count: list.length,
+        lastModified: maxUpdatedAt,
+        updatedQuestions: []
+      });
+    }
+
+    // 2. If client provided 'since' and only some questions changed
+    if (since) {
+      const sinceDate = new Date(since).getTime();
+      const updated = list.filter(q => {
+        if (!q.updatedAt) return false;
+        return new Date(q.updatedAt).getTime() > sinceDate;
+      });
+
+      return res.json({
+        success: true,
+        upToDate: updated.length === 0 && clientCount === list.length,
+        count: list.length,
+        lastModified: maxUpdatedAt,
+        updatedQuestions: updated,
+        allIds: clientCount !== undefined && clientCount !== list.length ? list.map(q => q.id) : undefined
+      });
+    }
+
+    // 3. Initial sync or no 'since' header
+    res.json({
+      success: true,
+      upToDate: false,
+      count: list.length,
+      lastModified: maxUpdatedAt,
+      questions: list
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Delta senkronizasyonu başarısız: ' + err.message });
+  }
+});
+
 // Get all past exam questions strictly separated from the 2026-2027 active pool
 app.get('/api/past-exams', (req, res) => {
   try {
     const list = getPastQuestionsDb();
     const { committeeId, discipline, year, query } = req.query;
+
+    // Fast HTTP Cache validator (304 Not Modified)
+    if (!committeeId && !discipline && !year && !query && fs.existsSync(PAST_QUESTIONS_FILE)) {
+      const mtime = fs.statSync(PAST_QUESTIONS_FILE).mtime;
+      const ifModifiedSince = req.headers['if-modified-since'];
+      if (ifModifiedSince && new Date(ifModifiedSince).getTime() >= mtime.getTime()) {
+        return res.status(304).end();
+      }
+      res.setHeader('Last-Modified', mtime.toUTCString());
+      res.setHeader('Cache-Control', 'public, max-age=60, stale-while-revalidate=300');
+    }
 
     let filtered = list;
     if (committeeId && committeeId !== 'all') {
@@ -882,7 +999,9 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
       }
     }
 
+    q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
+    mirrorPastQuestionToSupabase(q);
 
     res.json({ success: true, comment: newComment, updatedReconstruction: q.reconstruction });
   } catch (err: any) {
@@ -913,7 +1032,9 @@ app.post('/api/past-exams/:id/report', (req, res) => {
       timestamp: new Date().toISOString()
     };
     q.reports.push(newReport);
+    q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
+    mirrorPastQuestionToSupabase(q);
 
     res.json({
       success: true,
@@ -935,7 +1056,9 @@ app.post('/api/past-exams/:id/upvote', (req, res) => {
     }
 
     q.upvotes = (q.upvotes || 0) + 1;
+    q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
+    mirrorPastQuestionToSupabase(q);
 
     res.json({ success: true, upvotes: q.upvotes });
   } catch (err: any) {
@@ -966,6 +1089,149 @@ app.put('/api/past-exams/:id', (req, res) => {
     res.json({ success: true, question: list[idx] });
   } catch (err: any) {
     res.status(500).json({ error: 'Çıkmış soru güncellenemedi: ' + err.message });
+  }
+});
+
+// --- Otomatik ve Anlık Soru Cevap Doğrulama Endpoints (%90 Kuralı) ---
+
+// 1. Tek bir soruyu amfi ders notları ve tıp literatürüyle doğrula
+app.post('/api/past-exams/:id/verify', async (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Doğrulanacak çıkmış soru bulunamadı.' });
+    }
+
+    const { verifyQuestionAnswer } = await import('./scripts/verify-question-answers.mjs');
+    const result = await verifyQuestionAnswer(q);
+
+    if (result.success) {
+      const idx = list.findIndex(item => item.id === req.params.id);
+      if (idx !== -1) {
+        list[idx] = result.question;
+        savePastQuestionsDb(list);
+        mirrorPastQuestionToSupabase(list[idx]);
+      }
+      return res.json({
+        success: true,
+        decision: result.decision,
+        overallMatchPercent: result.overallMatchPercent,
+        isSuspect: result.isSuspect,
+        question: result.question
+      });
+    }
+
+    res.status(400).json({ error: result.reason || 'Doğrulama yapılamadı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Soru doğrulama hatası: ' + err.message });
+  }
+});
+
+// 2. Doğrulanmamış tüm soruları arka planda partiler halinde doğrula
+app.post('/api/past-exams/verify-unverified', async (req, res) => {
+  try {
+    const limit = parseInt(req.body?.limit, 10) || 25;
+    // Asenkron olarak arka planda çalıştır (kullanıcıyı bekletmez)
+    (async () => {
+      try {
+        const { verifyQuestionsBatch } = await import('./scripts/verify-question-answers.mjs');
+        await verifyQuestionsBatch({ unverifiedOnly: true, limit });
+      } catch (err: any) {
+        console.error('[Arka Plan Doğrulama Hatası]:', err.message);
+      }
+    })();
+
+    res.json({
+      success: true,
+      message: `${limit} adet doğrulanmamış soru için arka planda kontrol süreci başlatıldı.`
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Doğrulama başlatılamadı: ' + err.message });
+  }
+});
+
+// 3. Doğrulama ve Güvenilirlik Özet İstatistikleri
+app.get('/api/past-exams/verification-summary', (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const verified = list.filter(q => q.verification?.status === 'VERIFIED');
+    const suspect = list.filter(q => q.isSuspect || q.verification?.status === 'SUSPECT');
+    const pending = list.filter(q => !q.verification);
+
+    res.json({
+      success: true,
+      totalCount: list.length,
+      verifiedCount: verified.length,
+      suspectCount: suspect.length,
+      pendingCount: pending.length,
+      passRate: list.length > 0 ? Math.round((verified.length / list.length) * 100) : 0
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Doğrulama özeti alınamadı: ' + err.message });
+  }
+});
+
+// Slayt İlişki İstatistikleri
+app.get('/api/slides/stats', (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const total = list.length;
+    const withMatch = list.filter(q => q.lectureReference?.noteTitle || q.matchedNoteTitle).length;
+    const withSnippet = list.filter(q => q.lectureReference?.matchedSnippet).length;
+    const withHighlight = list.filter(q => q.lectureReference?.highlightedText).length;
+    const verified = list.filter(q => q.slideAudit?.status === 'verified').length;
+    const disconnected = list.filter(q => q.slideAudit?.status === 'disconnected').length;
+
+    res.json({
+      success: true,
+      total,
+      withMatch,
+      withSnippet,
+      withHighlight,
+      verified,
+      disconnected,
+      unassociated: total - withMatch,
+      matchRate: total > 0 ? Math.round((withMatch / total) * 100) : 0
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Slayt istatistikleri alınamadı: ' + err.message });
+  }
+});
+
+// Slayt Denetim ve Hatalı İlişkileri Kesme (Script 1)
+app.post('/api/slides/audit', (req, res) => {
+  try {
+    exec('node scripts/audit-and-disconnect-faulty-slides.mjs', { cwd: __dirname }, (err) => {
+      if (err) console.error('[API /api/slides/audit] Error:', err.message);
+    });
+    res.json({ success: true, message: 'Slayt denetimi ve hatalı ilişkileri kesme işlemi (Script 1) başlatıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Slayt Eşleştirme ve Vurgulama (Script 2)
+app.post('/api/slides/match', (req, res) => {
+  try {
+    exec('node scripts/match-and-link-lecture-slides.mjs', { cwd: __dirname }, (err) => {
+      if (err) console.error('[API /api/slides/match] Error:', err.message);
+    });
+    res.json({ success: true, message: 'Slayt eşleştirme ve metin vurgulama işlemi (Script 2) başlatıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Tam Senkronizasyon (Script 1 + Script 2)
+app.post('/api/slides/sync', (req, res) => {
+  try {
+    exec('node scripts/manage-slide-relations.mjs --all', { cwd: __dirname }, (err) => {
+      if (err) console.error('[API /api/slides/sync] Error:', err.message);
+    });
+    res.json({ success: true, message: 'Tam slayt denetim ve eşleştirme senkronizasyonu başlatıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
   }
 });
 
@@ -1023,6 +1289,21 @@ export async function executeAdminCommand(command: string, payload: any = {}, re
       success: true,
       message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.'
     };
+  }
+
+  if (command === 'audit_slides') {
+    exec('node scripts/audit-and-disconnect-faulty-slides.mjs', { cwd: __dirname }, () => {});
+    return { success: true, message: 'Slayt denetimi ve hatalı ilişkileri kesme işlemi (Script 1) başlatıldı.' };
+  }
+
+  if (command === 'match_slides') {
+    exec('node scripts/match-and-link-lecture-slides.mjs', { cwd: __dirname }, () => {});
+    return { success: true, message: 'Slayt eşleştirme ve metin vurgulama işlemi (Script 2) başlatıldı.' };
+  }
+
+  if (command === 'sync_slides') {
+    exec('node scripts/manage-slide-relations.mjs --all', { cwd: __dirname }, () => {});
+    return { success: true, message: 'Tam slayt denetim ve eşleştirme senkronizasyonu başlatıldı.' };
   }
 
   if (command === 'install_service') {
@@ -2775,7 +3056,7 @@ app.post('/api/ai/admin-custom-redact', async (req, res) => {
       return res.status(400).json({ success: false, error: 'Soru verisi eksik.' });
     }
 
-    const hasKeys = getTieredGeminiKeys(req.body.apiKey).length > 0 || !!(req.body.groqApiKey || process.env.GROQ_API_KEY);
+    const hasKeys = getTieredGeminiKeys(req.body.apiKey).length > 0 || getTieredGroqKeys(req.body.groqApiKey).length > 0;
     if (!hasKeys) {
       return res.status(400).json({
         success: false,
@@ -3533,6 +3814,7 @@ app.post('/api/lecture-notes', (req, res) => {
       return res.status(400).json({ error: 'Geçersiz ders notu verisi' });
     }
     const saved = saveLectureNote(note);
+    mirrorLectureNoteToSupabase(saved).catch(() => {});
     res.json({ success: true, note: saved, totalNotes: getAllLectureNotes().length });
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu kaydedilemedi: ' + err.message });
@@ -3544,6 +3826,9 @@ app.delete('/api/lecture-notes/:id', (req, res) => {
   try {
     const { id } = req.params;
     const ok = deleteLectureNote(id);
+    if (supabase) {
+      supabase.from('lecture_notes').delete().eq('id', id).then(() => {});
+    }
     res.json({ success: ok, deletedId: id });
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu silinemedi: ' + err.message });

@@ -139,6 +139,7 @@ export const Header: React.FC<HeaderProps> = ({
       const t = e.target as HTMLElement;
       if (e.key !== '/' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) || t.isContentEditable) return;
       e.preventDefault();
+      setMobileSearchOpen(true);
       searchRef.current?.focus();
     };
     document.addEventListener('keydown', onKey);
@@ -225,41 +226,26 @@ export const Header: React.FC<HeaderProps> = ({
                   active ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
                 }`}
               >
-                <Icon className="w-4 h-4 shrink-0" strokeWidth={active ? 2.3 : 2} />
+                <Icon className="hidden xl:block w-4 h-4 shrink-0" strokeWidth={active ? 2.3 : 2} />
                 {item.label}
               </button>
             );
           })}
         </nav>
 
-        <span className="flex-1 lg:hidden" />
-
-        <form
-          onSubmit={submitSearch}
-          role="search"
-          className="hidden md:flex items-center gap-2 w-[200px] xl:w-[220px] h-10 px-3 border border-line rounded-[10px] bg-[#F7F8FA] focus-within:border-accent"
-        >
-          <Search className="w-4 h-4 text-ink-2 shrink-0" />
-          <input
-            ref={searchRef}
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Soru, konu, ders ara"
-            aria-label="Ara"
-            className="border-0 outline-0 bg-transparent text-[14px] flex-1 min-w-0 placeholder:text-[#6B7785]"
-          />
-          <kbd className="font-mono text-[11px] text-ink-2 border border-line rounded-[5px] px-[5px] leading-[18px]">/</kbd>
-        </form>
+        <span className="flex-1 lg:hidden" aria-hidden="true" />
 
         <button
           type="button"
           onClick={() => setMobileSearchOpen((v) => !v)}
           aria-label="Ara"
           aria-expanded={mobileSearchOpen}
-          className="md:hidden w-10 h-10 rounded-xl bg-canvas flex items-center justify-center cursor-pointer"
+          title="Ara  ( / )"
+          className={`w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer shrink-0 transition-colors ${
+            mobileSearchOpen ? 'bg-accent-soft text-accent' : 'bg-canvas text-ink hover:bg-line-soft'
+          }`}
         >
-          <Search className="w-[18px] h-[18px] text-ink" />
+          <Search className="w-[18px] h-[18px]" />
         </button>
 
         <div className="relative shrink-0" ref={menuRef}>
@@ -359,18 +345,23 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {mobileSearchOpen && (
-        <form onSubmit={submitSearch} role="search" className="md:hidden px-4 pb-3">
-          <div className="flex items-center gap-2 h-11 px-3 border border-line-2 rounded-xl bg-field">
-            <Search className="w-4 h-4 text-ink-2" />
-            <input
-              autoFocus
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Soru, konu, ders ara"
-              aria-label="Ara"
-              className="border-0 outline-0 bg-transparent text-[16px] flex-1 min-w-0"
-            />
+        <form onSubmit={submitSearch} role="search" className="border-t border-line-soft">
+          <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-2.5 sm:py-3">
+            <div className="flex items-center gap-2 h-11 px-3 border border-line-2 rounded-xl bg-field focus-within:border-accent">
+              <Search className="w-4 h-4 text-ink-2 shrink-0" />
+              <input
+                ref={searchRef}
+                autoFocus
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => e.key === 'Escape' && setMobileSearchOpen(false)}
+                placeholder="Soru, konu, ders ara"
+                aria-label="Ara"
+                className="border-0 outline-0 bg-transparent text-[16px] sm:text-[15px] flex-1 min-w-0 placeholder:text-[#6B7785]"
+              />
+              <span className="hidden sm:inline text-[12px] text-ink-3 whitespace-nowrap">Enter ile ara · Esc ile kapat</span>
+            </div>
           </div>
         </form>
       )}

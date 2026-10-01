@@ -91,6 +91,56 @@ export function getSupabaseClient(): SupabaseClient | null {
   }
 }
 
+let liveSyncChannel: any = null;
+
+export function getLiveSyncChannel() {
+  const client = getSupabaseClient();
+  if (!client) return null;
+  if (!liveSyncChannel) {
+    liveSyncChannel = client.channel('medsoru-live-sync', {
+      config: { broadcast: { self: false } },
+    });
+    liveSyncChannel.subscribe();
+  }
+  return liveSyncChannel;
+}
+
+export function broadcastLiveEvent(event: string, payload: any) {
+  try {
+    const ch = getLiveSyncChannel();
+    if (ch) {
+      ch.send({ type: 'broadcast', event, payload }).catch(() => {});
+    }
+  } catch (_) {}
+}
+
+function mapRowToPastQuestion(row: any): QuestionItem {
+  return {
+    ...(row.data || {}),
+    id: row.id,
+    committeeId: row.committee_id || row.data?.committeeId,
+    discipline: row.discipline || row.data?.discipline,
+    topic: row.topic || row.data?.topic,
+    examYear: row.exam_year || row.data?.examYear,
+    sourceFile: row.source_file || row.data?.sourceFile,
+    aiCategory: row.ai_category || row.data?.aiCategory,
+    claimedAnswer: row.claimed_answer || row.data?.claimedAnswer,
+    rawQuestion: row.raw_question || row.data?.rawQuestion,
+    reconstruction: row.reconstruction || row.data?.reconstruction,
+    isSuspect: row.is_suspect ?? row.data?.isSuspect ?? false,
+    isAmbiguous: row.is_ambiguous ?? row.data?.isAmbiguous ?? false,
+    isLocked: row.is_locked ?? row.data?.isLocked ?? false,
+    upvotes: row.upvotes ?? row.data?.upvotes ?? 0,
+    comments: row.comments || row.data?.comments || [],
+    reports: row.reports || row.data?.reports || [],
+    customRedactedBy: row.custom_redacted_by || row.data?.customRedactedBy,
+    customRedactedAt: row.custom_redacted_at || row.data?.customRedactedAt,
+    customRedactionPrompt: row.custom_redaction_prompt || row.data?.customRedactionPrompt,
+    createdAt: row.created_at || row.data?.createdAt,
+    updatedAt: row.updated_at || row.data?.updatedAt,
+  };
+}
+
 export const SupabaseDbService = {
   isConfigured(): boolean {
     const { url, key } = getSupabaseConfig();
@@ -279,32 +329,73 @@ export const SupabaseDbService = {
       const { data, error } = await client.from('past_questions').select('*').limit(5000);
       if (error || !data) return [];
 
-      return data.map((row: any) => ({
-        ...(row.data || {}),
-        id: row.id,
-        committeeId: row.committee_id || row.data?.committeeId,
-        discipline: row.discipline || row.data?.discipline,
-        topic: row.topic || row.data?.topic,
-        examYear: row.exam_year || row.data?.examYear,
-        sourceFile: row.source_file || row.data?.sourceFile,
-        aiCategory: row.ai_category || row.data?.aiCategory,
-        claimedAnswer: row.claimed_answer || row.data?.claimedAnswer,
-        rawQuestion: row.raw_question || row.data?.rawQuestion,
-        reconstruction: row.reconstruction || row.data?.reconstruction,
-        isSuspect: row.is_suspect ?? row.data?.isSuspect ?? false,
-        isAmbiguous: row.is_ambiguous ?? row.data?.isAmbiguous ?? false,
-        isLocked: row.is_locked ?? row.data?.isLocked ?? false,
-        upvotes: row.upvotes ?? row.data?.upvotes ?? 0,
-        comments: row.comments || row.data?.comments || [],
-        reports: row.reports || row.data?.reports || [],
-        customRedactedBy: row.custom_redacted_by || row.data?.customRedactedBy,
-        customRedactedAt: row.custom_redacted_at || row.data?.customRedactedAt,
-        customRedactionPrompt: row.custom_redaction_prompt || row.data?.customRedactionPrompt,
-        createdAt: row.created_at || row.data?.createdAt,
-        updatedAt: row.updated_at || row.data?.updatedAt,
-      }));
+      return data.map(mapRowToPastQuestion);
     } catch (err) {
       console.warn('Supabase getAllPastQuestions error:', err);
+      return [];
+    }
+  },
+
+  // Past Questions Meta (Lightweight ~100 bytes check to test if anything changed)
+  async getPastQuestionsMeta(): Promise<{ latestUpdatedAt: string | null; count: number }> {
+    const client = getSupabaseClient();
+    if (!client) return { latestUpdatedAt: null, count: 0 };
+    try {
+      const { data, count, error } = await client
+        .from('past_questions')
+        .select('updated_at', { count: 'exact' })
+        .order('updated_at', { ascending: false })
+        .limit(1);
+
+      if (error) {
+        console.warn('Supabase getPastQuestionsMeta error:', error);
+        return { latestUpdatedAt: null, count: 0 };
+      }
+
+      return {
+        latestUpdatedAt: data?.[0]?.updated_at || null,
+        count: count ?? 0,
+      };
+    } catch (err) {
+      console.warn('Supabase getPastQuestionsMeta exception:', err);
+      return { latestUpdatedAt: null, count: 0 };
+    }
+  },
+
+  // Past Questions Delta (Fetch ONLY questions modified since timestamp)
+  async getPastQuestionsDelta(sinceIso: string): Promise<QuestionItem[]> {
+    const client = getSupabaseClient();
+    if (!client) return [];
+    try {
+      const { data, error } = await client
+        .from('past_questions')
+        .select('*')
+        .gt('updated_at', sinceIso)
+        .order('updated_at', { ascending: true })
+        .limit(2000);
+
+      if (error || !data) return [];
+      return data.map(mapRowToPastQuestion);
+    } catch (err) {
+      console.warn('Supabase getPastQuestionsDelta error:', err);
+      return [];
+    }
+  },
+
+  // Past Questions IDs (Lightweight ~25KB check to detect deleted questions when count decreases)
+  async getPastQuestionsIds(): Promise<string[]> {
+    const client = getSupabaseClient();
+    if (!client) return [];
+    try {
+      const { data, error } = await client
+        .from('past_questions')
+        .select('id')
+        .limit(10000);
+
+      if (error || !data) return [];
+      return data.map((r: any) => r.id);
+    } catch (err) {
+      console.warn('Supabase getPastQuestionsIds error:', err);
       return [];
     }
   },
@@ -487,6 +578,261 @@ export const SupabaseDbService = {
     }
   },
 
+  async batchSaveLectureNotes(notes: LectureNote[]): Promise<{ success: boolean; count: number }> {
+    const client = getSupabaseClient();
+    if (!client || notes.length === 0) return { success: false, count: 0 };
+
+    let totalSaved = 0;
+    const batchSize = 50;
+    try {
+      for (let i = 0; i < notes.length; i += batchSize) {
+        const chunk = notes.slice(i, i + batchSize);
+        const rows = cleanForPostgres(chunk.map((n) => ({
+          id: n.id,
+          committee_id: n.committeeId || 'donem3-kurul1',
+          discipline: n.discipline || 'Tıp Dersi',
+          title: n.title,
+          pages: n.pages || [],
+          page_count: n.pageCount || (n.pages ? n.pages.length : 0),
+          data: n,
+        })));
+        const { error } = await client.from('lecture_notes').upsert(rows, { onConflict: 'id' });
+        if (!error) totalSaved += chunk.length;
+      }
+      return { success: true, count: totalSaved };
+    } catch (err) {
+      console.warn('Supabase batchSaveLectureNotes error:', err);
+      return { success: false, count: totalSaved };
+    }
+  },
+
+  async deleteLectureNote(id: string): Promise<boolean> {
+    const client = getSupabaseClient();
+    if (!client || !id) return false;
+    try {
+      const { error } = await client.from('lecture_notes').delete().eq('id', id);
+      return !error;
+    } catch (err) {
+      console.warn('Supabase deleteLectureNote error:', err);
+      return false;
+    }
+  },
+
+  async deleteQuestion(id: string): Promise<boolean> {
+    const client = getSupabaseClient();
+    if (!client || !id) return false;
+    try {
+      const { error } = await client.from('questions').delete().eq('id', id);
+      return !error;
+    } catch (err) {
+      console.warn('Supabase deleteQuestion error:', err);
+      return false;
+    }
+  },
+
+  async deletePastQuestion(id: string): Promise<boolean> {
+    const client = getSupabaseClient();
+    if (!client || !id) return false;
+    try {
+      const { error } = await client.from('past_questions').delete().eq('id', id);
+      return !error;
+    } catch (err) {
+      console.warn('Supabase deletePastQuestion error:', err);
+      return false;
+    }
+  },
+
+  // Realtime Subscriptions
+  subscribeToTable(table: string, callback: (payload: any) => void): () => void {
+    const client = getSupabaseClient();
+    if (!client) return () => {};
+
+    const channelName = `realtime:${table}:${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
+    const channel = client
+      .channel(channelName)
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table },
+        (payload) => {
+          try {
+            callback(payload);
+          } catch (e) {
+            console.warn(`[Supabase Realtime] ${table} callback error:`, e);
+          }
+        }
+      )
+      .subscribe((status, err) => {
+        if (err) {
+          console.warn(`[Supabase Realtime] ${table} subscription error:`, err);
+        }
+      });
+
+    return () => {
+      try {
+        client.removeChannel(channel);
+      } catch (_) {}
+    };
+  },
+
+  subscribeToQuestions(callback: (payload: any) => void): () => void {
+    return this.subscribeToTable('questions', callback);
+  },
+
+  subscribeToPastQuestions(callback: (payload: any) => void): () => void {
+    return this.subscribeToTable('past_questions', callback);
+  },
+
+  subscribeToLectureNotes(callback: (payload: any) => void): () => void {
+    return this.subscribeToTable('lecture_notes', callback);
+  },
+
+  subscribeToCommittees(callback: (payload: any) => void): () => void {
+    return this.subscribeToTable('committees', callback);
+  },
+
+  // Detailed Diagnostics for Online Status Check
+  async getDetailedStatus(): Promise<{
+    connected: boolean;
+    latencyMs: number;
+    counts: {
+      questions: number;
+      pastQuestions: number;
+      lectureNotes: number;
+      committees: number;
+      users: number;
+    };
+    error?: string;
+  }> {
+    const client = getSupabaseClient();
+    if (!client) {
+      return {
+        connected: false,
+        latencyMs: 0,
+        counts: { questions: 0, pastQuestions: 0, lectureNotes: 0, committees: 0, users: 0 },
+        error: 'Supabase URL veya API Anahtarı eksik.',
+      };
+    }
+
+    const start = Date.now();
+    try {
+      const [resC, resQ, resP, resL, resU] = await Promise.all([
+        client.from('committees').select('id', { count: 'exact', head: true }),
+        client.from('questions').select('id', { count: 'exact', head: true }),
+        client.from('past_questions').select('id', { count: 'exact', head: true }),
+        client.from('lecture_notes').select('id', { count: 'exact', head: true }),
+        client.from('users').select('uid', { count: 'exact', head: true }),
+      ]);
+
+      const latencyMs = Date.now() - start;
+
+      if (resC.error && (resC.error.message.includes('relation') || resC.error.message.includes('schema cache'))) {
+        return {
+          connected: false,
+          latencyMs,
+          counts: { questions: 0, pastQuestions: 0, lectureNotes: 0, committees: 0, users: 0 },
+          error: 'Tablolar henüz oluşturulmamış (SQL Şeması çalıştırılmalı).',
+        };
+      }
+
+      return {
+        connected: !resC.error,
+        latencyMs,
+        counts: {
+          committees: resC.count || 0,
+          questions: resQ.count || 0,
+          pastQuestions: resP.count || 0,
+          lectureNotes: resL.count || 0,
+          users: resU.count || 0,
+        },
+        error: resC.error ? resC.error.message : undefined,
+      };
+    } catch (err: any) {
+      return {
+        connected: false,
+        latencyMs: Date.now() - start,
+        counts: { questions: 0, pastQuestions: 0, lectureNotes: 0, committees: 0, users: 0 },
+        error: err.message,
+      };
+    }
+  },
+
+  // Active Realtime Verification Test
+  async testRealtimeRoundtrip(timeoutMs: number = 4000): Promise<{
+    success: boolean;
+    latencyMs: number;
+    message: string;
+  }> {
+    const client = getSupabaseClient();
+    if (!client) {
+      return { success: false, latencyMs: 0, message: 'Supabase yapılandırılmamış.' };
+    }
+
+    return new Promise((resolve) => {
+      const testId = `rt-ping-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+      const startTime = Date.now();
+      let finished = false;
+
+      const timer = setTimeout(() => {
+        if (!finished) {
+          finished = true;
+          try { client.removeChannel(channel); } catch (_) {}
+          resolve({
+            success: false,
+            latencyMs: Date.now() - startTime,
+            message: 'Realtime zaman aşımına uğradı (PostgreSQL yayınları supabase_realtime tablosuna eklenmemiş olabilir).',
+          });
+        }
+      }, timeoutMs);
+
+      const channel = client
+        .channel(`rt-test-${testId}`)
+        .on(
+          'postgres_changes',
+          { event: '*', schema: 'public', table: 'system_status' },
+          (payload) => {
+            if (payload.new && (payload.new as any).id === testId && !finished) {
+              finished = true;
+              clearTimeout(timer);
+              const roundtrip = Date.now() - startTime;
+              try { client.removeChannel(channel); } catch (_) {}
+              // Clean up test row asynchronously
+              client.from('system_status').delete().eq('id', testId).then(() => {});
+              resolve({
+                success: true,
+                latencyMs: roundtrip,
+                message: `✓ Realtime aktiftir ve çalışıyor! Yankı süresi: ${roundtrip}ms`,
+              });
+            }
+          }
+        )
+        .subscribe(async (status) => {
+          if (status === 'SUBSCRIBED') {
+            // Write ping record
+            try {
+              await client.from('system_status').upsert([
+                {
+                  id: testId,
+                  data: { ping: true, timestamp: Date.now() },
+                  updated_at: new Date().toISOString(),
+                },
+              ]);
+            } catch (err: any) {
+              if (!finished) {
+                finished = true;
+                clearTimeout(timer);
+                try { client.removeChannel(channel); } catch (_) {}
+                resolve({
+                  success: false,
+                  latencyMs: Date.now() - startTime,
+                  message: 'Yazma hatası: ' + err.message,
+                });
+              }
+            }
+          }
+        });
+    });
+  },
+
   async getRegisteredUsers(): Promise<any[]> {
     return this.getUsers();
   },
@@ -527,3 +873,4 @@ export const SupabaseDbService = {
     }
   },
 };
+

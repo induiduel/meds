@@ -135,6 +135,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [groqApiKeyInput, setGroqApiKeyInput] = useState(() => {
     return localStorage.getItem('medsoru_groq_api_key') || '';
   });
+  const [groqApiKey2Input, setGroqApiKey2Input] = useState(() => {
+    return localStorage.getItem('medsoru_groq_api_key_2') || '';
+  });
   const [groqKeyFeedback, setGroqKeyFeedback] = useState<string | null>(null);
 
   const refreshDbStatuses = async () => {
@@ -167,11 +170,15 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const handleSaveGroqKey = () => {
     if (groqApiKeyInput.trim()) {
       localStorage.setItem('medsoru_groq_api_key', groqApiKeyInput.trim());
-      setGroqKeyFeedback('✓ Groq Cloud API anahtarı kaydedildi!');
     } else {
       localStorage.removeItem('medsoru_groq_api_key');
-      setGroqKeyFeedback('Groq API anahtarı temizlendi.');
     }
+    if (groqApiKey2Input.trim()) {
+      localStorage.setItem('medsoru_groq_api_key_2', groqApiKey2Input.trim());
+    } else {
+      localStorage.removeItem('medsoru_groq_api_key_2');
+    }
+    setGroqKeyFeedback('✓ Groq Cloud API anahtarları kaydedildi!');
     setTimeout(() => setGroqKeyFeedback(null), 4000);
   };
 
@@ -203,7 +210,19 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         console.warn('Firebase batch sync warning:', e.message);
       }
 
-      setMultiDbFeedback(`✓ Senkronizasyon Tamamlandı! ${supaCount} soru Supabase'e, ${sparkCount} soru Firebase Spark'a ve yerel sunucuya başarıyla işlendi.`);
+      let notesCount = 0;
+      try {
+        const notesList = await ApiService.getLectureNotes();
+        if (notesList && notesList.length > 0) {
+          setMultiDbFeedback(`${notesList.length} ders notu Supabase'e eşitleniyor...`);
+          const nRes = await SupabaseDbService.batchSaveLectureNotes(notesList);
+          notesCount = nRes.count;
+        }
+      } catch (e: any) {
+        console.warn('Lecture notes sync warning:', e.message);
+      }
+
+      setMultiDbFeedback(`✓ Senkronizasyon Tamamlandı! ${supaCount} çıkmış soru, ${notesCount} ders notu Supabase'e, ${sparkCount} soru Firebase Spark'a ve yerel sunucuya başarıyla işlendi.`);
       await refreshDbStatuses();
     } catch (err: any) {
       setMultiDbFeedback(`Hata: ${err.message}`);
@@ -1572,7 +1591,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-200">
                     <Sparkles className="w-3.5 h-3.5 text-orange-400" />
-                    <span>Groq Cloud API Anahtarı (3. Sıra: Ücretsiz Llama 3.3 70B & DeepSeek R1)</span>
+                    <span>Groq Cloud API Anahtarları (3. Sıra: Ücretsiz Llama 3.3 70B & DeepSeek R1)</span>
                   </div>
                   <span className="text-[10px] text-orange-400 font-semibold">3. Sırada Devreye Girer (Ücretli Plandan Önce)</span>
                 </div>
@@ -1581,7 +1600,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     type="password"
                     value={groqApiKeyInput}
                     onChange={(e) => setGroqApiKeyInput(e.target.value)}
-                    placeholder="gsk_... (console.groq.com adresinden aldığınız ücretsiz API anahtarı)"
+                    placeholder="1. Groq Anahtarı (gsk_...)"
                     className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-orange-500 font-mono"
                   />
                   <button
@@ -1591,6 +1610,15 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   >
                     Kaydet
                   </button>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="password"
+                    value={groqApiKey2Input}
+                    onChange={(e) => setGroqApiKey2Input(e.target.value)}
+                    placeholder="2. Yedek Groq Anahtarı (gsk_...)"
+                    className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-orange-500 font-mono"
+                  />
                 </div>
                 {groqKeyFeedback && (
                   <p className="text-[11px] font-semibold text-emerald-400">{groqKeyFeedback}</p>
@@ -2450,7 +2478,23 @@ CREATE POLICY "Allow public write access" ON public.lecture_notes FOR ALL USING 
 CREATE POLICY "Allow public read access" ON public.users FOR SELECT USING (true);
 CREATE POLICY "Allow public write access" ON public.users FOR ALL USING (true);
 CREATE POLICY "Allow public read access" ON public.system_status FOR SELECT USING (true);
-CREATE POLICY "Allow public write access" ON public.system_status FOR ALL USING (true);`}
+CREATE POLICY "Allow public write access" ON public.system_status FOR ALL USING (true);
+
+-- 8. Supabase Realtime Yayını (Anlık Canlı Akış İçin ŞARTTIR)
+ALTER PUBLICATION supabase_realtime ADD TABLE public.committees;
+ALTER PUBLICATION supabase_realtime ADD TABLE public.questions;
+ALTER PUBLICATION supabase_realtime ADD TABLE public.past_questions;
+ALTER PUBLICATION supabase_realtime ADD TABLE public.lecture_notes;
+ALTER PUBLICATION supabase_realtime ADD TABLE public.users;
+ALTER PUBLICATION supabase_realtime ADD TABLE public.system_status;
+
+-- 9. Replica Identity (Güncelleme ve Silmelerde Tüm Veriyi Aktarmak İçin)
+ALTER TABLE public.committees REPLICA IDENTITY FULL;
+ALTER TABLE public.questions REPLICA IDENTITY FULL;
+ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
+ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
+ALTER TABLE public.users REPLICA IDENTITY FULL;
+ALTER TABLE public.system_status REPLICA IDENTITY FULL;`}
               </pre>
             </div>
 
