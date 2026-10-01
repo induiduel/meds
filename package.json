@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://induiduel.github.io/meds/",
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build",
