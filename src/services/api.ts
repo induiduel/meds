@@ -1608,9 +1608,10 @@ JSON FORMATI:
     } catch (e) {
       // Fallback for static environments (e.g. GitHub Pages)
     }
+    // MultiDbManager with automatic Supabase failover
     try {
-      const cloud = await FirestoreDbService.getLectureNotes();
-      if (cloud && cloud.length > 0) return cloud;
+      const notes = await multiDbManager.getLectureNotes();
+      if (notes && notes.length > 0) return notes;
     } catch (e) {}
     return [];
   },
@@ -1910,12 +1911,15 @@ JSON FORMATI:
     } catch (e) {
       console.warn('API getPastQuestions error:', e);
     }
+    // MultiDbManager with automatic Supabase failover
     try {
-      const cloudPast = await FirestoreDbService.getAllPastQuestions();
-      if (cloudPast && cloudPast.length > 0) {
-        return cloudPast;
+      const pastList = await multiDbManager.getPastQuestions();
+      if (pastList && pastList.length > 0) {
+        return pastList;
       }
-    } catch (e) {}
+    } catch (e) {
+      console.warn('multiDbManager getPastQuestions fallback', e);
+    }
 
     // Fallback: load static past questions
     try {
@@ -2290,74 +2294,22 @@ KURALLAR:
   },
 
   async installWindowsService(adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string }> {
-    const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/automation/windows-service-install', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-    });
-    if (res.ok && res.data) {
-      return res.data;
-    }
-
-    // Fallback: Send command to local PC via Firestore queue
-    return await FirestoreDbService.sendAdminCommand('install_service', {}, adminEmail);
+    return await multiDbManager.sendAdminCommand('install_service', {}, adminEmail);
   },
 
   async stopWindowsService(adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string }> {
-    const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/automation/windows-service-stop', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-    });
-    if (res.ok && res.data) {
-      return res.data;
-    }
-
-    // Fallback: Send command to local PC via Firestore queue
-    return await FirestoreDbService.sendAdminCommand('stop_service', {}, adminEmail);
+    return await multiDbManager.sendAdminCommand('stop_service', {}, adminEmail);
   },
 
   async sendWindowsTestNotification(title?: string, message?: string, adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string }> {
-    const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/automation/windows-service-notify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, message }),
-    });
-    if (res.ok && res.data) {
-      return res.data;
-    }
-
-    // Fallback: Send command to local PC via Firestore queue
-    return await FirestoreDbService.sendAdminCommand('notify', { title, message }, adminEmail);
+    return await multiDbManager.sendAdminCommand('notify', { title, message }, adminEmail);
   },
 
   async runFullLocalSync(adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string }> {
-    const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/automation/run-full-local-sync', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-    });
-    if (res.ok && res.data) {
-      return res.data;
-    }
-
-    // Fallback: Send command to local PC via Firestore queue
-    return await FirestoreDbService.sendAdminCommand('run_full_local_sync', {}, adminEmail);
+    return await multiDbManager.sendAdminCommand('run_full_local_sync', {}, adminEmail);
   },
 
   async triggerSubagentRedaction(adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string }> {
-    // 1. Try local server endpoint first
-    try {
-      const customUrl = getCustomApiUrl();
-      const endpoint = customUrl ? `${customUrl}/api/admin/command` : '/api/admin/command';
-      const res = await safeJsonFetch<{ success: boolean; message: string }>(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ command: 'run_redactor_cycle', requestedBy: adminEmail }),
-      });
-      if (res.ok && res.data?.success) {
-        return res.data;
-      }
-    } catch (e) {}
-
-    // 2. Fallback to Firestore cloud command queue
-    return await FirestoreDbService.sendAdminCommand('run_redactor_cycle', {}, adminEmail);
+    return await multiDbManager.sendAdminCommand('run_redactor_cycle', {}, adminEmail);
   },
 };

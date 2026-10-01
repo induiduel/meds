@@ -797,7 +797,7 @@ app.post('/api/admin/command', async (req, res) => {
     const { command, payload, requestedBy } = req.body;
     console.log(`[AdminCommand] ⚡ Komut alındı: ${command} (${requestedBy})`);
 
-    if (command === 'run_redactor_cycle') {
+    if (command === 'run_redactor_cycle' || command === 'trigger_redactor') {
       exec('node scripts/deep-ai-redactor.mjs', { cwd: __dirname }, (error, stdout, stderr) => {
         if (error) console.warn('[AdminCommand] deep-ai-redactor error:', error.message);
       });
@@ -807,7 +807,7 @@ app.post('/api/admin/command', async (req, res) => {
       });
     }
 
-    if (command === 'run_sync') {
+    if (command === 'run_sync' || command === 'run_full_local_sync') {
       scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR).catch(() => {});
       return res.json({
         success: true,
@@ -815,9 +815,39 @@ app.post('/api/admin/command', async (req, res) => {
       });
     }
 
+    if (command === 'install_service') {
+      const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+      exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action install-and-start`, () => {});
+      return res.json({ success: true, message: 'Windows Başlangıç ve Masaüstü servisi kuruldu ve başlatıldı.' });
+    }
+
+    if (command === 'stop_service') {
+      const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+      exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action stop`, () => {});
+      return res.json({ success: true, message: 'Windows senkronizasyon servisi durduruldu.' });
+    }
+
+    if (command === 'notify') {
+      const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+      const title = (payload?.title || 'MedSoru Otomasyon Servisi 🚀').replace(/"/g, '');
+      const message = (payload?.message || 'Windows bildirim sistemi sorunsuz çalışıyor.').replace(/"/g, '');
+      exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action notify -Title "${title}" -Message "${message}"`, () => {});
+      return res.json({ success: true, message: 'Windows bildirimi başarıyla iletildi.' });
+    }
+
     res.json({ success: true, message: `Komut (${command}) yerel sunucuda başarıyla kaydedildi.` });
   } catch (err: any) {
     res.status(500).json({ success: false, error: 'Komut yürütülemedi: ' + err.message });
+  }
+});
+
+// Alias for full local sync
+app.post('/api/automation/run-full-local-sync', async (req, res) => {
+  try {
+    const result = await scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR);
+    res.json({ success: true, message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.', ...result });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
   }
 });
 

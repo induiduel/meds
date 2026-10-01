@@ -11,6 +11,7 @@
 import { QuestionItem, Committee, LectureNote } from '../types';
 import { FirestoreDbService } from './firestoreDb';
 import { safeJsonFetch, getCustomApiUrl } from './api';
+import { multiDbManager } from './multiDbManager';
 
 export type HybridDbMode = 'auto' | 'local_first' | 'cloud_only';
 
@@ -49,102 +50,18 @@ export const HybridDbService = {
     return '';
   },
 
-  // Parallel / Resilient Fetch for Committees
+  // Parallel / Resilient Fetch for Committees (Delegates to MultiDbManager)
   async getCommittees(): Promise<Committee[]> {
-    const mode = getHybridMode();
-
-    if (mode === 'local_first') {
-      const localRes = await safeJsonFetch<any>(`${this.getBaseUrl()}/api/committees`);
-      if (localRes.ok && localRes.data?.committees) {
-        return localRes.data.committees;
-      }
-    }
-
-    try {
-      const cloudData = await FirestoreDbService.getCommittees();
-      if (cloudData && cloudData.length > 0) return cloudData;
-    } catch (err: any) {
-      if (isFirebaseQuotaExceeded(err)) {
-        console.warn('⚠️ [HybridDB] Firebase kotası aşıldı! Yerel PC veritabanına geçiliyor.');
-      }
-    }
-
-    // Fallback to local server
-    const localRes = await safeJsonFetch<any>(`${this.getBaseUrl()}/api/committees`);
-    if (localRes.ok && localRes.data?.committees) {
-      return localRes.data.committees;
-    }
-
-    return FirestoreDbService.getCommittees();
+    return await multiDbManager.getCommittees();
   },
 
-  // Parallel / Resilient Fetch for Past Questions
+  // Parallel / Resilient Fetch for Past Questions (Delegates to MultiDbManager)
   async getPastQuestions(): Promise<QuestionItem[]> {
-    const mode = getHybridMode();
-
-    if (mode === 'local_first') {
-      const localRes = await safeJsonFetch<any>(`${this.getBaseUrl()}/api/past-exams`);
-      if (localRes.ok && localRes.data?.questions) {
-        return localRes.data.questions;
-      }
-    }
-
-    try {
-      const cloudData = await FirestoreDbService.getAllPastQuestions();
-      if (cloudData && cloudData.length > 0) return cloudData;
-    } catch (err: any) {
-      if (isFirebaseQuotaExceeded(err)) {
-        console.warn('⚠️ [HybridDB] Firebase kotası aşıldı! Yerel PC veritabanından sorular getiriliyor.');
-      }
-    }
-
-    // Fallback to local server
-    const localRes = await safeJsonFetch<any>(`${this.getBaseUrl()}/api/past-exams`);
-    if (localRes.ok && localRes.data?.questions) {
-      return localRes.data.questions;
-    }
-
-    // Static fallback
-    try {
-      const staticData = await import('../data/pastQuestions.json');
-      return (staticData.default || staticData) as QuestionItem[];
-    } catch (_) {}
-
-    return [];
+    return await multiDbManager.getPastQuestions();
   },
 
-  // Parallel / Resilient Fetch for Lecture Notes
+  // Parallel / Resilient Fetch for Lecture Notes (Delegates to MultiDbManager)
   async getLectureNotes(): Promise<LectureNote[]> {
-    const mode = getHybridMode();
-
-    if (mode === 'local_first') {
-      const localRes = await safeJsonFetch<any>(`${this.getBaseUrl()}/api/lecture-notes`);
-      if (localRes.ok && localRes.data?.notes) {
-        return localRes.data.notes;
-      }
-    }
-
-    try {
-      const cloudData = await FirestoreDbService.getLectureNotes();
-      if (cloudData && cloudData.length > 0) return cloudData;
-    } catch (err: any) {
-      if (isFirebaseQuotaExceeded(err)) {
-        console.warn('⚠️ [HybridDB] Firebase kotası aşıldı! Yerel PC ders notlarına geçiliyor.');
-      }
-    }
-
-    // Fallback to local server
-    const localRes = await safeJsonFetch<any>(`${this.getBaseUrl()}/api/lecture-notes`);
-    if (localRes.ok && localRes.data?.notes) {
-      return localRes.data.notes;
-    }
-
-    // Static fallback
-    try {
-      const staticData = await import('../data/lecture_notes.json');
-      return (staticData.default || staticData) as LectureNote[];
-    } catch (_) {}
-
-    return [];
-  }
+    return await multiDbManager.getLectureNotes();
+  },
 };

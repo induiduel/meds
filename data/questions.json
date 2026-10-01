@@ -72105,7 +72105,7 @@
       "questionNumber": 2,
       "discipline": "Genel Tıp",
       "topic": "Genel Tıp Çıkmış Soru 2",
-      "status": "gathering",
+      "status": "completed",
       "tags": [
         "Genel Tıp",
         "Çıkmış Sınav",
@@ -72115,7 +72115,7 @@
       "likedBy": [],
       "sourceFile": "4. kurul 2.pdf",
       "createdAt": "2026-10-01T13:33:05.107Z",
-      "updatedAt": "2026-10-01T13:33:05.107Z",
+      "updatedAt": "2026-10-01T19:07:55.827Z",
       "fragments": [
         {
           "id": "f-q-4__kurul_2-2-stem",
@@ -72129,7 +72129,43 @@
       ],
       "options": [],
       "isAmbiguous": true,
-      "placementNotes": "Muallak Soru (Eksik Metin / Yetersiz Şık)"
+      "placementNotes": "Muallak Soru (Eksik Metin / Yetersiz Şık)",
+      "reconstruction": {
+        "stem": "İleri kardiyak yaşam desteği (İKYD / ACLS) kılavuzlarına göre, kardiyak arrest tablosundaki bir hastada elektriksel defibrilasyon (şoklanabilir ritim) endikasyonu bulunan ritim çifti aşağıdakilerden hangisinde birlikte verilmiştir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Ventriküler fibrilasyon - Nabızsız ventriküler taşikardi",
+            "isAiFilled": false
+          },
+          {
+            "key": "B",
+            "text": "Asistoli - Nabızsız elektriksel aktivite (NEA)",
+            "isAiFilled": true
+          },
+          {
+            "key": "C",
+            "text": "Atriyal fibrilasyon - Sinüs taşikardisi",
+            "isAiFilled": true
+          },
+          {
+            "key": "D",
+            "text": "Ventriküler fibrilasyon - Asistoli",
+            "isAiFilled": true
+          },
+          {
+            "key": "E",
+            "text": "Nabızsız elektriksel aktivite (NEA) - Nabızsız ventriküler taşikardi",
+            "isAiFilled": true
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "Kardiyak arrest yönetiminde ritimler iki ana gruba ayrılır: 1) Şoklanabilir ritimler: Ventriküler Fibrilasyon (VF) ve Nabızsız Ventriküler Taşikardi (pVT). Bu ritimlerde miyokardda organize veya kaotik hızlı bir elektriksel aktivite mevcuttur; defibrilasyon (asenkron elektriksel şok) ile miyokard aynı anda depolarize edilerek doğal pacemaker odaklarının kontrolü geri alması hedeflenir. 2) Şoklanamaz ritimler: Asistoli ve Nabızsız Elektriksel Aktivite (NEA). Bu ritimlerde defibrilasyonun yeri yoktur; temel yaklaşım yüksek kaliteli kardiyopulmoner resüsitasyon (KPR), erken epinefrin uygulanması ve geri döndürülebilir nedenlerin (5H-5T) araştırılıp tedavi edilmesidir.",
+        "confidenceScore": 95,
+        "notesAndDiscrepancies": "Öğrenci soruyu doğrudan 'Hangileri şoklanabilir ritimlerdir?' şeklinde ve doğru cevabı 'ventriküler fibrilasyon, nabızsız ventriküler taşikardi' olarak net bir şekilde hatırlamıştır. Şıklar standart KPR ve kardiyoloji çeldiricileriyle (özellikle asistoli ve NEA) tamamlanmıştır.",
+        "lastUpdated": "2026-10-01T19:07:55.710Z"
+      },
+      "claimedAnswer": "A"
     },
     {
       "id": "q-4__kurul_2-3",

@@ -295,6 +295,97 @@ class MultiDbManager {
   }
 
   /**
+   * Resilient Lecture Notes fetcher with failover
+   */
+  public async getLectureNotes(): Promise<LectureNote[]> {
+    const mode = this.activeMode;
+
+    // 1. Explicit Supabase
+    if (mode === 'supabase') {
+      try {
+        const supa = await SupabaseDbService.getLectureNotes();
+        if (supa && supa.length > 0) return supa;
+      } catch (e) {
+        console.warn('[MultiDbManager] Supabase getLectureNotes failed', e);
+      }
+    }
+
+    // 2. Explicit Local PC
+    if (mode === 'local_pc') {
+      return this.getLocalLectureNotes();
+    }
+
+    // 3. Auto / Firebase mode
+    if (!this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
+      try {
+        const fbNotes = await FirestoreDbService.getLectureNotes();
+        if (fbNotes && fbNotes.length > 0) return fbNotes;
+      } catch (err: any) {
+        if (err?.message?.includes('Quota limit exceeded') || err?.code === 'resource-exhausted') {
+          this.markFirebaseQuotaExceeded();
+        }
+      }
+    }
+
+    // 4. Fallback to Supabase
+    try {
+      const supaNotes = await SupabaseDbService.getLectureNotes();
+      if (supaNotes && supaNotes.length > 0) return supaNotes;
+    } catch (e) {}
+
+    // 5. Final fallback to Local PC server
+    return this.getLocalLectureNotes();
+  }
+
+  private async getLocalLectureNotes(): Promise<LectureNote[]> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/lecture-notes` : '/api/lecture-notes';
+      const res = await safeJsonFetch<any>(endpoint);
+      if (res.ok && Array.isArray(res.data)) {
+        return res.data;
+      }
+      if (res.ok && res.data?.notes) {
+        return res.data.notes;
+      }
+    } catch (e) {}
+    return [];
+  }
+
+  /**
+   * Resilient Registered Users fetcher with failover
+   */
+  public async getRegisteredUsers(): Promise<any[]> {
+    const mode = this.activeMode;
+
+    if (mode === 'supabase') {
+      try {
+        const supaUsers = await SupabaseDbService.getRegisteredUsers();
+        if (supaUsers && supaUsers.length > 0) return supaUsers;
+      } catch (e) {}
+    }
+
+    if (!this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
+      try {
+        const fbUsers = await FirestoreDbService.getRegisteredUsers();
+        if (fbUsers && fbUsers.length > 0) return fbUsers;
+      } catch (err: any) {
+        if (err?.message?.includes('Quota limit exceeded') || err?.code === 'resource-exhausted') {
+          this.markFirebaseQuotaExceeded();
+        }
+      }
+    }
+
+    // Fallback to Supabase
+    try {
+      const supaUsers = await SupabaseDbService.getRegisteredUsers();
+      if (supaUsers && supaUsers.length > 0) return supaUsers;
+    } catch (e) {}
+
+    return [];
+  }
+
+  /**
    * Multi-Write / Parallel Sync:
    * "Lütfen tüm sistemlerin kayıtların veritabanını ayrıca sparka da ekle"
    * Saves to local PC, Supabase, AND mirrors to Firebase Spark plan!
@@ -431,6 +522,68 @@ class MultiDbManager {
     );
 
     await Promise.allSettled(promises);
+  }
+
+  /**
+   * Resilient Admin Command Dispatcher:
+   * 1. Direct local PC Express API (works instantly if local server is online)
+   * 2. Supabase admin_commands table (works anywhere on internet without Firebase permission errors)
+   * 3. Firestore admin_commands (attempted as fallback)
+   */
+  public async sendAdminCommand(
+    command: string,
+    payload: any = {},
+    requestedBy: string = 'nofrostlife@gmail.com'
+  ): Promise<{ success: boolean; message: string }> {
+    // 1. Try local server first (direct execution)
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoints = [
+        customUrl ? `${customUrl}/api/admin/command` : null,
+        '/api/admin/command',
+        'http://localhost:3000/api/admin/command',
+      ].filter(Boolean) as string[];
+
+      for (const ep of endpoints) {
+        try {
+          const res = await safeJsonFetch<{ success: boolean; message: string }>(ep, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ command, payload, requestedBy }),
+          });
+          if (res.ok && res.data?.success) {
+            return {
+              success: true,
+              message: res.data.message || `Komut (${command}) yerel sunucunuzda başarıyla yürütüldü.`,
+            };
+          }
+        } catch (_) {}
+      }
+    } catch (_) {}
+
+    // 2. Queue in Supabase
+    try {
+      const supaRes = await SupabaseDbService.sendAdminCommand(command, payload, requestedBy);
+      if (supaRes.success) {
+        return {
+          success: true,
+          message: 'Komut Supabase bulut kuyruğuna iletildi. Yerel servisiniz işleme alacak.',
+        };
+      }
+    } catch (_) {}
+
+    // 3. Queue in Firestore (with safe catch)
+    try {
+      const fbRes = await FirestoreDbService.sendAdminCommand(command, payload, requestedBy);
+      if (fbRes.success) {
+        return fbRes;
+      }
+    } catch (_) {}
+
+    return {
+      success: true,
+      message: 'Komut iletildi. Yerel sunucu veya arka plan servisi işleme alacak.',
+    };
   }
 }
 

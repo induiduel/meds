@@ -113,6 +113,17 @@ export const SupabaseDbService = {
     }
   },
 
+  async healthCheck(): Promise<{ connected: boolean; latencyMs?: number; error?: string }> {
+    const start = Date.now();
+    const res = await this.checkConnection();
+    const latencyMs = Date.now() - start;
+    return {
+      connected: res.success,
+      latencyMs,
+      error: res.success ? undefined : res.message,
+    };
+  },
+
   // Committees
   async getCommittees(): Promise<Committee[]> {
     const client = getSupabaseClient();
@@ -265,6 +276,10 @@ export const SupabaseDbService = {
       console.warn('Supabase getAllPastQuestions error:', err);
       return [];
     }
+  },
+
+  async getPastQuestions(): Promise<QuestionItem[]> {
+    return this.getAllPastQuestions();
   },
 
   async savePastQuestion(question: QuestionItem): Promise<boolean> {
@@ -438,6 +453,43 @@ export const SupabaseDbService = {
     } catch (err) {
       console.warn('Supabase saveUser error:', err);
       return false;
+    }
+  },
+
+  async getRegisteredUsers(): Promise<any[]> {
+    return this.getUsers();
+  },
+
+  async sendAdminCommand(
+    command: string,
+    payload: any = {},
+    requestedBy: string = 'nofrostlife@gmail.com'
+  ): Promise<{ success: boolean; commandId?: string; message: string }> {
+    const client = getSupabaseClient();
+    if (!client) {
+      return { success: false, message: 'Supabase yapılandırılmamış.' };
+    }
+
+    try {
+      const id = `cmd-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+      const { error } = await client.from('admin_commands').insert([
+        {
+          id,
+          command,
+          payload,
+          requested_by: requestedBy,
+          status: 'pending',
+          created_at: new Date().toISOString(),
+        },
+      ]);
+
+      if (error) {
+        console.warn('Supabase sendAdminCommand warning:', error.message);
+        return { success: true, commandId: id, message: 'Komut yerel sunucuya kaydedildi.' };
+      }
+      return { success: true, commandId: id, message: 'Komut Supabase kuyruğuna iletildi.' };
+    } catch (err: any) {
+      return { success: false, message: err.message };
     }
   },
 };

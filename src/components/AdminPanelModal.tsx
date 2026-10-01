@@ -412,7 +412,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setIsLoadingUsers(true);
     try {
       const serverUsers = await ApiService.adminGetUsers(adminEmail).catch(() => []);
-      const firestoreUsers = await FirestoreDbService.getRegisteredUsers().catch(() => []);
+      const firestoreUsers = await multiDbManager.getRegisteredUsers().catch(() => []);
 
       const map = new Map<string, any>();
 
