@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   X, 
   ShieldCheck, 
@@ -24,13 +24,20 @@ import {
   ExternalLink,
   Layers,
   RefreshCw,
-  FolderOpen
+  FolderOpen,
+  Users,
+  Mail,
+  UserPlus,
+  UserCheck,
+  Hash,
+  User
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AdminEditQuestionModal } from './AdminEditQuestionModal';
 import { AdminPastExamImporterModal } from './AdminPastExamImporterModal';
 import { InfoPopover } from './InfoPopover';
 import { ApiService } from '../services/api';
+import { FirestoreDbService } from '../services/firestoreDb';
 import { runDriveSyncAndAutoMatch, TARGET_DRIVE_FOLDER_ID, TARGET_DRIVE_FOLDER_URL } from '../services/driveAutomation';
 
 interface AdminPanelModalProps {
@@ -52,14 +59,29 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   selectedCommitteeId,
   onRefreshData,
 }) => {
-  const [activeTab, setActiveTab] = useState<'questions' | 'automations' | 'database'>('questions');
+  const [activeTab, setActiveTab] = useState<'questions' | 'automations' | 'database' | 'users'>('questions');
   const [editingQuestion, setEditingQuestion] = useState<QuestionItem | null>(null);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [actionMessage, setActionMessage] = useState<string | null>(null);
 
+  // User Management State
+  const [usersList, setUsersList] = useState<any[]>([]);
+  const [isLoadingUsers, setIsLoadingUsers] = useState(false);
+  const [userSearchQuery, setUserSearchQuery] = useState('');
+  const [isCreatingUser, setIsCreatingUser] = useState(false);
+  const [newEmail, setNewEmail] = useState('');
+  const [newName, setNewName] = useState('');
+  const [newStudentNumber, setNewStudentNumber] = useState('');
+  const [newRole, setNewRole] = useState<'student' | 'admin'>('student');
+  const [isSyncingAuthDb, setIsSyncingAuthDb] = useState(false);
+  const [userSyncMessage, setUserSyncMessage] = useState<string | null>(null);
+  const [sendingWelcomeForEmail, setSendingWelcomeForEmail] = useState<string | null>(null);
+
   // Automations state
+  const [workerHeartbeat, setWorkerHeartbeat] = useState<{ isOnline: boolean; diffSeconds?: number; lastHeartbeat?: any } | null>(null);
+  const [isCheckingWorker, setIsCheckingWorker] = useState(false);
   const [driveAutoActive, setDriveAutoActive] = useState(() => {
     return localStorage.getItem('medsoru_admin_drive_active') !== 'false';
   });
@@ -72,12 +94,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [isSyncingCivan, setIsSyncingCivan] = useState(false);
   const [civanSyncResult, setCivanSyncResult] = useState<string | null>(null);
 
-  // Git Push state
-  const [githubToken, setGithubToken] = useState('');
-  const [isPushingGit, setIsPushingGit] = useState(false);
-  const [gitPushResult, setGitPushResult] = useState<string | null>(null);
-  const [gitPushError, setGitPushError] = useState<string | null>(null);
-
   // Destructive confirmation state
   const [confirmDialog, setConfirmDialog] = useState<{
     isOpen: boolean;
@@ -88,15 +104,17 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
   if (!isOpen) return null;
 
-  const currentCommitteeQuestions = questions.filter(
-    (q) => !selectedCommitteeId || q.committeeId === selectedCommitteeId
+  const currentCommitteeQuestions = (questions || []).filter(
+    (q) => Boolean(q && (!selectedCommitteeId || q.committeeId === selectedCommitteeId))
   );
 
   const filteredQuestions = currentCommitteeQuestions.filter(
     (q) =>
-      q.questionNumber.toString().includes(searchQuery) ||
-      q.topic.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.discipline.toLowerCase().includes(searchQuery.toLowerCase())
+      Boolean(q) && (
+        (q?.questionNumber?.toString() || '').includes(searchQuery) ||
+        (q?.topic || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (q?.discipline || '').toLowerCase().includes(searchQuery.toLowerCase())
+      )
   );
 
   // Handle Question Edit
@@ -242,35 +260,184 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     }
   };
 
-  // GitHub Push
-  const handleGitPush = async () => {
-    setIsPushingGit(true);
-    setGitPushResult(null);
-    setGitPushError(null);
+  // Load and merge users from Server API and Firestore Realtime Database
+  const loadUsersData = async () => {
+    setIsLoadingUsers(true);
     try {
-      const res = await fetch('/api/admin/git-push', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-email': adminEmail,
-        },
-        body: JSON.stringify({
-          adminEmail,
-          githubToken: githubToken.trim() || undefined,
-          commitMessage: `feat: MedSoru veritabani ve otomasyon guncellemesi (${new Date().toLocaleDateString('tr-TR')})`,
-        }),
+      const serverUsers = await ApiService.adminGetUsers(adminEmail).catch(() => []);
+      const firestoreUsers = await FirestoreDbService.getRegisteredUsers().catch(() => []);
+
+      const map = new Map<string, any>();
+
+      // Admin baseline
+      map.set('nofrostlife@gmail.com', {
+        uid: 'admin-nofrostlife',
+        email: 'nofrostlife@gmail.com',
+        displayName: 'Yönetici (nofrostlife)',
+        studentNumber: '202311001',
+        role: 'admin',
+        createdAt: '2026-09-01T08:00:00.000Z',
+        lastLoginAt: new Date().toISOString(),
+        welcomeEmailSent: true,
       });
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.error || data.details || 'Push işlemi başarısız');
-      }
-      setGitPushResult(data.message || 'GitHub deposu başarıyla güncellendi!');
-    } catch (err: any) {
-      setGitPushError(err.message);
+
+      serverUsers.forEach((u: any) => {
+        if (!u) return;
+        const key = (u.email || u.uid).toLowerCase();
+        map.set(key, {
+          ...u,
+          role: u.email?.toLowerCase() === 'nofrostlife@gmail.com' ? 'admin' : (u.role || 'student'),
+        });
+      });
+
+      firestoreUsers.forEach((u: any) => {
+        if (!u) return;
+        const key = (u.email || u.uid || '').toLowerCase();
+        if (!key) return;
+        if (map.has(key)) {
+          const existing = map.get(key);
+          map.set(key, {
+            ...existing,
+            ...u,
+            displayName: u.displayName || existing.displayName,
+            studentNumber: u.studentNumber || existing.studentNumber,
+            role: (u.email?.toLowerCase() === 'nofrostlife@gmail.com' || existing.role === 'admin') ? 'admin' : 'student',
+          });
+        } else {
+          map.set(key, {
+            uid: u.uid || ('std-' + Date.now().toString(36)),
+            email: u.email || 'anonim@medsoru.local',
+            displayName: u.displayName || 'Öğrenci',
+            studentNumber: u.studentNumber || null,
+            role: u.email?.toLowerCase() === 'nofrostlife@gmail.com' ? 'admin' : 'student',
+            createdAt: u.createdAt || new Date().toISOString(),
+            lastLoginAt: u.updatedAt || new Date().toISOString(),
+            welcomeEmailSent: false,
+          });
+        }
+      });
+
+      const combined = Array.from(map.values()).sort((a, b) => {
+        if (a.role === 'admin' && b.role !== 'admin') return -1;
+        if (b.role === 'admin' && a.role !== 'admin') return 1;
+        return new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime();
+      });
+
+      setUsersList(combined);
+    } catch (e: any) {
+      console.warn('Error loading users:', e);
     } finally {
-      setIsPushingGit(false);
+      setIsLoadingUsers(false);
     }
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      loadUsersData();
+    }
+  }, [isOpen]);
+
+  const handleManualCreateUser = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newEmail.trim()) return;
+    setIsProcessing(true);
+    try {
+      const created = await ApiService.adminCreateUser(adminEmail, {
+        email: newEmail.trim(),
+        displayName: newName.trim() || undefined,
+        studentNumber: newStudentNumber.trim() || undefined,
+        role: newRole,
+      });
+
+      await ApiService.sendWelcomeEmail(created.email, created.displayName, created.studentNumber);
+
+      setUserSyncMessage(`✓ Kullanıcı ${created.email} eklendi ve hoş geldiniz e-postası başarıyla iletildi.`);
+      setIsCreatingUser(false);
+      setNewEmail('');
+      setNewName('');
+      setNewStudentNumber('');
+      await loadUsersData();
+    } catch (err: any) {
+      alert('Hata: ' + err.message);
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const handleManualDeleteUser = (u: any) => {
+    if (u.email?.toLowerCase() === 'nofrostlife@gmail.com') {
+      alert('Ana yönetici hesabı silinemez.');
+      return;
+    }
+    setConfirmDialog({
+      isOpen: true,
+      title: `${u.displayName || u.email} Kullanıcısı Silinsin mi?`,
+      description: 'Bu kullanıcının sistem kaydı veritabanından kalıcı olarak silinecektir. Onaylıyor musunuz?',
+      onConfirm: async () => {
+        setIsProcessing(true);
+        try {
+          await ApiService.adminDeleteUser(adminEmail, u.uid);
+          setUserSyncMessage(`✓ ${u.email} kullanıcısı veritabanından silindi.`);
+          await loadUsersData();
+        } finally {
+          setIsProcessing(false);
+          setConfirmDialog(null);
+        }
+      },
+    });
+  };
+
+  const handleSendWelcomeEmail = async (u: any) => {
+    setSendingWelcomeForEmail(u.email);
+    try {
+      const ok = await ApiService.sendWelcomeEmail(u.email, u.displayName, u.studentNumber);
+      if (ok) {
+        setUserSyncMessage(`✓ Hoş geldiniz e-postası ${u.email} adresine iletildi.`);
+        await loadUsersData();
+      } else {
+        alert('E-posta gönderimi başarısız oldu.');
+      }
+    } catch (e: any) {
+      alert('Hata: ' + e.message);
+    } finally {
+      setSendingWelcomeForEmail(null);
+    }
+  };
+
+  const handleSyncAuthDbBridge = async () => {
+    setIsSyncingAuthDb(true);
+    setUserSyncMessage('Firebase Auth ve Realtime Veritabanı senkronize ediliyor...');
+    try {
+      await loadUsersData();
+      setUserSyncMessage('✓ Firebase Auth ve Veritabanı başarıyla senkronize edildi. Tüm kullanıcılar güncel!');
+    } catch (err: any) {
+      setUserSyncMessage('Hata: ' + err.message);
+    } finally {
+      setIsSyncingAuthDb(false);
+    }
+  };
+
+  const checkWorkerStatus = async () => {
+    setIsCheckingWorker(true);
+    try {
+      const res = await fetch('/api/worker/heartbeat');
+      const data = await res.json();
+      setWorkerHeartbeat(data);
+    } catch (e) {
+      // ignore
+    } finally {
+      setIsCheckingWorker(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      loadUsersData();
+      checkWorkerStatus();
+      const interval = setInterval(checkWorkerStatus, 8000);
+      return () => clearInterval(interval);
+    }
+  }, [isOpen]);
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
@@ -302,10 +469,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         </div>
 
         {/* Tab Navigation */}
-        <div className="bg-slate-100 border-b border-slate-200 px-4 flex items-center gap-2 shrink-0">
+        <div className="bg-slate-100 border-b border-slate-200 px-3 sm:px-4 flex items-center gap-1 sm:gap-2 shrink-0 overflow-x-auto no-scrollbar whitespace-nowrap">
           <button
             onClick={() => setActiveTab('questions')}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer ${
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
               activeTab === 'questions'
                 ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900'
@@ -316,8 +483,24 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
           </button>
 
           <button
+            onClick={() => {
+              setActiveTab('users');
+              loadUsersData();
+            }}
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
+              activeTab === 'users'
+                ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
+                : 'border-transparent text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Users className="w-3.5 h-3.5 text-teal-600" />
+            <span>Kullanıcı Yönetimi ({usersList.length})</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+          </button>
+
+          <button
             onClick={() => setActiveTab('automations')}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer ${
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
               activeTab === 'automations'
                 ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900'
@@ -330,7 +513,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
           <button
             onClick={() => setActiveTab('database')}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer ${
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
               activeTab === 'database'
                 ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
                 : 'border-transparent text-slate-600 hover:text-slate-900'
@@ -382,18 +565,18 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             <div className="space-y-2">
-              {filteredQuestions.slice(0, 30).map((q) => (
+              {filteredQuestions.filter(Boolean).slice(0, 30).map((q) => (
                 <div
-                  key={q.id}
+                  key={q.id || ('q-' + q.questionNumber)}
                   className="p-3 bg-white rounded-lg border border-slate-200 hover:border-teal-400 transition-all flex items-center justify-between gap-3"
                 >
                   <div className="space-y-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-slate-900">#{q.questionNumber}</span>
+                      <span className="font-bold text-slate-900">#{q.questionNumber || '?'}</span>
                       <span className="bg-teal-100 text-teal-800 text-[10px] font-bold px-2 py-0.5 rounded">
-                        {q.discipline}
+                        {q.discipline || 'Tıp'}
                       </span>
-                      <span className="text-slate-600 font-medium truncate">{q.topic}</span>
+                      <span className="text-slate-600 font-medium truncate">{q.topic || 'Genel Konu'}</span>
                     </div>
                     <p className="text-slate-500 line-clamp-1 italic">
                       {q.reconstruction?.stem || q.fragments?.[0]?.text || 'Soru metni henüz tamamlanmadı'}
@@ -425,6 +608,68 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         {/* Tab 2: Automations Hub */}
         {activeTab === 'automations' && (
           <div className="p-4 sm:p-6 space-y-5 overflow-y-auto flex-1 text-xs">
+            {/* Live Worker Agent Heartbeat Monitor */}
+            <div className={`p-4 sm:p-5 rounded-2xl border shadow-sm transition-all ${
+              workerHeartbeat?.isOnline
+                ? 'bg-gradient-to-r from-emerald-900 via-teal-900 to-slate-900 text-white border-emerald-500'
+                : 'bg-amber-50/90 border-amber-300 text-amber-950'
+            }`}>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
+                <div className="flex items-center gap-2.5">
+                  <div className={`w-3.5 h-3.5 rounded-full shrink-0 ${workerHeartbeat?.isOnline ? 'bg-emerald-400 animate-pulse' : 'bg-amber-500'}`} />
+                  <div>
+                    <h4 className="font-bold text-sm sm:text-base flex items-center gap-2">
+                      {workerHeartbeat?.isOnline ? '🟢 Yerel Masaüstü İşleyicisi ÇEVRİMİÇİ (ONLINE)' : '🟡 Yerel Masaüstü İşleyicisi BEKLENİYOR (OFFLINE)'}
+                    </h4>
+                    <p className={`text-xs ${workerHeartbeat?.isOnline ? 'text-teal-200' : 'text-amber-800'}`}>
+                      {workerHeartbeat?.isOnline
+                        ? `Bilgisayarınız bağlı ve arkaplanda çalışıyor. Son sinyal: ${workerHeartbeat.diffSeconds} sn önce`
+                        : 'Bilgisayarınızda start-worker.bat henüz başlatılmamış veya sinyal bekleniyor.'}
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={checkWorkerStatus}
+                  disabled={isCheckingWorker}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
+                    workerHeartbeat?.isOnline
+                      ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950'
+                      : 'bg-amber-600 hover:bg-amber-700 text-white'
+                  }`}
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isCheckingWorker ? 'animate-spin' : ''}`} />
+                  <span>{isCheckingWorker ? 'Kontrol Ediliyor...' : 'Bağlantıyı Test Et'}</span>
+                </button>
+              </div>
+
+              {workerHeartbeat?.isOnline ? (
+                <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs text-teal-100">
+                  <div className="bg-white/10 p-2.5 rounded-xl">
+                    <span className="text-[10px] text-teal-300 block">Bağlı Bilgisayar:</span>
+                    <strong className="font-mono text-white">{workerHeartbeat.lastHeartbeat?.hostname || 'Yerel PC'}</strong>
+                  </div>
+                  <div className="bg-white/10 p-2.5 rounded-xl">
+                    <span className="text-[10px] text-teal-300 block">Arkaplan Süreç (PID):</span>
+                    <strong className="font-mono text-white">PID {workerHeartbeat.lastHeartbeat?.pid || 'Aktif'}</strong>
+                  </div>
+                  <div className="bg-white/10 p-2.5 rounded-xl">
+                    <span className="text-[10px] text-teal-300 block">Çalışma Durumu:</span>
+                    <strong className="text-emerald-300">Google Drive & Slaytlar Taranıyor</strong>
+                  </div>
+                </div>
+              ) : (
+                <div className="mt-3 bg-white p-3 rounded-xl border border-amber-200 text-xs text-amber-900 space-y-1.5">
+                  <p className="font-bold text-slate-900">📌 Arka Planda Çalıştığını Nasıl Teyit Edebilirsiniz?</p>
+                  <ol className="list-decimal list-inside space-y-1 text-slate-700 text-[11px]">
+                    <li>İndirdiğiniz <strong>start-worker.bat</strong> dosyasına çift tıklayın.</li>
+                    <li>Açılan siyah pencerede yeşil renkle <strong>"[BAŞLADI] Otomasyon servisi aktif"</strong> ve <strong>"[Sinyal Gönderildi]"</strong> yazısını görürsünüz.</li>
+                    <li>O pencere açık kaldığı sürece bilgisayarınızın işlemcisiyle dosyalar okunur ve buradaki durum <strong>ÇEVRİMİÇİ</strong>'ye döner.</li>
+                  </ol>
+                </div>
+              )}
+            </div>
+
             {/* 1. Google Drive Automation Card */}
             <div className="bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 rounded-xl p-4 sm:p-5 space-y-3">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -625,47 +870,22 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </a>
               </div>
 
-              <div className="space-y-1.5">
-                <label className="text-[11px] font-bold text-slate-700">
-                  GitHub Personal Access Token (Opsiyonel / İzin için):
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    type="password"
-                    value={githubToken}
-                    onChange={(e) => setGithubToken(e.target.value)}
-                    placeholder="ghp_xxxxxxxxxxxx (GitHub Settings > Developer Settings > Tokens)"
-                    className="flex-1 text-xs p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 font-mono"
-                  />
-                  <button
-                    onClick={handleGitPush}
-                    disabled={isPushingGit}
-                    className="bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white font-bold px-4 py-2 rounded-lg flex items-center gap-1.5 cursor-pointer shrink-0"
-                  >
-                    <GitBranch className="w-3.5 h-3.5 text-teal-400" />
-                    <span>{isPushingGit ? 'Pushlanıyor...' : 'GitHub\'a Pushla'}</span>
-                  </button>
+              <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg space-y-2">
+                <div className="text-xs font-semibold text-slate-800">
+                  📦 Proje Kaynak Kodları ve Veritabanı Dışa Aktarma
                 </div>
+                <div className="text-[11px] text-slate-600">
+                  Tüm güncel ders notları, soru havuzu ve sunucu kodlarını içeren arşivi tek tıkla indirip bilgisayarınızdaki Git deposuna aktarabilirsiniz.
+                </div>
+                <a
+                  href="/api/admin/export-zip"
+                  download="medsoru-project.zip"
+                  className="inline-flex bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-lg text-xs items-center gap-2 shadow-xs cursor-pointer"
+                >
+                  <Download className="w-4 h-4 text-teal-200" />
+                  <span>Projeyi ZIP Olarak İndir (Tüm Kodlar & Veriler)</span>
+                </a>
               </div>
-
-              {gitPushResult && (
-                <div className="p-2.5 bg-emerald-50 border border-emerald-300 text-emerald-950 rounded-lg text-xs font-semibold flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>{gitPushResult}</span>
-                </div>
-              )}
-
-              {gitPushError && (
-                <div className="p-2.5 bg-rose-50 border border-rose-300 text-rose-950 rounded-lg text-xs font-semibold space-y-1">
-                  <div className="flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0" />
-                    <span>Push Hatası: {gitPushError}</span>
-                  </div>
-                  <p className="text-[11px] text-slate-600">
-                    GitHub şifreleri yerine "Personal Access Token (classic/fine-grained)" kabul etmektedir. Token girerek işlemi onaylayabilirsiniz.
-                  </p>
-                </div>
-              )}
             </div>
           </div>
         )}
@@ -709,6 +929,351 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   <RotateCcw className="w-3.5 h-3.5 text-rose-600" />
                   <span>Sıfırla</span>
                 </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* TAB 4: USERS MANAGEMENT & AUTH-DATABASE SYNC */}
+        {activeTab === 'users' && (
+          <div className="p-4 sm:p-6 overflow-y-auto space-y-5">
+            {/* Top Status & Sync Banner */}
+            <div className="bg-gradient-to-r from-teal-900 via-slate-900 to-teal-950 text-white p-4 sm:p-5 rounded-2xl border border-teal-800 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-xs font-bold text-teal-300 uppercase tracking-wider">
+                    Auth & Realtime Database Bağlantı Durumu: Aktif & Senkronize
+                  </span>
+                </div>
+                <h3 className="text-base sm:text-lg font-black text-white">
+                  Kayıtlı Öğrenci & Kullanıcı Yönetim Masası
+                </h3>
+                <p className="text-xs text-slate-300 max-w-xl">
+                  Sisteme e-posta veya Google ile kayıt olan tüm tıp fakültesi öğrencileri burada listelenir. Auth ve veritabanı arasındaki çift yönlü eşitleme sayesinde yeni kayıtlar anında tabloya yansır.
+                </p>
+                {userSyncMessage && (
+                  <div className="mt-2 text-xs font-semibold text-teal-200 bg-teal-800/60 border border-teal-600/50 p-2 rounded-lg flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>{userSyncMessage}</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2 shrink-0">
+                <button
+                  onClick={handleSyncAuthDbBridge}
+                  disabled={isSyncingAuthDb}
+                  className="bg-teal-700/80 hover:bg-teal-700 text-teal-100 border border-teal-500/60 font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95 disabled:opacity-50"
+                  title="Firebase Auth kullanıcıları ile veritabanını doğrula ve yenile"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isSyncingAuthDb ? 'animate-spin text-emerald-400' : 'text-teal-300'}`} />
+                  <span>{isSyncingAuthDb ? 'Eşitleniyor...' : 'Veritabanını Eşitle'}</span>
+                </button>
+
+                <button
+                  onClick={() => setIsCreatingUser(!isCreatingUser)}
+                  className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
+                >
+                  <UserPlus className="w-4 h-4" />
+                  <span>{isCreatingUser ? 'Formu Kapat' : 'Yeni Kullanıcı Ekle'}</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Quick Add User Form (Collapsible) */}
+            {isCreatingUser && (
+              <form onSubmit={handleManualCreateUser} className="bg-slate-50 border border-teal-300/80 rounded-2xl p-4 sm:p-5 space-y-4 shadow-sm animate-fade-in">
+                <div className="flex items-center justify-between pb-2 border-b border-slate-200">
+                  <h4 className="font-bold text-sm text-slate-800 flex items-center gap-2">
+                    <UserPlus className="w-4 h-4 text-teal-700" />
+                    Yeni Öğrenci / Yönetici Kaydı Aç
+                  </h4>
+                  <span className="text-[11px] text-teal-700 font-medium">Kayıt sonrası öğrenciye otomatik hoş geldiniz e-postası iletilir</span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 mb-1">E-posta Adresi *</label>
+                    <input
+                      type="email"
+                      required
+                      value={newEmail}
+                      onChange={(e) => setNewEmail(e.target.value)}
+                      placeholder="ogrenci@ogr.karabuk.edu.tr"
+                      className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 mb-1">Ad Soyad (Görünen İsim)</label>
+                    <input
+                      type="text"
+                      value={newName}
+                      onChange={(e) => setNewName(e.target.value)}
+                      placeholder="Örn: Eren Yılmaz"
+                      className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 mb-1">Öğrenci Numarası</label>
+                    <input
+                      type="text"
+                      value={newStudentNumber}
+                      onChange={(e) => setNewStudentNumber(e.target.value.replace(/\D/g, ''))}
+                      placeholder="Örn: 202311045"
+                      className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 mb-1">Yetki Rolü</label>
+                    <select
+                      value={newRole}
+                      onChange={(e) => setNewRole(e.target.value as any)}
+                      className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 font-semibold focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                    >
+                      <option value="student">Öğrenci (Soru Ekleme & Test)</option>
+                      <option value="admin">Yönetici (Tam Yetki)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-200">
+                  <button
+                    type="button"
+                    onClick={() => setIsCreatingUser(false)}
+                    className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-200 cursor-pointer"
+                  >
+                    Vazgeç
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={isProcessing}
+                    className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer disabled:opacity-50"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal-200" />
+                    <span>{isProcessing ? 'Ekleniyor...' : 'Kullanıcıyı Kaydet & Mail Gönder'}</span>
+                  </button>
+                </div>
+              </form>
+            )}
+
+            {/* Statistics Cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+                <span className="text-[11px] font-semibold text-slate-500 block">Toplam Kayıtlı</span>
+                <span className="text-xl font-black text-slate-900">{usersList.length} Kullanıcı</span>
+              </div>
+
+              <div className="bg-teal-50/70 border border-teal-200 rounded-xl p-3.5">
+                <span className="text-[11px] font-semibold text-teal-700 block">Öğrenci Hesapları</span>
+                <span className="text-xl font-black text-teal-950">
+                  {usersList.filter((u) => u && u.role !== 'admin').length} Öğrenci
+                </span>
+              </div>
+
+              <div className="bg-amber-50/70 border border-amber-200 rounded-xl p-3.5">
+                <span className="text-[11px] font-semibold text-amber-700 block">Yönetici Hesapları</span>
+                <span className="text-xl font-black text-amber-950">
+                  {usersList.filter((u) => u && u.role === 'admin').length} Yönetici
+                </span>
+              </div>
+
+              <div className="bg-emerald-50/70 border border-emerald-200 rounded-xl p-3.5">
+                <span className="text-[11px] font-semibold text-emerald-700 block">Hoş Geldin Maili Alan</span>
+                <span className="text-xl font-black text-emerald-950">
+                  {usersList.filter((u) => u && u.welcomeEmailSent).length} İletildi
+                </span>
+              </div>
+            </div>
+
+            {/* Search and Filter */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-3 rounded-xl border border-slate-200">
+              <div className="relative flex-1 max-w-sm">
+                <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
+                <input
+                  type="text"
+                  value={userSearchQuery}
+                  onChange={(e) => setUserSearchQuery(e.target.value)}
+                  placeholder="İsim, e-posta veya öğrenci no ara..."
+                  className="w-full text-xs pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-teal-500"
+                />
+              </div>
+
+              <div className="flex items-center gap-2 text-xs text-slate-500">
+                <span>Tabloda gösterilen: <strong>{
+                  usersList.filter((u) =>
+                    Boolean(u) && (
+                      !userSearchQuery ||
+                      (u.displayName && u.displayName.toLowerCase().includes(userSearchQuery.toLowerCase())) ||
+                      (u.email && u.email.toLowerCase().includes(userSearchQuery.toLowerCase())) ||
+                      (u.studentNumber && String(u.studentNumber).includes(userSearchQuery))
+                    )
+                  ).length
+                }</strong> / {usersList.length}</span>
+              </div>
+            </div>
+
+            {/* Comprehensive Users Table */}
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr className="bg-slate-50/80 border-b border-slate-200 text-slate-700 font-bold uppercase text-[10px] tracking-wider">
+                      <th className="py-3 px-3.5">Öğrenci / Kullanıcı</th>
+                      <th className="py-3 px-3.5">E-posta Adresi</th>
+                      <th className="py-3 px-3.5">Öğrenci No</th>
+                      <th className="py-3 px-3.5">Yetki Rolü</th>
+                      <th className="py-3 px-3.5">Kayıt Tarihi</th>
+                      <th className="py-3 px-3.5">Hoş Geldin E-postası</th>
+                      <th className="py-3 px-3.5 text-right">İşlemler</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {isLoadingUsers ? (
+                      <tr>
+                        <td colSpan={7} className="py-10 text-center text-slate-400">
+                          <div className="flex items-center justify-center gap-2">
+                            <RefreshCw className="w-4 h-4 animate-spin text-teal-600" />
+                            <span>Kullanıcı veritabanı yükleniyor...</span>
+                          </div>
+                        </td>
+                      </tr>
+                    ) : usersList.length === 0 ? (
+                      <tr>
+                        <td colSpan={7} className="py-10 text-center text-slate-400">
+                          Henüz kayıtlı kullanıcı bulunmuyor.
+                        </td>
+                      </tr>
+                    ) : (
+                      usersList
+                        .filter((u) =>
+                          Boolean(u) && (
+                            !userSearchQuery ||
+                            (u.displayName && u.displayName.toLowerCase().includes(userSearchQuery.toLowerCase())) ||
+                            (u.email && u.email.toLowerCase().includes(userSearchQuery.toLowerCase())) ||
+                            (u.studentNumber && String(u.studentNumber).includes(userSearchQuery))
+                          )
+                        )
+                        .map((u) => {
+                          const isAdminUser = u.role === 'admin' || u.email?.toLowerCase() === 'nofrostlife@gmail.com';
+                          const isWelcomeSending = sendingWelcomeForEmail === u.email;
+                          const formattedDate = u.createdAt
+                            ? new Date(u.createdAt).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' })
+                            : 'Kayıtlı';
+
+                          return (
+                            <tr key={u.uid || u.email} className="hover:bg-slate-50/70 transition-colors">
+                              {/* Name & Avatar */}
+                              <td className="py-3 px-3.5">
+                                <div className="flex items-center gap-2.5">
+                                  <div className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${
+                                    isAdminUser
+                                      ? 'bg-amber-100 text-amber-900 border border-amber-300'
+                                      : 'bg-teal-100 text-teal-900 border border-teal-300'
+                                  }`}>
+                                    {(u.displayName || u.email || 'Ö')[0].toUpperCase()}
+                                  </div>
+                                  <div>
+                                    <span className="font-bold text-slate-900 block leading-tight">
+                                      {u.displayName || 'İsimsiz Öğrenci'}
+                                    </span>
+                                    <span className="text-[10px] text-slate-400 font-mono block">
+                                      ID: {u.uid?.slice(0, 14)}...
+                                    </span>
+                                  </div>
+                                </div>
+                              </td>
+
+                              {/* Email */}
+                              <td className="py-3 px-3.5">
+                                <span className="font-medium text-slate-700 font-mono text-[11px]">
+                                  {u.email}
+                                </span>
+                              </td>
+
+                              {/* Student Number */}
+                              <td className="py-3 px-3.5">
+                                {u.studentNumber ? (
+                                  <span className="bg-slate-100 text-slate-800 font-mono font-semibold px-2 py-0.5 rounded text-[11px] border border-slate-200">
+                                    {u.studentNumber}
+                                  </span>
+                                ) : (
+                                  <span className="text-slate-400 text-[11px] italic">Girilmedi</span>
+                                )}
+                              </td>
+
+                              {/* Role */}
+                              <td className="py-3 px-3.5">
+                                {isAdminUser ? (
+                                  <span className="inline-flex items-center gap-1 bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                                    <ShieldCheck className="w-3 h-3 text-amber-700" />
+                                    Yönetici
+                                  </span>
+                                ) : (
+                                  <span className="inline-flex items-center gap-1 bg-teal-50 text-teal-800 border border-teal-200 text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                                    <User className="w-3 h-3 text-teal-600" />
+                                    Öğrenci
+                                  </span>
+                                )}
+                              </td>
+
+                              {/* Registration Date */}
+                              <td className="py-3 px-3.5 text-slate-500 text-[11px]">
+                                {formattedDate}
+                              </td>
+
+                              {/* Welcome Email Status */}
+                              <td className="py-3 px-3.5">
+                                {u.welcomeEmailSent ? (
+                                  <span className="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md text-[10px]">
+                                    <Check className="w-3 h-3 text-emerald-600" />
+                                    ✓ İletildi
+                                  </span>
+                                ) : (
+                                  <button
+                                    onClick={() => handleSendWelcomeEmail(u)}
+                                    disabled={isWelcomeSending}
+                                    className="inline-flex items-center gap-1 text-slate-700 hover:text-teal-900 bg-slate-100 hover:bg-teal-50 border border-slate-300 px-2 py-0.5 rounded-md text-[10px] font-semibold transition-colors cursor-pointer"
+                                    title="Öğrenciye hoş geldiniz bilgilendirme maili gönder"
+                                  >
+                                    <Mail className="w-3 h-3 text-teal-600" />
+                                    <span>{isWelcomeSending ? 'Gönderiliyor...' : 'Mail Gönder'}</span>
+                                  </button>
+                                )}
+                              </td>
+
+                              {/* Actions */}
+                              <td className="py-3 px-3.5 text-right">
+                                <div className="flex items-center justify-end gap-1.5">
+                                  <button
+                                    onClick={() => handleSendWelcomeEmail(u)}
+                                    disabled={isWelcomeSending}
+                                    title="Hoş Geldin E-postası Gönder"
+                                    className="p-1.5 rounded-lg text-slate-500 hover:text-teal-700 hover:bg-teal-50 cursor-pointer transition-colors"
+                                  >
+                                    <Mail className="w-3.5 h-3.5" />
+                                  </button>
+
+                                  {!isAdminUser && (
+                                    <button
+                                      onClick={() => handleManualDeleteUser(u)}
+                                      title="Kullanıcıyı Sil"
+                                      className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 cursor-pointer transition-colors"
+                                    >
+                                      <Trash2 className="w-3.5 h-3.5" />
+                                    </button>
+                                  )}
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })
+                    )}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

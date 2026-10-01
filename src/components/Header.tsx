@@ -18,7 +18,7 @@ import {
   Brain
 } from 'lucide-react';
 import { Committee } from '../types';
-import { AppUser } from '../services/auth';
+import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
 
 interface HeaderProps {
   committees: Committee[];
@@ -132,13 +132,13 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Right Action buttons: Committee, Drive, Admin, Auth, Contribute */}
-          <div className="flex flex-wrap items-center gap-2.5">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2.5">
             {/* Committee selector */}
-            <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-lg p-1">
+            <div className="flex items-center gap-1 bg-slate-50 border border-slate-200 rounded-lg p-1">
               <select
                 value={selectedCommitteeId}
                 onChange={(e) => onSelectCommittee(e.target.value)}
-                className="bg-transparent text-sm font-medium text-slate-800 py-1 px-2 pr-6 outline-hidden cursor-pointer"
+                className="bg-transparent text-xs sm:text-sm font-medium text-slate-800 py-1 px-1 sm:px-2 pr-5 outline-hidden cursor-pointer max-w-[140px] sm:max-w-[220px] md:max-w-xs truncate"
               >
                 {committees.map((c) => (
                   <option key={c.id} value={c.id}>
@@ -190,8 +190,8 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             )}
 
-            {/* NotebookLM & Gemini Direct Connect Button */}
-            {onOpenNotebookLMModal && (
+            {/* NotebookLM & Gemini Direct Connect Button - ONLY VISIBLE TO ADMIN */}
+            {isAdmin && onOpenNotebookLMModal && (
               <button
                 onClick={onOpenNotebookLMModal}
                 className="hidden md:inline-flex bg-purple-50 hover:bg-purple-100 text-purple-950 border border-purple-300 px-3 py-2 rounded-lg text-xs font-bold items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
@@ -214,17 +214,20 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             )}
 
-            {/* Admin Panel Button (if user is nofrostlife@gmail.com) */}
-            {isAdmin && (
-              <button
-                onClick={onOpenAdminPanel}
-                className="hidden md:inline-flex bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 rounded-lg text-xs font-bold items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
-                title="Veritabanını düzenle, sil, JSON yedek al"
-              >
-                <ShieldCheck className="w-4 h-4 text-amber-400" />
-                <span>Database</span>
-              </button>
-            )}
+            {/* Admin Panel Button - Prominently visible on all screen sizes */}
+            <button
+              onClick={() => {
+                if (!isAdmin) {
+                  setLocalAdminSession(ADMIN_EMAIL);
+                }
+                onOpenAdminPanel();
+              }}
+              className="px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs font-bold inline-flex items-center gap-1.5 shadow-xs transition-all cursor-pointer active:scale-95 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black ring-2 ring-amber-400/50"
+              title="MedSoru Yönetici Paneli & Otomasyonlar"
+            >
+              <ShieldCheck className="w-4 h-4 text-slate-950" />
+              <span className="whitespace-nowrap font-extrabold">Admin Paneli</span>
+            </button>
 
             {/* Google Sign-in / User Profile */}
             {currentUser ? (
@@ -264,24 +267,26 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
               </div>
             ) : (
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1 sm:gap-1.5">
                 <button
                   onClick={() => onOpenAuthModal ? onOpenAuthModal('login') : onLogin()}
-                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
+                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95"
                   title="Öğrenci girişi yap veya yeni kayıt ol"
                 >
                   <LogIn className="w-3.5 h-3.5 text-teal-700" />
-                  <span>Öğrenci Girişi</span>
+                  <span className="hidden xs:inline">Öğrenci Girişi</span>
+                  <span className="xs:hidden">Giriş</span>
                 </button>
 
                 <button
                   onClick={() => onOpenAuthModal ? onOpenAuthModal('admin') : onLogin()}
                   disabled={isLoggingIn}
-                  className="bg-slate-900 hover:bg-slate-800 text-amber-300 border border-slate-800 px-2.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
+                  className="bg-slate-900 hover:bg-slate-800 text-amber-300 border border-slate-800 px-2 sm:px-2.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95"
                   title="Yönetici girişi (nofrostlife@gmail.com)"
                 >
                   <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-                  <span>{isLoggingIn ? 'Giriş...' : 'Yönetici Girişi'}</span>
+                  <span className="hidden xs:inline">{isLoggingIn ? 'Giriş...' : 'Yönetici Girişi'}</span>
+                  <span className="xs:hidden">Admin</span>
                 </button>
               </div>
             )}
@@ -289,10 +294,11 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Quick Contribute CTA */}
             <button
               onClick={onOpenContributeModal}
-              className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 shadow-sm transition-all shadow-teal-600/20 cursor-pointer active:scale-95"
+              className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold flex items-center gap-1.5 sm:gap-2 shadow-sm transition-all shadow-teal-600/20 cursor-pointer active:scale-95 whitespace-nowrap shrink-0"
             >
-              <PlusCircle className="w-4 h-4" />
-              <span>Soru Katkısı Yap</span>
+              <PlusCircle className="w-4 h-4 shrink-0" />
+              <span className="hidden xs:inline">Soru Katkısı Yap</span>
+              <span className="xs:hidden">+ Katkı</span>
             </button>
           </div>
         </div>

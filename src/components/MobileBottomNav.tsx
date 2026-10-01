@@ -147,18 +147,20 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
                 <span>Soru Hatırla & Ekle</span>
               </button>
 
-              {isAdmin && (
-                <button
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    onOpenAdminPanel();
-                  }}
-                  className="col-span-2 p-3 rounded-xl border border-amber-300 bg-amber-50 flex items-center justify-center gap-2 font-bold text-amber-950 text-xs"
-                >
-                  <ShieldCheck className="w-4 h-4 text-amber-600" />
-                  <span>Yönetici & Veritabanı Kontrolü</span>
-                </button>
-              )}
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  onOpenAdminPanel();
+                }}
+                className={`col-span-2 p-3 rounded-xl border flex items-center justify-center gap-2 font-bold text-xs cursor-pointer transition-all active:scale-95 ${
+                  isAdmin
+                    ? 'border-amber-400 bg-amber-400 text-slate-950 font-black ring-1 ring-amber-500'
+                    : 'border-slate-800 bg-slate-900 text-amber-300'
+                }`}
+              >
+                <ShieldCheck className={`w-4 h-4 ${isAdmin ? 'text-slate-950' : 'text-amber-400'}`} />
+                <span>{isAdmin ? 'Yönetici & Otomasyon Paneli' : 'Admin Paneli Girişi'}</span>
+              </button>
             </div>
           </div>
         </div>

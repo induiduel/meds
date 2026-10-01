@@ -545,4 +545,19 @@ export class FirestoreDbService {
       return [];
     }
   }
+
+  /**
+   * Fetches all registered users from Firestore users collection.
+   */
+  static async getRegisteredUsers(): Promise<any[]> {
+    try {
+      const snap = await withTimeout(getDocs(collection(db, 'users')), 4000);
+      const list: any[] = [];
+      snap.forEach((d) => list.push(d.data()));
+      return list;
+    } catch (e) {
+      console.warn('Firestore getRegisteredUsers fallback:', e);
+      return [];
+    }
+  }
 }

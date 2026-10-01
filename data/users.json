@@ -1,0 +1,57 @@
+[
+  {
+    "uid": "admin-nofrostlife",
+    "email": "nofrostlife@gmail.com",
+    "displayName": "Yönetici (nofrostlife)",
+    "studentNumber": "202311001",
+    "role": "admin",
+    "createdAt": "2026-09-01T08:00:00.000Z",
+    "lastLoginAt": "2026-10-01T00:47:38.794Z",
+    "welcomeEmailSent": true,
+    "welcomeEmailSentAt": "2026-09-01T08:05:00.000Z"
+  },
+  {
+    "uid": "std-eren-2023",
+    "email": "eren.stj@ogr.karabuk.edu.tr",
+    "displayName": "Stj. Dr. Eren",
+    "studentNumber": "202311042",
+    "role": "student",
+    "createdAt": "2026-09-15T10:14:00.000Z",
+    "lastLoginAt": "2026-09-30T19:47:38.794Z",
+    "welcomeEmailSent": true,
+    "welcomeEmailSentAt": "2026-09-15T10:15:00.000Z"
+  },
+  {
+    "uid": "std-ayse-tip3",
+    "email": "ayse.kaya@ogr.karabuk.edu.tr",
+    "displayName": "Ayşe Tıp-3",
+    "studentNumber": "202311088",
+    "role": "student",
+    "createdAt": "2026-09-18T14:30:00.000Z",
+    "lastLoginAt": "2026-09-30T12:47:38.794Z",
+    "welcomeEmailSent": true,
+    "welcomeEmailSentAt": "2026-09-18T14:31:00.000Z"
+  },
+  {
+    "uid": "std-mert-amfi1",
+    "email": "mert.yilmaz@ogr.karabuk.edu.tr",
+    "displayName": "Mert (Amfi 1)",
+    "studentNumber": "202311105",
+    "role": "student",
+    "createdAt": "2026-09-20T09:20:00.000Z",
+    "lastLoginAt": "2026-09-30T00:47:38.794Z",
+    "welcomeEmailSent": true,
+    "welcomeEmailSentAt": "2026-09-20T09:21:00.000Z"
+  },
+  {
+    "uid": "std-cemre-t",
+    "email": "cemre.demir@ogr.karabuk.edu.tr",
+    "displayName": "Cemre T.",
+    "studentNumber": "202311142",
+    "role": "student",
+    "createdAt": "2026-09-22T16:45:00.000Z",
+    "lastLoginAt": "2026-09-29T12:47:38.794Z",
+    "welcomeEmailSent": true,
+    "welcomeEmailSentAt": "2026-09-22T16:46:00.000Z"
+  }
+]

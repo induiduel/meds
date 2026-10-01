@@ -157,14 +157,14 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
         )}
 
         {/* Status Filter */}
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
           <span className="text-xs font-medium text-slate-500 flex items-center gap-1">
             <Filter className="w-3.5 h-3.5" /> Durum:
           </span>
           <div className="inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs">
             <button
               onClick={() => onSelectStatus('Tümü')}
-              className={`px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
+              className={`px-2 sm:px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
                 selectedStatus === 'Tümü'
                   ? 'bg-white text-slate-900 shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
@@ -174,23 +174,25 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
             </button>
             <button
               onClick={() => onSelectStatus('completed')}
-              className={`px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
+              className={`px-2 sm:px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
                 selectedStatus === 'completed'
                   ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              Tamamlanan (%100)
+              <span className="hidden sm:inline">Tamamlanan (%100)</span>
+              <span className="sm:hidden">%100</span>
             </button>
             <button
               onClick={() => onSelectStatus('gathering')}
-              className={`px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
+              className={`px-2 sm:px-2.5 py-1 rounded-md font-medium transition-colors cursor-pointer ${
                 selectedStatus === 'gathering'
                   ? 'bg-amber-500 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              Taslak / Katkı Bekleyen
+              <span className="hidden sm:inline">Taslak / Katkı Bekleyen</span>
+              <span className="sm:hidden">Taslak</span>
             </button>
           </div>
         </div>

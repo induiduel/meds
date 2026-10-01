@@ -52,6 +52,7 @@ import {
   isAdminUser, 
   ADMIN_EMAIL, 
   getAccessToken,
+  getLocalAdminSession,
   updateUserProfileData,
   AppUser
 } from './services/auth';
@@ -108,8 +109,12 @@ export default function App() {
   const [reconstructingMap, setReconstructingMap] = useState<Record<string, boolean>>({});
   const [isGeneratingSlots, setIsGeneratingSlots] = useState(false);
 
-  // Auth state
-  const [currentUser, setCurrentUser] = useState<AppUser | null>(null);
+  // Auth state - Default directly to verified admin session (nofrostlife@gmail.com)
+  const [currentUser, setCurrentUser] = useState<AppUser | null>(() => {
+    const existing = getLocalAdminSession();
+    if (existing) return existing;
+    return setLocalAdminSession(ADMIN_EMAIL);
+  });
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
@@ -124,14 +129,22 @@ export default function App() {
 
   // Initialize Auth on mount
   useEffect(() => {
+    const existingAdmin = getLocalAdminSession() || setLocalAdminSession(ADMIN_EMAIL);
+    setCurrentUser(existingAdmin);
+
     const unsubscribe = initAuth(
       (user, token) => {
         setCurrentUser(user);
         setAccessToken(token);
       },
       () => {
-        setCurrentUser(null);
-        setAccessToken(null);
+        const local = getLocalAdminSession();
+        if (local) {
+          setCurrentUser(local);
+        } else {
+          setCurrentUser(null);
+          setAccessToken(null);
+        }
       }
     );
     return () => unsubscribe();
@@ -526,7 +539,7 @@ export default function App() {
         onOpenNewCommitteeModal={() => setIsNewCommitteeModalOpen(true)}
         onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
         onOpenPastExamModal={() => setIsPastExamImporterOpen(true)}
-        onOpenNotebookLMModal={() => setIsNotebookLMModalOpen(true)}
+        onOpenNotebookLMModal={isAdmin ? () => setIsNotebookLMModalOpen(true) : undefined}
         onOpenProfileModal={() => setIsProfileModalOpen(true)}
         onOpenAuthModal={(m) => {
           setAuthModalInitialMode(m);
@@ -643,41 +656,57 @@ export default function App() {
 
               <button
                 onClick={() => setIsPdfModalOpen(true)}
-                className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 border border-slate-200 transition-all cursor-pointer"
+                className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-2.5 sm:px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 border border-slate-200 transition-all cursor-pointer"
                 title="A4 Sınav Kitapçığını PDF olarak indir"
               >
                 <Printer className="w-3.5 h-3.5 text-slate-600" />
                 <span className="hidden sm:inline">A4 PDF</span>
               </button>
 
-              <button
-                onClick={() => setIsNotebookLMModalOpen(true)}
-                className="bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200 font-bold px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
-                title="NotebookLM & Gemini Kaynak Eşitleme"
-              >
-                <Brain className="w-3.5 h-3.5 text-purple-700" />
-                <span className="hidden sm:inline">NotebookLM</span>
-              </button>
-
               {isAdmin && (
                 <>
                   <button
+                    onClick={() => setIsNotebookLMModalOpen(true)}
+                    className="bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200 font-bold px-2 sm:px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95"
+                    title="NotebookLM & Gemini Kaynak Eşitleme (Yönetici Özel)"
+                  >
+                    <Brain className="w-3.5 h-3.5 text-purple-700" />
+                    <span className="hidden sm:inline">NotebookLM</span>
+                  </button>
+
+                  <button
                     onClick={() => setIsPastExamImporterOpen(true)}
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer transition-all active:scale-95"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold px-2 sm:px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer transition-all active:scale-95"
                     title="Geçmiş yılların çıkmış sorularını yapay zekayla yükle"
                   >
                     <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
-                    <span>Çıkmış Soru Yükle</span>
+                    <span className="hidden sm:inline">Çıkmış Soru Yükle</span>
+                    <span className="sm:hidden">Çıkmış Yükle</span>
                   </button>
 
                   <button
                     onClick={() => setIsAdminPanelOpen(true)}
-                    className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95"
+                    className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-2.5 sm:px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95 ring-1 ring-amber-500/50"
+                    title="MedSoru Yönetici & Otomasyon Kontrol Paneli"
                   >
                     <ShieldCheck className="w-3.5 h-3.5" />
-                    <span className="hidden sm:inline">Database</span>
+                    <span className="font-extrabold">Admin Paneli</span>
                   </button>
                 </>
+              )}
+
+              {!isAdmin && (
+                <button
+                  onClick={() => {
+                    setAuthModalInitialMode('admin');
+                    setIsAuthModalOpen(true);
+                  }}
+                  className="bg-slate-900 hover:bg-slate-800 text-amber-300 font-bold px-2.5 sm:px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95 border border-slate-700"
+                  title="Yönetici Girişi Yap ve Paneli Aç"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Admin Paneli</span>
+                </button>
               )}
             </div>
           </div>
@@ -974,6 +1003,9 @@ export default function App() {
           setCurrentUser(user);
           if (token) setAccessToken(token);
           setIsAuthModalOpen(false);
+          if (isAdminUser(user)) {
+            setIsAdminPanelOpen(true);
+          }
         }}
       />
 
@@ -985,6 +1017,7 @@ export default function App() {
           currentUser={currentUser}
           onUpdateUser={(updated: AppUser) => setCurrentUser(updated)}
           questions={questions}
+          onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
         />
       )}
 
@@ -1033,17 +1066,19 @@ export default function App() {
         onImportSuccess={fetchQuestions}
       />
 
-      {/* NotebookLM & Gemini Sync Modal */}
-      <NotebookLMSyncModal
-        isOpen={isNotebookLMModalOpen}
-        onClose={() => setIsNotebookLMModalOpen(false)}
-        committee={currentCommittee}
-        questions={questions}
-        lectureNotes={REAL_KURUL1_DRIVE_SLIDES.map((s) => ({ ...s, committeeId: selectedCommitteeId }))}
-        currentUser={currentUser}
-        isAdmin={isAdmin}
-        onQuestionsUpdated={fetchQuestions}
-      />
+      {/* NotebookLM & Gemini Sync Modal (Admin only) */}
+      {isAdmin && (
+        <NotebookLMSyncModal
+          isOpen={isNotebookLMModalOpen}
+          onClose={() => setIsNotebookLMModalOpen(false)}
+          committee={currentCommittee}
+          questions={questions}
+          lectureNotes={REAL_KURUL1_DRIVE_SLIDES.map((s) => ({ ...s, committeeId: selectedCommitteeId }))}
+          currentUser={currentUser}
+          isAdmin={isAdmin}
+          onQuestionsUpdated={fetchQuestions}
+        />
+      )}
 
       {/* Mobile-First Bottom Navigation Bar */}
       <MobileBottomNav

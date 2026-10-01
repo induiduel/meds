@@ -91,11 +91,11 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
         cleanNum || undefined
       );
 
-      setSuccess('Kayıt başarılı! Öğrenci hesabınız oluşturuldu.');
+      setSuccess('Kayıt başarılı! Öğrenci hesabınız oluşturuldu ve hoş geldiniz e-postası iletildi.');
       setTimeout(() => {
         onAuthSuccess(user);
         onClose();
-      }, 500);
+      }, 700);
     } catch (err: any) {
       if (err.code === 'auth/email-already-in-use') {
         setError('Bu e-posta adresiyle kayıtlı bir hesap zaten var. Lütfen giriş sekmesinden giriş yapınız.');
@@ -421,12 +421,12 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                 <button
                   type="button"
                   onClick={handleDirectAdminLogin}
-                  className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-xs cursor-pointer transition-all active:scale-95"
+                  className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 px-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-xs cursor-pointer transition-all active:scale-95"
                 >
-                  <ShieldCheck className="w-4 h-4 text-slate-950" />
-                  <span>Şifresiz Doğrudan Yönetici Girişi Yap ({ADMIN_EMAIL})</span>
+                  <ShieldCheck className="w-4 h-4 text-slate-950 shrink-0" />
+                  <span className="truncate">Şifresiz Yönetici Girişi ({ADMIN_EMAIL})</span>
                 </button>
-                <p className="text-[10px] text-slate-400 mt-1">
+                <p className="text-[10px] text-slate-400 mt-1 text-center">
                   Iframe ortamında popup engeli durumunda tek tıkla tam yetki açar.
                 </p>
               </div>

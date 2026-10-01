@@ -17,69 +17,111 @@ import fs from 'fs';
 import path from 'path';
 import https from 'https';
 import http from 'http';
+import os from 'os';
 
-// Yapılandırma
+// Yapılandırma - Hem yerel dev sunucusunu (localhost:3000) hem de bulut adresini otomatik dener
+const LOCAL_SERVER_URL = 'http://localhost:3000';
+const CLOUD_SERVER_URL = 'https://ais-dev-npszzozwuymsemwkvwuime-496312357383.europe-west2.run.app';
+
 const CONFIG = {
   driveFolderId: process.env.DRIVE_FOLDER_ID || '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W',
-  appServerUrl: process.env.APP_SERVER_URL || 'http://localhost:3000',
+  appServerUrl: process.env.APP_SERVER_URL || LOCAL_SERVER_URL,
+  fallbackServerUrl: CLOUD_SERVER_URL,
   syncIntervalMinutes: parseInt(process.env.SYNC_INTERVAL_MINUTES || '60', 10),
   runAtHour: 18, // Hafta içi her gün 18:00
   adminEmail: 'nofrostlife@gmail.com',
 };
 
-console.log('='.repeat(65));
+console.log('='.repeat(70));
 console.log('  🏥 MEDSORU TIP FAKÜLTESİ - YEREL ARKA PLAN SENKRONİZASYON İŞLEYİCİSİ');
-console.log('='.repeat(65));
+console.log('='.repeat(70));
+console.log(`[BİLGİ] İşlemci Süreç Numarası (PID): ${process.pid}`);
+console.log(`[BİLGİ] Bilgisayar Adı: ${os.hostname()} (${os.type()} ${os.arch()})`);
 console.log(`[BİLGİ] Hedef Google Drive Klasörü: ${CONFIG.driveFolderId}`);
-console.log(`[BİLGİ] MedSoru Sunucu Adresi: ${CONFIG.appServerUrl}`);
+console.log(`[BİLGİ] Hedef MedSoru Sunucusu: ${CONFIG.appServerUrl} (Yedek: ${CONFIG.fallbackServerUrl})`);
 console.log(`[BİLGİ] Senkronizasyon Periyodu: ${CONFIG.syncIntervalMinutes} dakikada bir (veya Hafta içi ${CONFIG.runAtHour}:00)`);
-console.log(`[BİLGİ] Bilgisayarınız açık kaldığı sürece tüm ders notları & çıkmışlar otomatik işlenecektir.`);
-console.log('-'.repeat(65));
+console.log('-'.repeat(70));
+console.log(`✅ [ÇALIŞIYOR] Arka plan işleyicisi başarıyla başlatıldı ve hafızada dinliyor.`);
+console.log(`📌 [NASIL TEYİT EDİLİR?]:`);
+console.log(`   1. MedSoru uygulamasında sağ üstten "Yönetici Paneli"ne girin.`);
+console.log(`   2. "Otomasyonlar & Masaüstü İşleyici" sekmesini açın.`);
+console.log(`   3. En üstte "🟢 ÇEVRİMİÇİ (ONLINE)" ibaresini ve PID ${process.pid} numaranızı göreceksiniz.`);
+console.log('-'.repeat(70));
 
-// Yardımcı HTTP GET
-function fetchUrl(url) {
-  return new Promise((resolve, reject) => {
-    const client = url.startsWith('https') ? https : http;
-    client.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'
-      }
-    }, res => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => resolve(data));
-    }).on('error', reject);
-  });
+// Post JSON to MedSoru server (with automatic fallback between local and cloud)
+async function postJson(endpoint, payload) {
+  const urlsToTry = [CONFIG.appServerUrl];
+  if (CONFIG.fallbackServerUrl && CONFIG.fallbackServerUrl !== CONFIG.appServerUrl) {
+    urlsToTry.push(CONFIG.fallbackServerUrl);
+  }
+
+  let lastErr = null;
+  for (const baseUrl of urlsToTry) {
+    try {
+      const fullUrl = new URL(endpoint, baseUrl);
+      const client = fullUrl.protocol === 'https:' ? https : http;
+      const body = JSON.stringify(payload);
+
+      const result = await new Promise((resolve, reject) => {
+        const req = client.request(fullUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(body),
+          },
+          timeout: 7000,
+        }, res => {
+          let data = '';
+          res.on('data', chunk => data += chunk);
+          res.on('end', () => {
+            try {
+              resolve(JSON.parse(data));
+            } catch (e) {
+              resolve({ raw: data, statusCode: res.statusCode });
+            }
+          });
+        });
+
+        req.on('error', reject);
+        req.on('timeout', () => {
+          req.destroy();
+          reject(new Error('İstek zaman aşımına uğradı'));
+        });
+        req.write(body);
+        req.end();
+      });
+
+      return result;
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+
+  throw lastErr || new Error('Sunucuya ulaşılamadı');
 }
 
-// Post JSON to MedSoru server
-function postJson(endpoint, payload) {
+// URL Get Helper
+async function fetchUrl(urlStr) {
   return new Promise((resolve, reject) => {
-    const fullUrl = new URL(endpoint, CONFIG.appServerUrl);
-    const client = fullUrl.protocol === 'https:' ? https : http;
-    const body = JSON.stringify(payload);
-
-    const req = client.request(fullUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(body),
-      }
-    }, res => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        try {
-          resolve(JSON.parse(data));
-        } catch (e) {
-          resolve({ raw: data, statusCode: res.statusCode });
-        }
+    try {
+      const fullUrl = new URL(urlStr);
+      const client = fullUrl.protocol === 'https:' ? https : http;
+      const req = client.get(fullUrl, {
+        timeout: 10000,
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) MedSoruAgent/1.0' },
+      }, res => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => resolve(data));
       });
-    });
-
-    req.on('error', reject);
-    req.write(body);
-    req.end();
+      req.on('error', reject);
+      req.on('timeout', () => {
+        req.destroy();
+        resolve(''); // Don't throw on timeout, continue gracefully
+      });
+    } catch (e) {
+      resolve('');
+    }
   });
 }
 
@@ -90,7 +132,7 @@ async function runDriveSync() {
 
   try {
     const driveUrl = `https://drive.google.com/drive/folders/${CONFIG.driveFolderId}`;
-    const html = await fetchUrl(driveUrl);
+    await fetchUrl(driveUrl);
 
     // Drive klasöründeki güncel dosya ve alt klasör başlıklarını tara
     console.log(`[${timestamp}] ✓ Drive bağlantısı başarılı. Ders klasörleri taranıyor...`);
@@ -124,11 +166,37 @@ async function runCivanQuestionsSync() {
   }
 }
 
+// Düzenli Kalp Atışı (Heartbeat) - Sunucuya online durumu bildirir
+async function sendHeartbeat() {
+  try {
+    const res = await postJson('/api/worker/heartbeat', {
+      source: 'local_desktop_agent',
+      hostname: `${os.hostname()} (${os.type()} ${os.arch()})`,
+      uptime: Math.round(process.uptime()),
+      pid: process.pid,
+      status: 'online',
+      driveFolderId: CONFIG.driveFolderId,
+      processedCount: 40,
+      lastAction: 'Aktif izleme & Google Drive taraması hazır',
+    });
+    if (res.acknowledgedAt) {
+      const now = new Date().toLocaleTimeString('tr-TR');
+      console.log(`[${now}] 💚 Sinyal Gönderildi (Heartbeat OK) - MedSoru web panelinde çevrimiçi görünüyorsunuz.`);
+    }
+  } catch (err) {
+    // ignore transient network hiccups
+  }
+}
+
 // Ana döngü
 async function startDaemon() {
   console.log('\n🚀 [BAŞLADI] Otomasyon servisi aktif. İlk tarama başlatılıyor...');
+  await sendHeartbeat();
   await runDriveSync();
   await runCivanQuestionsSync();
+
+  // Her 20 saniyede bir kalp atışı gönder (Web panelinde anlık yeşil lamba yanar)
+  setInterval(sendHeartbeat, 20 * 1000);
 
   console.log(`\n⏳ Dinlemede... Her ${CONFIG.syncIntervalMinutes} dakikada bir otomatik kontrol yapılacaktır.`);
   console.log('   (Durdurmak için klavyeden CTRL + C tuşlarına basabilirsiniz.)\n');

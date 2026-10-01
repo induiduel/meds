@@ -20,12 +20,18 @@ import {
   Cloud,
   RefreshCw,
   FolderOpen,
-  ChevronDown
+  ChevronDown,
+  Download,
+  Copy,
+  Check,
+  UploadCloud,
+  FileUp
 } from 'lucide-react';
 import { LectureNote, QuestionItem, Committee, QuestionLectureMatch } from '../types';
 import { AppUser } from '../services/auth';
 import { getFirestore, collection, getDocs, doc, setDoc, deleteDoc } from 'firebase/firestore';
 import { db, cleanForFirestore } from '../services/firestoreDb';
+import { ApiService } from '../services/api';
 import { InfoPopover } from './InfoPopover';
 import { SlideReaderModal } from './SlideReaderModal';
 import { 
@@ -33,7 +39,8 @@ import {
   TARGET_DRIVE_FOLDER_URL, 
   REAL_KURUL1_DRIVE_SLIDES,
   getAutomationStatus, 
-  runDriveSyncAndAutoMatch 
+  runDriveSyncAndAutoMatch,
+  ensureAllSlidePages
 } from '../services/driveAutomation';
 
 interface LectureNotesViewProps {
@@ -60,10 +67,21 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       const stored = localStorage.getItem(LOCAL_NOTES_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length >= 10) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed.map((n) => ({
+            ...n,
+            totalSlides: n.pages?.length || n.totalSlides || 1,
+            pages: n.pages || [],
+          }));
+        }
       }
     } catch (e) {}
-    return REAL_KURUL1_DRIVE_SLIDES.map(s => ({ ...s, committeeId: committee?.id || 'donem3-kurul1' }));
+    return REAL_KURUL1_DRIVE_SLIDES.map(s => ({
+      ...s,
+      committeeId: committee?.id || 'donem3-kurul1',
+      totalSlides: s.pages?.length || 5,
+      pages: s.pages || [],
+    }));
   });
 
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Tümü');
@@ -71,6 +89,14 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   const [activeNote, setActiveNote] = useState<LectureNote | null>(() => {
     return notes[0] || null;
   });
+
+  // Export & Reader Enhancements
+  const [exportFeedback, setExportFeedback] = useState<string | null>(null);
+  const [copyPageSuccess, setCopyPageSuccess] = useState<Record<number, boolean>>({});
+  const [slideSearchQuery, setSlideSearchQuery] = useState('');
+  const [isUploadingPdf, setIsUploadingPdf] = useState(false);
+  const [pdfUploadStatus, setPdfUploadStatus] = useState<string | null>(null);
+  const [addMode, setAddMode] = useState<'upload' | 'text'>('upload');
 
   // Google Drive Automation State & Live Rendering Progress
   const [isSyncingDrive, setIsSyncingDrive] = useState(false);
@@ -94,6 +120,137 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
   const toggleCategory = (cat: string) => {
     setCollapsedCategories((prev) => ({ ...prev, [cat]: !prev[cat] }));
+  };
+
+  // Export full slide text as TXT, Markdown, or clipboard
+  const exportNoteText = (note: LectureNote, format: 'txt' | 'md' | 'copy') => {
+    let content = '';
+    if (format === 'md') {
+      content = `# ${note.title}\n\n`;
+      content += `**Anabilim Dalı:** ${note.discipline}  \n`;
+      if (note.instructor) content += `**Öğretim Üyesi:** ${note.instructor}  \n`;
+      content += `**Toplam Slayt/Sayfa:** ${note.totalSlides}  \n`;
+      content += `**Dışa Aktarım Tarihi:** ${new Date().toLocaleDateString('tr-TR')}  \n\n---\n\n`;
+      note.pages.forEach((p) => {
+        content += `## Sayfa ${p.pageNumber}\n\n${p.content}\n\n`;
+        if (p.keywords && p.keywords.length > 0) {
+          content += `*Anahtar Kelimeler: ${p.keywords.join(', ')}*\n\n`;
+        }
+        content += `---\n\n`;
+      });
+    } else {
+      content = `========================================================\n`;
+      content += `${note.title.toUpperCase()}\n`;
+      content += `Anabilim Dalı: ${note.discipline}\n`;
+      if (note.instructor) content += `Öğretim Üyesi: ${note.instructor}\n`;
+      content += `Toplam Slayt Sayısı: ${note.totalSlides}\n`;
+      content += `Dışa Aktarım Tarihi: ${new Date().toLocaleString('tr-TR')}\n`;
+      content += `========================================================\n\n`;
+      note.pages.forEach((p) => {
+        content += `--- SAYFA ${p.pageNumber} ---\n`;
+        content += `${p.content}\n`;
+        if (p.keywords && p.keywords.length > 0) {
+          content += `Anahtar Kelimeler: ${p.keywords.join(', ')}\n`;
+        }
+        content += `\n`;
+      });
+    }
+
+    if (format === 'copy') {
+      navigator.clipboard.writeText(content);
+      setExportFeedback('✓ Slaytın tüm metni panoya kopyalandı!');
+      setTimeout(() => setExportFeedback(null), 3500);
+    } else {
+      const sanitized = note.title.replace(/[^a-zA-Z0-9_\u00C0-\u017F-]/g, '_');
+      const filename = `${sanitized}_Metni.${format}`;
+      const blob = new Blob([content], {
+        type: format === 'md' ? 'text/markdown;charset=utf-8' : 'text/plain;charset=utf-8',
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      setExportFeedback(`✓ "${filename}" başarıyla dışarı aktarıldı!`);
+      setTimeout(() => setExportFeedback(null), 3500);
+    }
+  };
+
+  // Copy single page content
+  const copyPageContent = (pageNumber: number, text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopyPageSuccess((prev) => ({ ...prev, [pageNumber]: true }));
+    setTimeout(() => {
+      setCopyPageSuccess((prev) => ({ ...prev, [pageNumber]: false }));
+    }, 2000);
+  };
+
+  // Direct PDF/DOCX file upload and extraction
+  const handlePdfFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsUploadingPdf(true);
+    setPdfUploadStatus(`"${file.name}" okunuyor... Sayfalar render ediliyor...`);
+
+    try {
+      const reader = new FileReader();
+      const base64Promise = new Promise<string>((resolve, reject) => {
+        reader.onload = () => {
+          const res = reader.result as string;
+          const b64 = res.split(',')[1] || res;
+          resolve(b64);
+        };
+        reader.onerror = reject;
+      });
+      reader.readAsDataURL(file);
+      const base64 = await base64Promise;
+
+      setPdfUploadStatus(`PDF motoru çalışıyor, tüm sayfalar tek tek okunuyor...`);
+      const resp = await ApiService.extractDocument({
+        fileBase64: base64,
+        fileName: file.name,
+        fileMimeType: file.type || 'application/pdf',
+        mode: 'lecture_notes',
+        committeeId: committee?.id || 'donem3-kurul1',
+      });
+
+      if (resp.success && resp.note) {
+        const extractedNote = resp.note;
+        const newNote: LectureNote = {
+          id: `note-${Date.now()}`,
+          committeeId: committee?.id || 'donem3-kurul1',
+          discipline: extractedNote.discipline || newDiscipline,
+          title: extractedNote.title || file.name.replace(/\.[^/.]+$/, ''),
+          instructor: extractedNote.instructor || undefined,
+          totalSlides: extractedNote.pages?.length || 1,
+          pages: extractedNote.pages || [],
+          uploadedBy: currentUser?.displayName || currentUser?.email || 'Öğrenci',
+          uploadedAt: new Date().toISOString(),
+        };
+
+        const updated = [newNote, ...notes];
+        setNotes(updated);
+        setActiveNote(newNote);
+        setIsAddingNote(false);
+        setPdfUploadStatus(null);
+        setDriveSyncFeedback(
+          `✓ "${newNote.title}" başarıyla yüklendi: Toplam ${newNote.totalSlides} sayfa eksiksiz render edildi!`
+        );
+        try {
+          await setDoc(doc(db, 'lecture_notes', newNote.id), cleanForFirestore(newNote));
+        } catch (err) {}
+      } else {
+        throw new Error((resp as any).error || 'Belge okunamadı');
+      }
+    } catch (err: any) {
+      setPdfUploadStatus('Hata: ' + err.message);
+    } finally {
+      setIsUploadingPdf(false);
+    }
   };
 
   // Handler for manual trigger of Drive Automation
@@ -159,6 +316,28 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     }
     loadFirestoreNotes();
   }, []);
+
+  // Clear or restore default mock slides
+  const handleClearDefaultNotes = () => {
+    const customOnly = notes.filter((n) => !n.id.startsWith('drive-'));
+    setNotes(customOnly);
+    setActiveNote(customOnly[0] || null);
+    localStorage.setItem(LOCAL_NOTES_KEY, JSON.stringify(customOnly));
+    setDriveSyncFeedback('✓ Varsayılan örnek slaytlar gizlendi. Yalnızca yüklediğiniz kendi ders notlarınız listelenmektedir.');
+  };
+
+  const handleResetSampleNotes = () => {
+    const defaultSlides = REAL_KURUL1_DRIVE_SLIDES.map((s) => ({
+      ...s,
+      committeeId: committee?.id || 'donem3-kurul1',
+      totalSlides: s.pages?.length || 5,
+      pages: s.pages || [],
+    }));
+    setNotes(defaultSlides);
+    setActiveNote(defaultSlides[0] || null);
+    localStorage.setItem(LOCAL_NOTES_KEY, JSON.stringify(defaultSlides));
+    setDriveSyncFeedback('✓ Örnek kurul slaytları geri yüklendi.');
+  };
 
   const filteredNotes = useMemo(() => {
     return notes.filter((n) => {
@@ -442,10 +621,31 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left column: Categorized List of uploaded Lecture Notes */}
         <div className="lg:col-span-5 space-y-3.5">
-          <h3 className="font-bold text-sm text-slate-900 flex items-center justify-between">
-            <span>Kategorize Edilmiş Ders Slaytları ({filteredNotes.length})</span>
-            <span className="text-xs text-slate-500 font-normal">Kategoriye göre ayrılmıştır</span>
-          </h3>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h3 className="font-bold text-sm text-slate-900 flex items-center gap-2">
+              <span>Ders Slaytları ({filteredNotes.length})</span>
+            </h3>
+
+            <div className="flex items-center gap-1.5">
+              {notes.some(n => n.id.startsWith('drive-')) ? (
+                <button
+                  onClick={handleClearDefaultNotes}
+                  className="text-[10px] text-slate-500 hover:text-rose-600 bg-slate-100 hover:bg-rose-50 px-2 py-1 rounded-md border border-slate-200 transition-colors cursor-pointer"
+                  title="Varsayılan örnek slaytları gizle, sadece kendi yüklediğin PDF'leri göster"
+                >
+                  Örnekleri Gizle
+                </button>
+              ) : (
+                <button
+                  onClick={handleResetSampleNotes}
+                  className="text-[10px] text-teal-700 hover:text-teal-900 bg-teal-50 hover:bg-teal-100 px-2 py-1 rounded-md border border-teal-200 transition-colors cursor-pointer"
+                  title="Varsayılan örnek slaytları geri getir"
+                >
+                  Örnekleri Getir
+                </button>
+              )}
+            </div>
+          </div>
 
           {filteredNotes.length === 0 ? (
             <div className="bg-white rounded-xl border border-slate-200 p-8 text-center space-y-2">
@@ -630,71 +830,151 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         {/* Right column: Rendered Note Reader */}
         <div className="lg:col-span-7">
           {activeNote ? (
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-6">
-              <div className="border-b border-slate-100 pb-4">
-                <div className="flex items-center justify-between gap-3">
+            <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-xs space-y-5">
+              <div className="border-b border-slate-100 pb-4 space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-teal-100 text-teal-800 border border-teal-200">
                     {activeNote.discipline}
                   </span>
-                  <span className="text-xs text-slate-500 font-medium">
-                    Toplam {activeNote.totalSlides} Sayfa / Slayt Render Edildi
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-slate-500 font-medium">
+                      Toplam {activeNote.totalSlides} Sayfa Eksiksiz Render Edildi
+                    </span>
+                  </div>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-2">
-                  <h3 className="text-lg sm:text-xl font-black text-slate-900">{activeNote.title}</h3>
-                  {activeNote.driveFileUrl && (
-                    <a
-                      href={activeNote.driveFileUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white text-xs font-bold shadow-xs transition-all shrink-0 cursor-pointer active:scale-95"
+
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-black text-slate-900">{activeNote.title}</h3>
+                    {activeNote.instructor && (
+                      <p className="text-xs text-slate-600 mt-0.5">Öğretim Üyesi: {activeNote.instructor}</p>
+                    )}
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-1.5 shrink-0">
+                    {/* Export Text Dropdown/Buttons */}
+                    <button
+                      onClick={() => exportNoteText(activeNote, 'txt')}
+                      title="Slayt metnini .txt olarak kaydet"
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all cursor-pointer"
                     >
-                      <ExternalLink className="w-3.5 h-3.5 text-teal-200" />
-                      <span>Google Drive'da Slaytı Aç (PDF)</span>
-                    </a>
-                  )}
+                      <Download className="w-3.5 h-3.5 text-slate-600" />
+                      <span>TXT İndir</span>
+                    </button>
+
+                    <button
+                      onClick={() => exportNoteText(activeNote, 'md')}
+                      title="Slayt metnini Markdown olarak kaydet"
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all cursor-pointer"
+                    >
+                      <FileText className="w-3.5 h-3.5 text-slate-600" />
+                      <span>MD İndir</span>
+                    </button>
+
+                    <button
+                      onClick={() => exportNoteText(activeNote, 'copy')}
+                      title="Tüm slayt metnini kopyala"
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200 text-xs font-bold transition-all cursor-pointer"
+                    >
+                      <Copy className="w-3.5 h-3.5 text-teal-600" />
+                      <span>Tümünü Kopyala</span>
+                    </button>
+
+                    {activeNote.driveFileUrl && (
+                      <a
+                        href={activeNote.driveFileUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-teal-700 hover:bg-teal-800 text-white text-xs font-bold transition-all cursor-pointer"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5 text-teal-200" />
+                        <span>Drive'da Aç</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
-                {activeNote.instructor && (
-                  <p className="text-xs text-slate-600 mt-1">Öğretim Üyesi: {activeNote.instructor}</p>
+
+                {/* Export Feedback Alert */}
+                {exportFeedback && (
+                  <div className="bg-emerald-50 border border-emerald-300 text-emerald-950 p-2.5 rounded-xl text-xs font-semibold flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>{exportFeedback}</span>
+                  </div>
                 )}
+
+                {/* Search within slide deck */}
+                <div className="relative pt-1">
+                  <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="text"
+                    value={slideSearchQuery}
+                    onChange={(e) => setSlideSearchQuery(e.target.value)}
+                    placeholder={`"${activeNote.title}" içinde ara (konu, terim, ilaç veya sayfa no)...`}
+                    className="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:ring-2 focus:ring-teal-500 focus:bg-white"
+                  />
+                </div>
               </div>
 
               {/* Rendered Slide Pages */}
               <div className="space-y-4">
-                {activeNote.pages.map((page) => (
-                  <div
-                    key={page.pageNumber}
-                    className="bg-slate-50/70 border border-slate-200 rounded-xl p-4.5 space-y-2.5 transition-all hover:bg-white hover:shadow-xs"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="bg-slate-900 text-white text-[11px] font-black px-2.5 py-0.5 rounded-md flex items-center gap-1">
-                        <FileText className="w-3 h-3 text-teal-400" />
-                        Sayfa {page.pageNumber}
-                      </span>
-                      <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">
-                        Slayt Metni
-                      </span>
-                    </div>
+                {activeNote.pages
+                  .filter((page) => {
+                    if (!slideSearchQuery.trim()) return true;
+                    const q = slideSearchQuery.toLowerCase();
+                    return (
+                      page.content.toLowerCase().includes(q) ||
+                      `sayfa ${page.pageNumber}`.includes(q) ||
+                      (page.keywords && page.keywords.some((kw) => kw.toLowerCase().includes(q)))
+                    );
+                  })
+                  .map((page) => (
+                    <div
+                      key={page.pageNumber}
+                      className="bg-slate-50/70 border border-slate-200 rounded-xl p-4.5 space-y-2.5 transition-all hover:bg-white hover:shadow-xs"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="bg-slate-900 text-white text-[11px] font-black px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                          <FileText className="w-3 h-3 text-teal-400" />
+                          Sayfa {page.pageNumber} / {activeNote.totalSlides}
+                        </span>
 
-                    <div className="text-xs text-slate-800 whitespace-pre-line leading-relaxed font-sans font-medium">
-                      {page.content}
-                    </div>
-
-                    {page.keywords && page.keywords.length > 0 && (
-                      <div className="pt-2 border-t border-slate-200/60 flex flex-wrap items-center gap-1">
-                        <span className="text-[10px] text-slate-500 font-bold mr-1">Anahtar Kelimeler:</span>
-                        {page.keywords.map((kw, i) => (
-                          <span
-                            key={i}
-                            className="bg-white border border-slate-200 text-slate-700 text-[10px] px-2 py-0.5 rounded"
-                          >
-                            {kw}
-                          </span>
-                        ))}
+                        <button
+                          onClick={() => copyPageContent(page.pageNumber, page.content)}
+                          className="text-[10px] text-slate-600 hover:text-teal-700 bg-white hover:bg-teal-50 border border-slate-200 px-2 py-0.5 rounded flex items-center gap-1 cursor-pointer transition-colors"
+                        >
+                          {copyPageSuccess[page.pageNumber] ? (
+                            <>
+                              <Check className="w-3 h-3 text-emerald-600" />
+                              <span className="text-emerald-700 font-bold">Kopyalandı!</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-3 h-3 text-slate-400" />
+                              <span>Sayfayı Kopyala</span>
+                            </>
+                          )}
+                        </button>
                       </div>
-                    )}
-                  </div>
-                ))}
+
+                      <div className="text-xs text-slate-800 whitespace-pre-line leading-relaxed font-sans font-medium">
+                        {page.content}
+                      </div>
+
+                      {page.keywords && page.keywords.length > 0 && (
+                        <div className="pt-2 border-t border-slate-200/60 flex flex-wrap items-center gap-1">
+                          <span className="text-[10px] text-slate-500 font-bold mr-1">Anahtar Kelimeler:</span>
+                          {page.keywords.map((kw, i) => (
+                            <span
+                              key={i}
+                              className="bg-white border border-slate-200 text-slate-700 text-[10px] px-2 py-0.5 rounded"
+                            >
+                              {kw}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
               </div>
             </div>
           ) : (
@@ -720,94 +1000,155 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               </div>
               <button
                 onClick={() => setIsAddingNote(false)}
-                className="text-slate-400 hover:text-slate-600 text-xs px-2 py-1"
+                className="text-slate-400 hover:text-slate-600 text-xs px-2 py-1 cursor-pointer"
               >
                 Kapat
               </button>
             </div>
 
-            <form onSubmit={handleSaveNewNote} className="space-y-4 text-xs">
-              <div>
-                <label className="font-bold text-slate-700 block mb-1">Ders / Anabilim Dalı</label>
-                <select
-                  value={newDiscipline}
-                  onChange={(e) => setNewDiscipline(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white"
-                >
-                  <option value="Tıbbi Patoloji">Tıbbi Patoloji</option>
-                  <option value="Tıbbi Mikrobiyoloji">Tıbbi Mikrobiyoloji</option>
-                  <option value="Tıbbi Farmakoloji">Tıbbi Farmakoloji</option>
-                  <option value="Tıbbi Biyokimya">Tıbbi Biyokimya</option>
-                  <option value="İç Hastalıkları (Dahiliye)">İç Hastalıkları (Dahiliye)</option>
-                  <option value="Genel Cerrahi">Genel Cerrahi</option>
-                  <option value="Tıbbi Genetik">Tıbbi Genetik</option>
-                  <option value="Halk Sağlığı">Halk Sağlığı</option>
-                </select>
-              </div>
+            {/* Upload Mode Selector */}
+            <div className="flex border-b border-slate-200 text-xs font-bold">
+              <button
+                type="button"
+                onClick={() => setAddMode('upload')}
+                className={`flex-1 py-2 text-center border-b-2 cursor-pointer transition-colors ${
+                  addMode === 'upload'
+                    ? 'border-teal-700 text-teal-900 bg-teal-50/50'
+                    : 'border-transparent text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                📄 PDF / DOCX Slayt Dosyası Yükle
+              </button>
+              <button
+                type="button"
+                onClick={() => setAddMode('text')}
+                className={`flex-1 py-2 text-center border-b-2 cursor-pointer transition-colors ${
+                  addMode === 'text'
+                    ? 'border-teal-700 text-teal-900 bg-teal-50/50'
+                    : 'border-transparent text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                ✍️ Metin Yapıştırarak Ekle
+              </button>
+            </div>
 
-              <div>
-                <label className="font-bold text-slate-700 block mb-1">Ders / Slayt Başlığı</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Ör: Farmakoloji - Sempatomimetikler ve Adrenerjik Reseptörler"
-                  value={newTitle}
-                  onChange={(e) => setNewTitle(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300"
-                />
-              </div>
-
-              <div>
-                <label className="font-bold text-slate-700 block mb-1">Öğretim Üyesi (İsteğe bağlı)</label>
-                <input
-                  type="text"
-                  placeholder="Ör: Prof. Dr. ..."
-                  value={newInstructor}
-                  onChange={(e) => setNewInstructor(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300"
-                />
-              </div>
-
-              <div>
-                <div className="flex items-center justify-between mb-1">
-                  <label className="font-bold text-slate-700 block">
-                    Ders Notu / Slayt İçeriği (Sayfa sayfa yapıştırın)
+            {addMode === 'upload' ? (
+              <div className="space-y-4 text-xs">
+                <div className="border-2 border-dashed border-teal-300 rounded-xl p-6 text-center bg-teal-50/30 space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center mx-auto">
+                    <UploadCloud className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">Ders Slaytını Yükleyin (.pdf veya .docx)</h4>
+                    <p className="text-slate-500 text-[11px] mt-1">
+                      Sistem 200 sayfaya kadar olan tüm slaytları tek tek tarar, her sayfayı eksiksiz ve yorumsuz olarak doğrudan slayt içindeki metinle birebir aktarır.
+                    </p>
+                  </div>
+                  <label className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-lg cursor-pointer transition-all shadow-xs">
+                    <FileUp className="w-4 h-4 text-teal-200" />
+                    <span>Dosya Seç (.pdf, .docx)</span>
+                    <input
+                      type="file"
+                      accept=".pdf,.docx,.doc"
+                      onChange={handlePdfFileUpload}
+                      disabled={isUploadingPdf}
+                      className="hidden"
+                    />
                   </label>
-                  <span className="text-[11px] text-slate-500">
-                    Sayfa ayracı: <code>{pageDelimiter}</code>
-                  </span>
                 </div>
-                <textarea
-                  required
-                  rows={8}
-                  placeholder={`Sayfa 1 slayt metni...\n\n--- Sayfa ---\n\nSayfa 2 slayt metni...\n\n--- Sayfa ---\n\nSayfa 3 slayt metni...`}
-                  value={newRawContent}
-                  onChange={(e) => setNewRawContent(e.target.value)}
-                  className="w-full p-3 rounded-lg border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-teal-500"
-                />
-                <p className="text-[11px] text-slate-500 mt-1">
-                  İpucu: Slaytları ayırmak için aralarına <code>--- Sayfa ---</code> yazın. Sayfalar otomatik olarak numaralandırılacak ve soru eşleştirmelerinde kullanılacaktır.
-                </p>
-              </div>
 
-              <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
-                <button
-                  type="button"
-                  onClick={() => setIsAddingNote(false)}
-                  className="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50"
-                >
-                  İptal
-                </button>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="px-5 py-2 rounded-lg bg-teal-700 hover:bg-teal-800 text-white font-bold flex items-center gap-1.5 shadow-sm"
-                >
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>{isSubmitting ? 'Kaydediliyor...' : 'Ders Notunu Render Et & Kaydet'}</span>
-                </button>
+                {pdfUploadStatus && (
+                  <div className="p-3 bg-amber-50 border border-amber-300 text-amber-950 rounded-xl flex items-center gap-2.5 font-medium animate-pulse">
+                    <RefreshCw className="w-4 h-4 text-amber-700 animate-spin shrink-0" />
+                    <span>{pdfUploadStatus}</span>
+                  </div>
+                )}
               </div>
-            </form>
+            ) : (
+              <form onSubmit={handleSaveNewNote} className="space-y-4 text-xs">
+                <div>
+                  <label className="font-bold text-slate-700 block mb-1">Ders / Anabilim Dalı</label>
+                  <select
+                    value={newDiscipline}
+                    onChange={(e) => setNewDiscipline(e.target.value)}
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white"
+                  >
+                    <option value="Tıbbi Patoloji">Tıbbi Patoloji</option>
+                    <option value="Tıbbi Mikrobiyoloji">Tıbbi Mikrobiyoloji</option>
+                    <option value="Tıbbi Farmakoloji">Tıbbi Farmakoloji</option>
+                    <option value="Tıbbi Biyokimya">Tıbbi Biyokimya</option>
+                    <option value="İç Hastalıkları (Dahiliye)">İç Hastalıkları (Dahiliye)</option>
+                    <option value="Genel Cerrahi">Genel Cerrahi</option>
+                    <option value="Tıbbi Genetik">Tıbbi Genetik</option>
+                    <option value="Halk Sağlığı">Halk Sağlığı</option>
+                    <option value="Üroloji">Üroloji</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="font-bold text-slate-700 block mb-1">Ders / Slayt Başlığı</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Ör: Farmakoloji - Sempatomimetikler ve Adrenerjik Reseptörler"
+                    value={newTitle}
+                    onChange={(e) => setNewTitle(e.target.value)}
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300"
+                  />
+                </div>
+
+                <div>
+                  <label className="font-bold text-slate-700 block mb-1">Öğretim Üyesi (İsteğe bağlı)</label>
+                  <input
+                    type="text"
+                    placeholder="Ör: Prof. Dr. ..."
+                    value={newInstructor}
+                    onChange={(e) => setNewInstructor(e.target.value)}
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300"
+                  />
+                </div>
+
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="font-bold text-slate-700 block">
+                      Ders Notu / Slayt İçeriği (Sayfa sayfa yapıştırın)
+                    </label>
+                    <span className="text-[11px] text-slate-500">
+                      Sayfa ayracı: <code>{pageDelimiter}</code>
+                    </span>
+                  </div>
+                  <textarea
+                    required
+                    rows={8}
+                    placeholder={`Sayfa 1 slayt metni...\n\n--- Sayfa ---\n\nSayfa 2 slayt metni...\n\n--- Sayfa ---\n\nSayfa 3 slayt metni...`}
+                    value={newRawContent}
+                    onChange={(e) => setNewRawContent(e.target.value)}
+                    className="w-full p-3 rounded-lg border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-teal-500"
+                  />
+                  <p className="text-[11px] text-slate-500 mt-1">
+                    İpucu: Slaytları ayırmak için aralarına <code>--- Sayfa ---</code> yazın. Sayfalar otomatik olarak numaralandırılacak ve soru eşleştirmelerinde kullanılacaktır.
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
+                  <button
+                    type="button"
+                    onClick={() => setIsAddingNote(false)}
+                    className="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer"
+                  >
+                    İptal
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="px-5 py-2 rounded-lg bg-teal-700 hover:bg-teal-800 text-white font-bold flex items-center gap-1.5 shadow-sm cursor-pointer"
+                  >
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>{isSubmitting ? 'Kaydediliyor...' : 'Ders Notunu Render Et & Kaydet'}</span>
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       )}

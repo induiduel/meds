@@ -846,6 +846,32 @@ export const ApiService = {
     }
   },
 
+  /**
+   * Sends rich medical welcome email to student upon registration.
+   */
+  async sendWelcomeEmail(
+    userEmail: string,
+    displayName?: string,
+    studentNumber?: string
+  ): Promise<boolean> {
+    if (!userEmail) return false;
+    try {
+      const res = await fetch('/api/send-welcome-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: userEmail,
+          displayName,
+          studentNumber,
+        }),
+      });
+      return res.ok;
+    } catch (e) {
+      console.warn('sendWelcomeEmail network error:', e);
+      return false;
+    }
+  },
+
   async addFragment(questionId: string, text: string, author: string, type: 'stem' | 'clue' | 'option'): Promise<QuestionItem> {
     const db = getLocalDb();
     const q = db.questions.find((item) => item.id === questionId);
@@ -1355,6 +1381,79 @@ export const ApiService = {
     }
 
     return createdQuestions;
+  },
+
+  // User Management & Realtime Synchronization
+  async syncUser(user: {
+    uid: string;
+    email: string | null;
+    displayName: string | null;
+    studentNumber?: string | null;
+    photoURL?: string | null;
+    congratsSentCommittees?: string[];
+  }): Promise<any> {
+    try {
+      const res = await fetch('/api/users/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(user),
+      });
+      return await res.json();
+    } catch (e) {
+      console.warn('api.syncUser network fallback:', e);
+      return null;
+    }
+  },
+
+  async adminGetUsers(adminEmail: string): Promise<any[]> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz erişim: Kullanıcı listeleme yetkisi yalnızca yöneticiye aittir.');
+    }
+    const res = await fetch('/api/admin/users', {
+      headers: {
+        'x-admin-email': adminEmail,
+      },
+    });
+    if (!res.ok) {
+      throw new Error('Kullanıcı listesi alınamadı.');
+    }
+    const data = await res.json();
+    return data.users || [];
+  },
+
+  async adminCreateUser(adminEmail: string, user: { email: string; displayName?: string; studentNumber?: string; role?: string }): Promise<any> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz erişim: Kullanıcı ekleme yetkisi yalnızca yöneticiye aittir.');
+    }
+    const res = await fetch('/api/admin/users/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': adminEmail,
+      },
+      body: JSON.stringify(user),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Kullanıcı oluşturulamadı.');
+    }
+    return data.user;
+  },
+
+  async adminDeleteUser(adminEmail: string, uid: string): Promise<void> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz erişim: Kullanıcı silme yetkisi yalnızca yöneticiye aittir.');
+    }
+    const res = await fetch(`/api/admin/users/${uid}`, {
+      method: 'DELETE',
+      headers: {
+        'x-admin-email': adminEmail,
+      },
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Kullanıcı silinemedi.');
+    }
   },
 
   // Drive automation sync

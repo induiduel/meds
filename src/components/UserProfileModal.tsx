@@ -20,6 +20,7 @@ interface UserProfileModalProps {
   currentUser: AppUser | null;
   onUpdateUser: (updatedUser: AppUser) => void;
   questions: QuestionItem[];
+  onOpenAdminPanel?: () => void;
 }
 
 export const UserProfileModal: React.FC<UserProfileModalProps> = ({
@@ -28,6 +29,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   currentUser,
   onUpdateUser,
   questions,
+  onOpenAdminPanel,
 }) => {
   if (!isOpen || !currentUser) return null;
 
@@ -133,6 +135,31 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
               </div>
             </div>
           </div>
+
+          {/* Admin Panel Quick Access if Admin */}
+          {currentUser.email?.toLowerCase() === 'nofrostlife@gmail.com' && onOpenAdminPanel && (
+            <div className="bg-amber-50 border border-amber-300 rounded-xl p-3.5 flex items-center justify-between gap-3 shadow-2xs">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-lg bg-amber-500 text-slate-950 font-bold">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="font-extrabold text-xs text-amber-950 block">Sistem Yöneticisi Yetkisi Aktif</span>
+                  <span className="text-[11px] text-amber-800">Soru silme, kullanıcı yönetimi & otomasyonlar</span>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onOpenAdminPanel();
+                }}
+                className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs cursor-pointer shadow-xs transition-all active:scale-95 shrink-0"
+              >
+                Yönetici Panelini Aç ➔
+              </button>
+            </div>
+          )}
 
           {/* Form */}
           <form onSubmit={handleSave} className="space-y-4">

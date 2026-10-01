@@ -196,12 +196,12 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         </div>
 
         {/* Action Controls */}
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
           {/* Edit Button for Owner or Admin */}
           {(isMyQuestion || isAdmin) && onEditQuestion && (
             <button
               onClick={() => onEditQuestion(question)}
-              className="bg-white hover:bg-teal-50 border border-slate-300 hover:border-teal-400 text-slate-800 hover:text-teal-900 text-xs font-semibold px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer active:scale-95"
+              className="bg-white hover:bg-teal-50 border border-slate-300 hover:border-teal-400 text-slate-800 hover:text-teal-900 text-xs font-semibold px-2 sm:px-2.5 py-1.5 rounded-lg flex items-center gap-1 shadow-2xs transition-all cursor-pointer active:scale-95"
               title="Soruyu düzenle (Eski versiyon silinmeden yeni versiyon olarak eklenir)"
             >
               <Edit3 className="w-3.5 h-3.5 text-teal-700" />
@@ -212,7 +212,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           <button
             onClick={() => onReconstructWithAi(question.id)}
             disabled={isReconstructing || (question.fragments.length === 0 && question.options.length === 0)}
-            className="bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-xs transition-all disabled:opacity-50 cursor-pointer active:scale-95"
+            className="bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white text-xs font-semibold px-2.5 sm:px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-xs transition-all disabled:opacity-50 cursor-pointer active:scale-95"
             title="Öğrencilerin hatırladığı tüm parçaları yapay zeka ile birleştirip tam bir soru ve 5 şık haline getirir"
           >
             {isReconstructing ? (
@@ -223,7 +223,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             ) : (
               <>
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>{hasReconstruction ? 'AI ile Yenile' : 'AI ile Rekonstrükte Et'}</span>
+                <span className="hidden sm:inline">{hasReconstruction ? 'AI ile Yenile' : 'AI ile Rekonstrükte Et'}</span>
+                <span className="sm:hidden">{hasReconstruction ? 'AI Yenile' : 'AI Rekonstrükte'}</span>
               </>
             )}
           </button>

@@ -55,28 +55,54 @@ export const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
 export const SAVED_STUDENT_NUMBER_KEY = 'medsoru_saved_student_number';
 const USER_PROFILE_CACHE_KEY = 'medsoru_user_profile_cache';
 
+// Defensive storage wrapper that never throws in iframes or restricted environments
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        return window.localStorage.getItem(key);
+      }
+    } catch (e) {}
+    return null;
+  },
+  setItem: (key: string, value: string): void => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem(key, value);
+      }
+    } catch (e) {}
+  },
+  removeItem: (key: string): void => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.removeItem(key);
+      }
+    } catch (e) {}
+  }
+};
+
 let isSigningIn = false;
-let cachedAccessToken: string | null = localStorage.getItem(LOCAL_TOKEN_KEY) || null;
+let cachedAccessToken: string | null = safeStorage.getItem(LOCAL_TOKEN_KEY) || null;
 
 export const rememberStudentInfo = (name: string, studentNumber?: string) => {
   if (name && name.trim()) {
-    localStorage.setItem(SAVED_NAME_KEY, name.trim());
+    safeStorage.setItem(SAVED_NAME_KEY, name.trim());
   }
   if (studentNumber && studentNumber.trim()) {
-    localStorage.setItem(SAVED_STUDENT_NUMBER_KEY, studentNumber.trim().replace(/\D/g, ''));
+    safeStorage.setItem(SAVED_STUDENT_NUMBER_KEY, studentNumber.trim().replace(/\D/g, ''));
   }
 };
 
 export const getRememberedStudentInfo = (): { name: string; studentNumber: string } => {
   return {
-    name: localStorage.getItem(SAVED_NAME_KEY) || '',
-    studentNumber: localStorage.getItem(SAVED_STUDENT_NUMBER_KEY) || '',
+    name: safeStorage.getItem(SAVED_NAME_KEY) || '',
+    studentNumber: safeStorage.getItem(SAVED_STUDENT_NUMBER_KEY) || '',
   };
 };
 
 export const loadStoredUserProfile = (uid: string): Partial<AppUser> | null => {
   try {
-    const raw = localStorage.getItem(`${USER_PROFILE_CACHE_KEY}_${uid}`);
+    const raw = safeStorage.getItem(`${USER_PROFILE_CACHE_KEY}_${uid}`);
     if (raw) return JSON.parse(raw);
   } catch (e) {}
   return null;
@@ -84,12 +110,12 @@ export const loadStoredUserProfile = (uid: string): Partial<AppUser> | null => {
 
 export const cacheUserProfile = (user: AppUser) => {
   try {
-    localStorage.setItem(`${USER_PROFILE_CACHE_KEY}_${user.uid}`, JSON.stringify(user));
+    safeStorage.setItem(`${USER_PROFILE_CACHE_KEY}_${user.uid}`, JSON.stringify(user));
     if (user.displayName) {
-      localStorage.setItem(SAVED_NAME_KEY, user.displayName);
+      safeStorage.setItem(SAVED_NAME_KEY, user.displayName);
     }
     if (user.studentNumber) {
-      localStorage.setItem(SAVED_STUDENT_NUMBER_KEY, user.studentNumber);
+      safeStorage.setItem(SAVED_STUDENT_NUMBER_KEY, user.studentNumber);
     }
   } catch (e) {}
 };
@@ -122,6 +148,22 @@ export const saveFirestoreUserProfile = async (user: AppUser): Promise<void> => 
   } catch (e) {
     console.warn('Could not save user profile to Firestore:', e);
   }
+
+  // Dual sync to server database (Realtime sync bridge)
+  try {
+    fetch('/api/users/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        uid: user.uid,
+        email: user.email || null,
+        displayName: user.displayName || null,
+        studentNumber: user.studentNumber || null,
+        photoURL: user.photoURL || null,
+        congratsSentCommittees: user.congratsSentCommittees || [],
+      }),
+    }).catch(() => {});
+  } catch (err) {}
 };
 
 export const setLocalAdminSession = (email: string = ADMIN_EMAIL, token?: string): AppUser => {
@@ -133,17 +175,17 @@ export const setLocalAdminSession = (email: string = ADMIN_EMAIL, token?: string
     photoURL: null,
     congratsSentCommittees: [],
   };
-  localStorage.setItem(LOCAL_ADMIN_KEY, JSON.stringify(user));
+  safeStorage.setItem(LOCAL_ADMIN_KEY, JSON.stringify(user));
   if (token) {
     cachedAccessToken = token;
-    localStorage.setItem(LOCAL_TOKEN_KEY, token);
+    safeStorage.setItem(LOCAL_TOKEN_KEY, token);
   }
   return user;
 };
 
 export const getLocalAdminSession = (): AppUser | null => {
   try {
-    const raw = localStorage.getItem(LOCAL_ADMIN_KEY);
+    const raw = safeStorage.getItem(LOCAL_ADMIN_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) {
     // ignore
@@ -152,8 +194,8 @@ export const getLocalAdminSession = (): AppUser | null => {
 };
 
 export const clearLocalAdminSession = () => {
-  localStorage.removeItem(LOCAL_ADMIN_KEY);
-  localStorage.removeItem(LOCAL_TOKEN_KEY);
+  safeStorage.removeItem(LOCAL_ADMIN_KEY);
+  safeStorage.removeItem(LOCAL_TOKEN_KEY);
   cachedAccessToken = null;
 };
 
@@ -272,6 +314,19 @@ export const registerWithEmailPassword = async (
   cacheUserProfile(appUser);
   rememberStudentInfo(cleanName, cleanNum || undefined);
   await saveFirestoreUserProfile(appUser);
+
+  // Dispatch Welcome Email automatically to registered student
+  try {
+    fetch('/api/send-welcome-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: cleanEmail,
+        displayName: cleanName,
+        studentNumber: cleanNum || undefined,
+      }),
+    }).catch((e) => console.warn('Welcome email trigger error:', e));
+  } catch (err) {}
 
   return appUser;
 };
@@ -399,7 +454,7 @@ export const googleSignIn = async (): Promise<{ user: AppUser; accessToken: stri
     }
 
     cachedAccessToken = credential.accessToken;
-    localStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
+    safeStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
 
     const remembered = getRememberedStudentInfo();
     const remote = await fetchFirestoreUserProfile(result.user.uid);
@@ -426,12 +481,12 @@ export const googleSignIn = async (): Promise<{ user: AppUser; accessToken: stri
 };
 
 export const getAccessToken = async (): Promise<string | null> => {
-  return cachedAccessToken || localStorage.getItem(LOCAL_TOKEN_KEY);
+  return cachedAccessToken || safeStorage.getItem(LOCAL_TOKEN_KEY);
 };
 
 export const setCustomAccessToken = (token: string) => {
   cachedAccessToken = token.trim();
-  localStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
+  safeStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
 };
 
 export const logout = async () => {
@@ -444,6 +499,12 @@ export const logout = async () => {
 };
 
 export const isAdminUser = (user: AppUser | null): boolean => {
-  if (!user || !user.email) return false;
-  return user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+  if (user && user.email) {
+    return user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+  }
+  const local = getLocalAdminSession();
+  if (local && local.email) {
+    return local.email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+  }
+  return false;
 };

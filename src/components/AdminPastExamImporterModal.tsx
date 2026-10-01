@@ -414,7 +414,7 @@ Cevap: A
           <div className="flex justify-end">
             <button
               onClick={handleParseQuestions}
-              disabled={isParsing || !rawText.trim()}
+              disabled={isParsing || (!rawText.trim() && !uploadedFileBase64)}
               className="bg-gradient-to-r from-teal-700 to-emerald-700 hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-md cursor-pointer"
             >
               {isParsing ? (
