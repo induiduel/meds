@@ -53,6 +53,7 @@ import {
   ADMIN_EMAIL, 
   getAccessToken,
   getLocalAdminSession,
+  setLocalAdminSession,
   updateUserProfileData,
   AppUser
 } from './services/auth';
