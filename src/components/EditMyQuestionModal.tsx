@@ -23,8 +23,12 @@ interface EditMyQuestionModalProps {
   onOpenHistory: () => void;
 }
 
-export const EditMyQuestionModal: React.FC<EditMyQuestionModalProps> = ({
-  isOpen,
+export const EditMyQuestionModal: React.FC<EditMyQuestionModalProps> = (props) => {
+  if (!props.isOpen || !props.question) return null;
+  return <EditMyQuestionModalContent {...props} question={props.question} />;
+};
+
+const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question: QuestionItem }> = ({
   onClose,
   question,
   committee,
@@ -32,8 +36,6 @@ export const EditMyQuestionModal: React.FC<EditMyQuestionModalProps> = ({
   onSaveSuccess,
   onOpenHistory,
 }) => {
-  if (!isOpen || !question) return null;
-
   const currentStem = question.reconstruction?.stem || question.fragments[0]?.text || '';
   const disciplines = committee?.disciplines && committee.disciplines.length > 0
     ? committee.disciplines

@@ -10,15 +10,17 @@ interface AdminEditQuestionModalProps {
   onSaveQuestion: (updated: Partial<QuestionItem>) => Promise<void>;
 }
 
-export const AdminEditQuestionModal: React.FC<AdminEditQuestionModalProps> = ({
-  isOpen,
+export const AdminEditQuestionModal: React.FC<AdminEditQuestionModalProps> = (props) => {
+  if (!props.isOpen || !props.question) return null;
+  return <AdminEditQuestionModalContent {...props} question={props.question} />;
+};
+
+const AdminEditQuestionModalContent: React.FC<AdminEditQuestionModalProps & { question: QuestionItem }> = ({
   onClose,
   question,
   adminEmail,
   onSaveQuestion,
 }) => {
-  if (!isOpen || !question) return null;
-
   const [questionNumber, setQuestionNumber] = useState(question.questionNumber);
   const [discipline, setDiscipline] = useState(question.discipline);
   const [topic, setTopic] = useState(question.topic);

@@ -23,16 +23,18 @@ interface UserProfileModalProps {
   onOpenAdminPanel?: () => void;
 }
 
-export const UserProfileModal: React.FC<UserProfileModalProps> = ({
-  isOpen,
+export const UserProfileModal: React.FC<UserProfileModalProps> = (props) => {
+  if (!props.isOpen || !props.currentUser) return null;
+  return <UserProfileModalContent {...props} currentUser={props.currentUser} />;
+};
+
+const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: NonNullable<UserProfileModalProps['currentUser']> }> = ({
   onClose,
   currentUser,
   onUpdateUser,
   questions,
   onOpenAdminPanel,
 }) => {
-  if (!isOpen || !currentUser) return null;
-
   const [displayName, setDisplayName] = useState(currentUser.displayName || '');
   const [studentNumber, setStudentNumber] = useState(currentUser.studentNumber || '');
   const [isSaving, setIsSaving] = useState(false);

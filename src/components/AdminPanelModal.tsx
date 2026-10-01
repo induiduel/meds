@@ -102,8 +102,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     onConfirm: () => Promise<void>;
   } | null>(null);
 
-  if (!isOpen) return null;
-
   const currentCommitteeQuestions = (questions || []).filter(
     (q) => Boolean(q && (!selectedCommitteeId || q.committeeId === selectedCommitteeId))
   );
@@ -438,6 +436,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       return () => clearInterval(interval);
     }
   }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
