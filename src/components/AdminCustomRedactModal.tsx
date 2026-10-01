@@ -63,7 +63,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
   // Prompt Form States
   const [customPrompt, setCustomPrompt] = useState('');
   const [includeSlideGrounding, setIncludeSlideGrounding] = useState(true);
-  const [selectedModel, setSelectedModel] = useState('gemini-2.5-flash');
+  const [selectedModel, setSelectedModel] = useState('gemini-3.8-flash');
   const [isGenerating, setIsGenerating] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -272,8 +272,8 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                   onChange={(e) => setSelectedModel(e.target.value)}
                   className="bg-slate-50 border border-slate-300 rounded-md px-2 py-0.5 text-xs font-semibold text-slate-800"
                 >
-                  <option value="gemini-2.5-flash">Gemini 2.5 Flash (Hızlı & Tıp Odaklı)</option>
-                  <option value="gemini-1.5-pro">Gemini 1.5 Pro (Gelişmiş Mantık)</option>
+                  <option value="gemini-3.8-flash">Gemini 3.8 Flash (Önerilen & Hızlı)</option>
+                  <option value="gemini-2.5-pro">Gemini 2.5 Pro (Gelişmiş Tıbbi Mantık)</option>
                 </select>
               </div>
             </div>

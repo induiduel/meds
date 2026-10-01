@@ -1204,10 +1204,11 @@ export const ApiService = {
 
     if (!q) throw new Error('Soru bulunamadı');
 
-    // 2. Client-side Gemini fallback if API key exists
+    // 2. Client-side Gemini fallback if API key exists in local storage / environment
     const apiKey = (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
       localStorage.getItem('medsoru_gemini_api_key') ||
-      (typeof process !== 'undefined' && (process.env as any).GEMINI_API_KEY) ||
+      localStorage.getItem('medsoru_custom_gemini_key') ||
+      (import.meta as any).env?.VITE_GEMINI_API_KEY ||
       '';
 
     if (apiKey && apiKey !== 'MY_GEMINI_API_KEY') {
@@ -1253,7 +1254,7 @@ JSON FORMATI:
 }`;
 
         const geminiRes = await ai.models.generateContent({
-          model: 'gemini-2.5-flash',
+          model: 'gemini-3.8-flash',
           contents: prompt,
           config: { responseMimeType: 'application/json' }
         });
@@ -2125,7 +2126,7 @@ JSON FORMATI:
     // 2. Direct client-side Gemini fallback (works on GitHub Pages if API key is provided)
     const apiKey = (typeof window !== 'undefined' && (window as any).MEDSORU_GEMINI_KEY) ||
       localStorage.getItem('medsoru_gemini_api_key') ||
-      (typeof process !== 'undefined' && (process.env as any).GEMINI_API_KEY) ||
+      localStorage.getItem('medsoru_custom_gemini_key') ||
       (import.meta as any).env?.VITE_GEMINI_API_KEY ||
       '';
 
@@ -2173,7 +2174,7 @@ KURALLAR:
 }`;
 
         const geminiRes = await ai.models.generateContent({
-          model: params.model || 'gemini-2.5-flash',
+          model: params.model || 'gemini-3.8-flash',
           contents: prompt,
           config: { responseMimeType: 'application/json' }
         });

@@ -2457,7 +2457,7 @@ KURALLAR:
 }`;
 
         const response = await ai.models.generateContent({
-          model: 'gemini-2.5-flash',
+          model: 'gemini-3.8-flash',
           contents: prompt,
           config: { responseMimeType: 'application/json' }
         });
@@ -2517,7 +2517,7 @@ KURALLAR:
 // Admin Custom AI Redaction for Past Exam Questions
 app.post('/api/ai/admin-custom-redact', async (req, res) => {
   try {
-    const { question, customPrompt, groundingNote, model = 'gemini-2.5-flash', adminEmail } = req.body;
+    const { question, customPrompt, groundingNote, model = 'gemini-3.8-flash', adminEmail } = req.body;
     if (!question) {
       return res.status(400).json({ error: 'Soru verisi eksik.' });
     }
@@ -2577,7 +2577,7 @@ KURALLAR:
         const { GoogleGenAI } = await import('@google/genai');
         const clientAi = new GoogleGenAI({ apiKey });
         const geminiRes = await clientAi.models.generateContent({
-          model: model || 'gemini-2.5-flash',
+          model: model || 'gemini-3.8-flash',
           contents: prompt,
           config: { responseMimeType: 'application/json' }
         });
