@@ -108,6 +108,7 @@ export async function extractVerbatimPdfPages(
   fullText: string;
   title: string;
   discipline: string;
+  instructor?: string;
 }> {
   let rawPages: Array<{ num: number; text: string }> = [];
   let fullText = '';
@@ -145,11 +146,35 @@ export async function extractVerbatimPdfPages(
     rawPages = [{ num: 1, text: fullText.trim() }];
   }
 
-  const cleanTitle = fileName
+  let cleanTitle = fileName
     ? fileName.replace(/\.[^/.]+$/, '').trim()
     : 'Ders Notu Belgesi';
 
-  const discipline = inferDiscipline(fileName || '');
+  let instructor: string | undefined = undefined;
+
+  // Scan first 3 pages to extract meaningful title and instructor if filename is short/cryptic
+  const firstPagesText = rawPages.slice(0, 3).map(p => p.text).join('\n');
+  const instructorMatch = firstPagesText.match(/(?:Prof\.|Doç\.|Dr\.)\s*(?:Dr\.)?\s*([A-ZÇĞİÖŞÜa-zçğıöşü\s]{3,30})/);
+  if (instructorMatch) {
+    instructor = instructorMatch[0].replace(/\s+/g, ' ').trim();
+  }
+
+  // If cleanTitle is short (<= 4 chars, e.g. g17, p01) or generic
+  if (cleanTitle.length <= 4 || /^(ders|not|slayt)[\s_-]*\d*$/i.test(cleanTitle)) {
+    const lines = firstPagesText
+      .split('\n')
+      .map(l => l.replace(/[\r\t]+/g, ' ').trim())
+      .filter(l => l.length > 5 && !l.startsWith('--') && !/^(prof|doç|dr\.)/i.test(l) && !/^\d+\s*[-.]/i.test(l));
+
+    if (lines.length > 0) {
+      const candidate = lines[0].replace(/^o\s+/i, '').replace(/^[•\-*]\s*/, '').trim();
+      if (candidate.length > 3) {
+        cleanTitle = `${candidate} (${fileName?.replace(/\.[^/.]+$/, '')})`;
+      }
+    }
+  }
+
+  const discipline = inferDiscipline(fileName + ' ' + cleanTitle + ' ' + firstPagesText.slice(0, 1000));
 
   const pages: LecturePageItem[] = rawPages.map((p, index) => {
     const pageNum = p.num || index + 1;
@@ -161,7 +186,7 @@ export async function extractVerbatimPdfPages(
 
     const content = cleanText.length > 0
       ? cleanText
-      : `[Sayfa ${pageNum}: Tıbbi Slayt Görseli / Tablo / Şema]`;
+      : `[Sayfa ${pageNum}: Görsel / Şema]`;
 
     return {
       pageNumber: pageNum,
@@ -178,6 +203,7 @@ export async function extractVerbatimPdfPages(
     fullText: assembledFullText,
     title: cleanTitle,
     discipline,
+    instructor,
   };
 }
 
@@ -259,6 +285,103 @@ export function deleteLectureNote(id: string): boolean {
     console.error('[LectureNotesManager] Error deleting note:', err);
   }
   return false;
+}
+
+/**
+ * Verbatim rendering of a slide:
+ * 1. Checks C:\Users\indui\Desktop\meds_database for matching PDF
+ * 2. If not found, attempts downloading from Google Drive if fileId is provided
+ * 3. Extracts verbatim text page-by-page using PDFParse without any AI summarization or template text
+ * 4. Saves note to database and returns the record
+ */
+export async function renderSlideVerbatim(params: {
+  id: string;
+  title: string;
+  discipline: string;
+  fileId?: string;
+  committeeId?: string;
+}): Promise<LectureNoteRecord> {
+  const { id, title, discipline, fileId, committeeId = 'donem3-kurul1' } = params;
+
+  let targetBuffer: Buffer | null = null;
+  let sourcePath: string | undefined = undefined;
+  let source: 'desktop_folder' | 'drive' = 'desktop_folder';
+
+  // 1. Check local meds_database folder first
+  if (fs.existsSync(DESKTOP_DATABASE_DIR)) {
+    const list = fs.readdirSync(DESKTOP_DATABASE_DIR);
+    const cleanQuery = title.toLowerCase().replace(/[^a-z0-9ğüşıöç]/gi, '');
+    for (const f of list) {
+      if (!f.toLowerCase().endsWith('.pdf')) continue;
+      const cleanF = f.toLowerCase().replace(/[^a-z0-9ğüşıöç]/gi, '');
+      if (cleanF.includes(cleanQuery) || cleanQuery.includes(cleanF)) {
+        sourcePath = path.join(DESKTOP_DATABASE_DIR, f);
+        try {
+          targetBuffer = fs.readFileSync(sourcePath);
+          console.log(`[RenderVerbatim] Yerel klasörde eşleşti: ${sourcePath}`);
+          break;
+        } catch (e) {}
+      }
+    }
+  }
+
+  // 2. Fallback: Download from Google Drive if fileId is present
+  if (!targetBuffer && fileId) {
+    console.log(`[RenderVerbatim] Google Drive'dan indiriliyor (fileId: ${fileId}, title: "${title}")...`);
+    try {
+      const driveUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+      const resp = await fetch(driveUrl);
+      if (resp.ok) {
+        const ab = await resp.arrayBuffer();
+        const buf = Buffer.from(ab);
+        if (buf.slice(0, 5).toString() === '%PDF-') {
+          targetBuffer = buf;
+          source = 'drive';
+          // Save a copy to local meds_database so it's cached on user's machine
+          try {
+            if (!fs.existsSync(DESKTOP_DATABASE_DIR)) {
+              fs.mkdirSync(DESKTOP_DATABASE_DIR, { recursive: true });
+            }
+            const safeName = title.replace(/[/\\?%*:|"<>]/g, '_') + '.pdf';
+            const localDest = path.join(DESKTOP_DATABASE_DIR, safeName);
+            if (!fs.existsSync(localDest)) {
+              fs.writeFileSync(localDest, buf);
+              console.log(`[RenderVerbatim] PDF masaüstü klasörüne kaydedildi: ${localDest}`);
+            }
+            sourcePath = localDest;
+          } catch (e) {}
+        }
+      }
+    } catch (e: any) {
+      console.warn(`[RenderVerbatim] Google Drive indirme hatası (${fileId}):`, e.message);
+    }
+  }
+
+  if (!targetBuffer) {
+    throw new Error(
+      `"${title}" dersine ait PDF dosyası ne yerel C:\\Users\\indui\\Desktop\\meds_database klasöründe ne de Google Drive üzerinde erişilebilir değil. Lütfen PDF dosyasını meds_database klasörüne ekleyiniz veya 'PDF Yükle' butonu ile yükleyiniz.`
+    );
+  }
+
+  // 3. Extract 100% verbatim text page by page
+  const extracted = await extractVerbatimPdfPages(targetBuffer, `${title}.pdf`);
+
+  const record: LectureNoteRecord = {
+    id,
+    committeeId,
+    title,
+    discipline: discipline || extracted.discipline,
+    instructor: extracted.instructor,
+    totalSlides: extracted.totalPages,
+    pages: extracted.pages,
+    source,
+    filePath: sourcePath,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+
+  saveLectureNote(record);
+  return record;
 }
 
 /**
@@ -346,13 +469,16 @@ export async function scanDesktopDatabaseFolder(folderPath: string = DESKTOP_DAT
       let pages: LecturePageItem[] = [];
       let totalSlides = 0;
       let discipline = inferDiscipline(filePath);
-      const title = fileName.replace(/\.[^/.]+$/, '').trim();
+      let title = fileName.replace(/\.[^/.]+$/, '').trim();
+      let instructor: string | undefined = undefined;
 
       if (isPdf) {
         const extracted = await extractVerbatimPdfPages(buffer, fileName);
         pages = extracted.pages;
         totalSlides = extracted.totalPages;
         discipline = extracted.discipline;
+        title = extracted.title;
+        instructor = extracted.instructor;
       }
 
       const noteRecord: Partial<LectureNoteRecord> & { title: string } = {
@@ -360,6 +486,7 @@ export async function scanDesktopDatabaseFolder(folderPath: string = DESKTOP_DAT
         committeeId: 'donem3-kurul1',
         title,
         discipline,
+        instructor,
         totalSlides,
         pages,
         source: 'desktop_folder',

@@ -19,6 +19,7 @@ import {
   getAllLectureNotes,
   saveLectureNote,
   deleteLectureNote,
+  renderSlideVerbatim,
   scanDesktopDatabaseFolder,
   getDesktopFolderStatus,
   startDesktopFolderWatcherAndScheduler,
@@ -1957,6 +1958,27 @@ app.get('/api/automation/desktop-folder-status', (req, res) => {
     const status = getDesktopFolderStatus();
     res.json(status);
   } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Verbatim Slide Renderer: Render a single slide verbatim from meds_database or Google Drive
+app.post('/api/automation/render-slide', async (req, res) => {
+  try {
+    const { id, title, discipline, fileId, committeeId } = req.body;
+    if (!id || !title) {
+      return res.status(400).json({ error: 'Eksik slayt parametresi (id ve title gerekli)' });
+    }
+    const note = await renderSlideVerbatim({
+      id,
+      title,
+      discipline: discipline || 'Tıp Ders Notu',
+      fileId,
+      committeeId: committeeId || 'donem3-kurul1',
+    });
+    res.json({ success: true, note });
+  } catch (err: any) {
+    console.error('[RenderSlide] Hata:', err.message);
     res.status(500).json({ error: err.message });
   }
 });

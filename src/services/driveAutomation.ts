@@ -5,8 +5,7 @@ import {
   DRIVE_FOLDER_ID, 
   DRIVE_FOLDER_URL, 
   DRIVE_SLIDES_CATALOG, 
-  DriveSlideMeta, 
-  generateFullSlidePages 
+  DriveSlideMeta 
 } from '../data/driveCatalog';
 
 export const TARGET_DRIVE_FOLDER_ID = DRIVE_FOLDER_ID;
@@ -51,39 +50,35 @@ export function saveAutomationStatus(status: AutomationStatus) {
 export const REAL_KURUL1_DRIVE_SLIDES: Omit<LectureNote, 'committeeId'>[] = [];
 
 /**
- * Render a single specific slide from Google Drive catalog with ALL its actual pages (e.g. 28, 35, 42 pages)
+ * Render a single specific slide with ALL its actual pages verbatim (via desktop meds_database or Google Drive)
  */
 export async function renderSingleDriveSlide(
   meta: DriveSlideMeta,
   committeeId: string = 'donem3-kurul1',
   questions: QuestionItem[] = []
 ): Promise<{ note: LectureNote; matchedQuestions: { questionId: string; match: QuestionLectureMatch }[] }> {
-  const fullPages = generateFullSlidePages(meta);
+  // 1. Call server endpoint to extract real PDF verbatim without any AI alterations
+  const res = await fetch('/api/automation/render-slide', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      id: meta.id,
+      title: meta.title,
+      discipline: meta.discipline,
+      fileId: meta.fileId,
+      committeeId,
+    }),
+  });
 
-  const note: LectureNote = {
-    id: meta.id,
-    committeeId,
-    discipline: meta.discipline,
-    title: meta.title,
-    instructor: 'Dönem 3 Anabilim Dalı',
-    totalSlides: fullPages.length,
-    pages: fullPages,
-    uploadedBy: 'Google Drive Slayt Motoru',
-    uploadedAt: new Date().toISOString(),
-    driveFileId: meta.fileId,
-    driveFileUrl: `https://drive.google.com/file/d/${meta.fileId}/view?usp=sharing`,
-  };
+  if (!res.ok) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || `Slayt işlenemedi (${res.status})`);
+  }
 
-  // 1. Save to local server JSON database
-  try {
-    await fetch('/api/lecture-notes', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(note),
-    });
-  } catch (err) {}
+  const data = await res.json();
+  const note: LectureNote = data.note;
 
-  // 2. Save to Firestore
+  // 2. Save to Firestore (client copy)
   try {
     await setDoc(doc(db, 'lecture_notes', note.id), cleanForFirestore(note));
   } catch (err) {}

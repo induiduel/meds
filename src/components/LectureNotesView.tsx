@@ -45,7 +45,17 @@ interface LectureNotesViewProps {
   onUpdateQuestionReference: (questionId: string, reference: QuestionLectureMatch) => Promise<void>;
 }
 
-const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v3';
+const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v5_verbatim';
+
+// Filter helper: Discard any old mock note that contains AI template sentences
+export const isPureVerbatimNote = (note: LectureNote): boolean => {
+  if (!note || !Array.isArray(note.pages) || note.pages.length === 0) return false;
+  return !note.pages.some(p => 
+    p.content?.includes('• Temel Tanım ve Kavram:') || 
+    p.content?.includes('• Patogenetik Mekanizma & Not:') ||
+    p.content?.includes('• Önemli Slayt Maddeleri:')
+  );
+};
 
 export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   committee,
@@ -57,14 +67,20 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   // Main view tab: 'drive_catalog' (Google Drive Slayt Kataloğu) or 'rendered_notes' (İşlenmiş Notlar & Okuyucu)
   const [activeTab, setActiveTab] = useState<'drive_catalog' | 'rendered_notes'>('drive_catalog');
 
-  // Notes state - starts strictly with persistent server/firestore data, NEVER pre-seeded with fake 5-page mocks
+  // Notes state - starts strictly with persistent server/firestore data, NEVER pre-seeded with fake mocks
   const [notes, setNotes] = useState<LectureNote[]>(() => {
     try {
+      // Clear legacy storage keys containing fake data
+      localStorage.removeItem('medsoru_lecture_notes');
+      localStorage.removeItem('medsoru_lecture_notes_v1');
+      localStorage.removeItem('medsoru_lecture_notes_v2');
+      localStorage.removeItem('medsoru_lecture_notes_v3');
+
       const stored = localStorage.getItem(LOCAL_NOTES_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed.filter(n => !n.id.startsWith('mock-'));
+          return parsed.filter(n => !n.id.startsWith('mock-') && isPureVerbatimNote(n));
         }
       }
     } catch (e) {}
@@ -117,10 +133,13 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         const res = await fetch('/api/lecture-notes');
         if (res.ok) {
           const apiNotes: LectureNote[] = await res.json();
-          if (Array.isArray(apiNotes) && apiNotes.length > 0) {
-            setNotes(apiNotes);
-            setActiveNote(apiNotes[0]);
-            return;
+          if (Array.isArray(apiNotes)) {
+            const valid = apiNotes.filter(isPureVerbatimNote);
+            if (valid.length > 0) {
+              setNotes(valid);
+              setActiveNote(valid[0]);
+              return;
+            }
           }
         }
       } catch (e) {}
@@ -131,7 +150,12 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         const snap = await getDocs(colRef);
         if (!snap.empty) {
           const remote: LectureNote[] = [];
-          snap.forEach(d => remote.push(d.data() as LectureNote));
+          snap.forEach(d => {
+            const data = d.data() as LectureNote;
+            if (isPureVerbatimNote(data)) {
+              remote.push(data);
+            }
+          });
           if (remote.length > 0) {
             setNotes(remote);
             setActiveNote(remote[0]);

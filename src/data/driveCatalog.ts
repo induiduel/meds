@@ -387,61 +387,10 @@ export const DRIVE_SLIDES_CATALOG: DriveSlideMeta[] = [
   },
 ];
 
-// Helper to generate ALL pages for a slide when the user requests it
+// Helper: Previously generated synthetic mock pages, now strictly disabled.
+// Real verbatim pages are extracted directly from PDF files via /api/automation/render-slide.
 export function generateFullSlidePages(meta: DriveSlideMeta): { pageNumber: number; content: string; keywords: string[] }[] {
-  const pages: { pageNumber: number; content: string; keywords: string[] }[] = [];
-  const { title, discipline, totalRealPages, keyTopics } = meta;
-
-  for (let pageNum = 1; pageNum <= totalRealPages; pageNum++) {
-    // Determine page context and topic progression
-    const topicIdx = Math.min(
-      Math.floor(((pageNum - 1) / totalRealPages) * keyTopics.length),
-      keyTopics.length - 1
-    );
-    const currentTopic = keyTopics[topicIdx] || title;
-    const progressRatio = Math.round((pageNum / totalRealPages) * 100);
-
-    let pageType = 'Giriş ve Genel Prensipler';
-    if (pageNum === 1) pageType = 'Ders Başlığı & Amaçlar';
-    else if (pageNum === totalRealPages) pageType = 'Özet, Klinik Çıkarımlar & Kaynaklar';
-    else if (pageNum % 4 === 0) pageType = 'Histopatolojik & Klinik Bulgular';
-    else if (pageNum % 4 === 1) pageType = 'Etiyoloji ve Patofizyoloji';
-    else if (pageNum % 4 === 2) pageType = 'Moleküler Mekanizmalar & Tanı';
-    else pageType = 'Tedavi, Prognostik Faktörler & Sınav Vurguları';
-
-    const content = `[${discipline} - ${title}]
-SLAYT / SAYFA NO: ${pageNum} / ${totalRealPages} (%${progressRatio})
-BÖLÜM KONUSU: ${currentTopic} (${pageType})
-
-• Temel Tanım ve Kavram:
-${discipline} Kurul Sınavı müfredatında yer alan "${title}" dersi kapsamında, "${currentTopic}" konusu ayrıntılı olarak ele alınmaktadır. Bu slayt sayfasında patofizyolojik süreçler, histopatolojik kriterler ve klinik korelasyonlar vurgulanmaktadır.
-
-• Önemli Slayt Maddeleri:
-1. ${currentTopic} sürecinde hücresel düzeyde meydana gelen başlıca morfolojik değişiklikler ve mikroskobik inceleme kriterleri.
-2. Klinik pratikte ve kurul sorularında sıkça karşılaşılan ayırıcı tanı basamakları ve patofizyolojik mekanizmalar.
-3. Moleküler belirteçler, immünohistokimyasal boyanma özellikleri ve tanısal altın standart kriterler.
-4. TUS ve dönem kurul sınavlarında soru potansiyeli yüksek olan spesifik mekanizmalar ve klinik senaryolar.
-
-• Patogenetik Mekanizma & Not:
-Bu aşamada hücresel hasar yolları, inflamatuar mediyatörler veya doku yanıtı aktivasyonu belirleyicidir. Dokudaki yanıt tipi, hastalığın evresi ve uygulanan terapötik yaklaşımlarla doğrudan ilişkilidir.`;
-
-    const rawKeywords = [
-      currentTopic,
-      discipline,
-      ...currentTopic.split(/\s+/),
-      `Sayfa ${pageNum}`,
-      'Histopatoloji',
-      'Patofizyoloji',
-      'Tanı Kriteri',
-      'Kurul Soru Vurgusu'
-    ].filter(k => k.length > 2);
-
-    pages.push({
-      pageNumber: pageNum,
-      content,
-      keywords: Array.from(new Set(rawKeywords)),
-    });
-  }
-
-  return pages;
+  console.warn(`[DriveCatalog] generateFullSlidePages is deprecated. Use verbatim server extraction for "${meta.title}".`);
+  return [];
 }
+
