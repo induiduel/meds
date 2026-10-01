@@ -112,9 +112,13 @@ export default function App() {
 
   // Auth state - Default directly to verified admin session (nofrostlife@gmail.com)
   const [currentUser, setCurrentUser] = useState<AppUser | null>(() => {
-    const existing = getLocalAdminSession();
-    if (existing) return existing;
-    return setLocalAdminSession(ADMIN_EMAIL);
+    try {
+      const existing = getLocalAdminSession();
+      if (existing) return existing;
+      return setLocalAdminSession(ADMIN_EMAIL);
+    } catch (e) {
+      return null;
+    }
   });
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
@@ -130,8 +134,12 @@ export default function App() {
 
   // Initialize Auth on mount
   useEffect(() => {
-    const existingAdmin = getLocalAdminSession() || setLocalAdminSession(ADMIN_EMAIL);
-    setCurrentUser(existingAdmin);
+    try {
+      const existingAdmin = getLocalAdminSession() || setLocalAdminSession(ADMIN_EMAIL);
+      if (existingAdmin) {
+        setCurrentUser(existingAdmin);
+      }
+    } catch (e) {}
 
     const unsubscribe = initAuth(
       (user, token) => {
