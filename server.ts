@@ -3992,16 +3992,23 @@ TEMEL İLKELER VE YANIT KURALLARI:
       success: true,
       reply: result.text,
       providerUsed: result.providerUsed,
-      planUsed: result.planUsed
+      planUsed: result.planUsed,
+      attemptsCount: result.attemptsCount || 1,
+      fallbackUsed: Boolean(result.fallbackUsed),
     });
   } catch (err: any) {
     console.error('Question AI Chat error:', err);
-    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
-    return res.status(isQuota ? 429 : 500).json({
+    const attemptsCount = err.attemptsCount || 2;
+    const isTwoAttempts = err.isTwoAttemptsFailed || attemptsCount >= 2;
+    return res.status(200).json({
       success: false,
-      error: isQuota
-        ? 'Tüm yapay zeka sağlayıcıları kotaya takıldı (Hata 429). Lütfen alternatif model veya API anahtarı seçin.'
-        : (err.message || 'Yapay zeka yanıt veremedi.')
+      attemptsCount,
+      isTwoAttemptsFailed: isTwoAttempts,
+      error: isTwoAttempts
+        ? (err.message || '2 kez denendi: Hem Google Gemini hem de Groq Cloud sağlayıcıları yanıt veremedi. Lütfen API kotalarını veya bağlantınızı kontrol edin.')
+        : (err.message || 'Yapay zeka yanıt veremedi.'),
+      primaryError: err.primaryError,
+      secondaryError: err.secondaryError
     });
   }
 });
