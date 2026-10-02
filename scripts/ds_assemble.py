@@ -91,6 +91,9 @@ def build():
         bpath = os.path.join(BAT, bid + ".json")
         if not os.path.exists(bpath):
             bpath = os.path.join(WORK, "batches_retry", bid + ".json")
+        if not os.path.exists(bpath):
+            issues['batch_tanimi_yok'] += 1
+            continue
         b = json.load(open(bpath, encoding='utf-8'))
         src = {q['id']: q for q in b['questions']}
         cand_ids = {c['lectureId'] for c in b['lectureCandidates']}

@@ -252,7 +252,7 @@ async function runEvaluation() {
   console.log(`📁 Ayrıntılı Test Raporu Kaydedildi: ${REPORT_PATH}`);
   console.log('================================================================\n');
 
-  return finalSummary;
+  process.exit(0);
 }
 
 runEvaluation().catch(err => {
