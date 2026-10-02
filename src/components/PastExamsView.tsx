@@ -813,7 +813,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               ...(learnMatch
                 ? [{ label: `Öğren · slayt ${learnMatch.slideNumber}`, icon: GraduationCap, group: 'Diğer', onClick: () => setSelectedLearnMatch({ question: q, match: learnMatch }) }]
                 : []),
-              { label: 'Kaynak dosya', icon: FileText, group: 'Diğer', hint: getRawSourceBadge(q), onClick: () => setSelectedRawSourceQuestion(q) },
+              { label: 'Kaynak dosyayı göster', icon: FileText, group: 'Diğer', onClick: () => setSelectedRawSourceQuestion(q) },
               { label: copiedId === q.id ? 'Kopyalandı' : 'Soruyu kopyala', icon: copiedId === q.id ? Check : Copy, group: 'Diğer', onClick: () => handleCopyQuestion(q) },
               { label: 'Hata bildir', icon: Flag, group: 'Diğer', tone: 'danger', onClick: () => setReportingQuestion(q) },
             ];
