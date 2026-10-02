@@ -1,5 +1,5 @@
 {
-  "totalQuestions": 743,
+  "totalQuestions": 767,
   "totalChunks": 8,
   "updatedAt": "2026-10-02",
   "description": "Öğren sayfasındaki ders içeriklerinden üretilmiş özgün çalışma ve pekiştirme soruları veritabanı (çıkmış sorulardan bağımsızdır).",
@@ -135,10 +135,11 @@
     {
       "chunkId": "chunk_8",
       "filename": "chunk_8.json",
-      "questionCount": 43,
+      "questionCount": 67,
       "decksCovered": [
         "learn-genetik-pediatrik-cevresel-patoloji",
-        "learn-tromboz-patofizyolojisi-tam"
+        "learn-tromboz-patofizyolojisi-tam",
+        "learn-iskemi-infarktus-ve-sok"
       ],
       "disciplines": [
         "Tıbbi Patoloji"

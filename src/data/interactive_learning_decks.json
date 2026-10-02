@@ -136781,5 +136781,713 @@
         }
       }
     ]
+  },
+  {
+    "id": "learn-iskemi-infarktus-ve-sok",
+    "title": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "instructor": "Prof. Dr. Hikmet Keleş",
+    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
+    "description": "Prof. Dr. Hikmet Keleş'in Dönem 2 Kurul 1 Patoloji ders notundan derlenmiş; emboli tiplerinden (tromboemboli, eyer emboli, yağ, gaz ve amniyon embolisi) enfarktüs çeşitlerine (beyaz vs kırmızı enfarktüs, likefaksiyon istisnası), şok etiyolojisinden (kardiyojenik, hipovolemik, septik şok) organ morfolojilerine (ATN, ARDS, Waterhouse-Friderichsen) kadar %500 derinlikli 24 slayt ve 24 özgün çalışma sorusu içeren kapsamlı interaktif öğrenme güvertesi.",
+    "slidesCount": 24,
+    "detailLevel": "500%",
+    "slides": [
+      {
+        "id": "slide-1",
+        "title": "Emboli Patofizyolojisi: Tanım, Fiziksel Durumlar ve Dolaşım Dinamikleri",
+        "subtitle": "Kan akımı ile taşınan katı, sıvı veya gaz kitlelerin vasküler tıkanma oluşturma mekanizması",
+        "content": "**EMBOLİ TANIMI VE GENEL BİYOLOJİSİ**\nEmboli, kan akımı ile damar yatağında sürüklenen ve oluştuğu primer odaktan uzaktaki bir vasküler lümene takılarak parsiyel ya da tam tıkanıklığa yol açan damar içi kitlelerdir.\n\n1. **Fiziksel Durumlarına Göre Emboli Tipleri:**\n   - **Katı Emboliler:** Açık ara en yaygındır (%99).\n     - **Tromboemboli:** Kopmuş trombüs parçaları (%95'ten fazlası!).\n     - Aterom plağı debrisleri (kolesterol kristalleri).\n     - Tümör embolileri (metastaz aracı).\n     - Parazit yumurtaları, yabancı cisimler (talk, kateter parçaları).\n   - **Sıvı Emboliler:**\n     - **Yağ embolisi:** Kemik kırıkları sonrası kemik iliği kaynaklı nötral yağ damlacıkları.\n     - **Amniyon sıvısı embolisi:** Doğum sırasında açığa çıkan plasental-fetal sıvı.\n   - **Gaz Embolileri:**\n     - **Hava embolisi:** Boyun ven cerrahisi veya travma.\n     - **Azot gazı embolisi:** Dekompresyon hastalığı (dalgıçlarda vurgun / caisson hastalığı).\n\n2. **Dolaşım Dinamiklerine Göre Temel Ayrımlar:**\n   - **Pulmoner Emboli:** Venöz sistemden kaynaklanır, sağ kalpten geçerek pulmoner arterleri tıkar.\n   - **Sistemik (Arteriyel) Emboli:** Sol kalp veya aorttan kaynaklanır, periferik organ arterlerini tıkar.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Emboli Tanımı ve Sıklık Dağılımı:**\n  ▫ Embolilerin **>%99'u tromboemboli** (trombüs kaynaklı) şeklindedir.\n  ▫ Nadir fakat ölümcül tipler: ==Amniyon sıvısı, Yağ ve Gaz embolileri==dir.\n  ▫ Emboli mekanik tıkanma yanında distal vazospazm ve trombosit aktivasyonu da tetikler.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite & TUS Klasikleri:**\n  ▫ *Klinik pratikte saptanan embolilerin ezici çoğunluğu hangi fiziksel ve patolojik kökene sahiptir?* → **Kopmuş trombüs parçalarından oluşan tromboemboli**."
+        ],
+        "flashcards": [
+          {
+            "question": "Emboli nedir ve en sık hangi formu görülür?",
+            "answer": "Oluştuğu yerden kopup kan akımıyla taşınarak uzak damarları tıkayan katı, sıvı veya gaz kitledir; %99'dan fazlası trombüs kökenli tromboembolidir."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "emboli-q1",
+          "question": "Vasküler lümende taşınarak tıkanmaya yol açan emboli olgularının etiyolojisi değerlendirildiğinde, tüm klinik vakaların %95'inden fazlasını oluşturan en sık emboli tipi aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Uzun kemik kırığı sonrası gelişen yağ embolisi",
+            "B) Derin ven veya intrakardiyak trombüslerden kopan tromboemboli",
+            "C) Dalgıçlarda gözlenen dekompresyon nitrojen gaz embolisi",
+            "D) Doğum travması sonrası amniyon sıvısı embolisi",
+            "E) Aterosklerotik plak rüptürüne bağlı kolesterol kristal embolisi"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Embolilerin ezici çoğunluğu (>%95) venöz veya arteriyel trombüslerden kopan parçaların dolaşımda sürüklenmesiyle oluşan tromboembolilerdir."
+        }
+      },
+      {
+        "id": "slide-2",
+        "title": "Pulmoner Tromboembolizm (PTE): Kaynaklar ve DVT İlişkisi",
+        "subtitle": "Alt ekstremite derin venlerinden sağ kalbe ve pulmoner yatağa uzanan ölümcül göç",
+        "content": "**PULMONER TROMBOEMBOLİZMİN KAYNAĞI VE EPİDEMİYOLOJİSİ**\nHastanede yatan hastalarda en sık önlenebilir ölüm nedenlerinden biridir.\n\n1. **Primer Kaynak (%95 Kuralı):**\n   - Pulmoner embolilerin **>%95'i alt ekstremite derin ven trombozlarından (DVT)** köken alır.\n   - Özellikle **diz üzerindeki derin venler** (Popliteal, Femoral ve İliyak venler) masif ve ölümcül embolilerin ana kaynağıdır.\n   - Baldır (baldır kası içi soleus/gastroknemius) ven trombozları nadiren majör emboliye yol açar; ancak tedavi edilmezse uyluğa doğru propage olur.\n\n2. **Dolaşım Yolu:**\n   - Trombüs bacak derin veninden kopar → Vena kava inferior → Sağ atriyum → Triküspit kapak → Sağ ventrikül → Pulmoner arter gövdesi ve dalları.\n\n3. **Risk Faktörleri (Virchow Zemininde):**\n   - Majör ortopedik cerrahi (kalça ve diz protezi), kanser (pankreas, akciğer), uzamış immobilizasyon (>3 gün yatak istirahati), ileri yaş, gebelik/OKS kullanımı ve kalıtsal trombofililer (Faktör V Leiden).",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **PTE Kaynak Kuralı:**\n  ▫ En sık kaynak: ==Diz üzerindeki derin bacak venleri== (*Popliteal, Femoral, İliyak venler*).\n  ▫ Üst ekstremite venleri ve pelvik venler nadir kaynaklardır.\n  ▫ Bir kez PE geçiren hastada yeni bir atak gelişme riski katbekat artar.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Pulmoner tromboembolilerin en sık kaynaklandığı anatomik vasküler odak neresidir?* → **Alt ekstremite derin venleri (popliteal, femoral ve iliak venler)**."
+        ],
+        "flashcards": [
+          {
+            "question": "Pulmoner embolilerin yüzde kaçı nereden köken alır?",
+            "answer": "%95'ten fazlası alt ekstremite diz üstü derin ven trombozlarından (popliteal, femoral, iliyak venler) köken alır."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q2",
+          "question": "Klinikte pulmoner tromboembolizm (PTE) tanısı alan bir hastada, embolinin koptuğu primer anatomik vasküler yatak en yüksek olasılıkla aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Üst ekstremite sefalik ve bazilik venleri",
+            "B) Karın duvarı yüzeyel epigastrik venleri",
+            "C) Alt ekstremite diz üstü derin venleri (femoral, popliteal, iliyak venler)",
+            "D) Mezenterik venöz pleksus",
+            "E) Renal venler"
+          ],
+          "correctAnswer": "C",
+          "explanation": "Pulmoner embolilerin %95'ten fazlası alt ekstremitenin diz üstü derin venlerinden (özellikle femoral, popliteal ve iliak venler) kaynaklanır."
+        }
+      },
+      {
+        "id": "slide-3",
+        "title": "Eyer Emboli (Saddle Embolus) ve Masif Pulmoner Emboli",
+        "subtitle": "Pulmoner arter bifurkasyonunun tıkanması, akut kor pulmonale ve ani ölüm",
+        "content": "**MASİF PULMONER EMBOLİ VE EYER EMBOLİSİ**\nPulmoner embolilerin klinik tablosu, embolinin boyutuna ve tıkadığı damar çapına göre tam sessizlikten saniyeler içinde ani ölüme kadar geniş bir yelpazedir.\n\n1. **Eyer Emboli (Saddle Embolus):**\n   - Bacak derin veninden kopan çok büyük boyutlu bir trombüs ana pulmoner arterin sağ ve sol dallara ayrıldığı çatala (**bifurkasyona**) oturur ve bir 'eyer' gibi iki ana dalı birden kilitler.\n\n2. **Klinik ve Hemodinamik Sonuçlar:**\n   - **Pulmoner Vasküler Yatağın %60'ından Fazlasının Akut Tıkanması:**\n     - Sağ ventrikülün önünde aşırı bir son-yük (afterload) direnci doğar.\n     - Kan akciğerlere pompalanamaz; sol ventriküle kan dönüşü (preload) sıfırlanır.\n     - **Akut Kor Pulmonale (Akut Sağ Kalp Yetmezliği):** Sağ ventrikül aniden genişler (akut dilatasyon), ventriküler septum sola doğru itilir.\n     - Sistemik hipotansiyon, kardiyojenik şok ve **elektromekanik disosiasyonla ani ölüm** gelişir.\n   - Hasta genellikle nefes alamadığını belirterek yere yığılır; dakikalar içinde ölüm gerçekleşir.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Eyer Emboli Özellikleri:**\n  ▫ Yerleşim: ==Ana pulmoner arter bifurkasyonu==.\n  ▫ Hemodinami: Pulmoner vasküler yatağın **>%60'ı aniden tıkanır**.\n  ▫ Sonuç: **Akut Kor Pulmonale**, kardiyovasküler kollaps ve ani ölüm.\n  ▫ İskemi veya enfarktüs gelişmeye vakit kalmadan ölüm gerçekleşir!",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite & TUS Klasikleri:**\n  ▫ *Masif pulmoner embolide ani ölüme yol açan primer hemodinamik mekanizma nedir?* → **Pulmoner arter bifurkasyonunun tıkanması sonucu gelişen akut sağ kalp yetmezliği (akut kor pulmonale) ve sol ventrikül doluşunun çökmesi**."
+        ],
+        "flashcards": [
+          {
+            "question": "Eyer emboli (saddle embolus) nereye yerleşir ve ölüm mekanizması nedir?",
+            "answer": "Ana pulmoner arter bifurkasyonuna oturur; pulmoner yatağın >%60'ını tıkayarak akut sağ ventrikül yetmezliğine (akut kor pulmonale) ve kardiyojenik şoka yol açar."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q3",
+          "question": "Kalça protezi operasyonunun 4. gününde aniden şiddetli nefes darlığı, siyanoz ve senkop gelişen 68 yaşındaki hasta resüsitasyona yanıt vermeyerek kaybediliyor. Otopside ana pulmoner arter çatallanmasını tamamen tıkayan dev bir trombüs kitlesi (eyer emboli) saptanıyor. Bu hastada ani ölüme yol açan temel patofizyolojik süreç aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Akciğer parankiminde yaygın masif hemorajik enfarktüs gelişimi",
+            "B) Pulmoner yatağın akut tıkanması sonucu gelişen akut sağ kalp yetmezliği (kor pulmonale) ve kardiyak debinin çökmesi",
+            "C) Koroner arterlerin refleks spazmına bağlı akut sol ventrikül enfarktüsü",
+            "D) Beyin sapında diffüz nörojenik vazodilatasyon",
+            "E) Akut alveolit ve sürfaktan kaybı"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Eyer embolisinde akciğer parankiminde enfarktüs oluşmaya vakit kalmaz; pulmoner vasküler yatağın >%60'ı aniden tıkandığı için akut sağ kalp yetmezliği (akut kor pulmonale), sol ventriküle kan dönememesi ve kardiyojenik şok ile ani ölüm meydana gelir."
+        }
+      },
+      {
+        "id": "slide-4",
+        "title": "Akciğerin Çift Kan Dolaşımı ve Pulmoner Enfarktüs Mekanizması",
+        "subtitle": "Pulmoner arter ve bronşiyal arterlerin koruyucu kollateral ağı ve istisnaları",
+        "content": "**AKCİĞERDE ENFARKTÜS NEDEN NADİRDİR? (ÇİFT DOLAŞIM MUCİZESİ)**\nOrta ve küçük boyutlu pulmoner emboliler her zaman doku nekrozuna (enfarktüs) yol açmaz.\n\n1. **Akciğerin Çift Vasküler Beslenmesi:**\n   - **Pulmoner Arterler:** Gaz değişimi için venöz kanı taşır.\n   - **Bronşiyal Arterler:** Aorttan çıkan temiz arteryel kanı taşır ve parankimi besler.\n   - Pulmoner arter dallarından biri tıkandığında, sağlam bronşiyal arter kollateral akımı sayesinde akciğer parankimi oksijensiz kalmaz ve **enfarktüs gelişmez**.\n\n2. **Pulmoner Enfarktüs Ne Zaman Gelişir?**\n   - Pulmoner emboli ancak şu iki durumda enfarktüse yol açar:\n     1. **Kardiyovasküler Yetmezlik / Konjestif Kalp Yetmezliği:** Sol kalp yetmezliği olan veya hipotansif hastalarda bronşiyal arter perfüzyonu da bozulmuştur; kollateral koruma çöker.\n     2. **En Uç (Distal) Dalların Tıkanması:** Çok küçük periferik arteriyollerin tıkanmasında bronşiyal anastomozlar yetersiz kalabilir.\n   - Akciğer enfarktüsleri çift kanlanma ve gevşek doku nedeniyle tipik olarak **Kırmızı (Hemorajik) Enfarktüs** morfolojisindedir!",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Çift Dolaşım Kuralı:**\n  ▫ Akciğer çift kan dolaşımına sahiptir: ==Pulmoner arter + Bronşiyal arterler==.\n  ▫ Bu nedenle genç ve kalbi sağlam bireylerde pulmoner emboli **enfarktüs yapmaz**!\n  ▫ Pulmoner enfarktüs gelişmesi için hastada genellikle **altta yatan sol kalp yetmezliği** bulunmalıdır.\n  ▫ Gelişen enfarktüs daima **Kırmızı (Hemorajik)** tiptedir.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Pulmoner emboli geçiren sağlıklı genç bir hastada akciğer parankiminde enfarktüs gelişmesini engelleyen temel anatomik faktör nedir?* → **Bronşiyal arterlerden sağlanan zengin kollateral çift kan dolaşımı**."
+        ],
+        "flashcards": [
+          {
+            "question": "Pulmoner embolilerin çoğunun akciğerde enfarktüs yapmamasının anatomik nedeni nedir?",
+            "answer": "Akciğerin hem pulmoner arter hem de aorttan çıkan bronşiyal arterlerle çift kan dolaşımına sahip olmasıdır."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q4",
+          "question": "Pulmoner emboli olgularının büyük bir kısmında akciğer dokusunda iskemik nekroz (enfarktüs) gelişmemesini sağlayan temel fizyolojik ve anatomik mekanizma aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Akciğer parankiminin oksijen gereksiniminin sıfır olması",
+            "B) Aorttan köken alan bronşiyal arterler sayesinde akciğerin çift kan dolaşımına sahip olması",
+            "C) Alveollerdeki yüksek nitrojen gaz basıncı",
+            "D) Pulmoner venlerdeki kapakçıkların geriye kan akışını engellemesi",
+            "E) Akciğer endotelinde aşırı miktarda trombomodulin bulunması"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Akciğer çift dolaşıma sahiptir (pulmoner arterler ve bronşiyal arterler). Pulmoner arter dalı tıkansa dahi bronşiyal dolaşım parankimi beslemeyi sürdürerek enfarktüs gelişimini önler."
+        }
+      },
+      {
+        "id": "slide-5",
+        "title": "Sistemik Tromboembolizm: İntrakardiyak Kaynaklar ve Hedefler",
+        "subtitle": "Sol ventrikül, sol atriyum ve aorttan organ yataklarına arteriyel emboli dağılımı",
+        "content": "**SİSTEMİK (ARTERİYEL) TROMBOEMBOLİZM**\nSistemik emboliler arteriyel dolaşımda seyahat eder ve uç arterleri tıkayarak distal dokularda iskemik nekroza (enfarktüs) yol açar.\n\n1. **Primer Kaynaklar (%80 Sol Kalp):**\n   - **İntrakardiyak Mural Trombüsler (%80-85):**\n     - **Sol Ventrikül İnfarktüs Skarları (~%60-65):** Miyokard enfarktüsü sonrası akinetik/diskinetik ventrikül duvarında oluşan trombüsler.\n     - **Dilate Sol Atriyum ve Atriyal Fibrilasyon (~%20-25):** Mitral kapak darlığında sol atriyal apendikste gelişen trombüsler.\n   - **Diğer Kaynaklar:**\n     - Aort anevrizmaları ve ülseröz aterosklerotik plaklar (%10).\n     - Kalp kapak vejetasyonları (infektif veya nonbakteriyel endokardit).\n\n2. **Hedef Organ Yatakları:**\n   - **Alt Ekstremiteler (%70-75):** Femoral, popliteal arterleri tıkar; akut bacak iskemisi (soğukluk, nabızsızlık, şiddetli ağrı, gangren).\n   - **Beyin (%10):** Serebral arterleri tıkayarak **iskemik inmeye (felç)** yol açar.\n   - **İntestinal / Mezenterik Yatak:** Mezenter iskemi ve bağırsak kangreni.\n   - **Böbrekler ve Dalak:** Kama şeklinde beyaz (soluk) enfarktüsler.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Sistemik Emboli Özeti:**\n  ▫ 1 Numaralı Kaynak: ==Sol Kalp Boşlukları (%80)== (*Sol ventrikül MI skarı ve sol atriyal apendiks*).\n  ▫ 1 Numaralı Hedef: ==Alt Ekstremite Arterleri (%75)==.\n  ▫ 2 Numaralı Hedef: ==Beyin (%10)== (İskemik inme!).\n  ▫ Tıkanan organlarda uç arter yapısı nedeniyle doku nekrozu kaçınılmazdır.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite & TUS Sorusu:**\n  ▫ *Sistemik arteriyel tromboembolilerin en sık kaynaklandığı odak ve en sık yerleştiği anatomik hedef organ neresidir?* → Kaynak: **Sol ventrikül/atriyum mural trombüsleri**; Hedef: **Alt ekstremiteler**."
+        ],
+        "flashcards": [
+          {
+            "question": "Sistemik arteriyel embolilerin en sık kaynağı ve en sık yerleştiği hedef neresidir?",
+            "answer": "En sık kaynak: İntrakardiyak sol kalp mural trombüsleri (%80); en sık hedef: Alt ekstremite arterleri (%75)."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q5",
+          "question": "Atriyal fibrilasyonu olan 72 yaşındaki bir hastada aniden sağ bacakta şiddetli ağrı, solukluk, soğukluk ve nabızsızlık gelişiyor. Acil embolektomi ile femoral arter lümeninden trombüs çıkarılıyor. Bu hastada sistemik embolinin kaynaklandığı en olası intrakardiyak odak aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Sağ atriyum apendiksi",
+            "B) Sol atriyal apendiks mural trombüsü",
+            "C) Pulmoner arter kapak vejetasyonu",
+            "D) Vena kava inferior lümeni",
+            "E) Triküspit kapak kordaları"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Atriyal fibrilasyonda kanın göllenmesi ve staz nedeniyle mural trombüslerin en sık oluştuğu odak sol atriyal apendikstir; buradan kopan pıhtı sistemik arteriyel yolla bacak arterlerini tıkar."
+        }
+      },
+      {
+        "id": "slide-6",
+        "title": "Paradoksal Emboli: Sağdan Sola İntrakardiyak Şantlar",
+        "subtitle": "Venöz kaynaklı pıhtının Patent Foramen Ovale (PFO) veya ASD ile arteriyel sisteme geçişi",
+        "content": "**PARADOKSAL EMBOLİZMİN PATOFİZYOLOJİSİ**\nNormalde venöz sistemden kopan bir trombüs sağ kalbe gelir ve akciğer kapiller filtresine takılarak pulmoner emboli oluşturur.\n\n1. **Tanım ve Mekanizma:**\n   - Venöz dolaşımdan (DVT) köken alan bir embolinin, sağ kalpten pulmoner dolaşıma gitmek yerine intrakardiyak bir defektten **sağdan sola şant** yaparak sol kalbe ve oradan sistemik arteriyel dolaşıma (örneğin beyne) geçmesidir.\n\n2. **Altta Yatan Kardiyak Defektler:**\n   - **Patent Foramen Ovale (PFO):** Erişkinlerin yaklaşık %20-25'inde foramen ovale fonksiyonel olarak kapalı olsa da anatomik olarak açıktır.\n   - **Atriyal Septal Defekt (ASD):**\n   - **Ventriküler Septal Defekt (VSD):**\n\n3. **Tetikleyici Faktör (Şantın Tersine Dönmesi):**\n   - Normalde sol atriyum basıncı sağ atriyumdan yüksektir (soldan sağa kaçak eğilimi vardır).\n   - Ancak hastada pulmoner hipertansiyon geliştiğinde, öksürme, ıkınma (Valsalva manevrası) veya büyük bir PE sağ kalbi zorladığında **sağ atriyum basıncı aniden sol atriyum basıncını aşar**.\n   - PFO kapağı açılır; venöz bacaktaki pıhtı sağ atriyumdan sol atriyuma geçer ve beyne giderek genç yaşta **kriptojenik iskemik inmeye** yol açar!",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Paradoksal Emboli Kriterleri:**\n  ▫ Pıhtının kaynağı: ==Venöz sistem (DVT)==.\n  ▫ Geçiş kapısı: ==Patent Foramen Ovale (PFO) veya ASD==.\n  ▫ Sonuç: Pulmoner emboli yerine **Sistemik arteriyel emboli (Beyin inmesi)**.\n  ▫ Genç bir hastada bacakta DVT varken aynı anda inme (felç) gelişiyorsa akla ilk paradoksal emboli gelmelidir!",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Bacağında derin ven trombozu olan genç bir hastada serebral enfarktüs (inme) geliştiğinde en olası intrakardiyak anomali nedir?* → **Patent Foramen Ovale (PFO) / Atriyal Septal Defekt (ASD)**."
+        ],
+        "flashcards": [
+          {
+            "question": "Paradoksal emboli nedir ve en sık hangi kardiyak defekt zemininde gelişir?",
+            "answer": "Venöz kaynaklı (DVT) bir trombüsün Patent Foramen Ovale (PFO) veya ASD üzerinden sağ kalpten sol kalbe geçip sistemik arteriyel yatağı (örn. beyin) tıkamasıdır."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q6",
+          "question": "32 yaşında kadın hasta, sol bacağında ağrı ve şişlik (DVT) şikayeti varken aniden gelişen sağ hemipleji ve konuşma bozukluğu (akut iskemik inme) tablosuyla acil servise getiriliyor. Venöz sistemden kaynaklanan bir pıhtının beyin arterlerini tıkamasını açıklayan patolojik tablo ve altta yatan en olası defekt aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Retrograd emboli - Aort koarktasyonu",
+            "B) Paradoksal emboli - Patent Foramen Ovale (PFO)",
+            "C) Amniyon sıvı embolisi - Mitral kapak prolapsusu",
+            "D) Yağ embolisi - Ventriküler anevrizma",
+            "E) Hava embolisi - Duktus arteriozus"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Venöz dolaşımdaki bir trombüsün intrakardiyak sağdan sola şant (en sık PFO veya ASD) aracılığıyla arteriyel sisteme geçerek serebral enfarktüs yapması 'paradoksal emboli' olarak adlandırılır."
+        }
+      },
+      {
+        "id": "slide-7",
+        "title": "Yağ Embolisi Sendromu: Uzun Kemik Kırıkları ve Klinik Triad",
+        "subtitle": "Kemik iliği yağının dolaşıma karışması, mekanik obstrüksiyon ve biyokimyasal toksisite",
+        "content": "**YAĞ EMBOLİSİ SENDROMU (FAT EMBOLISM SYNDROME - FES)**\nÖzellikle femur ve tibia gibi yağlı kemik iliğinden zengin uzun kemik kırıklarından 1 ila 3 gün sonra ortaya çıkan spesifik bir klinik tablodur.\n\n1. **Patogenez (İki Aşamalı Teori):**\n   - **Mekanik Teori:** Kırık bölgesinde yırtılan kemik iliği venülleri içine medüller adipositler ve kemik iliği doku parçaları emilir. Yağ globülleri pulmoner ve serebral mikrosirkülasyona takılır.\n   - **Biyokimyasal Toksisite Teorisi:** Yağ damlacıkları vasküler lipazlar tarafından **serbest yağ asitlerine (FFA)** hidrolize edilir. Serbest yağ asitleri endotel hücreleri için doğrudan toksiktir; akut akciğer hasarı (ARDS), yaygın trombosit aktivasyonu ve peteşiyal kanamalara neden olur.\n\n2. **Karakteristik Klinik Triad:**\n   - Kırıktan **24-72 saat sonra** aniden başlar:\n     1. **Solunum Yetmezliği (Takipne, Dispne, Hipoksemi):** Pulmoner kapiller tıkanma ve ARDS.\n     2. **Nörolojik Bulgular:** Huzursuzluk, konfüzyon, ajitasyon, koma (serebral mikroemboliler).\n     3. **Peteşiyal Döküntü (Patognomonik):** Üst gövde, boyun, aksilla ve konjonktivada yaygın peteşiler (trombositopeni ve endotel toksisitesine bağlı).\n   - Otopside akciğer ve beyin kapillerlerinde yağ damlacıklarını göstermek için rutin parafin kesit yerine **donuk (frozen) kesit ve Oil Red O veya Sudan boyası** kullanılmalıdır!",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Yağ Embolisi Sendromu Triadı:**\n  ▫ 1. ==Solunum Yetmezliği (Dispne, Hipoksemi, ARDS)==\n  ▫ 2. ==Nörolojik Değişiklikler (Konfüzyon, Koma)==\n  ▫ 3. ==Peteşiyal Döküntü (Boyun, göğüs, aksilla, konjonktiva)==\n  ▫ Semptomlar kırıktan **1-3 gün sonra** başlar.\n  ▫ Histopatolojide donuk kesitte **Oil Red O / Sudan** pozitif yağ damlacıkları saptanır.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Femur kırığı geçiren bir hastada 48 saat sonra dispne, konfüzyon ve boyun-göğüs bölgesinde peteşiyal döküntüler geliştiğinde en olası tanı nedir?* → **Yağ embolisi sendromu**."
+        ],
+        "flashcards": [
+          {
+            "question": "Yağ embolisi sendromunun klasik klinik triadı nedir?",
+            "answer": "1) Solunum yetmezliği (hipoksemi, dispne), 2) Nörolojik bozukluklar (konfüzyon, koma), 3) Peteşiyal cilt döküntüsü (aksilla, boyun, konjonktiva)."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q7",
+          "question": "Motosiklet kazası sonrası izole kapalı femur cisim kırığı nedeniyle yatırılan 22 yaşındaki bir hastada travmanın 36. saatinde aniden takipne, şiddetli dispne, oryantasyon bozukluğu ve boyun ile aksilla bölgesinde yaygın peteşiyal döküntüler gelişiyor. Bu hastada patolojiyi açıklayan en olası tanı ve mekanizma aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Yağ Embolisi Sendromu - Kemik iliği yağının dolaşıma karışması ve serbest yağ asidi toksisitesi",
+            "B) Eyer embolisi - Vena kava inferior tıkanıklığı",
+            "C) Hipovolemik şok - Masif iç kanama",
+            "D) Anafilaktik şok - Analjezik alerjisi",
+            "E) Dekompresyon hastalığı - Azot gazı kabarcıkları"
+          ],
+          "correctAnswer": "A",
+          "explanation": "Uzun kemik (femur) kırığından 24-72 saat sonra ortaya çıkan solunum sıkıntısı, nörolojik semptomlar ve peteşiyal döküntü klasik Yağ Embolisi Sendromu triadıdır."
+        }
+      },
+      {
+        "id": "slide-8",
+        "title": "Gaz ve Hava Embolisi: Dekompresyon Hastalığı (Vurgun)",
+        "subtitle": "Henry Kanunu, çözünmüş azot gazının kabarcıklaşması ve Caisson hastalığı",
+        "content": "**GAZ VE HAVA EMBOLİSİ**\nDolaşım sistemine giren gaz kabarcıkları kapiller damarları tıkayarak mekanik iskemiye ve yabancı cisim reaksiyonuna neden olur.\n\n1. **Hava Embolisi (İatrojenik / Travmatik):**\n   - Boyun veya toraks cerrahisi, santral venöz kateter takılması/çıkarılması, doğum veya kürtaj sırasında venöz negatif basınçla hava emilmesi.\n   - Ölümcül olabilmesi için genellikle **>100 mL hava** hızla dolaşıma girmelidir; sağ ventrikülde köpüklü hava tıkacı oluşturarak kan akımını durdurur.\n\n2. **Dekompresyon Hastalığı (Vurgun / Caisson Hastalığı):**\n   - **Fiziksel İlke (Henry Kanunu):** Yüksek basınç altında gazların sıvılardaki çözünürlüğü artar.\n   - Derin deniz dalgıçları veya basınçlı tünel (caisson) işçileri yüksek basınç altında solurken kanda ve yağ dokusunda yüksek miktarda **Azot ($N_2$) gazı** çözünür.\n   - Eğer yüzeye aniden (hızlı) çıkılırsa, basınç aniden düşer ve çözünmüş azot kanda sıvı halden çıkarak **gaz kabarcıkları (baloncuklar)** oluşturur (tıpkı gazoz kapağının aniden açılması gibi!).\n   - **Klinik Tablo:**\n     - **The Bends (Kıvrılma):** Eklem periostu ve iskelet kaslarında oluşan kabarcıklar dayanılmaz eklem ağrılarına yol açar.\n     - **The Chokes (Boğulma):** Akciğer mikrosirkülasyonundaki gaz embolileri masif dispne ve göğüs ağrısı yapar.\n     - **Caisson Hastalığı (Kronik Form):** Femur başı, tibia ve humerusta gaz kabarcıklarının besleyici damarları tıkaması sonucu gelişen kronik **Aseptik Kemik Nekrozu (Avasküler Nekroz)**.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Vurgun ve Caisson Özeti:**\n  ▫ Gaz Tipi: ==Azot ($N_2$) gazı kabarcıkları==.\n  ▫ *The Bends:* Şiddetli kas ve eklem ağrıları.\n  ▫ *The Chokes:* Pulmoner gaz embolisine bağlı boğulma hissi ve dispne.\n  ▫ *Caisson Hastalığı:* Femur ve humerus başında kalıcı **avasküler osteonekroz**.\n  ▫ Tedavi: **Hiperbarik Oksijen Odası** (azotun yeniden çözünmesi sağlanır).",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Dalgıçlarda aniden su yüzeyine çıkılması sonucu kanda azot kabarcıklarının oluşmasıyla gelişen, kemiklerde avasküler nekroza yol açan tablo nedir?* → **Dekompresyon Hastalığı (Caisson Hastalığı)**."
+        ],
+        "flashcards": [
+          {
+            "question": "Dekompresyon hastalığında (vurgun) kanda kabarcık oluşturan gaz hangisidir ve kronik kemik komplikasyonuna ne ad verilir?",
+            "answer": "Azot (N2) gazıdır; kronik kemik iskemisi ve nekrozuna Caisson hastalığı (avasküler nekroz) denir."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q8",
+          "question": "Derin deniz dalışı sonrasında hızla su yüzeyine çıkan profesyonel bir dalgıçta şiddetli eklem ve kas ağrıları (the bends) ile nefes darlığı (the chokes) gelişiyor. Yıllar sonra çekilen kalça grafisinde femur başında avasküler osteonekroz alanları (Caisson hastalığı) saptanıyor. Bu patolojide kanda gaz kabarcıkları oluşturarak emboliye yol açan gaz aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Karbonmonoksit ($CO$)",
+            "B) Karbondioksit ($CO_2$)",
+            "C) Azot ($N_2$)",
+            "D) Helyum ($He$)",
+            "E) Saf Oksijen ($O_2$)"
+          ],
+          "correctAnswer": "C",
+          "explanation": "Dekompresyon hastalığında Henry kanunu uyarınca yüksek basınçta kanda çözünmüş olan Azot (N2) gazı, ani basınç düşüşünde çözünürlüğünü kaybederek kanda mikro ve makro kabarcıklar halinde gaz embolisi oluşturur."
+        }
+      },
+      {
+        "id": "slide-9",
+        "title": "Amniyon Sıvı Embolisi: Fetal Hücreler, Şok ve DİK",
+        "subtitle": "Doğum sırasında maternal dolaşıma fetal döküntülerin geçişi ve immün-anafilaktoid şok",
+        "content": "**AMNİYON SIVISI EMBOLİSİ (AMNIOTIC FLUID EMBOLISM - AFE)**\nGebelikte anne ölümlerinin en korkulan ve mortalitesi en yüksek (>%80) komplikasyonlarından biridir.\n\n1. **Gelişim Mekanizması:**\n   - Doğum eylemi sırasında veya hemen doğum sonrasında plasental zarların yırtılması ve uterin venlerin açılmasıyla amniyon sıvısı anne dolaşımına girer.\n   - Anne kanına geçen amniyon sıvısında **fetal skuamöz epitel hücreleri (vernix caseosa), lanugo tüyleri, fetal yağ dokusu ve mekonyum** bulunur.\n\n2. **İki Aşamalı Patofizyolojik Yanıt:**\n   - **Mekanik Değil, Ağır Biyokimyasal ve İmmün Reaksiyon:**\n     - Amniyon sıvısındaki prokoagülan ve vazoaktif maddeler masif pulmoner vazospazmı, sağ kalp yetmezliğini ve anafilaksi benzeri şoku tetikler (**Gebelikte Anafilaktoid Sendrom**).\n   - **Yaygın Damar İçi Pıhtılaşma (DİK):**\n     - Amniyon sıvısındaki doku faktörü benzeri prokoagülanlar maternal koagülasyon kaskadını kontrolsüz tetikler; hastaların en az %50'sinde masif **DİK ve durdurulamayan uterin atoni kanaması** gelişir.\n\n3. **Morfopatolojik Tanı (Otopside):**\n   - Maternal akciğer kapillerlerinde ve pulmoner arteriyollerinde **fetal döküntü skuamları, verniks ve lanugo tüylerinin** gösterilmesiyle kesin tanı konur.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Amniyon Sıvı Embolisi Özeti:**\n  ▫ Mortalite: **>%80** (Anne ölümlerinin en trajik nedeni).\n  ▫ Klinik: Doğum anında **ani dispne, siyanoz, hipotansif şok, koma ve DİK**.\n  ▫ Otopside: Maternal pulmoner damarlarda **fetal skuamöz hücreler ve lanugo kılları** görülür.\n  ▫ Doku faktörü salınımıyla ağır tüketim koagülopatisi (DİK) gelişir.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Doğum eylemi sırasında aniden kardiyovasküler şok, dispne ve DİK tablosuna girerek ölen bir kadının akciğer histopatolojisinde maternal pulmoner kapillerlerde ne görülmesi beklenir?* → **Fetal skuamöz epitel hücreleri ve lanugo tüyleri**."
+        ],
+        "flashcards": [
+          {
+            "question": "Amniyon sıvısı embolisinde otopside maternal akciğer kapillerlerinde ne saptanır?",
+            "answer": "Fetal kaynaklı skuamöz hücreler (skuamlar), verniks parçacıkları ve lanugo kılları saptanır."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q9",
+          "question": "Zorlu bir vajinal doğum eyleminin hemen ardından aniden şiddetli dispne, siyanoz, derin hipotansif şok ve nöbet geçiren primigravid bir kadında dakikalar içinde yaygın damar içi pıhtılaşma (DİK) ve vajinal masif kanama gelişiyor. Otopside maternal akciğer mikrosirkülasyonunda fetal skuamöz hücreler ve mekonyum debrisleri gösteriliyor. Bu klinik tablonun tanısı aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Pulmoner tromboembolizm",
+            "B) Amniyon sıvısı embolisi",
+            "C) Yağ embolisi sendromu",
+            "D) Eklampsi krizi",
+            "E) Peripartum kardiyomiyopati"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Doğum sırasında aniden gelişen kardiyovasküler kollaps, solunum yetmezliği, DİK ve maternal akciğer damarlarında fetal skuamların görülmesi Amniyon Sıvısı Embolisi'nin klasik tablosudur."
+        }
+      },
+      {
+        "id": "slide-10",
+        "title": "Enfarktüs Patofizyolojisi: İskemik Nekrozun Tanımı ve Etiyolojisi",
+        "subtitle": "Arteriyel tıkanma veya venöz drenaj yetersizliğine bağlı gelişen doku nekrozu",
+        "content": "**ENFARKTÜS TANIMI VE ETİYOLOJİSİ**\nEnfarktüs, bir doku veya organın arteriyel kanlanmasının kesilmesi ya da venöz drenajının tıkanması sonucu gelişen lokalize **iskemik doku nekrozu** alanıdır.\n\n1. **Etiyolojik Nedenler:**\n   - **Arteriyel Tromboz ve Tromboemboli (%99):** Enfarktüslerin neredeyse tamamı bir arterin trombüs veya emboli ile akut tıkanması sonucu doğar.\n   - **Vazospazm:** Koroner arter vazospazmı (Prinzmetal anjina / kokain kullanımı).\n   - **Aterom İçi Kanama:** Aterosklerotik plağın içine kanama olarak lümeni aniden kapatması.\n   - **Dıştan Bası:** Bir tümörün, fibröz bandın veya fıtık kesesinin damarı sıkıştırması.\n   - **Damarsal Torsiyon (Dönme):** Testis veya over torsiyonunda pedikülün kendi etrafında dönerek önce venleri, sonra arterleri boğması.\n   - **Damar Duvarının Yırtılması:** Aort diseksiyonu.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Enfarktüs Etiyolojisi:**\n  ▫ En sık neden: ==Arteriyel tromboz ve tromboemboli (%99)==.\n  ▫ Venöz kökenli enfarktüsler nadirdir; sadece drenajın tek bir vene bağlı olduğu organlarda (testis torsiyonu, over torsiyonu, superior mezenterik ven trombozu) görülür.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite Sorusu:**\n  ▫ *Enfarktüs gelişimine yol açan en yaygın patolojik mekanizma hangisidir?* → **Arteriyel lümenin tromboz veya emboli ile akut oklüzyonu**."
+        ],
+        "flashcards": [
+          {
+            "question": "Enfarktüs nedir ve en sık hangi vasküler hadiseye bağlı gelişir?",
+            "answer": "Arteriyel beslenmenin veya venöz drenajın kesilmesine bağlı gelişen iskemik doku nekrozudur; %99 arteriyel tromboz veya emboliye bağlıdır."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q10",
+          "question": "Bir doku veya organda iskemik nekroz (enfarktüs) gelişimine yol açan etiyolojik mekanizmalar arasında açık ara en sık saptanan patolojik olay aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Lokal lenfatik drenajın tıkanması",
+            "B) Arteriyel damar lümeninin tromboz veya tromboemboli ile akut tıkanması",
+            "C) Hipotermi sonucu periferik vazokonstriksiyon",
+            "D) Eritrosit membranında ozmotik frajilite artışı",
+            "E) Histamin salınımıyla gelişen lokal arteriyel dilatasyon"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Enfarktüs olgularının neredeyse tamamı (>%99) besleyici bir arterin tromboz veya emboli ile akut tıkanmasına sekonder gelişir."
+        }
+      },
+      {
+        "id": "slide-11",
+        "title": "Beyaz (Soluk / Anemik) Enfarktüs: Solid Organlar ve Uç Arterler",
+        "subtitle": "Kalp, dalak ve böbrekte uç arter tıkanıklığı ile gelişen koagülasyon nekrozu",
+        "content": "**BEYAZ (SOLUK / ANEMİK) ENFARKTÜSLER**\nEnfarktüsler renklerine ve içerdikleri kan miktarına göre beyaz (soluk) ve kırmızı (hemorajik) olmak üzere ikiye ayrılır.\n\n1. **Beyaz Enfarktüsün Gelişme Koşulları:**\n   - **Solid (Yoğun) Parankimli Organlar:** Kalp, böbrek, dalak.\n   - **Uç Arter (Son Arter / End-Artery) Dolaşımı:** Kollateral kan desteği bulunmayan veya minimal olan damar mimarisi.\n   - **Tek Girişli Arteriyel Beslenme.**\n\n2. **Neden Beyaz (Soluk) Görünür?**\n   - Tıkanan arter nedeniyle doku aniden kansız kalır.\n   - Solid parankimin sert ve yoğun yapısı, komşu komşu kapillerlerden nekroz alanına eritrositlerin sızmasını sınırlar.\n   - İlk saatlerde hafif hemorajik olsa da, 24-48 saat içinde nekroze olan hücreler şişer, komşu damarları ezer ve eritrositler lizise uğrar; nekroz alanı tebeşir gibi **soluk, sarı-beyaz** bir renge bürünür.\n   - Etrafında hiperemi ve enflamasyon nedeniyle **kırmızı bir sınır kuşağı** bulunur.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Beyaz Enfarktüs Organları:**\n  ▫ ==Kalp (Miyokard), Böbrek, Dalak==.\n  ▫ Koşullar: **Solid organ + Uç arter (End-artery)**.\n  ▫ Histopatoloji: Beyin hariç tüm solid organlarda **Koagülasyon Nekrozu** görülür (hücre hatları haftalarca hayalet hücreler şeklinde korunur).",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Aşağıdaki organların hangisinde arteriyel tıkanma sonrası tipik olarak 'beyaz (soluk/anemik) enfarktüs' gelişmesi beklenir?* → **Dalak, Böbrek veya Kalp** (Akciğer ve bağırsakta kırmızı enfarktüs olur!)."
+        ],
+        "flashcards": [
+          {
+            "question": "Beyaz (soluk) enfarktüs hangi tip organlarda görülür ve klasik örnekleri nelerdir?",
+            "answer": "Uç arter dolaşımına sahip solid organlarda görülür; klasik örnekleri kalp, böbrek ve dalaktır."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q11",
+          "question": "Sol ventrikül mural trombüsünden kopan bir embolinin dalak arterinin bir dalını tıkaması sonucu dalak dokusunda kama şeklinde sarı-beyaz renkli, tabanı kapsüle oturan bir nekroz alanı (beyaz enfarktüs) gelişiyor. Dalakta enfarktüsün beyaz (soluk) olmasını sağlayan temel doku özelliği aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Çift kan dolaşımına ve zengin venöz kollaterallere sahip olması",
+            "B) Organın solid parankimli olması ve uç arter (end-artery) dolaşımına sahip olması",
+            "C) Parankimin aşırı gevşek ve süngerimsi bağ dokusundan oluşması",
+            "D) Enfarktüsün venöz drenaj bozukluğu zemininde gelişmesi",
+            "E) Doku içine yoğun reperfüzyon kanaması olması"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Dalak, böbrek ve kalp gibi solid organlarda uç arter dolaşımı vardır; kollateral akım olmadığı ve parankim yoğun olduğu için kanama sızamaz ve soluk (beyaz) enfarktüs gelişir."
+        }
+      },
+      {
+        "id": "slide-12",
+        "title": "Kırmızı (Hemorajik) Enfarktüs: Çift Dolaşımlı ve Gevşek Dokular",
+        "subtitle": "Akciğer, ince bağırsak, venöz tıkanıklıklar ve reperfüzyon zemininde kanlı nekroz",
+        "content": "**KIRMIZI (HEMORAJİK) ENFARKTÜSLER**\nİskemik nekroz alanının içine yoğun miktarda eritrosit ve kan sızmasıyla oluşan koyu kırmızı-mor renkli enfarktüslerdir.\n\n1. **Kırmızı Enfarktüsün Geliştiği 5 Temel Durum:**\n   1. **Venöz Tıkanıklıklar:** Dokuya arteriyel kan girişi sürerken venöz çıkış tıkanır; organ kanla göllenir ve nekroze olur (Örn: **Testis torsiyonu, Over torsiyonu**, Superior mezenterik ven trombozu).\n   2. **Gevşek ve Süngerimsi Dokular:** **Akciğer** gibi gevşek parankimli organlarda nekroz alanına çevre dokulardan kolayca kan sızar.\n   3. **Çift Kan Dolaşımına Sahip Dokular:** **Akciğer** (pulmoner + bronşiyal) ve **İnce Bağırsak** (çift mezenterik arklar). Tıkanmayan diğer arterden nekroze alana kan pompalanır.\n   4. **Önceden Konjesyone Olan Dokular:** Yavaş kan akımı olan venöz staz alanları.\n   5. **Reperfüzyon Hasarı:** Tıkanmış bir arterin trombolitik (t-PA), anjiyoplasti veya spazmın çözülmesiyle yeniden açılması; hasar görmüş nekrotik kapillerlerden parankime masif kan fışkırır.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Kırmızı Enfarktüsün 5 Kuralı:**\n  ▫ 1. ==Venöz Oklüzyon== (Testis/over torsiyonu)\n  ▫ 2. ==Gevşek doku== (Akciğer)\n  ▫ 3. ==Çift dolaşım== (Akciğer, İnce bağırsak)\n  ▫ 4. ==Önceden konjesyone doku==\n  ▫ 5. ==Reperfüzyon== (t-PA veya anjiyo sonrası kanama).\n  ▫ Akciğer ve ince bağırsak enfarktüsleri **DAİMA KIRMIZIDIR**!",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Akut testis torsiyonu olan bir hastada gelişen enfarktüsün tipi ve temel mekanizması nedir?* → **Kırmızı (hemorajik) enfarktüs ve venöz drenajın tıkanması**."
+        ],
+        "flashcards": [
+          {
+            "question": "Kırmızı (hemorajik) enfarktüs gelişmesini sağlayan başlıca durumlar nelerdir?",
+            "answer": "1) Venöz tıkanıklıklar (torsiyonlar), 2) Gevşek dokular (akciğer), 3) Çift dolaşımlı organlar (akciğer, bağırsak), 4) Reperfüzyon (damarın yeniden açılması)."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q12",
+          "question": "Şiddetli skrotal ağrı ile başvuran 16 yaşındaki bir erkekte spermatik kordun kendi etrafında dönmesi (testis torsiyonu) sonucu cerrahiye alınıyor. Testisin koyu mor-siyah renkte, aşırı kanlı ve nekroze olduğu saptanıyor. Testiste gelişen bu enfarktüsün kırmızı (hemorajik) olmasının primer patogenetik nedeni aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Uç arter oklüzyonu sonucu hiç kan girmemesi",
+            "B) Venöz drenajın tıkanması sonucu arteriyel kanın dokuda göllenmesi ve kanamalı nekroz",
+            "C) Testis parankiminin aşırı sert ve solid olması",
+            "D) Siyanür intoksikasyonu gelişmesi",
+            "E) Doku plazminojen aktivatörünün (t-PA) aşırı salınması"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Testis torsiyonunda ince duvarlı venöz damarlar ilk tıkanır; arteriyel kan dokuya girmeye devam eder ancak çıkamadığı için masif venöz konjesyon, rüptür ve kırmızı (hemorajik) enfarktüs gelişir."
+        }
+      },
+      {
+        "id": "slide-13",
+        "title": "Enfarktüsün Morfolojisi: Kama Şekli ve Nekroz Tipleri",
+        "subtitle": "Kama morfolojisi, koagülasyon nekrozu ve santral sinir sisteminin likefaksiyon istisnası",
+        "content": "**ENFARKTÜSÜN MAKRO VE MİKROSKOBİK MORFOLOJİSİ**\n\n1. **Makroskobik Morfoloji (Kama / Wedge-Shaped Görünüm):**\n   - Solid organ enfarktüsleri (dalak, böbrek, akciğer) tipik olarak **kama (üçgen)** şeklindedir:\n     - **Tepesi (Apex):** Tıkanan arterin bulunduğu vasküler çatala bakar.\n     - **Tabanı (Base):** Organın dış yüzeyine / serozasına (örneğin böbrek veya dalak kapsülüne, akciğer plevrasına) oturur.\n   - Serozaya komşu taban üzerinde fibröz eksüda birikir (**Fibrinöz Plevrit veya Perisplenit**); bu durum hastada nefes alıp vermekle batan plöretik göğüs/yan ağrısına yol açar!\n\n2. **Mikroskobik Morfoloji (Nekroz Tipleri):**\n   - **Tüm Vücut Organları (Kalp, Böbrek, Dalak vb.):** İskemik hasar tipik olarak **Koagülasyon Nekrozu** ile sonuçlanır. Hücre proteinleri denatüre olur, hücre sınırları ve mimarisi korunur ancak çekirdekler kaybolur (**Hayalet / Ghost Hücreler**).\n   - **Santral Sinir Sistemi (BEYİN İSTİSNASI):** Beyin parankiminde iskemik nekroz koagülasyon nekrozu değil, zengin lipit ve hidrolitik enzim içeriği nedeniyle **Likefaksiyon (Sıvılaşma / Kollikuasyon) Nekrozu** ile sonlanır! Doku yumuşar, erir ve kistik bir kavitasyon bırakır.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Enfarktüs Morfolojisi ve Beyin Kuralı:**\n  ▫ Makroskopi: ==Kama şeklinde== (Tepe damara, taban serozaya/kapsüle bakar).\n  ▫ Vücuttaki tüm solid organ enfarktüsleri: ==Koagülasyon Nekrozu== (Hayalet hücreler).\n  ▫ **BEYİN ENFARKTÜSÜ İSTİSNASI:** Kesinlikle ==Likefaksiyon (Sıvılaşma) Nekrozu== gelişir!",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Soruları:**\n  ▫ *Serebral arter oklüzyonu sonucu beyin dokusunda gelişen iskemik enfarktüsün histopatolojik nekroz tipi nedir?* → **Likefaksiyon (sıvılaşma) nekrozu**."
+        ],
+        "flashcards": [
+          {
+            "question": "Enfarktüs makroskobik olarak ne şekildedir ve beyin dokusunda hangi nekroz tipi gelişir?",
+            "answer": "Kama (üçgen) şeklindedir (tabanı kapsüle bakar); diğer organlarda koagülasyon nekrozu görülürken beyinde Likefaksiyon (sıvılaşma) nekrozu gelişir."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q13",
+          "question": "Sol orta serebral arter (MCA) tıkanıklığı sonucu inme geçiren ve aylar sonra vefat eden bir hastanın beyin otopsisinde lezyon bölgesinde kistik bir boşluk saptanıyor. Beyin enfarktüslerinde koagülasyon nekrozu yerine görülen bu spesifik nekroz tipi aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Kazeifikasyon nekrozu",
+            "B) Yağ nekrozu",
+            "C) Likefaksiyon (sıvılaşma / kollikuasyon) nekrozu",
+            "D) Fibrinoid nekroz",
+            "E) Gangrenöz nekroz"
+          ],
+          "correctAnswer": "C",
+          "explanation": "Santral sinir sisteminde (beyin ve omurilik) iskemik hasar, zengin lipit içeriği ve otolitik enzimler nedeniyle koagülasyon nekrozu değil, likefaksiyon (sıvılaşma) nekrozu ile sonuçlanır."
+        }
+      },
+      {
+        "id": "slide-14",
+        "title": "İskemi ve Enfarktüs Gelişimini Etkileyen Dört Kritik Faktör",
+        "subtitle": "Kollateral dolaşım, oklüzyon hızı, dokunun hipoksiye duyarlılığı ve kan oksijen içeriği",
+        "content": "**ENFARKTÜSÜ BELİRLEYEN 4 FAKTÖR**\nBir damar tıkandığında her zaman enfarktüs gelişmez; tablonun ciddiyetini 4 temel parametre belirler:\n\n1. **Vasküler Yatağın Anatomisi (Kollateral Dolaşım):**\n   - Çift dolaşımlı organlar (karaciğer: hepatik arter + portal ven; akciğer: pulmoner + bronşiyal) veya zengin anastomozlu organlar (el palmar arkı, bağırsak arkadları) enfarktüse karşı dirençlidir.\n   - Uç artere sahip organlar (böbrek ve dalak) tıkanmada anında nekroza gider.\n\n2. **Oklüzyonun Gelişme Hızı:**\n   - Yavaş gelişen darlıklar (kronik ateroskleroz) yeni alternatif damar yollarının (**kollateral / anjiyogenez**) açılması için zaman kazandırır; tam tıkanma olsa bile enfarktüs gelişmeyebilir.\n   - Ani tromboembolik tıkanmalar kollateral gelişmesine fırsat vermez; masif nekroz yapar.\n\n3. **Dokunun Hipoksiye Hassasiyeti (İskemik Dayanıklılık):**\n   - **Nöronlar:** İskemiye en hassas hücrelerdir; **3-4 dakikalık** iskemi geri dönüşümsüz ölüm yapar.\n   - **Miyositler (Kalp Kası):** **20-30 dakika** dayanabilir; ardından nekroz başlar.\n   - **Fibroblastlar ve İskelet Kası:** Saatlerce canlı kalabilir.\n\n4. **Kandaki Oksijen İçeriği:**\n   - Şiddetli anemi, hipoksi veya karbonmonoksit zehirlenmesi olan bir hastada kısmi bir arter darlığı bile hızla enfarktüsü tetikler.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **İskemiye Hücresel Dayanıklılık Sıralaması:**\n  ▫ 1. En Duyarlı: ==Nöronlar (3-4 dakika)==.\n  ▫ 2. İkinci Duyarlı: ==Miyokard hücreleri (20-30 dakika)==.\n  ▫ 3. En Dirençli: ==Fibroblastlar ve ekstrasellüler matriks (saatler)==.\n  ▫ Yavaş gelişen darlık kollateral damar gelişimini uyararak enfarktüsü engeller.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite & TUS Sorusu:**\n  ▫ *Akut iskemide geri dönüşümsüz hücresel hasara en erken uğrayan (iskemiye en duyarlı) parankimal hücre hangisidir?* → **Santral sinir sistemi nöronları (3-4 dakika)**."
+        ],
+        "flashcards": [
+          {
+            "question": "İskemiye en duyarlı hücre tipi hangisidir ve ne kadar sürede geri dönüşümsüz ölür?",
+            "answer": "Santral sinir sistemi nöronlarıdır; 3-4 dakikalık iskemi sonrası geri dönüşümsüz hücre ölümü başlar."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q14",
+          "question": "Ani ve tam bir arteriyel tıkanma durumunda hücresel düzeyde geri dönüşümsüz iskemik hasarın ve nekrozun en erken (en kısa sürede) başladığı doku/hücre grubu aşağıdakilerden hangisidir?",
+          "options": [
+            "A) İskelet kası lifleri",
+            "B) Beyin korteks nöronları (3-4 dakika)",
+            "C) Miyokard kas lifleri (20-30 dakika)",
+            "D) Cilt fibroblastları",
+            "E) Renal tübül epitel hücreleri"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Beyin nöronları iskemiye vücuttaki en duyarlı hücrelerdir; kan akımı kesildikten 3-4 dakika sonra geri dönüşümsüz hücre ölümü gerçekleşir."
+        }
+      },
+      {
+        "id": "slide-15",
+        "title": "Şok Patofizyolojisi: Sistemik Hipoperfüzyon ve Hücresel Hipoksi",
+        "subtitle": "Kardiyak debi veya efektif dolaşan hacmin yetersizliği sonucu hücresel enerji çöküşü",
+        "content": "**ŞOKUN TANIMI VE PATOFİZYOLOJİK TEMELİ**\nŞok, kardiyak debideki azalma veya efektif dolaşan intravasküler kan hacminin yetersizliği sonucu, tüm vücutta doku perfüzyonunun ve oksijen sunumunun hücresel gereksinimi karşılayamayacak düzeye inmesidir (**Sistemik Hipoperfüzyon**).\n\n1. **Hücresel Düzeyde Ne Olur?**\n   - Oksijen yetersizliği → Mitokondriyal oksidatif fosforilasyon durur.\n   - Hücre zorunlu olarak **anaerobik glikolize** geçer.\n   - Laktik asit birikir → **Laktik Asidoz** gelişir; hücre içi pH düşer.\n   - ATP bağımlı $Na^+/K^+$ ATPaz pompası çöker; hücre içine sodyum ve su girer (hücresel şişme).\n   - Lisozom enzimleri serbest kalır, membranlar parçalanır ve çoklu organ yetmezliği başlar.\n\n2. **Şokun 5 Ana Kategorisi:**\n   1. **Kardiyojenik Şok:** Miyokard pompa yetmezliği.\n   2. **Hipovolemik Şok:** Kan veya plazma hacmi kaybı.\n   3. **Septik Şok:** Sistemik enfeksiyon, sitokin fırtınası ve vazodilatasyon.\n   4. **Nörojenik Şok:** Sempatik tonus kaybı, vazodilatasyon.\n   5. **Anafilaktik Şok:** IgE aracılı sistemik vazodilatasyon ve vasküler kaçak.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Şokun Özü:**\n  ▫ Şok bir tansiyon düşüklüğü değil, **hücresel düzeyde oksijen yetersizliği ve metabolik enerji krizidir**.\n  ▫ Ana metabolik belirteç: ==Laktik Asidoz== (Anaerobik glikoliz sonucu kanda laktat birikimi).\n  ▫ Tedavi edilmezse hücresel şişme geri dönüşümsüz doku nekrozuna evrilir.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite Sorusu:**\n  ▫ *Şok tablosunda hücresel hipoksinin erken ve karakteristik biyokimyasal sonucu nedir?* → **Anaerobik glikoliz aktivasyonu ve laktik asidoz gelişimi**."
+        ],
+        "flashcards": [
+          {
+            "question": "Şok patofizyolojisinde hücresel düzeyde gelişen primer metabolik kriz nedir?",
+            "answer": "Oksidatif fosforilasyonun durması, anaerobik glikolize geçiş ve laktik asidoz sonucu ATP tükenmesidir."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q15",
+          "question": "Şok tablosunun hücresel ve metabolik patofizyolojisi incelendiğinde, doku hipoperfüzyonuna yanıt olarak hücrede mitokondriyal solunumun durmasıyla tetiklenen ve kanda biriken temel biyokimyasal belirteç aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Piruvat kinaz eksikliği",
+            "B) Laktik asit (Laktik asidoz)",
+            "C) Serbest yağ asitleri düşüşü",
+            "D) Üre sentezinde masif artış",
+            "E) Glukoz-6-fosfataz birikimi"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Hipoperfüzyon nedeniyle oksijensiz kalan hücreler anaerobik glikolize geçer; piruvat laktata dönüştürülür ve kanda laktik asit birikerek metabolik laktik asidoz oluşturur."
+        }
+      },
+      {
+        "id": "slide-16",
+        "title": "Kardiyojenik Şok: Miyokardiyal Pompa Yetersizliği",
+        "subtitle": "Geniş enfarktüsler, ventriküler aritmiler ve mekanik kardiyak yetmezlikler",
+        "content": "**KARDİYOJENİK ŞOK PATOFİZYOLOJİSİ**\nMiyokard hasarı sonucu kalbin periferik dokuların metabolik ihtiyacını karşılayacak kanı pompalayamaması (akut kardiyak debi çöküşü) tablosudur.\n\n1. **Etiyolojik Nedenler:**\n   - **Geniş Miyokard Enfarktüsü:** Sol ventrikül kas kitlesinin **>%40'ının enfarktüse uğraması** durumunda kardiyojenik şok kaçınılmazdır (en sık neden!).\n   - **Ventriküler Aritmiler:** Ventriküler taşikardi / fibrilasyon.\n   - **Mekanik Komplikasyonlar:** Papiller adale rüptürü (akut masif mitral yetmezlik), ventriküler septal rüptür (VSD), sol ventrikül serbest duvar rüptürü (akut kardiyak tamponad).\n   - Ağır miyokardit veya kardiyomiyopati.\n\n2. **Klinik ve Hemodinamik Özellikler:**\n   - **Kardiyak Debi (CO):** Belirgin olarak DÜŞMÜŞTÜR.\n   - **Sistemik Vasküler Direnç (SVR):** Kompansatuar vazokonstriksiyon nedeniyle ARTMIŞTIR (soluk, soğuk, nemli cilt!).\n   - **Pulmoner Kılcal Uç Basıncı (PCWP):** Sol ventrikül boşalamadığı için sol atriyum ve pulmoner venlerde kan göllenir; PCWP **YÜKSEKTİR** (Akut Pulmoner Ödem tablosu eşlik eder).",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Kardiyojenik Şok Hemodinamiği:**\n  ▫ Etyoloji: Sol ventrikül kitlesinin **>%40 enfarktüsü**.\n  ▫ Kardiyak Debi: ↓↓↓ Düşük.\n  ▫ Cilt: **Soğuk, soluk, nemli** (Kompansatuar vazokonstriksiyon).\n  ▫ Akciğer: **Pulmoner ödem ve raller** (PCWP yüksek).\n  ▫ Hipovolemik şoktan farkı: Kardiyojenik şokta juguler venöz dolgunluk ve pulmoner ödem vardır!",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Akut miyokard enfarktüsü geçiren bir hastada kardiyojenik şok gelişmesi için sol ventrikül miyokard kitlesinin en az yüzde kaçının fonksiyon dışı kalması gerekir?* → **En az %40**."
+        ],
+        "flashcards": [
+          {
+            "question": "Kardiyojenik şokta kardiyak debi, periferik direnç ve cilt bulguları nasıldır?",
+            "answer": "Kardiyak debi düşüktür; periferik vasküler direnç kompanse etmek için artmıştır; cilt soğuk, soluk ve terli (nemli) görünümdedir."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q16",
+          "question": "Akut anterior miyokard enfarktüsü tanısıyla koroner yoğun bakımda izlenen 65 yaşındaki hastada kan basıncı 75/40 mmHg'ye geriliyor, taşikardi, dispne, akciğer bazallerinde yaygın yaş raller ve boyun venöz dolgunluğu gelişiyor; ekstremiteleri soğuk ve nemli bulunuyor. Bu hastada kardiyojenik şok tanısını destekleyen temel hemodinamik bulgular aşağıdakilerden hangisinde doğru verilmiştir?",
+          "options": [
+            "A) Kardiyak debi artmış, periferik vasküler direnç düşmüş",
+            "B) Kardiyak debi düşmüş, pulmoner kapiller uç basıncı (PCWP) yükselmiş ve periferik direnç artmış",
+            "C) Kardiyak debi normal, venöz doluş sıfırlanmış",
+            "D) Pulmoner kapiller uç basıncı düşmüş, cilt sıcak ve pembe",
+            "E) Sistemik vasküler direnç sıfıra inmiş"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Kardiyojenik şokta sol ventrikül pompa yetmezliği nedeniyle kardiyak debi düşer; geride kan göllendiği için PCWP artar (akciğer ödemi); vücut tansiyonu korumak için vazokonstriksiyon yapar (SVR artar, cilt soğuk-nemli)."
+        }
+      },
+      {
+        "id": "slide-17",
+        "title": "Hipovolemik Şok: İntravasküler Hacim Kaybı ve Kompansasyon",
+        "subtitle": "Hemoraji, yanıklar, aşırı sıvı kayıpları ve sempatik-RAAS savunma mekanizmaları",
+        "content": "**HİPOVOLEMİK ŞOK MEKANİZMASI**\nDolaşımdaki kan veya plazma hacminin akut kaybı sonucu ventrikül doluşunun (preload) çökmesiyle gelişir.\n\n1. **Etiyolojik Nedenler:**\n   - **Hemorajik Şok:** Masif iç veya dış kanamalar (rüptüre aort anevrizması, travma, ektopik gebelik rüptürü, gastrointestinal kanamalar).\n   - **Plazma ve Sıvı Kayıpları:** Geniş yanıklar (plazma kaybı), şiddetli kusma/ishal (kolera, gastroenterit), diyabetik ketoasidoz (ozmotik diürez).\n\n2. **Kompansasyon Mekanizmaları:**\n   - Karotid sinüs ve aortik baroreseptörler uyarılır → **Yoğun sempatik deşarj**:\n     - Taşikardi (nabız hızlanır).\n     - Periferik vazokonstriksiyon (deri, kas ve böbrek damarları büzülür; kan beyin ve kalbe yönlendirilir).\n   - **RAAS (Renin-Anjiyotensin-Aldosteron) Aktivasyonu:** Renal perfüzyon düşer; renin salınır, anjiyotensin II damarları kasar, aldosteron sodyum ve su tutar.\n   - **ADH (Vazopressin) Salınımı:** İdrar miktarı azalır (**oligüri/anüri**).\n\n3. **Hemodinami:**\n   - Kardiyak debi düşüktür; venöz doluş basınçları (CVP ve PCWP) **DÜŞÜKTÜR**; periferik direnç artmıştır (cilt soğuk, soluk, kapiller dolum uzamış).",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Hipovolemik Şok Özeti:**\n  ▫ Primer Sorun: ==İntravasküler hacim kaybı==.\n  ▫ Cilt: **Soğuk, soluk, terli**.\n  ▫ Boyun venleri: **Düzleşmiş (Kollabe)**; CVP ve PCWP çok düşüktür (kardiyojenik şokun tam tersi!).\n  ▫ İdrar çıkışı: Azalmış (**Oligüri <0.5 mL/kg/saat**) - hipovoleminin en duyarlı göstergesi.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite Sorusu:**\n  ▫ *Akut kanama geçiren bir hastada şok kompanzasyonunda devreye giren ve idrar çıkışını azaltarak hacmi korumaya çalışan temel hormonal aks hangisidir?* → **Renin-Anjiyotensin-Aldosteron Sistemi (RAAS) ve ADH**."
+        ],
+        "flashcards": [
+          {
+            "question": "Hipovolemik şokta boyun venleri ve pulmoner uç basıncı (PCWP) kardiyojenik şoktan nasıl ayrılır?",
+            "answer": "Kardiyojenik şokta venler dolgun ve PCWP yüksektir; hipovolemik şokta ise intravasküler hacim azaldığı için boyun venleri düzleşmiştir ve PCWP düşüktür."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q17",
+          "question": "Trafik kazası sonrası dalak rüptürü nedeniyle masif intraabdominal kanaması olan 28 yaşındaki bir hastada gelişen hipovolemik şok tablosunda aşağıdakilerden hangisinin görülmesi beklenmez?",
+          "options": [
+            "A) Taşikardi ve hipotansiyon",
+            "B) Cildin soğuk, soluk ve nemli olması",
+            "C) İdrar çıkışında belirgin azalma (oligüri)",
+            "D) Boyun venöz dolgunluğu ve bilateral yaygın akciğer ödemi",
+            "E) Santral venöz basıncın (CVP) belirgin düşmesi"
+          ],
+          "correctAnswer": "D",
+          "explanation": "Boyun venöz dolgunluğu ve akciğer ödemi volüm yüklenmesi veya kardiyojenik şokta görülür; hipovolemik şokta intravasküler hacim boşaldığı için boyun venleri kollabedir ve akciğerler temizdir."
+        }
+      },
+      {
+        "id": "slide-18",
+        "title": "Septik Şok 1: PAMP'lar, Toll-Like Reseptörler ve Sitokin Fırtınası",
+        "subtitle": "Enfeksiyona karşı konağın disregüle immün yanıtı ve moleküler mediyatörler",
+        "content": "**SEPTİK ŞOKUN MOLEKÜLER TETİKLEYİCİLERİ**\nSeptik şok, sistemik bir enfeksiyona karşı konağın verdiği kontrolsüz ve orantısız immün yanıtın yol açtığı, hücresel metabolizma anormallikleri ve derin vazodilatasyonla seyreden hayatı tehdit edici tablodur.\n\n1. **Mikrobiyal Tetikleyiciler (PAMP'lar):**\n   - **Gram-Negatif Bakteriler (En Klasik):** Hücre duvarındaki **Lipopolisakkarit (LPS / Endotoksin)**.\n   - **Gram-Pozitif Bakteriler (En Sık Neden!):** Peptidoglikanlar ve lipoteikoik asit.\n   - Mantarlar ve diğer mikroorganizmalar.\n\n2. **Reseptör Tanıma ve Hücresel Aktivasyon:**\n   - Dolaşımdaki LPS, serumdaki LBP (LPS-bağlayıcı protein) ile birleşir.\n   - Makrofaj ve monositlerin yüzeyindeki **CD14 ve Toll-Like Reseptör 4 (TLR4)** kompleksine bağlanır.\n   - Hücre içi NF-$\\kappa$B sinyal yolu aktive olur.\n\n3. **Sitokin Fırtınası (Aşırı İmmün Yanıt):**\n   - Masif miktarda primer proenflamatuar sitokin salgılanır:\n     - **Tümör Nekrozis Faktör-alfa (TNF-$\u0007lpha$)**\n     - **İnterlökin-1 (IL-1)**\n     - **İnterlökin-6 (IL-6)**\n     - İnterlökin-12 ve IFN-$\\gamma$\n   - Bu sitokinler ikincil mediyatörleri (lökotrienler, PAF, NO, kompleman) tetikleyerek lokal enflamasyonu kontrolsüz sistemik yangıya çevirir.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Septik Şokun Moleküler Aksı:**\n  ▫ Endotoksin: ==LPS (Lipopolisakkarit)==.\n  ▫ Reseptör Kompleksi: ==CD14 + TLR4 (Toll-like reseptör 4)==.\n  ▫ Anahtar Sitokinler: ==TNF-$\u0007lpha$ ve IL-1==.\n  ▫ Gram-pozitif bakteriler günümüzde sıklık olarak gram-negatiflerin önüne geçmiştir.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Soruları:**\n  ▫ *Gram-negatif bakteri septik şokunda endotoksin (LPS) makrofaj yüzeyindeki hangi reseptör kompleksi tarafından tanınır?* → **TLR4 (Toll-Like Reseptör 4) ve CD14**."
+        ],
+        "flashcards": [
+          {
+            "question": "Septik şokta gram-negatif endotoksin (LPS) makrofajlarda hangi reseptörle tanınır ve hangi ana sitokinleri salgılatır?",
+            "answer": "TLR4 (Toll-like reseptör 4) ve CD14 kompleksiyle tanınır; primer olarak TNF-alfa ve IL-1 salınımını tetikler."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q18",
+          "question": "Gram-negatif sepsis ve septik şok patofizyolojisinde, bakteriyel hücre duvarı lipopolisakkaritinin (LPS / endotoksin) immün sistem hücreleri tarafından tanınarak masif TNF-alfa ve IL-1 salınımını başlatan temel hücresel reseptör kompleksi aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Mannoz reseptörü",
+            "B) Toll-Like Reseptör 4 (TLR4) ve CD14",
+            "C) CD40 ve CD40L",
+            "D) İntegrin alfa-4 beta-1",
+            "E) T hücre reseptörü (TCR)"
+          ],
+          "correctAnswer": "B",
+          "explanation": "LPS molekülü, monosit ve makrofaj yüzeyindeki CD14 kofaktörü aracılığıyla TLR4 (Toll-like receptor 4) reseptörüne bağlanarak sitokin fırtınasını tetikler."
+        }
+      },
+      {
+        "id": "slide-19",
+        "title": "Septik Şok 2: Sistemik Endotel Hasarı, Vazodilatasyon ve DİK",
+        "subtitle": "İndüklenebilir NO sentaz (iNOS), kapiller kaçak, mikrotrombüsler ve metabolik çöküş",
+        "content": "**SEPTİK ŞOKTA VASKÜLER VE METABOLİK ANORMALLİKLER**\nSitokin fırtınası endotel hücreleri üzerinde yıkıcı sistemik etkiler yaratır:\n\n1. **Sistemik Vazodilatasyon ve Sıcak Şok:**\n   - Sitokinler damar düz kaslarında **İndüklenebilir Nitrik Oksit Sentazı (iNOS)** aşırı uyarır.\n   - Yüksek miktarda **Nitrik Oksit (NO)** sentezlenir.\n   - Tüm periferik arteriyoller aşırı genişler (vazodilatasyon); sistemik vasküler direnç (SVR) çöker.\n   - Kan deride göllenir; bu nedenle erken dönemde diğer şokların aksine **cilt sıcak, pembe ve kurudur ('Sıcak Şok' / Warm Shock)**!\n\n2. **Yaygın Endotel Hasarı ve Vasküler Kaçak:**\n   - Endotel bağlantıları gevşer; plazma ve albümin interstisyuma sızar (**üçüncü boşluğa kaçış**). Masif anazarka ödemi ve hipovolemi gelişir.\n\n3. **Dissemine İntravasküler Koagülasyon (DİK):**\n   - Sitokinler endotelde Doku Faktörü sentezini artırır; trombomodulin ve protein C'yi baskılar.\n   - Tüm mikrosirkülasyonda yaygın fibrin-trombosit mikrotrombüsleri oluşur. Dokular iskemik nekroza uğrarken kanda trombosit ve faktörler tükenir (tüketim koagülopatisi ve yaygın kanamalar).\n\n4. **İmmünsüpresyon ve Metabolik Anormallikler:**\n   - Hiperglisemi (glukoneogenez ve insülin direnci), ardından adrenal yetmezlik ve laktik asidoz.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Septik Şokun Belirteçleri:**\n  ▫ Aşırı Vazodilatasyon: ==iNOS aktivasyonu ve Nitrik Oksit (NO)==.\n  ▫ Erken Klinik: Cilt **sıcak ve pembedir (Sıcak Şok)**; ilerledikçe soğuk şoka döner.\n  ▫ Koagülasyon: Doku faktörü patlamasıyla **DİK (Dissemine İntravasküler Koagülasyon)** gelişir.\n  ▫ Sıvı Kaybı: Yaygın endotel hasarıyla **vasküler kaçak ve masif ödem**.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Septik şokta sistemik vazodilatasyondan ve periferik vasküler direncin çökmesinden sorumlu olan temel endotelyal gevşetici molekül nedir?* → **Nitrik Oksit (NO) - iNOS aktivasyonu**."
+        ],
+        "flashcards": [
+          {
+            "question": "Septik şokun erken döneminde cildin soğuk değil de sıcak/pembe olmasının nedeni nedir?",
+            "answer": "iNOS kaynaklı aşırı Nitrik Oksit (NO) üretimine bağlı sistemik vazodilatasyon ve deride kan göllenmesidir (Sıcak Şok)."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q19",
+          "question": "Ürosepsis zemininde yoğun bakımda takip edilen bir hastada hipotansiyon olmasına rağmen ekstremitelerin sıcak ve pembe olduğu saptanıyor. Septik şokun bu erken evresinde periferik vazodilatasyona yol açarak sistemik vasküler direncin düşmesine neden olan temel mediyatör aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Endotelin-1",
+            "B) Nitrik Oksit (NO)",
+            "C) Tromboksan A2",
+            "D) Anjiyotensin II",
+            "E) Lökotrien C4"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Septik şokta proenflamatuar sitokinler endotel ve damar düz kasında iNOS enzimini uyararak yüksek miktarda Nitrik Oksit (NO) sentezletir; NO güçlü vazodilatasyon yaparak erken dönemde 'sıcak şok' tablosuna yol açar."
+        }
+      },
+      {
+        "id": "slide-20",
+        "title": "Özel Şok Tipleri: Nörojenik Şok ve Anafilaktik Şok",
+        "subtitle": "Sempatik tonus kaybı ve IgE aracılı yaygın vazodilatasyon dinamikleri",
+        "content": "**NÖROJENİK VE ANAFİLAKTİK ŞOK**\n\n1. **Nörojenik Şok:**\n   - **Tetikleyici:** Yüksek spinal kord yaralanmaları (servikal/üst torakal kord transeksiyonu), spinal anestezi komplikasyonu veya şiddetli beyin travması.\n   - **Mekanizma:** Sempatik vazomotor tonus aniden kesilir.\n   - **Sonuç:** Vasküler yataktaki arter ve venler tamamen gevşer. Kan periferik venöz göllere toplanır; kalbe venöz dönüş sıfırlanır.\n   - **Karakteristik Klinik İpucu (Paradoks):** Diğer şok tiplerinde kompanzatuar taşikardi görülürken, nörojenik şokta sempatik uyarı yokluğu ve vagal baskınlık nedeniyle **HİPOTANSİYON + BRADİKARDİ** birlikteliği görülür! Cilt sıcak ve kurudur.\n\n2. **Anafilaktik Şok:**\n   - **Tetikleyici:** Tip I aşırı duyarlılık reaksiyonu (böcek sokması, penisilin, fıstık, lateks vb.).\n   - **Mekanizma:** Antijen duyarlı bireyde mast hücreleri ve bazofillerin yüzeyindeki **IgE moleküllerini** çapraz bağlar.\n   - **Salınan Mediyatörler:** Masif **Histamin**, lökotrienler ve PAF salınımı.\n   - **Sonuç:**\n     - Sistemik yaygın vazodilatasyon (derin hipotansiyon).\n     - Ani kapiller geçirgenlik artışı (ödem, laringeal spazm/stridor, boğulma).\n     - Bronkospazm (şiddetli astım benzeri dispne).\n   - **Acil Tedavi:** İntramüsküler **Adrenalin (Epinefrin)**.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Ayırıcı Tanı Özeti:**\n  ▫ ==Nörojenik Şok:== Sempatik felç → **Hipotansiyon + BRADİKARDİ** (Taşikardi OLMAZ!).\n  ▫ ==Anafilaktik Şok:== IgE + Histamin → Yaygın vazodilatasyon, **bronkospazm, laringeal ödem**.\n  ▫ Anafilaktik şokta hayat kurtarıcı ilk ilaç: **İntramüsküler Adrenalin**.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Spinal kord travması sonrası hipotansiyon gelişen bir hastada diğer şok tiplerinden farklı olarak bradikardi görülmesi hangi şok tipini işaret eder?* → **Nörojenik Şok**."
+        ],
+        "flashcards": [
+          {
+            "question": "Nörojenik şoku diğer hipovolemik veya kardiyojenik şoklardan ayıran tipik nabız bulgusu nedir?",
+            "answer": "Sempatik tonus kaybına bağlı olarak taşikardi yerine Bradikardi (yavaş nabız) görülmesidir."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q20",
+          "question": "Trafik kazasında C5 vertebra kırığı ve spinal kord kesisi saptanan 24 yaşındaki bir hastada kan basıncı 70/40 mmHg olarak ölçülüyor. Fizik muayenede taşikardi yerine nabzın 48/dakika (bradikardi) olduğu ve cildin sıcak-kuru olduğu tespit ediliyor. Bu klinik tablo aşağıdaki şok tiplerinden hangisine özgüdür?",
+          "options": [
+            "A) Hipovolemik şok",
+            "B) Kardiyojenik şok",
+            "C) Nörojenik şok",
+            "D) Obstrüktif şok",
+            "E) Septik şok"
+          ],
+          "correctAnswer": "C",
+          "explanation": "Spinal kord hasarında sempatik vazomotor uyarının kesilmesiyle gelişen nörojenik şokta, taşikardi yanıtı oluşamaz; hipotansiyon ile birlikte paradoksal bradikardi ve sıcak-kuru cilt görülür."
+        }
+      },
+      {
+        "id": "slide-21",
+        "title": "Şokun Üç Evresi: Kompanse, Progresif ve İrreversibl",
+        "subtitle": "Kompansatuar nörohümoral yanıttan geri dönüşümsüz hücresel otolize giden süreç",
+        "content": "**ŞOKUN KLİNİK VE PATOLOJİK EVRELERİ**\nAltta yatan neden ne olursa olsun, şok tablosu kontrol altına alınmazsa 3 kronolojik evreden geçer:\n\n1. **Evre 1: Nonprogresif (Kompanse) Evre:**\n   - Refleks kompansasyon mekanizmaları tam kapasite devrededir.\n   - Baroreseptör refleksleri, katekolamin salınımı, RAAS aktivasyonu, ADH artışı ve sempatik vazokonstriksiyon.\n   - Kan yaşamsal organlara (beyin ve koronerler) yönlendirilir; periferik vazokonstriksiyon sayesinde **kan basıncı korunur**.\n   - Hasta taşikardik, hafif soluk ve oligüriktir; bu evrede uygun sıvı/tedavi ile **tamamen geri döndürülebilir**!\n\n2. **Evre 2: Progresif Evre (Doku Hipoperfüzyonu):**\n   - Kompansasyon mekanizmaları yetersiz kalır.\n   - Dokularda yaygın hipoksi ve anaerobik glikoliz başlar.\n   - **Laktik Asidoz:** Düşük pH arteriyollerin vazomotor tonusunu felç eder; damarlar genişler ve kan mikrosirkülasyonda göllenir.\n   - Endotel hasarı başlar; vital organ fonksiyonları bozulur, idrar miktarı kritik derecede düşer.\n\n3. **Evre 3: İrreversibl (Geri Dönüşümsüz) Evre:**\n   - Hücresel hasar öyle bir boyuta ulaşır ki hemodinamik parametreler (tansiyon, nabız) düzeltilse bile hasta kurtarılamaz.\n   - Mitokondriler şişer, lizozomal asit hidrolazlar sitoplazmaya sızar.\n   - Miyokardiyal depresan faktörler kalbi durdurur; bağırsak bariyeri çöker ve kana bakteriyel endotoksinler karışır.\n   - Böbreklerde tam anüri, karaciğer ve akciğer yetmezliği (**MODS**) ve **Ölüm**.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Şok Evrelerinin Ayrımı:**\n  ▫ ==1. Nonprogresif (Kompanse):== Refleksler aktiftir, tansiyon korunur, tamamen kür sağlanabilir.\n  ▫ ==2. Progresif:== Laktik asidoz gelişir, damar tonusu çöker, perfüzyon bozulur.\n  ▫ ==3. İrreversibl (Geri Dönüşümsüz):== Masif hücre ölümü, lizozom enzim salınımı; tedaviye rağmen ölüm kaçınılmazdır.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite & TUS Sorusu:**\n  ▫ *Şokun progresif evreden irreversibl evreye geçişinde rol oynayan en temel hücresel patoloji nedir?* → **Yaygın mitokondriyal hasar, lizozomal enzimlerin serbestleşmesi ve hücresel ATP üretiminin kalıcı çöküşü**."
+        ],
+        "flashcards": [
+          {
+            "question": "Şokun nonprogresif (kompanse) evresi ile progresif evresi arasındaki temel klinik-patolojik fark nedir?",
+            "answer": "Kompanse evrede nörohümoral reflekslerle tansiyon korunur; progresif evrede laktik asidoz ve doku hipoperfüzyonu başlar, tansiyon düşer."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q21",
+          "question": "Şok tablosunda olan bir hastada yoğun sıvı resüsitasyonuna ve yüksek doz inotropik/vazopressör ajanlara rağmen kardiyak fonksiyonların giderek çökmesi, tübüler epitelin yaygın nekrozu (anüri), bağırsak florasının kana karışması ve hücresel düzeyde lizozomal enzimlerin sitozole dökülerek otolizi başlatması şokun hangi evresinde olduğunu gösterir?",
+          "options": [
+            "A) Nonprogresif evre",
+            "B) Kompanse erken evre",
+            "C) İrreversibl (geri dönüşümsüz) evre",
+            "D) İzole kardiyojenik evre",
+            "E) Pre-şok dönemi"
+          ],
+          "correctAnswer": "C",
+          "explanation": "Tedaviyle hemodinaminin düzeltilmesine rağmen organ yetmezliklerinin durdurulamadığı, yaygın hücresel nekroz ve lizozomal enzim kaçağının olduğu evre şokun irreversibl (geri dönüşümsüz) evresidir."
+        }
+      },
+      {
+        "id": "slide-22",
+        "title": "Şokun Organ Morfolojisi 1: Şok Böbreği (Akut Tübüler Nekroz)",
+        "subtitle": "Renal iskemi, tübül epitel nekrozu, silendirler ve oligürik akut böbrek yetmezliği",
+        "content": "**ŞOKUN ORGANLARA ETKİSİ: ŞOK BÖBREĞİ (ATN)**\nBöbrekler kardiyak debinin yaklaşık %20-25'ini alır; bu nedenle sistemik hipoperfüzyona en hassas organların başında gelir.\n\n1. **İskemik Akut Tübüler Nekroz (ATN):**\n   - Şok sırasında gelişen şiddetli ve uzamış renal hipoperfüzyon **İskemik ATN** tablosuna yol açar.\n   - En duyarlı yapılar: Metabolik aktivitesi en yüksek olan **Proksimal Kıvrıntılı Tübüller** ve Henle kulpunun kalın çıkan koludur.\n\n2. **Histopatolojik Bulgular:**\n   - Proksimal tübül epitel hücrelerinde fırçamsı kenar kaybı, şişme, tübül lümenine dökülme ve yama tarzında fokal nekrozlar.\n   - Dökülen epitel hücreleri ve Tamm-Horsfall proteini lümende birleşerek **Granüler Silendirler (Çamur Rengi Silendirler)** oluşturur.\n   - Tübüler obstrüksiyon ve geri kaçış glomerüler filtrasyonu sıfırlar.\n\n3. **Klinik Seyir ve Reversibilite:**\n   - İdrar miktarı dramatik düşer (**Oligüri <400 mL/gün veya Anüri**).\n   - Tübül bazal membranı sağlam kalmışsa ve hasta diyaliz ile yaşatılırsa, tübül epitel hücreleri rejenere olarak haftalar içinde **tam iyileşme** sağlayabilir!",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Şok Böbreği (İskemik ATN):**\n  ▫ En Duyarlı Bölge: ==Proksimal Tübüller ve Henle Kalın Çıkan Kolu==.\n  ▫ İdrar İncelemesi: ==Çamur rengi granüler silendirler==.\n  ▫ Glomerüller genellikle sağlamdır; hasar tübüllerde odaklanır.\n  ▫ Tübül bazal membranı sağlamsa epitel prolifere olup kendini yenileyebilir.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Sorusu:**\n  ▫ *Şok böbreğinde (iskemik akut tübüler nekroz) hipoksiye en duyarlı tübüler segment hangisidir?* → **Proksimal kıvrıntılı tübül (özellikle düz segmenti P3)**."
+        ],
+        "flashcards": [
+          {
+            "question": "Şok böbreğinde (iskemik ATN) iskemik hasara en hassas tübül bölümü hangisidir?",
+            "answer": "Proksimal kıvrıntılı tübül epitelidir (yüksek metabolik ve transport aktivitesi nedeniyle)."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q22",
+          "question": "Ağır hemorajik şok sonrasında oligüri gelişen ve idrar sedimentinde tipik çamur rengi granüler silendirler saptanan bir hastada gelişen iskemik akut tübüler nekrozda (şok böbreği), hipoksik hasara en duyarlı olan nefron segmenti aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Distal kıvrıntılı tübül",
+            "B) Toplayıcı kanallar",
+            "C) Proksimal kıvrıntılı tübül epiteli",
+            "D) Glomerüler mezangiyal hücreler",
+            "E) Henle kulpunun ince inen kolu"
+          ],
+          "correctAnswer": "C",
+          "explanation": "Böbrekte metabolik transport yükü ve oksijen tüketimi en yüksek olan hücreler proksimal tübül epiteli olduğundan iskemik şok hasarına en duyarlı bölgedir."
+        }
+      },
+      {
+        "id": "slide-23",
+        "title": "Şok Akciğeri (ARDS) ve Adrenal Bezler (Waterhouse-Friderichsen)",
+        "subtitle": "Diffüz alveoler hasar, hyalen membranlar ve meningokoksemik adrenal apopleksi",
+        "content": "**ŞOK AKCİĞERİ (ARDS) VE ADRENAL HASAR**\n\n1. **Şok Akciğeri (Diffüz Alveoler Hasar / ARDS):**\n   - Özellikle **Septik Şok** ve ağır travmada gelişir; hipovolemik şokta akciğerler genellikle korunur.\n   - **Patogenez:** Pulmoner kapiller yatakta aktive olan nötrofiller alveolokapiller membrana yapışır ve proteolitik enzimler ile serbest oksijen radikalleri salar.\n   - **Histopatoloji:**\n     - Alveol kapiller endotelinde ve Tip I pnömositlerde yaygın nekroz.\n     - Alveol lümenlerine protein ve fibrinden zengin eksüda dolar.\n     - Dökülen ölü epitel hücreleri ve fibrin birleşerek alveol iç yüzeyini pembe bir bant gibi kaplayan karakteristik **Hyalen Membranları** oluşturur.\n     - Akciğerler ağır, kaskatı ve hava içermez hale gelir (Klinik: Ağır refrakter hipoksemi).\n\n2. **Adrenal Bez Hasarı (Waterhouse-Friderichsen Sendromu):**\n   - Şokta stres hormonu üretimi için adrenal korteks lipidleri boşalır.\n   - **Waterhouse-Friderichsen Sendromu:** Özellikle *Neisseria meningitidis* (Meningokoksemi) sepsisli çocuklarda, masif DİK zemininde her iki sürrenal bezde gelişen **Bilateral Masif Adrenal Hemoraji / Nekroz** tablosudur. Akut adrenal yetmezlik ve saatler içinde ölüm görülür.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Kritik Morfolojik Eşleşmeler:**\n  ▫ ==Şok Akciğeri (ARDS / DAD):== Alveol duvarlarında **pembe Hyalen Membranlar**; en sık septik şokta görülür.\n  ▫ ==Waterhouse-Friderichsen Sendromu:== Meningokoksemide **Bilateral Adrenal Kanama ve Nekroz**.\n  ▫ Karaciğerde şok morfolojisi: Santrilobüler nekroz (Zon 3 nekrozu).\n  ▫ Midede şok morfolojisi: Akut stres erozyonları ve ülserleri (Curling ülseri).",
+          "🔵 ÇIKMIŞ SORU:\n▸ **TUS & Komite Soruları:**\n  ▫ *Meningokok sepsisi geçiren çocukta bilateral adrenal bezlerde masif hemoraji ve akut sürrenal yetmezlikle seyreden ölümcül sendrom nedir?* → **Waterhouse-Friderichsen Sendromu**."
+        ],
+        "flashcards": [
+          {
+            "question": "Şok akciğerinin (ARDS / Diffüz Alveoler Hasar) histopatolojik belirteci nedir ve en sık hangi şokta görülür?",
+            "answer": "Alveol lümenini döşeyen pembe fibrinöz Hyalen Membranlardır; en sık Septik Şokta görülür."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q23",
+          "question": "Yüksek ateş, peteşiyal döküntüler ve meningeal irritasyon bulgularıyla acile getirilen 5 yaşındaki çocukta saatler içinde fulminan septik şok gelişiyor ve hasta kaybediliyor. Otopside her iki böbrek üstü bezinin (adrenallerin) tamamen kanamalı nekrozla harap olduğu saptanıyor. Bu klinik ve patolojik antite aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Cushing sendromu",
+            "B) Waterhouse-Friderichsen sendromu",
+            "C) Conn sendromu",
+            "D) Sheehan sendromu",
+            "E) Goodpasture sendromu"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Meningokoksemiye bağlı fulminan sepsiste bilateral sürrenal bezlerin masif hemorajik nekrozu ve akut adrenal yetmezlik gelişmesi Waterhouse-Friderichsen sendromu olarak adlandırılır."
+        }
+      },
+      {
+        "id": "slide-24",
+        "title": "Şokun Klinik Seyri, Çoklu Organ Yetmezliği (MODS) ve Mortalite",
+        "subtitle": "Klinik yönetim prensipleri, organ hasar sırası ve patoloji-klinik entegrasyonu",
+        "content": "**ŞOKUN KLİNİK SEYRİ VE ÇOKLU ORGAN YETMEZLİĞİ (MODS)**\nŞok tablosunda mortalite ve prognoz, altta yatan nedene, şokun süresine ve hastanın rezervine doğrudan bağlıdır.\n\n1. **Klinik Bulguların Karşılaştırmalı Özeti:**\n   - **Hipovolemik ve Kardiyojenik Şok:** Hipotansiyon, zayıf ve hızlı nabız, takipne, oligüri, **soğuk, soluk, nemli cilt**.\n   - **Septik Şok (Erken Evre):** Hipotansiyon, taşikardi, **sıcak, pembe, kuru cilt**.\n   - **Nörojenik Şok:** Hipotansiyon, **bradikardi**, sıcak cilt.\n\n2. **Çoklu Organ Yetmezliği Sendromu (MODS):**\n   - Sistemik hipoperfüzyon ve sitokin hasarı devam ederse organlar domino taşları gibi sırayla iflas eder:\n     1. **Akciğerler (ARDS):** Oksijenizasyon çöker.\n     2. **Böbrekler (ATN):** Anüri, üre/kreatinin artışı, hiperkalemi.\n     3. **Karaciğer:** Santrilobüler nekroz, sarılık, koagülopati.\n     4. **Gastrointestinal Sistem:** Mukoza iskemisi, bakteriyel translokasyon.\n     5. **Kalp:** Asidoz ve hiperkalemi ile kardiyak arrest.\n\n3. **Mortalite Oranları:**\n   - Gençlerde hipovolemik şok uygun sıvı/kan replasmanı ile **%85-90 yaşatılabilir**.\n   - Septik şokta mortalite **%40-60**; kardiyojenik şokta ise **%70-80** seviyesindedir.",
+        "spots": [
+          "🔴 ÖNEMLİ:\n▸ **Klinik Özet:**\n  ▫ Hipovolemik ve Kardiyojenik Şok = **Soğuk Şok** (Periferik vazokonstriksiyon).\n  ▫ Erken Septik Şok ve Nörojenik Şok = **Sıcak Şok** (Periferik vazodilatasyon).\n  ▫ Nörojenik Şokun İmzası = **Bradikardi**.\n  ▫ Tedavide altın kural: İrreversibl evreye girmeden önce erken volüm ve perfüzyon restorasyonudur.",
+          "🔵 ÇIKMIŞ SORU:\n▸ **Komite & TUS Sorusu:**\n  ▫ *Aşağıdaki şok tiplerinin hangisinde erken dönemde periferik vazodilatasyona bağlı olarak cildin sıcak ve pembe olması beklenir?* → **Septik Şok (Erken 'Sıcak Şok' evresi)**."
+        ],
+        "flashcards": [
+          {
+            "question": "Hangi şok tiplerinde cilt soğuk ve soluk, hangilerinde ise erken dönemde sıcak ve pembedir?",
+            "answer": "Kardiyojenik ve Hipovolemik şokta cilt soğuk-soluktur; erken Septik şok ve Nörojenik şokta ise sıcak ve pembedir."
+          }
+        ],
+        "practiceQuestion": {
+          "id": "tromboz-infarkt-q24",
+          "question": "Farklı şok tiplerinin klinik özellikleri karşılaştırıldığında, erken dönemde periferik vasküler direncin düşmesine bağlı olarak hastanın cildinin sıcak ve pembe olması (sıcak şok) en karakteristik olarak hangi şok tipinde gözlenir?",
+          "options": [
+            "A) Masif kanamaya bağlı hipovolemik şok",
+            "B) Geniş miyokard enfarktüsüne bağlı kardiyojenik şok",
+            "C) Gram-negatif bakteriyemiye bağlı erken septik şok",
+            "D) Kardiyak tamponada bağlı obstrüktif şok",
+            "E) Ağır dehidratasyona bağlı hipovolemik şok"
+          ],
+          "correctAnswer": "C",
+          "explanation": "Erken septik şokta NO salınımına bağlı sistemik vazodilatasyon geliştiğinden diğer şokların aksine cilt sıcak ve pembedir (sıcak şok); hipovolemik ve kardiyojenik şokta ise vazokonstriksiyon nedeniyle cilt soğuk ve soluktur."
+        }
+      }
+    ]
   }
 ]
