@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import {
   X,
   Volume2,
@@ -157,17 +158,40 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       }}
     >
       {children}
-      <FloatingGlossaryToast />
-      <MedicalGlossaryDrawer />
+      <GlossaryLayer />
     </GlossaryContext.Provider>
   );
+};
+
+/**
+ * In native fullscreen the browser only paints the fullscreen element's subtree, so the
+ * popover and drawer must live inside it; otherwise they open invisibly.
+ */
+const GlossaryLayer: React.FC = () => {
+  const [fsHost, setFsHost] = useState<Element | null>(() => (typeof document !== 'undefined' ? document.fullscreenElement : null));
+  useEffect(() => {
+    const update = () => setFsHost(document.fullscreenElement);
+    document.addEventListener('fullscreenchange', update);
+    document.addEventListener('webkitfullscreenchange', update);
+    return () => {
+      document.removeEventListener('fullscreenchange', update);
+      document.removeEventListener('webkitfullscreenchange', update);
+    };
+  }, []);
+  const layer = (
+    <>
+      <FloatingGlossaryToast />
+      <MedicalGlossaryDrawer />
+    </>
+  );
+  return fsHost ? createPortal(layer, fsHost) : layer;
 };
 
 // ---------------------------------------------------------------------------
 // Floating Popover / Toast Component (Supports Touch Tap + Desktop Hover)
 // ---------------------------------------------------------------------------
 export const FloatingGlossaryToast: React.FC = () => {
-  const { activeState, hideTerm, setIsDrawerOpen } = useGlossary();
+  const { activeState, hideTerm, showTerm, setIsDrawerOpen } = useGlossary();
   const [isSpeaking, setIsSpeaking] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -267,10 +291,8 @@ export const FloatingGlossaryToast: React.FC = () => {
       ref={cardRef}
       style={style}
       onMouseEnter={() => {
-        // Prevent hiding when hovering directly over the tooltip card
-        if (source === 'hover') {
-          // keep open
-        }
+        // Moving from the word onto the card cancels the pending hover-hide
+        if (source === 'hover') showTerm(item, triggerRect, 'hover');
       }}
       onMouseLeave={() => {
         if (source === 'hover') hideTerm(false);
@@ -381,21 +403,32 @@ export const GlossaryTermSpan: React.FC<{
     showTerm(item, rect, 'tap');
   };
 
-  const handleMouseEnter = () => {
+  // Touch screens fire emulated mouseenter/leave around a tap; only a real mouse should hover
+  const handlePointerEnter = (e: React.PointerEvent) => {
+    if (e.pointerType !== 'mouse') return;
     const rect = spanRef.current?.getBoundingClientRect();
     showTerm(item, rect, 'hover');
   };
 
-  const handleMouseLeave = () => {
+  const handlePointerLeave = (e: React.PointerEvent) => {
+    if (e.pointerType !== 'mouse') return;
     hideTerm(false);
   };
 
   return (
     <span
       ref={spanRef}
+      role="button"
+      tabIndex={0}
       onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showTerm(item, spanRef.current?.getBoundingClientRect(), 'tap');
+        }
+      }}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
       className="cursor-pointer font-medium text-teal-800 dark:text-teal-200 underline decoration-dashed decoration-teal-400/80 underline-offset-4 hover:bg-teal-500/10 dark:hover:bg-teal-400/20 px-0.5 rounded transition-all duration-150"
       title={`${item.term} (${item.category}) - Dokunun veya üzerine gelin`}
     >
