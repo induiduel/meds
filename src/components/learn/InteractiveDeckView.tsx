@@ -2228,20 +2228,10 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
         }
       }
     } catch {
-      /* offline: fall through to the slide-based answer */
+      /* network failure: reported below */
     }
-    toast.error('AI şu an yanıt veremiyor', 'Sunucuya ulaşılamadı; bu slaytın kendi notlarından bir özet gösteriyorum.');
-    const hl = slide.professorAudioHighlight;
-    setAnswer(
-      [
-        `Sunucuya ulaşılamadı; bu slaytın kendi notlarından bir özet:`,
-        hl ? `Hoca ${hl.timestamp} dakikasında: "${hl.quote}"` : '',
-        slide.synthesisNarrative ? `Sentez: ${slide.synthesisNarrative}` : '',
-        ...(slide.spotPearls || []).map((p) => `• ${p}`),
-      ]
-        .filter(Boolean)
-        .join('\n\n')
-    );
+    // No fallback summary: just tell the student it failed and let them retry
+    toast.error('AI yanıt veremedi', 'Sunucuya ulaşılamadı. Biraz sonra tekrar dene.', { label: 'Tekrar dene', onClick: () => ask(text) });
     setLoading(false);
   };
 
