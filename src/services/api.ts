@@ -6,6 +6,12 @@ import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL } from './auth';
 import { systemHealthMonitor } from './systemHealthMonitor';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
+import {
+  clusterDraftsForCommittee,
+  mergeDrafts,
+  findRealtimeMatchingDraft,
+  ClusterAnalysisSummary
+} from './draftClusteringService';
 
 const STORAGE_KEY = 'medsoru_db_data_v1';
 const API_BASE_URL_KEY = 'medsoru_custom_api_url';
@@ -784,8 +790,69 @@ export const ApiService = {
       : null;
 
     if (isUnassigned) {
+      // Akıllı Taslak Eşleme: Var olan sorular arasında yüksek uyum (%82+) var mı kontrol et
+      const realtimeMatch = findRealtimeMatchingDraft(
+        {
+          committeeId: data.committeeId,
+          discipline: data.discipline,
+          topic: data.topic,
+          text: data.fragmentText || '',
+          options: data.options,
+        },
+        db.questions
+      );
+
+      if (realtimeMatch.matchFound && realtimeMatch.matchedQuestion && realtimeMatch.compatibility?.recommendation === 'auto_merge') {
+        // Yüksek uyumlu soruya doğrudan katkı yap (yeni mükerrer taslak oluşturma)
+        const existing = realtimeMatch.matchedQuestion;
+        if (initialFragment) {
+          existing.fragments = existing.fragments || [];
+          existing.fragments.push(initialFragment);
+        }
+        if (data.options) {
+          existing.options = existing.options || [];
+          data.options.forEach((o) => {
+            if (!o.text || !o.text.trim()) return;
+            existing.fragments.push({
+              id: `f-opt-${Date.now()}-${o.key}`,
+              author: data.author || 'Anonim',
+              authorUid: data.authorUid,
+              authorStudentNumber: data.authorStudentNumber,
+              text: `${o.key}) ${o.text.trim()}`,
+              type: 'option',
+              timestamp: new Date().toISOString(),
+              upvotes: 1,
+            });
+            const exOpt = existing.options.find((opt) => opt.key === o.key);
+            if (exOpt) {
+              exOpt.upvotes = (exOpt.upvotes || 1) + 1;
+            } else {
+              existing.options.push({
+                key: o.key,
+                text: o.text.trim(),
+                suggestedBy: data.author,
+                suggestedByUid: data.authorUid,
+                upvotes: 1,
+              });
+            }
+          });
+          existing.options.sort((a, b) => a.key.localeCompare(b.key));
+        }
+        existing.status = 'gathering';
+        existing.updatedAt = new Date().toISOString();
+        saveLocalDb(db);
+        try {
+          await multiDbManager.saveQuestion(existing);
+        } catch (e) {}
+        return existing;
+      }
+
       // Unassigned question pool
       const newId = `q-${data.committeeId}-unassigned-${Date.now()}`;
+      const candidateNote = realtimeMatch.matchFound && realtimeMatch.matchedQuestion
+        ? `Olası Taslak Eşleşmesi: Soru #${realtimeMatch.matchedQuestion.questionNumber || 'Belirsiz'} ile %${realtimeMatch.compatibility?.score} benzerlik.`
+        : undefined;
+
       targetQuestion = {
         id: newId,
         committeeId: data.committeeId,
@@ -807,7 +874,8 @@ export const ApiService = {
               }))
           : [],
         claimedAnswer: data.claimedAnswer,
-        tags: [data.discipline || 'Kurul', 'numarasız-hatırlanan'],
+        tags: [data.discipline || 'Kurul', 'numarasız-hatırlanan', ...(candidateNote ? ['taslak-eslesme-adayi'] : [])],
+        placementNotes: candidateNote,
         contributedByUid: data.authorUid,
         contributedByName: data.author,
         contributedByStudentNumber: data.authorStudentNumber,
@@ -1790,6 +1858,87 @@ JSON FORMATI:
       } catch (e) {}
       return unassigned;
     }
+  },
+
+  // Akıllı Taslak Kümeleme ve Birleştirme Metotları
+  async getCommitteeDraftClusters(committeeId: string): Promise<ClusterAnalysisSummary> {
+    const db = getLocalDb();
+    return clusterDraftsForCommittee(db.questions, committeeId);
+  },
+
+  async mergeDraftCluster(
+    adminEmail: string,
+    anchorId: string,
+    satelliteIds: string[],
+    adminName: string = 'Yönetici'
+  ): Promise<QuestionItem> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz işlem: Taslak birleştirme yetkisi yalnızca sistem yöneticisine aittir.');
+    }
+    const db = getLocalDb();
+    const anchor = db.questions.find((q) => q.id === anchorId);
+    if (!anchor) throw new Error('Çapa soru bulunamadı.');
+
+    const satellites = db.questions.filter((q) => satelliteIds.includes(q.id));
+    if (satellites.length === 0) throw new Error('Birleştirilecek uydu taslak bulunamadı.');
+
+    const { consolidated, mergedIds } = mergeDrafts(anchor, satellites, {
+      name: adminName,
+      email: adminEmail,
+    });
+
+    // Remove merged satellites from local database
+    const mergedSet = new Set(mergedIds);
+    db.questions = db.questions.filter((q) => !mergedSet.has(q.id));
+
+    // Update anchor with consolidated version
+    const anchorIndex = db.questions.findIndex((q) => q.id === anchorId);
+    if (anchorIndex !== -1) {
+      db.questions[anchorIndex] = consolidated;
+    } else {
+      db.questions.push(consolidated);
+    }
+
+    saveLocalDb(db);
+
+    // Cloud DB sync
+    try {
+      await multiDbManager.saveQuestion(consolidated);
+      for (const satId of mergedIds) {
+        await FirestoreDbService.deleteQuestion(satId);
+      }
+    } catch (e) {
+      console.warn('Draft merge cloud sync warning:', e);
+    }
+
+    return consolidated;
+  },
+
+  async autoMergeHighConfidenceClusters(
+    adminEmail: string,
+    committeeId: string,
+    adminName: string = 'Akıllı Konsolidasyon'
+  ): Promise<{ mergedClustersCount: number; savedDuplicatesCount: number }> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz işlem: Toplu taslak birleştirme yetkisi yalnızca sistem yöneticisine aittir.');
+    }
+    const db = getLocalDb();
+    const summary = clusterDraftsForCommittee(db.questions, committeeId);
+    const readyClusters = summary.clusters.filter((c) => c.status === 'ready_to_merge');
+
+    let mergedClustersCount = 0;
+    let savedDuplicatesCount = 0;
+
+    for (const cluster of readyClusters) {
+      const satelliteIds = cluster.satelliteDrafts.map((s) => s.question.id);
+      if (satelliteIds.length > 0) {
+        await this.mergeDraftCluster(adminEmail, cluster.anchorQuestion.id, satelliteIds, adminName);
+        mergedClustersCount++;
+        savedDuplicatesCount += satelliteIds.length;
+      }
+    }
+
+    return { mergedClustersCount, savedDuplicatesCount };
   },
 
   async adminExportDb(): Promise<LocalDatabase> {

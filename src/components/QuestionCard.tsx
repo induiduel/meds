@@ -160,9 +160,11 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     if (!fragmentText.trim()) return;
     setIsSubmittingFragment(true);
     try {
-      await onAddFragment(question.id, fragmentText, fragmentAuthor || 'Anonim Tıbbiyeli', fragmentType);
+      await onAddFragment(question.id, fragmentText.trim(), fragmentAuthor || 'Anonim Tıbbiyeli', fragmentType);
       setFragmentText('');
       setShowAddFragment(false);
+    } catch (err) {
+      console.error('Fragment submit error:', err);
     } finally {
       setIsSubmittingFragment(false);
     }
@@ -173,9 +175,11 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     if (!optionText.trim()) return;
     setIsSubmittingOption(true);
     try {
-      await onAddOption(question.id, optionKey, optionText, optionAuthor || 'Anonim Tıbbiyeli');
+      await onAddOption(question.id, optionKey, optionText.trim(), optionAuthor || 'Anonim Tıbbiyeli');
       setOptionText('');
       setShowAddOption(false);
+    } catch (err) {
+      console.error('Option submit error:', err);
     } finally {
       setIsSubmittingOption(false);
     }

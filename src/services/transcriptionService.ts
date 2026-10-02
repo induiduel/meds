@@ -51,19 +51,19 @@ function determineDisciplineAndCommittee(fileName: string, title: string): { dis
   let discipline = 'Tıbbi Patoloji';
   let committeeId = 'donem3-kurul1';
 
-  if (text.includes('halk') || text.includes('salgin') || text.includes('ana cocuk')) {
+  if (text.includes('halk') || text.includes('salgin') || text.includes('ana cocuk') || text.includes('ana-cocuk')) {
     discipline = 'Halk Sağlığı';
     committeeId = 'donem3-kurul1';
-  } else if (text.includes('genetik') || text.includes('dismorfoloji') || text.includes('kromozom')) {
+  } else if (text.includes('genetik') || text.includes('dismorfoloji') || text.includes('kromozom') || text.includes('prenatal') || text.includes('anomali')) {
     discipline = 'Tıbbi Genetik';
     committeeId = 'donem3-kurul1';
-  } else if (text.includes('izolasyon') || text.includes('enfeksiyon') || text.includes('cinsel yolla')) {
+  } else if (text.includes('izolasyon') || text.includes('enfeksiyon') || text.includes('genital enf') || text.includes('cinsel yolla')) {
     discipline = 'Enfeksiyon Hastalıkları';
     committeeId = 'donem3-kurul1';
-  } else if (text.includes('fmf') || text.includes('akdeniz atesi') || text.includes('uriner') || text.includes('urolitiyazis')) {
-    discipline = 'İç Hastalıkları / Üroloji';
+  } else if (text.includes('uroloji') || text.includes('üroloji') || text.includes('uriner') || text.includes('urolitiyazis') || text.includes('obstruksiyon') || text.includes('tas hastaliklari')) {
+    discipline = 'Üroloji';
     committeeId = 'donem3-kurul1';
-  } else if (text.includes('hucre') || text.includes('hasar') || text.includes('nekroz') || text.includes('adaptasyon')) {
+  } else if (text.includes('hucre') || text.includes('hasar') || text.includes('nekroz') || text.includes('adaptasyon') || text.includes('patoloji') || text.includes('odem') || text.includes('enflamasyon') || text.includes('kalsifikasyon') || text.includes('onarim')) {
     discipline = 'Tıbbi Patoloji';
     committeeId = 'donem3-kurul1';
   }
@@ -95,7 +95,11 @@ export function getAllTranscriptionsMeta(): TranscriptionMeta[] {
       ? firstLineMatch[1].replace(/^[🩺\s]+/, '').trim()
       : f.replace(/_Transkript\.md|_KUSURSUZ\.md|\.md/g, '').replace(/_/g, ' ');
 
-    const { discipline, committeeId } = determineDisciplineAndCommittee(f, title);
+    const discMatch = content.match(/>\s*\*\*Disiplin:\*\*\s*(.+)/i);
+    const parsedDiscipline = discMatch ? discMatch[1].replace(/\[.*?\]/g, '').trim() : '';
+    const determined = determineDisciplineAndCommittee(f, title);
+    const discipline = parsedDiscipline || determined.discipline;
+    const committeeId = determined.committeeId;
     const id = f.replace(/\.md$/, '').toLowerCase();
     const wordCount = content.split(/\s+/).filter(Boolean).length;
     const charCount = content.length;

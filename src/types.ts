@@ -122,6 +122,8 @@ export interface QuestionItem {
   upvotes?: number;
   likedBy?: string[];
   sourceFile?: string;
+  sourceNote?: string;
+  correctAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
   isAmbiguous?: boolean;
   comments?: Array<{ id?: string; author: string; text: string; createdAt?: string }>;
   reports?: Array<{ id?: string; reason: string; details?: string; reportedBy?: string; reportedAt?: string }>;
@@ -193,3 +195,11 @@ export interface Committee {
   targetQuestions?: number;
   color?: string;
 }
+
+export type {
+  DraftAnchorScore,
+  DraftCompatibilityResult,
+  DraftCluster,
+  ClusterAnalysisSummary,
+  OptionAlignment
+} from './services/draftClusteringService';

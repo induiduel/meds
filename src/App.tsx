@@ -182,6 +182,10 @@ export default function App() {
   const [selectedQuestionForHistory, setSelectedQuestionForHistory] = useState<QuestionItem | null>(null);
   const [optimizeQuestion, setOptimizeQuestion] = useState<QuestionItem | null>(null);
 
+  // Selected Learn deck and slide navigation state
+  const [selectedLearnDeckId, setSelectedLearnDeckId] = useState<string | undefined>(undefined);
+  const [selectedLearnSlideNumber, setSelectedLearnSlideNumber] = useState<number | undefined>(undefined);
+
   // Celebration Toast
   const [congratsToast, setCongratsToast] = useState<string | null>(null);
 
@@ -1008,6 +1012,8 @@ export default function App() {
         {activeTab === 'learn' && (
           <Suspense fallback={<ViewFallback />}>
             <InteractiveDeckView
+              initialDeckId={selectedLearnDeckId}
+              initialSlideNumber={selectedLearnSlideNumber}
               onOpenPdfModal={() => setIsPdfModalOpen(true)}
               onSelectCommittee={(id) => setSelectedCommitteeId(id)}
             />
@@ -1187,6 +1193,11 @@ export default function App() {
                 setActiveTab('notes');
               }}
               onUpdateQuestionReference={handleUpdateQuestionReference}
+              onNavigateToLearn={(deckId, slideNumber) => {
+                setSelectedLearnDeckId(deckId);
+                setSelectedLearnSlideNumber(slideNumber);
+                setActiveTab('learn');
+              }}
             />
           </Suspense>
         )}
@@ -1310,6 +1321,7 @@ export default function App() {
             committees={committees}
             selectedCommitteeId={selectedCommitteeId}
             defaultQuestionNumber={contributeDefaultNumber}
+            questions={questions}
             onAddQuestionContribution={handleAddQuestionContribution}
           />
         </Suspense>

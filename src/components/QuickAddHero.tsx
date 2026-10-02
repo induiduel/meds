@@ -231,8 +231,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!committee) return;
     setFormError(null);
+
+    const targetCommittee = committee || (committees && committees.length > 0 ? committees[0] : undefined);
+    if (!targetCommittee) {
+      setFormError('Lütfen önce bir kurul seçiniz.');
+      return;
+    }
 
     const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
     if (!text.trim() && optionsList.length === 0 && !claimedAnswer) {
@@ -248,7 +253,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     setIsSubmitting(true);
     try {
       await onSubmitContribution({
-        committeeId: committee.id,
+        committeeId: targetCommittee.id,
         questionNumber: hasNumber ? num : undefined,
         isUnknownNumber: !hasNumber,
         discipline,
@@ -266,8 +271,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       setQuestionNumber('');
       setSuccessMessage(
         hasNumber
-          ? `Soru ${num} için eklediğin parça havuza kaydedildi.`
-          : 'Parçan havuza kaydedildi. Numarası bilinmeyen sorular benzerlerine göre yerleştirilir.'
+          ? `Soru ${num} için eklediğin taslak parça havuza kaydedildi.`
+          : 'Taslak parçan havuza kaydedildi. Numarası bilinmeyen sorular benzerlerine göre yerleştirilir.'
       );
       setTimeout(() => setSuccessMessage(null), 7000);
     } catch (err: any) {
@@ -452,15 +457,20 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               </label>
               <button
                 type="submit"
-                disabled={isSubmitting || !committee}
+                disabled={isSubmitting}
                 className="h-11 px-[22px] rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 w-full sm:w-auto"
+                title="Taslak Olarak Kaydet"
+                aria-label="Taslak Olarak Kaydet"
               >
-                {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
+                {isSubmitting ? 'Kaydediliyor…' : 'Taslak Olarak Kaydet'}
                 <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
               </button>
             </div>
             {formError ? (
-              <p role="alert" className="m-0 text-[13px] text-bad-text">{formError}</p>
+              <div role="alert" className="flex items-center gap-2 p-3 rounded-lg bg-bad-soft text-bad-text text-[13px] font-semibold border border-bad-tint animate-fadeIn">
+                <AlertCircle className="w-4 h-4 shrink-0 text-bad" />
+                <span>{formError}</span>
+              </div>
             ) : (
               <p className="hidden sm:block m-0 text-[13px] text-ink-3">Benzer bir parça zaten varsa otomatik olarak o soruya bağlanır. İsim gerekmez.</p>
             )}

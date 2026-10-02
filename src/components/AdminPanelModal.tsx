@@ -43,10 +43,12 @@ import {
   Library,
   ChevronLeft,
   ChevronRight,
+  GitMerge,
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AdminEditQuestionModal } from './AdminEditQuestionModal';
 import { AdminPastExamImporterModal } from './AdminPastExamImporterModal';
+import { DraftDeduplicationModal } from './DraftDeduplicationModal';
 import { AdminScriptsTab } from './AdminScriptsTab';
 import { AdminDriveSyncSettings } from './AdminDriveSyncSettings';
 import { InfoPopover } from './InfoPopover';
@@ -96,6 +98,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [activeTab, setActiveTab] = useState<'questions' | 'scripts' | 'automations' | 'database' | 'users'>('questions');
   const [editingQuestion, setEditingQuestion] = useState<QuestionItem | null>(null);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
+  const [isDraftDeduplicationOpen, setIsDraftDeduplicationOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   // Question table filters + paging
   const [qStatus, setQStatus] = useState<'all' | 'completed' | 'draft' | 'empty'>('all');
@@ -1144,9 +1147,18 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               <p className="m-0 text-[13px] text-ink-2 truncate">{current.hint}</p>
             </div>
             {activeTab === 'questions' && (
-              <button type="button" onClick={() => setIsPastExamImporterOpen(true)} className="hidden sm:inline-flex h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold items-center gap-2 cursor-pointer">
-                <Upload className="w-4 h-4" /> Çıkmış soru yükle
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsDraftDeduplicationOpen(true)}
+                  className="hidden sm:inline-flex h-10 px-3.5 rounded-[10px] bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white text-[14px] font-semibold items-center gap-2 cursor-pointer shadow-sm"
+                >
+                  <GitMerge className="w-4 h-4" /> Taslakları Kümele & Birleştir
+                </button>
+                <button type="button" onClick={() => setIsPastExamImporterOpen(true)} className="hidden sm:inline-flex h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold items-center gap-2 cursor-pointer">
+                  <Upload className="w-4 h-4" /> Çıkmış soru yükle
+                </button>
+              </div>
             )}
             <button
               type="button"
@@ -1238,9 +1250,18 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   ))}
                 </select>
               </div>
-              <button type="button" onClick={() => setIsPastExamImporterOpen(true)} className="sm:hidden h-10 px-3.5 rounded-[10px] bg-accent text-white text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer">
-                <Upload className="w-4 h-4" /> Çıkmış soru yükle
-              </button>
+              <div className="sm:hidden flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsDraftDeduplicationOpen(true)}
+                  className="flex-1 h-10 px-3 rounded-[10px] bg-indigo-600 text-white text-[13px] font-semibold inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+                >
+                  <GitMerge className="w-4 h-4" /> Taslakları Birleştir
+                </button>
+                <button type="button" onClick={() => setIsPastExamImporterOpen(true)} className="h-10 px-3.5 rounded-[10px] bg-accent text-white text-[13px] font-semibold inline-flex items-center justify-center gap-1.5 cursor-pointer">
+                  <Upload className="w-4 h-4" /> Çıkmış yükle
+                </button>
+              </div>
             </div>
 
             <div className="rounded-xl border border-line overflow-hidden">
@@ -3053,6 +3074,16 @@ ALTER TABLE public.system_status REPLICA IDENTITY FULL;`}
           await onRefreshData();
           setActionMessage('Çıkmış sorular başarıyla veritabanına aktarıldı ve soru havuzuna eklendi.');
         }}
+      />
+
+      {/* Akıllı Taslak Birleştirme & Kümeleme Modal */}
+      <DraftDeduplicationModal
+        isOpen={isDraftDeduplicationOpen}
+        onClose={() => setIsDraftDeduplicationOpen(false)}
+        committee={committees.find((c) => c.id === selectedCommitteeId) || null}
+        questions={questions}
+        currentUser={{ email: adminEmail } as any}
+        onRefreshData={onRefreshData}
       />
     </div>
   );

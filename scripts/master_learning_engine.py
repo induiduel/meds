@@ -253,7 +253,8 @@ def main():
     parser.add_argument("--batch1", action="store_true", help="Build Batch 1: Üriner Obstrüksiyon")
     parser.add_argument("--batch2", action="store_true", help="Build Batch 2: Ürolitiyazis Patofizyolojisi")
     parser.add_argument("--batch3", action="store_true", help="Build Batch 3: Üriner Sistem Enfeksiyonları")
-    parser.add_argument("--build-all-batches", action="store_true", help="Build all ready batches (Batch 1, 2, 3)")
+    parser.add_argument("--batch4", action="store_true", help="Build Batch 4: Akut Enflamasyon (Patoloji)")
+    parser.add_argument("--build-all-batches", action="store_true", help="Build all ready batches (Batch 1, 2, 3, 4)")
     parser.add_argument("--verify", action="store_true", help="Verify all decks against Curriculum Fidelity Rules")
     parser.add_argument("--all", action="store_true", help="Run full pipeline: sync, build, and verify")
 
@@ -286,6 +287,12 @@ def main():
         if os.path.exists(b3_script):
             print("\n🚀 [Batch 3] Üriner Sistem Enfeksiyonları inşa ediliyor...")
             subprocess.run([sys.executable, b3_script], cwd=WORKSPACE_ROOT)
+
+    if args.batch4 or args.build_all_batches or args.all:
+        b4_script = os.path.join(WORKSPACE_ROOT, "scripts", "build_batch4_deck.py")
+        if os.path.exists(b4_script):
+            print("\n🚀 [Batch 4] Akut Enflamasyon (Patoloji) inşa ediliyor...")
+            subprocess.run([sys.executable, b4_script], cwd=WORKSPACE_ROOT)
 
     if args.verify or args.all:
         verify_learning_decks()

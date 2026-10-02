@@ -39,17 +39,30 @@
     "overview": "Üriner sistem enfeksiyonlarının (sistit, piyelonefrit, komplike İYE, asemptomatik bakteriüri) epidemiyolojisi, cinsiyet-yaş dinamikleri (neonatal erkek üstünlüğü); asendan (%99) ve hematojen patogenez; konak savunması (uromodulin, GAG, miksiyon); virülans faktörleri (Tip 1 vs P fimbriya); mikrobiyolojik etkenler (UPEC, S. saprophyticus, Proteus, Pseudomonas); idrar toplama (suprapubik altın standart); dipstik TİT (lökosit esteraz, nitrit ve 4 saat kuralı); mikroskopi (piyüri, lökosit silendirleri, steril piyüri); Kass anlamlı bakteriüri eşikleri; ASB'nin 2 mutlak tedavi endikasyonu (gebelik ve invaziv ürolojik girişim); ampirik tedaviler (fosfomisin, nitrofurantoin, florokinolon kısıtlaması) ve OM-89 bağışıklama profilaksisi."
   },
   {
-    "id": "learn-fmf-patofizyolojisi",
-    "title": "Ailesel Akdeniz Ateşi (FMF) ve Patofizyolojisi",
-    "shortTitle": "FMF Patofizyolojisi",
+    "id": "deck-acute-inflammation-pathology",
+    "title": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "shortTitle": "Akut Enflamasyon",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 3 - Sindirim ve Dolaşım Sistemi Patolojisi",
-    "instructor": "Uzm. Dr. Murat Ayberk Aytemiz",
+    "committee": "Kurul 1",
+    "instructor": "Prof. Dr. Hikmet Keleş",
+    "totalSlides": 22,
+    "matchedQuestionsCount": 4,
+    "totalFlashcardsCount": 44,
+    "themeColor": "#059669",
+    "overview": "Damarlı canlı dokuların enfeksiyon ve doku hasarına karşı verdiği hızlı, lokal ve dinamik savunma yanıtı: Kardinal belirtiler, 5R basamağı, eksüda/transüda ayrımı, mikrovasküler geçirgenlik, lökosit alımı (marjinasyon, yuvarlanma, sıkı adezyon, diapedez, kemotaksi), selektinler, integrinler, fagositoz, ROS/MPO/NO mikrobisidal mekanizmaları, genetik eksiklikler (LAD-1, LAD-2, CGD, Chédiak-Higashi), NETler ve morfolojik kalıplar (seröz, fibrinöz, pürülan, ülser)."
+  },
+  {
+    "id": "learn-odem-hiperemi-konjesyon",
+    "title": "Ödem, Hiperemi, Konjesyon ve Kanama",
+    "shortTitle": "Ödem ve Hemodinami",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu (TIP 310)",
+    "instructor": "Prof. Dr. Hikmet Keleş",
     "totalSlides": 2,
     "matchedQuestionsCount": 6,
     "totalFlashcardsCount": 4,
     "themeColor": "indigo",
-    "overview": "Bu derste, hemodinamik dengenin bozulması, ödem patofizyolojisi, konjesyon, hiperemi, iskemi ve enfarktüs gibi temel patolojik süreçler ele alınmıştır. Ayrıca sistemik dolaşım bozukluklarının doku düzeyindeki morfolojik yansımaları, laboratuvar bulguları ve ilgili genetik geçişli hastalıklara (örneğin Ailesel Akdeniz Ateşi - FMF) değinilmiştir."
+    "overview": "Bu derste; kapiller-interstisyel sıvı dengesi (Starling kuvvetleri), ödem oluşum mekanizmaları, transüda-eksüda ayrımı, aktif hiperemi vs. pasif konjesyon, sol kalp yetmezliğinde akciğer ödemi ve kalp yetmezliği hücreleri (hemosiderin yüklü makrofajlar), sağ kalp yetmezliğinde kronik karaciğer konjesyonu (nutmeg / muskat karaciğer) ve kanama patolojileri ele alınmıştır."
   },
   {
     "id": "learn-ana-cocuk-sagligi",

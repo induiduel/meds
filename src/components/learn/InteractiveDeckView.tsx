@@ -103,6 +103,7 @@ export interface SlideItem {
   timeWindow?: string;
   badge: string;
   badgeColor?: string;
+  discipline?: string;
   professorAudioHighlight?: ProfessorAudioHighlight;
   synthesisNarrative?: string;
   flashcards?: SlideFlashcard[];
@@ -143,6 +144,7 @@ export interface InteractiveDeck {
 
 interface InteractiveDeckViewProps {
   initialDeckId?: string;
+  initialSlideNumber?: number;
   onOpenPdfModal?: () => void;
   onSelectCommittee?: (committeeId: string) => void;
 }
@@ -200,11 +202,11 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
   const lines = text.split('\n');
 
   return (
-    <div className="flex flex-col gap-2.5">
+    <div className="flex flex-col gap-2 sm:gap-2.5">
       {lines.map((rawLine, idx) => {
         const line = rawLine.trim();
         if (!line) {
-          return <div key={idx} className="h-1.5" />;
+          return <div key={idx} className="h-1" />;
         }
 
         // Section Heading (### Başlık)
@@ -212,9 +214,9 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           return (
             <h4
               key={idx}
-              className="m-0 pt-3.5 pb-1.5 border-b border-line-soft text-[16.5px] sm:text-[18px] font-bold text-ink flex items-center gap-2"
+              className="m-0 pt-2.5 pb-1 border-b border-line-soft text-[14px] sm:text-[15px] font-bold text-ink flex items-center gap-2"
             >
-              <span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-2xs" />
+              <span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-2xs" />
               <Rich text={line.slice(4)} />
             </h4>
           );
@@ -225,7 +227,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           return (
             <h5
               key={idx}
-              className="m-0 pt-2 text-[14.5px] sm:text-[15.5px] font-bold text-accent flex items-center gap-2"
+              className="m-0 pt-1 text-[12px] sm:text-[12.5px] font-bold uppercase tracking-wider text-accent flex items-center gap-2"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0" />
               <Rich text={line.slice(5)} />
@@ -235,13 +237,15 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
 
         // Callout (> veya 💡 veya ⚠️)
         if (line.startsWith('> ') || line.startsWith('💡 ') || line.startsWith('⚠️ ')) {
-          const content = line.startsWith('> ') ? line.slice(2) : line;
+          // One icon only: take it from the line itself (💡 / ⚠️) and strip it from the text
+          const icon = line.startsWith('⚠️') ? '⚠️' : '💡';
+          const content = (line.startsWith('> ') ? line.slice(2) : line).replace(/^\s*(💡|⚠️)\s*/u, '');
           return (
             <div
               key={idx}
-              className="p-3.5 my-1.5 rounded-xl bg-accent-soft/30 border-l-4 border-accent text-[13.5px] sm:text-[14.5px] text-ink leading-relaxed flex items-start gap-2.5 shadow-2xs"
+              className="p-2.5 sm:p-3 my-1 rounded-xl bg-accent-soft/30 border-l-3 border-accent text-[12px] sm:text-[12.5px] text-ink leading-relaxed flex items-center gap-2.5 shadow-2xs"
             >
-              <span className="text-base select-none shrink-0">💡</span>
+              <span className="text-[14px] select-none shrink-0" aria-hidden="true">{icon}</span>
               <div className="min-w-0 flex-1">
                 <Rich text={content} />
               </div>
@@ -255,11 +259,29 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           return (
             <div
               key={idx}
-              className="flex items-start gap-2 ml-5 my-0.5 text-[12.5px] sm:text-[13.5px] text-ink-3 leading-relaxed"
+              className="flex items-start gap-2 ml-4.5 my-0.5 text-[11.5px] sm:text-[12px] text-ink-3 leading-relaxed"
             >
               <span className="mt-1.5 w-1 h-1 rounded-full bg-ink-4 shrink-0" />
               <div className="min-w-0 flex-1">
                 <Rich text={cleanText} />
+              </div>
+            </div>
+          );
+        }
+
+        // Numbered list item (1. 2. 3.)
+        const numMatch = line.match(/^(\d+)\.\s+(.*)$/);
+        if (numMatch) {
+          return (
+            <div
+              key={idx}
+              className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]"
+            >
+              <span className="shrink-0 w-4.5 h-4.5 rounded-full bg-accent-soft text-accent text-[10.5px] font-bold flex items-center justify-center mt-0.5 border border-accent/20 shadow-2xs">
+                {numMatch[1]}
+              </span>
+              <div className="min-w-0 flex-1">
+                <Rich text={numMatch[2]} />
               </div>
             </div>
           );
@@ -271,7 +293,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           return (
             <div
               key={idx}
-              className="flex items-start gap-2.5 my-1 text-[14px] sm:text-[15px] text-ink-2 leading-[1.65]"
+              className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]"
             >
               <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
               <div className="min-w-0 flex-1">
@@ -281,11 +303,62 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           );
         }
 
+        // Check if paragraph contains semicolon-separated bold points (e.g. "...; **Title**: desc")
+        if (line.includes('; **') || line.includes(': **')) {
+          const parts = line.split(/(?<=[;:])\s+(?=\*\*)/g);
+          if (parts.length > 1) {
+            return (
+              <div key={idx} className="flex flex-col gap-1 my-1">
+                {parts.map((p, pIdx) => {
+                  const cleanP = p.replace(/^;\s*/, '').trim();
+                  if (pIdx === 0 && !cleanP.startsWith('**')) {
+                    return (
+                      <p key={pIdx} className="m-0 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.72] font-normal mb-1">
+                        <Rich text={cleanP} />
+                      </p>
+                    );
+                  }
+                  return (
+                    <div key={pIdx} className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]">
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                      <div className="min-w-0 flex-1">
+                        <Rich text={cleanP} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          }
+        }
+
+        // Check if a long continuous paragraph has multiple distinct sentences (> 120 chars)
+        if (line.length > 120) {
+          const sentences = line.split(/(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ0-9\*\*])/g);
+          if (sentences.length > 1) {
+            return (
+              <div key={idx} className="flex flex-col gap-1 my-1">
+                <p className="m-0 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.72] font-normal mb-1">
+                  <Rich text={sentences[0]} />
+                </p>
+                {sentences.slice(1).map((s, sIdx) => (
+                  <div key={sIdx} className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <Rich text={s} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            );
+          }
+        }
+
         // Regular narrative paragraph
         return (
           <p
             key={idx}
-            className="m-0 text-[14.5px] sm:text-[15.5px] text-ink-2 leading-[1.72] font-normal"
+            className="m-0 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.72] font-normal my-1"
           >
             <Rich text={line} />
           </p>
@@ -374,14 +447,14 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             </span>
           </div>
 
-          <div className="my-2.5 flex-1 flex flex-col justify-center">
-            <h4 className="m-0 text-[15px] sm:text-[16px] font-semibold text-ink leading-snug tracking-[-0.01em] break-words">
+          <div className="my-2 flex-1 flex flex-col justify-center">
+            <h4 className="m-0 text-[13.5px] sm:text-[14.5px] font-semibold text-ink leading-snug tracking-[-0.01em] break-words">
               {card.front}
             </h4>
             {card.hint && (
-              <div className="mt-3">
+              <div className="mt-2.5">
                 {showHint ? (
-                  <p className="m-0 text-[12.5px] text-amber-950 bg-amber-50 border border-amber-200 rounded-xl p-2.5 leading-relaxed shadow-2xs">
+                  <p className="m-0 text-[12px] text-amber-950 bg-amber-50 border border-amber-200 rounded-xl p-2.5 leading-relaxed shadow-2xs">
                     💡 <strong>İpucu:</strong> {card.hint}
                   </p>
                 ) : (
@@ -391,7 +464,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
                       e.stopPropagation();
                       setShowHint(true);
                     }}
-                    className="text-[12px] font-semibold text-accent hover:text-accent-hover hover:underline cursor-pointer inline-flex items-center gap-1"
+                    className="text-[11.5px] font-semibold text-accent hover:text-accent-hover hover:underline cursor-pointer inline-flex items-center gap-1"
                   >
                     <span>💡 İpucunu Göster</span>
                   </button>
@@ -413,7 +486,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           }}
         >
           <div className="flex items-start justify-between gap-2 shrink-0 select-none">
-            <span className="min-w-0 min-h-6 px-2 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-emerald-100 text-emerald-900 uppercase tracking-[0.04em] inline-flex items-start gap-1.5 border border-emerald-300/80">
+            <span className="min-w-0 min-h-6 px-2 py-1 rounded-lg text-[11px] leading-tight font-semibold bg-emerald-100 text-emerald-900 uppercase tracking-[0.04em] inline-flex items-start gap-1.5 border border-emerald-300/80">
               <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-700" />
               <span className="min-w-0">Cevap</span>
             </span>
@@ -422,7 +495,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             </span>
           </div>
 
-          <div className="my-2.5 flex-1 text-[13.5px] sm:text-[14.5px] font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
+          <div className="my-2 flex-1 text-[12.5px] sm:text-[13px] font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
             <Rich text={card.back} />
           </div>
         </div>
@@ -434,12 +507,19 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 // ---------------------------------------------------------------------------
 // Hub (deck catalogue)
 // ---------------------------------------------------------------------------
-export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId }) => {
+export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber }) => {
   const allDecks = useMemo(
     () => ((interactiveDecksData as unknown as InteractiveDeck[]) || []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0),
     []
   );
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
+
+  useEffect(() => {
+    if (initialDeckId) {
+      setDeckId(initialDeckId);
+    }
+  }, [initialDeckId]);
+
   const [query, setQuery] = useState('');
   const [discipline, setDiscipline] = useState('all');
   const [progress, setProgress] = useState<DeckProgress>(readProgress);
@@ -573,7 +653,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       {activeDeck && (
         <DeckPlayer
           deck={activeDeck}
-          startAt={progress[activeDeck.id]?.last ?? 0}
+          startAt={initialSlideNumber != null && initialSlideNumber > 0 ? initialSlideNumber - 1 : (progress[activeDeck.id]?.last ?? 0)}
           onProgress={(index) => {
             setProgress((prev) => {
               const cur = prev[activeDeck.id] || { last: 0, seen: [] };
@@ -1222,17 +1302,17 @@ const SlideCanvas: React.FC<{
           </div>
 
           {/* Büyük Ana Başlık */}
-          <h2 className="m-0 font-display font-extrabold tracking-[-0.03em] leading-[1.12] text-[24px] sm:text-[30px] lg:text-[36px] text-ink">
+          <h2 className="m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-[20px] sm:text-[24px] lg:text-[27px] text-ink">
             {slide.title}
           </h2>
 
           {/* Vurgulu Alt Başlık */}
           {slide.subtitle && (
-            <div className="p-3 sm:p-3.5 rounded-xl bg-gradient-to-r from-accent-soft/40 via-white to-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
-              <span className="text-[16px] shrink-0 select-none">💡</span>
+            <div className="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-accent-soft/30 via-white to-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
+              <span className="text-[14px] shrink-0 select-none mt-0.5">💡</span>
               <div className="flex flex-col gap-0.5 min-w-0">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
-                <p className="m-0 text-[14px] sm:text-[15.5px] font-medium text-ink-2 leading-[1.5]">
+                <span className="text-[10.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
+                <p className="m-0 text-[12.5px] sm:text-[13.5px] font-medium text-ink-2 leading-[1.55]">
                   {slide.subtitle}
                 </p>
               </div>
@@ -1242,33 +1322,33 @@ const SlideCanvas: React.FC<{
 
         {/* 1. Clinical & Exam Critical Pearl */}
         {hl && emph && (
-          <figure className="m-0 rounded-2xl border-2 border-accent/20 bg-gradient-to-r from-accent-soft/30 via-white to-accent-soft/10 p-4 sm:p-5 flex flex-col gap-2 shadow-xs">
+          <figure className="m-0 rounded-2xl border-2 border-accent/20 bg-gradient-to-r from-accent-soft/30 via-white to-accent-soft/10 p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
             <figcaption className="flex items-center gap-2">
               <span
-                className="h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
+                className="h-6 px-2.5 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
                 style={{ background: tone(emph.c).bg, color: tone(emph.c).fg }}
               >
                 <emph.icon className="w-3.5 h-3.5" />
                 {emph.label}
               </span>
-              <span className="text-[12px] font-semibold text-accent uppercase tracking-wider">
+              <span className="text-[11.5px] font-semibold text-accent uppercase tracking-wider">
                 Klinik & Sınav Kritik Vurgusu
               </span>
               <button
                 type="button"
                 onClick={copyQuote}
                 aria-label="Alıntıyı kopyala"
-                className="ml-auto h-7 px-2 rounded-lg flex items-center gap-1 text-[12px] text-ink-2 hover:bg-white border border-transparent hover:border-line cursor-pointer transition-colors"
+                className="ml-auto h-7 px-2 rounded-lg flex items-center gap-1 text-[11.5px] text-ink-2 hover:bg-white border border-transparent hover:border-line cursor-pointer transition-colors"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
                 <span className="hidden sm:inline">{copied ? 'Kopyalandı' : 'Kopyala'}</span>
               </button>
             </figcaption>
-            <blockquote className="m-0 text-[15px] sm:text-[16.5px] font-medium leading-[1.55] text-ink border-l-3 border-accent pl-3.5 italic">
+            <blockquote className="m-0 text-[13.5px] sm:text-[14.5px] font-medium leading-[1.6] text-ink border-l-3 border-accent pl-3.5 italic">
               “{hl.quote}”
             </blockquote>
             {hl.note && (
-              <p className="m-0 text-[13px] text-ink-2 leading-[1.5] bg-white/60 p-2.5 rounded-xl border border-line-soft">
+              <p className="m-0 text-[12px] sm:text-[12.5px] text-ink-2 leading-[1.55] bg-white/60 p-2 sm:p-2.5 rounded-xl border border-line-soft">
                 💡 <strong>Klinik Yaklaşım:</strong> {hl.note}
               </p>
             )}
@@ -1277,18 +1357,20 @@ const SlideCanvas: React.FC<{
 
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
         {slide.synthesisNarrative && (
-          <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-4 sm:p-6 shadow-xs flex flex-col gap-3">
-            <div className="flex items-center justify-between gap-2 border-b border-line pb-3">
+          <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
+            <div className="flex items-center justify-between gap-2 border-b border-line pb-2.5">
               <div className="flex items-center gap-2.5 min-w-0">
-                <span className="w-8 h-8 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
-                  <BookOpen className="w-4.5 h-4.5" />
+                <span className="w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <BookOpen className="w-4 h-4" />
                 </span>
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-accent block">
+                  <span className="text-[10.5px] font-bold uppercase tracking-wider text-accent block">
                     Öğrenim Bölümü • Detaylı Müfredat Analizi
                   </span>
-                  <h3 className="m-0 text-[16px] sm:text-[17px] font-bold text-ink">
-                    Kapsamlı Ders Notu ve Patoloji Sentezi
+                  <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink">
+                    {slide.discipline?.toLowerCase().includes('patoloji')
+                      ? 'Kapsamlı Ders Notu ve Patoloji Sentezi'
+                      : `Kapsamlı Ders Notu ve ${slide.discipline || 'Müfredat'} Sentezi`}
                   </h3>
                 </div>
               </div>
@@ -1296,7 +1378,7 @@ const SlideCanvas: React.FC<{
                 <button
                   type="button"
                   onClick={onOpenNotes}
-                  className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-white border border-line text-[12px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                  className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-[11.5px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>Panelde Oku</span>
@@ -1306,25 +1388,61 @@ const SlideCanvas: React.FC<{
             </div>
             
             <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
+
+            {/* Comparison / Classification Table on Slide Canvas */}
+            {c.table && (
+              <div className="rounded-xl border border-line overflow-hidden bg-white mt-2 shadow-2xs">
+                {c.table.title && (
+                  <div className="px-3 py-2 bg-gradient-to-r from-canvas via-white to-canvas text-[12px] font-bold border-b border-line text-ink flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    <span>{c.table.title}</span>
+                  </div>
+                )}
+                <div className="overflow-x-auto">
+                  <table className="w-full text-[12px] border-collapse">
+                    <thead>
+                      <tr className="bg-canvas/80">
+                        {c.table.headers.map((h, i) => (
+                          <th key={i} className="text-left font-semibold text-ink-2 px-3 py-2 border-b border-line">
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {c.table.rows.map((row, ri) => (
+                        <tr key={ri} className="border-b border-line-soft last:border-0 hover:bg-canvas/30 transition-colors">
+                          {row.map((cell, ci) => (
+                            <td key={ci} className={`px-3 py-2 ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
+                              <Rich text={cell} />
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
           </section>
         )}
 
         {/* 3. Interactive 3D Flashcards (Akıl Kartları Atölyesi) */}
         {flashcards.length > 0 && (
-          <section className="flex flex-col gap-3 pt-2">
+          <section className="flex flex-col gap-2.5 pt-1">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0">
                   <BrainCircuit className="w-4 h-4" />
                 </span>
                 <div>
-                  <h3 className="m-0 text-[15px] font-bold text-ink flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <h3 className="m-0 text-[14px] sm:text-[14.5px] font-bold text-ink flex flex-wrap items-center gap-x-2 gap-y-1">
                     <span>Akıl Kartları (Tıkla & Çevir)</span>
                     <span className="shrink-0 whitespace-nowrap font-mono text-[11px] font-semibold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
                       {flashcards.length} Kart
                     </span>
                   </h3>
-                  <p className="m-0 text-[12px] text-ink-3">
+                  <p className="m-0 text-[11.5px] text-ink-3">
                     Kafanda yanıtla, ardından karta tıklayarak cevabı ve amfi ipucunu aç
                   </p>
                 </div>
@@ -1334,7 +1452,7 @@ const SlideCanvas: React.FC<{
                 <button
                   type="button"
                   onClick={onOpenFlashcards}
-                  className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[12px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
+                  className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
                 >
                   <span>Panelde Çalış</span>
                   <ChevronRight className="w-3.5 h-3.5" />
@@ -1342,7 +1460,7 @@ const SlideCanvas: React.FC<{
               )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-3.5">
               {flashcards.map((card) => (
                 <FlashcardComponent key={card.id} card={card} />
               ))}
@@ -1350,28 +1468,76 @@ const SlideCanvas: React.FC<{
           </section>
         )}
 
-        {/* 4. High-yield action bar (Questions, Flashcards, Notes) */}
-        <div className="rounded-xl border border-line bg-gradient-to-r from-accent-soft/20 via-white to-transparent p-3 sm:p-3.5 flex items-center justify-between gap-3 flex-wrap">
-          <div className="flex items-center gap-2 text-[13px] font-medium text-ink-2">
-            <Sparkles className="w-4 h-4 text-accent shrink-0" />
-            <span>Bu konu için <strong>{flashcards.length} akıl kartı</strong> ve <strong>{(slide.relatedQuestions || []).length} çıkmış soru</strong> hazırlandı.</span>
+        {/* 4. Interactive Questions (Doğrudan Slayt Üzerinde Çözülebilir Sorular) */}
+        {(slide.relatedQuestions || []).length > 0 && (
+          <section id={`slide-questions-${slide.slideNumber}`} className="flex flex-col gap-2.5 pt-1 scroll-mt-6">
+            <div className="flex items-center justify-between gap-2 border-b border-line-soft pb-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-2xs">
+                  <CheckCircle2 className="w-4 h-4" />
+                </span>
+                <div>
+                  <h3 className="m-0 text-[14px] sm:text-[14.5px] font-bold text-ink flex items-center gap-2">
+                    <span>Eşleşen Kurul & Çıkmış Sorular</span>
+                    <span className="shrink-0 font-mono text-[11px] font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+                      {(slide.relatedQuestions || []).length} Soru
+                    </span>
+                  </h3>
+                  <p className="m-0 text-[11.5px] text-ink-3">
+                    Paneli açmaya gerek kalmadan doğrudan bu slayt üzerinden çözebilirsiniz
+                  </p>
+                </div>
+              </div>
+
+              {onOpenQuestions && (
+                <button
+                  type="button"
+                  onClick={onOpenQuestions}
+                  className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[11.5px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
+                >
+                  <span>Panelde Aç</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 gap-3">
+              {(slide.relatedQuestions || []).map((q, i) => (
+                <QuizCard key={`canvas-${slide.slideNumber}-${q.id || i}`} q={q} n={i + 1} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* 5. High-yield action bar (Questions, Flashcards, Notes) */}
+        <div className="rounded-xl border border-line bg-gradient-to-r from-accent-soft/20 via-white to-transparent p-2.5 sm:p-3 flex items-center justify-between gap-3 flex-wrap">
+          <div className="flex items-center gap-2 text-[12px] sm:text-[12.5px] font-medium text-ink-2">
+            <Sparkles className="w-3.5 h-3.5 text-accent shrink-0" />
+            <span>Bu konu için <strong>{flashcards.length} akıl kartı</strong> ve <strong>{(slide.relatedQuestions || []).length} çıkmış soru</strong> slayt üzerine yerleştirildi.</span>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             {flashcards.length > 0 && onOpenFlashcards && (
               <button
                 type="button"
                 onClick={onOpenFlashcards}
-                className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
               >
                 <BrainCircuit className="w-3.5 h-3.5" />
                 <span>Akıl Kartları ({flashcards.length})</span>
               </button>
             )}
-            {(slide.relatedQuestions || []).length > 0 && onOpenQuestions && (
+            {(slide.relatedQuestions || []).length > 0 && (
               <button
                 type="button"
-                onClick={onOpenQuestions}
-                className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+                onClick={() => {
+                  const el = document.getElementById(`slide-questions-${slide.slideNumber}`);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                  } else if (onOpenQuestions) {
+                    onOpenQuestions();
+                  }
+                }}
+                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
               >
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Çıkmış Sorular ({(slide.relatedQuestions || []).length})</span>
@@ -1381,7 +1547,7 @@ const SlideCanvas: React.FC<{
               <button
                 type="button"
                 onClick={onOpenNotes}
-                className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-white border border-line text-ink-2 hover:text-ink text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-ink-2 hover:text-ink text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
               >
                 <BookOpen className="w-3.5 h-3.5 text-accent" />
                 <span>Ders Notu Özeti</span>
@@ -1390,18 +1556,18 @@ const SlideCanvas: React.FC<{
           </div>
         </div>
 
-        {/* 5. Core content: formulas, tables, bullets, infographics */}
+        {/* 6. Core content: formulas, tables, bullets, infographics */}
         <div className={`grid grid-cols-1 ${c.table && c.table.headers?.length > 0 ? '' : 'lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]'} gap-4 sm:gap-5 lg:gap-7 items-start`}>
           {/* Main content */}
           <div className="flex flex-col gap-4 min-w-0">
             {c.keyBullets && c.keyBullets.length > 0 && (
-              <ol className="list-none m-0 p-0 flex flex-col gap-2.5">
+              <ol className="list-none m-0 p-0 flex flex-col gap-2">
                 {c.keyBullets.map((b, i) => (
-                  <li key={i} className={`grid grid-cols-[26px_minmax(0,1fr)] gap-3 items-start ${b.isKey ? 'bg-accent-soft/60 rounded-xl p-2 -m-2' : ''}`}>
-                    <span className="w-[26px] h-[26px] rounded-lg bg-accent-soft text-accent font-mono text-[12px] font-semibold flex items-center justify-center">{i + 1}</span>
+                  <li key={i} className={`grid grid-cols-[24px_minmax(0,1fr)] gap-2.5 items-start ${b.isKey ? 'bg-accent-soft/50 rounded-xl p-2 -m-1.5' : ''}`}>
+                    <span className="w-6 h-6 rounded-lg bg-accent-soft text-accent font-mono text-[11px] font-semibold flex items-center justify-center">{i + 1}</span>
                     <span className="flex flex-col gap-0.5 min-w-0">
-                      <span className="text-[15px] sm:text-[16px] font-semibold leading-snug">{b.title}</span>
-                      <Rich text={b.desc} className="text-[14px] sm:text-[15px] text-ink-2 leading-[1.55]" />
+                      <span className="text-[13.5px] sm:text-[14px] font-semibold leading-snug">{b.title}</span>
+                      <Rich text={b.desc} className="text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.6]" />
                     </span>
                   </li>
                 ))}

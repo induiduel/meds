@@ -165,6 +165,133 @@
         "confidenceScore": 100,
         "reasoning": "Amfi Slayt Eşleşmesi: \"D8_D9_tiroid_neopl\" dersinin 66. slaytındaki (göre, yaş, dınlarda, sık) ifadeleri soru içeriği ile örtüşmektedir."
       }
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1790951053241",
+      "tags": [
+        "Tıbbi Patoloji",
+        "numarasız-hatırlanan"
+      ],
+      "topic": "Tıbbi Patoloji Sorusu",
+      "status": "completed",
+      "options": [],
+      "upvotes": 0,
+      "createdAt": "2026-10-02T14:24:13.63934+00:00",
+      "fragments": [
+        {
+          "id": "f-1790951053241-1mbo",
+          "text": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T14:24:13.241Z",
+          "likedBy": []
+        }
+      ],
+      "revisions": [
+        {
+          "id": "rev-1790951053241",
+          "stem": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
+          "topic": "Tıbbi Patoloji Sorusu",
+          "options": [],
+          "version": 1,
+          "editedAt": "2026-10-02T14:24:13.241Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Patoloji",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        }
+      ],
+      "updatedAt": "2026-10-02T14:50:47.877Z",
+      "discipline": "Tıbbi Patoloji",
+      "committeeId": "donem3-kurul1",
+      "claimedAnswer": "A",
+      "questionNumber": 0,
+      "reconstruction": {
+        "stem": "Kronik romatoid artrit tanısıyla takip edilen 58 yaşındaki kadın hastada son zamanlarda bilateral bacak ödemi ve proteinüri (6 g/gün) gelişiyor. Yapılan renal biyopsinin ışık mikroskobik incelemesinde, glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanıyor. Bu birikim Kongo kırmızısı (Congo red) boyası ile boyanıp polarize ışık mikroskobunda incelendiğinde elma yeşili çift kırınım (birefringe) gösteriyor.\n\nBu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Amiloid",
+            "isAiFilled": false
+          },
+          {
+            "key": "B",
+            "text": "Glikojen",
+            "isAiFilled": false
+          },
+          {
+            "key": "C",
+            "text": "Kalsiyum",
+            "isAiFilled": false
+          },
+          {
+            "key": "D",
+            "text": "Melanin",
+            "isAiFilled": false
+          },
+          {
+            "key": "E",
+            "text": "Kolesterol",
+            "isAiFilled": false
+          }
+        ],
+        "explanation": "Patofizyoloji: Amiloidoz, yanlış katlanmış proteinlerin dokularda çözünmeyen fibriler yapılar halinde ekstraselüler olarak birikmesiyle karakterize progressif bir hastalıktır. Kronik inflamatuar süreçlerde (romatoid artrit, tüberküloz, bronşektazi vb.) artan serum amiloid A (SAA) proteini, AA tipi amiloid birikimine yol açarak sekonder sistemik amiloidoza neden olur. Böbrek tutulumu sıklıkla ağır proteinüri ve nefrotik sendrom ile prezente olur.\n\nDoğru Şık Açıklaması (A): Amiloid birikimi ışık mikroskobunda amorf, asidofilik (eozinofilik) ekstraselüler madde olarak görülür. Kongo kırmızısı (Congo red) ile boyandıktan sonra polarize ışık altında yeşil (elma yeşili) çift kırınım (birefringence) göstermesi amiloid için patognomoniktir.\n\nÇeldiricilerin Analizi:\n- Glikojen (B): Hücre içi birikim gösterir, hematoksilen-eozinde berrak vakuoller oluşturur, PAS boyası ile pozitif boyanır ve diastaz ile sindirilir.\n- Kalsiyum (C): Hematoksilen-eozinde koyu mavi-mor (bazofilik) amorf veya granüler çökeltiler halinde görülür. von Kossa veya Alizarin red boyalarıyla boyanır.\n- Melanin (D): Melanositler tarafından üretilen kahverengi-siyah intraselüler pigmenttir. Masson-Fontana boyasıyla gösterilebilir.\n- Kolesterol (E): Doku takibi sırasında eriyip gittiğinden histolojik kesitlerde iğne şeklinde berrak yarıklar (kolesterol kleftleri) olarak izlenir.\n\nKlinik İpucu: Kronik inflamatuar hastalığı olan bir hastada nefrotik sendrom tablosu geliştiğinde akla ilk gelmesi gereken patoloji AA amiloidozudur. Kesin tanı için rektal veya abdominal yağ yastıkçığı biyopsisinde Kongo kırmızısı pozitifliği aranır.",
+        "lastUpdated": "2026-10-02T14:24:54.078Z",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "notesAndDiscrepancies": "Öğrencinin hatırladığı beş şık (amiloid, glikojen, kalsiyum, melanin, kolesterol) hücre içi ve dışı birikimler ile patolojik pigmentler konusuna aittir. Bu şıkları bir araya getiren en klasik, en yüksek verimli (high-yield) ve TUS formatına en uygun soru amiloid birikimini ve boyanma özelliklerini sorgulayan klinik senaryodur."
+      },
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "isUnassignedNumber": true
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1790951030251",
+      "tags": [
+        "Tıbbi Patoloji",
+        "numarasız-hatırlanan"
+      ],
+      "topic": "Tıbbi Patoloji Sorusu",
+      "status": "gathering",
+      "options": [],
+      "createdAt": "2026-10-02T14:23:50.62677+00:00",
+      "fragments": [
+        {
+          "id": "f-1790951030251-t6ke",
+          "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T14:23:50.251Z",
+          "likedBy": []
+        }
+      ],
+      "revisions": [
+        {
+          "id": "rev-1790951030251",
+          "stem": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+          "topic": "Tıbbi Patoloji Sorusu",
+          "options": [],
+          "version": 1,
+          "editedAt": "2026-10-02T14:23:50.251Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Patoloji",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        }
+      ],
+      "updatedAt": "2026-10-02T14:50:52.500Z",
+      "discipline": "Tıbbi Patoloji",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "isUnassignedNumber": true,
+      "upvotes": 0,
+      "reconstruction": null
     }
   ]
 }

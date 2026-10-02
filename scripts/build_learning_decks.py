@@ -701,102 +701,105 @@ CURATED_TOPICS = {
             }
         ]
     },
-    'Ailesel_Akdeniz_Atesi__FMF__ve_Patofizyolojisi_Transkript.md': {
-        'shortTitle': 'FMF Patofizyolojisi',
+    'Tibbi_Patoloji_-_Odem_Hiperemi_Konjesyon_ve_Kanama_Transkript.md': {
+        'shortTitle': 'Ödem ve Hemodinami',
         'discipline': 'Tıbbi Patoloji',
-        'committee': 'Kurul 3 - Sindirim ve Dolaşım Sistemi Patolojisi',
-        'instructor': 'Uzm. Dr. Murat Ayberk Aytemiz',
+        'committee': 'Kurul 1 - Ürogenital ve Obstetrik Kurulu (TIP 310)',
+        'instructor': 'Prof. Dr. Hikmet Keleş',
         'themeColor': 'indigo',
         'slides': [
             {
-                'title': 'FMF Genetiği, MEFV Mutasyonu & Pirin Proteini',
-                'badge': 'GENETİK MEKANİZMA',
+                'title': 'Hemodinamik Denge, Ödem Mekanizmaları & Sıvı Alışverişi',
+                'badge': 'HEMODİNAMİ',
                 'badgeColor': 'indigo',
-                'start': '00:00', 'end': '10:00',
-                'note': 'Hoca MEFV geni mutasyonunu (16p13.3), pirin disfonksiyonunu ve otozomal resesif kalıtımı sordu.',
-                'synthesisNarrative': 'Ailesel Akdeniz Ateşi (FMF), 16. kromozomun kısa kolunda (16p13.3) yerleşmiş MEFV genindeki mutasyonlarla kalıtılan otozomal resesif bir ot флаmatuvar hastalıktır. Normalde nötrofil ve monositlerde üretilen "pirin" (marenostrin) proteini inflamazom yolağının doğal denetleyicisidir. MEFV mutasyonunda pirin defektif kalır; fren mekanizması ortadan kalkınca NLRP3 inflamazomu aşırı aktive olur. Sonuçta aktif kaspaz-1 enzimi aralıksız şekilde İnterlökin-1 beta (IL-1β) salgılatarak serozal yüzeylere (periton, plevra, sinovya) nötrofil hücumuna ve steril inflamasyona neden olur.',
+                'start': '00:00', 'end': '15:00',
+                'note': 'Hoca Starling kuvvetlerini, kapiller hidrostatik ve onkotik basınç dengesizliğini ve pulmoner ödem riskini amfide özellikle vurguladı.',
+                'synthesisNarrative': 'Sağlıklı bir dokuda kapiller endotel boyunca sıvı hareketi Starling kuvvetleri tarafından dengelenir. Hidrostatik basınç sıvıyı damar dışına iterken, plazma kolloid onkotik basıncı (başlıca albümin) sıvıyı damar içinde tutar. Kalp yetmezliğinde venöz basınç ve dolayısıyla hidrostatik basınç artarken; nefrotik sendrom, karaciğer yetmezliği veya malnütrisyonda albümin sentezinin düşmesi ya da kaybı sonucu plazma onkotik basıncı düşer. Her iki mekanizma da interstisyel boşlukta aşırı sıvı birikimi olan ödeme neden olur.',
                 'flashcards': [
                     {
-                        'id': 'fmf-1-1',
-                        'category': 'Genetik & Biyoloji',
-                        'front': 'FMF hastalığına neden olan gen mutasyonu ve bu genin kodladığı protein hangisidir?',
-                        'back': '• Gen: 16p13.3 bölgesinde yer alan MEFV genidir (Otozomal Resesif kalıtım).\n• Protein: Pirin (Marenostrin) proteinidir.',
-                        'hint': '16. kromozom, MEFV geni, pirin proteini...'
+                        'id': 'odem-1-1',
+                        'category': 'Fizyopatoloji',
+                        'front': 'Plazma kolloid onkotik basıncının düşmesine bağlı ödem gelişen iki temel klinik tablo hangisidir?',
+                        'back': '• Nefrotik Sendrom (masif proteinüri ile albümin kaybı)\n• Karaciğer Sirozu / Malnütrisyon (yetersiz albümin sentezi)',
+                        'hint': 'Albümin azlığı veya idrarla kaybı...'
                     },
                     {
-                        'id': 'fmf-1-2',
-                        'category': 'İmmünoloji & Patogenez',
-                        'front': 'Pirin proteininin kontrolü kaybetmesi sonucu kontrolsüzce salınarak FMF ataklarını başlatan temel proinflamatuar sitokin hangisidir?',
-                        'back': 'İnterlökin-1 beta (IL-1β)\'dır. Kaspaz-1 aktivasyonuyla pro-IL-1β aktifleşir ve nötrofillerin serozal dokulara göç etmesine neden olur.',
-                        'hint': 'IL-1 beta (Tedavide anakinra hedeflenir)...'
+                        'id': 'odem-1-2',
+                        'category': 'Hemodinamik',
+                        'front': 'Transüda ve eksüda arasındaki en temel patofizyolojik ve biyokimyasal fark nedir?',
+                        'back': '• Transüda: Damar geçirgenliği bozulmadan hidrostatik/onkotik basınç dengesizliğiyle oluşur; proteini düşük (<3 g/dL), dansitesi düşüktür (<1.012).\n• Eksüda: İnflamasyona bağlı artmış vasküler geçirgenlikle oluşur; proteinden zengin, hücreli ve dansitesi yüksektir (>1.020).',
+                        'hint': 'Damar geçirgenliği artışı ve protein içeriği...'
                     }
                 ],
                 'bullets': [
-                    {'title': 'Genetik Geçiş ve Lokalizasyon', 'desc': 'Ailesel Akdeniz Ateşi (FMF), 16. kromozomun kısa kolunda (16p13.3) yer alan MEFV genindeki mutasyonlar sonucu ortaya çıkan otozomal resesif bir hastalıktır.'},
-                    {'title': 'Pirin (Marenostrin) Proteini', 'desc': 'MEFV geni miyeloid hücrelerde eksprese edilen "pirin" (veya marenostrin) proteinini kodlar. Pirin, intrasellüler inflamatuar yanıtın doğal fren mekanizmasıdır.'},
-                    {'title': 'İnflamazom Aktivasyonu', 'desc': 'Mutasyona uğramış pirin, NLRP3 inflamazom kompleksini inhibe edemez. Kaspaz-1 enzimi aşırı aktive olarak pro-IL-1β\'yı aktif IL-1β\'ya dönüştürür.'},
-                    {'title': 'Nötrofil Kemotaksisi', 'desc': 'Durdurulamayan IL-1β salınımı, nötrofillerin masif şekilde serozal yüzeylere (periton, plevra, sinovya) göç etmesine ve akut steril inflamasyona neden olur.'}
+                    {'title': 'Starling Kuvvetleri', 'desc': 'Kapiller hidrostatik basınç sıvıyı dışarı iter, plazma onkotik basıncı sıvıyı içeri çeker. Bozulması ödem oluşturur.'},
+                    {'title': 'Artmış Hidrostatik Basınç', 'desc': 'En tipik nedeni konjestif kalp yetmezliğidir; venöz dönüş engellenir ve periferik / pulmoner ödem tetiklenir.'},
+                    {'title': 'Düşmüş Onkotik Basınç', 'desc': 'Hipoalbüminemi (nefrotik sendrom, ağır siroz, kwashiorkor) sıvının damar içinde tutulamamasına yol açar.'},
+                    {'title': 'Lenfatik Obstrüksiyon', 'desc': 'Paraziter enfeksiyonlar (Filaryazis), cerrahi lenf nodu diseksiyonu veya tümör tıkanıklığı lenfödem yapar.'}
                 ],
                 'table': {
-                    'title': 'En Sık Görülen MEFV Gen Mutasyonları & Klinik Ağırlık',
-                    'headers': ['Mutasyon', 'Ekzon', 'Fenotip / Ağır Seyir Riski', 'Amiloidoz Gelişme Riski'],
+                    'title': 'Ödem Tipleri ve Karakteristik Özellikleri',
+                    'headers': ['Özellik', 'Transüda', 'Eksüda'],
                     'rows': [
-                        ['M694V', 'Ekzon 10', 'En ağır klinik, erken başlangıç, artrit sık', 'Çok Yüksek (Homozigot olgularda en yüksek)'],
-                        ['V726A', 'Ekzon 10', 'Orta şiddette ataklar, geç başlangıç', 'Düşük - Orta'],
-                        ['M680I', 'Ekzon 10', 'Orta - Ağır seyir, ateş ön planda', 'Yüksek'],
-                        ['E148Q', 'Ekzon 2', 'Hafif klinik veya asemptomatik taşıyıcılık', 'Çok Düşük']
+                        ['Damar Geçirgenliği', 'Normal', 'Artmış (Endotel hasarı)'],
+                        ['Protein İçeriği', 'Düşük (< 3 g/dL)', 'Yüksek (> 3 g/dL)'],
+                        ['Spesifik Dansite', '< 1.012', '> 1.020'],
+                        ['İnflamatuar Hücre', 'Yok veya çok az', 'Zengin (Lökositler, nötrofiller)']
                     ]
                 },
                 'spotPearls': [
-                    'FMF olgularının %90\'ında ilk atak 20 yaşından önce ortaya çıkar.',
-                    'M694V homozigot mutasyonu olan hastalar amiloidoz ve kronik böbrek yetmezliği açısından en yüksek risk altındadır.',
-                    'Ataklar genellikle 12-72 saat (1-3 gün) sürer ve sonrasında kendiliğinden tamamen düzelir.'
+                    'Transüda tipi ödem mekanik dengesizlikten (hidrostatik/onkotik) kaynaklanır; endotel geçirgenliği normaldir.',
+                    'Sol kalp yetmezliğinde pulmoner ödem gelişirken, sağ kalp yetmezliğinde periferik ödem, asit ve hepatomegali ön plandadır.',
+                    'Nefrotik sendromda masif proteinüriye bağlı gelişen hipoalbüminemi generalize ödemin (anazarka) başlıca sebebidir.'
                 ],
-                'keywords': ['fmf', 'mefv', 'pirin', 'amiloidoz', 'kolşisin', 'il-1']
+                'keywords': ['ödem', 'starling', 'hidrostatik basınç', 'onkotik basınç', 'transüda', 'eksüda']
             },
             {
-                'title': 'Klinik Ataklar & Sekonder AA Tipi Amiloidoz',
-                'badge': 'KLİNİK & PATOLOJİ',
+                'title': 'Hiperemi, Pasif Konjesyon & Kalp Yetmezliği Hücreleri',
+                'badge': 'ORGAN PATOLOJİSİ',
                 'badgeColor': 'rose',
-                'start': '10:00', 'end': '30:00',
-                'note': 'Hoca FMF\'in en ölümcül komplikasyonunun AA tipi sistemik amiloidoz ve nefrotik sendrom olduğunu defalarca vurguladı.',
-                'synthesisNarrative': 'FMF klinik tablosu kendini tekrarlayan 1-3 günlük ateş, akut apandisiti taklit eden şiddetli peritonit ve geçici monoartrit ataklarıyla gösterir. FMF artriti geçicidir, asla sekelsiz ve erozyonsuz iyileşir. Hastalığın hayatı tehdit eden en korkutucu komplikasyonu ise SEKONDER AA TİPİ AMİLOİDOZ\'dur. Ataklarda karaciğerden salınan Serum Amiloid A (SAA) proteini parçalanarak böbrek glomerül ve mezangiyumunda birikir; önce asemptomatik proteinüri, ardından nefrotik sendrom ve son evre böbrek yetmezliğine yol açar. Hocamızın amfideki en büyük uyarısı: KOLŞİSİN tedavisi sadece ağrıyı kesmez, amiloidoz gelişimini ve böbrek yetmezliğini önleyen kanıtlanmış tek ajandır ve ömür boyu kesintisiz alınmalıdır.',
+                'start': '15:00', 'end': '31:13',
+                'note': 'Hoca hemosiderin yüklü alveoler makrofajları (kalp yetmezliği hücreleri) ve muskat cevizi karaciğer morfolojisini doğrudan sınav sorusu olarak vurguladı.',
+                'synthesisNarrative': 'Hiperemi arteriyollerin genişlemesiyle gelişen aktif bir süreç olup egzersizde iskelet kasında veya inflamasyonun erken evresinde görülür; doku parlak kırmızı ve sıcaktır. Konjesyon ise venöz dönüşün bozulmasıyla gelişen pasif bir durumdur. Sol kalp yetmezliğinde pulmoner konjesyon sonucu alveollere eritrositler sızar; parçalanan eritrositlerin demiri makrofajlarca hemosiderine dönüştürülür ve "kalp yetmezliği hücreleri" oluşur. Sağ kalp yetmezliğinde ise sistemik venöz göllenme karaciğeri etkiler; santral venler çevresindeki hipoksik nekroz ve periferdeki yağlanma "muskat cevizi karaciğer" görüntüsünü oluşturur.',
                 'flashcards': [
                     {
-                        'id': 'fmf-2-1',
-                        'category': 'Patoloji & Sınav',
-                        'front': 'FMF\'te amiloidoz gelişimini ve buna bağlı böbrek yetmezliğini engelleyen tek temel ilaç hangisidir?',
-                        'back': 'KOLŞİSİN\'dir. Nötrofil mikrotübül fonksiyonlarını baskılayarak SAA üretimini ve doku birikimini durdurur. Hasta semptomsuz olsa bile amiloidozdan korunmak için ömür boyu kesintisiz kullanmalıdır.',
-                        'hint': 'Mikrotübül inhibitörü, gutta da kullanılır...'
+                        'id': 'odem-2-1',
+                        'category': 'Histopatoloji',
+                        'front': 'Sol kalp yetmezliğinde akciğer dokusunda görülen "kalp yetmezliği hücreleri" gerçekte hangi hücrelerdir ve sitoplazmalarında ne biriktirirler?',
+                        'back': 'Eritrositleri fagosite ederek sindiren ve sitoplazmalarında kahverengi hemosiderin pigmenti biriktiren alveoler makrofajlardır.',
+                        'hint': 'Hemosiderin yüklü alveoler makrofaj...'
                     },
                     {
-                        'id': 'fmf-2-2',
-                        'category': 'Histopatoloji',
-                        'front': 'Amiloidoz doku tanısında kullanılan özel histokimyasal boya ve polarize ışık mikroskobundaki karakteristik görünümü nedir?',
-                        'back': 'KONGO KIRMIZISI (Congo Red) boyası ile boyanır; polarize ışık mikroskobu altında patognomonik "ELMA YEŞİLİ ÇİFT KIRICILIK" (Apple-green birefringence) verir.',
-                        'hint': 'Kongo Kırmızısı boyası ve elma yeşili yansıma...'
+                        'id': 'odem-2-2',
+                        'category': 'Morfoloji',
+                        'front': 'Kronik pasif karaciğer konjesyonunda (Nutmeg liver) lobül merkezinde ve periferinde izlenen morfolojik değişiklikler nelerdir?',
+                        'back': '• Merkez (Vena Centralis çevresi): Konjesyon ve hipoksiye bağlı santrilobüler nekroz (koyu kırmızı).\n• Perifer (Periportal alan): Daha iyi oksijenlendiği için yağlı dejenerasyon (açık sarı).',
+                        'hint': 'Santrilobüler nekroz vs. periportal yağlanma...'
                     }
                 ],
                 'bullets': [
-                    {'title': 'Atak Özellikleri (Peritonit, Plörit, Artrit)', 'desc': 'Ani başlayan yüksek ateş ve akut batını taklit eden şiddetli karın ağrısı (defans, rebound). Akciğerde batıcı plöritik göğüs ağrısı, diz veya ayak bileğinde non-eroziv monoartrit.'},
-                    {'title': 'Erizipel Benzeri Eritem (EBE)', 'desc': 'Ayak sırtında veya alt bacakta sınırlı, sıcak, ağrılı, eritemli lezyon (FMF için oldukça spesifiktir).'},
-                    {'title': 'Sekonder (AA) Amiloidoz', 'desc': 'Tekrarlayan ataklar sırasında kanda Serum Amiloid A (SAA) düzeyi yüzlerce kat artar. Parçalanan SAA fibrilleri organlarda (en başta böbrek mezangiyumu ve glomerülleri) birikir.'},
-                    {'title': 'Klinik Sonuç: Nefrotik Sendrom', 'desc': 'Böbrekte biriken AA amiloid önce asemptomatik proteinüriye, sonra nefrotik sendroma ve son evrede kronik böbrek yetmezliğine yol açar.'}
+                    {'title': 'Aktif Hiperemi', 'desc': 'Arteriyel vazodilatasyona bağlı aktif kan akımı artışıdır. Egzersiz, sıcak veya akut iltihapta doku parlak kırmızıdır.'},
+                    {'title': 'Pasif Konjesyon', 'desc': 'Venöz dönüşün mekanik engellenmesi veya kalp yetmezliğine bağlı pasif venöz göllenmedir; doku siyanotiktir.'},
+                    {'title': 'Kalp Yetmezliği Hücreleri', 'desc': 'Pulmoner konjesyonda alveole sızan eritrositleri yiyip kahverengi hemosiderin biriktiren alveoler makrofajlar.'},
+                    {'title': 'Nutmeg Karaciğer', 'desc': 'Santral vende kan göllenmesi ve santrilobüler hepatosit nekrozu; periportal yağlanmayla birleşerek alacalı görünüm verir.'}
                 ],
                 'table': {
-                    'title': 'Tel Hashomer Tanı Kriterleri Sistemi',
-                    'headers': ['Kriter Tipi', 'Bulgular', 'Tanı Kuralları'],
+                    'title': 'Hiperemi ve Konjesyon Karşılaştırması',
+                    'headers': ['Özellik', 'Hiperemi', 'Konjesyon'],
                     'rows': [
-                        ['Majör Kriterler', '1. Ateşle birlikte peritonit, plörit veya sinovit atakları\n2. Spesifik bir hastalık olmadan AA tipi amiloidoz\n3. Kolşisin tedavisine tam yanıt', '2 Majör Kriter VEYA\n1 Majör + 2 Minör Kriter = KESİN FMF TANISI'],
-                        ['Minör Kriterler', '1. Tekrarlayan ateş atakları\n2. Erizipel benzeri eritem\n3. Birinci derece akrabada FMF öyküsü', 'Destekleyici genetik test mutasyonu tanıyı doğrular']
+                        ['Süreç', 'Aktif süreç', 'Pasif süreç'],
+                        ['Damar Tipi', 'Arteriyel dilatasyon', 'Venöz obstrüksiyon / göllenme'],
+                        ['Doku Rengi', 'Parlak kırmızı (Oksijenli kan)', 'Mavi-kırmızı / siyanotik (Deoksijene kan)'],
+                        ['Doku Sıcaklığı', 'Sıcak', 'Genellikle soğuk'],
+                        ['Örnek', 'Egzersiz kası, inflamasyon', 'Kalp yetmezliği, DVT, karaciğer stazı']
                     ]
                 },
                 'spotPearls': [
-                    'Kolşisin, FMF atak sıklığını azaltmanın ötesinde AMİLOİDOZ GELİŞİMİNİ ÖNLEYEN TEK İLAÇTIR; semptomu olmayan hastada dahi ömür boyu kesintisiz kullanılmalıdır!',
-                    'FMF artriti geçicidir, sekelsiz ve erozyonsuz iyileşir (Romatoid artritten en temel farkı budur).',
-                    'Amiloid doku biyopsisinde Kongo Kırmızısı boyası ile polarize ışık mikroskobunda "elma yeşili çift kırıcılık" verir.'
+                    'Kronik pulmoner konjesyonda hemosiderin yüklü makrofajlar (kalp yetmezliği hücreleri) ve fibrozise bağlı "kahverengi indürasyon" gelişir.',
+                    'Kronik karaciğer konjesyonunda santrilobüler nekroz ve periportal yağlanmanın birleşimi makroskopik olarak "muskat cevizi" (nutmeg liver) görünümü verir.',
+                    'Hiperemi arteriyel, aktif ve kırmızıdır; konjesyon venöz, pasif ve siyanotiktir.'
                 ],
-                'keywords': ['amiloidoz', 'kolşisin', 'tel hashomer', 'peritonit', 'erizipel']
+                'keywords': ['konjesyon', 'hiperemi', 'kalp yetmezliği hücresi', 'nutmeg karaciğer', 'hemosiderin']
             }
         ]
     },

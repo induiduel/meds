@@ -40,12 +40,15 @@ import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
 import { AdvancedQuestionUpgradeModal } from './AdvancedQuestionUpgradeModal';
 import { renderHighlightedSnippet } from './QuestionCard';
+import { learnMatcher, QuestionLearnMatch } from '../services/learnMatcher';
+import { FlashcardComponent } from './learn/InteractiveDeckView';
 
 interface PastExamsViewProps {
   currentUser: AppUser | null;
   lectureNotes?: LectureNote[];
   onOpenNote?: (noteId: string, pageNumber?: number) => void;
   onUpdateQuestionReference?: (questionId: string, match: QuestionLectureMatch) => Promise<void>;
+  onNavigateToLearn?: (deckId?: string, slideNumber?: number) => void;
 }
 
 export const PastExamsView: React.FC<PastExamsViewProps> = ({
@@ -53,6 +56,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   lectureNotes = [],
   onOpenNote,
   onUpdateQuestionReference,
+  onNavigateToLearn,
 }) => {
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [internalNotes, setInternalNotes] = useState<LectureNote[]>([]);
@@ -69,13 +73,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // Per-question card override: questionId -> 'redacted' | 'raw' | 'split'
   const [cardViewOverrides, setCardViewOverrides] = useState<Record<string, 'redacted' | 'raw' | 'split'>>({});
   
-  // Selected slide snippet modal
-  const [selectedSlideSnippet, setSelectedSlideSnippet] = useState<{
-    note: LectureNote;
-    page: LectureNotePage;
+  // Selected Öğren modülü match modal state
+  const [selectedLearnMatch, setSelectedLearnMatch] = useState<{
     question: QuestionItem;
-    score: number;
+    match: QuestionLearnMatch;
   } | null>(null);
+
+  // Selected Ham Soru location modal state
+  const [selectedRawSourceQuestion, setSelectedRawSourceQuestion] = useState<QuestionItem | null>(null);
 
   // AI Similar Question Modal State
   const [similarModalQuestion, setSimilarModalQuestion] = useState<any | null>(null);
@@ -320,6 +325,24 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       return best;
     };
   }, [effectiveNotes]);
+
+  // Format raw source file and location labels
+  const getRawSourceBadge = (q: QuestionItem) => {
+    const file = (q.sourceFile || q.sourceNote || 'Sınav Arşivi')
+      .replace(/\.[^/.]+$/, '')
+      .replace(/_/g, ' ');
+    const page = q.matchedSlidePage ? ` #${q.matchedSlidePage}` : '';
+    return `${file.substring(0, 18)}${page}`;
+  };
+
+  const getRawSourceSummary = (q: QuestionItem) => {
+    const file = (q.sourceFile || q.sourceNote || 'Sınav Arşivi')
+      .replace(/\.[^/.]+$/, '')
+      .replace(/_/g, ' ');
+    const page = q.matchedSlidePage ? ` · Sayfa #${q.matchedSlidePage}` : '';
+    const qNum = q.questionNumber ? ` · Soru #${q.questionNumber}` : '';
+    return `${file}${page}${qNum}`;
+  };
 
   // Curriculum Disciplines List
   const CURRICULUM_DISCIPLINES = [
@@ -718,6 +741,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         <div className="space-y-4">
           {paginatedQuestions.map((q) => {
             const effectiveMode: 'redacted' | 'raw' | 'split' = cardViewOverrides[q.id] || viewMode;
+            const learnMatch = learnMatcher.getMatch(q);
             const slideMatch = getQuestionSlideMatch(q);
             const isLiked = (q.likedBy || []).includes(currentUser?.uid || 'anonim-std');
 
@@ -754,12 +778,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     )}
 
                     {/* Exact source file name badge */}
-                    <span className="bg-slate-100 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded-md flex items-center gap-1" title="Sınav sorusunun çıkarıldığı orijinal PDF dosyası">
+                    <button
+                      onClick={() => setSelectedRawSourceQuestion(q)}
+                      className="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded-md flex items-center gap-1 cursor-pointer transition-colors"
+                      title="Ham sorunun çıkarıldığı orijinal dosya ve arşiv konumu"
+                    >
                       <FileText className="w-3 h-3 text-slate-500" />
                       <span className="truncate max-w-[150px] sm:max-w-[220px]">
                         {q.sourceFile || 'Çıkmış Dosyası'}
                       </span>
-                    </span>
+                    </button>
 
                     {q.isAmbiguous && (
                       <span className="bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
@@ -772,7 +800,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   <div className="flex items-center gap-1.5">
                     {/* AI Similar Question Generator Button ("Ek Soru Sor") */}
                     <button
-                      onClick={() => handleGenerateSimilarQuestion(q, slideMatch)}
+                      onClick={() => handleGenerateSimilarQuestion(q, learnMatch || slideMatch)}
                       disabled={isGeneratingSimilar === q.id}
                       className="bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
                       title="Bu çıkmış soru ve ders notu konusundan yola çıkarak yapay zeka ile benzer soru üret"
@@ -800,7 +828,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     {/* Admin Custom AI Redaction Button */}
                     {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && (
                       <button
-                        onClick={() => setCustomRedactQuestion({ question: q, match: slideMatch })}
+                        onClick={() => setCustomRedactQuestion({ question: q, match: learnMatch || slideMatch })}
                         className="bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border border-indigo-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
                         title="Bu soruyu Gemini yapay zekasına özel talimat vererek redakte et (Admin)"
                       >
@@ -819,20 +847,26 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       <span>Gelişmiş Soruya Çevir</span>
                     </button>
 
-                    {/* Slide Match Reference Badge */}
-                    {slideMatch && (
+                    {/* Learn Match Badge OR Raw Question Location Badge */}
+                    {learnMatch ? (
                       <button
-                        onClick={() => setSelectedSlideSnippet({
-                          note: slideMatch.note,
-                          page: slideMatch.page,
-                          question: q,
-                          score: slideMatch.score,
-                        })}
+                        onClick={() => setSelectedLearnMatch({ question: q, match: learnMatch })}
                         className="bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                        title="Bu sorunun değinildiği amfi ders slaytını aç"
+                        title="Bu sorunun eşleştiği Öğren modülü ders slaytı ve akıl kartlarını incele"
                       >
-                        <BookMarked className="w-3.5 h-3.5 text-emerald-700" />
-                        <span className="truncate max-w-[150px]">Slayt #{slideMatch.page.pageNumber}</span>
+                        <GraduationCap className="w-3.5 h-3.5 text-emerald-700" />
+                        <span className="truncate max-w-[170px]">Öğren: {learnMatch.deckTitle} (Slayt #{learnMatch.slideNumber})</span>
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => setSelectedRawSourceQuestion(q)}
+                        className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                        title="Ham sorunun arşivdeki orijinal sınav belgesini ve yerini incele"
+                      >
+                        <FileText className="w-3.5 h-3.5 text-slate-500" />
+                        <span className="truncate max-w-[170px]">
+                          Ham Soru: {getRawSourceBadge(q)}
+                        </span>
                       </button>
                     )}
 
@@ -1077,19 +1111,26 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     </span>
                   </div>
 
-                  {/* Right: Slide Link */}
-                  {slideMatch && (
+                  {/* Right: Learn Method Link OR Raw Question Location Link */}
+                  {learnMatch ? (
                     <button
-                      onClick={() => setSelectedSlideSnippet({
-                        note: slideMatch.note,
-                        page: slideMatch.page,
-                        question: q,
-                        score: slideMatch.score,
-                      })}
-                      className="text-teal-800 hover:text-teal-950 font-bold flex items-center gap-1 cursor-pointer"
+                      onClick={() => setSelectedLearnMatch({ question: q, match: learnMatch })}
+                      className="text-emerald-800 hover:text-emerald-950 font-bold flex items-center gap-1.5 cursor-pointer text-xs group"
+                      title="Öğren modülündeki interaktif amfi slayt sentezini ve akıl kartlarını aç"
                     >
-                      <span>İlgili Ders Slaytı Kesiti: {slideMatch.note.title.substring(0, 30)}...</span>
-                      <ExternalLink className="w-3 h-3 text-slate-400" />
+                      <GraduationCap className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform" />
+                      <span>Öğren Modülü: {learnMatch.deckTitle} • Slayt #{learnMatch.slideNumber}</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-emerald-500" />
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => setSelectedRawSourceQuestion(q)}
+                      className="text-slate-600 hover:text-slate-900 font-medium flex items-center gap-1.5 cursor-pointer text-xs group"
+                      title="Ham sorunun bulunduğu kaynak dosya ve arşiv yerini görüntüle"
+                    >
+                      <FileText className="w-4 h-4 text-slate-400 group-hover:text-slate-600" />
+                      <span>Ham Soru Konumu: {getRawSourceSummary(q)}</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
                     </button>
                   )}
                 </div>
@@ -1203,26 +1244,31 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </div>
       )}
 
-      {/* Slide Excerpt Popover Modal */}
-      {selectedSlideSnippet && (
+      {/* Öğren Modülü / İnteraktif Amfi Slaytı Eşleşmesi Modal */}
+      {selectedLearnMatch && (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[85vh]">
+          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[88vh]">
             {/* Modal Header */}
-            <div className="bg-slate-900 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
+            <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-slate-900 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center">
-                  <BookMarked className="w-5 h-5" />
+                <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
+                  <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm sm:text-base">Ders Notu / Slayt Eşleşmesi</h4>
-                  <p className="text-xs text-slate-400">
-                    {selectedSlideSnippet.note.discipline} • Slayt Sayfası #{selectedSlideSnippet.page.pageNumber}
+                  <h4 className="font-bold text-sm sm:text-base flex items-center gap-2">
+                    <span>{selectedLearnMatch.match.deckTitle}</span>
+                    <span className="text-[11px] bg-emerald-500/30 text-emerald-200 px-2 py-0.5 rounded-full font-mono">
+                      Slayt #{selectedLearnMatch.match.slideNumber}
+                    </span>
+                  </h4>
+                  <p className="text-xs text-slate-300">
+                    {selectedLearnMatch.match.discipline} • {selectedLearnMatch.match.committee}
                   </p>
                 </div>
               </div>
               <button
-                onClick={() => setSelectedSlideSnippet(null)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 cursor-pointer"
+                onClick={() => setSelectedLearnMatch(null)}
+                className="text-slate-300 hover:text-white p-1 rounded-lg hover:bg-white/10 cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -1230,38 +1276,69 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
             {/* Modal Body */}
             <div className="p-4 sm:p-6 overflow-y-auto space-y-4 flex-1 text-xs">
-              <div className="bg-teal-50 border border-teal-200 rounded-xl p-3 text-teal-900 space-y-1">
-                <strong className="block font-bold">
-                  Soru: #{selectedSlideSnippet.question.questionNumber} - {selectedSlideSnippet.question.topic}
-                </strong>
-                <p className="text-[11px] text-teal-800">
-                  Bu sorunun sınavda ölçtüğü bilgi, amfide anlatılan <strong>"{selectedSlideSnippet.note.title}"</strong> dersinin <strong>#{selectedSlideSnippet.page.pageNumber}</strong> numaralı slaytında birebir geçmektedir.
+              {/* Question Context Banner */}
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-emerald-900 space-y-1">
+                <div className="flex items-center justify-between">
+                  <strong className="block font-bold">
+                    Çıkmış Soru: #{selectedLearnMatch.question.questionNumber} - {selectedLearnMatch.question.topic || selectedLearnMatch.question.discipline}
+                  </strong>
+                  <span className="text-[10px] font-semibold bg-emerald-200/80 text-emerald-900 px-2 py-0.5 rounded">
+                    {selectedLearnMatch.match.matchType === 'direct' ? '✓ Müfredat Eşleşmesi' : '%90+ Konu Eşleşmesi'}
+                  </span>
+                </div>
+                <p className="text-[11px] text-emerald-800 leading-relaxed">
+                  Bu soru, Öğren modülündeki <strong>"{selectedLearnMatch.match.deckTitle}"</strong> dersinin <strong>#{selectedLearnMatch.match.slideNumber}</strong> numaralı interaktif amfi slaytına ve akıl kartlarına bağlanmıştır.
                 </p>
               </div>
 
-              {/* Verbatim Page Content */}
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-slate-700 font-bold border-b border-slate-200 pb-1">
-                  <span>Slayt Metni Kesiti (Verbatim / Sayfa #{selectedSlideSnippet.page.pageNumber}):</span>
-                  <span className="text-[10px] text-teal-700 bg-teal-100 px-2 py-0.5 rounded font-mono">
-                    %{selectedSlideSnippet.score} Eşleşme
-                  </span>
-                </div>
-
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs sm:text-sm font-sans text-slate-900 leading-relaxed max-h-60 overflow-y-auto whitespace-pre-wrap">
-                  {selectedSlideSnippet.page.content}
-                </div>
+              {/* Slide Title & Badge */}
+              <div className="space-y-1 border-b border-slate-100 pb-3">
+                <span className="bg-teal-100 text-teal-800 text-[11px] font-bold px-2 py-0.5 rounded-md inline-block">
+                  {selectedLearnMatch.match.badge}
+                </span>
+                <h5 className="font-bold text-slate-900 text-sm">
+                  {selectedLearnMatch.match.slideTitle}
+                </h5>
               </div>
 
-              {/* Keywords */}
-              {selectedSlideSnippet.page.keywords && selectedSlideSnippet.page.keywords.length > 0 && (
-                <div className="space-y-1.5 pt-2">
-                  <span className="text-[11px] font-bold text-slate-500 block">Slaytta Geçen Anahtar Kavramlar:</span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {selectedSlideSnippet.page.keywords.map((kw, i) => (
-                      <span key={i} className="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-[10px] font-medium">
-                        #{kw}
-                      </span>
+              {/* Synthesis Narrative (Ders Sentezi) */}
+              {selectedLearnMatch.match.synthesisNarrative && (
+                <div className="space-y-2">
+                  <span className="text-[11px] font-bold text-slate-500 block">Amfi ve Ders Notu Sentezi:</span>
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs sm:text-sm font-sans text-slate-900 leading-relaxed max-h-56 overflow-y-auto whitespace-pre-wrap">
+                    {selectedLearnMatch.match.synthesisNarrative}
+                  </div>
+                </div>
+              )}
+
+              {/* Spot Pearls */}
+              {selectedLearnMatch.match.spotPearls && selectedLearnMatch.match.spotPearls.length > 0 && (
+                <div className="space-y-2">
+                  <span className="text-[11px] font-bold text-amber-800 flex items-center gap-1">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                    Sınav İçin Spot Hap Bilgiler:
+                  </span>
+                  <div className="bg-amber-50/60 border border-amber-200 rounded-xl p-3 space-y-1.5">
+                    {selectedLearnMatch.match.spotPearls.map((pearl, i) => (
+                      <div key={i} className="flex items-start gap-1.5 text-slate-800 text-xs">
+                        <span className="text-amber-600 font-bold shrink-0">•</span>
+                        <span>{pearl}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Flashcards (Akıl Kartları) */}
+              {selectedLearnMatch.match.flashcards && selectedLearnMatch.match.flashcards.length > 0 && (
+                <div className="space-y-2">
+                  <span className="text-[11px] font-bold text-slate-600 flex items-center gap-1">
+                    <BookOpen className="w-3.5 h-3.5 text-slate-500" />
+                    İlgili 3D Akıl Kartları ({selectedLearnMatch.match.flashcards.length}):
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {selectedLearnMatch.match.flashcards.map((card) => (
+                      <FlashcardComponent key={card.id} card={card} />
                     ))}
                   </div>
                 </div>
@@ -1271,26 +1348,150 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             {/* Modal Footer */}
             <div className="bg-slate-50 border-t border-slate-200 p-4 flex items-center justify-between shrink-0 text-xs">
               <button
-                onClick={() => setSelectedSlideSnippet(null)}
+                onClick={() => setSelectedLearnMatch(null)}
                 className="px-4 py-2 rounded-xl text-slate-600 font-semibold hover:bg-slate-200 cursor-pointer"
               >
                 Kapat
               </button>
 
-              {onOpenNote && (
+              {onNavigateToLearn && (
                 <button
                   onClick={() => {
-                    const noteId = selectedSlideSnippet.note.id;
-                    const pageNo = selectedSlideSnippet.page.pageNumber;
-                    setSelectedSlideSnippet(null);
-                    onOpenNote(noteId, pageNo);
+                    const dId = selectedLearnMatch.match.deckId;
+                    const sNum = selectedLearnMatch.match.slideNumber;
+                    setSelectedLearnMatch(null);
+                    onNavigateToLearn(dId, sNum);
                   }}
-                  className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 cursor-pointer shadow-xs"
+                  className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 cursor-pointer shadow-xs transition-colors"
                 >
-                  <BookOpen className="w-3.5 h-3.5 text-teal-200" />
-                  <span>Ders Notunu Tam Ekranda Aç</span>
+                  <GraduationCap className="w-4 h-4" />
+                  <span>Öğren Sayfasında Tam Ekran Aç</span>
                 </button>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Ham Sorunun Bulunduğu Yer (Arşiv Konumu) Modal */}
+      {selectedRawSourceQuestion && (
+        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[85vh]">
+            {/* Modal Header */}
+            <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-slate-700 flex items-center justify-center text-slate-200">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm sm:text-base">
+                    Ham Soru Arşiv Konumu & Orijinal Belge
+                  </h4>
+                  <p className="text-xs text-slate-400">
+                    {selectedRawSourceQuestion.discipline || 'Tıp'} • {formatCommitteeName(selectedRawSourceQuestion.committeeId)}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setSelectedRawSourceQuestion(null)}
+                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-4 sm:p-6 overflow-y-auto space-y-4 flex-1 text-xs">
+              {/* Source Location Details */}
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2.5">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+                  <span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider">Orijinal Sınav Dosyası:</span>
+                  <span className="font-mono text-xs font-bold text-slate-900 bg-white border border-slate-200 px-2 py-0.5 rounded max-w-[280px] truncate" title={selectedRawSourceQuestion.sourceFile || selectedRawSourceQuestion.sourceNote}>
+                    {selectedRawSourceQuestion.sourceFile || selectedRawSourceQuestion.sourceNote || 'Geçmiş Kurul Arşivi'}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 text-xs">
+                  <div className="bg-white border border-slate-200 rounded-lg p-2.5">
+                    <span className="text-[10px] text-slate-400 font-semibold block">Sınav Yılı / Dönem</span>
+                    <strong className="text-slate-800 font-bold">{selectedRawSourceQuestion.examYear || 'Arşiv'}</strong>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-lg p-2.5">
+                    <span className="text-[10px] text-slate-400 font-semibold block">Soru Numarası</span>
+                    <strong className="text-slate-800 font-bold">Soru #{selectedRawSourceQuestion.questionNumber}</strong>
+                  </div>
+                  <div className="bg-white border border-slate-200 rounded-lg p-2.5 col-span-2 sm:col-span-1">
+                    <span className="text-[10px] text-slate-400 font-semibold block">Belge İçi Sayfa</span>
+                    <strong className="text-slate-800 font-bold">
+                      {selectedRawSourceQuestion.matchedSlidePage ? `Sayfa #${selectedRawSourceQuestion.matchedSlidePage}` : 'Arşiv Kitapçığı'}
+                    </strong>
+                  </div>
+                </div>
+
+                <p className="text-[11px] text-slate-500 italic pt-1">
+                  📌 Bu soru henüz doğrudan bir amfi slaytına bağlanmamıştır; tıp fakültesi geçmiş kurul sınav kitapçığından ve öğrenci hafıza parçalarından derlenmiştir. Orijinal sınav kitapçığındaki konumu gösterilmektedir.
+                </p>
+              </div>
+
+              {/* Raw Question Stem */}
+              <div className="space-y-2">
+                <span className="text-[11px] font-bold text-slate-700 block">Orijinal Ham Soru Metni:</span>
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs sm:text-sm font-serif text-slate-900 leading-relaxed whitespace-pre-wrap">
+                  {selectedRawSourceQuestion.rawStem ||
+                   selectedRawSourceQuestion.rawQuestion?.stem ||
+                   selectedRawSourceQuestion.fragments?.[0]?.text ||
+                   selectedRawSourceQuestion.stem ||
+                   selectedRawSourceQuestion.topic}
+                </div>
+              </div>
+
+              {/* Options */}
+              <div className="space-y-2">
+                <span className="text-[11px] font-bold text-slate-700 block">Seçenekler:</span>
+                <div className="space-y-1.5">
+                  {(selectedRawSourceQuestion.rawQuestion?.options || selectedRawSourceQuestion.options || []).map((opt: any, i: number) => {
+                    const key = typeof opt === 'string' ? String.fromCharCode(65 + i) : opt.key;
+                    const text = typeof opt === 'string' ? opt : opt.text;
+                    const isCorrect = key === (selectedRawSourceQuestion.correctAnswer || selectedRawSourceQuestion.claimedAnswer);
+                    return (
+                      <div
+                        key={key}
+                        className={`p-2.5 rounded-lg border text-xs flex items-start gap-2 ${
+                          isCorrect
+                            ? 'bg-emerald-50 border-emerald-300 text-emerald-950 font-semibold'
+                            : 'bg-white border-slate-200 text-slate-700'
+                        }`}
+                      >
+                        <span className={`w-5 h-5 rounded flex items-center justify-center font-bold text-[11px] shrink-0 ${
+                          isCorrect ? 'bg-emerald-700 text-white' : 'bg-slate-100 text-slate-600'
+                        }`}>
+                          {key}
+                        </span>
+                        <span className="flex-1 leading-snug">{text}</span>
+                        {isCorrect && (
+                          <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
+                            Cevap
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="bg-slate-50 border-t border-slate-200 p-4 flex items-center justify-between shrink-0 text-xs">
+              <button
+                onClick={() => setSelectedRawSourceQuestion(null)}
+                className="px-4 py-2 rounded-xl text-slate-600 font-semibold hover:bg-slate-200 cursor-pointer"
+              >
+                Kapat
+              </button>
+
+              <span className="text-slate-400 text-[11px]">
+                Fakülte Kurul Sınavı Arşivi
+              </span>
             </div>
           </div>
         </div>
