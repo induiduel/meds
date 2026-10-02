@@ -26,6 +26,7 @@ import { QuestionCard } from './components/QuestionCard';
 import { ContributeModal } from './components/ContributeModal';
 import { AddCommitteeModal } from './components/AddCommitteeModal';
 import { PracticeMode } from './components/PracticeMode';
+import { StudyHub } from './components/study/StudyHub';
 import { BookletView } from './components/BookletView';
 import { AdminPanelModal } from './components/AdminPanelModal';
 import { GithubPagesGuideModal } from './components/GithubPagesGuideModal';
@@ -82,7 +83,7 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
 
   // Tab Navigation: 'quick_add' (default simple landing page) | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet'
-  const [activeTab, setActiveTab] = useState<'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet'>('quick_add');
+  const [activeTab, setActiveTab] = useState<'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study'>('quick_add');
 
   // Filters & Search
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Tümü');
@@ -659,7 +660,7 @@ export default function App() {
           questions={questions}
           title={currentCommittee ? `${committeeShortLabel(currentCommittee).charAt(0)}${committeeShortLabel(currentCommittee).slice(1).toLocaleLowerCase('tr-TR')} · Test çöz` : 'Test çöz'}
           subtitle={currentCommittee?.name.split(':').slice(1).join(':').trim() || currentCommittee?.name}
-          onExit={() => setActiveTab('quick_add')}
+          onExit={() => setActiveTab('study')}
           onOpenQuestion={openQuestion}
           onOpenContributeModal={() => {
             setContributeDefaultNumber(undefined);
@@ -932,6 +933,15 @@ export default function App() {
               </div>
             )}
           </div>
+        )}
+
+        {/* Study workspace: solve, self-test, notes */}
+        {activeTab === 'study' && (
+          <StudyHub
+            questions={questions}
+            committees={committees}
+            onStartQuickTest={() => setActiveTab('practice')}
+          />
         )}
 
         {/* TAB: Çıkmış Sorular & AI Redaksiyon Arşivi */}

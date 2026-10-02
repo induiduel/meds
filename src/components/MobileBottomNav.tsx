@@ -45,7 +45,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, set
           <Plus className="w-6 h-6 text-white" strokeWidth={2.4} />
         </span>
       </button>
-      <Item id="practice" label="Test" icon={ListChecks} />
+      <Item id="study" label="Çalış" icon={ListChecks} />
       <Item id="notes" label="Notlar" icon={BookOpenText} />
     </nav>
   );

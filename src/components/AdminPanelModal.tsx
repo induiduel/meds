@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   X, 
   ShieldCheck, 
@@ -39,13 +39,17 @@ import {
   Bell,
   Monitor,
   Play,
-  Square
+  Square,
+  Library,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AdminEditQuestionModal } from './AdminEditQuestionModal';
 import { AdminPastExamImporterModal } from './AdminPastExamImporterModal';
 import { AdminScriptsTab } from './AdminScriptsTab';
 import { InfoPopover } from './InfoPopover';
+import { StatusPill, questionStemText } from './QuickAddHero';
 import { ApiService, safeJsonFetch } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { multiDbManager, DatabaseMode, DatabaseStatus } from '../services/multiDbManager';
@@ -77,6 +81,11 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [editingQuestion, setEditingQuestion] = useState<QuestionItem | null>(null);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  // Question table filters + paging
+  const [qStatus, setQStatus] = useState<'all' | 'completed' | 'draft' | 'empty'>('all');
+  const [qDiscipline, setQDiscipline] = useState('all');
+  const [qPage, setQPage] = useState(0);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [actionMessage, setActionMessage] = useState<string | null>(null);
 
@@ -285,6 +294,28 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         (q?.discipline || '').toLowerCase().includes(searchQuery.toLowerCase())
       )
   );
+
+  const Q_PAGE_SIZE = 25;
+  const tableQuestions = filteredQuestions
+    .filter((q) => qDiscipline === 'all' || q.discipline === qDiscipline)
+    .filter((q) =>
+      qStatus === 'all'
+        ? true
+        : qStatus === 'completed'
+        ? q.status === 'completed'
+        : qStatus === 'empty'
+        ? q.status === 'empty' && (q.fragments?.length || 0) === 0
+        : q.status !== 'completed' && ((q.fragments?.length || 0) > 0 || (q.options?.length || 0) > 0)
+    )
+    .sort((a, b) => (a.questionNumber || 0) - (b.questionNumber || 0));
+  const qPageCount = Math.max(1, Math.ceil(tableQuestions.length / Q_PAGE_SIZE));
+  const qPageSafe = Math.min(qPage, qPageCount - 1);
+  const pagedQuestions = tableQuestions.slice(qPageSafe * Q_PAGE_SIZE, (qPageSafe + 1) * Q_PAGE_SIZE);
+  const tableDisciplines = [...new Set(currentCommitteeQuestions.map((q) => q.discipline).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'tr'));
+  const qCounts = {
+    completed: currentCommitteeQuestions.filter((q) => q.status === 'completed').length,
+    draft: currentCommitteeQuestions.filter((q) => q.status !== 'completed' && ((q.fragments?.length || 0) > 0 || (q.options?.length || 0) > 0)).length,
+  };
 
   // Handle Question Edit
   const handleSaveQuestion = async (updated: Partial<QuestionItem>) => {
@@ -765,183 +796,324 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     }
   }, [isOpen]);
 
+  useEffect(() => setQPage(0), [searchQuery, qStatus, qDiscipline]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    dialogRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      previouslyFocused?.focus?.();
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      if (editingQuestion || confirmDialog || showSqlSchemaModal || isPastExamImporterOpen) return;
+      onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [isOpen, editingQuestion, confirmDialog, showSqlSchemaModal, isPastExamImporterOpen, onClose]);
+
   if (!isOpen) return null;
 
+  const sections: {
+    id: typeof activeTab;
+    label: string;
+    hint: string;
+    icon: React.ElementType;
+    count?: number;
+    onSelect?: () => void;
+  }[] = [
+    { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını düzenle, sil, içe aktar', icon: Library, count: currentCommitteeQuestions.length },
+    { id: 'users', label: 'Kullanıcılar', hint: 'Öğrenciler, yöneticiler ve e-posta', icon: Users, count: usersList.length, onSelect: loadUsersData },
+    { id: 'scripts', label: 'Script ve görevler', hint: 'Veri temizliği ve toplu işlemler', icon: Terminal },
+    { id: 'automations', label: 'Otomasyonlar', hint: 'Masaüstü işleyici, Drive, bildirimler', icon: Zap },
+    { id: 'database', label: 'Veritabanı ve yedek', hint: 'Aktif veritabanı, dışa/içe aktarım', icon: Database },
+  ];
+  const current = sections.find((x) => x.id === activeTab) || sections[0];
+  const dbDots: { label: string; state: 'ok' | 'warn' | 'off' }[] = [
+    { label: 'Firebase', state: dbStatuses?.firebase.status === 'quota_exceeded' ? 'warn' : dbStatuses ? 'ok' : 'off' },
+    { label: 'Supabase', state: dbStatuses?.supabase.status === 'online' ? 'ok' : dbStatuses ? 'warn' : 'off' },
+    { label: 'Yerel PC', state: dbStatuses?.localPc.status === 'online' ? 'ok' : 'off' },
+  ];
+  const dotCls = { ok: 'bg-[#10B981]', warn: 'bg-[#F59E0B]', off: 'bg-[#AEB8C3]' };
+  const dotText = { ok: 'çevrimiçi', warn: 'uyarı', off: 'kapalı' };
+
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
-      <div className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl border border-slate-200 overflow-hidden my-4 sm:my-6 flex flex-col max-h-[92vh]">
-        {/* Header */}
-        <div className="bg-slate-900 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-400/30 flex items-center justify-center">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h3 className="font-bold text-sm sm:text-base">MedSoru Yönetici & Otomasyon Kontrol Merkezi</h3>
-                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                  Admin
-                </span>
-              </div>
-              <p className="text-xs text-slate-400">
-                Hesap: <strong className="text-teal-300">{adminEmail}</strong> (Tam Yetki)
-              </p>
+    <div className="fixed inset-0 z-50 bg-[rgba(14,26,38,0.55)] flex items-stretch sm:items-center justify-center sm:p-4" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="admin-panel-title"
+        tabIndex={-1}
+        className="admin-panel bg-white w-full max-w-[1360px] h-full sm:h-[min(94vh,960px)] sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)] overflow-hidden grid grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[248px_minmax(0,1fr)] outline-none text-ink"
+      >
+        {/* ---------- Sidebar ---------- */}
+        <aside className="bg-canvas border-b lg:border-b-0 lg:border-r border-line flex lg:flex-col min-w-0">
+          <div className="hidden lg:flex items-center gap-2.5 px-5 pt-5 pb-4">
+            <span className="w-9 h-9 rounded-[10px] bg-ink text-white flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-[18px] h-[18px]" />
+            </span>
+            <div className="min-w-0">
+              <div className="font-display font-bold text-[17px] tracking-[-0.02em] leading-tight">Yönetim</div>
+              <div className="text-[12px] text-ink-3 truncate" title={adminEmail}>{adminEmail}</div>
             </div>
           </div>
+
+          <nav aria-label="Yönetim bölümleri" className="flex lg:flex-col gap-1 px-2 py-2 lg:px-3 lg:py-0 overflow-x-auto no-scrollbar flex-1 min-w-0">
+            {sections.map((sec) => {
+              const on = activeTab === sec.id;
+              const Icon = sec.icon;
+              return (
+                <button
+                  key={sec.id}
+                  type="button"
+                  onClick={() => {
+                    setActiveTab(sec.id);
+                    sec.onSelect?.();
+                  }}
+                  aria-current={on ? 'page' : undefined}
+                  className={`shrink-0 lg:w-full min-h-10 px-3 rounded-[10px] flex items-center gap-2.5 text-left cursor-pointer transition-colors ${
+                    on ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink hover:bg-white/60'
+                  }`}
+                >
+                  <Icon className={`w-[18px] h-[18px] shrink-0 ${on ? 'text-accent' : ''}`} />
+                  <span className="text-[14px] whitespace-nowrap flex-1">{sec.label}</span>
+                  {sec.count !== undefined && <span className="hidden lg:inline font-mono text-[12px] text-ink-3">{sec.count}</span>}
+                </button>
+              );
+            })}
+          </nav>
+
+          <div className="hidden lg:flex flex-col gap-2 px-5 py-4 border-t border-line">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3">Veritabanları</span>
+            {dbDots.map((d) => (
+              <span key={d.label} className="flex items-center gap-2 text-[13px] text-ink-2">
+                <span className={`w-2 h-2 rounded-full ${dotCls[d.state]}`} aria-hidden="true" />
+                {d.label}
+                <span className="ml-auto text-[12px] text-ink-3">{dotText[d.state]}</span>
+              </span>
+            ))}
+            <span className="text-[12px] text-ink-3">Aktif mod: <strong className="text-ink-2 font-semibold">{dbMode}</strong></span>
+          </div>
+
           <button
+            type="button"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 cursor-pointer"
+            aria-label="Yönetim panelini kapat"
+            className="lg:hidden shrink-0 w-11 h-11 m-1.5 rounded-[10px] flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
-        </div>
+        </aside>
 
-        {/* Tab Navigation */}
-        <div className="bg-slate-100 border-b border-slate-200 px-3 sm:px-4 flex items-center gap-1 sm:gap-2 shrink-0 overflow-x-auto no-scrollbar whitespace-nowrap">
-          <button
-            onClick={() => setActiveTab('questions')}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
-              activeTab === 'questions'
-                ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <BookOpen className="w-3.5 h-3.5 text-teal-600" />
-            <span>Soru Havuzu ({questions.length})</span>
-          </button>
-
-          <button
-            onClick={() => {
-              setActiveTab('users');
-              loadUsersData();
-            }}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
-              activeTab === 'users'
-                ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Users className="w-3.5 h-3.5 text-teal-600" />
-            <span>Kullanıcı Yönetimi ({usersList.length})</span>
-            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-          </button>
-
-          <button
-            onClick={() => setActiveTab('scripts')}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
-              activeTab === 'scripts'
-                ? 'border-indigo-600 text-indigo-900 bg-white shadow-2xs font-black'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Terminal className="w-3.5 h-3.5 text-indigo-600" />
-            <span>🛠️ Script & Görev Merkezi</span>
-            <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
-          </button>
-
-          <button
-            onClick={() => setActiveTab('automations')}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
-              activeTab === 'automations'
-                ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Zap className="w-3.5 h-3.5 text-amber-600" />
-            <span>Otomasyonlar & Masaüstü İşleyici</span>
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          </button>
-
-          <button
-            onClick={() => setActiveTab('database')}
-            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ${
-              activeTab === 'database'
-                ? 'border-teal-700 text-teal-900 bg-white shadow-2xs'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Database className="w-3.5 h-3.5 text-teal-600" />
-            <span>Veritabanı & Yedekler</span>
-          </button>
-        </div>
-
-        {/* Action alert message */}
-        {actionMessage && (
-          <div className="bg-teal-50 border-b border-teal-200 px-5 py-2 text-xs text-teal-900 flex items-center justify-between">
-            <span className="flex items-center gap-1.5 font-medium">
-              <CheckCircle2 className="w-4 h-4 text-teal-600" />
-              {actionMessage}
-            </span>
+        {/* ---------- Main ---------- */}
+        <div className="flex flex-col min-h-0 min-w-0 admin-body">
+          <header className="flex items-center gap-3 px-4 sm:px-6 py-3 sm:py-4 border-b border-line shrink-0">
+            <div className="min-w-0 flex-1">
+              <h2 id="admin-panel-title" className="m-0 font-display font-bold text-[20px] sm:text-[22px] tracking-[-0.02em] leading-tight">
+                {current.label}
+              </h2>
+              <p className="m-0 text-[13px] text-ink-2 truncate">{current.hint}</p>
+            </div>
+            {activeTab === 'questions' && (
+              <button type="button" onClick={() => setIsPastExamImporterOpen(true)} className="hidden sm:inline-flex h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold items-center gap-2 cursor-pointer">
+                <Upload className="w-4 h-4" /> Çıkmış soru yükle
+              </button>
+            )}
             <button
-              onClick={() => setActionMessage(null)}
-              className="text-teal-600 hover:text-teal-800 text-xs font-bold"
+              type="button"
+              onClick={onClose}
+              aria-label="Yönetim panelini kapat"
+              title="Kapat (Esc)"
+              className="hidden lg:flex w-10 h-10 rounded-[10px] border border-line items-center justify-center text-ink-2 hover:text-ink hover:border-line-2 cursor-pointer"
             >
-              Kapat
+              <X className="w-[18px] h-[18px]" />
             </button>
-          </div>
-        )}
+          </header>
 
-        {/* Tab 1: Questions Management */}
+          {actionMessage && (
+            <div role="status" className="mx-4 sm:mx-6 mt-3 px-4 py-2.5 rounded-xl bg-ok-soft text-[14px] text-ink flex items-center justify-between gap-3 shrink-0">
+              <span className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
+                {actionMessage}
+              </span>
+              <button type="button" onClick={() => setActionMessage(null)} className="h-8 px-2 rounded-lg text-ok font-semibold text-[13px] cursor-pointer">
+                Kapat
+              </button>
+            </div>
+          )}
+
+        {/* Questions management */}
         {activeTab === 'questions' && (
-          <div className="p-4 sm:p-6 space-y-4 overflow-y-auto flex-1 text-xs">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div className="relative flex-1">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <div className="flex-1 min-h-0 overflow-y-auto px-4 sm:px-6 py-4 flex flex-col gap-3">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
+              {[
+                { label: 'Toplam', n: currentCommitteeQuestions.length, cls: 'text-ink' },
+                { label: 'Doğrulandı', n: qCounts.completed, cls: 'text-ok' },
+                { label: 'Taslak', n: qCounts.draft, cls: 'text-warn' },
+              ].map((st) => (
+                <div key={st.label} className="rounded-xl border border-line px-3 py-2.5">
+                  <div className="text-[12px] text-ink-2">{st.label}</div>
+                  <div className={`font-mono text-[20px] ${st.cls}`}>{st.n}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-center gap-2">
+              <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field flex-1 min-w-0 focus-within:border-accent">
+                <Search className="w-4 h-4 text-ink-2 shrink-0" />
+                <span className="sr-only">Soru ara</span>
                 <input
-                  type="text"
+                  type="search"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Soru no, konu veya branş ara..."
-                  className="w-full pl-9 pr-4 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-teal-500"
+                  placeholder="Soru no, konu veya ders ara"
+                  className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px]"
                 />
+              </label>
+              <div className="flex gap-2 overflow-x-auto no-scrollbar">
+                <div role="radiogroup" aria-label="Durum" className="inline-flex gap-1 bg-canvas rounded-[10px] p-[3px] shrink-0">
+                  {(
+                    [
+                      ['all', 'Tümü'],
+                      ['completed', 'Doğrulanan'],
+                      ['draft', 'Taslak'],
+                      ['empty', 'Boş'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button
+                      key={id}
+                      type="button"
+                      role="radio"
+                      aria-checked={qStatus === id}
+                      onClick={() => setQStatus(id)}
+                      className={`h-8 px-2.5 rounded-lg text-[13px] cursor-pointer whitespace-nowrap ${
+                        qStatus === id ? 'bg-white font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)] text-ink' : 'text-ink-2'
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+                <label className="sr-only" htmlFor="admin-q-discipline">Ders</label>
+                <select
+                  id="admin-q-discipline"
+                  value={qDiscipline}
+                  onChange={(e) => setQDiscipline(e.target.value)}
+                  className="h-[38px] border border-line-2 rounded-[10px] px-2.5 text-[13px] bg-white cursor-pointer shrink-0 max-w-[200px]"
+                >
+                  <option value="all">Tüm dersler</option>
+                  {tableDisciplines.map((d) => (
+                    <option key={d} value={d}>
+                      {d}
+                    </option>
+                  ))}
+                </select>
               </div>
-
-              <button
-                onClick={() => setIsPastExamImporterOpen(true)}
-                className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-4 py-2 rounded-lg flex items-center gap-1.5 shadow-xs cursor-pointer"
-              >
-                <Sparkles className="w-4 h-4 text-teal-200" />
-                <span>Çıkmış Soru Yükle (PDF/DOCX)</span>
+              <button type="button" onClick={() => setIsPastExamImporterOpen(true)} className="sm:hidden h-10 px-3.5 rounded-[10px] bg-accent text-white text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer">
+                <Upload className="w-4 h-4" /> Çıkmış soru yükle
               </button>
             </div>
 
-            <div className="space-y-2">
-              {filteredQuestions.filter(Boolean).slice(0, 30).map((q) => (
-                <div
-                  key={q.id || ('q-' + q.questionNumber)}
-                  className="p-3 bg-white rounded-lg border border-slate-200 hover:border-teal-400 transition-all flex items-center justify-between gap-3"
-                >
-                  <div className="space-y-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-slate-900">#{q.questionNumber || '?'}</span>
-                      <span className="bg-teal-100 text-teal-800 text-[10px] font-bold px-2 py-0.5 rounded">
-                        {q.discipline || 'Tıp'}
-                      </span>
-                      <span className="text-slate-600 font-medium truncate">{q.topic || 'Genel Konu'}</span>
-                    </div>
-                    <p className="text-slate-500 line-clamp-1 italic">
-                      {q.reconstruction?.stem || q.fragments?.[0]?.text || 'Soru metni henüz tamamlanmadı'}
-                    </p>
-                  </div>
+            <div className="rounded-xl border border-line overflow-hidden">
+              <table className="w-full text-[14px] border-collapse">
+                <caption className="sr-only">Kurul soruları</caption>
+                <thead className="bg-canvas text-[12px] text-ink-2">
+                  <tr>
+                    <th scope="col" className="text-left font-semibold px-3 py-2 w-[64px]">No</th>
+                    <th scope="col" className="text-left font-semibold px-3 py-2">Soru</th>
+                    <th scope="col" className="text-left font-semibold px-3 py-2 hidden md:table-cell w-[120px]">Durum</th>
+                    <th scope="col" className="text-right font-semibold px-3 py-2 hidden lg:table-cell w-[80px]">Parça</th>
+                    <th scope="col" className="text-right font-semibold px-3 py-2 w-[96px]"><span className="sr-only">İşlemler</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pagedQuestions.length === 0 && (
+                    <tr>
+                      <td colSpan={5} className="px-3 py-8 text-center text-ink-2">Bu filtrede soru yok.</td>
+                    </tr>
+                  )}
+                  {pagedQuestions.map((q) => (
+                    <tr key={q.id || 'q-' + q.questionNumber} className="border-t border-line-soft hover:bg-[#FAFBFC] align-top">
+                      <td className="px-3 py-2.5 font-mono text-[13px] text-ink-2">{q.isUnassignedNumber ? '—' : q.questionNumber || '?'}</td>
+                      <td className="px-3 py-2.5 min-w-0">
+                        <div className="text-[12px] font-semibold text-ink-2 truncate">
+                          {q.discipline || 'Tıp'}
+                          {q.topic && !/hatırlanan soru|çıkmış sorusu/i.test(q.topic) ? ` · ${q.topic}` : ''}
+                        </div>
+                        <div className="text-[14px] text-ink line-clamp-2 break-words">{questionStemText(q) || 'Soru metni henüz yok'}</div>
+                        <div className="md:hidden mt-1">
+                          <StatusPill status={q.status} hasFragments={(q.fragments?.length || 0) > 0} />
+                        </div>
+                      </td>
+                      <td className="px-3 py-2.5 hidden md:table-cell">
+                        <StatusPill status={q.status} hasFragments={(q.fragments?.length || 0) > 0} />
+                      </td>
+                      <td className="px-3 py-2.5 hidden lg:table-cell text-right font-mono text-[13px] text-ink-2">{q.fragments?.length || 0}</td>
+                      <td className="px-2 py-1.5">
+                        <div className="flex justify-end gap-1">
+                          <button
+                            type="button"
+                            onClick={() => setEditingQuestion(q)}
+                            aria-label={`Soru ${q.questionNumber} düzenle`}
+                            title="Düzenle"
+                            className="w-10 h-10 rounded-lg flex items-center justify-center text-ink-2 hover:text-accent hover:bg-accent-soft cursor-pointer"
+                          >
+                            <Edit3 className="w-4 h-4" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleDeleteQuestion(q)}
+                            aria-label={`Soru ${q.questionNumber} sil`}
+                            title="Sil"
+                            className="w-10 h-10 rounded-lg flex items-center justify-center text-ink-2 hover:text-bad-text hover:bg-bad-soft cursor-pointer"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-                  <div className="flex items-center gap-1 shrink-0">
-                    <button
-                      onClick={() => setEditingQuestion(q)}
-                      className="p-1.5 hover:bg-slate-100 rounded text-slate-600 hover:text-teal-700 cursor-pointer"
-                      title="Düzenle"
-                    >
-                      <Edit3 className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => handleDeleteQuestion(q)}
-                      className="p-1.5 hover:bg-rose-50 rounded text-slate-400 hover:text-rose-600 cursor-pointer"
-                      title="Sil"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              ))}
+            <div className="flex items-center justify-between gap-2 text-[13px] text-ink-2">
+              <span>
+                {tableQuestions.length === 0 ? 0 : qPageSafe * Q_PAGE_SIZE + 1}–{Math.min(tableQuestions.length, (qPageSafe + 1) * Q_PAGE_SIZE)} / {tableQuestions.length}
+              </span>
+              <div className="flex items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => setQPage(Math.max(0, qPageSafe - 1))}
+                  disabled={qPageSafe === 0}
+                  aria-label="Önceki sayfa"
+                  className="w-10 h-10 rounded-[10px] border border-line-2 flex items-center justify-center cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <span className="font-mono px-2">
+                  {qPageSafe + 1}/{qPageCount}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setQPage(Math.min(qPageCount - 1, qPageSafe + 1))}
+                  disabled={qPageSafe >= qPageCount - 1}
+                  aria-label="Sonraki sayfa"
+                  className="w-10 h-10 rounded-[10px] border border-line-2 flex items-center justify-center cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -2306,17 +2478,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
           </div>
         )}
 
-        {/* Footer */}
-        <div className="bg-slate-50 border-t border-slate-200 p-4 flex items-center justify-between text-xs text-slate-500 shrink-0">
-          <span>
-            nofrostlife@gmail.com olarak yönetici yetkilerine sahipsiniz.
-          </span>
-          <button
-            onClick={onClose}
-            className="bg-slate-800 hover:bg-slate-900 text-white font-semibold px-4 py-1.5 rounded-lg text-xs cursor-pointer"
-          >
-            Kapat
-          </button>
         </div>
       </div>
 
