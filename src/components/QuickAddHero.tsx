@@ -111,7 +111,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Biyokimya', 'Halk Sağlığı', 'İç Hastalıkları'];
 
   const [mode, setMode] = useState<Mode>('stem');
-  const [text, setText] = useState('');
+  // Each mode keeps its own text: typing a stem must not leak into the clue or answer note
+  type TextMode = Exclude<Mode, 'option'>;
+  const [texts, setTexts] = useState<Record<TextMode, string>>({ stem: '', clue: '', answer: '' });
+  const text = mode === 'option' ? '' : texts[mode];
+  const setText = (v: string) => mode !== 'option' && setTexts((prev) => ({ ...prev, [mode]: v }));
+  const hasAnyText = Object.values(texts).some((t) => t.trim());
   const [options, setOptions] = useState<Record<OptionKey, string>>({ A: '', B: '', C: '', D: '', E: '' });
   const [claimedAnswer, setClaimedAnswer] = useState<OptionKey | undefined>(undefined);
   const [discipline, setDiscipline] = useState(disciplines[0]);
@@ -138,7 +143,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const isCollecting = committee?.id === activeCommitteeId;
   const shortName = committee ? titleCase(committee) : 'Kurul';
 
-  const canSubmit = !!text.trim() || KEYS.some((k) => options[k].trim()) || !!claimedAnswer;
+  const canSubmit = hasAnyText || KEYS.some((k) => options[k].trim()) || !!claimedAnswer;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -151,14 +156,21 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     }
 
     const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
-    if (!text.trim() && optionsList.length === 0 && !claimedAnswer) {
+    if (!hasAnyText && optionsList.length === 0 && !claimedAnswer) {
       setFormError('Sorudan aklında kalan en az bir kelime, şık ya da cevap yaz.');
       return;
     }
 
     const num = parseInt(questionNumber, 10);
     const hasNumber = Number.isFinite(num) && num >= 1 && num <= target;
-    const prefix = mode === 'clue' && text.trim() ? 'İpucu: ' : '';
+    // Everything written in the different modes goes in as one fragment
+    const fragmentText = [
+      texts.stem.trim(),
+      texts.clue.trim() ? `İpucu: ${texts.clue.trim()}` : '',
+      texts.answer.trim() ? `Cevap notu: ${texts.answer.trim()}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n');
     const savedName = localStorage.getItem(SAVED_NAME_KEY) || '';
 
     setIsSubmitting(true);
@@ -169,14 +181,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         isUnknownNumber: !hasNumber,
         discipline,
         topic: `${discipline} Hatırlanan Soru`,
-        fragmentText: prefix + text.trim(),
+        fragmentText,
         author: currentUser?.displayName || savedName || 'Dönem 3 Öğrencisi',
         authorUid: currentUser?.uid,
         authorStudentNumber: currentUser?.studentNumber || undefined,
         claimedAnswer,
         options: optionsList.length > 0 ? optionsList : undefined,
       });
-      setText('');
+      setTexts({ stem: '', clue: '', answer: '' });
       setOptions({ A: '', B: '', C: '', D: '', E: '' });
       setClaimedAnswer(undefined);
       setQuestionNumber('');
