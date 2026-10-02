@@ -384,7 +384,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   );
 
   const Q_PAGE_SIZE = 25;
+  const [hiddenQuestionIds, setHiddenQuestionIds] = useState<Set<string>>(new Set());
   const tableQuestions = filteredQuestions
+    .filter((q) => !hiddenQuestionIds.has(q.id))
     .filter((q) => qDiscipline === 'all' || q.discipline === qDiscipline)
     .filter((q) =>
       qStatus === 'all'
@@ -425,10 +427,19 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       description: `Bu soruyu ve öğrencilerin girdiği tüm hafıza parçalarını kalıcı olarak silmek üzeresiniz. Bu işlem geri alınamaz.`,
       onConfirm: async () => {
         setIsProcessing(true);
+        // Anında listeden kaldır; hata olursa geri getir.
+        setHiddenQuestionIds((prev) => new Set([...prev, question.id]));
         try {
           await ApiService.adminDeleteQuestion(adminEmail, question.id);
-          setActionMessage(`Soru #${question.questionNumber} silindi.`);
+          setActionMessage(`Soru #${question.questionNumber} silindi (yerel + Supabase + sunucu).`);
           await onRefreshData();
+        } catch (e: any) {
+          setHiddenQuestionIds((prev) => {
+            const next = new Set(prev);
+            next.delete(question.id);
+            return next;
+          });
+          setActionMessage(`Silinemedi: ${e.message || 'bilinmeyen hata'}`);
         } finally {
           setIsProcessing(false);
           setConfirmDialog(null);

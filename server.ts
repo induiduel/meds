@@ -90,11 +90,50 @@ process.on('unhandledRejection', (reason, promise) => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Supabase PostgreSQL Client & Cloud Bridge
-const SUPABASE_URL = process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
-const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
+// ==============================================================================
+// Dual Supabase Hybrid Bridge: Local-First (Docker) + Cloud Backup (Online)
+// ==============================================================================
+const LOCAL_SUPABASE_URL = process.env.LOCAL_SUPABASE_URL || 'http://127.0.0.1:8000';
+const LOCAL_SUPABASE_KEY = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_KEY || '';
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+const CLOUD_SUPABASE_URL = process.env.CLOUD_SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
+const CLOUD_SUPABASE_KEY = process.env.CLOUD_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_KEY || '';
+
+export const localSupabase = createClient(LOCAL_SUPABASE_URL, LOCAL_SUPABASE_KEY);
+export const cloudSupabase = createClient(CLOUD_SUPABASE_URL, CLOUD_SUPABASE_KEY);
+
+// Primary client: localSupabase if Docker is alive, fallback to cloudSupabase
+export let supabase = localSupabase;
+export let isLocalSupabaseActive = true;
+
+export async function detectActiveSupabase(): Promise<boolean> {
+  const checkUrls = [LOCAL_SUPABASE_URL, 'http://127.0.0.1:8000', 'http://localhost:8000'];
+  for (const url of checkUrls) {
+    try {
+      const res = await fetch(`${url}/rest/v1/`, { method: 'HEAD', signal: AbortSignal.timeout(2000) });
+      if (res.status === 200 || res.status === 401) {
+        if (!isLocalSupabaseActive) {
+          console.log('⚡ [Supabase Bridge] Yerel Docker Supabase aktif, yerel veritabanı devraldı.');
+        }
+        isLocalSupabaseActive = true;
+        supabase = localSupabase;
+        return true;
+      }
+    } catch (_) {}
+  }
+
+  if (isLocalSupabaseActive) {
+    console.warn('⚠️ [Supabase Bridge] Yerel Docker Supabase ulaşılamaz, Cloud Supabase yedek moduna geçildi.');
+  }
+  isLocalSupabaseActive = false;
+  supabase = cloudSupabase;
+  return false;
+}
+
+// Initial detection
+detectActiveSupabase();
+// Heartbeat check every 30 seconds
+setInterval(detectActiveSupabase, 30000);
 
 function cleanForPostgres<T>(data: T): T {
   if (data === null || data === undefined) return data;
@@ -116,7 +155,7 @@ function cleanForPostgres<T>(data: T): T {
 
 export async function mirrorQuestionToSupabase(question: any) {
   try {
-    if (!supabase || !question?.id) return;
+    if (!question?.id) return;
     const row = cleanForPostgres({
       id: question.id,
       committee_id: question.committeeId,
@@ -133,7 +172,11 @@ export async function mirrorQuestionToSupabase(question: any) {
       data: question,
       updated_at: new Date().toISOString(),
     });
-    await supabase.from('questions').upsert([row], { onConflict: 'id' });
+    if (localSupabase && isLocalSupabaseActive) {
+      await localSupabase.from('questions').upsert([row], { onConflict: 'id' });
+    } else if (cloudSupabase) {
+      await cloudSupabase.from('questions').upsert([row], { onConflict: 'id' });
+    }
   } catch (err: any) {
     console.warn('[Supabase Mirror] Question save warning:', err.message);
   }
@@ -141,7 +184,7 @@ export async function mirrorQuestionToSupabase(question: any) {
 
 export async function mirrorPastQuestionToSupabase(question: any) {
   try {
-    if (!supabase || !question?.id) return;
+    if (!question?.id) return;
     const row = cleanForPostgres({
       id: question.id,
       committee_id: question.committeeId,
@@ -165,7 +208,11 @@ export async function mirrorPastQuestionToSupabase(question: any) {
       data: question,
       updated_at: new Date().toISOString(),
     });
-    await supabase.from('past_questions').upsert([row], { onConflict: 'id' });
+    if (localSupabase && isLocalSupabaseActive) {
+      await localSupabase.from('past_questions').upsert([row], { onConflict: 'id' });
+    } else if (cloudSupabase) {
+      await cloudSupabase.from('past_questions').upsert([row], { onConflict: 'id' });
+    }
   } catch (err: any) {
     console.warn('[Supabase Mirror] Past question save warning:', err.message);
   }
@@ -173,7 +220,7 @@ export async function mirrorPastQuestionToSupabase(question: any) {
 
 export async function mirrorLectureNoteToSupabase(note: any) {
   try {
-    if (!supabase || !note?.id) return;
+    if (!note?.id) return;
     const row = cleanForPostgres({
       id: note.id,
       committee_id: note.committeeId || 'donem3-kurul1',
@@ -183,10 +230,71 @@ export async function mirrorLectureNoteToSupabase(note: any) {
       page_count: note.pages ? note.pages.length : (note.pageCount || 0),
       data: note,
     });
-    await supabase.from('lecture_notes').upsert([row], { onConflict: 'id' });
+    if (localSupabase && isLocalSupabaseActive) {
+      await localSupabase.from('lecture_notes').upsert([row], { onConflict: 'id' });
+    } else if (cloudSupabase) {
+      await cloudSupabase.from('lecture_notes').upsert([row], { onConflict: 'id' });
+    }
   } catch (err: any) {
     console.warn('[Supabase Mirror] Lecture note save warning:', err.message);
   }
+}
+
+export async function mirrorUserToSupabase(user: any) {
+  try {
+    if (!user || (!user.uid && !user.email)) return;
+    const userRow = cleanForPostgres({
+      uid: user.uid,
+      email: user.email,
+      display_name: user.displayName || user.name || user.email?.split('@')[0],
+      student_number: user.studentNumber || null,
+      role: user.role || 'student',
+      data: user,
+      updated_at: new Date().toISOString(),
+    });
+
+    const promises: Promise<any>[] = [];
+    if (localSupabase && isLocalSupabaseActive) {
+      promises.push(Promise.resolve(localSupabase.from('users').upsert([userRow], { onConflict: 'uid' })));
+    }
+    if (cloudSupabase) {
+      promises.push(
+        Promise.resolve(cloudSupabase.from('users').upsert([userRow], { onConflict: 'uid' })).catch((e: any) => {
+          console.warn('[CloudUserSync] Cloud Supabase user sync warning:', e.message);
+        })
+      );
+    }
+    await Promise.allSettled(promises);
+  } catch (err: any) {
+    console.warn('[Supabase Mirror] User save warning:', err.message);
+  }
+}
+
+/**
+ * Sunucu-yetkili silme fan-out'u: gizli anahtar RLS'yi aştığı için
+ * Supabase kopyası buradan garanti silinir (istemci anahtarı yetmeyebilir).
+ * Yerel + buluttan dönen kanal raporu, sessiz başarısızlığı bitirir.
+ */
+export async function deleteFromSupabaseEverywhere(
+  table: 'questions' | 'past_questions' | 'users',
+  id: string
+): Promise<{ local: boolean; cloud: boolean }> {
+  const result = { local: false, cloud: false };
+  const key = table === 'users' ? 'uid' : 'id';
+  try {
+    if (localSupabase && isLocalSupabaseActive) {
+      const { error } = await localSupabase.from(table).delete().eq(key, id);
+      if (!error) result.local = true;
+    }
+  } catch (_) {}
+  try {
+    if (cloudSupabase) {
+      const { error } = await cloudSupabase.from(table).delete().eq(key, id);
+      if (!error) result.cloud = true;
+    }
+  } catch (_) {}
+  // Not: gizli anahtar RLS'yi aşar; iki kanal da dürüstçe raporlanır.
+  return result;
 }
 
 const app = express();
@@ -203,7 +311,7 @@ app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, x-admin-email');
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
@@ -1193,6 +1301,28 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
     res.json({ success: true, comment: newComment, updatedReconstruction: q.reconstruction });
   } catch (err: any) {
     res.status(500).json({ error: 'Yorum kaydedilemedi: ' + err.message });
+  }
+});
+
+// Yönetim konsolu: çıkmış sorudaki bir yorumu sil (moderasyon)
+app.delete('/api/past-exams/:id/comments/:commentId', requireAdmin, (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+    const before = Array.isArray(q.comments) ? q.comments.length : 0;
+    q.comments = (q.comments || []).filter((c: any) => c?.id !== req.params.commentId);
+    if (q.comments.length === before) {
+      return res.status(404).json({ error: 'Yorum bulunamadı.' });
+    }
+    q.updatedAt = new Date().toISOString();
+    savePastQuestionsDb(list);
+    mirrorPastQuestionToSupabase(q);
+    res.json({ success: true, message: 'Yorum silindi.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Yorum silinemedi: ' + err.message });
   }
 });
 
@@ -2679,6 +2809,102 @@ app.post('/api/admin/drive/settings', requireAdmin, (req, res) => {
   }
 });
 
+// -------------------------------------------------------------
+// Yönetim Konsolu (manage.nofrostlife.com.tr) Destek Uçları
+// -------------------------------------------------------------
+const MANAGE_SETTINGS_FILE = path.join(__dirname, 'data', 'manage_settings.json');
+const MANAGE_CONSOLE_LOG_FILE = path.join(__dirname, 'logs', 'manage-console.log');
+const manageConsoleLogRing: Array<{ ts: string; level: string; source: string; message: string }> = [];
+
+function getManageSettings() {
+  const defaults = {
+    backupEnabled: true,
+    backupHours: ['03:00'],
+    backupScope: 'all',
+    aiAutoRunEnabled: false,
+    aiWindows: [{ start: '02:00', end: '05:00' }],
+    aiModel: 'gemini-3.8-flash',
+    notifyOnError: true,
+  };
+  try {
+    if (fs.existsSync(MANAGE_SETTINGS_FILE)) {
+      return { ...defaults, ...JSON.parse(fs.readFileSync(MANAGE_SETTINGS_FILE, 'utf8')) };
+    }
+  } catch (_) {}
+  return defaults;
+}
+
+app.get('/api/admin/manage-settings', requireAdmin, (_req, res) => {
+  res.json({ success: true, settings: getManageSettings() });
+});
+
+app.post('/api/admin/manage-settings', requireAdmin, (req, res) => {
+  try {
+    const merged = { ...getManageSettings(), ...(req.body || {}), updatedAt: new Date().toISOString() };
+    if (!fs.existsSync(path.dirname(MANAGE_SETTINGS_FILE))) {
+      fs.mkdirSync(path.dirname(MANAGE_SETTINGS_FILE), { recursive: true });
+    }
+    fs.writeFileSync(MANAGE_SETTINGS_FILE, JSON.stringify(merged, null, 2), 'utf8');
+    res.json({ success: true, settings: merged, message: 'Yönetim konsolu otomasyon ayarları kaydedildi.' });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: 'Ayarlar kaydedilemedi: ' + err.message });
+  }
+});
+
+// Bildirimi çözüldü olarak işaretle: önce past_question_reports tablosu, sonra
+// sorunun gömülü reports dizisi güncellenir. Bulut kapalıysa bile 200 dönülür
+// ki konsol yerelde kapatabilsin.
+app.post('/api/admin/reports/:id/resolve', requireAdmin, async (req, res) => {
+  const reportId = String(req.params.id || '');
+  const questionId = String(req.body?.questionId || '');
+  try {
+    const client = (supabase as any)?.from ? supabase : cloudSupabase;
+    try {
+      await client.from('past_question_reports').update({ status: 'resolved' }).eq('id', reportId);
+    } catch (_) {}
+    if (questionId) {
+      try {
+        const { data: row } = await client.from('past_questions').select('id, reports, data').eq('id', questionId).single();
+        const list = Array.isArray((row as any)?.reports) ? (row as any).reports : [];
+        const next = list.map((r: any) => (r?.id === reportId ? { ...r, status: 'resolved' } : r));
+        if (next.length !== list.length || JSON.stringify(next) !== JSON.stringify(list)) {
+          await client.from('past_questions').update({ reports: next, updated_at: new Date().toISOString() }).eq('id', questionId);
+        }
+      } catch (_) {}
+    }
+    res.json({ success: true, message: 'Bildirim çözüldü olarak işaretlendi.' });
+  } catch (err: any) {
+    res.json({ success: true, message: 'Sunucuda tam çözülemedi ama konsol yerelde kapatabilir: ' + (err?.message || '') });
+  }
+});
+
+app.post('/api/admin/console-logs', (req, res) => {
+  try {
+    const entry = {
+      ts: String(req.body?.ts || new Date().toISOString()),
+      level: String(req.body?.level || 'log').slice(0, 16),
+      source: String(req.body?.source || 'manage-console').slice(0, 80),
+      message: String(req.body?.message || '').slice(0, 2000),
+    };
+    manageConsoleLogRing.push(entry);
+    if (manageConsoleLogRing.length > 500) manageConsoleLogRing.splice(0, manageConsoleLogRing.length - 500);
+    try {
+      if (!fs.existsSync(path.dirname(MANAGE_CONSOLE_LOG_FILE))) {
+        fs.mkdirSync(path.dirname(MANAGE_CONSOLE_LOG_FILE), { recursive: true });
+      }
+      fs.appendFileSync(MANAGE_CONSOLE_LOG_FILE, JSON.stringify(entry) + '\n', 'utf8');
+    } catch (_) {}
+    res.json({ success: true });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err?.message || 'Log yazılamadı.' });
+  }
+});
+
+app.get('/api/admin/console-logs', requireAdmin, (req, res) => {
+  const limit = Math.min(Math.max(Number(req.query.limit || 200), 1), 500);
+  res.json({ success: true, logs: manageConsoleLogRing.slice(-limit) });
+});
+
 // 3. Get latest check result
 app.get('/api/admin/drive/check-results', requireAdmin, (req, res) => {
   try {
@@ -2810,13 +3036,14 @@ app.post('/api/committees/:id/generate-slots', requireAdmin, (req, res) => {
 });
 
 // Delete a question (Admin only to prevent sabotage)
-app.delete('/api/questions/:id', requireAdmin, (req, res) => {
+app.delete('/api/questions/:id', requireAdmin, async (req, res) => {
   const idx = db.questions.findIndex((q) => q.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Soru bulunamadı.' });
 
   db.questions.splice(idx, 1);
   saveDatabase();
-  res.json({ success: true });
+  const cloud = await deleteFromSupabaseEverywhere('questions', req.params.id);
+  res.json({ success: true, cloud });
 });
 
 // --- Persistent SMTP & Email Configuration Management ---
@@ -3259,6 +3486,7 @@ app.post('/api/users/sync', (req, res) => {
     if (congratsSentCommittees) existing.congratsSentCommittees = congratsSentCommittees;
     if (isAdmin) existing.role = 'admin';
     saveUsers(users);
+    mirrorUserToSupabase(existing).catch(() => {});
     return res.json({ success: true, user: existing });
   } else {
     const newUser: ServerUser = {
@@ -3275,6 +3503,7 @@ app.post('/api/users/sync', (req, res) => {
     };
     users.unshift(newUser);
     saveUsers(users);
+    mirrorUserToSupabase(newUser).catch(() => {});
     return res.json({ success: true, user: newUser });
   }
 });
@@ -3313,7 +3542,7 @@ app.post('/api/admin/users/create', requireAdmin, (req, res) => {
 });
 
 // Admin: Delete a user
-app.delete('/api/admin/users/:uid', requireAdmin, (req, res) => {
+app.delete('/api/admin/users/:uid', requireAdmin, async (req, res) => {
   const users = loadUsers();
   const idx = users.findIndex((u) => u.uid === req.params.uid);
   if (idx === -1) {
@@ -3324,7 +3553,8 @@ app.delete('/api/admin/users/:uid', requireAdmin, (req, res) => {
   }
   const deleted = users.splice(idx, 1)[0];
   saveUsers(users);
-  res.json({ success: true, deletedUser: deleted });
+  const cloud = await deleteFromSupabaseEverywhere('users', deleted.uid);
+  res.json({ success: true, deletedUser: deleted, cloud });
 });
 
 // Admin: Update any question
@@ -3358,13 +3588,14 @@ app.put('/api/admin/questions/:id', requireAdmin, (req, res) => {
 });
 
 // Admin: Delete any question
-app.delete('/api/admin/questions/:id', requireAdmin, (req, res) => {
+app.delete('/api/admin/questions/:id', requireAdmin, async (req, res) => {
   const idx = db.questions.findIndex((q) => q.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: 'Soru bulunamadı.' });
 
   const deleted = db.questions.splice(idx, 1)[0];
   saveDatabase();
-  res.json({ success: true, deletedQuestion: deleted });
+  const cloud = await deleteFromSupabaseEverywhere('questions', req.params.id);
+  res.json({ success: true, deletedQuestion: deleted, cloud });
 });
 
 // Admin: Export complete database JSON
@@ -5191,6 +5422,12 @@ async function startServer() {
     });
   }
 
+  // Periodic Local-to-Cloud Supabase Backup
+  app.post('/api/admin/backup-to-cloud', requireAdmin, async (req, res) => {
+    const result = await backupLocalToCloud();
+    res.json(result);
+  });
+
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
     // Masaüstü klasör izleyicisi arka planı meşgul etmemesi için otomatik başlatılmaz.
@@ -5204,7 +5441,98 @@ async function startServer() {
     initDeepSeekWatcher(() => {
       runAutoChunking({ syncToCloud: false }).catch(() => {});
     });
+
+    // ☁️ Belli saatlerde (her 1 saatte bir) yerel verileri online Supabase'e yedekle
+    setInterval(() => {
+      backupLocalToCloud().catch(() => {});
+    }, 3600000);
+    // Sunucu açılışından 15 saniye sonra ilk yedekleme kontrolü
+    setTimeout(() => {
+      backupLocalToCloud().catch(() => {});
+    }, 15000);
   });
+}
+
+export async function backupLocalToCloud(): Promise<{ success: boolean; message: string; counts?: any }> {
+  try {
+    console.log('☁️ [Cloud Backup] Otomatik online Supabase yedekleme işlemi başladı...');
+    if (!cloudSupabase) {
+      return { success: false, message: 'Cloud Supabase istemcisi tanımlı değil.' };
+    }
+
+    // 1. Kurulları yedekle
+    let committeesCount = 0;
+    if (db.committees && db.committees.length > 0) {
+      const rows = db.committees.map((c: any) => cleanForPostgres({
+        id: c.id,
+        name: c.name,
+        year: c.year,
+        term: c.term,
+        target_count: c.targetCount || 100,
+        color: c.color || 'blue',
+        code: c.code || null,
+        exam_date: c.examDate || null,
+        description: c.description || null,
+        disciplines: c.disciplines || [],
+        data: c,
+        updated_at: new Date().toISOString(),
+      }));
+      await cloudSupabase.from('committees').upsert(rows, { onConflict: 'id' });
+      committeesCount = rows.length;
+    }
+
+    // 2. Aktif Soruları yedekle
+    let questionsCount = 0;
+    if (db.questions && db.questions.length > 0) {
+      const rows = db.questions.map((q) => cleanForPostgres({
+        id: q.id,
+        committee_id: q.committeeId,
+        question_number: q.questionNumber || null,
+        discipline: q.discipline || null,
+        topic: q.topic || null,
+        status: q.status || 'gathering',
+        claimed_answer: q.claimedAnswer || (q.reconstruction?.correctAnswer || null),
+        upvotes: q.upvotes || 0,
+        tags: q.tags || [],
+        fragments: q.fragments || [],
+        options: q.options || [],
+        reconstruction: q.reconstruction || null,
+        data: q,
+        updated_at: new Date().toISOString(),
+      }));
+      for (let i = 0; i < rows.length; i += 50) {
+        await cloudSupabase.from('questions').upsert(rows.slice(i, i + 50), { onConflict: 'id' });
+      }
+      questionsCount = rows.length;
+    }
+
+    // 3. Kullanıcıları yedekle
+    const users = loadUsers();
+    let usersCount = 0;
+    if (users && users.length > 0) {
+      const rows = users.map((u) => cleanForPostgres({
+        uid: u.uid,
+        email: u.email,
+        display_name: u.displayName || u.email?.split('@')[0],
+        student_number: u.studentNumber || null,
+        role: u.role || 'student',
+        data: u,
+        updated_at: new Date().toISOString(),
+      }));
+      await cloudSupabase.from('users').upsert(rows, { onConflict: 'uid' });
+      usersCount = rows.length;
+    }
+
+    console.log(`✅ [Cloud Backup] Online Supabase yedeklemesi tamamlandı: ${committeesCount} kurul, ${questionsCount} aktif soru, ${usersCount} kullanıcı.`);
+    return {
+      success: true,
+      message: 'Yedekleme başarıyla tamamlandı.',
+      counts: { committeesCount, questionsCount, usersCount },
+    };
+  } catch (err: any) {
+    console.error('❌ [Cloud Backup] Hata oluştu:', err.message);
+    return { success: false, message: err.message };
+  }
 }
 
 startServer();

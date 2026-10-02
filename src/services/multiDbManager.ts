@@ -34,15 +34,16 @@ export interface DatabaseStatus {
 const DB_MODE_KEY = 'medsoru_active_db_mode';
 
 class MultiDbManager {
-  private activeMode: DatabaseMode = 'auto';
-  private firebaseQuotaExceeded = false;
-  private lastQuotaCheck = 0;
+  private activeMode: DatabaseMode = 'supabase';
+  private firebaseQuotaExceeded = true;
+  private lastQuotaCheck = Date.now();
 
   constructor() {
+    this.activeMode = 'supabase';
     if (typeof localStorage !== 'undefined') {
       const saved = localStorage.getItem(DB_MODE_KEY) as DatabaseMode | null;
-      if (saved && ['auto', 'supabase', 'firebase', 'local_pc'].includes(saved)) {
-        this.activeMode = saved;
+      if (saved && ['auto', 'supabase', 'local_pc'].includes(saved)) {
+        this.activeMode = saved === 'auto' ? 'supabase' : saved;
       }
     }
   }
@@ -61,45 +62,11 @@ class MultiDbManager {
 
   public markFirebaseQuotaExceeded() {
     this.firebaseQuotaExceeded = true;
-    this.lastQuotaCheck = Date.now();
-    if (typeof localStorage !== 'undefined') {
-      try {
-        localStorage.setItem('medsoru_fb_quota_exceeded', String(Date.now()));
-      } catch (_) {}
-    }
-    systemHealthMonitor.recordDatabaseError('firebase', new Error('Firebase Spark günlük okuma/yazma kotası aşıldı!'));
-    console.warn('[MultiDbManager] Firebase Spark günlük okuma/yazma kotası aşıldı! Otomatik olarak Supabase / Yerel PC devraldı.');
   }
 
   public isFirebaseQuotaExceeded(): boolean {
-    const QUOTA_BLOCK_DURATION = 6 * 3600 * 1000; // 6 saat boyunca gereksiz yere Firebase'e bekletme yapma
-    if (this.firebaseQuotaExceeded) {
-      if (Date.now() - this.lastQuotaCheck > QUOTA_BLOCK_DURATION) {
-        this.firebaseQuotaExceeded = false;
-        if (typeof localStorage !== 'undefined') {
-          try { localStorage.removeItem('medsoru_fb_quota_exceeded'); } catch (_) {}
-        }
-      }
-      return this.firebaseQuotaExceeded;
-    }
-
-    if (typeof localStorage !== 'undefined') {
-      try {
-        const stored = localStorage.getItem('medsoru_fb_quota_exceeded');
-        if (stored) {
-          const timestamp = Number(stored);
-          if (Date.now() - timestamp < QUOTA_BLOCK_DURATION) {
-            this.firebaseQuotaExceeded = true;
-            this.lastQuotaCheck = timestamp;
-            return true;
-          } else {
-            localStorage.removeItem('medsoru_fb_quota_exceeded');
-          }
-        }
-      } catch (_) {}
-    }
-
-    return false;
+    // Firestore veritabanı devreden çıkarıldı; tüm işlemler yerel / bulut Supabase üzerinden yürütülür.
+    return true;
   }
 
   /**

@@ -13,6 +13,7 @@ import {
   onSnapshot
 } from 'firebase/firestore';
 import { auth } from './auth';
+import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { Committee, QuestionItem, AdminNotification, LectureNote } from '../types';
 import firebaseConfig from '../../firebase-applet-config.json';
 
@@ -327,10 +328,16 @@ export const INITIAL_COMMITTEES: Committee[] = [
 export const INITIAL_QUESTIONS: QuestionItem[] = [];
 
 export class FirestoreDbService {
+  /** Firebase kapalıysa tüm çağrılar anında ve sessizce devre dışı kalır. */
+  private static ensureEnabled(): void {
+    if (!FIREBASE_DB_ENABLED) throw new Error('Firebase veritabanı devre dışı (Supabase + yerel sunucu kullanılıyor).');
+  }
+
   /**
    * Fetches committees from Firestore. If Firestore is empty, seeds initial committees.
    */
   static async getCommittees(): Promise<Committee[]> {
+    FirestoreDbService.ensureEnabled();
     try {
       const snap = await withTimeout(getDocs(collection(db, COMMITTEES_COLLECTION)));
       if (!snap.empty) {
@@ -359,6 +366,7 @@ export class FirestoreDbService {
    * Creates or updates a committee in Firestore
    */
   static async createCommittee(committee: Committee): Promise<Committee> {
+    FirestoreDbService.ensureEnabled();
     const cleaned = cleanForFirestore(committee);
     await withTimeout(setDoc(doc(db, COMMITTEES_COLLECTION, committee.id), cleaned), 4000);
     return committee;
@@ -368,6 +376,7 @@ export class FirestoreDbService {
    * Fetches questions for a committee from Firestore. If empty for the first committee, seeds default questions.
    */
   static async getQuestions(committeeId: string): Promise<QuestionItem[]> {
+    FirestoreDbService.ensureEnabled();
     try {
       const qRef = collection(db, QUESTIONS_COLLECTION);
       const qQuery = query(qRef, where('committeeId', '==', committeeId));
@@ -396,6 +405,7 @@ export class FirestoreDbService {
    * Saves or updates a single question in Firestore
    */
   static async saveQuestion(question: QuestionItem): Promise<QuestionItem> {
+    FirestoreDbService.ensureEnabled();
     const updated = {
       ...question,
       updatedAt: new Date().toISOString(),
@@ -411,6 +421,7 @@ export class FirestoreDbService {
    * ensures zero initial likes, and provides resilient timeouts.
    */
   static async batchSaveQuestions(questions: QuestionItem[]): Promise<{ success: boolean; count: number }> {
+    FirestoreDbService.ensureEnabled();
     if (!questions || questions.length === 0) return { success: true, count: 0 };
 
     const chunkSize = 100;
@@ -455,6 +466,7 @@ export class FirestoreDbService {
    * Deletes a question from Firestore
    */
   static async deleteQuestion(questionId: string): Promise<boolean> {
+    FirestoreDbService.ensureEnabled();
     try {
       await withTimeout(deleteDoc(doc(db, QUESTIONS_COLLECTION, questionId)), 4000);
       return true;
@@ -468,6 +480,7 @@ export class FirestoreDbService {
    * Logs an admin notification into Firestore
    */
   static async logAdminNotification(notif: AdminNotification): Promise<void> {
+    FirestoreDbService.ensureEnabled();
     try {
       const ref = doc(db, NOTIFICATIONS_COLLECTION, notif.id);
       await withTimeout(setDoc(ref, cleanForFirestore(notif)), 3000);
@@ -480,6 +493,7 @@ export class FirestoreDbService {
    * Fetches latest admin notifications
    */
   static async getAdminNotifications(): Promise<AdminNotification[]> {
+    FirestoreDbService.ensureEnabled();
     try {
       const snap = await withTimeout(getDocs(collection(db, NOTIFICATIONS_COLLECTION)), 4000);
       const list: AdminNotification[] = [];
@@ -497,6 +511,7 @@ export class FirestoreDbService {
    * Fetches all registered users from Firestore users collection.
    */
   static async getRegisteredUsers(): Promise<any[]> {
+    FirestoreDbService.ensureEnabled();
     try {
       const snap = await withTimeout(getDocs(collection(db, 'users')), 4000);
       const list: any[] = [];
@@ -512,6 +527,7 @@ export class FirestoreDbService {
    * Fetches all lecture notes from Firestore 'lecture_notes' collection
    */
   static async getLectureNotes(): Promise<LectureNote[]> {
+    FirestoreDbService.ensureEnabled();
     try {
       const snap = await withTimeout(getDocs(collection(db, LECTURE_NOTES_COLLECTION)), 8000);
       const list: LectureNote[] = [];
@@ -524,6 +540,7 @@ export class FirestoreDbService {
   }
 
   static async saveLectureNote(note: LectureNote): Promise<void> {
+    FirestoreDbService.ensureEnabled();
     try {
       await withTimeout(setDoc(doc(db, LECTURE_NOTES_COLLECTION, note.id), cleanForFirestore(note)), 6000);
     } catch (e) {
@@ -532,6 +549,7 @@ export class FirestoreDbService {
   }
 
   static async deleteLectureNote(id: string): Promise<void> {
+    FirestoreDbService.ensureEnabled();
     try {
       await withTimeout(deleteDoc(doc(db, LECTURE_NOTES_COLLECTION, id)), 6000);
     } catch (e) {
@@ -543,6 +561,7 @@ export class FirestoreDbService {
    * Fetches all past exam questions from Firestore
    */
   static async getAllPastQuestions(): Promise<QuestionItem[]> {
+    FirestoreDbService.ensureEnabled();
     try {
       // 1. Önce doğrudan past_questions koleksiyonunu kontrol et
       try {
@@ -602,6 +621,7 @@ export class FirestoreDbService {
    * Update or create a past exam question in Firestore 'past_questions' collection
    */
   static async updatePastQuestion(question: QuestionItem): Promise<boolean> {
+    FirestoreDbService.ensureEnabled();
     try {
       if (!question.id) return false;
       const docRef = doc(db, 'past_questions', question.id);
@@ -617,6 +637,7 @@ export class FirestoreDbService {
    * Fetches latest local PC background worker heartbeat from Firestore
    */
   static async getWorkerHeartbeat(): Promise<any | null> {
+    FirestoreDbService.ensureEnabled();
     try {
       const snap = await withTimeout(getDoc(doc(db, 'system_status', 'worker_heartbeat')), 3500);
       return snap.exists() ? snap.data() : null;
@@ -629,6 +650,7 @@ export class FirestoreDbService {
    * Realtime subscription to local PC background worker heartbeat
    */
   static subscribeWorkerHeartbeat(callback: (data: any | null) => void): () => void {
+    if (!FIREBASE_DB_ENABLED) return () => {};
     try {
       const unsub = onSnapshot(doc(db, 'system_status', 'worker_heartbeat'), (snap) => {
         callback(snap.exists() ? snap.data() : null);
@@ -645,6 +667,7 @@ export class FirestoreDbService {
    * Fetches latest AI Subagent monitor telemetry from Firestore
    */
   static async getSubagentMonitorStatus(): Promise<any | null> {
+    FirestoreDbService.ensureEnabled();
     try {
       const snap = await withTimeout(getDoc(doc(db, 'system_status', 'ai_subagent_monitor')), 3500);
       return snap.exists() ? snap.data() : null;
@@ -657,6 +680,7 @@ export class FirestoreDbService {
    * Realtime subscription to AI Subagent monitor telemetry
    */
   static subscribeSubagentMonitor(callback: (data: any | null) => void): () => void {
+    if (!FIREBASE_DB_ENABLED) return () => {};
     try {
       const unsub = onSnapshot(doc(db, 'system_status', 'ai_subagent_monitor'), (snap) => {
         callback(snap.exists() ? snap.data() : null);
@@ -674,6 +698,7 @@ export class FirestoreDbService {
    * (e.g. 'run_full_local_sync', 'run_redactor_cycle', 'install_service', 'stop_service')
    */
   static async sendAdminCommand(command: string, payload: any = {}, requestedBy: string = 'nofrostlife@gmail.com'): Promise<{ success: boolean; commandId?: string; message: string }> {
+    FirestoreDbService.ensureEnabled();
     try {
       const ref = await addDoc(collection(db, 'admin_commands'), {
         command,

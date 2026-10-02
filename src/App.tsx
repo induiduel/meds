@@ -60,6 +60,7 @@ const TranscriptionsView = React.lazy(() => import('./components/TranscriptionsV
 const FlashcardsView = React.lazy(() => import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView })));
 const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
 const MedicalEncyclopediaView = React.lazy(() => import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView })));
+const ManageConsole = React.lazy(() => import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole })));
 
 const ViewFallback = () => <SectionLoader />;
 import { systemHealthMonitor } from './services/systemHealthMonitor';
@@ -105,7 +106,16 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
 
   // Page navigation: the address bar is the source of truth (back/forward, shareable links)
-  const [initialRoute] = useState(() => parseLocation());
+  // manage.nofrostlife.com.tr hostunda açılışta yönetim konsoluna yönlendir.
+  const [initialRoute] = useState(() => {
+    const parsed = parseLocation();
+    try {
+      if (typeof window !== 'undefined' && /^manage\./i.test(window.location.hostname) && parsed.route === 'quick_add') {
+        return { route: 'manage' as ValidAppTab, param: undefined as string | undefined };
+      }
+    } catch {}
+    return parsed;
+  });
   const [activeTab, setActiveTabState] = useState<ValidAppTab>(initialRoute.route);
   const setActiveTab = useCallback((tab: ValidAppTab) => {
     setActiveTabState(tab);
@@ -896,6 +906,50 @@ export default function App() {
             }}
           />
         </Suspense>
+      ) : activeTab === 'manage' ? (
+        isAdmin ? (
+          <Suspense fallback={<ViewFallback />}>
+            <ManageConsole
+              adminEmail={ADMIN_EMAIL}
+              committees={committees}
+              questions={questions}
+              selectedCommitteeId={selectedCommitteeId}
+              onSelectCommittee={(id) => setSelectedCommitteeId(id)}
+              onRefreshData={fetchQuestions}
+              onExit={() => setActiveTab('quick_add')}
+              fullscreen
+            />
+          </Suspense>
+        ) : (
+          <div className="min-h-dvh w-full bg-canvas flex items-center justify-center p-4">
+            <div className="max-w-[440px] w-full bg-white border border-line rounded-[18px] p-6 sm:p-8 flex flex-col items-center text-center gap-3">
+              <span className="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center">
+                <ShieldCheck className="w-6 h-6" />
+              </span>
+              <h1 className="m-0 font-display font-bold text-[24px] tracking-[-0.02em]">Yönetim Konsolu</h1>
+              <p className="m-0 text-[15px] text-ink-2">Bu konsol yalnızca yöneticilere açık. Devam etmek için yönetici hesabıyla giriş yap.</p>
+              <div className="flex gap-2 pt-1">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('quick_add')}
+                  className="h-11 px-4 rounded-xl border border-line-2 bg-white font-semibold text-[15px] cursor-pointer"
+                >
+                  Ana sayfa
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setAuthModalInitialMode('admin');
+                    setIsAuthModalOpen(true);
+                  }}
+                  className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-[15px] cursor-pointer"
+                >
+                  Yönetici girişi
+                </button>
+              </div>
+            </div>
+          </div>
+        )
       ) : (
       <>
       {/* Navigation Header with Google Auth & Drive */}
@@ -1359,6 +1413,7 @@ export default function App() {
               </div>
             </div>
           ))}
+
       </main>
 
       {/* Footer */}
@@ -1373,6 +1428,9 @@ export default function App() {
             <button type="button" onClick={() => setIsPdfModalOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">PDF kitapçık</button>
             {isAdmin && (
               <button type="button" onClick={() => setActiveTab('admin')} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
+            )}
+            {isAdmin && (
+              <button type="button" onClick={() => setActiveTab('manage')} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim Konsolu</button>
             )}
           </span>
         </div>

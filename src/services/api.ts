@@ -1878,10 +1878,20 @@ JSON FORMATI:
     db.questions = db.questions.filter((q) => q.id !== id);
     saveLocalDb(db);
 
+    // Üç kanaldan sil: Supabase (istemci) + sunucu (gizli anahtarla Supabase fan-out).
+    // Biri tutsa bile kayıt geri gelmez; hatalar sessize değil konsola yazılır.
     try {
       await multiDbManager.deleteQuestion(id);
     } catch (e) {
       console.warn('[ApiService] adminDeleteQuestion multiDbManager error', e);
+    }
+    try {
+      await safeJsonFetch(`/api/questions/${encodeURIComponent(id)}`, {
+        method: 'DELETE',
+        headers: { 'x-admin-email': adminEmail },
+      });
+    } catch (e) {
+      console.warn('[ApiService] adminDeleteQuestion server error', e);
     }
   },
 

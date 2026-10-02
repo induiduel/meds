@@ -11,6 +11,7 @@
 
 import { SupabaseDbService, getSupabaseConfig } from './supabaseDb';
 import { FirestoreDbService } from './firestoreDb';
+import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { CLIENT_FREE_GEMINI_KEYS, CLIENT_BILLED_GEMINI_KEY } from './api';
 
 export type ServiceStatus = 'healthy' | 'warning' | 'critical' | 'unknown';
@@ -237,6 +238,16 @@ class SystemHealthMonitor {
   }
 
   private async checkFirebase(logToConsole: boolean) {
+    if (!FIREBASE_DB_ENABLED) {
+      this.currentHealth.firebase = {
+        status: 'offline',
+        sparkReadLimit: 'Kapalı',
+        details: 'Firebase veritabanı bu dağıtımda kapalı; Supabase + yerel sunucu kullanılıyor.',
+        lastChecked: Date.now(),
+      };
+      if (logToConsole) console.log('ℹ️ [Firebase Firestore] Devre dışı (dağıtım tercihi).');
+      return;
+    }
     const start = Date.now();
     try {
       // Doğrudan Firebase Firestore'dan hızlı okuma testi

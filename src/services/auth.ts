@@ -18,6 +18,7 @@ import {
   setDoc 
 } from 'firebase/firestore';
 import firebaseConfig from '../../firebase-applet-config.json';
+import { FIREBASE_DB_ENABLED } from './dbFlags';
 
 // Initialize Firebase App if not already initialized
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
@@ -125,6 +126,7 @@ export const cacheUserProfile = (user: AppUser) => {
 };
 
 export const fetchFirestoreUserProfile = async (uid: string): Promise<Partial<AppUser> | null> => {
+  if (!FIREBASE_DB_ENABLED) return null;
   try {
     const userDocRef = doc(firestoreDb, 'users', uid);
     const snap = await getDoc(userDocRef);
@@ -138,19 +140,21 @@ export const fetchFirestoreUserProfile = async (uid: string): Promise<Partial<Ap
 };
 
 export const saveFirestoreUserProfile = async (user: AppUser): Promise<void> => {
-  try {
-    const userDocRef = doc(firestoreDb, 'users', user.uid);
-    const dataToSave: Record<string, any> = {
-      uid: user.uid,
-      email: user.email || null,
-      displayName: user.displayName || null,
-      studentNumber: user.studentNumber || null,
-      congratsSentCommittees: user.congratsSentCommittees || [],
-      updatedAt: new Date().toISOString(),
-    };
-    await setDoc(userDocRef, dataToSave, { merge: true });
-  } catch (e) {
-    console.warn('Could not save user profile to Firestore:', e);
+  if (FIREBASE_DB_ENABLED) {
+    try {
+      const userDocRef = doc(firestoreDb, 'users', user.uid);
+      const dataToSave: Record<string, any> = {
+        uid: user.uid,
+        email: user.email || null,
+        displayName: user.displayName || null,
+        studentNumber: user.studentNumber || null,
+        congratsSentCommittees: user.congratsSentCommittees || [],
+        updatedAt: new Date().toISOString(),
+      };
+      await setDoc(userDocRef, dataToSave, { merge: true });
+    } catch (e) {
+      console.warn('Could not save user profile to Firestore:', e);
+    }
   }
 
   // Dual sync to server database (Realtime sync bridge)

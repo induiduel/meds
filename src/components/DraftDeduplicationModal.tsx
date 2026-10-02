@@ -2,76 +2,10 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split, Trash2 } from 'lucide-react';
 import { toast } from './ui/Toast';
 import { CapsuleLoader, SuccessCheck } from './ui/Animations';
+import { sharedWordColors, Colored, WordLegend } from './draftHighlight';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
 import { ApiService } from '../services/api';
 import { AppUser } from '../services/auth';
-
-
-// ---------------------------------------------------------------------------
-// Shared-word colouring: words that recur across drafts of one cluster get the
-// same pastel colour, so overlaps are visible at a glance.
-// ---------------------------------------------------------------------------
-const WORD_COLORS = ['#FEF08A', '#BBF7D0', '#FBCFE8', '#BFDBFE', '#DDD6FE', '#FED7AA', '#99F6E4', '#FECDD3'];
-const STOP = new Set(
-  'hasta hastada hastanın hastaya hastanin olan olarak ile için icin veya hangisi hangisidir aşağıdaki asagidaki daha gibi sonra kadar soru sorusu sorudu bunun buna olan yaşında yasinda ancak değil degil dolayı ilgili durum durumu durumda şekilde sekilde vardı vardi oldu olur olması olmasi kişi kisi hocam hoca bence sanki hatırlıyorum hatirliyorum hatırlanan sordu sorulmuştu şıkkı sikki şıklar siklar cevap doğru dogru yanlış yanlis bulunan bulunur görülür gorulur görüldü tanısı tanisi tanı tani ilgili arasında arasinda sırasında sirasinda nedir neden'.split(' ')
-);
-const wordKey = (w: string) => {
-  const t = w.toLocaleLowerCase('tr-TR');
-  // Turkish suffixes: compare by the first 5 letters of longer words ("sendromu" ~ "sendrom")
-  return t.length >= 7 ? t.slice(0, 5) : t;
-};
-const tokens = (text: string) => (text.match(/[\p{L}\p{N}]+/gu) || []).filter((w) => w.length >= 4 && !STOP.has(w.toLocaleLowerCase('tr-TR')));
-
-/** Word keys that appear in at least two different texts, coloured by how widely they recur. */
-const sharedWordColors = (texts: string[]): Map<string, string> => {
-  const seenIn = new Map<string, number>();
-  texts.forEach((t) => {
-    new Set(tokens(t).map(wordKey)).forEach((k) => seenIn.set(k, (seenIn.get(k) || 0) + 1));
-  });
-  const shared = [...seenIn.entries()]
-    .filter(([, n]) => n >= 2)
-    .sort((a, b) => b[1] - a[1] || b[0].length - a[0].length)
-    .slice(0, WORD_COLORS.length);
-  return new Map(shared.map(([k], i) => [k, WORD_COLORS[i]]));
-};
-
-/** Renders text with shared words painted in their colour. */
-const Colored: React.FC<{ text: string; colors: Map<string, string> }> = ({ text, colors }) => {
-  if (!colors.size || !text) return <>{text}</>;
-  const parts = text.split(/([\p{L}\p{N}]+)/u);
-  return (
-    <>
-      {parts.map((part, i) => {
-        const c = i % 2 === 1 && part.length >= 4 ? colors.get(wordKey(part)) : undefined;
-        return c ? (
-          <mark key={i} className="rounded-[4px] px-[2px] -mx-[1px] text-inherit" style={{ background: c }}>
-            {part}
-          </mark>
-        ) : (
-          <React.Fragment key={i}>{part}</React.Fragment>
-        );
-      })}
-    </>
-  );
-};
-
-/** The coloured keywords as a small legend. */
-const WordLegend: React.FC<{ texts: string[]; colors: Map<string, string> }> = ({ texts, colors }) => {
-  if (!colors.size) return null;
-  // Show one real spelling per key
-  const spelled = new Map<string, string>();
-  texts.forEach((t) => tokens(t).forEach((w) => !spelled.has(wordKey(w)) && spelled.set(wordKey(w), w.toLocaleLowerCase('tr-TR'))));
-  return (
-    <span className="flex flex-wrap items-center gap-1">
-      <span className="text-[11.5px] text-ink-3 mr-0.5">Ortak:</span>
-      {[...colors.entries()].map(([k, c]) => (
-        <span key={k} className="h-5 px-1.5 rounded-[6px] text-[11.5px] text-ink inline-flex items-center" style={{ background: c }}>
-          {spelled.get(k) || k}
-        </span>
-      ))}
-    </span>
-  );
-};
 
 interface DraftDeduplicationModalProps {
   isOpen: boolean;
@@ -106,6 +40,8 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
   // Manuel çoklu seçim durumu
   const [selectedDraftIds, setSelectedDraftIds] = useState<string[]>([]);
   const [manualAnchorId, setManualAnchorId] = useState<string>('');
+  // Birleştir'e basıldığı an elle-seç listesinden kalkması için iyimser gizleme
+  const [manuallyHiddenIds, setManuallyHiddenIds] = useState<Set<string>>(new Set());
   const [manualSearchQuery, setManualSearchQuery] = useState('');
   const [isManualMerging, setIsManualMerging] = useState(false);
 
@@ -199,6 +135,12 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 
     const anchorId = manualAnchorId || selectedDraftIds[0];
     const satelliteIds = selectedDraftIds.filter((id) => id !== anchorId);
+    const idsToMerge = [...selectedDraftIds];
+
+    // Basıldığı an listeden kaldır (sonuç beklenmez); hata olursa geri getirilir.
+    setManuallyHiddenIds((prev) => new Set([...prev, ...idsToMerge]));
+    setSelectedDraftIds([]);
+    setManualAnchorId('');
 
     setIsManualMerging(true);
     setFeedback(null);
@@ -211,8 +153,6 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
       );
       // Birleştirilen uyduları manuel listeden anında kaldır
       setLocallyMergedSatelliteIds((prev) => new Set([...prev, ...satelliteIds]));
-      setSelectedDraftIds([]);
-      setManualAnchorId('');
       setFeedback({
         type: 'ok',
         message: `Seçtiğiniz ${satelliteIds.length + 1} taslak başarıyla tek bir soru altında toplandı!`,
@@ -220,6 +160,13 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
       await onRefreshData();
       await runAnalysis();
     } catch (e: any) {
+      setManuallyHiddenIds((prev) => {
+        const next = new Set(prev);
+        idsToMerge.forEach((id) => next.delete(id));
+        return next;
+      });
+      setSelectedDraftIds(idsToMerge);
+      setManualAnchorId(anchorId);
       setFeedback({ type: 'err', message: e.message || 'Manuel birleştirme başarısız oldu.' });
     } finally {
       setIsManualMerging(false);
@@ -358,9 +305,12 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
   }, [questions, committeeId, locallyMergedSatelliteIds]);
 
   const manualFilteredQuestions = useMemo(() => {
-    if (!manualSearchQuery.trim()) return committeeQuestions;
+    // Birleştirilmiş sorular ve az önce birleştirilenler elle-seçimde görünmez
+    const mergedIds = new Set(mergedQuestions.map((q) => q.id));
+    const selectable = committeeQuestions.filter((q) => !mergedIds.has(q.id) && !manuallyHiddenIds.has(q.id));
+    if (!manualSearchQuery.trim()) return selectable;
     const q = manualSearchQuery.toLowerCase();
-    return committeeQuestions.filter((item) => {
+    return selectable.filter((item) => {
       const stem = item.reconstruction?.stem || item.stem || item.fragments?.map((f) => f.text).join(' ') || '';
       return (
         stem.toLowerCase().includes(q) ||
@@ -369,7 +319,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         item.questionNumber?.toString() === q
       );
     });
-  }, [committeeQuestions, manualSearchQuery]);
+  }, [committeeQuestions, manualSearchQuery, mergedQuestions, manuallyHiddenIds]);
 
   // Results also surface as floating toasts
   useEffect(() => {

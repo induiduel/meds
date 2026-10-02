@@ -28,3 +28,9 @@ data/ds_work/
 data/ds_out/
 .meds_ds/
 scripts/_*
+
+# Local Supabase Server Data & Keys
+supabase-server/volumes/
+supabase-server/.env*
+supabase-server/local-supabase-keys.json
+supabase-server/backups/
