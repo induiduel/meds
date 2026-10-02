@@ -1,4 +1,3 @@
-import { jsPDF } from 'jspdf';
 import { QuestionItem, Committee } from '../types';
 
 export const FOLDER_NAME = 'MedSoru - Tıp Kurul Arşivi';
@@ -69,10 +68,11 @@ export function evaluateAutoBackupThreshold(
 /**
  * Generates a clean, multi-page formatted medical exam PDF
  */
-export function generateBookletPdfBlob(
+export async function generateBookletPdfBlob(
   committee: Committee | undefined,
   questions: QuestionItem[]
-): Blob {
+): Promise<Blob> {
+  const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({
     orientation: 'portrait',
     unit: 'mm',
@@ -149,7 +149,7 @@ export function generateBookletPdfBlob(
     const hasRec = !!q.reconstruction;
     const stem = hasRec
       ? q.reconstruction!.stem
-      : (q.fragments?.map((f) => f.text).join(' ') || q.stem || (q as any).rawQuestion?.stem || '');
+      : (q.fragments?.map((f) => f.text).join(' ') || (q as any).stem || (q as any).rawQuestion?.stem || '');
 
     const options = (hasRec
       ? q.reconstruction!.options
@@ -332,7 +332,7 @@ export async function uploadBookletPdfToDrive({
   const folderId = await getOrCreateDriveFolder(accessToken, FOLDER_NAME);
 
   // 2. Generate PDF
-  const pdfBlob = generateBookletPdfBlob(committee, questions);
+  const pdfBlob = await generateBookletPdfBlob(committee, questions);
 
   // 3. Format filename
   const sanitizedCommitteeName = (committee?.name || 'Donem_3_Kurul_Sorulari')
@@ -402,12 +402,12 @@ export async function uploadBookletPdfToDrive({
 /**
  * Downloads the booklet PDF directly to the user's browser/device
  */
-export function downloadBookletPdfLocally(
+export async function downloadBookletPdfLocally(
   committee: Committee | undefined,
   questions: QuestionItem[],
   customFileName?: string
 ) {
-  const blob = generateBookletPdfBlob(committee, questions);
+  const blob = await generateBookletPdfBlob(committee, questions);
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;

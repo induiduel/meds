@@ -97,6 +97,55 @@ export function getDefaultActiveCommitteeId(): string {
   return 'donem3-final';
 }
 
+export const isCurrent2026_2027Committee = (c: any): boolean => {
+  if (!c) return false;
+  const id = String(c.id || '').toLowerCase();
+  const name = String(c.name || '').toLowerCase();
+  const term = String(c.term || c.academicYear || c.academic_year || '').toLowerCase();
+
+  // Exclude other dönems (Dönem 1, Dönem 2)
+  if (id.startsWith('donem1') || id.startsWith('donem2') || /dönem\s*[12]\b/i.test(name)) {
+    return false;
+  }
+
+  // Exclude past academic years (e.g. 2021-2022, 2022-2023, 2023-2024, 2024-2025, 2025-2026)
+  if (/(2021|2022|2023|2024|2025)-/i.test(term) && !term.includes('2026-2027')) {
+    return false;
+  }
+  if (/(2021|2022|2023|2024|2025)-/i.test(name) && !name.includes('2026-2027')) {
+    return false;
+  }
+
+  // Match Dönem 3 official 2026-2027 committees
+  const isDonem3 = id.startsWith('donem3-') || c.year === 3 || /dönem\s*3/i.test(name);
+  const is2026_2027 = term.includes('2026-2027') || !term;
+
+  return isDonem3 && is2026_2027;
+};
+
+export const filterCurrent2026_2027Committees = (list: Committee[]): Committee[] => {
+  if (!Array.isArray(list)) return INITIAL_COMMITTEES;
+  const filtered = list.filter(isCurrent2026_2027Committee);
+  if (filtered.length === 0) return INITIAL_COMMITTEES;
+
+  // Deduplicate by normalized committee key (kurul1..6, final, butunleme)
+  const seen = new Set<string>();
+  const unique: Committee[] = [];
+  for (const c of filtered) {
+    const key = c.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (!seen.has(key)) {
+      seen.add(key);
+      unique.push(c);
+    }
+  }
+
+  return unique.sort((a, b) => {
+    const orderA = COMMITTEE_SORT_ORDER[a.id] || 99;
+    const orderB = COMMITTEE_SORT_ORDER[b.id] || 99;
+    return orderA - orderB;
+  });
+};
+
 // Official curriculum committees from syllabus document
 export const INITIAL_COMMITTEES: Committee[] = [
   {
@@ -289,7 +338,7 @@ export class FirestoreDbService {
         snap.forEach((d) => {
           list.push(d.data() as Committee);
         });
-        return list.sort((a, b) => (COMMITTEE_SORT_ORDER[a.id] || 99) - (COMMITTEE_SORT_ORDER[b.id] || 99) || a.name.localeCompare(b.name));
+        return filterCurrent2026_2027Committees(list);
       }
 
       // Seed initial committees

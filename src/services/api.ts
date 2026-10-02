@@ -1,5 +1,5 @@
 import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion } from '../types';
-import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, db } from './firestoreDb';
+import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCurrent2026_2027Committees, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
@@ -552,10 +552,11 @@ export const ApiService = {
     try {
       const committees = await multiDbManager.getCommittees();
       if (committees && committees.length > 0) {
+        const filtered = filterCurrent2026_2027Committees(committees);
         const local = getLocalDb();
-        local.committees = committees;
+        local.committees = filtered;
         saveLocalDb(local);
-        return committees;
+        return filtered;
       }
     } catch (e) {
       console.warn('multiDbManager getCommittees fallback to local/server', e);
@@ -567,12 +568,13 @@ export const ApiService = {
       try {
         const res = await fetch(`${customUrl}/api/committees`);
         const data = await res.json();
-        return data.committees || [];
+        const serverCommittees = data.committees || [];
+        return filterCurrent2026_2027Committees(serverCommittees);
       } catch (e) {
         console.warn('Server fetch failed, falling back to LocalStorage', e);
       }
     }
-    return getLocalDb().committees;
+    return filterCurrent2026_2027Committees(getLocalDb().committees || INITIAL_COMMITTEES);
   },
 
   async addCommittee(data: {

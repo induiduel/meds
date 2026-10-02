@@ -97,7 +97,7 @@ const parseDistractors = (body: string) => {
 
 const fragmentTypeLabel = (t: string) => (t === 'stem' ? 'Soru kökü' : t === 'clue' ? 'İpucu' : t === 'answer' ? 'Doğru cevap' : 'Şık');
 
-export const QuestionCard: React.FC<QuestionCardProps> = ({
+const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   question,
   currentUser,
   isAdmin = false,
@@ -714,3 +714,5 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
     </article>
   );
 };
+
+export const QuestionCard = React.memo(QuestionCardComponent);

@@ -17,3 +17,5 @@ cloudflared.exe
 data/active_tunnel.txt
 .tmp.drivedownload/
 database_json/
+*.backup*
+data/nested_fix_report.json

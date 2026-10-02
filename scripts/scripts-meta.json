@@ -235,6 +235,15 @@
       "danger": false
     },
     {
+      "name": "fix-nested-and-embedded-questions.mjs",
+      "title": "İç İçe Şık ve Soru Ayrıştırma Motoru",
+      "category": "OCR & Veri Ayıklama",
+      "description": "Şık içinde başka şık olan (örn: B şıkkında C), soru kökünde kalan şıkları çıkaran ve birbirine yapışan soruları ayrıştıran motor.",
+      "defaultArgs": "",
+      "tags": ["iç-içe-şıklar", "soru-ayrıştırma", "şık-düzeltme", "veri-temizliği"],
+      "danger": false
+    },
+    {
       "name": "merge-same-exam-duplicates.mjs",
       "title": "Aynı Sene & Kurulda Sorulan Mükerrer Soruları Birleştirme",
       "category": "OCR & Veri Ayıklama",

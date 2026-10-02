@@ -10,6 +10,7 @@
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { Committee, QuestionItem, LectureNote } from '../types';
+import { filterCurrent2026_2027Committees } from './firestoreDb';
 
 export const DEFAULT_SUPABASE_URL = 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
 export const DEFAULT_SUPABASE_KEY = 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
@@ -213,7 +214,7 @@ export const SupabaseDbService = {
     try {
       const { data, error } = await client.from('committees').select('*');
       if (error || !data) return [];
-      return data.map((row: any) => ({
+      const list = data.map((row: any) => ({
         id: row.id,
         name: row.name,
         academicYear: row.academic_year || '2026-2027',
@@ -222,6 +223,7 @@ export const SupabaseDbService = {
         createdAt: row.created_at,
         ...(row.data || {}),
       }));
+      return filterCurrent2026_2027Committees(list);
     } catch (err) {
       console.warn('Supabase getCommittees error:', err);
       return [];

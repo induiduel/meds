@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import { 
   Stethoscope, 
   Sparkles, 
@@ -21,35 +21,45 @@ import {
 import { Committee, QuestionItem, QuestionLectureMatch } from './types';
 import { Header } from './components/Header';
 import { MetricsBar } from './components/MetricsBar';
-import { QuestionMatrix } from './components/QuestionMatrix';
 import { QuestionCard } from './components/QuestionCard';
-import { ContributeModal } from './components/ContributeModal';
-import { AddCommitteeModal } from './components/AddCommitteeModal';
-import { PracticeMode } from './components/PracticeMode';
-import { StudyHub } from './components/study/StudyHub';
-import { BookletView } from './components/BookletView';
-import { AdminPanelModal } from './components/AdminPanelModal';
-import { GithubPagesGuideModal } from './components/GithubPagesGuideModal';
-import { AuthErrorModal } from './components/AuthErrorModal';
-import { DriveSaveModal } from './components/DriveSaveModal';
-import { ExamPdfModal } from './components/ExamPdfModal';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
-import { UserAuthModal } from './components/UserAuthModal';
-import { UserProfileModal } from './components/UserProfileModal';
-import { EditMyQuestionModal } from './components/EditMyQuestionModal';
-import { RevisionHistoryModal } from './components/RevisionHistoryModal';
-import { LeaderboardView } from './components/LeaderboardView';
-import { LectureNotesView } from './components/LectureNotesView';
-import { InfoPopover } from './components/InfoPopover';
 import { MobileBottomNav } from './components/MobileBottomNav';
-import { PastExamsView } from './components/PastExamsView';
-import { AdminPastExamImporterModal } from './components/AdminPastExamImporterModal';
-import { AiQuestionOptimizerModal } from './components/AiQuestionOptimizerModal';
-import { NotebookLMSyncModal } from './components/NotebookLMSyncModal';
-import { SubagentMonitorModal } from './components/SubagentMonitorModal';
 import { SystemHealthBanner } from './components/SystemHealthBanner';
-import { SystemDiagnosticsModal } from './components/SystemDiagnosticsModal';
-import { AiQuotaAlertModal } from './components/AiQuotaAlertModal';
+
+// Lazy-loaded Views (Split into separate on-demand chunks)
+const PracticeMode = React.lazy(() => import('./components/PracticeMode').then(m => ({ default: m.PracticeMode })));
+const StudyHub = React.lazy(() => import('./components/study/StudyHub').then(m => ({ default: m.StudyHub })));
+const BookletView = React.lazy(() => import('./components/BookletView').then(m => ({ default: m.BookletView })));
+const LeaderboardView = React.lazy(() => import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView })));
+const LectureNotesView = React.lazy(() => import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView })));
+const PastExamsView = React.lazy(() => import('./components/PastExamsView').then(m => ({ default: m.PastExamsView })));
+const QuestionMatrix = React.lazy(() => import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix })));
+
+// Lazy-loaded Modals (Only downloaded when opened)
+const AdminPanelModal = React.lazy(() => import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal })));
+const ExamPdfModal = React.lazy(() => import('./components/ExamPdfModal').then(m => ({ default: m.ExamPdfModal })));
+const ContributeModal = React.lazy(() => import('./components/ContributeModal').then(m => ({ default: m.ContributeModal })));
+const AddCommitteeModal = React.lazy(() => import('./components/AddCommitteeModal').then(m => ({ default: m.AddCommitteeModal })));
+const GithubPagesGuideModal = React.lazy(() => import('./components/GithubPagesGuideModal').then(m => ({ default: m.GithubPagesGuideModal })));
+const AuthErrorModal = React.lazy(() => import('./components/AuthErrorModal').then(m => ({ default: m.AuthErrorModal })));
+const DriveSaveModal = React.lazy(() => import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal })));
+const UserAuthModal = React.lazy(() => import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal })));
+const UserProfileModal = React.lazy(() => import('./components/UserProfileModal').then(m => ({ default: m.UserProfileModal })));
+const EditMyQuestionModal = React.lazy(() => import('./components/EditMyQuestionModal').then(m => ({ default: m.EditMyQuestionModal })));
+const RevisionHistoryModal = React.lazy(() => import('./components/RevisionHistoryModal').then(m => ({ default: m.RevisionHistoryModal })));
+const AdminPastExamImporterModal = React.lazy(() => import('./components/AdminPastExamImporterModal').then(m => ({ default: m.AdminPastExamImporterModal })));
+const AiQuestionOptimizerModal = React.lazy(() => import('./components/AiQuestionOptimizerModal').then(m => ({ default: m.AiQuestionOptimizerModal })));
+const NotebookLMSyncModal = React.lazy(() => import('./components/NotebookLMSyncModal').then(m => ({ default: m.NotebookLMSyncModal })));
+const SubagentMonitorModal = React.lazy(() => import('./components/SubagentMonitorModal').then(m => ({ default: m.SubagentMonitorModal })));
+const SystemDiagnosticsModal = React.lazy(() => import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal })));
+const AiQuotaAlertModal = React.lazy(() => import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal })));
+
+const ViewFallback = () => (
+  <div className="py-20 flex flex-col items-center justify-center gap-3 text-ink-2">
+    <RefreshCw className="w-6 h-6 text-accent animate-spin" />
+    <span className="text-[14px] font-medium">Bölüm yükleniyor…</span>
+  </div>
+);
 import { systemHealthMonitor } from './services/systemHealthMonitor';
 import { REAL_KURUL1_DRIVE_SLIDES } from './services/driveAutomation';
 import { ApiService } from './services/api';
@@ -68,7 +78,7 @@ import {
   updateUserProfileData,
   AppUser
 } from './services/auth';
-import { getDefaultActiveCommitteeId } from './services/firestoreDb';
+import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from './services/firestoreDb';
 import { 
   uploadBookletPdfToDrive, 
   evaluateAutoBackupThreshold, 
@@ -309,14 +319,27 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  // Load committees on mount & start real-time health monitoring
+  // Load committees on mount
   useEffect(() => {
     fetchCommittees();
-    systemHealthMonitor.startAutoMonitoring(60000);
-    return () => {
-      systemHealthMonitor.stopAutoMonitoring();
-    };
   }, []);
+
+  // Real-time health monitoring: only for admin (saves student network and battery)
+  useEffect(() => {
+    if (isAdmin) {
+      systemHealthMonitor.startAutoMonitoring(120000);
+      return () => {
+        systemHealthMonitor.stopAutoMonitoring();
+      };
+    }
+  }, [isAdmin]);
+
+  // Load questions when selected committee changes
+  useEffect(() => {
+    if (selectedCommitteeId) {
+      fetchQuestions();
+    }
+  }, [selectedCommitteeId]);
 
   // Supabase Realtime Subscription: Sorulardaki yeni ekleme, oy ve güncellemeleri canlı dinle
   useEffect(() => {
@@ -367,10 +390,11 @@ export default function App() {
   const fetchCommittees = async () => {
     try {
       const data = await ApiService.getCommittees();
-      if (data && data.length > 0) {
-        setCommittees(data);
-        if (!selectedCommitteeId) {
-          setSelectedCommitteeId(data[0].id);
+      const validCommittees = filterCurrent2026_2027Committees(data);
+      if (validCommittees && validCommittees.length > 0) {
+        setCommittees(validCommittees);
+        if (!selectedCommitteeId || !validCommittees.some((c) => c.id === selectedCommitteeId)) {
+          setSelectedCommitteeId(validCommittees[0].id);
         }
       }
     } catch (err: any) {
@@ -386,9 +410,6 @@ export default function App() {
     try {
       const data = await ApiService.getQuestions({
         committeeId: selectedCommitteeId,
-        discipline: selectedDiscipline,
-        status: selectedStatus,
-        search: searchQuery,
       });
       setQuestions(data || []);
     } catch (err: any) {
@@ -498,63 +519,63 @@ export default function App() {
     }
   };
 
-  // Toggle Question Upvote
+  // Toggle Question Upvote (0ms Optimistic UI)
   const handleUpvoteQuestion = async (questionId: string) => {
+    const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+    setQuestions((prev) =>
+      prev.map((q) => {
+        if (q.id === questionId) {
+          const likedBy = q.likedBy || [];
+          const idx = likedBy.indexOf(currentUserId);
+          const newLikedBy = idx >= 0
+            ? likedBy.filter((u) => u !== currentUserId)
+            : [...likedBy, currentUserId];
+          return {
+            ...q,
+            upvotes: idx >= 0 ? Math.max(0, (q.upvotes || 1) - 1) : (q.upvotes || 0) + 1,
+            likedBy: newLikedBy,
+          };
+        }
+        return q;
+      })
+    );
     try {
-      const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
-      const res = await ApiService.upvoteQuestion(questionId, currentUserId);
-      setQuestions((prev) =>
-        prev.map((q) => {
-          if (q.id === questionId) {
-            const likedBy = q.likedBy || [];
-            const idx = likedBy.indexOf(currentUserId);
-            const newLikedBy = idx >= 0
-              ? likedBy.filter((u) => u !== currentUserId)
-              : [...likedBy, currentUserId];
-            return {
-              ...q,
-              upvotes: res.upvotes !== undefined ? res.upvotes : (idx >= 0 ? Math.max(0, (q.upvotes || 1) - 1) : (q.upvotes || 0) + 1),
-              likedBy: newLikedBy,
-            };
-          }
-          return q;
-        })
-      );
+      await ApiService.upvoteQuestion(questionId, currentUserId);
     } catch (err) {
       console.error('Upvote question error:', err);
     }
   };
 
-  // Upvote memory fragment (toggle)
+  // Upvote memory fragment (0ms Optimistic UI)
   const handleUpvoteFragment = async (questionId: string, fragmentId: string) => {
+    const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+    setQuestions((prev) =>
+      prev.map((q) => {
+        if (q.id === questionId) {
+          return {
+            ...q,
+            fragments: q.fragments.map((f) => {
+              if (f.id === fragmentId) {
+                const likedBy = f.likedBy || [];
+                const idx = likedBy.indexOf(currentUserId);
+                const newLikedBy = idx >= 0
+                  ? likedBy.filter((u) => u !== currentUserId)
+                  : [...likedBy, currentUserId];
+                return {
+                  ...f,
+                  upvotes: idx >= 0 ? Math.max(0, (f.upvotes || 1) - 1) : (f.upvotes || 0) + 1,
+                  likedBy: newLikedBy,
+                };
+              }
+              return f;
+            }),
+          };
+        }
+        return q;
+      })
+    );
     try {
-      const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
       await ApiService.upvoteFragment(questionId, fragmentId, currentUserId);
-      setQuestions((prev) =>
-        prev.map((q) => {
-          if (q.id === questionId) {
-            return {
-              ...q,
-              fragments: q.fragments.map((f) => {
-                if (f.id === fragmentId) {
-                  const likedBy = f.likedBy || [];
-                  const idx = likedBy.indexOf(currentUserId);
-                  const newLikedBy = idx >= 0
-                    ? likedBy.filter((u) => u !== currentUserId)
-                    : [...likedBy, currentUserId];
-                  return {
-                    ...f,
-                    upvotes: idx >= 0 ? Math.max(0, (f.upvotes || 1) - 1) : (f.upvotes || 0) + 1,
-                    likedBy: newLikedBy,
-                  };
-                }
-                return f;
-              }),
-            };
-          }
-          return q;
-        })
-      );
     } catch (err) {
       console.error('Upvote fragment error:', err);
     }
@@ -579,39 +600,39 @@ export default function App() {
     }
   };
 
-  // Upvote option (toggle)
+  // Upvote option (0ms Optimistic UI)
   const handleUpvoteOption = async (
     questionId: string,
     key: 'A' | 'B' | 'C' | 'D' | 'E'
   ) => {
+    const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+    setQuestions((prev) =>
+      prev.map((q) => {
+        if (q.id === questionId) {
+          return {
+            ...q,
+            options: q.options.map((o) => {
+              if (o.key === key) {
+                const likedBy = o.likedBy || [];
+                const idx = likedBy.indexOf(currentUserId);
+                const newLikedBy = idx >= 0
+                  ? likedBy.filter((u) => u !== currentUserId)
+                  : [...likedBy, currentUserId];
+                return {
+                  ...o,
+                  upvotes: idx >= 0 ? Math.max(0, (o.upvotes || 1) - 1) : (o.upvotes || 0) + 1,
+                  likedBy: newLikedBy,
+                };
+              }
+              return o;
+            }),
+          };
+        }
+        return q;
+      })
+    );
     try {
-      const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
       await ApiService.upvoteOption(questionId, key, currentUserId);
-      setQuestions((prev) =>
-        prev.map((q) => {
-          if (q.id === questionId) {
-            return {
-              ...q,
-              options: q.options.map((o) => {
-                if (o.key === key) {
-                  const likedBy = o.likedBy || [];
-                  const idx = likedBy.indexOf(currentUserId);
-                  const newLikedBy = idx >= 0
-                    ? likedBy.filter((u) => u !== currentUserId)
-                    : [...likedBy, currentUserId];
-                  return {
-                    ...o,
-                    upvotes: idx >= 0 ? Math.max(0, (o.upvotes || 1) - 1) : (o.upvotes || 0) + 1,
-                    likedBy: newLikedBy,
-                  };
-                }
-                return o;
-              }),
-            };
-          }
-          return q;
-        })
-      );
     } catch (err) {
       console.error('Upvote option error:', err);
     }

@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, ChevronRight, BookOpen, Check, CircleDashed, 
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { ApiService } from '../services/api';
-import { getDefaultActiveCommitteeId } from '../services/firestoreDb';
+import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
@@ -142,28 +142,48 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [committee]);
 
-  // ---- Archive + notes (real data) ----
+  // ---- Archive + notes (instant local count, 0 network lag on homepage) ----
+  const [archiveByCommittee, setArchiveByCommittee] = useState<Record<string, number>>(() => ({
+    'donem3-kurul1': 796,
+    'donem3-kurul2': 20,
+    'donem3-kurul3': 3,
+    'donem3-kurul4': 100,
+    'donem3-kurul5': 119,
+    'donem3-kurul6': 11,
+    'donem3-final': 257,
+    'donem3-butunleme': 4,
+  }));
+  const [notesCount, setNotesCount] = useState<number>(43);
   const [archive, setArchive] = useState<{ committeeId: string; discipline: string }[]>([]);
-  const [notesCount, setNotesCount] = useState<number | null>(null);
 
   useEffect(() => {
     let alive = true;
-    ApiService.getPastQuestions()
-      .then((list) => alive && setArchive((list || []).map((q: any) => ({ committeeId: q.committeeId, discipline: q.discipline }))))
-      .catch(() => {});
-    ApiService.getLectureNotes()
-      .then((list) => alive && setNotesCount((list || []).length))
-      .catch(() => {});
+    // Fast non-blocking check from cached index without downloading full payload
+    import('../data/driveCatalog').then((mod) => {
+      if (alive && mod.DRIVE_SLIDES_CATALOG) {
+        setNotesCount(mod.DRIVE_SLIDES_CATALOG.length);
+      }
+    }).catch(() => {});
+
+    import('../services/pastQuestionsCache').then(async (mod) => {
+      if (!alive) return;
+      try {
+        const cached = await mod.pastQuestionsCache.getCachedQuestions();
+        if (cached && cached.length > 0 && alive) {
+          setArchive(cached.map((q) => ({ committeeId: q.committeeId, discipline: q.discipline })));
+          const m: Record<string, number> = {};
+          cached.forEach((q) => {
+            if (q.committeeId) m[q.committeeId] = (m[q.committeeId] || 0) + 1;
+          });
+          setArchiveByCommittee(prev => ({ ...prev, ...m }));
+        }
+      } catch (_) {}
+    }).catch(() => {});
+
     return () => {
       alive = false;
     };
   }, []);
-
-  const archiveByCommittee = useMemo(() => {
-    const m: Record<string, number> = {};
-    archive.forEach((q) => (m[q.committeeId] = (m[q.committeeId] || 0) + 1));
-    return m;
-  }, [archive]);
 
   const archiveByDiscipline = useMemo(() => {
     const m: Record<string, number> = {};
@@ -204,7 +224,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   );
 
   const activeCommitteeId = getDefaultActiveCommitteeId();
-  const sortedCommittees = useMemo(() => [...committees].sort((a, b) => committeeOrder(a) - committeeOrder(b)), [committees]);
+  const sortedCommittees = useMemo(() => filterCurrent2026_2027Committees(committees), [committees]);
   const isCollecting = committee?.id === activeCommitteeId;
   const shortName = committee ? committeeShortLabel(committee) : 'KURUL';
   const titleCaseShort = shortName.charAt(0) + shortName.slice(1).toLocaleLowerCase('tr-TR');

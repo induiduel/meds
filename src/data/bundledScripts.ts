@@ -294,6 +294,15 @@ export const BUNDLED_SCRIPTS: AdminScriptItem[] = [
     runtime: 'node',
   },
   {
+    name: 'fix-nested-and-embedded-questions.mjs',
+    title: 'İç İçe Şık ve Soru Ayrıştırma Motoru',
+    category: 'OCR & Veri Ayıklama',
+    description: 'Şık içinde başka şık olan (örn: B şıkkında C), soru kökünde kalan şıkları çıkaran ve birbirine yapışan soruları ayrıştıran motor.',
+    defaultArgs: '',
+    tags: ['iç-içe-şıklar', 'soru-ayrıştırma', 'şık-düzeltme', 'veri-temizliği'],
+    runtime: 'node',
+  },
+  {
     name: 'rebuild-all-past-questions.mjs',
     title: 'Geçmiş Sınav Sorularını Baştan İnşa Etme',
     category: 'OCR & Veri Ayıklama',

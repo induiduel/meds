@@ -206,7 +206,7 @@ class SystemHealthMonitor {
   /**
    * Kapsamlı tam sistem teşhis testi (Firebase, Supabase ve AI havuzu)
    */
-  public async runFullDiagnostic(logToConsole = true): Promise<SystemOverallHealth> {
+  public async runFullDiagnostic(logToConsole = true, checkAi = true): Promise<SystemOverallHealth> {
     if (this.isChecking) return this.currentHealth;
     this.isChecking = true;
 
@@ -220,8 +220,10 @@ class SystemHealthMonitor {
     // 2. Supabase PostgreSQL Testi
     await this.checkSupabase(logToConsole);
 
-    // 3. Yapay Zeka (Gemini & Groq) Testi
-    await this.checkAiPool(logToConsole);
+    // 3. Yapay Zeka (Gemini & Groq) Testi - Sadece manuel/detaylı teşhiste çalıştır, kota koruması
+    if (checkAi) {
+      await this.checkAiPool(logToConsole);
+    }
 
     this.recalculateOverall();
     this.isChecking = false;
@@ -536,10 +538,10 @@ class SystemHealthMonitor {
 
   public startAutoMonitoring(intervalMs = 60000) {
     if (this.checkIntervalTimer) clearInterval(this.checkIntervalTimer);
-    // İlk açılışta hemen kontrol et
-    this.runFullDiagnostic(false);
+    // İlk açılışta veritabanlarını kontrol et (AI kotasını harcamaz)
+    this.runFullDiagnostic(false, false);
     this.checkIntervalTimer = setInterval(() => {
-      this.runFullDiagnostic(false);
+      this.runFullDiagnostic(false, false);
     }, intervalMs);
   }
 

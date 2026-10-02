@@ -1,28 +1,76 @@
 {
   "committees": [
     {
-      "id": "donem3-kurul2",
-      "name": "Dönem 3 - Kurul 2: Kardiyovasküler & Solunum Sistemi",
+      "id": "donem3-kurul1",
+      "name": "Dönem 3 - Kurul 1: TIP 310 - Ürogenital ve Obstetrik Kurulu",
       "year": 3,
-      "term": "2025-2026 Güz",
+      "term": "2026-2027 Güz",
       "targetCount": 100,
-      "description": "Patoloji, Farmakoloji, Tıbbi Mikrobiyoloji, Dahiliye, Göğüs Hastalıkları ve Kardiyoloji soruları."
+      "code": "TIP 310",
+      "description": "Tıbbi Patoloji, Enfeksiyon, Üroloji, Tıbbi Genetik, Halk Sağlığı, Kadın Doğum, Farmakoloji."
     },
     {
-      "id": "donem3-kurul1",
-      "name": "Dönem 3 - Kurul 1: Enfeksiyon & Hematoloji-Onkoloji",
+      "id": "donem3-kurul2",
+      "name": "Dönem 3 - Kurul 2: TIP 320 - Nöropsikiyatri Kurulu",
       "year": 3,
-      "term": "2025-2026 Güz",
+      "term": "2026-2027 Güz",
       "targetCount": 100,
-      "description": "Tıbbi Mikrobiyoloji, Parazitoloji, Patoloji ve Farmakoloji ağırlıklı kurul soruları."
+      "code": "TIP 320",
+      "description": "Farmakoloji, Psikiyatri, Nöroloji, Tıbbi Genetik, Aile Hekimliği, Beyin Cerrahisi, Patoloji, FTR."
     },
     {
       "id": "donem3-kurul3",
-      "name": "Dönem 3 - Kurul 3: Gastrointestinal & Metabolizma",
+      "name": "Dönem 3 - Kurul 3: TIP 330 - Gastrointestinal Sistem Kurulu",
       "year": 3,
-      "term": "2025-2026 Bahar",
+      "term": "2026-2027 Güz",
       "targetCount": 100,
-      "description": "Gastrointestinal sistem hastalıkları, karaciğer patolojisi ve metabolik bozukluklar."
+      "code": "TIP 330",
+      "description": "Farmakoloji, Dahiliye, Patoloji, Pediatri, Tıbbi Genetik, Enfeksiyon."
+    },
+    {
+      "id": "donem3-kurul4",
+      "name": "Dönem 3 - Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör Kurulu",
+      "year": 3,
+      "term": "2026-2027 Bahar",
+      "targetCount": 100,
+      "code": "TIP 340",
+      "description": "Kardiyoloji, Patoloji, Farmakoloji, Pediatri, Tıbbi Genetik, Göğüs Hastalıkları, KVC."
+    },
+    {
+      "id": "donem3-kurul5",
+      "name": "Dönem 3 - Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem Kurulu",
+      "year": 3,
+      "term": "2026-2027 Bahar",
+      "targetCount": 100,
+      "code": "TIP 350",
+      "description": "Acil Tıp, Patoloji, Ortopedi, Halk Sağlığı, FTR, Dahiliye, Tıbbi Genetik, Farmakoloji."
+    },
+    {
+      "id": "donem3-kurul6",
+      "name": "Dönem 3 - Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma Kurulu",
+      "year": 3,
+      "term": "2026-2027 Bahar",
+      "targetCount": 100,
+      "code": "TIP 360",
+      "description": "Dahiliye, Halk Sağlığı, Farmakoloji, Tıbbi Biyokimya, Tıbbi Genetik, Patoloji."
+    },
+    {
+      "id": "donem3-final",
+      "name": "Dönem 3 - TIP 300: Yıl Sonu Genel Final Sınavı",
+      "year": 3,
+      "term": "2026-2027 Yıl Sonu",
+      "targetCount": 150,
+      "code": "TIP 300",
+      "description": "Tüm Kurul 1-6 komitelerini kapsayan 150 soruluk genel yıl sonu final sınavı."
+    },
+    {
+      "id": "donem3-butunleme",
+      "name": "Dönem 3 - TIP 300: Bütünleme Sınavı",
+      "year": 3,
+      "term": "2026-2027 Bütünleme",
+      "targetCount": 150,
+      "code": "TIP 300",
+      "description": "Tüm Kurul 1-6 komitelerini kapsayan 150 soruluk genel yıl sonu bütünleme sınavı."
     }
   ],
   "questions": [

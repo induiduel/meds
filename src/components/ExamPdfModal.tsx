@@ -21,6 +21,7 @@ import {
 import { Committee, QuestionItem } from '../types';
 import { ApiService } from '../services/api';
 import { downloadBookletPdfLocally } from '../services/drive';
+import { filterCurrent2026_2027Committees } from '../services/firestoreDb';
 
 interface ExamPdfModalProps {
   isOpen: boolean;
@@ -105,11 +106,14 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     };
   }, [isOpen]);
 
+  // Filter committees strictly for 2026-2027 academic year
+  const cleanCommittees = useMemo(() => filterCurrent2026_2027Committees(committees), [committees]);
+
   // Determine current active committee object
   const activeCommittee = useMemo(() => {
     if (selectedCommitteeId === 'all') return undefined;
-    return committees.find((c) => c.id === selectedCommitteeId) || committee;
-  }, [committees, selectedCommitteeId, committee]);
+    return cleanCommittees.find((c) => c.id === selectedCommitteeId) || committee;
+  }, [cleanCommittees, selectedCommitteeId, committee]);
 
   // Build Normalized Questions Pool
   const allNormalized = useMemo<NormalizedPdfQuestion[]>(() => {
@@ -154,7 +158,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     if (sourceMode === 'collaborative' || sourceMode === 'all') {
       for (const q of questions) {
         const rec = q.reconstruction;
-        const stem = rec?.stem || (q.fragments?.map((f: any) => f.text).join(' ')) || q.stem || '';
+        const stem = rec?.stem || (q.fragments?.map((f: any) => f.text).join(' ')) || (q as any).stem || '';
         if (!stem) continue;
 
         const rawOpts = rec?.options || q.options || [];
@@ -265,7 +269,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     window.print();
   };
 
-  const handleDirectPdfDownload = () => {
+  const handleDirectPdfDownload = async () => {
     try {
       const qItems: QuestionItem[] = filteredQuestions.map((q, idx) => ({
         id: q.id,
@@ -277,17 +281,19 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
         status: q.isReady ? 'completed' : 'gathering',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
+        tags: [],
         fragments: [],
-        options: q.options.map((o) => ({ key: o.key, text: o.text })),
-        claimedAnswer: q.correctAnswer,
+        options: q.options.map((o) => ({ key: o.key as 'A' | 'B' | 'C' | 'D' | 'E', text: o.text, upvotes: 0 })),
+        claimedAnswer: (['A', 'B', 'C', 'D', 'E'].includes(q.correctAnswer) ? (q.correctAnswer as 'A' | 'B' | 'C' | 'D' | 'E') : undefined),
         reconstruction: q.correctAnswer
           ? {
               stem: q.stem,
-              options: q.options,
-              correctAnswer: q.correctAnswer,
-              explanation: q.explanation,
+              options: q.options.map((o) => ({ key: o.key as 'A' | 'B' | 'C' | 'D' | 'E', text: o.text, isAiFilled: false })),
+              correctAnswer: (['A', 'B', 'C', 'D', 'E'].includes(q.correctAnswer) ? (q.correctAnswer as 'A' | 'B' | 'C' | 'D' | 'E') : 'A'),
+              explanation: q.explanation || '',
               confidenceScore: 98,
-              reconstructionQuality: 'verified',
+              notesAndDiscrepancies: 'Doğrulandı',
+              lastUpdated: new Date().toISOString(),
             }
           : undefined,
       }));
@@ -303,7 +309,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
 
       const sanitizedName = displayTitle.replace(/[^a-zA-Z0-9_\u00C0-\u017F-]/g, '_').slice(0, 40);
       const customName = `${sanitizedName}_${sourceMode === 'past_exams' ? 'Cikmislar' : 'Kitapcik'}_${displayTarget}Soru.pdf`;
-      downloadBookletPdfLocally(commObj, qItems, customName);
+      await downloadBookletPdfLocally(commObj, qItems, customName);
     } catch (err) {
       console.error('Doğrudan PDF oluşturma hatası, yazdırmaya yönlendiriliyor:', err);
       window.print();
@@ -533,10 +539,10 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                 }}
                 className="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:ring-1 focus:ring-teal-500 cursor-pointer"
               >
-                <option value="all">🌟 Tüm Kurullar ({committees.length > 0 ? committees.length : 1} Kurul)</option>
-                {committees.map((c) => (
+                <option value="all">🌟 Tüm Kurullar ({cleanCommittees.length > 0 ? cleanCommittees.length : 1} Kurul)</option>
+                {cleanCommittees.map((c) => (
                   <option key={c.id} value={c.id}>
-                    {c.name} (Dönem {c.year || 3})
+                    {c.name}
                   </option>
                 ))}
               </select>

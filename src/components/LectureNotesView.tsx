@@ -120,12 +120,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   const [pdfUploadStatus, setPdfUploadStatus] = useState<string | null>(null);
   const [isSyncingDesktop, setIsSyncingDesktop] = useState(false);
 
-  // Save notes to localStorage
-  useEffect(() => {
-    try {
-      localStorage.setItem(LOCAL_NOTES_KEY, JSON.stringify(notes));
-    } catch (e) {}
-  }, [notes]);
+  // Notes are managed in memory and synced via multiDbManager & Supabase Realtime
 
   // Load verified notes from Multi-Database (Supabase / Local / Firestore) and listen for Realtime updates
   useEffect(() => {

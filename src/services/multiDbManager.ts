@@ -1,5 +1,5 @@
 import { Committee, QuestionItem, LectureNote, AdminNotification } from '../types';
-import { FirestoreDbService, db as firestoreDb } from './firestoreDb';
+import { FirestoreDbService, db as firestoreDb, filterCurrent2026_2027Committees } from './firestoreDb';
 import { SupabaseDbService, broadcastLiveEvent } from './supabaseDb';
 import { safeJsonFetch, getCustomApiUrl } from './api';
 import { systemHealthMonitor } from './systemHealthMonitor';
@@ -175,7 +175,8 @@ class MultiDbManager {
 
     // 2. If explicit Local PC mode
     if (mode === 'local_pc') {
-      return this.getLocalCommittees();
+      const raw = await this.getLocalCommittees();
+      return filterCurrent2026_2027Committees(raw);
     }
 
     // 3. Auto or Firebase mode: Try Firebase Spark first if quota not marked exceeded
@@ -210,7 +211,8 @@ class MultiDbManager {
     }
 
     // 5. Final fallback to Local PC Express Server or LocalStorage
-    return this.getLocalCommittees();
+    const raw = await this.getLocalCommittees();
+    return filterCurrent2026_2027Committees(raw);
   }
 
   private async getLocalCommittees(): Promise<Committee[]> {

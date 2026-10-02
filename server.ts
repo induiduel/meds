@@ -682,6 +682,73 @@ interface DatabaseSchema {
   questions: QuestionItem[];
 }
 
+const OFFICIAL_COMMITTEES_2026_2027: Committee[] = [
+  {
+    id: 'donem3-kurul1',
+    name: 'Dönem 3 - Kurul 1: TIP 310 - Ürogenital ve Obstetrik Kurulu',
+    year: 3,
+    term: '2026-2027 Güz',
+    targetCount: 100,
+    description: 'Tıbbi Patoloji (33s), Enfeksiyon Hastalıkları (22s), Üroloji (13s), Tıbbi Genetik (12s), Halk Sağlığı (10s), Kadın Hastalıkları ve Doğum (4s), Tıbbi Farmakoloji (2s). Toplam: 96 saat.',
+  },
+  {
+    id: 'donem3-kurul2',
+    name: 'Dönem 3 - Kurul 2: TIP 320 - Nöropsikiyatri Kurulu',
+    year: 3,
+    term: '2026-2027 Güz',
+    targetCount: 100,
+    description: 'Tıbbi Farmakoloji (28s), Psikiyatri (24s), Nöroloji (18s), Tıbbi Genetik (10s), Aile Hekimliği (8s), Beyin ve Sinir Cerrahisi (6s), Tıbbi Patoloji (5s), FTR (4s), Anesteziyoloji ve Reanimasyon (2s). Toplam: 105 saat.',
+  },
+  {
+    id: 'donem3-kurul3',
+    name: 'Dönem 3 - Kurul 3: TIP 330 - Gastrointestinal Sistem Kurulu',
+    year: 3,
+    term: '2026-2027 Güz',
+    targetCount: 100,
+    description: 'Tıbbi Farmakoloji (31s), İç Hastalıkları (26s), Tıbbi Patoloji (19s), Çocuk Sağlığı ve Hastalıkları (6s), Tıbbi Genetik (4s), Enfeksiyon Hastalıkları (4s). Toplam: 90 saat.',
+  },
+  {
+    id: 'donem3-kurul4',
+    name: 'Dönem 3 - Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör Kurulu',
+    year: 3,
+    term: '2026-2027 Bahar',
+    targetCount: 100,
+    description: 'Kardiyoloji (20s), Tıbbi Patoloji (18s), Tıbbi Farmakoloji (16s), Çocuk Sağlığı ve Hastalıkları (9s), Tıbbi Genetik (8s), Göğüs Hastalıkları (6s), Kalp ve Damar Cerrahisi (4s), Enfeksiyon Hastalıkları (4s), İç Hastalıkları (2s), Halk Sağlığı (2s), Anestezi (1s). Toplam: 90 saat.',
+  },
+  {
+    id: 'donem3-kurul5',
+    name: 'Dönem 3 - Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem Kurulu',
+    year: 3,
+    term: '2026-2027 Bahar',
+    targetCount: 100,
+    description: 'Acil Tıp (18s), Tıbbi Patoloji (16s), Ortopedi ve Travmatoloji (13s), Halk Sağlığı (13s), FTR (12s), İç Hastalıkları (8s), Tıbbi Genetik (6s), Tıbbi Farmakoloji (6s), Çocuk Sağlığı ve Hastalıkları (4s), Beyin ve Sinir Cerrahisi (3s), Göğüs Cerrahisi (3s), Enfeksiyon Hastalıkları (2s). Toplam: 104 saat.',
+  },
+  {
+    id: 'donem3-kurul6',
+    name: 'Dönem 3 - Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma Kurulu',
+    year: 3,
+    term: '2026-2027 Bahar',
+    targetCount: 100,
+    description: 'İç Hastalıkları (30s), Halk Sağlığı (17s), Tıbbi Farmakoloji (14s), Tıbbi Biyokimya (8s), Tıbbi Genetik (8s), Tıbbi Patoloji (4s), Çocuk Sağlığı ve Hastalıkları (3s), Psikiyatri (3s), Aile Hekimliği (2s), FTR (2s). Toplam: 91 saat.',
+  },
+  {
+    id: 'donem3-final',
+    name: 'Dönem 3 - TIP 300: Yıl Sonu Genel Final Sınavı',
+    year: 3,
+    term: '2026-2027 Yıl Sonu',
+    targetCount: 150,
+    description: 'Tüm Kurul 1-6 komitelerini kapsayan 150 soruluk genel yıl sonu final sınavı.',
+  },
+  {
+    id: 'donem3-butunleme',
+    name: 'Dönem 3 - TIP 300: Bütünleme Sınavı',
+    year: 3,
+    term: '2026-2027 Bütünleme',
+    targetCount: 150,
+    description: 'Tüm Kurul 1-6 komitelerini kapsayan 150 soruluk genel yıl sonu bütünleme sınavı.',
+  },
+];
+
 // Ensure data folder and seed file exist
 function initializeDatabase(): DatabaseSchema {
   if (!fs.existsSync(DATA_DIR)) {
@@ -698,56 +765,7 @@ function initializeDatabase(): DatabaseSchema {
   }
 
   const seed: DatabaseSchema = {
-    committees: [
-      {
-        id: 'donem3-kurul1',
-        name: 'Dönem 3 - Kurul 1: TIP 310 - Ürogenital ve Obstetrik Kurulu',
-        year: 3,
-        term: '2026-2027 Güz',
-        targetCount: 100,
-        description: 'Tıbbi Patoloji (33s), Enfeksiyon Hastalıkları (22s), Üroloji (13s), Tıbbi Genetik (12s), Halk Sağlığı (10s), Kadın Hastalıkları ve Doğum (4s), Tıbbi Farmakoloji (2s). Toplam: 96 saat.',
-      },
-      {
-        id: 'donem3-kurul2',
-        name: 'Dönem 3 - Kurul 2: TIP 320 - Nöropsikiyatri Kurulu',
-        year: 3,
-        term: '2026-2027 Güz',
-        targetCount: 100,
-        description: 'Tıbbi Farmakoloji (28s), Psikiyatri (24s), Nöroloji (18s), Tıbbi Genetik (10s), Aile Hekimliği (8s), Beyin ve Sinir Cerrahisi (6s), Tıbbi Patoloji (5s), FTR (4s), Anesteziyoloji ve Reanimasyon (2s). Toplam: 105 saat.',
-      },
-      {
-        id: 'donem3-kurul3',
-        name: 'Dönem 3 - Kurul 3: TIP 330 - Gastrointestinal Sistem Kurulu',
-        year: 3,
-        term: '2026-2027 Güz',
-        targetCount: 100,
-        description: 'Tıbbi Farmakoloji (31s), İç Hastalıkları (26s), Tıbbi Patoloji (19s), Çocuk Sağlığı ve Hastalıkları (6s), Tıbbi Genetik (4s), Enfeksiyon Hastalıkları (4s). Toplam: 90 saat.',
-      },
-      {
-        id: 'donem3-kurul4',
-        name: 'Dönem 3 - Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör Kurulu',
-        year: 3,
-        term: '2026-2027 Bahar',
-        targetCount: 100,
-        description: 'Kardiyoloji (20s), Tıbbi Patoloji (18s), Tıbbi Farmakoloji (16s), Çocuk Sağlığı ve Hastalıkları (9s), Tıbbi Genetik (8s), Göğüs Hastalıkları (6s), Kalp ve Damar Cerrahisi (4s), Enfeksiyon Hastalıkları (4s), İç Hastalıkları (2s), Halk Sağlığı (2s), Anestezi (1s). Toplam: 90 saat.',
-      },
-      {
-        id: 'donem3-kurul5',
-        name: 'Dönem 3 - Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem Kurulu',
-        year: 3,
-        term: '2026-2027 Bahar',
-        targetCount: 100,
-        description: 'Acil Tıp (18s), Tıbbi Patoloji (16s), Ortopedi ve Travmatoloji (13s), Halk Sağlığı (13s), FTR (12s), İç Hastalıkları (8s), Tıbbi Genetik (6s), Tıbbi Farmakoloji (6s), Çocuk Sağlığı ve Hastalıkları (4s), Beyin ve Sinir Cerrahisi (3s), Göğüs Cerrahisi (3s), Enfeksiyon Hastalıkları (2s). Toplam: 104 saat.',
-      },
-      {
-        id: 'donem3-kurul6',
-        name: 'Dönem 3 - Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma Kurulu',
-        year: 3,
-        term: '2026-2027 Bahar',
-        targetCount: 100,
-        description: 'İç Hastalıkları (30s), Halk Sağlığı (17s), Tıbbi Farmakoloji (14s), Tıbbi Biyokimya (8s), Tıbbi Genetik (8s), Tıbbi Patoloji (4s), Çocuk Sağlığı ve Hastalıkları (3s), Psikiyatri (3s), Aile Hekimliği (2s), FTR (2s). Toplam: 91 saat.',
-      },
-    ],
+    committees: OFFICIAL_COMMITTEES_2026_2027,
     questions: [], // 2026-2027 dönemine ait kurullarda henüz sınava girilmediği için güncel havuz boştur.
   };
 
@@ -780,7 +798,16 @@ function requireAdmin(req: express.Request, res: express.Response, next: express
 
 // API Routes
 app.get('/api/committees', (req, res) => {
-  res.json({ committees: db.committees });
+  const filtered = (db.committees || []).filter((c) => {
+    const id = String(c.id || '').toLowerCase();
+    const name = String(c.name || '').toLowerCase();
+    const term = String(c.term || '').toLowerCase();
+    if (id.startsWith('donem1') || id.startsWith('donem2') || /dönem\s*[12]\b/i.test(name)) return false;
+    if (/(2021|2022|2023|2024|2025)-/i.test(term) && !term.includes('2026-2027')) return false;
+    if (/(2021|2022|2023|2024|2025)-/i.test(name) && !name.includes('2026-2027')) return false;
+    return (id.startsWith('donem3-') || c.year === 3 || /dönem\s*3/i.test(name)) && (term.includes('2026-2027') || !term);
+  });
+  res.json({ committees: filtered.length > 0 ? filtered : OFFICIAL_COMMITTEES_2026_2027 });
 });
 
 app.post('/api/committees', requireAdmin, (req, res) => {
