@@ -403,7 +403,71 @@ export async function callGroqCloud(
 // In-memory cooldown cache when Gemini free tier hits 429 quota exhaustion (prevents 4-second delays per request)
 let serverGeminiQuotaCooldownUntil = 0;
 
-// Resilient Multi-Provider AI Caller with Automated Failover (Free 1 -> Free 2 -> Billed -> Groq)
+// Helper to call Google Gemini Key Pool (Free keys + Billed key)
+async function callGeminiPool(
+  prompt: string,
+  customGeminiKey?: string,
+  model?: string,
+  isJson: boolean = false,
+  systemInstruction?: string
+): Promise<{ text: string; providerUsed: string; planUsed: string }> {
+  const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
+  if (isGeminiInCooldown) {
+    throw new Error('Google Gemini API kotası aşıldığı için beklemede (429 RESOURCE_EXHAUSTED).');
+  }
+
+  const { GoogleGenAI } = await import('@google/genai');
+  const allGeminiKeys = getTieredGeminiKeys(customGeminiKey);
+  let lastErr: any = null;
+
+  for (let i = 0; i < allGeminiKeys.length; i++) {
+    const keyInfo = allGeminiKeys[i];
+    const candidateModels = (model && model.startsWith('gemini'))
+      ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
+      : ['gemini-3.8-flash'];
+
+    for (const m of candidateModels) {
+      try {
+        console.log(`[Gemini Engine] ${keyInfo.label} (${m}) deneniyor... (Sıra: ${i + 1}/${allGeminiKeys.length})`);
+        const clientAi = new GoogleGenAI({ apiKey: keyInfo.key });
+        const configPayload: any = {};
+        if (isJson) {
+          configPayload.responseMimeType = 'application/json';
+        }
+        if (systemInstruction) {
+          configPayload.systemInstruction = systemInstruction;
+        }
+
+        const geminiRes = await clientAi.models.generateContent({
+          model: m,
+          contents: prompt,
+          config: configPayload,
+        });
+        const text = geminiRes.text || (isJson ? '{}' : '');
+        serverGeminiQuotaCooldownUntil = 0;
+        return {
+          text,
+          providerUsed: keyInfo.isBilled ? 'Google Gemini (Faturalı)' : 'Google Gemini',
+          planUsed: `${keyInfo.label} (${m})`,
+        };
+      } catch (err: any) {
+        lastErr = err;
+        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
+        if (isQuota) {
+          serverGeminiQuotaCooldownUntil = Date.now() + 5 * 60 * 1000;
+          console.warn(`[Gemini Engine] ⚠️ ${keyInfo.label} (${m}) kotaya takıldı (429).`);
+          break;
+        }
+      }
+    }
+  }
+
+  throw lastErr || new Error('Google Gemini modelleri yanıt vermedi.');
+}
+
+// Resilient Multi-Provider AI Caller with Automated 2-Phase Failover
+// Deneme 1: Birincil Sağlayıcı -> Deneme 2: Alternatif Yedek Sağlayıcı (Gemini <-> Groq)
+// 2 kez denenip ikisi de başarısız olursa açık uyarı fırlatır.
 export async function generateResilientMedicalAi(options: {
   prompt: string;
   customGeminiKey?: string;
@@ -413,7 +477,7 @@ export async function generateResilientMedicalAi(options: {
   responseFormat?: 'json' | 'text';
   systemInstruction?: string;
   messages?: { role: string; content: string }[];
-}): Promise<{ text: string; providerUsed: string; planUsed: string }> {
+}): Promise<{ text: string; providerUsed: string; planUsed: string; attemptsCount: number; fallbackUsed?: boolean }> {
   const {
     prompt,
     customGeminiKey,
@@ -426,149 +490,99 @@ export async function generateResilientMedicalAi(options: {
   } = options;
 
   const isJson = responseFormat === 'json';
-
-  // If user explicitly chose Groq Cloud or a Groq-based model
   const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
-  if (isGroqExplicit) {
-    const groqRes = await callGroqCloud(prompt, model || 'openai/gpt-oss-120b', customGroqKey, {
-      systemPrompt: systemInstruction,
-      isJson,
-      messages
-    });
-    return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model} - ${groqRes.keyUsed})` };
-  }
-
-  let lastAiErr: any = null;
-
-  // ==========================================
-  // 1. SIRA & 2. SIRA: GEMİNİ ÜCRETSİZ PLANLAR
-  // ==========================================
   const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
-  if (!isGeminiInCooldown || preferredProvider === 'gemini') {
-    const freeGeminiKeys = getFreeGeminiKeys(customGeminiKey);
-    for (let i = 0; i < freeGeminiKeys.length; i++) {
-      const currentKeyInfo = freeGeminiKeys[i];
-      const candidateModels = (model && model.startsWith('gemini'))
-        ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
-        : ['gemini-3.8-flash'];
 
-      for (const m of candidateModels) {
-        try {
-          console.log(`[AI Engine] ${currentKeyInfo.label} (${m}) deneniyor... (Sıra: ${i + 1}/${freeGeminiKeys.length})`);
-          const { GoogleGenAI } = await import('@google/genai');
-          const clientAi = new GoogleGenAI({ apiKey: currentKeyInfo.key });
-          const configPayload: any = {};
-          if (isJson) {
-            configPayload.responseMimeType = 'application/json';
-          }
-          if (systemInstruction) {
-            configPayload.systemInstruction = systemInstruction;
-          }
+  // Birincil ve İkincil (Yedek) Sağlayıcı Belirleme
+  const primaryProvider: 'groq' | 'gemini' = (isGroqExplicit || (isGeminiInCooldown && preferredProvider !== 'gemini')) ? 'groq' : (preferredProvider === 'gemini' ? 'gemini' : 'gemini');
+  const secondaryProvider: 'groq' | 'gemini' = primaryProvider === 'groq' ? 'gemini' : 'groq';
 
-          const geminiRes = await clientAi.models.generateContent({
-            model: m,
-            contents: prompt,
-            config: configPayload
-          });
-          const text = geminiRes.text || (isJson ? '{}' : '');
-          console.log(`[AI Engine] ✓ ${currentKeyInfo.label} (${m}) başarıyla yanıt üretti!`);
-          serverGeminiQuotaCooldownUntil = 0; // reset cooldown on success
-          return {
-            text,
-            providerUsed: 'Google Gemini',
-            planUsed: `${currentKeyInfo.label} (${m})`
-          };
-        } catch (err: any) {
-          console.warn(`[AI Engine] ⚠️ ${currentKeyInfo.label} (${m}) başarısız:`, err.message);
-          lastAiErr = err;
-          const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
-          if (isQuota) {
-            serverGeminiQuotaCooldownUntil = Date.now() + 5 * 60 * 1000; // 5 minutes cooldown
-            console.log('[AI Engine] ⏳ Gemini API kotası aşıldı (429). 5 dk boyunca Groq Cloud öncelikli çalışacak.');
-            break;
-          }
-        }
-      }
-    }
-  } else {
-    console.log('[AI Engine] ⚡ Gemini kota beklemesinde olduğu için doğrudan Groq Cloud devreye alınıyor (0 gecikme).');
-  }
+  let attempt1Err: any = null;
+  let attempt2Err: any = null;
 
   // =========================================================================
-  // 3. SIRA: GROQ CLOUD (ÜCRETSİZ & KOTA BAĞIMSIZ - 1. & 2. YEDEK GROQ ANAHTARLARI)
+  // 1. DENEME: BİRİNCİL SAĞLAYICI (PRIMARY ATTEMPT)
   // =========================================================================
-  const groqKeys = getTieredGroqKeys(customGroqKey);
-  if (groqKeys.length > 0) {
-    try {
-      console.log(`[AI Engine] 🚀 3. Sıra Devrede: Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
-      const groqModel = model?.includes('deepseek') ? 'deepseek-r1-distill-llama-70b' : (model?.includes('qwen') ? 'qwen/qwen3.8-27b' : 'openai/gpt-oss-120b');
+  console.log(`[AI Multi-Provider] 🟢 1. DENEME: ${primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'} ile başlatılıyor...`);
+  try {
+    if (primaryProvider === 'groq') {
+      const groqModel = model && !model.startsWith('gemini') ? model : 'openai/gpt-oss-120b';
       const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
         systemPrompt: systemInstruction,
         isJson,
         messages
       });
-      console.log(`[AI Engine] ✓ 3. Sıra (Groq Cloud ${groqRes.model} - ${groqRes.keyUsed}) başarıyla yanıt üretti!`);
       return {
         text: groqRes.text,
         providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
-        planUsed: `Groq Cloud (${groqRes.model})`
+        planUsed: `Groq Cloud (${groqRes.model})`,
+        attemptsCount: 1,
+        fallbackUsed: false
       };
-    } catch (groqErr: any) {
-      console.warn('[AI Engine] ⚠️ 3. Sıra (Groq Cloud) başarısız oldu:', groqErr.message);
-      lastAiErr = groqErr;
+    } else {
+      const geminiRes = await callGeminiPool(prompt, customGeminiKey, model, isJson, systemInstruction);
+      return {
+        text: geminiRes.text,
+        providerUsed: geminiRes.providerUsed,
+        planUsed: geminiRes.planUsed,
+        attemptsCount: 1,
+        fallbackUsed: false
+      };
     }
+  } catch (err: any) {
+    console.warn(`[AI Multi-Provider] ⚠️ 1. DENEME (${primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'}) BAŞARISIZ:`, err.message);
+    attempt1Err = err;
   }
 
-  // ===================================================================
-  // 4. SIRA: GEMİNİ FATURALANDIRMALI PLAN (ÜCRETLİ PLAN - EN SON ÇARE)
-  // ===================================================================
-  const billedKey = getBilledGeminiKey();
-  if (billedKey && billedKey.key && (!isGeminiInCooldown || preferredProvider === 'gemini')) {
-    const candidateModels = (model && model.startsWith('gemini'))
-      ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
-      : ['gemini-3.8-flash'];
-
-    for (const m of candidateModels) {
-      try {
-        console.log(`[AI Engine] 💳 4. Sıra Devrede: Ücretsiz planlar ve Groq yanıt vermedi, ${billedKey.label} (${m}) deneniyor...`);
-        const { GoogleGenAI } = await import('@google/genai');
-        const clientAi = new GoogleGenAI({ apiKey: billedKey.key });
-        const configPayload: any = {};
-        if (isJson) {
-          configPayload.responseMimeType = 'application/json';
-        }
-        if (systemInstruction) {
-          configPayload.systemInstruction = systemInstruction;
-        }
-
-        const geminiRes = await clientAi.models.generateContent({
-          model: m,
-          contents: prompt,
-          config: configPayload
-        });
-        const text = geminiRes.text || (isJson ? '{}' : '');
-        console.log(`[AI Engine] ✓ 4. Sıra (${billedKey.label}) başarıyla yanıt üretti!`);
-        return {
-          text,
-          providerUsed: 'Google Gemini (Faturalı)',
-          planUsed: `${billedKey.label} (${m})`
-        };
-      } catch (billedErr: any) {
-        console.error(`[AI Engine] ⚠️ 4. Sıra (${billedKey.label}) da başarısız:`, billedErr.message);
-        lastAiErr = billedErr;
-        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap/i.test(billedErr.message || '');
-        if (isQuota) break;
-      }
+  // =========================================================================
+  // 2. DENEME: OTOMATİK YEDEK SAĞLAYICI (SECONDARY / FALLBACK ATTEMPT)
+  // =========================================================================
+  console.log(`[AI Multi-Provider] 🔄 2. DENEME: 1. sağlayıcı yanıt vermedi. Yedek sağlayıcı ${secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'} deneniyor...`);
+  try {
+    if (secondaryProvider === 'groq') {
+      const groqModel = 'openai/gpt-oss-120b';
+      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
+        systemPrompt: systemInstruction,
+        isJson,
+        messages
+      });
+      console.log(`[AI Multi-Provider] ✓ 2. DENEME (Yedek Groq Cloud ${groqRes.model}) başarıyla tamamlandı!`);
+      return {
+        text: groqRes.text,
+        providerUsed: `Groq Cloud (${groqRes.keyUsed}) [2. Deneme Yedek]`,
+        planUsed: `Groq Cloud (${groqRes.model})`,
+        attemptsCount: 2,
+        fallbackUsed: true
+      };
+    } else {
+      const geminiRes = await callGeminiPool(prompt, customGeminiKey, 'gemini-3.8-flash', isJson, systemInstruction);
+      console.log(`[AI Multi-Provider] ✓ 2. DENEME (Yedek Google Gemini) başarıyla tamamlandı!`);
+      return {
+        text: geminiRes.text,
+        providerUsed: `${geminiRes.providerUsed} [2. Deneme Yedek]`,
+        planUsed: geminiRes.planUsed,
+        attemptsCount: 2,
+        fallbackUsed: true
+      };
     }
+  } catch (err: any) {
+    console.error(`[AI Multi-Provider] ❌ 2. DENEME (${secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'}) DE BAŞARISIZ OLDU:`, err.message);
+    attempt2Err = err;
   }
 
-  // If everything failed, throw informative error
-  const errMsg = lastAiErr?.message || '';
-  const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
-  const friendlyMsg = isQuota
-    ? 'Tüm yapay zeka planları (1. Ücretsiz Gemini, 2. Ücretsiz Gemini, 3. Groq Cloud ve 4. Faturalı Gemini) kotaya takıldı veya yanıt vermedi (Hata 429). Lütfen AI Studio veya Groq Cloud ayarlarınızı kontrol edin.'
-    : (errMsg || 'Tüm yapay zeka sağlayıcıları yanıt vermedi.');
-  throw new Error(friendlyMsg);
+  // =========================================================================
+  // 2 KEZ DENENDİ VE İKİ SAĞLAYICI DA YANIT VERMEDİ -> UYARI VER
+  // =========================================================================
+  const primaryName = primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
+  const secondaryName = secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
+  const failureError: any = new Error(
+    `2 kez denendi: Hem 1. sağlayıcı (${primaryName}) hem de 2. alternatif sağlayıcı (${secondaryName}) yanıt veremedi. Lütfen API anahtarlarınızı veya internet bağlantınızı kontrol edin.`
+  );
+  failureError.attemptsCount = 2;
+  failureError.isTwoAttemptsFailed = true;
+  failureError.primaryError = attempt1Err?.message || 'Bilinmeyen hata';
+  failureError.secondaryError = attempt2Err?.message || 'Bilinmeyen hata';
+  throw failureError;
 }
 
 // Default instance for lightweight background tasks
