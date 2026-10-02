@@ -97,7 +97,10 @@ const LOCAL_SUPABASE_URL = process.env.LOCAL_SUPABASE_URL || 'http://127.0.0.1:8
 const LOCAL_SUPABASE_KEY = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_KEY || '';
 
 const CLOUD_SUPABASE_URL = process.env.CLOUD_SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
-const CLOUD_SUPABASE_KEY = process.env.CLOUD_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_KEY || '';
+const CLOUD_SUPABASE_KEY = process.env.CLOUD_SUPABASE_SECRET_KEY || process.env.CLOUD_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_KEY || '';
+const CLOUD_SUPABASE_KEY_SRC = process.env.CLOUD_SUPABASE_SECRET_KEY
+  ? 'CLOUD_SUPABASE_SECRET_KEY'
+  : (process.env.CLOUD_SUPABASE_KEY ? 'CLOUD_SUPABASE_KEY' : (process.env.SUPABASE_SECRET_KEY ? 'SUPABASE_SECRET_KEY' : 'none'));
 
 export const localSupabase = createClient(LOCAL_SUPABASE_URL, LOCAL_SUPABASE_KEY);
 export const cloudSupabase = createClient(CLOUD_SUPABASE_URL, CLOUD_SUPABASE_KEY);
@@ -338,7 +341,7 @@ app.get('/api/health', (req, res) => {
       localUrl: (() => { try { return new URL(LOCAL_SUPABASE_URL).host; } catch { return '?'; } })(),
       cloudUrl: (() => { try { return new URL(CLOUD_SUPABASE_URL).host; } catch { return '?'; } })(),
       cloudKeyLen: (CLOUD_SUPABASE_KEY || '').length,
-      cloudKeySrc: process.env.CLOUD_SUPABASE_KEY ? 'env' : 'fallback',
+      cloudKeySrc: typeof CLOUD_SUPABASE_KEY_SRC !== 'undefined' ? CLOUD_SUPABASE_KEY_SRC : '?',
     },
   });
 });

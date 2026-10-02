@@ -20,7 +20,7 @@ database_json/
 *.backup*
 *.bak
 __pycache__/
-.tmp_*
+.tmp*
 data/nested_fix_report.json
 data/local_rag_chunks.json
 data/_write_probe/
