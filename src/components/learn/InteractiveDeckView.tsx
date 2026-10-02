@@ -1278,17 +1278,18 @@ const GlobalTopicSearchModal: React.FC<{
         });
         return;
       }
-      // 2. Synthesis Narrative
-      if (slide.synthesisNarrative && slide.synthesisNarrative.toLocaleLowerCase('tr-TR').includes(queryNorm)) {
-        const idx = slide.synthesisNarrative.toLocaleLowerCase('tr-TR').indexOf(queryNorm);
+      // 2. Synthesis Narrative / Content
+      const narrativeText = slide.synthesisNarrative || (slide as any).content || '';
+      if (narrativeText && narrativeText.toLocaleLowerCase('tr-TR').includes(queryNorm)) {
+        const idx = narrativeText.toLocaleLowerCase('tr-TR').indexOf(queryNorm);
         const start = Math.max(0, idx - 40);
-        const end = Math.min(slide.synthesisNarrative.length, idx + queryNorm.length + 80);
+        const end = Math.min(narrativeText.length, idx + queryNorm.length + 80);
         matches.push({
           slideIndex: sIdx,
           slideNumber: slide.slideNumber,
           slideTitle: slide.title,
           matchedType: 'Ders Notu Sentezi',
-          snippet: (start > 0 ? '...' : '') + slide.synthesisNarrative.slice(start, end) + (end < slide.synthesisNarrative.length ? '...' : ''),
+          snippet: (start > 0 ? '...' : '') + narrativeText.slice(start, end) + (end < narrativeText.length ? '...' : ''),
         });
         return;
       }
@@ -1320,8 +1321,9 @@ const GlobalTopicSearchModal: React.FC<{
         });
         return;
       }
-      // 5. Spot Pearls
-      const foundPearl = (slide.spotPearls || []).find((p) => p.toLocaleLowerCase('tr-TR').includes(queryNorm));
+      // 5. Spot Pearls / Spots
+      const slideSpots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
+      const foundPearl = slideSpots.find((p: string) => p.toLocaleLowerCase('tr-TR').includes(queryNorm));
       if (foundPearl) {
         matches.push({
           slideIndex: sIdx,
@@ -1333,8 +1335,11 @@ const GlobalTopicSearchModal: React.FC<{
         return;
       }
       // 6. Questions
-      const foundQ = (slide.relatedQuestions || []).find(
-        (rq) => rq.stem.toLocaleLowerCase('tr-TR').includes(queryNorm) || rq.explanation.toLocaleLowerCase('tr-TR').includes(queryNorm)
+      const slideQuestions = (slide.relatedQuestions && slide.relatedQuestions.length > 0)
+        ? slide.relatedQuestions
+        : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
+      const foundQ = slideQuestions.find(
+        (rq: any) => (rq.stem || '').toLocaleLowerCase('tr-TR').includes(queryNorm) || (rq.explanation || '').toLocaleLowerCase('tr-TR').includes(queryNorm)
       );
       if (foundQ) {
         matches.push({
@@ -1342,7 +1347,7 @@ const GlobalTopicSearchModal: React.FC<{
           slideNumber: slide.slideNumber,
           slideTitle: slide.title,
           matchedType: 'Çıkmış Soru',
-          snippet: foundQ.stem.slice(0, 130) + '...',
+          snippet: (foundQ.stem || '').slice(0, 130) + '...',
         });
       }
     });
@@ -2197,7 +2202,9 @@ const InteractionPanel: React.FC<{
   tab: PanelTab;
   setTab: (t: PanelTab) => void;
 }> = ({ deck, slide, tab, setTab }) => {
-  const qs = slide.relatedQuestions || [];
+  const qs = (slide.relatedQuestions && slide.relatedQuestions.length > 0)
+    ? slide.relatedQuestions
+    : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
   const cards = slide.flashcards || [];
 
   const tabs: { id: PanelTab; label: string }[] = [
@@ -2241,7 +2248,7 @@ const InteractionPanel: React.FC<{
         )}
         {tab === 'questions' &&
           (qs.length === 0 ? (
-            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayta eşleşen çıkmış soru yok.</p>
+            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayta eşleşen soru yok.</p>
           ) : (
             qs.map((q, i) => <QuizCard key={`${slide.slideNumber}-${q.id}`} q={q} n={i + 1} />)
           ))}
@@ -2264,16 +2271,19 @@ const InteractionPanel: React.FC<{
 // ---------------------------------------------------------------------------
 const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
   const c = slide.coreContent || {};
+  const narrative = slide.synthesisNarrative || (slide as any).content || '';
+  const spots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
+
   return (
     <div className="flex flex-col gap-3.5">
       {/* Narrative block */}
-      {slide.synthesisNarrative && (
+      {narrative && (
         <div className="rounded-xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/20 p-3.5 flex flex-col gap-2.5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-line-soft">
             <BookOpen className="w-4 h-4 text-accent" />
             <span className="text-[13px] font-bold text-ink">Kapsamlı Ders Notu Sentezi</span>
           </div>
-          <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
+          <StructuredSynthesisRenderer text={narrative} />
         </div>
       )}
 
@@ -2297,8 +2307,8 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
       )}
 
       {/* Spot pearls */}
-      {slide.spotPearls && slide.spotPearls.length > 0 && (
-        <SpotList items={slide.spotPearls} title="Bu slaytın spotları" compact />
+      {spots.length > 0 && (
+        <SpotList items={spots} title="Bu slaytın spotları" compact />
       )}
     </div>
   );

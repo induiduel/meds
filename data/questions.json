@@ -174,7 +174,7 @@
         "taslak-birlestirildi"
       ],
       "topic": "Tıbbi Patoloji Sorusu",
-      "status": "gathering",
+      "status": "completed",
       "options": [],
       "upvotes": 0,
       "createdAt": "2026-10-02T14:23:50.62677+00:00",
@@ -191,12 +191,12 @@
         },
         {
           "id": "f-merged-1790983091687-cbhf",
-          "author": "Dr House",
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
           "text": "[Birleştirilen Taslak #Belirsiz]: Kronik romatoid artrit tanısıyla takip edilen 58 yaşındaki kadın hastada son zamanlarda bilateral bacak ödemi ve proteinüri (6 g/gün) gelişiyor. Yapılan renal biyopsinin ışık mikroskobik incelemesinde, glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanıyor. Bu birikim Kongo kırmızısı (Congo red) boyası ile boyanıp polarize ışık mikroskobunda incelendiğinde elma yeşili çift kırınım (birefringe) gösteriyor.\n\nBu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
           "type": "stem",
-          "timestamp": "2026-10-02T23:18:11.687Z",
-          "upvotes": 1
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T23:18:11.687Z"
         },
         {
           "id": "f-1790951053241-1mbo",
@@ -258,11 +258,40 @@
           "changeSummary": "4 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-02T23:18:14.662Z",
+      "updatedAt": "2026-10-02T23:18:44.877Z",
       "discipline": "Tıbbi Patoloji",
       "committeeId": "donem3-kurul1",
       "questionNumber": 0,
-      "reconstruction": null,
+      "reconstruction": {
+        "stem": "58 yaşında kronik romatoid artrit hastası olan kadın hastada son zamanlarda bilateral bacak ödemi ve 6 g/gün proteinüri gelişmiştir. Renal biyopsinin ışık mikroskobik incelemesinde glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanmıştır. Bu birikim Congo kırmızısı (Congo red) ile boyanıp polarize ışık mikroskobunda \"apple‑green birefringence\" (elma‑yeşili çift kırınım) göstermektedir. Bu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "text": "Amiloid",
+            "isAiFilled": false
+          },
+          {
+            "text": "Glikojen",
+            "isAiFilled": false
+          },
+          {
+            "text": "Kalsiyum",
+            "isAiFilled": false
+          },
+          {
+            "text": "Melanin",
+            "isAiFilled": false
+          },
+          {
+            "text": "Kolesterol",
+            "isAiFilled": false
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "Congo kırmızısı ile boyanan ve polarize ışık altında apple‑green birefringence gösteren ekstraselüler amorf materyal, amiloid birikimidir. Amiloid, β‑katlanmış proteinlerin dizi halinde birikmesiyle oluşur ve kronik inflamatuar hastalıklarda (ör. romatoid artrit) sekonder amiloidoz gelişebilir. Glikojen, PAS pozitif ancak Congo kırmızısı ile boyanmaz; kalsiyum, von Kossa ile tespit edilir ve ışık mikroskobunda parlak, kırılgan bir yapı gösterir; melanin, Fontana‑Masson ile boyanır ve ışık mikroskobunda kahverengi‑siyah pigment verir; kolesterol, yağ damlacıkları şeklinde boşluk bırakır ve özel yağ boyalarıyla görülür. Bu nedenlerle sadece amiloid doğru cevaptır.",
+        "confidenceScore": 96,
+        "notesAndDiscrepancies": "Öğrencilerin hatırladığı tüm şıklar (amiloid, glikojen, kalsiyum, melanin, kolesterol) doğru şekilde korunmuş ve imla hataları düzeltilmiştir. Sorunun metni, verilen ipuçları (Congo kırmızısı, apple‑green birefringence) ile tutarlı bir klinik senaryo hâline getirildi. Çelişki veya eksik bilgi bulunmamaktadır.",
+        "lastUpdated": "2026-10-02T23:18:44.402Z"
+      },
       "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
       "contributedByName": "Dr House",
       "isUnassignedNumber": true,
@@ -564,7 +593,8 @@
         }
       ],
       "isMerged": true,
-      "placementNotes": "[03.10.2026]: 4 taslak ile iç içe geçirildi."
+      "placementNotes": "[03.10.2026]: 4 taslak ile iç içe geçirildi.",
+      "claimedAnswer": "A"
     },
     {
       "id": "q-donem3-kurul1-unassigned-1790967524679",
