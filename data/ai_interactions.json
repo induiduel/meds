@@ -1,5 +1,70 @@
 [
   {
+    "id": "act-1790968835326-wmqj8",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Tıp",
+    "topic": "Test",
+    "interactionType": "chat_qa",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Test mesajı",
+    "response": "## Merhaba! 👋  \n\nÖncelikle **soru çözme sürecine ilgi gösterdiğin** için seni tebrik ederim. Şu an elimizde “Test mesajı” şeklinde bir soru var ve maalesef soru kökü, şıklar ya da doğru cevap gibi detaylar bulunmuyor. Bu yüzden sana en verimli yardımı sağlayabilmem için aşağıdaki bilgileri **paylaşman çok önemli**:\n\n| Bilmeniz Gerekenler | Açıklama |\n|---------------------|----------|\n| **Soru kökü** | Hastanın yaşı, şikayetleri, fizik bulguları, laboratuvar/radyoloji sonuçları vb. |\n| **Şıklar** | 4‑5 seçenek (A‑E) ve her birinin neyi ifade ettiğini |\n| **Doğru cevap** (eğer biliyorsan) | Hangi şıktın doğru olduğunu düşünüyorsan |\n| **Şüphelendiğin şık(lar)** | Özellikle zorlandığın ya da “neden yanlış?” diye merak ettiğin seçenekler |\n\nBu bilgileri gönderdiğinde:\n\n1. **Doğru cevabın neden doğru olduğunu** adım adım, patofizyoloji‑farmakoloji temelli açıklayacağım.  \n2. **Diğer şıkların neden yanıldığını**, hangi klinik senaryolarda doğru olabileceklerini ve “sınav tuzağı” olarak karşımıza çıkabilecek noktaları göstereceğim.  \n3. **Akılda kalıcı mnemonikler** ve hatırlama teknikleriyle konuyu pekiştireceğiz.  \n\n---\n\n### Şimdilik İşinize Yarayabilecek Genel İpuçları\n\n- **Soru kökünü “kırmak”**: Öncelikle sorunun ne istediğini netleştirin (tanı mı, tedavi mi, prognostik bir bilgi mi?).  \n- **Anahtar kelimeler**: “Keskin”, “kronik”, “bulaşıcı”, “iyileşme” gibi kelimeler, patofizyolojik yolakları işaret eder.  \n- **Şıkları sınıflandırın**: “İlaç”, “cerrahi”, “konservatif”, “komplikasyon” gibi gruplara ayırmak, mantıksal süzgeç oluşturur.  \n- **Olumsuzlukları yakala**: “…değildir”, “…olmaz” gibi ifadeler, doğru cevabı dışarıda bırakmak için kritik ipuçlarıdır.  \n\n---\n\n### “Sınav Tuzağı” Uyarısı 🚩\n\n> **“En çok hatırladığım şey, sorunun en çok dikkat çeken kısmının doğru cevap olduğu”**  \n> Bu, **yanıltıcı bir tuzaktır**. Soru kökünde vurgulanan bir bulgu, aslında **diferansiyel tanıyı daraltmak** için kullanılabilir; doğru cevap ise o bulguyu **kabul eden** ya da **reddecek** bir seçenek olabilir.\n\n---\n\n#### Şimdi ne yapalım?\n\nLütfen sorunun tam metnini, şıkları ve varsa işaretlediğin cevabı gönder. Böylece **her bir seçeneği tek tek inceleyip**, senin için en açıklayıcı ve kalıcı öğrenme deneyimini sunabilirim.\n\n> **Unutma:** Soruyu ne kadar detaylı paylaşırsan, açıklamam da o kadar **özelleşir** ve **etkili** olur.  \n\nSabırsızlıkla bekliyorum! 🌟",
+    "contextSnapshot": {
+      "stem": "Test soru?",
+      "options": [],
+      "correctAnswer": "",
+      "userAnswer": "",
+      "explanation": ""
+    },
+    "metadata": {
+      "providerUsed": "Groq Cloud (1. Ücretsiz Groq Anahtarı) [2. Deneme Yedek]",
+      "model": "Groq Cloud (openai/gpt-oss-120b)"
+    },
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1790968835326-wmqj8",
+    "createdAt": "2026-10-02T19:20:35.326Z"
+  },
+  {
+    "id": "act-1790968806656-fs5vp",
+    "committeeId": "Dönem 3 Kurul 2",
+    "discipline": "Tıbbi Farmakoloji",
+    "topic": "Beta Blokörler",
+    "interactionType": "chat_qa",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Neden cevap Propranolol değil de Karvedilol?",
+    "response": "## 📚 Soru Tekrarı  \n\n**Soru:** *Aşağıdaki beta‑blokörlerden hangisi aynı zamanda **α‑1 reseptör blokajı** yaparak **vazodilatasyon** oluşturur?*  \n\n**Şıklar**  \nA) Propranolol  \nB) Atenolol  \nC) **Carvedilol**  \nD) Metoprolol  \n\n**Doğru cevap:** C) **Carvedilol**  \n\nSen A) **Propranolol** işaretlemişsin. Şimdi neden **Carvedilol** doğru, **Propranolol** değil, adım adım inceleyelim.\n\n---\n\n## 1️⃣ Beta‑blokörlerin temel sınıflandırması  \n\n| **Beta‑blokör tipi** | **Beta‑reseptör seçiciliği** | **Ek özellikleri** |\n|----------------------|------------------------------|--------------------|\n| **Non‑selektif** | β1 + β2 (örnek: Propranolol) | Sadece β‑blokaj |\n| **β1‑selektif** | β1 > β2 (örnek: Atenolol, Metoprolol) | Kardiyovasküler yan etki daha az |\n| **β + α‑bloker** | β1 + β2 + α1 (örnek: Carvedilol, Labetalol) | **α1‑blokaj → vazodilatasyon** |\n| **İnverse agonist / ISA** | β‑blokaj + kısmi uyarıcı (örnek: Nebivolol) | NO‑salınımı vb. ek etkiler |\n\n**Anahtar nokta:** **α1‑reseptör blokajı** yalnızca “β + α” blokörlerde görülür. Bu da doğrudan **vazodilatasyon**a yol açar (özellikle periferik damarlar ve venöz tonus).\n\n---\n\n## 2️⃣ Carvedilol’un farmakolojik profili  \n\n| Özellik | Açıklama |\n|---------|----------|\n| **β‑blokaj** | β1 ve β2’yi bloke eder → kalp hızı, kontraktilite ve renin salgısı azalır. |\n| **α1‑blokaj** | **Vazodilatasyon** sağlar → periferik direnci düşürür, kan basıncını ek olarak azaltır. |\n| **Anti‑oksidan / anti‑inflamatuar etkiler** | Kromatinin metabolizması, ROS azaltımı vb. (kardiyoprotektif ek fayda). |\n| **Klinik kullanımı** | **Kronik kalp yetmezliği, hipertansiyon, post‑MI** (özellikle düşük dozda başlanır). |\n\n> **“CARVEDİLOP”** akrostişi:  \n> **C**ardiac (kalp) **A**ction, **R**eceptor (β + α) **V**asodilation, **E**ndothelial protection, **D**ose‑titrated, **İ**nhibits renin, **L**owers BP, **O**utcome improvement, **P**rotects heart.\n\n---\n\n## 3️⃣ Propranolol neden **yanlış**?  \n\n| **Propranolol** | **Neden Carvedilol değil?** |\n|----------------|-----------------------------|\n| **Non‑selektif β‑bloker** (β1 + β2) | **α1‑reseptör üzerinde etkisi yoktur**. |\n| **Vazokonstriktif** etkisi | β2 blokajından dolayı bronşlar ve damarlar **daralır** (özellikle yüksek dozda). |\n| **Kullanım alanları** | Anksiyete, tremor, migren profilaksisi, hipertansiyon (β‑blokajla) ama **vazodilatasyon** gerektiren durumlar için tercih edilmez. |\n\n> **Sınav Tuzağı:** “Non‑selektif” ifadesi **β‑blokajının geniş spektrumlu olduğunu** gösterir, **α‑blokajını** ima etmez. Bu yüzden “non‑selektif” kelimesi **α1** blokajını düşündürmemeli!\n\n---\n\n## 4️⃣ Diğer şıkların neden elendiği  \n\n| Şık | Beta‑blokaj tipi | α1‑blokaj var mı? | Açıklama |\n|-----|------------------|-------------------|----------|\n| **A) Propranolol** | Non‑selektif β | **Hayır** | β2 blokajı nedeniyle vazokonstriksiyon; α1 yok. |\n| **B) Atenolol** | β1‑selektif | **Hayır** | Kardiyoselektif; α1 etkisi yok. |\n| **D) Metoprolol** | β1‑selektif | **Hayır** | Aynı şekilde sadece β1 blokaj; α1 yok. |\n\n> **Klinik not:** Bu üç ilaç **izole β‑blokaj** gerektiren durumlarda (örnek: **Atenolol** – astım hastalarında β2 koruması isteniyorsa) tercih edilir. **Carvedilol** ise **β + α** blokajının faydalı olduğu **kronik kalp yetmezliği** ve **rezistans hipertansiyon** gibi durumlarda tercih edilir.\n\n---\n\n## 5️⃣ “Neden Carvedilol?” – Mekanizma adım adım  \n\n1. **Beta‑blokaj** →  \n   - β1: Kalp hızı, kontraktilite, renin salgısı azalır.  \n   - β2: Bronş ve vasküler düz kas gevşemesi azalır (ancak aynı anda α1 blokajı bu etkiyi dengeler).  \n\n2. **α1‑blokaj** →  \n   - **Vazodilatasyon**: Periferik arteriyel düz kasın gevşemesi → **Sistemik vasküler rezistans (SVR)** düşer.  \n   - **İntrakardiyak afterload** azalır → kalp pompa fonksiyonu iyileşir.  \n\n3. **Kombine etki** → **Kan basıncının iki yönlü kontrolü** (düşük CO ve yüksek SVR) ve **kardiyovasküler mortalitenin azalması**.  \n\n> **Kısa hatırlatma:** *“β↓ + α↓ = BP↓ + CO↑”* (β blokajı CO’yu düşürür, α blokajı SVR’yi düşürür → net fayda).\n\n---\n\n## 6️⃣ Mnemonikler & Hafıza Yardımları  \n\n| **Konu** | **Mnemonik** |\n|----------|--------------|\n| **β + α blokörler** | **“CARVEDİLOP”** (yukarıdaki akrostiş). |\n| **α1 blokajının vazodilatasyon etkisi** | **“A1 → Aç”** (A1 = α1, Aç = Açma = Genişleme). |\n| **Non‑selektif β vs β+α** | **“NON‑α = sadece β”** (Non‑α = α yok). |\n| **Kardiyovasküler hastalıkta tercih** | **“HF → H**eart **F**ailure **C**arvedilol**”** (HF = Heart Failure). |\n\n---\n\n## 7️⃣ Sınav Tuzağı Uyarısı  \n\n- **“Non‑selektif”** kelimesi **β‑blokajının geniş olduğunu** gösterir, **α‑blokajını** içermez.  \n- **“Selektif”** şıklar (Atenolol, Metoprolol) **β1** üzerine odaklanır → **α1** etkisi yoktur.  \n- **“Carvedilol”** ve **“Labetalol”** gibi **β + α** blokörleri **sadece “β‑bloker”** olarak düşünülmemeli; **α1** etkisi **vazodilatasyon** sağlar.\n\n---\n\n## 8️⃣ Özet – Neden Carvedilol?  \n\n- **Carvedilol**: **β1 + β2 + α1** blokajını bir arada yapar → **vazodilatasyon** (α1) + **beta‑blokaj** (kalp ve renin).  \n- **Propranolol**: **β1 + β2** blokajıdır, **α1** yok → **vazokonstriksiyon** (β2 blokajı) ve **vazodilatasyon** sağlamaz.  \n\nDolayısıyla sorunun doğru cevabı **C) Carvedilol**’dır.  \n\n---\n\n### 🎓 Öğrenciye Tavsiye\n\n1. **İlaç sınıflarını iki sütunlu bir tablo** halinde (β‑seçicilik vs α‑blokaj) çalış.  \n2. **Akrostişleri** (CARVEDİLOP, LABETAL) hatırlayarak **β+α** blokörleri hızlıca ayırt et.  \n3. **Klinik senaryolar** (HF, rezistans HT) ile **“hangi ilaç hangi mekanizma ile işe yarar?”** sorusunu mental olarak kur.\n\nBaşarılar! 🚀 Eğer başka bir şık ya da benzer bir konu hakkında soruların olursa, hemen sor!",
+    "contextSnapshot": {
+      "stem": "Aşağıdaki beta blokörlerden hangisi aynı zamanda alfa-1 reseptör blokajı yaparak vazodilatasyon oluşturur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Propranolol"
+        },
+        {
+          "key": "B",
+          "text": "Atenolol"
+        },
+        {
+          "key": "C",
+          "text": "Karvedilol"
+        },
+        {
+          "key": "D",
+          "text": "Metoprolol"
+        }
+      ],
+      "correctAnswer": "C",
+      "userAnswer": "A",
+      "explanation": ""
+    },
+    "metadata": {
+      "providerUsed": "Groq Cloud (1. Ücretsiz Groq Anahtarı) [2. Deneme Yedek]",
+      "model": "Groq Cloud (openai/gpt-oss-120b)"
+    },
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1790968806656-fs5vp",
+    "createdAt": "2026-10-02T19:20:06.656Z"
+  },
+  {
     "id": "act-1790967968680-qazpm",
     "questionId": "test-q-validation",
     "committeeId": "donem3-kurul1",

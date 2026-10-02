@@ -44,6 +44,9 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
   const [pastInteractions, setPastInteractions] = useState<any[]>([]);
   const [showPastInteractions, setShowPastInteractions] = useState(false);
   const [upvotedIds, setUpvotedIds] = useState<Set<string>>(new Set());
+  const [loadingStatus, setLoadingStatus] = useState<string>('Tıp literatürü ve amfi notları taranıyor...');
+  const [twoAttemptsFailed, setTwoAttemptsFailed] = useState<boolean>(false);
+  const [lastFailedText, setLastFailedText] = useState<string | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -137,6 +140,8 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
     setMessages(nextMessages);
     setInputMessage('');
     setIsLoading(true);
+    setLoadingStatus('Tıp literatürü ve amfi notları taranıyor (1. Deneme)...');
+    setTwoAttemptsFailed(false);
 
     try {
       const res = await ApiService.chatWithQuestionTutor({
@@ -145,9 +150,12 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         currentMessage: text,
         preferredProvider,
         model: selectedModel,
+        onStatusUpdate: (status) => setLoadingStatus(status),
       });
 
       if (res.success && res.reply) {
+        setTwoAttemptsFailed(false);
+        setLastFailedText(null);
         const assistantMsg: QuestionChatMessage = {
           role: 'assistant',
           content: res.reply,
@@ -158,17 +166,29 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         setMessages((prev) => [...prev, assistantMsg]);
         if (res.providerUsed) setLastUsedProvider(res.providerUsed);
       } else {
+        const isTwo = Boolean(res.isTwoAttemptsFailed || res.attemptsCount === 2 || res.error?.includes('2 kez'));
+        if (isTwo) {
+          setTwoAttemptsFailed(true);
+          setLastFailedText(text);
+        }
         const errorMsg: QuestionChatMessage = {
           role: 'assistant',
-          content: `⚠️ **Üzgünüm, bir sorun oluştu:** ${res.error || 'Yapay zeka yanıt üretemedi. Lütfen tekrar deneyin.'}`,
+          content: isTwo
+            ? `⚠️ **2 KEZ DENENDİ VE BAŞARISIZ OLDU**\n\n${res.error || 'Hem birincil yapay zeka sağlayıcısı hem de alternatif yedek sağlayıcı (Google Gemini ve Groq Cloud) yanıt veremedi.'}\n\n💡 *Aşağıdaki **Tekrar Dene** butonuna basabilir veya üstteki **Ayarlar** menüsünden farklı bir model ya da API anahtarı seçebilirsiniz.*`
+            : `⚠️ **Üzgünüm, bir sorun oluştu:** ${res.error || 'Yapay zeka yanıt üretemedi. Lütfen tekrar deneyin.'}`,
           timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
         };
         setMessages((prev) => [...prev, errorMsg]);
       }
     } catch (err: any) {
+      const isTwo = Boolean(err.message?.includes('2 kez'));
+      if (isTwo) {
+        setTwoAttemptsFailed(true);
+        setLastFailedText(text);
+      }
       const errorMsg: QuestionChatMessage = {
         role: 'assistant',
-        content: `⚠️ **Bağlantı hatası:** ${err.message || 'Yapay zekaya ulaşılamadı.'}`,
+        content: `⚠️ **Bağlantı hatası (2 deneme yapıldı):** ${err.message || 'Yapay zekaya ulaşılamadı.'}`,
         timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages((prev) => [...prev, errorMsg]);
@@ -619,9 +639,47 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                   <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: '150ms' }} />
                   <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: '300ms' }} />
                 </div>
-                <span className="text-xs text-ink-2 italic font-sans ml-1">
-                  Tıp literatürü ve amfi notları taranıyor...
+                <span className={`text-xs font-sans ml-1 ${loadingStatus.includes('2. Deneme') || loadingStatus.includes('Alternatif') || loadingStatus.includes('diğer') ? 'text-amber-700 font-semibold' : 'text-ink-2 italic'}`}>
+                  {loadingStatus}
                 </span>
+              </div>
+            </div>
+          )}
+
+          {/* 2-Attempt Failure Alert Card */}
+          {twoAttemptsFailed && !isLoading && (
+            <div className="p-3.5 bg-amber-50 border border-amber-300/80 rounded-2xl shadow-xs space-y-2.5 animate-fade-in text-ink">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 text-amber-900 font-bold text-[13px]">
+                  <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                  <span>2 Kez Denendi ve Yanıt Alınamadı</span>
+                </div>
+                <span className="text-[10px] bg-amber-200/90 text-amber-950 font-mono px-2 py-0.5 rounded-full font-bold">
+                  Gemini &amp; Groq Başarısız
+                </span>
+              </div>
+              <p className="text-[12px] text-amber-800/90 leading-relaxed m-0">
+                Sistem otomatik olarak önce birincil ardından yedek yapay zeka sağlayıcısını denedi ancak ikisi de yanıt veremedi. Aşağıdaki seçenekleri kullanarak sorunuzu tekrar gönderebilir veya modeli değiştirebilirsiniz.
+              </p>
+              <div className="flex items-center flex-wrap gap-2 pt-0.5">
+                {lastFailedText && (
+                  <button
+                    type="button"
+                    onClick={() => handleSendMessage(lastFailedText)}
+                    className="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[12px] font-semibold flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                    <span>Tekrar Dene</span>
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setShowSettings(!showSettings)}
+                  className="px-3 py-1.5 bg-white border border-amber-300 hover:bg-amber-100/50 text-amber-900 rounded-lg text-[12px] font-medium flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
+                >
+                  <SlidersHorizontal className="w-3.5 h-3.5" />
+                  <span>Model / Sağlayıcı Ayarları</span>
+                </button>
               </div>
             </div>
           )}
