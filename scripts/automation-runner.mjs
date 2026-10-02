@@ -96,14 +96,25 @@ export const AUTOMATION_PIPELINES = [
     ],
   },
   {
+    id: 'deep-triple-slide-audit-and-heal',
+    title: '🛡️ 3 Aşamalı Slayt Denetim & Otonom İyileştirme',
+    description: 'Soruların gerçek tıbbi branşlarını belirler, soru dosyalarıyla kurulan hatalı bağları keser, 3 aşamalı katı kuralla amfi slaytlarını eşleştirir ve buluta senkronize eder.',
+    category: 'Otomasyon & Pipeline',
+    steps: [
+      { script: 'deep-triple-slide-matcher.mjs', args: '', title: '1. 3 Aşamalı Derin Slayt Eşleştirme & Temizlik' },
+      { script: 'self-healing-auditor.mjs', args: '', title: '2. Otonom Sağlık Denetimi' },
+      { script: 'sync-all-to-supabase.mjs', args: '', title: '3. Supabase Senkronizasyonu' },
+      { script: 'sync-all-to-firestore.mjs', args: '', title: '4. Firestore Senkronizasyonu' },
+    ],
+  },
+  {
     id: 'slides-audit-and-rematch',
     title: '🔍 Slayt Denetim & Yeniden Eşleştirme',
     description: 'Hatalı slayt eşleşmelerini temizler, soruları ders notları slaytlarıyla yeniden eşleştirir ve buluta kaydeder.',
     category: 'Otomasyon & Pipeline',
     steps: [
-      { script: 'audit-and-disconnect-faulty-slides.mjs', args: '', title: '1. Hatalı Slaytları Temizle' },
-      { script: 'match-and-link-lecture-slides.mjs', args: '', title: '2. Slaytları Yeniden Eşleştir' },
-      { script: 'sync-database-json-to-cloud.mjs', args: '', title: '3. Buluta Aktar' },
+      { script: 'deep-triple-slide-matcher.mjs', args: '', title: '1. Slaytları 3 Aşamalı Eşleştir' },
+      { script: 'sync-database-json-to-cloud.mjs', args: '', title: '2. Buluta Aktar' },
     ],
   },
   {

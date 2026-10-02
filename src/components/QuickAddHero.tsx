@@ -534,13 +534,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         </div>
       )}
 
-      {/* Committees */}
+      {/* Committees (2026-2027) */}
       <section aria-labelledby="kurullar" className="hidden sm:flex flex-col gap-4">
         <div className="flex justify-between items-baseline">
           <h2 id="kurullar" className="m-0 font-display text-[26px] font-bold tracking-[-0.02em]">
-            Kurullar
+            2026-2027 Kurulları
           </h2>
-          <span className="text-[13px] text-ink-3">Arşivdeki çıkmış soru sayısı</span>
+          <span className="text-[13px] text-ink-3">Dönem 3 Kurul ve Sınav Programı</span>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-3">
           {sortedCommittees.map((c) => {
@@ -553,15 +553,24 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 title={c.name}
                 aria-pressed={sel}
                 onClick={() => onSelectCommittee(c.id)}
-                className={`bg-white rounded-[14px] p-4 flex flex-col gap-2.5 min-h-[110px] text-left cursor-pointer transition-colors ${
-                  sel ? 'border-[1.5px] border-accent' : isFinalish ? 'border border-dashed border-line-2 hover:border-ink-3' : 'border border-line hover:border-line-2'
+                className={`bg-white rounded-[14px] p-4 flex flex-col gap-2 min-h-[110px] text-left cursor-pointer transition-colors ${
+                  sel ? 'border-[1.5px] border-accent shadow-xs' : isFinalish ? 'border border-dashed border-line-2 hover:border-ink-3' : 'border border-line hover:border-line-2'
                 }`}
               >
-                <span className={`flex justify-between text-[12px] font-semibold ${sel ? 'text-accent' : 'text-ink-2'}`}>
-                  {committeeShortLabel(c)}
-                  {c.id === activeCommitteeId && <span>AKTİF</span>}
-                </span>
-                <span className="font-mono text-[26px] mt-auto text-ink">{formatCount(archiveByCommittee[c.id] || 0)}</span>
+                <div className="flex justify-between items-center text-[12px] font-semibold">
+                  <span className={sel ? 'text-accent' : 'text-ink-2'}>{committeeShortLabel(c)}</span>
+                  {c.id === activeCommitteeId && (
+                    <span className="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-1.5 py-0.5 rounded">
+                      AKTİF
+                    </span>
+                  )}
+                </div>
+                <div className="text-[12px] font-semibold text-ink line-clamp-2 mt-auto">
+                  {c.name.replace(/Dönem 3\s*/i, '').trim()}
+                </div>
+                <div className="text-[11px] text-ink-3">
+                  {c.examDate || '2026-2027'}
+                </div>
               </button>
             );
           })}

@@ -2935,6 +2935,54 @@ app.post('/api/send-welcome-email', async (req, res) => {
   });
 });
 
+// ----------------------------------------------------
+// LECTURE SUMMARIES API ENDPOINTS (Ders Özetleri API)
+// ----------------------------------------------------
+app.get('/api/summaries', (_req, res) => {
+  try {
+    const metaPath = path.resolve(__dirname, 'src', 'data', 'summaries_meta.json');
+    if (fs.existsSync(metaPath)) {
+      const data = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+      return res.json({ success: true, count: data.length, summaries: data });
+    }
+    const fullPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
+    if (fs.existsSync(fullPath)) {
+      const full = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+      const meta = full.map((s: any) => ({
+        id: s.id,
+        kurul: s.kurul,
+        committeeId: s.committeeId,
+        discipline: s.discipline,
+        title: s.title,
+        keyPoints: s.keyPoints,
+        charCount: s.charCount,
+        readingTimeMinutes: s.readingTimeMinutes,
+      }));
+      return res.json({ success: true, count: meta.length, summaries: meta });
+    }
+    return res.json({ success: true, count: 0, summaries: [] });
+  } catch (err: any) {
+    return res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get('/api/summaries/:id', (req, res) => {
+  try {
+    const id = req.params.id;
+    const catalogPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
+    if (fs.existsSync(catalogPath)) {
+      const data = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+      const found = data.find((s: any) => s.id === id);
+      if (found) {
+        return res.json({ success: true, summary: found });
+      }
+    }
+    return res.status(404).json({ success: false, error: 'Ders özeti bulunamadı' });
+  } catch (err: any) {
+    return res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 // User Synchronization Endpoint (syncs from Auth/Firestore to Server Database)
 app.post('/api/users/sync', (req, res) => {
   const { uid, email, displayName, studentNumber, photoURL, congratsSentCommittees } = req.body;

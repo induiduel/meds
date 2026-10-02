@@ -1,0 +1,354 @@
+{
+  "executedAt": "2026-10-02T00:59:21.392Z",
+  "totalQuestions": 2162,
+  "realLectureNotesCount": 778,
+  "reclassifiedDisciplineCount": 281,
+  "severedFalseMatchesCount": 232,
+  "verifiedMatchesCount": 1535,
+  "unverifiedFlaggedCount": 626,
+  "successRate": "71.0%",
+  "sampleSevered": [
+    {
+      "id": "past-1790877034646-469265",
+      "stem": "Hangi etanol metabolizmasından kaynaklanan toksik etkiler arasında yer",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Patoloji], ders notu [Tıbbi Farmakoloji] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "7. 24-25 O S S Farmakolojisi",
+        "pageNumber": 11
+      }
+    },
+    {
+      "id": "past-1790877034680-914918",
+      "stem": "Yetişkin tip torsiyon ile ilgili hangisi doğrudur?",
+      "reason": "İçerik Yetersizliği: Slaytta sadece 2 kelime eşleşti (en az 3-4 tıbbi terim veya 1 bigram gerekir).",
+      "previousMatch": {
+        "noteTitle": "21.%20Erkek%20Genital%20Sistem%20Patolojisi.pdf",
+        "pageNumber": 28
+      }
+    },
+    {
+      "id": "past-1790877034687-622358",
+      "stem": "Hangisi hücrede ATP azalması sonucu oluşan durumlardan değildir?",
+      "reason": "İçerik Yetersizliği: Slaytta sadece 1 kelime eşleşti (en az 3-4 tıbbi terim veya 1 bigram gerekir).",
+      "previousMatch": {
+        "noteTitle": "11.%20AI%CC%87DS.pdf",
+        "pageNumber": 2
+      }
+    },
+    {
+      "id": "past-1790877034722-269702",
+      "stem": "Aşağıdakilerden hangisi meme kanseri gelişme riskini artıran faktörler",
+      "reason": "Hatalı Soru Dosyası Eşleşmesi: \"DOC-20251017-WA0026.\" bir ders notu değil, çıkmış soru dosyasıdır.",
+      "previousMatch": {
+        "noteTitle": "DOC-20251017-WA0026.",
+        "pageNumber": 45
+      }
+    },
+    {
+      "id": "past-1790877034724-233133",
+      "stem": "Meme dokusundan köken alan tümörler ile ilgili hangisi yanlıştır?",
+      "reason": "Hatalı Soru Dosyası Eşleşmesi: \"DOC-20251017-WA0026.\" bir ders notu değil, çıkmış soru dosyasıdır.",
+      "previousMatch": {
+        "noteTitle": "DOC-20251017-WA0026.",
+        "pageNumber": 31
+      }
+    },
+    {
+      "id": "past-1790877034766-353191",
+      "stem": "Molar gebeliklerle ilgili aşağıdakilerden hangisi yanlıştır?",
+      "reason": "Hatalı Soru Dosyası Eşleşmesi: \"DOC-20251017-WA0023.\" bir ders notu değil, çıkmış soru dosyasıdır.",
+      "previousMatch": {
+        "noteTitle": "DOC-20251017-WA0023.",
+        "pageNumber": 10
+      }
+    },
+    {
+      "id": "past-1790877034772-958986",
+      "stem": "Duktal karsinoma in situnun yapısal hangi paterni ortada yoğun santral",
+      "reason": "Hatalı Soru Dosyası Eşleşmesi: \"DOC-20251017-WA0027.\" bir ders notu değil, çıkmış soru dosyasıdır.",
+      "previousMatch": {
+        "noteTitle": "DOC-20251017-WA0027.",
+        "pageNumber": 24
+      }
+    },
+    {
+      "id": "past-1790877034805-445847",
+      "stem": "Endometriyuma ait dokuların, myometrium içine doğru büyümesine ne ad v",
+      "reason": "Hatalı Soru Dosyası Eşleşmesi: \"DOC-20251017-WA0022.\" bir ders notu değil, çıkmış soru dosyasıdır.",
+      "previousMatch": {
+        "noteTitle": "DOC-20251017-WA0022.",
+        "pageNumber": 38
+      }
+    },
+    {
+      "id": "past-1790877034819-269139",
+      "stem": "Duktal Karsinoma in situ hücrelerinin laktiferöz duktuslar aracılığıyl",
+      "reason": "Hatalı Soru Dosyası Eşleşmesi: \"DOC-20251017-WA0027.\" bir ders notu değil, çıkmış soru dosyasıdır.",
+      "previousMatch": {
+        "noteTitle": "DOC-20251017-WA0027.",
+        "pageNumber": 43
+      }
+    },
+    {
+      "id": "past-1790877034868-348350",
+      "stem": "Hangisi antibiyotik kullanımı ile ilgili doğru değildir?",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıp Ders Notu] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim",
+        "pageNumber": 26
+      }
+    },
+    {
+      "id": "past-1790877034908-575369",
+      "stem": "Hangisi temas izolasyonu için yapılması gerekenlerden değldir?",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Patoloji], ders notu [Tıbbi Farmakoloji] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "3)İzolasyon yöntemleri",
+        "pageNumber": 12
+      }
+    },
+    {
+      "id": "past-1790877034987-592323",
+      "stem": "Aşağıdaki diüretik ajanlardan hangisi yan etki profili olarak hipokale",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıbbi Mikrobiyoloji] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "1. İmmünofarmakoloji",
+        "pageNumber": 41
+      }
+    },
+    {
+      "id": "past-1790877035010-823686",
+      "stem": "Kalsinörin inhibitörlerinin (siklosporin, takrolimus) kullanımını sını",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıbbi Mikrobiyoloji] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "1. İmmünofarmakoloji",
+        "pageNumber": 36
+      }
+    },
+    {
+      "id": "past-1790877035450-483598",
+      "stem": "Herediter hemokromatozis patogenezi, genetiği ve klinik özellikleri il",
+      "reason": "Hatalı Soru Dosyası Eşleşmesi: \"DOC-20251017-WA0027.\" bir ders notu değil, çıkmış soru dosyasıdır.",
+      "previousMatch": {
+        "noteTitle": "DOC-20251017-WA0027.",
+        "pageNumber": 43
+      }
+    },
+    {
+      "id": "past-1790877035597-173945",
+      "stem": "Konjestif kalp yetmezliği zemininde gelişen kronik pasif karaciğer kon",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Patoloji], ders notu [Tıbbi Farmakoloji] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "3 Diüretik İlaçlar",
+        "pageNumber": 18
+      }
+    },
+    {
+      "id": "past-1790877035603-922226",
+      "stem": "Aşağıdaki antimikrobiyal ajanlardan hangisi, alüminyum içeren antiasit",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıbbi Mikrobiyoloji] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "1. İmmünofarmakoloji",
+        "pageNumber": 40
+      }
+    },
+    {
+      "id": "past-1790877035652-222686",
+      "stem": "Aşağıdakilerin hangisi rifampinin yan tesirlerinden biri değildir? I- ",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıp Ders Notu] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "3. Tiroid ve Antitiroid İlaçlar.pptx",
+        "pageNumber": 36
+      }
+    },
+    {
+      "id": "past-1790877035704-743198",
+      "stem": "Aşağıdaki antibakteriyellerden hangisi/hangileri karbapenem grubu üyes",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıp Ders Notu] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim",
+        "pageNumber": 15
+      }
+    },
+    {
+      "id": "past-1790877035726-144254",
+      "stem": "Aşağıdakilerden hangisi apendektomi öncesi proflaktik olarak kullanılı",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıp Ders Notu] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "9. GİS-2",
+        "pageNumber": 16
+      }
+    },
+    {
+      "id": "past-1790877035743-955932",
+      "stem": "Aşağıdakilerden hangisi bir proton pompa inhibitörü (PPİ) değildir?",
+      "reason": "Disiplin Uyuşmazlığı: Soru [Tıbbi Farmakoloji], ders notu [Tıbbi Mikrobiyoloji] ile eşleştirilmiş.",
+      "previousMatch": {
+        "noteTitle": "2. Mide Polipleri ve Mide Tümörleri",
+        "pageNumber": 36
+      }
+    }
+  ],
+  "sampleVerified": [
+    {
+      "id": "d3-k1-enf-001",
+      "stem": "Epidemi (salgın) kavramı için hangisi doğru bir tanımdır?",
+      "noteTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler (1)-dönüştürüldü",
+      "pageNumber": 45,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-003",
+      "stem": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin",
+      "noteTitle": "4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+      "pageNumber": 29,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-004",
+      "stem": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonl",
+      "noteTitle": "3. Bağışıklama",
+      "pageNumber": 134,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-006",
+      "stem": "Aşağıdaki vücut bölgelerinden hangisinde normalde mikrobiyal flora bul",
+      "noteTitle": "Bağışıklığı baskılı hastalarda enfeksiyon",
+      "pageNumber": 22,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "score": 80
+    },
+    {
+      "id": "d3-k1-enf-010",
+      "stem": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden ",
+      "noteTitle": "3)0I%CC%87zolasyon%20yo%CC%88ntemleri.pdf",
+      "pageNumber": 18,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-013",
+      "stem": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
+      "noteTitle": "3)0I%CC%87zolasyon%20yo%CC%88ntemleri.pdf",
+      "pageNumber": 11,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-014",
+      "stem": "Karbapenem dirençli Klebsiella pneumoniae ile kolonize/enfekte bir has",
+      "noteTitle": "3)0I%CC%87zolasyon%20yo%CC%88ntemleri.pdf",
+      "pageNumber": 15,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-015",
+      "stem": "Aşağıdakilerden hangisi genital ülsere sebep olan mikroorganizmalardan",
+      "noteTitle": "2.%20Genital%20Enfeksiyonlar.pdf",
+      "pageNumber": 2,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-016",
+      "stem": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep ",
+      "noteTitle": "2)Genital enfeksiyonlar",
+      "pageNumber": 2,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-017",
+      "stem": "Neisseria gonorrhoeae enfeksiyonunun tedavisi ile ilgili aşağıdakilerd",
+      "noteTitle": "51 Antimikrobik Ajanların Klinik Kullanımı",
+      "pageNumber": 10,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 88
+    },
+    {
+      "id": "d3-k1-enf-018",
+      "stem": "Nongonokoksik üretrit ön tanısıyla izlenen (gram boyamada gram-negatif",
+      "noteTitle": "3)ÜRETRAL AKINTI-1",
+      "pageNumber": 26,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-019",
+      "stem": "Sekonder sifiliz bulgularından hangisi DEĞİLDİR?",
+      "noteTitle": "10. Medulla Spinalis Hastalıkları",
+      "pageNumber": 24,
+      "discipline": "Nöroloji / Nöroşirürji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-020",
+      "stem": "Primer sifiliz için hangisi yanlıştır?",
+      "noteTitle": "7)Sifiliz pptx",
+      "pageNumber": 8,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-021",
+      "stem": "Sifilizin bulaştırıcılığının en yüksek olduğu dönem(ler) hangileridir?",
+      "noteTitle": "7)Sifiliz pptx",
+      "pageNumber": 12,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-022",
+      "stem": "Bakteriyel vajinozis tanısında kullanılan Amsel kriterlerinden hangisi",
+      "noteTitle": "2.%20Genital%20Enfeksiyonlar.pdf",
+      "pageNumber": 12,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-023",
+      "stem": "Şankroid (yumuşak şankr) ile ilgili hangisi yanlıştır?",
+      "noteTitle": "7)Sifiliz pptx",
+      "pageNumber": 8,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-024",
+      "stem": "Üretrit etkenlerinin araştırılmasında Ureaplasma urealyticum ile ilgil",
+      "noteTitle": "3)ÜRETRAL AKINTI-1",
+      "pageNumber": 8,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-026",
+      "stem": "Üretrit sebebiyle izlenen bir hastada ateş yüksekliği gelişmesi halind",
+      "noteTitle": "1.Cinsel Yolla Bulaşan Hastal±klarda Tedavi",
+      "pageNumber": 7,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-027",
+      "stem": "30 yaşında erkek hasta idrarda yanma ve peniste sarı-beyaz renkte akın",
+      "noteTitle": "3)ÜRETRAL AKINTI-1",
+      "pageNumber": 10,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "score": 100
+    },
+    {
+      "id": "d3-k1-enf-028",
+      "stem": "Üretral/servikal akıntısı olan bir hastanın gram boyamasında mikroskop",
+      "noteTitle": "51 Antimikrobik Ajanların Klinik Kullanımı",
+      "pageNumber": 10,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "score": 100
+    }
+  ]
+}

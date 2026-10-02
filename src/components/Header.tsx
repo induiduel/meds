@@ -21,6 +21,7 @@ import {
   Archive,
   ListChecks,
   BookOpenText,
+  BookOpen,
   Trophy,
   SquarePen,
 } from 'lucide-react';
@@ -28,7 +29,7 @@ import { Committee } from '../types';
 import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
 import { systemHealthMonitor, SystemOverallHealth } from '../services/systemHealthMonitor';
 
-export type AppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study';
+export type AppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
 
 interface HeaderProps {
   committees: Committee[];
@@ -67,6 +68,7 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'quick_add', label: 'Ana sayfa', icon: House },
   { id: 'questions', label: 'Soru havuzu', icon: Library },
   { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
+  { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
   { id: 'study', label: 'Çalış', icon: ListChecks },
   { id: 'notes', label: 'Ders notları', icon: BookOpenText },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
@@ -332,6 +334,7 @@ export const Header: React.FC<HeaderProps> = ({
               <MenuItem icon={SquarePen} label="Soru katkısı yap" tone="accent" onClick={onOpenContributeModal} />
 
               <MenuLabel>Çalış</MenuLabel>
+              <MenuItem icon={BookOpen} label="Ders özetleri & spot bilgiler" onClick={() => setActiveTab('summaries')} />
               <MenuItem icon={Archive} label="Çıkmış sorular" className="lg:hidden" onClick={() => setActiveTab('past_exams')} />
               <MenuItem icon={Trophy} label="Sıralama" className="lg:hidden" onClick={() => setActiveTab('leaderboard')} />
               <MenuItem icon={LayoutGrid} label="Soru haritası" onClick={() => setActiveTab('matrix')} />

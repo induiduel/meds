@@ -53,6 +53,7 @@ const NotebookLMSyncModal = React.lazy(() => import('./components/NotebookLMSync
 const SubagentMonitorModal = React.lazy(() => import('./components/SubagentMonitorModal').then(m => ({ default: m.SubagentMonitorModal })));
 const SystemDiagnosticsModal = React.lazy(() => import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal })));
 const AiQuotaAlertModal = React.lazy(() => import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal })));
+const LectureSummariesView = React.lazy(() => import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView })));
 
 const ViewFallback = () => (
   <div className="py-20 flex flex-col items-center justify-center gap-3 text-ink-2">
@@ -87,12 +88,13 @@ import {
 } from './services/drive';
 
 // Supported App Tabs with URL hash & localStorage persistence
-export type ValidAppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study';
+export type ValidAppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
 
 const VALID_APP_TABS: ValidAppTab[] = [
   'quick_add',
   'questions',
   'past_exams',
+  'summaries',
   'matrix',
   'leaderboard',
   'notes',
@@ -1233,6 +1235,13 @@ export default function App() {
               isAdmin={isAdmin}
               onUpdateQuestionReference={handleUpdateQuestionReference}
             />
+          </Suspense>
+        )}
+
+        {/* TAB 7: Amfi Ders Özetleri & Spot Bilgiler */}
+        {activeTab === 'summaries' && (
+          <Suspense fallback={<ViewFallback />}>
+            <LectureSummariesView onOpenPdfModal={() => setIsPdfModalOpen(true)} />
           </Suspense>
         )}
       </main>

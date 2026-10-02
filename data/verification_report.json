@@ -1,157 +1,142 @@
 {
-  "lastRun": "2026-10-01T23:20:29.036Z",
+  "lastRun": "2026-10-02T00:58:41.324Z",
   "totalChecked": 15,
-  "verifiedCount": 1,
-  "suspectCount": 14,
+  "verifiedCount": 10,
+  "suspectCount": 5,
   "reports": [
     {
-      "id": "past-1790877034640-638281",
+      "id": "d3-k1-enf-001",
       "questionNumber": 1,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tiroid Neoplazmları ve Tanı Kriterleri",
-      "claimedAnswer": "A",
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "EPIDEMIYOLOJI TEMEL KAVRAMLARI",
       "decision": "VERIFIED",
-      "overallMatchPercent": 96,
+      "overallMatchPercent": 97,
       "isSuspect": false
     },
     {
-      "id": "past-1790877034649-417069",
+      "id": "d3-k1-enf-002",
+      "questionNumber": 2,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "EPIDEMIYOLOJI TEMEL KAVRAMLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-003",
       "questionNumber": 3,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "GENEL KAVRAMLAR",
       "decision": "SUSPECT",
-      "overallMatchPercent": 60,
+      "overallMatchPercent": 57,
       "isSuspect": true
     },
     {
-      "id": "past-1790877034650-998580",
+      "id": "d3-k1-enf-004",
       "questionNumber": 4,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 0,
-      "isSuspect": true
-    },
-    {
-      "id": "past-1790877034654-153296",
-      "questionNumber": 5,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 5,
-      "isSuspect": true
-    },
-    {
-      "id": "past-1790877034657-386150",
-      "questionNumber": 6,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 47,
-      "isSuspect": true
-    },
-    {
-      "id": "past-1790877034660-775587",
-      "questionNumber": 7,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 0,
-      "isSuspect": true
-    },
-    {
-      "id": "past-1790877034665-453551",
-      "questionNumber": 8,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 5,
-      "isSuspect": true
-    },
-    {
-      "id": "past-1790877034670-958753",
-      "questionNumber": 9,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 58,
-      "isSuspect": true
-    },
-    {
-      "id": "past-1790877034674-813824",
-      "questionNumber": 10,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tiroid Neoplazileri ve Epidemiyolojisi",
-      "claimedAnswer": "A",
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "BULAŞMA YOLLARI",
       "decision": "SUSPECT",
       "overallMatchPercent": 55,
       "isSuspect": true
     },
     {
-      "id": "past-1790877034676-748351",
+      "id": "d3-k1-enf-005",
+      "questionNumber": 5,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "BULAŞMA YOLLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-006",
+      "questionNumber": 6,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "GENEL KAVRAMLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-007",
+      "questionNumber": 7,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "BULAŞMA YOLLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-008",
+      "questionNumber": 8,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "KAN ÜRÜNLERI VE TARAMA",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-009",
+      "questionNumber": 9,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "STANDART VE GENEL İZOLASYON İLKELERI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 54,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-010",
+      "questionNumber": 10,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "TEMAS İZOLASYONU",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-011",
       "questionNumber": 11,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 8,
-      "isSuspect": true
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "İZOLASYON İŞARETLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
     },
     {
-      "id": "past-1790877034680-914918",
+      "id": "d3-k1-enf-012",
       "questionNumber": 12,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "HAVA YOLU (SOLUNUM) İZOLASYONU",
       "decision": "SUSPECT",
-      "overallMatchPercent": 0,
+      "overallMatchPercent": 52.5,
       "isSuspect": true
     },
     {
-      "id": "past-1790877034683-275936",
+      "id": "d3-k1-enf-013",
       "questionNumber": 13,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 0,
-      "isSuspect": true
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "STANDART ÖNLEMLER",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
     },
     {
-      "id": "past-1790877034687-622358",
+      "id": "d3-k1-enf-014",
       "questionNumber": 14,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 52,
-      "isSuspect": true
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "DIRENÇLI MIKROORGANIZMA İZOLASYONU",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
     },
     {
-      "id": "past-1790877034690-91414",
+      "id": "d3-k1-enf-015",
       "questionNumber": 15,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "GENITAL ÜLSER HASTALIKLARI",
       "decision": "SUSPECT",
-      "overallMatchPercent": 47,
-      "isSuspect": true
-    },
-    {
-      "id": "past-1790877034692-481014",
-      "questionNumber": 16,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
-      "claimedAnswer": "A",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 5,
+      "overallMatchPercent": 50,
       "isSuspect": true
     }
   ]

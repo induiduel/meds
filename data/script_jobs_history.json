@@ -1,5 +1,17 @@
 [
   {
+    "id": "pipe_1790902653689_fg0y5",
+    "name": "ai-verify-and-cloud",
+    "type": "pipeline",
+    "status": "completed",
+    "startedAt": "2026-10-02T00:57:33.689Z",
+    "completedAt": "2026-10-02T00:59:26.774Z",
+    "durationMs": 113084,
+    "exitCode": 0,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[03:59:26]   [STDERR]   ⚠️ Parti aktarım hatası [50-100]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[03:59:26]   [STDERR]   ⚠️ Parti aktarım hatası [100-121]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[03:59:26]   =============================================\n[03:59:26]   🎉 [Bulu Senkronizasyonu Tamamlandı]\n[03:59:26]   📊 Toplam Aktarılan Çıkmış Soru: 3094\n[03:59:26]   📊 Toplam Aktarılan Canlı Soru: 1\n[03:59:26]   =============================================\n[03:59:26] ✓ [Adım Tamamlandı]: 3. Buluta Aktar\n[03:59:26] ============================================================\n[03:59:26] 🎉 [PIPELINE BAŞARIYLA TAMAMLANDI] Toplam Süre: 113.1 sn."
+  },
+  {
     "id": "pipe_1790896643132_28vao",
     "name": "ai-verify-and-cloud",
     "type": "pipeline",
