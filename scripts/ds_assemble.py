@@ -218,34 +218,13 @@ def build():
             issues['eksik_soru'] += len(missing)
             print(f"EKSİK {bid}: {sorted(missing)[:6]}")
 
-    # batch çıktısı olmayan / eksik kalan sorular için temel kayıt üret
-    for qid, orig in BASEMAP.items():
-        if qid in records:
-            continue
-        issues['temel_kayittan_tamamlandi'] += 1
-        rec = {
-            "id": qid, "committeeId": orig['committeeId'], "folderKey": orig['folderKey'],
-            "donem": orig['donem'], "kurul": orig['kurul'], "examSet": orig['committeeId'],
-            "examYear": orig['examYear'], "questionNumber": orig.get('questionNumber'),
-            "discipline": clean(orig['discipline']), "topic": clean(orig['topic']),
-            "stem": clean(orig['stem']), "options": orig['options'],
-            "correctAnswer": (orig.get('correctAnswer') or '').strip().upper()[:1],
-            "explanation": clean(orig['explanation']), "evidenceText": "",
-            "lectureMatches": [],
-            "source": {"file": orig.get('sourceFile') or '', "rawStem": orig.get('hamSoru') or ''},
-            "verification": {"answerStatus": "dogrulanamadi", "evidenceStatus": "not_yok",
-                             "confidence": 0.5, "curriculumFit": "kismen_uyumlu",
-                             "status": "inceleme_gerekli", "qualityScore": 50,
-                             "changes": [], "needsReview": True,
-                             "reviewReason": "AI doğrulaması bu soru için tamamlanamadı."},
-            "duplicateOf": None,
-        }
-        rec["optionsText"] = " ".join(f"{o['key']}) {o['text']}" for o in rec['options'])
-        rec["lectureRefs"] = []
-        rec["embeddingText"] = (f"{rec['discipline']} - {rec['topic']}. {rec['stem']} "
-                                f"{rec['optionsText']} Doğru cevap: {rec['correctAnswer']}. "
-                                f"{rec['explanation']}").strip()
-        records[qid] = rec
+    # NOT: Batch çıktısı olmayan sorular için yer tutucu kayıt üretilmez.
+    # Dosyaya yalnızca gerçekten işlenmiş sorular girer (dürüstlük ilkesi).
+    missing_all = [qid for qid in BASEMAP if qid not in records]
+    if missing_all:
+        print(f"\nİŞLENMEMİŞ soru sayısı: {len(missing_all)} (dosyaya dahil edilmedi)")
+        for qid in missing_all[:40]:
+            print("   -", qid, "|", BASEMAP[qid]['discipline'], "|", BASEMAP[qid]['committeeId'])
 
     print("\n### BİRLEŞTİRME SORUNLARI ###")
     for k, v in issues.most_common():

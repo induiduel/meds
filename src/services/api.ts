@@ -247,7 +247,12 @@ export async function safeJsonFetch<T = any>(
         resolvedInput = `${base.replace(/\/$/, '')}${input}`;
       }
     }
-    const res = await fetch(resolvedInput, init);
+    const hasSignal = init?.signal;
+    const fetchOptions: RequestInit = {
+      ...init,
+      signal: hasSignal || (typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(6000) : undefined),
+    };
+    const res = await fetch(resolvedInput, fetchOptions);
     const contentType = res.headers.get('content-type') || '';
     if (!res.ok) {
       let errMsg = `HTTP ${res.status}`;

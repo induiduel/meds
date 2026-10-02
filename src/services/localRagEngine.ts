@@ -1351,8 +1351,7 @@ export function initLocalRagEngine(): void {
 
   let changeDebounce: NodeJS.Timeout | null = null;
   if (fs.existsSync(DATA_DIR)) {
-    try {
-      fs.watch(DATA_DIR, (eventType, filename) => {
+      const watcher = fs.watch(DATA_DIR, (eventType, filename) => {
         if (!filename) return;
         // Strictly ignore everything other than the 4 core content files
         if (!WATCHED_CONTENT_FILES.has(filename)) return;
@@ -1362,7 +1361,8 @@ export function initLocalRagEngine(): void {
           console.log(`[LocalRagEngine] 📂 Çekirdek müfredat dosyasında değişiklik tespit edildi (${filename}), yerel indeks güncelleniyor...`);
           runAutoChunking({ syncToCloud: false }).catch(() => {});
         }, 15000); // 15s debounce to prevent rebuild storms
+        changeDebounce.unref();
       });
-    } catch (_) {}
+      watcher.unref(); // Allows node process to exit naturally when tasks complete
   }
 }

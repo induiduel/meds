@@ -448,7 +448,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                       Vazgeç
                     </button>
                     <button type="submit" disabled={isSubmittingOption} className="h-11 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold cursor-pointer disabled:opacity-60">
-                      Şıkkı kaydet
+                      {isSubmittingOption ? 'Kaydediliyor…' : 'Şıkkı kaydet'}
                     </button>
                   </div>
                 </form>

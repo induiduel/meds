@@ -701,35 +701,54 @@ export default function App() {
     options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
   }) => {
     try {
-      await ApiService.addQuestionContribution({
+      const savedQuestion = await ApiService.addQuestionContribution({
         ...data,
         authorUid: currentUser?.uid || data.authorUid,
         authorStudentNumber: currentUser?.studentNumber || data.authorStudentNumber,
       });
 
-      // Send congratulations email if user is registered and hasn't received one for this committee yet
-      // Requirement: "Bunu yalnızca her kurul 1 kez yap."
+      // Anında arayüze yansıt (0ms Optimistic UI)
+      if (savedQuestion) {
+        setQuestions((prev) => {
+          const idx = prev.findIndex((q) => q.id === savedQuestion.id);
+          if (idx >= 0) {
+            const next = [...prev];
+            next[idx] = savedQuestion;
+            return next;
+          }
+          if (savedQuestion.committeeId === (data.committeeId || selectedCommitteeId)) {
+            return [...prev, savedQuestion].sort((a, b) => (a.questionNumber || 0) - (b.questionNumber || 0));
+          }
+          return prev;
+        });
+      }
+
+      // Kullanıcı farklı bir kurula taslak eklediyse o kurula geçiş yap ki eklediğini hemen görsün
+      if (data.committeeId && data.committeeId !== selectedCommitteeId) {
+        setSelectedCommitteeId(data.committeeId);
+      }
+
+      // Send congratulations email in the background without blocking the UI
       if (currentUser && currentUser.email) {
         const comm = committees.find((c) => c.id === data.committeeId);
         const commName = comm?.name || 'Kurul Sınavı';
         const alreadySent = (currentUser.congratsSentCommittees || []).includes(data.committeeId);
 
         if (!alreadySent) {
-          await ApiService.sendCongratulationsEmail(
+          ApiService.sendCongratulationsEmail(
             currentUser.email,
             currentUser.displayName || data.author,
             currentUser.studentNumber || undefined,
             commName,
             data.committeeId,
             { questionNumber: data.questionNumber, discipline: data.discipline }
-          );
-
-          // Update user state and Firestore so email is only sent once per committee
-          const updatedCommittees = [...(currentUser.congratsSentCommittees || []), data.committeeId];
-          const updatedUser = await updateUserProfileData(currentUser, {
-            congratsSentCommittees: updatedCommittees,
-          });
-          setCurrentUser(updatedUser);
+          ).then(async () => {
+            const updatedCommittees = [...(currentUser.congratsSentCommittees || []), data.committeeId];
+            const updatedUser = await updateUserProfileData(currentUser, {
+              congratsSentCommittees: updatedCommittees,
+            });
+            setCurrentUser(updatedUser);
+          }).catch((err) => console.warn('Congrats email non-fatal error:', err));
 
           setCongratsToast(
             `🎉 Tebrikler! ${commName} için ilk soru katkınız kaydedildi. Teşekkür e-postası ${currentUser.email} adresinize iletildi!`
@@ -738,10 +757,12 @@ export default function App() {
         }
       }
 
-      await fetchQuestions();
+      // Arka planda verileri tazele
+      fetchQuestions().catch((e) => console.warn('Background fetchQuestions error', e));
     } catch (err: any) {
       console.error('Add question contribution error:', err);
       alert('Soru kaydedilirken hata oluştu: ' + (err.message || ''));
+      throw err;
     }
   };
 
@@ -1321,6 +1342,7 @@ export default function App() {
             committees={committees}
             selectedCommitteeId={selectedCommitteeId}
             defaultQuestionNumber={contributeDefaultNumber}
+            currentUser={currentUser}
             questions={questions}
             onAddQuestionContribution={handleAddQuestionContribution}
           />
