@@ -139,6 +139,7 @@ export default function App() {
   const [isAuthErrorModalOpen, setIsAuthErrorModalOpen] = useState(false);
   const [isDriveModalOpen, setIsDriveModalOpen] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
+  const [pdfSlideTarget, setPdfSlideTarget] = useState<{ deckId: string; slideNumber: number } | null>(null);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
   const [isNotebookLMModalOpen, setIsNotebookLMModalOpen] = useState(false);
   const [isSubagentMonitorOpen, setIsSubagentMonitorOpen] = useState(false);
@@ -1004,7 +1005,10 @@ export default function App() {
                 if (id === null) setSelectedLearnSlideNumber(undefined);
                 writeLocation('learn', id ?? undefined);
               }}
-              onOpenPdfModal={() => setIsPdfModalOpen(true)}
+              onOpenPdfModal={(target) => {
+                setPdfSlideTarget(target ?? null);
+                setIsPdfModalOpen(true);
+              }}
               onSelectCommittee={(id) => setSelectedCommitteeId(id)}
             />
           </Suspense>
@@ -1423,10 +1427,14 @@ export default function App() {
         <Suspense fallback={null}>
           <ExamPdfModal
             isOpen={isPdfModalOpen}
-            onClose={() => setIsPdfModalOpen(false)}
+            onClose={() => {
+              setIsPdfModalOpen(false);
+              setPdfSlideTarget(null);
+            }}
             committee={currentCommittee}
             committees={committees}
             questions={questions}
+            initialSlide={pdfSlideTarget}
           />
         </Suspense>
       )}

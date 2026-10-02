@@ -76,6 +76,8 @@ export interface BookletPdfOptions {
   subtitle?: string;
   /** Two-column compact booklet (default) or a single wide column */
   columns?: 'one' | 'two';
+  /** Solution mode: mark the correct option in green (default true). Off = plain "Cevap: X" line only. */
+  highlightCorrect?: boolean;
 }
 
 // ---------- Unicode font (Turkish glyphs) ----------
@@ -110,6 +112,19 @@ const loadFonts = (): Promise<FontSet | null> => {
   return fontCache;
 };
 
+/** Embeds the Turkish-capable font into a jsPDF doc; returns the font name and a text mapper. */
+export async function setupPdfFonts(doc: any): Promise<{ font: string; T: (s: string) => string }> {
+  const fonts = await loadFonts();
+  if (!fonts) return { font: 'helvetica', T: (s: string) => asciiFold(s) };
+  doc.addFileToVFS('LiberationSans-Regular.ttf', fonts.regular);
+  doc.addFont('LiberationSans-Regular.ttf', 'Liberation', 'normal');
+  doc.addFileToVFS('LiberationSans-Bold.ttf', fonts.bold);
+  doc.addFont('LiberationSans-Bold.ttf', 'Liberation', 'bold');
+  doc.addFileToVFS('LiberationSans-Italic.ttf', fonts.italic);
+  doc.addFont('LiberationSans-Italic.ttf', 'Liberation', 'italic');
+  return { font: 'Liberation', T: (s: string) => s };
+}
+
 const TR_ASCII: Record<string, string> = { ş: 's', Ş: 'S', ğ: 'g', Ğ: 'G', ı: 'i', İ: 'I', ç: 'c', Ç: 'C', ö: 'o', Ö: 'O', ü: 'u', Ü: 'U' };
 const asciiFold = (s: string) => s.replace(/[şŞğĞıİçÇöÖüÜ]/g, (c) => TR_ASCII[c] || c);
 
@@ -132,6 +147,7 @@ export async function generateBookletPdfBlob(
   const mode: BookletMode = options.mode || 'solution';
   const includeKey = mode === 'answers_only' ? true : options.includeAnswerKey ?? true;
   const twoCol = (options.columns || 'two') === 'two';
+  const highlight = options.highlightCorrect ?? true;
 
   const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
@@ -171,12 +187,12 @@ export async function generateBookletPdfBlob(
   const BOTTOM = pageH - 15; // last baseline before the footer
   const W = pageW - M * 2;
   const COL_W = twoCol ? (W - GUTTER) / 2 : W;
-  const BADGE = 6; // number badge column
+  const BADGE = 5.2; // number gutter
   const TEXT_W = COL_W - BADGE;
 
   // type scale (pt) and line heights (mm)
-  const SZ = { stem: 8.4, opt: 8, meta: 6.2, exp: 7, title: 13, sub: 7.6 };
-  const LH = { stem: 3.75, opt: 3.5, exp: 3.15 };
+  const SZ = { stem: 8.2, opt: 7.8, meta: 5.9, exp: 6.8, title: 12.5, sub: 7.4 };
+  const LH = { stem: 3.6, opt: 3.4, exp: 3.05 };
 
   let col = 0;
   let y = M;
@@ -272,6 +288,9 @@ export async function generateBookletPdfBlob(
   columnTops.push(colTop);
 
   // ---------- Questions ----------
+  // Compact layout: number in a narrow gutter, a tiny meta line, the stem, options
+  // (two per row when every option fits on half a line) and a short answer note.
+  const green = highlight && mode === 'solution';
   if (mode !== 'answers_only') {
     questions.forEach((q, idx) => {
       const rec = q.reconstruction;
@@ -279,67 +298,94 @@ export async function generateBookletPdfBlob(
       const opts = ((rec?.options as any[]) || q.options || []).filter((o: any) => o && o.key && String(o.text || '').trim());
       const answer = rec?.correctAnswer || q.claimedAnswer || '';
 
-      // badge + meta + first two stem lines stay together
-      ensure(3.4 + 2 * LH.stem);
+      // number + meta + first two stem lines stay together
+      ensure(2.8 + 2 * LH.stem);
 
-      const x0 = colX();
-      fill(ACCENT_SOFT);
-      doc.roundedRect(x0, y - 3.2, 4.8, 4.2, 0.9, 0.9, 'F');
-      style('bold', 6.6, ACCENT);
-      doc.text(String(idx + 1), x0 + 2.4, y - 0.25, { align: 'center' });
-
-      const meta = [q.discipline, q.examYear, q.questionNumber ? `S.${q.questionNumber}` : ''].filter(Boolean).join(' · ');
-      style('normal', SZ.meta, INK3);
-      doc.text(T(meta.toLocaleUpperCase('tr-TR')), x0 + BADGE, y - 0.6, { maxWidth: TEXT_W });
-      y += 3.6;
+      const meta = [q.discipline, q.examYear].filter(Boolean).join(' · ');
+      if (meta) {
+        style('normal', SZ.meta, INK3);
+        doc.text(T(meta), colX() + BADGE, y - 0.9, { maxWidth: TEXT_W });
+        y += 2.7;
+      }
+      style('bold', SZ.stem, ACCENT);
+      doc.text(`${idx + 1}.`, colX(), y);
 
       style('normal', SZ.stem, INK);
       write(stem || '(Soru kökü henüz derlenmedi)', BADGE, TEXT_W, LH.stem);
-      y += 0.8;
+      y += 0.7;
 
-      opts.forEach((o: any) => {
-        const isCorrect = mode === 'solution' && !!answer && o.key === answer;
-        style(isCorrect ? 'bold' : 'normal', SZ.opt, isCorrect ? OK : INK);
-        write(
-          `${o.key})  ${String(o.text).trim()}`,
-          BADGE + 1.2,
-          TEXT_W - 2.4,
-          LH.opt,
-          isCorrect
-            ? (x, top, h) => {
-                fill(OK_SOFT);
-                doc.rect(x - 1.2, top - 0.35, TEXT_W, h, 'F');
-              }
-            : undefined
-        );
-      });
+      // Options: two per row when all are short
+      const half = (TEXT_W - 2) / 2;
+      style('normal', SZ.opt, INK);
+      const optText = (o: any) => T(`${o.key})  ${String(o.text).trim()}`);
+      const short = opts.length > 0 && opts.every((o: any) => doc.getTextWidth(optText(o)) <= half - 1.5);
+      const isMarked = (o: any) => mode === 'solution' && green && !!answer && o.key === answer;
+      const optStyle = (o: any) => style(isMarked(o) ? 'bold' : 'normal', SZ.opt, isMarked(o) ? OK : INK);
+      const markRow = (x: number, w: number) => {
+        fill(OK_SOFT);
+        doc.roundedRect(x - 1, y - LH.opt * 0.78, w, LH.opt + 0.2, 0.6, 0.6, 'F');
+      };
+
+      if (short) {
+        for (let i = 0; i < opts.length; i += 2) {
+          ensure(LH.opt);
+          const pair = opts.slice(i, i + 2);
+          pair.forEach((o: any, j: number) => {
+            const x = colX() + BADGE + 1 + j * (half + 2);
+            if (isMarked(o)) markRow(x, half);
+            optStyle(o);
+            doc.text(optText(o), x, y);
+          });
+          y += LH.opt;
+        }
+      } else {
+        // hanging indent: wrapped lines align with the option text, not the letter
+        const KEY_W = 4.4;
+        opts.forEach((o: any) => {
+          optStyle(o);
+          const lines: string[] = doc.splitTextToSize(T(String(o.text).trim()), TEXT_W - 2 - KEY_W);
+          lines.forEach((ln, li) => {
+            ensure(LH.opt);
+            const x = colX() + BADGE + 1;
+            if (isMarked(o)) {
+              fill(OK_SOFT);
+              doc.rect(x - 1, y - LH.opt * 0.78, TEXT_W - 0.2, LH.opt, 'F');
+            }
+            optStyle(o);
+            if (li === 0) doc.text(`${o.key})`, x, y);
+            doc.text(ln, x + KEY_W, y);
+            y += LH.opt;
+          });
+        });
+      }
 
       if (mode === 'solution') {
         const exp = cleanExplanation(rec?.explanation || '');
-        y += 1.2;
+        y += 1;
+        const barColor = green ? OK : LINE;
         const bar = (x: number, top: number, h: number) => {
-          fill(OK);
-          doc.rect(x - 2.4, top, 0.5, h + 0.15, 'F');
+          fill(barColor);
+          doc.rect(x - 2, top, 0.45, h + 0.15, 'F');
         };
-        style('bold', SZ.exp, OK);
-        write(`Doğru cevap: ${answer || 'belirtilmemiş'}`, BADGE + 2.4, TEXT_W - 2.6, LH.exp, bar);
+        style('bold', SZ.exp, green ? OK : INK);
+        write(`Cevap: ${answer || 'belirtilmemiş'}`, BADGE + 2, TEXT_W - 2.2, LH.exp, bar);
         if (exp) {
           style('normal', SZ.exp, INK2);
           exp
             .split('\n')
             .map((p) => p.trim())
             .filter(Boolean)
-            .forEach((para) => write(para, BADGE + 2.4, TEXT_W - 2.6, LH.exp, bar));
+            .forEach((para) => write(para, BADGE + 2, TEXT_W - 2.2, LH.exp, bar));
         }
       }
 
       // space + hairline between questions (skipped at a column break)
-      y += 2.4;
+      y += 1.8;
       if (y + 4 <= BOTTOM) {
-        stroke(LINE);
+        stroke(LINE, 0.15);
         doc.line(colX() + BADGE, y, colX() + COL_W, y);
       }
-      y += 4.4;
+      y += 3.6;
     });
   }
 

@@ -33,6 +33,7 @@ import {
   RotateCcw,
   GraduationCap,
   FileText,
+  FileDown,
 } from 'lucide-react';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
 
@@ -147,7 +148,8 @@ interface InteractiveDeckViewProps {
   initialSlideNumber?: number;
   /** Fired when a deck is opened (id) or closed (null) so the URL can follow. */
   onDeckChange?: (deckId: string | null) => void;
-  onOpenPdfModal?: () => void;
+  /** Opens the PDF dialog; with a target it starts on that deck's slide. */
+  onOpenPdfModal?: (target?: { deckId: string; slideNumber: number }) => void;
   onSelectCommittee?: (committeeId: string) => void;
 }
 
@@ -587,7 +589,7 @@ const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ lab
   );
 };
 
-export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange }) => {
+export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal }) => {
   const allDecks = useMemo(
     () => ((interactiveDecksData as unknown as InteractiveDeck[]) || []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0),
     []
@@ -759,6 +761,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
             setDeckId(null);
             onDeckChange?.(null);
           }}
+          onExportPdf={onOpenPdfModal ? (slideNumber) => onOpenPdfModal({ deckId: activeDeck.id, slideNumber }) : undefined}
         />
       )}
     </div>
@@ -775,7 +778,8 @@ const DeckPlayer: React.FC<{
   startAt: number;
   onProgress: (index: number) => void;
   onClose: () => void;
-}> = ({ deck, startAt, onProgress, onClose }) => {
+  onExportPdf?: (slideNumber: number) => void;
+}> = ({ deck, startAt, onProgress, onClose, onExportPdf }) => {
   const slides = deck.slides;
   const n = slides.length;
   const [index, setIndex] = useState(() => Math.min(Math.max(0, startAt), n - 1));
@@ -997,6 +1001,20 @@ const DeckPlayer: React.FC<{
             </button>
           ))}
         </div>
+        {onExportPdf && (
+          <button
+            type="button"
+            onClick={() => {
+              if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+              onExportPdf(slides[index].slideNumber);
+            }}
+            aria-label="Bu slaytı PDF olarak indir"
+            title="Bu slaytı PDF yap"
+            className={iconBtn}
+          >
+            <FileDown className="w-5 h-5" />
+          </button>
+        )}
         <button
           type="button"
           onClick={() => setPanelOpen((v) => !v)}
@@ -1727,19 +1745,7 @@ const SlideCanvas: React.FC<{
 
           {/* Side: spot pearls */}
           <div className="flex flex-col gap-3 min-w-0">
-            {slide.spotPearls?.length > 0 && (
-              <div className="rounded-xl border border-line p-3.5 sm:p-4 flex flex-col gap-2 bg-[#FAFBFC]">
-                <span className="text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-2">Akılda Tutulacak Spotlar</span>
-                <ul className="list-none m-0 p-0 flex flex-col gap-2">
-                  {slide.spotPearls.map((p, i) => (
-                    <li key={i} className="grid grid-cols-[16px_minmax(0,1fr)] gap-2 text-[14px] leading-[1.5]">
-                      <CheckCircle2 className="w-4 h-4 text-ok mt-0.5" />
-                      <Rich text={p} />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            {slide.spotPearls?.length > 0 && <SpotList items={slide.spotPearls} />}
           </div>
         </div>
         {paged && index < total - 1 && onNext && (
@@ -1759,6 +1765,44 @@ const SlideCanvas: React.FC<{
     </article>
   );
 };
+
+// ---------------------------------------------------------------------------
+// Spot list: warm "Akılda tut" card with numbered, spaced items
+// ---------------------------------------------------------------------------
+const SpotList: React.FC<{ items: string[]; title?: string; note?: string; compact?: boolean }> = ({
+  items,
+  title = 'Akılda tut',
+  note,
+  compact = false,
+}) => (
+  <section className={`rounded-2xl border border-[#F2DDB8] bg-[#FFF9EF] flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-3.5 sm:p-4 gap-3'}`}>
+    <header className="flex items-center gap-2">
+      <span className="w-7 h-7 rounded-[9px] bg-[#FCE9C6] text-[#9A4D06] flex items-center justify-center shrink-0" aria-hidden="true">
+        <Lightbulb className="w-4 h-4" />
+      </span>
+      <span className="text-[13.5px] font-semibold text-[#8A4405]">{title}</span>
+      <span className="ml-auto text-[12px] font-mono text-[#9A4D06]/70">{items.length}</span>
+    </header>
+    {note && <p className="m-0 -mt-1 text-[13px] text-[#8A4405]/80">{note}</p>}
+    <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-1.5' : 'gap-2'}`}>
+      {items.map((p, i) => (
+        <li
+          key={i}
+          className={`grid grid-cols-[22px_minmax(0,1fr)] gap-2.5 items-start bg-white rounded-xl shadow-[0_1px_0_rgba(154,77,6,0.10)] ${
+            compact ? 'px-2.5 py-2 text-[13.5px]' : 'px-3 py-2.5 text-[14.5px]'
+          } leading-[1.6] text-ink`}
+        >
+          <span className="w-[22px] h-[22px] mt-[1px] rounded-full bg-[#FCE9C6] text-[#9A4D06] font-mono text-[11.5px] font-semibold flex items-center justify-center">
+            {i + 1}
+          </span>
+          <span className="min-w-0 break-words">
+            <Rich text={p} />
+          </span>
+        </li>
+      ))}
+    </ol>
+  </section>
+);
 
 // ---------------------------------------------------------------------------
 // Interaction panel: flashcards, questions, structured notes, deck pearls, ask AI
@@ -1819,16 +1863,11 @@ const InteractionPanel: React.FC<{
           ))}
         {tab === 'notes' && <SlideNotesTab slide={slide} />}
         {tab === 'pearls' && (
-          <div className="flex flex-col gap-2">
-            <p className="m-0 text-[13px] text-ink-2 px-1">{deck.title} dersinin tamamından yüksek verimli bilgiler.</p>
-            <ul className="list-none m-0 p-0 flex flex-col gap-2">
-              {(deck.highYieldPearls || []).map((p, i) => (
-                <li key={i} className="rounded-xl border border-line p-3 text-[14px] leading-[1.55] text-ink-2">
-                  <Rich text={p} />
-                </li>
-              ))}
-            </ul>
-          </div>
+          (deck.highYieldPearls || []).length > 0 ? (
+            <SpotList items={deck.highYieldPearls || []} title="Dersin spotları" note="Dersin tamamından en çok sorulan bilgiler" compact />
+          ) : (
+            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu ders için spot bilgi yok.</p>
+          )
         )}
         {tab === 'ai' && <AskAi key={slide.slideNumber} deck={deck} slide={slide} />}
       </div>
@@ -1915,17 +1954,7 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
 
       {/* Spot pearls */}
       {slide.spotPearls && slide.spotPearls.length > 0 && (
-        <div className="rounded-xl border border-line p-3 bg-canvas/60 flex flex-col gap-2">
-          <span className="text-[11.5px] font-semibold uppercase tracking-wider text-ink-3">Bu Slaytın Spot İnci Bilgileri</span>
-          <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
-            {slide.spotPearls.map((p, i) => (
-              <li key={i} className="flex items-start gap-2 text-[12.5px] text-ink-2 leading-relaxed">
-                <CheckCircle2 className="w-3.5 h-3.5 text-ok shrink-0 mt-0.5" />
-                <Rich text={p} />
-              </li>
-            ))}
-          </ul>
-        </div>
+        <SpotList items={slide.spotPearls} title="Bu slaytın spotları" compact />
       )}
     </div>
   );

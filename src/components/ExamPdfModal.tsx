@@ -23,6 +23,11 @@ import { Committee, QuestionItem } from '../types';
 import { ApiService } from '../services/api';
 import { downloadBookletPdfLocally } from '../services/drive';
 import { filterCurrent2026_2027Committees } from '../services/firestoreDb';
+import { generateSlidePdfBlob, downloadSlidePdf } from '../services/slidePdf';
+import type { InteractiveDeck } from './learn/InteractiveDeckView';
+
+/** Primary branch of a deck ("Enfeksiyon Hastalıkları / Klinik Mikrobiyoloji" → "Enfeksiyon Hastalıkları"). */
+const disciplineGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
 
 interface ExamPdfModalProps {
   isOpen: boolean;
@@ -30,6 +35,8 @@ interface ExamPdfModalProps {
   committee?: Committee;
   committees?: Committee[];
   questions: QuestionItem[];
+  /** Open on the Öğren tab with this deck's slide preselected */
+  initialSlide?: { deckId: string; slideNumber: number } | null;
 }
 
 export interface NormalizedPdfQuestion {
@@ -53,7 +60,11 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
   committee,
   committees = [],
   questions = [],
+  initialSlide = null,
 }) => {
+  // What goes into the PDF: past/pool questions or Öğren slides
+  const [contentType, setContentType] = useState<'questions' | 'slides'>(initialSlide ? 'slides' : 'questions');
+  const [highlightCorrect, setHighlightCorrect] = useState(true);
   // Configurable Selection States
   const [selectedCommitteeId, setSelectedCommitteeId] = useState<string>(() => committee?.id || 'all');
   const [sourceMode, setSourceMode] = useState<'past_exams' | 'collaborative' | 'all'>('past_exams');
@@ -66,6 +77,15 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
   const [includeAnswerMatrix, setIncludeAnswerMatrix] = useState(true);
   const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
   const [pdfError, setPdfError] = useState<string | null>(null);
+
+  // Öğren slides
+  const [decks, setDecks] = useState<InteractiveDeck[]>([]);
+  const [deckId, setDeckId] = useState<string>(initialSlide?.deckId || '');
+  const [pickedSlides, setPickedSlides] = useState<number[]>(initialSlide ? [initialSlide.slideNumber] : []);
+  const [includeCards, setIncludeCards] = useState(true);
+  const [includeSlideQuestions, setIncludeSlideQuestions] = useState(false);
+  const [slidePreviewUrl, setSlidePreviewUrl] = useState<string | null>(null);
+  const [isBuildingPreview, setIsBuildingPreview] = useState(false);
 
   // Past Questions Loading State
   const [pastQuestions, setPastQuestions] = useState<any[]>([]);
@@ -272,7 +292,76 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     };
   }, [isOpen, onClose]);
 
+  // Load decks only when the slide tab is used (the JSON is large)
+  useEffect(() => {
+    if (!isOpen || contentType !== 'slides' || decks.length) return;
+    let alive = true;
+    import('../data/interactive_learning_decks.json').then((mod: any) => {
+      if (!alive) return;
+      const list = ((mod.default || mod) as InteractiveDeck[]).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0);
+      setDecks(list);
+      if (!list.some((d) => d.id === deckId) && list[0]) {
+        setDeckId(list[0].id);
+        setPickedSlides([list[0].slides[0].slideNumber]);
+      }
+    });
+    return () => {
+      alive = false;
+    };
+  }, [isOpen, contentType, decks.length, deckId]);
+
+  const activeDeck = useMemo(() => decks.find((d) => d.id === deckId) || null, [decks, deckId]);
+  const chosenSlides = useMemo(
+    () => (activeDeck ? activeDeck.slides.filter((sl) => pickedSlides.includes(sl.slideNumber)) : []),
+    [activeDeck, pickedSlides]
+  );
+  const slideOptions = { includeFlashcards: includeCards, includeQuestions: includeSlideQuestions, highlightCorrect };
+
+  // Live PDF preview for slides (debounced)
+  useEffect(() => {
+    if (!isOpen || contentType !== 'slides' || !activeDeck || chosenSlides.length === 0) {
+      setSlidePreviewUrl(null);
+      return;
+    }
+    let alive = true;
+    let url: string | null = null;
+    setIsBuildingPreview(true);
+    const t = setTimeout(async () => {
+      try {
+        const blob = await generateSlidePdfBlob(activeDeck, chosenSlides.slice(0, 12), slideOptions);
+        if (!alive) return;
+        url = URL.createObjectURL(blob);
+        setSlidePreviewUrl(url);
+      } catch (e) {
+        console.warn('Slayt PDF önizlemesi oluşturulamadı', e);
+        if (alive) setSlidePreviewUrl(null);
+      } finally {
+        if (alive) setIsBuildingPreview(false);
+      }
+    }, 350);
+    return () => {
+      alive = false;
+      clearTimeout(t);
+      if (url) URL.revokeObjectURL(url);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen, contentType, activeDeck, chosenSlides, includeCards, includeSlideQuestions, highlightCorrect]);
+
   if (!isOpen) return null;
+
+  const handleSlidePdfDownload = async () => {
+    if (!activeDeck || chosenSlides.length === 0) return;
+    setPdfError(null);
+    setIsGeneratingPdf(true);
+    try {
+      await downloadSlidePdf(activeDeck, chosenSlides, slideOptions);
+    } catch (err) {
+      console.error('Slayt PDF hatası:', err);
+      setPdfError('Slayt PDF oluşturulamadı. Lütfen tekrar dene.');
+    } finally {
+      setIsGeneratingPdf(false);
+    }
+  };
 
   // Booklet Header Details
   const displayTitle = activeCommittee?.name || (selectedCommitteeId === 'all' ? 'TÜM KURULLAR BİRLEŞİK SINAV KİTAPÇIĞI' : 'TIP FAKÜLTESİ KURUL SINAVI');
@@ -332,6 +421,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
         title: displayTitle,
         subtitle: selectedYear !== 'all' ? selectedYear : undefined,
         columns,
+        highlightCorrect,
       });
     } catch (err: any) {
       console.error('PDF oluşturma hatası:', err);
@@ -406,7 +496,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
   return createPortal(
     <div
       id="exam-pdf-modal-portal"
-      className="pdf-modal-backdrop fixed inset-0 z-50 bg-[rgba(14,26,38,0.45)] flex items-stretch sm:items-center justify-center sm:p-4"
+      className="pdf-modal-backdrop fixed inset-0 z-[80] bg-[rgba(14,26,38,0.45)] flex items-stretch sm:items-center justify-center sm:p-4"
       onMouseDown={(e) => e.target === e.currentTarget && onClose()}
     >
       <style>{`
@@ -440,10 +530,16 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
           </span>
           <div className="min-w-0 flex-1">
             <h2 id="pdf-modal-title" className="m-0 font-display font-bold text-[18px] sm:text-[20px] tracking-[-0.02em] leading-tight">
-              PDF kitapçık
+              PDF oluştur
             </h2>
             <p className="m-0 text-[13px] text-ink-2 truncate" role="status">
-              {isLoadingPast ? 'Çıkmış sorular yükleniyor…' : `${displayTarget} soru · ${displayTitle}`}
+              {contentType === 'slides'
+                ? activeDeck
+                  ? `${chosenSlides.length} slayt · ${activeDeck.title}`
+                  : 'Dersler yükleniyor…'
+                : isLoadingPast
+                  ? 'Çıkmış sorular yükleniyor…'
+                  : `${displayTarget} soru · ${displayTitle}`}
             </p>
           </div>
           <button
@@ -459,6 +555,117 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
         <div className="pdf-modal-scrollable flex-1 min-h-0 overflow-y-auto lg:overflow-hidden grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)]">
           {/* Settings */}
           <aside className="no-print lg:overflow-y-auto border-b lg:border-b-0 lg:border-r border-line bg-[#FAFBFC] p-4 sm:p-5 flex flex-col gap-4 min-w-0">
+            <div role="radiogroup" aria-label="İçerik" className="grid grid-cols-2 gap-1 bg-white border border-line rounded-[12px] p-1">
+              {(
+                [
+                  ['questions', FileText, 'Çıkmış sorular'],
+                  ['slides', GraduationCap, 'Öğren slaytı'],
+                ] as const
+              ).map(([id, Icon, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="radio"
+                  aria-checked={contentType === id}
+                  onClick={() => setContentType(id)}
+                  className={`h-10 rounded-[9px] inline-flex items-center justify-center gap-1.5 text-[13.5px] cursor-pointer ${
+                    contentType === id ? 'bg-ink text-white font-semibold' : 'text-ink-2 hover:text-ink'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            {contentType === 'slides' && (
+              <>
+                <label className={labelCls}>
+                  Ders
+                  <select
+                    value={deckId}
+                    onChange={(e) => {
+                      const d = decks.find((x) => x.id === e.target.value);
+                      setDeckId(e.target.value);
+                      setPickedSlides(d ? [d.slides[0].slideNumber] : []);
+                    }}
+                    className={fieldCls}
+                    disabled={!decks.length}
+                  >
+                    {!decks.length && <option>Yükleniyor…</option>}
+                    {decks.map((d) => (
+                      <option key={d.id} value={d.id}>
+                        {disciplineGroup(d.discipline)} · {d.title}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                {activeDeck && (
+                  <div className="flex flex-col gap-1.5 min-h-0">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[13px] font-semibold text-ink-2">Slaytlar · {pickedSlides.length} seçili</span>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setPickedSlides(
+                            pickedSlides.length === activeDeck.slides.length ? [activeDeck.slides[0].slideNumber] : activeDeck.slides.map((sl) => sl.slideNumber)
+                          )
+                        }
+                        className="h-8 px-2 text-[13px] font-semibold text-accent cursor-pointer"
+                      >
+                        {pickedSlides.length === activeDeck.slides.length ? 'Yalnız ilki' : 'Tümünü seç'}
+                      </button>
+                    </div>
+                    <ul className="list-none m-0 p-1 bg-white border border-line rounded-[12px] max-h-[260px] lg:max-h-[300px] overflow-y-auto flex flex-col">
+                      {activeDeck.slides.map((sl) => {
+                        const on = pickedSlides.includes(sl.slideNumber);
+                        return (
+                          <li key={sl.slideNumber}>
+                            <label
+                              className={`flex items-center gap-2.5 min-h-10 px-2 rounded-[9px] cursor-pointer text-[13.5px] ${
+                                on ? 'bg-accent-soft text-ink' : 'text-ink-2 hover:bg-canvas'
+                              }`}
+                            >
+                              <input
+                                type="checkbox"
+                                checked={on}
+                                onChange={() =>
+                                  setPickedSlides((prev) =>
+                                    on ? prev.filter((x) => x !== sl.slideNumber) : [...prev, sl.slideNumber].sort((a, b) => a - b)
+                                  )
+                                }
+                                className="w-4 h-4 accent-[#1E4FD8] shrink-0"
+                              />
+                              <span className="font-mono text-[12px] text-ink-3 w-6 shrink-0">{sl.slideNumber}</span>
+                              <span className="truncate">{sl.title}</span>
+                            </label>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                )}
+
+                <div className="flex flex-col gap-0.5">
+                  <label className="flex items-center gap-2.5 min-h-10 text-[14px] text-ink cursor-pointer">
+                    <input type="checkbox" checked={includeCards} onChange={(e) => setIncludeCards(e.target.checked)} className="w-4 h-4 accent-[#1E4FD8]" />
+                    Akıl kartlarını ekle
+                  </label>
+                  <label className="flex items-center gap-2.5 min-h-10 text-[14px] text-ink cursor-pointer">
+                    <input type="checkbox" checked={includeSlideQuestions} onChange={(e) => setIncludeSlideQuestions(e.target.checked)} className="w-4 h-4 accent-[#1E4FD8]" />
+                    Eşleşen çıkmış soruları ekle
+                  </label>
+                  <label className="flex items-center gap-2.5 min-h-10 text-[14px] text-ink cursor-pointer">
+                    <input type="checkbox" checked={highlightCorrect} onChange={(e) => setHighlightCorrect(e.target.checked)} className="w-4 h-4 accent-[#1E4FD8]" />
+                    Doğru cevapları yeşil göster
+                  </label>
+                </div>
+              </>
+            )}
+
+            {contentType === 'questions' && (
+            <>
             <div className="flex flex-col gap-1.5">
               <span className="text-[13px] font-semibold text-ink-2">Kitapçık türü</span>
               <div role="radiogroup" aria-label="Kitapçık türü" className="grid grid-cols-3 gap-1 bg-canvas rounded-[12px] p-1">
@@ -591,7 +798,19 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                 <input type="checkbox" checked={filterReadyOnly} onChange={(e) => setFilterReadyOnly(e.target.checked)} className="w-4 h-4 accent-[#1E4FD8]" />
                 Yalnızca cevabı belli sorular
               </label>
+              <label className={`flex items-center gap-2.5 min-h-10 text-[14px] text-ink cursor-pointer ${bookletMode !== 'solution' ? 'opacity-50' : ''}`}>
+                <input
+                  type="checkbox"
+                  checked={highlightCorrect}
+                  disabled={bookletMode !== 'solution'}
+                  onChange={(e) => setHighlightCorrect(e.target.checked)}
+                  className="w-4 h-4 accent-[#1E4FD8]"
+                />
+                Doğru şıkkı yeşil işaretle
+              </label>
             </div>
+            </>
+            )}
 
             {loadError && <p className="m-0 text-[13px] text-warn bg-warn-soft rounded-lg px-3 py-2">{loadError}</p>}
             {pdfError && (
@@ -602,6 +821,18 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
 
             {/* Actions (sticky on phones) */}
             <div className="sticky bottom-0 mt-auto -mx-4 sm:-mx-5 -mb-4 sm:-mb-5 px-4 sm:px-5 py-3 bg-[#FAFBFC] border-t border-line flex flex-col gap-2 z-10">
+              {contentType === 'slides' ? (
+                <button
+                  type="button"
+                  onClick={handleSlidePdfDownload}
+                  disabled={!activeDeck || chosenSlides.length === 0 || isGeneratingPdf}
+                  className="h-11 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isGeneratingPdf ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                  {isGeneratingPdf ? 'PDF hazırlanıyor…' : `PDF indir (${chosenSlides.length} slayt)`}
+                </button>
+              ) : (
+              <>
               <button
                 type="button"
                 onClick={handleDirectPdfDownload}
@@ -631,11 +862,35 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                   <FileText className="w-4 h-4" /> HTML
                 </button>
               </div>
+              </>
+              )}
             </div>
           </aside>
 
+          {/* Slide PDF preview: the real PDF, so what you see is what you get */}
+          {contentType === 'slides' && (
+            <div className="no-print bg-canvas p-3 sm:p-5 flex flex-col min-w-0 min-h-[420px] lg:min-h-0">
+              {slidePreviewUrl ? (
+                <iframe
+                  key={slidePreviewUrl}
+                  title="Slayt PDF önizlemesi"
+                  src={`${slidePreviewUrl}#view=FitH&toolbar=0&navpanes=0`}
+                  className={`flex-1 w-full rounded-[12px] border border-line bg-white transition-opacity ${isBuildingPreview ? 'opacity-60' : ''}`}
+                />
+              ) : (
+                <div className="flex-1 flex flex-col items-center justify-center gap-2 text-center text-ink-2 bg-white border border-dashed border-line-2 rounded-[12px] p-8">
+                  {isBuildingPreview ? <RefreshCw className="w-6 h-6 text-accent animate-spin" /> : <GraduationCap className="w-7 h-7 text-ink-3" />}
+                  <p className="m-0 text-[14px]">{isBuildingPreview ? 'Önizleme hazırlanıyor…' : 'Önizleme için bir ders ve en az bir slayt seç.'}</p>
+                </div>
+              )}
+              {chosenSlides.length > 12 && (
+                <p className="m-0 mt-2 text-[12.5px] text-ink-3">Önizlemede ilk 12 slayt gösteriliyor; indirilen PDF hepsini içerir.</p>
+              )}
+            </div>
+          )}
+
           {/* A4 preview */}
-          <div className="bg-canvas lg:overflow-y-auto p-3 sm:p-6 flex justify-center min-w-0">
+          <div className={`bg-canvas lg:overflow-y-auto p-3 sm:p-6 justify-center min-w-0 ${contentType === 'slides' ? 'hidden print:flex' : 'flex'}`}>
             <div
               id="exam-printable-content"
               className="print-container bg-white border border-line rounded-sm shadow-[0_2px_12px_rgba(14,26,38,0.08)] w-full max-w-[210mm] sm:min-h-[297mm] h-fit p-4 sm:p-[14mm] text-[#0f172a]"
@@ -664,17 +919,17 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                   {filteredQuestions.map((q, idx) => {
                     const meta = [q.discipline, q.examYear, q.questionNumber ? `S.${q.questionNumber}` : ''].filter(Boolean).join(' · ');
                     return (
-                      <div key={q.id} className="exam-question-item break-inside-avoid mb-4 pb-3 border-b border-[#e2e8f0]">
-                        <div className="flex items-baseline justify-between gap-2 mb-1">
-                          <span className="q-badge font-bold text-[13px]">{idx + 1}.</span>
-                          <span className="q-meta text-[12px] text-[#475569] truncate">{meta}</span>
-                        </div>
-                        <p className="q-stem m-0 mb-1.5 text-[13px] leading-[1.5] whitespace-pre-line">{q.stem}</p>
+                      <div key={q.id} className="exam-question-item break-inside-avoid mb-3 pb-2.5 border-b border-[#eef1f4]">
+                        <div className="q-meta text-[11px] text-[#7a8693] truncate pl-5">{meta}</div>
+                        <p className="q-stem m-0 mb-1 text-[13px] leading-[1.5] whitespace-pre-line">
+                          <span className="q-badge font-bold text-[#1E4FD8] inline-block w-5">{idx + 1}.</span>
+                          {q.stem}
+                        </p>
                         <div className="flex flex-col gap-0.5">
                           {q.options.map((opt) => {
-                            const isCorrect = bookletMode === 'solution' && (q.correctAnswer === opt.key || !!opt.isCorrect);
+                            const isCorrect = bookletMode === 'solution' && highlightCorrect && (q.correctAnswer === opt.key || !!opt.isCorrect);
                             return (
-                              <div key={opt.key} className={`q-option${isCorrect ? ' correct' : ''} flex gap-1.5 text-[13px] leading-snug px-1 rounded ${isCorrect ? 'font-semibold text-[#065f46] bg-[#ecfdf5]' : ''}`}>
+                              <div key={opt.key} className={`q-option${isCorrect ? ' correct' : ''} flex gap-1.5 text-[12.5px] leading-snug pl-5 pr-1 rounded ${isCorrect ? 'font-semibold text-[#065f46] bg-[#ecfdf5]' : ''}`}>
                                 <span className="font-semibold shrink-0">{opt.key})</span>
                                 <span>{opt.text}</span>
                               </div>
@@ -682,8 +937,8 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                           })}
                         </div>
                         {bookletMode === 'solution' && (
-                          <div className="explanation mt-2 px-2.5 py-1.5 border-l-2 border-[#059669] bg-[#f0fdf4] text-[12px] leading-[1.5] text-[#334155]">
-                            <strong className="text-[#065f46]">Doğru cevap: {q.correctAnswer || 'belirtilmemiş'}</strong>
+                          <div className={`explanation mt-1.5 ml-5 pl-2 py-0.5 border-l-2 text-[11.5px] leading-[1.5] text-[#4a5868] ${highlightCorrect ? 'border-[#059669]' : 'border-[#dce2e8]'}`}>
+                            <strong className={highlightCorrect ? 'text-[#065f46]' : 'text-[#0e1a26]'}>Cevap: {q.correctAnswer || 'belirtilmemiş'}</strong>
                             {q.explanation && <span className="block whitespace-pre-line mt-0.5">{q.explanation.replace(/【([^】]+)】\s*:?\s*/g, '\n$1: ').trim()}</span>}
                           </div>
                         )}
