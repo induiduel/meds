@@ -128,6 +128,13 @@ ve yalnızca dil/format düzeltmesi yap.
 - Şık sayısını 5'ten farklı yapma (kurtarılamıyorsa `kullanilamaz`).
 - Türkçe dışında dilde içerik yazma. Kod bloğu, markdown başlığı veya emoji kullanma.
 
+### 2.1 Ortam kuralları (ÇOK ÖNEMLİ)
+- **Hiçbir Python/Node betiği çalıştırma.** `ds_pipeline.py`, `ds_batches.py` vb. çalıştırmak yasaktır.
+- `dist\ds_work` klasöründeki dosyaları **değiştirme, silme, yeniden üretme**. Batch dosyaları hazırdır.
+- Yardımcı/geçici betik veya klasör oluşturma.
+- Tek yazma iznin şudur: `dist\ds_out\<batchId>.json`.
+- Görevde verilen batch dosyası yoksa **dur ve bunu son mesajında bildir**; kendi başına üretmeye çalışma.
+
 ---
 
 ## 3. ÇIKTI ŞEMASI (TEK JSON NESNESİ)
@@ -157,6 +164,7 @@ ve yalnızca dil/format düzeltmesi yap.
         {"lectureId": "lec-xxxxxxxxxx", "matchType": "konu_eslesmesi", "coverage": "guclu",
          "evidenceQuote": "ders notundan birebir alıntı"}
       ],
+      "evidenceText": "Bu soruyu çözmek için gereken bilgiyi içeren, ders notlarında geçen kanıt metni (2-4 cümle).",
       "curriculumFit": "uyumlu",
       "status": "onaylandi",
       "qualityScore": 88,
@@ -180,6 +188,12 @@ ve yalnızca dil/format düzeltmesi yap.
 | `qualityScore` | 0 – 100 (format + dil + kanıt + açıklama kalitesi) |
 | `changes` | `turkce_karakter`, `html_entity`, `ham_gurultu_temizlendi`, `kok_yeniden_yazildi`, `siklar_duzenlendi`, `cevap_duzeltildi`, `aciklama_yenilendi`, `brans_duzeltildi`, `konu_duzeltildi`, `ders_notu_eslesti` |
 
+### `evidenceText` nedir?
+RAG sisteminin bu soruyla birlikte indeksleyeceği **kanıt metni**. Kurallar:
+- Ders notlarında geçen bilgiden üretilmiş, 2-4 cümlelik, soruyu çözmeye yeten bir açıklama olmalı.
+- İçindeki tıbbi iddialar ders notuyla çelişmemeli. Ders notunda olmayan bir bilgi ekleme.
+- Ders notu hiç yoksa (`evidenceStatus: "not_yok"`) bu alanı **boş string** bırak.
+
 ---
 
 ## 4. ÇALIŞMA AKIŞI
@@ -187,7 +201,7 @@ ve yalnızca dil/format düzeltmesi yap.
 1. Sana verilen batch dosyasını Read ile oku.
 2. `lectureCandidates[].evidence` pasajlarını dikkatle incele.
 3. Her soruyu sırayla işle: dil/format düzelt → cevabı kanıtla doğrula → açıklamayı yaz →
-   ders notu eşleşmesini kur (alıntıyı birebir kopyala) → kalite puanla.
+   ders notu eşleşmesini kur (alıntıyı birebir kopyala) → `evidenceText` yaz → kalite puanla.
 4. Kanıt yetersizse ilgili ders notunun tam metnini oku (en fazla 4 dosya, offset/limit ile).
 5. Çıktı JSON'unu **Write** ile şu yola yaz:
    `C:\Users\indui\Desktop\meds\dist\ds_out\<batchId>.json`

@@ -10,7 +10,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 BASE = r"C:\Users\indui\Desktop\meds_database"
 RS = os.path.join(BASE, "redakte_sorular")
 RZ = os.path.join(BASE, "redakte_ozet")
-WORK = r"C:\Users\indui\Desktop\meds\dist\ds_work"
+WORK = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
 os.makedirs(WORK, exist_ok=True)
 
 # ----------------------------------------------------------------------------

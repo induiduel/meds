@@ -1,6 +1,15 @@
 {
   "scripts": [
     {
+      "name": "transcribe-drive-audio.mjs",
+      "title": "Google Drive Amfi Ses Transkripsiyon ve Otomatik Düzeltme",
+      "category": "Drive & Ses Transkripsiyon",
+      "description": "Drive'daki tıp ses kayıtlarını bilgisayara indirir, müfredat ve çıkmış sorularla eşleştirip Gemini File API ile %100 eksiksiz verbatim transkribe eder.",
+      "defaultArgs": "--watch",
+      "tags": ["ses", "transkripsiyon", "gemini", "drive", "amfi", "otomatik-izleyici"],
+      "danger": false
+    },
+    {
       "name": "sync-drive-updates.mjs",
       "title": "Google Drive Güncelleme Tespit & Manuel Senkronizasyon",
       "category": "Drive & Senkronizasyon",

@@ -26,8 +26,10 @@
     "check:updates": "node scripts/detect-database-updates.mjs",
     "sync:updates": "node scripts/detect-database-updates.mjs --sync",
     "transcribe:audio": "node scripts/transcribe-drive-audio.mjs",
+    "transcribe:watch": "node scripts/transcribe-drive-audio.mjs --watch",
     "rag:index": "node scripts/index-rag-knowledge.mjs",
-    "rag:index:all": "node scripts/index-rag-knowledge.mjs --limit 10000"
+    "rag:index:all": "node scripts/index-rag-knowledge.mjs --limit 10000",
+    "decks:build": "python scripts/build_learning_decks.py"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, CheckCircle2, ChevronRight, BookOpen, Check, CircleDashed, AlertCircle, ListChecks } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ChevronRight, BookOpen, Check, CircleDashed, AlertCircle, ListChecks, Sparkles } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { ApiService } from '../services/api';
@@ -29,7 +29,7 @@ interface QuickAddHeroProps {
   totalQuestionsCount: number;
   questions?: QuestionItem[];
   onOpenQuestion?: (question: QuestionItem) => void;
-  onNavigateTab: (tab: 'matrix' | 'questions' | 'practice' | 'booklet' | 'notes' | 'past_exams' | 'study') => void;
+  onNavigateTab: (tab: 'matrix' | 'questions' | 'practice' | 'booklet' | 'notes' | 'past_exams' | 'study' | 'learn') => void;
   isAdmin: boolean;
   currentUser?: AppUser | null;
   onOpenAdminPanel?: () => void;
@@ -300,6 +300,31 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </button>
           );
         })}
+      </div>
+
+      {/* ÖĞREN HUB'I ÇAĞRISI (Ses Transkriptleri & Slayt Sunuları) */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-indigo-950 to-slate-900 text-white p-4 sm:p-6 border border-indigo-900/60 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="space-y-1.5 max-w-2xl">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 text-[11px] font-bold tracking-wide uppercase border border-indigo-400/30">
+            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+            Yeni Bölüm • Ses & Slayt Eşleşmeli İnteraktif Öğrenme
+          </div>
+          <h2 className="text-base sm:text-xl font-black text-white tracking-tight">
+            Hocanın Ses Kayıtları, Slayt Vurguları & Çıkmış Sorularla Öğren
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Hocanın amfide <span className="text-amber-300 font-semibold">"Buradan soru sorarız"</span> ve <span className="text-amber-300 font-semibold">"Slaytta yok, beni dinleyin"</span> dediği noktaları tam ekran PPTX slayt sunumu veya dikey akışla incele; her slaytta eşleşen gerçek kurul çıkmış sorularını çöz.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => onNavigateTab('learn')}
+          className="shrink-0 px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-indigo-600/30 transition-all hover:scale-[1.02] cursor-pointer"
+        >
+          <span>Öğrenmeye Başla</span>
+          <ArrowRight className="w-4 h-4" />
+        </button>
       </div>
 
       {/* HERO: composer + pool */}

@@ -24,12 +24,13 @@ import {
   BookOpen,
   Trophy,
   SquarePen,
+  GraduationCap,
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
 import { systemHealthMonitor, SystemOverallHealth } from '../services/systemHealthMonitor';
 
-export type AppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
+export type AppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
 
 interface HeaderProps {
   committees: Committee[];
@@ -66,6 +67,7 @@ interface HeaderProps {
 
 export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'quick_add', label: 'Ana sayfa', icon: House },
+  { id: 'learn', label: 'Öğren', icon: GraduationCap },
   { id: 'questions', label: 'Soru havuzu', icon: Library },
   { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
   { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },

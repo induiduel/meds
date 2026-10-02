@@ -3,20 +3,19 @@
 /**
  * scripts/transcribe-drive-audio.mjs
  * 
- * MedSoru Tıbbi Amfi Ses Kayıtları Transkripsiyon ve Ders Eşleştirme Motoru
- * ------------------------------------------------------------------------
- * Google Gemini (3.5 Flash-Lite & 3.8 Flash) ile:
- *   1. Amfi ses kayıtlarını (.m4a, .mp3, .wav) TÜM DAKİKALARIYLA (dakika dakika) transkribe eder.
- *   2. 25 dakikadan uzun kayıtları otomatik zaman pencerelerine (00:00-20:00, 20:00-40:00 vb.) bölerek
- *      token sınırlarına takılmadan ve hiçbir cümleyi atlamadan %100 eksiksiz (verbatim) işler.
- *   3. Tıp müfredatı (Karabük Tıp Dönem 3) ve 347 ders özeti kataloğunu
- *      kullanarak ses dosyasının GERÇEKTE hangi Kurula, hangi Disipline ve hangi
- *      Ders Başlığına ait olduğunu tespit eder.
- *   4. Tıbbi literatür ve doğru tıbbi terminoloji (Latince anatomik yapılar, patoloji,
- *      mikrobiyoloji, farmakoloji) ile fonetik bozulmaları engeller.
- *   5. Amfi sınav ve TUS hap bilgilerini (High-Yield Pearls) özel kutularda özetler.
- *   6. Kota ve Hız Limiti Yönetimi (Rate Limiting, RPM/TPM koruması, 429 backoff).
- *   7. Kaldığı yerden devam edebilen yapılandırılmış manifest (transcription_manifest.json).
+ * MedSoru Tıbbi Amfi Ses Kayıtları Transkripsiyon, Ders Eşleştirme ve İzleme Motoru
+ * ---------------------------------------------------------------------------------
+ * 1. Google Drive ('G:\Drive'ım\Tıp Genel\Ses Kayıtları Dönem 3 (26-27)') klasörünü
+ *    özyinelemeli (recursive) tarar ve yeni ses kayıtlarını yerel 'meds_database/ses_kayitlari'
+ *    klasörüne %100 eksiksiz indirir.
+ * 2. Tıp müfredatı (Karabük Tıp Dönem 3), 347 amfi dersi özeti ve geçmiş Kurul çıkmış soruları
+ *    ile eşleştirme yaparak dersin Kurul, Disiplin, Hoca ve Konu kimliğini tespit eder.
+ * 3. Karabük Tıp çıkmış sınav sorularını (pastQuestions / redakte_sorular) prompta enjekte ederek
+ *    amfide hocanın sınav uyarısı yaptığı yerleri 'High-Yield Pearls' olarak çıkarır.
+ * 4. Gemini 3.5 Flash-Lite ve 3.8 Flash Multimodal File API ile 15'er dakikalık pencereler halinde
+ *    dakika dakika, %100 KESİNTİSİZ ve KELİMESİ KELİMESİNE (verbatim) transkript üretir.
+ * 5. Kalıcı otomatik izleme (--watch) modu ile Google Drive'a yeni ses eklendiğinde
+ *    otomatik olarak algılayıp transkribe eder.
  */
 
 import fs from 'fs';
@@ -33,26 +32,42 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
 
-// Varsayılan Arama Yolları
-const DEFAULT_AUDIO_DIRS = [
-  'C:\\Users\\indui\\Desktop\\Quick',
-  path.join(BASE_DATABASE_DIR, 'ses_kayitlari'),
-  path.join(ROOT_DIR, 'audio')
-];
-
+// Klasör Yolları
+const DRIVE_ROOT_DIR = path.join('G:', "Drive'ım", 'Tıp Genel', 'Ses Kayıtları Dönem 3 (26-27)');
+const LOCAL_AUDIO_DIR = path.join(BASE_DATABASE_DIR, 'ses_kayitlari');
 const TRANSCRIPTION_OUT_DIR = path.join(BASE_DATABASE_DIR, 'transcriptions');
 const MANIFEST_PATH = path.join(TRANSCRIPTION_OUT_DIR, 'transcription_manifest.json');
-const SUMMARIES_CATALOG_PATH = path.join(ROOT_DIR, 'src', 'data', 'summaries_meta.json');
+const WATCHER_LOG_PATH = path.join(TRANSCRIPTION_OUT_DIR, 'watcher.log');
 
-// CLI Parametreleri
+const SUMMARIES_CATALOG_PATHS = [
+  path.join(ROOT_DIR, 'src', 'data', 'summaries_meta.json'),
+  path.join(BASE_DATABASE_DIR, 'redakte_ozet_manifest.json')
+];
+
+const REDAKTE_SORULAR_DIR = path.join(BASE_DATABASE_DIR, 'redakte_sorular');
+const PAST_QUESTIONS_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
+
+// Komut Satırı Argümanları
 const args = process.argv.slice(2);
-const customInputArg = args.find(a => a.startsWith('--input='))?.split('=')[1] || null;
+const isWatchMode = args.includes('--watch') || args.includes('-w');
+const isForce = args.includes('--force') || args.includes('-f');
 const modelArg = args.find(a => a.startsWith('--model='))?.split('=')[1] || 'gemini-3.5-flash-lite';
 const delayArg = parseInt(args.find(a => a.startsWith('--delay='))?.split('=')[1] || '6', 10);
-const isForce = args.includes('--force') || args.includes('-f');
 const limitArg = parseInt(args.find(a => a.startsWith('--limit='))?.split('=')[1] || '0', 10);
+const watchIntervalSec = parseInt(args.find(a => a.startsWith('--interval='))?.split('=')[1] || '60', 10);
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '';
+
+// Logger
+function log(msg, alsoConsole = true) {
+  const timeStr = new Date().toISOString().replace('T', ' ').substring(0, 19);
+  const formatted = `[${timeStr}] ${msg}`;
+  if (alsoConsole) console.log(formatted);
+  try {
+    fs.mkdirSync(TRANSCRIPTION_OUT_DIR, { recursive: true });
+    fs.appendFileSync(WATCHER_LOG_PATH, formatted + '\n', 'utf8');
+  } catch (_) {}
+}
 
 // M4A / MP4 Süre Okuyucu (mvhd atomu)
 function getM4aDuration(filePath) {
@@ -61,11 +76,9 @@ function getM4aDuration(filePath) {
     const stat = fs.fstatSync(fd);
     const size = stat.size;
     const buf = Buffer.alloc(Math.min(size, 6 * 1024 * 1024));
-    // Sona bak (moov atomu genellikle sondadır)
     fs.readSync(fd, buf, 0, buf.length, Math.max(0, size - buf.length));
     let idx = buf.indexOf('mvhd');
     if (idx === -1) {
-      // Başa bak
       fs.readSync(fd, buf, 0, buf.length, 0);
       idx = buf.indexOf('mvhd');
     }
@@ -92,10 +105,9 @@ function formatSeconds(totalSec) {
   return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 }
 
-// Zaman Pencereleri Üretici (15'er dakikalık güvenli dilimler)
+// 15'er Dakikalık Güvenli Zaman Pencereleri
 function createTimeWindows(durationSeconds, windowSizeSec = 900) {
   if (!durationSeconds || durationSeconds <= 900) {
-    // 15 dk ve altı tek parça işlenebilir
     return [{
       index: 1,
       total: 1,
@@ -135,7 +147,7 @@ function createTimeWindows(durationSeconds, windowSizeSec = 900) {
   return windows;
 }
 
-// ASCII Güvenli İsim Dönüştürücü (HTTP Header ve File API ByteString hatasını önler)
+// ASCII Güvenli İsim
 function toAsciiSafeName(str) {
   return str
     .replace(/ı/g, 'i').replace(/İ/g, 'I')
@@ -157,6 +169,9 @@ const TYPO_MAP = {
   'genetsk': 'genetik',
   'tbg': 'tıbbi genetik',
   'hs': 'halk sağlığı',
+  'farmakolji': 'farmakoloji',
+  'patolji': 'patoloji',
+  'enfeksyon': 'enfeksiyon',
 };
 
 function normalizeText(str) {
@@ -173,28 +188,70 @@ function normalizeText(str) {
     .replace(/\s+/g, ' ').trim();
 }
 
+// 1. Bilgi Tabanını Yükle (Ders Özetleri Kataloğu)
 function loadSummariesCatalog() {
-  if (fs.existsSync(SUMMARIES_CATALOG_PATH)) {
-    try {
-      const data = JSON.parse(fs.readFileSync(SUMMARIES_CATALOG_PATH, 'utf8'));
-      console.log(`📚 ${data.length} Ders Özeti Kataloğu Yüklendi.`);
-      return data;
-    } catch (e) {
-      console.warn('⚠️ summaries_meta.json okunamadı:', e.message);
+  for (const cp of SUMMARIES_CATALOG_PATHS) {
+    if (fs.existsSync(cp)) {
+      try {
+        const data = JSON.parse(fs.readFileSync(cp, 'utf8'));
+        log(`📚 Ders Kataloğu Yüklendi (${data.length} ders): ${path.basename(cp)}`);
+        return data;
+      } catch (e) {
+        log(`⚠️ Katalog okuma hatası (${cp}): ${e.message}`);
+      }
     }
   }
   return [];
 }
 
-function findBestLectureCandidate(fileName, catalog) {
+// 2. Çıkmış Sınav Soruları Veritabanını Yükle
+function loadPastQuestionsDatabase() {
+  let allQuestions = [];
+  
+  // A) Redakte Sorular klasöründeki resmi sorular
+  if (fs.existsSync(REDAKTE_SORULAR_DIR)) {
+    try {
+      const files = fs.readdirSync(REDAKTE_SORULAR_DIR).filter(f => f.endsWith('.json'));
+      for (const f of files) {
+        const fPath = path.join(REDAKTE_SORULAR_DIR, f);
+        try {
+          const qList = JSON.parse(fs.readFileSync(fPath, 'utf8'));
+          if (Array.isArray(qList)) {
+            allQuestions.push(...qList);
+          }
+        } catch (_) {}
+      }
+      log(`🎯 Redakte Soru Havuzundan ${allQuestions.length} soru yüklendi.`);
+    } catch (_) {}
+  }
+
+  // B) pastQuestions.json (Geniş Çıkmışlar Havuzu)
+  if (allQuestions.length === 0 && fs.existsSync(PAST_QUESTIONS_PATH)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(PAST_QUESTIONS_PATH, 'utf8'));
+      if (Array.isArray(raw)) {
+        allQuestions.push(...raw);
+        log(`🎯 pastQuestions.json havuzundan ${allQuestions.length} soru yüklendi.`);
+      }
+    } catch (_) {}
+  }
+
+  return allQuestions;
+}
+
+// Aday Ders Eşleştirme (Klasör Hiyerarşisi + Dosya Adı)
+function findBestLectureCandidate(filePath, catalog) {
+  const fileName = path.basename(filePath);
   const cleanName = normalizeText(path.basename(fileName, path.extname(fileName)));
-  const words = cleanName.split(' ').filter(w => w.length > 2);
+  const relativeParts = filePath.split(path.sep).map(p => normalizeText(p));
+  const fullContext = relativeParts.join(' ') + ' ' + cleanName;
+  const words = fullContext.split(' ').filter(w => w.length > 2);
 
   let best = null;
   let maxScore = 0;
 
   for (const item of catalog) {
-    const target = normalizeText(`${item.discipline || ''} ${item.title || ''} ${(item.keyPoints || []).join(' ')}`);
+    const target = normalizeText(`${item.committeeId || ''} ${item.discipline || ''} ${item.title || ''} ${(item.keyPoints || []).join(' ')}`);
     let score = 0;
     for (const w of words) {
       if (target.includes(w)) score++;
@@ -205,54 +262,116 @@ function findBestLectureCandidate(fileName, catalog) {
     }
   }
 
+  // Klasörden doğrudan tespit
+  let detectedDiscipline = 'Tıp Fakültesi';
+  let detectedKurul = 1;
+  let committeeId = 'donem3-kurul1';
+
+  if (fullContext.includes('patoloji')) detectedDiscipline = 'Tıbbi Patoloji';
+  else if (fullContext.includes('uroloji')) detectedDiscipline = 'Üroloji';
+  else if (fullContext.includes('enfeksiyon')) detectedDiscipline = 'Enfeksiyon Hastalıkları';
+  else if (fullContext.includes('halk')) detectedDiscipline = 'Halk Sağlığı';
+  else if (fullContext.includes('genetik') || fullContext.includes('tbg')) detectedDiscipline = 'Tıbbi Genetik';
+
+  for (let k = 1; k <= 6; k++) {
+    if (fullContext.includes(`kurul ${k}`) || fullContext.includes(`kurul${k}`) || fullContext.includes(`k${k}`)) {
+      detectedKurul = k;
+      committeeId = `donem3-kurul${k}`;
+      break;
+    }
+  }
+
   if (best && maxScore >= 2) {
     return {
-      committeeId: best.committeeId || 'donem3-kurul1',
-      kurul: best.kurul || 1,
-      discipline: best.discipline,
+      committeeId: best.committeeId || committeeId,
+      kurul: best.kurul || detectedKurul,
+      discipline: best.discipline || detectedDiscipline,
       title: best.title,
       keyPoints: best.keyPoints || [],
       confidence: maxScore >= 4 ? 'Yüksek' : 'Orta'
     };
   }
 
-  // Varsayılan Kurul 1 Heuristiği
-  let disc = 'Tıp Fakültesi';
-  if (cleanName.includes('genetik')) disc = 'Tıbbi Genetik';
-  else if (cleanName.includes('uroloji')) disc = 'Üroloji';
-  else if (cleanName.includes('enfeksiyon')) disc = 'Enfeksiyon Hastalıkları';
-  else if (cleanName.includes('halk')) disc = 'Halk Sağlığı';
-  else if (cleanName.includes('patoloji')) disc = 'Tıbbi Patoloji';
-
   return {
-    committeeId: 'donem3-kurul1',
-    kurul: 1,
-    discipline: disc,
+    committeeId,
+    kurul: detectedKurul,
+    discipline: detectedDiscipline,
     title: path.basename(fileName, path.extname(fileName)),
     keyPoints: [],
     confidence: 'Ön Sezgisel'
   };
 }
 
-function buildMetadataPrompt(candidate, fileName) {
+// Konuyla İlişkili Çıkmış Sınav Sorularını Bul
+function findMatchingPastQuestions(candidate, fileName, allQuestions, maxCount = 5) {
+  if (!allQuestions || allQuestions.length === 0) return [];
+
+  const searchKeywords = [
+    ...normalizeText(candidate.title).split(' '),
+    ...normalizeText(candidate.discipline).split(' '),
+    ...normalizeText(path.basename(fileName, path.extname(fileName))).split(' ')
+  ].filter(w => w.length > 3 && !['dersi', 'kaydi', 'gunu', 'giris', 'kurul', 'donem', 'genel'].includes(w));
+
+  const scored = [];
+  const commId = candidate.committeeId || `donem3-kurul${candidate.kurul}`;
+
+  for (const q of allQuestions) {
+    let score = 0;
+    // Aynı kurul ise öncelik ver
+    if (q.committeeId === commId || q.kurul === candidate.kurul) score += 2;
+    // Aynı branş ise öncelik ver
+    const qDisc = normalizeText(q.discipline || '');
+    const cDisc = normalizeText(candidate.discipline || '');
+    if (qDisc && cDisc && (qDisc.includes(cDisc) || cDisc.includes(qDisc))) score += 4;
+
+    const qText = normalizeText(`${q.topic || ''} ${q.stem || ''} ${q.explanation || ''}`);
+    for (const kw of searchKeywords) {
+      if (qText.includes(kw)) score += 3;
+    }
+
+    if (score >= 5) {
+      scored.push({ q, score });
+    }
+  }
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, maxCount).map(s => s.q);
+}
+
+// Metadata & Sınav Hap Bilgileri Promptu
+function buildMetadataPrompt(candidate, fileName, relatedQuestions) {
   const kpStr = candidate.keyPoints && candidate.keyPoints.length > 0
     ? candidate.keyPoints.map(k => `- ${k}`).join('\n')
     : 'Mevcut değil';
 
+  let questionsStr = 'Bu ders konusuyla doğrudan eşleşen arşiv sorusu bulunamadı.';
+  if (relatedQuestions && relatedQuestions.length > 0) {
+    questionsStr = relatedQuestions.map((q, idx) => {
+      const correctOpt = q.options?.find(o => o.key === q.correctAnswer || o.isCorrect)?.text || q.correctAnswer || 'Belirtilmedi';
+      const expl = q.explanation ? `\n   *Açıklama/Klinik:* ${q.explanation.substring(0, 200)}...` : '';
+      return `${idx + 1}. [${q.discipline || 'Tıp'} / ${q.examYear || 'Çıkmış'}] **Soru:** ${q.stem}\n   *Doğru Yanıt:* ${correctOpt}${expl}`;
+    }).join('\n\n');
+  }
+
   return `Sen Karabük Üniversitesi Tıp Fakültesi Dönem 3 amfi dersleri ve klinik müfredat uzmanısın.
 SES DOSYASI: ${fileName}
 Ön Eşleştirme (Aday Ders): ${candidate.discipline} - ${candidate.title}
-Tıbbi Referans İpuçları:
+
+DERS NOTLARI VE SLAYT REFERANS NOKTALARI:
 ${kpStr}
+
+🎯 İLİŞKİLİ KARABÜK TIP ÇIKMIŞ SINAV SORULARI & RESMİ ARŞİV:
+${questionsStr}
 
 GÖREVLERİN:
 1. Ses kaydının başındaki konuşmalardan, hoca hitabından ve ders konusundan hareketle dersin gerçek kimliğini tespit et:
    - Gerçek Dönem 3 Kurulu (Kurul 1-6)
-   - Tıp Disiplini (örn. Halk Sağlığı, Tıbbi Genetik, Üroloji, Patoloji, vb.)
+   - Tıp Disiplini (örn. Halk Sağlığı, Tıbbi Genetik, Üroloji, Patoloji, Farmakoloji vb.)
    - Resmi Ders Adı
    - Öğretim Üyesi (Hocanın Adı)
 2. Dersin genel özetini ve işlenen temel kavramları çıkar.
 3. Amfi ve sınav için en kritik hap bilgileri (High-Yield Pearls) listele.
+   - ÖZELLİKLE yukarıda verilen çıkmış sınav soruları veya hocanın amfide 'burası sınavda gelir', 'TUS'ta sorarlar' dediği noktaları vurgula.
 
 ÇIKTI FORMATI:
 # 🩺 [Tespit Edilen Resmi Ders Adı]
@@ -268,13 +387,14 @@ GÖREVLERİN:
 ## 📌 Dersin Genel Özeti ve Anahtar Kavramlar
 [Dersin ana hatları ve işlenen temel kavramlar]
 
-## ⭐ Amfi & Sınav Hap Bilgileri (High-Yield Pearls)
-- **[Kavram 1]:** [Hocanın özellikle sınav için uyardığı kritik nokta]
+## ⭐ Amfi & Sınav Hap Bilgileri (High-Yield Pearls & Çıkmış Sorular)
+- **[Kavram 1]:** [Hocanın özellikle sınav için uyardığı kritik nokta / Çıkmış soru paraleli]
 - **[Kavram 2]:** [Klinik / TUS ipucu]
 - **[Kavram 3]:** ...
 `;
 }
 
+// Saf Verbatim Transkripsiyon Promptu
 function buildVerbatimSegmentPrompt(fileName, window) {
   return `Sen Tıp Fakültesi amfi derslerinin resmi tutanak kâtibi ve klinik transkripsiyon uzmanısın.
 
@@ -327,256 +447,277 @@ function parseMarkdownMetadata(mdText) {
   return meta;
 }
 
-async function main() {
-  console.log('=================================================================');
-  console.log('🩺 MedSoru - Tıbbi Amfi Ses Kayıtları Tam Transkripsiyon Motoru');
-  console.log('⚡ Özellik: Tüm Dakikaları Kapsayan Kesintisiz Verbatim Çözümleme');
-  console.log(`🤖 Tercih Edilen Model: ${modelArg} (1M Token Çok Modlu)`);
-  console.log('=================================================================');
+// 3. Google Drive'dan Yerel Bilgisayara İndirme / Senkronizasyon
+function syncDriveAudioToLocal() {
+  log(`\n🔄 [Drive Senkronizasyon] Google Drive kontrol ediliyor: ${DRIVE_ROOT_DIR}...`);
+  fs.mkdirSync(LOCAL_AUDIO_DIR, { recursive: true });
 
-  if (!GEMINI_API_KEY) {
-    console.error('\n❌ [Hata] GEMINI_API_KEY tanımlı değil!');
-    console.error('Lütfen .env dosyasına ekleyin veya PowerShell üzerinden tanımlayın:');
-    console.error('  $env:GEMINI_API_KEY="AIzaSy..."\n');
-    process.exit(1);
+  if (!fs.existsSync(DRIVE_ROOT_DIR)) {
+    log(`⚠️ Drive yolu bulunamadı (${DRIVE_ROOT_DIR}). Yalnızca yerel klasör kullanılacak: ${LOCAL_AUDIO_DIR}`);
+    return [];
   }
 
-  // 1. Ses Kaynak Klasörünü Bul
-  let audioDir = customInputArg;
-  if (!audioDir || !fs.existsSync(audioDir)) {
-    for (const d of DEFAULT_AUDIO_DIRS) {
-      if (fs.existsSync(d)) {
-        const files = fs.readdirSync(d);
-        if (files.some(f => /\.(m4a|mp3|wav|aac|ogg|flac)$/i.test(f))) {
-          audioDir = d;
+  function scanDir(dir) {
+    let results = [];
+    try {
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          results = results.concat(scanDir(fullPath));
+        } else if (/\.(m4a|mp3|wav|aac|ogg|flac)$/i.test(entry.name)) {
+          results.push(fullPath);
+        }
+      }
+    } catch (e) {
+      log(`⚠️ Dizin okuma hatası (${dir}): ${e.message}`);
+    }
+    return results;
+  }
+
+  const driveFiles = scanDir(DRIVE_ROOT_DIR);
+  log(`📡 Google Drive'da bulunan toplam ses kaydı: ${driveFiles.length}`);
+
+  let downloadedCount = 0;
+  const localSyncedFiles = [];
+
+  for (const driveFile of driveFiles) {
+    const relPath = path.relative(DRIVE_ROOT_DIR, driveFile);
+    const localDest = path.join(LOCAL_AUDIO_DIR, relPath);
+    const driveStat = fs.statSync(driveFile);
+
+    let needsCopy = false;
+    if (!fs.existsSync(localDest)) {
+      needsCopy = true;
+    } else {
+      const localStat = fs.statSync(localDest);
+      if (localStat.size !== driveStat.size) {
+        needsCopy = true;
+      }
+    }
+
+    if (needsCopy) {
+      fs.mkdirSync(path.dirname(localDest), { recursive: true });
+      log(`⬇️ [İndiriliyor] ${relPath} (${(driveStat.size / (1024 * 1024)).toFixed(1)} MB)...`);
+      try {
+        fs.copyFileSync(driveFile, localDest);
+        downloadedCount++;
+        log(`   ✅ Bilgisayara başarıyla indirildi: ${path.basename(localDest)}`);
+      } catch (err) {
+        log(`   ❌ İndirme hatası (${relPath}): ${err.message}`);
+      }
+    }
+
+    if (fs.existsSync(localDest)) {
+      localSyncedFiles.push(localDest);
+    }
+  }
+
+  if (downloadedCount > 0) {
+    log(`🎉 Google Drive'dan ${downloadedCount} yeni ses kaydı bilgisayara indirildi!`);
+  } else {
+    log(`✨ Google Drive ve yerel ses klasörü birebir senkronize.`);
+  }
+
+  return localSyncedFiles;
+}
+
+// Yerel Ses Klasörünü Tara
+function scanLocalAudioFiles() {
+  const dirsToScan = [LOCAL_AUDIO_DIR, 'C:\\Users\\indui\\Desktop\\Quick'];
+  const foundMap = new Map();
+
+  function scan(dir) {
+    if (!fs.existsSync(dir)) return;
+    try {
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          scan(fullPath);
+        } else if (/\.(m4a|mp3|wav|aac|ogg|flac)$/i.test(entry.name)) {
+          const size = fs.statSync(fullPath).size;
+          // Exact duplicate detection (name + size)
+          const key = `${entry.name}_${size}`;
+          if (!foundMap.has(key)) {
+            foundMap.set(key, { fullPath, name: entry.name, size });
+          }
+        }
+      }
+    } catch (_) {}
+  }
+
+  dirsToScan.forEach(scan);
+  return Array.from(foundMap.values()).map(v => v.fullPath);
+}
+
+// 4. Tek Bir Ses Dosyasını Gemini API ile Transkribe Et
+async function processSingleAudioFile(audioPath, ai, catalog, questionsDb, manifest) {
+  const fileName = path.basename(audioPath);
+  const fileId = path.basename(audioPath, path.extname(audioPath));
+  const fileSizeMB = (fs.statSync(audioPath).size / (1024 * 1024)).toFixed(1);
+
+  const durationSec = getM4aDuration(audioPath);
+  const durationStr = durationSec ? `${(durationSec / 60).toFixed(1)} dk (${Math.round(durationSec)} sn)` : 'Bilinmiyor';
+
+  log(`\n=======================================================`);
+  log(`▶️ Ses Dosyası İşleniyor: ${fileName}`);
+  log(`   📊 Boyut: ${fileSizeMB} MB | Süre: ${durationStr}`);
+  log(`=======================================================`);
+
+  // Aday ders ve çıkmış soru tespiti
+  const candidate = findBestLectureCandidate(audioPath, catalog);
+  const relatedQuestions = findMatchingPastQuestions(candidate, fileName, questionsDb, 4);
+
+  log(`🔍 Tespit Edilen Ders Adayı: Kurul ${candidate.kurul} | ${candidate.discipline} | ${candidate.title}`);
+  log(`🎯 İlgili Çıkmış Sınav Sorusu: ${relatedQuestions.length} adet bulundu.`);
+
+  // 15'er dakikalık pencereler
+  const windows = createTimeWindows(durationSec, 900);
+  log(`⏱️ Zaman Pencereleri: Toplam ${windows.length} parça (${windows.map(w => `${w.startStr}-${w.endStr}`).join(', ')})`);
+
+  // ASCII Safe Geçici Dosya
+  const ext = path.extname(fileName).toLowerCase();
+  const safeBase = toAsciiSafeName(path.basename(fileName, ext));
+  const tmpUploadPath = path.join(os.tmpdir(), `meds_${Date.now()}_${safeBase}${ext}`);
+  fs.copyFileSync(audioPath, tmpUploadPath);
+
+  let uploadedFile = null;
+
+  try {
+    log(`   ☁️ Gemini File API'ye yükleniyor...`);
+    const mimeType = ext === '.m4a' ? 'audio/mp4' : 'audio/mpeg';
+
+    uploadedFile = await ai.files.upload({
+      file: tmpUploadPath,
+      config: {
+        mimeType,
+        displayName: `${safeBase}${ext}`
+      }
+    });
+
+    log(`   ☁️ File URI: ${uploadedFile.uri} | Durum: ${uploadedFile.state}`);
+
+    // Yükleme kontrolü
+    let getFile = await ai.files.get({ name: uploadedFile.name });
+    let retries = 0;
+    while (getFile.state === 'PROCESSING' && retries < 60) {
+      process.stdout.write('.');
+      await new Promise(r => setTimeout(r, 4000));
+      getFile = await ai.files.get({ name: uploadedFile.name });
+      retries++;
+    }
+
+    if (getFile.state !== 'ACTIVE') {
+      throw new Error(`Ses dosyası Gemini deposunda hazır hale gelemedi: ${getFile.state}`);
+    }
+
+    // Aşama 1: Ders Kimliği, Özet ve Amfi Sınav Hap Bilgileri
+    log(`\n   🧠 Ders Kimliği, Özet ve Amfi Sınav Hap Bilgileri Çıkarılıyor...`);
+    const metaPrompt = buildMetadataPrompt(candidate, fileName, relatedQuestions);
+    let metaMarkdown = '';
+    let parsedMeta = null;
+
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        const metaRes = await ai.models.generateContent({
+          model: modelArg,
+          contents: [
+            { fileData: { fileUri: getFile.uri, mimeType: getFile.mimeType || mimeType } },
+            metaPrompt
+          ],
+          config: {
+            temperature: 0.2,
+            maxOutputTokens: 2500
+          }
+        });
+        metaMarkdown = extractResponseText(metaRes);
+        if (metaMarkdown && metaMarkdown.length > 50) {
+          parsedMeta = parseMarkdownMetadata(metaMarkdown);
+          break;
+        }
+      } catch (metaErr) {
+        const isQuota = metaErr.message?.includes('429') || metaErr.message?.includes('RESOURCE_EXHAUSTED');
+        if (isQuota) {
+          const waitSec = 35 * attempt;
+          log(`   ⚠️ Kota (429) uyarısı! ${waitSec} saniye bekleniyor...`);
+          await new Promise(r => setTimeout(r, waitSec * 1000));
+        } else {
+          log(`   ⚠️ Meta analizi uyarısı: ${metaErr.message}`);
           break;
         }
       }
     }
-  }
 
-  if (!audioDir || !fs.existsSync(audioDir)) {
-    console.error('❌ [Hata] Ses kayıtlarının bulunduğu klasör bulunamadı!');
-    console.error('Lütfen geçerli bir yol belirtin: node scripts/transcribe-drive-audio.mjs --input="C:\\Klasor"');
-    process.exit(1);
-  }
-
-  console.log(`📂 Ses Klasörü: ${audioDir}`);
-
-  // 2. Çıktı Klasörünü Hazırla
-  if (!fs.existsSync(TRANSCRIPTION_OUT_DIR)) {
-    fs.mkdirSync(TRANSCRIPTION_OUT_DIR, { recursive: true });
-  }
-  console.log(`💾 Transkript Klasörü: ${TRANSCRIPTION_OUT_DIR}`);
-
-  // 3. Manifesti Oku
-  let manifest = {};
-  if (fs.existsSync(MANIFEST_PATH) && !isForce) {
-    try {
-      manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
-    } catch (e) {
-      manifest = {};
-    }
-  }
-
-  // 4. Katalog Yükle
-  const catalog = loadSummariesCatalog();
-
-  // 5. Ses Dosyalarını Topla ve Boyuta Göre Sırala
-  const supportedExts = new Set(['.m4a', '.mp3', '.wav', '.aac', '.ogg', '.flac']);
-  const allFiles = fs.readdirSync(audioDir);
-  const audioFiles = allFiles
-    .filter(f => supportedExts.has(path.extname(f).toLowerCase()))
-    .map(f => path.join(audioDir, f))
-    .sort((a, b) => fs.statSync(a).size - fs.statSync(b).size);
-
-  if (audioFiles.length === 0) {
-    console.log(`⚠️ Klasörde desteklenen formatta ses dosyası bulunamadı: ${audioDir}`);
-    process.exit(0);
-  }
-
-  console.log(`🎯 Bulunan Ses Kaydı Sayısı: ${audioFiles.length}`);
-
-  // 6. Gemini İstemcisi
-  const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-
-  let processedCount = 0;
-
-  for (let i = 0; i < audioFiles.length; i++) {
-    if (limitArg > 0 && processedCount >= limitArg) {
-      console.log(`\n🛑 Limit sınırına (${limitArg}) ulaşıldı, işlem tamamlandı.`);
-      break;
+    if (!metaMarkdown) {
+      metaMarkdown = `# 🩺 ${candidate.title}\n\n> **Kurul:** Kurul ${candidate.kurul}\n> **Disiplin:** ${candidate.discipline}\n> **Kaynak:** \`${fileName}\`\n\n---\n\n## 📌 Dersin Genel Özeti\n${candidate.title} ders kaydı.`;
     }
 
-    const audioPath = audioFiles[i];
-    const fileName = path.basename(audioPath);
-    const fileId = path.basename(audioPath, path.extname(audioPath));
-    const fileSizeMB = (fs.statSync(audioPath).size / (1024 * 1024)).toFixed(1);
+    log(`   ✅ Ders Kimliği Çıkarıldı: ${parsedMeta?.lectureTitle || candidate.title} (${parsedMeta?.discipline || candidate.discipline})`);
 
-    // Süre tespiti
-    const durationSec = getM4aDuration(audioPath);
-    const durationStr = durationSec ? `${(durationSec / 60).toFixed(1)} dk (${Math.round(durationSec)} sn)` : 'Bilinmiyor';
+    // Güvenlik beklemesi
+    await new Promise(r => setTimeout(r, Math.max(3, delayArg) * 1000));
 
-    if (!isForce && manifest[fileId]?.status === 'completed' && manifest[fileId]?.totalDurationMinutes) {
-      console.log(`\n⏩ [${i + 1}/${audioFiles.length}] Zaten Tamamlandı (Atlandı): ${fileName}`);
-      continue;
-    }
+    // Aşama 2: 15'er Dakikalık Dilimler Halinde Kesintisiz Verbatim Transkripsiyon
+    const segmentTexts = [];
 
-    console.log(`\n=======================================================`);
-    console.log(`▶️ [${i + 1}/${audioFiles.length}] İşleniyor: ${fileName}`);
-    console.log(`   📊 Boyut: ${fileSizeMB} MB | Süre: ${durationStr}`);
-    console.log(`=======================================================`);
+    for (const win of windows) {
+      log(`\n   🎙️ Parça Transkribe Ediliyor [${win.index}/${win.total}]: ${win.startStr} - ${win.endStr}...`);
+      const prompt = buildVerbatimSegmentPrompt(fileName, win);
 
-    const candidate = findBestLectureCandidate(fileName, catalog);
-    console.log(`🔍 Ön Tespit: Kurul ${candidate.kurul} | ${candidate.discipline} | ${candidate.title}`);
+      let windowSuccess = false;
+      let windowText = '';
 
-    // Zaman pencerelerini hesapla
-    const windows = createTimeWindows(durationSec, 900); // 15'er dakikalık pencereler
-    console.log(`⏱️ Zaman Pencereleri: Toplam ${windows.length} parça (${windows.map(w => `${w.startStr}-${w.endStr}`).join(', ')})`);
-
-    // ASCII Safe Geçici Dosya
-    const ext = path.extname(fileName).toLowerCase();
-    const safeBase = toAsciiSafeName(path.basename(fileName, ext));
-    const tmpUploadPath = path.join(os.tmpdir(), `meds_${Date.now()}_${safeBase}${ext}`);
-    fs.copyFileSync(audioPath, tmpUploadPath);
-
-    let uploadedFile = null;
-
-    try {
-      console.log(`   ☁️ File API'ye yükleniyor...`);
-      const mimeType = ext === '.m4a' ? 'audio/mp4' : 'audio/mpeg';
-
-      uploadedFile = await ai.files.upload({
-        file: tmpUploadPath,
-        config: {
-          mimeType,
-          displayName: `${safeBase}${ext}`
-        }
-      });
-
-      console.log(`   ☁️ File URI: ${uploadedFile.uri} | Durum: ${uploadedFile.state}`);
-
-      // Durum Kontrolü
-      let getFile = await ai.files.get({ name: uploadedFile.name });
-      let retries = 0;
-      while (getFile.state === 'PROCESSING' && retries < 60) {
-        process.stdout.write('.');
-        await new Promise(r => setTimeout(r, 4000));
-        getFile = await ai.files.get({ name: uploadedFile.name });
-        retries++;
-      }
-
-      if (getFile.state !== 'ACTIVE') {
-        throw new Error(`Dosya işlenemedi. Durum: ${getFile.state}`);
-      }
-
-      // Adım 1: Ders Bilgileri, Özet ve Amfi Sınav Hap Bilgileri
-      console.log(`\n   🧠 Ders Kimliği, Özet ve Amfi Sınav Hap Bilgileri Çıkarılıyor...`);
-      const metaPrompt = buildMetadataPrompt(candidate, fileName);
-      let metaMarkdown = '';
-      let parsedMeta = null;
-
-      for (let attempt = 1; attempt <= 2; attempt++) {
+      for (let attempt = 1; attempt <= 3; attempt++) {
         try {
-          const metaRes = await ai.models.generateContent({
+          const response = await ai.models.generateContent({
             model: modelArg,
             contents: [
               { fileData: { fileUri: getFile.uri, mimeType: getFile.mimeType || mimeType } },
-              metaPrompt
+              prompt
             ],
             config: {
-              temperature: 0.2,
-              maxOutputTokens: 2048
+              temperature: 0.1,
+              maxOutputTokens: 8192
             }
           });
-          metaMarkdown = extractResponseText(metaRes);
-          if (metaMarkdown && metaMarkdown.length > 50) {
-            parsedMeta = parseMarkdownMetadata(metaMarkdown);
+          windowText = extractResponseText(response);
+          if (windowText && windowText.length > 50) {
+            windowSuccess = true;
             break;
           }
-        } catch (metaErr) {
-          const isQuota = metaErr.message?.includes('429') || metaErr.message?.includes('RESOURCE_EXHAUSTED');
+        } catch (genErr) {
+          const isQuota = genErr.message?.includes('429') || genErr.message?.includes('RESOURCE_EXHAUSTED');
           if (isQuota) {
             const waitSec = 35 * attempt;
-            console.warn(`   ⚠️ Kota (429) uyarısı! ${waitSec} saniye bekleniyor...`);
+            log(`   ⚠️ Kota (429) uyarısı! ${waitSec} saniye bekleniyor...`);
             await new Promise(r => setTimeout(r, waitSec * 1000));
           } else {
-            console.warn(`   ⚠️ Meta çıkarma uyarısı:`, metaErr.message);
-            break;
+            throw genErr;
           }
         }
       }
 
-      if (!metaMarkdown) {
-        metaMarkdown = `# 🩺 ${candidate.title}\n\n> **Kurul:** Kurul ${candidate.kurul}\n> **Disiplin:** ${candidate.discipline}\n> **Kaynak:** \`${fileName}\`\n\n---\n\n## 📌 Dersin Genel Özeti\n${candidate.title} ders kaydı.`;
+      if (!windowSuccess || !windowText) {
+        throw new Error(`Parça (${win.startStr}-${win.endStr}) transkribe edilemedi.`);
       }
 
-      console.log(`   ✅ Ders Kimliği: ${parsedMeta?.lectureTitle || candidate.title} (${parsedMeta?.discipline || candidate.discipline})`);
+      log(`   ✅ Parça Tamamlandı: ${windowText.length} karakter, ${windowText.split('\n').length} satır`);
+      segmentTexts.push(windowText);
 
-      // Kısa ara
-      await new Promise(r => setTimeout(r, Math.max(3, delayArg) * 1000));
-
-      // Adım 2: Pencereleri sırayla transkribe et (Saf Verbatim)
-      const segmentTexts = [];
-
-      for (const win of windows) {
-        console.log(`\n   🎙️ Parça Transkribe Ediliyor [${win.index}/${win.total}]: ${win.startStr} - ${win.endStr}...`);
-        const prompt = buildVerbatimSegmentPrompt(fileName, win);
-
-        let windowSuccess = false;
-        let windowText = '';
-
-        for (let attempt = 1; attempt <= 2; attempt++) {
-          try {
-            const response = await ai.models.generateContent({
-              model: modelArg,
-              contents: [
-                { fileData: { fileUri: getFile.uri, mimeType: getFile.mimeType || mimeType } },
-                prompt
-              ],
-              config: {
-                temperature: 0.1,
-                maxOutputTokens: 8192
-              }
-            });
-            windowText = extractResponseText(response);
-            if (windowText && windowText.length > 50) {
-              windowSuccess = true;
-              break;
-            }
-          } catch (genErr) {
-            const isQuota = genErr.message?.includes('429') || genErr.message?.includes('RESOURCE_EXHAUSTED');
-            if (isQuota) {
-              const waitSec = 35 * attempt;
-              console.warn(`   ⚠️ Kota (429) uyarısı! ${waitSec} saniye bekleniyor...`);
-              await new Promise(r => setTimeout(r, waitSec * 1000));
-            } else {
-              throw genErr;
-            }
-          }
-        }
-
-        if (!windowSuccess || !windowText) {
-          throw new Error(`Parça (${win.startStr}-${win.endStr}) transkribe edilemedi.`);
-        }
-
-        console.log(`   ✅ Parça Tamamlandı: ${windowText.length} karakter, ${windowText.split('\n').length} satır`);
-        segmentTexts.push(windowText);
-
-        // Pencere arası kota koruma beklemesi
-        if (!win.isLast) {
-          console.log(`   ⏱️ Parça arası güvenlik beklemesi (${delayArg} sn)...`);
-          await new Promise(r => setTimeout(r, delayArg * 1000));
-        }
+      if (!win.isLast) {
+        log(`   ⏱️ Parça arası güvenlik beklemesi (${delayArg} sn)...`);
+        await new Promise(r => setTimeout(r, delayArg * 1000));
       }
+    }
 
-      // Parçaları biçimlendir ve birleştir
-      const transcriptSections = segmentTexts.map((txt, idx) => {
-        const win = windows[idx];
-        return `### Bölüm ${win.index} (${win.startStr} - ${win.endStr})\n\n${txt}`;
-      });
+    // Parçaları birleştir
+    const transcriptSections = segmentTexts.map((txt, idx) => {
+      const win = windows[idx];
+      return `### Bölüm ${win.index} (${win.startStr} - ${win.endStr})\n\n${txt}`;
+    });
 
-      const finalMarkdown = `${metaMarkdown}
+    const finalMarkdown = `${metaMarkdown}
 
 ---
 
@@ -585,72 +726,175 @@ async function main() {
 ${transcriptSections.join('\n\n---\n\n')}
 `;
 
-      // Markdown Çıktısını Kaydet
-      const safeTitle = toAsciiSafeName(parsedMeta?.lectureTitle || candidate.title || fileName.replace(/\.[^/.]+$/, ''));
-      const outMdPath = path.join(TRANSCRIPTION_OUT_DIR, `${safeTitle}_Transkript.md`);
-      fs.writeFileSync(outMdPath, finalMarkdown, 'utf8');
+    // Markdown Çıktısını Kaydet
+    const safeTitle = toAsciiSafeName(parsedMeta?.lectureTitle || candidate.title || fileName.replace(/\.[^/.]+$/, ''));
+    const outMdPath = path.join(TRANSCRIPTION_OUT_DIR, `${safeTitle}_Transkript.md`);
+    fs.writeFileSync(outMdPath, finalMarkdown, 'utf8');
 
-      console.log(`\n🎉 EKSİKSİZ TRANSKRİPT KAYDEDİLDİ: ${path.basename(outMdPath)}`);
-      console.log(`   📏 Toplam Boyut: ${finalMarkdown.length} karakter, ${finalMarkdown.split('\n').length} satır`);
-      console.log(`   🎓 Ders: ${parsedMeta?.lectureTitle || candidate.title} (${parsedMeta?.discipline || candidate.discipline})`);
-      console.log(`   👨‍🏫 Hoca: ${parsedMeta?.instructor || 'Belirtilmedi'}`);
+    log(`\n🎉 EKSİKSİZ TRANSKRİPT KAYDEDİLDİ: ${path.basename(outMdPath)}`);
+    log(`   📏 Toplam Boyut: ${finalMarkdown.length} karakter, ${finalMarkdown.split('\n').length} satır`);
+    log(`   🎓 Ders: ${parsedMeta?.lectureTitle || candidate.title} (${parsedMeta?.discipline || candidate.discipline})`);
+    log(`   👨‍🏫 Hoca: ${parsedMeta?.instructor || 'Belirtilmedi'}`);
 
-      // Manifest Güncelle
-      manifest[fileId] = {
-        audioFileName: fileName,
-        fileSizeMB: parseFloat(fileSizeMB),
-        totalDurationMinutes: durationSec ? parseFloat((durationSec / 60).toFixed(1)) : null,
-        windowsCount: windows.length,
-        markdownFile: path.basename(outMdPath),
-        totalCharacters: finalMarkdown.length,
-        lectureTitle: parsedMeta?.lectureTitle || candidate.title,
-        committee: parsedMeta?.committee || `Kurul ${candidate.kurul}`,
-        discipline: parsedMeta?.discipline || candidate.discipline,
-        instructor: parsedMeta?.instructor || 'Belirtilmedi',
-        confidence: parsedMeta?.confidence || candidate.confidence,
-        modelUsed: modelArg,
-        status: 'completed',
-        processedAt: new Date().toISOString()
-      };
+    // Manifest Güncelle
+    manifest[fileId] = {
+      audioFileName: fileName,
+      fileSizeMB: parseFloat(fileSizeMB),
+      totalDurationMinutes: durationSec ? parseFloat((durationSec / 60).toFixed(1)) : null,
+      windowsCount: windows.length,
+      markdownFile: path.basename(outMdPath),
+      totalCharacters: finalMarkdown.length,
+      lectureTitle: parsedMeta?.lectureTitle || candidate.title,
+      committee: parsedMeta?.committee || `Kurul ${candidate.kurul}`,
+      discipline: parsedMeta?.discipline || candidate.discipline,
+      instructor: parsedMeta?.instructor || 'Belirtilmedi',
+      confidence: parsedMeta?.confidence || candidate.confidence,
+      relatedQuestionsCount: relatedQuestions.length,
+      modelUsed: modelArg,
+      status: 'completed',
+      processedAt: new Date().toISOString()
+    };
 
-      fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), 'utf8');
-      processedCount++;
+    fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), 'utf8');
+    return true;
 
-      // Dosyalar arası güvenlik beklemesi
-      console.log(`   ⏱️ Sıradaki dosya öncesi kota koruması (${delayArg} sn)...`);
-      await new Promise(r => setTimeout(r, delayArg * 1000));
+  } catch (err) {
+    log(`❌ Hata (${fileName}): ${err.message}`);
+    manifest[fileId] = {
+      audioFileName: fileName,
+      status: 'error',
+      errorMessage: err.message,
+      attemptedAt: new Date().toISOString()
+    };
+    fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), 'utf8');
+    return false;
+  } finally {
+    // Geçici dosyaları temizle
+    if (fs.existsSync(tmpUploadPath)) {
+      try { fs.unlinkSync(tmpUploadPath); } catch (_) {}
+    }
+    if (uploadedFile) {
+      try {
+        await ai.files.delete({ name: uploadedFile.name });
+        log(`   🧹 Gemini File API geçici depolaması temizlendi.`);
+      } catch (_) {}
+    }
+  }
+}
 
-    } catch (err) {
-      console.error(`❌ Hata (${fileName}):`, err.message);
-      manifest[fileId] = {
-        audioFileName: fileName,
-        status: 'error',
-        errorMessage: err.message,
-        attemptedAt: new Date().toISOString()
-      };
-      fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), 'utf8');
-    } finally {
-      // Geçici dosyaları temizle
-      if (fs.existsSync(tmpUploadPath)) {
-        try { fs.unlinkSync(tmpUploadPath); } catch (_) {}
-      }
-      if (uploadedFile) {
-        try {
-          await ai.files.delete({ name: uploadedFile.name });
-          console.log(`   🧹 File API geçici depolaması temizlendi.`);
-        } catch (_) {}
-      }
+// 5. Bir Tarama Döngüsü (Drive Senkronize Et -> Transkribe Edilecekleri Belirle -> İşle)
+async function runSingleCycle(ai, catalog, questionsDb) {
+  // A) Drive'dan bilgisayara indir
+  syncDriveAudioToLocal();
+
+  // B) Yerel ses kayıtlarını listele
+  const allAudioFiles = scanLocalAudioFiles();
+
+  // C) Manifesti oku
+  let manifest = {};
+  if (fs.existsSync(MANIFEST_PATH)) {
+    try {
+      manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+    } catch (_) {
+      manifest = {};
     }
   }
 
-  console.log('\n=======================================================');
-  console.log(`🎉 İşlem Tamamlandı! Toplam ${processedCount} ses kaydı tam transkribe edildi.`);
-  console.log(`📁 Transkriptler: ${TRANSCRIPTION_OUT_DIR}`);
-  console.log(`📋 Manifest: ${MANIFEST_PATH}`);
-  console.log('=======================================================');
+  // D) Henüz işlenmemiş dosyaları filtrele
+  const filesToProcess = [];
+  for (const fPath of allAudioFiles) {
+    const fName = path.basename(fPath);
+    const stem = path.basename(fPath, path.extname(fPath));
+    const isDone = !isForce && (
+      (manifest[stem]?.status === 'completed' && manifest[stem]?.totalDurationMinutes) ||
+      Object.values(manifest).some(v => (v.audioFileName === fName || v.filename === fName) && v.status === 'completed')
+    );
+
+    if (!isDone) {
+      filesToProcess.push(fPath);
+    }
+  }
+
+  if (filesToProcess.length === 0) {
+    log(`💤 [Beklemede] İşlenecek yeni ses kaydı yok. Tüm dosyalar güncel.`);
+    return 0;
+  }
+
+  log(`\n🎯 İŞLENECEK YENİ SES DOSYASI SAYISI: ${filesToProcess.length}`);
+  filesToProcess.forEach((f, idx) => log(`   ${idx + 1}. ${path.basename(f)}`));
+
+  // Boyuta göre sırala (küçükten büyüğe)
+  filesToProcess.sort((a, b) => fs.statSync(a).size - fs.statSync(b).size);
+
+  let successCount = 0;
+  for (let i = 0; i < filesToProcess.length; i++) {
+    if (limitArg > 0 && successCount >= limitArg) {
+      log(`🛑 Limit sınırına (${limitArg}) ulaşıldı.`);
+      break;
+    }
+
+    const currentFile = filesToProcess[i];
+    log(`\n⏳ [${i + 1}/${filesToProcess.length}] Başlatılıyor: ${path.basename(currentFile)}`);
+
+    const ok = await processSingleAudioFile(currentFile, ai, catalog, questionsDb, manifest);
+    if (ok) {
+      successCount++;
+    }
+
+    // Dosyalar arası güvenlik beklemesi
+    if (i < filesToProcess.length - 1) {
+      log(`⏱️ Sıradaki dosya öncesi kota koruması beklemesi (${delayArg} sn)...`);
+      await new Promise(r => setTimeout(r, delayArg * 1000));
+    }
+  }
+
+  log(`\n✨ Döngü Tamamlandı: ${successCount} ses dosyası başarıyla transkribe edildi.`);
+  return successCount;
+}
+
+// 6. Ana Giriş Fonksiyonu
+async function main() {
+  log('=================================================================');
+  log('🩺 MedSoru - Tıbbi Amfi Ses Kayıtları Tam Transkripsiyon & İzleme');
+  log(`⚡ Mod: ${isWatchMode ? '🛡️ Kalıcı Otomatik İzleyici (Watcher Daemon)' : '⚡ Tek Seferlik Senkronizasyon ve İşlem'}`);
+  log(`🤖 Tercih Edilen Model: ${modelArg} (1M Token Çok Modlu)`);
+  log('=================================================================');
+
+  if (!GEMINI_API_KEY) {
+    log('❌ [Hata] GEMINI_API_KEY ortam değişkeni veya .env içinde tanımlı değil!');
+    process.exit(1);
+  }
+
+  // Veritabanı ve katalogları yükle
+  const catalog = loadSummariesCatalog();
+  const questionsDb = loadPastQuestionsDatabase();
+  const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+
+  if (!isWatchMode) {
+    // Tek seferlik tam çalıştırma
+    await runSingleCycle(ai, catalog, questionsDb);
+    log('🏁 Tek seferlik transkripsiyon işlemi sonlandı.');
+    return;
+  }
+
+  // Kalıcı Watcher Modu
+  log(`\n👀 [Watcher Aktif] Her ${watchIntervalSec} saniyede bir Google Drive kontrol edilecek...`);
+  log(`📁 Transkript Çıktıları: ${TRANSCRIPTION_OUT_DIR}`);
+  log(`📜 Log Dosyası: ${WATCHER_LOG_PATH}`);
+
+  while (true) {
+    try {
+      await runSingleCycle(ai, catalog, questionsDb);
+    } catch (cycleErr) {
+      log(`⚠️ Watcher döngü hatası (kurtarılıyor): ${cycleErr.message}`);
+    }
+
+    log(`⏱️ Sonraki kontrol ${watchIntervalSec} saniye sonra...`);
+    await new Promise(r => setTimeout(r, watchIntervalSec * 1000));
+  }
 }
 
 main().catch(err => {
-  console.error('Kritik Hata:', err);
+  log(`💥 Kritik Başlatma Hatası: ${err.message}`);
   process.exit(1);
 });

@@ -54,6 +54,7 @@ const SubagentMonitorModal = React.lazy(() => import('./components/SubagentMonit
 const SystemDiagnosticsModal = React.lazy(() => import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal })));
 const AiQuotaAlertModal = React.lazy(() => import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal })));
 const LectureSummariesView = React.lazy(() => import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView })));
+const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
 
 const ViewFallback = () => (
   <div className="py-20 flex flex-col items-center justify-center gap-3 text-ink-2">
@@ -87,10 +88,11 @@ import {
 } from './services/drive';
 
 // Supported App Tabs with URL hash & localStorage persistence
-export type ValidAppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
+export type ValidAppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
 
 const VALID_APP_TABS: ValidAppTab[] = [
   'quick_add',
+  'learn',
   'questions',
   'past_exams',
   'summaries',
@@ -998,6 +1000,16 @@ export default function App() {
             currentUser={currentUser}
             onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
           />
+        )}
+
+        {/* TAB: Learn / İnteraktif Ses & Slayt Hub'ı */}
+        {activeTab === 'learn' && (
+          <Suspense fallback={<ViewFallback />}>
+            <InteractiveDeckView
+              onOpenPdfModal={() => setIsPdfModalOpen(true)}
+              onSelectCommittee={(id) => setSelectedCommitteeId(id)}
+            />
+          </Suspense>
         )}
 
         {/* TAB 1: Questions List */}

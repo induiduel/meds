@@ -87,12 +87,12 @@ def _sections_for(q_tokens, c, width=1600, maxn=3):
         out.append({"heading": h[:160], "excerpt": ' '.join(picked)[:width], "termOverlap": ov})
     return out
 
-def build_evidence(c, q_tokens_list, cap=14000):
+def build_evidence(c, q_tokens_list, cap=6500):
     """Bir ders notu için batch'teki tüm soruları kapsayan kanıt paketi."""
     merged_tokens = set()
     for t in q_tokens_list:
         merged_tokens |= t
-    heads = _sections_for(merged_tokens, c, width=1500, maxn=5)
+    heads = _sections_for(merged_tokens, c, width=1100, maxn=4)
     # hiç örtüşme yoksa ders notunun en bilgi yoğun ilk bölümlerini ver
     if not heads:
         heads = [{"heading": h, "excerpt": re.sub(r'\s+', ' ', clean_text(b, keep_newlines=True))[:900],
@@ -106,7 +106,7 @@ def build_evidence(c, q_tokens_list, cap=14000):
         total += len(e)
     return out
 
-def match_lectures(q, topn=5, min_overlap=2):
+def match_lectures(q, topn=4, min_overlap=2):
     qt = toks(q['stem']) | toks(q['topic']) | toks(q['explanation'][:1200])
     if not qt:
         return []
@@ -204,7 +204,7 @@ def main():
     batches = []
     for (cid, disc), items in sorted(groups.items(), key=lambda kv: (order.get(kv[0][0], ''), kv[0][1])):
         items.sort(key=lambda x: str(x.get('questionNumber') or ''))
-        CH = 14
+        CH = 4
         for i in range(0, len(items), CH):
             chunk = items[i:i + CH]
             agg = {}
@@ -213,7 +213,7 @@ def main():
                     a = agg.setdefault(c['lectureId'], {"best": 0.0, "hits": 0, "c": c})
                     a['best'] = max(a['best'], c['matchScore'])
                     a['hits'] += 1
-            pick = sorted(agg.values(), key=lambda x: -(x['best'] + x['hits'] * 12))[:9]
+            pick = sorted(agg.values(), key=lambda x: -(x['best'] + x['hits'] * 12))[:7]
             common = {}
             for p in pick:
                 c = p['c']

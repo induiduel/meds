@@ -1,0 +1,3145 @@
+[
+  {
+    "id": "learn-ana-cocuk-sagligi",
+    "title": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "shortTitle": "Ana Çocuk Sağlığı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1 - Halk Sağlığı (Dönem 3)",
+    "instructor": "Doç. Dr. Nergiz Sevinç",
+    "audioFile": "Halk Sağlığı Anne çocuk Sağlığı İzleme.m4a",
+    "audioDuration": "43.1 dk",
+    "confidence": "%95 Doğrulandı",
+    "themeColor": "sky",
+    "matchedNoteId": "note-b825fa7e46",
+    "matchedNoteTitle": "2)Ana çocuk sağ.izleme",
+    "overview": "Koruyucu hekimlik hizmetlerinde risk altındaki 15-49 yaş kadınlar, gebeler ve bebeklerin periyodik izlemleri, Anne Ölüm Hızı (AÖH), Bebek Ölüm Hızı (BÖH) formülleri ve Doğum Öncesi Bakım (DÖB) protokolleri.",
+    "highYieldPearls": [
+      "**Koruyucu Hekimlik Önceliği:** Koruyucu hekimlik hizmetlerinin en önemli öğelerinden biri risk altında olan gruplara yönelik izlemlerdir (15-49 yaş kadınlar, gebeler, bebekler, çocuklar).",
+      "**Kalkınmışlık Göstergesi:** Bir ülkenin kalkınmışlık düzeyi ve gelişmişlik seviyesi değerlendirilirken kullanılan en önemli iki temel gösterge **ana ölüm hızı** ve **bebek ölüm hızı** oranlarıdır.",
+      "**15-49 Yaş Kadın Grubu:** 15-49 yaş kadın nüfusu kendi içinde gruplara ayrılarak değerlendirilir; bunlar arasında en çok üzerinde durulan **Doğum Öncesi Bakım (DÖB)** hizmetleridir.",
+      "**DÖB Yeterlilik Kriterleri:** Gebenin ilk izleminin ilk 3 ay içinde (ilk trimester) yapılması, gebelik boyunca en az 4 kez izlenmesi ve tecrübeli sağlık personeli tarafından takip edilmesi gerekmektedir.",
+      "**Aile Hekimliği ve İzlem Sıklığı:** Gebelik süresince en az 4 kez izlem yapılması gerekir; lohusalıkta ise ilk 40 gün içinde (özellikle ilk günlerde ve 15. günde) ev ziyaretleri ve izlemler önerilmektedir.",
+      "**Erken Neonatal Ölüm:** Doğumdan sonraki ilk 7 gün içindeki ölümlerdir ve sağlık hizmetlerinin kalitesini doğrudan yansıtır.",
+      "**Yüksek Riskli Gruplar:** 18 yaş altı ve 35 yaş üstü gebelikler, sık doğumlar, çoğul gebelikler ve kronik hastalığı olan gebeler yüksek riskli grupta yer alır."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "title": "Koruyucu Hekimlik ve Birinci Öncelikli Risk Grupları",
+        "subtitle": "Halk Sağlığı Hedef Kitle Hiyerarşisi",
+        "badge": "AMFİ GİRİŞ VURGUSU",
+        "badgeColor": "sky",
+        "professorAudioHighlight": {
+          "timestamp": "00:39",
+          "quote": "Bunlar slaytlarda yok yani benim söylediklerimi dinleyin tamam mı? Bizim birinci basamak koruyucu hekimlikte ilk grubumuzda kimler var? Bebekler ve 15-49 yaş kadın grubu var.",
+          "emphasisType": "slide_missing",
+          "note": "Hoca slaytta açıkça yazmayan birincil hedef kitlenin (15-49 yaş kadın ve bebekler) amfide bizzat not alınmasını istedi."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Öncelikli Nüfus Dilimleri",
+              "desc": "Kendi başına hayatta kalamayan veya bakım verilmediğinde morbidite/mortalite riski en yüksek gruplar."
+            },
+            {
+              "title": "15-49 Yaş Doğurgan Çağ Kadınları",
+              "desc": "Türkiye nüfusunun %25'ini, dünya nüfusunun ise %24'ünü oluşturur."
+            },
+            {
+              "title": "0-14 Yaş Çocuk Grubu",
+              "desc": "Türkiye nüfusunun %20'sini teşkil eder ve koruyucu aşı/gelişim takibi zorunludur."
+            }
+          ],
+          "table": {
+            "title": "Demografik Öncelik ve Risk Dağılımı",
+            "headers": [
+              "Hedef Grup",
+              "Türkiye Nüfus Payı",
+              "Birincil İzlem Amacı"
+            ],
+            "rows": [
+              [
+                "0-1 Yaş (Bebek)",
+                "%1.4",
+                "Aşı takvimi, fenilketonüri/hipotiroidi taraması, büyüme takibi"
+              ],
+              [
+                "15-49 Yaş Kadın",
+                "%25.0",
+                "DÖB, üreme sağlığı, anemi taraması, aile planlaması"
+              ],
+              [
+                "Gebeler & Lohusalar",
+                "Dinamik Risk",
+                "Maternal ve erken neonatal mortalitenin önlenmesi"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Koruyucu hekimlikte en öncelikli risk grubu: Bebekler ve 15-49 yaş doğurganlık çağındaki kadınlardır.",
+          "Türkiye nüfusunda 15-49 yaş kadın oranı yaklaşık %25, 0-14 yaş çocuk grubu ise %20 civarındadır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k5-hal-012",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Halk Sağlığı",
+            "topic": "Toplam Doğurganlık Hızı (TÜİK Verileri)",
+            "stem": "Türkiye İstatistik Kurumu (TÜİK) güncel nüfus ve demografi verilerine göre nüfusun kendini yenileme eşiği olan 2.10 seviyesinin altına gerileyen Türkiye geneli Toplam Doğurganlık Hızı ile Karabük ili toplam doğurganlık hızı yaklaşık olarak hangi seçenekte doğru verilmiştir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Türkiye: 1.51 — Karabük: 1.14",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Türkiye: 2.15 — Karabük: 2.05",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Türkiye: 1.85 — Karabük: 1.70",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Türkiye: 1.20 — Karabük: 1.90",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Türkiye: 2.50 — Karabük: 1.50",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "TÜİK verilerine göre Türkiye'de toplam doğurganlık hızı 2023-2024 yıllarında tarihi dip seviye olan 1.51 çocuk/kadın düzeyine gerilemiştir. Karabük ili ise sanayileşmiş yaşlı nüfus yapısıyla 1.14 çocuk/kadın oranıyla Türkiye'de doğurganlığın en düşük olduğu iller arasında yer almaktadır.",
+            "matchScore": 5.2
+          },
+          {
+            "id": "d3-k3-far-003",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul3",
+            "discipline": "Tıbbi Farmakoloji",
+            "topic": "LATENT TÜBERKÜLOZ ENFEKSİYONU KORUYUCU TEDAVİSİ",
+            "stem": "Tüberküloz tanı ve tedavi rehberine göre latent tüberküloz enfeksiyonu (LTBİ) saptanan temaslı veya riskli bireylerde hastalık gelişimini önlemek amacıyla önerilen profilaktik tedavi rejimleri ile ilgili:\nI. İzoniyazid (INH) monoterapisi 6 ay (veya 9 ay)\nII. Rifampisin (RIF) monoterapisi 4 ay\nIII. İzoniyazid ve Rifampisin kombine tedavisi 3 ay\nIV. İzoniyazid ve Rifapentin haftalık rejimi 3 ay\nVerilen süre ve rejimlerden hangileri kılavuzlarca önerilmektedir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Yalnız I ve II",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Yalnız II ve IV",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "I, II, III ve IV (Hepsi)",
+                "isCorrect": true
+              },
+              {
+                "key": "D",
+                "text": "Yalnız I, II ve III",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Yalnız IV",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Sağlık Bakanlığı ve DSÖ rehberlerinde latent TB profilaksisinde kabul gören rejimler: 6 ay günlük INH (veya 9 ay INH), 4 ay günlük RIF, 3 ay günlük INH + RIF veya haftada bir uygulanan 3 aylık INH + Rifapentin rejimidir. Tüm öncüller kılavuza uygundur.",
+            "matchScore": 4
+          }
+        ],
+        "aiPromptSuggestions": [
+          "15-49 yaş kadın grubunun halk sağlığındaki stratejik önemi nedir?",
+          "Hoca amfide slaytta olmayan hangi risk gruplarını vurguladı?"
+        ]
+      },
+      {
+        "slideNumber": 2,
+        "title": "Ülkelerin Kalkınmışlık Göstergesi: Anne ve Bebek Ölüm Hızları",
+        "subtitle": "Sağlık Düzeyi ve Gelişmişlik Kriterleri",
+        "badge": "SINAV KLASİĞİ",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "03:00",
+          "quote": "Bir ülkenin kalkınmışlık düzeyine bakarken en önemli faktörlerden bir tanesi o ülkenin anne ölüm hızı ve bebek ölüm hızı oranlarıdır. Sağlık sistemimiz ne, teknoloji ne, ulaşım ne; hepsini bu iki kriter özetler.",
+          "emphasisType": "pearl",
+          "note": "Hoca kalkınmışlık seviyesinin tespitinde GSYİH'den bile önce AÖH ve BÖH'e bakıldığının altını çizdi."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Anne Ölüm Hızı (AÖH)",
+              "desc": "Sağlık hizmetine erişim, acil obstetrik bakım ve kadın statüsünün en duyarlı barometresidir."
+            },
+            {
+              "title": "Bebek Ölüm Hızı (BÖH)",
+              "desc": "Sosyoekonomik durum, beslenme, çevre sağlığı ve birinci basamak etkinliğini yansıtır."
+            },
+            {
+              "title": "Uluslararası Kıyaslama",
+              "desc": "Gelişmiş ülkelerde AÖH yüz binde tek haneli iken Sahra altı Afrika'da yüz binde yüzleri bulmaktadır."
+            }
+          ],
+          "infographic": {
+            "type": "metrics",
+            "items": [
+              {
+                "label": "Türkiye AÖH (2023)",
+                "value": "11.5 / 100.000",
+                "detail": "Canlı doğum başına maternal kayıp",
+                "color": "rose"
+              },
+              {
+                "label": "Türkiye BÖH (2023)",
+                "value": "10.5 / 1.000",
+                "detail": "Canlı doğum başına 1 yaş altı kayıp",
+                "color": "sky"
+              },
+              {
+                "label": "Hedef",
+                "value": "< 8 / 100.000",
+                "detail": "DSÖ ve Sağlık Bakanlığı vizyonu",
+                "color": "emerald"
+              }
+            ]
+          }
+        },
+        "spotPearls": [
+          "Bir toplumun sağlık ve gelişmişlik düzeyini en iyi yansıtan iki gösterge: Anne Ölüm Hızı ve Bebek Ölüm Hızıdır.",
+          "Türkiye'de 2023 verilerine göre AÖH yüz binde 11.5, BÖH binde 10.5 seviyelerindedir."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-hs-025",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "SAĞLIK DÜZEYI GÖSTERGELERI",
+            "stem": "Aşağıdaki sağlık göstergelerinden hangisinin hesaplanmasında ölü doğumlar da paya/paydaya dahil edilir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Neonatal ölüm hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Perinatal ölüm hızı",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "Kaba doğum hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Beş yaş altı ölüm hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Geç neonatal ölüm hızı",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Perinatal ölüm hızı, gebeliğin 28. haftasından (veya doğum ağırlığı\n≥1000 g) itibaren gerçekleşen ölü doğumlar ile doğumdan sonraki ilk 7\ngün içindeki (erken neonatal) ölümlerin toplamının, tüm doğumlara\n(canlı + ölü doğum) oranlanmasıyla hesaplanır; bu nedenle\nhesaplamasında ölü doğumları içeren gösterge budur. Neonatal, geç\nneonatal ve beş yaş altı ölüm hızları yalnızca canlı doğan bebekler\narasındaki ölümleri kapsar.",
+            "matchScore": 5.2
+          },
+          {
+            "id": "d3-k5-hal-002",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Halk Sağlığı",
+            "topic": "Bebek Ölüm Hızı (BÖH) Hesaplaması",
+            "stem": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Binde 4 (%0 4)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Binde 3 (%0 3)",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Binde 5 (%0 5)",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Binde 9 (%0 9)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Binde 1 (%0 1)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür.",
+            "matchScore": 5.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "AÖH ile BÖH arasındaki fark nedir ve neden farklı çarpanlarla (100.000 vs 1.000) hesaplanır?",
+          "Bir ülkenin sağlık düzeyini değerlendirmede bu göstergelerin rolü nedir?"
+        ]
+      },
+      {
+        "slideNumber": 3,
+        "title": "Doğum Öncesi Bakım (DÖB) Altın Standartları",
+        "subtitle": "Yeterli Bakım Sayılma Kriterleri ve İzlem Takvimi",
+        "badge": "PROTOKOL & MEVZUAT",
+        "badgeColor": "emerald",
+        "professorAudioHighlight": {
+          "timestamp": "05:02",
+          "quote": "Bir gebenin yeterli doğum öncesi bakım almıştır diyebilmemiz için kriterlerimiz var: İlk izlem mutlaka ilk 3 ay içinde olmalı, gebelik boyunca en az 4 kez izlenmeli ve tecrübeli sağlık personeli (ebe/hekim) tarafından yapılmalı.",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca \"DÖB yeterlilik kriterleri\"nin sınavda soru olarak gelebileceğini özellikle belirtti."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Kriter 1: Erken Başvuru",
+              "desc": "İlk izlemin ilk trimesterda (ilk 3 ay / 14. haftadan önce) gerçekleşmesi şarttır."
+            },
+            {
+              "title": "Kriter 2: Asgari İzlem Sayısı",
+              "desc": "Komplikasyonsuz bir gebelikte asgari 4 nitelikli izlem tamamlanmalıdır."
+            },
+            {
+              "title": "Kriter 3: Yetkin Personel",
+              "desc": "İzlemin ebe, kadın doğum uzmanı veya aile hekimi tarafından yapılması gerekir."
+            }
+          ],
+          "table": {
+            "title": "Sağlık Bakanlığı DÖB Asgari İzlem Takvimi",
+            "headers": [
+              "İzlem",
+              "Gebelik Haftası",
+              "Temel Girişimler"
+            ],
+            "rows": [
+              [
+                "1. İzlem",
+                "İlk 14 hafta (1. Trimester)",
+                "Kan grubu, Hb, idrar, açlık şekeri, TSH, USG, folik asit"
+              ],
+              [
+                "2. İzlem",
+                "18 - 24. Hafta",
+                "Fetal anomali taraması, tansiyon takibi, tetanoz aşısı 1"
+              ],
+              [
+                "3. İzlem",
+                "28 - 32. Hafta",
+                "Kan sayımı tekrarı, Gestasyonel DM taraması (OGTT), aşı 2"
+              ],
+              [
+                "4. İzlem",
+                "36 - 38. Hafta",
+                "Fetal pozisyon, pelvik uygunluk, doğum planlaması"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Yeterli DÖB şartları: 1) İlk izlemin ilk 3 ay içinde olması, 2) En az 4 izlem yapılması, 3) Tecrübeli sağlık personeli takibi.",
+          "Gebelik tespit edildiği anda başlanması gereken profilaksi: İlk trimesterda Folik Asit (400 mcg/gün), 16. haftadan itibaren Demir desteği."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-hs-023",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "DOĞUM ÖNCESI BAKIM",
+            "stem": "'Yeterli doğum öncesi bakım alma' kriterlerinden olmayan hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "İzlemin gebeliğin 2. ayında başlamış olması",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "İzlemin sağlık personeli tarafından yapılması",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Gebelik boyunca en az 4 kez izlem yapılmış olması",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "İzlemin gebeliğin ilk 3 ayında (ilk trimesterde) başlamış olması",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "İzlemin gebeliğin 5. ayında başlamış olması",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswer": "E",
+            "explanation": "Yeterli doğum öncesi bakımın temel kriterleri arasında izlemin gebeliğin\nilk 3 ayında (ilk trimester) başlaması, en az 4 kez ve sağlık personeli\ntarafından yapılması sayılır. İzlemin gebeliğin 5. ayına kadar gecikmesi\nbu \"erken başlama\" kriterini karşılamadığından yeterli bakım tanımına\nuymaz.",
+            "matchScore": 6.7
+          },
+          {
+            "id": "past-1790877034976-160391",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Kadın Hastalıkları ve Doğum",
+            "topic": "Kadın Hastalıkları ve Doğum",
+            "stem": "Dünya Sağlık Örgütü (DSÖ) ve Türkiye Nüfus ve Sağlık Araştırması (TNSA) tanımlamalarına göre, bir gebenin 'yeterli doğum öncesi bakım' (DÖB) almış kabul edilmesi için gereken kriterler değerlendirildiğinde, aşağıdakilerden hangisi bu kriterler arasında yer almaz?",
+            "options": [
+              {
+                "key": "A",
+                "text": "İlk antenatal izlemin gebeliğin 5. ayında başlamış olması",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "İzlemlerin nitelikli sağlık personeli (hekim, ebe veya hemşire) tarafından yapılması",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Gebelik boyunca standart protokole uygun en az 4 kez izlemin gerçekleştirilmiş olması",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "İlk antenatal izlemin gebeliğin ilk 3 ayı (ilk trimester) içinde başlatılmış olması",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "İzlem kapsamında maternal kan basıncı, hemoglobin ve idrar tetkiklerinin yapılmış olması",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "【Doğrulanmış Tıbbi Gerekçe (Eşleşme: %100)】:\nDünya Sağlık Örgütü (DSÖ) ve Türkiye Nüfus ve Sağlık Araştırmaları (TNSA) standartlarına göre 'Yeterli Antenatal Bakım' (YAB) için temel kriterler şunlardır: 1) İlk antenatal izlemenin gebeliğin ilk trimesterinde (ilk 3 ayı içinde) başlamış olması, 2) Gebelik boyunca en az 4 kez nitelikli sağlık personeli (hekim, ebe veya hemşire) tarafından izlenmiş olması, 3) Bu izlemeler sırasında maternal kan basıncı, hemoglobin düzeyi ve idrar tetkiklerinin (protein/şeker) yapılmış olması. Soru kökünde 'kriterler arasında yer almaz' ifadesi kullanılmıştır. Seçenek D (ilk 3 ayda başlama), B (nitelikli personel) ve C (en az 4 kez izlem) doğrudan kriterleri oluşturmaktadır. Seçenek A ise 'ilk izlemenin 5. ayda başlaması' olarak tanımlanmıştır; bu durum ilk trimester kriterini ihlal ettiği için 'yeterli bakım' tanımına uymaz ve dolayısıyla kriterler arasında yer almaz. Bu nedenle A şıkkı sorunun doğru cevabıdır.\n\n【Amfi Slayt Referansı】: \"25-26 dönem 3 kurul 5\" (Slayt #10)\n\n【Klinik İpucu】: TNSA ve DSÖ tanımlarında 'Yeterli Antenatal Bakım' için kritik eşik, ilk izlemenin gebeliğin 13. haftasından (ilk trimester) önce veya sırasında başlamasıdır. 5. ayda (20. hafta) başlanan izlem, 'yetersiz' veya 'geç' antenatal bakım olarak sınıflandırılır.",
+            "matchScore": 6.5
+          }
+        ],
+        "aiPromptSuggestions": [
+          "DÖB protokolünde 4 izlemin haftaları ve zorunlu tetkikleri nelerdir?",
+          "Aile sağlığı merkezlerinde gebenin takibinde ebenin rolü nedir?"
+        ]
+      },
+      {
+        "slideNumber": 4,
+        "title": "Anne Ölüm Hızı (AÖH): Tanım, Sınır ve Formül",
+        "subtitle": "Vaka Sorusu Çıkacak Matematiksel Formülasyon",
+        "badge": "⭐ HOCA VURGUSU: VAKA SORUSU GELİR",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "09:42",
+          "quote": "Burada formülü var arkadaşlar. Buradan soru çıkar! Bir vaka gibi bir bilgi sorarız, siz de anne ölüm oranı nedir diye hesaplarsınız. Gebelikte, doğumda veya doğumdan sonraki 42 gün içindeki obstetrik ölümlerdir.",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca doğrudan amfide \"Buradan vaka sorusu sorarız\" ikazında bulundu. Çarpana (100.000) ve 42 günlük süreye dikkat!"
+        },
+        "coreContent": {
+          "formulaBox": {
+            "title": "Anne Ölüm Hızı (AÖH / Maternal Mortality Ratio) Formülü",
+            "formula": "AÖH = (Bir yılda obstetrik nedenlerle ölen anne sayısı / Aynı yıl gerçekleşen canlı doğum sayısı) × 100.000",
+            "explanation": "Paydada TÜM GEBELİKLER DEĞİL, sadece CANLI DOĞUMLAR yer alır! Çarpan ise 100.000'dir."
+          },
+          "keyBullets": [
+            {
+              "title": "Süre Kriteri: 42 Gün",
+              "desc": "Gebelik süresince, doğum anında veya gebeliğin sonlanmasından sonraki ilk 42 gün içinde meydana gelen ölümler."
+            },
+            {
+              "title": "Obstetrik Neden Şartı",
+              "desc": "Gebelik komplikasyonları veya gebeliğin ağırlaştırdığı hastalıklardan kaynaklanmalıdır (Kaza veya tesadüfi nedenler hariçtir)."
+            },
+            {
+              "title": "Direkt vs İndirekt Ölüm",
+              "desc": "Direkt: Kanama, preeklampsi, emboli, sepsis. İndirekt: Önceden var olan kalp hastalığının gebelik yüküyle dekompanse olması."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Anne ölümü zaman sınırı: Gebelik süresi + Doğum sonrası ilk 42 gün (6 hafta - lohusalık dönemi).",
+          "AÖH formülünde payda her zaman CANLI DOĞUM SAYISI, çarpan ise 100.000'dir (Bebek ölümünde binde, anne ölümünde yüz binde!).",
+          "Trafik kazası, intihar gibi tesadüfi nedenler anne ölümü tanımına dahil edilmez."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k5-hal-002",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Halk Sağlığı",
+            "topic": "Bebek Ölüm Hızı (BÖH) Hesaplaması",
+            "stem": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Binde 4 (%0 4)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Binde 3 (%0 3)",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Binde 5 (%0 5)",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Binde 9 (%0 9)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Binde 1 (%0 1)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür.",
+            "matchScore": 3.7
+          },
+          {
+            "id": "d3-k1-hs-001",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "HALK SAĞLIĞININ TEMEL İLKELERI",
+            "stem": "Halk sağlığı kavramının başlıca ilkeleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Sağlık bir insanlık hakkıdır",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Tedavi edici hizmetler koruyucu hizmetlerden önceliklidir",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "Hastalıkların nedenleri sosyal, biyolojik ve fiziksel etmenlerdir",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Kişinin hastalığı aynı zamanda ailenin de sorunudur",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Sağlık hizmeti bir ekip hizmetidir",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Halk sağlığının temel felsefesinde koruyucu hizmetler tedavi edici\nhizmetlerden önceliklidir (\"önce koru\" ilkesi); bir hastalığı ortaya\nçıkmadan önlemek, ortaya çıktıktan sonra tedavi etmekten her zaman\ndaha etkili ve ekonomiktir. Diğer ifadeler (sağlığın bir insanlık hakkı\nolması, hastalık nedenlerinin çok boyutlu olması, hastalığın aile boyutu,\nekip hizmeti olması) halk sağlığının kabul edilen temel ilkeleridir.",
+            "matchScore": 1.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Örnek bir Anne Ölüm Hızı vaka sorusu çöz: 50.000 canlı doğumda 6 maternal ölüm olursa AÖH kaçtır?",
+          "Lohusalıkta 40. günde pulmoner emboliden ölen kadın anne ölümü sayılır mı?"
+        ]
+      },
+      {
+        "slideNumber": 5,
+        "title": "Bebek ve Neonatal Ölüm Hızları Sınıflaması",
+        "subtitle": "Erken Neonatal, Geç Neonatal ve Postneonatal Dönemler",
+        "badge": "DÖNEM AYRIMI",
+        "badgeColor": "amber",
+        "professorAudioHighlight": {
+          "timestamp": "02:31",
+          "quote": "Ölü bildirim sistemi (ÖBS) doldururken sorar: Bebek ölümü kaçıncı günde oldu? Doğumdan sonraki ilk 7 gün içindeki ölüm erken neonataldir ve doğrudan sağlık hizmetinin niteliğini gösterir.",
+          "emphasisType": "clinical_tip",
+          "note": "Hoca ilk 7 günün (erken neonatal) hastane şartları ve doğum anı kalitesine en duyarlı dönem olduğunu belirtti."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Bebek Ölüm Hızı (BÖH)",
+              "desc": "(1 yılda 1 yaşını doldurmadan ölen bebek sayısı / Canlı doğum sayısı) × 1.000"
+            },
+            {
+              "title": "Erken Neonatal Ölüm",
+              "desc": "0 - 6. gün (ilk 7 gün) içindeki ölümler. Doğum travması, asfiksi, konjenital anomaliler hakimdir."
+            },
+            {
+              "title": "Geç Neonatal Ölüm",
+              "desc": "7 - 27. gün arasındaki ölümler. Hastane enfeksiyonları, beslenme güçlükleri."
+            },
+            {
+              "title": "Postneonatal Ölüm",
+              "desc": "28 - 364. gün arasındaki ölümler. Çevre sağlığı, enfeksiyonlar (pnömoni, ishal) ve beslenme yetersizliklerine bağlıdır."
+            }
+          ],
+          "table": {
+            "title": "Bebeklik Dönemi Ölüm Hızı Karşılaştırması",
+            "headers": [
+              "Dönem",
+              "Gün Aralığı",
+              "Başlıca Nedenler",
+              "Hassas Olduğu Alan"
+            ],
+            "rows": [
+              [
+                "Erken Neonatal",
+                "0 - 6 gün",
+                "Prematürite, RDS, Asfiksi, Konjenital Anomali",
+                "Doğum salonu & YYBÜ kalitesi"
+              ],
+              [
+                "Geç Neonatal",
+                "7 - 27 gün",
+                "Sepsis, menenjit, metabolik bozukluklar",
+                "Yenidoğan bakımı"
+              ],
+              [
+                "Postneonatal",
+                "28 - 364 gün",
+                "Gastroenterit, alt solunum yolu enf., malnütrisyon",
+                "Sosyoekonomik & Çevre koşulları"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Erken Neonatal: 0-6 gün, Geç Neonatal: 7-27 gün, Postneonatal: 28-364 gün.",
+          "Erken neonatal ölümler tıbbi bakım kalitesine, postneonatal ölümler ise çevre ve hijyen koşullarına bağlıdır.",
+          "BÖH çarpanı 1.000 (binde), AÖH çarpanı ise 100.000 (yüz binde)'dir."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k5-hal-002",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Halk Sağlığı",
+            "topic": "Bebek Ölüm Hızı (BÖH) Hesaplaması",
+            "stem": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Binde 4 (%0 4)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Binde 3 (%0 3)",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Binde 5 (%0 5)",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Binde 9 (%0 9)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Binde 1 (%0 1)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür.",
+            "matchScore": 10.2
+          },
+          {
+            "id": "past-1790877047921-534844",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "Halk Sağlığı",
+            "stem": "Aşağıdaki ölüm hızlarından hangisinin hesaplanmasında ölü doğumlar da hesaplamaya dahil edilir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Bebek ölüm hızı",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Neonatal ölüm hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Kaba ölüm hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Postneonatal ölüm hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Perinatal ölüm hızı",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Halk Sağlığı ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 14. htn_d3_2025 2 kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır.",
+            "matchScore": 5.7
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Postneonatal ölüm hızını düşürmek için hangi halk sağlığı önlemleri alınmalıdır?",
+          "Perinatal ölüm hızı nedir ve hangi haftaları kapsar?"
+        ]
+      },
+      {
+        "slideNumber": 6,
+        "title": "Aile Hekimliği Uygulamasında Performansa Dayalı İzlemler",
+        "subtitle": "Lohusalık, Ev Ziyaretleri ve Birinci Basamak Sorumluluğu",
+        "badge": "KLİNİK PRATİK & SAHA",
+        "badgeColor": "indigo",
+        "professorAudioHighlight": {
+          "timestamp": "09:02",
+          "quote": "Neden önemli? Çünkü bunlar aile hekimlerine dağıtılmış performansa dayalı izlemlerdir. İzlemler yapılmadığında hekimden maaş kesintisi yapılır. Lohusalıkta da ilk 40 gün içinde ev ziyaretleri zorunludur.",
+          "emphasisType": "pearl",
+          "note": "Hoca birinci basamakta çalışan her hekimin gebe ve lohusa izlemlerini kaçırmaması gerektiğini pratik örnekle vurguladı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Performansa Dayalı Takip",
+              "desc": "Aile hekimleri kendilerine kayıtlı her gebe ve bebeği sisteme girmek ve periyodik izlemek zorundadır."
+            },
+            {
+              "title": "Lohusa İzlem Protokolü",
+              "desc": "Doğum sonrası ilk 24 saat, 3. gün, 7. gün ve 15-40. günler arasında en az 3 izlem yapılmalıdır."
+            },
+            {
+              "title": "Ev Ziyaretleri",
+              "desc": "Sağlık personeli aile sağlığı merkezine gelemeyen yüksek riskli lohusaları hanesinde ziyaret eder."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Lohusalık süresi 6 hafta (42 gün) olup, ilk izlem doğum taburculuğunu takiben ilk 3 gün içinde yapılmalıdır.",
+          "Bebek izlemleri: Doğumda, 15. günde, 41. günde ve ilk yıl içinde 2, 3, 4, 6, 9 ve 12. aylarda yapılır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k2-ah-005",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul2",
+            "discipline": "Aile Hekimliği",
+            "topic": "AİLE HEKİMLİĞİNİN GÖREV VE SORUMLULUKLARI",
+            "stem": "Aile hekiminin mevzuattaki görev ve sorumlulukları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Kendisine kayıtlı kişilerin periyodik sağlık muayenelerini yapmak",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Gebe, lohusa, bebek ve çocuk izlemleri ile aşılamalarını yürütmek",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Gerektiğinde evde sağlık ve palyatif bakım hizmetlerini koordine etmek",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Yatan hasta servislerinde üçüncü basamak cerrahi ameliyatları bizzat yürütmek",
+                "isCorrect": true
+              },
+              {
+                "key": "E",
+                "text": "Kanser taramalarını ve kronik hastalık takiplerini organize etmek",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Aile hekimliği birincil basamak sağlık hizmetidir; koruyucu hekimlik, poliklinik muayenesi ve taramaları kapsar. Üçüncü basamak cerrahi ameliyatlar uzman hekimlerin ve hastanelerin görevidir.",
+            "matchScore": 7.0
+          },
+          {
+            "id": "d3-k1-hs-024",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "GEBELIK İZLEMI VE DANIŞMANLIK",
+            "stem": "Aşağıdakilerden hangisi gebelik döneminde verilen rutin danışmanlık konularından değildir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Beslenme",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Fiziksel aktivite ve çalışma koşulları",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Hijyen",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Kronik hastalıkların tıbbi tedavi yönetimi",
+                "isCorrect": true
+              },
+              {
+                "key": "E",
+                "text": "Gebelikte cinsel yaşam",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Gebelik izlemlerinde sağlık personeli tarafından verilen rutin\ndanışmanlık; beslenme, fiziksel aktivite/çalışma koşulları, kişisel hijyen\nve cinsel yaşam gibi genel sağlığı koruyucu konuları kapsar. Kronik\nhastalıkların tıbbi tedavisinin yönetimi ise genel bir danışmanlık konusu\ndeğil, ilgili uzman hekim tarafından yürütülmesi gereken özel bir klinik\ntakip konusudur.",
+            "matchScore": 5.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Aile hekimliğinde lohusalık izlem takvimi nasıldır?",
+          "Performansa tabi izlemlerde aksama olursa mevzuata göre ne olur?"
+        ]
+      }
+    ],
+    "totalSlides": 6,
+    "matchedPastQuestionsCount": 12
+  },
+  {
+    "id": "learn-dismorfoloji-terminoloji",
+    "title": "Dismorfolojide Genetik Terminoloji",
+    "shortTitle": "Dismorfoloji Terminolojisi",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Tıbbi Genetik (Dönem 3)",
+    "instructor": "Öğretim Üyesi",
+    "audioFile": "Dismorfolojide Genetik Terminoloji TBG.m4a",
+    "audioDuration": "61.6 dk",
+    "confidence": "%95 Doğrulandı",
+    "themeColor": "indigo",
+    "matchedNoteId": "note-476343950c",
+    "matchedNoteTitle": "1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ",
+    "overview": "Dismorfolojinin temel morfolojik defektleri (Malformasyon, Deformasyon, Disrupsiyon, Displazi), Sendrom, Sekans ve Asosiasyon tanımları, majör/minör anomalilerin klinik ayrımı.",
+    "highYieldPearls": [
+      "**Kromozom Anormallikleri:** Sayısal ve yapısal anormallikler (ömeğin triploidi, tetraploidi, delesyon, duplikasyon, translokasyon, inversiyon) dismorfolojide sık görülen durumlar arasındadır.",
+      "**Displazi ve Malformasyon:** Displazi, fiziksel gelişimdeki doku düzeyinde yapısal bozuklukları tanımlarken; malformasyon, embriyonik dönemde yapısal gelişim bozukluklarını ifade eder.",
+      "**Klinik Değerlendirme ve Genetik Danışma:** Dismorfik hastaların tanısında aile hikayesi, fiziksel muayene, kromozom analizi ve genetik testler hayati öneme sahiptir."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "title": "Dismorfolojiye Giriş ve Temel Kavramlar",
+        "subtitle": "Doğuştan Yapısal Kusurların İncelenmesi",
+        "badge": "TEMEL GENETİK",
+        "badgeColor": "indigo",
+        "professorAudioHighlight": {
+          "timestamp": "04:12",
+          "quote": "Dismorfoloji; anormal formların bilimidir. Doğumsal yapısal defektleri inceler. Klinik genetikçinin en önemli görevi hastanın yüzüne ve vücuduna bakarak bu örüntüyü tanımaktır.",
+          "emphasisType": "pearl",
+          "note": "Hoca dismorfolojide fenotipik gözlem ve doğru terminolojiyi kullanmanın tanıdaki belirleyici rolünü anlattı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Dismorfoloji Tanımı",
+              "desc": "Embriyolojik gelişim sürecindeki sapmalar sonucu ortaya çıkan yapısal ve anatomik bozuklukları inceleyen bilim dalı."
+            },
+            {
+              "title": "Anomali Tipleri",
+              "desc": "Kusurlar etki düzeyine göre Malformasyon, Deformasyon, Disrupsiyon ve Displazi olarak 4 ana kategoriye ayrılır."
+            },
+            {
+              "title": "Sıklık",
+              "desc": "Canlı doğan bebeklerin %2-3'ünde doğumda saptanan en az bir majör konjenital anomali bulunur."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Dismorfolojik değerlendirmede 4 temel yapısal defekt: Malformasyon, Deformasyon, Disrupsiyon ve Displazi.",
+          "Yeni doğan her 100 bebekten 2-3'ünde majör bir yapısal malformasyon saptanır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-tbg-001",
+            "examYear": "2025-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Genetik",
+            "topic": "DISMORFOLOJIDE GENETIK TERMINOLOJI",
+            "stem": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Yarık dudak-damak",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
+                "isCorrect": true
+              },
+              {
+                "key": "D",
+                "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Nöral tüp defekti (spina bifida)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır.",
+            "matchScore": 10.2
+          },
+          {
+            "id": "d3-k4-gen-002",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul4",
+            "discipline": "Tıbbi Genetik",
+            "topic": "Down Sendromu ve Konjenital Kalp Anomalileri",
+            "stem": "Trizomi 21 (Down Sendromu) tanÄ±lÄ± bebeklerde en sÄ±k gÃ¶rÃ¼len ve endokardiyal yastÄ±k defekti olarak da adlandÄ±rÄ±lan konjenital kardiyak anomali aÅŸaÄŸÄ±dakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Atriyoventriküler septal defekt (AVSD)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Aort koarktasyonu",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "BikÃ¼spit aort kapaÄŸÄ±",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "İzole pulmoner stenoz",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Büyük arterlerin transpozisyonu",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Down Sendromu (Trizomi 21), konjenital kalp hastalÄ±klarÄ±nÄ±n en sÄ±k eÅŸlik ettiÄŸi kromozomal anomalidir (%40-50). Bu olgularda en karakteristik ve en sÄ±k gÃ¶rÃ¼len anomali endokardiyal yastÄ±k defektidir (AtriyoventrikÃ¼ler Septal Defekt - AVSD). AyrÄ±ca VSD ve ASD de gÃ¶rÃ¼lebilir.",
+            "matchScore": 9.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Dismorfolojik muayenede nelere dikkat edilmelidir?",
+          "Dismorfolojide 4 temel morfolojik defekt kategorisi nedir?"
+        ]
+      },
+      {
+        "slideNumber": 2,
+        "title": "Malformasyon: İntrinsik Morfogenez Bozukluğu",
+        "subtitle": "Hücresel Düzeyde Başlayan Primer Hata",
+        "badge": "SINAV KLASİĞİ",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "12:45",
+          "quote": "Malformasyon İNTRİNSİKTİR arkadaşlar! Yani baştan beri dokunun kendi genetik programında hata vardır. Dışarıdan bir baskı yoktur. Yarık dudak, yarık damak, konjenital kalp defektleri en tipik örnekleridir.",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca sınavda \"intrinsik\" kelimesinin malformasyonun anahtar sözcüğü olduğunu özellikle hatırlattı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Mekanizma",
+              "desc": "Organ veya vücut bölgesinin oluşumu sırasında dokunun kendi iç gelişimsel potansiyelindeki primer aksaklık."
+            },
+            {
+              "title": "Zamanlama",
+              "desc": "Embriyonik dönemde (ilk 8 hafta / organogenez evresinde) meydana gelir."
+            },
+            {
+              "title": "Klinik Örnekler",
+              "desc": "Yarık dudak/damak, Nöral tüp defektleri (Spina bifida), Fallot tetralojisi, Polidaktili, Sindaktili."
+            }
+          ],
+          "table": {
+            "title": "Sık Karşılaşılan Malformasyonlar",
+            "headers": [
+              "Malformasyon",
+              "Embriyolojik Hata",
+              "Genetik / Çevresel Risk"
+            ],
+            "rows": [
+              [
+                "Nöral Tüp Defekti",
+                "Nöral tüpün 28. günde kapanamaması",
+                "Folik asit eksikliği, çok genli kalıtım"
+              ],
+              [
+                "Yarık Dudak/Damak",
+                "Maksiller ve mediyal nazal çıkıntı birleşme hatası",
+                "Multifaktöriyel kalıtım"
+              ],
+              [
+                "Ventriküler Septal Defekt (VSD)",
+                "İnterventriküler septum kapanma defekti",
+                "Trizomiler (21, 18, 13), teratojenler"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Malformasyon = İntrinsik (yapısal/genetik) primer gelişim hatası.",
+          "Malformasyonlar organogenez evresinde (ilk 8 hafta) meydana gelir ve geri dönüşümsüzdür.",
+          "En sık rastlanan malformasyonlar: Konjenital kalp hastalıkları ve nöral tüp defektleridir."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-tbg-001",
+            "examYear": "2025-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Genetik",
+            "topic": "DISMORFOLOJIDE GENETIK TERMINOLOJI",
+            "stem": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Yarık dudak-damak",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
+                "isCorrect": true
+              },
+              {
+                "key": "D",
+                "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Nöral tüp defekti (spina bifida)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır.",
+            "matchScore": 4.2
+          },
+          {
+            "id": "d3-k2-pat-008",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul2",
+            "discipline": "Tıbbi Patoloji",
+            "topic": "KONJENİTAL SANTRAL SİNİR SİSTEMİ MALFORMASYONLARI",
+            "stem": "Ön beyin vezikülünün (prozensefalon) orta hatta iki ayrı hemisfere bölünememesi sonucu tek bir telensefalik ventrikül ve orta hat yüz anomalileri (siklopya, hipotelorizm, yarık damak) ile karakterize ağır gelişim defekti hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Holoprozensefali",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Lizensefali (Agyria)",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Polimikrojiri",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Şizensefali",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Anensefali",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Holoprozensefali, orta hat gelişiminde Sonic Hedgehog (SHH) yolağı mutasyonları veya Trizomi 13 zemininde prozensefalonun iki hemisfere ayrılamamasıdır; tek ortak ventrikül ve ağır kraniofasiyal dismorfizmle seyreder.",
+            "matchScore": 4
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Malformasyon ile deformasyon arasındaki en temel fark nedir?",
+          "Yarık dudak ve damak embriyolojik olarak hangi haftada oluşur?"
+        ]
+      },
+      {
+        "slideNumber": 3,
+        "title": "Deformasyon vs Disrupsiyon: Ekstrinsik Mekanizmalar",
+        "subtitle": "Mekanik Kuvvetler ve Vasküler Yıkımlar",
+        "badge": "AYIRICI TANI TUZAĞI",
+        "badgeColor": "amber",
+        "professorAudioHighlight": {
+          "timestamp": "21:30",
+          "quote": "Deformasyon mekanik güçtür! Uterus daralır, oligohidramnioz olur, fetüs sıkışır; ayak çarpılır (clubfoot). Doğumdan sonra düzelme şansı vardır. Ama disrupsiyon yıkımdır; amniyotik bant parmağı koparır!",
+          "emphasisType": "pearl",
+          "note": "Hoca deformasyonun mekanik/dönüşümlü, disrupsiyonun ise yıkıcı/amputasyon yapıcı farkına odaklandı."
+        },
+        "coreContent": {
+          "table": {
+            "title": "Deformasyon ve Disrupsiyon Karşılaştırması",
+            "headers": [
+              "Özellik",
+              "Deformasyon",
+              "Disrupsiyon"
+            ],
+            "rows": [
+              [
+                "Temel Neden",
+                "Ekstrinsik anormal mekanik bası/kuvvet",
+                "Önceden normal dokunun dış etkenle yıkımı"
+              ],
+              [
+                "Doku Başlangıcı",
+                "Normal doku ve organ taslağı",
+                "Tamamen normal gelişmiş doku"
+              ],
+              [
+                "Tipik Etkenler",
+                "Oligohidramnioz, uterus anomalisi, çoğul gebelik",
+                "Amniyotik bantlar, iskemi, teratojen, enfeksiyon"
+              ],
+              [
+                "Prognoz / Düzelme",
+                "Fizyoterapi/alçı ile düzelebilir (reversible)",
+                "Kalıcı doku kaybı / amputasyon (irreversible)"
+              ],
+              [
+                "Klasik Örnek",
+                "Pes ekinovarus (clubfoot), kalça çıkığı",
+                "Amniyotik bant amputasyonu, barsak atrezisi"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Deformasyon: Mekanik kuvvetlere bağlı şekil bozukluğudur, doku normaldir ve doğum sonrası düzelebilir.",
+          "Disrupsiyon: Önceden normal olan dokunun vasküler, mekanik veya enfektif yıkımıdır (Örn: Amniyotik bant amputasyonu).",
+          "Potter sekansındaki basık burun ve clubfoot tipik bir DEFORMASYONDUR."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-tbg-001",
+            "examYear": "2025-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Genetik",
+            "topic": "DISMORFOLOJIDE GENETIK TERMINOLOJI",
+            "stem": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Yarık dudak-damak",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
+                "isCorrect": true
+              },
+              {
+                "key": "D",
+                "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Nöral tüp defekti (spina bifida)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır.",
+            "matchScore": 5.2
+          },
+          {
+            "id": "past-1790877037444-653838",
+            "examYear": "2020-2021",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Ortopedi ve Travmatoloji",
+            "topic": "Ortopedi ve Travmatoloji",
+            "stem": "Talipes ekinovarus ile ilgili hangisi yanlıştır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Kas iskelet sisteminin en sik doğumsal defektidir.",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Tedavide erken dönemde seri alçılama yöntemleri başarılıdır.",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Klasik ayak deformitelerinden bir tanesi ekinus deformtesidir.",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Klasik ayak deformitelerinden bir tanesi ön ayak abduksiyonudur.",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Klasik ayak deformitelerinden bir tanesi orta ayak kavusudur.",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "【Patofizyolojik & Klinik Değerlendirme】:\nOrtopedi ve Travmatoloji kapsamında sorulan bu vaka/mekanizmada primer patoloji 'Kas iskelet sisteminin en sik doğumsal defektidir.' ile ilişkilidir.\n\n【Doğru Yanıt (A) Gerekçesi】:\nDoğru seçenek A olup, klinik pratikte biyokimyasal/histopatolojik belirteçler ve moleküler kaskad bu mekanizmayı doğrulamaktadır.\n\n【Çeldirici Seçeneklerin Değerlendirilmesi】:\nDiğer seçenekler alternatif klinik tablolarda veya farklı etyolojik süreçlerde gözlenmekte olup bu soru kökündeki klinik tabloya uymamaktadır.\n\n【Klinik İpucu】:\nOrtopedi ve Travmatoloji sınavlarında ayırıcı tanıda yer alan biyomarkerlar ve histopatolojik bulgular yüksek ayırt ediciliğe sahiptir.",
+            "matchScore": 2.5
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Amniyotik bant sendromu neden bir disrupsiyondur?",
+          "Oligohidramnioz fetüste hangi deformasyonlara yol açar?"
+        ]
+      },
+      {
+        "slideNumber": 4,
+        "title": "Displazi: Hücresel Organizasyon Bozukluğu",
+        "subtitle": "Doku Düzeyinde Hatalı Diferansiyasyon",
+        "badge": "HÜCRESEL PATOLOJİ",
+        "badgeColor": "purple",
+        "professorAudioHighlight": {
+          "timestamp": "28:15",
+          "quote": "Displazi dendiğinde aklınıza spesifik bir doku tipi gelecek: kemik displazileri, ektodermal displazi. Hücrelerin doku içindeki organizasyonu ve dizilimi bozulmuştur. Akondroplazi FGFR3 mutasyonuyla en ünlü örnektir.",
+          "emphasisType": "clinical_tip",
+          "note": "Hoca displazinin tek bir organı değil, vücuttaki o dokunun bulunduğu tüm sahaları etkileyebileceğini belirtti."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Displazi Tanımı",
+              "desc": "Hücrelerin doku içerisindeki anormal organizasyonu veya hücre mimarisinin fonksiyonel bozukluğudur."
+            },
+            {
+              "title": "Kalıtım Deseni",
+              "desc": "Çoğunlukla tek gen mutasyonlarına (Otozomal dominant vb.) bağlı olarak ortaya çıkar."
+            },
+            {
+              "title": "Klasik Örnek: Akondroplazi",
+              "desc": "FGFR3 gen mutasyonu sonucu kıkırdak proliferasyonunun durması ve rizomelik ekstremite kısalığı."
+            },
+            {
+              "title": "Osteogenezis İmperfekta",
+              "desc": "Tip 1 kollajen sentez defektine bağlı kemik kırılganlığı ve mavi sklera tablosu."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Displazi = Hücrelerin belirli bir doku türünde (kemik, kıkırdak, deri vb.) anormal organizasyonudur.",
+          "Akondroplazi ve Thanatoforik displazi FGFR3 gen mutasyonuna bağlı iskelet displazileridir.",
+          "Displaziler embriyonik döneme hapsolmaz, doğum sonrasında da doku büyüdükçe etkileri devam eder."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k5-pat-018",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Tıbbi Patoloji",
+            "topic": "Fibröz Displazi Histopatolojisi",
+            "stem": "Mikroskobik incelemede osteoblastik dizilim (osteoblastik rimming) GÖSTERMEYEN, lameller olmayan olgunlaşmamış örgülü (woven) kemikten kıvrık trabeküller (Çin harfi veya alfabe çorbası manzarası) ve aralarında sellüler iğsi fibroblastik stroma izlenen benign kemik lezyonu aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Fibröz displazi",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Osteoid osteoma",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Osteokondrom",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Kemiğin dev hücreli tümörü",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Ewing sarkomu",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Fibröz displazide GNAS genindeki somatik mutasyonlar osteoblastların matürasyonunu bozar. Karakteristik histolojik triad: 1) Matür lameller kemiğe dönüşemeyen C veya harf benzeri kıvrık woven kemik trabekülleri (Çin harfleri - Chinese characters), 2) Trabeküllerin etrafında osteoblastik sıralanmanın (rimming) OLMAMASI, 3) Aradaki sellüler fibröz stroma.",
+            "matchScore": 4
+          },
+          {
+            "id": "d3-k5-ort-014",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Ortopedi ve Travmatoloji",
+            "topic": "Kas-İskelet Enfeksiyonlarında Klasik Bulgular",
+            "stem": "Akut septik artrit veya osteomiyelit şüphesi olan bir hastada etkilenen bölgede beklenen kardinal lokal enfeksiyon bulguları arasında aşağıdakilerden hangisi YER ALMAZ?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Kemik krepitasyonu",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Lokal ısı artışı (kalor)",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Kızarıklık / eritem (rubor)",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Şişlik / ödem (tümör)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Şiddetli hassasiyet ve fonksiyon kaybı (functio laesa)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Akut kas-iskelet ve eklem enfeksiyonlarının kardinal bulguları rubor (kızarıklık), kalor (ısı artışı), tümör (şişlik), dolor (ağrı/hassasiyet) ve fonksiyon kısıtlılığıdır. \"Kemik krepitasyonu\" ise kırık fragmanlarının birbirine sürtünmesiyle oluşan mekanik bir kırık bulgusudur; enfeksiyonun klasik bulgusu değildir.",
+            "matchScore": 4
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Displazinin diğer yapısal anomalilerden farkı nedir?",
+          "FGFR3 geni ve akondroplazinin klinik bulguları nelerdir?"
+        ]
+      },
+      {
+        "slideNumber": 5,
+        "title": "Sekans vs Sendrom vs Asosiasyon",
+        "subtitle": "Çoklu Anomalilerin Sınıflandırılması ve Tanı Mantığı",
+        "badge": "⭐ HOCA VURGUSU: SINAVIN EN ÇOK SORULAN YERİ",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "36:40",
+          "quote": "Buraya yıldız koyun! Sekans, sendrom ve asosiasyon farkını bilmeyen genetik sınavından geçemez. Bir tek primer hata domino taşı gibi diğerlerini deviriyorsa buna SEKANS diyoruz. Potter sekansı buna en güzel örnektir.",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca domino taşı analojisi ile sekans kavramını ve VACTERL asosiasyonunu sınavın garanti soruları olarak açıkladı."
+        },
+        "coreContent": {
+          "table": {
+            "title": "Çoklu Anomali Örüntüleri",
+            "headers": [
+              "Kavram",
+              "Tanım Mekanizması",
+              "Klasik Klinik Örnek"
+            ],
+            "rows": [
+              [
+                "Sekans (Sequence)",
+                "Tek bir primer anomalinin zincirleme sonuçları (Kaskad)",
+                "Potter Sekansı (Bilateral renal agenezi -> Oligohidramnioz -> Akciğer hipoplazisi + Clubfoot)"
+              ],
+              [
+                "Sendrom (Syndrome)",
+                "Tek bir ortak etyolojiye (kromozom/gen) bağlı birden çok organda tutulum",
+                "Down Sendromu (Trizomi 21), Marfan Sendromu (FBN1)"
+              ],
+              [
+                "Asosiasyon (Association)",
+                "Tesadüften daha sık bir arada görülen fakat nedeni henüz bilinmeyen anomali grubu",
+                "VACTERL Asosiasyonu (Vertebral, Anal, Kardiyak, TE fistül, Renal, Limb)"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Sekans: Tek bir primer olay başlatır, gerisi zincirleme gelişir (Örn: Potter sekansı, Pierre Robin sekansı).",
+          "Sendrom: Birden fazla sistem tutulur ve ortak bir genetik/çevresel neden vardır (Örn: Turner, Down, Edward).",
+          "Asosiasyon: İstatistiksel birlikteliktir, ortak bir neden veya sekans kanıtlanmamıştır (Örn: VACTERL/VATER)."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k2-tbg-004",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul2",
+            "discipline": "Tıbbi Genetik",
+            "topic": "TİK BOZUKLUKLARI VE TOURETTE SENDROMU",
+            "stem": "En az 1 yıldır devam eden birden fazla motor tik ve en az bir vokal tikin (koprolali, ekolali gibi) birlikte bulunduğu, sıklıkla OKB ve DEHB ile birliktelik gösteren nörogelişimsel tik bozukluğu hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Tourette Sendromu",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Sydenham Koresi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Huntington Hastalığı",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Tardif Diskinezi",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Spazmodik tortikollis",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Tourette sendromu; çocukluk çağında başlayan, hem motor hem vokal tiklerin en az 1 yıl sürdüğü, dopaminerjik disfonksiyonla giden herediter nörogelişimsel bir tablodur.",
+            "matchScore": 5.2
+          },
+          {
+            "id": "d3-k4-gen-002",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul4",
+            "discipline": "Tıbbi Genetik",
+            "topic": "Down Sendromu ve Konjenital Kalp Anomalileri",
+            "stem": "Trizomi 21 (Down Sendromu) tanÄ±lÄ± bebeklerde en sÄ±k gÃ¶rÃ¼len ve endokardiyal yastÄ±k defekti olarak da adlandÄ±rÄ±lan konjenital kardiyak anomali aÅŸaÄŸÄ±dakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Atriyoventriküler septal defekt (AVSD)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Aort koarktasyonu",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "BikÃ¼spit aort kapaÄŸÄ±",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "İzole pulmoner stenoz",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Büyük arterlerin transpozisyonu",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Down Sendromu (Trizomi 21), konjenital kalp hastalÄ±klarÄ±nÄ±n en sÄ±k eÅŸlik ettiÄŸi kromozomal anomalidir (%40-50). Bu olgularda en karakteristik ve en sÄ±k gÃ¶rÃ¼len anomali endokardiyal yastÄ±k defektidir (AtriyoventrikÃ¼ler Septal Defekt - AVSD). AyrÄ±ca VSD ve ASD de gÃ¶rÃ¼lebilir.",
+            "matchScore": 5.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Potter sekansında zincirleme olaylar nasıl gelişir?",
+          "VACTERL asosiasyonunun bileşenleri nelerdir?"
+        ]
+      }
+    ],
+    "totalSlides": 5,
+    "matchedPastQuestionsCount": 10
+  },
+  {
+    "id": "learn-izolasyon-yontemleri",
+    "title": "İzolasyon Yöntemleri ve Hastane Enfeksiyon Kontrolü",
+    "shortTitle": "İzolasyon Yöntemleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1 - Enfeksiyon Hastalıkları (Dönem 3)",
+    "instructor": "Öğretim Üyesi",
+    "audioFile": "Enfeksiyon Hastalıkları 1.m4a",
+    "audioDuration": "33.3 dk",
+    "confidence": "%95 Doğrulandı",
+    "themeColor": "emerald",
+    "matchedNoteId": "note-e2df90f5dc",
+    "matchedNoteTitle": "3)İzolasyon yöntemleri",
+    "overview": "Hastane enfeksiyonlarının önlenmesi, el hijyeni ve standart önlemler, bulaşma yoluna dayalı izolasyonlar (Temas, Damlacık, Solunum) ve sembolleri/renkleri.",
+    "highYieldPearls": [
+      "**Standart Önlemler:** Kan ve diğer vücut sıvılarıyla temas riski veya sıçrama ihtimali bulunduğunda maske, gözlük ve önlük kullanımı zorunludur.",
+      "**Temas İzolasyonu:** Özellikle dirençli mikroorganizmaların (örneğin MRSA, VRE) yayılımını engellemek adına hastanın tek kişilik odalara alınması ve eldiven/önlük kullanımını içeren kuralları kapsar.",
+      "**Bulaş Zinciri:** Hastane infeksiyonlarının önlenmesinde en kritik adım, etkenin duyarlı konakçıya ulaşmasını kesmek için izolasyon önlemlerinin eksiksiz uygulanmasıdır."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "title": "İzolasyonun Temel Amacı ve Standart Önlemler",
+        "subtitle": "Her Hastada İstisnasız Uygulanması Gereken Kurallar",
+        "badge": "TEMEL ENFEKSİYON",
+        "badgeColor": "emerald",
+        "professorAudioHighlight": {
+          "timestamp": "01:15",
+          "quote": "Standart önlemler tanısı ne olursa olsun hastaneye yatan HER hastaya uygulanır. Kan, tüm vücut sıvıları, salgılar ve hasarlı deri potansiyel olarak bulaşıcı kabul edilir. En ucuz ve en etkili önlem el hijyenidir.",
+          "emphasisType": "pearl",
+          "note": "Hoca standart önlemlerin tanı beklenmeksizin her hastaya uygulanmasının önemini anlattı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "El Hijyeninin 5 Endikasyonu (DSÖ)",
+              "desc": "1) Hastaya dokunmadan önce, 2) Temiz/aseptik işlemden önce, 3) Vücut sıvısı maruziyetinden sonra, 4) Hastaya dokunduktan sonra, 5) Hasta çevresindeki nesnelere dokunduktan sonra."
+            },
+            {
+              "title": "Kişisel Koruyucu Ekipman (KKE)",
+              "desc": "Eldiven, önlük, maske ve yüz siperliği bulaş riskine göre seçilir."
+            },
+            {
+              "title": "Kesici-Delici Alet Güvenliği",
+              "desc": "Kullanılmış enjektör iğneleri kesinlikle kılıfına tekrar takılmaz, doğrudan sarı tıbbi atık kutusuna atılır."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Standart önlemler: Tanısı ne olursa olsun tüm hastalara uygulanır (Ter hariç tüm vücut sıvıları enfeksiyöz kabul edilir).",
+          "Hastane enfeksiyonlarını önlemede en etkili, en kolay ve en maliyet-etkin yöntem: Doğru el hijyenidir."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-enf-013",
+            "examYear": "2024-2025",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Enfeksiyon Hastalıkları",
+            "topic": "STANDART ÖNLEMLER",
+            "stem": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır.",
+            "matchScore": 6.7
+          },
+          {
+            "id": "d3-k1-enf-014",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Enfeksiyon Hastalıkları",
+            "topic": "DIRENÇLI MIKROORGANIZMA İZOLASYONU",
+            "stem": "Karbapenem dirençli Klebsiella pneumoniae ile kolonize/enfekte bir hastada, standart önlemlere ek olarak hangi\nizolasyon önlemi uygulanmalıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Ek önlem gerekmez, sadece standart önlemler yeterlidir",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Standart önlemler + temas izolasyonu",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "Standart önlemler + damlacık izolasyonu",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Standart önlemler + solunum (hava yolu) izolasyonu",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Standart önlemler + hem damlacık hem solunum izolasyonu birlikte",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Çok ilaca dirençli Enterobacteriaceae (karbapenemaz üreten Klebsiella\npneumoniae gibi) ile kolonize/enfekte hastalarda, standart önlemlere ek\nolarak temas izolasyonu uygulanır; bu tür dirençli bakteriler esas olarak\nkontamine eller ve yüzeyler yoluyla (temas) yayılır, havada asılı kalarak\nveya damlacıkla yayılmazlar.",
+            "matchScore": 3.7
+          }
+        ],
+        "aiPromptSuggestions": [
+          "El hijyeninin 5 altın anı nedir?",
+          "Standart önlemler hangi vücut sıvılarını kapsar, hangisini kapsamaz?"
+        ]
+      },
+      {
+        "slideNumber": 2,
+        "title": "Bulaşma Yoluna Dayalı İzolasyonlar ve Renk Kodları",
+        "subtitle": "Temas, Damlacık ve Solunum İzolasyonlarının Karşılaştırması",
+        "badge": "⭐ HOCA VURGUSU: RENKLER VE MASKE TİPLERİ",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "08:40",
+          "quote": "Sınavda sorarız: Hangi izolasyonda hangi renk ve sembol kullanılır, hangi maske takılır? Tüberkülozda N95 takılır, negatif basınç gerekir. Meningokokta cerrahi maske yeterlidir. Renkleri sakın karıştırmayın!",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca semboller (Kırmızı El, Mavi Çiçek, Sarı Yaprak), maske tipleri ve oda basınçlarının kesinlikle sınav sorusu olduğunu vurguladı."
+        },
+        "coreContent": {
+          "table": {
+            "title": "İzolasyon Tipleri & Kuralları Tablosu",
+            "headers": [
+              "İzolasyon Tipi",
+              "Sembol & Renk",
+              "Partikül Boyutu",
+              "Gereken Maske & Oda",
+              "Örnek Hastalıklar / Etkenler"
+            ],
+            "rows": [
+              [
+                "Temas İzolasyonu",
+                "Kırmızı El",
+                "Direkt/İndirekt temas",
+                "Önlük + Eldiven (Maske şart değil), Tek kişilik oda",
+                "VRE, MRSA, C. difficile, Acinetobacter, Uyuz"
+              ],
+              [
+                "Damlacık İzolasyonu",
+                "Mavi Çiçek",
+                "> 5 mikron (ağır damlacık)",
+                "Cerrahi Maske (1 metre mesafe), Normal oda",
+                "Meningokok, İnfluenza, Boğmaca, Kabakulak, Adenovirüs"
+              ],
+              [
+                "Solunum (Hava Yolu)",
+                "Sarı Yaprak",
+                "< 5 mikron (havada asılı)",
+                "N95 / FFP2 Maske, Negatif Basınçlı Oda (Hava dışarı atılır)",
+                "Akciğer Tüberkülozu, Kızamık, Suçiçeği, Yaygın Zona"
+              ],
+              [
+                "Koruyucu (Ters)",
+                "Beyaz Melek / Kart",
+                "Hastayı koruma",
+                "Pozitif Basınçlı Oda, Steril önlük, HEPA filtre",
+                "Ağır nötropeni, Kemik iliği / Organ nakli alıcıları"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Kırmızı El = Temas İzolasyonu (VRE, MRSA, C. difficile). Önlük ve eldiven zorunludur.",
+          "Mavi Çiçek = Damlacık İzolasyonu (>5 µm). Cerrahi maske yeterlidir, hasta ile 1 metre mesafe korunmalıdır.",
+          "Sarı Yaprak = Solunum / Hava Yolu İzolasyonu (<5 µm). N95/FFP2 maske ve NEGATİF basınçlı oda şarttır (Tüberküloz, Kızamık, Suçiçeği).",
+          "Negatif basınçlı oda: Havanın koridora kaçmasını önler. Pozitif basınçlı oda: Ters izolasyonda bağışıklığı baskılanmış hastaya dışarıdan mikrop girmesini önler."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-enf-010",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Enfeksiyon Hastalıkları",
+            "topic": "TEMAS İZOLASYONU",
+            "stem": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden değildir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Tek kişilik oda, mümkün değilse aynı mikroorganizma ile enfekte/kolonize hastaların\naynı odaya yerleştirilmesi (kohortlama)",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Odalar/hastalar arasında malzeme veya tıbbi cihazların ortak kullanımının önlenmesi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Kişisel koruyucu ekipmanların (KKE) hasta odasından ayrılmadan çıkarılması",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Odadan ayrıldıktan sonra el hijyeni uygulanması",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Odaya girmeden önce N95 maske takılması",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswer": "E",
+            "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez.",
+            "matchScore": 6.7
+          },
+          {
+            "id": "d3-k1-enf-014",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Enfeksiyon Hastalıkları",
+            "topic": "DIRENÇLI MIKROORGANIZMA İZOLASYONU",
+            "stem": "Karbapenem dirençli Klebsiella pneumoniae ile kolonize/enfekte bir hastada, standart önlemlere ek olarak hangi\nizolasyon önlemi uygulanmalıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Ek önlem gerekmez, sadece standart önlemler yeterlidir",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Standart önlemler + temas izolasyonu",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "Standart önlemler + damlacık izolasyonu",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Standart önlemler + solunum (hava yolu) izolasyonu",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Standart önlemler + hem damlacık hem solunum izolasyonu birlikte",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Çok ilaca dirençli Enterobacteriaceae (karbapenemaz üreten Klebsiella\npneumoniae gibi) ile kolonize/enfekte hastalarda, standart önlemlere ek\nolarak temas izolasyonu uygulanır; bu tür dirençli bakteriler esas olarak\nkontamine eller ve yüzeyler yoluyla (temas) yayılır, havada asılı kalarak\nveya damlacıkla yayılmazlar.",
+            "matchScore": 5.7
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Tüberkülozlu hastaya yaklaşırken neden cerrahi maske yetersizdir?",
+          "Clostridium difficile enfeksiyonunda alkollü el antiseptiği neden yetersizdir?"
+        ]
+      }
+    ],
+    "totalSlides": 2,
+    "matchedPastQuestionsCount": 4
+  },
+  {
+    "id": "learn-salgin-hastaliklar",
+    "title": "Halk Sağlığı - Salgın Hastalıklarda Kontrol ve Korunma",
+    "shortTitle": "Salgın Hastalıklar",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1 - Halk Sağlığı (Dönem 3)",
+    "instructor": "Uzm. Dr. Erkay Nacar",
+    "audioFile": "Halk Sağlığı Giriş Dersi.m4a",
+    "audioDuration": "39.9 dk",
+    "confidence": "%95 Doğrulandı",
+    "themeColor": "sky",
+    "matchedNoteId": "note-86e7d188a4",
+    "matchedNoteTitle": "4)'Salgın Hastalıklarda Kontrol ve Korunma'",
+    "overview": "Salgın (epidemi) dinamikleri, bulaşma zinciri bileşenleri (Kaynak, Bulaşma Yolu, Duyarlı Kişi), salgın inceleme basamakları, filyasyon ve karantina prensipleri.",
+    "highYieldPearls": [
+      "**Salgın Müdahaleleri ve Koordinasyon:** Etkili bir salgın yönetimi için kurumlar arası koordinasyon şarttır ve bunun için özel fiziksel alanlar (acil operasyon merkezi) gereklidir.",
+      "**Koruyucu Hekimlik Düzeyleri:** Birincil koruma (hastalık oluşmadan önceki önlemler), ikincil koruma (erken tanı ve tedavi) ve üçüncül koruma (rehabilitasyon) sınavda sıklıkla sorulan temel sınıflandırmalardır.",
+      "**Epidemik Fazlar:** Salgının ilk aşaması bir topluluğa giriş veya ortaya çıkışıdır; bu süreçlerin ve geçiş aşamalarının çok iyi bilinmesi gerekir.",
+      "**Aşı ve Bağışıklama:** Aşı reddi ve tereddüdü, salgınların kontrolünde en büyük engellerden biridir; bu konuda toplumsal farkındalık ve doğru bilgilendirme hayati önem taşır.",
+      "**Kolera ve Benzeri Salgınlar:** Kolera gibi su ve besin kaynaklı salgınlarda hijyen kuralları, temiz içme suyu temini ve atık kontrolü birincil koruma basamağını oluşturur."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "title": "Bulaşıcı Hastalıkların Bulaş Zinciri",
+        "subtitle": "Hastalık Yayılımının 3 Temel Halkası",
+        "badge": "EPİDEMİYOLOJİ ÇEKİRDEĞİ",
+        "badgeColor": "sky",
+        "professorAudioHighlight": {
+          "timestamp": "05:20",
+          "quote": "Bulaşıcı bir hastalığı kontrol etmek istiyorsanız bu üç halkadan en az birini kırmak zorundasınız: Kaynak, bulaşma yolu ve duyarlı kişi. Aşı duyarlı kişiyi korur; filyasyon ve izolasyon kaynağı sınırlar.",
+          "emphasisType": "pearl",
+          "note": "Hoca halk sağlığı müdahalelerinin daima bu 3 basamaktan birine hedeflendiğini anlattı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "1. Kaynağa Yönelik Önlemler",
+              "desc": "Erken tanı, bildirim, filyasyon (temaslı takibi), izolasyon ve hastanın tedavisi."
+            },
+            {
+              "title": "2. Bulaşma Yoluna Yönelik Önlemler",
+              "desc": "İçme suyu klorlaması, gıda güvenliği denetimleri, vektör (sivrisinek vb.) mücadelesi, havalandırma."
+            },
+            {
+              "title": "3. Duyarlı Konağa Yönelik Önlemler",
+              "desc": "Aktif bağışıklama (aşılar), pasif bağışıklama (serum/immünglobulin), kemoprofilaksi ve sağlık eğitimi."
+            }
+          ],
+          "table": {
+            "title": "Bulaş Zinciri Kırma Stratejileri",
+            "headers": [
+              "Halka",
+              "Halk Sağlığı Müdahalesi",
+              "Örnek Uygulama"
+            ],
+            "rows": [
+              [
+                "Kaynak",
+                "Vaka bulma ve İzolasyon",
+                "COVID-19 pozitif hastanın evde karantinası"
+              ],
+              [
+                "Bulaşma Yolu",
+                "Vektör ve Çevre Kontrolü",
+                "Sıtma için bataklık kurutma, kolerada su klorlama"
+              ],
+              [
+                "Duyarlı Konak",
+                "Aşılama ve Profilaksi",
+                "Kızamık aşısı, meningokok temaslısına rifampisin"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Bulaş zincirinin 3 halkası: Kaynak -> Bulaşma Yolu -> Duyarlı Kişi.",
+          "İzolasyon: HASTA olan bireyin ayrılmasıdır. Karantina: ŞÜPHELİ/TEMASLI sağlıklı bireyin kuluçka süresince gözetimidir.",
+          "Duyarlı konağı korumanın en radikal ve kalıcı yolu kitlesel aşılamadır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "past-q-combinepdf__28_-150",
+            "examYear": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+            "committeeId": "donem3-kurul6",
+            "discipline": "Halk Sağlığı",
+            "topic": "Halk Sağlığı",
+            "stem": "000 nüfuslu bir şehirde son 5 yılda 250 kişi meme kanseri tanısı almış olup bunlardan 20 kişi ölmüştür. Mortalite hızı binde kaçtır? 1)0.13 2)1.66 3)80 4)40 5)0.17 (Cevap: 1) 📌 Kaynak: 2021 Kurul 1 Sınavı (1.Kurul-2021.txt) Halk Sağlığı · Dönem 3 – Kurul 1 · 13/33 SALGIN KONTROL KAVRAMLARI 14 / 33 Bulaşıcı hastalık vakalarının olası bulaşma kaynağını (kaynak/temas zincirini) araştırmak amacıyla yapılan çalışmaya ne ad verilir? A Bildirim B Filyasyon ✓ C Portör arama D Kemoprofilaksi E Bağışıklama AÇIKLAMA Filyasyon, bulaşıcı bir hastalık vakası saptandığında hastalığın kaynağını ve bulaştığı/bulaşabileceği diğer kişileri belirlemek amacıyla yapılan sistematik saha araştırmasıdır (kaynak/temaslı araştırması). Bildirim, hastalığın yetkili sağlık kurumuna resmi olarak duyurulmasıdır; portör arama ise hastalık belirtisi göstermeden etkeni taşıyan kişilerin tespitidir. HAM SORU (KAYNAK METNİ) Bulaşıcı hastalık vakalarının daha önceki kaynaklarını araştırmak için yapılan çalışmalar aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Bildirim",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Filyasyon",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Portör arama",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Kemoprofilaksi",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Bağışıklama 📌 Kaynak: Genel Halk Sağlığı sınav havuzu (combinepdf_plain.txt) Halk Sağlığı · Dönem 3 – Kurul 1 · 14/33 SALGIN KONTROL KAVRAMLARI 15 / 33 Bulaşıcı bir hastalığı taşıdığı bilinen vakaların, hastalığın bulaştırıcılık süresi boyunca sağlam bireylerden ayrılması aşağıdaki tanımlardan hangisiyle ifade edilir? A Sekülar (saküler) trend B Filyasyon C Karantina D Tecrit ✓ E İtlaf AÇIKLAMA Tecrit (izolasyon), bulaşıcı hastalık etkenini taşıyan ve bulaştırıcı olduğu bilinen kişilerin, bulaştırıcılık süresi boyunca sağlıklı bireylerden ayrı tutulmasıdır. Karantina ise hastalığa maruz kalmış olabilecek ama henüz hasta olmayan (sağlıklı görünen) kişilerin, kuluçka süresi boyunca gözlem altında tutulmasıdır ve tecritten farklıdır. HAM SORU (KAYNAK METNİ) Bir bulaşıcı hastalığı taşıdığı bilinen vakaların, bu hastalığın bulaştırıcılık süresince sağlam bireylerden ayrılması hangi tanım ile ifade edilir? 1)Saküler trend 2)Filyasyon 3)Karantina 4)Tecrit",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Bu soru önceki senelere ait kurul çıkmış soruları arşivinden derlenmiştir.",
+            "matchScore": 5.2
+          },
+          {
+            "id": "d3-k1-hs-015",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "SALGIN KONTROL KAVRAMLARI",
+            "stem": "Bulaşıcı bir hastalığı taşıdığı bilinen vakaların, hastalığın bulaştırıcılık süresi boyunca sağlam bireylerden\nayrılması aşağıdaki tanımlardan hangisiyle ifade edilir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Sekülar (saküler) trend",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Filyasyon",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Karantina",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Tecrit",
+                "isCorrect": true
+              },
+              {
+                "key": "E",
+                "text": "İtlaf",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Tecrit (izolasyon), bulaşıcı hastalık etkenini taşıyan ve bulaştırıcı olduğu\nbilinen kişilerin, bulaştırıcılık süresi boyunca sağlıklı bireylerden ayrı\ntutulmasıdır. Karantina ise hastalığa maruz kalmış olabilecek ama henüz\nhasta olmayan (sağlıklı görünen) kişilerin, kuluçka süresi boyunca\ngözlem altında tutulmasıdır ve tecritten farklıdır.",
+            "matchScore": 4.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "İzolasyon ile karantina arasındaki fark nedir?",
+          "Salgın kontrolünde bulaşma yoluna yönelik önlemler nelerdir?"
+        ]
+      },
+      {
+        "slideNumber": 2,
+        "title": "Salgın İnceleme Basamakları ve Atak Hızı",
+        "subtitle": "Sahada Bir Salgın Nasıl Yönetilir?",
+        "badge": "SAHA METODOLOJİSİ",
+        "badgeColor": "emerald",
+        "professorAudioHighlight": {
+          "timestamp": "14:10",
+          "quote": "Salgın var mı yok mu? İlk basamak tanının doğrulanması ve beklenen vaka sayısının aşılıp aşılmadığıdır. Atak hızı ise o salgına özgü insidanstır, paydada risk altındaki nüfus yer alır.",
+          "emphasisType": "clinical_tip",
+          "note": "Hoca salgın inceleme adımlarının sıralamasının sık sorulan bir klasik olduğunu belirtti."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "1. Tanının Doğrulanması",
+              "desc": "Klinik ve laboratuvar bulgularının teyidi."
+            },
+            {
+              "title": "2. Salgının Varlığının Belirlenmesi",
+              "desc": "Mevcut vaka sayısının o bölge ve mevsim için beklenen sınırın üzerine çıkması."
+            },
+            {
+              "title": "3. Vaka Tanımının Yapılması",
+              "desc": "Kesin, olası ve şüpheli vaka kriterlerinin netleştirilmesi."
+            },
+            {
+              "title": "4. Atak Hızı Hesabı",
+              "desc": "Atak Hızı = (Salgında hastalanan kişi sayısı / Risk altındaki toplam kişi sayısı) × 100"
+            }
+          ]
+        },
+        "spotPearls": [
+          "Salgın incelemesinde ilk basamak: Tanının laboratuvar ve klinik olarak doğrulanmasıdır.",
+          "Atak hızı: Belirli bir salgın süresince risk altındaki grupta hastalığa yakalanma oranıdır (özel bir kümülatif insidans türüdür).",
+          "İkincil Atak Hızı: Primer vakayla temas edenler arasında kuluçka süresinde hastalananların oranıdır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "past-1790877034971-28969",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "Halk Sağlığı",
+            "stem": "250.000 nüfuslu bir yerleşim yerinde ortaya çıkan bir bulaşıcı hastalık salgınında, ilk kuluçka dönemi içinde 25.000 kişi, izleyen ikinci kuluçka döneminde ise 50.000 kişi hastalanmıştır.\n\nBu salgında sekonder atak hızı (ikincil hücum hızı) yaklaşık olarak yüzde kaçtır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "%12",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "%22",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "%32",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "%42",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "%52",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "⚠️ 【DİKKAT: ŞÜPHELİ CEVAP / DÜŞÜK GÜVENİLİRLİK】:\nBu sorunun mevcut cevap anahtarı veya iddia edilen yanıtı ('B'), amfi ders notları ve güncel tıp literatürüyle %90 eşleşme barajını geçememiştir (Hesaplanan Eşleşme: %15).\nBu nedenle sistem doğru cevabı işaretlememiş, boş bırakmış ve soruyu inceleme havuzuna almıştır.\n【Tıbbi Denetim Gerekçesi】:\nSecondary attack rate (SAR) is calculated as the proportion of susceptible contacts who become infected after exposure to a primary case. In this scenario, the first incubation period produced 25,000 cases (primary cases). The second incubation period produced 50,000 cases, implying 25,000 secondary cases (50,000 – 25,000). The total susceptible population is the total population minus the primary cases: 250,000 – 25,000 = 225,000. SAR = (25,000 / 225,000) × 100 ≈ 11.1%. The closest answer choice is 12% (option A). The claimed answer B (22%) is inconsistent with the standard epidemiologic formula and with textbook definitions (e.g., CDC, WHO, and standard epidemiology texts). The lecture slides provided do not contain any calculation or definition of secondary attack rate, and internet literature confirms the calculation above. Therefore the claimed answer is incorrect.\n\n【Klinik İpucu】: When calculating secondary attack rates, always subtract primary cases from total cases in the subsequent period and divide by the remaining susceptible population. This simple formula is a quick check for exam questions involving outbreak dynamics.",
+            "matchScore": 3.7
+          },
+          {
+            "id": "past-1790877035943-473151",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul6",
+            "discipline": "Halk Sağlığı",
+            "topic": "Halk Sağlığı",
+            "stem": "“Bir yılda Türkiye’de yaşayan her 100.000 kişiden 45’i Kırım Kongo Kanamalı Ateşi hastalığına yakalanmaktadır” ifadesi hangi kavramı karşılamaktadır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Prevalans",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "İnsidans",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Olgu fatalite hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Atak hızı",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Mortalite",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "【Patofizyolojik & Klinik Değerlendirme】:\nHalk Sağlığı kapsamında sorulan bu vaka/mekanizmada primer patoloji 'Prevalans' ile ilişkilidir.\n\n【Doğru Yanıt (A) Gerekçesi】:\nDoğru seçenek A olup, klinik pratikte biyokimyasal/histopatolojik belirteçler ve moleküler kaskad bu mekanizmayı doğrulamaktadır.\n\n【Çeldirici Seçeneklerin Değerlendirilmesi】:\nDiğer seçenekler alternatif klinik tablolarda veya farklı etyolojik süreçlerde gözlenmekte olup bu soru kökündeki klinik tabloya uymamaktadır.\n\n【Klinik İpucu】:\nHalk Sağlığı sınavlarında ayırıcı tanıda yer alan biyomarkerlar ve histopatolojik bulgular yüksek ayırt ediciliğe sahiptir.",
+            "matchScore": 2.7
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Atak hızı ile ikincil atak hızı arasındaki fark nedir?",
+          "Salgın eğrisinden (epidemiyolojik eğri) bulaş türü nasıl anlaşılır?"
+        ]
+      }
+    ],
+    "totalSlides": 2,
+    "matchedPastQuestionsCount": 4
+  },
+  {
+    "id": "learn-halk-sagligi-tarihcesi",
+    "title": "Halk Sağlığı Tarihçesi ve Sağlık Hizmetlerinin Sosyalleştirilmesi",
+    "shortTitle": "Halk Sağlığı Tarihçesi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1 - Halk Sağlığı (Dönem 3)",
+    "instructor": "Öğretim Üyesi",
+    "audioFile": "Halk Saülığı Tarihçesi.m4a",
+    "audioDuration": "24.2 dk",
+    "confidence": "%90 Doğrulandı",
+    "themeColor": "sky",
+    "matchedNoteId": "note-e947c6e0b3",
+    "matchedNoteTitle": "1)Halk SağlığıTarihçesi",
+    "overview": "Dünya ve Türkiye halk sağlığı tarihi, John Snow ve Broad Street kolerası, Alma-Ata Bildirgesi (1978), Dr. Refik Saydam ve Prof. Dr. Nusret Fişek'in 224 Sayılı Sosyalleştirme Kanunu.",
+    "highYieldPearls": [
+      "**Hipokrat'ın Temel İlkesi:** \"Önce zarar verme (Primum non nocere).\" Hipokrat tıbbın babası olarak kabul edilir ve Epidemiler kitabında çevre koşullarının sağlığa etkisini vurgulamıştır.",
+      "**Skorbüt ve C Vitamini:** Skorbüt, C vitamini eksikliğinden kaynaklanan bir hastalıktır ve tarihte narenciye tüketimi ile önlenebileceği keşfedilmiştir.",
+      "**D Vitamini Eksikliği:** D vitamini eksikliği raşitizme yol açar. Güneş ışığı ve beslenme ile önlenebilir.",
+      "**Koruyucu Hekimlik İlkeleri:** Koruyucu hekimlik, tedavi edici hekimlikten her zaman daha üstündür ve maliyet-etkindir.",
+      "**Halk Sağlığı Yasaları:** Türkiye'de ve dünyada halk sağlığının kurumsallaşması ve yasal düzenlemelerin yapılması salgınların önlenmesinde kilit rol oynamıştır."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "title": "Dünya Halk Sağlığı Öncüleri ve Dönüm Noktaları",
+        "subtitle": "Modern Epidemiyolojinin Doğuşu",
+        "badge": "TARİHİ KİLOMETRE TAŞLARI",
+        "badgeColor": "sky",
+        "professorAudioHighlight": {
+          "timestamp": "03:15",
+          "quote": "John Snow epidemiyolojinin babasıdır. 1854 Londra kolera salgınında etken bilinmiyorken harita üzerinde vakaları işaretleyerek Broad Street su pompasının kolunu söktürmüştür. Bu halk sağlığının en çarpıcı müdahalesidir.",
+          "emphasisType": "pearl",
+          "note": "Hoca John Snow'un Broad Street su pompası vakasının epidemiyolojinin temeli olduğunu belirtti."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "John Snow (1854)",
+              "desc": "Koleranın suyla bulaştığını haritalama yöntemiyle kanıtlayan modern epidemiyolojinin kurucusu."
+            },
+            {
+              "title": "Edward Jenner (1796)",
+              "desc": "Çiçek aşısını geliştirerek kitlesel eradikasyonun temelini atan bilim insanı."
+            },
+            {
+              "title": "Robert Koch & Louis Pasteur",
+              "desc": "Miasma (pis hava) teorisini yıkarak mikrop teorisini (Germ Theory) ispatladılar."
+            },
+            {
+              "title": "Alma-Ata Konferansı (1978)",
+              "desc": "DSÖ ve UNICEF öncülüğünde \"2000 Yılında Herkese Sağlık\" hedefi ve Temel Sağlık Hizmetleri (TSH) felsefesi ilan edildi."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Modern epidemiyolojinin babası: John Snow (1854 Londra Kolera Salgını - Broad Street Pompası).",
+          "İlk aşı: 1796'da Edward Jenner tarafından çiçek hastalığına (Variola) karşı geliştirilmiştir.",
+          "Alma-Ata Bildirgesi (1978): Temel Sağlık Hizmetleri (TSH) yaklaşımının küresel manifestosudur."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-hs-003",
+            "examYear": "2024-2025",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "DÜ NYA HALK SAĞLIĞI TARIHINDEN ÖNEMLI İSIMLER",
+            "stem": "Halk sağlığı tarihine ait aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Edward Jenner - Çiçek (variola) hastalığına karşı ilk aşıyı geliştirmesi",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "John Snow - Londra'da bir su pompasının kolera salgınının kaynağı olduğunu haritalama\nyöntemiyle göstermesi ve modern epidemiyolojinin kurucularından sayılması",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "James Lind - Skorbütün (C vitamini eksikliği) narenciye tüketimiyle önlenebildiğini\ngösteren ilk kontrollü klinik denemelerden birini yapması",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Robert Koch - Londra su şebekesindeki kolera salgınının kaynağını haritalama\nyöntemiyle ilk kez göstermesi",
+                "isCorrect": true
+              },
+              {
+                "key": "E",
+                "text": "Refik Saydam - Türkiye'de Hıfzıssıhha Enstitüsü'nün kurulmasına öncülük etmesi",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "D",
+            "explanation": "Londra'daki kolera salgınının kaynağını (Broad Street su pompası)\nharitalama yöntemiyle gösteren kişi Robert Koch değil, John Snow'dur;\nbu çalışma modern epidemiyolojinin doğuşu kabul edilir. Robert Koch,\nkolera basilini (Vibrio cholerae) ayrı bir çalışmada tanımlamıştır, ancak\nLondra salgınıyla doğrudan ilişkili değildir. Diğer eşleştirmeler (Jenner-\nçiçek aşısı, Lind-skorbüt, Refik Saydam-Hıfzıssıhha Enstitüsü) doğrudur.",
+            "matchScore": 4.2
+          },
+          {
+            "id": "d3-f-173",
+            "examYear": "2021",
+            "committeeId": "donem3-final",
+            "discipline": "Tıbbi Patoloji",
+            "topic": "Üroloji Çıkmış Soru 3",
+            "stem": "parmağına uyar IV. Deltoid kası C7 ten inerve olur Sıra No Cevap 1 a. I,II,III 2 b. I ve III 3 c. II, IV 4 d. Yalnız IV 5 e. I, II, III, IV  c. II, IV Epidemiyolojinin Tanım ve Sınıfandırılması Epidemiyolojik araştırmalarla ilgili hangisi doğrudur? Sıra No Cevap 1 Kohort çalışmalarının sonuçları evrene genellenebilir. 2 Kesitsel araştırmalar mutlak nedensellik verirler. 3 Vaka-kontrol tipi araştırmalar pahalı ve zaman isteyen araştırmalardır 4 Kohort tipi araştırmalarda bireylerin araştırmayı terk etme ihtimali yoktur. 5 Deneysel araştırmalarda araştırmacının olaylara müdahalesi söz konusu değilidir.  Kohort çalışmalarının sonuçları evrene genellenebilir.  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 13/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 24 25 Çevre Sağlığına Giriş ve Genel Bilgiler Dünya Sağlık Örgütü (WHO) tarafından; halk sağlığının korunabilmesi amacıyla hangi miktarda kükürt dioksit sınır değerinin aşılmaması tavsiye edilmektedir? Sıra No Cevap 1 100 mikrogram/m3/10 dakika 2 200 mikrogram/m3/10 dakika 3 300 mikrogram/m3/10 dakika 4 300 mikrogram/m3/10 dakika 5 500 mikrogram/m3/10 dakika  500 mikrogram/m3/10 dakika  Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri Aşağıdakilerden hangisi yaşlılarda düşmeye neden olacak sebeplerden değildir? Sıra No Cevap 1 Görme bozukluğu 2 Artrit 3 Kas Güçsüzlüğü 4 Yaşlılığa bağlı senil purpura 5 Ortostatik hipotansiyonla sonuçlanan barorefeks duyarlılığındaki düşüş.  Kas Güçsüzlüğü 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 14/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 26 27 28 tarihçesi Hangisi birincil koruma değilidir?Sıra No Cevap 1 Bağışıklama 2 Tansiyon ölçümü 3 Aile planlaması 4 Yeterli ve dengeli beslenme 5 Sağlık eğitimi  Tansiyon ölçümü Halk Sağlığı 1 Sağlıklı ve zamanında doğmuş yenidoğana ilk yapılan aşı hangisidir? Sıra No Cevap 1 Hepatit A 2 Hepatit B 3 Suçiçeği 4 Kızamık 5 Pnömokok  Hepatit B Bağışıklama ve Önemi Hangisi Türkiye'de rutin aşılama takvimi içerisinde yer almaz?? Sıra No Cevap 1 KKK 2 Hemoflus İnfuenza tip b 3 Suçiçeği 4 Sarı humma 5 BCG  Hemoflus İnfuenza tip b 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 15/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 29 30 İç Hastalıkları 4 Akalazya ile ilgili aşağıdaki seçeneklerden hangisi yanlıştır? Sıra No Cevap 1 Alt özefagus sfnkterinin beklenenden fazla gevşemesinden dolayı oluşan bir hastalıktır 2 Akalazya tanısı için baryumlu özofagus grafsi önemlidir 3 Özofagusda orta veya ileri derecede dilatasyon ve aperistaltizma izlenir 4 Baryumlu grafde diyafragmatik hiatus bölgesinde düzgün ince daralma görülür (kalem ucu şeklinde) 5 Özofagus motilite çalışmasında alt özofagus basıncında artış ve sfnkterin yeterince gevşeyememesi söz konusudur  Akalazya tanısı için baryumlu özofagus grafsi önemlidir  İç Hastalıkları 4 Aşağıdaki parazitlerden hangisi safra yollarında ya da barsakta obstrüksiyon yaratabilir? Sıra No Cevap 1 Giardia intestinalis 2 Ascaris lumbricoides 3 Isospora belli 4 Trichuris trichura 5 Enterobius vermicularis  Ascaris lumbricoides 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 16/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 31 32 İç Hastalıkları 4 Salmonella enfeksiyonları ile ilgili aşağıdaki seçeneklerden hangisi yanlıştır? Sıra No Cevap 1 Çiğ ya da az pişmiş kümes hayvanları, yumurta, et, deniz ürünleri ve pastörize edilmemiş sütlerle bulaşabilir 2 Enfeksiyonun ardından 12- 36 saat sonra ateş, baş ağrısı, kusma, ishal şeklinde ortaya çıkar 3 Kuşlar, memeli hayvanlar ve kemiricilerde de enfeksiyon nedeni olabilir fakat sadece insanlarda hastalık yapar 4 Göğüs ve karında basmakla solan, rose spot denilen, makülopapüler cilt döküntülerine neden olabilir 5 Sadece barsak ile sınırlı enfeksiyonlara neden olur, sistemik enfeksiyona neden olmaz  Sadece barsak ile sınırlı enfeksiyonlara neden olur, sistemik enfeksiyona neden olmaz  İç Hastalıkları 3 Aşağıdakilerden hangisi metabolik sendrom tanı kriterlerinden biri değildir? Sıra No Cevap 1 Trigliserit yüksekliği >150 mg/dl 2 Düşük HDL Erkek<40mg/dl ,Kadın 50 mg/dl 3 Artmış bel çevresi 4 Yüksek açlık glukozu>100 mg/dl 5 Yüksek kan basıncı SKB>120 mmHg, DKB>75 mmHG  Yüksek kan basıncı SKB>120 mmHg, DKB>75 mmHG  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 17/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 33 34 35 İç Hastalıkları 3 Aşağıdakilerden hangisi Cushing Sendromu belirtilerinden biri değildir? Sıra No Cevap 1 Genital ülserler 2 Sentripedal obezite 3 Glukoz intoleransı 4 Hirsutizm 5 Proksimal miyopati  Genital ülserler İç Hastalıkları 3 Çocukluk Çağı Diyabet belirtilerinden hangisi dopru değildir? Sıra No Cevap 1 Poliüri 2 Polifaji 3 Polidipsi 4 Çabuk yorulma 5 Kilo alma  Kilo alma İç Hastalıkları 2 Aşağıdakilerden hangisi kan şekeri regülasyonunda etkili olan hormonlardan biri değildir? Sıra No Cevap 1 İnsülin 2 Glukagon 3 Melatonin 4 Kortizol 5 Epinefrin  Melatonin 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 18/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 36 37 İç Hastalıkları 2 Nöroendokrin tümörler için hangisi yanlıştır??? Sıra No Cevap 1 Nöroendokrin tümörlerin görülme sıklığı giderek artmaktadır 2 Nöroendokrin tümörlerde klinik tümörün lokalizasyonuna ve hormon salınımına göre değişkenlik gösterir 3 Karsinoid Sendromda fuşhin görülür 4 Vipomada sulu diyare görülebilir 5 İnsülinoma hiperglisemiye neden olur  İnsülinoma hiperglisemiye neden olur  İç Hastalıkları 2 Gastrointestinal Stromal tümörler için aşağıdakilerden hangisi yanlıştır? Sıra No Cevap 1 Gastrointestinal stromal tümörlerin tedavisinde imatinib kullanılır 2 Gastrointestinal stromal tümörler en sık olarak midede bulunur 3 Gastrointestinal stromal tümörlerinde lenf bezi metastazı sık görülür 4 Gastrointestinal stromal tümörler Cajalın interstisyel hücrelerinden doğar 5 Gastrointestinal stromal tümörler 35 cm gibi büyük boyutlara ulaşabilir  Gastrointestinal stromal tümörlerinde lenf bezi metastazı sık görülür  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 19/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 38 39 İç Hastalıkları 1 Elli yaşın üzerindeki kişilerde günlük yeterli kalsiyum alımı için gerekli miktar en az hangisidir? Sıra No Cevap 1 Elli yaşın üzerindeki kadın ve erkekler için yeterli kalsiyum alımı 1200 mg/gün 2 Elli yaşın üzerindeki kadınlarda 1200 mg/gün, erkeklerde 1000mg/gün 3 Her iki cinsiyette 1 gram/gün 4 12000 mg/gün 5 600 IU/gün  Elli yaşın üzerindeki kadın ve erkekler için yeterli kalsiyum alımı 1200 mg/gün  İç Hastalıkları 1 Hangisi yaşlılarda düşme riskini azaltmak için alınacak önlemlerden biri değildir? Sıra No Cevap 1 Yerdeki alçak nesne ve mobilyanın kaldırılması 2 Yerdeki kabloların kaldırılması 3 Tuvaletin alçaltılması 4 Eşyaların fazla ve sıkışık yerleştirilmiş olmaması 5 Hipotansif ilaçların dikkatli kullanımı  Tuvaletin alçaltılması 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 20/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 40 41 İç Hastalıkları 1 Hangisi Familial ademonamtöz poliposis sendromu için yanlıştır? Sıra No Cevap 1 APC geni ile ilişkilidir tüm hastalarda bu gende mutasyon vardır 2 Mide fundus bölgesinde de prekanseröz polipler gelişebilir 3 Kolon kanserleri daha çok sol kolondadır 4 Kesin tanısı için kolonoskopi ve biyopsi gereklidir 5 Kolonda yüzlerce-binlerce polip bulunabilir  Mide fundus bölgesinde de prekanseröz polipler gelişebilir  Kardiyoloji 1 Aşağıdaki hangi hastalıkta infektif endokardit proflaksisi yapılması gerekir? Sıra No Cevap 1 Mitral stenoz 2 Mekanik mitral kapak protezi varlığı 3 Triküspid yetersizliği 4 Atriyal septal defekt 5 Aort darlığı  Mekanik mitral kapak protezi varlığı  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 21/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 42 43 44 Kardiyoloji 2 Hipertansiyonunun potansiyel riskleri ilgili şağıdaki ifadeleren hangisi yanlıştır? Sıra No Cevap 1 Atriyal fbrilasyon riskini artırır. 2 Koroner arter hastalığın isikini artırır. 3 Kronik böbrek yetmezliği riskini artırır 4 Aort disseksiyonu riskini azaltır. 5 İnme riskini artırır.  Aort disseksiyonu riskini azaltır. Kalp Yetersizliği ve Konjenital kalp hastalıkları Aşağıdakilerden hangisi kalp yetersizliğinde artış gösteren renin- anjiotensin- aldesteron sistem (RAAS) aktivasyonu sonuçlarından biri değildir? Sıra No Cevap 1 Ön yükte (afterload) azalma 2 Hipokalemi 3 Aritmi 4 Sol ventrikül yeniden şekillenmesi (remodeling) 5 Ardyük (preload) artışı  Ön yükte (afterload) azalma Kalp Yetersizliği ve Konjenital kalp hastalıkları Kronik kalp yetersizliği tanısı almış bir hastada, aşağıdaki ilaçlardan hangisi hastalığın progresyonunu önlemek amacıyla kullanılabilir? Sıra No Cevap 1 Diüretikler 2 Beta blokörler 3 Digoksin 4 Kalsiyum kanal blokörleri 5 Glitazonlar  Beta blokörler 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 22/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 45 46 47 NÖROLOJİ NÖROLOJİ BAŞAĞRISI Anamnezinde aura öyküsü olan hastada ilk aklınıza gelen hastalık hangisidir? Sıra No Cevap 1 epilepsi 2 trigeminal nevralji 3 migren 4 MS 5 gerilim tipi başağrısı  migren NÖROLOJİ NÖROLOJİ NÖROLOJİK HASTAYA YAKLAŞIM Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz olması, monoton konuşması hangi nörolojik hastalığı düşündürür? Sıra No Cevap 1 MS 2 Primer başağrısı 3 Polinöropati 4 Parkinson hastalığı 5 Epilepsi  Parkinson hastalığı NÖROLOJİ NÖROLOJİ POLİNÖROPATİLER ve BAZAL GANGLİONLAR Miyelinsiz sinir lif tipi hangisidir?Sıra No Cevap 1 Tip B 2 Tip A 3 Tip C 4 Tip D 5 Kalın lifer  Tip C 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 23/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 48 49 NÖROLOJİ NÖROLOJİ NÖROLOJİK MUAYENE Motor muayenede kas gücü 4/5'in karşılığı aşağıdakilerden hangisidir? Sıra No Cevap 1 Yer çekimine karşı koyabilmek 2 Gözle görülebilen, palpe edilebilen kasılma 3 Tam felç 4 Normal kas gücü 5 Kas normal hareketini yapmakta karşı kuvvete yenilmekte  Kas normal hareketini yapmakta karşı kuvvete yenilmekte  Ortopedi ve Trav Ortopedi ve Trav Ortopedi 1 Aşağıdaki romatoid artritle alakalı bilgilerden hangisi yanlıştır? Sıra No Cevap 1 En sık görülen infamatuar arttir. 2 Eklemde şişlik yapabilir. 3 İnfamatuar hücreler, granülasyon dokusu ve sinovyal fbroblastlardan oluşan sinovyal kitle (pannus) mevcuttur. 4 Genelde el eklemlerini simetrik olarak tutar. 5 Erkeklerde kadınlardan daha fazla görülür.  Erkeklerde kadınlardan daha fazla görülür.  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 24/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 50 51 Ortopedi ve Trav Ortopedi ve Trav Ortopedi 2 Aşağıdakilerden hangisi yanlıştır?Sıra No Cevap 1 Milkman sendromu olarak da adlandırılan pseudofraktürler sekonder hiperparatiroide görülebilir. 2 Osteomalazi ve rikets hastalıkları D vitamini eksiklikleri veya D vitamininin işlevini yerine getirememesi sonucu görülürler. 3 Osteogenesis imperfektada mavi sklera görülebilir. 4 Osteogenesis imperfekta tip 2 kollagen geninde bozukluk nedeni ile ortaya çıkar. 5 Osteopetrozis defektik kemik yıkımı ile karakterizedir.  Osteogenesis imperfekta tip 2 kollagen geninde bozukluk nedeni ile ortaya çıkar.  Duygudurum Bozuklukları Aşağıdakilerden hangisi, unipolar depresyona göre, bipolar depresyonda ön plana çıkar? Sıra No Cevap 1 Psikomotor retardasyon ve letarji daha sıktır. 2 Atipik semptomlar daha sıktır. 3 Hipersomni daha sıktır. 4 Antidepresanlar daha etkilidir. 5 Özkıyım riski yüksektir.  Özkıyım riski yüksektir. 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 25/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 52 53 Kişilik Bozuklukları Aşağıdakilerden hangisi, histriyonik kişilik bozukluğu kliniği hakkında söylenemez? Sıra No Cevap 1 İlgi odağı olmadığı durumlarda rahatsız olur. 2 Çoğu zaman başkalarını kıskanır. 3 Hızlı değişen ve yüzeysel kalan duygular sergiler. 4 Gösteriş yapar, yapmacık davranır. 5 Telkine yatkındır, kolay etkilenir.  Çoğu zaman başkalarını kıskanır.  Yaşlılığa Özgü Ruhsal Sorunlar Aşağıdakilerden hangisi, ileri evre Alzheimer Hastalığında öne çıkan belirtilerden biri değildir? Sıra No Cevap 1 Artmış güçsüzlük, dengesiz yürüme,yatağa bağımlılık 2 Mesane ve barsak işlevlerinin kontrolünün kaybı 3 Dışarıda kaybolma 4 Belirgin ölçüde kilo kaybı 5 İlerleyici şekilde konuşmanın kaybı  Dışarıda kaybolma 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 26/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 54 Psikiyatri Şizofreni ve Diğer Psikotik Boz. Şizofreni hakkında verilen aşağıdaki bilgilerden hangisi söylenemez? Sıra No Cevap 1 Şizofreni hastalarında madde kullanma sıklığı yüksektir. 2 Kentsel bölgelerde doğanlarda hastalık riski daha fazladır. 3 İki ebeveyninde şizofreni hastalığı varsa, çocukta görülme oranı %47’e kadar yükselmektedir. 4 Yaz mevsiminde doğanlarda risk artmaktadır. 5 Çocukluk çağı travmaları, hastalık riskini artırmaktadır.  Yaz mevsiminde doğanlarda risk artmaktadır.  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 27/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 55 56 Diüretikler ''İlk bulunan karbonik anhidraz inhibitörüdür ve oral yolla kullanılır. Proksimal tübülden sekresyonla atılır. Etkisi yarım saat içinde başlar. yaklaşık 12 saate kadar devam eder. Tedavide en sık olarak geniş açılı glokomda, göz-içi basıncını düşürmek amacıyla, metabolik alkolozun düzeltilmesinde, akut dağ hastalığında, epilepside, ilaç intoksikasyonlarında (İdrarın alkalileştirilmesi için) kullanılır.'' Özellikleri tanımlanan diüretik hangisi olabilir? Sıra No Cevap 1 Furosemid 2 Asetazolamid 3 Bumetanid 4 Civalı diüretikler 5 Etakrinik asit  Asetazolamid Farmakoloji 2 Alkol bağımlılığının tedavisinde kullanım için onay alan madde aşağıdakilerden hangisidir? Sıra No Cevap 1 Akamprosat 2 Fenitoin 3 İsoniazid 4 Etilen glikol 5 Glisin  Akamprosat 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 28/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 57 58 59 Kardiyak aritmilerde kullanılan ilaçlar Ameliyat esnasında ve diğer akut aritmilerde kullanılan kısa etkili ß bloker etkili ilaç hangisidir? Sıra No Cevap 1 Esmolol 2 Amiodaron 3 Diltiazem 4 Propranolol 5 Nifedipin  Esmolol Farmakoloji 1 'Sebepten bağımsız olarak astımdaki bronkospazm mast hücrelerine bağlı İg-E miktarını azaltan ve mast hücre degranülasyonunu inhibe eden ajanlarla tedavi edilir.'' Genel doğrusal paradigmasına hangisi uymaz? Sıra No Cevap 1 Kromolin 2 Sempatomimetik ajanlar 3 Teoflin 4 Antihistaminik ve steroidler 5 Homeopati  Kromolin NSAİİ Normal dozunda, 500mg Tb formunda reçete endikasyonu '''16 yaş ve üstü adolesanlar ve yetişkinlerde; haff ve orta dereceli akut ağrılarda ve ateşli durumlarda endikedir. İltihaplı romatizmal hastalıkların tedavisinde endikedir.''' yazan ve 1/5 dozlamda antiagregan olarak kullanılan ilaç hangisidir? Sıra No Cevap 1 Aspirin 2 Metamizol 3 Naproksen Na+ 4 Etodolak 5 Asetaminofen  Aspirin 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 29/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 60 61 Farmakoloji 3 Aşağıdaki adrenerjik reseptörlerden hangisi hipertansiyon tedavisinde görev alır? Sıra No Cevap 1 Alfa2 agonist 2 Alfa1 agonist 3 Beta3 agonist 4 Beta2 agonist 5 Beta1 agonist  Alfa2 agonist Tetrasiklin, Makrolit, Kloramfenikol Aşağıdaki antibiyotiklerden hangisi muhtemelen bir aşırı duyarlılık reaksiyonu sonucu akut kolestatik hepatit oluşturabilir? Sıra No Cevap 1 Eritromisin 2 Telitromisin 3 Klindamisin 4 Kloramfenikol 5 Linezolid  Eritromisin 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 30/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 62 63 Kanser kemoterapisi Kanser tedavisinde kullanılan antrasiklinlerle ilgili aşağıdaki ifadelerden hangisi yanlıştır? Sıra No Cevap 1 DNA ve RNA sentezini etkilemezler 2 Antikanser etki gösteren antibiyotiklerdir 3 Serbest radikal oluşumunu artırarak toksik etki gösterirler 4 Daunorubisin ve idarubusin genellikle akut lösemilerde etkilidir 5 Mitomisinin yüzeyel mesane kanserinin intravezikal tedavisinde kullanılır  DNA ve RNA sentezini etkilemezler  Dislipidemide Kullanılan İlaçlar Aşağıdaki ilaçlardan hangisi yüksek dansiteli lipoprotein (YDL veya HDL) düzeyini artırmada en etkili ilaçtır? Sıra No Cevap 1 Niasin 2 Ezetimib 3 Atorvastatin 4 Fenofbrat 5 Kolesevelam  Niasin 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 31/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 64 65 66 Pankreatik Hormonlar ve Antidiyabetik İlaçlar Aşağıdaki insülinlerden hangisi hızlı etkili insülün olarak kullanılmaktadır? Sıra No Cevap 1 İnsülin lispro 2 Regüler insülin 3 NPH insülin 4 İnsülin glarjin 5 İnsülin detemir  İnsülin lispro Sedatif ve Hipnotik İlaçlar Aşağıdaki maddelerden hangisi uykuya yardımcı sedatif etkili antihistaminik bir ilaçtır? Sıra No Cevap 1 Difenhidramin 2 Diazepam 3 Etanol 4 Glutetimid 5 Desmetildiazepam  Difenhidramin İmmunofarmakoloji Penisilin gibi ilaçlara karşı tip I (ani) duyarlılık allerjisi geliştiğinde ilaç- hapten birleşiğine karşı spesifk olarak aşağıdaki antikorlardan hangisi oluşmaktadır? Sıra No Cevap 1 IgE 2 IgM 3 IgA 4 IgG1 5 IgG2  IgE 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 32/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 67 68 Dermatolojik Aşağıdakilerden hangisi topikal uygulamayla akne vulgaris tedavisinde kullanılan ilaçlardan biri değildir? Sıra No Cevap 1 Ketokonazol 2 Klindamisin fosfat 3 Eritromisin 4 Metronidazol 5 Sulfasetamid  Ketokonazol Beta Laktam ve Diğer Hücre Duvarına Etkili Antibiyotikler Bakteriyel laktamazlar tarafından penisilinlerin β- laktam halkasının hidrolizi sonucu antibakteriyel etkinliği olmayan aşağıdaki maddelerden hangisi meydana gelir? Sıra No Cevap 1 Penisiloik asid 2 Aminopenisilanik asit 3 Peptidoglikanlar 4 N-Asetilglukozamin 5 N- Asetilmuramik asid  Peptidoglikanlar 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 33/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 69 Tıbbi Farmakoloji Genel ve Lokal Anestezikler I. Genel anestezikler glomerüler fltrasyon hızını ve idrar akışını arttırma eğilimindedirler. Böbrek kan akımında da artış yaparlar II. Halotan dışında volatil anestaziklerin karaciğer üzerine ciddi bir etkileri yoktur. Halotan <12 yaşta hepatotoksik değildir ve nedeni bilinmemektedir III. Halojenli anesteziklerden propofol-ketamin ikilisi uterus kaslarını güçlü bir şekilde kasar IV. Doğum esnasında veya plasenta retansiyonunda manuel müdahale için gerekli gevşemeyi sağlarlar. Ancak bu gevşemenin uterusta kanamayı da beraberinde getireceği unutulmamalıdır Genel anestezik ajanlar için hangisi/hangileri doğrudur? Sıra No Cevap 1 Yalnız I, II ve III 2 Yalnız I ve III 3 Yalnız II ve IV 4 Yalnız IV 5 I, II, III ve IV  Yalnız I, II ve III 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 34/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 70 71 Opoid Analjezikler ve Antagonistleri Narkotik analjeziklerin endikasyonlarından biri aşağıdakilerden hangisi değildir? Sıra No Cevap 1 Doğum eylemini geciktirme 2 Postoperatif ağrı 3 Öksürük 4 Akut pulmoner ödem 5 Nonspesifk diyare  Doğum eylemini geciktirme TIBBİ PATOLOJİ TIBBİ PATOLOJİ İnfamatuar barsak hastalığı Aşağıdakilerden hangisi ülseratif kolitte gözlenen bulgulardan biri değildir? Sıra No Cevap 1 Kolonun kesintisiz tutulumu 2 Kript lümeninde apseler 3 Serozal yüzeyin infamasyonu 4 Apendiks tutulumu 5 Ülser komşuluğunda rejenere mukoza  Serozal yüzeyin infamasyonu 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 35/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 72 73 74 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Glomerülonefrit Akut postenfeksiyöz (poststreptokoksik) glomerülonefrit ile ilgili hangisi yanlıştır? Sıra No Cevap 1 İmmunkompleks glomerülde birikir. 2 En sık beta hemolitik streptokokların nefritojenik türleri ile ilişkilidir. 3 Primer olarak alternatif kompleman yolağını aktive eder. 4 Granüler tarzda kompleman birikimi mevcuttur. 5 İnsitu ya da dolaşan kompleks birikimi olabilir.  Primer olarak alternatif kompleman yolağını aktive eder.  TIBBİ PATOLOJİ TIBBİ PATOLOJİ Amiloidoz Senil kardiyak amiloidozda hangi tip amiloid birikimi olur? Sıra No Cevap 1 AL (amiloid haff zincir) protein 2 AA (amiloid ilişkili) fbril 3 Aβ amiloid 4 Transtiretin (TTR): 5 β2–mikroglobulin  Transtiretin (TTR): TIBBİ PATOLOJİ TIBBİ PATOLOJİ Obstruktif akciğer Hastalıkları Sarkoidozla ilgili hangisi yanlıştır?Sıra No Cevap 1 Lenf nodları karakteristik olarak ağrısız, sert ve elastik kıvamdadır  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 36/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 75 76 77 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Kolon Polipleri Hangiisinde kolonda polipler genellikle 5 yaşından önce görülür? Sıra No Cevap 1 Peutz-Jeghers sendromu 2 Jüvenil polipozis 3 Ailesel adenomatöz polipozis 4 Cronkhite-Canada sendromu 5 Cowden sendromu  Jüvenil polipozis TIBBİ PATOLOJİ TIBBİ PATOLOJİ Yumuşak doku tümörleri Yumuşak doku tümörleri ve bu tümörlerin farklılaştıkları hücrelere ilişkin; I) desmoid tümör- fbroblast II) Ewing sarkomu-Endotel III) Kaposi sarkomu- Düz kas eşleştirmelerinden hangileri doğrudur? Sıra No Cevap 1 Yalnız I 2 Yalnız II 3 Yalnız III 4 I ve II 5 II ve III  Yalnız I TIBBİ PATOLOJİ TIBBİ PATOLOJİ Santral sinir sistemi tümörleri Sıklıkla progesteron reseptörü bulunan ve gebelik sırasında hızla büyüyebilen tümör hangisidir? Sıra No Cevap 1 Ependimom 2 Oligodendrogliom 3 Schwannom 4 Meningiom 5 Astrositom  Meningiom 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 37/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 78 79 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Nöromuskuler kavşak hastalıkları Myastenia Gravis için hangisi yanlıştır?Sıra No Cevap 1 Dalgalanan kas güçsüzlüğü görülür 2 Otoimmun bir hastalıktır 3 Timik hiperplazi ilişkilidir. 4 Klinik olarak ptozis ile kendini gösterir. 5 En sık antijenik hedef presinaptik kalsiyum kanallarıdır.  En sık antijenik hedef presinaptik kalsiyum kanallarıdır.  TIBBİ PATOLOJİ TIBBİ PATOLOJİ Ateroskleroz Ateroskleroz gellişimi ile ilgisi hangisi yanlıştır? Sıra No Cevap 1 Yüksek oranda çoklu doymamış yağlar içeren diyetler plazma kolesterolünü düşürür 2 Çoklu doymamış sıvı yağların yapay hidrojenizasyonu ile üretilen trans yağlar kolesterol proflini olumsuz etkiler 3 Obezite ve sigara HDL'yi yükseltir 4 Kilo verme ve egzersiz CRP düzeylerini azaltır 5 Statinler, LDL kolesterolü ve CRP düzeylerini azaltır  Obezite ve sigara HDL'yi yükseltir 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 38/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 80 81 82 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Diabetes Mellitus Diyabetik nefropatinin en erken bulgusu hangisidir? Sıra No Cevap 1 Glukozüri 2 Ketonüri 3 Mikrolbüminüri 4 Poliüri 5 Nefrotik sendrom  Mikrolbüminüri TIBBİ PATOLOJİ TIBBİ PATOLOJİ Akciğer ve Plevra tümörleri Hangisi sigara içimi ile daha çok ilişkili olup aynı zamanda cerrahi olarak çıkarılabilir? Sıra No Cevap 1 Skuamöz hücreli karsinom 2 Adenokarsinom 3 Küçük hücreli karsinom 4 Karsinoid tümör 5 Mezotelyoma  Karsinoid tümör TIBBİ PATOLOJİ TIBBİ PATOLOJİ Lenfoid neoplaziler- 1 Ekstranodal T hücre kökenli nonHodgkin lenfoma hangisidir? Sıra No Cevap 1 Burkitt lenfoma 2 MALToma 3 Mikozis Fungoides 4 Folliküler lenfoma 5 Mantle Zon lenfoma  Mikozis Fungoides 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 39/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 83 84 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Myelin Hastalıkları Erişkin bir kadının otopsisinde; beyinde ventriküllerin çevresindeki beyaz cevherde, ortası demiyelinize, çevresinde perivasküler lenfositik infltrasyonlar bulunan çok sayıda alan saptanıyor. Hastanın genç yaştan beri devam eden ve ataklarla seyreden nörolojik semptomları ve görme bozukluğu olduğu öğreniliyor. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir? Sıra No Cevap 1 Alzheimer hastalığı 2 Multiple skleroz 3 Amyotrofk lateral skleroz 4 Frontotemporal lober dejenerasyon 5 Huntington hastalığı  Huntington hastalığı TIBBİ PATOLOJİ TIBBİ PATOLOJİ Karaciğer Hastalığının Klinik Sendromları ve Kolestatik Karaciğer Hastalıkları Primer biliyer kolanjit ile ilgili hangisi yanlıştır? Sıra No Cevap 1 Küçük ve orta büyüklükteki safra kanallarını tutar 2 On hastadan dokuzu kadındır 3 Hastaların %90’ından fazlasında antimitokondriyal antikorlar saptanır 4 En sık birlikte görüldüğü otoimmün hastalık Graves hastalığıdır 5 Granülom oluşumu infamasyona eşlik edebilir  En sık birlikte görüldüğü otoimmün hastalık Graves hastalığıdır  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 40/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 85 86 87 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Meme kanseri-1 İnvaziv meme kanseri histolojik derecelendirmesinde hangileri dikkate alınır? I- Tübül formasyonu II- Pleomorfzm III- Mitoz sayısı IV- E- kadherin ekspresyonu Sıra No Cevap 1 Yalnız I 2 I-II 3 I-II-IV 4 I-II-III 5 Hepsi  Hepsi TIBBİ PATOLOJİ TIBBİ PATOLOJİ Hücre Hasarı, Hücre Ölümü Ve Adaptasyonlar Hangisi anti- apoptotik etki gösterir? Sıra No Cevap 1 BH3 proteinlerin aktivasyonu 2 Bax-Bak proteinlerinin aktivasyonu 3 Sitokrom c sızması 4 Bcl-2/ Bcl-xL üretimi 5 Kaspazların aktivasyonu  Bcl-2/ Bcl-xL üretimi TIBBİ PATOLOJİ TIBBİ PATOLOJİ Meme hastalıkları patolojisi Hangisi erkek meme kanseri risk faktörlerinden değildir? Sıra No Cevap 1 Eksojen östrojen kullanımı 2 Obezite 3 1.derece akrabada meme kanseri tanısı olması 4 Radyoaktif iyot tedavisi 5 Kleinefelter sendromu  Radyoaktif iyot tedavisi 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 41/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 88 89 90 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Myeloid ve histiyositik neoplaziler Hangisi myeloid diferansiasyonu promyelositik evrede bloke eder? Sıra No Cevap 1 Jak-2 mutasyonu 2 PML-RARA füzyon geni 3 Philedelphia kromozomu 4 Trizomi 8 5 5q delesyonu  PML-RARA füzyon geni TIBBİ PATOLOJİ TIBBİ PATOLOJİ SİNİR SİSTEMİNDEKİ HASAR BİÇİMLERİ Hangisi nöronal hasarın morfolojik özelliklerinden değildir? Sıra No Cevap 1 Hücre boyutlarında küçülme 2 Nukleusta piknoz 3 Nukleolusun ortadan kaybolması 4 Sitoplazmada yoğun eozinofli 5 Rosenthal liferi  Nukleolusun ortadan kaybolması  TIBBİ PATOLOJİ TIBBİ PATOLOJİ Kanser Patogenezi Hangisi tümöre bağlı İmmün supresyoa aracılık etmez? Sıra No Cevap 1 PD-1 2 PD-L1 3 CTLA-4 4 Treg İndüksiyonu 5 CAR-T hücreleri  CAR-T hücreleri 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 42/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 91 92 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Barsak tümörleri Kolon rektosigmoid tümörleri ile ilgili hangisi daha sık beklenir? Sıra No Cevap 1 Mismatch tamir genlerinde mutasyon saptanır. 2 Crohn benzeri lenfositik 3 Sağ taraf tümörlerine göre prognoz daha iyidir. 4 FAP zemininde gelişmesi 5 NoMo sınıfında olması  FAP zemininde gelişmesi TIBBİ PATOLOJİ TIBBİ PATOLOJİ Serviks kanseri-2 HPV E7 viral onkoproteini etkisini hangisi üzerinden oluşturur? Sıra No Cevap 1 Retinoblastom tümör baskılayıcı geni 2 p53 3 p16 4 p27 5 Siklin D1  p53 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 43/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 93 94 TIBBİ PATOLOJİ TIBBİ PATOLOJİ İmmün Sistem Major histokompatibilite kompleks (MHC) molekülleri ile ilgili hangisi doğrudur? Sıra No Cevap 1 Antijenlerin B hücrelerince tanınmasını sağlarlar 2 Class I moleküllerle ortaya konan peptitlere sadece CD8+ T hücreler cevap verir 3 Class II MHC molekülleri tüm çekirdekli hücrelerde bulunur 4 Class I MHC molekülleri genellikle hücre dışında sentezlenmiş proteinlerden gelişen ve hücreye yutulan peptidlere bağlanır 5 Class IMHC molekülleri DP, DQ, ve DR adı verilen en az 3 alt bölge içeren HLA- Dbölgesindeki genlerle kodlanır  Class I MHC molekülleri genellikle hücre dışında sentezlenmiş proteinlerden gelişen ve hücreye yutulan peptidlere bağlanır  TIBBİ PATOLOJİ TIBBİ PATOLOJİ Mide Polipleri ve Mide Tümörleri Mide adenomları ile ilgili hangisi yanlıştır?Sıra No Cevap 1 Tüm mide poliplerinin yaklaşık %10'unu oluşturur 2 Erkeklerde kadınlardan 3 kat daha sık rastlanır 3 Adenokarsinom gelişme riski lezyonun boyutu ile ilişkilidir 4 En sık mide korpusundan gelişirler 5 Tüm gastrointestinal adenomlarda epitel displazisi vardır  En sık mide korpusundan gelişirler  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 44/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 95 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Restriktif Akciğer Hastalıkları Pnömokonyozlar ile ilgili hangisi yanlıştır?Sıra No Cevap 1 Kömür madencilerinde akciğer kanseri sıklığında bir artış söz konusudur 2 Silikozis bugün itibariyle dünyada prevalansı en yüksek olan meslek hastalığıdır 3 Silikoziste tüberküloza karşı duyarlılık artmıştır 4 Asbestoszis etkeni olan amfboller, serpentin krizotilden daha patojeniktir 5 Plevral plaklar asbest maruziyetinin en sık bulgusudur  Silikozis bugün itibariyle dünyada prevalansı en yüksek olan meslek hastalığıdır  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 45/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 96 97 TIBBİ PATOLOJİ TIBBİ PATOLOJİ Tiroid kanserleri-1 Tiroid nodülleri için hangisi yanlıştır?Sıra No Cevap 1 Geç hastalardaki nodüllerin, yaşlılara göre neoplastik olma olasılıüı daha yüksektir 2 Baş boyun bölgesine radyasyon uygulanması, tiroid maligniteleri için artmış risk taşır 3 Radyoaktif iyod tutan nodüllerin malign olma olasılığı daha yüksektir 4 Soliter tiroid nodüllerin, multiple nodullere göre neoplastik olma olasılığı daha fazladır. 5 Erkeklerdeki nodüllerin, kadınlara göre neoplastik olma olasılığı daha yüksektir.  Radyoaktif iyod tutan nodüllerin malign olma olasılığı daha yüksektir  Üroloji 1 Aşağıdaki patolojilerin hangisinde üst üriner sistem görüntüleme yöntemlerine gerek yoktur? Sıra No Cevap 1 Ürosepsis varlığı 2 Enfekte böbrek taşı 3 Akut sistit 4 Akut pyelonefrit 5 Tekrarlayan üriner enfeksiyonlar  Akut sistit 12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 46/47 Sıra No Ders / Ünite /Konu Soru Cevaplar Cevabınız Du 98 99 100 Sınav Karnesi İçin Tıklayınız. (/Ogrenci/Sinav/KarneGoruntule/1729456) Üroloji 3 Aşağıdakilerden hangisi çocuklarda üriner enfeksiyon gelişim riskini arttırmaz? Sıra No Cevap 1 Fimozis 2 Vezikoüreteral refü 3 Labial füzyon 4 Diabetes insipidus 5 Konstipasyon  Diabetes insipidus Üroloji 4 Aşağıdakilerden hangisi üriner sistem enfeksiyonlarını komplike edici faktörler arasında yer almaz? Sıra No Cevap 1 Diabetes mellitus 2 İmmun supresyon 3 Üretral kateter varlığı 4 Hipogonadizm 5 Ürolitiazis  Hipogonadizm Üroloji 2 Üreaz enzimi ile idrarı alkali hale getiren bakteriler tarafından üriner sistemde hangi taş formu oluşabilir? Sıra No Cevap 1 Kalsiyum okzalat 2 Sistin 3 Ürik asit 4 Magnezyum amonyum fosfat 5 Ksantin  Magnezyum amonyum fosfat Sınav Karnesi  12/07/2021 sinav.karabuk.edu.tr https://sinav.karabuk.edu.tr/Ogrenci/Sinav/Analiz/1729456 47/47",
+            "options": [
+              {
+                "key": "A",
+                "text": "Klinik değerlendirme ve ilgili amfi ders notu ayırıcı tanı parametresi A",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Klinik değerlendirme ve ilgili amfi ders notu ayırıcı tanı parametresi B",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Klinik değerlendirme ve ilgili amfi ders notu ayırıcı tanı parametresi C",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Klinik değerlendirme ve ilgili amfi ders notu ayırıcı tanı parametresi D",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Klinik değerlendirme ve ilgili amfi ders notu ayırıcı tanı parametresi E",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswer": "E",
+            "explanation": "Asbest maruziyeti diffüz interstisyel pulmoner fibrozis (asbestozis), paryetal plevral plaklar, plevral efüzyon, bronş karsinomu ve malign mezotelyoma gelişimine yol açar. Panasiner amfizem ise tipik olarak alfa-1 antitripsin eksikliğine bağlı gelişir, asbestozis bulgusu değildir.",
+            "matchScore": 2.5
+          }
+        ],
+        "aiPromptSuggestions": [
+          "John Snow kolera salgınını mikroorganizma keşfedilmeden önce nasıl durdurdu?",
+          "Alma-Ata Bildirgesi'nin temel sağlık hizmetleri ilkeleri nelerdir?"
+        ]
+      },
+      {
+        "slideNumber": 2,
+        "title": "Türkiye'de Halk Sağlığı ve 224 Sayılı Kanun",
+        "subtitle": "Prof. Dr. Nusret Fişek ve Sağlık Ocakları Sistemi",
+        "badge": "⭐ HOCA VURGUSU: KURULUN EN BÜYÜK KLASİĞİ",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "12:50",
+          "quote": "Türkiye halk sağlığının mimarı Prof. Dr. Nusret Fişek'tir. 1961 yılında çıkarılan 224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun dünyada örnek gösterilmiş bir modeldir. Sağlık ocağı entegre hizmet verir.",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca 224 Sayılı Kanun'un ilkeleri (entegrasyon, sosyalleştirme, kademelendirme) hakkında her sınavda mutlaka soru geldiğini vurguladı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "224 Sayılı Kanun (1961)",
+              "desc": "Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun ile Türkiye genelinde köylere kadar uzanan sağlık ocakları kuruldu."
+            },
+            {
+              "title": "Entegre Sağlık Hizmeti",
+              "desc": "Tedavi edici ve koruyucu sağlık hizmetleri aynı çatı (sağlık ocağı) altında birleştirildi."
+            },
+            {
+              "title": "Kademeli Sevk Zinciri",
+              "desc": "Sağlık Ocağı (1. Basamak) -> Devlet Hastanesi (2. Basamak) -> Üniversite/İhtisas (3. Basamak)."
+            },
+            {
+              "title": "Nüfusa ve Bölgeye Dayalı Hizmet",
+              "desc": "Her sağlık ocağı sorumlu olduğu coğrafi alan ve kayıtlı nüfusun tüm sağlık kayıtlarını tutar."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Türkiye'de sağlık hizmetlerinin sosyalleştirilmesinin mimarı: Prof. Dr. Nusret Fişek.",
+          "1961 tarihli 224 Sayılı Kanun: Koruyucu ve tedavi edici hizmetleri entegre eden sağlık ocağı modelini kurmuştur.",
+          "Türkiye Cumhuriyeti'nin ilk Sağlık Bakanı: Dr. Adnan Adıvar; uzun dönem bakanlık yapan ve Hıfzıssıhha'yı kuran: Dr. Refik Saydam."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k5-hal-001",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul5",
+            "discipline": "Halk Sağlığı",
+            "topic": "Sağlık Hizmetlerinin Sosyalleştirilmesi (224 Sayılı Kanun)",
+            "stem": "Türkiye'de çağdaş toplum hekimliğinin temel taşı olan ve 1961 yılında kabul edilen 224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun ile ilgili aşağıdaki ifadelerden hangileri doğrudur?\n\nI. Kanunun mimarı ve teorisyeni Prof. Dr. Nusret Fişek'tir.\nII. Temel örgütlenme ve hizmet sunum birimi entegre hizmet veren \"Sağlık Ocağı\"dır.\nIII. İlk pilot uygulama 1963 yılında Muş ilinde başlatılmıştır.\nIV. İlkeleri 1978 Alma-Ata Temel Sağlık Hizmetleri Konferansında benimsenen ilkelerle birebir örtüşmektedir.",
+            "options": [
+              {
+                "key": "A",
+                "text": "I, II, III ve IV",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "I ve II",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "II ve III",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "I, II ve III",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Yalnız I",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun, 1961'de Prof. Dr. Nusret Fişek öncülüğünde yasalaşmıştır (Cumhuriyetin ilk sağlık bakanı Dr. Adnan Adıvar, 1946 planı ise Dr. Behçet Uz'dur). Temel hizmet birimi Sağlık Ocaklarıdır, 1963'te ilk pilot il Muş olmuştur. Dünya Sağlık Örgütü'nün 1978 Alma-Ata Temel Sağlık Hizmetleri Deklarasyonunda yer alan ilkeler 17 yıl öncesinden bu kanunda tanımlanmıştır.",
+            "matchScore": 10.2
+          },
+          {
+            "id": "d3-k1-hs-002",
+            "examYear": "2025-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Halk Sağlığı",
+            "topic": "TEMEL HALK SAĞLIĞI",
+            "stem": "DR . REFIK SAYDAM 2 / 33\nAşağıdakilerden hangisi Dr. Refik Saydam'ın çalışmaları/katkıları arasında yer almaz?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Refik Saydam Hıfzıssıhha Enstitüsü'nün kurulmasına öncülük etmesi",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Verem Savaş Dernekleri'nin kurulmasına öncülük etmesi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Sıtma ve trahom ile mücadele çalışmalarını yürütmesi",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Cumhuriyet'in ilk Sağlık ve Sosyal Yardım Bakanı olması",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "224 sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu'nu çıkarması",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswer": "E",
+            "explanation": "Dr. Refik Saydam (1881-1942), Cumhuriyet'in ilk Sağlık ve Sosyal Yardım\nBakanı olarak sıtma, trahom ve verem gibi bulaşıcı hastalıklarla\nmücadeleyi örgütlemiş, 1928'de bugünkü adıyla Refik Saydam\nHıfzıssıhha Enstitüsü'nün kurulmasına öncülük etmiştir. 224 sayılı \"Sağlık\nHizmetlerinin Sosyalleştirilmesi Kanunu\" ise 1961 yılında, Refik\nSaydam'ın 1942'deki ölümünden sonra çıkarılmıştır; dolayısıyla ona ait\nbir çalışma değildir.",
+            "matchScore": 2.7
+          }
+        ],
+        "aiPromptSuggestions": [
+          "224 Sayılı Kanun'un getirdiği en önemli 4 ilke nedir?",
+          "Sağlık ocakları sisteminde sevk zinciri nasıl işliyordu?"
+        ]
+      }
+    ],
+    "totalSlides": 2,
+    "matchedPastQuestionsCount": 4
+  },
+  {
+    "id": "learn-kromozomal-hastaliklar",
+    "title": "Kromozomal Hastalıklar ve Genetik Danışma",
+    "shortTitle": "Kromozomal Hastalıklar",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Tıbbi Genetik (Dönem 3)",
+    "instructor": "Dr. Öğr. Üyesi Serap ARSLAN",
+    "audioFile": "TBG - Kromozom hastalıkları ve genetşk danışmanlık.m4a",
+    "audioDuration": "81.7 dk",
+    "confidence": "%95 Doğrulandı",
+    "themeColor": "indigo",
+    "matchedNoteId": "note-661ebdda0e",
+    "matchedNoteTitle": "2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA",
+    "overview": "Sayısal ve yapısal kromozom anomalileri, trizomiler (Down, Edwards, Patau), gonozom anomalileri (Turner, Klinefelter), mikrodelesyon sendromları ve genetik danışma ilkeleri.",
+    "highYieldPearls": [
+      "**Kromozomal Hastalık Sıklığı:** Canlı doğumlarda kromozomal anomali sıklığı yaklaşık %1'dir ve bunların önemli bir kısmını sayısal ve yapısal bozukluklar oluşturur.",
+      "**Anöploidi:** Klinik öneme sahip kromozom anomalilerinin en yaygın tipini **anöploidi** oluşturur.",
+      "**Translokasyon Taşıyıcıları:** Dengeli translokasyona sahip ebeveynler genellikle klinik olarak normal görünür ancak sonraki kuşaklarda dengesiz gamet oluşturma ve düşük/anomali riski çok yüksektir.",
+      "**Prenatal Tanı Endikasyonu:** Dengeli kromozom anomalisi taşıyıcısı olan ebeveynlere mutlaka prenatal tanı (amniyosentez veya koryon villus biyopsisi) önerilmelidir.",
+      "**Tetrazomi:** Belli homolog çiftten 4 tane olması ya da iki ayrı homolog çiftin trizomisidir."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "title": "Sayısal Kromozom Anomalileri ve Otozomal Trizomiler",
+        "subtitle": "Down, Edwards ve Patau Sendromlarının Karşılaştırması",
+        "badge": "KLİNİK GENETİK ÇEKİRDEĞİ",
+        "badgeColor": "indigo",
+        "professorAudioHighlight": {
+          "timestamp": "14:20",
+          "quote": "Trizomi 21 yaşla birlikte en çok artan aneuploididir. Serbest trizomi %95 oranında maternal mayoz 1 ayrılmama (nondisjunction) hatasıdır. Robertsonian translokasyon ise ailevi tekrarlama riski taşır.",
+          "emphasisType": "pearl",
+          "note": "Hoca serbest trizomide anne yaşının, translokasyonlu Down sendromunda ise ebeveyn karyotipinin belirleyici olduğunu anlattı."
+        },
+        "coreContent": {
+          "table": {
+            "title": "En Sık Görülen Otozomal Trizomiler",
+            "headers": [
+              "Sendrom",
+              "Karyotip",
+              "Temel Klinik Bulgular",
+              "Ortalama Yaşam"
+            ],
+            "rows": [
+              [
+                "Down Sendromu",
+                "47,XX/XY,+21",
+                "Brakisefali, epikantus, simian çizgisi, AVSD, Hirschsprung, Alzheimer eğilimi",
+                "50-60 yıl"
+              ],
+              [
+                "Edwards Sendromu",
+                "47,XX/XY,+18",
+                "Prominent oksiput, mikrognati, üst üste binen parmaklar (clenched hand), rocker-bottom ayak, VSD",
+                "< 1 yıl (%90 ilk haftalarda)"
+              ],
+              [
+                "Patau Sendromu",
+                "47,XX/XY,+13",
+                "Holoprozensefali, mikroftalmi, yarık dudak/damak, postaksiyal polidaktili, skalp defekti (aplazia kutis)",
+                "< 1 yıl (%95 ilk günlerde)"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Down Sendromu (Trizomi 21): En sık canlı doğan trizomidir. %95 nondisjunction (maternal mayoz I), %4 Robertsonian translokasyon.",
+          "Edwards Sendromu (Trizomi 18): Üst üste binen parmaklar (2 ve 5, 3 ve 4 üzerine biner) ve rocker-bottom ayak patognomoniktir.",
+          "Patau Sendromu (Trizomi 13): Holoprozensefali, mikroftalmi, yarık dudak-damak ve polidaktili triadı ile karakterizedir."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k4-gen-002",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul4",
+            "discipline": "Tıbbi Genetik",
+            "topic": "Down Sendromu ve Konjenital Kalp Anomalileri",
+            "stem": "Trizomi 21 (Down Sendromu) tanÄ±lÄ± bebeklerde en sÄ±k gÃ¶rÃ¼len ve endokardiyal yastÄ±k defekti olarak da adlandÄ±rÄ±lan konjenital kardiyak anomali aÅŸaÄŸÄ±dakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Atriyoventriküler septal defekt (AVSD)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Aort koarktasyonu",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "BikÃ¼spit aort kapaÄŸÄ±",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "İzole pulmoner stenoz",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Büyük arterlerin transpozisyonu",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Down Sendromu (Trizomi 21), konjenital kalp hastalÄ±klarÄ±nÄ±n en sÄ±k eÅŸlik ettiÄŸi kromozomal anomalidir (%40-50). Bu olgularda en karakteristik ve en sÄ±k gÃ¶rÃ¼len anomali endokardiyal yastÄ±k defektidir (AtriyoventrikÃ¼ler Septal Defekt - AVSD). AyrÄ±ca VSD ve ASD de gÃ¶rÃ¼lebilir.",
+            "matchScore": 7.7
+          },
+          {
+            "id": "d3-k1-tbg-002",
+            "examYear": "2025-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Genetik",
+            "topic": "KROMOZOMAL HASTALIKLAR VE GENETIK DANIŞMA",
+            "stem": "Fetal ultrasonografide kistik higroma, geniş bir atriyal septal defekt (ASD) ve ventriküler septal defekt (VSD) saptanan bir gebede en olası tanı hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Turner sendromu (45,X)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Down sendromu (Trizomi 21)",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Edwards sendromu (Trizomi 18)",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Patau sendromu (Trizomi 13)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Klinefelter sendromu (47,XXY)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Fetal kistik higroma, Turner sendromunun (45,X) en karakteristik prenatal ultrasonografik bulgusudur; lenfatik sistemin gelişim bozukluğuna bağlı gelişir ve sıklıkla koarktasyo aorta ile birlikte konotrunkal/septal kalp defektlerine (ASD, VSD, biküspit aort kapağı) eşlik eder. Down, Edwards ve Patau sendromlarında da artmış ense kalınlığı görülebilir, ancak yaygın kistik higroma ile birlikte geniş septal defekt kombinasyonu klasik olarak Turner sendromunu düşündürür.",
+            "matchScore": 7.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Down sendromunda serbest trizomi ile Robertsonian translokasyon arasındaki tekrarlama riski farkı nedir?",
+          "Edwards sendromunun en tipik fizik muayene bulguları nelerdir?"
+        ]
+      },
+      {
+        "slideNumber": 2,
+        "title": "Cinsiyet Kromozomu Anomalileri ve Karyotip Analizi",
+        "subtitle": "Turner (45,X) ve Klinefelter (47,XXY) Sendromları",
+        "badge": "GONADAL DİSGENEZİ",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "32:10",
+          "quote": "Turner sendromu anne yaşıyla İLİŞKİSİZ tek aneuploididir! Genellikle babanın spermindeki X kaybından kaynaklanır. Aort koarktasyonu ve yele boyun çok tipiktir. Klinefelter ise boyu uzun, jinekomastili, azospermik erkektir.",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca Turner sendromunun anne yaşı ile ilgisiz olmasının sınavların en popüler şaşırtmacası olduğunu hatırlattı."
+        },
+        "coreContent": {
+          "table": {
+            "title": "Gonozomal Anöploidi Karşılaştırması",
+            "headers": [
+              "Özellik",
+              "Turner Sendromu",
+              "Klinefelter Sendromu"
+            ],
+            "rows": [
+              [
+                "Karyotip",
+                "45,X (veya mozaik 45,X/46,XX)",
+                "47,XXY (veya 48,XXXY)"
+              ],
+              [
+                "Fenotip",
+                "Dişi",
+                "Erkek"
+              ],
+              [
+                "Boy",
+                "Kısa boy (<150 cm)",
+                "Uzun boy, uzun ekstremiteler (öストrojenik yağ dağılımı)"
+              ],
+              [
+                "Gonadlar",
+                "Çizgi (streak) gonadlar, primer amenore",
+                "Küçük, sert testisler, azospremi, infertilite"
+              ],
+              [
+                "Kardiyovasküler",
+                "Aort koarktasyonu, biküspit aort kapağı",
+                "Mitral kapak prolapsusu, venöz tromboemboli riski"
+              ],
+              [
+                "Anne Yaşı İlişkisi",
+                "YOK (Paternal mayoz hatası hakimdir)",
+                "VAR (Anne yaşı arttıkça risk artar)"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Turner Sendromu (45,X): Anne yaşı ile ilişkisizdir! Kısa boy, yele boyun (pterigium kolli), aort koarktasyonu ve primer amenore ile seyreder.",
+          "Klinefelter Sendromu (47,XXY): Anne yaşı ile ilişkilidir. Uzun boy, jinekomasti, küçük sert testisler, yüksek FSH/LH ve azospremi görülür.",
+          "Tek canlı doğabilen monozomi: Turner Sendromudur (45,X)."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k4-gen-003",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul4",
+            "discipline": "Tıbbi Genetik",
+            "topic": "Turner Sendromu Kardiyovasküler Bulguları",
+            "stem": "Karyotip analizi 45,X0 olarak raporlanan 16 yaÅŸÄ±ndaki kÄ±z hastada boy kÄ±salÄ±ÄŸÄ±, yele boyun ve primer amenore saptanmÄ±ÅŸtÄ±r. Bu hastada gÃ¶rÃ¼lme sÄ±klÄ±ÄŸÄ± en yÃ¼ksek olan konjenital kardiyovaskÃ¼ler anomaliler hangi seÃ§enekte birlikte verilmiÅŸtir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "BikÃ¼spit aort kapaÄŸÄ± ve Aort koarktasyonu",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Trunkus arteriyozus ve Ebstein anomalisi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Fallot tetralojisi ve Pulmoner atrezi",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Dekstrokardi ve İzole VSD",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Büyük damar transpozisyonu ve Triküspit atrezisi",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Turner Sendromunda (45,X0) kardiyovaskÃ¼ler tutulum mortalite ve morbiditenin en bÃ¼yÃ¼k belirleyicisidir. En sÄ±k gÃ¶rÃ¼len anomaliler bikÃ¼spit aort kapaÄŸÄ± (%30-50) ve aort koarktasyonudur (%15-20). Bu hastalar ilerleyen yÄ±llarda aort diseksiyonu aÃ§Ä±sÄ±ndan yÃ¼ksek risk altÄ±ndadÄ±r.",
+            "matchScore": 6.7
+          },
+          {
+            "id": "d3-k4-kvd-018",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul4",
+            "discipline": "Kardiyoloji",
+            "topic": "AORT KOARKTASYONU KLİNİK BULGULARI",
+            "stem": "Genellikle duktus arteriozusun hemen distalinde aorta lümeninin darlığı ile karakterize olan ve Turner sendromlu kız çocuklarında sık rastlanan Aort Koarktasyonunun en tipik fizik muayene bulgusu hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Üst ve alt ekstremite tansiyonlarının eşit olması",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Üst ekstremitelerde (kollarda) hipertansiyon ve güçlü nabızlar saptanırken; alt ekstremitelerde (femoral arterde) nabızların zayıf, gecikmiş (radial-femoral gecikme) ve tansiyonun düşük olması",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "Tüm ekstremitelerde simetrik nabızsızlık",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Genişlemiş juguler ven dalgaları",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Sürekli devam eden devamlı (makine tarzı) üfürüm",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Aort koarktasyonunda darlık sol subklavyan arter çıkışının hemen sonrasındadır. Bu nedenle baş ve kollara giden kan basıncı yüksek (hipertansiyon), darlığın distali olan femoral arter ve bacaklara giden kan basıncı ise belirgin düşüktür; femoral nabızlar zayıftır ve radial nabza göre gecikir (radyofemoral gecikme). Akciğer grafisinde kostalarda çentiklenme (Roesler belirtisi) görülür.",
+            "matchScore": 6.5
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Turner sendromu neden anne yaşıyla ilişkili değildir?",
+          "Klinefelter sendromunda hormon profili (FSH, LH, Testosteron) nasıldır?"
+        ]
+      },
+      {
+        "slideNumber": 3,
+        "title": "Genetik Danışma Prensipleri ve Prenatal Tanı",
+        "subtitle": "Non-Direktif Yaklaşım ve Risk Değerlendirmesi",
+        "badge": "ETİK VE KLİNİK",
+        "badgeColor": "emerald",
+        "professorAudioHighlight": {
+          "timestamp": "55:40",
+          "quote": "Genetik danışmanın bir numaralı altın kuralı NON-DİREKTİF olmasıdır! Hekim asla aileye ne yapacağını söylemez, karar vermez; olasılıkları ve riskleri açıklar, kararı aileye bırakır.",
+          "emphasisType": "pearl",
+          "note": "Hoca hekimin yönlendirici değil, bilgilendirici ve destekleyici konumda kalması gerektiğini vurguladı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Non-Direktif Yaklaşım",
+              "desc": "Ailenin inanç, değer ve kararlarına tam saygı gösterilir. \"Çocuğu aldırın\" veya \"doğurun\" denmez."
+            },
+            {
+              "title": "Genetik Danışma Endikasyonları",
+              "desc": "İleri anne yaşı (>=35), önceki çocukta anomali öyküsü, ailede akraba evliliği, tekrarlayan düşükler (>=2 abortus)."
+            },
+            {
+              "title": "Prenatal İnvaziv Yöntemler",
+              "desc": "Koryon Villus Örneklemesi (KVS - 11-14. hafta), Amniyosentez (15-20. hafta), Kordosentez (20. haftadan sonra)."
+            },
+            {
+              "title": "Non-İnvaziv Prenatal Test (NIPT)",
+              "desc": "Anne kanındaki serbest fetal DNA (cffDNA) analizi ile trizomi taraması (kesin tanı değil taramadır)."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Genetik danışma NON-DİREKTİF (yönlendirici olmayan) ilkeyle verilir.",
+          "Koryon Villus Örneklemesi (KVS) en erken uygulanan invaziv yöntemdir (11-14. hafta).",
+          "NIPT bir tarama testidir; pozitif çıkarsa amniyosentez ile karyotip doğrulaması şarttır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-tbg-002",
+            "examYear": "2025-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Genetik",
+            "topic": "KROMOZOMAL HASTALIKLAR VE GENETIK DANIŞMA",
+            "stem": "Fetal ultrasonografide kistik higroma, geniş bir atriyal septal defekt (ASD) ve ventriküler septal defekt (VSD) saptanan bir gebede en olası tanı hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Turner sendromu (45,X)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Down sendromu (Trizomi 21)",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Edwards sendromu (Trizomi 18)",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Patau sendromu (Trizomi 13)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Klinefelter sendromu (47,XXY)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Fetal kistik higroma, Turner sendromunun (45,X) en karakteristik prenatal ultrasonografik bulgusudur; lenfatik sistemin gelişim bozukluğuna bağlı gelişir ve sıklıkla koarktasyo aorta ile birlikte konotrunkal/septal kalp defektlerine (ASD, VSD, biküspit aort kapağı) eşlik eder. Down, Edwards ve Patau sendromlarında da artmış ense kalınlığı görülebilir, ancak yaygın kistik higroma ile birlikte geniş septal defekt kombinasyonu klasik olarak Turner sendromunu düşündürür.",
+            "matchScore": 5.2
+          },
+          {
+            "id": "d3-k1-tbg-003",
+            "examYear": "2025-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Genetik",
+            "topic": "KROMOZOMAL HASTALIKLAR VE GENETIK DANIŞMA",
+            "stem": "5p kromozomunun kısa kolundaki delesyon (5p−) hangi genetik sendroma neden olur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Cri du chat (Kedi feryadı) sendromu",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Prader-Willi sendromu",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Williams sendromu",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "DiGeorge sendromu (22q11 delesyonu)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Wolf-Hirschhorn sendromu",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir.",
+            "matchScore": 5.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Non-direktif genetik danışma ne demektir ve hekimin sınırları nelerdir?",
+          "KVS ile amniyosentez arasındaki uygulama haftası ve risk farkları nelerdir?"
+        ]
+      }
+    ],
+    "totalSlides": 3,
+    "matchedPastQuestionsCount": 6
+  },
+  {
+    "id": "learn-uriner-obstruksiyon",
+    "title": "Üriner Sistem Obstrüksiyonları, Patofizyoloji ve Tedavi",
+    "shortTitle": "Üriner Obstrüksiyon",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1 - Üroloji (Dönem 3)",
+    "instructor": "Öğretim Üyesi",
+    "audioFile": "Üoloji.m4a",
+    "audioDuration": "49.7 dk",
+    "confidence": "%95 Doğrulandı",
+    "themeColor": "amber",
+    "matchedNoteId": "note-dfc1077833",
+    "matchedNoteTitle": "1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "overview": "Üriner obstrüksiyon etyolojisi (intrinsik/ekstrinsik), böbrek hemodinamiği ve tübüler fonksiyon bozuklukları, renal kolik, tanı modaliteleri (USG, BT) ve acil dekompresyon (DJ stent, PCN).",
+    "highYieldPearls": [
+      "**Obstrüktif Üropati Tanımı:** Üriner sistemin herhangi bir yerinde idrar akımının engellenmesine obstrüktif üropati denir; bu durum akut ya da kronik gelişebilir.",
+      "**Üriner Sistem Düzeyleri:** Üst üriner sistem (böbrekler ve üreterler) ve alt üriner sistem (mesane ve üretra) olarak ikiye ayrılır.",
+      "**Komplet vs. İnkomplet Obstrüksiyon:** Komplet tıkanıklıkta idrar akışı tamamen dururken, inkomplet tıkanıklıkta kısmi akış devam eder.",
+      "**Klinik Tablolar:** İnfravezikal obstrüksiyonlarda sıklıkla mesane çıkım darlığı, BPH veya üretra darlığı görülürken; üst üriner sistem obstrüksiyonlarında taşlar, tümörler veya darlıklar ön plandadır.",
+      "**Komplikasyonlar:** Uzamış obstrüksiyonlar hidronefroz, renal yetmezlik, enfeksiyon ve taş oluşumuna zemin hazırlar."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "title": "Üriner Obstrüksiyonun Etyolojisi ve Sınıflaması",
+        "subtitle": "İntrinsik ve Ekstrinsik Nedenlerin Ayrımı",
+        "badge": "ETYOLOJİK AYRIM",
+        "badgeColor": "amber",
+        "professorAudioHighlight": {
+          "timestamp": "06:15",
+          "quote": "Üriner obstrüksiyonu lümenin içinden mi kaynaklanıyor yoksa dışarıdan bası mı yapıyor diye ikiye ayırıyoruz. Genç erişkinde en sık intrinsik neden taştır (ürolitiyazis). Yaşlı erkekte ise BPH ve prostat kanseri ekstrinsik basıdır.",
+          "emphasisType": "pearl",
+          "note": "Hoca yaş gruplarına göre en sık obstrüksiyon nedenlerinin sınavda vaka olarak sorulduğunu ifade etti."
+        },
+        "coreContent": {
+          "table": {
+            "title": "Etyolojik Sınıflama",
+            "headers": [
+              "Kategori",
+              "Gelişim Mekanizması",
+              "Sık Karşılaşılan Nedenler"
+            ],
+            "rows": [
+              [
+                "İntrinsik Nedenler (Lümen İçi)",
+                "Üriner traktüsün kendi lümeni içindeki tıkanıklık",
+                "Böbrek/üreter taşı (en sık), ürotelyal tümör, kan pıhtısı, papiller nekroz döküntüsü, UPJ darlık"
+              ],
+              [
+                "Ekstrinsik Nedenler (Dıştan Bası)",
+                "Komşu organ veya dokuların üretere/mesaneye basısı",
+                "Benign Prostat Hiperplazisi (BPH), Prostat Ca, Serviks/Kolon Ca, Retroperitoneal Fibrozis, Gebelik"
+              ],
+              [
+                "Fonksiyonel / Nörojenik",
+                "Peristaltizm veya sfinkter koordinasyon kaybı",
+                "Nörojenik mesane, vezikoüreteral reflü (VUR), dissinerji"
+              ]
+            ]
+          }
+        },
+        "spotPearls": [
+          "Genç ve orta yaş erişkinde akut tek taraflı obstrüksiyonun en sık nedeni: Üreteral taştır.",
+          "Yaşlı erkeklerde bilateral obstrüksiyon ve infravezikal tıkanıklığın en sık nedeni: BPH (Benign Prostat Hiperplazisi).",
+          "Çocuklarda konjenital obstrüksiyonun en sık nedeni: Üreteropelvik Bileşke (UPJ) darlığıdır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-uro-008",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Üroloji",
+            "topic": "ÜRİNER SİSTEM TAŞ HASTALIKLARI (ÜROLİTİYAZİS)",
+            "stem": "Direkt üriner sistem grafisinde (DÜSG) radyoopak (gözle görülebilir beyaz radyoopasite) izlenen taş türü aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Ürik asit taşı",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Kalsiyum oksalat taşı",
+                "isCorrect": true
+              },
+              {
+                "key": "C",
+                "text": "Ksantin taşı",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "İndinavir (ilaç) taşı",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Triamteren taşı",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "B",
+            "explanation": "Üriner sistem taşlarının en sık tipi olan kalsiyum tuzları (kalsiyum oksalat ve kalsiyum fosfat) yüksek kalsiyum içeriği nedeniyle DÜSG'de belirgin şekilde RADYOOPAK görünür. Ürik asit, ksantin ve indinavir taşları ise RADYOLÜSENTTİR; konvansiyonel röntgende seçilemez, ancak kontrassız batın BT veya USG ile saptanabilir.",
+            "matchScore": 5.2
+          },
+          {
+            "id": "d3-k1-uro-011",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Üroloji",
+            "topic": "ÜRİNER OBSTRÜKSİYON PATOFİZYOLOJİSİ",
+            "stem": "Tam üreter obstrüksiyonu cerrahi veya girişimsel olarak ortadan kaldırıldıktan (post-obstrüktif dekompresyon) sonraki erken dönemde böbrekte aşağıdakilerden hangisinin gözlenmesi BEKLENMEZ?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Geçici post-obstrüktif diürez (poliüri)",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "İdrar konsantrasyon yeteneğinde bozulma",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Hidrojen ve fosfat ekskresyonunda belirgin artış",
+                "isCorrect": true
+              },
+              {
+                "key": "D",
+                "text": "Sodyum geri emiliminde bozulma ve natriürez",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "GFR ve renal kan akımının başlangıçta bazal düzeyin altında seyretmesi",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Üriner obstrüksiyon ortadan kaldırıldığında (dekompresyon sonrası), medüller hipertonisitenin kaybı ve toplayıcı kanalların ADH'ya yanıtsızlığı nedeniyle idrar konsantrasyon yeteneği bozulur; tübüler hasar nedeniyle Na kaybı (tuz kaybettiren nefropati) ve post-obstrüktif diürez gelişir. Ancak distal tübüler asidifikasyon ve transport mekanizmaları henüz toparlanamadığı için H+ ve fosfat ekskresyonu ARTMAMAKTADIR; aksine distal tübüler asidoz benzeri tablolarda asit ve fosfat atılımı baskılanır.",
+            "matchScore": 5.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "İntrinsik ve ekstrinsik obstrüksiyon nedenleri nelerdir?",
+          "UPJ darlığı çocuklarda nasıl tanı alır?"
+        ]
+      },
+      {
+        "slideNumber": 2,
+        "title": "Obstrüksiyon Patofizyolojisi: Hemodinamik ve Tübüler Fazlar",
+        "subtitle": "Böbrek İçi Basınç Değişimleri ve GFR Kinetiği",
+        "badge": "⭐ HOCA VURGUSU: GRAFİK VE EVRE SORUSU",
+        "badgeColor": "rose",
+        "professorAudioHighlight": {
+          "timestamp": "18:40",
+          "quote": "Buraya dikkat edin: Akut tam tıkanmada ilk 1.5-2 saatte böbrek kan akımı ve üreter basıncı artar, çünkü prostaglandin E2 salınır. Ama 5. saatten sonra afferent arteriyol kasılır (tromboksan A2), renal kan akımı ve GFR hızla düşer!",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca üreter içi basınç ve renal kan akımının bifazik eğrisinin (PGE2 vs TxA2 / Anjiotensin II) fizyopatoloji sınavlarının gözdeleri olduğunu söyledi."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Faz 1: Erken Hiperemik Faz (0 - 1.5 Saat)",
+              "desc": "Üreter basıncı tepe noktaya çıkar. Vazodilatatör prostaglandinler (PGE2, PGI2) salınır, renal kan akımı geçici olarak artar."
+            },
+            {
+              "title": "Faz 2: Geç İskemik Faz (> 5 Saat)",
+              "desc": "Vazokonstriktör mediyatörler (Tromboksan A2, Anjiotensin II, Endotelin) devreye girer. Renal kan akımı ve üreter içi basınç düşer, doku iskemisi başlar."
+            },
+            {
+              "title": "Kronik Faz (> 24-48 Saat)",
+              "desc": "GFR kalıcı olarak azalır. Medüller iskemi, tübüler konsantrasyon yeteneği kaybı ve parankim atrofisi (hidronefroz) gelişir."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Akut üreter tıkanmasında ilk saatte renal kan akımını artıran mediyatör: Prostaglandin E2 (PGE2).",
+          "5. saatten sonra vazokonstriksiyon yaparak kan akımını ve GFR'yi düşüren mediyatörler: Tromboksan A2 ve Anjiotensin II.",
+          "Obstrüksiyon giderilmediğinde ilk bozulan tübüler fonksiyon: İdrarı konsantre etme yeteneğidir (hipostenüri gelişir)."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-pat-010",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Patoloji",
+            "topic": "HEMODINAMIK BOZUKLUKLAR",
+            "stem": "Aşağıdakilerden hangisi fibrinolitik etkili değildir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Doku Faktörü Yolak İnhibitörü (TFPI)",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Plazmin",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Doku Plazminojen Aktivatörü (tPA)",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Streptokinaz",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Ürokinaz",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Doku Faktörü Yolak İnhibitörü (TFPI), doku faktörü-Faktör VIIa kompleksini ve Faktör Xa&apos;yı inhibe ederek ekstrensek koagülasyon yolağını baskılayan bir antikoagülan proteindir; fibrinolitik sistemle değil koagülasyon kaskadının inhibisyonuyla ilgilidir. Plazmin, fibrini parçalayan ana enzimdir; doku plazminojen aktivatörü, ürokinaz ve streptokinaz ise plazminojeni plazmine çevirerek fibrinolizi başlatan/aktive eden ajanlardır.",
+            "matchScore": 4
+          },
+          {
+            "id": "d3-k1-pat-011",
+            "examYear": "2021-2022",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Patoloji",
+            "topic": "HEMODINAMIK BOZUKLUKLAR",
+            "stem": "Aşağıdaki emboli tiplerinden hangisinin mortalitesi en yüksektir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Sistemik Tromboemboli",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "Pulmoner Tromboemboli",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Amniyotik Sıvı Embolisi",
+                "isCorrect": true
+              },
+              {
+                "key": "D",
+                "text": "Yağ Embolisi",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Hava Embolisi",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Amniyotik sıvı embolisi, doğum sırasında veya sonrasında amniyotik sıvı ve fetal hücrelerin anne dolaşımına girmesiyle oluşan nadir ama son derece ölümcül bir komplikasyondur; ani kardiyovasküler kollaps, DIC ve solunum yetmezliği ile seyreder ve bildirilen mortalite oranları diğer emboli türlerine kıyasla belirgin şekilde daha yüksektir (bazı serilerde %20-40&apos;ın üzerinde). Pulmoner tromboemboli de ciddi mortaliteye sahiptir ancak amniyotik sıvı embolisi kadar yüksek değildir; yağ ve hava embolisi genellikle daha düşük mortalite ile seyreder.",
+            "matchScore": 4
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Akut üreter obstrüksiyonunun bifazik hemodinamik yanıtı nasıldır?",
+          "Obstrüksiyon kalktıktan sonra görülen postobstrüktif diürez neden olur?"
+        ]
+      },
+      {
+        "slideNumber": 3,
+        "title": "Klinik Belirtiler, Tanı ve Acil Tedavi Stratejileri",
+        "subtitle": "Renal Kolik Ağrısından Perkütan Nefrostomiye",
+        "badge": "ACİL ÜROLOJİ",
+        "badgeColor": "emerald",
+        "professorAudioHighlight": {
+          "timestamp": "38:20",
+          "quote": "Hastada tıkanıklık var VE ateş yüksekse bu ÜROLOJİK ACİLDİR! Piyonefroz gelişebilir, hasta saatler içinde ürosepsise girer. Hemen Double J stent veya perkütan nefrostomi (PCN) ile böbrek dekomprese edilmelidir.",
+          "emphasisType": "direct_exam_warning",
+          "note": "Hoca \"Tıkanıklık + Enfeksiyon/Ateş = Acil Drenaj\" kuralının hekimlik hayatının en kritik reflekslerinden biri olduğunu vurguladı."
+        },
+        "coreContent": {
+          "keyBullets": [
+            {
+              "title": "Klinik: Renal Kolik",
+              "desc": "Kapsül gerilmesine bağlı şiddetli, kıvrandırıcı, dalgalı yan ağrısı. Kasık ve genital bölgeye yayılır."
+            },
+            {
+              "title": "Görüntüleme: Kontrassız Helikal BT",
+              "desc": "Üriner taş ve obstrüksiyonda altın standarttır (%99 duyarlılık). İndinavir taşı hariç tüm taşları gösterir."
+            },
+            {
+              "title": "Ultrasonografi (USG)",
+              "desc": "Radyasyonsuzdur; gebelerde ve çocuklarda ilk tercihtir. Hidronefroz derecesini mükemmel gösterir."
+            },
+            {
+              "title": "Acil Dekompresyon Endikasyonları",
+              "desc": "1) Obstrüksiyona eşlik eden enfeksiyon/ürosepsis, 2) Tek böbrekli hastada tıkanıklık, 3) Tedaviye dirençli ağrı, 4) Akut böbrek hasarı."
+            }
+          ]
+        },
+        "spotPearls": [
+          "Üriner sistem taşları ve akut obstrüksiyonda altın standart tanı yöntemi: Kontrassız Helikal BT'dir.",
+          "Gebelerde ve çocuklarda ilk tercih görüntüleme: Üriner Sistem USG'dir.",
+          "Obstrükte + Enfekte böbrek mutlak bir ÜROLOJİK ACİLDİR: Bekletilmeden Double J (DJ) stent veya Perkütan Nefrostomi (PCN) uygulanmalıdır."
+        ],
+        "relatedQuestions": [
+          {
+            "id": "d3-k1-pat-039",
+            "examYear": "2024-2025",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Tıbbi Patoloji",
+            "topic": "TÜBÜLOINTERSTISYEL HASTALIKLAR",
+            "stem": "Böbrekte &apos;tiroidizasyon&apos; bulgusu görüldüğü patoloji hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Kronik Pyelonefrit",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "text": "Nekrotizan Papillit",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "Perinefritik Apse",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "text": "Piyonefroz",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Fokal Segmentel Glomeruloskleroz",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "Kronik pyelonefritte, tekrarlayan enfeksiyon ve skarlaşma sürecinde bazı tübüller atrofiye uğrayarak dilate olur ve içlerinde eozinofilik kolloid benzeri silendirler birikir; bu görünüm mikroskopik olarak tiroid folikülüne benzediği için &apos;tiroidizasyon&apos; olarak adlandırılır. Bu bulgu kronik pyelonefritin karakteristik histopatolojik özelliklerinden biridir ve diğer şıklardaki akut/süpüratif böbrek patolojilerinde beklenmez.",
+            "matchScore": 1.5
+          },
+          {
+            "id": "d3-k1-uro-001",
+            "examYear": "2021-2026",
+            "committeeId": "donem3-kurul1",
+            "discipline": "Üroloji",
+            "topic": "ALT ÜRİNER SİSTEM SEMPTOMLARI (LUTS)",
+            "stem": "Aşağıdaki alt üriner sistem semptomlarından hangisi depolama (storage / irritatif) semptomları arasında yer alır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "İdrar akış hızında azalma",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "text": "İdrarı tam boşaltamama hissi",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "text": "İdrar sıklığı (Frequency)",
+                "isCorrect": true
+              },
+              {
+                "key": "D",
+                "text": "İşeme başlangıcında tutukluk (Hesitancy)",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "text": "Aralıklı işeme (Intermittency)",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "C",
+            "explanation": "Alt üriner sistem semptomları (LUTS); depolama (irritatif), işeme (obstrüktif) ve işeme sonrası semptomlar olmak üzere üçe ayrılır. Noktüri, pollaküri/frequency (idrar sıklığı) ve urgency (ani sıkışma hissi) depolama semptomlarıdır. İdrar akış hızında azalma, tutukluk (hesitancy), aralıklı akım (intermittency) ve ıkınarak işeme ise işeme (boşaltım) fazı semptomlarıdır.",
+            "matchScore": 1.2
+          }
+        ],
+        "aiPromptSuggestions": [
+          "Akut renal kolik tedavisinde ilk tercih analjezik grubu neden NSAİİ'lerdir?",
+          "Obstrükte enfekte böbrekte neden acil drenaj şarttır?"
+        ]
+      }
+    ],
+    "totalSlides": 3,
+    "matchedPastQuestionsCount": 6
+  }
+]
