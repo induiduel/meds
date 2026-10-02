@@ -1168,10 +1168,10 @@ slides_batch2 = [
     {
         'slideNumber': 17,
         'title': 'Sistin Taşları ve Sistinüri Patolojisi (COLA Defekti)',
-        'subtitle': 'SLC3A1 / SLC7A9 mutasyonları, hekzagonal kristaller ve sodyum siyanid testi',
+        'subtitle': 'SLC3A1 / SLC7A9 mutasyonları, hekzagonal kristaller, sodyum ilişkisi ve nitroprussid testi',
         'badge': 'Genetik & Metabolizma',
         'badgeColor': 'rose',
-        'synthesisNarrative': '**Sistinüri**, renal proksimal tübül ve ince bağırsak epitelinde yer alan dibazik aminoasit taşıyıcı sistemindeki mutasyonlara bağlı gelişen **otozomal resesif** bir hastalıktır. Genetik defekt **SLC3A1** (rBAT ağır zincir - Tip A) veya **SLC7A9** (b0,+AT hafif zincir - Tip B) genlerindedir. Taşıyıcı kusuru nedeniyle 4 dibazik aminoasidin idrarla atılımı aşırı artar: **Cystine, Ornithine, Lysine, Arginine (COLA)**. Bu grupta yer alan ornitin, lizin ve arginin fizyolojik pH\'da suda son derece çözünürken; **Sistin** fizyolojik idrar pH\'sında (pH < 7.0) son derece çözünmezdir (çözünürlük sınırı ~250 mg/L) ve erken yaşta iki taraflı rekürren taşlar yapar. İdrar mikroskopisinde **patojenik hekzagonal (altıgen / benzen halkası) kristaller** patognomoniktir. Tarama testi **Sodyum Siyanid Nitroprussid** testidir.',
+        'synthesisNarrative': '**Sistinüri**, renal proksimal tübül ve ince bağırsak epitelinde yer alan dibazik aminoasit taşıyıcı sistemindeki mutasyonlara bağlı gelişen **otozomal resesif** bir hastalıktır. Genetik defekt **SLC3A1** (rBAT) veya **SLC7A9** (b0,+AT) genlerindedir. Taşıyıcı kusuru nedeniyle 4 dibazik aminoasidin idrarla atılımı aşırı artar: **Cystine, Ornithine, Lysine, Arginine (COLA)**. Bu grupta yer alan ornitin, lizin ve arginin fizyolojik pH\'da suda son derece çözünürken; **Sistin** fizyolojik idrar pH\'sında çok az çözünür ve erken yaşta iki taraflı rekürren taşlar yapar. Sistin çözünürlüğü artan idrar pH\'sı ile artar. Ders notunda özellikle vurgulanan hayati nokta: **"Sodyum sistin atılımını arttırır."** Bu nedenle sistinüri hastalarında tuz (sodyum) kısıtlaması birinci basamak koruyucu tedavidir. İdrar mikroskopisinde **patojenik hekzagonal (altıgen) kristaller** patognomoniktir. Tarama testi **Sodyum Siyanid Nitroprussid** testidir.',
         'flashcards': [
             {
                 'id': 'uro-fc-17-01',
@@ -1182,54 +1182,54 @@ slides_batch2 = [
             },
             {
                 'id': 'uro-fc-17-02',
-                'category': 'Tanı & Kristal',
-                'front': 'Sistin taşlarının idrar mikroskopisindeki karakteristik kristal morfolojisi ve kimyasal tarama testi nedir?',
-                'hint': 'Altıgen şekil ve nitroprussid reaksiyonu.',
-                'back': 'Mikroskopide: **Hekzagonal (altıgen) yassı kristaller** (patognomonik).\nTarama testi: **Sodyum Siyanid Nitroprussid Testi** (idrarda serbest sistin varlığında kırmızı-mor renk verir).'
+                'category': 'Sodyum ve Sistin İlişkisi',
+                'front': 'Ders notuna göre sodyum alımının idrar sistin atılımı ve taş riski üzerindeki doğrudan etkisi nedir?',
+                'hint': 'Sayfa 47: Sodyum sistin atılımını...',
+                'back': 'Ders notuna göre: **"Sodyum sistin atılımını arttırır."** Yüksek sodyumlu diyet proksimal tübülde sistin atılımını kamçılar; bu nedenle hastalarda katı **tuz/sodyum kısıtlaması** taş nüksünü önlemede şarttır.'
             }
         ],
         'coreContent': {
             'keyBullets': [
                 {
-                    'title': 'Otozomal Resesif Geçiş',
-                    'desc': 'SLC3A1 (kromozom 2p) ve SLC7A9 (kromozom 19q) mutasyonları.',
+                    'title': 'Otozomal Resesif COLA Defekti',
+                    'desc': 'SLC3A1 ve SLC7A9 mutasyonları; Sistin, Ornitin, Lizin ve Arginin atılımı artar.',
                     'isKey': True
                 },
                 {
-                    'title': 'Agresif Erken Başlangıç',
-                    'desc': 'Hastalar tipik olarak ilk taş atağını 10-20 yaş arasında geçirir; yaşam boyu nüks oranı çok yüksektir.',
+                    'title': 'Sodyum Kısıtlaması Kuralı (Sayfa 47)',
+                    'desc': 'Sodyum sistin atılımını arttırır; bu nedenle düşük sodyumlu diyet temel tedavi unsurudur.',
                     'isKey': True
                 },
                 {
                     'title': 'Alkalinizasyon (Hedef pH > 7.5)',
-                    'desc': 'Sistinin pKa\'sı 8.3\'tür; çözünürlüğü ancak pH > 7.5 olduğunda belirgin artar.',
+                    'desc': 'Sistin çözünürlüğü idrar pH\'sı arttıkça belirgin şekilde artar (potasyum sitrat kullanılır).',
                     'isKey': True
                 },
                 {
                     'title': 'Tiyol İçeren Şelatör İlaçlar',
-                    'desc': 'D-Penisilamin ve Tiopronin (Alfa-MPG), sistin ile disülfit bağı kurarak 50 kat daha çözünür kompleksler oluşturur.'
+                    'desc': 'D-Penisilamin ve Tiopronin (Alfa-MPG), sistin ile disülfit bağı kurarak suda çözünür kompleks oluşturur.'
                 }
             ],
             'table': {
-                'title': 'Sistinüri Tanı ve Tedavi Prensipleri',
-                'headers': ['Basamak', 'Yöntem / İlaç', 'Mekanizma / Amaç', 'Klinik Not'],
+                'title': 'Ders Notu Sayfa 47: Sistinüri Patolojisi ve Yönetimi',
+                'headers': ['Alan', 'Özellik / Müdahale', 'Patofizyolojik Mekanizma', 'Klinik Önemi'],
                 'rows': [
-                    ['Mikroskopi', 'Taze idrar sedimenti', 'Hekzagonal kristallerin görülmesi', 'Tanı koydurucudur'],
-                    ['Tarama Testi', 'Na-siyanid nitroprussid', 'Kırmızı-mor renk reaksiyonu', 'Kalitatif pozitiflik (>75 mg/L)'],
-                    ['Konservatif', 'Aşırı hidrasyon (>3.5-4 L/gün)', 'Sistin derişimini <250 mg/L tutmak', 'Gece dahil sıvı alınmalıdır'],
-                    ['Medikal I', 'Potasyum Sitrat', 'İdrar pH\'sını >7.5 yapmak', 'Sistin çözünürlüğü katlanır'],
-                    ['Medikal II', 'Tiopronin / D-Penisilamin', 'Disülfit bağını kırıp şelat oluşturma', 'Yan etki takibi gerekir (proteinüri)']
+                    ['Genetik & Defekt', 'Otozomal Resesif', 'Dibazik aminoasit (COLA) taşıyıcı kusuru', 'Genç yaşta rekürren taşlar'],
+                    ['Çözünürlük & pH', 'Asitte Çökme, Alkalide Çözünme', 'pH arttıkça iyonlaşma ve çözünürlük katlanır', 'Hedef idrar pH > 7.5'],
+                    ['Diyet Sodyumu', 'Katı Sodyum Kısıtlaması', 'Sodyum sistin atılımını doğrudan artırır!', 'Tuz alımı kısıtlanmalıdır'],
+                    ['Tanısal Test', 'Na-Siyanid Nitroprussid', 'Serbest sistin ile kırmızı-mor renk reaksiyonu', 'Hızlı idrar tarama testi'],
+                    ['Mikroskopi', 'Hekzagonal (Altıgen) Kristaller', 'Sistin tuzunun karakteristik geometrik formu', 'Patognomoniktir']
                 ]
             }
         },
         'spotPearls': [
+            'Ders notu Sayfa 47: "Sodyum sistin atılımını arttırır" (bu nedenle tuz kısıtlaması en az hidrasyon kadar kritiktir).',
             'Sistin taşları kükürt içeriği nedeniyle DÜSG\'de hafif zayıf radyoopaktır (buzlu cam / mumsu opasite).',
-            'Sistin taşları ESWL şok dalgalarına en dirençli taş gruplarındandır; cerrahi gerektiğinde lazer litotripsi (URS/PNL) uygulanır.',
-            'Sodyum kısıtlaması sistinüri yönetiminde çok etkilidir; çünkü sistin taşınması sodyum gradyentine bağımlıdır.'
+            'Sistin taşları ESWL şok dalgalarına en dirençli taşlardandır; cerrahi gerektiğinde lazer litotripsi tercih edilir.'
         ],
         'relatedQuestions': [matched_questions_dict['q_cystinuria_cola'], matched_questions_dict['q_dusg_radiopacity']],
         'aiPromptSuggestions': [
-            'Sistinüri tedavisinde tiyol türevi ilaçlar nasıl etki eder?',
+            'Sistinüri tedavisinde sodyum kısıtlaması neden bu kadar önemlidir?',
             'Sistin taşlarında idrar pH hedefi neden ürik asitten daha yüksektir?'
         ]
     },
@@ -1238,69 +1238,69 @@ slides_batch2 = [
     {
         'slideNumber': 18,
         'title': 'Enfeksiyon Taşları (Strüvit / Magnezyum Amonyum Fosfat)',
-        'subtitle': 'Üreaz pozitif bakteriler, pH > 7.2 patogenezi ve Geyik Boynuzu (Staghorn) taşları',
+        'subtitle': 'Proteus, Klebsiella, Staph. aureus/epidermidis, üreaz aktivitesi ve Staghorn taşları',
         'badge': 'Enfeksiyon & Üreaz',
         'badgeColor': 'emerald',
-        'synthesisNarrative': '**Enfeksiyon Taşları (Strüvit)**, üriner sistemin üreaz üreten bakterilerle kronik enfeksiyonu zemininde gelişir. En sık etken **Proteus mirabilis**tir (ayrıca Klebsiella pneumoniae, Pseudomonas aeruginosa, Providencia, Serratia ve Staph. saprophyticus). **ÇOK ÖNEMLİ: E. coli üreaz üretmez; dolayısıyla saf E. coli enfeksiyonu strüvit taşı yapmaz!** Bakteriyel üreaz enzimi idrardaki üreyi parçalar: `Üre + H2O -> 2 NH3 + CO2`. Açığa çıkan amonyak idrardaki protonları bağlar; idrar pH\'sı dramatik şekilde bazikleşir (**pH > 7.2 - 8.0**). Bu aşırı alkali ve amonyumdan zengin ortamda **Magnezyum Amonyum Fosfat (Strüvit - MgNH4PO4.6H2O)** ve **Karbonat Apatit** hızla çökerek renal pelvis ve kaliksleri tamamen dolduran devasa **Geyik Boynuzu (Staghorn)** kalkülüslerini oluşturur.',
+        'synthesisNarrative': '**Enfeksiyon Taşları**, üriner sistemin üreaz üreten bakterilerle kronik enfeksiyonu zemininde gelişir. Taş bileşenleri: **Magnezyum amonyum fosfat (Strüvit), Karbonat apatit ve Amonyum ürat**tır. Resmi ders notunda (Sayfa 49) üreaz enzimi oluşturan bakteriler açıkça belirtilmiştir: **Proteus mirabilis, Klebsiella pneumoniae, Staphylococcus aureus ve Staphylococcus epidermidis**. Üreaz enzimi ürenin amonyak ve karbondioksite dönüşümünü katalizler: `Üre -> NH3 + CO2`. Oluşan amonyak ortamdaki serbest hidrojenleri bağlar; alkali idrar yüksek düzeyde amonyum ve fosfat oluşumunu destekleyerek **Strüvit taş oluşumuna** yol açar. **ÇOK ÖNEMLİ KURUL BİLGİSİ: E. coli üreaz üretmez; dolayısıyla saf E. coli enfeksiyonu strüvit taşı yapmaz!** Strüvit taşları tüm kaliksleri kaplayarak devasa **Geyik Boynuzu (Staghorn)** taşlarına dönüşür.',
         'flashcards': [
             {
                 'id': 'uro-fc-18-01',
                 'category': 'Enfeksiyon Taşı',
-                'front': 'Strüvit taşlarının oluşumunda en sık izole edilen üreaz pozitif bakteri hangisidir ve E. coli bu grupta mıdır?',
-                'hint': 'En sık Proteus; E. coli üreaz durumu.',
-                'back': 'En sık etken **Proteus mirabilis**tir. **E. coli üreaz NEGATİFTİR**; bu nedenle E. coli tek başına strüvit (enfeksiyon) taşı oluşturmaz (sınavların en klasik tuzağıdır!).'
+                'front': 'Ders notuna göre üreaz enzimi oluşturarak strüvit taşına yol açan 4 temel bakteri hangisidir?',
+                'hint': 'Sayfa 49: Proteus, Klebsiella ve iki Stafilokok türü.',
+                'back': 'Ders notu Sayfa 49:\n1) **Proteus mirabilis** (en sık)\n2) **Klebsiella pneumoniae**\n3) **Staphylococcus aureus**\n4) **Staphylococcus epidermidis**\n(NOT: E. coli üreaz üretmez, tek başına strüvit taşı yapmaz!).'
             },
             {
                 'id': 'uro-fc-18-02',
                 'category': 'Üreaz Reaksiyonu',
-                'front': 'Bakteriyel üreaz enziminin kimyasal reaksiyonu ve idrar pH\'sına etkisi nasıldır?',
-                'hint': 'Ürenin amonyak ve bikarbonata hidrolizi.',
-                'back': '`Üre + H2O --(Üreaz)--> 2 NH3 + CO2`\nAmonyak (NH3) hidrojen tutarak amonyuma (NH4+) dönüşür ve serbest hidrojen iyonlarını tüketir. İdrar pH\'sı hızla **>7.2 - 8.0** seviyesine fırlar; bu aşırı bazik ortamda strüvit kristalleri çöker.'
+                'front': 'Enfeksiyon taşlarının temel bileşenleri ve bakteriyel üreaz reaksiyonunun sonucu nedir?',
+                'hint': 'Sayfa 49: 3 temel mineral bileşeni ve idrar pH etkisi.',
+                'back': 'Bileşenler: **Magnezyum amonyum fosfat (Strüvit), Karbonat apatit ve Amonyum ürat**.\nÜreaz enzimi üreyi amonyak ve karbondioksite dönüştürür; açığa çıkan yüksek amonyum ve aşırı **alkali idrar** fosfat çökmesini destekleyerek strüvit taşını oluşturur.'
             }
         ],
         'coreContent': {
             'keyBullets': [
                 {
-                    'title': 'Geyik Boynuzu (Staghorn Kalkülüs)',
-                    'desc': 'Renal pelvisi ve tüm minör/majör kaliksleri dolduran dev döküm taşlardır; tedavi edilmezse sepsise ve renal yetmezliğe götürür.',
+                    'title': 'Ders Notundaki Üreaz (+) Bakteriler',
+                    'desc': 'Proteus mirabilis, Klebsiella pneumoniae, Staphylococcus aureus ve Staphylococcus epidermidis.',
                     'isKey': True
                 },
                 {
-                    'title': 'Kadınlarda Sık Görülür',
-                    'desc': 'Tekrarlayan komplike idrar yolu enfeksiyonları nedeniyle kadın/erkek oranı 2:1\'dir.',
+                    'title': 'Enfeksiyon Taşı Bileşenleri (Sayfa 49)',
+                    'desc': 'Magnezyum amonyum fosfat (Strüvit), Karbonat apatit ve Amonyum ürat.',
                     'isKey': True
                 },
                 {
-                    'title': 'Yüksek Matris İçeriği (%65)',
-                    'desc': 'Bakteri biyofilmleri ve mukoid proteinler nedeniyle antibiyotik penetrasyonu zordur; cerrahi tam temizlik şarttır.',
+                    'title': 'E. coli Üreaz Negatiftir!',
+                    'desc': 'Toplumda en sık İYE etkeni olan E. coli üreaz üretmediği için tek başına strüvit taşı oluşturamaz.',
                     'isKey': True
                 },
                 {
-                    'title': 'Cerrahi Tedavi (PNL)',
-                    'desc': 'Perkütan Nefrolitotomi (PNL) altın standarttır; geride milimetrik parça kalsa bile bakteri odağı nedeniyle hızla nükseder.'
+                    'title': 'Geyik Boynuzu (Staghorn) ve Cerrahi',
+                    'desc': 'Kolektör sistemi dolduran döküm taşlardır; tam cerrahi temizlik (PNL) ve antibiyoterapi zorunludur.'
                 }
             ],
             'table': {
-                'title': 'Üreaz Üreten ve Üretmeyen Üropatojenler',
-                'headers': ['Üreaz Pozitif Bakteriler (Strüvit Yapar)', 'Üreaz Negatif Bakteriler (Strüvit Yapmaz)'],
+                'title': 'Ders Notu Sayfa 49: Enfeksiyon Taşları ve Mikrobiyolojik Özellikleri',
+                'headers': ['Bileşen / Bakteri Türü', 'Üreaz Enzim Durumu', 'İdrar pH Etkisi', 'Klinik Tablo'],
                 'rows': [
-                    ['Proteus mirabilis (En sık %70)', 'Escherichia coli (En sık İYE etkeni ama üreaz -)'],
-                    ['Klebsiella pneumoniae', 'Enterococcus faecalis'],
-                    ['Pseudomonas aeruginosa', 'Streptococcus türleri'],
-                    ['Providencia stuartii / Morganella morganii', 'Citrobacter (çoğu suş)'],
-                    ['Staphylococcus saprophyticus / aureus', 'Candida albicans']
+                    ['Proteus mirabilis', 'Üreaz Pozitif (Güçlü)', 'Aşırı Alkali (pH > 7.2 - 8.0)', 'En sık enfeksiyon / Staghorn taşı etkeni'],
+                    ['Klebsiella pneumoniae', 'Üreaz Pozitif', 'Alkali pH', 'Komplike taş oluşturan üropatojen'],
+                    ['Staphylococcus aureus', 'Üreaz Pozitif', 'Alkali pH', 'Enfeksiyon taşı oluşturan gram (+) kok'],
+                    ['Staphylococcus epidermidis', 'Üreaz Pozitif', 'Alkali pH', 'Enfeksiyon taşı oluşturan koagülaz (-) kok'],
+                    ['Escherichia coli', 'Üreaz NEGATİF', 'Değişken / Asidik', 'Tek başına strüvit taşı yapmaz (Sınav tuzağı!)']
                 ]
             }
         },
         'spotPearls': [
-            'Strüvit taşlarının tedavisinde "cerrahi olarak geride hiç taş bırakmamak" kuraldır (rezidüel taş = kaçınılmaz nüks ve ürosepsis).',
-            'Alkalik idrar pH\'sı (>7.2) ile birlikte idrarda magnezyum amonyum fosfat (tabut kapağı / coffin-lid) kristalleri görülmesi strüvit lehinedir.',
-            'Asetohidroksamik asit (AHA), bakteriyel üreaz enzim inhibitörü olup seçilmiş nüks vakalarda medikal olarak kullanılır.'
+            'Ders notu Sayfa 49: Üreaz pozitif etkenler Proteus mirabilis, Klebsiella pneumoniae, Staphylococcus aureus ve Staphylococcus epidermidis\'tir.',
+            'Enfeksiyon taşlarının 3 temel formu: Magnezyum amonyum fosfat, karbonat apatit ve amonyum ürattır.',
+            'E. coli üreaz negatif olduğu için staghorn/strüvit taşı yapmaz; bu kural kurul sınavlarının en klasik sorusudur.'
         ],
         'relatedQuestions': [matched_questions_dict['q_struvite_urease'], matched_questions_dict['q_dusg_radiopacity']],
         'aiPromptSuggestions': [
-            'E. coli neden strüvit taşı yapmaz?',
-            'Staghorn taşının cerrahi yönetim prensipleri nelerdir?'
+            'Sayfa 49\'daki üreaz pozitif bakteriler hangileridir?',
+            'E. coli neden strüvit taşı oluşturamaz?'
         ]
     },
 
@@ -1308,69 +1308,70 @@ slides_batch2 = [
     {
         'slideNumber': 19,
         'title': 'İlaç Kaynaklı Taşlar ve Nadir Taş Türleri',
-        'subtitle': 'İndinavir, Triamteren, Karbonik Anhidraz İnhibitörleri, Ksantin ve APRT eksikliği',
+        'subtitle': 'Asetazolamid, Topiramat, HCTZ, İndinavir, Ritonavir, Triamteren, Guaifenesin ve Efedrin',
         'badge': 'İlaçlar & Nadir Taşlar',
         'badgeColor': 'purple',
-        'synthesisNarrative': 'İlaç kaynaklı taşlar iki temel mekanizmayla ortaya çıkar: **1) İlacın bizzat idrarda kristalleşerek taş oluşturması**: En tipik örneği HIV tedavisinde kullanılan proteaz inhibitörü **İNDİNAVİR**dir. İndinavir suda zor çözünür, idrarda iğnemsi kristaller yapar ve tamamen **RADYOLÜSENTTİR** (hem DÜSG\'de hem de kontrassız BT\'de görünmeyebilir; kontrastlı ürografide dolma defektiyle tanınır!). Diğer kristalleşen ilaçlar: Triamteren, Sülfonamidler, Siprofloksasin. **2) İlacın metabolizmayı bozarak taş zeminini hazırlaması**: Glokom veya epilepsi/migren ilacı olan Karbonik Anhidraz İnhibitörleri (**Topiramat, Asetazolamid**) distal RTA tablosu yaratarak kalsiyum fosfat taşlarına yol açar. Nadir pürin metabolizma taşları: **Ksantin taşları** (Ksantin dehidrogenaz eksikliği) ve **2,8-Dihidroksiadenin taşları** (APRT enzim eksikliği).',
+        'synthesisNarrative': 'Resmi ders notuna göre (Sayfa 51) **İlaç Kaynaklı Taşlar** iki grupta incelenir: **1) Metabolik Asidoz ve İdrar Kompozisyonunu Bozarak Taş Yapanlar**: **Karbonik Anhidraz İnhibitörleri (Asetazolamid ve Topiramat)**: İdrar pH\'sini artıran, idrar sitratını azaltan ve bazen hiperkalsiüriyi destekleyen bir metabolik asidoz tablosu yaratarak kalsiyum fosfat taşlarına yol açarlar. **Hidroklorotiyazid (HCTZ)**: Hipokalemi sonucu hücre içi asidoz yoluyla **hipositratüriye** neden olarak taş riskini tetikleyebilir. **2) Doğrudan İdrarda Taş Oluşturan İlaçlar**: Proteaz inhibitörleri (**İndinavir ve Ritonavir**), **Triamteren**, **Guaifenesin** ve **Efedrin**dir. İndinavir suda zor çözünür, idrarda doğrudan kristalleşir ve direkt grafide (DÜSG) tamamen **RADYOLÜSENTTİR**.',
         'flashcards': [
             {
                 'id': 'uro-fc-19-01',
-                'category': 'İlaç Taşı',
-                'front': 'HIV hastalarında kullanılan ve hem DÜSG\'de hem de kontrassız BT\'de radyolüsent olabilen proteaz inhibitörü taş hangisidir?',
-                'hint': 'Kendisi kristalleşen ünlü retroviral ilaç.',
-                'back': '**İndinavir** taşı. Düşük radyolojik dansiteye sahip olduğu için röntgende ve rutin kontrassız BT\'de parankimle izodens kalabilir. Tanı sıklıkla kontrastlı IVP veya retrograd pyelografide dolma defekti görülmesiyle konur.'
+                'category': 'Doğrudan Taş Yapan İlaçlar',
+                'front': 'Ders notu Sayfa 51\'e göre idrarda doğrudan kristalleşerek taş oluşturan ilaçlar hangileridir?',
+                'hint': 'Proteaz inhibitörleri ve diğer üç aktif bileşik.',
+                'back': 'Ders notu Sayfa 51\'e göre doğrudan taş oluşturan ilaçlar:\n• Proteaz inhibitörleri: **İndinavir** ve **Ritonavir**\n• **Triamteren**\n• **Guaifenesin**\n• **Efedrin**'
             },
             {
                 'id': 'uro-fc-19-02',
                 'category': 'İlaç Metabolizması',
-                'front': 'Topiramat veya Asetazolamid kullanan hastalarda hangi mekanizmayla taş oluşur?',
-                'hint': 'Karbonik anhidraz inhibisyonu ve edinsel dRTA.',
-                'back': 'Bu ilaçlar **Karbonik Anhidraz enzimini inhibe eder**. Proksimalde bikarbonat emilimini bozup hücre içi asidoz yaratırlar. Sonuçta: Paradoksal alkali idrar + Ağır Hipositratüri gelişir ve **Kalsiyum Fosfat taşları** çöker.'
+                'front': 'Ders notuna göre Asetazolamid, Topiramat ve Hidroklorotiyazid hangi mekanizmalarla taş oluşumunu tetikler?',
+                'hint': 'Karbonik anhidraz inhibisyonu vs hipokalemi / hücre içi asidoz.',
+                'back': '• **Asetazolamid ve Topiramat**: Karbonik anhidraz inhibitörüdür; idrar pH\'sini artıran, idrar sitratını azaltan ve hiperkalsiüriyi destekleyen metabolik asidoz yaratırlar.\n• **Hidroklorotiyazid**: Hipokalemi sonucu hücre içi asidoz yoluyla **hipositratüriye** yol açabilir.'
             }
         ],
         'coreContent': {
             'keyBullets': [
                 {
-                    'title': 'İndinavir Taşları',
-                    'desc': 'İlaç kesilip bol hidrasyon sağlandığında hızla çözünür.',
+                    'title': 'Doğrudan Taş Yapan İlaçlar (Sayfa 51)',
+                    'desc': 'Proteaz inhibitörleri (İndinavir ve Ritonavir), Triamteren, Guaifenesin ve Efedrin.',
                     'isKey': True
                 },
                 {
-                    'title': 'Topiramat / Asetazolamid Uyarısı',
-                    'desc': 'Migren veya glokom tedavisi görenlerde edinsel distal RTA benzeri kalsiyum fosfat taşı riski yüksektir.',
+                    'title': 'Karbonik Anhidraz İnhibitörleri',
+                    'desc': 'Asetazolamid ve Topiramat: İdrar pH\'sini artırır, idrar sitratını azaltır, hiperkalsiüriyi destekler.',
                     'isKey': True
                 },
                 {
-                    'title': '2,8-Dihidroksiadenin (APRT Eksikliği)',
-                    'desc': 'Radyolüsenttir; ürik asit taşı zannedilip allopurinol verilmesi yanlıştır (tedavi adenin diyet kısıtlamasıdır).',
+                    'title': 'Hidroklorotiyazid Uyarısı',
+                    'desc': 'Hipokalemiye bağlı hücre içi asidoz geliştirerek hipositratüriye neden olabilir.',
                     'isKey': True
                 },
                 {
-                    'title': 'Ksantin Taşları',
-                    'desc': 'Primer herediter ksantinüri veya ağır hiperürisemide yüksek doz allopurinol tedavisi sonucu gelişir.'
+                    'title': 'İndinavir Radyolüsensitesi',
+                    'desc': 'DÜSG\'de ve kontrassız BT\'de görünmeyebilir; hidrasyon ve ilacın kesilmesiyle çözünür.'
                 }
             ],
             'table': {
-                'title': 'İlaç İlişkili Taşlar ve Mekanizmaları',
-                'headers': ['İlaç Adı', 'Kullanım Alanı', 'Etki Mekanizması', 'Taşın Radyoopasitesi'],
+                'title': 'Ders Notu Sayfa 51: İlaç Kaynaklı Taşlar ve Mekanizmaları',
+                'headers': ['İlaç Grubu / İlaç Adı', 'Kullanım Endikasyonu', 'Ders Notundaki Patolojik Mekanizma', 'Oluşan Taş Tipi / Opasite'],
                 'rows': [
-                    ['İndinavir', 'HIV / AIDS tedavisi', 'İlacın idrarda doğrudan kristalleşmesi', 'Tamamen Radyolüsent'],
-                    ['Triamteren', 'Potasyum tutucu diüretik', 'İlaç ve metabolitlerinin çökmesi', 'Radyolüsen veya zayıf opak'],
-                    ['Topiramat', 'Migren, Epilepsi', 'Karbonik anhidraz inh. -> Alkali pH + hipositratüri', 'Radyoopak (CaP taşı)'],
-                    ['Asetazolamid', 'Glokom, İntrakraniyal basınç', 'Karbonik anhidraz inh. -> dRTA benzeri tablo', 'Radyoopak (CaP taşı)'],
-                    ['Yüksek Doz C Vitamini', 'Besin takviyesi', 'Askorbik asidin oksalata dönüşmesi', 'Radyoopak (CaOx taşı)']
+                    ['İndinavir ve Ritonavir', 'HIV / Proteaz İnhibitörü', 'Doğrudan idrarda kristalleşme', 'Tamamen Radyolüsent'],
+                    ['Triamteren', 'Potasyum tutucu diüretik', 'Doğrudan kristalleşen aktif bileşik', 'Radyolüsen / Zayıf opak'],
+                    ['Guaifenesin', 'Ekspektoran öksürük ilacı', 'Doğrudan idrarda kristalleşme', 'Radyolüsent'],
+                    ['Efedrin', 'Dekonjestan / Sempatomimetik', 'Doğrudan idrarda kristalleşme', 'Radyolüsent'],
+                    ['Asetazolamid & Topiramat', 'Glokom, Migren, Epilepsi', 'İdrar pH ↑, Sitrat ↓, Hiperkalsiüri ↑ yaratan metabolik asidoz', 'Radyoopak (Kalsiyum fosfat)'],
+                    ['Hidroklorotiyazid', 'Hipertansiyon, Hiperkalsiüri', 'Hipokalemi sonucu hücre içi asidoz -> Hipositratüri', 'Kalsiyum taşı riski']
                 ]
             }
         },
         'spotPearls': [
-            'Genç bir hastada bilateral kalsiyum fosfat taşı ve hipositratüri saptandığında migren için Topiramat kullanımı mutlaka sorgulanmalıdır.',
-            'İndinavir taşı hidrasyon ve ilacın kesilmesiyle günler içinde medikal olarak geriler.',
-            'Triamteren taşları sıklıkla kalsiyum oksalat taşlarının içine nükleus olarak gömülür.'
+            'Ders notu Sayfa 51: Doğrudan taş oluşturan ilaçlar İndinavir, Ritonavir, Triamteren, Guaifenesin ve Efedrin\'dir.',
+            'Karbonik anhidraz inhibitörleri (asetazolamid, topiramat) idrar pH\'sini artırıp sitratı düşürerek kalsiyum fosfat taşı yaparlar.',
+            'Hidroklorotiyazid hipokalemiye bağlı hücre içi asidoz geliştirirse sekonder hipositratüriye neden olabilir.'
         ],
         'relatedQuestions': [matched_questions_dict['q_dusg_radiopacity']],
         'aiPromptSuggestions': [
-            'Topiramat kullanan hastalarda taş riski nasıl önlenir?',
-            'İndinavir taşının ayırıcı tanısı nasıl yapılır?'
+            'Ders notundaki doğrudan taş oluşturan 5 ilaç hangisidir?',
+            'Topiramat ve asetazolamid idrar parametrelerini nasıl bozar?'
         ]
     },
 

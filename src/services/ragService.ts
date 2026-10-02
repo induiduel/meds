@@ -139,10 +139,9 @@ export async function searchRagChunks(
     console.warn('[RagService] Yerel RAG arama uyarısı:', localErr.message);
   }
 
-  // Fast-Path: If local BM25 returned confident matches (at least 2 results or top score >= 15),
+  // Fast-Path: If local BM25 returned matches from the 55,000 course chunks,
   // return immediately in < 5ms without blocking on external Gemini Embedding API + Supabase RPC!
-  const hasConfidentLocalMatches = localResults.length >= Math.min(2, limit) && (localResults[0]?.combinedScore || 0) >= 15;
-  if (hasConfidentLocalMatches) {
+  if (localResults.length > 0) {
     return localResults.slice(0, limit);
   }
 
@@ -279,7 +278,11 @@ export async function executeRagQuery(
     return cached;
   }
 
-  const references = await searchRagChunks(options.query, apiKey, {
+  const effectiveQuery = (mode === 'redact' && options.targetQuestion)
+    ? `${options.query} ${options.targetQuestion.rawStem || options.targetQuestion.stem || ''} ${options.targetQuestion.claimedAnswer || ''}`.trim()
+    : options.query;
+
+  const references = await searchRagChunks(effectiveQuery, apiKey, {
     committeeId: options.committeeId,
     discipline: options.discipline,
     limit: options.limit || 4
@@ -450,7 +453,11 @@ export async function* executeRagQueryStream(
   modelName: string = 'gemini-3.8-flash'
 ): AsyncGenerator<{ token?: string; done?: boolean; references?: RagChunkResult[]; usedModel?: string }> {
   const mode = options.mode || 'qa';
-  const references = await searchRagChunks(options.query, apiKey, {
+  const effectiveQuery = (mode === 'redact' && options.targetQuestion)
+    ? `${options.query} ${options.targetQuestion.rawStem || options.targetQuestion.stem || ''} ${options.targetQuestion.claimedAnswer || ''}`.trim()
+    : options.query;
+
+  const references = await searchRagChunks(effectiveQuery, apiKey, {
     committeeId: options.committeeId,
     discipline: options.discipline,
     limit: options.limit || 4

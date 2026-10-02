@@ -993,7 +993,7 @@ const GlobalTopicSearchModal: React.FC<{
           <button
             type="button"
             onClick={onClose}
-            className="h-8 px-2.5 rounded-lg bg-canvas hover:bg-line text-[12px] font-semibold text-ink-2 cursor-pointer"
+            className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-canvas hover:bg-line text-[12px] font-semibold text-ink-2 cursor-pointer"
           >
             Kapat (Esc)
           </button>
@@ -1200,7 +1200,7 @@ const SlideCanvas: React.FC<{
                 <button
                   type="button"
                   onClick={onOpenFlashcards}
-                  className="h-8 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[12px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
+                  className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[12px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
                 >
                   <span>Panelde Çalış</span>
                   <ChevronRight className="w-3.5 h-3.5" />
@@ -1222,12 +1222,12 @@ const SlideCanvas: React.FC<{
             <Sparkles className="w-4 h-4 text-accent shrink-0" />
             <span>Bu konu için <strong>{flashcards.length} akıl kartı</strong> ve <strong>{(slide.relatedQuestions || []).length} çıkmış soru</strong> hazırlandı.</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {flashcards.length > 0 && onOpenFlashcards && (
               <button
                 type="button"
                 onClick={onOpenFlashcards}
-                className="h-8 px-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+                className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
               >
                 <BrainCircuit className="w-3.5 h-3.5" />
                 <span>Akıl Kartları ({flashcards.length})</span>
@@ -1237,7 +1237,7 @@ const SlideCanvas: React.FC<{
               <button
                 type="button"
                 onClick={onOpenQuestions}
-                className="h-8 px-3 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+                className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
               >
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Çıkmış Sorular ({(slide.relatedQuestions || []).length})</span>
@@ -1247,7 +1247,7 @@ const SlideCanvas: React.FC<{
               <button
                 type="button"
                 onClick={onOpenNotes}
-                className="h-8 px-3 rounded-lg bg-white border border-line text-ink-2 hover:text-ink text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+                className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-white border border-line text-ink-2 hover:text-ink text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
               >
                 <BookOpen className="w-3.5 h-3.5 text-accent" />
                 <span>Ders Notu Özeti</span>
@@ -1353,7 +1353,7 @@ const SlideCanvas: React.FC<{
             <button
               type="button"
               onClick={onNext}
-              className="h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent hover:text-white text-accent font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+              className="shrink-0 whitespace-nowrap h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent hover:text-white text-accent font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
             >
               <span>Sonraki Slayta Geç</span>
               <ChevronRight className="w-4 h-4" />

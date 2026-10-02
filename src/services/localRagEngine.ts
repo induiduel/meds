@@ -1240,18 +1240,22 @@ export async function searchLocalRag(
     const chunk = memoryChunks.get(id);
     if (!chunk) continue;
 
-    // Strict Filters
-    if (options.committeeId && chunk.committeeId && chunk.committeeId !== options.committeeId) {
-      continue;
+    let finalScore = bmScore;
+
+    // Committee and Discipline Relevance Boosts
+    if (options.committeeId && chunk.committeeId) {
+      if (chunk.committeeId === options.committeeId) {
+        finalScore += 20;
+      }
     }
-    if (options.discipline && chunk.discipline && !chunk.discipline.toLowerCase().includes(options.discipline.toLowerCase())) {
-      continue;
+    if (options.discipline && chunk.discipline) {
+      if (chunk.discipline.toLowerCase().includes(options.discipline.toLowerCase())) {
+        finalScore += 25;
+      }
     }
     if (options.documentTypes && options.documentTypes.length > 0 && !options.documentTypes.includes(chunk.documentType)) {
       continue;
     }
-
-    let finalScore = bmScore;
 
     // Term coordination boost (chunks matching multiple high-yield query terms)
     const matchCount = matchedTokensCount.get(id) || 1;

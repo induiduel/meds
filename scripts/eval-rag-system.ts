@@ -127,6 +127,10 @@ async function runEvaluation() {
   console.log('================================================================\n');
 
   const apiKey = process.env.GEMINI_API_KEY || '';
+  const { initLocalRagEngine } = await import('../src/services/localRagEngine.ts');
+  console.log('🔄 BM25 Yerel İndeks Hazırlanıyor...');
+  initLocalRagEngine();
+
   const results: any[] = [];
   let totalSearchTime = 0;
   let totalRagGenTime = 0;
@@ -139,7 +143,11 @@ async function runEvaluation() {
 
     // 1. RAG Arama (Retrieval)
     const tSearchStart = Date.now();
-    const references = await searchRagChunks(tc.query, apiKey, {
+    const searchQuery = tc.mode === 'redact' && tc.targetQuestion
+      ? `${tc.query} ${tc.targetQuestion.rawStem || tc.targetQuestion.stem || ''} ${tc.targetQuestion.claimedAnswer || ''}`.trim()
+      : tc.query;
+
+    const references = await searchRagChunks(searchQuery, apiKey, {
       committeeId: tc.committeeId,
       discipline: tc.discipline,
       limit: 3

@@ -4004,96 +4004,96 @@
       {
         "slideNumber": 13,
         "title": "Kalsiyum Taşları ve Hiperkalsiüri Patofizyolojisi",
-        "subtitle": "Absorptif (Tip I, II, III), Renal kaçak ve Rezorptif (Primer HPT) ayrımı",
+        "subtitle": "Diyet, Absorptif (Tip I, II), Renal ve Primer Hiperparatiroidi ayrımı & Sarkoidoz",
         "badge": "Metabolik Bozukluklar",
         "badgeColor": "amber",
-        "synthesisNarrative": "Kalsiyum taşlı hastaların yaklaşık **%50'sinde** saptanan en yaygın metabolik anormallik **Hiperkalsiüri**dir (24 saatlik idrarda Ca >250 mg/gün kadın, >300 mg/gün erkek veya >4 mg/kg/gün). Hiperkalsiüri 3 ana fizyopatolojik mekanizmaya ayrılır: **1) Absorptif Hiperkalsiüri**: Bağırsaktan aşırı Ca emilimi. Tip I (diyet kalsiyum kısıtlamasına yanıtsız, genetik), Tip II (diyet kısıtlamasıyla normale dönen hafif form), Tip III (renal fosfat kaçağı -> 1,25-(OH)2-D3 artışı). **2) Renal Hiperkalsiüri**: Kalın çıkan kolda Ca reabsorpsiyon defekti (renal kaçak); serum kalsiyumu düşme eğilimine girince sekonder PTH artar. **3) Rezorptif Hiperkalsiüri**: Primer Hiperparatiroidizme (adenom) bağlıdır; otonom PTH artışı kemikten Ca çeker; hem hiperkalsemi hem hiperkalsiüri görülür.",
+        "synthesisNarrative": "Kalsiyum taşlı hastaların yaklaşık **%50'sinde** saptanan en yaygın metabolik anormallik **Hiperkalsiüri**dir. Resmi ders notuna göre geleneksel olarak sınıflandırılır: **1) Absorptif Hiperkalsiüri**: Bağırsaktan artmış kalsiyum emilimi. Tip I (kalsiyum kısıtlı diyette dahi idrar Ca yüksek kalır), Tip II (diyet kalsiyumu kısıtlandığında idrar Ca normale döner). **2) Renal Hiperkalsiüri**: Proksimal ve distal renal tübüllerden kalsiyumun yeniden emiliminin bozulması (renal kaçak; sekonder olarak PTH yükselir). **3) Rezorptif Hiperkalsiüri**: En sık paratiroid adenomuna bağlı gelişen **Primer Hiperparatiroidizm**dir. Klinik tanının EN ANLAMLI adımı **Primer Hiperparatiroidiyi diğerlerinden ayırt etmektir** (çünkü hem serum Ca hem PTH birlikte yüksektir). Hiperkalsemi ve hiperkalsiürinin diğer önemli nedeni **Sarkoidoz**dur; sarkoidozda PTH baskılanır, 1,25-dihidroksi D3 artar ve akciğer grafisinde hiler adenopati saptanır.",
         "flashcards": [
           {
             "id": "uro-fc-13-01",
             "category": "Hiperkalsiüri Tipleri",
             "front": "Absorptif Hiperkalsiüri Tip I ile Tip II arasındaki en kritik klinik ve tanısal fark nedir?",
             "hint": "Düşük kalsiyumlu diyete verilen yanıt.",
-            "back": "**Tip I Absorptif Hiperkalsiüri**, diyet kalsiyum kısıtlamasından bağımsızdır; hasta kalsiyumsuz beslense dahi idrar kalsiyumu yüksek kalır.\n**Tip II Absorptif Hiperkalsiüri** ise diyete duyarlıdır; kalsiyum kısıtlandığında 24 saatlik idrar kalsiyumu normale geriler."
+            "back": "**Tip I Absorptif Hiperkalsiüri**: Diyet kalsiyumu kısıtlansa bile idrar kalsiyumu yüksek kalır (yanıtsız).\n**Tip II Absorptif Hiperkalsiüri**: Diyet kalsiyumu kısıtlandığında idrar kalsiyumu normale döner (diyete tam yanıt)."
           },
           {
             "id": "uro-fc-13-02",
             "category": "Ayırıcı Tanı",
-            "front": "Renal hiperkalsiüri ile Rezorptif (Primer Hiperparatiroidizm) hiperkalsiüri serum kalsiyumu ve PTH açısından nasıl ayırt edilir?",
-            "hint": "Sekonder vs Primer PTH yüksekliği ve serum Ca düzeyi.",
-            "back": "**Rezorptif (Primer HPT)**: Serum Kalsiyumu YÜKSEK (hiperkalsemi) + Serum PTH YÜKSEK (otonom adenom).\n**Renal Hiperkalsiüri**: Serum Kalsiyumu NORMAL veya DÜŞÜK-NORMAL (idrarla kaçak var) + Serum PTH YÜKSEK (sekonder kompanzatuar yanıt)."
+            "front": "Primer Hiperparatiroidizm ile Granülomatöz Hastalıklar (Sarkoidoz) serum Ca, PTH ve tanısal testlerle nasıl ayırt edilir?",
+            "hint": "Her ikisi de hiperkalsemi ve hiperkalsiüri yapar; ancak PTH davranışı farklıdır.",
+            "back": "• **Primer Hiperparatiroidizm**: Serum Ca YÜKSEK, PTH YÜKSEKTİR (otonom adenom).\n• **Sarkoidoz**: Serum Ca YÜKSEK, ancak PTH BASKILANIR (↓). Tanıda göğüs röntgeninde **hiler adenopati** aranır ve kontrol edilen **1,25-dihidroksi D vitamini** yüksek bulunur."
           }
         ],
         "coreContent": {
           "keyBullets": [
             {
-              "title": "Kalsiyum Taşında En Sık Neden",
-              "desc": "Hiperkalsiüri (%50 sıklıkta saptanır; idiopatik veya sekonder).",
+              "title": "Tanının En Anlamlı Adımı",
+              "desc": "Primer hiperparatiroidiyi (yüksek Ca + yüksek PTH) diğer benign hiperkalsiürilerden ayırt etmektir.",
               "isKey": true
             },
             {
-              "title": "Tiyazid Diüretikleri",
-              "desc": "Distal tübülde kalsiyum geri emilimini artırarak idrar kalsiyumunu düşürür (en temel tedavi).",
+              "title": "Geleneksel Hiperkalsiüri Sınıflaması",
+              "desc": "Absorptif (barsaktan aşırı emilim), Renal (tübüler geri emilim bozukluğu) ve Rezorptif (paratiroid adenomu).",
               "isKey": true
             },
             {
-              "title": "Diyette Kalsiyum Kısıtlaması Tuzağı",
-              "desc": "Diyette kalsiyumu aşırı kısıtlamak serbest oksalat emilimini artırarak taş riskini DAHA ÇOK ARTIRIR!",
+              "title": "Sarkoidoz Ayrımı",
+              "desc": "Hiperkalsemi + hiperkalsiüri vardır fakat PTH baskılıdır; artmış 1,25-(OH)2-D3 ve bilateral hiler LAP tipiktir.",
               "isKey": true
             }
           ],
           "table": {
-            "title": "Hiperkalsiüri Tiplerinin Laboratuvar Ayırıcı Tanı Tablosu",
+            "title": "Ders Notu Sayfa 33: Hiperkalsiüri Tipleri Ayırıcı Tanı Tablosu",
             "headers": [
               "Hiperkalsiüri Tipi",
+              "Random İdrar Ca",
+              "Diyet Kısıtlanmış İdrar Ca",
               "Serum Kalsiyumu",
-              "Serum PTH Düzeyi",
-              "Açlık İdrar Kalsiyumu",
-              "Diyet Kısıtlamasına Yanıt"
+              "Serum Parathormon (PTH)"
             ],
             "rows": [
               [
+                "Diyet Kaynaklı",
+                "↑ Yüksek",
+                "Normal (N)",
+                "Normal (N)",
+                "Normal (N)"
+              ],
+              [
                 "Absorptif Tip I",
-                "Normal",
-                "Normal veya Baskılı",
-                "Normal veya Hafif Yüksek",
-                "Yanıtsız (Ca yüksek kalır)"
+                "↑ Yüksek",
+                "↑ Yüksek",
+                "Normal (N)",
+                "Normal veya ↓ Baskılı"
               ],
               [
                 "Absorptif Tip II",
-                "Normal",
-                "Normal veya Baskılı",
-                "Normal",
-                "Tam Yanıt (Normale döner)"
-              ],
-              [
-                "Absorptif Tip III",
-                "Normal",
-                "Normal (Fosfat Düşük)",
-                "Normal",
-                "Fosfat replasmanına yanıt verir"
+                "↑ Yüksek",
+                "Normal (N)",
+                "Normal (N)",
+                "Normal veya ↓ Baskılı"
               ],
               [
                 "Renal Kaçak",
-                "Normal / Düşük-Normal",
-                "Yüksek (Sekonder)",
-                "Yüksek (Açlıkta da kaçar)",
-                "Yanıtsız (Tiyazid gerekir)"
+                "↑ Yüksek",
+                "↑ Yüksek",
+                "Normal (N)",
+                "↑ Yüksek (Sekonder)"
               ],
               [
-                "Rezorptif (Primer HPT)",
-                "Yüksek (Hiperkalsemi)",
-                "Yüksek (Primer Otonom)",
-                "Yüksek",
-                "Cerrahi Paratiroidektomi"
+                "Primer Hiperparatiroidi",
+                "↑ Yüksek",
+                "↑ Yüksek",
+                "↑ Yüksek (Hiperkalsemi)",
+                "↑ Yüksek (Primer Otonom)"
               ]
             ]
           }
         },
         "spotPearls": [
-          "Taş hastasına asla gereksiz kalsiyum kısıtlaması yapılmaz; normal kalsiyumlu (1000-1200 mg/gün), düşük sodyumlu diyet önerilir.",
-          "Tuz (Sodyum) kısıtlaması hayati önemdedir; proksimal tübülde sodyum ile kalsiyum geri emilimi paraleldir (Na kısıtlanırsa Ca atılımı azalır).",
-          "Renal hiperkalsiüride tiyazid grubu diüretikler (hidroklorotiyazid, indapamid) ilk basamak medikal seçenektir."
+          "Primer hiperparatiroidiyi diğer hiperkalsiüri türlerinden ayırt etmek, klinik tanının en anlamlı adımıdır.",
+          "Sarkoidozda makrofaj kaynaklı 1-alfa hidroksilaz aktivitesi nedeniyle 1,25-dihidroksi D3 artar; hiperkalsemiye rağmen PTH baskılanır.",
+          "Diyet kaynaklı hiperkalsiüride kalsiyum kısıtlandığında idrar kalsiyumu hızla normale geriler; serum Ca ve PTH baştan beri normaldir."
         ],
         "relatedQuestions": [
           {
@@ -4131,90 +4131,102 @@
           }
         ],
         "aiPromptSuggestions": [
-          "Absorptif ve renal hiperkalsiüri ayrımı nasıl yapılır?",
-          "Taş hastalarında kalsiyum kısıtlaması neden zararlıdır?"
+          "Absorptif Tip I ve Tip II hiperkalsiüri diyet kısıtlamasına nasıl yanıt verir?",
+          "Primer hiperparatiroidi ile sarkoidoz laboratuvar olarak nasıl ayrılır?"
         ]
       },
       {
         "slideNumber": 14,
-        "title": "Hiperoksalüri Patofizyolojisi: Diyet, Primer ve Enterik Tipler",
-        "subtitle": "Oksalatın güçlü litogenik etkisi, AGXT enzim defekti ve yağ asidi sabunlaşması",
+        "title": "Hiperoksalüri Patofizyolojisi: Diyet, Birincil ve Enterik Tipler",
+        "subtitle": "Oxalobacter formigenes, AGXT/GRHPR/HOGA genetik defektleri ve Ca-Mg sabunlaşması",
         "badge": "Oksalat & Genetik",
         "badgeColor": "rose",
-        "synthesisNarrative": "İdrar oksalat konsantrasyonu, kalsiyum oksalat süpersatürasyonunu artırmada kalsiyumdan **10 ila 15 kat daha güçlü bir itici faktördür** (küçük oksalat artışları devasa kristalleşmeye yol açar). Normal idrar oksalatı <40-45 mg/gün olmalıdır. Üç tip hiperoksalüri görülür: **1) Diyet İlişkili**: Ispanak, pazı, kakao, fındık, çay gibi oksalattan zengin gıdaların aşırı tüketimi. **2) Primer Hiperoksalüri (PH)**: Nadir fakat ölümcül otozomal resesif metabolizma bozukluğudur. PH Tip 1'de hepatik peroksizomal **Alanin-Glioksilat Aminotransferaz (AGXT)** enzimi eksiktir; glioksilat glioksilata dönüştürülemeyip aşırı oksalata çevrilir; erken yaşta sistemik oksalozis ve böbrek yetmezliği yapar. **3) Enterik Hiperoksalüri**: Malabsorpsiyon (Crohn, kronik pankreatit, bariatrik cerrahi). Emilmemiş serbest yağ asitleri bağırsaktaki kalsiyumu sabunlaşarak bağlar; kalsiyumsuz kalan serbest oksalat kolondan kontrolsüzce emilir!",
+        "synthesisNarrative": "Resmi ders notuna göre **Hiperoksalüri** 3 temel grupta incelenir: **1) Diyet İlişkili Hiperoksalüri**: Oksalattan zengin besinler (fındık, çikolata, ıspanak, patates, demlenmiş çay) veya aşırı C vitamini (askorbik asit) alımıyla oluşur. Bağırsak oksalat emilimini belirleyen iki kritik faktör vardır: Diyetteki kalsiyum alımı ve bağırsağın substrat olarak oksalat kullanan, oksalatı indirgeyen koruyucu bakteri **Oxalobacter formigenes** ile kolonizasyonudur. **2) Birincil Hiperoksalüri (PH)**: Otozomal resesif glioksilat metabolizma bozukluğudur (idrar oksalatı >100 mg/gün, genç yaş, agresif tekrarlayan taşlar). **PH Tip I (%80, en ağır)**: Alanin-glioksilat aminotransferaz (AGXT) defekti, tedavisi karaciğer/böbrek kombine naklidir. **PH Tip II (daha az şiddetli)**: Glioksilat redüktaz / hidroksipirüvat redüktaz (GRHPR) kusuru, tedavisi genellikle izole böbrek naklidir. **PH Tip III (en az şiddetli)**: Mitokondriyal 4-hidroksi-2-oksoglutarat aldolaz (HOGA) kusuru, böbrek yetmezliği riski düşüktür. **3) Enterik Hiperoksalüri**: Malabsorpsiyon (Crohn, ülseratif kolit, çölyak) veya bariatrik cerrahide serbest yağ asitleri kalsiyum ve magnezyum ile **sabunlaşır**. Kalsiyumsuz kalan serbest oksalat ve safra tuzlarının artırdığı kolon geçirgenliği nedeniyle aşırı emilir. 24 saatlik idrarda: **↓ İdrar hacmi, ↓ pH, ↓ Ca, ↓ Na, ↓ Sitrat ve belirgin ↑ Oksalat** görülür!",
         "flashcards": [
           {
             "id": "uro-fc-14-01",
-            "category": "Enterik Oksalüri",
-            "front": "Malabsorpsiyon (Crohn, gastrik bypass) hastalarında enterik hiperoksalüri nasıl gelişir?",
-            "hint": "Serbest yağ asitleri, kalsiyum sabunlaşması ve serbest oksalat.",
-            "back": "Bağırsakta emilemeyen serbest yağ asitleri lümendeki kalsiyum ile birleşerek **sabunlaşır**. Normalde oksalatı bağlayıp dışkıyla atılmasını sağlayan kalsiyum tükenince, bağırsakta serbest kalan oksalat kolondan aşırı miktarda emilerek kana ve idrara geçer."
+            "category": "Bağırsak Kolonizasyonu",
+            "front": "Ders notuna göre bağırsakta substrat olarak oksalat kullanan ve oksalatı indirgeyerek emilimini azaltan koruyucu bakteri hangisidir?",
+            "hint": "Oksalat parçalayan bağırsak kommensali.",
+            "back": "**Oxalobacter formigenes**. Bağırsakta oksalatı parçalayarak lümendeki serbest oksalat miktarını ve kolonik emilimi belirgin şekilde düşürür; kolonizasyon kaybı hiperoksalüri riskini artırır."
           },
           {
             "id": "uro-fc-14-02",
-            "category": "Primer Oksalüri",
-            "front": "En ağır seyreden Primer Hiperoksalüri Tip 1'de hangi hepatik enzim eksiktir?",
-            "hint": "Glioksilatı glisine çeviren peroksizomal enzim.",
-            "back": "**Alanin-Glioksilat Aminotransferaz (AGXT)** enzimi eksiktir. Glioksilat glisine dönüştürülemez ve laktat dehidrogenaz (LDH) aracılığıyla yüksek miktarda oksalata çevrilir; agresif nefrokalsinozis ve çocuklukta böbrek yetmezliği yapar."
+            "category": "Birincil Hiperoksalüri",
+            "front": "Birincil Hiperoksalüri Tip I ve Tip II enzim defektleri ve nakil (organ transplantasyon) stratejileri nelerdir?",
+            "hint": "Ders notu Sayfa 38: AGXT vs GRHPR ve KC/böbrek vs böbrek nakli.",
+            "back": "• **PH Tip I (%80, en ağır)**: **Alanin:glioksalat aminotransferaz (AGXT)** enzim kusuru. Tedavisi **Karaciğer / Böbrek naklidir** (enzim karaciğer peroksizomundadır).\n• **PH Tip II**: **Glioksilat redüktaz / hidroksipirüvat redüktaz (GRHPR)** enzim kusuru. Tedavisi genellikle **izole böbrek naklidir**."
           }
         ],
         "coreContent": {
           "keyBullets": [
             {
-              "title": "Oksalatın Taş Yapıcı Gücü",
-              "desc": "İdrar oksalatındaki %10'luk bir artış, kalsiyumdaki %50'lik artıştan daha fazla kristalleşme yaratır.",
+              "title": "Oxalobacter formigenes Kolonizasyonu",
+              "desc": "Bağırsak oksalat emilimini modüle eden ana biyolojik faktör, oksalatı indirgeyen bu bakterinin varlığıdır.",
               "isKey": true
             },
             {
-              "title": "Primer Hiperoksalüri Tipleri",
-              "desc": "Tip 1: AGXT mutasyonu; Tip 2: GRHPR (glioksilat redüktaz) mutasyonu; Tip 3: HOGA1 mutasyonu.",
+              "title": "Birincil Hiperoksalüri Tipleri (Sayfa 38)",
+              "desc": "Tip I (AGXT kusuru, KC/böbrek nakli), Tip II (GRHPR kusuru, izole böbrek nakli), Tip III (HOGA kusuru, böbrek yetmezliği riski düşük).",
               "isKey": true
             },
             {
-              "title": "Enterik Oksalüri Tedavisi",
-              "desc": "Yemeklerle birlikte ağızdan kalsiyum karbonat/sitrat verilerek serbest oksalatın bağırsakta bağlanması sağlanır."
+              "title": "Enterik Oksalüri ve Ca-Mg Sabunlaşması",
+              "desc": "Yağ asitleri Ca ve Mg ile sabunlaşır -> Kalsiyum oksalatı bağlayamaz -> Serbest oksalat ve safra tuzları etkisiyle kolondan emilir.",
+              "isKey": true
+            },
+            {
+              "title": "Enterik Oksalüride 24 Saatlik İdrar Profili",
+              "desc": "Hacim ↓, pH ↓, Ca ↓, Na ↓, Sitrat ↓, fakat İdrar Oksalatı belirgin ↑ artmıştır.",
+              "isKey": true
             }
           ],
           "table": {
-            "title": "Hiperoksalüri Nedenleri ve Özellikleri",
+            "title": "Ders Notu Sayfa 36-39: Hiperoksalüri Sınıflaması ve Klinik Profili",
             "headers": [
-              "Tip",
-              "Etiyoloji / Mekanizma",
-              "İdrar Oksalat Düzeyi",
-              "Tedavi Yaklaşımı"
+              "Hiperoksalüri Grubu",
+              "Temel Etyoloji / Enzim Kusuru",
+              "Özgün Mekanizma",
+              "Tedavi / Organ Nakli"
             ],
             "rows": [
               [
-                "Diyetsel Hiperoksalüri",
-                "Oksalattan zengin besinler (ıspanak, çikolata, kuruyemiş)",
-                "Hafif-Orta (45-60 mg/gün)",
-                "Diyet düzenlemesi, hidrasyon"
+                "Diyet İlişkili",
+                "Oksalattan zengin besinler (fındık, çikolata, ıspanak, çay) veya aşırı C vitamini",
+                "Diyet kalsiyum düşüklüğü ve Oxalobacter formigenes eksikliği",
+                "Diyet modifikasyonu, yeterli kalsiyum ve hidrasyon"
+              ],
+              [
+                "Birincil Tip I (PH I - %80)",
+                "Alanin:glioksalat aminotransferaz (AGXT) kusuru",
+                "Otozomal resesif endojen oksalat aşırı üretimi (>100 mg/gün)",
+                "Karaciğer / Böbrek Nakli"
+              ],
+              [
+                "Birincil Tip II (PH II)",
+                "Glioksilat redüktaz / hidroksipirüvat redüktaz kusuru",
+                "Glioksilat metabolizma defekti (daha az şiddetli)",
+                "Genellikle izole Böbrek Nakli"
+              ],
+              [
+                "Birincil Tip III (PH III)",
+                "Mitokondriyal 4-hidroksi-2-oksoglutarat aldolaz (HOGA)",
+                "HOGA gen mutasyonu (en az şiddetli tip)",
+                "Konservatif tedavi (böbrek yetmezliği nadir)"
               ],
               [
                 "Enterik Hiperoksalüri",
-                "Malabsorpsiyon, Crohn, rezeksiyon (Ca sabunlaşması)",
-                "Yüksek (60-120 mg/gün)",
-                "Yağ kısıtlaması, oral Ca desteği, hidrasyon"
-              ],
-              [
-                "Primer Tip 1 (PH1)",
-                "Hepatik AGXT enzim mutasyonu (otozomal resesif)",
-                "Çok Yüksek (>100-300 mg/gün)",
-                "Piridoksin (B6), Lumasiran (RNAi), KC-Böbrek Nakli"
-              ],
-              [
-                "C Vitamini Toksisitesi",
-                "Aşırı askorbik asit alımı (oksalata metabolize olur)",
-                "Orta-Yüksek",
-                "C vitamini takviyesinin kesilmesi"
+                "Malabsorpsiyon (Crohn, ülseratif kolit, çölyak) veya cerrahi rezeksiyon",
+                "Yağ asitlerinin Ca ve Mg ile sabunlaşması, safra tuzlarının kolon geçirgenliğini artırması",
+                "Oral kalsiyum desteği (lümen bağlama), yağ kısıtlaması"
               ]
             ]
           }
         },
         "spotPearls": [
-          "Bariatrik cerrahi (Roux-en-Y gastrik bypass) geçiren hastalarda en sık gelişen taş enterik hiperoksalüriye bağlı CaOx taşıdır.",
-          "C vitamini (askorbik asit) vücutta oksalata metabolize olur; günde >1000 mg C vitamini taş riskini belirgin artırır.",
-          "Piridoksin (B6 vitamini), AGXT enziminin ko-faktörüdür ve Primer Hiperoksalüri Tip 1 hastalarının bir kısmında oksalat üretimini düşürür."
+          "Ders notuna göre bağırsakta oksalatı substrat olarak kullanan koruyucu bakteri Oxalobacter formigenes'tir.",
+          "Enterik hiperoksalüride 24 saatlik idrarda hacim, pH, kalsiyum, sodyum ve sitrat DÜŞÜK iken idrar oksalatı BELİRGİN YÜKSEKTİR.",
+          "Birincil hiperoksalüri Tip I karaciğer/böbrek kombine nakli gerektirirken, Tip II'de izole böbrek nakli yeterli olabilmektedir."
         ],
         "relatedQuestions": [
           {
@@ -4252,8 +4264,8 @@
           }
         ],
         "aiPromptSuggestions": [
-          "Enterik hiperoksalüride kalsiyum neden kısıtlanmaz, aksine verilir?",
-          "Primer hiperoksalüri tedavisinde güncel genetik/RNAi yaklaşımları nelerdir?"
+          "Oxalobacter formigenes hiperoksalüriyi nasıl engeller?",
+          "Enterik hiperoksalüride Ca ve Mg sabunlaşmasının mekanizması nedir?"
         ]
       },
       {
@@ -4424,8 +4436,8 @@
               "isKey": true
             },
             {
-              "title": "Ksantin Oksidaz İnhibitörleri",
-              "desc": "Allopurinol veya Febuksostat, yalnızca hiperürisemi veya aşırı ürikozüri (>800-1000 mg/gün) varsa eklenir."
+              "title": "Ksantin Oksidaz İnhibitörü (Allopurinol)",
+              "desc": "Allopurinol, yalnızca eşlik eden hiperürisemi veya aşırı hiperürikozüri (>700-800 mg/gün) varlığında tedaviye eklenir."
             }
           ],
           "table": {
@@ -4551,10 +4563,10 @@
       {
         "slideNumber": 17,
         "title": "Sistin Taşları ve Sistinüri Patolojisi (COLA Defekti)",
-        "subtitle": "SLC3A1 / SLC7A9 mutasyonları, hekzagonal kristaller ve sodyum siyanid testi",
+        "subtitle": "SLC3A1 / SLC7A9 mutasyonları, hekzagonal kristaller, sodyum ilişkisi ve nitroprussid testi",
         "badge": "Genetik & Metabolizma",
         "badgeColor": "rose",
-        "synthesisNarrative": "**Sistinüri**, renal proksimal tübül ve ince bağırsak epitelinde yer alan dibazik aminoasit taşıyıcı sistemindeki mutasyonlara bağlı gelişen **otozomal resesif** bir hastalıktır. Genetik defekt **SLC3A1** (rBAT ağır zincir - Tip A) veya **SLC7A9** (b0,+AT hafif zincir - Tip B) genlerindedir. Taşıyıcı kusuru nedeniyle 4 dibazik aminoasidin idrarla atılımı aşırı artar: **Cystine, Ornithine, Lysine, Arginine (COLA)**. Bu grupta yer alan ornitin, lizin ve arginin fizyolojik pH'da suda son derece çözünürken; **Sistin** fizyolojik idrar pH'sında (pH < 7.0) son derece çözünmezdir (çözünürlük sınırı ~250 mg/L) ve erken yaşta iki taraflı rekürren taşlar yapar. İdrar mikroskopisinde **patojenik hekzagonal (altıgen / benzen halkası) kristaller** patognomoniktir. Tarama testi **Sodyum Siyanid Nitroprussid** testidir.",
+        "synthesisNarrative": "**Sistinüri**, renal proksimal tübül ve ince bağırsak epitelinde yer alan dibazik aminoasit taşıyıcı sistemindeki mutasyonlara bağlı gelişen **otozomal resesif** bir hastalıktır. Genetik defekt **SLC3A1** (rBAT) veya **SLC7A9** (b0,+AT) genlerindedir. Taşıyıcı kusuru nedeniyle 4 dibazik aminoasidin idrarla atılımı aşırı artar: **Cystine, Ornithine, Lysine, Arginine (COLA)**. Bu grupta yer alan ornitin, lizin ve arginin fizyolojik pH'da suda son derece çözünürken; **Sistin** fizyolojik idrar pH'sında çok az çözünür ve erken yaşta iki taraflı rekürren taşlar yapar. Sistin çözünürlüğü artan idrar pH'sı ile artar. Ders notunda özellikle vurgulanan hayati nokta: **\"Sodyum sistin atılımını arttırır.\"** Bu nedenle sistinüri hastalarında tuz (sodyum) kısıtlaması birinci basamak koruyucu tedavidir. İdrar mikroskopisinde **patojenik hekzagonal (altıgen) kristaller** patognomoniktir. Tarama testi **Sodyum Siyanid Nitroprussid** testidir.",
         "flashcards": [
           {
             "id": "uro-fc-17-01",
@@ -4565,80 +4577,80 @@
           },
           {
             "id": "uro-fc-17-02",
-            "category": "Tanı & Kristal",
-            "front": "Sistin taşlarının idrar mikroskopisindeki karakteristik kristal morfolojisi ve kimyasal tarama testi nedir?",
-            "hint": "Altıgen şekil ve nitroprussid reaksiyonu.",
-            "back": "Mikroskopide: **Hekzagonal (altıgen) yassı kristaller** (patognomonik).\nTarama testi: **Sodyum Siyanid Nitroprussid Testi** (idrarda serbest sistin varlığında kırmızı-mor renk verir)."
+            "category": "Sodyum ve Sistin İlişkisi",
+            "front": "Ders notuna göre sodyum alımının idrar sistin atılımı ve taş riski üzerindeki doğrudan etkisi nedir?",
+            "hint": "Sayfa 47: Sodyum sistin atılımını...",
+            "back": "Ders notuna göre: **\"Sodyum sistin atılımını arttırır.\"** Yüksek sodyumlu diyet proksimal tübülde sistin atılımını kamçılar; bu nedenle hastalarda katı **tuz/sodyum kısıtlaması** taş nüksünü önlemede şarttır."
           }
         ],
         "coreContent": {
           "keyBullets": [
             {
-              "title": "Otozomal Resesif Geçiş",
-              "desc": "SLC3A1 (kromozom 2p) ve SLC7A9 (kromozom 19q) mutasyonları.",
+              "title": "Otozomal Resesif COLA Defekti",
+              "desc": "SLC3A1 ve SLC7A9 mutasyonları; Sistin, Ornitin, Lizin ve Arginin atılımı artar.",
               "isKey": true
             },
             {
-              "title": "Agresif Erken Başlangıç",
-              "desc": "Hastalar tipik olarak ilk taş atağını 10-20 yaş arasında geçirir; yaşam boyu nüks oranı çok yüksektir.",
+              "title": "Sodyum Kısıtlaması Kuralı (Sayfa 47)",
+              "desc": "Sodyum sistin atılımını arttırır; bu nedenle düşük sodyumlu diyet temel tedavi unsurudur.",
               "isKey": true
             },
             {
               "title": "Alkalinizasyon (Hedef pH > 7.5)",
-              "desc": "Sistinin pKa'sı 8.3'tür; çözünürlüğü ancak pH > 7.5 olduğunda belirgin artar.",
+              "desc": "Sistin çözünürlüğü idrar pH'sı arttıkça belirgin şekilde artar (potasyum sitrat kullanılır).",
               "isKey": true
             },
             {
               "title": "Tiyol İçeren Şelatör İlaçlar",
-              "desc": "D-Penisilamin ve Tiopronin (Alfa-MPG), sistin ile disülfit bağı kurarak 50 kat daha çözünür kompleksler oluşturur."
+              "desc": "D-Penisilamin ve Tiopronin (Alfa-MPG), sistin ile disülfit bağı kurarak suda çözünür kompleks oluşturur."
             }
           ],
           "table": {
-            "title": "Sistinüri Tanı ve Tedavi Prensipleri",
+            "title": "Ders Notu Sayfa 47: Sistinüri Patolojisi ve Yönetimi",
             "headers": [
-              "Basamak",
-              "Yöntem / İlaç",
-              "Mekanizma / Amaç",
-              "Klinik Not"
+              "Alan",
+              "Özellik / Müdahale",
+              "Patofizyolojik Mekanizma",
+              "Klinik Önemi"
             ],
             "rows": [
               [
+                "Genetik & Defekt",
+                "Otozomal Resesif",
+                "Dibazik aminoasit (COLA) taşıyıcı kusuru",
+                "Genç yaşta rekürren taşlar"
+              ],
+              [
+                "Çözünürlük & pH",
+                "Asitte Çökme, Alkalide Çözünme",
+                "pH arttıkça iyonlaşma ve çözünürlük katlanır",
+                "Hedef idrar pH > 7.5"
+              ],
+              [
+                "Diyet Sodyumu",
+                "Katı Sodyum Kısıtlaması",
+                "Sodyum sistin atılımını doğrudan artırır!",
+                "Tuz alımı kısıtlanmalıdır"
+              ],
+              [
+                "Tanısal Test",
+                "Na-Siyanid Nitroprussid",
+                "Serbest sistin ile kırmızı-mor renk reaksiyonu",
+                "Hızlı idrar tarama testi"
+              ],
+              [
                 "Mikroskopi",
-                "Taze idrar sedimenti",
-                "Hekzagonal kristallerin görülmesi",
-                "Tanı koydurucudur"
-              ],
-              [
-                "Tarama Testi",
-                "Na-siyanid nitroprussid",
-                "Kırmızı-mor renk reaksiyonu",
-                "Kalitatif pozitiflik (>75 mg/L)"
-              ],
-              [
-                "Konservatif",
-                "Aşırı hidrasyon (>3.5-4 L/gün)",
-                "Sistin derişimini <250 mg/L tutmak",
-                "Gece dahil sıvı alınmalıdır"
-              ],
-              [
-                "Medikal I",
-                "Potasyum Sitrat",
-                "İdrar pH'sını >7.5 yapmak",
-                "Sistin çözünürlüğü katlanır"
-              ],
-              [
-                "Medikal II",
-                "Tiopronin / D-Penisilamin",
-                "Disülfit bağını kırıp şelat oluşturma",
-                "Yan etki takibi gerekir (proteinüri)"
+                "Hekzagonal (Altıgen) Kristaller",
+                "Sistin tuzunun karakteristik geometrik formu",
+                "Patognomoniktir"
               ]
             ]
           }
         },
         "spotPearls": [
+          "Ders notu Sayfa 47: \"Sodyum sistin atılımını arttırır\" (bu nedenle tuz kısıtlaması en az hidrasyon kadar kritiktir).",
           "Sistin taşları kükürt içeriği nedeniyle DÜSG'de hafif zayıf radyoopaktır (buzlu cam / mumsu opasite).",
-          "Sistin taşları ESWL şok dalgalarına en dirençli taş gruplarındandır; cerrahi gerektiğinde lazer litotripsi (URS/PNL) uygulanır.",
-          "Sodyum kısıtlaması sistinüri yönetiminde çok etkilidir; çünkü sistin taşınması sodyum gradyentine bağımlıdır."
+          "Sistin taşları ESWL şok dalgalarına en dirençli taşlardandır; cerrahi gerektiğinde lazer litotripsi tercih edilir."
         ],
         "relatedQuestions": [
           {
@@ -4709,89 +4721,101 @@
           }
         ],
         "aiPromptSuggestions": [
-          "Sistinüri tedavisinde tiyol türevi ilaçlar nasıl etki eder?",
+          "Sistinüri tedavisinde sodyum kısıtlaması neden bu kadar önemlidir?",
           "Sistin taşlarında idrar pH hedefi neden ürik asitten daha yüksektir?"
         ]
       },
       {
         "slideNumber": 18,
         "title": "Enfeksiyon Taşları (Strüvit / Magnezyum Amonyum Fosfat)",
-        "subtitle": "Üreaz pozitif bakteriler, pH > 7.2 patogenezi ve Geyik Boynuzu (Staghorn) taşları",
+        "subtitle": "Proteus, Klebsiella, Staph. aureus/epidermidis, üreaz aktivitesi ve Staghorn taşları",
         "badge": "Enfeksiyon & Üreaz",
         "badgeColor": "emerald",
-        "synthesisNarrative": "**Enfeksiyon Taşları (Strüvit)**, üriner sistemin üreaz üreten bakterilerle kronik enfeksiyonu zemininde gelişir. En sık etken **Proteus mirabilis**tir (ayrıca Klebsiella pneumoniae, Pseudomonas aeruginosa, Providencia, Serratia ve Staph. saprophyticus). **ÇOK ÖNEMLİ: E. coli üreaz üretmez; dolayısıyla saf E. coli enfeksiyonu strüvit taşı yapmaz!** Bakteriyel üreaz enzimi idrardaki üreyi parçalar: `Üre + H2O -> 2 NH3 + CO2`. Açığa çıkan amonyak idrardaki protonları bağlar; idrar pH'sı dramatik şekilde bazikleşir (**pH > 7.2 - 8.0**). Bu aşırı alkali ve amonyumdan zengin ortamda **Magnezyum Amonyum Fosfat (Strüvit - MgNH4PO4.6H2O)** ve **Karbonat Apatit** hızla çökerek renal pelvis ve kaliksleri tamamen dolduran devasa **Geyik Boynuzu (Staghorn)** kalkülüslerini oluşturur.",
+        "synthesisNarrative": "**Enfeksiyon Taşları**, üriner sistemin üreaz üreten bakterilerle kronik enfeksiyonu zemininde gelişir. Taş bileşenleri: **Magnezyum amonyum fosfat (Strüvit), Karbonat apatit ve Amonyum ürat**tır. Resmi ders notunda (Sayfa 49) üreaz enzimi oluşturan bakteriler açıkça belirtilmiştir: **Proteus mirabilis, Klebsiella pneumoniae, Staphylococcus aureus ve Staphylococcus epidermidis**. Üreaz enzimi ürenin amonyak ve karbondioksite dönüşümünü katalizler: `Üre -> NH3 + CO2`. Oluşan amonyak ortamdaki serbest hidrojenleri bağlar; alkali idrar yüksek düzeyde amonyum ve fosfat oluşumunu destekleyerek **Strüvit taş oluşumuna** yol açar. **ÇOK ÖNEMLİ KURUL BİLGİSİ: E. coli üreaz üretmez; dolayısıyla saf E. coli enfeksiyonu strüvit taşı yapmaz!** Strüvit taşları tüm kaliksleri kaplayarak devasa **Geyik Boynuzu (Staghorn)** taşlarına dönüşür.",
         "flashcards": [
           {
             "id": "uro-fc-18-01",
             "category": "Enfeksiyon Taşı",
-            "front": "Strüvit taşlarının oluşumunda en sık izole edilen üreaz pozitif bakteri hangisidir ve E. coli bu grupta mıdır?",
-            "hint": "En sık Proteus; E. coli üreaz durumu.",
-            "back": "En sık etken **Proteus mirabilis**tir. **E. coli üreaz NEGATİFTİR**; bu nedenle E. coli tek başına strüvit (enfeksiyon) taşı oluşturmaz (sınavların en klasik tuzağıdır!)."
+            "front": "Ders notuna göre üreaz enzimi oluşturarak strüvit taşına yol açan 4 temel bakteri hangisidir?",
+            "hint": "Sayfa 49: Proteus, Klebsiella ve iki Stafilokok türü.",
+            "back": "Ders notu Sayfa 49:\n1) **Proteus mirabilis** (en sık)\n2) **Klebsiella pneumoniae**\n3) **Staphylococcus aureus**\n4) **Staphylococcus epidermidis**\n(NOT: E. coli üreaz üretmez, tek başına strüvit taşı yapmaz!)."
           },
           {
             "id": "uro-fc-18-02",
             "category": "Üreaz Reaksiyonu",
-            "front": "Bakteriyel üreaz enziminin kimyasal reaksiyonu ve idrar pH'sına etkisi nasıldır?",
-            "hint": "Ürenin amonyak ve bikarbonata hidrolizi.",
-            "back": "`Üre + H2O --(Üreaz)--> 2 NH3 + CO2`\nAmonyak (NH3) hidrojen tutarak amonyuma (NH4+) dönüşür ve serbest hidrojen iyonlarını tüketir. İdrar pH'sı hızla **>7.2 - 8.0** seviyesine fırlar; bu aşırı bazik ortamda strüvit kristalleri çöker."
+            "front": "Enfeksiyon taşlarının temel bileşenleri ve bakteriyel üreaz reaksiyonunun sonucu nedir?",
+            "hint": "Sayfa 49: 3 temel mineral bileşeni ve idrar pH etkisi.",
+            "back": "Bileşenler: **Magnezyum amonyum fosfat (Strüvit), Karbonat apatit ve Amonyum ürat**.\nÜreaz enzimi üreyi amonyak ve karbondioksite dönüştürür; açığa çıkan yüksek amonyum ve aşırı **alkali idrar** fosfat çökmesini destekleyerek strüvit taşını oluşturur."
           }
         ],
         "coreContent": {
           "keyBullets": [
             {
-              "title": "Geyik Boynuzu (Staghorn Kalkülüs)",
-              "desc": "Renal pelvisi ve tüm minör/majör kaliksleri dolduran dev döküm taşlardır; tedavi edilmezse sepsise ve renal yetmezliğe götürür.",
+              "title": "Ders Notundaki Üreaz (+) Bakteriler",
+              "desc": "Proteus mirabilis, Klebsiella pneumoniae, Staphylococcus aureus ve Staphylococcus epidermidis.",
               "isKey": true
             },
             {
-              "title": "Kadınlarda Sık Görülür",
-              "desc": "Tekrarlayan komplike idrar yolu enfeksiyonları nedeniyle kadın/erkek oranı 2:1'dir.",
+              "title": "Enfeksiyon Taşı Bileşenleri (Sayfa 49)",
+              "desc": "Magnezyum amonyum fosfat (Strüvit), Karbonat apatit ve Amonyum ürat.",
               "isKey": true
             },
             {
-              "title": "Yüksek Matris İçeriği (%65)",
-              "desc": "Bakteri biyofilmleri ve mukoid proteinler nedeniyle antibiyotik penetrasyonu zordur; cerrahi tam temizlik şarttır.",
+              "title": "E. coli Üreaz Negatiftir!",
+              "desc": "Toplumda en sık İYE etkeni olan E. coli üreaz üretmediği için tek başına strüvit taşı oluşturamaz.",
               "isKey": true
             },
             {
-              "title": "Cerrahi Tedavi (PNL)",
-              "desc": "Perkütan Nefrolitotomi (PNL) altın standarttır; geride milimetrik parça kalsa bile bakteri odağı nedeniyle hızla nükseder."
+              "title": "Geyik Boynuzu (Staghorn) ve Cerrahi",
+              "desc": "Kolektör sistemi dolduran döküm taşlardır; tam cerrahi temizlik (PNL) ve antibiyoterapi zorunludur."
             }
           ],
           "table": {
-            "title": "Üreaz Üreten ve Üretmeyen Üropatojenler",
+            "title": "Ders Notu Sayfa 49: Enfeksiyon Taşları ve Mikrobiyolojik Özellikleri",
             "headers": [
-              "Üreaz Pozitif Bakteriler (Strüvit Yapar)",
-              "Üreaz Negatif Bakteriler (Strüvit Yapmaz)"
+              "Bileşen / Bakteri Türü",
+              "Üreaz Enzim Durumu",
+              "İdrar pH Etkisi",
+              "Klinik Tablo"
             ],
             "rows": [
               [
-                "Proteus mirabilis (En sık %70)",
-                "Escherichia coli (En sık İYE etkeni ama üreaz -)"
+                "Proteus mirabilis",
+                "Üreaz Pozitif (Güçlü)",
+                "Aşırı Alkali (pH > 7.2 - 8.0)",
+                "En sık enfeksiyon / Staghorn taşı etkeni"
               ],
               [
                 "Klebsiella pneumoniae",
-                "Enterococcus faecalis"
+                "Üreaz Pozitif",
+                "Alkali pH",
+                "Komplike taş oluşturan üropatojen"
               ],
               [
-                "Pseudomonas aeruginosa",
-                "Streptococcus türleri"
+                "Staphylococcus aureus",
+                "Üreaz Pozitif",
+                "Alkali pH",
+                "Enfeksiyon taşı oluşturan gram (+) kok"
               ],
               [
-                "Providencia stuartii / Morganella morganii",
-                "Citrobacter (çoğu suş)"
+                "Staphylococcus epidermidis",
+                "Üreaz Pozitif",
+                "Alkali pH",
+                "Enfeksiyon taşı oluşturan koagülaz (-) kok"
               ],
               [
-                "Staphylococcus saprophyticus / aureus",
-                "Candida albicans"
+                "Escherichia coli",
+                "Üreaz NEGATİF",
+                "Değişken / Asidik",
+                "Tek başına strüvit taşı yapmaz (Sınav tuzağı!)"
               ]
             ]
           }
         },
         "spotPearls": [
-          "Strüvit taşlarının tedavisinde \"cerrahi olarak geride hiç taş bırakmamak\" kuraldır (rezidüel taş = kaçınılmaz nüks ve ürosepsis).",
-          "Alkalik idrar pH'sı (>7.2) ile birlikte idrarda magnezyum amonyum fosfat (tabut kapağı / coffin-lid) kristalleri görülmesi strüvit lehinedir.",
-          "Asetohidroksamik asit (AHA), bakteriyel üreaz enzim inhibitörü olup seçilmiş nüks vakalarda medikal olarak kullanılır."
+          "Ders notu Sayfa 49: Üreaz pozitif etkenler Proteus mirabilis, Klebsiella pneumoniae, Staphylococcus aureus ve Staphylococcus epidermidis'tir.",
+          "Enfeksiyon taşlarının 3 temel formu: Magnezyum amonyum fosfat, karbonat apatit ve amonyum ürattır.",
+          "E. coli üreaz negatif olduğu için staghorn/strüvit taşı yapmaz; bu kural kurul sınavlarının en klasik sorusudur."
         ],
         "relatedQuestions": [
           {
@@ -4862,101 +4886,107 @@
           }
         ],
         "aiPromptSuggestions": [
-          "E. coli neden strüvit taşı yapmaz?",
-          "Staghorn taşının cerrahi yönetim prensipleri nelerdir?"
+          "Sayfa 49'daki üreaz pozitif bakteriler hangileridir?",
+          "E. coli neden strüvit taşı oluşturamaz?"
         ]
       },
       {
         "slideNumber": 19,
         "title": "İlaç Kaynaklı Taşlar ve Nadir Taş Türleri",
-        "subtitle": "İndinavir, Triamteren, Karbonik Anhidraz İnhibitörleri, Ksantin ve APRT eksikliği",
+        "subtitle": "Asetazolamid, Topiramat, HCTZ, İndinavir, Ritonavir, Triamteren, Guaifenesin ve Efedrin",
         "badge": "İlaçlar & Nadir Taşlar",
         "badgeColor": "purple",
-        "synthesisNarrative": "İlaç kaynaklı taşlar iki temel mekanizmayla ortaya çıkar: **1) İlacın bizzat idrarda kristalleşerek taş oluşturması**: En tipik örneği HIV tedavisinde kullanılan proteaz inhibitörü **İNDİNAVİR**dir. İndinavir suda zor çözünür, idrarda iğnemsi kristaller yapar ve tamamen **RADYOLÜSENTTİR** (hem DÜSG'de hem de kontrassız BT'de görünmeyebilir; kontrastlı ürografide dolma defektiyle tanınır!). Diğer kristalleşen ilaçlar: Triamteren, Sülfonamidler, Siprofloksasin. **2) İlacın metabolizmayı bozarak taş zeminini hazırlaması**: Glokom veya epilepsi/migren ilacı olan Karbonik Anhidraz İnhibitörleri (**Topiramat, Asetazolamid**) distal RTA tablosu yaratarak kalsiyum fosfat taşlarına yol açar. Nadir pürin metabolizma taşları: **Ksantin taşları** (Ksantin dehidrogenaz eksikliği) ve **2,8-Dihidroksiadenin taşları** (APRT enzim eksikliği).",
+        "synthesisNarrative": "Resmi ders notuna göre (Sayfa 51) **İlaç Kaynaklı Taşlar** iki grupta incelenir: **1) Metabolik Asidoz ve İdrar Kompozisyonunu Bozarak Taş Yapanlar**: **Karbonik Anhidraz İnhibitörleri (Asetazolamid ve Topiramat)**: İdrar pH'sini artıran, idrar sitratını azaltan ve bazen hiperkalsiüriyi destekleyen bir metabolik asidoz tablosu yaratarak kalsiyum fosfat taşlarına yol açarlar. **Hidroklorotiyazid (HCTZ)**: Hipokalemi sonucu hücre içi asidoz yoluyla **hipositratüriye** neden olarak taş riskini tetikleyebilir. **2) Doğrudan İdrarda Taş Oluşturan İlaçlar**: Proteaz inhibitörleri (**İndinavir ve Ritonavir**), **Triamteren**, **Guaifenesin** ve **Efedrin**dir. İndinavir suda zor çözünür, idrarda doğrudan kristalleşir ve direkt grafide (DÜSG) tamamen **RADYOLÜSENTTİR**.",
         "flashcards": [
           {
             "id": "uro-fc-19-01",
-            "category": "İlaç Taşı",
-            "front": "HIV hastalarında kullanılan ve hem DÜSG'de hem de kontrassız BT'de radyolüsent olabilen proteaz inhibitörü taş hangisidir?",
-            "hint": "Kendisi kristalleşen ünlü retroviral ilaç.",
-            "back": "**İndinavir** taşı. Düşük radyolojik dansiteye sahip olduğu için röntgende ve rutin kontrassız BT'de parankimle izodens kalabilir. Tanı sıklıkla kontrastlı IVP veya retrograd pyelografide dolma defekti görülmesiyle konur."
+            "category": "Doğrudan Taş Yapan İlaçlar",
+            "front": "Ders notu Sayfa 51'e göre idrarda doğrudan kristalleşerek taş oluşturan ilaçlar hangileridir?",
+            "hint": "Proteaz inhibitörleri ve diğer üç aktif bileşik.",
+            "back": "Ders notu Sayfa 51'e göre doğrudan taş oluşturan ilaçlar:\n• Proteaz inhibitörleri: **İndinavir** ve **Ritonavir**\n• **Triamteren**\n• **Guaifenesin**\n• **Efedrin**"
           },
           {
             "id": "uro-fc-19-02",
             "category": "İlaç Metabolizması",
-            "front": "Topiramat veya Asetazolamid kullanan hastalarda hangi mekanizmayla taş oluşur?",
-            "hint": "Karbonik anhidraz inhibisyonu ve edinsel dRTA.",
-            "back": "Bu ilaçlar **Karbonik Anhidraz enzimini inhibe eder**. Proksimalde bikarbonat emilimini bozup hücre içi asidoz yaratırlar. Sonuçta: Paradoksal alkali idrar + Ağır Hipositratüri gelişir ve **Kalsiyum Fosfat taşları** çöker."
+            "front": "Ders notuna göre Asetazolamid, Topiramat ve Hidroklorotiyazid hangi mekanizmalarla taş oluşumunu tetikler?",
+            "hint": "Karbonik anhidraz inhibisyonu vs hipokalemi / hücre içi asidoz.",
+            "back": "• **Asetazolamid ve Topiramat**: Karbonik anhidraz inhibitörüdür; idrar pH'sini artıran, idrar sitratını azaltan ve hiperkalsiüriyi destekleyen metabolik asidoz yaratırlar.\n• **Hidroklorotiyazid**: Hipokalemi sonucu hücre içi asidoz yoluyla **hipositratüriye** yol açabilir."
           }
         ],
         "coreContent": {
           "keyBullets": [
             {
-              "title": "İndinavir Taşları",
-              "desc": "İlaç kesilip bol hidrasyon sağlandığında hızla çözünür.",
+              "title": "Doğrudan Taş Yapan İlaçlar (Sayfa 51)",
+              "desc": "Proteaz inhibitörleri (İndinavir ve Ritonavir), Triamteren, Guaifenesin ve Efedrin.",
               "isKey": true
             },
             {
-              "title": "Topiramat / Asetazolamid Uyarısı",
-              "desc": "Migren veya glokom tedavisi görenlerde edinsel distal RTA benzeri kalsiyum fosfat taşı riski yüksektir.",
+              "title": "Karbonik Anhidraz İnhibitörleri",
+              "desc": "Asetazolamid ve Topiramat: İdrar pH'sini artırır, idrar sitratını azaltır, hiperkalsiüriyi destekler.",
               "isKey": true
             },
             {
-              "title": "2,8-Dihidroksiadenin (APRT Eksikliği)",
-              "desc": "Radyolüsenttir; ürik asit taşı zannedilip allopurinol verilmesi yanlıştır (tedavi adenin diyet kısıtlamasıdır).",
+              "title": "Hidroklorotiyazid Uyarısı",
+              "desc": "Hipokalemiye bağlı hücre içi asidoz geliştirerek hipositratüriye neden olabilir.",
               "isKey": true
             },
             {
-              "title": "Ksantin Taşları",
-              "desc": "Primer herediter ksantinüri veya ağır hiperürisemide yüksek doz allopurinol tedavisi sonucu gelişir."
+              "title": "İndinavir Radyolüsensitesi",
+              "desc": "DÜSG'de ve kontrassız BT'de görünmeyebilir; hidrasyon ve ilacın kesilmesiyle çözünür."
             }
           ],
           "table": {
-            "title": "İlaç İlişkili Taşlar ve Mekanizmaları",
+            "title": "Ders Notu Sayfa 51: İlaç Kaynaklı Taşlar ve Mekanizmaları",
             "headers": [
-              "İlaç Adı",
-              "Kullanım Alanı",
-              "Etki Mekanizması",
-              "Taşın Radyoopasitesi"
+              "İlaç Grubu / İlaç Adı",
+              "Kullanım Endikasyonu",
+              "Ders Notundaki Patolojik Mekanizma",
+              "Oluşan Taş Tipi / Opasite"
             ],
             "rows": [
               [
-                "İndinavir",
-                "HIV / AIDS tedavisi",
-                "İlacın idrarda doğrudan kristalleşmesi",
+                "İndinavir ve Ritonavir",
+                "HIV / Proteaz İnhibitörü",
+                "Doğrudan idrarda kristalleşme",
                 "Tamamen Radyolüsent"
               ],
               [
                 "Triamteren",
                 "Potasyum tutucu diüretik",
-                "İlaç ve metabolitlerinin çökmesi",
-                "Radyolüsen veya zayıf opak"
+                "Doğrudan kristalleşen aktif bileşik",
+                "Radyolüsen / Zayıf opak"
               ],
               [
-                "Topiramat",
-                "Migren, Epilepsi",
-                "Karbonik anhidraz inh. -> Alkali pH + hipositratüri",
-                "Radyoopak (CaP taşı)"
+                "Guaifenesin",
+                "Ekspektoran öksürük ilacı",
+                "Doğrudan idrarda kristalleşme",
+                "Radyolüsent"
               ],
               [
-                "Asetazolamid",
-                "Glokom, İntrakraniyal basınç",
-                "Karbonik anhidraz inh. -> dRTA benzeri tablo",
-                "Radyoopak (CaP taşı)"
+                "Efedrin",
+                "Dekonjestan / Sempatomimetik",
+                "Doğrudan idrarda kristalleşme",
+                "Radyolüsent"
               ],
               [
-                "Yüksek Doz C Vitamini",
-                "Besin takviyesi",
-                "Askorbik asidin oksalata dönüşmesi",
-                "Radyoopak (CaOx taşı)"
+                "Asetazolamid & Topiramat",
+                "Glokom, Migren, Epilepsi",
+                "İdrar pH ↑, Sitrat ↓, Hiperkalsiüri ↑ yaratan metabolik asidoz",
+                "Radyoopak (Kalsiyum fosfat)"
+              ],
+              [
+                "Hidroklorotiyazid",
+                "Hipertansiyon, Hiperkalsiüri",
+                "Hipokalemi sonucu hücre içi asidoz -> Hipositratüri",
+                "Kalsiyum taşı riski"
               ]
             ]
           }
         },
         "spotPearls": [
-          "Genç bir hastada bilateral kalsiyum fosfat taşı ve hipositratüri saptandığında migren için Topiramat kullanımı mutlaka sorgulanmalıdır.",
-          "İndinavir taşı hidrasyon ve ilacın kesilmesiyle günler içinde medikal olarak geriler.",
-          "Triamteren taşları sıklıkla kalsiyum oksalat taşlarının içine nükleus olarak gömülür."
+          "Ders notu Sayfa 51: Doğrudan taş oluşturan ilaçlar İndinavir, Ritonavir, Triamteren, Guaifenesin ve Efedrin'dir.",
+          "Karbonik anhidraz inhibitörleri (asetazolamid, topiramat) idrar pH'sini artırıp sitratı düşürerek kalsiyum fosfat taşı yaparlar.",
+          "Hidroklorotiyazid hipokalemiye bağlı hücre içi asidoz geliştirirse sekonder hipositratüriye neden olabilir."
         ],
         "relatedQuestions": [
           {
@@ -4994,8 +5024,8 @@
           }
         ],
         "aiPromptSuggestions": [
-          "Topiramat kullanan hastalarda taş riski nasıl önlenir?",
-          "İndinavir taşının ayırıcı tanısı nasıl yapılır?"
+          "Ders notundaki doğrudan taş oluşturan 5 ilaç hangisidir?",
+          "Topiramat ve asetazolamid idrar parametrelerini nasıl bozar?"
         ]
       },
       {
