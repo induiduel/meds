@@ -377,12 +377,12 @@ export class FirestoreDbService {
         const list: QuestionItem[] = [];
         snap.forEach((d) => {
           const item = d.data() as QuestionItem;
-          // Sadece sınavı tamamlanmış güncel 2026-2027 sorularını dahil et, çıkmış soruları hariç tut
-          if (!item.isPastExam && item.examYear === '2026-2027') {
+          // Aktif komite sorularını ve öğrenci taslaklarını dahil et, çıkmış sınav sorularını hariç tut
+          if (!item.isPastExam && (!item.examYear || item.examYear === '2026-2027')) {
             list.push(item);
           }
         });
-        return list.sort((a, b) => a.questionNumber - b.questionNumber);
+        return list.sort((a, b) => (a.questionNumber || 0) - (b.questionNumber || 0));
       }
 
       return [];
@@ -454,8 +454,14 @@ export class FirestoreDbService {
   /**
    * Deletes a question from Firestore
    */
-  static async deleteQuestion(questionId: string): Promise<void> {
-    await withTimeout(deleteDoc(doc(db, QUESTIONS_COLLECTION, questionId)), 4000);
+  static async deleteQuestion(questionId: string): Promise<boolean> {
+    try {
+      await withTimeout(deleteDoc(doc(db, QUESTIONS_COLLECTION, questionId)), 4000);
+      return true;
+    } catch (err: any) {
+      console.warn('[FirestoreDbService] deleteQuestion warning:', err?.message || err);
+      return false;
+    }
   }
 
   /**

@@ -26,7 +26,7 @@ import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { SectionLoader } from './components/ui/Animations';
-import { ToastHost } from './components/ui/Toast';
+import { ToastHost, toast } from './components/ui/Toast';
 
 // Lazy-loaded Views (Split into separate on-demand chunks)
 const PracticeMode = React.lazy(() => import('./components/PracticeMode').then(m => ({ default: m.PracticeMode })));
@@ -648,6 +648,22 @@ export default function App() {
     }
   };
 
+  // Delete question or draft
+  const handleDeleteQuestion = async (targetQ: QuestionItem) => {
+    const isDraft = targetQ.isUnassignedNumber || targetQ.questionNumber === 0;
+    const label = isDraft ? `"${targetQ.topic || 'Bu taslağı'}"` : `Soru #${targetQ.questionNumber}'ı`;
+    if (!window.confirm(`${label} kalıcı olarak veritabanından silmek istediğinize emin misiniz? Bu işlem geri alınamaz.`)) {
+      return;
+    }
+    try {
+      await ApiService.deleteQuestion(targetQ.id, currentUser);
+      setQuestions((prev) => prev.filter((item) => item.id !== targetQ.id));
+      toast.success('Silindi', `${isDraft ? 'Taslak' : 'Soru'} buluttan ve yerel hafızadan kalıcı olarak silindi.`);
+    } catch (err: any) {
+      toast.error('Silinemedi', err.message || 'Silme işlemi başarısız oldu.');
+    }
+  };
+
   // Trigger Gemini AI Reconstruction
   const handleReconstructWithAi = async (questionId: string) => {
     setReconstructingMap((prev) => ({ ...prev, [questionId]: true }));
@@ -1155,6 +1171,7 @@ export default function App() {
                       setSelectedQuestionToEdit(targetQ);
                       setIsEditQuestionModalOpen(true);
                     }}
+                    onDeleteQuestion={handleDeleteQuestion}
                     onOpenHistory={(targetQ) => {
                       setSelectedQuestionForHistory(targetQ);
                       setIsHistoryModalOpen(true);
@@ -1538,6 +1555,7 @@ export default function App() {
               setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
               setSelectedQuestionToEdit(null);
               setIsEditQuestionModalOpen(false);
+              toast.success('Değişiklikler Kaydedildi', 'Soru bulut veritabanına ve yerel hafızaya başarıyla kaydedildi.');
             }}
             onOpenHistory={() => {
               setSelectedQuestionForHistory(selectedQuestionToEdit);

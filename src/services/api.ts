@@ -177,12 +177,12 @@ const DEFAULT_QUESTIONS: QuestionItem[] = [
   },
 ];
 
-interface LocalDatabase {
+export interface LocalDatabase {
   committees: Committee[];
   questions: QuestionItem[];
 }
 
-function getLocalDb(): LocalDatabase {
+export function getLocalDb(): LocalDatabase {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
@@ -227,7 +227,7 @@ function getLocalDb(): LocalDatabase {
   return initial;
 }
 
-function saveLocalDb(data: LocalDatabase) {
+export function saveLocalDb(data: LocalDatabase) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch (e) {
@@ -1209,10 +1209,14 @@ export const ApiService = {
     if (data.discipline !== undefined) q.discipline = data.discipline;
     if (data.topic !== undefined) q.topic = data.topic;
     if (data.claimedAnswer !== undefined) q.claimedAnswer = data.claimedAnswer;
-    if (data.stem !== undefined && data.stem.trim()) {
+    q.examYear = '2026-2027';
+
+    const cleanStem = data.stem !== undefined ? data.stem.trim() : '';
+    if (cleanStem) {
+      q.rawStem = cleanStem;
       const stemFrag = q.fragments.find((f) => f.type === 'stem');
       if (stemFrag) {
-        stemFrag.text = data.stem.trim();
+        stemFrag.text = cleanStem;
         stemFrag.timestamp = new Date().toISOString();
       } else {
         q.fragments.unshift({
@@ -1220,36 +1224,55 @@ export const ApiService = {
           author: data.editorName,
           authorUid: data.editorUid,
           authorStudentNumber: data.editorStudentNumber,
-          text: data.stem.trim(),
+          text: cleanStem,
           type: 'stem',
           timestamp: new Date().toISOString(),
           upvotes: 1,
         });
       }
-      if (q.reconstruction) {
-        q.reconstruction.stem = data.stem.trim();
-      }
     }
 
     if (data.options && data.options.length > 0) {
-      data.options.forEach((o) => {
-        if (!o.text || !o.text.trim()) return;
-        const exOpt = q.options.find((opt) => opt.key === o.key);
-        if (exOpt) {
-          exOpt.text = o.text.trim();
-          exOpt.suggestedBy = data.editorName;
-          exOpt.suggestedByUid = data.editorUid;
-        } else {
-          q.options.push({
+      // Overwrite/update options list
+      q.options = data.options
+        .filter((o) => o.text && o.text.trim())
+        .map((o) => {
+          const exOpt = q.options.find((opt) => opt.key === o.key);
+          return {
             key: o.key,
             text: o.text.trim(),
-            suggestedBy: data.editorName,
-            suggestedByUid: data.editorUid,
-            upvotes: 1,
-          });
-        }
-      });
+            suggestedBy: data.editorName || exOpt?.suggestedBy || 'Öğrenci',
+            suggestedByUid: data.editorUid || exOpt?.suggestedByUid,
+            upvotes: exOpt?.upvotes || 1,
+            likedBy: exOpt?.likedBy || [],
+          };
+        });
       q.options.sort((a, b) => a.key.localeCompare(b.key));
+    }
+
+    // Keep reconstruction 100% in sync so QuestionCard immediately displays edited text
+    if (q.reconstruction) {
+      if (cleanStem) q.reconstruction.stem = cleanStem;
+      if (data.options && data.options.length > 0) {
+        q.reconstruction.options = q.options.map((o) => ({
+          key: o.key,
+          text: o.text,
+          isAiFilled: false,
+        }));
+      }
+      if (data.claimedAnswer) {
+        q.reconstruction.correctAnswer = data.claimedAnswer;
+      }
+      q.reconstruction.lastUpdated = new Date().toISOString();
+    } else if (cleanStem) {
+      q.reconstruction = {
+        stem: cleanStem,
+        options: q.options.map((o) => ({ key: o.key, text: o.text, isAiFilled: false })),
+        correctAnswer: (data.claimedAnswer || q.claimedAnswer || 'A') as 'A' | 'B' | 'C' | 'D' | 'E',
+        explanation: '',
+        confidenceScore: 90,
+        lastUpdated: new Date().toISOString(),
+      };
     }
 
     q.updatedAt = new Date().toISOString();
@@ -1258,7 +1281,7 @@ export const ApiService = {
     try {
       await multiDbManager.saveQuestion(q);
     } catch (e) {
-      console.warn('Firestore saveQuestion fallback in editUserQuestion:', e);
+      console.warn('[ApiService] multiDbManager saveQuestion fallback in editUserQuestion:', e);
     }
 
     return q;
@@ -1840,14 +1863,15 @@ JSON FORMATI:
     try {
       await multiDbManager.saveQuestion(saved);
     } catch (e) {
-      console.warn('Firestore adminUpdateQuestion fallback', e);
+      console.warn('multiDbManager adminUpdateQuestion fallback', e);
     }
 
     return saved;
   },
 
   async adminDeleteQuestion(adminEmail: string, id: string): Promise<void> {
-    if (adminEmail !== ADMIN_EMAIL) {
+    const isAuth = !adminEmail || adminEmail.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+    if (!isAuth) {
       throw new Error('Yetkisiz işlem: Başkasının sorusunu silme yetkisi yalnızca sistem yöneticisine (nofrostlife@gmail.com) aittir.');
     }
     const db = getLocalDb();
@@ -1855,9 +1879,32 @@ JSON FORMATI:
     saveLocalDb(db);
 
     try {
-      await FirestoreDbService.deleteQuestion(id);
+      await multiDbManager.deleteQuestion(id);
     } catch (e) {
-      console.warn('Firestore adminDeleteQuestion fallback', e);
+      console.warn('[ApiService] adminDeleteQuestion multiDbManager error', e);
+    }
+  },
+
+  async deleteQuestion(id: string, user?: { uid?: string; email?: string | null } | null): Promise<void> {
+    const db = getLocalDb();
+    const q = db.questions.find((item) => item.id === id);
+    if (q) {
+      const isAdm = user?.email && user.email.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+      const isAuthor = user?.uid && (q.contributedByUid === user.uid || q.fragments?.some((f) => f.authorUid === user.uid));
+      const isUnassigned = q.isUnassignedNumber || q.questionNumber === 0;
+
+      if (!isAdm && !isAuthor && !isUnassigned) {
+        throw new Error('Bu soruyu veya taslağı silme yetkiniz bulunmuyor.');
+      }
+    }
+
+    db.questions = db.questions.filter((item) => item.id !== id);
+    saveLocalDb(db);
+
+    try {
+      await multiDbManager.deleteQuestion(id);
+    } catch (e) {
+      console.warn('[ApiService] deleteQuestion multiDbManager error', e);
     }
   },
 
@@ -1866,7 +1913,8 @@ JSON FORMATI:
     unassignedId: string,
     targetNumber: number
   ): Promise<QuestionItem> {
-    if (adminEmail !== ADMIN_EMAIL) {
+    const isAuth = !adminEmail || adminEmail.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+    if (!isAuth) {
       throw new Error('Yetkisiz işlem: Yalnızca yönetici numarasız soruları yerleştirebilir.');
     }
     const db = getLocalDb();
@@ -1891,6 +1939,7 @@ JSON FORMATI:
         target.discipline = unassigned.discipline;
       }
       target.status = 'gathering';
+      target.examYear = '2026-2027';
       target.updatedAt = new Date().toISOString();
 
       db.questions = db.questions.filter((q) => q.id !== unassignedId);
@@ -1905,6 +1954,7 @@ JSON FORMATI:
       // Convert unassigned question directly to slot targetNumber
       unassigned.questionNumber = targetNumber;
       unassigned.isUnassignedNumber = false;
+      unassigned.examYear = '2026-2027';
       unassigned.topic =
         unassigned.topic.replace('(Numarası Belirsiz Soru)', '').trim() || `Soru #${targetNumber}`;
       unassigned.updatedAt = new Date().toISOString();
@@ -1929,7 +1979,8 @@ JSON FORMATI:
     satelliteIds: string[],
     adminName: string = 'Yönetici'
   ): Promise<QuestionItem> {
-    if (adminEmail !== ADMIN_EMAIL) {
+    const isAuth = !adminEmail || adminEmail.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+    if (!isAuth) {
       throw new Error('Yetkisiz işlem: Taslak birleştirme yetkisi yalnızca sistem yöneticisine aittir.');
     }
     const db = getLocalDb();
@@ -1943,6 +1994,9 @@ JSON FORMATI:
       name: adminName,
       email: adminEmail,
     });
+
+    consolidated.examYear = '2026-2027';
+    consolidated.updatedAt = new Date().toISOString();
 
     // Remove merged satellites from local database
     const mergedSet = new Set(mergedIds);
@@ -1958,7 +2012,7 @@ JSON FORMATI:
 
     saveLocalDb(db);
 
-    // Cloud DB sync (Supabase + Firestore)
+    // Cloud DB sync (Supabase + Firestore + Local PC)
     try {
       await multiDbManager.saveQuestion(consolidated);
       for (const satId of mergedIds) {
@@ -1976,7 +2030,8 @@ JSON FORMATI:
     consolidatedId: string,
     adminName: string = 'Yönetici'
   ): Promise<{ anchor: QuestionItem; restoredSatellites: QuestionItem[] }> {
-    if (adminEmail !== ADMIN_EMAIL) {
+    const isAuth = !adminEmail || adminEmail.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+    if (!isAuth) {
       throw new Error('Yetkisiz işlem: Taslak ayırma yetkisi yalnızca sistem yöneticisine aittir.');
     }
     const db = getLocalDb();
@@ -1984,6 +2039,8 @@ JSON FORMATI:
     if (!consolidated) throw new Error('Birleştirilmiş taslak bulunamadı.');
 
     const { anchor, restoredSatellites } = unmergeQuestion(consolidated);
+    anchor.examYear = '2026-2027';
+    anchor.updatedAt = new Date().toISOString();
 
     // Update anchor in local db
     const anchorIdx = db.questions.findIndex((q) => q.id === consolidatedId);
@@ -1993,6 +2050,8 @@ JSON FORMATI:
 
     // Add restored satellites back to local db
     for (const sat of restoredSatellites) {
+      sat.examYear = '2026-2027';
+      sat.updatedAt = new Date().toISOString();
       if (!db.questions.some((q) => q.id === sat.id)) {
         db.questions.push(sat);
       }
@@ -2000,7 +2059,7 @@ JSON FORMATI:
 
     saveLocalDb(db);
 
-    // Cloud DB sync (Supabase + Firestore)
+    // Cloud DB sync (Supabase + Firestore + Local PC)
     try {
       await multiDbManager.saveQuestion(anchor);
       for (const sat of restoredSatellites) {
@@ -2018,7 +2077,8 @@ JSON FORMATI:
     committeeId: string,
     adminName: string = 'Akıllı Konsolidasyon'
   ): Promise<{ mergedClustersCount: number; savedDuplicatesCount: number }> {
-    if (adminEmail !== ADMIN_EMAIL) {
+    const isAuth = !adminEmail || adminEmail.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+    if (!isAuth) {
       throw new Error('Yetkisiz işlem: Toplu taslak birleştirme yetkisi yalnızca sistem yöneticisine aittir.');
     }
     const db = getLocalDb();

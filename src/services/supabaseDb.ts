@@ -269,23 +269,28 @@ export const SupabaseDbService = {
       const { data, error } = await query;
       if (error || !data) return [];
 
-      return data.map((row: any) => ({
-        ...(row.data || {}),
-        id: row.id,
-        committeeId: row.committee_id || row.data?.committeeId,
-        questionNumber: row.question_number ?? row.data?.questionNumber,
-        discipline: row.discipline || row.data?.discipline,
-        topic: row.topic || row.data?.topic,
-        status: row.status || row.data?.status || 'gathering',
-        claimedAnswer: row.claimed_answer || row.data?.claimedAnswer,
-        upvotes: row.upvotes ?? row.data?.upvotes ?? 0,
-        tags: row.tags || row.data?.tags || [],
-        fragments: row.fragments || row.data?.fragments || [],
-        options: row.options || row.data?.options || [],
-        reconstruction: row.reconstruction || row.data?.reconstruction || null,
-        createdAt: row.created_at || row.data?.createdAt,
-        updatedAt: row.updated_at || row.data?.updatedAt,
-      }));
+      return data.map((row: any) => {
+        const qNum = row.question_number ?? row.data?.questionNumber ?? 0;
+        const isUnassigned = qNum === 0 || !!row.data?.isUnassignedNumber;
+        return {
+          ...(row.data || {}),
+          id: row.id,
+          committeeId: row.committee_id || row.data?.committeeId,
+          questionNumber: qNum,
+          isUnassignedNumber: isUnassigned,
+          discipline: row.discipline || row.data?.discipline || 'Belirtilmedi',
+          topic: row.topic || row.data?.topic || '',
+          status: row.status || row.data?.status || 'gathering',
+          claimedAnswer: row.claimed_answer || row.data?.claimedAnswer,
+          upvotes: row.upvotes ?? row.data?.upvotes ?? 0,
+          tags: row.tags || row.data?.tags || [],
+          fragments: row.fragments || row.data?.fragments || [],
+          options: row.options || row.data?.options || [],
+          reconstruction: row.reconstruction || row.data?.reconstruction || null,
+          createdAt: row.created_at || row.data?.createdAt,
+          updatedAt: row.updated_at || row.data?.updatedAt,
+        };
+      });
     } catch (err) {
       console.warn('Supabase getQuestions error:', err);
       return [];
@@ -297,25 +302,35 @@ export const SupabaseDbService = {
     if (!client || !question.id) return false;
 
     try {
+      const qNum = typeof question.questionNumber === 'number' ? question.questionNumber : 0;
       const row = cleanForPostgres({
         id: question.id,
         committee_id: question.committeeId,
-        question_number: question.questionNumber,
-        discipline: question.discipline,
-        topic: question.topic,
-        status: question.status,
-        claimed_answer: question.claimedAnswer,
+        question_number: qNum,
+        discipline: question.discipline || 'Belirtilmedi',
+        topic: question.topic || '',
+        status: question.status || 'gathering',
+        claimed_answer: question.claimedAnswer || null,
         upvotes: question.upvotes || 0,
         tags: question.tags || [],
         fragments: question.fragments || [],
         options: question.options || [],
-        reconstruction: question.reconstruction,
-        data: question,
-        updated_at: new Date().toISOString(),
+        reconstruction: question.reconstruction || null,
+        data: {
+          ...question,
+          questionNumber: qNum,
+          isUnassignedNumber: qNum === 0 || !!question.isUnassignedNumber,
+          updatedAt: question.updatedAt || new Date().toISOString()
+        },
+        updated_at: question.updatedAt || new Date().toISOString(),
       });
 
       const { error } = await client.from('questions').upsert([row], { onConflict: 'id' });
-      return !error;
+      if (error) {
+        console.warn('[SupabaseDbService] saveQuestion upsert error:', error.message || error);
+        return false;
+      }
+      return true;
     } catch (err) {
       console.warn('Supabase saveQuestion error:', err);
       return false;

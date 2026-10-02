@@ -303,50 +303,77 @@
       "fragments": [
         {
           "id": "f-1790956524167-gqdh",
-          "author": "Dönem 3 Öğrencisi",
           "text": "dfdfd",
           "type": "stem",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
+          "author": "Dönem 3 Öğrencisi",
+          "upvotes": 1,
+          "timestamp": "2026-10-02T15:55:24.167Z"
         },
         {
           "id": "f-opt-1790956524167-A",
-          "author": "Dönem 3 Öğrencisi",
           "text": "A) asas",
           "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
+          "author": "Dönem 3 Öğrencisi",
+          "upvotes": 1,
+          "timestamp": "2026-10-02T15:55:24.167Z"
         },
         {
           "id": "f-opt-1790956524167-B",
-          "author": "Dönem 3 Öğrencisi",
           "text": "B) dfdf",
           "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
+          "author": "Dönem 3 Öğrencisi",
+          "upvotes": 1,
+          "timestamp": "2026-10-02T15:55:24.167Z"
         },
         {
           "id": "f-opt-1790956524167-C",
-          "author": "Dönem 3 Öğrencisi",
           "text": "C) df",
           "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
+          "author": "Dönem 3 Öğrencisi",
+          "upvotes": 1,
+          "timestamp": "2026-10-02T15:55:24.167Z"
         },
         {
           "id": "f-opt-1790956524167-D",
-          "author": "Dönem 3 Öğrencisi",
           "text": "D) dfdf",
           "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
+          "author": "Dönem 3 Öğrencisi",
+          "upvotes": 1,
+          "timestamp": "2026-10-02T15:55:24.167Z"
         },
         {
           "id": "f-opt-1790956524167-E",
-          "author": "Dönem 3 Öğrencisi",
           "text": "E) df",
           "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
+          "author": "Dönem 3 Öğrencisi",
+          "upvotes": 1,
+          "timestamp": "2026-10-02T15:55:24.167Z"
+        },
+        {
+          "id": "f-1790972868016-dx5z",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "xfgnbfgbsgh",
+          "type": "stem",
+          "timestamp": "2026-10-02T20:27:48.016Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1790972868193-A",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "A) dfdwfdf",
+          "type": "option",
+          "timestamp": "2026-10-02T20:27:48.193Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1790972868193-B",
+          "author": "Dr House",
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "text": "B) dfdfdf",
+          "type": "option",
+          "timestamp": "2026-10-02T20:27:48.193Z",
           "upvotes": 1
         }
       ],
@@ -354,32 +381,32 @@
         {
           "key": "A",
           "text": "asas",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
+          "upvotes": 2,
+          "suggestedBy": "Dönem 3 Öğrencisi"
         },
         {
           "key": "B",
           "text": "dfdf",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
+          "upvotes": 2,
+          "suggestedBy": "Dönem 3 Öğrencisi"
         },
         {
           "key": "C",
           "text": "df",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
+          "upvotes": 1,
+          "suggestedBy": "Dönem 3 Öğrencisi"
         },
         {
           "key": "D",
           "text": "dfdf",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
+          "upvotes": 1,
+          "suggestedBy": "Dönem 3 Öğrencisi"
         },
         {
           "key": "E",
           "text": "df",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
+          "upvotes": 1,
+          "suggestedBy": "Dönem 3 Öğrencisi"
         }
       ],
       "claimedAnswer": "B",
@@ -390,14 +417,8 @@
       "revisions": [
         {
           "id": "rev-1790956524167",
-          "version": 1,
-          "editedAt": "2026-10-02T15:55:24.167Z",
-          "editorName": "Dönem 3 Öğrencisi",
-          "changeSummary": "İlk soru kaydı oluşturuldu",
           "stem": "dfdfd",
-          "discipline": "Tıbbi Patoloji",
           "topic": "Tıbbi Patoloji Hatırlanan Soru",
-          "claimedAnswer": "B",
           "options": [
             {
               "key": "A",
@@ -424,11 +445,19 @@
               "text": "df",
               "upvotes": 1
             }
-          ]
+          ],
+          "version": 1,
+          "editedAt": "2026-10-02T15:55:24.167Z",
+          "discipline": "Tıbbi Patoloji",
+          "editorName": "Dönem 3 Öğrencisi",
+          "changeSummary": "İlk soru kaydı oluşturuldu",
+          "claimedAnswer": "B"
         }
       ],
-      "createdAt": "2026-10-02T15:55:24.167Z",
-      "updatedAt": "2026-10-02T15:55:24.175Z"
+      "createdAt": "2026-10-02T15:55:33.114634+00:00",
+      "updatedAt": "2026-10-02T20:27:48.347Z",
+      "upvotes": 0,
+      "reconstruction": null
     },
     {
       "id": "q-donem3-kurul1-unassigned-1790950963304",
@@ -1565,6 +1594,61 @@
       ],
       "isMerged": true,
       "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi."
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1790951018529",
+      "tags": [
+        "Tıbbi Patoloji",
+        "numarasız-hatırlanan"
+      ],
+      "topic": "Tıbbi Patoloji Sorusu",
+      "status": "gathering",
+      "options": [],
+      "upvotes": 0,
+      "createdAt": "2026-10-02T14:23:39.181231+00:00",
+      "fragments": [
+        {
+          "id": "f-1790951018529-kul2",
+          "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+          "type": "stem",
+          "author": "Dr House",
+          "likedBy": [],
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T14:23:38.529Z"
+        },
+        {
+          "id": "f-1790972893418-vofn",
+          "author": "Dr House",
+          "text": "konko kırmızısı vardı",
+          "type": "clue",
+          "timestamp": "2026-10-02T20:28:13.418Z",
+          "upvotes": 0,
+          "likedBy": []
+        }
+      ],
+      "revisions": [
+        {
+          "id": "rev-1790951018529",
+          "stem": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+          "topic": "Tıbbi Patoloji Sorusu",
+          "options": [],
+          "version": 1,
+          "editedAt": "2026-10-02T14:23:38.529Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Patoloji",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        }
+      ],
+      "updatedAt": "2026-10-02T20:28:14.305Z",
+      "discipline": "Tıbbi Patoloji",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "reconstruction": null,
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "isUnassignedNumber": true
     }
   ]
 }

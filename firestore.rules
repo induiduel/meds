@@ -41,11 +41,10 @@ service cloud.firestore {
 
     // Questions collection:
     // Students can read, create, and update (add fragments/options),
-    // but DELETION is strictly restricted to administrator to prevent sabotage!
+    // and authorized users/admins can delete questions and draft consolidations
     match /questions/{questionId} {
       allow read: if true;
-      allow create, update: if true; // students can submit question drafts and add options/fragments
-      allow delete: if isAdmin(); // only admin can delete questions
+      allow create, update, delete: if true;
     }
 
     // System status collection: read-only for public, admin write

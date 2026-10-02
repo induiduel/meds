@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split } from 'lucide-react';
+import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split, Trash2 } from 'lucide-react';
 import { toast } from './ui/Toast';
 import { CapsuleLoader, SuccessCheck } from './ui/Animations';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
@@ -296,6 +296,23 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
       toast.error('Ayırma Başarısız', e.message || 'Taslak ayırma işlemi sırasında hata oluştu.');
     } finally {
       setUnmergingQuestionId(null);
+    }
+  };
+
+  // Taslağı Kalıcı Olarak Silme
+  const handleDeleteDraft = async (draftId: string, topic: string) => {
+    if (!window.confirm(`"${topic || 'Bu taslağı'}" kalıcı olarak silmek istediğinize emin misiniz?`)) {
+      return;
+    }
+    try {
+      await ApiService.deleteQuestion(draftId, currentUser);
+      setLocallyMergedSatelliteIds((prev) => new Set([...prev, draftId]));
+      setSelectedDraftIds((prev) => prev.filter((id) => id !== draftId));
+      toast.success('Taslak Silindi', 'Taslak veritabanından kalıcı olarak kaldırıldı.');
+      await onRefreshData();
+      await runAnalysis();
+    } catch (err: any) {
+      toast.error('Silme Başarısız', err.message || 'Taslak silinemedi.');
     }
   };
 
@@ -690,48 +707,61 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                   const isAnchor = on && manualAnchorId === q.id;
                   return (
                     <li key={q.id}>
-                      <button
-                        type="button"
-                        role="checkbox"
-                        aria-checked={on}
-                        onClick={() => toggleSelectDraft(q.id)}
-                        className={`w-full text-left rounded-[14px] border px-3 py-2.5 flex items-start gap-3 cursor-pointer transition-colors ${
-                          on ? 'bg-accent-soft/60 border-accent/40' : 'bg-white border-line hover:border-line-2'
-                        }`}
-                      >
-                        <span
-                          className={`mt-0.5 w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 ${on ? 'bg-accent text-white' : 'bg-white border border-line-2'}`}
-                          aria-hidden="true"
+                      <div className="flex items-center gap-1.5 w-full">
+                        <button
+                          type="button"
+                          role="checkbox"
+                          aria-checked={on}
+                          onClick={() => toggleSelectDraft(q.id)}
+                          className={`flex-1 text-left rounded-[14px] border px-3 py-2.5 flex items-start gap-3 cursor-pointer transition-colors ${
+                            on ? 'bg-accent-soft/60 border-accent/40' : 'bg-white border-line hover:border-line-2'
+                          }`}
                         >
-                          {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
-                        </span>
-                        <span className="flex-1 min-w-0 flex flex-col gap-1">
-                          <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
-                            <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
-                            <span className="truncate">
-                              {q.discipline}
-                              {q.topic ? ` · ${q.topic}` : ''}
+                          <span
+                            className={`mt-0.5 w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 ${on ? 'bg-accent text-white' : 'bg-white border border-line-2'}`}
+                            aria-hidden="true"
+                          >
+                            {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                          </span>
+                          <span className="flex-1 min-w-0 flex flex-col gap-1">
+                            <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
+                              <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
+                              <span className="truncate">
+                                {q.discipline}
+                                {q.topic ? ` · ${q.topic}` : ''}
+                              </span>
+                              {isAnchor && (
+                                <span className="ml-auto shrink-0 h-5 px-2 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center">Çapa</span>
+                              )}
                             </span>
-                            {isAnchor && (
-                              <span className="ml-auto shrink-0 h-5 px-2 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center">Çapa</span>
+                            <span className="text-[14px] text-ink leading-snug line-clamp-2">
+                              {stemOf(q) ? <Colored text={stemOf(q)} colors={manualColors} /> : 'Metin girilmemiş'}
+                            </span>
+                            {q.options?.length > 0 && (
+                              <span className="flex flex-wrap gap-1">
+                                {q.options.slice(0, 3).map((o) => (
+                                  <span key={o.key} className="max-w-[220px] truncate h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center">
+                                    <strong className="font-mono mr-1">{o.key}</strong>
+                                    <Colored text={o.text} colors={manualColors} />
+                                  </span>
+                                ))}
+                                {q.options.length > 3 && <span className="h-6 px-2 text-[12px] text-ink-3 inline-flex items-center">+{q.options.length - 3}</span>}
+                              </span>
                             )}
                           </span>
-                          <span className="text-[14px] text-ink leading-snug line-clamp-2">
-                            {stemOf(q) ? <Colored text={stemOf(q)} colors={manualColors} /> : 'Metin girilmemiş'}
-                          </span>
-                          {q.options?.length > 0 && (
-                            <span className="flex flex-wrap gap-1">
-                              {q.options.slice(0, 3).map((o) => (
-                                <span key={o.key} className="max-w-[220px] truncate h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center">
-                                  <strong className="font-mono mr-1">{o.key}</strong>
-                                  <Colored text={o.text} colors={manualColors} />
-                                </span>
-                              ))}
-                              {q.options.length > 3 && <span className="h-6 px-2 text-[12px] text-ink-3 inline-flex items-center">+{q.options.length - 3}</span>}
-                            </span>
-                          )}
-                        </span>
-                      </button>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleDeleteDraft(q.id, q.topic || q.discipline);
+                          }}
+                          className="w-10 h-10 rounded-[12px] border border-line bg-white flex items-center justify-center text-ink-3 hover:text-bad-text hover:bg-bad-soft hover:border-bad/30 cursor-pointer shrink-0 transition-colors"
+                          title="Taslağı kalıcı olarak veritabanından sil"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
                     </li>
                   );
                 })}
@@ -746,15 +776,25 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                 <EmptyState title="Muğlak taslak yok" text="Bütün taslaklar bir soruyla eşleşmiş görünüyor." />
               ) : (
                 analysis.unmatchedVagueDrafts.map((q) => (
-                  <div key={q.id} className="rounded-[14px] bg-white border border-line px-3.5 py-2.5 flex flex-col gap-1">
-                    <span className="flex items-center gap-2 text-[12.5px] text-ink-3 min-w-0">
-                      <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
-                      <span className="truncate">
-                        {q.discipline}
-                        {q.topic ? ` · ${q.topic}` : ''}
+                  <div key={q.id} className="rounded-[14px] bg-white border border-line px-3.5 py-2.5 flex items-start justify-between gap-2">
+                    <div className="flex-1 min-w-0 flex flex-col gap-1">
+                      <span className="flex items-center gap-2 text-[12.5px] text-ink-3 min-w-0">
+                        <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
+                        <span className="truncate">
+                          {q.discipline}
+                          {q.topic ? ` · ${q.topic}` : ''}
+                        </span>
                       </span>
-                    </span>
-                    <span className="text-[14px] text-ink leading-snug line-clamp-2">{stemOf(q) || 'Metin girilmemiş'}</span>
+                      <span className="text-[14px] text-ink leading-snug line-clamp-2">{stemOf(q) || 'Metin girilmemiş'}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteDraft(q.id, q.topic || q.discipline)}
+                      className="w-9 h-9 rounded-[10px] border border-line bg-white flex items-center justify-center text-ink-3 hover:text-bad-text hover:bg-bad-soft hover:border-bad/30 cursor-pointer shrink-0 transition-colors"
+                      title="Taslağı kalıcı olarak sil"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
                   </div>
                 ))
               )}
@@ -874,6 +914,18 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                             >
                               <Split className="w-3 h-3" />
                               <span>Kümeden Ayır</span>
+                            </button>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteDraft(sat.question.id, sat.question.topic || sat.question.discipline);
+                              }}
+                              title="Taslağı kalıcı olarak veritabanından sil"
+                              className="text-[11.5px] px-2 py-0.5 rounded-[6px] text-ink-3 hover:text-bad-text hover:bg-bad-soft border border-line-soft transition-colors cursor-pointer inline-flex items-center gap-1 shrink-0"
+                            >
+                              <Trash2 className="w-3 h-3" />
+                              <span>Sil</span>
                             </button>
                           </div>
                           <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-1'}`}>{stemOf(sat.question) ? <Colored text={stemOf(sat.question)} colors={colors} /> : 'Metin'}</span>
