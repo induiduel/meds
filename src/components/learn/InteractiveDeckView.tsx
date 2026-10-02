@@ -31,6 +31,8 @@ import {
   ChevronUp,
   BrainCircuit,
   RotateCcw,
+  GraduationCap,
+  FileText,
 } from 'lucide-react';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
 
@@ -165,14 +167,17 @@ const writeProgress = (p: DeckProgress) => {
   }
 };
 
-/** Renders **bold** segments from the generated text. */
+/** Renders rich text segments with bolding, sub-details, and code styling. */
 const Rich: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
   const parts = String(text || '').split(/(\*\*[^*]+\*\*)/g);
   return (
     <span className={className}>
       {parts.map((p, i) =>
         p.startsWith('**') && p.endsWith('**') ? (
-          <strong key={i} className="font-semibold text-ink">
+          <strong
+            key={i}
+            className="font-bold text-ink bg-amber-100/60 dark:bg-amber-950/40 px-1 py-0.5 rounded shadow-2xs"
+          >
             {p.slice(2, -2)}
           </strong>
         ) : (
@@ -180,6 +185,113 @@ const Rich: React.FC<{ text: string; className?: string }> = ({ text, className 
         )
       )}
     </span>
+  );
+};
+
+/**
+ * Structured Synthesis Renderer:
+ * Parses paragraphs, ### H3 headings, #### H4 sub-headings, • bullet points,
+ * and callouts to provide a clean typographic reading experience.
+ */
+const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
+  if (!text) return null;
+
+  // Split into lines
+  const lines = text.split('\n');
+
+  return (
+    <div className="flex flex-col gap-2.5">
+      {lines.map((rawLine, idx) => {
+        const line = rawLine.trim();
+        if (!line) {
+          return <div key={idx} className="h-1.5" />;
+        }
+
+        // Section Heading (### Başlık)
+        if (line.startsWith('### ')) {
+          return (
+            <h4
+              key={idx}
+              className="m-0 pt-3.5 pb-1.5 border-b border-line-soft text-[16.5px] sm:text-[18px] font-bold text-ink flex items-center gap-2"
+            >
+              <span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-2xs" />
+              <Rich text={line.slice(4)} />
+            </h4>
+          );
+        }
+
+        // Sub-heading (#### Alt Başlık)
+        if (line.startsWith('#### ')) {
+          return (
+            <h5
+              key={idx}
+              className="m-0 pt-2 text-[14.5px] sm:text-[15.5px] font-bold text-accent flex items-center gap-2"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0" />
+              <Rich text={line.slice(5)} />
+            </h5>
+          );
+        }
+
+        // Callout (> veya 💡 veya ⚠️)
+        if (line.startsWith('> ') || line.startsWith('💡 ') || line.startsWith('⚠️ ')) {
+          const content = line.startsWith('> ') ? line.slice(2) : line;
+          return (
+            <div
+              key={idx}
+              className="p-3.5 my-1.5 rounded-xl bg-accent-soft/30 border-l-4 border-accent text-[13.5px] sm:text-[14.5px] text-ink leading-relaxed flex items-start gap-2.5 shadow-2xs"
+            >
+              <span className="text-base select-none shrink-0">💡</span>
+              <div className="min-w-0 flex-1">
+                <Rich text={content} />
+              </div>
+            </div>
+          );
+        }
+
+        // Sub-bullet (girintili alt madde)
+        if (rawLine.startsWith('  - ') || rawLine.startsWith('  • ') || rawLine.startsWith('\t- ') || rawLine.startsWith('\t• ')) {
+          const cleanText = line.replace(/^[•\-\*]\s*/, '');
+          return (
+            <div
+              key={idx}
+              className="flex items-start gap-2 ml-5 my-0.5 text-[12.5px] sm:text-[13.5px] text-ink-3 leading-relaxed"
+            >
+              <span className="mt-1.5 w-1 h-1 rounded-full bg-ink-4 shrink-0" />
+              <div className="min-w-0 flex-1">
+                <Rich text={cleanText} />
+              </div>
+            </div>
+          );
+        }
+
+        // Top-level Bullet item (• veya - veya *)
+        if (line.startsWith('• ') || line.startsWith('- ') || line.startsWith('* ')) {
+          const cleanText = line.replace(/^[•\-\*]\s*/, '');
+          return (
+            <div
+              key={idx}
+              className="flex items-start gap-2.5 my-1 text-[14px] sm:text-[15px] text-ink-2 leading-[1.65]"
+            >
+              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+              <div className="min-w-0 flex-1">
+                <Rich text={cleanText} />
+              </div>
+            </div>
+          );
+        }
+
+        // Regular narrative paragraph
+        return (
+          <p
+            key={idx}
+            className="m-0 text-[14.5px] sm:text-[15.5px] text-ink-2 leading-[1.72] font-normal"
+          >
+            <Rich text={line} />
+          </p>
+        );
+      })}
+    </div>
   );
 };
 
@@ -1091,19 +1203,41 @@ const SlideCanvas: React.FC<{
     >
       <div className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6">
         {/* Slide header */}
-        <header className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-mono text-[12px] text-ink-3">
-              {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
+        <header className="flex flex-col gap-2.5 pb-2 border-b border-line-soft">
+          {/* Üst Başlık (Eyebrow & Metadata) */}
+          <div className="flex items-center gap-2 flex-wrap text-[12px]">
+            <span className="font-mono font-bold text-accent bg-accent-soft px-2.5 py-1 rounded-lg border border-accent/20 flex items-center gap-1.5 shadow-2xs">
+              <GraduationCap className="w-3.5 h-3.5" />
+              <span>Slayt {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
             </span>
             {slide.badge && (
-              <span className="h-6 px-2 rounded-full text-[11.5px] font-semibold tracking-[0.04em] inline-flex items-center" style={{ background: badge.bg, color: badge.fg }}>
+              <span className="h-7 px-3 rounded-lg text-[12px] font-bold tracking-[0.03em] inline-flex items-center shadow-2xs" style={{ background: badge.bg, color: badge.fg }}>
                 {slide.badge}
               </span>
             )}
+            <span className="hidden sm:inline-flex items-center gap-1 text-ink-3 text-[12px] font-medium">
+              <span>•</span>
+              <span>Dönem 3 Kurul 1 Patoloji ve Klinik Müfredatı</span>
+            </span>
           </div>
-          <h2 className="m-0 font-display font-bold tracking-[-0.025em] leading-[1.12] text-[22px] sm:text-[28px] lg:text-[34px]">{slide.title}</h2>
-          {slide.subtitle && <p className="m-0 text-[14px] sm:text-[16px] text-ink-2">{slide.subtitle}</p>}
+
+          {/* Büyük Ana Başlık */}
+          <h2 className="m-0 font-display font-extrabold tracking-[-0.03em] leading-[1.12] text-[24px] sm:text-[30px] lg:text-[36px] text-ink">
+            {slide.title}
+          </h2>
+
+          {/* Vurgulu Alt Başlık */}
+          {slide.subtitle && (
+            <div className="p-3 sm:p-3.5 rounded-xl bg-gradient-to-r from-accent-soft/40 via-white to-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
+              <span className="text-[16px] shrink-0 select-none">💡</span>
+              <div className="flex flex-col gap-0.5 min-w-0">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
+                <p className="m-0 text-[14px] sm:text-[15.5px] font-medium text-ink-2 leading-[1.5]">
+                  {slide.subtitle}
+                </p>
+              </div>
+            </div>
+          )}
         </header>
 
         {/* 1. Clinical & Exam Critical Pearl */}
@@ -1143,35 +1277,35 @@ const SlideCanvas: React.FC<{
 
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
         {slide.synthesisNarrative && (
-          <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/30 p-4 sm:p-5 shadow-xs flex flex-col gap-2">
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2 min-w-0">
-                <span className="w-7 h-7 rounded-lg bg-accent text-white flex items-center justify-center shrink-0">
-                  <BookOpen className="w-4 h-4" />
+          <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-4 sm:p-6 shadow-xs flex flex-col gap-3">
+            <div className="flex items-center justify-between gap-2 border-b border-line pb-3">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className="w-8 h-8 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <BookOpen className="w-4.5 h-4.5" />
                 </span>
                 <div>
-                  <h3 className="m-0 text-[14.5px] font-bold text-ink">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-accent block">
+                    Öğrenim Bölümü • Detaylı Müfredat Analizi
+                  </span>
+                  <h3 className="m-0 text-[16px] sm:text-[17px] font-bold text-ink">
                     Kapsamlı Ders Notu ve Patoloji Sentezi
                   </h3>
-                  <p className="m-0 text-[11.5px] text-ink-3">
-                    Resmi ders notunun derinlemesine akıcı tıbbi sentezi
-                  </p>
                 </div>
               </div>
               {onOpenNotes && (
                 <button
                   type="button"
                   onClick={onOpenNotes}
-                  className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-white border border-line text-[12px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors"
+                  className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-white border border-line text-[12px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
                 >
+                  <FileText className="w-3.5 h-3.5" />
                   <span>Panelde Oku</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </button>
               )}
             </div>
-            <p className="m-0 text-[14.5px] sm:text-[15.5px] text-ink-2 leading-[1.68] font-normal">
-              <Rich text={slide.synthesisNarrative} />
-            </p>
+            
+            <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
           </section>
         )}
 
@@ -1450,14 +1584,12 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
     <div className="flex flex-col gap-3.5">
       {/* Narrative block */}
       {slide.synthesisNarrative && (
-        <div className="rounded-xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/20 p-3.5 flex flex-col gap-2">
-          <div className="flex items-center gap-2">
+        <div className="rounded-xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/20 p-3.5 flex flex-col gap-2.5">
+          <div className="flex items-center gap-2 pb-1.5 border-b border-line-soft">
             <BookOpen className="w-4 h-4 text-accent" />
             <span className="text-[13px] font-bold text-ink">Kapsamlı Ders Notu Sentezi</span>
           </div>
-          <p className="m-0 text-[13.5px] leading-relaxed text-ink-2">
-            <Rich text={slide.synthesisNarrative} />
-          </p>
+          <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
         </div>
       )}
 

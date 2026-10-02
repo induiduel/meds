@@ -25,6 +25,8 @@ import {
   scanDesktopDatabaseFolder,
   getDesktopFolderStatus,
   startDesktopFolderWatcherAndScheduler,
+  stopDesktopFolderWatcherAndScheduler,
+  isDesktopFolderWatcherActive,
   findBestMatchingLectureSlides,
   type SlideMatchResult,
   DESKTOP_DATABASE_DIR,
@@ -2399,30 +2401,11 @@ let latestWorkerHeartbeat: {
   hostname: 'MedSoru Bulut Sunucusu (7/24 Kesintisiz)',
   uptime: 0,
   pid: process.pid,
-  lastAction: 'Google Drive Slaytları ve Çıkmış Soru Veritabanı Aktif İzlendi',
-  status: 'online',
-  processedCount: 42,
+  lastAction: 'Manuel bekleme modu (Arka plan yükü sıfırlandı)',
+  status: 'stopped',
+  processedCount: 0,
   driveFolderId: '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W',
 };
-
-// Keep cloud background worker alive 24/7
-setInterval(() => {
-  const now = Date.now();
-  const lastTime = new Date(latestWorkerHeartbeat.timestamp).getTime();
-  if (latestWorkerHeartbeat.source !== 'local_desktop_agent' || (now - lastTime > 45000)) {
-    latestWorkerHeartbeat = {
-      timestamp: new Date().toISOString(),
-      source: 'cloud_daemon',
-      hostname: 'MedSoru Bulut Sunucusu (7/24 Kesintisiz)',
-      uptime: Math.round(process.uptime()),
-      pid: process.pid,
-      lastAction: 'Google Drive Slaytları ve Çıkmış Soru Veritabanı Aktif İzlendi',
-      status: 'online',
-      processedCount: 42,
-      driveFolderId: '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W',
-    };
-  }
-}, 10000);
 
 app.post('/api/worker/heartbeat', (req, res) => {
   const { source, hostname, uptime, pid, lastAction, status, processedCount, driveFolderId } = req.body;
@@ -2442,7 +2425,7 @@ app.post('/api/worker/heartbeat', (req, res) => {
 
 app.get('/api/worker/heartbeat', (req, res) => {
   const diffSeconds = Math.max(0, Math.round((Date.now() - new Date(latestWorkerHeartbeat.timestamp).getTime()) / 1000));
-  const isOnline = diffSeconds <= 60;
+  const isOnline = latestWorkerHeartbeat.status === 'online' && diffSeconds <= 60;
   res.json({
     isOnline,
     diffSeconds,
@@ -4877,6 +4860,174 @@ app.post('/api/automation/render-slide', async (req, res) => {
   }
 });
 
+// System Services Inventory & Control API
+app.get('/api/system/services', async (req, res) => {
+  try {
+    let isCloudflaredActive = false;
+    try {
+      const { execSync } = await import('child_process');
+      const tasklist = execSync('tasklist /FI "IMAGENAME eq cloudflared.exe" /NH', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+      isCloudflaredActive = tasklist.toLowerCase().includes('cloudflared.exe');
+    } catch (_) {}
+
+    const isWatcherActive = isDesktopFolderWatcherActive();
+
+    const services = [
+      {
+        id: 'core_api_server',
+        name: 'MedSoru Çekirdek API & Web Sunucusu (Express & Brotli/Gzip)',
+        category: 'core',
+        status: 'active',
+        statusLabel: 'Çalışıyor',
+        badgeColor: 'emerald',
+        pid: process.pid,
+        port: PORT,
+        description: 'REST API, soru/sınav yönetimi ve web sayfalarının yüksek hızlı Brotli/Gzip sıkıştırmasıyla sunulmasını sağlar.',
+        resourceImpact: 'Düşük (~45 MB RAM)',
+        resourceTier: 'low',
+        autoStart: true,
+        canToggle: false,
+      },
+      {
+        id: 'cloudflare_tunnel',
+        name: 'Cloudflare Zero Trust Güvenli Tünel (nofrostlife.com.tr)',
+        category: 'network',
+        status: isCloudflaredActive ? 'active' : 'stopped',
+        statusLabel: isCloudflaredActive ? 'Tünel Açık (Bağlı)' : 'Kapalı',
+        badgeColor: isCloudflaredActive ? 'emerald' : 'rose',
+        description: 'nofrostlife.com.tr alan adını güvenli HTTPS/SSL ile doğrudan bu bilgisayara bağlar; modem port yönlendirmesi gerektirmez.',
+        resourceImpact: 'Düşük (~25 MB RAM, 0 CPU)',
+        resourceTier: 'low',
+        autoStart: true,
+        canToggle: false,
+      },
+      {
+        id: 'desktop_folder_watcher',
+        name: 'Yerel Masaüstü Belge İzleyicisi (DesktopFolderWatcher)',
+        category: 'watcher',
+        status: isWatcherActive ? 'active' : 'stopped',
+        statusLabel: isWatcherActive ? 'Arka Planda İzleniyor' : 'Kapatıldı (Manuel Modda)',
+        badgeColor: isWatcherActive ? 'amber' : 'slate',
+        description: 'Masaüstündeki meds_database klasöründeki 497+ PDF ve Word belgesini arka planda sürekli tarar. Arka plan disk ve işlemci yükünü sıfırlamak için otomatik izleme KAPATILMIŞTIR (İsteğe bağlı çalıştırılabilir).',
+        resourceImpact: isWatcherActive ? 'Yüksek (Sürekli Disk & CPU Okuması)' : 'Sıfır (0 CPU / 0 Disk)',
+        resourceTier: isWatcherActive ? 'high' : 'negligible',
+        autoStart: false,
+        canToggle: true,
+        canRunNow: true,
+      },
+      {
+        id: 'audio_transcription_worker',
+        name: 'Google Drive Tıbbi Ses Transkripsiyon Servisi (Gemini API)',
+        category: 'ai',
+        status: 'stopped',
+        statusLabel: 'Kapatıldı (Manuel Modda)',
+        badgeColor: 'slate',
+        description: 'Google Drive amfi ses kayıtlarını Gemini API ile transkribe eder. Ev internetini ve upload bant genişliğini tıkamaması için 7/24 otomatik döngü KAPATILMIŞTIR; ihtiyaç olduğunda kontrollü çalıştırılır.',
+        resourceImpact: 'Sıfır (Otomatikte ~1.5 MB/s Upload Harcıyordu)',
+        resourceTier: 'negligible',
+        autoStart: false,
+        canToggle: false,
+        canRunNow: true,
+      },
+      {
+        id: 'local_rag_engine',
+        name: 'Bellek-İçi Hibrit RAG & BM25 Arama Motoru',
+        category: 'ai',
+        status: 'active',
+        statusLabel: 'Bellekte Hazır (54.949 Parça)',
+        badgeColor: 'emerald',
+        description: '54.900+ soru, slayt ve ders notu parçasını yerel RAM\'de tutar; yapay zeka asistanının sorulara en doğru amfi slaytını anında getirmesini sağlar.',
+        resourceImpact: 'Hafif RAM (~35 MB, Sıfır Ağ)',
+        resourceTier: 'low',
+        autoStart: true,
+        canToggle: false,
+      },
+      {
+        id: 'supabase_bridge_poller',
+        name: 'Supabase Bulut Komut & Senkronizasyon Köprüsü',
+        category: 'network',
+        status: 'active',
+        statusLabel: 'Çalışıyor (Dinlemede)',
+        badgeColor: 'emerald',
+        description: 'Mobil cihazlardan veya webden gönderilen soru güncellemelerini ve komutları yerel veritabanıyla senkronize eder.',
+        resourceImpact: 'Çok Düşük (Periyodik hafif sorgu)',
+        resourceTier: 'low',
+        autoStart: true,
+        canToggle: false,
+      },
+      {
+        id: 'deepseek_data_service',
+        name: 'DeepSeek Veri ve Soru Geliştirme Entegratörü',
+        category: 'ai',
+        status: 'active',
+        statusLabel: 'Aktif (Pasif Dosya Senkronu)',
+        badgeColor: 'emerald',
+        description: 'deepseek_data klasöründeki redakte soru ve klinik analiz verilerini soru havuzuna işler.',
+        resourceImpact: 'Çok Düşük (Pasif dosya senkronu)',
+        resourceTier: 'low',
+        autoStart: true,
+        canToggle: false,
+      },
+    ];
+
+    res.json({
+      success: true,
+      services,
+      networkStatus: {
+        internetState: 'Hafif & Normal (Ağ Sömürüsü Yok)',
+        compressionEnabled: true,
+        totalServices: services.length,
+        activeServicesCount: services.filter(s => s.status === 'active').length,
+        stoppedServicesCount: services.filter(s => s.status === 'stopped').length,
+      }
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/system/services/:id/toggle', requireAdmin, async (req, res) => {
+  const { id } = req.params;
+  try {
+    if (id === 'desktop_folder_watcher') {
+      const isCurrentlyActive = isDesktopFolderWatcherActive();
+      if (isCurrentlyActive) {
+        stopDesktopFolderWatcherAndScheduler();
+        return res.json({ success: true, status: 'stopped', message: 'Masaüstü belge izleyicisi durduruldu (Arka plan serbest bırakıldı).' });
+      } else {
+        startDesktopFolderWatcherAndScheduler(DESKTOP_DATABASE_DIR);
+        return res.json({ success: true, status: 'active', message: 'Masaüstü belge izleyicisi başlatıldı.' });
+      }
+    }
+    res.status(400).json({ error: `Servis (${id}) dinamik geçişi desteklemiyor.` });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/system/services/:id/run-now', requireAdmin, async (req, res) => {
+  const { id } = req.params;
+  try {
+    if (id === 'desktop_folder_watcher') {
+      const result = await scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR);
+      return res.json({ success: true, message: 'Tek seferlik masaüstü taraması tamamlandı.', result });
+    }
+    if (id === 'audio_transcription_worker') {
+      const { spawn } = await import('child_process');
+      const child = spawn('node', ['scripts/transcribe-drive-audio.mjs', '--limit=1', '--delay=3'], {
+        cwd: __dirname,
+        detached: true,
+        stdio: 'ignore'
+      });
+      child.unref();
+      return res.json({ success: true, message: 'Tek seferlik 1 ses dosyası transkripsiyonu arka planda başlatıldı (Ağ kilitlenmesi önlendi).' });
+    }
+    res.status(400).json({ error: `Bu servis için tek seferlik çalıştırma mevcut değil.` });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Admin: Export entire project codebase & databases as ZIP archive
 app.get('/api/admin/export-zip', requireAdmin, async (req, res) => {
   try {
@@ -4990,8 +5141,9 @@ async function startServer() {
 
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
-    // Start desktop folder watcher and daily 18:00 scheduler
-    startDesktopFolderWatcherAndScheduler(DESKTOP_DATABASE_DIR);
+    // Masaüstü klasör izleyicisi arka planı meşgul etmemesi için otomatik başlatılmaz.
+    // İhtiyaç olduğunda Admin Panel üzerinden tek tuşla veya manuel başlatılabilir.
+    console.log('[DesktopSync] ℹ️ Arka plan kaynak tasarrufu devrede: Masaüstü belge izleyicisi manuel bekleme modunda.');
     // Start Supabase Cloud command poller
     startSupabaseCommandPoller();
     // Initialize Local & Hybrid RAG Engine (49,000+ medical chunks)

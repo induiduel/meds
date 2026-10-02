@@ -1,9 +1,9 @@
 {
-  "evaluatedAt": "2026-10-02T13:19:18.783Z",
+  "evaluatedAt": "2026-10-02T13:21:45.579Z",
   "totalTestCases": 4,
   "ragSystemStatus": "FUNCTIONAL_AND_VERIFIED",
-  "averageSearchLatencyMs": 1932,
-  "averageRagGenerationLatencyMs": 6793,
+  "averageSearchLatencyMs": 4,
+  "averageRagGenerationLatencyMs": 6084,
   "totalIndexedChunksAvailable": 49960,
   "testCases": [
     {
@@ -13,9 +13,9 @@
       "mode": "reduction",
       "query": "Papiller tiroid karsinomunun sitolojik/histopatolojik tanı kriterleri, Orphan Annie gözü nükleusları, psammom cisimcikleri ve lenfatik yayılım özellikleri amfi notlarında nasıl geçmektedir?",
       "metrics": {
-        "retrievalDurationMs": 4277,
-        "ragGenerationDurationMs": 6230,
-        "zeroShotDurationMs": 9429,
+        "retrievalDurationMs": 3,
+        "ragGenerationDurationMs": 5591,
+        "zeroShotDurationMs": 6486,
         "referencesCount": 3,
         "usedModel": "gemini-3.1-flash-lite"
       },
@@ -45,12 +45,12 @@
       "comparison": {
         "zeroShot": {
           "model": "gemini-3.1-flash-lite",
-          "excerpt": "Papiller tiroid karsinomu (PTK), tiroidin en sık görülen malignitesidir ve sitolojik/histopatolojik tanısı oldukça karakteristik nükleer özelliklere dayanır. Bir tıp fakültesi amfi notu formatında, bu kriterleri şu şekilde özetleyebiliriz:\n\n### 1. Sitolojik ve Histopatolojik Tanı Kriterleri\nPTK tanısında \"altın standart\" nükleer değişikliklerdir. M...",
+          "excerpt": "Papiller tiroid karsinomu (PTK), tiroidin en sık görülen malignitesidir ve sitolojik/histopatolojik tanısı oldukça karakteristik nükleer özelliklere dayanır. Tıp eğitiminde amfi notlarında ve patoloji derslerinde bu konu genellikle şu başlıklar altında özetlenir:\n\n### 1. Sitolojik ve Histopatolojik Tanı Kriterleri\nPTK tanısında \"nükleer özellikler\"...",
           "hasFacultyCitations": true
         },
         "ragAugmented": {
           "model": "gemini-3.1-flash-lite",
-          "excerpt": "Tıp Fakültesi Redüksiyon Uzmanı olarak, Papiller Tiroid Karsinomu (PTC) konusundaki yüksek verimli (high-yield) bilgileri aşağıda sentezledim.\n\n---\n\n### **Papiller Tiroid Karsinomu (PTC): Yüksek Verimli Hap Bilgiler**\n\nPTC, tiroidin en sık görülen malignitesidir. Tanı, sitolojik ve histopatolojik \"nükleer özellikler\" üzerinden konur.\n\n#### **1. Tan...",
+          "excerpt": "Tıp Fakültesi Redüksiyon Uzmanı olarak, Papiller Tiroid Karsinomu (PTC) ile ilgili sınavda hayat kurtaracak \"Hap Bilgileri\" aşağıda sentezlenmiştir.\n\n---\n\n### 🎯 Papiller Tiroid Karsinomu (PTC): Yüksek Verimli Hap Bilgiler\n\nPTC, tiroidin **en sık** görülen malignitesidir. Tanı, mimariden ziyade **nükleer özelliklere** dayanır.\n\n#### 1. Tanısal Nükl...",
           "hasFacultyCitations": true,
           "citedSlideCount": 1,
           "citedPastQuestionCount": 1
@@ -70,8 +70,8 @@
       "query": "Asetaminofen (parasetamol) intoksikasyonunda hepatotoksisiteden sorumlu reaktif toksik metabolit hangisidir ve antidot olarak N-asetilsistein (NAC) hangi mekanizmayla koruma sağlar?",
       "metrics": {
         "retrievalDurationMs": 5,
-        "ragGenerationDurationMs": 4763,
-        "zeroShotDurationMs": 6583,
+        "ragGenerationDurationMs": 5897,
+        "zeroShotDurationMs": 6717,
         "referencesCount": 3,
         "usedModel": "gemini-3.1-flash-lite"
       },
@@ -92,21 +92,21 @@
         },
         {
           "type": "lecture_slide",
-          "title": "Akut Hepatit 2024-2025 dönem 3 (Slayt #13)",
-          "pageNumber": 13,
+          "title": "16. Zehirlenmeler ve Zehirlenmelerde G. Yönetim (Slayt #36)",
+          "pageNumber": 36,
           "discipline": "Tıbbi Farmakoloji",
-          "snippet": "[DERS SLAYTI NOTU] Ders: Tıbbi Farmakoloji Sunum Başlığı: Akut Hepatit 2024-2025 dönem 3 Kurul: donem3-kurul1 Slayt Numarası: #13 İçerik: Tedavi • Ak..."
+          "snippet": "[DERS SLAYTI NOTU] Ders: Tıbbi Farmakoloji Sunum Başlığı: 16. Zehirlenmeler ve Zehirlenmelerde G. Yönetim Kurul: donem3-kurul1 Slayt Numarası: #36 İç..."
         }
       ],
       "comparison": {
         "zeroShot": {
           "model": "gemini-3.1-flash-lite",
-          "excerpt": "Asetaminofen (parasetamol) intoksikasyonu, karaciğerde meydana gelen metabolik süreçler sonucunda gelişen ciddi bir klinik tablodur. Sorunuzun yanıtlarını aşağıda tıbbi bilgilerim ışığında detaylandırıyorum:\n\n### 1. Hepatotoksisiteden Sorumlu Reaktif Metabolit\nAsetaminofen, normal dozlarda karaciğerde büyük oranda glukuronidasyon ve sülfatasyon yol...",
+          "excerpt": "Asetaminofen (parasetamol) intoksikasyonu, karaciğerde meydana gelen metabolik süreçler sonucunda gelişen ciddi bir klinik tablodur. Sorularınızı tıbbi bilgilerim ışığında şu şekilde yanıtlayabilirim:\n\n### 1. Hepatotoksisiteden Sorumlu Reaktif Metabolit\nAsetaminofen, normal dozlarda karaciğerde büyük oranda glukuronidasyon ve sülfatasyon yollarıyla...",
           "hasFacultyCitations": false
         },
         "ragAugmented": {
           "model": "gemini-3.1-flash-lite",
-          "excerpt": "Asetaminofen (parasetamol) intoksikasyonunda hepatotoksisite mekanizması ve N-asetilsistein (NAC) kullanımı ile ilgili akademik açıklama aşağıdadır:\n\n### 1. Hepatotoksisiteden Sorumlu Reaktif Metabolit\nAsetaminofen, terapötik dozlarda büyük oranda glukuronidasyon ve sülfatasyon ile konjuge edilerek vücuttan atılır. Ancak yüksek dozlarda bu yollar d...",
+          "excerpt": "Merhaba, bir Tıp Eğitmeni olarak asetaminofen (parasetamol) intoksikasyonunun patofizyolojisini ve N-asetilsistein (NAC) tedavisinin mekanizmasını aşağıda senin için özetledim:\n\n### 1. Hepatotoksisiteden Sorumlu Reaktif Metabolit\nAsetaminofen normal dozlarda karaciğerde glukuronidasyon ve sülfatasyon yolları ile metabolize edilir. Ancak doz aşımı d...",
           "hasFacultyCitations": true,
           "citedSlideCount": 1,
           "citedPastQuestionCount": 1
@@ -125,33 +125,33 @@
       "mode": "reduction",
       "query": "Yenidoğan, çocuk ve erişkinlerde akut pürülan bakteriyel menenjitin en sık etkenleri nelerdir ve tipik BOS incelemesinde basınç, protein, glukoz (BOS/kan) ve hücre profili nasıldır?",
       "metrics": {
-        "retrievalDurationMs": 2711,
-        "ragGenerationDurationMs": 7350,
-        "zeroShotDurationMs": 5217,
+        "retrievalDurationMs": 9,
+        "ragGenerationDurationMs": 7001,
+        "zeroShotDurationMs": 7135,
         "referencesCount": 3,
         "usedModel": "gemini-3.1-flash-lite"
       },
       "retrievedSources": [
         {
-          "type": "lecture_slide",
-          "title": "DOC-20251017-WA0012.",
-          "pageNumber": 11,
-          "discipline": "Tıp Ders Notu",
-          "snippet": "• Akut inflamasyonun başlıca 2 bileşeni vardır: • 1. Vasküler değişiklikler: • -Vazodilatasyon • -Geçirgenlik (permeabilite) artışı • -Endotel hücre a..."
+          "type": "past_question",
+          "title": "Tıbbi Patoloji - SANTRAL SİNİR SİSTEMİ TÜMÖRLERİ (SCHWANNOMA) (2021-2026)",
+          "pageNumber": 3,
+          "discipline": "Tıbbi Patoloji",
+          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Patoloji Kurul: donem3-kurul2 Sınav Yılı: 2021-2026 Konu: SANTRAL SİNİR SİSTEMİ TÜMÖRLERİ (SCHWANNOMA) Soru ..."
         },
         {
-          "type": "lecture_slide",
-          "title": "Untitled",
-          "pageNumber": 6,
-          "discipline": "Tıp Ders Notu",
-          "snippet": "5  Kronik kurşun zehirlenmesi 17  Çocuk sağ ve hast Çocuk sağ ve hast Çocukluk çağı anemilerine yaklaşım Osmotik frajilite testi hangi hastalığın ayır..."
+          "type": "past_question",
+          "title": "Tıbbi Farmakoloji - SANTRAL KAS GEVŞETİCİLER (2021-2026)",
+          "pageNumber": 10,
+          "discipline": "Tıbbi Farmakoloji",
+          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Farmakoloji Kurul: donem3-kurul2 Sınav Yılı: 2021-2026 Konu: SANTRAL KAS GEVŞETİCİLER Soru Kökü: Omurilik dü..."
         },
         {
-          "type": "lecture_slide",
-          "title": "Untitled",
+          "type": "past_question",
+          "title": "Tıbbi Patoloji - DEMİYELİNİZAN HASTALIKLAR (MS PATOLOJİSİ) (2021-2026)",
           "pageNumber": 7,
-          "discipline": "Tıp Ders Notu",
-          "snippet": "indexi<13, RBC(kırmızı kan hücre)>5x10⁶ 5  MCV(OEH)>80!, MCHB(OEHb)>27pg, RDW Normal, Mentzer indexi>13, RBC(kırmızı kan hücre)<5x10⁶ 20  Enfeksiyon h..."
+          "discipline": "Tıbbi Patoloji",
+          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Patoloji Kurul: donem3-kurul2 Sınav Yılı: 2021-2026 Konu: DEMİYELİNİZAN HASTALIKLAR (MS PATOLOJİSİ) Soru Kök..."
         }
       ],
       "comparison": {
@@ -162,10 +162,10 @@
         },
         "ragAugmented": {
           "model": "gemini-3.1-flash-lite",
-          "excerpt": "Tıp Fakültesi Redüksiyon Uzmanı olarak, akut pürülan bakteriyel menenjit konusundaki \"High-Yield\" (yüksek verimli) bilgileri, sınav odaklı bir yaklaşımla aşağıda sentezledim.\n\n---\n\n### 1. Akut Bakteriyel Menenjit: En Sık Etkenler (Yaş Gruplarına Göre)\nSınavlarda \"en sık\" sorusu yaş grubuna göre değişir, bu tabloyu ezberlemek zorunludur:\n\n| Yaş Grub...",
+          "excerpt": "Merhaba, ben Tıp Fakültesi Redüksiyon Uzmanınız. Akut Pürülan Bakteriyel Menenjit konusu, hem pediatri hem de enfeksiyon hastalıkları sınavlarının \"olmazsa olmaz\" konusudur. İşte sınavda net kazandıracak yüksek verimli özet:\n\n### 1. Yaş Gruplarına Göre En Sık Etkenler (High-Yield)\nSınavlarda \"en sık\" sorusu gelirken mutlaka yaş grubuna dikkat etmel...",
           "hasFacultyCitations": true,
-          "citedSlideCount": 3,
-          "citedPastQuestionCount": 0
+          "citedSlideCount": 0,
+          "citedPastQuestionCount": 3
         },
         "keyDifferences": [
           "Fakülte Zeminlemesi: Zero-shot genel ansiklopedik bilgi verirken RAG, Dönem 3 kurul amfi slaytlarını ve geçmiş çıkmışları referans aldı.",
@@ -181,38 +181,52 @@
       "mode": "redact",
       "query": "Öğrencinin eksik hatırladığı soru taslağını amfi slaytları ve çıkmış sorularla tam 5 seçenekli bir sınav sorusuna dönüştür.",
       "metrics": {
-        "retrievalDurationMs": 735,
-        "ragGenerationDurationMs": 8829,
-        "zeroShotDurationMs": 4254,
-        "referencesCount": 1,
+        "retrievalDurationMs": 0,
+        "ragGenerationDurationMs": 5848,
+        "zeroShotDurationMs": 4238,
+        "referencesCount": 3,
         "usedModel": "gemini-3.1-flash-lite"
       },
       "retrievedSources": [
         {
-          "type": "past_question",
-          "title": "Tıbbi Farmakoloji - Tıbbi Patoloji Çıkmış Sorusu",
-          "pageNumber": 20,
-          "discipline": "Tıbbi Farmakoloji",
-          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Farmakoloji Kurul: donem3-kurul2 Sınav Yılı: Geçmiş Yıllar Çıkmışı (Arşiv) Konu: Tıbbi Patoloji Çıkmış Sorus..."
+          "type": "lecture_slide",
+          "title": "Psikiyatrik Semiyoloji-3.SINIF (Slayt #32)",
+          "pageNumber": 32,
+          "discipline": "Psikiyatri",
+          "snippet": "[DERS SLAYTI NOTU] Ders: Psikiyatri Sunum Başlığı: Psikiyatrik Semiyoloji-3.SINIF Kurul: donem3-kurul2 Slayt Numarası: #32 İçerik: Yargılama Kişinin v..."
+        },
+        {
+          "type": "summary",
+          "title": "nörolojik hastaya yaklaşım (Özet #2)",
+          "pageNumber": 2,
+          "discipline": "Nöroloji",
+          "snippet": "[DERS ÖZETİ & SPOT BİLGİ] Ders / Branş: Nöroloji Konu / Başlık: nörolojik hastaya yaklaşım Kurul: donem3-kurul2 Bölüm: #2 Özet Metin: ## 1. Giriş, T..."
+        },
+        {
+          "type": "lecture_slide",
+          "title": "nörolojik hastaya yaklaşım (Slayt #2)",
+          "pageNumber": 2,
+          "discipline": "Nöroloji",
+          "snippet": "[DERS SLAYTI NOTU] Ders: Nöroloji Sunum Başlığı: nörolojik hastaya yaklaşım Kurul: donem3-kurul2 Slayt Numarası: #2 İçerik: «Hastayı dinledikten son..."
         }
       ],
       "comparison": {
         "zeroShot": {
           "model": "gemini-3.1-flash-lite",
-          "excerpt": "Bir tıp uzmanı olarak, sunduğunuz ham veriyi klinik bir vaka senaryosu ile zenginleştirerek, uzmanlık sınavı (TUS) formatına uygun, akademik bir soru haline getirdim:\n\n---\n\n### Soru:\n\n55 yaşında, bilinen hipertansiyon ve bronşiyal astım tanısı olan erkek hasta, rutin kontrolü için polikliniğe başvuruyor. Hastanın mevcut antihipertansif tedavisinde ...",
+          "excerpt": "Bir tıp uzmanı olarak, sunduğunuz ham veriyi klinik bir vaka senaryosu ile zenginleştirerek, uzmanlık sınavı (TUS) formatına uygun, akademik bir soru haline getirdim:\n\n---\n\n### Soru:\n\n55 yaşında bilinen bronşiyal astım tanısı olan ve düzenli inhale kortikosteroid kullanan bir erkek hasta, hipertansiyon şikayetiyle polikliniğe başvuruyor. Hastanın y...",
           "hasFacultyCitations": false
         },
         "ragAugmented": {
           "model": "gemini-3.1-flash-lite",
-          "excerpt": "Tıp Fakültesi Soru Redaksiyon ve Doğrulama Uzmanı olarak, ilettiğiniz ham soruyu farmakolojik mekanizmalar ve klinik kılavuzlar (GINA - Global Initiative for Asthma) ışığında, sınav formatına uygun şekilde yeniden düzenledim.\n\n---\n\n### **REDAKTE EDİLMİŞ TIP SORUSU**\n\n**Soru:**\nAstım tanısı ile takip edilen ve hipertansiyon nedeniyle antihipertansif...",
+          "excerpt": "Sayın Öğrenci,\n\nİlettiğiniz ham soru içeriği, farmakoloji dersi kapsamındaki \"Otonom Sinir Sistemi ve Antihipertansifler\" konusuna aittir. Paylaştığınız referanslar (Psikiyatri ve Nöroloji notları) bu soru için doğrudan kaynak teşkil etmemektedir; ancak tıp fakültesi farmakoloji müfredatı ve genel klinik yaklaşım prensipleri doğrultusunda, soruyu s...",
           "hasFacultyCitations": true,
-          "citedSlideCount": 0,
-          "citedPastQuestionCount": 1
+          "citedSlideCount": 2,
+          "citedPastQuestionCount": 0
         },
         "keyDifferences": [
           "Fakülte Zeminlemesi: Zero-shot genel ansiklopedik bilgi verirken RAG, Dönem 3 kurul amfi slaytlarını ve geçmiş çıkmışları referans aldı.",
           "Sınav İpuçları & Tuzaklar: RAG yanıtı fakülte hocasının özellikle sorduğu çeldirici ayrımını (Örn: Tıbbi Farmakoloji) doğrudan vurguladı.",
-          "Alıntı Güvenirliği: RAG doğrudan 1 adet doğrulanmış yerel parça ile desteklendi."
+          "Alıntı Güvenirliği: RAG doğrudan 3 adet doğrulanmış yerel parça ile desteklendi."
         ]
       }
     }

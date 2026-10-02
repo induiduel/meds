@@ -847,6 +847,30 @@ export async function scanDesktopDatabaseFolder(folderPath: string = DESKTOP_DAT
 let lastScanResult: any = null;
 let lastScanTime: string | null = null;
 let watcherActive = false;
+let activeWatcherInstance: fs.FSWatcher | null = null;
+let activeSchedulerInterval: NodeJS.Timeout | null = null;
+
+export function isDesktopFolderWatcherActive(): boolean {
+  return watcherActive;
+}
+
+export function stopDesktopFolderWatcherAndScheduler(): boolean {
+  if (activeWatcherInstance) {
+    try {
+      activeWatcherInstance.close();
+    } catch (_) {}
+    activeWatcherInstance = null;
+  }
+  if (activeSchedulerInterval) {
+    try {
+      clearInterval(activeSchedulerInterval);
+    } catch (_) {}
+    activeSchedulerInterval = null;
+  }
+  watcherActive = false;
+  console.log(`[DesktopSync] 🛑 Yerel masaüstü belge izleyicisi durduruldu (Arka plan serbest bırakıldı).`);
+  return true;
+}
 
 export function getDesktopFolderStatus() {
   const filesCount = fs.existsSync(DESKTOP_DATABASE_DIR)
@@ -861,7 +885,9 @@ export function getDesktopFolderStatus() {
     lastScanResult,
     watcherActive,
     scheduledHour: 18,
-    scheduleDescription: 'Her gün saat 18:00 (Ayrıca klasöre yeni dosya atıldığında anında otomatik)',
+    scheduleDescription: watcherActive 
+      ? 'Aktif: Klasöre yeni dosya atıldığında anında otomatik işlenir.' 
+      : 'Devre Dışı / Manuel: Arka planı meşgul etmemesi için otomatik izleme kapatılmıştır (İsteğe bağlı taranabilir).',
     totalDatabaseNotes: getAllLectureNotes().length,
   };
 }
@@ -872,14 +898,14 @@ export function getDesktopFolderStatus() {
 export function startDesktopFolderWatcherAndScheduler(folderPath: string = DESKTOP_DATABASE_DIR) {
   console.log(`[DesktopSync] 🕒 Otomasyon başlatılıyor. Hedef Klasör: ${folderPath}`);
 
-  // 1. Initial scan on server boot
+  // 1. Initial scan on demand
   setTimeout(async () => {
     try {
-      console.log(`[DesktopSync] İlk açılış taraması başlatılıyor...`);
+      console.log(`[DesktopSync] Açılış taraması başlatılıyor...`);
       lastScanResult = await scanDesktopDatabaseFolder(folderPath);
       lastScanTime = new Date().toISOString();
     } catch (e: any) {
-      console.error('[DesktopSync] İlk açılış taraması hatası:', e.message);
+      console.error('[DesktopSync] Açılış taraması hatası:', e.message);
     }
   }, 2000);
 
@@ -887,7 +913,7 @@ export function startDesktopFolderWatcherAndScheduler(folderPath: string = DESKT
   if (!watcherActive && fs.existsSync(folderPath)) {
     try {
       let debounceTimer: NodeJS.Timeout | null = null;
-      fs.watch(folderPath, { recursive: true }, (eventType, filename) => {
+      activeWatcherInstance = fs.watch(folderPath, { recursive: true }, (eventType, filename) => {
         if (!filename) return;
         const ext = path.extname(filename).toLowerCase();
         if (ext === '.pdf' || ext === '.docx') {
@@ -909,7 +935,7 @@ export function startDesktopFolderWatcherAndScheduler(folderPath: string = DESKT
 
   // 3. Daily 18:00 Scheduler Check (checked every 30 seconds)
   let lastRanDateString = '';
-  setInterval(async () => {
+  activeSchedulerInterval = setInterval(async () => {
     const now = new Date();
     const hours = now.getHours();
     const minutes = now.getMinutes();
