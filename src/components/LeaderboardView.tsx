@@ -11,7 +11,8 @@ import {
   ListFilter,
   Shield,
   HelpCircle,
-  Hash
+  Hash,
+  Search,
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AppUser } from '../services/auth';
@@ -199,279 +200,176 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
   const top3 = leaderboard.slice(0, 3);
 
+  const me = leaderboard.find((x) => x.isCurrentUser);
+  const myRank = me ? leaderboard.indexOf(me) + 1 : 0;
+  const maxPoints = Math.max(1, leaderboard[0]?.totalPoints || 1);
+  const podiumTone = ['#B7791F', '#6B7785', '#A0592B'];
+  const initials = (name: string) =>
+    name
+      .split(/[^\p{L}\p{N}]+/u)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((w) => w[0])
+      .join('')
+      .toLocaleUpperCase('tr-TR') || '?';
+
   return (
-    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-      {/* Title (light, compact) */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-        <div className="min-w-0">
-          <h2 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em] text-ink">Katkı sıralaması</h2>
-          <p className="m-0 mt-1 text-[14px] text-ink-2 max-w-[720px]">
-            {filterScope === 'current' ? (currentCommittee ? currentCommittee.name : 'Seçili kurul') : 'Tüm kurullar'} · Soru kökü +10, şık +5, beğeni +2 puan.
-          </p>
+    <div className="w-full max-w-[880px] mx-auto flex flex-col gap-3 sm:gap-4 min-w-0">
+      {/* Title */}
+      <div className="flex items-end gap-3">
+        <div className="min-w-0 flex-1">
+          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] text-ink">Sıralama</h1>
+          <p className="m-0 mt-1 text-[14px] text-ink-3">Soru kökü +10 · şık +5 · aldığın her beğeni +2</p>
         </div>
         <button
           type="button"
           onClick={onOpenContributeModal}
-          className="self-start sm:self-auto h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer shrink-0"
+          className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer shrink-0"
         >
           <Sparkles className="w-4 h-4" />
-          Katkı yap
+          <span className="hidden sm:inline">Katkı yap</span>
+          <span className="sm:hidden">Ekle</span>
         </button>
       </div>
 
-      {/* Podium for Top 3 */}
-      {top3.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-          {/* 2nd Place */}
-          {top3[1] && (
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs flex flex-col items-center text-center relative order-2 md:order-1 mt-4 md:mt-6">
-              <div className="w-10 h-10 rounded-full bg-slate-100 border border-slate-300 flex items-center justify-center text-slate-700 font-black text-sm mb-3">
-                🥈 2
-              </div>
-              <h4 className="font-bold text-slate-900 text-sm">{top3[1].name}</h4>
-              {top3[1].studentNumber && (
-                <span className="text-[11px] text-slate-500 font-mono mt-0.5">No: {top3[1].studentNumber}</span>
-              )}
-              <div className="mt-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 w-full">
-                <span className="text-lg font-black text-slate-800">{top3[1].totalPoints}</span>
-                <span className="text-xs text-slate-500 block">Puan</span>
-              </div>
-              <div className="mt-2 text-[11px] text-slate-600 flex items-center gap-3">
-                <span>{top3[1].questionsCount} Soru</span>
-                <span>•</span>
-                <span>{top3[1].optionsCount} Şık</span>
-                <span>•</span>
-                <span>{top3[1].upvotesCount} Beğeni</span>
-              </div>
-            </div>
-          )}
+      {/* Scope + committee */}
+      <div className="flex flex-wrap items-center gap-2">
+        <div role="radiogroup" aria-label="Kapsam" className="inline-grid grid-cols-2 gap-1 bg-white border border-line rounded-[12px] p-1">
+          {(
+            [
+              ['current', 'Bu kurul'],
+              ['all', 'Tüm kurullar'],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              role="radio"
+              aria-checked={filterScope === id}
+              onClick={() => setFilterScope(id)}
+              className={`h-8 px-3 rounded-[9px] text-[13.5px] cursor-pointer whitespace-nowrap ${
+                filterScope === id ? 'bg-ink text-white font-semibold' : 'text-ink-2 hover:text-ink'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        {filterScope === 'current' && (
+          <label className="min-w-0 flex-1 sm:flex-none">
+            <span className="sr-only">Kurul</span>
+            <select
+              value={selectedCommitteeId}
+              onChange={(e) => onSelectCommittee(e.target.value)}
+              className="w-full sm:w-auto sm:max-w-[320px] h-10 rounded-[12px] bg-white border border-line px-3 text-[14px] text-ink cursor-pointer truncate"
+            >
+              {committees.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+      </div>
 
-          {/* 1st Place (Center / Taller) */}
-          {top3[0] && (
-            <div className="bg-gradient-to-b from-amber-50 to-white rounded-2xl border-2 border-amber-400 p-6 shadow-md flex flex-col items-center text-center relative order-1 md:order-2">
-              <div className="absolute -top-3.5 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
-                <CrownIcon className="w-3.5 h-3.5" />
-                Dönem Lideri
-              </div>
-              <div className="w-14 h-14 rounded-full bg-amber-100 border-2 border-amber-400 flex items-center justify-center text-amber-800 font-black text-xl mb-3 mt-1 shadow-inner">
-                🥇 1
-              </div>
-              <h4 className="font-black text-slate-900 text-base">{top3[0].name}</h4>
-              {top3[0].studentNumber && (
-                <span className="text-xs text-amber-800 font-mono mt-0.5 font-semibold">
-                  Öğrenci No: {top3[0].studentNumber}
-                </span>
-              )}
-              <div className="mt-4 bg-amber-500 text-white rounded-xl px-6 py-2.5 w-full shadow-xs">
-                <span className="text-2xl font-black">{top3[0].totalPoints}</span>
-                <span className="text-xs text-amber-100 block font-semibold">Toplam Katkı Puanı</span>
-              </div>
-              <div className="mt-3 text-xs text-slate-700 font-medium flex items-center gap-3">
-                <span className="bg-amber-100/70 px-2 py-0.5 rounded text-amber-900">{top3[0].questionsCount} Soru Kökü</span>
-                <span className="bg-amber-100/70 px-2 py-0.5 rounded text-amber-900">{top3[0].optionsCount} Şık</span>
-                <span className="bg-amber-100/70 px-2 py-0.5 rounded text-amber-900">{top3[0].upvotesCount} Beğeni</span>
-              </div>
-            </div>
-          )}
-
-          {/* 3rd Place */}
-          {top3[2] && (
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs flex flex-col items-center text-center relative order-3 mt-4 md:mt-8">
-              <div className="w-10 h-10 rounded-full bg-amber-100/50 border border-amber-300 flex items-center justify-center text-amber-900 font-black text-sm mb-3">
-                🥉 3
-              </div>
-              <h4 className="font-bold text-slate-900 text-sm">{top3[2].name}</h4>
-              {top3[2].studentNumber && (
-                <span className="text-[11px] text-slate-500 font-mono mt-0.5">No: {top3[2].studentNumber}</span>
-              )}
-              <div className="mt-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 w-full">
-                <span className="text-lg font-black text-slate-800">{top3[2].totalPoints}</span>
-                <span className="text-xs text-slate-500 block">Puan</span>
-              </div>
-              <div className="mt-2 text-[11px] text-slate-600 flex items-center gap-3">
-                <span>{top3[2].questionsCount} Soru</span>
-                <span>•</span>
-                <span>{top3[2].optionsCount} Şık</span>
-                <span>•</span>
-                <span>{top3[2].upvotesCount} Beğeni</span>
-              </div>
-            </div>
-          )}
+      {/* Your rank */}
+      {me && (
+        <div className="bg-ink text-white rounded-[18px] px-4 sm:px-5 py-4 flex items-center gap-4">
+          <span className="font-display font-bold text-[34px] leading-none tracking-[-0.03em] w-14 text-center shrink-0">{myRank}.</span>
+          <span className="flex-1 min-w-0">
+            <span className="block text-[13px] text-white/60">Senin sıran</span>
+            <span className="block text-[16px] font-semibold truncate">{me.name}</span>
+          </span>
+          <span className="text-right shrink-0">
+            <span className="block font-mono text-[20px] font-semibold">{me.totalPoints}</span>
+            <span className="block text-[12px] text-white/60">puan</span>
+          </span>
         </div>
       )}
 
-      {/* Controls & Search */}
-      <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div className="flex flex-wrap items-center gap-2">
-          <button
-            onClick={() => setFilterScope('current')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-              filterScope === 'current'
-                ? 'bg-amber-500 text-white shadow-2xs'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-            }`}
-          >
-            Seçili Kurul Sıralaması
-          </button>
-          <button
-            onClick={() => setFilterScope('all')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-              filterScope === 'all'
-                ? 'bg-amber-500 text-white shadow-2xs'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-            }`}
-          >
-            Tüm Kurullar Genel Sıralama
-          </button>
-        </div>
+      {/* Podium */}
+      {top3.some((t) => t.totalPoints > 0) && (
+        <ol className="list-none m-0 p-0 grid grid-cols-3 gap-2 sm:gap-3">
+          {top3.map((item, i) => (
+            <li
+              key={item.id}
+              className={`bg-white border rounded-[18px] px-2 sm:px-4 pt-4 pb-3 flex flex-col items-center text-center gap-1.5 min-w-0 ${
+                item.isCurrentUser ? 'border-accent' : 'border-line'
+              } ${i === 0 ? 'shadow-[0_8px_24px_rgba(183,121,31,0.12)]' : ''}`}
+            >
+              <span className="relative">
+                <span
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white font-semibold text-[15px] sm:text-[17px]"
+                  style={{ background: podiumTone[i] }}
+                >
+                  {initials(item.name)}
+                </span>
+                <span className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white border border-line flex items-center justify-center font-mono text-[12px] font-semibold">
+                  {i + 1}
+                </span>
+              </span>
+              <span className="text-[14px] sm:text-[15px] font-semibold text-ink truncate max-w-full">{item.name}</span>
+              <span className="font-mono text-[13px] text-ink-2">{item.totalPoints} puan</span>
+            </li>
+          ))}
+        </ol>
+      )}
 
-        <div className="w-full sm:w-64">
+      {/* Full list */}
+      <div className="bg-white border border-line rounded-[18px] overflow-hidden">
+        <div className="flex items-center gap-2 px-3 sm:px-4 py-2.5 border-b border-line-soft">
+          <Search className="w-4 h-4 text-ink-3 shrink-0" />
           <input
-            type="text"
+            type="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Rumuz veya öğrenci no ara..."
-            className="w-full text-xs px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            placeholder="Rumuz ya da öğrenci no ara"
+            aria-label="Katkıcı ara"
+            className="flex-1 min-w-0 h-9 bg-transparent border-0 outline-0 text-[16px] sm:text-[14px] placeholder:text-[#7A8693]"
           />
+          <span className="text-[12.5px] text-ink-3 shrink-0">{filteredLeaderboard.length} kişi</span>
         </div>
-      </div>
-
-      {/* Main Leaderboard Table */}
-      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50 border-b border-slate-200 text-slate-600 uppercase tracking-wider text-[11px] font-bold">
-              <tr>
-                <th className="py-3 px-4 w-16 text-center">Sıra</th>
-                <th className="py-3 px-4">Öğrenci Rumuzu</th>
-                <th className="py-3 px-4">Öğrenci No</th>
-                <th className="py-3 px-4 text-center">Eklenen Soru</th>
-                <th className="py-3 px-4 text-center">Eklenen Şık</th>
-                <th className="py-3 px-4 text-center">Alınan Beğeni</th>
-                <th className="py-3 px-4 text-right">Toplam Puan</th>
-                <th className="py-3 px-4 text-center">Durum</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {filteredLeaderboard.map((item, index) => {
-                const rank = index + 1;
-                return (
-                  <tr
-                    key={item.id}
-                    className={`transition-colors ${
-                      item.isCurrentUser
-                        ? 'bg-amber-50/80 font-semibold'
-                        : index % 2 === 0
-                        ? 'bg-white hover:bg-slate-50/60'
-                        : 'bg-slate-50/40 hover:bg-slate-50'
-                    }`}
-                  >
-                    <td className="py-3.5 px-4 text-center font-bold">
-                      {rank === 1 ? (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400 text-white text-xs font-black shadow-2xs">
-                          1
-                        </span>
-                      ) : rank === 2 ? (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-300 text-slate-800 text-xs font-bold">
-                          2
-                        </span>
-                      ) : rank === 3 ? (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-200 text-amber-900 text-xs font-bold">
-                          3
-                        </span>
-                      ) : (
-                        <span className="text-slate-500 font-mono">{rank}</span>
+        {filteredLeaderboard.length === 0 ? (
+          <p className="m-0 px-4 py-10 text-center text-[14px] text-ink-3">Aramaya uyan katkıcı yok.</p>
+        ) : (
+          <ol className="list-none m-0 p-0">
+            {filteredLeaderboard.map((item) => {
+              const rank = leaderboard.indexOf(item) + 1;
+              return (
+                <li
+                  key={item.id}
+                  className={`grid grid-cols-[32px_minmax(0,1fr)_auto] items-center gap-3 px-3 sm:px-4 py-3 border-b border-line-soft last:border-b-0 ${
+                    item.isCurrentUser ? 'bg-accent-soft/60' : ''
+                  }`}
+                >
+                  <span className={`font-mono text-[14px] text-center ${rank <= 3 ? 'font-bold text-ink' : 'text-ink-3'}`}>{rank}</span>
+                  <span className="min-w-0 flex flex-col gap-1">
+                    <span className="flex items-center gap-2 min-w-0">
+                      <span className="text-[15px] font-semibold text-ink truncate">{item.name}</span>
+                      {item.isCurrentUser && (
+                        <span className="h-5 px-1.5 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center shrink-0">Sen</span>
                       )}
-                    </td>
-
-                    <td className="py-3.5 px-4">
-                      <div className="flex items-center gap-2">
-                        <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
-                          item.isCurrentUser ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-700'
-                        }`}>
-                          {item.name.charAt(0).toUpperCase()}
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-1.5">
-                            <span className="font-bold text-slate-900">{item.name}</span>
-                            {item.isCurrentUser && (
-                              <span className="text-[10px] bg-amber-200 text-amber-900 px-1.5 py-0.2 rounded font-bold">
-                                Sen
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-
-                    <td className="py-3.5 px-4 font-mono text-slate-600">
-                      {item.studentNumber ? (
-                        <span>{item.studentNumber}</span>
-                      ) : (
-                        <span className="text-slate-400 italic text-[11px]">Belirtilmedi</span>
-                      )}
-                    </td>
-
-                    <td className="py-3.5 px-4 text-center font-semibold text-slate-700">
-                      {item.questionsCount > 0 ? (
-                        <span className="bg-teal-50 text-teal-800 px-2 py-0.5 rounded-full border border-teal-200">
-                          {item.questionsCount}
-                        </span>
-                      ) : (
-                        <span className="text-slate-400">0</span>
-                      )}
-                    </td>
-
-                    <td className="py-3.5 px-4 text-center font-semibold text-slate-700">
-                      {item.optionsCount > 0 ? (
-                        <span className="bg-cyan-50 text-cyan-800 px-2 py-0.5 rounded-full border border-cyan-200">
-                          {item.optionsCount}
-                        </span>
-                      ) : (
-                        <span className="text-slate-400">0</span>
-                      )}
-                    </td>
-
-                    <td className="py-3.5 px-4 text-center font-semibold text-slate-700">
-                      {item.upvotesCount > 0 ? (
-                        <span className="text-emerald-700 flex items-center justify-center gap-1">
-                          <ThumbsUp className="w-3 h-3" />
-                          {item.upvotesCount}
-                        </span>
-                      ) : (
-                        <span className="text-slate-400">0</span>
-                      )}
-                    </td>
-
-                    <td className="py-3.5 px-4 text-right">
-                      <span className="font-black text-sm text-amber-700">
-                        {item.totalPoints} <span className="text-xs font-normal text-slate-500">puan</span>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <span className="flex-1 max-w-[220px] h-1.5 rounded-full bg-line-soft overflow-hidden" aria-hidden="true">
+                        <span
+                          className="block h-full rounded-full bg-accent"
+                          style={{ width: `${Math.max(item.totalPoints > 0 ? 3 : 0, (item.totalPoints / maxPoints) * 100)}%` }}
+                        />
                       </span>
-                    </td>
-
-                    <td className="py-3.5 px-4 text-center">
-                      {item.totalPoints >= 50 ? (
-                        <span className="inline-flex items-center gap-1 text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-300">
-                          <Award className="w-3 h-3" />
-                          Hafıza Ustası
-                        </span>
-                      ) : item.totalPoints > 0 ? (
-                        <span className="inline-flex items-center gap-1 text-[10px] font-bold bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200">
-                          <CheckCircle2 className="w-3 h-3" />
-                          Aktif Katkıcı
-                        </span>
-                      ) : (
-                        <span className="text-[10px] text-slate-400 italic">
-                          Katkı Bekleniyor
-                        </span>
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+                      <span className="text-[12px] text-ink-3 whitespace-nowrap">
+                        {item.questionsCount} soru · {item.optionsCount} şık
+                        <span className="hidden sm:inline"> · {item.upvotesCount} beğeni</span>
+                      </span>
+                    </span>
+                  </span>
+                  <span className="font-mono text-[15px] font-semibold text-ink text-right">{item.totalPoints}</span>
+                </li>
+              );
+            })}
+          </ol>
+        )}
       </div>
     </div>
   );

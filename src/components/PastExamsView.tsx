@@ -30,8 +30,13 @@ import {
   AlertCircle,
   Database,
   HardDrive,
-  Zap
+  Zap,
+  SlidersHorizontal,
+  ChevronDown,
+  Wand2,
+  PenLine,
 } from 'lucide-react';
+import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
@@ -68,6 +73,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [openExplanations, setOpenExplanations] = useState<Record<string, boolean>>({});
   const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'all'>('valid');
   
   // Per-question card override: questionId -> 'redacted' | 'raw' | 'split'
@@ -494,251 +501,276 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     return cId;
   };
 
+  const activeFilterChips: { label: string; clear: () => void }[] = [
+    ...(ambiguityTab !== 'valid'
+      ? [{ label: ambiguityTab === 'ambiguous' ? 'İnceleme bekleyen' : 'Tüm havuz', clear: () => setAmbiguityTab('valid') }]
+      : []),
+    ...(selectedCommittee !== 'all'
+      ? [{ label: formatCommitteeName(selectedCommittee).split(':')[0], clear: () => setSelectedCommittee('all') }]
+      : []),
+    ...(selectedYear !== 'all' ? [{ label: selectedYear, clear: () => setSelectedYear('all') }] : []),
+    ...(selectedDiscipline !== 'all' ? [{ label: selectedDiscipline, clear: () => setSelectedDiscipline('all') }] : []),
+    ...(viewMode !== 'redacted'
+      ? [{ label: viewMode === 'raw' ? 'Ham görünüm' : 'Karşılaştır', clear: () => setViewMode('redacted') }]
+      : []),
+  ];
+  const clearAllFilters = () => {
+    setSearchQuery('');
+    setAmbiguityTab('valid');
+    setSelectedCommittee('all');
+    setSelectedYear('all');
+    setSelectedDiscipline('all');
+    setViewMode('redacted');
+    setCurrentPage(1);
+  };
+  const isAdminUser = currentUser?.email === ADMIN_EMAIL || !!currentUser?.isAdmin;
+  const chipCls = (on: boolean) =>
+    `h-9 px-3.5 rounded-full text-[13.5px] whitespace-nowrap cursor-pointer transition-colors ${
+      on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent' : 'bg-white text-ink border border-line hover:border-line-2'
+    }`;
+  const selectCls =
+    'w-full h-11 sm:h-10 rounded-[10px] bg-field border border-line px-3 text-[14px] text-ink cursor-pointer outline-0 focus:border-accent';
+
   return (
-    <div className="flex flex-col gap-3 sm:gap-5 pb-12 min-w-0">
-      {/* Title + stats (light, compact) */}
-      <div className="flex flex-col gap-3">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div className="min-w-0">
-            <h2 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em] text-ink">Çıkmış sorular</h2>
-            <p className="m-0 mt-1 text-[14px] text-ink-2 max-w-[720px]">
-              Geçmiş kurul ve final soruları. Ham metni, AI ile düzenlenmiş 5 şıklı hâlini ve eşleşen ders slaytını yan yana görebilirsin.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={handleManualSync}
-            disabled={cacheStatus.isSyncing}
-            title="Veritabanında güncelleme olup olmadığını kontrol et"
-            className="h-9 px-3 rounded-[10px] border border-line-2 bg-white text-[13px] font-semibold text-ink-2 inline-flex items-center gap-1.5 cursor-pointer hover:border-ink-3 disabled:opacity-60"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 ${cacheStatus.isSyncing ? 'animate-spin' : ''}`} />
-            {cacheStatus.isSyncing ? 'Eşitleniyor…' : `Cihazda ${questions.length.toLocaleString('tr-TR')} soru · Güncelle`}
-          </button>
+    <div className="flex flex-col gap-3 sm:gap-4 pb-12 min-w-0 w-full max-w-[880px] mx-auto">
+      {/* Title */}
+      <div className="flex items-end gap-3">
+        <div className="min-w-0 flex-1">
+          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] text-ink">Çıkmış sorular</h1>
+          <p className="m-0 mt-1 text-[14px] text-ink-3">
+            {tabCounts.validCount.toLocaleString('tr-TR')} tam metin soru
+            {tabCounts.ambiguousCount > 0 && ` · ${tabCounts.ambiguousCount.toLocaleString('tr-TR')} inceleme bekliyor`}
+          </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
-          {[
-            { label: 'Tam metin', value: tabCounts.validCount.toLocaleString('tr-TR'), cls: 'text-ink' },
-            { label: 'İnceleme bekleyen', value: tabCounts.ambiguousCount.toLocaleString('tr-TR'), cls: 'text-warn' },
-            { label: 'Filtre sonucu', value: filteredQuestions.length.toLocaleString('tr-TR'), cls: 'text-accent' },
-            { label: 'Eşleşen slayt', value: lectureNotes.length.toLocaleString('tr-TR'), cls: 'text-ok' },
-          ].map((st) => (
-            <div key={st.label} className="bg-white border border-line rounded-[14px] px-3 py-2.5">
-              <div className="text-[12px] text-ink-2">{st.label}</div>
-              <div className={`font-mono text-[20px] leading-tight ${st.cls}`}>{st.value}</div>
-            </div>
-          ))}
-        </div>
+        <button
+          type="button"
+          onClick={handleManualSync}
+          disabled={cacheStatus.isSyncing}
+          aria-label="Güncellemeleri denetle"
+          title={`Cihazda ${questions.length.toLocaleString('tr-TR')} soru · güncellemeleri denetle`}
+          className="w-10 h-10 rounded-[10px] border border-line bg-white text-ink-2 flex items-center justify-center cursor-pointer hover:border-line-2 disabled:opacity-60 shrink-0"
+        >
+          <RefreshCw className={`w-4 h-4 ${cacheStatus.isSyncing ? 'animate-spin' : ''}`} />
+        </button>
       </div>
 
-      {/* Filter and Control Bar */}
-      <div className="bg-white rounded-[16px] border border-line p-3 sm:p-4 space-y-3">
-        {/* Search & View Mode Switch */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
-          <div className="relative flex-1">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setCurrentPage(1);
-              }}
-              placeholder="Çıkmış soru metni, şık, branş, konu, dosya adı veya yıl ara..."
-              className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1 cursor-pointer"
-              >
-                <X className="w-3.5 h-3.5" />
+      {/* Search + one filter button */}
+      <div className="flex gap-2">
+        <label className="flex-1 min-w-0 flex items-center gap-2 h-11 px-3.5 rounded-[12px] bg-white border border-line focus-within:border-accent">
+          <Search className="w-[17px] h-[17px] text-ink-3 shrink-0" />
+          <span className="sr-only">Çıkmış sorularda ara</span>
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setCurrentPage(1);
+            }}
+            placeholder="Soru, şık ya da konu ara"
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-[#7A8693]"
+          />
+          {searchQuery && (
+            <button type="button" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle" className="w-7 h-7 -mr-1 rounded-full flex items-center justify-center text-ink-3 hover:bg-canvas cursor-pointer">
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </label>
+        <button
+          type="button"
+          onClick={() => setFiltersOpen((v) => !v)}
+          aria-expanded={filtersOpen}
+          aria-label={`Filtrele${activeFilterChips.length ? `, ${activeFilterChips.length} etkin` : ''}`}
+          className={`relative h-11 px-3 sm:px-3.5 rounded-[12px] border text-[14px] font-semibold flex items-center gap-2 cursor-pointer shrink-0 transition-colors ${
+            filtersOpen ? 'bg-accent-soft border-accent text-accent' : 'bg-white border-line text-ink hover:border-line-2'
+          }`}
+        >
+          <SlidersHorizontal className="w-[17px] h-[17px]" />
+          <span className="hidden sm:inline">Filtrele</span>
+          {activeFilterChips.length > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 sm:static min-w-5 h-5 px-1.5 rounded-full bg-accent text-white text-[12px] inline-flex items-center justify-center">
+              {activeFilterChips.length}
+            </span>
+          )}
+        </button>
+      </div>
+
+      {/* Filter panel: inline on tablet/desktop, bottom sheet on phones */}
+      {filtersOpen && (
+        <div className="fixed inset-0 z-[60] flex items-end sm:static sm:z-auto sm:block" role="dialog" aria-label="Filtreler">
+          <button type="button" aria-label="Kapat" onClick={() => setFiltersOpen(false)} className="sm:hidden absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
+          <div className="relative w-full max-h-[85dvh] overflow-y-auto sm:overflow-visible bg-white rounded-t-[24px] sm:rounded-[16px] sm:border sm:border-line px-4 pt-2 sm:pt-4 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-4 flex flex-col gap-4 shadow-[0_-10px_40px_rgba(14,26,38,0.18)] sm:shadow-none">
+            <span className="sm:hidden self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
+            <div className="sm:hidden flex items-center">
+              <span className="flex-1 text-[18px] font-bold">Filtrele</span>
+              <button type="button" onClick={() => setFiltersOpen(false)} className="h-9 px-2 text-[15px] font-semibold text-accent cursor-pointer">
+                Bitti
               </button>
-            )}
-          </div>
+            </div>
 
-          {/* View Mode Toggle */}
-          <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl shrink-0 self-start sm:self-auto text-xs font-bold">
-            <button
-              onClick={() => setViewMode('redacted')}
-              className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer ${
-                viewMode === 'redacted'
-                  ? 'bg-white text-teal-800 shadow-2xs font-extrabold'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Yapay zeka tarafından temizlenmiş, şıklandırılmış ve gerekçeli soru görünümü"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-              <span>Redakte Edilmiş</span>
-            </button>
+            <div className="flex flex-col gap-1.5">
+              <span className="text-[12.5px] font-semibold text-ink-3">Havuz</span>
+              <div className="flex flex-wrap gap-1.5">
+                {(
+                  [
+                    ['valid', `Tam metin · ${tabCounts.validCount}`],
+                    ['ambiguous', `İnceleme bekleyen · ${tabCounts.ambiguousCount}`],
+                    ['all', `Tümü · ${tabCounts.totalCount}`],
+                  ] as const
+                ).map(([id, label]) => (
+                  <button
+                    key={id}
+                    type="button"
+                    aria-pressed={ambiguityTab === id}
+                    onClick={() => {
+                      setAmbiguityTab(id);
+                      setCurrentPage(1);
+                    }}
+                    className={chipCls(ambiguityTab === id)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-            <button
-              onClick={() => setViewMode('raw')}
-              className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer ${
-                viewMode === 'raw'
-                  ? 'bg-white text-teal-800 shadow-2xs font-extrabold'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Öğrencilerin sınav sonrası hatırladığı orijinal ham metinler"
-            >
-              <FileText className="w-3.5 h-3.5 text-slate-500" />
-              <span>Ham Orijinal</span>
-            </button>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label className="flex flex-col gap-1.5">
+                <span className="text-[12.5px] font-semibold text-ink-3">Sınav</span>
+                <select
+                  value={selectedCommittee}
+                  onChange={(e) => {
+                    setSelectedCommittee(e.target.value);
+                    setCurrentPage(1);
+                  }}
+                  className={selectCls}
+                >
+                  <option value="all">Tüm kurul ve sınavlar</option>
+                  {filterOptions.committees.map((cId) => (
+                    <option key={cId} value={cId}>
+                      {formatCommitteeName(cId)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="flex flex-col gap-1.5">
+                <span className="text-[12.5px] font-semibold text-ink-3">Yıl</span>
+                <select
+                  value={selectedYear}
+                  onChange={(e) => {
+                    setSelectedYear(e.target.value);
+                    setCurrentPage(1);
+                  }}
+                  className={selectCls}
+                >
+                  <option value="all">Tüm yıllar</option>
+                  {filterOptions.years.map((yr) => (
+                    <option key={yr} value={yr}>
+                      {yr}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="flex flex-col gap-1.5">
+                <span className="text-[12.5px] font-semibold text-ink-3">Branş</span>
+                <select
+                  value={selectedDiscipline}
+                  onChange={(e) => {
+                    setSelectedDiscipline(e.target.value);
+                    setCurrentPage(1);
+                  }}
+                  className={selectCls}
+                >
+                  <option value="all">Tüm branşlar</option>
+                  {filterOptions.disciplines.map((d) => (
+                    <option key={d} value={d}>
+                      {d}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
 
-            <button
-              onClick={() => setViewMode('split')}
-              className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer ${
-                viewMode === 'split'
-                  ? 'bg-white text-teal-800 shadow-2xs font-extrabold'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Ham soru ile Redakte soruyu yan yana karşılaştır"
-            >
-              <Layers className="w-3.5 h-3.5 text-purple-600" />
-              <span>Karşılaştır</span>
-            </button>
-          </div>
-        </div>
+            <div className="flex flex-col gap-1.5">
+              <span className="text-[12.5px] font-semibold text-ink-3">Görünüm</span>
+              <div role="radiogroup" aria-label="Görünüm" className="grid grid-cols-3 sm:inline-grid sm:w-[360px] gap-1 bg-canvas rounded-[12px] p-1">
+                {(
+                  [
+                    ['redacted', 'Düzenlenmiş'],
+                    ['raw', 'Ham'],
+                    ['split', 'Karşılaştır'],
+                  ] as const
+                ).map(([id, label]) => (
+                  <button
+                    key={id}
+                    type="button"
+                    role="radio"
+                    aria-checked={viewMode === id}
+                    onClick={() => setViewMode(id)}
+                    className={`h-9 rounded-[9px] text-[13.5px] cursor-pointer ${
+                      viewMode === id ? 'bg-white font-semibold text-ink shadow-[0_1px_3px_rgba(14,26,38,0.12)]' : 'text-ink-2'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        {/* Quality & Ambiguity Filter Pills */}
-        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
-          <span className="text-[11px] font-bold text-slate-500">Soru Havuzu:</span>
-          <button
-            onClick={() => { setAmbiguityTab('valid'); setCurrentPage(1); }}
-            className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
-              ambiguityTab === 'valid'
-                ? 'bg-emerald-600 text-white shadow-xs'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-            }`}
-          >
-            ✓ Tam Metin Soru Havuzu ({tabCounts.validCount})
-          </button>
-          <button
-            onClick={() => { setAmbiguityTab('ambiguous'); setCurrentPage(1); }}
-            className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
-              ambiguityTab === 'ambiguous'
-                ? 'bg-amber-600 text-white shadow-xs'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-            }`}
-            title="Eksik metin veya şık içeren, arka planda muallak olarak işaretlenen sorular"
-          >
-            ⚠️ Muallak / Parça Sorular ({tabCounts.ambiguousCount})
-          </button>
-          <button
-            onClick={() => { setAmbiguityTab('all'); setCurrentPage(1); }}
-            className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
-              ambiguityTab === 'all'
-                ? 'bg-accent-soft text-accent ring-1 ring-inset ring-accent/40'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-            }`}
-          >
-            Tümü ({tabCounts.totalCount})
-          </button>
-        </div>
-
-        {/* Multi-Facet Dropdowns */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-3 border-t border-slate-100">
-          {/* Kurul / Sınav Dropdown */}
-          <div className="space-y-1">
-            <label className="text-[11px] font-bold text-slate-700 flex items-center gap-1">
-              <GraduationCap className="w-3.5 h-3.5 text-teal-600" />
-              Kurul / Sınav Türü:
-            </label>
-            <select
-              value={selectedCommittee}
-              onChange={(e) => {
-                setSelectedCommittee(e.target.value);
-                setCurrentPage(1);
-              }}
-              className="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-semibold text-slate-900 focus:bg-white focus:border-teal-500"
-            >
-              <option value="all">Tüm Kurul ve Sınavlar</option>
-              {filterOptions.committees.map(cId => (
-                <option key={cId} value={cId}>
-                  {formatCommitteeName(cId)}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Sene / Yıl Dropdown */}
-          <div className="space-y-1">
-            <label className="text-[11px] font-bold text-slate-700 flex items-center gap-1">
-              <Calendar className="w-3.5 h-3.5 text-teal-600" />
-              Sınav Yılı / Kaynak:
-            </label>
-            <select
-              value={selectedYear}
-              onChange={(e) => {
-                setSelectedYear(e.target.value);
-                setCurrentPage(1);
-              }}
-              className="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-semibold text-slate-900 focus:bg-white focus:border-teal-500"
-            >
-              <option value="all">Tüm Yıllar & Dönemler</option>
-              {filterOptions.years.map(yr => (
-                <option key={yr} value={yr}>
-                  {yr}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Branş / Ders Dropdown */}
-          <div className="space-y-1">
-            <label className="text-[11px] font-bold text-slate-700 flex items-center gap-1">
-              <Stethoscope className="w-3.5 h-3.5 text-teal-600" />
-              Tıbbi Branş / Ders:
-            </label>
-            <select
-              value={selectedDiscipline}
-              onChange={(e) => {
-                setSelectedDiscipline(e.target.value);
-                setCurrentPage(1);
-              }}
-              className="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 text-xs font-semibold text-slate-900 focus:bg-white focus:border-teal-500"
-            >
-              <option value="all">Tüm Tıp Branşları</option>
-              {filterOptions.disciplines.map(d => (
-                <option key={d} value={d}>
-                  {d}
-                </option>
-              ))}
-            </select>
+            <div className="flex items-center justify-between gap-2 pt-3 border-t border-line-soft">
+              <button type="button" onClick={clearAllFilters} className="h-10 px-2 text-[14px] text-ink-2 font-semibold cursor-pointer">
+                Temizle
+              </button>
+              <button
+                type="button"
+                onClick={() => setFiltersOpen(false)}
+                className="h-11 sm:h-10 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14.5px] font-semibold cursor-pointer"
+              >
+                {filteredQuestions.length.toLocaleString('tr-TR')} soruyu göster
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {/* Active filters as removable chips */}
+      {(activeFilterChips.length > 0 || searchQuery) && (
+        <div className="flex flex-wrap items-center gap-1.5">
+          {activeFilterChips.map((c) => (
+            <button
+              key={c.label}
+              type="button"
+              onClick={() => {
+                c.clear();
+                setCurrentPage(1);
+              }}
+              className="h-8 pl-3 pr-2 rounded-full bg-accent-soft text-accent text-[13px] font-semibold inline-flex items-center gap-1 cursor-pointer max-w-full"
+              aria-label={`${c.label} filtresini kaldır`}
+            >
+              <span className="truncate">{c.label}</span>
+              <X className="w-3.5 h-3.5 shrink-0" />
+            </button>
+          ))}
+          <span className="ml-auto text-[13px] text-ink-3">{filteredQuestions.length.toLocaleString('tr-TR')} soru</span>
+        </div>
+      )}
 
       {/* Questions Listing */}
       {isLoading ? (
-        <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center space-y-3 shadow-xs">
-          <RefreshCw className="w-8 h-8 text-teal-600 animate-spin mx-auto" />
-          <h4 className="font-bold text-slate-800 text-sm">Çıkmış Sorular Yükleniyor...</h4>
-          <p className="text-xs text-slate-500 max-w-sm mx-auto">
-            Veritabanındaki tüm çıkmış sınav soruları ve ders notları arşivi hazırlanıyor...
-          </p>
+        <div className="bg-white rounded-[18px] border border-line p-12 text-center flex flex-col items-center gap-2">
+          <RefreshCw className="w-6 h-6 text-accent animate-spin" />
+          <p className="m-0 text-[14px] text-ink-2">Çıkmış sorular yükleniyor…</p>
         </div>
       ) : paginatedQuestions.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center space-y-3 shadow-xs">
-          <HelpCircle className="w-10 h-10 text-slate-400 mx-auto" />
-          <h4 className="font-bold text-slate-800 text-base">Eşleşen Çıkmış Soru Bulunamadı</h4>
-          <p className="text-xs text-slate-500 max-w-md mx-auto">
-            Arama kriterlerinize veya seçilen filtrelere uygun soru bulunamadı. Filtreleri sıfırlayarak tüm soruları görebilirsiniz.
-          </p>
-          <button
-            onClick={() => {
-              setSearchQuery('');
-              setSelectedCommittee('all');
-              setSelectedYear('all');
-              setSelectedDiscipline('all');
-            }}
-            className="bg-teal-50 hover:bg-teal-100 text-teal-800 font-bold px-4 py-2 rounded-xl text-xs cursor-pointer"
-          >
-            Filtreleri Temizle
+        <div className="bg-white rounded-[18px] border border-line px-6 py-12 text-center flex flex-col items-center gap-3">
+          <HelpCircle className="w-9 h-9 text-ink-3" />
+          <p className="m-0 font-display text-[20px] font-bold">Eşleşen soru yok</p>
+          <p className="m-0 text-[14px] text-ink-2 max-w-sm">Aramayı ya da filtreleri değiştirip yeniden dene.</p>
+          <button type="button" onClick={clearAllFilters} className="h-10 px-4 rounded-[10px] bg-accent-soft text-accent font-semibold text-[14px] cursor-pointer">
+            Filtreleri temizle
           </button>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="flex flex-col gap-3">
           {paginatedQuestions.map((q) => {
             const effectiveMode: 'redacted' | 'raw' | 'split' = cardViewOverrides[q.id] || viewMode;
             const learnMatch = learnMatcher.getMatch(q);
@@ -749,423 +781,214 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const options = q.reconstruction?.options || q.options || [];
             const correctAnswer = q.reconstruction?.correctAnswer || q.claimedAnswer;
             const explanation = q.reconstruction?.explanation;
+            const commentsCount = (q as any).comments?.length || 0;
+            const expOpen = !!openExplanations[q.id];
+            const meta = [q.discipline || 'Tıp', formatCommitteeName(q.committeeId).split(':')[0], q.examYear].filter(Boolean).join(' · ');
+            const setCardMode = (m: 'redacted' | 'raw' | 'split') => setCardViewOverrides((prev) => ({ ...prev, [q.id]: m }));
+
+            const actions: ActionItem[] = [
+              {
+                label: isGeneratingSimilar === q.id ? 'Benzer soru üretiliyor…' : 'Benzer soru üret',
+                icon: Sparkles,
+                group: 'Yapay zekâ',
+                tone: 'accent',
+                disabled: isGeneratingSimilar === q.id,
+                onClick: () => handleGenerateSimilarQuestion(q, learnMatch || slideMatch),
+              },
+              ...(isAdminUser
+                ? [
+                    { label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', onClick: () => setOptimizeModalQuestion(q) },
+                    {
+                      label: 'AI ile redakte et',
+                      icon: PenLine,
+                      group: 'Yapay zekâ',
+                      onClick: () => setCustomRedactQuestion({ question: q, match: learnMatch || slideMatch }),
+                    },
+                  ]
+                : []),
+              { label: 'Gelişmiş soruya çevir', icon: Zap, group: 'Yapay zekâ', onClick: () => setUpgradeModalQuestion(q) },
+              { label: 'Düzenlenmiş', icon: Sparkles, group: 'Görünüm', hint: effectiveMode === 'redacted' ? '✓' : undefined, onClick: () => setCardMode('redacted') },
+              { label: 'Ham metin', icon: FileText, group: 'Görünüm', hint: effectiveMode === 'raw' ? '✓' : undefined, onClick: () => setCardMode('raw') },
+              { label: 'Karşılaştır', icon: Layers, group: 'Görünüm', hint: effectiveMode === 'split' ? '✓' : undefined, onClick: () => setCardMode('split') },
+              ...(learnMatch
+                ? [{ label: `Öğren · slayt ${learnMatch.slideNumber}`, icon: GraduationCap, group: 'Diğer', onClick: () => setSelectedLearnMatch({ question: q, match: learnMatch }) }]
+                : []),
+              { label: 'Kaynak dosya', icon: FileText, group: 'Diğer', hint: getRawSourceBadge(q), onClick: () => setSelectedRawSourceQuestion(q) },
+              { label: copiedId === q.id ? 'Kopyalandı' : 'Soruyu kopyala', icon: copiedId === q.id ? Check : Copy, group: 'Diğer', onClick: () => handleCopyQuestion(q) },
+              { label: 'Hata bildir', icon: Flag, group: 'Diğer', tone: 'danger', onClick: () => setReportingQuestion(q) },
+            ];
 
             return (
-              <div
-                key={q.id}
-                className="bg-white rounded-2xl border border-slate-200 hover:border-teal-300 transition-all p-4 sm:p-6 shadow-xs space-y-4"
-              >
-                {/* Header Metadata Bar */}
-                <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-black text-slate-900 text-sm bg-slate-100 px-2.5 py-1 rounded-lg">
-                      #{q.questionNumber}
-                    </span>
+              <article key={q.id} className="bg-white rounded-[18px] border border-line p-4 sm:p-5 flex flex-col gap-3.5">
+                <header className="flex items-center gap-2.5 min-w-0">
+                  <span className="font-mono text-[13px] font-semibold text-ink shrink-0">#{q.questionNumber}</span>
+                  <span className="text-[13px] text-ink-3 truncate min-w-0" title={formatCommitteeName(q.committeeId)}>
+                    {meta}
+                  </span>
+                  {q.isAmbiguous ? (
+                    <span className="h-[22px] px-2 rounded-full bg-warn-soft text-warn text-[12px] font-semibold inline-flex items-center shrink-0">Eksik</span>
+                  ) : q.reconstruction ? (
+                    <span className="hidden sm:inline-flex h-[22px] px-2 rounded-full bg-ok-soft text-ok text-[12px] font-semibold items-center shrink-0">Doğrulandı</span>
+                  ) : null}
+                  {isGeneratingSimilar === q.id && <RefreshCw className="w-4 h-4 text-accent animate-spin shrink-0" aria-label="Benzer soru üretiliyor" />}
+                  <span className="flex-1" />
+                  <ActionMenu items={actions} label="İşlemler" title={`Soru #${q.questionNumber}`} />
+                </header>
 
-                    <span className="bg-teal-50 text-teal-800 border border-teal-200 text-xs font-bold px-2.5 py-0.5 rounded-md">
-                      {q.discipline || 'Tıp'}
-                    </span>
-
-                    <span className="bg-slate-100 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded-md">
-                      {formatCommitteeName(q.committeeId)}
-                    </span>
-
-                    {q.examYear && (
-                      <span className="bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold px-2 py-0.5 rounded-md flex items-center gap-1">
-                        <Calendar className="w-3 h-3 text-amber-600" />
-                        {q.examYear}
-                      </span>
-                    )}
-
-                    {/* Exact source file name badge */}
-                    <button
-                      onClick={() => setSelectedRawSourceQuestion(q)}
-                      className="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded-md flex items-center gap-1 cursor-pointer transition-colors"
-                      title="Ham sorunun çıkarıldığı orijinal dosya ve arşiv konumu"
-                    >
-                      <FileText className="w-3 h-3 text-slate-500" />
-                      <span className="truncate max-w-[150px] sm:max-w-[220px]">
-                        {q.sourceFile || 'Çıkmış Dosyası'}
-                      </span>
-                    </button>
-
-                    {q.isAmbiguous && (
-                      <span className="bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                        ⚠️ Muallak Parça
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Actions & Card Flip */}
-                  <div className="flex items-center gap-1.5">
-                    {/* AI Similar Question Generator Button ("Ek Soru Sor") */}
-                    <button
-                      onClick={() => handleGenerateSimilarQuestion(q, learnMatch || slideMatch)}
-                      disabled={isGeneratingSimilar === q.id}
-                      className="bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                      title="Bu çıkmış soru ve ders notu konusundan yola çıkarak yapay zeka ile benzer soru üret"
-                    >
-                      {isGeneratingSimilar === q.id ? (
-                        <RefreshCw className="w-3.5 h-3.5 animate-spin text-teal-600" />
-                      ) : (
-                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-                      )}
-                      <span>{isGeneratingSimilar === q.id ? 'Üretiliyor...' : 'Ek Soru Sor'}</span>
-                    </button>
-
-                    {/* Admin AI Question Optimizer Button */}
-                    {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && (
-                      <button
-                        onClick={() => setOptimizeModalQuestion(q)}
-                        className="bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                        title="Bu soruyu amfi ders notları ve tıp literatürüyle yapay zeka ile düzenle / iyileştir (Admin)"
-                      >
-                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-                        <span>AI ile Düzenle</span>
-                      </button>
-                    )}
-
-                    {/* Admin Custom AI Redaction Button */}
-                    {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && (
-                      <button
-                        onClick={() => setCustomRedactQuestion({ question: q, match: learnMatch || slideMatch })}
-                        className="bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border border-indigo-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                        title="Bu soruyu Gemini yapay zekasına özel talimat vererek redakte et (Admin)"
-                      >
-                        <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                        <span>AI ile Redakte Et</span>
-                      </button>
-                    )}
-
-                    {/* Upgrade to Advanced Clinical Case Question Button */}
-                    <button
-                      onClick={() => setUpgradeModalQuestion(q)}
-                      className="bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                      title="Bu soruyu eski ve redakte edilmiş haliyle eşleştirip USMLE / TUS düzeyinde gelişmiş klinik vaka sorusuna dönüştür"
-                    >
-                      <Zap className="w-3.5 h-3.5 text-amber-600" />
-                      <span>Gelişmiş Soruya Çevir</span>
-                    </button>
-
-                    {/* Learn Match Badge OR Raw Question Location Badge */}
-                    {learnMatch ? (
-                      <button
-                        onClick={() => setSelectedLearnMatch({ question: q, match: learnMatch })}
-                        className="bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                        title="Bu sorunun eşleştiği Öğren modülü ders slaytı ve akıl kartlarını incele"
-                      >
-                        <GraduationCap className="w-3.5 h-3.5 text-emerald-700" />
-                        <span className="truncate max-w-[170px]">Öğren: {learnMatch.deckTitle} (Slayt #{learnMatch.slideNumber})</span>
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => setSelectedRawSourceQuestion(q)}
-                        className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                        title="Ham sorunun arşivdeki orijinal sınav belgesini ve yerini incele"
-                      >
-                        <FileText className="w-3.5 h-3.5 text-slate-500" />
-                        <span className="truncate max-w-[170px]">
-                          Ham Soru: {getRawSourceBadge(q)}
-                        </span>
-                      </button>
-                    )}
-
-                    {/* Mode Toggle for this single card */}
-                    <div className="bg-slate-100 p-0.5 rounded-lg flex text-[11px] font-bold">
-                      <button
-                        onClick={() => setCardViewOverrides(prev => ({ ...prev, [q.id]: 'redacted' }))}
-                        className={`px-2 py-0.5 rounded transition-all cursor-pointer ${
-                          effectiveMode === 'redacted' ? 'bg-white text-teal-800 shadow-2xs' : 'text-slate-500'
-                        }`}
-                        title="Yapay zeka redakte görünümü"
-                      >
-                        Redakte
-                      </button>
-                      <button
-                        onClick={() => setCardViewOverrides(prev => ({ ...prev, [q.id]: 'raw' }))}
-                        className={`px-2 py-0.5 rounded transition-all cursor-pointer ${
-                          effectiveMode === 'raw' ? 'bg-white text-teal-800 shadow-2xs' : 'text-slate-500'
-                        }`}
-                        title="Ham orijinal metin görünümü"
-                      >
-                        Ham
-                      </button>
-                    </div>
-
-                    {/* Copy Button */}
-                    <button
-                      onClick={() => handleCopyQuestion(q)}
-                      className="p-1.5 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
-                      title="Soruyu metin olarak kopyala"
-                    >
-                      {copiedId === q.id ? (
-                        <Check className="w-4 h-4 text-emerald-600" />
-                      ) : (
-                        <Copy className="w-4 h-4" />
-                      )}
-                    </button>
-                  </div>
-                </div>
-
-                {/* Question Topic */}
-                <div className="text-xs font-bold text-slate-500">
-                  Konu: <span className="text-slate-800 font-semibold">{q.topic}</span>
-                </div>
-
-                {/* CONTENT AREA: Depends on Mode */}
                 {effectiveMode === 'split' ? (
-                  /* SPLIT SIDE-BY-SIDE VIEW */
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                    {/* Raw Column */}
-                    <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
-                      <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 pb-1 border-b border-slate-200">
-                        <FileText className="w-3.5 h-3.5 text-slate-500" />
-                        <span>Ham / Orijinal Hatırlanan Metin</span>
-                      </div>
-                      <p className="text-xs text-slate-800 leading-relaxed font-sans">
-                        {q.fragments?.[0]?.text || stem}
-                      </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="bg-canvas rounded-[14px] p-3.5 flex flex-col gap-2">
+                      <span className="text-[12px] font-semibold text-ink-3 uppercase tracking-[0.06em]">Ham metin</span>
+                      <p className="m-0 text-[14.5px] text-ink leading-relaxed whitespace-pre-wrap">{q.fragments?.[0]?.text || stem}</p>
                       {q.options && q.options.length > 0 && (
-                        <div className="space-y-1.5 text-xs">
-                          {q.options.map(opt => (
-                            <div key={opt.key} className="flex items-start gap-2 text-slate-700">
-                              <span className="font-bold text-slate-500">{opt.key})</span>
+                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[14px] text-ink-2">
+                          {q.options.map((opt) => (
+                            <li key={opt.key} className="flex gap-2">
+                              <span className="font-mono text-ink-3">{opt.key})</span>
                               <span>{opt.text}</span>
-                            </div>
+                            </li>
                           ))}
-                        </div>
+                        </ol>
                       )}
                     </div>
-
-                    {/* Redacted Column */}
-                    <div className="bg-teal-50/50 border border-teal-200 rounded-xl p-4 space-y-3">
-                      <div className="flex items-center gap-1.5 text-xs font-bold text-teal-900 pb-1 border-b border-teal-200">
-                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-                        <span>Yapay Zeka Redakte Hali</span>
-                      </div>
-                      <p className="text-xs text-slate-900 font-medium leading-relaxed">
-                        {stem}
-                      </p>
+                    <div className="bg-accent-soft/50 rounded-[14px] p-3.5 flex flex-col gap-2">
+                      <span className="text-[12px] font-semibold text-accent uppercase tracking-[0.06em]">Düzenlenmiş</span>
+                      <p className="m-0 text-[14.5px] text-ink font-medium leading-relaxed">{stem}</p>
                       {options.length > 0 && (
-                        <div className="space-y-1.5 text-xs">
-                          {options.map((opt: any) => {
-                            const isCorrect = opt.key === correctAnswer;
-                            return (
-                              <div
-                                key={opt.key}
-                                className={`p-2 rounded-lg border transition-all flex items-start justify-between gap-2 ${
-                                  isCorrect
-                                    ? 'bg-emerald-100/70 border-emerald-400 text-emerald-950 font-bold'
-                                    : 'bg-white border-slate-200 text-slate-700'
-                                }`}
-                              >
-                                <div className="flex items-start gap-2">
-                                  <span className={isCorrect ? 'text-emerald-800' : 'text-slate-400'}>{opt.key})</span>
-                                  <span>{opt.text}</span>
-                                </div>
-                                {isCorrect && (
-                                  <span className="text-[10px] text-emerald-700 font-extrabold uppercase shrink-0">
-                                    ✓ Doğru
-                                  </span>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
+                        <ol className="list-none m-0 p-0 flex flex-col gap-1 text-[14px]">
+                          {options.map((opt: any) => (
+                            <li key={opt.key} className={`flex gap-2 ${opt.key === correctAnswer ? 'text-ok font-semibold' : 'text-ink-2'}`}>
+                              <span className="font-mono">{opt.key})</span>
+                              <span>{opt.text}</span>
+                            </li>
+                          ))}
+                        </ol>
                       )}
                     </div>
                   </div>
                 ) : effectiveMode === 'raw' ? (
-                  /* RAW ORIGINAL VIEW */
-                  <div className="space-y-3 bg-slate-50 border border-slate-200 rounded-xl p-4">
-                    <div className="flex items-center justify-between text-xs text-slate-500 pb-1 border-b border-slate-200">
-                      <span className="font-semibold flex items-center gap-1.5">
-                        <FileText className="w-3.5 h-3.5 text-slate-500" />
-                        Orijinal Sınav Metni
-                      </span>
-                      <span className="text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                        {q.sourceFile || 'PDF Kaynağı'}
-                      </span>
-                    </div>
-
-                    <div className="text-xs sm:text-sm text-slate-900 leading-relaxed font-sans">
-                      <p className="font-medium whitespace-pre-wrap">
-                        {(q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic}
-                      </p>
-                    </div>
-
+                  <div className="bg-canvas rounded-[14px] p-3.5 flex flex-col gap-2.5">
+                    <span className="text-[12px] font-semibold text-ink-3 uppercase tracking-[0.06em]">Ham metin · {q.sourceFile || 'PDF kaynağı'}</span>
+                    <p className="m-0 text-[15px] text-ink leading-relaxed whitespace-pre-wrap">
+                      {(q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic}
+                    </p>
                     {(((q as any).rawQuestion?.options && (q as any).rawQuestion.options.length > 0) || (q.options && q.options.length > 0)) && (
-                      <div className="space-y-1.5 pt-2 border-t border-slate-200">
+                      <ol className="list-none m-0 p-0 flex flex-col gap-1">
                         {((q as any).rawQuestion?.options || q.options).map((opt: any) => {
                           const isClaimed = opt.key === (q.claimedAnswer || (q as any).rawQuestion?.claimedAnswer);
                           return (
-                            <div key={opt.key} className={`flex items-start gap-2 text-xs p-1.5 rounded ${isClaimed ? 'bg-amber-50 text-amber-950 font-bold border border-amber-200' : 'text-slate-700'}`}>
-                              <span className="font-bold text-slate-500">{opt.key})</span>
-                              <span>{opt.text}</span>
-                              {isClaimed && <span className="text-[10px] text-amber-800 ml-auto font-semibold">İşaretlenen</span>}
-                            </div>
+                            <li key={opt.key} className={`flex gap-2 text-[14px] px-2 py-1 rounded-lg ${isClaimed ? 'bg-warn-soft text-ink font-semibold' : 'text-ink-2'}`}>
+                              <span className="font-mono text-ink-3">{opt.key})</span>
+                              <span className="flex-1">{opt.text}</span>
+                              {isClaimed && <span className="text-[12px] text-warn">İşaretlenen</span>}
+                            </li>
                           );
                         })}
-                      </div>
+                      </ol>
                     )}
                   </div>
                 ) : (
-                  /* REDACTED (DEFAULT AI FORMAT) */
-                  <div className="space-y-3.5">
-                    {/* Stem */}
-                    <p className="text-xs sm:text-sm font-medium text-slate-900 leading-relaxed">
-                      {stem}
-                    </p>
-
-                    {/* Options Grid */}
+                  <>
+                    <p className="m-0 text-[16px] sm:text-[17px] font-medium text-ink leading-[1.5]">{stem}</p>
                     {options && options.length > 0 && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                      <ol className="list-none m-0 p-0 flex flex-col gap-1.5">
                         {options.map((opt: any) => {
                           const isCorrect = opt.key === correctAnswer;
                           return (
-                            <div
+                            <li
                               key={opt.key}
-                              className={`p-2.5 rounded-xl border transition-all flex items-start justify-between gap-2 ${
-                                isCorrect
-                                  ? 'bg-emerald-50 border-emerald-400 text-emerald-950 font-bold shadow-2xs'
-                                  : 'bg-slate-50/60 border-slate-200 text-slate-800'
+                              className={`grid grid-cols-[28px_minmax(0,1fr)_auto] items-center gap-2.5 px-3 py-2.5 rounded-[12px] border ${
+                                isCorrect ? 'bg-ok-tint border-[#9FD9B5]' : 'bg-white border-line-soft'
                               }`}
                             >
-                              <div className="flex items-start gap-2">
-                                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 ${
-                                  isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-600'
-                                }`}>
-                                  {opt.key}
-                                </span>
-                                <span className="leading-snug pt-0.5">{opt.text}</span>
-                              </div>
-                              {isCorrect && (
-                                <span className="text-[10px] bg-emerald-200 text-emerald-900 px-1.5 py-0.5 rounded font-extrabold shrink-0">
-                                  Doğru
-                                </span>
-                              )}
-                            </div>
+                              <span
+                                className={`w-7 h-7 rounded-[8px] flex items-center justify-center font-mono text-[13px] font-semibold ${
+                                  isCorrect ? 'bg-ok text-white' : 'bg-canvas text-ink-2'
+                                }`}
+                              >
+                                {opt.key}
+                              </span>
+                              <span className={`text-[14.5px] leading-[1.45] ${isCorrect ? 'font-semibold text-ink' : 'text-ink'}`}>{opt.text}</span>
+                              {isCorrect ? <span className="text-[12px] font-semibold text-ok">Doğru</span> : <span />}
+                            </li>
                           );
                         })}
-                      </div>
+                      </ol>
                     )}
-
-                    {/* Clinical / Pathological Explanation Box */}
                     {explanation && (
-                      <div className="bg-teal-50/70 border border-teal-200/80 rounded-xl p-3 text-xs space-y-1">
-                        <div className="flex items-center gap-1.5 font-bold text-teal-900">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-teal-700" />
-                          <span>Klinik Patofizyolojik Açıklama & Sınav Notu:</span>
-                        </div>
-                        <p className="text-slate-700 leading-relaxed pl-5 whitespace-pre-line">
-                          {explanation}
-                        </p>
+                      <div className="rounded-[12px] bg-field">
+                        <button
+                          type="button"
+                          onClick={() => setOpenExplanations((prev) => ({ ...prev, [q.id]: !prev[q.id] }))}
+                          aria-expanded={expOpen}
+                          className="w-full h-11 px-3.5 flex items-center justify-between text-[14px] font-semibold text-ink cursor-pointer"
+                        >
+                          Açıklama
+                          <ChevronDown className={`w-4 h-4 text-ink-3 transition-transform ${expOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        {expOpen && <p className="m-0 px-3.5 pb-3.5 text-[14.5px] text-ink-2 leading-[1.6] whitespace-pre-line">{explanation}</p>}
                       </div>
                     )}
-                  </div>
+                  </>
                 )}
 
-                {/* Footer Bar: Likes, Comments, Report & Matched Slide Preview */}
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100 text-xs">
-                  {/* Left: Like, Comment & Report Interaction */}
-                  <div className="flex items-center gap-2">
+                {/* Footer: like, comments, learn link */}
+                <footer className="flex items-center gap-2 text-[13px] text-ink-3">
+                  <button
+                    type="button"
+                    onClick={() => handleToggleLike(q)}
+                    aria-pressed={isLiked}
+                    title={isLiked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
+                    className={`h-8 px-2.5 rounded-[9px] border inline-flex items-center gap-1.5 cursor-pointer transition-colors ${
+                      isLiked ? 'bg-accent-soft border-accent/30 text-accent font-semibold' : 'bg-white border-line text-ink-2 hover:border-line-2'
+                    }`}
+                  >
+                    <ThumbsUp className={`w-3.5 h-3.5 ${isLiked ? 'fill-current' : ''}`} />
+                    {q.upvotes || 0}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setExpandedCommentsQuestionId(expandedCommentsQuestionId === q.id ? null : q.id)}
+                    aria-expanded={expandedCommentsQuestionId === q.id}
+                    className={`h-8 px-2.5 rounded-[9px] inline-flex items-center gap-1.5 cursor-pointer ${
+                      expandedCommentsQuestionId === q.id ? 'bg-canvas text-ink font-semibold' : 'text-ink-2 hover:bg-canvas'
+                    }`}
+                  >
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    {commentsCount > 0 ? `${commentsCount} yorum` : 'Yorum'}
+                  </button>
+                  <span className="flex-1" />
+                  {learnMatch && (
                     <button
-                      onClick={() => handleToggleLike(q)}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                        isLiked
-                          ? 'bg-teal-700 text-white shadow-xs'
-                          : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                      }`}
-                      title={isLiked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
-                    >
-                      <ThumbsUp className={`w-3.5 h-3.5 ${isLiked ? 'fill-current' : ''}`} />
-                      <span>{q.upvotes || 0}</span>
-                    </button>
-
-                    {/* Comments Toggle Button */}
-                    <button
-                      onClick={() => setExpandedCommentsQuestionId(expandedCommentsQuestionId === q.id ? null : q.id)}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                        expandedCommentsQuestionId === q.id
-                          ? 'bg-blue-600 text-white shadow-xs'
-                          : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                      }`}
-                      title="Soruya ait öğrenci öneri ve yorumlarını göster"
-                    >
-                      <MessageSquare className="w-3.5 h-3.5" />
-                      <span>Öneri & Yorum ({(q as any).comments?.length || 0})</span>
-                    </button>
-
-                    {/* Report / Complaint Button ("Şikayet Et / Hata Bildir") */}
-                    <button
-                      onClick={() => setReportingQuestion(q)}
-                      className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg font-semibold text-rose-600 hover:bg-rose-50 border border-transparent hover:border-rose-200 transition-all cursor-pointer"
-                      title="Soru hakkında hata veya şikayet bildir"
-                    >
-                      <Flag className="w-3.5 h-3.5" />
-                      <span className="hidden sm:inline">Hata Bildir</span>
-                    </button>
-
-                    <span className="text-[11px] text-slate-400 hidden md:inline">
-                      {q.reconstruction ? '✓ Redakte Doğrulandı' : 'Öğrenci Katkısı'}
-                    </span>
-                  </div>
-
-                  {/* Right: Learn Method Link OR Raw Question Location Link */}
-                  {learnMatch ? (
-                    <button
+                      type="button"
                       onClick={() => setSelectedLearnMatch({ question: q, match: learnMatch })}
-                      className="text-emerald-800 hover:text-emerald-950 font-bold flex items-center gap-1.5 cursor-pointer text-xs group"
-                      title="Öğren modülündeki interaktif amfi slayt sentezini ve akıl kartlarını aç"
+                      title={`${learnMatch.deckTitle} · slayt ${learnMatch.slideNumber}`}
+                      className="h-8 px-2.5 rounded-[9px] inline-flex items-center gap-1.5 text-accent font-semibold hover:bg-accent-soft cursor-pointer min-w-0"
                     >
-                      <GraduationCap className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform" />
-                      <span>Öğren Modülü: {learnMatch.deckTitle} • Slayt #{learnMatch.slideNumber}</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-emerald-500" />
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => setSelectedRawSourceQuestion(q)}
-                      className="text-slate-600 hover:text-slate-900 font-medium flex items-center gap-1.5 cursor-pointer text-xs group"
-                      title="Ham sorunun bulunduğu kaynak dosya ve arşiv yerini görüntüle"
-                    >
-                      <FileText className="w-4 h-4 text-slate-400 group-hover:text-slate-600" />
-                      <span>Ham Soru Konumu: {getRawSourceSummary(q)}</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                      <GraduationCap className="w-4 h-4 shrink-0" />
+                      <span className="truncate max-w-[180px] sm:max-w-[260px]">Öğren · slayt {learnMatch.slideNumber}</span>
                     </button>
                   )}
-                </div>
+                </footer>
 
-                {/* Expandable Comments & Suggestions Drawer */}
                 {expandedCommentsQuestionId === q.id && (
-                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 pt-3">
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-800 pb-2 border-b border-slate-200">
-                      <span className="flex items-center gap-1.5">
-                        <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
-                        Öğrenci Tartışmaları, Alternatif Çözümler & Mnemonicler ({(q as any).comments?.length || 0})
-                      </span>
-                    </div>
-
-                    {/* Comments List */}
-                    <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
-                      {((q as any).comments && (q as any).comments.length > 0) ? (
+                  <div className="bg-field rounded-[14px] p-3 flex flex-col gap-2.5">
+                    <div className="flex flex-col gap-2 max-h-56 overflow-y-auto">
+                      {commentsCount > 0 ? (
                         (q as any).comments.map((c: any) => (
-                          <div key={c.id} className="bg-white border border-slate-200 rounded-lg p-2.5 text-xs space-y-1">
-                            <div className="flex items-center justify-between text-[11px] text-slate-500 font-semibold">
-                              <span className="text-slate-800 font-bold">{c.author || 'Tıp Öğrencisi'}</span>
-                              <span>{new Date(c.timestamp).toLocaleString('tr-TR')}</span>
+                          <div key={c.id} className="bg-white border border-line-soft rounded-[10px] px-3 py-2 flex flex-col gap-0.5">
+                            <div className="flex items-center justify-between gap-2 text-[12px] text-ink-3">
+                              <span className="font-semibold text-ink">{c.author || 'Tıp öğrencisi'}</span>
+                              <span>{new Date(c.timestamp).toLocaleDateString('tr-TR')}</span>
                             </div>
-                            <p className="text-slate-700 leading-relaxed">{c.text}</p>
+                            <p className="m-0 text-[14px] text-ink-2 leading-relaxed">{c.text}</p>
                           </div>
                         ))
                       ) : (
-                        <p className="text-xs text-slate-500 italic py-1">
-                          Henüz bir öneri veya yorum eklenmemiş. Bu soruya ait klinik ipucu veya alternatif çözüm yolunu ilk sen ekle!
-                        </p>
+                        <p className="m-0 text-[14px] text-ink-3">Henüz yorum yok. Bir ipucu ya da alternatif çözüm ekleyen ilk kişi ol.</p>
                       )}
                     </div>
-
-                    {/* New Comment Input */}
-                    <div className="flex items-center gap-2 pt-2 border-t border-slate-200">
+                    <div className="flex items-center gap-2">
                       <input
                         type="text"
                         value={newCommentText}
@@ -1173,73 +996,50 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         onKeyDown={(e) => {
                           if (e.key === 'Enter') handleCommentSubmit(q.id);
                         }}
-                        placeholder="Öneri, pratik çözüm ipucu veya yorumunuzu yazın..."
-                        className="flex-1 bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-900 focus:outline-teal-600"
+                        placeholder="Yorum ya da ipucu yaz…"
+                        aria-label="Yorum"
+                        className="flex-1 min-w-0 h-10 bg-white border border-line rounded-[10px] px-3 text-[15px] outline-0 focus:border-accent"
                       />
                       <button
+                        type="button"
                         onClick={() => handleCommentSubmit(q.id)}
                         disabled={isSubmittingComment || !newCommentText.trim()}
-                        className="bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer transition-colors"
+                        aria-label="Gönder"
+                        className="w-10 h-10 rounded-[10px] bg-accent text-white flex items-center justify-center disabled:opacity-50 cursor-pointer shrink-0"
                       >
-                        <Send className="w-3.5 h-3.5" />
-                        <span>Gönder</span>
+                        <Send className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
                 )}
-              </div>
+              </article>
             );
           })}
 
-          {/* Pagination Controls */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-between pt-6 border-t border-slate-200 text-xs font-semibold">
-              <span className="text-slate-500">
-                Sayfa {currentPage} / {totalPages} (Toplam {filteredQuestions.length} soru)
+            <nav aria-label="Sayfalar" className="flex items-center justify-between gap-2 pt-2 text-[14px]">
+              <button
+                type="button"
+                onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+                disabled={currentPage === 1}
+                className="h-10 px-3 rounded-[10px] border border-line bg-white inline-flex items-center gap-1 font-semibold disabled:opacity-40 cursor-pointer"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span className="hidden sm:inline">Önceki</span>
+              </button>
+              <span className="text-ink-3">
+                <span className="font-semibold text-ink">{currentPage}</span> / {totalPages}
               </span>
-
-              <div className="flex items-center gap-1">
-                <button
-                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                  disabled={currentPage === 1}
-                  className="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 disabled:opacity-40 cursor-pointer flex items-center gap-1"
-                >
-                  <ChevronLeft className="w-3.5 h-3.5" />
-                  <span>Önceki</span>
-                </button>
-
-                <div className="hidden sm:flex items-center gap-1 px-2">
-                  {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-                    let pageNum = i + 1;
-                    if (currentPage > 3 && totalPages > 5) {
-                      pageNum = Math.min(totalPages - 4 + i, Math.max(1, currentPage - 2 + i));
-                    }
-                    return (
-                      <button
-                        key={pageNum}
-                        onClick={() => setCurrentPage(pageNum)}
-                        className={`w-7 h-7 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                          currentPage === pageNum
-                            ? 'bg-teal-700 text-white'
-                            : 'hover:bg-slate-100 text-slate-700'
-                        }`}
-                      >
-                        {pageNum}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <button
-                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                  disabled={currentPage === totalPages}
-                  className="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 disabled:opacity-40 cursor-pointer flex items-center gap-1"
-                >
-                  <span>Sonraki</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
+              <button
+                type="button"
+                onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+                disabled={currentPage === totalPages}
+                className="h-10 px-3 rounded-[10px] border border-line bg-white inline-flex items-center gap-1 font-semibold disabled:opacity-40 cursor-pointer"
+              >
+                <span className="hidden sm:inline">Sonraki</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </nav>
           )}
         </div>
       )}

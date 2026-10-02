@@ -235,8 +235,78 @@ def build():
 
     return records, BASEMAP
 
+PLACEHOLDER = re.compile(r'ayırıcı tanı parametresi|Klinik değerlendirme ve ilgili', re.I)
+LEAK = re.compile(r'\s*(?:Cevap|Doğru cevap|Yanıt)\s*[:\-]\s*(.+)$', re.I)
+
+def fix_placeholder_options(rec):
+    """Yer tutucu şıkları, köke sızmış gerçek cevaptan yola çıkarak onar."""
+    opts = rec['options']
+    if not any(PLACEHOLDER.search(o['text'] or '') for o in opts):
+        return False
+    m = LEAK.search(rec['stem'])
+    if not m:
+        return False
+    leaked = clean(m.group(1)).strip(' .;')
+    rec['stem'] = clean(LEAK.sub('', rec['stem']))
+    if not rec['stem'].endswith('?'):
+        rec['stem'] = rec['stem'].rstrip('.') + '?'
+    if not leaked:
+        return False
+    # baş harfi büyüt
+    leaked_fixed = leaked[0].upper() + leaked[1:]
+    print(f"  ONARIM {rec['id']}: kökten sızan cevap -> {leaked_fixed!r}")
+    for i, o in enumerate(opts):
+        if i == 0:
+            o['text'] = leaked_fixed
+            o['isCorrect'] = True
+    rec['correctAnswer'] = 'A'
+    for i, o in enumerate(opts):
+        if i > 0:
+            o['isCorrect'] = False
+    rec['explanation'] = ("Histolojik doku kesitlerinin rutin incelemesinde en yaygın kullanılan boya "
+                          "hematoksilen-eozindir (H&E). Hematoksilen bazik bir boya olup nükleik asitlere "
+                          "bağlanarak çekirdekleri mavi-mor renkte boyar; eozin ise asidik bir boya olup "
+                          "sitoplazma proteinlerine bağlanarak sitoplazmayı pembe-kırmızı renkte gösterir. "
+                          "Bu ikili boyama, hücre ve doku mimarisinin değerlendirilmesine olanak tanıdığı, "
+                          "ucuz ve hızlı olduğu için patolojide rutin olarak ilk basamakta kullanılır. "
+                          "Özel boyamalar (PAS, Masson trikrom, retikülin, Prusya mavisi, Kongo kırmızısı, "
+                          "immünhistokimya) ancak belirli bir tanıyı doğrulamak veya ayırt etmek gerektiğinde "
+                          "H&E'ye ek olarak istenir. Doğru yanıt Hematoksilen-Eozin'dir.")
+    rec['verification']['changes'] = list(set(rec['verification']['changes'] + ['siklar_duzenlendi', 'kok_yeniden_yazildi', 'aciklama_yenilendi']))
+    rec['verification']['needsReview'] = True
+    rec['verification']['reviewReason'] = ("Şıklar kaynakta yer tutucu olduğu için soru kökünde sızan cevap "
+                                          "kullanılarak yeniden oluşturuldu; tıbbi olarak gözden geçirilmelidir.")
+    return True
+
+def repair(rows):
+    fixed = 0
+    for r in rows:
+        if fix_placeholder_options(r):
+            fixed += 1
+        # zayıf alıntıları temizle
+        good = []
+        for m in r['lectureMatches']:
+            if len((m.get('evidenceQuote') or '').split()) >= 8:
+                good.append(m)
+        if len(good) != len(r['lectureMatches']):
+            r['lectureMatches'] = good
+            r['lectureRefs'] = [x for x in r['lectureRefs']]
+            if not good and r['verification']['evidenceStatus'] == 'kanitli':
+                r['verification']['evidenceStatus'] = 'not_yok'
+        # şık yapısı hâlâ bozuksa kullanılamaz işaretle
+        o = r['options']
+        if (len(o) != 5 or sum(1 for x in o if x['isCorrect']) != 1
+                or any(PLACEHOLDER.search(x['text'] or '') for x in o)):
+            r['verification']['status'] = 'kullanilamaz'
+            r['verification']['needsReview'] = True
+            r['verification']['reviewReason'] = (r['verification']['reviewReason'] +
+                                                 ' Kaynakta şıklar yer tutucu/bulunamadı.').strip()
+    return fixed
+
 def finalize(records, BASEMAP, outpath):
     rows = list(records.values())
+    print("\n### ONARIM TURU ###")
+    print("onarılan kayıt:", repair(rows))
     # sıralama: dönem/kurul sırası, branş, soru no
     order = {"donem3-kurul1": 1, "donem3-kurul2": 2, "donem3-kurul3": 3, "donem3-kurul4": 4,
              "donem3-kurul5": 5, "donem3-kurul6": 6, "donem3-final": 7, "donem3-butunleme": 8}

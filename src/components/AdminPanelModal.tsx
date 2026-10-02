@@ -1064,13 +1064,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     { id: 'database', label: 'Veritabanı ve yedek', hint: 'Aktif veritabanı, dışa/içe aktarım', icon: Database },
   ];
   const current = sections.find((x) => x.id === activeTab) || sections[0];
-  const dbDots: { label: string; state: 'ok' | 'warn' | 'off' }[] = [
-    { label: 'Firebase', state: dbStatuses?.firebase.status === 'quota_exceeded' ? 'warn' : dbStatuses ? 'ok' : 'off' },
-    { label: 'Supabase', state: dbStatuses?.supabase.status === 'online' ? 'ok' : dbStatuses ? 'warn' : 'off' },
-    { label: 'Yerel PC', state: dbStatuses?.localPc.status === 'online' ? 'ok' : 'off' },
-  ];
-  const dotCls = { ok: 'bg-[#10B981]', warn: 'bg-[#F59E0B]', off: 'bg-[#AEB8C3]' };
-  const dotText = { ok: 'çevrimiçi', warn: 'uyarı', off: 'kapalı' };
 
   return (
     <div
@@ -1125,18 +1118,6 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               );
             })}
           </nav>
-
-          <div className="hidden lg:flex flex-col gap-2 px-5 py-4 border-t border-line">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3">Veritabanları</span>
-            {dbDots.map((d) => (
-              <span key={d.label} className="flex items-center gap-2 text-[13px] text-ink-2">
-                <span className={`w-2 h-2 rounded-full ${dotCls[d.state]}`} aria-hidden="true" />
-                {d.label}
-                <span className="ml-auto text-[12px] text-ink-3">{dotText[d.state]}</span>
-              </span>
-            ))}
-            <span className="text-[12px] text-ink-3">Aktif mod: <strong className="text-ink-2 font-semibold">{dbMode}</strong></span>
-          </div>
 
           <button
             type="button"

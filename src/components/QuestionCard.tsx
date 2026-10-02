@@ -13,7 +13,9 @@ import {
   Pencil,
   ThumbsUp,
   AlertTriangle,
+  Wand2,
 } from 'lucide-react';
+import { ActionMenu } from './ui/ActionMenu';
 import { QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { StatusPill, questionStemText } from './QuickAddHero';
@@ -234,7 +236,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   const lastUpdatedText = lastUpdated ? new Date(lastUpdated).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 
   const btnSecondary =
-    'shrink-0 whitespace-nowrap h-10 sm:h-11 px-3.5 sm:px-[18px] rounded-[10px] border border-line-2 bg-white text-ink text-[14px] sm:text-[15px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-50';
+    'shrink-0 whitespace-nowrap h-10 px-3.5 rounded-[10px] border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50';
   const mobileHidden = detailsOpen ? 'flex' : 'hidden sm:flex';
   const field = 'border border-line-2 rounded-[10px] bg-white px-3 text-[15px] text-ink outline-0 focus:border-accent placeholder:text-[#6B7785]';
 
@@ -242,7 +244,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     <article className="bg-white border border-line rounded-[18px] overflow-hidden">
       <div className={`grid grid-cols-1 ${isExpanded ? 'lg:grid-cols-[minmax(0,1.75fr)_minmax(0,1fr)]' : ''}`}>
         {/* ---------------- Main column ---------------- */}
-        <div className="p-4 sm:p-9 flex flex-col gap-4 sm:gap-7 min-w-0">
+        <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 min-w-0">
           <div className="flex items-start gap-3">
             <div className="flex gap-2 flex-wrap flex-1 min-w-0">
               <StatusPill status={question.status} hasFragments={question.fragments.length > 0} />
@@ -272,7 +274,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
 
           <h3
             className={`m-0 font-display font-medium leading-[1.3] tracking-[-0.02em] text-ink ${
-              longStem ? 'text-[17px] sm:text-[22px]' : 'text-[20px] sm:text-[30px]'
+              longStem ? 'text-[17px] sm:text-[19px]' : 'text-[19px] sm:text-[23px]'
             } ${longStem && !stemOpen ? 'line-clamp-6 sm:line-clamp-none' : ''}`}
           >
             {questionStemText(question)}
@@ -454,77 +456,68 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                 </form>
               )}
 
-              {/* Actions */}
-              <div className="flex gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap border-t border-line-soft pt-4 sm:pt-5">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setShowAddFragment((v) => !v);
-                    setShowAddOption(false);
-                  }}
-                  className="shrink-0 whitespace-nowrap h-10 sm:h-11 px-3.5 sm:px-[18px] rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] sm:text-[15px] font-semibold inline-flex items-center gap-2 cursor-pointer"
-                >
-                  <Plus className="w-4 h-4" strokeWidth={2.2} />
-                  Parça ekle
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setShowAddOption((v) => !v);
-                    setShowAddFragment(false);
-                  }}
-                  className={btnSecondary}
-                >
-                  Şık ekle
-                </button>
-                {(isMyQuestion || isAdmin) && onEditQuestion && (
-                  <button type="button" onClick={() => onEditQuestion(question)} className={btnSecondary}>
-                    <Pencil className="w-4 h-4" />
-                    Düzenle
-                  </button>
-                )}
-                {revisionCount > 0 && onOpenHistory && (
-                  <button type="button" onClick={() => onOpenHistory(question)} className={btnSecondary}>
-                    <History className="w-4 h-4" />
-                    Değişiklik geçmişi
-                  </button>
-                )}
-                <button
-                  type="button"
-                  onClick={() => onReconstructWithAi(question.id)}
-                  disabled={isReconstructing || (question.fragments.length === 0 && question.options.length === 0)}
-                  className={btnSecondary}
-                  title="Öğrencilerin hatırladığı parçaları birleştirip tam bir soru ve 5 şık üretir"
-                >
-                  {isReconstructing ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
-                  {isReconstructing ? 'Kuruluyor…' : hasReconstruction ? 'AI ile yeniden kur' : 'AI ile kur'}
-                </button>
-                {isAdmin && onOpenAiOptimizer && (
-                  <button
-                    type="button"
-                    onClick={() => onOpenAiOptimizer(question)}
-                    className="h-10 sm:h-11 px-3 sm:px-3.5 rounded-[10px] bg-gradient-to-r from-teal-50 to-cyan-50 hover:from-teal-100 hover:to-cyan-100 text-teal-800 border border-teal-300 font-semibold text-[13px] inline-flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                    title="Amfi ders notları ve tıp literatürüyle bu soruyu yapay zeka ile düzenle"
-                  >
-                    <Sparkles className="w-4 h-4 text-teal-600" />
-                    <span>AI ile Düzenle</span>
-                  </button>
-                )}
-                <span className="hidden sm:block flex-1" />
+              {/* Actions: two primary, the rest in one menu */}
+              <div className="flex items-center gap-2 border-t border-line-soft pt-4">
                 {onUpvoteQuestion && (
                   <button
                     type="button"
                     onClick={() => onUpvoteQuestion(question.id)}
                     aria-pressed={isQuestionLiked}
                     aria-label="Soruyu beğen"
-                    className={`shrink-0 h-10 sm:h-11 min-w-11 px-3 rounded-[10px] border inline-flex items-center justify-center gap-1.5 cursor-pointer font-mono text-[13px] ${
-                      isQuestionLiked ? 'border-accent bg-accent-soft text-accent' : 'border-line-2 bg-white text-ink'
+                    className={`shrink-0 h-10 min-w-10 px-2.5 rounded-[10px] border inline-flex items-center justify-center gap-1.5 cursor-pointer font-mono text-[13px] ${
+                      isQuestionLiked ? 'border-accent/40 bg-accent-soft text-accent' : 'border-line bg-white text-ink-2 hover:border-line-2'
                     }`}
                   >
                     <ThumbsUp className={`w-4 h-4 ${isQuestionLiked ? 'fill-current' : ''}`} />
                     {question.upvotes || 0}
                   </button>
                 )}
+                <span className="flex-1" />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowAddOption((v) => !v);
+                    setShowAddFragment(false);
+                  }}
+                  aria-pressed={showAddOption}
+                  className={btnSecondary}
+                >
+                  Şık ekle
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowAddFragment((v) => !v);
+                    setShowAddOption(false);
+                  }}
+                  aria-pressed={showAddFragment}
+                  className="shrink-0 whitespace-nowrap h-10 px-3.5 sm:px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Plus className="w-4 h-4" strokeWidth={2.2} />
+                  Parça ekle
+                </button>
+                <ActionMenu
+                  title={question.isUnassignedNumber ? 'Soru işlemleri' : `Soru ${question.questionNumber}`}
+                  items={[
+                    {
+                      label: isReconstructing ? 'Kuruluyor…' : hasReconstruction ? 'AI ile yeniden kur' : 'AI ile kur',
+                      icon: isReconstructing ? RefreshCw : Sparkles,
+                      group: 'Yapay zekâ',
+                      tone: 'accent',
+                      disabled: isReconstructing || (question.fragments.length === 0 && question.options.length === 0),
+                      onClick: () => onReconstructWithAi(question.id),
+                    },
+                    ...(isAdmin && onOpenAiOptimizer
+                      ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', onClick: () => onOpenAiOptimizer(question) }]
+                      : []),
+                    ...((isMyQuestion || isAdmin) && onEditQuestion
+                      ? [{ label: 'Düzenle', icon: Pencil, group: 'Soru', onClick: () => onEditQuestion(question) }]
+                      : []),
+                    ...(revisionCount > 0 && onOpenHistory
+                      ? [{ label: 'Değişiklik geçmişi', icon: History, group: 'Soru', hint: String(revisionCount), onClick: () => onOpenHistory(question) }]
+                      : []),
+                  ]}
+                />
               </div>
 
               {/* Phone-only disclosure for explanation + details */}
