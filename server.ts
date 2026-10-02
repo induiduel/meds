@@ -278,21 +278,27 @@ export async function mirrorUserToSupabase(user: any) {
 export async function deleteFromSupabaseEverywhere(
   table: 'questions' | 'past_questions' | 'users',
   id: string
-): Promise<{ local: boolean; cloud: boolean }> {
-  const result = { local: false, cloud: false };
+): Promise<{ local: boolean; cloud: boolean; localError?: string; cloudError?: string }> {
+  const result: { local: boolean; cloud: boolean; localError?: string; cloudError?: string } = { local: false, cloud: false };
   const key = table === 'users' ? 'uid' : 'id';
   try {
     if (localSupabase && isLocalSupabaseActive) {
       const { error } = await localSupabase.from(table).delete().eq(key, id);
       if (!error) result.local = true;
+      else result.localError = error.message;
     }
-  } catch (_) {}
+  } catch (e: any) {
+    result.localError = e?.message || String(e);
+  }
   try {
     if (cloudSupabase) {
       const { error } = await cloudSupabase.from(table).delete().eq(key, id);
       if (!error) result.cloud = true;
+      else result.cloudError = error.message;
     }
-  } catch (_) {}
+  } catch (e: any) {
+    result.cloudError = e?.message || String(e);
+  }
   // Not: gizli anahtar RLS'yi aşar; iki kanal da dürüstçe raporlanır.
   return result;
 }
