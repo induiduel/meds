@@ -495,7 +495,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                   {isReconstructing ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
                   {isReconstructing ? 'Kuruluyor…' : hasReconstruction ? 'AI ile yeniden kur' : 'AI ile kur'}
                 </button>
-                {onOpenAiOptimizer && (
+                {isAdmin && onOpenAiOptimizer && (
                   <button
                     type="button"
                     onClick={() => onOpenAiOptimizer(question)}

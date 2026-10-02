@@ -235,6 +235,15 @@
       "danger": false
     },
     {
+      "name": "merge-same-exam-duplicates.mjs",
+      "title": "Aynı Sene & Kurulda Sorulan Mükerrer Soruları Birleştirme",
+      "category": "OCR & Veri Ayıklama",
+      "description": "Aynı yıl ve aynı kurulda sorulan eşleşen veya birbirini tekrar eden soruları tek soru altında birleştirir; farklı yıl ve kuruldaki soruları ayrı tutar.",
+      "defaultArgs": "",
+      "tags": ["deduplikasyon", "birleştirme", "çıkmışlar", "kalite"],
+      "danger": false
+    },
+    {
       "name": "rebuild-all-past-questions.mjs",
       "title": "Geçmiş Sınav Sorularını Baştan İnşa Etme",
       "category": "OCR & Veri Ayıklama",

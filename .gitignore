@@ -15,3 +15,5 @@ data/smtp_config.json
 # Cloudflare tunnel binary & runtime state
 cloudflared.exe
 data/active_tunnel.txt
+.tmp.drivedownload/
+database_json/

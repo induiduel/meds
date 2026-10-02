@@ -765,12 +765,25 @@ function saveDatabase() {
   }
 }
 
+// Admin Middleware: Ensures caller is nofrostlife@gmail.com
+const ADMIN_EMAIL = 'nofrostlife@gmail.com';
+function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
+  const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.body?.requestedBy || req.query?.adminEmail) as string;
+  if (!adminEmail || adminEmail.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+    return res.status(403).json({ 
+      success: false, 
+      error: 'Bu işlem için yetkiniz yok. Sadece sistem yöneticisi (nofrostlife@gmail.com) işlem yapabilir.' 
+    });
+  }
+  next();
+}
+
 // API Routes
 app.get('/api/committees', (req, res) => {
   res.json({ committees: db.committees });
 });
 
-app.post('/api/committees', (req, res) => {
+app.post('/api/committees', requireAdmin, (req, res) => {
   const { name, year, term, targetCount, description } = req.body;
   if (!name) {
     return res.status(400).json({ error: 'Komite adı gereklidir.' });
@@ -1078,7 +1091,7 @@ app.post('/api/past-exams/:id/upvote', (req, res) => {
 });
 
 // Update past exam question directly (for Admin edits, approvals, and AI Redactions)
-app.put('/api/past-exams/:id', (req, res) => {
+app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
   try {
     const list = getPastQuestionsDb();
     const idx = list.findIndex(item => item.id === req.params.id);
@@ -1106,7 +1119,7 @@ app.put('/api/past-exams/:id', (req, res) => {
 // --- Otomatik ve Anlık Soru Cevap Doğrulama Endpoints (%90 Kuralı) ---
 
 // 1. Tek bir soruyu amfi ders notları ve tıp literatürüyle doğrula
-app.post('/api/past-exams/:id/verify', async (req, res) => {
+app.post('/api/past-exams/:id/verify', requireAdmin, async (req, res) => {
   try {
     const list = getPastQuestionsDb();
     const q = list.find(item => item.id === req.params.id);
@@ -1140,7 +1153,7 @@ app.post('/api/past-exams/:id/verify', async (req, res) => {
 });
 
 // 2. Doğrulanmamış tüm soruları arka planda partiler halinde doğrula
-app.post('/api/past-exams/verify-unverified', async (req, res) => {
+app.post('/api/past-exams/verify-unverified', requireAdmin, async (req, res) => {
   try {
     const limit = parseInt(req.body?.limit, 10) || 25;
     // Asenkron olarak arka planda çalıştır (kullanıcıyı bekletmez)
@@ -1211,7 +1224,7 @@ app.get('/api/slides/stats', (req, res) => {
 });
 
 // Slayt Denetim ve Hatalı İlişkileri Kesme (Script 1)
-app.post('/api/slides/audit', (req, res) => {
+app.post('/api/slides/audit', requireAdmin, (req, res) => {
   try {
     exec('node scripts/audit-and-disconnect-faulty-slides.mjs', { cwd: __dirname }, (err) => {
       if (err) console.error('[API /api/slides/audit] Error:', err.message);
@@ -1223,7 +1236,7 @@ app.post('/api/slides/audit', (req, res) => {
 });
 
 // Slayt Eşleştirme ve Vurgulama (Script 2)
-app.post('/api/slides/match', (req, res) => {
+app.post('/api/slides/match', requireAdmin, (req, res) => {
   try {
     exec('node scripts/match-and-link-lecture-slides.mjs', { cwd: __dirname }, (err) => {
       if (err) console.error('[API /api/slides/match] Error:', err.message);
@@ -1235,7 +1248,7 @@ app.post('/api/slides/match', (req, res) => {
 });
 
 // Tam Senkronizasyon (Script 1 + Script 2)
-app.post('/api/slides/sync', (req, res) => {
+app.post('/api/slides/sync', requireAdmin, (req, res) => {
   try {
     exec('node scripts/manage-slide-relations.mjs --all', { cwd: __dirname }, (err) => {
       if (err) console.error('[API /api/slides/sync] Error:', err.message);
@@ -1275,6 +1288,11 @@ let isRedactorRunning = false;
 
 export async function executeAdminCommand(command: string, payload: any = {}, requestedBy: string = 'nofrostlife@gmail.com'): Promise<{ success: boolean; message: string }> {
   console.log(`[AdminCommand] ⚡ Komut alındı: ${command} (${requestedBy})`);
+
+  if (!requestedBy || requestedBy.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+    console.warn(`[AdminCommand] ⛔ Yetkisiz komut reddedildi: ${command} (${requestedBy})`);
+    return { success: false, message: 'Bu işlem için yetkiniz yok. Sadece sistem yöneticisi (nofrostlife@gmail.com) işlem yapabilir.' };
+  }
 
   if (command === 'run_redactor_cycle' || command === 'trigger_redactor') {
     if (isRedactorRunning) {
@@ -1375,6 +1393,16 @@ function startSupabaseCommandPoller() {
         const cmdData = row.data;
         if (cmdData && cmdData.status === 'pending') {
           console.log(`[Supabase Bridge] ⚡ Buluttan Yeni Komut Alındı: ${cmdData.command} (${row.id})`);
+
+          if (cmdData.requested_by?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+            console.warn(`[Supabase Bridge] ⛔ Yetkisiz komut reddedildi: ${cmdData.command} (${cmdData.requested_by})`);
+            await supabase.from('system_status').upsert([{
+              id: row.id,
+              data: { ...cmdData, status: 'rejected', error: 'Yetkisiz erişim: Sadece sistem yöneticisi (nofrostlife@gmail.com) komut çalıştırabilir.' },
+              updated_at: new Date().toISOString()
+            }]);
+            continue;
+          }
           
           await supabase.from('system_status').upsert([{
             id: row.id,
@@ -1404,7 +1432,7 @@ function startSupabaseCommandPoller() {
 }
 
 // Admin Command Execution API (Bypasses Firestore permissions issues when on local server)
-app.post('/api/admin/command', async (req, res) => {
+app.post('/api/admin/command', requireAdmin, async (req, res) => {
   try {
     const { command, payload, requestedBy } = req.body;
     const result = await executeAdminCommand(command, payload, requestedBy);
@@ -1415,7 +1443,7 @@ app.post('/api/admin/command', async (req, res) => {
 });
 
 // Alias for full local sync
-app.post('/api/automation/run-full-local-sync', async (req, res) => {
+app.post('/api/automation/run-full-local-sync', requireAdmin, async (req, res) => {
   try {
     const result = await scanDesktopDatabaseFolder(DESKTOP_DATABASE_DIR);
     res.json({ ...result, message: 'Yerel klasör ve ders notları tarama işlemi başlatıldı.' });
@@ -1429,7 +1457,7 @@ app.post('/api/automation/run-full-local-sync', async (req, res) => {
 // -------------------------------------------------------------
 
 // 1. List all discovered scripts, pipelines, and jobs
-app.get('/api/admin/scripts/list', (req, res) => {
+app.get('/api/admin/scripts/list', requireAdmin, (req, res) => {
   try {
     const scripts = getAllScripts();
     const pipelines = AUTOMATION_PIPELINES;
@@ -1441,7 +1469,7 @@ app.get('/api/admin/scripts/list', (req, res) => {
 });
 
 // 2. Run a specific script
-app.post('/api/admin/scripts/run', (req, res) => {
+app.post('/api/admin/scripts/run', requireAdmin, (req, res) => {
   try {
     const { scriptName, args, requestedBy } = req.body;
     if (!scriptName) {
@@ -1455,7 +1483,7 @@ app.post('/api/admin/scripts/run', (req, res) => {
 });
 
 // 3. Run a pipeline (chained automation)
-app.post('/api/admin/scripts/pipeline/run', async (req, res) => {
+app.post('/api/admin/scripts/pipeline/run', requireAdmin, async (req, res) => {
   try {
     const { pipelineId, requestedBy } = req.body;
     if (!pipelineId) {
@@ -1469,7 +1497,7 @@ app.post('/api/admin/scripts/pipeline/run', async (req, res) => {
 });
 
 // 4. Get active and recent jobs
-app.get('/api/admin/scripts/jobs', (req, res) => {
+app.get('/api/admin/scripts/jobs', requireAdmin, (req, res) => {
   try {
     const jobs = getAllJobs();
     res.json({ success: true, ...jobs });
@@ -1479,7 +1507,7 @@ app.get('/api/admin/scripts/jobs', (req, res) => {
 });
 
 // 5. Get status and logs of a specific job
-app.get('/api/admin/scripts/jobs/:id', (req, res) => {
+app.get('/api/admin/scripts/jobs/:id', requireAdmin, (req, res) => {
   try {
     const job = getJob(req.params.id);
     if (!job) {
@@ -1492,7 +1520,7 @@ app.get('/api/admin/scripts/jobs/:id', (req, res) => {
 });
 
 // 6. Kill / Stop a running job
-app.post('/api/admin/scripts/jobs/:id/kill', (req, res) => {
+app.post('/api/admin/scripts/jobs/:id/kill', requireAdmin, (req, res) => {
   try {
     const ok = killJob(req.params.id);
     res.json({ success: ok, message: ok ? 'İşlem durduruldu.' : 'İşlem bulunamadı veya zaten sonlanmış.' });
@@ -1502,7 +1530,7 @@ app.post('/api/admin/scripts/jobs/:id/kill', (req, res) => {
 });
 
 // Batch import questions (Past exams, AI parsed questions, desktop sync)
-app.post('/api/questions/batch-import', (req, res) => {
+app.post('/api/questions/batch-import', requireAdmin, (req, res) => {
   const { committeeId, examYear, questions } = req.body;
   if (!committeeId || !Array.isArray(questions)) {
     return res.status(400).json({ error: 'Komite ID ve sorular dizisi zorunludur.' });
@@ -2330,7 +2358,7 @@ app.get('/api/notebooklm/bundle', (req, res) => {
 });
 
 // Direct Gemini / NotebookLM Database Sync Webhook
-app.post('/api/gemini/sync-database', async (req, res) => {
+app.post('/api/gemini/sync-database', requireAdmin, async (req, res) => {
   const { payload, committeeId, updateType, secretKey } = req.body;
   if (!payload) {
     return res.status(400).json({ error: 'Lütfen güncellenecek JSON verisini veya NotebookLM metnini gönderin.' });
@@ -2433,7 +2461,7 @@ Bunu veritabanımıza uygun JSON formatında çıkar:
 });
 
 // Drive Automation: Weekly / weekday automated sync status and trigger for folder 1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W
-app.post('/api/drive/sync-automation', async (req, res) => {
+app.post('/api/drive/sync-automation', requireAdmin, async (req, res) => {
   const { committeeId, forceSync } = req.body;
   const DRIVE_FOLDER_ID = '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W';
   const DRIVE_FOLDER_URL = `https://drive.google.com/drive/folders/${DRIVE_FOLDER_ID}?usp=drive_link`;
@@ -2482,16 +2510,6 @@ app.post('/api/drive/sync-automation', async (req, res) => {
     message: 'Google Drive klasöründen hafta içi her gün yüklenen PDF ders notları senkronize edildi ve sorularla eşleştirilmeye hazırlandı.',
   });
 });
-
-// Admin Middleware: Ensures caller is nofrostlife@gmail.com
-const ADMIN_EMAIL = 'nofrostlife@gmail.com';
-function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
-  const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.query?.adminEmail) as string;
-  if (!adminEmail || adminEmail.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
-    return res.status(403).json({ error: 'Bu işlem için yetkiniz yok. Sadece yönetici (nofrostlife@gmail.com) işlem yapabilir.' });
-  }
-  next();
-}
 
 // Batch seed question slots for 100 or 150 questions (Admin only to prevent sabotage)
 app.post('/api/committees/:id/generate-slots', requireAdmin, (req, res) => {
@@ -2609,7 +2627,7 @@ function createSmtpTransporter() {
 }
 
 // Admin: Get SMTP Configuration (Password masked)
-app.get('/api/admin/smtp-config', (req, res) => {
+app.get('/api/admin/smtp-config', requireAdmin, (req, res) => {
   const cfg = getSmtpConfig();
   res.json({
     enabled: cfg.enabled,
@@ -2627,7 +2645,7 @@ app.get('/api/admin/smtp-config', (req, res) => {
 });
 
 // Admin: Save SMTP Configuration
-app.post('/api/admin/smtp-config', (req, res) => {
+app.post('/api/admin/smtp-config', requireAdmin, (req, res) => {
   try {
     const updated = saveSmtpConfig(req.body);
     res.json({
@@ -2649,7 +2667,7 @@ app.post('/api/admin/smtp-config', (req, res) => {
 });
 
 // Admin: Test SMTP Connection & Send Live Test Email
-app.post('/api/admin/smtp-test', async (req, res) => {
+app.post('/api/admin/smtp-test', requireAdmin, async (req, res) => {
   const targetEmail = req.body?.to || 'nofrostlife@gmail.com';
   const cfg = getSmtpConfig();
   const transporter = createSmtpTransporter();
@@ -3152,7 +3170,7 @@ KURALLAR:
 });
 
 // Admin Custom AI Redaction for Past Exam Questions
-app.post('/api/ai/admin-custom-redact', async (req, res) => {
+app.post('/api/ai/admin-custom-redact', requireAdmin, async (req, res) => {
   try {
     const { question, customPrompt, groundingNote, model = 'gemini-3.8-flash', adminEmail } = req.body;
     if (!question) {
@@ -3738,7 +3756,7 @@ app.get('/api/automation/windows-service-status', (req, res) => {
   }
 });
 
-app.post('/api/automation/windows-service-install', (req, res) => {
+app.post('/api/automation/windows-service-install', requireAdmin, (req, res) => {
   try {
     const { execSync } = require('child_process');
     const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
@@ -3756,7 +3774,7 @@ app.post('/api/automation/windows-service-install', (req, res) => {
   }
 });
 
-app.post('/api/automation/windows-service-stop', (req, res) => {
+app.post('/api/automation/windows-service-stop', requireAdmin, (req, res) => {
   try {
     const { execSync } = require('child_process');
     const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
@@ -3774,7 +3792,7 @@ app.post('/api/automation/windows-service-stop', (req, res) => {
   }
 });
 
-app.post('/api/automation/windows-service-notify', (req, res) => {
+app.post('/api/automation/windows-service-notify', requireAdmin, (req, res) => {
   try {
     const { execSync } = require('child_process');
     const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
@@ -3910,7 +3928,7 @@ app.get('/api/lecture-notes', (req, res) => {
 });
 
 // Lecture Notes: Save / Update a lecture note
-app.post('/api/lecture-notes', (req, res) => {
+app.post('/api/lecture-notes', requireAdmin, (req, res) => {
   try {
     const note = req.body;
     if (!note || !note.title) {
@@ -3925,7 +3943,7 @@ app.post('/api/lecture-notes', (req, res) => {
 });
 
 // Lecture Notes: Delete a lecture note
-app.delete('/api/lecture-notes/:id', (req, res) => {
+app.delete('/api/lecture-notes/:id', requireAdmin, (req, res) => {
   try {
     const { id } = req.params;
     const ok = deleteLectureNote(id);
@@ -3939,7 +3957,7 @@ app.delete('/api/lecture-notes/:id', (req, res) => {
 });
 
 // Desktop Database Folder Automation: Trigger scan manually
-app.post('/api/automation/scan-desktop-folder', async (req, res) => {
+app.post('/api/automation/scan-desktop-folder', requireAdmin, async (req, res) => {
   try {
     const targetDir = req.body?.folderPath || DESKTOP_DATABASE_DIR;
     const result = await scanDesktopDatabaseFolder(targetDir);
@@ -3981,7 +3999,7 @@ app.post('/api/automation/render-slide', async (req, res) => {
 });
 
 // Admin: Export entire project codebase & databases as ZIP archive
-app.get('/api/admin/export-zip', async (req, res) => {
+app.get('/api/admin/export-zip', requireAdmin, async (req, res) => {
   try {
     const JSZip = require('jszip');
     const zip = new JSZip();

@@ -1,5 +1,42 @@
 [
   {
+    "id": "pipe_1790896643132_28vao",
+    "name": "ai-verify-and-cloud",
+    "type": "pipeline",
+    "status": "completed",
+    "startedAt": "2026-10-01T23:17:23.132Z",
+    "completedAt": "2026-10-01T23:27:43.381Z",
+    "durationMs": 620249,
+    "exitCode": 0,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[02:27:43]   [STDERR]   ⚠️ Parti aktarım hatası [50-100]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:27:43]   [STDERR]   ⚠️ Parti aktarım hatası [100-121]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:27:43]   =============================================\n[02:27:43]   🎉 [Bulu Senkronizasyonu Tamamlandı]\n[02:27:43]   📊 Toplam Aktarılan Çıkmış Soru: 2830\n[02:27:43]   📊 Toplam Aktarılan Canlı Soru: 1\n[02:27:43]   =============================================\n[02:27:43] ✓ [Adım Tamamlandı]: 3. Buluta Aktar\n[02:27:43] ============================================================\n[02:27:43] 🎉 [PIPELINE BAŞARIYLA TAMAMLANDI] Toplam Süre: 620.2 sn."
+  },
+  {
+    "id": "pipe_1790896620339_naz2j",
+    "name": "build-and-sync-json",
+    "type": "pipeline",
+    "status": "completed",
+    "startedAt": "2026-10-01T23:17:00.339Z",
+    "completedAt": "2026-10-01T23:24:53.376Z",
+    "durationMs": 473037,
+    "exitCode": 0,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[02:24:53]   [STDERR]   ⚠️ Parti aktarım hatası [50-100]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:24:53]   [STDERR]   ⚠️ Parti aktarım hatası [100-121]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:24:53]   =============================================\n[02:24:53]   🎉 [Bulu Senkronizasyonu Tamamlandı]\n[02:24:53]   📊 Toplam Aktarılan Çıkmış Soru: 2830\n[02:24:53]   📊 Toplam Aktarılan Canlı Soru: 1\n[02:24:53]   =============================================\n[02:24:53] ✓ [Adım Tamamlandı]: 2. Buluta Yükle\n[02:24:53] ============================================================\n[02:24:53] 🎉 [PIPELINE BAŞARIYLA TAMAMLANDI] Toplam Süre: 473.0 sn."
+  },
+  {
+    "id": "job_1790895893436_xyxp7",
+    "name": "inspect-sources.mjs",
+    "type": "single",
+    "args": "",
+    "status": "completed",
+    "startedAt": "2026-10-01T23:04:53.437Z",
+    "completedAt": "2026-10-01T23:04:53.520Z",
+    "durationMs": 78,
+    "exitCode": 0,
+    "requestedBy": "admin",
+    "logSummary": "[02:04:53]        Comm: donem3-kurul1 | Disc: FTR\n[02:04:53]        Sample: Aşağıdakilerden hangisi derin ısıtıcı tedavidir? a) Kısa dalga diatermi b) Hot pack c) Wh...\n[02:04:53] [   3] Kurul I Cevap Anahtarı.pdf\n[02:04:53]        Comm: donem3-kurul1 | Disc: Patoloji\n[02:04:53]        Sample: E D C E ÇOCUK SAĞLIĞI VE HASTALIKLARI...\n[02:04:53] [   1] Kurul I Sınavı.pdf\n[02:04:53]        Comm: donem3-kurul1 | Disc: Genel Tıp\n[02:04:53]        Sample: Etkileşimi ve advers etkileri aşağıda sıralanmış tetrasiklinler için hangisi/hangileri doğ...\n[02:04:53] ------------------------------------------------------------\n[02:04:53] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 0.1 sn."
+  },
+  {
     "id": "job_1790895370134_s8wgf",
     "name": "inspect-sources.mjs",
     "type": "single",
@@ -10,6 +47,6 @@
     "durationMs": 79,
     "exitCode": 0,
     "requestedBy": "cli",
-    "logSummary": "[01:56:10]        Comm: donem3-kurul1 | Disc: FTR\n[01:56:10]        Sample: Aşağıdakilerden hangisi derin ısıtıcı tedavidir? a) Kısa dalga diatermi b) Hot pack c) Wh...\n[01:56:10] [   3] Kurul I Cevap Anahtarı.pdf\n[01:56:10]        Comm: donem3-kurul1 | Disc: Patoloji\n[01:56:10]        Sample: E D C E ÇOCUK SAĞLIĞI VE HASTALIKLARI...\n[01:56:10] [   1] Kurul I Sınavı.pdf\n[01:56:10]        Comm: donem3-kurul1 | Disc: Genel Tıp\n[01:56:10]        Sample: Etkileşimi ve advers etkileri aşağıda sıralanmış tetrasiklinler için hangisi/hangileri doğ...\n[01:56:10] ------------------------------------------------------------\n[01:56:10] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 0.1 sn."
+    "logSummary": ""
   }
 ]

@@ -204,12 +204,6 @@ export const initAuth = (
   onAuthSuccess?: (user: AppUser, token: string | null) => void,
   onAuthFailure?: () => void
 ) => {
-  // Check local admin first
-  const localAdmin = getLocalAdminSession();
-  if (localAdmin) {
-    if (onAuthSuccess) onAuthSuccess(localAdmin, cachedAccessToken);
-  }
-
   return onAuthStateChanged(auth, async (firebaseUser: User | null) => {
     if (firebaseUser) {
       // Load cached profile or fetch from Firestore
@@ -243,7 +237,9 @@ export const initAuth = (
       if (onAuthSuccess) onAuthSuccess(appUser, cachedAccessToken);
     } else {
       const existingLocal = getLocalAdminSession();
-      if (!existingLocal) {
+      if (existingLocal && existingLocal.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+        if (onAuthSuccess) onAuthSuccess(existingLocal, cachedAccessToken);
+      } else {
         cachedAccessToken = null;
         if (onAuthFailure) onAuthFailure();
       }
@@ -368,9 +364,9 @@ export const loginWithEmailPassword = async (
   } catch (firebaseErr: any) {
     console.warn('Firebase signIn error, attempting resilient profile recovery:', firebaseErr.code || firebaseErr.message);
 
-    // If admin is logging in with credentials or password
+    // If admin is attempting login, do NOT create an unverified session on error!
     if (cleanEmail === ADMIN_EMAIL.toLowerCase()) {
-      return setLocalAdminSession(ADMIN_EMAIL);
+      throw new Error(firebaseErr.message || 'Yönetici girişi başarısız. Lütfen şifrenizi kontrol ediniz.');
     }
 
     // Check remembered student info or cache
@@ -401,7 +397,7 @@ export const loginWithEmailPassword = async (
  * Direct Instant Admin Login for nofrostlife@gmail.com
  */
 export const directAdminLogin = (): AppUser => {
-  return setLocalAdminSession(ADMIN_EMAIL);
+  throw new Error('Doğrudan şifresiz giriş güvenlik nedeniyle kapatılmıştır. Lütfen Google ile veya şifrenizle giriş yapınız.');
 };
 
 /**
@@ -500,12 +496,8 @@ export const logout = async () => {
 };
 
 export const isAdminUser = (user: AppUser | null): boolean => {
-  if (user && user.email) {
-    return user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+  if (!user || !user.email) {
+    return false;
   }
-  const local = getLocalAdminSession();
-  if (local && local.email) {
-    return local.email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
-  }
-  return false;
+  return user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
 };

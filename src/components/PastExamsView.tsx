@@ -796,15 +796,17 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       <span>{isGeneratingSimilar === q.id ? 'Üretiliyor...' : 'Ek Soru Sor'}</span>
                     </button>
 
-                    {/* Student & User AI Question Optimizer Button */}
-                    <button
-                      onClick={() => setOptimizeModalQuestion(q)}
-                      className="bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
-                      title="Bu soruyu amfi ders notları ve tıp literatürüyle yapay zeka ile düzenle / iyileştir"
-                    >
-                      <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-                      <span>AI ile Düzenle</span>
-                    </button>
+                    {/* Admin AI Question Optimizer Button */}
+                    {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && (
+                      <button
+                        onClick={() => setOptimizeModalQuestion(q)}
+                        className="bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                        title="Bu soruyu amfi ders notları ve tıp literatürüyle yapay zeka ile düzenle / iyileştir (Admin)"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+                        <span>AI ile Düzenle</span>
+                      </button>
+                    )}
 
                     {/* Admin Custom AI Redaction Button */}
                     {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && (
@@ -1518,8 +1520,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </div>
       )}
 
-      {/* Student & User AI Question Optimizer Modal */}
-      {optimizeModalQuestion && (
+      {/* Admin AI Question Optimizer Modal */}
+      {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && optimizeModalQuestion && (
         <AiQuestionOptimizerModal
           question={optimizeModalQuestion}
           isOpen={Boolean(optimizeModalQuestion)}
@@ -1538,7 +1540,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       )}
 
       {/* Admin Custom AI Redaction Modal */}
-      {customRedactQuestion && (
+      {(currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && customRedactQuestion && (
         <AdminCustomRedactModal
           question={customRedactQuestion.question}
           isOpen={Boolean(customRedactQuestion)}

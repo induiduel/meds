@@ -794,6 +794,13 @@ class MultiDbManager {
     payload: any = {},
     requestedBy: string = 'nofrostlife@gmail.com'
   ): Promise<{ success: boolean; message: string }> {
+    if (!requestedBy || requestedBy.toLowerCase() !== 'nofrostlife@gmail.com') {
+      return {
+        success: false,
+        message: 'Bu işlem için yetkiniz yok. Sadece sistem yöneticisi (nofrostlife@gmail.com) komut çalıştırabilir.',
+      };
+    }
+
     // 1. Try local server first (direct execution)
     try {
       const customUrl = getCustomApiUrl();
@@ -807,7 +814,10 @@ class MultiDbManager {
         try {
           const res = await safeJsonFetch<{ success: boolean; message: string }>(ep, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+              'Content-Type': 'application/json',
+              'x-admin-email': requestedBy,
+            },
             body: JSON.stringify({ command, payload, requestedBy }),
           });
           if (res.ok && res.data?.success) {

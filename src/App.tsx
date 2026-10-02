@@ -63,6 +63,8 @@ import {
   getAccessToken,
   getLocalAdminSession,
   setLocalAdminSession,
+  clearLocalAdminSession,
+  safeStorage,
   updateUserProfileData,
   AppUser
 } from './services/auth';
@@ -74,20 +76,69 @@ import {
   FOLDER_NAME
 } from './services/drive';
 
+// Supported App Tabs with URL hash & localStorage persistence
+export type ValidAppTab = 'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study';
+
+const VALID_APP_TABS: ValidAppTab[] = [
+  'quick_add',
+  'questions',
+  'past_exams',
+  'matrix',
+  'leaderboard',
+  'notes',
+  'practice',
+  'booklet',
+  'study',
+];
+
+const getSavedOrInitialTab = (): ValidAppTab => {
+  try {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.replace(/^#/, '') as ValidAppTab;
+      if (hash && VALID_APP_TABS.includes(hash)) {
+        return hash;
+      }
+      const saved = localStorage.getItem('medsoru_last_active_tab') as ValidAppTab;
+      if (saved && VALID_APP_TABS.includes(saved)) {
+        return saved;
+      }
+    }
+  } catch (e) {}
+  return 'quick_add';
+};
+
 export default function App() {
   const [committees, setCommittees] = useState<Committee[]>([]);
-  // Open active upcoming committee automatically based on calendar date
-  const [selectedCommitteeId, setSelectedCommitteeId] = useState<string>(() => getDefaultActiveCommitteeId());
+  // Open active upcoming committee automatically based on calendar date or saved choice
+  const [selectedCommitteeId, setSelectedCommitteeId] = useState<string>(() => {
+    try {
+      const saved = localStorage.getItem('medsoru_last_committee_id');
+      if (saved) return saved;
+    } catch (e) {}
+    return getDefaultActiveCommitteeId();
+  });
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Tab Navigation: 'quick_add' (default simple landing page) | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet'
-  const [activeTab, setActiveTab] = useState<'quick_add' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study'>('quick_add');
+  // Tab Navigation with reload persistence
+  const [activeTab, setActiveTab] = useState<ValidAppTab>(getSavedOrInitialTab);
 
-  // Filters & Search
-  const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Tümü');
-  const [selectedStatus, setSelectedStatus] = useState<string>('Tümü');
+  // Filters & Search with reload persistence
+  const [selectedDiscipline, setSelectedDiscipline] = useState<string>(() => {
+    try {
+      return localStorage.getItem('medsoru_last_discipline') || 'Tümü';
+    } catch (e) {
+      return 'Tümü';
+    }
+  });
+  const [selectedStatus, setSelectedStatus] = useState<string>(() => {
+    try {
+      return localStorage.getItem('medsoru_last_status') || 'Tümü';
+    } catch (e) {
+      return 'Tümü';
+    }
+  });
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filterMyQuestionsOnly, setFilterMyQuestionsOnly] = useState<boolean>(false);
 
@@ -123,15 +174,25 @@ export default function App() {
   const [reconstructingMap, setReconstructingMap] = useState<Record<string, boolean>>({});
   const [isGeneratingSlots, setIsGeneratingSlots] = useState(false);
 
-  // Auth state - Default directly to verified admin session (nofrostlife@gmail.com)
+  // Auth state - Default strictly to null unless authentic session exists
   const [currentUser, setCurrentUser] = useState<AppUser | null>(() => {
     try {
-      const existing = getLocalAdminSession();
-      if (existing) return existing;
-      return setLocalAdminSession(ADMIN_EMAIL);
+      // Clear any legacy unverified auto-admin session in visitor storage
+      const legacyCleaned = safeStorage.getItem('medsoru_legacy_admin_cleaned_v2');
+      if (!legacyCleaned) {
+        safeStorage.setItem('medsoru_legacy_admin_cleaned_v2', 'true');
+        clearLocalAdminSession();
+        return null;
+      }
+
+      const existingAdmin = getLocalAdminSession();
+      if (existingAdmin && existingAdmin.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+        return existingAdmin;
+      }
     } catch (e) {
       return null;
     }
+    return null;
   });
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
@@ -145,11 +206,87 @@ export default function App() {
   } | null>(null);
   const [hasAutoBackedUp, setHasAutoBackedUp] = useState<boolean>(false);
 
+  // State Persistence: Sync active tab to localStorage and URL hash
+  useEffect(() => {
+    try {
+      localStorage.setItem('medsoru_last_active_tab', activeTab);
+      if (window.location.hash.replace(/^#/, '') !== activeTab) {
+        window.history.replaceState(null, '', `#${activeTab}`);
+      }
+    } catch (e) {}
+  }, [activeTab]);
+
+  // Support browser Back / Forward buttons across tabs
+  useEffect(() => {
+    const handleHashChange = () => {
+      try {
+        const hash = window.location.hash.replace(/^#/, '') as ValidAppTab;
+        if (hash && VALID_APP_TABS.includes(hash) && hash !== activeTab) {
+          setActiveTab(hash);
+        }
+      } catch (e) {}
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [activeTab]);
+
+  // Save selectedCommitteeId
+  useEffect(() => {
+    if (selectedCommitteeId) {
+      try {
+        localStorage.setItem('medsoru_last_committee_id', selectedCommitteeId);
+      } catch (e) {}
+    }
+  }, [selectedCommitteeId]);
+
+  // Save selectedDiscipline
+  useEffect(() => {
+    try {
+      localStorage.setItem('medsoru_last_discipline', selectedDiscipline);
+    } catch (e) {}
+  }, [selectedDiscipline]);
+
+  // Save selectedStatus
+  useEffect(() => {
+    try {
+      localStorage.setItem('medsoru_last_status', selectedStatus);
+    } catch (e) {}
+  }, [selectedStatus]);
+
+  // Scroll Position Restoration: Save scroll position on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      try {
+        sessionStorage.setItem('medsoru_scroll_pos', window.scrollY.toString());
+      } catch (e) {}
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Restore scroll position after initial loading completes
+  useEffect(() => {
+    if (!loading) {
+      try {
+        const savedPos = sessionStorage.getItem('medsoru_scroll_pos');
+        if (savedPos) {
+          const y = parseInt(savedPos, 10);
+          if (!isNaN(y) && y > 0) {
+            const timer = setTimeout(() => {
+              window.scrollTo({ top: y, behavior: 'instant' as ScrollBehavior });
+            }, 100);
+            return () => clearTimeout(timer);
+          }
+        }
+      } catch (e) {}
+    }
+  }, [loading]);
+
   // Initialize Auth on mount
   useEffect(() => {
     try {
-      const existingAdmin = getLocalAdminSession() || setLocalAdminSession(ADMIN_EMAIL);
-      if (existingAdmin) {
+      const existingAdmin = getLocalAdminSession();
+      if (existingAdmin && existingAdmin.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
         setCurrentUser(existingAdmin);
       }
     } catch (e) {}
@@ -161,7 +298,7 @@ export default function App() {
       },
       () => {
         const local = getLocalAdminSession();
-        if (local) {
+        if (local && local.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
           setCurrentUser(local);
         } else {
           setCurrentUser(null);
@@ -669,11 +806,13 @@ export default function App() {
         />
       ) : (
       <>
-      {/* Real-time System Status & Quota Alert Banner */}
-      <SystemHealthBanner
-        onOpenDiagnostics={() => setIsDiagnosticsOpen(true)}
-        onOpenAiQuotaModal={() => setIsAiQuotaModalOpen(true)}
-      />
+      {/* Real-time System Status & Quota Alert Banner (Admin only) */}
+      {isAdmin && (
+        <SystemHealthBanner
+          onOpenDiagnostics={() => setIsDiagnosticsOpen(true)}
+          onOpenAiQuotaModal={() => setIsAiQuotaModalOpen(true)}
+        />
+      )}
 
       {/* Navigation Header with Google Auth & Drive */}
       <Header
@@ -691,11 +830,11 @@ export default function App() {
           setContributeDefaultNumber(undefined);
           setIsContributeModalOpen(true);
         }}
-        onOpenNewCommitteeModal={() => setIsNewCommitteeModalOpen(true)}
-        onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
-        onOpenPastExamModal={() => setIsPastExamImporterOpen(true)}
+        onOpenNewCommitteeModal={isAdmin ? () => setIsNewCommitteeModalOpen(true) : () => {}}
+        onOpenAdminPanel={isAdmin ? () => setIsAdminPanelOpen(true) : () => {}}
+        onOpenPastExamModal={isAdmin ? () => setIsPastExamImporterOpen(true) : undefined}
         onOpenNotebookLMModal={isAdmin ? () => setIsNotebookLMModalOpen(true) : undefined}
-        onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
+        onOpenSubagentMonitor={isAdmin ? () => setIsSubagentMonitorOpen(true) : undefined}
         onOpenProfileModal={() => setIsProfileModalOpen(true)}
         onOpenAuthModal={(m) => {
           setAuthModalInitialMode(m);
@@ -716,7 +855,7 @@ export default function App() {
         isUploadingToDrive={isUploadingToDrive}
         driveLastUploadedLink={driveUploadSuccess?.webViewLink || null}
         onOpenPdfModal={() => setIsPdfModalOpen(true)}
-        onOpenDiagnostics={() => setIsDiagnosticsOpen(true)}
+        onOpenDiagnostics={isAdmin ? () => setIsDiagnosticsOpen(true) : undefined}
       />
 
       {/* Main Container */}
@@ -1018,7 +1157,9 @@ export default function App() {
           <span className="flex flex-wrap gap-5">
             <button type="button" onClick={() => { setContributeDefaultNumber(undefined); setIsContributeModalOpen(true); }} className="text-ink-2 hover:text-accent cursor-pointer">Katkı yap</button>
             <button type="button" onClick={() => setIsPdfModalOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">PDF kitapçık</button>
-            <button type="button" onClick={() => setIsAdminPanelOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
+            {isAdmin && (
+              <button type="button" onClick={() => setIsAdminPanelOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
+            )}
           </span>
         </div>
       </footer>
@@ -1050,11 +1191,13 @@ export default function App() {
         onAddQuestionContribution={handleAddQuestionContribution}
       />
 
-      <AddCommitteeModal
-        isOpen={isNewCommitteeModalOpen}
-        onClose={() => setIsNewCommitteeModalOpen(false)}
-        onAddCommittee={handleAddCommittee}
-      />
+      {isAdmin && (
+        <AddCommitteeModal
+          isOpen={isNewCommitteeModalOpen}
+          onClose={() => setIsNewCommitteeModalOpen(false)}
+          onAddCommittee={handleAddCommittee}
+        />
+      )}
 
       <GithubPagesGuideModal
         isOpen={isGithubPagesModalOpen}
@@ -1090,16 +1233,18 @@ export default function App() {
       />
 
       {/* Admin Panel Modal for nofrostlife@gmail.com */}
-      <AdminPanelModal
-        isOpen={isAdminPanelOpen}
-        onClose={() => setIsAdminPanelOpen(false)}
-        adminEmail={ADMIN_EMAIL}
-        committees={committees}
-        questions={questions}
-        selectedCommitteeId={selectedCommitteeId}
-        onRefreshData={fetchQuestions}
-        onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
-      />
+      {isAdmin && (
+        <AdminPanelModal
+          isOpen={isAdminPanelOpen}
+          onClose={() => setIsAdminPanelOpen(false)}
+          adminEmail={ADMIN_EMAIL}
+          committees={committees}
+          questions={questions}
+          selectedCommitteeId={selectedCommitteeId}
+          onRefreshData={fetchQuestions}
+          onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
+        />
+      )}
 
       {/* A4 Medical Exam Booklet & High-Resolution PDF Print Modal */}
       <ExamPdfModal
@@ -1110,18 +1255,22 @@ export default function App() {
       />
 
       {/* System Diagnostics & Database Troubleshooting Modal */}
-      <SystemDiagnosticsModal
-        isOpen={isDiagnosticsOpen}
-        onClose={() => setIsDiagnosticsOpen(false)}
-        onRefreshParentData={fetchQuestions}
-      />
+      {isAdmin && (
+        <SystemDiagnosticsModal
+          isOpen={isDiagnosticsOpen}
+          onClose={() => setIsDiagnosticsOpen(false)}
+          onRefreshParentData={fetchQuestions}
+        />
+      )}
 
       {/* Yapay Zeka (AI) Quota & Rate Limit Exceeded Modal */}
-      <AiQuotaAlertModal
-        isOpen={isAiQuotaModalOpen}
-        onClose={() => setIsAiQuotaModalOpen(false)}
-        onRetry={fetchQuestions}
-      />
+      {isAdmin && (
+        <AiQuotaAlertModal
+          isOpen={isAiQuotaModalOpen}
+          onClose={() => setIsAiQuotaModalOpen(false)}
+          onRetry={fetchQuestions}
+        />
+      )}
 
       {/* User Login/Register Modal */}
       <UserAuthModal
@@ -1186,14 +1335,16 @@ export default function App() {
       )}
 
       {/* Admin Past Exam Questions Importer Modal */}
-      <AdminPastExamImporterModal
-        isOpen={isPastExamImporterOpen}
-        onClose={() => setIsPastExamImporterOpen(false)}
-        adminEmail={ADMIN_EMAIL}
-        committees={committees}
-        selectedCommitteeId={selectedCommitteeId}
-        onImportSuccess={fetchQuestions}
-      />
+      {isAdmin && (
+        <AdminPastExamImporterModal
+          isOpen={isPastExamImporterOpen}
+          onClose={() => setIsPastExamImporterOpen(false)}
+          adminEmail={ADMIN_EMAIL}
+          committees={committees}
+          selectedCommitteeId={selectedCommitteeId}
+          onImportSuccess={fetchQuestions}
+        />
+      )}
 
       {/* NotebookLM & Gemini Sync Modal (Admin only) */}
       {isAdmin && (
@@ -1209,8 +1360,8 @@ export default function App() {
         />
       )}
 
-      {/* Student & User AI Question Optimizer Modal */}
-      {optimizeQuestion && (
+      {/* Admin AI Question Optimizer Modal */}
+      {isAdmin && optimizeQuestion && (
         <AiQuestionOptimizerModal
           question={optimizeQuestion}
           isOpen={Boolean(optimizeQuestion)}
@@ -1228,10 +1379,12 @@ export default function App() {
       )}
 
       {/* AI Subagents & Hybrid Server Monitor Modal */}
-      <SubagentMonitorModal
-        isOpen={isSubagentMonitorOpen}
-        onClose={() => setIsSubagentMonitorOpen(false)}
-      />
+      {isAdmin && (
+        <SubagentMonitorModal
+          isOpen={isSubagentMonitorOpen}
+          onClose={() => setIsSubagentMonitorOpen(false)}
+        />
+      )}
 
     </div>
   );

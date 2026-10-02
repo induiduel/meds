@@ -115,6 +115,10 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     try {
       const result = await googleSignIn();
       if (result) {
+        if (result.user.email?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+          setError(`Giriş yapılan Google hesabı (${result.user.email}) yönetici yetkisine sahip değil. Lütfen ${ADMIN_EMAIL} ile giriş yapınız.`);
+          return;
+        }
         setSuccess('Yönetici girişi başarılı!');
         setTimeout(() => {
           onAuthSuccess(result.user, result.accessToken);
@@ -122,20 +126,11 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
         }, 500);
       }
     } catch (err: any) {
-      console.warn('Google popup error, offering direct login fallback:', err);
-      setError(`Google Popup uyarısı (${err.code || err.message}). Aşağıdaki "Doğrudan Yönetici Oturumu Aç" butonunu kullanarak şifresiz geçiş yapabilirsiniz.`);
+      console.warn('Google popup error:', err);
+      setError(`Google ile giriş yapılamadı: ${err.message || 'Yetkilendirme hatası'}`);
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const handleDirectAdminLogin = () => {
-    const adminUser = directAdminLogin();
-    setSuccess('Yönetici yetkileriyle doğrudan giriş yapıldı!');
-    setTimeout(() => {
-      onAuthSuccess(adminUser, 'admin-token');
-      onClose();
-    }, 400);
   };
 
   return (
@@ -189,16 +184,18 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
           >
             Kayıt Ol
           </button>
-          <button
-            onClick={() => { setMode('admin'); setError(null); }}
-            className={`flex-1 py-3 text-center border-b-2 transition-all cursor-pointer ${
-              mode === 'admin' 
-                ? 'border-amber-500 text-amber-900 bg-white font-bold' 
-                : 'border-transparent text-slate-500 hover:text-slate-900'
-            }`}
-          >
-            Yönetici Girişi
-          </button>
+          {initialMode === 'admin' && (
+            <button
+              onClick={() => { setMode('admin'); setError(null); }}
+              className={`flex-1 py-3 text-center border-b-2 transition-all cursor-pointer ${
+                mode === 'admin' 
+                  ? 'border-amber-500 text-amber-900 bg-white font-bold' 
+                  : 'border-transparent text-slate-500 hover:text-slate-900'
+              }`}
+            >
+              Yönetici Girişi
+            </button>
+          )}
         </div>
 
         {/* Feedback Messages */}
@@ -416,20 +413,6 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                 </svg>
                 <span>{isLoading ? 'Giriş Yapılıyor...' : 'Yönetici Girişi (Google)'}</span>
               </button>
-
-              <div className="pt-2 border-t border-slate-100">
-                <button
-                  type="button"
-                  onClick={handleDirectAdminLogin}
-                  className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 px-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-xs cursor-pointer transition-all active:scale-95"
-                >
-                  <ShieldCheck className="w-4 h-4 text-slate-950 shrink-0" />
-                  <span className="truncate">Şifresiz Yönetici Girişi ({ADMIN_EMAIL})</span>
-                </button>
-                <p className="text-[10px] text-slate-400 mt-1 text-center">
-                  Iframe ortamında popup engeli durumunda tek tıkla tam yetki açar.
-                </p>
-              </div>
             </div>
           )}
         </div>

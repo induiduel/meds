@@ -167,7 +167,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   const openAdmin = () => {
-    if (!isAdmin) setLocalAdminSession(ADMIN_EMAIL);
+    if (!isAdmin) return;
     onOpenAdminPanel();
   };
 
@@ -338,11 +338,11 @@ export const Header: React.FC<HeaderProps> = ({
               <MenuItem icon={BookCopy} label="A4 kitapçık" onClick={() => setActiveTab('booklet')} />
               <MenuItem icon={FileDown} label="PDF indir" onClick={onOpenPdfModal} />
 
-              <MenuLabel>Yönetim</MenuLabel>
-              <MenuItem icon={ShieldCheck} label="Yönetim paneli" onClick={openAdmin} />
-              {onOpenDiagnostics && <MenuItem icon={Activity} label="Veritabanı & limit takibi" onClick={onOpenDiagnostics} />}
               {isAdmin && (
                 <>
+                  <MenuLabel>Yönetim</MenuLabel>
+                  <MenuItem icon={ShieldCheck} label="Yönetim paneli" onClick={openAdmin} />
+                  {onOpenDiagnostics && <MenuItem icon={Activity} label="Veritabanı & limit takibi" onClick={onOpenDiagnostics} />}
                   {onOpenPastExamModal && <MenuItem icon={FileUp} label="Çıkmış soru yükle" onClick={onOpenPastExamModal} />}
                   {onOpenNotebookLMModal && <MenuItem icon={NotebookPen} label="NotebookLM / Gemini" onClick={onOpenNotebookLMModal} />}
                   <MenuItem
@@ -353,9 +353,9 @@ export const Header: React.FC<HeaderProps> = ({
                     onClick={onUploadToDrive}
                   />
                   <MenuItem icon={FolderPlus} label="Yeni kurul ekle" onClick={onOpenNewCommitteeModal} />
+                  {onOpenSubagentMonitor && <MenuItem icon={Activity} label="AI subagent izleme" onClick={onOpenSubagentMonitor} />}
                 </>
               )}
-              {onOpenSubagentMonitor && <MenuItem icon={Activity} label="AI subagent izleme" onClick={onOpenSubagentMonitor} />}
 
               <MenuLabel>Hesap</MenuLabel>
               {currentUser ? (
