@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   X, 
   Printer, 
@@ -63,6 +64,8 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
   const [bookletMode, setBookletMode] = useState<'student' | 'solution' | 'answers_only'>('solution');
   const [columns, setColumns] = useState<'two' | 'one'>('two');
   const [includeAnswerMatrix, setIncludeAnswerMatrix] = useState(true);
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
+  const [pdfError, setPdfError] = useState<string | null>(null);
 
   // Past Questions Loading State
   const [pastQuestions, setPastQuestions] = useState<any[]>([]);
@@ -257,6 +260,18 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     return result;
   }, [allNormalized, selectedCommitteeId, selectedYear, selectedDiscipline, filterReadyOnly, questionLimit]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   // Booklet Header Details
@@ -270,6 +285,8 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
   };
 
   const handleDirectPdfDownload = async () => {
+    setPdfError(null);
+    setIsGeneratingPdf(true);
     try {
       const qItems: QuestionItem[] = filteredQuestions.map((q, idx) => ({
         id: q.id,
@@ -291,8 +308,8 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
               options: q.options.map((o) => ({ key: o.key as 'A' | 'B' | 'C' | 'D' | 'E', text: o.text, isAiFilled: false })),
               correctAnswer: (['A', 'B', 'C', 'D', 'E'].includes(q.correctAnswer) ? (q.correctAnswer as 'A' | 'B' | 'C' | 'D' | 'E') : 'A'),
               explanation: q.explanation || '',
-              confidenceScore: 98,
-              notesAndDiscrepancies: 'Doğrulandı',
+              confidenceScore: 0,
+              notesAndDiscrepancies: '',
               lastUpdated: new Date().toISOString(),
             }
           : undefined,
@@ -309,10 +326,17 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
 
       const sanitizedName = displayTitle.replace(/[^a-zA-Z0-9_\u00C0-\u017F-]/g, '_').slice(0, 40);
       const customName = `${sanitizedName}_${sourceMode === 'past_exams' ? 'Cikmislar' : 'Kitapcik'}_${displayTarget}Soru.pdf`;
-      await downloadBookletPdfLocally(commObj, qItems, customName);
-    } catch (err) {
-      console.error('Doğrudan PDF oluşturma hatası, yazdırmaya yönlendiriliyor:', err);
-      window.print();
+      await downloadBookletPdfLocally(commObj, qItems, customName, {
+        mode: bookletMode,
+        includeAnswerKey: bookletMode === 'answers_only' || includeAnswerMatrix,
+        title: displayTitle,
+        subtitle: selectedYear !== 'all' ? selectedYear : undefined,
+      });
+    } catch (err: any) {
+      console.error('PDF oluşturma hatası:', err);
+      setPdfError('PDF oluşturulamadı. "Yazdır" ile tarayıcıdan PDF olarak kaydedebilirsin.');
+    } finally {
+      setIsGeneratingPdf(false);
     }
   };
 
@@ -369,543 +393,326 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     URL.revokeObjectURL(url);
   };
 
-  return (
-    <div 
+  const modeOptions: { id: typeof bookletMode; label: string; hint: string }[] = [
+    { id: 'student', label: 'Öğrenci', hint: 'Cevaplar gizli' },
+    { id: 'solution', label: 'Çözümlü', hint: 'Cevap ve açıklama' },
+    { id: 'answers_only', label: 'Cevap anahtarı', hint: 'Yalnızca tablo' },
+  ];
+  const showKey = bookletMode === 'answers_only' || includeAnswerMatrix;
+  const fieldCls = 'h-10 w-full border border-line-2 rounded-[10px] px-3 text-[14px] text-ink bg-white cursor-pointer min-w-0';
+  const labelCls = 'flex flex-col gap-1.5 text-[13px] font-semibold text-ink-2';
+
+  return createPortal(
+    <div
       id="exam-pdf-modal-portal"
-      className="pdf-modal-backdrop fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto"
+      className="pdf-modal-backdrop fixed inset-0 z-50 bg-[rgba(14,26,38,0.45)] flex items-stretch sm:items-center justify-center sm:p-4"
+      onMouseDown={(e) => e.target === e.currentTarget && onClose()}
     >
-      {/* CSS to ensure pristine multi-page printing without clipping */}
       <style>{`
         @media print {
-          html, body {
-            margin: 0 !important;
-            padding: 0 !important;
-            background: #fff !important;
-            color: #000 !important;
-            height: auto !important;
-            overflow: visible !important;
+          html, body { margin: 0 !important; padding: 0 !important; background: #fff !important; color: #000 !important; height: auto !important; overflow: visible !important; }
+          body > *:not(#exam-pdf-modal-portal) { display: none !important; }
+          .pdf-modal-backdrop, .pdf-modal-card, .pdf-modal-scrollable {
+            position: static !important; display: block !important; background: #fff !important; padding: 0 !important; margin: 0 !important;
+            width: 100% !important; max-width: 100% !important; height: auto !important; max-height: none !important; overflow: visible !important;
+            border: none !important; box-shadow: none !important; border-radius: 0 !important;
           }
-          body > *:not(#exam-pdf-modal-portal) {
-            display: none !important;
-          }
-          .pdf-modal-backdrop {
-            position: static !important;
-            background: transparent !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            width: 100% !important;
-            height: auto !important;
-            min-height: auto !important;
-            max-height: none !important;
-            overflow: visible !important;
-            box-shadow: none !important;
-          }
-          .pdf-modal-card {
-            position: static !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            height: auto !important;
-            min-height: auto !important;
-            max-height: none !important;
-            overflow: visible !important;
-            border: none !important;
-            box-shadow: none !important;
-            background: #fff !important;
-            margin: 0 !important;
-            padding: 0 !important;
-          }
-          .pdf-modal-scrollable {
-            overflow: visible !important;
-            height: auto !important;
-            max-height: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            background: #fff !important;
-          }
-          .no-print {
-            display: none !important;
-          }
-          #exam-printable-content {
-            box-shadow: none !important;
-            border: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            max-width: 100% !important;
-            width: 100% !important;
-            background: #fff !important;
-            color: #000 !important;
-          }
-          .exam-question-item {
-            break-inside: avoid !important;
-            page-break-inside: avoid !important;
-            margin-bottom: 16px !important;
-          }
-          .exam-answer-table {
-            break-before: page !important;
-            page-break-before: always !important;
-          }
-          @page {
-            size: A4 portrait;
-            margin: 12mm 14mm 12mm 14mm;
-          }
+          .no-print { display: none !important; }
+          #exam-printable-content { box-shadow: none !important; border: none !important; margin: 0 !important; padding: 0 !important; max-width: 100% !important; width: 100% !important; }
+          .exam-columns-2 { columns: 2 !important; column-gap: 8mm !important; }
+          .exam-question-item { break-inside: avoid !important; page-break-inside: avoid !important; }
+          .exam-answer-table { break-before: page !important; page-break-before: always !important; }
+          @page { size: A4 portrait; margin: 12mm 14mm; }
         }
       `}</style>
 
-      <div className="pdf-modal-card bg-slate-100 rounded-2xl max-w-6xl w-full shadow-2xl border border-slate-300 overflow-hidden my-2 sm:my-4 flex flex-col max-h-[96vh]">
-        
-        {/* ROW 1: Top Control Header (Dark Navy) */}
-        <div className="bg-slate-900 text-white p-3.5 sm:p-4 shrink-0 flex flex-wrap items-center justify-between gap-3 no-print border-b border-slate-800">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center shrink-0">
-              <FileText className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h2 className="text-sm sm:text-base font-black tracking-tight">
-                  A4 Kurul Sınav Kitapçığı & PDF İndirme Merkezi
-                </h2>
-                <span className="bg-teal-500/30 text-teal-300 text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full border border-teal-500/40">
-                  {displayTarget} Soru Seçili
-                </span>
-                {isLoadingPast && (
-                  <span className="text-[11px] text-amber-300 flex items-center gap-1 animate-pulse">
-                    <RefreshCw className="w-3 h-3 animate-spin" />
-                    Çıkmışlar yükleniyor...
-                  </span>
-                )}
-              </div>
-              <p className="text-xs text-slate-400 mt-0.5">
-                {displayTitle} • Fakülte mizanpajı, yüksek çözünürlüklü vektör PDF ve çevrimdışı çalışma
-              </p>
-            </div>
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="pdf-modal-title"
+        className="pdf-modal-card bg-white w-full max-w-[1240px] h-full sm:h-[min(94vh,980px)] sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)] overflow-hidden flex flex-col text-ink"
+      >
+        {/* Header */}
+        <header className="no-print shrink-0 flex items-center gap-3 px-4 sm:px-5 py-3 border-b border-line">
+          <span className="w-9 h-9 rounded-[10px] bg-accent-soft text-accent flex items-center justify-center shrink-0">
+            <FileText className="w-[18px] h-[18px]" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <h2 id="pdf-modal-title" className="m-0 font-display font-bold text-[18px] sm:text-[20px] tracking-[-0.02em] leading-tight">
+              PDF kitapçık
+            </h2>
+            <p className="m-0 text-[13px] text-ink-2 truncate" role="status">
+              {isLoadingPast ? 'Çıkmış sorular yükleniyor…' : `${displayTarget} soru · ${displayTitle}`}
+            </p>
           </div>
-
-          <div className="flex items-center flex-wrap gap-2">
-            {/* Primary Action 1: Native Print to PDF */}
-            <button
-              onClick={handlePrint}
-              className="bg-teal-600 hover:bg-teal-500 text-white px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-md cursor-pointer transition-all active:scale-95"
-              title="Tarayıcının 'Hedef: PDF Olarak Kaydet' menüsüyle tam çözünürlüklü vektör PDF oluşturur"
-            >
-              <Printer className="w-4 h-4" />
-              <span>Yazdır / PDF Olarak Kaydet</span>
-            </button>
-
-            {/* Primary Action 2: Direct PDF File Download */}
-            <button
-              onClick={handleDirectPdfDownload}
-              className="bg-emerald-700 hover:bg-emerald-600 text-white px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-md cursor-pointer transition-all active:scale-95"
-              title="Doğrudan cihazınıza .pdf dosyası olarak kaydeder"
-            >
-              <Download className="w-4 h-4" />
-              <span>Direkt .PDF İndir</span>
-            </button>
-
-            {/* Offline HTML Booklet */}
-            <button
-              onClick={handleDownloadHtml}
-              className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 cursor-pointer transition-colors"
-              title="İnternetsiz her cihazda açılabilen tek dosya HTML kitapçık"
-            >
-              <FileText className="w-4 h-4 text-slate-300" />
-              <span className="hidden sm:inline">HTML Kitapçık</span>
-            </button>
-
-            <button
-              onClick={onClose}
-              className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors ml-1"
-              aria-label="Kapat"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-
-        {/* ROW 2: Filter & Source Selector Bar (White) */}
-        <div className="bg-white border-b border-slate-200 p-3 px-4 sm:px-5 flex flex-wrap items-center justify-between gap-3 shrink-0 no-print text-xs shadow-2xs">
-          <div className="flex flex-wrap items-center gap-3">
-            {/* 1. Kurul Seçici */}
-            <div className="flex items-center gap-1.5">
-              <span className="font-bold text-slate-700 flex items-center gap-1 text-[11px] uppercase tracking-wide">
-                <FolderOpen className="w-3.5 h-3.5 text-teal-600" />
-                Kurul:
-              </span>
-              <select
-                value={selectedCommitteeId}
-                onChange={(e) => {
-                  setSelectedCommitteeId(e.target.value);
-                  setSelectedYear('all');
-                  setSelectedDiscipline('all');
-                }}
-                className="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:ring-1 focus:ring-teal-500 cursor-pointer"
-              >
-                <option value="all">🌟 Tüm Kurullar ({cleanCommittees.length > 0 ? cleanCommittees.length : 1} Kurul)</option>
-                {cleanCommittees.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* 2. Kaynak / Havuz Seçici */}
-            <div className="flex items-center gap-1.5">
-              <span className="font-bold text-slate-700 flex items-center gap-1 text-[11px] uppercase tracking-wide">
-                <Layers className="w-3.5 h-3.5 text-teal-600" />
-                Kaynak:
-              </span>
-              <select
-                value={sourceMode}
-                onChange={(e) => setSourceMode(e.target.value as any)}
-                className="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:ring-1 focus:ring-teal-500 cursor-pointer"
-              >
-                <option value="past_exams">📚 Çıkmış Sınavlar Arşivi ({pastQuestions.length} Çıkmış)</option>
-                <option value="collaborative">📝 Güncel İmece Soru Havuzu ({questions.length} Soru)</option>
-                <option value="all">🌟 Birleşik Havuz (Çıkmışlar + Güncel)</option>
-              </select>
-            </div>
-
-            {/* 3. Sınav Yılı Filtresi */}
-            {availableYears.length > 0 && sourceMode !== 'collaborative' && (
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-slate-700 flex items-center gap-1 text-[11px] uppercase tracking-wide">
-                  <Calendar className="w-3.5 h-3.5 text-teal-600" />
-                  Sınav / Yıl:
-                </span>
-                <select
-                  value={selectedYear}
-                  onChange={(e) => setSelectedYear(e.target.value)}
-                  className="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:ring-1 focus:ring-teal-500 cursor-pointer"
-                >
-                  <option value="all">Tüm Yıllar ({availableYears.length} Yıl)</option>
-                  {availableYears.map((yr) => (
-                    <option key={yr} value={yr}>
-                      {yr} Çıkmış Sınavı
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-
-            {/* 4. Branş / Ders Filtresi */}
-            {availableDisciplines.length > 0 && (
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-slate-700 flex items-center gap-1 text-[11px] uppercase tracking-wide">
-                  <GraduationCap className="w-3.5 h-3.5 text-teal-600" />
-                  Ders:
-                </span>
-                <select
-                  value={selectedDiscipline}
-                  onChange={(e) => setSelectedDiscipline(e.target.value)}
-                  className="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:ring-1 focus:ring-teal-500 cursor-pointer max-w-[160px] truncate"
-                >
-                  <option value="all">Tüm Branşlar ({availableDisciplines.length})</option>
-                  {availableDisciplines.map((d) => (
-                    <option key={d} value={d}>
-                      {d}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-
-            {/* 5. Soru Limiti */}
-            <div className="flex items-center gap-1.5">
-              <span className="font-bold text-slate-700 text-[11px] uppercase tracking-wide">Limit:</span>
-              <select
-                value={questionLimit}
-                onChange={(e) => setQuestionLimit(Number(e.target.value))}
-                className="bg-slate-50 border border-slate-300 rounded-lg px-2 py-1.5 text-xs text-slate-900 font-semibold focus:outline-none focus:ring-1 focus:ring-teal-500 cursor-pointer"
-              >
-                <option value={0}>Tümü ({allNormalized.length})</option>
-                <option value={50}>İlk 50 Soru</option>
-                <option value={100}>İlk 100 Soru (Klasik Kurul)</option>
-                <option value={150}>İlk 150 Soru (Final/Bütünleme)</option>
-              </select>
-            </div>
-          </div>
-
-          {loadError && (
-            <div className="text-[11px] text-amber-700 bg-amber-50 px-2 py-1 rounded border border-amber-200">
-              {loadError}
-            </div>
-          )}
-        </div>
-
-        {/* ROW 3: Booklet Layout & Content Options Bar */}
-        <div className="bg-slate-50 border-b border-slate-200 p-2.5 px-4 sm:px-5 flex flex-wrap items-center justify-between gap-3 shrink-0 no-print text-xs">
-          {/* Mode Selector (Student vs Solution vs Answers Only) */}
-          <div className="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-200 shadow-2xs">
-            <button
-              onClick={() => setBookletMode('student')}
-              className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                bookletMode === 'student'
-                  ? 'bg-teal-700 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-              }`}
-            >
-              Öğrenci Sınavı (Cevaplar Gizli)
-            </button>
-            <button
-              onClick={() => setBookletMode('solution')}
-              className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                bookletMode === 'solution'
-                  ? 'bg-teal-700 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-              }`}
-            >
-              Çözümlü & Açıklamalı Kitapçık
-            </button>
-            <button
-              onClick={() => setBookletMode('answers_only')}
-              className={`px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
-                bookletMode === 'answers_only'
-                  ? 'bg-teal-700 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-              }`}
-            >
-              Sadece Cevap Anahtarı Matrisi
-            </button>
-          </div>
-
-          {/* Columns & Checkbox Toggles */}
-          <div className="flex flex-wrap items-center gap-3">
-            {/* Columns Toggle */}
-            <div className="flex items-center gap-1 bg-white p-1 rounded-lg border border-slate-200 shadow-2xs">
-              <button
-                onClick={() => setColumns('two')}
-                className={`p-1.5 rounded-md transition-all cursor-pointer flex items-center gap-1 text-[11px] ${
-                  columns === 'two' ? 'bg-teal-50 text-teal-800 font-bold border border-teal-200' : 'text-slate-500 hover:text-slate-900'
-                }`}
-                title="İki Sütunlu Klasik Tıp Kitapçığı"
-              >
-                <Columns className="w-3.5 h-3.5" />
-                <span>2 Sütun</span>
-              </button>
-              <button
-                onClick={() => setColumns('one')}
-                className={`p-1.5 rounded-md transition-all cursor-pointer flex items-center gap-1 text-[11px] ${
-                  columns === 'one' ? 'bg-teal-50 text-teal-800 font-bold border border-teal-200' : 'text-slate-500 hover:text-slate-900'
-                }`}
-                title="Tek Sütunlu Geniş Okuma Mizanpajı"
-              >
-                <Square className="w-3.5 h-3.5" />
-                <span>Tek Sütun</span>
-              </button>
-            </div>
-
-            {/* Answer Matrix Checkbox */}
-            <label className="flex items-center gap-1.5 cursor-pointer text-slate-700 select-none font-medium">
-              <input
-                type="checkbox"
-                checked={includeAnswerMatrix}
-                onChange={(e) => setIncludeAnswerMatrix(e.target.checked)}
-                className="rounded border-slate-300 text-teal-600 focus:ring-teal-500"
-              />
-              <span>Cevap Anahtarı Tablosunu Ekle</span>
-            </label>
-
-            {/* Ready Only Checkbox */}
-            <label className="flex items-center gap-1.5 cursor-pointer text-slate-700 select-none font-medium">
-              <input
-                type="checkbox"
-                checked={filterReadyOnly}
-                onChange={(e) => setFilterReadyOnly(e.target.checked)}
-                className="rounded border-slate-300 text-teal-600 focus:ring-teal-500"
-              />
-              <span>Yalnızca Doğrulanmışlar</span>
-            </label>
-          </div>
-        </div>
-
-        {/* Printable A4 Content Area (Scrollable in modal, full in print) */}
-        <div className="pdf-modal-scrollable overflow-y-auto p-3 sm:p-8 flex justify-center bg-slate-200/70">
-          <div
-            id="exam-printable-content"
-            className="print-container bg-white shadow-xl border border-slate-300 p-6 sm:p-12 w-full max-w-[210mm] min-h-[297mm] text-slate-900 font-sans print:shadow-none print:border-none print:p-0 print:m-0"
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="PDF penceresini kapat"
+            className="w-10 h-10 rounded-[10px] flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
           >
-            {/* Official Exam Header */}
-            <div className="border-b-2 border-slate-900 pb-4 mb-5 text-center space-y-1">
-              <div className="flex items-center justify-between text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200 pb-1.5 mb-2">
-                <span>T.C. TIP FAKÜLTESİ DEKANLIĞI</span>
-                <span>DÖNEM {activeCommittee?.year || 3} • {displayTerm}</span>
-                <span className="bg-slate-900 text-white px-2 py-0.5 rounded text-[10px] font-mono">
-                  A KİTAPÇIĞI
-                </span>
-              </div>
+            <X className="w-5 h-5" />
+          </button>
+        </header>
 
-              <h1 className="text-base sm:text-xl font-black text-slate-900 uppercase tracking-tight">
-                {displayTitle}
-              </h1>
-
-              <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-700 font-serif pt-1">
-                <span><strong>Soru Sayısı:</strong> {displayTarget} Soru</span>
-                <span>•</span>
-                <span><strong>Sınav Süresi:</strong> {examDuration} Dakika</span>
-                {selectedYear !== 'all' && (
-                  <>
-                    <span>•</span>
-                    <span><strong>Sınav Yılı:</strong> {selectedYear}</span>
-                  </>
-                )}
-                <span>•</span>
-                <span>
-                  <strong>Format:</strong>{' '}
-                  {bookletMode === 'student'
-                    ? 'Öğrenci Deneme Sınavı'
-                    : bookletMode === 'solution'
-                    ? 'Çözümlü ve Açıklamalı Çalışma Kitapçığı'
-                    : 'Cevap Anahtarı Matrisi'}
-                </span>
-              </div>
-            </div>
-
-            {/* Exam Instructions Banner */}
-            {bookletMode !== 'answers_only' && (
-              <div className="instructions bg-slate-50 border border-slate-200 rounded-md p-2.5 mb-6 text-[11px] text-slate-700 space-y-0.5">
-                <p className="font-bold text-slate-900">SINAV YÖNERGESİ VE KURALLAR:</p>
-                <p>1. Bu soru kitapçığında toplam {displayTarget} soru yer almaktadır. Her sorunun yalnızca tek bir doğru cevabı vardır.</p>
-                <p>2. Cevaplarınızı optik cevap kâğıdındaki ilgili soru numarasına taşıyınız. Yanlış cevaplar doğru cevapları götürmez.</p>
-                <p className="text-[10px] text-slate-500 italic">
-                  MedSoru Tıp Kurul Kolektif Hafıza & Yapay Zeka Rekonstrüksiyon Arşivi tarafından hazırlanmıştır.
-                </p>
-              </div>
-            )}
-
-            {/* Empty State */}
-            {filteredQuestions.length === 0 && (
-              <div className="text-center py-16 px-4 space-y-3 bg-slate-50 rounded-xl border border-dashed border-slate-300">
-                <FileText className="w-10 h-10 text-slate-400 mx-auto" />
-                <h3 className="font-bold text-slate-700 text-sm">Seçilen Kriterlere Uygun Soru Bulunamadı</h3>
-                <p className="text-xs text-slate-500 max-w-md mx-auto">
-                  Lütfen Kurul, Kaynak, Sınav Yılı veya Branş filtrelerini değiştirerek tekrar deneyiniz.
-                </p>
-              </div>
-            )}
-
-            {/* Questions Layout */}
-            {bookletMode !== 'answers_only' && filteredQuestions.length > 0 && (
-              <div
-                className={`exam-columns-${columns === 'two' ? '2' : '1'} ${
-                  columns === 'two' ? 'columns-1 md:columns-2 gap-8' : 'space-y-6'
-                } text-xs leading-relaxed`}
-              >
-                {filteredQuestions.map((q, idx) => {
-                  const qNum = q.questionNumber || (idx + 1);
-
+        <div className="pdf-modal-scrollable flex-1 min-h-0 overflow-y-auto lg:overflow-hidden grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)]">
+          {/* Settings */}
+          <aside className="no-print lg:overflow-y-auto border-b lg:border-b-0 lg:border-r border-line bg-[#FAFBFC] p-4 sm:p-5 flex flex-col gap-4 min-w-0">
+            <div className="flex flex-col gap-1.5">
+              <span className="text-[13px] font-semibold text-ink-2">Kitapçık türü</span>
+              <div role="radiogroup" aria-label="Kitapçık türü" className="grid grid-cols-3 gap-1 bg-canvas rounded-[12px] p-1">
+                {modeOptions.map((m) => {
+                  const on = bookletMode === m.id;
                   return (
-                    <div
-                      key={q.id}
-                      className="exam-question-item mb-5 pb-3 border-b border-slate-200 break-inside-avoid page-break-inside-avoid"
+                    <button
+                      key={m.id}
+                      type="button"
+                      role="radio"
+                      aria-checked={on}
+                      onClick={() => {
+                        setBookletMode(m.id);
+                        if (m.id === 'student') setIncludeAnswerMatrix(false);
+                      }}
+                      className={`min-h-12 px-1.5 py-1 rounded-[9px] flex flex-col items-center justify-center text-center cursor-pointer ${
+                        on ? 'bg-white text-accent shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
+                      }`}
                     >
-                      {/* Question meta bar */}
-                      <div className="flex items-center justify-between text-[11px] font-bold text-slate-800 mb-1.5">
-                        <span className="bg-slate-900 text-white font-mono px-2 py-0.5 rounded text-[10px] tracking-wide">
-                          SORU {qNum}
-                        </span>
-                        <span className="text-teal-800 font-semibold text-[10px] uppercase truncate max-w-[210px]">
-                          {q.discipline} {q.topic ? `• ${q.topic}` : ''} {q.examYear ? `(${q.examYear})` : ''}
-                        </span>
-                      </div>
-
-                      {/* Question Case Stem */}
-                      <p className="font-serif text-[11.5px] font-normal text-slate-900 leading-normal mb-2 whitespace-pre-line text-justify">
-                        {q.stem}
-                      </p>
-
-                      {/* Options */}
-                      <div className="space-y-1 pl-1 text-[11px]">
-                        {q.options.map((opt) => {
-                          const isCorrect = q.correctAnswer === opt.key || !!opt.isCorrect;
-                          const showAsCorrect = bookletMode === 'solution' && isCorrect;
-
-                          return (
-                            <div
-                              key={opt.key}
-                              className={`flex items-start gap-2 py-0.5 px-1.5 rounded transition-colors ${
-                                showAsCorrect
-                                  ? 'bg-emerald-50 text-emerald-900 font-bold border border-emerald-300'
-                                  : 'text-slate-800'
-                              }`}
-                            >
-                              <span className="font-bold shrink-0 font-mono">
-                                {opt.key})
-                              </span>
-                              <span className="leading-tight">{opt.text}</span>
-                              {showAsCorrect && (
-                                <span className="ml-auto text-[9px] text-emerald-700 uppercase font-mono font-bold shrink-0">
-                                  [DOĞRU CEVAP]
-                                </span>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
-
-                      {/* Detailed Medical Explanation (Solution Mode) */}
-                      {bookletMode === 'solution' && q.explanation && (
-                        <div className="mt-2.5 p-2 bg-emerald-50/70 border-l-2 border-emerald-600 rounded text-[10.5px] text-emerald-950 space-y-0.5">
-                          <div className="font-bold flex items-center gap-1 text-emerald-900 text-[11px]">
-                            <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
-                            <span>Gerekçe & Patofizyolojik Açıklama (Doğru Cevap: {q.correctAnswer || 'Belirtilmemiş'}):</span>
-                          </div>
-                          <p className="leading-snug text-slate-700 italic">
-                            {q.explanation}
-                          </p>
-                        </div>
-                      )}
-                    </div>
+                      <span className={`text-[13px] leading-tight ${on ? 'font-semibold' : 'font-medium'}`}>{m.label}</span>
+                      <span className="text-[12px] leading-tight text-ink-3">{m.hint}</span>
+                    </button>
                   );
                 })}
               </div>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
+              <label className={labelCls}>
+                Kurul
+                <select
+                  value={selectedCommitteeId}
+                  onChange={(e) => {
+                    setSelectedCommitteeId(e.target.value);
+                    setSelectedYear('all');
+                    setSelectedDiscipline('all');
+                  }}
+                  className={fieldCls}
+                >
+                  <option value="all">Tüm kurullar</option>
+                  {cleanCommittees.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.name.replace(/^Dönem 3\s*-\s*/i, '')}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className={labelCls}>
+                Kaynak
+                <select value={sourceMode} onChange={(e) => setSourceMode(e.target.value as any)} className={fieldCls}>
+                  <option value="past_exams">Çıkmış sorular ({pastQuestions.length})</option>
+                  <option value="collaborative">Güncel havuz ({questions.length})</option>
+                  <option value="all">İkisi birlikte</option>
+                </select>
+              </label>
+              {availableYears.length > 0 && sourceMode !== 'collaborative' && (
+                <label className={labelCls}>
+                  Yıl
+                  <select value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)} className={fieldCls}>
+                    <option value="all">Tüm yıllar</option>
+                    {availableYears.map((yr) => (
+                      <option key={yr} value={yr}>
+                        {yr}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
+              {availableDisciplines.length > 0 && (
+                <label className={labelCls}>
+                  Ders
+                  <select value={selectedDiscipline} onChange={(e) => setSelectedDiscipline(e.target.value)} className={fieldCls}>
+                    <option value="all">Tüm dersler</option>
+                    {availableDisciplines.map((d) => (
+                      <option key={d} value={d}>
+                        {d}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
+              <label className={labelCls}>
+                Soru sayısı
+                <select value={questionLimit} onChange={(e) => setQuestionLimit(Number(e.target.value))} className={fieldCls}>
+                  <option value={50}>İlk 50</option>
+                  <option value={100}>İlk 100</option>
+                  <option value={150}>İlk 150</option>
+                  <option value={0}>Hepsi</option>
+                </select>
+              </label>
+              <div className="flex flex-col gap-1.5">
+                <span className="text-[13px] font-semibold text-ink-2">Sütun (yazdırma)</span>
+                <div role="radiogroup" aria-label="Sütun" className="grid grid-cols-2 gap-1 bg-canvas rounded-[10px] p-[3px]">
+                  {(
+                    [
+                      ['two', Columns, '2 sütun'],
+                      ['one', Square, 'Tek'],
+                    ] as const
+                  ).map(([id, Icon, label]) => (
+                    <button
+                      key={id}
+                      type="button"
+                      role="radio"
+                      aria-checked={columns === id}
+                      onClick={() => setColumns(id)}
+                      className={`h-9 rounded-lg inline-flex items-center justify-center gap-1.5 text-[13px] cursor-pointer ${
+                        columns === id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2'
+                      }`}
+                    >
+                      <Icon className="w-3.5 h-3.5" />
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <label className={`flex items-center gap-2.5 min-h-10 text-[14px] text-ink cursor-pointer ${bookletMode === 'answers_only' ? 'opacity-50' : ''}`}>
+                <input
+                  type="checkbox"
+                  checked={showKey}
+                  disabled={bookletMode === 'answers_only'}
+                  onChange={(e) => setIncludeAnswerMatrix(e.target.checked)}
+                  className="w-4 h-4 accent-[#1E4FD8]"
+                />
+                Sona cevap anahtarı ekle
+              </label>
+              <label className="flex items-center gap-2.5 min-h-10 text-[14px] text-ink cursor-pointer">
+                <input type="checkbox" checked={filterReadyOnly} onChange={(e) => setFilterReadyOnly(e.target.checked)} className="w-4 h-4 accent-[#1E4FD8]" />
+                Yalnızca cevabı belli sorular
+              </label>
+            </div>
+
+            {loadError && <p className="m-0 text-[13px] text-warn bg-warn-soft rounded-lg px-3 py-2">{loadError}</p>}
+            {pdfError && (
+              <p role="alert" className="m-0 text-[13px] text-bad-text bg-bad-soft rounded-lg px-3 py-2">
+                {pdfError}
+              </p>
             )}
 
-            {/* Answer Key Summary Table */}
-            {includeAnswerMatrix && filteredQuestions.length > 0 && (
-              <div className="exam-answer-table mt-8 pt-6 border-t-2 border-slate-900 page-break-before">
-                <div className="text-center mb-4">
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-                    CEVAP ANAHTARI ÖZETİ (A KİTAPÇIĞI)
-                  </h3>
-                  <p className="text-[11px] text-slate-500 font-serif">
-                    {displayTitle} • Toplam {filteredQuestions.length} Soru
-                  </p>
-                </div>
+            {/* Actions (sticky on phones) */}
+            <div className="sticky bottom-0 mt-auto -mx-4 sm:-mx-5 -mb-4 sm:-mb-5 px-4 sm:px-5 py-3 bg-[#FAFBFC] border-t border-line flex flex-col gap-2 z-10">
+              <button
+                type="button"
+                onClick={handleDirectPdfDownload}
+                disabled={displayTarget === 0 || isGeneratingPdf}
+                className="h-11 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isGeneratingPdf ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                {isGeneratingPdf ? 'PDF hazırlanıyor…' : `PDF indir (${displayTarget} soru)`}
+              </button>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={handlePrint}
+                  disabled={displayTarget === 0}
+                  title="Tarayıcının yazdırma penceresinde Hedef: PDF olarak kaydet"
+                  className="h-10 rounded-[10px] border border-line-2 bg-white text-ink text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-50"
+                >
+                  <Printer className="w-4 h-4" /> Yazdır
+                </button>
+                <button
+                  type="button"
+                  onClick={handleDownloadHtml}
+                  disabled={displayTarget === 0}
+                  title="İnternetsiz açılabilen tek dosya HTML kitapçık"
+                  className="h-10 rounded-[10px] border border-line-2 bg-white text-ink text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-50"
+                >
+                  <FileText className="w-4 h-4" /> HTML
+                </button>
+              </div>
+            </div>
+          </aside>
 
-                <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 text-center text-xs">
+          {/* A4 preview */}
+          <div className="bg-canvas lg:overflow-y-auto p-3 sm:p-6 flex justify-center min-w-0">
+            <div
+              id="exam-printable-content"
+              className="print-container bg-white border border-line rounded-sm shadow-[0_2px_12px_rgba(14,26,38,0.08)] w-full max-w-[210mm] sm:min-h-[297mm] h-fit p-4 sm:p-[14mm] text-[#0f172a]"
+            >
+              <div className="header border-b-2 border-[#0f172a] pb-3 mb-4">
+                <div className="meta text-[12px] font-semibold text-[#475569] uppercase tracking-[0.06em]">MedSoru · Dönem {activeCommittee?.year || 3}</div>
+                <h1 className="m-0 mt-1 text-[16px] sm:text-[19px] font-bold uppercase leading-snug">{displayTitle}</h1>
+                <div className="meta mt-1 text-[12px] text-[#475569]">
+                  {displayTarget} soru
+                  {bookletMode !== 'answers_only' && ` · ~${examDuration} dakika`}
+                  {selectedYear !== 'all' && ` · ${selectedYear}`}
+                  {' · '}
+                  {modeOptions.find((m) => m.id === bookletMode)?.label}
+                </div>
+              </div>
+
+              {filteredQuestions.length === 0 && (
+                <div className="text-center py-14 px-4 bg-[#f8fafc] rounded-lg border border-dashed border-[#cbd5e1]">
+                  <p className="m-0 font-semibold text-[15px]">Bu seçimde soru yok</p>
+                  <p className="m-0 mt-1 text-[13px] text-[#475569]">Kurul, kaynak, yıl ya da ders filtresini değiştir.</p>
+                </div>
+              )}
+
+              {bookletMode !== 'answers_only' && filteredQuestions.length > 0 && (
+                <div className={`exam-columns-${columns === 'two' ? '2' : '1'} ${columns === 'two' ? 'md:columns-2 md:gap-8' : ''}`}>
                   {filteredQuestions.map((q, idx) => {
-                    const qNum = q.questionNumber || (idx + 1);
-                    const ans = q.correctAnswer || '-';
+                    const meta = [q.discipline, q.examYear, q.questionNumber ? `S.${q.questionNumber}` : ''].filter(Boolean).join(' · ');
                     return (
-                      <div
-                        key={q.id + '-' + idx}
-                        className={`p-1.5 rounded border ${
-                          ans !== '-'
-                            ? 'bg-slate-50 border-slate-300 text-slate-900'
-                            : 'bg-slate-100/50 border-slate-200 text-slate-400'
-                        }`}
-                      >
-                        <span className="block text-[9px] text-slate-500 font-mono">
-                          #{qNum}
-                        </span>
-                        <span className="block font-black text-xs text-teal-800">
-                          {bookletMode === 'student' ? '___' : ans}
-                        </span>
+                      <div key={q.id} className="exam-question-item break-inside-avoid mb-4 pb-3 border-b border-[#e2e8f0]">
+                        <div className="flex items-baseline justify-between gap-2 mb-1">
+                          <span className="q-badge font-bold text-[13px]">{idx + 1}.</span>
+                          <span className="q-meta text-[12px] text-[#475569] truncate">{meta}</span>
+                        </div>
+                        <p className="q-stem m-0 mb-1.5 text-[13px] leading-[1.5] whitespace-pre-line">{q.stem}</p>
+                        <div className="flex flex-col gap-0.5">
+                          {q.options.map((opt) => {
+                            const isCorrect = bookletMode === 'solution' && (q.correctAnswer === opt.key || !!opt.isCorrect);
+                            return (
+                              <div key={opt.key} className={`q-option${isCorrect ? ' correct' : ''} flex gap-1.5 text-[13px] leading-snug px-1 rounded ${isCorrect ? 'font-semibold text-[#065f46] bg-[#ecfdf5]' : ''}`}>
+                                <span className="font-semibold shrink-0">{opt.key})</span>
+                                <span>{opt.text}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        {bookletMode === 'solution' && (
+                          <div className="explanation mt-2 px-2.5 py-1.5 border-l-2 border-[#059669] bg-[#f0fdf4] text-[12px] leading-[1.5] text-[#334155]">
+                            <strong className="text-[#065f46]">Doğru cevap: {q.correctAnswer || 'belirtilmemiş'}</strong>
+                            {q.explanation && <span className="block whitespace-pre-line mt-0.5">{q.explanation.replace(/【([^】]+)】\s*:?\s*/g, '\n$1: ').trim()}</span>}
+                          </div>
+                        )}
                       </div>
                     );
                   })}
                 </div>
-              </div>
-            )}
+              )}
 
-            {/* Official Footer */}
-            <div className="mt-8 pt-4 border-t border-slate-200 flex items-center justify-between text-[10px] text-slate-400 font-mono">
-              <span>MedSoru - Tıp Fakültesi Kurul Sınavı Arşivi</span>
-              <span>Sayfa Sonu • Başarılar Dileriz</span>
+              {showKey && filteredQuestions.length > 0 && (
+                <div className={`exam-answer-table answer-key-section ${bookletMode === 'answers_only' ? '' : 'mt-6 pt-4 border-t-2 border-[#0f172a]'}`}>
+                  <h3 className="m-0 mb-3 text-[14px] font-bold uppercase tracking-[0.04em]">Cevap anahtarı</h3>
+                  <div className="answer-grid grid grid-cols-5 sm:grid-cols-10 gap-1 text-center">
+                    {filteredQuestions.map((q, idx) => {
+                      const ans = q.correctAnswer || '–';
+                      return (
+                        <div key={q.id + '-' + idx} className="answer-cell border border-[#cbd5e1] rounded py-1">
+                          <span className="num block text-[12px] text-[#64748b] font-mono">{idx + 1}</span>
+                          <span className={`ans block text-[14px] font-bold ${ans === '–' ? 'text-[#94a3b8]' : 'text-[#1E4FD8]'}`}>{ans}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

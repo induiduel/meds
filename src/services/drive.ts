@@ -65,194 +65,313 @@ export function evaluateAutoBackupThreshold(
   };
 }
 
+export type BookletMode = 'student' | 'solution' | 'answers_only';
+
+export interface BookletPdfOptions {
+  /** student: no answers; solution: answers + explanations; answers_only: just the key */
+  mode?: BookletMode;
+  /** Append the answer key table (always on for answers_only) */
+  includeAnswerKey?: boolean;
+  title?: string;
+  subtitle?: string;
+}
+
+// ---------- Unicode font (Turkish glyphs) ----------
+// jsPDF's built-in Helvetica has no ş/ğ/ı/İ, so we embed Liberation Sans (SIL OFL,
+// shipped in public/fonts). Fetched once, only when a PDF is generated.
+type FontSet = { regular: string; bold: string; italic: string };
+let fontCache: Promise<FontSet | null> | null = null;
+
+const toBase64 = (buf: ArrayBuffer) => {
+  const bytes = new Uint8Array(buf);
+  let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+};
+
+const loadFonts = (): Promise<FontSet | null> => {
+  if (!fontCache) {
+    const base = (import.meta as any).env?.BASE_URL || '/';
+    const get = (f: string) =>
+      fetch(`${base}fonts/${f}`).then((r) => {
+        if (!r.ok) throw new Error(`${f}: ${r.status}`);
+        return r.arrayBuffer();
+      });
+    fontCache = Promise.all([get('LiberationSans-Regular.ttf'), get('LiberationSans-Bold.ttf'), get('LiberationSans-Italic.ttf')])
+      .then(([r, b, i]) => ({ regular: toBase64(r), bold: toBase64(b), italic: toBase64(i) }))
+      .catch((e) => {
+        console.warn('PDF fontu yüklenemedi, ASCII karşılıklar kullanılacak:', e);
+        fontCache = null;
+        return null;
+      });
+  }
+  return fontCache;
+};
+
+const TR_ASCII: Record<string, string> = { ş: 's', Ş: 'S', ğ: 'g', Ğ: 'G', ı: 'i', İ: 'I', ç: 'c', Ç: 'C', ö: 'o', Ö: 'O', ü: 'u', Ü: 'U' };
+const asciiFold = (s: string) => s.replace(/[şŞğĞıİçÇöÖüÜ]/g, (c) => TR_ASCII[c] || c);
+
+/** Redactor explanations use 【Başlık】: markers; turn them into readable paragraphs. */
+const cleanExplanation = (raw: string) =>
+  raw
+    .replace(/【([^】]+)】\s*:?\s*/g, (_m, h) => `\n${String(h).trim()}: `)
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+
 /**
- * Generates a clean, multi-page formatted medical exam PDF
+ * Generates an A4 exam booklet PDF with real Turkish text, per-line page breaks,
+ * sequential numbering and the layout options chosen in the PDF dialog.
  */
 export async function generateBookletPdfBlob(
   committee: Committee | undefined,
-  questions: QuestionItem[]
+  questions: QuestionItem[],
+  options: BookletPdfOptions = {}
 ): Promise<Blob> {
+  const mode: BookletMode = options.mode || 'solution';
+  const includeKey = mode === 'answers_only' ? true : options.includeAnswerKey ?? true;
+
   const { jsPDF } = await import('jspdf');
-  const doc = new jsPDF({
-    orientation: 'portrait',
-    unit: 'mm',
-    format: 'a4',
-  });
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
 
-  const pageWidth = doc.internal.pageSize.getWidth();
-  const pageHeight = doc.internal.pageSize.getHeight();
-  const margin = 15;
-  const contentWidth = pageWidth - margin * 2;
-  let cursorY = margin;
+  const fonts = await loadFonts();
+  let FONT = 'helvetica';
+  let T = (s: string) => asciiFold(s);
+  if (fonts) {
+    doc.addFileToVFS('LiberationSans-Regular.ttf', fonts.regular);
+    doc.addFont('LiberationSans-Regular.ttf', 'Liberation', 'normal');
+    doc.addFileToVFS('LiberationSans-Bold.ttf', fonts.bold);
+    doc.addFont('LiberationSans-Bold.ttf', 'Liberation', 'bold');
+    doc.addFileToVFS('LiberationSans-Italic.ttf', fonts.italic);
+    doc.addFont('LiberationSans-Italic.ttf', 'Liberation', 'italic');
+    FONT = 'Liberation';
+    T = (s: string) => s;
+  }
 
-  const addHeader = (pageNum: number) => {
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(10);
-    doc.setTextColor(15, 118, 110); // Teal
-    doc.text(
-      `MEDSORU - TIP FAKÜLTESİ DÖNEM ${committee?.year || 3} KURUL ÇIKMIŞ SORULARI`,
-      margin,
-      10
-    );
+  // ---- Design tokens (match the site: ink, muted ink, line, accent, green) ----
+  type RGB = [number, number, number];
+  const INK: RGB = [14, 26, 38];
+  const INK2: RGB = [74, 88, 104];
+  const INK3: RGB = [120, 132, 146];
+  const LINE: RGB = [226, 231, 236];
+  const ACCENT: RGB = [30, 79, 216];
+  const ACCENT_SOFT: RGB = [232, 238, 253];
+  const OK: RGB = [21, 122, 62];
+  const OK_SOFT: RGB = [236, 248, 241];
+  const CANVAS: RGB = [246, 247, 249];
 
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(8);
-    doc.setTextColor(100, 116, 139);
-    doc.text(`Sayfa ${pageNum}`, pageWidth - margin - 15, 10);
+  const pageW = doc.internal.pageSize.getWidth();
+  const pageH = doc.internal.pageSize.getHeight();
+  const M = 20; // generous side margins
+  const TOP = 24; // first baseline on continuation pages
+  const BOTTOM = pageH - 20; // last baseline before the footer
+  const W = pageW - M * 2;
+  const BODY_X = M + 10; // text column right of the number badge
+  const BODY_W = W - 10;
+  let y = M;
 
-    doc.setDrawColor(226, 232, 240);
-    doc.setLineWidth(0.3);
-    doc.line(margin, 12, pageWidth - margin, 12);
+  const title = (options.title || committee?.name || 'Dönem 3 Kurul Sınavı').trim();
+  const shortTitle = title.length > 80 ? title.slice(0, 77) + '…' : title;
+
+  const style = (weight: 'normal' | 'bold' | 'italic', size: number, rgb: RGB) => {
+    doc.setFont(FONT, weight);
+    doc.setFontSize(size);
+    doc.setTextColor(rgb[0], rgb[1], rgb[2]);
+  };
+  const fill = (rgb: RGB) => doc.setFillColor(rgb[0], rgb[1], rgb[2]);
+  const stroke = (rgb: RGB, w = 0.2) => {
+    doc.setDrawColor(rgb[0], rgb[1], rgb[2]);
+    doc.setLineWidth(w);
   };
 
-  const checkPageBreak = (neededHeight: number) => {
-    if (cursorY + neededHeight > pageHeight - margin) {
-      doc.addPage();
-      const pageNum = doc.getNumberOfPages();
-      addHeader(pageNum);
-      cursorY = 20;
+  const runningHeader = () => {
+    style('normal', 7, INK3);
+    doc.text(T(shortTitle), M, 13);
+    stroke(LINE);
+    doc.line(M, 15.5, pageW - M, 15.5);
+  };
+  const newPage = () => {
+    doc.addPage();
+    runningHeader();
+    y = TOP;
+  };
+  const ensure = (h: number) => {
+    if (y + h > BOTTOM) newPage();
+  };
+
+  /**
+   * Writes wrapped text line by line (so long stems/explanations flow across pages).
+   * `decorate` runs before each line so backgrounds/bars follow the text onto new pages.
+   */
+  const write = (text: string, x: number, width: number, lineH: number, decorate?: (top: number, h: number) => void) => {
+    const lines: string[] = doc.splitTextToSize(T(text), width);
+    for (const line of lines) {
+      ensure(lineH);
+      decorate?.(y - lineH * 0.74, lineH);
+      doc.text(line, x, y);
+      y += lineH;
     }
   };
 
-  // Title Page Header
-  addHeader(1);
-  cursorY = 22;
-
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(15);
-  doc.setTextColor(15, 23, 42); // Slate-900
-  const titleText = (committee?.name || 'DÖNEM 3 KURUL SINAVI').toUpperCase();
-  doc.text(titleText, margin, cursorY);
-  cursorY += 7;
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(9);
-  doc.setTextColor(71, 85, 105);
-  doc.text(
-    `Akademik Yıl: ${committee?.term || '2025-2026'}  |  Tarih: ${new Date().toLocaleDateString('tr-TR')}  |  Kolektif Öğrenci Rekonstrüksiyon Arşivi`,
-    margin,
-    cursorY
+  // ---------- Title block ----------
+  y = M + 2;
+  style('bold', 7.5, ACCENT);
+  doc.text(T('MEDSORU · SORU KİTAPÇIĞI'), M, y);
+  y += 7;
+  style('bold', 15, INK);
+  write(title, M, W, 6.4);
+  y += 0.5;
+  const modeLabel = mode === 'student' ? 'Öğrenci sınavı' : mode === 'solution' ? 'Çözümlü ve açıklamalı' : 'Cevap anahtarı';
+  style('normal', 8.5, INK2);
+  write(
+    [
+      `${questions.length} soru`,
+      mode !== 'answers_only' ? `~${Math.round(questions.length * 1.1)} dk` : '',
+      modeLabel,
+      options.subtitle || '',
+      new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
+    ]
+      .filter(Boolean)
+      .join('   ·   '),
+    M,
+    W,
+    4.2
   );
-  cursorY += 5;
+  y += 3;
 
-  doc.setDrawColor(15, 118, 110);
-  doc.setLineWidth(0.6);
-  doc.line(margin, cursorY, pageWidth - margin, cursorY);
-  cursorY += 8;
-
-  // Filter and sort questions by number
-  const sortedQuestions = [...questions].sort(
-    (a, b) => a.questionNumber - b.questionNumber
-  );
-
-  sortedQuestions.forEach((q) => {
-    const hasRec = !!q.reconstruction;
-    const stem = hasRec
-      ? q.reconstruction!.stem
-      : (q.fragments?.map((f) => f.text).join(' ') || (q as any).stem || (q as any).rawQuestion?.stem || '');
-
-    const options = (hasRec
-      ? q.reconstruction!.options
-      : q.options || (q as any).rawQuestion?.options || []).filter(Boolean);
-
-    // Estimate box height
-    const splitStem = doc.splitTextToSize(
-      `SORU ${q.questionNumber} (${q.discipline}): ${stem || 'Soru kökü derleniyor...'}`,
-      contentWidth
+  if (mode === 'student') {
+    // short instructions card
+    const lines: string[] = doc.splitTextToSize(
+      T('Her sorunun tek doğru cevabı vardır. Cevaplarını optik forma işaretle. Cevap anahtarı ayrı sayfadadır.'),
+      W - 8
     );
-    const estimatedHeight = 15 + splitStem.length * 4.5 + options.length * 5 + (hasRec ? 20 : 0);
+    const h = lines.length * 3.8 + 5;
+    fill(CANVAS);
+    doc.roundedRect(M, y, W, h, 1.5, 1.5, 'F');
+    style('normal', 8, INK2);
+    doc.text(lines, M + 4, y + 4.6);
+    y += h + 4;
+  }
 
-    checkPageBreak(Math.min(estimatedHeight, 80));
+  stroke(INK, 0.4);
+  doc.line(M, y, pageW - M, y);
+  y += 9;
 
-    // Question Box background
-    doc.setFillColor(248, 250, 252);
-    doc.setDrawColor(226, 232, 240);
-    doc.roundedRect(margin, cursorY, contentWidth, 7, 1, 1, 'FD');
+  // ---------- Questions ----------
+  if (mode !== 'answers_only') {
+    questions.forEach((q, idx) => {
+      const rec = q.reconstruction;
+      const stem = (rec?.stem || (q as any).rawStem || q.fragments?.map((f) => f.text).join(' ') || (q as any).stem || '').trim();
+      const opts = ((rec?.options as any[]) || q.options || []).filter((o: any) => o && o.key && String(o.text || '').trim());
+      const answer = rec?.correctAnswer || q.claimedAnswer || '';
+      const num = idx + 1;
 
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(9);
-    doc.setTextColor(15, 118, 110);
-    doc.text(`SORU #${q.questionNumber} • ${q.discipline} - ${q.topic}`, margin + 3, cursorY + 5);
+      // Keep the badge with at least the first three stem lines
+      ensure(8 + 3 * 4.2);
 
-    if (hasRec) {
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(8);
-      doc.setTextColor(16, 149, 193);
-      doc.text(`AI Güven: %${q.reconstruction?.confidenceScore}`, pageWidth - margin - 30, cursorY + 5);
-    }
+      // Number badge
+      const badge = String(num);
+      fill(ACCENT_SOFT);
+      doc.roundedRect(M, y - 4.1, 7, 5.6, 1.2, 1.2, 'F');
+      style('bold', 8, ACCENT);
+      doc.text(T(badge), M + 3.5, y - 0.2, { align: 'center' });
 
-    cursorY += 10;
+      // Meta (discipline · year · original no.)
+      const meta = [q.discipline, q.examYear, q.questionNumber ? `S.${q.questionNumber}` : ''].filter(Boolean).join('  ·  ');
+      style('normal', 7, INK3);
+      doc.text(T(meta.toLocaleUpperCase('tr-TR')), BODY_X, y - 0.4, { maxWidth: BODY_W });
+      y += 5;
 
-    // Question stem
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-    doc.setTextColor(15, 23, 42);
-    doc.text(splitStem, margin + 2, cursorY);
-    cursorY += splitStem.length * 4.5 + 2;
+      // Stem
+      style('normal', 9.2, INK);
+      write(stem || '(Soru kökü henüz derlenmedi)', BODY_X, BODY_W, 4.3);
+      y += 1.6;
 
-    // Options
-    options.forEach((opt) => {
-      checkPageBreak(8);
-      const isCorrect = hasRec && q.reconstruction!.correctAnswer === opt.key;
-      const optText = `${opt.key}) ${opt.text}${isCorrect ? '  [DOĞRU CEVAP]' : ''}`;
-      const splitOpt = doc.splitTextToSize(optText, contentWidth - 8);
+      // Options
+      opts.forEach((o: any) => {
+        const isCorrect = mode === 'solution' && !!answer && o.key === answer;
+        style(isCorrect ? 'bold' : 'normal', 8.7, isCorrect ? OK : INK);
+        write(
+          `${o.key})  ${String(o.text).trim()}`,
+          BODY_X + 2,
+          BODY_W - 6,
+          4.1,
+          isCorrect
+            ? (top, h) => {
+                fill(OK_SOFT);
+                doc.rect(BODY_X, top - 0.5, BODY_W, h, 'F');
+              }
+            : undefined
+        );
+        y += 0.6;
+      });
 
-      if (isCorrect) {
-        doc.setFont('helvetica', 'bold');
-        doc.setTextColor(5, 150, 105); // Emerald
-      } else {
-        doc.setFont('helvetica', 'normal');
-        doc.setTextColor(51, 65, 85);
+      // Explanation with an accent bar that follows the text across pages
+      if (mode === 'solution') {
+        const exp = cleanExplanation(rec?.explanation || '');
+        y += 2;
+        const bar = (top: number, h: number) => {
+          fill(OK);
+          doc.rect(BODY_X, top, 0.6, h + 0.2, 'F');
+        };
+        style('bold', 7.8, OK);
+        write(`Doğru cevap: ${answer || 'belirtilmemiş'}`, BODY_X + 3.5, BODY_W - 4, 3.7, bar);
+        if (exp) {
+          style('normal', 7.8, INK2);
+          exp
+            .split('\n')
+            .map((p) => p.trim())
+            .filter(Boolean)
+            .forEach((para) => write(para, BODY_X + 3.5, BODY_W - 4, 3.6, bar));
+        }
       }
 
-      doc.text(splitOpt, margin + 5, cursorY);
-      cursorY += splitOpt.length * 4 + 1.5;
+      // Breathing room + hairline between questions
+      y += 4;
+      ensure(2);
+      stroke(LINE);
+      doc.line(BODY_X, y, pageW - M, y);
+      y += 7.5;
     });
+  }
 
-    // Medical Explanation
-    if (hasRec && q.reconstruction?.explanation) {
-      checkPageBreak(15);
-      doc.setFont('helvetica', 'italic');
-      doc.setFontSize(8);
-      doc.setTextColor(4, 120, 87);
-      const splitExp = doc.splitTextToSize(
-        `Gerekçe & Patofizyoloji: ${q.reconstruction.explanation}`,
-        contentWidth - 6
-      );
-      doc.text(splitExp, margin + 3, cursorY);
-      cursorY += splitExp.length * 3.8 + 3;
-    }
+  // ---------- Answer key ----------
+  if (includeKey && questions.length > 0) {
+    if (mode !== 'answers_only') newPage();
+    style('bold', 7.5, ACCENT);
+    doc.text(T('CEVAP ANAHTARI'), M, y);
+    y += 4;
+    style('normal', 8.5, INK2);
+    doc.text(T(`${questions.length} soru`), M, y);
+    y += 7;
+    const cols = 10;
+    const gap = 1.6;
+    const cellW = (W - gap * (cols - 1)) / cols;
+    const cellH = 10;
+    questions.forEach((q, idx) => {
+      const col = idx % cols;
+      if (col === 0) ensure(cellH + gap);
+      const x = M + col * (cellW + gap);
+      const ans = q.reconstruction?.correctAnswer || q.claimedAnswer || '–';
+      fill(CANVAS);
+      doc.roundedRect(x, y, cellW, cellH, 1.2, 1.2, 'F');
+      style('normal', 6.5, INK3);
+      doc.text(String(idx + 1), x + cellW / 2, y + 3.4, { align: 'center' });
+      style('bold', 10, ans === '–' ? INK3 : ACCENT);
+      doc.text(T(ans), x + cellW / 2, y + 8, { align: 'center' });
+      if (col === cols - 1 || idx === questions.length - 1) y += cellH + gap;
+    });
+  }
 
-    // Divider line between questions
-    cursorY += 4;
-    doc.setDrawColor(241, 245, 249);
-    doc.line(margin, cursorY, pageWidth - margin, cursorY);
-    cursorY += 4;
-  });
-
-  // End Answer Key Table
-  checkPageBreak(40);
-  cursorY += 6;
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(11);
-  doc.setTextColor(15, 23, 42);
-  doc.text('CEVAP ANAHTARI ÖZETİ', margin, cursorY);
-  cursorY += 6;
-
-  const reconstructedOnly = sortedQuestions.filter((q) => q.reconstruction);
-  let keyRow = '';
-  reconstructedOnly.forEach((q, idx) => {
-    keyRow += `${q.questionNumber}: ${q.reconstruction!.correctAnswer}   `;
-    if ((idx + 1) % 10 === 0 || idx === reconstructedOnly.length - 1) {
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(8);
-      doc.setTextColor(71, 85, 105);
-      doc.text(keyRow, margin, cursorY);
-      cursorY += 5;
-      keyRow = '';
-      checkPageBreak(10);
-    }
-  });
+  // ---------- Footer with page numbers ----------
+  const total = doc.getNumberOfPages();
+  for (let p = 1; p <= total; p++) {
+    doc.setPage(p);
+    stroke(LINE);
+    doc.line(M, pageH - 13.5, pageW - M, pageH - 13.5);
+    style('normal', 7, INK3);
+    doc.text(T('MedSoru · Dönem 3 kurul soru arşivi'), M, pageH - 9.5);
+    doc.text(T(`${p} / ${total}`), pageW - M, pageH - 9.5, { align: 'right' });
+  }
 
   return doc.output('blob');
 }
@@ -405,9 +524,10 @@ export async function uploadBookletPdfToDrive({
 export async function downloadBookletPdfLocally(
   committee: Committee | undefined,
   questions: QuestionItem[],
-  customFileName?: string
+  customFileName?: string,
+  options?: BookletPdfOptions
 ) {
-  const blob = await generateBookletPdfBlob(committee, questions);
+  const blob = await generateBookletPdfBlob(committee, questions, options);
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;

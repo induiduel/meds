@@ -218,7 +218,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="bg-white border-b border-line sticky top-0 z-30 print:hidden">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 sm:h-[68px] flex items-center gap-3 lg:gap-4 xl:gap-6">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 sm:h-[68px] flex items-center gap-2 sm:gap-3 lg:gap-4">
         <button
           type="button"
           onClick={() => setActiveTab('quick_add')}
@@ -227,9 +227,6 @@ export const Header: React.FC<HeaderProps> = ({
         >
           <BrandMark size={30} />
           <span className="font-display font-bold text-[18px] sm:text-[20px] tracking-[-0.02em] text-ink">MedSoru</span>
-          <span className="hidden 2xl:inline font-mono text-[11px] px-[7px] py-[3px] border border-line rounded-md text-ink-2">
-            DÖNEM {currentCommittee?.year || 3}
-          </span>
         </button>
 
         <nav aria-label="Ana menü" className="hidden lg:flex items-center gap-0.5 flex-1 min-w-0">
@@ -291,7 +288,7 @@ export const Header: React.FC<HeaderProps> = ({
             aria-haspopup="menu"
             aria-expanded={menuOpen}
             aria-label="Hesap ve araçlar"
-            className={`h-10 pl-1 pr-2 rounded-full border bg-white flex items-center gap-1 cursor-pointer ${
+            className={`h-10 pl-1 pr-1 sm:pr-2 rounded-full border bg-white flex items-center gap-1 cursor-pointer ${
               menuOpen ? 'border-accent' : 'border-line hover:border-line-2'
             }`}
           >
@@ -302,7 +299,7 @@ export const Header: React.FC<HeaderProps> = ({
                 {currentUser ? initialsOf(currentUser) : <UserRound className="w-4 h-4" />}
               </span>
             )}
-            <ChevronDown className={`w-3.5 h-3.5 text-ink-2 transition-transform ${menuOpen ? 'rotate-180' : ''}`} />
+            <ChevronDown className={`hidden sm:block w-3.5 h-3.5 text-ink-2 transition-transform ${menuOpen ? 'rotate-180' : ''}`} />
           </button>
 
           {menuOpen && (
