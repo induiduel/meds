@@ -1866,7 +1866,7 @@ JSON FORMATI:
 
       try {
         await multiDbManager.saveQuestion(target);
-        await FirestoreDbService.deleteQuestion(unassignedId);
+        await multiDbManager.deleteQuestion(unassignedId);
       } catch (e) {}
       return target;
     } else {
@@ -1926,11 +1926,11 @@ JSON FORMATI:
 
     saveLocalDb(db);
 
-    // Cloud DB sync
+    // Cloud DB sync (Supabase + Firestore)
     try {
       await multiDbManager.saveQuestion(consolidated);
       for (const satId of mergedIds) {
-        await FirestoreDbService.deleteQuestion(satId);
+        await multiDbManager.deleteQuestion(satId);
       }
     } catch (e) {
       console.warn('Draft merge cloud sync warning:', e);

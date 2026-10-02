@@ -6,6 +6,7 @@
  */
 import { QuestionItem } from '../types';
 import { ApiService } from './api';
+import { normalizeDonem3Discipline, isDonem3Question } from '../data/curriculumData';
 
 export type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 
@@ -105,7 +106,7 @@ const normalizeArchive = (q: any): StudyQuestion | null => {
     committeeId: q.committeeId || '',
     year: q.examYear || '',
     number: Number(q.questionNumber) || 0,
-    discipline: q.discipline || 'Genel',
+    discipline: normalizeDonem3Discipline(q.discipline) || q.discipline || 'Genel',
     topic: q.topic || '',
     stem,
     options: opts,
@@ -134,7 +135,7 @@ const normalizePool = (q: QuestionItem): StudyQuestion | null => {
     committeeId: q.committeeId,
     year: q.examYear || '',
     number: q.questionNumber,
-    discipline: q.discipline || 'Genel',
+    discipline: normalizeDonem3Discipline(q.discipline) || q.discipline || 'Genel',
     topic: q.topic || '',
     stem,
     options: opts,
@@ -153,6 +154,7 @@ export const loadArchiveBank = (): Promise<StudyQuestion[]> => {
       .then((list) => {
         const seen = new Set<string>();
         archiveCache = (list || [])
+          .filter(isDonem3Question)
           .map(normalizeArchive)
           .filter((q): q is StudyQuestion => !!q && !seen.has(q.id) && !!seen.add(q.id));
         return archiveCache;

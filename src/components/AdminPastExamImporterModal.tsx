@@ -23,6 +23,7 @@ import {
 import { Committee, QuestionItem } from '../types';
 import { ApiService } from '../services/api';
 import { InfoPopover } from './InfoPopover';
+import { DONEM3_CURRICULUM_DISCIPLINES } from '../data/curriculumData';
 
 interface AdminPastExamImporterModalProps {
   isOpen: boolean;
