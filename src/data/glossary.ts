@@ -111,31 +111,52 @@ if (Array.isArray(rawGlossary)) {
   }
 }
 
-// 2. Process medical_encyclopedia.json (Enrich and fill empty definitions)
+// 2. Process medical_encyclopedia.json (Enrich and fill definitions)
 if (Array.isArray(rawEncyclopedia)) {
   for (const enc of rawEncyclopedia as any[]) {
-    if (!enc || !enc.title) continue;
-    const term = String(enc.title).trim();
+    if (!enc) continue;
+    const term = String(enc.term || enc.title || '').trim();
+    if (!term) continue;
     const normKey = term.toLowerCase();
 
-    // Summary as main definition
-    const definition = String(enc.summary || '').trim();
+    // Definition from definition, description, or summary
+    const definition = String(enc.definition || enc.description || enc.summary || '').trim();
     if (!definition) continue;
 
-    // Clinical Pearls from clinicalSignificance or highYieldFacts
+    // Clinical Pearls from examSpotPearls, lectureContextNotes, morphologyOrMechanism, pitfalls, or clinicalPearls
     const pearlsArr: string[] = [];
+    if (Array.isArray(enc.examSpotPearls)) {
+      pearlsArr.push(...enc.examSpotPearls);
+    }
     if (Array.isArray(enc.clinicalSignificance)) {
       pearlsArr.push(...enc.clinicalSignificance);
     }
     if (Array.isArray(enc.highYieldFacts)) {
       pearlsArr.push(...enc.highYieldFacts);
     }
+    if (typeof enc.clinicalPearls === 'string' && enc.clinicalPearls.trim()) {
+      pearlsArr.push(enc.clinicalPearls.trim());
+    } else if (typeof enc.clinicalPearl === 'string' && enc.clinicalPearl.trim()) {
+      pearlsArr.push(enc.clinicalPearl.trim());
+    }
+    if (typeof enc.morphologyOrMechanism === 'string' && enc.morphologyOrMechanism.trim()) {
+      pearlsArr.push(`Mekanizma: ${enc.morphologyOrMechanism.trim()}`);
+    }
+    if (Array.isArray(enc.pitfallsAndWarnings)) {
+      pearlsArr.push(...enc.pitfallsAndWarnings);
+    }
     const clinicalPearls = pearlsArr.slice(0, 3).join(' • ').trim() || undefined;
 
-    // Aliases from relatedTerms or clean term without parentheses
+    // Aliases from aliases, latinName, relatedTerms, and parentheses in term
     const aliases: string[] = [];
+    if (enc.latinName && typeof enc.latinName === 'string') {
+      aliases.push(enc.latinName.trim());
+    }
+    if (Array.isArray(enc.aliases)) {
+      aliases.push(...enc.aliases.map((a: string) => String(a).trim()));
+    }
     if (Array.isArray(enc.relatedTerms)) {
-      aliases.push(...enc.relatedTerms.map((t: string) => t.replace(/-/g, ' ')));
+      aliases.push(...enc.relatedTerms.map((t: string) => String(t).replace(/-/g, ' ').trim()));
     }
     const parenMatch = term.match(/^(.+?)\s*\((.+?)\)$/);
     if (parenMatch) {
@@ -153,16 +174,19 @@ if (Array.isArray(rawEncyclopedia)) {
         existing.clinicalPearls = clinicalPearls;
       }
       if (aliases.length > 0) {
-        const mergedAliases = Array.from(new Set([...(existing.aliases || []), ...aliases]));
-        existing.aliases = mergedAliases;
+        const mergedAliases = Array.from(new Set([...(existing.aliases || []), ...aliases])).filter(
+          (a) => a.toLowerCase() !== normKey
+        );
+        existing.aliases = mergedAliases.length > 0 ? mergedAliases : undefined;
       }
     } else {
       const rawCat = String(enc.category || enc.discipline || 'Tıbbi Patoloji');
       const category = CATEGORY_LABELS[rawCat.toLowerCase()] || rawCat;
+      const cleanAliases = Array.from(new Set(aliases)).filter((a) => a.toLowerCase() !== normKey);
 
       termMap.set(normKey, {
         term,
-        aliases: aliases.length > 0 ? aliases : undefined,
+        aliases: cleanAliases.length > 0 ? cleanAliases : undefined,
         category,
         definition,
         clinicalPearls,
@@ -174,3 +198,4 @@ if (Array.isArray(rawEncyclopedia)) {
 }
 
 export const GLOSSARY: GlossaryEntry[] = Array.from(termMap.values());
+
