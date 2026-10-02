@@ -17,7 +17,10 @@ import {
   FileQuestion,
   Users,
   ShieldAlert,
-  Zap
+  Zap,
+  Search,
+  CheckSquare,
+  Square
 } from 'lucide-react';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
 import { ApiService } from '../services/api';
@@ -42,11 +45,17 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 }) => {
   const [analysis, setAnalysis] = useState<ClusterAnalysisSummary | null>(null);
   const [loading, setLoading] = useState(false);
-  const [activeFilter, setActiveFilter] = useState<'all' | 'ready' | 'review' | 'vague'>('ready');
+  const [activeFilter, setActiveFilter] = useState<'ready' | 'review' | 'manual' | 'all' | 'vague'>('ready');
   const [mergingClusterId, setMergingClusterId] = useState<string | null>(null);
   const [isBatchMerging, setIsBatchMerging] = useState(false);
   const [feedback, setFeedback] = useState<{ type: 'ok' | 'err'; message: string } | null>(null);
   const [expandedClusterId, setExpandedClusterId] = useState<string | null>(null);
+
+  // Manuel çoklu seçim durumu
+  const [selectedDraftIds, setSelectedDraftIds] = useState<string[]>([]);
+  const [manualAnchorId, setManualAnchorId] = useState<string>('');
+  const [manualSearchQuery, setManualSearchQuery] = useState('');
+  const [isManualMerging, setIsManualMerging] = useState(false);
 
   const committeeId = committee?.id || '';
 
@@ -100,7 +109,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 
   const handleBatchMergeReady = async () => {
     if (!currentUser?.email) return;
-    if (!window.confirm('Yüksek uyumlu (>=%80) tüm taslak kümeleri otomatik birleştirilecek. Onaylıyor musunuz?')) return;
+    if (!window.confirm('Yüksek uyumlu tüm taslak kümeleri otomatik birleştirilecek. Onaylıyor musunuz?')) return;
 
     setIsBatchMerging(true);
     setFeedback(null);
@@ -123,6 +132,56 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     }
   };
 
+  // Manuel Çoklu Birleştirme İşlemi
+  const handleManualMergeSelected = async () => {
+    if (selectedDraftIds.length < 2) {
+      setFeedback({ type: 'err', message: 'Birleştirmek için en az 2 taslak seçmelisiniz.' });
+      return;
+    }
+    if (!currentUser?.email) {
+      setFeedback({ type: 'err', message: 'Taslak birleştirmek için giriş yapmış olmalısınız.' });
+      return;
+    }
+
+    const anchorId = manualAnchorId || selectedDraftIds[0];
+    const satelliteIds = selectedDraftIds.filter((id) => id !== anchorId);
+
+    setIsManualMerging(true);
+    setFeedback(null);
+    try {
+      await ApiService.mergeDraftCluster(
+        currentUser.email,
+        anchorId,
+        satelliteIds,
+        currentUser.displayName || 'Yönetici'
+      );
+      setFeedback({
+        type: 'ok',
+        message: `Seçtiğiniz ${selectedDraftIds.length} taslak başarıyla tek bir soru altında toplandı!`,
+      });
+      setSelectedDraftIds([]);
+      setManualAnchorId('');
+      await onRefreshData();
+      await runAnalysis();
+    } catch (e: any) {
+      setFeedback({ type: 'err', message: e.message || 'Manuel birleştirme başarısız oldu.' });
+    } finally {
+      setIsManualMerging(false);
+    }
+  };
+
+  const toggleSelectDraft = (id: string) => {
+    setSelectedDraftIds((prev) => {
+      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+      if (!manualAnchorId && next.length > 0) {
+        setManualAnchorId(next[0]);
+      } else if (!next.includes(manualAnchorId)) {
+        setManualAnchorId(next[0] || '');
+      }
+      return next;
+    });
+  };
+
   const filteredClusters = useMemo(() => {
     if (!analysis) return [];
     if (activeFilter === 'all') return analysis.clusters;
@@ -130,6 +189,24 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     if (activeFilter === 'review') return analysis.clusters.filter((c) => c.status === 'needs_review');
     return [];
   }, [analysis, activeFilter]);
+
+  const committeeQuestions = useMemo(() => {
+    return questions.filter((q) => !committeeId || q.committeeId === committeeId);
+  }, [questions, committeeId]);
+
+  const manualFilteredQuestions = useMemo(() => {
+    if (!manualSearchQuery.trim()) return committeeQuestions;
+    const q = manualSearchQuery.toLowerCase();
+    return committeeQuestions.filter((item) => {
+      const stem = item.reconstruction?.stem || item.stem || item.fragments?.map((f) => f.text).join(' ') || '';
+      return (
+        stem.toLowerCase().includes(q) ||
+        item.discipline?.toLowerCase().includes(q) ||
+        item.topic?.toLowerCase().includes(q) ||
+        item.questionNumber?.toString() === q
+      );
+    });
+  }, [committeeQuestions, manualSearchQuery]);
 
   if (!isOpen) return null;
 
@@ -150,7 +227,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                 </span>
               </div>
               <p className="text-xs text-slate-300">
-                Farklı kitapçık şık ve numara varyasyonlarını analiz eder, 100 soru hedefine konsolide eder.
+                Tıbbi kavram analizleri, şık permütasyonu ve manuel birleştirme koruması ile 100 soru hedefine konsolide edin.
               </p>
             </div>
           </div>
@@ -241,7 +318,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
               }`}
             >
               <CheckCircle2 className="w-3.5 h-3.5" />
-              Yüksek Uyum (%80+) ({analysis?.clusters.filter((c) => c.status === 'ready_to_merge').length || 0})
+              Yüksek Uyum ({analysis?.clusters.filter((c) => c.status === 'ready_to_merge').length || 0})
             </button>
 
             <button
@@ -254,6 +331,18 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
             >
               <HelpCircle className="w-3.5 h-3.5" />
               İnceleme Bekleyenler ({analysis?.clusters.filter((c) => c.status === 'needs_review').length || 0})
+            </button>
+
+            <button
+              onClick={() => setActiveFilter('manual')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
+                activeFilter === 'manual'
+                  ? 'bg-indigo-600 text-white shadow-sm'
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              <GitMerge className="w-3.5 h-3.5" />
+              Manuel Çoklu Seçim & Birleştir ({selectedDraftIds.length > 0 ? `${selectedDraftIds.length} Seçili` : 'Seç'})
             </button>
 
             <button
@@ -298,7 +387,129 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
           {loading ? (
             <div className="flex flex-col items-center justify-center py-16 gap-3 text-slate-400">
               <RefreshCw className="w-8 h-8 animate-spin text-indigo-500" />
-              <p className="text-sm font-medium">Taslaklar taranıyor, şık permütasyonları ve kitapçık varyasyonları analiz ediliyor...</p>
+              <p className="text-sm font-medium">Taslaklar taranıyor, tıbbi kavramlar ve şık varyasyonları analiz ediliyor...</p>
+            </div>
+          ) : activeFilter === 'manual' ? (
+            // MANUEL ÇOKLU SEÇİM VE BİRLEŞTİRME ARAYÜZÜ
+            <div className="space-y-4">
+              <div className="p-3.5 bg-indigo-50 border border-indigo-200 rounded-xl text-xs text-indigo-950 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="flex items-start gap-2">
+                  <GitMerge className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-sm block">Manuel Taslak Seçimi & Birleştirme:</span>
+                    Aynı soruya ait olduğunu düşündüğünüz taslakları işaretleyin. Sistem hepsini tek bir soru altında toplar, şıkları harmanlar ve mükerrer kayıtları temizler.
+                  </div>
+                </div>
+
+                {selectedDraftIds.length >= 2 && (
+                  <div className="flex items-center gap-2 shrink-0">
+                    <button
+                      onClick={handleManualMergeSelected}
+                      disabled={isManualMerging}
+                      className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-md flex items-center gap-2 cursor-pointer transition-all disabled:opacity-50"
+                    >
+                      <GitMerge className="w-4 h-4" />
+                      {isManualMerging ? 'Birleştiriliyor...' : `Seçilen ${selectedDraftIds.length} Taslağı Birleştir`}
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Arama çubuğu */}
+              <div className="relative">
+                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                <input
+                  type="text"
+                  placeholder="Taslak metni, konu veya ders ara (Örn: Down, Amiloid, Farmakoloji)..."
+                  value={manualSearchQuery}
+                  onChange={(e) => setManualSearchQuery(e.target.value)}
+                  className="w-full bg-white border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-indigo-500 shadow-2xs"
+                />
+              </div>
+
+              {/* Seçilen Taslaklar varsa Anchor seçimi */}
+              {selectedDraftIds.length >= 2 && (
+                <div className="p-3 bg-white rounded-xl border border-indigo-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                  <span className="font-bold text-slate-700">
+                    Ana Soru Kalıbı (Çapa) Olarak Kullanılacak Taslak:
+                  </span>
+                  <select
+                    value={manualAnchorId}
+                    onChange={(e) => setManualAnchorId(e.target.value)}
+                    className="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1 text-xs font-semibold text-slate-800"
+                  >
+                    {selectedDraftIds.map((id) => {
+                      const q = committeeQuestions.find((x) => x.id === id);
+                      return (
+                        <option key={id} value={id}>
+                          {q?.isUnassignedNumber ? 'Numarasız' : `#${q?.questionNumber}`} - {q?.discipline} ({q?.topic})
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+              )}
+
+              {/* Taslak Listesi */}
+              <div className="space-y-2">
+                {manualFilteredQuestions.map((q) => {
+                  const isChecked = selectedDraftIds.includes(q.id);
+                  const isAnchor = manualAnchorId === q.id;
+
+                  return (
+                    <div
+                      key={q.id}
+                      onClick={() => toggleSelectDraft(q.id)}
+                      className={`p-3.5 rounded-xl border transition-all cursor-pointer flex items-start gap-3 ${
+                        isChecked
+                          ? 'bg-indigo-50/60 border-indigo-300 shadow-sm'
+                          : 'bg-white border-slate-200 hover:border-slate-300'
+                      }`}
+                    >
+                      <button
+                        type="button"
+                        className="mt-0.5 text-indigo-600 shrink-0"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleSelectDraft(q.id);
+                        }}
+                      >
+                        {isChecked ? <CheckSquare className="w-5 h-5 text-indigo-600" /> : <Square className="w-5 h-5 text-slate-300" />}
+                      </button>
+
+                      <div className="flex-1 min-w-0 space-y-1 text-xs">
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">
+                            {q.isUnassignedNumber ? 'Numarasız Taslak' : `Soru #${q.questionNumber}`}
+                          </span>
+                          <span className="font-semibold text-indigo-700">{q.discipline}</span>
+                          <span className="text-slate-400">·</span>
+                          <span className="text-slate-600 font-medium truncate">{q.topic}</span>
+                          {isAnchor && (
+                            <span className="ml-auto bg-indigo-600 text-white px-2 py-0.5 rounded-full text-[10px] font-bold">
+                              Ana Çapa
+                            </span>
+                          )}
+                        </div>
+
+                        <p className="text-slate-900 font-medium line-clamp-2">
+                          {q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || 'Metin belirtilmemiş'}
+                        </p>
+
+                        {q.options && q.options.length > 0 && (
+                          <div className="flex flex-wrap gap-1 text-[11px] text-slate-600 pt-1">
+                            {q.options.map((o) => (
+                              <span key={o.key} className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">
+                                <strong>{o.key})</strong> {o.text}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           ) : activeFilter === 'vague' ? (
             // Vague drafts list
@@ -341,10 +552,19 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
               )}
             </div>
           ) : filteredClusters.length === 0 ? (
-            <div className="text-center py-16 text-slate-400 text-sm">
-              <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-2 opacity-80" />
-              <p className="font-semibold text-slate-700">Bu kategoride bekleyen küme bulunmuyor.</p>
-              <p className="text-xs text-slate-400 mt-1">Tüm taslaklar ya birleştirildi ya da benzersiz kabul edildi.</p>
+            <div className="text-center py-16 text-slate-400 text-sm space-y-3">
+              <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto opacity-80" />
+              <p className="font-semibold text-slate-700">Bu kategoride bekleyen otomatik küme bulunmuyor.</p>
+              <p className="text-xs text-slate-400">
+                Soruları doğrudan birleştirmek isterseniz yukarıdaki <strong>"Manuel Çoklu Seçim & Birleştir"</strong> sekmesini kullanabilirsiniz.
+              </p>
+              <button
+                onClick={() => setActiveFilter('manual')}
+                className="px-4 py-2 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+              >
+                <GitMerge className="w-4 h-4" />
+                Manuel Taslak Seçimine Git
+              </button>
             </div>
           ) : (
             // Cluster Cards
@@ -377,7 +597,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                         <div className="flex flex-wrap items-center gap-2">
                           <h3 className="font-bold text-sm text-slate-900">{anchor.discipline}</h3>
                           <span className="text-xs text-slate-400">·</span>
-                          <span className="text-xs font-semibold text-slate-600">{anchor.topic}</span>
+                          <span className="text-xs font-semibold text-slate-600">{cluster.detectedSubject || anchor.topic}</span>
                           <span
                             className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
                               isReady
@@ -503,7 +723,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                         <ul className="list-disc list-inside space-y-0.5 text-[11px] text-indigo-900">
                           <li>Tüm öğrencilerin girdiği ipuçları ve soru parçaları hafıza havuzuna aktarılacak (isimler ve puanlar korunur).</li>
                           <li>Farklı kitapçıklardaki şıklar permütasyon filtresinden geçirilerek eksiksiz 5 şık oluşturulacaktır.</li>
-                          <li>Fazladan açılan mükerrer taslaklar veritabanından güvenle arşivlenecek, soru sayısı 100 hedefine yaklaşacaktır.</li>
+                          <li>Fazladan açılan mükerrer taslaklar veritabanından güvenle temizlenecek, soru sayısı 100 hedefine yaklaşacaktır.</li>
                         </ul>
                       </div>
                     </div>
@@ -517,7 +737,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         {/* Modal Footer */}
         <div className="px-5 py-3 border-t border-slate-200 flex items-center justify-between bg-white text-xs text-slate-500">
           <span>
-            MedSoru Çok Katmanlı Kümeleme Motoru · Karışık Şık & Numara Korumalı
+            MedSoru Tıbbi Kavram & Permütasyon Korumalı Kümeleme Motoru
           </span>
           <button
             onClick={onClose}

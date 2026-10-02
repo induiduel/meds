@@ -377,7 +377,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
             {/* Discipline */}
             <div>
               <label className="block text-[11px] font-bold text-slate-700 mb-1">
-                Ders / Branş Filtresi
+                Ders / Branş (Dönem 3 Müfredatı)
               </label>
               <select
                 value={defaultDiscipline}
@@ -385,15 +385,11 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
                 className="w-full bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-800"
               >
                 <option value="Otomatik (Yapay Zeka Tespit Etsin)">Otomatik (Yapay Zeka Tespit Etsin)</option>
-                <option value="Tıbbi Patoloji">Tıbbi Patoloji</option>
-                <option value="Tıbbi Farmakoloji">Tıbbi Farmakoloji</option>
-                <option value="Tıbbi Mikrobiyoloji">Tıbbi Mikrobiyoloji</option>
-                <option value="İç Hastalıkları (Dahiliye)">İç Hastalıkları (Dahiliye)</option>
-                <option value="Pediatri">Pediatri</option>
-                <option value="Anatomi">Anatomi</option>
-                <option value="Histoloji ve Embriyoloji">Histoloji ve Embriyoloji</option>
-                <option value="Fizyoloji">Fizyoloji</option>
-                <option value="Tıbbi Biyokimya">Tıbbi Biyokimya</option>
+                {DONEM3_CURRICULUM_DISCIPLINES.map((d) => (
+                  <option key={d} value={d}>
+                    {d}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
