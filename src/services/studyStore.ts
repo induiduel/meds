@@ -85,11 +85,19 @@ const VALID: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
 
 const normalizeArchive = (q: any): StudyQuestion | null => {
   const rec = q?.reconstruction;
-  const opts = (rec?.options || q?.rawQuestion?.options || [])
-    .filter((o: any) => o && VALID.includes(o.key) && String(o.text || '').trim())
-    .map((o: any) => ({ key: o.key as OptionKey, text: String(o.text).trim() }));
-  const answer = (rec?.correctAnswer || rec?.options?.find((o: any) => o.isCorrect)?.key || q?.rawQuestion?.claimedAnswer) as OptionKey;
-  const stem = String(rec?.stem || q?.rawQuestion?.stem || '').trim();
+  const rawOpts = rec?.options || q?.options || q?.rawQuestion?.options || [];
+  const opts = rawOpts
+    .filter((o: any) => o && VALID.includes(String(o.key || '').trim().toUpperCase() as OptionKey) && String(o.text || '').trim())
+    .map((o: any) => ({ key: String(o.key || '').trim().toUpperCase() as OptionKey, text: String(o.text).trim() }));
+  const answer = (
+    rec?.correctAnswer ||
+    q?.correctAnswer ||
+    rec?.options?.find((o: any) => o.isCorrect)?.key ||
+    q?.options?.find((o: any) => o.isCorrect)?.key ||
+    q?.claimedAnswer ||
+    q?.rawQuestion?.claimedAnswer
+  ) as OptionKey;
+  const stem = String(rec?.stem || q?.stem || q?.rawQuestion?.stem || '').trim();
   if (!stem || opts.length < 2 || !VALID.includes(answer) || !opts.some((o: any) => o.key === answer)) return null;
   return {
     id: String(q.id),
@@ -102,13 +110,24 @@ const normalizeArchive = (q: any): StudyQuestion | null => {
     stem,
     options: opts,
     answer,
-    explanation: String(rec?.explanation || '').trim(),
+    explanation: String(rec?.explanation || q?.explanation || '').trim(),
   };
 };
 
 const normalizePool = (q: QuestionItem): StudyQuestion | null => {
   const rec = q.reconstruction;
-  if (q.status !== 'completed' || !rec || !rec.stem || !rec.correctAnswer) return null;
+  const stem = String(rec?.stem || q.stem || (q.fragments && q.fragments.length > 0 ? q.fragments.map((f: any) => f.text).join(' ') : '')).trim();
+  const rawOpts = rec?.options && rec.options.length >= 2 ? rec.options : q.options || [];
+  const opts = rawOpts
+    .filter((o: any) => o && VALID.includes(String(o.key || '').trim().toUpperCase() as OptionKey) && String(o.text || '').trim())
+    .map((o: any) => ({ key: String(o.key || '').trim().toUpperCase() as OptionKey, text: String(o.text).trim() }));
+  const answer = (
+    rec?.correctAnswer ||
+    q.claimedAnswer ||
+    rec?.options?.find((o: any) => o.isCorrect)?.key ||
+    q.options?.find((o: any) => o.isCorrect)?.key
+  ) as OptionKey;
+  if (!stem || opts.length < 2 || !VALID.includes(answer) || !opts.some((o) => o.key === answer)) return null;
   return {
     id: q.id,
     source: 'havuz',
@@ -117,10 +136,10 @@ const normalizePool = (q: QuestionItem): StudyQuestion | null => {
     number: q.questionNumber,
     discipline: q.discipline || 'Genel',
     topic: q.topic || '',
-    stem: rec.stem,
-    options: rec.options.map((o) => ({ key: o.key, text: o.text })),
-    answer: rec.correctAnswer,
-    explanation: rec.explanation || '',
+    stem,
+    options: opts,
+    answer,
+    explanation: rec?.explanation || '',
   };
 };
 

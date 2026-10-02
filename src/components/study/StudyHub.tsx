@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { ListChecks, Target, NotebookPen, Zap } from 'lucide-react';
 import { Committee, QuestionItem } from '../../types';
 import { StudyQuestion, loadArchiveBank, buildBank, getProgress, getReview, getTestHistory, getNotes } from '../../services/studyStore';
+import { filterCurrent2026_2027Committees } from '../../services/firestoreDb';
 import { SolveView } from './SolveView';
 import { SelfTestView } from './SelfTestView';
 import { NotesView } from './NotesView';
@@ -14,10 +15,17 @@ const SECTION_KEY = 'medsoru_study_section';
 interface StudyHubProps {
   questions: QuestionItem[];
   committees: Committee[];
+  selectedCommitteeId?: string;
+  onSelectCommittee?: (id: string) => void;
   onStartQuickTest: () => void;
 }
 
-export const StudyHub: React.FC<StudyHubProps> = ({ questions, committees, onStartQuickTest }) => {
+export const StudyHub: React.FC<StudyHubProps> = ({
+  questions,
+  committees,
+  selectedCommitteeId,
+  onStartQuickTest,
+}) => {
   const [section, setSection] = useState<StudySection>(() => {
     try {
       const s = localStorage.getItem(SECTION_KEY) as StudySection | null;
@@ -29,6 +37,9 @@ export const StudyHub: React.FC<StudyHubProps> = ({ questions, committees, onSta
   const [archive, setArchive] = useState<StudyQuestion[]>([]);
   const [loading, setLoading] = useState(true);
   const [tick, setTick] = useState(0);
+
+  // Strict 2026-2027 committees
+  const cleanCommittees = useMemo(() => filterCurrent2026_2027Committees(committees), [committees]);
 
   useEffect(() => {
     let alive = true;
@@ -87,7 +98,14 @@ export const StudyHub: React.FC<StudyHubProps> = ({ questions, committees, onSta
             {stats.review}
           </p>
         </div>
-        <button type="button" onClick={onStartQuickTest} disabled={!quickReady} className={`${btnSecondary} shrink-0 px-3`} title="Seçili kurulun kurulan sorularıyla tam ekran hızlı test" aria-label="Havuzdan hızlı test">
+        <button
+          type="button"
+          onClick={onStartQuickTest}
+          disabled={!quickReady}
+          className={`${btnSecondary} shrink-0 px-3`}
+          title="Seçili kurulun kurulan sorularıyla tam ekran hızlı test"
+          aria-label="Havuzdan hızlı test"
+        >
           <Zap className="w-4 h-4" /> <span className="hidden sm:inline">Havuzdan hızlı test</span>
         </button>
       </div>
@@ -118,8 +136,24 @@ export const StudyHub: React.FC<StudyHubProps> = ({ questions, committees, onSta
       </div>
 
       <div role="tabpanel" id={`study-panel-${section}`} aria-labelledby={`study-tab-${section}`}>
-        {section === 'solve' && <SolveView bank={bank} committees={committees} loading={loading} onProgressChange={bump} />}
-        {section === 'test' && <SelfTestView bank={bank} committees={committees} loading={loading} onProgressChange={bump} />}
+        {section === 'solve' && (
+          <SolveView
+            bank={bank}
+            committees={cleanCommittees}
+            loading={loading}
+            initialCommitteeId={selectedCommitteeId}
+            onProgressChange={bump}
+          />
+        )}
+        {section === 'test' && (
+          <SelfTestView
+            bank={bank}
+            committees={cleanCommittees}
+            loading={loading}
+            initialCommitteeId={selectedCommitteeId}
+            onProgressChange={bump}
+          />
+        )}
         {section === 'notes' && <NotesView disciplines={disciplines} />}
       </div>
     </div>

@@ -1150,6 +1150,8 @@ export default function App() {
             <StudyHub
               questions={questions}
               committees={committees}
+              selectedCommitteeId={selectedCommitteeId}
+              onSelectCommittee={(id) => setSelectedCommitteeId(id)}
               onStartQuickTest={() => setActiveTab('practice')}
             />
           </Suspense>

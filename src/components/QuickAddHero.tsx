@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, CheckCircle2, ChevronRight, BookOpen, Check, CircleDashed, AlertCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ChevronRight, BookOpen, Check, CircleDashed, AlertCircle, ListChecks } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { ApiService } from '../services/api';
@@ -29,7 +29,7 @@ interface QuickAddHeroProps {
   totalQuestionsCount: number;
   questions?: QuestionItem[];
   onOpenQuestion?: (question: QuestionItem) => void;
-  onNavigateTab: (tab: 'matrix' | 'questions' | 'practice' | 'booklet' | 'notes' | 'past_exams') => void;
+  onNavigateTab: (tab: 'matrix' | 'questions' | 'practice' | 'booklet' | 'notes' | 'past_exams' | 'study') => void;
   isAdmin: boolean;
   currentUser?: AppUser | null;
   onOpenAdminPanel?: () => void;
@@ -649,6 +649,24 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               Çıkmış sorulara git
             </button>
           </div>
+
+          <button
+            type="button"
+            onClick={() => onNavigateTab('study')}
+            className="bg-ok-soft rounded-[18px] p-4 sm:p-6 flex gap-3 sm:gap-4 items-start text-left cursor-pointer hover:brightness-[0.98] border border-ok-tint transition-all"
+          >
+            <span className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl bg-white flex items-center justify-center shadow-2xs">
+              <ListChecks className="w-[22px] h-[22px] text-ok" />
+            </span>
+            <span className="flex flex-col gap-1">
+              <span className="font-semibold text-[16px] text-ink">
+                Test Çöz & Deneme Sınavı
+              </span>
+              <span className="text-[14px] text-ink-2">
+                2.100+ çözümlü çıkmış soru, süreli optik formlu denemeler ve kişisel çalışma notları.
+              </span>
+            </span>
+          </button>
 
           <button
             type="button"

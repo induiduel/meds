@@ -93,15 +93,26 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
         <main className="flex-1 w-full max-w-[560px] mx-auto px-4 sm:px-8 py-16 flex flex-col gap-4 text-center items-center">
           <h1 className="m-0 font-display text-[28px] font-bold tracking-[-0.02em]">Çözülecek soru henüz yok</h1>
           <p className="m-0 text-[16px] text-ink-2">
-            Test modunda yalnızca yeniden kurulup doğrulanan sorular çıkar. Hafıza parçası ekleyip soruların kurulmasına yardım edebilirsin.
+            Hızlı test modunda yalnızca yeniden kurulup doğrulanan sorular çıkar. 2.100'den fazla çıkmış soruyla pratik yapmak için soru bankasını açabilir ya da bu kurula ilk hafıza parçasını ekleyebilirsin.
           </p>
-          <button
-            type="button"
-            onClick={onOpenContributeModal}
-            className="h-12 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold cursor-pointer"
-          >
-            İlk parçayı ekle
-          </button>
+          <div className="flex flex-wrap gap-3 justify-center">
+            {onExit && (
+              <button
+                type="button"
+                onClick={onExit}
+                className="h-12 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold cursor-pointer shadow-xs inline-flex items-center gap-2"
+              >
+                Soru Bankasını Aç (Çalış)
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={onOpenContributeModal}
+              className="h-12 px-6 rounded-xl border border-line-2 hover:bg-slate-50 text-ink font-semibold cursor-pointer"
+            >
+              Hafıza Parçası Ekle
+            </button>
+          </div>
         </main>
       </div>
     );

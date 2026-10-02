@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, Flag, Timer, Trash2, RotateCcw, ChevronDown, ChevronUp, Play } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Flag, Timer, Trash2, RotateCcw, ChevronDown, ChevronUp, Play, Bookmark, BookmarkCheck } from 'lucide-react';
 import { Committee } from '../../types';
 import {
   StudyQuestion,
   OptionKey,
   SelfTestResult,
   getProgress,
+  getReview,
   recordAttempt,
   setInReview,
   shuffle,
@@ -20,18 +21,22 @@ interface SelfTestViewProps {
   bank: StudyQuestion[];
   committees: Committee[];
   loading: boolean;
+  initialCommitteeId?: string;
   onProgressChange?: () => void;
 }
 
 type Phase = 'setup' | 'running' | 'result';
 type TimeMode = 'none' | '60' | '90';
 
-export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, loading, onProgressChange }) => {
+export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, loading, initialCommitteeId, onProgressChange }) => {
   const [phase, setPhase] = useState<Phase>('setup');
   const [history, setHistory] = useState(getTestHistory);
 
   // setup
-  const [committeeId, setCommitteeId] = useState('all');
+  const [committeeId, setCommitteeId] = useState(() => {
+    if (initialCommitteeId && initialCommitteeId !== 'all') return initialCommitteeId;
+    return 'all';
+  });
   const [picked, setPicked] = useState<string[]>([]);
   const [count, setCount] = useState(20);
   const [timeMode, setTimeMode] = useState<TimeMode>('60');
@@ -54,7 +59,13 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
     const m = id.match(/kurul(\d+)/i);
     return m ? `Kurul ${m[1]}` : /final/i.test(id) ? 'Final' : id;
   };
-  const committeeIds = useMemo(() => [...new Set(bank.map((q) => q.committeeId).filter(Boolean))].sort(), [bank]);
+  const committeeIds = useMemo(() => {
+    const fromCommittees = committees.map((c) => c.id);
+    const fromBank = new Set(bank.map((q) => q.committeeId).filter(Boolean));
+    const ordered = fromCommittees.filter((id) => fromBank.has(id));
+    const others = [...fromBank].filter((id) => !fromCommittees.includes(id)).sort();
+    return [...ordered, ...others];
+  }, [bank, committees]);
   const scoped = useMemo(() => bank.filter((q) => committeeId === 'all' || q.committeeId === committeeId), [bank, committeeId]);
   const disciplineCounts = useMemo(() => {
     const m: Record<string, number> = {};
@@ -149,6 +160,13 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
       if (q && ['A', 'B', 'C', 'D', 'E'].includes(k) && q.options.some((o) => o.key === k)) {
         e.preventDefault();
         setAnswers((p) => ({ ...p, [q.id]: p[q.id] === k ? undefined : (k as OptionKey) }));
+      } else if (q && k === 'F') {
+        e.preventDefault();
+        setFlags((f) => {
+          const n = new Set(f);
+          n.has(q.id) ? n.delete(q.id) : n.add(q.id);
+          return n;
+        });
       } else if (e.key === 'ArrowRight') setCur((i) => Math.min(items.length - 1, i + 1));
       else if (e.key === 'ArrowLeft') setCur((i) => Math.max(0, i - 1));
     };
@@ -241,7 +259,14 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
             <span className="text-[14px] text-ink-2">
               <strong className="text-ink">{effective}</strong> soru
               {timeMode !== 'none' && effective > 0 && <> · {formatDuration(Math.round(effective * Number(timeMode)))} süre</>}
-              {pool.length < count && pool.length > 0 && <span className="text-warn"> · bu filtrede {pool.length} soru var</span>}
+              {pool.length < count && pool.length > 0 && (
+                <span className="text-warn">
+                  {' '}· bu filtrede {pool.length} soru var{' '}
+                  <button type="button" onClick={() => setCount(pool.length)} className="text-accent underline font-semibold cursor-pointer">
+                    (tamamını seç)
+                  </button>
+                </span>
+              )}
             </span>
             <button type="button" onClick={start} disabled={loading || effective === 0} className={btnPrimary}>
               <Play className="w-4 h-4" /> {loading && bank.length === 0 ? 'Sorular yükleniyor…' : 'Denemeyi başlat'}
@@ -450,14 +475,21 @@ const ResultView: React.FC<{
   onRestart: () => void;
   onAddWrongToReview: () => void;
 }> = ({ result, items, onRestart, onAddWrongToReview }) => {
-  const [filter, setFilter] = useState<'wrong' | 'blank' | 'all'>('wrong');
+  const [filter, setFilter] = useState<'wrong' | 'blank' | 'correct' | 'all'>(() => {
+    if (result.wrong > 0) return 'wrong';
+    if (result.blank > 0) return 'blank';
+    return 'all';
+  });
   const [open, setOpen] = useState<string | null>(null);
   const [added, setAdded] = useState(false);
   const pct = Math.round((result.correct / Math.max(1, result.total)) * 100);
   const net = result.correct - result.wrong / 4;
   const rows = items.filter((q) => {
     const a = result.answers[q.id];
-    return filter === 'all' ? true : filter === 'blank' ? !a : a && a !== q.answer;
+    if (filter === 'all') return true;
+    if (filter === 'blank') return !a;
+    if (filter === 'correct') return a === q.answer;
+    return a && a !== q.answer;
   });
   const disc = Object.entries(result.byDiscipline).sort((a, b) => b[1].total - a[1].total);
 
@@ -545,6 +577,7 @@ const ResultView: React.FC<{
             options={[
               { value: 'wrong', label: `Yanlış ${result.wrong}` },
               { value: 'blank', label: `Boş ${result.blank}` },
+              { value: 'correct', label: `Doğru ${result.correct}` },
               { value: 'all', label: `Tümü ${result.total}` },
             ]}
           />
@@ -595,6 +628,22 @@ const ResultView: React.FC<{
                       </div>
                       <div className="bg-canvas rounded-lg p-3">
                         <ExplanationBlock q={q} compact />
+                      </div>
+                      <div className="flex items-center justify-between pt-1">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const isRev = getReview().has(q.id);
+                            setInReview(q.id, !isRev);
+                            setAdded(false);
+                          }}
+                          className={`h-8 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
+                            getReview().has(q.id) ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
+                          }`}
+                        >
+                          {getReview().has(q.id) ? <BookmarkCheck className="w-3.5 h-3.5" /> : <Bookmark className="w-3.5 h-3.5" />}
+                          {getReview().has(q.id) ? 'Tekrar listesinde' : 'Tekrar listesine ekle'}
+                        </button>
                       </div>
                     </div>
                   )}

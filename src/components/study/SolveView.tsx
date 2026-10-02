@@ -23,11 +23,15 @@ interface SolveViewProps {
   bank: StudyQuestion[];
   committees: Committee[];
   loading: boolean;
+  initialCommitteeId?: string;
   onProgressChange?: () => void;
 }
 
-export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading, onProgressChange }) => {
-  const [committeeId, setCommitteeId] = useState('all');
+export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading, initialCommitteeId, onProgressChange }) => {
+  const [committeeId, setCommitteeId] = useState(() => {
+    if (initialCommitteeId && initialCommitteeId !== 'all') return initialCommitteeId;
+    return 'all';
+  });
   const [discipline, setDiscipline] = useState('all');
   const [source, setSource] = useState<'all' | 'arşiv' | 'havuz'>('all');
   const [mode, setMode] = useState<Mode>('all');
@@ -48,7 +52,13 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
     return m ? `Kurul ${m[1]}` : /final/i.test(id) ? 'Final' : id;
   };
 
-  const committeeIds = useMemo(() => [...new Set(bank.map((q) => q.committeeId).filter(Boolean))].sort(), [bank]);
+  const committeeIds = useMemo(() => {
+    const fromCommittees = committees.map((c) => c.id);
+    const fromBank = new Set(bank.map((q) => q.committeeId).filter(Boolean));
+    const ordered = fromCommittees.filter((id) => fromBank.has(id));
+    const others = [...fromBank].filter((id) => !fromCommittees.includes(id)).sort();
+    return [...ordered, ...others];
+  }, [bank, committees]);
 
   const scoped = useMemo(
     () => bank.filter((q) => (committeeId === 'all' || q.committeeId === committeeId) && (source === 'all' || q.source === source)),
