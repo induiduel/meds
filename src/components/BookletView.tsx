@@ -16,9 +16,9 @@ export const BookletView: React.FC<BookletViewProps> = ({
   const [showAnswerKey, setShowAnswerKey] = useState(false);
   const [showExplanations, setShowExplanations] = useState(false);
 
-  // Filter questions that have either reconstruction or fragments
+  // Filter questions that have either reconstruction or fragments or stem
   const activeQuestions = questions.filter(
-    (q) => q.reconstruction || q.fragments.length > 0
+    (q) => q.reconstruction || (q.fragments && q.fragments.length > 0) || (q as any).stem || (q as any).rawQuestion?.stem
   );
 
   const handlePrint = () => {
@@ -102,10 +102,10 @@ export const BookletView: React.FC<BookletViewProps> = ({
             const hasRec = !!q.reconstruction;
             const stem = hasRec
               ? q.reconstruction!.stem
-              : q.fragments.map((f) => f.text).join(' ');
-            const options = hasRec
+              : (q.fragments?.map((f) => f.text).join(' ') || (q as any).stem || (q as any).rawQuestion?.stem || 'Soru kökü derleniyor...');
+            const options = (hasRec
               ? q.reconstruction!.options
-              : q.options;
+              : q.options || (q as any).rawQuestion?.options || []).filter(Boolean);
 
             return (
               <div

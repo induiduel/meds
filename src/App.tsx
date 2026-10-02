@@ -1251,6 +1251,7 @@ export default function App() {
         isOpen={isPdfModalOpen}
         onClose={() => setIsPdfModalOpen(false)}
         committee={currentCommittee}
+        committees={committees}
         questions={questions}
       />
 

@@ -577,18 +577,22 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               <span>Drive Klasörünü Aç</span>
             </a>
 
-            <button
-              onClick={() => setIsAddingNote(true)}
-              className="bg-teal-600 hover:bg-teal-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-md transition-all cursor-pointer active:scale-95"
-            >
-              <Plus className="w-4 h-4" />
-              <span>Yeni Slayt / Not Yükle</span>
-            </button>
+            {isAdmin && (
+              <button
+                onClick={() => setIsAddingNote(true)}
+                className="bg-teal-600 hover:bg-teal-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-md transition-all cursor-pointer active:scale-95"
+              >
+                <Plus className="w-4 h-4" />
+                <span>Yeni Slayt / Not Yükle</span>
+              </button>
+            )}
           </div>
         </div>
 
-        {/* Drive and Local Archive Interactive Visualizer */}
-        <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />
+        {/* Drive and Local Archive Interactive Visualizer - Admin Only */}
+        {isAdmin && (
+          <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />
+        )}
 
         {/* Global Progress Bar Banner */}
         <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700 space-y-2.5">
@@ -607,7 +611,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               <span className="text-[11px] text-amber-300 font-medium">
                 Kalan: {(TOTAL_CATALOG_PAGES - renderedPagesCount).toLocaleString('tr-TR')} Sayfa
               </span>
-              {notes.length > 0 && (
+              {isAdmin && notes.length > 0 && (
                 <button
                   onClick={handlePurgeMockNotes}
                   title="Önbellekte kalan eski veya 5 sayfalık örnek notları temizler"
@@ -848,13 +852,15 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                             <RefreshCw className={`w-3.5 h-3.5 ${isProcessing ? 'animate-spin' : ''}`} />
                           </button>
 
-                          <button
-                            onClick={() => handleDeleteNote(slide.id, slide.title)}
-                            title="İşlenmiş notu siler"
-                            className="text-rose-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 cursor-pointer"
-                          >
-                            <Trash2 className="w-3.5 h-3.5" />
-                          </button>
+                          {isAdmin && (
+                            <button
+                              onClick={() => handleDeleteNote(slide.id, slide.title)}
+                              title="İşlenmiş notu siler"
+                              className="text-rose-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 cursor-pointer"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </button>
+                          )}
                         </>
                       ) : (
                         <button
@@ -1001,13 +1007,15 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                           <span>Tam Ekran Okuyucu</span>
                         </button>
 
-                        <button
-                          onClick={() => handleDeleteNote(activeNote.id, activeNote.title)}
-                          className="text-rose-500 hover:text-rose-700 p-1.5 rounded-lg hover:bg-rose-50 cursor-pointer"
-                          title="Bu notu sil"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
+                        {isAdmin && (
+                          <button
+                            onClick={() => handleDeleteNote(activeNote.id, activeNote.title)}
+                            className="text-rose-500 hover:text-rose-700 p-1.5 rounded-lg hover:bg-rose-50 cursor-pointer"
+                            title="Bu notu sil"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        )}
                       </div>
                     </div>
 

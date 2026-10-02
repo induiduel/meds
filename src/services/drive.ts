@@ -149,11 +149,11 @@ export function generateBookletPdfBlob(
     const hasRec = !!q.reconstruction;
     const stem = hasRec
       ? q.reconstruction!.stem
-      : q.fragments.map((f) => f.text).join(' ');
+      : (q.fragments?.map((f) => f.text).join(' ') || q.stem || (q as any).rawQuestion?.stem || '');
 
-    const options = hasRec
+    const options = (hasRec
       ? q.reconstruction!.options
-      : q.options;
+      : q.options || (q as any).rawQuestion?.options || []).filter(Boolean);
 
     // Estimate box height
     const splitStem = doc.splitTextToSize(
