@@ -292,6 +292,143 @@
       "isUnassignedNumber": true,
       "upvotes": 0,
       "reconstruction": null
+    },
+    {
+      "id": "q-1790956524167",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Hatırlanan Soru",
+      "status": "gathering",
+      "fragments": [
+        {
+          "id": "f-1790956524167-gqdh",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "dfdfd",
+          "type": "stem",
+          "timestamp": "2026-10-02T15:55:24.167Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1790956524167-A",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "A) asas",
+          "type": "option",
+          "timestamp": "2026-10-02T15:55:24.167Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1790956524167-B",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "B) dfdf",
+          "type": "option",
+          "timestamp": "2026-10-02T15:55:24.167Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1790956524167-C",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "C) df",
+          "type": "option",
+          "timestamp": "2026-10-02T15:55:24.167Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1790956524167-D",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "D) dfdf",
+          "type": "option",
+          "timestamp": "2026-10-02T15:55:24.167Z",
+          "upvotes": 1
+        },
+        {
+          "id": "f-opt-1790956524167-E",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "E) df",
+          "type": "option",
+          "timestamp": "2026-10-02T15:55:24.167Z",
+          "upvotes": 1
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "asas",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "dfdf",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 1
+        },
+        {
+          "key": "C",
+          "text": "df",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 1
+        },
+        {
+          "key": "D",
+          "text": "dfdf",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 1
+        },
+        {
+          "key": "E",
+          "text": "df",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 1
+        }
+      ],
+      "claimedAnswer": "B",
+      "tags": [
+        "Tıbbi Patoloji"
+      ],
+      "contributedByName": "Dönem 3 Öğrencisi",
+      "revisions": [
+        {
+          "id": "rev-1790956524167",
+          "version": 1,
+          "editedAt": "2026-10-02T15:55:24.167Z",
+          "editorName": "Dönem 3 Öğrencisi",
+          "changeSummary": "İlk soru kaydı oluşturuldu",
+          "stem": "dfdfd",
+          "discipline": "Tıbbi Patoloji",
+          "topic": "Tıbbi Patoloji Hatırlanan Soru",
+          "claimedAnswer": "B",
+          "options": [
+            {
+              "key": "A",
+              "text": "asas",
+              "upvotes": 1
+            },
+            {
+              "key": "B",
+              "text": "dfdf",
+              "upvotes": 1
+            },
+            {
+              "key": "C",
+              "text": "df",
+              "upvotes": 1
+            },
+            {
+              "key": "D",
+              "text": "dfdf",
+              "upvotes": 1
+            },
+            {
+              "key": "E",
+              "text": "df",
+              "upvotes": 1
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-02T15:55:24.167Z",
+      "updatedAt": "2026-10-02T15:55:24.175Z"
     }
   ]
 }

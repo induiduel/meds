@@ -88,45 +88,6 @@ export const SystemHealthBanner: React.FC<SystemHealthBannerProps> = ({
     );
   }
 
-  // 2. FİREBASE KOTA BİLDİRİMİ (Supabase yedek olarak devraldı)
-  if (health.firebase.status === 'quota_exceeded' && health.supabase.status === 'online') {
-    return (
-      <div 
-        role="status" 
-        className="w-full bg-[#FFFBEB] border-b border-[#FCD34D] text-[#92400E] px-4 py-2 sm:px-6 sm:py-2.5 transition-all"
-      >
-        <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-[12px] sm:text-[13px]">
-          <div className="flex items-center gap-2">
-            <span className="p-1 rounded-md bg-[#F59E0B] text-white shrink-0">
-              <AlertTriangle className="w-3.5 h-3.5" />
-            </span>
-            <div>
-              <span className="font-bold mr-1">Firebase Spark Kotası Doldu:</span>
-              <span>Günlük 50.000 okuma limiti aşıldı. Supabase PostgreSQL bulut veritabanı kesintisiz olarak aktif devraldı.</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
-            <button
-              type="button"
-              onClick={onOpenDiagnostics}
-              className="h-7 px-2.5 rounded-md bg-white border border-[#FCD34D] hover:bg-[#FEF3C7] text-[#92400E] font-medium text-[12px] inline-flex items-center gap-1 transition-colors cursor-pointer"
-            >
-              <Database className="w-3 h-3 text-[#D97706]" />
-              Veritabanı Durumu
-            </button>
-            <button
-              type="button"
-              onClick={() => setDismissed(true)}
-              aria-label="Kapat"
-              className="p-1 rounded text-[#92400E] hover:bg-[#FEF3C7] transition-colors cursor-pointer"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   // 3. YAPAY ZEKA LİMİT UYARISI: AI kotaları dolduysa
   if (health.hasAiQuotaAlert || health.ai.status === 'all_exhausted') {

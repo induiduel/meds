@@ -27,12 +27,11 @@ import {
   GraduationCap,
   MoreHorizontal,
   Mic,
-} from 'lucide-react';
 import { Committee } from '../types';
-import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
-import { systemHealthMonitor, SystemOverallHealth } from '../services/systemHealthMonitor';
+import { AppUser } from '../services/auth';
+import { AppRoute, pathFor, linkClick } from '../router';
 
-export type AppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries' | 'transcripts';
+export type AppTab = AppRoute;
 
 interface HeaderProps {
   committees: Committee[];
@@ -67,17 +66,23 @@ interface HeaderProps {
   onOpenDiagnostics?: () => void;
 }
 
+/** Primary pages, in priority order: the desktop nav shows as many as fit, the rest go under "Daha". */
 export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
-  { id: 'quick_add', label: 'Ana sayfa', icon: House },
+  { id: 'quick_add', label: 'Soru ekle', icon: SquarePen },
   { id: 'learn', label: 'Öğren', icon: GraduationCap },
-  { id: 'questions', label: 'Soru havuzu', icon: Library },
   { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
-  { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
-  { id: 'transcripts', label: 'Ses kayıtları', icon: Mic },
+  { id: 'questions', label: 'Soru havuzu', icon: Library },
   { id: 'study', label: 'Çalış', icon: ListChecks },
-  { id: 'notes', label: 'Ders notları', icon: BookOpenText },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
+  { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
+  { id: 'notes', label: 'Ders notları', icon: BookOpenText },
+  { id: 'transcripts', label: 'Ses kayıtları', icon: Mic },
+  { id: 'matrix', label: 'Soru haritası', icon: LayoutGrid },
+  { id: 'booklet', label: 'A4 kitapçık', icon: BookCopy },
 ];
+
+/** How many NAV entries the desktop bar may show before folding the rest into "Daha". */
+const NAV_PRIMARY = 6;
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span
@@ -156,8 +161,8 @@ const PriorityNav: React.FC<{
     `h-10 px-2 xl:px-2.5 rounded-lg text-[14px] xl:text-[15px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 shrink-0 ${
       on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
     }`;
-  const shown = items.slice(0, count);
-  const hidden = items.slice(count);
+  const shown = items.slice(0, Math.min(count, NAV_PRIMARY));
+  const hidden = items.slice(Math.min(count, NAV_PRIMARY));
   const activeHidden = hidden.some((i) => i.id === active);
 
   return (
@@ -183,10 +188,10 @@ const PriorityNav: React.FC<{
         const on = active === item.id;
         const Icon = item.icon;
         return (
-          <button key={item.id} type="button" onClick={() => onSelect(item.id)} aria-current={on ? 'page' : undefined} className={itemCls(on)}>
+          <a key={item.id} href={pathFor(item.id)} onClick={linkClick(() => onSelect(item.id))} aria-current={on ? 'page' : undefined} className={itemCls(on)}>
             <Icon className="hidden xl:block w-4 h-4 shrink-0" strokeWidth={on ? 2.3 : 2} />
             {item.label}
-          </button>
+          </a>
         );
       })}
 
@@ -209,21 +214,21 @@ const PriorityNav: React.FC<{
                 const Icon = item.icon;
                 const on = active === item.id;
                 return (
-                  <button
+                  <a
                     key={item.id}
-                    type="button"
+                    href={pathFor(item.id)}
                     role="menuitem"
-                    onClick={() => {
+                    onClick={linkClick(() => {
                       setOpen(false);
                       onSelect(item.id);
-                    }}
+                    })}
                     className={`w-full min-h-10 px-2.5 rounded-[10px] flex items-center gap-2.5 text-left text-[14px] cursor-pointer ${
                       on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink hover:bg-canvas'
                     }`}
                   >
                     <Icon className="w-4 h-4 shrink-0" />
                     {item.label}
-                  </button>
+                  </a>
                 );
               })}
             </div>
@@ -363,16 +368,16 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="bg-white border-b border-line sticky top-0 z-30 print:hidden">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 sm:h-[68px] flex items-center gap-2 sm:gap-3 lg:gap-4">
-        <button
-          type="button"
-          onClick={() => setActiveTab('quick_add')}
-          className="flex items-center gap-2.5 cursor-pointer shrink-0"
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 sm:h-[60px] flex items-center gap-2 sm:gap-3 lg:gap-5">
+        <a
+          href={pathFor('quick_add')}
+          onClick={linkClick(() => setActiveTab('quick_add'))}
+          className="flex items-center gap-2 cursor-pointer shrink-0"
           aria-label="MedSoru ana sayfa"
         >
-          <BrandMark size={30} />
-          <span className="font-display font-bold text-[18px] sm:text-[20px] tracking-[-0.02em] text-ink">MedSoru</span>
-        </button>
+          <BrandMark size={28} />
+          <span className="font-display font-bold text-[18px] sm:text-[19px] tracking-[-0.02em] text-ink">MedSoru</span>
+        </a>
 
         <PriorityNav items={NAV} active={activeTab} onSelect={setActiveTab} />
 
@@ -456,18 +461,12 @@ export const Header: React.FC<HeaderProps> = ({
 
               <MenuItem icon={SquarePen} label="Soru katkısı yap" tone="accent" onClick={onOpenContributeModal} />
 
-              <MenuLabel>Çalış</MenuLabel>
-              <MenuItem icon={BookOpen} label="Ders özetleri & spot bilgiler" onClick={() => setActiveTab('summaries')} />
-              <MenuItem icon={Archive} label="Çıkmış sorular" className="lg:hidden" onClick={() => setActiveTab('past_exams')} />
-              <MenuItem icon={Trophy} label="Sıralama" className="lg:hidden" onClick={() => setActiveTab('leaderboard')} />
-              <MenuItem icon={LayoutGrid} label="Soru haritası" onClick={() => setActiveTab('matrix')} />
-              <MenuItem icon={BookCopy} label="A4 kitapçık" onClick={() => setActiveTab('booklet')} />
               <MenuItem icon={FileDown} label="PDF indir" onClick={onOpenPdfModal} />
 
               {isAdmin && (
                 <>
                   <MenuLabel>Yönetim</MenuLabel>
-                  <MenuItem icon={ShieldCheck} label="Yönetim paneli" onClick={openAdmin} />
+                  <MenuItem icon={ShieldCheck} label="Yönetim" onClick={openAdmin} />
                   {onOpenDiagnostics && <MenuItem icon={Activity} label="Veritabanı & limit takibi" onClick={onOpenDiagnostics} />}
                   {onOpenPastExamModal && <MenuItem icon={FileUp} label="Çıkmış soru yükle" onClick={onOpenPastExamModal} />}
                   {onOpenNotebookLMModal && <MenuItem icon={NotebookPen} label="NotebookLM / Gemini" onClick={onOpenNotebookLMModal} />}

@@ -83,6 +83,8 @@ interface AdminPanelModalProps {
   selectedCommitteeId: string;
   onRefreshData: () => Promise<void>;
   onOpenSubagentMonitor?: () => void;
+  /** 'page' renders inline as the /yonetim route instead of a modal overlay. */
+  variant?: 'modal' | 'page';
 }
 
 export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
@@ -94,7 +96,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   selectedCommitteeId,
   onRefreshData,
   onOpenSubagentMonitor,
+  variant = 'modal',
 }) => {
+  const isPage = variant === 'page';
   const [activeTab, setActiveTab] = useState<'questions' | 'scripts' | 'automations' | 'database' | 'users'>('questions');
   const [editingQuestion, setEditingQuestion] = useState<QuestionItem | null>(null);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
@@ -1021,7 +1025,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   useEffect(() => setQPage(0), [searchQuery, qStatus, qDiscipline]);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || isPage) return;
     const previouslyFocused = document.activeElement as HTMLElement | null;
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -1030,10 +1034,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       document.body.style.overflow = prevOverflow;
       previouslyFocused?.focus?.();
     };
-  }, [isOpen]);
+  }, [isOpen, isPage]);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || isPage) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return;
       if (editingQuestion || confirmDialog || showSqlSchemaModal || isPastExamImporterOpen) return;
@@ -1041,7 +1045,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [isOpen, editingQuestion, confirmDialog, showSqlSchemaModal, isPastExamImporterOpen, onClose]);
+  }, [isOpen, isPage, editingQuestion, confirmDialog, showSqlSchemaModal, isPastExamImporterOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -1069,14 +1073,21 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const dotText = { ok: 'çevrimiçi', warn: 'uyarı', off: 'kapalı' };
 
   return (
-    <div className="fixed inset-0 z-50 bg-[rgba(14,26,38,0.55)] flex items-stretch sm:items-center justify-center sm:p-4" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+    <div
+      className={isPage ? 'w-full' : 'fixed inset-0 z-50 bg-[rgba(14,26,38,0.55)] flex items-stretch sm:items-center justify-center sm:p-4'}
+      onMouseDown={isPage ? undefined : (e) => e.target === e.currentTarget && onClose()}
+    >
       <div
         ref={dialogRef}
-        role="dialog"
-        aria-modal="true"
+        role={isPage ? 'region' : 'dialog'}
+        aria-modal={isPage ? undefined : true}
         aria-labelledby="admin-panel-title"
         tabIndex={-1}
-        className="admin-panel bg-white w-full max-w-[1360px] h-full sm:h-[min(94vh,960px)] sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)] overflow-hidden grid grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[248px_minmax(0,1fr)] outline-none text-ink"
+        className={`admin-panel bg-white w-full overflow-hidden grid ${
+          isPage
+            ? 'h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)] min-h-[560px] rounded-[18px] border border-line'
+            : 'max-w-[1360px] h-full sm:h-[min(94vh,960px)] sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)]'
+        } grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[248px_minmax(0,1fr)] outline-none text-ink`}
       >
         {/* ---------- Sidebar ---------- */}
         <aside className="bg-canvas border-b lg:border-b-0 lg:border-r border-line flex lg:flex-col min-w-0">
@@ -1131,7 +1142,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             type="button"
             onClick={onClose}
             aria-label="Yönetim panelini kapat"
-            className="lg:hidden shrink-0 w-11 h-11 m-1.5 rounded-[10px] flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer"
+            className={`${isPage ? 'hidden' : 'lg:hidden flex'} shrink-0 w-11 h-11 m-1.5 rounded-[10px] items-center justify-center text-ink-2 hover:bg-white cursor-pointer`}
           >
             <X className="w-5 h-5" />
           </button>
@@ -1165,7 +1176,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               onClick={onClose}
               aria-label="Yönetim panelini kapat"
               title="Kapat (Esc)"
-              className="hidden lg:flex w-10 h-10 rounded-[10px] border border-line items-center justify-center text-ink-2 hover:text-ink hover:border-line-2 cursor-pointer"
+              className={`hidden ${isPage ? '' : 'lg:flex'} w-10 h-10 rounded-[10px] border border-line items-center justify-center text-ink-2 hover:text-ink hover:border-line-2 cursor-pointer`}
             >
               <X className="w-[18px] h-[18px]" />
             </button>

@@ -145,6 +145,8 @@ export interface InteractiveDeck {
 interface InteractiveDeckViewProps {
   initialDeckId?: string;
   initialSlideNumber?: number;
+  /** Fired when a deck is opened (id) or closed (null) so the URL can follow. */
+  onDeckChange?: (deckId: string | null) => void;
   onOpenPdfModal?: () => void;
   onSelectCommittee?: (committeeId: string) => void;
 }
@@ -507,7 +509,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 // ---------------------------------------------------------------------------
 // Hub (deck catalogue)
 // ---------------------------------------------------------------------------
-export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber }) => {
+export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange }) => {
   const allDecks = useMemo(
     () => ((interactiveDecksData as unknown as InteractiveDeck[]) || []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0),
     []
@@ -543,48 +545,48 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   const totalSlides = allDecks.reduce((n, d) => n + d.slides.length, 0);
 
   return (
-    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-      <div className="flex items-end justify-between gap-3">
-        <div className="min-w-0">
-          <h1 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em]">Öğren</h1>
-          <p className="m-0 mt-1 text-[14px] text-ink-2 max-w-[720px]">
-            Amfi ses kayıtları, ders notu sentezi, akıl kartları ve çıkmış sorularla donatılmış {allDecks.length} interaktif ders sunumu · {totalSlides} slayt.
+    <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
+      <div className="flex flex-col md:flex-row md:items-end gap-3">
+        <div className="min-w-0 flex-1">
+          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em]">Öğren</h1>
+          <p className="m-0 mt-1 text-[14px] text-ink-3">
+            {allDecks.length} ders · {totalSlides} slayt · hocanın vurguları ve çıkmış sorularla
           </p>
         </div>
-      </div>
-
-      <div className="bg-white border border-line rounded-[16px] p-3 sm:p-4 flex flex-col gap-2.5">
-        <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field focus-within:border-accent">
-          <Search className="w-4 h-4 text-ink-2 shrink-0" />
+        <label className="flex items-center gap-2 h-11 md:h-10 md:w-[300px] px-3 border border-line rounded-[12px] bg-white focus-within:border-accent">
+          <Search className="w-4 h-4 text-ink-3 shrink-0" />
           <span className="sr-only">Derslerde ara</span>
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Ders, hoca ya da konu ara"
-            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-[#6B7785]"
+            placeholder="Ders ya da konu ara"
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] md:text-[14px] placeholder:text-[#7A8693]"
           />
         </label>
-        <div role="radiogroup" aria-label="Ders" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
-          {[['all', allDecks.length] as [string, number], ...disciplines].map(([d, n]) => {
-            const on = discipline === d;
-            return (
-              <button
-                key={d}
-                type="button"
-                role="radio"
-                aria-checked={on}
-                onClick={() => setDiscipline(d)}
-                className={`shrink-0 h-8 px-3 rounded-full text-[13px] whitespace-nowrap cursor-pointer ${
-                  on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink hover:border-line-2'
-                }`}
-              >
-                {d === 'all' ? 'Tümü' : d}
-                <span className={`ml-1.5 font-mono text-[12px] ${on ? 'text-accent/70' : 'text-ink-3'}`}>{n}</span>
-              </button>
-            );
-          })}
-        </div>
+      </div>
+
+      <div role="radiogroup" aria-label="Ders" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
+        {[['all', allDecks.length] as [string, number], ...disciplines].map(([d, n]) => {
+          const on = discipline === d;
+          const dot = d === 'all' ? '#0E1A26' : tone(allDecks.find((x) => x.discipline === d)?.themeColor).fg;
+          return (
+            <button
+              key={d}
+              type="button"
+              role="radio"
+              aria-checked={on}
+              onClick={() => setDiscipline(d)}
+              className={`shrink-0 h-9 px-3.5 rounded-full text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 transition-colors ${
+                on ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink hover:border-line-2'
+              }`}
+            >
+              <span className="w-2 h-2 rounded-full shrink-0" style={{ background: on && d === 'all' ? '#fff' : dot }} aria-hidden="true" />
+              {d === 'all' ? 'Tümü' : d}
+              <span className={`font-mono text-[12px] ${on ? 'text-white/70' : 'text-ink-3'}`}>{n}</span>
+            </button>
+          );
+        })}
       </div>
 
       {visible.length === 0 ? (
@@ -600,47 +602,55 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
             const pct = Math.round((seen / d.slides.length) * 100);
             const qCount = d.slides.reduce((n, s) => n + (s.relatedQuestions?.length || 0), 0);
             const cardCount = d.slides.reduce((n, s) => n + (s.flashcards?.length || 0), 0);
+            const started = seen > 0;
+            const done = seen >= d.slides.length;
+            const t = tone(d.themeColor);
             return (
               <li key={d.id} className="min-w-0">
                 <button
                   type="button"
-                  onClick={() => setDeckId(d.id)}
-                  className="w-full h-full text-left bg-white border border-line rounded-[16px] p-4 flex flex-col gap-2.5 cursor-pointer hover:border-accent transition-colors group"
+                  onClick={() => {
+                    setDeckId(d.id);
+                    onDeckChange?.(d.id);
+                  }}
+                  className="w-full h-full text-left bg-white border border-line rounded-[16px] p-4 flex flex-col gap-2.5 cursor-pointer hover:border-accent hover:shadow-[0_6px_20px_rgba(14,26,38,0.06)] transition-all group"
                 >
-                  <span className="flex items-center gap-1.5 min-w-0">
-                    <span
-                      className="min-w-0 h-6 px-2 rounded-full text-[12px] font-semibold inline-flex items-center truncate"
-                      style={{ background: tone(d.themeColor).bg, color: tone(d.themeColor).fg }}
-                    >
-                      {d.discipline}
-                    </span>
-                    <span className="shrink-0 ml-auto font-mono text-[12px] text-ink-3">{d.slides.length} slayt</span>
+                  <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
+                    <span className="w-2 h-2 rounded-full shrink-0" style={{ background: t.fg }} aria-hidden="true" />
+                    <span className="truncate">{d.discipline}</span>
+                    <span className="shrink-0 ml-auto font-mono text-[12px]">{d.slides.length} slayt</span>
                   </span>
-                  <span className="text-[17px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{d.title}</span>
-                  <span className="text-[13px] text-ink-2 line-clamp-2">{d.overview}</span>
-                  <span className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-ink-3">
+                  <span className="text-[16.5px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2 min-h-[2.6em]">{d.title}</span>
+                  <span className="flex flex-wrap gap-1.5">
                     {d.instructor && (
-                      <span className="inline-flex items-center gap-1 min-w-0 max-w-full">
-                        <User className="w-3.5 h-3.5 shrink-0" />
+                      <span className="max-w-full h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center gap-1 min-w-0">
+                        <User className="w-3 h-3 shrink-0" />
                         <span className="truncate">{d.instructor}</span>
                       </span>
                     )}
                     {cardCount > 0 && (
-                      <span className="inline-flex items-center gap-1 text-amber-700 font-medium">
-                        <Lightbulb className="w-3.5 h-3.5 text-amber-500" /> {cardCount} akıl kartı
-                      </span>
+                      <span className="h-6 px-2 rounded-[7px] bg-[#FDF2E1] text-[12px] text-[#9A4D06] inline-flex items-center">{cardCount} kart</span>
                     )}
-                    <span className="inline-flex items-center gap-1">
-                      <Layers className="w-3.5 h-3.5" /> {qCount} soru
-                    </span>
+                    {qCount > 0 && (
+                      <span className="h-6 px-2 rounded-[7px] bg-accent-soft text-[12px] text-accent inline-flex items-center">{qCount} soru</span>
+                    )}
                   </span>
                   <span className="mt-auto pt-2.5 border-t border-line-soft flex items-center gap-3">
-                    <span className="flex-1 h-1.5 rounded-full bg-line-soft overflow-hidden" aria-hidden="true">
-                      <span className="block h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
+                    <span className="flex-1 min-w-0 flex flex-col gap-1">
+                      <span className="text-[12px] text-ink-3">
+                        {done ? 'Tamamlandı' : started ? `${(pr?.last ?? 0) + 1} / ${d.slides.length} slayt` : 'Başlanmadı'}
+                      </span>
+                      <span className="h-[5px] rounded-full bg-line-soft overflow-hidden" aria-hidden="true">
+                        <span className="block h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
+                      </span>
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-accent shrink-0">
-                      <Play className="w-3.5 h-3.5" />
-                      {seen === 0 ? 'Başla' : seen >= d.slides.length ? 'Tekrar izle' : `Devam et · ${(pr?.last ?? 0) + 1}/${d.slides.length}`}
+                    <span
+                      className={`h-[34px] px-3 rounded-[10px] inline-flex items-center gap-1.5 text-[13px] font-semibold shrink-0 ${
+                        started ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
+                      }`}
+                    >
+                      <Play className="w-3 h-3 fill-current" />
+                      {done ? 'Tekrar' : started ? 'Devam et' : 'Başla'}
                     </span>
                   </span>
                 </button>
@@ -663,7 +673,10 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
               return next;
             });
           }}
-          onClose={() => setDeckId(null)}
+          onClose={() => {
+            setDeckId(null);
+            onDeckChange?.(null);
+          }}
         />
       )}
     </div>

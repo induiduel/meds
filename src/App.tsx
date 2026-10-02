@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useMemo, Suspense } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
+import { AppRoute, parseLocation, writeLocation, ROUTE_TITLES } from './router';
 import { 
   Stethoscope, 
   Sparkles, 
@@ -24,7 +25,6 @@ import { MetricsBar } from './components/MetricsBar';
 import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MobileBottomNav } from './components/MobileBottomNav';
-import { SystemHealthBanner } from './components/SystemHealthBanner';
 
 // Lazy-loaded Views (Split into separate on-demand chunks)
 const PracticeMode = React.lazy(() => import('./components/PracticeMode').then(m => ({ default: m.PracticeMode })));
@@ -88,39 +88,8 @@ import {
   FOLDER_NAME
 } from './services/drive';
 
-// Supported App Tabs with URL hash & localStorage persistence
-export type ValidAppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries' | 'transcripts';
-
-const VALID_APP_TABS: ValidAppTab[] = [
-  'quick_add',
-  'learn',
-  'questions',
-  'past_exams',
-  'summaries',
-  'transcripts',
-  'matrix',
-  'leaderboard',
-  'notes',
-  'practice',
-  'booklet',
-  'study',
-];
-
-const getSavedOrInitialTab = (): ValidAppTab => {
-  try {
-    if (typeof window !== 'undefined') {
-      const hash = window.location.hash.replace(/^#/, '') as ValidAppTab;
-      if (hash && VALID_APP_TABS.includes(hash)) {
-        return hash;
-      }
-      const saved = localStorage.getItem('medsoru_last_active_tab') as ValidAppTab;
-      if (saved && VALID_APP_TABS.includes(saved)) {
-        return saved;
-      }
-    }
-  } catch (e) {}
-  return 'quick_add';
-};
+// Top-level pages live at real paths (/ogren, /sorular, /siralama …); see router.ts
+export type ValidAppTab = AppRoute;
 
 export default function App() {
   const [committees, setCommittees] = useState<Committee[]>([]);
@@ -136,8 +105,14 @@ export default function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Tab Navigation with reload persistence
-  const [activeTab, setActiveTab] = useState<ValidAppTab>(getSavedOrInitialTab);
+  // Page navigation: the address bar is the source of truth (back/forward, shareable links)
+  const [initialRoute] = useState(() => parseLocation());
+  const [activeTab, setActiveTabState] = useState<ValidAppTab>(initialRoute.route);
+  const setActiveTab = useCallback((tab: ValidAppTab) => {
+    setActiveTabState(tab);
+    writeLocation(tab);
+    window.scrollTo({ top: 0 });
+  }, []);
 
   // Filters & Search with reload persistence
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>(() => {
@@ -164,7 +139,6 @@ export default function App() {
   const [isAuthErrorModalOpen, setIsAuthErrorModalOpen] = useState(false);
   const [isDriveModalOpen, setIsDriveModalOpen] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
-  const [isAdminPanelOpen, setIsAdminPanelOpen] = useState(false);
   const [isPastExamImporterOpen, setIsPastExamImporterOpen] = useState(false);
   const [isNotebookLMModalOpen, setIsNotebookLMModalOpen] = useState(false);
   const [isSubagentMonitorOpen, setIsSubagentMonitorOpen] = useState(false);
@@ -183,7 +157,9 @@ export default function App() {
   const [optimizeQuestion, setOptimizeQuestion] = useState<QuestionItem | null>(null);
 
   // Selected Learn deck and slide navigation state
-  const [selectedLearnDeckId, setSelectedLearnDeckId] = useState<string | undefined>(undefined);
+  const [selectedLearnDeckId, setSelectedLearnDeckId] = useState<string | undefined>(
+    initialRoute.route === 'learn' ? initialRoute.param : undefined
+  );
   const [selectedLearnSlideNumber, setSelectedLearnSlideNumber] = useState<number | undefined>(undefined);
 
   // Celebration Toast
@@ -225,28 +201,24 @@ export default function App() {
   } | null>(null);
   const [hasAutoBackedUp, setHasAutoBackedUp] = useState<boolean>(false);
 
-  // State Persistence: Sync active tab to localStorage and URL hash
+  // Normalise legacy #tab links to their path once, then follow back / forward
   useEffect(() => {
-    try {
-      localStorage.setItem('medsoru_last_active_tab', activeTab);
-      if (window.location.hash.replace(/^#/, '') !== activeTab) {
-        window.history.replaceState(null, '', `#${activeTab}`);
+    writeLocation(initialRoute.route, initialRoute.param, true);
+    const onPop = () => {
+      const { route, param } = parseLocation();
+      setActiveTabState(route);
+      if (route === 'learn') {
+        setSelectedLearnDeckId(param);
+        setSelectedLearnSlideNumber(undefined);
       }
-    } catch (e) {}
-  }, [activeTab]);
-
-  // Support browser Back / Forward buttons across tabs
-  useEffect(() => {
-    const handleHashChange = () => {
-      try {
-        const hash = window.location.hash.replace(/^#/, '') as ValidAppTab;
-        if (hash && VALID_APP_TABS.includes(hash) && hash !== activeTab) {
-          setActiveTab(hash);
-        }
-      } catch (e) {}
     };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    document.title = activeTab === 'quick_add' ? 'MedSoru · Soru ekle' : `${ROUTE_TITLES[activeTab]} · MedSoru`;
   }, [activeTab]);
 
   // Save selectedCommitteeId
@@ -901,14 +873,6 @@ export default function App() {
         </Suspense>
       ) : (
       <>
-      {/* Real-time System Status & Quota Alert Banner (Admin only) */}
-      {isAdmin && (
-        <SystemHealthBanner
-          onOpenDiagnostics={() => setIsDiagnosticsOpen(true)}
-          onOpenAiQuotaModal={() => setIsAiQuotaModalOpen(true)}
-        />
-      )}
-
       {/* Navigation Header with Google Auth & Drive */}
       <Header
         searchQuery={searchQuery}
@@ -926,7 +890,7 @@ export default function App() {
           setIsContributeModalOpen(true);
         }}
         onOpenNewCommitteeModal={isAdmin ? () => setIsNewCommitteeModalOpen(true) : () => {}}
-        onOpenAdminPanel={isAdmin ? () => setIsAdminPanelOpen(true) : () => {}}
+        onOpenAdminPanel={isAdmin ? () => setActiveTab('admin') : () => {}}
         onOpenPastExamModal={isAdmin ? () => setIsPastExamImporterOpen(true) : undefined}
         onOpenNotebookLMModal={isAdmin ? () => setIsNotebookLMModalOpen(true) : undefined}
         onOpenSubagentMonitor={isAdmin ? () => setIsSubagentMonitorOpen(true) : undefined}
@@ -954,7 +918,7 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-[1280px] w-full mx-auto px-3 sm:px-8 py-3 sm:py-10 flex flex-col gap-4 sm:gap-8 pb-24 sm:pb-16">
+      <main className="flex-1 max-w-[1280px] w-full mx-auto px-3 sm:px-8 pt-4 sm:pt-8 flex flex-col gap-4 sm:gap-6 pb-28 lg:pb-16">
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
@@ -1025,7 +989,7 @@ export default function App() {
             onNavigateTab={(tab) => setActiveTab(tab)}
             isAdmin={isAdmin}
             currentUser={currentUser}
-            onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
+            onOpenAdminPanel={() => setActiveTab('admin')}
           />
         )}
 
@@ -1035,6 +999,11 @@ export default function App() {
             <InteractiveDeckView
               initialDeckId={selectedLearnDeckId}
               initialSlideNumber={selectedLearnSlideNumber}
+              onDeckChange={(id) => {
+                setSelectedLearnDeckId(id ?? undefined);
+                if (id === null) setSelectedLearnSlideNumber(undefined);
+                writeLocation('learn', id ?? undefined);
+              }}
               onOpenPdfModal={() => setIsPdfModalOpen(true)}
               onSelectCommittee={(id) => setSelectedCommitteeId(id)}
             />
@@ -1296,10 +1265,55 @@ export default function App() {
             <TranscriptionsView />
           </Suspense>
         )}
+
+        {/* /yonetim — admin panel as its own page */}
+        {activeTab === 'admin' &&
+          (isAdmin ? (
+            <Suspense fallback={<ViewFallback />}>
+              <AdminPanelModal
+                variant="page"
+                isOpen
+                onClose={() => setActiveTab('quick_add')}
+                adminEmail={ADMIN_EMAIL}
+                committees={committees}
+                questions={questions}
+                selectedCommitteeId={selectedCommitteeId}
+                onRefreshData={fetchQuestions}
+                onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
+              />
+            </Suspense>
+          ) : (
+            <div className="max-w-[440px] w-full mx-auto mt-6 sm:mt-14 bg-white border border-line rounded-[18px] p-6 sm:p-8 flex flex-col items-center text-center gap-3">
+              <span className="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center">
+                <ShieldCheck className="w-6 h-6" />
+              </span>
+              <h1 className="m-0 font-display font-bold text-[24px] tracking-[-0.02em]">Yönetim</h1>
+              <p className="m-0 text-[15px] text-ink-2">Bu sayfa yalnızca yöneticilere açık. Devam etmek için yönetici hesabıyla giriş yap.</p>
+              <div className="flex gap-2 pt-1">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('quick_add')}
+                  className="h-11 px-4 rounded-xl border border-line-2 bg-white font-semibold text-[15px] cursor-pointer"
+                >
+                  Ana sayfa
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setAuthModalInitialMode('admin');
+                    setIsAuthModalOpen(true);
+                  }}
+                  className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-[15px] cursor-pointer"
+                >
+                  Yönetici girişi
+                </button>
+              </div>
+            </div>
+          ))}
       </main>
 
       {/* Footer */}
-      <footer className="hidden sm:block border-t border-line bg-white print:hidden">
+      <footer className="hidden lg:block border-t border-line bg-white print:hidden">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-5 flex flex-col sm:flex-row sm:justify-between gap-3 text-[13px] text-ink-3">
           <span>
             MedSoru · Tıp Dönem 3 kurul soru havuzu
@@ -1309,7 +1323,7 @@ export default function App() {
             <button type="button" onClick={() => { setContributeDefaultNumber(undefined); setIsContributeModalOpen(true); }} className="text-ink-2 hover:text-accent cursor-pointer">Katkı yap</button>
             <button type="button" onClick={() => setIsPdfModalOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">PDF kitapçık</button>
             {isAdmin && (
-              <button type="button" onClick={() => setIsAdminPanelOpen(true)} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
+              <button type="button" onClick={() => setActiveTab('admin')} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
             )}
           </span>
         </div>
@@ -1326,7 +1340,7 @@ export default function App() {
           setIsContributeModalOpen(true);
         }}
         onOpenPdfModal={() => setIsPdfModalOpen(true)}
-        onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
+        onOpenAdminPanel={() => setActiveTab('admin')}
         onUploadToDrive={() => handleDriveUpload(false)}
       />
       </>
@@ -1404,22 +1418,6 @@ export default function App() {
         </Suspense>
       )}
 
-      {/* Admin Panel Modal for nofrostlife@gmail.com */}
-      {isAdmin && isAdminPanelOpen && (
-        <Suspense fallback={null}>
-          <AdminPanelModal
-            isOpen={isAdminPanelOpen}
-            onClose={() => setIsAdminPanelOpen(false)}
-            adminEmail={ADMIN_EMAIL}
-            committees={committees}
-            questions={questions}
-            selectedCommitteeId={selectedCommitteeId}
-            onRefreshData={fetchQuestions}
-            onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
-          />
-        </Suspense>
-      )}
-
       {/* A4 Medical Exam Booklet & High-Resolution PDF Print Modal */}
       {isPdfModalOpen && (
         <Suspense fallback={null}>
@@ -1467,7 +1465,7 @@ export default function App() {
               if (token) setAccessToken(token);
               setIsAuthModalOpen(false);
               if (isAdminUser(user)) {
-                setIsAdminPanelOpen(true);
+                setActiveTab('admin');
               }
             }}
           />
@@ -1483,7 +1481,7 @@ export default function App() {
             currentUser={currentUser}
             onUpdateUser={(updated: AppUser) => setCurrentUser(updated)}
             questions={questions}
-            onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
+            onOpenAdminPanel={() => setActiveTab('admin')}
           />
         </Suspense>
       )}
