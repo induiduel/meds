@@ -213,7 +213,7 @@ async function main() {
   if (testErr) {
     console.error('\n⚠️ DİKKAT: Supabase üzerinde "rag_chunks" tablosu henüz mevcut değil!');
     console.error('Lütfen şu dosyayı Supabase Dashboard > SQL Editor sekmesinde çalıştırın:');
-    console.error('👉 c:\\Users\\indui\\Desktop\\meds\\supabase\\migrations\\20261002_rag_vector_schema.sql\n');
+    console.error('👉 c:\\Users\\indui\\Desktop\\meds\\supabase\\migrations\\20261003_rag_vector_schema.sql\n');
     console.error('Hata detayı:', testErr.message);
     process.exit(1);
   }

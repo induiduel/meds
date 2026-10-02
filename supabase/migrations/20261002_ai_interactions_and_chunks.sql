@@ -43,6 +43,10 @@ BEGIN
   END IF;
 END $$;
 
--- 4. RAG Chunks tablosundaki ek belge türleri için destek
--- Belge türleri: 'lecture_slide', 'past_question', 'active_question', 'summary', 'transcript', 'user_contribution', 'ai_refinement', 'ai_qa'
-CREATE INDEX IF NOT EXISTS idx_rag_chunks_type_doc ON public.rag_chunks (document_type, document_id);
+-- 4. RAG Chunks tablosundaki ek belge türleri için destek (rag_chunks tablosu varsa indeks oluştur)
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'rag_chunks') THEN
+    CREATE INDEX IF NOT EXISTS idx_rag_chunks_type_doc ON public.rag_chunks (document_type, document_id);
+  END IF;
+END $$;

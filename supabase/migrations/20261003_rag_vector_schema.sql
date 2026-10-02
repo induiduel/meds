@@ -27,6 +27,7 @@ CREATE INDEX IF NOT EXISTS idx_rag_chunks_committee ON public.rag_chunks (commit
 CREATE INDEX IF NOT EXISTS idx_rag_chunks_discipline ON public.rag_chunks (discipline);
 CREATE INDEX IF NOT EXISTS idx_rag_chunks_type ON public.rag_chunks (document_type);
 CREATE INDEX IF NOT EXISTS idx_rag_chunks_doc_id ON public.rag_chunks (document_id);
+CREATE INDEX IF NOT EXISTS idx_rag_chunks_type_doc ON public.rag_chunks (document_type, document_id);
 
 -- Tam Metin Arama (Full-Text Search) İndeksi
 CREATE INDEX IF NOT EXISTS idx_rag_chunks_fts ON public.rag_chunks USING gin (to_tsvector('simple', content));
