@@ -1,5 +1,18 @@
 [
   {
+    "id": "job_1790937744027_yznb8",
+    "name": "transcribe-drive-audio.mjs",
+    "type": "single",
+    "args": "--input=\"C:\\Users\\indui\\Desktop\\Quick\" --model=gemini-3.8-flash --delay=8",
+    "status": "completed",
+    "startedAt": "2026-10-02T10:42:24.028Z",
+    "completedAt": "2026-10-02T10:42:25.657Z",
+    "durationMs": 1617,
+    "exitCode": 0,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[13:42:25] ⏩ [5/7] Zaten Tamamlandı (Atlandı): Üoloji.m4a\n[13:42:25] ⏩ [6/7] Zaten Tamamlandı (Atlandı): Dismorfolojide Genetik Terminoloji TBG.m4a\n[13:42:25] ⏩ [7/7] Zaten Tamamlandı (Atlandı): TBG - Kromozom hastalıkları ve genetşk danışmanlık.m4a\n[13:42:25] =======================================================\n[13:42:25] 🎉 İşlem Tamamlandı! Toplam 0 ses kaydı tam transkribe edildi.\n[13:42:25] 📁 Transkriptler: C:\\Users\\indui\\Desktop\\meds_database\\transcriptions\n[13:42:25] 📋 Manifest: C:\\Users\\indui\\Desktop\\meds_database\\transcriptions\\transcription_manifest.json\n[13:42:25] =======================================================\n[13:42:25] ------------------------------------------------------------\n[13:42:25] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 1.6 sn."
+  },
+  {
     "id": "job_1790924042173_2jkvq",
     "name": "sync-drive-updates.mjs",
     "type": "single",
@@ -10,7 +23,7 @@
     "durationMs": 25981,
     "exitCode": 0,
     "requestedBy": "nofrostlife@gmail.com",
-    "logSummary": "[09:54:27] 💾 [ADIM 4] Veritabanı ve Havuz Güncelleniyor...\n[09:54:28]    ✓ Ders notları data/lecture_notes.json güncellendi (Toplam: 878)\n[09:54:28] ===========================================================================\n[09:54:28]   🎉 MANUEL GOOGLE DRIVE GÜNCELLEMESİ BAŞARIYLA TAMAMLANDI!\n[09:54:28]   - İndirilen Dosya Sayısı      : 0\n[09:54:28]   - Eklenen Yeni Soru Sayısı    : 0\n[09:54:28]   - Güncellenen Ders Notu Sayısı: 0\n[09:54:28] ===========================================================================\n[09:54:28] ------------------------------------------------------------\n[09:54:28] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 26.0 sn."
+    "logSummary": ""
   },
   {
     "id": "job_1790918204956_7y3m8",

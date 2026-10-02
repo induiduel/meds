@@ -74,6 +74,8 @@ export interface BookletPdfOptions {
   includeAnswerKey?: boolean;
   title?: string;
   subtitle?: string;
+  /** Two-column compact booklet (default) or a single wide column */
+  columns?: 'one' | 'two';
 }
 
 // ---------- Unicode font (Turkish glyphs) ----------
@@ -129,6 +131,7 @@ export async function generateBookletPdfBlob(
 ): Promise<Blob> {
   const mode: BookletMode = options.mode || 'solution';
   const includeKey = mode === 'answers_only' ? true : options.includeAnswerKey ?? true;
+  const twoCol = (options.columns || 'two') === 'two';
 
   const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
@@ -147,7 +150,7 @@ export async function generateBookletPdfBlob(
     T = (s: string) => s;
   }
 
-  // ---- Design tokens (match the site: ink, muted ink, line, accent, green) ----
+  // ---- Design tokens (same palette as the site) ----
   type RGB = [number, number, number];
   const INK: RGB = [14, 26, 38];
   const INK2: RGB = [74, 88, 104];
@@ -159,18 +162,29 @@ export async function generateBookletPdfBlob(
   const OK_SOFT: RGB = [236, 248, 241];
   const CANVAS: RGB = [246, 247, 249];
 
+  // ---- Page geometry: compact booklet ----
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
-  const M = 20; // generous side margins
-  const TOP = 24; // first baseline on continuation pages
-  const BOTTOM = pageH - 20; // last baseline before the footer
+  const M = 14; // side margin
+  const GUTTER = 7; // between columns
+  const TOP = 19; // first baseline on continuation pages
+  const BOTTOM = pageH - 15; // last baseline before the footer
   const W = pageW - M * 2;
-  const BODY_X = M + 10; // text column right of the number badge
-  const BODY_W = W - 10;
+  const COL_W = twoCol ? (W - GUTTER) / 2 : W;
+  const BADGE = 6; // number badge column
+  const TEXT_W = COL_W - BADGE;
+
+  // type scale (pt) and line heights (mm)
+  const SZ = { stem: 8.4, opt: 8, meta: 6.2, exp: 7, title: 13, sub: 7.6 };
+  const LH = { stem: 3.75, opt: 3.5, exp: 3.15 };
+
+  let col = 0;
   let y = M;
+  let colTop = TOP; // where columns start on the current page
+  const columnTops: number[] = []; // per page, for drawing the column rule
 
   const title = (options.title || committee?.name || 'Dönem 3 Kurul Sınavı').trim();
-  const shortTitle = title.length > 80 ? title.slice(0, 77) + '…' : title;
+  const shortTitle = title.length > 90 ? title.slice(0, 87) + '…' : title;
 
   const style = (weight: 'normal' | 'bold' | 'italic', size: number, rgb: RGB) => {
     doc.setFont(FONT, weight);
@@ -182,79 +196,80 @@ export async function generateBookletPdfBlob(
     doc.setDrawColor(rgb[0], rgb[1], rgb[2]);
     doc.setLineWidth(w);
   };
+  const colX = () => M + col * (COL_W + GUTTER);
 
   const runningHeader = () => {
-    style('normal', 7, INK3);
-    doc.text(T(shortTitle), M, 13);
+    style('normal', 6.5, INK3);
+    doc.text(T(shortTitle), M, 10.5, { maxWidth: W - 30 });
+    style('bold', 6.5, ACCENT);
+    doc.text(T('MEDSORU'), pageW - M, 10.5, { align: 'right' });
     stroke(LINE);
-    doc.line(M, 15.5, pageW - M, 15.5);
+    doc.line(M, 12.5, pageW - M, 12.5);
   };
   const newPage = () => {
     doc.addPage();
     runningHeader();
+    col = 0;
+    colTop = TOP;
     y = TOP;
+    columnTops.push(TOP);
+  };
+  const nextColumn = () => {
+    if (twoCol && col === 0) {
+      col = 1;
+      y = colTop;
+    } else newPage();
   };
   const ensure = (h: number) => {
-    if (y + h > BOTTOM) newPage();
+    if (y + h > BOTTOM) nextColumn();
   };
 
-  /**
-   * Writes wrapped text line by line (so long stems/explanations flow across pages).
-   * `decorate` runs before each line so backgrounds/bars follow the text onto new pages.
-   */
-  const write = (text: string, x: number, width: number, lineH: number, decorate?: (top: number, h: number) => void) => {
+  /** Line-by-line writer: text (and its decoration) flows across columns and pages. */
+  const write = (text: string, dx: number, width: number, lineH: number, decorate?: (x: number, top: number, h: number) => void) => {
     const lines: string[] = doc.splitTextToSize(T(text), width);
     for (const line of lines) {
       ensure(lineH);
-      decorate?.(y - lineH * 0.74, lineH);
+      const x = colX() + dx;
+      decorate?.(x, y - lineH * 0.76, lineH);
       doc.text(line, x, y);
       y += lineH;
     }
   };
 
-  // ---------- Title block ----------
-  y = M + 2;
-  style('bold', 7.5, ACCENT);
-  doc.text(T('MEDSORU · SORU KİTAPÇIĞI'), M, y);
-  y += 7;
-  style('bold', 15, INK);
-  write(title, M, W, 6.4);
-  y += 0.5;
-  const modeLabel = mode === 'student' ? 'Öğrenci sınavı' : mode === 'solution' ? 'Çözümlü ve açıklamalı' : 'Cevap anahtarı';
-  style('normal', 8.5, INK2);
-  write(
-    [
-      `${questions.length} soru`,
-      mode !== 'answers_only' ? `~${Math.round(questions.length * 1.1)} dk` : '',
-      modeLabel,
-      options.subtitle || '',
-      new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
-    ]
-      .filter(Boolean)
-      .join('   ·   '),
-    M,
-    W,
-    4.2
-  );
-  y += 3;
-
-  if (mode === 'student') {
-    // short instructions card
-    const lines: string[] = doc.splitTextToSize(
-      T('Her sorunun tek doğru cevabı vardır. Cevaplarını optik forma işaretle. Cevap anahtarı ayrı sayfadadır.'),
-      W - 8
-    );
-    const h = lines.length * 3.8 + 5;
-    fill(CANVAS);
-    doc.roundedRect(M, y, W, h, 1.5, 1.5, 'F');
-    style('normal', 8, INK2);
-    doc.text(lines, M + 4, y + 4.6);
-    y += h + 4;
+  // ---------- Title block (full width) ----------
+  style('bold', 6.8, ACCENT);
+  doc.text(T('MEDSORU · SORU KİTAPÇIĞI'), M, M);
+  y = M + 5.6;
+  style('bold', SZ.title, INK);
+  for (const line of doc.splitTextToSize(T(title), W) as string[]) {
+    doc.text(line, M, y);
+    y += 5.4;
   }
-
-  stroke(INK, 0.4);
+  const modeLabel = mode === 'student' ? 'Öğrenci sınavı' : mode === 'solution' ? 'Çözümlü' : 'Cevap anahtarı';
+  style('normal', SZ.sub, INK2);
+  const metaLine = [
+    `${questions.length} soru`,
+    mode !== 'answers_only' ? `~${Math.round(questions.length * 1.1)} dk` : '',
+    modeLabel,
+    options.subtitle || '',
+    new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
+  ]
+    .filter(Boolean)
+    .join('  ·  ');
+  doc.text(T(metaLine), M, y - 0.6, { maxWidth: W });
+  y += 2.6;
+  if (mode === 'student') {
+    fill(CANVAS);
+    doc.roundedRect(M, y, W, 6.4, 1.2, 1.2, 'F');
+    style('normal', 7, INK2);
+    doc.text(T('Her sorunun tek doğru cevabı vardır. Cevaplarını optik forma işaretle. Cevap anahtarı son sayfadadır.'), M + 3, y + 4.1, { maxWidth: W - 6 });
+    y += 6.4 + 3;
+  }
+  stroke(INK, 0.35);
   doc.line(M, y, pageW - M, y);
-  y += 9;
+  y += 6.2;
+  colTop = y;
+  columnTops.push(colTop);
 
   // ---------- Questions ----------
   if (mode !== 'answers_only') {
@@ -263,114 +278,115 @@ export async function generateBookletPdfBlob(
       const stem = (rec?.stem || (q as any).rawStem || q.fragments?.map((f) => f.text).join(' ') || (q as any).stem || '').trim();
       const opts = ((rec?.options as any[]) || q.options || []).filter((o: any) => o && o.key && String(o.text || '').trim());
       const answer = rec?.correctAnswer || q.claimedAnswer || '';
-      const num = idx + 1;
 
-      // Keep the badge with at least the first three stem lines
-      ensure(8 + 3 * 4.2);
+      // badge + meta + first two stem lines stay together
+      ensure(3.4 + 2 * LH.stem);
 
-      // Number badge
-      const badge = String(num);
+      const x0 = colX();
       fill(ACCENT_SOFT);
-      doc.roundedRect(M, y - 4.1, 7, 5.6, 1.2, 1.2, 'F');
-      style('bold', 8, ACCENT);
-      doc.text(T(badge), M + 3.5, y - 0.2, { align: 'center' });
+      doc.roundedRect(x0, y - 3.2, 4.8, 4.2, 0.9, 0.9, 'F');
+      style('bold', 6.6, ACCENT);
+      doc.text(String(idx + 1), x0 + 2.4, y - 0.25, { align: 'center' });
 
-      // Meta (discipline · year · original no.)
-      const meta = [q.discipline, q.examYear, q.questionNumber ? `S.${q.questionNumber}` : ''].filter(Boolean).join('  ·  ');
-      style('normal', 7, INK3);
-      doc.text(T(meta.toLocaleUpperCase('tr-TR')), BODY_X, y - 0.4, { maxWidth: BODY_W });
-      y += 5;
+      const meta = [q.discipline, q.examYear, q.questionNumber ? `S.${q.questionNumber}` : ''].filter(Boolean).join(' · ');
+      style('normal', SZ.meta, INK3);
+      doc.text(T(meta.toLocaleUpperCase('tr-TR')), x0 + BADGE, y - 0.6, { maxWidth: TEXT_W });
+      y += 3.6;
 
-      // Stem
-      style('normal', 9.2, INK);
-      write(stem || '(Soru kökü henüz derlenmedi)', BODY_X, BODY_W, 4.3);
-      y += 1.6;
+      style('normal', SZ.stem, INK);
+      write(stem || '(Soru kökü henüz derlenmedi)', BADGE, TEXT_W, LH.stem);
+      y += 0.8;
 
-      // Options
       opts.forEach((o: any) => {
         const isCorrect = mode === 'solution' && !!answer && o.key === answer;
-        style(isCorrect ? 'bold' : 'normal', 8.7, isCorrect ? OK : INK);
+        style(isCorrect ? 'bold' : 'normal', SZ.opt, isCorrect ? OK : INK);
         write(
           `${o.key})  ${String(o.text).trim()}`,
-          BODY_X + 2,
-          BODY_W - 6,
-          4.1,
+          BADGE + 1.2,
+          TEXT_W - 2.4,
+          LH.opt,
           isCorrect
-            ? (top, h) => {
+            ? (x, top, h) => {
                 fill(OK_SOFT);
-                doc.rect(BODY_X, top - 0.5, BODY_W, h, 'F');
+                doc.rect(x - 1.2, top - 0.35, TEXT_W, h, 'F');
               }
             : undefined
         );
-        y += 0.6;
       });
 
-      // Explanation with an accent bar that follows the text across pages
       if (mode === 'solution') {
         const exp = cleanExplanation(rec?.explanation || '');
-        y += 2;
-        const bar = (top: number, h: number) => {
+        y += 1.2;
+        const bar = (x: number, top: number, h: number) => {
           fill(OK);
-          doc.rect(BODY_X, top, 0.6, h + 0.2, 'F');
+          doc.rect(x - 2.4, top, 0.5, h + 0.15, 'F');
         };
-        style('bold', 7.8, OK);
-        write(`Doğru cevap: ${answer || 'belirtilmemiş'}`, BODY_X + 3.5, BODY_W - 4, 3.7, bar);
+        style('bold', SZ.exp, OK);
+        write(`Doğru cevap: ${answer || 'belirtilmemiş'}`, BADGE + 2.4, TEXT_W - 2.6, LH.exp, bar);
         if (exp) {
-          style('normal', 7.8, INK2);
+          style('normal', SZ.exp, INK2);
           exp
             .split('\n')
             .map((p) => p.trim())
             .filter(Boolean)
-            .forEach((para) => write(para, BODY_X + 3.5, BODY_W - 4, 3.6, bar));
+            .forEach((para) => write(para, BADGE + 2.4, TEXT_W - 2.6, LH.exp, bar));
         }
       }
 
-      // Breathing room + hairline between questions
-      y += 4;
-      ensure(2);
-      stroke(LINE);
-      doc.line(BODY_X, y, pageW - M, y);
-      y += 7.5;
+      // space + hairline between questions (skipped at a column break)
+      y += 2.4;
+      if (y + 4 <= BOTTOM) {
+        stroke(LINE);
+        doc.line(colX() + BADGE, y, colX() + COL_W, y);
+      }
+      y += 4.4;
     });
   }
 
-  // ---------- Answer key ----------
+  // ---------- Answer key (full width) ----------
+  let keyStartPage = Infinity;
   if (includeKey && questions.length > 0) {
     if (mode !== 'answers_only') newPage();
-    style('bold', 7.5, ACCENT);
+    keyStartPage = doc.getNumberOfPages();
+    const keyCols = 15;
+    const gap = 1.2;
+    const cellW = (W - gap * (keyCols - 1)) / keyCols;
+    const cellH = 8.2;
+    style('bold', 6.8, ACCENT);
     doc.text(T('CEVAP ANAHTARI'), M, y);
+    style('normal', 6.8, INK3);
+    doc.text(T(`${questions.length} soru`), pageW - M, y, { align: 'right' });
     y += 4;
-    style('normal', 8.5, INK2);
-    doc.text(T(`${questions.length} soru`), M, y);
-    y += 7;
-    const cols = 10;
-    const gap = 1.6;
-    const cellW = (W - gap * (cols - 1)) / cols;
-    const cellH = 10;
     questions.forEach((q, idx) => {
-      const col = idx % cols;
-      if (col === 0) ensure(cellH + gap);
-      const x = M + col * (cellW + gap);
+      const c = idx % keyCols;
+      if (c === 0 && y + cellH > BOTTOM) newPage();
+      const x = M + c * (cellW + gap);
       const ans = q.reconstruction?.correctAnswer || q.claimedAnswer || '–';
       fill(CANVAS);
-      doc.roundedRect(x, y, cellW, cellH, 1.2, 1.2, 'F');
-      style('normal', 6.5, INK3);
-      doc.text(String(idx + 1), x + cellW / 2, y + 3.4, { align: 'center' });
-      style('bold', 10, ans === '–' ? INK3 : ACCENT);
-      doc.text(T(ans), x + cellW / 2, y + 8, { align: 'center' });
-      if (col === cols - 1 || idx === questions.length - 1) y += cellH + gap;
+      doc.roundedRect(x, y, cellW, cellH, 1, 1, 'F');
+      style('normal', 5.8, INK3);
+      doc.text(String(idx + 1), x + cellW / 2, y + 2.9, { align: 'center' });
+      style('bold', 8.6, ans === '–' ? INK3 : ACCENT);
+      doc.text(T(ans), x + cellW / 2, y + 6.6, { align: 'center' });
+      if (c === keyCols - 1 || idx === questions.length - 1) y += cellH + gap;
     });
   }
 
-  // ---------- Footer with page numbers ----------
+  // ---------- Column rules + footer ----------
   const total = doc.getNumberOfPages();
   for (let p = 1; p <= total; p++) {
     doc.setPage(p);
+    const isKeyPage = mode === 'answers_only' || p >= keyStartPage;
+    if (twoCol && mode !== 'answers_only' && !isKeyPage) {
+      stroke(LINE);
+      const mid = M + COL_W + GUTTER / 2;
+      doc.line(mid, (columnTops[p - 1] ?? TOP) - 3, mid, BOTTOM);
+    }
     stroke(LINE);
-    doc.line(M, pageH - 13.5, pageW - M, pageH - 13.5);
-    style('normal', 7, INK3);
-    doc.text(T('MedSoru · Dönem 3 kurul soru arşivi'), M, pageH - 9.5);
-    doc.text(T(`${p} / ${total}`), pageW - M, pageH - 9.5, { align: 'right' });
+    doc.line(M, pageH - 11, pageW - M, pageH - 11);
+    style('normal', 6.5, INK3);
+    doc.text(T('MedSoru · Dönem 3 kurul soru arşivi'), M, pageH - 7.5);
+    doc.text(T(`${p} / ${total}`), pageW - M, pageH - 7.5, { align: 'right' });
   }
 
   return doc.output('blob');

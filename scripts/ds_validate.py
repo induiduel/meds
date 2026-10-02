@@ -1,8 +1,8 @@
 import json, os, glob, re, sys
 from collections import Counter
 sys.stdout.reconfigure(encoding='utf-8')
-OUT = r"C:\Users\indui\Desktop\meds\data\ds_out"
-BAT = r"C:\Users\indui\Desktop\meds\data\ds_work\batches"
+OUT = r"C:\Users\indui\Desktop\meds\dist\ds_out"
+BAT = r"C:\Users\indui\Desktop\meds\dist\ds_work\batches"
 
 STATUS = {"onaylandi", "inceleme_gerekli", "kullanilamaz"}
 ANSWER = {"dogrulandi", "duzeltildi", "dogrulanamadi", "belirsiz"}

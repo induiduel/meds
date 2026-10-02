@@ -49,8 +49,8 @@ def verify_quote(quote, hint_discipline=None):
     return best
 
 if __name__ == "__main__":
-    OUT = r"C:\Users\indui\Desktop\meds\data\ds_out"
-    BAT = r"C:\Users\indui\Desktop\meds\data\ds_work\batches"
+    OUT = r"C:\Users\indui\Desktop\meds\dist\ds_out"
+    BAT = r"C:\Users\indui\Desktop\meds\dist\ds_work\batches"
     stats = {"tam": 0, "id_yanlis": 0, "uydurma": 0, "kisa": 0}
     for f in sorted(glob.glob(os.path.join(OUT, "*.json"))):
         bid = os.path.basename(f)[:-5]

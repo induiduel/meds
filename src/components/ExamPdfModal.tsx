@@ -331,6 +331,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
         includeAnswerKey: bookletMode === 'answers_only' || includeAnswerMatrix,
         title: displayTitle,
         subtitle: selectedYear !== 'all' ? selectedYear : undefined,
+        columns,
       });
     } catch (err: any) {
       console.error('PDF oluşturma hatası:', err);
@@ -549,7 +550,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                 </select>
               </label>
               <div className="flex flex-col gap-1.5">
-                <span className="text-[13px] font-semibold text-ink-2">Sütun (yazdırma)</span>
+                <span className="text-[13px] font-semibold text-ink-2">Sütun</span>
                 <div role="radiogroup" aria-label="Sütun" className="grid grid-cols-2 gap-1 bg-canvas rounded-[10px] p-[3px]">
                   {(
                     [

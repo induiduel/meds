@@ -1,7 +1,7 @@
 import json, os, glob, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-OUT = r"C:\Users\indui\Desktop\meds\data\ds_out"
-BAT = r"C:\Users\indui\Desktop\meds\data\ds_work\batches"
+OUT = r"C:\Users\indui\Desktop\meds\dist\ds_out"
+BAT = r"C:\Users\indui\Desktop\meds\dist\ds_work\batches"
 CAT = {}
 import glob as g
 for f in g.glob(r"C:\Users\indui\Desktop\meds_database\redakte_ozet\Kurul *\*\*.md"):
