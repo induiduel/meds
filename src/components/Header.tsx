@@ -76,10 +76,7 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'study', label: 'Çalış', icon: ListChecks },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
   { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
-  { id: 'notes', label: 'Ders notları', icon: BookOpenText },
-  { id: 'transcripts', label: 'Ses kayıtları', icon: Mic },
   { id: 'matrix', label: 'Soru haritası', icon: LayoutGrid },
-  { id: 'booklet', label: 'A4 kitapçık', icon: BookCopy },
 ];
 
 /** How many NAV entries the desktop bar may show before folding the rest into "Daha". */

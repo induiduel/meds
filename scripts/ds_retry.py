@@ -6,7 +6,9 @@ sys.path.insert(0, r"C:\Users\indui\Desktop\meds\scripts")
 import ds_batches as B
 
 W = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
+R = r"C:\Users\indui\Desktop\meds\.meds_ds"
 O = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
+O2 = r"C:\Users\indui\Desktop\meds\.meds_ds\out_retry"
 RB = os.path.join(W, "batches_retry")
 os.makedirs(RB, exist_ok=True)
 
@@ -16,7 +18,7 @@ def main():
     base = json.load(open(os.path.join(W, "questions_matched.json"), encoding='utf-8'))
     BASEMAP = {q['id']: q for q in base}
     have = {}
-    for f in glob.glob(os.path.join(O, "*.json")):
+    for f in glob.glob(os.path.join(O, "*.json")) + glob.glob(os.path.join(O2, "*.json")):
         try:
             d = json.load(open(f, encoding='utf-8'))
         except Exception:

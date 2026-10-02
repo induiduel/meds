@@ -962,7 +962,19 @@ def build_deck():
             f"Bu slayttaki patolojik adaptasyon mekanizmasının reversibilitesini ve hücre ölümüyle olan sınır çizgisini klinik örneklerle açıklar mısın?"
         ]
 
-        flashcards = s_raw.get('flashcards', [])
+        flashcards = []
+        for fc in s_raw.get('flashcards', []):
+            q_val = fc.get('question') or fc.get('front', '')
+            a_val = fc.get('answer') or fc.get('back', '')
+            flashcards.append({
+                "id": fc.get('id', ''),
+                "category": fc.get('category', 'Akıl Kartı'),
+                "front": q_val,
+                "back": a_val,
+                "question": q_val,
+                "answer": a_val,
+                "hint": fc.get('hint', '')
+            })
         total_cards += len(flashcards)
 
         slide_obj = {

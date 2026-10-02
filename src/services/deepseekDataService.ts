@@ -256,6 +256,103 @@ ${content}`.trim();
 }
 
 /**
+ * Parse a JSONL file and extract DeepSeek items (one JSON per line)
+ */
+function parseJsonlFile(filePath: string, fileName: string): DeepSeekItem[] {
+  const items: DeepSeekItem[] = [];
+  try {
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+    const now = new Date().toISOString();
+
+    for (let idx = 0; idx < lines.length; idx++) {
+      try {
+        const obj = JSON.parse(lines[idx]);
+        if (!obj || typeof obj !== 'object') continue;
+
+        const stem = obj.stem || obj.question || obj.soru || obj.soruKoku || '';
+        const content = obj.content || obj.text || obj.ozet || obj.not || obj.explanation || '';
+        const title = obj.topic || obj.title || obj.baslik || (stem ? stem.slice(0, 60) + '...' : `DeepSeek Soru #${idx + 1}`);
+        const discipline = obj.discipline || obj.brans || obj.ders || 'Tıp Bilimleri';
+        const committeeId = obj.committeeId || obj.kurulId || obj.kurul || 'donem3-kurul1';
+
+        let itemType: DeepSeekItem['itemType'] = 'question';
+        let fullContent = '';
+
+        if (stem) {
+          const opts = obj.options || obj.siklar || [];
+          const optLines = Array.isArray(opts)
+            ? opts.map((o: any) => typeof o === 'string' ? o : `${o.key || o.label || ''}) ${o.text || ''}`).join('\n')
+            : (obj.optionsText || '');
+          const claim = obj.correctAnswer || obj.dogruCevap || obj.claimedAnswer || '';
+          const expl = obj.explanation || obj.aciklama || '';
+          const evidence = obj.evidenceText ? `\nKanıt / Ders Notu Referansı:\n${obj.evidenceText}` : '';
+
+          fullContent = `[DEEPSEEK DOĞRULANMIŞ TIP SORUSU]
+Ders / Branş: ${discipline}
+Kurul: ${committeeId}
+Konu: ${title}
+Soru Kökü:
+${stem}
+
+Seçenekler:
+${optLines}
+
+Doğru Cevap: ${claim}
+${expl ? `\nDeepSeek Tıbbi Analizi & Çözümü:\n${expl}` : ''}${evidence}`.trim();
+        } else {
+          itemType = 'summary';
+          fullContent = `[DEEPSEEK TIP ÖZETİ]
+Ders: ${discipline}
+Kurul: ${committeeId}
+Başlık: ${title}
+İçerik:
+${content}`.trim();
+        }
+
+        const h = hashText(fullContent);
+        items.push({
+          id: obj.id || `deepseek-jsonl-${h.slice(0, 10)}`,
+          source: 'deepseek',
+          contributor: 'DeepSeek AI',
+          isContribution: true,
+          attributionBadge: 'DeepSeek Doğrulanmış Soru',
+          itemType,
+          committeeId,
+          discipline,
+          topic: obj.topic || title,
+          title,
+          content: fullContent,
+          rawPayload: obj,
+          metadata: {
+            sourceFile: fileName,
+            fileFormat: 'jsonl',
+            importedAt: now,
+            stem: stem || undefined,
+            options: obj.options || undefined,
+            correctAnswer: obj.correctAnswer || obj.claimedAnswer || undefined,
+            explanation: obj.explanation || undefined,
+            evidenceText: obj.evidenceText || undefined,
+            lectureMatches: obj.lectureMatches || undefined,
+            verification: obj.verification || undefined,
+            embeddingText: obj.embeddingText || undefined,
+            tags: ['deepseek', 'donem3', 'dogrulanmis_soru', discipline]
+          },
+          hash: h,
+          createdAt: now,
+          updatedAt: now
+        });
+      } catch (errLine: any) {
+        // Skip malformed individual line
+      }
+    }
+  } catch (err: any) {
+    console.warn(`[DeepSeekService] JSONL okuma hatası (${fileName}):`, err.message);
+  }
+  return items;
+}
+
+/**
  * Parse a Markdown / Text file and extract DeepSeek items
  */
 function parseMarkdownFile(filePath: string, fileName: string): DeepSeekItem[] {
@@ -354,7 +451,7 @@ export async function scanAndIngestDeepSeekData(): Promise<DeepSeekSyncResult> {
   try {
     const files = fs.readdirSync(DEEPSEEK_DATA_DIR).filter(f => {
       const lower = f.toLowerCase();
-      return (lower.endsWith('.json') || lower.endsWith('.md') || lower.endsWith('.txt')) &&
+      return (lower.endsWith('.json') || lower.endsWith('.jsonl') || lower.endsWith('.md') || lower.endsWith('.txt')) &&
              !lower.startsWith('readme');
     });
 
@@ -364,7 +461,11 @@ export async function scanAndIngestDeepSeekData(): Promise<DeepSeekSyncResult> {
 
     for (const f of files) {
       const fullPath = path.join(DEEPSEEK_DATA_DIR, f);
-      if (f.toLowerCase().endsWith('.json')) {
+      const lower = f.toLowerCase();
+      if (lower.endsWith('.jsonl')) {
+        const parsed = parseJsonlFile(fullPath, f);
+        allIngested.push(...parsed);
+      } else if (lower.endsWith('.json')) {
         const parsed = parseJsonFile(fullPath, f);
         allIngested.push(...parsed);
       } else {

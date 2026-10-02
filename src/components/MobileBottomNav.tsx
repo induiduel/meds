@@ -41,10 +41,7 @@ const MORE: { id: AppTab; label: string; hint: string; icon: React.ElementType; 
   { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#1E4FD8' },
   { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#B7791F' },
   { id: 'summaries', label: 'Ders özetleri', hint: 'Spot bilgiler', icon: BookOpen, tint: '#6D28D9' },
-  { id: 'notes', label: 'Ders notları', hint: 'Slaytlar ve PDF notlar', icon: BookOpenText, tint: '#0F7A5F' },
-  { id: 'transcripts', label: 'Ses kayıtları', hint: 'Amfi transkriptleri', icon: Mic, tint: '#C2410C' },
   { id: 'matrix', label: 'Soru haritası', hint: '1–100 doluluk', icon: LayoutGrid, tint: '#0E1A26' },
-  { id: 'booklet', label: 'A4 kitapçık', hint: 'Yazdırılabilir görünüm', icon: BookCopy, tint: '#4A5868' },
 ];
 
 /** App-style tab bar for phones and tablets (below lg), with a "Daha" sheet for the remaining pages. */

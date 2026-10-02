@@ -991,7 +991,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                     <User className="w-3 h-3 text-teal-600" /> Öğretim Üyesi
                   </span>
                   <p className="font-bold text-slate-800 dark:text-slate-200 line-clamp-1">
-                    {dossier.instructor || `${summary.discipline} ABD`}
+                    {summary.instructor || dossier.instructor || `${summary.discipline} ABD`}
                   </p>
                 </div>
 

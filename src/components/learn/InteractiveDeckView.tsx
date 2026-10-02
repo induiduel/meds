@@ -56,8 +56,10 @@ export interface TranscriptUtterance {
 export interface SlideFlashcard {
   id: string;
   category?: string;
-  front: string;
-  back: string;
+  front?: string;
+  back?: string;
+  question?: string;
+  answer?: string;
   hint?: string;
 }
 
@@ -408,6 +410,9 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
   const [isFlipped, setIsFlipped] = useState(false);
   const [showHint, setShowHint] = useState(false);
 
+  const frontText = card.front || card.question || '';
+  const backText = card.back || card.answer || '';
+
   return (
     <div
       className="w-full cursor-pointer group"
@@ -422,7 +427,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       tabIndex={0}
       role="button"
       aria-pressed={isFlipped}
-      aria-label={`${card.front} akıl kartı`}
+      aria-label={`${frontText || 'Akıl Kartı'} akıl kartı`}
     >
       <div
         className="w-full grid rounded-2xl transition-all duration-500 ease-out shadow-xs hover:shadow-md min-h-[160px]"
@@ -453,7 +458,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 
           <div className="my-2 flex-1 flex flex-col justify-center">
             <h4 className="m-0 text-[13.5px] sm:text-[14.5px] font-semibold text-ink leading-snug tracking-[-0.01em] break-words">
-              {card.front}
+              {frontText}
             </h4>
             {card.hint && (
               <div className="mt-2.5">
@@ -500,7 +505,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           </div>
 
           <div className="my-2 flex-1 text-[12.5px] sm:text-[13px] font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
-            <Rich text={card.back} />
+            <Rich text={backText} />
           </div>
         </div>
       </div>
@@ -1234,7 +1239,7 @@ const GlobalTopicSearchModal: React.FC<{
       }
       // 4. Flashcards
       const foundCard = (slide.flashcards || []).find(
-        (fc) => fc.front.toLocaleLowerCase('tr-TR').includes(queryNorm) || fc.back.toLocaleLowerCase('tr-TR').includes(queryNorm)
+        (fc) => (fc.front || '').toLocaleLowerCase('tr-TR').includes(queryNorm) || (fc.back || '').toLocaleLowerCase('tr-TR').includes(queryNorm)
       );
       if (foundCard) {
         matches.push({
@@ -1242,7 +1247,7 @@ const GlobalTopicSearchModal: React.FC<{
           slideNumber: slide.slideNumber,
           slideTitle: slide.title,
           matchedType: 'Akıl Kartı',
-          snippet: `Soru: ${foundCard.front} -> ${foundCard.back.slice(0, 110)}...`,
+          snippet: `Soru: ${foundCard.front || ''} -> ${(foundCard.back || '').slice(0, 110)}...`,
         });
         return;
       }

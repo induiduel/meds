@@ -27,6 +27,7 @@ export interface SummaryMeta {
   committeeId: string;
   discipline: string;
   title: string;
+  instructor?: string;
   fileName: string;
   keyPoints: string[];
   charCount: number;
@@ -89,8 +90,9 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
         const q = searchQuery.toLowerCase();
         const inTitle = s.title.toLowerCase().includes(q);
         const inDiscipline = s.discipline.toLowerCase().includes(q);
+        const inInstructor = s.instructor ? s.instructor.toLowerCase().includes(q) : false;
         const inPoints = s.keyPoints.some((p) => p.toLowerCase().includes(q));
-        if (!inTitle && !inDiscipline && !inPoints) return false;
+        if (!inTitle && !inDiscipline && !inInstructor && !inPoints) return false;
       }
       return true;
     });
@@ -269,6 +271,12 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
                   <span className="min-w-0 h-6 px-2 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center truncate">{s.discipline}</span>
                 </span>
                 <span className="text-[16px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{s.title}</span>
+                {s.instructor && (
+                  <span className="text-[13px] text-ink-2 font-medium flex items-center gap-1.5 truncate">
+                    <GraduationCap className="w-3.5 h-3.5 text-accent shrink-0" />
+                    <span className="truncate">{s.instructor}</span>
+                  </span>
+                )}
                 {s.keyPoints?.length > 0 && (
                   <span className="flex flex-col gap-0.5 text-[13px] text-ink-2">
                     {s.keyPoints.slice(0, 3).map((pt, idx) => (

@@ -844,7 +844,19 @@ def build_deck():
         lead = s_raw["lead"]
         spot_pearls = s_raw["spotPearls"]
         key_bullets = s_raw["keyBullets"]
-        flashcards = s_raw["flashcards"]
+        flashcards = []
+        for fc in s_raw.get("flashcards", []):
+            q_val = fc.get("question") or fc.get("front", "")
+            a_val = fc.get("answer") or fc.get("back", "")
+            flashcards.append({
+                "id": fc.get("id", ""),
+                "category": fc.get("category", "Akıl Kartı"),
+                "front": q_val,
+                "back": a_val,
+                "question": q_val,
+                "answer": a_val,
+                "hint": fc.get("hint", "")
+            })
 
         matched_qs = find_matched_questions(keywords, max_count=2)
         total_matched_questions += len(matched_qs)

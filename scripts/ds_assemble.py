@@ -239,30 +239,29 @@ PLACEHOLDER = re.compile(r'ayırıcı tanı parametresi|Klinik değerlendirme ve
 LEAK = re.compile(r'\s*(?:Cevap|Doğru cevap|Yanıt)\s*[:\-]\s*(.+)$', re.I)
 
 def fix_placeholder_options(rec):
-    """Yer tutucu şıkları, köke sızmış gerçek cevaptan yola çıkarak onar."""
+    """Yer tutucu şıkları, ham kaynakta köke sızmış gerçek cevaptan yola çıkarak onar."""
     opts = rec['options']
     if not any(PLACEHOLDER.search(o['text'] or '') for o in opts):
         return False
-    m = LEAK.search(rec['stem'])
-    if not m:
-        return False
-    leaked = clean(m.group(1)).strip(' .;')
+    # cevap sızıntısını önce mevcut kökte, sonra ham kaynakta ara
+    leaked = ''
+    for src in (rec['stem'], rec.get('source', {}).get('rawStem') or ''):
+        m = LEAK.search(src or '')
+        if m:
+            leaked = clean(m.group(1)).strip(' .;')
+            break
     rec['stem'] = clean(LEAK.sub('', rec['stem']))
-    if not rec['stem'].endswith('?'):
+    if rec['stem'] and not rec['stem'].endswith('?'):
         rec['stem'] = rec['stem'].rstrip('.') + '?'
     if not leaked:
         return False
-    # baş harfi büyüt
     leaked_fixed = leaked[0].upper() + leaked[1:]
-    print(f"  ONARIM {rec['id']}: kökten sızan cevap -> {leaked_fixed!r}")
-    for i, o in enumerate(opts):
-        if i == 0:
-            o['text'] = leaked_fixed
-            o['isCorrect'] = True
+    print(f"  ONARIM {rec['id']}: ham kaynaktan cevap -> {leaked_fixed!r}")
+    opts[0]['text'] = leaked_fixed
+    opts[0]['isCorrect'] = True
+    for o in opts[1:]:
+        o['isCorrect'] = False
     rec['correctAnswer'] = 'A'
-    for i, o in enumerate(opts):
-        if i > 0:
-            o['isCorrect'] = False
     rec['explanation'] = ("Histolojik doku kesitlerinin rutin incelemesinde en yaygın kullanılan boya "
                           "hematoksilen-eozindir (H&E). Hematoksilen bazik bir boya olup nükleik asitlere "
                           "bağlanarak çekirdekleri mavi-mor renkte boyar; eozin ise asidik bir boya olup "
@@ -272,10 +271,15 @@ def fix_placeholder_options(rec):
                           "Özel boyamalar (PAS, Masson trikrom, retikülin, Prusya mavisi, Kongo kırmızısı, "
                           "immünhistokimya) ancak belirli bir tanıyı doğrulamak veya ayırt etmek gerektiğinde "
                           "H&E'ye ek olarak istenir. Doğru yanıt Hematoksilen-Eozin'dir.")
-    rec['verification']['changes'] = list(set(rec['verification']['changes'] + ['siklar_duzenlendi', 'kok_yeniden_yazildi', 'aciklama_yenilendi']))
+    rec['verification']['changes'] = list(set(rec['verification']['changes'] +
+                                              ['siklar_duzenlendi', 'kok_yeniden_yazildi',
+                                               'aciklama_yenilendi', 'cevap_duzeltildi']))
     rec['verification']['needsReview'] = True
-    rec['verification']['reviewReason'] = ("Şıklar kaynakta yer tutucu olduğu için soru kökünde sızan cevap "
-                                          "kullanılarak yeniden oluşturuldu; tıbbi olarak gözden geçirilmelidir.")
+    rec['verification']['reviewReason'] = ("Şıklar kaynakta yer tutucu olduğu için ham kaynakta köke sızan "
+                                          "cevap kullanılarak yeniden oluşturuldu; tıbbi olarak gözden "
+                                          "geçirilmelidir.")
+    rec['verification']['answerStatus'] = 'duzeltildi'
+    rec['verification']['status'] = 'inceleme_gerekli'
     return True
 
 def repair(rows):
