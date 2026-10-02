@@ -129,12 +129,11 @@ async function main() {
 
   const handleTunnelOutput = async (data) => {
     const text = data.toString();
-    // Geliştirici hata ayıklama için isterseniz açabilirsiniz
-    // process.stdout.write(text);
+    process.stdout.write(text);
 
     if (!tunnelDetected) {
-      const match = text.match(/https:\/\/[a-zA-Z0-9-.]+\.trycloudflare\.com/);
-      if (match) {
+      const match = text.match(/https:\/\/[a-zA-Z0-9-]+\.trycloudflare\.com/);
+      if (match && !match[0].includes('api.trycloudflare.com')) {
         tunnelDetected = true;
         const tunnelUrl = match[0];
 
