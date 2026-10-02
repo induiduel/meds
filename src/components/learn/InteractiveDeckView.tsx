@@ -221,8 +221,8 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 
   return (
     <div
-      className="w-full select-none cursor-pointer group"
-      style={{ perspective: '1000px' }}
+      className="w-full cursor-pointer group"
+      style={{ perspective: '1200px' }}
       onClick={() => setIsFlipped((v) => !v)}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -236,7 +236,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       aria-label={`${card.front} akıl kartı`}
     >
       <div
-        className="w-full relative rounded-2xl transition-transform duration-500 ease-out shadow-xs hover:shadow-md min-h-[220px] sm:min-h-[200px]"
+        className="w-full grid rounded-2xl transition-all duration-500 ease-out shadow-xs hover:shadow-md min-h-[160px]"
         style={{
           transformStyle: 'preserve-3d',
           transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
@@ -244,7 +244,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       >
         {/* FRONT FACE */}
         <div
-          className={`absolute inset-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-white via-white to-slate-50 overflow-hidden ${
+          className={`[grid-area:1/1] min-w-0 select-none rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-white via-white to-amber-50/20 shadow-xs hover:border-accent/40 transition-colors ${
             isFlipped ? 'pointer-events-none' : ''
           }`}
           style={{
@@ -253,24 +253,24 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           }}
         >
           <div className="flex items-center justify-between gap-2 shrink-0">
-            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-accent-soft text-accent uppercase tracking-wider inline-flex items-center gap-1">
-              <BrainCircuit className="w-3.5 h-3.5" />
+            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-900 uppercase tracking-wider inline-flex items-center gap-1.5 border border-amber-200/80">
+              <BrainCircuit className="w-3.5 h-3.5 text-amber-700" />
               {card.category || 'Akıl Kartı'}
             </span>
-            <span className="text-[11px] text-ink-3 font-medium flex items-center gap-1">
+            <span className="text-[11px] text-ink-3 font-medium flex items-center gap-1.5 bg-canvas px-2 py-0.5 rounded-full">
               <span>Cevap arkada</span>
-              <RefreshCw className="w-3 h-3 text-accent group-hover:rotate-45 transition-transform" />
+              <RefreshCw className="w-3 h-3 text-accent group-hover:rotate-180 transition-transform duration-500" />
             </span>
           </div>
 
-          <div className="my-2 flex-1 overflow-y-auto no-scrollbar flex flex-col justify-center">
-            <h4 className="m-0 text-[14.5px] sm:text-[15.5px] font-semibold text-ink leading-snug">
+          <div className="my-2.5 flex-1 flex flex-col justify-center">
+            <h4 className="m-0 text-[15px] sm:text-[16px] font-semibold text-ink leading-snug tracking-[-0.01em] break-words">
               {card.front}
             </h4>
             {card.hint && (
-              <div className="mt-2.5">
+              <div className="mt-3">
                 {showHint ? (
-                  <p className="m-0 text-[12px] text-amber-900 bg-amber-50/90 border border-amber-200/90 rounded-lg p-2 leading-relaxed">
+                  <p className="m-0 text-[12.5px] text-amber-950 bg-amber-50 border border-amber-200 rounded-xl p-2.5 leading-relaxed shadow-2xs">
                     💡 <strong>İpucu:</strong> {card.hint}
                   </p>
                 ) : (
@@ -280,27 +280,27 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
                       e.stopPropagation();
                       setShowHint(true);
                     }}
-                    className="text-[11.5px] font-medium text-accent hover:underline cursor-pointer inline-flex items-center gap-1"
+                    className="text-[12px] font-semibold text-accent hover:text-accent-hover hover:underline cursor-pointer inline-flex items-center gap-1"
                   >
-                    <span>💡 İpucu göster</span>
+                    <span>💡 İpucunu Göster</span>
                   </button>
                 )}
               </div>
             )}
           </div>
 
-          <div className="pt-2 border-t border-line-soft flex items-center justify-between text-[11.5px] text-ink-3 shrink-0">
-            <span className="flex items-center gap-1 text-accent font-medium">
-              <RefreshCw className="w-3.5 h-3.5" />
-              <span>Çevirmek için tıkla</span>
+          <div className="pt-2.5 border-t border-line-soft flex items-center justify-between text-[11.5px] text-ink-3 shrink-0">
+            <span className="flex items-center gap-1.5 text-accent font-semibold">
+              <RefreshCw className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
+              <span>Cevabı görmek için tıkla</span>
             </span>
-            <span className="text-[11px] font-mono text-ink-3 hidden sm:inline">Boşluk / Enter</span>
+            <span className="text-[11px] font-mono text-ink-3 hidden sm:inline bg-canvas px-1.5 py-0.5 rounded border border-line-soft">Boşluk / Enter</span>
           </div>
         </div>
 
         {/* BACK FACE */}
         <div
-          className={`absolute inset-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-emerald-50/90 via-white to-ok-soft/30 border-ok-bright/40 overflow-hidden ${
+          className={`[grid-area:1/1] min-w-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-emerald-50/95 via-teal-50/30 to-white border-emerald-300 shadow-sm ${
             !isFlipped ? 'pointer-events-none' : ''
           }`}
           style={{
@@ -308,24 +308,24 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             transform: 'rotateY(180deg)',
           }}
         >
-          <div className="flex items-center justify-between gap-2 shrink-0">
-            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-ok-soft text-ok uppercase tracking-wider inline-flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5 text-ok" />
+          <div className="flex items-center justify-between gap-2 shrink-0 select-none">
+            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-900 uppercase tracking-wider inline-flex items-center gap-1.5 border border-emerald-300/80">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
               Doğru Yanıt & Klinik Açıklama
             </span>
-            <span className="text-[11px] text-ok font-medium flex items-center gap-1">
+            <span className="text-[11px] text-emerald-800 font-medium flex items-center gap-1.5 bg-white/80 px-2 py-0.5 rounded-full border border-emerald-200">
               <span>Geri çevir</span>
-              <RefreshCw className="w-3 h-3 text-ok" />
+              <RefreshCw className="w-3 h-3 text-emerald-600" />
             </span>
           </div>
 
-          <div className="my-2 flex-1 overflow-y-auto pr-1 text-[13.5px] sm:text-[14px] font-medium text-ink leading-relaxed whitespace-pre-line">
+          <div className="my-2.5 flex-1 text-[13.5px] sm:text-[14.5px] font-medium text-ink leading-relaxed whitespace-pre-line select-text">
             <Rich text={card.back} />
           </div>
 
-          <div className="pt-2 border-t border-ok-soft flex items-center justify-between text-[11.5px] text-ok shrink-0">
-            <span className="flex items-center gap-1 font-semibold">
-              <Check className="w-3.5 h-3.5" />
+          <div className="pt-2.5 border-t border-emerald-200 flex items-center justify-between text-[11.5px] text-emerald-800 shrink-0 select-none">
+            <span className="flex items-center gap-1.5 font-bold">
+              <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
               <span>Klinik Hafızaya Alındı</span>
             </span>
             <span className="text-[11px] text-ink-3">Tekrar çevirmek için tıkla</span>
@@ -528,17 +528,6 @@ const DeckPlayer: React.FC<{
   const touch = useRef<{ x: number; y: number } | null>(null);
 
   const slide = slides[index];
-  // A long slide is split into screen-sized pages ("parts") in paged mode
-  const [part, setPart] = useState(0);
-  const [parts, setParts] = useState(1);
-  const landOnLastPart = useRef(false);
-  const handleParts = useCallback((count: number) => {
-    setParts(count);
-    if (landOnLastPart.current) {
-      landOnLastPart.current = false;
-      setPart(count - 1);
-    } else setPart((p) => Math.min(p, count - 1));
-  }, []);
 
   // Lock page scroll and focus the player while open
   useEffect(() => {
@@ -575,10 +564,8 @@ const DeckPlayer: React.FC<{
   };
 
   const goTo = useCallback(
-    (i: number, toLastPart = false) => {
+    (i: number) => {
       const t = Math.max(0, Math.min(n - 1, i));
-      landOnLastPart.current = toLastPart;
-      setPart(0);
       setIndex(t);
       if (mode === 'scroll') {
         programmatic.current = true;
@@ -590,15 +577,13 @@ const DeckPlayer: React.FC<{
   );
 
   const next = () => {
-    if (mode === 'paged' && part < parts - 1) setPart(part + 1);
-    else if (index < n - 1) goTo(index + 1);
+    if (index < n - 1) goTo(index + 1);
   };
   const prev = () => {
-    if (mode === 'paged' && part > 0) setPart(part - 1);
-    else if (index > 0) goTo(index - 1, mode === 'paged');
+    if (index > 0) goTo(index - 1);
   };
-  const atStart = index === 0 && (mode !== 'paged' || part === 0);
-  const atEnd = index >= n - 1 && (mode !== 'paged' || part >= parts - 1);
+  const atStart = index === 0;
+  const atEnd = index >= n - 1;
 
   // Keep the current slide in view when switching to scroll mode
   useEffect(() => {
@@ -773,8 +758,8 @@ const DeckPlayer: React.FC<{
                 index={index}
                 total={n}
                 paged
-                part={part}
-                onParts={handleParts}
+                onNext={next}
+                onPrev={prev}
                 onOpenQuestions={() => {
                   setTab('questions');
                   setPanelOpen(true);
@@ -1090,65 +1075,18 @@ const SlideCanvas: React.FC<{
   onOpenQuestions?: () => void;
   onOpenFlashcards?: () => void;
   onOpenNotes?: () => void;
-  /** paged: split into screen-sized pages; otherwise flow at natural height */
+  onNext?: () => void;
+  onPrev?: () => void;
   paged?: boolean;
-  part?: number;
-  onParts?: (count: number) => void;
-}> = ({ slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, paged = false, part = 0, onParts }) => {
+}> = ({ slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, onNext, paged = false }) => {
   const [copied, setCopied] = useState(false);
-  // Pagination (paged mode): measure the slide's blocks and cut pages only at
-  // block boundaries, so every page fits the stage like a presentation slide.
-  const boxRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [pages, setPages] = useState<{ start: number; end: number }[]>([{ start: 0, end: Infinity }]);
-  const pagesKey = useRef('');
-  useLayoutEffect(() => {
-    const box = boxRef.current;
-    const content = contentRef.current;
-    if (!box || !content || !paged) return;
-    const compute = () => {
-      const avail = box.clientHeight;
-      if (!avail) return;
-      const cr = content.getBoundingClientRect();
-      const total = cr.height;
-      const units: [number, number][] = [];
-      const walk = (el: Element, depth: number) => {
-        for (const ch of Array.from(el.children)) {
-          const r = (ch as HTMLElement).getBoundingClientRect();
-          if (r.height <= 0) continue;
-          // descend into tall blocks so long lists/tables split between items, not leave half a page empty
-          if (r.height > avail * 0.4 && ch.children.length > 0 && depth < 7) walk(ch, depth + 1);
-          else units.push([r.top - cr.top, r.bottom - cr.top]);
-        }
-      };
-      walk(content, 0);
-      const inside = (y: number) => units.some(([a, b]) => a < y - 1 && b > y + 1);
-      const out: { start: number; end: number }[] = [];
-      let start = 0;
-      while (start + avail < total - 2 && out.length < 30) {
-        const limit = start + avail - 14;
-        const cands = units.map((u) => u[1] + 6).filter((y) => y > start + 60 && y <= limit && !inside(y));
-        const cut = cands.length ? Math.max(...cands) : limit;
-        out.push({ start, end: cut });
-        const nextTops = units.map((u) => u[0]).filter((t) => t >= cut - 6);
-        start = Math.max(cut, (nextTops.length ? Math.min(...nextTops) : cut) - 16);
-      }
-      out.push({ start, end: total });
-      const key = out.map((pg) => `${Math.round(pg.start)}-${Math.round(pg.end)}`).join(',');
-      if (key !== pagesKey.current) {
-        pagesKey.current = key;
-        setPages(out);
-        onParts?.(out.length);
-      }
-    };
-    compute();
-    const ro = new ResizeObserver(() => compute());
-    ro.observe(box);
-    ro.observe(content);
-    return () => ro.disconnect();
-  }, [paged, slide, onParts]);
-  const page = pages[Math.min(part, pages.length - 1)] || { start: 0, end: Infinity };
-  const pageCount = pages.length;
+  const containerRef = useRef<HTMLElement>(null);
+
+  // When changing slides in paged mode, scroll to top immediately
+  useEffect(() => {
+    containerRef.current?.scrollTo({ top: 0, behavior: 'instant' });
+  }, [index, slide]);
+
   const hl = slide.professorAudioHighlight;
   const emph = hl ? EMPHASIS[hl.emphasisType] || EMPHASIS.pearl : null;
   const c = slide.coreContent || {};
@@ -1164,14 +1102,11 @@ const SlideCanvas: React.FC<{
   };
 
   return (
-    <article className={`w-full ${paged ? 'h-full' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 overflow-hidden`}>
-      <div ref={boxRef} className={paged ? 'flex-1 min-h-0 overflow-hidden relative' : ''}>
-      <div style={paged && Number.isFinite(page.end) ? { height: page.end - page.start, overflow: 'hidden' } : undefined}>
-      <div
-        ref={contentRef}
-        style={paged ? { transform: `translateY(${-page.start}px)` } : undefined}
-        className="px-4 py-4 sm:px-8 sm:py-6 lg:px-10 lg:py-7 flex flex-col gap-4 sm:gap-6"
-      >
+    <article
+      ref={containerRef}
+      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 custom-scrollbar`}
+    >
+      <div className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6">
         {/* Slide header */}
         <header className="flex flex-col gap-2">
           <div className="flex items-center gap-2 flex-wrap">
@@ -1339,7 +1274,7 @@ const SlideCanvas: React.FC<{
         </div>
 
         {/* 5. Core content: formulas, tables, bullets, infographics */}
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] gap-4 sm:gap-5 lg:gap-7 items-start">
+        <div className={`grid grid-cols-1 ${c.table && c.table.headers?.length > 0 ? '' : 'lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]'} gap-4 sm:gap-5 lg:gap-7 items-start`}>
           {/* Main content */}
           <div className="flex flex-col gap-4 min-w-0">
             {c.keyBullets && c.keyBullets.length > 0 && (
@@ -1385,11 +1320,11 @@ const SlideCanvas: React.FC<{
               <div className="rounded-xl border border-line overflow-hidden">
                 {c.table.title && <div className="px-3 py-2 bg-canvas text-[13px] font-semibold border-b border-line">{c.table.title}</div>}
                 <div className="overflow-x-auto">
-                  <table className="w-full text-[13px] sm:text-[14px] border-collapse">
+                  <table className={`w-full border-collapse ${c.table.headers.length >= 4 ? 'text-[12.5px] sm:text-[13px]' : 'text-[13px] sm:text-[14px]'}`}>
                     <thead>
                       <tr className="bg-[#FAFBFC]">
                         {c.table.headers.map((h, i) => (
-                          <th key={i} scope="col" className="text-left font-semibold text-ink-2 px-3 py-2 border-b border-line whitespace-nowrap">
+                          <th key={i} scope="col" className="text-left font-semibold text-ink-2 px-3 py-2 border-b border-line align-bottom break-words">
                             {h}
                           </th>
                         ))}
@@ -1399,7 +1334,7 @@ const SlideCanvas: React.FC<{
                       {c.table.rows.map((r, ri) => (
                         <tr key={ri} className="border-b border-line-soft last:border-0 align-top">
                           {r.map((cell, ci) => (
-                            <td key={ci} className={`px-3 py-2 ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
+                            <td key={ci} className={`px-3 py-2 break-words leading-[1.5] ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
                               <Rich text={cell} />
                             </td>
                           ))}
@@ -1429,22 +1364,20 @@ const SlideCanvas: React.FC<{
             )}
           </div>
         </div>
+        {paged && index < total - 1 && onNext && (
+          <div className="mt-2 pt-3.5 border-t border-line-soft flex items-center justify-between text-[12.5px] text-ink-3">
+            <span>Slayt {index + 1} / {total} · Aşağı kaydırarak tamamını okuyabilirsiniz</span>
+            <button
+              type="button"
+              onClick={onNext}
+              className="h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent hover:text-white text-accent font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+            >
+              <span>Sonraki Slayta Geç</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
       </div>
-      </div>
-      </div>
-      {paged && pageCount > 1 && (
-        <div className="shrink-0 h-9 border-t border-line-soft px-4 flex items-center justify-between text-[12px] text-ink-3" aria-live="polite">
-          <span>
-            Slayt {index + 1} · sayfa {Math.min(part, pageCount - 1) + 1}/{pageCount}
-          </span>
-          <span className="flex items-center gap-1.5" aria-hidden="true">
-            {pages.map((_, k) => (
-              <span key={k} className={`h-1.5 rounded-full transition-all ${k === Math.min(part, pageCount - 1) ? 'w-5 bg-accent' : 'w-1.5 bg-line-2'}`} />
-            ))}
-          </span>
-          <span>{part < pageCount - 1 ? 'Devamı →' : 'Son sayfa'}</span>
-        </div>
-      )}
     </article>
   );
 };
