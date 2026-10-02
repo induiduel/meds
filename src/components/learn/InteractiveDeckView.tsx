@@ -1727,6 +1727,8 @@ const SlideCanvas: React.FC<{
   const c = slide.coreContent || {};
   const badge = tone(slide.badgeColor);
   const flashcards = slide.flashcards || [];
+  const narrative = slide.synthesisNarrative || (slide as any).content || '';
+  const spots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
 
   const copyQuote = () => {
     if (!hl?.quote) return;
@@ -1819,7 +1821,7 @@ const SlideCanvas: React.FC<{
         )}
 
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
-        {slide.synthesisNarrative && (
+        {narrative && (
           <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
             <div className="flex items-center justify-between gap-2 border-b border-line pb-2.5">
               <div className="flex items-center gap-2.5 min-w-0">
@@ -1851,11 +1853,11 @@ const SlideCanvas: React.FC<{
             </div>
             {/* Quick Medical Terms Pills for This Slide */}
             <SlideTermsPills
-              textToScan={`${slide.title || ''} ${slide.synthesisNarrative || ''} ${((slide as any).keyConcepts || []).join(' ')}`}
+              textToScan={`${slide.title || ''} ${narrative} ${((slide as any).keyConcepts || []).join(' ')}`}
               className="mb-1"
             />
             
-            <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
+            <StructuredSynthesisRenderer text={narrative} />
 
             {/* Categorized Key Bullets with Colors & Icons */}
             {c.keyBullets && c.keyBullets.length > 0 && (
@@ -2038,7 +2040,7 @@ const SlideCanvas: React.FC<{
 
           {/* Side: spot pearls */}
           <div className="flex flex-col gap-3 min-w-0">
-            {slide.spotPearls?.length > 0 && <SpotList items={slide.spotPearls} />}
+            {spots.length > 0 && <SpotList items={spots} />}
           </div>
         </div>
         {paged && index < total - 1 && onNext && (
