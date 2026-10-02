@@ -1,27 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import {
-  Sparkles,
-  X,
-  CheckCircle2,
-  AlertTriangle,
-  Layers,
-  ArrowRight,
-  RefreshCw,
-  GitMerge,
-  Filter,
-  Check,
-  HelpCircle,
-  Hash,
-  ChevronDown,
-  ChevronUp,
-  FileQuestion,
-  Users,
-  ShieldAlert,
-  Zap,
-  Search,
-  CheckSquare,
-  Square
-} from 'lucide-react';
+import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search } from 'lucide-react';
+import { toast } from './ui/Toast';
+import { CapsuleLoader, SuccessCheck } from './ui/Animations';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
 import { ApiService } from '../services/api';
 import { AppUser } from '../services/auth';
@@ -109,7 +89,6 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 
   const handleBatchMergeReady = async () => {
     if (!currentUser?.email) return;
-    if (!window.confirm('Yüksek uyumlu tüm taslak kümeleri otomatik birleştirilecek. Onaylıyor musunuz?')) return;
 
     setIsBatchMerging(true);
     setFeedback(null);
@@ -208,545 +187,458 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     });
   }, [committeeQuestions, manualSearchQuery]);
 
+  // Results also surface as floating toasts
+  useEffect(() => {
+    if (!feedback) return;
+    if (feedback.type === 'ok') toast.success('Birleştirildi', feedback.message);
+    else toast.error('İşlem tamamlanamadı', feedback.message);
+  }, [feedback]);
+
+  const [confirmBatch, setConfirmBatch] = useState(false);
+  useEffect(() => {
+    if (!confirmBatch) return;
+    const t = window.setTimeout(() => setConfirmBatch(false), 4000);
+    return () => window.clearTimeout(t);
+  }, [confirmBatch]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
+  const readyCount = analysis?.clusters.filter((c) => c.status === 'ready_to_merge').length || 0;
+  const reviewCount = analysis?.clusters.filter((c) => c.status === 'needs_review').length || 0;
+  const stemOf = (q: QuestionItem) => q.reconstruction?.stem || (q as any).stem || q.fragments?.[0]?.text || '';
+  const numLabel = (q: QuestionItem) => (q.isUnassignedNumber || !q.questionNumber ? 'No ?' : `S.${q.questionNumber}`);
+  const shortCommittee = (committee?.name || 'Seçili kurul').replace(/^Dönem 3\s*-\s*/i, '');
+
+  const tabs: { id: typeof activeFilter; label: string; count?: number }[] = [
+    { id: 'ready', label: 'Hazır', count: readyCount },
+    { id: 'review', label: 'İncele', count: reviewCount },
+    { id: 'all', label: 'Tümü', count: analysis?.clusters.length || 0 },
+    { id: 'vague', label: 'Muğlak', count: analysis?.vagueDraftsCount || 0 },
+    { id: 'manual', label: 'Elle seç', count: selectedDraftIds.length || undefined },
+  ];
+
+  const stats: { label: string; value: React.ReactNode; hint?: string; dot: string }[] = [
+    { label: 'Taslak', value: analysis?.totalDrafts ?? '–', hint: 'öğrenci girdisi', dot: '#4A5868' },
+    { label: 'Tahmini soru', value: analysis?.estimatedTrueQuestions ?? '–', hint: '/ 100 hedef', dot: '#1F9D55' },
+    { label: 'Hazır küme', value: readyCount, hint: `${analysis?.potentialSavedDuplicates ?? 0} mükerrer`, dot: '#1E4FD8' },
+    { label: 'Muğlak', value: analysis?.vagueDraftsCount ?? '–', hint: 'eşleşme arıyor', dot: '#F59E0B' },
+  ];
+
+  const busy = loading || isBatchMerging || isManualMerging || !!mergingClusterId;
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in">
-      <div className="bg-white w-full max-w-5xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[92vh]">
+    <div
+      className="fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in"
+      onMouseDown={(e) => e.target === e.currentTarget && onClose()}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="dedup-title"
+        className="relative w-full sm:max-w-[980px] h-[94dvh] sm:h-[min(92vh,900px)] bg-white rounded-t-[24px] sm:rounded-[24px] shadow-[0_30px_90px_rgba(14,26,38,0.32)] grid grid-rows-[auto_auto_auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
+      >
         {/* Header */}
-        <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-400">
-              <Layers className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h2 className="text-lg font-bold">Akıllı Taslak Birleştirme ve Kümeleme Merkezi</h2>
-                <span className="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
-                  {committee?.name || 'Seçili Kurul'}
-                </span>
-              </div>
-              <p className="text-xs text-slate-300">
-                Tıbbi kavram analizleri, şık permütasyonu ve manuel birleştirme koruması ile 100 soru hedefine konsolide edin.
-              </p>
-            </div>
+        <header className="relative flex items-center gap-3 px-4 sm:px-5 pt-4 pb-3">
+          <span className="sm:hidden absolute left-1/2 -translate-x-1/2 top-1.5 w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
+          <span className="w-10 h-10 rounded-[12px] bg-accent text-white flex items-center justify-center shrink-0 shadow-[0_6px_16px_rgba(30,79,216,0.25)]">
+            <Layers className="w-5 h-5" />
+          </span>
+          <div className="flex-1 min-w-0">
+            <h2 id="dedup-title" className="m-0 font-display font-bold text-[19px] tracking-[-0.02em] leading-tight">
+              Taslak birleştirme
+            </h2>
+            <p className="m-0 text-[13px] text-ink-3 truncate">{shortCommittee}</p>
           </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={runAnalysis}
-              disabled={loading}
-              title="Yeniden Analiz Et"
-              className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer disabled:opacity-50"
-            >
-              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-            </button>
-            <button
-              onClick={onClose}
-              className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-
-        {/* Feedback Alert */}
-        {feedback && (
-          <div
-            className={`px-5 py-2.5 text-xs font-medium flex items-center gap-2 border-b ${
-              feedback.type === 'ok'
-                ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
-                : 'bg-rose-50 text-rose-800 border-rose-200'
-            }`}
+          <button
+            type="button"
+            onClick={runAnalysis}
+            disabled={loading}
+            aria-label="Yeniden analiz et"
+            title="Yeniden analiz et"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer disabled:opacity-50"
           >
-            {feedback.type === 'ok' ? <Check className="w-4 h-4 text-emerald-600" /> : <AlertTriangle className="w-4 h-4 text-rose-600" />}
-            <span>{feedback.message}</span>
-          </div>
-        )}
+            <RefreshCw className={`w-[18px] h-[18px] ${loading ? 'animate-spin' : ''}`} />
+          </button>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Kapat"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </header>
 
-        {/* Metric Cards Banner */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-slate-50 border-b border-slate-200 text-xs">
-          <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
-            <span className="text-slate-500 font-medium">Toplam Taslak Havuzu</span>
-            <div className="flex items-baseline gap-2 mt-1">
-              <span className="text-xl font-bold text-slate-800 font-mono">{analysis?.totalDrafts ?? '...'}</span>
-              <span className="text-[11px] text-slate-400">öğrenci girdisi</span>
-            </div>
-          </div>
-
-          <div className="bg-white p-3 rounded-xl border border-emerald-200 bg-emerald-50/30 shadow-sm flex flex-col justify-between">
-            <span className="text-emerald-700 font-medium">Tahmini Gerçek Soru</span>
-            <div className="flex items-baseline gap-2 mt-1">
-              <span className="text-xl font-bold text-emerald-700 font-mono">
-                {analysis?.estimatedTrueQuestions ?? '...'}
+        {/* Stats */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4 sm:px-5 pb-3">
+          {stats.map((s) => (
+            <div key={s.label} className="rounded-[14px] bg-canvas px-3 py-2 flex flex-col">
+              <span className="flex items-center gap-1.5 text-[12px] text-ink-2">
+                <span className="w-2 h-2 rounded-full" style={{ background: s.dot }} aria-hidden="true" />
+                {s.label}
               </span>
-              <span className="text-[11px] text-emerald-600">/ 100 Hedef</span>
-            </div>
-          </div>
-
-          <div className="bg-white p-3 rounded-xl border border-indigo-200 bg-indigo-50/30 shadow-sm flex flex-col justify-between">
-            <span className="text-indigo-700 font-medium">Birleşmeye Hazır Küme</span>
-            <div className="flex items-baseline gap-2 mt-1">
-              <span className="text-xl font-bold text-indigo-700 font-mono">
-                {analysis?.clusters.filter((c) => c.status === 'ready_to_merge').length ?? '...'}
-              </span>
-              <span className="text-[11px] text-indigo-600">
-                ({analysis?.potentialSavedDuplicates ?? 0} mükerrer)
+              <span className="flex items-baseline gap-1.5">
+                <span className="font-mono text-[20px] font-semibold text-ink leading-tight">{s.value}</span>
+                {s.hint && <span className="text-[12px] text-ink-3 truncate">{s.hint}</span>}
               </span>
             </div>
-          </div>
-
-          <div className="bg-white p-3 rounded-xl border border-amber-200 bg-amber-50/30 shadow-sm flex flex-col justify-between">
-            <span className="text-amber-700 font-medium">Muğlak / Tekil Parça</span>
-            <div className="flex items-baseline gap-2 mt-1">
-              <span className="text-xl font-bold text-amber-700 font-mono">
-                {analysis?.vagueDraftsCount ?? '...'}
-              </span>
-              <span className="text-[11px] text-amber-600">eşleşme arayan</span>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* Filter Tabs and Quick Actions */}
-        <div className="px-5 py-3 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 bg-white">
-          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
-            <button
-              onClick={() => setActiveFilter('ready')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
-                activeFilter === 'ready'
-                  ? 'bg-emerald-600 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              Yüksek Uyum ({analysis?.clusters.filter((c) => c.status === 'ready_to_merge').length || 0})
-            </button>
-
-            <button
-              onClick={() => setActiveFilter('review')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
-                activeFilter === 'review'
-                  ? 'bg-amber-600 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              <HelpCircle className="w-3.5 h-3.5" />
-              İnceleme Bekleyenler ({analysis?.clusters.filter((c) => c.status === 'needs_review').length || 0})
-            </button>
-
-            <button
-              onClick={() => setActiveFilter('manual')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
-                activeFilter === 'manual'
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              <GitMerge className="w-3.5 h-3.5" />
-              Manuel Çoklu Seçim & Birleştir ({selectedDraftIds.length > 0 ? `${selectedDraftIds.length} Seçili` : 'Seç'})
-            </button>
-
-            <button
-              onClick={() => setActiveFilter('all')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
-                activeFilter === 'all'
-                  ? 'bg-slate-800 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              <Filter className="w-3.5 h-3.5" />
-              Tüm Kümeler ({analysis?.clusters.length || 0})
-            </button>
-
-            <button
-              onClick={() => setActiveFilter('vague')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
-                activeFilter === 'vague'
-                  ? 'bg-purple-600 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              <FileQuestion className="w-3.5 h-3.5" />
-              Muğlak Taslaklar ({analysis?.vagueDraftsCount || 0})
-            </button>
+        {/* Tabs + batch action */}
+        <div className="flex items-center gap-2 px-4 sm:px-5 pb-3 border-b border-line-soft">
+          <div role="tablist" aria-label="Görünüm" className="flex gap-1 bg-canvas rounded-[12px] p-1 overflow-x-auto no-scrollbar min-w-0">
+            {tabs.map((t) => {
+              const on = activeFilter === t.id;
+              return (
+                <button
+                  key={t.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={on}
+                  onClick={() => setActiveFilter(t.id)}
+                  className={`shrink-0 h-8 px-3 rounded-[9px] text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 transition-colors ${
+                    on ? 'bg-white text-ink font-semibold shadow-[0_1px_3px_rgba(14,26,38,0.12)]' : 'text-ink-2 hover:text-ink'
+                  }`}
+                >
+                  {t.id === 'manual' && <GitMerge className="w-3.5 h-3.5" />}
+                  {t.label}
+                  {t.count !== undefined && <span className={`font-mono text-[12px] ${on ? 'text-accent' : 'text-ink-3'}`}>{t.count}</span>}
+                </button>
+              );
+            })}
           </div>
-
-          {activeFilter === 'ready' && (analysis?.clusters.filter((c) => c.status === 'ready_to_merge').length || 0) > 0 && (
+          <span className="flex-1" />
+          {activeFilter === 'ready' && readyCount > 0 && (
             <button
-              onClick={handleBatchMergeReady}
+              type="button"
+              onClick={() => (confirmBatch ? (setConfirmBatch(false), handleBatchMergeReady()) : setConfirmBatch(true))}
               disabled={isBatchMerging}
-              className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-xs font-bold flex items-center gap-2 shadow-sm transition-all cursor-pointer disabled:opacity-50"
+              className={`shrink-0 h-10 px-3.5 rounded-[11px] text-[13.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 transition-colors ${
+                confirmBatch ? 'bg-[#B4233C] text-white' : 'bg-ok text-white hover:bg-[#126A35]'
+              }`}
             >
-              <Zap className="w-3.5 h-3.5" />
-              {isBatchMerging ? 'Birleştiriliyor...' : 'Tüm Yüksek Uyumlu Kümeleri Tek Tıkla Konsolide Et'}
+              <Zap className="w-4 h-4" />
+              <span className="hidden sm:inline">{confirmBatch ? 'Emin misin? Birleştir' : `Hazır ${readyCount} kümeyi birleştir`}</span>
+              <span className="sm:hidden">{confirmBatch ? 'Onayla' : `Hepsi (${readyCount})`}</span>
             </button>
           )}
         </div>
 
-        {/* Content Area */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-slate-100/50">
+        {/* Body */}
+        <div className="relative overflow-y-auto bg-[#FAFBFC] px-4 sm:px-5 py-4 flex flex-col gap-2.5">
           {loading ? (
-            <div className="flex flex-col items-center justify-center py-16 gap-3 text-slate-400">
-              <RefreshCw className="w-8 h-8 animate-spin text-indigo-500" />
-              <p className="text-sm font-medium">Taslaklar taranıyor, tıbbi kavramlar ve şık varyasyonları analiz ediliyor...</p>
+            <div role="status" className="py-14 flex flex-col items-center gap-2 text-center ms-fade-in">
+              <CapsuleLoader />
+              <p className="m-0 text-[15px] font-semibold text-ink">Taslaklar taranıyor…</p>
+              <p className="m-0 text-[13px] text-ink-3">Tıbbi kavramlar ve şık varyasyonları karşılaştırılıyor</p>
             </div>
           ) : activeFilter === 'manual' ? (
-            // MANUEL ÇOKLU SEÇİM VE BİRLEŞTİRME ARAYÜZÜ
-            <div className="space-y-4">
-              <div className="p-3.5 bg-indigo-50 border border-indigo-200 rounded-xl text-xs text-indigo-950 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div className="flex items-start gap-2">
-                  <GitMerge className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-bold text-sm block">Manuel Taslak Seçimi & Birleştirme:</span>
-                    Aynı soruya ait olduğunu düşündüğünüz taslakları işaretleyin. Sistem hepsini tek bir soru altında toplar, şıkları harmanlar ve mükerrer kayıtları temizler.
-                  </div>
-                </div>
-
-                {selectedDraftIds.length >= 2 && (
-                  <div className="flex items-center gap-2 shrink-0">
-                    <button
-                      onClick={handleManualMergeSelected}
-                      disabled={isManualMerging}
-                      className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-md flex items-center gap-2 cursor-pointer transition-all disabled:opacity-50"
-                    >
-                      <GitMerge className="w-4 h-4" />
-                      {isManualMerging ? 'Birleştiriliyor...' : `Seçilen ${selectedDraftIds.length} Taslağı Birleştir`}
-                    </button>
-                  </div>
-                )}
-              </div>
-
-              {/* Arama çubuğu */}
-              <div className="relative">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <>
+              <p className="m-0 text-[13.5px] text-ink-2">
+                Aynı soruya ait taslakları işaretle. Biri <strong className="text-ink">çapa</strong> olur; şıklar harmanlanır, mükerrerler temizlenir.
+              </p>
+              <label className="flex items-center gap-2 h-11 px-3.5 rounded-[12px] bg-white border border-line focus-within:border-accent">
+                <Search className="w-4 h-4 text-ink-3 shrink-0" />
+                <span className="sr-only">Taslaklarda ara</span>
                 <input
-                  type="text"
-                  placeholder="Taslak metni, konu veya ders ara (Örn: Down, Amiloid, Farmakoloji)..."
+                  type="search"
+                  placeholder="Metin, konu, ders ya da soru no ara"
                   value={manualSearchQuery}
                   onChange={(e) => setManualSearchQuery(e.target.value)}
-                  className="w-full bg-white border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-indigo-500 shadow-2xs"
+                  className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[14.5px] placeholder:text-[#7A8693]"
                 />
-              </div>
-
-              {/* Seçilen Taslaklar varsa Anchor seçimi */}
-              {selectedDraftIds.length >= 2 && (
-                <div className="p-3 bg-white rounded-xl border border-indigo-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-                  <span className="font-bold text-slate-700">
-                    Ana Soru Kalıbı (Çapa) Olarak Kullanılacak Taslak:
-                  </span>
-                  <select
-                    value={manualAnchorId}
-                    onChange={(e) => setManualAnchorId(e.target.value)}
-                    className="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1 text-xs font-semibold text-slate-800"
-                  >
-                    {selectedDraftIds.map((id) => {
-                      const q = committeeQuestions.find((x) => x.id === id);
-                      return (
-                        <option key={id} value={id}>
-                          {q?.isUnassignedNumber ? 'Numarasız' : `#${q?.questionNumber}`} - {q?.discipline} ({q?.topic})
-                        </option>
-                      );
-                    })}
-                  </select>
-                </div>
-              )}
-
-              {/* Taslak Listesi */}
-              <div className="space-y-2">
+                <span className="text-[12.5px] text-ink-3 shrink-0">{manualFilteredQuestions.length}</span>
+              </label>
+              <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
                 {manualFilteredQuestions.map((q) => {
-                  const isChecked = selectedDraftIds.includes(q.id);
-                  const isAnchor = manualAnchorId === q.id;
-
+                  const on = selectedDraftIds.includes(q.id);
+                  const isAnchor = on && manualAnchorId === q.id;
                   return (
-                    <div
-                      key={q.id}
-                      onClick={() => toggleSelectDraft(q.id)}
-                      className={`p-3.5 rounded-xl border transition-all cursor-pointer flex items-start gap-3 ${
-                        isChecked
-                          ? 'bg-indigo-50/60 border-indigo-300 shadow-sm'
-                          : 'bg-white border-slate-200 hover:border-slate-300'
-                      }`}
-                    >
+                    <li key={q.id}>
                       <button
                         type="button"
-                        className="mt-0.5 text-indigo-600 shrink-0"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleSelectDraft(q.id);
-                        }}
+                        role="checkbox"
+                        aria-checked={on}
+                        onClick={() => toggleSelectDraft(q.id)}
+                        className={`w-full text-left rounded-[14px] border px-3 py-2.5 flex items-start gap-3 cursor-pointer transition-colors ${
+                          on ? 'bg-accent-soft/60 border-accent/40' : 'bg-white border-line hover:border-line-2'
+                        }`}
                       >
-                        {isChecked ? <CheckSquare className="w-5 h-5 text-indigo-600" /> : <Square className="w-5 h-5 text-slate-300" />}
-                      </button>
-
-                      <div className="flex-1 min-w-0 space-y-1 text-xs">
-                        <div className="flex items-center gap-2">
-                          <span className="font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">
-                            {q.isUnassignedNumber ? 'Numarasız Taslak' : `Soru #${q.questionNumber}`}
+                        <span
+                          className={`mt-0.5 w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 ${on ? 'bg-accent text-white' : 'bg-white border border-line-2'}`}
+                          aria-hidden="true"
+                        >
+                          {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                        </span>
+                        <span className="flex-1 min-w-0 flex flex-col gap-1">
+                          <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
+                            <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
+                            <span className="truncate">
+                              {q.discipline}
+                              {q.topic ? ` · ${q.topic}` : ''}
+                            </span>
+                            {isAnchor && (
+                              <span className="ml-auto shrink-0 h-5 px-2 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center">Çapa</span>
+                            )}
                           </span>
-                          <span className="font-semibold text-indigo-700">{q.discipline}</span>
-                          <span className="text-slate-400">·</span>
-                          <span className="text-slate-600 font-medium truncate">{q.topic}</span>
-                          {isAnchor && (
-                            <span className="ml-auto bg-indigo-600 text-white px-2 py-0.5 rounded-full text-[10px] font-bold">
-                              Ana Çapa
+                          <span className="text-[14px] text-ink leading-snug line-clamp-2">{stemOf(q) || 'Metin girilmemiş'}</span>
+                          {q.options?.length > 0 && (
+                            <span className="flex flex-wrap gap-1">
+                              {q.options.slice(0, 3).map((o) => (
+                                <span key={o.key} className="max-w-[220px] truncate h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center">
+                                  <strong className="font-mono mr-1">{o.key}</strong>
+                                  {o.text}
+                                </span>
+                              ))}
+                              {q.options.length > 3 && <span className="h-6 px-2 text-[12px] text-ink-3 inline-flex items-center">+{q.options.length - 3}</span>}
                             </span>
                           )}
-                        </div>
-
-                        <p className="text-slate-900 font-medium line-clamp-2">
-                          {q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || 'Metin belirtilmemiş'}
-                        </p>
-
-                        {q.options && q.options.length > 0 && (
-                          <div className="flex flex-wrap gap-1 text-[11px] text-slate-600 pt-1">
-                            {q.options.map((o) => (
-                              <span key={o.key} className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">
-                                <strong>{o.key})</strong> {o.text}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                        </span>
+                      </button>
+                    </li>
                   );
                 })}
-              </div>
-            </div>
+              </ul>
+            </>
           ) : activeFilter === 'vague' ? (
-            // Vague drafts list
-            <div className="space-y-3">
-              <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl text-xs text-purple-900 flex items-start gap-2">
-                <HelpCircle className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold">Muğlak Taslaklar Hakkında:</span> Bu sorular başlık, ders veya yeterli şık bilgisi içermediği için henüz hiçbir çapa soruyla güçlü bir eşleşme kuramadı. Öğrenciler bu sorulara yeni ipucu veya şık ekledikçe otomatik olarak ilgili ana soruya bağlanacaktır.
-                </div>
-              </div>
-
-              {analysis?.unmatchedVagueDrafts.length === 0 ? (
-                <div className="text-center py-12 text-slate-400 text-sm">
-                  Tebrikler! Eşleşmemiş muğlak taslak bulunmuyor.
-                </div>
+            <>
+              <p className="m-0 text-[13.5px] text-ink-2">
+                Bu taslaklarda henüz güçlü bir eşleşme için yeterli bilgi yok. Yeni ipucu ya da şık geldikçe otomatik bağlanırlar.
+              </p>
+              {!analysis?.unmatchedVagueDrafts.length ? (
+                <EmptyState title="Muğlak taslak yok" text="Bütün taslaklar bir soruyla eşleşmiş görünüyor." />
               ) : (
-                analysis?.unmatchedVagueDrafts.map((q) => (
-                  <div key={q.id} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start justify-between gap-4">
-                    <div className="space-y-1 text-xs">
-                      <div className="flex items-center gap-2">
-                        <span className="font-mono font-bold text-slate-700">#{q.questionNumber || 'Belirsiz'}</span>
-                        <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-semibold">{q.discipline}</span>
-                        <span className="text-slate-400">{q.topic}</span>
-                      </div>
-                      <p className="text-slate-800 font-medium">
-                        {q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || 'Metin belirtilmemiş'}
-                      </p>
-                      {q.options && q.options.length > 0 && (
-                        <div className="flex flex-wrap gap-1 mt-1 text-[11px] text-slate-600">
-                          {q.options.map((o) => (
-                            <span key={o.key} className="px-2 py-0.5 rounded bg-slate-50 border border-slate-200">
-                              {o.key}) {o.text}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                analysis.unmatchedVagueDrafts.map((q) => (
+                  <div key={q.id} className="rounded-[14px] bg-white border border-line px-3.5 py-2.5 flex flex-col gap-1">
+                    <span className="flex items-center gap-2 text-[12.5px] text-ink-3 min-w-0">
+                      <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
+                      <span className="truncate">
+                        {q.discipline}
+                        {q.topic ? ` · ${q.topic}` : ''}
+                      </span>
+                    </span>
+                    <span className="text-[14px] text-ink leading-snug line-clamp-2">{stemOf(q) || 'Metin girilmemiş'}</span>
                   </div>
                 ))
               )}
-            </div>
+            </>
           ) : filteredClusters.length === 0 ? (
-            <div className="text-center py-16 text-slate-400 text-sm space-y-3">
-              <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto opacity-80" />
-              <p className="font-semibold text-slate-700">Bu kategoride bekleyen otomatik küme bulunmuyor.</p>
-              <p className="text-xs text-slate-400">
-                Soruları doğrudan birleştirmek isterseniz yukarıdaki <strong>"Manuel Çoklu Seçim & Birleştir"</strong> sekmesini kullanabilirsiniz.
-              </p>
-              <button
-                onClick={() => setActiveFilter('manual')}
-                className="px-4 py-2 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors"
-              >
-                <GitMerge className="w-4 h-4" />
-                Manuel Taslak Seçimine Git
-              </button>
-            </div>
+            <EmptyState
+              title="Bu sekmede küme yok"
+              text="Taslakları kendin birleştirmek istersen elle seçebilirsin."
+              action={{ label: 'Elle seçime geç', onClick: () => setActiveFilter('manual') }}
+            />
           ) : (
-            // Cluster Cards
             filteredClusters.map((cluster) => {
               const anchor = cluster.anchorQuestion;
-              const isExpanded = expandedClusterId === cluster.id;
-              const isMerging = mergingClusterId === cluster.id;
-              const isReady = cluster.status === 'ready_to_merge';
-
+              const open = expandedClusterId === cluster.id;
+              const merging = mergingClusterId === cluster.id;
+              const ready = cluster.status === 'ready_to_merge';
               return (
-                <div
+                <article
                   key={cluster.id}
-                  className={`bg-white rounded-2xl border transition-all shadow-sm overflow-hidden ${
-                    isReady ? 'border-emerald-200 shadow-emerald-50/50' : 'border-slate-200'
-                  }`}
+                  className={`rounded-[18px] bg-white border overflow-hidden ${ready ? 'border-[#CDEBD8]' : 'border-line'}`}
                 >
-                  {/* Cluster Card Header */}
-                  <div className="p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-100 bg-gradient-to-r from-slate-50 to-white">
-                    <div className="flex items-start gap-3">
-                      <div
-                        className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 font-mono font-bold text-sm ${
-                          isReady
-                            ? 'bg-emerald-100 text-emerald-700 border border-emerald-300'
-                            : 'bg-amber-100 text-amber-700 border border-amber-300'
-                        }`}
-                      >
-                        {anchor.isUnassignedNumber ? '?' : `#${anchor.questionNumber}`}
-                      </div>
-                      <div>
-                        <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="font-bold text-sm text-slate-900">{anchor.discipline}</h3>
-                          <span className="text-xs text-slate-400">·</span>
-                          <span className="text-xs font-semibold text-slate-600">{cluster.detectedSubject || anchor.topic}</span>
-                          <span
-                            className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
-                              isReady
-                                ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                                : 'bg-amber-50 text-amber-700 border border-amber-200'
-                            }`}
-                          >
-                            %{cluster.overallConfidence} Uyumlu
-                          </span>
-                        </div>
-                        <p className="text-xs text-slate-500 mt-0.5">
-                          {cluster.satelliteDrafts.length} adet benzer taslak bu çapa soru etrafında kümelendi.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 self-end md:self-center">
-                      <button
-                        onClick={() => setExpandedClusterId(isExpanded ? null : cluster.id)}
-                        className="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-xs font-semibold text-slate-600 flex items-center gap-1 cursor-pointer"
-                      >
-                        {isExpanded ? 'Detayları Gizle' : 'Karşılaştır ve İncele'}
-                        {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-                      </button>
-
-                      <button
-                        onClick={() => handleMergeCluster(cluster)}
-                        disabled={isMerging}
-                        className={`px-4 py-1.5 rounded-lg text-xs font-bold text-white flex items-center gap-1.5 shadow-sm transition-all cursor-pointer disabled:opacity-50 ${
-                          isReady
-                            ? 'bg-emerald-600 hover:bg-emerald-700'
-                            : 'bg-slate-800 hover:bg-slate-900'
-                        }`}
-                      >
-                        <GitMerge className="w-3.5 h-3.5" />
-                        {isMerging ? 'Birleştiriliyor...' : 'Bu Kümeyi Birleştir'}
-                      </button>
-                    </div>
+                  {/* Row: number, subject, confidence, actions */}
+                  <div className="flex items-center gap-3 px-3.5 py-3">
+                    <span
+                      className={`w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 font-mono text-[13px] font-semibold ${
+                        ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'
+                      }`}
+                    >
+                      {anchor.isUnassignedNumber || !anchor.questionNumber ? '?' : anchor.questionNumber}
+                    </span>
+                    <span className="flex-1 min-w-0 flex flex-col">
+                      <span className="flex items-center gap-2 min-w-0">
+                        <span className="text-[14.5px] font-semibold text-ink truncate">{cluster.detectedSubject || anchor.topic || anchor.discipline}</span>
+                        <span
+                          className={`shrink-0 h-5 px-1.5 rounded-full text-[11.5px] font-mono font-semibold inline-flex items-center ${
+                            ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'
+                          }`}
+                        >
+                          %{cluster.overallConfidence}
+                        </span>
+                      </span>
+                      <span className="text-[12.5px] text-ink-3 truncate">
+                        {anchor.discipline} · {cluster.satelliteDrafts.length} taslak birleşecek
+                      </span>
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setExpandedClusterId(open ? null : cluster.id)}
+                      aria-expanded={open}
+                      className="hidden sm:inline-flex h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold text-ink-2 items-center gap-1 cursor-pointer hover:border-line-2"
+                    >
+                      Karşılaştır
+                      <ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleMergeCluster(cluster)}
+                      disabled={merging || busy}
+                      className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold text-white inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${
+                        ready ? 'bg-ok hover:bg-[#126A35]' : 'bg-ink hover:bg-[#1B2B3B]'
+                      }`}
+                    >
+                      {merging ? <RefreshCw className="w-4 h-4 animate-spin" /> : <GitMerge className="w-4 h-4" />}
+                      <span className="hidden sm:inline">{merging ? 'Birleştiriliyor…' : 'Birleştir'}</span>
+                    </button>
                   </div>
 
-                  {/* Anchor & Satellites Overview */}
-                  <div className="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                    {/* Left: Anchor Question */}
-                    <div className="bg-slate-50/80 p-3.5 rounded-xl border border-slate-200 space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="font-bold text-indigo-900 flex items-center gap-1.5">
-                          <Layers className="w-3.5 h-3.5 text-indigo-600" />
-                          Ana Soru Çatısı (Çapa)
-                        </span>
-                        <span className="text-[11px] font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">
-                          {anchor.options?.length || 0} Şık Mevcut
-                        </span>
-                      </div>
-                      <p className="text-slate-800 line-clamp-3 font-medium">
-                        {anchor.reconstruction?.stem || anchor.stem || anchor.fragments?.[0]?.text || 'Soru kökü henüz girilmemiş'}
-                      </p>
-                      {anchor.options && anchor.options.length > 0 && (
-                        <div className="space-y-1 pt-1 border-t border-slate-200">
-                          {anchor.options.slice(0, 3).map((o) => (
-                            <div key={o.key} className="text-[11px] text-slate-600 truncate">
-                              <span className="font-bold font-mono text-slate-800">{o.key})</span> {o.text}
-                            </div>
-                          ))}
-                          {anchor.options.length > 3 && (
-                            <span className="text-[10px] text-slate-400 font-medium">
-                              +{anchor.options.length - 3} şık daha...
+                  {/* Anchor + satellites, compact */}
+                  <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-2 px-3.5 pb-3.5">
+                    <div className="rounded-[14px] bg-canvas px-3 py-2.5 flex flex-col gap-1">
+                      <span className="flex items-center gap-1.5 text-[12px] font-semibold text-accent">
+                        <Layers className="w-3.5 h-3.5" />
+                        Çapa soru
+                        <span className="ml-auto font-normal text-ink-3">{anchor.options?.length || 0} şık</span>
+                      </span>
+                      <span className={`text-[13.5px] text-ink leading-snug ${open ? '' : 'line-clamp-2'}`}>{stemOf(anchor) || 'Soru kökü henüz girilmemiş'}</span>
+                      {open && anchor.options?.length > 0 && (
+                        <span className="flex flex-col gap-0.5 pt-1 border-t border-line-soft mt-1">
+                          {anchor.options.map((o) => (
+                            <span key={o.key} className="text-[12.5px] text-ink-2">
+                              <strong className="font-mono text-ink mr-1">{o.key})</strong>
+                              {o.text}
                             </span>
-                          )}
-                        </div>
+                          ))}
+                        </span>
                       )}
                     </div>
-
-                    {/* Right: Satellites to be Merged */}
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs font-bold text-slate-700">
-                        <span>İç İçe Geçecek Uydu Taslaklar ({cluster.satelliteDrafts.length})</span>
-                      </div>
-
-                      <div className="space-y-2 max-h-56 overflow-y-auto pr-1">
-                        {cluster.satelliteDrafts.map((sat, idx) => (
-                          <div
-                            key={sat.question.id || idx}
-                            className="p-3 bg-white rounded-xl border border-slate-200 shadow-2xs space-y-1.5"
-                          >
-                            <div className="flex items-center justify-between">
-                              <span className="font-bold text-slate-800">
-                                {sat.question.contributedByName || 'Anonim Tıbbiyeli'}
-                                {sat.question.questionNumber ? ` · Soru #${sat.question.questionNumber}` : ' · Numarasız'}
-                              </span>
-                              <span className="font-mono font-bold text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                                %{sat.compatibility.score} Uyum
-                              </span>
-                            </div>
-
-                            <p className="text-slate-600 line-clamp-2">
-                              {sat.question.reconstruction?.stem || sat.question.stem || sat.question.fragments?.[0]?.text || 'Metin'}
-                            </p>
-
-                            {/* Reasons list */}
-                            <div className="flex flex-wrap gap-1 text-[10px]">
-                              {sat.compatibility.reasons.map((r, rIdx) => (
-                                <span key={rIdx} className="bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">
+                    <ul className={`list-none m-0 p-0 flex flex-col gap-1.5 ${open ? '' : 'max-h-[132px] overflow-y-auto'}`}>
+                      {cluster.satelliteDrafts.map((sat, idx) => (
+                        <li key={sat.question.id || idx} className="rounded-[12px] border border-line-soft px-3 py-2 flex flex-col gap-1">
+                          <span className="flex items-center gap-2 text-[12.5px] min-w-0">
+                            <span className="font-semibold text-ink truncate">{sat.question.contributedByName || 'Anonim'}</span>
+                            <span className="text-ink-3 shrink-0">· {numLabel(sat.question)}</span>
+                            <span className="ml-auto shrink-0 font-mono text-[12px] font-semibold text-ok">%{sat.compatibility.score}</span>
+                          </span>
+                          <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-1'}`}>{stemOf(sat.question) || 'Metin'}</span>
+                          {open && sat.compatibility.reasons.length > 0 && (
+                            <span className="flex flex-wrap gap-1">
+                              {sat.compatibility.reasons.map((r, i) => (
+                                <span key={i} className="px-2 py-0.5 rounded-[7px] bg-canvas text-[11.5px] text-ink-2">
                                   {r}
                                 </span>
                               ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                            </span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  {/* Expandable Deep Diff & Reconciliation Details */}
-                  {isExpanded && (
-                    <div className="p-4 sm:p-5 border-t border-slate-100 bg-slate-50 space-y-3 text-xs animate-in slide-in-from-top-2">
-                      <h4 className="font-bold text-slate-800 flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                        Birleştirme ve Şık Konsolidasyonu Önizlemesi
-                      </h4>
-
-                      <div className="p-3 bg-indigo-50 border border-indigo-200 rounded-xl text-indigo-950 space-y-1">
-                        <p className="font-semibold">Bu birleştirme uygulandığında:</p>
-                        <ul className="list-disc list-inside space-y-0.5 text-[11px] text-indigo-900">
-                          <li>Tüm öğrencilerin girdiği ipuçları ve soru parçaları hafıza havuzuna aktarılacak (isimler ve puanlar korunur).</li>
-                          <li>Farklı kitapçıklardaki şıklar permütasyon filtresinden geçirilerek eksiksiz 5 şık oluşturulacaktır.</li>
-                          <li>Fazladan açılan mükerrer taslaklar veritabanından güvenle temizlenecek, soru sayısı 100 hedefine yaklaşacaktır.</li>
-                        </ul>
-                      </div>
-                    </div>
+                  {open && (
+                    <p className="m-0 mx-3.5 mb-3.5 rounded-[12px] bg-accent-soft/60 px-3 py-2 text-[12.5px] text-ink-2 leading-[1.55]">
+                      Birleşince ipuçları ve parçalar çapa soruya taşınır (isimler ve puanlar korunur), şıklar 5'e tamamlanır, mükerrer taslaklar silinir.
+                    </p>
                   )}
-                </div>
+                  <button
+                    type="button"
+                    onClick={() => setExpandedClusterId(open ? null : cluster.id)}
+                    className="sm:hidden w-full h-10 border-t border-line-soft text-[13px] font-semibold text-ink-2 inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    {open ? 'Daha az' : 'Karşılaştır'}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
+                  </button>
+                </article>
               );
             })
           )}
         </div>
 
-        {/* Modal Footer */}
-        <div className="px-5 py-3 border-t border-slate-200 flex items-center justify-between bg-white text-xs text-slate-500">
-          <span>
-            MedSoru Tıbbi Kavram & Permütasyon Korumalı Kümeleme Motoru
-          </span>
-          <button
-            onClick={onClose}
-            className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 font-semibold text-slate-700 cursor-pointer"
-          >
-            Kapat
-          </button>
-        </div>
+        {/* Footer: manual-merge bar, or a quiet close */}
+        <footer className="flex items-center gap-2 px-4 sm:px-5 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 border-t border-line-soft bg-white">
+          {activeFilter === 'manual' && selectedDraftIds.length > 0 ? (
+            <>
+              <span className="text-[13.5px] text-ink-2 shrink-0">
+                <strong className="text-ink">{selectedDraftIds.length}</strong> seçili
+              </span>
+              {selectedDraftIds.length >= 2 && (
+                <label className="relative min-w-0 flex-1 sm:flex-none sm:w-[280px]">
+                  <span className="sr-only">Çapa soru</span>
+                  <select
+                    value={manualAnchorId}
+                    onChange={(e) => setManualAnchorId(e.target.value)}
+                    className="appearance-none w-full h-10 rounded-[11px] bg-field border border-line pl-3 pr-8 text-[13.5px] text-ink cursor-pointer truncate"
+                  >
+                    {selectedDraftIds.map((id) => {
+                      const q = committeeQuestions.find((x) => x.id === id);
+                      return (
+                        <option key={id} value={id}>
+                          Çapa: {q ? numLabel(q) : '?'} · {q?.topic || q?.discipline}
+                        </option>
+                      );
+                    })}
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" />
+                </label>
+              )}
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedDraftIds([]);
+                  setManualAnchorId('');
+                }}
+                className="hidden sm:inline-flex h-10 px-3 rounded-[11px] text-[13.5px] font-semibold text-ink-2 hover:bg-canvas cursor-pointer items-center"
+              >
+                Temizle
+              </button>
+              <button
+                type="button"
+                onClick={handleManualMergeSelected}
+                disabled={isManualMerging || selectedDraftIds.length < 2}
+                className="ml-auto h-10 px-4 rounded-[11px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0"
+              >
+                {isManualMerging ? <RefreshCw className="w-4 h-4 animate-spin" /> : <GitMerge className="w-4 h-4" />}
+                {selectedDraftIds.length < 2 ? 'En az 2 seç' : 'Birleştir'}
+              </button>
+            </>
+          ) : (
+            <>
+              <span className="text-[12.5px] text-ink-3 truncate">Kavram ve şık permütasyonuna göre kümeleme</span>
+              <button
+                type="button"
+                onClick={onClose}
+                className="ml-auto h-10 px-4 rounded-[11px] bg-canvas hover:bg-line-soft text-[14px] font-semibold text-ink cursor-pointer shrink-0"
+              >
+                Kapat
+              </button>
+            </>
+          )}
+        </footer>
       </div>
     </div>
   );
 };
+
+const EmptyState: React.FC<{ title: string; text: string; action?: { label: string; onClick: () => void } }> = ({ title, text, action }) => (
+  <div className="py-12 flex flex-col items-center gap-2 text-center">
+    <SuccessCheck size={72} />
+    <p className="m-0 text-[16px] font-semibold text-ink">{title}</p>
+    <p className="m-0 text-[13.5px] text-ink-2 max-w-[340px]">{text}</p>
+    {action && (
+      <button
+        type="button"
+        onClick={action.onClick}
+        className="mt-1 h-10 px-4 rounded-[11px] bg-accent-soft text-accent text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+      >
+        <GitMerge className="w-4 h-4" />
+        {action.label}
+      </button>
+    )}
+  </div>
+);

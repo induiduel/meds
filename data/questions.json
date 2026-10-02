@@ -429,6 +429,96 @@
       ],
       "createdAt": "2026-10-02T15:55:24.167Z",
       "updatedAt": "2026-10-02T15:55:24.175Z"
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1790950963304",
+      "tags": [
+        "Tıbbi Patoloji",
+        "numarasız-hatırlanan",
+        "taslak-birlestirildi"
+      ],
+      "topic": "Tıbbi Patoloji Sorusu",
+      "status": "gathering",
+      "options": [],
+      "createdAt": "2026-10-02T14:22:44.00527+00:00",
+      "fragments": [
+        {
+          "id": "f-1790950963304-d8pn",
+          "text": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T14:22:43.304Z"
+        },
+        {
+          "id": "f-1790951042634-2z92",
+          "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T14:24:02.634Z"
+        },
+        {
+          "id": "f-1790951030251-t6ke",
+          "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+          "type": "stem",
+          "author": "Dr House",
+          "likedBy": [],
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T14:23:50.251Z"
+        },
+        {
+          "id": "f-1790951018529-kul2",
+          "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+          "type": "stem",
+          "author": "Dr House",
+          "likedBy": [],
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T14:23:38.529Z"
+        }
+      ],
+      "revisions": [
+        {
+          "id": "rev-1790950963304",
+          "stem": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
+          "topic": "Tıbbi Patoloji Sorusu",
+          "options": [],
+          "version": 1,
+          "editedAt": "2026-10-02T14:22:43.304Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Patoloji",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        },
+        {
+          "id": "rev-merge-1790968944742",
+          "version": 2,
+          "editedAt": "2026-10-02T19:22:24.742Z",
+          "editorName": "Yönetici",
+          "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-merge-1790968983118",
+          "version": 3,
+          "editedAt": "2026-10-02T19:23:03.118Z",
+          "editorName": "Yönetici",
+          "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+        }
+      ],
+      "updatedAt": "2026-10-02T19:23:03.241Z",
+      "discipline": "Tıbbi Patoloji",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "isUnassignedNumber": true,
+      "upvotes": 0,
+      "reconstruction": null,
+      "placementNotes": "[02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi."
     }
   ]
 }

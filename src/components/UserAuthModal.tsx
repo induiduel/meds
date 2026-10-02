@@ -14,16 +14,13 @@ import {
   Copy,
   Check,
   ExternalLink,
-  KeyRound,
   ArrowRight,
-  RefreshCw,
-  Sparkles
+  RefreshCw
 } from 'lucide-react';
 import { 
   registerWithEmailPassword, 
   loginWithEmailPassword, 
   googleSignIn, 
-  setLocalAdminSession,
   ADMIN_EMAIL,
   FIREBASE_CONSOLE_URL,
   FIREBASE_PROJECT_ID,
@@ -52,7 +49,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const [studentNumber, setStudentNumber] = useState('');
   
   // Admin form state
-  const [adminAuthMethod, setAdminAuthMethod] = useState<'google' | 'password' | 'bypass'>('google');
+  const [adminAuthMethod, setAdminAuthMethod] = useState<'google' | 'password'>('google');
   const [adminPassword, setAdminPassword] = useState('');
   
   // Status states
@@ -236,15 +233,6 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     }
   };
 
-  // Emergency Admin Bypass Login
-  const handleEmergencyAdminBypass = () => {
-    const user = setLocalAdminSession(ADMIN_EMAIL);
-    setSuccess('Yönetici acil oturumu açıldı!');
-    setTimeout(() => {
-      onAuthSuccess(user, null);
-      onClose();
-    }, 300);
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
@@ -557,30 +545,22 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                     </button>
                   </div>
 
-                  <div className="flex items-center gap-2 pt-1">
+                  <div className="pt-1">
                     <a
                       href={FIREBASE_CONSOLE_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-rose-600 hover:bg-rose-700 text-white font-bold py-1.5 px-2.5 rounded-lg text-[11px] flex items-center justify-center gap-1.5 transition-colors"
+                      className="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-1.5 px-2.5 rounded-lg text-[11px] flex items-center justify-center gap-1.5 transition-colors"
                     >
                       <span>Firebase Konsolunu Aç</span>
                       <ExternalLink className="w-3 h-3" />
                     </a>
-                    <button
-                      type="button"
-                      onClick={handleEmergencyAdminBypass}
-                      className="flex-1 bg-teal-700 hover:bg-teal-800 text-white font-bold py-1.5 px-2.5 rounded-lg text-[11px] flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
-                    >
-                      <KeyRound className="w-3 h-3 text-teal-300" />
-                      <span>Hemen Giriş Yap (Bypass)</span>
-                    </button>
                   </div>
                 </div>
               )}
 
               {/* Admin Auth Method Switcher */}
-              <div className="grid grid-cols-3 gap-1.5 bg-slate-100 p-1 rounded-xl text-[11px] font-bold">
+              <div className="grid grid-cols-2 gap-1.5 bg-slate-100 p-1 rounded-xl text-[11px] font-bold">
                 <button
                   type="button"
                   onClick={() => setAdminAuthMethod('google')}
@@ -602,17 +582,6 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                   }`}
                 >
                   Şifre ile
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setAdminAuthMethod('bypass')}
-                  className={`py-1.5 rounded-lg transition-all cursor-pointer ${
-                    adminAuthMethod === 'bypass'
-                      ? 'bg-amber-500 text-white shadow-xs'
-                      : 'text-amber-800 hover:text-amber-950'
-                  }`}
-                >
-                  ⚡ Acil Erişim
                 </button>
               </div>
 
@@ -693,26 +662,6 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                 </form>
               )}
 
-              {/* Sub-view: Emergency Bypass */}
-              {adminAuthMethod === 'bypass' && (
-                <div className="space-y-3 pt-1 bg-amber-50/60 border border-amber-200 rounded-xl p-3.5">
-                  <div className="flex items-center gap-2 text-xs font-bold text-amber-950">
-                    <Sparkles className="w-4 h-4 text-amber-600" />
-                    <span>Geliştirici & Acil Durum Girişi</span>
-                  </div>
-                  <p className="text-[11px] text-amber-900 leading-relaxed">
-                    Firebase alan adı yetkilendirmesi veya Google API kısıtlamalarına takılmadan doğrudan yerel yönetici oturumu açar.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={handleEmergencyAdminBypass}
-                    className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <KeyRound className="w-4 h-4" />
-                    <span>Yönetici Olarak Giriş Yap ({ADMIN_EMAIL})</span>
-                  </button>
-                </div>
-              )}
             </div>
           )}
         </div>
