@@ -29,7 +29,9 @@
     "transcribe:watch": "node scripts/transcribe-drive-audio.mjs --watch",
     "rag:index": "node scripts/index-rag-knowledge.mjs",
     "rag:index:all": "node scripts/index-rag-knowledge.mjs --limit 10000",
-    "decks:build": "python scripts/build_learning_decks.py"
+    "decks:build": "python scripts/build_learning_decks.py",
+    "sync:deepseek": "python scripts/sync_deepseek_data.py",
+    "glossary:build": "python scripts/generate_medical_glossary.py"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

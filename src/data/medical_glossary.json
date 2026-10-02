@@ -1,85 +1,5 @@
 [
   {
-    "term": "Staphylococcus aureus",
-    "aliases": [
-      "staphylococcus aureus",
-      "s. aureus",
-      "stafilokok aureus",
-      "altın sarısı stafilokok"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[staf-i-lo-kok-kus au-re-us]",
-    "definition": "Gram pozitif, katalaz ve koagülaz pozitif küme oluşturan kok. Deri ve yumuşak doku enfeksiyonları, apseler, osteomiyelit ve nozokomiyal bakteriyeminin baş etkenidir.",
-    "clinicalPearls": "Sağlıklı toplumda burun mukozasında %20-30 oranında asemptomatik kolonize olur.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "MRSA (Metisiline Dirençli S. aureus)",
-    "aliases": [
-      "mrsa",
-      "metisiline dirençli staphylococcus aureus",
-      "metisilin dirençli"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[m-r-s-a]",
-    "definition": "mecA geni aracılığıyla PBP2a sentezleyerek tüm standart beta-laktam antibiyotiklere direnç kazanmış S. aureus suşları.",
-    "clinicalPearls": "Hastanede mutlaka TEMAS İZOLASYONU (Kırmızı Yıldız) gerektirir; tedavide vankomisin veya daptomisin seçilir.",
-    "badgeColor": "red"
-  },
-  {
-    "term": "Clostridioides difficile",
-    "aliases": [
-      "clostridioides difficile",
-      "c. difficile",
-      "clostridium difficile"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[klos-tri-di-oy-des dif-fi-si-le]",
-    "definition": "Gram pozitif, anaerop, sporlu çomak. Geniş spektrumlu antibiyotik sonrası normal floranın bozulmasıyla psödomembranöz kolit tablosu oluşturur.",
-    "clinicalPearls": "Sporları alkol bazlı jellerle ölmez! Temas sonrası eller MUTLAKA su ve sabunla yıkanmalıdır.",
-    "badgeColor": "red"
-  },
-  {
-    "term": "Mycobacterium tuberculosis",
-    "aliases": [
-      "mycobacterium tuberculosis",
-      "m. tuberculosis",
-      "tüberküloz basili",
-      "koch basili"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[mi-ko-bak-te-ri-yum tü-ber-kü-lo-zis]",
-    "definition": "Aside dirençli (ARB / Ehrlich-Ziehl-Neelsen pozitif), hücre duvarında yüksek oranda mikolik asit içeren zorunlu aerop basil. Akciğer tüberkülozunun etkenidir.",
-    "clinicalPearls": "Solunum yoluyla (<5 µm aerosol) bulaşır; hastanede NEGATİF BASINÇLI ODA ve N95 MASKE (Sarı Yaprak) şarttır.",
-    "badgeColor": "purple"
-  },
-  {
-    "term": "Neisseria meningitidis",
-    "aliases": [
-      "neisseria meningitidis",
-      "n. meningitidis",
-      "meningokok"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[nay-se-ri-ya me-nin-ji-ti-dis]",
-    "definition": "Gram negatif kahve çekirdeği şeklinde diplokok. Farenksten kan dolaşımına geçerek fulminan meningokoksemi ve pürülan menenjit yapar.",
-    "clinicalPearls": "DAMLACIK İZOLASYONU (Mavi Çiçek) gerektirir; 1 metreden yakın mesafede cerrahi maske takılır; yakın temaslılara rifampisin kemoprofilaksisi verilir.",
-    "badgeColor": "blue"
-  },
-  {
-    "term": "Pseudomonas aeruginosa",
-    "aliases": [
-      "pseudomonas aeruginosa",
-      "p. aeruginosa",
-      "psödomonas"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[psö-do-mo-nas e-ru-ji-no-za]",
-    "definition": "Gram negatif, oksidaz pozitif, yeşil-mavi piyosiyanin pigmenti üreten firsatçı basil. Nemli ortamları sever.",
-    "clinicalPearls": "Ventilatör ilişkili pnömoni ve yanık yarası enfeksiyonlarının ölümcül nozokomiyal etkenidir.",
-    "badgeColor": "teal"
-  },
-  {
     "term": "Acinetobacter baumannii",
     "aliases": [
       "acinetobacter baumannii",
@@ -93,30 +13,95 @@
     "badgeColor": "red"
   },
   {
-    "term": "VRE (Vankomisine Dirençli Enterokok)",
+    "term": "Akut Piyelonefrit",
     "aliases": [
-      "vre",
-      "vankomisine dirençli enterokok",
-      "vancomycin-resistant enterococcus"
+      "akut piyelonefrit",
+      "piyelonefrit",
+      "pyelonephritis"
     ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[v-r-e]",
-    "definition": "vanA veya vanB genleri aracılığıyla hücre duvarı hedef peptidi D-Ala-D-Ala yerine D-Ala-D-Laktat sentezleyerek glikopeptidlere direnç kazanan Enterococcus faecium suşları.",
-    "clinicalPearls": "Hastanelerde Temas İzolasyonu ile sınırlandırılır; tedavide linezolid tercih edilir.",
+    "category": "Üroloji / Nefroloji",
+    "pronunciation": "[pi-ye-lo-nef-rit]",
+    "definition": "Bakterilerin asendan yolla (en sık E. coli) mesaneden üretere ve böbrek toplayıcı sistemine ulaşarak renal interstisyum ve tübüllerde süpüratif inflamasyon oluşturması.",
+    "clinicalPearls": "Ateş, titreme, lomber kostavertebral açı hassasiyeti (KVAH) ve idrarda NÖTROFİL/LÖKOSİT SİLENDİRLERİ görülmesi patognomoniktir (sistit ile en mühim ayırıcı tanısı silendirdir).",
     "badgeColor": "red"
   },
   {
-    "term": "Mycoplasma pneumoniae",
+    "term": "Amiloid Birikimi",
     "aliases": [
-      "mycoplasma pneumoniae",
-      "m. pneumoniae",
-      "mikoplazma"
+      "amiloid",
+      "amiloidoz",
+      "amyloid"
     ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[mi-ko-plaz-ma pnö-mo-ni-ye]",
-    "definition": "Hücre duvarı kesinlikle bulunmayan en küçük bağımsız çoğalan bakteri. Membranında kolesterol içerir.",
-    "clinicalPearls": "Hücre duvarı olmadığından beta-laktam antibiyotiklere (penisilin/sefalosporin) DOĞAL DİRENÇLİDİR; atipik pnömoni yapar.",
-    "badgeColor": "indigo"
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[a-mi-lo-id]",
+    "definition": "Yanlış katlanmış fibriler proteinlerin (çapraz beta-kırmalı yapıda) hücre dışı aralıkta çözünmez halde çökmesi tablosu.",
+    "clinicalPearls": "Hematoksilen-eozinde amorf pembe hiyalen madde görünümündedir; Kongo Kırmızısı (Congo Red) boyası sonrası polarize mikroskop altında 'elma yeşili çift kırılma' (apple-green birefringence) vermesi patognomoniktir.",
+    "badgeColor": "emerald"
+  },
+  {
+    "term": "Anaphase Lagging (Anafaz Gecikmesi)",
+    "aliases": [
+      "anaphase lagging",
+      "anafazda geri kalma",
+      "anafaz gecikmesi"
+    ],
+    "category": "Genetik & Patoloji",
+    "pronunciation": "[e-na-feyz leg-ging]",
+    "definition": "Anafazda bir kromatitin iğ ipliği yetersizliği nedeniyle kutba hareket etmekte gecikmesi ve nükleus zarı dışında kalarak sitoplazmada kaybolması.",
+    "clinicalPearls": "Monozomi ve mozaik karyotiplerin (özellikle mozaik Turner ve Down) temel hücresel mekanizmasıdır.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Apoptoz (Programlı Hücre Ölümü)",
+    "aliases": [
+      "apoptoz",
+      "apoptozis",
+      "apoptosis",
+      "programlı hücre ölümü"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[a-pop-toz]",
+    "definition": "Hücre zarı bütünlüğünü koruyarak kaspaz enzimleri aracılığıyla hücrenin büzüşmesi, nükleer kromatin yoğunlaşması ve enflamasyonsuz fagositozla yok edilmesi.",
+    "clinicalPearls": "Nekrozdan farkı çevre dokuda enflamatuar reaksiyon YARATMAMASIDIR; embriyogenezde parmak aralarının açılmasını sağlar.",
+    "badgeColor": "emerald"
+  },
+  {
+    "term": "Bax ve Bak Proteinleri",
+    "aliases": [
+      "bax",
+      "bak",
+      "bax/bak",
+      "pro-apoptotik proteinler"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[baks ve bak]",
+    "definition": "Hücresel hasar ve p53 sinyali sonrasında mitokondri dış zarına oligomerize olarak delikler açan pro-apoptotik moleküller.",
+    "clinicalPearls": "Açtıkları porlardan Sitokrom c sitoplazmaya fışkırır ve intrinsik apoptoz kaskadını geri dönüşsüz başlatır.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Bcl-2 Proteini",
+    "aliases": [
+      "bcl-2",
+      "bcl2"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[b-c-l-2]",
+    "definition": "Mitokondri dış zarında yerleşerek Bax ve Bak porlarını bloke eden, Sitokrom c salınımını önleyen temel anti-apoptotik protein.",
+    "clinicalPearls": "Foliküler lenfomada t(14;18) translokasyonu ile IgH geni altına girer; aşırı Bcl-2 üretimi apoptozu bloke ederek tümör hücresinin ölümsüzleşmesine yol açar.",
+    "badgeColor": "emerald"
+  },
+  {
+    "term": "Brushfield Lekeleri",
+    "aliases": [
+      "brushfield lekeleri",
+      "brushfield spots"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[braş-fild le-ke-le-ri]",
+    "definition": "İrisin periferik stroma tabakasında halka şeklinde dizilmiş küçük, beyazımsı veya gri-sarı depigmentasyon odakları.",
+    "clinicalPearls": "Down sendromlu çocukların %80-90'ında görülür; açık renkli gözlerde çıplak gözle veya biyomikroskopla çok net seçilir.",
+    "badgeColor": "cyan"
   },
   {
     "term": "Chlamydia trachomatis",
@@ -132,122 +117,43 @@
     "badgeColor": "purple"
   },
   {
-    "term": "Escherichia coli",
+    "term": "Clenched Hand (Kenetlenmiş El)",
     "aliases": [
-      "escherichia coli",
-      "e. coli"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[e-şe-ri-şi-ya ko-li]",
-    "definition": "Gram negatif, laktoz pozitif fakültatif anaerop basil. Bağırsak mikrobiyotasının normal üyesidir.",
-    "clinicalPearls": "Pili (fimbria) aracılığıyla üroepitele tutunarak toplum kaynaklı üriner sistem enfeksiyonlarının %80'inden fazlasından sorumludur.",
-    "badgeColor": "blue"
-  },
-  {
-    "term": "Proteus mirabilis",
-    "aliases": [
-      "proteus mirabilis",
-      "proteus"
-    ],
-    "category": "Bakteriyoloji",
-    "pronunciation": "[pro-te-us mi-ra-bi-lis]",
-    "definition": "Besiyerinde dalgalanma (swarming) hareketi yapan ve güçlü ÜREAZ enzimi üreten Gram negatif basil.",
-    "clinicalPearls": "Üreyi amonyak ve CO2'ye yıkarak idrar pH'sını alkali yapar; Magnezyum Amonyum Fosfat (Strüvit / Staghorn / Geyik boynuzu) taşlarının birincil etkenidir.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "SARS-CoV-2",
-    "aliases": [
-      "sars-cov-2",
-      "covid-19",
-      "koronavirüs",
-      "coronavirus"
-    ],
-    "category": "Viroloji",
-    "pronunciation": "[sars-kov-iki]",
-    "definition": "Zarflı, pozitif polariteli tek zincirli RNA virüsü. ACE2 reseptörüne bağlanarak alt solunum yollarına invaze olur.",
-    "clinicalPearls": "Damlacıkla bulaşır; entübasyon gibi aerosol oluşturan işlemlerde N95 maske ve solunum izolasyonu gerekir.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Varicella Zoster Virüsü (VZV)",
-    "aliases": [
-      "varicella zoster",
-      "vzv",
-      "suçiçeği virüsü"
-    ],
-    "category": "Viroloji",
-    "pronunciation": "[va-ri-sel-la zos-ter]",
-    "definition": "Zarflı çift zincirli DNA virüsü (Herpesviridae). Primer enfeksiyonu suçiçeği, duyusal gangliyonlarda reaktivasyonu ise zonadır.",
-    "clinicalPearls": "Hem damlacık hem solunum yoluyla (<5 µm aerosol) bulaşır; hastanede SOLUNUM İZOLASYONU (Sarı Yaprak) uygulanır.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "Kızamık Virüsü (Rubeola)",
-    "aliases": [
-      "kızamık virüsü",
-      "rubeola",
-      "measles virus"
-    ],
-    "category": "Viroloji",
-    "pronunciation": "[ru-be-o-la]",
-    "definition": "Zarflı, tek zincirli negatif RNA virüsü (Paramiksovirüs). Koplik lekeleri ve makülopapüler döküntü ile seyreder.",
-    "clinicalPearls": "R0 değeri 12-18 olan en bulaşıcı virüstür; mikroskobik aerosollerle bulaşır, SOLUNUM İZOLASYONU şarttır.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "İnfluenza Virüsü",
-    "aliases": [
-      "influenza",
-      "influenza virüsü",
-      "grip virüsü"
-    ],
-    "category": "Viroloji",
-    "pronunciation": "[in-flu-en-za]",
-    "definition": "Segmenter tek zincirli RNA genomuna sahip Orthomyxoviridae üyesi virüs. Hemaglütinin (HA) ve Nöraminidaz (NA) glikoproteinleri içerir.",
-    "clinicalPearls": "Antijenik shift (pandemi) ve antijenik drift (mevsimsel epidemi) gösterir; DAMLACIK İZOLASYONU (Mavi Çiçek) gerektirir.",
-    "badgeColor": "cyan"
-  },
-  {
-    "term": "Prionlar",
-    "aliases": [
-      "prion",
-      "prionlar",
-      "prpsc",
-      "prpc"
-    ],
-    "category": "Viroloji / Ajan",
-    "pronunciation": "[pri-yon]",
-    "definition": "Nükleik asit (DNA veya RNA) içermeyen, anormal katlanmış enfeksiyöz protein partikülleri. Normal PrPC proteinlerini PrPSc formuna çevirirler.",
-    "clinicalPearls": "Standart otoklav ve kimyasal dezenfektanlara olağanüstü dirençlidir; Creutzfeldt-Jakob ve Kuru hastalıklarına yol açar.",
-    "badgeColor": "purple"
-  },
-  {
-    "term": "Pes equinovarus",
-    "aliases": [
-      "pes equinovarus",
-      "pes ekinovarus",
-      "çomak ayak",
-      "clubfoot"
+      "clenched hand",
+      "kenetlenmiş el",
+      "yumruk kenetlenmesi"
     ],
     "category": "Latin / Anatomi",
-    "pronunciation": "[pes e-kwi-no-va-rus]",
-    "definition": "Ayak bileğinin plantar fleksiyon (ekinus), topuğun içe dönmesi (varus) ve ön ayağın adduksiyonu ile karakterize konjenital ayak deformitesi.",
-    "clinicalPearls": "Oligohidramniozda mekanik sıkışmaya bağlı DEFORMASYON örneğidir; Edwards sendromunda da sık görülür.",
-    "badgeColor": "indigo"
+    "pronunciation": "[klençt hend]",
+    "definition": "2. ve 5. parmakların 3. ve 4. parmaklar üzerine bindiği karakteristik parmak fleksiyon kontraktürü manzarası.",
+    "clinicalPearls": "Edwards Sendromunun (Trizomi 18) en patognomonik fizik muayene bulgusudur.",
+    "badgeColor": "rose"
   },
   {
-    "term": "Pterygium colli (Yele Boyun)",
+    "term": "Clostridioides difficile",
     "aliases": [
-      "pterygium colli",
-      "yele boyun",
-      "webbed neck"
+      "clostridioides difficile",
+      "c. difficile",
+      "clostridium difficile"
     ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[pte-ri-ji-yum kol-li]",
-    "definition": "Mastoid çıkıntıdan akromiyona kadar uzanan bilateral boyun derisi kıvrımı (kanat şeklinde cilt katlantısı).",
-    "clinicalPearls": "Fetal dönemdeki masif kistik higromanın (lenfödem) rezolüsyon kalıntısıdır; Turner Sendromu (45,X) için patognomoniktir.",
-    "badgeColor": "rose"
+    "category": "Bakteriyoloji",
+    "pronunciation": "[klos-tri-di-oy-des dif-fi-si-le]",
+    "definition": "Gram pozitif, anaerop, sporlu çomak. Geniş spektrumlu antibiyotik sonrası normal floranın bozulmasıyla psödomembranöz kolit tablosu oluşturur.",
+    "clinicalPearls": "Sporları alkol bazlı jellerle ölmez! Temas sonrası eller MUTLAKA su ve sabunla yıkanmalıdır.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Cri-du-chat Sendromu",
+    "aliases": [
+      "cri du chat",
+      "kedi miyavlaması sendromu",
+      "5p delesyonu"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[kri dü şa]",
+    "definition": "5. kromozomun kısa kolunun parsiyel delesyonu (5p-) sonucu gelişen sendrom.",
+    "clinicalPearls": "Larenks hipoplazisine bağlı bebeklikte kedi miyavlamasına benzeyen karakteristik tiz ağlama sesi, mikrosefali, yuvarlak ay yüz ve zeka geriliği ile seyreder.",
+    "badgeColor": "amber"
   },
   {
     "term": "Cubitus valgus",
@@ -276,130 +182,17 @@
     "badgeColor": "purple"
   },
   {
-    "term": "Clenched Hand (Kenetlenmiş El)",
+    "term": "Damlacık İzolasyonu",
     "aliases": [
-      "clenched hand",
-      "kenetlenmiş el",
-      "yumruk kenetlenmesi"
+      "damlacık izolasyonu",
+      "mavi çiçek",
+      "droplet precautions"
     ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[klençt hend]",
-    "definition": "2. ve 5. parmakların 3. ve 4. parmaklar üzerine bindiği karakteristik parmak fleksiyon kontraktürü manzarası.",
-    "clinicalPearls": "Edwards Sendromunun (Trizomi 18) en patognomonik fizik muayene bulgusudur.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Rocker-Bottom Ayak (Beşik Taban)",
-    "aliases": [
-      "rocker-bottom",
-      "rocker bottom",
-      "fırlak topuk",
-      "beşik taban"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[ra-kır ba-tım]",
-    "definition": "Belirgin kalkaneus çıkıntısı ve düzleşmiş/kavisli taban yapısı ile beşik ayaklığına benzeyen konjenital taban deformitesi.",
-    "clinicalPearls": "Trizomi 18 (Edwards Sendromu) ve miksoploidide karakteristik klinik tablodur.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "Simian Çizgisi (Tek Palmar Çizgi)",
-    "aliases": [
-      "simian çizgisi",
-      "simian crease",
-      "tek palmar çizgi",
-      "dört parmak çizgisi"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[si-mi-yan]",
-    "definition": "Avuç içindeki normal iki transvers fleksür çizgisinin birleşerek el ayasını baştan başa geçen tek bir yatay çizgi oluşturması.",
-    "clinicalPearls": "Down Sendromunda (Trizomi 21) %50'den fazla görülür; toplumda sağlıklı bireylerde de %1-2 bulunabilir.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "Holoprosencephaly (Holoprozensefali)",
-    "aliases": [
-      "holoprosencephaly",
-      "holoprozensefali"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[ho-lo-pro-zen-se-fa-li]",
-    "definition": "Embriyonik ön beynin (prosensefalon) sağ ve sol iki serebral hemisfere bölünememesi sonucu oluşan ağır nörogelişimsel malformasyon.",
-    "clinicalPearls": "Patau Sendromu (Trizomi 13) kliniğinin temel nöropatolojik komponentidir; siklopi veya yarık dudak-damağa eşlik eder.",
-    "badgeColor": "purple"
-  },
-  {
-    "term": "Streak Gonad (Çizgi Gonad)",
-    "aliases": [
-      "streak gonad",
-      "çizgi gonad",
-      "gonadal disgenezis"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[striyk go-nad]",
-    "definition": "Over dokusundaki foliküllerin erken fetal atreziye uğraması sonucu geriye kalan fibröz, çizgi biçimindeki non-fonksiyonel bağ dokusu bandı.",
-    "clinicalPearls": "Turner Sendromunda (45,X) primer amenore ve hipergonadotropik hipogonadizmin doğrudan nedenidir.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Glabella",
-    "aliases": [
-      "glabella",
-      "glabella bölgesi"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[gla-bel-la]",
-    "definition": "Alında, iki kaş arasında ve burun kökünün hemen üzerinde yer alan düz kemiksel alan.",
-    "clinicalPearls": "Wolf-Hirschhorn sendromunda (4p16.3) glabella aşırı belirginleşerek Grek savaş miğferi görünümü oluşturur.",
-    "badgeColor": "indigo"
-  },
-  {
-    "term": "Telekantus",
-    "aliases": [
-      "telekantus",
-      "telecanthus"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[te-le-kan-tus]",
-    "definition": "Göz bebekleri arasındaki mesafe (interpupiller mesafe) normal iken iç göz kapak köşeleri (iç kantuslar) arasındaki mesafenin artmış olması.",
-    "clinicalPearls": "Kemiksel orbitanın birbirinden uzaklaştığı Hipertelorizmden farklıdır; yumuşak doku anomalisi olup Waardenburg sendromunda sıktır.",
-    "badgeColor": "indigo"
-  },
-  {
-    "term": "Hipertelorizm",
-    "aliases": [
-      "hipertelorizm",
-      "hypertelorism"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[hi-per-te-lo-rizm]",
-    "definition": "İki göz çukuru (orbita) arasındaki kemiksel mesafenin ve interpupiller mesafenin +2 standart sapmanın üzerinde genişlemiş olması.",
-    "clinicalPearls": "Cri-du-chat (5p-) ve Wolf-Hirschhorn (4p-) sendromlarında tipik yüz bulgusudur.",
-    "badgeColor": "indigo"
-  },
-  {
-    "term": "Klinodaktili",
-    "aliases": [
-      "klinodaktili",
-      "clinodactyly"
-    ],
-    "category": "Latin / Anatomi",
-    "pronunciation": "[kli-no-dak-ti-li]",
-    "definition": "Genellikle 5. parmağın (küçük parmak) orta falanks hipoplazisi nedeniyle 4. parmağa doğru medial eğrilik göstermesi.",
-    "clinicalPearls": "Down sendromunda en sık rastlanan minör ekstremite anomalilerindendir.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "Malformasyon",
-    "aliases": [
-      "malformasyon",
-      "malformation"
-    ],
-    "category": "Genetik & Dismorfoloji",
-    "pronunciation": "[mal-for-mas-yon]",
-    "definition": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
-    "clinicalPearls": "Yarık dudak-damak, VSD ve spina bifida klasik malformasyon örnekleridir.",
-    "badgeColor": "purple"
+    "category": "İzolasyon",
+    "pronunciation": "[dam-la-cık]",
+    "definition": "Öksürme, hapşırma ve konuşma sırasında saçılan >5 mikron boyutundaki büyük damlacıklarla bulaşan patojenlere karşı uygulanan izolasyon şekli.",
+    "clinicalPearls": "Kapıya MAVİ ÇİÇEK sembolü asılır; hastaya 1 metreden yakın mesafede standart CERRAHİ MASKE takılması zorunludur. Neisseria meningitidis, İnfluenza ve Kabakulak için uygulanır.",
+    "badgeColor": "blue"
   },
   {
     "term": "Deformasyon",
@@ -414,16 +207,17 @@
     "badgeColor": "teal"
   },
   {
-    "term": "Disrupsiyon",
+    "term": "Diapedez (Transmigrasyon)",
     "aliases": [
-      "disrupsiyon",
-      "disruption"
+      "diapedez",
+      "diapedesis",
+      "transmigrasyon"
     ],
-    "category": "Genetik & Dismorfoloji",
-    "pronunciation": "[dis-rup-si-yon]",
-    "definition": "Normal gelişim sürecindeki bir organ veya vücut parçasının dışsal mekanik bantlar (amniyotik bant) veya vasküler iskemiyle parçalanıp yıkıma uğraması.",
-    "clinicalPearls": "Kalıtsal değildir, rekürrens riski düşüktür; amniyotik bant amputasyonu en bilinen örneğidir.",
-    "badgeColor": "rose"
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[di-ya-pe-dez]",
+    "definition": "Kemosentez ve adezyon molekülleri (özellikle PECAM-1/CD31) aracılığıyla lökositlerin intakt postkapiller venül endotel hücrelerinin arasından doku parankimine sızması.",
+    "clinicalPearls": "Akut iltihabın hücresel evresinin vazgeçilmez basamağıdır; ilk 6-24 saatte nötrofiller, 24-48 saatten sonra monosit/makrofajlar geçer.",
+    "badgeColor": "indigo"
   },
   {
     "term": "Displazi",
@@ -438,57 +232,102 @@
     "badgeColor": "indigo"
   },
   {
-    "term": "Non-Disjunction (Kromozom Ayrılamaması)",
+    "term": "Disrupsiyon",
     "aliases": [
-      "non-disjunction",
-      "nondisjunction",
-      "ayrılamama",
-      "mayotik ayrılmama"
+      "disrupsiyon",
+      "disruption"
     ],
-    "category": "Genetik & Patoloji",
-    "pronunciation": "[non-dis-cank-şın]",
-    "definition": "Hücre bölünmesinde (Mayoz veya Mitoz) homolog kromozomların veya kardeş kromatitlerin zıt kutuplara ayrılamayarak aynı hücreye gitmesi kusuru.",
-    "clinicalPearls": "Anöploidilerin (Trizomi 21, 18, 13, Klinefelter) bir numaralı nedenidir; Mayoz I'de olursa heterolog, Mayoz II'de olursa özdeş kromatitler aktarılır.",
-    "badgeColor": "teal"
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[dis-rup-si-yon]",
+    "definition": "Normal gelişim sürecindeki bir organ veya vücut parçasının dışsal mekanik bantlar (amniyotik bant) veya vasküler iskemiyle parçalanıp yıkıma uğraması.",
+    "clinicalPearls": "Kalıtsal değildir, rekürrens riski düşüktür; amniyotik bant amputasyonu en bilinen örneğidir.",
+    "badgeColor": "rose"
   },
   {
-    "term": "Anaphase Lagging (Anafaz Gecikmesi)",
+    "term": "Distrofik Kalsifikasyon",
     "aliases": [
-      "anaphase lagging",
-      "anafazda geri kalma",
-      "anafaz gecikmesi"
+      "distrofik kalsifikasyon",
+      "dystrophic calcification"
     ],
-    "category": "Genetik & Patoloji",
-    "pronunciation": "[e-na-feyz leg-ging]",
-    "definition": "Anafazda bir kromatitin iğ ipliği yetersizliği nedeniyle kutba hareket etmekte gecikmesi ve nükleus zarı dışında kalarak sitoplazmada kaybolması.",
-    "clinicalPearls": "Monozomi ve mozaik karyotiplerin (özellikle mozaik Turner ve Down) temel hücresel mekanizmasıdır.",
-    "badgeColor": "teal"
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[dis-tro-fik kal-si-fi-kas-yon]",
+    "definition": "Serum kalsiyum düzeyi NORMAL iken, nekrotik veya hasarlı dokularda (aterom plağı, tüberküloz kazeöz odağı, yaşlı kalp kapakları) kalsiyum tuzlarının çökmesi.",
+    "clinicalPearls": "Metastatik kalsifikasyondan farkı kalsiyum-fosfor metabolizmasının normal olması ve sadece hasarlı dokuda gerçekleşmesidir.",
+    "badgeColor": "purple"
   },
   {
-    "term": "Robertsonyan Translokasyon",
+    "term": "Eksüda",
     "aliases": [
-      "robertsonyan translokasyon",
-      "robertsonian translokasyon",
-      "sentrik füzyon"
+      "eksüda",
+      "exudate",
+      "enflamatuar sıvı"
     ],
-    "category": "Genetik & Patoloji",
-    "pronunciation": "[ra-bırt-sin-yın]",
-    "definition": "Yalnızca akrosentrik kromozomların (13, 14, 15, 21, 22) sentromer yakınından kırılarak uzun kollarının birleşmesi ve kısa kollarının kaybolması.",
-    "clinicalPearls": "Taşıyıcı 45 kromozomludur ve sağlıklıdır; rob(14;21) taşıyıcısı annede Down sendromlu çocuk riski %10-15, rob(21;21)'de %100'dür.",
-    "badgeColor": "teal"
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[ek-sü-da]",
+    "definition": "Vasküler geçirgenliğin artması sonucu damardan doku aralığına çıkan; yüksek protein konsantrasyonu (>3 g/dL), yüksek dansite (>1.020) ve çok sayıda hücresel eleman içeren iltihabi sıvı.",
+    "clinicalPearls": "Akut enflamasyon, bakteriyel enfeksiyon ve malign tümörlerde görülür; transüdadan temel farkı mikrovasküler endotel geçirgenliğinin bozulmuş olmasıdır.",
+    "badgeColor": "rose"
   },
   {
-    "term": "İzokromozom",
+    "term": "Eliminasyon",
     "aliases": [
-      "izokromozom",
-      "isochromosome",
-      "i(xq)"
+      "eliminasyon",
+      "elimination"
     ],
-    "category": "Genetik & Patoloji",
-    "pronunciation": "[i-zo-kro-mo-zom]",
-    "definition": "Sentromerin uzunlamasına değil enlemesine hatalı bölünmesiyle bir kolun silinip diğer kolun ayna simetrisi şeklinde çift kopyaya çıkması.",
-    "clinicalPearls": "En sık örnek i(Xq)'dur; Turner Sendromu olgularının %15'ini oluşturur.",
-    "badgeColor": "indigo"
+    "category": "Epidemiyoloji",
+    "pronunciation": "[e-li-mi-nas-yon]",
+    "definition": "Hastalığın etkeni dünyada bulunmaya devam ederken, belirli bir coğrafi bölgede (ülkede) yerli (otokton) vakanın artık görülmemesi.",
+    "clinicalPearls": "Eradikasyondan farkı: Sürveyans, aşı ve kontrol önlemleri KESİNTİSİZ DEVAM ETMEK ZORUNDADIR!",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Epikantus",
+    "aliases": [
+      "epikantus",
+      "epikantik kıvrım",
+      "epicanthal fold"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[e-pi-kan-tus]",
+    "definition": "Gözün iç kantusunu örten ve gözü badem biçiminde gösteren hilal şeklindeki dikey deri kıvrımı.",
+    "clinicalPearls": "Asya toplumlarında normal fizyolojik varyanttır; Kafkas ırkında Down sendromu ve Fetal Alkol Sendromunun (FAS) önemli dismorfolojik ipucudur.",
+    "badgeColor": "cyan"
+  },
+  {
+    "term": "Eradikasyon",
+    "aliases": [
+      "eradikasyon",
+      "eradication"
+    ],
+    "category": "Epidemiyoloji",
+    "pronunciation": "[e-ra-di-kas-yon]",
+    "definition": "Bir patojenin dünya çapında görülme sıklığının kalıcı olarak sıfırlanması; tüm dünyadan rezervuarlarıyla silinmesi.",
+    "clinicalPearls": "Dünya genelinde aşı ve müdahale sonlandırılır; insanda tek örnek Çiçek Hastalığıdır (1980).",
+    "badgeColor": "emerald"
+  },
+  {
+    "term": "Escherichia coli",
+    "aliases": [
+      "escherichia coli",
+      "e. coli"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[e-şe-ri-şi-ya ko-li]",
+    "definition": "Gram negatif, laktoz pozitif fakültatif anaerop basil. Bağırsak mikrobiyotasının normal üyesidir.",
+    "clinicalPearls": "Pili (fimbria) aracılığıyla üroepitele tutunarak toplum kaynaklı üriner sistem enfeksiyonlarının %80'inden fazlasından sorumludur.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Fibrinoid Nekroz",
+    "aliases": [
+      "fibrinoid nekroz",
+      "fibrinoid necrosis"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[fib-ri-noyd nek-roz]",
+    "definition": "Damar duvarında antijen-antikor kompleksleri ile plazma proteinlerinin birikmesiyle parlak pembe, amorf birikim oluşması.",
+    "clinicalPearls": "Malign hipertansiyon ve immün kompleks vaskülitlerinde (PAN, SLE) görülür.",
+    "badgeColor": "rose"
   },
   {
     "term": "Genomik İmprinting",
@@ -504,159 +343,15 @@
     "badgeColor": "purple"
   },
   {
-    "term": "Uniparental Dizomi (UPD)",
+    "term": "Glabella",
     "aliases": [
-      "uniparental dizomi",
-      "upd",
-      "maternal upd",
-      "paternal upd"
+      "glabella",
+      "glabella bölgesi"
     ],
-    "category": "Genetik & Patoloji",
-    "pronunciation": "[u-ni-pa-ren-tal di-zo-mi]",
-    "definition": "Diploid bir bireyde homolog kromozom çiftinin her iki üyesinin de tek bir ebeveynden kalıtılması durumu.",
-    "clinicalPearls": "Maternal UPD 15 -> Prader-Willi sendromuna; Paternal UPD 15 -> Angelman sendromuna yol açar.",
-    "badgeColor": "purple"
-  },
-  {
-    "term": "İzodizomi vs Heterodizomi",
-    "aliases": [
-      "izodizomi",
-      "heterodizomi",
-      "isodisomy",
-      "heterodisomy"
-    ],
-    "category": "Genetik & Patoloji",
-    "pronunciation": "[i-zo-di-zo-mi]",
-    "definition": "İzodizomi tek bir ebeveyn kromozomunun duplikasyonu (otozomal resesif hastalık riski taşır); Heterodizomi ise ebeveynin iki farklı homologunun birden aktarılmasıdır.",
-    "clinicalPearls": "Mayoz I ayrılmama kalıntısı heterodizomi, Mayoz II ayrılmama kalıntısı izodizomi yaratır.",
-    "badgeColor": "purple"
-  },
-  {
-    "term": "Apoptoz (Programlı Hücre Ölümü)",
-    "aliases": [
-      "apoptoz",
-      "apoptozis",
-      "apoptosis",
-      "programlı hücre ölümü"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[a-pop-toz]",
-    "definition": "Hücre zarı bütünlüğünü koruyarak kaspaz enzimleri aracılığıyla hücrenin büzüşmesi, nükleer kromatin yoğunlaşması ve enflamasyonsuz fagositozla yok edilmesi.",
-    "clinicalPearls": "Nekrozdan farkı çevre dokuda enflamatuar reaksiyon YARATMAMASIDIR; embriyogenezde parmak aralarının açılmasını sağlar.",
-    "badgeColor": "emerald"
-  },
-  {
-    "term": "Koagülasyon Nekrozu",
-    "aliases": [
-      "koagülasyon nekrozu",
-      "coagulative necrosis"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[ko-a-gü-las-yon nek-ro-zu]",
-    "definition": "Hücre proteinlerinin ve enzimlerinin asidozla denatüre olması sonucu hücre temel mimarisinin (hayalet hücre manzarası) günlerce korunduğu iskemi nekrozu.",
-    "clinicalPearls": "BEYİN HARİÇ tüm solid organ enfarktüslerinin (miyokard, böbrek, dalak) temel nekroz tipidir.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Likefaksiyon (Sıvılaşma) Nekrozu",
-    "aliases": [
-      "likefaksiyon nekrozu",
-      "sıvılaşma nekrozu",
-      "liquefactive necrosis"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[li-ke-fak-si-yon]",
-    "definition": "Güçlü litik enzimlerin dokuyu tamamen sindirerek amorf vizköz bir sıvı kütlesine (cerahat/apse) dönüştürdüğü nekroz tipi.",
-    "clinicalPearls": "Bakteriyel piyojenik apselerde ve SANTRAL SİNİR SİSTEMİ (beyin) iskemik enfarktüslerinde karakteristiktir.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Kazeifikasyon Nekrozu",
-    "aliases": [
-      "kazeifikasyon",
-      "kazeöz nekroz",
-      "caseous necrosis",
-      "peynirleşme nekrozu"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[ka-ze-i-fi-kas-yon]",
-    "definition": "Hücre mimarisinin tamamen silindiği, amorf, granüler, yapısız ve eozinofilik peynirimsi doku harabiyeti manzarası.",
-    "clinicalPearls": "Mycobacterium tuberculosis (Tüberküloz) granülomlarının merkezinde patognomoniktir.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Fibrinoid Nekroz",
-    "aliases": [
-      "fibrinoid nekroz",
-      "fibrinoid necrosis"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[fib-ri-noyd nek-roz]",
-    "definition": "Damar duvarında antijen-antikor kompleksleri ile plazma proteinlerinin birikmesiyle parlak pembe, amorf birikim oluşması.",
-    "clinicalPearls": "Malign hipertansiyon ve immün kompleks vaskülitlerinde (PAN, SLE) görülür.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Steatoz (Yağlanma)",
-    "aliases": [
-      "steatoz",
-      "hepatosteatoz",
-      "yağlanma",
-      "fatty change"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[ste-a-toz]",
-    "definition": "Parankim hücreleri (özellikle hepatositler) sitoplazmasında anormal trigliserit vakuollerinin birikmesi.",
-    "clinicalPearls": "Alkol kullanımı, obezite, diyabet ve protein malnütrisyonunda (Kwashiorkor) en sık karaciğerde geri dönüşümlü hücre hasarı bulgusudur.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "Distrofik Kalsifikasyon",
-    "aliases": [
-      "distrofik kalsifikasyon",
-      "dystrophic calcification"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[dis-tro-fik kal-si-fi-kas-yon]",
-    "definition": "Serum kalsiyum düzeyi NORMAL iken, nekrotik veya hasarlı dokularda (aterom plağı, tüberküloz kazeöz odağı, yaşlı kalp kapakları) kalsiyum tuzlarının çökmesi.",
-    "clinicalPearls": "Metastatik kalsifikasyondan farkı kalsiyum-fosfor metabolizmasının normal olması ve sadece hasarlı dokuda gerçekleşmesidir.",
-    "badgeColor": "purple"
-  },
-  {
-    "term": "Metastatik Kalsifikasyon",
-    "aliases": [
-      "metastatik kalsifikasyon",
-      "metastatic calcification"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[me-tas-ta-tik kal-si-fi-kas-yon]",
-    "definition": "Serumda HİPERKALSEMİ bulunması nedeniyle normal sağlıklı dokularda (mide mukozası, akciğer alveolleri, böbrek tübülleri) kalsiyum tuzlarının birikmesi.",
-    "clinicalPearls": "Hiperparatiroidizm, kemik metastazları ve D vitamini intoksikasyonunda görülür; asit salgılayan dokuları sever.",
-    "badgeColor": "purple"
-  },
-  {
-    "term": "Virchow Triadı",
-    "aliases": [
-      "virchow triadı",
-      "virchow üçlüsü",
-      "virchow triad"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[vir-şov tri-ya-dı]",
-    "definition": "İntravasküler tromboz oluşumunu başlatan 3 temel patolojik faktör: 1) Endotel Hasarı, 2) Kan Akımında Bozulma (Staz veya Türbülans), 3) Hiperkoagülabilite.",
-    "clinicalPearls": "Derin ven trombozu ve pulmoner emboli gelişiminin evrensel patogenez modelidir.",
-    "badgeColor": "red"
-  },
-  {
-    "term": "Metaplazi",
-    "aliases": [
-      "metaplazi",
-      "metaplasia"
-    ],
-    "category": "Tıbbi Patoloji",
-    "pronunciation": "[me-tap-la-zi]",
-    "definition": "Kronik strese maruz kalan diferansiye bir erişkin hücre tipinin yerini strese daha dirençli başka bir hücre tipine bırakması.",
-    "clinicalPearls": "Sigarada bronşiyal yassı epitel metaplazisi; reflüde Barrett özofagusu (intestinal glandüler metaplazi).",
+    "category": "Latin / Anatomi",
+    "pronunciation": "[gla-bel-la]",
+    "definition": "Alında, iki kaş arasında ve burun kökünün hemen üzerinde yer alan düz kemiksel alan.",
+    "clinicalPearls": "Wolf-Hirschhorn sendromunda (4p16.3) glabella aşırı belirginleşerek Grek savaş miğferi görünümü oluşturur.",
     "badgeColor": "indigo"
   },
   {
@@ -673,6 +368,33 @@
     "badgeColor": "emerald"
   },
   {
+    "term": "Hemosiderin",
+    "aliases": [
+      "hemosiderin",
+      "hemosiderosis"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[he-mo-si-de-rin]",
+    "definition": "Ferritin agregatlarının oluşturduğu altın sarısı-kahverengi, granüler demir depolama pigmenti.",
+    "clinicalPearls": "Prusya Mavisi (Prussian Blue / Perls) histokimyasal boyasıyla parlak maviye boyanır; kronik akciğer konjesyonunda alveollerde 'kalp yetmezliği hücreleri' (hemosiderin yüklü makrofajlar) şeklinde görülür.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Herpes Simplex Virüs (HSV)",
+    "aliases": [
+      "herpes simplex virus",
+      "hsv",
+      "hsv-1",
+      "hsv-2",
+      "uçuk virüsü"
+    ],
+    "category": "Viroloji",
+    "pronunciation": "[her-pes simp-leks]",
+    "definition": "Zarlı, çift iplikli DNA virüsü. Duyusal ganglionlarda (trigeminal ve sakral) ömür boyu latent kalır.",
+    "clinicalPearls": "Tzanck yaymasında çok çekirdekli dev hücreler ve Cowdry A nükleer inklüzyonları izlenir; HSV-1 dudak uçuğu ve temporal lob ensefaliti, HSV-2 ağrılı genital veziküller yapar.",
+    "badgeColor": "amber"
+  },
+  {
     "term": "Hidronefroz",
     "aliases": [
       "hidronefroz",
@@ -683,6 +405,667 @@
     "definition": "İdrar akımındaki obstrüksiyon nedeniyle renal pelvis ve kalikslerin aşırı genişlemesi ve böbrek parankiminin bası atrofisine uğraması.",
     "clinicalPearls": "En sık üreter taşı, BPH, pelviüreteral darlık ve retroperitoneal fibroziste gelişir; bası atrofisi böbrek yetmezliği doğurabilir.",
     "badgeColor": "blue"
+  },
+  {
+    "term": "Hipertelorizm",
+    "aliases": [
+      "hipertelorizm",
+      "hypertelorism"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[hi-per-te-lo-rizm]",
+    "definition": "İki göz çukuru (orbita) arasındaki kemiksel mesafenin ve interpupiller mesafenin +2 standart sapmanın üzerinde genişlemiş olması.",
+    "clinicalPearls": "Cri-du-chat (5p-) ve Wolf-Hirschhorn (4p-) sendromlarında tipik yüz bulgusudur.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Holoprosencephaly (Holoprozensefali)",
+    "aliases": [
+      "holoprosencephaly",
+      "holoprozensefali"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[ho-lo-pro-zen-se-fa-li]",
+    "definition": "Embriyonik ön beynin (prosensefalon) sağ ve sol iki serebral hemisfere bölünememesi sonucu oluşan ağır nörogelişimsel malformasyon.",
+    "clinicalPearls": "Patau Sendromu (Trizomi 13) kliniğinin temel nöropatolojik komponentidir; siklopi veya yarık dudak-damağa eşlik eder.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Human Papillomavirus (HPV)",
+    "aliases": [
+      "human papillomavirus",
+      "hpv",
+      "insan papilloma virüsü"
+    ],
+    "category": "Viroloji",
+    "pronunciation": "[h-p-v]",
+    "definition": "Zarsız, çift iplikli dairesel DNA virüsü. Deri ve mukozalarda siğil (kondilom) ve malign neoplazilere yol açar.",
+    "clinicalPearls": "Tip 6 ve 11 benign genital siğil (kondiloma akuminata); Tip 16 ve 18 yüksek riskli olup E6 (p53 inhibisyonu) ve E7 (pRb inhibisyonu) onkogenleriyle serviks kanserine neden olur. Histopatolojide halo içeren koilositler tanı koydurucudur.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "İnfluenza Virüsü",
+    "aliases": [
+      "influenza",
+      "influenza virüsü",
+      "grip virüsü"
+    ],
+    "category": "Viroloji",
+    "pronunciation": "[in-flu-en-za]",
+    "definition": "Segmenter tek zincirli RNA genomuna sahip Orthomyxoviridae üyesi virüs. Hemaglütinin (HA) ve Nöraminidaz (NA) glikoproteinleri içerir.",
+    "clinicalPearls": "Antijenik shift (pandemi) ve antijenik drift (mevsimsel epidemi) gösterir; DAMLACIK İZOLASYONU (Mavi Çiçek) gerektirir.",
+    "badgeColor": "cyan"
+  },
+  {
+    "term": "İnfodemi",
+    "aliases": [
+      "infodemi",
+      "infodemic"
+    ],
+    "category": "Epidemiyoloji",
+    "pronunciation": "[in-fo-de-mi]",
+    "definition": "Salgın sırasında doğru bilgilerle birlikte aşırı miktarda yanlış, asılsız ve kitlelerde panik yaratan dedikodu/bilgi seli yayılması.",
+    "clinicalPearls": "DSÖ çözüm formülü: Konuşma, Dinleme ve Dedikoduları Engelleme.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "İzodizomi vs Heterodizomi",
+    "aliases": [
+      "izodizomi",
+      "heterodizomi",
+      "isodisomy",
+      "heterodisomy"
+    ],
+    "category": "Genetik & Patoloji",
+    "pronunciation": "[i-zo-di-zo-mi]",
+    "definition": "İzodizomi tek bir ebeveyn kromozomunun duplikasyonu (otozomal resesif hastalık riski taşır); Heterodizomi ise ebeveynin iki farklı homologunun birden aktarılmasıdır.",
+    "clinicalPearls": "Mayoz I ayrılmama kalıntısı heterodizomi, Mayoz II ayrılmama kalıntısı izodizomi yaratır.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "İzokromozom",
+    "aliases": [
+      "izokromozom",
+      "isochromosome",
+      "i(xq)"
+    ],
+    "category": "Genetik & Patoloji",
+    "pronunciation": "[i-zo-kro-mo-zom]",
+    "definition": "Sentromerin uzunlamasına değil enlemesine hatalı bölünmesiyle bir kolun silinip diğer kolun ayna simetrisi şeklinde çift kopyaya çıkması.",
+    "clinicalPearls": "En sık örnek i(Xq)'dur; Turner Sendromu olgularının %15'ini oluşturur.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Kalsiyum Oksalat Taşı",
+    "aliases": [
+      "kalsiyum oksalat",
+      "calcium oxalate"
+    ],
+    "category": "Üroloji / Nefroloji",
+    "pronunciation": "[kal-si-yum ok-sa-lat]",
+    "definition": "Tüm üriner sistem taşlarının yaklaşık %70-80'ini oluşturan en yaygın böbrek taşı türü.",
+    "clinicalPearls": "Radyoopaktır (direk grafide beyaz görünür); zarf şeklinde monohidrat/dihidrat kristalleri gösterir.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Karbapenemler",
+    "aliases": [
+      "karbapenem",
+      "meropenem",
+      "imipenem",
+      "ertapenem"
+    ],
+    "category": "Farmakoloji",
+    "pronunciation": "[kar-ba-pe-nem]",
+    "definition": "Çoğu beta-laktamaz enzimine dirençli, gram negatif basillere karşı en geniş spektrumlu son çare beta-laktam antibiyotik ailesi.",
+    "clinicalPearls": "Direnç geliştiğinde (Karbapenem Dirençli Enterobacteriaceae - CRE) hastanede Temas İzolasyonu zorunludur.",
+    "badgeColor": "cyan"
+  },
+  {
+    "term": "Karyolizis",
+    "aliases": [
+      "karyolizis",
+      "karyolysis"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[kar-yo-li-zis]",
+    "definition": "Lizozomal deoksiribonükleaz (DNAz) enzimlerinin aktivitesiyle kromatinin tamamen sindirilmesi ve bazofilik nükleusun soluklaşıp silinerek kaybolması.",
+    "clinicalPearls": "Hücrede 'hayalet hücre' (ghost cell) tablosunun nihai nükleer sonucudur.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Karyoreksis",
+    "aliases": [
+      "karyoreksis",
+      "karyorrhexis"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[kar-yo-rek-sis]",
+    "definition": "Piknotik nükleusun nükleaz enzimleri etkisiyle çok sayıda küçük bazofilik parçacığa ve nükleer toza bölünmesi.",
+    "clinicalPearls": "Nekroz ve ileri evre apoptoziste hücre sitoplazması içine dağılan nükleer kırıntılar olarak seçilir.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Karyotip Analizi",
+    "aliases": [
+      "karyotip",
+      "karyotipleme",
+      "karyotype"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[kar-yo-tip]",
+    "definition": "Bölünmekte olan metafaz hücrelerinin kolşisinle durdurulup Giemsa (G-bantlama) ile boyanarak kromozomların sayı ve morfolojik büyüklüklerine göre dizilmesi işlemi.",
+    "clinicalPearls": "Standart insan karyotipi 46,XX (kadın) veya 46,XY (erkek) olup kromozom sayısal ve büyük yapısal anomalilerini tespit eder; mikrodelesyonlar için FISH veya mikrodizin (CMA) gerekir.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Kazeifikasyon Nekrozu",
+    "aliases": [
+      "kazeifikasyon",
+      "kazeöz nekroz",
+      "caseous necrosis",
+      "peynirleşme nekrozu"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[ka-ze-i-fi-kas-yon]",
+    "definition": "Hücre mimarisinin tamamen silindiği, amorf, granüler, yapısız ve eozinofilik peynirimsi doku harabiyeti manzarası.",
+    "clinicalPearls": "Mycobacterium tuberculosis (Tüberküloz) granülomlarının merkezinde patognomoniktir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Klebsiella pneumoniae",
+    "aliases": [
+      "klebsiella pneumoniae",
+      "k. pneumoniae",
+      "klebsiella"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[kleb-si-yel-la pnö-mo-ni-ye]",
+    "definition": "Gram negatif, hareketsiz, belirgin polisakkarit kapsüllü basil. Alkoliklerde ve diyabetiklerde kaviteli pnömoni ve nozokomiyal idrar yolu/kan enfeksiyonu yapar.",
+    "clinicalPearls": "Tipik koyu kırmızı 'kuşburnu/frenk üzümü jölesi' (red currant jelly) kıvamında balgama yol açar; ESBL ve karbapenemaz (KPC) üretimi yüksektir.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Klinefelter Sendromu (47,XXY)",
+    "aliases": [
+      "klinefelter sendromu",
+      "klinefelter",
+      "47,xxy"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[klayn-fel-ter]",
+    "definition": "Erkeklerde bir veya daha fazla fazla X kromozomu bulunmasıyla seyreden hipogonadizm tablosu (47,XXY).",
+    "clinicalPearls": "Uzun boy, orantısız uzun bacaklar, atrofik sert testisler, azoosperme ve infertilite, jinekomasti, yüksek FSH/LH ve düşük testosteron ile seyreder; erkekte meme kanseri riskini 20-50 kat artırır.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Klinodaktili",
+    "aliases": [
+      "klinodaktili",
+      "clinodactyly"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[kli-no-dak-ti-li]",
+    "definition": "Genellikle 5. parmağın (küçük parmak) orta falanks hipoplazisi nedeniyle 4. parmağa doğru medial eğrilik göstermesi.",
+    "clinicalPearls": "Down sendromunda en sık rastlanan minör ekstremite anomalilerindendir.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Koagülasyon Nekrozu",
+    "aliases": [
+      "koagülasyon nekrozu",
+      "coagulative necrosis"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[ko-a-gü-las-yon nek-ro-zu]",
+    "definition": "Hücre proteinlerinin ve enzimlerinin asidozla denatüre olması sonucu hücre temel mimarisinin (hayalet hücre manzarası) günlerce korunduğu iskemi nekrozu.",
+    "clinicalPearls": "BEYİN HARİÇ tüm solid organ enfarktüslerinin (miyokard, böbrek, dalak) temel nekroz tipidir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Kolistin (Polimiksin E)",
+    "aliases": [
+      "kolistin",
+      "colistin",
+      "polimiksin"
+    ],
+    "category": "Farmakoloji",
+    "pronunciation": "[ko-lis-tin]",
+    "definition": "Gram negatif bakterilerin dış membranındaki LPS yapısını bozarak deterjan benzeri etkiyle hücreyi patlatan polipeptid antibiyotik.",
+    "clinicalPearls": "Nefrotoksik ve nörotoksiktir; pan-rezistan Acinetobacter ve Klebsiella suşlarında son çaredir.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Kolobom",
+    "aliases": [
+      "kolobom",
+      "coloboma",
+      "iris kolobomu"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[ko-lo-bom]",
+    "definition": "Embriyonik optik yarığın kapanmasındaki yetersizlik nedeniyle iris, retina, koroid veya optik sinirde oluşan anahtar deliği benzeri doku defekti.",
+    "clinicalPearls": "CHARGE sendromunun baş harfini oluşturur (Coloboma, Heart defects, Atresia choanae, Retardation, Genital hypoplasia, Ear anomalies).",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Kızamık Virüsü (Rubeola)",
+    "aliases": [
+      "kızamık virüsü",
+      "rubeola",
+      "measles virus"
+    ],
+    "category": "Viroloji",
+    "pronunciation": "[ru-be-o-la]",
+    "definition": "Zarflı, tek zincirli negatif RNA virüsü (Paramiksovirüs). Koplik lekeleri ve makülopapüler döküntü ile seyreder.",
+    "clinicalPearls": "R0 değeri 12-18 olan en bulaşıcı virüstür; mikroskobik aerosollerle bulaşır, SOLUNUM İZOLASYONU şarttır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Likefaksiyon (Sıvılaşma) Nekrozu",
+    "aliases": [
+      "likefaksiyon nekrozu",
+      "sıvılaşma nekrozu",
+      "liquefactive necrosis"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[li-ke-fak-si-yon]",
+    "definition": "Güçlü litik enzimlerin dokuyu tamamen sindirerek amorf vizköz bir sıvı kütlesine (cerahat/apse) dönüştürdüğü nekroz tipi.",
+    "clinicalPearls": "Bakteriyel piyojenik apselerde ve SANTRAL SİNİR SİSTEMİ (beyin) iskemik enfarktüslerinde karakteristiktir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Lipofuskin",
+    "aliases": [
+      "lipofuskin",
+      "yaşlanma pigmenti",
+      "yıpranma pigmenti",
+      "lipofuscin"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[li-po-fus-kin]",
+    "definition": "Serbest oksijen radikallerinin doymamış membran lipidlerini peroksidasyona uğratması sonucu lizozomlarda sindirilemeyip biriken sarı-kahverengi intrasellüler pigment.",
+    "clinicalPearls": "Yaşlı veya atrofik miyokard ve karaciğer hücrelerinde birikerek 'kahverengi atrofi' görüntüsü oluşturur; hücreye doğrudan zararsız bir yaşlanma belirtisidir.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Malformasyon",
+    "aliases": [
+      "malformasyon",
+      "malformation"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[mal-for-mas-yon]",
+    "definition": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
+    "clinicalPearls": "Yarık dudak-damak, VSD ve spina bifida klasik malformasyon örnekleridir.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Metaplazi",
+    "aliases": [
+      "metaplazi",
+      "metaplasia"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[me-tap-la-zi]",
+    "definition": "Kronik strese maruz kalan diferansiye bir erişkin hücre tipinin yerini strese daha dirençli başka bir hücre tipine bırakması.",
+    "clinicalPearls": "Sigarada bronşiyal yassı epitel metaplazisi; reflüde Barrett özofagusu (intestinal glandüler metaplazi).",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Metastatik Kalsifikasyon",
+    "aliases": [
+      "metastatik kalsifikasyon",
+      "metastatic calcification"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[me-tas-ta-tik kal-si-fi-kas-yon]",
+    "definition": "Serumda HİPERKALSEMİ bulunması nedeniyle normal sağlıklı dokularda (mide mukozası, akciğer alveolleri, böbrek tübülleri) kalsiyum tuzlarının birikmesi.",
+    "clinicalPearls": "Hiperparatiroidizm, kemik metastazları ve D vitamini intoksikasyonunda görülür; asit salgılayan dokuları sever.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Mikrognati",
+    "aliases": [
+      "mikrognati",
+      "küçük çene",
+      "micrognathia"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[mik-rog-na-ti]",
+    "definition": "Mandibula (alt çene) kemiğinin normalden belirgin derecede küçük ve geri yerleşimli olması anomalisi.",
+    "clinicalPearls": "Pierre Robin sekansında mikrognati -> glossoptozis -> U biçimli yarık damak zincirine yol açar; Edwards sendromunda da sık rastlanır.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "MRSA (Metisiline Dirençli S. aureus)",
+    "aliases": [
+      "mrsa",
+      "metisiline dirençli staphylococcus aureus",
+      "metisilin dirençli"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[m-r-s-a]",
+    "definition": "mecA geni aracılığıyla PBP2a sentezleyerek tüm standart beta-laktam antibiyotiklere direnç kazanmış S. aureus suşları.",
+    "clinicalPearls": "Hastanede mutlaka TEMAS İZOLASYONU (Kırmızı Yıldız) gerektirir; tedavide vankomisin veya daptomisin seçilir.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Mycobacterium tuberculosis",
+    "aliases": [
+      "mycobacterium tuberculosis",
+      "m. tuberculosis",
+      "tüberküloz basili",
+      "koch basili"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[mi-ko-bak-te-ri-yum tü-ber-kü-lo-zis]",
+    "definition": "Aside dirençli (ARB / Ehrlich-Ziehl-Neelsen pozitif), hücre duvarında yüksek oranda mikolik asit içeren zorunlu aerop basil. Akciğer tüberkülozunun etkenidir.",
+    "clinicalPearls": "Solunum yoluyla (<5 µm aerosol) bulaşır; hastanede NEGATİF BASINÇLI ODA ve N95 MASKE (Sarı Yaprak) şarttır.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Mycoplasma pneumoniae",
+    "aliases": [
+      "mycoplasma pneumoniae",
+      "m. pneumoniae",
+      "mikoplazma"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[mi-ko-plaz-ma pnö-mo-ni-ye]",
+    "definition": "Hücre duvarı kesinlikle bulunmayan en küçük bağımsız çoğalan bakteri. Membranında kolesterol içerir.",
+    "clinicalPearls": "Hücre duvarı olmadığından beta-laktam antibiyotiklere (penisilin/sefalosporin) DOĞAL DİRENÇLİDİR; atipik pnömoni yapar.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Negatif Basınçlı Oda",
+    "aliases": [
+      "negatif basınçlı oda",
+      "negatif basınç",
+      "negative pressure room"
+    ],
+    "category": "İzolasyon",
+    "pronunciation": "[ne-ga-tif ba-sınç]",
+    "definition": "Oda içi hava basıncının koridora göre daha düşük tutulduğu, böylece kapı açıldığında havanın koridora kaçmayıp koridordan odaya girdiği özel oda mimarisi.",
+    "clinicalPearls": "Solunum izolasyonunda (Tüberküloz, Kızamık, Suçiçeği) zorunludur; hava saatte 6-12 kez değiştirilir ve HEPA filtreden geçirilir.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Neisseria gonorrhoeae",
+    "aliases": [
+      "neisseria gonorrhoeae",
+      "n. gonorrhoeae",
+      "gonokok"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[nay-se-ri-ya go-nor-re]",
+    "definition": "İntrasellüler yerleşim gösteren, gram negatif kahve çekirdeği biçiminde diplokok. Gonore (bel soğukluğu) ve pelvik inflamatuar hastalık (PID) etkenidir.",
+    "clinicalPearls": "Thayer-Martin besiyerinde ürer; erkeklerde pürülan üretral akıntı, kadınlarda asemptomatik servisit yapar. Tedavide Seftriakson + Azitromisin kombinasyonu verilir.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Neisseria meningitidis",
+    "aliases": [
+      "neisseria meningitidis",
+      "n. meningitidis",
+      "meningokok"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[nay-se-ri-ya me-nin-ji-ti-dis]",
+    "definition": "Gram negatif kahve çekirdeği şeklinde diplokok. Farenksten kan dolaşımına geçerek fulminan meningokoksemi ve pürülan menenjit yapar.",
+    "clinicalPearls": "DAMLACIK İZOLASYONU (Mavi Çiçek) gerektirir; 1 metreden yakın mesafede cerrahi maske takılır; yakın temaslılara rifampisin kemoprofilaksisi verilir.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Non-Disjunction (Kromozom Ayrılamaması)",
+    "aliases": [
+      "non-disjunction",
+      "nondisjunction",
+      "ayrılamama",
+      "mayotik ayrılmama"
+    ],
+    "category": "Genetik & Patoloji",
+    "pronunciation": "[non-dis-cank-şın]",
+    "definition": "Hücre bölünmesinde (Mayoz veya Mitoz) homolog kromozomların veya kardeş kromatitlerin zıt kutuplara ayrılamayarak aynı hücreye gitmesi kusuru.",
+    "clinicalPearls": "Anöploidilerin (Trizomi 21, 18, 13, Klinefelter) bir numaralı nedenidir; Mayoz I'de olursa heterolog, Mayoz II'de olursa özdeş kromatitler aktarılır.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Otofaji",
+    "aliases": [
+      "otofaji",
+      "autophagy"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[o-to-fa-ji]",
+    "definition": "Hücrenin besin yokluğu veya stres altında kendi sitoplazmik organellerini çift zarlı bir otofagozom içine alarak lizozomla kaynaştırıp sindirmesi ve geri dönüştürmesi süreci.",
+    "clinicalPearls": "Atrofiye uğrayan hücrelerde belirgin artar; sindirilemeyen artık membran lipidleri lipofuskin granüllerine dönüşür.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Pes equinovarus",
+    "aliases": [
+      "pes equinovarus",
+      "pes ekinovarus",
+      "çomak ayak",
+      "clubfoot"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[pes e-kwi-no-va-rus]",
+    "definition": "Ayak bileğinin plantar fleksiyon (ekinus), topuğun içe dönmesi (varus) ve ön ayağın adduksiyonu ile karakterize konjenital ayak deformitesi.",
+    "clinicalPearls": "Oligohidramniozda mekanik sıkışmaya bağlı DEFORMASYON örneğidir; Edwards sendromunda da sık görülür.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Piknoz",
+    "aliases": [
+      "piknoz",
+      "pyknosis"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[pik-noz]",
+    "definition": "Hücre ölümü ve nekroz sürecinde nükleer kromatini yoğunlaşıp nükleusun büzülerek küçük, koyu bazofilik homojen bir kitleye dönüşmesi.",
+    "clinicalPearls": "Nükleer değişikliklerin ilk morfolojik basamağıdır; ardından karyoreksis ve karyolizis gelişir.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Pozitif Basınçlı Oda (Koruyucu Ortam)",
+    "aliases": [
+      "pozitif basınçlı oda",
+      "pozitif basınç",
+      "koruyucu ortam",
+      "ters izolasyon"
+    ],
+    "category": "İzolasyon",
+    "pronunciation": "[po-zi-tif ba-sınç]",
+    "definition": "Oda içi hava basıncının koridora göre daha yüksek tutularak koridordaki patojenlerin içeri sızmasının engellendiği özel ortam.",
+    "clinicalPearls": "Kemik iliği nakli alıcıları ve derin nötropenik (nötrofil <500) hastalar için kullanılır; HEPA filtre şarttır.",
+    "badgeColor": "cyan"
+  },
+  {
+    "term": "Prionlar",
+    "aliases": [
+      "prion",
+      "prionlar",
+      "prpsc",
+      "prpc"
+    ],
+    "category": "Viroloji / Ajan",
+    "pronunciation": "[pri-yon]",
+    "definition": "Nükleik asit (DNA veya RNA) içermeyen, anormal katlanmış enfeksiyöz protein partikülleri. Normal PrPC proteinlerini PrPSc formuna çevirirler.",
+    "clinicalPearls": "Standart otoklav ve kimyasal dezenfektanlara olağanüstü dirençlidir; Creutzfeldt-Jakob ve Kuru hastalıklarına yol açar.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Proteus mirabilis",
+    "aliases": [
+      "proteus mirabilis",
+      "proteus"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[pro-te-us mi-ra-bi-lis]",
+    "definition": "Besiyerinde dalgalanma (swarming) hareketi yapan ve güçlü ÜREAZ enzimi üreten Gram negatif basil.",
+    "clinicalPearls": "Üreyi amonyak ve CO2'ye yıkarak idrar pH'sını alkali yapar; Magnezyum Amonyum Fosfat (Strüvit / Staghorn / Geyik boynuzu) taşlarının birincil etkenidir.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Pseudomonas aeruginosa",
+    "aliases": [
+      "pseudomonas aeruginosa",
+      "p. aeruginosa",
+      "psödomonas"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[psö-do-mo-nas e-ru-ji-no-za]",
+    "definition": "Gram negatif, oksidaz pozitif, yeşil-mavi piyosiyanin pigmenti üreten firsatçı basil. Nemli ortamları sever.",
+    "clinicalPearls": "Ventilatör ilişkili pnömoni ve yanık yarası enfeksiyonlarının ölümcül nozokomiyal etkenidir.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Pterygium colli (Yele Boyun)",
+    "aliases": [
+      "pterygium colli",
+      "yele boyun",
+      "webbed neck"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[pte-ri-ji-yum kol-li]",
+    "definition": "Mastoid çıkıntıdan akromiyona kadar uzanan bilateral boyun derisi kıvrımı (kanat şeklinde cilt katlantısı).",
+    "clinicalPearls": "Fetal dönemdeki masif kistik higromanın (lenfödem) rezolüsyon kalıntısıdır; Turner Sendromu (45,X) için patognomoniktir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Rifampisin",
+    "aliases": [
+      "rifampisin",
+      "rifampin"
+    ],
+    "category": "Farmakoloji",
+    "pronunciation": "[ri-fam-pi-sin]",
+    "definition": "Bakteriyel DNA bağımlı RNA polimerazı inhibe ederek transkripsiyonu durduran güçlü antibiyotik.",
+    "clinicalPearls": "Tüberküloz tedavisinin ana ilacıdır; ayrıca Meningokok menenjiti temaslılarına profilakside verilir; idrarı ve teri kırmızı-turuncuya boyar.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Robertsonyan Translokasyon",
+    "aliases": [
+      "robertsonyan translokasyon",
+      "robertsonian translokasyon",
+      "sentrik füzyon"
+    ],
+    "category": "Genetik & Patoloji",
+    "pronunciation": "[ra-bırt-sin-yın]",
+    "definition": "Yalnızca akrosentrik kromozomların (13, 14, 15, 21, 22) sentromer yakınından kırılarak uzun kollarının birleşmesi ve kısa kollarının kaybolması.",
+    "clinicalPearls": "Taşıyıcı 45 kromozomludur ve sağlıklıdır; rob(14;21) taşıyıcısı annede Down sendromlu çocuk riski %10-15, rob(21;21)'de %100'dür.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Rocker-Bottom Ayak (Beşik Taban)",
+    "aliases": [
+      "rocker-bottom",
+      "rocker bottom",
+      "fırlak topuk",
+      "beşik taban"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[ra-kır ba-tım]",
+    "definition": "Belirgin kalkaneus çıkıntısı ve düzleşmiş/kavisli taban yapısı ile beşik ayaklığına benzeyen konjenital taban deformitesi.",
+    "clinicalPearls": "Trizomi 18 (Edwards Sendromu) ve miksoploidide karakteristik klinik tablodur.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "SARS-CoV-2",
+    "aliases": [
+      "sars-cov-2",
+      "covid-19",
+      "koronavirüs",
+      "coronavirus"
+    ],
+    "category": "Viroloji",
+    "pronunciation": "[sars-kov-iki]",
+    "definition": "Zarflı, pozitif polariteli tek zincirli RNA virüsü. ACE2 reseptörüne bağlanarak alt solunum yollarına invaze olur.",
+    "clinicalPearls": "Damlacıkla bulaşır; entübasyon gibi aerosol oluşturan işlemlerde N95 maske ve solunum izolasyonu gerekir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Simian Çizgisi (Tek Palmar Çizgi)",
+    "aliases": [
+      "simian çizgisi",
+      "simian crease",
+      "tek palmar çizgi",
+      "dört parmak çizgisi"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[si-mi-yan]",
+    "definition": "Avuç içindeki normal iki transvers fleksür çizgisinin birleşerek el ayasını baştan başa geçen tek bir yatay çizgi oluşturması.",
+    "clinicalPearls": "Down Sendromunda (Trizomi 21) %50'den fazla görülür; toplumda sağlıklı bireylerde de %1-2 bulunabilir.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Sitokrom c",
+    "aliases": [
+      "sitokrom c",
+      "cytochrome c"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[si-tok-rom se]",
+    "definition": "Normalde mitokondri kristalarında elektron taşıma zincirinde görev yapan, ancak dış zara sızdığında apoptoz başlatıcı olan hem-proteini.",
+    "clinicalPearls": "Sitoplazmada Apaf-1 ve prokaspaz-9 ile birleşerek 7 kollu tekerlek biçiminde 'apoptozom' kompleksini meydana getirir.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Solunum İzolasyonu",
+    "aliases": [
+      "solunum izolasyonu",
+      "sarı yaprak",
+      "airborne precautions"
+    ],
+    "category": "İzolasyon",
+    "pronunciation": "[so-lu-num]",
+    "definition": "Havada uzun süre asılı kalabilen ve hava akımlarıyla uzak mesafelere taşınabilen <5 mikron boyutundaki damlacık çekirdeklerine karşı uygulanan en üst düzey hava yolu izolasyonu.",
+    "clinicalPearls": "Kapıya SARI YAPRAK sembolü asılır; NEGATİF BASINÇLI ODA ve odaya giren herkesin N95/FFP2 MASKE takması şarttır. Tüberküloz, Kızamık ve VZV (Suçiçeği) etkenlerinde uygulanır.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Staphylococcus aureus",
+    "aliases": [
+      "staphylococcus aureus",
+      "s. aureus",
+      "stafilokok aureus",
+      "altın sarısı stafilokok"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[staf-i-lo-kok-kus au-re-us]",
+    "definition": "Gram pozitif, katalaz ve koagülaz pozitif küme oluşturan kok. Deri ve yumuşak doku enfeksiyonları, apseler, osteomiyelit ve nozokomiyal bakteriyeminin baş etkenidir.",
+    "clinicalPearls": "Sağlıklı toplumda burun mukozasında %20-30 oranında asemptomatik kolonize olur.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Steatoz (Yağlanma)",
+    "aliases": [
+      "steatoz",
+      "hepatosteatoz",
+      "yağlanma",
+      "fatty change"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[ste-a-toz]",
+    "definition": "Parankim hücreleri (özellikle hepatositler) sitoplazmasında anormal trigliserit vakuollerinin birikmesi.",
+    "clinicalPearls": "Alkol kullanımı, obezite, diyabet ve protein malnütrisyonunda (Kwashiorkor) en sık karaciğerde geri dönüşümlü hücre hasarı bulgusudur.",
+    "badgeColor": "amber"
+  },
+  {
+    "term": "Streak Gonad (Çizgi Gonad)",
+    "aliases": [
+      "streak gonad",
+      "çizgi gonad",
+      "gonadal disgenezis"
+    ],
+    "category": "Latin / Anatomi",
+    "pronunciation": "[striyk go-nad]",
+    "definition": "Over dokusundaki foliküllerin erken fetal atreziye uğraması sonucu geriye kalan fibröz, çizgi biçimindeki non-fonksiyonel bağ dokusu bandı.",
+    "clinicalPearls": "Turner Sendromunda (45,X) primer amenore ve hipergonadotropik hipogonadizmin doğrudan nedenidir.",
+    "badgeColor": "rose"
   },
   {
     "term": "Strüvit Taşı (Magnezyum Amonyum Fosfat)",
@@ -700,16 +1083,146 @@
     "badgeColor": "amber"
   },
   {
-    "term": "Kalsiyum Oksalat Taşı",
+    "term": "Telekantus",
     "aliases": [
-      "kalsiyum oksalat",
-      "calcium oxalate"
+      "telekantus",
+      "telecanthus"
     ],
-    "category": "Üroloji / Nefroloji",
-    "pronunciation": "[kal-si-yum ok-sa-lat]",
-    "definition": "Tüm üriner sistem taşlarının yaklaşık %70-80'ini oluşturan en yaygın böbrek taşı türü.",
-    "clinicalPearls": "Radyoopaktır (direk grafide beyaz görünür); zarf şeklinde monohidrat/dihidrat kristalleri gösterir.",
-    "badgeColor": "blue"
+    "category": "Latin / Anatomi",
+    "pronunciation": "[te-le-kan-tus]",
+    "definition": "Göz bebekleri arasındaki mesafe (interpupiller mesafe) normal iken iç göz kapak köşeleri (iç kantuslar) arasındaki mesafenin artmış olması.",
+    "clinicalPearls": "Kemiksel orbitanın birbirinden uzaklaştığı Hipertelorizmden farklıdır; yumuşak doku anomalisi olup Waardenburg sendromunda sıktır.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Temas İzolasyonu",
+    "aliases": [
+      "temas izolasyonu",
+      "kırmızı yıldız",
+      "contact precautions"
+    ],
+    "category": "İzolasyon",
+    "pronunciation": "[te-mas]",
+    "definition": "Hasta veya hastanın çevresindeki kontamine cansız yüzeylerle doğrudan veya dolaylı temas yoluyla bulaşan dirençli mikroorganizmalara karşı uygulanan önlem paketi.",
+    "clinicalPearls": "Kapıya KIRMIZI YILDIZ sembolü asılır; odaya girerken steril olmayan ÖNLÜK ve ELDİVEN giyilir, çıkarken odada çıkartılır. MRSA, VRE, Acinetobacter ve C. difficile için zorunludur.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Transüda",
+    "aliases": [
+      "transüda",
+      "transudate"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[tran-sü-da]",
+    "definition": "Vasküler geçirgenlik bozulmaksızın, hidrostatik basınç artışı (kalp yetmezliği) veya onkotik basınç düşüşü (siroz, nefrotik sendrom) nedeniyle damar dışına kaçan ultrafiltrat sıvı.",
+    "clinicalPearls": "Düşük protein içeriği (<3 g/dL), düşük dansite (<1.012) ve neredeyse hiç hücresel eleman içermemesi ile karakterizedir.",
+    "badgeColor": "cyan"
+  },
+  {
+    "term": "Treponema pallidum",
+    "aliases": [
+      "treponema pallidum",
+      "t. pallidum",
+      "treponema",
+      "sifiliz etkeni"
+    ],
+    "category": "Bakteriyoloji",
+    "pronunciation": "[tre-po-ne-ma pal-li-dum]",
+    "definition": "Işık mikroskobunda görünmeyen, karanlık saha mikroskobu veya gümüşleme ile incelenen hareketli spiroket. Frengi (Sifiliz) hastalığının etkenidir.",
+    "clinicalPearls": "Primer evrede ağrısız sert tabanlı şankr; sekonder evrede condyloma lata; tersiyer evrede gommalar ve tabes dorsalis oluşturur. Tedavide Benzatin Penisilin G esastır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Trizomi 13 (Patau Sendromu)",
+    "aliases": [
+      "patau sendromu",
+      "trizomi 13",
+      "trisomy 13"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[tri-zo-mi 13]",
+    "definition": "13. kromozomun trizomisine bağlı en ağır kraniofasiyal ve serebral malformasyon tablosu.",
+    "clinicalPearls": "Holoprosensefali (ön beynin bölünememesi), mikrosefali, mikroftalmi/anoftalmi, yarık damak-dudak, postaksiyel polidaktili ve saçlı deride aplazi kutis patognomonik triaddır.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Trizomi 18 (Edwards Sendromu)",
+    "aliases": [
+      "edwards sendromu",
+      "trizomi 18",
+      "trisomy 18"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[tri-zo-mi 18]",
+    "definition": "18. kromozomun trizomisi sonucu gelişen, ağır çoklu sistem anomalileriyle seyreden konjenital sendrom.",
+    "clinicalPearls": "Kenetlenmiş parmaklar (clenched hand; 2. ve 5. parmak 3. ve 4. parmağın üzerine biner), beşik taban ayak (rocker-bottom feet), mikrognati, düşük kulak ve ventriküler septal defekt tipiktir; bebeklerin %90'ı 1 yaşından önce kaybedilir.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Trizomi 21 (Down Sendromu)",
+    "aliases": [
+      "down sendromu",
+      "trizomi 21",
+      "trisomy 21"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[tri-zo-mi 21]",
+    "definition": "21. kromozomun fazladan bir kopyasının bulunmasıyla karakterize en yaygın otozomal anöploidi tablosu (47,XX+21 veya 47,XY+21).",
+    "clinicalPearls": "Anne yaşı ilerledikçe risk artar (%95 maternal Mayoz 1 non-disjunction). Epikantus, basık burun kökü, Brushfield lekeleri, avuç içi tek transvers fleksiyon çizgisi (simian), AV septal defekt ve erken başlangıçlı Alzheimer riski taşır.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Turner Sendromu (45,X)",
+    "aliases": [
+      "turner sendromu",
+      "turner",
+      "45,x"
+    ],
+    "category": "Genetik & Dismorfoloji",
+    "pronunciation": "[tör-nır sen-dro-mu]",
+    "definition": "Kadın fenotipinde tek bir X kromozomunun bulunması (45,X monozomi) veya yapısal X anomalisi ile giden tek canlı doğabilen monozomi tablosu.",
+    "clinicalPearls": "Çizgi (streak) gonadlar, over disgenezisi, primer amenore, infertilite, kısa boy, yele boyun (pterygium colli), cubitus valgus ve aort koarktasyonu / biküspit aort kapağı en kritik klinik bulgularıdır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Uniparental Dizomi (UPD)",
+    "aliases": [
+      "uniparental dizomi",
+      "upd",
+      "maternal upd",
+      "paternal upd"
+    ],
+    "category": "Genetik & Patoloji",
+    "pronunciation": "[u-ni-pa-ren-tal di-zo-mi]",
+    "definition": "Diploid bir bireyde homolog kromozom çiftinin her iki üyesinin de tek bir ebeveynden kalıtılması durumu.",
+    "clinicalPearls": "Maternal UPD 15 -> Prader-Willi sendromuna; Paternal UPD 15 -> Angelman sendromuna yol açar.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Vankomisin",
+    "aliases": [
+      "vankomisin",
+      "vancomycin"
+    ],
+    "category": "Farmakoloji",
+    "pronunciation": "[van-ko-mi-sin]",
+    "definition": "D-Ala-D-Ala ucuna bağlanarak hücre duvarı peptidoglikan sentezini engelleyen glikopeptid antibiyotik.",
+    "clinicalPearls": "MRSA bakteriyemisinde intravenöz; C. difficile kolitinde oral yolla kullanılır.",
+    "badgeColor": "cyan"
+  },
+  {
+    "term": "Varicella Zoster Virüsü (VZV)",
+    "aliases": [
+      "varicella zoster",
+      "vzv",
+      "suçiçeği virüsü"
+    ],
+    "category": "Viroloji",
+    "pronunciation": "[va-ri-sel-la zos-ter]",
+    "definition": "Zarflı çift zincirli DNA virüsü (Herpesviridae). Primer enfeksiyonu suçiçeği, duyusal gangliyonlarda reaktivasyonu ise zonadır.",
+    "clinicalPearls": "Hem damlacık hem solunum yoluyla (<5 µm aerosol) bulaşır; hastanede SOLUNUM İZOLASYONU (Sarı Yaprak) uygulanır.",
+    "badgeColor": "amber"
   },
   {
     "term": "Vezikoüreteral Reflü (VÜR)",
@@ -725,117 +1238,42 @@
     "badgeColor": "cyan"
   },
   {
-    "term": "Vankomisin",
+    "term": "Virchow Triadı",
     "aliases": [
-      "vankomisin",
-      "vancomycin"
+      "virchow triadı",
+      "virchow üçlüsü",
+      "virchow triad"
     ],
-    "category": "Farmakoloji",
-    "pronunciation": "[van-ko-mi-sin]",
-    "definition": "D-Ala-D-Ala ucuna bağlanarak hücre duvarı peptidoglikan sentezini engelleyen glikopeptid antibiyotik.",
-    "clinicalPearls": "MRSA bakteriyemisinde intravenöz; C. difficile kolitinde oral yolla kullanılır.",
-    "badgeColor": "cyan"
-  },
-  {
-    "term": "Karbapenemler",
-    "aliases": [
-      "karbapenem",
-      "meropenem",
-      "imipenem",
-      "ertapenem"
-    ],
-    "category": "Farmakoloji",
-    "pronunciation": "[kar-ba-pe-nem]",
-    "definition": "Çoğu beta-laktamaz enzimine dirençli, gram negatif basillere karşı en geniş spektrumlu son çare beta-laktam antibiyotik ailesi.",
-    "clinicalPearls": "Direnç geliştiğinde (Karbapenem Dirençli Enterobacteriaceae - CRE) hastanede Temas İzolasyonu zorunludur.",
-    "badgeColor": "cyan"
-  },
-  {
-    "term": "Kolistin (Polimiksin E)",
-    "aliases": [
-      "kolistin",
-      "colistin",
-      "polimiksin"
-    ],
-    "category": "Farmakoloji",
-    "pronunciation": "[ko-lis-tin]",
-    "definition": "Gram negatif bakterilerin dış membranındaki LPS yapısını bozarak deterjan benzeri etkiyle hücreyi patlatan polipeptid antibiyotik.",
-    "clinicalPearls": "Nefrotoksik ve nörotoksiktir; pan-rezistan Acinetobacter ve Klebsiella suşlarında son çaredir.",
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "[vir-şov tri-ya-dı]",
+    "definition": "İntravasküler tromboz oluşumunu başlatan 3 temel patolojik faktör: 1) Endotel Hasarı, 2) Kan Akımında Bozulma (Staz veya Türbülans), 3) Hiperkoagülabilite.",
+    "clinicalPearls": "Derin ven trombozu ve pulmoner emboli gelişiminin evrensel patogenez modelidir.",
     "badgeColor": "red"
   },
   {
-    "term": "Rifampisin",
+    "term": "VRE (Vankomisine Dirençli Enterokok)",
     "aliases": [
-      "rifampisin",
-      "rifampin"
+      "vre",
+      "vankomisine dirençli enterokok",
+      "vancomycin-resistant enterococcus"
     ],
-    "category": "Farmakoloji",
-    "pronunciation": "[ri-fam-pi-sin]",
-    "definition": "Bakteriyel DNA bağımlı RNA polimerazı inhibe ederek transkripsiyonu durduran güçlü antibiyotik.",
-    "clinicalPearls": "Tüberküloz tedavisinin ana ilacıdır; ayrıca Meningokok menenjiti temaslılarına profilakside verilir; idrarı ve teri kırmızı-turuncuya boyar.",
+    "category": "Bakteriyoloji",
+    "pronunciation": "[v-r-e]",
+    "definition": "vanA veya vanB genleri aracılığıyla hücre duvarı hedef peptidi D-Ala-D-Ala yerine D-Ala-D-Laktat sentezleyerek glikopeptidlere direnç kazanan Enterococcus faecium suşları.",
+    "clinicalPearls": "Hastanelerde Temas İzolasyonu ile sınırlandırılır; tedavide linezolid tercih edilir.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Ürik Asit Taşı",
+    "aliases": [
+      "ürik asit taşı",
+      "ürik asit",
+      "uric acid stone"
+    ],
+    "category": "Üroloji / Nefroloji",
+    "pronunciation": "[ü-rik a-sit]",
+    "definition": "Asidik idrar pH'sında (<5.5) ürik asidin aşırı doygunluğa ulaşarak kristalleşmesiyle oluşan üriner taş.",
+    "clinicalPearls": "Direk üriner sistem grafisinde (DÜSG) GÖRÜLMEZ (RADYOLÜSENTTİR!); ancak kontrastsız batın BT'de net saptanır. İdrarın bikarbonat veya potasyum sitratla alkalinizasyonu ile taş eritilebilir.",
     "badgeColor": "amber"
-  },
-  {
-    "term": "İnfodemi",
-    "aliases": [
-      "infodemi",
-      "infodemic"
-    ],
-    "category": "Epidemiyoloji",
-    "pronunciation": "[in-fo-de-mi]",
-    "definition": "Salgın sırasında doğru bilgilerle birlikte aşırı miktarda yanlış, asılsız ve kitlelerde panik yaratan dedikodu/bilgi seli yayılması.",
-    "clinicalPearls": "DSÖ çözüm formülü: Konuşma, Dinleme ve Dedikoduları Engelleme.",
-    "badgeColor": "rose"
-  },
-  {
-    "term": "Eradikasyon",
-    "aliases": [
-      "eradikasyon",
-      "eradication"
-    ],
-    "category": "Epidemiyoloji",
-    "pronunciation": "[e-ra-di-kas-yon]",
-    "definition": "Bir patojenin dünya çapında görülme sıklığının kalıcı olarak sıfırlanması; tüm dünyadan rezervuarlarıyla silinmesi.",
-    "clinicalPearls": "Dünya genelinde aşı ve müdahale sonlandırılır; insanda tek örnek Çiçek Hastalığıdır (1980).",
-    "badgeColor": "emerald"
-  },
-  {
-    "term": "Eliminasyon",
-    "aliases": [
-      "eliminasyon",
-      "elimination"
-    ],
-    "category": "Epidemiyoloji",
-    "pronunciation": "[e-li-mi-nas-yon]",
-    "definition": "Hastalığın etkeni dünyada bulunmaya devam ederken, belirli bir coğrafi bölgede (ülkede) yerli (otokton) vakanın artık görülmemesi.",
-    "clinicalPearls": "Eradikasyondan farkı: Sürveyans, aşı ve kontrol önlemleri KESİNTİSİZ DEVAM ETMEK ZORUNDADIR!",
-    "badgeColor": "blue"
-  },
-  {
-    "term": "Negatif Basınçlı Oda",
-    "aliases": [
-      "negatif basınçlı oda",
-      "negatif basınç",
-      "negative pressure room"
-    ],
-    "category": "İzolasyon",
-    "pronunciation": "[ne-ga-tif ba-sınç]",
-    "definition": "Oda içi hava basıncının koridora göre daha düşük tutulduğu, böylece kapı açıldığında havanın koridora kaçmayıp koridordan odaya girdiği özel oda mimarisi.",
-    "clinicalPearls": "Solunum izolasyonunda (Tüberküloz, Kızamık, Suçiçeği) zorunludur; hava saatte 6-12 kez değiştirilir ve HEPA filtreden geçirilir.",
-    "badgeColor": "amber"
-  },
-  {
-    "term": "Pozitif Basınçlı Oda (Koruyucu Ortam)",
-    "aliases": [
-      "pozitif basınçlı oda",
-      "pozitif basınç",
-      "koruyucu ortam",
-      "ters izolasyon"
-    ],
-    "category": "İzolasyon",
-    "pronunciation": "[po-zi-tif ba-sınç]",
-    "definition": "Oda içi hava basıncının koridora göre daha yüksek tutularak koridordaki patojenlerin içeri sızmasının engellendiği özel ortam.",
-    "clinicalPearls": "Kemik iliği nakli alıcıları ve derin nötropenik (nötrofil <500) hastalar için kullanılır; HEPA filtre şarttır.",
-    "badgeColor": "cyan"
   }
 ]

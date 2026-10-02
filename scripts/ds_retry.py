@@ -10,7 +10,6 @@ R = r"C:\Users\indui\Desktop\meds\.meds_ds"
 O = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
 O2 = r"C:\Users\indui\Desktop\meds\.meds_ds\out_retry"
 RB = os.path.join(W, "batches_retry")
-os.makedirs(RB, exist_ok=True)
 
 LIGHT = B.LIGHT
 

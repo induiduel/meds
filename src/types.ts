@@ -22,12 +22,16 @@ export interface QuestionOption {
 
 export interface ReconstructedQuestion {
   stem: string;
-  options: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string; isAiFilled: boolean }[];
+  options: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string; isAiFilled?: boolean; isCorrect?: boolean }[];
   correctAnswer: 'A' | 'B' | 'C' | 'D' | 'E';
   explanation: string;
   confidenceScore: number; // 0 - 100
-  notesAndDiscrepancies: string;
+  notesAndDiscrepancies?: string;
   lastUpdated: string;
+  evidenceText?: string;
+  reconstructionQuality?: string;
+  qualityScore?: number;
+  isAiRefined?: boolean;
 }
 
 export interface QuestionRevision {
@@ -152,6 +156,22 @@ export interface QuestionItem {
     options?: QuestionOption[] | string[];
     answer?: string;
     [key: string]: any;
+  };
+  explanation?: string;
+  evidenceText?: string;
+  lectureMatches?: any[];
+  lectureRefs?: any[];
+  deepseekEnriched?: boolean;
+  verification?: {
+    answerStatus?: string;
+    evidenceStatus?: string;
+    confidence?: number;
+    curriculumFit?: string;
+    status?: string;
+    qualityScore?: number;
+    changes?: string[];
+    needsReview?: boolean;
+    reviewReason?: string;
   };
   advancedQuestion?: any;
   hasAdvancedVersion?: boolean;

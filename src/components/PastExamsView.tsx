@@ -50,6 +50,16 @@ import { renderHighlightedSnippet } from './QuestionCard';
 import { learnMatcher, QuestionLearnMatch } from '../services/learnMatcher';
 import { FlashcardComponent } from './learn/InteractiveDeckView';
 
+export const isDeepSeekQuestion = (q: any): boolean => {
+  if (!q) return false;
+  if (q.deepseekEnriched) return true;
+  if (q.reconstruction?.reconstructionQuality === 'deepseek_verified') return true;
+  if (Array.isArray(q.tags) && (q.tags.includes('deepseek_verified') || q.tags.includes('deepseek') || q.tags.includes('dogrulanmis_soru'))) return true;
+  if (q.verification && (q.verification.status === 'onaylandi' || q.verification.answerStatus === 'dogrulandi')) return true;
+  if (typeof q.sourceFile === 'string' && q.sourceFile.toLowerCase().includes('deepseek')) return true;
+  return false;
+};
+
 interface PastExamsViewProps {
   currentUser: AppUser | null;
   lectureNotes?: LectureNote[];
@@ -74,6 +84,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedCommittee, setSelectedCommittee] = useState<string>('all');
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
+  const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [openExplanations, setOpenExplanations] = useState<Record<string, boolean>>({});
@@ -410,7 +421,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const tabCounts = useMemo(() => {
     const validCount = questions.filter(q => !q.isAmbiguous).length;
     const ambiguousCount = questions.filter(q => q.isAmbiguous).length;
-    return { validCount, ambiguousCount, totalCount: questions.length };
+    const deepseekCount = questions.filter(isDeepSeekQuestion).length;
+    return { validCount, ambiguousCount, deepseekCount, totalCount: questions.length };
   }, [questions]);
 
   // Filtered Questions
@@ -462,9 +474,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         }
       }
 
+      // 6. DeepSeek Filter
+      if (deepseekFilter === 'deepseek_only' && !isDeepSeekQuestion(q)) return false;
+      if (deepseekFilter === 'standard_only' && isDeepSeekQuestion(q)) return false;
+
       return true;
     });
-  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline]);
+  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter]);
 
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
@@ -507,6 +523,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(ambiguityTab !== 'valid'
       ? [{ label: ambiguityTab === 'ambiguous' ? 'İnceleme bekleyen' : 'Tüm havuz', clear: () => setAmbiguityTab('valid') }]
       : []),
+    ...(deepseekFilter !== 'all'
+      ? [{ label: deepseekFilter === 'deepseek_only' ? '⚡ Yalnızca DeepSeek' : 'Standart sorular', clear: () => setDeepseekFilter('all') }]
+      : []),
     ...(selectedCommittee !== 'all'
       ? [{ label: formatCommitteeName(selectedCommittee).split(':')[0], clear: () => setSelectedCommittee('all') }]
       : []),
@@ -519,6 +538,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const clearAllFilters = () => {
     setSearchQuery('');
     setAmbiguityTab('valid');
+    setDeepseekFilter('all');
     setSelectedCommittee('all');
     setSelectedYear('all');
     setSelectedDiscipline('all');
@@ -577,6 +597,31 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             </button>
           )}
         </label>
+        {/* Quick DeepSeek Filter Toggle Button */}
+        <button
+          type="button"
+          onClick={() => {
+            setDeepseekFilter((prev) => (prev === 'deepseek_only' ? 'all' : 'deepseek_only'));
+            setCurrentPage(1);
+          }}
+          className={`h-11 px-3 sm:px-3.5 rounded-[12px] border text-[13.5px] font-semibold flex items-center gap-1.5 cursor-pointer shrink-0 transition-all ${
+            deepseekFilter === 'deepseek_only'
+              ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white border-indigo-600 shadow-sm ring-2 ring-indigo-200'
+              : 'bg-white border-line text-ink hover:border-indigo-300 hover:text-indigo-600'
+          }`}
+          title="Yalnızca DeepSeek doğrulanmış soruları filtrele"
+        >
+          <Sparkles className={`w-4 h-4 ${deepseekFilter === 'deepseek_only' ? 'text-amber-300 fill-amber-300' : 'text-indigo-500'}`} />
+          <span className="hidden xs:inline">DeepSeek</span>
+          <span
+            className={`text-[11.5px] px-1.5 py-0.5 rounded-full font-mono ${
+              deepseekFilter === 'deepseek_only' ? 'bg-white/20 text-white' : 'bg-indigo-50 text-indigo-700 font-semibold'
+            }`}
+          >
+            {tabCounts.deepseekCount.toLocaleString('tr-TR')}
+          </span>
+        </button>
+
         <button
           type="button"
           onClick={() => setFiltersOpen((v) => !v)}
@@ -628,6 +673,36 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       setCurrentPage(1);
                     }}
                     className={chipCls(ambiguityTab === id)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* DeepSeek Doğrulama Filtresi */}
+            <div className="flex flex-col gap-1.5">
+              <span className="text-[12.5px] font-semibold text-indigo-700 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
+                DeepSeek Doğrulaması
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {(
+                  [
+                    ['all', `Tümü · ${tabCounts.totalCount}`],
+                    ['deepseek_only', `⚡ Yalnızca DeepSeek Doğrulanmış · ${tabCounts.deepseekCount}`],
+                    ['standard_only', `Standart Çıkmışlar · ${tabCounts.totalCount - tabCounts.deepseekCount}`],
+                  ] as const
+                ).map(([id, label]) => (
+                  <button
+                    key={id}
+                    type="button"
+                    aria-pressed={deepseekFilter === id}
+                    onClick={() => {
+                      setDeepseekFilter(id as any);
+                      setCurrentPage(1);
+                    }}
+                    className={chipCls(deepseekFilter === id)}
                   >
                     {label}
                   </button>
@@ -778,10 +853,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const slideMatch = getQuestionSlideMatch(q);
             const isLiked = (q.likedBy || []).includes(currentUser?.uid || 'anonim-std');
 
-            const stem = q.reconstruction?.stem || q.fragments?.[0]?.text || q.topic;
+            const stem = q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || q.topic;
             const options = q.reconstruction?.options || q.options || [];
-            const correctAnswer = q.reconstruction?.correctAnswer || q.claimedAnswer;
-            const explanation = q.reconstruction?.explanation;
+            const correctAnswer = q.reconstruction?.correctAnswer || q.correctAnswer || q.claimedAnswer;
+            const explanation = q.reconstruction?.explanation || q.explanation;
             const commentsCount = (q as any).comments?.length || 0;
             const expOpen = !!openExplanations[q.id];
             const meta = [q.discipline || 'Tıp', formatCommitteeName(q.committeeId).split(':')[0], q.examYear].filter(Boolean).join(' · ');
@@ -828,6 +903,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   </span>
                   {q.isAmbiguous ? (
                     <span className="h-[22px] px-2 rounded-full bg-warn-soft text-warn text-[12px] font-semibold inline-flex items-center shrink-0">Eksik</span>
+                  ) : isDeepSeekQuestion(q) ? (
+                    <span className="inline-flex h-[24px] px-2.5 rounded-full bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 text-indigo-700 text-[11.5px] font-bold items-center gap-1.5 shrink-0 shadow-2xs">
+                      <Sparkles className="w-3.5 h-3.5 text-indigo-600 fill-indigo-100" />
+                      <span>DeepSeek Doğrulanmış</span>
+                      {q.verification?.qualityScore && (
+                        <span className="text-[10px] px-1.5 py-0.2 rounded bg-indigo-100 text-indigo-800 font-mono">
+                          %{q.verification.qualityScore}
+                        </span>
+                      )}
+                    </span>
                   ) : q.reconstruction ? (
                     <span className="hidden sm:inline-flex h-[22px] px-2 rounded-full bg-ok-soft text-ok text-[12px] font-semibold items-center shrink-0">Doğrulandı</span>
                   ) : null}
@@ -924,10 +1009,45 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                           aria-expanded={expOpen}
                           className="w-full h-11 px-3.5 flex items-center justify-between text-[14px] font-semibold text-ink cursor-pointer"
                         >
-                          Açıklama
+                          <span className="flex items-center gap-1.5">
+                            {isDeepSeekQuestion(q) ? (
+                              <>
+                                <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                                <span className="text-indigo-900 font-semibold">DeepSeek Tıbbi Analizi & Çözümü</span>
+                              </>
+                            ) : (
+                              <span>Açıklama & Çözüm Analizi</span>
+                            )}
+                          </span>
                           <ChevronDown className={`w-4 h-4 text-ink-3 transition-transform ${expOpen ? 'rotate-180' : ''}`} />
                         </button>
-                        {expOpen && <p className="m-0 px-3.5 pb-3.5 text-[14.5px] text-ink-2 leading-[1.6] whitespace-pre-line">{explanation}</p>}
+                        {expOpen && (
+                          <div className="px-3.5 pb-3.5 flex flex-col gap-2.5">
+                            <p className="m-0 text-[14.5px] text-ink-2 leading-[1.6] whitespace-pre-line">{explanation}</p>
+                            {(q.evidenceText || q.reconstruction?.evidenceText) && (
+                              <div className={`p-3 rounded-[12px] text-[13px] flex flex-col gap-1.5 shadow-2xs ${
+                                isDeepSeekQuestion(q)
+                                  ? 'bg-indigo-50/80 border border-indigo-200/80 text-indigo-950'
+                                  : 'bg-amber-50/80 border border-amber-200/80 text-amber-950'
+                              }`}>
+                                <div className="flex items-center justify-between">
+                                  <span className={`font-bold flex items-center gap-1.5 ${isDeepSeekQuestion(q) ? 'text-indigo-900' : 'text-amber-900'}`}>
+                                    <BookOpen className={`w-3.5 h-3.5 ${isDeepSeekQuestion(q) ? 'text-indigo-700' : 'text-amber-700'}`} />
+                                    {isDeepSeekQuestion(q) ? 'Ders Notu & Slayt Kanıtı (DeepSeek Doğrulaması):' : 'Ders Notu & Amfi Kanıtı:'}
+                                  </span>
+                                  {q.verification?.evidenceStatus && (
+                                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800">
+                                      {q.verification.evidenceStatus === 'kanitli' ? '✓ Kanıtlı Soru' : q.verification.evidenceStatus}
+                                    </span>
+                                  )}
+                                </div>
+                                <p className={`m-0 leading-relaxed font-medium ${isDeepSeekQuestion(q) ? 'text-indigo-950/90' : 'text-amber-900/90'}`}>
+                                  {q.evidenceText || q.reconstruction?.evidenceText}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     )}
                   </>

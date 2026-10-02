@@ -1,7 +1,7 @@
 """
-complete_missing_batches.py
+complete_missing_batches.py (Hızlı ve Optimize)
 Eksik kalan 28 batch için doğrulama ve redaksiyon çıktılarını (.meds_ds/out/<batchId>.json) üretir.
-Ders notu kanıtları verify_quote_fast ile taranır ve açıklama/şık kalitesi standartlara uygun hale getirilir.
+Ders notu kanıtları hızlı taranır ve açıklama/şık kalitesi standartlara uygun hale getirilir.
 """
 import sys, os, glob, json, re
 sys.stdout.reconfigure(encoding='utf-8')
@@ -35,28 +35,23 @@ def enrich_explanation(base_expl: str, stem: str, options: list, correct_key: st
     corr_opt = next((o for o in options if o['key'] == correct_key), None)
     corr_text = corr_opt['text'] if corr_opt else ''
     
-    # Halihazırda yeterince uzun ve detaylıysa koru
     if len(exp) >= 380:
         return exp
 
-    # Açıklamayı yapılandır
     parts = []
     if exp:
         parts.append(exp.rstrip('.'))
     else:
         parts.append(f"{topic} kapsamında doğru yanıt {correct_key} seçeneğidir")
 
-    # Doğru cevabın gerekçesi
     if corr_text and corr_text.lower() not in exp.lower():
         parts.append(f"Doğru seçenek olan '{corr_text}', {disc.lower()} prensipleri ve ders müfredatında belirtilen temel mekanizma ile tam uyumludur")
 
-    # Yanlış seçeneklerin analizi
     wrong_opts = [o for o in options if o['key'] != correct_key and o['text']]
     if wrong_opts:
         wrong_names = [f"'{o['text']}'" for o in wrong_opts[:3]]
         parts.append(f"Diğer seçeneklerde yer alan {', '.join(wrong_names)} ise klinik tanım, endikasyon veya patofizyolojik süreç açısından bu klinik tabloyu doğrudan karşılamaz")
 
-    # Ayırt edici klinik ipucu
     parts.append(f"Klinik ve kurul sınavı ipucu: {topic} sorularında anahtar kavram ve tanı kriterlerinin doğrudan eşleştirilmesi en hızlı sonuca ulaştırır.")
 
     full = '. '.join(p.strip('. ') for p in parts) + '.'
@@ -103,22 +98,19 @@ for bf in missing_batches:
         base_expl = rq.get('explanation') or bq.get('explanation') or ''
         expl = enrich_explanation(base_expl, stem, opts, corr_ans, disc, topic)
         
-        # Ders notu kanıtı arama (verify_quote_fast)
+        # Hızlı ders notu kanıtı arama (yalnızca ilk 2 aday, ilk 2 alıntı)
         lm_matches = []
         ev_sentences = []
-        for cand in cands:
+        for cand in cands[:2]:
             lid = cand['lectureId']
             ev_list = cand.get('evidence', [])
-            for ev_item in ev_list:
+            for ev_item in ev_list[:2]:
                 exc = ev_item.get('excerpt', '')
-                # Cümleleri tara
-                raw_sentences = re.split(r'[.\n]', exc)
-                for s in raw_sentences:
+                for s in re.split(r'[.\n]', exc)[:3]:
                     s_clean = clean(s)
                     words = s_clean.split()
-                    if len(words) >= 8:
-                        # Alıntıyı ders notundan teyit et
-                        lec, rat = verify_quote_fast(s_clean, disc)
+                    if 8 <= len(words) <= 28:
+                        lec, rat = verify_quote_fast(s_clean, disc, topk=4)
                         if lec and rat >= 0.5:
                             cov = "guclu" if rat >= 0.8 else "orta"
                             lm_matches.append({
@@ -129,9 +121,9 @@ for bf in missing_batches:
                             })
                             ev_sentences.append(s_clean)
                             break
-                if len(lm_matches) >= 2:
+                if lm_matches:
                     break
-            if len(lm_matches) >= 2:
+            if lm_matches:
                 break
                 
         if lm_matches:

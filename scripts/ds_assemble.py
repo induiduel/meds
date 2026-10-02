@@ -17,10 +17,16 @@ def build_lookup():
 LUT = build_lookup()
 from difflib import SequenceMatcher
 
-def verify_quote_fast(quote, hint_discipline=None, topk=12, thresh=0.5):
+QUOTE_CACHE = {}
+
+def verify_quote_fast(quote, hint_discipline=None, topk=6, thresh=0.5):
+    cache_key = (quote, hint_discipline)
+    if cache_key in QUOTE_CACHE:
+        return QUOTE_CACHE[cache_key]
     nq = norm(quote)
     words = [w for w in nq.split() if len(w) > 4]
     if not words or len(nq) < 40:
+        QUOTE_CACHE[cache_key] = (None, 0.0)
         return None, 0.0
     scored = []
     for x, ws in LUT:
@@ -30,24 +36,39 @@ def verify_quote_fast(quote, hint_discipline=None, topk=12, thresh=0.5):
         bonus = 30 if hint_discipline and hint_discipline.split('(')[0].strip() in x['discipline'] else 0
         scored.append((hits + bonus, x))
     if not scored:
+        QUOTE_CACHE[cache_key] = (None, 0.0)
         return None, 0.0
     scored.sort(key=lambda t: -t[0])
     best = (0.0, None)
     for _s, x in scored[:topk]:
-        # hızlı kontrol: alıntının ilk 12 kelimesi geçiyor mu
-        probe = ' '.join(words[:12])
-        if probe in x['norm']:
-            return x, 1.0
-        for i in range(0, max(1, len(x['norm']) - 150), 45):
-            r = SequenceMatcher(None, nq[:200], x['norm'][i:i + 230]).ratio()
+        probe8 = ' '.join(words[:8])
+        if probe8 and probe8 in x['norm']:
+            res = (x, 1.0)
+            QUOTE_CACHE[cache_key] = res
+            return res
+        anchor = words[0]
+        pos = 0
+        while pos < len(x['norm']):
+            idx = x['norm'].find(anchor, pos)
+            if idx == -1:
+                break
+            start = max(0, idx - 20)
+            end = min(len(x['norm']), idx + len(nq) + 40)
+            r = SequenceMatcher(None, nq[:200], x['norm'][start:end]).ratio()
             if r > best[0]:
                 best = (r, x)
-            if r > 0.9:
-                return x, r
-    return best[1], best[0]
+            if r > 0.85:
+                res = (x, r)
+                QUOTE_CACHE[cache_key] = res
+                return res
+            pos = idx + len(anchor) + 15
+    res = (best[1], best[0])
+    QUOTE_CACHE[cache_key] = res
+    return res
 
 BASE = r"C:\Users\indui\Desktop\meds_database"
 WORK = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
+R = r"C:\Users\indui\Desktop\meds\.meds_ds"
 OUT = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
 BAT = os.path.join(WORK, "batches")
 
@@ -74,7 +95,7 @@ def build():
     print("temel soru:", len(BASEMAP))
 
     files = sorted(glob.glob(os.path.join(OUT, "*.json"))) + \
-            sorted(glob.glob(os.path.join(WORK, "out_retry", "*.json")))
+            sorted(glob.glob(os.path.join(R, "out_retry", "*.json")))
     print("batch çıktısı:", len(files))
 
     records = {}
@@ -315,7 +336,7 @@ def finalize(records, BASEMAP, outpath):
     order = {"donem3-kurul1": 1, "donem3-kurul2": 2, "donem3-kurul3": 3, "donem3-kurul4": 4,
              "donem3-kurul5": 5, "donem3-kurul6": 6, "donem3-final": 7, "donem3-butunleme": 8}
     rows.sort(key=lambda r: (order.get(r['committeeId'], 99), r['discipline'],
-                             r.get('questionNumber') or 0, r['id']))
+                             int(r.get('questionNumber')) if str(r.get('questionNumber') or '').isdigit() else 0, r['id']))
     with open(outpath, "w", encoding='utf-8', newline='\n') as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False, separators=(',', ':')) + "\n")

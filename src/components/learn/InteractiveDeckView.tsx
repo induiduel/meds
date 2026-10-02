@@ -36,6 +36,12 @@ import {
   FileDown,
 } from 'lucide-react';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
+import {
+  GlossaryProvider,
+  RenderWithGlossaryTerms,
+  SlideTermsPills,
+  useGlossary,
+} from './MedicalGlossaryPopover';
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -175,25 +181,9 @@ const writeProgress = (p: DeckProgress) => {
   }
 };
 
-/** Renders rich text segments with bolding, sub-details, and code styling. */
+/** Renders rich text segments with bolding, sub-details, and interactive medical glossary terms. */
 const Rich: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
-  const parts = String(text || '').split(/(\*\*[^*]+\*\*)/g);
-  return (
-    <span className={className}>
-      {parts.map((p, i) =>
-        p.startsWith('**') && p.endsWith('**') ? (
-          <strong
-            key={i}
-            className="font-bold text-ink bg-amber-100/60 dark:bg-amber-950/40 px-1 py-0.5 rounded shadow-2xs"
-          >
-            {p.slice(2, -2)}
-          </strong>
-        ) : (
-          <React.Fragment key={i}>{p}</React.Fragment>
-        )
-      )}
-    </span>
-  );
+  return <RenderWithGlossaryTerms text={text} className={className} />;
 };
 
 /**
@@ -634,7 +624,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   const totalSlides = allDecks.reduce((n, d) => n + d.slides.length, 0);
 
   return (
-    <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
+    <GlossaryProvider>
+      <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
       <div className="flex flex-col md:flex-row md:items-end gap-3">
         <div className="min-w-0 flex-1">
           <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em]">Öğren</h1>
@@ -769,7 +760,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
           onExportPdf={onOpenPdfModal ? (slideNumber) => onOpenPdfModal({ deckId: activeDeck.id, slideNumber }) : undefined}
         />
       )}
-    </div>
+      </div>
+    </GlossaryProvider>
   );
 };
 
@@ -799,6 +791,7 @@ const DeckPlayer: React.FC<{
   const [tab, setTab] = useState<PanelTab>('flashcards');
   const [isFs, setIsFs] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const { setIsDrawerOpen, glossaryList } = useGlossary();
   const rootRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
@@ -977,6 +970,20 @@ const DeckPlayer: React.FC<{
           <Search className="w-4 h-4 text-accent" />
           <span className="hidden md:inline">Ders İçi Arama</span>
           <kbd className="hidden lg:inline text-[10px] font-mono text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">Ctrl+K</kbd>
+        </button>
+
+        {/* Medical Glossary Dictionary trigger */}
+        <button
+          type="button"
+          onClick={() => setIsDrawerOpen(true)}
+          title="Tıbbi Terimler Sözlüğü (Latin İsimler, Bakteri, Virüs ve İlaçlar)"
+          className="h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-teal-700 dark:hover:text-teal-400 text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
+        >
+          <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+          <span className="hidden md:inline">Tıbbi Sözlük</span>
+          <span className="text-[10.5px] font-bold bg-teal-500/10 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-full border border-teal-500/20">
+            {glossaryList.length}
+          </span>
         </button>
 
         <span className="hidden sm:inline font-mono text-[13px] text-ink-2 px-1" aria-live="polite">
@@ -1504,6 +1511,11 @@ const SlideCanvas: React.FC<{
                 </button>
               )}
             </div>
+            {/* Quick Medical Terms Pills for This Slide */}
+            <SlideTermsPills
+              textToScan={`${slide.title || ''} ${slide.synthesisNarrative || ''} ${((slide as any).keyConcepts || []).join(' ')}`}
+              className="mb-1"
+            />
             
             <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
 
