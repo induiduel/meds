@@ -3294,5 +3294,100 @@
     "slideNumber": 24,
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-gp-01",
+    "question": "Hücrede transkribe edildikten sonra sitoplazmada Dicer enzimi ile işlenen, RISC kompleksi içine girerek hedef mRNA'ların 3' translasyona uğramayan bölgesine (3'-UTR) bağlanan ve protein sentezini baskılayan yaklaşık 22 nükleotidlik düzenleyici molekül hangisidir?",
+    "options": [
+      "A) Ribozomal RNA (rRNA)",
+      "B) Transfer RNA (tRNA)",
+      "C) MikroRNA (miRNA)",
+      "D) Küçük nükleer RNA (snRNA)",
+      "E) Heterojen nükleer RNA (hnRNA)"
+    ],
+    "correctAnswer": "C",
+    "explanation": "miRNA'lar yaklaşık 22 nükleotidlik tek iplikli kodlamayan RNA'lardır. Dicer ile işlenip RISC kompleksine yüklenir ve hedef mRNA'nın translasyonunu durdurarak post-transkripsiyonel susturma yaparlar.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "slideNumber": 1,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-gp-02",
+    "question": "Aşağıdaki genetik varyasyon türlerinden hangisi insan genomunda sayısal olarak en sık rastlanan, bireyler arasında her 1000 bazda bir görülen ve multifaktöryel hastalıklara yatkınlığı haritalamada kullanılan tek bazlık değişimdir?",
+    "options": [
+      "A) Kopya Sayısı Varyasyonu (CNV)",
+      "B) Tek Nükleotid Polimorfizmi (SNP)",
+      "C) Dengeli Translokasyon",
+      "D) Halka Kromozom",
+      "E) İzokromozom"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Tek Nükleotid Polimorfizmleri (SNP), genomda 10 milyondan fazla bulunan ve her 1000 bazda bir rastlanan en sık varyasyon biçimidir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "slideNumber": 2,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-gp-03",
+    "question": "Bir tümör hücresinde p16 (CDKN2A) tümör süpresör gen dizisinde hiçbir delesyon veya nokta mutasyonu saptanmamasına rağmen proteinin hiç üretilmediği görülüyor. Promotor bölgesinin incelenmesinde CpG adacıklarında aşırı metilasyon tespit ediliyor. Bu gen susturma mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Reseptör Düzenlemesi",
+      "B) Nonsense Mutasyon",
+      "C) Epigenetik Susturma (DNA Hipermetilasyonu)",
+      "D) Alternatif Splicing",
+      "E) Gen Amplifikasyonu"
+    ],
+    "correctAnswer": "C",
+    "explanation": "DNA dizisi değişmeden promotor CpG adacıklarının metillenmesi sonucu genin inaktive olması klasik epigenetik susturma (DNA hipermetilasyonu) mekanizmasıdır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "slideNumber": 3,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-gp-04",
+    "question": "Aşağıdakilerden hangisi otozomal dominant kalıtım gösteren hastalıkların genel özelliklerinden biri DEĞİLDİR?",
+    "options": [
+      "A) Kuşak atlamadan vertikal geçiş göstermesi",
+      "B) Etkilenen ebeveynin çocuğuna aktarma riskinin %50 olması",
+      "C) Sıklıkla metabolik enzim eksikliklerinden kaynaklanması",
+      "D) Değişken ekspresyon ve eksik penetrans görülebilmesi",
+      "E) Erkek ve kadın çocuklarda eşit oranda ortaya çıkması"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Metabolik enzim eksiklikleri kural olarak Otozomal Resesif kalıtılır; çünkü enzimlerin %50 aktivitesi normal homeostaz için genellikle yeterlidir. Otozomal dominant hastalıklar ise yapısal proteinler ve reseptör defektlerinden kaynaklanır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "slideNumber": 4,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-gp-05",
+    "question": "Marfan sendromunda fibrillin-1 gen kusurunun yanı sıra patogenezde rol oynayan ve elastik liflerin proteolitik yıkımını tetikleyen, aşırı sinyal iletimi gösteren sitokin/büyüme faktörü yolağı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Epidermal Büyüme Faktörü (EGF)",
+      "B) Dönüştürücü Büyüme Faktörü-Beta (TGF-β)",
+      "C) Vasküler Endotelyal Büyüme Faktörü (VEGF)",
+      "D) İnterlökin-2 (IL-2)",
+      "E) Tümör Nekrozis Faktörü-Alfa (TNF-α)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Normal fibrillin-1 molekülleri latent TGF-β'yı sekestre eder. Fibrillin-1 kusurunda kontrolsüz serbest kalan TGF-β, matriks metalloproteinaz aktivasyonuna ve elastik doku harabiyetine neden olur.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "slideNumber": 5,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
   }
 ]

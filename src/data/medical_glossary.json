@@ -4543,5 +4543,149 @@
     "clinicalPearl": "En sık böbreği tutarak masif proteinüri ve nefrotik sendrom tablosu ile başvurur.",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1"
+  },
+  "marfan sendromu": {
+    "term": "Marfan Sendromu",
+    "category": "hastalik",
+    "description": "FBN1 gen mutasyonuna bağlı otozomal dominant bağ dokusu hastalığı; aşırı boy, araknodaktili, pektus deformitesi, ektopia lentis (yukarı-dışa) ve aort kökü diseksiyonu.",
+    "clinicalPearl": "En sık ölüm nedeni aort kistik medyal nekrozu zemininde gelişen aort diseksiyonudur. Serbest TGF-β aşırı aktiftir; Losartan bu yolağı baskılar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "fibrillin-1": {
+    "term": "Fibrillin-1 (FBN1)",
+    "category": "protein",
+    "description": "Elastik liflerin mikrofibril iskeletini kuran ve latent TGF-β'yı bağlayan 15q21.1 lokusundaki glikoprotein.",
+    "clinicalPearl": "Mutasyonunda mikrofibriller çöker ve serbest kalan TGF-β elastolizis yaparak Marfan sendromunu tetikler.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "kistik fibrozis": {
+    "term": "Kistik Fibrozis (CF)",
+    "category": "hastalik",
+    "description": "CFTR klorür kanalı mutasyonuna bağlı en sık ölümcül otozomal resesif hastalık; koyu yapışkan mukus, Pseudomonas bronşiektazisi, pankreas yetmezliği ve terde yüksek tuz.",
+    "clinicalPearl": "En sık mutasyon Delta-F508'dir. Yenidoğanda mekonyum ileusu; altın standart tanı ter testinde klorun >60 mEq/L saptanmasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "cftr geni": {
+    "term": "CFTR Geni",
+    "category": "protein",
+    "description": "Kromozom 7q31.2'de kodlanan cAMP bağımlı epitel klorür ve bikarbonat iletim kanalı.",
+    "clinicalPearl": "Solunumda klor salıp ENaC'ı frenler; ter bezinde ise kloru geri emer. Kistik fibroziste bu denge bozulur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "down sendromu": {
+    "term": "Down Sendromu (Trizomi 21)",
+    "category": "hastalik",
+    "description": "Fazladan 21. kromozom bulunmasıyla oluşan en sık kromozomal anöploidi; epikantus, simian çizgisi, AVSD kalp defekti, duodenal atrezi ve lösemi yatkınlığı.",
+    "clinicalPearl": "%95 maternal mayotik non-disjunction kaynaklıdır. 40 yaş üstünde APP gen dozajı nedeniyle erken Alzheimer kaçınılmazdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "tek nükleotid polimorfizmi": {
+    "term": "Tek Nükleotid Polimorfizmi (SNP)",
+    "category": "terim",
+    "description": "Genomik DNA'da tek bir bazın değişmesiyle oluşan ve toplumda >%1 sıklıkta bulunan en yaygın genetik çeşitlilik türü.",
+    "clinicalPearl": "Genomda 10 milyondan fazla bulunur; poligenik multifaktöryel hastalıkların GWAS haritalamasında kullanılır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "kopya sayısı varyasyonu": {
+    "term": "Kopya Sayısı Varyasyonu (CNV)",
+    "category": "terim",
+    "description": "Genomda 1 kilobazdan büyük DNA segmentlerinin delesyonu veya duplikasyonu.",
+    "clinicalPearl": "İnsanlar arasındaki nükleotid baz çeşitliliğinin yarısından fazlasını oluşturur; otizm ve mikrodelesyonlarda önemlidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "kurşun toksisitesi": {
+    "term": "Kurşun Toksisitesi (Satürnizm)",
+    "category": "patoloji",
+    "description": "Eski boya ve borulardan alınan kurşunun hem sentezini ve sinir sistemini felç ettiği kronik ağır metal zehirlenmesi.",
+    "clinicalPearl": "ALA dehidrataz ve ferroşelataz inhibisyonu, mikrositer anemi, eritrositlerde bazofilik noktalanma, epifiz kurşun hatları ve diş etinde Burton çizgisi yapar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "bazofilik noktalanma": {
+    "term": "Bazofilik Noktalanma (Basophilic Stippling)",
+    "category": "patoloji",
+    "description": "Kurşun zehirlenmesinde pirimidin 5'-nükleotidaz inhibisyonu sonucu eritrosit içinde biriken ribozomal RNA agregatları.",
+    "clinicalPearl": "Periferik yaymada eritrosit içinde koyu mavi-mor ince noktacıklar olarak izlenir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "karbonmonoksit zehirlenmesi": {
+    "term": "Karbonmonoksit Zehirlenmesi",
+    "category": "patoloji",
+    "description": "Eksik yanma gazı olan CO'nun hemoglobine 200 kat afiniteyle bağlanarak hücresel oksijen transferini durdurması.",
+    "clinicalPearl": "Deri kiraz kırmızısıdır; beyinde bilateral globus pallidus nekrozu patognomoniktir. Tedavi %100 hiperbarik oksijendir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "mallory-denk cisimcikleri": {
+    "term": "Mallory-Denk Cisimcikleri",
+    "category": "patoloji",
+    "description": "Alkolik hepatitte hasarlı hepatosit sitoplazmasında izlenen sitokeratin 8/18 ve ubikuitin kaynaklı eozinofilik inklüzyonlar.",
+    "clinicalPearl": "Etrafında nötrofillerin toplanması (satellitozis) tipiktir; viral hepatitten ayırıcı tanıyı sağlar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "cyp2e1": {
+    "term": "CYP2E1 (MEOS)",
+    "category": "protein",
+    "description": "Kronik alkol tüketiminde indüklenen ve etanolü parçalarken reaktif oksijen türleri (ROS) üreten sitokrom P450 izoenzimi.",
+    "clinicalPearl": "Parasetamolün toksik metabolit NAPQI'ye dönüşümünü hızlandırarak ölümcül karaciğer nekrozu yaratabilir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "marasmus": {
+    "term": "Marasmus",
+    "category": "hastalik",
+    "description": "Ağır kalori (enerji) yoksunluğuna bağlı somatik iskelet kası ve subkutan yağ dokusunun tamamen eridiği çocukluk malnütrisyonu.",
+    "clinicalPearl": "Bichat yağ pedleri erir ve 'yaşlı adam yüzü' oluşur; visseral protein ve albümin korunduğu için ÖDEM KESİNLİKLE YOKTUR.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "kwashiorkor": {
+    "term": "Kwashiorkor",
+    "category": "hastalik",
+    "description": "Kalori görece korunurken ağır protein yoksunluğu sonucu karaciğer protein sentezinin çöktüğü ödemli çocukluk malnütrisyonu.",
+    "clinicalPearl": "Hipoalbüminemi, masif ödem, asit, apolipoprotein sentezlenememesiyle karaciğer yağlanması ve flaky-paint dermatiti görülür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "leptin": {
+    "term": "Leptin",
+    "category": "protein",
+    "description": "Adipositlerden salınarak hipotalamus arkuat nükleusta POMC nöronları ve MC4R üzerinden tokluk oluşturan hormon.",
+    "clinicalPearl": "Obezitede leptin çok yüksektir ancak leptin direnci vardır; tokluk sinyali iletilemez.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "adiponektin": {
+    "term": "Adiponektin",
+    "category": "protein",
+    "description": "Adipositlerden salınan, insülin duyarlılığını artıran ve yağ asidi oksidasyonunu hızlandıran koruyucu adipokin.",
+    "clinicalPearl": "Obezitede plazma düzeyi paradoksal olarak AZALIR; düşüklüğü Tip 2 DM ve aterosklerozu tetikler.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "yeni nesil dizileme": {
+    "term": "Yeni Nesil Dizileme (NGS)",
+    "category": "terim",
+    "description": "Milyonlarca DNA parçasını paralel dizileyerek kanserde yüzlerce onkogeni tek dokuda tarayan yüksek verimli teknoloji.",
+    "clinicalPearl": "Akciğer ve kolonda hedefe yönelik tedavi mutasyonlarının (EGFR, ALK, KRAS, BRAF) saptanmasında altın standarttır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "kistik medyal nekroz": {
+    "term": "Kistik Medyal Nekroz",
+    "category": "patoloji",
+    "description": "Büyük arterlerin tunika medyasında elastik liflerin parçalanması ve boşluklarda mukoid madde birikmesi.",
+    "clinicalPearl": "Marfan sendromunda ölümcül aort kökü dilatasyonu ve aort diseksiyonunun zemin hazırlayıcı lezyonudur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
   }
 }

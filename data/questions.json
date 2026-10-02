@@ -514,9 +514,23 @@
           "editedAt": "2026-10-02T19:26:07.720Z",
           "editorName": "Yönetici",
           "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-merge-1790970495670",
+          "version": 5,
+          "editedAt": "2026-10-02T19:48:15.670Z",
+          "editorName": "Yönetici",
+          "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-merge-1790970665773",
+          "version": 6,
+          "editedAt": "2026-10-02T19:51:05.773Z",
+          "editorName": "Yönetici",
+          "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-02T19:26:07.832Z",
+      "updatedAt": "2026-10-02T19:51:05.778Z",
       "discipline": "Tıbbi Patoloji",
       "committeeId": "donem3-kurul1",
       "questionNumber": 0,
@@ -525,7 +539,1032 @@
       "isUnassignedNumber": true,
       "upvotes": 0,
       "reconstruction": null,
-      "placementNotes": "[02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi."
+      "placementNotes": "[02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi.",
+      "mergedSatellites": [
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951042634",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T14:24:03.007702+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951042634-2z92",
+              "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:02.634Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951042634",
+              "stem": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:24:02.634Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T14:24:02.825+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951030251",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T14:23:50.62677+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951030251-t6ke",
+              "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:50.251Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951030251",
+              "stem": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:23:50.251Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T14:50:48.51+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951018529",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T14:23:39.181231+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951018529-kul2",
+              "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:38.529Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951018529",
+              "stem": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:23:38.529Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T16:28:36.814+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951042634",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "createdAt": "2026-10-02T14:24:03.007702+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951042634-2z92",
+              "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:02.634Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951042634",
+              "stem": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:24:02.634Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T14:24:02.825+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true,
+          "upvotes": 0,
+          "reconstruction": null
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951030251",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T14:23:50.62677+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951030251-t6ke",
+              "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:50.251Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951030251",
+              "stem": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:23:50.251Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T14:50:48.51+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951018529",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T14:23:39.181231+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951018529-kul2",
+              "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:38.529Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951018529",
+              "stem": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:23:38.529Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T16:28:36.814+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        }
+      ],
+      "isMerged": true
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1790967524679",
+      "tags": [
+        "Tıbbi Genetik",
+        "numarasız-hatırlanan",
+        "taslak-birlestirildi"
+      ],
+      "topic": "Tıbbi Genetik Hatırlanan Soru",
+      "status": "gathering",
+      "options": [
+        {
+          "key": "A",
+          "text": "Down Sendromu",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "Edwards Sendromu",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 2
+        }
+      ],
+      "createdAt": "2026-10-02T18:58:45.067051+00:00",
+      "fragments": [
+        {
+          "id": "f-1790967524671-hec2",
+          "text": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:58:44.671Z"
+        },
+        {
+          "id": "f-1790967391168-u8je",
+          "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:31.168Z"
+        },
+        {
+          "id": "f-opt-1790967391177-A",
+          "text": "A) Down Sendromu",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:31.177Z"
+        },
+        {
+          "id": "f-1790967419200-5dc9",
+          "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:59.200Z"
+        },
+        {
+          "id": "f-opt-1790967419207-A",
+          "text": "A) Edwards Sendromu",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:59.207Z"
+        },
+        {
+          "id": "f-1790967544107-iqlx",
+          "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:59:04.107Z"
+        }
+      ],
+      "revisions": [
+        {
+          "id": "rev-1790967524679",
+          "stem": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "options": [],
+          "version": 1,
+          "editedAt": "2026-10-02T18:58:44.679Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Genetik",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        },
+        {
+          "id": "rev-merge-1790970516684",
+          "version": 2,
+          "editedAt": "2026-10-02T19:48:36.684Z",
+          "editorName": "Yönetici",
+          "changeSummary": "2 adet benzer taslak bu ana soru altında birleştirildi."
+        }
+      ],
+      "updatedAt": "2026-10-02T19:48:40.971Z",
+      "discipline": "Tıbbi Genetik",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "isUnassignedNumber": true,
+      "upvotes": 0,
+      "reconstruction": null,
+      "mergedSatellites": [
+        {
+          "id": "q-donem3-kurul1-unassigned-1790967391177",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [
+            {
+              "key": "A",
+              "text": "Down Sendromu",
+              "upvotes": 1,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            }
+          ],
+          "createdAt": "2026-10-02T18:56:31.862572+00:00",
+          "fragments": [
+            {
+              "id": "f-1790967391168-u8je",
+              "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.168Z"
+            },
+            {
+              "id": "f-opt-1790967391177-A",
+              "text": "A) Down Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.177Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790967391177",
+              "stem": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Down Sendromu",
+                  "upvotes": 1
+                }
+              ],
+              "version": 1,
+              "editedAt": "2026-10-02T18:56:31.177Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+              "claimedAnswer": "A"
+            }
+          ],
+          "updatedAt": "2026-10-02T18:56:31.68+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "claimedAnswer": "A",
+          "questionNumber": 0,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true,
+          "upvotes": 0,
+          "reconstruction": null
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790967419207",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [
+            {
+              "key": "A",
+              "text": "Edwards Sendromu",
+              "upvotes": 2,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            }
+          ],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T18:56:59.440085+00:00",
+          "fragments": [
+            {
+              "id": "f-1790967419200-5dc9",
+              "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.200Z"
+            },
+            {
+              "id": "f-opt-1790967419207-A",
+              "text": "A) Edwards Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.207Z"
+            },
+            {
+              "id": "f-1790967544107-iqlx",
+              "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:59:04.107Z"
+            },
+            {
+              "id": "f-opt-1790967544117-A",
+              "text": "A) Edwards Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:59:04.117Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790967419207",
+              "stem": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Edwards Sendromu",
+                  "upvotes": 1
+                }
+              ],
+              "version": 1,
+              "editedAt": "2026-10-02T18:56:59.207Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T18:59:04.119+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        }
+      ],
+      "isMerged": true,
+      "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi."
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1790967419207",
+      "tags": [
+        "Tıbbi Genetik",
+        "numarasız-hatırlanan",
+        "taslak-birlestirildi"
+      ],
+      "topic": "Tıbbi Genetik Hatırlanan Soru",
+      "status": "gathering",
+      "options": [
+        {
+          "key": "A",
+          "text": "Edwards Sendromu",
+          "upvotes": 4,
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+        },
+        {
+          "key": "B",
+          "text": "Down Sendromu",
+          "suggestedBy": "Dr House",
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "upvotes": 2
+        }
+      ],
+      "upvotes": 0,
+      "createdAt": "2026-10-02T18:56:59.440085+00:00",
+      "fragments": [
+        {
+          "id": "f-1790967419200-5dc9",
+          "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:59.200Z"
+        },
+        {
+          "id": "f-opt-1790967419207-A",
+          "text": "A) Edwards Sendromu",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:59.207Z"
+        },
+        {
+          "id": "f-1790967544107-iqlx",
+          "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:59:04.107Z"
+        },
+        {
+          "id": "f-opt-1790967544117-A",
+          "text": "A) Edwards Sendromu",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:59:04.117Z"
+        },
+        {
+          "id": "f-1790967391168-u8je",
+          "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:31.168Z"
+        },
+        {
+          "id": "f-opt-1790967391177-A",
+          "text": "A) Down Sendromu",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:56:31.177Z"
+        },
+        {
+          "id": "f-1790967524671-hec2",
+          "text": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-02T18:58:44.671Z"
+        }
+      ],
+      "revisions": [
+        {
+          "id": "rev-1790967419207",
+          "stem": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "options": [
+            {
+              "key": "A",
+              "text": "Edwards Sendromu",
+              "upvotes": 1
+            }
+          ],
+          "version": 1,
+          "editedAt": "2026-10-02T18:56:59.207Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Genetik",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        },
+        {
+          "id": "rev-merge-1790970693942",
+          "version": 2,
+          "editedAt": "2026-10-02T19:51:33.942Z",
+          "editorName": "Yönetici",
+          "changeSummary": "2 adet benzer taslak bu ana soru altında birleştirildi."
+        }
+      ],
+      "updatedAt": "2026-10-02T19:51:33.945Z",
+      "discipline": "Tıbbi Genetik",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "reconstruction": null,
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "isUnassignedNumber": true,
+      "mergedSatellites": [
+        {
+          "id": "q-donem3-kurul1-unassigned-1790967391177",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [
+            {
+              "key": "A",
+              "text": "Down Sendromu",
+              "upvotes": 1,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            }
+          ],
+          "createdAt": "2026-10-02T18:56:31.862572+00:00",
+          "fragments": [
+            {
+              "id": "f-1790967391168-u8je",
+              "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.168Z"
+            },
+            {
+              "id": "f-opt-1790967391177-A",
+              "text": "A) Down Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.177Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790967391177",
+              "stem": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Down Sendromu",
+                  "upvotes": 1
+                }
+              ],
+              "version": 1,
+              "editedAt": "2026-10-02T18:56:31.177Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+              "claimedAnswer": "A"
+            }
+          ],
+          "updatedAt": "2026-10-02T18:56:31.68+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "claimedAnswer": "A",
+          "questionNumber": 0,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true,
+          "upvotes": 0,
+          "reconstruction": null
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790967524679",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan",
+            "taslak-birlestirildi"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [
+            {
+              "key": "A",
+              "text": "Down Sendromu",
+              "upvotes": 1,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            },
+            {
+              "key": "B",
+              "text": "Edwards Sendromu",
+              "upvotes": 2,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            }
+          ],
+          "upvotes": 0,
+          "isMerged": true,
+          "createdAt": "2026-10-02T18:58:45.067051+00:00",
+          "fragments": [
+            {
+              "id": "f-1790967524671-hec2",
+              "text": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:58:44.671Z"
+            },
+            {
+              "id": "f-1790967391168-u8je",
+              "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.168Z"
+            },
+            {
+              "id": "f-opt-1790967391177-A",
+              "text": "A) Down Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.177Z"
+            },
+            {
+              "id": "f-1790967419200-5dc9",
+              "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.200Z"
+            },
+            {
+              "id": "f-opt-1790967419207-A",
+              "text": "A) Edwards Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.207Z"
+            },
+            {
+              "id": "f-1790967544107-iqlx",
+              "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:59:04.107Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790967524679",
+              "stem": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T18:58:44.679Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            },
+            {
+              "id": "rev-merge-1790970516684",
+              "version": 2,
+              "editedAt": "2026-10-02T19:48:36.684Z",
+              "editorName": "Yönetici",
+              "changeSummary": "2 adet benzer taslak bu ana soru altında birleştirildi."
+            }
+          ],
+          "updatedAt": "2026-10-02T19:48:40.973+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi.",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "mergedSatellites": [
+            {
+              "id": "q-donem3-kurul1-unassigned-1790967391177",
+              "tags": [
+                "Tıbbi Genetik",
+                "numarasız-hatırlanan"
+              ],
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "status": "gathering",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Down Sendromu",
+                  "upvotes": 1,
+                  "suggestedBy": "Dr House",
+                  "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+                }
+              ],
+              "upvotes": 0,
+              "createdAt": "2026-10-02T18:56:31.862572+00:00",
+              "fragments": [
+                {
+                  "id": "f-1790967391168-u8je",
+                  "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+                  "type": "stem",
+                  "author": "Dr House",
+                  "upvotes": 1,
+                  "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "timestamp": "2026-10-02T18:56:31.168Z"
+                },
+                {
+                  "id": "f-opt-1790967391177-A",
+                  "text": "A) Down Sendromu",
+                  "type": "option",
+                  "author": "Dr House",
+                  "upvotes": 1,
+                  "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "timestamp": "2026-10-02T18:56:31.177Z"
+                }
+              ],
+              "revisions": [
+                {
+                  "id": "rev-1790967391177",
+                  "stem": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+                  "topic": "Tıbbi Genetik Hatırlanan Soru",
+                  "options": [
+                    {
+                      "key": "A",
+                      "text": "Down Sendromu",
+                      "upvotes": 1
+                    }
+                  ],
+                  "version": 1,
+                  "editedAt": "2026-10-02T18:56:31.177Z",
+                  "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "discipline": "Tıbbi Genetik",
+                  "editorName": "Dr House",
+                  "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+                  "claimedAnswer": "A"
+                }
+              ],
+              "updatedAt": "2026-10-02T18:56:31.68+00:00",
+              "discipline": "Tıbbi Genetik",
+              "committeeId": "donem3-kurul1",
+              "claimedAnswer": "A",
+              "questionNumber": 0,
+              "reconstruction": null,
+              "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "contributedByName": "Dr House",
+              "isUnassignedNumber": true
+            },
+            {
+              "id": "q-donem3-kurul1-unassigned-1790967419207",
+              "tags": [
+                "Tıbbi Genetik",
+                "numarasız-hatırlanan"
+              ],
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "status": "gathering",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Edwards Sendromu",
+                  "upvotes": 2,
+                  "suggestedBy": "Dr House",
+                  "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+                }
+              ],
+              "upvotes": 0,
+              "createdAt": "2026-10-02T18:56:59.440085+00:00",
+              "fragments": [
+                {
+                  "id": "f-1790967419200-5dc9",
+                  "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+                  "type": "stem",
+                  "author": "Dr House",
+                  "upvotes": 1,
+                  "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "timestamp": "2026-10-02T18:56:59.200Z"
+                },
+                {
+                  "id": "f-opt-1790967419207-A",
+                  "text": "A) Edwards Sendromu",
+                  "type": "option",
+                  "author": "Dr House",
+                  "upvotes": 1,
+                  "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "timestamp": "2026-10-02T18:56:59.207Z"
+                },
+                {
+                  "id": "f-1790967544107-iqlx",
+                  "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
+                  "type": "stem",
+                  "author": "Dr House",
+                  "upvotes": 1,
+                  "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "timestamp": "2026-10-02T18:59:04.107Z"
+                },
+                {
+                  "id": "f-opt-1790967544117-A",
+                  "text": "A) Edwards Sendromu",
+                  "type": "option",
+                  "author": "Dr House",
+                  "upvotes": 1,
+                  "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "timestamp": "2026-10-02T18:59:04.117Z"
+                }
+              ],
+              "revisions": [
+                {
+                  "id": "rev-1790967419207",
+                  "stem": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+                  "topic": "Tıbbi Genetik Hatırlanan Soru",
+                  "options": [
+                    {
+                      "key": "A",
+                      "text": "Edwards Sendromu",
+                      "upvotes": 1
+                    }
+                  ],
+                  "version": 1,
+                  "editedAt": "2026-10-02T18:56:59.207Z",
+                  "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+                  "discipline": "Tıbbi Genetik",
+                  "editorName": "Dr House",
+                  "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+                }
+              ],
+              "updatedAt": "2026-10-02T18:59:04.119+00:00",
+              "discipline": "Tıbbi Genetik",
+              "committeeId": "donem3-kurul1",
+              "questionNumber": 0,
+              "reconstruction": null,
+              "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "contributedByName": "Dr House",
+              "isUnassignedNumber": true
+            }
+          ],
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        }
+      ],
+      "isMerged": true,
+      "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi."
     }
   ]
 }
