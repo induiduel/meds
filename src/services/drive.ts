@@ -78,6 +78,8 @@ export interface BookletPdfOptions {
   columns?: 'one' | 'two';
   /** Solution mode: mark the correct option in green (default true). Off = plain "Cevap: X" line only. */
   highlightCorrect?: boolean;
+  /** 'tablet': 3:4 portrait page, one column, larger type — fills a tablet screen edge to edge */
+  pageFormat?: 'a4' | 'tablet';
 }
 
 // ---------- Unicode font (Turkish glyphs) ----------
@@ -131,9 +133,19 @@ const asciiFold = (s: string) => s.replace(/[şŞğĞıİçÇöÖüÜ]/g, (c) =>
 /** Redactor explanations use 【Başlık】: markers; turn them into readable paragraphs. */
 const cleanExplanation = (raw: string) =>
   raw
-    .replace(/【([^】]+)】\s*:?\s*/g, (_m, h) => `\n${String(h).trim()}: `)
-    .replace(/\n{3,}/g, '\n\n')
+    .replace(/【([^】]+)】\s*:?\s*/g, (_m, h) => `\n\n${String(h).trim()}: `)
+    .replace(/\r/g, '')
     .trim();
+
+/**
+ * Paragraphs of an explanation. Source texts often carry hard line wraps; a single
+ * newline is just a space, only blank lines and 【Başlık】 markers start a new paragraph.
+ */
+const explanationParagraphs = (raw: string) =>
+  cleanExplanation(raw)
+    .split(/\n\s*\n/)
+    .map((p) => p.replace(/\s*\n\s*/g, ' ').trim())
+    .filter(Boolean);
 
 /**
  * Generates an A4 exam booklet PDF with real Turkish text, per-line page breaks,
@@ -146,11 +158,13 @@ export async function generateBookletPdfBlob(
 ): Promise<Blob> {
   const mode: BookletMode = options.mode || 'solution';
   const includeKey = mode === 'answers_only' ? true : options.includeAnswerKey ?? true;
-  const twoCol = (options.columns || 'two') === 'two';
+  const tablet = options.pageFormat === 'tablet';
+  const twoCol = !tablet && (options.columns || 'two') === 'two';
   const highlight = options.highlightCorrect ?? true;
 
   const { jsPDF } = await import('jspdf');
-  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+  // Tablet: 157.5 × 210 mm = 3:4, the shape of an iPad / most tablets held upright
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: tablet ? [157.5, 210] : 'a4' });
 
   const fonts = await loadFonts();
   let FONT = 'helvetica';
@@ -181,7 +195,7 @@ export async function generateBookletPdfBlob(
   // ---- Page geometry: compact booklet ----
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
-  const M = 14; // side margin
+  const M = tablet ? 10 : 14; // side margin
   const GUTTER = 7; // between columns
   const TOP = 19; // first baseline on continuation pages
   const BOTTOM = pageH - 15; // last baseline before the footer
@@ -191,8 +205,10 @@ export async function generateBookletPdfBlob(
   const TEXT_W = COL_W - BADGE;
 
   // type scale (pt) and line heights (mm)
-  const SZ = { stem: 8.2, opt: 7.8, meta: 5.9, exp: 6.8, title: 12.5, sub: 7.4 };
-  const LH = { stem: 3.6, opt: 3.4, exp: 3.05 };
+  const SZ = tablet
+    ? { stem: 9.6, opt: 9.1, meta: 6.6, exp: 7.8, title: 13.5, sub: 7.8 }
+    : { stem: 8.2, opt: 7.8, meta: 5.9, exp: 6.8, title: 12.5, sub: 7.4 };
+  const LH = tablet ? { stem: 4.3, opt: 4.05, exp: 3.55 } : { stem: 3.6, opt: 3.4, exp: 3.05 };
 
   let col = 0;
   let y = M;
@@ -371,11 +387,7 @@ export async function generateBookletPdfBlob(
         write(`Cevap: ${answer || 'belirtilmemiş'}`, BADGE + 2, TEXT_W - 2.2, LH.exp, bar);
         if (exp) {
           style('normal', SZ.exp, INK2);
-          exp
-            .split('\n')
-            .map((p) => p.trim())
-            .filter(Boolean)
-            .forEach((para) => write(para, BADGE + 2, TEXT_W - 2.2, LH.exp, bar));
+          explanationParagraphs(rec?.explanation || '').forEach((para) => write(para, BADGE + 2, TEXT_W - 2.2, LH.exp, bar));
         }
       }
 
@@ -394,7 +406,7 @@ export async function generateBookletPdfBlob(
   if (includeKey && questions.length > 0) {
     if (mode !== 'answers_only') newPage();
     keyStartPage = doc.getNumberOfPages();
-    const keyCols = 15;
+    const keyCols = tablet ? 8 : 15;
     const gap = 1.2;
     const cellW = (W - gap * (keyCols - 1)) / keyCols;
     const cellH = 8.2;

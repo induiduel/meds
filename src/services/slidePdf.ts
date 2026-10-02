@@ -8,6 +8,8 @@ export interface SlidePdfOptions {
   includeQuestions?: boolean;
   /** Çıkmış sorularda doğru şıkkı yeşil işaretle */
   highlightCorrect?: boolean;
+  /** 'tablet': 4:3 landscape page (280 × 210 mm) that fills a tablet screen */
+  pageFormat?: 'a4' | 'tablet';
 }
 
 type RGB = [number, number, number];
@@ -70,7 +72,7 @@ const parseRich = (s?: string): Seg[] =>
  */
 export async function generateSlidePdfBlob(deck: InteractiveDeck, slides: SlideItem[], options: SlidePdfOptions = {}): Promise<Blob> {
   const { jsPDF } = await import('jspdf');
-  const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+  const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: options.pageFormat === 'tablet' ? [210, 280] : 'a4' });
   const { font: FONT, T } = await setupPdfFonts(doc);
   const highlight = options.highlightCorrect ?? true;
 
@@ -643,7 +645,8 @@ export async function downloadSlidePdf(deck: InteractiveDeck, slides: SlideItem[
   const safe = clean(deck.shortTitle || deck.title)
     .replace(/[^a-zA-Z0-9_À-ſ-]+/g, '_')
     .slice(0, 50);
-  a.download = slides.length === 1 ? `${safe}_Slayt${slides[0].slideNumber}.pdf` : `${safe}_${slides.length}_slayt.pdf`;
+  const tag = options?.pageFormat === 'tablet' ? '_Tablet' : '';
+  a.download = slides.length === 1 ? `${safe}_Slayt${slides[0].slideNumber}${tag}.pdf` : `${safe}_${slides.length}_slayt${tag}.pdf`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
