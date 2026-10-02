@@ -161,6 +161,14 @@ export default function App() {
     initialRoute.route === 'learn' ? initialRoute.param : undefined
   );
   const [selectedLearnSlideNumber, setSelectedLearnSlideNumber] = useState<number | undefined>(undefined);
+  const [selectedGlossaryTermId, setSelectedGlossaryTermId] = useState<string | undefined>(() => {
+    if (initialRoute.route === 'glossary' && initialRoute.param) return initialRoute.param;
+    if (typeof window !== 'undefined') {
+      const p = new URLSearchParams(window.location.search);
+      return p.get('id') || undefined;
+    }
+    return undefined;
+  });
 
   // Celebration Toast
   const [congratsToast, setCongratsToast] = useState<string | null>(null);
@@ -1010,6 +1018,19 @@ export default function App() {
                 setIsPdfModalOpen(true);
               }}
               onSelectCommittee={(id) => setSelectedCommitteeId(id)}
+            />
+          </Suspense>
+        )}
+
+        {/* TAB: Glossary & Encyclopedia / Tıbbi Sözlük & Ansiklopedi */}
+        {activeTab === 'glossary' && (
+          <Suspense fallback={<ViewFallback />}>
+            <MedicalEncyclopediaView
+              initialTermId={selectedGlossaryTermId}
+              onNavigateToDeck={(deckId) => {
+                setSelectedLearnDeckId(deckId);
+                setActiveTab('learn');
+              }}
             />
           </Suspense>
         )}

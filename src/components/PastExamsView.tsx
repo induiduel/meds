@@ -706,16 +706,26 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Sınav</span>
+                <span className="text-[12.5px] font-semibold text-ink-3">Kurul / Sınav</span>
                 <select
                   value={selectedCommittee}
                   onChange={(e) => {
-                    setSelectedCommittee(e.target.value);
+                    const newComm = e.target.value;
+                    setSelectedCommittee(newComm);
                     setCurrentPage(1);
+                    if (newComm !== 'all' && !newComm.includes('final') && !newComm.includes('butunleme')) {
+                      const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find(c => c.id === newComm);
+                      if (commObj && selectedDiscipline !== 'all') {
+                        const allowed = commObj.allDisciplineNames.map(d => normalizeDonem3Discipline(d) || d);
+                        if (!allowed.includes(selectedDiscipline)) {
+                          setSelectedDiscipline('all');
+                        }
+                      }
+                    }
                   }}
                   className={selectCls}
                 >
-                  <option value="all">Tüm kurul ve sınavlar</option>
+                  <option value="all">Tüm Dönem 3 sınavları</option>
                   {filterOptions.committees.map((cId) => (
                     <option key={cId} value={cId}>
                       {formatCommitteeName(cId)}
@@ -742,7 +752,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 </select>
               </label>
               <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Branş</span>
+                <span className="text-[12.5px] font-semibold text-ink-3">Ders (Dönem 3 Müfredatı)</span>
                 <select
                   value={selectedDiscipline}
                   onChange={(e) => {
@@ -751,7 +761,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   }}
                   className={selectCls}
                 >
-                  <option value="all">Tüm branşlar</option>
+                  <option value="all">Tüm dersler ({filterOptions.disciplines.length})</option>
                   {filterOptions.disciplines.map((d) => (
                     <option key={d} value={d}>
                       {d}

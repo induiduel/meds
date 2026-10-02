@@ -44,6 +44,7 @@ import {
   useGlossary,
 } from './MedicalGlossaryPopover';
 import { AiThinking } from '../ui/Animations';
+import { HighlighterToolbar, Highlightable, isPenActive } from '../ui/Highlighter';
 import { toast } from '../ui/Toast';
 
 // ---------------------------------------------------------------------------
@@ -979,7 +980,8 @@ const DeckPlayer: React.FC<{
     touch.current = { x: t.clientX, y: t.clientY };
   };
   const onTouchEnd = (e: React.TouchEvent) => {
-    if (!touch.current || mode !== 'paged') return;
+    // Selecting text with the highlighter must not flip the slide
+    if (!touch.current || mode !== 'paged' || isPenActive()) return;
     const t = e.changedTouches[0];
     const dx = t.clientX - touch.current.x;
     const dy = t.clientY - touch.current.y;
@@ -1065,6 +1067,7 @@ const DeckPlayer: React.FC<{
             </button>
           ))}
         </div>
+        <HighlighterToolbar />
         {onExportPdf && (
           <button
             type="button"
@@ -1107,6 +1110,7 @@ const DeckPlayer: React.FC<{
               <SlideCanvas
                 key={index}
                 slide={slide}
+                highlightScope={`deck:${deck.id}:${slide.slideNumber}`}
                 index={index}
                 total={n}
                 paged
@@ -1140,6 +1144,7 @@ const DeckPlayer: React.FC<{
                 >
                   <SlideCanvas
                     slide={s}
+                    highlightScope={`deck:${deck.id}:${s.slideNumber}`}
                     index={i}
                     total={n}
                     onOpenQuestions={() => {
@@ -1701,7 +1706,9 @@ const SlideCanvas: React.FC<{
   onNext?: () => void;
   onPrev?: () => void;
   paged?: boolean;
-}> = ({ slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, onNext, paged = false }) => {
+  /** Storage key for the student's own highlights on this slide */
+  highlightScope?: string;
+}> = ({ slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, onNext, paged = false, highlightScope }) => {
   const [copied, setCopied] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -1729,7 +1736,10 @@ const SlideCanvas: React.FC<{
       ref={containerRef}
       className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 custom-scrollbar`}
     >
-      <div className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6">
+      <Highlightable
+        scope={highlightScope || `slide:${slide.slideNumber}:${slide.title}`}
+        className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6"
+      >
         {/* Slide header */}
         <header className="flex flex-col gap-2.5 pb-2 border-b border-line-soft">
           {/* Üst Başlık (Eyebrow & Metadata) */}
@@ -2039,7 +2049,7 @@ const SlideCanvas: React.FC<{
             </button>
           </div>
         )}
-      </div>
+      </Highlightable>
     </article>
   );
 };

@@ -78,6 +78,7 @@ function detectConcepts(text: string, discipline?: string): string[] {
 
 async function test() {
   const { data: questions } = await client.from('questions').select('*').eq('committee_id', 'donem3-kurul1');
+  if (!questions) return;
   
   const downQuestions = questions.filter(x => x.id.includes('1790967'));
   console.log('Testing concept detection on 3 Down questions:');

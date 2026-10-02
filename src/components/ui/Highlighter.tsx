@@ -29,6 +29,9 @@ const setTool = (patch: Partial<Tool>) => {
   tool = { ...tool, ...patch };
   toolListeners.forEach((l) => l());
 };
+/** True while the pen (or eraser) is on — gestures like swipe-to-next should pause. */
+export const isPenActive = () => tool.active;
+
 const useTool = () =>
   useSyncExternalStore(
     (cb) => {

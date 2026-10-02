@@ -19,6 +19,7 @@ import { Committee, QuestionItem } from '../types';
 import { ApiService } from '../services/api';
 import { downloadBookletPdfLocally, generateBookletPdfBlob } from '../services/drive';
 import { filterCurrent2026_2027Committees } from '../services/firestoreDb';
+import { normalizeDonem3Discipline, isDonem3Question } from '../data/curriculumData';
 import { generateSlidePdfBlob, downloadSlidePdf } from '../services/slidePdf';
 import type { InteractiveDeck } from './learn/InteractiveDeckView';
 import { BlurOverlay, PaperLoader } from './ui/Animations';
@@ -122,7 +123,13 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
       try {
         const data = await ApiService.getPastQuestions();
         if (isMounted) {
-          const clean = data.filter((q: any) => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t)));
+          const clean = data
+            .filter((q: any) => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t)))
+            .filter(isDonem3Question)
+            .map((q: any) => {
+              const norm = normalizeDonem3Discipline(q.discipline);
+              return norm ? { ...q, discipline: norm } : q;
+            });
           setPastQuestions(clean);
         }
       } catch (err: any) {

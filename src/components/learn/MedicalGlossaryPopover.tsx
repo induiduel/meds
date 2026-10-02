@@ -462,17 +462,32 @@ export const FloatingGlossaryToast: React.FC = () => {
           <BookOpen className="w-3 h-3 text-accent" />
           <span>Kurul 1 Tıbbi Terimler Sözlüğü</span>
         </span>
-        <button
-          type="button"
-          onClick={() => {
-            hideTerm(true);
-            setIsDrawerOpen(true);
-          }}
-          className="hover:text-accent font-medium transition-colors cursor-pointer flex items-center gap-0.5"
-        >
-          <span>Tüm Sözlüğü Aç</span>
-          <ChevronRight className="w-3 h-3" />
-        </button>
+        <div className="flex items-center gap-2">
+          <a
+            href={`/sozluk?id=${encodeURIComponent(item.term)}`}
+            onClick={(e) => {
+              e.preventDefault();
+              hideTerm(true);
+              window.location.href = `/sozluk?id=${encodeURIComponent(item.term)}`;
+            }}
+            className="text-accent hover:underline font-semibold flex items-center gap-0.5 cursor-pointer"
+          >
+            <span>Ansiklopedide Aç</span>
+            <ExternalLink className="w-2.5 h-2.5" />
+          </a>
+          <span>•</span>
+          <button
+            type="button"
+            onClick={() => {
+              hideTerm(true);
+              setIsDrawerOpen(true);
+            }}
+            className="hover:text-accent font-medium transition-colors cursor-pointer flex items-center gap-0.5"
+          >
+            <span>Tüm Liste</span>
+            <ChevronRight className="w-3 h-3" />
+          </button>
+        </div>
       </div>
     </div>
   );
