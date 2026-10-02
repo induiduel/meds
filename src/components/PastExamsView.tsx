@@ -38,6 +38,7 @@ import { ApiService } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
+import { AdvancedQuestionUpgradeModal } from './AdvancedQuestionUpgradeModal';
 import { renderHighlightedSnippet } from './QuestionCard';
 
 interface PastExamsViewProps {
@@ -85,6 +86,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Student & User AI Question Optimizer Modal State
   const [optimizeModalQuestion, setOptimizeModalQuestion] = useState<QuestionItem | null>(null);
+
+  // Advanced Question Upgrade Modal State (Gelişmiş Klinik Vaka)
+  const [upgradeModalQuestion, setUpgradeModalQuestion] = useState<QuestionItem | null>(null);
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -804,6 +808,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         <span>AI ile Redakte Et</span>
                       </button>
                     )}
+
+                    {/* Upgrade to Advanced Clinical Case Question Button */}
+                    <button
+                      onClick={() => setUpgradeModalQuestion(q)}
+                      className="bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                      title="Bu soruyu eski ve redakte edilmiş haliyle eşleştirip USMLE / TUS düzeyinde gelişmiş klinik vaka sorusuna dönüştür"
+                    >
+                      <Zap className="w-3.5 h-3.5 text-amber-600" />
+                      <span>Gelişmiş Soruya Çevir</span>
+                    </button>
 
                     {/* Slide Match Reference Badge */}
                     {slideMatch && (
@@ -1539,6 +1553,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             pageNumber: customRedactQuestion.match.page.pageNumber,
             snippet: customRedactQuestion.match.page.content.substring(0, 300)
           } : null}
+        />
+      )}
+
+      {/* Advanced Question Upgrade Modal */}
+      {upgradeModalQuestion && (
+        <AdvancedQuestionUpgradeModal
+          question={upgradeModalQuestion}
+          isOpen={Boolean(upgradeModalQuestion)}
+          onClose={() => setUpgradeModalQuestion(null)}
+          onSaveUpgraded={(questionId, advancedData) => {
+            setQuestions(prev => prev.map(q => q.id === questionId ? { ...q, advancedQuestion: advancedData, hasAdvancedVersion: true } : q));
+          }}
         />
       )}
     </div>

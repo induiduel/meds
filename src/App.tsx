@@ -54,6 +54,7 @@ const SubagentMonitorModal = React.lazy(() => import('./components/SubagentMonit
 const SystemDiagnosticsModal = React.lazy(() => import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal })));
 const AiQuotaAlertModal = React.lazy(() => import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal })));
 const LectureSummariesView = React.lazy(() => import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView })));
+const TranscriptionsView = React.lazy(() => import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView })));
 const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
 
 const ViewFallback = () => (
@@ -88,7 +89,7 @@ import {
 } from './services/drive';
 
 // Supported App Tabs with URL hash & localStorage persistence
-export type ValidAppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
+export type ValidAppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries' | 'transcripts';
 
 const VALID_APP_TABS: ValidAppTab[] = [
   'quick_add',
@@ -96,6 +97,7 @@ const VALID_APP_TABS: ValidAppTab[] = [
   'questions',
   'past_exams',
   'summaries',
+  'transcripts',
   'matrix',
   'leaderboard',
   'notes',
@@ -1253,6 +1255,13 @@ export default function App() {
         {activeTab === 'summaries' && (
           <Suspense fallback={<ViewFallback />}>
             <LectureSummariesView onOpenPdfModal={() => setIsPdfModalOpen(true)} />
+          </Suspense>
+        )}
+
+        {/* TAB 8: Amfi Ses Kaydı Transkriptleri */}
+        {activeTab === 'transcripts' && (
+          <Suspense fallback={<ViewFallback />}>
+            <TranscriptionsView />
           </Suspense>
         )}
       </main>

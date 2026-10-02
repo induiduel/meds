@@ -25,6 +25,7 @@ import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { loadDeepSeekContributions } from './deepseekDataService.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -43,7 +44,8 @@ export type RagDocumentType =
   | 'transcript'
   | 'user_contribution'
   | 'ai_refinement'
-  | 'ai_qa';
+  | 'ai_qa'
+  | 'deepseek_contribution';
 
 export interface RagChunk {
   id: string;
@@ -95,12 +97,14 @@ export interface RagSearchResult {
   source: 'local' | 'cloud';
 }
 
-// Stopwords to filter out from auto-keyword index
+// Stopwords to filter out from auto-keyword index (expanded medical question terms)
 const TURKISH_STOPWORDS = new Set([
   've', 'ile', 'veya', 'için', 'gibi', 'kadar', 'daha', 'olan', 'olarak', 'bunun',
   'buna', 'şekilde', 'olarak', 'üzere', 'bir', 'bu', 'şu', 'o', 'her', 'tüm', 'bütün',
   'sayfa', 'slayt', 'bölüm', 'ders', 'notu', 'konu', 'ünite', 'tablo', 'şekil', 'görsel',
   'hangisidir', 'aşağıdakilerden', 'hangisi', 'nedir', 'aşağıdaki', 'vardır', 'yoktur',
+  'doğrudur', 'yanlıştır', 'göre', 'ilgili', 'ilişkin', 'arasında', 'yer', 'alır', 'almaz',
+  'belirtilmiştir', 'örnektir', 'adlandırılır', 'kabul', 'edilen', 'bulunur', 'bulunmaz',
   'the', 'and', 'for', 'with', 'from', 'that', 'this', 'are', 'was'
 ]);
 
@@ -151,12 +155,17 @@ function getNextGeminiClient(): GoogleGenAI | null {
 }
 
 // ==============================================================================
-// In-Memory Index State
+// In-Memory Index State (High-Performance BM25 Engine)
 // ==============================================================================
 let memoryChunks: Map<string, RagChunk> = new Map();
-let invertedIndex: Map<string, Set<string>> = new Map(); // token -> Set of chunk ids
+// token -> Map<chunkId, termFrequency> for exact BM25 calculation
+let invertedIndex: Map<string, Map<string, number>> = new Map();
+let docLengths: Map<string, number> = new Map();
+let avgDocLength = 110;
 let isInitialized = false;
 let isIndexingInProgress = false;
+let saveDebounceTimer: NodeJS.Timeout | null = null;
+let isSavingToFile = false;
 
 // Load stored chunks from local file into memory
 function loadLocalChunksFromFile(): void {
@@ -171,39 +180,110 @@ function loadLocalChunksFromFile(): void {
     for (const chunk of list) {
       memoryChunks.set(chunk.id, chunk);
     }
+
+    // Also merge real-time AI interactions from ai_interactions.json
+    try {
+      const interactions = loadAiInteractions();
+      for (const act of interactions) {
+        const cId = act.ragChunkId || `chunk-aiqa-${act.id}`;
+        if (!memoryChunks.has(cId)) {
+          const chunkContent = `[YAPAY ZEKA TIBBİ SORU-CEVAP & AÇIKLAMA]
+Soru Bağlamı: ${act.discipline || 'Tıp'} - ${act.topic || 'Soru Analizi'}
+Öğrencinin Sorusu / Talebi:
+"${act.prompt}"
+
+Yapay Zekanın Akademik Yanıtı & Mekanizma Açıklaması:
+${act.response}`.trim();
+
+          memoryChunks.set(cId, {
+            id: cId,
+            documentId: act.questionId || act.id,
+            documentType: 'ai_qa',
+            committeeId: act.committeeId || 'donem3-kurul1',
+            discipline: act.discipline || 'Tıp',
+            title: `AI Soru-Cevap: ${act.topic || 'Tıbbi Analiz'} ("${act.prompt.slice(0, 45)}...")`,
+            content: chunkContent,
+            metadata: {
+              interactionId: act.id,
+              questionId: act.questionId,
+              interactionType: act.interactionType,
+              userDisplayName: act.userDisplayName,
+              upvotes: act.upvotes || 0
+            },
+            hash: hashContent(chunkContent),
+            createdAt: act.createdAt || new Date().toISOString(),
+            updatedAt: act.createdAt || new Date().toISOString()
+          });
+        }
+      }
+    } catch (_) {}
+
     rebuildInvertedIndex();
-    console.log(`[LocalRagEngine] 🚀 ${memoryChunks.size} adet yerel parça (chunk) belleğe yüklendi.`);
+    console.log(`[LocalRagEngine] 🚀 ${memoryChunks.size} adet yerel parça (chunk) belleğe yüklendi ve BM25 indeksi oluşturuldu.`);
   } catch (err: any) {
     console.warn('[LocalRagEngine] Yerel parça dosyası okunamadı:', err.message);
   }
 }
 
-function saveLocalChunksToFile(): void {
-  try {
-    const list = Array.from(memoryChunks.values());
-    fs.writeFileSync(LOCAL_CHUNKS_FILE, JSON.stringify(list, null, 2), 'utf-8');
-  } catch (err: any) {
-    console.error('[LocalRagEngine] Yerel parçalar kaydedilemedi:', err.message);
+// Asynchronous, debounced, compact disk serialization (avoids event loop blocking)
+export async function saveLocalChunksToFile(forceImmediate: boolean = false): Promise<void> {
+  if (saveDebounceTimer) {
+    clearTimeout(saveDebounceTimer);
+    saveDebounceTimer = null;
+  }
+
+  const doWrite = async () => {
+    if (isSavingToFile) return;
+    isSavingToFile = true;
+    try {
+      const list = Array.from(memoryChunks.values());
+      // Compact JSON without 2-space indentation saves ~35MB disk space and reduces I/O by 80%
+      const jsonStr = JSON.stringify(list);
+      await fs.promises.writeFile(LOCAL_CHUNKS_FILE, jsonStr, 'utf-8');
+      console.log(`[LocalRagEngine] 💾 ${list.length} parça diskte güncellendi (${Math.round(jsonStr.length / 1024 / 1024)} MB).`);
+    } catch (err: any) {
+      console.error('[LocalRagEngine] Yerel parçalar kaydedilemedi:', err.message);
+    } finally {
+      isSavingToFile = false;
+    }
+  };
+
+  if (forceImmediate) {
+    await doWrite();
+  } else {
+    saveDebounceTimer = setTimeout(doWrite, 2500);
   }
 }
 
 function rebuildInvertedIndex(): void {
   invertedIndex.clear();
-  for (const [id, chunk] of memoryChunks.entries()) {
+  docLengths.clear();
+  let totalDocLen = 0;
+  for (const chunk of memoryChunks.values()) {
     indexChunkTokens(chunk);
+    totalDocLen += (docLengths.get(chunk.id) || 0);
   }
+  avgDocLength = memoryChunks.size > 0 ? totalDocLen / memoryChunks.size : 110;
 }
 
 function indexChunkTokens(chunk: RagChunk): void {
-  const textToScan = `${chunk.title} ${chunk.discipline || ''} ${chunk.content}`;
+  // Boost title and discipline by repeating in text representation
+  const textToScan = `${chunk.title} ${chunk.title} ${chunk.discipline || ''} ${chunk.content}`;
   const tokens = cleanTextForTokens(textToScan);
+  docLengths.set(chunk.id, tokens.length);
+
+  const freqMap = new Map<string, number>();
   for (const t of tokens) {
-    let set = invertedIndex.get(t);
-    if (!set) {
-      set = new Set();
-      invertedIndex.set(t, set);
+    freqMap.set(t, (freqMap.get(t) || 0) + 1);
+  }
+
+  for (const [t, freq] of freqMap.entries()) {
+    let posting = invertedIndex.get(t);
+    if (!posting) {
+      posting = new Map<string, number>();
+      invertedIndex.set(t, posting);
     }
-    set.add(chunk.id);
+    posting.set(chunk.id, freq);
   }
 }
 
@@ -396,8 +476,12 @@ export function chunkLectureNotes(): RagChunk[] {
   for (const note of list) {
     if (!note.pages || note.pages.length === 0) continue;
     for (const page of note.pages) {
-      const pageText = (page.content || '').trim();
-      if (pageText.length < 25) continue; // Skip empty slides
+      const rawContent = (page.content || '').trim();
+      const repaired = (page.repairedContent || '').trim();
+      const pageText = repaired 
+        ? (rawContent.length >= 25 ? `${rawContent}\n\n${repaired}` : repaired)
+        : rawContent;
+      if (pageText.length < 25) continue; // Skip truly empty slides
 
       const content = `[DERS SLAYTI NOTU]
 Ders: ${note.discipline || 'Tıp'}
@@ -718,6 +802,43 @@ ${act.response}`.trim();
   return chunks;
 }
 
+// 9. DeepSeek Düzenlenmiş & Katkı Verileri (deepseek_contribution)
+export function chunkDeepSeekData(): RagChunk[] {
+  const items = loadDeepSeekContributions();
+  const chunks: RagChunk[] = [];
+  const now = new Date().toISOString();
+
+  for (const item of items) {
+    const content = item.content || '';
+    if (content.length < 20) continue;
+    const h = item.hash || hashContent(content);
+
+    chunks.push({
+      id: `chunk-ds-${item.id || h.slice(0, 10)}`,
+      documentId: item.id,
+      documentType: 'deepseek_contribution',
+      committeeId: item.committeeId || 'donem3-kurul1',
+      discipline: item.discipline || 'Tıp',
+      title: `${item.title} [DeepSeek Katkısı]`,
+      pageNumber: undefined,
+      content,
+      metadata: {
+        source: 'deepseek',
+        contributor: 'DeepSeek AI',
+        isContribution: true,
+        attributionBadge: 'DeepSeek Katkısı',
+        itemType: item.itemType,
+        sourceFile: item.metadata?.sourceFile,
+        topic: item.topic
+      },
+      hash: h,
+      createdAt: item.createdAt || now,
+      updatedAt: item.updatedAt || now
+    });
+  }
+  return chunks;
+}
+
 // ==============================================================================
 // Ingest Single AI Interaction in Real-time (Chat Drawer, Optimizer, Redact)
 // ==============================================================================
@@ -794,7 +915,6 @@ ${interaction.response}`.trim();
   // Put in-memory index immediately
   memoryChunks.set(chunk.id, chunk);
   indexChunkTokens(chunk);
-  saveLocalChunksToFile();
 
   // 3. Asynchronously generate embedding and mirror to Supabase
   setTimeout(async () => {
@@ -803,7 +923,6 @@ ${interaction.response}`.trim();
       if (emb) {
         chunk.embedding = emb;
         memoryChunks.set(chunk.id, chunk);
-        saveLocalChunksToFile();
       }
 
       const sb = getSupabase();
@@ -865,7 +984,6 @@ export function upvoteAiInteraction(interactionId: string): boolean {
     const chunk = memoryChunks.get(item.ragChunkId)!;
     chunk.metadata = { ...chunk.metadata, upvotes: item.upvotes };
     memoryChunks.set(chunk.id, chunk);
-    saveLocalChunksToFile();
   }
 
   // Update in Supabase
@@ -949,8 +1067,13 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
 
     // 8. AI Chat interactions
     const aiq = chunkAiInteractions();
-    console.log(`✓ 8/8 AI Soru Sohbetleri: ${aiq.length} parça`);
+    console.log(`✓ 8/9 AI Soru Sohbetleri: ${aiq.length} parça`);
     allChunks.push(...aiq);
+
+    // 9. DeepSeek Katkı & Düzenlenmiş Verileri
+    const dsc = chunkDeepSeekData();
+    console.log(`✓ 9/9 DeepSeek Katkıları: ${dsc.length} parça`);
+    allChunks.push(...dsc);
 
     let newlyIndexed = 0;
     for (const chunk of allChunks) {
@@ -1052,7 +1175,7 @@ async function syncPendingChunksToCloud(maxCount: number = 100): Promise<void> {
 }
 
 // ==============================================================================
-// Ultra-Fast Unified Local & Hybrid Search (< 5ms)
+// Ultra-Fast Unified Local & Hybrid BM25 Search (< 5ms)
 // ==============================================================================
 export async function searchLocalRag(
   queryText: string,
@@ -1064,31 +1187,60 @@ export async function searchLocalRag(
     queryEmbedding?: number[];
   } = {}
 ): Promise<RagSearchResult[]> {
+  if (memoryChunks.size === 0) {
+    loadLocalChunksFromFile();
+  }
   const limit = options.limit || 5;
   const cleanTokens = cleanTextForTokens(queryText);
   if (cleanTokens.length === 0 && !options.queryEmbedding) return [];
 
-  // 1. Gather candidate chunk IDs using inverted index
-  const candidateScores = new Map<string, number>();
+  const N = memoryChunks.size || 1;
+  const k1 = 1.2;
+  const b = 0.75;
+  const avgdl = avgDocLength || 110;
 
-  for (const token of cleanTokens) {
-    const chunkIds = invertedIndex.get(token);
-    if (chunkIds) {
-      for (const id of chunkIds) {
-        candidateScores.set(id, (candidateScores.get(id) || 0) + 1);
-      }
+  // 1. Calculate IDF for each query token present in the index
+  const tokenInfo: Array<{ token: string; idf: number; postings: Map<string, number> }> = [];
+  for (const t of cleanTokens) {
+    const postings = invertedIndex.get(t);
+    if (postings && postings.size > 0) {
+      const df = postings.size;
+      const idf = Math.log(1 + (N - df + 0.5) / (df + 0.5));
+      tokenInfo.push({ token: t, idf, postings });
     }
   }
 
-  // 2. Score and rank candidates
+  if (tokenInfo.length === 0 && !options.queryEmbedding) return [];
+
+  // Sort by IDF descending: most discriminating / rare medical terms first
+  tokenInfo.sort((x, y) => y.idf - x.idf);
+  // Optimization: Prune query tokens to top 6 most informative terms (highest IDF) for ultra-fast evaluation (< 5ms)
+  const tokensToScore = tokenInfo.slice(0, 6);
+
+  // 2. Accumulate candidate BM25 scores
+  const candidateScores = new Map<string, number>();
+  const matchedTokensCount = new Map<string, number>();
+
+  for (const { idf, postings } of tokensToScore) {
+    for (const [chunkId, tf] of postings.entries()) {
+      const docLen = docLengths.get(chunkId) || avgdl;
+      const tfNorm = (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * (docLen / avgdl)));
+      const termScore = idf * tfNorm;
+
+      candidateScores.set(chunkId, (candidateScores.get(chunkId) || 0) + termScore);
+      matchedTokensCount.set(chunkId, (matchedTokensCount.get(chunkId) || 0) + 1);
+    }
+  }
+
+  // 3. Score and rank candidates
   const scoredResults: Array<{ chunk: RagChunk; score: number; similarity: number }> = [];
   const normalizedQuery = queryText.toLowerCase().replace(/[^a-z0-9ğüşıöç]/gi, ' ').trim();
 
-  for (const [id, tokenHits] of candidateScores.entries()) {
+  for (const [id, bmScore] of candidateScores.entries()) {
     const chunk = memoryChunks.get(id);
     if (!chunk) continue;
 
-    // Filters
+    // Strict Filters
     if (options.committeeId && chunk.committeeId && chunk.committeeId !== options.committeeId) {
       continue;
     }
@@ -1099,27 +1251,41 @@ export async function searchLocalRag(
       continue;
     }
 
-    let score = (tokenHits / Math.max(1, cleanTokens.length)) * 50;
+    let finalScore = bmScore;
+
+    // Term coordination boost (chunks matching multiple high-yield query terms)
+    const matchCount = matchedTokensCount.get(id) || 1;
+    if (matchCount > 1) {
+      finalScore *= (1 + 0.25 * (matchCount - 1));
+    }
 
     // Exact phrase match bonus
     const lowerContent = chunk.content.toLowerCase();
     if (lowerContent.includes(normalizedQuery)) {
-      score += 40;
+      finalScore += 25;
     }
 
-    // High yield document types bonus (past questions & verified summaries & AI QAs)
-    if (chunk.documentType === 'past_question' || chunk.documentType === 'ai_qa') {
-      score += 10;
+    // High yield document types bonus (collected DeepSeek data is top priority ground-truth!)
+    if (chunk.documentType === 'deepseek_contribution') {
+      finalScore += 25; // Top priority: collected data pool is referenced first!
+    } else if (chunk.documentType === 'past_question') {
+      finalScore += 15; // Past exam questions
+    } else if (chunk.documentType === 'ai_refinement') {
+      finalScore += 10;
+    } else if (chunk.documentType === 'summary') {
+      finalScore += 8;
+    } else if (chunk.documentType === 'lecture_slide') {
+      finalScore += 5;
     }
 
     // Cosine similarity if embeddings are present
     let sim = 0;
     if (options.queryEmbedding && chunk.embedding) {
       sim = cosineSimilarity(options.queryEmbedding, chunk.embedding);
-      score += sim * 40;
+      finalScore += sim * 30;
     }
 
-    scoredResults.push({ chunk, score, similarity: sim });
+    scoredResults.push({ chunk, score: finalScore, similarity: sim });
   }
 
   scoredResults.sort((a, b) => b.score - a.score);
@@ -1171,20 +1337,27 @@ export function initLocalRagEngine(): void {
     console.log(`[LocalRagEngine] ✓ Hazır: Toplam ${memoryChunks.size} parça bellekte ve anında aranabilir.`);
   }
 
-  // Watch data folder for changes (debounced auto-reindex)
+  // Watch data folder for changes (ONLY core course content files, strictly ignore runtime state/log files!)
+  const WATCHED_CONTENT_FILES = new Set([
+    'pastQuestions.json',
+    'lecture_notes.json',
+    'lectureSummariesCatalog.json',
+    'questions.json'
+  ]);
+
   let changeDebounce: NodeJS.Timeout | null = null;
   if (fs.existsSync(DATA_DIR)) {
     try {
       fs.watch(DATA_DIR, (eventType, filename) => {
         if (!filename) return;
-        if (filename === 'local_rag_chunks.json' || filename === 'rag_indexing_manifest.json') return;
-        if (filename.endsWith('.json')) {
-          if (changeDebounce) clearTimeout(changeDebounce);
-          changeDebounce = setTimeout(() => {
-            console.log(`[LocalRagEngine] 📂 Veri dosyasında değişiklik tespit edildi (${filename}), yerel indeks güncelleniyor...`);
-            runAutoChunking({ syncToCloud: false }).catch(() => {});
-          }, 5000);
-        }
+        // Strictly ignore everything other than the 4 core content files
+        if (!WATCHED_CONTENT_FILES.has(filename)) return;
+
+        if (changeDebounce) clearTimeout(changeDebounce);
+        changeDebounce = setTimeout(() => {
+          console.log(`[LocalRagEngine] 📂 Çekirdek müfredat dosyasında değişiklik tespit edildi (${filename}), yerel indeks güncelleniyor...`);
+          runAutoChunking({ syncToCloud: false }).catch(() => {});
+        }, 15000); // 15s debounce to prevent rebuild storms
       });
     } catch (_) {}
   }

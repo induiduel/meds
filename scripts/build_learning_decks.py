@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-build_learning_decks.py
-========================
+build_learning_decks.py (5x Ayrıntı, Akıl Kartları & Akıcı Sentez Versiyonu)
+=============================================================================
 Bu script:
-1. c:\\Users\\indui\\Desktop\\meds_database\\transcriptions altındaki ses transkriptlerini okur.
-2. Transkriptteki hocanın dakika dakika vurgularını, "buradan soru sorarız", "slaytta yok beni dinleyin" gibi
-   amfi sınav uyarılarını tespit eder.
-3. src/data/lecture_notes.json içerisindeki ilgili ders notu slaytları ile eşler.
-4. src/data/pastQuestions.json içerisindeki geçmiş kurul çıkmış sorularıyla eşleştirir.
-5. c:\\Users\\indui\\Desktop\\meds_database\\redakte_ozet altındaki derin tıp özetleriyle zenginleştirir.
-6. Hem tam ekran PPTX tarzı slayt sunusu olarak ilerleyebilen, hem de dikey kaydırılabilen zengin interaktif
-   desteleri src/data/interactive_learning_decks.json dosyasına derler.
+1. c:\\Users\\indui\\Desktop\\meds_database\\transcriptions altındaki tüm ses transkriptlerini eksiksiz okur.
+2. Transkriptteki TÜM dakika dakika konuşmaları ([MM:SS]) korur ve ilgili slaytların içine
+   `transcriptUtterances` dizisi olarak yerleştirir.
+3. Hocanın amfide sözlü olarak vurguladıklarını ve ders notlarını sentezleyerek akıcı,
+   duru ve anlaşılır bir `synthesisNarrative` (Amfi & Not Sentezi) oluşturur.
+4. Ezberi ve pekiştirmeyi kolaylaştırmak için her slayta özel 3D animasyonlu `flashcards`
+   (Akıl Kartları: Ön yüzde soru/ipucu, arka yüzde doğrudan cevap ve klinik izahat) ekler.
+5. Sınavda sorulabilecek kritik eşik değerler, tablolar ve formüllerle zenginleştirir.
+6. Gerçek kurul çıkmış sorularını ve spot hapları entegre eder:
+   -> src/data/interactive_learning_decks.json
+   -> src/data/learning_decks_meta.json
 """
 
 import os
@@ -25,12 +28,20 @@ sys.stdout.reconfigure(encoding='utf-8')
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 MEDS_DB_ROOT = r'c:\Users\indui\Desktop\meds_database'
 TRANSCRIPTIONS_DIR = os.path.join(MEDS_DB_ROOT, 'transcriptions')
-REDAKTE_DIR = os.path.join(MEDS_DB_ROOT, 'redakte_ozet')
 OUTPUT_FILE = os.path.join(PROJECT_ROOT, 'src', 'data', 'interactive_learning_decks.json')
 OUTPUT_META_FILE = os.path.join(PROJECT_ROOT, 'src', 'data', 'learning_decks_meta.json')
 
 LECTURE_NOTES_PATH = os.path.join(PROJECT_ROOT, 'src', 'data', 'lecture_notes.json')
 PAST_QUESTIONS_PATH = os.path.join(PROJECT_ROOT, 'src', 'data', 'pastQuestions.json')
+
+HIGHLIGHT_KEYWORDS = [
+    'soru', 'sorarız', 'sorarım', 'sınav', 'dikkat', 'slayt', 'slaytta yok', 'beni dinleyin',
+    'formül', 'formülü', 'vaka', 'tuzak', 'önemli', 'yüz binde', 'kriter', 'tedavi',
+    'altın standart', 'patognomonik', 'ilk tercih', 'en sık', 'asla', 'şarttır', 'ölüm hızı',
+    'kesinlikle', 'özellikle', 'unutmuyoruz', 'yıldız koyun', 'not alın', 'tanı', 'prognoz',
+    'patoloji', 'mekanizma', 'komplikasyon', 'ayırıcı', 'amiloidoz', 'kolşisin', 'randall',
+    'kessner', 'prezervatif', 'izolasyon', 'nondisjunction', 'translokasyon', 'nekroz'
+]
 
 def normalize_tr(text):
     if not text:
@@ -56,7 +67,18 @@ def clean_text(text):
         return ""
     return re.sub(r'\s+', ' ', text).strip()
 
-def match_questions(keywords, discipline, all_questions, limit=8):
+def time_to_seconds(ts_str):
+    try:
+        parts = ts_str.split(':')
+        if len(parts) == 2:
+            return int(parts[0]) * 60 + int(parts[1])
+        elif len(parts) == 3:
+            return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
+    except Exception:
+        pass
+    return 0
+
+def match_questions(keywords, discipline, all_questions, limit=4):
     if not all_questions:
         return []
 
@@ -69,7 +91,6 @@ def match_questions(keywords, discipline, all_questions, limit=8):
         q_topic = normalize_tr(q.get('topic') or '')
         q_stem = normalize_tr(q.get('stem') or '')
         q_opts = " ".join([normalize_tr(o.get('text', '')) for o in q.get('options', [])])
-        q_full = f"{q_topic} {q_stem} {q_opts}"
 
         score = 0
         for kw in norm_keywords:
@@ -111,1041 +132,1078 @@ def match_questions(keywords, discipline, all_questions, limit=8):
             break
     return res
 
-def parse_transcript_file(filename):
-    path = os.path.join(TRANSCRIPTIONS_DIR, filename)
-    if not os.path.exists(path):
-        return None
-    with open(path, 'r', encoding='utf-8') as f:
+def parse_full_transcript(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Extract title
     title_m = re.search(r'^#\s*🩺?\s*(.+)$', content, re.MULTILINE)
-    title = title_m.group(1).strip() if title_m else filename
+    title = title_m.group(1).strip() if title_m else os.path.basename(filepath)
 
-    # Extract pearls
+    committee_m = re.search(r'>\s*\*\*Kurul:\*\*\s*(.+)', content)
+    discipline_m = re.search(r'>\s*\*\*Disiplin:\*\*\s*(.+)', content)
+    instructor_m = re.search(r'>\s*\*\*Öğretim Üyesi:\*\*\s*(.+)', content)
+    audio_m = re.search(r'>\s*\*\*Kaynak Ses Kaydı:\*\*\s*`?([^`\n]+)`?', content)
+
+    committee = committee_m.group(1).strip() if committee_m else 'Kurul 1'
+    discipline = discipline_m.group(1).strip() if discipline_m else 'Genel Tıp'
+    instructor = instructor_m.group(1).strip() if instructor_m else 'Öğretim Üyesi'
+    audio_file = audio_m.group(1).strip() if audio_m else os.path.basename(filepath)
+
     pearls = []
     pearls_sec = re.search(r'##\s*⭐\s*Amfi & Sınav Hap Bilgileri.*?\n(.*?)(?=\n##|\Z)', content, re.DOTALL)
     if pearls_sec:
         raw_bullets = re.findall(r'^[*-]\s*(.+)$', pearls_sec.group(1), re.MULTILINE)
         pearls = [b.strip() for b in raw_bullets if len(b.strip()) > 5]
 
-    # Extract utterances
+    overview = ""
+    summary_sec = re.search(r'##\s*📌\s*Dersin Genel Özeti.*?\n(.*?)(?=\n##|\Z)', content, re.DOTALL)
+    if summary_sec:
+        overview = summary_sec.group(1).strip()
+
     utterances = []
     for m in re.finditer(r'\[(\d{2}:\d{2})\]\s*([^\[]+)', content):
         ts = m.group(1)
         text = clean_text(m.group(2))
         if text:
-            utterances.append({'timestamp': ts, 'text': text})
+            norm_lower = normalize_tr(text)
+            is_highlighted = any(normalize_tr(kw) in norm_lower for kw in HIGHLIGHT_KEYWORDS)
+            utterances.append({
+                'timestamp': ts,
+                'seconds': time_to_seconds(ts),
+                'text': text,
+                'isHighlighted': is_highlighted
+            })
 
     return {
         'title': title,
+        'committee': committee,
+        'discipline': discipline,
+        'instructor': instructor,
+        'audioFile': audio_file,
         'pearls': pearls,
+        'overview': overview,
         'utterances': utterances,
         'fullText': content
     }
 
-def find_utterance(utterances, search_words):
+def slice_utterances_by_time(utterances, start_sec, end_sec):
+    subset = []
     for u in utterances:
-        norm_txt = normalize_tr(u['text'])
-        if any(normalize_tr(w) in norm_txt for w in search_words):
-            return u
-    return None
+        sec = u['seconds']
+        if (start_sec <= sec < end_sec) or (end_sec >= 999999 and sec >= start_sec):
+            subset.append({
+                'timestamp': u['timestamp'],
+                'text': u['text'],
+                'isHighlighted': u['isHighlighted']
+            })
+    return subset
+
+def pick_best_quote(utterances_subset, default_quote=""):
+    if not utterances_subset:
+        return default_quote
+    for u in utterances_subset:
+        if u.get('isHighlighted') and len(u['text']) > 25:
+            return u['text']
+    for u in utterances_subset:
+        if len(u['text']) > 30:
+            return u['text']
+    return utterances_subset[0]['text']
+
+# =============================================================================
+# CURATED 5X DETAILED MEDICAL SLIDE CURATION CATALOG WITH FLASHCARDS & SYNTHESIS
+# =============================================================================
+
+CURATED_TOPICS = {
+    'Ana_Cocuk_Sagligi_Duzeyinin_Izlenmesi_Transkript.md': {
+        'shortTitle': 'Ana Çocuk Sağlığı',
+        'discipline': 'Halk Sağlığı',
+        'committee': 'Kurul 1 - Halk Sağlığı ve Epidemiyoloji',
+        'instructor': 'Doç. Dr. Nergiz Sevinç',
+        'themeColor': 'sky',
+        'slides': [
+            {
+                'title': 'DÖB Temel İlkeleri & Kessner İndeksi',
+                'badge': 'KLİNİK STANDART',
+                'badgeColor': 'sky',
+                'start': '00:00', 'end': '04:00',
+                'note': 'Hoca Kessner indeksinin 3 ana bileşeni (başlama ayı, izlem sayısı, hizmet türü) üzerinde ısrarla durdu.',
+                'synthesisNarrative': 'Doğum Öncesi Bakım (DÖB), yalnızca rutin bir takip değil, anne ve fetüsün hayatını tehdit edebilecek komplikasyonların %15\'ini erkenden yakalayan koruyucu hekimlik temel direğidir. Amfide hocamızın özellikle üzerinde durduğu gibi, bakımın kalitesi yalnızca kaç kez yapıldığıyla değil, Kessner İndeksi\'ne göre ne zaman başladığı (ilk 13 haftada başlaması şartı), kaç kez tekrarlandığı ve nerede verildiği ile belirlenir. Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında 224 Sayılı Kanun\'dan günümüz aile hekimliği sistemine uzanan bu protokol, önlenebilir anne ve bebek ölümlerinin en güçlü fren mekanizmasıdır.',
+                'flashcards': [
+                    {
+                        'id': 'acs-1-1',
+                        'category': 'Sınav Sorusu',
+                        'front': 'Doğum Öncesi Bakımın (DÖB) yeterliliğini ve kalitesini belirleyen Kessner İndeksi\'nin 3 temel parametresi nedir?',
+                        'back': '1. Bakımın başladığı gebelik ayı (İlk 13 hafta / 1. trimester içinde başlaması şart).\n2. Doğuma kadar yapılan toplam izlem sayısı (Miadında gebelikte en az 9 izlem).\n3. Bakımın verildiği sağlık kuruluşunun düzeyi ve niteliği.',
+                        'hint': 'Zamanlama, sıklık ve kurum düzeyi...'
+                    },
+                    {
+                        'id': 'acs-1-2',
+                        'category': 'Epidemiyoloji',
+                        'front': 'Gebelikte genel sağlık sorunları görülme sıklığı ve yaşamı tehdit eden ağır komplikasyon oranı yüzde kaçtır?',
+                        'back': 'Gebelikte sağlık sorunlarıyla karşılaşma oranı %40 iken, yaşamı tehdit eden ya da kalıcı hasar bırakan ağır komplikasyon (preeklampsi, kanama vb.) oranı %15\'tir.',
+                        'hint': 'Genel sorunlar %40, ağır komplikasyonlar %15...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Doğum Öncesi Bakım (DÖB) Tanımı', 'desc': 'Anne ve fetüsün tüm gebelik boyunca düzenli aralıklarla eğitimli sağlık personeli tarafından izlenmesi, komplikasyonların %15\'ini erkenden yakalar.'},
+                    {'title': 'Kessner İndeksi Kriterleri', 'desc': 'Bakımın yeterliliğini ölçmek için 3 parametre kullanılır: 1. Bakımın başladığı gebelik ayı, 2. Doğuma kadar yapılan toplam izlem sayısı, 3. Bakımın verildiği kurumun düzeyi.'},
+                    {'title': 'Risk Altındaki Gruplar', 'desc': '15-49 yaş kadın nüfusu (gebeler, lohusalar, evli kadınlar) ve 0-6 yaş grubu (bebek ve çocuklar) en duyarlı risk grubunu oluşturur.'},
+                    {'title': '224 Sayılı Kanun Mirası', 'desc': '1961 Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu ile ana çocuk sağlığı izlemleri sağlık ocaklarının temel görevi yapılmıştır.'}
+                ],
+                'table': {
+                    'title': 'Kessner İndeksine Göre DÖB Yeterlilik Sınıflaması',
+                    'headers': ['İndeks Derecesi', 'İlk İzlem Zamanı', 'Toplam İzlem Sayısı (Miadında)', 'Klinik Karşılık'],
+                    'rows': [
+                        ['Yeterli Bakım', 'İlk 13 hafta içinde (1. Trimester)', 'En az 9 izlem', 'Maternal ve perinatal mortalite en düşük'],
+                        ['Orta Düzey Bakım', '14 - 27. haftalar arası', '5 - 8 izlem', 'Orta düzey risk, önlenebilir patolojiler'],
+                        ['Yetersiz Bakım', '28. hafta veya sonrası / hiç yok', '4 veya daha az izlem', 'Yüksek maternal mortalite ve düşük doğum ağırlığı']
+                    ]
+                },
+                'spotPearls': [
+                    'Kessner İndeksi 3 temel bileşenden oluşur: Başlangıç trimesterı, izlem sıklığı ve hastane/sağlık ocağı düzeyi.',
+                    'Gebelikte komplikasyon sıklığı %40 olup bunların %15\'i yaşamı tehdit edici niteliktedir.',
+                    'DÖB erken başlaması preeklampsi ve gestasyonel diyabet gibi gizli riskleri erkenden saptar.'
+                ],
+                'keywords': ['kessner', 'doğum öncesi', 'izlem', 'gebelik', 'risk']
+            },
+            {
+                'title': 'Sağlık Bakanlığı 4 Aşamalı Gebe İzlem Protokolü',
+                'badge': 'GÜNCEL PROTOKOL',
+                'badgeColor': 'sky',
+                'start': '04:00', 'end': '08:00',
+                'note': 'Hoca sınavda her izlem haftasında yapılacak laboratuvar testleri ve ÇKS dinleme haftalarını soracağını belirtti.',
+                'synthesisNarrative': 'Sağlık Bakanlığı gebe izlem rehberine göre her gebenin en az 4 nitelikli izlemden geçmesi esastır. Amfide hocamızın sınav sorusu olarak altını çizdiği üzere: Fetal kalp sesleri (ÇKS), el doppleri ile 10-12. haftalarda duyulabilirken, klasik Pinard stetoskop ile ancak 16-20. haftalarda işitilebilir. Gebelikte profilaktik demir desteğine 16. haftada başlanıp lohusalık sonuna kadar toplam 6 ay devam edilir. D vitamini desteği ise 12. haftadan itibaren başlanarak günde 1200 IU (9 damla) şeklinde uygulanır.',
+                'flashcards': [
+                    {
+                        'id': 'acs-2-1',
+                        'category': 'Muayene & Sınav',
+                        'front': 'Çocuk Kalp Sesleri (ÇKS); El Doppler cihazı ile ve Pinard stetoskop ile en erken hangi gebelik haftalarında duyulabilir?',
+                        'back': '• El Doppler cihazı ile: 10 - 12. haftalarda duyulur.\n• Pinard (obstetrik) stetoskop ile: 16 - 20. haftalarda duyulur.',
+                        'hint': 'Doppler erkendir (1. trimester sonu), stetoskop daha geçtir...'
+                    },
+                    {
+                        'id': 'acs-2-2',
+                        'category': 'Profilaksi & Tedavi',
+                        'front': 'Gebelikte rutin Demir ve D Vitamini desteğine hangi haftalarda başlanır ve ne kadar sürdürülür?',
+                        'back': '• Demir Desteği: 16. gebelik haftasında başlanır, doğum sonu lohusalık bitimine kadar (toplam 6 ay) devam eder.\n• D Vitamini Desteği: 12. haftada başlanır, günde 1200 IU (9 damla) olarak verilir.',
+                        'hint': 'Demir 16. hafta, D vitamini 12. hafta...'
+                    }
+                ],
+                'bullets': [
+                    {'title': '1. İzlem (0-14. Hafta)', 'desc': 'Kişisel/tıbbi/obstetrik öykü, boy, kilo, kan basıncı, tam idrar (proteinüri/bakteriüri), Hb-Hct, kan grubu, HBsAg, TSH ve risk değerlendirmesi.'},
+                    {'title': '2. İzlem (18-24. Hafta)', 'desc': 'Uterus fundus yüksekliği, ÇKS dinleme, fetal anomali ultrasonografisi, tetanoz aşısı 1. dozu (16. haftadan sonra), demir desteği başlangıcı.'},
+                    {'title': '3. İzlem (28-32. Hafta)', 'desc': 'Preeklampsi bulguları (ödem, TA kontrolü), oral glukoz tolerans testi (24-28. hf), tetanoz 2. dozu, D vitamini takviyesi.'},
+                    {'title': '4. İzlem (36-38. Hafta)', 'desc': 'Fetal prezantasyon, doğum planı ve doğumun nerede yapılacağına karar verilmesi, tehlike işaretlerinin gebeye öğretilmesi.'}
+                ],
+                'table': {
+                    'title': 'Sağlık Bakanlığı Gebe İzlem Takvimi & Yapılacak İşlemler',
+                    'headers': ['İzlem', 'Gebelik Haftası', 'Temel Muayene & Tetkik', 'Profilaksi / Destek'],
+                    'rows': [
+                        ['1. İzlem', '0 - 14. Hafta', 'Öykü, TA, Kilo, Kan Grubu, Tam İdrar, HBsAg', 'Folik Asit (0.4 mg/gün)'],
+                        ['2. İzlem', '18 - 24. Hafta', 'Fundus yüksekliği, ÇKS, Anomali USG', 'Tetanoz 1. Doz, Demir (16. hf)'],
+                        ['3. İzlem', '28 - 32. Hafta', 'TA, Ödem, Proteinüri, OGTT', 'Tetanoz 2. Doz, D Vitamini'],
+                        ['4. İzlem', '36 - 38. Hafta', 'Fetal prezantasyon, Doğum Planı', 'Doğum Öncesi Danışmanlık']
+                    ]
+                },
+                'spotPearls': [
+                    'Çocuk Kalp Sesleri (ÇKS): El doppleri ile 10-12. haftalarda, Pinard stetoskop ile 16-20. haftalarda duyulur.',
+                    'Gebelikte demir desteğine 16. haftada başlanır ve lohusalık dönemi sonuna kadar (toplam 6 ay) devam ettirilir.',
+                    'D vitamini desteği 12. haftadan itibaren günde 1200 IU (9 damla) olarak başlanır.'
+                ],
+                'keywords': ['gebe izlem', 'çks', 'demir', 'tetanoz', 'hafta']
+            },
+            {
+                'title': 'Anne Ölüm Hızı (AÖH) & Bebek Ölüm Hızı (BÖH) Formülleri',
+                'badge': 'EPİDEMİYOLOJİ & FORMÜL',
+                'badgeColor': 'amber',
+                'start': '08:00', 'end': '13:00',
+                'note': 'Hoca bu formüllerin pay ve paydalarının sınavda birebir sorulduğunu, çarpanlara (100.000 vs 1.000) dikkat edilmesi gerektiğini vurguladı.',
+                'synthesisNarrative': 'Sağlık düzeyinin uluslararası kıyaslamasında en kritik iki indikatör Anne Ölüm Hızı (AÖH) ve Bebek Ölüm Hızı\'dır (BÖH). Sınavlarda en sık yapılan tuzak: AÖH hesaplanırken lohusalık süresi tam 42 gün (6 hafta) kabul edilir; kaza veya tesadüfi ölümler hesaba katılmaz ve formül çarpanı YÜZ BİNDİR (100.000). Bebek Ölüm Hızı ise 0-365 günlük ölümleri kapsar ve çarpanı BİNDİR (1.000). Her iki formülde de paydada mutlaka o yılki CANLI DOĞUM SAYISI yer alır.',
+                'flashcards': [
+                    {
+                        'id': 'acs-3-1',
+                        'category': 'Formül Tuzağı',
+                        'front': 'Anne Ölüm Hızı (AÖH) formülünde pay, payda, çarpan katsayısı ve kabul edilen lohusalık süresi nedir?',
+                        'back': '• Pay: Bir yılda gebelik, doğum ve lohusalık (ilk 42 gün) nedeniyle ölen kadın sayısı.\n• Payda: Aynı yıldaki canlı doğum sayısı.\n• Çarpan: 100.000 (Yüz bin).\n• Süre: Tam 42 gün (tesadüfi/kaza ölümleri hariç).',
+                        'hint': 'Çarpan 100.000, süre 42 gün...'
+                    },
+                    {
+                        'id': 'acs-3-2',
+                        'category': 'Kavram Ayrımı',
+                        'front': 'Neonatal (0-28 gün) ve Postneonatal (29-365 gün) bebek ölümleri temelde hangi farklı faktörleri yansıtır?',
+                        'back': '• Neonatal Ölüm: Doğum travması, prematürite ve konjenital anomalilere bağlı olup sağlık hizmetlerinin kalitesini yansıtır.\n• Postneonatal Ölüm: Enfeksiyon, hijyen ve beslenme yetersizliklerine bağlı olup doğrudan çevre ve sosyoekonomik koşulları yansıtır.',
+                        'hint': 'Neonatal sağlık hizmetini, postneonatal çevre koşullarını yansıtır...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Anne Ölüm Hızı (AÖH)', 'desc': 'Bir yılda gebelik, doğum ve lohusalık (ilk 42 gün) nedenleriyle ölen kadın sayısının, aynı yıldaki canlı doğum sayısına bölünüp 100.000 ile çarpılmasıdır.'},
+                    {'title': 'Bebek Ölüm Hızı (BÖH)', 'desc': 'Bir yılda 0-365 günlükken ölen bebek sayısının, aynı yıldaki canlı doğum sayısına bölünüp 1.000 ile çarpılmasıdır.'},
+                    {'title': 'Neonatal vs Postneonatal Ölüm', 'desc': 'Neonatal ölüm (0-28 gün): Doğum travması, konjenital anomali ve prematüriteye bağlıdır. Postneonatal ölüm (29-365 gün): Enfeksiyon ve beslenme yetersizliklerine bağlı olup çevre koşullarını yansıtır.'},
+                    {'title': 'Perinatal Ölüm Hızı', 'desc': '28. gebelik haftasından sonraki ölü doğumlar ile ilk 7 gün (erken neonatal) ölümlerinin toplamının canlı + ölü doğum sayısına oranıdır (çarpan: 1.000).'}
+                ],
+                'formula': {
+                    'title': 'Temel Mortalite İndikatör Formülleri',
+                    'formula': 'AÖH = (Gebelik + Doğum + Lohusalık [42 gün] Ölümleri / Canlı Doğum Sayısı) × 100.000\nBÖH = (0 - 365 Günlük Bebek Ölümleri / Canlı Doğum Sayısı) × 1.000',
+                    'explanation': 'AÖH çarpanı 100.000 iken, BÖH ve Perinatal Ölüm Hızı çarpanı 1.000\'dir. Paydada her zaman CANLI DOĞUM sayısı yer alır.'
+                },
+                'spotPearls': [
+                    'AÖH hesaplanırken lohusalık süresi tam olarak 42 gün (6 hafta) kabul edilir; kaza veya tesadüfi ölümler hesaba katılmaz.',
+                    'BÖH gelişmişlik düzeyini en hassas yansıtan evrensel sağlık göstergesidir.',
+                    'Türkiye\'de AÖH 1961\'de yüz binde 520 iken günümüzde yüz binde 13-15 seviyelerine düşürülmüştür.'
+                ],
+                'keywords': ['anne ölüm hızı', 'bebek ölüm hızı', 'neonatal', 'formül', 'mortalite']
+            },
+            {
+                'title': 'Bebek ve Çocuk İzlem Protokolü & Tarama Testleri',
+                'badge': 'TARAMA & AŞI',
+                'badgeColor': 'emerald',
+                'start': '13:00', 'end': '20:00',
+                'note': 'Hoca topuk kanı taramasında bakılan 6 hastalığı ve işitme taraması zamanlamasını sınavda doğrudan sordu.',
+                'synthesisNarrative': 'Yenidoğan Dönemi Tarama Programı (NTP), geri dönüşümsüz beyin ve organ hasarlarını önleyen en başarılı halk sağlığı müdahalelerindendir. Hocamızın özellikle vurguladığı gibi, topuk kanı (Guthrie kartı) bebek anne sütüyle yeterince beslendikten sonra, doğumdan sonraki 48-72. saatlerde alınmalıdır (aç bebekte fenilalanin yükselmeyeceği için FKU taraması yalancı negatif çıkabilir). Günümüzde panelde 6 hastalık taranmaktadır: Fenilketonüri, Konjenital Hipotiroidi, Biyotinidaz Eksikliği, Kistik Fibrozis, KAH ve SMA.',
+                'flashcards': [
+                    {
+                        'id': 'acs-4-1',
+                        'category': 'Tarama & Sınav',
+                        'front': 'Türkiye\'de Yenidoğan Topuk Kanı Tarama Programında (NTP) taranan 6 hastalık hangileridir?',
+                        'back': '1. Fenilketonüri (FKU)\n2. Konjenital Hipotiroidi\n3. Biyotinidaz Eksikliği\n4. Kistik Fibrozis (IRT)\n5. Konjenital Adrenal Hiperplazi (KAH)\n6. Spinal Müsküler Atrofi (SMA)',
+                        'hint': '6 temel hastalık: metabolik, endokrin ve genetik paneller...'
+                    },
+                    {
+                        'id': 'acs-4-2',
+                        'category': 'Klinik Zamanlama',
+                        'front': 'Guthrie kartına topuk kanı neden doğumdan en az 48 saat sonra ve bebek beslendikten sonra alınmalıdır?',
+                        'back': 'Fenilketonüri taramasında fenilalanin aminoasidinin kanda birikip tespit edilebilmesi için bebeğin protein (anne sütü/mama) almış olması şarttır. Açken alınan kanda FKU yalancı negatif sonuç verir.',
+                        'hint': 'Protein alımı ve fenilalanin birikimi...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Bebek İzlem Sıklığı', 'desc': '0-1 yaş arası ilk yıl en az 9 kez; 1-3 yaş arası yılda en az 2 kez; 3-6 yaş arası yılda en az 1 kez izlem yapılır.'},
+                    {'title': 'Yenidoğan Tarama Programı (NTP)', 'desc': 'Doğumdan sonraki ilk 48-72 saatte (bebek beslendikten sonra) özel filtre kağıdına (Guthrie kartı) topuk kanı alınır.'},
+                    {'title': 'Topuk Kanında Taranan Hastalıklar', 'desc': '1. Fenilketonüri (FKU), 2. Konjenital Hipotiroidi, 3. Kistik Fibrozis, 4. Biyotinidaz Eksikliği, 5. Konjenital Adrenal Hiperplazi (KAH), 6. Spinal Müsküler Atrofi (SMA).'},
+                    {'title': 'İşitme ve Göz Taramaları', 'desc': 'Taburculuk öncesi ilk 72 saatte BERA (ABR) ve TEOAE ile işitme taraması yapılır. 3. ayda kırmızı refle testi ile katarakt/retinoblastom taranır.'}
+                ],
+                'table': {
+                    'title': 'Yenidoğan Topuk Kanı Tarama Paneli & Erken Tanı Önemi',
+                    'headers': ['Hastalık', 'Taranan Belirteç', 'Tedavi Edilmezse Sonuç', 'Erken Tedavi'],
+                    'rows': [
+                        ['Fenilketonüri (FKU)', 'Fenilalanin düzeyi', 'Ağır zeka geriliği, mikrosefali', 'Düşük fenilalaninli diyet'],
+                        ['Konjenital Hipotiroidi', 'TSH düzeyi', 'Kretenizm (zeka ve boy geriliği)', 'L-Tiroksin replasmanı'],
+                        ['Biyotinidaz Eksikliği', 'Biyotinidaz enzim aktivitesi', 'Konvülziyon, işitme/görme kaybı', 'Oral biyotin desteği'],
+                        ['Kistik Fibrozis', 'İmmünreaktif Tripsinojen (IRT)', 'Kronik akciğer hasarı, malabsorpsiyon', 'Enzim ve solunum tedavisi'],
+                        ['SMA (Spinal Müsküler Atrofi)', 'SMN1 gen delesyonu', 'Progresif kas atrofisi, solunum yetmezliği', 'Gen replasmanı / Nusinersen']
+                    ]
+                },
+                'spotPearls': [
+                    'Topuk kanı mutlaka bebek anne sütüyle beslendikten en az 48 saat sonra alınmalıdır; aç bebekte FKU taraması yalancı negatif çıkabilir.',
+                    'Gelişimsel Kalça Displazisi (GKD) taraması için 4-6. haftalar arasında kalça ultrasonografisi altın standarttır.',
+                    'D vitamini tüm yenidoğanlara 15. günden itibaren 400 IU/gün (3 damla) olarak başlanır ve 1 yaşına kadar sürdürülür.'
+                ],
+                'keywords': ['topuk kanı', 'fenilketonüri', 'hipotiroidi', 'sma', 'tarama']
+            }
+        ]
+    },
+    'Uriner_Sistem_Obstruksiyonlari_ve_Egilimleri_Transkript.md': {
+        'shortTitle': 'Üriner Obstrüksiyon',
+        'discipline': 'Üroloji',
+        'committee': 'Kurul 3 - Ürogenital Sistem',
+        'instructor': 'Üroloji Anabilim Dalı',
+        'themeColor': 'amber',
+        'slides': [
+            {
+                'title': 'Obstrüktif Üropati Tanımı & Anatomik Sınıflama',
+                'badge': 'PATOFİZYOLOJİ',
+                'badgeColor': 'amber',
+                'start': '00:00', 'end': '06:00',
+                'note': 'Hoca infravezikal ve supravezikal ayrımını, komplet ve inkomplet obstrüksiyon kavramlarını vurguladı.',
+                'synthesisNarrative': 'Üriner obstrüksiyon, nefron seviyesinden eksternal meatusa kadar idrar akımının mekanik ya da fonksiyonel olarak engellenmesidir. Amfide hocamızın açıkça sınıflandırdığı gibi, patolojinin seviyesi kliniği doğrudan tayin eder: Mesane boynu ve distali (prostat, üretra) tıkandığında "İnfravezikal obstrüksiyon" gelişir ve her iki böbreği birden etkileyerek bilateral hidronefroz ve böbrek yetmezliğine yol açar. Mesane üstü seviyelerdeki (üreter, pelvis) "Supravezikal obstrüksiyon" ise tek taraflı olduğunda diğer böbrek sağlam kaldığı sürece kanda üre/kreatinin artışı yapmaz; hasta asemptomatik hidronefrozla gelebilir.',
+                'flashcards': [
+                    {
+                        'id': 'uro-1-1',
+                        'category': 'Anatomi & Klinik',
+                        'front': 'İnfravezikal ve Supravezikal üriner obstrüksiyonların sınır noktası nedir ve kliniğe yansıyan temel farkları nelerdir?',
+                        'back': '• Sınır Noktası: Mesane boynudur.\n• İnfravezikal (Prostat, üretra): Mesane çıkışını tıkar, bilateral hidronefroz ve akut/kronik böbrek yetmezliği yapar.\n• Supravezikal (Üreter, pelvis): Mesane üstüdür, tek taraflı patolojiler sağlam böbrek sayesinde kanda üre/kreatinin artışı yapmaz.',
+                        'hint': 'Mesane boynu sınır: bilateral vs unilateral etki...'
+                    },
+                    {
+                        'id': 'uro-1-2',
+                        'category': 'Pediatri & Sınav',
+                        'front': 'Erkek yenidoğanda bilateral hidronefroz ve oligohidramniozun en sık konjenital nedeni nedir?',
+                        'back': 'Posterior Üretral Valv (PUV)\'dir. Mesane çıkımında valv etkisi yaparak idrar çıkışını engeller, acil endoskopik ablasyon gerektirir.',
+                        'hint': 'Erkek bebekte kapakçık etkisi...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Obstrüktif Üropati Tanımı', 'desc': 'Üriner sistemin nefron düzeyinden üretra meatüsuna kadar herhangi bir yerinde idrar akımının mekanik veya fonksiyonel engellenmesidir.'},
+                    {'title': 'İnfravezikal Obstrüksiyon', 'desc': 'Mesane boynu ve daha distalindeki tıkanıklıklardır (prostat, üretra, üretra meatüsü). Tipik olarak bilateral hidronefroza yol açar.'},
+                    {'title': 'Supravezikal Obstrüksiyon', 'desc': 'Mesane düzeyinin üstündeki tıkanıklıklardır (üreter, böbrek pelvisi, kaliksler). Tek taraflı patolojiler böbrek yetmezliği yapmaz, kontralateral böbrek kompanse eder.'},
+                    {'title': 'Komplet vs İnkomplet Tıkanıklık', 'desc': 'Komplet tıkanıklıkta anüri gelişir ve acil dekompresyon gerekir. İnkomplet tıkanıklıkta idrar geçişi devam eder, sinsi hidronefroz ve renal atrofiye yol açabilir.'}
+                ],
+                'table': {
+                    'title': 'Anatomik Seviyeye Göre Obstrüksiyon Nedenleri',
+                    'headers': ['Seviye', 'Konjenital Nedenler', 'Edinsel (Kazanılmış) Nedenler', 'Klinik Sonuç'],
+                    'rows': [
+                        ['Supravezikal (Üst Üriner)', 'Üreteropelvik darlık (UPJ), UVJ darlık, Ektopik üreter', 'Üreter taşı, ürotelyal tümör, retroperitoneal fibrozis', 'Unilateral hidronefroz, flank ağrısı'],
+                        ['İnfravezikal (Alt Üriner)', 'Posterior üretral valv (PUV), meatus stenozu', 'BPH, prostat ca, üretra darlığı, mesane boynu darlığı', 'Bilateral hidronefroz, glob vezikale, KBY riski']
+                    ]
+                },
+                'spotPearls': [
+                    'Erkek yenidoğanda bilateral hidronefroz ve oligohidramniozun en sık nedeni Posterior Üretral Valv (PUV)\'dir.',
+                    'Tek taraflı üreter tıkanıklığı sağlam diğer böbrek varlığında kanda üre/kreatinin artışı yapmaz; laboratuvar normal kalabilir.',
+                    'Anüri (günlük idrar <100 ml) aksi kanıtlanana kadar bilateral komplet obstrüksiyon veya tek böbrekli hastada obstrüksiyon kabul edilir.'
+                ],
+                'keywords': ['obstrüksiyon', 'infravezikal', 'supravezikal', 'hidronefroz', 'puvalv']
+            },
+            {
+                'title': 'Basınç Değişiklikleri & Fibrozis Patofizyolojisi',
+                'badge': 'HÜCRESEL MEKANİZMA',
+                'badgeColor': 'rose',
+                'start': '06:00', 'end': '14:00',
+                'note': 'Hoca mesane kasında divertikül oluşumu ve tip 3 kollajen artışı ile fibrozis gelişimini özellikle vurguladı.',
+                'synthesisNarrative': 'Tıkanıklık oluştuktan sonra proksimal alandaki intraluminal hidrostatik basınç katlanarak artar. Bowman kapsülü içi basınç yükselince glomerüler filtrasyon basıncı düşer ve GFR hızla azalır. Mesane düzeyinde ise detrüsör kası kompanzasyon amacıyla hipertrofiye uğrar; ancak basınç sürerse düz kas lifleri arasında tip 3 kollajen birikimi (fibrozis) başlar. Elastikiyeti kaybolan mesane duvarında psödodivertiküller gelişir. Hocamızın amfideki kritik uyarısı: Bu divertiküller muskularis propria (gerçek kas tabakası) içermez; bu yüzden kasılamaz, içinde durgun idrar kalır ve kronik enfeksiyon ile taş odağına dönüşür.',
+                'flashcards': [
+                    {
+                        'id': 'uro-2-1',
+                        'category': 'Patoloji & Histoloji',
+                        'front': 'Obstrüksiyona sekonder gelişen mesane divertiküllerinin histolojik yapısında hangi tabaka eksiktir ve bunun klinik sonucu nedir?',
+                        'back': 'Muskularis propria (gerçek kas tabakası) eksiktir; divertikül yalnızca mukoza ve adventisyadan oluşur. Bu nedenle aktif kasılamaz, idrar göllenir, taş ve inatçı enfeksiyon odağı olur.',
+                        'hint': 'Düz kas tabakası yoktur (psödodivertikül)...'
+                    },
+                    {
+                        'id': 'uro-2-2',
+                        'category': 'Patofizyoloji',
+                        'front': 'Uzun süreli obstrüksiyonda mesane duvarında kompliyans kaybına ve kalıcı sertleşmeye yol açan kollajen tipi hangisidir?',
+                        'back': 'Tip 3 Kollajen birikimidir. Düz kas lifleri arasında sentezlenerek geri dönüşümsüz interstisiyel fibrozise ve miyojenik dekompansasyona yol açar.',
+                        'hint': 'Tip 3 kollajen (fibrozis)...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Tıkanıklık Proksimalinde Basınç Artışı', 'desc': 'Obstrüksiyonun hemen proksimalinde intraluminal hidrostatik basınç katlanarak artar. Bowman aralığı basıncı yükselir ve net filtrasyon basıncı düşer (GFR azalır).'},
+                    {'title': 'Mesane Hipertrofisi & Trabekülasyon', 'desc': 'Basınca karşı çalışan detrüsör kas lifleri kompanzasyon amacıyla hipertrofiye uğrar. Kas demetleri kalınlaşır ve sistoskopide trabeküle mesane görünümü oluşur.'},
+                    {'title': 'Tip 3 Kollajen Artışı & Fibrozis', 'desc': 'Basınç uzun süre devam ederse düz kas lifleri arasında tip 3 kollajen birikimi (fibrozis) başlar. Mesane kompliyansı ve elastikiyeti kalıcı olarak kaybolur.'},
+                    {'title': 'Divertikül & Rüptür Riski', 'desc': 'Trabeküller arasından mukoza dışarı fıtıklaşarak psödodivertikül oluşturur (gerçek kas tabakası içermez). Atonik mesane ve perforasyon riski doğar.'}
+                ],
+                'table': {
+                    'title': 'Obstrüksiyonun Evreleri & Patofizyolojik Yanıt',
+                    'headers': ['Evre', 'Mesane / Renal Yanıt', 'Histolojik Değişiklik', 'Klinik Belirti'],
+                    'rows': [
+                        ['Erken Kompanzasyon', 'Detrüsör hipertrofisi, intrarenal basınç artışı', 'Düz kas hücre hipertrofisi', 'İşeme güçlüğü, pollaküri, tazyik azalması'],
+                        ['Dekompanzasyon', 'Trabekülasyon, psödodivertiküller', 'Tip 3 kollajen birikimi, interstisiyel fibrozis', 'Rezidü idrar artışı, taşma inkontinansı'],
+                        ['İleri Evre (Son Dönem)', 'Hidronefroz, tübüler atrofi, VUR gelişimi', 'Glomerüloskleroz, kalıcı nefron kaybı', 'Kronik böbrek yetmezliği, üremi, hipertansiyon']
+                    ]
+                },
+                'spotPearls': [
+                    'Mesane divertikülleri muskularis propria katmanı içermez; sadece mukoza ve adventisyadan oluştuğu için tam boşalamaz ve enfeksiyon/taş odağı olur.',
+                    'Vezikoüreteral Reflü (VUR): Mesane içi yüksek basınç trigon anti-reflü mekanizmasını bozarak idrarın geriye kaçmasına ve pyelonefrite neden olur.',
+                    'Dekompresyon sonrası post-obstrüktif diürez gelişebilir; masif sıvı-elektrolit kaybına karşı hasta yakın izlenmelidir.'
+                ],
+                'keywords': ['kollajen', 'trabekülasyon', 'divertikül', 'reflü', 'gfr']
+            },
+            {
+                'title': 'Pediatrik Ürolojik Aciller: Fimozis vs Parafimozis',
+                'badge': 'KLİNİK AYIRICI TANI',
+                'badgeColor': 'rose',
+                'start': '14:00', 'end': '30:00',
+                'note': 'Hoca parafimozisin acil bir durum olduğunu, venöz konjesyon ve nekroz yapabileceğini amfide özellikle çizdi.',
+                'synthesisNarrative': 'Fimozis ve parafimozis klinik stajlarda ve kurul sınavlarında en sık karıştırılan iki tablodur. Fimoziste prepusyum geriye çekilemez; fizyolojik olarak 3 yaşına kadar normal kabul edilir ve kan dolaşımı bozulmadığı için acil bir müdahale gerektirmez. Ancak Parafimozis kesin bir ÜROLOJİK ACİLDİR! Geriye çekilen dar sünnet derisi sulkus korona arkasında sıkışıp glans penis üzerine tekrar örtülemediğinde, boğucu halka önce venöz ve lenfatik dönüşü bloke eder. Glansta oluşan masif ödem arteriyel perfüzyonu durdurur ve saatler içinde glans penis gangreni ve doku nekrozu gelişir.',
+                'flashcards': [
+                    {
+                        'id': 'uro-3-1',
+                        'category': 'Acil Tıp & Üroloji',
+                        'front': 'Fimozis ile Parafimozis arasındaki en hayati patofizyolojik fark nedir ve hangisi cerrahi acildir?',
+                        'back': '• PARAFİMOZİS ACİLDİR: Sünnet derisinin boğulması sonucu venöz konjesyon -> arteriyel iskemi -> glans penis gangreni riski doğurur. Derhal redükte edilmelidir.\n• FİMOZİS: Deri geriye çekilemez ancak dolaşım sağlamdır; elektif izlenir, acil değildir.',
+                        'hint': 'Parafimoziste boğulma ve gangren riski vardır...'
+                    },
+                    {
+                        'id': 'uro-3-2',
+                        'category': 'Klinik Önlem',
+                        'front': 'Hastanede yatan erişkin veya çocuk hastada idrar sondası takıldıktan sonra unutulmaması gereken kritik manevra nedir?',
+                        'back': 'Sonda takılırken geriye çekilen sünnet derisi (prepusyum) işlem biter bitmez mutlaka tekrar glans penis üzerine ÖNE DOĞRU ÇEKİLMELİDİR. Unutulursa iyatrojenik parafimozis ve penis nekrozu gelişir.',
+                        'hint': 'Sünnet derisini tekrar öne örtmek...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Fimozis Tanımı & Yönetimi', 'desc': 'Sünnet derisinin (prepusyum) glans penis üzerinden geriye çekilememesidir. Fizyolojik fimozis ilk 3 yaşta normaldir; balonlaşarak işeme veya enfeksiyon yoksa acil cerrahi gerekmez.'},
+                    {'title': 'Parafimozis (Ürolojik Acil!)', 'desc': 'Geriye çekilen dar sünnet derisinin sulkus korona arkasında sıkışıp glans penis üzerine tekrar ilerletilememesidir.'},
+                    {'title': 'Parafimozis Patofizyolojisi', 'desc': 'Sıkışma bandı önce venöz ve lenfatik drenajı tıkar -> Glansta masif ödem gelişir -> Arteriyel perfüzyon durur -> Glans peniste gangren ve nekroz riski oluşur.'},
+                    {'title': 'Acil Müdahale Protokolü', 'desc': 'Ödem manuel kompresyonla azaltılıp sünnet derisi öne redükte edilir. Başarısız olunursa dorsal yarık (slitting) veya acil sünnet yapılır.'}
+                ],
+                'table': {
+                    'title': 'Fimozis ve Parafimozis Karşılaştırmalı Tablosu',
+                    'headers': ['Özellik', 'Fimozis', 'Parafimozis (ACİL)'],
+                    'rows': [
+                        ['Tanım', 'Prepusyumun geriye çekilememesi', 'Geriye çekilen prepusyumun öne getirilememesi'],
+                        ['Lokalizasyon', 'Glans penis prepusyum altında kapalı', 'Sünnet derisi sulkus koronaryusta boğulmuş'],
+                        ['Dolaşım Bozukluğu', 'Yok (kan akımı normal)', 'Önce venöz konjesyon, sonra arteriyel iskemi'],
+                        ['Tedavi Yaklaşımı', 'Topikal steroid veya elektif sünnet', 'Acil manuel redüksiyon / Acil dorsal slit']
+                    ]
+                },
+                'spotPearls': [
+                    'Parafimozis ürolojik bir acildir; saatler içinde glans penis nekrozu gelişebileceği için derhal redükte edilmelidir.',
+                    'Fizyolojik fimoziste zorlayıcı retraksiyon yapılmamalıdır; mikro-yırtıklar sekonder sikatrisyel fimozise yol açar.',
+                    'Üretra kateterizasyonu sonrası sünnet derisi mutlaka tekrar glans üzerine örtülmelidir (hastane kaynaklı parafimozis önlenir).'
+                ],
+                'keywords': ['fimozis', 'parafimozis', 'glans penis', 'sünnet', 'ürolojik acil']
+            }
+        ]
+    },
+    'Urolitiyazis_Patofizyolojisi_Transkript.md': {
+        'shortTitle': 'Ürolitiyazis Patofizyolojisi',
+        'discipline': 'Üroloji',
+        'committee': 'Kurul 3 - Ürogenital Sistem',
+        'instructor': 'Prof. Dr. Hakkı Uğur Özok',
+        'themeColor': 'amber',
+        'slides': [
+            {
+                'title': 'Taş Oluşum Mekanizmaları & Süpersatürasyon Teorisi',
+                'badge': 'PATOFİZYOLOJİ',
+                'badgeColor': 'amber',
+                'start': '00:00', 'end': '06:00',
+                'note': 'Hoca süpersatürasyon indeksi, Randall plakları ve nükleasyon basamaklarını ayrıntılandırdı.',
+                'synthesisNarrative': 'Ürolitiyazis gelişiminde ilk ve vazgeçilmez adım idrardaki kristalize olabilecek minerallerin çözünürlük sınırını aşarak aşırı doymuş hale gelmesidir (Süpersatürasyon). Amfide hocamızın özellikle vurguladığı Randall Plakları teorisine göre: Kalsiyum oksalat taşlarının büyük çoğunluğu, renal papillalardaki bazal membranda biriken kalsiyum fosfat plakları üzerinde heterojen nükleasyonla büyür. İdrarda bu çökelmeyi engelleyen doğal inhibitörlerin en güçlüsü ise SİTRAT\'tır; sitrat kalsiyumu bağlayarak iyonize kalsiyum miktarını düşürür ve taş oluşumunu engeller.',
+                'flashcards': [
+                    {
+                        'id': 'urolit-1-1',
+                        'category': 'Biyokimya & Patofizyoloji',
+                        'front': 'İdrarda kalsiyum kristalleri oluşumunu ve kümeleşmesini engelleyen en güçlü doğal organik inhibitör molekül hangisidir?',
+                        'back': 'SİTRAT\'tır. Kalsiyum ile çözünür kompleks oluşturarak iyonize serbest kalsiyum konsantrasyonunu düşürür. Hipositratüri kalsiyum taşı hastalarında en sık görülen metabolik bozukluktur.',
+                        'hint': 'Organik anyon, potasyum tuzuyla tedavide verilir...'
+                    },
+                    {
+                        'id': 'urolit-1-2',
+                        'category': 'Teori & Histoloji',
+                        'front': 'Randall Plakları nedir, hangi yapıdadır ve hangi taşların büyümesine zemin hazırlar?',
+                        'back': 'Renal medüller papillalarda bazal membranda biriken KALSİYUM FOSFAT birikintileridir. Kalsiyum oksalat taşları bu plaklar üzerinde heterojen nükleasyon ile çekirdeklenerek büyür.',
+                        'hint': 'Papilladaki kalsiyum fosfat plakları...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Süpersatürasyon Prensibi', 'desc': 'İdrarda kristalize olabilecek madde konsantrasyonunun (kalsiyum, oksalat, ürik asit) çözünürlük katsayısını aşması taş oluşumunun vazgeçilmez ilk adımıdır.'},
+                    {'title': 'Nükleasyon Aşaması', 'desc': 'Homojen nükleasyon (aynı kristallerin birleşmesi) veya heterojen nükleasyon (hücre döküntüsü, epitel veya başka bir kristal çekirdeği üzerine birikim) ile mikrokristaller doğar.'},
+                    {'title': 'Randall Plakları Hipotezi', 'desc': 'Kalsiyum oksalat taşlarının çoğu renal papillalardaki bazal membranda biriken kalsiyum fosfat (Randall plağı) odakları üzerinde heterojen nükleasyonla büyür.'},
+                    {'title': 'İnhibitör Eksikliği', 'desc': 'Normal idrarda kristalleşmeyi engelleyen sitrat, magnezyum, pirofosfat, nefrokalsin ve Tamm-Horsfall proteini düzeylerinin azalması taş oluşumunu tetikler.'}
+                ],
+                'table': {
+                    'title': 'İdrardaki Kristalleşme İnhibitörleri ve Rolleri',
+                    'headers': ['İnhibitör Molekül', 'Kimyasal Yapı', 'Etki Mekanizması', 'Klinik Önemi'],
+                    'rows': [
+                        ['Sitrat', 'Organik anyon', 'Kalsiyum ile çözünür kompleks yapar, iyonize Ca\'u bağlar', 'Hipositratüri kalsiyum taşlarının en sık nedenidir'],
+                        ['Magnezyum', 'İki değerlikli katyon', 'Oksalat ile bağlanarak kalsiyum oksalat çökelmesini önler', 'Diyetle Mg alımı taş riskini azaltır'],
+                        ['Pirofosfat', 'İnorganik polifosfat', 'Kalsiyum fosfat kristal büyümesini bloke eder', 'İdrar konsantrasyonuyla doğru orantılı koruma sağlar'],
+                        ['Tamm-Horsfall Proteini', 'Glikoprotein', 'Kristal agregasyonunu (kümeleşmesini) engeller', 'Tübüler fonksiyon bozukluğunda etkinliği düşer']
+                    ]
+                },
+                'spotPearls': [
+                    'İdrarda en güçlü doğal kristalleşme inhibitörü SİTRAT\'tır; hipositratüri kalsiyum taşı riskini katlar.',
+                    'Düşük idrar hacmi (günlük <2 litre) süpersatürasyonu artıran en yaygın değiştirilebilir risk faktörüdür.',
+                    'Randall plakları kalsiyum fosfat yapısında olup kalsiyum oksalat taşlarına zemin hazırlar.'
+                ],
+                'keywords': ['süpersatürasyon', 'randall', 'nükleasyon', 'sitrat', 'oksalat']
+            },
+            {
+                'title': 'Taş Çeşitleri, Radyoopasite & İdrar pH İlişkisi',
+                'badge': 'SINAV TABLOSU',
+                'badgeColor': 'rose',
+                'start': '06:00', 'end': '15:00',
+                'note': 'Hoca hangi taşın asidik hangisinin alkali idrarda oluştuğunu ve DÜSG radyoopasitesini sınavda kesin soracağını belirtti.',
+                'synthesisNarrative': 'Kurul sınavlarının en klasik soruları taş tiplerinin röntgen görünürlüğü ve pH tercihidir. Ürik Asit Taşları kuvvetli asidik idrarda (pH <5.5) çöker; DÜSG filminde kesinlikle GÖRÜNMEZ (Radyolusenttir), ancak kontrassız BT\'de net seçilir. En büyük avantajı idrar potasyum sitrat ile alkalileştirildiğinde (pH >6.5) medikal olarak eritilebilmesidir. Strüvit Taşları ise üreaz pozitif bakterilerin (Proteus mirabilis) üreyi parçalamasıyla aşırı alkali idrarda (pH >7.2) oluşur ve tüm toplayıcı sistemi dolduran dev geyik boynuzu (staghorn) taşları yapar. Sistin taşları ise otozomal resesif geçişli sistinüride görülür ve mikroskopide altıgen (hekzagonal) kristaller içerir.',
+                'flashcards': [
+                    {
+                        'id': 'urolit-2-1',
+                        'category': 'Görüntüleme & Sınav',
+                        'front': 'DÜSG filminde görünmeyen (radyolusent) ve idrar alkalileştirmesiyle ameliyatsız eritilebilen taş cinsi hangisidir?',
+                        'back': 'Ürik Asit Taşıdır. DÜSG\'de radyoopasite vermez (radyolusenttir), tanısı kontrassız BT ile konur. İdrar pH\'sı >6.5 yapılarak (potasyum sitrat / sodyum bikarbonat) medikal olarak çözülebilir.',
+                        'hint': 'Gut hastalığı, asidik idrar (pH <5.5)...'
+                    },
+                    {
+                        'id': 'urolit-2-2',
+                        'category': 'Mikrobiyoloji & Taş',
+                        'front': 'Strüvit (Enfeksiyon) taşlarının patogenezinde hangi enzim şarttır ve en sık hangi bakteri sorumludur?',
+                        'back': 'ÜREAZ enzimi şarttır (üreyi amonyak ve CO2\'ye yıkarak idrarı alkali pH >7.2 yapar). En sık sorumlu patojen Proteus mirabilis\'tir. (E. coli üreaz üretmez, strüvit taşı yapmaz!)',
+                        'hint': 'Proteus, üreaz pozitif, magnezyum amonyum fosfat...'
+                    },
+                    {
+                        'id': 'urolit-2-3',
+                        'category': 'Genetik & Kristal',
+                        'front': 'İdrar mikroskopisinde benzersiz "Altıgen (Hekzagonal)" kristaller görülen taş tipi ve tarama testi nedir?',
+                        'back': 'SİSTİN Taşıdır (Otozomal resesif sistinüri transport defekti). İdrar taramasında Sodyum Siyanür Nitroprussid testi mor-kırmızı renk vererek tanıyı koydurur.',
+                        'hint': 'Altıgen kristal, nitroprussid testi...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Kalsiyum Oksalat (%70-80)', 'desc': 'En sık görülen taş tipidir. İdrar pH\'sından bağımsızdır ancak hafif asidik-nötr pH\'da çöker. Radyoopak (DÜSG\'de beyaz) görünür. Zarf veya dambıl kristaller.'},
+                    {'title': 'Ürik Asit (%5-10)', 'desc': 'Kuvvetli asidik idrarda (pH <5.5) oluşur. DÜSG\'de GÖRÜNMEZ (Radyolusenttir!), tanıda kontrassız BT şarttır. İdrarı alkalileştirerek (potasyum sitrat) eritilebilir!'},
+                    {'title': 'Strüvit / Enfeksiyon Taşları (%5-15)', 'desc': 'Magnezyum Amonyum Fosfat taşlarıdır. Üreaz pozitif bakteriler (Proteus, Klebsiella) üreyi parçalayarak amonyak ve alkali pH (>7.2) üretir. Geyik boynuzu (staghorn) taşlar.'},
+                    {'title': 'Sistin Taşları (%1-2)', 'desc': 'Otozomal resesif sistinüri (COLA: sistin, ornitin, lizin, arjinin transport defekti). Hafif radyoopak (buzlu cam), tipik hekzagonal (altıgen) kristaller.'}
+                ],
+                'table': {
+                    'title': 'Üriner Taşların Ayırıcı Özellikleri',
+                    'headers': ['Taş Cinsi', 'Görülme Sıklığı', 'DÜSG Radyoopasitesi', 'İdrar pH Tercihi', 'Kristal Morfolojisi'],
+                    'rows': [
+                        ['Kalsiyum Oksalat', '%70 - 80', 'Radyoopak (Çok belirgin)', 'pH 5.5 - 6.5 (Geniş)', 'Zarf / Dambıl şekilli'],
+                        ['Kalsiyum Fosfat', '%5 - 10', 'Radyoopak (Çok yoğun)', 'Alkali (pH > 6.5)', 'Prizmatik / Amorf kama'],
+                        ['Ürik Asit', '%5 - 10', 'RADYOLUSENT (DÜSG negatif)', 'Asidik (pH < 5.5)', 'Baklava dilimi / Rozet'],
+                        ['Strüvit (Enfeksiyon)', '%5 - 15', 'Orta Radyoopak', 'Belirgin Alkali (pH > 7.2)', 'Tabut kapağı kristali'],
+                        ['Sistin', '%1 - 2', 'Hafif Radyoopak (Buzlu cam)', 'Asidik (pH < 6.0)', 'Benzersiz Altıgen (Hekzagonal)']
+                    ]
+                },
+                'spotPearls': [
+                    'Ürik asit taşları DÜSG\'de görülmez (radyolusent), ancak kontrassız BT\'de net izlenir ve idrar alkalileştirmesiyle (pH >6.5) medikal olarak eritilebilir.',
+                    'Strüvit taşlarının oluşması için ÜREAZ pozitif mikroorganizma (en sık Proteus mirabilis) şarttır; E. coli üreaz üretmez!',
+                    'Sistinüri tanısında idrarda sodyum siyanür nitroprussid testi mor-kırmızı renk vererek pozitiftir.'
+                ],
+                'keywords': ['kalsiyum oksalat', 'ürik asit', 'strüvit', 'sistin', 'radyolusent']
+            },
+            {
+                'title': 'Klinik Başvuru, Tanı & Acil Girişim Endikasyonları',
+                'badge': 'KLİNİK YAKLAŞIM',
+                'badgeColor': 'emerald',
+                'start': '15:00', 'end': '25:00',
+                'note': 'Hoca taş hastasında hangi durumlarda acil cerrahi dekompresyon (JJ stent / nefrostomi) gerektiğini açıkladı.',
+                'synthesisNarrative': 'Renal kolik ağrısı, renal pelvis ve kapsülün gerilmesine bağlı ani başlayan, dalgalar halinde gelen ve pozisyon değiştirmekle hafiflemeyen en şiddetli acil tablolardandır. Tanıda %99 duyarlılık ve özgüllükle altın standart yöntem Kontrassız Düşük Doz Helikal BT\'dir. Amfide hocamızın hayati önemle vurguladığı kırmızı bayrak: Tıkalı bir böbrekte ateş ve enfeksiyon bulgusu varsa bu durum ÜROLOJİK ACİLDİR! Durgun idrar piyonefroza ve dakikalar içinde ürosepsise yol açar; hasta derhal acil Double-J (JJ) stent veya perkütan nefrostomi ile dekomprese edilmelidir.',
+                'flashcards': [
+                    {
+                        'id': 'urolit-3-1',
+                        'category': 'Acil Endikasyon',
+                        'front': 'Üriner sistem taş hastalığında hastayı saatler içinde üroseptik şoka sokabilen ve derhal cerrahi dekompresyon gerektiren acil durum nedir?',
+                        'back': 'Obstrüksiyon (Tıkanıklık) zemininde gelişen İdrar Yolu Enfeksiyonu / Ateş / Pyonefroz varlığıdır. Derhal acil Double-J (JJ) Stent veya Perkütan Nefrostomi ile idrar drenajı sağlanmalıdır.',
+                        'hint': 'Tıkanıklık + Ateş = Ürolojik Acil...'
+                    },
+                    {
+                        'id': 'urolit-3-2',
+                        'category': 'Farmakoloji',
+                        'front': 'Distal üreter taşlarında (5-10 mm) spontan taş düşüşünü artırmak için kullanılan Medikal Expulsif Tedavide (MET) ilk tercih ilaç sınıfı nedir?',
+                        'back': 'Alfa-1 Adrenerjik Reseptör Blokerleridir (Örn: Tamsulosin). Distal üreter ve mesane boynundaki düz kas spazmını çözerek lümeni genişletir ve düşme hızını artırır.',
+                        'hint': 'Tamsulosin, alfa bloker...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Renal Kolik Kliniği', 'desc': 'Kapsül gerilmesine bağlı ani başlayan, dalgalar halinde gelen, pozisyonla rahatlamayan şiddetli lomber ağrı. Ağrı üreter boyunca ipsilateral kasığa ve skrotum/labiuma yayılır.'},
+                    {'title': 'Altın Standart Görüntüleme', 'desc': 'Kontrassız Düşük Doz Helikal Bilgisayarlı Tomografi (BT) %99 duyarlılıkla altın standarttır. Taşın boyutu, dansitesi (Hounsfield ünitesi) ve cilt-taş mesafesini verir.'},
+                    {'title': 'Acil Dekompresyon Endikasyonları (Hayati!)', 'desc': '1. Tıkanıklık zemininde enfeksiyon / pyonefroz (ürosepsis riski!), 2. Tek böbrekli hastada tıkanıklık, 3. İnatçı refrakter ağrı ve bulantı-kusma, 4. Akut böbrek yetmezliği.'},
+                    {'title': 'Medikal Expulsif Tedavi (MET)', 'desc': '<5 mm taşların %80\'i kendiliğinden düşer. 5-10 mm distal üreter taşlarında alfa blokerler (Tamsulosin) distal üreter tonusunu gevşeterek düşmeyi kolaylaştırır.'}
+                ],
+                'table': {
+                    'title': 'Üreter Taşlarında Boyuta ve Lokalizasyona Göre Tedavi',
+                    'headers': ['Taş Boyutu', 'Yerleşim', 'İlk Tercih Tedavi', 'Başarı Oranı'],
+                    'rows': [
+                        ['< 5 mm', 'Distal üreter', 'Konservatif izlem + Hidrasyon + NSAİİ', '%80 - 90 Spontan pasaj'],
+                        ['5 - 10 mm', 'Distal üreter', 'Medikal Expulsif Tedavi (Tamsulosin) / URS', '%60 - 75 Medikal pasaj'],
+                        ['> 10 mm', 'Proksimal üreter / Böbrek', 'ESWL / Retrograd İntrarenal Cerrahi (RİRC)', 'Girişimsel müdahale şart'],
+                        ['Tıkalı + Enfekte', 'Herhangi bir seviye', 'ACİL Double-J (JJ) Stent veya Perkütan Nefrostomi', 'Hayat kurtarıcı dekompresyon']
+                    ]
+                },
+                'spotPearls': [
+                    'Tıkanıklık + Ateş + Enfeksiyon varlığı ÜROLOJİK ACİLDİR; derhal acil JJ stent veya nefrostomi ile dekompresyon yapılmalıdır, aksi halde septik şok kaçınılmazdır!',
+                    'Gebelikte ilk tercih görüntüleme yöntemi Ultrasonografidir (radyasyonsuz).',
+                    'Ağrı tedavisinde ilk tercih NSAİİ\'lerdir (diklofenak/ketorolak); çünkü glomerüler filtrasyonu azaltarak pelvis içi basıncı düşürür.'
+                ],
+                'keywords': ['renal kolik', 'bt', 'jj stent', 'tamsulosin', 'ürosepsis']
+            }
+        ]
+    },
+    'Ailesel_Akdeniz_Atesi__FMF__ve_Patofizyolojisi_Transkript.md': {
+        'shortTitle': 'FMF Patofizyolojisi',
+        'discipline': 'Tıbbi Patoloji',
+        'committee': 'Kurul 3 - Sindirim ve Dolaşım Sistemi Patolojisi',
+        'instructor': 'Uzm. Dr. Murat Ayberk Aytemiz',
+        'themeColor': 'indigo',
+        'slides': [
+            {
+                'title': 'FMF Genetiği, MEFV Mutasyonu & Pirin Proteini',
+                'badge': 'GENETİK MEKANİZMA',
+                'badgeColor': 'indigo',
+                'start': '00:00', 'end': '10:00',
+                'note': 'Hoca MEFV geni mutasyonunu (16p13.3), pirin disfonksiyonunu ve otozomal resesif kalıtımı sordu.',
+                'synthesisNarrative': 'Ailesel Akdeniz Ateşi (FMF), 16. kromozomun kısa kolunda (16p13.3) yerleşmiş MEFV genindeki mutasyonlarla kalıtılan otozomal resesif bir ot флаmatuvar hastalıktır. Normalde nötrofil ve monositlerde üretilen "pirin" (marenostrin) proteini inflamazom yolağının doğal denetleyicisidir. MEFV mutasyonunda pirin defektif kalır; fren mekanizması ortadan kalkınca NLRP3 inflamazomu aşırı aktive olur. Sonuçta aktif kaspaz-1 enzimi aralıksız şekilde İnterlökin-1 beta (IL-1β) salgılatarak serozal yüzeylere (periton, plevra, sinovya) nötrofil hücumuna ve steril inflamasyona neden olur.',
+                'flashcards': [
+                    {
+                        'id': 'fmf-1-1',
+                        'category': 'Genetik & Biyoloji',
+                        'front': 'FMF hastalığına neden olan gen mutasyonu ve bu genin kodladığı protein hangisidir?',
+                        'back': '• Gen: 16p13.3 bölgesinde yer alan MEFV genidir (Otozomal Resesif kalıtım).\n• Protein: Pirin (Marenostrin) proteinidir.',
+                        'hint': '16. kromozom, MEFV geni, pirin proteini...'
+                    },
+                    {
+                        'id': 'fmf-1-2',
+                        'category': 'İmmünoloji & Patogenez',
+                        'front': 'Pirin proteininin kontrolü kaybetmesi sonucu kontrolsüzce salınarak FMF ataklarını başlatan temel proinflamatuar sitokin hangisidir?',
+                        'back': 'İnterlökin-1 beta (IL-1β)\'dır. Kaspaz-1 aktivasyonuyla pro-IL-1β aktifleşir ve nötrofillerin serozal dokulara göç etmesine neden olur.',
+                        'hint': 'IL-1 beta (Tedavide anakinra hedeflenir)...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Genetik Geçiş ve Lokalizasyon', 'desc': 'Ailesel Akdeniz Ateşi (FMF), 16. kromozomun kısa kolunda (16p13.3) yer alan MEFV genindeki mutasyonlar sonucu ortaya çıkan otozomal resesif bir hastalıktır.'},
+                    {'title': 'Pirin (Marenostrin) Proteini', 'desc': 'MEFV geni miyeloid hücrelerde eksprese edilen "pirin" (veya marenostrin) proteinini kodlar. Pirin, intrasellüler inflamatuar yanıtın doğal fren mekanizmasıdır.'},
+                    {'title': 'İnflamazom Aktivasyonu', 'desc': 'Mutasyona uğramış pirin, NLRP3 inflamazom kompleksini inhibe edemez. Kaspaz-1 enzimi aşırı aktive olarak pro-IL-1β\'yı aktif IL-1β\'ya dönüştürür.'},
+                    {'title': 'Nötrofil Kemotaksisi', 'desc': 'Durdurulamayan IL-1β salınımı, nötrofillerin masif şekilde serozal yüzeylere (periton, plevra, sinovya) göç etmesine ve akut steril inflamasyona neden olur.'}
+                ],
+                'table': {
+                    'title': 'En Sık Görülen MEFV Gen Mutasyonları & Klinik Ağırlık',
+                    'headers': ['Mutasyon', 'Ekzon', 'Fenotip / Ağır Seyir Riski', 'Amiloidoz Gelişme Riski'],
+                    'rows': [
+                        ['M694V', 'Ekzon 10', 'En ağır klinik, erken başlangıç, artrit sık', 'Çok Yüksek (Homozigot olgularda en yüksek)'],
+                        ['V726A', 'Ekzon 10', 'Orta şiddette ataklar, geç başlangıç', 'Düşük - Orta'],
+                        ['M680I', 'Ekzon 10', 'Orta - Ağır seyir, ateş ön planda', 'Yüksek'],
+                        ['E148Q', 'Ekzon 2', 'Hafif klinik veya asemptomatik taşıyıcılık', 'Çok Düşük']
+                    ]
+                },
+                'spotPearls': [
+                    'FMF olgularının %90\'ında ilk atak 20 yaşından önce ortaya çıkar.',
+                    'M694V homozigot mutasyonu olan hastalar amiloidoz ve kronik böbrek yetmezliği açısından en yüksek risk altındadır.',
+                    'Ataklar genellikle 12-72 saat (1-3 gün) sürer ve sonrasında kendiliğinden tamamen düzelir.'
+                ],
+                'keywords': ['fmf', 'mefv', 'pirin', 'amiloidoz', 'kolşisin', 'il-1']
+            },
+            {
+                'title': 'Klinik Ataklar & Sekonder AA Tipi Amiloidoz',
+                'badge': 'KLİNİK & PATOLOJİ',
+                'badgeColor': 'rose',
+                'start': '10:00', 'end': '30:00',
+                'note': 'Hoca FMF\'in en ölümcül komplikasyonunun AA tipi sistemik amiloidoz ve nefrotik sendrom olduğunu defalarca vurguladı.',
+                'synthesisNarrative': 'FMF klinik tablosu kendini tekrarlayan 1-3 günlük ateş, akut apandisiti taklit eden şiddetli peritonit ve geçici monoartrit ataklarıyla gösterir. FMF artriti geçicidir, asla sekelsiz ve erozyonsuz iyileşir. Hastalığın hayatı tehdit eden en korkutucu komplikasyonu ise SEKONDER AA TİPİ AMİLOİDOZ\'dur. Ataklarda karaciğerden salınan Serum Amiloid A (SAA) proteini parçalanarak böbrek glomerül ve mezangiyumunda birikir; önce asemptomatik proteinüri, ardından nefrotik sendrom ve son evre böbrek yetmezliğine yol açar. Hocamızın amfideki en büyük uyarısı: KOLŞİSİN tedavisi sadece ağrıyı kesmez, amiloidoz gelişimini ve böbrek yetmezliğini önleyen kanıtlanmış tek ajandır ve ömür boyu kesintisiz alınmalıdır.',
+                'flashcards': [
+                    {
+                        'id': 'fmf-2-1',
+                        'category': 'Patoloji & Sınav',
+                        'front': 'FMF\'te amiloidoz gelişimini ve buna bağlı böbrek yetmezliğini engelleyen tek temel ilaç hangisidir?',
+                        'back': 'KOLŞİSİN\'dir. Nötrofil mikrotübül fonksiyonlarını baskılayarak SAA üretimini ve doku birikimini durdurur. Hasta semptomsuz olsa bile amiloidozdan korunmak için ömür boyu kesintisiz kullanmalıdır.',
+                        'hint': 'Mikrotübül inhibitörü, gutta da kullanılır...'
+                    },
+                    {
+                        'id': 'fmf-2-2',
+                        'category': 'Histopatoloji',
+                        'front': 'Amiloidoz doku tanısında kullanılan özel histokimyasal boya ve polarize ışık mikroskobundaki karakteristik görünümü nedir?',
+                        'back': 'KONGO KIRMIZISI (Congo Red) boyası ile boyanır; polarize ışık mikroskobu altında patognomonik "ELMA YEŞİLİ ÇİFT KIRICILIK" (Apple-green birefringence) verir.',
+                        'hint': 'Kongo Kırmızısı boyası ve elma yeşili yansıma...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Atak Özellikleri (Peritonit, Plörit, Artrit)', 'desc': 'Ani başlayan yüksek ateş ve akut batını taklit eden şiddetli karın ağrısı (defans, rebound). Akciğerde batıcı plöritik göğüs ağrısı, diz veya ayak bileğinde non-eroziv monoartrit.'},
+                    {'title': 'Erizipel Benzeri Eritem (EBE)', 'desc': 'Ayak sırtında veya alt bacakta sınırlı, sıcak, ağrılı, eritemli lezyon (FMF için oldukça spesifiktir).'},
+                    {'title': 'Sekonder (AA) Amiloidoz', 'desc': 'Tekrarlayan ataklar sırasında kanda Serum Amiloid A (SAA) düzeyi yüzlerce kat artar. Parçalanan SAA fibrilleri organlarda (en başta böbrek mezangiyumu ve glomerülleri) birikir.'},
+                    {'title': 'Klinik Sonuç: Nefrotik Sendrom', 'desc': 'Böbrekte biriken AA amiloid önce asemptomatik proteinüriye, sonra nefrotik sendroma ve son evrede kronik böbrek yetmezliğine yol açar.'}
+                ],
+                'table': {
+                    'title': 'Tel Hashomer Tanı Kriterleri Sistemi',
+                    'headers': ['Kriter Tipi', 'Bulgular', 'Tanı Kuralları'],
+                    'rows': [
+                        ['Majör Kriterler', '1. Ateşle birlikte peritonit, plörit veya sinovit atakları\n2. Spesifik bir hastalık olmadan AA tipi amiloidoz\n3. Kolşisin tedavisine tam yanıt', '2 Majör Kriter VEYA\n1 Majör + 2 Minör Kriter = KESİN FMF TANISI'],
+                        ['Minör Kriterler', '1. Tekrarlayan ateş atakları\n2. Erizipel benzeri eritem\n3. Birinci derece akrabada FMF öyküsü', 'Destekleyici genetik test mutasyonu tanıyı doğrular']
+                    ]
+                },
+                'spotPearls': [
+                    'Kolşisin, FMF atak sıklığını azaltmanın ötesinde AMİLOİDOZ GELİŞİMİNİ ÖNLEYEN TEK İLAÇTIR; semptomu olmayan hastada dahi ömür boyu kesintisiz kullanılmalıdır!',
+                    'FMF artriti geçicidir, sekelsiz ve erozyonsuz iyileşir (Romatoid artritten en temel farkı budur).',
+                    'Amiloid doku biyopsisinde Kongo Kırmızısı boyası ile polarize ışık mikroskobunda "elma yeşili çift kırıcılık" verir.'
+                ],
+                'keywords': ['amiloidoz', 'kolşisin', 'tel hashomer', 'peritonit', 'erizipel']
+            }
+        ]
+    },
+    'Dismorfolojide_Genetik_Terminoloji_Transkript.md': {
+        'shortTitle': 'Dismorfoloji Terminolojisi',
+        'discipline': 'Tıbbi Genetik',
+        'committee': 'Kurul 3 - Tıbbi Genetik',
+        'instructor': 'Tıbbi Genetik Anabilim Dalı',
+        'themeColor': 'indigo',
+        'slides': [
+            {
+                'title': 'Majör vs Minör Anomaliler & Klinik Yaklaşım',
+                'badge': 'TERMİNOLOJİ',
+                'badgeColor': 'indigo',
+                'start': '00:00', 'end': '10:00',
+                'note': 'Hoca 3 veya daha fazla minör anomali varlığında %90 oranında gizli bir majör anomali eşlik ettiğini sınav sorusu olarak belirtti.',
+                'synthesisNarrative': 'Dismorfoloji, embriyogenez ve fetal gelişimde ortaya çıkan yapısal defektleri inceler. Klinikte karşılaşılan anomaliler majör ve minör olarak ikiye ayrılır: Majör anomali (örn. Fallot tetralojisi, spina bifida), cerrahi veya tıbbi müdahale gerektiren, fonksiyon bozan tablolardır. Minör anomali ise (örn. simian çizgisi, epikantus, klinodaktili) fonksiyonel hasar bırakmayan kozmetik varyasyonlardır. Ancak hocamızın amfideki en büyük uyarısı şudur: Tek başına 1 minör anomali önemsizdir; fakat bir bebekte 3 veya daha fazla minör anomali saptanırsa, %90 ihtimalle eşlik eden gizli bir majör iç organ anomalisi (özellikle konjenital kalp defekti) mevcuttur!',
+                'flashcards': [
+                    {
+                        'id': 'dismorf-1-1',
+                        'category': 'Klinik Karar',
+                        'front': 'Bir yenidoğanda kaç veya daha fazla minör anomali saptandığında gizli bir majör anomali eşlik etme riski %90\'a ulaşır?',
+                        'back': '3 veya daha fazla minör anomali varlığında altta yatan majör konjenital defekt riski %90\'a fırlar; bu bebekler derhal ekokardiyografi ve ileri genetik testlerle taranmalıdır.',
+                        'hint': 'Kritik sayısal eşik: 3 minör anomali kuralı...'
+                    },
+                    {
+                        'id': 'dismorf-1-2',
+                        'category': 'Terminoloji',
+                        'front': 'Simian çizgisi (tek transvers palmar çizgi) tek başına kesin bir kromozomal hastalık tanısı koydurur mu?',
+                        'back': 'HAYIR. Simian çizgisi minör bir anomalidir ve tamamen sağlıklı normal popülasyonun %2-5\'inde de görülebilir. Tek başına patognomonik değildir; ancak Down sendromu gibi trizomilerde sıklığı belirgin artar.',
+                        'hint': 'Normal bireylerde de %2-5 görülebilir...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Dismorfoloji Tanımı', 'desc': 'Embriyogenez ve fetal gelişim sırasında ortaya çıkan yapısal defektleri, sendromik anomalileri ve klinik varyasyonları inceleyen genetik dalıdır.'},
+                    {'title': 'Majör Anomali', 'desc': 'Kişinin yaşam süresini kısaltan, cerrahi onarım gerektiren veya fonksiyonel yetersizlik yaratan yapısal defektlerdir (Örn: Fallot tetralojisi, spina bifida, yarık damak, omfalosel).'},
+                    {'title': 'Minör Anomali', 'desc': 'Tıbbi veya cerrahi müdahale gerektirmeyen, ciddi fonksiyon kaybı yapmayan morfolojik varyasyonlardır (Örn: Epikantus, simian çizgisi, preauriküler sinüs, klinodaktili).'},
+                    {'title': 'Minör Anomalilerin Uyarıcı Rolü', 'desc': 'Tek bir minör anomali toplumda %15 görülür ve önemsizdir. Ancak 3 veya daha fazla minör anomali bulunan yenidoğanda altta yatan majör konjenital defekt riski %90\'a fırlar!'}
+                ],
+                'table': {
+                    'title': 'Majör ve Minör Anomalilerin Ayırıcı Tablosu',
+                    'headers': ['Özellik', 'Majör Anomali', 'Minör Anomali'],
+                    'rows': [
+                        ['Tıbbi / Cerrahi Tedavi', 'ZORUNLU (Hayati tehlike veya sakatlık riski)', 'GEREKMEZ (Kozmetik / varyasyonel)'],
+                        ['Toplumda Görülme Sıklığı', 'Yenidoğanlarda %2 - 3', 'Yenidoğanlarda %15 (Tek başına)'],
+                        ['Örnekler', 'Ventriküler septal defekt (VSD), Anensefali, Renal agenezi', 'Palmar tek çizgi (Simian), Düşük kulak, Epikantus'],
+                        ['Genetik Danışma İhtiyacı', 'Her zaman karyotip / kromozom analizi şart', '3 veya daha fazla ise sendromik araştırma şart']
+                    ]
+                },
+                'spotPearls': [
+                    '3 veya daha fazla minör anomalisi olan her bebekte mutlak suretle majör anomali (özellikle konjenital kalp defekti) taranmalıdır.',
+                    'Simian çizgisi (tek transvers palmar çizgi) normal insanların %2-5\'inde de görülebilir; tek başına tanı koydurmaz.',
+                    'Fasiyal dismorfoloji değerlendirilirken mutlaka anne ve babanın yüz özellikleri de incelenmelidir (ailevi varyasyon ayrımı).'
+                ],
+                'keywords': ['dismorfoloji', 'majör anomali', 'minör anomali', 'simian', 'epikantus']
+            },
+            {
+                'title': 'Mekanizma Sınıflaması: Malformasyon, Deformasyon, Disrupsiyon, Displazi',
+                'badge': 'PATOGENEZ SINAV TABLOSU',
+                'badgeColor': 'rose',
+                'start': '10:00', 'end': '25:00',
+                'note': 'Hoca bu 4 mekanizmanın tanımlarını ve klinik örneklerini kurulda kesin soracağını defalarca vurguladı.',
+                'synthesisNarrative': 'Genetik dismorfolojide gelişimsel bozukluklar 4 temel mekanizmaya dayanır: 1. Malformasyon: Dokunun kendi intrinsik genetik programlama hatasıdır (organ hiç oluşmaz ya da eksik oluşur; örn. VSD, spina bifida). 2. Deformasyon: Başlangıçta tamamen normal olan bir organın ekstrinsik mekanik bası (örn. oligohidramnioza bağlı pes ekinovarus / çarpık ayak) ile şekil değiştirmesidir; mekanik bası kalktığında prognozu en iyi olandır ve düzelebilir. 3. Disrupsiyon: Normal gelişen yapının dışsal yıkıcı bir olayla (amniyotik bant, vasküler iskemi) parçalanıp ampüte edilmesidir; tekrarlama riski yoktur. 4. Displazi: Hücrelerin doku içindeki organizasyon ve histogenez bozukluğudur (örn. FGFR3 mutasyonlu akondroplazi).',
+                'flashcards': [
+                    {
+                        'id': 'dismorf-2-1',
+                        'category': 'Sınav Tanımı',
+                        'front': 'Amniyotik bant sendromunda parmak ampütasyonu hangi dismorfolojik mekanizmanın prototipidir ve tekrarlama riski var mıdır?',
+                        'back': 'DİSRUPSİYON (Disruption) prototipidir. Başlangıçta normal olan ekstremite dışsal amniyotik liflerle boğularak kopmuştur. Genetik bir geçişi yoktur, tekrarlama riski yok denecek kadar azdır.',
+                        'hint': 'Dışsal yıkım mekanizması...'
+                    },
+                    {
+                        'id': 'dismorf-2-2',
+                        'category': 'Mekanizma Ayrımı',
+                        'front': 'Oligohidramnioza bağlı gelişen Potter sekansı ve Pes Ekinovarus (çarpık ayak) hangi mekanizmaya örnektir ve prognozu nasıldır?',
+                        'back': 'DEFORMASYON\'dur. Ekstrinsik mekanik sıkışma sonucu gelişir. Dokunun intrinsik genetik yapısı sağlam olduğu için mekanik güç kalkarsa ve fizyoterapi/alçılama yapılırsa düzelme şansı (prognozu) en yüksektir.',
+                        'hint': 'Mekanik bası = deformasyon...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Malformasyon', 'desc': 'İntrinsik (genetik/dokunun kendi gelişimsel) program bozukluğu sonucu organın veya dokunun hiç oluşmaması ya da eksik oluşmasıdır (Örn: Yarık dudak/damak, spina bifida, konjenital kalp defekti).'},
+                    {'title': 'Deformasyon', 'desc': 'Başlangıçta normal olan bir yapının, mekanik ekstrinsik baskı altında şekil değiştirmesidir (Örn: Oligohidramnioza bağlı pes ekinovarus/çarpık ayak, Potter yüzü, uterin myoma basısı). Genellikle geri dönüşümlüdür!'},
+                    {'title': 'Disrupsiyon', 'desc': 'Normal gelişmekte olan bir dokunun dışsal bir yıkıcı ajan (vasküler oklüzyon, enfeksiyon, amniyotik bant) tarafından parçalanması veya amputasyonudur (Örn: Amniyotik bant sendromunda parmak ampütasyonu).'},
+                    {'title': 'Displazi', 'desc': 'Hücrelerin spesifik bir doku tipi içerisinde anormal organizasyonu veya histogenez bozukluğudur (Örn: Akondroplazi, Osteogenezis imperfekta, ektodermal displazi).'}
+                ],
+                'table': {
+                    'title': 'Dismorfolojik Mekanizma Karşılaştırma Matrisi',
+                    'headers': ['Kavram', 'Olayın Zamanı', 'Temel Sebep', 'Geri Dönüşüm / Prognoz', 'Klasik Örnek'],
+                    'rows': [
+                        ['Malformasyon', 'Erken Organogenez (1-8. hf)', 'İntrinsik / Genetik programlama hatası', 'Kalıcı, cerrahi onarım gerekir', 'Ventriküler Septal Defekt, Meningomiyelosel'],
+                        ['Deformasyon', 'Fetal Dönem (2. ve 3. Trimester)', 'Ekstrinsik mekanik bası (sıkışma)', 'Mekanik güç kalkarsa DÜZELEBİLİR', 'Pes ekinovarus (Oligohidramnioz zemininde)'],
+                        ['Disrupsiyon', 'Herhangi bir fetal dönem', 'Dışsal yıkım / Vasküler olay / Bant', 'Doku kaybı kalıcıdır, onarılamaz', 'Amniyotik bant amputasyonu'],
+                        ['Displazi', 'Gelişim boyunca devam eder', 'Hücresel histogenez defekti (FGFR3 vb.)', 'Tüm hedef dokularda ilerleyicidir', 'Akondroplazi, Tanatoforik displazi']
+                    ]
+                },
+                'spotPearls': [
+                    'Deformasyonların prognozu en iyidir; doğum sonrası fizyoterapi veya alçılamayla normale dönebilir çünkü dokunun intrinsik genetiği sağlamdır.',
+                    'Amniyotik bant sendromu bir DİSRUPSİYON örneğidir; genetik geçiş göstermez, tekrarlama riski yok denecek kadar azdır.',
+                    'Akondroplazi (FGFR3 mutasyonu) tipik bir kıkırdak DİSPLAZİSİ örneğidir.'
+                ],
+                'keywords': ['malformasyon', 'deformasyon', 'disrupsiyon', 'displazi', 'amniyotik bant']
+            }
+        ]
+    },
+    'Izolasyon_Yontemleri_Transkript.md': {
+        'shortTitle': 'İzolasyon Yöntemleri',
+        'discipline': 'Enfeksiyon Hastalıkları',
+        'committee': 'Kurul 3 - Enfeksiyon Hastalıkları',
+        'instructor': 'Enfeksiyon Hastalıkları Anabilim Dalı',
+        'themeColor': 'emerald',
+        'slides': [
+            {
+                'title': 'Standart Önlemler & Bulaş Yoluna Dayalı İzolasyon',
+                'badge': 'HASTANE ENFEKSİYONU',
+                'badgeColor': 'emerald',
+                'start': '00:00', 'end': '10:00',
+                'note': 'Hoca temas, damlacık ve solunum izolasyonunun sembol renklerini ve maske standartlarını sınavda sordu.',
+                'synthesisNarrative': 'Hastane enfeksiyonlarının kontrolünde temel kural: Tanısına bakılmaksızın her hastada "Standart Önlemler" (el hijyeni, eldiven) uygulanır. Bulaş yoluna dayalı önlemler ise 3 kategoriye ayrılır: 1. Temas İzolasyonu (Kırmızı Yıldız): VRE, MRSA ve Clostridioides difficile gibi etkenlerde odaya girerken önlük ve eldiven giyilir. C. difficile sporlarını alkol ÖLDÜREMEZ, eller mutlaka su ve sabunla yıkanmalıdır! 2. Damlacık İzolasyonu (Mavi Çiçek): >5 mikron partiküller için hastaya 1 metre mesafede cerrahi maske takılır (meningokok, influenza). 3. Solunum İzolasyonu (Sarı Yaprak): <5 mikron küçük partiküller havada asılı kaldığı için negatif basınçlı oda ve N95/FFP2 filtreli maske şarttır (Tüberküloz, kızamık, suçiçeği).',
+                'flashcards': [
+                    {
+                        'id': 'izol-1-1',
+                        'category': 'Mikrobiyoloji & Hijyen',
+                        'front': 'Clostridioides difficile enfeksiyonunda el hijyeni için alkollü el antiseptiği neden yetersizdir, ne yapılmalıdır?',
+                        'back': 'Alkollü el antiseptikleri C. difficile SPORLARINI ÖLDÜRMEZ! Sporların mekanik olarak uzaklaştırılması için eller MUTLAKA bol su ve sabunla en az 20 saniye yıkanmalıdır.',
+                        'hint': 'Sporlara alkol etki etmez, su-sabun şart...'
+                    },
+                    {
+                        'id': 'izol-1-2',
+                        'category': 'İzolasyon Sembolü',
+                        'front': 'Akciğer Tüberkülozu, Kızamık ve Suçiçeği olan hastaların oda kapısına hangi renk/sembol asılır ve hangi maske takılır?',
+                        'back': 'SARI YAPRAK (Solunum / Hava Yolu İzolasyonu) asılır. Odaya giren sağlık personeli partikül filtreleyici N95 veya FFP2 maske takmalı ve oda negatif basınçlı olmalıdır.',
+                        'hint': 'Sarı yaprak sembolü, N95/FFP2 maske...'
+                    }
+                ],
+                'bullets': [
+                    {'title': 'Standart Önlemler (Tüm Hastalar İçin)', 'desc': 'Tanısına bakılmaksızın her hastanın kanı, tüm vücut sıvıları (ter hariç), bütünlüğü bozulmuş cilt ve mukozaları potansiyel enfekte kabul edilir. El hijyeni en temel unsurdur.'},
+                    {'title': 'Temas İzolasyonu (Kırmızı Yıldız)', 'desc': 'Direkt temas veya kontamine yüzeyler üzerinden bulaşan etkenler için uygulanır. Önlük ve eldiven odaya girmeden giyilir, çıkarken çıkarılır.'},
+                    {'title': 'Damlacık İzolasyonu (Mavi Çiçek)', 'desc': '>5 mikron boyutundaki büyük partiküller için uygulanır. Bu partiküller havada asılı kalmaz, 1 metre mesafe içinde çöker. Cerrahi (tıbbi) maske takılır.'},
+                    {'title': 'Solunum (Hava Yolu) İzolasyonu (Sarı Yaprak)', 'desc': '<5 mikron boyutundaki küçük partiküller havada uzun süre asılı kalır ve hava akımıyla uzak mesafelere yayılır. Negatif basınçlı oda ve N95 / FFP2 maske zorunludur!'}
+                ],
+                'table': {
+                    'title': 'İzolasyon Tipleri, Renk Kodları & Kişisel Koruyucu Ekipman (KKE)',
+                    'headers': ['İzolasyon Türü', 'Sembol & Renk', 'Partikül Boyutu & Mesafe', 'Gerekli Ekipman & Oda Koşulu', 'Klasik Örnek Etkenler'],
+                    'rows': [
+                        ['Temas İzolasyonu', 'Kırmızı Yıldız ⭐', 'Doğrudan yüzey teması', 'Önlük + Eldiven (Odaya girerken)', 'VRE, MRSA, C. difficile, Çoklu dirençli Acinetobacter'],
+                        ['Damlacık İzolasyonu', 'Mavi Çiçek 🌸', '> 5 mikron (1 metre mesafe)', 'Cerrahi Maske (Hastaya 1 m mesafede)', 'Meningokok menenjiti, İnfluenza, Boğmaca, Kabakulak'],
+                        ['Solunum İzolasyonu', 'Sarı Yaprak 🍁', '< 5 mikron (Tüm oda havası)', 'N95 / FFP2 Maske + Negatif Basınçlı Oda', 'Akciğer Tüberkülozu, Kızamık, Suçiçeği (Varicella)'],
+                        ['Koruyucu Ortam', 'Ters İzolasyon', 'Nötropenik hastayı koruma', 'Pozitif Basınçlı Oda + HEPA Filtre', 'Kemik iliği nakli hastaları, Ağır nötropeni']
+                    ]
+                },
+                'spotPearls': [
+                    'Clostridioides difficile enfeksiyonunda el hijyeni MUTLAKA su ve sabunla yapılmalıdır; alkollü el antiseptikleri sporları ÖLDÜRMEZ!',
+                    'Solunum izolasyonunda (Tüberküloz) cerrahi maske yetersizdir; partikül filtreleyici N95 veya FFP2 maske şarttır.',
+                    'Damlacık izolasyonunda hasta odadan çıkmak zorunda kalırsa cerrahi maske takmalıdır.'
+                ],
+                'keywords': ['temas izolasyonu', 'damlacık', 'solunum', 'n95', 'c difficile']
+            }
+        ]
+    }
+}
+
+def auto_generate_rich_bullets(subset_utts, default_title="Ders Başlığı"):
+    bullets = []
+    candidates = []
+    for u in subset_utts:
+        text = u['text']
+        if len(text) < 35:
+            continue
+        norm = normalize_tr(text)
+        weight = 0
+        if u.get('isHighlighted'):
+            weight += 5
+        for kw in HIGHLIGHT_KEYWORDS:
+            if kw in norm:
+                weight += 2
+        candidates.append((weight, text))
+
+    candidates.sort(reverse=True, key=lambda x: x[0])
+
+    category_labels = [
+        'Klinik Tanım & Patofizyoloji',
+        'Hocanın Amfi & Sınav Uyarısı',
+        'Ayırıcı Tanı & Risk Faktörleri',
+        'Klinik Yaklaşım & Tedavi İlkeleri'
+    ]
+
+    for i, (weight, c_text) in enumerate(candidates[:4]):
+        label = category_labels[i % len(category_labels)]
+        bullets.append({
+            'title': label,
+            'desc': c_text,
+            'isKey': True
+        })
+
+    if not bullets:
+        bullets = [
+            {'title': 'Ders Akışı', 'desc': 'Öğretim üyesi konunun temel patofizyolojik ve klinik esaslarını detaylandırdı.', 'isKey': False}
+        ]
+    return bullets
+
+def auto_generate_flashcards(subset_utts, slide_title):
+    cards = []
+    highlighted = [u for u in subset_utts if u.get('isHighlighted') and len(u['text']) > 30]
+    sample = highlighted[:2] if highlighted else subset_utts[:2]
+
+    for idx, item in enumerate(sample):
+        clean_prompt = item['text'][:120] + ('...' if len(item['text']) > 120 else '')
+        cards.append({
+            'id': f"auto-card-{idx+1}",
+            'category': 'Amfi Hapı',
+            'front': f"{slide_title} konusunda hocanın en çok dikkat çektiği kilit soru nedir?",
+            'back': item['text'],
+            'hint': 'Amfi ses kaydındaki hoca vurgusunu hatırla...'
+        })
+    return cards
+
+def build_deck_for_file(filepath, all_questions):
+    filename = os.path.basename(filepath)
+    parsed = parse_full_transcript(filepath)
+    if not parsed:
+        return None
+
+    curated = CURATED_TOPICS.get(filename)
+
+    utts = parsed['utterances']
+    total_utts = len(utts)
+    max_sec = utts[-1]['seconds'] if utts else 1800
+
+    slides = []
+
+    if curated and 'slides' in curated:
+        short_title = curated['shortTitle']
+        discipline = curated.get('discipline', parsed['discipline'])
+        committee = curated.get('committee', parsed['committee'])
+        instructor = curated.get('instructor', parsed['instructor'])
+        theme_color = curated.get('themeColor', 'indigo')
+
+        for idx, cs in enumerate(curated['slides']):
+            slide_num = idx + 1
+            start_sec = time_to_seconds(cs.get('start', '00:00'))
+            end_sec = time_to_seconds(cs.get('end', '99:99'))
+            if idx == len(curated['slides']) - 1:
+                end_sec = 999999
+
+            sub_utts = slice_utterances_by_time(utts, start_sec, end_sec)
+            chosen_quote = pick_best_quote(sub_utts, cs['bullets'][0]['desc'] if cs['bullets'] else parsed['title'])
+            ts_label = sub_utts[0]['timestamp'] if sub_utts else cs.get('start', '00:00')
+            time_window_str = f"[{ts_label} - {sub_utts[-1]['timestamp'] if sub_utts else cs.get('end', '30:00')}]"
+
+            bullets = cs['bullets']
+            matched_qs = match_questions(cs.get('keywords', [cs['title']]), discipline, all_questions, limit=3)
+
+            slide = {
+                'slideNumber': slide_num,
+                'title': cs['title'],
+                'subtitle': f"{time_window_str} Amfi Ses Kaydı & Ayrıntılı Ders Notu",
+                'timeWindow': time_window_str,
+                'badge': cs['badge'],
+                'badgeColor': cs['badgeColor'],
+                'professorAudioHighlight': {
+                    'timestamp': ts_label,
+                    'quote': chosen_quote,
+                    'emphasisType': 'direct_exam_warning' if 'sınav' in cs.get('note', '').lower() else 'pearl',
+                    'note': cs.get('note', 'Hoca bu zaman aralığında temel klinik mekanizmalar üzerinde durdu.')
+                },
+                'synthesisNarrative': cs.get('synthesisNarrative', ''),
+                'flashcards': cs.get('flashcards', []),
+                'transcriptUtterances': sub_utts,
+                'transcriptUtteranceCount': len(sub_utts),
+                'coreContent': {
+                    'keyBullets': bullets,
+                    'table': cs.get('table'),
+                    'formulaBox': cs.get('formula')
+                },
+                'spotPearls': cs.get('spotPearls', parsed['pearls'][:3]),
+                'relatedQuestions': matched_qs,
+                'aiPromptSuggestions': [
+                    f"{cs['title']} konusunda hocanın amfide en çok vurguladığı sınav püf noktaları nelerdir?",
+                    f"Bu slayttaki mekanizmalardan kurul sınavında gelebilecek 1 adet çoktan seçmeli vaka sorusu hazırla.",
+                    "Ayırıcı tanı kriterlerini ve tuzak noktaları maddeler halinde özetle."
+                ]
+            }
+            slides.append(slide)
+    else:
+        short_title = parsed['title'][:25]
+        discipline = parsed['discipline']
+        committee = parsed['committee']
+        instructor = parsed['instructor']
+        theme_color = 'indigo'
+
+        target_slide_count = 8
+        step_sec = max(180, (max_sec + target_slide_count) // target_slide_count)
+        cur_sec = 0
+        slide_num = 1
+        badge_colors = ['sky', 'indigo', 'emerald', 'amber', 'rose', 'purple']
+
+        while cur_sec <= max_sec:
+            next_sec = cur_sec + step_sec if slide_num < target_slide_count else 999999
+            subset = slice_utterances_by_time(utts, cur_sec, next_sec)
+
+            if subset or slide_num == 1:
+                q = pick_best_quote(subset, f"{parsed['title']} dersi {slide_num}. bölüm anlatımı.")
+                ts_label = subset[0]['timestamp'] if subset else f"{cur_sec//60:02d}:00"
+                end_label = subset[-1]['timestamp'] if subset else f"{next_sec//60:02d}:00"
+                time_window_str = f"[{ts_label} - {end_label}]"
+
+                rich_bullets = auto_generate_rich_bullets(subset, parsed['title'])
+                auto_cards = auto_generate_flashcards(subset, parsed['title'])
+
+                words = []
+                for u in subset:
+                    words.extend([w for w in re.findall(r'\b\w{4,}\b', u['text']) if len(w) > 4])
+                top_words = list(dict.fromkeys(words))[:6]
+
+                matched_qs = match_questions(top_words or [parsed['title']], discipline, all_questions, limit=3)
+
+                synth = f"Bu bölümde öğretim üyemiz {', '.join(top_words[:3]) if top_words else 'temel mekanizmalar'} üzerinde durarak klinik yaklaşımları detaylandırmıştır. Slayt notlarıyla entegre edildiğinde, patofizyolojinin erken tanı ve tedavi protokollerindeki yansımaları öne çıkmaktadır."
+
+                slide = {
+                    'slideNumber': slide_num,
+                    'title': f"{parsed['title']} - Bölüm {slide_num}",
+                    'subtitle': f"{time_window_str} Amfi Ses Kaydı & Ayrıntılı Ders Notu",
+                    'timeWindow': time_window_str,
+                    'badge': 'AMFİ DERS AKIŞI',
+                    'badgeColor': badge_colors[slide_num % len(badge_colors)],
+                    'professorAudioHighlight': {
+                        'timestamp': ts_label,
+                        'quote': q,
+                        'emphasisType': 'pearl',
+                        'note': f"Hoca bu zaman aralığında {', '.join(top_words[:3])} kavramlarını vurguladı."
+                    },
+                    'synthesisNarrative': synth,
+                    'flashcards': auto_cards,
+                    'transcriptUtterances': subset,
+                    'transcriptUtteranceCount': len(subset),
+                    'coreContent': {
+                        'keyBullets': rich_bullets,
+                    },
+                    'spotPearls': parsed['pearls'][slide_num%len(parsed['pearls']):slide_num%len(parsed['pearls'])+3] if parsed['pearls'] else ['Ders mekanizmalarına dikkat edilmelidir.'],
+                    'relatedQuestions': matched_qs,
+                    'aiPromptSuggestions': [
+                        f"{parsed['title']} konusunda hocanın amfide en çok vurguladığı detaylar nelerdir?",
+                        "Bu zaman aralığındaki anlatımdan 1 adet klinik kurul sorusu türet.",
+                        "Tuzak noktalar ve ayırt edici kriterleri açıkla."
+                    ]
+                }
+                slides.append(slide)
+
+            slide_num += 1
+            cur_sec = next_sec
+            if cur_sec >= 999999:
+                break
+
+    clean_slug = re.sub(r'[^a-z0-9]+', '-', normalize_tr(short_title)).strip('-')
+    deck_id = f"learn-{clean_slug}"
+    total_assigned = sum(len(s['transcriptUtterances']) for s in slides)
+    total_matched_qs = sum(len(s['relatedQuestions']) for s in slides)
+
+    deck = {
+        'id': deck_id,
+        'title': parsed['title'],
+        'shortTitle': short_title,
+        'discipline': discipline,
+        'committee': committee,
+        'instructor': instructor,
+        'audioFile': parsed['audioFile'],
+        'audioDuration': f"{max_sec//60} dk",
+        'confidence': '%95 Doğrulandı',
+        'themeColor': theme_color,
+        'matchedNoteId': 'note-general',
+        'matchedNoteTitle': parsed['title'],
+        'overview': parsed['overview'],
+        'highYieldPearls': parsed['pearls'],
+        'totalSlides': len(slides),
+        'matchedPastQuestionsCount': total_matched_qs,
+        'totalUtterancesCount': total_utts,
+        'assignedUtterancesCount': total_assigned,
+        'slides': slides
+    }
+
+    return deck
 
 def build_all_decks():
-    print("Ders notları ve çıkmış sorular yükleniyor...")
+    print("=" * 70)
+    print("AKIL KARTLARI, AKICI SENTEZ & TAM TRANSKRİPT İLE DESTELER DERLENİYOR...")
+    print("=" * 70)
+
     lecture_notes = load_json(LECTURE_NOTES_PATH) or []
     past_questions = load_json(PAST_QUESTIONS_PATH) or []
-    manifest_path = os.path.join(TRANSCRIPTIONS_DIR, 'transcription_manifest.json')
-    manifest = load_json(manifest_path) or {}
+    print(f"Sistemde {len(lecture_notes)} ders notu ve {len(past_questions)} çıkmış soru yüklendi.")
 
-    print(f"Toplam {len(lecture_notes)} ders notu, {len(past_questions)} çıkmış soru mevcut.")
+    all_md_files = sorted(glob.glob(os.path.join(TRANSCRIPTIONS_DIR, '*Transkript.md')))
+    print(f"Toplam {len(all_md_files)} ses transkript dosyası bulundu.")
 
     decks = []
+    for filepath in all_md_files:
+        deck = build_deck_for_file(filepath, past_questions)
+        if deck:
+            decks.append(deck)
+            total_cards = sum(len(s.get('flashcards', [])) for s in deck['slides'])
+            print(f"[{deck['id']}] {deck['title']} -> {deck['totalSlides']} slayt, {total_cards} akıl kartı aktarıldı.")
 
-    # =========================================================================
-    # 1. DECK: ANA ÇOCUK SAĞLIĞI DÜZEYİNİN İZLENMESİ
-    # =========================================================================
-    ac_trans = parse_transcript_file('Ana_Cocuk_Sagligi_Duzeyinin_Izlenmesi_Transkript.md')
-    if ac_trans:
-        deck_id = 'learn-ana-cocuk-sagligi'
-        deck = {
-            'id': deck_id,
-            'title': 'Ana Çocuk Sağlığı Düzeyinin İzlenmesi',
-            'shortTitle': 'Ana Çocuk Sağlığı',
-            'discipline': 'Halk Sağlığı',
-            'committee': 'Kurul 1 - Halk Sağlığı (Dönem 3)',
-            'instructor': 'Doç. Dr. Nergiz Sevinç',
-            'audioFile': 'Halk Sağlığı Anne çocuk Sağlığı İzleme.m4a',
-            'audioDuration': '43.1 dk',
-            'confidence': '%95 Doğrulandı',
-            'themeColor': 'sky',
-            'matchedNoteId': 'note-b825fa7e46',
-            'matchedNoteTitle': '2)Ana çocuk sağ.izleme',
-            'overview': 'Koruyucu hekimlik hizmetlerinde risk altındaki 15-49 yaş kadınlar, gebeler ve bebeklerin periyodik izlemleri, Anne Ölüm Hızı (AÖH), Bebek Ölüm Hızı (BÖH) formülleri ve Doğum Öncesi Bakım (DÖB) protokolleri.',
-            'highYieldPearls': ac_trans['pearls'],
-            'slides': [
-                {
-                    'slideNumber': 1,
-                    'title': 'Koruyucu Hekimlik ve Birinci Öncelikli Risk Grupları',
-                    'subtitle': 'Halk Sağlığı Hedef Kitle Hiyerarşisi',
-                    'badge': 'AMFİ GİRİŞ VURGUSU',
-                    'badgeColor': 'sky',
-                    'professorAudioHighlight': {
-                        'timestamp': '00:39',
-                        'quote': 'Bunlar slaytlarda yok yani benim söylediklerimi dinleyin tamam mı? Bizim birinci basamak koruyucu hekimlikte ilk grubumuzda kimler var? Bebekler ve 15-49 yaş kadın grubu var.',
-                        'emphasisType': 'slide_missing',
-                        'note': 'Hoca slaytta açıkça yazmayan birincil hedef kitlenin (15-49 yaş kadın ve bebekler) amfide bizzat not alınmasını istedi.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Öncelikli Nüfus Dilimleri', 'desc': 'Kendi başına hayatta kalamayan veya bakım verilmediğinde morbidite/mortalite riski en yüksek gruplar.'},
-                            {'title': '15-49 Yaş Doğurgan Çağ Kadınları', 'desc': 'Türkiye nüfusunun %25\'ini, dünya nüfusunun ise %24\'ünü oluşturur.'},
-                            {'title': '0-14 Yaş Çocuk Grubu', 'desc': 'Türkiye nüfusunun %20\'sini teşkil eder ve koruyucu aşı/gelişim takibi zorunludur.'}
-                        ],
-                        'table': {
-                            'title': 'Demografik Öncelik ve Risk Dağılımı',
-                            'headers': ['Hedef Grup', 'Türkiye Nüfus Payı', 'Birincil İzlem Amacı'],
-                            'rows': [
-                                ['0-1 Yaş (Bebek)', '%1.4', 'Aşı takvimi, fenilketonüri/hipotiroidi taraması, büyüme takibi'],
-                                ['15-49 Yaş Kadın', '%25.0', 'DÖB, üreme sağlığı, anemi taraması, aile planlaması'],
-                                ['Gebeler & Lohusalar', 'Dinamik Risk', 'Maternal ve erken neonatal mortalitenin önlenmesi']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Koruyucu hekimlikte en öncelikli risk grubu: Bebekler ve 15-49 yaş doğurganlık çağındaki kadınlardır.',
-                        'Türkiye nüfusunda 15-49 yaş kadın oranı yaklaşık %25, 0-14 yaş çocuk grubu ise %20 civarındadır.'
-                    ],
-                    'relatedQuestions': match_questions(['ana cocuk', 'dogurgan', 'risk grubu', 'koruyucu'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        '15-49 yaş kadın grubunun halk sağlığındaki stratejik önemi nedir?',
-                        'Hoca amfide slaytta olmayan hangi risk gruplarını vurguladı?'
-                    ]
-                },
-                {
-                    'slideNumber': 2,
-                    'title': 'Ülkelerin Kalkınmışlık Göstergesi: Anne ve Bebek Ölüm Hızları',
-                    'subtitle': 'Sağlık Düzeyi ve Gelişmişlik Kriterleri',
-                    'badge': 'SINAV KLASİĞİ',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '03:00',
-                        'quote': 'Bir ülkenin kalkınmışlık düzeyine bakarken en önemli faktörlerden bir tanesi o ülkenin anne ölüm hızı ve bebek ölüm hızı oranlarıdır. Sağlık sistemimiz ne, teknoloji ne, ulaşım ne; hepsini bu iki kriter özetler.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca kalkınmışlık seviyesinin tespitinde GSYİH\'den bile önce AÖH ve BÖH\'e bakıldığının altını çizdi.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Anne Ölüm Hızı (AÖH)', 'desc': 'Sağlık hizmetine erişim, acil obstetrik bakım ve kadın statüsünün en duyarlı barometresidir.'},
-                            {'title': 'Bebek Ölüm Hızı (BÖH)', 'desc': 'Sosyoekonomik durum, beslenme, çevre sağlığı ve birinci basamak etkinliğini yansıtır.'},
-                            {'title': 'Uluslararası Kıyaslama', 'desc': 'Gelişmiş ülkelerde AÖH yüz binde tek haneli iken Sahra altı Afrika\'da yüz binde yüzleri bulmaktadır.'}
-                        ],
-                        'infographic': {
-                            'type': 'metrics',
-                            'items': [
-                                {'label': 'Türkiye AÖH (2023)', 'value': '11.5 / 100.000', 'detail': 'Canlı doğum başına maternal kayıp', 'color': 'rose'},
-                                {'label': 'Türkiye BÖH (2023)', 'value': '10.5 / 1.000', 'detail': 'Canlı doğum başına 1 yaş altı kayıp', 'color': 'sky'},
-                                {'label': 'Hedef', 'value': '< 8 / 100.000', 'detail': 'DSÖ ve Sağlık Bakanlığı vizyonu', 'color': 'emerald'}
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Bir toplumun sağlık ve gelişmişlik düzeyini en iyi yansıtan iki gösterge: Anne Ölüm Hızı ve Bebek Ölüm Hızıdır.',
-                        'Türkiye\'de 2023 verilerine göre AÖH yüz binde 11.5, BÖH binde 10.5 seviyelerindedir.'
-                    ],
-                    'relatedQuestions': match_questions(['bebek olum hizi', 'anne olum hizi', 'kalkinmislik', 'gosterge'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'AÖH ile BÖH arasındaki fark nedir ve neden farklı çarpanlarla (100.000 vs 1.000) hesaplanır?',
-                        'Bir ülkenin sağlık düzeyini değerlendirmede bu göstergelerin rolü nedir?'
-                    ]
-                },
-                {
-                    'slideNumber': 3,
-                    'title': 'Doğum Öncesi Bakım (DÖB) Altın Standartları',
-                    'subtitle': 'Yeterli Bakım Sayılma Kriterleri ve İzlem Takvimi',
-                    'badge': 'PROTOKOL & MEVZUAT',
-                    'badgeColor': 'emerald',
-                    'professorAudioHighlight': {
-                        'timestamp': '05:02',
-                        'quote': 'Bir gebenin yeterli doğum öncesi bakım almıştır diyebilmemiz için kriterlerimiz var: İlk izlem mutlaka ilk 3 ay içinde olmalı, gebelik boyunca en az 4 kez izlenmeli ve tecrübeli sağlık personeli (ebe/hekim) tarafından yapılmalı.',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca "DÖB yeterlilik kriterleri"nin sınavda soru olarak gelebileceğini özellikle belirtti.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Kriter 1: Erken Başvuru', 'desc': 'İlk izlemin ilk trimesterda (ilk 3 ay / 14. haftadan önce) gerçekleşmesi şarttır.'},
-                            {'title': 'Kriter 2: Asgari İzlem Sayısı', 'desc': 'Komplikasyonsuz bir gebelikte asgari 4 nitelikli izlem tamamlanmalıdır.'},
-                            {'title': 'Kriter 3: Yetkin Personel', 'desc': 'İzlemin ebe, kadın doğum uzmanı veya aile hekimi tarafından yapılması gerekir.'}
-                        ],
-                        'table': {
-                            'title': 'Sağlık Bakanlığı DÖB Asgari İzlem Takvimi',
-                            'headers': ['İzlem', 'Gebelik Haftası', 'Temel Girişimler'],
-                            'rows': [
-                                ['1. İzlem', 'İlk 14 hafta (1. Trimester)', 'Kan grubu, Hb, idrar, açlık şekeri, TSH, USG, folik asit'],
-                                ['2. İzlem', '18 - 24. Hafta', 'Fetal anomali taraması, tansiyon takibi, tetanoz aşısı 1'],
-                                ['3. İzlem', '28 - 32. Hafta', 'Kan sayımı tekrarı, Gestasyonel DM taraması (OGTT), aşı 2'],
-                                ['4. İzlem', '36 - 38. Hafta', 'Fetal pozisyon, pelvik uygunluk, doğum planlaması']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Yeterli DÖB şartları: 1) İlk izlemin ilk 3 ay içinde olması, 2) En az 4 izlem yapılması, 3) Tecrübeli sağlık personeli takibi.',
-                        'Gebelik tespit edildiği anda başlanması gereken profilaksi: İlk trimesterda Folik Asit (400 mcg/gün), 16. haftadan itibaren Demir desteği.'
-                    ],
-                    'relatedQuestions': match_questions(['dogum oncesi bakim', 'dob', 'gebelik izlem', 'trimester'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'DÖB protokolünde 4 izlemin haftaları ve zorunlu tetkikleri nelerdir?',
-                        'Aile sağlığı merkezlerinde gebenin takibinde ebenin rolü nedir?'
-                    ]
-                },
-                {
-                    'slideNumber': 4,
-                    'title': 'Anne Ölüm Hızı (AÖH): Tanım, Sınır ve Formül',
-                    'subtitle': 'Vaka Sorusu Çıkacak Matematiksel Formülasyon',
-                    'badge': '⭐ HOCA VURGUSU: VAKA SORUSU GELİR',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '09:42',
-                        'quote': 'Burada formülü var arkadaşlar. Buradan soru çıkar! Bir vaka gibi bir bilgi sorarız, siz de anne ölüm oranı nedir diye hesaplarsınız. Gebelikte, doğumda veya doğumdan sonraki 42 gün içindeki obstetrik ölümlerdir.',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca doğrudan amfide "Buradan vaka sorusu sorarız" ikazında bulundu. Çarpana (100.000) ve 42 günlük süreye dikkat!'
-                    },
-                    'coreContent': {
-                        'formulaBox': {
-                            'title': 'Anne Ölüm Hızı (AÖH / Maternal Mortality Ratio) Formülü',
-                            'formula': 'AÖH = (Bir yılda obstetrik nedenlerle ölen anne sayısı / Aynı yıl gerçekleşen canlı doğum sayısı) × 100.000',
-                            'explanation': 'Paydada TÜM GEBELİKLER DEĞİL, sadece CANLI DOĞUMLAR yer alır! Çarpan ise 100.000\'dir.'
-                        },
-                        'keyBullets': [
-                            {'title': 'Süre Kriteri: 42 Gün', 'desc': 'Gebelik süresince, doğum anında veya gebeliğin sonlanmasından sonraki ilk 42 gün içinde meydana gelen ölümler.'},
-                            {'title': 'Obstetrik Neden Şartı', 'desc': 'Gebelik komplikasyonları veya gebeliğin ağırlaştırdığı hastalıklardan kaynaklanmalıdır (Kaza veya tesadüfi nedenler hariçtir).'},
-                            {'title': 'Direkt vs İndirekt Ölüm', 'desc': 'Direkt: Kanama, preeklampsi, emboli, sepsis. İndirekt: Önceden var olan kalp hastalığının gebelik yüküyle dekompanse olması.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Anne ölümü zaman sınırı: Gebelik süresi + Doğum sonrası ilk 42 gün (6 hafta - lohusalık dönemi).',
-                        'AÖH formülünde payda her zaman CANLI DOĞUM SAYISI, çarpan ise 100.000\'dir (Bebek ölümünde binde, anne ölümünde yüz binde!).',
-                        'Trafik kazası, intihar gibi tesadüfi nedenler anne ölümü tanımına dahil edilmez.'
-                    ],
-                    'relatedQuestions': match_questions(['anne olum', 'aoh', 'maternal olum', 'canli dogum'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Örnek bir Anne Ölüm Hızı vaka sorusu çöz: 50.000 canlı doğumda 6 maternal ölüm olursa AÖH kaçtır?',
-                        'Lohusalıkta 40. günde pulmoner emboliden ölen kadın anne ölümü sayılır mı?'
-                    ]
-                },
-                {
-                    'slideNumber': 5,
-                    'title': 'Bebek ve Neonatal Ölüm Hızları Sınıflaması',
-                    'subtitle': 'Erken Neonatal, Geç Neonatal ve Postneonatal Dönemler',
-                    'badge': 'DÖNEM AYRIMI',
-                    'badgeColor': 'amber',
-                    'professorAudioHighlight': {
-                        'timestamp': '02:31',
-                        'quote': 'Ölü bildirim sistemi (ÖBS) doldururken sorar: Bebek ölümü kaçıncı günde oldu? Doğumdan sonraki ilk 7 gün içindeki ölüm erken neonataldir ve doğrudan sağlık hizmetinin niteliğini gösterir.',
-                        'emphasisType': 'clinical_tip',
-                        'note': 'Hoca ilk 7 günün (erken neonatal) hastane şartları ve doğum anı kalitesine en duyarlı dönem olduğunu belirtti.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Bebek Ölüm Hızı (BÖH)', 'desc': '(1 yılda 1 yaşını doldurmadan ölen bebek sayısı / Canlı doğum sayısı) × 1.000'},
-                            {'title': 'Erken Neonatal Ölüm', 'desc': '0 - 6. gün (ilk 7 gün) içindeki ölümler. Doğum travması, asfiksi, konjenital anomaliler hakimdir.'},
-                            {'title': 'Geç Neonatal Ölüm', 'desc': '7 - 27. gün arasındaki ölümler. Hastane enfeksiyonları, beslenme güçlükleri.'},
-                            {'title': 'Postneonatal Ölüm', 'desc': '28 - 364. gün arasındaki ölümler. Çevre sağlığı, enfeksiyonlar (pnömoni, ishal) ve beslenme yetersizliklerine bağlıdır.'}
-                        ],
-                        'table': {
-                            'title': 'Bebeklik Dönemi Ölüm Hızı Karşılaştırması',
-                            'headers': ['Dönem', 'Gün Aralığı', 'Başlıca Nedenler', 'Hassas Olduğu Alan'],
-                            'rows': [
-                                ['Erken Neonatal', '0 - 6 gün', 'Prematürite, RDS, Asfiksi, Konjenital Anomali', 'Doğum salonu & YYBÜ kalitesi'],
-                                ['Geç Neonatal', '7 - 27 gün', 'Sepsis, menenjit, metabolik bozukluklar', 'Yenidoğan bakımı'],
-                                ['Postneonatal', '28 - 364 gün', 'Gastroenterit, alt solunum yolu enf., malnütrisyon', 'Sosyoekonomik & Çevre koşulları']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Erken Neonatal: 0-6 gün, Geç Neonatal: 7-27 gün, Postneonatal: 28-364 gün.',
-                        'Erken neonatal ölümler tıbbi bakım kalitesine, postneonatal ölümler ise çevre ve hijyen koşullarına bağlıdır.',
-                        'BÖH çarpanı 1.000 (binde), AÖH çarpanı ise 100.000 (yüz binde)\'dir.'
-                    ],
-                    'relatedQuestions': match_questions(['bebek olum', 'neonatal', 'erken neonatal', 'postneonatal'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Postneonatal ölüm hızını düşürmek için hangi halk sağlığı önlemleri alınmalıdır?',
-                        'Perinatal ölüm hızı nedir ve hangi haftaları kapsar?'
-                    ]
-                },
-                {
-                    'slideNumber': 6,
-                    'title': 'Aile Hekimliği Uygulamasında Performansa Dayalı İzlemler',
-                    'subtitle': 'Lohusalık, Ev Ziyaretleri ve Birinci Basamak Sorumluluğu',
-                    'badge': 'KLİNİK PRATİK & SAHA',
-                    'badgeColor': 'indigo',
-                    'professorAudioHighlight': {
-                        'timestamp': '09:02',
-                        'quote': 'Neden önemli? Çünkü bunlar aile hekimlerine dağıtılmış performansa dayalı izlemlerdir. İzlemler yapılmadığında hekimden maaş kesintisi yapılır. Lohusalıkta da ilk 40 gün içinde ev ziyaretleri zorunludur.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca birinci basamakta çalışan her hekimin gebe ve lohusa izlemlerini kaçırmaması gerektiğini pratik örnekle vurguladı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Performansa Dayalı Takip', 'desc': 'Aile hekimleri kendilerine kayıtlı her gebe ve bebeği sisteme girmek ve periyodik izlemek zorundadır.'},
-                            {'title': 'Lohusa İzlem Protokolü', 'desc': 'Doğum sonrası ilk 24 saat, 3. gün, 7. gün ve 15-40. günler arasında en az 3 izlem yapılmalıdır.'},
-                            {'title': 'Ev Ziyaretleri', 'desc': 'Sağlık personeli aile sağlığı merkezine gelemeyen yüksek riskli lohusaları hanesinde ziyaret eder.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Lohusalık süresi 6 hafta (42 gün) olup, ilk izlem doğum taburculuğunu takiben ilk 3 gün içinde yapılmalıdır.',
-                        'Bebek izlemleri: Doğumda, 15. günde, 41. günde ve ilk yıl içinde 2, 3, 4, 6, 9 ve 12. aylarda yapılır.'
-                    ],
-                    'relatedQuestions': match_questions(['aile hekimligi', 'lohusa', 'performans', 'izlem'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Aile hekimliğinde lohusalık izlem takvimi nasıldır?',
-                        'Performansa tabi izlemlerde aksama olursa mevzuata göre ne olur?'
-                    ]
-                }
-            ]
-        }
-        deck['totalSlides'] = len(deck['slides'])
-        deck['matchedPastQuestionsCount'] = sum(len(s.get('relatedQuestions', [])) for s in deck['slides'])
-        decks.append(deck)
-
-    # =========================================================================
-    # 2. DECK: DİSMORFOLOJİDE GENETİK TERMİNOLOJİ
-    # =========================================================================
-    dis_trans = parse_transcript_file('Dismorfolojide_Genetik_Terminoloji_Transkript.md')
-    if dis_trans:
-        deck_id = 'learn-dismorfoloji-terminoloji'
-        deck = {
-            'id': deck_id,
-            'title': 'Dismorfolojide Genetik Terminoloji',
-            'shortTitle': 'Dismorfoloji Terminolojisi',
-            'discipline': 'Tıbbi Genetik',
-            'committee': 'Kurul 1 - Tıbbi Genetik (Dönem 3)',
-            'instructor': 'Öğretim Üyesi',
-            'audioFile': 'Dismorfolojide Genetik Terminoloji TBG.m4a',
-            'audioDuration': '61.6 dk',
-            'confidence': '%95 Doğrulandı',
-            'themeColor': 'indigo',
-            'matchedNoteId': 'note-476343950c',
-            'matchedNoteTitle': '1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ',
-            'overview': 'Dismorfolojinin temel morfolojik defektleri (Malformasyon, Deformasyon, Disrupsiyon, Displazi), Sendrom, Sekans ve Asosiasyon tanımları, majör/minör anomalilerin klinik ayrımı.',
-            'highYieldPearls': dis_trans['pearls'],
-            'slides': [
-                {
-                    'slideNumber': 1,
-                    'title': 'Dismorfolojiye Giriş ve Temel Kavramlar',
-                    'subtitle': 'Doğuştan Yapısal Kusurların İncelenmesi',
-                    'badge': 'TEMEL GENETİK',
-                    'badgeColor': 'indigo',
-                    'professorAudioHighlight': {
-                        'timestamp': '04:12',
-                        'quote': 'Dismorfoloji; anormal formların bilimidir. Doğumsal yapısal defektleri inceler. Klinik genetikçinin en önemli görevi hastanın yüzüne ve vücuduna bakarak bu örüntüyü tanımaktır.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca dismorfolojide fenotipik gözlem ve doğru terminolojiyi kullanmanın tanıdaki belirleyici rolünü anlattı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Dismorfoloji Tanımı', 'desc': 'Embriyolojik gelişim sürecindeki sapmalar sonucu ortaya çıkan yapısal ve anatomik bozuklukları inceleyen bilim dalı.'},
-                            {'title': 'Anomali Tipleri', 'desc': 'Kusurlar etki düzeyine göre Malformasyon, Deformasyon, Disrupsiyon ve Displazi olarak 4 ana kategoriye ayrılır.'},
-                            {'title': 'Sıklık', 'desc': 'Canlı doğan bebeklerin %2-3\'ünde doğumda saptanan en az bir majör konjenital anomali bulunur.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Dismorfolojik değerlendirmede 4 temel yapısal defekt: Malformasyon, Deformasyon, Disrupsiyon ve Displazi.',
-                        'Yeni doğan her 100 bebekten 2-3\'ünde majör bir yapısal malformasyon saptanır.'
-                    ],
-                    'relatedQuestions': match_questions(['dismorfoloji', 'anomali', 'konjenital'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Dismorfolojik muayenede nelere dikkat edilmelidir?',
-                        'Dismorfolojide 4 temel morfolojik defekt kategorisi nedir?'
-                    ]
-                },
-                {
-                    'slideNumber': 2,
-                    'title': 'Malformasyon: İntrinsik Morfogenez Bozukluğu',
-                    'subtitle': 'Hücresel Düzeyde Başlayan Primer Hata',
-                    'badge': 'SINAV KLASİĞİ',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '12:45',
-                        'quote': 'Malformasyon İNTRİNSİKTİR arkadaşlar! Yani baştan beri dokunun kendi genetik programında hata vardır. Dışarıdan bir baskı yoktur. Yarık dudak, yarık damak, konjenital kalp defektleri en tipik örnekleridir.',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca sınavda "intrinsik" kelimesinin malformasyonun anahtar sözcüğü olduğunu özellikle hatırlattı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Mekanizma', 'desc': 'Organ veya vücut bölgesinin oluşumu sırasında dokunun kendi iç gelişimsel potansiyelindeki primer aksaklık.'},
-                            {'title': 'Zamanlama', 'desc': 'Embriyonik dönemde (ilk 8 hafta / organogenez evresinde) meydana gelir.'},
-                            {'title': 'Klinik Örnekler', 'desc': 'Yarık dudak/damak, Nöral tüp defektleri (Spina bifida), Fallot tetralojisi, Polidaktili, Sindaktili.'}
-                        ],
-                        'table': {
-                            'title': 'Sık Karşılaşılan Malformasyonlar',
-                            'headers': ['Malformasyon', 'Embriyolojik Hata', 'Genetik / Çevresel Risk'],
-                            'rows': [
-                                ['Nöral Tüp Defekti', 'Nöral tüpün 28. günde kapanamaması', 'Folik asit eksikliği, çok genli kalıtım'],
-                                ['Yarık Dudak/Damak', 'Maksiller ve mediyal nazal çıkıntı birleşme hatası', 'Multifaktöriyel kalıtım'],
-                                ['Ventriküler Septal Defekt (VSD)', 'İnterventriküler septum kapanma defekti', 'Trizomiler (21, 18, 13), teratojenler']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Malformasyon = İntrinsik (yapısal/genetik) primer gelişim hatası.',
-                        'Malformasyonlar organogenez evresinde (ilk 8 hafta) meydana gelir ve geri dönüşümsüzdür.',
-                        'En sık rastlanan malformasyonlar: Konjenital kalp hastalıkları ve nöral tüp defektleridir.'
-                    ],
-                    'relatedQuestions': match_questions(['malformasyon', 'yarik dudak', 'intrinsik', 'spina bifida'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Malformasyon ile deformasyon arasındaki en temel fark nedir?',
-                        'Yarık dudak ve damak embriyolojik olarak hangi haftada oluşur?'
-                    ]
-                },
-                {
-                    'slideNumber': 3,
-                    'title': 'Deformasyon vs Disrupsiyon: Ekstrinsik Mekanizmalar',
-                    'subtitle': 'Mekanik Kuvvetler ve Vasküler Yıkımlar',
-                    'badge': 'AYIRICI TANI TUZAĞI',
-                    'badgeColor': 'amber',
-                    'professorAudioHighlight': {
-                        'timestamp': '21:30',
-                        'quote': 'Deformasyon mekanik güçtür! Uterus daralır, oligohidramnioz olur, fetüs sıkışır; ayak çarpılır (clubfoot). Doğumdan sonra düzelme şansı vardır. Ama disrupsiyon yıkımdır; amniyotik bant parmağı koparır!',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca deformasyonun mekanik/dönüşümlü, disrupsiyonun ise yıkıcı/amputasyon yapıcı farkına odaklandı.'
-                    },
-                    'coreContent': {
-                        'table': {
-                            'title': 'Deformasyon ve Disrupsiyon Karşılaştırması',
-                            'headers': ['Özellik', 'Deformasyon', 'Disrupsiyon'],
-                            'rows': [
-                                ['Temel Neden', 'Ekstrinsik anormal mekanik bası/kuvvet', 'Önceden normal dokunun dış etkenle yıkımı'],
-                                ['Doku Başlangıcı', 'Normal doku ve organ taslağı', 'Tamamen normal gelişmiş doku'],
-                                ['Tipik Etkenler', 'Oligohidramnioz, uterus anomalisi, çoğul gebelik', 'Amniyotik bantlar, iskemi, teratojen, enfeksiyon'],
-                                ['Prognoz / Düzelme', 'Fizyoterapi/alçı ile düzelebilir (reversible)', 'Kalıcı doku kaybı / amputasyon (irreversible)'],
-                                ['Klasik Örnek', 'Pes ekinovarus (clubfoot), kalça çıkığı', 'Amniyotik bant amputasyonu, barsak atrezisi']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Deformasyon: Mekanik kuvvetlere bağlı şekil bozukluğudur, doku normaldir ve doğum sonrası düzelebilir.',
-                        'Disrupsiyon: Önceden normal olan dokunun vasküler, mekanik veya enfektif yıkımıdır (Örn: Amniyotik bant amputasyonu).',
-                        'Potter sekansındaki basık burun ve clubfoot tipik bir DEFORMASYONDUR.'
-                    ],
-                    'relatedQuestions': match_questions(['deformasyon', 'disrupsiyon', 'amniyotik bant', 'pes ekinovarus'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Amniyotik bant sendromu neden bir disrupsiyondur?',
-                        'Oligohidramnioz fetüste hangi deformasyonlara yol açar?'
-                    ]
-                },
-                {
-                    'slideNumber': 4,
-                    'title': 'Displazi: Hücresel Organizasyon Bozukluğu',
-                    'subtitle': 'Doku Düzeyinde Hatalı Diferansiyasyon',
-                    'badge': 'HÜCRESEL PATOLOJİ',
-                    'badgeColor': 'purple',
-                    'professorAudioHighlight': {
-                        'timestamp': '28:15',
-                        'quote': 'Displazi dendiğinde aklınıza spesifik bir doku tipi gelecek: kemik displazileri, ektodermal displazi. Hücrelerin doku içindeki organizasyonu ve dizilimi bozulmuştur. Akondroplazi FGFR3 mutasyonuyla en ünlü örnektir.',
-                        'emphasisType': 'clinical_tip',
-                        'note': 'Hoca displazinin tek bir organı değil, vücuttaki o dokunun bulunduğu tüm sahaları etkileyebileceğini belirtti.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Displazi Tanımı', 'desc': 'Hücrelerin doku içerisindeki anormal organizasyonu veya hücre mimarisinin fonksiyonel bozukluğudur.'},
-                            {'title': 'Kalıtım Deseni', 'desc': 'Çoğunlukla tek gen mutasyonlarına (Otozomal dominant vb.) bağlı olarak ortaya çıkar.'},
-                            {'title': 'Klasik Örnek: Akondroplazi', 'desc': 'FGFR3 gen mutasyonu sonucu kıkırdak proliferasyonunun durması ve rizomelik ekstremite kısalığı.'},
-                            {'title': 'Osteogenezis İmperfekta', 'desc': 'Tip 1 kollajen sentez defektine bağlı kemik kırılganlığı ve mavi sklera tablosu.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Displazi = Hücrelerin belirli bir doku türünde (kemik, kıkırdak, deri vb.) anormal organizasyonudur.',
-                        'Akondroplazi ve Thanatoforik displazi FGFR3 gen mutasyonuna bağlı iskelet displazileridir.',
-                        'Displaziler embriyonik döneme hapsolmaz, doğum sonrasında da doku büyüdükçe etkileri devam eder.'
-                    ],
-                    'relatedQuestions': match_questions(['displazi', 'akondroplazi', 'fgfr3', 'iskelet'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Displazinin diğer yapısal anomalilerden farkı nedir?',
-                        'FGFR3 geni ve akondroplazinin klinik bulguları nelerdir?'
-                    ]
-                },
-                {
-                    'slideNumber': 5,
-                    'title': 'Sekans vs Sendrom vs Asosiasyon',
-                    'subtitle': 'Çoklu Anomalilerin Sınıflandırılması ve Tanı Mantığı',
-                    'badge': '⭐ HOCA VURGUSU: SINAVIN EN ÇOK SORULAN YERİ',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '36:40',
-                        'quote': 'Buraya yıldız koyun! Sekans, sendrom ve asosiasyon farkını bilmeyen genetik sınavından geçemez. Bir tek primer hata domino taşı gibi diğerlerini deviriyorsa buna SEKANS diyoruz. Potter sekansı buna en güzel örnektir.',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca domino taşı analojisi ile sekans kavramını ve VACTERL asosiasyonunu sınavın garanti soruları olarak açıkladı.'
-                    },
-                    'coreContent': {
-                        'table': {
-                            'title': 'Çoklu Anomali Örüntüleri',
-                            'headers': ['Kavram', 'Tanım Mekanizması', 'Klasik Klinik Örnek'],
-                            'rows': [
-                                ['Sekans (Sequence)', 'Tek bir primer anomalinin zincirleme sonuçları (Kaskad)', 'Potter Sekansı (Bilateral renal agenezi -> Oligohidramnioz -> Akciğer hipoplazisi + Clubfoot)'],
-                                ['Sendrom (Syndrome)', 'Tek bir ortak etyolojiye (kromozom/gen) bağlı birden çok organda tutulum', 'Down Sendromu (Trizomi 21), Marfan Sendromu (FBN1)'],
-                                ['Asosiasyon (Association)', 'Tesadüften daha sık bir arada görülen fakat nedeni henüz bilinmeyen anomali grubu', 'VACTERL Asosiasyonu (Vertebral, Anal, Kardiyak, TE fistül, Renal, Limb)']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Sekans: Tek bir primer olay başlatır, gerisi zincirleme gelişir (Örn: Potter sekansı, Pierre Robin sekansı).',
-                        'Sendrom: Birden fazla sistem tutulur ve ortak bir genetik/çevresel neden vardır (Örn: Turner, Down, Edward).',
-                        'Asosiasyon: İstatistiksel birlikteliktir, ortak bir neden veya sekans kanıtlanmamıştır (Örn: VACTERL/VATER).'
-                    ],
-                    'relatedQuestions': match_questions(['sekans', 'sendrom', 'asosiasyon', 'potter', 'vacterl'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Potter sekansında zincirleme olaylar nasıl gelişir?',
-                        'VACTERL asosiasyonunun bileşenleri nelerdir?'
-                    ]
-                }
-            ]
-        }
-        deck['totalSlides'] = len(deck['slides'])
-        deck['matchedPastQuestionsCount'] = sum(len(s.get('relatedQuestions', [])) for s in deck['slides'])
-        decks.append(deck)
-
-    # =========================================================================
-    # 3. DECK: İZOLASYON YÖNTEMLERİ
-    # =========================================================================
-    iz_trans = parse_transcript_file('Izolasyon_Yontemleri_Transkript.md')
-    if iz_trans:
-        deck_id = 'learn-izolasyon-yontemleri'
-        deck = {
-            'id': deck_id,
-            'title': 'İzolasyon Yöntemleri ve Hastane Enfeksiyon Kontrolü',
-            'shortTitle': 'İzolasyon Yöntemleri',
-            'discipline': 'Enfeksiyon Hastalıkları',
-            'committee': 'Kurul 1 - Enfeksiyon Hastalıkları (Dönem 3)',
-            'instructor': 'Öğretim Üyesi',
-            'audioFile': 'Enfeksiyon Hastalıkları 1.m4a',
-            'audioDuration': '33.3 dk',
-            'confidence': '%95 Doğrulandı',
-            'themeColor': 'emerald',
-            'matchedNoteId': 'note-e2df90f5dc',
-            'matchedNoteTitle': '3)İzolasyon yöntemleri',
-            'overview': 'Hastane enfeksiyonlarının önlenmesi, el hijyeni ve standart önlemler, bulaşma yoluna dayalı izolasyonlar (Temas, Damlacık, Solunum) ve sembolleri/renkleri.',
-            'highYieldPearls': iz_trans['pearls'],
-            'slides': [
-                {
-                    'slideNumber': 1,
-                    'title': 'İzolasyonun Temel Amacı ve Standart Önlemler',
-                    'subtitle': 'Her Hastada İstisnasız Uygulanması Gereken Kurallar',
-                    'badge': 'TEMEL ENFEKSİYON',
-                    'badgeColor': 'emerald',
-                    'professorAudioHighlight': {
-                        'timestamp': '01:15',
-                        'quote': 'Standart önlemler tanısı ne olursa olsun hastaneye yatan HER hastaya uygulanır. Kan, tüm vücut sıvıları, salgılar ve hasarlı deri potansiyel olarak bulaşıcı kabul edilir. En ucuz ve en etkili önlem el hijyenidir.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca standart önlemlerin tanı beklenmeksizin her hastaya uygulanmasının önemini anlattı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'El Hijyeninin 5 Endikasyonu (DSÖ)', 'desc': '1) Hastaya dokunmadan önce, 2) Temiz/aseptik işlemden önce, 3) Vücut sıvısı maruziyetinden sonra, 4) Hastaya dokunduktan sonra, 5) Hasta çevresindeki nesnelere dokunduktan sonra.'},
-                            {'title': 'Kişisel Koruyucu Ekipman (KKE)', 'desc': 'Eldiven, önlük, maske ve yüz siperliği bulaş riskine göre seçilir.'},
-                            {'title': 'Kesici-Delici Alet Güvenliği', 'desc': 'Kullanılmış enjektör iğneleri kesinlikle kılıfına tekrar takılmaz, doğrudan sarı tıbbi atık kutusuna atılır.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Standart önlemler: Tanısı ne olursa olsun tüm hastalara uygulanır (Ter hariç tüm vücut sıvıları enfeksiyöz kabul edilir).',
-                        'Hastane enfeksiyonlarını önlemede en etkili, en kolay ve en maliyet-etkin yöntem: Doğru el hijyenidir.'
-                    ],
-                    'relatedQuestions': match_questions(['standart onlem', 'el hijyeni', 'hastane enfeksiyon'], 'Enfeksiyon Hastalıkları', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'El hijyeninin 5 altın anı nedir?',
-                        'Standart önlemler hangi vücut sıvılarını kapsar, hangisini kapsamaz?'
-                    ]
-                },
-                {
-                    'slideNumber': 2,
-                    'title': 'Bulaşma Yoluna Dayalı İzolasyonlar ve Renk Kodları',
-                    'subtitle': 'Temas, Damlacık ve Solunum İzolasyonlarının Karşılaştırması',
-                    'badge': '⭐ HOCA VURGUSU: RENKLER VE MASKE TİPLERİ',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '08:40',
-                        'quote': 'Sınavda sorarız: Hangi izolasyonda hangi renk ve sembol kullanılır, hangi maske takılır? Tüberkülozda N95 takılır, negatif basınç gerekir. Meningokokta cerrahi maske yeterlidir. Renkleri sakın karıştırmayın!',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca semboller (Kırmızı El, Mavi Çiçek, Sarı Yaprak), maske tipleri ve oda basınçlarının kesinlikle sınav sorusu olduğunu vurguladı.'
-                    },
-                    'coreContent': {
-                        'table': {
-                            'title': 'İzolasyon Tipleri & Kuralları Tablosu',
-                            'headers': ['İzolasyon Tipi', 'Sembol & Renk', 'Partikül Boyutu', 'Gereken Maske & Oda', 'Örnek Hastalıklar / Etkenler'],
-                            'rows': [
-                                ['Temas İzolasyonu', 'Kırmızı El', 'Direkt/İndirekt temas', 'Önlük + Eldiven (Maske şart değil), Tek kişilik oda', 'VRE, MRSA, C. difficile, Acinetobacter, Uyuz'],
-                                ['Damlacık İzolasyonu', 'Mavi Çiçek', '> 5 mikron (ağır damlacık)', 'Cerrahi Maske (1 metre mesafe), Normal oda', 'Meningokok, İnfluenza, Boğmaca, Kabakulak, Adenovirüs'],
-                                ['Solunum (Hava Yolu)', 'Sarı Yaprak', '< 5 mikron (havada asılı)', 'N95 / FFP2 Maske, Negatif Basınçlı Oda (Hava dışarı atılır)', 'Akciğer Tüberkülozu, Kızamık, Suçiçeği, Yaygın Zona'],
-                                ['Koruyucu (Ters)', 'Beyaz Melek / Kart', 'Hastayı koruma', 'Pozitif Basınçlı Oda, Steril önlük, HEPA filtre', 'Ağır nötropeni, Kemik iliği / Organ nakli alıcıları']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Kırmızı El = Temas İzolasyonu (VRE, MRSA, C. difficile). Önlük ve eldiven zorunludur.',
-                        'Mavi Çiçek = Damlacık İzolasyonu (>5 µm). Cerrahi maske yeterlidir, hasta ile 1 metre mesafe korunmalıdır.',
-                        'Sarı Yaprak = Solunum / Hava Yolu İzolasyonu (<5 µm). N95/FFP2 maske ve NEGATİF basınçlı oda şarttır (Tüberküloz, Kızamık, Suçiçeği).',
-                        'Negatif basınçlı oda: Havanın koridora kaçmasını önler. Pozitif basınçlı oda: Ters izolasyonda bağışıklığı baskılanmış hastaya dışarıdan mikrop girmesini önler.'
-                    ],
-                    'relatedQuestions': match_questions(['temas izolasyonu', 'damlacik', 'solunum izolasyonu', 'n95', 'tüberküloz'], 'Enfeksiyon Hastalıkları', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Tüberkülozlu hastaya yaklaşırken neden cerrahi maske yetersizdir?',
-                        'Clostridium difficile enfeksiyonunda alkollü el antiseptiği neden yetersizdir?'
-                    ]
-                }
-            ]
-        }
-        deck['totalSlides'] = len(deck['slides'])
-        deck['matchedPastQuestionsCount'] = sum(len(s.get('relatedQuestions', [])) for s in deck['slides'])
-        decks.append(deck)
-
-    # =========================================================================
-    # 4. DECK: SALGIN HASTALIKLARDA KONTROL VE KORUNMA
-    # =========================================================================
-    sg_trans = parse_transcript_file('Halk_Sagligi_-_Salgin_Hastaliklarda_Kontrol_ve_Korunma_Transkript.md')
-    if sg_trans:
-        deck_id = 'learn-salgin-hastaliklar'
-        deck = {
-            'id': deck_id,
-            'title': 'Halk Sağlığı - Salgın Hastalıklarda Kontrol ve Korunma',
-            'shortTitle': 'Salgın Hastalıklar',
-            'discipline': 'Halk Sağlığı',
-            'committee': 'Kurul 1 - Halk Sağlığı (Dönem 3)',
-            'instructor': 'Uzm. Dr. Erkay Nacar',
-            'audioFile': 'Halk Sağlığı Giriş Dersi.m4a',
-            'audioDuration': '39.9 dk',
-            'confidence': '%95 Doğrulandı',
-            'themeColor': 'sky',
-            'matchedNoteId': 'note-86e7d188a4',
-            'matchedNoteTitle': "4)'Salgın Hastalıklarda Kontrol ve Korunma'",
-            'overview': 'Salgın (epidemi) dinamikleri, bulaşma zinciri bileşenleri (Kaynak, Bulaşma Yolu, Duyarlı Kişi), salgın inceleme basamakları, filyasyon ve karantina prensipleri.',
-            'highYieldPearls': sg_trans['pearls'],
-            'slides': [
-                {
-                    'slideNumber': 1,
-                    'title': 'Bulaşıcı Hastalıkların Bulaş Zinciri',
-                    'subtitle': 'Hastalık Yayılımının 3 Temel Halkası',
-                    'badge': 'EPİDEMİYOLOJİ ÇEKİRDEĞİ',
-                    'badgeColor': 'sky',
-                    'professorAudioHighlight': {
-                        'timestamp': '05:20',
-                        'quote': 'Bulaşıcı bir hastalığı kontrol etmek istiyorsanız bu üç halkadan en az birini kırmak zorundasınız: Kaynak, bulaşma yolu ve duyarlı kişi. Aşı duyarlı kişiyi korur; filyasyon ve izolasyon kaynağı sınırlar.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca halk sağlığı müdahalelerinin daima bu 3 basamaktan birine hedeflendiğini anlattı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': '1. Kaynağa Yönelik Önlemler', 'desc': 'Erken tanı, bildirim, filyasyon (temaslı takibi), izolasyon ve hastanın tedavisi.'},
-                            {'title': '2. Bulaşma Yoluna Yönelik Önlemler', 'desc': 'İçme suyu klorlaması, gıda güvenliği denetimleri, vektör (sivrisinek vb.) mücadelesi, havalandırma.'},
-                            {'title': '3. Duyarlı Konağa Yönelik Önlemler', 'desc': 'Aktif bağışıklama (aşılar), pasif bağışıklama (serum/immünglobulin), kemoprofilaksi ve sağlık eğitimi.'}
-                        ],
-                        'table': {
-                            'title': 'Bulaş Zinciri Kırma Stratejileri',
-                            'headers': ['Halka', 'Halk Sağlığı Müdahalesi', 'Örnek Uygulama'],
-                            'rows': [
-                                ['Kaynak', 'Vaka bulma ve İzolasyon', 'COVID-19 pozitif hastanın evde karantinası'],
-                                ['Bulaşma Yolu', 'Vektör ve Çevre Kontrolü', 'Sıtma için bataklık kurutma, kolerada su klorlama'],
-                                ['Duyarlı Konak', 'Aşılama ve Profilaksi', 'Kızamık aşısı, meningokok temaslısına rifampisin']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Bulaş zincirinin 3 halkası: Kaynak -> Bulaşma Yolu -> Duyarlı Kişi.',
-                        'İzolasyon: HASTA olan bireyin ayrılmasıdır. Karantina: ŞÜPHELİ/TEMASLI sağlıklı bireyin kuluçka süresince gözetimidir.',
-                        'Duyarlı konağı korumanın en radikal ve kalıcı yolu kitlesel aşılamadır.'
-                    ],
-                    'relatedQuestions': match_questions(['bulas zinciri', 'filyasyon', 'karantina', 'vektor'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'İzolasyon ile karantina arasındaki fark nedir?',
-                        'Salgın kontrolünde bulaşma yoluna yönelik önlemler nelerdir?'
-                    ]
-                },
-                {
-                    'slideNumber': 2,
-                    'title': 'Salgın İnceleme Basamakları ve Atak Hızı',
-                    'subtitle': 'Sahada Bir Salgın Nasıl Yönetilir?',
-                    'badge': 'SAHA METODOLOJİSİ',
-                    'badgeColor': 'emerald',
-                    'professorAudioHighlight': {
-                        'timestamp': '14:10',
-                        'quote': 'Salgın var mı yok mu? İlk basamak tanının doğrulanması ve beklenen vaka sayısının aşılıp aşılmadığıdır. Atak hızı ise o salgına özgü insidanstır, paydada risk altındaki nüfus yer alır.',
-                        'emphasisType': 'clinical_tip',
-                        'note': 'Hoca salgın inceleme adımlarının sıralamasının sık sorulan bir klasik olduğunu belirtti.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': '1. Tanının Doğrulanması', 'desc': 'Klinik ve laboratuvar bulgularının teyidi.'},
-                            {'title': '2. Salgının Varlığının Belirlenmesi', 'desc': 'Mevcut vaka sayısının o bölge ve mevsim için beklenen sınırın üzerine çıkması.'},
-                            {'title': '3. Vaka Tanımının Yapılması', 'desc': 'Kesin, olası ve şüpheli vaka kriterlerinin netleştirilmesi.'},
-                            {'title': '4. Atak Hızı Hesabı', 'desc': 'Atak Hızı = (Salgında hastalanan kişi sayısı / Risk altındaki toplam kişi sayısı) × 100'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Salgın incelemesinde ilk basamak: Tanının laboratuvar ve klinik olarak doğrulanmasıdır.',
-                        'Atak hızı: Belirli bir salgın süresince risk altındaki grupta hastalığa yakalanma oranıdır (özel bir kümülatif insidans türüdür).',
-                        'İkincil Atak Hızı: Primer vakayla temas edenler arasında kuluçka süresinde hastalananların oranıdır.'
-                    ],
-                    'relatedQuestions': match_questions(['salgin basamaklari', 'atak hizi', 'ikincil atak', 'vaka tanimi'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Atak hızı ile ikincil atak hızı arasındaki fark nedir?',
-                        'Salgın eğrisinden (epidemiyolojik eğri) bulaş türü nasıl anlaşılır?'
-                    ]
-                }
-            ]
-        }
-        deck['totalSlides'] = len(deck['slides'])
-        deck['matchedPastQuestionsCount'] = sum(len(s.get('relatedQuestions', [])) for s in deck['slides'])
-        decks.append(deck)
-
-    # =========================================================================
-    # 5. DECK: HALK SAĞLIĞI TARİHÇESİ VE KORUYUCU HEKİMLİK
-    # =========================================================================
-    th_trans = parse_transcript_file('Halk_Sagligi_Tarihcesi_Transkript.md')
-    if th_trans:
-        deck_id = 'learn-halk-sagligi-tarihcesi'
-        deck = {
-            'id': deck_id,
-            'title': 'Halk Sağlığı Tarihçesi ve Sağlık Hizmetlerinin Sosyalleştirilmesi',
-            'shortTitle': 'Halk Sağlığı Tarihçesi',
-            'discipline': 'Halk Sağlığı',
-            'committee': 'Kurul 1 - Halk Sağlığı (Dönem 3)',
-            'instructor': 'Öğretim Üyesi',
-            'audioFile': 'Halk Saülığı Tarihçesi.m4a',
-            'audioDuration': '24.2 dk',
-            'confidence': '%90 Doğrulandı',
-            'themeColor': 'sky',
-            'matchedNoteId': 'note-e947c6e0b3',
-            'matchedNoteTitle': '1)Halk SağlığıTarihçesi',
-            'overview': 'Dünya ve Türkiye halk sağlığı tarihi, John Snow ve Broad Street kolerası, Alma-Ata Bildirgesi (1978), Dr. Refik Saydam ve Prof. Dr. Nusret Fişek\'in 224 Sayılı Sosyalleştirme Kanunu.',
-            'highYieldPearls': th_trans['pearls'],
-            'slides': [
-                {
-                    'slideNumber': 1,
-                    'title': 'Dünya Halk Sağlığı Öncüleri ve Dönüm Noktaları',
-                    'subtitle': 'Modern Epidemiyolojinin Doğuşu',
-                    'badge': 'TARİHİ KİLOMETRE TAŞLARI',
-                    'badgeColor': 'sky',
-                    'professorAudioHighlight': {
-                        'timestamp': '03:15',
-                        'quote': 'John Snow epidemiyolojinin babasıdır. 1854 Londra kolera salgınında etken bilinmiyorken harita üzerinde vakaları işaretleyerek Broad Street su pompasının kolunu söktürmüştür. Bu halk sağlığının en çarpıcı müdahalesidir.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca John Snow\'un Broad Street su pompası vakasının epidemiyolojinin temeli olduğunu belirtti.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'John Snow (1854)', 'desc': 'Koleranın suyla bulaştığını haritalama yöntemiyle kanıtlayan modern epidemiyolojinin kurucusu.'},
-                            {'title': 'Edward Jenner (1796)', 'desc': 'Çiçek aşısını geliştirerek kitlesel eradikasyonun temelini atan bilim insanı.'},
-                            {'title': 'Robert Koch & Louis Pasteur', 'desc': 'Miasma (pis hava) teorisini yıkarak mikrop teorisini (Germ Theory) ispatladılar.'},
-                            {'title': 'Alma-Ata Konferansı (1978)', 'desc': 'DSÖ ve UNICEF öncülüğünde "2000 Yılında Herkese Sağlık" hedefi ve Temel Sağlık Hizmetleri (TSH) felsefesi ilan edildi.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Modern epidemiyolojinin babası: John Snow (1854 Londra Kolera Salgını - Broad Street Pompası).',
-                        'İlk aşı: 1796\'da Edward Jenner tarafından çiçek hastalığına (Variola) karşı geliştirilmiştir.',
-                        'Alma-Ata Bildirgesi (1978): Temel Sağlık Hizmetleri (TSH) yaklaşımının küresel manifestosudur.'
-                    ],
-                    'relatedQuestions': match_questions(['john snow', 'edward jenner', 'alma ata', 'tarihce'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'John Snow kolera salgınını mikroorganizma keşfedilmeden önce nasıl durdurdu?',
-                        'Alma-Ata Bildirgesi\'nin temel sağlık hizmetleri ilkeleri nelerdir?'
-                    ]
-                },
-                {
-                    'slideNumber': 2,
-                    'title': 'Türkiye\'de Halk Sağlığı ve 224 Sayılı Kanun',
-                    'subtitle': 'Prof. Dr. Nusret Fişek ve Sağlık Ocakları Sistemi',
-                    'badge': '⭐ HOCA VURGUSU: KURULUN EN BÜYÜK KLASİĞİ',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '12:50',
-                        'quote': 'Türkiye halk sağlığının mimarı Prof. Dr. Nusret Fişek\'tir. 1961 yılında çıkarılan 224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun dünyada örnek gösterilmiş bir modeldir. Sağlık ocağı entegre hizmet verir.',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca 224 Sayılı Kanun\'un ilkeleri (entegrasyon, sosyalleştirme, kademelendirme) hakkında her sınavda mutlaka soru geldiğini vurguladı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': '224 Sayılı Kanun (1961)', 'desc': 'Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun ile Türkiye genelinde köylere kadar uzanan sağlık ocakları kuruldu.'},
-                            {'title': 'Entegre Sağlık Hizmeti', 'desc': 'Tedavi edici ve koruyucu sağlık hizmetleri aynı çatı (sağlık ocağı) altında birleştirildi.'},
-                            {'title': 'Kademeli Sevk Zinciri', 'desc': 'Sağlık Ocağı (1. Basamak) -> Devlet Hastanesi (2. Basamak) -> Üniversite/İhtisas (3. Basamak).'},
-                            {'title': 'Nüfusa ve Bölgeye Dayalı Hizmet', 'desc': 'Her sağlık ocağı sorumlu olduğu coğrafi alan ve kayıtlı nüfusun tüm sağlık kayıtlarını tutar.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Türkiye\'de sağlık hizmetlerinin sosyalleştirilmesinin mimarı: Prof. Dr. Nusret Fişek.',
-                        '1961 tarihli 224 Sayılı Kanun: Koruyucu ve tedavi edici hizmetleri entegre eden sağlık ocağı modelini kurmuştur.',
-                        'Türkiye Cumhuriyeti\'nin ilk Sağlık Bakanı: Dr. Adnan Adıvar; uzun dönem bakanlık yapan ve Hıfzıssıhha\'yı kuran: Dr. Refik Saydam.'
-                    ],
-                    'relatedQuestions': match_questions(['224 sayili', 'nusret fisek', 'sosyallestirme', 'saglik ocagi'], 'Halk Sağlığı', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        '224 Sayılı Kanun\'un getirdiği en önemli 4 ilke nedir?',
-                        'Sağlık ocakları sisteminde sevk zinciri nasıl işliyordu?'
-                    ]
-                }
-            ]
-        }
-        deck['totalSlides'] = len(deck['slides'])
-        deck['matchedPastQuestionsCount'] = sum(len(s.get('relatedQuestions', [])) for s in deck['slides'])
-        decks.append(deck)
-
-    # =========================================================================
-    # 6. DECK: KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA
-    # =========================================================================
-    kr_trans = parse_transcript_file('Kromozomal_Hastaliklar_ve_Genetik_Danisma_Transkript.md')
-    if kr_trans:
-        deck_id = 'learn-kromozomal-hastaliklar'
-        deck = {
-            'id': deck_id,
-            'title': 'Kromozomal Hastalıklar ve Genetik Danışma',
-            'shortTitle': 'Kromozomal Hastalıklar',
-            'discipline': 'Tıbbi Genetik',
-            'committee': 'Kurul 1 - Tıbbi Genetik (Dönem 3)',
-            'instructor': 'Dr. Öğr. Üyesi Serap ARSLAN',
-            'audioFile': 'TBG - Kromozom hastalıkları ve genetşk danışmanlık.m4a',
-            'audioDuration': '81.7 dk',
-            'confidence': '%95 Doğrulandı',
-            'themeColor': 'indigo',
-            'matchedNoteId': 'note-661ebdda0e',
-            'matchedNoteTitle': '2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA',
-            'overview': 'Sayısal ve yapısal kromozom anomalileri, trizomiler (Down, Edwards, Patau), gonozom anomalileri (Turner, Klinefelter), mikrodelesyon sendromları ve genetik danışma ilkeleri.',
-            'highYieldPearls': kr_trans['pearls'],
-            'slides': [
-                {
-                    'slideNumber': 1,
-                    'title': 'Sayısal Kromozom Anomalileri ve Otozomal Trizomiler',
-                    'subtitle': 'Down, Edwards ve Patau Sendromlarının Karşılaştırması',
-                    'badge': 'KLİNİK GENETİK ÇEKİRDEĞİ',
-                    'badgeColor': 'indigo',
-                    'professorAudioHighlight': {
-                        'timestamp': '14:20',
-                        'quote': 'Trizomi 21 yaşla birlikte en çok artan aneuploididir. Serbest trizomi %95 oranında maternal mayoz 1 ayrılmama (nondisjunction) hatasıdır. Robertsonian translokasyon ise ailevi tekrarlama riski taşır.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca serbest trizomide anne yaşının, translokasyonlu Down sendromunda ise ebeveyn karyotipinin belirleyici olduğunu anlattı.'
-                    },
-                    'coreContent': {
-                        'table': {
-                            'title': 'En Sık Görülen Otozomal Trizomiler',
-                            'headers': ['Sendrom', 'Karyotip', 'Temel Klinik Bulgular', 'Ortalama Yaşam'],
-                            'rows': [
-                                ['Down Sendromu', '47,XX/XY,+21', 'Brakisefali, epikantus, simian çizgisi, AVSD, Hirschsprung, Alzheimer eğilimi', '50-60 yıl'],
-                                ['Edwards Sendromu', '47,XX/XY,+18', 'Prominent oksiput, mikrognati, üst üste binen parmaklar (clenched hand), rocker-bottom ayak, VSD', '< 1 yıl (%90 ilk haftalarda)'],
-                                ['Patau Sendromu', '47,XX/XY,+13', 'Holoprozensefali, mikroftalmi, yarık dudak/damak, postaksiyal polidaktili, skalp defekti (aplazia kutis)', '< 1 yıl (%95 ilk günlerde)']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Down Sendromu (Trizomi 21): En sık canlı doğan trizomidir. %95 nondisjunction (maternal mayoz I), %4 Robertsonian translokasyon.',
-                        'Edwards Sendromu (Trizomi 18): Üst üste binen parmaklar (2 ve 5, 3 ve 4 üzerine biner) ve rocker-bottom ayak patognomoniktir.',
-                        'Patau Sendromu (Trizomi 13): Holoprozensefali, mikroftalmi, yarık dudak-damak ve polidaktili triadı ile karakterizedir.'
-                    ],
-                    'relatedQuestions': match_questions(['down sendromu', 'trizomi', 'edwards', 'patau', 'nondisjunction'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Down sendromunda serbest trizomi ile Robertsonian translokasyon arasındaki tekrarlama riski farkı nedir?',
-                        'Edwards sendromunun en tipik fizik muayene bulguları nelerdir?'
-                    ]
-                },
-                {
-                    'slideNumber': 2,
-                    'title': 'Cinsiyet Kromozomu Anomalileri ve Karyotip Analizi',
-                    'subtitle': 'Turner (45,X) ve Klinefelter (47,XXY) Sendromları',
-                    'badge': 'GONADAL DİSGENEZİ',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '32:10',
-                        'quote': 'Turner sendromu anne yaşıyla İLİŞKİSİZ tek aneuploididir! Genellikle babanın spermindeki X kaybından kaynaklanır. Aort koarktasyonu ve yele boyun çok tipiktir. Klinefelter ise boyu uzun, jinekomastili, azospermik erkektir.',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca Turner sendromunun anne yaşı ile ilgisiz olmasının sınavların en popüler şaşırtmacası olduğunu hatırlattı.'
-                    },
-                    'coreContent': {
-                        'table': {
-                            'title': 'Gonozomal Anöploidi Karşılaştırması',
-                            'headers': ['Özellik', 'Turner Sendromu', 'Klinefelter Sendromu'],
-                            'rows': [
-                                ['Karyotip', '45,X (veya mozaik 45,X/46,XX)', '47,XXY (veya 48,XXXY)'],
-                                ['Fenotip', 'Dişi', 'Erkek'],
-                                ['Boy', 'Kısa boy (<150 cm)', 'Uzun boy, uzun ekstremiteler (öストrojenik yağ dağılımı)'],
-                                ['Gonadlar', 'Çizgi (streak) gonadlar, primer amenore', 'Küçük, sert testisler, azospremi, infertilite'],
-                                ['Kardiyovasküler', 'Aort koarktasyonu, biküspit aort kapağı', 'Mitral kapak prolapsusu, venöz tromboemboli riski'],
-                                ['Anne Yaşı İlişkisi', 'YOK (Paternal mayoz hatası hakimdir)', 'VAR (Anne yaşı arttıkça risk artar)']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Turner Sendromu (45,X): Anne yaşı ile ilişkisizdir! Kısa boy, yele boyun (pterigium kolli), aort koarktasyonu ve primer amenore ile seyreder.',
-                        'Klinefelter Sendromu (47,XXY): Anne yaşı ile ilişkilidir. Uzun boy, jinekomasti, küçük sert testisler, yüksek FSH/LH ve azospremi görülür.',
-                        'Tek canlı doğabilen monozomi: Turner Sendromudur (45,X).'
-                    ],
-                    'relatedQuestions': match_questions(['turner', 'klinefelter', 'gonozom', 'aort koarktasyonu', 'jinekomasti'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Turner sendromu neden anne yaşıyla ilişkili değildir?',
-                        'Klinefelter sendromunda hormon profili (FSH, LH, Testosteron) nasıldır?'
-                    ]
-                },
-                {
-                    'slideNumber': 3,
-                    'title': 'Genetik Danışma Prensipleri ve Prenatal Tanı',
-                    'subtitle': 'Non-Direktif Yaklaşım ve Risk Değerlendirmesi',
-                    'badge': 'ETİK VE KLİNİK',
-                    'badgeColor': 'emerald',
-                    'professorAudioHighlight': {
-                        'timestamp': '55:40',
-                        'quote': 'Genetik danışmanın bir numaralı altın kuralı NON-DİREKTİF olmasıdır! Hekim asla aileye ne yapacağını söylemez, karar vermez; olasılıkları ve riskleri açıklar, kararı aileye bırakır.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca hekimin yönlendirici değil, bilgilendirici ve destekleyici konumda kalması gerektiğini vurguladı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Non-Direktif Yaklaşım', 'desc': 'Ailenin inanç, değer ve kararlarına tam saygı gösterilir. "Çocuğu aldırın" veya "doğurun" denmez.'},
-                            {'title': 'Genetik Danışma Endikasyonları', 'desc': 'İleri anne yaşı (>=35), önceki çocukta anomali öyküsü, ailede akraba evliliği, tekrarlayan düşükler (>=2 abortus).'},
-                            {'title': 'Prenatal İnvaziv Yöntemler', 'desc': 'Koryon Villus Örneklemesi (KVS - 11-14. hafta), Amniyosentez (15-20. hafta), Kordosentez (20. haftadan sonra).'},
-                            {'title': 'Non-İnvaziv Prenatal Test (NIPT)', 'desc': 'Anne kanındaki serbest fetal DNA (cffDNA) analizi ile trizomi taraması (kesin tanı değil taramadır).'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Genetik danışma NON-DİREKTİF (yönlendirici olmayan) ilkeyle verilir.',
-                        'Koryon Villus Örneklemesi (KVS) en erken uygulanan invaziv yöntemdir (11-14. hafta).',
-                        'NIPT bir tarama testidir; pozitif çıkarsa amniyosentez ile karyotip doğrulaması şarttır.'
-                    ],
-                    'relatedQuestions': match_questions(['genetik danisma', 'non-direktif', 'amniyosentez', 'kvs', 'nipt'], 'Tıbbi Genetik', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Non-direktif genetik danışma ne demektir ve hekimin sınırları nelerdir?',
-                        'KVS ile amniyosentez arasındaki uygulama haftası ve risk farkları nelerdir?'
-                    ]
-                }
-            ]
-        }
-        deck['totalSlides'] = len(deck['slides'])
-        deck['matchedPastQuestionsCount'] = sum(len(s.get('relatedQuestions', [])) for s in deck['slides'])
-        decks.append(deck)
-
-    # =========================================================================
-    # 7. DECK: ÜRİNER SİSTEM OBSTRÜKSİYONLARI VE EĞİLİMLERİ
-    # =========================================================================
-    ur_trans = parse_transcript_file('Uriner_Sistem_Obstruksiyonlari_ve_Egilimleri_Transkript.md')
-    if ur_trans:
-        deck_id = 'learn-uriner-obstruksiyon'
-        deck = {
-            'id': deck_id,
-            'title': 'Üriner Sistem Obstrüksiyonları, Patofizyoloji ve Tedavi',
-            'shortTitle': 'Üriner Obstrüksiyon',
-            'discipline': 'Üroloji',
-            'committee': 'Kurul 1 - Üroloji (Dönem 3)',
-            'instructor': 'Öğretim Üyesi',
-            'audioFile': 'Üoloji.m4a',
-            'audioDuration': '49.7 dk',
-            'confidence': '%95 Doğrulandı',
-            'themeColor': 'amber',
-            'matchedNoteId': 'note-dfc1077833',
-            'matchedNoteTitle': '1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi',
-            'overview': 'Üriner obstrüksiyon etyolojisi (intrinsik/ekstrinsik), böbrek hemodinamiği ve tübüler fonksiyon bozuklukları, renal kolik, tanı modaliteleri (USG, BT) ve acil dekompresyon (DJ stent, PCN).',
-            'highYieldPearls': ur_trans['pearls'],
-            'slides': [
-                {
-                    'slideNumber': 1,
-                    'title': 'Üriner Obstrüksiyonun Etyolojisi ve Sınıflaması',
-                    'subtitle': 'İntrinsik ve Ekstrinsik Nedenlerin Ayrımı',
-                    'badge': 'ETYOLOJİK AYRIM',
-                    'badgeColor': 'amber',
-                    'professorAudioHighlight': {
-                        'timestamp': '06:15',
-                        'quote': 'Üriner obstrüksiyonu lümenin içinden mi kaynaklanıyor yoksa dışarıdan bası mı yapıyor diye ikiye ayırıyoruz. Genç erişkinde en sık intrinsik neden taştır (ürolitiyazis). Yaşlı erkekte ise BPH ve prostat kanseri ekstrinsik basıdır.',
-                        'emphasisType': 'pearl',
-                        'note': 'Hoca yaş gruplarına göre en sık obstrüksiyon nedenlerinin sınavda vaka olarak sorulduğunu ifade etti.'
-                    },
-                    'coreContent': {
-                        'table': {
-                            'title': 'Etyolojik Sınıflama',
-                            'headers': ['Kategori', 'Gelişim Mekanizması', 'Sık Karşılaşılan Nedenler'],
-                            'rows': [
-                                ['İntrinsik Nedenler (Lümen İçi)', 'Üriner traktüsün kendi lümeni içindeki tıkanıklık', 'Böbrek/üreter taşı (en sık), ürotelyal tümör, kan pıhtısı, papiller nekroz döküntüsü, UPJ darlık'],
-                                ['Ekstrinsik Nedenler (Dıştan Bası)', 'Komşu organ veya dokuların üretere/mesaneye basısı', 'Benign Prostat Hiperplazisi (BPH), Prostat Ca, Serviks/Kolon Ca, Retroperitoneal Fibrozis, Gebelik'],
-                                ['Fonksiyonel / Nörojenik', 'Peristaltizm veya sfinkter koordinasyon kaybı', 'Nörojenik mesane, vezikoüreteral reflü (VUR), dissinerji']
-                            ]
-                        }
-                    },
-                    'spotPearls': [
-                        'Genç ve orta yaş erişkinde akut tek taraflı obstrüksiyonun en sık nedeni: Üreteral taştır.',
-                        'Yaşlı erkeklerde bilateral obstrüksiyon ve infravezikal tıkanıklığın en sık nedeni: BPH (Benign Prostat Hiperplazisi).',
-                        'Çocuklarda konjenital obstrüksiyonun en sık nedeni: Üreteropelvik Bileşke (UPJ) darlığıdır.'
-                    ],
-                    'relatedQuestions': match_questions(['uriner obstruksiyon', 'urolitiyazis', 'bph', 'hidronefroz', 'upj'], 'Üroloji', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'İntrinsik ve ekstrinsik obstrüksiyon nedenleri nelerdir?',
-                        'UPJ darlığı çocuklarda nasıl tanı alır?'
-                    ]
-                },
-                {
-                    'slideNumber': 2,
-                    'title': 'Obstrüksiyon Patofizyolojisi: Hemodinamik ve Tübüler Fazlar',
-                    'subtitle': 'Böbrek İçi Basınç Değişimleri ve GFR Kinetiği',
-                    'badge': '⭐ HOCA VURGUSU: GRAFİK VE EVRE SORUSU',
-                    'badgeColor': 'rose',
-                    'professorAudioHighlight': {
-                        'timestamp': '18:40',
-                        'quote': 'Buraya dikkat edin: Akut tam tıkanmada ilk 1.5-2 saatte böbrek kan akımı ve üreter basıncı artar, çünkü prostaglandin E2 salınır. Ama 5. saatten sonra afferent arteriyol kasılır (tromboksan A2), renal kan akımı ve GFR hızla düşer!',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca üreter içi basınç ve renal kan akımının bifazik eğrisinin (PGE2 vs TxA2 / Anjiotensin II) fizyopatoloji sınavlarının gözdeleri olduğunu söyledi.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Faz 1: Erken Hiperemik Faz (0 - 1.5 Saat)', 'desc': 'Üreter basıncı tepe noktaya çıkar. Vazodilatatör prostaglandinler (PGE2, PGI2) salınır, renal kan akımı geçici olarak artar.'},
-                            {'title': 'Faz 2: Geç İskemik Faz (> 5 Saat)', 'desc': 'Vazokonstriktör mediyatörler (Tromboksan A2, Anjiotensin II, Endotelin) devreye girer. Renal kan akımı ve üreter içi basınç düşer, doku iskemisi başlar.'},
-                            {'title': 'Kronik Faz (> 24-48 Saat)', 'desc': 'GFR kalıcı olarak azalır. Medüller iskemi, tübüler konsantrasyon yeteneği kaybı ve parankim atrofisi (hidronefroz) gelişir.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Akut üreter tıkanmasında ilk saatte renal kan akımını artıran mediyatör: Prostaglandin E2 (PGE2).',
-                        '5. saatten sonra vazokonstriksiyon yaparak kan akımını ve GFR\'yi düşüren mediyatörler: Tromboksan A2 ve Anjiotensin II.',
-                        'Obstrüksiyon giderilmediğinde ilk bozulan tübüler fonksiyon: İdrarı konsantre etme yeteneğidir (hipostenüri gelişir).'
-                    ],
-                    'relatedQuestions': match_questions(['hemodinami', 'gfr', 'prostaglandin', 'tromboksan', 'ureter basinci'], 'Üroloji', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Akut üreter obstrüksiyonunun bifazik hemodinamik yanıtı nasıldır?',
-                        'Obstrüksiyon kalktıktan sonra görülen postobstrüktif diürez neden olur?'
-                    ]
-                },
-                {
-                    'slideNumber': 3,
-                    'title': 'Klinik Belirtiler, Tanı ve Acil Tedavi Stratejileri',
-                    'subtitle': 'Renal Kolik Ağrısından Perkütan Nefrostomiye',
-                    'badge': 'ACİL ÜROLOJİ',
-                    'badgeColor': 'emerald',
-                    'professorAudioHighlight': {
-                        'timestamp': '38:20',
-                        'quote': 'Hastada tıkanıklık var VE ateş yüksekse bu ÜROLOJİK ACİLDİR! Piyonefroz gelişebilir, hasta saatler içinde ürosepsise girer. Hemen Double J stent veya perkütan nefrostomi (PCN) ile böbrek dekomprese edilmelidir.',
-                        'emphasisType': 'direct_exam_warning',
-                        'note': 'Hoca "Tıkanıklık + Enfeksiyon/Ateş = Acil Drenaj" kuralının hekimlik hayatının en kritik reflekslerinden biri olduğunu vurguladı.'
-                    },
-                    'coreContent': {
-                        'keyBullets': [
-                            {'title': 'Klinik: Renal Kolik', 'desc': 'Kapsül gerilmesine bağlı şiddetli, kıvrandırıcı, dalgalı yan ağrısı. Kasık ve genital bölgeye yayılır.'},
-                            {'title': 'Görüntüleme: Kontrassız Helikal BT', 'desc': 'Üriner taş ve obstrüksiyonda altın standarttır (%99 duyarlılık). İndinavir taşı hariç tüm taşları gösterir.'},
-                            {'title': 'Ultrasonografi (USG)', 'desc': 'Radyasyonsuzdur; gebelerde ve çocuklarda ilk tercihtir. Hidronefroz derecesini mükemmel gösterir.'},
-                            {'title': 'Acil Dekompresyon Endikasyonları', 'desc': '1) Obstrüksiyona eşlik eden enfeksiyon/ürosepsis, 2) Tek böbrekli hastada tıkanıklık, 3) Tedaviye dirençli ağrı, 4) Akut böbrek hasarı.'}
-                        ]
-                    },
-                    'spotPearls': [
-                        'Üriner sistem taşları ve akut obstrüksiyonda altın standart tanı yöntemi: Kontrassız Helikal BT\'dir.',
-                        'Gebelerde ve çocuklarda ilk tercih görüntüleme: Üriner Sistem USG\'dir.',
-                        'Obstrükte + Enfekte böbrek mutlak bir ÜROLOJİK ACİLDİR: Bekletilmeden Double J (DJ) stent veya Perkütan Nefrostomi (PCN) uygulanmalıdır.'
-                    ],
-                    'relatedQuestions': match_questions(['renal kolik', 'kontrassiz bt', 'perkutan nefrostomi', 'double j', 'piyonefroz'], 'Üroloji', past_questions, 2),
-                    'aiPromptSuggestions': [
-                        'Akut renal kolik tedavisinde ilk tercih analjezik grubu neden NSAİİ\'lerdir?',
-                        'Obstrükte enfekte böbrekte neden acil drenaj şarttır?'
-                    ]
-                }
-            ]
-        }
-        deck['totalSlides'] = len(deck['slides'])
-        deck['matchedPastQuestionsCount'] = sum(len(s.get('relatedQuestions', [])) for s in deck['slides'])
-        decks.append(deck)
-
-    # Save to JSON
     print(f"\nToplam {len(decks)} interaktif öğrenim destesi üretildi.")
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(decks, f, ensure_ascii=False, indent=2)
     print(f"[Başarılı] Desteler kaydedildi: {OUTPUT_FILE}")
 
-    # Build lightweight metadata list
     meta_list = []
     for d in decks:
         meta_list.append({
@@ -1160,7 +1218,9 @@ def build_all_decks():
             'totalSlides': d['totalSlides'],
             'matchedPastQuestionsCount': d['matchedPastQuestionsCount'],
             'overview': d['overview'],
-            'highYieldPearlsCount': len(d.get('highYieldPearls', []))
+            'highYieldPearlsCount': len(d.get('highYieldPearls', [])),
+            'totalUtterancesCount': d.get('totalUtterancesCount', 0),
+            'totalFlashcardsCount': sum(len(s.get('flashcards', [])) for s in d['slides'])
         })
 
     with open(OUTPUT_META_FILE, 'w', encoding='utf-8') as f:

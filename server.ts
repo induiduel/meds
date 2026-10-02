@@ -1,4 +1,5 @@
 import express from 'express';
+import compression from 'compression';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, Type } from '@google/genai';
 import nodemailer from 'nodemailer';
@@ -40,6 +41,29 @@ import {
   type RagChunk,
   type AiInteractionRecord,
 } from './src/services/localRagEngine.ts';
+
+import {
+  initDeepSeekWatcher,
+  scanAndIngestDeepSeekData,
+  loadDeepSeekContributions,
+  DEEPSEEK_DATA_DIR
+} from './src/services/deepseekDataService.ts';
+
+import {
+  getAllTranscriptionsMeta,
+  getTranscriptionById,
+  TRANSCRIPTIONS_DIR
+} from './src/services/transcriptionService.ts';
+
+import {
+  repairAndEnrichLectureNotes
+} from './src/services/lectureRepairEngine.ts';
+
+import {
+  buildUpgradePrompt,
+  saveUpgradedQuestion,
+  type AdvancedQuestionData
+} from './src/services/questionUpgradeService.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -166,6 +190,9 @@ export async function mirrorLectureNoteToSupabase(note: any) {
 const app = express();
 // Environment constraint: dev server must run on port 3000. Do not use process.env.PORT which may be 8080 (reserved for nginx).
 const PORT = 3000;
+
+// Enable HTTP Gzip/Brotli compression for high-speed delivery over tunnel/broadband
+app.use(compression({ threshold: 1024 }));
 
 app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
@@ -4431,6 +4458,53 @@ app.post('/api/rag/ask', async (req, res) => {
   }
 });
 
+// 2b. RAG Ask Stream: Real-time Server-Sent Events (SSE) streaming for fast token delivery
+app.post('/api/rag/ask-stream', async (req, res) => {
+  try {
+    const { query, committeeId, discipline, mode, targetQuestion, limit, customModel } = req.body;
+    if (!query || typeof query !== 'string' || !query.trim()) {
+      return res.status(400).json({ error: 'Sorgu metni (query) gereklidir.' });
+    }
+
+    res.writeHead(200, {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive',
+      'Access-Control-Allow-Origin': '*'
+    });
+
+    const { executeRagQueryStream } = await import('./src/services/ragService.ts');
+    const freeKeys = getTieredGeminiKeys();
+    const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
+    const modelToUse = customModel || 'gemini-3.8-flash';
+
+    for await (const chunk of executeRagQueryStream(
+      {
+        query: query.trim(),
+        committeeId,
+        discipline,
+        mode: mode || 'qa',
+        targetQuestion,
+        limit: limit ? parseInt(limit, 10) : 4,
+      },
+      activeKey,
+      modelToUse
+    )) {
+      res.write(`data: ${JSON.stringify(chunk)}\n\n`);
+    }
+
+    res.write('data: [DONE]\n\n');
+    res.end();
+  } catch (err: any) {
+    console.error('[RAG Ask Stream Error]:', err.message);
+    if (!res.headersSent) {
+      res.status(500).json({ error: 'RAG stream hatası: ' + err.message });
+    } else {
+      res.end();
+    }
+  }
+});
+
 // 3. RAG Stats: Current indexing and database state
 app.get('/api/rag/stats', async (req, res) => {
   try {
@@ -4542,6 +4616,191 @@ app.post('/api/ai/interactions/:id/upvote', (req, res) => {
   try {
     const ok = upvoteAiInteraction(req.params.id);
     res.json({ success: ok });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// ----------------------------------------------------
+// DEEPSEEK DATA INTEGRATION & RAG ENDPOINTS
+// ----------------------------------------------------
+app.get('/api/deepseek/status', (_req, res) => {
+  try {
+    const items = loadDeepSeekContributions();
+    let files: string[] = [];
+    if (fs.existsSync(DEEPSEEK_DATA_DIR)) {
+      files = fs.readdirSync(DEEPSEEK_DATA_DIR).filter(f => !f.toLowerCase().startsWith('readme'));
+    }
+    const byType = items.reduce((acc: any, it) => {
+      acc[it.itemType] = (acc[it.itemType] || 0) + 1;
+      return acc;
+    }, {});
+    res.json({
+      success: true,
+      directory: DEEPSEEK_DATA_DIR,
+      filesCount: files.length,
+      files,
+      itemsCount: items.length,
+      byType
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/deepseek/sync', async (_req, res) => {
+  try {
+    const result = await scanAndIngestDeepSeekData();
+    // Re-index RAG chunks to include new DeepSeek data
+    await runAutoChunking({ syncToCloud: false });
+    res.json({ success: true, result });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get('/api/deepseek/contributions', (_req, res) => {
+  try {
+    const items = loadDeepSeekContributions();
+    res.json({ success: true, count: items.length, contributions: items });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// ----------------------------------------------------
+// AMFİ SES TRANSKRİPTLERİ (AUDIO TRANSCRIPTIONS) ENDPOINTS
+// ----------------------------------------------------
+app.get('/api/transcriptions', (_req, res) => {
+  try {
+    const list = getAllTranscriptionsMeta();
+    res.json({ success: true, count: list.length, transcriptions: list });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get('/api/transcriptions/:id', (req, res) => {
+  try {
+    const item = getTranscriptionById(req.params.id);
+    if (!item) {
+      return res.status(404).json({ success: false, error: 'Transkripsiyon bulunamadı.' });
+    }
+    res.json({ success: true, transcription: item });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// ----------------------------------------------------
+// GELİŞMİŞ SORUYA ÇEVİRME (UPGRADE QUESTION TO ADVANCED CASE)
+// ----------------------------------------------------
+app.post('/api/ai/upgrade-advanced-question', async (req, res) => {
+  try {
+    const { questionId, question: directQ, apiKey, groqApiKey, preferredProvider = 'auto', model } = req.body;
+    let targetQuestion = directQ;
+    if (!targetQuestion && questionId) {
+      const pastList = getPastQuestionsDb();
+      targetQuestion = pastList.find((q: any) => q.id === questionId) || db.questions.find((q: any) => q.id === questionId);
+    }
+
+    if (!targetQuestion) {
+      return res.status(400).json({ success: false, error: 'Dönüştürülecek soru bulunamadı.' });
+    }
+
+    // 1. Gather lecture snippet
+    const matchingSlides = findBestMatchingLectureSlides(
+      targetQuestion.reconstruction?.stem || targetQuestion.stem || targetQuestion.topic || '',
+      targetQuestion.discipline,
+      targetQuestion.committeeId,
+      1
+    );
+    const lectureSnippet = matchingSlides[0]?.snippet || '';
+
+    // 2. Gather DeepSeek contributions context
+    const deepseekItems = loadDeepSeekContributions();
+    const relevantDs = deepseekItems
+      .filter(d => (d.discipline === targetQuestion.discipline || d.committeeId === targetQuestion.committeeId))
+      .slice(0, 2)
+      .map(d => `[${d.title}]: ${d.content.slice(0, 400)}...`)
+      .join('\n\n');
+
+    // 3. Build rich prompt
+    const prompt = buildUpgradePrompt(targetQuestion, lectureSnippet, relevantDs);
+
+    // 4. Generate with resilient multi-provider AI (supporting DeepSeek R1 via Groq or Gemini 3.8 Flash)
+    const aiRes = await generateResilientMedicalAi({
+      prompt,
+      customGeminiKey: apiKey,
+      customGroqKey: groqApiKey,
+      preferredProvider,
+      model: model || 'gemini-3.8-flash',
+      responseFormat: 'json',
+      systemInstruction: 'Sen tıp fakültesi kurul ve TUS sınavları için ileri düzey klinik vaka sorusu üreten uzman bir akademisyensin. Yalnızca geçerli JSON döndür.'
+    });
+
+    // Parse JSON response
+    const jsonMatch = aiRes.text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      throw new Error('Yapay zeka geçerli JSON formatında yanıt üretemedi.');
+    }
+    const parsed = JSON.parse(jsonMatch[0]);
+
+    const advancedData: AdvancedQuestionData = {
+      stem: parsed.stem,
+      clinicalScenario: parsed.clinicalScenario || '',
+      options: parsed.options || [],
+      correctAnswer: parsed.correctAnswer,
+      explanation: parsed.explanation,
+      distractorAnalysis: parsed.distractorAnalysis || {},
+      clinicalPearl: parsed.clinicalPearl || '',
+      difficulty: parsed.difficulty || 'İleri Düzey (TUS / USMLE)',
+      generatedAt: new Date().toISOString(),
+      modelUsed: aiRes.providerUsed || 'Gemini 3.8 Flash',
+      upgradedFrom: {
+        questionId: targetQuestion.id,
+        rawStem: targetQuestion.rawQuestion?.stem || targetQuestion.rawStem,
+        redactedStem: targetQuestion.reconstruction?.stem || targetQuestion.stem,
+        examYear: targetQuestion.examYear,
+        discipline: targetQuestion.discipline
+      }
+    };
+
+    if (targetQuestion.id) {
+      saveUpgradedQuestion(targetQuestion.id, advancedData);
+    }
+
+    // Record as RAG interaction chunk
+    await recordAiInteraction({
+      questionId: targetQuestion.id,
+      committeeId: targetQuestion.committeeId,
+      discipline: targetQuestion.discipline,
+      topic: `${targetQuestion.topic || 'Soru'} - Gelişmiş Vaka`,
+      interactionType: 'refinement',
+      prompt: 'Gelişmiş klinik vaka sorusuna dönüştür',
+      response: `[GELİŞMİŞ KLİNİK SENARYO]\n${advancedData.clinicalScenario}\n\n[SORU KÖKÜ]\n${advancedData.stem}\n\n[DOĞRU CEVAP]: ${advancedData.correctAnswer}\n\n[AÇIKLAMA]: ${advancedData.explanation}\n\n[KLİNİK İNCİ]: ${advancedData.clinicalPearl}`
+    });
+
+    res.json({
+      success: true,
+      advancedQuestion: advancedData,
+      providerUsed: aiRes.providerUsed,
+      planUsed: aiRes.planUsed
+    });
+  } catch (err: any) {
+    console.error('[Upgrade Question Error]:', err.message);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// ----------------------------------------------------
+// AMFİ DERS NOTLARINI REDAKTE ÖZETLE ONARMA (ADMIN)
+// ----------------------------------------------------
+app.post('/api/admin/repair-lecture-notes', requireAdmin, async (_req, res) => {
+  try {
+    const stats = repairAndEnrichLectureNotes();
+    await runAutoChunking({ syncToCloud: false });
+    res.json({ success: true, stats });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
   }
@@ -4737,6 +4996,10 @@ async function startServer() {
     startSupabaseCommandPoller();
     // Initialize Local & Hybrid RAG Engine (49,000+ medical chunks)
     initLocalRagEngine();
+    // Initialize DeepSeek Data Watcher
+    initDeepSeekWatcher(() => {
+      runAutoChunking({ syncToCloud: false }).catch(() => {});
+    });
   });
 }
 

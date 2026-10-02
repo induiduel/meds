@@ -199,6 +199,16 @@ def build():
                 },
                 "duplicateOf": q.get('duplicateOf') or None,
             }
+            # RAG için türetilmiş alanlar
+            rec["optionsText"] = " ".join(f"{o['key']}) {o['text']}" for o in opts)
+            rec["lectureRefs"] = [{"lectureId": m["lectureId"],
+                                   "title": os.path.basename(
+                                       next((c['path'] for c in b['lectureCandidates']
+                                             if c['lectureId'] == m["lectureId"]), ""))[:-3],
+                                   "coverage": m["coverage"]} for m in lm_out]
+            rec["embeddingText"] = (f"{rec['discipline']} - {rec['topic']}. {rec['stem']} "
+                                    f"{rec['optionsText']} Doğru cevap: {ca}. {exp} "
+                                    f"{rec['evidenceText']}").strip()
             if q.get('duplicateOf'):
                 dup_group[qid] = q['duplicateOf']
             records[qid] = rec
@@ -230,6 +240,11 @@ def build():
                              "reviewReason": "AI doğrulaması bu soru için tamamlanamadı."},
             "duplicateOf": None,
         }
+        rec["optionsText"] = " ".join(f"{o['key']}) {o['text']}" for o in rec['options'])
+        rec["lectureRefs"] = []
+        rec["embeddingText"] = (f"{rec['discipline']} - {rec['topic']}. {rec['stem']} "
+                                f"{rec['optionsText']} Doğru cevap: {rec['correctAnswer']}. "
+                                f"{rec['explanation']}").strip()
         records[qid] = rec
 
     print("\n### BİRLEŞTİRME SORUNLARI ###")
@@ -272,3 +287,35 @@ if __name__ == "__main__":
     print("\nbranş dağılımı:")
     for k, v in disc.most_common():
         print(f"  {v:4}  {k}")
+
+    # --- son kalite kontrolü ---
+    print("\n### SON KALİTE KONTROLÜ ###")
+    prob = Counter()
+    for r in rows:
+        o = r['options']
+        if len(o) != 5 or [x['key'] for x in o] != list('ABCDE'):
+            prob['sik_yapisi'] += 1
+        if sum(1 for x in o if x['isCorrect']) != 1:
+            prob['dogru_sik_sayisi'] += 1
+        if r['correctAnswer'] not in [x['key'] for x in o]:
+            prob['cevap_uyumsuz'] += 1
+        if len(r['stem']) < 20:
+            prob['kisa_kok'] += 1
+        if len(r['explanation']) < 250:
+            prob['kisa_aciklama'] += 1
+        if MOJI.search(r['stem'] + r['explanation'] + r['topic'] + r['optionsText']):
+            prob['mojibake'] += 1
+        if not r['embeddingText']:
+            prob['bos_embedding'] += 1
+        for m in r['lectureMatches']:
+            if not m['evidenceQuote'] or len(m['evidenceQuote'].split()) < 8:
+                prob['zayif_alinti'] += 1
+    print("sorun:" if prob else "sorun yok:", dict(prob) if prob else "")
+    ids = [r['id'] for r in rows]
+    print("tekil id:", len(set(ids)), "/", len(ids))
+    print("kanıtlı soru:", sum(1 for r in rows if r['lectureMatches']),
+          "| eşleşme sayısı:", sum(len(r['lectureMatches']) for r in rows))
+    print("onaylı+inceleme+kullanılamaz:",
+          f"{st.get('onaylandi',0)} / {st.get('inceleme_gerekli',0)} / {st.get('kullanilamaz',0)}")
+    print("ortalama embedding uzunluğu:", round(sum(len(r['embeddingText']) for r in rows) / len(rows)))
+    print("dosya boyutu: %.2f MB" % (size / 1e6))

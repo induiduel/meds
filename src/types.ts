@@ -144,6 +144,15 @@ export interface QuestionItem {
       pageNumber?: number | null;
     };
   };
+  stem?: string;
+  rawQuestion?: {
+    stem?: string;
+    options?: QuestionOption[] | string[];
+    answer?: string;
+    [key: string]: any;
+  };
+  advancedQuestion?: any;
+  hasAdvancedVersion?: boolean;
   createdAt: string;
   updatedAt: string;
 }

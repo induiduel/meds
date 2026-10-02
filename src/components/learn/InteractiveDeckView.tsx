@@ -252,14 +252,13 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             borderColor: 'var(--color-line)',
           }}
         >
-          <div className="flex items-center justify-between gap-2 shrink-0">
-            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-900 uppercase tracking-wider inline-flex items-center gap-1.5 border border-amber-200/80">
-              <BrainCircuit className="w-3.5 h-3.5 text-amber-700" />
-              {card.category || 'Akıl Kartı'}
+          <div className="flex items-start justify-between gap-2 shrink-0">
+            <span className="min-w-0 min-h-6 px-2 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-amber-100 text-amber-900 uppercase tracking-[0.04em] inline-flex items-start gap-1.5 border border-amber-200/80 break-words">
+              <BrainCircuit className="w-3.5 h-3.5 shrink-0 text-amber-700" />
+              <span className="min-w-0">{card.category || 'Akıl Kartı'}</span>
             </span>
-            <span className="text-[11px] text-ink-3 font-medium flex items-center gap-1.5 bg-canvas px-2 py-0.5 rounded-full">
-              <span>Cevap arkada</span>
-              <RefreshCw className="w-3 h-3 text-accent group-hover:rotate-180 transition-transform duration-500" />
+            <span aria-hidden="true" className="shrink-0 w-8 h-8 -mt-1 -mr-1 rounded-full flex items-center justify-center bg-canvas text-accent">
+              <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
             </span>
           </div>
 
@@ -289,13 +288,6 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             )}
           </div>
 
-          <div className="pt-2.5 border-t border-line-soft flex items-center justify-between text-[11.5px] text-ink-3 shrink-0">
-            <span className="flex items-center gap-1.5 text-accent font-semibold">
-              <RefreshCw className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
-              <span>Cevabı görmek için tıkla</span>
-            </span>
-            <span className="text-[11px] font-mono text-ink-3 hidden sm:inline bg-canvas px-1.5 py-0.5 rounded border border-line-soft">Boşluk / Enter</span>
-          </div>
         </div>
 
         {/* BACK FACE */}
@@ -308,27 +300,18 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             transform: 'rotateY(180deg)',
           }}
         >
-          <div className="flex items-center justify-between gap-2 shrink-0 select-none">
-            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-900 uppercase tracking-wider inline-flex items-center gap-1.5 border border-emerald-300/80">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
-              Doğru Yanıt & Klinik Açıklama
+          <div className="flex items-start justify-between gap-2 shrink-0 select-none">
+            <span className="min-w-0 min-h-6 px-2 py-1 rounded-lg text-[11.5px] leading-tight font-semibold bg-emerald-100 text-emerald-900 uppercase tracking-[0.04em] inline-flex items-start gap-1.5 border border-emerald-300/80">
+              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-700" />
+              <span className="min-w-0">Cevap</span>
             </span>
-            <span className="text-[11px] text-emerald-800 font-medium flex items-center gap-1.5 bg-white/80 px-2 py-0.5 rounded-full border border-emerald-200">
-              <span>Geri çevir</span>
-              <RefreshCw className="w-3 h-3 text-emerald-600" />
+            <span aria-hidden="true" className="shrink-0 w-8 h-8 -mt-1 -mr-1 rounded-full flex items-center justify-center bg-white/80 text-emerald-700 border border-emerald-200">
+              <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
             </span>
           </div>
 
-          <div className="my-2.5 flex-1 text-[13.5px] sm:text-[14.5px] font-medium text-ink leading-relaxed whitespace-pre-line select-text">
+          <div className="my-2.5 flex-1 text-[13.5px] sm:text-[14.5px] font-medium text-ink leading-relaxed whitespace-pre-line break-words select-text">
             <Rich text={card.back} />
-          </div>
-
-          <div className="pt-2.5 border-t border-emerald-200 flex items-center justify-between text-[11.5px] text-emerald-800 shrink-0 select-none">
-            <span className="flex items-center gap-1.5 font-bold">
-              <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
-              <span>Klinik Hafızaya Alındı</span>
-            </span>
-            <span className="text-[11px] text-ink-3">Tekrar çevirmek için tıkla</span>
           </div>
         </div>
       </div>
@@ -1162,7 +1145,7 @@ const SlideCanvas: React.FC<{
         {slide.synthesisNarrative && (
           <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/30 p-4 sm:p-5 shadow-xs flex flex-col gap-2">
             <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 min-w-0">
                 <span className="w-7 h-7 rounded-lg bg-accent text-white flex items-center justify-center shrink-0">
                   <BookOpen className="w-4 h-4" />
                 </span>
@@ -1179,7 +1162,7 @@ const SlideCanvas: React.FC<{
                 <button
                   type="button"
                   onClick={onOpenNotes}
-                  className="h-8 px-2.5 rounded-lg bg-white border border-line text-[12px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors"
+                  className="shrink-0 whitespace-nowrap h-8 px-2.5 rounded-lg bg-white border border-line text-[12px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors"
                 >
                   <span>Panelde Oku</span>
                   <ChevronRight className="w-3.5 h-3.5" />
@@ -1196,14 +1179,14 @@ const SlideCanvas: React.FC<{
         {flashcards.length > 0 && (
           <section className="flex flex-col gap-3 pt-2">
             <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
                 <span className="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0">
                   <BrainCircuit className="w-4 h-4" />
                 </span>
                 <div>
-                  <h3 className="m-0 text-[15px] font-bold text-ink flex items-center gap-2">
+                  <h3 className="m-0 text-[15px] font-bold text-ink flex flex-wrap items-center gap-x-2 gap-y-1">
                     <span>Akıl Kartları (Tıkla & Çevir)</span>
-                    <span className="font-mono text-[11px] font-semibold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
+                    <span className="shrink-0 whitespace-nowrap font-mono text-[11px] font-semibold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
                       {flashcards.length} Kart
                     </span>
                   </h3>

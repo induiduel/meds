@@ -294,7 +294,9 @@ ${expl ? `Akademik Açıklama: ${expl}` : ''}`.trim();
       for (const note of notes) {
         if (!note.pages || note.pages.length === 0) continue;
         for (const page of note.pages) {
-          const content = (page.content || '').trim();
+          const rawText = (page.content || '').trim();
+          const repaired = (page.repairedContent || '').trim();
+          const content = repaired ? (rawText.length >= 30 ? `${rawText}\n\n${repaired}` : repaired) : rawText;
           if (content.length < 30) continue; // Skip near-empty slides
 
           const chunkContent = `[DERS SLAYTI NOTU]
@@ -369,6 +371,86 @@ ${currentChunkText.trim()}`.trim();
             currentChunkText = '';
             chunkIndex++;
           }
+        }
+      }
+    }
+  }
+
+  // --- D. Amfi Ders Özetlerini Hazırla (347 Kırmızı/Redakte Özet) ---
+  if (!onlyType || onlyType === 'summaries') {
+    const sumPath = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
+    if (fs.existsSync(sumPath)) {
+      console.log('📂 Amfi ders özetleri okunuyor...');
+      const summaries = JSON.parse(fs.readFileSync(sumPath, 'utf-8'));
+      for (const item of summaries) {
+        if (!item.content || item.content.length < 50) continue;
+        const sections = item.content.split(/\n(?=##\s+)/);
+        let sectionIdx = 1;
+        for (const sec of sections) {
+          const trimmed = sec.trim();
+          if (trimmed.length < 40) continue;
+          const chunkContent = `[DERS ÖZETİ & SPOT BİLGİ]
+Ders / Branş: ${item.discipline || 'Tıp'}
+Konu / Başlık: ${item.title}
+Kurul: ${item.committeeId || `donem3-kurul${item.kurul || 1}`}
+Bölüm: #${sectionIdx}
+Özet Metin:
+${trimmed}`.trim();
+
+          const h = hashContent(chunkContent);
+          if (!manifest.processedHashes[h]) {
+            rawChunksToProcess.push({
+              id: `chunk-sum-${item.id}-${sectionIdx}`,
+              documentId: item.id,
+              documentType: 'summary',
+              committeeId: item.committeeId || `donem3-kurul${item.kurul || 1}`,
+              discipline: item.discipline || 'Tıp',
+              title: `${item.title} (Özet #${sectionIdx})`,
+              pageNumber: sectionIdx,
+              content: chunkContent,
+              metadata: {
+                fileName: item.fileName,
+                keyPoints: item.keyPoints || []
+              },
+              hash: h
+            });
+          }
+          sectionIdx++;
+        }
+      }
+    }
+  }
+
+  // --- E. DeepSeek Katkı Verilerini Hazırla ---
+  if (!onlyType || onlyType === 'deepseek') {
+    const dsPath = path.resolve(DATA_DIR, 'deepseek_contributions.json');
+    if (fs.existsSync(dsPath)) {
+      console.log('📂 DeepSeek katkı verileri okunuyor...');
+      const dsItems = JSON.parse(fs.readFileSync(dsPath, 'utf-8'));
+      for (const item of dsItems) {
+        const content = item.content || '';
+        if (content.length < 25) continue;
+        const h = hashContent(content);
+        if (!manifest.processedHashes[h]) {
+          rawChunksToProcess.push({
+            id: `chunk-ds-${item.id || h.slice(0, 10)}`,
+            documentId: item.id,
+            documentType: 'deepseek_contribution',
+            committeeId: item.committeeId || 'donem3-kurul1',
+            discipline: item.discipline || 'Tıp',
+            title: `${item.title} [DeepSeek Katkısı]`,
+            pageNumber: null,
+            content,
+            metadata: {
+              source: 'deepseek',
+              contributor: 'DeepSeek AI',
+              isContribution: true,
+              itemType: item.itemType,
+              sourceFile: item.metadata?.sourceFile,
+              topic: item.topic
+            },
+            hash: h
+          });
         }
       }
     }

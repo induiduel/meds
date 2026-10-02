@@ -46,7 +46,10 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
       };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(activePage.content);
+    const textToCopy = (activePage as any).repairedContent 
+      ? `${activePage.content}\n\n${(activePage as any).repairedContent}`
+      : activePage.content;
+    navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -210,11 +213,35 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
                 )}
               </div>
 
+              {/* Repaired / Supplemented with Redacted Summary Banner */}
+              {(activePage as any).isRepairedWithRedaction && (
+                <div className="p-3.5 bg-amber-50 border border-amber-200 rounded-xl flex items-center justify-between text-xs text-amber-900 shadow-2xs">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-amber-600 shrink-0" />
+                    <span>
+                      <strong>✨ Amfi Redakte Dersi ile Onarıldı:</strong> Bu slaytın okunamayan veya eksik kısımları <em>"{(activePage as any).repairedSource || (note as any).matchedSummaryTitle || 'Amfi Ders Özeti'}"</em> ile tamamlanmıştır.
+                    </span>
+                  </div>
+                </div>
+              )}
+
               {/* Rendered Text Content */}
-              <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-2xs">
+              <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-2xs space-y-4">
                 <div className="prose prose-sm max-w-none text-slate-800 text-sm leading-relaxed whitespace-pre-wrap font-sans">
                   {activePage.content}
                 </div>
+
+                {(activePage as any).repairedContent && (
+                  <div className="pt-4 border-t border-amber-200/80 bg-amber-50/60 p-4 rounded-xl text-amber-950 space-y-1.5">
+                    <div className="text-xs font-bold text-amber-800 uppercase tracking-wider flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                      Redakte Amfi Dersi Tamamlayıcı Notu & Açıklaması
+                    </div>
+                    <div className="text-sm leading-relaxed whitespace-pre-line text-slate-800">
+                      {(activePage as any).repairedContent}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Keywords / High-Yield Medical Terms */}

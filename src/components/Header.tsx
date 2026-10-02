@@ -26,12 +26,13 @@ import {
   SquarePen,
   GraduationCap,
   MoreHorizontal,
+  Mic,
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
 import { systemHealthMonitor, SystemOverallHealth } from '../services/systemHealthMonitor';
 
-export type AppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries';
+export type AppTab = 'quick_add' | 'learn' | 'questions' | 'past_exams' | 'matrix' | 'leaderboard' | 'notes' | 'practice' | 'booklet' | 'study' | 'summaries' | 'transcripts';
 
 interface HeaderProps {
   committees: Committee[];
@@ -72,6 +73,7 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'questions', label: 'Soru havuzu', icon: Library },
   { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
   { id: 'summaries', label: 'Ders özetleri', icon: BookOpen },
+  { id: 'transcripts', label: 'Ses kayıtları', icon: Mic },
   { id: 'study', label: 'Çalış', icon: ListChecks },
   { id: 'notes', label: 'Ders notları', icon: BookOpenText },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },

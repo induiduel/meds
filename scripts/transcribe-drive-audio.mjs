@@ -27,6 +27,14 @@ import { GoogleGenAI } from '@google/genai';
 
 dotenv.config();
 
+// Global Crash Koruma Handlers
+process.on('uncaughtException', (err) => {
+  log(`⚠️ [Global Koruma] Yakalanmamış İstisna: ${err.message}`);
+});
+process.on('unhandledRejection', (reason) => {
+  log(`⚠️ [Global Koruma] Yakalanmamış Promise Reddi: ${reason?.message || reason}`);
+});
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
@@ -585,16 +593,25 @@ async function processSingleAudioFile(audioPath, ai, catalog, questionsDb, manif
   let uploadedFile = null;
 
   try {
-    log(`   ☁️ Gemini File API'ye yükleniyor...`);
     const mimeType = ext === '.m4a' ? 'audio/mp4' : 'audio/mpeg';
 
-    uploadedFile = await ai.files.upload({
-      file: tmpUploadPath,
-      config: {
-        mimeType,
-        displayName: `${safeBase}${ext}`
+    for (let upAttempt = 1; upAttempt <= 3; upAttempt++) {
+      try {
+        log(`   ☁️ Gemini File API'ye yükleniyor (Deneme ${upAttempt}/3)...`);
+        uploadedFile = await ai.files.upload({
+          file: tmpUploadPath,
+          config: {
+            mimeType,
+            displayName: `${safeBase}${ext}`
+          }
+        });
+        if (uploadedFile?.name) break;
+      } catch (upErr) {
+        log(`   ⚠️ Yükleme hatası (${upErr.message}). ${15 * upAttempt} sn sonra tekrar denenecek...`);
+        if (upAttempt === 3) throw upErr;
+        await new Promise(r => setTimeout(r, 15 * upAttempt * 1000));
       }
-    });
+    }
 
     log(`   ☁️ File URI: ${uploadedFile.uri} | Durum: ${uploadedFile.state}`);
 
@@ -618,10 +635,14 @@ async function processSingleAudioFile(audioPath, ai, catalog, questionsDb, manif
     let metaMarkdown = '';
     let parsedMeta = null;
 
-    for (let attempt = 1; attempt <= 2; attempt++) {
+    const candModels = [modelArg, modelArg === 'gemini-3.5-flash-lite' ? 'gemini-3.8-flash' : 'gemini-3.5-flash-lite'];
+    let activeModel = modelArg;
+
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const curMod = candModels[(attempt - 1) % candModels.length];
       try {
         const metaRes = await ai.models.generateContent({
-          model: modelArg,
+          model: curMod,
           contents: [
             { fileData: { fileUri: getFile.uri, mimeType: getFile.mimeType || mimeType } },
             metaPrompt
@@ -634,13 +655,14 @@ async function processSingleAudioFile(audioPath, ai, catalog, questionsDb, manif
         metaMarkdown = extractResponseText(metaRes);
         if (metaMarkdown && metaMarkdown.length > 50) {
           parsedMeta = parseMarkdownMetadata(metaMarkdown);
+          activeModel = curMod;
           break;
         }
       } catch (metaErr) {
-        const isQuota = metaErr.message?.includes('429') || metaErr.message?.includes('RESOURCE_EXHAUSTED');
+        const isQuota = metaErr.message?.includes('429') || metaErr.message?.includes('RESOURCE_EXHAUSTED') || metaErr.message?.includes('503') || metaErr.message?.includes('UNAVAILABLE');
         if (isQuota) {
-          const waitSec = 35 * attempt;
-          log(`   ⚠️ Kota (429) uyarısı! ${waitSec} saniye bekleniyor...`);
+          const waitSec = 20 * attempt;
+          log(`   ⚠️ Kota/Yoğunluk uyarısı (${curMod})! ${waitSec} saniye bekleniyor...`);
           await new Promise(r => setTimeout(r, waitSec * 1000));
         } else {
           log(`   ⚠️ Meta analizi uyarısı: ${metaErr.message}`);
@@ -668,10 +690,11 @@ async function processSingleAudioFile(audioPath, ai, catalog, questionsDb, manif
       let windowSuccess = false;
       let windowText = '';
 
-      for (let attempt = 1; attempt <= 3; attempt++) {
+      for (let attempt = 1; attempt <= 4; attempt++) {
+        const curMod = candModels[(attempt - 1) % candModels.length];
         try {
           const response = await ai.models.generateContent({
-            model: modelArg,
+            model: curMod,
             contents: [
               { fileData: { fileUri: getFile.uri, mimeType: getFile.mimeType || mimeType } },
               prompt
@@ -684,16 +707,18 @@ async function processSingleAudioFile(audioPath, ai, catalog, questionsDb, manif
           windowText = extractResponseText(response);
           if (windowText && windowText.length > 50) {
             windowSuccess = true;
+            activeModel = curMod;
             break;
           }
         } catch (genErr) {
-          const isQuota = genErr.message?.includes('429') || genErr.message?.includes('RESOURCE_EXHAUSTED');
+          const isQuota = genErr.message?.includes('429') || genErr.message?.includes('RESOURCE_EXHAUSTED') || genErr.message?.includes('503') || genErr.message?.includes('UNAVAILABLE');
           if (isQuota) {
-            const waitSec = 35 * attempt;
-            log(`   ⚠️ Kota (429) uyarısı! ${waitSec} saniye bekleniyor...`);
+            const waitSec = 20 * attempt;
+            log(`   ⚠️ Kota/Yoğunluk uyarısı (${curMod})! Alternatif modele geçiliyor, ${waitSec} sn bekleniyor...`);
             await new Promise(r => setTimeout(r, waitSec * 1000));
           } else {
-            throw genErr;
+            log(`   ⚠️ Parça üretim uyarısı (${curMod}): ${genErr.message}`);
+            await new Promise(r => setTimeout(r, 10000));
           }
         }
       }
