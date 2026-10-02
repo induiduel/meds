@@ -1,39 +1,42 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
-  Sparkles,
-  BookOpen,
-  Volume2,
-  Maximize2,
-  Minimize2,
+  Search,
+  X,
   ChevronLeft,
   ChevronRight,
-  HelpCircle,
+  Maximize2,
+  Minimize2,
+  Clock,
+  User,
+  Layers,
+  Volume2,
+  Copy,
+  Check,
   CheckCircle2,
   XCircle,
   Lightbulb,
-  Search,
-  Layers,
-  Clock,
-  User,
-  GraduationCap,
-  MessageSquare,
-  Send,
-  RotateCcw,
-  List,
-  Check,
-  Zap,
-  ArrowRight,
-  ExternalLink,
-  Flame,
   AlertTriangle,
+  EyeOff,
+  Stethoscope,
+  Sparkles,
+  Send,
+  RefreshCw,
+  PanelRightOpen,
+  PanelRightClose,
+  GalleryHorizontal,
+  Rows3,
   Play,
-  Share2,
-  Sliders,
-  Compass,
-  LayoutGrid
+  BookOpen,
+  ChevronDown,
+  ChevronUp,
+  BrainCircuit,
+  RotateCcw,
 } from 'lucide-react';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
 
+// ---------------------------------------------------------------------------
+// Data types (shape of interactive_learning_decks.json)
+// ---------------------------------------------------------------------------
 export interface ProfessorAudioHighlight {
   timestamp: string;
   quote: string;
@@ -41,9 +44,24 @@ export interface ProfessorAudioHighlight {
   note: string;
 }
 
+export interface TranscriptUtterance {
+  timestamp: string;
+  text: string;
+  isHighlighted?: boolean;
+}
+
+export interface SlideFlashcard {
+  id: string;
+  category?: string;
+  front: string;
+  back: string;
+  hint?: string;
+}
+
 export interface SlideQuestionOption {
   key: string;
   text: string;
+  isCorrect?: boolean;
 }
 
 export interface SlideRelatedQuestion {
@@ -80,9 +98,14 @@ export interface SlideItem {
   slideNumber: number;
   title: string;
   subtitle: string;
+  timeWindow?: string;
   badge: string;
   badgeColor?: string;
   professorAudioHighlight?: ProfessorAudioHighlight;
+  synthesisNarrative?: string;
+  flashcards?: SlideFlashcard[];
+  transcriptUtterances?: TranscriptUtterance[];
+  transcriptUtteranceCount?: number;
   coreContent: {
     keyBullets?: Array<{ title: string; desc: string; isKey?: boolean }>;
     table?: SlideContentTable;
@@ -109,1029 +132,1680 @@ export interface InteractiveDeck {
   matchedNoteTitle: string;
   overview: string;
   highYieldPearls: string[];
+  slides: SlideItem[];
   totalSlides: number;
   matchedPastQuestionsCount: number;
-  slides: SlideItem[];
+  totalUtterancesCount?: number;
+  assignedUtterancesCount?: number;
 }
 
 interface InteractiveDeckViewProps {
+  initialDeckId?: string;
   onOpenPdfModal?: () => void;
-  initialDeckId?: string | null;
   onSelectCommittee?: (committeeId: string) => void;
 }
 
-const DISCIPLINE_THEMES: Record<string, { bg: string; text: string; border: string; accent: string; badgeBg: string }> = {
-  'Halk Sağlığı': {
-    bg: 'bg-sky-50 dark:bg-sky-950/40',
-    text: 'text-sky-800 dark:text-sky-300',
-    border: 'border-sky-200 dark:border-sky-800/60',
-    accent: 'bg-sky-600',
-    badgeBg: 'bg-sky-100 text-sky-800 border-sky-300',
-  },
-  'Tıbbi Genetik': {
-    bg: 'bg-indigo-50 dark:bg-indigo-950/40',
-    text: 'text-indigo-800 dark:text-indigo-300',
-    border: 'border-indigo-200 dark:border-indigo-800/60',
-    accent: 'bg-indigo-600',
-    badgeBg: 'bg-indigo-100 text-indigo-800 border-indigo-300',
-  },
-  'Enfeksiyon Hastalıkları': {
-    bg: 'bg-emerald-50 dark:bg-emerald-950/40',
-    text: 'text-emerald-800 dark:text-emerald-300',
-    border: 'border-emerald-200 dark:border-emerald-800/60',
-    accent: 'bg-emerald-600',
-    badgeBg: 'bg-emerald-100 text-emerald-800 border-emerald-300',
-  },
-  'Üroloji': {
-    bg: 'bg-amber-50 dark:bg-amber-950/40',
-    text: 'text-amber-800 dark:text-amber-300',
-    border: 'border-amber-200 dark:border-amber-800/60',
-    accent: 'bg-amber-600',
-    badgeBg: 'bg-amber-100 text-amber-800 border-amber-300',
-  },
+// ---------------------------------------------------------------------------
+// Small helpers
+// ---------------------------------------------------------------------------
+const PROGRESS_KEY = 'medsoru_learn_progress_v1';
+type DeckProgress = Record<string, { last: number; seen: number[] }>;
+const readProgress = (): DeckProgress => {
+  try {
+    return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+  } catch {
+    return {};
+  }
+};
+const writeProgress = (p: DeckProgress) => {
+  try {
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify(p));
+  } catch {
+    /* storage unavailable */
+  }
 };
 
-export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({
-  initialDeckId,
-}) => {
-  const allDecks: InteractiveDeck[] = interactiveDecksData as InteractiveDeck[];
+/** Renders **bold** segments from the generated text. */
+const Rich: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
+  const parts = String(text || '').split(/(\*\*[^*]+\*\*)/g);
+  return (
+    <span className={className}>
+      {parts.map((p, i) =>
+        p.startsWith('**') && p.endsWith('**') ? (
+          <strong key={i} className="font-semibold text-ink">
+            {p.slice(2, -2)}
+          </strong>
+        ) : (
+          <React.Fragment key={i}>{p}</React.Fragment>
+        )
+      )}
+    </span>
+  );
+};
 
-  // Selected deck & active slide
-  const [selectedDeckId, setSelectedDeckId] = useState<string | null>(initialDeckId || null);
-  const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
+/** Soft badge palette keyed by the colour names used in the data. */
+const TONE: Record<string, { bg: string; fg: string }> = {
+  sky: { bg: '#E6F3FB', fg: '#0B5C86' },
+  blue: { bg: '#E8EEFD', fg: '#1E4FD8' },
+  indigo: { bg: '#ECEBFD', fg: '#4338CA' },
+  violet: { bg: '#F1EBFD', fg: '#6D28D9' },
+  rose: { bg: '#FDECEF', fg: '#B4233C' },
+  red: { bg: '#FDECEC', fg: '#B42318' },
+  amber: { bg: '#FDF2E1', fg: '#9A4D06' },
+  orange: { bg: '#FDEFE3', fg: '#A64B0A' },
+  emerald: { bg: '#E4F3E9', fg: '#157A3E' },
+  green: { bg: '#E4F3E9', fg: '#157A3E' },
+  teal: { bg: '#E0F4F1', fg: '#0F6E63' },
+  slate: { bg: '#EEF1F4', fg: '#4A5868' },
+};
+const tone = (c?: string) => TONE[(c || '').toLowerCase()] || TONE.blue;
 
-  // View presentation mode: 'presentation' (PPTX slide deck) or 'continuous' (downward scrolling)
-  const [viewMode, setViewMode] = useState<'presentation' | 'continuous'>('presentation');
+const EMPHASIS: Record<ProfessorAudioHighlight['emphasisType'], { label: string; icon: React.ElementType; c: string }> = {
+  direct_exam_warning: { label: 'Sınavda sorulur', icon: AlertTriangle, c: 'rose' },
+  slide_missing: { label: 'Slaytta yok', icon: EyeOff, c: 'amber' },
+  pearl: { label: 'Spot bilgi', icon: Lightbulb, c: 'blue' },
+  clinical_tip: { label: 'Klinik ipucu', icon: Stethoscope, c: 'emerald' },
+};
 
-  // Fullscreen state
-  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const presentationContainerRef = useRef<HTMLDivElement>(null);
+const isTyping = (t: EventTarget | null) => {
+  const el = t as HTMLElement | null;
+  return !!el && (['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName) || el.isContentEditable);
+};
 
-  // Slide drawer / TOC
-  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
+// ---------------------------------------------------------------------------
+// 3D Flip Flashcard Component (Akıl Kartı)
+// ---------------------------------------------------------------------------
+export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
-  // Search & Filter in Deck Hub
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
+  return (
+    <div
+      className="w-full select-none cursor-pointer group"
+      style={{ perspective: '1000px' }}
+      onClick={() => setIsFlipped((v) => !v)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setIsFlipped((v) => !v);
+        }
+      }}
+      tabIndex={0}
+      role="button"
+      aria-pressed={isFlipped}
+      aria-label={`${card.front} akıl kartı`}
+    >
+      <div
+        className="w-full relative rounded-2xl transition-transform duration-500 ease-out shadow-xs hover:shadow-md min-h-[220px] sm:min-h-[200px]"
+        style={{
+          transformStyle: 'preserve-3d',
+          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+        }}
+      >
+        {/* FRONT FACE */}
+        <div
+          className={`absolute inset-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-white via-white to-slate-50 overflow-hidden ${
+            isFlipped ? 'pointer-events-none' : ''
+          }`}
+          style={{
+            backfaceVisibility: 'hidden',
+            borderColor: 'var(--color-line)',
+          }}
+        >
+          <div className="flex items-center justify-between gap-2 shrink-0">
+            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-accent-soft text-accent uppercase tracking-wider inline-flex items-center gap-1">
+              <BrainCircuit className="w-3.5 h-3.5" />
+              {card.category || 'Akıl Kartı'}
+            </span>
+            <span className="text-[11px] text-ink-3 font-medium flex items-center gap-1">
+              <span>Cevap arkada</span>
+              <RefreshCw className="w-3 h-3 text-accent group-hover:rotate-45 transition-transform" />
+            </span>
+          </div>
 
-  // Interactive Quiz state: { [questionId]: selectedOptionKey }
-  const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
-  const [revealedExplanations, setRevealedExplanations] = useState<Record<string, boolean>>({});
+          <div className="my-2 flex-1 overflow-y-auto no-scrollbar flex flex-col justify-center">
+            <h4 className="m-0 text-[14.5px] sm:text-[15.5px] font-semibold text-ink leading-snug">
+              {card.front}
+            </h4>
+            {card.hint && (
+              <div className="mt-2.5">
+                {showHint ? (
+                  <p className="m-0 text-[12px] text-amber-900 bg-amber-50/90 border border-amber-200/90 rounded-lg p-2 leading-relaxed">
+                    💡 <strong>İpucu:</strong> {card.hint}
+                  </p>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowHint(true);
+                    }}
+                    className="text-[11.5px] font-medium text-accent hover:underline cursor-pointer inline-flex items-center gap-1"
+                  >
+                    <span>💡 İpucu göster</span>
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
 
-  // Slide RAG AI Chat
-  const [aiQuery, setAiQuery] = useState('');
-  const [aiLoading, setAiLoading] = useState(false);
-  const [aiResponse, setAiResponse] = useState<string | null>(null);
-  const [aiReferences, setAiReferences] = useState<any[]>([]);
-  const [copiedQuote, setCopiedQuote] = useState(false);
+          <div className="pt-2 border-t border-line-soft flex items-center justify-between text-[11.5px] text-ink-3 shrink-0">
+            <span className="flex items-center gap-1 text-accent font-medium">
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Çevirmek için tıkla</span>
+            </span>
+            <span className="text-[11px] font-mono text-ink-3 hidden sm:inline">Boşluk / Enter</span>
+          </div>
+        </div>
 
-  // Active deck object
-  const activeDeck = useMemo(() => {
-    return allDecks.find((d) => d.id === selectedDeckId) || null;
-  }, [allDecks, selectedDeckId]);
+        {/* BACK FACE */}
+        <div
+          className={`absolute inset-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-emerald-50/90 via-white to-ok-soft/30 border-ok-bright/40 overflow-hidden ${
+            !isFlipped ? 'pointer-events-none' : ''
+          }`}
+          style={{
+            backfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg)',
+          }}
+        >
+          <div className="flex items-center justify-between gap-2 shrink-0">
+            <span className="h-6 px-2.5 rounded-full text-[11px] font-semibold bg-ok-soft text-ok uppercase tracking-wider inline-flex items-center gap-1">
+              <CheckCircle2 className="w-3.5 h-3.5 text-ok" />
+              Doğru Yanıt & Klinik Açıklama
+            </span>
+            <span className="text-[11px] text-ok font-medium flex items-center gap-1">
+              <span>Geri çevir</span>
+              <RefreshCw className="w-3 h-3 text-ok" />
+            </span>
+          </div>
 
-  // Active slide object
-  const activeSlide = useMemo(() => {
-    if (!activeDeck || !activeDeck.slides || activeDeck.slides.length === 0) return null;
-    const safeIdx = Math.min(Math.max(0, activeSlideIndex), activeDeck.slides.length - 1);
-    return activeDeck.slides[safeIdx];
-  }, [activeDeck, activeSlideIndex]);
+          <div className="my-2 flex-1 overflow-y-auto pr-1 text-[13.5px] sm:text-[14px] font-medium text-ink leading-relaxed whitespace-pre-line">
+            <Rich text={card.back} />
+          </div>
 
-  // Discipline options
+          <div className="pt-2 border-t border-ok-soft flex items-center justify-between text-[11.5px] text-ok shrink-0">
+            <span className="flex items-center gap-1 font-semibold">
+              <Check className="w-3.5 h-3.5" />
+              <span>Klinik Hafızaya Alındı</span>
+            </span>
+            <span className="text-[11px] text-ink-3">Tekrar çevirmek için tıkla</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------------------
+// Hub (deck catalogue)
+// ---------------------------------------------------------------------------
+export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId }) => {
+  const allDecks = useMemo(
+    () => ((interactiveDecksData as unknown as InteractiveDeck[]) || []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0),
+    []
+  );
+  const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
+  const [query, setQuery] = useState('');
+  const [discipline, setDiscipline] = useState('all');
+  const [progress, setProgress] = useState<DeckProgress>(readProgress);
+
   const disciplines = useMemo(() => {
-    const set = new Set<string>();
-    allDecks.forEach((d) => d.discipline && set.add(d.discipline));
-    return Array.from(set).sort();
+    const m: Record<string, number> = {};
+    allDecks.forEach((d) => (m[d.discipline] = (m[d.discipline] || 0) + 1));
+    return Object.entries(m).sort((a, b) => a[0].localeCompare(b[0], 'tr'));
   }, [allDecks]);
 
-  // Filtered decks for Hub list
-  const filteredDecks = useMemo(() => {
+  const visible = useMemo(() => {
+    const q = query.trim().toLocaleLowerCase('tr-TR');
     return allDecks.filter((d) => {
-      if (selectedDiscipline !== 'all' && d.discipline !== selectedDiscipline) return false;
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase();
-        const inTitle = d.title.toLowerCase().includes(q);
-        const inDisc = d.discipline.toLowerCase().includes(q);
-        const inOverview = d.overview.toLowerCase().includes(q);
-        const inPearls = d.highYieldPearls.some((p) => p.toLowerCase().includes(q));
-        if (!inTitle && !inDisc && !inOverview && !inPearls) return false;
-      }
-      return true;
+      if (discipline !== 'all' && d.discipline !== discipline) return false;
+      if (!q) return true;
+      return [d.title, d.discipline, d.instructor, d.overview, ...(d.highYieldPearls || [])].join(' ').toLocaleLowerCase('tr-TR').includes(q);
     });
-  }, [allDecks, selectedDiscipline, searchQuery]);
+  }, [allDecks, discipline, query]);
 
-  // Handle Fullscreen toggle
-  const toggleFullscreen = () => {
-    if (!presentationContainerRef.current) return;
-    if (!document.fullscreenElement) {
-      presentationContainerRef.current.requestFullscreen().catch(() => {});
-      setIsFullscreen(true);
-    } else {
-      document.exitFullscreen().catch(() => {});
-      setIsFullscreen(false);
-    }
-  };
+  const activeDeck = allDecks.find((d) => d.id === deckId) || null;
+  const totalSlides = allDecks.reduce((n, d) => n + d.slides.length, 0);
 
-  useEffect(() => {
-    const handleFsChange = () => {
-      setIsFullscreen(Boolean(document.fullscreenElement));
-    };
-    document.addEventListener('fullscreenchange', handleFsChange);
-    return () => document.removeEventListener('fullscreenchange', handleFsChange);
-  }, []);
-
-  // Keyboard navigation for presentation mode
-  useEffect(() => {
-    if (!activeDeck || viewMode !== 'presentation') return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (['input', 'textarea'].includes((e.target as HTMLElement)?.tagName?.toLowerCase())) return;
-
-      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
-        e.preventDefault();
-        setActiveSlideIndex((prev) => Math.min(prev + 1, activeDeck.slides.length - 1));
-      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
-        e.preventDefault();
-        setActiveSlideIndex((prev) => Math.max(prev - 1, 0));
-      } else if (e.key.toLowerCase() === 'f') {
-        toggleFullscreen();
-      } else if (e.key === 'Escape' && isFullscreen) {
-        document.exitFullscreen().catch(() => {});
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [activeDeck, viewMode, isFullscreen]);
-
-  // Reset slide index & AI response when deck changes
-  const handleSelectDeck = (deckId: string) => {
-    setSelectedDeckId(deckId);
-    setActiveSlideIndex(0);
-    setAiResponse(null);
-    setAiReferences([]);
-    setAiQuery('');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  // Submit AI Question using RAG Engine
-  const handleAskAi = async (customPrompt?: string) => {
-    const promptToSend = customPrompt || aiQuery;
-    if (!promptToSend.trim() || !activeSlide || !activeDeck) return;
-
-    setAiLoading(true);
-    setAiResponse(null);
-    setAiReferences([]);
-
-    try {
-      const slideContext = `
-Ders: ${activeDeck.title} (${activeDeck.discipline} - ${activeDeck.committee})
-Öğretim Üyesi: ${activeDeck.instructor}
-Slayt Başlığı: ${activeSlide.title} - ${activeSlide.subtitle}
-Hocanın Amfi Vurgusu: "${activeSlide.professorAudioHighlight?.quote || ''}" (Dakika: ${activeSlide.professorAudioHighlight?.timestamp || ''})
-Slayt Temel İçeriği:
-${activeSlide.coreContent.keyBullets?.map((b) => `- ${b.title}: ${b.desc}`).join('\n') || ''}
-Spot Bilgiler:
-${activeSlide.spotPearls.map((p) => `* ${p}`).join('\n')}
-      `.trim();
-
-      const response = await fetch('/api/rag/ask', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query: `${promptToSend}\n\n[İlgili Ders Slayt ve Hoca Ses Bağlamı]:\n${slideContext}`,
-          discipline: activeDeck.discipline,
-          committeeId: activeDeck.committee,
-          mode: 'qa',
-          limit: 4,
-        }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        if (data.answer) {
-          setAiResponse(data.answer);
-          setAiReferences(data.references || []);
-          setAiLoading(false);
-          return;
-        }
-      }
-    } catch (_) {}
-
-    // Fallback response if offline or server API unavailable
-    setTimeout(() => {
-      const quote = activeSlide.professorAudioHighlight?.quote;
-      const fallback = `
-### 🩺 Amfi & Sınav Değerlendirmesi:
-**Soru:** *${promptToSend}*
-
-Bu konuda ders sorumlusu hocamız **[${activeSlide.professorAudioHighlight?.timestamp || 'Ders İçi'}]** dakikasında özellikle şu can alıcı noktayı vurguladı:
-> "${quote || activeSlide.title}"
-
-**Klinik & Sınav İpucu:**
-${activeSlide.spotPearls.join('\n\n')}
-
-Bu konuyla ilgili geçmiş kurullarda **${activeSlide.relatedQuestions.length} adet çıkmış soru** bulunmaktadır. Lütfen slayt altındaki çıkmış soru seçeneklerini çözerek bilginizi pekiştirin.
-      `.trim();
-
-      setAiResponse(fallback);
-      setAiLoading(false);
-    }, 600);
-  };
-
-  const handleCopyQuote = (quote: string) => {
-    navigator.clipboard.writeText(quote);
-    setCopiedQuote(true);
-    setTimeout(() => setCopiedQuote(false), 2000);
-  };
-
-  // If no deck selected, show the Decks Hub (Öğren Kataloğu)
-  if (!activeDeck) {
-    return (
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-8 animate-in fade-in duration-300">
-        {/* Hero Header */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white p-6 sm:p-10 border border-slate-800 shadow-2xl">
-          <div className="absolute top-0 right-0 -mt-10 -mr-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-1/3 -mb-10 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="relative z-10 max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-bold tracking-wide uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-              Yapay Zeka Destekli Ses & Slayt Hub'ı
-            </div>
-
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
-              Hocanın Sesiyle Ders Notları & Çıkmış Sorular Tek Bir Yerde
-            </h1>
-
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Amfi ses kayıtlarındaki hocaların <strong className="text-white font-semibold">"Buradan soru sorarız"</strong> ve <strong className="text-white font-semibold">"Slaytta yok, beni dinleyin"</strong> dediği en kritik yerler tespit edildi; tam metin ders slaytları, spot hap bilgiler ve gerçek kurul çıkmış sorularıyla eşleştirildi.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 pt-2 text-xs sm:text-sm text-slate-300 font-medium">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-xl border border-white/10">
-                <Volume2 className="w-4 h-4 text-sky-400" />
-                7 Tam Ses Transkripti Eşleşti
-              </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-xl border border-white/10">
-                <Layers className="w-4 h-4 text-emerald-400" />
-                877 Ders Notu Arşivinden Doğrulandı
-              </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-xl border border-white/10">
-                <GraduationCap className="w-4 h-4 text-amber-400" />
-                3.349 Çıkmış Soruyla İlişkilendirildi
-              </span>
-            </div>
-          </div>
+  return (
+    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+      <div className="flex items-end justify-between gap-3">
+        <div className="min-w-0">
+          <h1 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em]">Öğren</h1>
+          <p className="m-0 mt-1 text-[14px] text-ink-2 max-w-[720px]">
+            Amfi ses kayıtları, ders notu sentezi, akıl kartları ve çıkmış sorularla donatılmış {allDecks.length} interaktif ders sunumu · {totalSlides} slayt.
+          </p>
         </div>
+      </div>
 
-        {/* Filter & Search Bar */}
-        <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 no-scrollbar">
-            <button
-              onClick={() => setSelectedDiscipline('all')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
-                selectedDiscipline === 'all'
-                  ? 'bg-slate-900 text-white shadow-sm'
-                  : 'bg-white hover:bg-slate-100 text-slate-600 border border-slate-200'
-              }`}
-            >
-              Tüm Disiplinler ({allDecks.length})
-            </button>
-            {disciplines.map((d) => (
+      <div className="bg-white border border-line rounded-[16px] p-3 sm:p-4 flex flex-col gap-2.5">
+        <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field focus-within:border-accent">
+          <Search className="w-4 h-4 text-ink-2 shrink-0" />
+          <span className="sr-only">Derslerde ara</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Ders, hoca ya da konu ara"
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-[#6B7785]"
+          />
+        </label>
+        <div role="radiogroup" aria-label="Ders" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
+          {[['all', allDecks.length] as [string, number], ...disciplines].map(([d, n]) => {
+            const on = discipline === d;
+            return (
               <button
                 key={d}
-                onClick={() => setSelectedDiscipline(d)}
-                className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
-                  selectedDiscipline === d
-                    ? 'bg-indigo-600 text-white shadow-sm'
-                    : 'bg-white hover:bg-slate-100 text-slate-600 border border-slate-200'
+                type="button"
+                role="radio"
+                aria-checked={on}
+                onClick={() => setDiscipline(d)}
+                className={`shrink-0 h-8 px-3 rounded-full text-[13px] whitespace-nowrap cursor-pointer ${
+                  on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink hover:border-line-2'
                 }`}
               >
-                {d}
+                {d === 'all' ? 'Tümü' : d}
+                <span className={`ml-1.5 font-mono text-[12px] ${on ? 'text-accent/70' : 'text-ink-3'}`}>{n}</span>
               </button>
-            ))}
-          </div>
-
-          <div className="relative min-w-[260px]">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Ders adı, hoca vurgusu veya anahtar kelime..."
-              className="w-full pl-9 pr-4 py-2 bg-white rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all placeholder:text-slate-400"
-            />
-          </div>
-        </div>
-
-        {/* Deck Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredDecks.map((deck) => {
-            const theme = DISCIPLINE_THEMES[deck.discipline] || DISCIPLINE_THEMES['Halk Sağlığı'];
-
-            return (
-              <div
-                key={deck.id}
-                className="group bg-white rounded-2xl border border-slate-200 hover:border-indigo-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden"
-              >
-                {/* Card Top Banner */}
-                <div className={`p-5 ${theme.bg} border-b ${theme.border} flex flex-col gap-2.5`}>
-                  <div className="flex items-center justify-between gap-2">
-                    <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border uppercase tracking-wider ${theme.badgeBg}`}>
-                      {deck.discipline}
-                    </span>
-                    <span className="text-[11px] font-medium text-slate-500 flex items-center gap-1 bg-white/80 px-2 py-0.5 rounded-md border border-slate-200">
-                      <Clock className="w-3 h-3 text-slate-400" />
-                      {deck.audioDuration}
-                    </span>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-2 leading-snug">
-                    {deck.title}
-                  </h3>
-
-                  {deck.instructor && deck.instructor !== 'Öğretim Üyesi' && (
-                    <p className="text-xs text-slate-600 flex items-center gap-1">
-                      <User className="w-3.5 h-3.5 text-slate-400" />
-                      {deck.instructor}
-                    </p>
-                  )}
-                </div>
-
-                {/* Card Body */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed line-clamp-3">
-                    {deck.overview}
-                  </p>
-
-                  {/* Highlights Pill Box */}
-                  <div className="space-y-2 pt-2 border-t border-slate-100">
-                    <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
-                      <Flame className="w-3 h-3 text-rose-500" />
-                      Öne Çıkan Amfi Hapı
-                    </div>
-                    {deck.highYieldPearls.length > 0 && (
-                      <p className="text-xs text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-200/80 leading-snug line-clamp-2">
-                        {deck.highYieldPearls[0]}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Metrics Bar */}
-                  <div className="grid grid-cols-2 gap-2 text-center text-xs">
-                    <div className="bg-slate-50 p-2 rounded-xl border border-slate-100">
-                      <div className="font-extrabold text-slate-900 text-sm">{deck.totalSlides} Slayt</div>
-                      <div className="text-[10px] text-slate-500 font-medium">İnteraktif Slayt</div>
-                    </div>
-                    <div className="bg-indigo-50/60 p-2 rounded-xl border border-indigo-100">
-                      <div className="font-extrabold text-indigo-700 text-sm">{deck.matchedPastQuestionsCount} Soru</div>
-                      <div className="text-[10px] text-indigo-600 font-medium">Eşleşen Çıkmış</div>
-                    </div>
-                  </div>
-
-                  {/* Action Button */}
-                  <button
-                    onClick={() => handleSelectDeck(deck.id)}
-                    className="w-full mt-2 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-indigo-600 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-sm group-hover:shadow cursor-pointer"
-                  >
-                    <span>Dersi İncele & Slayt Sunumu</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  </button>
-                </div>
-              </div>
             );
           })}
         </div>
       </div>
-    );
-  }
 
-  // --------------------------------------------------------------------------
-  // ACTIVE DECK PLAYER (PPTX Presentation Mode + Continuous Scroll Mode)
-  // --------------------------------------------------------------------------
-  const theme = DISCIPLINE_THEMES[activeDeck.discipline] || DISCIPLINE_THEMES['Halk Sağlığı'];
-  const totalSlides = activeDeck.slides.length;
-  const currentSlideNum = activeSlide ? activeSlide.slideNumber : 1;
+      {visible.length === 0 ? (
+        <div className="bg-white border border-line rounded-[16px] px-6 py-12 text-center">
+          <p className="m-0 font-display text-[20px] font-bold">Bu aramada ders yok</p>
+          <p className="m-0 mt-1 text-[14px] text-ink-2">Aramayı temizleyip başka bir ders seçebilirsin.</p>
+        </div>
+      ) : (
+        <ul className="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
+          {visible.map((d) => {
+            const pr = progress[d.id];
+            const seen = pr?.seen?.length || 0;
+            const pct = Math.round((seen / d.slides.length) * 100);
+            const qCount = d.slides.reduce((n, s) => n + (s.relatedQuestions?.length || 0), 0);
+            const cardCount = d.slides.reduce((n, s) => n + (s.flashcards?.length || 0), 0);
+            return (
+              <li key={d.id} className="min-w-0">
+                <button
+                  type="button"
+                  onClick={() => setDeckId(d.id)}
+                  className="w-full h-full text-left bg-white border border-line rounded-[16px] p-4 flex flex-col gap-2.5 cursor-pointer hover:border-accent transition-colors group"
+                >
+                  <span className="flex items-center gap-1.5 min-w-0">
+                    <span
+                      className="min-w-0 h-6 px-2 rounded-full text-[12px] font-semibold inline-flex items-center truncate"
+                      style={{ background: tone(d.themeColor).bg, color: tone(d.themeColor).fg }}
+                    >
+                      {d.discipline}
+                    </span>
+                    <span className="shrink-0 ml-auto font-mono text-[12px] text-ink-3">{d.slides.length} slayt</span>
+                  </span>
+                  <span className="text-[17px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{d.title}</span>
+                  <span className="text-[13px] text-ink-2 line-clamp-2">{d.overview}</span>
+                  <span className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-ink-3">
+                    {d.instructor && (
+                      <span className="inline-flex items-center gap-1 min-w-0 max-w-full">
+                        <User className="w-3.5 h-3.5 shrink-0" />
+                        <span className="truncate">{d.instructor}</span>
+                      </span>
+                    )}
+                    {cardCount > 0 && (
+                      <span className="inline-flex items-center gap-1 text-amber-700 font-medium">
+                        <Lightbulb className="w-3.5 h-3.5 text-amber-500" /> {cardCount} akıl kartı
+                      </span>
+                    )}
+                    <span className="inline-flex items-center gap-1">
+                      <Layers className="w-3.5 h-3.5" /> {qCount} soru
+                    </span>
+                  </span>
+                  <span className="mt-auto pt-2.5 border-t border-line-soft flex items-center gap-3">
+                    <span className="flex-1 h-1.5 rounded-full bg-line-soft overflow-hidden" aria-hidden="true">
+                      <span className="block h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-accent shrink-0">
+                      <Play className="w-3.5 h-3.5" />
+                      {seen === 0 ? 'Başla' : seen >= d.slides.length ? 'Tekrar izle' : `Devam et · ${(pr?.last ?? 0) + 1}/${d.slides.length}`}
+                    </span>
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+
+      {activeDeck && (
+        <DeckPlayer
+          deck={activeDeck}
+          startAt={progress[activeDeck.id]?.last ?? 0}
+          onProgress={(index) => {
+            setProgress((prev) => {
+              const cur = prev[activeDeck.id] || { last: 0, seen: [] };
+              const seen = cur.seen.includes(index) ? cur.seen : [...cur.seen, index];
+              const next = { ...prev, [activeDeck.id]: { last: index, seen } };
+              writeProgress(next);
+              return next;
+            });
+          }}
+          onClose={() => setDeckId(null)}
+        />
+      )}
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------------------
+// Player: full-viewport overlay, paged or scrolling, optional native fullscreen
+// ---------------------------------------------------------------------------
+type PanelTab = 'flashcards' | 'questions' | 'notes' | 'pearls' | 'ai';
+
+const DeckPlayer: React.FC<{
+  deck: InteractiveDeck;
+  startAt: number;
+  onProgress: (index: number) => void;
+  onClose: () => void;
+}> = ({ deck, startAt, onProgress, onClose }) => {
+  const slides = deck.slides;
+  const n = slides.length;
+  const [index, setIndex] = useState(() => Math.min(Math.max(0, startAt), n - 1));
+  const [mode, setMode] = useState<'paged' | 'scroll'>(() => {
+    try {
+      return localStorage.getItem('medsoru_learn_mode') === 'scroll' ? 'scroll' : 'paged';
+    } catch {
+      return 'paged';
+    }
+  });
+  const [panelOpen, setPanelOpen] = useState(() => typeof window !== 'undefined' && window.innerWidth >= 1100);
+  const [tab, setTab] = useState<PanelTab>('flashcards');
+  const [isFs, setIsFs] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+  const stripRef = useRef<HTMLDivElement>(null);
+  const programmatic = useRef(false);
+  const touch = useRef<{ x: number; y: number } | null>(null);
+
+  const slide = slides[index];
+  // A long slide is split into screen-sized pages ("parts") in paged mode
+  const [part, setPart] = useState(0);
+  const [parts, setParts] = useState(1);
+  const landOnLastPart = useRef(false);
+  const handleParts = useCallback((count: number) => {
+    setParts(count);
+    if (landOnLastPart.current) {
+      landOnLastPart.current = false;
+      setPart(count - 1);
+    } else setPart((p) => Math.min(p, count - 1));
+  }, []);
+
+  // Lock page scroll and focus the player while open
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    rootRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prev;
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+    };
+  }, []);
+
+  useEffect(() => onProgress(index), [index]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('medsoru_learn_mode', mode);
+    } catch {
+      /* ignore */
+    }
+  }, [mode]);
+
+  // Native fullscreen on top of the overlay (the overlay already fills the viewport)
+  useEffect(() => {
+    const onFs = () => setIsFs(document.fullscreenElement === rootRef.current);
+    document.addEventListener('fullscreenchange', onFs);
+    return () => document.removeEventListener('fullscreenchange', onFs);
+  }, []);
+  const canFullscreen = typeof document !== 'undefined' && !!document.fullscreenEnabled;
+  const toggleFullscreen = () => {
+    if (!rootRef.current) return;
+    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+    else rootRef.current.requestFullscreen?.().catch(() => {});
+  };
+
+  const goTo = useCallback(
+    (i: number, toLastPart = false) => {
+      const t = Math.max(0, Math.min(n - 1, i));
+      landOnLastPart.current = toLastPart;
+      setPart(0);
+      setIndex(t);
+      if (mode === 'scroll') {
+        programmatic.current = true;
+        sectionRefs.current[t]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.setTimeout(() => (programmatic.current = false), 600);
+      }
+    },
+    [mode, n]
+  );
+
+  const next = () => {
+    if (mode === 'paged' && part < parts - 1) setPart(part + 1);
+    else if (index < n - 1) goTo(index + 1);
+  };
+  const prev = () => {
+    if (mode === 'paged' && part > 0) setPart(part - 1);
+    else if (index > 0) goTo(index - 1, mode === 'paged');
+  };
+  const atStart = index === 0 && (mode !== 'paged' || part === 0);
+  const atEnd = index >= n - 1 && (mode !== 'paged' || part >= parts - 1);
+
+  // Keep the current slide in view when switching to scroll mode
+  useEffect(() => {
+    if (mode === 'scroll') {
+      requestAnimationFrame(() => sectionRefs.current[index]?.scrollIntoView({ block: 'start' }));
+    }
+  }, [mode]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Scroll mode: slides flow at their natural height; the current one is the
+  // section crossing the upper third of the stage.
+  useEffect(() => {
+    const sc = scrollRef.current;
+    if (mode !== 'scroll' || !sc) return;
+    const onScroll = () => {
+      if (programmatic.current) return;
+      const probe = sc.scrollTop + sc.clientHeight * 0.35;
+      let i = 0;
+      sectionRefs.current.forEach((el, k) => {
+        if (el && el.offsetTop <= probe) i = k;
+      });
+      setIndex((prev) => (prev === i ? prev : i));
+    };
+    sc.addEventListener('scroll', onScroll, { passive: true });
+    return () => sc.removeEventListener('scroll', onScroll);
+  }, [mode, n]);
+
+  // Thumbnail strip follows the current slide
+  useEffect(() => {
+    const el = stripRef.current?.querySelector<HTMLElement>(`[data-thumb="${index}"]`);
+    el?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }, [index]);
+
+  // Keyboard
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (isTyping(e.target)) return;
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setSearchOpen((v) => !v);
+        return;
+      }
+      if (e.key === '/' && !searchOpen) {
+        e.preventDefault();
+        setSearchOpen(true);
+        return;
+      }
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (['ArrowRight', 'PageDown', ' '].includes(e.key) || (mode === 'paged' && e.key === 'ArrowDown')) {
+        e.preventDefault();
+        next();
+      } else if (['ArrowLeft', 'PageUp'].includes(e.key) || (mode === 'paged' && e.key === 'ArrowUp')) {
+        e.preventDefault();
+        prev();
+      } else if (e.key === 'Home') goTo(0);
+      else if (e.key === 'End') goTo(n - 1);
+      else if (e.key.toLowerCase() === 'f' && canFullscreen) toggleFullscreen();
+      else if (e.key === 'Escape') {
+        if (searchOpen) setSearchOpen(false);
+        else if (!document.fullscreenElement) onClose();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  });
+
+  // Swipe (paged mode)
+  const onTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touch.current = { x: t.clientX, y: t.clientY };
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!touch.current || mode !== 'paged') return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touch.current.x;
+    const dy = t.clientY - touch.current.y;
+    touch.current = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) (dx < 0 ? next : prev)();
+  };
+
+  const iconBtn =
+    'w-10 h-10 shrink-0 rounded-[10px] flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed';
 
   return (
     <div
-      ref={presentationContainerRef}
-      className={`min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors ${
-        isFullscreen ? 'p-3 sm:p-6 flex flex-col justify-between' : 'pb-16'
-      }`}
+      ref={rootRef}
+      tabIndex={-1}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${deck.title} sunumu`}
+      className="fixed inset-0 z-[60] h-[100dvh] w-screen bg-canvas text-ink flex flex-col outline-none"
     >
-      {/* Top Sticky Navigation Bar */}
-      <div className="sticky top-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-xs px-3 sm:px-6 py-2.5">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-          {/* Left: Back button + Title */}
-          <div className="flex items-center gap-3 min-w-0">
-            <button
-              onClick={() => setSelectedDeckId(null)}
-              className="p-1.5 sm:px-3 sm:py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shrink-0"
-              title="Öğren Kataloğuna Dön"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Kataloğa Dön</span>
-            </button>
-
-            <div className="min-w-0">
-              <div className="flex items-center gap-2">
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${theme.badgeBg}`}>
-                  {activeDeck.discipline}
-                </span>
-                <span className="text-[11px] text-slate-500 truncate hidden md:inline">
-                  {activeDeck.committee}
-                </span>
-              </div>
-              <h2 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate">
-                {activeDeck.title}
-              </h2>
-            </div>
+      {/* Top bar */}
+      <header className="shrink-0 h-14 bg-white border-b border-line px-2 sm:px-3 flex items-center gap-1.5 sm:gap-2">
+        <button type="button" onClick={onClose} aria-label="Sunumu kapat" title="Kapat (Esc)" className={iconBtn}>
+          <X className="w-5 h-5" />
+        </button>
+        <div className="min-w-0 flex-1">
+          <div className="text-[12px] text-ink-2 truncate">
+            {deck.discipline}
+            {deck.instructor ? ` · ${deck.instructor}` : ''}
           </div>
+          <div className="text-[15px] font-semibold truncate">{deck.shortTitle || deck.title}</div>
+        </div>
 
-          {/* Center / Right: Mode Switchers & Controls */}
-          <div className="flex items-center gap-2 shrink-0">
-            {/* Presentation Mode vs Continuous Scroll Toggle */}
-            <div className="bg-slate-100 dark:bg-slate-800 p-0.5 rounded-xl flex items-center border border-slate-200 dark:border-slate-700">
-              <button
-                onClick={() => setViewMode('presentation')}
-                className={`px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
-                  viewMode === 'presentation'
-                    ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
-                    : 'text-slate-500 hover:text-slate-800'
-                }`}
-                title="PPTX Slayt Sunumu Modu"
-              >
-                <Sliders className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Slayt Modu</span>
-              </button>
-              <button
-                onClick={() => setViewMode('continuous')}
-                className={`px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
-                  viewMode === 'continuous'
-                    ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
-                    : 'text-slate-500 hover:text-slate-800'
-                }`}
-                title="Aşağı Doğru Kaydırma Modu"
-              >
-                <List className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Dikey Akış</span>
-              </button>
+        {/* Global topic search trigger */}
+        <button
+          type="button"
+          onClick={() => setSearchOpen(true)}
+          title="Ders İçinde Konu, Soru ve Spot Ara (Ctrl+K veya /)"
+          className="h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-ink text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
+        >
+          <Search className="w-4 h-4 text-accent" />
+          <span className="hidden md:inline">Ders İçi Arama</span>
+          <kbd className="hidden lg:inline text-[10px] font-mono text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">Ctrl+K</kbd>
+        </button>
+
+        <span className="hidden sm:inline font-mono text-[13px] text-ink-2 px-1" aria-live="polite">
+          {index + 1} / {n}
+        </span>
+        <div role="radiogroup" aria-label="Görünüm" className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5">
+          {(
+            [
+              ['paged', GalleryHorizontal, 'Sayfa sayfa'],
+              ['scroll', Rows3, 'Kaydırarak'],
+            ] as const
+          ).map(([id, Icon, label]) => (
+            <button
+              key={id}
+              type="button"
+              role="radio"
+              aria-checked={mode === id}
+              aria-label={label}
+              title={label}
+              onClick={() => setMode(id)}
+              className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[13px] cursor-pointer ${
+                mode === id ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
+              }`}
+            >
+              <Icon className="w-4 h-4" />
+              <span className="hidden md:inline">{label}</span>
+            </button>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={() => setPanelOpen((v) => !v)}
+          aria-pressed={panelOpen}
+          aria-label="Etkileşim panelini aç/kapat"
+          title="Akıl kartları, çıkmış sorular, ders notu ve AI"
+          className={`${iconBtn} ${panelOpen ? 'bg-accent-soft text-accent' : ''}`}
+        >
+          {panelOpen ? <PanelRightClose className="w-5 h-5" /> : <PanelRightOpen className="w-5 h-5" />}
+        </button>
+        {canFullscreen && (
+          <button type="button" onClick={toggleFullscreen} aria-label={isFs ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (F)" className={iconBtn}>
+            {isFs ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
+          </button>
+        )}
+      </header>
+      <div className="shrink-0 h-[3px] bg-line-soft" aria-hidden="true">
+        <div className="h-full bg-accent transition-[width] duration-300" style={{ width: `${((index + 1) / n) * 100}%` }} />
+      </div>
+
+      {/* Stage + panel */}
+      <div className={`flex-1 min-h-0 grid grid-cols-1 ${panelOpen ? 'lg:grid-cols-[minmax(0,1fr)_420px]' : ''}`}>
+        <div className="min-h-0 min-w-0 relative">
+          {mode === 'paged' ? (
+            <div className="absolute inset-0 p-2 sm:p-4 lg:p-6 flex" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+              <SlideCanvas
+                key={index}
+                slide={slide}
+                index={index}
+                total={n}
+                paged
+                part={part}
+                onParts={handleParts}
+                onOpenQuestions={() => {
+                  setTab('questions');
+                  setPanelOpen(true);
+                }}
+                onOpenFlashcards={() => {
+                  setTab('flashcards');
+                  setPanelOpen(true);
+                }}
+                onOpenNotes={() => {
+                  setTab('notes');
+                  setPanelOpen(true);
+                }}
+              />
             </div>
+          ) : (
+            <div ref={scrollRef} className="absolute inset-0 overflow-y-auto snap-y snap-proximity overscroll-contain" aria-label="Slaytlar">
+              {slides.map((s, i) => (
+                <section
+                  key={i}
+                  data-index={i}
+                  ref={(el) => {
+                    sectionRefs.current[i] = el;
+                  }}
+                  aria-label={`Slayt ${i + 1}`}
+                  className="min-h-full snap-start p-2 sm:p-4 lg:p-6 flex"
+                >
+                  <SlideCanvas
+                    slide={s}
+                    index={i}
+                    total={n}
+                    onOpenQuestions={() => {
+                      setTab('questions');
+                      setPanelOpen(true);
+                    }}
+                    onOpenFlashcards={() => {
+                      setTab('flashcards');
+                      setPanelOpen(true);
+                    }}
+                    onOpenNotes={() => {
+                      setTab('notes');
+                      setPanelOpen(true);
+                    }}
+                  />
+                </section>
+              ))}
+            </div>
+          )}
+        </div>
 
-            {/* Slide Index Pill in Presentation Mode */}
-            {viewMode === 'presentation' && (
-              <span className="text-xs font-bold font-mono px-2.5 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hidden sm:inline">
-                {currentSlideNum} / {totalSlides}
+        {panelOpen && (
+          <>
+            {/* phone/tablet: bottom sheet */}
+            <button type="button" aria-label="Paneli kapat" onClick={() => setPanelOpen(false)} className="lg:hidden fixed inset-0 z-[61] bg-[rgba(14,26,38,0.35)] cursor-default" />
+            <aside
+              aria-label="Etkileşim paneli"
+              className="fixed lg:static z-[62] left-0 right-0 bottom-0 max-h-[78dvh] lg:max-h-none lg:h-full rounded-t-[18px] lg:rounded-none bg-white border-t lg:border-t-0 lg:border-l border-line flex flex-col min-h-0 shadow-[0_-12px_40px_rgba(14,26,38,0.18)] lg:shadow-none"
+            >
+              <div className="lg:hidden flex justify-center pt-2" aria-hidden="true">
+                <span className="w-10 h-1 rounded-full bg-line-2" />
+              </div>
+              <InteractionPanel deck={deck} slide={slide} tab={tab} setTab={setTab} />
+            </aside>
+          </>
+        )}
+      </div>
+
+      {/* Bottom navigation: prev · thumbnails · next */}
+      <nav aria-label="Slayt gezgini" className="shrink-0 h-14 sm:h-16 bg-white border-t border-line px-2 sm:px-3 flex items-center gap-2">
+        <button type="button" onClick={prev} disabled={atStart} aria-label="Önceki sayfa" className={iconBtn}>
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <div ref={stripRef} className="flex-1 min-w-0 flex gap-1.5 overflow-x-auto no-scrollbar py-1">
+          {slides.map((s, i) => {
+            const on = i === index;
+            return (
+              <button
+                key={i}
+                type="button"
+                data-thumb={i}
+                onClick={() => goTo(i)}
+                aria-current={on ? 'step' : undefined}
+                aria-label={`Slayt ${i + 1}: ${s.title}`}
+                title={s.title}
+                className={`shrink-0 h-9 sm:h-10 rounded-[9px] px-2.5 flex items-center gap-2 text-left cursor-pointer border transition-colors ${
+                  on ? 'border-accent bg-accent-soft text-accent' : 'border-line bg-white text-ink-2 hover:border-line-2'
+                }`}
+              >
+                <span className="font-mono text-[12px] font-semibold">{String(i + 1).padStart(2, '0')}</span>
+                <span className={`hidden md:block max-w-[160px] truncate text-[12px] ${on ? 'font-semibold' : ''}`}>{s.title}</span>
+              </button>
+            );
+          })}
+        </div>
+        <span className="sm:hidden font-mono text-[12px] text-ink-2 shrink-0">
+          {index + 1}/{n}
+        </span>
+        <button type="button" onClick={next} disabled={atEnd} aria-label="Sonraki sayfa" className={`${iconBtn} bg-accent text-white hover:bg-accent-hover hover:text-white`}>
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </nav>
+
+      {/* Global topic search modal */}
+      {searchOpen && (
+        <GlobalTopicSearchModal
+          deck={deck}
+          onSelect={(slideIdx) => {
+            goTo(slideIdx);
+            setPanelOpen(true);
+            setSearchOpen(false);
+          }}
+          onClose={() => setSearchOpen(false)}
+        />
+      )}
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------------------
+// Global Topic Search Modal (searches slide contents, notes, cards and questions)
+// ---------------------------------------------------------------------------
+const GlobalTopicSearchModal: React.FC<{
+  deck: InteractiveDeck;
+  onSelect: (slideIdx: number) => void;
+  onClose: () => void;
+}> = ({ deck, onSelect, onClose }) => {
+  const [q, setQ] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
+  const results = useMemo(() => {
+    const queryNorm = q.trim().toLocaleLowerCase('tr-TR');
+    if (!queryNorm || queryNorm.length < 2) return [];
+
+    const matches: Array<{
+      slideIndex: number;
+      slideNumber: number;
+      slideTitle: string;
+      matchedType: string;
+      snippet: string;
+    }> = [];
+
+    deck.slides.forEach((slide, sIdx) => {
+      // 1. Title / Subtitle
+      if (slide.title.toLocaleLowerCase('tr-TR').includes(queryNorm)) {
+        matches.push({
+          slideIndex: sIdx,
+          slideNumber: slide.slideNumber,
+          slideTitle: slide.title,
+          matchedType: 'Başlık',
+          snippet: slide.subtitle || slide.title,
+        });
+        return;
+      }
+      // 2. Synthesis Narrative
+      if (slide.synthesisNarrative && slide.synthesisNarrative.toLocaleLowerCase('tr-TR').includes(queryNorm)) {
+        const idx = slide.synthesisNarrative.toLocaleLowerCase('tr-TR').indexOf(queryNorm);
+        const start = Math.max(0, idx - 40);
+        const end = Math.min(slide.synthesisNarrative.length, idx + queryNorm.length + 80);
+        matches.push({
+          slideIndex: sIdx,
+          slideNumber: slide.slideNumber,
+          slideTitle: slide.title,
+          matchedType: 'Ders Notu Sentezi',
+          snippet: (start > 0 ? '...' : '') + slide.synthesisNarrative.slice(start, end) + (end < slide.synthesisNarrative.length ? '...' : ''),
+        });
+        return;
+      }
+      // 3. Key bullets
+      const foundBullet = (slide.coreContent?.keyBullets || []).find(
+        (b) => b.title.toLocaleLowerCase('tr-TR').includes(queryNorm) || b.desc.toLocaleLowerCase('tr-TR').includes(queryNorm)
+      );
+      if (foundBullet) {
+        matches.push({
+          slideIndex: sIdx,
+          slideNumber: slide.slideNumber,
+          slideTitle: slide.title,
+          matchedType: 'Klinik Bilgi',
+          snippet: `${foundBullet.title}: ${foundBullet.desc}`,
+        });
+        return;
+      }
+      // 4. Flashcards
+      const foundCard = (slide.flashcards || []).find(
+        (fc) => fc.front.toLocaleLowerCase('tr-TR').includes(queryNorm) || fc.back.toLocaleLowerCase('tr-TR').includes(queryNorm)
+      );
+      if (foundCard) {
+        matches.push({
+          slideIndex: sIdx,
+          slideNumber: slide.slideNumber,
+          slideTitle: slide.title,
+          matchedType: 'Akıl Kartı',
+          snippet: `Soru: ${foundCard.front} -> ${foundCard.back.slice(0, 110)}...`,
+        });
+        return;
+      }
+      // 5. Spot Pearls
+      const foundPearl = (slide.spotPearls || []).find((p) => p.toLocaleLowerCase('tr-TR').includes(queryNorm));
+      if (foundPearl) {
+        matches.push({
+          slideIndex: sIdx,
+          slideNumber: slide.slideNumber,
+          slideTitle: slide.title,
+          matchedType: 'Spot İnci',
+          snippet: foundPearl,
+        });
+        return;
+      }
+      // 6. Questions
+      const foundQ = (slide.relatedQuestions || []).find(
+        (rq) => rq.stem.toLocaleLowerCase('tr-TR').includes(queryNorm) || rq.explanation.toLocaleLowerCase('tr-TR').includes(queryNorm)
+      );
+      if (foundQ) {
+        matches.push({
+          slideIndex: sIdx,
+          slideNumber: slide.slideNumber,
+          slideTitle: slide.title,
+          matchedType: 'Çıkmış Soru',
+          snippet: foundQ.stem.slice(0, 130) + '...',
+        });
+      }
+    });
+
+    return matches;
+  }, [deck, q]);
+
+  return (
+    <div className="fixed inset-0 z-[70] bg-[rgba(14,26,38,0.5)] backdrop-blur-xs flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
+      <div className="w-full max-w-2xl bg-white border border-line rounded-[18px] shadow-2xl flex flex-col max-h-[85dvh] overflow-hidden animate-in fade-in duration-200">
+        {/* Modal Search Header */}
+        <div className="p-3.5 sm:p-4 border-b border-line flex items-center gap-2.5">
+          <Search className="w-5 h-5 text-accent shrink-0" />
+          <input
+            ref={inputRef}
+            type="search"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Ders içinde konu, patofizyoloji, tanı, akıl kartı veya soru ara..."
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] sm:text-[16px] placeholder:text-[#6B7785]"
+          />
+          {q && (
+            <button type="button" onClick={() => setQ('')} className="p-1 text-ink-3 hover:text-ink cursor-pointer">
+              <X className="w-4 h-4" />
+            </button>
+          )}
+          <button
+            type="button"
+            onClick={onClose}
+            className="h-8 px-2.5 rounded-lg bg-canvas hover:bg-line text-[12px] font-semibold text-ink-2 cursor-pointer"
+          >
+            Kapat (Esc)
+          </button>
+        </div>
+
+        {/* Modal Results List */}
+        <div className="flex-1 min-h-0 overflow-y-auto p-3 sm:p-4 flex flex-col gap-2">
+          {!q.trim() ? (
+            <div className="py-12 text-center text-ink-3 text-[14px]">
+              <Search className="w-8 h-8 mx-auto mb-2 text-ink-3 opacity-40" />
+              <p className="m-0 font-medium text-ink-2">Bu dersteki tüm slaytlar, klinik maddeler ve akıl kartları taranır.</p>
+              <p className="m-0 text-[13px] mt-1">Aramak istediğin tıbbi kavramı yazmaya başla (örn. forniks, trabekülasyon, POD, pyelointerstisyel, BPH)...</p>
+            </div>
+          ) : results.length === 0 ? (
+            <div className="py-12 text-center text-ink-3 text-[14px]">
+              <p className="m-0 font-medium text-ink-2">"{q}" için ders içeriğinde eşleşme bulunamadı.</p>
+              <p className="m-0 text-[13px] mt-1">Farklı bir tıp terimi ya da kelime kökü dene.</p>
+            </div>
+          ) : (
+            <>
+              <div className="text-[12px] font-semibold text-ink-3 px-1 pb-1">
+                Ders içeriğinde {results.length} eşleşme bulundu:
+              </div>
+              {results.map((r, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => onSelect(r.slideIndex)}
+                  className="w-full text-left rounded-xl border border-line hover:border-accent p-3 bg-white hover:bg-accent-soft/30 transition-all cursor-pointer flex flex-col gap-1.5 group"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-semibold text-[13px] text-accent flex items-center gap-1.5">
+                      <span className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-accent-soft text-accent">
+                        Slayt {r.slideNumber}
+                      </span>
+                      <span className="truncate">{r.slideTitle}</span>
+                    </span>
+                    <span className="text-[11px] font-semibold text-ink-2 bg-black/5 px-2 py-0.5 rounded">
+                      {r.matchedType}
+                    </span>
+                  </div>
+                  <p className="m-0 text-[13.5px] leading-[1.5] text-ink line-clamp-2">
+                    {r.snippet}
+                  </p>
+                </button>
+              ))}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------------------
+// One slide, sized to the stage (16:9 feel on wide screens, scrolls inside if long)
+// ---------------------------------------------------------------------------
+const SlideCanvas: React.FC<{
+  slide: SlideItem;
+  index: number;
+  total: number;
+  onOpenQuestions?: () => void;
+  onOpenFlashcards?: () => void;
+  onOpenNotes?: () => void;
+  /** paged: split into screen-sized pages; otherwise flow at natural height */
+  paged?: boolean;
+  part?: number;
+  onParts?: (count: number) => void;
+}> = ({ slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, paged = false, part = 0, onParts }) => {
+  const [copied, setCopied] = useState(false);
+  // Pagination (paged mode): measure the slide's blocks and cut pages only at
+  // block boundaries, so every page fits the stage like a presentation slide.
+  const boxRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [pages, setPages] = useState<{ start: number; end: number }[]>([{ start: 0, end: Infinity }]);
+  const pagesKey = useRef('');
+  useLayoutEffect(() => {
+    const box = boxRef.current;
+    const content = contentRef.current;
+    if (!box || !content || !paged) return;
+    const compute = () => {
+      const avail = box.clientHeight;
+      if (!avail) return;
+      const cr = content.getBoundingClientRect();
+      const total = cr.height;
+      const units: [number, number][] = [];
+      const walk = (el: Element, depth: number) => {
+        for (const ch of Array.from(el.children)) {
+          const r = (ch as HTMLElement).getBoundingClientRect();
+          if (r.height <= 0) continue;
+          // descend into tall blocks so long lists/tables split between items, not leave half a page empty
+          if (r.height > avail * 0.4 && ch.children.length > 0 && depth < 7) walk(ch, depth + 1);
+          else units.push([r.top - cr.top, r.bottom - cr.top]);
+        }
+      };
+      walk(content, 0);
+      const inside = (y: number) => units.some(([a, b]) => a < y - 1 && b > y + 1);
+      const out: { start: number; end: number }[] = [];
+      let start = 0;
+      while (start + avail < total - 2 && out.length < 30) {
+        const limit = start + avail - 14;
+        const cands = units.map((u) => u[1] + 6).filter((y) => y > start + 60 && y <= limit && !inside(y));
+        const cut = cands.length ? Math.max(...cands) : limit;
+        out.push({ start, end: cut });
+        const nextTops = units.map((u) => u[0]).filter((t) => t >= cut - 6);
+        start = Math.max(cut, (nextTops.length ? Math.min(...nextTops) : cut) - 16);
+      }
+      out.push({ start, end: total });
+      const key = out.map((pg) => `${Math.round(pg.start)}-${Math.round(pg.end)}`).join(',');
+      if (key !== pagesKey.current) {
+        pagesKey.current = key;
+        setPages(out);
+        onParts?.(out.length);
+      }
+    };
+    compute();
+    const ro = new ResizeObserver(() => compute());
+    ro.observe(box);
+    ro.observe(content);
+    return () => ro.disconnect();
+  }, [paged, slide, onParts]);
+  const page = pages[Math.min(part, pages.length - 1)] || { start: 0, end: Infinity };
+  const pageCount = pages.length;
+  const hl = slide.professorAudioHighlight;
+  const emph = hl ? EMPHASIS[hl.emphasisType] || EMPHASIS.pearl : null;
+  const c = slide.coreContent || {};
+  const badge = tone(slide.badgeColor);
+  const flashcards = slide.flashcards || [];
+
+  const copyQuote = () => {
+    if (!hl?.quote) return;
+    navigator.clipboard?.writeText(hl.quote).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1600);
+    });
+  };
+
+  return (
+    <article className={`w-full ${paged ? 'h-full' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 overflow-hidden`}>
+      <div ref={boxRef} className={paged ? 'flex-1 min-h-0 overflow-hidden relative' : ''}>
+      <div style={paged && Number.isFinite(page.end) ? { height: page.end - page.start, overflow: 'hidden' } : undefined}>
+      <div
+        ref={contentRef}
+        style={paged ? { transform: `translateY(${-page.start}px)` } : undefined}
+        className="px-4 py-4 sm:px-8 sm:py-6 lg:px-10 lg:py-7 flex flex-col gap-4 sm:gap-6"
+      >
+        {/* Slide header */}
+        <header className="flex flex-col gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="font-mono text-[12px] text-ink-3">
+              {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
+            </span>
+            {slide.badge && (
+              <span className="h-6 px-2 rounded-full text-[11.5px] font-semibold tracking-[0.04em] inline-flex items-center" style={{ background: badge.bg, color: badge.fg }}>
+                {slide.badge}
               </span>
             )}
+          </div>
+          <h2 className="m-0 font-display font-bold tracking-[-0.025em] leading-[1.12] text-[22px] sm:text-[28px] lg:text-[34px]">{slide.title}</h2>
+          {slide.subtitle && <p className="m-0 text-[14px] sm:text-[16px] text-ink-2">{slide.subtitle}</p>}
+        </header>
 
-            {/* Slide Drawer Toggle */}
-            <button
-              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              className="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-all cursor-pointer"
-              title="Slayt Listesi / İndeks"
-            >
-              <LayoutGrid className="w-4 h-4" />
-            </button>
+        {/* 1. Clinical & Exam Critical Pearl */}
+        {hl && emph && (
+          <figure className="m-0 rounded-2xl border-2 border-accent/20 bg-gradient-to-r from-accent-soft/30 via-white to-accent-soft/10 p-4 sm:p-5 flex flex-col gap-2 shadow-xs">
+            <figcaption className="flex items-center gap-2">
+              <span
+                className="h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
+                style={{ background: tone(emph.c).bg, color: tone(emph.c).fg }}
+              >
+                <emph.icon className="w-3.5 h-3.5" />
+                {emph.label}
+              </span>
+              <span className="text-[12px] font-semibold text-accent uppercase tracking-wider">
+                Klinik & Sınav Kritik Vurgusu
+              </span>
+              <button
+                type="button"
+                onClick={copyQuote}
+                aria-label="Alıntıyı kopyala"
+                className="ml-auto h-7 px-2 rounded-lg flex items-center gap-1 text-[12px] text-ink-2 hover:bg-white border border-transparent hover:border-line cursor-pointer transition-colors"
+              >
+                {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
+                <span className="hidden sm:inline">{copied ? 'Kopyalandı' : 'Kopyala'}</span>
+              </button>
+            </figcaption>
+            <blockquote className="m-0 text-[15px] sm:text-[16.5px] font-medium leading-[1.55] text-ink border-l-3 border-accent pl-3.5 italic">
+              “{hl.quote}”
+            </blockquote>
+            {hl.note && (
+              <p className="m-0 text-[13px] text-ink-2 leading-[1.5] bg-white/60 p-2.5 rounded-xl border border-line-soft">
+                💡 <strong>Klinik Yaklaşım:</strong> {hl.note}
+              </p>
+            )}
+          </figure>
+        )}
 
-            {/* Fullscreen Toggle */}
-            <button
-              onClick={toggleFullscreen}
-              className="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-all cursor-pointer"
-              title={isFullscreen ? 'Tam Ekrandan Çık (Esc / F)' : 'Tam Ekran Sunum (F)'}
-            >
-              {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
-            </button>
+        {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
+        {slide.synthesisNarrative && (
+          <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/30 p-4 sm:p-5 shadow-xs flex flex-col gap-2">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <span className="w-7 h-7 rounded-lg bg-accent text-white flex items-center justify-center shrink-0">
+                  <BookOpen className="w-4 h-4" />
+                </span>
+                <div>
+                  <h3 className="m-0 text-[14.5px] font-bold text-ink">
+                    Kapsamlı Ders Notu ve Patoloji Sentezi
+                  </h3>
+                  <p className="m-0 text-[11.5px] text-ink-3">
+                    Resmi ders notunun derinlemesine akıcı tıbbi sentezi
+                  </p>
+                </div>
+              </div>
+              {onOpenNotes && (
+                <button
+                  type="button"
+                  onClick={onOpenNotes}
+                  className="h-8 px-2.5 rounded-lg bg-white border border-line text-[12px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors"
+                >
+                  <span>Panelde Oku</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+            <p className="m-0 text-[14.5px] sm:text-[15.5px] text-ink-2 leading-[1.68] font-normal">
+              <Rich text={slide.synthesisNarrative} />
+            </p>
+          </section>
+        )}
+
+        {/* 3. Interactive 3D Flashcards (Akıl Kartları Atölyesi) */}
+        {flashcards.length > 0 && (
+          <section className="flex flex-col gap-3 pt-2">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2.5">
+                <span className="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0">
+                  <BrainCircuit className="w-4 h-4" />
+                </span>
+                <div>
+                  <h3 className="m-0 text-[15px] font-bold text-ink flex items-center gap-2">
+                    <span>Akıl Kartları (Tıkla & Çevir)</span>
+                    <span className="font-mono text-[11px] font-semibold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
+                      {flashcards.length} Kart
+                    </span>
+                  </h3>
+                  <p className="m-0 text-[12px] text-ink-3">
+                    Kafanda yanıtla, ardından karta tıklayarak cevabı ve amfi ipucunu aç
+                  </p>
+                </div>
+              </div>
+
+              {onOpenFlashcards && (
+                <button
+                  type="button"
+                  onClick={onOpenFlashcards}
+                  className="h-8 px-2.5 rounded-lg bg-canvas hover:bg-white border border-line text-[12px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer transition-colors"
+                >
+                  <span>Panelde Çalış</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
+              {flashcards.map((card) => (
+                <FlashcardComponent key={card.id} card={card} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* 4. High-yield action bar (Questions, Flashcards, Notes) */}
+        <div className="rounded-xl border border-line bg-gradient-to-r from-accent-soft/20 via-white to-transparent p-3 sm:p-3.5 flex items-center justify-between gap-3 flex-wrap">
+          <div className="flex items-center gap-2 text-[13px] font-medium text-ink-2">
+            <Sparkles className="w-4 h-4 text-accent shrink-0" />
+            <span>Bu konu için <strong>{flashcards.length} akıl kartı</strong> ve <strong>{(slide.relatedQuestions || []).length} çıkmış soru</strong> hazırlandı.</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {flashcards.length > 0 && onOpenFlashcards && (
+              <button
+                type="button"
+                onClick={onOpenFlashcards}
+                className="h-8 px-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+              >
+                <BrainCircuit className="w-3.5 h-3.5" />
+                <span>Akıl Kartları ({flashcards.length})</span>
+              </button>
+            )}
+            {(slide.relatedQuestions || []).length > 0 && onOpenQuestions && (
+              <button
+                type="button"
+                onClick={onOpenQuestions}
+                className="h-8 px-3 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+              >
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Çıkmış Sorular ({(slide.relatedQuestions || []).length})</span>
+              </button>
+            )}
+            {onOpenNotes && (
+              <button
+                type="button"
+                onClick={onOpenNotes}
+                className="h-8 px-3 rounded-lg bg-white border border-line text-ink-2 hover:text-ink text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+              >
+                <BookOpen className="w-3.5 h-3.5 text-accent" />
+                <span>Ders Notu Özeti</span>
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* 5. Core content: formulas, tables, bullets, infographics */}
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] gap-4 sm:gap-5 lg:gap-7 items-start">
+          {/* Main content */}
+          <div className="flex flex-col gap-4 min-w-0">
+            {c.keyBullets && c.keyBullets.length > 0 && (
+              <ol className="list-none m-0 p-0 flex flex-col gap-2.5">
+                {c.keyBullets.map((b, i) => (
+                  <li key={i} className={`grid grid-cols-[26px_minmax(0,1fr)] gap-3 items-start ${b.isKey ? 'bg-accent-soft/60 rounded-xl p-2 -m-2' : ''}`}>
+                    <span className="w-[26px] h-[26px] rounded-lg bg-accent-soft text-accent font-mono text-[12px] font-semibold flex items-center justify-center">{i + 1}</span>
+                    <span className="flex flex-col gap-0.5 min-w-0">
+                      <span className="text-[15px] sm:text-[16px] font-semibold leading-snug">{b.title}</span>
+                      <Rich text={b.desc} className="text-[14px] sm:text-[15px] text-ink-2 leading-[1.55]" />
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            )}
+
+            {c.infographic?.items?.length ? (
+              <div className={`grid gap-2 ${c.infographic.items.length >= 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-1 sm:grid-cols-2'}`}>
+                {c.infographic.items.map((it, i) => {
+                  const t = tone(it.color);
+                  return (
+                    <div key={i} className="rounded-xl border border-line p-3 flex flex-col gap-0.5" style={{ background: t.bg }}>
+                      <span className="text-[12px] font-semibold" style={{ color: t.fg }}>
+                        {it.label}
+                      </span>
+                      <span className="font-mono text-[18px] sm:text-[20px] font-semibold text-ink leading-tight">{it.value}</span>
+                      {it.detail && <span className="text-[12px] text-ink-2 leading-snug">{it.detail}</span>}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : null}
+
+            {c.formulaBox && (
+              <div className="rounded-xl bg-accent-soft p-3.5 sm:p-4 flex flex-col gap-1.5">
+                <span className="text-[12px] font-semibold uppercase tracking-[0.06em] text-accent">{c.formulaBox.title}</span>
+                <code className="font-mono text-[14px] sm:text-[16px] text-ink whitespace-pre-wrap break-words">{c.formulaBox.formula}</code>
+                {c.formulaBox.explanation && <Rich text={c.formulaBox.explanation} className="text-[13px] text-ink-2 leading-[1.55]" />}
+              </div>
+            )}
+
+            {c.table && c.table.headers?.length > 0 && (
+              <div className="rounded-xl border border-line overflow-hidden">
+                {c.table.title && <div className="px-3 py-2 bg-canvas text-[13px] font-semibold border-b border-line">{c.table.title}</div>}
+                <div className="overflow-x-auto">
+                  <table className="w-full text-[13px] sm:text-[14px] border-collapse">
+                    <thead>
+                      <tr className="bg-[#FAFBFC]">
+                        {c.table.headers.map((h, i) => (
+                          <th key={i} scope="col" className="text-left font-semibold text-ink-2 px-3 py-2 border-b border-line whitespace-nowrap">
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {c.table.rows.map((r, ri) => (
+                        <tr key={ri} className="border-b border-line-soft last:border-0 align-top">
+                          {r.map((cell, ci) => (
+                            <td key={ci} className={`px-3 py-2 ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
+                              <Rich text={cell} />
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Side: spot pearls */}
+          <div className="flex flex-col gap-3 min-w-0">
+            {slide.spotPearls?.length > 0 && (
+              <div className="rounded-xl border border-line p-3.5 sm:p-4 flex flex-col gap-2 bg-[#FAFBFC]">
+                <span className="text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-2">Akılda Tutulacak Spotlar</span>
+                <ul className="list-none m-0 p-0 flex flex-col gap-2">
+                  {slide.spotPearls.map((p, i) => (
+                    <li key={i} className="grid grid-cols-[16px_minmax(0,1fr)] gap-2 text-[14px] leading-[1.5]">
+                      <CheckCircle2 className="w-4 h-4 text-ok mt-0.5" />
+                      <Rich text={p} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>
+      </div>
+      </div>
+      {paged && pageCount > 1 && (
+        <div className="shrink-0 h-9 border-t border-line-soft px-4 flex items-center justify-between text-[12px] text-ink-3" aria-live="polite">
+          <span>
+            Slayt {index + 1} · sayfa {Math.min(part, pageCount - 1) + 1}/{pageCount}
+          </span>
+          <span className="flex items-center gap-1.5" aria-hidden="true">
+            {pages.map((_, k) => (
+              <span key={k} className={`h-1.5 rounded-full transition-all ${k === Math.min(part, pageCount - 1) ? 'w-5 bg-accent' : 'w-1.5 bg-line-2'}`} />
+            ))}
+          </span>
+          <span>{part < pageCount - 1 ? 'Devamı →' : 'Son sayfa'}</span>
+        </div>
+      )}
+    </article>
+  );
+};
 
-      {/* Main Content Area */}
-      <div className="max-w-6xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6 relative">
-        {/* Slide Drawer Dropdown / Modal */}
-        {isDrawerOpen && (
-          <div className="mb-6 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-3 animate-in fade-in duration-200">
-            <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                Slayt Listesi ({totalSlides} Slayt)
+// ---------------------------------------------------------------------------
+// Interaction panel: flashcards, questions, structured notes, deck pearls, ask AI
+// ---------------------------------------------------------------------------
+const InteractionPanel: React.FC<{
+  deck: InteractiveDeck;
+  slide: SlideItem;
+  tab: PanelTab;
+  setTab: (t: PanelTab) => void;
+}> = ({ deck, slide, tab, setTab }) => {
+  const qs = slide.relatedQuestions || [];
+  const cards = slide.flashcards || [];
+
+  const tabs: { id: PanelTab; label: string }[] = [
+    { id: 'flashcards', label: `Kartlar ${cards.length}` },
+    { id: 'questions', label: `Sorular ${qs.length}` },
+    { id: 'notes', label: 'Ders Notu' },
+    { id: 'pearls', label: 'Spotlar' },
+    { id: 'ai', label: "AI'ya sor" },
+  ];
+
+  return (
+    <>
+      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-5 gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
+        {tabs.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            role="tab"
+            aria-selected={tab === t.id}
+            onClick={() => setTab(t.id)}
+            className={`h-9 rounded-[9px] text-[12px] cursor-pointer truncate ${tab === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain p-3 flex flex-col gap-3">
+        {tab === 'flashcards' && (
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center justify-between px-1">
+              <span className="text-[12px] text-ink-3">
+                {cards.length} akıl kartı · Tıklayarak çevir
               </span>
-              <button
-                onClick={() => setIsDrawerOpen(false)}
-                className="text-xs text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold"
-              >
-                Kapat
-              </button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 max-h-60 overflow-y-auto pr-1">
-              {activeDeck.slides.map((s, idx) => (
-                <button
-                  key={s.slideNumber}
-                  onClick={() => {
-                    setActiveSlideIndex(idx);
-                    setIsDrawerOpen(false);
-                  }}
-                  className={`text-left p-2.5 rounded-xl border text-xs transition-all cursor-pointer flex items-start gap-2.5 ${
-                    activeSlideIndex === idx
-                      ? 'border-indigo-500 bg-indigo-50/70 dark:bg-indigo-950/60 font-semibold text-indigo-900 dark:text-indigo-200'
-                      : 'border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-300'
-                  }`}
-                >
-                  <span className="w-6 h-6 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center font-mono font-bold text-[11px] shrink-0">
-                    {s.slideNumber}
-                  </span>
-                  <div className="min-w-0">
-                    <div className="truncate font-bold">{s.title}</div>
-                    <div className="text-[10px] text-slate-500 truncate">{s.subtitle}</div>
-                  </div>
-                </button>
+            {cards.length === 0 ? (
+              <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayt için tanımlı akıl kartı yok.</p>
+            ) : (
+              cards.map((c) => <FlashcardComponent key={c.id} card={c} />)
+            )}
+          </div>
+        )}
+        {tab === 'questions' &&
+          (qs.length === 0 ? (
+            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayta eşleşen çıkmış soru yok.</p>
+          ) : (
+            qs.map((q, i) => <QuizCard key={`${slide.slideNumber}-${q.id}`} q={q} n={i + 1} />)
+          ))}
+        {tab === 'notes' && <SlideNotesTab slide={slide} />}
+        {tab === 'pearls' && (
+          <div className="flex flex-col gap-2">
+            <p className="m-0 text-[13px] text-ink-2 px-1">{deck.title} dersinin tamamından yüksek verimli bilgiler.</p>
+            <ul className="list-none m-0 p-0 flex flex-col gap-2">
+              {(deck.highYieldPearls || []).map((p, i) => (
+                <li key={i} className="rounded-xl border border-line p-3 text-[14px] leading-[1.55] text-ink-2">
+                  <Rich text={p} />
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         )}
+        {tab === 'ai' && <AskAi key={slide.slideNumber} deck={deck} slide={slide} />}
+      </div>
+    </>
+  );
+};
 
-        {/* MODE 1: PPTX PRESENTATION SLIDE MODE */}
-        {viewMode === 'presentation' && activeSlide && (
-          <div className="space-y-6">
-            {/* The PPTX Slide Canvas Card */}
-            <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden flex flex-col min-h-[620px]">
-              {/* Slide Top Header Bar */}
-              <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white px-5 sm:px-8 py-5 flex items-start justify-between gap-4 border-b border-slate-800">
-                <div className="space-y-1.5 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-indigo-400/30 uppercase tracking-wider">
-                      Slayt {activeSlide.slideNumber} / {totalSlides}
-                    </span>
-                    <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-amber-400/30 uppercase tracking-wider flex items-center gap-1">
-                      <Flame className="w-3 h-3 text-amber-400" />
-                      {activeSlide.badge}
-                    </span>
-                  </div>
-
-                  <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-tight">
-                    {activeSlide.title}
-                  </h1>
-
-                  <p className="text-xs sm:text-sm text-indigo-200 font-medium">
-                    {activeSlide.subtitle}
-                  </p>
-                </div>
-
-                <div className="hidden sm:flex items-center gap-2 shrink-0">
-                  {activeDeck.instructor && (
-                    <div className="text-right text-xs text-slate-300 font-medium">
-                      <div>{activeDeck.instructor}</div>
-                      <div className="text-[10px] text-slate-400">{activeDeck.audioFile}</div>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Slide Body Container */}
-              <div className="p-5 sm:p-8 space-y-6 flex-1">
-                {/* 1. HOCANIN SES KAYDI & AMFİ VURGUSU BOX */}
-                {activeSlide.professorAudioHighlight && (
-                  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-rose-50 via-amber-50/50 to-orange-50 dark:from-rose-950/30 dark:via-amber-950/20 dark:to-orange-950/30 border-2 border-rose-200 dark:border-rose-900/60 p-4 sm:p-5 shadow-xs space-y-2.5">
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2 text-rose-800 dark:text-rose-300 text-xs font-black uppercase tracking-wider">
-                        <Volume2 className="w-4 h-4 text-rose-600 animate-pulse" />
-                        <span>Hocanın Ses Kaydı & Amfi Vurgusu</span>
-                        <span className="bg-rose-200/80 dark:bg-rose-900/60 text-rose-900 dark:text-rose-200 font-mono text-[11px] px-2 py-0.5 rounded-md">
-                          [{activeSlide.professorAudioHighlight.timestamp}]
-                        </span>
-                      </div>
-
-                      <button
-                        onClick={() => handleCopyQuote(activeSlide.professorAudioHighlight!.quote)}
-                        className="text-[11px] font-bold text-rose-700 dark:text-rose-300 hover:underline flex items-center gap-1 cursor-pointer"
-                      >
-                        {copiedQuote ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Share2 className="w-3.5 h-3.5" />}
-                        {copiedQuote ? 'Kopyalandı' : 'Alıntıyı Kopyala'}
-                      </button>
-                    </div>
-
-                    <blockquote className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 italic leading-relaxed pl-3 border-l-3 border-rose-400">
-                      "{activeSlide.professorAudioHighlight.quote}"
-                    </blockquote>
-
-                    <p className="text-xs text-rose-900/80 dark:text-rose-300/80 font-medium">
-                      💡 <strong>Sınav Analizi:</strong> {activeSlide.professorAudioHighlight.note}
-                    </p>
-                  </div>
-                )}
-
-                {/* 2. DERS NOTU & SLAYT TEMEL İÇERİĞİ */}
-                {activeSlide.coreContent && (
-                  <div className="space-y-4">
-                    {/* Key Bullets */}
-                    {activeSlide.coreContent.keyBullets && activeSlide.coreContent.keyBullets.length > 0 && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {activeSlide.coreContent.keyBullets.map((bullet, bIdx) => (
-                          <div
-                            key={bIdx}
-                            className="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-3.5 border border-slate-200/80 dark:border-slate-700/60 flex items-start gap-3"
-                          >
-                            <span className="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                              {bIdx + 1}
-                            </span>
-                            <div className="space-y-0.5 min-w-0">
-                              <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
-                                {bullet.title}
-                              </h4>
-                              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                                {bullet.desc}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Table if present */}
-                    {activeSlide.coreContent.table && (
-                      <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-xs">
-                        {activeSlide.coreContent.table.title && (
-                          <div className="px-4 py-2.5 bg-slate-100 dark:bg-slate-800 font-bold text-xs text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700">
-                            📊 {activeSlide.coreContent.table.title}
-                          </div>
-                        )}
-                        <div className="overflow-x-auto">
-                          <table className="w-full text-left text-xs">
-                            <thead>
-                              <tr className="bg-slate-50 dark:bg-slate-800/40 border-b border-slate-200 dark:border-slate-700 text-slate-500 font-bold uppercase tracking-wider">
-                                {activeSlide.coreContent.table.headers.map((h, hIdx) => (
-                                  <th key={hIdx} className="px-4 py-3">
-                                    {h}
-                                  </th>
-                                ))}
-                              </tr>
-                            </thead>
-                            <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                              {activeSlide.coreContent.table.rows.map((row, rIdx) => (
-                                <tr key={rIdx} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors">
-                                  {row.map((cell, cIdx) => (
-                                    <td key={cIdx} className="px-4 py-3 font-medium text-slate-800 dark:text-slate-200">
-                                      {cell}
-                                    </td>
-                                  ))}
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Formula Box if present */}
-                    {activeSlide.coreContent.formulaBox && (
-                      <div className="rounded-2xl bg-indigo-900 text-white p-5 space-y-2 border border-indigo-700 shadow-md">
-                        <div className="text-xs font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
-                          <Zap className="w-4 h-4 text-amber-400" />
-                          {activeSlide.coreContent.formulaBox.title}
-                        </div>
-                        <div className="font-mono text-sm sm:text-base font-bold text-amber-300 bg-black/30 p-3 rounded-xl border border-white/10 overflow-x-auto">
-                          {activeSlide.coreContent.formulaBox.formula}
-                        </div>
-                        <p className="text-xs text-indigo-200">
-                          {activeSlide.coreContent.formulaBox.explanation}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {/* 3. SPOT BİLGİLER & HAP NOTLAR */}
-                {activeSlide.spotPearls && activeSlide.spotPearls.length > 0 && (
-                  <div className="rounded-2xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/50 p-4 sm:p-5 space-y-3">
-                    <div className="flex items-center gap-2 text-amber-800 dark:text-amber-300 text-xs font-bold uppercase tracking-wider">
-                      <Zap className="w-4 h-4 text-amber-500" />
-                      Spot Bilgiler & Akılda Tutma İpuçları (High-Yield Pearls)
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      {activeSlide.spotPearls.map((pearl, pIdx) => (
-                        <div key={pIdx} className="flex items-start gap-2 text-xs text-amber-950 dark:text-amber-200 leading-snug">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
-                          <span>{pearl}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* 4. ÇIKMIŞ SORU ATÖLYESİ (INTERACTIVE EXAM QUESTIONS) */}
-                {activeSlide.relatedQuestions && activeSlide.relatedQuestions.length > 0 && (
-                  <div className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-indigo-900 dark:text-indigo-300 font-bold text-sm">
-                        <GraduationCap className="w-5 h-5 text-indigo-600" />
-                        <span>Bu Slaytla Eşleşen Gerçek Çıkmış Kurul Soruları</span>
-                        <span className="bg-indigo-100 text-indigo-800 text-xs font-mono px-2 py-0.5 rounded-full font-bold">
-                          {activeSlide.relatedQuestions.length} Soru
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="space-y-4">
-                      {activeSlide.relatedQuestions.map((q) => {
-                        const userChoice = quizAnswers[q.id];
-                        const isAnswered = Boolean(userChoice);
-                        const isCorrect = userChoice === q.correctAnswer;
-                        const showExplanation = revealedExplanations[q.id] || isAnswered;
-
-                        return (
-                          <div
-                            key={q.id}
-                            className="bg-slate-50 dark:bg-slate-800/40 rounded-2xl border border-slate-200 dark:border-slate-700/80 p-4 sm:p-5 space-y-3.5"
-                          >
-                            <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-                              <span className="font-bold text-slate-500 font-mono bg-white dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700">
-                                {q.examYear} • {q.committeeId}
-                              </span>
-                              <span className="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400">
-                                {q.topic || activeDeck.discipline}
-                              </span>
-                            </div>
-
-                            {/* Stem */}
-                            <p className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
-                              {q.stem}
-                            </p>
-
-                            {/* Options */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-                              {q.options.map((opt) => {
-                                const isSelected = userChoice === opt.key;
-                                const isRealAnswer = q.correctAnswer === opt.key;
-
-                                let optClasses = 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-indigo-400';
-                                if (isAnswered) {
-                                  if (isRealAnswer) {
-                                    optClasses = 'bg-emerald-50 dark:bg-emerald-950/50 border-emerald-500 text-emerald-900 dark:text-emerald-200 font-semibold ring-1 ring-emerald-500';
-                                  } else if (isSelected && !isCorrect) {
-                                    optClasses = 'bg-rose-50 dark:bg-rose-950/50 border-rose-500 text-rose-900 dark:text-rose-200 font-semibold';
-                                  } else {
-                                    optClasses = 'opacity-60 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700';
-                                  }
-                                }
-
-                                return (
-                                  <button
-                                    key={opt.key}
-                                    onClick={() => {
-                                      setQuizAnswers((prev) => ({ ...prev, [q.id]: opt.key }));
-                                    }}
-                                    className={`w-full text-left p-2.5 rounded-xl border text-xs transition-all flex items-start gap-2.5 cursor-pointer ${optClasses}`}
-                                  >
-                                    <span
-                                      className={`w-6 h-6 rounded-lg flex items-center justify-center font-mono font-bold text-xs shrink-0 ${
-                                        isAnswered && isRealAnswer
-                                          ? 'bg-emerald-600 text-white'
-                                          : isAnswered && isSelected && !isCorrect
-                                          ? 'bg-rose-600 text-white'
-                                          : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
-                                      }`}
-                                    >
-                                      {opt.key}
-                                    </span>
-                                    <span className="flex-1 mt-0.5">{opt.text}</span>
-                                  </button>
-                                );
-                              })}
-                            </div>
-
-                            {/* Answer Feedback & Explanation */}
-                            {showExplanation && (
-                              <div className="pt-2 text-xs space-y-2 animate-in fade-in duration-200">
-                                <div
-                                  className={`p-3 rounded-xl border flex items-start gap-2 font-medium ${
-                                    isCorrect
-                                      ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 text-emerald-800 dark:text-emerald-300'
-                                      : 'bg-slate-100 dark:bg-slate-800 border-slate-200 text-slate-800 dark:text-slate-200'
-                                  }`}
-                                >
-                                  {isCorrect ? (
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                                  ) : (
-                                    <HelpCircle className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
-                                  )}
-                                  <div>
-                                    <p className="font-bold">
-                                      Doğru Cevap: <span className="font-mono">{q.correctAnswer}</span>
-                                    </p>
-                                    <p className="mt-1 leading-relaxed">
-                                      {q.explanation || 'Bu soru doğrudan yukarıdaki slaytta açıklanan temel ilke ve formüle dayanmaktadır.'}
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Slide Bottom Presentation Controller */}
-              <div className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-5 sm:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-                {/* Dots / Timeline */}
-                <div className="flex items-center gap-1.5 overflow-x-auto max-w-full pb-1 sm:pb-0 no-scrollbar">
-                  {activeDeck.slides.map((s, idx) => (
-                    <button
-                      key={s.slideNumber}
-                      onClick={() => setActiveSlideIndex(idx)}
-                      className={`h-2.5 rounded-full transition-all cursor-pointer ${
-                        activeSlideIndex === idx
-                          ? 'w-8 bg-indigo-600'
-                          : 'w-2.5 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
-                      }`}
-                      title={`Slayt ${s.slideNumber}: ${s.title}`}
-                    />
-                  ))}
-                </div>
-
-                {/* Prev / Next Buttons */}
-                <div className="flex items-center gap-3">
-                  <button
-                    disabled={activeSlideIndex <= 0}
-                    onClick={() => setActiveSlideIndex((prev) => Math.max(0, prev - 1))}
-                    className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold border border-slate-200 dark:border-slate-700 disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-1.5 transition-all cursor-pointer shadow-xs"
-                  >
-                    <ChevronLeft className="w-4 h-4" />
-                    Önceki Slayt
-                  </button>
-
-                  <span className="text-xs font-mono font-bold text-slate-500">
-                    {currentSlideNum} / {totalSlides}
-                  </span>
-
-                  <button
-                    disabled={activeSlideIndex >= totalSlides - 1}
-                    onClick={() => setActiveSlideIndex((prev) => Math.min(totalSlides - 1, prev + 1))}
-                    className="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
-                  >
-                    Sonraki Slayt
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* LIVE RAG AI ASSISTANT FOR THIS SLIDE */}
-            <div className="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 sm:p-7 shadow-sm space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">
-                    <Sparkles className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                      Ders Asistanına Sor (Canlı RAG Destekli)
-                    </h3>
-                    <p className="text-xs text-slate-500">
-                      Bu slayt, hocanın ses kaydı ve çıkmış sorular bağlamında anında soru sor.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Quick AI Prompts */}
-              <div className="flex flex-wrap gap-2">
-                {activeSlide.aiPromptSuggestions.map((prompt, prIdx) => (
-                  <button
-                    key={prIdx}
-                    onClick={() => {
-                      setAiQuery(prompt);
-                      handleAskAi(prompt);
-                    }}
-                    className="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 hover:bg-indigo-50 dark:bg-slate-800 dark:hover:bg-indigo-950/50 hover:text-indigo-600 border border-slate-200 dark:border-slate-700 transition-colors text-slate-700 dark:text-slate-300 cursor-pointer"
-                  >
-                    💡 {prompt}
-                  </button>
-                ))}
-              </div>
-
-              {/* Prompt Input Form */}
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleAskAi();
-                }}
-                className="flex items-center gap-2"
-              >
-                <input
-                  type="text"
-                  value={aiQuery}
-                  onChange={(e) => setAiQuery(e.target.value)}
-                  placeholder="Bu slayttaki konu veya hocanın vurgusu hakkında soru sor..."
-                  className="flex-1 px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-slate-900 dark:text-white placeholder:text-slate-400"
-                />
-                <button
-                  type="submit"
-                  disabled={aiLoading || !aiQuery.trim()}
-                  className="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-xs sm:text-sm font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm shrink-0"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>{aiLoading ? 'Düşünüyor...' : 'Sor'}</span>
-                </button>
-              </form>
-
-              {/* AI Response Display */}
-              {aiResponse && (
-                <div className="p-4 sm:p-5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900/60 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed space-y-3 animate-in fade-in duration-200">
-                  <div className="flex items-center justify-between pb-2 border-b border-indigo-100 dark:border-indigo-900/50 text-[11px] font-bold text-indigo-700 dark:text-indigo-300">
-                    <span className="flex items-center gap-1">
-                      <Check className="w-3.5 h-3.5 text-emerald-600" />
-                      Yapay Zeka Tıp Yanıtı (RAG Tabanlı Doğrulandı)
-                    </span>
-                    <button
-                      onClick={() => setAiResponse(null)}
-                      className="text-slate-400 hover:text-slate-600 cursor-pointer"
-                    >
-                      Kapat
-                    </button>
-                  </div>
-                  <div className="whitespace-pre-wrap font-sans">{aiResponse}</div>
-                </div>
-              )}
-            </div>
+// ---------------------------------------------------------------------------
+// Slide Notes Tab: Structured medical textbook notes and tables for the slide
+// ---------------------------------------------------------------------------
+const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
+  const c = slide.coreContent || {};
+  return (
+    <div className="flex flex-col gap-3.5">
+      {/* Narrative block */}
+      {slide.synthesisNarrative && (
+        <div className="rounded-xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/20 p-3.5 flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <BookOpen className="w-4 h-4 text-accent" />
+            <span className="text-[13px] font-bold text-ink">Kapsamlı Ders Notu Sentezi</span>
           </div>
-        )}
+          <p className="m-0 text-[13.5px] leading-relaxed text-ink-2">
+            <Rich text={slide.synthesisNarrative} />
+          </p>
+        </div>
+      )}
 
-        {/* MODE 2: CONTINUOUS VERTICAL SCROLL MODE */}
-        {viewMode === 'continuous' && (
-          <div className="space-y-8">
-            {activeDeck.slides.map((slide) => (
-              <div
-                key={slide.slideNumber}
-                id={`slide-${slide.slideNumber}`}
-                className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-md p-6 sm:p-8 space-y-6"
-              >
-                {/* Header */}
-                <div className="flex items-start justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="w-7 h-7 rounded-lg bg-indigo-600 text-white font-mono font-bold text-xs flex items-center justify-center">
-                        {slide.slideNumber}
-                      </span>
-                      <span className="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 uppercase tracking-wide">
-                        {slide.badge}
-                      </span>
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
-                      {slide.title}
-                    </h3>
-                    <p className="text-xs text-slate-500 font-medium">{slide.subtitle}</p>
-                  </div>
-                </div>
-
-                {/* Professor Voice Quote */}
-                {slide.professorAudioHighlight && (
-                  <div className="rounded-2xl bg-rose-50/70 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60 p-4 space-y-2">
-                    <div className="flex items-center gap-2 text-rose-800 dark:text-rose-300 text-xs font-bold">
-                      <Volume2 className="w-4 h-4 text-rose-600" />
-                      <span>Hocanın Amfi Vurgusu [{slide.professorAudioHighlight.timestamp}]</span>
-                    </div>
-                    <blockquote className="text-xs sm:text-sm font-semibold italic text-slate-800 dark:text-slate-200">
-                      "{slide.professorAudioHighlight.quote}"
-                    </blockquote>
-                    <p className="text-[11px] text-rose-800/80">
-                      💡 {slide.professorAudioHighlight.note}
-                    </p>
-                  </div>
-                )}
-
-                {/* Bullets */}
-                {slide.coreContent.keyBullets && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {slide.coreContent.keyBullets.map((b, bIdx) => (
-                      <div key={bIdx} className="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-200 text-xs space-y-0.5">
-                        <div className="font-bold text-slate-900 dark:text-white">{b.title}</div>
-                        <div className="text-slate-600 dark:text-slate-300">{b.desc}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {/* Spot Pearls */}
-                <div className="bg-amber-50/60 dark:bg-amber-950/20 p-4 rounded-2xl border border-amber-200/80 space-y-2">
-                  <div className="text-xs font-bold text-amber-800 uppercase tracking-wide flex items-center gap-1.5">
-                    <Zap className="w-3.5 h-3.5 text-amber-600" />
-                    Spot Bilgiler
-                  </div>
-                  <ul className="text-xs text-amber-900 dark:text-amber-200 space-y-1 list-disc list-inside">
-                    {slide.spotPearls.map((p, pIdx) => (
-                      <li key={pIdx}>{p}</li>
-                    ))}
-                  </ul>
-                </div>
+      {/* Key Bullets */}
+      {c.keyBullets && c.keyBullets.length > 0 && (
+        <div className="rounded-xl border border-line p-3.5 bg-white flex flex-col gap-2.5">
+          <span className="text-[12px] font-semibold uppercase tracking-wider text-ink-3">Önemli Klinik & Patolojik Maddeler</span>
+          <div className="flex flex-col gap-2">
+            {c.keyBullets.map((b, i) => (
+              <div key={i} className="text-[13px] leading-snug">
+                <span className="font-semibold text-ink">{b.title}: </span>
+                <Rich text={b.desc} className="text-ink-2" />
               </div>
             ))}
           </div>
-        )}
+        </div>
+      )}
+
+      {/* Formula / Box */}
+      {c.formulaBox && (
+        <div className="rounded-xl bg-accent-soft p-3 flex flex-col gap-1 border border-accent/20">
+          <span className="text-[11.5px] font-semibold uppercase text-accent">{c.formulaBox.title}</span>
+          <code className="font-mono text-[13px] text-ink">{c.formulaBox.formula}</code>
+          {c.formulaBox.explanation && <span className="text-[12px] text-ink-2">{c.formulaBox.explanation}</span>}
+        </div>
+      )}
+
+      {/* Table */}
+      {c.table && (
+        <div className="rounded-xl border border-line overflow-hidden bg-white">
+          {c.table.title && (
+            <div className="px-3 py-1.5 bg-canvas text-[12px] font-semibold border-b border-line text-ink">
+              {c.table.title}
+            </div>
+          )}
+          <div className="overflow-x-auto">
+            <table className="w-full text-[12px] border-collapse">
+              <thead>
+                <tr className="bg-canvas">
+                  {c.table.headers.map((h, i) => (
+                    <th key={i} className="text-left font-semibold text-ink-2 px-2.5 py-1.5 border-b border-line">
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {c.table.rows.map((row, ri) => (
+                  <tr key={ri} className="border-b border-line-soft last:border-0">
+                    {row.map((cell, ci) => (
+                      <td key={ci} className={`px-2.5 py-1.5 ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
+                        <Rich text={cell} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Spot pearls */}
+      {slide.spotPearls && slide.spotPearls.length > 0 && (
+        <div className="rounded-xl border border-line p-3 bg-canvas/60 flex flex-col gap-2">
+          <span className="text-[11.5px] font-semibold uppercase tracking-wider text-ink-3">Bu Slaytın Spot İnci Bilgileri</span>
+          <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
+            {slide.spotPearls.map((p, i) => (
+              <li key={i} className="flex items-start gap-2 text-[12.5px] text-ink-2 leading-relaxed">
+                <CheckCircle2 className="w-3.5 h-3.5 text-ok shrink-0 mt-0.5" />
+                <Rich text={p} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) => {
+  const [picked, setPicked] = useState<string | null>(null);
+  const [showExp, setShowExp] = useState(true);
+  const answer = q.correctAnswer || q.options.find((o) => o.isCorrect)?.key || '';
+  const done = picked !== null;
+  const right = done && picked === answer;
+  return (
+    <article className="rounded-xl border border-line p-3 flex flex-col gap-2.5">
+      <header className="flex items-center gap-2 text-[12px] text-ink-3">
+        <span className="font-mono font-semibold text-accent">S{n}</span>
+        <span className="truncate">{[q.examYear, q.topic].filter(Boolean).join(' · ')}</span>
+      </header>
+      <p className="m-0 text-[14px] leading-[1.5] font-medium">{q.stem}</p>
+      <div role="radiogroup" aria-label={`Soru ${n} şıkları`} className="flex flex-col gap-1.5">
+        {q.options.map((o) => {
+          const isAns = o.key === answer;
+          const isPick = o.key === picked;
+          const cls = !done
+            ? 'border-line hover:border-accent bg-white'
+            : isAns
+              ? 'border-ok-bright bg-ok-tint'
+              : isPick
+                ? 'border-bad bg-bad-soft'
+                : 'border-line bg-white opacity-70';
+          return (
+            <button
+              key={o.key}
+              type="button"
+              role="radio"
+              aria-checked={isPick}
+              disabled={done}
+              onClick={() => setPicked(o.key)}
+              className={`w-full min-h-10 px-2.5 py-1.5 rounded-lg border text-left flex items-start gap-2 text-[13px] leading-snug ${done ? 'cursor-default' : 'cursor-pointer'} ${cls}`}
+            >
+              <span className={`font-mono font-semibold shrink-0 ${done && isAns ? 'text-ok' : done && isPick ? 'text-bad-text' : 'text-ink-2'}`}>{o.key})</span>
+              <span className="flex-1">{o.text}</span>
+              {done && isAns && <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />}
+              {done && isPick && !isAns && <XCircle className="w-4 h-4 text-bad-text shrink-0" />}
+            </button>
+          );
+        })}
       </div>
+      {done && (
+        <div className={`rounded-lg px-2.5 py-2 text-[13px] ${right ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
+          <div className="flex items-center justify-between gap-2">
+            <strong className={right ? 'text-ok' : 'text-bad-text'}>{right ? 'Doğru' : `Doğru cevap ${answer}`}</strong>
+            <span className="flex gap-1">
+              {q.explanation && (
+                <button type="button" onClick={() => setShowExp((v) => !v)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 cursor-pointer">
+                  {showExp ? 'Açıklamayı gizle' : 'Açıklama'}
+                </button>
+              )}
+              <button type="button" onClick={() => setPicked(null)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 cursor-pointer">
+                Tekrar
+              </button>
+            </span>
+          </div>
+          {showExp && q.explanation && <p className="m-0 mt-1.5 text-ink-2 leading-[1.55] whitespace-pre-line">{q.explanation.replace(/\n(?!\n)/g, ' ')}</p>}
+        </div>
+      )}
+    </article>
+  );
+};
+
+const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, slide }) => {
+  const [q, setQ] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [answer, setAnswer] = useState<string | null>(null);
+  const [refs, setRefs] = useState<any[]>([]);
+
+  const ask = async (prompt?: string) => {
+    const text = (prompt ?? q).trim();
+    if (!text) return;
+    setQ(text);
+    setLoading(true);
+    setAnswer(null);
+    setRefs([]);
+    const ctx = [
+      `Ders: ${deck.title} (${deck.discipline} - ${deck.committee})`,
+      `Öğretim üyesi: ${deck.instructor}`,
+      `Slayt: ${slide.title} - ${slide.subtitle}`,
+      slide.professorAudioHighlight ? `Hocanın vurgusu (${slide.professorAudioHighlight.timestamp}): "${slide.professorAudioHighlight.quote}"` : '',
+      slide.synthesisNarrative ? `Ders ve amfi sentezi: ${slide.synthesisNarrative}` : '',
+      ...(slide.coreContent?.keyBullets || []).map((b) => `- ${b.title}: ${b.desc}`),
+      ...(slide.spotPearls || []).map((p) => `* ${p}`),
+    ]
+      .filter(Boolean)
+      .join('\n');
+    try {
+      const res = await fetch('/api/rag/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: `${text}\n\n[Slayt ve ders bağlamı]:\n${ctx}`, discipline: deck.discipline, committeeId: deck.committee, mode: 'qa', limit: 4 }),
+      });
+      if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
+        const data = await res.json();
+        if (data.answer) {
+          setAnswer(data.answer);
+          setRefs(data.references || []);
+          setLoading(false);
+          return;
+        }
+      }
+    } catch {
+      /* offline: fall through to the slide-based answer */
+    }
+    const hl = slide.professorAudioHighlight;
+    setAnswer(
+      [
+        `Sunucuya ulaşılamadı; bu slaytın kendi notlarından bir özet:`,
+        hl ? `Hoca ${hl.timestamp} dakikasında: "${hl.quote}"` : '',
+        slide.synthesisNarrative ? `Sentez: ${slide.synthesisNarrative}` : '',
+        ...(slide.spotPearls || []).map((p) => `• ${p}`),
+      ]
+        .filter(Boolean)
+        .join('\n\n')
+    );
+    setLoading(false);
+  };
+
+  return (
+    <div className="flex flex-col gap-3">
+      {(slide.aiPromptSuggestions || []).length > 0 && (
+        <div className="flex flex-col gap-1.5">
+          <span className="text-[12px] font-semibold text-ink-2 px-1">Hazır sorular</span>
+          {slide.aiPromptSuggestions.map((s, i) => (
+            <button
+              key={i}
+              type="button"
+              disabled={loading}
+              onClick={() => ask(s)}
+              className="text-left rounded-lg border border-line px-2.5 py-2 text-[13px] leading-snug hover:border-accent cursor-pointer disabled:opacity-50"
+            >
+              {s}
+            </button>
+          ))}
+        </div>
+      )}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          ask();
+        }}
+        className="flex flex-col gap-2"
+      >
+        <label htmlFor="deck-ai-q" className="sr-only">
+          Sorunu yaz
+        </label>
+        <textarea
+          id="deck-ai-q"
+          rows={3}
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Bu slaytla ilgili sorunu yaz…"
+          className="resize-none border border-line-2 rounded-[10px] px-3 py-2.5 text-[14px] bg-field outline-0 focus:border-accent"
+        />
+        <button
+          type="submit"
+          disabled={loading || !q.trim()}
+          className="h-10 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+        >
+          {loading ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+          {loading ? 'Yanıt hazırlanıyor…' : 'Sor'}
+        </button>
+      </form>
+      {answer && (
+        <div className="rounded-xl bg-accent-soft p-3 flex flex-col gap-2" role="status">
+          <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-accent">
+            <Sparkles className="w-3.5 h-3.5" /> Yanıt
+          </span>
+          <div className="text-[14px] leading-[1.6] text-ink whitespace-pre-line">
+            <Rich text={answer.replace(/^#+\s*/gm, '').replace(/^>\s?/gm, '')} />
+          </div>
+          {refs.length > 0 && (
+            <ul className="list-none m-0 p-0 flex flex-col gap-1 border-t border-white/60 pt-2">
+              {refs.slice(0, 4).map((r: any, i: number) => (
+                <li key={i} className="text-[12px] text-ink-2 truncate">
+                  {r.title || r.noteTitle || r.source || `Kaynak ${i + 1}`}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   );
 };

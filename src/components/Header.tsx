@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {
   Plus,
   Search,
@@ -25,6 +25,7 @@ import {
   Trophy,
   SquarePen,
   GraduationCap,
+  MoreHorizontal,
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser, ADMIN_EMAIL, setLocalAdminSession } from '../services/auth';
@@ -89,6 +90,146 @@ const initialsOf = (user: AppUser | null) => {
   const src = (user?.displayName || user?.email || 'Ö').trim();
   const parts = src.split(/[^\p{L}]+/u).filter(Boolean);
   return ((parts[0]?.[0] || 'Ö') + (parts[1]?.[0] || '')).toLocaleUpperCase('tr-TR');
+};
+
+/**
+ * Desktop nav that never overflows: every tab is measured off-screen, as many as
+ * fit are shown, and the rest move into a "Daha" menu. Re-measures on resize,
+ * breakpoint changes (icons/padding) and font load.
+ */
+const PriorityNav: React.FC<{
+  items: { id: AppTab; label: string; icon: React.ElementType }[];
+  active: AppTab;
+  onSelect: (id: AppTab) => void;
+}> = ({ items, active, onSelect }) => {
+  const navRef = useRef<HTMLElement>(null);
+  const measureRef = useRef<HTMLDivElement>(null);
+  const moreRef = useRef<HTMLDivElement>(null);
+  const [count, setCount] = useState(items.length);
+  const [open, setOpen] = useState(false);
+
+  useLayoutEffect(() => {
+    const nav = navRef.current;
+    const measure = measureRef.current;
+    if (!nav || !measure) return;
+    const GAP = 2;
+    const compute = () => {
+      const avail = nav.clientWidth;
+      if (!avail) return;
+      const kids = Array.from(measure.children) as HTMLElement[];
+      const widths = kids.slice(0, items.length).map((k) => k.offsetWidth);
+      const moreW = (kids[items.length]?.offsetWidth || 80) + GAP;
+      const all = widths.reduce((a, b) => a + b, 0) + GAP * (widths.length - 1);
+      if (all <= avail) return setCount(items.length);
+      let used = 0;
+      let c = 0;
+      for (const w of widths) {
+        if (used + w + moreW > avail) break;
+        used += w + GAP;
+        c++;
+      }
+      setCount(c);
+    };
+    compute();
+    const ro = new ResizeObserver(compute);
+    ro.observe(nav);
+    ro.observe(measure);
+    (document as any).fonts?.ready?.then(compute);
+    return () => ro.disconnect();
+  }, [items]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => moreRef.current && !moreRef.current.contains(e.target as Node) && setOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  const itemCls = (on: boolean) =>
+    `h-10 px-2 xl:px-2.5 rounded-lg text-[14px] xl:text-[15px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 shrink-0 ${
+      on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
+    }`;
+  const shown = items.slice(0, count);
+  const hidden = items.slice(count);
+  const activeHidden = hidden.some((i) => i.id === active);
+
+  return (
+    <nav ref={navRef} aria-label="Ana menü" className="hidden lg:flex items-center gap-0.5 flex-1 min-w-0 relative">
+      {/* off-screen measuring row (same classes, never visible) */}
+      <div ref={measureRef} aria-hidden="true" className="absolute left-0 top-0 flex gap-0.5 invisible pointer-events-none h-0 overflow-hidden">
+        {items.map((item) => {
+          const Icon = item.icon;
+          return (
+            <span key={item.id} className={itemCls(item.id === active)}>
+              <Icon className="hidden xl:block w-4 h-4 shrink-0" />
+              {item.label}
+            </span>
+          );
+        })}
+        <span className={itemCls(false)}>
+          <MoreHorizontal className="w-4 h-4" />
+          Daha
+        </span>
+      </div>
+
+      {shown.map((item) => {
+        const on = active === item.id;
+        const Icon = item.icon;
+        return (
+          <button key={item.id} type="button" onClick={() => onSelect(item.id)} aria-current={on ? 'page' : undefined} className={itemCls(on)}>
+            <Icon className="hidden xl:block w-4 h-4 shrink-0" strokeWidth={on ? 2.3 : 2} />
+            {item.label}
+          </button>
+        );
+      })}
+
+      {hidden.length > 0 && (
+        <div className="relative shrink-0" ref={moreRef}>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-haspopup="menu"
+            aria-expanded={open}
+            className={itemCls(activeHidden)}
+          >
+            <MoreHorizontal className="w-4 h-4" />
+            {activeHidden ? hidden.find((i) => i.id === active)?.label : 'Daha'}
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
+          </button>
+          {open && (
+            <div role="menu" className="absolute left-0 top-11 min-w-[220px] bg-white border border-line rounded-2xl shadow-[0_12px_40px_rgba(14,26,38,0.16)] p-1.5 z-50">
+              {hidden.map((item) => {
+                const Icon = item.icon;
+                const on = active === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    role="menuitem"
+                    onClick={() => {
+                      setOpen(false);
+                      onSelect(item.id);
+                    }}
+                    className={`w-full min-h-10 px-2.5 rounded-[10px] flex items-center gap-2.5 text-left text-[14px] cursor-pointer ${
+                      on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink hover:bg-canvas'
+                    }`}
+                  >
+                    <Icon className="w-4 h-4 shrink-0" />
+                    {item.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
+    </nav>
+  );
 };
 
 export const Header: React.FC<HeaderProps> = ({
@@ -231,26 +372,7 @@ export const Header: React.FC<HeaderProps> = ({
           <span className="font-display font-bold text-[18px] sm:text-[20px] tracking-[-0.02em] text-ink">MedSoru</span>
         </button>
 
-        <nav aria-label="Ana menü" className="hidden lg:flex items-center gap-0.5 flex-1 min-w-0">
-          {NAV.map((item) => {
-            const active = activeTab === item.id;
-            const Icon = item.icon;
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setActiveTab(item.id)}
-                aria-current={active ? 'page' : undefined}
-                className={`h-10 px-2 xl:px-2.5 rounded-lg text-[14px] xl:text-[15px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 ${
-                  active ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
-                }`}
-              >
-                <Icon className="hidden xl:block w-4 h-4 shrink-0" strokeWidth={active ? 2.3 : 2} />
-                {item.label}
-              </button>
-            );
-          })}
-        </nav>
+        <PriorityNav items={NAV} active={activeTab} onSelect={setActiveTab} />
 
         <span className="flex-1 lg:hidden" aria-hidden="true" />
 
