@@ -34,6 +34,7 @@ import {
   GraduationCap,
   FileText,
   FileDown,
+  ArrowLeftRight,
 } from 'lucide-react';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
 import {
@@ -1580,6 +1581,114 @@ export const EnhancedDifferentialTable: React.FC<{
 };
 
 // ---------------------------------------------------------------------------
+// Key Bullets Component: Categorized Medical Bullets with Semantic Colors & Icons
+// (Ders Notu, Spot Bilgi, Ayırt Edici Özellikler, Dikkat / Tuzak, Özet & Tekrar)
+// ---------------------------------------------------------------------------
+export const KeyBulletsRenderer: React.FC<{
+  bullets: Array<{ title: string; desc: string; isKey?: boolean }>;
+  compact?: boolean;
+}> = ({ bullets, compact = false }) => {
+  if (!bullets || bullets.length === 0) return null;
+
+  return (
+    <div className={`flex flex-col ${compact ? 'gap-2' : 'gap-2.5 my-2.5'}`}>
+      <div className="flex items-center justify-between gap-2 px-1">
+        <span className="text-[11.5px] font-bold uppercase tracking-wider text-ink-3 flex items-center gap-1.5">
+          <Sparkles className="w-3.5 h-3.5 text-accent" />
+          <span>Kritik Ders Notları, Spotlar ve Ayırt Edici Özellikler</span>
+        </span>
+        <span className="text-[11px] font-mono font-semibold text-ink-3 bg-canvas px-2 py-0.5 rounded-md border border-line">
+          {bullets.length} Madde
+        </span>
+      </div>
+
+      <div className="grid grid-cols-1 gap-2">
+        {bullets.map((b, i) => {
+          const t = b.title.toLowerCase();
+          const d = b.desc.toLowerCase();
+
+          // 1. Red: Dikkat / Sınav Tuzağı / Kritik / Ölümcül / Kontrendike / Hayati
+          const isRed =
+            /^(?:🔴|🚨|⚠️)/.test(b.title) ||
+            /\b(dikkat|tuzak|sınav tuzağı|kritik|ölümcül|acil|hayati|kontrendike|yanılgı|hata|sakın)\b/i.test(t) ||
+            /\b(asla|ölümcül|kontrendike)\b/i.test(d);
+
+          // 2. Amber: Spot Bilgi / Hoca İncisi / Sınav Sorusu / Püf Nokta
+          const isAmber =
+            !isRed &&
+            (/(?:💡|⚡|🎯)/.test(b.title) ||
+              /\b(spot|hoca incisi|sınav spotu|püf nokta|ipucu|çıkmış soru|komite|tus)\b/i.test(t));
+
+          // 3. Blue: Ayırt Edici Özellikler / Ayırıcı Tanı / Karşılaştırma / Kriter
+          const isBlue =
+            !isRed &&
+            !isAmber &&
+            (/(?:🔍|⚖️|⚡)/.test(b.title) ||
+              /\b(ayırt edici|ayırıcı tanı|fark|karşılaştırma|kriter|altın standart|patognomonik|spesifik)\b/i.test(t));
+
+          // 4. Purple: Özet / Tekrar / Sentez / Hatırlatma
+          const isPurple =
+            !isRed &&
+            !isAmber &&
+            !isBlue &&
+            (/(?:🔄|✨|🧬)/.test(b.title) ||
+              /\b(özet|tekrar|sentez|hatırlatma|yaklaşım|prognoz|sonuç)\b/i.test(t));
+
+          let badgeCls = 'bg-teal-500/10 text-teal-800 dark:text-teal-300 border-teal-500/20';
+          let borderCls = 'border-l-4 border-l-teal-500 bg-teal-50/20 dark:bg-teal-950/20 border-line-soft';
+          let icon = <BookOpen className="w-3.5 h-3.5 text-teal-600 shrink-0" />;
+
+          if (isRed) {
+            badgeCls = 'bg-rose-500/10 text-rose-800 dark:text-rose-300 border-rose-500/30';
+            borderCls = 'border-l-4 border-l-rose-500 bg-rose-50/40 dark:bg-rose-950/30 border-rose-500/20';
+            icon = <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />;
+          } else if (isAmber) {
+            badgeCls = 'bg-amber-500/10 text-amber-900 dark:text-amber-300 border-amber-500/30';
+            borderCls = 'border-l-4 border-l-amber-500 bg-amber-50/40 dark:bg-amber-950/30 border-amber-500/20';
+            icon = <Lightbulb className="w-3.5 h-3.5 text-amber-600 shrink-0" />;
+          } else if (isBlue) {
+            badgeCls = 'bg-blue-500/10 text-blue-900 dark:text-blue-300 border-blue-500/30';
+            borderCls = 'border-l-4 border-l-blue-500 bg-blue-50/40 dark:bg-blue-950/30 border-blue-500/20';
+            icon = <ArrowLeftRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />;
+          } else if (isPurple) {
+            badgeCls = 'bg-purple-500/10 text-purple-900 dark:text-purple-300 border-purple-500/30';
+            borderCls = 'border-l-4 border-l-purple-500 bg-purple-50/40 dark:bg-purple-950/30 border-purple-500/20';
+            icon = <RotateCcw className="w-3.5 h-3.5 text-purple-600 shrink-0" />;
+          }
+
+          return (
+            <div
+              key={i}
+              className={`rounded-xl p-3 sm:p-3.5 border transition-all duration-150 flex items-start gap-3 shadow-2xs ${borderCls}`}
+            >
+              <div className="mt-0.5 shrink-0 flex flex-col items-center gap-1">
+                <span className="w-6 h-6 rounded-lg bg-white/90 dark:bg-panel shadow-2xs border border-line flex items-center justify-center">
+                  {icon}
+                </span>
+                <span className="text-[10px] font-mono font-bold text-ink-3">
+                  #{i + 1}
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-1 min-w-0 flex-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className={`text-[11px] font-bold px-2 py-0.5 rounded-md border shadow-2xs ${badgeCls}`}>
+                    {b.title}
+                  </span>
+                </div>
+                <div className="text-[12.5px] sm:text-[13px] text-ink leading-relaxed font-normal">
+                  <Rich text={b.desc} />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------------------
 // One slide, sized to the stage (16:9 feel on wide screens, scrolls inside if long)
 // ---------------------------------------------------------------------------
 const SlideCanvas: React.FC<{
@@ -1733,6 +1842,11 @@ const SlideCanvas: React.FC<{
             
             <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
 
+            {/* Categorized Key Bullets with Colors & Icons */}
+            {c.keyBullets && c.keyBullets.length > 0 && (
+              <KeyBulletsRenderer bullets={c.keyBullets} />
+            )}
+
             {/* Comparison / Classification Table on Slide Canvas */}
             {c.table && (
               <EnhancedDifferentialTable table={c.table} />
@@ -1874,28 +1988,7 @@ const SlideCanvas: React.FC<{
           {/* Main content */}
           <div className="flex flex-col gap-4 min-w-0">
             {c.keyBullets && c.keyBullets.length > 0 && (
-              <ol className="list-none m-0 p-0 flex flex-col gap-2">
-                {c.keyBullets.map((b, i) => (
-                  <li
-                    key={i}
-                    className={`grid grid-cols-[24px_minmax(0,1fr)] gap-3 items-start rounded-xl px-3 py-2.5 border ${
-                      b.isKey ? 'bg-accent-soft/60 border-transparent' : 'bg-white border-line'
-                    }`}
-                  >
-                    <span
-                      className={`w-6 h-6 mt-px rounded-lg font-mono text-[11px] font-semibold flex items-center justify-center ${
-                        b.isKey ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
-                      }`}
-                    >
-                      {i + 1}
-                    </span>
-                    <span className="flex flex-col gap-0.5 min-w-0">
-                      <span className="text-[13.5px] sm:text-[14px] font-semibold leading-snug">{b.title}</span>
-                      <Rich text={b.desc} className="text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.6]" />
-                    </span>
-                  </li>
-                ))}
-              </ol>
+              <KeyBulletsRenderer bullets={c.keyBullets} />
             )}
 
             {c.infographic?.items?.length ? (
@@ -2089,17 +2182,7 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
 
       {/* Key Bullets */}
       {c.keyBullets && c.keyBullets.length > 0 && (
-        <div className="rounded-xl border border-line p-3.5 bg-white flex flex-col gap-2.5">
-          <span className="text-[12px] font-semibold uppercase tracking-wider text-ink-3">Önemli Klinik & Patolojik Maddeler</span>
-          <div className="flex flex-col gap-2">
-            {c.keyBullets.map((b, i) => (
-              <div key={i} className="text-[13px] leading-snug">
-                <span className="font-semibold text-ink">{b.title}: </span>
-                <Rich text={b.desc} className="text-ink-2" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <KeyBulletsRenderer bullets={c.keyBullets} compact />
       )}
 
       {/* Formula / Box */}

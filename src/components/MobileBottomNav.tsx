@@ -15,6 +15,7 @@ import {
   ShieldCheck,
   ChevronRight,
   X,
+  Layers,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -38,6 +39,7 @@ const TABS: { id: AppTab; label: string; icon: React.ElementType }[] = [
 ];
 
 const MORE: { id: AppTab; label: string; hint: string; icon: React.ElementType; tint: string }[] = [
+  { id: 'flashcards', label: 'Ezber kartları', hint: 'Tıbbi terimler ve ders kartları', icon: Layers, tint: '#7C3AED' },
   { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#1E4FD8' },
   { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#B7791F' },
   { id: 'summaries', label: 'Ders özetleri', hint: 'Spot bilgiler', icon: BookOpen, tint: '#6D28D9' },

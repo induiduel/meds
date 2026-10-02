@@ -184,6 +184,16 @@ CREATE TABLE IF NOT EXISTS past_questions (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS past_question_reports (
+  id TEXT PRIMARY KEY,
+  question_id TEXT REFERENCES past_questions(id) ON DELETE CASCADE,
+  reason TEXT NOT NULL,
+  details TEXT,
+  reported_by TEXT,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
 CREATE TABLE IF NOT EXISTS lecture_notes (
   id TEXT PRIMARY KEY,
   committee_id TEXT NOT NULL,
@@ -199,6 +209,7 @@ CREATE TABLE IF NOT EXISTS lecture_notes (
 ALTER TABLE committees ENABLE ROW LEVEL SECURITY;
 ALTER TABLE questions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE past_questions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE past_question_reports ENABLE ROW LEVEL SECURITY;
 ALTER TABLE lecture_notes ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Allow public read committees" ON committees FOR SELECT USING (true);
@@ -206,6 +217,12 @@ CREATE POLICY "Allow public write committees" ON committees FOR ALL USING (true)
 
 CREATE POLICY "Allow public read questions" ON questions FOR SELECT USING (true);
 CREATE POLICY "Allow public write questions" ON questions FOR ALL USING (true);
+
+CREATE POLICY "Allow public read past_questions" ON past_questions FOR SELECT USING (true);
+CREATE POLICY "Allow public write past_questions" ON past_questions FOR ALL USING (true);
+
+CREATE POLICY "Allow public read past_question_reports" ON past_question_reports FOR SELECT USING (true);
+CREATE POLICY "Allow public write past_question_reports" ON past_question_reports FOR ALL USING (true);
 
 CREATE POLICY "Allow public read lecture_notes" ON lecture_notes FOR SELECT USING (true);
 CREATE POLICY "Allow public write lecture_notes" ON lecture_notes FOR ALL USING (true);
@@ -215,6 +232,7 @@ ALTER PUBLICATION supabase_realtime SET TABLE
   public.committees, 
   public.questions, 
   public.past_questions, 
+  public.past_question_reports,
   public.lecture_notes, 
   public.system_status, 
   public.users;
@@ -222,6 +240,7 @@ ALTER PUBLICATION supabase_realtime SET TABLE
 ALTER TABLE public.committees REPLICA IDENTITY FULL;
 ALTER TABLE public.questions REPLICA IDENTITY FULL;
 ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
+ALTER TABLE public.past_question_reports REPLICA IDENTITY FULL;
 ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
 ALTER TABLE public.system_status REPLICA IDENTITY FULL;
 ALTER TABLE public.users REPLICA IDENTITY FULL;
@@ -237,6 +256,7 @@ ALTER PUBLICATION supabase_realtime SET TABLE
   public.committees, 
   public.questions, 
   public.past_questions, 
+  public.past_question_reports,
   public.lecture_notes, 
   public.system_status, 
   public.users;
@@ -244,6 +264,7 @@ ALTER PUBLICATION supabase_realtime SET TABLE
 ALTER TABLE public.committees REPLICA IDENTITY FULL;
 ALTER TABLE public.questions REPLICA IDENTITY FULL;
 ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
+ALTER TABLE public.past_question_reports REPLICA IDENTITY FULL;
 ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
 ALTER TABLE public.system_status REPLICA IDENTITY FULL;
 ALTER TABLE public.users REPLICA IDENTITY FULL;

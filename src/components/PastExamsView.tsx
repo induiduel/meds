@@ -523,7 +523,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   const activeFilterChips: { label: string; clear: () => void }[] = [
     ...(ambiguityTab !== 'valid'
-      ? [{ label: ambiguityTab === 'ambiguous' ? 'İnceleme bekleyen' : 'Tüm havuz', clear: () => setAmbiguityTab('valid') }]
+      ? [{ label: ambiguityTab === 'ambiguous' ? 'İnceleme bekleyen' : ambiguityTab === 'reported' ? '🚩 Hata bildirilenler' : 'Tüm havuz', clear: () => setAmbiguityTab('valid') }]
       : []),
     ...(deepseekFilter !== 'all'
       ? [{ label: deepseekFilter === 'deepseek_only' ? '⚡ Yalnızca DeepSeek' : 'Standart sorular', clear: () => setDeepseekFilter('all') }]
@@ -663,6 +663,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   [
                     ['valid', `Tam metin · ${tabCounts.validCount}`],
                     ['ambiguous', `İnceleme bekleyen · ${tabCounts.ambiguousCount}`],
+                    ['reported', `Hata bildirilen · ${tabCounts.reportedCount}`],
                     ['all', `Tümü · ${tabCounts.totalCount}`],
                   ] as const
                 ).map(([id, label]) => (
@@ -918,6 +919,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   ) : q.reconstruction ? (
                     <span className="hidden sm:inline-flex h-[22px] px-2 rounded-full bg-ok-soft text-ok text-[12px] font-semibold items-center shrink-0">Doğrulandı</span>
                   ) : null}
+                  {q.reports && q.reports.length > 0 && (
+                    <span
+                      className="h-[22px] px-2 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-[11px] font-semibold inline-flex items-center gap-1 shrink-0"
+                      title={`${q.reports.length} adet hata bildirimi var`}
+                    >
+                      <Flag className="w-3 h-3 text-rose-600" />
+                      <span>{q.reports.length} Bildirim</span>
+                    </span>
+                  )}
                   {isGeneratingSimilar === q.id && <RefreshCw className="w-4 h-4 text-accent animate-spin shrink-0" aria-label="Benzer soru üretiliyor" />}
                   <span className="flex-1" />
                   <ActionMenu items={actions} label="İşlemler" title={`Soru #${q.questionNumber}`} />
@@ -1560,7 +1570,26 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           question={reportingQuestion}
           onClose={() => setReportingQuestion(null)}
           onSubmit={async (reason, details) => {
-            await ApiService.reportPastQuestion(reportingQuestion.id, reason, details, currentUser?.displayName || 'Tıp Öğrencisi');
+            const res = await ApiService.reportPastQuestion(
+              reportingQuestion.id,
+              reason,
+              details,
+              currentUser?.displayName || 'Tıp Öğrencisi'
+            );
+            if (res && res.report) {
+              setQuestions((prev) =>
+                prev.map((q) => {
+                  if (q.id === reportingQuestion.id) {
+                    const curReports = q.reports || [];
+                    const updatedReports = curReports.some((r: any) => r.id === res.report.id)
+                      ? curReports
+                      : [...curReports, res.report];
+                    return { ...q, reports: updatedReports };
+                  }
+                  return q;
+                })
+              );
+            }
           }}
         />
       )}

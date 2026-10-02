@@ -2953,6 +2953,17 @@ CREATE TABLE IF NOT EXISTS public.past_questions (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- 3b. Çıkmış Soru Hata Bildirimleri Tablosu
+CREATE TABLE IF NOT EXISTS public.past_question_reports (
+  id TEXT PRIMARY KEY,
+  question_id TEXT REFERENCES public.past_questions(id) ON DELETE CASCADE,
+  reason TEXT NOT NULL,
+  details TEXT,
+  reported_by TEXT,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
 -- 4. Amfi Ders Notları & Slaytlar Tablosu
 CREATE TABLE IF NOT EXISTS public.lecture_notes (
   id TEXT PRIMARY KEY,
@@ -2988,6 +2999,7 @@ CREATE TABLE IF NOT EXISTS public.system_status (
 ALTER TABLE public.committees ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.questions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.past_questions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.past_question_reports ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.lecture_notes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.system_status ENABLE ROW LEVEL SECURITY;
@@ -2998,6 +3010,8 @@ CREATE POLICY "Allow public read access" ON public.questions FOR SELECT USING (t
 CREATE POLICY "Allow public write access" ON public.questions FOR ALL USING (true);
 CREATE POLICY "Allow public read access" ON public.past_questions FOR SELECT USING (true);
 CREATE POLICY "Allow public write access" ON public.past_questions FOR ALL USING (true);
+CREATE POLICY "Allow public read access" ON public.past_question_reports FOR SELECT USING (true);
+CREATE POLICY "Allow public write access" ON public.past_question_reports FOR ALL USING (true);
 CREATE POLICY "Allow public read access" ON public.lecture_notes FOR SELECT USING (true);
 CREATE POLICY "Allow public write access" ON public.lecture_notes FOR ALL USING (true);
 CREATE POLICY "Allow public read access" ON public.users FOR SELECT USING (true);
@@ -3010,6 +3024,7 @@ ALTER PUBLICATION supabase_realtime SET TABLE
   public.committees, 
   public.questions, 
   public.past_questions, 
+  public.past_question_reports,
   public.lecture_notes, 
   public.system_status, 
   public.users;
@@ -3018,6 +3033,7 @@ ALTER PUBLICATION supabase_realtime SET TABLE
 ALTER TABLE public.committees REPLICA IDENTITY FULL;
 ALTER TABLE public.questions REPLICA IDENTITY FULL;
 ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
+ALTER TABLE public.past_question_reports REPLICA IDENTITY FULL;
 ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
 ALTER TABLE public.users REPLICA IDENTITY FULL;
 ALTER TABLE public.system_status REPLICA IDENTITY FULL;`}

@@ -2503,7 +2503,7 @@ JSON FORMATI:
 
     // 3. Local IndexedDB Cache update (Cihaz üzerinde anlık yansıma)
     try {
-      const cached = await pastQuestionsCache.getQuestion(questionId);
+      const cached = await pastQuestionsCache.getCachedQuestionById(questionId);
       if (cached) {
         const curReports = cached.reports || [];
         if (!curReports.some((r: any) => r.id === reportObj.id)) {

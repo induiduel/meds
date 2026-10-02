@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "id": "act-1790966029331-3u24z",
+    "questionId": "test-q1",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Farmakoloji",
+    "topic": "Antihipertansifler",
+    "interactionType": "chat_qa",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Mekanizmayi a�iklar misin?",
+    "response": "## Dry Cough ve ACE‑İnhibitörler: “Bradykinin Tuzağı”\n\n**Soru:** 58 yaşında hipertansiyon tanısı konmuş ve yeni bir ilaçla tedaviye başlanmış hastada **kuru öksürük** gelişmiştir.  \n**Doğru cevap:** **C) Bradikinin**  \n\nAşağıda bu bulgunun **farmakolojik temeli**, diğer şıkların neden yanlış olduğu ve sınavda işinize yarayacak **mnemonik‑ve ipuçları** yer alıyor.\n\n---\n\n## 1. ACE‑İnhibitörlerin (ör. Enalapril, Lisinopril) temel etkileri\n\n| Etki | Normal fizyoloji | ACE‑İnhibitörle ne olur? |\n|------|------------------|--------------------------|\n| **Angiotensin‑I → Angiotensin‑II** | ACE (kanda ve akciğer endotelinde) Ang I’i güçlü vazokonstriktör Ang II’ye çevirir. | ACE bloke edildiği için **Ang II üretimi azalır** → damarlar gevşer, aldosteron düşer, kan basıncı düşer. |\n| **Bradykinin’in yıkımı** | ACE aynı zamanda **bradykinin** adlı vazodilatör peptidi de hızla parçalar (kısa ömür). | ACE engellendiğinde **bradykinin yıkımı azalır**, dolayısıyla **bradykinin düzeyi yükselir**. |\n\n### Bradykinin’in öksürük üzerindeki etkisi\n\n1. **Bronşial sinir uçlarını uyarır** → C‑fibre (tahriş) aktivasyonu.  \n2. **Prostaglandin E2 ve Nörokinin‑A** gibi sekonder mediyatörlerin salınımını artırır → mukozal irritasyon.  \n3. **Kuru, kurşun gibi** bir öksürük ortaya çıkar (genellikle 1‑4 hafta içinde, doz‑bağımlı değildir).  \n\n> **Klinik not:** Öksürük genellikle hastayı rahatsız eder, ancak **ACE‑İnhibitörün antihipertansif faydaları** (düşük mortalite, kardiyovasküler koruma) nedeniyle ilk tercih hâlâ bu ilaçlardır. Öksürük çok şiddetliyse, **ARB (Losartan, Valsartan vb.)** gibi ACE‑İnhibitörün etkisini taklit eden ama bradykinin metabolizmasını etkilemeyen bir ilaçla değiştirilebilir.\n\n---\n\n## 2. Neden **Renin** ve **Angiotensin** (Şık A ve B) yanıt değildir?\n\n| Şık | Açıklama | Hangi durumda “doğru” olabilir? |\n|-----|----------|-----------------------------------|\n| **A) Renin** | Renin, **JGA** (juxtaglomerular aparat) tarafından salgılanan bir enzimdir; kan basıncını yükseltmek için **angiotensinogen → Ang I** dönüşümünü başlatır. Renin’in artışı **vasokonstriksiyon, aldosteron artışı** gibi etkiler yaratır, **öksürük** üretmez. | Renin düzeyinin artması **hiperaldosteronizm** veya **renin‑yüksek hipertansiyon** gibi durumlarda görülür; öksürükle ilişkili değildir. |\n| **B) Angiotensin** | Angiotensin II, güçlü bir **vazokonstriktör** ve **aldosteron sekreteri**dir; yine **öksürük** üretmez. Aslında ACE‑İnhibitörler Ang II’yı azaltarak kan basıncını düşürür. | Angiotensin II’nin aşırı aktivitesi **malign hipertansiyon** gibi durumlarda görülebilir; yine öksürükle ilişkilendirilmez. |\n\n> **Kısaca:** Öksürük, **bradykinin birikimi** (ve/veya prostaglandin artışı) ile ortaya çıkar; renin ve angiotensin ise **kan basıncını düzenleyen** ama **solunum yollarını tahriş etmeyen** moleküllerdir.\n\n---\n\n## 3. Mnemonikler & Sınav Tuzağı Uyarıları\n\n### Mnemonic – “**BRADY‑Cough**”\n- **B**radykinin ↑ → **R**eceptor (B2) **A**ktivasyonu → **D**ry (kuru) **Y**akıcı öksürük.\n- **C** = **C**ough (öksürük) → **O** = **O**ld ACE‑İnhibitör (Enalapril, Lisinopril, Captopril).\n\n> **Hatırlatma:** “**B**radykinin **R**eacts **A**nd **D**rives **Y**our **C**ough” → **BRADY‑Cough**.\n\n### Sınav Tuzağı\n- **“Kuru öksürük + yeni antihipertansif”** sorularında **“ACE‑İnhibitör”** otomatik akla gelmelidir.  \n- **“Renin‑anjiyotensin sistemi”** (RAS) şıkları **genellikle** “**düşük kan basıncı**, **hiperkalemi**, **kalsiyum metabolizması** gibi yan etkilerle (ör. aliskiren, ARB) karıştırılır.  \n- **“Bradykinin”** şıkkı **sadece ACE‑İnhibitör** bağlamında **kuru öksürük** ile eşleştirilir; başka antihipertansiflerde (β‑bloker, diüretik, kalsiyum kanal blokeri) **bradykinin** artışı **yoktur**.\n\n---\n\n## 4. Klinik Özet (Kısa Çizelge)\n\n| İlaç Grubu | Öksürük? | Diğer Önemli Yan Etkiler | Değiştirme Seçeneği (eğer öksürük şiddetliyse) |\n|-----------|----------|--------------------------|------------------------------------------------|\n| **ACE‑İnhibitör** | **Evet** (bradykinin) | Kallikrein‑kinin ödemi, anjioödem, hiperpotasemi | **ARB** (Losartan, Valsartan) |\n| **ARB** | Hayır | Hafif hiperkalemi, artmış kreatinin | – |\n| **β‑bloker** | Hayır | Bradykardi, astımda bronkokonstriksiyon | – |\n| **Kalsiyum kanal blokeri** | Hayır | Ödem, kabızlık (dihidro), AV blok | – |\n| **Diüretik (tiazid)** | Hayır | Hipokalemi, hiperglisemi, hiperürisemi | – |\n\n---\n\n## 5. “Kısa ve Net” Açıklama (Sözlü Sınavda Kullanabileceğiniz)\n\n> *“ACE‑İnhibitörler kan basıncını düşürürken aynı zamanda bradykinin yıkımını engeller. Bradi­kinin bronşial sinir uçlarını uyararak kuru, tahriş edici bir öksürüğe neden olur. Renin ve angiotensin ise kan basıncını düzenleyen hormonlardır; öksürük üretmezler. Bu yüzden doğru cevap bradykinindir.”*\n\n---\n\n### Son Söz\nKuru öksürük, **ACE‑İnhibitörlerin karakteristik “bradykinin‑mediated” yan etkisi** olduğundan, bu tip sorularda **“yeni antihipertansif + kuru öksürük”** kombinasyonu gördüğünüzde **bradykinin**i aklınızda tutun. Başarılar! 🚀",
+    "contextSnapshot": {
+      "stem": "58 yasinda hipertansiyon tanisiyla yeni ila� baslanan hastada kuru �ks�r�k gelisiyor. Sebep olan mediyat�r?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Renin"
+        },
+        {
+          "key": "B",
+          "text": "Anjiyotensin"
+        },
+        {
+          "key": "C",
+          "text": "Bradikinin"
+        }
+      ],
+      "correctAnswer": "C",
+      "userAnswer": "C",
+      "explanation": ""
+    },
+    "metadata": {
+      "providerUsed": "Groq Cloud (1. Ücretsiz Groq Anahtarı)",
+      "model": "Groq Cloud (openai/gpt-oss-120b)"
+    },
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1790966029331-3u24z",
+    "createdAt": "2026-10-02T18:33:49.331Z"
+  }
+]

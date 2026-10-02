@@ -57,6 +57,7 @@ const SystemDiagnosticsModal = React.lazy(() => import('./components/SystemDiagn
 const AiQuotaAlertModal = React.lazy(() => import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal })));
 const LectureSummariesView = React.lazy(() => import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView })));
 const TranscriptionsView = React.lazy(() => import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView })));
+const FlashcardsView = React.lazy(() => import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView })));
 const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
 
 const ViewFallback = () => <SectionLoader />;
@@ -1265,6 +1266,13 @@ export default function App() {
         {activeTab === 'transcripts' && (
           <Suspense fallback={<ViewFallback />}>
             <TranscriptionsView />
+          </Suspense>
+        )}
+
+        {/* /kartlar — spaced-repetition flashcards (medical terms + lesson cards) */}
+        {activeTab === 'flashcards' && (
+          <Suspense fallback={<ViewFallback />}>
+            <FlashcardsView />
           </Suspense>
         )}
 

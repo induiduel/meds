@@ -27,6 +27,7 @@ import {
   GraduationCap,
   MoreHorizontal,
   Mic,
+  Layers,
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser } from '../services/auth';
@@ -71,6 +72,7 @@ interface HeaderProps {
 export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'quick_add', label: 'Soru ekle', icon: SquarePen },
   { id: 'learn', label: 'Öğren', icon: GraduationCap },
+  { id: 'flashcards', label: 'Kartlar', icon: Layers },
   { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
   { id: 'questions', label: 'Soru havuzu', icon: Library },
   { id: 'study', label: 'Çalış', icon: ListChecks },
