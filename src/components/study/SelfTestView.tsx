@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, Flag, Timer, Trash2, RotateCcw, ChevronDown, ChevronUp, Play, Bookmark, BookmarkCheck } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Flag, Timer, Trash2, RotateCcw, ChevronDown, ChevronUp, Play, Bookmark, BookmarkCheck, Sparkles } from 'lucide-react';
 import { Committee } from '../../types';
 import {
   StudyQuestion,
@@ -16,6 +16,7 @@ import {
 } from '../../services/studyStore';
 import { committeeShortLabel } from '../QuickAddHero';
 import { Segmented, OptionButton, ExplanationBlock, EmptyState, cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, Field, formatDuration, isTypingTarget } from './StudyUI';
+import { QuestionAiChatDrawer } from '../QuestionAiChatDrawer';
 
 interface SelfTestViewProps {
   bank: StudyQuestion[];
@@ -482,6 +483,7 @@ const ResultView: React.FC<{
   });
   const [open, setOpen] = useState<string | null>(null);
   const [added, setAdded] = useState(false);
+  const [chatQuestion, setChatQuestion] = useState<StudyQuestion | null>(null);
   const pct = Math.round((result.correct / Math.max(1, result.total)) * 100);
   const net = result.correct - result.wrong / 4;
   const rows = items.filter((q) => {
@@ -644,6 +646,14 @@ const ResultView: React.FC<{
                           {getReview().has(q.id) ? <BookmarkCheck className="w-3.5 h-3.5" /> : <Bookmark className="w-3.5 h-3.5" />}
                           {getReview().has(q.id) ? 'Tekrar listesinde' : 'Tekrar listesine ekle'}
                         </button>
+                        <button
+                          type="button"
+                          onClick={() => setChatQuestion(q)}
+                          className="h-8 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 text-accent hover:bg-accent-soft cursor-pointer transition-colors"
+                        >
+                          <Sparkles className="w-3.5 h-3.5" />
+                          <span>AI ile İncele</span>
+                        </button>
                       </div>
                     </div>
                   )}
@@ -653,6 +663,26 @@ const ResultView: React.FC<{
           </ol>
         )}
       </section>
+
+      {/* AI Live Tutor Chat Drawer */}
+      <QuestionAiChatDrawer
+        isOpen={!!chatQuestion}
+        onClose={() => setChatQuestion(null)}
+        questionContext={chatQuestion ? {
+          id: chatQuestion.id,
+          discipline: chatQuestion.discipline,
+          topic: chatQuestion.topic,
+          committeeId: chatQuestion.committeeId,
+          committeeName: chatQuestion.committeeId,
+          year: chatQuestion.year,
+          number: chatQuestion.number,
+          stem: chatQuestion.stem,
+          options: chatQuestion.options,
+          correctAnswer: chatQuestion.answer,
+          explanation: chatQuestion.explanation,
+          userAnswer: result?.answers[chatQuestion.id],
+        } : null}
+      />
     </div>
   );
 };

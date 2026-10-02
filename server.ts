@@ -278,7 +278,12 @@ export function getTieredGroqKeys(customGroqKey?: string): { key: string; label:
 export async function callGroqCloud(
   prompt: string,
   model: string = 'openai/gpt-oss-120b',
-  customGroqKey?: string
+  customGroqKey?: string,
+  options?: {
+    systemPrompt?: string;
+    isJson?: boolean;
+    messages?: { role: string; content: string }[];
+  }
 ): Promise<{ text: string; model: string; keyUsed: string }> {
   const keys = getTieredGroqKeys(customGroqKey);
   if (keys.length === 0) {
@@ -293,32 +298,42 @@ export async function callGroqCloud(
     'llama-3.3-70b-versatile',
   ].filter(Boolean) as string[];
 
+  const isJson = options?.isJson !== false;
+  const sysMsg = options?.systemPrompt || (isJson
+    ? 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
+    : 'Sen Tıp Fakültesi öğrencilerine sınav sorularında rehberlik eden kıdemli bir tıp hocası ve eğitmenisin.');
+
+  const chatMessages: any[] = options?.messages && options.messages.length > 0
+    ? [
+        { role: 'system', content: sysMsg },
+        ...options.messages
+      ]
+    : [
+        { role: 'system', content: sysMsg },
+        { role: 'user', content: prompt }
+      ];
+
   let lastErr: any = null;
   for (let ki = 0; ki < keys.length; ki++) {
     const currentKey = keys[ki];
     for (const m of candidateModels) {
       try {
+        const bodyPayload: any = {
+          model: m,
+          messages: chatMessages,
+          temperature: isJson ? 0.2 : 0.4
+        };
+        if (isJson) {
+          bodyPayload.response_format = { type: 'json_object' };
+        }
+
         const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${currentKey.key}`,
           },
-          body: JSON.stringify({
-            model: m,
-            messages: [
-              {
-                role: 'system',
-                content: 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
-              },
-              {
-                role: 'user',
-                content: prompt
-              }
-            ],
-            response_format: { type: 'json_object' },
-            temperature: 0.2
-          })
+          body: JSON.stringify(bodyPayload)
         });
 
         if (!res.ok) {
@@ -334,7 +349,7 @@ export async function callGroqCloud(
         }
 
         const data: any = await res.json();
-        const text = data.choices?.[0]?.message?.content || '{}';
+        const text = data.choices?.[0]?.message?.content || (isJson ? '{}' : '');
         return { text, model: m, keyUsed: currentKey.label };
       } catch (err: any) {
         lastErr = err;
@@ -352,13 +367,31 @@ export async function generateResilientMedicalAi(options: {
   customGroqKey?: string;
   preferredProvider?: 'gemini' | 'groq' | 'auto';
   model?: string;
+  responseFormat?: 'json' | 'text';
+  systemInstruction?: string;
+  messages?: { role: string; content: string }[];
 }): Promise<{ text: string; providerUsed: string; planUsed: string }> {
-  const { prompt, customGeminiKey, customGroqKey, preferredProvider = 'auto', model } = options;
+  const {
+    prompt,
+    customGeminiKey,
+    customGroqKey,
+    preferredProvider = 'auto',
+    model,
+    responseFormat = 'json',
+    systemInstruction,
+    messages
+  } = options;
+
+  const isJson = responseFormat === 'json';
 
   // If user explicitly chose Groq Cloud or a Groq-based model
   const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
   if (isGroqExplicit) {
-    const groqRes = await callGroqCloud(prompt, model || 'openai/gpt-oss-120b', customGroqKey);
+    const groqRes = await callGroqCloud(prompt, model || 'openai/gpt-oss-120b', customGroqKey, {
+      systemPrompt: systemInstruction,
+      isJson,
+      messages
+    });
     return { text: groqRes.text, providerUsed: 'Groq Cloud', planUsed: `Groq (${groqRes.model} - ${groqRes.keyUsed})` };
   }
 
@@ -379,12 +412,20 @@ export async function generateResilientMedicalAi(options: {
         console.log(`[AI Engine] ${currentKeyInfo.label} (${m}) deneniyor... (Sıra: ${i + 1}/${freeGeminiKeys.length})`);
         const { GoogleGenAI } = await import('@google/genai');
         const clientAi = new GoogleGenAI({ apiKey: currentKeyInfo.key });
+        const configPayload: any = {};
+        if (isJson) {
+          configPayload.responseMimeType = 'application/json';
+        }
+        if (systemInstruction) {
+          configPayload.systemInstruction = systemInstruction;
+        }
+
         const geminiRes = await clientAi.models.generateContent({
           model: m,
           contents: prompt,
-          config: { responseMimeType: 'application/json' }
+          config: configPayload
         });
-        const text = geminiRes.text || '{}';
+        const text = geminiRes.text || (isJson ? '{}' : '');
         console.log(`[AI Engine] ✓ ${currentKeyInfo.label} (${m}) başarıyla yanıt üretti!`);
         return {
           text,
@@ -411,7 +452,11 @@ export async function generateResilientMedicalAi(options: {
     try {
       console.log(`[AI Engine] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
       const groqModel = model?.includes('deepseek') ? 'deepseek-r1-distill-llama-70b' : (model?.includes('qwen') ? 'qwen/qwen3.8-27b' : 'openai/gpt-oss-120b');
-      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey);
+      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
+        systemPrompt: systemInstruction,
+        isJson,
+        messages
+      });
       console.log(`[AI Engine] ✓ 3. Sıra (Groq Cloud ${groqRes.model} - ${groqRes.keyUsed}) başarıyla yanıt üretti!`);
       return {
         text: groqRes.text,
@@ -438,12 +483,20 @@ export async function generateResilientMedicalAi(options: {
         console.log(`[AI Engine] 💳 4. Sıra Devrede: Ücretsiz planlar ve Groq yanıt vermedi, ${billedKey.label} (${m}) deneniyor...`);
         const { GoogleGenAI } = await import('@google/genai');
         const clientAi = new GoogleGenAI({ apiKey: billedKey.key });
+        const configPayload: any = {};
+        if (isJson) {
+          configPayload.responseMimeType = 'application/json';
+        }
+        if (systemInstruction) {
+          configPayload.systemInstruction = systemInstruction;
+        }
+
         const geminiRes = await clientAi.models.generateContent({
           model: m,
           contents: prompt,
-          config: { responseMimeType: 'application/json' }
+          config: configPayload
         });
-        const text = geminiRes.text || '{}';
+        const text = geminiRes.text || (isJson ? '{}' : '');
         console.log(`[AI Engine] ✓ 4. Sıra (${billedKey.label}) başarıyla yanıt üretti!`);
         return {
           text,
@@ -3637,6 +3690,99 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
   } catch (err: any) {
     console.error('Fatal optimize-question error:', err);
     return res.status(500).json({ success: false, error: 'Soru düzenlenemedi: ' + err.message });
+  }
+});
+
+// Live Interactive Medical AI Chat for Question Solving
+app.post('/api/ai/question-chat', async (req, res) => {
+  try {
+    const { questionContext, messages = [], currentMessage, apiKey, groqApiKey, preferredProvider = 'auto', model } = req.body;
+    if (!questionContext || !currentMessage) {
+      return res.status(400).json({ success: false, error: 'Soru bağlamı ve kullanıcı mesajı zorunludur.' });
+    }
+
+    const {
+      discipline = 'Tıp',
+      topic = 'Tıp Konusu',
+      committeeName = '',
+      year = '',
+      number,
+      stem = '',
+      options = [],
+      correctAnswer = '',
+      explanation = '',
+      userAnswer = '',
+      lectureReference = null,
+      slideSnippet = ''
+    } = questionContext;
+
+    const optionsText = options.map((o: any) => `${o.key}) ${o.text}`).join('\n');
+
+    const systemInstruction = `Sen Türkiye'deki Tıp Fakültesi komite/kurul sınavları, TUS ve klinik tıp alanında uzman kıdemli bir Tıp Profesörü ve Soru Eğitmenisin (AI Tıp Asistanı).
+Şu an tıp öğrencisi bir soru çözerken seninle anlık canlı sohbet ediyor. Amacın öğrencinin soruyla ilgili aklına takılan her şeyi (doğru cevabın altında yatan fizyopatolojik/farmakolojik mekanizma, diğer şıkların neden elenmesi gerektiği, çeldiriciler, klinik incelikler ve ezberlemeyi kolaylaştıracak mnemonikler) en berrak ve öğretici şekilde açıklamak.
+
+SORU BİLGİLERİ:
+- Komite / Sınav: ${committeeName ? committeeName : ''} ${year ? `(${year})` : ''} ${number ? `· Soru ${number}` : ''}
+- Disiplin / Branş: ${discipline}
+- Konu: ${topic}
+- Soru Kökü:
+${stem}
+
+- Şıklar:
+${optionsText || 'Şıklar belirtilmemiş.'}
+
+- Doğru Cevap: ${correctAnswer ? `${correctAnswer} şıkkı` : 'Bilinmiyor'}
+${userAnswer ? `- Öğrencinin İşaretlediği Şık: ${userAnswer} şıkkı ${correctAnswer ? (userAnswer === correctAnswer ? '(DOĞRU BİLDİ)' : '(YANLIŞ İŞARETLEDİ)') : ''}` : '- Öğrenci henüz bir şık işaretlemedi.'}
+${explanation ? `- Sorunun Açıklaması / Mekanizması:\n${explanation}` : ''}
+${slideSnippet || lectureReference?.matchedSnippet ? `- İlgili Amfi Slaytı Notu:\n${slideSnippet || lectureReference?.matchedSnippet}` : ''}
+
+TEMEL İLKELER VE YANIT KURALLARI:
+1. Öğrencinin sorusuna tıp fakültesi amfisi kalitesinde, motive edici, samimi ve akademik olarak %100 doğru bir üslupla yanıt ver.
+2. Öğrenci neden doğru cevabın o olduğunu sorduğunda, altında yatan fizyolojik/biyokimyasal/farmakolojik mekanizmayı adım adım açıkla.
+3. Çeldirici şıklar sorulduğunda, o şıkkın neden elenmesi gerektiğini ve hangi klinik tabloda doğru olabileceğini belirt.
+4. Karmaşık bilgileri akılda tutması için pratik mnemonikler (akrostişler, tekerlemeler) ve "Sınav Tuzağı" uyarıları ver.
+5. Markdown biçimlendirmesini (başlıklar, **kalın terimler**, - maddeler) okunaklı ve düzenli kullan.
+6. Yanıtını gereksiz dolambaçlı tutma; doğrudan öğrencinin sorduğu soruya odaklan.`;
+
+    const chatHistory = messages.map((m: any) => ({
+      role: m.role === 'assistant' ? 'assistant' : 'user',
+      content: m.content
+    }));
+
+    // Ensure the current user message is in chatHistory
+    const lastMsg = chatHistory[chatHistory.length - 1];
+    if (!lastMsg || lastMsg.content !== currentMessage || lastMsg.role !== 'user') {
+      chatHistory.push({ role: 'user', content: currentMessage });
+    }
+
+    const promptText = `Öğrencinin Sorusu: "${currentMessage}"\nLütfen yukarıdaki tıbbi soru bağlamını ve ilkeleri dikkate alarak öğrenciye samimi, net ve öğretici bir yanıt ver.`;
+
+    const result = await generateResilientMedicalAi({
+      prompt: promptText,
+      customGeminiKey: apiKey,
+      customGroqKey: groqApiKey,
+      preferredProvider,
+      model,
+      responseFormat: 'text',
+      systemInstruction,
+      messages: chatHistory
+    });
+
+    return res.json({
+      success: true,
+      reply: result.text,
+      providerUsed: result.providerUsed,
+      planUsed: result.planUsed
+    });
+  } catch (err: any) {
+    console.error('Question AI Chat error:', err);
+    const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
+    return res.status(isQuota ? 429 : 500).json({
+      success: false,
+      error: isQuota
+        ? 'Tüm yapay zeka sağlayıcıları kotaya takıldı (Hata 429). Lütfen alternatif model veya API anahtarı seçin.'
+        : (err.message || 'Yapay zeka yanıt veremedi.')
+    });
   }
 });
 

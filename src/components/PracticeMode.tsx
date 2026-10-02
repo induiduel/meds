@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { X, ArrowLeft, ArrowRight, BookOpen } from 'lucide-react';
+import { X, ArrowLeft, ArrowRight, BookOpen, Sparkles } from 'lucide-react';
 import { QuestionItem } from '../types';
 import { parseExplanation } from './QuestionCard';
+import { QuestionAiChatDrawer } from './QuestionAiChatDrawer';
 
 interface PracticeModeProps {
   questions: QuestionItem[];
@@ -32,6 +33,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [elapsed, setElapsed] = useState(0);
+  const [aiChatOpen, setAiChatOpen] = useState(false);
 
   useEffect(() => {
     const t = setInterval(() => setElapsed((s) => s + 1), 1000);
@@ -140,6 +142,16 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           <span className="ml-auto sm:ml-0 shrink-0 font-mono text-[13px] sm:text-[14px] px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-[10px] bg-canvas" aria-label="Geçen süre">
             {formatElapsed(elapsed)}
           </span>
+          <button
+            type="button"
+            onClick={() => setAiChatOpen(true)}
+            className="h-8 sm:h-9 px-2.5 sm:px-3 rounded-lg bg-gradient-to-r from-accent to-indigo-600 text-white font-semibold text-[12px] sm:text-[13px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer hover:opacity-95 transition-all shrink-0"
+            title="Yapay zeka ile bu soru hakkında canlı sohbet et"
+          >
+            <Sparkles className="w-3.5 h-3.5 animate-pulse" />
+            <span className="hidden sm:inline">Yapay Zekaya Sor</span>
+            <span className="sm:hidden">AI Sor</span>
+          </button>
         </div>
         <div className="sm:hidden h-1 bg-line-soft">
           <div className="h-1 bg-accent" style={{ width: `${(position / total) * 100}%` }} />
@@ -214,16 +226,26 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                 : `Doğru cevap ${rec.correctAnswer} — ${rec.options.find((o) => o.key === rec.correctAnswer)?.text || ''}`}
             </span>
             {shortExplanation && <p className="m-0 text-[15px] leading-[1.6] whitespace-pre-line line-clamp-6">{shortExplanation}</p>}
-            {onOpenQuestion && (
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <button
                 type="button"
-                onClick={() => onOpenQuestion(currentQ)}
-                className="self-start text-[14px] font-semibold text-accent inline-flex items-center gap-1.5 cursor-pointer"
+                onClick={() => setAiChatOpen(true)}
+                className="text-[14px] font-semibold text-accent inline-flex items-center gap-1.5 cursor-pointer hover:underline"
               >
-                <BookOpen className="w-4 h-4" />
-                Tam açıklama ve kaynak slayt
+                <Sparkles className="w-4 h-4" />
+                {isCorrect ? 'Mekanizmayı ve klinik incelikleri AI\'ya sor' : 'Neden yanlış yaptım? AI ile tartış'}
               </button>
-            )}
+              {onOpenQuestion && (
+                <button
+                  type="button"
+                  onClick={() => onOpenQuestion(currentQ)}
+                  className="text-[14px] font-semibold text-ink-2 hover:text-ink inline-flex items-center gap-1.5 cursor-pointer"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  Tam açıklama ve kaynak slayt
+                </button>
+              )}
+            </div>
           </section>
         )}
 
@@ -287,6 +309,26 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           </nav>
         </div>
       </footer>
+
+      {/* AI Live Tutor Chat Drawer */}
+      <QuestionAiChatDrawer
+        isOpen={aiChatOpen}
+        onClose={() => setAiChatOpen(false)}
+        questionContext={currentQ && rec ? {
+          id: currentQ.id,
+          discipline: currentQ.discipline,
+          topic: currentQ.topic,
+          committeeId: currentQ.committeeId,
+          number: currentQ.questionNumber,
+          stem: rec.stem,
+          options: rec.options.map((o) => ({ key: o.key, text: o.text })),
+          correctAnswer: rec.correctAnswer,
+          explanation: rec.explanation,
+          userAnswer: userAnswer,
+          lectureReference: currentQ.lectureReference,
+          slideSnippet: currentQ.lectureReference?.matchedSnippet
+        } : null}
+      />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, NotebookPen, RotateCcw, Shuffle, Check, X as XIcon, SlidersHorizontal, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, NotebookPen, RotateCcw, Shuffle, Check, X as XIcon, SlidersHorizontal, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import { Committee } from '../../types';
 import {
   StudyQuestion,
@@ -16,6 +16,7 @@ import {
 } from '../../services/studyStore';
 import { committeeShortLabel } from '../QuickAddHero';
 import { Segmented, OptionButton, ExplanationBlock, EmptyState, cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, Field, isTypingTarget } from './StudyUI';
+import { QuestionAiChatDrawer } from '../QuestionAiChatDrawer';
 
 type Mode = 'all' | 'unsolved' | 'review' | 'wrong';
 
@@ -44,6 +45,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
   const [noteText, setNoteText] = useState('');
   const [noteSaved, setNoteSaved] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [aiChatOpen, setAiChatOpen] = useState(false);
 
   const committeeName = (id: string) => {
     const c = committees.find((x) => x.id === id);
@@ -334,6 +336,16 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
               <span className="flex-1" />
               <button
                 type="button"
+                onClick={() => setAiChatOpen(true)}
+                className="h-9 px-2.5 sm:px-3 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 bg-gradient-to-r from-accent to-indigo-600 text-white hover:opacity-95 shadow-xs cursor-pointer transition-all shrink-0"
+                title="Yapay zeka ile bu soru hakkında canlı sohbet et"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Yapay Zekaya Sor</span>
+                <span className="sm:hidden">AI Sor</span>
+              </button>
+              <button
+                type="button"
                 onClick={toggleReview}
                 aria-pressed={review.has(q.id)}
                 className={`h-9 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
@@ -388,6 +400,18 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 </div>
                 <div className="bg-white/70 rounded-lg p-3">
                   <ExplanationBlock q={q} compact />
+                  <div className="pt-2.5 mt-2.5 border-t border-line/25 flex items-center justify-between">
+                    <button
+                      type="button"
+                      onClick={() => setAiChatOpen(true)}
+                      className="text-[13px] font-semibold text-accent hover:text-accent-hover inline-flex items-center gap-1.5 cursor-pointer"
+                    >
+                      <Sparkles className="w-3.5 h-3.5" />
+                      {attempt!.correct
+                        ? 'Mekanizmayı ve klinik incelikleri AI ile derinleştir'
+                        : 'Neden yanlış yaptım? Şıkları AI ile tartış'}
+                    </button>
+                  </div>
                 </div>
               </section>
             )}
@@ -432,6 +456,26 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
           </article>
         )}
       </section>
+
+      {/* AI Live Tutor Chat Drawer */}
+      <QuestionAiChatDrawer
+        isOpen={aiChatOpen}
+        onClose={() => setAiChatOpen(false)}
+        questionContext={q ? {
+          id: q.id,
+          discipline: q.discipline,
+          topic: q.topic,
+          committeeId: q.committeeId,
+          committeeName: committeeName(q.committeeId),
+          year: q.year,
+          number: q.number,
+          stem: q.stem,
+          options: q.options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+          userAnswer: attempt?.picked,
+        } : null}
+      />
     </div>
   );
 };
