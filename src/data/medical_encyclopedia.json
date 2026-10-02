@@ -13925,5 +13925,249 @@
       "auditSummary": "Dönem 3 Kurul 6 resmi ders özeti ve slayt içerikleri ile %100 doğrulanmıştır.",
       "sampleExamQuestion": "ENDOKRİN SİSTEM ile ilgili komite sınavlarında ders notunda vurgulanan anahtar kavramlar sorgulanır."
     }
+  },
+  {
+    "id": "enc-bradikinin",
+    "term": "Bradikinin",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / Farmakoloji",
+    "committee": "Kurul 1",
+    "description": "Kallikrein-kinin sistemi aracılığıyla plazma kininojenlerinden üretilen vazoaktif 9 aminoasitlik nonapeptid. C liflerindeki B2 reseptörlerine bağlanarak doğrudan ağrı (dolor) duyusunu tetikler. Arteriollerde vazodilatasyon ve postkapiller venüllerde güçlü vasküler geçirgenlik artışına neden olur. Akciğer endotelinde bulunan Kininaz II (Anjiyotensin Dönüştürücü Enzim - ACE) tarafından hızla yıkılır. ACE inhibitörleri bradikinini biriktirerek kuru öksürük ve anjiyoödem yapar.",
+    "clinicalPearl": "Enflamasyonda doğrudan ağrı oluşturan temel moleküldür (PGE2 ağrıyı duyarlılaştırır). C1 inhibitörü eksikliğinde yıkılamayıp birikerek Herediter Anjiyoödem tablosuna yol açar.",
+    "keywords": [
+      "bradikinin",
+      "kallikrein",
+      "kinin sistemi",
+      "ağrı",
+      "dolor",
+      "ace inhibitörü",
+      "anjiyoödem",
+      "herediter anjiyoödem"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-prostasiklin",
+    "term": "Prostasiklin (PGI2)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "description": "Vasküler endotel hücreleri tarafından araşidonik asitten COX-1/COX-2 ve Prostasiklin Sentaz enzimleri aracılığıyla sentezlenen prostanoid. Trombosit IP reseptörlerine bağlanıp hücre içi cAMP düzeyini artırarak trombosit agregasyonunu kuvvetle inhibe eder ve arteriollerde güçlü vazodilatasyon oluşturur. Trombositte üretilen protrombotik Tromboksan A2 (TXA2) ile zıt çalışarak damar içi trombüs oluşumunu engeller.",
+    "clinicalPearl": "Selektif COX-2 inhibitörleri endoteldeki PGI2 sentezini baskılarken trombositteki TXA2'ye dokunmaz; bu durum tromboz, inme ve miyokard enfarktüsü riskini artırır.",
+    "keywords": [
+      "prostasiklin",
+      "pgi2",
+      "endotel",
+      "vazodilatasyon",
+      "trombosit agregasyon inhibisyonu",
+      "cox-2",
+      "txa2"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-tromboksan-a2",
+    "term": "Tromboksan A2 (TXA2)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / Hematoloji",
+    "committee": "Kurul 1",
+    "description": "Dolaşımdaki trombositler tarafından COX-1 ve Tromboksan Sentaz enzimleri aracılığıyla üretilen son derece kararsız lipid mediyatör. Güçlü vazokonstriktördür ve trombosit agregasyonu ile granül salınımını tetikleyerek primer hemostatik tıkacın oluşmasını sağlar.",
+    "clinicalPearl": "Trombositler çekirdeksiz olduğu için aspirin tarafından geri dönüşümsüz asetillenen COX-1 enzimini yenileyemezler; bu nedenle düşük doz aspirin tüm trombosit ömrü boyunca (7-10 gün) TXA2 üretimini durdurur.",
+    "keywords": [
+      "tromboksan a2",
+      "txa2",
+      "trombosit",
+      "cox-1",
+      "vazokonstriksiyon",
+      "agregasyon",
+      "aspirin"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-lokotrien-b4",
+    "term": "Lökotrien B4 (LTB4)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "description": "Nötrofiller ve diğer miyeloid hücrelerde 5-lipoksijenaz ve LTA4 hidrolaz enzimleri ile sentezlenen majör lipid kemoatraktan. Nötrofillerin yangı odağına doğru yönlenmiş kemotaksisini yönetir, lökosit integrinlerinin (Mac-1, LFA-1) afinitesini artırarak endotelyal adezyonu sağlar, lizozomal enzim salınımını ve ROS üretimini tetikler.",
+    "clinicalPearl": "Akut enflamasyonda nötrofil kemotaksisini sağlayan 4 altın ajandan biridir (LTB4, C5a, IL-8, bakteriyel N-formil peptidler).",
+    "keywords": [
+      "lökotrien b4",
+      "ltb4",
+      "5-lipoksijenaz",
+      "kemotaksis",
+      "nötrofil",
+      "adezyon",
+      "ros"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-sisteinil-lokotrienler",
+    "term": "Sisteinil Lökotrienler (LTC4, LTD4, LTE4)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / Farmakoloji",
+    "committee": "Kurul 1",
+    "description": "Mast hücreleri, eozinofiller ve bazofillerde LTA4'e glutatyon eklenmesiyle sentezlenen sistein içerikli eikozanoidler (eski adıyla SRS-A / Slow Reacting Substance of Anaphylaxis). Bronş düz kaslarında histaminden 1000 kat daha güçlü ve uzun süreli bronkokonstriksiyon yaparlar; venüllerde vasküler geçirgenliği artırıp mukus hipersekresyonunu tetiklerler.",
+    "clinicalPearl": "Bronşiyal astım ve alerjik rinit patogenezinde başroldedirler. Montelukast ve zafirlukast bu moleküllerin CysLT1 reseptörlerini antagonize ederek hava yollarını rahatlatır.",
+    "keywords": [
+      "sisteinil lökotrienler",
+      "ltc4",
+      "ltd4",
+      "lte4",
+      "srs-a",
+      "bronkospazm",
+      "astım",
+      "montelukast"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-lipoksinler",
+    "term": "Lipoksinler (LXA4, LXB4)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "description": "Enflamasyonun çözünme (rezolüsyon) fazında nötrofiller (5-LOX) ile trombositler (12-LOX) arasındaki transsellüler metabolik işbirliği ile sentezlenen endojen anti-inflamatuar lipid mediyatörler. Nötrofil kemotaksisini ve damar dışına göçünü inhibe eder, makrofajların apoptotik hücre enkazını temizlemesini (eferositoz) uyarırlar.",
+    "clinicalPearl": "Diğer tüm araşidonik asit metabolitlerinin aksine yangıyı alevlendirmez; enflamasyonu sonlandıran bir fren görevi görür.",
+    "keywords": [
+      "lipoksin",
+      "lxa4",
+      "lxb4",
+      "anti-inflamatuar",
+      "rezolüsyon",
+      "transsellüler",
+      "eferositoz"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-kompleman-c3b",
+    "term": "Kompleman C3b (Opsonin)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1",
+    "description": "Klasik, lektin veya alternatif C3 konvertaz enzimi tarafından C3'ün proteolitik parçalanması sonucu ortaya çıkan büyük fragman. Mikrop ve antijen yüzeylerine kovalent tioester bağlarıyla tutunur. Nötrofil ve makrofajların yüzeyindeki Kompleman Reseptörü 1 (CR1 / CD35) tarafından tanınarak fagositozu dramatik biçimde hızlandırır (opsonizasyon).",
+    "clinicalPearl": "İmmün sistemdeki en güçlü opsonindir; ayrıca C5 konvertaz kompleksinin yapısına katılarak MAC oluşumunu başlatır.",
+    "keywords": [
+      "c3b",
+      "opsonin",
+      "opsonizasyon",
+      "fagositoz",
+      "cr1",
+      "cd35",
+      "kompleman"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-kompleman-c5a",
+    "term": "Kompleman C5a (Anafilatoksin & Kemoatraktan)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1",
+    "description": "C5 konvertazın C5 molekülünü parçalamasıyla salınan 74 aminoasitlik çözünür peptid. Kompleman sisteminin en güçlü anafilatoksini ve kemoatraktanıdır. Mast hücrelerinden histamin degranülasyonunu tetikler; nötrofiller, monositler ve makrofajlar için son derece güçlü kemotaksis uyarısı sağlar ve integrin adezyonunu artırır.",
+    "clinicalPearl": "Nötrofil kemotaksisinde LTB4 ve IL-8 ile yarışan majör plazma ürünüdür; şok tablolarında kontrolsüz salınımı vasküler kollapsa yol açar.",
+    "keywords": [
+      "c5a",
+      "anafilatoksin",
+      "kemotaksis",
+      "nötrofil",
+      "mast hücresi",
+      "enflamasyon"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-membran-atak-kompleksi",
+    "term": "Membran Atak Kompleksi (MAC / C5b-9)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1",
+    "description": "C5b parçasının hedef hücre zarına tutunmasının ardından C6, C7, C8 ve çok sayıda C9 monomerinin birleşmesiyle oluşan silindirik transmembran por kompleksi. Hücre zarında 10 nanometrelik delikler açarak serbest su ve iyon girişine, hücrenin osmotik lizisle patlamasına neden olur. CD59 (Protectin) konağın kendi hücrelerini bu kompleksten korur.",
+    "clinicalPearl": "Terminal kompleman (C5b-C9) eksikliği olan bireylerde tekrarlayan Neisseria meningitidis ve Neisseria gonorrhoeae enfeksiyonları (bakteriyemi, menenjit) görülür.",
+    "keywords": [
+      "membran atak kompleksi",
+      "mac",
+      "c5b-9",
+      "lizis",
+      "neisseria",
+      "cd59",
+      "protectin"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-daf-cd55",
+    "term": "Decay-Accelerating Factor (DAF / CD55)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / Hematoloji",
+    "committee": "Kurul 1",
+    "description": "Hücre zarına GPI (Glikozilfosfatidilinozitol) çıpasıyla bağlanan kompleman düzenleyici glikoprotein. Klasik ve alternatif C3 konvertaz enzim komplekslerini (C4b2a ve C3bBb) hızla ayrıştırıp inaktive ederek konak dokularının oto-kompleman saldırısına uğramasını engeller. CD59 ile birlikte eritrosit zarını korur.",
+    "clinicalPearl": "PIGA gen mutasyonu sonucu GPI çıpası yapılamadığında eritrositlerde CD55 ve CD59 eksikliği gelişir ve Paroksismal Noktürnal Hemoglobinüri (PNH) ortaya çıkar.",
+    "keywords": [
+      "daf",
+      "cd55",
+      "c3 konvertaz",
+      "gpi çıpası",
+      "pnh",
+      "paroksismal noktürnal hemoglobinüri"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-cd59-protectin",
+    "term": "CD59 (Protectin / MAC İnhibitörü)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / Hematoloji",
+    "committee": "Kurul 1",
+    "description": "Hücre membranına GPI çıpası ile tutunan 18-20 kDa ağırlığında kompleman inhibitörü protein. Oluşmakta olan C5b-8 kompleksine C9 monomerlerinin bağlanmasını ve polimerleşerek zar tüneli açmasını engelleyerek konak hücrelerini litik parçalanmadan korur.",
+    "clinicalPearl": "PNH'de eritrositlerin intravasküler kompleman lizisine uğramasının primer sebebi hücre yüzeyinde CD59 bulunmayışıdır.",
+    "keywords": [
+      "cd59",
+      "protectin",
+      "mac inhibitörü",
+      "c9 polimerizasyonu",
+      "pnh",
+      "gpi"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-paf-platelet-activating-factor",
+    "term": "Platelet Aktive Edici Faktör (PAF)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "description": "Nötrofiller, makrofajlar, mast hücreleri ve endotel tarafından membran fosfolipidlerinden Fosfolipaz A2 yardımıyla sentezlenen fosfolipid türevi vazoaktif mediyatör. Trombosit agregasyonunu uyarır; son derece düşük konsantrasyonlarda histaminden binlerce kat daha güçlü vazodilatasyon ve venüler geçirgenlik artışı yapar.",
+    "clinicalPearl": "Bronkokonstriksiyon, vazodilatasyon ve lökosit adezyonunu aynı anda tetikleyen çok yönlü bir inflamasyon mediyatörüdür.",
+    "keywords": [
+      "paf",
+      "platelet activating factor",
+      "trombosit",
+      "vazodilatasyon",
+      "vasküler geçirgenlik",
+      "fosfolipaz a2"
+    ],
+    "aiAuditScore": 100
+  },
+  {
+    "id": "enc-interlokin-8-cxcl8",
+    "term": "İnterlökin-8 (IL-8 / CXCL8)",
+    "category": "patoloji",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1",
+    "description": "Makrofajlar ve endotel hücreleri tarafından mikrobiyal ürünler, IL-1 ve TNF uyarımı ile sentezlenen C-X-C ailesi kemokin. Dolaşımdaki nötrofillerin CXCR1 ve CXCR2 reseptörlerine bağlanarak nötrofillerin enfeksiyon alanına yoğun kemotaksisini ve mikrobisidal aktivasyonunu sağlar.",
+    "clinicalPearl": "Akut irinli (pürülan) enfeksiyonlarda nötrofilleri olay yerine toplayan en temel kemokindir.",
+    "keywords": [
+      "il-8",
+      "cxcl8",
+      "c-x-c kemokin",
+      "nötrofil kemotaksisi",
+      "cxcr1",
+      "cxcr2"
+    ],
+    "aiAuditScore": 100
   }
 ]
