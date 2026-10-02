@@ -109,16 +109,33 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
                 Açılan sayfada <strong>"Yetkili alan adları" (Authorized domains)</strong> başlığı altındaki <strong>"Alan adı ekle" (Add domain)</strong> butonuna tıklayın.
               </li>
               <li>
-                Aşağıdaki alan adını yapıştırıp kaydedin:
-                <div className="mt-1 flex items-center gap-2 bg-white border border-amber-300 rounded p-1.5 font-mono text-slate-900">
-                  <span className="flex-1 font-bold">{domainToAuthorize}</span>
-                  <button
-                    onClick={copyDomain}
-                    className="px-2 py-0.5 rounded bg-amber-100 hover:bg-amber-200 text-amber-800 font-sans text-[10px] font-semibold flex items-center gap-1"
-                  >
-                    {copied ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
-                    <span>{copied ? 'Kopyalandı' : 'Kopyala'}</span>
-                  </button>
+                Aşağıdaki alan adlarını tek tek yapıştırıp kaydedin:
+                <div className="mt-2 space-y-1.5">
+                  {[
+                    domainToAuthorize,
+                    'nofrostlife.com.tr',
+                    'www.nofrostlife.com.tr',
+                    'localhost',
+                    '127.0.0.1'
+                  ]
+                    .filter((d, i, arr) => d && arr.indexOf(d) === i)
+                    .map((dom) => (
+                      <div key={dom} className="flex items-center gap-2 bg-white border border-amber-300 rounded p-1.5 font-mono text-slate-900 text-[11px]">
+                        <span className="flex-1 font-bold">{dom}</span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            navigator.clipboard.writeText(dom);
+                            setCopied(true);
+                            setTimeout(() => setCopied(false), 2000);
+                          }}
+                          className="px-2 py-0.5 rounded bg-amber-100 hover:bg-amber-200 text-amber-800 font-sans text-[10px] font-semibold flex items-center gap-1 cursor-pointer"
+                        >
+                          <Copy className="w-3 h-3" />
+                          <span>Kopyala</span>
+                        </button>
+                      </div>
+                    ))}
                 </div>
               </li>
             </ol>

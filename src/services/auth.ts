@@ -2,6 +2,8 @@ import { initializeApp, getApps } from 'firebase/app';
 import { 
   getAuth, 
   signInWithPopup, 
+  signInWithRedirect,
+  getRedirectResult,
   GoogleAuthProvider, 
   onAuthStateChanged, 
   createUserWithEmailAndPassword,
@@ -40,15 +42,16 @@ export interface AppUser {
 }
 
 export const SCOPES = [
-  'https://www.googleapis.com/auth/drive',
   'https://www.googleapis.com/auth/drive.file',
-  'https://www.googleapis.com/auth/drive.metadata',
   'https://www.googleapis.com/auth/userinfo.email',
   'https://www.googleapis.com/auth/userinfo.profile',
 ];
 
-const provider = new GoogleAuthProvider();
-SCOPES.forEach((scope) => provider.addScope(scope));
+export const provider = new GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/drive.file');
+provider.setCustomParameters({
+  prompt: 'select_account',
+});
 
 const LOCAL_ADMIN_KEY = 'medsoru_local_admin_session';
 const LOCAL_TOKEN_KEY = 'medsoru_drive_token';
@@ -204,6 +207,37 @@ export const initAuth = (
   onAuthSuccess?: (user: AppUser, token: string | null) => void,
   onAuthFailure?: () => void
 ) => {
+  // Capture redirect sign in result (if returning from Google redirect)
+  getRedirectResult(auth)
+    .then(async (result) => {
+      if (result && result.user) {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        if (credential?.accessToken) {
+          cachedAccessToken = credential.accessToken;
+          safeStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
+        }
+        const remembered = getRememberedStudentInfo();
+        const remote = await fetchFirestoreUserProfile(result.user.uid);
+        const appUser: AppUser = {
+          uid: result.user.uid,
+          email: result.user.email,
+          displayName: result.user.displayName || remote?.displayName || remembered.name,
+          studentNumber: remote?.studentNumber || remembered.studentNumber || null,
+          photoURL: result.user.photoURL,
+          congratsSentCommittees: remote?.congratsSentCommittees || [],
+        };
+        cacheUserProfile(appUser);
+        if (appUser.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+          setLocalAdminSession(ADMIN_EMAIL, cachedAccessToken || undefined);
+        }
+        await saveFirestoreUserProfile(appUser);
+        if (onAuthSuccess) onAuthSuccess(appUser, cachedAccessToken);
+      }
+    })
+    .catch((err) => {
+      console.warn('Firebase getRedirectResult error:', err);
+    });
+
   return onAuthStateChanged(auth, async (firebaseUser: User | null) => {
     if (firebaseUser) {
       // Load cached profile or fetch from Firestore
@@ -385,6 +419,9 @@ export const loginWithEmailPassword = async (
   }
 
   cacheUserProfile(appUser);
+  if (appUser.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+    setLocalAdminSession(ADMIN_EMAIL);
+  }
   if (appUser.displayName) {
     rememberStudentInfo(appUser.displayName, appUser.studentNumber || undefined);
   }
@@ -441,17 +478,37 @@ export const updateUserProfileData = async (
   return updatedUser;
 };
 
-export const googleSignIn = async (): Promise<{ user: AppUser; accessToken: string } | null> => {
+export const googleSignIn = async (
+  options: { preferRedirect?: boolean } = {}
+): Promise<{ user: AppUser; accessToken: string } | null> => {
   try {
     isSigningIn = true;
-    const result = await signInWithPopup(auth, provider);
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    if (!credential?.accessToken) {
-      throw new Error('Google Drive erişim belirteci (Access Token) alınamadı.');
+    let result;
+
+    if (options.preferRedirect) {
+      await signInWithRedirect(auth, provider);
+      return null;
     }
 
-    cachedAccessToken = credential.accessToken;
-    safeStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
+    try {
+      result = await signInWithPopup(auth, provider);
+    } catch (popupErr: any) {
+      if (
+        popupErr.code === 'auth/popup-blocked' ||
+        popupErr.code === 'auth/cancelled-popup-request'
+      ) {
+        console.warn('Google popup blocked or cancelled, attempting redirect sign-in...', popupErr);
+        await signInWithRedirect(auth, provider);
+        return null;
+      }
+      throw popupErr;
+    }
+
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    cachedAccessToken = credential?.accessToken || '';
+    if (cachedAccessToken) {
+      safeStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
+    }
 
     const remembered = getRememberedStudentInfo();
     const remote = await fetchFirestoreUserProfile(result.user.uid);
@@ -466,9 +523,12 @@ export const googleSignIn = async (): Promise<{ user: AppUser; accessToken: stri
     };
 
     cacheUserProfile(appUser);
+    if (appUser.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+      setLocalAdminSession(ADMIN_EMAIL, cachedAccessToken || undefined);
+    }
     await saveFirestoreUserProfile(appUser);
 
-    return { user: appUser, accessToken: cachedAccessToken };
+    return { user: appUser, accessToken: cachedAccessToken || '' };
   } catch (error: any) {
     console.error('Sign in error:', error);
     throw error;

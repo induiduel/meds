@@ -116,7 +116,7 @@ const normalizeArchive = (q: any): StudyQuestion | null => {
 
 const normalizePool = (q: QuestionItem): StudyQuestion | null => {
   const rec = q.reconstruction;
-  const stem = String(rec?.stem || q.stem || (q.fragments && q.fragments.length > 0 ? q.fragments.map((f: any) => f.text).join(' ') : '')).trim();
+  const stem = String(rec?.stem || (q as any).stem || (q.fragments && q.fragments.length > 0 ? q.fragments.map((f: any) => f.text).join(' ') : '')).trim();
   const rawOpts = rec?.options && rec.options.length >= 2 ? rec.options : q.options || [];
   const opts = rawOpts
     .filter((o: any) => o && VALID.includes(String(o.key || '').trim().toUpperCase() as OptionKey) && String(o.text || '').trim())

@@ -421,13 +421,19 @@ export default function App() {
         setAccessToken(result.accessToken);
       }
     } catch (err: any) {
+      console.warn('Google login exception:', err);
       if (
-        err.code === 'auth/unauthorized-domain' ||
-        err.message?.includes('unauthorized-domain')
+        err.code === 'auth/popup-blocked' ||
+        err.code === 'auth/cancelled-popup-request'
       ) {
-        setIsAuthErrorModalOpen(true);
+        try {
+          await googleSignIn({ preferRedirect: true });
+          return;
+        } catch (redirErr) {
+          setIsAuthErrorModalOpen(true);
+        }
       } else {
-        alert('Google ile giriş yapılırken hata oluştu: ' + (err.message || 'Bilinmeyen hata'));
+        setIsAuthErrorModalOpen(true);
       }
     } finally {
       setIsLoggingIn(false);
