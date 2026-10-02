@@ -231,17 +231,47 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           );
         }
 
-        // Callout (> veya 💡 veya ⚠️)
-        if (line.startsWith('> ') || line.startsWith('💡 ') || line.startsWith('⚠️ ')) {
-          // One icon only: take it from the line itself (💡 / ⚠️) and strip it from the text
-          const icon = line.startsWith('⚠️') ? '⚠️' : '💡';
-          const content = (line.startsWith('> ') ? line.slice(2) : line).replace(/^\s*(💡|⚠️)\s*/u, '');
+        // Callout (> veya 💡 veya ⚠️ veya 🔴 veya 🚨)
+        if (
+          line.startsWith('> ') ||
+          line.startsWith('💡 ') ||
+          line.startsWith('⚠️ ') ||
+          line.startsWith('🔴 ') ||
+          line.startsWith('🚨 ')
+        ) {
+          const isRed =
+            line.startsWith('🔴') ||
+            line.startsWith('🚨') ||
+            line.startsWith('⚠️') ||
+            /(?:ölümcül|asla|acil|hayati|kritik|kontrendike|sınav tuzağı)/i.test(line);
+
+          const icon = line.startsWith('🚨')
+            ? '🚨'
+            : line.startsWith('🔴')
+              ? '🔴'
+              : line.startsWith('⚠️')
+                ? '⚠️'
+                : isRed
+                  ? '🔴'
+                  : '💡';
+
+          const content = (line.startsWith('> ') ? line.slice(2) : line).replace(
+            /^\s*(💡|⚠️|🔴|🚨)\s*/u,
+            ''
+          );
+
           return (
             <div
               key={idx}
-              className="p-2.5 sm:p-3 my-1 rounded-xl bg-accent-soft/30 border-l-3 border-accent text-[12px] sm:text-[12.5px] text-ink leading-relaxed flex items-center gap-2.5 shadow-2xs"
+              className={`p-2.5 sm:p-3 my-1 rounded-xl border-l-4 text-[12px] sm:text-[12.5px] leading-relaxed flex items-center gap-2.5 shadow-2xs ${
+                isRed
+                  ? 'bg-red-500/10 dark:bg-red-500/20 border-red-500 text-red-950 dark:text-red-200'
+                  : 'bg-accent-soft/30 border-accent text-ink'
+              }`}
             >
-              <span className="text-[14px] select-none shrink-0" aria-hidden="true">{icon}</span>
+              <span className="text-[14px] select-none shrink-0" aria-hidden="true">
+                {icon}
+              </span>
               <div className="min-w-0 flex-1">
                 <Rich text={content} />
               </div>
@@ -791,7 +821,7 @@ const DeckPlayer: React.FC<{
   const [tab, setTab] = useState<PanelTab>('flashcards');
   const [isFs, setIsFs] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const { setIsDrawerOpen, glossaryList } = useGlossary();
+  const { setIsDrawerOpen, glossaryList, setCurrentSlideText } = useGlossary();
   const rootRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
@@ -800,6 +830,25 @@ const DeckPlayer: React.FC<{
   const touch = useRef<{ x: number; y: number } | null>(null);
 
   const slide = slides[index];
+
+  // Keep active slide text in sync with glossary provider for dynamic slide knowledge
+  useEffect(() => {
+    if (!slide || !setCurrentSlideText) return;
+    const slideText = [
+      slide.title,
+      slide.subtitle,
+      slide.professorAudioHighlight?.quote,
+      slide.professorAudioHighlight?.note,
+      slide.synthesisNarrative,
+      ...(slide.coreContent?.keyBullets || []).map((b) => `${b.title}: ${b.desc}`),
+      ...(slide.spotPearls || []),
+      slide.coreContent?.table?.title,
+      slide.coreContent?.table?.rows?.map((r) => r.join(' ')).join('\n'),
+    ]
+      .filter(Boolean)
+      .join('\n');
+    setCurrentSlideText(slideText);
+  }, [slide, setCurrentSlideText]);
 
   // Lock page scroll and focus the player while open
   useEffect(() => {
@@ -1366,6 +1415,169 @@ const GlobalTopicSearchModal: React.FC<{
 };
 
 // ---------------------------------------------------------------------------
+// Enhanced Differential Diagnosis & Comparison Table Component
+// ---------------------------------------------------------------------------
+export const EnhancedDifferentialTable: React.FC<{
+  table: SlideContentTable;
+  compact?: boolean;
+}> = ({ table, compact = false }) => {
+  if (!table || !table.headers || table.headers.length === 0) return null;
+
+  const titleLower = (table.title || '').toLowerCase();
+  const isDiffDiagnosis =
+    titleLower.includes('ayırıcı') ||
+    titleLower.includes('tanı') ||
+    titleLower.includes('karşılaştırma') ||
+    titleLower.includes('fark') ||
+    titleLower.includes('tipler') ||
+    titleLower.includes('sınıflama') ||
+    table.headers.some((h) => {
+      const hl = h.toLowerCase();
+      return (
+        hl.includes('ayırıcı') ||
+        hl.includes('benign') ||
+        hl.includes('malign') ||
+        hl.includes('tip') ||
+        hl.includes('evre')
+      );
+    });
+
+  // Cell semantic coloring helper
+  const renderCellContent = (cellText: string, isFirstCol: boolean) => {
+    if (isFirstCol) {
+      return (
+        <span className="font-bold text-ink">
+          <Rich text={cellText} />
+        </span>
+      );
+    }
+
+    const t = cellText.toLowerCase().trim();
+
+    // 1. Red / Rose (Malign, Poor prognosis, Lethal, Cancer, Severe, Urgent)
+    const isRed =
+      /\b(malign|kötü huylu|karsinom|sarkom|pozitif|ölümcül|acil|kritik|yüksek mortalite|metastaz|irreversibl|nekroz|agresif|kötü prognoz|refrakter)\b/i.test(t);
+
+    if (isRed) {
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-semibold bg-rose-500/10 text-rose-700 dark:text-rose-300 border border-rose-500/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-rose-500 shrink-0" />
+          <Rich text={cellText} />
+        </span>
+      );
+    }
+
+    // 2. Green / Emerald (Benign, Normal, Negative, Good prognosis)
+    const isGreen =
+      /\b(benign|iyi huylu|normal|negatif|kür|yüksek sağkalım|spontan geriler|reversibl|minimal)\b/i.test(t);
+
+    if (isGreen) {
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+          <Rich text={cellText} />
+        </span>
+      );
+    }
+
+    // 3. Amber (Warning, Pitfall, Moderate risk, Variable, Recurrence)
+    const isAmber =
+      /\b(tuzak|dikkat|şüpheli|orta risk|değişken|relaps sık|sık nüks|subklinik)\b/i.test(t);
+
+    if (isAmber) {
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-medium bg-amber-500/10 text-amber-800 dark:text-amber-300 border border-amber-500/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
+          <Rich text={cellText} />
+        </span>
+      );
+    }
+
+    // 4. Blue / Indigo (Diagnostic Criteria, Gold standard, Specific hallmark)
+    const isBlue =
+      /\b(altın standart|tanı kriteri|patognomonik|spike and dome|hump|tram-track|kresent|lineer if|granüler if)\b/i.test(t);
+
+    if (isBlue) {
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11.5px] font-medium bg-blue-500/10 text-blue-800 dark:text-blue-300 border border-blue-500/20 shadow-2xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+          <Rich text={cellText} />
+        </span>
+      );
+    }
+
+    return <Rich text={cellText} />;
+  };
+
+  return (
+    <div className={`rounded-xl border border-line overflow-hidden bg-white shadow-2xs ${compact ? 'mt-1' : 'mt-2.5'}`}>
+      {/* Table Header Banner */}
+      <div className="px-3.5 py-2 bg-gradient-to-r from-canvas via-white to-canvas text-[12px] font-bold border-b border-line text-ink flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-2xs" />
+          <span className="truncate">{table.title || 'Klinik & Patolojik Karşılaştırma Tablosu'}</span>
+        </div>
+        {isDiffDiagnosis && (
+          <span className="shrink-0 text-[10px] font-bold uppercase tracking-wider bg-accent-soft text-accent border border-accent/20 px-2 py-0.5 rounded-full shadow-2xs">
+            Ayırıcı Tanı & Sınıflama
+          </span>
+        )}
+      </div>
+
+      <div className="overflow-x-auto custom-scrollbar">
+        <table className={`w-full border-collapse ${table.headers.length >= 4 || compact ? 'text-[12px]' : 'text-[12.5px] sm:text-[13px]'}`}>
+          <thead>
+            <tr className="bg-canvas/90 border-b border-line">
+              {table.headers.map((h, i) => (
+                <th
+                  key={i}
+                  scope="col"
+                  className={`text-left font-bold text-ink px-3 py-2.5 align-middle ${
+                    i === 0 ? 'bg-canvas text-ink w-1/4' : 'text-ink-2'
+                  }`}
+                >
+                  <div className="flex items-center gap-1.5">
+                    {i === 0 ? (
+                      <span className="text-accent text-[11px]">✦</span>
+                    ) : (
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
+                    )}
+                    <span>{h}</span>
+                  </div>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, ri) => (
+              <tr
+                key={ri}
+                className={`border-b border-line-soft last:border-0 transition-colors ${
+                  ri % 2 === 0 ? 'bg-white' : 'bg-canvas/40'
+                } hover:bg-accent-soft/20`}
+              >
+                {row.map((cell, ci) => (
+                  <td
+                    key={ci}
+                    className={`px-3 py-2.5 align-top leading-relaxed ${
+                      ci === 0
+                        ? 'font-semibold text-ink bg-canvas/30 border-r border-line-soft'
+                        : 'text-ink-2'
+                    }`}
+                  >
+                    {renderCellContent(cell, ci === 0)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------------------
 // One slide, sized to the stage (16:9 feel on wide screens, scrolls inside if long)
 // ---------------------------------------------------------------------------
 const SlideCanvas: React.FC<{
@@ -1521,38 +1733,7 @@ const SlideCanvas: React.FC<{
 
             {/* Comparison / Classification Table on Slide Canvas */}
             {c.table && (
-              <div className="rounded-xl border border-line overflow-hidden bg-white mt-2 shadow-2xs">
-                {c.table.title && (
-                  <div className="px-3 py-2 bg-gradient-to-r from-canvas via-white to-canvas text-[12px] font-bold border-b border-line text-ink flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                    <span>{c.table.title}</span>
-                  </div>
-                )}
-                <div className="overflow-x-auto">
-                  <table className="w-full text-[12px] border-collapse">
-                    <thead>
-                      <tr className="bg-canvas/80">
-                        {c.table.headers.map((h, i) => (
-                          <th key={i} className="text-left font-semibold text-ink-2 px-3 py-2 border-b border-line">
-                            {h}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {c.table.rows.map((row, ri) => (
-                        <tr key={ri} className="border-b border-line-soft last:border-0 hover:bg-canvas/30 transition-colors">
-                          {row.map((cell, ci) => (
-                            <td key={ci} className={`px-3 py-2 ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
-                              <Rich text={cell} />
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+              <EnhancedDifferentialTable table={c.table} />
             )}
           </section>
         )}
@@ -1741,33 +1922,7 @@ const SlideCanvas: React.FC<{
             )}
 
             {c.table && c.table.headers?.length > 0 && (
-              <div className="rounded-xl border border-line overflow-hidden">
-                {c.table.title && <div className="px-3 py-2 bg-canvas text-[13px] font-semibold border-b border-line">{c.table.title}</div>}
-                <div className="overflow-x-auto">
-                  <table className={`w-full border-collapse ${c.table.headers.length >= 4 ? 'text-[12.5px] sm:text-[13px]' : 'text-[13px] sm:text-[14px]'}`}>
-                    <thead>
-                      <tr className="bg-[#FAFBFC]">
-                        {c.table.headers.map((h, i) => (
-                          <th key={i} scope="col" className="text-left font-semibold text-ink-2 px-3 py-2 border-b border-line align-bottom break-words">
-                            {h}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {c.table.rows.map((r, ri) => (
-                        <tr key={ri} className="border-b border-line-soft last:border-0 align-top">
-                          {r.map((cell, ci) => (
-                            <td key={ci} className={`px-3 py-2 break-words leading-[1.5] ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
-                              <Rich text={cell} />
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+              <EnhancedDifferentialTable table={c.table} />
             )}
           </div>
 
@@ -1813,21 +1968,30 @@ const SpotList: React.FC<{ items: string[]; title?: string; note?: string; compa
     </header>
     {note && <p className="m-0 -mt-1 text-[13px] text-[#8A4405]/80">{note}</p>}
     <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-1.5' : 'gap-2'}`}>
-      {items.map((p, i) => (
-        <li
-          key={i}
-          className={`grid grid-cols-[22px_minmax(0,1fr)] gap-2.5 items-start bg-white rounded-xl shadow-[0_1px_0_rgba(154,77,6,0.10)] ${
-            compact ? 'px-2.5 py-2 text-[13.5px]' : 'px-3 py-2.5 text-[14.5px]'
-          } leading-[1.6] text-ink`}
-        >
-          <span className="w-[22px] h-[22px] mt-[1px] rounded-full bg-[#FCE9C6] text-[#9A4D06] font-mono text-[11.5px] font-semibold flex items-center justify-center">
-            {i + 1}
-          </span>
-          <span className="min-w-0 break-words">
-            <Rich text={p} />
-          </span>
-        </li>
-      ))}
+      {items.map((p, i) => {
+        const isRed = /(?:🔴|🚨|⚠️|ölümcül|asla|acil|hayati|kritik|kontrendike)/i.test(p);
+        return (
+          <li
+            key={i}
+            className={`grid grid-cols-[22px_minmax(0,1fr)] gap-2.5 items-start rounded-xl shadow-[0_1px_0_rgba(154,77,6,0.10)] ${
+              isRed
+                ? 'bg-red-50/80 border border-red-200/90 text-red-950 dark:text-red-200'
+                : 'bg-white text-ink'
+            } ${compact ? 'px-2.5 py-2 text-[13.5px]' : 'px-3 py-2.5 text-[14.5px]'} leading-[1.6]`}
+          >
+            <span
+              className={`w-[22px] h-[22px] mt-[1px] rounded-full font-mono text-[11.5px] font-semibold flex items-center justify-center ${
+                isRed ? 'bg-red-200 text-red-800' : 'bg-[#FCE9C6] text-[#9A4D06]'
+              }`}
+            >
+              {isRed ? '!' : i + 1}
+            </span>
+            <span className="min-w-0 break-words">
+              <Rich text={p} />
+            </span>
+          </li>
+        );
+      })}
     </ol>
   </section>
 );
@@ -1947,37 +2111,7 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
 
       {/* Table */}
       {c.table && (
-        <div className="rounded-xl border border-line overflow-hidden bg-white">
-          {c.table.title && (
-            <div className="px-3 py-1.5 bg-canvas text-[12px] font-semibold border-b border-line text-ink">
-              {c.table.title}
-            </div>
-          )}
-          <div className="overflow-x-auto">
-            <table className="w-full text-[12px] border-collapse">
-              <thead>
-                <tr className="bg-canvas">
-                  {c.table.headers.map((h, i) => (
-                    <th key={i} className="text-left font-semibold text-ink-2 px-2.5 py-1.5 border-b border-line">
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {c.table.rows.map((row, ri) => (
-                  <tr key={ri} className="border-b border-line-soft last:border-0">
-                    {row.map((cell, ci) => (
-                      <td key={ci} className={`px-2.5 py-1.5 ${ci === 0 ? 'font-semibold text-ink' : 'text-ink-2'}`}>
-                        <Rich text={cell} />
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <EnhancedDifferentialTable table={c.table} compact />
       )}
 
       {/* Spot pearls */}

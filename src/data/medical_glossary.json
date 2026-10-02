@@ -26,6 +26,31 @@
     "badgeColor": "red"
   },
   {
+    "term": "Akut Poststreptokoksik Glomerülonefrit (APSGN)",
+    "aliases": [
+      "akut poststreptokoksik glomerülonefrit",
+      "apsgn",
+      "postenfeksiyöz glomerülonefrit"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[post-strep-to-kok-sik]",
+    "definition": "A Grubu Beta-Hemolitik Streptokok (farenjit veya deri impetigosu) enfeksiyonundan 1-4 hafta sonra gelişen akut nefritik sendrom prototipidir.",
+    "clinicalPearls": "Glomerüllerde yoğun nötrofil ve endotel proliferasyonu vardır. Elektron mikroskobunda subepitelyal 'hörgüç' (hump) birikimleri patognomoniktir; serumda C3 düşer ve ASO yükselir.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Akut Tübüler Nekroz (ATN)",
+    "aliases": [
+      "akut tübüler nekroz",
+      "atn"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[a-kut tü-bü-ler nek-roz]",
+    "definition": "İskemi (şok, sepsis) veya nefrotoksinler (aminoglikozitler, radyokontrast, miyoglobin) nedeniyle renal tübül epitel hücrelerinin hasarlanıp dökülmesiyle karakterize akut böbrek hasarı tablosu.",
+    "clinicalPearls": "İdrar sedimentinde 'kirli kahverengi granüler silendirler' (muddy brown casts) patognomoniktir; tübüller rejenere olabilir.",
+    "badgeColor": "amber"
+  },
+  {
     "term": "Amiloid Birikimi",
     "aliases": [
       "amiloid",
@@ -39,6 +64,18 @@
     "badgeColor": "emerald"
   },
   {
+    "term": "Amniyotik Sıvı Embolisi",
+    "aliases": [
+      "amniyotik sıvı embolisi",
+      "amniyon embolisi"
+    ],
+    "category": "Klinik Hastalık / Kadın Doğum",
+    "pronunciation": "[am-ni-yo-tik sı-vı]",
+    "definition": "Doğum esnasında plasental venlerin yırtılmasıyla fetal skuamöz hücre, kıl ve mukus içeren amniyon sıvısının maternal venöz dolaşıma girmesi.",
+    "clinicalPearls": "Akut solunum sıkıntısı, siyanoz, şok, kardiyak arrest ve dakikalar içinde ağır DIC (Yaygın Damar İçi Pıhtılaşma) tablosu oluşturur; anne mortalitesi çok yüksektir.",
+    "badgeColor": "red"
+  },
+  {
     "term": "Anaphase Lagging (Anafaz Gecikmesi)",
     "aliases": [
       "anaphase lagging",
@@ -50,6 +87,19 @@
     "definition": "Anafazda bir kromatitin iğ ipliği yetersizliği nedeniyle kutba hareket etmekte gecikmesi ve nükleus zarı dışında kalarak sitoplazmada kaybolması.",
     "clinicalPearls": "Monozomi ve mozaik karyotiplerin (özellikle mozaik Turner ve Down) temel hücresel mekanizmasıdır.",
     "badgeColor": "teal"
+  },
+  {
+    "term": "Antifosfolipid Antikor Sendromu (APS)",
+    "aliases": [
+      "antifosfolipid antikor sendromu",
+      "aps",
+      "antifosfolipid sendromu"
+    ],
+    "category": "Klinik Hastalık / Romatoloji",
+    "pronunciation": "[an-ti-fos-fo-li-pid]",
+    "definition": "Kanda antikardiolipin antikorları, anti-beta2-glikoprotein I veya lupus antikoagülanı bulunmasıyla giden; tekrarlayan arteriyel/venöz trombozlar ve tekrarlayan fetal kayıplarla seyreden otoimmün hiperkoagülabilite sendromu.",
+    "clinicalPearls": "Laboratuvarda in vitro aPTT testi paradoksal olarak uzundur ancak in vivo ortamda güçlü tromboza yol açar; sifiliz tarama testlerinde (VDRL/RPR) yalancı pozitiflik verir.",
+    "badgeColor": "purple"
   },
   {
     "term": "Apoptoz (Programlı Hücre Ölümü)",
@@ -207,6 +257,32 @@
     "badgeColor": "teal"
   },
   {
+    "term": "Dekompresyon Hastalığı (Caisson / Vurgun)",
+    "aliases": [
+      "dekompresyon hastalığı",
+      "vurgun",
+      "caisson hastalığı",
+      "caisson"
+    ],
+    "category": "Klinik Hastalık / Çevre",
+    "pronunciation": "[de-kom-pres-yon]",
+    "definition": "Yüksek basınçlı ortamdan (derin dalış) hızla normal basınca çıkıldığında kanda çözünmüş azot gazının kabarcıklaşarak doku ve damarları tıkaması.",
+    "clinicalPearls": "Eklemlerde bükülme ağrıları ('bends'), akciğerde dispne ve ödem ('chokes'), kemik başlarında aseptik avasküler nekroz (Caisson) yapar; hiperbarik oksijen odası ile tedavi edilir.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Derin Ven Trombozu (DVT)",
+    "aliases": [
+      "derin ven trombozu",
+      "dvt"
+    ],
+    "category": "Klinik Hastalık / Kardiyoloji",
+    "pronunciation": "[de-rin ven trom-bo-zu]",
+    "definition": "Genellikle alt ekstremite derin venlerinde (popliteal, femoral, iliak) staz ve endotel hasarı zemininde pıhtı oluşmasıdır.",
+    "clinicalPearls": "Bacakta ağrı, ödem, kızarıklık ve Homans belirtisi (ayak dorsifleksiyonunda baldır ağrısı) ile kendini gösterir; ölümcül pulmoner embolinin bir numaralı kaynağıdır.",
+    "badgeColor": "amber"
+  },
+  {
     "term": "Diapedez (Transmigrasyon)",
     "aliases": [
       "diapedez",
@@ -330,6 +406,18 @@
     "badgeColor": "rose"
   },
   {
+    "term": "Fokal Segmental Glomerüloskleroz (FSGS)",
+    "aliases": [
+      "fokal segmental glomerüloskleroz",
+      "fsgs"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[fo-kal seg-men-tal]",
+    "definition": "Bazı glomerüllerin (fokal) sadece bir kısmında (segmental) skleroz ve hyalinozis ile seyreden, erişkinlerde nefrotik sendromun en sık nedenlerinden biri.",
+    "clinicalPearls": "Non-selektif proteinüri yapar; steroid tedavisine yanıtı zayıftır; böbrek nakli sonrasında greftte hızla nüks edebilir.",
+    "badgeColor": "purple"
+  },
+  {
     "term": "Genomik İmprinting",
     "aliases": [
       "genomik imprinting",
@@ -442,6 +530,33 @@
     "definition": "Zarsız, çift iplikli dairesel DNA virüsü. Deri ve mukozalarda siğil (kondilom) ve malign neoplazilere yol açar.",
     "clinicalPearls": "Tip 6 ve 11 benign genital siğil (kondiloma akuminata); Tip 16 ve 18 yüksek riskli olup E6 (p53 inhibisyonu) ve E7 (pRb inhibisyonu) onkogenleriyle serviks kanserine neden olur. Histopatolojide halo içeren koilositler tanı koydurucudur.",
     "badgeColor": "rose"
+  },
+  {
+    "term": "Hızlı İlerleyen Glomerülonefrit (RPGN / Kresentik)",
+    "aliases": [
+      "hızlı ilerleyen glomerülonefrit",
+      "rpgn",
+      "kresentik glomerülonefrit",
+      "crescentic gn"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[kre-sen-tik glo-me-rül]",
+    "definition": "Haftalar veya aylar içinde böbrek fonksiyonlarının hızla kaybedildiği, oligüri ve ölümcül üremiye giden akut klinik sendrom.",
+    "clinicalPearls": "Bowman aralığında paryetal epitel hücreleri ve monositlerin proliferasyonuyla oluşan Kresent (Yarımay) yapıları patognomoniktir; kresent oranı >%50 ise RPGN denir.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "IgA Nefropatisi (Berger Hastalığı)",
+    "aliases": [
+      "iga nefropatisi",
+      "berger hastalığı",
+      "berger"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[ber-jer has-ta-lı-ğı]",
+    "definition": "Dünyada en sık görülen primer glomerülonefrit türüdür. Üst solunum yolu veya gastrointestinal enfeksiyon sırasında veya 1-2 gün sonra ataklar halinde tekrarlayan makroskopik hematüri ile karakterizedir.",
+    "clinicalPearls": "İmmünfloresan mikroskopide mezanjiyumda granüler IgA birikimi tanı koydurucudur. APSGN'den farkı latent sürenin olmamasıdır (enfeksiyonla eş zamanlı hematüri).",
+    "badgeColor": "amber"
   },
   {
     "term": "İnfluenza Virüsü",
@@ -701,6 +816,31 @@
     "badgeColor": "purple"
   },
   {
+    "term": "Membranoproliferatif Glomerülonefrit (MPGN)",
+    "aliases": [
+      "membranoproliferatif glomerülonefrit",
+      "mpgn"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[mem-bra-no-pro-li-fe-ra-tif]",
+    "definition": "Mezanjiyal hücre proliferasyonu ve GBM kalınlaşması ile seyreden, hem nefritik hem nefrotik sendrom tablosu verebilen kronik glomerül hastalığı.",
+    "clinicalPearls": "Işık mikroskobunda mezanjiyal hücre uzantılarının bazal membranı ikiye ayırmasıyla tipik 'tramvay rayı' (tram-track / çift kontur) görünümü oluşur.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Membranöz Nefropati (MN)",
+    "aliases": [
+      "membranöz nefropati",
+      "membranöz glomerülonefrit",
+      "mn"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[mem-bra-nöz nef-ro-pa-ti]",
+    "definition": "Subepitelyal immün kompleks birikimi ve glomerül bazal membranında (GBM) yaygın kalınlaşma ile giden nefrotik sendrom tablosu. Primer formunda anti-PLA2R antikorları pozitiftir.",
+    "clinicalPearls": "Gümüşlemede bazal membranda tipik 'çivi ve kubbe' (spike and dome) manzarası görülür; immünfloresanda granüler IgG ve C3 birikir; renal ven trombozu riski en yüksek glomerülopatidir.",
+    "badgeColor": "purple"
+  },
+  {
     "term": "Metaplazi",
     "aliases": [
       "metaplazi",
@@ -736,6 +876,21 @@
     "definition": "Mandibula (alt çene) kemiğinin normalden belirgin derecede küçük ve geri yerleşimli olması anomalisi.",
     "clinicalPearls": "Pierre Robin sekansında mikrognati -> glossoptozis -> U biçimli yarık damak zincirine yol açar; Edwards sendromunda da sık rastlanır.",
     "badgeColor": "teal"
+  },
+  {
+    "term": "Minimal Değişiklik Hastalığı (MDH)",
+    "aliases": [
+      "minimal değişiklik hastalığı",
+      "mdh",
+      "nil hastalığı",
+      "minimal change disease",
+      "mcd"
+    ],
+    "category": "Klinik Hastalık / Nefroloji",
+    "pronunciation": "[mi-ni-mal de-ği-şik-lik]",
+    "definition": "Çocukluk çağında nefrotik sendromun en sık nedeni (%90). Işık mikroskobunda glomerüller tamamen normal görünür; elektron mikroskobunda podosit ayak çıkıntılarında yaygın silinme (effacement) izlenir.",
+    "clinicalPearls": "Selektif proteinüri (yalnızca albümin kaybı) yapar; immün kompleks çökmez; kortikosteroid tedavisine dramatik ve hızlı yanıt verir.",
+    "badgeColor": "blue"
   },
   {
     "term": "MRSA (Metisiline Dirençli S. aureus)",
@@ -843,6 +998,19 @@
     "badgeColor": "teal"
   },
   {
+    "term": "Pelvik İnflamatuar Hastalık (PID)",
+    "aliases": [
+      "pelvik inflamatuar hastalık",
+      "pid",
+      "pelvik iltihap"
+    ],
+    "category": "Klinik Hastalık / Kadın Doğum",
+    "pronunciation": "[pel-vik in-fla-ma-tu-ar]",
+    "definition": "Serviks ve vajinadan asendan yolla (en sık N. gonorrhoeae ve C. trachomatis) endometriyum, tuba uterina ve overleri tutan süpüratif enfeksiyon tablosu.",
+    "clinicalPearls": "Tuba skarlaşması sonucu tuba tıkanıklığı, tubal infertilite ve ektopik gebelik (dış gebelik) riskini katbekat artırır.",
+    "badgeColor": "amber"
+  },
+  {
     "term": "Pes equinovarus",
     "aliases": [
       "pes equinovarus",
@@ -857,6 +1025,19 @@
     "badgeColor": "indigo"
   },
   {
+    "term": "Pierre Robin Sekansı",
+    "aliases": [
+      "pierre robin sekansı",
+      "pierre robin",
+      "prs"
+    ],
+    "category": "Klinik Hastalık / Genetik",
+    "pronunciation": "[pi-yer ro-ben]",
+    "definition": "Mandibula hipoplazisi (mikrognati) ile başlayan; dilin geriye düşmesi (glossoptozis) ve bu nedenle palatal çıkıntıların birleşememesi sonucu U-biçimli yarık damak gelişen patolojik sekans.",
+    "clinicalPearls": "Birincil defekt alt çenenin gelişim yetersizliğidir; ardından basamak basamak diğer anomaliler domino taşı gibi zincirleme gelişir (sekans mekanizması).",
+    "badgeColor": "indigo"
+  },
+  {
     "term": "Piknoz",
     "aliases": [
       "piknoz",
@@ -867,6 +1048,33 @@
     "definition": "Hücre ölümü ve nekroz sürecinde nükleer kromatini yoğunlaşıp nükleusun büzülerek küçük, koyu bazofilik homojen bir kitleye dönüşmesi.",
     "clinicalPearls": "Nükleer değişikliklerin ilk morfolojik basamağıdır; ardından karyoreksis ve karyolizis gelişir.",
     "badgeColor": "purple"
+  },
+  {
+    "term": "Polikistik Böbrek Hastalığı (ADPKD)",
+    "aliases": [
+      "polikistik böbrek",
+      "adpkd",
+      "arpkd",
+      "polikistik böbrek hastalığı"
+    ],
+    "category": "Klinik Hastalık / Genetik",
+    "pronunciation": "[po-li-kis-tik böb-rek]",
+    "definition": "Böbrek parankiminde bilateral sayısız kist gelişimi ile giden genetik hastalık. Erişkin tipi otozomal dominant (PKD1 - polisistin-1 veya PKD2 - polisistin-2 mutasyonu); bebek tipi otozomal resesiftir.",
+    "clinicalPearls": "ADPKD hastalarında intrakraniyal 'berry anevrizmaları' sıktır ve subaraknoid kanama riski taşır; karaciğerde de kistler görülür.",
+    "badgeColor": "indigo"
+  },
+  {
+    "term": "Potter Sekansı (Oligohidramnios Sekansı)",
+    "aliases": [
+      "potter sekansı",
+      "oligohidramnios sekansı",
+      "potter sendromu"
+    ],
+    "category": "Klinik Hastalık / Genetik",
+    "pronunciation": "[pot-ter se-kan-sı]",
+    "definition": "Bilateral renal agenezis veya obstrüktif üropati nedeniyle fetal idrar üretiminin durması ve şiddetli oligohidramnios gelişmesiyle karakterize kaskad.",
+    "clinicalPearls": "Amniyon sıvısının azlığı uterusta bası oluşturur: Basık burun, çekik çene (Potter yüzü), uzuv deformiteleri (pes ekinovarus) ve ölümcül pulmoner hipoplazi gelişir; bebekler solunum yetmezliğinden kaybedilir.",
+    "badgeColor": "indigo"
   },
   {
     "term": "Pozitif Basınçlı Oda (Koruyucu Ortam)",
@@ -935,6 +1143,34 @@
     "badgeColor": "rose"
   },
   {
+    "term": "Pulmoner Tromboembolizm (PTE)",
+    "aliases": [
+      "pulmoner tromboembolizm",
+      "pulmoner emboli",
+      "pte",
+      "pe"
+    ],
+    "category": "Klinik Hastalık / Göğüs",
+    "pronunciation": "[pul-mo-ner em-bo-li]",
+    "definition": "DVT kaynaklı trombüs parçasının sağ kalpten geçerek pulmoner arter yatağını tıkaması tablosudur.",
+    "clinicalPearls": "Masif eyer emboliler akut kor pulmonale ve ani ölüme yol açar; D-Dimer yüksekliği taramada, BT Anjiyografi ise tanıda altın standarttır.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Renal Hücreli Karsinom (RCC)",
+    "aliases": [
+      "renal hücreli karsinom",
+      "rcc",
+      "böbrek kanseri",
+      "berrak hücreli rcc"
+    ],
+    "category": "Klinik Hastalık / Onkoloji",
+    "pronunciation": "[re-nal hüc-re-li kar-si-nom]",
+    "definition": "Proksimal tübül epitelinden köken alan en sık primer malign böbrek tümörü (%85). En sık alt tipi Berrak Hücreli RCC'dir (Clear cell RCC; VHL gen inaktivasyonu ve 3p delesyonu).",
+    "clinicalPearls": "Hücre sitoplazması glikojen ve lipitten zengin olduğu için optik olarak berraktır. Renal vene ve Vena Cava Inferior'a invazyon yaparak sağ atriyuma kadar uzanabilir. Kostovertebral açı ağrısı + hematüri + ele gelen kitle klasik triadıdır.",
+    "badgeColor": "red"
+  },
+  {
     "term": "Rifampisin",
     "aliases": [
       "rifampisin",
@@ -985,6 +1221,19 @@
     "pronunciation": "[sars-kov-iki]",
     "definition": "Zarflı, pozitif polariteli tek zincirli RNA virüsü. ACE2 reseptörüne bağlanarak alt solunum yollarına invaze olur.",
     "clinicalPearls": "Damlacıkla bulaşır; entübasyon gibi aerosol oluşturan işlemlerde N95 maske ve solunum izolasyonu gerekir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Sifiliz (Frengi)",
+    "aliases": [
+      "sifiliz",
+      "frengi",
+      "syphilis"
+    ],
+    "category": "Klinik Hastalık / Enfeksiyon",
+    "pronunciation": "[si-fi-liz]",
+    "definition": "Treponema pallidum spiroketinin neden olduğu, cinsel yolla veya transplasental bulaşan sistemik kronik enfeksiyon hastalığı.",
+    "clinicalPearls": "Primer evrede ağrısız sert tabanlı şankr; sekonder evrede makülopapüler döküntü ve condyloma lata; latent dönem sonrası tersiyer evrede gomlar, aortit ve nörosifiliz (tabes dorsalis) gelişir; penisilin temel tedavidir.",
     "badgeColor": "rose"
   },
   {
@@ -1264,6 +1513,46 @@
     "badgeColor": "red"
   },
   {
+    "term": "Wilms Tümörü (Nefroblastom)",
+    "aliases": [
+      "wilms tümörü",
+      "nefroblastom",
+      "wilms"
+    ],
+    "category": "Klinik Hastalık / Pediatri",
+    "pronunciation": "[vilms tü-mö-rü]",
+    "definition": "Çocukluk çağının (genellikle 2-5 yaş) en sık primer malign böbrek tümörüdür. 11. kromozomdaki WT1 tümör baskılayıcı gen mutasyonuyla ilişkilidir.",
+    "clinicalPearls": "Klasik trifazik histoloji gösterir: Blastem (küçük yuvarlak mavi hücreler), Epitelyal elemanlar (ilkel tübüller) ve Mezenkimal stroma. Karında ağrısız dev kitle ile başvurur.",
+    "badgeColor": "purple"
+  },
+  {
+    "term": "Yaygın Damar İçi Pıhtılaşma (DIC)",
+    "aliases": [
+      "yaygın damar içi pıhtılaşma",
+      "dic",
+      "tüketim koagülopatisi",
+      "dissemine intravasküler koagülasyon"
+    ],
+    "category": "Klinik Hastalık / Hematoloji",
+    "pronunciation": "[d-i-c]",
+    "definition": "Mikrovasküler yatakta kontrolsüz yaygın trombin oluşumu sonucu trombositlerin ve pıhtılaşma faktörlerinin tükenmesi (tüketim koagülopatisi), ardından eşzamanlı ölümcül kanamaların geliştiği ağır hematolojik sendrom.",
+    "clinicalPearls": "Sepsis, maligniteler, obstetrik komplikasyonlar ve ağır travmalarda gelişir; trombosit, fibrinojen düşer; PT, aPTT uzar; D-Dimer aşırı yükselir.",
+    "badgeColor": "red"
+  },
+  {
+    "term": "Yağ Embolisi Sendromu",
+    "aliases": [
+      "yağ embolisi",
+      "yağ embolisi sendromu",
+      "fat embolism"
+    ],
+    "category": "Klinik Hastalık / Travma",
+    "pronunciation": "[yağ em-bo-li-si]",
+    "definition": "Femur veya tibia gibi uzun kemik kırıkları sonrası kemik iliğindeki yağ globüllerinin dolaşıma katılarak akciğer ve beyin kapillerlerini tıkaması.",
+    "clinicalPearls": "Kırıktan 24-72 saat sonra dispne, konfüzyon ve aksilla/boyunda peteşiyal döküntü triadı ile teşhis edilir.",
+    "badgeColor": "red"
+  },
+  {
     "term": "Ürik Asit Taşı",
     "aliases": [
       "ürik asit taşı",
@@ -1275,5 +1564,19 @@
     "definition": "Asidik idrar pH'sında (<5.5) ürik asidin aşırı doygunluğa ulaşarak kristalleşmesiyle oluşan üriner taş.",
     "clinicalPearls": "Direk üriner sistem grafisinde (DÜSG) GÖRÜLMEZ (RADYOLÜSENTTİR!); ancak kontrastsız batın BT'de net saptanır. İdrarın bikarbonat veya potasyum sitratla alkalinizasyonu ile taş eritilebilir.",
     "badgeColor": "amber"
+  },
+  {
+    "term": "Ürotelyal Karsinom (Mesane Kanseri)",
+    "aliases": [
+      "ürotelyal karsinom",
+      "mesane kanseri",
+      "transizyonel hücreli karsinom",
+      "tcc"
+    ],
+    "category": "Klinik Hastalık / Onkoloji",
+    "pronunciation": "[ü-ro-tel-yal kar-si-nom]",
+    "definition": "Üriner sistemi (renal pelvis, üreter, mesane ve üretra) döşeyen transizyonel epitelden kaynaklanan malign tümör. En sık mesanede görülür.",
+    "clinicalPearls": "Sigara kullanımı ve anilin boyalarına maruziyet en önemli risk faktörüdür. Ağrısız makroskopik hematüri en tipik ilk belirtisidir. Çok odaklı (multifokal) gelişme eğilimindedir.",
+    "badgeColor": "red"
   }
 ]

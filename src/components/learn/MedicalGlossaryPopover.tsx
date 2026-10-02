@@ -41,6 +41,8 @@ export interface GlossaryContextValue {
   glossaryList: GlossaryItem[];
   isDrawerOpen: boolean;
   setIsDrawerOpen: (open: boolean) => void;
+  currentSlideText?: string;
+  setCurrentSlideText?: (text: string) => void;
 }
 
 // ---------------------------------------------------------------------------
@@ -99,6 +101,7 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const glossaryList = rawGlossaryData as GlossaryItem[];
   const [activeState, setActiveState] = useState<ActiveGlossaryState | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [currentSlideText, setCurrentSlideText] = useState<string>('');
   const hideTimeoutRef = useRef<number | null>(null);
 
   // Fast lookup map (lowercased alias/term -> GlossaryItem)
@@ -155,6 +158,8 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         glossaryList,
         isDrawerOpen,
         setIsDrawerOpen,
+        currentSlideText,
+        setCurrentSlideText,
       }}
     >
       {children}
@@ -188,12 +193,78 @@ const GlossaryLayer: React.FC = () => {
 };
 
 // ---------------------------------------------------------------------------
+// Dynamic Slide Clinical Synthesis / Knowledge Extractor
+// ---------------------------------------------------------------------------
+export function extractSlideKnowledge(item: GlossaryItem, slideText?: string): string | null {
+  if (!slideText || !slideText.trim()) return null;
+
+  const cleanTerm = item.term.replace(/\s*\([^)]*\)/g, '').trim().toLowerCase();
+  const searchTerms = [
+    cleanTerm,
+    ...(item.aliases || []).map((a) => a.trim().toLowerCase()),
+  ].filter((t) => t.length >= 2);
+
+  const lines = slideText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  const matchedSentences: string[] = [];
+
+  for (const line of lines) {
+    const lowerLine = line.toLowerCase();
+    const hasMatch = searchTerms.some((st) => {
+      if (st.length <= 4) {
+        const reg = new RegExp(`(?<![\\p{L}\\p{N}])${st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}\\p{N}])`, 'iu');
+        return reg.test(lowerLine);
+      }
+      return lowerLine.includes(st);
+    });
+
+    if (hasMatch) {
+      const cleaned = line
+        .replace(/^[•\-\*]\s*/, '')
+        .replace(/^>\s*/, '')
+        .replace(/^[💡⚠️🔴🚨✨]\s*/, '')
+        .trim();
+
+      if (cleaned.length > 15) {
+        matchedSentences.push(cleaned);
+      }
+    }
+  }
+
+  if (matchedSentences.length === 0) {
+    const firstLine = lines[0] || '';
+    const lowerFirstLine = firstLine.toLowerCase();
+    const titleMatch = searchTerms.some((st) => lowerFirstLine.includes(st));
+    if (titleMatch && lines.length > 1) {
+      const narrativeLine = lines.find((l) => l.length > 25 && !l.startsWith('#')) || lines[1];
+      if (narrativeLine) {
+        return narrativeLine.replace(/^[•\-\*]\s*/, '').replace(/^>\s*/, '').trim();
+      }
+    }
+    return null;
+  }
+
+  // Deduplicate and combine up to 2 distinct informative sentences/bullets
+  const unique = Array.from(new Set(matchedSentences));
+  const summary = unique.slice(0, 2).join(' • ');
+
+  if (summary.length > 250) {
+    return summary.slice(0, 247) + '...';
+  }
+  return summary;
+}
+
+// ---------------------------------------------------------------------------
 // Floating Popover / Toast Component (Supports Touch Tap + Desktop Hover)
 // ---------------------------------------------------------------------------
 export const FloatingGlossaryToast: React.FC = () => {
-  const { activeState, hideTerm, showTerm, setIsDrawerOpen } = useGlossary();
+  const { activeState, hideTerm, showTerm, setIsDrawerOpen, currentSlideText } = useGlossary();
   const [isSpeaking, setIsSpeaking] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+
+  const slideKnowledge = useMemo(() => {
+    if (!activeState?.item) return null;
+    return extractSlideKnowledge(activeState.item, currentSlideText);
+  }, [activeState?.item, currentSlideText]);
 
   // Close on Escape or click outside
   useEffect(() => {
@@ -352,6 +423,26 @@ export const FloatingGlossaryToast: React.FC = () => {
         {item.definition}
       </p>
 
+      {/* Dynamic Slide Clinical Synthesis / Slayt Patoloji Bilgisi */}
+      {slideKnowledge && (
+        <div className="p-2.5 rounded-xl bg-teal-500/10 dark:bg-teal-500/15 border-l-3 border-teal-500 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2 animate-in fade-in duration-200 shadow-2xs">
+          <span className="text-[13px] select-none shrink-0 mt-0.5">✨</span>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1.5 mb-1">
+              <strong className="font-semibold text-teal-900 dark:text-teal-200 text-[11.5px]">
+                Slayttaki Bilgi & Patoloji Sentezi:
+              </strong>
+              <span className="text-[9.5px] font-bold uppercase tracking-wider bg-teal-500/20 text-teal-800 dark:text-teal-300 px-1 py-0.2 rounded">
+                Bu Slayt
+              </span>
+            </div>
+            <p className="m-0 text-ink leading-relaxed font-normal">
+              {slideKnowledge}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Clinical Pearl Box */}
       {item.clinicalPearls && (
         <div className="p-2.5 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 border-l-3 border-amber-500 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2">
@@ -480,14 +571,16 @@ export const RenderWithGlossaryTerms: React.FC<{
     return { regex: reg, aliasToItem: map };
   }, [glossaryList]);
 
-  // First handle markdown **bold**
-  const boldParts = String(text || '').split(/(\*\*[^*]+\*\*)/g);
+  // First handle markdown ***triple*** or **double** bold
+  const boldParts = String(text || '').split(/(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*)/g);
 
   return (
     <span className={className}>
       {boldParts.map((bPart, bIdx) => {
-        const isBold = bPart.startsWith('**') && bPart.endsWith('**');
-        const rawContent = isBold ? bPart.slice(2, -2) : bPart;
+        const isTriple = bPart.startsWith('***') && bPart.endsWith('***');
+        const isDouble = bPart.startsWith('**') && bPart.endsWith('**');
+        const isBold = isTriple || isDouble;
+        const rawContent = isTriple ? bPart.slice(3, -3) : isDouble ? bPart.slice(2, -2) : bPart;
 
         // Split rawContent by terms regex
         const termParts = rawContent.split(regex);
@@ -502,6 +595,26 @@ export const RenderWithGlossaryTerms: React.FC<{
         });
 
         if (isBold) {
+          // Check if this bold content represents an ultra-critical item that should be red
+          const isRed =
+            isTriple ||
+            /^(?:🔴|🚨|⚠️)/.test(rawContent.trim()) ||
+            /(?:ölümcül|asla|acil|hayati|kritik|dikkat!|sınav tuzağı|tuzak:|hayat kurtarır|kontrendike)/i.test(rawContent);
+
+          if (isRed) {
+            return (
+              <strong
+                key={bIdx}
+                className="font-bold text-red-600 dark:text-red-400 bg-red-500/10 dark:bg-red-500/20 border border-red-500/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
+              >
+                {!rawContent.includes('🔴') && !rawContent.includes('🚨') && !rawContent.includes('⚠️') && (
+                  <span className="text-[10px] select-none text-red-500">🔴</span>
+                )}
+                <span>{renderedContent}</span>
+              </strong>
+            );
+          }
+
           return (
             <strong
               key={bIdx}

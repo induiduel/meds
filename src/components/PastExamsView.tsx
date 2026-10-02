@@ -88,7 +88,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [openExplanations, setOpenExplanations] = useState<Record<string, boolean>>({});
-  const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'all'>('valid');
+  const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'reported' | 'all'>('valid');
   
   // Per-question card override: questionId -> 'redacted' | 'raw' | 'split'
   const [cardViewOverrides, setCardViewOverrides] = useState<Record<string, 'redacted' | 'raw' | 'split'>>({});
@@ -421,16 +421,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const tabCounts = useMemo(() => {
     const validCount = questions.filter(q => !q.isAmbiguous).length;
     const ambiguousCount = questions.filter(q => q.isAmbiguous).length;
+    const reportedCount = questions.filter(q => q.reports && q.reports.length > 0).length;
     const deepseekCount = questions.filter(isDeepSeekQuestion).length;
-    return { validCount, ambiguousCount, deepseekCount, totalCount: questions.length };
+    return { validCount, ambiguousCount, reportedCount, deepseekCount, totalCount: questions.length };
   }, [questions]);
 
   // Filtered Questions
   const filteredQuestions = useMemo(() => {
     return questions.filter(q => {
-      // 1. Ambiguity Filter (Muallak vs Tam Metin)
+      // 1. Ambiguity & Report Filter
       if (ambiguityTab === 'valid' && q.isAmbiguous) return false;
       if (ambiguityTab === 'ambiguous' && !q.isAmbiguous) return false;
+      if (ambiguityTab === 'reported' && (!q.reports || q.reports.length === 0)) return false;
 
       // 2. Search
       if (searchQuery.trim()) {

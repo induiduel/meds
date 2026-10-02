@@ -1,6 +1,7 @@
 import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCurrent2026_2027Committees, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
+import { SupabaseDbService } from './supabaseDb';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL } from './auth';
@@ -2454,38 +2455,73 @@ JSON FORMATI:
 
   async reportPastQuestion(questionId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
     const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+    const nowIso = new Date().toISOString();
+    const reportObj = {
+      id: `rep-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      questionId,
+      reason: reason.trim(),
+      details: (details || '').trim(),
+      reportedBy: reportedBy || 'Tıp Öğrencisi',
+      createdAt: nowIso,
+      status: 'pending'
+    };
 
-    // 1. Try local server
+    // 1. Try local Express server (Updates server DB and mirrors to Supabase)
     try {
       const res = await fetch(`${apiBase}/api/past-exams/${encodeURIComponent(questionId)}/report`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ reason, details, reportedBy }),
+        body: JSON.stringify({
+          id: reportObj.id,
+          reason: reportObj.reason,
+          details: reportObj.details,
+          reportedBy: reportObj.reportedBy
+        }),
       });
       if (res.ok) {
-        return await res.json();
+        const data = await res.json();
+        if (data?.report) {
+          reportObj.id = data.report.id || reportObj.id;
+        }
       }
     } catch (e) {
-      console.warn('[reportPastQuestion] Server çağrısı başarısız, Firestore yedeğine geçiliyor:', e);
+      console.warn('[reportPastQuestion] Server çağrısı başarısız, doğrudan buluta geçiliyor:', e);
     }
 
-    // 2. Direct Firestore fallback (Guarantees zero 405 error on GitHub Pages!)
+    // 2. Direct Supabase save (Garanti: GitHub Pages ve sunucusuz ortamlarda da Supabase'e anında yazar!)
     try {
-      const reportObj = {
-        id: `rep-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
-        questionId,
-        reason,
-        details: details || '',
-        reportedBy: reportedBy || 'Tıp Öğrencisi',
-        createdAt: new Date().toISOString(),
-        status: 'pending'
-      };
-      await addDoc(collection(db, 'past_question_reports'), reportObj);
-      return { success: true, report: reportObj };
-    } catch (err: any) {
-      console.warn('[reportPastQuestion] Firestore kaydı da yapılamadı, yerel başarı dönülüyor:', err.message);
-      return { success: true, report: { id: `rep-local-${Date.now()}`, questionId, reason, details, reportedBy, createdAt: new Date().toISOString() } };
+      await SupabaseDbService.reportPastQuestion(questionId, {
+        id: reportObj.id,
+        reason: reportObj.reason,
+        details: reportObj.details,
+        reportedBy: reportObj.reportedBy,
+        timestamp: nowIso
+      });
+    } catch (sbErr: any) {
+      console.warn('[reportPastQuestion] Supabase doğrudan kayıt uyarısı:', sbErr?.message);
     }
+
+    // 3. Local IndexedDB Cache update (Cihaz üzerinde anlık yansıma)
+    try {
+      const cached = await pastQuestionsCache.getQuestion(questionId);
+      if (cached) {
+        const curReports = cached.reports || [];
+        if (!curReports.some((r: any) => r.id === reportObj.id)) {
+          cached.reports = [...curReports, reportObj];
+        }
+        cached.updatedAt = nowIso;
+        await pastQuestionsCache.saveQuestion(cached);
+      }
+    } catch (_) {}
+
+    // 4. Firestore Dual Cloud Fallback (Firebase Spark/Cloud kesintisiz yedek)
+    try {
+      await addDoc(collection(db, 'past_question_reports'), reportObj);
+    } catch (err: any) {
+      console.warn('[reportPastQuestion] Firestore kaydı yapılamadı:', err.message);
+    }
+
+    return { success: true, report: reportObj };
   },
 
   async upvotePastQuestion(questionId: string): Promise<number> {

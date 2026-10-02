@@ -443,6 +443,131 @@ export const SupabaseDbService = {
     }
   },
 
+  async reportPastQuestion(
+    questionId: string,
+    report: { id?: string; reason: string; details?: string; reportedBy?: string; timestamp?: string }
+  ): Promise<{ success: boolean; error?: string; report?: any }> {
+    const client = getSupabaseClient();
+    if (!client || !questionId) {
+      return { success: false, error: 'Supabase istemcisi veya soru kimliği eksik.' };
+    }
+
+    try {
+      const nowIso = report.timestamp || new Date().toISOString();
+      const reportObj = {
+        id: report.id || `rep-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+        reason: report.reason,
+        details: report.details || '',
+        reportedBy: report.reportedBy || 'Tıp Öğrencisi',
+        timestamp: nowIso,
+      };
+
+      // 1. Fetch current question row from past_questions to update reports JSONB array
+      const { data: row, error: fetchError } = await client
+        .from('past_questions')
+        .select('id, reports, data')
+        .eq('id', questionId)
+        .maybeSingle();
+
+      if (fetchError) {
+        console.warn('[SupabaseDbService.reportPastQuestion] Soru çekilirken uyarı:', fetchError.message);
+      }
+
+      const existingReports = Array.isArray(row?.reports)
+        ? row.reports
+        : Array.isArray(row?.data?.reports)
+        ? row.data.reports
+        : [];
+
+      // Avoid duplicate report ID insertion
+      const alreadyHas = existingReports.some((r: any) => r.id === reportObj.id);
+      const updatedReports = alreadyHas ? existingReports : [...existingReports, reportObj];
+
+      const updatePayload: Record<string, any> = {
+        reports: cleanForPostgres(updatedReports),
+        updated_at: nowIso,
+      };
+
+      if (row?.data) {
+        updatePayload.data = cleanForPostgres({
+          ...row.data,
+          reports: updatedReports,
+          updatedAt: nowIso,
+        });
+      }
+
+      const { error: updateError } = await client
+        .from('past_questions')
+        .update(updatePayload)
+        .eq('id', questionId);
+
+      if (updateError) {
+        console.warn('[SupabaseDbService.reportPastQuestion] past_questions reports update hatası:', updateError.message);
+      }
+
+      // 2. Also try inserting into dedicated past_question_reports table if it exists
+      try {
+        await client.from('past_question_reports').insert([cleanForPostgres({
+          id: reportObj.id,
+          question_id: questionId,
+          reason: reportObj.reason,
+          details: reportObj.details,
+          reported_by: reportObj.reportedBy,
+          status: 'pending',
+          created_at: nowIso,
+        })]);
+      } catch (_) {
+        // Table might not exist yet; reports column in past_questions is the primary storage
+      }
+
+      broadcastLiveEvent('past_question_reported', { questionId, report: reportObj });
+      return { success: !updateError, report: reportObj };
+    } catch (err: any) {
+      console.warn('[SupabaseDbService.reportPastQuestion] Beklenmeyen hata:', err);
+      return { success: false, error: err?.message || 'Bilinmeyen hata' };
+    }
+  },
+
+  async getPastQuestionReports(limit: number = 100): Promise<any[]> {
+    const client = getSupabaseClient();
+    if (!client) return [];
+
+    // First try dedicated past_question_reports table
+    try {
+      const { data, error } = await client
+        .from('past_question_reports')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(limit);
+      if (!error && Array.isArray(data) && data.length > 0) {
+        return data;
+      }
+    } catch (_) {}
+
+    // Fallback: collect reports from past_questions table
+    try {
+      const { data, error } = await client
+        .from('past_questions')
+        .select('id, discipline, topic, reports, updated_at')
+        .not('reports', 'is', null)
+        .limit(limit);
+
+      if (!error && Array.isArray(data)) {
+        const flat: any[] = [];
+        for (const q of data) {
+          if (Array.isArray(q.reports)) {
+            for (const r of q.reports) {
+              flat.push({ ...r, question_id: q.id, discipline: q.discipline, topic: q.topic });
+            }
+          }
+        }
+        return flat;
+      }
+    } catch (_) {}
+
+    return [];
+  },
+
   async batchSavePastQuestions(questions: QuestionItem[]): Promise<{ success: boolean; count: number }> {
     const client = getSupabaseClient();
     if (!client || questions.length === 0) return { success: false, count: 0 };

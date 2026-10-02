@@ -297,7 +297,23 @@ body {
 .ms-fade-in { animation: ms-fade-in .2s ease-out both; }
 .ms-pop-in { animation: ms-pop-in .22s ease-out both; }
 
+@keyframes ms-look { 0%, 35%, 100% { transform: translateX(0); } 45%, 60% { transform: translateX(-2.5px); } 70%, 85% { transform: translateX(2.5px); } }
+@keyframes ms-dot { 0%, 60%, 100% { transform: translateY(0); opacity: .45; } 30% { transform: translateY(-3px); opacity: 1; } }
+@keyframes ms-twinkle { 0%, 100% { transform: scale(.6) rotate(0deg); opacity: .3; } 50% { transform: scale(1.1) rotate(20deg); opacity: 1; } }
+@keyframes ms-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+@keyframes ms-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+
+.ms-look { animation: ms-look 3.4s ease-in-out infinite; }
+.ms-dot { transform-box: fill-box; transform-origin: center; animation: ms-dot 1.2s ease-in-out infinite; }
+.ms-dot-2 { animation-delay: .15s; }
+.ms-dot-3 { animation-delay: .3s; }
+.ms-twinkle { transform-box: fill-box; transform-origin: center; animation: ms-twinkle 1.8s ease-in-out infinite; }
+.ms-twinkle-2 { animation-delay: .9s; }
+.ms-float { animation: ms-float 2.4s ease-in-out infinite; }
+.ms-shimmer { display: block; background: linear-gradient(90deg, rgba(30,79,216,.10) 25%, rgba(30,79,216,.22) 50%, rgba(30,79,216,.10) 75%); background-size: 200% 100%; animation: ms-shimmer 1.6s linear infinite; }
+
 @media (prefers-reduced-motion: reduce) {
-  .ms-bounce, .ms-shadow, .ms-blink, .ms-page, .ms-sheet, .ms-ring, .ms-check, .ms-confetti, .ms-fade-in, .ms-pop-in { animation: none !important; }
+  .ms-bounce, .ms-shadow, .ms-blink, .ms-page, .ms-sheet, .ms-ring, .ms-check, .ms-confetti, .ms-fade-in, .ms-pop-in,
+  .ms-look, .ms-dot, .ms-twinkle, .ms-float, .ms-shimmer { animation: none !important; }
   .ms-check { stroke-dashoffset: 0; }
 }

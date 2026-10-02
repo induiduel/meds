@@ -1174,9 +1174,9 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
 });
 
 // Student report / complaint ("Şikayet Et / Hata Bildir") on a past question
-app.post('/api/past-exams/:id/report', (req, res) => {
+app.post('/api/past-exams/:id/report', async (req, res) => {
   try {
-    const { reason, details, reportedBy } = req.body;
+    const { reason, details, reportedBy, id: incomingId } = req.body;
     if (!reason || !reason.trim()) {
       return res.status(400).json({ error: 'Şikayet sebebi belirtilmelidir.' });
     }
@@ -1188,17 +1188,39 @@ app.post('/api/past-exams/:id/report', (req, res) => {
     }
 
     if (!q.reports) q.reports = [];
+    const reportId = incomingId || `rep-${Date.now()}`;
     const newReport = {
-      id: `rep-${Date.now()}`,
+      id: reportId,
       reason: reason.trim(),
       details: (details || '').trim(),
       reportedBy: reportedBy || 'Anonim Öğrenci',
       timestamp: new Date().toISOString()
     };
-    q.reports.push(newReport);
+    if (!q.reports.some((r: any) => r.id === reportId)) {
+      q.reports.push(newReport);
+    }
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    mirrorPastQuestionToSupabase(q);
+
+    // 1. Supabase past_questions tablosundaki reports JSONB alanına anında kaydet
+    await mirrorPastQuestionToSupabase(q);
+
+    // 2. Eğer past_question_reports tablosu mevcutsa oraya da satır olarak ekle
+    if (supabase) {
+      try {
+        await supabase.from('past_question_reports').insert([cleanForPostgres({
+          id: newReport.id,
+          question_id: q.id,
+          reason: newReport.reason,
+          details: newReport.details,
+          reported_by: newReport.reportedBy,
+          status: 'pending',
+          created_at: newReport.timestamp
+        })]);
+      } catch (sbErr: any) {
+        // Tablo henüz SQL ile oluşturulmamışsa past_questions.reports birincil kaynaktır
+      }
+    }
 
     res.json({
       success: true,
