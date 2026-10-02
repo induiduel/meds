@@ -15,7 +15,9 @@ import {
   Stethoscope, 
   ChevronDown, 
   ChevronUp, 
-  SlidersHorizontal 
+  SlidersHorizontal,
+  Database,
+  ThumbsUp
 } from 'lucide-react';
 import { ApiService, QuestionChatContext, QuestionChatMessage } from '../services/api';
 
@@ -39,6 +41,9 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
   const [preferredProvider, setPreferredProvider] = useState<'auto' | 'gemini' | 'groq'>('auto');
   const [selectedModel, setSelectedModel] = useState('gemini-3.8-flash');
   const [lastUsedProvider, setLastUsedProvider] = useState<string>('');
+  const [pastInteractions, setPastInteractions] = useState<any[]>([]);
+  const [showPastInteractions, setShowPastInteractions] = useState(false);
+  const [upvotedIds, setUpvotedIds] = useState<Set<string>>(new Set());
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -90,7 +95,31 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         providerUsed: 'AI Soru Hocası',
       },
     ]);
+
+    if (questionContext?.id) {
+      ApiService.getQuestionAiInteractions(questionContext.id).then((list) => {
+        setPastInteractions(list);
+        if (list.length > 0) {
+          setShowPastInteractions(true);
+        }
+      });
+    } else {
+      setPastInteractions([]);
+    }
   }, [questionContext?.id, questionContext?.stem, questionContext?.userAnswer]);
+
+  const handleUpvote = async (interactionId: string) => {
+    if (upvotedIds.has(interactionId)) return;
+    const ok = await ApiService.upvoteAiInteraction(interactionId);
+    if (ok) {
+      setUpvotedIds((prev) => new Set(prev).add(interactionId));
+      setPastInteractions((prev) =>
+        prev.map((item) =>
+          item.id === interactionId ? { ...item, upvotes: (item.upvotes || 0) + 1 } : item
+        )
+      );
+    }
+  };
 
   if (!isOpen || !questionContext) return null;
 
@@ -441,6 +470,72 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
 
         {/* Chat Messages Container */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {/* Past Community & AI Interactions Accordion */}
+          {pastInteractions.length > 0 && (
+            <div className="bg-indigo-50/80 border border-indigo-200/80 rounded-xl p-3 text-ink shadow-xs transition-all">
+              <div 
+                className="flex items-center justify-between cursor-pointer select-none" 
+                onClick={() => setShowPastInteractions(!showPastInteractions)}
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-[12px] font-bold shadow-xs">
+                    {pastInteractions.length}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[13px] text-indigo-950 flex items-center gap-1.5 m-0">
+                      <span>Bu Soru İçin Kayıtlı AI Soru-Cevapları</span>
+                      <span className="text-[10px] font-bold bg-indigo-200/70 text-indigo-800 px-1.5 py-0.5 rounded">RAG Arşivi</span>
+                    </h4>
+                    <p className="text-[11px] text-indigo-800/80 m-0">Daha önce sorulan sorular ve açıklamalar tek tıkla incelenebilir.</p>
+                  </div>
+                </div>
+                {showPastInteractions ? <ChevronUp className="w-4 h-4 text-indigo-600" /> : <ChevronDown className="w-4 h-4 text-indigo-600" />}
+              </div>
+
+              {showPastInteractions && (
+                <div className="mt-2.5 space-y-2.5 pt-2.5 border-t border-indigo-200/70 max-h-72 overflow-y-auto pr-1">
+                  {pastInteractions.map((item, pIdx) => (
+                    <div key={item.id || pIdx} className="bg-white p-3 rounded-lg border border-indigo-100 text-[13px] space-y-2 shadow-2xs">
+                      <div className="font-medium text-indigo-950 flex items-start gap-1.5">
+                        <span className="text-indigo-600 font-bold shrink-0">❓ Soru:</span>
+                        <span className="text-ink font-semibold">"{item.prompt}"</span>
+                      </div>
+                      <div className="text-ink-2 bg-slate-50 p-2.5 rounded-md text-[12px] max-h-40 overflow-y-auto border border-slate-100">
+                        {renderFormattedText(item.response)}
+                      </div>
+                      <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-slate-100">
+                        <span className="text-ink-3 text-[10px]">
+                          {item.userDisplayName || 'Öğrenci'} · {new Date(item.createdAt).toLocaleDateString('tr-TR')}
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => handleUpvote(item.id)}
+                            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded text-[11px] font-medium transition-colors cursor-pointer ${
+                              upvotedIds.has(item.id) 
+                                ? 'bg-emerald-100 text-emerald-800 font-bold' 
+                                : 'bg-slate-100 hover:bg-slate-200 text-ink'
+                            }`}
+                          >
+                            <ThumbsUp className="w-3 h-3" />
+                            <span>{item.upvotes || 0} Faydalı</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleSendMessage(`"${item.prompt}" konusuyla ilgili daha detaylı klinik örnek verebilir misin?`)}
+                            className="text-accent hover:underline font-semibold text-[11px] cursor-pointer"
+                          >
+                            Detay İste &rarr;
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
           {messages.map((msg, idx) => {
             const isMe = msg.role === 'user';
             return (
@@ -474,6 +569,10 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                     <span>{msg.timestamp || ''}</span>
                     {!isMe && (
                       <div className="flex items-center gap-2">
+                        <span className="inline-flex items-center gap-1 text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-medium">
+                          <Database className="w-2.5 h-2.5" />
+                          RAG Kütüphanesinde
+                        </span>
                         {msg.providerUsed && (
                           <span className="font-mono text-[10px] opacity-75">{msg.providerUsed}</span>
                         )}

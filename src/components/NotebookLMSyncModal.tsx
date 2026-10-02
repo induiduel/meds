@@ -18,13 +18,14 @@ import {
 import { Committee, QuestionItem, LectureNote } from '../types';
 import { AppUser } from '../services/auth';
 import { ApiService } from '../services/api';
+import { REAL_KURUL1_DRIVE_SLIDES } from '../services/driveAutomation';
 
 interface NotebookLMSyncModalProps {
   isOpen: boolean;
   onClose: () => void;
   committee: Committee | undefined;
   questions: QuestionItem[];
-  lectureNotes: LectureNote[];
+  lectureNotes?: LectureNote[];
   currentUser: AppUser | null;
   isAdmin: boolean;
   onQuestionsUpdated: () => void;
@@ -35,11 +36,15 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
   onClose,
   committee,
   questions,
-  lectureNotes,
+  lectureNotes: passedLectureNotes,
   currentUser,
   isAdmin,
   onQuestionsUpdated,
 }) => {
+  const lectureNotes = passedLectureNotes || REAL_KURUL1_DRIVE_SLIDES.map((s) => ({
+    ...s,
+    committeeId: committee?.id || 'donem3-kurul1',
+  }));
   const [activeTab, setActiveTab] = useState<'export' | 'import' | 'direct_ai'>('export');
   const [copied, setCopied] = useState(false);
   const [importText, setImportText] = useState('');

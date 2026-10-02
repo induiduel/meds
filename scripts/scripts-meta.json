@@ -1,6 +1,15 @@
 {
   "scripts": [
     {
+      "name": "sync-drive-updates.mjs",
+      "title": "Google Drive Güncelleme Tespit & Manuel Senkronizasyon",
+      "category": "Drive & Senkronizasyon",
+      "description": "Drive klasörlerini tarar, yeni/güncellenen ders notları ve çıkmış soruları tespit eder, yerel arşiv ve veritabanına aktarır.",
+      "defaultArgs": "--check-only",
+      "tags": ["drive", "güncelleme", "manuel-senkron", "ocr", "delta"],
+      "danger": false
+    },
+    {
       "name": "audit-and-disconnect-faulty-slides.mjs",
       "title": "Slayt Denetim ve Hatalı İlişkileri Kesme",
       "category": "Slayt & Eşleştirme",

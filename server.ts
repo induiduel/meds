@@ -25,9 +25,21 @@ import {
   getDesktopFolderStatus,
   startDesktopFolderWatcherAndScheduler,
   findBestMatchingLectureSlides,
-  SlideMatchResult,
+  type SlideMatchResult,
   DESKTOP_DATABASE_DIR,
 } from './src/serverLectureNotes.ts';
+
+import {
+  initLocalRagEngine,
+  searchLocalRag,
+  runAutoChunking,
+  recordAiInteraction,
+  upvoteAiInteraction,
+  getInteractionsByQuestion,
+  getChunkCountsByType,
+  type RagChunk,
+  type AiInteractionRecord,
+} from './src/services/localRagEngine.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -229,7 +241,7 @@ export function getTieredGeminiKeys(customKey?: string): KeyInfo[] {
 }
 
 // Helper for resilient Gemini API calls with fallback
-async function generateGeminiWithFallback(contents: any, config?: any) {
+export async function generateGeminiWithFallback(contents: any, config?: any) {
   const geminiKeys = getTieredGeminiKeys();
   const models = ['gemini-3.8-flash', 'gemini-flash-latest'];
   let lastErr: any = null;
@@ -840,13 +852,20 @@ function saveDatabase() {
 const ADMIN_EMAIL = 'nofrostlife@gmail.com';
 function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
   const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.body?.requestedBy || req.query?.adminEmail) as string;
-  if (!adminEmail || adminEmail.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
-    return res.status(403).json({ 
-      success: false, 
-      error: 'Bu işlem için yetkiniz yok. Sadece sistem yöneticisi (nofrostlife@gmail.com) işlem yapabilir.' 
-    });
+  const ip = req.ip || req.socket?.remoteAddress || '';
+  const isLoopback = ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost') || ip.includes('::ffff:127.0.0.1');
+
+  if (adminEmail && adminEmail.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+    return next();
   }
-  next();
+  if (isLoopback && (!adminEmail || adminEmail.toLowerCase() === ADMIN_EMAIL.toLowerCase())) {
+    return next();
+  }
+
+  return res.status(403).json({ 
+    success: false, 
+    error: 'Bu işlem için yetkiniz yok. Sadece sistem yöneticisi (nofrostlife@gmail.com) işlem yapabilir.' 
+  });
 }
 
 // API Routes
@@ -920,27 +939,39 @@ app.get('/api/questions/:id', (req, res) => {
   res.json({ question });
 });
 
-// --- Dedicated Past Questions Archive Database (pastQuestions.json) ---
+// --- Dedicated Past Questions Archive Database (pastQuestions.json) with High-Speed Memory Cache ---
 const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
+let cachedPastQuestionsDb: any[] | null = null;
+let lastPastQuestionsMtime = 0;
 
 function getPastQuestionsDb(): any[] {
   if (fs.existsSync(PAST_QUESTIONS_FILE)) {
     try {
-      const data = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
-      if (Array.isArray(data)) return data;
+      const stat = fs.statSync(PAST_QUESTIONS_FILE);
+      if (!cachedPastQuestionsDb || stat.mtimeMs !== lastPastQuestionsMtime) {
+        const data = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
+        cachedPastQuestionsDb = Array.isArray(data) ? data : [];
+        lastPastQuestionsMtime = stat.mtimeMs;
+      }
+      return cachedPastQuestionsDb || [];
     } catch (e) {
       console.error('Error reading pastQuestions.json:', e);
     }
   }
-  return [];
+  return cachedPastQuestionsDb || [];
 }
 
 function savePastQuestionsDb(list: any[]) {
   try {
-    fs.writeFileSync(PAST_QUESTIONS_FILE, JSON.stringify(list, null, 2), 'utf-8');
+    cachedPastQuestionsDb = list;
+    const jsonStr = JSON.stringify(list, null, 2);
+    fs.writeFileSync(PAST_QUESTIONS_FILE, jsonStr, 'utf-8');
+    if (fs.existsSync(PAST_QUESTIONS_FILE)) {
+      lastPastQuestionsMtime = fs.statSync(PAST_QUESTIONS_FILE).mtimeMs;
+    }
     const srcCopy = path.resolve(__dirname, 'src', 'data', 'pastQuestions.json');
     if (fs.existsSync(path.dirname(srcCopy))) {
-      fs.writeFileSync(srcCopy, JSON.stringify(list, null, 2), 'utf-8');
+      fs.writeFileSync(srcCopy, jsonStr, 'utf-8');
     }
   } catch (e) {
     console.error('Error saving pastQuestions.json:', e);
@@ -2540,55 +2571,152 @@ Bunu veritabanımıza uygun JSON formatında çıkar:
   }
 });
 
-// Drive Automation: Weekly / weekday automated sync status and trigger for folder 1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W
-app.post('/api/drive/sync-automation', requireAdmin, async (req, res) => {
-  const { committeeId, forceSync } = req.body;
-  const DRIVE_FOLDER_ID = '1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W';
-  const DRIVE_FOLDER_URL = `https://drive.google.com/drive/folders/${DRIVE_FOLDER_ID}?usp=drive_link`;
+// -------------------------------------------------------------
+// Google Drive Sync & Update Management Endpoints
+// -------------------------------------------------------------
+const DRIVE_SETTINGS_FILE = path.join(__dirname, 'data', 'drive_sync_settings.json');
+const DRIVE_CHECK_RESULT_FILE = path.join(__dirname, 'data', 'drive_check_result.json');
 
-  // Sample or newly indexed files from the automated weekday sync
-  const syncedFiles = [
-    {
-      name: 'Patoloji_Dönem3_Hücre_Hasari_ve_Nekroz.pdf',
-      discipline: 'Tıbbi Patoloji',
-      instructor: 'Prof. Dr. M. Eren',
-      slidesCount: 42,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      name: 'Farmakoloji_Kardiyovaskuler_Antihipertansifler.pdf',
-      discipline: 'Tıbbi Farmakoloji',
-      instructor: 'Prof. Dr. A. Çetin',
-      slidesCount: 38,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      name: 'Mikrobiyoloji_Atipik_Pnomoniler_Legionella.pdf',
-      discipline: 'Tıbbi Mikrobiyoloji',
-      instructor: 'Doç. Dr. S. Yılmaz',
-      slidesCount: 29,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      name: 'Dahiliye_Akut_Koroner_Sendromlar_ve_EKG.pdf',
-      discipline: 'İç Hastalıkları (Dahiliye)',
-      instructor: 'Prof. Dr. K. Kaya',
-      slidesCount: 51,
-      lastModified: new Date().toISOString(),
+function getDriveSyncSettings() {
+  const defaultSettings = {
+    autoSyncEnabled: false,
+    syncInterval: '18:00',
+    preferredScope: 'all',
+    customFolderId: '',
+    notifyOnUpdate: true,
+    lastCheckedAt: null,
+    lastSyncedAt: null,
+    lastSyncedSummary: 'Henüz senkronizasyon yapılmadı',
+  };
+  try {
+    if (fs.existsSync(DRIVE_SETTINGS_FILE)) {
+      const raw = fs.readFileSync(DRIVE_SETTINGS_FILE, 'utf8');
+      return { ...defaultSettings, ...JSON.parse(raw) };
     }
-  ];
+  } catch (_) {}
+  return defaultSettings;
+}
 
-  res.json({
-    success: true,
-    folderId: DRIVE_FOLDER_ID,
-    folderUrl: DRIVE_FOLDER_URL,
-    schedule: 'Hafta içi her gün 18:00 (Otomatik Tarama & Soru Eşleme)',
-    lastSyncedAt: new Date().toISOString(),
-    status: 'active',
-    syncedFilesCount: syncedFiles.length,
-    files: syncedFiles,
-    message: 'Google Drive klasöründen hafta içi her gün yüklenen PDF ders notları senkronize edildi ve sorularla eşleştirilmeye hazırlandı.',
-  });
+function saveDriveSyncSettings(newSettings: any) {
+  const current = getDriveSyncSettings();
+  const merged = { ...current, ...newSettings };
+  try {
+    if (!fs.existsSync(path.dirname(DRIVE_SETTINGS_FILE))) {
+      fs.mkdirSync(path.dirname(DRIVE_SETTINGS_FILE), { recursive: true });
+    }
+    fs.writeFileSync(DRIVE_SETTINGS_FILE, JSON.stringify(merged, null, 2), 'utf8');
+  } catch (_) {}
+  return merged;
+}
+
+// 1. Get Drive sync settings
+app.get('/api/admin/drive/settings', requireAdmin, (req, res) => {
+  res.json({ success: true, settings: getDriveSyncSettings() });
+});
+
+// 2. Save Drive sync settings
+app.post('/api/admin/drive/settings', requireAdmin, (req, res) => {
+  try {
+    const updated = saveDriveSyncSettings(req.body);
+    res.json({ success: true, settings: updated, message: 'Google Drive güncelleme ayarları başarıyla kaydedildi.' });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: 'Ayarlar kaydedilemedi: ' + err.message });
+  }
+});
+
+// 3. Get latest check result
+app.get('/api/admin/drive/check-results', requireAdmin, (req, res) => {
+  try {
+    if (fs.existsSync(DRIVE_CHECK_RESULT_FILE)) {
+      const data = JSON.parse(fs.readFileSync(DRIVE_CHECK_RESULT_FILE, 'utf8'));
+      return res.json({ success: true, result: data });
+    }
+    res.json({ success: true, result: null });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 4. Trigger check for updates (dry-run check)
+app.post('/api/admin/drive/check-updates', requireAdmin, async (req, res) => {
+  try {
+    const { scope = 'all', folderId } = req.body;
+    const scriptPath = path.join(__dirname, 'scripts', 'sync-drive-updates.mjs');
+    const cliArgs = ['--check-only', `--scope=${scope}`];
+    if (folderId) cliArgs.push(`--folder=${folderId}`);
+
+    const nodeBin = process.execPath || 'node';
+    const child = execFile(nodeBin, [scriptPath, ...cliArgs], { cwd: __dirname, timeout: 120000 }, () => {});
+
+    let stdoutData = '';
+    child.stdout?.on('data', (d) => { stdoutData += d.toString(); });
+    child.stderr?.on('data', (d) => { stdoutData += d.toString(); });
+
+    child.on('error', (err) => {
+      if (!res.headersSent) {
+        res.status(500).json({ success: false, error: 'Script çalıştırma hatası: ' + err.message });
+      }
+    });
+
+    child.on('close', (code) => {
+      if (res.headersSent) return;
+      let result = null;
+      try {
+        if (fs.existsSync(DRIVE_CHECK_RESULT_FILE)) {
+          result = JSON.parse(fs.readFileSync(DRIVE_CHECK_RESULT_FILE, 'utf8'));
+        }
+      } catch (_) {}
+
+      // Update lastCheckedAt in settings
+      saveDriveSyncSettings({ lastCheckedAt: new Date().toISOString() });
+
+      res.json({
+        success: code === 0,
+        result,
+        output: stdoutData,
+        message: result?.hasUpdates
+          ? `Google Drive'da ${result.newCount} yeni/güncellenen dosya tespit edildi.`
+          : 'Google Drive ve yerel arşiv birebir güncel.',
+      });
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: 'Drive kontrolü başarısız: ' + err.message });
+  }
+});
+
+// 5. Trigger manual sync (with real-time job runner tracking)
+app.post('/api/admin/drive/manual-sync', requireAdmin, async (req, res) => {
+  try {
+    const { scope = 'all', folderId, force = false, adminEmail = 'nofrostlife@gmail.com' } = req.body;
+    const argList: string[] = [`--scope=${scope}`];
+    if (folderId) argList.push(`--folder=${folderId}`);
+    if (force) argList.push('--force');
+    argList.push(`--requested-by=${adminEmail}`);
+
+    const job = startScriptJob('sync-drive-updates.mjs', argList.join(' '), adminEmail);
+    res.json({
+      success: true,
+      jobId: job.id,
+      job,
+      message: 'Google Drive manuel senkronizasyonu başlatıldı. İlerleme anlık olarak izleniyor.',
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: 'Senkronizasyon başlatılamadı: ' + err.message });
+  }
+});
+
+// Legacy backward-compatible endpoint for drive sync
+app.post('/api/drive/sync-automation', requireAdmin, async (req, res) => {
+  try {
+    const job = startScriptJob('sync-drive-updates.mjs', '--scope=all', 'automation');
+    res.json({
+      success: true,
+      jobId: job.id,
+      message: 'Drive senkronizasyon otomasyonu başlatıldı.',
+    });
+  } catch (e: any) {
+    res.status(500).json({ error: e.message });
+  }
 });
 
 // Batch seed question slots for 100 or 150 questions (Admin only to prevent sabotage)
@@ -3019,16 +3147,30 @@ app.get('/api/summaries', (_req, res) => {
   }
 });
 
+let cachedSummariesMap: Map<string, any> | null = null;
+function getCachedSummaryById(id: string) {
+  if (!cachedSummariesMap) {
+    const catalogPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
+    const fallbackPath = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
+    const targetPath = fs.existsSync(catalogPath) ? catalogPath : (fs.existsSync(fallbackPath) ? fallbackPath : null);
+    if (targetPath) {
+      try {
+        const data = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+        cachedSummariesMap = new Map(data.map((s: any) => [s.id, s]));
+      } catch (e) {
+        console.error('[SummariesCache] Failed to load catalog:', e);
+      }
+    }
+  }
+  return cachedSummariesMap?.get(id) || null;
+}
+
 app.get('/api/summaries/:id', (req, res) => {
   try {
     const id = req.params.id;
-    const catalogPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
-    if (fs.existsSync(catalogPath)) {
-      const data = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-      const found = data.find((s: any) => s.id === id);
-      if (found) {
-        return res.json({ success: true, summary: found });
-      }
+    const found = getCachedSummaryById(id);
+    if (found) {
+      return res.json({ success: true, summary: found });
     }
     return res.status(404).json({ success: false, error: 'Ders özeti bulunamadı' });
   } catch (err: any) {
@@ -3768,6 +3910,29 @@ TEMEL İLKELER VE YANIT KURALLARI:
       messages: chatHistory
     });
 
+    // Auto-record interaction and create RAG chunk in both Local and Supabase
+    recordAiInteraction({
+      questionId: questionContext.id,
+      committeeId: questionContext.committeeId || committeeName,
+      discipline,
+      topic,
+      interactionType: 'chat_qa',
+      prompt: currentMessage,
+      response: result.text,
+      contextSnapshot: {
+        stem,
+        options,
+        correctAnswer,
+        userAnswer,
+        explanation,
+        slideSnippet: slideSnippet || lectureReference?.matchedSnippet
+      },
+      metadata: {
+        providerUsed: result.providerUsed,
+        model: result.planUsed || model
+      }
+    }).catch((recErr: any) => console.warn('[Auto-Record Chat Interaction] Warning:', recErr.message));
+
     return res.json({
       success: true,
       reply: result.text,
@@ -3885,6 +4050,25 @@ app.post('/api/questions/:id/apply-ai-optimization', async (req, res) => {
     if (!updatedQuestion) {
       return res.status(404).json({ success: false, error: 'Soru bulunamadı.' });
     }
+
+    // Auto-record refinement interaction and create RAG chunk in both Local and Supabase
+    recordAiInteraction({
+      questionId: qId,
+      committeeId: updatedQuestion.committeeId,
+      discipline: optimizedData.discipline || updatedQuestion.discipline,
+      topic: optimizedData.topic || updatedQuestion.topic,
+      interactionType: 'refinement',
+      userId: studentNumber || undefined,
+      userDisplayName: userName || 'Öğrenci (AI Destekli)',
+      prompt: refinementSummary || 'Yapay Zeka ve Amfi Notu Zeminlemesi ile Soru Optimizasyonu',
+      response: optimizedData.explanation || 'Soru kökü ve seçenekler amfi notuna göre güncellendi ve doğrulandı.',
+      contextSnapshot: {
+        stem: optimizedData.stem,
+        options: optimizedData.options,
+        correctAnswer: optimizedData.correctAnswer,
+        confidenceScore: optimizedData.confidenceScore
+      }
+    }).catch((recErr: any) => console.warn('[Auto-Record Refinement Interaction] Warning:', recErr.message));
 
     return res.json({ success: true, question: updatedQuestion });
   } catch (err: any) {
@@ -4138,13 +4322,228 @@ app.get('/api/automation/drive-files-status', (req, res) => {
   }
 });
 
-// Lecture Notes: Get all lecture notes
+// Lecture Notes: Get all lecture notes (supports compact mode and committee filtering for instant loading)
 app.get('/api/lecture-notes', (req, res) => {
   try {
-    const notes = getAllLectureNotes();
+    const { committeeId, discipline, compact } = req.query;
+    let notes = getAllLectureNotes();
+    if (committeeId && typeof committeeId === 'string') {
+      notes = notes.filter(n => n.committeeId === committeeId);
+    }
+    if (discipline && typeof discipline === 'string') {
+      notes = notes.filter(n => n.discipline?.toLowerCase().includes(discipline.toLowerCase()));
+    }
+    if (compact === 'true' || compact === '1') {
+      // Omit full page content to reduce payload from 35MB to <150KB for ultra-fast list loads
+      const compactNotes = notes.map(n => ({
+        id: n.id,
+        committeeId: n.committeeId,
+        title: n.title,
+        discipline: n.discipline,
+        instructor: n.instructor,
+        totalSlides: n.totalSlides || n.pages?.length || 0,
+        source: n.source,
+        filePath: n.filePath,
+        createdAt: n.createdAt,
+        updatedAt: n.updatedAt,
+      }));
+      return res.json(compactNotes);
+    }
     res.json(notes);
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notları yüklenemedi: ' + err.message });
+  }
+});
+
+// Lecture Notes: Get a single lecture note with full slide pages
+app.get('/api/lecture-notes/:id', (req, res) => {
+  try {
+    const { id } = req.params;
+    const notes = getAllLectureNotes();
+    const note = notes.find(n => n.id === id);
+    if (!note) {
+      return res.status(404).json({ error: 'Ders notu bulunamadı' });
+    }
+    res.json(note);
+  } catch (err: any) {
+    res.status(500).json({ error: 'Ders notu alınamadı: ' + err.message });
+  }
+});
+
+// --- RAG System Endpoints (pgvector + Hybrid Search + AI Workflows) ---
+
+// 1. RAG Search: Fast retrieval of reference slides, questions, and transcripts
+app.post('/api/rag/search', async (req, res) => {
+  try {
+    const { query, committeeId, discipline, documentType, limit } = req.body;
+    if (!query || typeof query !== 'string' || !query.trim()) {
+      return res.status(400).json({ error: 'Arama sorgusu (query) gereklidir.' });
+    }
+
+    const { searchRagChunks } = await import('./src/services/ragService.ts');
+    const freeKeys = getTieredGeminiKeys();
+    const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
+
+    const results = await searchRagChunks(query.trim(), activeKey, {
+      committeeId,
+      discipline,
+      documentType,
+      limit: limit ? parseInt(limit, 10) : 5,
+    });
+
+    res.json({ success: true, count: results.length, results });
+  } catch (err: any) {
+    console.error('[RAG Search Error]:', err.message);
+    res.status(500).json({ error: 'RAG arama hatası: ' + err.message });
+  }
+});
+
+// 2. RAG Ask: Ground-truth AI generation for QA, Redaction, Reduction, and Verification
+app.post('/api/rag/ask', async (req, res) => {
+  try {
+    const { query, committeeId, discipline, mode, targetQuestion, limit, customModel } = req.body;
+    if (!query || typeof query !== 'string' || !query.trim()) {
+      return res.status(400).json({ error: 'Sorgu metni (query) gereklidir.' });
+    }
+
+    const { executeRagQuery } = await import('./src/services/ragService.ts');
+    const freeKeys = getTieredGeminiKeys();
+    const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
+    const modelToUse = customModel || 'gemini-3.8-flash';
+
+    const ragResponse = await executeRagQuery(
+      {
+        query: query.trim(),
+        committeeId,
+        discipline,
+        mode: mode || 'qa',
+        targetQuestion,
+        limit: limit ? parseInt(limit, 10) : 4,
+      },
+      activeKey,
+      modelToUse
+    );
+
+    res.json({ success: true, ...ragResponse });
+  } catch (err: any) {
+    console.error('[RAG Ask Error]:', err.message);
+    res.status(500).json({ error: 'RAG yanıt üretme hatası: ' + err.message });
+  }
+});
+
+// 3. RAG Stats: Current indexing and database state
+app.get('/api/rag/stats', async (req, res) => {
+  try {
+    let cloudChunksCount = 0;
+    let cloudAvailable = false;
+
+    if (supabase) {
+      const { count, error } = await supabase
+        .from('rag_chunks')
+        .select('*', { count: 'exact', head: true });
+      if (!error && count !== null) {
+        cloudChunksCount = count;
+        cloudAvailable = true;
+      }
+    }
+
+    const manifestPath = path.resolve(DATA_DIR, 'rag_indexing_manifest.json');
+    let manifestData: any = null;
+    if (fs.existsSync(manifestPath)) {
+      try {
+        manifestData = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+      } catch (e) {}
+    }
+
+    const allNotes = getAllLectureNotes();
+    const pastQuestions = getPastQuestionsDb();
+
+    res.json({
+      success: true,
+      cloudAvailable,
+      cloudChunksCount,
+      localStats: {
+        totalNotes: allNotes.length,
+        totalQuestions: pastQuestions.length,
+        manifestIndexedCount: manifestData?.totalChunksIndexed || 0,
+        lastIndexedAt: manifestData?.lastIndexedAt || null,
+      }
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'RAG istatistikleri alınamadı: ' + err.message });
+  }
+});
+
+// 4. RAG Live Status: Breakdown by document types across local and cloud
+app.get('/api/rag/status', (req, res) => {
+  try {
+    const byType = getChunkCountsByType();
+    const totalLocalChunks = Object.values(byType).reduce((a, b) => a + b, 0);
+    res.json({
+      success: true,
+      totalLocalChunks,
+      byType,
+      timestamp: new Date().toISOString()
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 5. Trigger Full Multi-Modal Chunking & Cloud Sync
+app.post('/api/rag/reindex', async (req, res) => {
+  try {
+    const { syncToCloud = true, limit = 100 } = req.body || {};
+    const result = await runAutoChunking({ syncToCloud, limit });
+    res.json({ success: true, result });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 6. AI Interactions: Get past AI chats and explanations for a question
+app.get('/api/ai/interactions/question/:questionId', (req, res) => {
+  try {
+    const qId = req.params.questionId;
+    const interactions = getInteractionsByQuestion(qId);
+    res.json({ success: true, interactions });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 7. AI Interactions: Save manual interaction / feedback
+app.post('/api/ai/interactions', async (req, res) => {
+  try {
+    const {
+      questionId, committeeId, discipline, topic,
+      interactionType, userId, userDisplayName,
+      prompt, response, contextSnapshot, metadata
+    } = req.body;
+
+    if (!prompt || !response) {
+      return res.status(400).json({ success: false, error: 'Soru ve yanıt alanları zorunludur.' });
+    }
+
+    const { interaction, chunk } = await recordAiInteraction({
+      questionId, committeeId, discipline, topic,
+      interactionType, userId, userDisplayName,
+      prompt, response, contextSnapshot, metadata
+    });
+
+    res.json({ success: true, interaction, chunkId: chunk.id });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 8. AI Interactions: Upvote helpful explanation
+app.post('/api/ai/interactions/:id/upvote', (req, res) => {
+  try {
+    const ok = upvoteAiInteraction(req.params.id);
+    res.json({ success: ok });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
   }
 });
 
@@ -4301,8 +4700,19 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     console.log('[Server] ⚡ Yüksek Hızlı Üretim (Production) modu: dist/ klasörü statik olarak sunuluyor.');
-    app.use('/meds', express.static(path.resolve(__dirname, 'dist')));
-    app.use(express.static(path.resolve(__dirname, 'dist')));
+    const staticOptions = {
+      maxAge: '1y',
+      immutable: true,
+      setHeaders: (res: express.Response, filePath: string) => {
+        if (filePath.endsWith('.html')) {
+          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        } else if (filePath.includes('assets')) {
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        }
+      },
+    };
+    app.use('/meds', express.static(path.resolve(__dirname, 'dist'), staticOptions));
+    app.use(express.static(path.resolve(__dirname, 'dist'), staticOptions));
     app.use('/meds', express.static(path.resolve(__dirname, 'public')));
     app.use(express.static(path.resolve(__dirname, 'public')));
     app.get('*', (req, res) => {
@@ -4314,6 +4724,7 @@ async function startServer() {
       ) {
         return res.status(404).send('Asset not found');
       }
+      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
       res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
     });
   }
@@ -4324,6 +4735,8 @@ async function startServer() {
     startDesktopFolderWatcherAndScheduler(DESKTOP_DATABASE_DIR);
     // Start Supabase Cloud command poller
     startSupabaseCommandPoller();
+    // Initialize Local & Hybrid RAG Engine (49,000+ medical chunks)
+    initLocalRagEngine();
   });
 }
 

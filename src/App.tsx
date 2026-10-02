@@ -62,7 +62,6 @@ const ViewFallback = () => (
   </div>
 );
 import { systemHealthMonitor } from './services/systemHealthMonitor';
-import { REAL_KURUL1_DRIVE_SLIDES } from './services/driveAutomation';
 import { ApiService } from './services/api';
 import { multiDbManager } from './services/multiDbManager';
 import { 
@@ -1495,7 +1494,6 @@ export default function App() {
             onClose={() => setIsNotebookLMModalOpen(false)}
             committee={currentCommittee}
             questions={questions}
-            lectureNotes={REAL_KURUL1_DRIVE_SLIDES.map((s) => ({ ...s, committeeId: selectedCommitteeId }))}
             currentUser={currentUser}
             isAdmin={isAdmin}
             onQuestionsUpdated={fetchQuestions}

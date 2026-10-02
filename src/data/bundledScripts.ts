@@ -60,6 +60,24 @@ export const BUNDLED_PIPELINES: AdminPipelineItem[] = [
 
 export const BUNDLED_SCRIPTS: AdminScriptItem[] = [
   {
+    name: 'transcribe-drive-audio.mjs',
+    title: '🎙️ Tıbbi Amfi Ses Kayıtları Transkripsiyon & Ders Tespiti',
+    category: 'Yapay Zeka & Transkripsiyon',
+    description: 'Google Drive ve yerel amfi ses kayıtlarını Gemini 3.8 Flash ile transkribe eder; müfredat ve ders notlarıyla eşleştirerek doğru ders ve branşı tespit eder.',
+    defaultArgs: '--input="C:\\Users\\indui\\Desktop\\Quick" --model=gemini-3.8-flash --delay=8',
+    tags: ['ses', 'transkript', 'gemini-3.8', 'tıbbi-terminoloji', 'amfi', 'drive'],
+    runtime: 'node',
+  },
+  {
+    name: 'sync-drive-updates.mjs',
+    title: 'Google Drive Güncelleme Tespit & Manuel Senkronizasyon',
+    category: 'Drive & Senkronizasyon',
+    description: 'Drive klasörlerini tarar, yeni/güncellenen ders notları ve çıkmış soruları tespit eder, yerel arşiv ve veritabanına aktarır.',
+    defaultArgs: '--check-only',
+    tags: ['drive', 'güncelleme', 'manuel-senkron', 'ocr', 'delta'],
+    runtime: 'node',
+  },
+  {
     name: 'audit-and-disconnect-faulty-slides.mjs',
     title: 'Slayt Denetim ve Hatalı İlişkileri Kesme',
     category: 'Slayt & Eşleştirme',

@@ -10,8 +10,13 @@ dotenv.config();
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig(({ mode }) => {
+  const isGhPages =
+    process.env.BUILD_TARGET === 'gh-pages' ||
+    process.env.npm_lifecycle_event === 'build:gh-pages' ||
+    process.env.npm_lifecycle_event === 'predeploy';
+
   return {
-    base: mode === 'production' ? '/meds/' : '/',
+    base: process.env.VITE_BASE || (isGhPages ? '/meds/' : '/'),
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co'),
@@ -24,21 +29,57 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      chunkSizeWarningLimit: 1500,
+      chunkSizeWarningLimit: 2500,
       rollupOptions: {
         output: {
+          chunkFileNames: 'assets/chunk-[name]-[hash].js',
+          entryFileNames: 'assets/entry-[name]-[hash].js',
+          assetFileNames: 'assets/asset-[name]-[hash].[ext]',
           manualChunks(id) {
-            if (id.includes('node_modules/firebase')) {
-              return 'vendor-firebase';
+            const normalized = id.replace(/\\/g, '/');
+
+            // 1. External Vendor Code Splitting
+            if (normalized.includes('node_modules')) {
+              if (
+                normalized.includes('/react/') ||
+                normalized.includes('/react-dom/') ||
+                normalized.includes('/scheduler/')
+              ) {
+                return 'vendor-react';
+              }
+              if (
+                normalized.includes('/firebase/') ||
+                normalized.includes('/@firebase/')
+              ) {
+                return 'vendor-firebase';
+              }
+              if (normalized.includes('/@supabase/')) {
+                return 'vendor-supabase';
+              }
+              if (normalized.includes('/@google/genai/')) {
+                return 'vendor-genai';
+              }
+              if (
+                normalized.includes('/jspdf/') ||
+                normalized.includes('/html2canvas/') ||
+                normalized.includes('/dompurify/')
+              ) {
+                return 'vendor-pdf';
+              }
+              if (normalized.includes('/motion/')) {
+                return 'vendor-motion';
+              }
+              if (normalized.includes('/lucide-react/')) {
+                return 'vendor-lucide';
+              }
             }
-            if (id.includes('node_modules/@supabase')) {
-              return 'vendor-supabase';
-            }
-            if (id.includes('node_modules/lucide-react')) {
-              return 'vendor-lucide';
-            }
-            if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-              return 'vendor-react';
+
+            // 2. Local Application Code Splitting (Local Chunklama)
+            if (normalized.includes('/src/data/summaries/')) {
+              const match = normalized.match(/kurul\d+/);
+              if (match) {
+                return `local-data-summaries-${match[0]}`;
+              }
             }
           },
         },

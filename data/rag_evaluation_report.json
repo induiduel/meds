@@ -1,0 +1,220 @@
+{
+  "evaluatedAt": "2026-10-02T09:05:16.250Z",
+  "totalTestCases": 4,
+  "ragSystemStatus": "FUNCTIONAL_AND_VERIFIED",
+  "averageSearchLatencyMs": 3035,
+  "averageRagGenerationLatencyMs": 12189,
+  "totalIndexedChunksAvailable": 49960,
+  "testCases": [
+    {
+      "caseId": "case-1-patoloji",
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tiroid Neoplazmları & Papiller Karsinom",
+      "mode": "reduction",
+      "query": "Papiller tiroid karsinomunun sitolojik/histopatolojik tanı kriterleri, Orphan Annie gözü nükleusları, psammom cisimcikleri ve lenfatik yayılım özellikleri amfi notlarında nasıl geçmektedir?",
+      "metrics": {
+        "retrievalDurationMs": 2779,
+        "ragGenerationDurationMs": 11510,
+        "zeroShotDurationMs": 6673,
+        "referencesCount": 3,
+        "usedModel": "gemini-3.1-flash-lite"
+      },
+      "retrievedSources": [
+        {
+          "type": "lecture_slide",
+          "title": "1. Kurul Sorular",
+          "pageNumber": 3,
+          "discipline": "Tıbbi Patoloji",
+          "snippet": "3 26. Meme dokusundan köken alan tümörler ile ilgili hangisi yanlıştır? a. Memenin en sık görülen benign tümörü fib- roadenomdur. b. Memenin intralobü..."
+        },
+        {
+          "type": "lecture_slide",
+          "title": "İSKENDERUN TİMüdürlüğüne0 (1)_230709_230251",
+          "pageNumber": 40,
+          "discipline": "Tıp Ders Notu",
+          "snippet": "E) Granülom 115) Endokrin neoplazilerle birliktelik gösteren kemik lezyonu hangisidir? A) Enkondrom B) Fibröz Displazi C) Dev hücreli kemik tümörü D) ..."
+        },
+        {
+          "type": "lecture_slide",
+          "title": "Kurul 6 Çıkmışı (düzeltilmiş)_260525_201204",
+          "pageNumber": 7,
+          "discipline": "Tıbbi Biyokimya",
+          "snippet": "Pato 12/14 1. MEN1 in en sık belirtisi nedir? A) tiroid medüller karsinom B) gastrinoma C) insülinoma D) feokromasitoma E) primer hiperparatiroidi 2. ..."
+        }
+      ],
+      "comparison": {
+        "zeroShot": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Papiller tiroid karsinomu (PTK), tiroidin en sık görülen malignitesidir ve sitopatolojik/histopatolojik tanısı oldukça karakteristik bulgulara dayanır. Tıp eğitiminde amfi notlarında ve patoloji derslerinde bu konu genellikle şu başlıklar altında özetlenir:\n\n### 1. Sitolojik ve Histopatolojik Tanı Kriterleri\nPTK tanısında \"altın standart\" nükleer ö...",
+          "hasFacultyCitations": true
+        },
+        "ragAugmented": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Tıp Fakültesi Redüksiyon Uzmanı olarak, Papiller Tiroid Karsinomu (PTC) ile ilgili sınavda hayat kurtaracak \"High-Yield\" bilgileri aşağıda sentezledim.\n\n---\n\n### 1. Papiller Tiroid Karsinomu (PTC): \"Hap Bilgiler\"\n*   **Epidemiyoloji:** Tiroidin en sık görülen malignitesidir. İyonize radyasyon öyküsü ile en güçlü ilişkisi olan tiroid kanseridir.\n*  ...",
+          "hasFacultyCitations": true,
+          "citedSlideCount": 3,
+          "citedPastQuestionCount": 0
+        },
+        "keyDifferences": [
+          "Fakülte Zeminlemesi: Zero-shot genel ansiklopedik bilgi verirken RAG, Dönem 3 kurul amfi slaytlarını ve geçmiş çıkmışları referans aldı.",
+          "Sınav İpuçları & Tuzaklar: RAG yanıtı fakülte hocasının özellikle sorduğu çeldirici ayrımını (Örn: Tıbbi Patoloji) doğrudan vurguladı.",
+          "Alıntı Güvenirliği: RAG doğrudan 3 adet doğrulanmış yerel parça ile desteklendi."
+        ]
+      }
+    },
+    {
+      "caseId": "case-2-farmakoloji",
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Asetaminofen Toksisitesi & Antidot Mekanizması",
+      "mode": "qa",
+      "query": "Asetaminofen (parasetamol) intoksikasyonunda hepatotoksisiteden sorumlu reaktif toksik metabolit hangisidir ve antidot olarak N-asetilsistein (NAC) hangi mekanizmayla koruma sağlar?",
+      "metrics": {
+        "retrievalDurationMs": 2328,
+        "ragGenerationDurationMs": 13254,
+        "zeroShotDurationMs": 4117,
+        "referencesCount": 3,
+        "usedModel": "gemini-3.1-flash-lite"
+      },
+      "retrievedSources": [
+        {
+          "type": "past_question",
+          "title": "Tıbbi Farmakoloji - TOKSIK HÜCRE HASARI",
+          "pageNumber": 1,
+          "discipline": "Tıbbi Farmakoloji",
+          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Farmakoloji Kurul: donem3-kurul1 Sınav Yılı: 2021-2022 Konu: TOKSIK HÜCRE HASARI Soru: Parasetamol (asetamin..."
+        },
+        {
+          "type": "past_question",
+          "title": "Tıbbi Farmakoloji - Tıbbi Farmakoloji Çıkmış Sorusu",
+          "pageNumber": 42,
+          "discipline": "Tıbbi Farmakoloji",
+          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Farmakoloji Kurul: donem3-kurul1 Sınav Yılı: 2021-2022 Konu: Tıbbi Farmakoloji Çıkmış Sorusu Soru: Aşağıdaki..."
+        },
+        {
+          "type": "past_question",
+          "title": "Tıbbi Farmakoloji - Tıbbi Farmakoloji Çıkmış Sorusu",
+          "pageNumber": 60,
+          "discipline": "Tıbbi Farmakoloji",
+          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Farmakoloji Kurul: donem3-kurul1 Sınav Yılı: 2021-2022 Konu: Tıbbi Farmakoloji Çıkmış Sorusu Soru: Aşağıdaki..."
+        }
+      ],
+      "comparison": {
+        "zeroShot": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Asetaminofen (parasetamol) intoksikasyonu, klinik toksikolojide oldukça iyi tanımlanmış bir mekanizmaya sahiptir. Sorularınızı tıbbi bilgilerim ışığında şu şekilde yanıtlayabilirim:\n\n### 1. Hepatotoksisiteden Sorumlu Reaktif Metabolit\nAsetaminofen normal dozlarda karaciğerde glukuronidasyon ve sülfatasyon yollarıyla metabolize edilerek vücuttan atı...",
+          "hasFacultyCitations": false
+        },
+        "ragAugmented": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Asetaminofen (parasetamol) intoksikasyonunda hepatotoksisite mekanizması ve N-asetilsistein (NAC) kullanımı ile ilgili bilgiler aşağıda özetlenmiştir:\n\n### 1. Hepatotoksik Metabolit: NAPQI\nAsetaminofen, terapötik dozlarda büyük oranda glukuronidasyon ve sülfasyon yollarıyla metabolize edilerek vücuttan atılır. Ancak ilacın küçük bir kısmı, sitokrom...",
+          "hasFacultyCitations": true,
+          "citedSlideCount": 0,
+          "citedPastQuestionCount": 3
+        },
+        "keyDifferences": [
+          "Fakülte Zeminlemesi: Zero-shot genel ansiklopedik bilgi verirken RAG, Dönem 3 kurul amfi slaytlarını ve geçmiş çıkmışları referans aldı.",
+          "Sınav İpuçları & Tuzaklar: RAG yanıtı fakülte hocasının özellikle sorduğu çeldirici ayrımını (Örn: Tıbbi Farmakoloji) doğrudan vurguladı.",
+          "Alıntı Güvenirliği: RAG doğrudan 3 adet doğrulanmış yerel parça ile desteklendi."
+        ]
+      }
+    },
+    {
+      "caseId": "case-3-mikrobiyoloji",
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "Akut Bakteriyel Menenjit Etkenleri ve BOS Bulguları",
+      "mode": "reduction",
+      "query": "Yenidoğan, çocuk ve erişkinlerde akut pürülan bakteriyel menenjitin en sık etkenleri nelerdir ve tipik BOS incelemesinde basınç, protein, glukoz (BOS/kan) ve hücre profili nasıldır?",
+      "metrics": {
+        "retrievalDurationMs": 5568,
+        "ragGenerationDurationMs": 18568,
+        "zeroShotDurationMs": 7389,
+        "referencesCount": 3,
+        "usedModel": "gemini-3.1-flash-lite"
+      },
+      "retrievedSources": [
+        {
+          "type": "lecture_slide",
+          "title": "DOC-20251017-WA0012.",
+          "pageNumber": 11,
+          "discipline": "Tıp Ders Notu",
+          "snippet": "• Akut inflamasyonun başlıca 2 bileşeni vardır: • 1. Vasküler değişiklikler: • -Vazodilatasyon • -Geçirgenlik (permeabilite) artışı • -Endotel hücre a..."
+        },
+        {
+          "type": "lecture_slide",
+          "title": "Untitled",
+          "pageNumber": 6,
+          "discipline": "Tıp Ders Notu",
+          "snippet": "5  Kronik kurşun zehirlenmesi 17  Çocuk sağ ve hast Çocuk sağ ve hast Çocukluk çağı anemilerine yaklaşım Osmotik frajilite testi hangi hastalığın ayır..."
+        },
+        {
+          "type": "lecture_slide",
+          "title": "Untitled",
+          "pageNumber": 7,
+          "discipline": "Tıp Ders Notu",
+          "snippet": "indexi<13, RBC(kırmızı kan hücre)>5x10⁶ 5  MCV(OEH)>80!, MCHB(OEHb)>27pg, RDW Normal, Mentzer indexi>13, RBC(kırmızı kan hücre)<5x10⁶ 20  Enfeksiyon h..."
+        }
+      ],
+      "comparison": {
+        "zeroShot": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Akut pürülan bakteriyel menenjit, merkezi sinir sisteminin acil ve hayatı tehdit eden bir enfeksiyonudur. Yaş gruplarına göre etkenler ve tipik beyin omurilik sıvısı (BOS) bulguları aşağıda özetlenmiştir:\n\n### 1. Yaş Gruplarına Göre En Sık Etkenler\n\nBakteriyel menenjit etkenleri, hastanın bağışıklık durumu ve yaş grubuna göre değişiklik gösterir:\n\n...",
+          "hasFacultyCitations": false
+        },
+        "ragAugmented": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Akut pürülan bakteriyel menenjit, tıp fakültesi sınavlarının ve klinik pratiğin en kritik konularından biridir. Sağladığınız kaynaklar genel enfeksiyon prensiplerini içerse de, bakteriyel menenjit için güncel literatür (Nelson, Harrison) ışığında \"Yüksek Verimli (High-Yield)\" bilgileri aşağıda sentezledim.\n\n### 1. Yaş Gruplarına Göre En Sık Etkenle...",
+          "hasFacultyCitations": true,
+          "citedSlideCount": 3,
+          "citedPastQuestionCount": 0
+        },
+        "keyDifferences": [
+          "Fakülte Zeminlemesi: Zero-shot genel ansiklopedik bilgi verirken RAG, Dönem 3 kurul amfi slaytlarını ve geçmiş çıkmışları referans aldı.",
+          "Sınav İpuçları & Tuzaklar: RAG yanıtı fakülte hocasının özellikle sorduğu çeldirici ayrımını (Örn: Tıbbi Mikrobiyoloji) doğrudan vurguladı.",
+          "Alıntı Güvenirliği: RAG doğrudan 3 adet doğrulanmış yerel parça ile desteklendi."
+        ]
+      }
+    },
+    {
+      "caseId": "case-4-redact",
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Beta Blokerler & Astım Kontrendikasyonu",
+      "mode": "redact",
+      "query": "Öğrencinin eksik hatırladığı soru taslağını amfi slaytları ve çıkmış sorularla tam 5 seçenekli bir sınav sorusuna dönüştür.",
+      "metrics": {
+        "retrievalDurationMs": 1465,
+        "ragGenerationDurationMs": 5425,
+        "zeroShotDurationMs": 4961,
+        "referencesCount": 1,
+        "usedModel": "gemini-3.1-flash-lite"
+      },
+      "retrievedSources": [
+        {
+          "type": "past_question",
+          "title": "Tıbbi Farmakoloji - Tıbbi Patoloji Çıkmış Sorusu",
+          "pageNumber": 20,
+          "discipline": "Tıbbi Farmakoloji",
+          "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Farmakoloji Kurul: donem3-kurul2 Sınav Yılı: Geçmiş Yıllar Çıkmışı (Arşiv) Konu: Tıbbi Patoloji Çıkmış Sorus..."
+        }
+      ],
+      "comparison": {
+        "zeroShot": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Bir tıp uzmanı olarak, sunduğunuz ham veriyi klinik bir vaka senaryosu ile zenginleştirerek, uzmanlık sınavı (TUS) veya tıp fakültesi düzeyinde bir soru formatına dönüştürdüm:\n\n---\n\n### **Soru:**\n\n55 yaşında, bilinen hipertansiyon ve bronşiyal astım tanısı olan erkek hasta, rutin kontrolü için polikliniğe başvuruyor. Hastanın mevcut antihipertansif...",
+          "hasFacultyCitations": false
+        },
+        "ragAugmented": {
+          "model": "gemini-3.1-flash-lite",
+          "excerpt": "Tıp Fakültesi Soru Redaksiyon ve Doğrulama Uzmanı olarak, ilettiğiniz ham veriyi farmakoloji ders notları ve klinik kılavuzlar (GINA rehberi ve temel farmakoloji prensipleri) ışığında, sınav formatına uygun şekilde yeniden yapılandırdım.\n\n---\n\n### **Redakte Edilmiş Soru**\n\n**Soru:** Bronşiyal astım tanısı ile takip edilen ve hipertansiyon nedeniyle...",
+          "hasFacultyCitations": true,
+          "citedSlideCount": 0,
+          "citedPastQuestionCount": 1
+        },
+        "keyDifferences": [
+          "Fakülte Zeminlemesi: Zero-shot genel ansiklopedik bilgi verirken RAG, Dönem 3 kurul amfi slaytlarını ve geçmiş çıkmışları referans aldı.",
+          "Sınav İpuçları & Tuzaklar: RAG yanıtı fakülte hocasının özellikle sorduğu çeldirici ayrımını (Örn: Tıbbi Farmakoloji) doğrudan vurguladı.",
+          "Alıntı Güvenirliği: RAG doğrudan 1 adet doğrulanmış yerel parça ile desteklendi."
+        ]
+      }
+    }
+  ]
+}

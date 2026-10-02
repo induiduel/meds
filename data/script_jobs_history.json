@@ -1,5 +1,18 @@
 [
   {
+    "id": "job_1790924042173_2jkvq",
+    "name": "sync-drive-updates.mjs",
+    "type": "single",
+    "args": "--scope=exams --requested-by=nofrostlife@gmail.com",
+    "status": "completed",
+    "startedAt": "2026-10-02T06:54:02.174Z",
+    "completedAt": "2026-10-02T06:54:28.161Z",
+    "durationMs": 25981,
+    "exitCode": 0,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[09:54:27] 💾 [ADIM 4] Veritabanı ve Havuz Güncelleniyor...\n[09:54:28]    ✓ Ders notları data/lecture_notes.json güncellendi (Toplam: 878)\n[09:54:28] ===========================================================================\n[09:54:28]   🎉 MANUEL GOOGLE DRIVE GÜNCELLEMESİ BAŞARIYLA TAMAMLANDI!\n[09:54:28]   - İndirilen Dosya Sayısı      : 0\n[09:54:28]   - Eklenen Yeni Soru Sayısı    : 0\n[09:54:28]   - Güncellenen Ders Notu Sayısı: 0\n[09:54:28] ===========================================================================\n[09:54:28] ------------------------------------------------------------\n[09:54:28] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 26.0 sn."
+  },
+  {
     "id": "job_1790918204956_7y3m8",
     "name": "self-healing-auditor.mjs",
     "type": "single",
@@ -10,7 +23,7 @@
     "durationMs": 244,
     "exitCode": 0,
     "requestedBy": "nofrostlife@gmail.com",
-    "logSummary": "[08:16:44] ------------------------------------------------------------\n[08:16:45] 🛡️ [MedSoru Otonom Denetleyici] Sistem sağlığı ve veri bütünlüğü taranıyor...\n[08:16:45] 📊 Denetim Bulguları:\n[08:16:45]   - İncelenen Toplam Soru: 2162\n[08:16:45]   - Şüpheli/Hatalı Soru Dosyası Eşleşmesi: 0\n[08:16:45]   - Disiplin Uyuşmazlığı (Farmakoloji-Patoloji): 0\n[08:16:45]   - Cevap Belirtilmemiş Soru: 25\n[08:16:45] ✅ [Otonom Denetleyici] Rapor kaydedildi: C:\\Users\\indui\\Desktop\\meds\\data\\self_healing_health_status.json\n[08:16:45] ------------------------------------------------------------\n[08:16:45] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 0.2 sn."
+    "logSummary": ""
   },
   {
     "id": "pipe_1790902653689_fg0y5",
@@ -22,7 +35,7 @@
     "durationMs": 113084,
     "exitCode": 0,
     "requestedBy": "nofrostlife@gmail.com",
-    "logSummary": "[03:59:26]   [STDERR]   ⚠️ Parti aktarım hatası [50-100]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[03:59:26]   [STDERR]   ⚠️ Parti aktarım hatası [100-121]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[03:59:26]   =============================================\n[03:59:26]   🎉 [Bulu Senkronizasyonu Tamamlandı]\n[03:59:26]   📊 Toplam Aktarılan Çıkmış Soru: 3094\n[03:59:26]   📊 Toplam Aktarılan Canlı Soru: 1\n[03:59:26]   =============================================\n[03:59:26] ✓ [Adım Tamamlandı]: 3. Buluta Aktar\n[03:59:26] ============================================================\n[03:59:26] 🎉 [PIPELINE BAŞARIYLA TAMAMLANDI] Toplam Süre: 113.1 sn."
+    "logSummary": ""
   },
   {
     "id": "pipe_1790896643132_28vao",
@@ -34,7 +47,7 @@
     "durationMs": 620249,
     "exitCode": 0,
     "requestedBy": "nofrostlife@gmail.com",
-    "logSummary": "[02:27:43]   [STDERR]   ⚠️ Parti aktarım hatası [50-100]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:27:43]   [STDERR]   ⚠️ Parti aktarım hatası [100-121]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:27:43]   =============================================\n[02:27:43]   🎉 [Bulu Senkronizasyonu Tamamlandı]\n[02:27:43]   📊 Toplam Aktarılan Çıkmış Soru: 2830\n[02:27:43]   📊 Toplam Aktarılan Canlı Soru: 1\n[02:27:43]   =============================================\n[02:27:43] ✓ [Adım Tamamlandı]: 3. Buluta Aktar\n[02:27:43] ============================================================\n[02:27:43] 🎉 [PIPELINE BAŞARIYLA TAMAMLANDI] Toplam Süre: 620.2 sn."
+    "logSummary": ""
   },
   {
     "id": "pipe_1790896620339_naz2j",
@@ -46,7 +59,7 @@
     "durationMs": 473037,
     "exitCode": 0,
     "requestedBy": "nofrostlife@gmail.com",
-    "logSummary": "[02:24:53]   [STDERR]   ⚠️ Parti aktarım hatası [50-100]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:24:53]   [STDERR]   ⚠️ Parti aktarım hatası [100-121]: ON CONFLICT DO UPDATE command cannot affect row a second time\n[02:24:53]   =============================================\n[02:24:53]   🎉 [Bulu Senkronizasyonu Tamamlandı]\n[02:24:53]   📊 Toplam Aktarılan Çıkmış Soru: 2830\n[02:24:53]   📊 Toplam Aktarılan Canlı Soru: 1\n[02:24:53]   =============================================\n[02:24:53] ✓ [Adım Tamamlandı]: 2. Buluta Yükle\n[02:24:53] ============================================================\n[02:24:53] 🎉 [PIPELINE BAŞARIYLA TAMAMLANDI] Toplam Süre: 473.0 sn."
+    "logSummary": ""
   },
   {
     "id": "job_1790895893436_xyxp7",
@@ -59,7 +72,7 @@
     "durationMs": 78,
     "exitCode": 0,
     "requestedBy": "admin",
-    "logSummary": "[02:04:53]        Comm: donem3-kurul1 | Disc: FTR\n[02:04:53]        Sample: Aşağıdakilerden hangisi derin ısıtıcı tedavidir? a) Kısa dalga diatermi b) Hot pack c) Wh...\n[02:04:53] [   3] Kurul I Cevap Anahtarı.pdf\n[02:04:53]        Comm: donem3-kurul1 | Disc: Patoloji\n[02:04:53]        Sample: E D C E ÇOCUK SAĞLIĞI VE HASTALIKLARI...\n[02:04:53] [   1] Kurul I Sınavı.pdf\n[02:04:53]        Comm: donem3-kurul1 | Disc: Genel Tıp\n[02:04:53]        Sample: Etkileşimi ve advers etkileri aşağıda sıralanmış tetrasiklinler için hangisi/hangileri doğ...\n[02:04:53] ------------------------------------------------------------\n[02:04:53] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 0.1 sn."
+    "logSummary": ""
   },
   {
     "id": "job_1790895370134_s8wgf",

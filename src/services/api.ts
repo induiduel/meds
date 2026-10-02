@@ -232,7 +232,16 @@ export async function safeJsonFetch<T = any>(
   init?: RequestInit
 ): Promise<{ ok: boolean; status: number; data?: T; error?: string }> {
   try {
-    const res = await fetch(input, init);
+    let resolvedInput = input;
+    if (typeof input === 'string' && input.startsWith('/')) {
+      const customUrl = getCustomApiUrl();
+      const isRemoteHost = typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+      const base = customUrl || (isRemoteHost ? 'http://localhost:3000' : '');
+      if (base) {
+        resolvedInput = `${base.replace(/\/$/, '')}${input}`;
+      }
+    }
+    const res = await fetch(resolvedInput, init);
     const contentType = res.headers.get('content-type') || '';
     if (!res.ok) {
       let errMsg = `HTTP ${res.status}`;
@@ -2893,6 +2902,102 @@ YALNIZCA GEÇERLİ JSON DÖN:
   },
 
   // -------------------------------------------------------------
+  // Google Drive Manual Update & Sync Management
+  // -------------------------------------------------------------
+  async getDriveSyncSettings(adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; settings: DriveSyncSettings }> {
+    const res = await safeJsonFetch<any>('/api/admin/drive/settings', {
+      headers: {
+        'x-admin-email': adminEmail || ADMIN_EMAIL,
+      },
+    });
+    if (res.ok && res.data?.settings) return { success: true, settings: res.data.settings };
+    return {
+      success: false,
+      settings: {
+        autoSyncEnabled: false,
+        syncInterval: '18:00',
+        preferredScope: 'all',
+        customFolderId: '',
+        notifyOnUpdate: true,
+      }
+    };
+  },
+
+  async saveDriveSyncSettings(settings: Partial<DriveSyncSettings>, adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; message: string; settings?: DriveSyncSettings }> {
+    const res = await safeJsonFetch<any>('/api/admin/drive/settings', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': adminEmail || ADMIN_EMAIL,
+      },
+      body: JSON.stringify({ ...settings, adminEmail: adminEmail || ADMIN_EMAIL }),
+    });
+    if (res.ok) return { success: true, message: res.data?.message || 'Ayarlar kaydedildi.', settings: res.data?.settings };
+    return { success: false, message: res.data?.error || 'Ayarlar kaydedilemedi.' };
+  },
+
+  async getDriveCheckResult(adminEmail: string = ADMIN_EMAIL): Promise<{ success: boolean; result: DriveCheckResult | null }> {
+    const res = await safeJsonFetch<any>('/api/admin/drive/check-results', {
+      headers: {
+        'x-admin-email': adminEmail || ADMIN_EMAIL,
+      },
+    });
+    if (res.ok) return { success: true, result: res.data?.result || null };
+    return { success: false, result: null };
+  },
+
+  async checkDriveUpdates(options: { scope?: string; folderId?: string; adminEmail?: string } = {}): Promise<{
+    success: boolean;
+    result: DriveCheckResult | null;
+    output?: string;
+    message: string;
+  }> {
+    const email = options.adminEmail || ADMIN_EMAIL;
+    const res = await safeJsonFetch<any>('/api/admin/drive/check-updates', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': email,
+      },
+      body: JSON.stringify({ ...options, adminEmail: email }),
+    });
+    if (res.ok) {
+      return {
+        success: res.data?.success !== false,
+        result: res.data?.result || null,
+        output: res.data?.output,
+        message: res.data?.message || 'Kontrol tamamlandı.',
+      };
+    }
+    return {
+      success: false,
+      result: null,
+      message: res.data?.error || res.error || 'Drive kontrolü başarısız oldu.',
+    };
+  },
+
+  async triggerManualDriveSync(options: {
+    scope?: string;
+    folderId?: string;
+    force?: boolean;
+    adminEmail?: string;
+  } = {}): Promise<{ success: boolean; jobId?: string; message: string }> {
+    const email = options.adminEmail || ADMIN_EMAIL;
+    const res = await safeJsonFetch<any>('/api/admin/drive/manual-sync', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': email,
+      },
+      body: JSON.stringify({ ...options, adminEmail: email }),
+    });
+    if (res.ok && res.data?.success) {
+      return { success: true, jobId: res.data.jobId, message: res.data.message };
+    }
+    return { success: false, message: res.data?.error || res.error || 'Senkronizasyon başlatılamadı.' };
+  },
+
+  // -------------------------------------------------------------
   // Dynamic Admin Scripts & Automations
   // -------------------------------------------------------------
   async getScriptsList(): Promise<{
@@ -3115,6 +3220,54 @@ TALİMATLAR:
       error: serverErrorMsg || 'Yapay zeka asistanına ulaşılamadı.'
     };
   },
+
+  async getQuestionAiInteractions(questionId: string): Promise<any[]> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/ai/interactions/question/${questionId}` : `/api/ai/interactions/question/${questionId}`;
+      const res = await safeJsonFetch<{ success: boolean; interactions: any[] }>(endpoint);
+      return res.ok && res.data?.success && Array.isArray(res.data.interactions) ? res.data.interactions : [];
+    } catch (_) {
+      return [];
+    }
+  },
+
+  async upvoteAiInteraction(interactionId: string): Promise<boolean> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/ai/interactions/${interactionId}/upvote` : `/api/ai/interactions/${interactionId}/upvote`;
+      const res = await safeJsonFetch<{ success: boolean }>(endpoint, { method: 'POST' });
+      return Boolean(res.ok && res.data?.success);
+    } catch (_) {
+      return false;
+    }
+  },
+
+  async getRagStatus(): Promise<any> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/rag/status` : `/api/rag/status`;
+      const res = await safeJsonFetch<any>(endpoint);
+      return res.ok && res.data?.success ? res.data : null;
+    } catch (_) {
+      return null;
+    }
+  },
+
+  async reindexRag(syncToCloud: boolean = true): Promise<any> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/rag/reindex` : `/api/rag/reindex`;
+      const res = await safeJsonFetch<any>(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ syncToCloud })
+      });
+      return res.ok && res.data?.success ? res.data : null;
+    } catch (_) {
+      return null;
+    }
+  },
 };
 
 export interface QuestionChatContext {
@@ -3182,5 +3335,33 @@ export interface AdminScriptJob {
   logs?: string[];
   lastLog?: string;
   requestedBy?: string;
+}
+
+export interface DriveSyncSettings {
+  autoSyncEnabled: boolean;
+  syncInterval: 'manual' | '15m' | '30m' | '1h' | '18:00';
+  preferredScope: 'all' | 'lectures' | 'exams' | 'custom';
+  customFolderId: string;
+  notifyOnUpdate: boolean;
+  lastCheckedAt?: string | null;
+  lastSyncedAt?: string | null;
+  lastSyncedSummary?: string;
+}
+
+export interface DriveCheckResult {
+  checkedAt: string;
+  scope: string;
+  customFolderId?: string | null;
+  totalScanned: number;
+  upToDateCount: number;
+  newCount: number;
+  hasUpdates: boolean;
+  newFiles: Array<{
+    name: string;
+    fullPath: string;
+    type: 'exam' | 'lecture';
+    committeeId: string;
+    status: string;
+  }>;
 }
 

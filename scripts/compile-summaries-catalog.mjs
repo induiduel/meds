@@ -150,6 +150,18 @@ function normalizeMarkdown(content) {
     fs.writeFileSync(OUT_SRC_PATH, jsonStr, 'utf8');
   }
 
+  // 3. Local committee chunks (kurul 1-6) for fast code-split client loading
+  const summariesDir = path.join(ROOT_DIR, 'src', 'data', 'summaries');
+  if (!fs.existsSync(summariesDir)) {
+    fs.mkdirSync(summariesDir, { recursive: true });
+  }
+  for (let k = 1; k <= 6; k++) {
+    const kList = summaries.filter(s => s.kurul === k || s.committeeId === `donem3-kurul${k}`);
+    const kPath = path.join(summariesDir, `kurul${k}.json`);
+    fs.writeFileSync(kPath, JSON.stringify(kList), 'utf8');
+  }
+  console.log(`💾 Yerel kurul özet parçaları oluşturuldu (src/data/summaries/kurul1..6.json)`);
+
   console.log(`💾 Hafif meta listesi kaydedildi: ${metaPath} (${(fs.statSync(metaPath).size / 1024).toFixed(1)} KB)`);
   console.log(`💾 Tam katalog kaydedildi: ${OUT_SRC_PATH}`);
   return summaries;

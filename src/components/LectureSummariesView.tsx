@@ -113,15 +113,39 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       }
     } catch (_) {}
 
-    // 2. Fallback to dynamic full import for GitHub Pages / offline
+    // 2. Fallback to dynamic per-committee chunk import for GitHub Pages / offline
     try {
-      const fullMod = await import('../data/lectureSummariesCatalog.json');
-      const found = (fullMod.default || fullMod).find((s: any) => s.id === meta.id);
+      let kurulMod: any;
+      switch (meta.kurul) {
+        case 1:
+          kurulMod = await import('../data/summaries/kurul1.json');
+          break;
+        case 2:
+          kurulMod = await import('../data/summaries/kurul2.json');
+          break;
+        case 3:
+          kurulMod = await import('../data/summaries/kurul3.json');
+          break;
+        case 4:
+          kurulMod = await import('../data/summaries/kurul4.json');
+          break;
+        case 5:
+          kurulMod = await import('../data/summaries/kurul5.json');
+          break;
+        case 6:
+          kurulMod = await import('../data/summaries/kurul6.json');
+          break;
+        default:
+          kurulMod = await import('../data/summaries/kurul1.json');
+          break;
+      }
+      const list = (kurulMod && (kurulMod.default || kurulMod)) || [];
+      const found = list.find((s: any) => s.id === meta.id);
       if (found && found.content) {
         setActiveSummary(found);
       }
     } catch (e) {
-      console.warn('Could not load full summary content:', e);
+      console.warn('Could not load summary content from committee chunk:', e);
     } finally {
       setIsLoadingContent(false);
     }

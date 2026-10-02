@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build",
-    "predeploy": "npm run build",
+    "build:gh-pages": "vite build",
+    "predeploy": "npm run build:gh-pages",
     "deploy": "gh-pages -d dist",
     "start": "tsx server.ts",
     "preview": "vite preview",
@@ -23,7 +24,10 @@
     "slides:sync": "node scripts/manage-slide-relations.mjs --all",
     "slides:stats": "node scripts/manage-slide-relations.mjs --stats",
     "check:updates": "node scripts/detect-database-updates.mjs",
-    "sync:updates": "node scripts/detect-database-updates.mjs --sync"
+    "sync:updates": "node scripts/detect-database-updates.mjs --sync",
+    "transcribe:audio": "node scripts/transcribe-drive-audio.mjs",
+    "rag:index": "node scripts/index-rag-knowledge.mjs",
+    "rag:index:all": "node scripts/index-rag-knowledge.mjs --limit 10000"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

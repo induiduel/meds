@@ -1,140 +1,2857 @@
 {
-  "lastRun": "2026-10-02T00:58:41.324Z",
-  "totalChecked": 15,
-  "verifiedCount": 10,
-  "suspectCount": 5,
+  "lastRun": "2026-10-02T06:51:42.105Z",
+  "totalChecked": 305,
+  "verifiedCount": 191,
+  "suspectCount": 114,
   "reports": [
     {
-      "id": "d3-k1-enf-001",
-      "questionNumber": 1,
+      "id": "d3-k1-enf-016",
+      "questionNumber": 16,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "EPIDEMIYOLOJI TEMEL KAVRAMLARI",
-      "decision": "VERIFIED",
-      "overallMatchPercent": 97,
-      "isSuspect": false
-    },
-    {
-      "id": "d3-k1-enf-002",
-      "questionNumber": 2,
-      "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "EPIDEMIYOLOJI TEMEL KAVRAMLARI",
-      "decision": "VERIFIED",
-      "overallMatchPercent": 90,
-      "isSuspect": false
-    },
-    {
-      "id": "d3-k1-enf-003",
-      "questionNumber": 3,
-      "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "GENEL KAVRAMLAR",
+      "topic": "CINSEL YOLLA BULAŞAN HASTALIKLARIN EPIDEMIYOLOJISI",
       "decision": "SUSPECT",
-      "overallMatchPercent": 57,
+      "overallMatchPercent": 52,
       "isSuspect": true
     },
     {
-      "id": "d3-k1-enf-004",
-      "questionNumber": 4,
+      "id": "d3-k1-enf-017",
+      "questionNumber": 17,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "BULAŞMA YOLLARI",
-      "decision": "SUSPECT",
-      "overallMatchPercent": 55,
-      "isSuspect": true
+      "topic": "GONOKOKSIK ENFEKSIYONLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-005",
-      "questionNumber": 5,
+      "id": "d3-k1-enf-018",
+      "questionNumber": 18,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "BULAŞMA YOLLARI",
+      "topic": "ÜRETRIT / SERVISIT",
       "decision": "VERIFIED",
       "overallMatchPercent": 95,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-006",
-      "questionNumber": 6,
+      "id": "d3-k1-enf-019",
+      "questionNumber": 19,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "GENEL KAVRAMLAR",
+      "topic": "SIFILIZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 96,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-020",
+      "questionNumber": 20,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "SIFILIZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95.5,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-021",
+      "questionNumber": 21,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "SIFILIZ",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-022",
+      "questionNumber": 22,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "GENITAL ENFEKSIYONLAR (BAKTERIYEL VA JINOZIS)",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 53,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-023",
+      "questionNumber": 23,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "GENITAL ÜLSER HASTALIKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 98,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-024",
+      "questionNumber": 24,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "ÜRETRIT ETKENLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-025",
+      "questionNumber": 25,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "SERVISIT",
       "decision": "VERIFIED",
       "overallMatchPercent": 100,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-007",
-      "questionNumber": 7,
+      "id": "d3-k1-enf-026",
+      "questionNumber": 26,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "BULAŞMA YOLLARI",
+      "topic": "ÜRETRIT KOMPLIKASYONLARI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-027",
+      "questionNumber": 27,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ÜRETRIT",
       "decision": "VERIFIED",
       "overallMatchPercent": 90,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-008",
-      "questionNumber": 8,
+      "id": "d3-k1-enf-028",
+      "questionNumber": 28,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "KAN ÜRÜNLERI VE TARAMA",
+      "topic": "ÜRETRIT / SERVISIT",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 96,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-029",
+      "questionNumber": 29,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "GENEL CYBE",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 70,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-030",
+      "questionNumber": 30,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "EPIDIDIMIT / ORŞIT",
       "decision": "VERIFIED",
       "overallMatchPercent": 100,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-009",
-      "questionNumber": 9,
+      "id": "d3-k1-enf-031",
+      "questionNumber": 31,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "EPIDIDIMIT / PROSTATIT",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-032",
+      "questionNumber": 32,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "STANDART VE GENEL İZOLASYON İLKELERI",
+      "topic": "HIV PATOFIZYOLOJISI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-033",
+      "questionNumber": 33,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "AIDS TANIMLAYAN DURUMLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-034",
+      "questionNumber": 34,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "AKUT HIV ENFEKSIYONU",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-035",
+      "questionNumber": 35,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "HIV BULAŞI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-036",
+      "questionNumber": 36,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ANNEDEN BEBEĞE HIV BULAŞI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-037",
+      "questionNumber": 37,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "HIV YÖNETIMI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-038",
+      "questionNumber": 38,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "AIDS TANIMLAYAN KANSERLER",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-039",
+      "questionNumber": 39,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "ÜSE MIKROBIYOLOJISI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-040",
+      "questionNumber": 40,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ASEMPTOMATIK BAKTERIÜRI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-041",
+      "questionNumber": 41,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ASEMPTOMATIK BAKTERIÜRI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 78,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-042",
+      "questionNumber": 42,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "KOMPLIKE ÜSE",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-043",
+      "questionNumber": 43,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ÜSE SINIFLAMASI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 70,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-044",
+      "questionNumber": 44,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ÜSE TANISI (LABORATUVAR)",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-045",
+      "questionNumber": 45,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "ÜSE TANISI (LABORATUVAR)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-046",
+      "questionNumber": 46,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "ASEMPTOMATIK BAKTERIÜRI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-047",
+      "questionNumber": 47,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "KADINLARDA ÜSE RISK FAKTÖRLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-048",
+      "questionNumber": 48,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "KADINLARDA ÜSE RISK FAKTÖRLERI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-049",
+      "questionNumber": 49,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "ÜSE MIKROBIYOLOJISI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 70,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-050",
+      "questionNumber": 50,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ÜSE NÜKSÜ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-051",
+      "questionNumber": 51,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ÜRINER TÜBERKÜLOZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-052",
+      "questionNumber": 52,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "ÜSE VE GÖRÜNTÜLEME",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-053",
+      "questionNumber": 53,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "PROSTATIT",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-054",
+      "questionNumber": 54,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "FEBRIL NÖTROPENI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-055",
+      "questionNumber": 55,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "SEKONDER İMMÜN YETMEZLIK",
       "decision": "SUSPECT",
       "overallMatchPercent": 54,
       "isSuspect": true
     },
     {
-      "id": "d3-k1-enf-010",
-      "questionNumber": 10,
+      "id": "d3-k1-enf-056",
+      "questionNumber": 56,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "TEMAS İZOLASYONU",
+      "topic": "İMMÜNSÜPRESIF HASTALARDA ENFEKSIYON PATERNLERI",
       "decision": "VERIFIED",
       "overallMatchPercent": 90,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-011",
-      "questionNumber": 11,
+      "id": "d3-k1-enf-057",
+      "questionNumber": 57,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "TOKSOPLAZMOZ VE GEBELIK",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95.5,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-058",
+      "questionNumber": 58,
       "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "İZOLASYON İŞARETLERI",
+      "topic": "İNTRAUTERIN ENFEKSIYONLAR",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 20,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-059",
+      "questionNumber": 59,
+      "discipline": "Enfeksiyon Hastalıkları",
+      "topic": "İNTRAUTERIN ENFEKSIYONLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-enf-060",
+      "questionNumber": 60,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "AKILCI ANTIBIYOTIK KULLANIMI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 54,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-enf-061",
+      "questionNumber": 61,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "DOĞAL ANTIBIYOTIK DIRENCI",
       "decision": "VERIFIED",
       "overallMatchPercent": 92,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-012",
-      "questionNumber": 12,
-      "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "HAVA YOLU (SOLUNUM) İZOLASYONU",
+      "id": "d3-k1-enf-062",
+      "questionNumber": 62,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "BETA-LAKTAMAZ DIRENCI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-001",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "TOKSIK HÜCRE HASARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 97,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-002",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "NEOPLAZI - GENEL ÖZELLIKLER",
       "decision": "SUSPECT",
-      "overallMatchPercent": 52.5,
+      "overallMatchPercent": 50,
       "isSuspect": true
     },
     {
-      "id": "d3-k1-enf-013",
-      "questionNumber": 13,
-      "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "STANDART ÖNLEMLER",
+      "id": "d3-k1-pat-003",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "KARSINOGENEZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-004",
+      "questionNumber": 4,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "NEOPLAZI - BENIGN/MALIGN AYRIMI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-005",
+      "questionNumber": 5,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "DOKU TAKIBI VE HISTOTEKNIK",
       "decision": "VERIFIED",
       "overallMatchPercent": 100,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-014",
-      "questionNumber": 14,
-      "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "DIRENÇLI MIKROORGANIZMA İZOLASYONU",
+      "id": "d3-k1-pat-006",
+      "questionNumber": 6,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HÜCRE HASARI",
       "decision": "VERIFIED",
       "overallMatchPercent": 92,
       "isSuspect": false
     },
     {
-      "id": "d3-k1-enf-015",
+      "id": "d3-k1-pat-007",
+      "questionNumber": 7,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "APOPTOZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-008",
+      "questionNumber": 8,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İMMÜN SISTEM HASTALIKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-009",
+      "questionNumber": 9,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İMMÜN SISTEM HASTALIKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-010",
+      "questionNumber": 10,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HEMODINAMIK BOZUKLUKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-011",
+      "questionNumber": 11,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HEMODINAMIK BOZUKLUKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 93,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-012",
+      "questionNumber": 12,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İMMÜN SISTEM HASTALIKLARI (SLE)",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 70,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-013",
+      "questionNumber": 13,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "OTOIMMÜN HASTALIKLAR",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-014",
+      "questionNumber": 14,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "TRANSPLANTASYON İMMÜNOLOJISI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-015",
       "questionNumber": 15,
-      "discipline": "Enfeksiyon Hastalıkları",
-      "topic": "GENITAL ÜLSER HASTALIKLARI",
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İNFLAMASYON",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92.5,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-016",
+      "questionNumber": 16,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HÜCRE YENILENMESI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-017",
+      "questionNumber": 17,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İNFLAMASYON",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-018",
+      "questionNumber": 18,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "GENETIK HASTALIKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-019",
+      "questionNumber": 19,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "GENETIK HASTALIKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-020",
+      "questionNumber": 20,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "PEDIATRIK TÜMÖRLER",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-021",
+      "questionNumber": 21,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HEMODINAMIK BOZUKLUKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-022",
+      "questionNumber": 22,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HEMODINAMIK BOZUKLUKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 97,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-023",
+      "questionNumber": 23,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "NEOPLAZI: EVRELEME VE DERECELENDIRME",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-024",
+      "questionNumber": 24,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İMMÜN SISTEM HÜCRELERI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-025",
+      "questionNumber": 25,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İMMÜNOPATOLOJI: HIV",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 53,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-026",
+      "questionNumber": 26,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "TÜMÖR İMMÜNOLOJISI: BAĞIŞIKLIKTAN KAÇIŞ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-027",
+      "questionNumber": 27,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "AKUT İNFLAMASYON: LÖKOSIT GÖÇÜ",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 20,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-028",
+      "questionNumber": 28,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HÜCRESEL ADAPTASYON: YENILENME KAPASITESI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-029",
+      "questionNumber": 29,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HÜCRE HASARI: PATOLOJIK KALSIFIKASYON",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-030",
+      "questionNumber": 30,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HEMODINAMIK BOZUKLUKLAR: TROMBOZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-031",
+      "questionNumber": 31,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HÜCRESEL ADAPTASYON: METAPLAZI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-032",
+      "questionNumber": 32,
+      "discipline": "Tıbbi Biyokimya",
+      "topic": "HÜCRE HASARI: HIPOKSIK HASARIN BIYOKIMYASI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-033",
+      "questionNumber": 33,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "İMMÜN SISTEM: ANTIJEN SUNAN HÜCRELER",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 20,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-034",
+      "questionNumber": 34,
+      "discipline": "Halk Sağlığı",
+      "topic": "OTOIMMÜN HASTALIKLAR: SISTEMIK SKLEROZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-035",
+      "questionNumber": 35,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "NEOPLAZI TERMINOLOJISI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-036",
+      "questionNumber": 36,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HEMODINAMIK BOZUKLUKLAR: HEMOSTAZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-037",
+      "questionNumber": 37,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HEMODINAMIK BOZUKLUKLAR: İNFARKTÜS",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 59,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-038",
+      "questionNumber": 38,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "GLOMERÜLER HASTALIKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-039",
+      "questionNumber": 39,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "TÜBÜLOINTERSTISYEL HASTALIKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-040",
+      "questionNumber": 40,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "NEFROTIK SENDROM",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-041",
+      "questionNumber": 41,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "TÜBÜLOINTERSTISYEL HASTALIKLAR",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 63,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-042",
+      "questionNumber": 42,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "VASKÜLER BÖBREK HASTALIKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-043",
+      "questionNumber": 43,
+      "discipline": "Tıbbi Genetik",
+      "topic": "KISTIK BÖBREK HASTALIKLARI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-044",
+      "questionNumber": 44,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "GLOMERÜLER HASTALIKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 93,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-045",
+      "questionNumber": 45,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "GLOMERÜLER HASTALIKLAR",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-046",
+      "questionNumber": 46,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "BÖBREK TÜMÖRLERI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 58,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-047",
+      "questionNumber": 47,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "GLOMERÜLER HASTALIKLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-048",
+      "questionNumber": 48,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "OVER TÜMÖRLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-049",
+      "questionNumber": 49,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "OVER TÜMÖRLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-050",
+      "questionNumber": 50,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "SERVIKS PATOLOJISI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-051",
+      "questionNumber": 51,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "ENDOMETRIOZIS",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-052",
+      "questionNumber": 52,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "GEBELIK VE GESTASYONEL TROFOBLASTIK HASTALIK",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-053",
+      "questionNumber": 53,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "VULVA PATOLOJISI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 53,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-054",
+      "questionNumber": 54,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "POLIKISTIK OVER SENDROMU",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 94,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-055",
+      "questionNumber": 55,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HPV VE SERVIKS PATOLOJISI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-056",
+      "questionNumber": 56,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "KORPUS UTERI HASTALIKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 94,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-057",
+      "questionNumber": 57,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "KORPUS UTERI HASTALIKLARI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 12,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-058",
+      "questionNumber": 58,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "OVER TÜMÖRLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-059",
+      "questionNumber": 59,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "HPV VE SERVIKS PATOLOJISI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-060",
+      "questionNumber": 60,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "SERVIKS VE AIDS İLIŞKILI KANSERLER",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 96,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-061",
+      "questionNumber": 61,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "MEME KANSERI RISK FAKTÖRLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-062",
+      "questionNumber": 62,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "MEME TÜMÖRLERI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-063",
+      "questionNumber": 63,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "FIBROKISTIK DEĞIŞIKLIKLER",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 48,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-064",
+      "questionNumber": 64,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "MEME KANSERI ETIYOLOJISI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 75,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-065",
+      "questionNumber": 65,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "DUKTAL KARSINOMA İN SITU",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-066",
+      "questionNumber": 66,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "FILLODES TÜMÖR",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-067",
+      "questionNumber": 67,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "PAGET HASTALIĞI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 49,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-pat-068",
+      "questionNumber": 68,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "PROSTAT KANSERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-069",
+      "questionNumber": 69,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "PROSTAT KANSERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-070",
+      "questionNumber": 70,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "TESTIS TORSIYONU",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-pat-071",
+      "questionNumber": 71,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "BENIGN PROSTAT HIPERPLAZISI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 53,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-001",
+      "questionNumber": 1,
+      "discipline": "Halk Sağlığı",
+      "topic": "HALK SAĞLIĞININ TEMEL İLKELERI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 59,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-002",
+      "questionNumber": 2,
+      "discipline": "Halk Sağlığı",
+      "topic": "TEMEL HALK SAĞLIĞI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 97,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-003",
+      "questionNumber": 3,
+      "discipline": "Halk Sağlığı",
+      "topic": "DÜ NYA HALK SAĞLIĞI TARIHINDEN ÖNEMLI İSIMLER",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-004",
+      "questionNumber": 4,
+      "discipline": "Halk Sağlığı",
+      "topic": "KORUMA BASAMAKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-005",
+      "questionNumber": 5,
+      "discipline": "Halk Sağlığı",
+      "topic": "KORUMA BASAMAKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-006",
+      "questionNumber": 6,
+      "discipline": "Halk Sağlığı",
+      "topic": "ÇOCUK VE OKUL SAĞLIĞI TARAMALARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-007",
+      "questionNumber": 7,
+      "discipline": "Halk Sağlığı",
+      "topic": "HASTALIK SIKLIĞI KAVRAMLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95.5,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-008",
+      "questionNumber": 8,
+      "discipline": "Halk Sağlığı",
+      "topic": "HASTALIK SIKLIĞI KAVRAMLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-009",
+      "questionNumber": 9,
+      "discipline": "Halk Sağlığı",
+      "topic": "EPIDEMIYOLOJIK ARAŞTIRMA TIPLERI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-010",
+      "questionNumber": 10,
+      "discipline": "Halk Sağlığı",
+      "topic": "EPIDEMIYOLOJIK ARAŞTIRMA TIPLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-011",
+      "questionNumber": 11,
+      "discipline": "Halk Sağlığı",
+      "topic": "EPIDEMIYOLOJIK ARAŞTIRMA TIPLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-012",
+      "questionNumber": 12,
+      "discipline": "Halk Sağlığı",
+      "topic": "HIZ HESAPLAMALARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-013",
+      "questionNumber": 13,
+      "discipline": "Halk Sağlığı",
+      "topic": "HIZ HESAPLAMALARI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 58,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-014",
+      "questionNumber": 14,
+      "discipline": "Halk Sağlığı",
+      "topic": "SALGIN KONTROL KAVRAMLARI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-015",
+      "questionNumber": 15,
+      "discipline": "Halk Sağlığı",
+      "topic": "SALGIN KONTROL KAVRAMLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-016",
+      "questionNumber": 16,
+      "discipline": "Halk Sağlığı",
+      "topic": "SALGIN KONTROL KAVRAMLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 98,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-017",
+      "questionNumber": 17,
+      "discipline": "Halk Sağlığı",
+      "topic": "SALGIN KONTROL KAVRAMLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-018",
+      "questionNumber": 18,
+      "discipline": "Halk Sağlığı",
+      "topic": "AŞI UYGULAMA YOLLARI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-019",
+      "questionNumber": 19,
+      "discipline": "Halk Sağlığı",
+      "topic": "GENIŞLETILMIŞ BAĞIŞIKLAMA PROGRAMI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 62,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-020",
+      "questionNumber": 20,
+      "discipline": "Halk Sağlığı",
+      "topic": "TÜRKIYE ULUSAL AŞI TAKVIMI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-021",
+      "questionNumber": 21,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "TÜRKIYE ULUSAL AŞI TAKVIMI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-022",
+      "questionNumber": 22,
+      "discipline": "Halk Sağlığı",
+      "topic": "TÜRKIYE ULUSAL AŞI TAKVIMI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-023",
+      "questionNumber": 23,
+      "discipline": "Halk Sağlığı",
+      "topic": "DOĞUM ÖNCESI BAKIM",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-024",
+      "questionNumber": 24,
+      "discipline": "Halk Sağlığı",
+      "topic": "GEBELIK İZLEMI VE DANIŞMANLIK",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-025",
+      "questionNumber": 25,
+      "discipline": "Halk Sağlığı",
+      "topic": "SAĞLIK DÜZEYI GÖSTERGELERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 97,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-026",
+      "questionNumber": 26,
+      "discipline": "Halk Sağlığı",
+      "topic": "ANNE-ÇOCUK SAĞLIĞI HIZMETLERINE ERIŞIM",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-027",
+      "questionNumber": 27,
+      "discipline": "Halk Sağlığı",
+      "topic": "ANNE-ÇOCUK SAĞLIĞI PROGRAMLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-028",
+      "questionNumber": 28,
+      "discipline": "Halk Sağlığı",
+      "topic": "BEBEKLIK DÖNEMINDE BÜYÜME VE SINDIRIM FIZYOLOJISI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-029",
+      "questionNumber": 29,
+      "discipline": "Halk Sağlığı",
+      "topic": "ANNE SÜTÜNÜN SAKLANMASI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-hs-030",
+      "questionNumber": 30,
+      "discipline": "Halk Sağlığı",
+      "topic": "ANNE SÜTÜNÜN SAKLANMASI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-031",
+      "questionNumber": 31,
+      "discipline": "Halk Sağlığı",
+      "topic": "BEBEKLIK DÖNEMINDE BÜYÜME İZLEMI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-032",
+      "questionNumber": 32,
+      "discipline": "Halk Sağlığı",
+      "topic": "BESLENME BOZUKLUKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 93,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-hs-033",
+      "questionNumber": 33,
+      "discipline": "Halk Sağlığı",
+      "topic": "GEBELIKTE BESLENMEYI ETKILEYEN FAKTÖRLER",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52.5,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-tbg-001",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "DISMORFOLOJIDE GENETIK TERMINOLOJI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-002",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Genetik",
+      "topic": "KROMOZOMAL HASTALIKLAR VE GENETIK DANIŞMA",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-003",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Genetik",
+      "topic": "KROMOZOMAL HASTALIKLAR VE GENETIK DANIŞMA",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52.5,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-tbg-004",
+      "questionNumber": 4,
+      "discipline": "Tıbbi Genetik",
+      "topic": "DOĞUMSAL KADIN/ERKEK GENITAL GELIŞIM ANOMALILERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 97,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-005",
+      "questionNumber": 5,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "DOĞUMSAL KADIN/ERKEK GENITAL GELIŞIM ANOMALILERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-006",
+      "questionNumber": 6,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "DOĞUMSAL KADIN/ERKEK GENITAL GELIŞIM ANOMALILERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-007",
+      "questionNumber": 7,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "ÜROGENITAL SISTEM TÜMÖRLERINDE GENETIK BELIRTEÇLER",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-008",
+      "questionNumber": 8,
+      "discipline": "Tıbbi Genetik",
+      "topic": "ÜROGENITAL SISTEM TÜMÖRLERINDE GENETIK BELIRTEÇLER (KANSER GENETIĞI)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-009",
+      "questionNumber": 9,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "PRENATAL TANI YÖNTEMLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-010",
+      "questionNumber": 10,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "PRENATAL TANI YÖNTEMLERI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-011",
+      "questionNumber": 11,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "PREIMPLANTASYON GENETIK TANI (PGD)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-012",
+      "questionNumber": 12,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "PREIMPLANTASYON GENETIK TANI (PGD)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-013",
+      "questionNumber": 13,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "PREIMPLANTASYON GENETIK TANI (PGD)",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 58,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-tbg-014",
+      "questionNumber": 14,
+      "discipline": "Tıbbi Genetik",
+      "topic": "KROMOZOMAL HASTALIKLAR VE GENETIK DANIŞMA",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-tbg-015",
+      "questionNumber": 15,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "DISMORFOLOJIDE GENETIK TERMINOLOJI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-001",
+      "questionNumber": 1,
+      "discipline": "Üroloji",
+      "topic": "ALT ÜRİNER SİSTEM SEMPTOMLARI (LUTS)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-002",
+      "questionNumber": 2,
+      "discipline": "Üroloji",
+      "topic": "ÜRİNER SİSTEM GÖRÜNTÜLEME ENDİKASYONLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-003",
+      "questionNumber": 3,
+      "discipline": "Üroloji",
+      "topic": "ERKEKLERDE ÜSE RİSK FAKTÖRLERİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-004",
+      "questionNumber": 4,
+      "discipline": "Üroloji",
+      "topic": "KADINLARDA ÜSE RİSK FAKTÖRLERİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-005",
+      "questionNumber": 5,
+      "discipline": "Üroloji",
+      "topic": "DIŞ ATIM BOZUKLUKLARI VE ENÜREZİS",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-006",
+      "questionNumber": 6,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "DİZÜRİ VE AYIRICI TANI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-007",
+      "questionNumber": 7,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "STERİL PİYÜRİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-008",
+      "questionNumber": 8,
+      "discipline": "Üroloji",
+      "topic": "ÜRİNER SİSTEM TAŞ HASTALIKLARI (ÜROLİTİYAZİS)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-009",
+      "questionNumber": 9,
+      "discipline": "Üroloji",
+      "topic": "ÜRİNER SİSTEM TAŞ HASTALIKLARI (PATOGENEZ)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-010",
+      "questionNumber": 10,
+      "discipline": "Üroloji",
+      "topic": "GENETİK TAŞ HASTALIKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-011",
+      "questionNumber": 11,
+      "discipline": "Üroloji",
+      "topic": "ÜRİNER OBSTRÜKSİYON PATOFİZYOLOJİSİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-012",
+      "questionNumber": 12,
+      "discipline": "Üroloji",
+      "topic": "ÜRİNER SİSTEM İŞEME BOZUKLUKLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-013",
+      "questionNumber": 13,
+      "discipline": "Üroloji",
+      "topic": "ÜRİNER KÜLTÜR ENDİKASYONLARI",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-014",
+      "questionNumber": 14,
+      "discipline": "Üroloji",
+      "topic": "ORŞİT VE EPİDİDİMOORŞİT TEDAVİSİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-015",
+      "questionNumber": 15,
+      "discipline": "Üroloji",
+      "topic": "GENİTOÜRİNER TÜBERKÜLOZ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-uro-016",
+      "questionNumber": 16,
+      "discipline": "Üroloji",
+      "topic": "ENÜREZİS NOKTURNA FARMAKOTERAPİSİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-001",
+      "questionNumber": 1,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "AİLE PLANLAMASI VE KONTRASEPSİYON",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-002",
+      "questionNumber": 2,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "PRENATAL TARAMA TESTLERİ (İKİLİ TEST)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-003",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Genetik",
+      "topic": "ABORTUS VE FETAL KROMOZOM ANOMALİLERİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-004",
+      "questionNumber": 4,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "GEBELİK BELİRTİLERİ VE TERMİNOLOJİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-005",
+      "questionNumber": 5,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "CERRAHİ STERİLİZASYON YÖNTEMLERİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-006",
+      "questionNumber": 6,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "SUBDERMAL KONTRASEPTİF İMPLANTLAR",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92.5,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-007",
+      "questionNumber": 7,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "TAHMİNİ DOĞUM TARİHİ HESAPLAMA (NAEGELE KURALI)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-gyn-008",
+      "questionNumber": 8,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "OBSTETRİK ÖYKÜ HESAPLAMA (G-P-A-Y FORMÜLÜ)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-far-001",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "İMMÜNOFARMAKOLOJİ (İMMÜNOSÜPRESİF VE İMMÜNOSTİMÜLANLAR)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-far-002",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "İMMÜNOFARMAKOLOJİ (BİYOLOJİK AJANLAR)",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-far-003",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "MONOKLONAL ANTİKORLAR VE İMMÜNOSİNTİGRAFİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-far-004",
+      "questionNumber": 4,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "DİÜRETİKLERİN FARMAKOLOJİSİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-far-005",
+      "questionNumber": 5,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "KARBONİK ANHİDRAZ İNHİBİTÖRLERİ",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-far-006",
+      "questionNumber": 6,
+      "discipline": "Tıbbi Biyokimya",
+      "topic": "İMMÜNOSÜPRESİF İLAÇ ETKİ MEKANİZMASI",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 70,
+      "isSuspect": true
+    },
+    {
+      "id": "d3-k1-far-007",
+      "questionNumber": 7,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "DİÜRETİK VE HORMON ETKİLEŞİMLERİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "d3-k1-far-008",
+      "questionNumber": 8,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "TRANSPLANTASYONDA REJEKSİYON FARMAKOTERAPİSİ",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034696-430707",
+      "questionNumber": 17,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034700-571108",
+      "questionNumber": 18,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034702-686847",
+      "questionNumber": 19,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034704-772524",
+      "questionNumber": 20,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034709-543104",
+      "questionNumber": 21,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 12,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034711-760549",
+      "questionNumber": 22,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034715-968859",
+      "questionNumber": 23,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 85,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034717-754791",
+      "questionNumber": 24,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034722-269702",
+      "questionNumber": 25,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52.5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034724-233133",
+      "questionNumber": 26,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034728-257107",
+      "questionNumber": 27,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034746-100113",
+      "questionNumber": 28,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034752-706442",
+      "questionNumber": 30,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 20,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034756-573395",
+      "questionNumber": 31,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034760-333010",
+      "questionNumber": 32,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034763-929643",
+      "questionNumber": 33,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92.5,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034766-353191",
+      "questionNumber": 34,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034772-958986",
+      "questionNumber": 35,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034778-831525",
+      "questionNumber": 36,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034781-654092",
+      "questionNumber": 37,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034784-197422",
+      "questionNumber": 38,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034789-547540",
+      "questionNumber": 39,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034792-310336",
+      "questionNumber": 40,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034798-852693",
+      "questionNumber": 41,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034802-127680",
+      "questionNumber": 42,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034805-445847",
+      "questionNumber": 43,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 13,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034810-496063",
+      "questionNumber": 44,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034813-625038",
+      "questionNumber": 45,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034819-269139",
+      "questionNumber": 46,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034823-25133",
+      "questionNumber": 47,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034825-523965",
+      "questionNumber": 48,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 15,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034827-833752",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 10,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034830-18027",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 96,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034834-277681",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92.5,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034837-948673",
+      "questionNumber": 4,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 12,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034838-157240",
+      "questionNumber": 5,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 7,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034844-23360",
+      "questionNumber": 6,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 10,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034847-228936",
+      "questionNumber": 7,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034850-708298",
+      "questionNumber": 8,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034854-747207",
+      "questionNumber": 9,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034858-648721",
+      "questionNumber": 10,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034860-577614",
+      "questionNumber": 11,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034865-651766",
+      "questionNumber": 12,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034868-348350",
+      "questionNumber": 13,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 10,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034873-233641",
+      "questionNumber": 14,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 53,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034875-254698",
+      "questionNumber": 15,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 20,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034878-451174",
+      "questionNumber": 16,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 86,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034882-993159",
+      "questionNumber": 17,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034888-140425",
+      "questionNumber": 18,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 7.5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034896-963736",
+      "questionNumber": 19,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 15,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034900-801390",
+      "questionNumber": 20,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 85,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034904-100852",
+      "questionNumber": 21,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034908-575369",
+      "questionNumber": 22,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 20,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034912-782365",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 20,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034916-929286",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 7.5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034920-987738",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034924-556974",
+      "questionNumber": 4,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 15,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034926-634071",
+      "questionNumber": 5,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 12,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034929-279085",
+      "questionNumber": 6,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 10,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034933-544543",
+      "questionNumber": 7,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034937-619743",
+      "questionNumber": 8,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034942-792094",
+      "questionNumber": 9,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034944-281758",
+      "questionNumber": 10,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034951-866539",
+      "questionNumber": 11,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 10,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034959-592961",
+      "questionNumber": 12,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 52,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034961-168421",
+      "questionNumber": 1,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "D",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034963-454726",
+      "questionNumber": 2,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "C",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034971-28969",
+      "questionNumber": 3,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "B",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 15,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034973-262905",
+      "questionNumber": 4,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034976-160391",
+      "questionNumber": 5,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034977-294026",
+      "questionNumber": 6,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877034979-373165",
+      "questionNumber": 7,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "B",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034983-887192",
+      "questionNumber": 8,
+      "discipline": "Halk Sağlığı",
+      "topic": "Halk Sağlığı Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034987-592323",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "claimedAnswer": "C",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034991-323817",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "claimedAnswer": "C",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877034996-32289",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "claimedAnswer": "D",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035000-655618",
+      "questionNumber": 4,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035010-823686",
+      "questionNumber": 5,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Tıbbi Farmakoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035016-569250",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035022-223980",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035026-426781",
+      "questionNumber": 1,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "Kadın Hastalıkları ve Doğum Çıkmış Sorusu",
+      "claimedAnswer": "C",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 93,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035030-691637",
+      "questionNumber": 2,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "Kadın Hastalıkları ve Doğum Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035032-303717",
+      "questionNumber": 3,
+      "discipline": "Kadın Hastalıkları ve Doğum",
+      "topic": "Kadın Hastalıkları ve Doğum Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 12,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035422-832150",
+      "questionNumber": 1,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035424-978247",
+      "questionNumber": 2,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035426-935021",
+      "questionNumber": 3,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "C",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035429-873031",
+      "questionNumber": 4,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 80,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035432-925992",
+      "questionNumber": 5,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035436-270389",
+      "questionNumber": 6,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035439-953078",
+      "questionNumber": 7,
+      "discipline": "Tıbbi Mikrobiyoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 95,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035442-53215",
+      "questionNumber": 8,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035445-829176",
+      "questionNumber": 9,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035448-288019",
+      "questionNumber": 10,
+      "discipline": "Tıbbi Biyokimya",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 5,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035450-483598",
+      "questionNumber": 11,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "D",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 90,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035452-460308",
+      "questionNumber": 12,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035455-527391",
+      "questionNumber": 13,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035459-713412",
+      "questionNumber": 14,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 100,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035464-869247",
+      "questionNumber": 15,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 0,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035467-589300",
+      "questionNumber": 16,
+      "discipline": "Tıbbi Farmakoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 12,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035472-248961",
+      "questionNumber": 17,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 12,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035475-533128",
+      "questionNumber": 18,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "VERIFIED",
+      "overallMatchPercent": 92.5,
+      "isSuspect": false
+    },
+    {
+      "id": "past-1790877035482-190448",
+      "questionNumber": 19,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 7,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035485-541395",
+      "questionNumber": 20,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035489-630839",
+      "questionNumber": 21,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 50,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035504-952793",
+      "questionNumber": 22,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035508-304242",
+      "questionNumber": 23,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
+      "decision": "SUSPECT",
+      "overallMatchPercent": 55,
+      "isSuspect": true
+    },
+    {
+      "id": "past-1790877035511-292232",
+      "questionNumber": 24,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Çıkmış Sorusu",
+      "claimedAnswer": "A",
       "decision": "SUSPECT",
       "overallMatchPercent": 50,
       "isSuspect": true
