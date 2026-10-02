@@ -509,6 +509,84 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 // ---------------------------------------------------------------------------
 // Hub (deck catalogue)
 // ---------------------------------------------------------------------------
+
+/**
+ * Deck data spells the same branch several ways ("Enfeksiyon Hastalıkları / Klinik Mikrobiyoloji",
+ * "… ve Klinik Mikrobiyoloji", "Üroloji / Nefroloji"). The catalogue groups by the primary branch.
+ */
+export const disciplineGroup = (raw: string) => {
+  const first = (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim();
+  return first || 'Diğer';
+};
+
+const GROUP_DOTS: Record<string, string> = {
+  'Tıbbi Patoloji': '#E0566E',
+  'Enfeksiyon Hastalıkları': '#1F9D55',
+  'Halk Sağlığı': '#2B8BC6',
+  'Tıbbi Genetik': '#6D5BD0',
+  Üroloji: '#E0952B',
+};
+const FALLBACK_DOTS = ['#0F7A5F', '#B4233C', '#4A5868', '#9A4D06', '#1E4FD8'];
+const groupDot = (g: string) =>
+  GROUP_DOTS[g] || FALLBACK_DOTS[[...g].reduce((n, ch) => n + ch.charCodeAt(0), 0) % FALLBACK_DOTS.length];
+
+/** Horizontally scrolling chip row: wheel scrolls sideways, arrow buttons appear when it overflows. */
+const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [edges, setEdges] = useState({ left: false, right: false });
+
+  const update = useCallback(() => {
+    const el = ref.current;
+    if (!el) return;
+    setEdges({ left: el.scrollLeft > 4, right: el.scrollLeft + el.clientWidth < el.scrollWidth - 4 });
+  }, []);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    const onWheel = (e: WheelEvent) => {
+      if (el.scrollWidth <= el.clientWidth || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      el.scrollLeft += e.deltaY;
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => {
+      ro.disconnect();
+      el.removeEventListener('wheel', onWheel);
+    };
+  }, [update]);
+
+  const nudge = (dir: 1 | -1) => ref.current?.scrollBy({ left: dir * Math.max(200, (ref.current.clientWidth || 400) * 0.7), behavior: 'smooth' });
+  const arrow = 'absolute top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-line shadow-[0_2px_8px_rgba(14,26,38,0.12)] hidden sm:flex items-center justify-center text-ink cursor-pointer hover:border-line-2';
+
+  return (
+    <div className="relative -mx-3 sm:mx-0">
+      {edges.left && (
+        <>
+          <span className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-canvas to-transparent z-[5]" aria-hidden="true" />
+          <button type="button" onClick={() => nudge(-1)} aria-label="Sola kaydır" className={`${arrow} left-0`}>
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+        </>
+      )}
+      <div ref={ref} onScroll={update} role="radiogroup" aria-label={label} className="flex gap-1.5 overflow-x-auto no-scrollbar px-3 sm:px-0 scroll-smooth">
+        {children}
+      </div>
+      {edges.right && (
+        <>
+          <span className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-canvas to-transparent z-[5]" aria-hidden="true" />
+          <button type="button" onClick={() => nudge(1)} aria-label="Sağa kaydır" className={`${arrow} right-0`}>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </>
+      )}
+    </div>
+  );
+};
+
 export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange }) => {
   const allDecks = useMemo(
     () => ((interactiveDecksData as unknown as InteractiveDeck[]) || []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0),
@@ -528,14 +606,18 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
   const disciplines = useMemo(() => {
     const m: Record<string, number> = {};
-    allDecks.forEach((d) => (m[d.discipline] = (m[d.discipline] || 0) + 1));
-    return Object.entries(m).sort((a, b) => a[0].localeCompare(b[0], 'tr'));
+    allDecks.forEach((d) => {
+      const g = disciplineGroup(d.discipline);
+      m[g] = (m[g] || 0) + 1;
+    });
+    // Biggest groups first, then alphabetical
+    return Object.entries(m).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'tr'));
   }, [allDecks]);
 
   const visible = useMemo(() => {
     const q = query.trim().toLocaleLowerCase('tr-TR');
     return allDecks.filter((d) => {
-      if (discipline !== 'all' && d.discipline !== discipline) return false;
+      if (discipline !== 'all' && disciplineGroup(d.discipline) !== discipline) return false;
       if (!q) return true;
       return [d.title, d.discipline, d.instructor, d.overview, ...(d.highYieldPearls || [])].join(' ').toLocaleLowerCase('tr-TR').includes(q);
     });
@@ -566,10 +648,10 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         </label>
       </div>
 
-      <div role="radiogroup" aria-label="Ders" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
+      <ScrollRow label="Ders">
         {[['all', allDecks.length] as [string, number], ...disciplines].map(([d, n]) => {
           const on = discipline === d;
-          const dot = d === 'all' ? '#0E1A26' : tone(allDecks.find((x) => x.discipline === d)?.themeColor).fg;
+          const dot = d === 'all' ? '#0E1A26' : groupDot(d);
           return (
             <button
               key={d}
@@ -587,7 +669,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
             </button>
           );
         })}
-      </div>
+      </ScrollRow>
 
       {visible.length === 0 ? (
         <div className="bg-white border border-line rounded-[16px] px-6 py-12 text-center">
@@ -604,7 +686,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
             const cardCount = d.slides.reduce((n, s) => n + (s.flashcards?.length || 0), 0);
             const started = seen > 0;
             const done = seen >= d.slides.length;
-            const t = tone(d.themeColor);
+            const group = disciplineGroup(d.discipline);
             return (
               <li key={d.id} className="min-w-0">
                 <button
@@ -616,8 +698,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                   className="w-full h-full text-left bg-white border border-line rounded-[16px] p-4 flex flex-col gap-2.5 cursor-pointer hover:border-accent hover:shadow-[0_6px_20px_rgba(14,26,38,0.06)] transition-all group"
                 >
                   <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
-                    <span className="w-2 h-2 rounded-full shrink-0" style={{ background: t.fg }} aria-hidden="true" />
-                    <span className="truncate">{d.discipline}</span>
+                    <span className="w-2 h-2 rounded-full shrink-0" style={{ background: groupDot(group) }} aria-hidden="true" />
+                    <span className="truncate" title={d.discipline}>{group}</span>
                     <span className="shrink-0 ml-auto font-mono text-[12px]">{d.slides.length} slayt</span>
                   </span>
                   <span className="text-[16.5px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2 min-h-[2.6em]">{d.title}</span>
