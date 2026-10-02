@@ -3822,19 +3822,24 @@
     "term": "Sitokrom c",
     "latinName": "[si-tok-rom se]",
     "aliases": [
-      "sitokrom c",
-      "cytochrome c"
+      "Sitokrom-c",
+      "Cyt c",
+      "Cytochrome c"
     ],
     "category": "patoloji",
     "kurul": "Kurul 1",
     "discipline": "Tıbbi Patoloji",
     "instructorAndSource": "Dönem 3 Kurul 1 Resmi Ders Notları",
-    "definition": "Normalde mitokondri kristalarında elektron taşıma zincirinde görev yapan, ancak dış zara sızdığında apoptoz başlatıcı olan hem-proteini.",
+    "definition": "Normalde mitokondri iç zarı ve intermembran aralıkta elektron taşıma zincirinde görev yapan hemoproteindir. Bax/Bak porları açıldığında sitoplazmaya sızarak apoptozomu kurar ve apoptozu başlatır.",
     "lectureContextNotes": "Ders slaytlarında vurgulanan temel içerik: Normalde mitokondri kristalarında elektron taşıma zincirinde görev yapan, ancak dış zara sızdığında apoptoz başlatıcı olan hem-proteini.",
-    "morphologyOrMechanism": "Sitokrom c mekanizması ve klinik özellikleri ders müfredatı kapsamında ele alınmıştır.",
+    "morphologyOrMechanism": "Apaf-1 e bağlanarak konformasyonel değişiklik oluşturur.",
     "differentialDiagnosis": "Sitokrom c ayırıcı tanısında klinik ve laboratuvar bulguları belirleyicidir.",
-    "examSpotPearls": "Sitoplazmada Apaf-1 ve prokaspaz-9 ile birleşerek 7 kollu tekerlek biçiminde 'apoptozom' kompleksini meydana getirir.",
-    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Sitokrom c ile ilgili atlanan klinik bulgular tanı ve yönetim hatalarına yol açabilir.",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Mitokondriden sitoplazmaya sitokrom c sızması intrensek apoptozun dönüşümsüz basamağıdır."
+    ],
+    "pitfallsAndWarnings": [
+      "Bcl-2 sitokrom c nin mitokondriden çıkışını önler."
+    ],
     "relatedItems": [],
     "badgeColor": "amber",
     "aiAudit": {
@@ -3843,7 +3848,8 @@
       "accuracyScore": 98,
       "auditSummary": "Müfredat ders notları ve tıp terminolojisi ile yapay zeka tarafından doğrulanmıştır.",
       "sampleExamQuestion": "Sitokrom c ile ilgili temel mekanizma ve ayırt edici özellikler fakülte sınavlarında sorgulanır."
-    }
+    },
+    "clinicalPearls": "Mitokondri içi solunum zincirindeyken hayat kaynağı, sitoplazmaya çıktığında ise apoptoz tetikleyicisidir."
   },
   {
     "id": "solunum-i-zolasyonu",
@@ -4346,20 +4352,24 @@
     "term": "Virchow Triadı",
     "latinName": "[vir-şov tri-ya-dı]",
     "aliases": [
-      "virchow triadı",
-      "virchow üçlüsü",
-      "virchow triad"
+      "Virchow Üçlüsü",
+      "Virchow Triad"
     ],
     "category": "patoloji",
     "kurul": "Kurul 1",
     "discipline": "Tıbbi Patoloji",
     "instructorAndSource": "Dönem 3 Kurul 1 Resmi Ders Notları",
-    "definition": "İntravasküler tromboz oluşumunu başlatan 3 temel patolojik faktör: 1) Endotel Hasarı, 2) Kan Akımında Bozulma (Staz veya Türbülans), 3) Hiperkoagülabilite.",
+    "definition": "Tromboz oluşumunun zeminini hazırlayan üç ana patofizyolojik faktördür: 1) Endotel Hasarı, 2) Kan Akımında Değişiklikler (Staz veya Türbülans), 3) Hiperkoagülabilite (Trombofili).",
     "lectureContextNotes": "Ders slaytlarında vurgulanan temel içerik: İntravasküler tromboz oluşumunu başlatan 3 temel patolojik faktör: 1) Endotel Hasarı, 2) Kan Akımında Bozulma (Staz veya Türbülans), 3) Hiperkoagülabilite.",
-    "morphologyOrMechanism": "Virchow Triadı mekanizması ve klinik özellikleri ders müfredatı kapsamında ele alınmıştır.",
+    "morphologyOrMechanism": "Endotel denüdasyonu -> Von Willebrand faktör maruziyeti -> Trombosit adezyonu ve agregasyonu.",
     "differentialDiagnosis": "Virchow Triadı ayırıcı tanısında klinik ve laboratuvar bulguları belirleyicidir.",
-    "examSpotPearls": "Derin ven trombozu ve pulmoner emboli gelişiminin evrensel patogenez modelidir.",
-    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Virchow Triadı ile ilgili atlanan klinik bulgular tanı ve yönetim hatalarına yol açabilir.",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Arteriyel trombozda primer faktör endotel hasarı, venöz trombozda ise stazdır.",
+      "🔵 ÇIKMIŞ SORU: Virchow triadının bileşenleri: Endotel hasarı, anormal kan akımı (staz/türbülans) ve hiperkoagülabilite."
+    ],
+    "pitfallsAndWarnings": [
+      "Arterde staz değil türbülans daha ön plandadır; venlerde staz belirleyicidir."
+    ],
     "relatedItems": [],
     "badgeColor": "red",
     "aiAudit": {
@@ -4368,7 +4378,8 @@
       "accuracyScore": 98,
       "auditSummary": "Müfredat ders notları ve tıp terminolojisi ile yapay zeka tarafından doğrulanmıştır.",
       "sampleExamQuestion": "Virchow Triadı ile ilgili temel mekanizma ve ayırt edici özellikler fakülte sınavlarında sorgulanır."
-    }
+    },
+    "clinicalPearls": "Kalp ve arterlerdeki trombüslerde EN ÖNEMLİ faktör endotel hasarıdır; venöz trombüslerde ise EN ÖNEMLİ faktör stazdır."
   },
   {
     "id": "vre-vankomisine-direncli-enterokok",
@@ -17009,6 +17020,20 @@
       "atriyal-fibrilasyon",
       "iskemik-inme",
       "anevrizma"
+    ],
+    "definition": "Geniş kardiyak boşlukların (sol ventrikül, sol atriyum) veya büyük damarların (aort anevrizması) duvarına yapışık, lümeni tamamen tıkamayan trombüslerdir.",
+    "clinicalPearls": "Miyokard enfarktüsü sonrası ventrikül duvar disfonksiyonu ve atriyal fibrilasyonda sol atriyal apandikste sık oluşur. Sistemik arteriyel embolilerin en önemli kaynağıdır.",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Sistemik embolilerin %80 den fazlası intrakardiyak mural trombüslerden kaynaklanır.",
+      "🔵 ÇIKMIŞ SORU: Sol ventrikül miyokard enfarktüsü sahası üzerinde mural trombüs oluşumu sıktır."
+    ],
+    "morphologyOrMechanism": "Endotel kaybı + diskinezi/staz -> lümen duvarında pıhtı birikimi.",
+    "pitfallsAndWarnings": [
+      "Arteriyel emboli oluştururlar; pulmoner emboli yapmazlar (sol kalpten çıkarak beyin, böbrek, dalak vb. gider)."
+    ],
+    "aliases": [
+      "Mural Tromboz",
+      "Duvar Trombüsü"
     ]
   },
   {
@@ -17689,5 +17714,542 @@
       "adrenal-yetmezlik",
       "meningokoksemi"
     ]
+  },
+  {
+    "id": "enc-apoptoz",
+    "term": "Apoptoz",
+    "latinName": "Apoptosis",
+    "aliases": [
+      "Programlı Hücre Ölümü",
+      "Apoptotik Ölüm",
+      "Apoptosis"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Genetik olarak kontrol edilen, hücrenin kendi kendini sindirdiği programlı fizyolojik veya patolojik hücre ölümüdür. Membran bütünlüğü korunur, apoptotik cisimcikler oluşur ve çevre dokuda enflamasyon gelişmez.",
+    "lectureContextNotes": "Genetik olarak kontrol edilen, hücrenin kendi kendini sindirdiği programlı fizyolojik veya patolojik hücre ölümüdür. Membran bütünlüğü korunur, apoptotik cisimcikler oluşur ve çevre dokuda enflamasyon gelişmez.",
+    "morphologyOrMechanism": "Hücre büzüşmesi, kromatin kondansasyonu (piknoz), nükleer fragmantasyon (karyoreksis), apoptotik cisimcikler.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Apoptozda enflamasyon OLMAZ.",
+      "🔵 ÇIKMIŞ SORU: Dış yaprağa çıkan fosfatidilserin, makrofajların apoptotik cisimcikleri tanımasını sağlar."
+    ],
+    "pitfallsAndWarnings": [
+      "Nekrozda hücre şişer ve lizis olur; apoptozda hücre büzüşür ve zar bütünlüğü başlangıçta korunur."
+    ],
+    "relatedItems": [
+      "Programlı Hücre Ölümü",
+      "Apoptotik Ölüm",
+      "Apoptosis"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-bax",
+    "term": "Bax",
+    "latinName": "Bcl-2-associated X protein",
+    "aliases": [
+      "Bax Proteini",
+      "BAX"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Bcl-2 ailesine ait temel pro-apoptotik efektör proteindir. Sitoplazmadan mitokondri dış zarına transloke olarak Bak ile oligomerler oluşturur ve sitokrom c salınımına yol açan porları açar.",
+    "lectureContextNotes": "Bcl-2 ailesine ait temel pro-apoptotik efektör proteindir. Sitoplazmadan mitokondri dış zarına transloke olarak Bak ile oligomerler oluşturur ve sitokrom c salınımına yol açan porları açar.",
+    "morphologyOrMechanism": "Mitokondriyal dış membran geçirgenleşmesi (MOMP) oluşturarak sitokrom c ve Smac/DIABLO salınımı sağlar.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Bax ve Bak mitokondri geçirgenliğini artırarak apoptozu tetikleyen temel pro-apoptotik proteinlerdir.",
+      "🔵 ÇIKMIŞ SORU: p53 DNA hasarında Bax genini aktive eder, Bcl-2 yi baskılar."
+    ],
+    "pitfallsAndWarnings": [
+      "Bcl-2 ve Bcl-xL Bax/Bak por oluşturmasını engeller (inhibe eder)."
+    ],
+    "relatedItems": [
+      "Bax Proteini",
+      "BAX"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-bak",
+    "term": "Bak",
+    "latinName": "Bcl-2 homologous antagonist/killer",
+    "aliases": [
+      "Bak Proteini",
+      "BAK"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Bcl-2 ailesine ait pro-apoptotik efektör proteindir. Mitokondri dış zarına kalıcı olarak bağlıdır. Apoptotik uyarıyla Bax ile birleşerek mitokondri zar porlarını (MOMP) açar.",
+    "lectureContextNotes": "Bcl-2 ailesine ait pro-apoptotik efektör proteindir. Mitokondri dış zarına kalıcı olarak bağlıdır. Apoptotik uyarıyla Bax ile birleşerek mitokondri zar porlarını (MOMP) açar.",
+    "morphologyOrMechanism": "MOMP kanallarını oluşturarak sitokrom c salınımını yürütür.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Bak mitokondri zarına lokalizedir, pro-apoptotiktir."
+    ],
+    "pitfallsAndWarnings": [
+      "Bcl-2 Bak ı inaktif konformasyonda tutar."
+    ],
+    "relatedItems": [
+      "Bak Proteini",
+      "BAK"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-bcl-2",
+    "term": "Bcl-2",
+    "latinName": "B-cell lymphoma 2 protein",
+    "aliases": [
+      "Bcl-2 Proteini",
+      "BCL2",
+      "Bcl2"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Bcl-2 ailesinin prototip anti-apoptotik proteinidir. Mitokondri dış zarında, endoplazmik retikulumda ve nükleer zarda bulunur. Bax ve Bak ın por açmasını engelleyerek hücreyi apoptozdan korur.",
+    "lectureContextNotes": "Bcl-2 ailesinin prototip anti-apoptotik proteinidir. Mitokondri dış zarında, endoplazmik retikulumda ve nükleer zarda bulunur. Bax ve Bak ın por açmasını engelleyerek hücreyi apoptozdan korur.",
+    "morphologyOrMechanism": "Mitokondri dış zarında por oluşumunu ve sitokrom c sızıntısını bloke eder.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Bcl-2 ve Bcl-xL temel anti-apoptotik proteinlerdir.",
+      "🔵 ÇIKMIŞ SORU: t(14;18) translokasyonu Bcl-2 aşırı üretimine ve apoptoz inhibisyonuna neden olur."
+    ],
+    "pitfallsAndWarnings": [
+      "Bcl-2 hücre bölünmesini artırmaz; hücrenin programlı ölümünü durdurarak yaşam süresini uzatır."
+    ],
+    "relatedItems": [
+      "Bcl-2 Proteini",
+      "BCL2",
+      "Bcl2"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-bcl-xl",
+    "term": "Bcl-xL",
+    "latinName": "B-cell lymphoma-extra large",
+    "aliases": [
+      "Bcl-xL Proteini",
+      "BCL-XL",
+      "BclxL"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Güçlü bir anti-apoptotik proteindir. Mitokondri zarında sitokrom c salınımını ve Bax oligomerizasyonunu inhibe eder.",
+    "lectureContextNotes": "Güçlü bir anti-apoptotik proteindir. Mitokondri zarında sitokrom c salınımını ve Bax oligomerizasyonunu inhibe eder.",
+    "morphologyOrMechanism": "Mitokondri membran bütünlüğünü korur.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Anti-apoptotik moleküller: Bcl-2, Bcl-xL, Mcl-1."
+    ],
+    "pitfallsAndWarnings": [
+      "Pro-apoptotik BH3-only proteinleri (Bad, Bim, Bid) Bcl-xL i nötralize eder."
+    ],
+    "relatedItems": [
+      "Bcl-xL Proteini",
+      "BCL-XL",
+      "BclxL"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-i̇ntrensek-apoptoz-yolağı",
+    "term": "İntrensek Apoptoz Yolağı",
+    "latinName": "Intrinsic Apoptosis Pathway (Mitochondrial Pathway)",
+    "aliases": [
+      "Mitokondriyal Apoptoz Yolu",
+      "İntrensek Yol",
+      "Mitokondriyal Yol"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Hücre içi hasarlar (DNA hasarı, hipoksi, serbest radikaller, büyüme faktörü yokluğu, yanlış katlanmış protein birikimi) sonucu mitokondri kaynaklı tetiklenen apoptoz mekanizmasıdır.",
+    "lectureContextNotes": "Hücre içi hasarlar (DNA hasarı, hipoksi, serbest radikaller, büyüme faktörü yokluğu, yanlış katlanmış protein birikimi) sonucu mitokondri kaynaklı tetiklenen apoptoz mekanizmasıdır.",
+    "morphologyOrMechanism": "MOMP -> Sitokrom c salınımı -> Apaf-1 bağlanması -> Apoptozom -> Kaspaz-9 -> Kaspaz-3/7 aktivasyonu.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: İntrensek yolun başlatıcı kaspazı KASPAZ-9 dur.",
+      "🔵 ÇIKMIŞ SORU: Sitokrom c sitoplazmada Apaf-1 e bağlanarak apoptozomu kurar."
+    ],
+    "pitfallsAndWarnings": [
+      "Ekstrensek yoldan farkı ölüm reseptörlerine ihtiyaç duymaması ve Kaspaz-9 kullanmasıdır."
+    ],
+    "relatedItems": [
+      "Mitokondriyal Apoptoz Yolu",
+      "İntrensek Yol",
+      "Mitokondriyal Yol"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-ekstrensek-apoptoz-yolağı",
+    "term": "Ekstrensek Apoptoz Yolağı",
+    "latinName": "Extrinsic Apoptosis Pathway (Death Receptor Pathway)",
+    "aliases": [
+      "Ölüm Reseptörü Yolu",
+      "Ekstrensek Yol",
+      "Fas-FasL Yolağı"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Hücre yüzeyindeki ölüm reseptörlerinin (Fas/CD95, TNFR1) ligantları (FasL, TNF) ile etkileşime girmesiyle hücre dışından tetiklenen apoptoz yoludur.",
+    "lectureContextNotes": "Hücre yüzeyindeki ölüm reseptörlerinin (Fas/CD95, TNFR1) ligantları (FasL, TNF) ile etkileşime girmesiyle hücre dışından tetiklenen apoptoz yoludur.",
+    "morphologyOrMechanism": "FasL + Fas (CD95) -> FADD -> Prokaspaz-8 -> Kaspaz-8 -> Kaspaz-3 aktivasyonu.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Ekstrensek yolun başlatıcı kaspazı KASPAZ-8 dir.",
+      "🔵 ÇIKMIŞ SORU: FLIP proteini prokaspaz-8 e bağlanarak ekstrensek apoptozu bloke eder."
+    ],
+    "pitfallsAndWarnings": [
+      "Kaspaz-8 Bid proteinini keserek tBid e çevirir ve mitokondriyal (intrensek) yola da çapraz geçiş yapabilir."
+    ],
+    "relatedItems": [
+      "Ölüm Reseptörü Yolu",
+      "Ekstrensek Yol",
+      "Fas-FasL Yolağı"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-apoptozom",
+    "term": "Apoptozom",
+    "latinName": "Apoptosome",
+    "aliases": [
+      "Apaf-1 Kompleksi",
+      "Apoptosome"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "İntrensek apoptozda sitoplazmaya salınan Sitokrom c nin Apaf-1 ve dATP/ATP ile birleşerek oluşturduğu tekerlek benzeri 7 kollu (heptamerik) protein kompleksidir.",
+    "lectureContextNotes": "İntrensek apoptozda sitoplazmaya salınan Sitokrom c nin Apaf-1 ve dATP/ATP ile birleşerek oluşturduğu tekerlek benzeri 7 kollu (heptamerik) protein kompleksidir.",
+    "morphologyOrMechanism": "Heptamerik tekerlek yapısı oluşturan moleküler kaspaz aktivasyon platformudur.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Apoptozom bileşenleri: Sitokrom c + Apaf-1 + dATP + Prokaspaz-9."
+    ],
+    "pitfallsAndWarnings": [
+      "Ekstrensek yolda apoptozom oluşmaz; onun yerine hücre zarında DISC kompleksi kurulur."
+    ],
+    "relatedItems": [
+      "Apaf-1 Kompleksi",
+      "Apoptosome"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-kaspaz-3",
+    "term": "Kaspaz-3",
+    "latinName": "Caspase-3",
+    "aliases": [
+      "Caspase 3",
+      "Kaspaz 3",
+      "Efektör Kaspaz 3"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Hem intrensek hem ekstrensek apoptoz yolaklarının birleştiği ana efektör (yürütücü) kaspazdır. Hücre içi yapısal proteinleri parçalar ve DNAaz inhibitörünü (ICAD) yıkarak DNA nın nükleozomal parçalanmasını başlatır.",
+    "lectureContextNotes": "Hem intrensek hem ekstrensek apoptoz yolaklarının birleştiği ana efektör (yürütücü) kaspazdır. Hücre içi yapısal proteinleri parçalar ve DNAaz inhibitörünü (ICAD) yıkarak DNA nın nükleozomal parçalanmasını başlatır.",
+    "morphologyOrMechanism": "Sistein proteaz aktivitesiyle aspartat kalıntılarından sonra kesim yapar.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Kaspaz-3 ve Kaspaz-6/7 temel yürütücü (efektör) kaspazlardır.",
+      "🔵 ÇIKMIŞ SORU: Kaspaz-3 ICAD ı parçalayarak CAD (Caspase-Activated DNase) ın DNA yı nükleozomlar arasından kesmesini sağlar."
+    ],
+    "pitfallsAndWarnings": [
+      "Kaspaz-8 ve Kaspaz-9 başlatıcı kaspazlardır; Kaspaz-3 ise yürütücüdür."
+    ],
+    "relatedItems": [
+      "Caspase 3",
+      "Kaspaz 3",
+      "Efektör Kaspaz 3"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-kaspaz-8",
+    "term": "Kaspaz-8",
+    "latinName": "Caspase-8",
+    "aliases": [
+      "Caspase 8",
+      "Kaspaz 8",
+      "Başlatıcı Kaspaz 8"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Ekstrensek (ölüm reseptörü) apoptoz yolağının temel başlatıcı kaspazıdır. DISC kompleksinde FADD aracılığıyla aktive edilir.",
+    "lectureContextNotes": "Ekstrensek (ölüm reseptörü) apoptoz yolağının temel başlatıcı kaspazıdır. DISC kompleksinde FADD aracılığıyla aktive edilir.",
+    "morphologyOrMechanism": "Prokaspaz-8 dimerizasyonu ve otokatalitik kesimle aktif heterodimer oluşturur.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Ölüm reseptör yolağının başlatıcısı Kaspaz-8 dir."
+    ],
+    "pitfallsAndWarnings": [
+      "Kaspaz-9 intrensek yolun; Kaspaz-8 ekstrensek yolun başlatıcısıdır."
+    ],
+    "relatedItems": [
+      "Caspase 8",
+      "Kaspaz 8",
+      "Başlatıcı Kaspaz 8"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-kaspaz-9",
+    "term": "Kaspaz-9",
+    "latinName": "Caspase-9",
+    "aliases": [
+      "Caspase 9",
+      "Kaspaz 9",
+      "Başlatıcı Kaspaz 9"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "İntrensek (mitokondriyal) apoptoz yolağının temel başlatıcı kaspazıdır. Sitokrom c ve Apaf-1 in kurduğu apoptozom kompleksi içinde aktive olur.",
+    "lectureContextNotes": "İntrensek (mitokondriyal) apoptoz yolağının temel başlatıcı kaspazıdır. Sitokrom c ve Apaf-1 in kurduğu apoptozom kompleksi içinde aktive olur.",
+    "morphologyOrMechanism": "CARD domaini aracılığıyla Apaf-1 e tutunarak aktive olur.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Mitokondriyal apoptozun başlatıcı kaspazı Kaspaz-9 dur."
+    ],
+    "pitfallsAndWarnings": [
+      "Kaspaz-8 ile karıştırılmamalıdır; Kaspaz-9 mitokondri/apoptozom bağımlıdır."
+    ],
+    "relatedItems": [
+      "Caspase 9",
+      "Kaspaz 9",
+      "Başlatıcı Kaspaz 9"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-fas-cd95",
+    "term": "Fas (CD95)",
+    "latinName": "Fas receptor (CD95 / APO-1)",
+    "aliases": [
+      "CD95",
+      "Fas Reseptörü",
+      "Apo-1",
+      "FAS"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Hücre zarında bulunan TNF reseptör ailesi üyesi tip I transmembran ölüm reseptörüdür. Sitoplazmik kuyruğunda ölüm alanı (death domain - DD) taşır.",
+    "lectureContextNotes": "Hücre zarında bulunan TNF reseptör ailesi üyesi tip I transmembran ölüm reseptörüdür. Sitoplazmik kuyruğunda ölüm alanı (death domain - DD) taşır.",
+    "morphologyOrMechanism": "Ölüm reseptörü trimerizasyonu ve DISC kompleksi kurulumu.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Fas (CD95) - FasL yolağı oto-reaktif T lenfositlerin eliminasyonunda kritik rol oynar.",
+      "🔵 ÇIKMIŞ SORU: Fas mutasyonlarında otoimmün lenfoproliferatif sendrom (ALPS) gelişir."
+    ],
+    "pitfallsAndWarnings": [
+      "Hücre ölümü indükler, enflamasyon oluşturmaz."
+    ],
+    "relatedItems": [
+      "CD95",
+      "Fas Reseptörü",
+      "Apo-1",
+      "FAS"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-fasl",
+    "term": "FasL",
+    "latinName": "Fas Ligand (CD95L / CD178)",
+    "aliases": [
+      "Fas Ligandı",
+      "CD178",
+      "CD95L",
+      "FASL"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Aktive sitotoksik T lenfositler (CTL) ve NK hücreleri yüzeyinde eksprese edilen, Fas (CD95) reseptörüne bağlanarak hedef hücrede apoptozu tetikleyen transmembran proteindir.",
+    "lectureContextNotes": "Aktive sitotoksik T lenfositler (CTL) ve NK hücreleri yüzeyinde eksprese edilen, Fas (CD95) reseptörüne bağlanarak hedef hücrede apoptozu tetikleyen transmembran proteindir.",
+    "morphologyOrMechanism": "Hedef hücre Fas reseptörüne bağlanıp trimerizasyon sağlar.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Aktive CD8+ sitotoksik T hücreleri hedef hücreleri FasL veya Perforin/Granzim ile öldürür."
+    ],
+    "pitfallsAndWarnings": [
+      "Çözünür formu da mevcuttur ancak zara bağlı trimerik form çok daha güçlü apoptojeniktir."
+    ],
+    "relatedItems": [
+      "Fas Ligandı",
+      "CD178",
+      "CD95L",
+      "FASL"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-perforin-ve-granzim-b",
+    "term": "Perforin ve Granzim B",
+    "latinName": "Perforin and Granzyme B",
+    "aliases": [
+      "Perforin",
+      "Granzim B",
+      "Granzyme B",
+      "CTL Apoptoz Yolu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Sitotoksik T lenfositlerin (CD8+) ve NK hücrelerinin hedef hücreyi öldürmek için granüllerinden salgıladığı sitotoksik moleküllerdir. Perforin hedef zarda delik açar, Granzim B içeri girerek doğrudan Kaspaz-3 ve Kaspaz-10 u keserek apoptozu başlatır.",
+    "lectureContextNotes": "Sitotoksik T lenfositlerin (CD8+) ve NK hücrelerinin hedef hücreyi öldürmek için granüllerinden salgıladığı sitotoksik moleküllerdir. Perforin hedef zarda delik açar, Granzim B içeri girerek doğrudan Kaspaz-3 ve Kaspaz-10 u keserek apoptozu başlatır.",
+    "morphologyOrMechanism": "Perforin porları -> Granzim B serin proteaz girişi -> Kaspaz aktivasyonu ve DNA kesimi.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Granzim B hücre içine girerek Kaspaz-3 ve Kaspaz-7 yi doğrudan aktive edebilir."
+    ],
+    "pitfallsAndWarnings": [
+      "Ölüm reseptörü gerektirmez; sitoplazmik granül ekzositozu ile çalışır."
+    ],
+    "relatedItems": [
+      "Perforin",
+      "Granzim B",
+      "Granzyme B",
+      "CTL Apoptoz Yolu"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-zahn-çizgileri",
+    "term": "Zahn Çizgileri",
+    "latinName": "Lines of Zahn",
+    "aliases": [
+      "Zahn Çizgisi",
+      "Lines of Zahn",
+      "Line of Zahn"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Antemortem (canlıda, kan akımı varken) oluşan trombüslerin mikroskobik ve makroskobik laminasyonudur. Açık renkli trombosit-fibrin tabakaları ile koyu renkli eritrositten zengin tabakaların ardışık diziliminden oluşur.",
+    "lectureContextNotes": "Antemortem (canlıda, kan akımı varken) oluşan trombüslerin mikroskobik ve makroskobik laminasyonudur. Açık renkli trombosit-fibrin tabakaları ile koyu renkli eritrositten zengin tabakaların ardışık diziliminden oluşur.",
+    "morphologyOrMechanism": "Akım yönünde ardışık açık (trombosit/fibrin) ve koyu (eritrosit) bantlar.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Zahn çizgileri trombüsün canlıda (antemortem) oluştuğunun kesin kanıtıdır.",
+      "🔵 ÇIKMIŞ SORU: Postmortem pıhtı ile antemortem trombüsün ayrımında Zahn çizgilerinin varlığı patognomoniktir."
+    ],
+    "pitfallsAndWarnings": [
+      "Ölüm sonrası oluşan pıhtılar jelatinözdür, tavuk yağı (üstte) ve frenk üzümü jölesi (altta) görünümündedir, duvara yapışmaz."
+    ],
+    "relatedItems": [
+      "Zahn Çizgisi",
+      "Lines of Zahn",
+      "Line of Zahn"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
+  },
+  {
+    "id": "enc-trousseau-sendromu",
+    "term": "Trousseau Sendromu",
+    "latinName": "Trousseau sign of malignancy",
+    "aliases": [
+      "Trousseau Belirtisi",
+      "Migratuar Tromboflebit",
+      "Trousseau"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Patoloji Anabilim Dalı Kurul 1",
+    "definition": "Vücudun farklı venlerinde gezici olarak ortaya çıkan tromboflebit (migratuar tromboflebit) tablosudur. Özellikle pankreas karsinomu, mide veya akciğer adenokarsinomlarında tümörden salınan prokoagülan ve müsinöz maddeler nedeniyle gelişir.",
+    "lectureContextNotes": "Vücudun farklı venlerinde gezici olarak ortaya çıkan tromboflebit (migratuar tromboflebit) tablosudur. Özellikle pankreas karsinomu, mide veya akciğer adenokarsinomlarında tümörden salınan prokoagülan ve müsinöz maddeler nedeniyle gelişir.",
+    "morphologyOrMechanism": "Tümör kaynaklı doku faktörü benzeri prokoagülan salınımı.",
+    "differentialDiagnosis": "Klinik ve histopatolojik ayırıcı tanı",
+    "examSpotPearls": [
+      "🔴 ÖNEMLİ: Migratuar tromboflebit (Trousseau sendromu) en sık pankreas adenokarsinomunda görülür.",
+      "🔵 ÇIKMIŞ SORU: Trousseau sendromu malignite ilişkili hiperkoagülabilitenin prototipidir."
+    ],
+    "pitfallsAndWarnings": [
+      "Hipokalsemideki karpopedal spazm olan Trousseau belirtisi ile karıştırılmamalıdır (bu paraneoplastik trombozdur)."
+    ],
+    "relatedItems": [
+      "Trousseau Belirtisi",
+      "Migratuar Tromboflebit",
+      "Trousseau"
+    ],
+    "aiAudit": {
+      "isVerified": true,
+      "score": 100
+    }
   }
 ]

@@ -557,26 +557,45 @@ export const RenderWithGlossaryTerms: React.FC<{
   const { regex, aliasToItem } = useMemo(() => {
     const map = new Map<string, GlossaryItem>();
     const patterns: string[] = [];
+    const STOP_WORDS = new Set(['ile', 've', 'bir', 'için', 'gibi', 'daha', 'çok', 'tip', 'her', 'bu', 'şu', 'veya', 'olan', 'göre']);
+
+    const addPattern = (raw: string, item: GlossaryItem) => {
+      const clean = raw.trim();
+      if (clean.length < 3) return;
+      const lower = clean.toLowerCase();
+      if (STOP_WORDS.has(lower)) return;
+      patterns.push(clean);
+      map.set(lower, item);
+      map.set(clean.toLocaleLowerCase('tr-TR'), item);
+    };
 
     glossaryList.forEach((item) => {
-      // Add term
+      // Add term directly
+      addPattern(item.term, item);
+
+      // Add clean term without parentheses
       const cleanTerm = item.term.replace(/\s*\([^)]*\)/g, '').trim();
-      if (cleanTerm.length >= 3) {
-        patterns.push(cleanTerm);
-        map.set(cleanTerm.toLowerCase(), item);
+      addPattern(cleanTerm, item);
+
+      // Add parenthetical contents if any
+      const parenMatch = item.term.match(/^(.+?)\s*\((.+?)\)$/);
+      if (parenMatch) {
+        addPattern(parenMatch[1], item);
+        addPattern(parenMatch[2], item);
       }
+
       // Add aliases
       item.aliases?.forEach((alias) => {
-        const cleanAlias = alias.trim();
-        if (cleanAlias.length >= 3) {
-          patterns.push(cleanAlias);
-          map.set(cleanAlias.toLowerCase(), item);
-        }
+        addPattern(alias, item);
       });
     });
 
     // Unique and sort by descending length
     const unique = Array.from(new Set(patterns)).sort((a, b) => b.length - a.length);
+
+    if (unique.length === 0) {
+      return { regex: /(?!x)x/, aliasToItem: map };
+    }
 
     // Escape regex special chars
     const escaped = unique.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
@@ -625,7 +644,7 @@ export const RenderWithGlossaryTerms: React.FC<{
         const termParts = rawContent.split(regex);
         const renderedContent = termParts.map((tPart, tIdx) => {
           if (!tPart) return null;
-          const matchedItem = aliasToItem.get(tPart.toLowerCase());
+          const matchedItem = aliasToItem.get(tPart.toLowerCase()) || aliasToItem.get(tPart.toLocaleLowerCase('tr-TR'));
           if (matchedItem) {
             return <GlossaryTermSpan key={tIdx} text={tPart} item={matchedItem} />;
           }

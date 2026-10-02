@@ -332,6 +332,14 @@ app.get('/api/health', (req, res) => {
     uptime: Math.round(process.uptime()),
     timestamp: new Date().toISOString(),
     isLocalPc: true,
+    // Operasyonel teşhis (sır içermez): hangi Supabase'e, hangi anahtar uzunluğuyla bağlı
+    supabase: {
+      localActive: isLocalSupabaseActive,
+      localUrl: (() => { try { return new URL(LOCAL_SUPABASE_URL).host; } catch { return '?'; } })(),
+      cloudUrl: (() => { try { return new URL(CLOUD_SUPABASE_URL).host; } catch { return '?'; } })(),
+      cloudKeyLen: (CLOUD_SUPABASE_KEY || '').length,
+      cloudKeySrc: process.env.CLOUD_SUPABASE_KEY ? 'env' : 'fallback',
+    },
   });
 });
 
