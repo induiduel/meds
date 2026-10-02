@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { BookA, GraduationCap, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2 } from 'lucide-react';
-import glossaryData from '../../data/medical_glossary.json';
+import { GLOSSARY } from '../../data/glossary';
 import { SectionLoader, SuccessCheck } from '../ui/Animations';
 
 // ---------------------------------------------------------------------------
@@ -71,16 +71,14 @@ const glossaryGroup = (cat: string) => {
   return (cat.split(/\s*[\/&]\s*/)[0] || 'Diğer').trim();
 };
 
-const GLOSSARY_CARDS: StudyCard[] = (glossaryData as any[])
-  .filter((g) => g?.term && g?.definition)
-  .map((g) => ({
-    id: `g:${g.term}`,
-    group: glossaryGroup(g.category || 'Diğer'),
-    front: g.term,
-    back: g.definition,
-    sub: g.pronunciation,
-    pearl: g.clinicalPearls,
-  }));
+const GLOSSARY_CARDS: StudyCard[] = GLOSSARY.map((g) => ({
+  id: `g:${g.term}`,
+  group: glossaryGroup(g.category || 'Diğer'),
+  front: g.term,
+  back: g.definition,
+  sub: g.pronunciation,
+  pearl: g.clinicalPearls,
+}));
 
 const deckGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
 

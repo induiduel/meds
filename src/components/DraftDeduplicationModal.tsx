@@ -6,6 +6,73 @@ import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '.
 import { ApiService } from '../services/api';
 import { AppUser } from '../services/auth';
 
+
+// ---------------------------------------------------------------------------
+// Shared-word colouring: words that recur across drafts of one cluster get the
+// same pastel colour, so overlaps are visible at a glance.
+// ---------------------------------------------------------------------------
+const WORD_COLORS = ['#FEF08A', '#BBF7D0', '#FBCFE8', '#BFDBFE', '#DDD6FE', '#FED7AA', '#99F6E4', '#FECDD3'];
+const STOP = new Set(
+  'hasta hastada hastanın hastaya hastanin olan olarak ile için icin veya hangisi hangisidir aşağıdaki asagidaki daha gibi sonra kadar soru sorusu sorudu bunun buna olan yaşında yasinda ancak değil degil dolayı ilgili durum durumu durumda şekilde sekilde vardı vardi oldu olur olması olmasi kişi kisi hocam hoca bence sanki hatırlıyorum hatirliyorum hatırlanan sordu sorulmuştu şıkkı sikki şıklar siklar cevap doğru dogru yanlış yanlis bulunan bulunur görülür gorulur görüldü tanısı tanisi tanı tani ilgili arasında arasinda sırasında sirasinda nedir neden'.split(' ')
+);
+const wordKey = (w: string) => {
+  const t = w.toLocaleLowerCase('tr-TR');
+  // Turkish suffixes: compare by the first 5 letters of longer words ("sendromu" ~ "sendrom")
+  return t.length >= 7 ? t.slice(0, 5) : t;
+};
+const tokens = (text: string) => (text.match(/[\p{L}\p{N}]+/gu) || []).filter((w) => w.length >= 4 && !STOP.has(w.toLocaleLowerCase('tr-TR')));
+
+/** Word keys that appear in at least two different texts, coloured by how widely they recur. */
+const sharedWordColors = (texts: string[]): Map<string, string> => {
+  const seenIn = new Map<string, number>();
+  texts.forEach((t) => {
+    new Set(tokens(t).map(wordKey)).forEach((k) => seenIn.set(k, (seenIn.get(k) || 0) + 1));
+  });
+  const shared = [...seenIn.entries()]
+    .filter(([, n]) => n >= 2)
+    .sort((a, b) => b[1] - a[1] || b[0].length - a[0].length)
+    .slice(0, WORD_COLORS.length);
+  return new Map(shared.map(([k], i) => [k, WORD_COLORS[i]]));
+};
+
+/** Renders text with shared words painted in their colour. */
+const Colored: React.FC<{ text: string; colors: Map<string, string> }> = ({ text, colors }) => {
+  if (!colors.size || !text) return <>{text}</>;
+  const parts = text.split(/([\p{L}\p{N}]+)/u);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const c = i % 2 === 1 && part.length >= 4 ? colors.get(wordKey(part)) : undefined;
+        return c ? (
+          <mark key={i} className="rounded-[4px] px-[2px] -mx-[1px] text-inherit" style={{ background: c }}>
+            {part}
+          </mark>
+        ) : (
+          <React.Fragment key={i}>{part}</React.Fragment>
+        );
+      })}
+    </>
+  );
+};
+
+/** The coloured keywords as a small legend. */
+const WordLegend: React.FC<{ texts: string[]; colors: Map<string, string> }> = ({ texts, colors }) => {
+  if (!colors.size) return null;
+  // Show one real spelling per key
+  const spelled = new Map<string, string>();
+  texts.forEach((t) => tokens(t).forEach((w) => !spelled.has(wordKey(w)) && spelled.set(wordKey(w), w.toLocaleLowerCase('tr-TR'))));
+  return (
+    <span className="flex flex-wrap items-center gap-1">
+      <span className="text-[11.5px] text-ink-3 mr-0.5">Ortak:</span>
+      {[...colors.entries()].map(([k, c]) => (
+        <span key={k} className="h-5 px-1.5 rounded-[6px] text-[11.5px] text-ink inline-flex items-center" style={{ background: c }}>
+          {spelled.get(k) || k}
+        </span>
+      ))}
+    </span>
+  );
+};
+
 interface DraftDeduplicationModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -218,6 +285,10 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
   const readyCount = analysis?.clusters.filter((c) => c.status === 'ready_to_merge').length || 0;
   const reviewCount = analysis?.clusters.filter((c) => c.status === 'needs_review').length || 0;
   const stemOf = (q: QuestionItem) => q.reconstruction?.stem || (q as any).stem || q.fragments?.[0]?.text || '';
+  const fullText = (q: QuestionItem) => [stemOf(q), ...(q.options || []).map((o) => o.text)].join(' ');
+  // Manual tab: colour words the selected drafts share (and show them in the other rows too)
+  const selectedQs = selectedDraftIds.map((id) => committeeQuestions.find((x) => x.id === id)).filter(Boolean) as QuestionItem[];
+  const manualColors = selectedQs.length >= 2 ? sharedWordColors(selectedQs.map(fullText)) : new Map<string, string>();
   const numLabel = (q: QuestionItem) => (q.isUnassignedNumber || !q.questionNumber ? 'No ?' : `S.${q.questionNumber}`);
   const shortCommittee = (committee?.name || 'Seçili kurul').replace(/^Dönem 3\s*-\s*/i, '');
 
@@ -282,7 +353,8 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         </header>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4 sm:px-5 pb-3">
+        {/* Hidden on short screens (landscape phones) so the list keeps its room */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4 sm:px-5 pb-3 [@media(max-height:620px)]:hidden">
           {stats.map((s) => (
             <div key={s.label} className="rounded-[14px] bg-canvas px-3 py-2 flex flex-col">
               <span className="flex items-center gap-1.5 text-[12px] text-ink-2">
@@ -350,6 +422,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
               <p className="m-0 text-[13.5px] text-ink-2">
                 Aynı soruya ait taslakları işaretle. Biri <strong className="text-ink">çapa</strong> olur; şıklar harmanlanır, mükerrerler temizlenir.
               </p>
+              {manualColors.size > 0 && <WordLegend texts={selectedQs.map(fullText)} colors={manualColors} />}
               <label className="flex items-center gap-2 h-11 px-3.5 rounded-[12px] bg-white border border-line focus-within:border-accent">
                 <Search className="w-4 h-4 text-ink-3 shrink-0" />
                 <span className="sr-only">Taslaklarda ara</span>
@@ -394,13 +467,15 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                               <span className="ml-auto shrink-0 h-5 px-2 rounded-full bg-accent text-white text-[11px] font-semibold inline-flex items-center">Çapa</span>
                             )}
                           </span>
-                          <span className="text-[14px] text-ink leading-snug line-clamp-2">{stemOf(q) || 'Metin girilmemiş'}</span>
+                          <span className="text-[14px] text-ink leading-snug line-clamp-2">
+                            {stemOf(q) ? <Colored text={stemOf(q)} colors={manualColors} /> : 'Metin girilmemiş'}
+                          </span>
                           {q.options?.length > 0 && (
                             <span className="flex flex-wrap gap-1">
                               {q.options.slice(0, 3).map((o) => (
                                 <span key={o.key} className="max-w-[220px] truncate h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center">
                                   <strong className="font-mono mr-1">{o.key}</strong>
-                                  {o.text}
+                                  <Colored text={o.text} colors={manualColors} />
                                 </span>
                               ))}
                               {q.options.length > 3 && <span className="h-6 px-2 text-[12px] text-ink-3 inline-flex items-center">+{q.options.length - 3}</span>}
@@ -447,6 +522,8 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
               const open = expandedClusterId === cluster.id;
               const merging = mergingClusterId === cluster.id;
               const ready = cluster.status === 'ready_to_merge';
+              const clusterTexts = [anchor, ...cluster.satelliteDrafts.map((sd) => sd.question)].map(fullText);
+              const colors = sharedWordColors(clusterTexts);
               return (
                 <article
                   key={cluster.id}
@@ -474,6 +551,9 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                       </span>
                       <span className="text-[12.5px] text-ink-3 truncate">
                         {anchor.discipline} · {cluster.satelliteDrafts.length} taslak birleşecek
+                      </span>
+                      <span className="mt-1">
+                        <WordLegend texts={clusterTexts} colors={colors} />
                       </span>
                     </span>
                     <button
@@ -506,13 +586,13 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                         Çapa soru
                         <span className="ml-auto font-normal text-ink-3">{anchor.options?.length || 0} şık</span>
                       </span>
-                      <span className={`text-[13.5px] text-ink leading-snug ${open ? '' : 'line-clamp-2'}`}>{stemOf(anchor) || 'Soru kökü henüz girilmemiş'}</span>
+                      <span className={`text-[13.5px] text-ink leading-snug ${open ? '' : 'line-clamp-2'}`}>{stemOf(anchor) ? <Colored text={stemOf(anchor)} colors={colors} /> : 'Soru kökü henüz girilmemiş'}</span>
                       {open && anchor.options?.length > 0 && (
                         <span className="flex flex-col gap-0.5 pt-1 border-t border-line-soft mt-1">
                           {anchor.options.map((o) => (
                             <span key={o.key} className="text-[12.5px] text-ink-2">
                               <strong className="font-mono text-ink mr-1">{o.key})</strong>
-                              {o.text}
+                              <Colored text={o.text} colors={colors} />
                             </span>
                           ))}
                         </span>
@@ -526,7 +606,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                             <span className="text-ink-3 shrink-0">· {numLabel(sat.question)}</span>
                             <span className="ml-auto shrink-0 font-mono text-[12px] font-semibold text-ok">%{sat.compatibility.score}</span>
                           </span>
-                          <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-1'}`}>{stemOf(sat.question) || 'Metin'}</span>
+                          <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-1'}`}>{stemOf(sat.question) ? <Colored text={stemOf(sat.question)} colors={colors} /> : 'Metin'}</span>
                           {open && sat.compatibility.reasons.length > 0 && (
                             <span className="flex flex-wrap gap-1">
                               {sat.compatibility.reasons.map((r, i) => (

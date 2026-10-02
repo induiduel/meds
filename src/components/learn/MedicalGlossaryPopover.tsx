@@ -10,7 +10,7 @@ import {
   ChevronRight,
   Filter,
 } from 'lucide-react';
-import rawGlossaryData from '../../data/medical_glossary.json';
+import { GLOSSARY } from '../../data/glossary';
 
 // ---------------------------------------------------------------------------
 // Type definitions
@@ -98,7 +98,8 @@ export const getCategoryBadgeStyle = (category: string, badgeColor?: string) => 
 // Provider Component
 // ---------------------------------------------------------------------------
 export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const glossaryList = rawGlossaryData as GlossaryItem[];
+  // Normalised list (handles both glossary file shapes, skips entries without a definition)
+  const glossaryList = GLOSSARY as GlossaryItem[];
   const [activeState, setActiveState] = useState<ActiveGlossaryState | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [currentSlideText, setCurrentSlideText] = useState<string>('');
