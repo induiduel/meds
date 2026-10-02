@@ -439,14 +439,31 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Human committee name translator
   const formatCommitteeName = (cId: string) => {
-    if (cId === 'donem3-kurul1') return 'Kurul 1: TIP 310 - Ürogenital ve Obstetrik';
-    if (cId === 'donem3-kurul2') return 'Kurul 2: TIP 320 - Nöropsikiyatri';
-    if (cId === 'donem3-kurul3') return 'Kurul 3: TIP 330 - Gastrointestinal Sistem';
-    if (cId === 'donem3-kurul4') return 'Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör';
-    if (cId === 'donem3-kurul5') return 'Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem';
-    if (cId === 'donem3-kurul6') return 'Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma';
+    // Dönem 3
+    if (cId === 'donem3-kurul1') return 'Dönem 3 Kurul 1: TIP 310 - Ürogenital ve Obstetrik';
+    if (cId === 'donem3-kurul2') return 'Dönem 3 Kurul 2: TIP 320 - Nöropsikiyatri';
+    if (cId === 'donem3-kurul3') return 'Dönem 3 Kurul 3: TIP 330 - Gastrointestinal Sistem';
+    if (cId === 'donem3-kurul4') return 'Dönem 3 Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör';
+    if (cId === 'donem3-kurul5') return 'Dönem 3 Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem';
+    if (cId === 'donem3-kurul6') return 'Dönem 3 Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma';
     if (cId === 'donem3-final') return 'Dönem 3 Final Sınavı (28.06.2027)';
     if (cId === 'donem3-butunleme') return 'Dönem 3 Bütünleme Sınavı (16.07.2027)';
+
+    // Dönem 2
+    if (cId === 'donem2-kurul1') return 'Dönem 2 Kurul 1: TIP 211 - Dolaşım ve Solunum Sistemleri';
+    if (cId === 'donem2-kurul2') return 'Dönem 2 Kurul 2: TIP 212 - Sindirim ve Metabolizma Sistemleri';
+    if (cId === 'donem2-kurul3') return 'Dönem 2 Kurul 3: TIP 213 - Ürogenital ve Endokrin Sistemleri';
+    if (cId === 'donem2-kurul4') return 'Dönem 2 Kurul 4: TIP 214 - Sinir Sistemi ve Duyu Organları';
+    if (cId === 'donem2-kurul5') return 'Dönem 2 Kurul 5: TIP 215 - Hastalıkların Biyolojik Temelleri';
+    if (cId === 'donem2-final') return 'Dönem 2 Final Sınavı';
+
+    // Dönem 1
+    if (cId === 'donem1-kurul1') return 'Dönem 1 Kurul 1: TIP 111 - Hücre Biyolojisi I';
+    if (cId === 'donem1-kurul2') return 'Dönem 1 Kurul 2: TIP 112 - Hücre Biyolojisi II';
+    if (cId === 'donem1-kurul3') return 'Dönem 1 Kurul 3: TIP 113 - Hücre Biyolojisi III';
+    if (cId === 'donem1-kurul4') return 'Dönem 1 Kurul 4: TIP 114 - Kemik ve Eklem Kurulu';
+    if (cId === 'donem1-kurul5') return 'Dönem 1 Kurul 5: TIP 115 - Kas Kurulu';
+
     return cId;
   };
 

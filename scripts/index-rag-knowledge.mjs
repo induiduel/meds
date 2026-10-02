@@ -248,7 +248,7 @@ async function main() {
         const claim = q.claimedAnswer || q.reconstruction?.correctOption || '';
         const expl = q.explanation || q.reconstruction?.explanation || '';
 
-        const chunkContent = `[ÇIKMIŞ SINAV SORUSU]
+        const chunkContent = q.ragChunk || `[ÇIKMIŞ SINAV SORUSU]
 Ders / Branş: ${q.discipline || 'Tıp'}
 Kurul: ${q.committeeId || 'donem3-kurul1'}
 Sınav Yılı: ${q.examYear || 'Bilinmiyor'}
