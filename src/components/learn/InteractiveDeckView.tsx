@@ -16,6 +16,8 @@ import {
   XCircle,
   Lightbulb,
   AlertTriangle,
+  AlertCircle,
+  HelpCircle,
   EyeOff,
   Stethoscope,
   Sparkles,
@@ -81,15 +83,16 @@ export interface SlideQuestionOption {
 
 export interface SlideRelatedQuestion {
   id: string;
-  examYear: string;
-  committeeId: string;
-  discipline: string;
-  topic: string;
+  examYear?: string;
+  committeeId?: string;
+  discipline?: string;
+  topic?: string;
   stem: string;
   options: SlideQuestionOption[];
   correctAnswer: string;
   explanation: string;
   matchScore?: number;
+  isPracticeQuestion?: boolean;
 }
 
 export interface SlideContentTable {
@@ -2055,7 +2058,12 @@ const SlideCanvas: React.FC<{
 };
 
 // ---------------------------------------------------------------------------
-// Spot list: warm "Akılda tut" card with numbered, spaced items
+// Spot list: warm "Akılda tut" card with numbered, structured items
+// Supports:
+// - Red (Kırmızı) = Önemli / Kritik / Hayati
+// - Blue (Mavi) = Sorulmuş Soru / Komite / TUS Sınav Sorusu
+// - Normal = Genel Spot Bilgi
+// - Sub-bullets (alt madde) and Upper-bullets (üst madde)
 // ---------------------------------------------------------------------------
 const SpotList: React.FC<{ items: string[]; title?: string; note?: string; compact?: boolean }> = ({
   items,
@@ -2063,37 +2071,112 @@ const SpotList: React.FC<{ items: string[]; title?: string; note?: string; compa
   note,
   compact = false,
 }) => (
-  <section className={`rounded-2xl border border-[#F2DDB8] bg-[#FFF9EF] flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-3.5 sm:p-4 gap-3'}`}>
+  <section className={`rounded-2xl border border-[#F2DDB8] bg-[#FFF9EF] dark:bg-[#1C1814] dark:border-[#523A1E] flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-3.5 sm:p-4 gap-3'}`}>
     <header className="flex items-center gap-2">
-      <span className="w-7 h-7 rounded-[9px] bg-[#FCE9C6] text-[#9A4D06] flex items-center justify-center shrink-0" aria-hidden="true">
+      <span className="w-7 h-7 rounded-[9px] bg-[#FCE9C6] dark:bg-[#3D2508] text-[#9A4D06] dark:text-[#E6934A] flex items-center justify-center shrink-0" aria-hidden="true">
         <Lightbulb className="w-4 h-4" />
       </span>
-      <span className="text-[13.5px] font-semibold text-[#8A4405]">{title}</span>
-      <span className="ml-auto text-[12px] font-mono text-[#9A4D06]/70">{items.length}</span>
+      <span className="text-[13.5px] font-semibold text-[#8A4405] dark:text-[#E6934A]">{title}</span>
+      <span className="ml-auto text-[12px] font-mono text-[#9A4D06]/70 dark:text-[#E6934A]/70">{items.length}</span>
     </header>
-    {note && <p className="m-0 -mt-1 text-[13px] text-[#8A4405]/80">{note}</p>}
-    <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-1.5' : 'gap-2'}`}>
+    {note && <p className="m-0 -mt-1 text-[13px] text-[#8A4405]/80 dark:text-[#E6934A]/80">{note}</p>}
+    <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-2' : 'gap-2.5'}`}>
       {items.map((p, i) => {
-        const isRed = /(?:🔴|🚨|⚠️|ölümcül|asla|acil|hayati|kritik|kontrendike)/i.test(p);
+        const isRed = /(?:🔴|🚨|⚠️|ölümcül|asla|acil|hayati|kritik|kontrendike|\[kırmızı|\[red|önemli)/i.test(p);
+        const isBlue = !isRed && /(?:🔵|❓|❔|çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|\[mavi|\[blue|\[çıkmış|soru:)/i.test(p);
+
+        // Split multi-line spot pearls to support main bullets and sub-bullets
+        const rawLines = p.split('\n');
+
         return (
           <li
             key={i}
-            className={`grid grid-cols-[22px_minmax(0,1fr)] gap-2.5 items-start rounded-xl shadow-[0_1px_0_rgba(154,77,6,0.10)] ${
+            className={`rounded-xl transition-all shadow-[0_1px_2px_rgba(0,0,0,0.04)] border flex flex-col ${
               isRed
-                ? 'bg-red-50/80 border border-red-200/90 text-red-950 dark:text-red-200'
-                : 'bg-white text-ink'
-            } ${compact ? 'px-2.5 py-2 text-[13.5px]' : 'px-3 py-2.5 text-[14.5px]'} leading-[1.6]`}
+                ? 'bg-red-50/80 dark:bg-red-950/25 border-red-200/90 dark:border-red-900/40 text-red-950 dark:text-red-100'
+                : isBlue
+                ? 'bg-blue-50/80 dark:bg-blue-950/25 border-blue-200/90 dark:border-blue-900/40 text-blue-950 dark:text-blue-100'
+                : 'bg-white dark:bg-surface-elevated border-line-soft text-ink'
+            } ${compact ? 'p-2.5 text-[13.5px]' : 'p-3 text-[14.5px]'} leading-[1.6]`}
           >
-            <span
-              className={`w-[22px] h-[22px] mt-[1px] rounded-full font-mono text-[11.5px] font-semibold flex items-center justify-center ${
-                isRed ? 'bg-red-200 text-red-800' : 'bg-[#FCE9C6] text-[#9A4D06]'
-              }`}
-            >
-              {isRed ? '!' : i + 1}
-            </span>
-            <span className="min-w-0 break-words">
-              <Rich text={p} />
-            </span>
+            {/* Top header row: Pill + Badge Icon */}
+            <div className="flex items-center justify-between gap-2 mb-1.5 pb-1 border-b border-inherit/20">
+              <span className="inline-flex items-center gap-1.5">
+                {isRed ? (
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-bold bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-200">
+                    <AlertCircle className="w-3 h-3" /> ÖNEMLİ
+                  </span>
+                ) : isBlue ? (
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200">
+                    <HelpCircle className="w-3 h-3" /> ÇIKMIŞ SORU
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-semibold bg-amber-100/70 dark:bg-amber-950/40 text-[#9A4D06] dark:text-amber-300">
+                    ⚡ SPOT BİLGİ
+                  </span>
+                )}
+              </span>
+              <span
+                className={`w-[20px] h-[20px] rounded-full font-mono text-[11px] font-semibold flex items-center justify-center ${
+                  isRed
+                    ? 'bg-red-200 text-red-800 dark:bg-red-900/80 dark:text-red-100'
+                    : isBlue
+                    ? 'bg-blue-200 text-blue-800 dark:bg-blue-900/80 dark:text-blue-100'
+                    : 'bg-[#FCE9C6] text-[#9A4D06] dark:bg-amber-950/60 dark:text-amber-200'
+                }`}
+              >
+                {isRed ? '!' : isBlue ? '?' : i + 1}
+              </span>
+            </div>
+
+            {/* Lines rendering: upper-bullets, sub-bullets, and paragraphs */}
+            <div className="flex flex-col gap-1 min-w-0 break-words">
+              {rawLines.map((line, lIdx) => {
+                const trimmed = line.trim();
+                if (!trimmed) return null;
+
+                const isSubBullet =
+                  (line.startsWith('  ') || line.startsWith('\t')) &&
+                  (trimmed.startsWith('- ') || trimmed.startsWith('• ') || trimmed.startsWith('* ') || trimmed.startsWith('→ '));
+
+                const isUpperBullet =
+                  !isSubBullet &&
+                  (trimmed.startsWith('• ') || trimmed.startsWith('* ') || /^[0-9]+\.\s/.test(trimmed));
+
+                if (isSubBullet) {
+                  const cleanText = trimmed.replace(/^[-•*→]\s*/, '');
+                  return (
+                    <div
+                      key={lIdx}
+                      className="ml-3.5 pl-2.5 py-0.5 border-l-2 border-inherit/40 text-[13px] flex items-start gap-1.5"
+                    >
+                      <span className="text-[10px] opacity-70 mt-1 select-none">▫</span>
+                      <span className="min-w-0 flex-1">
+                        <Rich text={cleanText} />
+                      </span>
+                    </div>
+                  );
+                }
+
+                if (isUpperBullet) {
+                  const cleanText = trimmed.replace(/^([•*]|\d+\.)\s*/, '');
+                  return (
+                    <div key={lIdx} className="font-semibold flex items-start gap-2 pt-0.5">
+                      <span className="text-accent mt-0.5 select-none">▸</span>
+                      <span className="min-w-0 flex-1">
+                        <Rich text={cleanText} />
+                      </span>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div key={lIdx}>
+                    <Rich text={trimmed} />
+                  </div>
+                );
+              })}
+            </div>
           </li>
         );
       })}
@@ -2223,24 +2306,55 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) =>
   const answer = q.correctAnswer || q.options.find((o) => o.isCorrect)?.key || '';
   const done = picked !== null;
   const right = done && picked === answer;
+  const isPractice =
+    Boolean(q.isPracticeQuestion) ||
+    Boolean(q.examYear && (q.examYear.includes('Çalışma') || q.examYear.includes('Özgün') || q.examYear.includes('Pekiştirme')));
+
   return (
-    <article className="rounded-xl border border-line p-3 flex flex-col gap-2.5">
-      <header className="flex items-center gap-2 text-[12px] text-ink-3">
-        <span className="font-mono font-semibold text-accent">S{n}</span>
-        <span className="truncate">{[q.examYear, q.topic].filter(Boolean).join(' · ')}</span>
+    <article
+      className={`rounded-xl border p-3 flex flex-col gap-2.5 transition-all shadow-2xs ${
+        isPractice
+          ? 'border-emerald-200 dark:border-emerald-900/40 bg-emerald-50/20 dark:bg-emerald-950/10'
+          : 'border-blue-200 dark:border-blue-900/40 bg-blue-50/20 dark:bg-blue-950/10'
+      }`}
+    >
+      <header className="flex items-center justify-between gap-2 text-[12px] text-ink-3 flex-wrap">
+        <div className="flex items-center gap-1.5 min-w-0">
+          <span
+            className={`font-mono font-semibold px-1.5 py-0.5 rounded text-[11px] ${
+              isPractice
+                ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300'
+                : 'bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300'
+            }`}
+          >
+            S{n}
+          </span>
+          <span className="truncate font-medium text-ink-2">{[q.examYear, q.topic].filter(Boolean).join(' · ')}</span>
+        </div>
+        {isPractice ? (
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-[10.5px] font-bold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700 flex items-center gap-1 shadow-2xs">
+            <Sparkles className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+            Özgün Çalışma Sorusu
+          </span>
+        ) : (
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-[10.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 border border-blue-300 dark:border-blue-700 flex items-center gap-1 shadow-2xs">
+            <GraduationCap className="w-3 h-3 text-blue-600 dark:text-blue-400" />
+            Çıkmış Sınav Sorusu
+          </span>
+        )}
       </header>
-      <p className="m-0 text-[14px] leading-[1.5] font-medium">{q.stem}</p>
+      <p className="m-0 text-[14px] leading-[1.5] font-medium text-ink">{q.stem}</p>
       <div role="radiogroup" aria-label={`Soru ${n} şıkları`} className="flex flex-col gap-1.5">
         {q.options.map((o) => {
           const isAns = o.key === answer;
           const isPick = o.key === picked;
           const cls = !done
-            ? 'border-line hover:border-accent bg-white'
+            ? 'border-line hover:border-accent bg-white dark:bg-surface-elevated'
             : isAns
-              ? 'border-ok-bright bg-ok-tint'
+              ? 'border-ok-bright bg-ok-tint dark:bg-ok/20 text-ok-bright'
               : isPick
-                ? 'border-bad bg-bad-soft'
-                : 'border-line bg-white opacity-70';
+                ? 'border-bad bg-bad-soft dark:bg-bad/20'
+                : 'border-line bg-white dark:bg-surface-elevated opacity-70';
           return (
             <button
               key={o.key}
@@ -2249,32 +2363,32 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) =>
               aria-checked={isPick}
               disabled={done}
               onClick={() => setPicked(o.key)}
-              className={`w-full min-h-10 px-2.5 py-1.5 rounded-lg border text-left flex items-start gap-2 text-[13px] leading-snug ${done ? 'cursor-default' : 'cursor-pointer'} ${cls}`}
+              className={`w-full min-h-10 px-2.5 py-1.5 rounded-lg border text-left flex items-start gap-2 text-[13px] leading-snug transition-colors ${done ? 'cursor-default' : 'cursor-pointer'} ${cls}`}
             >
               <span className={`font-mono font-semibold shrink-0 ${done && isAns ? 'text-ok' : done && isPick ? 'text-bad-text' : 'text-ink-2'}`}>{o.key})</span>
-              <span className="flex-1">{o.text}</span>
-              {done && isAns && <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />}
-              {done && isPick && !isAns && <XCircle className="w-4 h-4 text-bad-text shrink-0" />}
+              <span className="flex-1 text-ink">{o.text}</span>
+              {done && isAns && <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />}
+              {done && isPick && !isAns && <XCircle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />}
             </button>
           );
         })}
       </div>
       {done && (
-        <div className={`rounded-lg px-2.5 py-2 text-[13px] ${right ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
+        <div className={`rounded-lg px-2.5 py-2 text-[13px] ${right ? 'bg-ok-soft dark:bg-ok/20 border border-ok/30' : 'bg-bad-soft dark:bg-bad/20 border border-bad/30'}`}>
           <div className="flex items-center justify-between gap-2">
-            <strong className={right ? 'text-ok' : 'text-bad-text'}>{right ? 'Doğru' : `Doğru cevap ${answer}`}</strong>
+            <strong className={right ? 'text-ok dark:text-emerald-400' : 'text-bad-text dark:text-rose-400'}>{right ? '✓ Tebrikler, Doğru Yanıt!' : `✕ Yanlış. Doğru cevap ${answer}`}</strong>
             <span className="flex gap-1">
               {q.explanation && (
-                <button type="button" onClick={() => setShowExp((v) => !v)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 cursor-pointer">
+                <button type="button" onClick={() => setShowExp((v) => !v)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
                   {showExp ? 'Açıklamayı gizle' : 'Açıklama'}
                 </button>
               )}
-              <button type="button" onClick={() => setPicked(null)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 cursor-pointer">
-                Tekrar
+              <button type="button" onClick={() => setPicked(null)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
+                Tekrar Dene
               </button>
             </span>
           </div>
-          {showExp && q.explanation && <p className="m-0 mt-1.5 text-ink-2 leading-[1.55] whitespace-pre-line">{q.explanation.replace(/\n(?!\n)/g, ' ')}</p>}
+          {showExp && q.explanation && <p className="m-0 mt-1.5 text-ink-2 dark:text-ink-muted leading-[1.55] whitespace-pre-line">{q.explanation.replace(/\n(?!\n)/g, ' ')}</p>}
         </div>
       )}
     </article>

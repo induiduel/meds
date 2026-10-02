@@ -587,20 +587,42 @@ export const RenderWithGlossaryTerms: React.FC<{
     return { regex: reg, aliasToItem: map };
   }, [glossaryList]);
 
-  // First handle markdown ***triple*** or **double** bold
-  const boldParts = String(text || '').split(/(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*)/g);
+  // Multi-token parser: Bold (*** / **), Markers (==...== or <mark>...</mark>), Italics (*...* or _..._)
+  const tokenRegex = /(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|==[^=]+==|<mark>[^<]+<\/mark>|\*[^*\n]+\*|_[^_\n]+_)/g;
+  const parts = String(text || '').split(tokenRegex);
 
   return (
     <span className={className}>
-      {boldParts.map((bPart, bIdx) => {
-        const isTriple = bPart.startsWith('***') && bPart.endsWith('***');
-        const isDouble = bPart.startsWith('**') && bPart.endsWith('**');
+      {parts.map((part, pIdx) => {
+        if (!part) return null;
+
+        const isTriple = part.startsWith('***') && part.endsWith('***');
+        const isDouble = part.startsWith('**') && part.endsWith('**');
         const isBold = isTriple || isDouble;
-        const rawContent = isTriple ? bPart.slice(3, -3) : isDouble ? bPart.slice(2, -2) : bPart;
+        const isMarker = (part.startsWith('==') && part.endsWith('==')) || (part.startsWith('<mark>') && part.endsWith('</mark>'));
+        const isItalic = (part.startsWith('*') && part.endsWith('*') && !isBold) || (part.startsWith('_') && part.endsWith('_'));
 
-        // Split rawContent by terms regex
+        let rawContent = part;
+        if (isTriple) rawContent = part.slice(3, -3);
+        else if (isDouble) rawContent = part.slice(2, -2);
+        else if (part.startsWith('==') && part.endsWith('==')) rawContent = part.slice(2, -2);
+        else if (part.startsWith('<mark>') && part.endsWith('</mark>')) rawContent = part.slice(6, -7);
+        else if (isItalic) rawContent = part.slice(1, -1);
+
+        // Marker color variants (e.g. ==red:...==, ==kırmızı:...==, ==blue:...==, ==mavi:...==)
+        let markerColor: 'yellow' | 'red' | 'blue' = 'yellow';
+        if (isMarker) {
+          if (/^(?:red:|kırmızı:|onemli:|önemli:)/i.test(rawContent)) {
+            markerColor = 'red';
+            rawContent = rawContent.replace(/^(?:red:|kırmızı:|onemli:|önemli:)/i, '').trim();
+          } else if (/^(?:blue:|mavi:|cikmis:|çıkmış:|soru:)/i.test(rawContent)) {
+            markerColor = 'blue';
+            rawContent = rawContent.replace(/^(?:blue:|mavi:|cikmis:|çıkmış:|soru:)/i, '').trim();
+          }
+        }
+
+        // Split rawContent by medical terms regex
         const termParts = rawContent.split(regex);
-
         const renderedContent = termParts.map((tPart, tIdx) => {
           if (!tPart) return null;
           const matchedItem = aliasToItem.get(tPart.toLowerCase());
@@ -610,18 +632,60 @@ export const RenderWithGlossaryTerms: React.FC<{
           return <React.Fragment key={tIdx}>{tPart}</React.Fragment>;
         });
 
+        // 1. Marker Highlight rendering
+        if (isMarker) {
+          if (markerColor === 'red') {
+            return (
+              <mark
+                key={pIdx}
+                className="bg-red-100/90 dark:bg-red-950/50 text-red-800 dark:text-red-200 border-b-2 border-red-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
+                title="Önemli / Kritik Vurgu"
+              >
+                <span className="text-[10px] select-none text-red-500">🔴</span>
+                <span>{renderedContent}</span>
+              </mark>
+            );
+          }
+          if (markerColor === 'blue') {
+            return (
+              <mark
+                key={pIdx}
+                className="bg-blue-100/90 dark:bg-blue-950/50 text-blue-800 dark:text-blue-200 border-b-2 border-blue-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
+                title="Sorulmuş / Çıkmış Sınav Sorusu"
+              >
+                <span className="text-[10px] select-none text-blue-500">🔵</span>
+                <span>{renderedContent}</span>
+              </mark>
+            );
+          }
+          return (
+            <mark
+              key={pIdx}
+              className="bg-amber-200/80 dark:bg-amber-400/30 text-amber-950 dark:text-amber-100 px-1.5 py-0.5 rounded font-medium not-italic border-b-2 border-amber-400/80 shadow-2xs"
+            >
+              {renderedContent}
+            </mark>
+          );
+        }
+
+        // 2. Bold rendering (Kırmızı = Önemli, Mavi = Sorulmuş Soru, Standart = Vurgulu)
         if (isBold) {
-          // Check if this bold content represents an ultra-critical item that should be red
           const isRed =
             isTriple ||
             /^(?:🔴|🚨|⚠️)/.test(rawContent.trim()) ||
-            /(?:ölümcül|asla|acil|hayati|kritik|dikkat!|sınav tuzağı|tuzak:|hayat kurtarır|kontrendike)/i.test(rawContent);
+            /(?:ölümcül|asla|acil|hayati|kritik|dikkat!|sınav tuzağı|tuzak:|hayat kurtarır|kontrendike|önemli|\[kırmızı|\[red)/i.test(rawContent);
+
+          const isBlue =
+            !isRed &&
+            (/^(?:🔵|❓|❔)/.test(rawContent.trim()) ||
+              /(?:çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|sınav sorusu|sınavda soruldu|\[mavi|\[blue|\[çıkmış)/i.test(rawContent));
 
           if (isRed) {
             return (
               <strong
-                key={bIdx}
+                key={pIdx}
                 className="font-bold text-red-600 dark:text-red-400 bg-red-500/10 dark:bg-red-500/20 border border-red-500/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
+                title="Önemli Bilgi"
               >
                 {!rawContent.includes('🔴') && !rawContent.includes('🚨') && !rawContent.includes('⚠️') && (
                   <span className="text-[10px] select-none text-red-500">🔴</span>
@@ -631,9 +695,24 @@ export const RenderWithGlossaryTerms: React.FC<{
             );
           }
 
+          if (isBlue) {
+            return (
+              <strong
+                key={pIdx}
+                className="font-bold text-blue-600 dark:text-blue-400 bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
+                title="Sorulmuş / Çıkmış Soru"
+              >
+                {!rawContent.includes('🔵') && !rawContent.includes('❓') && !rawContent.includes('❔') && (
+                  <span className="text-[10px] select-none text-blue-500">🔵</span>
+                )}
+                <span>{renderedContent}</span>
+              </strong>
+            );
+          }
+
           return (
             <strong
-              key={bIdx}
+              key={pIdx}
               className="font-bold text-ink bg-amber-100/60 dark:bg-amber-950/40 px-1 py-0.5 rounded shadow-2xs"
             >
               {renderedContent}
@@ -641,7 +720,17 @@ export const RenderWithGlossaryTerms: React.FC<{
           );
         }
 
-        return <React.Fragment key={bIdx}>{renderedContent}</React.Fragment>;
+        // 3. Italic rendering
+        if (isItalic) {
+          return (
+            <em key={pIdx} className="italic text-ink-2 font-medium">
+              {renderedContent}
+            </em>
+          );
+        }
+
+        // 4. Regular text with medical term popovers
+        return <React.Fragment key={pIdx}>{renderedContent}</React.Fragment>;
       })}
     </span>
   );

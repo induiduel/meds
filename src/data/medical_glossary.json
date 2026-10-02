@@ -4094,5 +4094,213 @@
     "clinicalPearl": "Akut irinli (pürülan) enfeksiyonlarda nötrofilleri olay yerine toplayan en temel kemokindir.",
     "discipline": "Tıbbi Patoloji / İmmünoloji",
     "committee": "Kurul 1"
+  },
+  "bax proteini (bcl-2 associated x protein)": {
+    "term": "Bax Proteini (Bcl-2 Associated X Protein)",
+    "category": "patoloji",
+    "description": "Normalde sitozolde inaktif monomer olarak bulunan, p53 ve BH3-only sensörler ile uyarıldığında mitokondri dış zarına (MOM) göç edip oligomerleşerek sitokrom c salınım delikleri açan majör pro-apoptotik efektör protein.",
+    "clinicalPearl": "Foliküler lenfomada t(14;18) translokasyonu sonucu aşırı üretilen Bcl-2, Bax proteinini sürekli heterodimer halinde tutarak apoptozu engeller ve neoplastik hücrelerin ölümsüzleşmesine yol açar.",
+    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
+    "committee": "Kurul 1"
+  },
+  "bax proteini": {
+    "term": "Bax Proteini (Bcl-2 Associated X Protein)",
+    "category": "patoloji",
+    "description": "Normalde sitozolde inaktif monomer olarak bulunan, p53 ve BH3-only sensörler ile uyarıldığında mitokondri dış zarına (MOM) göç edip oligomerleşerek sitokrom c salınım delikleri açan majör pro-apoptotik efektör protein.",
+    "clinicalPearl": "Foliküler lenfomada t(14;18) translokasyonu sonucu aşırı üretilen Bcl-2, Bax proteinini sürekli heterodimer halinde tutarak apoptozu engeller ve neoplastik hücrelerin ölümsüzleşmesine yol açar.",
+    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
+    "committee": "Kurul 1"
+  },
+  "bak proteini (bcl-2 antagonist/killer)": {
+    "term": "Bak Proteini (Bcl-2 Antagonist/Killer)",
+    "category": "patoloji",
+    "description": "Mitokondri dış zarına kalıcı olarak bağlı duran, normalde anti-apoptotik Mcl-1 ve Bcl-xL tarafından tutularak susturulan, ölüm sinyaliyle serbest kalıp oligomerleşerek zar gözeneği açan pro-apoptotik efektör protein.",
+    "clinicalPearl": "Kemoterapiye dirençli tümörlerde hem Bax hem Bak gen delesyonu veya mutasyonu varsa mitokondriyal geçirgenlik açılamaz ve intrensek apoptoz tamamen felç olur.",
+    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
+    "committee": "Kurul 1"
+  },
+  "bak proteini": {
+    "term": "Bak Proteini (Bcl-2 Antagonist/Killer)",
+    "category": "patoloji",
+    "description": "Mitokondri dış zarına kalıcı olarak bağlı duran, normalde anti-apoptotik Mcl-1 ve Bcl-xL tarafından tutularak susturulan, ölüm sinyaliyle serbest kalıp oligomerleşerek zar gözeneği açan pro-apoptotik efektör protein.",
+    "clinicalPearl": "Kemoterapiye dirençli tümörlerde hem Bax hem Bak gen delesyonu veya mutasyonu varsa mitokondriyal geçirgenlik açılamaz ve intrensek apoptoz tamamen felç olur.",
+    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
+    "committee": "Kurul 1"
+  },
+  "i̇ntrensek apoptoz yolağı (mitokondriyal yol)": {
+    "term": "İntrensek Apoptoz Yolağı (Mitokondriyal Yol)",
+    "category": "patoloji",
+    "description": "DNA hasarı ve hücresel stresle tetiklenen, mitokondriden Sitokrom c salınımı, Apaf-1 ile apaptozom oluşumu ve başlatıcı Kaspaz-9 aktivasyonu ile yürütülen majör hücre içi apoptoz yolağı.",
+    "clinicalPearl": "Bcl-2 aşırı ekspresyonu mitokondri zarını stabilize ederek Sitokrom c çıkışını bloke eder ve B-hücreli lenfomaların gelişmesine yol açar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "i̇ntrensek apoptoz yolağı": {
+    "term": "İntrensek Apoptoz Yolağı (Mitokondriyal Yol)",
+    "category": "patoloji",
+    "description": "DNA hasarı ve hücresel stresle tetiklenen, mitokondriden Sitokrom c salınımı, Apaf-1 ile apaptozom oluşumu ve başlatıcı Kaspaz-9 aktivasyonu ile yürütülen majör hücre içi apoptoz yolağı.",
+    "clinicalPearl": "Bcl-2 aşırı ekspresyonu mitokondri zarını stabilize ederek Sitokrom c çıkışını bloke eder ve B-hücreli lenfomaların gelişmesine yol açar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "ekstrensek apoptoz yolağı (ölüm reseptörü yolağı)": {
+    "term": "Ekstrensek Apoptoz Yolağı (Ölüm Reseptörü Yolağı)",
+    "category": "patoloji",
+    "description": "Fas (CD95) veya TNFR1 ölüm reseptörlerinin ligantlarıyla trimerizasyonu, sitoplazmik FADD adaptörü ile DISC kompleksi kurulması ve başlatıcı Kaspaz-8 aktivasyonu ile yürütülen dış kaynaklı apoptoz yolağı.",
+    "clinicalPearl": "Otoimmün Lenfoproliferatif Sendromda (ALPS) Fas veya FasL gen mutasyonu vardır; oto-reaktif T lenfositler apoptoza uğratılamaz ve lenfadenopati, splenomegali ile otoimmün sitopeniler gelişir.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
+  },
+  "ekstrensek apoptoz yolağı": {
+    "term": "Ekstrensek Apoptoz Yolağı (Ölüm Reseptörü Yolağı)",
+    "category": "patoloji",
+    "description": "Fas (CD95) veya TNFR1 ölüm reseptörlerinin ligantlarıyla trimerizasyonu, sitoplazmik FADD adaptörü ile DISC kompleksi kurulması ve başlatıcı Kaspaz-8 aktivasyonu ile yürütülen dış kaynaklı apoptoz yolağı.",
+    "clinicalPearl": "Otoimmün Lenfoproliferatif Sendromda (ALPS) Fas veya FasL gen mutasyonu vardır; oto-reaktif T lenfositler apoptoza uğratılamaz ve lenfadenopati, splenomegali ile otoimmün sitopeniler gelişir.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
+  },
+  "kaspaz-8 (ekstrensek başlatıcı kaspaz)": {
+    "term": "Kaspaz-8 (Ekstrensek Başlatıcı Kaspaz)",
+    "category": "patoloji",
+    "description": "Ölüm reseptörü uyarısıyla DISC kompleksinde aktifleşen, efektör Kaspaz-3'ü doğrudan kesen ve Bid'i tBid'e çevirerek intrensek yolu tetikleyen majör ekstrensek başlatıcı kaspaz.",
+    "clinicalPearl": "Kaspaz-8 inhibe edildiğinde veya bloke olduğunda hücre ölümü durmaz; alternatif yol olan Nekroptoz (RIPK1/RIPK3/MLKL) devreye girer.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "kaspaz-8": {
+    "term": "Kaspaz-8 (Ekstrensek Başlatıcı Kaspaz)",
+    "category": "patoloji",
+    "description": "Ölüm reseptörü uyarısıyla DISC kompleksinde aktifleşen, efektör Kaspaz-3'ü doğrudan kesen ve Bid'i tBid'e çevirerek intrensek yolu tetikleyen majör ekstrensek başlatıcı kaspaz.",
+    "clinicalPearl": "Kaspaz-8 inhibe edildiğinde veya bloke olduğunda hücre ölümü durmaz; alternatif yol olan Nekroptoz (RIPK1/RIPK3/MLKL) devreye girer.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "kaspaz-9 (i̇ntrensek başlatıcı kaspaz)": {
+    "term": "Kaspaz-9 (İntrensek Başlatıcı Kaspaz)",
+    "category": "patoloji",
+    "description": "Mitokondriyal Sitokrom c ve Apaf-1'in kurduğu Apaptozom kompleksi üzerinde aktifleşerek efektör Kaspaz-3 ve Kaspaz-7'yi kesip infazı başlatan intrensek başlatıcı enzim.",
+    "clinicalPearl": "IAP (İnhibitör of Apoptosis) proteinleri aktif Kaspaz-9'u tutarak bloke eder; mitokondriden çıkan Smac/DIABLO ise IAP'leri nötralize ederek Kaspaz-9'u serbest bırakır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "kaspaz-9": {
+    "term": "Kaspaz-9 (İntrensek Başlatıcı Kaspaz)",
+    "category": "patoloji",
+    "description": "Mitokondriyal Sitokrom c ve Apaf-1'in kurduğu Apaptozom kompleksi üzerinde aktifleşerek efektör Kaspaz-3 ve Kaspaz-7'yi kesip infazı başlatan intrensek başlatıcı enzim.",
+    "clinicalPearl": "IAP (İnhibitör of Apoptosis) proteinleri aktif Kaspaz-9'u tutarak bloke eder; mitokondriden çıkan Smac/DIABLO ise IAP'leri nötralize ederek Kaspaz-9'u serbest bırakır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "kaspaz-3 (majör yürütücü / efektör kaspaz)": {
+    "term": "Kaspaz-3 (Majör Yürütücü / Efektör Kaspaz)",
+    "category": "patoloji",
+    "description": "Tüm apoptoz yollarının ortak infaz enzimidir; hücre iskeletini (aktin, lamin) parçalar ve ICAD'i keserek CAD endonükleazını serbest bırakıp DNA merdiven parçalanmasını (DNA laddering) gerçekleştirir.",
+    "clinicalPearl": "Doku kesitlerinde apoptozun immunohistokimyasal gösterilmesinde 'Aktif Kaspaz-3 (Cleaved Caspase-3)' boyaması altın standarttır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "kaspaz-3": {
+    "term": "Kaspaz-3 (Majör Yürütücü / Efektör Kaspaz)",
+    "category": "patoloji",
+    "description": "Tüm apoptoz yollarının ortak infaz enzimidir; hücre iskeletini (aktin, lamin) parçalar ve ICAD'i keserek CAD endonükleazını serbest bırakıp DNA merdiven parçalanmasını (DNA laddering) gerçekleştirir.",
+    "clinicalPearl": "Doku kesitlerinde apoptozun immunohistokimyasal gösterilmesinde 'Aktif Kaspaz-3 (Cleaved Caspase-3)' boyaması altın standarttır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "apaptozom kompleksi (sitokrom c - apaf-1 tekerleği)": {
+    "term": "Apaptozom Kompleksi (Sitokrom c - Apaf-1 Tekerleği)",
+    "category": "patoloji",
+    "description": "Sitokrom c, Apaf-1 ve dATP'nin oluşturduğu 7'li tekerlek kompleksi; CARD bölgeleriyle Prokaspaz-9'u toplayıp aktif Kaspaz-9 dimerlerine dönüştürür.",
+    "clinicalPearl": "🔴 **Önemli:** Apaptozom bileşenleri: ==Sitokrom c + Apaf-1 + dATP + Prokaspaz-9==dur.",
+    "discipline": "Tıbbi Patoloji / Biyokimya",
+    "committee": "Kurul 1"
+  },
+  "apaptozom kompleksi": {
+    "term": "Apaptozom Kompleksi (Sitokrom c - Apaf-1 Tekerleği)",
+    "category": "patoloji",
+    "description": "Sitokrom c, Apaf-1 ve dATP'nin oluşturduğu 7'li tekerlek kompleksi; CARD bölgeleriyle Prokaspaz-9'u toplayıp aktif Kaspaz-9 dimerlerine dönüştürür.",
+    "clinicalPearl": "🔴 **Önemli:** Apaptozom bileşenleri: ==Sitokrom c + Apaf-1 + dATP + Prokaspaz-9==dur.",
+    "discipline": "Tıbbi Patoloji / Biyokimya",
+    "committee": "Kurul 1"
+  },
+  "c-flip proteini (kaspaz-8 i̇nhibitörü)": {
+    "term": "c-FLIP Proteini (Kaspaz-8 İnhibitörü)",
+    "category": "patoloji",
+    "description": "DISC kompleksine bağlanarak Prokaspaz-8'in yerini alan ve Kaspaz-8 aktivasyonunu yarışmalı olarak bloke eden anti-apoptotik düzenleyici protein.",
+    "clinicalPearl": "🔴 **Önemli:** Bazı virüsler (özellikle Herpesvirüsler) v-FLIP üreterek konağın sitotoksik T lenfositleri tarafından apoptoza uğratılmasını engeller.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
+  },
+  "c-flip proteini": {
+    "term": "c-FLIP Proteini (Kaspaz-8 İnhibitörü)",
+    "category": "patoloji",
+    "description": "DISC kompleksine bağlanarak Prokaspaz-8'in yerini alan ve Kaspaz-8 aktivasyonunu yarışmalı olarak bloke eden anti-apoptotik düzenleyici protein.",
+    "clinicalPearl": "🔴 **Önemli:** Bazı virüsler (özellikle Herpesvirüsler) v-FLIP üreterek konağın sitotoksik T lenfositleri tarafından apoptoza uğratılmasını engeller.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
+  },
+  "smac / diablo proteini (iap i̇nhibitörü)": {
+    "term": "Smac / DIABLO Proteini (IAP İnhibitörü)",
+    "category": "patoloji",
+    "description": "Mitokondriden sitozole salınarak IAP proteinlerini bağlayan, böylece Kaspaz-9 ve Kaspaz-3'ün frenini kaldırarak apoptozun önünü açan mitokondriyal faktör.",
+    "clinicalPearl": "🔴 **Önemli:** Smac/DIABLO doğrudan kaspaz aktive etmez; kaspazların inhibitörü olan IAP'leri inhibe ederek dolaylı aktivasyon sağlar (inhibitörün inhibitörü).",
+    "discipline": "Tıbbi Patoloji / Moleküler Biyoloji",
+    "committee": "Kurul 1"
+  },
+  "smac / diablo proteini": {
+    "term": "Smac / DIABLO Proteini (IAP İnhibitörü)",
+    "category": "patoloji",
+    "description": "Mitokondriden sitozole salınarak IAP proteinlerini bağlayan, böylece Kaspaz-9 ve Kaspaz-3'ün frenini kaldırarak apoptozun önünü açan mitokondriyal faktör.",
+    "clinicalPearl": "🔴 **Önemli:** Smac/DIABLO doğrudan kaspaz aktive etmez; kaspazların inhibitörü olan IAP'leri inhibe ederek dolaylı aktivasyon sağlar (inhibitörün inhibitörü).",
+    "discipline": "Tıbbi Patoloji / Moleküler Biyoloji",
+    "committee": "Kurul 1"
+  },
+  "perforin ve granzim b yolu (ctl apoptozu)": {
+    "term": "Perforin ve Granzim B Yolu (CTL Apoptozu)",
+    "category": "patoloji",
+    "description": "Perforin hedef zarda delik açar, Granzim B içeri girerek başlatıcı kaspazlara ihtiyaç duymadan doğrudan efektör Kaspaz-3'ü keserek hedef hücreyi apoptoza sokar.",
+    "clinicalPearl": "🔴 **Önemli:** Granzim B, Kaspaz-8 veya Kaspaz-9 gibi başlatıcı kaspazları beklemeden ==doğrudan Kaspaz-3'ü aktive edebilir==.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
+  },
+  "perforin ve granzim b yolu": {
+    "term": "Perforin ve Granzim B Yolu (CTL Apoptozu)",
+    "category": "patoloji",
+    "description": "Perforin hedef zarda delik açar, Granzim B içeri girerek başlatıcı kaspazlara ihtiyaç duymadan doğrudan efektör Kaspaz-3'ü keserek hedef hücreyi apoptoza sokar.",
+    "clinicalPearl": "🔴 **Önemli:** Granzim B, Kaspaz-8 veya Kaspaz-9 gibi başlatıcı kaspazları beklemeden ==doğrudan Kaspaz-3'ü aktive edebilir==.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
+  },
+  "nekroptoz (programlı nekroz)": {
+    "term": "Nekroptoz (Programlı Nekroz)",
+    "category": "patoloji",
+    "description": "TNFR1 uyarısıyla Kaspaz-8 bloke olduğunda devreye giren, RIPK1 ve RIPK3 kinazlarının MLKL'yi fosforilleyip plazma zarını patlatmasıyla oluşan enflamatuar programlı hücre ölümü.",
+    "clinicalPearl": "Akut pankreatit, miyokardiyal iskemi-reperfüzyon hasarı ve viral enfeksiyonlarda doku nekrozunun temel mekanizması nekroptozdur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "nekroptoz": {
+    "term": "Nekroptoz (Programlı Nekroz)",
+    "category": "patoloji",
+    "description": "TNFR1 uyarısıyla Kaspaz-8 bloke olduğunda devreye giren, RIPK1 ve RIPK3 kinazlarının MLKL'yi fosforilleyip plazma zarını patlatmasıyla oluşan enflamatuar programlı hücre ölümü.",
+    "clinicalPearl": "Akut pankreatit, miyokardiyal iskemi-reperfüzyon hasarı ve viral enfeksiyonlarda doku nekrozunun temel mekanizması nekroptozdur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
+  },
+  "pyroptoz (i̇nflamazom / kaspaz-1 bağımlı hücre ölümü)": {
+    "term": "Pyroptoz (İnflamazom / Kaspaz-1 Bağımlı Hücre Ölümü)",
+    "category": "patoloji",
+    "description": "İnflamazom uyarısıyla aktifleşen Kaspaz-1'in IL-1β ve IL-18 salgılatıp Gasdermin D proteinini keserek hücre zarında porlar açmasıyla gelişen yangısal hücre ölümü.",
+    "clinicalPearl": "Sepsis ve septik şok patogenezinde aşırı sitokin fırtınası ve lökosit kaybında pyroptoz başroldedir.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
+  },
+  "pyroptoz": {
+    "term": "Pyroptoz (İnflamazom / Kaspaz-1 Bağımlı Hücre Ölümü)",
+    "category": "patoloji",
+    "description": "İnflamazom uyarısıyla aktifleşen Kaspaz-1'in IL-1β ve IL-18 salgılatıp Gasdermin D proteinini keserek hücre zarında porlar açmasıyla gelişen yangısal hücre ölümü.",
+    "clinicalPearl": "Sepsis ve septik şok patogenezinde aşırı sitokin fırtınası ve lökosit kaybında pyroptoz başroldedir.",
+    "discipline": "Tıbbi Patoloji / İmmünoloji",
+    "committee": "Kurul 1"
   }
 }
