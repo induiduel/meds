@@ -7,6 +7,7 @@
 
 import { QuestionItem, MemoryFragment, QuestionOption, QuestionRevision } from '../types';
 import { GoogleGenAI } from '@google/genai';
+import medicalConceptsRaw from '../data/medicalConcepts5000.json';
 
 // ==========================================
 // TİPLER VE VERİ YAPILARI
@@ -85,96 +86,7 @@ export interface MedicalConceptBank {
   terms: string[];
 }
 
-export const MEDICAL_CONCEPT_BANKS: MedicalConceptBank[] = [
-  // 1. Tıbbi Genetik / Pediatri
-  {
-    id: 'down_syndrome_trisomy21',
-    name: 'Down Sendromu (Trizomi 21)',
-    disciplines: ['Tıbbi Genetik', 'Pediatri', 'Kadın Hastalıkları ve Doğum'],
-    terms: [
-      'down', 'trizomi 21', '21 kromozom', 'ense saydamligi', 'nt', 'av kanal',
-      'endokardiyal yastik', 'cift kabarcik', 'double bubble', 'simian',
-      'brushfield', 'hipotoni', 'makroglossi', 'burun kemigi', 'basik burun',
-      'edwards sendromu', 'patau sendromu', 'fetal ultrason', 'birinci trimester',
-      'anne yasi', 'duodenal atrezi', 'karyotip 47'
-    ]
-  },
-  {
-    id: 'edwards_trisomy18',
-    name: 'Edwards Sendromu (Trizomi 18)',
-    disciplines: ['Tıbbi Genetik', 'Pediatri'],
-    terms: ['edwards', 'trizomi 18', '18 kromozom', 'rocker bottom', 'mikrognati', 'ust uste binen parmaklar', 'clenched hand']
-  },
-  {
-    id: 'turner_syndrome',
-    name: 'Turner Sendromu (45,X0)',
-    disciplines: ['Tıbbi Genetik', 'Pediatri', 'Dahiliye'],
-    terms: ['turner', '45 x0', '45 x', 'yele boyun', 'primer amenore', 'aort koarktasyonu', 'streak over', 'cizgi gonad']
-  },
-  {
-    id: 'klinefelter_syndrome',
-    name: 'Klinefelter Sendromu (47,XXY)',
-    disciplines: ['Tıbbi Genetik', 'Dahiliye'],
-    terms: ['klinefelter', '47 xxy', 'jinekomasti', 'azospermi', 'kucuk testis', 'uzun boy']
-  },
-
-  // 2. Tıbbi Patoloji
-  {
-    id: 'amyloidosis_congo_red',
-    name: 'Amiloidoz & Kongo Kırmızısı',
-    disciplines: ['Tıbbi Patoloji'],
-    terms: [
-      'amiloid', 'kongo kirmizisi', 'congo red', 'elma yesili', 'cift kirinim',
-      'polarize isik', 'polarize mikroskop', 'birefringence', 'apple green', 'al amiloid', 'aa amiloid'
-    ]
-  },
-  {
-    id: 'granulomatous_inflammation',
-    name: 'Granülomatöz İltihap & Tüberküloz',
-    disciplines: ['Tıbbi Patoloji', 'Tıbbi Mikrobiyoloji', 'Göğüs Hastalıkları'],
-    terms: ['granulom', 'kazeifikasyon', 'langhans', 'dev hucre', 'epiteloid histiyosit', 'tüberküloz', 'tbc', 'asido rezistan', 'arb']
-  },
-  {
-    id: 'myocardial_infarction_pathology',
-    name: 'Miyokard İnfarktüsü Histopatolojisi',
-    disciplines: ['Tıbbi Patoloji', 'Kardiyoloji'],
-    terms: ['koagulasyon nekrozu', 'dalgalı lifler', 'wavy fibers', 'notrofil infiltrasyonu', 'kontraksiyon bandi', 'granulasyon dokusu', 'enfarkt']
-  },
-
-  // 3. Tıbbi Mikrobiyoloji
-  {
-    id: 'legionella_pneumonia',
-    name: 'Legionella Pnömonisi (Lejyoner Hastalığı)',
-    disciplines: ['Tıbbi Mikrobiyoloji', 'Göğüs Hastalıkları', 'Dahiliye'],
-    terms: ['legionella', 'klima', 'bcye', 'hiponatremi', 'atipik pnomoni', 'lejyone', 'idrar antijen']
-  },
-  {
-    id: 'mycoplasma_pneumonia',
-    name: 'Mycoplasma Pnömonisi',
-    disciplines: ['Tıbbi Mikrobiyoloji', 'Göğüs Hastalıkları'],
-    terms: ['mycoplasma', 'soguk aglutinin', 'hucre duvari olmayan', 'atipik pnomoni', 'genc eriskinde']
-  },
-
-  // 4. Farmakoloji
-  {
-    id: 'asthma_beta2_agonists',
-    name: 'Astım & Beta-2 Agonistler',
-    disciplines: ['Farmakoloji', 'Göğüs Hastalıkları'],
-    terms: ['salbutamol', 'albuterol', 'salmeterol', 'formoterol', 'beta 2 agonist', 'astim krizi', 'inhaler', 'ipratropium']
-  },
-  {
-    id: 'ace_inhibitors_bradykinin',
-    name: 'ACE İnhibitörleri & Bradikinin',
-    disciplines: ['Farmakoloji', 'Kardiyoloji', 'Dahiliye'],
-    terms: ['ace inhibitor', 'kaptopril', 'enalapril', 'ramipril', 'bradikinin', 'kuru oksuruk', 'anjiyoodem']
-  },
-  {
-    id: 'organophosphate_poisoning',
-    name: 'Organofosfat Zehirlenmesi & Antidot',
-    disciplines: ['Farmakoloji', 'Acil Tıp'],
-    terms: ['organofosfat', 'kolinesteraz', 'atropin', 'pralidoksim', 'pam', 'obidoksim', 'miyozis', 'fasikulasyon']
-  }
-];
+export const MEDICAL_CONCEPT_BANKS: MedicalConceptBank[] = (medicalConceptsRaw as any) || [];
 
 // ==========================================
 // METİN NORMALİZASYONU (TÜRKÇE DESTEKLİ)
@@ -244,26 +156,75 @@ export function extractMedicalEntities(text: string): string[] {
   return entities;
 }
 
-// Metinden eşleşen Tıbbi Kavram Bankalarını bulma
+// Hızlı Ters İndeks (Inverted Index) - 5,000+ Tıbbi Kavram için O(1) arama
+let termToConceptMap: Map<string, MedicalConceptBank[]> | null = null;
+
+function getTermToConceptMap(): Map<string, MedicalConceptBank[]> {
+  if (termToConceptMap) return termToConceptMap;
+  termToConceptMap = new Map();
+
+  for (const concept of MEDICAL_CONCEPT_BANKS) {
+    if (!concept.terms) continue;
+    for (const term of concept.terms) {
+      const cleanTerm = normalizeMedicalText(term);
+      if (cleanTerm.length < 3 || MEDICAL_STOP_WORDS.has(cleanTerm)) continue;
+      const list = termToConceptMap.get(cleanTerm);
+      if (list) {
+        if (list.length < 30) {
+          list.push(concept);
+        }
+      } else {
+        termToConceptMap.set(cleanTerm, [concept]);
+      }
+    }
+  }
+  return termToConceptMap;
+}
+
+// Metinden eşleşen Tıbbi Kavram Bankalarını bulma (5,000+ kavram üzerinde anlık O(1) eşleşme)
 export function detectMedicalConcepts(text: string, discipline?: string): MedicalConceptBank[] {
   const norm = normalizeMedicalText(text);
-  const matched: MedicalConceptBank[] = [];
+  if (!norm || norm.length < 3) return [];
 
-  for (const bank of MEDICAL_CONCEPT_BANKS) {
-    if (discipline && discipline !== 'Belirtilmedi' && bank.disciplines.length > 0) {
-      const discMatch = bank.disciplines.some(
-        (d) => discipline.toLowerCase().includes(d.toLowerCase()) || d.toLowerCase().includes(discipline.toLowerCase())
-      );
-      if (!discMatch) continue;
-    }
+  const index = getTermToConceptMap();
+  const matchedMap = new Map<string, { concept: MedicalConceptBank; matchCount: number }>();
+  const words = norm.split(' ').filter((w) => w.length >= 3 && !MEDICAL_STOP_WORDS.has(w));
 
-    const matchedTermsCount = bank.terms.filter((t) => norm.includes(t)).length;
-    if (matchedTermsCount >= 1) {
-      matched.push(bank);
+  // 1'li, 2'li ve 3'lü kelime öbeklerini oluştur
+  const phrases: string[] = [...words];
+  for (let i = 0; i < words.length - 1; i++) {
+    phrases.push(`${words[i]} ${words[i + 1]}`);
+    if (i < words.length - 2) {
+      phrases.push(`${words[i]} ${words[i + 1]} ${words[i + 2]}`);
     }
   }
 
-  return matched;
+  const discLower = discipline && discipline !== 'Belirtilmedi' ? discipline.toLowerCase() : null;
+
+  for (const phrase of phrases) {
+    const hits = index.get(phrase);
+    if (!hits) continue;
+
+    for (const concept of hits) {
+      if (discLower && concept.disciplines && concept.disciplines.length > 0) {
+        const discMatch = concept.disciplines.some(
+          (d) => discLower.includes(d.toLowerCase()) || d.toLowerCase().includes(discLower)
+        );
+        if (!discMatch) continue;
+      }
+
+      const existing = matchedMap.get(concept.id);
+      if (existing) {
+        existing.matchCount++;
+      } else {
+        matchedMap.set(concept.id, { concept, matchCount: 1 });
+      }
+    }
+  }
+
+  return Array.from(matchedMap.values())
+    .sort((a, b) => b.matchCount - a.matchCount)
+    .map((item) => item.concept);
 }
 
 export function detectQuestionTarget(text: string): 'etiology' | 'treatment' | 'diagnosis' | 'mechanism' | 'anatomy' | 'general' {
@@ -748,6 +709,11 @@ export function mergeDrafts(
     options: consolidatedOptions.sort((a, b) => a.key.localeCompare(b.key)),
     tags: Array.from(allTags),
     status: consolidatedOptions.length >= 4 && consolidatedFragments.length >= 2 ? 'gathering' : anchorQuestion.status,
+    mergedSatellites: [
+      ...(anchorQuestion.mergedSatellites || []),
+      ...satelliteQuestions
+    ],
+    isMerged: true,
     revisions,
     updatedAt: now,
     placementNotes: [
@@ -757,6 +723,102 @@ export function mergeDrafts(
   };
 
   return { consolidated, mergedIds };
+}
+
+/**
+ * Birleştirilmiş (iç içe geçmiş) taslağı geri alıp ana soru ve bağımsız
+ * uydu taslaklara ayrıştırır.
+ */
+export function unmergeQuestion(
+  consolidatedQuestion: QuestionItem
+): {
+  anchor: QuestionItem;
+  restoredSatellites: QuestionItem[];
+} {
+  const now = new Date().toISOString();
+  const restoredSatellites: QuestionItem[] = [];
+
+  // 1. Varsa orijinal uydu taslak kopyalarını geri yükle
+  if (consolidatedQuestion.mergedSatellites && consolidatedQuestion.mergedSatellites.length > 0) {
+    for (const sat of consolidatedQuestion.mergedSatellites) {
+      restoredSatellites.push({
+        ...sat,
+        id: sat.id || `restored-sat-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+        status: sat.status || 'gathering',
+        tags: (sat.tags || []).filter((t) => t !== 'taslak-birlestirildi'),
+        updatedAt: now
+      });
+    }
+  } else {
+    // 2. Yedek: [Birleştirilen Taslak ...] etiketli parçalardan ayrıştır
+    const mergedFrags = (consolidatedQuestion.fragments || []).filter((f) =>
+      f.text.includes('[Birleştirilen Taslak')
+    );
+
+    for (let i = 0; i < mergedFrags.length; i++) {
+      const mf = mergedFrags[i];
+      const match = mf.text.match(/^\[Birleştirilen Taslak #([^\]]+)\]:\s*([\s\S]*)$/);
+      const qNum = match ? parseInt(match[1], 10) : 0;
+      const cleanStem = match ? match[2].trim() : mf.text.trim();
+
+      restoredSatellites.push({
+        id: `restored-sat-${Date.now()}-${i}-${Math.random().toString(36).substring(2, 6)}`,
+        committeeId: consolidatedQuestion.committeeId,
+        questionNumber: !isNaN(qNum) ? qNum : 0,
+        discipline: consolidatedQuestion.discipline || 'Belirtilmedi',
+        topic: consolidatedQuestion.topic || '',
+        status: 'gathering',
+        fragments: [
+          {
+            id: `f-restored-${Date.now()}-${i}`,
+            author: mf.author || 'Taslak Yazarı',
+            authorUid: mf.authorUid,
+            authorStudentNumber: mf.authorStudentNumber,
+            text: cleanStem,
+            type: 'stem',
+            timestamp: mf.timestamp || now,
+            upvotes: mf.upvotes || 1
+          }
+        ],
+        options: [],
+        tags: [],
+        createdAt: mf.timestamp || now,
+        updatedAt: now
+      });
+    }
+  }
+
+  // 3. Çapa sorunun temizlenmesi (birleştirme parçaları ve etiketler çıkarılır)
+  const cleanedFragments = (consolidatedQuestion.fragments || []).filter(
+    (f) => !f.text.includes('[Birleştirilen Taslak')
+  );
+
+  const cleanedTags = (consolidatedQuestion.tags || []).filter(
+    (t) => t !== 'taslak-birlestirildi'
+  );
+
+  const revisions: QuestionRevision[] = [
+    ...(consolidatedQuestion.revisions || []),
+    {
+      id: `rev-unmerge-${Date.now()}`,
+      version: (consolidatedQuestion.revisions?.length || 0) + 1,
+      editedAt: now,
+      editorName: 'Taslak Ayırma',
+      changeSummary: `${restoredSatellites.length} adet birleştirilmiş taslak ayrıldı ve bağımsız taslak olarak geri yüklendi.`
+    }
+  ];
+
+  const anchor: QuestionItem = {
+    ...consolidatedQuestion,
+    fragments: cleanedFragments,
+    tags: cleanedTags,
+    mergedSatellites: [],
+    isMerged: false,
+    revisions,
+    updatedAt: now
+  };
+
+  return { anchor, restoredSatellites };
 }
 
 // ==========================================

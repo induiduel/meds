@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search } from 'lucide-react';
+import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split } from 'lucide-react';
 import { toast } from './ui/Toast';
 import { CapsuleLoader, SuccessCheck } from './ui/Animations';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
@@ -92,11 +92,16 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 }) => {
   const [analysis, setAnalysis] = useState<ClusterAnalysisSummary | null>(null);
   const [loading, setLoading] = useState(false);
-  const [activeFilter, setActiveFilter] = useState<'ready' | 'review' | 'manual' | 'all' | 'vague'>('ready');
+  const [activeFilter, setActiveFilter] = useState<'ready' | 'review' | 'merged' | 'manual' | 'all' | 'vague'>('ready');
   const [mergingClusterId, setMergingClusterId] = useState<string | null>(null);
   const [isBatchMerging, setIsBatchMerging] = useState(false);
   const [feedback, setFeedback] = useState<{ type: 'ok' | 'err'; message: string } | null>(null);
   const [expandedClusterId, setExpandedClusterId] = useState<string | null>(null);
+
+  // Yerel birleştirilen uyduların listeden anında gizlenmesi
+  const [locallyMergedSatelliteIds, setLocallyMergedSatelliteIds] = useState<Set<string>>(new Set());
+  const [unmergingQuestionId, setUnmergingQuestionId] = useState<string | null>(null);
+  const [inspectingMergedId, setInspectingMergedId] = useState<string | null>(null);
 
   // Manuel çoklu seçim durumu
   const [selectedDraftIds, setSelectedDraftIds] = useState<string[]>([]);
@@ -141,6 +146,9 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         satelliteIds,
         currentUser.displayName || 'Yönetici'
       );
+      // Birleştirilen uyduları anında gizle
+      setLocallyMergedSatelliteIds((prev) => new Set([...prev, ...satelliteIds]));
+      setSelectedDraftIds((prev) => prev.filter((id) => !satelliteIds.includes(id)));
       setFeedback({
         type: 'ok',
         message: `Soru #${cluster.anchorQuestion.questionNumber || 'Çapa'} için ${satelliteIds.length} taslak başarıyla birleştirildi!`,
@@ -201,18 +209,93 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
         satelliteIds,
         currentUser.displayName || 'Yönetici'
       );
-      setFeedback({
-        type: 'ok',
-        message: `Seçtiğiniz ${selectedDraftIds.length} taslak başarıyla tek bir soru altında toplandı!`,
-      });
+      // Birleştirilen uyduları manuel listeden anında kaldır
+      setLocallyMergedSatelliteIds((prev) => new Set([...prev, ...satelliteIds]));
       setSelectedDraftIds([]);
       setManualAnchorId('');
+      setFeedback({
+        type: 'ok',
+        message: `Seçtiğiniz ${satelliteIds.length + 1} taslak başarıyla tek bir soru altında toplandı!`,
+      });
       await onRefreshData();
       await runAnalysis();
     } catch (e: any) {
       setFeedback({ type: 'err', message: e.message || 'Manuel birleştirme başarısız oldu.' });
     } finally {
       setIsManualMerging(false);
+    }
+  };
+
+  // Otomatik Kümeden Tek Bir Taslağı Ayırma / Çıkarma
+  const handleDetachSatelliteFromCluster = (clusterId: string, satelliteQuestionId: string) => {
+    if (!analysis) return;
+    setAnalysis((prev) => {
+      if (!prev) return null;
+      const nextClusters = prev.clusters
+        .map((c) => {
+          if (c.id !== clusterId) return c;
+          const nextSatellites = c.satelliteDrafts.filter((s) => s.question.id !== satelliteQuestionId);
+          return {
+            ...c,
+            satelliteDrafts: nextSatellites
+          };
+        })
+        .filter((c) => c.satelliteDrafts.length > 0);
+
+      return {
+        ...prev,
+        clusters: nextClusters,
+        mergeableClustersCount: nextClusters.length,
+        vagueDraftsCount: prev.vagueDraftsCount + 1
+      };
+    });
+    toast.success('Kümeden Ayrıldı', 'Taslak bu kümeden çıkarıldı ve bağımsız hale getirildi.');
+  };
+
+  // Otomatik Kümeyi Tamamen Dağıtma / Ayırma
+  const handleDissolveCluster = (clusterId: string) => {
+    if (!analysis) return;
+    setAnalysis((prev) => {
+      if (!prev) return null;
+      const target = prev.clusters.find((c) => c.id === clusterId);
+      const detachedCount = (target?.satelliteDrafts.length || 0) + 1;
+      const nextClusters = prev.clusters.filter((c) => c.id !== clusterId);
+      return {
+        ...prev,
+        clusters: nextClusters,
+        mergeableClustersCount: nextClusters.length,
+        vagueDraftsCount: prev.vagueDraftsCount + detachedCount
+      };
+    });
+    toast.success('Küme Dağıtıldı', 'Kümeye ait tüm taslaklar serbest bırakıldı.');
+  };
+
+  // Birleştirilmiş Soruyu Eski Haline Ayırma (Unmerge)
+  const handleUnmergeQuestion = async (questionId: string) => {
+    if (!currentUser?.email) {
+      toast.error('Yetki Yok', 'Taslak ayırmak için giriş yapmış olmalısınız.');
+      return;
+    }
+    setUnmergingQuestionId(questionId);
+    try {
+      const res = await ApiService.unmergeDraftCluster(
+        currentUser.email,
+        questionId,
+        currentUser.displayName || 'Yönetici'
+      );
+      // Geri yüklenen uyduları gizlilik kümesinden çıkar
+      setLocallyMergedSatelliteIds((prev) => {
+        const next = new Set(prev);
+        res.restoredSatellites.forEach((s) => next.delete(s.id));
+        return next;
+      });
+      toast.success('Taslaklar Ayrıldı', `${res.restoredSatellites.length} adet taslak bağımsız hale getirildi ve geri yüklendi.`);
+      await onRefreshData();
+      await runAnalysis();
+    } catch (e: any) {
+      toast.error('Ayırma Başarısız', e.message || 'Taslak ayırma işlemi sırasında hata oluştu.');
+    } finally {
+      setUnmergingQuestionId(null);
     }
   };
 
@@ -237,8 +320,25 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
   }, [analysis, activeFilter]);
 
   const committeeQuestions = useMemo(() => {
-    return questions.filter((q) => !committeeId || q.committeeId === committeeId);
-  }, [questions, committeeId]);
+    return questions.filter((q) => {
+      if (committeeId && q.committeeId !== committeeId) return false;
+      if (locallyMergedSatelliteIds.has(q.id)) return false;
+      return true;
+    });
+  }, [questions, committeeId, locallyMergedSatelliteIds]);
+
+  const mergedQuestions = useMemo(() => {
+    return questions.filter((q) => {
+      if (committeeId && q.committeeId !== committeeId) return false;
+      if (locallyMergedSatelliteIds.has(q.id)) return false;
+      return (
+        q.tags?.includes('taslak-birlestirildi') ||
+        q.isMerged ||
+        (q.mergedSatellites && q.mergedSatellites.length > 0) ||
+        (q.fragments && q.fragments.some((f) => f.text.includes('[Birleştirilen Taslak')))
+      );
+    });
+  }, [questions, committeeId, locallyMergedSatelliteIds]);
 
   const manualFilteredQuestions = useMemo(() => {
     if (!manualSearchQuery.trim()) return committeeQuestions;
@@ -295,6 +395,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
   const tabs: { id: typeof activeFilter; label: string; count?: number }[] = [
     { id: 'ready', label: 'Hazır', count: readyCount },
     { id: 'review', label: 'İncele', count: reviewCount },
+    { id: 'merged', label: 'Birleştirilenler', count: mergedQuestions.length },
     { id: 'all', label: 'Tümü', count: analysis?.clusters.length || 0 },
     { id: 'vague', label: 'Muğlak', count: analysis?.vagueDraftsCount || 0 },
     { id: 'manual', label: 'Elle seç', count: selectedDraftIds.length || undefined },
@@ -304,6 +405,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     { label: 'Taslak', value: analysis?.totalDrafts ?? '–', hint: 'öğrenci girdisi', dot: '#4A5868' },
     { label: 'Tahmini soru', value: analysis?.estimatedTrueQuestions ?? '–', hint: '/ 100 hedef', dot: '#1F9D55' },
     { label: 'Hazır küme', value: readyCount, hint: `${analysis?.potentialSavedDuplicates ?? 0} mükerrer`, dot: '#1E4FD8' },
+    { label: 'Birleşik', value: mergedQuestions.length, hint: 'konsolide soru', dot: '#10B981' },
     { label: 'Muğlak', value: analysis?.vagueDraftsCount ?? '–', hint: 'eşleşme arıyor', dot: '#F59E0B' },
   ];
 
@@ -417,6 +519,153 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
               <p className="m-0 text-[15px] font-semibold text-ink">Taslaklar taranıyor…</p>
               <p className="m-0 text-[13px] text-ink-3">Tıbbi kavramlar ve şık varyasyonları karşılaştırılıyor</p>
             </div>
+          ) : activeFilter === 'merged' ? (
+            <>
+              <div className="flex items-center justify-between gap-2">
+                <p className="m-0 text-[13.5px] text-ink-2">
+                  Daha önce birleştirilmiş (iç içe geçmiş) taslaklar aşağıda listelenmiştir. Her bir taslağın parçalarını inceleyebilir, hata durumunda <strong className="text-ink">"Taslakları Ayır (Geri Al)"</strong> butonuyla eski bağımsız hallerine döndürebilirsiniz.
+                </p>
+              </div>
+              {mergedQuestions.length === 0 ? (
+                <EmptyState
+                  title="Henüz birleştirilmiş soru yok"
+                  text="Taslakları 'Hazır' veya 'Elle seç' sekmesinden birleştirebilirsiniz."
+                  action={{ label: 'Taslak seçimine geç', onClick: () => setActiveFilter('manual') }}
+                />
+              ) : (
+                <ul className="list-none m-0 p-0 flex flex-col gap-3">
+                  {mergedQuestions.map((q) => {
+                    const isInspecting = inspectingMergedId === q.id;
+                    const isUnmerging = unmergingQuestionId === q.id;
+                    const satelliteCount =
+                      q.mergedSatellites?.length ||
+                      (q.fragments?.filter((f) => f.text.includes('[Birleştirilen Taslak')).length || 0);
+
+                    return (
+                      <li
+                        key={q.id}
+                        className="rounded-[16px] bg-white border border-[#CDEBD8] shadow-[0_2px_8px_rgba(31,157,85,0.06)] overflow-hidden flex flex-col"
+                      >
+                        {/* Başlık ve Butonlar */}
+                        <div className="flex items-center gap-3 px-4 py-3 bg-[#F6FEF9] border-b border-[#E1F6EB]">
+                          <span className="w-9 h-9 rounded-[10px] bg-ok-soft text-ok font-mono text-[13px] font-bold flex items-center justify-center shrink-0">
+                            {numLabel(q)}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <span className="font-semibold text-ink text-[14.5px] truncate">
+                                {q.topic || q.discipline || 'Birleştirilmiş Soru'}
+                              </span>
+                              <span className="h-5 px-2 rounded-full bg-ok text-white text-[11px] font-semibold inline-flex items-center gap-1 shrink-0">
+                                <Layers className="w-3 h-3" />
+                                {satelliteCount > 0 ? `${satelliteCount + 1} taslak birleşik` : 'Birleşik'}
+                              </span>
+                            </div>
+                            <span className="text-[12px] text-ink-3">
+                              {q.discipline} · {q.fragments?.length || 0} parça · {q.options?.length || 0} şık
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1.5 shrink-0">
+                            <button
+                              type="button"
+                              onClick={() => setInspectingMergedId(isInspecting ? null : q.id)}
+                              className="h-8 px-2.5 rounded-[8px] border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
+                            >
+                              {isInspecting ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                              <span>{isInspecting ? 'Kapat' : 'İncele'}</span>
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => handleUnmergeQuestion(q.id)}
+                              disabled={isUnmerging}
+                              className="h-8 px-2.5 rounded-[8px] border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] text-[12.5px] font-semibold hover:bg-[#FEE4E2] inline-flex items-center gap-1 cursor-pointer disabled:opacity-50 transition-colors"
+                              title="İç içe geçmiş taslakları ayrıştırıp bağımsız taslaklar olarak geri yükler"
+                            >
+                              {isUnmerging ? (
+                                <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                              ) : (
+                                <Undo2 className="w-3.5 h-3.5" />
+                              )}
+                              <span>{isUnmerging ? 'Ayrılıyor…' : 'Ayır (Geri Al)'}</span>
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Konsolide Soru Önizlemesi */}
+                        <div className="p-3.5 flex flex-col gap-2">
+                          <p className="m-0 text-[13.5px] text-ink leading-relaxed">
+                            {stemOf(q) || 'Soru kökü henüz girilmemiş'}
+                          </p>
+                          {q.options && q.options.length > 0 && (
+                            <div className="flex flex-wrap gap-1.5 pt-1 border-t border-line-soft">
+                              {q.options.map((opt) => (
+                                <span key={opt.key} className="h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center">
+                                  <strong className="font-mono text-ink mr-1">{opt.key})</strong>
+                                  {opt.text}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* Detaylı İnceleme Bölümü */}
+                          {isInspecting && (
+                            <div className="mt-2 pt-3 border-t border-line flex flex-col gap-2.5 bg-canvas/60 p-3 rounded-[12px]">
+                              <span className="text-[12.5px] font-semibold text-accent flex items-center gap-1.5">
+                                <Layers className="w-3.5 h-3.5" />
+                                İç İçe Geçen Taslaklar ve Öğrenci Katkıları
+                              </span>
+
+                              {/* Varsa Orijinal Uydu Taslak Kayıtları */}
+                              {q.mergedSatellites && q.mergedSatellites.length > 0 ? (
+                                <div className="flex flex-col gap-2">
+                                  {q.mergedSatellites.map((sat, sIdx) => (
+                                    <div key={sat.id || sIdx} className="rounded-[10px] bg-white border border-line-soft p-2.5 flex flex-col gap-1 text-[12.5px]">
+                                      <div className="flex items-center justify-between text-ink-3">
+                                        <span className="font-semibold text-ink">
+                                          Taslak #{sIdx + 1}: {sat.contributedByName || sat.author || 'Anonim Katkıcı'}
+                                        </span>
+                                        <span className="font-mono text-[11.5px]">{numLabel(sat)}</span>
+                                      </div>
+                                      <p className="m-0 text-ink-2 leading-snug">
+                                        {stemOf(sat) || 'Metin girilmemiş'}
+                                      </p>
+                                      {sat.options && sat.options.length > 0 && (
+                                        <div className="flex flex-wrap gap-1 mt-0.5">
+                                          {sat.options.map((o) => (
+                                            <span key={o.key} className="px-1.5 py-0.5 rounded bg-canvas text-[11px] text-ink-3">
+                                              {o.key}) {o.text}
+                                            </span>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  ))}
+                                </div>
+                              ) : (
+                                /* Parçalardan derleme görünümü */
+                                <div className="flex flex-col gap-1.5">
+                                  {(q.fragments || [])
+                                    .filter((f) => f.text.includes('[Birleştirilen Taslak'))
+                                    .map((f, fIdx) => (
+                                      <div key={f.id || fIdx} className="rounded-[10px] bg-white border border-line-soft p-2.5 flex flex-col gap-0.5 text-[12.5px]">
+                                        <div className="flex items-center justify-between text-ink-3">
+                                          <span className="font-semibold text-ink">{f.author || 'Taslak Parçası'}</span>
+                                          {f.timestamp && <span className="text-[11px]">{new Date(f.timestamp).toLocaleDateString('tr-TR')}</span>}
+                                        </div>
+                                        <p className="m-0 text-ink-2 leading-snug">{f.text}</p>
+                                      </div>
+                                    ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </>
           ) : activeFilter === 'manual' ? (
             <>
               <p className="m-0 text-[13.5px] text-ink-2">
@@ -558,6 +807,15 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                     </span>
                     <button
                       type="button"
+                      onClick={() => handleDissolveCluster(cluster.id)}
+                      title="Bu kümeyi dağıtıp taslakları ayır"
+                      className="hidden sm:inline-flex h-9 px-2.5 rounded-[10px] border border-line bg-white text-[12px] font-medium text-ink-2 hover:text-[#B4233C] hover:border-[#FECDCA] hover:bg-[#FEF3F2] items-center gap-1 cursor-pointer"
+                    >
+                      <Split className="w-3.5 h-3.5" />
+                      <span>Kümeyi Dağıt</span>
+                    </button>
+                    <button
+                      type="button"
                       onClick={() => setExpandedClusterId(open ? null : cluster.id)}
                       aria-expanded={open}
                       className="hidden sm:inline-flex h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold text-ink-2 items-center gap-1 cursor-pointer hover:border-line-2"
@@ -601,11 +859,23 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                     <ul className={`list-none m-0 p-0 flex flex-col gap-1.5 ${open ? '' : 'max-h-[132px] overflow-y-auto'}`}>
                       {cluster.satelliteDrafts.map((sat, idx) => (
                         <li key={sat.question.id || idx} className="rounded-[12px] border border-line-soft px-3 py-2 flex flex-col gap-1">
-                          <span className="flex items-center gap-2 text-[12.5px] min-w-0">
+                          <div className="flex items-center gap-2 text-[12.5px] min-w-0">
                             <span className="font-semibold text-ink truncate">{sat.question.contributedByName || 'Anonim'}</span>
                             <span className="text-ink-3 shrink-0">· {numLabel(sat.question)}</span>
-                            <span className="ml-auto shrink-0 font-mono text-[12px] font-semibold text-ok">%{sat.compatibility.score}</span>
-                          </span>
+                            <span className="shrink-0 font-mono text-[12px] font-semibold text-ok">%{sat.compatibility.score}</span>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDetachSatelliteFromCluster(cluster.id, sat.question.id);
+                              }}
+                              title="Bu taslağı bu kümeden ayır (bağımsız yap)"
+                              className="ml-auto text-[11.5px] px-2 py-0.5 rounded-[6px] text-ink-3 hover:text-[#B4233C] hover:bg-[#FEE4E2] border border-line-soft transition-colors cursor-pointer inline-flex items-center gap-1 shrink-0"
+                            >
+                              <Split className="w-3 h-3" />
+                              <span>Kümeden Ayır</span>
+                            </button>
+                          </div>
                           <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-1'}`}>{stemOf(sat.question) ? <Colored text={stemOf(sat.question)} colors={colors} /> : 'Metin'}</span>
                           {open && sat.compatibility.reasons.length > 0 && (
                             <span className="flex flex-wrap gap-1">

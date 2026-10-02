@@ -10,6 +10,7 @@ import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import {
   clusterDraftsForCommittee,
   mergeDrafts,
+  unmergeQuestion,
   findRealtimeMatchingDraft,
   ClusterAnalysisSummary
 } from './draftClusteringService';
@@ -1968,6 +1969,48 @@ JSON FORMATI:
     }
 
     return consolidated;
+  },
+
+  async unmergeDraftCluster(
+    adminEmail: string,
+    consolidatedId: string,
+    adminName: string = 'Yönetici'
+  ): Promise<{ anchor: QuestionItem; restoredSatellites: QuestionItem[] }> {
+    if (adminEmail !== ADMIN_EMAIL) {
+      throw new Error('Yetkisiz işlem: Taslak ayırma yetkisi yalnızca sistem yöneticisine aittir.');
+    }
+    const db = getLocalDb();
+    const consolidated = db.questions.find((q) => q.id === consolidatedId);
+    if (!consolidated) throw new Error('Birleştirilmiş taslak bulunamadı.');
+
+    const { anchor, restoredSatellites } = unmergeQuestion(consolidated);
+
+    // Update anchor in local db
+    const anchorIdx = db.questions.findIndex((q) => q.id === consolidatedId);
+    if (anchorIdx !== -1) {
+      db.questions[anchorIdx] = anchor;
+    }
+
+    // Add restored satellites back to local db
+    for (const sat of restoredSatellites) {
+      if (!db.questions.some((q) => q.id === sat.id)) {
+        db.questions.push(sat);
+      }
+    }
+
+    saveLocalDb(db);
+
+    // Cloud DB sync (Supabase + Firestore)
+    try {
+      await multiDbManager.saveQuestion(anchor);
+      for (const sat of restoredSatellites) {
+        await multiDbManager.saveQuestion(sat);
+      }
+    } catch (e) {
+      console.warn('Draft unmerge cloud sync warning:', e);
+    }
+
+    return { anchor, restoredSatellites };
   },
 
   async autoMergeHighConfidenceClusters(

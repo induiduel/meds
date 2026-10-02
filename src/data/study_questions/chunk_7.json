@@ -2838,5 +2838,461 @@
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
     "slideNumber": 22,
     "isPracticeQuestion": true
+  },
+  {
+    "id": "prac-hs-01",
+    "question": "Bir patoloji laboratuvarında immünohistokimyasal incelemede, glomerül bazal membranında kesintisiz çizgisel (lineer) IgG birikimi ve nekrotizan hasar saptanıyor. Hastada akciğerde hemoptizi ve böbrekte hematüri mevcuttur. Bu tablonun gelişiminde rol oynayan temel immünopatolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Dolaşan immün komplekslerin subendotelyal çökmesi (Tip III)",
+      "B) Doku bazal membranındaki Tip IV kolajen alfa-3 zincirine karşı antikor aracılı doku hasarı (Tip II)",
+      "C) CD4+ Th1 hücrelerinin makrofaj aktivasyonu ve granülom oluşturması (Tip IV)",
+      "D) Alerjen maruziyeti ile IgE aracılı mast hücre degranülasyonu (Tip I)",
+      "E) CD8+ sitotoksik T lenfositlerinin perforin-granzim salınımı (Tip IV sitotoksisite)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Goodpasture sendromu, glomerül ve alveol bazal membranında Tip IV kolajenin alfa-3 zincirine karşı gelişen otoantikorların (anti-GBM) yol açtığı prototip bir Tip II aşırı duyarlılık tablosudur. İmmünofloresanda Tip II'ye özgü lineer (çizgisel) floresans verir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 1,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-02",
+    "question": "Alerjik astım patogenezinde rol oynayan Th2 hücre kaynaklı sitokinlerden hangisi, kemik iliğinde eozinofil öncüllerinin proliferasyonunu ve dokuya göçünü spesifik olarak uyarır?",
+    "options": [
+      "A) IL-4",
+      "B) IL-5",
+      "C) IL-13",
+      "D) IFN-γ",
+      "E) TGF-β"
+    ],
+    "correctAnswer": "B",
+    "explanation": "IL-5, eozinofil büyüme, aktivasyon ve kemotaksis faktörüdür. IL-4 IgE sınıf değişimini sağlar; IL-13 mukus salgısını artırır; IFN-γ ise Th1 sitokini olup Th2 yanıtını baskılar.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 2,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-03",
+    "question": "Aşağıdaki mast hücresi mediyatörlerinden hangisi granüllerde önceden depolanmış (preformed) olmayıp, membran fosfolipidlerinden arakidonik asit metabolizması sonucu yeni sentezlenen (de novo) bir mediyatördür?",
+    "options": [
+      "A) Histamin",
+      "B) Triptaz",
+      "C) Lökotrien C4",
+      "D) Kimaz",
+      "E) Heparin"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Lökotrien C4, fosfolipaz A2 ve 5-lipoksijenaz yolağı ile hücre zarından anlık sentezlenen bir lipid mediyatördür. Histamin, triptaz, kimaz ve heparin ise granüllerde önceden depolanmış durumdadır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 3,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-04",
+    "question": "Kronik atopik astım hastasının bronş lavajında saptanan ve hava yolu silialı epitel hücrelerinde nekroz ve dökülmeye neden olan en güçlü eozinofilik katyonik protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Majör Temel Protein (MBP)",
+      "B) Histaminaz",
+      "C) Arilsülfataz",
+      "D) Triptaz",
+      "E) İmmünoglobulin A"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Majör Temel Protein (MBP), eozinofil granül çekirdeğinde yer alan ve doku epitelinde doğrudan nekroz ve epitelyal soyulmaya (deskuamasyon) yol açan en toksik proteindir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 4,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-05",
+    "question": "Penisilin enjeksiyonu sonrası 5 dakika içinde nefes darlığı, stridor, yaygın ürtiker ve tansiyon düşüklüğü (70/40 mmHg) gelişen 24 yaşındaki hastada derhal uygulanması gereken en uygun ilk basamak medikal tedavi hangisidir?",
+    "options": [
+      "A) İntravenöz Dekzametazon",
+      "B) İntramüsküler Epinefrin (Adrenalin)",
+      "C) Oral Difenhidramin",
+      "D) İnhaler Salbutamol tek başına",
+      "E) İntravenöz Kalsiyum Glukonat"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Sistemik anafilaksinin tek hayat kurtarıcı birinci basamak ilacı intramüsküler epinefrindir (adrenalin). Alfa-1 vazokonstrüksiyon ve beta-2 bronkodilatasyon/mast hücre stabilizasyonu sağlar. Kortikosteroid ve antihistaminikler yalnızca ikincil adjuvan tedavilerdir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 5,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-06",
+    "question": "Sarılık, splenomegali ve anemi saptanan 30 yaşındaki kadın hastanın periferik yaymasında mikrosferositler izleniyor ve Direkt Coombs testi IgG pozitif bulunuyor. Bu hastada eritrositlerin yıkım mekanizması aşağıdakilerden hangisiyle en iyi açıklanır?",
+    "options": [
+      "A) Damar içinde kompleman Membran Atak Kompleksi (MAC, C5b-9) ile doğrudan lizis",
+      "B) Dalak makrofajlarındaki Fcγ reseptörleri aracılığıyla opsonize eritrosit fagositozu",
+      "C) Dolaşan çözünür immün komplekslerin dalak sinüzoidlerinde endoteli tıkaması",
+      "D) CD8+ sitotoksik T lenfositlerinin perforin salgılayarak eritrositi apoptoza sokması",
+      "E) Mast hücre degranülasyonuna bağlı eritrosit lizisi"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Sıcak tip otoimmün hemolitik anemi (AIHA), eritrosit yüzeyindeki proteinlere IgG bağlanması ve bu opsonize eritrositlerin dalak makrofajlarının Fcγ reseptörlerince tanınarak fagosite edilmesi (ekstravasküler hemoliz) ile seyreder.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 6,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-07",
+    "question": "Hemoptizi ve oligüri ile başvuran 28 yaşındaki erkek hastanın renal biyopsisinde hilal (kresent) oluşumu saptanıyor. İmmünofloresan incelemede glomerül kapiller duvarlarında kesintisiz, düzgün çizgisel (lineer) IgG birikimi saptanıyor. Bu hastada patolojiden sorumlu otoantikorun hedef molekülü hangisidir?",
+    "options": [
+      "A) Tip I kolajen fibrilleri",
+      "B) Tip IV kolajenin alfa-3 zinciri",
+      "C) Mezangiyal lökosit elastazı",
+      "D) Glomerül podosit nefrin proteini",
+      "E) Nötrofil sitoplazmik miyeloperoksidaz"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Goodpasture sendromunda otoantikorlar glomerül bazal membranındaki Tip IV kolajenin alfa-3 zincirinin non-kollajenöz (NC1) bölgesine bağlanır ve kesintisiz çizgisel (lineer) immünofloresan paterni verir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 7,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-08",
+    "question": "Göz kapağında düşme (ptozis) ve çiğneme kaslarında günün ilerleyen saatlerinde artan güçsüzlük şikayetiyle başvuran 32 yaşındaki kadında doku biyopsisinde hiçbir nekroz veya enflamasyon izlenmiyor. Bu hastanın hastalığının patogenezindeki temel immün mekanizma hangisidir?",
+    "options": [
+      "A) İmmün komplekslerin motor nöron aksonlarına çökmesi",
+      "B) Motor son plaktaki asetilkolin reseptörlerinin antikor aracılığıyla bloke ve internalize edilmesi",
+      "C) CD8+ T lenfositlerinin iskelet kas liflerini perforinle parçalaması",
+      "D) Kolinesteraz enziminin genetik yokluğu",
+      "E) Mast hücrelerinden salınan histaminin sinir iletisini kesmesi"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Myasthenia Gravis, asetilkolin reseptörlerine karşı gelişen otoantikorların reseptörü bloke etmesi ve internalize ederek azaltması sonucu motor son plakta ileti yetersizliği yaratan prototip bir Tip II hücresel disfonksiyon hastalığıdır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 8,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-09",
+    "question": "Aşağıdaki antijen-antikor durumlarından hangisinde oluşan immün kompleksler, retiküloendotelyal sistem tarafından temizlenemeyip damar duvarlarına en yüksek oranda çökerek Tip III doku hasarı oluşturur?",
+    "options": [
+      "A) Aşırı antikor fazlalığında oluşan devasa kompleksler",
+      "B) Aşırı antijen fazlalığında oluşan minik monomerik kompleksler",
+      "C) Hafif antijen fazlalığında oluşan orta büyüklükteki kompleksler",
+      "D) Yalnızca IgA sınıfı monomerik kompleksler",
+      "E) Yalnızca IgE içeren mast hücresine bağlı kompleksler"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hafif antijen fazlalığında oluşan orta büyüklükteki immün kompleksler, hem makrofaj fagositozundan kaçacak kadar küçük hem de endotel aralıklarına takılıp çökecek kadar büyüktür; bu nedenle en patojenik olanlardır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 9,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-10",
+    "question": "Deri nekrozu şüphesiyle biyopsi yapılan bir hastanın arteriyol duvarında fibrinoid nekroz saptanıyor. Hastaya 8 gün önce yabancı protein içerikli antitoksin verilmiş olduğu ve şu an ateş, artralji ile birlikte serum C3 ve C4 düzeylerinde belirgin düşüklük olduğu öğreniliyor. Bu hastadaki immünopatolojik tanı nedir?",
+    "options": [
+      "A) Akut Serum Hastalığı (Tip III)",
+      "B) Arthus Reaksiyonu (Tip II)",
+      "C) Sistemik Anafilaksi (Tip I)",
+      "D) Temas Dermatiti (Tip IV)",
+      "E) Atopik Ekzama (Tip I)"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Yabancı protein temasından 7-10 gün sonra ortaya çıkan ateş, artralji, vaskülit ve serum kompleman tüketimi (hipokomplemantemi) tablosu prototip Sistemik Akut Serum Hastalığıdır (Tip III).",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 10,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-11",
+    "question": "Tüberküloz şüphesiyle PPD testi yapılan bir sağlık çalışanında 48 saat sonra kolda 18 mm çapında belirgin endürasyon saptanıyor. Bu lezyonun biyopsisinde saptanması beklenen temel hücresel infiltrat bileşeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Yoğun eozinofiller ve nötrofiller",
+      "B) Perivasküler CD4+ T lenfositleri ve aktive makrofajlar",
+      "C) Plazma hücreleri ve B lenfosit agregatları",
+      "D) Mast hücreleri ve bazofiller",
+      "E) Yalnızca eritrosit ekstravazasyonu ve fibrin"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Gecikmiş tip aşırı duyarlılıkta (DTH) perivasküler alanda toplanan CD4+ T lenfositleri ve bunların salgıladığı sitokinlerle aktive olan makrofaj infiltrasyonu (perivasküler manşonlaşma) izlenir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 11,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-12",
+    "question": "Yeni aldığı nikel kaplama saati taktıktan 36 saat sonra bileğinde kaşıntılı, eritematöz ve minik veziküllerle karakterize egzamatöz lezyonlar gelişen bir hastada bu dermatolojik tablonun patogenezinde rol oynayan temel immünolojik süreç hangisidir?",
+    "options": [
+      "A) Nikelin mast hücrelerine bağlanarak doğrudan IgE bağımsız histamin salgılatması",
+      "B) Dolaşan anti-nikel immün komplekslerinin dermal kapillerleri tıkaması",
+      "C) Nikelin hapten olarak deri proteinlerine bağlanması ve duyarlaşmış T hücrelerinin Tip IV reaksiyon başlatması",
+      "D) Epidermal bazal membrana karşı IgG antikorlarının kompleman aktive etmesi",
+      "E) Nikelin derideki melanositleri fagosite eden makrofajları aktive etmesi"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Nikel kontakt dermatiti klasik bir Tip IV gecikmiş aşırı duyarlılık tablosudur. Nikel hapten olarak cilt proteinlerine bağlanır, Langerhans hücrelerince lenf noduna taşınır ve duyarlaşan T hücreleri 24-48 saat sonra temas alanında spongiyotik dermatit tablosu oluşturur.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 12,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-13",
+    "question": "Çocukluk çağında kronik mukokutanöz kandidiyazis, hipoparatiroidizm ve adrenal yetmezlik (Addison hastalığı) tanıları alan bir hastada, timik negatif seleksiyon sırasında periferik doku antijenlerinin ekspresyonundan sorumlu hangi gende mutasyon saptanması beklenir?",
+    "options": [
+      "A) FoxP3",
+      "B) AIRE",
+      "C) FAS (CD95)",
+      "D) CTLA-4",
+      "E) BTK"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kronik mukokutanöz kandidiyazis, hipoparatiroidizm ve adrenal yetmezlik triadı APECED (Otoimmün Poliendokrinopati Tip 1) sendromudur ve timusta periferik antijen sunumunu sağlayan AIRE gen mutasyonuna bağlıdır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 13,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-14",
+    "question": "Erkek bir bebekte yaşamın ilk aylarında şiddetli inatçı kanlı/sulu ishal (enteropati), erken başlangıçlı Tip 1 diyabet ve yaygın egzama saptanıyor. Genetik analizde CD4+ CD25+ regülatuvar T hücre fonksiyon bozukluğu izleniyor. Bu hastada mutasyona uğramış transkripsiyon faktörü hangisidir?",
+    "options": [
+      "A) AIRE",
+      "B) FoxP3",
+      "C) T-bet",
+      "D) GATA-3",
+      "E) STAT3"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Erkek bebekte enteropati, endokrinopati (diyabet) ve dermatit birlikteliği X'e bağlı IPEX sendromudur. Bu tablo regülatuvar T hücrelerinin (Treg) ana transkripsiyon faktörü olan FoxP3 gen mutasyonu sonucu gelişir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 14,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-15",
+    "question": "Geçirilmiş streptokok farenjitinden 3 hafta sonra göğüs ağrısı, üfürüm ve eklem ağrılarıyla başvuran bir çocukta, bakteriyel M proteinine karşı oluşan antikorların kalp kapakçıklarıyla çapraz reaksiyon vermesi aşağıdaki immünopatolojik mekanizmalardan hangisinin tipik örneğidir?",
+    "options": [
+      "A) Aşırı Duyarlılık Reaksiyonu Tip I",
+      "B) Moleküler Taklit (Molecular Mimicry)",
+      "C) Santral Tolerans Eksikliği",
+      "D) Reseptör Düzenlemesi Defekti",
+      "E) Kriptik Antijen İzolasyonu"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Patojen antijeninin (streptokok M proteini) konak doku antijenine (kardiyak miyozin/kapak glikoproteinleri) yapısal benzerliği nedeniyle antikorların konak dokusuna saldırması Moleküler Taklit (Molecular Mimicry) olarak adlandırılır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 15,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-16",
+    "question": "SLE tanısı ile izlenen 26 yaşındaki kadın hastada rutin kontrolde proteinüri (2.5 g/gün) ve mikroskopik hematüri saptanıyor. Bu hastada lupus nefriti alevlenmesini doğrulamak için istenmesi gereken en uygun otoantikor ve kompleman tetkik ikilisi hangisidir?",
+    "options": [
+      "A) Anti-Histon yüksekliği ve C3/C4 artışı",
+      "B) Anti-dsDNA titresi yüksekliği ve C3/C4 seviyelerinde düşüş (hipokomplemantemi)",
+      "C) Yalnızca ANA pozitifliği ve C1 esteraz artışı",
+      "D) Anti-Sentromer antikor yüksekliği ve IgG4 artışı",
+      "E) Anti-CCP pozitifliği ve Romatoid Faktör artışı"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Lupus nefriti alevlenmesinde anti-dsDNA antikor titresi yükselir ve dolaşan immün komplekslerin komplemanı tüketmesi nedeniyle serum C3 ve C4 düzeyleri belirgin olarak düşer (hipokomplemantemi).",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 16,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-17",
+    "question": "30 yaşında SLE tanılı kadın hastanın ekokardiyografisinde mitral kapak ön ve arka yaprakçıklarının her iki yüzeyine yerleşmiş küçük, steril, verrüköz nodüller saptanıyor. Kan kültürlerinde üreme olmayan bu hastada tanımlanan kardiyak lezyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut Romatizmal Kardit vejetasyonları",
+      "B) Subakut Bakteriyel Endokardit",
+      "C) Libman-Sacks Endokarditi",
+      "D) Non-Bakteriyel Trombotik (Marantik) Endokardit",
+      "E) Karsinoid Kalp Hastalığı"
+    ],
+    "correctAnswer": "C",
+    "explanation": "SLE hastalarında kapak yaprakçıklarının hem ön hem arka yüzüne yerleşen steril, küçük verrüköz lezyonlar Libman-Sacks endokarditidir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 17,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-18",
+    "question": "Her iki elinde sabah tutukluğu, MKF ve PİF eklemlerinde simetrik şişlik ve ağrı yakınması olan 45 yaşındaki kadında çekilen el grafisinde periartiküler erozyonlar saptanıyor. Bu hastada tanıyı kesinleştirmede özgüllüğü en yüksek olan laboratuvar testi hangisidir?",
+    "options": [
+      "A) Romatoid Faktör (RF)",
+      "B) Anti-Sitrülinlenmiş Peptid Antikoru (Anti-CCP)",
+      "C) Antinükleer Antikor (ANA)",
+      "D) Eritrosit Sedimantasyon Hızı (ESR)",
+      "E) Serum C-Reaktif Protein (CRP)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Romatoid Artrit tanısında Anti-CCP (ACPA) %95'in üzerindeki özgüllüğü ile en spesifik biyobelirteçtir. RF daha sensitif olsa da diğer bağ dokusu hastalıklarında ve kronik enfeksiyonlarda da pozitifleşebilir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 18,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-19",
+    "question": "Parmaklarında soğukta beyazlaşıp morarma (Raynaud), el derisinde gerginleşme ve yutma güçlüğü yakınması olan 50 yaşındaki hastada kalsinozis ve yüzde telenjiektaziler saptanıyor. Bu hastada pozitif çıkması en muhtemel otoantikor hangisidir?",
+    "options": [
+      "A) Anti-DNA Topoizomeraz I (Anti-Scl-70)",
+      "B) Anti-Sentromer Antikoru (ACA)",
+      "C) Anti-dsDNA",
+      "D) Anti-Smith",
+      "E) Anti-Jo-1"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kalsinozis, Raynaud, Özofagus dismotilitesi, Sklerodaktili ve Telenjiektazi bulguları CREST sendromuna işaret eder ve CREST sendromuna özgü otoantikor Anti-Sentromer Antikorudur (ACA).",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 19,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-20",
+    "question": "Pankreas başında kitle nedeniyle opere edilen ve biyopsisinde malignite saptanmayan hastada, dokuda storiform (hasır örgü) tarzında fibrozis, ven lümenlerini tıkayan obliteratif flebit ve yoğun plazmosit infiltrasyonu izleniyor. İmmünohistokimyada bu plazmositlerin IgG4 pozitif olduğu gösteriliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) IgG4-İlişkili Hastalık (Tip 1 Otoimmün Pankreatit)",
+      "B) Duktal Adenokarsinom",
+      "C) Sistemik Lupus Eritematozus",
+      "D) Sarkoidoz Pankreatiti",
+      "E) Akut Nekrotizan Pankreatit"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Storiform fibrozis, obliteratif flebit ve dokuda bol IgG4-pozitif plazma hücre infiltrasyonu triadı IgG4-İlişkili Hastalığın (bu olguda Tip 1 Otoimmün Pankreatit) patognomonik histolojik tablosudur.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 20,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-21",
+    "question": "Böbrek naklinden 3 hafta sonra serum kreatinini yükselen hastanın allogreft biyopsisinde kortikal tübül epiteli arasına CD8+ T lenfositlerinin sızdığı (tubulit) ve renal arteriyol intima tabakasında lenfositik enflamasyon (endotelit) izleniyor. Bu hastadaki rejeksiyon tipi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hiperakut rejeksiyon",
+      "B) Akut hücresel (T hücre-aracılı) rejeksiyon",
+      "C) Kronik intimal sklerozan rejeksiyon",
+      "D) Graft-versus-Host hastalığı",
+      "E) İlaç toksisitesine bağlı tübüler nekroz"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Nakilden haftalar sonra gelişen, interstisyel lenfosit infiltrasyonu, tübül epiteli arasına lenfosit sızması (tubulit) ve arteriyel intimal infiltrasyon (endotelit) Akut Hücresel Rejeksiyonun tanısal bulgularıdır.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 21,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-22",
+    "question": "Akut miyeloid lösemi nedeniyle allojeneik kemik iliği nakli yapılan 35 yaşındaki erkek hastada, nakilden 25 gün sonra avuç içlerinden başlayan yaygın döküntü, hiperbilirubinemi (sarılık) ve günde 2 litreye varan sulu-kanlı ishal gelişiyor. Kolon biyopsisinde kript epitel hücrelerinde yaygın apoptoz izleniyor. Bu klinik tablonun primer sorumlusu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Alıcının B lenfositlerince üretilen donör karşıtı antikorlar",
+      "B) Donör kök hücre greftindeki alloreaktif T lenfositleri",
+      "C) Sitomegalovirüs (CMV) süperenfeksiyonu",
+      "D) Yüksek doz kemoterapinin doğrudan mukozal toksisitesi",
+      "E) Mast hücrelerinin ani sistemik degranülasyonu"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kemik iliği naklinden sonra cilt döküntüsü, kolestatik sarılık ve kanlı ishal ile seyreden tablo Akut GVHD'dir. Donör grefti içindeki olgun T lenfositlerinin alıcının HLA antijenlerine saldırması sonucu gelişir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 22,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-23",
+    "question": "Doğumdan sonra göbek kordonu 4. haftada düşen, tekrarlayan nekrotizan deri enfeksiyonları geçiren bir bebekte kanda aşırı nötrofili (55.000/μL) saptanmasına rağmen, deri enfeksiyon alanında hiç püy (cerahat) oluşmadığı görülüyor. Bu hastadaki moleküler defekt aşağıdakilerden hangisidir?",
+    "options": [
+      "A) NADPH oksidaz enzim eksikliği",
+      "B) CD18 (beta-2 integrin) lökosit adhezyon molekül eksikliği",
+      "C) Bruton tirozin kinaz mutasyonu",
+      "D) Adenozin deaminaz (ADA) enzim yokluğu",
+      "E) CD40 ligand (CD154) eksikliği"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Göbek kordonunun geç düşmesi, belirgin kanda lökositoz olmasına rağmen enfeksiyon bölgesine lökositlerin geçememesi ve püy oluşmaması Lökosit Adhezyon Defekti Tip 1 (LAD-1; CD18 integrin eksikliği) için patognomoniktir.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 23,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  {
+    "id": "prac-hs-24",
+    "question": "15 yıldır Ailevi Akdeniz Ateşi (FMF) nedeniyle takip edilen ve ataklarını düzensiz geçiren 38 yaşındaki hastada pretibial ödem ve 6 g/gün proteinüri ile nefrotik sendrom gelişiyor. Yapılan böbrek biyopsisinde glomerüllerde biriken maddenin Kongo kırmızısı ile elma yeşili çift kırılma verdiği saptanıyor. Bu hastada biriken amiloidin öncül proteini aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İmmünoglobulin lambda hafif zinciri",
+      "B) Transtiretin",
+      "C) Serum Amiloid A (SAA)",
+      "D) Beta-2 mikroglobulin",
+      "E) Amiloid Prekürsör Protein (APP)"
+    ],
+    "correctAnswer": "C",
+    "explanation": "FMF, Romatoid Artrit veya kronik osteomiyelit gibi uzun süren kronik enflamatuar durumlarda gelişen sekonder amiloidoz AA tipindedir ve karaciğerden salınan Serum Amiloid A (SAA) proteininin birikmesiyle oluşur.",
+    "isPracticeQuestion": true,
+    "examYear": "Özgün Çalışma Testi",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "slideNumber": 24,
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
   }
 ]

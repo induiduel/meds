@@ -1,5 +1,5 @@
 {
-  "totalQuestions": 671,
+  "totalQuestions": 695,
   "totalChunks": 7,
   "updatedAt": "2026-10-02",
   "description": "Öğren sayfasındaki ders içeriklerinden üretilmiş özgün çalışma ve pekiştirme soruları veritabanı (çıkmış sorulardan bağımsızdır).",
@@ -117,14 +117,15 @@
     {
       "chunkId": "chunk_7",
       "filename": "chunk_7.json",
-      "questionCount": 71,
+      "questionCount": 95,
       "decksCovered": [
         "learn-enflamasyon-kimyasal-mediyatorleri",
         "learn-emboli-enfarktus-sok",
         "learn-mesane-hastaliklari-tumorleri",
         "learn-bobrek-tumorleri",
         "learn-tumor-biyolojisi-terminolojisi",
-        "learn-tromboz-patofizyolojisi"
+        "learn-tromboz-patofizyolojisi",
+        "learn-asiri-duyarlilik-ve-otoimmunite"
       ],
       "disciplines": [
         "Tıbbi Patoloji"

@@ -133,6 +133,8 @@ export interface QuestionItem {
   reports?: Array<{ id?: string; reason: string; details?: string; reportedBy?: string; reportedAt?: string }>;
   isLocked?: boolean;
   author?: string;
+  mergedSatellites?: QuestionItem[];
+  isMerged?: boolean;
   customRedactedBy?: string;
   customRedactedAt?: string;
   customRedactionPrompt?: string;

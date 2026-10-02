@@ -4302,5 +4302,246 @@
     "clinicalPearl": "Sepsis ve septik şok patogenezinde aşırı sitokin fırtınası ve lökosit kaybında pyroptoz başroldedir.",
     "discipline": "Tıbbi Patoloji / İmmünoloji",
     "committee": "Kurul 1"
+  },
+  "tip 1 aşırı duyarlılık": {
+    "term": "Tip I Aşırı Duyarlılık",
+    "category": "patoloji",
+    "description": "IgE ve mast hücre/bazofil aracılı, alerjenle çapraz bağlanma sonucu dakikalar içinde vazoaktif amin salınımıyla seyreden ani hipersensitivite reaksiyonu (Anafilaksi, Astım).",
+    "clinicalPearl": "Erken fazda histamin ve lökotrienler C4/D4/E4; geç fazda eozinofiller (MBP) doku hasarı yapar. Birincil acil tedavi Epinefrindir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "tip 2 aşırı duyarlılık": {
+    "term": "Tip II Aşırı Duyarlılık",
+    "category": "patoloji",
+    "description": "Hücre zarına veya hücre dışı matrise bağlı SABİT doku antijenlerine IgG/IgM bağlanması sonucu gelişen opsonizasyon, kompleman hasarı veya fonksiyonel bozukluk tablosu.",
+    "clinicalPearl": "Goodpasture (lineer IF), Pemfigus vulgaris (desmoglein-3), Myasthenia gravis (AChR blokajı) ve Graves (TSHR uyarımı) prototipleridir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "tip 3 aşırı duyarlılık": {
+    "term": "Tip III Aşırı Duyarlılık",
+    "category": "patoloji",
+    "description": "Kanda dolaşan çözünür antijen-antikor komplekslerinin damar duvarına çökmesi, kompleman fiksasyonu ve damar duvarında fibrinoid nekroz oluşturması.",
+    "clinicalPearl": "Hafif antijen fazlalığında oluşan orta boy kompleksler en patojeniktir. Akut serum hastalığı ve SLE nefriti prototipidir; granüler IF verir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "tip 4 aşırı duyarlılık": {
+    "term": "Tip IV Aşırı Duyarlılık",
+    "category": "patoloji",
+    "description": "Antikorlardan bağımsız, duyarlaşmış CD4+ Th1/Th17 ve CD8+ CTL lenfositlerinin sitokin ve perforin/granzimle oluşturduğu gecikmiş hücresel doku hasarı.",
+    "clinicalPearl": "Tüberkülin (PPD) reaksiyonu 48-72 saatte pik yapar. IFN-γ makrofajları aktive ederek granülom oluşturur. Kontakt dermatit prototipidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "sistemik lupus eritematozus": {
+    "term": "Sistemik Lupus Eritematozus (SLE)",
+    "category": "hastalik",
+    "description": "Nükleer antijenlere karşı patojenik otoantikorlar ve immün komplekslerin dokularda birikmesiyle karakterize remisyon ve alevlenmelerle seyreden multisistemik otoimmün hastalık.",
+    "clinicalPearl": "ANA (%98-100 en hassas), Anti-dsDNA (nefritle korele spesifik), Anti-Sm (en spesifik), Sınıf IV nefritte tel-kulp (wire-loop) ve Libman-Sacks endokarditi görülür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "anti-dsdna": {
+    "term": "Anti-dsDNA Antikoru",
+    "category": "protein",
+    "description": "Çift sarmallı nativ DNA'ya karşı yönelen ve SLE'ye yüksek özgüllük gösteren patojenik otoantikor.",
+    "clinicalPearl": "Titresi lupus nefriti aktivitesi ve alevlenmeleriyle birebir paralel gider; alevlenme sırasında titresi yükselirken serum C3/C4 düşer.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "anti-smith": {
+    "term": "Anti-Smith Antikoru (Anti-Sm)",
+    "category": "protein",
+    "description": "Ribonükleoprotein çekirdek proteinlerini tanıyan ve SLE için en yüksek tanısal özgüllüğe (spesifiteye) sahip antikor.",
+    "clinicalPearl": "Pozitifliği SLE tanısını mühürler ancak duyarlılığı düşüktür (%25). Hastalık alevlenmesiyle titresi değişmez.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "libman-sacks endokarditi": {
+    "term": "Libman-Sacks Endokarditi",
+    "category": "patoloji",
+    "description": "SLE ve APS hastalarında kalp kapakçıklarının hem ön hem arka yüzünde steril, verrüköz vejetasyonların yerleştiği non-bakteriyel endokardit.",
+    "clinicalPearl": "Vejetasyonların kapak yaprakçıklarının her iki yüzünde yerleşmesiyle romatizmal ve bakteriyel endokarditten ayrılır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "lupus nefriti": {
+    "term": "Lupus Nefriti",
+    "category": "patoloji",
+    "description": "SLE'de immün komplekslerin glomerüllerde birikmesiyle oluşan böbrek tutulumu (Sınıf I-VI).",
+    "clinicalPearl": "En sık ve en ağır tip Sınıf IV (Diffüz lupus nefriti) olup tel-kulp (wire-loop) lezyonları ve Full-House immünofloresan pozitifliği gösterir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "antifosfolipid sendromu": {
+    "term": "Antifosfolipid Sendromu (APS)",
+    "category": "hastalik",
+    "description": "Fosfolipid bağlayıcı proteinlere karşı otoantikorlarla seyreden, tekrarlayan trombozlar ve düşüklerle karakterize hiperkoagülabilite sendromu.",
+    "clinicalPearl": "İn vitro aPTT uzamasına rağmen in vivo arteriyel/venöz tromboz yapar; sifiliz testlerinde yalancı pozitiflik verir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "aire geni": {
+    "term": "AIRE Geni (Autoimmune Regulator)",
+    "latinName": "AIRE",
+    "category": "protein",
+    "description": "Timik medüller epitelde periferik doku antijenlerinin sentezlenmesini sağlayarak negatif seleksiyonu yöneten kilit gen.",
+    "clinicalPearl": "Mutasyonunda APECED / APS-1 (Kronik mukokutanöz kandidiyazis, hipoparatiroidizm, adrenal yetmezlik) gelişir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "foxp3": {
+    "term": "FoxP3 Transkripsiyon Faktörü",
+    "category": "protein",
+    "description": "CD4+ CD25+ regülatuvar T hücrelerinin (Treg) ana transkripsiyon faktörü.",
+    "clinicalPearl": "Mutasyonunda erkek bebeklerde inatçı otoimmün ishal, diyabet ve egzama ile karakterize X'e bağlı ölümcül IPEX sendromu gelişir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "ctla-4": {
+    "term": "CTLA-4 (CD152)",
+    "category": "protein",
+    "description": "T lenfosit yüzeyinde CD28 ile yarışarak APC'deki B7 moleküllerine çok daha yüksek afiniteyle bağlanan inhibitör kontrol noktası molekülü.",
+    "clinicalPearl": "T hücresine negatif sinyal göndererek anerji ve periferik tolerans sağlar; İpilimumab kanserde bu molekülü bloke eder.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "romatoid artrit": {
+    "term": "Romatoid Artrit (RA)",
+    "category": "hastalik",
+    "description": "Küçük eklemleri simetrik tutan, proliferatif sinovit, pannus ve eklem erozyonları ile seyreden kronik sistemik otoimmün hastalık.",
+    "clinicalPearl": "Anti-CCP (%95+ en spesifik), RF (IgM anti-IgG Fc), MKF ve PİF tutulumu; Distal interfalangeal (DİF) eklemler karakteristik olarak KORUNUR.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "anti-ccp": {
+    "term": "Anti-CCP (ACPA)",
+    "category": "protein",
+    "description": "Sitrülinlenmiş peptidlere karşı gelişen ve Romatoid Artrit tanısında %95'in üzerinde özgüllüğe sahip olan otoantikor.",
+    "clinicalPearl": "Erken evrede ve erozif eklem harabiyetini öngörmede Romatoid Faktörden çok daha üstündür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "pannus": {
+    "term": "Pannus",
+    "category": "patoloji",
+    "description": "Romatoid artritte prolifere sinovyal örtü hücreleri, granülasyon dokusu ve lenfositlerden oluşan erozif tümör benzeri kitle.",
+    "clinicalPearl": "Salgıladığı enzimlerle kıkırdağı ve alttaki kemiği eriterek fibröz ve kemik ankilozuna yol açar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "sjogren sendromu": {
+    "term": "Sjögren Sendromu",
+    "category": "hastalik",
+    "description": "Gözyaşı ve tükürük bezlerinin lenfositik infiltrasyonu sonucu kuru göz (keratokonjunktivitis sikka) ve kuru ağız (kserostomi) ile seyreden otoimmün hastalık.",
+    "clinicalPearl": "Anti-SSA (Ro) ve Anti-SSB (La) antikorları pozitiftir; B hücreli MALT lenfoma riski 40 kat artmıştır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "skleroderma": {
+    "term": "Sistemik Skleroz (Skleroderma)",
+    "category": "hastalik",
+    "description": "Mikrovasküler endotel hasarı ve aşırı kollajen depolanmasıyla deride ve iç organlarda yaygın fibrozis oluşturan otoimmün hastalık.",
+    "clinicalPearl": "Diffüz tipte Anti-Scl-70 (hızlı visseral tutulum); Sınırlı tipte (CREST) Anti-Sentromer antikorları pozitiftir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "crest sendromu": {
+    "term": "CREST Sendromu",
+    "category": "hastalik",
+    "description": "Calcinosis, Raynaud, Esophageal dysmotility, Sclerodactyly, Telangiectasia bulguları ile karakterize sınırlı sistemik skleroz.",
+    "clinicalPearl": "Anti-Sentromer Antikoru (ACA) pozitiftir; geç dönemde izole pulmoner hipertansiyon riski taşır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "igg4-iliskili hastalik": {
+    "term": "IgG4-İlişkili Hastalık (IgG4-RD)",
+    "category": "hastalik",
+    "description": "Otoimmün pankreatit, Riedel tiroiditi ve retroperitoneal fibrozisi kapsayan sistemik fibroinflamatuar sendrom.",
+    "clinicalPearl": "Histopatolojik triadı: Yoğun IgG4+ plazma hücresi, Storiform fibrozis ve Obliteratif flebit. Steroide dramatik yanıt verir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "storiform fibrozis": {
+    "term": "Storiform Fibrozis",
+    "category": "patoloji",
+    "description": "Kollajen ve fibroblastların çarkıfelek veya hasır örgüsü benzeri girdapsı dizilim gösterdiği fibrozis deseni.",
+    "clinicalPearl": "IgG4-ilişkili hastalığın (IgG4-RD) biyopsideki tanısal mihenk taşıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "obliteratif flebit": {
+    "term": "Obliteratif Flebit",
+    "category": "patoloji",
+    "description": "Enflamatuar infiltratın ven duvarını işgal ederek lümeni tıkaması; komşu arterin açık kalması.",
+    "clinicalPearl": "IgG4-ilişkili hastalığın üç temel histopatolojik ayağından biridir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "hiperakut rejeksiyon": {
+    "term": "Hiperakut Organ Reddi",
+    "category": "patoloji",
+    "description": "Nakilden dakikalar-saatler sonra alıcıdaki önceden var olan antikorlarla gelişen fulminan trombotik iskemik greft nekrozu.",
+    "clinicalPearl": "Ameliyat masasında greft siyanotik ve yumuşak hale gelir; damar duvarında fibrinoid nekroz saptanır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "c4d birikimi": {
+    "term": "C4d Kompleman Birikimi",
+    "category": "patoloji",
+    "description": "Böbrek allogreft biyopsisinde peritübüler kapiller endotelinde saptanan ve humoral rejeksiyonu kanıtlayan kompleman fragmanı.",
+    "clinicalPearl": "Akut Antikor-Aracılı (Humoral) Rejeksiyonun (ABMR) immünohistokimyasal altın standart biyobelirtecidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "graft-versus-host": {
+    "term": "Graft-versus-Host Hastalığı (GVHD)",
+    "category": "hastalik",
+    "description": "Kök hücre nakli sonrası donör T lenfositlerinin immünkompromize alıcının dokularına saldırması.",
+    "clinicalPearl": "Akut GVHD'de hedef organlar Cilt (döküntü), Karaciğer (sarılık) ve Bağırsaktır (kanlı ishal); ortak bulgu epitel apoptozudur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "bruton agamaglobulinemisi": {
+    "term": "Bruton Agamaglobulinemisi (XLA)",
+    "category": "hastalik",
+    "description": "BTK mutasyonu sonucu pre-B hücrelerinin olgun B'ye dönüşemediği X'e bağlı primer immün yetmezlik.",
+    "clinicalPearl": "Kanda B lenfositi ve antikor yoktur; lenf nodlarında germinal merkez bulunmaz. 6. aydan sonra piyojenik bakteriyel enfeksiyonlar başlar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "scid": {
+    "term": "Ağır Kombine İmmün Yetmezlik (SCID)",
+    "category": "hastalik",
+    "description": "Hem hücresel (T) hem humoral (B) immün yanıtın çöktüğü, erken bebeklikte ölümcül fırsatçı enfeksiyonlara yol açan sendrom.",
+    "clinicalPearl": "En sık tipi X'e bağlı IL-2R gama zinciri defekti; resesif tipi ADA eksikliğidir. Timus hipoplaziktir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "amiloidoz": {
+    "term": "Amiloidoz",
+    "category": "patoloji",
+    "description": "Yanlış katlanmış fibriler proteinlerin hücrelerarası alanda çapraz beta-kırmalı tabaka şeklinde birikmesiyle organ yetmezliği yapan hastalık.",
+    "clinicalPearl": "Kongo kırmızısı ile polarize mikroskopta ELMA YEŞİLİ ÇİFT KIRILMA patognomoniktir. AL hafif zincir, AA ise SAA kökenlidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "al amiloidoz": {
+    "term": "AL Amiloidoz (Primer)",
+    "category": "patoloji",
+    "description": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+    "clinicalPearl": "Kalpte restriktif kardiyomiyopati, dilde makroglossi ve böbrek yetmezliği yapar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
+  },
+  "aa amiloidoz": {
+    "term": "AA Amiloidoz (Sekonder/Reaktif)",
+    "category": "patoloji",
+    "description": "Romatoid Artrit, FMF gibi kronik enflamatuar durumlarda karaciğer kaynaklı Serum Amiloid A (SAA) proteininin birikmesi.",
+    "clinicalPearl": "En sık böbreği tutarak masif proteinüri ve nefrotik sendrom tablosu ile başvurur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1"
   }
 }
