@@ -11,6 +11,12 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
+DECK_ID = "learn-tromboz-patofizyolojisi-tam"
+DECK_TITLE = "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları"
+DISCIPLINE = "Tıbbi Patoloji"
+INSTRUCTOR = "Prof. Dr. Hikmet Keleş"
+COMMITTEE = "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)"
+
 # 24 SLIDES DATA
 slides = [
     # SLIDE 1
@@ -1087,3 +1093,746 @@ Bir trombüs oluştuktan sonraki günlerde 4 temel yoldan birini izler:
 ]
 
 print(f"Prepared {len(slides)} comprehensive slides.")
+
+
+# -------------------------------------------------------------
+# ENCYCLOPEDIA & GLOSSARY DATA FOR THROMBOSIS & HEMOSTASIS
+# -------------------------------------------------------------
+
+encyclopedia_entries = [
+    {
+        "id": "ekstrinsik-koagulasyon-yolu",
+        "title": "Ekstrinsik Koagülasyon Yolu (Doku Faktörü Yolu)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Damar hasarı sonrasında subendotelyal doku faktörünün (TF / Faktör III) açığa çıkmasıyla başlayan, in vivo pıhtılaşmanın ana başlatıcı yolu olan ve laboratuvarda Protrombin Zamanı (PT / INR) ile ölçülen koagülasyon koludur.",
+        "mechanism": [
+            "▸ Vasküler hasarla subendotelyal doku faktörü (TF / Tromboplastin) kana maruz kalır.",
+            "▸ Doku faktörü, dolaşımdaki Faktör VII ile $Ca^{2+}$ varlığında birleşerek **TF-FVIIa kompleksi** oluşturur.",
+            "▸ TF-FVIIa kompleksi doğrudan **Faktör X**'u aktive ederek ortak yola girer; aynı zamanda Faktör IX'u da aktive ederek intrinsik yolu besler.",
+            "▸ Doku faktörü yolu inhibitörü (TFPI) tarafından hızla baskılanır; bu nedenle pıhtının devamlılığı intrinsik yolun amplifikasyonuna bağlıdır."
+        ],
+        "clinicalSignificance": [
+            "▸ İn vivo koagülasyonun birincil başlatıcısıdır.",
+            "▸ Laboratuvarda **Protrombin Zamanı (PT)** ve **INR** ile değerlendirilir.",
+            "▸ Faktör VII en kısa yarı ömürlü faktör olduğu için karaciğer yetmezliğinde ve Warfarin tedavisinde ilk bozulan yoldur."
+        ],
+        "differentialDiagnosis": [
+            "▸ **İntrinsik Yol:** Yabancı/negatif yüzey temasıyla (FXII) başlar, aPTT ile ölçülür.",
+            "▸ **Ekstrinsik Yol:** Doku hasarı (TF) ile başlar, PT ile ölçülür."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Ekstrinsik yolun anahtar enzimi **Faktör VII**'dir.",
+            "🔵 ÇIKMIŞ SORU: Warfarin (Kumadin) tedavisinde takip edilen test **PT (INR)** olup, ekstrinsik yolun hızla tükenen Faktör VII'sine duyarlıdır."
+        ],
+        "relatedTerms": ["intrinsik-koagulasyon-yolu", "ortak-koagulasyon-yolu", "doku-faktoru", "faktor-vii", "protrombin-zamani"]
+    },
+    {
+        "id": "intrinsik-koagulasyon-yolu",
+        "title": "İntrinsik Koagülasyon Yolu (Temas Faktörleri Yolu)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Faktör XII'nin negatif yüklü yüzeylerle teması veya trombinin geri beslemesiyle aktive olan, Faktör XI, IX ve VIII bileşenlerinden oluşan ve laboratuvarda aPTT ile izlenen pıhtılaşma yolu.",
+        "mechanism": [
+            "▸ İn vitro temas fazı: Faktör XII (Hageman faktörü) negatif yüzeye temasla XIIa'ya dönüşür.",
+            "▸ FXIIa → FXI'i aktive eder (FXIa).",
+            "▸ FXIa → $Ca^{2+}$ varlığında FIX'u aktive eder (FIXa).",
+            "▸ FIXa, kofaktör FVIIIa, $Ca^{2+}$ ve trombosit fosfolipit yüzeyinde birleşerek **Tenaz Kompleksi** oluşturur.",
+            "▸ Tenaz kompleksi **Faktör X**'u keserek aktive eder (FXa) ve ortak yola geçer.",
+            "▸ İn vivo ortamda ise bu yol esas olarak az miktarda üretilen trombin tarafından FXI ve FVIII'in aktive edilmesiyle bir 'amplifikasyon döngüsü' olarak işler."
+        ],
+        "clinicalSignificance": [
+            "▸ Laboratuvarda **aPTT (Aktive Parsiyel Tromboplastin Zamanı)** testi ile takip edilir.",
+            "▸ **Hemofili A (FVIII eksikliği)** ve **Hemofili B (FIX eksikliği)** bu yoldaki defektlerdir.",
+            "▸ Standart (fraksiyone olmayan) heparin tedavisi bu yol üzerinden aPTT ile izlenir."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Hemofili A:** FVIII eksikliği, X'e bağlı resesif, izole aPTT uzaması.",
+            "▸ **Hemofili B (Christmas Hastalığı):** FIX eksikliği, X'e bağlı resesif, izole aPTT uzaması.",
+            "▸ **FXII Eksikliği:** aPTT belirgin uzar ancak in vivo KANAMA OLMAZ!"
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Faktör XII eksikliğinde test tüpünde aPTT aşırı uzar ama hastada kanama diyatezi KESİNLİKLE GÖRÜLMEZ!",
+            "🔵 ÇIKMIŞ SORU: Hemofili A'da izole **aPTT uzaması** saptanır, PT ve kanama zamanı tamamen normaldir."
+        ],
+        "relatedTerms": ["ekstrinsik-koagulasyon-yolu", "ortak-koagulasyon-yolu", "faktor-viii", "faktor-ix", "aptt-testi"]
+    },
+    {
+        "id": "ortak-koagulasyon-yolu",
+        "title": "Ortak Koagülasyon Yolu (Faktör X - Trombin - Fibrin Aksı)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Ekstrinsik ve intrinsik yolların Faktör X aktivasyonu üzerinde birleştiği, Faktör V, Protrombin (FII) ve Fibrinojen (FI) bileşenleriyle fibrin pıhtısını üreten ortak enzimatik hat.",
+        "mechanism": [
+            "▸ Hem ekstrinsik (TF-FVIIa) hem intrinsik (FIXa-FVIIIa) yollar **Faktör X**'u FXa'ya dönüştürür.",
+            "▸ FXa, kofaktör FVa, fosfolipid ve $Ca^{2+}$ ile trombosit zarında **Protrombinaz Kompleksi** oluşturur.",
+            "▸ Protrombinaz, Protrombini (FII) keserek aktif **Trombin (FIIa)** haline getirir.",
+            "▸ Trombin, çözünür Fibrinojeni keserek çözünmeyen **Fibrin monomerleri** üretir.",
+            "▸ Trombin ayrıca FXIII'ü aktive eder; FXIIIa fibrini çapraz bağlarla kilitler."
+        ],
+        "clinicalSignificance": [
+            "▸ Ortak yol faktörlerinin (X, V, II, I) eksikliğinde **HEM PT HEM aPTT UZAR**.",
+            "▸ Karaciğer yetmezliği, yaygın damar içi pıhtılaşma (DİK) ve aşırı antikoagülan dozunda her iki test birden bozulur.",
+            "▸ Yeni nesil oral antikoagülanlar (Rivaroksaban, Apiksaban) doğrudan Faktör Xa'yı; Dabigatran ise doğrudan Trombini bloke eder."
+        ],
+        "differentialDiagnosis": [
+            "▸ Yalnızca PT uzun: Faktör VII eksikliği (ekstrinsik).",
+            "▸ Yalnızca aPTT uzun: Faktör XII, XI, IX, VIII eksikliği (intrinsik).",
+            "▸ Hem PT hem aPTT uzun: Faktör X, V, II veya fibrinojen eksikliği (ortak yol)."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Ortak yol faktörleri **Faktör X, V, II (Protrombin) ve I (Fibrinojen)**'dir.",
+            "🔵 ÇIKMIŞ SORU: Hem PT hem aPTT testinin birlikte uzadığı durumlarda ortak yol faktörleri (X, V, II, I) taranmalıdır."
+        ],
+        "relatedTerms": ["trombin", "faktor-x", "faktor-v", "fibrinojen", "faktor-xiii"]
+    },
+    {
+        "id": "arteriyel-tromboz",
+        "title": "Arteriyel Trombüs (Beyaz Trombüs)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Kardiyovasküler",
+        "summary": "Yüksek akım hızına sahip arterlerde endotel hasarı (özellikle ateroskleroz) zemininde gelişen, trombosit ve fibrinden zengin, akıma ters (retrograd) büyüyen ve distal dokularda enfarktüse yol açan tıkayıcı pıhtıdır.",
+        "mechanism": [
+            "▸ Aterosklerotik plak yırtılması veya endotel aşınması subendoteli açığa çıkarır.",
+            "▸ Yüksek kayma geriliminde (shear stress) vWF ve trombosit GpIb etkileşimi ile masif trombosit adezyonu gerçekleşir.",
+            "▸ Trombositler aktive olup GpIIb/IIIa üzerinden fibrinojenle kümelenir.",
+            "▸ Pıhtı hızlı akıma rağmen duvara yapışık kalır; akım yönünün tersine (**retrograd**) uzar.",
+            "▸ Lümeni tamamen tıkadığında distal doku perfüzyonu durur."
+        ],
+        "clinicalSignificance": [
+            "▸ En sık görüldüğü yerler: Koroner arterler (%MI), Serebral arterler (%İskemik inme), Femoral ve iliak arterler (alt ekstremite iskemisi/gangren).",
+            "▸ Trombositten zengin olduğu için tedavisinde ve profilaksisinde **Antiagreganlar (Aspirin, Klopidogrel)** ön plandadır."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Venöz Trombüs:** Staz zemininde oluşur, eritrositten zengindir (kırmızı), kalbe doğru (antegrad) büyür, pulmoner emboli yapar.",
+            "▸ **Arteriyel Trombüs:** Endotel hasarı zemininde oluşur, trombositten zengindir (beyaz), retrograd büyür, iskemi/enfarktüs yapar."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Arteriyel trombüslerin en sık nedeni **aterosklerotik plak rüptürü**dür.",
+            "🔵 ÇIKMIŞ SORU: Arteriyel trombüsler akım yönünün tersine (**retrograd**) büyürken, venöz trombüsler akım yönünde (**antegrad**) kalbe doğru uzar."
+        ],
+        "relatedTerms": ["venoz-tromboz", "zahn-cizgileri", "ateroskleroz", "enfarktus", "aspirin"]
+    },
+    {
+        "id": "venoz-tromboz",
+        "title": "Venöz Trombüs (Kırmızı Trombüs / Flebotromboz)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Vasküler",
+        "summary": "Düşük akım hızına sahip venlerde staz ve hiperkoagülabilite zemininde gelişen, yoğun eritrosit ve fibrin ağı içeren, akım yönünde (antegrad) büyüyen ve pulmoner tromboembolinin ana kaynağı olan pıhtı.",
+        "mechanism": [
+            "▸ İmmobilizasyon, kalp yetmezliği veya varislerde venöz akım yavaşlar (staz).",
+            "▸ Laminer akım bozulur; trombositler marjine olur ve aktive koagülasyon faktörleri yıkanamaz.",
+            "▸ Fibrin ağı içinde çok sayıda eritrosit hapsolur; pıhtı koyu kırmızı, jelatinöz bir kitleye dönüşür.",
+            "▸ Pıhtı damar duvarına tutunduğu odaktan kalbe doğru (**antegrad**) uzar.",
+            "▸ Lümen içinde serbest dalgalanan uzun bir kuyruk oluşturur; bu kuyruk kolayca kopar."
+        ],
+        "clinicalSignificance": [
+            "▸ %90 oranında alt ekstremite derin venlerinde (**Derin Ven Trombozu - DVT**: popliteal, femoral, iliyak venler) yerleşir.",
+            "▸ En ölümcül komplikasyonu koparak vena kava inferior yoluyla sağ kalbe ve akciğere gitmesidir (**Pulmoner Tromboemboli - PTE**).",
+            "▸ Eritrosit ve fibrinden zengin olduğu için tedavisinde ve profilaksisinde **Antikoagülanlar (Heparin, Warfarin, DOAK)** kullanılır."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Arteriyel Trombüs:** Beyaz, trombositten zengin, enfarktüs yapar.",
+            "▸ **Venöz Trombüs:** Kırmızı, eritrositten zengin, pulmoner emboli yapar."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Venöz trombüsler neredeyse daima tıkayıcıdır (oklüzif) ve kan akımı yönünde (**antegrad**) büyür.",
+            "🔵 ÇIKMIŞ SORU: Pulmoner tromboembolilerin %95'ten fazlası **alt ekstremite derin ven trombozlarından (DVT)** kaynaklanır."
+        ],
+        "relatedTerms": ["arteriyel-tromboz", "pulmoner-tromboemboli", "derin-ven-trombozu", "virchow-uclusu", "staz"]
+    },
+    {
+        "id": "zahn-cizgileri",
+        "title": "Zahn Çizgileri (Lines of Zahn)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Adli Patoloji",
+        "summary": "Yalnızca canlı organizmada ve akan kanın yarattığı laminasyon altında oluşan, açık renkli trombosit-fibrin tabakaları ile koyu renkli eritrosit tabakalarının ardışık mikroskobik ve makroskobik çizgilenmesidir.",
+        "mechanism": [
+            "▸ Akan kan trombüsün yüzeyinden geçerken ilk olarak trombositler ve fibrin çöker (açık renkli tabaka).",
+            "▸ Ardından akım girdaplarında çok sayıda eritrosit pıhtı yüzeyine tutunur (koyu kırmızı tabaka).",
+            "▸ Bu döngü kat kat tekrarlanarak karakteristik çizgili (lamine) görünümü oluşturur.",
+            "▸ Ölümden sonra dolaşım durduğu için bu ardışık dinamik tabakalaşma gerçekleşemez."
+        ],
+        "clinicalSignificance": [
+            "▸ Adli patolojide ve otopside damar lümenindeki pıhtının **ante-mortem (ölüm öncesi)** oluştuğunun kesin kanıtıdır.",
+            "▸ Aort ve kalp boşluklarındaki trombüslerde makroskobik olarak çıplak gözle dahi seçilebilir."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Zahn Çizgileri İçeren Pıhtı:** Ante-mortem gerçek trombüs (duvara yapışık, kuru, kırılgan).",
+            "▸ **Zahn Çizgisi İçermeyen Pıhtı:** Post-mortem ölüm sonrası pıhtı (duvara yapışmaz, jelatinöz, frenk üzümü jölesi ve tavuk yağı görünümü)."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Açık katmanlar = Trombosit ve Fibrin; Koyu katmanlar = Eritrositler.",
+            "🔵 ÇIKMIŞ SORU: Otopsi kesitinde damar içi kitlenin ölümden önce oluştuğunu gösteren en spesifik histopatolojik bulgu **Zahn çizgilerinin (Lines of Zahn)** varlığıdır."
+        ],
+        "relatedTerms": ["post-mortem-pihti", "arteriyel-tromboz", "mural-tromboz", "ante-mortem-tromboz"]
+    },
+    {
+        "id": "post-mortem-pihti",
+        "title": "Post-Mortem (Ölüm Sonrası) Pıhtı",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Adli Tıp",
+        "summary": "Ölümün ardından dolaşımın durmasıyla damar lümeninde kalan kanın yerçekimi etkisiyle çökelmesi sonucu oluşan, duvara yapışmayan, Zahn çizgisi içermeyen jelatinöz yalancı pıhtıdır.",
+        "mechanism": [
+            "▸ Kalp durduktan sonra kan akımı kesilir.",
+            "▸ Ağır olan eritrositler yerçekimi etkisiyle kabın/damarın alt kısmına çöker.",
+            "▸ Üst kısımda berrak, hücreden fakir plazma sıvısı toplanır.",
+            "▸ Yavaş fibrin oluşumuyla homojen, elastik bir jel kıvamı kazanır.",
+            "▸ Endotel reaksiyonu veya canlı doku yanıtı olmadığı için damar intimasına kesinlikle tutunmaz."
+        ],
+        "clinicalSignificance": [
+            "▸ Otopside damar lümeni açıldığında tek parça halinde kolayca çekilerek çıkarılabilir.",
+            "▸ Patolog veya adli tıp uzmanı tarafından gerçek ölümcül trombüslerle karıştırılmamalıdır."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Alt Katman:** Koyu kırmızı renkli, çöken eritrositler = **'Frenk Üzümü Jölesi' (Currant Jelly)** görünümü.",
+            "▸ **Üst Katman:** Açık sarı renkli, plazma ve fibrin = **'Tavuk Yağı' (Chicken Fat)** görünümü.",
+            "▸ **Gerçek Trombüs:** Kuru, granüler, kırılgan, duvara yapışık, Zahn çizgileri pozitif."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Post-mortem pıhtı damar duvarına **YAPIŞIK DEĞİLDİR** ve **ZAHN ÇİZGİSİ İÇERMEZ**.",
+            "🔵 ÇIKMIŞ SORU: Frenk üzümü jölesi ve tavuk yağı görünümünde iki tabakalı jel kıvamındaki kitle **post-mortem pıhtıdır**."
+        ],
+        "relatedTerms": ["zahn-cizgileri", "arteriyel-tromboz", "venoz-tromboz", "otopsi-bulgulari"]
+    },
+    {
+        "id": "mural-tromboz",
+        "title": "Mural Trombüs",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Kardiyovasküler",
+        "summary": "Kalp odacıklarının (atriyum veya ventrikül) endokardiyal duvarına ya da genişlemiş aort lümenine yapışık olarak gelişen, lümeni tamamen tıkamayan ancak sistemik emboli riski çok yüksek olan trombüs.",
+        "mechanism": [
+            "▸ Sol ventrikülde: Akut transmural miyokard enfarktüsü endokardiyal nekroz yapar; diskinetik/akinetik miyokard staz ve endotel hasarı oluşturur.",
+            "▸ Sol atriyumda: Mitral darlığı ve atriyal fibrilasyon sol atriyal apendikste masif staza yol açar.",
+            "▸ Aortta: Aterosklerotik ülserasyonlar veya anevrizmatik genişlemeler (türbülans ve staz) üzerinde gelişir."
+        ],
+        "clinicalSignificance": [
+            "▸ Sistemik arteriyel embolilerin en sık kaynağıdır.",
+            "▸ Sol ventrikül veya sol atriyumdan kopan parçalar aorta fırlatılarak **beyne (inme), böbreğe, dalağa ve alt ekstremiteye** giderek yaygın infarktüslere yol açar."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Oklüzif Trombüs:** Lümeni tamamen kapatır (küçük arterler ve derin venlerde tipik).",
+            "▸ **Mural Trombüs:** Geniş çaplı boşluklarda duvara yapışık kalır, lümeni daraltır ama tamamen tıkamaz."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Sol ventrikül mural trombüslerinin 1 numaralı nedeni **ön duvar miyokard enfarktüsü ve sol ventrikül anevrizması**dır.",
+            "🔵 ÇIKMIŞ SORU: Atriyal fibrilasyonda mural trombüslerin en sık yerleştiği anatomik odak **sol atriyal apendiks (aurikula)**'dır."
+        ],
+        "relatedTerms": ["miyokard-enfarktusu", "atriyal-fibrilasyon", "iskemik-inme", "anevrizma"]
+    },
+    {
+        "id": "faktor-v-leiden",
+        "title": "Faktör V Leiden Mutasyonu (Aktive Protein C Direnci)",
+        "category": "genetic",
+        "discipline": "Tıbbi Patoloji / Tıbbi Genetik",
+        "summary": "Faktör V geninde 506. kodondaki Arg506Gln nokta mutasyonu sonucu Faktör Va'nın Aktive Protein C (APC) tarafından yıkılamamasıyla karakterize, toplumda en sık görülen kalıtsal trombofilidir.",
+        "mechanism": [
+            "▸ Faktör V geninde tek nükleotid değişimi (G1691A) gerçekleşir.",
+            "▸ 506. pozisyondaki Arjinin amino asidi Glutamin'e dönüşür (**Arg506Gln**).",
+            "▸ Normalde Aktive Protein C (APC), FVa'yı tam bu Arg506 bölgesinden keserek yok eder.",
+            "▸ Mutasyonlu Faktör V pıhtılaşma işlevini eksiksiz sürdürür ancak APC tarafından kesilemez (**APC Direnci**).",
+            "▸ Faktör Va dolaşımda uzun süre aktif kalır; protrombinaz kompleksi durmaksızın trombin üretir."
+        ],
+        "clinicalSignificance": [
+            "▸ Beyaz ırkın %2-15'inde bulunur; kalıtsal venöz trombozların en sık nedenidir.",
+            "▸ Heterozigotlarda venöz tromboz riski 5-8 kat; homozigotlarda 50-80 kat artar.",
+            "▸ Oral kontraseptif (östrojen) kullanan heterozigot kadınlarda tromboz riski 30 kattan fazla artış gösterir!"
+        ],
+        "differentialDiagnosis": [
+            "▸ **Protrombin G20210A:** 3' UTR mutasyonu, aşırı protrombin üretimi.",
+            "▸ **Faktör V Leiden:** Arg506Gln mutasyonu, inaktive edilemeyen Faktör Va."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Faktör V Leiden mutasyonu = **Arg506Gln** = **Aktive Protein C (APC) Direnci**.",
+            "🔵 ÇIKMIŞ SORU: Kalıtsal venöz tromboz etiyolojisinde en sık saptanan genetik defekt **Faktör V Leiden mutasyonu**dur."
+        ],
+        "relatedTerms": ["protein-c", "protein-s", "protrombin-g20210a", "derin-ven-trombozu", "trombofili"]
+    },
+    {
+        "id": "protrombin-g20210a",
+        "title": "Protrombin G20210A Gen Mutasyonu",
+        "category": "genetic",
+        "discipline": "Tıbbi Patoloji / Tıbbi Genetik",
+        "summary": "Protrombin geninin 3' kodlamayan bölgesindeki (3'-UTR) G20210A tek nükleotid değişimi sonucu kanda protrombin (Faktör II) düzeyinin %30 artmasıyla seyreden ikinci en sık kalıtsal trombofili.",
+        "mechanism": [
+            "▸ Protrombin geninin 3' çevrilmeyen bölgesinde (3'-untranslated region / UTR) 20210. pozisyonda Guanin yerine Adenin geçer.",
+            "▸ Bu mutasyon protein yapısını değiştirmez; ancak **protrombin mRNA'sının hücre içinde parçalanmasını geciktirerek stabilitesini artırır**.",
+            "▸ Translasyon verimi yükselir ve karaciğerden plazmaya salınan Protrombin (Faktör II) miktarı normalin yaklaşık %130'una ulaşır.",
+            "▸ Fazla protrombin, kaskad tetiklendiğinde çok daha yüksek miktarda trombin patlamasına (thrombin burst) yol açar."
+        ],
+        "clinicalSignificance": [
+            "▸ Toplumun yaklaşık %1-2'sinde saptanır; kalıtsal trombofililerde 2. sırada yer alır.",
+            "▸ Venöz tromboz riskini 2-3 kat artırır.",
+            "▸ Gebelik ve cerrahi gibi edinsel faktörlerle birleştiğinde derin ven trombozunu tetikler."
+        ],
+        "differentialDiagnosis": [
+            "▸ Faktör V Leiden mutasyonu (Arg506Gln) protein dizisini değiştirir; Protrombin G20210A ise kodlamayan 3' UTR'dedir ve protein yapısını bozmaz, sadece sentez miktarını artırır."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Mutasyon kodlayan bölgede değil, **3' UTR bölgesindedir** ve mRNA stabilitesini artırır.",
+            "🔵 ÇIKMIŞ SORU: İkinci en sık kalıtsal hiperkoagülabilite nedeni **Protrombin G20210A mutasyonu**dur."
+        ],
+        "relatedTerms": ["faktor-v-leiden", "trombin", "protrombin", "derin-ven-trombozu"]
+    },
+    {
+        "id": "heparin-induced-thrombocytopenia-hit-tip-2",
+        "title": "Heparin Kaynaklı Trombositopeni Tip II (İmmün HIT)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Fraksiyone olmayan heparin kullanımı sonrası Trombosit Faktörü 4 (PF4)-Heparin komplekslerine karşı gelişen IgG otoantikorlarının trombositleri kontrolsüz aktive etmesiyle seyreden, trombositopeniye rağmen ölümcül trombozlarla karakterize immün paradoks.",
+        "mechanism": [
+            "▸ Negatif yüklü heparin, trombosit alfa granüllerinden çıkan pozitif yüklü **Trombosit Faktörü 4 (PF4)**'e bağlanır.",
+            "▸ Ortaya çıkan immünojenik Heparin-PF4 kompleksine karşı **IgG yapısında otoantikorlar** üretilir.",
+            "▸ IgG antikorlarının Fc kuyrukları trombosit zarındaki **FcγRIIa reseptörlerini** çapraz bağlar.",
+            "▸ Trombositler aşırı aktive olur; mikropartiküller salar, agregasyon yapar ve dalakta tüketime uğrar.",
+            "▸ **Paradoksal Tromboz:** Trombosit sayısı %50'den fazla düşer (trombositopeni), ancak açığa çıkan prokoagülan mikropartiküller yaygın arteriyel ve venöz trombozlara yol açar!"
+        ],
+        "clinicalSignificance": [
+            "▸ Genellikle heparin başlandıktan **5-10 gün sonra** ortaya çıkar.",
+            "▸ Derhal **HEPARİN KESİLMELİDİR**! Düşük molekül ağırlıklı heparin (LMWH) verilmez (çapraz reaksiyon %100'e yakındır).",
+            "▸ Tedavide **Direkt Trombin İnhibitörleri (Argatroban, Bivalirudin)** veya Fondaparinuks kullanılır."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Tip I HIT:** Non-immündir, tedavinin 1-2. gününde hafif trombosit düşüşü olur, pıhtı yapmaz, klinik önemi yoktur, heparin kesilmez.",
+            "▸ **Tip II HIT:** İmmündir (IgG), 5-10. günde çıkar, trombosit %50 düşer, masif tromboz yapar, heparin derhal kesilir."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: HIT Tip II'de hedef antijen: ==Heparin - PF4 kompleksi==; reseptör: ==FcγRIIa==.",
+            "🔵 ÇIKMIŞ SORU: Heparin tedavisi altında trombosit sayısı aniden düşen ve bacağında yeni DVT gelişen hastada ilaç kesilip **Argatroban (direkt trombin inhibitörü)** başlanmalıdır."
+        ],
+        "relatedTerms": ["heparin", "trombositopeni", "argatroban", "virchow-uclusu"]
+    },
+    {
+        "id": "antifosfolipid-antikor-sendromu-aps",
+        "title": "Antifosfolipid Antikor Sendromu (APS)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Romatoloji",
+        "summary": "Fosfolipid-protein komplekslerine (özellikle β2-glikoprotein I) karşı gelişen otoantikorların varlığıyla karakterize; tekrarlayan arteriyel/venöz trombozlar, tekrarlayan gebelik kayıpları ve trombositopeni ile seyreden sistemik otoimmün trombofili.",
+        "mechanism": [
+            "▸ Plazma proteinleri (özellikle **β2-glikoprotein I** ve protrombin) anyonik fosfolipidlere bağlandığında neoantijen konformasyonu kazanır.",
+            "▸ Bağışıklık sistemi bu komplekslere karşı **Anti-β2-GPI, Antikardiyolipin ve Lupus Antikoagülanı (LA)** antikorları üretir.",
+            "▸ Antikorlar endotel hücrelerini, trombositleri ve kompleman sistemini uyararak protrombotik durumu tetikler.",
+            "▸ Trofoblast hücre fonksiyonlarını bozarak plasental damarlarda enfarktüslere ve fetal kayıplara neden olur."
+        ],
+        "clinicalSignificance": [
+            "▸ **Primer APS:** Altta yatan başka bir otoimmün hastalık olmadan izole görülür.",
+            "▸ **Sekonder APS:** En sık **Sistemik Lupus Eritematozus (SLE)** zemininde gelişir.",
+            "▸ **Katastrofik APS (Asherson Sendromu):** Günler içinde birden fazla organda yaygın mikrovasküler trombozlarla seyreden ölümcül fulminan tablodur."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Laboratuvar Paradoksu:** Test tüpünde koagülasyon fosfolipidlerini bloke ettiği için **aPTT paradoksal olarak uzar**; ancak hastanın vücudunda **tromboz** yapar!"
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Klinik Triad: ==Tekrarlayan tromboz + Tekrarlayan düşükler + Trombositopeni==.",
+            "🔵 ÇIKMIŞ SORU: Lupus antikoagülanı in vitro testte **aPTT'yi uzatırken**, in vivo ortamda **hiperkoagülabilite ve tromboz** oluşturur."
+        ],
+        "relatedTerms": ["lupus-antikoagulani", "sistemik-lupus-eritematozus", "libman-sacks-endokarditi", "derin-ven-trombozu"]
+    },
+    {
+        "id": "lupus-antikoagulani",
+        "title": "Lupus Antikoagülanı (LA)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Laboratuvarda in vitro aPTT pıhtılaşma süresini uzatan, ancak klinik olarak in vivo damar içi tromboza yol açan antifosfolipid otoantikor ailesi üyesi.",
+        "mechanism": [
+            "▸ Test tüpünde aPTT reaktifindeki fosfolipid yüzeylerine bağlanarak pıhtılaşma faktör komplekslerinin montajını geciktirir.",
+            "▸ Bu nedenle laboratuvar testinde aPTT uzamış (kanama bozukluğu gibi) rapor edilir.",
+            "▸ Normal plazma ile karıştırıldığında (karışım testi) aPTT düzelmez (inhibitör varlığı kanıtlanır).",
+            "▸ Ancak in vivo damar yatağında endotel aktivasyonu ve trombosit agregasyonunu tetikleyerek şiddetli tromboz yapar."
+        ],
+        "clinicalSignificance": [
+            "▸ Antifosfolipid antikor sendromunun en güçlü tromboz prediktörüdür.",
+            "▸ Genç yaşta inme, DVT, pulmoner emboli ve tekrarlayan gebelik kayıplarında araştırılmalıdır."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Faktör Eksikliği (Hemofili):** Normal plazma eklendiğinde aPTT düzelir.",
+            "▸ **Lupus Antikoagülanı:** Normal plazma eklendiğinde aPTT DÜZELMEZ (inhibitör varlığı)."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Adı 'antikoagülan' olmasına rağmen hastada kanamaya değil **TROMBOZA** yol açar!",
+            "🔵 ÇIKMIŞ SORU: Karışım testinde (mixing study) normale dönmeyen aPTT uzaması **Lupus Antikoagülanı** varlığını gösterir."
+        ],
+        "relatedTerms": ["antifosfolipid-antikor-sendromu-aps", "aptt-testi", "sistemik-lupus-eritematozus"]
+    },
+    {
+        "id": "trousseau-sendromu",
+        "title": "Trousseau Sendromu (Tromboflebitis Migrans)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Onkoloji",
+        "summary": "Malign tümörlerin (özellikle müsinöz adenokarsinomların) salgıladığı prokoagülan faktörler nedeniyle vücudun farklı yerlerinde tekrarlayan, bir kaybolup başka bir vende ortaya çıkan gezici yüzeyel ven trombozlarıdır.",
+        "mechanism": [
+            "▸ Kanser hücreleri (özellikle pankreas, mide, akciğer, kolon adenokarsinomları) dolaşıma Doku Faktörü benzeri veziküller ve müsin molekülleri salar.",
+            "▸ Müsin, lökosit L-selektin ve trombosit P-selektini ile etkileşerek yaygın mikroagregatları tetikler.",
+            "▸ Düşük dereceli kronik DİK ve endotel hasarı eşliğinde ekstremite yüzeyel venlerinde tekrarlayan pıhtılar ve periflebit gelişir.",
+            "▸ Lezyonlar tipik olarak göç edicidir (migrans): Bir kolda iyileşirken haftalar sonra diğer bacakta belirir."
+        ],
+        "clinicalSignificance": [
+            "▸ Çoğu zaman henüz teşhis edilmemiş gizli (okült) bir iç organ kanserinin ilk klinik prezentasyonudur.",
+            "▸ Armand Trousseau 1865'te bu sendromu tanımlamış ve daha sonra kendisinde de gelişen gezici tromboflebit sonrası pankreas kanserinden vefat etmiştir."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Buerger Hastalığı (Tromboanjitis Obliterans):** Genç sigara içen erkeklerde distal ekstremite iskemi ve flebiti; kanserle ilişkisizdir.",
+            "▸ **Trousseau Sendromu:** İleri yaşta gezici flebit; iç organ adenokarsinomu ile ilişkilidir."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Trousseau sendromunda en sık sorumlu kanser **Pankreas Adenokarsinomu**'dur.",
+            "🔵 ÇIKMIŞ SORU: Tromboflebitis migrans (gezici yüzeyel ven trombozu) kliniği olan hastada ilk araştırılması gereken tümör **pankreas kanseri**dir."
+        ],
+        "relatedTerms": ["adenokarsinom", "virchow-uclusu", "doku-faktoru", "derin-ven-trombozu"]
+    },
+    {
+        "id": "bernard-soulier-sendromu",
+        "title": "Bernard-Soulier Sendromu (Dev Trombosit Sendromu)",
+        "category": "genetic",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Trombosit yüzeyindeki Glikoprotein Ib (GpIb-IX-V) reseptör kompleksinin otozomal resesif eksikliği sonucu trombositlerin von Willebrand Faktörüne (vWF) ve subendotele yapışamadığı, dev trombositlerle seyreden kalıtsal kanama bozukluğu.",
+        "mechanism": [
+            "▸ GpIb genlerindeki mutasyonlar nedeniyle trombosit zarı üzerinde fonksiyonel GpIb reseptörü bulunamaz.",
+            "▸ Damar hasarında açığa çıkan subendotelyal vWF'ye bağlanma gerçekleşemez (**Adhezyon Kusuru**).",
+            "▸ Primer hemostaz tıkacı kurulamaz; kanama zamanı belirgin uzar.",
+            "▸ Megakaryosit olgunlaşma defekti nedeniyle kanda trombosit sayısı hafif düşüktür ve trombositler eritrosit boyutunda **dev (makrotrombosit)** morfolojidedir."
+        ],
+        "clinicalSignificance": [
+            "▸ Mukokutanöz kanamalar, burun kanamaları (epistaksis), diş eti kanamaları ve menoraji ile başvurur.",
+            "▸ Ristosetin ile trombosit agregasyon testinde **agregasyon olmaz**; plazma eklenmesiyle de düzelmez (vWF sağlamdır, reseptör yoktur!)."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Glanzmann Trombastenisi:** GpIIb/IIIa eksikliği, agregasyon bozukluğu, trombosit boyutları normaldir.",
+            "▸ **Bernard-Soulier Sendromu:** GpIb eksikliği, adhezyon bozukluğu, dev trombositler (makrotrombositopeni)."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Bernard-Soulier = **GpIb Eksikliği** = **Adhezyon Kusuru** + **Dev Trombositler**.",
+            "🔵 ÇIKMIŞ SORU: Trombosit adezyon testi ristosetin ile bozuk olan ve periferik yaymada dev trombositlerin görüldüğü hastalık **Bernard-Soulier sendromu**dur."
+        ],
+        "relatedTerms": ["glanzmann-trombastenisi", "von-willebrand-faktoru", "primer-hemostaz"]
+    },
+    {
+        "id": "glanzmann-trombastenisi",
+        "title": "Glanzmann Trombastenisi",
+        "category": "genetic",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Trombosit yüzeyindeki Glikoprotein IIb/IIIa (İntegrin αIIbβ3) reseptör kompleksinin otozomal resesif kalıtsal eksikliği sonucu trombositlerin fibrinojen köprüleriyle birbirine bağlanamadığı (agregasyon kusuru) kanama hastalığı.",
+        "mechanism": [
+            "▸ ITGA2B veya ITGB3 gen mutasyonları sonucu GpIIb/IIIa integrini üretilemez.",
+            "▸ Trombosit adezyonu normaldir (GpIb ve vWF sağlam olduğu için subendotele yapışırlar).",
+            "▸ Ancak aktive trombositler arasına fibrinojen molekülleri köprü kuramaz (**Agregasyon Bozukluğu**).",
+            "▸ Trombositler birbiriyle kümelenemediği için primer tıkacın büyümesi durur; kanama zamanı uzar."
+        ],
+        "clinicalSignificance": [
+            "▸ Şiddetli purpura, peteşi, epistaksis ve gastrointestinal kanamalar.",
+            "▸ Periferik yaymada trombosit sayısı ve boyutları tamamen **normaldir**, ancak lam üzerinde kümelenme yapamazlar (tek tek dağınık dururlar).",
+            "▸ Ristosetin testi normaldir (adezyon sağlamdır); ADP, kollajen ve epinefrin ile agregasyon **sıfırdır**."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Bernard-Soulier:** GpIb eksikliği, adhezyon kusuru, dev trombositler.",
+            "▸ **Glanzmann:** GpIIb/IIIa eksikliği, agregasyon kusuru, normal boyutlu trombositler."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Glanzmann = **GpIIb/IIIa Eksikliği** = **Agregasyon Kusuru** (Fibrinojen bağlanamaz).",
+            "🔵 ÇIKMIŞ SORU: Trombosit adezyonu normal olan ancak fibrinojen köprüleri kurulamadığı için agregasyon yapamayan kalıtsal defekt **Glanzmann trombastenisi**dir."
+        ],
+        "relatedTerms": ["bernard-soulier-sendromu", "fibrinojen", "primer-hemostaz", "aspirin"]
+    },
+    {
+        "id": "libman-sacks-endokarditi",
+        "title": "Libman-Sacks Endokarditi (SLE Endokarditi)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Kardiyoloji",
+        "summary": "Sistemik Lupus Eritematozus (SLE) ve Antifosfolipid Antikor Sendromu zemininde kalp kapaklarının hem ventriküler hem atriyal yüzeylerinde gelişen küçük, steril, verrüköz vejetasyonlardır.",
+        "mechanism": [
+            "▸ İmmün kompleks birikimi ve antifosfolipid antikorların endotel zedelenmesiyle tetiklenir.",
+            "▸ Kapak endokardında mukoid dejenerasyon ve fibrin birikimi oluşur.",
+            "▸ Bakteriyel veya fungal mikroorganizma içermez (**Steril Vejetasyonlar**).",
+            "▸ Karakteristik olarak kalp kapaklarının **her iki yüzünde (hem kan akım yönünde hem serbest alt yüzde)** yerleşebilir."
+        ],
+        "clinicalSignificance": [
+            "▸ En sık mitral ve aort kapaklarını tutar.",
+            "▸ Genellikle asemptomatiktir ancak kapak yetmezliğine, kalsifikasyona veya sekonder bakteriyel süperenfeksiyona zemin hazırlayabilir.",
+            "▸ Tromboemboli riski taşır."
+        ],
+        "differentialDiagnosis": [
+            "▸ **İnfektif Endokardit:** Bakteriyel, kapağı tahrip eden, büyük, düzensiz vejetasyonlar.",
+            "▸ **Marantik Endokardit (NBTE):** Kanser hastalarında kapak kapanma hattında steril vejetasyonlar.",
+            "▸ **Libman-Sacks Endokarditi:** SLE'de kapakların her iki yüzünde yerleşen küçük steril vejetasyonlar."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Libman-Sacks vejetasyonları **sterildir** ve kapakların **HER İKİ YÜZÜNDE** de bulunabilir.",
+            "🔵 ÇIKMIŞ SORU: Sistemik Lupus Eritematozus hastasında mitral kapağın hem atriyal hem ventriküler yüzeyine yapışık küçük verrüköz steril oluşumlar **Libman-Sacks endokarditi**dir."
+        ],
+        "relatedTerms": ["antifosfolipid-antikor-sendromu-aps", "sistemik-lupus-eritematozus", "nonbakteriyel-trombotik-endokardit-nbte"]
+    },
+    {
+        "id": "nonbakteriyel-trombotik-endokardit-nbte",
+        "title": "Nonbakteriyel Trombotik Endokardit (NBTE / Marantik Endokardit)",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Kardiyovasküler",
+        "summary": "İleri evre kanserler (özellikle müsinöz adenokarsinomlar), kronik sepsis veya aşırı kaşeksi zemininde hiperkoagülabiliteye bağlı olarak kalp kapak kapanma çizgilerinde oluşan tahribatsız ve steril fibrin-trombosit vejetasyonlarıdır.",
+        "mechanism": [
+            "▸ Sistemik hiperkoagülabilite (Trousseau sendromu, DİK) ve hafif hemodinamik travma bir araya gelir.",
+            "▸ Kalp kapağı üzerinde lökosit infiltrasyonu veya belirgin enflamasyon olmadan saf fibrin ve trombosit kümeleri çöker.",
+            "▸ Altta yatan kapak dokusunda nekroz veya tahribat (destrüksiyon) **YOKTUR**.",
+            "▸ Mikroorganizma içermez (**Sterildir**)."
+        ],
+        "clinicalSignificance": [
+            "▸ Vejetasyonlar kapağa çok gevşek tutunmuştur; bu nedenle son derece kolay koparak **serebral, böbrek veya dalak infarktüslerine (sistemik emboli)** yol açar.",
+            "▸ Maligniteli hastalarda ani gelişen felçlerin (inme) önemli bir nedenidir."
+        ],
+        "differentialDiagnosis": [
+            "▸ **İnfektif Endokardit:** Kapakta destrüksiyon, delinme (perforasyon) ve yoğun nötrofilik eksüda vardır.",
+            "▸ **NBTE:** Kapakta destrüksiyon yoktur, enflamasyon yoktur, steril fibrin-trombosit kitlesidir."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: NBTE vejetasyonları **sterildir**, kapak dokusunu **tahrip etmez** ancak **çok kolay emboli atar**.",
+            "🔵 ÇIKMIŞ SORU: İleri evre kanser veya kaşeksi hastasında kalp kapaklarının kapanma hattında tahribatsız, steril fibrin trombüsleri saptanması **Nonbakteriyel Trombotik Endokardit (Marantik Endokardit)** tanısı koydurur."
+        ],
+        "relatedTerms": ["trousseau-sendromu", "libman-sacks-endokarditi", "infektif-endokardit", "emboli"]
+    },
+    {
+        "id": "trombomodulin-protein-c-aksi",
+        "title": "Trombomodulin - Protein C Aksı",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Biyokimya",
+        "summary": "Sağlam endotel yüzeyindeki trombomodulin reseptörünün trombin ile birleşerek onun pıhtılaştırıcı etkisini yok etmesi ve Protein C'yi aktive ederek Faktör Va ve VIIIa'yı parçalatan en önemli doğal antikoagülan fren mekanizmasıdır.",
+        "mechanism": [
+            "▸ Sağlam endotel yüzeyinde **Trombomodulin** adlı transmembran glikoprotein bulunur.",
+            "▸ Dolaşımdaki aktif Trombin (FIIa) trombomoduline bağlanır.",
+            "▸ Bu bağlanma trombinin şeklini değiştirir; trombin artık fibrinojeni kesemez ve trombositleri aktive edemez.",
+            "▸ Bunun yerine endotelyal Protein C Reseptörü (EPCR) üzerindeki **Protein C**'yi parçalayarak aktif enzim haline getirir (**Aktive Protein C - APC**).",
+            "▸ APC, kofaktörü olan **Protein S** varlığında koagülasyon kaskadının vazgeçilmez amplifikatörleri olan **Faktör Va ve Faktör VIIIa'yı proteolitik olarak parçalayarak inaktive eder**."
+        ],
+        "clinicalSignificance": [
+            "▸ Koagülasyonun hasarlı bölge dışına taşmasını önleyen en güçlü hücresel güvenlik şalteridir.",
+            "▸ Protein C veya Protein S genetik eksikliklerinde bu fren mekanizması çalışamaz; genç yaşta tekrarlayan ağır venöz trombozlar ve Warfarin deri nekrozu gelişir."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Faktör V Leiden:** Trombomodulin ve Protein C sağlamdır; ancak hedef olan Faktör Va mutasyon nedeniyle APC tarafından kesilemez."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: Trombin trombomoduline bağlandığında **prokoagülan kimliğini kaybeder ve antikoagülan bir enzime dönüşür!**",
+            "🔵 ÇIKMIŞ SORU: Aktive Protein C (APC), kofaktör Protein S ile birlikte koagülasyon kaskadında hangi iki faktörü parçalayarak inaktive eder? → **Faktör Va ve Faktör VIIIa**."
+        ],
+        "relatedTerms": ["faktor-v-leiden", "protein-c", "protein-s", "trombin", "endotel"]
+    },
+    {
+        "id": "antitrombin-iii-eksikligi",
+        "title": "Antitrombin III (AT-III) ve Eksikliği",
+        "category": "pathology",
+        "discipline": "Tıbbi Patoloji / Hematoloji",
+        "summary": "Trombin, Faktör Xa ve Faktör IXa'yı inaktive eden temel serin proteaz inhibitörüdür; kalıtsal eksikliğinde veya nefrotik sendromda idrarla kaybında ağır venöz trombozlar ve klasik 'Heparin Direnci' gelişir.",
+        "mechanism": [
+            "▸ Karaciğerde sentezlenen tek zincirli bir glikoproteindir (serpin ailesi).",
+            "▸ Dolaşımda serbest Trombin (FIIa), Faktör Xa, IXa, XIa ve XIIa'nın aktif merkezine yavaşça bağlanarak onları nötralize eder.",
+            "▸ Endotelyal **Heparan Sülfat** veya dışarıdan verilen **Heparin** molekülüne bağlandığında konformasyonu değişir ve inaktivasyon hızı **1000 ila 2000 kat** artar!",
+            "▸ Eksikliğinde koagülasyon faktörleri dolaşımda serbestçe aktif kalır; masif pıhtılaşma eğilimi doğar."
+        ],
+        "clinicalSignificance": [
+            "▸ **Kalıtsal Eksiklik:** Otozomal dominant geçer; genç erişkinlerde hayatı tehdit eden DVT ve mezenterik/renal ven trombozları görülür.",
+            "▸ **Heparin Direnci:** Standart heparin etkisini AT-III üzerinden gösterdiği için, AT-III düzeyi düşük hastalara yüksek doz heparin verilse bile aPTT uzamaz!",
+            "▸ **Nefrotik Sendrom:** Düşük molekül ağırlıklı AT-III idrarla atıldığı için edinsel eksiklik ve renal ven trombozu sıktır."
+        ],
+        "differentialDiagnosis": [
+            "▸ **Protein C/S Eksikliği:** Warfarin başlandığında deri nekrozu riski taşır.",
+            "▸ **AT-III Eksikliği:** Heparin başlandığında heparin direnci (aPTT'nin uzamaması) ile kendini belli eder."
+        ],
+        "highYieldFacts": [
+            "🔴 ÖNEMLİ: AT-III eksikliğinde heparin **etki gösteremez (heparin direnci)**; tedavi için taze donmuş plazma veya AT-III konsantresi gerekir.",
+            "🔵 ÇIKMIŞ SORU: Heparin infüzyonuna rağmen aPTT uzamayan bir hastada altta yatan defekt **Antitrombin III eksikliği**dir."
+        ],
+        "relatedTerms": ["heparan-sulfat", "heparin", "trombin", "nefrotik-sendrom"]
+    }
+]
+
+# GLOSSARY TERMS FOR TOOLTIP / TOAST DICTIONARY
+glossary_terms = {
+    "Hemostaz": "Damar zedelenmesi sonrasında kanamayı durdurmak amacıyla damar lümeninde fizyolojik, lokalize ve kontrollü pıhtı oluşumu ve ardından gelen doku onarımı süreci.",
+    "Tromboz": "Sağlam veya hasarlı bir damarın ya da kalp boşluklarının lümeninde uygunsuz ve kontrolsüz pıhtı (trombüs) oluşmasıyla damar lümeninin tıkanması patolojisi.",
+    "Trombüs": "Canlı bir organizmada damar veya kalp boşlukları içinde kanın şekilli elemanları ve fibrin ağından oluşan patolojik intralüminal pıhtı kitlesi.",
+    "Virchow Üçlüsü": "Trombozun patogenezinde rol oynayan 3 temel etken: 1) Endotel hasarı, 2) Anormal kan akımı (staz ve türbülans), 3) Hiperkoagülabilite (trombofili).",
+    "Endotelin": "Vasküler hasar sonrasında hasarlı endotel hücrelerinden salgılanan ve hemostazın ilk saniyelerinde arteriyel vazokonstriksiyona yol açan bilinen en güçlü endojen vazokonstriktör peptid.",
+    "vWF (von Willebrand Faktörü)": "Endotel hücreleri ve megakaryositlerde sentezlenen; subendotelyal kollajen ile trombosit GpIb reseptörü arasında köprü kurarak adezyonu sağlayan multimerik glikoprotein.",
+    "Glikoprotein Ib (GpIb)": "Trombosit yüzeyinde bulunan ve subendotelyal vWF'ye bağlanarak trombosit adezyonunu sağlayan reseptör kompleksi; eksikliğinde Bernard-Soulier sendromu gelişir.",
+    "Glikoprotein IIb/IIIa (GpIIb/IIIa)": "Trombosit aktivasyonuyla konformasyon değiştiren ve komşu trombositler arasında fibrinojen köprüleri kurarak agregasyonu sağlayan integrin reseptörü; eksikliğinde Glanzmann trombastenisi gelişir.",
+    "Bernard-Soulier Sendromu": "GpIb reseptör eksikliği sonucu trombositlerin subendotele yapışamadığı, kanama zamanının uzadığı ve periferik yaymada dev trombositlerin görüldüğü kalıtsal adezyon bozukluğu.",
+    "Glanzmann Trombastenisi": "GpIIb/IIIa reseptör eksikliği sonucu trombositlerin fibrinojen köprüleriyle birbirine bağlanamadığı (agregasyon kusuru) kalıtsal kanama bozukluğu.",
+    "Doku Faktörü (Tromboplastin / Faktör III)": "Subendotel ve adventisyada bolca bulunan; vasküler hasarla açığa çıkıp Faktör VIIa ile birleşerek in vivo koagülasyonu başlatan membran glikoproteini.",
+    "Protrombin Zamanı (PT)": "Plazmaya doku faktörü eklenerek ölçülen; ekstrinsik (FVII) ve ortak (X, V, II, I) yolları değerlendiren ve Warfarin tedavisinde takip edilen koagülasyon testi.",
+    "aPTT (Aktive Parsiyel Tromboplastin Zamanı)": "Negatif yüklü yüzey temasıyla ölçülen; intrinsik (XII, XI, IX, VIII) ve ortak yolları değerlendiren ve standart heparin tedavisinde izlenen koagülasyon testi.",
+    "Trombin (Faktör IIa)": "Fibrinojeni fibrine çeviren, trombositleri PAR reseptörleriyle aktive eden ve trombomoduline bağlandığında Protein C'yi aktive ederek antikoagülan etki gösteren merkezi serin proteaz.",
+    "Trombomodulin": "Sağlam endotel yüzeyinde bulunan; trombine bağlanarak onun prokoagülan etkisini yok eden ve Protein C'yi aktive etmesini sağlayan antikoagülan reseptör.",
+    "Protein C": "K vitaminine bağımlı doğal antikoagülan enzim; kofaktör Protein S ile birlikte Faktör Va ve Faktör VIIIa'yı parçalayarak koagülasyon kaskadını frenler.",
+    "Antitrombin III (AT-III)": "Endotelyal heparan sülfat ve heparin varlığında aktivitesi bin kat artan; trombin, Faktör Xa ve Faktör IXa'yı inaktive eden temel plazma inhibitörü.",
+    "Faktör V Leiden": "Faktör V geninde Arg506Gln nokta mutasyonu sonucu Faktör Va'nın Aktive Protein C (APC) tarafından yıkılamamasıyla seyreden ve en sık görülen kalıtsal venöz trombofili.",
+    "Protrombin G20210A": "Protrombin geninin 3' UTR bölgesindeki mutasyon sonucu mRNA stabilitesinin artması ve kanda aşırı protrombin üretimiyle seyreden ikinci en sık kalıtsal trombofili.",
+    "Trousseau Sendromu": "Özellikle pankreas ve müsinöz adenokarsinomlarda tümör kaynaklı prokoagülanlar nedeniyle vücutta tekrarlayan gezici yüzeyel ven trombozları (tromboflebitis migrans).",
+    "HIT Tip II (Heparin Kaynaklı Trombositopeni)": "Heparin-PF4 kompleksine karşı gelişen IgG otoantikorlarının trombositleri tüketip aynı zamanda masif aktive ederek trombositopeni eşliğinde şiddetli tromboza yol açtığı immün tablo.",
+    "Antifosfolipid Antikor Sendromu (APS)": "β2-glikoprotein I ve fosfolipidlere karşı otoantikorlarla karakterize; tekrarlayan arteriyel/venöz trombozlar, tekrarlayan düşükler ve trombositopeni triadı.",
+    "Lupus Antikoagülanı": "Test tüpünde fosfolipidleri bağlayarak in vitro aPTT'yi uzatan, ancak canlı vücutta güçlü bir hiperkoagülasyon ve tromboz oluşturan antifosfolipid otoantikor.",
+    "Zahn Çizgileri": "Yalnızca canlıda ve akan kanda oluşan trombüslerde görülen; açık renkli trombosit-fibrin tabakaları ile koyu renkli eritrosit tabakalarının ardışık laminasyon çizgileri.",
+    "Mural Trombüs": "Kalp odacıkları (sol ventrikül, sol atriyum) veya anevrizmatik aort duvarına yapışık gelişen ve sistemik arteriyel embolilerin en sık kaynağı olan pıhtı.",
+    "Libman-Sacks Endokarditi": "Sistemik Lupus Eritematozus hastalarında kalp kapaklarının her iki yüzeyinde gelişebilen küçük, steril, verrüköz vejetasyonlar.",
+    "Marantik Endokardit (NBTE)": "Kanser ve kaşeksi hastalarında kapak kapanma hattında gelişen, kapağı tahrip etmeyen steril fibrin-trombosit vejetasyonları.",
+    "Post-Mortem Pıhtı": "Ölüm sonrası kanın yerçekimiyle çökmesi sonucu oluşan; duvara yapışmayan, Zahn çizgisi içermeyen, altta frenk üzümü jölesi ve üstte tavuk yağı görünümündeki yalancı pıhtı.",
+    "D-Dimer": "Faktör XIII ile çapraz bağlanmış stabil fibrin pıhtısının plazmin tarafından eritilmesiyle açığa çıkan; DVT, PE ve DİK tanısında yüksek negatif prediktif değere sahip fibrin yıkım ürünü.",
+    "Flebolit": "Eski ve organize olmuş venöz trombüsün zaman içinde kalsifiye olarak damar lümeni içinde taşlaşmış kireç odağı haline gelmesi."
+}
+
+# -------------------------------------------------------------
+# MAIN INTEGRATION EXECUTION
+# -------------------------------------------------------------
+
+def run_integration():
+    print("Executing full integration for Tromboz Patofizyolojisi...")
+
+    # 1. READ INTERACTIVE LEARNING DECKS
+    decks_file = "src/data/interactive_learning_decks.json"
+    with open(decks_file, "r", encoding="utf-8") as f:
+        decks = json.load(f)
+
+    # Prepare deck object
+    new_deck = {
+        "id": DECK_ID,
+        "title": DECK_TITLE,
+        "discipline": DISCIPLINE,
+        "instructor": INSTRUCTOR,
+        "committee": COMMITTEE,
+        "description": "Prof. Dr. Hikmet Keleş'in Dönem 2 Kurul 1 Patoloji ders notundan derlenmiş, normal hemostaz basamaklarından Virchow üçlüsüne, genetik trombofililerden Zahn çizgilerine kadar %500 derinlikli 24 slayt ve 24 özgün çalışma sorusu içeren kapsamlı interaktif öğrenme güvertesi.",
+        "slidesCount": len(slides),
+        "detailLevel": "500%",
+        "slides": slides
+    }
+
+    # Check if deck already exists
+    existing_index = next((i for i, d in enumerate(decks) if d.get("id") == DECK_ID), None)
+    if existing_index is not None:
+        decks[existing_index] = new_deck
+        print(f"Updated existing deck: {DECK_ID}")
+    else:
+        decks.append(new_deck)
+        print(f"Appended new deck: {DECK_ID}. Total decks: {len(decks)}")
+
+    with open(decks_file, "w", encoding="utf-8") as f:
+        json.dump(decks, f, ensure_ascii=False, indent=2)
+
+    # 2. SAVE STUDY QUESTIONS TO CHUNK_8
+    c8_file = "src/data/study_questions/chunk_8.json"
+    with open(c8_file, "r", encoding="utf-8") as f:
+        chunk_8 = json.load(f)
+
+    added_questions = 0
+    for s in slides:
+        pq = s.get("practiceQuestion")
+        if pq:
+            q_obj = {
+                "id": f"sq-tromboz-{pq['id']}",
+                "deckId": DECK_ID,
+                "deckTitle": DECK_TITLE,
+                "slideId": s["id"],
+                "slideTitle": s["title"],
+                "discipline": DISCIPLINE,
+                "committee": COMMITTEE,
+                "instructor": INSTRUCTOR,
+                "question": pq["question"],
+                "options": pq["options"],
+                "correctAnswer": pq["correctAnswer"],
+                "explanation": pq["explanation"],
+                "isPracticeQuestion": True,
+                "examYear": "Özgün Çalışma Testi"
+            }
+            # Avoid duplicate
+            if not any(x.get("id") == q_obj["id"] for x in chunk_8):
+                chunk_8.append(q_obj)
+                added_questions += 1
+
+    print(f"Added {added_questions} questions to chunk_8. Total now: {len(chunk_8)}")
+    with open(c8_file, "w", encoding="utf-8") as f:
+        json.dump(chunk_8, f, ensure_ascii=False, indent=2)
+
+    # 3. UPDATE STUDY QUESTIONS INDEX
+    idx_file = "src/data/study_questions/index.json"
+    with open(idx_file, "r", encoding="utf-8") as f:
+        idx_data = json.load(f)
+
+    # Recalculate total questions across all chunks
+    total_q = 0
+    for ch in idx_data.get("chunks", []):
+        if ch["chunkId"] == "chunk_8":
+            ch["questionCount"] = len(chunk_8)
+            if DECK_ID not in ch.get("decksCovered", []):
+                ch.setdefault("decksCovered", []).append(DECK_ID)
+        total_q += ch.get("questionCount", len(chunk_8))
+
+    idx_data["totalQuestions"] = total_q
+    with open(idx_file, "w", encoding="utf-8") as f:
+        json.dump(idx_data, f, ensure_ascii=False, indent=2)
+    print(f"Updated study_questions/index.json! Total study questions: {total_q}")
+
+    # 4. UPDATE LEARNING QUEUE
+    queue_file = "src/data/learning_batch_queue.json"
+    with open(queue_file, "r", encoding="utf-8") as f:
+        queue_data = json.load(f)
+
+    # Mark DECK_ID as completed
+    for item in queue_data:
+        if item.get("id") == DECK_ID:
+            item["status"] = "completed"
+            item["slidesCount"] = len(slides)
+            item["detailLevel"] = "500%"
+
+    # Determine next in queue if available
+    # Check if there is another next item or add next course
+    has_next = any(x.get("status") == "next_in_queue" and x.get("id") != DECK_ID for x in queue_data)
+    if not has_next:
+        # Check next Kurul 1 course: 13) İskemi, İnfarktüs ve Şok Patolojisi
+        next_item = {
+            "id": "learn-iskemi-infarktus-ve-sok",
+            "title": "İskemi, İnfarktüs ve Şok Patolojisi",
+            "discipline": "Tıbbi Patoloji",
+            "status": "next_in_queue",
+            "slidesCount": 24,
+            "detailLevel": "500% (Planlanan)"
+        }
+        queue_data.append(next_item)
+        print("Added next course to queue: learn-iskemi-infarktus-ve-sok")
+
+    with open(queue_file, "w", encoding="utf-8") as f:
+        json.dump(queue_data, f, ensure_ascii=False, indent=2)
+
+    # 5. EXPAND ENCYCLOPEDIA
+    enc_file = "src/data/medical_encyclopedia.json"
+    with open(enc_file, "r", encoding="utf-8") as f:
+        encyclopedia = json.load(f)
+
+    enc_added = 0
+    enc_updated = 0
+    for entry in encyclopedia_entries:
+        existing = next((e for e in encyclopedia if e.get("id") == entry["id"]), None)
+        if existing:
+            existing.update(entry)
+            enc_updated += 1
+        else:
+            encyclopedia.append(entry)
+            enc_added += 1
+
+    print(f"Encyclopedia: Added {enc_added} new entries, updated {enc_updated} entries. Total now: {len(encyclopedia)}")
+    with open(enc_file, "w", encoding="utf-8") as f:
+        json.dump(encyclopedia, f, ensure_ascii=False, indent=2)
+
+    # 6. EXPAND GLOSSARY
+    glo_file = "src/data/medical_glossary.json"
+    with open(glo_file, "r", encoding="utf-8") as f:
+        glossary = json.load(f)
+
+    glo_added = 0
+    for term, definition in glossary_terms.items():
+        if term not in glossary or len(definition) > len(glossary.get(term, "")):
+            glossary[term] = definition
+            glo_added += 1
+
+    print(f"Glossary: Added/Updated {glo_added} terms. Total now: {len(glossary)}")
+    with open(glo_file, "w", encoding="utf-8") as f:
+        json.dump(glossary, f, ensure_ascii=False, indent=2)
+
+    print("ALL INTEGRATION TASKS SUCCESSFULLY COMPLETED!")
+
+if __name__ == "__main__":
+    run_integration()
