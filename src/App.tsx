@@ -25,6 +25,7 @@ import { MetricsBar } from './components/MetricsBar';
 import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { SectionLoader } from './components/ui/Animations';
 
 // Lazy-loaded Views (Split into separate on-demand chunks)
 const PracticeMode = React.lazy(() => import('./components/PracticeMode').then(m => ({ default: m.PracticeMode })));
@@ -57,12 +58,7 @@ const LectureSummariesView = React.lazy(() => import('./components/LectureSummar
 const TranscriptionsView = React.lazy(() => import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView })));
 const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
 
-const ViewFallback = () => (
-  <div className="py-20 flex flex-col items-center justify-center gap-3 text-ink-2">
-    <RefreshCw className="w-6 h-6 text-accent animate-spin" />
-    <span className="text-[14px] font-medium">Bölüm yükleniyor…</span>
-  </div>
-);
+const ViewFallback = () => <SectionLoader />;
 import { systemHealthMonitor } from './services/systemHealthMonitor';
 import { ApiService } from './services/api';
 import { multiDbManager } from './services/multiDbManager';

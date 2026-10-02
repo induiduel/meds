@@ -37,6 +37,8 @@ import {
   PenLine,
 } from 'lucide-react';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
+import { ReportQuestionModal } from './ReportQuestionModal';
+import { SectionLoader } from './ui/Animations';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
@@ -756,9 +758,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
       {/* Questions Listing */}
       {isLoading ? (
-        <div className="bg-white rounded-[18px] border border-line p-12 text-center flex flex-col items-center gap-2">
-          <RefreshCw className="w-6 h-6 text-accent animate-spin" />
-          <p className="m-0 text-[14px] text-ink-2">Çıkmış sorular yükleniyor…</p>
+        <div className="bg-white rounded-[18px] border border-line">
+          <SectionLoader variant="book" label="Çıkmış sorular yükleniyor…" />
         </div>
       ) : paginatedQuestions.length === 0 ? (
         <div className="bg-white rounded-[18px] border border-line px-6 py-12 text-center flex flex-col items-center gap-3">
@@ -1431,93 +1432,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </div>
       )}
 
-      {/* Question Report / Complaint Modal */}
+      {/* Hata bildir */}
       {reportingQuestion && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
-            <div className="bg-slate-900 text-white p-4 flex items-center justify-between shrink-0">
-              <div className="flex items-center gap-2">
-                <Flag className="w-5 h-5 text-rose-400" />
-                <div>
-                  <h3 className="font-bold text-sm">Soru Hata Bildirimi & Şikayet</h3>
-                  <p className="text-[11px] text-slate-400">
-                    Soru #{reportingQuestion.questionNumber} - {reportingQuestion.discipline} ({reportingQuestion.examYear})
-                  </p>
-                </div>
-              </div>
-              <button
-                onClick={() => setReportingQuestion(null)}
-                className="p-1 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="p-5 space-y-4 overflow-y-auto text-xs">
-              {reportSuccessMsg ? (
-                <div className="bg-emerald-50 border border-emerald-300 rounded-xl p-4 text-emerald-950 flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-                  <p className="font-bold">{reportSuccessMsg}</p>
-                </div>
-              ) : (
-                <>
-                  <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
-                    <span className="text-[11px] font-bold text-slate-500">Bildirilen Soru Kökü:</span>
-                    <p className="text-slate-800 font-medium line-clamp-2">
-                      {reportingQuestion.reconstruction?.stem || reportingQuestion.rawQuestion?.stem || reportingQuestion.topic}
-                    </p>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-700">Şikayet / Bildirim Türü:</label>
-                    <select
-                      value={reportReason}
-                      onChange={(e) => setReportReason(e.target.value)}
-                      className="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-900 focus:bg-white focus:outline-teal-600"
-                    >
-                      <option value="Hatalı Soru Kökü">Hatalı veya Eksik Soru Kökü</option>
-                      <option value="Yanlış / Eksik Şıklar">Eksik veya Yanlış Seçenekler</option>
-                      <option value="Hatalı Doğru Cevap">Hatalı Doğru Cevap Anahtarı</option>
-                      <option value="Hatalı Branş / Kurul Eşleşmesi">Hatalı Branş veya Kurul Eşleşmesi</option>
-                      <option value="Yapay Zeka Redaksiyon Hatası">Yapay Zeka Redaksiyonu Yetersiz / Hatalı</option>
-                      <option value="Diğer">Diğer Sorun / İtiraz</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-700">Detaylı Açıklama veya Düzeltme Öneriniz (Opsiyonel):</label>
-                    <textarea
-                      value={reportDetails}
-                      onChange={(e) => setReportDetails(e.target.value)}
-                      rows={3}
-                      placeholder="Örn: Bu sorunun cevabı C şıkkı olmalı çünkü hoca slayt 12'de amiloidozis ile ilişkisini vurgulamıştı..."
-                      className="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs text-slate-900 focus:bg-white focus:outline-teal-600"
-                    />
-                  </div>
-                </>
-              )}
-            </div>
-
-            {!reportSuccessMsg && (
-              <div className="bg-slate-50 border-t border-slate-200 p-4 flex items-center justify-between shrink-0 text-xs">
-                <button
-                  onClick={() => setReportingQuestion(null)}
-                  className="px-4 py-2 rounded-xl text-slate-600 font-semibold hover:bg-slate-200 cursor-pointer"
-                >
-                  İptal
-                </button>
-                <button
-                  onClick={handleReportSubmit}
-                  disabled={isSubmittingReport}
-                  className="bg-rose-600 hover:bg-rose-700 disabled:opacity-50 text-white font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 cursor-pointer shadow-xs"
-                >
-                  <Flag className="w-3.5 h-3.5" />
-                  <span>{isSubmittingReport ? 'İletiliyor...' : 'Şikayeti İlet'}</span>
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
+        <ReportQuestionModal
+          question={reportingQuestion}
+          onClose={() => setReportingQuestion(null)}
+          onSubmit={async (reason, details) => {
+            await ApiService.reportPastQuestion(reportingQuestion.id, reason, details, currentUser?.displayName || 'Tıp Öğrencisi');
+          }}
+        />
       )}
 
       {/* Admin AI Question Optimizer Modal */}

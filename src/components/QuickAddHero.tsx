@@ -4,6 +4,8 @@ import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
 import { pathFor, linkClick } from '../router';
+import { OptionsEditor } from './ui/OptionsEditor';
+import { BlurOverlay, SuccessCheck } from './ui/Animations';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
@@ -37,19 +39,18 @@ interface QuickAddHeroProps {
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
 
-type Mode = 'stem' | 'option' | 'clue' | 'answer';
+// The correct answer is picked inside the option list (tap a letter), so there is no separate "Cevap" mode
+type Mode = 'stem' | 'option' | 'clue';
 const MODES: { id: Mode; label: string }[] = [
   { id: 'stem', label: 'Soru kökü' },
-  { id: 'option', label: 'Şık' },
+  { id: 'option', label: 'Şıklar' },
   { id: 'clue', label: 'İpucu' },
-  { id: 'answer', label: 'Cevap' },
 ];
 
 const PLACEHOLDERS: Record<Mode, string> = {
   stem: "Sorudan hatırladığın kısmı yaz… örn. göçük altında kalan hasta, EKG'de sivri T",
   option: '',
   clue: 'Örn. idrarda delta-ALA yüksekti, kemik iliğinde halkalı sideroblast…',
-  answer: 'İstersen cevabın neden doğru olduğunu da yaz (opsiyonel)',
 };
 
 export const committeeShortLabel = (c: Committee) => {
@@ -111,13 +112,15 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Biyokimya', 'Halk Sağlığı', 'İç Hastalıkları'];
 
   const [mode, setMode] = useState<Mode>('stem');
-  // Each mode keeps its own text: typing a stem must not leak into the clue or answer note
+  // Each mode keeps its own text: typing a stem must not leak into the clue
   type TextMode = Exclude<Mode, 'option'>;
-  const [texts, setTexts] = useState<Record<TextMode, string>>({ stem: '', clue: '', answer: '' });
+  const [texts, setTexts] = useState<Record<TextMode, string>>({ stem: '', clue: '' });
   const text = mode === 'option' ? '' : texts[mode];
   const setText = (v: string) => mode !== 'option' && setTexts((prev) => ({ ...prev, [mode]: v }));
-  const hasAnyText = Object.values(texts).some((t) => t.trim());
+  const [answerReason, setAnswerReason] = useState('');
+  const hasAnyText = Object.values(texts).some((t) => t.trim()) || !!answerReason.trim();
   const [options, setOptions] = useState<Record<OptionKey, string>>({ A: '', B: '', C: '', D: '', E: '' });
+  const [optionCount, setOptionCount] = useState(1);
   const [claimedAnswer, setClaimedAnswer] = useState<OptionKey | undefined>(undefined);
   const [discipline, setDiscipline] = useState(disciplines[0]);
   const [questionNumber, setQuestionNumber] = useState('');
@@ -167,7 +170,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     const fragmentText = [
       texts.stem.trim(),
       texts.clue.trim() ? `İpucu: ${texts.clue.trim()}` : '',
-      texts.answer.trim() ? `Cevap notu: ${texts.answer.trim()}` : '',
+      claimedAnswer && answerReason.trim() ? `Cevap notu (${claimedAnswer}): ${answerReason.trim()}` : '',
     ]
       .filter(Boolean)
       .join('\n');
@@ -188,8 +191,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         claimedAnswer,
         options: optionsList.length > 0 ? optionsList : undefined,
       });
-      setTexts({ stem: '', clue: '', answer: '' });
+      setTexts({ stem: '', clue: '' });
       setOptions({ A: '', B: '', C: '', D: '', E: '' });
+      setOptionCount(1);
+      setAnswerReason('');
       setClaimedAnswer(undefined);
       setQuestionNumber('');
       setSuccessMessage(
@@ -197,7 +202,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           ? `Soru ${num} için eklediğin parça havuza kaydedildi.`
           : 'Parçan havuza kaydedildi. Numarası bilinmeyenler benzerlerine göre yerleştirilir.'
       );
-      setTimeout(() => setSuccessMessage(null), 7000);
+      setTimeout(() => setSuccessMessage(null), 6000);
     } catch (err: any) {
       setFormError('Kayıt sırasında bir hata oluştu: ' + (err?.message || 'bilinmeyen hata'));
     } finally {
@@ -238,8 +243,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       </div>
 
       {/* Composer */}
-      <form onSubmit={handleSubmit} className="bg-white border border-line rounded-[20px] p-3 sm:p-4 flex flex-col gap-3 shadow-[0_1px_2px_rgba(14,26,38,0.04)]">
-        <div role="radiogroup" aria-label="Ne ekliyorsun?" className="grid grid-cols-4 gap-1 bg-canvas rounded-[12px] p-1">
+      <form
+        onSubmit={handleSubmit}
+        aria-busy={isSubmitting}
+        className="relative bg-white border border-line rounded-[20px] p-3 sm:p-4 flex flex-col gap-3 shadow-[0_1px_2px_rgba(14,26,38,0.04)]"
+      >
+        <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
+        <div role="radiogroup" aria-label="Ne ekliyorsun?" className="grid grid-cols-3 gap-1 bg-canvas rounded-[12px] p-1">
           {MODES.map((m) => {
             const on = mode === m.id;
             return (
@@ -249,64 +259,44 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 role="radio"
                 aria-checked={on}
                 onClick={() => setMode(m.id)}
-                className={`h-9 rounded-[9px] text-[13px] sm:text-[14px] whitespace-nowrap cursor-pointer transition-colors ${
+                className={`h-9 rounded-[9px] text-[13.5px] sm:text-[14px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center justify-center gap-1.5 ${
                   on ? 'bg-white text-ink font-semibold shadow-[0_1px_3px_rgba(14,26,38,0.12)]' : 'text-ink-2 hover:text-ink'
                 }`}
               >
                 {m.label}
+                {m.id === 'option' && claimedAnswer && (
+                  <span className="h-5 min-w-5 px-1 rounded-full bg-ok text-white text-[11px] font-mono font-semibold inline-flex items-center justify-center" aria-label={`Cevap ${claimedAnswer}`}>
+                    {claimedAnswer}
+                  </span>
+                )}
               </button>
             );
           })}
         </div>
 
         {mode === 'option' ? (
-          <div className="flex flex-col gap-1.5">
-            {KEYS.map((k) => (
-              <label key={k} className="flex items-center gap-2.5 h-11 pl-1.5 pr-3 rounded-[12px] bg-field border border-transparent focus-within:border-accent focus-within:bg-white">
-                <span className="w-8 h-8 rounded-[9px] bg-white border border-line flex items-center justify-center font-mono text-[13px] text-ink-2">{k}</span>
-                <input
-                  type="text"
-                  value={options[k]}
-                  onChange={(e) => setOptions((p) => ({ ...p, [k]: e.target.value }))}
-                  placeholder={`${k} şıkkı`}
-                  aria-label={`${k} şıkkı`}
-                  className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-[#7A8693]"
-                />
-              </label>
-            ))}
-          </div>
+          <OptionsEditor
+            options={options}
+            onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
+            count={optionCount}
+            onCountChange={setOptionCount}
+            answer={claimedAnswer}
+            onAnswerChange={setClaimedAnswer}
+            reason={answerReason}
+            onReasonChange={setAnswerReason}
+          />
         ) : (
           <>
-            {mode === 'answer' && (
-              <div className="grid grid-cols-5 gap-1.5" role="radiogroup" aria-label="Hatırlanan doğru cevap">
-                {KEYS.map((k) => (
-                  <button
-                    key={k}
-                    type="button"
-                    role="radio"
-                    aria-checked={claimedAnswer === k}
-                    onClick={() => setClaimedAnswer(claimedAnswer === k ? undefined : k)}
-                    className={`h-11 rounded-[12px] font-mono text-[15px] cursor-pointer transition-colors ${
-                      claimedAnswer === k ? 'bg-ok text-white' : 'bg-field text-ink hover:bg-line-soft'
-                    }`}
-                  >
-                    {k}
-                  </button>
-                ))}
-              </div>
-            )}
             <label htmlFor="hatira" className="sr-only">
               Hatırladığın kısım
             </label>
             <textarea
               id="hatira"
-              rows={mode === 'answer' ? 2 : 4}
+              rows={4}
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder={PLACEHOLDERS[mode]}
-              className={`resize-none rounded-[14px] px-3.5 py-3 text-[16px] leading-[1.55] text-ink placeholder:text-[#7A8693] ${field} ${
-                mode === 'answer' ? 'min-h-[76px]' : 'min-h-[132px] sm:min-h-[148px]'
-              }`}
+              className={`resize-none rounded-[14px] px-3.5 py-3 text-[16px] leading-[1.55] text-ink placeholder:text-[#7A8693] min-h-[132px] sm:min-h-[148px] ${field}`}
             />
           </>
         )}
@@ -358,9 +348,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           </div>
         )}
         {successMessage && (
-          <div role="status" className="flex items-center gap-2 px-3 py-2.5 rounded-[12px] bg-ok-soft text-[14px]">
-            <CheckCircle2 className="w-4 h-4 shrink-0 text-ok" />
-            <span className="text-ink">{successMessage}</span>
+          <div role="status" className="ms-pop-in flex items-center gap-3 px-3 py-2 rounded-[14px] bg-ok-tint border border-[#CDEBD8]">
+            <SuccessCheck size={48} className="shrink-0 -my-1" />
+            <span className="flex flex-col">
+              <span className="text-[14.5px] font-semibold text-ok">Teşekkürler!</span>
+              <span className="text-[13.5px] text-ink-2">{successMessage}</span>
+            </span>
           </div>
         )}
       </form>

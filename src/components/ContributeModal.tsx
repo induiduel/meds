@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { X, Sparkles, Send, Stethoscope, AlertCircle, Plus, Check, Save, RefreshCw } from 'lucide-react';
+import { X, Sparkles, Stethoscope, AlertCircle, ArrowRight, ChevronDown } from 'lucide-react';
+import { OptionsEditor, OPTION_KEYS, OptionKey } from './ui/OptionsEditor';
+import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { findRealtimeMatchingDraft, DraftCompatibilityResult } from '../services/draftClusteringService';
@@ -113,12 +115,11 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     }
   }, [committeeId, selectedComm]);
 
-  // Remembered options
-  const [optionA, setOptionA] = useState('');
-  const [optionB, setOptionB] = useState('');
-  const [optionC, setOptionC] = useState('');
-  const [optionD, setOptionD] = useState('');
-  const [optionE, setOptionE] = useState('');
+  // Remembered options: start with one row, grow with (+)
+  const [options, setOptions] = useState<Record<OptionKey, string>>({ A: '', B: '', C: '', D: '', E: '' });
+  const [optionCount, setOptionCount] = useState(1);
+  const [answerReason, setAnswerReason] = useState('');
+  const filledOptions = OPTION_KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
 
   // Canlı Benzerlik Taraması (Debounce ile 350ms)
   useEffect(() => {
@@ -134,13 +135,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
           discipline,
           topic,
           text: fragmentText,
-          options: [
-            { key: 'A', text: optionA },
-            { key: 'B', text: optionB },
-            { key: 'C', text: optionC },
-            { key: 'D', text: optionD },
-            { key: 'E', text: optionE },
-          ].filter((o) => o.text.trim().length > 0),
+          options: filledOptions,
         },
         questions
       );
@@ -156,7 +151,8 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     }, 350);
 
     return () => clearTimeout(timer);
-  }, [fragmentText, discipline, topic, optionA, optionB, optionC, optionD, optionE, questions, committeeId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fragmentText, discipline, topic, options, questions, committeeId]);
 
   const [aiAssisting, setAiAssisting] = useState(false);
   const [aiSuggestion, setAiSuggestion] = useState<{
@@ -164,6 +160,19 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     suggestedOptions?: { key: string; text: string }[];
     probableAnswer?: string;
   } | null>(null);
+
+  // Escape closes (unless saving)
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !isSubmitting && onClose();
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [isOpen, isSubmitting, onClose]);
 
   if (!isOpen) return null;
 
@@ -183,13 +192,19 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
       const data = await res.json();
       setAiSuggestion(data);
       if (data.suggestedOptions) {
-        data.suggestedOptions.forEach((opt: { key: string; text: string }) => {
-          if (opt.key === 'A' && !optionA) setOptionA(opt.text);
-          if (opt.key === 'B' && !optionB) setOptionB(opt.text);
-          if (opt.key === 'C' && !optionC) setOptionC(opt.text);
-          if (opt.key === 'D' && !optionD) setOptionD(opt.text);
-          if (opt.key === 'E' && !optionE) setOptionE(opt.text);
+        let maxIdx = optionCount - 1;
+        setOptions((prev) => {
+          const next = { ...prev };
+          data.suggestedOptions.forEach((opt: { key: string; text: string }) => {
+            const k = String(opt.key || '').toUpperCase() as OptionKey;
+            if (OPTION_KEYS.includes(k) && !next[k]) {
+              next[k] = opt.text;
+              maxIdx = Math.max(maxIdx, OPTION_KEYS.indexOf(k));
+            }
+          });
+          return next;
         });
+        setOptionCount(maxIdx + 1);
       }
     } catch (e) {
       console.error(e);
@@ -203,13 +218,13 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     setFormError(null);
 
     const trimmedStem = fragmentText.trim();
-    const hasOptions = [optionA, optionB, optionC, optionD, optionE].some((o) => o.trim().length > 0);
+    const hasOptions = filledOptions.length > 0;
     const hasTopic = topic.trim().length > 0;
     const hasClaimedAnswer = Boolean(claimedAnswer);
 
     // Kök, şık, konu veya doğru cevaptan en az biri girilmiş olmalı
     if (!trimmedStem && !hasOptions && !hasTopic && !hasClaimedAnswer) {
-      setFormError('Lütfen soru kökü, en az bir şık, konu başlığı veya ipucu giriniz.');
+      setFormError('Soru kökünden, şıklardan ya da konudan en az birini yaz.');
       return;
     }
 
@@ -217,21 +232,16 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
       const maxTarget = selectedComm?.targetCount || 150;
       const num = Number(questionNumber);
       if (!Number.isFinite(num) || num < 1 || num > maxTarget) {
-        setFormError(`Soru numarası 1 ile ${maxTarget} arasında geçerli bir sayı olmalıdır. Numarayı hatırlamıyorsanız yukarıdaki "Numarayı hatırlamıyorum" seçeneğini işaretleyebilirsiniz.`);
+        setFormError(`Soru numarası 1 ile ${maxTarget} arasında olmalı. Hatırlamıyorsan numarayı boş bırak.`);
         return;
       }
     }
 
     setIsSubmitting(true);
     try {
-      const optionsPayload: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[] = [];
-      if (optionA.trim()) optionsPayload.push({ key: 'A', text: optionA.trim() });
-      if (optionB.trim()) optionsPayload.push({ key: 'B', text: optionB.trim() });
-      if (optionC.trim()) optionsPayload.push({ key: 'C', text: optionC.trim() });
-      if (optionD.trim()) optionsPayload.push({ key: 'D', text: optionD.trim() });
-      if (optionE.trim()) optionsPayload.push({ key: 'E', text: optionE.trim() });
-
-      const finalTopic = topic.trim() || (trimmedStem ? (trimmedStem.length > 50 ? trimmedStem.substring(0, 50) + '...' : trimmedStem) : `${discipline} Taslak Sorusu`);
+      const finalTopic =
+        topic.trim() || (trimmedStem ? (trimmedStem.length > 50 ? trimmedStem.substring(0, 50) + '...' : trimmedStem) : `${discipline} Taslak Sorusu`);
+      const reasonLine = claimedAnswer && answerReason.trim() ? `Cevap notu (${claimedAnswer}): ${answerReason.trim()}` : '';
 
       await onAddQuestionContribution({
         committeeId: committeeId || selectedCommitteeId,
@@ -239,376 +249,260 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         isUnknownNumber,
         discipline,
         topic: finalTopic,
-        fragmentText: trimmedStem,
+        fragmentText: [trimmedStem, reasonLine].filter(Boolean).join('\n'),
         author: author.trim() || currentUser?.displayName || 'Anonim Tıbbiyeli',
         authorUid: currentUser?.uid,
         authorStudentNumber: currentUser?.studentNumber || undefined,
         claimedAnswer: (claimedAnswer as any) || undefined,
-        options: optionsPayload,
+        options: filledOptions,
       });
 
       setSaveSuccess(true);
       setTimeout(() => {
         onClose();
-      }, 650);
+      }, 1400);
     } catch (err: any) {
       console.error('ContributeModal submit error:', err);
-      setFormError('Soru kaydedilirken bir sorun oluştu: ' + (err?.message || 'Lütfen tekrar deneyiniz.'));
+      setFormError('Kaydedilirken bir sorun oluştu: ' + (err?.message || 'Lütfen tekrar dene.'));
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const fieldCls =
+    'w-full rounded-[12px] bg-field border border-transparent px-3.5 text-[15px] text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-[#7A8693]';
+  const labelCls = 'text-[12px] font-semibold uppercase tracking-[0.07em] text-ink-3';
+
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8">
+    <div
+      className="fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in"
+      onMouseDown={(e) => e.target === e.currentTarget && !isSubmitting && onClose()}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contribute-title"
+        className="relative w-full sm:max-w-[600px] max-h-[94dvh] sm:max-h-[92vh] bg-white rounded-t-[24px] sm:rounded-[24px] shadow-[0_30px_90px_rgba(14,26,38,0.32)] grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
+      >
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-700 to-emerald-700 text-white p-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-white/20">
-              <Stethoscope className="w-5 h-5 text-teal-100" />
-            </div>
-            <div>
-              <h3 className="text-base font-bold">Soru / Şık Hatırlatma & Katkı Formu</h3>
-              <p className="text-xs text-teal-100/90">
-                Sınavda aklınızda kalan her küçük detay, sorunun tam halini yeniden inşa etmek için çok değerlidir.
-              </p>
-            </div>
+        <header className="flex items-center gap-3 px-5 pt-3 sm:pt-4 pb-3 border-b border-line-soft">
+          <span className="sm:hidden absolute left-1/2 -translate-x-1/2 top-1.5 w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
+          <span className="w-10 h-10 rounded-[12px] bg-accent text-white flex items-center justify-center shrink-0 mt-1 sm:mt-0 shadow-[0_6px_16px_rgba(30,79,216,0.25)]">
+            <Stethoscope className="w-5 h-5" />
+          </span>
+          <div className="flex-1 min-w-0 mt-1 sm:mt-0">
+            <h2 id="contribute-title" className="m-0 font-display font-bold text-[19px] tracking-[-0.02em] leading-tight">
+              Soru ekle
+            </h2>
+            <p className="m-0 text-[13px] text-ink-3 truncate">Hatırladığın her küçük detay soruyu kurmaya yardım eder.</p>
           </div>
           <button
+            type="button"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+            disabled={isSubmitting}
+            aria-label="Kapat"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
-        </div>
+        </header>
 
-        {/* Form Body */}
-        <form onSubmit={handleSubmit} noValidate className="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
-          {formError && (
-            <div className="bg-rose-50 border border-rose-200 text-rose-800 text-xs p-3 rounded-xl flex items-start gap-2 animate-fadeIn">
-              <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
-              <div className="font-semibold">{formError}</div>
-            </div>
-          )}
+        {saveSuccess ? (
+          <div role="status" className="row-span-2 flex flex-col items-center justify-center gap-2 px-6 py-14 text-center">
+            <SuccessCheck size={96} />
+            <p className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">Havuza eklendi!</p>
+            <p className="m-0 text-[15px] text-ink-2 max-w-[340px]">Teşekkürler. Benzer parçalar varsa aynı soruda birleştiriyoruz.</p>
+          </div>
+        ) : (
+          <>
+            <form id="contribute-form" onSubmit={handleSubmit} noValidate className="relative overflow-y-auto px-5 py-4 flex flex-col gap-5">
+              {/* Which question */}
+              <section className="flex flex-col gap-2">
+                <span className={labelCls}>Hangi soru?</span>
+                <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-2">
+                  <label className="relative">
+                    <span className="sr-only">Kurul</span>
+                    <select value={committeeId} onChange={(e) => setCommitteeId(e.target.value)} className={`${fieldCls} h-12 pr-9 appearance-none cursor-pointer truncate`}>
+                      {committees.map((c) => (
+                        <option key={c.id} value={c.id}>
+                          {c.name.replace(/^Dönem 3\s*-\s*/i, '')}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" />
+                  </label>
+                  <label className="relative">
+                    <span className="sr-only">Ders</span>
+                    <select value={discipline} onChange={(e) => setDiscipline(e.target.value)} className={`${fieldCls} h-12 pr-9 appearance-none cursor-pointer truncate`}>
+                      {activeDisciplines.map((d) => (
+                        <option key={d} value={d}>
+                          {d}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" />
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className={`flex items-center gap-2 h-12 w-[132px] px-3.5 rounded-[12px] bg-field border border-transparent focus-within:border-accent focus-within:bg-white ${isUnknownNumber ? '' : ''}`}>
+                    <span className="text-[13px] text-ink-3 shrink-0">Soru no</span>
+                    <input
+                      type="text"
+                      inputMode="numeric"
+                      value={isUnknownNumber ? '' : String(questionNumber || '')}
+                      onChange={(e) => {
+                        const v = e.target.value.replace(/[^0-9]/g, '').slice(0, 3);
+                        setIsUnknownNumber(v === '');
+                        setQuestionNumber(v === '' ? ('' as any) : Number(v));
+                        if (formError) setFormError(null);
+                      }}
+                      placeholder="?"
+                      aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                      className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-[#7A8693]"
+                    />
+                  </label>
+                  <span className="text-[13px] text-ink-3">{isUnknownNumber ? 'Bilmiyorsan boş bırak, biz yerleştiririz.' : `${selectedComm?.targetCount || 150} sorudan biri`}</span>
+                </div>
+              </section>
 
-          {saveSuccess && (
-            <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs p-3 rounded-xl flex items-center gap-2 animate-fadeIn">
-              <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span className="font-bold">✓ Taslak soru başarıyla havuza kaydedildi!</span>
-            </div>
-          )}
-
-          {/* Sınav ve Soru No */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">Kurul / Sınav</label>
-              <select
-                value={committeeId}
-                onChange={(e) => setCommitteeId(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-800"
-              >
-                {committees.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">Soru Numarası</label>
-              <label className="flex items-center gap-1.5 p-1.5 rounded bg-teal-50 border border-teal-200 text-teal-900 text-xs font-semibold cursor-pointer mb-1.5 select-none">
-                <input
-                  type="checkbox"
-                  checked={isUnknownNumber}
-                  onChange={(e) => setIsUnknownNumber(e.target.checked)}
-                  className="rounded border-slate-300 text-teal-600 focus:ring-teal-500"
-                />
-                <span>Numarayı hatırlamıyorum</span>
-              </label>
-              {!isUnknownNumber && (
-                <input
-                  type="number"
-                  min={1}
-                  max={selectedComm?.targetCount || 150}
-                  value={questionNumber || ''}
+              {/* Stem */}
+              <section className="flex flex-col gap-2">
+                <div className="flex items-center justify-between gap-2">
+                  <label htmlFor="contrib-stem" className={labelCls}>
+                    Soru kökü / ipucu
+                  </label>
+                  <button
+                    type="button"
+                    onClick={handleQuickAiAssist}
+                    disabled={aiAssisting || !fragmentText.trim()}
+                    className="h-8 px-2.5 rounded-[9px] text-[13px] font-semibold text-accent bg-accent-soft inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                  >
+                    <Sparkles className={`w-3.5 h-3.5 ${aiAssisting ? 'animate-pulse' : ''}`} />
+                    {aiAssisting ? 'AI düşünüyor…' : 'AI ile tamamla'}
+                  </button>
+                </div>
+                <textarea
+                  id="contrib-stem"
+                  rows={4}
+                  placeholder="Örn. 45 yaşında kadın, el bileklerinde sabah tutukluğu, RF ve anti-CCP pozitif. İlk basamak DMARD soruluyordu…"
+                  value={fragmentText}
                   onChange={(e) => {
-                    const val = e.target.value;
-                    setQuestionNumber(val === '' ? ('' as any) : Number(val));
+                    setFragmentText(e.target.value);
                     if (formError) setFormError(null);
                   }}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs font-bold text-teal-800"
+                  className={`${fieldCls} py-3 resize-none leading-[1.55] min-h-[112px]`}
                 />
+                <input
+                  type="text"
+                  placeholder="Konu (isteğe bağlı) · örn. Myastenia gravis, digoksin toksisitesi"
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  aria-label="Konu"
+                  className={`${fieldCls} h-11 text-[14px]`}
+                />
+
+                {realtimeMatch && (
+                  <div className="ms-pop-in rounded-[14px] bg-[#FFF9EF] border border-[#F2DDB8] p-3 flex flex-col gap-2">
+                    <div className="flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-[#9A4D06] shrink-0" />
+                      <span className="flex-1 text-[13.5px] font-semibold text-[#8A4405]">Benzer bir taslak var · %{realtimeMatch.compatibility?.score} uyum</span>
+                      <span className="text-[12px] font-mono text-[#8A4405]/80">
+                        {realtimeMatch.matchedQuestion?.questionNumber ? `S.${realtimeMatch.matchedQuestion.questionNumber}` : 'Numarasız'}
+                      </span>
+                    </div>
+                    <p className="m-0 text-[13.5px] text-ink-2 line-clamp-2">
+                      “{realtimeMatch.matchedQuestion?.reconstruction?.stem || (realtimeMatch.matchedQuestion as any)?.stem || realtimeMatch.matchedQuestion?.fragments?.[0]?.text}”
+                    </p>
+                    {realtimeMatch.matchedQuestion?.questionNumber && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const mq = realtimeMatch.matchedQuestion!;
+                          setIsUnknownNumber(false);
+                          setQuestionNumber(mq.questionNumber);
+                          if (mq.discipline && mq.discipline !== 'Belirtilmedi') setDiscipline(mq.discipline);
+                          if (mq.topic) setTopic(mq.topic);
+                        }}
+                        className="self-start h-9 px-3 rounded-[10px] bg-[#9A4D06] text-white text-[13px] font-semibold cursor-pointer"
+                      >
+                        Bu soruya bağla (S.{realtimeMatch.matchedQuestion.questionNumber})
+                      </button>
+                    )}
+                  </div>
+                )}
+
+                {aiSuggestion?.suggestedStem && (
+                  <div className="ms-pop-in rounded-[14px] bg-accent-soft/60 p-3 flex flex-col gap-1">
+                    <span className="text-[12.5px] font-semibold text-accent inline-flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      AI'nın önerdiği soru kalıbı
+                    </span>
+                    <p className="m-0 text-[14px] text-ink leading-[1.55]">{aiSuggestion.suggestedStem}</p>
+                  </div>
+                )}
+              </section>
+
+              {/* Options + answer */}
+              <section className="flex flex-col gap-2">
+                <span className={labelCls}>Şıklar</span>
+                <OptionsEditor
+                  options={options}
+                  onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
+                  count={optionCount}
+                  onCountChange={setOptionCount}
+                  answer={(claimedAnswer || undefined) as OptionKey | undefined}
+                  onAnswerChange={(k) => setClaimedAnswer(k || '')}
+                  reason={answerReason}
+                  onReasonChange={setAnswerReason}
+                />
+              </section>
+
+              {/* Author */}
+              <section className="flex flex-col gap-2">
+                <label htmlFor="contrib-author" className={labelCls}>
+                  Rumuz <span className="normal-case tracking-normal font-normal">· isteğe bağlı</span>
+                </label>
+                <input
+                  id="contrib-author"
+                  type="text"
+                  placeholder="Örn. Tıbbiyeli3"
+                  value={author}
+                  onChange={(e) => handleAuthorChange(e.target.value)}
+                  className={`${fieldCls} h-11`}
+                />
+              </section>
+
+              {formError && (
+                <div role="alert" className="flex items-start gap-2 px-3 py-2.5 rounded-[12px] bg-bad-soft text-bad-text text-[14px]">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-bad" />
+                  <span>{formError}</span>
+                </div>
               )}
-            </div>
+            </form>
 
-            <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">Ders / Anabilim Dalı</label>
-              <select
-                value={discipline}
-                onChange={(e) => setDiscipline(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-800"
-              >
-                {activeDisciplines.map((d) => (
-                  <option key={d} value={d}>
-                    {d}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Konu / Başlık */}
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">
-              Konu / Hastalık / İlaç Başlığı
-            </label>
-            <input
-              type="text"
-              placeholder="Örnek: Myastenia Gravis, Digoksin Toksisitesi, Atipik Pnömoni..."
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs text-slate-800 placeholder:text-slate-400"
-            />
-          </div>
-
-          {/* Aklında Kalan Soru Parçası */}
-          <div>
-            <div className="flex items-center justify-between mb-1">
-              <label className="block text-xs font-bold text-slate-800">
-                Aklınızda Kalan Soru Kökü, Vaka Hikayesi veya İpuçları *
-              </label>
+            <footer className="flex items-center gap-2 px-5 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 border-t border-line-soft bg-white">
               <button
                 type="button"
-                onClick={handleQuickAiAssist}
-                disabled={aiAssisting || !fragmentText.trim()}
-                className="text-[11px] text-teal-700 hover:text-teal-800 font-semibold flex items-center gap-1 bg-teal-50 hover:bg-teal-100 px-2 py-0.5 rounded border border-teal-200 cursor-pointer disabled:opacity-40"
+                onClick={onClose}
+                disabled={isSubmitting}
+                className="h-12 sm:h-11 px-4 rounded-[12px] text-[15px] font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
               >
-                <Sparkles className="w-3 h-3 text-teal-600" />
-                <span>{aiAssisting ? 'AI Analiz Ediyor...' : 'AI Soru Kalıbı Öner'}</span>
+                Vazgeç
               </button>
-            </div>
-            <textarea
-              rows={3}
-              placeholder="Ör: 45 yaşında kadın hasta el bileklerinde ve MCP eklemlerinde sabah tutukluğu ile geliyor. RF pozitif, anti-CCP yüksek. Hoca ilk basamakta başlanacak DMARD ilacı hangisidir diye sormuştu..."
-              value={fragmentText}
-              onChange={(e) => {
-                setFragmentText(e.target.value);
-                if (formError) setFormError(null);
-              }}
-              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs text-slate-900 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600"
-            />
+              <button
+                type="submit"
+                form="contribute-form"
+                disabled={isSubmitting}
+                className="flex-1 sm:flex-none sm:ml-auto h-12 sm:h-11 px-6 rounded-[12px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 shadow-[0_6px_16px_rgba(30,79,216,0.25)]"
+              >
+                Havuza ekle
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </footer>
+          </>
+        )}
 
-            {/* Akıllı Taslak Eşleşme Uyarısı (Mükerrer Soru Önleme) */}
-            {realtimeMatch && (
-              <div className="mt-2 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 rounded-xl p-3 text-xs space-y-2 animate-in fade-in">
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-amber-900 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                    Benzer Taslak Bulundu! (%{realtimeMatch.compatibility?.score} Uyum)
-                  </span>
-                  <span className="text-[11px] font-mono font-bold text-amber-800 bg-amber-200/60 px-2 py-0.5 rounded">
-                    {realtimeMatch.matchedQuestion?.questionNumber ? `Soru #${realtimeMatch.matchedQuestion.questionNumber}` : 'Numarasız Taslak'}
-                  </span>
-                </div>
-                <p className="text-amber-950 font-medium line-clamp-2 italic">
-                  "{realtimeMatch.matchedQuestion?.reconstruction?.stem || realtimeMatch.matchedQuestion?.stem || realtimeMatch.matchedQuestion?.fragments?.[0]?.text}"
-                </p>
-                <div className="flex items-center justify-between pt-1 border-t border-amber-200">
-                  <span className="text-[11px] text-amber-800">
-                    Ayrı mükerrer taslak oluşturmak yerine bu soruya doğrudan ipucu ve şık ekleyebilirsiniz.
-                  </span>
-                  {realtimeMatch.matchedQuestion?.questionNumber && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setIsUnknownNumber(false);
-                        setQuestionNumber(realtimeMatch.matchedQuestion!.questionNumber);
-                        if (realtimeMatch.matchedQuestion!.discipline && realtimeMatch.matchedQuestion!.discipline !== 'Belirtilmedi') {
-                          setDiscipline(realtimeMatch.matchedQuestion!.discipline);
-                        }
-                        if (realtimeMatch.matchedQuestion!.topic) {
-                          setTopic(realtimeMatch.matchedQuestion!.topic);
-                        }
-                      }}
-                      className="px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-bold text-[11px] shrink-0 cursor-pointer shadow-xs transition-colors"
-                    >
-                      Bu Soruya Bağla (#{realtimeMatch.matchedQuestion.questionNumber})
-                    </button>
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* AI Quick Suggestion Preview */}
-          {aiSuggestion && (
-            <div className="bg-teal-50/70 border border-teal-200 rounded-lg p-3 text-xs space-y-1.5 animate-fadeIn">
-              <span className="font-bold text-teal-900 flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-                Gemini Önerilen Soru Taslağı:
-              </span>
-              <p className="text-teal-950 font-serif italic">{aiSuggestion.suggestedStem}</p>
-            </div>
-          )}
-
-          {/* Hatırlanan Şıklar */}
-          <div className="space-y-2 pt-1 border-t border-slate-100">
-            <span className="text-xs font-bold text-slate-700 block">
-              Hatırladığınız Şıklar (A - E) (Bildiğiniz kadarını yazabilirsiniz)
-            </span>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <div className="flex items-center gap-1.5">
-                <span className="w-6 h-6 rounded bg-slate-200 text-slate-800 text-xs font-bold flex items-center justify-center shrink-0">
-                  A
-                </span>
-                <input
-                  type="text"
-                  placeholder="A şıkkı metni..."
-                  value={optionA}
-                  onChange={(e) => setOptionA(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-1 text-xs"
-                />
-              </div>
-
-              <div className="flex items-center gap-1.5">
-                <span className="w-6 h-6 rounded bg-slate-200 text-slate-800 text-xs font-bold flex items-center justify-center shrink-0">
-                  B
-                </span>
-                <input
-                  type="text"
-                  placeholder="B şıkkı metni..."
-                  value={optionB}
-                  onChange={(e) => setOptionB(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-1 text-xs"
-                />
-              </div>
-
-              <div className="flex items-center gap-1.5">
-                <span className="w-6 h-6 rounded bg-slate-200 text-slate-800 text-xs font-bold flex items-center justify-center shrink-0">
-                  C
-                </span>
-                <input
-                  type="text"
-                  placeholder="C şıkkı metni..."
-                  value={optionC}
-                  onChange={(e) => setOptionC(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-1 text-xs"
-                />
-              </div>
-
-              <div className="flex items-center gap-1.5">
-                <span className="w-6 h-6 rounded bg-slate-200 text-slate-800 text-xs font-bold flex items-center justify-center shrink-0">
-                  D
-                </span>
-                <input
-                  type="text"
-                  placeholder="D şıkkı metni..."
-                  value={optionD}
-                  onChange={(e) => setOptionD(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-1 text-xs"
-                />
-              </div>
-
-              <div className="flex items-center gap-1.5 sm:col-span-2">
-                <span className="w-6 h-6 rounded bg-slate-200 text-slate-800 text-xs font-bold flex items-center justify-center shrink-0">
-                  E
-                </span>
-                <input
-                  type="text"
-                  placeholder="E şıkkı metni..."
-                  value={optionE}
-                  onChange={(e) => setOptionE(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-1 text-xs"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Doğru Olduğunu Düşündüğünüz Şık & İsim */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100">
-            <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Sizce Doğru Cevap Hangi Şıktı?
-              </label>
-              <div className="flex items-center gap-2">
-                {(['A', 'B', 'C', 'D', 'E'] as const).map((key) => (
-                  <button
-                    key={key}
-                    type="button"
-                    onClick={() => setClaimedAnswer(claimedAnswer === key ? '' : key)}
-                    className={`w-7 h-7 rounded font-bold text-xs transition-colors cursor-pointer ${
-                      claimedAnswer === key
-                        ? 'bg-emerald-600 text-white'
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                    }`}
-                  >
-                    {key}
-                  </button>
-                ))}
-                {claimedAnswer && (
-                  <span className="text-[11px] text-emerald-700 font-medium">Seçildi</span>
-                )}
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Adınız / Rumuzunuz
-              </label>
-              <input
-                type="text"
-                placeholder="Örnek: Stj. Dr. Eren, Tıbbiyeli3"
-                value={author}
-                onChange={(e) => handleAuthorChange(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded px-3 py-1.5 text-xs text-slate-800"
-              />
-            </div>
-          </div>
-
-          {/* Footer CTA */}
-          <div className="pt-4 border-t border-slate-100 flex items-center justify-end gap-2.5">
-            <button
-              type="button"
-              onClick={onClose}
-              disabled={isSubmitting}
-              className="px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer disabled:opacity-50"
-            >
-              Vazgeç
-            </button>
-            <button
-              type="submit"
-              disabled={isSubmitting || saveSuccess}
-              title="Taslak Soruyu Kaydet"
-              aria-label="Taslak Soruyu Kaydet"
-              className={`text-white px-5 py-2.5 text-xs font-bold rounded-xl shadow-md transition-all flex items-center gap-2 cursor-pointer active:scale-95 ${
-                saveSuccess
-                  ? 'bg-emerald-600'
-                  : isSubmitting
-                  ? 'bg-teal-700 opacity-80 cursor-wait'
-                  : 'bg-gradient-to-r from-teal-700 to-emerald-700 hover:from-teal-800 hover:to-emerald-800 hover:shadow-lg'
-              }`}
-            >
-              {saveSuccess ? (
-                <>
-                  <Check className="w-4 h-4 text-emerald-200" />
-                  <span>Taslak Soru Kaydedildi!</span>
-                </>
-              ) : isSubmitting ? (
-                <>
-                  <RefreshCw className="w-4 h-4 animate-spin" />
-                  <span>Kaydediliyor...</span>
-                </>
-              ) : (
-                <>
-                  <Save className="w-4 h-4" />
-                  <span>Taslak Soruyu Kaydet</span>
-                </>
-              )}
-            </button>
-          </div>
-        </form>
+        <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" rounded="rounded-t-[24px] sm:rounded-[24px]" />
       </div>
     </div>
   );

@@ -21,6 +21,7 @@ import { downloadBookletPdfLocally, generateBookletPdfBlob } from '../services/d
 import { filterCurrent2026_2027Committees } from '../services/firestoreDb';
 import { generateSlidePdfBlob, downloadSlidePdf } from '../services/slidePdf';
 import type { InteractiveDeck } from './learn/InteractiveDeckView';
+import { BlurOverlay, PaperLoader } from './ui/Animations';
 
 /** Primary branch of a deck ("Enfeksiyon Hastalıkları / Klinik Mikrobiyoloji" → "Enfeksiyon Hastalıkları"). */
 const disciplineGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
@@ -571,7 +572,8 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
         role="dialog"
         aria-modal="true"
         aria-labelledby="pdf-modal-title"
-        className="pdf-modal-card bg-white w-full max-w-[1260px] h-full sm:h-[min(92vh,920px)] sm:rounded-[24px] shadow-[0_30px_90px_rgba(14,26,38,0.32)] overflow-hidden grid grid-rows-[auto_minmax(0,1fr)_auto] text-ink"
+        aria-busy={isGeneratingPdf}
+        className="relative pdf-modal-card bg-white w-full max-w-[1260px] h-full sm:h-[min(92vh,920px)] sm:rounded-[24px] shadow-[0_30px_90px_rgba(14,26,38,0.32)] overflow-hidden grid grid-rows-[auto_minmax(0,1fr)_auto] text-ink"
       >
         {/* ---------- Header ---------- */}
         <header className="no-print flex flex-wrap items-center gap-x-4 gap-y-3 px-4 sm:px-6 py-3.5 border-b border-line">
@@ -883,14 +885,17 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                   key={previewUrl}
                   title="PDF önizlemesi"
                   src={`${previewUrl}#view=FitH&toolbar=0&navpanes=0`}
-                  className={`absolute inset-0 w-full h-full border-0 transition-opacity duration-200 ${isBuildingPreview ? 'opacity-50' : ''}`}
+                  className="absolute inset-0 w-full h-full border-0"
                 />
-              ) : (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-8">
+              ) : null}
+              {previewUrl && <BlurOverlay show={isBuildingPreview} icon={<PaperLoader size={72} />} label="Önizleme güncelleniyor…" />}
+              {!previewUrl && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-8 ms-fade-in">
                   {isBuildingPreview || (isLoadingPast && !isSlides) ? (
                     <>
-                      <RefreshCw className="w-7 h-7 text-accent animate-spin" />
-                      <p className="m-0 text-[14px] text-ink-2">Önizleme hazırlanıyor…</p>
+                      <PaperLoader />
+                      <p className="m-0 text-[15px] font-semibold text-ink">Sayfalar diziliyor…</p>
+                      <p className="m-0 text-[13px] text-ink-3">Önizleme birazdan burada</p>
                     </>
                   ) : !canInlinePdf ? (
                     <>
@@ -975,6 +980,8 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
             </div>
           )}
         </div>
+
+        <BlurOverlay show={isGeneratingPdf} fixed={false} icon={<PaperLoader size={96} />} label="PDF hazırlanıyor…" hint="Birkaç saniye sürebilir" />
 
         {/* ---------- Footer: summary + actions, always visible ---------- */}
         <footer className="no-print border-t border-line bg-white px-4 sm:px-6 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2">
