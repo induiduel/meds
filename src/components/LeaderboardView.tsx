@@ -200,34 +200,22 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
   const top3 = leaderboard.slice(0, 3);
 
   return (
-    <div className="space-y-6">
-      {/* Header Banner */}
-      <div className="bg-gradient-to-r from-amber-500 via-amber-600 to-teal-700 rounded-2xl p-6 text-white shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div className="space-y-1.5">
-          <div className="flex items-center gap-2">
-            <span className="text-[11px] font-black uppercase tracking-wider bg-black/20 px-2.5 py-0.5 rounded-full text-amber-100 flex items-center gap-1.5">
-              <Trophy className="w-3.5 h-3.5 text-amber-200" />
-              Kurul Katkı & Başarı Sıralaması
-            </span>
-            <span className="text-xs text-amber-100">
-              {filterScope === 'current' ? (currentCommittee ? currentCommittee.name : 'Seçili Kurul') : 'Tüm Kurullar'}
-            </span>
-          </div>
-          <h2 className="text-xl sm:text-2xl font-black tracking-tight">
-            En Çok Katkı Veren Dönem Arkadaşları
-          </h2>
-          <p className="text-xs sm:text-sm text-amber-100/90 max-w-2xl">
-            Soru kökü paylaşan (+10p), şık ekleyen (+5p) ve soruları beğenilen (+2p) öğrenciler puan kazanır.
-            Rumuzlar küfür filtresiyle korunur; hiç paylaşım yapmamış öğrenciler de listede görüntülenebilir.
+    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+      {/* Title (light, compact) */}
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em] text-ink">Katkı sıralaması</h2>
+          <p className="m-0 mt-1 text-[14px] text-ink-2 max-w-[720px]">
+            {filterScope === 'current' ? (currentCommittee ? currentCommittee.name : 'Seçili kurul') : 'Tüm kurullar'} · Soru kökü +10, şık +5, beğeni +2 puan.
           </p>
         </div>
-
         <button
+          type="button"
           onClick={onOpenContributeModal}
-          className="bg-white hover:bg-amber-50 text-slate-900 font-bold px-4 py-2.5 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-md transition-all shrink-0 cursor-pointer active:scale-95"
+          className="self-start sm:self-auto h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer shrink-0"
         >
-          <Sparkles className="w-4 h-4 text-amber-600" />
-          <span>Hemen Katkı Yap, Puan Kazan</span>
+          <Sparkles className="w-4 h-4" />
+          Katkı yap
         </button>
       </div>
 

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* The site is light-only. `dark:` styles apply solely inside the summary
+   reader's own dark themes, never because of the OS colour scheme. */
+@custom-variant dark (&:where(.reader-theme-dark, .reader-theme-dark *, .reader-theme-cobalt, .reader-theme-cobalt *));
+
 /* -------------------------------------------------------------
  * MedSoru design tokens
  * Teal is remapped onto the brand blue so every view that still
@@ -67,11 +71,15 @@ body {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Admin panel: legacy sections were authored with 9–11px text.
-   Lift them to a readable floor without touching every class. */
-.admin-body .text-\[9px\],
-.admin-body .text-\[10px\] { font-size: 12px; line-height: 1.45; }
-.admin-body .text-\[11px\] { font-size: 12.5px; line-height: 1.45; }
+/* Readable floor: older views were authored with 8–11px text. On screen
+   nothing goes below 12px (print keeps its own sizes). Unlayered, so it
+   wins over Tailwind's utilities without !important. */
+@media screen {
+  .text-\[8px\],
+  .text-\[9px\],
+  .text-\[10px\],
+  .text-\[11px\] { font-size: 12px; line-height: 1.45; }
+}
 .admin-body .text-xs { font-size: 13px; line-height: 1.5; }
 .admin-body :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 @media (max-width: 639px) {

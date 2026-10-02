@@ -241,10 +241,10 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                     aria-pressed={on}
                     onClick={() => toggleDiscipline(d)}
                     className={`h-8 px-3 rounded-full text-[13px] cursor-pointer ${
-                      on ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink hover:border-line-2'
+                      on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink hover:border-line-2'
                     }`}
                   >
-                    {d} <span className={`font-mono text-[11px] ${on ? 'text-[#B8C3CF]' : 'text-ink-3'}`}>{n}</span>
+                    {d} <span className={`font-mono text-[11px] ${on ? 'text-accent/70' : 'text-ink-3'}`}>{n}</span>
                   </button>
                 );
               })}
@@ -498,31 +498,31 @@ const ResultView: React.FC<{
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-3 sm:gap-5 items-start">
       <section className="flex flex-col gap-3 sm:gap-4">
-        <div className="bg-ink text-white rounded-[16px] p-4 sm:p-6 flex flex-col gap-3">
+        <div className="bg-white border border-line rounded-[16px] p-4 sm:p-5 flex flex-col gap-3">
           <div className="flex justify-between items-baseline gap-2">
-            <h2 className="m-0 text-[15px] font-semibold truncate">{result.title}</h2>
-            <span className="font-mono text-[12px] text-[#B8C3CF] shrink-0">{formatDuration(result.durationSec)}</span>
+            <h2 className="m-0 text-[15px] font-semibold truncate text-ink">{result.title}</h2>
+            <span className="font-mono text-[12px] text-ink-3 shrink-0">{formatDuration(result.durationSec)}</span>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-[48px] sm:text-[56px] font-bold leading-none tracking-[-0.03em]">%{pct}</span>
-            <span className="text-[14px] text-[#B8C3CF]">net {net.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}</span>
+            <span className="font-display text-[40px] sm:text-[48px] font-bold leading-none tracking-[-0.03em] text-ink">%{pct}</span>
+            <span className="text-[14px] text-ink-2">net {net.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}</span>
           </div>
-          <div className="flex h-2 rounded-full overflow-hidden gap-[2px] bg-[#334455]">
-            <span className="bg-[#4ADE80]" style={{ width: `${(result.correct / result.total) * 100}%` }} />
-            <span className="bg-[#F87171]" style={{ width: `${(result.wrong / result.total) * 100}%` }} />
+          <div className="flex h-2 rounded-full overflow-hidden gap-[2px] bg-line-soft">
+            <span className="bg-ok-bright" style={{ width: `${(result.correct / result.total) * 100}%` }} />
+            <span className="bg-bad" style={{ width: `${(result.wrong / result.total) * 100}%` }} />
           </div>
           <div className="grid grid-cols-3 gap-2 text-[13px]">
             {[
-              ['Doğru', result.correct, '#4ADE80'],
-              ['Yanlış', result.wrong, '#F87171'],
-              ['Boş', result.blank, '#5B6B7D'],
+              ['Doğru', result.correct, '#1F9D55'],
+              ['Yanlış', result.wrong, '#C2410C'],
+              ['Boş', result.blank, '#C9D2DB'],
             ].map(([l, n, c]) => (
               <div key={l as string} className="flex flex-col">
-                <span className="flex items-center gap-1.5 text-[#B8C3CF]">
+                <span className="flex items-center gap-1.5 text-ink-2">
                   <span className="w-2 h-2 rounded-[2px]" style={{ background: c as string }} />
                   {l}
                 </span>
-                <span className="font-mono text-[18px]">{n}</span>
+                <span className="font-mono text-[18px] text-ink">{n}</span>
               </div>
             ))}
           </div>

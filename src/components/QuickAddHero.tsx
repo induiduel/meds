@@ -293,7 +293,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               aria-selected={sel}
               onClick={() => onSelectCommittee(c.id)}
               className={`shrink-0 h-8 px-3 rounded-full text-[13px] cursor-pointer ${
-                sel ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink'
+                sel ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink'
               }`}
             >
               {committeeShortLabel(c).charAt(0) + committeeShortLabel(c).slice(1).toLocaleLowerCase('tr-TR')}
@@ -444,35 +444,35 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
         <div className="flex flex-col gap-3 sm:gap-6">
           {/* Pool card */}
-          <div className="bg-ink text-white rounded-[18px] p-4 sm:p-7 flex flex-col gap-2.5 sm:gap-5">
+          <div className="bg-white border border-line rounded-[18px] p-4 sm:p-6 flex flex-col gap-2.5 sm:gap-4">
             <div className="flex justify-between items-baseline gap-3">
               <h2 className="m-0 text-[14px] sm:text-[15px] font-semibold">{titleCaseShort} havuzu</h2>
-              <span className="font-mono text-[12px] text-[#B8C3CF]">{committee?.examDate || ''}</span>
+              <span className="font-mono text-[12px] text-ink-3">{committee?.examDate || ''}</span>
             </div>
             <div className="flex items-baseline gap-2.5">
-              <span className="font-display text-[36px] sm:text-[64px] font-bold leading-none tracking-[-0.03em]">{completed}</span>
-              <span className="text-[15px] sm:text-[16px] text-[#B8C3CF]">/ {target} soru kuruldu</span>
+              <span className="font-display text-[34px] sm:text-[52px] font-bold leading-none tracking-[-0.03em] text-ink">{completed}</span>
+              <span className="text-[14px] sm:text-[15px] text-ink-2">/ {target} soru kuruldu</span>
             </div>
             <div
               role="img"
               aria-label={`Havuz durumu: ${completed} doğrulandı, ${drafts} taslak, ${empty} boş`}
-              className="flex h-2.5 rounded-full overflow-hidden gap-[3px] bg-[#334455]"
+              className="flex h-2 rounded-full overflow-hidden gap-[2px] bg-line-soft"
             >
-              {completed > 0 && <span className="bg-[#4ADE80]" style={{ width: pct(completed) }} />}
-              {drafts > 0 && <span className="bg-[#FBBF24]" style={{ width: draftPct }} />}
+              {completed > 0 && <span className="bg-ok-bright" style={{ width: pct(completed) }} />}
+              {drafts > 0 && <span className="bg-[#F59E0B]" style={{ width: draftPct }} />}
             </div>
             <div className="grid grid-cols-3 gap-3 text-[12px] sm:text-[13px]">
               {[
-                { label: 'Doğrulandı', n: completed, c: '#4ADE80' },
-                { label: 'Taslak', n: drafts, c: '#FBBF24' },
-                { label: 'Boş', n: empty, c: '#5B6B7D' },
+                { label: 'Doğrulandı', n: completed, c: '#1F9D55' },
+                { label: 'Taslak', n: drafts, c: '#F59E0B' },
+                { label: 'Boş', n: empty, c: '#C9D2DB' },
               ].map((s) => (
                 <div key={s.label} className="flex flex-col gap-0.5">
-                  <span className="flex items-center gap-1.5 text-[#B8C3CF]">
+                  <span className="flex items-center gap-1.5 text-ink-2">
                     <span className="w-2 h-2 rounded-[2px]" style={{ background: s.c }} />
                     {s.label}
                   </span>
-                  <span className="font-mono text-[15px] sm:text-[18px]">{s.n}</span>
+                  <span className="font-mono text-[15px] sm:text-[18px] text-ink">{s.n}</span>
                 </div>
               ))}
             </div>
@@ -560,7 +560,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 <div className="flex justify-between items-center text-[12px] font-semibold">
                   <span className={sel ? 'text-accent' : 'text-ink-2'}>{committeeShortLabel(c)}</span>
                   {c.id === activeCommitteeId && (
-                    <span className="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-1.5 py-0.5 rounded">
+                    <span className="bg-ok-soft text-ok text-[12px] font-semibold px-1.5 py-0.5 rounded">
                       AKTİF
                     </span>
                   )}
@@ -568,7 +568,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 <div className="text-[12px] font-semibold text-ink line-clamp-2 mt-auto">
                   {c.name.replace(/Dönem 3\s*/i, '').trim()}
                 </div>
-                <div className="text-[11px] text-ink-3">
+                <div className="text-[12px] text-ink-3">
                   {c.examDate || '2026-2027'}
                 </div>
               </button>

@@ -122,14 +122,16 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
   const [theme, setTheme] = useState<ReaderTheme>(() => {
     try {
       const saved = localStorage.getItem('medsoru_reader_theme') as ReaderTheme;
-      return saved || 'light';
+      // Only the themes offered in the toolbar; anything else falls back to light
+      return saved === 'sepia' || saved === 'dark' ? saved : 'light';
     } catch {
       return 'light';
     }
   });
   const [widthMode, setWidthMode] = useState<WidthMode>('standard');
   const [markerMode, setMarkerMode] = useState<boolean>(true);
-  const [showToc, setShowToc] = useState<boolean>(true);
+  // Table of contents starts open only where there is room for it next to the text
+  const [showToc, setShowToc] = useState<boolean>(() => typeof window === 'undefined' || window.innerWidth >= 1024);
 
   // Search in document
   const [searchQuery, setSearchQuery] = useState('');
@@ -672,7 +674,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex flex-col justify-center items-center p-0 sm:p-4 overflow-hidden select-text ${curTheme.container}`}
+      className={`fixed inset-0 z-50 bg-[rgba(14,26,38,0.45)] flex flex-col justify-center items-center p-0 sm:p-4 overflow-hidden select-text ${curTheme.container}`}
       onClick={(e) => e.stopPropagation()}
     >
       {/* ========================================================
@@ -684,203 +686,156 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
         {/* ========================================================
             TOP DOCK TOOLBAR (Artifact Design Header)
             ======================================================== */}
-        <header className="bg-slate-900 border-b border-slate-800 text-white shrink-0 px-3 sm:px-5 py-2.5 flex items-center justify-between gap-2 z-20">
-          {/* Left: Info & Back */}
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <button
-              type="button"
-              onClick={onClose}
-              className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white cursor-pointer transition-colors"
-              title="Kapat (ESC)"
-            >
-              <X className="w-4 h-4" />
-            </button>
+        <header className="bg-white border-b border-line text-ink shrink-0 px-2 sm:px-4 py-2 flex items-center gap-2 z-20">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Okuyucuyu kapat"
+            title="Kapat (Esc)"
+            className="w-10 h-10 shrink-0 rounded-[10px] flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer"
+          >
+            <X className="w-[18px] h-[18px]" />
+          </button>
 
-            <div className="min-w-0">
-              <div className="flex items-center gap-1.5 text-[11px] text-teal-300 font-semibold truncate">
-                <span className="bg-teal-500/20 px-2 py-0.5 rounded border border-teal-500/30">
-                  Kurul {summary.kurul}
-                </span>
-                <span>•</span>
-                <span className="text-slate-300 truncate">{summary.discipline}</span>
-                <span className="hidden md:inline text-slate-400">• ~{summary.readingTimeMinutes} dk okuma</span>
-              </div>
-              <h2 className="text-sm sm:text-base font-bold text-white truncate max-w-md sm:max-w-lg mt-0.5">
-                {summary.title}
-              </h2>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1.5 text-[12px] text-ink-2 min-w-0">
+              <span className="shrink-0 font-semibold">Kurul {summary.kurul}</span>
+              <span aria-hidden="true">·</span>
+              <span className="truncate">{summary.discipline}</span>
+              <span className="hidden md:inline shrink-0 text-ink-3">· ~{summary.readingTimeMinutes} dk</span>
             </div>
+            <h2 className="m-0 text-[15px] sm:text-[16px] font-semibold text-ink truncate">{summary.title}</h2>
           </div>
 
-          {/* Center / Right: Reader Controls (Büyütme/Küçültme, Renkler, Arama, TOC, Yazdır) */}
-          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
-            {/* Search Input */}
-            <div className="relative hidden md:flex items-center">
-              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5" />
+          <div className="flex items-center gap-1 shrink-0">
+            <label className="relative hidden lg:flex items-center">
+              <span className="sr-only">Özet içinde ara</span>
+              <Search className="w-4 h-4 text-ink-2 absolute left-2.5 pointer-events-none" />
               <input
-                type="text"
+                type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Özet içinde ara..."
-                className="w-36 lg:w-48 pl-8 pr-6 py-1 text-xs bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-hidden focus:border-teal-500 transition-all"
+                placeholder="Özette ara"
+                className="w-44 h-9 pl-8 pr-2 text-[14px] bg-field border border-line-2 rounded-[10px] outline-0 focus:border-accent"
               />
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2 text-slate-400 hover:text-white"
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              )}
-            </div>
+            </label>
 
-            {/* Font Scale (Büyütme / Küçültme) */}
-            <div className="flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700">
+            <div className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5" role="group" aria-label="Yazı boyutu">
               <button
                 type="button"
                 onClick={() => setFontScale((s) => Math.max(75, s - 10))}
-                title="Yazıyı Küçült"
-                className="p-1 rounded text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
+                aria-label="Yazıyı küçült"
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-ink-2 hover:bg-white hover:text-ink cursor-pointer"
               >
-                <ZoomOut className="w-3.5 h-3.5" />
+                <ZoomOut className="w-4 h-4" />
               </button>
-              <span className="text-[11px] font-mono font-bold px-1.5 text-teal-300 select-none">
+              <button
+                type="button"
+                onClick={() => setFontScale(100)}
+                aria-label={`Yazı boyutu yüzde ${fontScale}, sıfırla`}
+                className="hidden sm:block min-w-10 font-mono text-[12px] text-ink-2 cursor-pointer"
+              >
                 %{fontScale}
-              </span>
+              </button>
               <button
                 type="button"
                 onClick={() => setFontScale((s) => Math.min(160, s + 10))}
-                title="Yazıyı Büyüt"
-                className="p-1 rounded text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
+                aria-label="Yazıyı büyüt"
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-ink-2 hover:bg-white hover:text-ink cursor-pointer"
               >
-                <ZoomIn className="w-3.5 h-3.5" />
+                <ZoomIn className="w-4 h-4" />
               </button>
-              {fontScale !== 100 && (
-                <button
-                  type="button"
-                  onClick={() => setFontScale(100)}
-                  title="Yazı Boyutunu Sıfırla (%100)"
-                  className="p-1 text-slate-400 hover:text-white transition-colors"
-                >
-                  <RotateCcw className="w-3 h-3" />
-                </button>
-              )}
             </div>
 
-            {/* Font Family Switch (Sans vs Serif) */}
+            <div className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5" role="radiogroup" aria-label="Okuma teması">
+              {(
+                [
+                  ['light', Sun, 'Açık tema'],
+                  ['sepia', Coffee, 'Sepya tema'],
+                  ['dark', Moon, 'Koyu tema'],
+                ] as const
+              ).map(([id, Icon, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="radio"
+                  aria-checked={theme === id}
+                  aria-label={label}
+                  title={label}
+                  onClick={() => setTheme(id)}
+                  className={`w-8 h-8 rounded-lg flex items-center justify-center cursor-pointer ${
+                    theme === id ? 'bg-white text-accent shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                </button>
+              ))}
+            </div>
+
             <button
               type="button"
               onClick={() => setFontFamily((f) => (f === 'sans' ? 'serif' : 'sans'))}
-              title={`Yazı Tipi: ${fontFamily === 'sans' ? 'Serif (Kitap Okuma)' : 'Sans-Serif (Modern)'}`}
-              className={`p-1.5 rounded-lg border text-xs font-bold transition-colors ${
-                fontFamily === 'serif'
-                  ? 'bg-amber-500/20 border-amber-400 text-amber-200'
-                  : 'bg-slate-800 border-slate-700 text-slate-300 hover:text-white'
+              aria-pressed={fontFamily === 'serif'}
+              aria-label="Kitap yazı tipi"
+              title={fontFamily === 'serif' ? 'Modern yazı tipine geç' : 'Kitap yazı tipine geç'}
+              className={`hidden sm:flex w-9 h-9 rounded-[10px] items-center justify-center text-[14px] font-serif cursor-pointer ${
+                fontFamily === 'serif' ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
               }`}
             >
-              <span className="font-serif px-0.5">Aa</span>
+              Aa
             </button>
 
-            {/* Medical Marker Highlighter Toggle */}
             <button
               type="button"
               onClick={() => setMarkerMode((m) => !m)}
-              title={markerMode ? 'Fosforlu Kalem Vurgularını Kapat' : 'Fosforlu Kalem Vurgularını Aç'}
-              className={`p-1.5 rounded-lg border text-xs flex items-center gap-1 transition-colors ${
-                markerMode
-                  ? 'bg-amber-400 text-slate-950 font-bold border-amber-300 shadow-xs'
-                  : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-white'
+              aria-pressed={markerMode}
+              aria-label="Fosforlu vurgular"
+              title={markerMode ? 'Vurguları kapat' : 'Vurguları aç'}
+              className={`hidden sm:flex w-9 h-9 rounded-[10px] items-center justify-center cursor-pointer ${
+                markerMode ? 'bg-[#FEF3C7] text-[#92400E]' : 'text-ink-2 hover:bg-canvas'
               }`}
             >
-              <Highlighter className="w-3.5 h-3.5" />
-              <span className="hidden xl:inline text-[11px]">Marker</span>
+              <Highlighter className="w-4 h-4" />
             </button>
 
-            {/* Theme Selector (Açık, Sepya, Gece, Kobalt) */}
-            <div className="flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700">
-              <button
-                type="button"
-                onClick={() => setTheme('light')}
-                title="Açık Tema (Temiz Beyaz)"
-                className={`p-1.5 rounded transition-colors ${
-                  theme === 'light' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <Sun className="w-3.5 h-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => setTheme('sepia')}
-                title="Sepya Tema (Göz Dinlendirici Kitap Kağıdı)"
-                className={`p-1.5 rounded transition-colors ${
-                  theme === 'sepia' ? 'bg-[#FCF8EE] text-[#5C4B3A] shadow-xs' : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <Coffee className="w-3.5 h-3.5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => setTheme('dark')}
-                title="Gece Teması (Koyu)"
-                className={`p-1.5 rounded transition-colors ${
-                  theme === 'dark' ? 'bg-slate-950 text-teal-400 shadow-xs' : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <Moon className="w-3.5 h-3.5" />
-              </button>
-            </div>
-
-            {/* Table of Contents Toggle */}
             <button
               type="button"
               onClick={() => setShowToc((v) => !v)}
-              title={showToc ? 'İçindekiler Menüsünü Gizle' : 'İçindekiler Menüsünü Göster'}
-              className={`p-1.5 rounded-lg border text-xs flex items-center gap-1 transition-colors ${
-                showToc
-                  ? 'bg-teal-700 border-teal-600 text-white'
-                  : 'bg-slate-800 border-slate-700 text-slate-300 hover:text-white'
+              aria-pressed={showToc}
+              aria-label="İçindekiler"
+              title="İçindekiler"
+              className={`h-9 px-2 rounded-[10px] flex items-center gap-1.5 cursor-pointer ${
+                showToc ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
               }`}
             >
-              <List className="w-3.5 h-3.5" />
-              <span className="hidden lg:inline text-[11px]">İçindekiler</span>
+              <List className="w-4 h-4" />
+              <span className="hidden xl:inline text-[13px] font-semibold">İçindekiler</span>
             </button>
 
-            {/* Print / PDF */}
             <button
               type="button"
               onClick={handlePrint}
-              title="Yazdır / PDF Olarak Kaydet"
-              className="p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
+              aria-label="Yazdır veya PDF kaydet"
+              title="Yazdır / PDF"
+              className="hidden md:flex w-9 h-9 rounded-[10px] items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer"
             >
-              <Printer className="w-3.5 h-3.5" />
+              <Printer className="w-4 h-4" />
             </button>
 
-            {/* Layout Width Toggle */}
             <button
               type="button"
-              onClick={() =>
-                setWidthMode((w) => (w === 'standard' ? 'wide' : w === 'wide' ? 'fullscreen' : 'standard'))
-              }
-              title={`Genişlik: ${widthMode === 'standard' ? 'Genişlet' : widthMode === 'wide' ? 'Tam Ekran' : 'Normal'}`}
-              className="hidden sm:flex p-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-colors"
+              onClick={() => setWidthMode((w) => (w === 'standard' ? 'wide' : w === 'wide' ? 'fullscreen' : 'standard'))}
+              aria-label="Okuyucu genişliğini değiştir"
+              title={`Genişlik: ${widthMode === 'standard' ? 'Geniş' : widthMode === 'wide' ? 'Tam ekran' : 'Normal'}`}
+              className="hidden md:flex w-9 h-9 rounded-[10px] items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer"
             >
-              {widthMode === 'fullscreen' ? (
-                <Minimize2 className="w-3.5 h-3.5" />
-              ) : (
-                <Maximize2 className="w-3.5 h-3.5" />
-              )}
+              {widthMode === 'fullscreen' ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
             </button>
           </div>
         </header>
 
-        {/* ========================================================
-            TOP READING PROGRESS BAR
-            ======================================================== */}
-        <div className="w-full h-1 bg-slate-800/20 shrink-0 relative overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-teal-500 via-emerald-400 to-teal-600 transition-all duration-150"
-            style={{ width: `${scrollProgress}%` }}
-          />
+        <div className="w-full h-[3px] bg-line-soft shrink-0" aria-hidden="true">
+          <div className="h-full bg-accent transition-[width] duration-150" style={{ width: `${scrollProgress}%` }} />
         </div>
 
         {/* ========================================================

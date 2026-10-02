@@ -607,7 +607,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                       aria-checked={question.claimedAnswer === k}
                       onClick={() => onSetClaimedAnswer(question.id, k)}
                       className={`flex-1 h-11 rounded-[10px] font-mono text-[14px] cursor-pointer ${
-                        question.claimedAnswer === k ? 'bg-ink text-white' : 'bg-white border border-line-2 text-ink hover:border-ink-3'
+                        question.claimedAnswer === k ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line-2 text-ink hover:border-ink-3'
                       }`}
                     >
                       {k}

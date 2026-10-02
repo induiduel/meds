@@ -145,7 +145,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           <button
             type="button"
             onClick={() => setAiChatOpen(true)}
-            className="h-8 sm:h-9 px-2.5 sm:px-3 rounded-lg bg-gradient-to-r from-accent to-indigo-600 text-white font-semibold text-[12px] sm:text-[13px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer hover:opacity-95 transition-all shrink-0"
+            className="h-8 sm:h-9 px-2.5 sm:px-3 rounded-lg bg-accent hover:bg-accent-hover text-white font-semibold text-[12px] sm:text-[13px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer hover:opacity-95 transition-all shrink-0"
             title="Yapay zeka ile bu soru hakkında canlı sohbet et"
           >
             <Sparkles className="w-3.5 h-3.5 animate-pulse" />

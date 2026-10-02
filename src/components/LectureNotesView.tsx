@@ -21,7 +21,8 @@ import {
   AlertCircle,
   Plus,
   BookOpen,
-  FolderOpen
+  FolderOpen,
+  X,
 } from 'lucide-react';
 import { LectureNote, QuestionItem, QuestionLectureMatch, UserProfile, Committee } from '../types';
 import { 
@@ -525,148 +526,112 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   };
 
   return (
-    <div className="space-y-6">
-      {/* Top Header Card */}
-      <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-xl border border-slate-800 space-y-4">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2 text-teal-400">
-              <FolderGit2 className="w-5 h-5" />
-              <span className="text-xs font-bold uppercase tracking-wider">Masaüstü & Google Drive Ders Notu Merkezi</span>
-            </div>
-            <h2 className="text-xl sm:text-2xl font-black tracking-tight">
-              Kurul 1 Ders Slaytları & Birebir Not Havuzu
-            </h2>
-            <p className="text-xs text-slate-400 max-w-2xl leading-relaxed">
-              <strong>C:\\Users\\indui\\Desktop\\meds_database</strong> klasörüne eklenen veya Drive'a yüklenen PDF ders notları her gün saat 18:00'da ve anında taranır. Tüm sayfalar yapay zeka yorumu veya özetleme olmaksızın birebir metin olarak veritabanına işlenir.
+    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+      {/* Title + progress (light, compact) */}
+      <div className="bg-white border border-line rounded-[16px] p-4 sm:p-5 flex flex-col gap-3.5">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-3">
+          <div className="min-w-0">
+            <h2 className="m-0 font-display font-bold text-[24px] sm:text-[28px] leading-[1.1] tracking-[-0.03em] text-ink">Ders notları ve slaytlar</h2>
+            <p className="m-0 mt-1 text-[14px] text-ink-2 max-w-[720px]">
+              Drive'daki ders slaytları sayfa sayfa, yorumsuz metin olarak işlenir. Sorular bu sayfalarla eşleştirilir.
             </p>
           </div>
-
           <div className="flex flex-wrap items-center gap-2 shrink-0">
-            <button
-              onClick={handleTriggerDesktopSync}
-              disabled={isSyncingDesktop}
-              className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-md transition-all cursor-pointer active:scale-95"
-              title="C:\\Users\\indui\\Desktop\\meds_database klasörünü şimdi tara ve yeni PDF'leri veritabanına ekle"
-            >
-              {isSyncingDesktop ? (
-                <>
-                  <RefreshCw className="w-4 h-4 text-indigo-200 animate-spin" />
-                  <span>Taranıyor...</span>
-                </>
-              ) : (
-                <>
-                  <FolderOpen className="w-4 h-4 text-indigo-200" />
-                  <span>Masaüstü Klasörünü Tara (meds_database)</span>
-                </>
-              )}
-            </button>
-
+            {isAdmin && (
+              <button
+                type="button"
+                onClick={handleTriggerDesktopSync}
+                disabled={isSyncingDesktop}
+                className="h-10 px-3.5 rounded-[10px] border border-line-2 bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-60"
+                title="Yerel ders notu klasörünü şimdi tara"
+              >
+                {isSyncingDesktop ? <RefreshCw className="w-4 h-4 animate-spin" /> : <FolderOpen className="w-4 h-4" />}
+                {isSyncingDesktop ? 'Taranıyor…' : 'Klasörü tara'}
+              </button>
+            )}
             <a
               href={DRIVE_FOLDER_URL}
               target="_blank"
               rel="noreferrer"
-              className="bg-white/10 hover:bg-white/20 text-white px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all border border-white/10"
+              className="h-10 px-3.5 rounded-[10px] border border-line-2 bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 hover:border-ink-3"
             >
-              <ExternalLink className="w-4 h-4 text-teal-400" />
-              <span>Drive Klasörünü Aç</span>
+              <ExternalLink className="w-4 h-4" />
+              Drive klasörü
             </a>
-
             {isAdmin && (
               <button
+                type="button"
                 onClick={() => setIsAddingNote(true)}
-                className="bg-teal-600 hover:bg-teal-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-md transition-all cursor-pointer active:scale-95"
+                className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
-                <span>Yeni Slayt / Not Yükle</span>
+                Not yükle
               </button>
             )}
           </div>
         </div>
 
-        {/* Drive and Local Archive Interactive Visualizer - Admin Only */}
-        {isAdmin && (
-          <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />
-        )}
+        {isAdmin && <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />}
 
-        {/* Global Progress Bar Banner */}
-        <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700 space-y-2.5">
-          <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-            <div className="flex items-center gap-2">
-              <span className="text-slate-300 font-semibold">Genel İşleme İlerlemesi:</span>
-              <span className="font-bold text-teal-300">
-                {renderedSlidesCount} / {TOTAL_CATALOG_SLIDES} Slayt İşlendi
-              </span>
-              <span className="text-slate-400 text-[11px]">
-                ({renderedPagesCount.toLocaleString('tr-TR')} / {TOTAL_CATALOG_PAGES.toLocaleString('tr-TR')} Sayfa • %{progressPercent})
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <span className="text-[11px] text-amber-300 font-medium">
-                Kalan: {(TOTAL_CATALOG_PAGES - renderedPagesCount).toLocaleString('tr-TR')} Sayfa
-              </span>
+        <div className="flex flex-col gap-1.5">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 text-[13px]">
+            <span className="text-ink-2">
+              <strong className="text-ink font-semibold">
+                {renderedSlidesCount} / {TOTAL_CATALOG_SLIDES}
+              </strong>{' '}
+              slayt işlendi · {renderedPagesCount.toLocaleString('tr-TR')} / {TOTAL_CATALOG_PAGES.toLocaleString('tr-TR')} sayfa · %{progressPercent}
+            </span>
+            <span className="flex items-center gap-3 text-ink-3">
+              Kalan {(TOTAL_CATALOG_PAGES - renderedPagesCount).toLocaleString('tr-TR')} sayfa
               {isAdmin && notes.length > 0 && (
-                <button
-                  onClick={handlePurgeMockNotes}
-                  title="Önbellekte kalan eski veya 5 sayfalık örnek notları temizler"
-                  className="text-[10px] text-rose-400 hover:text-rose-300 underline cursor-pointer ml-2"
-                >
-                  Örnekleri Temizle
+                <button type="button" onClick={handlePurgeMockNotes} title="Önbellekte kalan örnek notları temizler" className="text-bad-text font-semibold cursor-pointer">
+                  Örnekleri temizle
                 </button>
               )}
-            </div>
+            </span>
           </div>
-
-          <div className="w-full bg-slate-900 rounded-full h-3 overflow-hidden p-0.5 border border-slate-700">
-            <div 
-              className="bg-linear-to-r from-teal-500 to-emerald-400 h-full rounded-full transition-all duration-500 shadow-sm"
-              style={{ width: `${Math.max(2, progressPercent)}%` }}
-            />
+          <div className="w-full h-2 rounded-full bg-line-soft overflow-hidden" role="progressbar" aria-valuenow={progressPercent} aria-valuemin={0} aria-valuemax={100} aria-label="Slayt işleme ilerlemesi">
+            <div className="h-full rounded-full bg-accent transition-all duration-500" style={{ width: `${Math.max(2, progressPercent)}%` }} />
           </div>
         </div>
 
-        {/* Feedback alert */}
         {feedbackMessage && (
-          <div className="p-3 bg-teal-950/80 border border-teal-500/40 rounded-xl text-teal-200 text-xs flex items-center justify-between animate-fade-in">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0" />
-              <span>{feedbackMessage}</span>
-            </div>
-            <button onClick={() => setFeedbackMessage(null)} className="text-teal-400 hover:text-white text-xs">
-              ✕
+          <div role="status" className="px-3.5 py-2.5 rounded-xl bg-ok-soft text-[14px] text-ink flex items-center justify-between gap-3">
+            <span className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
+              {feedbackMessage}
+            </span>
+            <button type="button" onClick={() => setFeedbackMessage(null)} aria-label="Bildirimi kapat" className="w-8 h-8 rounded-lg flex items-center justify-center text-ok cursor-pointer">
+              <X className="w-4 h-4" />
             </button>
           </div>
         )}
 
-        {/* Navigation Tabs */}
-        <div className="flex border-b border-slate-800 pt-2 gap-2 text-xs font-bold">
-          <button
-            onClick={() => setActiveTab('drive_catalog')}
-            className={`pb-3 px-4 border-b-2 flex items-center gap-2 transition-colors cursor-pointer ${
-              activeTab === 'drive_catalog'
-                ? 'border-teal-400 text-teal-300'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <FolderGit2 className="w-4 h-4" />
-            <span>Google Drive Slayt Kataloğu ({TOTAL_CATALOG_SLIDES} Dosya)</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('rendered_notes')}
-            className={`pb-3 px-4 border-b-2 flex items-center gap-2 transition-colors cursor-pointer ${
-              activeTab === 'rendered_notes'
-                ? 'border-teal-400 text-teal-300'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <BookOpen className="w-4 h-4" />
-            <span>İşlenmiş Notlar & Sayfa Okuyucu</span>
-            <span className="bg-teal-500/20 text-teal-300 text-[10px] px-2 py-0.5 rounded-full border border-teal-500/30">
-              {notes.length}
-            </span>
-          </button>
+        <div role="tablist" aria-label="Ders notu görünümü" className="grid grid-cols-2 gap-1 bg-canvas rounded-[12px] p-1">
+          {(
+            [
+              ['drive_catalog', FolderGit2, 'Slayt kataloğu', TOTAL_CATALOG_SLIDES],
+              ['rendered_notes', BookOpen, 'İşlenmiş notlar', notes.length],
+            ] as const
+          ).map(([id, Icon, label, count]) => {
+            const on = activeTab === id;
+            return (
+              <button
+                key={id}
+                type="button"
+                role="tab"
+                aria-selected={on}
+                onClick={() => setActiveTab(id)}
+                className={`min-h-10 px-2 rounded-[9px] flex items-center justify-center gap-2 text-[14px] cursor-pointer ${
+                  on ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'
+                }`}
+              >
+                <Icon className={`w-4 h-4 shrink-0 ${on ? 'text-accent' : ''}`} />
+                <span className="truncate">{label}</span>
+                <span className="font-mono text-[12px] text-ink-3">{count}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -695,7 +660,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   onClick={() => setCatalogStatusFilter('all')}
                   className={`px-2.5 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
                     catalogStatusFilter === 'all'
-                      ? 'bg-slate-900 text-white'
+                      ? 'bg-accent-soft text-accent ring-1 ring-inset ring-accent/40'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >

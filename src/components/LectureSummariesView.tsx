@@ -139,195 +139,137 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-6 space-y-6">
-      {/* Header Banner */}
-      <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-lg relative overflow-hidden">
-        <div className="relative z-10 max-w-2xl space-y-2">
-          <div className="inline-flex items-center gap-2 bg-teal-500/20 border border-teal-400/30 px-3 py-1 rounded-full text-xs font-semibold text-teal-200">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>347 Amfi Ders Sunumu & Spot Bilgi Kataloğu</span>
-          </div>
-          <h1 className="text-2xl sm:text-3xl font-bold font-display tracking-tight text-white">
-            Ders Özetleri & Yüksek Verimli Tıp Notları
-          </h1>
-          <p className="text-sm text-teal-100/90 leading-relaxed">
-            Dönem 3 kurul sınavlarında hocaların en çok üzerinde durduğu klinik ipuçları, patofizyolojik mekanizmalar, sınav tuzakları ve farmakolojik tablolar.
+    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+      {/* Title */}
+      <div className="flex items-end justify-between gap-3">
+        <div className="min-w-0">
+          <h1 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em]">Ders özetleri</h1>
+          <p className="m-0 mt-1 text-[14px] text-ink-2">
+            {summaries.length} amfi dersinin özeti: klinik ipuçları, mekanizmalar, sınav tuzakları ve tablolar.
           </p>
         </div>
-      </div>
-
-      {/* Filter and Search Bar */}
-      <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs space-y-3">
-        {/* Kurul pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-xs font-semibold">
+        {onOpenPdfModal && (
           <button
             type="button"
-            onClick={() => setSelectedKurul('all')}
-            className={`px-3 py-1.5 rounded-lg shrink-0 cursor-pointer transition-colors ${
-              selectedKurul === 'all'
-                ? 'bg-teal-700 text-white shadow-xs'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
+            onClick={onOpenPdfModal}
+            aria-label="PDF indir"
+            className="shrink-0 h-10 px-3 rounded-[10px] border border-line-2 bg-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-ink-3"
           >
-            Tüm Kurullar ({summaries.length})
+            <Download className="w-4 h-4" />
+            <span className="hidden sm:inline">PDF indir</span>
           </button>
-          {[1, 2, 3, 4, 5, 6].map((kNum) => {
-            const count = summaries.filter((s) => s.kurul === kNum).length;
-            const isSel = selectedKurul === kNum;
+        )}
+      </div>
+
+      {/* Toolbar */}
+      <div className="bg-white border border-line rounded-[16px] p-3 sm:p-4 flex flex-col gap-2.5">
+        <div role="radiogroup" aria-label="Kurul" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
+          {(['all', 1, 2, 3, 4, 5, 6] as const).map((k) => {
+            const on = selectedKurul === k;
+            const count = k === 'all' ? summaries.length : summaries.filter((s) => s.kurul === k).length;
             return (
               <button
-                key={kNum}
+                key={String(k)}
                 type="button"
-                onClick={() => setSelectedKurul(kNum)}
-                className={`px-3 py-1.5 rounded-lg shrink-0 cursor-pointer transition-colors ${
-                  isSel
-                    ? 'bg-teal-700 text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                role="radio"
+                aria-checked={on}
+                title={k === 'all' ? undefined : KURUL_LABELS[k]}
+                onClick={() => setSelectedKurul(k)}
+                className={`shrink-0 h-8 sm:h-9 px-3 rounded-full text-[13px] sm:text-[14px] cursor-pointer whitespace-nowrap ${
+                  on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink hover:border-line-2'
                 }`}
               >
-                Kurul {kNum} ({count})
+                {k === 'all' ? 'Tümü' : `Kurul ${k}`}
+                <span className={`ml-1.5 font-mono text-[12px] ${on ? 'text-accent/70' : 'text-ink-3'}`}>{count}</span>
               </button>
             );
           })}
         </div>
-
-        {/* Search & Discipline Filter */}
-        <div className="flex flex-col sm:flex-row gap-3 items-center">
-          <div className="relative flex-1 w-full">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+        <div className="flex flex-col sm:flex-row gap-2">
+          <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field flex-1 min-w-0 focus-within:border-accent">
+            <Search className="w-4 h-4 text-ink-2 shrink-0" />
+            <span className="sr-only">Özetlerde ara</span>
             <input
-              type="text"
+              type="search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Ders başlığı, konu veya klinik terim ara (örn: İmmunofarmakoloji, Aort, Diyabet)..."
-              className="w-full pl-9 pr-4 py-2 text-sm border border-slate-200 rounded-lg bg-slate-50 focus:bg-white focus:outline-hidden focus:border-teal-600 transition-colors"
+              placeholder="Ders, konu ya da terim ara"
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-[#6B7785]"
             />
             {searchQuery && (
-              <button
-                type="button"
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer"
-              >
+              <button type="button" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle" className="w-7 h-7 rounded-md flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer">
                 <X className="w-4 h-4" />
               </button>
             )}
-          </div>
-
-          <div className="w-full sm:w-auto shrink-0 flex items-center gap-2">
-            <Filter className="w-4 h-4 text-slate-400" />
-            <select
-              value={selectedDiscipline}
-              onChange={(e) => setSelectedDiscipline(e.target.value)}
-              className="w-full sm:w-48 py-2 px-3 text-xs font-medium border border-slate-200 rounded-lg bg-white focus:outline-hidden focus:border-teal-600 cursor-pointer"
-            >
-              <option value="all">Tüm Branşlar ({disciplines.length})</option>
-              {disciplines.map((d) => (
-                <option key={d} value={d}>
-                  {d}
-                </option>
-              ))}
-            </select>
-          </div>
+          </label>
+          <label className="sr-only" htmlFor="summ-discipline">
+            Branş
+          </label>
+          <select
+            id="summ-discipline"
+            value={selectedDiscipline}
+            onChange={(e) => setSelectedDiscipline(e.target.value)}
+            className="h-10 border border-line-2 rounded-[10px] px-3 text-[14px] bg-white cursor-pointer sm:w-[220px] min-w-0"
+          >
+            <option value="all">Tüm branşlar ({disciplines.length})</option>
+            {disciplines.map((d) => (
+              <option key={d} value={d}>
+                {d}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
-      {/* Summaries Grid */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between text-xs text-slate-500 px-1">
-          <span>
-            Toplam <strong>{filteredSummaries.length}</strong> ders özeti listeleniyor
-          </span>
-          {onOpenPdfModal && (
-            <button
-              type="button"
-              onClick={onOpenPdfModal}
-              className="text-teal-700 hover:text-teal-900 font-bold flex items-center gap-1 cursor-pointer"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>PDF İndirme Merkezine Git</span>
-            </button>
-          )}
-        </div>
-
-        {filteredSummaries.length === 0 ? (
-          <div className="bg-white rounded-xl border border-slate-200 p-12 text-center space-y-3">
-            <BookOpen className="w-10 h-10 text-slate-300 mx-auto" />
-            <h3 className="font-bold text-slate-800 text-sm">Aranan kriterlere uygun ders özeti bulunamadı</h3>
-            <p className="text-xs text-slate-500 max-w-sm mx-auto">
-              Arama filtrenizi temizleyerek veya farklı bir kurul seçerek tekrar deneyebilirsiniz.
-            </p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredSummaries.map((s) => {
-              const discColor = DISCIPLINE_COLORS[s.discipline] || {
-                bg: 'bg-slate-50',
-                text: 'text-slate-800',
-                border: 'border-slate-200',
-              };
-
-              return (
-                <div
-                  key={s.id}
-                  onClick={() => handleOpenSummary(s)}
-                  className="bg-white rounded-xl border border-slate-200 hover:border-teal-500/80 p-5 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group"
-                >
-                  <div className="space-y-2.5">
-                    {/* Tags */}
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
-                        Kurul {s.kurul}
-                      </span>
-                      <span
-                        className={`text-[10px] font-bold px-2 py-0.5 rounded border ${discColor.bg} ${discColor.text} ${discColor.border}`}
-                      >
-                        {s.discipline}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="font-bold text-sm text-slate-900 group-hover:text-teal-700 transition-colors line-clamp-2">
-                      {s.title}
-                    </h3>
-
-                    {/* Key takeaway bullets */}
-                    {s.keyPoints && s.keyPoints.length > 0 && (
-                      <ul className="space-y-1 text-xs text-slate-600 pt-1">
-                        {s.keyPoints.slice(0, 3).map((pt, idx) => (
-                          <li key={idx} className="flex items-start gap-1.5 line-clamp-1">
-                            <span className="text-teal-600 font-bold shrink-0">•</span>
-                            <span className="truncate">{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-
-                  {/* Footer */}
-                  <div className="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
-                    <span className="flex items-center gap-1 font-mono text-[11px]">
-                      <Clock className="w-3.5 h-3.5 text-slate-400" />
-                      ~{s.readingTimeMinutes} dk okuma
-                    </span>
-                    <span className="font-bold text-teal-700 group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5">
-                      <span>Özeti Oku</span>
-                      <ChevronRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
+      <div className="text-[13px] text-ink-2 px-1" role="status">
+        <strong className="text-ink font-semibold">{filteredSummaries.length}</strong> özet
+        {selectedKurul !== 'all' && <> · {KURUL_LABELS[selectedKurul]}</>}
       </div>
 
-      {/* State-of-the-Art Artifact Reader View */}
+      {filteredSummaries.length === 0 ? (
+        <div className="bg-white border border-line rounded-[16px] px-6 py-12 text-center flex flex-col items-center gap-2">
+          <h3 className="m-0 font-display text-[20px] font-bold tracking-[-0.02em]">Bu filtrede özet yok</h3>
+          <p className="m-0 text-[14px] text-ink-2">Aramayı temizleyip farklı bir kurul seçebilirsin.</p>
+        </div>
+      ) : (
+        <ul className="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
+          {filteredSummaries.map((s) => (
+            <li key={s.id} className="min-w-0">
+              <button
+                type="button"
+                onClick={() => handleOpenSummary(s)}
+                className="w-full h-full text-left bg-white border border-line rounded-[14px] p-3.5 sm:p-4 flex flex-col gap-2 cursor-pointer hover:border-accent transition-colors group"
+              >
+                <span className="flex items-center gap-1.5 min-w-0">
+                  <span className="shrink-0 h-6 px-2 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center">Kurul {s.kurul}</span>
+                  <span className="min-w-0 h-6 px-2 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center truncate">{s.discipline}</span>
+                </span>
+                <span className="text-[16px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{s.title}</span>
+                {s.keyPoints?.length > 0 && (
+                  <span className="flex flex-col gap-0.5 text-[13px] text-ink-2">
+                    {s.keyPoints.slice(0, 3).map((pt, idx) => (
+                      <span key={idx} className="truncate">
+                        · {pt}
+                      </span>
+                    ))}
+                  </span>
+                )}
+                <span className="mt-auto pt-2 border-t border-line-soft flex items-center justify-between text-[12px] text-ink-3">
+                  <span className="inline-flex items-center gap-1 font-mono">
+                    <Clock className="w-3.5 h-3.5" /> ~{s.readingTimeMinutes} dk
+                  </span>
+                  <span className="inline-flex items-center gap-0.5 text-[13px] font-semibold text-accent">
+                    Oku <ChevronRight className="w-4 h-4" />
+                  </span>
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+
       {activeSummary && (
-        <SummaryArtifactReader
-          summary={activeSummary}
-          onClose={() => setActiveSummary(null)}
-          onOpenPdfModal={onOpenPdfModal}
-        />
+        <SummaryArtifactReader summary={activeSummary} onClose={() => setActiveSummary(null)} onOpenPdfModal={onOpenPdfModal} />
       )}
     </div>
   );

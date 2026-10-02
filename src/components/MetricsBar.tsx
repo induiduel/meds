@@ -158,7 +158,7 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
                 aria-pressed={on}
                 onClick={() => onSelectDiscipline(d)}
                 className={`shrink-0 h-8 sm:h-9 px-3 sm:px-3.5 rounded-full text-[13px] sm:text-[14px] cursor-pointer whitespace-nowrap ${
-                  on ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink hover:border-line-2'
+                  on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink hover:border-line-2'
                 }`}
               >
                 {d}
