@@ -1676,8 +1676,19 @@ const SlideCanvas: React.FC<{
             {c.keyBullets && c.keyBullets.length > 0 && (
               <ol className="list-none m-0 p-0 flex flex-col gap-2">
                 {c.keyBullets.map((b, i) => (
-                  <li key={i} className={`grid grid-cols-[24px_minmax(0,1fr)] gap-2.5 items-start ${b.isKey ? 'bg-accent-soft/50 rounded-xl p-2 -m-1.5' : ''}`}>
-                    <span className="w-6 h-6 rounded-lg bg-accent-soft text-accent font-mono text-[11px] font-semibold flex items-center justify-center">{i + 1}</span>
+                  <li
+                    key={i}
+                    className={`grid grid-cols-[24px_minmax(0,1fr)] gap-3 items-start rounded-xl px-3 py-2.5 border ${
+                      b.isKey ? 'bg-accent-soft/60 border-transparent' : 'bg-white border-line'
+                    }`}
+                  >
+                    <span
+                      className={`w-6 h-6 mt-px rounded-lg font-mono text-[11px] font-semibold flex items-center justify-center ${
+                        b.isKey ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
+                      }`}
+                    >
+                      {i + 1}
+                    </span>
                     <span className="flex flex-col gap-0.5 min-w-0">
                       <span className="text-[13.5px] sm:text-[14px] font-semibold leading-snug">{b.title}</span>
                       <Rich text={b.desc} className="text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.6]" />
