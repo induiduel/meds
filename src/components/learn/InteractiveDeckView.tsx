@@ -841,14 +841,16 @@ const DeckPlayer: React.FC<{
   // Keep active slide text in sync with glossary provider for dynamic slide knowledge
   useEffect(() => {
     if (!slide || !setCurrentSlideText) return;
+    const narrativeText = slide.synthesisNarrative || (slide as any).content || '';
+    const spotsList = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
     const slideText = [
       slide.title,
       slide.subtitle,
       slide.professorAudioHighlight?.quote,
       slide.professorAudioHighlight?.note,
-      slide.synthesisNarrative,
+      narrativeText,
       ...(slide.coreContent?.keyBullets || []).map((b) => `${b.title}: ${b.desc}`),
-      ...(slide.spotPearls || []),
+      ...spotsList,
       slide.coreContent?.table?.title,
       slide.coreContent?.table?.rows?.map((r) => r.join(' ')).join('\n'),
     ]

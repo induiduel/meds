@@ -3038,12 +3038,15 @@ app.post('/api/committees/:id/generate-slots', requireAdmin, (req, res) => {
 // Delete a question (Admin only to prevent sabotage)
 app.delete('/api/questions/:id', requireAdmin, async (req, res) => {
   const idx = db.questions.findIndex((q) => q.id === req.params.id);
-  if (idx === -1) return res.status(404).json({ error: 'Soru bulunamadı.' });
-
-  db.questions.splice(idx, 1);
-  saveDatabase();
+  let localDeleted = false;
+  if (idx !== -1) {
+    db.questions.splice(idx, 1);
+    saveDatabase();
+    localDeleted = true;
+  }
+  // Yerel JSON'da yoksa bile Supabase fan-out yapılır (havuz Supabase'te yaşar).
   const cloud = await deleteFromSupabaseEverywhere('questions', req.params.id);
-  res.json({ success: true, cloud });
+  res.json({ success: true, localDeleted, cloud });
 });
 
 // --- Persistent SMTP & Email Configuration Management ---
@@ -3590,12 +3593,14 @@ app.put('/api/admin/questions/:id', requireAdmin, (req, res) => {
 // Admin: Delete any question
 app.delete('/api/admin/questions/:id', requireAdmin, async (req, res) => {
   const idx = db.questions.findIndex((q) => q.id === req.params.id);
-  if (idx === -1) return res.status(404).json({ error: 'Soru bulunamadı.' });
-
-  const deleted = db.questions.splice(idx, 1)[0];
-  saveDatabase();
+  let deleted: unknown = null;
+  if (idx !== -1) {
+    deleted = db.questions.splice(idx, 1)[0];
+    saveDatabase();
+  }
+  // Yerel JSON'da yoksa bile Supabase fan-out yapılır (havuz Supabase'te yaşar).
   const cloud = await deleteFromSupabaseEverywhere('questions', req.params.id);
-  res.json({ success: true, deletedQuestion: deleted, cloud });
+  res.json({ success: true, deletedQuestion: deleted, localDeleted: idx !== -1, cloud });
 });
 
 // Admin: Export complete database JSON
