@@ -79,6 +79,120 @@ body {
 }
 
 /* -------------------------------------------------------------
+ * Medical Summary Artifact Reader Styles & Color Themes
+ * ------------------------------------------------------------- */
+.reader-theme-light {
+  --reader-bg: #FFFFFF;
+  --reader-surface: #F8FAFC;
+  --reader-card: #FFFFFF;
+  --reader-text: #0F172A;
+  --reader-text-muted: #475569;
+  --reader-text-subtle: #64748B;
+  --reader-border: #E2E8F0;
+  --reader-accent: #0D9488;
+  --reader-accent-bg: #F0FDFA;
+  --reader-code-bg: #F1F5F9;
+}
+
+.reader-theme-sepia {
+  --reader-bg: #FBF4E6;
+  --reader-surface: #F2E9D4;
+  --reader-card: #FFFBF3;
+  --reader-text: #2D2319;
+  --reader-text-muted: #5C4B3A;
+  --reader-text-subtle: #7A6753;
+  --reader-border: #DDD1BC;
+  --reader-accent: #B45309;
+  --reader-accent-bg: #FEF3C7;
+  --reader-code-bg: #EAE0CC;
+}
+
+.reader-theme-dark {
+  --reader-bg: #0B0F17;
+  --reader-surface: #111827;
+  --reader-card: #162032;
+  --reader-text: #F1F5F9;
+  --reader-text-muted: #94A3B8;
+  --reader-text-subtle: #64748B;
+  --reader-border: #1E293B;
+  --reader-accent: #14B8A6;
+  --reader-accent-bg: #134E4A;
+  --reader-code-bg: #0F172A;
+}
+
+.reader-theme-cobalt {
+  --reader-bg: #0A192F;
+  --reader-surface: #0E223D;
+  --reader-card: #132C4E;
+  --reader-text: #E2E8F0;
+  --reader-text-muted: #94A3B8;
+  --reader-text-subtle: #64748B;
+  --reader-border: #1E3A5F;
+  --reader-accent: #38BDF8;
+  --reader-accent-bg: #0369A1;
+  --reader-code-bg: #071324;
+}
+
+.font-reading-serif {
+  font-family: "Merriweather", "Charter", Georgia, "Times New Roman", serif;
+}
+
+.font-reading-sans {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Medical highlighter markers */
+.reader-mark-yellow {
+  background: linear-gradient(120deg, rgba(254, 240, 138, 0.65) 0%, rgba(253, 224, 71, 0.75) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.reader-mark-rose {
+  background: linear-gradient(120deg, rgba(254, 205, 211, 0.65) 0%, rgba(253, 164, 175, 0.75) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.reader-mark-green {
+  background: linear-gradient(120deg, rgba(187, 247, 208, 0.65) 0%, rgba(134, 239, 172, 0.75) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.reader-mark-cyan {
+  background: linear-gradient(120deg, rgba(186, 230, 253, 0.65) 0%, rgba(125, 211, 252, 0.75) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* In-text search match highlights */
+.reader-search-match {
+  background-color: #FDE047 !important;
+  color: #713F12 !important;
+  font-weight: 700 !important;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.reader-search-active {
+  background-color: #EA580C !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  padding: 1px 4px;
+  border-radius: 3px;
+  outline: 2px solid #C2410C;
+}
+
+/* -------------------------------------------------------------
  * A4 Medical School Examination & PDF Print Stylesheet
  * ------------------------------------------------------------- */
 @page {

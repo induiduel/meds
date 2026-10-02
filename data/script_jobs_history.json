@@ -1,5 +1,18 @@
 [
   {
+    "id": "job_1790918204956_7y3m8",
+    "name": "self-healing-auditor.mjs",
+    "type": "single",
+    "args": "",
+    "status": "completed",
+    "startedAt": "2026-10-02T05:16:44.957Z",
+    "completedAt": "2026-10-02T05:16:45.201Z",
+    "durationMs": 244,
+    "exitCode": 0,
+    "requestedBy": "nofrostlife@gmail.com",
+    "logSummary": "[08:16:44] ------------------------------------------------------------\n[08:16:45] 🛡️ [MedSoru Otonom Denetleyici] Sistem sağlığı ve veri bütünlüğü taranıyor...\n[08:16:45] 📊 Denetim Bulguları:\n[08:16:45]   - İncelenen Toplam Soru: 2162\n[08:16:45]   - Şüpheli/Hatalı Soru Dosyası Eşleşmesi: 0\n[08:16:45]   - Disiplin Uyuşmazlığı (Farmakoloji-Patoloji): 0\n[08:16:45]   - Cevap Belirtilmemiş Soru: 25\n[08:16:45] ✅ [Otonom Denetleyici] Rapor kaydedildi: C:\\Users\\indui\\Desktop\\meds\\data\\self_healing_health_status.json\n[08:16:45] ------------------------------------------------------------\n[08:16:45] ✅ [BAŞARILI] İşlem tamamlandı. Süre: 0.2 sn."
+  },
+  {
     "id": "pipe_1790902653689_fg0y5",
     "name": "ai-verify-and-cloud",
     "type": "pipeline",

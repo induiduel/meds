@@ -19,6 +19,7 @@ import {
   Layers
 } from 'lucide-react';
 import summariesMetaData from '../data/summaries_meta.json';
+import { SummaryArtifactReader } from './SummaryArtifactReader';
 
 export interface SummaryMeta {
   id: string;
@@ -102,7 +103,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
     try {
       // 1. Try server API
       const res = await fetch(`/api/summaries/${meta.id}`);
-      if (res.ok) {
+      if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
         const data = await res.json();
         if (data.success && data.summary?.content) {
           setActiveSummary(data.summary);
@@ -320,146 +321,13 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
         )}
       </div>
 
-      {/* Full Summary Reader Modal */}
+      {/* State-of-the-Art Artifact Reader View */}
       {activeSummary && (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-          <div
-            className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl border border-slate-200 overflow-hidden my-auto max-h-[92vh] flex flex-col animate-fadeIn"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Header */}
-            <div className="p-4 sm:p-5 bg-gradient-to-r from-teal-900 to-slate-900 text-white flex items-center justify-between shrink-0">
-              <div className="min-w-0 pr-4">
-                <div className="flex items-center gap-2 text-xs text-teal-200">
-                  <span className="font-bold">Kurul {activeSummary.kurul}</span>
-                  <span>•</span>
-                  <span>{activeSummary.discipline}</span>
-                </div>
-                <h2 className="text-base sm:text-lg font-bold truncate mt-0.5">
-                  {activeSummary.title}
-                </h2>
-              </div>
-              <div className="flex items-center gap-1.5 shrink-0">
-                <button
-                  type="button"
-                  onClick={handleCopyMarkdown}
-                  title="Markdown Kopyala"
-                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs flex items-center gap-1 cursor-pointer transition-colors"
-                >
-                  {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-                  <span className="hidden sm:inline">{copied ? 'Kopyalandı' : 'Kopyala'}</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={handlePrint}
-                  title="Yazdır / PDF Kaydet"
-                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs flex items-center gap-1 cursor-pointer transition-colors"
-                >
-                  <Printer className="w-4 h-4" />
-                  <span className="hidden sm:inline">Yazdır / PDF</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveSummary(null)}
-                  className="p-2 rounded-lg hover:bg-white/10 text-white/80 hover:text-white cursor-pointer transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Modal Content */}
-            <div className="p-6 sm:p-8 overflow-y-auto space-y-4 text-slate-800 text-sm leading-relaxed prose prose-slate max-w-none print:p-0">
-              {isLoadingContent ? (
-                <div className="py-20 text-center space-y-3">
-                  <div className="w-8 h-8 border-3 border-teal-600 border-t-transparent rounded-full animate-spin mx-auto" />
-                  <p className="text-xs text-slate-500">Ders özeti yükleniyor...</p>
-                </div>
-              ) : activeSummary.content ? (
-                <div className="space-y-4">
-                  {activeSummary.content.split('\n\n').map((block, idx) => {
-                    const trimmed = block.trim();
-                    if (!trimmed) return null;
-
-                    // Warning / Sınav Tuzağı block
-                    if (trimmed.includes('[!WARNING]')) {
-                      return (
-                        <div key={idx} className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg my-3 text-xs text-amber-950 space-y-1">
-                          <div className="font-bold flex items-center gap-1.5 text-amber-800">
-                            <AlertTriangle className="w-4 h-4 shrink-0" />
-                            <span>Sınav Tuzağı & Dikkat Edilmesi Gereken Nokta</span>
-                          </div>
-                          <p>{trimmed.replace(/>\s*\[!WARNING\]/g, '').replace(/>/g, '').trim()}</p>
-                        </div>
-                      );
-                    }
-
-                    // Level 2 / 3 Headings
-                    if (trimmed.startsWith('## ')) {
-                      return (
-                        <h2 key={idx} className="text-lg font-bold text-teal-900 border-b border-slate-200 pb-1 pt-3 font-display">
-                          {trimmed.replace(/^##\s*/, '')}
-                        </h2>
-                      );
-                    }
-                    if (trimmed.startsWith('### ')) {
-                      return (
-                        <h3 key={idx} className="text-sm font-bold text-slate-800 pt-2 font-display">
-                          {trimmed.replace(/^###\s*/, '')}
-                        </h3>
-                      );
-                    }
-
-                    // Bullet lists
-                    if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
-                      const items = trimmed.split('\n').filter(Boolean);
-                      return (
-                        <ul key={idx} className="space-y-1.5 list-disc list-inside text-xs sm:text-sm text-slate-700">
-                          {items.map((it, iIdx) => (
-                            <li key={iIdx} className="leading-normal">
-                              <span dangerouslySetInnerHTML={{
-                                __html: it
-                                  .replace(/^[\-\*]\s*/, '')
-                                  .replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-900 font-semibold">$1</strong>')
-                              }} />
-                            </li>
-                          ))}
-                        </ul>
-                      );
-                    }
-
-                    // Standard paragraphs
-                    return (
-                      <p
-                        key={idx}
-                        className="text-xs sm:text-sm text-slate-700 leading-relaxed"
-                        dangerouslySetInnerHTML={{
-                          __html: trimmed.replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-900 font-semibold">$1</strong>')
-                        }}
-                      />
-                    );
-                  })}
-                </div>
-              ) : (
-                <div className="py-12 text-center text-slate-500 text-xs">
-                  Özet içeriği yüklenemedi. Lütfen internet bağlantınızı kontrol ediniz.
-                </div>
-              )}
-            </div>
-
-            {/* Modal Footer */}
-            <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between shrink-0 text-xs text-slate-500">
-              <span>{activeSummary.title} · Kurul {activeSummary.kurul}</span>
-              <button
-                type="button"
-                onClick={() => setActiveSummary(null)}
-                className="bg-slate-800 hover:bg-slate-900 text-white font-bold px-4 py-1.5 rounded-lg cursor-pointer"
-              >
-                Kapat
-              </button>
-            </div>
-          </div>
-        </div>
+        <SummaryArtifactReader
+          summary={activeSummary}
+          onClose={() => setActiveSummary(null)}
+          onOpenPdfModal={onOpenPdfModal}
+        />
       )}
     </div>
   );

@@ -74,9 +74,19 @@ export function compileSummaries() {
         const discName = entry.name;
         const mdFiles = fs.readdirSync(discPath).filter(f => f.endsWith('.md'));
 
+function normalizeMarkdown(content) {
+  if (!content) return '';
+  // Convert CRLF to LF
+  let text = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  // Clean runaway tabs that mash words together
+  text = text.replace(/([^\n\t])\t+([^\n\t])/g, '$1 $2');
+  text = text.replace(/\t+/g, ' ');
+  return text.trim();
+}
+
         for (const file of mdFiles) {
           const filePath = path.join(discPath, file);
-          const rawContent = fs.readFileSync(filePath, 'utf8');
+          const rawContent = normalizeMarkdown(fs.readFileSync(filePath, 'utf8'));
           const title = cleanTitle(file);
           const keyPoints = extractKeyPointsFromMarkdown(rawContent, 6);
 
@@ -95,7 +105,7 @@ export function compileSummaries() {
         }
       } else if (entry.isFile() && entry.name.endsWith('.md')) {
         const filePath = path.join(kPath, entry.name);
-        const rawContent = fs.readFileSync(filePath, 'utf8');
+        const rawContent = normalizeMarkdown(fs.readFileSync(filePath, 'utf8'));
         const title = cleanTitle(entry.name);
         const keyPoints = extractKeyPointsFromMarkdown(rawContent, 6);
 
