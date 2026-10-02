@@ -22,6 +22,7 @@ import { filterCurrent2026_2027Committees } from '../services/firestoreDb';
 import { generateSlidePdfBlob, downloadSlidePdf } from '../services/slidePdf';
 import type { InteractiveDeck } from './learn/InteractiveDeckView';
 import { BlurOverlay, PaperLoader } from './ui/Animations';
+import { toast } from './ui/Toast';
 
 /** Primary branch of a deck ("Enfeksiyon Hastalıkları / Klinik Mikrobiyoloji" → "Enfeksiyon Hastalıkları"). */
 const disciplineGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
@@ -451,6 +452,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     } catch (err) {
       console.error('Slayt PDF hatası:', err);
       setPdfError('Slayt PDF oluşturulamadı. Lütfen tekrar dene.');
+      toast.error('Slayt PDF oluşturulamadı', 'Lütfen tekrar dene.', { label: 'Tekrar dene', onClick: () => handleSlidePdfDownload() });
     } finally {
       setIsGeneratingPdf(false);
     }
@@ -467,6 +469,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
     } catch (err: any) {
       console.error('PDF oluşturma hatası:', err);
       setPdfError('PDF oluşturulamadı. "Yazdır" ile tarayıcıdan PDF olarak kaydedebilirsin.');
+      toast.error('PDF oluşturulamadı', '"Yazdır" ile tarayıcıdan PDF olarak kaydedebilirsin.', { label: 'Tekrar dene', onClick: () => handleDirectPdfDownload() });
     } finally {
       setIsGeneratingPdf(false);
     }

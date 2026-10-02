@@ -26,6 +26,7 @@ import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { SectionLoader } from './components/ui/Animations';
+import { ToastHost } from './components/ui/Toast';
 
 // Lazy-loaded Views (Split into separate on-demand chunks)
 const PracticeMode = React.lazy(() => import('./components/PracticeMode').then(m => ({ default: m.PracticeMode })));
@@ -854,6 +855,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-canvas text-ink flex flex-col font-sans antialiased">
+      <ToastHost />
       {activeTab === 'practice' ? (
         <Suspense fallback={<ViewFallback />}>
           <PracticeMode

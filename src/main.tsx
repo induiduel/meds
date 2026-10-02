@@ -2,6 +2,10 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import { installToastBridge } from './components/ui/Toast';
+
+// alert() and unhandled failures become friendly floating toasts
+installToastBridge();
 
 interface ErrorBoundaryProps {
   children: ReactNode;

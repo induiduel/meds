@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Sparkles, Stethoscope, AlertCircle, ArrowRight, ChevronDown } from 'lucide-react';
 import { OptionsEditor, OPTION_KEYS, OptionKey } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
+import { toast } from './ui/Toast';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { findRealtimeMatchingDraft, DraftCompatibilityResult } from '../services/draftClusteringService';
@@ -206,8 +207,9 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         });
         setOptionCount(maxIdx + 1);
       }
-    } catch (e) {
+    } catch (e: any) {
       console.error(e);
+      toast.error('AI önerisi alınamadı', 'Sunucuya ulaşılamadı. Biraz sonra tekrar dene.');
     } finally {
       setAiAssisting(false);
     }
@@ -264,6 +266,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     } catch (err: any) {
       console.error('ContributeModal submit error:', err);
       setFormError('Kaydedilirken bir sorun oluştu: ' + (err?.message || 'Lütfen tekrar dene.'));
+      toast.error('Soru kaydedilemedi', err?.message || 'Bağlantını kontrol edip tekrar dene.');
     } finally {
       setIsSubmitting(false);
     }

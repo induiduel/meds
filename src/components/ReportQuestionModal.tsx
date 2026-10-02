@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { X, Flag, FileWarning, ListX, CircleX, Tags, Sparkles, MoreHorizontal, AlertCircle, Send } from 'lucide-react';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
+import { toast } from './ui/Toast';
 
 const REASONS: { id: string; label: string; hint: string; icon: React.ElementType; placeholder: string }[] = [
   { id: 'Hatalı Soru Kökü', label: 'Soru kökü', hint: 'Eksik ya da hatalı', icon: FileWarning, placeholder: 'Kökte neyin eksik ya da yanlış olduğunu yaz…' },
@@ -57,6 +58,7 @@ export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ questi
       setTimeout(onClose, 1700);
     } catch (e: any) {
       setError('Gönderilemedi: ' + (e?.message || 'bilinmeyen hata') + '. Tekrar dener misin?');
+      toast.error('Bildirim gönderilemedi', e?.message || 'Bağlantını kontrol edip tekrar dene.');
     } finally {
       setBusy(false);
     }

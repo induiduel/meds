@@ -6,6 +6,7 @@ import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '.
 import { pathFor, linkClick } from '../router';
 import { OptionsEditor } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
+import { toast } from './ui/Toast';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
@@ -205,6 +206,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       setTimeout(() => setSuccessMessage(null), 6000);
     } catch (err: any) {
       setFormError('Kayıt sırasında bir hata oluştu: ' + (err?.message || 'bilinmeyen hata'));
+      toast.error('Parça kaydedilemedi', err?.message || 'Bağlantını kontrol edip tekrar dene.');
     } finally {
       setIsSubmitting(false);
     }

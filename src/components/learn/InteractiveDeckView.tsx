@@ -42,6 +42,8 @@ import {
   SlideTermsPills,
   useGlossary,
 } from './MedicalGlossaryPopover';
+import { AiThinking } from '../ui/Animations';
+import { toast } from '../ui/Toast';
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -2228,6 +2230,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
     } catch {
       /* offline: fall through to the slide-based answer */
     }
+    toast.error('AI şu an yanıt veremiyor', 'Sunucuya ulaşılamadı; bu slaytın kendi notlarından bir özet gösteriyorum.');
     const hl = slide.professorAudioHighlight;
     setAnswer(
       [
@@ -2283,10 +2286,11 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
           disabled={loading || !q.trim()}
           className="h-10 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
         >
-          {loading ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+          {loading ? <Sparkles className="w-4 h-4 animate-pulse" /> : <Send className="w-4 h-4" />}
           {loading ? 'Yanıt hazırlanıyor…' : 'Sor'}
         </button>
       </form>
+      {loading && <AiThinking />}
       {answer && (
         <div className="rounded-xl bg-accent-soft p-3 flex flex-col gap-2" role="status">
           <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-accent">
