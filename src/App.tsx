@@ -324,16 +324,6 @@ export default function App() {
     fetchCommittees();
   }, []);
 
-  // Real-time health monitoring: only for admin (saves student network and battery)
-  useEffect(() => {
-    if (isAdmin) {
-      systemHealthMonitor.startAutoMonitoring(120000);
-      return () => {
-        systemHealthMonitor.stopAutoMonitoring();
-      };
-    }
-  }, [isAdmin]);
-
   // Load questions when selected committee changes
   useEffect(() => {
     if (selectedCommitteeId) {
@@ -455,6 +445,16 @@ export default function App() {
   const currentCommittee = committees.find((c) => c.id === selectedCommitteeId);
   const targetCount = currentCommittee?.targetCount || 100;
   const isAdmin = isAdminUser(currentUser);
+
+  // Real-time health monitoring: only for admin (saves student network and battery)
+  useEffect(() => {
+    if (isAdmin) {
+      systemHealthMonitor.startAutoMonitoring(120000);
+      return () => {
+        systemHealthMonitor.stopAutoMonitoring();
+      };
+    }
+  }, [isAdmin]);
 
   // Evaluate the auto-backup threshold requested by the user:
   // "100 soru toplanıp soruların %80'i %90 doğruluğa ulaştığında otomatik olarak bir pdf oluşturup drive'da bir klasöre kayıt etmeni istiyorum."
@@ -789,6 +789,42 @@ export default function App() {
         q.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)))
   );
 
+  // Ultra-fast in-memory filtering: 0ms search & filter without network lag
+  const filteredQuestions = useMemo(() => {
+    let result = questions;
+    if (selectedDiscipline && selectedDiscipline !== 'Tümü') {
+      const discLower = selectedDiscipline.toLowerCase();
+      result = result.filter((q) => q.discipline?.toLowerCase() === discLower);
+    }
+    if (selectedStatus && selectedStatus !== 'Tümü') {
+      result = result.filter((q) => q.status === selectedStatus);
+    }
+    if (searchQuery && searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      result = result.filter(
+        (item) =>
+          item.topic?.toLowerCase().includes(q) ||
+          item.discipline?.toLowerCase().includes(q) ||
+          item.reconstruction?.stem?.toLowerCase().includes(q) ||
+          item.questionNumber?.toString() === q ||
+          item.tags?.some((t) => t.toLowerCase().includes(q)) ||
+          item.fragments?.some((f) => f.text.toLowerCase().includes(q)) ||
+          item.options?.some((o) => o.text.toLowerCase().includes(q))
+      );
+    }
+    return result;
+  }, [questions, selectedDiscipline, selectedStatus, searchQuery]);
+
+  // Progressive rendering: Keep DOM lightweight with 30 cards at a time
+  const [visibleCount, setVisibleCount] = useState<number>(30);
+
+  useEffect(() => {
+    setVisibleCount(30);
+  }, [selectedCommitteeId, selectedDiscipline, selectedStatus, searchQuery, filterMyQuestionsOnly]);
+
+  const poolQuestions = filterMyQuestionsOnly ? myQuestions : filteredQuestions;
+  const displayedQuestions = poolQuestions.slice(0, visibleCount);
+
   // Jump to a single question in the pool (home rows, practice "full explanation")
   const openQuestion = (q: QuestionItem) => {
     setSelectedDiscipline('Tümü');
@@ -814,17 +850,19 @@ export default function App() {
   return (
     <div className="min-h-screen bg-canvas text-ink flex flex-col font-sans antialiased">
       {activeTab === 'practice' ? (
-        <PracticeMode
-          questions={questions}
-          title={currentCommittee ? `${committeeShortLabel(currentCommittee).charAt(0)}${committeeShortLabel(currentCommittee).slice(1).toLocaleLowerCase('tr-TR')} · Test çöz` : 'Test çöz'}
-          subtitle={currentCommittee?.name.split(':').slice(1).join(':').trim() || currentCommittee?.name}
-          onExit={() => setActiveTab('study')}
-          onOpenQuestion={openQuestion}
-          onOpenContributeModal={() => {
-            setContributeDefaultNumber(undefined);
-            setIsContributeModalOpen(true);
-          }}
-        />
+        <Suspense fallback={<ViewFallback />}>
+          <PracticeMode
+            questions={questions}
+            title={currentCommittee ? `${committeeShortLabel(currentCommittee).charAt(0)}${committeeShortLabel(currentCommittee).slice(1).toLocaleLowerCase('tr-TR')} · Test çöz` : 'Test çöz'}
+            subtitle={currentCommittee?.name.split(':').slice(1).join(':').trim() || currentCommittee?.name}
+            onExit={() => setActiveTab('study')}
+            onOpenQuestion={openQuestion}
+            onOpenContributeModal={() => {
+              setContributeDefaultNumber(undefined);
+              setIsContributeModalOpen(true);
+            }}
+          />
+        </Suspense>
       ) : (
       <>
       {/* Real-time System Status & Quota Alert Banner (Admin only) */}
@@ -1029,7 +1067,7 @@ export default function App() {
                 <RefreshCw className="w-6 h-6 text-accent animate-spin mx-auto mb-3" />
                 <p className="m-0 text-[14px] text-ink-2">Soru havuzu yükleniyor…</p>
               </div>
-            ) : (filterMyQuestionsOnly ? myQuestions : questions).length === 0 ? (
+            ) : poolQuestions.length === 0 ? (
               <div className="bg-white rounded-[18px] border border-line px-6 py-14 text-center flex flex-col items-center gap-4">
                 <div>
                   <h3 className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">
@@ -1065,7 +1103,7 @@ export default function App() {
               </div>
             ) : (
               <div className="flex flex-col gap-3 sm:gap-5">
-                {(filterMyQuestionsOnly ? myQuestions : questions).map((q) => (
+                {displayedQuestions.map((q) => (
                   <QuestionCard
                     key={q.id}
                     question={q}
@@ -1090,6 +1128,17 @@ export default function App() {
                     isReconstructing={!!reconstructingMap[q.id]}
                   />
                 ))}
+                {poolQuestions.length > visibleCount && (
+                  <div className="text-center py-4">
+                    <button
+                      type="button"
+                      onClick={() => setVisibleCount((prev) => prev + 30)}
+                      className="h-11 px-6 rounded-xl bg-white border border-line-2 text-ink font-semibold text-[14px] hover:bg-slate-50 cursor-pointer shadow-xs inline-flex items-center gap-2"
+                    >
+                      Daha fazla soru göster ({poolQuestions.length - visibleCount} soru daha)
+                    </button>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -1097,74 +1146,86 @@ export default function App() {
 
         {/* Study workspace: solve, self-test, notes */}
         {activeTab === 'study' && (
-          <StudyHub
-            questions={questions}
-            committees={committees}
-            onStartQuickTest={() => setActiveTab('practice')}
-          />
+          <Suspense fallback={<ViewFallback />}>
+            <StudyHub
+              questions={questions}
+              committees={committees}
+              onStartQuickTest={() => setActiveTab('practice')}
+            />
+          </Suspense>
         )}
 
         {/* TAB: Çıkmış Sorular & AI Redaksiyon Arşivi */}
         {activeTab === 'past_exams' && (
-          <PastExamsView
-            currentUser={currentUser}
-            onOpenNote={(noteId, pageNumber) => {
-              setActiveTab('notes');
-            }}
-            onUpdateQuestionReference={handleUpdateQuestionReference}
-          />
+          <Suspense fallback={<ViewFallback />}>
+            <PastExamsView
+              currentUser={currentUser}
+              onOpenNote={(noteId, pageNumber) => {
+                setActiveTab('notes');
+              }}
+              onUpdateQuestionReference={handleUpdateQuestionReference}
+            />
+          </Suspense>
         )}
 
         {/* TAB 2: 1-100 Question Matrix */}
         {activeTab === 'matrix' && (
-          <QuestionMatrix
-            questions={questions}
-            targetCount={targetCount}
-            onSelectQuestion={(q) => {
-              setActiveTab('questions');
-              setSearchQuery(q.questionNumber.toString());
-            }}
-            onAddContributionForNumber={(num) => {
-              setContributeDefaultNumber(num);
-              setIsContributeModalOpen(true);
-            }}
-          />
+          <Suspense fallback={<ViewFallback />}>
+            <QuestionMatrix
+              questions={questions}
+              targetCount={targetCount}
+              onSelectQuestion={(q) => {
+                setActiveTab('questions');
+                setSearchQuery(q.questionNumber.toString());
+              }}
+              onAddContributionForNumber={(num) => {
+                setContributeDefaultNumber(num);
+                setIsContributeModalOpen(true);
+              }}
+            />
+          </Suspense>
         )}
 
         {/* TAB 4: A4 Booklet / Print Mode */}
         {activeTab === 'booklet' && (
-          <BookletView
-            committee={currentCommittee}
-            questions={questions}
-            onOpenPdfModal={() => setIsPdfModalOpen(true)}
-          />
+          <Suspense fallback={<ViewFallback />}>
+            <BookletView
+              committee={currentCommittee}
+              questions={questions}
+              onOpenPdfModal={() => setIsPdfModalOpen(true)}
+            />
+          </Suspense>
         )}
 
         {/* TAB 5: Leaderboard / Katkı Sıralaması */}
         {activeTab === 'leaderboard' && (
-          <LeaderboardView
-            questions={questions}
-            committees={committees}
-            selectedCommitteeId={selectedCommitteeId}
-            onSelectCommittee={(id) => setSelectedCommitteeId(id)}
-            currentUser={currentUser}
-            onOpenContributeModal={() => {
-              setContributeDefaultNumber(undefined);
-              setIsContributeModalOpen(true);
-            }}
-          />
+          <Suspense fallback={<ViewFallback />}>
+            <LeaderboardView
+              questions={questions}
+              committees={committees}
+              selectedCommitteeId={selectedCommitteeId}
+              onSelectCommittee={(id) => setSelectedCommitteeId(id)}
+              currentUser={currentUser}
+              onOpenContributeModal={() => {
+                setContributeDefaultNumber(undefined);
+                setIsContributeModalOpen(true);
+              }}
+            />
+          </Suspense>
         )}
 
         {/* TAB 6: Ders Notları & Slaytlar */}
         {activeTab === 'notes' && (
-          <LectureNotesView
-            committee={currentCommittee}
-            committees={committees}
-            questions={questions}
-            currentUser={currentUser}
-            isAdmin={isAdmin}
-            onUpdateQuestionReference={handleUpdateQuestionReference}
-          />
+          <Suspense fallback={<ViewFallback />}>
+            <LectureNotesView
+              committee={currentCommittee}
+              committees={committees}
+              questions={questions}
+              currentUser={currentUser}
+              isAdmin={isAdmin}
+              onUpdateQuestionReference={handleUpdateQuestionReference}
+            />
+          </Suspense>
         )}
       </main>
 
@@ -1203,209 +1264,256 @@ export default function App() {
       )}
 
       {/* Modals */}
-      <ContributeModal
-        isOpen={isContributeModalOpen}
-        onClose={() => setIsContributeModalOpen(false)}
-        committees={committees}
-        selectedCommitteeId={selectedCommitteeId}
-        defaultQuestionNumber={contributeDefaultNumber}
-        onAddQuestionContribution={handleAddQuestionContribution}
-      />
-
-      {isAdmin && (
-        <AddCommitteeModal
-          isOpen={isNewCommitteeModalOpen}
-          onClose={() => setIsNewCommitteeModalOpen(false)}
-          onAddCommittee={handleAddCommittee}
-        />
+      {/* Modals wrapped in Suspense and conditionally mounted */}
+      {isContributeModalOpen && (
+        <Suspense fallback={null}>
+          <ContributeModal
+            isOpen={isContributeModalOpen}
+            onClose={() => setIsContributeModalOpen(false)}
+            committees={committees}
+            selectedCommitteeId={selectedCommitteeId}
+            defaultQuestionNumber={contributeDefaultNumber}
+            onAddQuestionContribution={handleAddQuestionContribution}
+          />
+        </Suspense>
       )}
 
-      <GithubPagesGuideModal
-        isOpen={isGithubPagesModalOpen}
-        onClose={() => setIsGithubPagesModalOpen(false)}
-      />
+      {isAdmin && isNewCommitteeModalOpen && (
+        <Suspense fallback={null}>
+          <AddCommitteeModal
+            isOpen={isNewCommitteeModalOpen}
+            onClose={() => setIsNewCommitteeModalOpen(false)}
+            onAddCommittee={handleAddCommittee}
+          />
+        </Suspense>
+      )}
 
-      <AuthErrorModal
-        isOpen={isAuthErrorModalOpen}
-        onClose={() => setIsAuthErrorModalOpen(false)}
-        onLoginSuccess={(user, token) => {
-          setCurrentUser(user);
-          if (token) setAccessToken(token);
-        }}
-      />
+      {isGithubPagesModalOpen && (
+        <Suspense fallback={null}>
+          <GithubPagesGuideModal
+            isOpen={isGithubPagesModalOpen}
+            onClose={() => setIsGithubPagesModalOpen(false)}
+          />
+        </Suspense>
+      )}
 
-      <DriveSaveModal
-        isOpen={isDriveModalOpen}
-        onClose={() => setIsDriveModalOpen(false)}
-        committee={currentCommittee}
-        questions={questions}
-        currentUser={currentUser}
-        accessToken={accessToken}
-        onGoogleSignIn={async () => {
-          await handleGoogleLogin();
-        }}
-        onUploadSuccess={(link, fileName) => {
-          setDriveUploadSuccess({
-            fileId: 'uploaded',
-            fileName,
-            webViewLink: link,
-          });
-        }}
-      />
+      {isAuthErrorModalOpen && (
+        <Suspense fallback={null}>
+          <AuthErrorModal
+            isOpen={isAuthErrorModalOpen}
+            onClose={() => setIsAuthErrorModalOpen(false)}
+            onLoginSuccess={(user, token) => {
+              setCurrentUser(user);
+              if (token) setAccessToken(token);
+            }}
+          />
+        </Suspense>
+      )}
+
+      {isDriveModalOpen && (
+        <Suspense fallback={null}>
+          <DriveSaveModal
+            isOpen={isDriveModalOpen}
+            onClose={() => setIsDriveModalOpen(false)}
+            committee={currentCommittee}
+            questions={questions}
+            currentUser={currentUser}
+            accessToken={accessToken}
+            onGoogleSignIn={async () => {
+              await handleGoogleLogin();
+            }}
+            onUploadSuccess={(link, fileName) => {
+              setDriveUploadSuccess({
+                fileId: 'uploaded',
+                fileName,
+                webViewLink: link,
+              });
+            }}
+          />
+        </Suspense>
+      )}
 
       {/* Admin Panel Modal for nofrostlife@gmail.com */}
-      {isAdmin && (
-        <AdminPanelModal
-          isOpen={isAdminPanelOpen}
-          onClose={() => setIsAdminPanelOpen(false)}
-          adminEmail={ADMIN_EMAIL}
-          committees={committees}
-          questions={questions}
-          selectedCommitteeId={selectedCommitteeId}
-          onRefreshData={fetchQuestions}
-          onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
-        />
+      {isAdmin && isAdminPanelOpen && (
+        <Suspense fallback={null}>
+          <AdminPanelModal
+            isOpen={isAdminPanelOpen}
+            onClose={() => setIsAdminPanelOpen(false)}
+            adminEmail={ADMIN_EMAIL}
+            committees={committees}
+            questions={questions}
+            selectedCommitteeId={selectedCommitteeId}
+            onRefreshData={fetchQuestions}
+            onOpenSubagentMonitor={() => setIsSubagentMonitorOpen(true)}
+          />
+        </Suspense>
       )}
 
       {/* A4 Medical Exam Booklet & High-Resolution PDF Print Modal */}
-      <ExamPdfModal
-        isOpen={isPdfModalOpen}
-        onClose={() => setIsPdfModalOpen(false)}
-        committee={currentCommittee}
-        committees={committees}
-        questions={questions}
-      />
+      {isPdfModalOpen && (
+        <Suspense fallback={null}>
+          <ExamPdfModal
+            isOpen={isPdfModalOpen}
+            onClose={() => setIsPdfModalOpen(false)}
+            committee={currentCommittee}
+            committees={committees}
+            questions={questions}
+          />
+        </Suspense>
+      )}
 
       {/* System Diagnostics & Database Troubleshooting Modal */}
-      {isAdmin && (
-        <SystemDiagnosticsModal
-          isOpen={isDiagnosticsOpen}
-          onClose={() => setIsDiagnosticsOpen(false)}
-          onRefreshParentData={fetchQuestions}
-        />
+      {isAdmin && isDiagnosticsOpen && (
+        <Suspense fallback={null}>
+          <SystemDiagnosticsModal
+            isOpen={isDiagnosticsOpen}
+            onClose={() => setIsDiagnosticsOpen(false)}
+            onRefreshParentData={fetchQuestions}
+          />
+        </Suspense>
       )}
 
       {/* Yapay Zeka (AI) Quota & Rate Limit Exceeded Modal */}
-      {isAdmin && (
-        <AiQuotaAlertModal
-          isOpen={isAiQuotaModalOpen}
-          onClose={() => setIsAiQuotaModalOpen(false)}
-          onRetry={fetchQuestions}
-        />
+      {isAdmin && isAiQuotaModalOpen && (
+        <Suspense fallback={null}>
+          <AiQuotaAlertModal
+            isOpen={isAiQuotaModalOpen}
+            onClose={() => setIsAiQuotaModalOpen(false)}
+            onRetry={fetchQuestions}
+          />
+        </Suspense>
       )}
 
       {/* User Login/Register Modal */}
-      <UserAuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        initialMode={authModalInitialMode}
-        onAuthSuccess={(user, token) => {
-          setCurrentUser(user);
-          if (token) setAccessToken(token);
-          setIsAuthModalOpen(false);
-          if (isAdminUser(user)) {
-            setIsAdminPanelOpen(true);
-          }
-        }}
-      />
+      {isAuthModalOpen && (
+        <Suspense fallback={null}>
+          <UserAuthModal
+            isOpen={isAuthModalOpen}
+            onClose={() => setIsAuthModalOpen(false)}
+            initialMode={authModalInitialMode}
+            onAuthSuccess={(user, token) => {
+              setCurrentUser(user);
+              if (token) setAccessToken(token);
+              setIsAuthModalOpen(false);
+              if (isAdminUser(user)) {
+                setIsAdminPanelOpen(true);
+              }
+            }}
+          />
+        </Suspense>
+      )}
 
       {/* User Profile & Student Number Modal */}
-      {currentUser && (
-        <UserProfileModal
-          isOpen={isProfileModalOpen}
-          onClose={() => setIsProfileModalOpen(false)}
-          currentUser={currentUser}
-          onUpdateUser={(updated: AppUser) => setCurrentUser(updated)}
-          questions={questions}
-          onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
-        />
+      {isProfileModalOpen && currentUser && (
+        <Suspense fallback={null}>
+          <UserProfileModal
+            isOpen={isProfileModalOpen}
+            onClose={() => setIsProfileModalOpen(false)}
+            currentUser={currentUser}
+            onUpdateUser={(updated: AppUser) => setCurrentUser(updated)}
+            questions={questions}
+            onOpenAdminPanel={() => setIsAdminPanelOpen(true)}
+          />
+        </Suspense>
       )}
 
       {/* Student Question Edit Modal (Old versions are preserved) */}
-      {selectedQuestionToEdit && currentUser && (
-        <EditMyQuestionModal
-          isOpen={isEditQuestionModalOpen}
-          onClose={() => {
-            setIsEditQuestionModalOpen(false);
-            setSelectedQuestionToEdit(null);
-          }}
-          question={selectedQuestionToEdit}
-          committee={currentCommittee}
-          currentUser={currentUser}
-          onSaveSuccess={(updated: QuestionItem) => {
-            setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
-            setSelectedQuestionToEdit(null);
-            setIsEditQuestionModalOpen(false);
-          }}
-          onOpenHistory={() => {
-            setSelectedQuestionForHistory(selectedQuestionToEdit);
-            setIsHistoryModalOpen(true);
-          }}
-        />
+      {isEditQuestionModalOpen && selectedQuestionToEdit && currentUser && (
+        <Suspense fallback={null}>
+          <EditMyQuestionModal
+            isOpen={isEditQuestionModalOpen}
+            onClose={() => {
+              setIsEditQuestionModalOpen(false);
+              setSelectedQuestionToEdit(null);
+            }}
+            question={selectedQuestionToEdit}
+            committee={currentCommittee}
+            currentUser={currentUser}
+            onSaveSuccess={(updated: QuestionItem) => {
+              setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
+              setSelectedQuestionToEdit(null);
+              setIsEditQuestionModalOpen(false);
+            }}
+            onOpenHistory={() => {
+              setSelectedQuestionForHistory(selectedQuestionToEdit);
+              setIsHistoryModalOpen(true);
+            }}
+          />
+        </Suspense>
       )}
 
       {/* Question Revision History Modal */}
-      {selectedQuestionForHistory && (
-        <RevisionHistoryModal
-          isOpen={isHistoryModalOpen}
-          onClose={() => {
-            setIsHistoryModalOpen(false);
-            setSelectedQuestionForHistory(null);
-          }}
-          question={selectedQuestionForHistory}
-        />
+      {isHistoryModalOpen && selectedQuestionForHistory && (
+        <Suspense fallback={null}>
+          <RevisionHistoryModal
+            isOpen={isHistoryModalOpen}
+            onClose={() => {
+              setIsHistoryModalOpen(false);
+              setSelectedQuestionForHistory(null);
+            }}
+            question={selectedQuestionForHistory}
+          />
+        </Suspense>
       )}
 
       {/* Admin Past Exam Questions Importer Modal */}
-      {isAdmin && (
-        <AdminPastExamImporterModal
-          isOpen={isPastExamImporterOpen}
-          onClose={() => setIsPastExamImporterOpen(false)}
-          adminEmail={ADMIN_EMAIL}
-          committees={committees}
-          selectedCommitteeId={selectedCommitteeId}
-          onImportSuccess={fetchQuestions}
-        />
+      {isAdmin && isPastExamImporterOpen && (
+        <Suspense fallback={null}>
+          <AdminPastExamImporterModal
+            isOpen={isPastExamImporterOpen}
+            onClose={() => setIsPastExamImporterOpen(false)}
+            adminEmail={ADMIN_EMAIL}
+            committees={committees}
+            selectedCommitteeId={selectedCommitteeId}
+            onImportSuccess={fetchQuestions}
+          />
+        </Suspense>
       )}
 
       {/* NotebookLM & Gemini Sync Modal (Admin only) */}
-      {isAdmin && (
-        <NotebookLMSyncModal
-          isOpen={isNotebookLMModalOpen}
-          onClose={() => setIsNotebookLMModalOpen(false)}
-          committee={currentCommittee}
-          questions={questions}
-          lectureNotes={REAL_KURUL1_DRIVE_SLIDES.map((s) => ({ ...s, committeeId: selectedCommitteeId }))}
-          currentUser={currentUser}
-          isAdmin={isAdmin}
-          onQuestionsUpdated={fetchQuestions}
-        />
+      {isAdmin && isNotebookLMModalOpen && (
+        <Suspense fallback={null}>
+          <NotebookLMSyncModal
+            isOpen={isNotebookLMModalOpen}
+            onClose={() => setIsNotebookLMModalOpen(false)}
+            committee={currentCommittee}
+            questions={questions}
+            lectureNotes={REAL_KURUL1_DRIVE_SLIDES.map((s) => ({ ...s, committeeId: selectedCommitteeId }))}
+            currentUser={currentUser}
+            isAdmin={isAdmin}
+            onQuestionsUpdated={fetchQuestions}
+          />
+        </Suspense>
       )}
 
       {/* Admin AI Question Optimizer Modal */}
       {isAdmin && optimizeQuestion && (
-        <AiQuestionOptimizerModal
-          question={optimizeQuestion}
-          isOpen={Boolean(optimizeQuestion)}
-          onClose={() => setOptimizeQuestion(null)}
-          currentUser={currentUser}
-          onSaved={(updated) => {
-            setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
-            setOptimizeQuestion(null);
-          }}
-          onOpenSlideReader={(note, pageNumber) => {
-            setActiveTab('notes');
-            setOptimizeQuestion(null);
-          }}
-        />
+        <Suspense fallback={null}>
+          <AiQuestionOptimizerModal
+            question={optimizeQuestion}
+            isOpen={Boolean(optimizeQuestion)}
+            onClose={() => setOptimizeQuestion(null)}
+            currentUser={currentUser}
+            onSaved={(updated) => {
+              setQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
+              setOptimizeQuestion(null);
+            }}
+            onOpenSlideReader={(note, pageNumber) => {
+              setActiveTab('notes');
+              setOptimizeQuestion(null);
+            }}
+          />
+        </Suspense>
       )}
 
       {/* AI Subagents & Hybrid Server Monitor Modal */}
-      {isAdmin && (
-        <SubagentMonitorModal
-          isOpen={isSubagentMonitorOpen}
-          onClose={() => setIsSubagentMonitorOpen(false)}
-        />
+      {isAdmin && isSubagentMonitorOpen && (
+        <Suspense fallback={null}>
+          <SubagentMonitorModal
+            isOpen={isSubagentMonitorOpen}
+            onClose={() => setIsSubagentMonitorOpen(false)}
+          />
+        </Suspense>
       )}
 
     </div>
