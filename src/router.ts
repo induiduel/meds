@@ -16,6 +16,7 @@ import type React from 'react';
 export type AppRoute =
   | 'quick_add'
   | 'learn'
+  | 'glossary'
   | 'flashcards'
   | 'questions'
   | 'past_exams'
@@ -32,6 +33,7 @@ export type AppRoute =
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
   learn: '/ogren',
+  glossary: '/sozluk',
   flashcards: '/kartlar',
   questions: '/sorular',
   past_exams: '/cikmis',
@@ -49,6 +51,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
 export const ROUTE_TITLES: Record<AppRoute, string> = {
   quick_add: 'Soru ekle',
   learn: 'Öğren',
+  glossary: 'Sözlük & Ansiklopedi',
   flashcards: 'Ezber kartları',
   questions: 'Soru havuzu',
   past_exams: 'Çıkmış sorular',
@@ -73,6 +76,10 @@ const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
 const ALIASES: Record<string, AppRoute> = {
   quick_add: 'quick_add',
   learn: 'learn',
+  glossary: 'glossary',
+  sozluk: 'glossary',
+  ansiklopedi: 'glossary',
+  dictionary: 'glossary',
   flashcards: 'flashcards',
   'ezber-kartlari': 'flashcards',
   questions: 'questions',

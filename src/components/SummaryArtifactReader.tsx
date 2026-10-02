@@ -43,9 +43,13 @@ import {
   Share2,
   User,
   Calendar,
-  Building
+  Building,
+  Expand,
+  Shrink,
+  Wand2,
 } from 'lucide-react';
 import { SummaryDetail } from './LectureSummariesView';
+import { HighlighterToolbar, Highlightable } from './ui/Highlighter';
 
 interface SummaryArtifactReaderProps {
   summary: SummaryDetail;
@@ -130,6 +134,8 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
   });
   const [widthMode, setWidthMode] = useState<WidthMode>('standard');
   const [markerMode, setMarkerMode] = useState<boolean>(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const widthBeforeFs = useRef<WidthMode>('standard');
   // Table of contents starts open only where there is room for it next to the text
   const [showToc, setShowToc] = useState<boolean>(() => typeof window === 'undefined' || window.innerWidth >= 1024);
 
@@ -161,13 +167,45 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
   // Handle escape key to close
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      // Esc first leaves fullscreen (the browser handles that), then closes the reader
+      if (e.key === 'Escape' && !document.fullscreenElement) {
         onClose();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
+
+  // Real fullscreen for the reader
+  useEffect(() => {
+    const onFs = () => {
+      const on = !!document.fullscreenElement && document.fullscreenElement === containerRef.current;
+      setIsFullscreen(on);
+      if (!on) setWidthMode(widthBeforeFs.current);
+    };
+    document.addEventListener('fullscreenchange', onFs);
+    return () => {
+      document.removeEventListener('fullscreenchange', onFs);
+      if (document.fullscreenElement === containerRef.current) document.exitFullscreen?.().catch(() => {});
+    };
+  }, []);
+
+  const toggleFullscreen = () => {
+    const el = containerRef.current;
+    if (!el) return;
+    if (document.fullscreenElement) {
+      document.exitFullscreen?.().catch(() => {});
+      return;
+    }
+    widthBeforeFs.current = widthMode;
+    setWidthMode('fullscreen');
+    if (el.requestFullscreen) {
+      el.requestFullscreen().catch(() => setIsFullscreen(true));
+    } else {
+      // iPhone Safari has no element fullscreen: use the full-window layout instead
+      setIsFullscreen(true);
+    }
+  };
 
   // Track scroll progress and active section
   const handleScroll = () => {
@@ -785,17 +823,19 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
               Aa
             </button>
 
+            <HighlighterToolbar />
+
             <button
               type="button"
               onClick={() => setMarkerMode((m) => !m)}
               aria-pressed={markerMode}
-              aria-label="Fosforlu vurgular"
-              title={markerMode ? 'Vurguları kapat' : 'Vurguları aç'}
+              aria-label="Otomatik vurgular"
+              title={markerMode ? 'Otomatik anahtar kelime vurgularını kapat' : 'Otomatik anahtar kelime vurgularını aç'}
               className={`hidden sm:flex w-9 h-9 rounded-[10px] items-center justify-center cursor-pointer ${
-                markerMode ? 'bg-[#FEF3C7] text-[#92400E]' : 'text-ink-2 hover:bg-canvas'
+                markerMode ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
               }`}
             >
-              <Highlighter className="w-4 h-4" />
+              <Wand2 className="w-4 h-4" />
             </button>
 
             <button
@@ -830,6 +870,19 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
               className="hidden md:flex w-9 h-9 rounded-[10px] items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer"
             >
               {widthMode === 'fullscreen' ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+            </button>
+
+            <button
+              type="button"
+              onClick={toggleFullscreen}
+              aria-pressed={isFullscreen}
+              aria-label={isFullscreen ? 'Tam ekrandan çık' : 'Tam ekran'}
+              title={isFullscreen ? 'Tam ekrandan çık (Esc)' : 'Tam ekran'}
+              className={`w-9 h-9 rounded-[10px] flex items-center justify-center cursor-pointer ${
+                isFullscreen ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
+              }`}
+            >
+              {isFullscreen ? <Shrink className="w-4 h-4" /> : <Expand className="w-4 h-4" />}
             </button>
           </div>
         </header>
@@ -945,7 +998,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                 <p className="text-xs text-slate-400">Tıp Fakültesi müfredat kataloğu hazırlanıyor</p>
               </div>
             ) : (
-              <>
+              <Highlightable scope={`summary:${summary.id}`} className="space-y-8">
             {/* 1. EXECUTIVE DOSSIER CARD (DERS BİLGİ KARTI) */}
             <div
               className={`p-6 sm:p-7 rounded-2xl border ${curTheme.card} ${curTheme.border} relative overflow-hidden`}
@@ -1436,7 +1489,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                 )}
               </div>
             </div>
-            </>
+            </Highlightable>
             )}
           </main>
         </div>

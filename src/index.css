@@ -327,3 +327,20 @@ body {
   .ms-look, .ms-dot, .ms-twinkle, .ms-float, .ms-shimmer, .ms-wobble, .ms-drop, .ms-toast-in { animation: none !important; }
   .ms-check { stroke-dashoffset: 0; }
 }
+
+/* -------------------------------------------------------------
+ * Fosforlu kalem (components/ui/Highlighter.tsx)
+ * ------------------------------------------------------------- */
+::highlight(ms-hl-yellow) { background-color: rgba(253, 224, 71, 0.75); color: inherit; }
+::highlight(ms-hl-green) { background-color: rgba(134, 239, 172, 0.75); color: inherit; }
+::highlight(ms-hl-pink) { background-color: rgba(249, 168, 212, 0.75); color: inherit; }
+::highlight(ms-hl-blue) { background-color: rgba(147, 197, 253, 0.75); color: inherit; }
+
+/* While the pen is on, the selection itself previews the ink colour */
+.ms-pen { cursor: text; }
+.ms-pen-yellow ::selection { background: rgba(253, 224, 71, 0.85); color: inherit; }
+.ms-pen-green ::selection { background: rgba(134, 239, 172, 0.85); color: inherit; }
+.ms-pen-pink ::selection { background: rgba(249, 168, 212, 0.85); color: inherit; }
+.ms-pen-blue ::selection { background: rgba(147, 197, 253, 0.85); color: inherit; }
+.ms-pen-eraser { cursor: cell; }
+.ms-pen-eraser ::selection { background: rgba(14, 26, 38, 0.12); color: inherit; }

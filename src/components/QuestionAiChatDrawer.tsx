@@ -384,7 +384,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 onChange={(e) => setPreferredProvider(e.target.value as any)}
                 className="bg-white border border-line-2 rounded px-2 py-1 text-ink outline-none"
               >
-                <option value="auto">Otomatik (Gemini + Groq Yedekli)</option>
+                <option value="auto">Otomatik (Gemini + Groq Kesintisiz)</option>
                 <option value="groq">Groq Cloud (Ultra Hızlı)</option>
                 <option value="gemini">Google Gemini (Tıbbi Muhakeme)</option>
               </select>
@@ -396,11 +396,10 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 onChange={(e) => setSelectedModel(e.target.value)}
                 className="bg-white border border-line-2 rounded px-2 py-1 text-ink outline-none"
               >
-                <option value="gemini-3.8-flash">Gemini 3.8 Flash</option>
-                <option value="gemini-3.5-flash">Gemini 3.5 Flash</option>
-                <option value="openai/gpt-oss-120b">Groq GPT-OSS 120B</option>
-                <option value="llama-3.3-70b-versatile">Groq Llama 3.3 70B</option>
-                <option value="qwen/qwen3.8-27b">Groq Qwen 27B</option>
+                <option value="gemini-3.8-flash">Google Gemini 3.8 Flash</option>
+                <option value="openai/gpt-oss-120b">Groq GPT-OSS 120B (Önerilen)</option>
+                <option value="qwen/qwen3.8-27b">Groq Qwen 27B (Türkçe Tıbbi)</option>
+                <option value="openai/gpt-oss-20b">Groq GPT-OSS 20B (Ultra Hızlı)</option>
               </select>
             </div>
           </div>

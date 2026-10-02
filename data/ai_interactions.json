@@ -1,5 +1,119 @@
 [
   {
+    "id": "act-1790967968680-qazpm",
+    "questionId": "test-q-validation",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Farmakoloji",
+    "topic": "Antihipertansifler",
+    "interactionType": "chat_qa",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Test",
+    "response": "## ACE‑İnhibitörlerinde “İnatçı Kuru Öksürük” Neden **Bradikinin**’dir?  \n\n### 1. Kısa Cevap  \n**Bradikinin**, ACE (anjiyotensin‑dönüştürücü enzim) tarafından hem anjiyotensin I’i anjiyotensin II’ye dönüştürürken hem de **bradikininin inaktivasyonunu** (yıkımını) sağlar. ACE‑İnhibitörleri bu enzimi bloke ettiğinde, bradikinin kanda birikir ve **kuru, kuru‑kıtır bir öksürüğe** yol açar.  \n\n---\n\n## 2. Mekanizmanın Adım‑Adım Açıklaması  \n\n| Adım | Normal Fizyoloji (ACE aktif) | ACE‑İnhibitör etkisi | Sonuç |\n|------|------------------------------|----------------------|-------|\n| 1. | **Renin** → Angiotensinogen → **Angiotensin I** | Renin etkilenmez (renin seviyesi artabilir) | Renin → **yanlış şık** |\n| 2. | **ACE** iki önemli substratı keser: <br>• Angiotensin I → Angiotensin II (vazokonstriktör) <br>• **Bradikinin → inaktif metabolit** | ACE bloke edildiğinde **Angiotensin II üretimi azalır** (antihipertansif etki) **ve bradikinin yıkımı durur** | Bradikinin seviyesi yükselir |\n| 3. | **Bradikinin**: <br>• Vasküler endoteli üzerinde **B2 reseptör** → NO, PGI₂ (prostacyclin) salınımı → vazodilatasyon <br>• **Sensör sinir uçlarını uyarır** → **refleks öksürük** | Yüksek bradikinin → **Duyu sinir uçlarını aşırı uyarır** → **Kuru, kuru‑kıtır öksürük** | **Bradikinin = Öksürük kaynağı** |\n\n> **Özet:** ACE’nin “kestirdiği” iki molekül vardır. Birincisi anjiyotensin I (vasokonstriktör), ikincisi bradikinin (vazodilatör ve öksürük indükleyici). ACE‑İnhibitörleri yalnızca birincisini (anjiyotensin I) engeller, ikincisinin (bradikinin) yıkımını da engeller; bu da öksürüğe yol açar.\n\n---\n\n## 3. Diğer Şıkların Neden Yanlış Olduğu\n\n| Şık | Açıklama | Hangi durumda “doğru” olabilir? |\n|-----|----------|---------------------------------|\n| **A) Renin** | Renin, **ACE**‑İnhibitörlerinin hedefi **değildir**; aksine ACE‑İnhibitörleri renin sekresyonunu **kompansatuvar olarak artırabilir** (renin geri beslemesi). Renin’in birikmesi öksürükle ilişkili değildir. | Renin düzeyindeki artış, **renin‑anjiyotensin‑aldosteron sistemi (RAAS) aktivasyonu** ile hipertansif krizlerde (örneğin ACE‑İnhibitör kesildiğinde) görülebilir. |\n| **C) Anjiyotensin I** | Anjiyotensin I, ACE tarafından **anjiyotensin II’ye** dönüştürülür. ACE‑İnhibitörleri bu dönüşümü engeller, dolayısıyla anjiyotensin I seviyesi **artar**, ama anjiyotensin I’nin kendisi öksürük yapmaz. | Anjiyotensin I’nin yüksek olması, **ACE‑İnhibitörsüz** bir durumda **anjiyotensin II eksikliği** ve **hipotansiyon** riskine işaret eder; ancak öksürükle ilişkili değildir. |\n\n---\n\n## 4. Klinik İpuçları & “Sınav Tuzağı” Uyarıları  \n\n| Tuzağa Düşebileceğiniz Durum | Nasıl Kaçınılır? |\n|------------------------------|------------------|\n| **“Kuru öksürük = ACE‑İnhibitör”** sorusunu **renin** ya da **anjiyotensin I** ile eşleştirmek. | **Bradikinin**in **ACE‑İnhibitörlerde yıkımını** engellediğini hatırlayın. |\n| **“ACE‑İnhibitörleri sadece anjiyotensin II’yi düşürür”** diyerek bradikinin etkisini göz ardı etmek. | ACE’nin **çift görevini** (anjiyotensin I → II ve bradikinin → inaktif) aklınızda tutun. |\n| **“Kuru öksürük, ACE‑İnhibitörün dozuna bağlıdır”** düşüncesi. | Öksürük genellikle **doz‑bağımsız** bir yan etkidir; doz artırılsa da artmaz, durdurulunca kaybolur. |\n| **“Bradikinin = sadece vazodilatör, öksürük yapmaz”** yanılgısı. | Bradikinin **B2 reseptörleri** üzerinden **sensör sinir uçlarını** da uyarır → **refleks öksürük**. |\n\n---\n\n## 5. Akılda Kalıcı Mnemonikler  \n\n| Mnemonik | Açıklama |\n|----------|----------|\n| **“**B**RAdikinin **R**eaksiyon **E**kstra **S**es (kuru öksürük)**”** | **B**RAdikinin → **R**eaksiyon (ACE‑İnhibitör) → **E**kstra **S**es (öksürük). |\n| **“ACE‑İnhibitör: **A**n**C**e **E**k**S** (kuru öksürük) – **B**RAdikinin**”** | ACE’nin iki “E”si (Enzim, **E**kstra) ve **B**RAdikinin’i hatırlatır. |\n| **“Renin‑Angiotensin‑Bradikinin = RAB”** | **RAB** (köpek) gibi **“hav”** (öksürük) çıkar! (Renin ve Angiotensin “hav” yapmaz, sadece Bradikinin “hav” eder). |\n\n---\n\n## 6. Özet Tablo\n\n| Peptit | ACE’nin Normal Rolü | ACE‑İnhibitör Sonrası Durum | Klinik Sonuç |\n|--------|---------------------|-----------------------------|--------------|\n| **Renin** | Angiotensinogen → Angiotensin I | **Artar** (kompansatuvar) | RAAS aktivasyonu, **kuru öksürük yok** |\n| **Anjiyotensin I** | Substrat → Angiotensin II | **Artar** (dönüşüm engellendi) | **Hipotansiyon**, **kalsiyum‑alanda artmaz** |\n| **Bradikinin** | **Inaktivasyon** (ACE) → inaktif metabolit | **Birikir** (yıkım engellendi) | **Kuru, kuru‑kıtır öksürük** (en tipik yan etki) |\n\n---\n\n### Son Söz  \nACE‑İnhibitörlerin **“kuru öksürük”** yan etkisi, **bradikininin yıkımının engellenmesi**yle ortaya çıkar. Bu bilgiyi **“Bradikinin = B**R**A**D**İ**KİNİN → **K**uru **Ö**ksürük**** şeklinde aklınızda tutarsanız, sınavda çeldiricileri rahatlıkla ayırt edebilirsiniz. Başarılar! 🎓",
+    "contextSnapshot": {
+      "stem": "ACE inhibit�rleri kullanimi sirasinda inat�i kuru �ks�r�kten sorumlu olan peptit hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Renin"
+        },
+        {
+          "key": "B",
+          "text": "Bradikinin"
+        },
+        {
+          "key": "C",
+          "text": "Anjiyotensin I"
+        }
+      ],
+      "correctAnswer": "B",
+      "userAnswer": "B",
+      "explanation": ""
+    },
+    "metadata": {
+      "providerUsed": "Groq Cloud (1. Ücretsiz Groq Anahtarı)",
+      "model": "Groq Cloud (openai/gpt-oss-120b)"
+    },
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1790967968680-qazpm",
+    "createdAt": "2026-10-02T19:06:08.680Z"
+  },
+  {
+    "id": "act-1790967917912-aum31",
+    "questionId": "test-q-validation",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Farmakoloji",
+    "topic": "Antihipertansifler",
+    "interactionType": "chat_qa",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Kisaca a�ikla",
+    "response": "## ACE‑İnhibitörlerinde “İnatçı Kuru Öksürük” – Hangi Peptit Sorumlu?\n\n**Doğru Şık:** **B) Bradikinin**  \n\nAşağıda bu sorunun arkasındaki **fizyopatolojik ve farmakolojik mekanizmayı** adım adım, **çeldirici şıkları neden elendiğini** ve **akılda kalıcı mnemonik/tuzağı** bulacaksınız.\n\n---\n\n## 1. ACE‑İnhibitörlerinin Etki Mekanizması\n\n| Adım | Normal Fiziyoloji | ACE‑İnhibitörünün Etkisi |\n|------|-------------------|--------------------------|\n| 1. | **Renin** → **Angiotensinogen** → **Angiotensin I (Ang‑I)** | Renin hâlâ aktif, çünkü ACE‑İnhibitörleri renin üzerinde etkili değildir. |\n| 2. | **ACE (Kangiotenzin‑Dönüştürücü Enzim)** → Ang‑I → **Angiotensin II (Ang‑II)** (vasokonstriktör, aldosteron salınımı) | ACE bloke edildiği için **Ang‑II üretimi azalır** → kan basıncı düşer. |\n| 3. | **ACE** aynı zamanda **Bradikinin**i **inaktive eder** (bradikinin → bradikinin‑degradasyonu). | ACE bloke edildiğinde **bradikinin yıkımı azalır**, **bradikinin düzeyi yükselir**. |\n| 4. | **Bradikinin** → **B2‑reseptör** → **Bronkokonstriksiyon, artmış vasküler permeabilite, sinir uçlarını uyarma** → **kuru, tahriş edici öksürük**. | Yüksek bradikinin → **kuru öksürük** ortaya çıkar. |\n\n> **Özet:** ACE‑İnhibitörleri *hem* Ang‑II üretimini engeller hem de bradikininin yıkımını azaltır. **Bradikininin birikmesi** öksürüğün temel nedeni olduğundan, “inatçı kuru öksürük” **bradikinin**e bağlanır.\n\n---\n\n## 2. Neden Diğer Şıklar Yanlış?\n\n| Şık | Açıklama | Hangi Durumda Doğru Olabilir? |\n|-----|----------|------------------------------|\n| **A) Renin** | Renin, **ACE‑İnhibitörlerinin hedefi değildir**; renin düzeyi genellikle ACE‑İnhibitör tedavisine yanıt olarak **artar** (feedback). Renin’in artışı öksürükle ilişkili değildir. | Renin, **renin‑anjiyotensin‑aldosteron sistemi (RAAS) inhibisyonu** (örnek: renin inhibitörleri) ile ilgili sorularda doğru olabilir. |\n| **C) Anjiyotensin I** | Ang‑I, ACE tarafından **Ang‑II’ye** dönüştürülür; ACE‑İnhibitörleri bu dönüşümü engeller, fakat **Ang‑I’in birikmesi** öksürükle ilişkili bir mekanizma sunmaz. | Ang‑I’in birikimi, **ACE‑İnhibitörlerinin farmakodinamiği** sorularında “angiotensin‑II azalması” başlığı altında anılabilir, fakat öksürükle bağlanmaz. |\n\n---\n\n## 3. Klinik İpuçları & Sınav Tuzağı\n\n| Tuzağa Düşmemek İçin | Açıklama |\n|----------------------|----------|\n| **“ACE = Angiotensin‑Converting Enzyme”** | Öğrenciler genellikle sadece **Ang‑II** düşüşüne odaklanır ve **bradikinin**i unuturlar. ACE’nin **iki işlevi** (Ang‑I → Ang‑II ve bradikinin yıkımı) vardır. |\n| **“Kuru Öksürük = ACE‑İnhibitör”** | Diğer antihipertansif sınıfları (β‑bloker, kalsiyum kanal blokeri, ARB) **kuru öksürük** yapmaz. **ARB** (Losartan vb.) *Ang‑II reseptörünü* bloke eder, **bradikinin birikmez**, bu yüzden öksürük **yoktur**. |\n| **“Renin Yükselir → Öksürük”** | Renin artışı **feedback** sonucu olur, semptom üretmez. Öksürük **bradikinin**le ilişkilidir. |\n\n---\n\n## 4. Akılda Kalıcı Mnemonikler\n\n1. **“ACE = A**lways **C**uts **E**verything (Ang‑II & Bradykinin)**  \n   - *ACE hem “A”ngiotensin II’yi “C”uts (düşürür), hem “E”verything (bradikinin) yı “C”uts (parçalayıp yok eder).*  \n   - **ACE‑İnhibitör** → “A”ngiotensin II **düşer**, **B**radikinin **kalır** → **Kuru Öksürük**.\n\n2. **“BRAD‑KİNİN = B**r**a**dık**i**nin **K**uru **İ**nflamasyon **N**e**?** (Öksürük)**\n   - **B**R**A**D**K**İN → **K**uru **İ**nflamasyon → **Öksürük**.\n\n3. **“RENIN = REnin Never InhibiTed by ACE‑İnhibitör”**  \n   - Renin **asla** ACE‑İnhibitörle inhibe edilmez → **yanlış** şık.\n\n---\n\n## 5. Özet – Tek Cümleyle\n\n> **ACE‑İnhibitörleri, bradikininin yıkımını engellediği için bronkodilatör ve öksürük uyaran etkisi artar; bu yüzden “inatçı kuru öksürük” **bradikinin**e bağlanır.**  \n\nUmarım bu açıklama, sorunun temelini ve sınavda karşılaşabileceğiniz tuzakları netleştirmiştir. Başarılar! 🎓🚀",
+    "contextSnapshot": {
+      "stem": "ACE inhibit�rleri kullanimi sirasinda inat�i kuru �ks�r�kten sorumlu olan peptit hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Renin"
+        },
+        {
+          "key": "B",
+          "text": "Bradikinin"
+        },
+        {
+          "key": "C",
+          "text": "Anjiyotensin I"
+        }
+      ],
+      "correctAnswer": "B",
+      "userAnswer": "B",
+      "explanation": ""
+    },
+    "metadata": {
+      "providerUsed": "Groq Cloud (1. Ücretsiz Groq Anahtarı)",
+      "model": "Groq Cloud (openai/gpt-oss-120b)"
+    },
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1790967917912-aum31",
+    "createdAt": "2026-10-02T19:05:17.912Z"
+  },
+  {
+    "id": "act-1790967885603-51f2n",
+    "questionId": "test-q-validation",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Farmakoloji",
+    "topic": "Antihipertansifler",
+    "interactionType": "chat_qa",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Neden bradikinin birikir?",
+    "response": "## ACE‑İnhibitörlerinde **Bradikinin** Neden Birikir?  \n\n### 1. Kısa cevap  \nACE (Anjiyotensin‑Dönüştürücü Enzim) hem **anjiyotensin I → anjiyotensin II** dönüşümünü hem de **bradikininin inaktivasyonunu** (kininaz aktivitesi) gerçekleştirir. ACE‑İnhibitörleri bu enzimi bloke ettiğinde:\n\n1. **Anjiyotensin II üretimi azalır → kan basıncı düşer.**  \n2. **Bradikininin yıkımı durur → bradikinin plazmada birikir.**  \n\nBiriken bradikinin **vazodilatör, antiplatelet, anti‑inflamatuar** etkiler gösterir ve özellikle **kuru öksürük** ve **anjiyoödem** gibi yan etkilere yol açar.\n\n---\n\n## 2. Detaylı adım‑adım mekanizma\n\n| Adım | Normal (ACE aktif) | ACE‑İnhibitör ile |\n|------|-------------------|-------------------|\n| 1. | **Renin** → **anjiyotensinogen** → **anjiyotensin I** (kısaca *Ang I*) | Aynı |\n| 2. | **ACE** iki işi yapar: <br>• *Ang I → Ang II* (vazokonstriktör) <br>• *Bradikinin → inaktif metabolit* (kininaz) | **ACE bloke edilir** → <br>• *Ang I → Ang II* dönüşümü azalır (hipotansiyon) <br>• *Bradikinin* yıkımı durur → **bradikinin birikir** |\n| 3. | **Bradikinin** kısa ömürlü, hızlıca kininaz (ACE) tarafından **des‑arg‑bradikinin** gibi inaktif parçacıklara parçalanır. | **Bradikinin** **B2 reseptör** (endotel) üzerinden **NO** ve **PGI₂** (prostacyclin) salgılanmasını artırır → **vazodilatasyon, artan damar geçirgenliği**. |\n| 4. | Normalde düşük bradikinin düzeyi → yan etkiler minimal. | **Yüksek bradikinin** → <br>• **Kuru öksürük** (bronşiyal C‑fiber uyarımı) <br>• **Anjiyoödem** (vazodilatasyon + damar geçirgenliği artışı) <br>• **Hipotansiyon** (ek etkisi). |\n\n### Bradikininin Fiziyolojik Etkileri (kısa özet)\n\n- **Vazodilatasyon** → NO, PGI₂, prostaglandin E₂ artışı  \n- **Artan damar geçirgenliği** → ödem (özellikle yüz, dudak, boğaz)  \n- **Bronşiyal düzeyde** C‑fiber uyarımı → **kuru öksürük**  \n- **Ağrı ve inflamasyon** modülasyonu (düşük dozda anti‑inflamatuar)\n\n---\n\n## 3. Diğer Şıkların Neden Yanlış Olduğu\n\n| Şık | Açıklama | Hangi durumda doğru olabilir? |\n|-----|----------|--------------------------------|\n| **A) Renin** | Renin **anjiyotensinogen**i **anjiyotensin I**e dönüştürür. ACE‑İnhibitörleri **renin** aktivitesini doğrudan etkilemez; aksine **renin** düzeyi **artabilir** (renin geri besleme). | Renin düzeyinin artması, **renin‑anjiyotensin‑aldosteron sistemi (RAAS) aktivasyonu** gibi durumlarda (örneğin ACE‑İnhibitör + diüretik kombinasyonu) incelenir. |\n| **C) Anjiyotensin I** | ACE’nin **substratı**dır; ACE‑İnhibitörleri **Ang I**’i **Ang II**ye dönüştürmeyi engeller, **Ang I** düzeyi yükselir ama **kuru öksürük** ve **anjiyoödem** gibi semptomların doğrudan sorumlusu **değildir**. | Yüksek **Ang I** düzeyi, ACE‑İnhibitörsüz bir hastada **ACE eksikliği** (genetik) gibi nadir durumlarda görülebilir. |\n| **B) Bradikinin** | **Doğru cevap**. ACE aynı zamanda **kininaz** (bradikinin yıkayıcı) olduğu için, ACE’nin inhibisyonu bradikininin birikmesine yol açar. | — |\n\n---\n\n## 4. Akılda Kalıcı Mnemonikler  \n\n| Mnemonik | Açıklama |\n|----------|----------|\n| **“ACE = A **C**E (A **C**hannel **E**nzyme) – **A**ng II & **C**hannel (bradikinin) **E**limination”** | ACE hem **Ang II** üretir (A) hem de **bradikinin**i (C) yok eder; inhibisyonu ikisini de “elinizden alır”. |\n| **“BRADY‑KİNİN = B**R**eak **A**nd **D**ry **Y**awn (kuru öksürük)** | Bradikinin biriktiğinde “dry cough” (kuru öksürük) ortaya çıkar. |\n| **“ACE‑İnhibitör → **B**R**A**D**Y** K**İ**N**İ**N** = **B**R**A**D**Y** (BRADY) = **B**iriken **R**eaktif **A**çık **D**amar **Y**apısı** | “BRADY” kelimesi, bradikinin birikmesinin damar yapısını (geçirgenliği) artırdığını hatırlatır. |\n\n---\n\n## 5. Sınav Tuzağı Uyarıları  \n\n1. **“Kuru öksürük = ACE‑İnhibitör”** → Yanıtı **bradikinin** olarak düşünün, **angiotensin I** ya da **renin** değil.  \n2. **“ACE = sadece Ang II”** düşüncesi sıkça hataya yol açar; **ACE’nin kininaz (bradikinin yıkayıcı) aktivitesi** de vardır.  \n3. **“Renin artışı = ACE‑İnhibitör yan etkisi”** → Renin artışı **kompansatuvar** bir durumdur, semptomların kaynağı **değildir**.  \n4. **“Anjiyotensin I birikir → öksürük”** → Öksürük **bradikinin**le ilişkilidir; **Ang I** sadece bir ara metabolittir.  \n\n---\n\n## 6. Klinik Özet (Kısa bir tablo)\n\n| Klinik Bulgular | Nedeni | Tedavi/Önlem |\n|----------------|--------|--------------|\n| **Kuru öksürük** | **Bradikinin** birikmesi → bronşiyal C‑fiber uyarımı | ACE‑İnhibitör yerine **ARB** (angiotensin II reseptör blokeri) tercih edilebilir; ARB’ler bradikinin yıkımını etkilemez. |\n| **Anjiyoödem** (dudak, yüz, boğaz şişliği) | **Bradikinin** → vazodilatasyon + damar geçirgenliği artışı | ACE‑İnhibitör kesilir, antihistamin/epinefrin acil tedavi; ARB’a geçiş. |\n| **Hipotansiyon** (özellikle başlangıçta) | **Azalan Ang II** + **Bradikinin** etkisi | Düşük dozla başlama, gerekirse doz artırma. |\n\n---\n\n### Sonuç  \n**ACE‑İnhibitörleri** hem **anjiyotensin II** üretimini engeller hem de **bradikininin** yıkımını durdurur. Bu iki etkiden ikincisi (bradikinin birikmesi) **kuru öksürük** ve **anjiyoödem** gibi karakteristik yan etkilerin temelini oluşturur. Diğer şıklar (renin, anjiyotensin I) ACE‑İnhibitörlerin farmakodinamiğiyle doğrudan ilişkili değildir; bu yüzden doğru cevap **B) Bradikinin**’dir.  \n\nUmarım açıklama faydalı olmuştur! Başarılar dilerim, soruların olursa her zaman sorabilirsin. 🚀",
+    "contextSnapshot": {
+      "stem": "ACE inhibit�rleri kullanimi sirasinda inat�i kuru �ks�r�kten sorumlu olan peptit hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Renin"
+        },
+        {
+          "key": "B",
+          "text": "Bradikinin"
+        },
+        {
+          "key": "C",
+          "text": "Anjiyotensin I"
+        }
+      ],
+      "correctAnswer": "B",
+      "userAnswer": "B",
+      "explanation": ""
+    },
+    "metadata": {
+      "providerUsed": "Groq Cloud (1. Ücretsiz Groq Anahtarı)",
+      "model": "Groq Cloud (openai/gpt-oss-120b)"
+    },
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1790967885603-51f2n",
+    "createdAt": "2026-10-02T19:04:45.603Z"
+  },
+  {
     "id": "act-1790966029331-3u24z",
     "questionId": "test-q1",
     "committeeId": "donem3-kurul1",

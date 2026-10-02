@@ -72,6 +72,7 @@ interface HeaderProps {
 export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'quick_add', label: 'Soru ekle', icon: SquarePen },
   { id: 'learn', label: 'Öğren', icon: GraduationCap },
+  { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
   { id: 'flashcards', label: 'Kartlar', icon: Layers },
   { id: 'past_exams', label: 'Çıkmış sorular', icon: Archive },
   { id: 'questions', label: 'Soru havuzu', icon: Library },

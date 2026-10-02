@@ -86,6 +86,13 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
+      port: 5174,
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+        },
+      },
       // HMR is disabled in AI Studio iframe environment.
       hmr: false,
       watch: null,

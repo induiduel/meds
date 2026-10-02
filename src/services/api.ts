@@ -242,16 +242,21 @@ export async function safeJsonFetch<T = any>(
     let resolvedInput = input;
     if (typeof input === 'string' && input.startsWith('/')) {
       const customUrl = getCustomApiUrl();
-      const isRemoteHost = typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
-      const base = customUrl || (isRemoteHost ? 'http://localhost:3000' : '');
-      if (base) {
-        resolvedInput = `${base.replace(/\/$/, '')}${input}`;
+      if (customUrl) {
+        resolvedInput = `${customUrl.replace(/\/$/, '')}${input}`;
       }
     }
+    const isAiOrLongRequest = typeof resolvedInput === 'string' && (
+      resolvedInput.includes('/ai/') ||
+      resolvedInput.includes('/rag/') ||
+      resolvedInput.includes('reconstruct') ||
+      resolvedInput.includes('optimize')
+    );
+    const timeoutMs = isAiOrLongRequest ? 60000 : 10000;
     const hasSignal = init?.signal;
     const fetchOptions: RequestInit = {
       ...init,
-      signal: hasSignal || (typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(6000) : undefined),
+      signal: hasSignal || (typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(timeoutMs) : undefined),
     };
     const res = await fetch(resolvedInput, fetchOptions);
     const contentType = res.headers.get('content-type') || '';
@@ -281,7 +286,11 @@ export async function safeJsonFetch<T = any>(
     const data = await res.json();
     return { ok: true, status: res.status, data };
   } catch (err: any) {
-    return { ok: false, status: 0, error: err.message || 'Bağlantı hatası' };
+    const isTimeout = err.name === 'AbortError' || err.name === 'TimeoutError';
+    const errMsg = isTimeout
+      ? 'Sunucu yanıt zaman aşımına uğradı. İstemci yapay zeka motoru devreye alınıyor...'
+      : (err.message || 'Bağlantı hatası');
+    return { ok: false, status: 0, error: errMsg };
   }
 }
 
@@ -385,7 +394,6 @@ export async function callClientGroq(
     'openai/gpt-oss-120b',
     'qwen/qwen3.8-27b',
     'openai/gpt-oss-20b',
-    'llama-3.3-70b-versatile',
   ].filter(Boolean) as string[];
 
   const isJson = options?.isJson !== false;
@@ -450,6 +458,9 @@ export async function callClientGroq(
   throw lastErr || new Error('Groq Cloud modelleri yanıt vermedi.');
 }
 
+// In-memory cooldown cache when Gemini client hits 429 quota exhaustion
+let clientGeminiQuotaCooldownUntil = 0;
+
 export async function callClientResilientAi(options: {
   prompt: string;
   customGeminiKey?: string;
@@ -485,64 +496,71 @@ export async function callClientResilientAi(options: {
   }
 
   let lastAiErr: any = null;
-  const { GoogleGenAI } = await import('@google/genai');
 
   // ==========================================
   // 1. SIRA & 2. SIRA: GEMİNİ ÜCRETSİZ PLANLAR
   // ==========================================
-  const freeGeminiPool: ClientKeyInfo[] = [];
-  if (customGeminiKey && customGeminiKey.trim() && customGeminiKey !== 'MY_GEMINI_API_KEY') {
-    freeGeminiPool.push({ key: customGeminiKey.trim(), label: 'Admin Özel Anahtarı', isBilled: false });
-  }
-
-  for (const k of CLIENT_FREE_GEMINI_KEYS) {
-    if (!freeGeminiPool.some(x => x.key === k.key)) {
-      freeGeminiPool.push(k);
+  const isGeminiInCooldown = Date.now() < clientGeminiQuotaCooldownUntil;
+  if (!isGeminiInCooldown || preferredProvider === 'gemini') {
+    const { GoogleGenAI } = await import('@google/genai');
+    const freeGeminiPool: ClientKeyInfo[] = [];
+    if (customGeminiKey && customGeminiKey.trim() && customGeminiKey !== 'MY_GEMINI_API_KEY') {
+      freeGeminiPool.push({ key: customGeminiKey.trim(), label: 'Admin Özel Anahtarı', isBilled: false });
     }
-  }
 
-  for (let i = 0; i < freeGeminiPool.length; i++) {
-    const currentKey = freeGeminiPool[i];
-    const candidateModels = (model && model.startsWith('gemini'))
-      ? [model, 'gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-flash-lite-latest', 'gemini-3.1-flash-lite'].filter((v, idx, arr) => arr.indexOf(v) === idx)
-      : ['gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-flash-lite-latest', 'gemini-3.1-flash-lite'];
-
-    for (const m of candidateModels) {
-      try {
-        console.log(`[Client AI] ${currentKey.label} (${m}) deneniyor... (Sıra: ${i + 1}/${freeGeminiPool.length})`);
-        const ai = new GoogleGenAI({ apiKey: currentKey.key });
-        const configPayload: any = {};
-        if (isJson) {
-          configPayload.responseMimeType = 'application/json';
-        }
-        if (systemInstruction) {
-          configPayload.systemInstruction = systemInstruction;
-        }
-
-        const geminiRes = await ai.models.generateContent({
-          model: m,
-          contents: prompt,
-          config: configPayload
-        });
-        const text = geminiRes.text || (isJson ? '{}' : '');
-        console.log(`[Client AI] ✓ ${currentKey.label} (${m}) başarıyla yanıt üretti!`);
-        return {
-          text,
-          providerUsed: 'Google Gemini',
-          planUsed: `${currentKey.label} (${m})`
-        };
-      } catch (err: any) {
-        console.warn(`[Client AI] ⚠️ ${currentKey.label} (${m}) başarısız:`, err.message);
-        lastAiErr = err;
-        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap/i.test(err.message || '');
-        if (isQuota) {
-          break;
-        }
+    for (const k of CLIENT_FREE_GEMINI_KEYS) {
+      if (!freeGeminiPool.some(x => x.key === k.key)) {
+        freeGeminiPool.push(k);
       }
     }
-    if (i < freeGeminiPool.length - 1) {
-      console.log(`[Client AI Failover] 🔄 ${currentKey.label} yanıt veremedi. Otomatik olarak sıradaki Ücretsiz plana geçiliyor...`);
+
+    for (let i = 0; i < freeGeminiPool.length; i++) {
+      const currentKey = freeGeminiPool[i];
+      const candidateModels = (model && model.startsWith('gemini'))
+        ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
+        : ['gemini-3.8-flash'];
+
+      for (const m of candidateModels) {
+        try {
+          console.log(`[Client AI] ${currentKey.label} (${m}) deneniyor... (Sıra: ${i + 1}/${freeGeminiPool.length})`);
+          const ai = new GoogleGenAI({ apiKey: currentKey.key });
+          const configPayload: any = {};
+          if (isJson) {
+            configPayload.responseMimeType = 'application/json';
+          }
+          if (systemInstruction) {
+            configPayload.systemInstruction = systemInstruction;
+          }
+
+          const geminiRes = await ai.models.generateContent({
+            model: m,
+            contents: prompt,
+            config: configPayload
+          });
+          const text = geminiRes.text || (isJson ? '{}' : '');
+          console.log(`[Client AI] ✓ ${currentKey.label} (${m}) başarıyla yanıt üretti!`);
+          clientGeminiQuotaCooldownUntil = 0; // reset cooldown on success
+          return {
+            text,
+            providerUsed: 'Google Gemini',
+            planUsed: `${currentKey.label} (${m})`
+          };
+        } catch (err: any) {
+          console.warn(`[Client AI] ⚠️ ${currentKey.label} (${m}) başarısız:`, err.message);
+          lastAiErr = err;
+          const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
+          if (isQuota) {
+            clientGeminiQuotaCooldownUntil = Date.now() + 5 * 60 * 1000;
+            break;
+          }
+        }
+      }
+      if (i < freeGeminiPool.length - 1) {
+        console.log(`[Client AI Failover] 🔄 ${currentKey.label} yanıt veremedi. Otomatik olarak sıradaki Ücretsiz plana geçiliyor...`);
+      }
     }
+  } else {
+    console.log('[Client AI] ⚡ Gemini API kotası aşıldığı için doğrudan Groq Cloud devreye alınıyor (0 gecikme).');
   }
 
   // =========================================================================
@@ -551,7 +569,7 @@ export async function callClientResilientAi(options: {
   const groqKeys = getClientGroqKeys(customGroqKey);
   if (groqKeys.length > 0) {
     try {
-      console.log(`[Client AI Failover] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
+      console.log(`[Client AI Failover] 🚀 3. Sıra Devrede: Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
       const groqModel = model?.includes('deepseek') ? 'deepseek-r1-distill-llama-70b' : (model?.includes('qwen') ? 'qwen/qwen3.8-27b' : 'openai/gpt-oss-120b');
       const groqRes = await callClientGroq(prompt, groqModel, customGroqKey, {
         systemPrompt: systemInstruction,
@@ -573,14 +591,15 @@ export async function callClientResilientAi(options: {
   // ===================================================================
   // 4. SIRA: GEMİNİ FATURALANDIRMALI PLAN (ÜCRETLİ PLAN - EN SON ÇARE)
   // ===================================================================
-  if (CLIENT_BILLED_GEMINI_KEY && CLIENT_BILLED_GEMINI_KEY.key) {
+  if (CLIENT_BILLED_GEMINI_KEY && CLIENT_BILLED_GEMINI_KEY.key && (!isGeminiInCooldown || preferredProvider === 'gemini')) {
     const candidateModels = (model && model.startsWith('gemini'))
-      ? [model, 'gemini-3.8-flash', 'gemini-3.5-flash']
-      : ['gemini-3.8-flash', 'gemini-3.5-flash'];
+      ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
+      : ['gemini-3.8-flash'];
 
     for (const m of candidateModels) {
       try {
         console.log(`[Client AI Failover] 💳 4. Sıra Devrede: Ücretsiz planlar ve Groq yanıt vermedi, ${CLIENT_BILLED_GEMINI_KEY.label} (${m}) deneniyor...`);
+        const { GoogleGenAI } = await import('@google/genai');
         const ai = new GoogleGenAI({ apiKey: CLIENT_BILLED_GEMINI_KEY.key });
         const configPayload: any = {};
         if (isJson) {

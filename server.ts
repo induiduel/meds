@@ -336,7 +336,6 @@ export async function callGroqCloud(
     'openai/gpt-oss-120b',
     'qwen/qwen3.8-27b',
     'openai/gpt-oss-20b',
-    'llama-3.3-70b-versatile',
   ].filter(Boolean) as string[];
 
   const isJson = options?.isJson !== false;
@@ -401,6 +400,9 @@ export async function callGroqCloud(
   throw lastErr || new Error('Groq Cloud modelleri yanıt vermedi.');
 }
 
+// In-memory cooldown cache when Gemini free tier hits 429 quota exhaustion (prevents 4-second delays per request)
+let serverGeminiQuotaCooldownUntil = 0;
+
 // Resilient Multi-Provider AI Caller with Automated Failover (Free 1 -> Free 2 -> Billed -> Groq)
 export async function generateResilientMedicalAi(options: {
   prompt: string;
@@ -441,48 +443,55 @@ export async function generateResilientMedicalAi(options: {
   // ==========================================
   // 1. SIRA & 2. SIRA: GEMİNİ ÜCRETSİZ PLANLAR
   // ==========================================
-  const freeGeminiKeys = getFreeGeminiKeys(customGeminiKey);
-  for (let i = 0; i < freeGeminiKeys.length; i++) {
-    const currentKeyInfo = freeGeminiKeys[i];
-    const candidateModels = (model && model.startsWith('gemini'))
-      ? [model, 'gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-flash-lite-latest', 'gemini-3.1-flash-lite'].filter((v, idx, arr) => arr.indexOf(v) === idx)
-      : ['gemini-3.8-flash', 'gemini-3.5-flash', 'gemini-flash-lite-latest', 'gemini-3.1-flash-lite'];
+  const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
+  if (!isGeminiInCooldown || preferredProvider === 'gemini') {
+    const freeGeminiKeys = getFreeGeminiKeys(customGeminiKey);
+    for (let i = 0; i < freeGeminiKeys.length; i++) {
+      const currentKeyInfo = freeGeminiKeys[i];
+      const candidateModels = (model && model.startsWith('gemini'))
+        ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
+        : ['gemini-3.8-flash'];
 
-    for (const m of candidateModels) {
-      try {
-        console.log(`[AI Engine] ${currentKeyInfo.label} (${m}) deneniyor... (Sıra: ${i + 1}/${freeGeminiKeys.length})`);
-        const { GoogleGenAI } = await import('@google/genai');
-        const clientAi = new GoogleGenAI({ apiKey: currentKeyInfo.key });
-        const configPayload: any = {};
-        if (isJson) {
-          configPayload.responseMimeType = 'application/json';
-        }
-        if (systemInstruction) {
-          configPayload.systemInstruction = systemInstruction;
-        }
+      for (const m of candidateModels) {
+        try {
+          console.log(`[AI Engine] ${currentKeyInfo.label} (${m}) deneniyor... (Sıra: ${i + 1}/${freeGeminiKeys.length})`);
+          const { GoogleGenAI } = await import('@google/genai');
+          const clientAi = new GoogleGenAI({ apiKey: currentKeyInfo.key });
+          const configPayload: any = {};
+          if (isJson) {
+            configPayload.responseMimeType = 'application/json';
+          }
+          if (systemInstruction) {
+            configPayload.systemInstruction = systemInstruction;
+          }
 
-        const geminiRes = await clientAi.models.generateContent({
-          model: m,
-          contents: prompt,
-          config: configPayload
-        });
-        const text = geminiRes.text || (isJson ? '{}' : '');
-        console.log(`[AI Engine] ✓ ${currentKeyInfo.label} (${m}) başarıyla yanıt üretti!`);
-        return {
-          text,
-          providerUsed: 'Google Gemini',
-          planUsed: `${currentKeyInfo.label} (${m})`
-        };
-      } catch (err: any) {
-        console.warn(`[AI Engine] ⚠️ ${currentKeyInfo.label} (${m}) başarısız:`, err.message);
-        lastAiErr = err;
-        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap/i.test(err.message || '');
-        if (isQuota) {
-          // If quota is exhausted on this key, skip the rest of models for this key immediately!
-          break;
+          const geminiRes = await clientAi.models.generateContent({
+            model: m,
+            contents: prompt,
+            config: configPayload
+          });
+          const text = geminiRes.text || (isJson ? '{}' : '');
+          console.log(`[AI Engine] ✓ ${currentKeyInfo.label} (${m}) başarıyla yanıt üretti!`);
+          serverGeminiQuotaCooldownUntil = 0; // reset cooldown on success
+          return {
+            text,
+            providerUsed: 'Google Gemini',
+            planUsed: `${currentKeyInfo.label} (${m})`
+          };
+        } catch (err: any) {
+          console.warn(`[AI Engine] ⚠️ ${currentKeyInfo.label} (${m}) başarısız:`, err.message);
+          lastAiErr = err;
+          const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
+          if (isQuota) {
+            serverGeminiQuotaCooldownUntil = Date.now() + 5 * 60 * 1000; // 5 minutes cooldown
+            console.log('[AI Engine] ⏳ Gemini API kotası aşıldı (429). 5 dk boyunca Groq Cloud öncelikli çalışacak.');
+            break;
+          }
         }
       }
     }
+  } else {
+    console.log('[AI Engine] ⚡ Gemini kota beklemesinde olduğu için doğrudan Groq Cloud devreye alınıyor (0 gecikme).');
   }
 
   // =========================================================================
@@ -491,7 +500,7 @@ export async function generateResilientMedicalAi(options: {
   const groqKeys = getTieredGroqKeys(customGroqKey);
   if (groqKeys.length > 0) {
     try {
-      console.log(`[AI Engine] 🚀 3. Sıra Devrede: Ücretsiz Gemini planları tükendi, Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
+      console.log(`[AI Engine] 🚀 3. Sıra Devrede: Groq Cloud (${groqKeys.length} adet anahtar havuzu) devreye sokuluyor...`);
       const groqModel = model?.includes('deepseek') ? 'deepseek-r1-distill-llama-70b' : (model?.includes('qwen') ? 'qwen/qwen3.8-27b' : 'openai/gpt-oss-120b');
       const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
         systemPrompt: systemInstruction,
@@ -514,10 +523,10 @@ export async function generateResilientMedicalAi(options: {
   // 4. SIRA: GEMİNİ FATURALANDIRMALI PLAN (ÜCRETLİ PLAN - EN SON ÇARE)
   // ===================================================================
   const billedKey = getBilledGeminiKey();
-  if (billedKey && billedKey.key) {
+  if (billedKey && billedKey.key && (!isGeminiInCooldown || preferredProvider === 'gemini')) {
     const candidateModels = (model && model.startsWith('gemini'))
-      ? [model, 'gemini-3.8-flash', 'gemini-3.5-flash']
-      : ['gemini-3.8-flash', 'gemini-3.5-flash'];
+      ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
+      : ['gemini-3.8-flash'];
 
     for (const m of candidateModels) {
       try {

@@ -353,7 +353,7 @@ Lütfen bu referansları temel alarak talimatı yerine getir.`;
     process.env.GEMINI_BILLED_KEY
   ].filter((k): k is string => Boolean(k && k.trim() && k !== 'MY_GEMINI_FREE_KEY_1'));
 
-  const candidateModels = [modelName, 'gemini-3.8-flash', 'gemini-flash-latest', 'gemini-2.5-flash'];
+  const candidateModels = [modelName, 'gemini-3.8-flash', 'gemini-flash-latest'].filter((v, idx, arr) => arr.indexOf(v) === idx);
   let response: any = null;
   let lastErr: any = null;
   let resolvedModel = modelName;

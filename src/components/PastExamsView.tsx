@@ -49,6 +49,12 @@ import { AdvancedQuestionUpgradeModal } from './AdvancedQuestionUpgradeModal';
 import { renderHighlightedSnippet } from './QuestionCard';
 import { learnMatcher, QuestionLearnMatch } from '../services/learnMatcher';
 import { FlashcardComponent } from './learn/InteractiveDeckView';
+import {
+  OFFICIAL_CURRICULUM_COMMITTEES,
+  DONEM3_CURRICULUM_DISCIPLINES,
+  normalizeDonem3Discipline,
+  isDonem3Question,
+} from '../data/curriculumData';
 
 export const isDeepSeekQuestion = (q: any): boolean => {
   if (!q) return false;
@@ -137,12 +143,19 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // Client-Side Caching & Delta-Sync State
   const [cacheStatus, setCacheStatus] = useState<CacheSyncStatus>(pastQuestionsCache.getStatus());
 
-  // Load questions
+  // Load questions - Yalnızca Dönem 3 çıkmışları gösterilir, diğer dönemler veritabanında kalır
   const loadPastQuestions = async () => {
     setIsLoading(true);
     try {
       const data = await ApiService.getPastQuestions();
-      setQuestions(data.filter(q => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t))));
+      const donem3Data = data
+        .filter(q => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t)))
+        .filter(isDonem3Question)
+        .map(q => {
+          const normDisc = normalizeDonem3Discipline(q.discipline);
+          return normDisc ? { ...q, discipline: normDisc } : q;
+        });
+      setQuestions(donem3Data);
     } catch (e) {
       console.warn('Could not load past questions:', e);
     } finally {
@@ -228,7 +241,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const unsubscribe = pastQuestionsCache.subscribe((status, updatedList) => {
       setCacheStatus(status);
       if (updatedList && updatedList.length > 0) {
-        const updateMap = new Map(updatedList.map(q => [q.id, q]));
+        const filteredUpdated = updatedList
+          .filter(isDonem3Question)
+          .map(q => {
+            const normDisc = normalizeDonem3Discipline(q.discipline);
+            return normDisc ? { ...q, discipline: normDisc } : q;
+          });
+        if (filteredUpdated.length === 0) return;
+        const updateMap = new Map(filteredUpdated.map(q => [q.id, q]));
         setQuestions(prev => {
           let hasChange = false;
           const next = prev.map(existing => {
@@ -238,7 +258,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             }
             return existing;
           });
-          for (const newQ of updatedList) {
+          for (const newQ of filteredUpdated) {
             if (!prev.some(p => p.id === newQ.id)) {
               next.unshift(newQ);
               hasChange = true;
@@ -364,58 +384,46 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     return `${file}${page}${qNum}`;
   };
 
-  // Curriculum Disciplines List
-  const CURRICULUM_DISCIPLINES = [
-    'Tıbbi Biyoloji ve Genetik',
-    'Tıbbi Biyokimya',
-    'Tıbbi Patoloji',
-    'Tıbbi Farmakoloji',
-    'Tıbbi Mikrobiyoloji',
-    'Histoloji ve Embriyoloji',
-    'Anatomi',
-    'Fizyoloji',
-    'İç Hastalıkları',
-    'Kardiyoloji',
-    'Göğüs Hastalıkları',
-    'Enfeksiyon Hastalıkları',
-    'Pediatri (Çocuk Sağlığı)',
-    'Kadın Hastalıkları ve Doğum',
-    'Genel Cerrahi',
-    'Üroloji',
-    'Nöroloji',
-    'Psikiyatri',
-    'Beyin ve Sinir Cerrahisi',
-    'Ortopedi ve Travmatoloji',
-    'Acil Tıp',
-    'Aile Hekimliği',
-    'Halk Sağlığı',
-    'Tıbbi Genetik',
-    'FTR',
-    'Anesteziyoloji ve Reanimasyon',
-  ];
-
-  // Available options for filters derived from data
+  // Available options for filters derived from data - Yalnızca Dönem 3 ve Resmi Müfredat
   const filterOptions = useMemo(() => {
-    const committees = new Set<string>();
-    const years = new Set<string>();
-    const disciplines = new Set<string>(CURRICULUM_DISCIPLINES);
+    const validCommitteesOrder = [
+      'donem3-kurul1',
+      'donem3-kurul2',
+      'donem3-kurul3',
+      'donem3-kurul4',
+      'donem3-kurul5',
+      'donem3-kurul6',
+      'donem3-final',
+      'donem3-butunleme',
+    ];
 
+    const committees = validCommitteesOrder.filter(cId => questions.some(q => q.committeeId === cId));
+
+    const years = new Set<string>();
     questions.forEach(q => {
-      if (q.committeeId) committees.add(q.committeeId);
       if (q.examYear && !q.examYear.includes('2026') && !q.examYear.toLowerCase().includes('civan')) {
         years.add(q.examYear);
       }
-      if (q.discipline) disciplines.add(q.discipline);
     });
 
     years.add('Kategorisiz');
 
+    // Snipper (Dersler): Yalnızca Dönem 3 ders programında yer alan dersler
+    // Eğer belirli bir kurul seçilmişse sadece o kurulun ders programındaki dersleri gösterir.
+    let disciplines = DONEM3_CURRICULUM_DISCIPLINES;
+    if (selectedCommittee !== 'all' && !selectedCommittee.includes('final') && !selectedCommittee.includes('butunleme')) {
+      const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find(c => c.id === selectedCommittee);
+      if (commObj && commObj.allDisciplineNames && commObj.allDisciplineNames.length > 0) {
+        disciplines = Array.from(new Set(commObj.allDisciplineNames.map(d => normalizeDonem3Discipline(d) || d))).sort((a, b) => a.localeCompare(b, 'tr'));
+      }
+    }
+
     return {
-      committees: Array.from(committees).sort(),
+      committees,
       years: Array.from(years).sort(),
-      disciplines: Array.from(disciplines).sort(),
+      disciplines,
     };
-  }, [questions]);
+  }, [questions, selectedCommittee]);
 
   // Counts for tabs
   const tabCounts = useMemo(() => {
@@ -467,11 +475,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         }
       }
 
-      // 5. Discipline filter
+      // 5. Discipline filter (Yalnızca resmi müfredat dersine göre tam eşleşme)
       if (selectedDiscipline !== 'all') {
-        const qDisc = (q.discipline || '').toLowerCase();
-        const selDisc = selectedDiscipline.toLowerCase();
-        if (qDisc !== selDisc && !qDisc.includes(selDisc) && !selDisc.includes(qDisc)) {
+        const qDisc = normalizeDonem3Discipline(q.discipline) || q.discipline;
+        if (qDisc !== selectedDiscipline) {
           return false;
         }
       }
@@ -491,32 +498,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     return filteredQuestions.slice(start, start + itemsPerPage);
   }, [filteredQuestions, currentPage]);
 
-  // Human committee name translator
+  // Human committee name translator (Dönem 3 Resmi Programı)
   const formatCommitteeName = (cId: string) => {
-    // Dönem 3
-    if (cId === 'donem3-kurul1') return 'Dönem 3 Kurul 1: TIP 310 - Ürogenital ve Obstetrik';
-    if (cId === 'donem3-kurul2') return 'Dönem 3 Kurul 2: TIP 320 - Nöropsikiyatri';
-    if (cId === 'donem3-kurul3') return 'Dönem 3 Kurul 3: TIP 330 - Gastrointestinal Sistem';
-    if (cId === 'donem3-kurul4') return 'Dönem 3 Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör';
-    if (cId === 'donem3-kurul5') return 'Dönem 3 Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem';
-    if (cId === 'donem3-kurul6') return 'Dönem 3 Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma';
+    if (cId === 'donem3-kurul1') return 'Kurul 1: TIP 310 - Ürogenital ve Obstetrik';
+    if (cId === 'donem3-kurul2') return 'Kurul 2: TIP 320 - Nöropsikiyatri';
+    if (cId === 'donem3-kurul3') return 'Kurul 3: TIP 330 - Gastrointestinal Sistem';
+    if (cId === 'donem3-kurul4') return 'Kurul 4: TIP 340 - Dolaşım, Solunum ve Tümör';
+    if (cId === 'donem3-kurul5') return 'Kurul 5: TIP 350 - Ortopedi, Travmatoloji ve Hematopoetik Sistem';
+    if (cId === 'donem3-kurul6') return 'Kurul 6: TIP 360 - Endokrin, Metabolizma ve Yaşlanma';
     if (cId === 'donem3-final') return 'Dönem 3 Final Sınavı (28.06.2027)';
     if (cId === 'donem3-butunleme') return 'Dönem 3 Bütünleme Sınavı (16.07.2027)';
-
-    // Dönem 2
-    if (cId === 'donem2-kurul1') return 'Dönem 2 Kurul 1: TIP 211 - Dolaşım ve Solunum Sistemleri';
-    if (cId === 'donem2-kurul2') return 'Dönem 2 Kurul 2: TIP 212 - Sindirim ve Metabolizma Sistemleri';
-    if (cId === 'donem2-kurul3') return 'Dönem 2 Kurul 3: TIP 213 - Ürogenital ve Endokrin Sistemleri';
-    if (cId === 'donem2-kurul4') return 'Dönem 2 Kurul 4: TIP 214 - Sinir Sistemi ve Duyu Organları';
-    if (cId === 'donem2-kurul5') return 'Dönem 2 Kurul 5: TIP 215 - Hastalıkların Biyolojik Temelleri';
-    if (cId === 'donem2-final') return 'Dönem 2 Final Sınavı';
-
-    // Dönem 1
-    if (cId === 'donem1-kurul1') return 'Dönem 1 Kurul 1: TIP 111 - Hücre Biyolojisi I';
-    if (cId === 'donem1-kurul2') return 'Dönem 1 Kurul 2: TIP 112 - Hücre Biyolojisi II';
-    if (cId === 'donem1-kurul3') return 'Dönem 1 Kurul 3: TIP 113 - Hücre Biyolojisi III';
-    if (cId === 'donem1-kurul4') return 'Dönem 1 Kurul 4: TIP 114 - Kemik ve Eklem Kurulu';
-    if (cId === 'donem1-kurul5') return 'Dönem 1 Kurul 5: TIP 115 - Kas Kurulu';
 
     return cId;
   };
@@ -560,9 +551,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       {/* Title */}
       <div className="flex items-end gap-3">
         <div className="min-w-0 flex-1">
-          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] text-ink">Çıkmış sorular</h1>
+          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] text-ink">Dönem 3 Çıkmış Sorular</h1>
           <p className="m-0 mt-1 text-[14px] text-ink-3">
-            {tabCounts.validCount.toLocaleString('tr-TR')} tam metin soru
+            Dönem 3 müfredatında {tabCounts.validCount.toLocaleString('tr-TR')} tam metin soru
             {tabCounts.ambiguousCount > 0 && ` · ${tabCounts.ambiguousCount.toLocaleString('tr-TR')} inceleme bekliyor`}
           </p>
         </div>

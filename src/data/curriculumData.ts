@@ -117,7 +117,7 @@ export const OFFICIAL_CURRICULUM_COMMITTEES: CurriculumCommittee[] = [
       'Kalp ve Damar Cerrahisi',
       'İç Hastalıkları',
       'Halk Sağlığı',
-      'Anestezi ve Reanimasyon'
+      'Anesteziyoloji ve Reanimasyon'
     ],
     disciplines: [
       { name: 'Kardiyoloji', hours: 20, instructors: ['Prof. Dr. Orhan Önalan', 'Prof. Dr. Yeşim Akın', 'Dr. Öğr. Tuğba Kapanşahin'] },
@@ -130,7 +130,7 @@ export const OFFICIAL_CURRICULUM_COMMITTEES: CurriculumCommittee[] = [
       { name: 'Kalp ve Damar Cerrahisi', hours: 4, instructors: ['Doç. Dr. Erdem Çetin', 'Dr. Öğr. Üyesi Celal Selçuk Ünal'] },
       { name: 'İç Hastalıkları', hours: 2, instructors: ['Prof. Dr. Nurhayat Özkan Sevencan'] },
       { name: 'Halk Sağlığı', hours: 2, instructors: ['Doç. Dr. Nergis Sevinç', 'Dr. Öğr. Üyesi Erkay Nacar'] },
-      { name: 'Anestezi ve Reanimasyon', hours: 1, instructors: ['Doç. Dr. Müge Arıkan'] },
+      { name: 'Anesteziyoloji ve Reanimasyon', hours: 1, instructors: ['Doç. Dr. Müge Arıkan'] },
     ]
   },
   {
@@ -208,32 +208,99 @@ export const ALL_VALID_DISCIPLINES: string[] = Array.from(
   new Set(OFFICIAL_CURRICULUM_COMMITTEES.flatMap(c => c.allDisciplineNames))
 ).sort();
 
-export function normalizeDisciplineName(name: string): string {
-  if (!name) return 'Tıbbi Patoloji';
-  const clean = name.trim().toLowerCase();
-  if (clean.includes('genel tıp')) return 'Tıbbi Patoloji'; // Banish Genel Tıp
-  if (clean.includes('patoloji')) return 'Tıbbi Patoloji';
-  if (clean.includes('farma')) return 'Tıbbi Farmakoloji';
-  if (clean.includes('genetik')) return 'Tıbbi Genetik';
-  if (clean.includes('enfeksiyon')) return 'Enfeksiyon Hastalıkları';
-  if (clean.includes('üroloji') || clean.includes('uroloji')) return 'Üroloji';
-  if (clean.includes('halk')) return 'Halk Sağlığı';
-  if (clean.includes('kadın') || clean.includes('doğum') || clean.includes('obstetrik')) return 'Kadın Hastalıkları ve Doğum';
-  if (clean.includes('nöro') || clean.includes('noro')) return 'Nöroloji';
-  if (clean.includes('psiki')) return 'Psikiyatri';
-  if (clean.includes('aile')) return 'Aile Hekimliği';
-  if (clean.includes('beyin') || clean.includes('nöroşirürji')) return 'Beyin ve Sinir Cerrahisi';
-  if (clean.includes('ftr') || clean.includes('fizik tedavi') || clean.includes('rehabilitasyon')) return 'FTR';
-  if (clean.includes('anestezi')) return 'Anesteziyoloji ve Reanimasyon';
-  if (clean.includes('iç') || clean.includes('dahiliye')) return 'İç Hastalıkları';
-  if (clean.includes('çocuk') || clean.includes('pediatri')) return 'Çocuk Sağlığı ve Hastalıkları';
-  if (clean.includes('kardiyo')) return 'Kardiyoloji';
-  if (clean.includes('göğüs cerrahi') || clean.includes('gogus cerrahi')) return 'Göğüs Cerrahisi';
-  if (clean.includes('göğüs') || clean.includes('gogus') || clean.includes('pulmon')) return 'Göğüs Hastalıkları';
-  if (clean.includes('kalp ve damar') || clean.includes('kvc')) return 'Kalp ve Damar Cerrahisi';
-  if (clean.includes('acil')) return 'Acil Tıp';
-  if (clean.includes('ortopedi')) return 'Ortopedi ve Travmatoloji';
-  if (clean.includes('biyo') || clean.includes('biokimya')) return 'Tıbbi Biyokimya';
+/**
+ * 2026-2027 Karabük Üniversitesi Tıp Fakültesi Dönem 3 Resmi Müfredat Dersleri (22 Ders)
+ * Evrak Tarih ve Sayısı: 07.09.2026-E.541744
+ */
+export const DONEM3_CURRICULUM_DISCIPLINES: string[] = [
+  'Acil Tıp',
+  'Aile Hekimliği',
+  'Anesteziyoloji ve Reanimasyon',
+  'Beyin ve Sinir Cerrahisi',
+  'Çocuk Sağlığı ve Hastalıkları',
+  'Enfeksiyon Hastalıkları',
+  'FTR',
+  'Göğüs Cerrahisi',
+  'Göğüs Hastalıkları',
+  'Halk Sağlığı',
+  'İç Hastalıkları',
+  'Kadın Hastalıkları ve Doğum',
+  'Kalp ve Damar Cerrahisi',
+  'Kardiyoloji',
+  'Nöroloji',
+  'Ortopedi ve Travmatoloji',
+  'Psikiyatri',
+  'Tıbbi Biyokimya',
+  'Tıbbi Farmakoloji',
+  'Tıbbi Genetik',
+  'Tıbbi Patoloji',
+  'Üroloji'
+];
 
+/**
+ * Verilen serbest veya karmaşık branş adını Dönem 3 resmi ders programındaki standart ada normalize eder.
+ * Dönem 3 müfredatında yer almayan dersler için (Anatomi, Histoloji, Fizyoloji, vb.) null döner.
+ */
+export function normalizeDonem3Discipline(raw?: string): string | null {
+  if (!raw) return null;
+  const c = raw.trim().toLocaleLowerCase('tr-TR').replace(/[\u0300-\u036f]/g, '');
+
+  // Dönem 3 müfredatında bulunmayan branşları dışla (Dönem 1 & 2 veya diğer stajlar)
+  if (c.includes('anatomi')) return null;
+  if (c.includes('histoloji') || c.includes('embriyoloji')) return null;
+  if (c.includes('fizyoloji')) return null;
+  if (c.includes('biyofizik')) return null;
+  if (c.includes('biyoistatistik')) return null;
+  if (c.includes('deontoloji') || c.includes('tıp tarihi') || c.includes('tip tarihi')) return null;
+  if (c.includes('davranış') || c.includes('davranis')) return null;
+  if (c.includes('terminoloji')) return null;
+  if (c.includes('ilk yardım') || c.includes('ilk yardim')) return null;
+  if (c.includes('genel cerrahi')) return null;
+  if (c.includes('kulak burun') || c.includes('kbb')) return null;
+
+  // Dönem 3 Resmi Müfredat Ders Eşleştirmeleri
+  if (c.includes('acil')) return 'Acil Tıp';
+  if (c.includes('aile')) return 'Aile Hekimliği';
+  if (c.includes('anestezi')) return 'Anesteziyoloji ve Reanimasyon';
+  if (c.includes('beyin') || c.includes('nöroşirürji') || c.includes('norosirurji')) return 'Beyin ve Sinir Cerrahisi';
+  if (c.includes('çocuk') || c.includes('cocuk') || c.includes('pediatri')) return 'Çocuk Sağlığı ve Hastalıkları';
+  if (c.includes('enfeksiyon') || c.includes('mikrobiyoloji')) return 'Enfeksiyon Hastalıkları';
+  if (c.includes('ftr') || c.includes('fiziksel tıp') || c.includes('fiziksel tip') || c.includes('fizik tedavi') || c.includes('rehabilitasyon')) return 'FTR';
+  if (c.includes('göğüs cerrahi') || c.includes('gogus cerrahi')) return 'Göğüs Cerrahisi';
+  if (c.includes('göğüs') || c.includes('gogus') || c.includes('pulmon')) return 'Göğüs Hastalıkları';
+  if (c.includes('halk')) return 'Halk Sağlığı';
+  if (c.includes('kadın') || c.includes('kadin') || c.includes('doğum') || c.includes('dogum') || c.includes('obstetrik')) return 'Kadın Hastalıkları ve Doğum';
+  if (c.includes('kalp ve damar') || c.includes('kalp damar') || c.includes('kvc')) return 'Kalp ve Damar Cerrahisi';
+  if (c.includes('kardiyo')) return 'Kardiyoloji';
+  if (c.includes('nöro') || c.includes('noro')) return 'Nöroloji';
+  if (c.includes('ortopedi') || c.includes('travmatoloji')) return 'Ortopedi ve Travmatoloji';
+  if (c.includes('psiki') || c.includes('ruh sağlığı') || c.includes('ruh sagligi')) return 'Psikiyatri';
+  if (c.includes('biyokimya') || c.includes('biokimya')) return 'Tıbbi Biyokimya';
+  if (c.includes('farma')) return 'Tıbbi Farmakoloji';
+  if (c.includes('genetik')) return 'Tıbbi Genetik';
+  if (c.includes('patoloji')) return 'Tıbbi Patoloji';
+  if (c.includes('üroloji') || c.includes('uroloji')) return 'Üroloji';
+  if (c.includes('iç') || c.includes('ic') || c.includes('dahiliye')) return 'İç Hastalıkları';
+
+  return null;
+}
+
+/**
+ * Sorunun Dönem 3'e ait olup olmadığını doğrular.
+ * Hem kurul kimliğinin donem3 ile başlamasını hem de dersin Dönem 3 müfredatında yer almasını kontrol eder.
+ */
+export function isDonem3Question(q: { committeeId?: string; discipline?: string }): boolean {
+  if (!q) return false;
+  const cid = (q.committeeId || '').toLowerCase().trim();
+  if (!cid.startsWith('donem3')) {
+    return false;
+  }
+  const norm = normalizeDonem3Discipline(q.discipline);
+  return Boolean(norm);
+}
+
+export function normalizeDisciplineName(name: string): string {
+  const norm = normalizeDonem3Discipline(name);
+  if (norm) return norm;
   return 'Tıbbi Patoloji';
 }

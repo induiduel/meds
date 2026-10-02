@@ -39,6 +39,7 @@ const TABS: { id: AppTab; label: string; icon: React.ElementType }[] = [
 ];
 
 const MORE: { id: AppTab; label: string; hint: string; icon: React.ElementType; tint: string }[] = [
+  { id: 'glossary', label: 'Tıbbi Sözlük', hint: 'Hastalık & ilaç ansiklopedisi', icon: BookOpenText, tint: '#0F6E63' },
   { id: 'flashcards', label: 'Ezber kartları', hint: 'Tıbbi terimler ve ders kartları', icon: Layers, tint: '#7C3AED' },
   { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#1E4FD8' },
   { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#B7791F' },

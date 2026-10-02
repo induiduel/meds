@@ -75,7 +75,7 @@ async function generateZeroShot(prompt: string, apiKey: string): Promise<{ text:
     process.env.GEMINI_BILLED_KEY
   ].filter(Boolean) as string[];
 
-  const models = ['gemini-3.1-flash-lite', 'gemini-flash-latest', 'gemini-2.5-flash'];
+  const models = ['gemini-3.8-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
   for (const k of keys) {
     for (const m of models) {
       try {

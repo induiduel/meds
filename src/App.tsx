@@ -59,6 +59,7 @@ const LectureSummariesView = React.lazy(() => import('./components/LectureSummar
 const TranscriptionsView = React.lazy(() => import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView })));
 const FlashcardsView = React.lazy(() => import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView })));
 const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
+const MedicalEncyclopediaView = React.lazy(() => import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView })));
 
 const ViewFallback = () => <SectionLoader />;
 import { systemHealthMonitor } from './services/systemHealthMonitor';

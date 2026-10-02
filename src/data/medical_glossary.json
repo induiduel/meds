@@ -1578,5 +1578,365 @@
     "definition": "Üriner sistemi (renal pelvis, üreter, mesane ve üretra) döşeyen transizyonel epitelden kaynaklanan malign tümör. En sık mesanede görülür.",
     "clinicalPearls": "Sigara kullanımı ve anilin boyalarına maruziyet en önemli risk faktörüdür. Ağrısız makroskopik hematüri en tipik ilk belirtisidir. Çok odaklı (multifokal) gelişme eğilimindedir.",
     "badgeColor": "red"
+  },
+  {
+    "term": "Berrak Hücreli Renal Hücreli Karsinom (ccRCC)",
+    "aliases": [
+      "ccRCC",
+      "Grawitz tümörü",
+      "Berrak hücreli böbrek kanseri"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Clear Cell Renal Cell Carcinoma",
+    "definition": "Renal tübüler epitelden köken alan, böbreğin en sık görülen malign primer neoplazmıdır (tüm RHK'ların %65–70'i). Karakteristik olarak berrak, lipit ve glikojen zengini sitoplazmaya sahip hücrelerden oluşur.",
+    "clinicalPearls": "TUS & Komite İncisi: En sık RHK tipidir. VHL geni (3p25) defekti esastır. En sık hematolojik paraneoplastik sendromu Polistitemidir (Eritropoetin salgısı). Klasik triad (kostovertebral ağrı + palpabl kitle + hematüri) hastaların yalnızca %10'unda görülür.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Papiller Renal Hücreli Karsinom",
+    "aliases": [
+      "PRCC",
+      "Kromofilik RHK"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Papillary Renal Cell Carcinoma",
+    "definition": "RHK'ların %10–15'ini oluşturan, fibrovasküler korlar içeren papiller veya tübülopapiller yapılarla karakterize ikinci en sık böbrek karsinomu.",
+    "clinicalPearls": "Sınav Spotu: Kronik diyaliz hastalarında bilateral/multifokal böbrek kitlesi dendiğinde akla ilk Papiller RHK gelmelidir. Trizomi 7, trizomi 17 ve MET mutasyonu sorgulanır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Kromofob Renal Hücreli Karsinom",
+    "aliases": [
+      "Kromofob böbrek karsinomu"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Chromophobe Renal Cell Carcinoma",
+    "definition": "Kortikal toplayıcı kanalların interkale hücrelerinden köken alan, RHK'ların yaklaşık %5'ini oluşturan ve diğer tiplere kıyasla mükemmel prognoza sahip bir alt tip.",
+    "clinicalPearls": "Sınav İncisi: 'Bitki hücresi manzarası', perinükleer halo ve Kolloid demir boyası pozitifliği doğrudan Kromofob RHK'yı işaret eder.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Böbrek Onkositoması",
+    "aliases": [
+      "Onkositik adenom"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Renal Oncocytoma",
+    "definition": "Toplayıcı tübül interkale hücrelerinden gelişen, bol eozinofilik granüler sitoplazmalı onkositik hücrelerden oluşan BENİGN böbrek neoplazmıdır.",
+    "clinicalPearls": "Komite & TUS Spotu: 'Santral stellat skar', 'maun kahverengi makroskopi' ve 'elektron mikroskopisinde aşırı mitokondri birikimi' dendiğinde cevap tartışmasız Onkositomadır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Böbrek Anjiyomiyolipomu (AML)",
+    "aliases": [
+      "Böbrek AML",
+      "Tüberoz skleroz hamartomu"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Renal Angiomyolipoma",
+    "definition": "Damarlar (anjiyo), düz kas (miyo) ve olgun yağ dokusundan (lipom) oluşan benign mezenkimal lezyondur. Tüberoz sklerozlu hastaların %25-50'sinde görülür.",
+    "clinicalPearls": "Sınav Spotu: Tüberoz skleroz kompleksi (TSC1 hamartin, TSC2 tüberin mutasyonu) ile en sık birliktelik gösteren böbrek lezyonudur.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Mesane Ürotelyal Karsinomu",
+    "aliases": [
+      "Değişici epitel hücreli karsinom",
+      "TCC"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Urothelial Carcinoma of Bladder",
+    "definition": "Üriner sistemin (özellikle mesanenin) en sık görülen malign neoplazmıdır (%90'dan fazlası). En sık semptomu ağrısız, intermittan pıhtılı gros hematüridir.",
+    "clinicalPearls": "Sınav Spotu: Ağrısız gros hematüri ile başvuran yaşlı sigara içicisi erkekte ilk ekarte edilecek hastalık Ürotelyal karsinomdur.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Minimal Değişiklik Hastalığı (MCD)",
+    "aliases": [
+      "MCD",
+      "Lipoid nefroz",
+      "Nil hastalığı"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Minimal Change Disease",
+    "definition": "Çocukluk çağında (özellikle 2–6 yaş) nefrotik sendromun en sık nedenidir (%90). Glomerüller ışık mikroskopisinde tamamen normal görünür.",
+    "clinicalPearls": "Sınav Spotu: 'Işık mikroskopisi normal, IF negatif, EM'de podosit ayaksı çıkıntılarda silinme, kortikosteroidlere mükemmel yanıt' = Minimal Değişiklik Hastalığı.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Lupus Nefriti (Evre I-VI)",
+    "aliases": [
+      "SLE böbrek tutulumu"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Lupus Nephritis",
+    "definition": "Sistemik Lupus Eritematozus (SLE) hastalarında immün kompleks birikimine bağlı gelişen ve prognozu belirleyen en majör organ tutulumudur.",
+    "clinicalPearls": "Sınav İncisi: Lupus nefritinin en sık görülen ve prognozu en kötü olan sınıfı Sınıf IV (Diffüz proliferatif lupus nefriti)'dir. 'Wire-loop' lezyonu ve 'Full-house' boyanma TUS'un klasik sorularıdır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Diyabetik Glomerüloskleroz (Kimmelstiel-Wilson)",
+    "aliases": [
+      "Kimmelstiel-Wilson hastalığı",
+      "Diyabetik nefropati"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Diabetic Glomerulosclerosis",
+    "definition": "Diabetes Mellitus'un en yıkıcı mikrovasküler komplikasyonudur; son dönem böbrek yetmezliğinin dünya çapındaki en sık nedenidir.",
+    "clinicalPearls": "Sınav Spotu: Diyabetik nefropatinin ilk klinik laboratuvar göstergesi MİKROALBÜMİNÜRİ'dir (30–300 mg/gün). Patognomonik histolojik bulgu ise Kimmelstiel-Wilson nodülüdür.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Hızlı İlerleyen Glomerülonefrit (RPGN / Kresentik GN)",
+    "aliases": [
+      "Kresentik glomerülonefrit",
+      "Hilal şekilli GN"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Rapidly Progressive Glomerulonephritis",
+    "definition": "Haftalar veya aylar içinde hızlı böbrek fonksiyon kaybı, oligüri ve ölümcül üremi ile karakterize klinik sendromdur. Glomerüllerin çoğunda Bowman aralığında kresent (hilal) oluşumu ile tanımlanır.",
+    "clinicalPearls": "TUS & Komite İncisi: Kresent yapısında yer alan hücreler: Paryetal epitel hücreleri ve makrofajlardır. Tip 3 (Pauci-immün) tipte immün birikim saptanmaz, serumda ANCA pozitiftir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Kronik Piyelonefrit ve Reflü Nefropatisi",
+    "aliases": [
+      "Reflü nefropatisi",
+      "Tiroidizasyon böbreği"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Chronic Pyelonephritis",
+    "definition": "Tekrarlayan bakteriyel enfeksiyonlar ve vezikoüreteral reflü (VÜR) sonucu renal pelvis ve kalikslerin kalıcı hasarı ve kortikal skarlanması ile giden kronik tübülointerstisyel hastalıktır.",
+    "clinicalPearls": "Sınav İncisi: Böbrek kesitinde 'tiroid dokusu benzeri görünüm' (tiroidizasyon) ve 'kaliks küntleşmesi ile uyumlu kaba skarlar' doğrudan Kronik Piyelonefrit bulgusudur.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Benign Nefroskleroz",
+    "aliases": [
+      "Hyalin arteriyoloskleroz",
+      "Hipertansif böbrek hastalığı"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Benign Nephrosclerosis",
+    "definition": "Uzun süreli iyi kontrollü veya hafif-orta kronik hipertansiyon ve yaşlanma zemininde böbrek arteriyollerinin ve küçük arterlerin sertleşmesidir.",
+    "clinicalPearls": "Sınav Spotu: Kronik esansiyel hipertansiyonda görülen vasküler patoloji 'hyalin arteriyoloskleroz'dur. Böbrek simetrik küçülür ve yüzeyi granülerdir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Malign Nefroskleroz",
+    "aliases": [
+      "Malign hipertansiyon böbreği",
+      "Pire ısırığı böbrek"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Malignant Nephrosclerosis",
+    "definition": "Malign hipertansiyon tablosunda (kan basıncı >200/120 mmHg, papilödem, retinal kanamalar) böbrek vasküler yatağında gelişen akut ve nekrotizan hasar tablosudur.",
+    "clinicalPearls": "TUS & Komite İncisi: 'Soğan zarı (onion-skinning) hiperplastik arteriyoloskleroz', 'fibrinoid nekroz' ve 'pire ısırığı böbrek' triadının cevabı Malign Nefrosklerozdur.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Otozomal Dominant Polikistik Böbrek Hastalığı (ADPKD)",
+    "aliases": [
+      "Erişkin tipi polikistik böbrek",
+      "ADPKD"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Autosomal Dominant Polycystic Kidney Disease",
+    "definition": "Otozomal dominant geçişli, böbrek parankimini progresif olarak tahrip eden sayısız kist gelişimi ile karakterize, her iki böbreğin dev boyutlara ulaştığı kalıtsal hastalıktır.",
+    "clinicalPearls": "Sınav İncisi: Ekstrarenal komplikasyonları çok sorgulanır: 1) Willis poligonunda SAKKÜLER (BERRY) ANEVRİZMASI (rüptürü subaraknoid kanama yapar!), 2) Karaciğer kistleri (polikistik karaciğer), 3) Mitral kapak prolapsusu (MVP).",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Sifiliz (Frengi) ve Treponema pallidum",
+    "aliases": [
+      "Lues",
+      "Frengi",
+      "Büyük taklitçi"
+    ],
+    "category": "Tıbbi Mikrobiyoloji & Enfeksiyon",
+    "pronunciation": "Syphilis / Treponema pallidum",
+    "definition": "Treponema pallidum spiroketinin neden olduğu, cinsel temas veya transplasental yolla bulaşan, primer, sekonder, latent ve tersiyer evrelerle seyreden sistemik enfeksiyondur.",
+    "clinicalPearls": "Sınav Spotu: Avuç içi ve ayak tabanını tutan döküntü dendiğinde ilk akla Sifiliz gelmelidir. Tanıda tarama testi VDRL/RPR (non-treponemal); doğrulama testi FTA-ABS / TPHA'dır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Benzatin Penisilin G (Depopen)",
+    "aliases": [
+      "Depopen",
+      "Kristasili depo",
+      "Penadur"
+    ],
+    "category": "Farmakoloji & Tedavi",
+    "pronunciation": "Benzathine Benzylpenicillin",
+    "definition": "Treponema pallidum enfeksiyonlarının (Primer, Sekonder ve Erken Latent Sifiliz) tedavisinde birinci basamak ve altın standart uzun etkili depo penisilindir.",
+    "clinicalPearls": "Sınav Spotu: 'Gebelikte sifiliz tedavisi': Tek güvenilir ve zorunlu ilaç Penisilin G'dir! Penisilin alerjisi olan gebede alternatif ilaç verilmez, MUTLAKA DESENSİTİZASYON YAPILIP PENİSİLİN VERİLİR.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Jarisch-Herxheimer Reaksiyonu",
+    "aliases": [
+      "Herxheimer yanıtı"
+    ],
+    "category": "Farmakoloji & Enfeksiyon",
+    "pronunciation": "Jarisch-Herxheimer Reaction",
+    "definition": "Sifiliz veya diğer spiroket enfeksiyonlarının antimikrobiyal tedavisinin (özellikle penisilin) başlamasından sonraki ilk 2–24 saat içinde ortaya çıkan akut febril sistemik reaksiyondur.",
+    "clinicalPearls": "Sınav İncisi: 'Sifiliz tedavisi başlandıktan birkaç saat sonra gelişen titreme ve ateş' sorulduğunda tedavi KESİLMEZ, semptomatik antipiretikler verilerek antibiyotiğe devam edilir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Gonore (Bel Soğukluğu) ve Neisseria gonorrhoeae",
+    "aliases": [
+      "Gonokok",
+      "Bel soğukluğu"
+    ],
+    "category": "Tıbbi Mikrobiyoloji & Enfeksiyon",
+    "pronunciation": "Gonorrhea / Neisseria gonorrhoeae",
+    "definition": "Neisseria gonorrhoeae'nin yol açtığı, erkeklerde akut pürülan üretral akıntı ve dizüri, kadınlarda ise sıklıkla asemptomatik servisit ve PID ile seyreden CYBE'dir.",
+    "clinicalPearls": "Sınav Spotu: Tedavide altın standart: SEFTRİAKSON (500 mg tek doz İ.M.). Ko-enfeksiyon riski yüksek olduğu için klamidya ekarte edilemiyorsa DOKSİSİKLİN (100 mg 2x1, 7 gün) tedaviye eklenir.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Seftriakson",
+    "aliases": [
+      "Rocephin",
+      "Unacefin",
+      "Novosef"
+    ],
+    "category": "Farmakoloji",
+    "pronunciation": "Ceftriaxone",
+    "definition": "Geniş spektrumlu 3. kuşak sefalosporindir. Neisseria gonorrhoeae enfeksiyonlarında, bakteriyel menenjitlerde ve komplike piyelonefritlerde birinci basamak antibiyotiktir.",
+    "clinicalPearls": "Sınav İncisi: Seftriakson safrada çökerek psödokolelitiyazis (safra çamuru) yapabilir. Yenidoğanda bilirubini albüminden ayırarak kernikterus riskini artırdığı için hiperbilirubinemik yenidoğanda kontrendikedir!",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Chlamydia trachomatis ve Nongonokoksik Üretrit",
+    "aliases": [
+      "Klamidya",
+      "NGU"
+    ],
+    "category": "Tıbbi Mikrobiyoloji",
+    "pronunciation": "Chlamydia trachomatis",
+    "definition": "Zorunlu hücre içi bakteridir. Dünya çapında en sık görülen bakteriyel cinsel yolla bulaşan enfeksiyon etkenidir. Nongonokoksik üretrit ve kadınlarda tubal infertiliteye yol açan PID'nin birincil nedenidir.",
+    "clinicalPearls": "Sınav Spotu: Tedavide DOKSİSİKLİN (100 mg 2x1 oral, 7 gün) ilk seçenektir. Gebelikte ise doksisiklin kontrendike olduğu için AZİTROMİSİN (1 g tek doz oral) kullanılır.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Doksisiklin",
+    "aliases": [
+      "Monodox",
+      "Tetradox"
+    ],
+    "category": "Farmakoloji",
+    "pronunciation": "Doxycycline",
+    "definition": "30S ribozomal alt birime bağlanan uzun etkili tetrasiklin grubu antibiyotiktir. Chlamydia trachomatis üretritinde birinci basamak tedavidir.",
+    "clinicalPearls": "Sınav İncisi: Doksisiklin kalsiyuma bağlanır; süt ve antiasitlerle alındığında emilimi bozulur. Dişlerde kalıcı sarı-kahverengi renk değişikliği ve kemik gelişim geriliği yapar.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Metronidazol",
+    "aliases": [
+      "Flagyl"
+    ],
+    "category": "Farmakoloji",
+    "pronunciation": "Metronidazole",
+    "definition": "Antiprotozoal ve anaerobik antibakteriyel etkili nitroimidazol türevi ilaçtır. Trichomonas vaginalis ve Bakteriyel Vajinozis tedavisinde altın standarttır.",
+    "clinicalPearls": "TUS & Komite İncisi: DİSÜLFİRAM BENZERİ REAKSİYON: Alkolle birlikte alındığında asetaldehit dehidrogenazı inhibe eder; şiddetli kusma, kızarma, taşikardi yapar. Metalik tat en sık yan etkisidir.",
+    "badgeColor": "blue"
+  },
+  {
+    "term": "Trikomoniyaz (Trichomonas vaginalis)",
+    "aliases": [
+      "Trikomonas vajiniti"
+    ],
+    "category": "Tıbbi Mikrobiyoloji & Kadın Doğum",
+    "pronunciation": "Trichomoniasis / Trichomonas vaginalis",
+    "definition": "Kamçılı bir protozoon olan Trichomonas vaginalis'in neden olduğu, bol köpüklü, sarı-yeşil renkli, kötü kokulu vajinal akıntı ile karakterize cinsel yolla bulaşan enfeksiyondur.",
+    "clinicalPearls": "Sınav Spotu: 'Köpüklü sarı-yeşil akıntı', 'ıslak preparatta kamçılı hareketli trofozoitler' ve kolposkopide 'çilek serviks' bulgusu doğrudan Trikomoniyazdır. Tedavi: Metronidazol (Eş tedavisi şart!).",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Bakteriyel Vajinozis (Gardnerella vaginalis)",
+    "aliases": [
+      "Gardnerella vajiniti",
+      "Nonspesifik vajinit"
+    ],
+    "category": "Tıbbi Mikrobiyoloji & Kadın Doğum",
+    "pronunciation": "Bacterial Vaginosis",
+    "definition": "Vajinada hidrojen peroksit üreten koruyucu Lactobacillus türlerinin azalması ve Gardnerella vaginalis ile anaerob bakterilerin (Atopobium, Mobiluncus) aşırı çoğalmasıyla karakterize vajinal ekosistem bozukluğudur.",
+    "clinicalPearls": "Sınav İncisi: 'Clue cell (ipucu hücresi)', 'Whiff pozitifliği / balık kokusu' ve 'pH > 4.5' = Bakteriyel Vajinozis. Tedavi: Oral veya vajinal Metronidazol.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "SRY Geni (Sex-determining Region Y)",
+    "aliases": [
+      "Testis belirleyici faktör - TDF",
+      "SRY"
+    ],
+    "category": "Tıbbi Genetik",
+    "pronunciation": "SRY Gene",
+    "definition": "Y kromozomunun kısa kolunda (Yp11.3) yer alan, primitif indiferan gonaddan testis gelişimini başlatan ana anahtar düzenleyici gendir.",
+    "clinicalPearls": "Sınav Spotu: 'Y kromozomunda cinsiyeti belirleyen temel gen SRY'dir'. 'Swyer sendromu' (46,XY gonadal disgenezi): SRY mutasyonu sonucu gonadlar gelişemez (streak gonad), dişi iç ve dış genitalya gelişir.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Turner Sendromu (45,X0)",
+    "aliases": [
+      "Monozomi X",
+      "45,X"
+    ],
+    "category": "Tıbbi Genetik",
+    "pronunciation": "Turner Syndrome",
+    "definition": "Bir X kromozomunun tam veya kısmi monozomisi (45,X0) sonucu gelişen, yalnızca dişi fenotipte görülen kromozomal sendromdur.",
+    "clinicalPearls": "Sınav İncisi: En sık kardiyovasküler anomalisi BİKÜSPİT AORT KAPAĞI ve AORT KOARKTASYONU'dur. En sık renal anomalisi ise AT NALI BÖBREK'tir.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Konjenital Adrenal Hiperplazi (KAH)",
+    "aliases": [
+      "KAH",
+      "21-hidroksilaz eksikliği"
+    ],
+    "category": "Tıbbi Genetik & Patoloji",
+    "pronunciation": "Congenital Adrenal Hyperplasia",
+    "definition": "Kortizol biyosentezindeki otozomal resesif enzim defektlerine bağlı ACTH aşırı salgılanması ve adrenal korteks hiperplazisi ile seyreden genetik hastalık grubudur.",
+    "clinicalPearls": "Sınav İncisi: 46,XX genetik dişi bebekte ambigius genitalyanın en sık nedeni Konjenital Adrenal Hiperplazidir. Tanıda kanda 17-OH Progesteron yüksekliği ölçülür.",
+    "badgeColor": "rose"
+  },
+  {
+    "term": "Androjen Duyarsızlığı Sendromu (Testiküler Feminizasyon)",
+    "aliases": [
+      "Testiküler feminizasyon",
+      "AIS",
+      "CAIS"
+    ],
+    "category": "Tıbbi Genetik",
+    "pronunciation": "Androgen Insensitivity Syndrome",
+    "definition": "X kromozomundaki Androjen Reseptör (AR) gen mutasyonu sonucu, hedef dokuların testosteron ve DHT'ye tam veya kısmi yanıtsızlığı ile karakterize X'e bağlı resesif durumdur.",
+    "clinicalPearls": "Sınav Spotu: 'Primer amenore ile başvuran, dış genitalyası dişi, memeleri gelişmiş ancak aksiller ve pubik kıllanması olmayan 46,XY birey' = Tam Androjen Duyarsızlığı Sendromu.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Likefaksiyon (Kollikuasyon) Nekrozu",
+    "aliases": [
+      "Eriyen nekroz",
+      "Kollikuasyon nekrozu"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Liquefactive Necrosis",
+    "definition": "Ölü hücrelerin güçlü litik enzimlerle tamamen sindirilerek dokunun sıvılaşmış visköz bir kitleye (püy/apse veya kistik kavite) dönüştüğü nekroz tipidir.",
+    "clinicalPearls": "Sınav Spotu: 'Beyin enfarktüsü' ve 'akut bakteriyel apse' dendiğinde akla gelecek tek nekroz tipi Likefaksiyon nekrozudur.",
+    "badgeColor": "teal"
+  },
+  {
+    "term": "Kazeöz Nekroz",
+    "aliases": [
+      "Peynirimsi nekroz",
+      "Tüberküloz nekrozu"
+    ],
+    "category": "Tıbbi Patoloji",
+    "pronunciation": "Caseous Necrosis",
+    "definition": "Tüberküloz enfeksiyonuna özgü, koagülasyon ve likefaksiyon nekrozunun bir kombinasyonu olan peynirimsi nekroz tipidir.",
+    "clinicalPearls": "Sınav Spotu: 'Langhans tipi multinükleer dev hücreler içeren kazeifiye granülom' tüberküloz için patognomoniktir.",
+    "badgeColor": "teal"
   }
 ]
