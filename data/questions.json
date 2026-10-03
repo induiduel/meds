@@ -75,200 +75,18 @@
   ],
   "questions": [
     {
-      "id": "past-1790877034674-813824",
-      "sourceFile": "1. Kurul Sorular.txt",
-      "committeeId": "donem3-kurul1",
-      "examYear": "2021-2022",
-      "questionNumber": 10,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tiroid Neoplazileri ve Epidemiyolojisi",
-      "rawQuestion": {
-        "stem": "Türkiye’de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser hangisidir?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Meme"
-          },
-          {
-            "key": "B",
-            "text": "Over"
-          },
-          {
-            "key": "C",
-            "text": "Endometrium"
-          },
-          {
-            "key": "D",
-            "text": "Serviks uteri"
-          },
-          {
-            "key": "E",
-            "text": "Tiroid"
-          }
-        ],
-        "claimedAnswer": "A"
-      },
-      "reconstruction": {
-        "stem": "Türkiye'de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser türü aşağıdakilerden hangisidir?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Tiroid karsinomu",
-            "isAiFilled": false
-          },
-          {
-            "key": "B",
-            "text": "Meme karsinomu",
-            "isAiFilled": true
-          },
-          {
-            "key": "C",
-            "text": "Serviks uteri karsinomu",
-            "isAiFilled": true
-          },
-          {
-            "key": "D",
-            "text": "Over malign epitelyal tümörü",
-            "isAiFilled": true
-          },
-          {
-            "key": "E",
-            "text": "Hodgkin lenfoma",
-            "isAiFilled": true
-          }
-        ],
-        "correctAnswer": "A",
-        "explanation": "Türkiye'deki kanser insidans verilerine (örneğin TÜİK ve Sağlık Bakanlığı Kanser Daire Başkanlığı 2014 raporları) göre, 15-24 yaş arası genç kadın popülasyonda en sık görülen kanser tiroid bezinin maligniteleridir (özellikle papiller tiroid karsinomu). Tiroid kanserleri genel popülasyonda ve özellikle kadınlarda (yaklaşık 3:1 oranında) erkeklere kıyasla belirgin şekilde daha yüksek oranda izlenmektedir.",
-        "confidenceScore": 96,
-        "notesAndDiscrepancies": "Öğrenci sorusundaki yazım hataları ('kadınlarda' kelimesindeki boşluk vb.) giderildi. Amfi ders notu 'D8_D9_tiroid_neopl' verileri ve Türkiye epidemiyolojik verileri ışığında soru kökü resmi kurul sınavı formatına uyarlandı ve 5 şık tamamlandı.",
-        "lastUpdated": "2026-10-01T21:57:04.940Z"
-      },
-      "isSuspect": false,
-      "isAmbiguous": false,
-      "ambiguityReason": null,
-      "matchedNoteTitle": "1",
-      "matchedSlidePage": 3,
-      "upvotes": 0,
-      "comments": [],
-      "reports": [],
-      "createdAt": "2026-10-01T18:23:23.395Z",
-      "claimedAnswer": "A",
-      "status": "completed",
-      "updatedAt": "2026-10-01T21:57:05.042Z",
-      "lectureReference": {
-        "noteId": "note-88be594003",
-        "noteTitle": "D8_D9_tiroid_neopl",
-        "discipline": "Tıp Ders Notu",
-        "pageNumber": 66,
-        "totalSlides": 99,
-        "matchedSnippet": "...Tiroid Karsinomunun Epidemiyolojisi • Kadınlarda erkeklere göre ≈3:1 daha sık görülür. • Papiller tiroid karsinomuna göre daha ileri yaşta ortaya çıkar. • En sık 40–60 yaş aralığınd...",
-        "confidenceScore": 100,
-        "reasoning": "Amfi Slayt Eşleşmesi: \"D8_D9_tiroid_neopl\" dersinin 66. slaytındaki (göre, yaş, dınlarda, sık) ifadeleri soru içeriği ile örtüşmektedir."
-      }
-    },
-    {
-      "id": "q-donem3-kurul1-unassigned-1790951053241",
-      "tags": [
-        "Tıbbi Patoloji",
-        "numarasız-hatırlanan"
-      ],
-      "topic": "Tıbbi Patoloji Sorusu",
-      "status": "completed",
-      "options": [],
-      "upvotes": 0,
-      "createdAt": "2026-10-02T14:24:13.63934+00:00",
-      "fragments": [
-        {
-          "id": "f-1790951053241-1mbo",
-          "text": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:24:13.241Z",
-          "likedBy": []
-        }
-      ],
-      "revisions": [
-        {
-          "id": "rev-1790951053241",
-          "stem": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
-          "topic": "Tıbbi Patoloji Sorusu",
-          "options": [],
-          "version": 1,
-          "editedAt": "2026-10-02T14:24:13.241Z",
-          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "discipline": "Tıbbi Patoloji",
-          "editorName": "Dr House",
-          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
-        }
-      ],
-      "updatedAt": "2026-10-02T14:50:47.877Z",
-      "discipline": "Tıbbi Patoloji",
-      "committeeId": "donem3-kurul1",
-      "claimedAnswer": "A",
-      "questionNumber": 0,
-      "reconstruction": {
-        "stem": "Kronik romatoid artrit tanısıyla takip edilen 58 yaşındaki kadın hastada son zamanlarda bilateral bacak ödemi ve proteinüri (6 g/gün) gelişiyor. Yapılan renal biyopsinin ışık mikroskobik incelemesinde, glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanıyor. Bu birikim Kongo kırmızısı (Congo red) boyası ile boyanıp polarize ışık mikroskobunda incelendiğinde elma yeşili çift kırınım (birefringe) gösteriyor.\n\nBu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Amiloid",
-            "isAiFilled": false
-          },
-          {
-            "key": "B",
-            "text": "Glikojen",
-            "isAiFilled": false
-          },
-          {
-            "key": "C",
-            "text": "Kalsiyum",
-            "isAiFilled": false
-          },
-          {
-            "key": "D",
-            "text": "Melanin",
-            "isAiFilled": false
-          },
-          {
-            "key": "E",
-            "text": "Kolesterol",
-            "isAiFilled": false
-          }
-        ],
-        "explanation": "Patofizyoloji: Amiloidoz, yanlış katlanmış proteinlerin dokularda çözünmeyen fibriler yapılar halinde ekstraselüler olarak birikmesiyle karakterize progressif bir hastalıktır. Kronik inflamatuar süreçlerde (romatoid artrit, tüberküloz, bronşektazi vb.) artan serum amiloid A (SAA) proteini, AA tipi amiloid birikimine yol açarak sekonder sistemik amiloidoza neden olur. Böbrek tutulumu sıklıkla ağır proteinüri ve nefrotik sendrom ile prezente olur.\n\nDoğru Şık Açıklaması (A): Amiloid birikimi ışık mikroskobunda amorf, asidofilik (eozinofilik) ekstraselüler madde olarak görülür. Kongo kırmızısı (Congo red) ile boyandıktan sonra polarize ışık altında yeşil (elma yeşili) çift kırınım (birefringence) göstermesi amiloid için patognomoniktir.\n\nÇeldiricilerin Analizi:\n- Glikojen (B): Hücre içi birikim gösterir, hematoksilen-eozinde berrak vakuoller oluşturur, PAS boyası ile pozitif boyanır ve diastaz ile sindirilir.\n- Kalsiyum (C): Hematoksilen-eozinde koyu mavi-mor (bazofilik) amorf veya granüler çökeltiler halinde görülür. von Kossa veya Alizarin red boyalarıyla boyanır.\n- Melanin (D): Melanositler tarafından üretilen kahverengi-siyah intraselüler pigmenttir. Masson-Fontana boyasıyla gösterilebilir.\n- Kolesterol (E): Doku takibi sırasında eriyip gittiğinden histolojik kesitlerde iğne şeklinde berrak yarıklar (kolesterol kleftleri) olarak izlenir.\n\nKlinik İpucu: Kronik inflamatuar hastalığı olan bir hastada nefrotik sendrom tablosu geliştiğinde akla ilk gelmesi gereken patoloji AA amiloidozudur. Kesin tanı için rektal veya abdominal yağ yastıkçığı biyopsisinde Kongo kırmızısı pozitifliği aranır.",
-        "lastUpdated": "2026-10-02T14:24:54.078Z",
-        "correctAnswer": "A",
-        "confidenceScore": 95,
-        "notesAndDiscrepancies": "Öğrencinin hatırladığı beş şık (amiloid, glikojen, kalsiyum, melanin, kolesterol) hücre içi ve dışı birikimler ile patolojik pigmentler konusuna aittir. Bu şıkları bir araya getiren en klasik, en yüksek verimli (high-yield) ve TUS formatına en uygun soru amiloid birikimini ve boyanma özelliklerini sorgulayan klinik senaryodur."
-      },
-      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-      "contributedByName": "Dr House",
-      "isUnassignedNumber": true
-    },
-    {
       "id": "q-donem3-kurul1-unassigned-1790951030251",
       "tags": [
         "Tıbbi Patoloji",
-        "numarasız-hatırlanan"
+        "numarasız-hatırlanan",
+        "taslak-birlestirildi"
       ],
       "topic": "Tıbbi Patoloji Sorusu",
-      "status": "gathering",
+      "status": "completed",
       "options": [],
+      "upvotes": 0,
       "createdAt": "2026-10-02T14:23:50.62677+00:00",
-      "fragments": [
-        {
-          "id": "f-1790951030251-t6ke",
-          "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:23:50.251Z",
-          "likedBy": []
-        }
-      ],
+      "fragments": [],
       "revisions": [
         {
           "id": "rev-1790951030251",
@@ -281,251 +99,1136 @@
           "discipline": "Tıbbi Patoloji",
           "editorName": "Dr House",
           "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        },
+        {
+          "id": "rev-merge-1790983091687",
+          "version": 2,
+          "editedAt": "2026-10-02T23:18:11.687Z",
+          "editorName": "Yönetici",
+          "changeSummary": "4 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-merge-1790983486379",
+          "version": 3,
+          "editedAt": "2026-10-02T23:24:46.379Z",
+          "editorName": "Yönetici",
+          "changeSummary": "5 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-02T14:50:52.500Z",
+      "updatedAt": "2026-10-03T00:03:23.726Z",
       "discipline": "Tıbbi Patoloji",
       "committeeId": "donem3-kurul1",
       "questionNumber": 0,
+      "reconstruction": {
+        "stem": "58 yaşında kronik romatoid artrit hastası olan kadın hastada son zamanlarda bilateral bacak ödemi ve 6 g/gün proteinüri gelişmiştir. Renal biyopsinin ışık mikroskobik incelemesinde glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanmıştır. Bu birikim Congo kırmızısı (Congo red) ile boyanıp polarize ışık mikroskobunda \"apple‑green birefringence\" (elma‑yeşili çift kırınım) göstermektedir. Bu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "text": "Amiloid",
+            "isAiFilled": false
+          },
+          {
+            "text": "Glikojen",
+            "isAiFilled": false
+          },
+          {
+            "text": "Kalsiyum",
+            "isAiFilled": false
+          },
+          {
+            "text": "Melanin",
+            "isAiFilled": false
+          },
+          {
+            "text": "Kolesterol",
+            "isAiFilled": false
+          }
+        ],
+        "explanation": "Congo kırmızısı ile boyanan ve polarize ışık altında apple‑green birefringence gösteren ekstraselüler amorf materyal, amiloid birikimidir. Amiloid, β‑katlanmış proteinlerin dizi halinde birikmesiyle oluşur ve kronik inflamatuar hastalıklarda (ör. romatoid artrit) sekonder amiloidoz gelişebilir. Glikojen, PAS pozitif ancak Congo kırmızısı ile boyanmaz; kalsiyum, von Kossa ile tespit edilir ve ışık mikroskobunda parlak, kırılgan bir yapı gösterir; melanin, Fontana‑Masson ile boyanır ve ışık mikroskobunda kahverengi‑siyah pigment verir; kolesterol, yağ damlacıkları şeklinde boşluk bırakır ve özel yağ boyalarıyla görülür. Bu nedenlerle sadece amiloid doğru cevaptır.",
+        "lastUpdated": "2026-10-02T23:18:44.402Z",
+        "correctAnswer": "A",
+        "confidenceScore": 96,
+        "notesAndDiscrepancies": "Öğrencilerin hatırladığı tüm şıklar (amiloid, glikojen, kalsiyum, melanin, kolesterol) doğru şekilde korunmuş ve imla hataları düzeltilmiştir. Sorunun metni, verilen ipuçları (Congo kırmızısı, apple‑green birefringence) ile tutarlı bir klinik senaryo hâline getirildi. Çelişki veya eksik bilgi bulunmamaktadır."
+      },
       "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
       "contributedByName": "Dr House",
       "isUnassignedNumber": true,
-      "upvotes": 0,
-      "reconstruction": null
-    },
-    {
-      "id": "q-1790956524167",
-      "committeeId": "donem3-kurul1",
-      "questionNumber": 2,
-      "discipline": "Tıbbi Patoloji",
-      "topic": "Tıbbi Patoloji Hatırlanan Soru",
-      "status": "gathering",
-      "fragments": [
+      "examYear": "2026-2027",
+      "mergedSatellites": [
         {
-          "id": "f-1790956524167-gqdh",
-          "author": "Dönem 3 Öğrencisi",
-          "text": "dfdfd",
-          "type": "stem",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
-        },
-        {
-          "id": "f-opt-1790956524167-A",
-          "author": "Dönem 3 Öğrencisi",
-          "text": "A) asas",
-          "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
-        },
-        {
-          "id": "f-opt-1790956524167-B",
-          "author": "Dönem 3 Öğrencisi",
-          "text": "B) dfdf",
-          "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
-        },
-        {
-          "id": "f-opt-1790956524167-C",
-          "author": "Dönem 3 Öğrencisi",
-          "text": "C) df",
-          "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
-        },
-        {
-          "id": "f-opt-1790956524167-D",
-          "author": "Dönem 3 Öğrencisi",
-          "text": "D) dfdf",
-          "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
-        },
-        {
-          "id": "f-opt-1790956524167-E",
-          "author": "Dönem 3 Öğrencisi",
-          "text": "E) df",
-          "type": "option",
-          "timestamp": "2026-10-02T15:55:24.167Z",
-          "upvotes": 1
-        }
-      ],
-      "options": [
-        {
-          "key": "A",
-          "text": "asas",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
-        },
-        {
-          "key": "B",
-          "text": "dfdf",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
-        },
-        {
-          "key": "C",
-          "text": "df",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
-        },
-        {
-          "key": "D",
-          "text": "dfdf",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
-        },
-        {
-          "key": "E",
-          "text": "df",
-          "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 1
-        }
-      ],
-      "claimedAnswer": "B",
-      "tags": [
-        "Tıbbi Patoloji"
-      ],
-      "contributedByName": "Dönem 3 Öğrencisi",
-      "revisions": [
-        {
-          "id": "rev-1790956524167",
-          "version": 1,
-          "editedAt": "2026-10-02T15:55:24.167Z",
-          "editorName": "Dönem 3 Öğrencisi",
-          "changeSummary": "İlk soru kaydı oluşturuldu",
-          "stem": "dfdfd",
-          "discipline": "Tıbbi Patoloji",
-          "topic": "Tıbbi Patoloji Hatırlanan Soru",
-          "claimedAnswer": "B",
-          "options": [
+          "id": "q-donem3-kurul1-unassigned-1790951053241",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "completed",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T14:24:13.63934+00:00",
+          "fragments": [
             {
-              "key": "A",
-              "text": "asas",
-              "upvotes": 1
-            },
-            {
-              "key": "B",
-              "text": "dfdf",
-              "upvotes": 1
-            },
-            {
-              "key": "C",
-              "text": "df",
-              "upvotes": 1
-            },
-            {
-              "key": "D",
-              "text": "dfdf",
-              "upvotes": 1
-            },
-            {
-              "key": "E",
-              "text": "df",
-              "upvotes": 1
+              "id": "f-1790951053241-1mbo",
+              "text": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:13.241Z"
             }
-          ]
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951053241",
+              "stem": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:24:13.241Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T14:50:43.876+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "claimedAnswer": "A",
+          "questionNumber": 0,
+          "reconstruction": {
+            "stem": "Kronik romatoid artrit tanısıyla takip edilen 58 yaşındaki kadın hastada son zamanlarda bilateral bacak ödemi ve proteinüri (6 g/gün) gelişiyor. Yapılan renal biyopsinin ışık mikroskobik incelemesinde, glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanıyor. Bu birikim Kongo kırmızısı (Congo red) boyası ile boyanıp polarize ışık mikroskobunda incelendiğinde elma yeşili çift kırınım (birefringe) gösteriyor.\n\nBu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Amiloid",
+                "isAiFilled": false
+              },
+              {
+                "key": "B",
+                "text": "Glikojen",
+                "isAiFilled": false
+              },
+              {
+                "key": "C",
+                "text": "Kalsiyum",
+                "isAiFilled": false
+              },
+              {
+                "key": "D",
+                "text": "Melanin",
+                "isAiFilled": false
+              },
+              {
+                "key": "E",
+                "text": "Kolesterol",
+                "isAiFilled": false
+              }
+            ],
+            "explanation": "Patofizyoloji: Amiloidoz, yanlış katlanmış proteinlerin dokularda çözünmeyen fibriler yapılar halinde ekstraselüler olarak birikmesiyle karakterize progressif bir hastalıktır. Kronik inflamatuar süreçlerde (romatoid artrit, tüberküloz, bronşektazi vb.) artan serum amiloid A (SAA) proteini, AA tipi amiloid birikimine yol açarak sekonder sistemik amiloidoza neden olur. Böbrek tutulumu sıklıkla ağır proteinüri ve nefrotik sendrom ile prezente olur.\n\nDoğru Şık Açıklaması (A): Amiloid birikimi ışık mikroskobunda amorf, asidofilik (eozinofilik) ekstraselüler madde olarak görülür. Kongo kırmızısı (Congo red) ile boyandıktan sonra polarize ışık altında yeşil (elma yeşili) çift kırınım (birefringence) göstermesi amiloid için patognomoniktir.\n\nÇeldiricilerin Analizi:\n- Glikojen (B): Hücre içi birikim gösterir, hematoksilen-eozinde berrak vakuoller oluşturur, PAS boyası ile pozitif boyanır ve diastaz ile sindirilir.\n- Kalsiyum (C): Hematoksilen-eozinde koyu mavi-mor (bazofilik) amorf veya granüler çökeltiler halinde görülür. von Kossa veya Alizarin red boyalarıyla boyanır.\n- Melanin (D): Melanositler tarafından üretilen kahverengi-siyah intraselüler pigmenttir. Masson-Fontana boyasıyla gösterilebilir.\n- Kolesterol (E): Doku takibi sırasında eriyip gittiğinden histolojik kesitlerde iğne şeklinde berrak yarıklar (kolesterol kleftleri) olarak izlenir.\n\nKlinik İpucu: Kronik inflamatuar hastalığı olan bir hastada nefrotik sendrom tablosu geliştiğinde akla ilk gelmesi gereken patoloji AA amiloidozudur. Kesin tanı için rektal veya abdominal yağ yastıkçığı biyopsisinde Kongo kırmızısı pozitifliği aranır.",
+            "lastUpdated": "2026-10-02T14:24:54.078Z",
+            "correctAnswer": "A",
+            "confidenceScore": 95,
+            "notesAndDiscrepancies": "Öğrencinin hatırladığı beş şık (amiloid, glikojen, kalsiyum, melanin, kolesterol) hücre içi ve dışı birikimler ile patolojik pigmentler konusuna aittir. Bu şıkları bir araya getiren en klasik, en yüksek verimli (high-yield) ve TUS formatına en uygun soru amiloid birikimini ve boyanma özelliklerini sorgulayan klinik senaryodur."
+          },
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951018529",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "createdAt": "2026-10-02T14:23:39.181231+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951018529-kul2",
+              "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:38.529Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951018529",
+              "stem": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:23:38.529Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:46.316+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790950963304",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "isMerged": false,
+          "createdAt": "2026-10-02T14:22:44.00527+00:00",
+          "fragments": [
+            {
+              "id": "f-1790950963304-d8pn",
+              "text": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:22:43.304Z"
+            },
+            {
+              "id": "f-1790951042634-2z92",
+              "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:02.634Z"
+            },
+            {
+              "id": "f-1790951030251-t6ke",
+              "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:50.251Z"
+            },
+            {
+              "id": "f-1790951018529-kul2",
+              "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:38.529Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790950963304",
+              "stem": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:22:43.304Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            },
+            {
+              "id": "rev-merge-1790968944742",
+              "version": 2,
+              "editedAt": "2026-10-02T19:22:24.742Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790968983118",
+              "version": 3,
+              "editedAt": "2026-10-02T19:23:03.118Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790969167720",
+              "version": 4,
+              "editedAt": "2026-10-02T19:26:07.720Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790970495670",
+              "version": 5,
+              "editedAt": "2026-10-02T19:48:15.670Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790970665773",
+              "version": 6,
+              "editedAt": "2026-10-02T19:51:05.773Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-unmerge-1790983006316",
+              "version": 7,
+              "editedAt": "2026-10-02T23:16:46.316Z",
+              "editorName": "Taslak Ayırma",
+              "changeSummary": "6 adet birleştirilmiş taslak ayrıldı ve bağımsız taslak olarak geri yüklendi."
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:46.316+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "[02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi.",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "mergedSatellites": [],
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951042634",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "createdAt": "2026-10-02T21:45:28.934214+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951042634-2z92",
+              "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:02.634Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951042634",
+              "stem": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:24:02.634Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:46.316+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "past-1790877034674-813824",
+          "tags": [],
+          "topic": "Tiroid Neoplazileri ve Epidemiyolojisi",
+          "status": "completed",
+          "options": [],
+          "reports": [],
+          "upvotes": 0,
+          "comments": [],
+          "examYear": "2021-2022",
+          "createdAt": "2026-10-02T21:45:28.934214+00:00",
+          "fragments": [],
+          "isSuspect": false,
+          "updatedAt": "2026-10-02T23:22:43.952+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "sourceFile": "1. Kurul Sorular.txt",
+          "committeeId": "donem3-kurul1",
+          "isAmbiguous": false,
+          "rawQuestion": {
+            "stem": "Türkiye’de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Meme"
+              },
+              {
+                "key": "B",
+                "text": "Over"
+              },
+              {
+                "key": "C",
+                "text": "Endometrium"
+              },
+              {
+                "key": "D",
+                "text": "Serviks uteri"
+              },
+              {
+                "key": "E",
+                "text": "Tiroid"
+              }
+            ],
+            "claimedAnswer": "A"
+          },
+          "claimedAnswer": "A",
+          "questionNumber": 10,
+          "reconstruction": {
+            "stem": "Türkiye'de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser türü aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Tiroid karsinomu",
+                "isAiFilled": false
+              },
+              {
+                "key": "B",
+                "text": "Meme karsinomu",
+                "isAiFilled": true
+              },
+              {
+                "key": "C",
+                "text": "Serviks uteri karsinomu",
+                "isAiFilled": true
+              },
+              {
+                "key": "D",
+                "text": "Over malign epitelyal tümörü",
+                "isAiFilled": true
+              },
+              {
+                "key": "E",
+                "text": "Hodgkin lenfoma",
+                "isAiFilled": true
+              }
+            ],
+            "explanation": "Türkiye'deki kanser insidans verilerine (örneğin TÜİK ve Sağlık Bakanlığı Kanser Daire Başkanlığı 2014 raporları) göre, 15-24 yaş arası genç kadın popülasyonda en sık görülen kanser tiroid bezinin maligniteleridir (özellikle papiller tiroid karsinomu). Tiroid kanserleri genel popülasyonda ve özellikle kadınlarda (yaklaşık 3:1 oranında) erkeklere kıyasla belirgin şekilde daha yüksek oranda izlenmektedir.",
+            "lastUpdated": "2026-10-01T21:57:04.940Z",
+            "correctAnswer": "A",
+            "confidenceScore": 96,
+            "notesAndDiscrepancies": "Öğrenci sorusundaki yazım hataları ('kadınlarda' kelimesindeki boşluk vb.) giderildi. Amfi ders notu 'D8_D9_tiroid_neopl' verileri ve Türkiye epidemiyolojik verileri ışığında soru kökü resmi kurul sınavı formatına uyarlandı ve 5 şık tamamlandı."
+          },
+          "ambiguityReason": null,
+          "lectureReference": {
+            "noteId": "note-88be594003",
+            "noteTitle": "D8_D9_tiroid_neopl",
+            "reasoning": "Amfi Slayt Eşleşmesi: \"D8_D9_tiroid_neopl\" dersinin 66. slaytındaki (göre, yaş, dınlarda, sık) ifadeleri soru içeriği ile örtüşmektedir.",
+            "discipline": "Tıp Ders Notu",
+            "pageNumber": 66,
+            "totalSlides": 99,
+            "matchedSnippet": "...Tiroid Karsinomunun Epidemiyolojisi • Kadınlarda erkeklere göre ≈3:1 daha sık görülür. • Papiller tiroid karsinomuna göre daha ileri yaşta ortaya çıkar. • En sık 40–60 yaş aralığınd...",
+            "confidenceScore": 100
+          },
+          "matchedNoteTitle": "1",
+          "matchedSlidePage": 3,
+          "isUnassignedNumber": false
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951053241",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "completed",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-02T14:24:13.63934+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951053241-1mbo",
+              "text": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:13.241Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951053241",
+              "stem": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:24:13.241Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T14:50:43.876+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "claimedAnswer": "A",
+          "questionNumber": 0,
+          "reconstruction": {
+            "stem": "Kronik romatoid artrit tanısıyla takip edilen 58 yaşındaki kadın hastada son zamanlarda bilateral bacak ödemi ve proteinüri (6 g/gün) gelişiyor. Yapılan renal biyopsinin ışık mikroskobik incelemesinde, glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanıyor. Bu birikim Kongo kırmızısı (Congo red) boyası ile boyanıp polarize ışık mikroskobunda incelendiğinde elma yeşili çift kırınım (birefringe) gösteriyor.\n\nBu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Amiloid",
+                "isAiFilled": false
+              },
+              {
+                "key": "B",
+                "text": "Glikojen",
+                "isAiFilled": false
+              },
+              {
+                "key": "C",
+                "text": "Kalsiyum",
+                "isAiFilled": false
+              },
+              {
+                "key": "D",
+                "text": "Melanin",
+                "isAiFilled": false
+              },
+              {
+                "key": "E",
+                "text": "Kolesterol",
+                "isAiFilled": false
+              }
+            ],
+            "explanation": "Patofizyoloji: Amiloidoz, yanlış katlanmış proteinlerin dokularda çözünmeyen fibriler yapılar halinde ekstraselüler olarak birikmesiyle karakterize progressif bir hastalıktır. Kronik inflamatuar süreçlerde (romatoid artrit, tüberküloz, bronşektazi vb.) artan serum amiloid A (SAA) proteini, AA tipi amiloid birikimine yol açarak sekonder sistemik amiloidoza neden olur. Böbrek tutulumu sıklıkla ağır proteinüri ve nefrotik sendrom ile prezente olur.\n\nDoğru Şık Açıklaması (A): Amiloid birikimi ışık mikroskobunda amorf, asidofilik (eozinofilik) ekstraselüler madde olarak görülür. Kongo kırmızısı (Congo red) ile boyandıktan sonra polarize ışık altında yeşil (elma yeşili) çift kırınım (birefringence) göstermesi amiloid için patognomoniktir.\n\nÇeldiricilerin Analizi:\n- Glikojen (B): Hücre içi birikim gösterir, hematoksilen-eozinde berrak vakuoller oluşturur, PAS boyası ile pozitif boyanır ve diastaz ile sindirilir.\n- Kalsiyum (C): Hematoksilen-eozinde koyu mavi-mor (bazofilik) amorf veya granüler çökeltiler halinde görülür. von Kossa veya Alizarin red boyalarıyla boyanır.\n- Melanin (D): Melanositler tarafından üretilen kahverengi-siyah intraselüler pigmenttir. Masson-Fontana boyasıyla gösterilebilir.\n- Kolesterol (E): Doku takibi sırasında eriyip gittiğinden histolojik kesitlerde iğne şeklinde berrak yarıklar (kolesterol kleftleri) olarak izlenir.\n\nKlinik İpucu: Kronik inflamatuar hastalığı olan bir hastada nefrotik sendrom tablosu geliştiğinde akla ilk gelmesi gereken patoloji AA amiloidozudur. Kesin tanı için rektal veya abdominal yağ yastıkçığı biyopsisinde Kongo kırmızısı pozitifliği aranır.",
+            "lastUpdated": "2026-10-02T14:24:54.078Z",
+            "correctAnswer": "A",
+            "confidenceScore": 95,
+            "notesAndDiscrepancies": "Öğrencinin hatırladığı beş şık (amiloid, glikojen, kalsiyum, melanin, kolesterol) hücre içi ve dışı birikimler ile patolojik pigmentler konusuna aittir. Bu şıkları bir araya getiren en klasik, en yüksek verimli (high-yield) ve TUS formatına en uygun soru amiloid birikimini ve boyanma özelliklerini sorgulayan klinik senaryodur."
+          },
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951018529",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "createdAt": "2026-10-02T14:23:39.181231+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951018529-kul2",
+              "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:38.529Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951018529",
+              "stem": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:23:38.529Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:46.316+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790950963304",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "isMerged": false,
+          "createdAt": "2026-10-02T14:22:44.00527+00:00",
+          "fragments": [
+            {
+              "id": "f-1790950963304-d8pn",
+              "text": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:22:43.304Z"
+            },
+            {
+              "id": "f-1790951042634-2z92",
+              "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:02.634Z"
+            },
+            {
+              "id": "f-1790951030251-t6ke",
+              "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:50.251Z"
+            },
+            {
+              "id": "f-1790951018529-kul2",
+              "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
+              "type": "stem",
+              "author": "Dr House",
+              "likedBy": [],
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:23:38.529Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790950963304",
+              "stem": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:22:43.304Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            },
+            {
+              "id": "rev-merge-1790968944742",
+              "version": 2,
+              "editedAt": "2026-10-02T19:22:24.742Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790968983118",
+              "version": 3,
+              "editedAt": "2026-10-02T19:23:03.118Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790969167720",
+              "version": 4,
+              "editedAt": "2026-10-02T19:26:07.720Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790970495670",
+              "version": 5,
+              "editedAt": "2026-10-02T19:48:15.670Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-merge-1790970665773",
+              "version": 6,
+              "editedAt": "2026-10-02T19:51:05.773Z",
+              "editorName": "Yönetici",
+              "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-unmerge-1790983006316",
+              "version": 7,
+              "editedAt": "2026-10-02T23:16:46.316Z",
+              "editorName": "Taslak Ayırma",
+              "changeSummary": "6 adet birleştirilmiş taslak ayrıldı ve bağımsız taslak olarak geri yüklendi."
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:46.316+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "[02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi.",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "mergedSatellites": [],
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790951042634",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Patoloji Sorusu",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "createdAt": "2026-10-02T21:45:28.934214+00:00",
+          "fragments": [
+            {
+              "id": "f-1790951042634-2z92",
+              "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T14:24:02.634Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790951042634",
+              "stem": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
+              "topic": "Tıbbi Patoloji Sorusu",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-02T14:24:02.634Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Patoloji",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:46.316+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
         }
       ],
-      "createdAt": "2026-10-02T15:55:24.167Z",
-      "updatedAt": "2026-10-02T15:55:24.175Z"
+      "isMerged": true,
+      "placementNotes": "[03.10.2026]: 4 taslak ile iç içe geçirildi. [03.10.2026]: 5 taslak ile iç içe geçirildi.",
+      "claimedAnswer": "A"
     },
     {
-      "id": "q-donem3-kurul1-unassigned-1790950963304",
+      "id": "q-donem3-kurul1-unassigned-1790967524679",
       "tags": [
-        "Tıbbi Patoloji",
+        "Tıbbi Genetik",
         "numarasız-hatırlanan",
+        "Tıbbi Patoloji",
         "taslak-birlestirildi"
       ],
-      "topic": "Tıbbi Patoloji Sorusu",
-      "status": "gathering",
+      "topic": "Tıbbi Genetik Hatırlanan Soru",
+      "status": "completed",
       "options": [],
-      "createdAt": "2026-10-02T14:22:44.00527+00:00",
-      "fragments": [
-        {
-          "id": "f-1790950963304-d8pn",
-          "text": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:22:43.304Z"
-        },
-        {
-          "id": "f-1790951042634-2z92",
-          "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:24:02.634Z"
-        },
-        {
-          "id": "f-1790951030251-t6ke",
-          "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
-          "type": "stem",
-          "author": "Dr House",
-          "likedBy": [],
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:23:50.251Z"
-        },
-        {
-          "id": "f-1790951018529-kul2",
-          "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
-          "type": "stem",
-          "author": "Dr House",
-          "likedBy": [],
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:23:38.529Z"
-        }
-      ],
+      "upvotes": 0,
+      "isMerged": true,
+      "createdAt": "2026-10-02T21:45:28.934214+00:00",
+      "fragments": [],
       "revisions": [
         {
-          "id": "rev-1790950963304",
-          "stem": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
-          "topic": "Tıbbi Patoloji Sorusu",
+          "id": "rev-1790967524679",
+          "stem": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
           "options": [],
           "version": 1,
-          "editedAt": "2026-10-02T14:22:43.304Z",
+          "editedAt": "2026-10-02T18:58:44.679Z",
           "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "discipline": "Tıbbi Patoloji",
+          "discipline": "Tıbbi Genetik",
           "editorName": "Dr House",
           "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
         },
         {
-          "id": "rev-merge-1790968944742",
+          "id": "rev-merge-1790970516684",
           "version": 2,
-          "editedAt": "2026-10-02T19:22:24.742Z",
+          "editedAt": "2026-10-02T19:48:36.684Z",
           "editorName": "Yönetici",
-          "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+          "changeSummary": "2 adet benzer taslak bu ana soru altında birleştirildi."
         },
         {
-          "id": "rev-merge-1790968983118",
+          "id": "rev-unmerge-1790983010793",
           "version": 3,
-          "editedAt": "2026-10-02T19:23:03.118Z",
-          "editorName": "Yönetici",
-          "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+          "editedAt": "2026-10-02T23:16:50.793Z",
+          "editorName": "Taslak Ayırma",
+          "changeSummary": "2 adet birleştirilmiş taslak ayrıldı ve bağımsız taslak olarak geri yüklendi."
         },
         {
-          "id": "rev-merge-1790969167720",
+          "id": "rev-merge-1790983072922",
           "version": 4,
-          "editedAt": "2026-10-02T19:26:07.720Z",
+          "editedAt": "2026-10-02T23:17:52.922Z",
           "editorName": "Yönetici",
           "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-02T19:26:07.832Z",
-      "discipline": "Tıbbi Patoloji",
+      "updatedAt": "2026-10-03T00:03:22.788Z",
+      "discipline": "Tıbbi Genetik",
       "committeeId": "donem3-kurul1",
+      "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi. [03.10.2026]: 3 taslak ile iç içe geçirildi.",
       "questionNumber": 0,
+      "reconstruction": {
+        "stem": "Birinci trimester taramasında artmış ense saydamlığı (NT) ve burun kemiğinin belirgin olmaması, doğum sonrası duodenal atrezia (çift kabarcık) ve endokardiyal yastık (AV kanal) defekti gösteren bir bebek için en olası tanı aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "text": "Down sendromu",
+            "isAiFilled": false
+          },
+          {
+            "text": "Edwards sendromu",
+            "isAiFilled": false
+          },
+          {
+            "text": "Endokardiyal yastık defekti",
+            "isAiFilled": false
+          },
+          {
+            "text": "Fallot tetralojisi",
+            "isAiFilled": false
+          },
+          {
+            "text": "Patau sendromu",
+            "isAiFilled": true
+          }
+        ],
+        "explanation": "Artmış nuchal translucency ve burun kemiğinin yokluğu, maternal yaşla artan risk, duodenal atrezia (double‑bubble) ve AV kanal defekti Down sendromunun (Trisomy 21) tipik bulgularıdır. Edwards sendromu (Trisomy 18) daha çok ciddi intrauterin büyüme geriliği, rocker‑bottom ayak ve overlapped parmaklarla seyreder; duodenal atrezia ve AV kanal defekti nadiren görülür. Endokardiyal yastık defekti tek başına bir sendrom değildir ve diğer bulgularla birlikte Down sendromunda sık rastlanır. Fallot tetralojisi kardiyak bir anomali olup, duodenal atrezya ve artmış NT ile ilişkili değildir. Patau sendromu (Trisomy 13) ise mikrocefali, oral fena, polidaktili gibi farklı bulgular gösterir, bu senaryoda bulunmaz.",
+        "lastUpdated": "2026-10-02T23:18:30.419Z",
+        "correctAnswer": "A",
+        "confidenceScore": 95,
+        "notesAndDiscrepancies": "Öğrenciler Down ve Edwards sendromlarını karıştırmış; double‑bubble ve AV kanal defekti Down sendromuna özgü iken Edwards sendromunda nadirdir. Ayrıca bir seçenek olarak 'Endokardiyal yastık defekti' girilmiş, ancak bu bir tanı değil, bir bulgudur; sorunun doğru yanıtı Down sendromu olduğundan negatif bir biçim kullanılmadı."
+      },
       "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "mergedSatellites": [
+        {
+          "id": "q-donem3-kurul1-unassigned-1790967391177",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [
+            {
+              "key": "A",
+              "text": "Down Sendromu",
+              "upvotes": 1,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            }
+          ],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "createdAt": "2026-10-02T18:56:31.862572+00:00",
+          "fragments": [
+            {
+              "id": "f-1790967391168-u8je",
+              "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.168Z"
+            },
+            {
+              "id": "f-opt-1790967391177-A",
+              "text": "A) Down Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.177Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790967391177",
+              "stem": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Down Sendromu",
+                  "upvotes": 1
+                }
+              ],
+              "version": 1,
+              "editedAt": "2026-10-02T18:56:31.177Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+              "claimedAnswer": "A"
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:50.793+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "claimedAnswer": "A",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1790967419207",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [
+            {
+              "key": "A",
+              "text": "Edwards Sendromu",
+              "upvotes": 2,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            }
+          ],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "createdAt": "2026-10-02T21:45:28.934214+00:00",
+          "fragments": [
+            {
+              "id": "f-1790967419200-5dc9",
+              "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.200Z"
+            },
+            {
+              "id": "f-opt-1790967419207-A",
+              "text": "A) Edwards Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.207Z"
+            },
+            {
+              "id": "f-1790967544107-iqlx",
+              "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:59:04.107Z"
+            },
+            {
+              "id": "f-opt-1790967544117-A",
+              "text": "A) Edwards Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:59:04.117Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1790967419207",
+              "stem": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Edwards Sendromu",
+                  "upvotes": 1
+                }
+              ],
+              "version": 1,
+              "editedAt": "2026-10-02T18:56:59.207Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:50.793+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1740000000000",
+          "tags": [
+            "Tıbbi Patoloji",
+            "numarasız-hatırlanan",
+            "Tıbbi Genetik"
+          ],
+          "topic": "Down Sendromu Karyotip ve Klinik Bulgular",
+          "status": "gathering",
+          "options": [
+            {
+              "key": "A",
+              "text": "Endokardiyal yastık defekti",
+              "upvotes": 1
+            },
+            {
+              "key": "B",
+              "text": "Fallot tetralojisi",
+              "upvotes": 1
+            },
+            {
+              "key": "C",
+              "text": "Edwards Sendromu",
+              "upvotes": 6,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            },
+            {
+              "key": "D",
+              "text": "Down Sendromu",
+              "upvotes": 4,
+              "suggestedBy": "Dr House",
+              "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+            }
+          ],
+          "upvotes": 0,
+          "examYear": "2026-2027",
+          "isMerged": false,
+          "createdAt": "2026-10-02T19:56:53.817571+00:00",
+          "fragments": [
+            {
+              "id": "f-1",
+              "text": "Down sendromunda görülen kardiyak defekt...",
+              "type": "stem",
+              "author": "Test Öğrenci",
+              "upvotes": 1,
+              "timestamp": "2026-10-02T19:56:50.291Z"
+            },
+            {
+              "id": "f-1790967419200-5dc9",
+              "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.200Z"
+            },
+            {
+              "id": "f-opt-1790967419207-A",
+              "text": "A) Edwards Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:59.207Z"
+            },
+            {
+              "id": "f-1790967544107-iqlx",
+              "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:59:04.107Z"
+            },
+            {
+              "id": "f-1790967391168-u8je",
+              "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.168Z"
+            },
+            {
+              "id": "f-opt-1790967391177-A",
+              "text": "A) Down Sendromu",
+              "type": "option",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:56:31.177Z"
+            },
+            {
+              "id": "f-1790967524671-hec2",
+              "text": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-02T18:58:44.671Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1",
+              "version": 1,
+              "editedAt": "2026-10-02T19:56:50.292Z",
+              "editorName": "Test Öğrenci",
+              "changeSummary": "İlk kayıt"
+            },
+            {
+              "id": "rev-merge-1790982110148",
+              "version": 2,
+              "editedAt": "2026-10-02T23:01:50.147Z",
+              "editorName": "Yönetici",
+              "changeSummary": "1 adet benzer taslak bu ana soru altında birleştirildi."
+            },
+            {
+              "id": "rev-unmerge-1790983007103",
+              "version": 3,
+              "editedAt": "2026-10-02T23:16:47.103Z",
+              "editorName": "Taslak Ayırma",
+              "changeSummary": "1 adet birleştirilmiş taslak ayrıldı ve bağımsız taslak olarak geri yüklendi."
+            }
+          ],
+          "updatedAt": "2026-10-02T23:16:47.103+00:00",
+          "discipline": "Tıbbi Patoloji",
+          "committeeId": "donem3-kurul1",
+          "claimedAnswer": "A",
+          "placementNotes": "[03.10.2026]: 1 taslak ile iç içe geçirildi.",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "mergedSatellites": [],
+          "isUnassignedNumber": true
+        }
+      ],
       "contributedByName": "Dr House",
       "isUnassignedNumber": true,
-      "upvotes": 0,
-      "reconstruction": null,
-      "placementNotes": "[02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi. [02.10.2026]: 3 taslak ile iç içe geçirildi."
+      "examYear": "2026-2027",
+      "claimedAnswer": "A"
     }
   ]
 }

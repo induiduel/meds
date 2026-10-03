@@ -37,7 +37,12 @@ import {
   FileText,
   FileDown,
   ArrowLeftRight,
+  Bot,
+  Columns,
+  Cloud,
 } from 'lucide-react';
+import { DeckPdfViewer } from './DeckPdfViewer';
+import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
 import {
   GlossaryProvider,
@@ -47,6 +52,7 @@ import {
 } from './MedicalGlossaryPopover';
 import { AiThinking } from '../ui/Animations';
 import { HighlighterToolbar, Highlightable, isPenActive } from '../ui/Highlighter';
+import { SlideDrawingCanvas, DrawingModeToolbarTrigger } from './SlideDrawingCanvas';
 import { toast } from '../ui/Toast';
 import { safeJsonFetch } from '../../services/api';
 
@@ -628,6 +634,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     []
   );
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
+  const [playerViewMode, setPlayerViewMode] = useState<DeckViewMode>('interactive');
 
   useEffect(() => {
     if (initialDeckId) {
@@ -728,6 +735,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                 <button
                   type="button"
                   onClick={() => {
+                    setPlayerViewMode('interactive');
                     setDeckId(d.id);
                     onDeckChange?.(d.id);
                   }}
@@ -762,13 +770,28 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                         <span className="block h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
                       </span>
                     </span>
-                    <span
-                      className={`h-[34px] px-3 rounded-[10px] inline-flex items-center gap-1.5 text-[13px] font-semibold shrink-0 ${
-                        started ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
-                      }`}
-                    >
-                      <Play className="w-3 h-3 fill-current" />
-                      {done ? 'Tekrar' : started ? 'Devam et' : 'Başla'}
+                    <span className="flex items-center gap-1.5 shrink-0">
+                      <span
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setPlayerViewMode('pdf');
+                          setDeckId(d.id);
+                          onDeckChange?.(d.id);
+                        }}
+                        title="Orijinal PDF Slaytını Aç"
+                        className="h-[34px] px-2.5 rounded-[10px] inline-flex items-center gap-1 text-[12px] font-semibold text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 transition-colors"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>PDF</span>
+                      </span>
+                      <span
+                        className={`h-[34px] px-3 rounded-[10px] inline-flex items-center gap-1.5 text-[13px] font-semibold ${
+                          started ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
+                        }`}
+                      >
+                        <Play className="w-3 h-3 fill-current" />
+                        {done ? 'Tekrar' : started ? 'Devam et' : 'Başla'}
+                      </span>
                     </span>
                   </span>
                 </button>
@@ -781,6 +804,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       {activeDeck && (
         <DeckPlayer
           deck={activeDeck}
+          initialViewMode={playerViewMode}
           startAt={initialSlideNumber != null && initialSlideNumber > 0 ? initialSlideNumber - 1 : (progress[activeDeck.id]?.last ?? 0)}
           onProgress={(index) => {
             setProgress((prev) => {
@@ -806,18 +830,21 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 // ---------------------------------------------------------------------------
 // Player: full-viewport overlay, paged or scrolling, optional native fullscreen
 // ---------------------------------------------------------------------------
-type PanelTab = 'flashcards' | 'questions' | 'notes' | 'pearls' | 'ai';
+export type DeckViewMode = 'interactive' | 'pdf' | 'split';
+type PanelTab = 'flashcards' | 'questions' | 'notes' | 'pearls' | 'ai' | 'pdf';
 
 const DeckPlayer: React.FC<{
   deck: InteractiveDeck;
   startAt: number;
+  initialViewMode?: DeckViewMode;
   onProgress: (index: number) => void;
   onClose: () => void;
   onExportPdf?: (slideNumber: number) => void;
-}> = ({ deck, startAt, onProgress, onClose, onExportPdf }) => {
+}> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf }) => {
   const slides = deck.slides;
   const n = slides.length;
   const [index, setIndex] = useState(() => Math.min(Math.max(0, startAt), n - 1));
+  const [viewMode, setViewMode] = useState<DeckViewMode>(initialViewMode);
   const [mode, setMode] = useState<'paged' | 'scroll'>(() => {
     try {
       return localStorage.getItem('medsoru_learn_mode') === 'scroll' ? 'scroll' : 'paged';
@@ -842,14 +869,16 @@ const DeckPlayer: React.FC<{
   // Keep active slide text in sync with glossary provider for dynamic slide knowledge
   useEffect(() => {
     if (!slide || !setCurrentSlideText) return;
+    const narrativeText = slide.synthesisNarrative || (slide as any).content || '';
+    const spotsList = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
     const slideText = [
       slide.title,
       slide.subtitle,
       slide.professorAudioHighlight?.quote,
       slide.professorAudioHighlight?.note,
-      slide.synthesisNarrative,
+      narrativeText,
       ...(slide.coreContent?.keyBullets || []).map((b) => `${b.title}: ${b.desc}`),
-      ...(slide.spotPearls || []),
+      ...spotsList,
       slide.coreContent?.table?.title,
       slide.coreContent?.table?.rows?.map((r) => r.join(' ')).join('\n'),
     ]
@@ -1047,31 +1076,94 @@ const DeckPlayer: React.FC<{
         <span className="hidden sm:inline font-mono text-[13px] text-ink-2 px-1" aria-live="polite">
           {index + 1} / {n}
         </span>
-        <div role="radiogroup" aria-label="Görünüm" className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5">
-          {(
-            [
-              ['paged', GalleryHorizontal, 'Sayfa sayfa'],
-              ['scroll', Rows3, 'Kaydırarak'],
-            ] as const
-          ).map(([id, Icon, label]) => (
-            <button
-              key={id}
-              type="button"
-              role="radio"
-              aria-checked={mode === id}
-              aria-label={label}
-              title={label}
-              onClick={() => setMode(id)}
-              className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[13px] cursor-pointer ${
-                mode === id ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
-              }`}
-            >
-              <Icon className="w-4 h-4" />
-              <span className="hidden md:inline">{label}</span>
-            </button>
-          ))}
+
+        {/* View Mode Switcher: Interactive / Split / PDF */}
+        <div role="radiogroup" aria-label="Çalışma Modu" className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5 border border-line/60">
+          <button
+            type="button"
+            role="radio"
+            aria-checked={viewMode === 'interactive'}
+            aria-label="Etkileşimli Slaytlar"
+            title="Etkileşimli Slaytlar"
+            onClick={() => setViewMode('interactive')}
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+              viewMode === 'interactive'
+                ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                : 'text-ink-2 hover:text-ink'
+            }`}
+          >
+            <GalleryHorizontal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
+            <span className="hidden md:inline">Slaytlar</span>
+          </button>
+
+          <button
+            type="button"
+            role="radio"
+            aria-checked={viewMode === 'split'}
+            aria-label="Yan Yana (Slayt + Orijinal PDF)"
+            title="Yan Yana: Sol tarafta slayt, sağ tarafta hoca PDF'i"
+            onClick={() => setViewMode('split')}
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+              viewMode === 'split'
+                ? 'bg-white text-indigo-600 dark:text-indigo-400 font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                : 'text-ink-2 hover:text-ink'
+            }`}
+          >
+            <Columns className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
+            <span className="hidden md:inline">Yan Yana</span>
+          </button>
+
+          <button
+            type="button"
+            role="radio"
+            aria-checked={viewMode === 'pdf'}
+            aria-label="Orijinal Ders PDF'i"
+            title="Hocanın orijinal ders sunumu PDF'i"
+            onClick={() => setViewMode('pdf')}
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+              viewMode === 'pdf'
+                ? 'bg-white text-rose-600 dark:text-rose-400 font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                : 'text-ink-2 hover:text-ink'
+            }`}
+          >
+            <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-500" />
+            <span className="hidden md:inline">Orijinal PDF</span>
+          </button>
         </div>
-        <HighlighterToolbar />
+
+        {viewMode === 'interactive' && (
+          <div role="radiogroup" aria-label="Görünüm" className="hidden xl:flex items-center h-9 bg-canvas rounded-[10px] p-0.5">
+            {(
+              [
+                ['paged', GalleryHorizontal, 'Sayfa sayfa'],
+                ['scroll', Rows3, 'Kaydırarak'],
+              ] as const
+            ).map(([id, Icon, label]) => (
+              <button
+                key={id}
+                type="button"
+                role="radio"
+                aria-checked={mode === id}
+                aria-label={label}
+                title={label}
+                onClick={() => setMode(id)}
+                className={`h-8 px-2 rounded-lg inline-flex items-center gap-1.5 text-[12px] cursor-pointer ${
+                  mode === id ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
+                }`}
+              >
+                <Icon className="w-3.5 h-3.5" />
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {viewMode !== 'pdf' && (
+          <>
+            <HighlighterToolbar />
+            <DrawingModeToolbarTrigger />
+          </>
+        )}
         {onExportPdf && (
           <button
             type="button"
@@ -1109,7 +1201,54 @@ const DeckPlayer: React.FC<{
       {/* Stage + panel */}
       <div className={`flex-1 min-h-0 grid grid-cols-1 ${panelOpen ? 'lg:grid-cols-[minmax(0,1fr)_420px]' : ''}`}>
         <div className="min-h-0 min-w-0 relative">
-          {mode === 'paged' ? (
+          {viewMode === 'pdf' ? (
+            <div className="absolute inset-0 p-2 sm:p-4 flex flex-col">
+              <DeckPdfViewer
+                deck={deck}
+                currentSlideNumber={slide.slideNumber}
+                onToggleSplitView={() => setViewMode('split')}
+              />
+            </div>
+          ) : viewMode === 'split' ? (
+            <div className="absolute inset-0 p-2 sm:p-3 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3">
+              <div
+                className="min-h-0 h-full flex flex-col rounded-[16px] overflow-hidden border border-line bg-white/50 backdrop-blur-sm relative shadow-sm"
+                onTouchStart={onTouchStart}
+                onTouchEnd={onTouchEnd}
+              >
+                <SlideCanvas
+                  key={`split-${index}`}
+                  slide={slide}
+                  highlightScope={`deck:${deck.id}:${slide.slideNumber}`}
+                  index={index}
+                  total={n}
+                  paged
+                  onNext={next}
+                  onPrev={prev}
+                  onOpenQuestions={() => {
+                    setTab('questions');
+                    setPanelOpen(true);
+                  }}
+                  onOpenFlashcards={() => {
+                    setTab('flashcards');
+                    setPanelOpen(true);
+                  }}
+                  onOpenNotes={() => {
+                    setTab('notes');
+                    setPanelOpen(true);
+                  }}
+                />
+              </div>
+              <div className="min-h-0 h-full flex flex-col rounded-[16px] overflow-hidden border border-line bg-white shadow-sm">
+                <DeckPdfViewer
+                  deck={deck}
+                  currentSlideNumber={slide.slideNumber}
+                  isSplitView
+                  onToggleSplitView={() => setViewMode('interactive')}
+                />
+              </div>
+            </div>
+          ) : mode === 'paged' ? (
             <div className="absolute inset-0 p-2 sm:p-4 lg:p-6 flex" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <SlideCanvas
                 key={index}
@@ -1277,17 +1416,18 @@ const GlobalTopicSearchModal: React.FC<{
         });
         return;
       }
-      // 2. Synthesis Narrative
-      if (slide.synthesisNarrative && slide.synthesisNarrative.toLocaleLowerCase('tr-TR').includes(queryNorm)) {
-        const idx = slide.synthesisNarrative.toLocaleLowerCase('tr-TR').indexOf(queryNorm);
+      // 2. Synthesis Narrative / Content
+      const narrativeText = slide.synthesisNarrative || (slide as any).content || '';
+      if (narrativeText && narrativeText.toLocaleLowerCase('tr-TR').includes(queryNorm)) {
+        const idx = narrativeText.toLocaleLowerCase('tr-TR').indexOf(queryNorm);
         const start = Math.max(0, idx - 40);
-        const end = Math.min(slide.synthesisNarrative.length, idx + queryNorm.length + 80);
+        const end = Math.min(narrativeText.length, idx + queryNorm.length + 80);
         matches.push({
           slideIndex: sIdx,
           slideNumber: slide.slideNumber,
           slideTitle: slide.title,
           matchedType: 'Ders Notu Sentezi',
-          snippet: (start > 0 ? '...' : '') + slide.synthesisNarrative.slice(start, end) + (end < slide.synthesisNarrative.length ? '...' : ''),
+          snippet: (start > 0 ? '...' : '') + narrativeText.slice(start, end) + (end < narrativeText.length ? '...' : ''),
         });
         return;
       }
@@ -1319,8 +1459,9 @@ const GlobalTopicSearchModal: React.FC<{
         });
         return;
       }
-      // 5. Spot Pearls
-      const foundPearl = (slide.spotPearls || []).find((p) => p.toLocaleLowerCase('tr-TR').includes(queryNorm));
+      // 5. Spot Pearls / Spots
+      const slideSpots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
+      const foundPearl = slideSpots.find((p: string) => p.toLocaleLowerCase('tr-TR').includes(queryNorm));
       if (foundPearl) {
         matches.push({
           slideIndex: sIdx,
@@ -1332,8 +1473,11 @@ const GlobalTopicSearchModal: React.FC<{
         return;
       }
       // 6. Questions
-      const foundQ = (slide.relatedQuestions || []).find(
-        (rq) => rq.stem.toLocaleLowerCase('tr-TR').includes(queryNorm) || rq.explanation.toLocaleLowerCase('tr-TR').includes(queryNorm)
+      const slideQuestions = (slide.relatedQuestions && slide.relatedQuestions.length > 0)
+        ? slide.relatedQuestions
+        : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
+      const foundQ = slideQuestions.find(
+        (rq: any) => (rq.stem || '').toLocaleLowerCase('tr-TR').includes(queryNorm) || (rq.explanation || '').toLocaleLowerCase('tr-TR').includes(queryNorm)
       );
       if (foundQ) {
         matches.push({
@@ -1341,7 +1485,7 @@ const GlobalTopicSearchModal: React.FC<{
           slideNumber: slide.slideNumber,
           slideTitle: slide.title,
           matchedType: 'Çıkmış Soru',
-          snippet: foundQ.stem.slice(0, 130) + '...',
+          snippet: (foundQ.stem || '').slice(0, 130) + '...',
         });
       }
     });
@@ -1726,6 +1870,8 @@ const SlideCanvas: React.FC<{
   const c = slide.coreContent || {};
   const badge = tone(slide.badgeColor);
   const flashcards = slide.flashcards || [];
+  const narrative = slide.synthesisNarrative || (slide as any).content || '';
+  const spots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
 
   const copyQuote = () => {
     if (!hl?.quote) return;
@@ -1738,8 +1884,9 @@ const SlideCanvas: React.FC<{
   return (
     <article
       ref={containerRef}
-      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 custom-scrollbar`}
+      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 custom-scrollbar relative`}
     >
+      <SlideDrawingCanvas scope={highlightScope || `slide:${slide.slideNumber}`} />
       <Highlightable
         scope={highlightScope || `slide:${slide.slideNumber}:${slide.title}`}
         className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6"
@@ -1818,7 +1965,7 @@ const SlideCanvas: React.FC<{
         )}
 
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
-        {slide.synthesisNarrative && (
+        {narrative && (
           <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
             <div className="flex items-center justify-between gap-2 border-b border-line pb-2.5">
               <div className="flex items-center gap-2.5 min-w-0">
@@ -1850,11 +1997,11 @@ const SlideCanvas: React.FC<{
             </div>
             {/* Quick Medical Terms Pills for This Slide */}
             <SlideTermsPills
-              textToScan={`${slide.title || ''} ${slide.synthesisNarrative || ''} ${((slide as any).keyConcepts || []).join(' ')}`}
+              textToScan={`${slide.title || ''} ${narrative} ${((slide as any).keyConcepts || []).join(' ')}`}
               className="mb-1"
             />
             
-            <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
+            <StructuredSynthesisRenderer text={narrative} />
 
             {/* Categorized Key Bullets with Colors & Icons */}
             {c.keyBullets && c.keyBullets.length > 0 && (
@@ -1950,52 +2097,6 @@ const SlideCanvas: React.FC<{
           </section>
         )}
 
-        {/* 5. High-yield action bar (Questions, Flashcards, Notes) */}
-        <div className="rounded-xl border border-line bg-gradient-to-r from-accent-soft/20 via-white to-transparent p-2.5 sm:p-3 flex items-center justify-between gap-3 flex-wrap">
-          <div className="flex items-center gap-2 text-[12px] sm:text-[12.5px] font-medium text-ink-2">
-            <Sparkles className="w-3.5 h-3.5 text-accent shrink-0" />
-            <span>Bu konu için <strong>{flashcards.length} akıl kartı</strong> ve <strong>{(slide.relatedQuestions || []).length} çıkmış soru</strong> slayt üzerine yerleştirildi.</span>
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            {flashcards.length > 0 && onOpenFlashcards && (
-              <button
-                type="button"
-                onClick={onOpenFlashcards}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <BrainCircuit className="w-3.5 h-3.5" />
-                <span>Akıl Kartları ({flashcards.length})</span>
-              </button>
-            )}
-            {(slide.relatedQuestions || []).length > 0 && (
-              <button
-                type="button"
-                onClick={() => {
-                  const el = document.getElementById(`slide-questions-${slide.slideNumber}`);
-                  if (el) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                  } else if (onOpenQuestions) {
-                    onOpenQuestions();
-                  }
-                }}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
-              >
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Çıkmış Sorular ({(slide.relatedQuestions || []).length})</span>
-              </button>
-            )}
-            {onOpenNotes && (
-              <button
-                type="button"
-                onClick={onOpenNotes}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-ink-2 hover:text-ink text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <BookOpen className="w-3.5 h-3.5 text-accent" />
-                <span>Ders Notu Özeti</span>
-              </button>
-            )}
-          </div>
-        </div>
 
         {/* 6. Core content: formulas, tables, bullets, infographics */}
         <div className={`grid grid-cols-1 ${c.table && c.table.headers?.length > 0 ? '' : 'lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]'} gap-4 sm:gap-5 lg:gap-7 items-start`}>
@@ -2037,7 +2138,7 @@ const SlideCanvas: React.FC<{
 
           {/* Side: spot pearls */}
           <div className="flex flex-col gap-3 min-w-0">
-            {slide.spotPearls?.length > 0 && <SpotList items={slide.spotPearls} />}
+            {spots.length > 0 && <SpotList items={spots} />}
           </div>
         </div>
         {paged && index < total - 1 && onNext && (
@@ -2194,7 +2295,9 @@ const InteractionPanel: React.FC<{
   tab: PanelTab;
   setTab: (t: PanelTab) => void;
 }> = ({ deck, slide, tab, setTab }) => {
-  const qs = slide.relatedQuestions || [];
+  const qs = (slide.relatedQuestions && slide.relatedQuestions.length > 0)
+    ? slide.relatedQuestions
+    : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
   const cards = slide.flashcards || [];
 
   const tabs: { id: PanelTab; label: string }[] = [
@@ -2203,11 +2306,12 @@ const InteractionPanel: React.FC<{
     { id: 'notes', label: 'Ders Notu' },
     { id: 'pearls', label: 'Spotlar' },
     { id: 'ai', label: "AI'ya sor" },
+    { id: 'pdf', label: 'PDF' },
   ];
 
   return (
     <>
-      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-5 gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
+      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-6 gap-0.5 sm:gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -2215,7 +2319,7 @@ const InteractionPanel: React.FC<{
             role="tab"
             aria-selected={tab === t.id}
             onClick={() => setTab(t.id)}
-            className={`h-9 rounded-[9px] text-[12px] cursor-pointer truncate ${tab === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
+            className={`h-8 sm:h-9 px-1 rounded-[9px] text-[11px] sm:text-[12px] cursor-pointer truncate ${tab === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
           >
             {t.label}
           </button>
@@ -2238,7 +2342,7 @@ const InteractionPanel: React.FC<{
         )}
         {tab === 'questions' &&
           (qs.length === 0 ? (
-            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayta eşleşen çıkmış soru yok.</p>
+            <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayta eşleşen soru yok.</p>
           ) : (
             qs.map((q, i) => <QuizCard key={`${slide.slideNumber}-${q.id}`} q={q} n={i + 1} />)
           ))}
@@ -2251,6 +2355,11 @@ const InteractionPanel: React.FC<{
           )
         )}
         {tab === 'ai' && <AskAi key={slide.slideNumber} deck={deck} slide={slide} />}
+        {tab === 'pdf' && (
+          <div className="flex-1 min-h-[460px] flex flex-col h-full rounded-xl overflow-hidden border border-line bg-white shadow-sm">
+            <DeckPdfViewer deck={deck} currentSlideNumber={slide.slideNumber} compact />
+          </div>
+        )}
       </div>
     </>
   );
@@ -2261,16 +2370,19 @@ const InteractionPanel: React.FC<{
 // ---------------------------------------------------------------------------
 const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
   const c = slide.coreContent || {};
+  const narrative = slide.synthesisNarrative || (slide as any).content || '';
+  const spots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
+
   return (
     <div className="flex flex-col gap-3.5">
       {/* Narrative block */}
-      {slide.synthesisNarrative && (
+      {narrative && (
         <div className="rounded-xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/20 p-3.5 flex flex-col gap-2.5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-line-soft">
             <BookOpen className="w-4 h-4 text-accent" />
             <span className="text-[13px] font-bold text-ink">Kapsamlı Ders Notu Sentezi</span>
           </div>
-          <StructuredSynthesisRenderer text={slide.synthesisNarrative} />
+          <StructuredSynthesisRenderer text={narrative} />
         </div>
       )}
 
@@ -2294,8 +2406,8 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
       )}
 
       {/* Spot pearls */}
-      {slide.spotPearls && slide.spotPearls.length > 0 && (
-        <SpotList items={slide.spotPearls} title="Bu slaytın spotları" compact />
+      {spots.length > 0 && (
+        <SpotList items={spots} title="Bu slaytın spotları" compact />
       )}
     </div>
   );
@@ -2396,11 +2508,29 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) =>
   );
 };
 
+const formatAiModelDisplayName = (raw?: string | null): string => {
+  if (!raw) return 'Google Gemini 3.8 Flash';
+  const val = raw.trim();
+  if (val.includes('3.8-flash')) return 'Google Gemini 3.8 Flash';
+  if (val.includes('3.7-flash')) return 'Google Gemini 3.7 Flash';
+  if (val.includes('3.5-flash-lite')) return 'Google Gemini 3.5 Flash Lite';
+  if (val.includes('3.5-flash')) return 'Google Gemini 3.5 Flash';
+  if (val.includes('3.1-flash-lite')) return 'Google Gemini 3.1 Flash Lite';
+  if (val.includes('gpt-oss-120b')) return 'Groq GPT-OSS 120B';
+  if (val.includes('gpt-oss-20b')) return 'Groq GPT-OSS 20B';
+  if (val.includes('qwen')) return 'Groq Qwen 27B';
+  if (val.includes('spark') || val.includes('muse')) return 'Muse Spark 1.3 Free';
+  return val;
+};
+
 const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, slide }) => {
   const [q, setQ] = useState('');
   const [loading, setLoading] = useState(false);
   const [answer, setAnswer] = useState<string | null>(null);
   const [refs, setRefs] = useState<any[]>([]);
+  const [selectedModel, setSelectedModel] = useState<string>('gemini-3.8-flash');
+  const [modelUsed, setModelUsed] = useState<string | null>(null);
+  const [copied, setCopied] = useState<boolean>(false);
 
   const ask = async (prompt?: string) => {
     const text = (prompt ?? q).trim();
@@ -2408,6 +2538,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
     setQ(text);
     setLoading(true);
     setAnswer(null);
+    setModelUsed(null);
     setRefs([]);
     const ctx = [
       `Ders: ${deck.title} (${deck.discipline} - ${deck.committee})`,
@@ -2420,28 +2551,75 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
     ]
       .filter(Boolean)
       .join('\n');
+    // 1. Try server RAG endpoint first
     try {
       // safeJsonFetch honours the custom API URL (GitHub Pages + tunnel setups)
       const res = await safeJsonFetch<any>('/api/rag/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: `${text}\n\n[Slayt ve ders bağlamı]:\n${ctx}`, discipline: deck.discipline, committeeId: deck.committee, mode: 'qa', limit: 4 }),
+        body: JSON.stringify({
+          query: `${text}\n\n[Slayt ve ders bağlamı]:\n${ctx}`,
+          discipline: deck.discipline,
+          committeeId: deck.committee,
+          mode: 'qa',
+          limit: 4,
+          customModel: selectedModel,
+        }),
       });
       if (res.ok && res.data) {
         const data = res.data;
         if (data.answer) {
           setAnswer(data.answer);
+          setModelUsed(data.usedModel || selectedModel);
           setRefs(data.references || []);
           setLoading(false);
           return;
         }
       }
     } catch {
-      /* network failure: reported below */
+      /* network failure or server error: fall back to resilient client AI below */
     }
-    // No fallback summary: just tell the student it failed and let them retry
-    toast.error('AI yanıt veremedi', 'Sunucuya ulaşılamadı. Biraz sonra tekrar dene.', { label: 'Tekrar dene', onClick: () => ask(text) });
+
+    // 2. Resilient Client-Side Multi-Provider Fallback (Gemini Pool + Groq Cloud)
+    try {
+      const { callClientResilientAi } = await import('../../services/api');
+      const aiPrompt = `Öğrencinin Sorusu: "${text}"\n\n[Ders ve Slayt Bağlamı]:\n${ctx}\n\nLütfen bu ders notu ve slayt bağlamına sadık kalarak net, açıklayıcı ve sınav odaklı bir yanıt ver.`;
+      const isGroq = selectedModel.includes('gpt-oss') || selectedModel.includes('qwen') || selectedModel.includes('llama');
+      const isMuse = selectedModel.includes('spark') || selectedModel.includes('muse');
+      const preferredProvider = isMuse ? 'muse-spark' : (isGroq ? 'groq' : 'gemini');
+
+      const clientRes = await callClientResilientAi({
+        prompt: aiPrompt,
+        model: selectedModel,
+        preferredProvider,
+        responseFormat: 'text',
+        systemInstruction: 'Sen Tıp Fakültesi öğrencilerine ders slaytları üzerinden rehberlik eden kıdemli bir tıp akademisyenisin. Slayt içeriğine dayanarak doğru, net ve öğretici cevaplar ver.',
+      });
+
+      if (clientRes && clientRes.text) {
+        setAnswer(clientRes.text);
+        setModelUsed(clientRes.planUsed || clientRes.providerUsed || selectedModel);
+        setRefs([
+          { title: `${deck.title} — Slayt #${slide.slideNumber} (${deck.discipline})` }
+        ]);
+        setLoading(false);
+        return;
+      }
+    } catch (clientErr: any) {
+      console.warn('Client resilient AI fallback failed:', clientErr);
+    }
+
+    toast.error('AI yanıt veremedi', 'Bağlantı kurulamadı. Lütfen tekrar deneyin.', { label: 'Tekrar dene', onClick: () => ask(text) });
     setLoading(false);
+  };
+
+  const handleCopy = () => {
+    if (!answer) return;
+    const modelTag = modelUsed ? `\n\n[Yapay Zeka Modeli: ${formatAiModelDisplayName(modelUsed)}]` : '';
+    navigator.clipboard.writeText(answer + modelTag);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    toast.success('Yanıt kopyalandı', modelUsed ? `Yapay zeka modeli (${formatAiModelDisplayName(modelUsed)}) bilgisiyle panoya alındı.` : undefined);
   };
 
   return (
@@ -2455,7 +2633,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
               type="button"
               disabled={loading}
               onClick={() => ask(s)}
-              className="text-left rounded-lg border border-line px-2.5 py-2 text-[13px] leading-snug hover:border-accent cursor-pointer disabled:opacity-50"
+              className="text-left rounded-lg border border-line px-2.5 py-2 text-[13px] leading-snug hover:border-accent cursor-pointer disabled:opacity-50 transition-colors"
             >
               {s}
             </button>
@@ -2469,6 +2647,26 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
         }}
         className="flex flex-col gap-2"
       >
+        <div className="flex items-center justify-between gap-2 px-1">
+          <label htmlFor="deck-ai-model-select" className="text-[12px] font-semibold text-ink-2 inline-flex items-center gap-1.5">
+            <BrainCircuit className="w-3.5 h-3.5 text-accent" />
+            <span>Yapay Zeka Modeli:</span>
+          </label>
+          <select
+            id="deck-ai-model-select"
+            value={selectedModel}
+            disabled={loading}
+            onChange={(e) => setSelectedModel(e.target.value)}
+            className="bg-white dark:bg-slate-800 border border-line-2 rounded-md px-2 py-0.5 text-[11.5px] font-medium text-ink outline-none cursor-pointer focus:border-accent disabled:opacity-50"
+          >
+            <option value="gemini-3.8-flash">Google Gemini 3.8 Flash (Önerilen)</option>
+            <option value="gemini-3.7-flash">Google Gemini 3.7 Flash</option>
+            <option value="gemini-3.5-flash">Google Gemini 3.5 Flash</option>
+            <option value="openai/gpt-oss-120b">Groq GPT-OSS 120B</option>
+            <option value="qwen/qwen3.8-27b">Groq Qwen 27B (Türkçe)</option>
+            <option value="muse-spark-1.3-contributor-free">Muse Spark 1.3 Free</option>
+          </select>
+        </div>
         <label htmlFor="deck-ai-q" className="sr-only">
           Sorunu yaz
         </label>
@@ -2477,7 +2675,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
           rows={3}
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Bu slaytla ilgili sorunu yaz…"
+          placeholder="Bu slayt ve ders notuyla ilgili sorunu yaz…"
           className="resize-none border border-line-2 rounded-[10px] px-3 py-2.5 text-[14px] bg-field outline-0 focus:border-accent"
         />
         <button
@@ -2491,22 +2689,51 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
       </form>
       {loading && <AiThinking />}
       {answer && (
-        <div className="rounded-xl bg-accent-soft p-3 flex flex-col gap-2" role="status">
-          <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-accent">
-            <Sparkles className="w-3.5 h-3.5" /> Yanıt
-          </span>
-          <div className="text-[14px] leading-[1.6] text-ink whitespace-pre-line">
+        <div className="rounded-xl bg-accent-soft border border-accent/20 p-3.5 flex flex-col gap-2.5 shadow-2xs" role="status">
+          <div className="flex items-center justify-between gap-2 flex-wrap border-b border-accent/15 pb-2">
+            <span className="inline-flex items-center gap-1.5 text-[12.5px] font-bold text-accent">
+              <Sparkles className="w-3.5 h-3.5" /> AI Yanıtı
+            </span>
+            {modelUsed && (
+              <span
+                className="inline-flex items-center gap-1.5 text-[11px] font-medium bg-white/95 dark:bg-slate-800 text-ink-2 px-2.5 py-0.5 rounded-full border border-accent/25 shadow-2xs"
+                title={`Bu yanıtı üreten yapay zeka: ${modelUsed}`}
+              >
+                <Bot className="w-3.5 h-3.5 text-accent shrink-0" />
+                <span className="text-ink-3">Model:</span>
+                <span className="font-semibold text-accent font-mono">{formatAiModelDisplayName(modelUsed)}</span>
+              </span>
+            )}
+          </div>
+          <div className="text-[14px] leading-[1.65] text-ink whitespace-pre-line">
             <Rich text={answer.replace(/^#+\s*/gm, '').replace(/^>\s?/gm, '')} />
           </div>
           {refs.length > 0 && (
-            <ul className="list-none m-0 p-0 flex flex-col gap-1 border-t border-white/60 pt-2">
+            <ul className="list-none m-0 p-0 flex flex-col gap-1 border-t border-accent/15 pt-2">
               {refs.slice(0, 4).map((r: any, i: number) => (
-                <li key={i} className="text-[12px] text-ink-2 truncate">
-                  {r.title || r.noteTitle || r.source || `Kaynak ${i + 1}`}
+                <li key={i} className="text-[11.5px] text-ink-2 truncate flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                  <span>{r.title || r.noteTitle || r.source || `Kaynak ${i + 1}`}</span>
                 </li>
               ))}
             </ul>
           )}
+          <div className="flex items-center justify-between gap-2 pt-2 border-t border-accent/15 text-[11px] text-ink-3">
+            {modelUsed && (
+              <span className="inline-flex items-center gap-1 text-[11px] text-ink-2">
+                <span>Kullanılan Yapay Zeka:</span>
+                <strong className="text-ink font-mono font-medium">{formatAiModelDisplayName(modelUsed)}</strong>
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="inline-flex items-center gap-1 text-[11.5px] text-ink-2 hover:text-ink cursor-pointer px-2 py-0.5 rounded hover:bg-white/60 dark:hover:bg-white/10 transition-colors ml-auto"
+            >
+              {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? 'Kopyalandı' : 'Kopyala'}</span>
+            </button>
+          </div>
         </div>
       )}
     </div>

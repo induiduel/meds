@@ -284,19 +284,48 @@ export const Highlightable: React.FC<{ scope: string; className?: string; style?
         sel.removeAllRanges();
         return;
       }
+      // Touch / Tap on word or mark
+      const doc: any = document;
+      const caret = doc.caretPositionFromPoint
+        ? doc.caretPositionFromPoint(e.clientX, e.clientY)
+        : doc.caretRangeFromPoint?.(e.clientX, e.clientY);
+      if (!caret) return;
+      const node = caret.offsetNode || caret.startContainer;
+      const off = caret.offset ?? caret.startOffset;
+      if (!node || !root.contains(node)) return;
+
+      const pos = offsetOf(root, node, off);
+
       // Eraser tap on a single mark
       if (t.eraser) {
-        const doc: any = document;
-        const caret = doc.caretPositionFromPoint
-          ? doc.caretPositionFromPoint(e.clientX, e.clientY)
-          : doc.caretRangeFromPoint?.(e.clientX, e.clientY);
-        if (!caret) return;
-        const node = caret.offsetNode || caret.startContainer;
-        const off = caret.offset ?? caret.startOffset;
-        if (!node || !root.contains(node)) return;
-        const pos = offsetOf(root, node, off);
         const next = marks.current.filter((m) => !(pos >= m.start && pos <= m.end));
         if (next.length !== marks.current.length) commit(next);
+        return;
+      }
+
+      // Tap to highlight word directly (mobile-friendly without needing long-press OS selection)
+      if (node.nodeType === Node.TEXT_NODE) {
+        const textContent = (node as Text).data || '';
+        let start = off;
+        let end = off;
+        while (start > 0 && /[\p{L}\p{N}_\-]/u.test(textContent[start - 1])) start--;
+        while (end < textContent.length && /[\p{L}\p{N}_\-]/u.test(textContent[end])) end++;
+        if (end > start) {
+          const globalStart = offsetOf(root, node, start);
+          const globalEnd = offsetOf(root, node, end);
+          const overlapping = (m: Mark) => m.start < globalEnd && m.end > globalStart;
+          const wordText = textContent.slice(start, end);
+          commit([
+            ...marks.current.filter((m) => !overlapping(m)),
+            {
+              id: `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`,
+              color: t.color,
+              start: globalStart,
+              end: globalEnd,
+              text: wordText,
+            },
+          ]);
+        }
       }
     }, 10);
   };

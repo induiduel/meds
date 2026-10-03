@@ -231,14 +231,156 @@ async function callGeminiPool(
   throw lastErr || new Error('Google Gemini modelleri yanıt vermedi.');
 }
 
-// Resilient Multi-Provider AI Caller with Automated 2-Phase Failover
-// Deneme 1: Birincil Sağlayıcı -> Deneme 2: Alternatif Yedek Sağlayıcı (Gemini <-> Groq)
-// 2 kez denenip ikisi de başarısız olursa açık uyarı fırlatır.
+// =========================================================================
+// Muse Spark 1.3 Free Integration (Meta / OpenCode Zen / OpenRouter)
+// Kota kurtarma: Gemini ve Groq limitleri tükendiğinde devreye giren son çare modeli
+// =========================================================================
+export function getTieredMuseSparkKeys(customKey?: string): { key: string; label: string }[] {
+  const keys: { key: string; label: string }[] = [];
+  if (customKey && customKey.trim()) {
+    keys.push({ key: customKey.trim(), label: 'Özel Muse Spark Anahtarı' });
+  }
+  const envKey = (process.env.MUSE_SPARK_API_KEY || process.env.OPENCODE_API_KEY || process.env.OPENROUTER_API_KEY || '').trim();
+  if (envKey && !keys.some(x => x.key === envKey)) {
+    keys.push({ key: envKey, label: 'Sunucu Muse Spark Anahtarı' });
+  }
+  if (keys.length === 0) {
+    keys.push({ key: 'public-free-tier', label: 'Muse Spark 1.3 Ücretsiz / Contributor Havuzu' });
+  }
+  return keys;
+}
+
+export function getMuseSparkBaseUrls(customUrl?: string): string[] {
+  const urls: string[] = [];
+  if (customUrl && customUrl.trim()) {
+    urls.push(customUrl.trim().replace(/\/+$/, ''));
+  }
+  if (process.env.MUSE_SPARK_BASE_URL) {
+    urls.push(process.env.MUSE_SPARK_BASE_URL.trim().replace(/\/+$/, ''));
+  }
+  urls.push('https://opencode.ai/zen/v1');
+  urls.push('https://openrouter.ai/api/v1');
+  urls.push('https://api.meta.ai/v1');
+  return [...new Set(urls)];
+}
+
+export async function callMuseSpark(
+  prompt: string,
+  model: string = 'muse-spark-1.3-contributor-free',
+  customKey?: string,
+  options?: {
+    systemPrompt?: string;
+    isJson?: boolean;
+    messages?: { role: string; content: string }[];
+    baseUrl?: string;
+  }
+): Promise<{ text: string; model: string; keyUsed: string; providerUsed: string }> {
+  const keys = getTieredMuseSparkKeys(customKey);
+  const baseUrls = getMuseSparkBaseUrls(options?.baseUrl);
+
+  const candidateModels = [
+    model && (model.includes('spark') || model.includes('muse')) ? model : null,
+    'muse-spark-1.3-contributor-free',
+    'muse-spark-1.3-free',
+    'muse-spark-1.3',
+    'meta/muse-spark-1.3:free',
+    'meta/muse-spark-1.3',
+    'meta/muse-spark-1.3-contributor'
+  ].filter(Boolean) as string[];
+
+  const isJson = options?.isJson !== false;
+  const sysMsg = options?.systemPrompt || (isJson
+    ? 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
+    : 'Sen Tıp Fakültesi öğrencilerine sınav sorularında rehberlik eden kıdemli bir tıp hocası ve eğitmenisin.');
+
+  const chatMessages: any[] = options?.messages && options.messages.length > 0
+    ? [
+        { role: 'system', content: sysMsg },
+        ...options.messages
+      ]
+    : [
+        { role: 'system', content: sysMsg },
+        { role: 'user', content: prompt }
+      ];
+
+  let lastErr: any = null;
+
+  for (const baseUrl of baseUrls) {
+    for (const keyInfo of keys) {
+      for (const m of candidateModels) {
+        try {
+          const bodyPayload: any = {
+            model: m,
+            messages: chatMessages,
+            temperature: isJson ? 0.2 : 0.4
+          };
+          if (isJson) {
+            bodyPayload.response_format = { type: 'json_object' };
+          }
+
+          const headers: Record<string, string> = {
+            'Content-Type': 'application/json'
+          };
+          if (keyInfo.key && keyInfo.key !== 'public-free-tier') {
+            headers['Authorization'] = `Bearer ${keyInfo.key}`;
+          }
+          if (baseUrl.includes('openrouter')) {
+            headers['HTTP-Referer'] = 'https://induiduel.github.io/meds';
+            headers['X-Title'] = 'MedSoru AI Medical Tutor';
+          }
+
+          console.log(`[Muse Spark 1.3] Deneniyor: ${baseUrl} (${m}) [${keyInfo.label}]...`);
+
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 20000);
+
+          const res = await fetch(`${baseUrl}/chat/completions`, {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(bodyPayload),
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
+          if (!res.ok) {
+            const errText = await res.text();
+            console.warn(`[Muse Spark 1.3] ⚠️ ${baseUrl} (${m}) hatası:`, errText);
+            lastErr = new Error(`Muse Spark Hatası (${res.status}): ${errText}`);
+            continue;
+          }
+
+          const data: any = await res.json();
+          let text = data.choices?.[0]?.message?.content || (isJson ? '{}' : '');
+          if (isJson) {
+            text = text.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
+          }
+          return {
+            text,
+            model: m,
+            keyUsed: keyInfo.label,
+            providerUsed: `Muse Spark 1.3 Free (${keyInfo.label})`
+          };
+        } catch (err: any) {
+          lastErr = err;
+        }
+      }
+    }
+  }
+
+  throw lastErr || new Error('Muse Spark 1.3 modelleri yanıt vermedi.');
+}
+
+// Resilient Multi-Provider AI Caller with Automated 3-Phase Failover
+// Deneme 1: Birincil Sağlayıcı (Gemini / Groq / Muse Spark)
+// Deneme 2: Alternatif Yedek Sağlayıcı (Groq / Gemini)
+// Deneme 3 (Kurtarıcı / Son Çare): Tüm AI'lar Limit Doldurduysa Otomatik Devreye Giren Muse Spark 1.3 Free
 export async function generateResilientMedicalAi(options: {
   prompt: string;
   customGeminiKey?: string;
   customGroqKey?: string;
-  preferredProvider?: 'gemini' | 'groq' | 'auto';
+  customMuseSparkKey?: string;
+  museSparkBaseUrl?: string;
+  preferredProvider?: 'gemini' | 'groq' | 'muse-spark' | 'auto';
   model?: string;
   responseFormat?: 'json' | 'text';
   systemInstruction?: string;
@@ -248,6 +390,8 @@ export async function generateResilientMedicalAi(options: {
     prompt,
     customGeminiKey,
     customGroqKey,
+    customMuseSparkKey,
+    museSparkBaseUrl,
     preferredProvider = 'auto',
     model,
     responseFormat = 'json',
@@ -256,8 +400,36 @@ export async function generateResilientMedicalAi(options: {
   } = options;
 
   const isJson = responseFormat === 'json';
+  const isMuseExplicit = preferredProvider === 'muse-spark' || Boolean(model && (model.includes('spark') || model.includes('muse')));
   const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
   const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
+
+  // 1. ÖZEL DURUM: Kullanıcı doğrudan Muse Spark 1.3 seçtiyse doğrudan 1. sırada çalıştır
+  if (isMuseExplicit) {
+    console.log(`[AI Multi-Provider] 🟢 1. DENEME: Muse Spark 1.3 Free doğrudan seçildi...`);
+    try {
+      const sparkRes = await callMuseSpark(
+        prompt,
+        model || 'muse-spark-1.3-contributor-free',
+        customMuseSparkKey,
+        {
+          systemPrompt: systemInstruction,
+          isJson,
+          messages,
+          baseUrl: museSparkBaseUrl
+        }
+      );
+      return {
+        text: sparkRes.text,
+        providerUsed: sparkRes.providerUsed,
+        planUsed: `Muse Spark (${sparkRes.model})`,
+        attemptsCount: 1,
+        fallbackUsed: false
+      };
+    } catch (e: any) {
+      console.warn('[AI Multi-Provider] ⚠️ Doğrudan Muse Spark çağrısı başarısız, Gemini/Groq havuzuna düşülüyor:', e.message);
+    }
+  }
 
   // Birincil ve İkincil (Yedek) Sağlayıcı Belirleme
   const primaryProvider: 'groq' | 'gemini' = (isGroqExplicit || (isGeminiInCooldown && preferredProvider !== 'gemini')) ? 'groq' : (preferredProvider === 'gemini' ? 'gemini' : 'gemini');
@@ -265,6 +437,7 @@ export async function generateResilientMedicalAi(options: {
 
   let attempt1Err: any = null;
   let attempt2Err: any = null;
+  let attempt3Err: any = null;
 
   // =========================================================================
   // 1. DENEME: BİRİNCİL SAĞLAYICI (PRIMARY ATTEMPT)
@@ -337,16 +510,48 @@ export async function generateResilientMedicalAi(options: {
   }
 
   // =========================================================================
-  // 2 KEZ DENENDİ VE İKİ SAĞLAYICI DA YANIT VERMEDİ -> UYARI VER
+  // 3. DENEME: TÜM AI'LAR LİMİT DOLDURDUYSA DEVREYE GİREN MUSE SPARK 1.3 FREE
+  // (SON ÇARE KOTA KURTARMA FAZI)
+  // =========================================================================
+  console.log(`[AI Multi-Provider] ⚡ 3. DENEME (KOTA KURTARMA): Tüm AI'lar limit doldurdu! Muse Spark 1.3 Free devreye alınıyor...`);
+  try {
+    const sparkRes = await callMuseSpark(
+      prompt,
+      model && model.includes('spark') ? model : 'muse-spark-1.3-contributor-free',
+      customMuseSparkKey,
+      {
+        systemPrompt: systemInstruction,
+        isJson,
+        messages,
+        baseUrl: museSparkBaseUrl
+      }
+    );
+    console.log(`[AI Multi-Provider] ✓ 3. DENEME (Kurtarıcı Muse Spark 1.3 Free ${sparkRes.model}) başarıyla yanıt verdi!`);
+    return {
+      text: sparkRes.text,
+      providerUsed: `Muse Spark 1.3 Free [Kota Kurtarıcı]`,
+      planUsed: `Muse Spark (${sparkRes.model})`,
+      attemptsCount: 3,
+      fallbackUsed: true
+    };
+  } catch (sparkErr: any) {
+    console.error(`[AI Multi-Provider] ❌ 3. DENEME (Muse Spark 1.3 Free) DE BAŞARISIZ OLDU:`, sparkErr.message);
+    attempt3Err = sparkErr;
+  }
+
+  // =========================================================================
+  // 3 KEZ DENENDİ VE ÜÇ SAĞLAYICI DA YANIT VERMEDİ -> UYARI VER
   // =========================================================================
   const primaryName = primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
   const secondaryName = secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
   const failureError: any = new Error(
-    `2 kez denendi: Hem 1. sağlayıcı (${primaryName}) hem de 2. alternatif sağlayıcı (${secondaryName}) yanıt veremedi. Lütfen API anahtarlarınızı veya internet bağlantınızı kontrol edin.`
+    `3 kez denendi: Hem Google Gemini hem Groq Cloud hem de Muse Spark 1.3 Free sağlayıcılarının kotaları tükendi veya yanıt veremediler. Lütfen API kotalarınızı veya internet bağlantınızı kontrol edin.`
   );
-  failureError.attemptsCount = 2;
+  failureError.attemptsCount = 3;
   failureError.isTwoAttemptsFailed = true;
+  failureError.isThreeAttemptsFailed = true;
   failureError.primaryError = attempt1Err?.message || 'Bilinmeyen hata';
   failureError.secondaryError = attempt2Err?.message || 'Bilinmeyen hata';
+  failureError.tertiaryError = attempt3Err?.message || 'Bilinmeyen hata';
   throw failureError;
 }

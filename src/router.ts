@@ -8,6 +8,7 @@
  *   /calis       → study hub, /test → focused test mode
  *   /siralama    → leaderboard
  *   /yonetim     → admin panel (admins only)
+ *   /manage      → yönetim konsolu (manage.nofrostlife.com.tr ile aynı ekran)
  *
  * Old `#tab` links keep working: they are rewritten to the matching path on load.
  */
@@ -28,7 +29,8 @@ export type AppRoute =
   | 'study'
   | 'summaries'
   | 'transcripts'
-  | 'admin';
+  | 'admin'
+  | 'manage';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -46,6 +48,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   matrix: '/harita',
   booklet: '/kitapcik',
   admin: '/yonetim',
+  manage: '/manage',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -64,6 +67,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   matrix: 'Soru haritası',
   booklet: 'A4 kitapçık',
   admin: 'Yönetim',
+  manage: 'Yönetim Konsolu',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -96,6 +100,8 @@ const ALIASES: Record<string, AppRoute> = {
   summaries: 'summaries',
   transcripts: 'transcripts',
   admin: 'admin',
+  manage: 'manage',
+  yonetim: 'admin',
 };
 
 export interface ParsedRoute {

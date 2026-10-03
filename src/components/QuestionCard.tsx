@@ -14,6 +14,7 @@ import {
   ThumbsUp,
   AlertTriangle,
   Wand2,
+  Trash2,
 } from 'lucide-react';
 import { ActionMenu } from './ui/ActionMenu';
 import { QuestionItem } from '../types';
@@ -35,6 +36,7 @@ interface QuestionCardProps {
   currentUser?: AppUser | null;
   isAdmin?: boolean;
   onEditQuestion?: (question: QuestionItem) => void;
+  onDeleteQuestion?: (question: QuestionItem) => void;
   onOpenHistory?: (question: QuestionItem) => void;
   onAddFragment: (questionId: string, text: string, author: string, type: 'stem' | 'clue' | 'option') => Promise<void>;
   onUpvoteFragment: (questionId: string, fragmentId: string) => Promise<void>;
@@ -111,6 +113,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   currentUser,
   isAdmin = false,
   onEditQuestion,
+  onDeleteQuestion,
   onOpenHistory,
   onAddFragment,
   onUpvoteFragment,
@@ -519,6 +522,17 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                       : []),
                     ...((isMyQuestion || isAdmin) && onEditQuestion
                       ? [{ label: 'Düzenle', icon: Pencil, group: 'Soru', onClick: () => onEditQuestion(question) }]
+                      : []),
+                    ...((isMyQuestion || isAdmin || question.isUnassignedNumber) && onDeleteQuestion
+                      ? [
+                          {
+                            label: question.isUnassignedNumber ? 'Taslağı Sil' : 'Soruyu Sil',
+                            icon: Trash2,
+                            group: 'Soru',
+                            tone: 'danger' as const,
+                            onClick: () => onDeleteQuestion(question),
+                          },
+                        ]
                       : []),
                     ...(revisionCount > 0 && onOpenHistory
                       ? [{ label: 'Değişiklik geçmişi', icon: History, group: 'Soru', hint: String(revisionCount), onClick: () => onOpenHistory(question) }]

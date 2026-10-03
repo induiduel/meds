@@ -1,0 +1,891 @@
+# -*- coding: utf-8 -*-
+"""
+Builder script for 24 high-yield academic slides:
+Halk Sagligi Tarihcesi, Felsefesi ve Koruyucu Hekimlik Ilkeleri
+"""
+
+import json
+import os
+
+target_path = r"C:\Users\indui\.gemini\antigravity\brain\386176b3-c821-4f99-a837-6f25ae2aca35\scratch\deck_halk_sagligi_tarihcesi.json"
+
+slides = [
+    # 1
+    {
+        "slideNumber": 1,
+        "title": "Halk Sağlığı Kavramı, Tanımı ve Felsefi Temelleri",
+        "subtitle": "Dr. C.E.A. Winslow (1920) Tanımı ve Bireysel Tıptan Toplumsal Paradigmaya Geçiş",
+        "content": (
+            "Halk sağlığı; klinik tıbbın yalnızca hasta bireyi iyileştirmeye odaklanan dar biyomedikal sınırlarını aşarak, "
+            "odağına toplumun bütününü alan, sağlığı koruma ve geliştirme bilimi ve sanatıdır. Modern halk sağlığının felsefi temelleri, "
+            "hastalığın yalnızca biyolojik bir arıza değil; bireyin içinde yaşadığı fiziksel, biyolojik ve sosyoekonomik çevrenin bir ürünü "
+            "olduğu anlayışına dayanır. Bu bağlamda halk sağlığı; tek tek bireylerin tedavisinden ziyade, toplum düzeyinde risk faktörlerinin "
+            "kontrol altına alınmasını, sağlığın sosyal belirleyicilerinin iyileştirilmesini ve sağlık hakkının evrensel olarak güvenceye alınmasını hedefler.\n\n"
+            "Alanın kurucu öncülerinden olan bakteriyolog ve halk sağlığı kuramcısı Dr. Charles-Edward Amory Winslow, 1920 yılında bugün hala evrensel "
+            "geçerliliğini koruyan klasik halk sağlığı tanımını yapmıştır: 'Halk sağlığı; organize edilmiş toplum çalışmaları sonunda çevre sağlık koşullarını "
+            "düzelterek, bireylere sağlık bilgisi vererek, bulaşıcı hastalıkları önleyerek, hastalıkların erken tanı ve tedavisini sağlayarak, sağlık örgütleri "
+            "kurarak ve toplumsal çalışmaları her bireyin sağlığını sürdürecek bir yaşam düzeyini sağlayacak biçimde geliştirerek; hastalıklardan korunmayı, "
+            "yaşamın uzatılmasını, beden ve ruh sağlığı ile çalışma gücünün artırılmasını sağlayan bir bilim ve sanattır.'\n\n"
+            "Winslow'un bu tanımı üç devrimci sacayağını barındırır: Birincisi, sağlığın ancak 'organize toplum çabası' ile korunabileceği; yani bireysel "
+            "çabanın yetersiz kaldığı su şebekesi, kanalizasyon, aşı politikaları gibi kolektif eylemlerin zorunluluğudur. İkincisi, halk sağlığının yalnızca "
+            "bir 'bilim' değil, aynı zamanda toplumun kültürel, ekonomik ve idari dinamiklerini yönetebilme 'sanatı' olduğudur. Üçüncüsü ise hedefin salt "
+            "mortaliteyi düşürmek değil, insanın çalışma gücünü ve yaşam kalitesini en üst düzeye çıkarmak oluşudur."
+        ),
+        "importantPoint": "Winslow'un tanımında halk sağlığının anahtar unsuru 'organize edilmiş toplum çalışmaları'dır. Bireysel hekimlik tek bir hastayı tedavi ederken; halk sağlığı tüm toplumu hasta kabul eder veya korur; çevresel sanitasyonu, erken tanıyı ve yaşam standardını organize çabalarla yükseltir.",
+        "examTip": "Tıp Fakültesi Komite ve Halk Sağlığı Uzmanlık sınavlarında en sık sorulan soru: 'Winslow (1920) halk sağlığı tanımında aşağıdakilerden hangisi yer almaz?' Yanıt seçeneklerinde genellikle 'Pahalı ve ileri teknolojik hastane tedavilerinin yaygınlaştırılması' veya 'Bireysel tedavi harcamalarının özelleştirilmesi' gibi çeldiriciler kullanılır. Doğru unsurlar: Çevre sanitasyonu, bulaşıcı hastalıkların önlenmesi, sağlık eğitimi, erken tanı/tedavi örgütlenmesi ve insanca yaşam standardının sağlanmasıdır.",
+        "practiceQuestion": {
+            "question": "C.E.A. Winslow'un 1920 yılında formüle ettiği klasik halk sağlığı tanımına göre aşağıdakilerden hangisi halk sağlığının temel bileşenlerinden veya hedeflerinden biri DEĞİLDİR?",
+            "options": [
+                "A) Organize edilmiş toplum çabalarıyla çevre sağlık koşullarının düzeltilmesi",
+                "B) Bulaşıcı hastalıkların kontrol altına alınması ve bireylere sağlık eğitimi verilmesi",
+                "C) Hastalıkların erken tanı ve tedavisini organize edecek sağlık örgütlerinin kurulması",
+                "D) Yüksek maliyetli üçüncül yoğun bakım ve ileri cerrahi merkezlerinin kâr odaklı yaygınlaştırılması",
+                "E) Yaşamın uzatılması, beden ve ruh sağlığı ile çalışma gücünün artırılması"
+            ],
+            "correctAnswer": 3,
+            "explanation": "C.E.A. Winslow'un 1920 tanımında çevre sanitasyonu, bulaşıcı hastalıkların kontrolü, sağlık eğitimi, erken tanı/tedavi teşkilatları ve yaşam standardının yükseltilmesi yer alır. Yüksek maliyetli kâr odaklı özel hastane yatırımları halk sağlığının değil, ticari/bireysel tıbbın konusudur."
+        }
+    },
+    # 2
+    {
+        "slideNumber": 2,
+        "title": "İlk Çağlarda Sağlık Arayışı ve Hijyen Pratikleri",
+        "subtitle": "Gılgamış Destanı'ndan Antik Mısır ve Mezopotamya'nın Sanitasyon Kurallarına",
+        "content": (
+            "İnsanoğlunun sağlık, hastalık ve ölümle mücadelesi insanlık tarihi kadar eskidir. Yazılı tarihin en eski edebi metni olan ve MÖ 3000 yıllarının ilk yarısında "
+            "Mezopotamya'daki Uruk kentinde hüküm süren Kral Gılgamış'ın öyküsünü anlatan Gılgamış Destanı, insanın ölümsüzlük ve sağlıklı yaşam arayışının ilk somut "
+            "belgesidir. Dostu Enkidu'nun ölümüyle sarsılan Gılgamış'ın çıktığı ölümsüzlük arayışı; tıp felsefesi açısından insanın biyolojik sınırlarını aşma, "
+            "hastalıklardan arınma ve yaşam süresini uzatma tutkusunun evrensel bir alegorisidir.\n\n"
+            "Mezopotamya uygarlıklarında (Sümer, Babil, Asur) hastalıklar uzun süre tanrıların gazabı veya kötü ruhların bedeni istilası olarak yorumlansa da, "
+            "toplumsal düzeyde erken sanitasyon pratiklerinin ilk örnekleri bu coğrafyada görülmüştür. MÖ 18. yüzyıla tarihlenen Hammurabi Kanunları; hekimlerin "
+            "tıbbi müdahalelerdeki yasal ve mesleki sorumluluklarını, cerrahi kusurlardaki cezai yaptırımları ve su kaynaklarının korunmasını düzenleyen tarihteki "
+            "ilk yazılı hekimlik yasalarını içerir. Babil ve Ninova kalıntılarında ortaya çıkarılan pişmiş topraktan yapılmış drenaj boruları ve kentsel atık kanalları, "
+            "çevre sağlığının ilk embriyonik adımlarıdır.\n\n"
+            "Antik Mısır tıbbı ise hijyen ve koruyucu hekimlik açısından daha da ileri bir düzey sergilemiştir. Ebers ve Edwin Smith papirüslerinde tarif edilen "
+            "tıbbi uygulamalar; vücut temizliği, sünnet, periyodik laksatif kullanımı, temiz içme suyu temini ve böceklerden korunma gibi koruyucu sağlık "
+            "kurallarını dini ve kamusal yasalarla birleştirmiştir. Mısır'da hekimlerin her birinin belirli bir organ veya hastalık üzerinde uzmanlaşması, "
+            "halk sağlığının öncüsü sayılabilecek toplumsal iş bölümünü ve kayıt tutma kültürünü başlatmıştır."
+        ),
+        "importantPoint": "Gılgamış Destanı tıp tarihi açısından insanın 'ölümsüzlük, yaşlanmayı geciktirme ve hastalıktan korunma' arayışının bilinen en eski yazılı belgesidir. Hammurabi Kanunları ise hekimlik uygulamasını kamusal ve yasal denetime bağlayan ilk kanunnamedir.",
+        "examTip": "'Tarihte hekimlik uygulamalarını ve tıbbi hatalara yönelik cezai sorumlulukları ilk kez yasal bir çerçeveye bağlayan yazılı metin hangisidir?' Sorusunun cevabı: Hammurabi Kanunları'dır. Gılgamış Destanı ise ölümsüzlük arayışını simgeler.",
+        "practiceQuestion": {
+            "question": "İlk Çağ uygarlıklarındaki sağlık ve hijyen pratikleriyle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Gılgamış Destanı, insanın ölümsüzlük ve hastalıklardan korunarak yaşamı uzatma arayışının tarihteki en eski yazılı edebi belgesidir.",
+                "B) Hammurabi Kanunları, hekimlerin tıbbi müdahalelerdeki yasal sorumluluklarını ve cerrahi kusurlarını düzenleyen ilk yazılı metinlerdendir.",
+                "C) Antik Mısır tıbbında vücut hijyeni, temiz su temini ve parazitlerden korunma kuralları papirüslerde yer almıştır.",
+                "D) Mezopotamya kazılarında bulunan pişmiş toprak drenaj boruları, çevre sağlığı ve kentsel atık kontrolünün erken örneklerindendir.",
+                "E) İlk Çağ tıbbında hastalıkların tamamen mikrobiyolojik etkenlerle oluştuğu kanıtlanmış ve modern aşılar uygulanmıştır."
+            ],
+            "correctAnswer": 4,
+            "explanation": "İlk Çağ tıbbında mikrobiyolojik etkenler ve aşılar bilinmiyordu; mikroorganizmalar 17. yüzyılda Leeuwenhoek ile görülmüş, Germ Teorisi ise 19. yüzyılda Pasteur ve Koch ile kanıtlanmıştır."
+        }
+    },
+    # 3
+    {
+        "slideNumber": 3,
+        "title": "Rasyonel Tıbbın ve Etiğin Doğuşu: Hipokrat",
+        "subtitle": "Doğaüstü İnançlardan Doğal Nedenlere, Humoral Patoloji ve 'Primum Non Nocere'",
+        "content": (
+            "Antik Yunan'da tıp, MÖ 5. yüzyıla kadar Asklepios tapınaklarında uygulanan teolojik ve teürjik (büyüsel) bir nitelik taşımaktaydı. Bu dogmatik yapıyı "
+            "kökten yıkan ve tıbbı rasyonel bir gözlem bilimi haline getiren isim Hipokrat'tır (MÖ 460-370). Hipokrat, hastalıkların tanrıların cezalandırması olmadığını; "
+            "aksine tamamen 'doğal nedenlerden' kaynaklandığını ileri sürmüştür. 'Kutsal Hastalık Üzerine' adlı eserinde epilepsinin ilahi bir lanet değil, beynin "
+            "fiziksel bir bozukluğu olduğunu savunarak tıpta natüralist devrimi başlatmıştır.\n\n"
+            "Hipokrat'ın fizyoloji ve patoloji anlayışı, Empedokles'in dört element kuramından türetilen 'Humoral Patoloji Teorisi' (Hipokratik Sıvı Kuramı) üzerine kuruludur. "
+            "Evren nasıl toprak, hava, ateş ve sudan oluşuyorsa; insan bedeni de dört temel sıvıdan (humor) oluşur: Kan (sıcak-nemli), Balgam (soğuk-nemli), Sarı Safra "
+            "(sıcak-kuru) ve Kara Safra (soğuk-kuru). Sağlık, bu dört sıvının nitelik ve nicelik olarak mükemmel bir dengede (Eukrasia) bulunmasıdır; hastalık ise "
+            "bu dengenin bozulmasıdır (Dyskrasia). Hekimin görevi, doğanın iyileştirici gücüne (Vis medicatrix naturae) yardımcı olarak bu dengeyi yeniden kurmaktır.\n\n"
+            "Hipokrat aynı zamanda modern tıp terminolojisinin ve nozolojisinin kurucusudur. Semptom, tanı, prognoz, profilaksi, kriz, sepsis ve travma terimlerini "
+            "tıbba kazandırmış; diyabet, artrit, gastrit, enterit, kanser, eklampsi, koma, paralizi ve histeri gibi tabloları tanımlamıştır. Hepsinden önemlisi, "
+            "'Hastalık yoktur, hasta vardır' ilkesini ve tıbbın en temel aksiyomu olan 'Primum non nocere' (Önce zarar verme) kuralını tıp ahlakının merkezine yerleştirmiştir. "
+            "Hipokratik gelenek, hekimlik mesleğini katı bir etik sözleşmeye bağlayarak insanlık tarihinin en köklü meslek ahlakını inşa etmiştir."
+        ),
+        "importantPoint": "Hipokratik tıbbın en büyük tarihsel devrimi, hastalıkları tanrısal/büyüsel nedenlerden arındırıp 'tamamen doğal ve çevresel nedenlere' bağlamasıdır. Temel patoloji kuramı Humoral Teori (kan, balgam, sarı safra, kara safra dengesi), temel tıp ahlakı kuralı ise 'Primum non nocere'dir.",
+        "examTip": "'Hastalıkların doğaüstü güçlerden değil doğal nedenlerden kaynaklandığını ilk kez savunan, Humoral Patoloji teorisini geliştiren ve 'Önce zarar verme' (Primum non nocere) ilkesini getiren hekim kimdir?' Yanıt: Hipokrat.",
+        "practiceQuestion": {
+            "question": "Hipokratik tıp felsefesi ve Humoral Patoloji Kuramı ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Hastalıkların tanrısal bir ceza değil, tamamen doğal ve çevresel nedenlerle meydana geldiğini savunmuştur.",
+                "B) Vücuttaki dört temel sıvıyı (humor) kan, balgam, sarı safra ve kara safra olarak tanımlamıştır.",
+                "C) Sağlık durumunu sıvıların dengede olması (eukrasia), hastalığı ise dengenin bozulması (dyskrasia) olarak açıklamıştır.",
+                "D) Tıbbın temel ahlaki ilkesini 'Primum non nocere' (Önce zarar verme) olarak formüle etmiştir.",
+                "E) Hastalıkların tek nedeninin genetik mutasyonlar olduğunu ileri sürerek çevrenin sağlığa etkisini bütünüyle reddetmiştir."
+            ],
+            "correctAnswer": 4,
+            "explanation": "Hipokrat çevrenin (su, hava, mekanlar) sağlığa etkisini en güçlü vurgulayan hekimdir ('Havalar, Sular ve Yöreler Üzerine' eseri). Genetik mutasyon kavramı 20. yüzyıla aittir."
+        }
+    },
+    # 4
+    {
+        "slideNumber": 4,
+        "title": "Roma Dönemi, Bergamalı Galen ve Kamu Sağlığı Mühendisliği",
+        "subtitle": "Galenik Farmakoloji, Su Kemerleri (Aqueducts), Cloaca Maxima ve Columella'nın Bataklık Gözlemi",
+        "content": (
+            "Antik Yunan'ın teorik ve felsefi tıp mirasını devralıp geliştiren Roma İmparatorluğu, tıp uygulamalarını kamu sağlığı ve çevre mühendisliğiyle taçlandırmıştır. "
+            "Bu dönemin en büyük tıbbi otoritesi, Anadolu kökenli hekim Bergamalı Galen'dir (Galenos, MS 129-216). Galen, gladyatör hekimliği yaparak edindiği anatomi "
+            "ve fizyoloji tecrübelerini botanik bilimiyle harmanlamıştır. Bitkisel, hayvansal ve mineral maddelerden hazırladığı karmaşık ilaç formülleri günümüzde "
+            "'galenik preparatlar' olarak anılmakta olup, kendisi modern eczacılığın babası kabul edilir. Galen'in eserleri, Rönesans'a kadar yaklaşık 1400 yıl boyunca "
+            "tartışılmaz dogma olarak kalmıştır.\n\n"
+            "Roma uygarlığının halk sağlığına en kalıcı katkısı, devasa çevre sağlığı ve hijyen altyapısıdır. Romalılar, suyun ve temizliğin toplum sağlığı için "
+            "hayati olduğunu kavrayarak yüzlerce kilometre uzunluğunda su kemerleri (aqueducts) inşa etmiş, şehirlere sürekli temiz dağ suyu taşımışlardır. "
+            "Halk hamamları (thermae), çeşmeler, umumi tuvaletler (latrina) ve kentin tüm kanalizasyon atıklarını Tiber nehrine boşaltan ünlü 'Cloaca Maxima' kolektörü, "
+            "halk sağlığı mühendisliğinin antik çağdaki zirve noktalarıdır.\n\n"
+            "Bu dönemde çevre sağlığı ve epidemiyolojik sezginin en çarpıcı belgesi ise Romalı yazar Lucius Junius Moderatus Columella (MS 1. yüzyıl) tarafından "
+            "kaleme alınmıştır. Columella, 'De Re Rustica' (Tarım Üzerine) adlı eserinde şu tarihi uyarıyı yapmıştır: 'Ne bir bina bataklık bir yere yapılmalı, "
+            "ne de yollar böyle yerlerden geçmelidir. Çünkü bataklıklar güneşin etkisiyle kururken gözle görülmeyen ve solunumla içeri çekilen zehirli minik canlılar yayarlar; "
+            "yoksa sivrisinek ve pis kokudan kurtulamayız ve sıtma oluruz.' Columella, mikrobiyolojiden 1800 yıl önce bataklık, sivrisinek ve sıtma arasındaki ilişkiyi doğru saptamıştır."
+        ),
+        "importantPoint": "Bergamalı Galen, hazırladığı standardize ilaç formülleriyle (galenik preparatlar) eczacılığın babası kabul edilir. Columella ise MS 100 civarında bataklıklar, sivrisinekler ve sıtma arasındaki ilişkiyi ilk kez açıkça tarif ederek çevre sağlığı ve yerleşim yeri seçiminin önemini vurgulamıştır.",
+        "examTip": "'Antik Roma döneminde bataklıkların sıtmaya yol açtığını belirterek binaların bataklık alanlara yapılmaması gerektiğini ifade eden yazar kimdir?' Yanıt: Columella. (Ayrıca eczacılıktaki bitkisel preparatların isim babası: Galen).",
+        "practiceQuestion": {
+            "question": "Antik Roma dönemi kamu sağlığı uygulamaları ve tıp tarihi ile ilgili aşağıdakilerden hangisi DOĞRUDUR?",
+            "options": [
+                "A) Bergamalı Galen geliştirdiği formüllerle modern eczacılığın temeli olan galenik preparatları oluşturmuştur.",
+                "B) Romalılar şehirlerde su kemerleri ve kanalizasyon sistemlerini bütünüyle yasaklamışlardır.",
+                "C) Columella bataklıkların sağlığa faydalı olduğunu ve tüm yerleşimlerin bataklık kenarına kurulmasını savunmuştur.",
+                "D) Galenik tıp anlayışı sadece cerrahi girişimleri kapsar, ilaç tedavisini ve bitkisel preparatları reddeder.",
+                "E) Cloaca Maxima, Roma'da halkın temiz içme suyu ihtiyacını karşılamak için açılmış kutsal bir su kaynağıdır."
+            ],
+            "correctAnswer": 0,
+            "explanation": "Bergamalı Galen bitkisel formülasyonlarıyla galenik preparatların ve eczacılığın kurucusudur. Romalılar su kemerleri ve kanalizasyon (Cloaca Maxima) inşa etmiş, Columella ise bataklıklardan sıtma nedeniyle kaçınılmasını öğütlemiştir."
+        }
+    },
+    # 5
+    {
+        "slideNumber": 5,
+        "title": "İslam Uygarlığında Tıp ve Enfeksiyon Kavramı",
+        "subtitle": "Razi'nin Kokuşma Deneyi, İbn-i Sina'nın Karantinası ve İbn-ül Habib'in Bulaşma Gözlemi",
+        "content": (
+            "Avrupa'nın Erken Orta Çağ karanlığına gömüldüğü ve manastır dogmatizmiyle antik mirası unuttuğu dönemde; İslam dünyası, Antik Yunan ve Roma tıbbını "
+            "korumuş, gözlem ve deneysel yöntemlerle zenginleştirmiştir. Bu dönemin en parlak dâhilerinden biri Ebubekir er-Razi'dir (MS 850-932). Razi, kokuşma "
+            "(putrefaksiyon) kuramını tıp pratiğine ustalıkla uygulamıştır. Kendisine Bağdat'ta kurulacak Adudi Hastanesi'nin nereye yapılması gerektiği sorulduğunda; "
+            "kentin farklı bölgelerine, ağaç dallarına taze et parçaları astırmış ve etin en geç kokuştuğu bölgeyi havanın en temiz olduğu yer olarak belirleyip "
+            "hastanenin oraya inşa edilmesini sağlamıştır. Bu deney, tarihteki ilk uygulamalı çevre sağlığı ve mikroiklim araştırmalarından biridir.\n\n"
+            "Batı'da 'Avicenna' adıyla anılan ve hekimlerin piri kabul edilen İbn-i Sina (980-1037), tıbbi bilgileri 'El-Kanun fi't-Tıbb' ve felsefi-bilimsel "
+            "görüşlerini 'Kitabü'ş-Şifa' adlı anıtsal yapıtlarında toplamıştır. El-Kanun, 17. yüzyılın sonlarına kadar Doğu ve Batı üniversitelerinde standart "
+            "tıp ders kitabı olarak okutulmuştur. İbn-i Sina, hastalıkların gözle görülmeyen minik varlıklar tarafından su ve toprak yoluyla bulaştırılabileceğini öngörmüş; "
+            "salgın durumunda tecridin (karantina) ve sirke gibi antiseptiklerin kullanımının gerekliliğini vurgulamıştır.\n\n"
+            "Endülüslü hekim İbn-ül Habib ise 14. yüzyıldaki veba pandemisinde bulaşma yollarını epidemiyolojik bir kesinlikle gözlemlemiştir: 'Hastalıklı bireylerle "
+            "temas etmeyenlerin sağlıklı kalmalarına karşın, temas edenlerin hastalığa yakalanmaları; bu geçişin hastaların giysilerinden, kullandıkları kap-kacaktan "
+            "ve eşyalardan ortaya çıktığı açık bir gerçektir.' Bu tespit; temasın, kontamine eşyaların (fomitler) ve izolasyonun önemini mikrobiyoloji öncesi çağda ortaya koyan muazzam bir halk sağlığı sezgisidir."
+        ),
+        "importantPoint": "Razi'nin Bağdat'ta hastane yeri seçimi için et astırıp kokuşmanın en geç olduğu noktayı saptaması, çevre sağlığı ve hava kalitesi değerlendirmesinin ilk deneysel kanıtıdır. İbn-ül Habib ise veba salgınında hastalığın temas ve hastanın giysileri/eşyaları (fomitler) yoluyla bulaştığını açıkça ifade etmiştir.",
+        "examTip": "'Bağdat'ta yeni bir hastane kurulacağı zaman kentin farklı yerlerine et parçaları asarak etin en geç kokuştuğu yere hastanenin yapılmasını öneren ve kokuşma fikrini ortaya atan İslam hekimi kimdir?' Yanıt: Ebubekir er-Razi.",
+        "practiceQuestion": {
+            "question": "Orta Çağ İslam tıbbı ve hekimlerinin halk sağlığına katkılarıyla ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+            "options": [
+                "A) Ebubekir Razi - Bağdat'ta et astırarak en geç kokuşmanın görüldüğü temiz havaya sahip bölgeye hastane yapılması",
+                "B) İbn-i Sina - Çiçek aşısını sığırlardan izole ederek dünyada ilk modern aşılamayı başlatması",
+                "C) İbn-ül Habib - Kolera etkenini mikroskop altında izole ederek vibrio adını vermesi",
+                "D) Ebubekir Razi - Broad Street su pompasının kolunu sökerek kolera salgınını durdurması",
+                "E) İbn-i Sina - Skorbüt hastalığının narenciye ile tedavi edileceğini donanma deneyleriyle kanıtlaması"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Razi, et asma deneyiyle kokuşmanın en geç olduğu temiz havaya sahip alana hastane yapılmasını sağlamıştır. Çiçek aşısı Jenner'a, Broad Street Snow'a, skorbüt Lind'e aittir."
+        }
+    },
+    # 6
+    {
+        "slideNumber": 6,
+        "title": "Orta Çağ Salgınları ve Karantina Kurumunun Doğuşu",
+        "subtitle": "Kara Ölüm (Yersinia pestis) Pandemisi, Venedik ve Ragusa'da İzolasyon ve Karantina (Quaranta Giorni)",
+        "content": (
+            "İnsanlık tarihi boyunca demografik, sosyal ve ekonomik yapıları en derinden sarsan olayların başında büyük salgınlar gelir. 1347-1351 yılları arasında "
+            "Asya'dan ticaret gemileriyle Avrupa'ya taşınan ve 'Kara Ölüm' (Black Death) olarak adlandırılan Büyük Veba Salgını, Avrupa nüfusunun yaklaşık "
+            "üçte birini (25 milyon insanı) yok etmiştir. Yersinia pestis bakterisinin neden olduğu ve sıçan pireleri (Xenopsylla cheopis) aracılığıyla yayılan "
+            "hıyarcıklı (bubonik) ve pnömonik veba; feodal düzeni çözmüş, tarlaları sahipsiz bırakmış ve dönemin dogmatik tıp anlayışını iflas ettirmiştir.\n\n"
+            "Vebanın çaresizliği karşısında tıp otoriteleri etkisiz kalınca, kent yönetimleri hayatta kalabilmek adına tarihin ilk organize halk sağlığı "
+            "ve sınır güvenliği önlemlerini geliştirmek zorunda kalmışlardır. 1377 yılında Adriyatik kıyısındaki Ragusa (günümüzde Dubrovnik) kent meclisi, "
+            "salgın bölgelerinden gelen gemilerin ve yolcuların şehre girmeden önce kentin açıklarındaki adacıklarda 30 gün boyunca (Trentina) tecrit altında "
+            "bekletilmesini kararlaştırmıştır. Bu süre daha sonra 1423 yılında Venedik'te 40 güne (İtalyanca: Quaranta giorni) çıkarılmış ve böylece modern 'Karantina' terimi ve kurumu doğmuştur.\n\n"
+            "Venedik Cumhuriyeti ayrıca 1423'te Santa Maria di Nazareth adasında tarihin ilk karantina hastanesi olan 'Lazzaretto'yu kurmuş; şüpheli gemilerin "
+            "yüklerini havalandırma, tütsüleme ve dezenfekte etme kurallarını yasalaştırmıştır. Salgınların yönetimi amacıyla daimi Sağlık Konseyleri oluşturulmuş, "
+            "yolcular için sağlık sertifikaları (patent di sanità) ve ölüm nedenlerinin kaydedildiği ilk sistematik mortalite kütükleri tutulmaya başlanmıştır. "
+            "Karantina; etkeni henüz bilinmeyen bulaşıcı hastalıklara karşı toplumun uyguladığı en eski organize halk sağlığı savunma hattıdır."
+        ),
+        "importantPoint": "Karantina kavramı İtalyanca 'quaranta giorni' (kırk gün) kelimesinden türemiştir. Salgın bölgelerinden gelen gemi ve yolcuların ilk olarak 1377'de Ragusa'da (Dubrovnik) 30 gün (trentina), ardından Venedik'te 40 gün tecrit edilmesiyle kurumsallaşmıştır.",
+        "examTip": "'Bulaşıcı hastalıkların yayılmasını önlemek amacıyla deniz yoluyla gelen yolcu ve yüklerin limana girmeden önce belirli bir süre tecrit edilmesi uygulaması olan karantina ilk kez hangi tarihi salgına karşı ve nerede uygulanmıştır?' Yanıt: Kara Ölüm (Veba) salgını sırasında Ragusa ve Venedik'te.",
+        "practiceQuestion": {
+            "question": "Tarihteki karantina uygulamaları ve Kara Ölüm salgını ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Karantina sözcüğü, İtalyanca kırk gün anlamına gelen 'quaranta giorni' teriminden türemiştir.",
+                "B) İlk organize tecrit uygulaması 1377'de Ragusa'da 30 günlük bekleme (trentina) şeklinde başlatılmıştır.",
+                "C) Kara Ölüm pandemisi Yersinia pestis etkeninin sıçan ve pireler aracılığıyla bulaşmasıyla yayılmıştır.",
+                "D) Karantina, etkeni mikro düzeyde bilinmeyen bulaşıcı hastalıklara karşı geliştirilmiş ilk organize savunma sistemlerindendir.",
+                "E) Karantina uygulaması ilk kez 20. yüzyılda Dünya Sağlık Örgütü tarafından keşfedilmiş ve uygulanmıştır."
+            ],
+            "correctAnswer": 4,
+            "explanation": "Karantina 20. yüzyılda değil, 14. yüzyılda Orta Çağ'da Veba salgınları sırasında Ragusa ve Venedik'te ortaya çıkmış ve kurumsallaşmıştır."
+        }
+    },
+    # 7
+    {
+        "slideNumber": 7,
+        "title": "Beslenme Yetersizlikleri ve İlk Kontrollü Klinik Deney",
+        "subtitle": "James Lind (1753), Kommodor Anson Seferi ve C Vitamini Eksikliği (Skorbüt)",
+        "content": (
+            "Halk sağlığı tarihi sadece bulaşıcı mikroorganizmalarla değil, mikro besin öğesi yetersizlikleriyle de şekillenmiştir. Coğrafi keşifler ve deniz aşırı "
+            "kolonileşme çağında uzun aylar boyunca açık denizlerde seyreden gemicilerin en büyük kâbusu 'denizcilerin vebası' olarak bilinen skorbüt hastalığıydı. "
+            "Diş eti kanamaları, dökülen dişler, eklem ağrıları, deri altı hemorajileri ve şiddetli letarji ile seyreden skorbütün feci bilançosu 1740 yılında İngiliz "
+            "Kommodor George Anson'un seferinde açıkça belgelenmiştir: Anson 7 gemi ve 1755 tayfa ile yola çıkmış; 3,5 yıl sonra geri döndüğünde tayfaların %54'ü "
+            "(1051 kişi) skorbüt nedeniyle hayatını kaybetmiştir.\n\n"
+            "Hastalığın bir enfeksiyon veya tembellik hali sanıldığı bir dönemde, İngiliz donanma hekimi James Lind 1747 yılında HMS Salisbury gemisinde tıp tarihinin "
+            "ilk prospektif kontrollü klinik deneyini gerçekleştirmiştir. Lind, skorbüt belirtileri gösteren 12 hastayı ikişer kişilik altı gruba ayırmış; "
+            "hepsine aynı temel diyeti vermiş, ancak her gruba farklı bir ek takviye uygulamıştır: Elma sirkesi, sülfürik asit damlaları, deniz suyu, baharat ezmesi, "
+            "arpa suyu ve son gruba ise her gün iki portakal ve bir limon vermiştir.\n\n"
+            "Sonuç çarpıcıydı: Narenciye (limon ve portakal) tüketen gruptaki hastalar yalnızca altı gün içinde mucizevi bir şekilde tamamen iyileşerek göreve "
+            "dönmüşlerdir. Lind, 1753 yılında yayımladığı 'A Treatise of the Scurvy' adlı anıtsal eserinde bu sonuçları bilim dünyasına sunmuş; taze meyve ve sebzelerin, "
+            "yani dengeli beslenmenin hastalıklardan korunmadaki hayati rolünü kanıtlamıştır. İngiliz Kraliyet Donanması bu bulguları benimseyerek tayfalarına düzenli "
+            "limon suyu dağıtmaya başlamış ve skorbütü donanmadan silmiştir. Lind'in çalışması, halk sağlığında kontrollü klinik araştırmaların ilk parlak örneğidir."
+        ),
+        "importantPoint": "James Lind 1753'te limon ve portakal vererek skorbütün iyileştiğini tıp tarihinin ilk kontrollü klinik deneyi ile kanıtlamıştır. Bu çalışma, dengeli beslenmenin ve taze meyve/sebze tüketiminin hastalıklardan korunmadaki rolünü kanıtlayan köşe taşıdır.",
+        "examTip": "'Gemicilerde görülen skorbüt hastalığının narenciye (limon ve portakal) tüketimiyle önlenebileceğini kontrollü bir klinik deneyle kanıtlayan İngiliz hekim kimdir?' Yanıt: James Lind.",
+        "practiceQuestion": {
+            "question": "James Lind'in 1753 yılındaki skorbüt araştırması halk sağlığı ve tıp metodolojisi açısından neden bir dönüm noktası kabul edilir?",
+            "options": [
+                "A) Tüberküloz basilini mikroskop altında ilk kez görüntülediği için",
+                "B) Tıp tarihinde benzer semptomlara sahip hastaları gruplara ayırarak ilk kontrollü klinik beslenme deneyini gerçekleştirdiği için",
+                "C) Hastalıkların genetik temellerini DNA analiziyle ortaya koyduğu için",
+                "D) Kuduz aşısını geliştirerek ilk aktif bağışıklamayı başlattığı için",
+                "E) Şehir kanalizasyon hatlarının kolera salgınlarını önlediğini gösterdiği için"
+            ],
+            "correctAnswer": 1,
+            "explanation": "James Lind, skorbütlü denizcileri benzer gruplara ayırıp farklı diyet takviyeleri vererek tıp tarihinin ilk kontrollü prospektif klinik deneyini gerçekleştirmiş ve narenciyenin iyileştirici etkisini kanıtlamıştır."
+        }
+    },
+    # 8
+    {
+        "slideNumber": 8,
+        "title": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı",
+        "subtitle": "Osmanlı Variolasyon Geleneğinden Edward Jenner'ın Cowpox Gözlemine ve Global Eradikasyona",
+        "content": (
+            "Tarih boyunca milyonlarca insanın ölümüne, kör kalmasına veya yüzünde derin yara izleri bırakmasına neden olan çiçek hastalığı (Variola), "
+            "halk sağlığı müdahalelerinin en büyük zaferine sahne olmuştur. Aşılama tarihinin kökleri Doğu ve Osmanlı tıbbına dayanır. Osmanlı toplumunda "
+            "yüzyıllardır uygulanan 'variolasyon' (çiçekleme), hafif seyreden çiçek hastalarının püstüllerinden alınan sıvının sağlıklı kişilerin cildine "
+            "çizik atılarak uygulanması tekniğiydi. İngiltere'nin İstanbul Büyükelçisi'nin eşi Lady Mary Wortley Montagu, 1717-1721 yıllarında Edirne ve "
+            "İstanbul'da Osmanlı aşıcı kadınlarının bu başarılı uygulamasını gözlemlemiş, kendi çocuklarını aşılatmış ve yazdığı ünlü mektuplarla yöntemi Avrupa'ya tanıtmıştır.\n\n"
+            "Variolasyon kısmi bağışıklık sağlasa da bazen tam çiçek hastalığına ve ölümlere yol açabiliyordu. Bu riski ortadan kaldıran devrimci adımı İngiliz kır hekimi "
+            "Edward Jenner atmıştır. Jenner, kırsal bölgedeki sütçü kızların ineklerden geçen sığır çiçeği (cowpox) hastalığına yakalandıktan sonra insan çiçeğine (smallpox) "
+            "asla yakalanmadıklarını fark etmiştir. 1796 yılında Sarah Nelmes adlı sütçü kadının elindeki lezyondan aldığı sıvıyı 8 yaşındaki James Phipps'in koluna "
+            "aşılamış; çocuk hafif bir reaksiyon geçirdikten sonra, ona insan çiçeği mikrobu verdiğinde çocuğun hastalanmadığını görmüştür.\n\n"
+            "Jenner 1797/1798'de bu çığır açan bulgularını yayımlamıştır. Latince inek anlamına gelen 'vacca' kelimesinden türetilen 'vaccination' (aşılama) terimi "
+            "tıp literatürüne girmiştir. Jenner'ın geliştirdiği sığır çiçeği aşısı, insanlık tarihindeki ilk güvenli aşı olup, halk sağlığında primer korunmanın "
+            "en güçlü aracı olmuştur. Bu bilimsel miras, 1980 yılında Dünya Sağlık Örgütü'nün (DSÖ) çiçek hastalığının yeryüzünden tamamen silindiğini (eradikasyon) "
+            "ilan etmesiyle taçlanmıştır."
+        ),
+        "importantPoint": "Edward Jenner 1796/1797'de sığır çiçeği (cowpox) materyalini kullanarak insan çiçeğine karşı ilk güvenli aşıyı geliştirmiştir. Bu yöntem, Osmanlı'daki variolasyon (çiçekleme) uygulamasından ilham alarak geliştirilmiş ve modern aşılamanın (vaccination) miladı olmuştur.",
+        "examTip": "'Süt sağan kadınların inek çiçeğine yakalandıktan sonra insan çiçeğine karşı direnç kazandığını gözlemleyerek ilk modern aşıyı geliştiren bilim insanı kimdir?' Yanıt: Edward Jenner. (Ayrıca çiçek hastalığı, aşılama ile dünyadan eradike edilen ilk insan hastalığıdır - 1980 DSÖ).",
+        "practiceQuestion": {
+            "question": "Çiçek aşısı ve bağışıklama tarihi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+            "options": [
+                "A) Çiçek aşısı ilk kez Robert Koch tarafından tüberküloz basilinden üretilmiştir.",
+                "B) Edward Jenner, süt sağan kadınların sığır çiçeği geçirdikten sonra insan çiçeğine yakalanmadığını gözlemleyerek modern aşılamanın temelini atmıştır.",
+                "C) Variolasyon yöntemi ilk kez İngiltere'de icat edilmiş ve Osmanlı İmparatorluğu'na ihraç edilmiştir.",
+                "D) Çiçek hastalığı günümüzde dünya genelinde en sık ölüme neden olan bulaşıcı hastalık olmaya devam etmektedir.",
+                "E) Jenner'ın aşılama deneyi tarihte ilk kez penisilin antibiyotiğinin keşfedilmesini sağlamıştır."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Edward Jenner, süt sağanların sığır çiçeği (cowpox) geçirdikten sonra insan çiçeğine yakalanmadığını gözlemlemiş ve 1796'da aşılamayı (vaccination) başlatmıştır. Çiçek 1980'de DSÖ tarafından tamamen eradike edilmiştir."
+        }
+    },
+    # 9
+    {
+        "slideNumber": 9,
+        "title": "Sanayi Devrimi ve Büyük Sanitasyon Hareketi",
+        "subtitle": "Edwin Chadwick'in 1842 Raporu, Kentsel Sefalet ve 1848 İngiliz Halk Sağlığı Yasası",
+        "content": (
+            "18. yüzyılın sonu ve 19. yüzyılda İngiltere'de başlayıp dünyaya yayılan Sanayi Devrimi, insanlık tarihinde benzeri görülmemiş bir toplumsal dönüşüm yaratmıştır. "
+            "Kırsaldan fabrikaların kurulu olduğu şehirlere yaşanan kitlesel göç; Londra, Manchester ve Liverpool gibi sanayi merkezlerinde korkunç bir kentsel sefalet "
+            "doğurmuştur. İşçi sınıfı, güneş görmeyen, havalandırması olmayan, kanalizasyon sistemi bulunmayan, kanalizasyon atıklarının sokaklara ve içme suyu havzalarına "
+            "aktığı aşırı kalabalık gettolarda yaşamak zorunda kalmıştır. Günde 14-16 saat çalışan çocuk ve kadınlar, tifo, kolera ve tüberkülozun pençesine düşmüş; "
+            "işçi sınıfında ortalama yaşam süresi 20 yaşın altına gerilemiştir.\n\n"
+            "Bu felaket tablosu karşısında İngiliz hukukçu ve sosyal reformcu Sir Edwin Chadwick, yoksulluk ile salgın hastalıklar arasındaki bağı ortaya koymak "
+            "üzere kapsamlı bir araştırma yürütmüştür. Chadwick'in 1842 yılında yayımlanan ünlü 'Report on the Sanitary Condition of the Labouring Population of Great Britain' "
+            "raporu, halk sağlığı tarihinin en etkili sosyal politika belgesidir. Chadwick raporda; hastalıkların bireysel ahlaki düşkünlükten değil, kötü çevre "
+            "koşullarından, arıtılmamış sudan ve biriken atıklardan kaynaklandığını; hastalıkların iş gücü kaybına ve derinleşen yoksulluğa yol açtığını kantitatif verilerle kanıtlamıştır.\n\n"
+            "Chadwick, dönemin baskın inanışı olan 'Miasma Teorisi'ne (hastalıkların kokuşmuş havadan bulaştığı kuramı) inansa da, önerdiği çözüm devrimciydi: Şehirlerin "
+            "borulu temiz su şebekesiyle donatılması, yeraltı kanalizasyon hatlarının kurulması, sokakların düzenli temizlenmesi ve çöplerin tahliyesi. Bu rapor, "
+            "1848 yılında tarihin ilk kapsamlı çevre ve sağlık düzenlemesi olan İngiliz Halk Sağlığı Yasası'nın (Public Health Act) çıkarılmasını ve Sağlık Genel Kurulu'nun "
+            "(General Board of Health) kurulmasını sağlamıştır. Böylece 'Büyük Sanitasyon Hareketi' başlamış ve devlet, halkın sağlığını korumayı kamusal bir görev kabul etmiştir."
+        ),
+        "importantPoint": "Edwin Chadwick'in 1842 tarihli raporu, hastalıklar ile kötü çevre ve sefalet arasındaki ilişkiyi ilk kez geniş çaplı istatistiklerle ortaya koymuştur. 1848 İngiliz Halk Sağlığı Yasası ile devlet ilk kez çevre sağlığını, kanalizasyonu ve temiz suyu yasal bir kamu görevi olarak üstlenmiştir.",
+        "examTip": "'Sanayi Devrimi sırasında işçi sınıfının sıhhi koşullarını inceleyerek 1842 yılında yayımladığı raporla sanitasyon hareketini başlatan ve 1848 Halk Sağlığı Yasası'na zemin hazırlayan sosyal reformcu kimdir?' Yanıt: Edwin Chadwick.",
+        "practiceQuestion": {
+            "question": "Edwin Chadwick'in 1842 yılında hazırladığı rapor ve başlattığı Sanitasyon Hareketi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Salgın hastalıklar ile çevre kirliliği, kötü kanalizasyon ve yoksulluk arasındaki bağı ortaya koymuştur.",
+                "B) Şehirlerde borulu temiz su temini ve kapalı kanalizasyon altyapısının kurulmasını savunmuştur.",
+                "C) İngiltere'de 1848 Halk Sağlığı Yasası'nın çıkarılmasına ve sağlık kurullarının oluşturulmasına zemin hazırlamıştır.",
+                "D) Toplum sağlığının korunmasını devletin ve yerel yönetimlerin temel kamusal sorumluluğu olarak tanımlamıştır.",
+                "E) Çevre koşullarının hastalıklarla hiçbir ilgisi olmadığını savunarak kanalizasyon inşaatlarının durdurulmasını talep etmiştir."
+            ],
+            "correctAnswer": 4,
+            "explanation": "Chadwick aksine çevre koşullarının hastalıkların birincil nedeni olduğunu savunmuş ve kapalı kanalizasyon ile temiz su şebekesinin kurulmasını zorunlu kılmıştır."
+        }
+    },
+    # 10
+    {
+        "slideNumber": 10,
+        "title": "Modern Epidemiyolojinin Doğuşu: John Snow",
+        "subtitle": "1854 Londra Broad Street Kolera Salgını, Su Pompası Kolunun Sökülmesi ve Haritalama Metodu",
+        "content": (
+            "19. yüzyılın ortalarında kolera salgınları Londra'yı periyodik olarak vurmaktaydı. Tıp dünyası koleranın bataklıklardan ve çürüyen çöplerden yükselen "
+            "zehirli kokulu havadan (Miasma) kaynaklandığına inanırken; hekim Dr. John Snow (1813-1858), hastalığın solunumla değil, su veya yiyeceklere karışan "
+            "görünmez bir etken vasıtasıyla sindirim yolundan bulaştığını savunan radikal bir hipotez geliştirdi. 1854 Ağustos ayı sonunda Londra'nın Soho bölgesinde, "
+            "Broad Street çevresinde aniden patlak veren ve birkaç günde 500'den fazla insanın ölümüne yol açan şiddetli kolera salgını, Snow'a teorisini test etme fırsatı sundu.\n\n"
+            "Snow, tıp tarihinde bir ilki gerçekleştirerek salgının merkezindeki tüm evleri tek tek ziyaret etti ve ölümlerin meydana geldiği adresleri bir sokak haritası "
+            "üzerine işaretledi ('Spot Map' - Nokta Haritası tekniği). Harita incelendiğinde, ölümlerin Broad Street üzerindeki belirli bir umumi su tulumbasının etrafında "
+            "kümelendiği gün gibi açığa çıktı. İstisnalar hipotezi daha da güçlendirdi: Tulumbanın hemen yanındaki birahanede çalışan işçiler kendi biralarını içtikleri için "
+            "hiç koleraya yakalanmamışken; bölgeden uzakta yaşayan ancak Broad Street suyunun tadını beğendiği için oradan su getiren yaşlı bir kadın ve yeğeni koleradan ölmüştü.\n\n"
+            "John Snow, 7 Eylül 1854'te yerel konseyi ikna ederek Broad Street tulumbasının pompalama kolunu söktürdü. Su kaynağının kesilmesiyle salgın bıçak gibi kesildi. "
+            "Daha sonra yapılan kazılarda, tulumba kuyusunun hemen yanındaki bir fosseptik çukurunun sızdırdığı ve bir bebek bezinden kaynaklanan koleralı dışkının kuyuya karıştığı "
+            "anlaşıldı. Snow ayrıca Southwark & Vauxhall ile Lambeth su şirketlerinin müşterileri arasında yaptığı karşılaştırmayla kirli Thames suyunu kullananlarda kolera "
+            "ölümlerinin kat kat yüksek olduğunu gösterdi. Henüz bakteri mikroskopta izole edilmemişken; Snow saf epidemiyolojik yöntemlerle salgını durdurmuş, 'Modern Epidemiyolojinin Babası' olmuştur."
+        ),
+        "importantPoint": "John Snow, 1854 Londra Broad Street salgınında koleranın su yoluyla bulaştığını nokta haritası ve epidemiyolojik analizle kanıtlamış, tulumbanın kolunu söktürerek salgını durdurmuştur. Etken henüz mikroskopta bilinmeden epidemiyolojik yöntemle hastalığı kontrol altına alarak 'Modern Epidemiyolojinin ve Çevre Sağlığının Kurucusu' olmuştur.",
+        "examTip": "'1854 yılında Londra'da görülen kolera salgınında nokta haritalama yöntemini kullanarak salgının Broad Street su tulumbasından kaynaklandığını saptayan ve modern epidemiyolojinin kurucusu kabul edilen hekim kimdir?' Yanıt: John Snow.",
+        "practiceQuestion": {
+            "question": "Dr. John Snow'un 1854 Broad Street kolera salgını sırasındaki incelemeleri ve modern epidemiyolojiye katkısı hakkında hangisi YANLIŞTIR?",
+            "options": [
+                "A) Hastalık vakalarını ve ölümleri harita üzerinde işaretleyerek kümelenmenin Broad Street su tulumbası çevresinde olduğunu saptamıştır.",
+                "B) Tulumbanın kolunu söktürerek suyun kullanımını engellemiş ve salgının yayılmasını durdurmuştur.",
+                "C) Koleranın miasma (pis hava) yoluyla değil, dışkı ile kirlenmiş içme suları aracılığıyla bulaştığını kanıtlamıştır.",
+                "D) Salgını durdurmak için hastaların tümüne tüberküloz antibiyotikleri dağıtmıştır.",
+                "E) Su şirketlerinin su kaynaklarını karşılaştırarak analitik epidemiyolojinin ilk klasik örneğini vermiştir."
+            ],
+            "correctAnswer": 3,
+            "explanation": "1854 yılında henüz antibiyotikler keşfedilmemişti (penisilin 1928'de bulundu). Snow müdahaleyi tulumba kolunu söktürerek çevre sağlığı/su sanitasyonu yöntemiyle yapmıştır."
+        }
+    },
+    # 11
+    {
+        "slideNumber": 11,
+        "title": "Mikrobiyoloji Devrimi ve Germ Kuramı",
+        "subtitle": "Antonie van Leeuwenhoek'ten Louis Pasteur'e: Kendiliğinden Oluşun Çürütülmesi ve Aşılama",
+        "content": (
+            "Canlılar aleminin mikroskobik boyutlarının keşfi, Hollandalı Antonie van Leeuwenhoek (1632-1723) ile başlamıştır. Kendi geliştirdiği mikroskoplarla "
+            "1675'te bir su damlasındaki ve diş plağındaki mikroorganizmaları gözlemleyen Leeuwenhoek, bunlara 'animaküller' adını vermiştir. Robert Hooke ise "
+            "1665'te mantar kesitlerini inceleyerek boşluklara 'hücre' adını vermiştir. Ancak bu mikroorganizmaların hastalıklara yol açabileceği fikri iki yüzyıl "
+            "boyunca anlaşılamamış; canlıların çürüyen cansız maddelerden kendiliğinden ürediğini savunan kadim 'Abiogenesis' (Kendiliğinden Oluş) kuramı varlığını sürdürmüştür.\n\n"
+            "Bu biyolojik dogmayı kökünden yıkan ve tıp ile halk sağlığında gerçek bir devrim başlatan Fransız kimyager ve mikrobiyolog Louis Pasteur (1822-1895) olmuştur. "
+            "Pasteur, tasarladığı ünlü kuğu boyunlu balon deneyleriyle havadaki toz ve mikroorganizmalar engellendiğinde kaynatılmış et suyunun asla bozulmadığını kanıtlayarak "
+            "'Biogenesis' ilkesini kesin olarak ispatlamış ve abiogenesis teorisini tarihe gömmüştür. Şarap ve biranın bozulmasını önlemek amacıyla geliştirdiği kontrollü "
+            "ısıtma yöntemi ('Pastörizasyon'), süt ve gıda hijyeninin temel direği olmuştur.\n\n"
+            "Pasteur'ün halk sağlığına en büyük mirası, hastalıkların dışarıdan vücuda giren özgül mikroorganizmalar tarafından oluşturulduğunu savunan 'Germ Kuramı'nı "
+            "(Mikrop Kuramı) inşa etmesi ve zayıflatılmış (atenuasyon) mikroorganizmalarla yapay bağışıklama yöntemini keşfetmesidir. İpek böceği hastalığı, tavuk kolerası "
+            "ve şarbon üzerinde çalışarak etkenleri zayıflatmayı başarmış; 1885 yılında kuduz virüsüne karşı geliştirdiği aşıyı kuduz bir köpek tarafından ısırılan 9 yaşındaki "
+            "Joseph Meister'e uygulayarak çocuğu mutlak ölümden kurtarmıştır. Pasteur Enstitüsü'nün kurulmasıyla modern aşı bilimi kurumsallaşmıştır."
+        ),
+        "importantPoint": "Louis Pasteur, kuğu boyunlu balon deneyleriyle 'abiogenesis' (kendiliğinden oluş) teorisini çürütmüş, Biogenesis ve Germ (Mikrop) Kuramını kanıtlamıştır. Pastörizasyon tekniğini, şarbon ve kuduz aşılarını geliştirerek halk sağlığı ve mikrobiyolojinin babalarından biri olmuştur.",
+        "examTip": "'Kendiliğinden oluş (abiogenesis) teorisini çürüten, fermantasyonun mikroorganizmalarla gerçekleştiğini gösteren, pastörizasyon yöntemini bulan ve 1885'te kuduza karşı aşı geliştiren bilim insanı kimdir?' Yanıt: Louis Pasteur.",
+        "practiceQuestion": {
+            "question": "Louis Pasteur'ün tıp ve halk sağlığı tarihindeki devrim niteliğindeki katkıları arasında aşağıdakilerden hangisi YER ALMAZ?",
+            "options": [
+                "A) Kuğu boyunlu balon deneyleriyle kendiliğinden oluş (abiogenesis) kuramını kesin olarak çürütmesi",
+                "B) Gıda ve süt hijyeninde mikropları öldürmek için pastörizasyon yöntemini geliştirmesi",
+                "C) Hastalıkların dışarıdan giren canlı etkenlerle oluştuğunu gösteren Germ Kuramını kurması",
+                "D) Tavuk kolerası, şarbon ve kuduz aşılarını geliştirerek atenuasyon ilkesini tıp pratiğine sokması",
+                "E) Tüberküloz basilini ve kolera vibrionunu ilk kez saf kültürde izole ederek Koch postülatlarını yazması"
+            ],
+            "correctAnswer": 4,
+            "explanation": "Tüberküloz basili, kolera etkeni izolasyonu ve Koch postülatları Robert Koch'a aittir; Louis Pasteur'e ait değildir."
+        }
+    },
+    # 12
+    {
+        "slideNumber": 12,
+        "title": "Bakteriyolojinin Altın Çağı ve Robert Koch",
+        "subtitle": "Koch Postülatları, Tüberküloz ve Kolera Etkenleri, Difteri Antitoksini ve BCG Aşısı",
+        "content": (
+            "Louis Pasteur'ün açtığı mikrop çağını sistematik laboratuvar teknikleri ve katı bilimsel nedensellik kurallarıyla taçlandıran isim Alman hekim "
+            "Robert Koch (1843-1910) olmuştur. Koch; mikroorganizmaları mikroskopta görünür kılan boyama tekniklerini, sıvı besiyerleri yerine agar ve jelatin kullanarak "
+            "bakterileri tek koloni halinde üretmeyi sağlayan katı besiyeri yöntemini ve mikrofotografiyi geliştirmiştir. 1876'da şarbon basili döngüsünü aydınlatmış; "
+            "24 Mart 1882'de o dönem Avrupa'da her yedi kişiden birini öldüren tüberkülozun etkenini (Mycobacterium tuberculosis / Koch basili) keşfetmiş; "
+            "1883'te ise Mısır ve Hindistan'da kolera vibrionunu (Vibrio cholerae) izole etmiştir.\n\n"
+            "Koch'un tıp metodolojisine en büyük hediyesi, bir mikroorganizmanın belirli bir hastalığın özgül etkeni olduğunu kanıtlamak için zorunlu kıldığı 'Koch Postülatları'dır: "
+            "1) Şüpheli mikroorganizma, o hastalıktan muzdarip her vakada bulunmalı, ancak sağlıklı bireylerde bulunmamalıdır. "
+            "2) Mikroorganizma hastalıklı konaktan izole edilmeli ve laboratuvarda saf kültür halinde üretilmelidir. "
+            "3) Saf kültürden alınan mikroorganizma duyarlı sağlıklı bir deney hayvanına verildiğinde aynı hastalığı oluşturmalıdır. "
+            "4) Deneysel olarak enfekte edilen hayvandan aynı mikroorganizma yeniden izole edilip üretilebilmelidir.\n\n"
+            "Koch'un açtığı bakteriyoloji çığırı, halk sağlığında pasif ve aktif bağışıklamanın dev adımlarıyla devam etmiştir. Koch'un öğrencisi Emil von Behring, "
+            "1890'da difteri ve tetanoz toksinlerine karşı hayvan kanında oluşan antikorları keşfederek antitoksin (serum terapisi) tedavisini geliştirmiş ve 1901'de ilk "
+            "Nobel Fizyoloji veya Tıp Ödülü'nü kazanmıştır. 1920'li yıllarda ise Albert Calmette ve Camille Guérin, Mycobacterium bovis suşunu 230 kez pasajlayarak "
+            "zayıflatmış ve 1921 yılında tüberküloza karşı günümüzde hala kullanılan BCG aşısını insanlığa kazandırmışlardır."
+        ),
+        "importantPoint": "Robert Koch; şarbon, tüberküloz basili (1882) ve kolera etkenini (1883) izole etmiş, nedensellik kriterleri olan Koch Postülatlarını formüle etmiştir. Emil von Behring 1890'da difteri antitoksinini, Calmette ve Guérin ise 1921'de tüberküloza karşı BCG aşısını bulmuştur.",
+        "examTip": "'Tüberküloz basilini ve kolera etkenini izole eden, bakteriyolojide saf kültür yöntemini geliştiren ve bir mikroorganizmanın hastalık etkeni olduğunu kanıtlayan dört temel postülatı ortaya koyan bilim insanı kimdir?' Yanıt: Robert Koch. (BCG aşısını geliştirenler: Calmette ve Guérin).",
+        "practiceQuestion": {
+            "question": "Robert Koch ve bakteriyolojinin gelişimi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) 1882 yılında tüberküloz etkeni olan Mycobacterium tuberculosis basilini keşfetmiştir.",
+                "B) 1883 yılında kolera etkenini (Vibrio cholerae) izole ederek su sanitasyonunun önemini mikrobiyolojik olarak doğrulamıştır.",
+                "C) Bir mikroorganizmanın hastalık etkeni olduğunu kanıtlamak için dört basamaklı Koch Postülatlarını tanımlamıştır.",
+                "D) Emil von Behring 1890'da difteri antitoksinini geliştirerek pasif bağışıklamanın temellerini atmıştır.",
+                "E) Koch, tüberkülozun genetik bir bozukluk olduğunu kanıtlayarak aşı ve hijyen çalışmalarının tüberkülozda etkisiz olduğunu ilan etmiştir."
+            ],
+            "correctAnswer": 4,
+            "explanation": "Koch tüberkülozun genetik değil, bulaşıcı bir bakteriyel enfeksiyon olduğunu kanıtlamış ve etken olan tüberküloz basilini (Mycobacterium tuberculosis) izole etmiştir."
+        }
+    },
+    # 13
+    {
+        "slideNumber": 13,
+        "title": "Vektörlerle Mücadele ve Entomolojinin Doğuşu: Sıtma",
+        "subtitle": "Kına-Kına Ağacından Charles Laveran ve Ronald Ross'a: Parazit-Vektör-İnsan Döngüsü",
+        "content": (
+            "Sıtma (Malaria), insanlık tarihi boyunca imparatorlukların yıkılmasına, orduların dağılmasına ve geniş coğrafyaların insansızlaşmasına yol açan en kadim "
+            "paraziter hastalıktır. Tarih boyunca sıtma, etmeni ve bulaşma yolu bilimsel olarak açıklanmadan önce ampirik olarak tedavi edilen ilk hastalık olma özelliğini taşır. "
+            "Güney Amerika'daki Peru yerlileri, atalarından öğrendikleri ve yerel dilde 'Quina-Quina' (Kına-Kına / Cinchona) olarak adlandırılan ağacın kabuklarını çiğneyerek "
+            "sıtmanın titreme ve ateş nöbetlerini tedavi etmeyi başarmışlardır. 17. yüzyılda Avrupa'ya getirilen bu kabuklardan daha sonra saf kinin alkaloidi izole edilmiş "
+            "ve modern sıtma tedavisinin temeli atılmıştır.\n\n"
+            "Sıtmanın biyolojik gizemi 19. yüzyılın son çeyreğinde çözülmüştür. 1880 yılında Cezayir'de görev yapan Fransız askeri hekimi Charles Louis Alphonse Laveran, "
+            "sıtmalı bir askerin taze kan yaymasını mikroskop altında incelerken alyuvarların (eritrositlerin) içinde hareket eden pigmentli parazitleri saptamış "
+            "ve etkenin bir protozoon (Plasmodium) olduğunu keşfetmiştir. Laveran bu keşfiyle 1907 Nobel Tıp Ödülü'nü kazanmıştır.\n\n"
+            "Parazitin insandan insana nasıl bulaştığını ise 1897'de Hindistan'da çalışan İngiliz hekim Ronald Ross kanıtlamıştır. Ross, sıtmalı hastaları ısıran "
+            "sivrisineklerin midesinde Plasmodium kistlerini görüntülemiş ve vektörün dişi 'Anopheles' (Anofel) cinsi sivrisinek olduğunu ispatlamıştır (1902 Nobel Ödülü). "
+            "Sıtma döngüsünün çözülmesi; halk sağlığında tıp ile zoolojiyi birleştirmiş, 'Tıbbi Entomoloji' (böcek bilimi) disiplinini doğurmuş, bataklıkların kurutulması, "
+            "larvasit uygulamaları ve insektisit kullanımıyla halk sağlığının yanı sıra tarım ve veterinerlikte de muazzam bir ivme başlatmıştır."
+        ),
+        "importantPoint": "Sıtma, etmeni bilinmeden önce Peru yerlileri tarafından Kına-Kına (Quina-Quina / Cinchona) ağacı kabuğuyla (kinin) ampirik olarak tedavi edilmiş ilk hastalıktır. Etkeni Plasmodium'u 1880'de Alphonse Laveran alyuvarlarda bulmuş; vektörünün Anofel sivrisineği olduğunu 1897'de Ronald Ross kanıtlamıştır.",
+        "examTip": "'Sıtma hastalığının etkeni olan Plasmodium parazitini alyuvarlar içinde ilk kez saptayan hekim kimdir?' Yanıt: Charles Louis Alphonse Laveran. (Vektörünün anofel sivrisineği olduğunu gösteren ise Ronald Ross'tur).",
+        "practiceQuestion": {
+            "question": "Sıtma hastalığının tarihçesi ve vektör kontrolü ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Sıtma, etkeni ve biyolojisi bilinmeden çok önce Peru yerlilerince Kına-Kına ağacı kabuğuyla ampirik olarak tedavi edilmiştir.",
+                "B) Sıtma etkeni Plasmodium, 1880'de Charles Louis Alphonse Laveran tarafından kanda alyuvarlar içinde gösterilmiştir.",
+                "C) Sıtmanın insana anofel cinsi sivrisineklerle bulaştığının gösterilmesi tıbbi entomolojinin gelişimini başlatmıştır.",
+                "D) Sıtma etkeninin ve vektörünün bulunması bataklık ıslahı ve vektör kontrolü gibi çevre sağlığı müdahalelerine yol açmıştır.",
+                "E) Sıtma etkeni bir bakteridir ve Robert Koch tarafından Broad Street tulumbasından izole edilmiştir."
+            ],
+            "correctAnswer": 4,
+            "explanation": "Sıtma etkeni bakteri değil, Plasmodium cinsine ait bir paraziter protozoondur ve 1880'de Laveran tarafından kanda keşfedilmiştir. Kolera ise bakteridir ve suyla bulaşır."
+        }
+    },
+    # 14
+    {
+        "slideNumber": 14,
+        "title": "Sosyal Tıp Hareketi ve Alfred Grotjahn",
+        "subtitle": "Rudolf Virchow'dan Alfred Grotjahn'a Sosyal Patoloji ve Toplumsal Sağlık İlkeleri",
+        "content": (
+            "19. yüzyılın ikinci yarısında bakteriyolojinin zaferleri, tıbbı mekanik bir indirgemeciliğe (biyomedikal model) sürüklemiştir: 'Her hastalığın bir mikrobu vardır, "
+            "mikrop öldürülürse sorun biter.' Bu dar bakış açısına ilk güçlü itiraz ünlü patolog Rudolf Virchow'dan gelmiştir. 1848 Yukarı Silezya tifüs salgınını inceleyen "
+            "Virchow; salgının asıl nedeninin yoksulluk, açlık, cehalet ve adaletsizlik olduğunu vurgulayarak şu ölümsüz ilkeyi formüle etmiştir: 'Tıp bir sosyal bilimdir "
+            "ve politika büyük ölçekte tıptan başka bir şey değildir.' Virchow, hekimlerin toplumun sosyal avukatları olması gerektiğini savunmuştur.\n\n"
+            "Sosyal tıp felsefesini sistematik bir akademik disiplin ve halk sağlığı metodolojisi haline getiren isim ise Alman hekim Alfred Grotjahn (1869-1931) olmuştur. "
+            "Grotjahn, 1912'de yayımladığı 'Sosyal Patoloji' adlı anıtsal eserinde; hekimlik ve halk sağlığı uygulamalarının yalnızca varlıklı ve seçkin zümreler için değil, "
+            "halk kitleleri için vazgeçilmez bir insan hakkı ve kamusal bir gereksinim olduğunu savunmuştur. Devletin bu hizmetleri sağlamakla yükümlü olduğunu belirten Grotjahn; "
+            "küçük çocukları, anneleri, okul çağı çocuklarını, işçileri ve kimsesizleri 'riskli gruplar' olarak tanımlamış ve öncelikli korunmalarını talep etmiştir.\n\n"
+            "Grotjahn'ın geliştirdiği ve günümüz halk sağlığı anlayışının temel omurgasını oluşturan Sosyal Hekimlik İlkeleri şunlardır: "
+            "1) En önemli hastalıklar; bir toplumda en çok öldüren, en sık görülen ve en çok sakat bırakan hastalıklardır (Önemli Hastalık İlkesi). "
+            "2) Bir kişinin veya toplumun sağlık düzeyini belirleyen, kişiyi hasta eden biyolojik ve fizik çevre faktörlerini yaratan veya etkisini koşullayan asıl etmenler sosyal ve ekonomik etkenlerdir. "
+            "3) Bir kimsenin hasta oluşu sadece o kişinin değil, ailesinden başlayarak bütün toplumun sorunudur. "
+            "4) Sağlığın korunması ve hastalıkların tedavisinde kitlelere fırsat eşitliği sağlanmalıdır."
+        ),
+        "importantPoint": "Alfred Grotjahn, sosyal hekimliğin en büyük kuramcısıdır. 'Bir toplumda en önemli hastalıklar; en çok öldüren, en sık görülen ve en çok sakat bırakan hastalıklardır' ilkesini koymuş; biyolojik nedenlerin arkasındaki asıl belirleyicilerin sosyoekonomik etkenler olduğunu ilan etmiştir.",
+        "examTip": "'Sosyal hekimliğin kurucularından olan ve 'Toplumda en önemli hastalıklar en sık görülen, en çok öldüren ve en çok sakat bırakan hastalıklardır' ilkesini ortaya koyan hekim kimdir?' Yanıt: Alfred Grotjahn.",
+        "practiceQuestion": {
+            "question": "Alfred Grotjahn'ın sosyal hekimlik kuramı ve ilkeleri ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Bir toplumdaki en önemli hastalıkların en çok öldüren, en sık görülen ve en çok sakat bırakan hastalıklar olduğunu belirtmiştir.",
+                "B) Sağlık hizmetlerinin yalnızca parası yeten seçkin sınıflara verilmesi gerektiğini, kamunun sağlık sorumluluğu olmadığını savunmuştur.",
+                "C) Biyolojik ve fiziksel çevre faktörlerinin etkisini sosyoekonomik etmenlerin koşulladığını ileri sürmüştür.",
+                "D) Bir kişinin hasta olmasının sadece bireysel bir durum değil, aile ve bütün toplumun sorunu olduğunu vurgulamıştır.",
+                "E) Anne, çocuk ve işçiler gibi özel risk gruplarının öncelikli olarak korunması gerektiğini ifade etmiştir."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Grotjahn aksine sağlık hizmetlerinin yalnızca seçkinler için değil halk kitleleri için kamusal bir hak ve zorunluluk olduğunu savunmuştur."
+        }
+    },
+    # 15
+    {
+        "slideNumber": 15,
+        "title": "20. Yüzyıl Paradigma Değişimi: DSÖ ve Yunanistan Deneyimi",
+        "subtitle": "1948 DSÖ Sağlık Tanımı, Marshall Yardımları ve Hastane Odaklı Tıbbın Yetersizliği",
+        "content": (
+            "II. Dünya Savaşı'nın yarattığı muazzam yıkım, açlık ve salgınlar, uluslararası düzeyde kalıcı bir sağlık örgütlenmesini zorunlu kılmıştır. "
+            "7 Nisan 1948 tarihinde Birleşmiş Milletler bünyesinde Dünya Sağlık Örgütü (DSÖ / WHO) kurulmuş ve bu tarih her yıl 'Dünya Sağlık Günü' olarak "
+            "kutlanmaya başlanmıştır. DSÖ Anayasası'nda yer alan sağlık tanımı, tıpta biyopsikososyal modele geçişin manifestosudur: 'Sağlık; sadece hastalık ve "
+            "sakatlığın olmayışı değil, bedensel, ruhsal ve sosyal yönden tam bir iyilik halidir.' Bu tanım, sağlığı pasif bir hastalık yokluğundan çıkarıp "
+            "dinamik ve çok boyutlu bir insan hakkı olarak tescil etmiştir.\n\n"
+            "1950'li yıllarda hekimlik anlayışını kökünden sarsan ve halk sağlığı anlayışının zaferini ilan eden tarihi bir tecrübe yaşanmıştır: II. Dünya Savaşı "
+            "sonrasında açlık ve salgınlarla boğuşan Yunanistan'a, ABD ve Avrupa ülkeleri büyük yardımlar göndermiştir. Yunanistan'daki en yakıcı sağlık sorunu; "
+            "bebek ve çocuklarda görülen kötü beslenme (malnütrisyon) ve buna bağlı çok yüksek bebek ve çocuk ölümleriydi. Batı ülkelerinden büyük bağışlar toplandı, "
+            "modern hastaneler kuruldu ve gönüllü hekim/hemşireler görevlendirildi.\n\n"
+            "Kötü beslenen ve hasta olan bebekler bu hastanelerde tedavi edildi, beslendi ve tamamen iyileştirilerek ailelerine teslim edildi. Ancak bir süre sonra "
+            "hekimler çarpıcı bir gerçekle karşılaştılar: İyileştirilen bebek ve çocuklar kısa bir süre sonra tekrar aynı ağır hastalık tablosuyla hastaneye "
+            "geri getiriliyordu! Buradan tıp tarihi şu hayati dersi çıkardı: Bebeklerin hastalanmasının asıl nedeni tıbbi yetersizlik değil; yaşadıkları sağlıksız çevre, "
+            "temiz su şebekesinin yokluğu ve ailelerin sefaletiydi. Bir kentin su şebekesi yoksa hiçbir ailenin gücü ishalleri önlemeye yetmezdi. Önlem toplumun "
+            "içinde alınmalı ve koruyucu hekimliğe öncelik verilmeliydi; çünkü kişiyi korumak iyileştirmekten çok daha ucuz ve kalıcıydı."
+        ),
+        "importantPoint": "1950'ler Yunanistan deneyimi; hastanede tedavi edilen çocukların sağlıksız çevreye döndüklerinde tekrar hastalanmaları üzerine, bireysel tedavi edici hastane tıbbının yetersizliğini ve çevre sanitasyonu ile koruyucu hekimliğin mutlak önceliğini tüm dünyaya kanıtlamıştır.",
+        "examTip": "DSÖ'nün (1948) anayasal sağlık tanımı: 'Sağlık; sadece hastalık ve sakatlığın olmayışı değil, bedensel, ruhsal ve sosyal yönden tam bir iyilik halidir.' Yunanistan deneyiminin ana dersi: Koruyucu önlemlerin hastane tedavisine ekonomik ve yaşamsal üstünlüğüdür.",
+        "practiceQuestion": {
+            "question": "1950'li yıllarda Yunanistan'da yaşanan sağlık krizi ve uluslararası yardım çalışmalarının tıp tarihindeki en önemli sonucu aşağıdakilerden hangisidir?",
+            "options": [
+                "A) Bebek ölümlerinin yalnızca hastane yatak sayısını artırarak çözülebileceğinin anlaşılması",
+                "B) Çevre koşulları, temiz su ve sosyoekonomik ortam düzeltilmedikçe hastanede tedavi etmenin kalıcı çözüm sağlamadığının ve koruyucu hekimliğin üstünlüğünün anlaşılması",
+                "C) Bulaşıcı hastalıkların tedavisinde aşıların tamamen etkisiz olduğunun gösterilmesi",
+                "D) Sağlık harcamalarının tamamen bireylerin kendi bütçesine bırakılması gerektiğinin kanıtlanması",
+                "E) Kötü beslenmenin genetik bir rahatsızlık olduğu ve hiçbir zaman önlenemeyeceğinin ortaya çıkması"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Yunanistan deneyimi, hastanede tedavi edilen çocukların sağlıksız çevreye döndüklerinde tekrar hastalandığını göstererek koruyucu çevre önlemlerinin tedaviye üstünlüğünü kanıtlamıştır."
+        }
+    },
+    # 16
+    {
+        "slideNumber": 16,
+        "title": "Toplum Hekimliği Disiplini ve Kentucky Modeli",
+        "subtitle": "Kurt W. Deuschle, Klinik Tıp ile Halk Sağlığının Sentezi ve Ekip Hizmeti",
+        "content": (
+            "Geleneksel halk sağlığı (public health) uzun yıllar boyunca devlet dairelerinde istatistik toplayan, sanitasyon denetleyen bürokratik bir kamu hizmeti "
+            "olarak algılanmış; tıp fakültelerinde ise hekimler yalnızca hastane koridorlarında tek tek hastalarla ilgilenen klinisyenler olarak yetiştirilmiştir. "
+            "Bu iki alan arasındaki derin kopukluğu gidermek ve hekim adaylarına toplumun sağlık sorunlarına bütüncül yaklaşma vizyonu kazandırmak amacıyla "
+            "'Toplum Hekimliği' (Community Medicine) kavramı doğmuştur.\n\n"
+            "Toplum Hekimliği tanımı ve anabilim dalı, dünya tıp eğitiminde ilk kez ABD'de Kentucky Üniversitesi Tıp Fakültesi'nde hayata geçirilmiştir. "
+            "Bu bölümün kurucusu ve fikir babası Dr. Kurt W. Deuschle'dir. Deuschle, hekimin sadece hastane polikliniğinde pasif bir biçimde hastanın gelmesini "
+            "bekleyen bir uygulayıcı olamayacağını; bizzat toplumun içine girerek hastalığın sosyal, ekonomik ve çevresel köklerini sahada analiz etmesi gerektiğini savunmuştur.\n\n"
+            "Dr. Kurt W. Deuschle'ye göre Toplum Hekimliği öğreniminin ve felsefesinin temel amacı şudur: 'Sağlık personelinden oluşan bir ekiple, toplum içinde "
+            "koruyucu ve tedavi edici hekimliğin nasıl uygulanacağını; toplumun sağlık sorunlarının ve bu sorunların öncelik derecesinin epidemiyolojik yöntemlerle "
+            "nasıl saptanacağını ve uygulamalardan alınan sonuçların toplum düzeyinde nasıl değerlendirileceğini öğrencilere öğretmektir.' "
+            "Deuschle modeli; koruyucu ve tedavi edici hekimliği entegre eden, ekip çalışmasını merkeze alan çağdaş tıp eğitiminin öncüsü olmuştur."
+        ),
+        "importantPoint": "'Toplum Hekimliği' tanımı ve anabilim dalı ilk kez Kentucky Üniversitesi'nde Dr. Kurt W. Deuschle tarafından kurulmuştur. Temel amacı: Sağlık ekibiyle toplum içinde koruyucu ve tedavi edici hekimliği entegre sunmak, sorunların öncelik derecesini saptamak ve sonuçları değerlendirmektir.",
+        "examTip": "'Toplum Hekimliği kavramını ilk kez tanımlayan, Kentucky Üniversitesi'nde bu bölümü kurarak koruyucu ve tedavi edici hekimliğin toplum içinde bir ekip tarafından entegre uygulanmasını savunan bilim insanı kimdir?' Yanıt: Kurt W. Deuschle.",
+        "practiceQuestion": {
+            "question": "Dr. Kurt W. Deuschle'nin Kentucky Üniversitesi'nde kurduğu Toplum Hekimliği disiplininin temel yaklaşımı aşağıdakilerden hangisidir?",
+            "options": [
+                "A) Hekimleri yalnızca üçüncü basamak ameliyathanelerinde cerrahi uzmanı olarak yetiştirmek",
+                "B) Sağlık personeli ekibiyle toplum içinde koruyucu ve tedavi edici hizmetleri entegre sunarak toplumun sağlık önceliklerini sahada saptamak ve çözmek",
+                "C) Bulaşıcı hastalıkların tedavisini hekimlerin görev alanından çıkarıp sadece kolluk kuvvetlerine devretmek",
+                "D) Çevre sağlığı ve istatistik çalışmalarını tıp fakültesi eğitiminden tamamen kaldırmak",
+                "E) Koruyucu hekimlik yerine yalnızca yüksek maliyetli ilaç araştırmalarına odaklanmak"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Kurt W. Deuschle, tıp eğitiminde toplum hekimliğinin amacını: Sağlık personeli ekibiyle toplumda koruyucu ve tedavi edici hekimliğin entegre uygulanması, sorunların önceliklendirilmesi ve değerlendirilmesi olarak tanımlamıştır."
+        }
+    },
+    # 17
+    {
+        "slideNumber": 17,
+        "title": "Türkiye'de Halk Sağlığının Mimarı: Prof. Dr. Nusret Fişek",
+        "subtitle": "Yaşamı, Efsanevi Sağlık Bakanlığı Müsteşarlığı ve Kapsamlı Halk Sağlığı Tanımı",
+        "content": (
+            "Türkiye'de modern halk sağlığı ve toplum hekimliği disiplininin kurucusu, sağlık politikalarının en büyük düşünürü ve uygulayıcısı Prof. Dr. Nusret Fişek'tir "
+            "(1914-1990). 1938 yılında İstanbul Tıp Fakültesi'ni birincilikle bitiren Fişek; biyokimya ve mikrobiyoloji alanında uzmanlaşmış, ardından ABD'de Harvard "
+            "Üniversitesi'nde Halk Sağlığı alanında doktora derecesi almıştır. Türkiye'ye döndükten sonra Refik Saydam Hıfzıssıhha Okulu Müdürlüğü, Sağlık Bakanlığı "
+            "Müsteşarlığı (1960-1965), Hacettepe Üniversitesi Toplum Hekimliği Enstitüsü kurucu başkanlığı ve Türk Tabipleri Birliği (TTB) Başkanlığı görevlerini yürütmüştür.\n\n"
+            "Prof. Dr. Nusret Fişek, halk sağlığını amfilerde teorik bir ders olmaktan çıkarıp devlete ve topluma yön veren dinamik bir hizmet modeline dönüştürmüştür. "
+            "Fişek'in tıp literatürüne kazandırdığı anıtsal Halk Sağlığı tanımı şöyledir: 'Kişiyi tüm çevresi ile ele alarak, onun sağlığını ana rahmine düştüğü andan "
+            "ölümüne kadar kendi sorumluluğu içinde gören; hastalıkların oluşumunda rol oynayan fiziki, biyolojik, sosyal, kültürel, ekonomik ve psikolojik çevredeki "
+            "olumsuz etmenlerin giderilmesine ve olumlu bir çevre yaratılmasına uğraşan; hasta olanları olanakların elverdiği ölçüde erken dönemde bulup tanı koymaya "
+            "ve tedavi etmeye çalışan bir hizmet dalı ve bunun öğretisini yapan bir bilim dalıdır.'\n\n"
+            "Fişek vizyonunun en temel felsefesi 'Herkese sağlık ve eşit, nitelikli sağlık hizmeti'dir. Sağlığın alınıp satılan ticari bir meta değil, anayasal bir temel "
+            "insan hakkı olduğunu savunmuştur. Türkiye'de sağlık hizmetlerinin ülkenin en ücra dağ köylerine kadar ulaştırılması; köylere ebenin, ilçelere doktorun, "
+            "yardımcı sağlık personelinin, araç-gereç ve aşının kesintisiz taşınması için hayatını adamıştır. Fişek, 224 Sayılı Sosyalleştirme Kanunu'nun mimarıdır."
+        ),
+        "importantPoint": "Prof. Dr. Nusret Fişek; Türkiye'de Halk Sağlığı disiplininin ve sosyalleştirilmiş sağlık hizmetlerinin kurucusudur. Sağlık Bakanlığı Müsteşarlığı, Hıfzıssıhha Okulu Müdürlüğü, Hacettepe Toplum Hekimliği Enstitüsü kuruculuğu ve TTB Başkanlığı yapmıştır.",
+        "examTip": "'Türkiye'ye Toplum Hekimliği ve Halk Sağlığı kavramını ilk kez getiren, Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu'nu çıkaran ve bu disiplinin ülkemizdeki kurucusu olan bilim insanı kimdir?' Yanıt: Prof. Dr. Nusret Fişek.",
+        "practiceQuestion": {
+            "question": "Prof. Dr. Nusret Fişek'in halk sağlığı tanımı ve vizyonu ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) İnsanı ana rahmine düştüğü andan ölümüne kadar tüm çevresiyle bir bütün olarak ele almıştır.",
+                "B) Sağlık hizmetini sadece hastaneye başvuran varlıklı bireylerin satın alabileceği bir ayrıcalık olarak görmüştür.",
+                "C) Fiziki, biyolojik, sosyal, kültürel ve psikolojik çevredeki olumsuzlukların giderilmesini temel hedef saymıştır.",
+                "D) Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu'nun (224 Sayılı Kanun) mimarıdır.",
+                "E) Erken tanı, tedavi ve koruyucu hekimliği entegre bir hizmet ve bilim dalı olarak tanımlamıştır."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Nusret Fişek, sağlığı bir insan hakkı olarak görmüş ve 'herkese eşit, nitelikli ve ücretsiz sağlık hizmeti' ilkesini savunmuştur. Hizmeti varlıklıların ayrıcalığı olarak görmemiştir."
+        }
+    },
+    # 18
+    {
+        "slideNumber": 18,
+        "title": "Türkiye'de Sağlık Devrimi: 224 Sayılı Kanun",
+        "subtitle": "1961 Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu, Sağlık Ocakları ve Nüfus Planlaması",
+        "content": (
+            "Türkiye Cumhuriyeti sağlık tarihinin en parlak ve devrimci adımı, Prof. Dr. Nusret Fişek'in Sağlık Bakanlığı Müsteşarlığı döneminde hazırlanan ve "
+            "5 Ocak 1961 tarihinde kabul edilen '224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun'dur. Sosyalleştirmenin temel felsefesi; sağlık "
+            "hizmetlerinin vatandaşın ayağına kadar götürülmesi, hizmetin devlet eliyle eşit, sürekli, entegre ve ücretsiz olarak sunulmasıdır. İlk kez Muş ilinde "
+            "pilot olarak başlatılan bu model, kademeli olarak tüm Türkiye'ye yayılmıştır.\n\n"
+            "224 Sayılı Kanun, dünyada 1978 Alma-Ata Bildirgesi'nden tam 17 yıl önce Temel Sağlık Hizmetleri modelini kusursuz bir örgütlenme piramidiyle kurmuştur: "
+            "1) En uç birim: Köylerde görev yapan diplomalı bir ebenin bulunduğu 'Sağlık Evi'. "
+            "2) Temel omurga: 5.000-10.000 nüfusa hizmet veren, hekim, hemşire, ebe ve sağlık memurundan oluşan 'Sağlık Ocağı'. Burada koruyucu ve birinci basamak "
+            "tedavi edici hizmetler entegre (birlikte) sunulur. "
+            "3) İkinci basamak: İlçe ve il merkezlerindeki Devlet Hastaneleri. "
+            "Modelin en kritik ilkeleri: Bölge tabanlı nüfus kaydı (Ev halkı tespit fişleri / Form 01), Kademeli sevk zinciri ve Ekip hizmetidir.\n\n"
+            "Prof. Dr. Nusret Fişek aynı zamanda Türkiye'de kontrolsüz hızlı nüfus artışının anne ve çocuk sağlığı üzerindeki tehdidini ilk fark eden devlet adamıdır. "
+            "Cumhuriyetin ilk yıllarındaki savaştan çıkmış nüfusu artırma (pronatalist) politikalarının miadını doldurduğunu görerek; 1965 yılında '557 Sayılı Nüfus "
+            "Planlaması Kanunu'nun çıkarılmasını sağlamıştır. Bu yasa ile aile planlaması hizmetleri serbest bırakılmış, kadınların güvenli yöntemlere erişimi "
+            "sağlanarak sağlıksız düşüklerin önüne geçilmiştir."
+        ),
+        "importantPoint": "1961 tarihli 224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun; Türkiye'de sağlık ocakları ve sağlık evleri ağını kuran, entegre hizmet, sevk zinciri, bölge tabanlı nüfus kaydı ve ekip anlayışını getiren temel reform kanunudur.",
+        "examTip": "'Türkiye'de sağlık ocakları sistemini kuran, koruyucu ve tedavi edici hizmetlerin birinci basamakta entegre verilmesini öngören ve 1961 yılında çıkarılan kanun hangisidir?' Yanıt: 224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun.",
+        "practiceQuestion": {
+            "question": "224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun'un getirdiği örgütlenme modeli ve ilkelerle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Temel hizmet birimi yaklaşık 5.000-10.000 nüfusa hizmet veren Sağlık Ocaklarıdır.",
+                "B) Köylerde ebenin görev yaptığı en uç birim Sağlık Evidir.",
+                "C) Birinci basamakta koruyucu hizmetler ile ayaktan tedavi edici hizmetler bir ekip tarafından entegre olarak sunulur.",
+                "D) Kademeli sevk zinciri uygulanarak hastaların doğrudan üçüncü basamak hastanelere gitmesi zorunlu kılınmıştır.",
+                "E) Nüfusa dayalı kayıt sistemi (Ev halkı tespit fişleri) ile bölgedeki tüm bireyler izlenir."
+            ],
+            "correctAnswer": 3,
+            "explanation": "224 Sayılı Kanun'da sevk zinciri birinci basamaktan ikinci basamağa doğru kademeli olarak işler; hastaların doğrudan üçüncü basamağa gitmesi sevk zincirini bozar ve sistemin mantığına aykırıdır."
+        }
+    },
+    # 19
+    {
+        "slideNumber": 19,
+        "title": "Cumhuriyet Öncesi ve Erken Dönem Türk Sağlık Tarihi",
+        "subtitle": "Meclis-i Tahaffuz'dan Dr. Refik Saydam, Merkez Hıfzıssıhha ve 1593 Sayılı Kanun (1930)",
+        "content": (
+            "Türkiye'de kamusal sağlık örgütlenmesinin kökleri 19. yüzyıl Osmanlı modernleşmesine kadar uzanır. 1838 yılında II. Mahmud döneminde kolera ve veba salgınlarına "
+            "karşı sınırları ve limanları denetlemek üzere 'Meclis-i Tahaffuz' (Karantina Meclisi) kurulmuştur. 1887'de Sultan II. Abdülhamid, Louis Pasteur'ün kuduz aşısını "
+            "bulması üzerine Paris'e heyet göndermiş, bağışta bulunmuş ve heyetin dönüşüyle İstanbul'da dünyanın üçüncü kuduz merkezi olan 'Dârü'l-Kelb Tedavihânesi' "
+            "ile 'Telkihhâne' (Çiçek Aşısı Üretim Merkezi) kurulmuştur. Osmanlı'da çiçek, kuduz ve difteri aşıları yerli olarak üretilmeye başlanmıştır.\n\n"
+            "Kurtuluş Savaşı'ndan çıkan genç Türkiye Cumhuriyeti'nin sağlık mimarı ise Mustafa Kemal Atatürk'ün yakın çalışma arkadaşı ve ilk Sağlık Bakanı olan "
+            "Dr. Refik Saydam'dır (1881-1942). Dr. Refik Saydam; savaşlarla tükenmiş, sıtma, trahom, frengi, verem ve tifüsle kırılan Anadolu insanını kurtarmak için "
+            "merkezi ve disiplinli bir ulusal sağlık politikası inşa etmiştir. 1928 yılında Ankara'da kurulan 'Refik Saydam Merkez Hıfzıssıhha Müessesesi', "
+            "Türkiye'nin aşı, serum ve biyolojik ürün üretiminde kendi kendine yetmesini sağlamış; hatta komşu ülkelere kolera aşısı ihraç edecek düzeye ulaşmıştır.\n\n"
+            "1930 yılında Dr. Refik Saydam'ın öncülüğünde çıkarılan '1593 Sayılı Umumi Hıfzıssıhha Kanunu', Cumhuriyet Türkiye'sinin sağlık anayasasıdır. "
+            "Bu kanun; bulaşıcı hastalıklarla mücadeleyi (ihbarı mecburi hastalıklar), aşı zorunluluklarını, çevre sağlığını, su denetimlerini, işçi sağlığı kurallarını "
+            "ve belediyelerin sağlık görevlerini en ince detayına kadar düzenlemiştir. Bu dönemde sıtma, verem, trahom ve frengi için özel dikey mücadele dispanserleri kurulmuştur."
+        ),
+        "importantPoint": "1930 tarihli 1593 Sayılı Umumi Hıfzıssıhha Kanunu Türkiye'nin temel halk sağlığı yasasıdır. Dr. Refik Saydam döneminde kurulan (1928) Refik Saydam Merkez Hıfzıssıhha Enstitüsü, ulusal aşı ve serum bağımsızlığımızın simgesi olmuştur.",
+        "examTip": "'Cumhuriyet döneminde 1930 yılında çıkarılan, bulaşıcı hastalıklarla mücadele ve çevre sağlığının temel yasal çerçevesini çizen kanun hangisidir?' Yanıt: 1593 Sayılı Umumi Hıfzıssıhha Kanunu.",
+        "practiceQuestion": {
+            "question": "Cumhuriyet dönemi halk sağlığı örgütlenmesi ve Dr. Refik Saydam dönemi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) 1928 yılında aşı ve serum üretimi için Refik Saydam Merkez Hıfzıssıhha Enstitüsü kurulmuştur.",
+                "B) 1930 yılında halk sağlığının temel çerçevesini çizen 1593 Sayılı Umumi Hıfzıssıhha Kanunu çıkarılmıştır.",
+                "C) Sıtma, trahom, frengi ve verem gibi yaygın halk sağlığı sorunlarıyla dikey mücadele teşkilatları ve dispanserler kurulmuştur.",
+                "D) Bu dönemde tüm aşı üretimi tamamen yasaklanmış ve dışa bağımlılık yasal zorunluluk haline getirilmiştir.",
+                "E) Osmanlı'dan devralınan telkihhane ve kuduz tedavihanesi geleneği Cumhuriyet döneminde kurumsallaştırılmıştır."
+            ],
+            "correctAnswer": 3,
+            "explanation": "Refik Saydam döneminde Hıfzıssıhha Enstitüsü aşı ve serumları bizzat yerli olarak üretmiş, aşı ithalatı yerine aşı ihracatı yapılmıştır."
+        }
+    },
+    # 20
+    {
+        "slideNumber": 20,
+        "title": "Küresel Dönüm Noktası: Alma-Ata Bildirgesi (1978)",
+        "subtitle": "'2000 Yılında Herkese Sağlık' Hedefi ve Temel Sağlık Hizmetleri (TSH / PHC) İlkeleri",
+        "content": (
+            "1970'li yıllara gelindiğinde, dünyada sağlık harcamaları hızla artmasına rağmen az gelişmiş ve gelişmekte olan ülkelerde kitlelerin sağlık durumunda beklenen "
+            "iyileşme sağlanamamıştı. Pahalı hastaneler zengin kent merkezlerine yığılırken, kırsal nüfus temel aşılardan ve temiz sudan yoksundu. Bu küresel eşitsizliğe "
+            "son vermek amacıyla Dünya Sağlık Örgütü (DSÖ) ve UNICEF öncülüğünde 6-12 Eylül 1978 tarihlerinde Kazakistan'ın Alma-Ata kentinde tarihi bir konferans toplandı. "
+            "134 ülkenin katılımıyla imzalanan 'Alma-Ata Bildirgesi', '2000 Yılında Herkese Sağlık' (Health for All by 2000) hedefini ilan etmiştir.\n\n"
+            "Alma-Ata Bildirgesi'nin kalbini 'Temel Sağlık Hizmetleri' (TSH / Primary Health Care) felsefesi oluşturur. TSH; toplumdaki her bireyin kabul edebileceği, "
+            "tam olarak katılabileceği, ülkenin ekonomik gücünün yetebileceği pratik, bilimsel açıdan geçerli yöntemlerle sunulan temel sağlık hizmetidir. Sağlık sisteminin "
+            "merkezi ve ilk temas noktası birinci basamaktır.\n\n"
+            "Ders notlarımızda yer alan Alma-Ata ve çağdaş halk sağlığı anlayışının temel ilkeleri şunlardır: "
+            "1) Toplumsal Eşitlik: Sağlık bir insan hakkıdır, herkes ihtiyacı kadar hizmet almalıdır. "
+            "2) Korumaya Öncelik: Koruma tedaviden üstündür ve ucuzdur. "
+            "3) Çevre ile Bütünlük: Kişi çevresiyle bir bütündür; çevre düzeltilmeden sağlık sağlanamaz. "
+            "4) Önemli Hastalıklara Öncelik: En çok öldüren, en sık görülen ve en çok sakat bırakan sorunlara kaynak ayrılmalıdır. "
+            "5) Risk Gruplarına Öncelik: Anne, çocuk, işçi ve yaşlılar önceliklidir. "
+            "6) Entegre Hizmet: Koruyucu ve tedavi edici hizmetler birlikte sunulmalıdır. "
+            "7) Ekip Hizmeti ve Multisektöryel Yaklaşım: Sağlık sadece sağlık sektörünün değil; tarım, eğitim, çevre sektörlerinin ortak görevidir. "
+            "8) Toplum Katılımı ve Öz Sorumluluk: Halk sağlık hizmetlerine katılmalı, kendi sağlığından sorumlu olmalıdır."
+        ),
+        "importantPoint": "1978 Alma-Ata Bildirgesi '2000 Yılında Herkese Sağlık' hedefini koymuş ve 'Temel Sağlık Hizmetleri' (TSH) yaklaşımını benimsemiştir. İlkeleri: Eşitlik, korumaya öncelik, risk gruplarına öncelik, entegre hizmet, ekip hizmeti, multisektörel yaklaşım ve halkın katılımıdır.",
+        "examTip": "'1978 yılında DSÖ ve UNICEF tarafından düzenlenen, '2000 Yılında Herkese Sağlık' hedefini belirleyen ve Temel Sağlık Hizmetleri (TSH) yaklaşımını kabul eden tarihi konferans ve bildirge hangisidir?' Yanıt: Alma-Ata Konferansı ve Bildirgesi.",
+        "practiceQuestion": {
+            "question": "1978 Alma-Ata Bildirgesi'nde tanımlanan Temel Sağlık Hizmetleri (TSH) ilkeleri arasında aşağıdakilerden hangisi YER ALMAZ?",
+            "options": [
+                "A) Toplumsal eşitlik ve sağlık hizmetlerine erişimde fırsat eşitliği sağlanması",
+                "B) Sağlık hizmetlerinin planlanması ve yürütülmesinde toplumun katılımının sağlanması",
+                "C) Sağlık hizmetlerinin yalnızca dördüncül cerrahi hastanelerinde merkezileştirilmesi ve birinci basamağın kapatılması",
+                "D) Koruyucu hekimlik uygulamalarına tedavi edici hizmetler karşısında öncelik verilmesi",
+                "E) Tarım, su, eğitim ve konut gibi sektörlerin işbirliğini içeren multisektöryel yaklaşım"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Alma-Ata Bildirgesi birinci basamağı sağlık sisteminin merkezine koymuştur; hizmetlerin dördüncül cerrahi hastanelerde merkezileştirilmesi TSH ruhuna tamamen zıttır."
+        }
+    },
+    # 21
+    {
+        "slideNumber": 21,
+        "title": "Sağlığın Geliştirilmesi ve Ottawa Şartı (1986)",
+        "subtitle": "'Health Promotion' Çağı, Sağlığın Ön Koşulları ve 5 Stratejik Eylem Alanı",
+        "content": (
+            "Alma-Ata Bildirgesi'nin ardından, özellikle sanayileşmiş ülkelerde bulaşıcı olmayan kronik hastalıkların (kardiyovasküler hastalıklar, kanserler, obezite) "
+            "yükselişi ve yaşam tarzı faktörlerinin (tütün, alkol, sedanter yaşam) öne çıkması yeni bir yaklaşıma ihtiyaç doğurdu. Bu doğrultuda 17-21 Kasım 1986 tarihlerinde "
+            "Kanada'nın Ottawa kentinde toplanan Birinci Uluslararası Sağlığı Geliştirme Konferansı'nda 'Ottawa Şartı' (Ottawa Charter for Health Promotion) kabul edilmiştir. "
+            "Bu belge, modern halk sağlığında 'Sağlığın Geliştirilmesi' (Health Promotion) çağını başlatmıştır.\n\n"
+            "Ottawa Şartı'na göre Sağlığın Geliştirilmesi; 'insanların kendi sağlıkları üzerindeki kontrollerini artırma ve sağlıklarını geliştirme sürecidir.' Sağlık artık "
+            "sadece bir hedef değil, günlük yaşam için bir kaynak ve pozitif bir kavramdır. Ottawa Şartı sağlığın temel ön koşullarını tanımlamıştır: Barış, barınma, "
+            "eğitim, yeterli gıda, adil gelir, dengeli ve istikrarlı bir ekosistem, sürdürülebilir kaynaklar, sosyal adalet ve hakkaniyet. Bu ön koşullar sağlanmadan "
+            "toplumun sağlıklı olması mümkün değildir.\n\n"
+            "Ottawa Şartı, sağlığın geliştirilmesi için 5 Temel Stratejik Eylem Alanı belirlemiştir: "
+            "1) Sağlıklı Kamu Politikaları Oluşturmak: Vergi, ulaştırma, çevre politikalarında sağlığı kriter yapmak (örn. tütün vergileri, emniyet kemeri yasaları). "
+            "2) Destekleyici Çevreler Yaratmak: Yaşanılan ve çalışılan mekanları sağlığı destekler hale getirmek (yeşil alanlar, dumansız hava sahası). "
+            "3) Toplum Eylemini Güçlendirmek: Toplulukların kendi sağlık kararlarında söz sahibi olması. "
+            "4) Kişisel Becerileri Geliştirmek: Bireylere sağlık okuryazarlığı ve yaşam becerileri kazandırmak. "
+            "5) Sağlık Hizmetlerini Yeniden Yönlendirmek: Sağlık sistemini sadece tedavi edici olmaktan çıkarıp sağlığı geliştirici yöne evirmek."
+        ),
+        "importantPoint": "1986 Ottawa Şartı, 'Sağlığın Geliştirilmesi' (Health Promotion) kavramının kurucu belgesidir. 5 eylem alanı: Sağlıklı kamu politikaları oluşturmak, destekleyici çevreler yaratmak, toplum eylemini güçlendirmek, kişisel becerileri geliştirmek ve sağlık hizmetlerini yeniden yönlendirmektir.",
+        "examTip": "'Bireylerin ve toplumların kendi sağlıkları üzerindeki kontrolünü artırma süreci olarak tanımlanan 'Sağlığın Geliştirilmesi' kavramı ilk kez hangi uluslararası belgede ve yılda sistemleştirilmiştir?' Yanıt: 1986 Ottawa Şartı.",
+        "practiceQuestion": {
+            "question": "1986 Ottawa Şartı'nda belirlenen Sağlığın Geliştirilmesi (Health Promotion) beş temel eylem alanı arasında aşağıdakilerden hangisi YER ALMAZ?",
+            "options": [
+                "A) Sağlıklı kamu politikaları oluşturmak",
+                "B) Destekleyici çevreler yaratmak",
+                "C) Kişisel becerileri geliştirmek ve sağlık okuryazarlığını artırmak",
+                "D) Sağlık harcamalarını karşılayamayan bireyleri sağlık sigortası kapsamından tamamen çıkarmak",
+                "E) Sağlık hizmetlerini koruyucu ve geliştirici yönde yeniden yönlendirmek"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Ottawa Şartı sosyal adalet ve hakkaniyeti savunur; yoksulları sigortadan çıkarmak gibi ayrımcı ve piyasacı uygulamalar Ottawa ilkelerine taban tabana zıttır."
+        }
+    },
+    # 22
+    {
+        "slideNumber": 22,
+        "title": "Koruma Düzeyleri - I: Primordial ve Birincil Korunma",
+        "subtitle": "Hastalık Öncesi Dönem, Sosyal Belirleyiciler, Makro Politikalar ve Spesifik Koruma",
+        "content": (
+            "Koruyucu hekimlik; hastalıklar ortaya çıkmadan veya ilerlemeden önce müdahale etmeyi amaçlayan halk sağlığı felsefesidir. Tıpta koruma basamakları geleneksel "
+            "olarak üç düzeyde (primer, sekonder, tersiyer) ele alınırken, kronik ve yaşam tarzıyla ilişkili bulaşıcı olmayan hastalıkların epidemi yapması üzerine en temel "
+            "basamak olarak 'Primordial Koruma' tanımlanmıştır. Primordial koruma; bir toplumda hastalık risk faktörlerinin (tütün kullanımı, sedanter yaşam, doymuş yağ "
+            "tüketimi, obezite) henüz ortaya çıkmasını veya yerleşmesini engellemeyi amaçlayan en erken koruma düzeyidir.\n\n"
+            "Primordial korumanın hedefi doğrudan tek bir birey değil, tüm nüfus ve seçilmiş toplumsal gruplardır. Bu mücadele, hastalıklara yol açan kök nedenlerle "
+            "(sosyoekonomik, kültürel ve yasal zemin) yapılır. Primordial koruma hekimin poliklinik reçetesiyle değil; devlet desteği, yasalar ve makro politikalarla "
+            "yürütülür: Çocukların sigaraya başlamasını önleyen okul eğitimleri ve müfredat programları, tütün ürünlerine ağır vergiler getirilmesi, trans yağların "
+            "gıdalarda yasaklanması, kentlerde bisiklet ve yürüyüş yolları yapılması primordial korumanın somut örnekleridir.\n\n"
+            "Birincil (Primer) Korunma ise; risk faktörleri ortamda bulunsa bile, henüz biyolojik patoloji (hastalık süreci) başlamadan önce kişiyi hastalıktan koruma "
+            "çabasıdır. Temel amacı hastalığın yeni vaka sayısını (insidans) ve prevalansını düşürmektir. İki ana bileşenden oluşur: "
+            "1) Sağlığın Geliştirilmesi: Yeterli ve dengeli beslenme, kişisel hijyen eğitimi, temiz su ve çevre koşullarının sağlanması. "
+            "2) Spesifik (Özgül) Koruma: Belirli bir hastalığa karşı kalkan oluşturmak: Rutin çocukluk çağı aşıları (aktif bağışıklama), tetanoz seromu (pasif bağışıklama), "
+            "gebelikte folik asit takviyesi, guatrı önlemek için tuzların iyotlanması, diş çürüklerine karşı suların florlanması, iş yerinde koruyucu baret/maske kullanımı."
+        ),
+        "importantPoint": "Primordial koruma, risk faktörlerinin henüz toplumda oluşmasını engellemeye yönelik makro düzeydeki yasal ve çevresel politikalardır (örn. tütüne vergi artışı, trans yağ yasağı). Birincil (primer) koruma ise hastalık başlamadan önce insidansı azaltmak için yapılan aşı, hijyen ve iyotlama gibi spesifik koruyucu uygulamalardır.",
+        "examTip": "'Koroner kalp hastalığı veya kanser riskini artıran yaşam tarzı faktörlerinin toplumda hiç yerleşmemesi için devlet politikaları ve okul eğitimleriyle yapılan koruma düzeyi hangisidir?' Yanıt: Primordial koruma. (Aşılama ve suların florlanması ise Birincil/Primer korumadır).",
+        "practiceQuestion": {
+            "question": "Koruma düzeyleri ile ilgili aşağıdaki uygulamalardan hangisi BİRİNCİL (PRİMER) KORUMA örneğidir?",
+            "options": [
+                "A) Çocuklara hepatit B ve kızamık aşılarının yapılması",
+                "B) Rahim ağzı kanserini semptomsuz evrede yakalamak için Pap-smear taraması yapılması",
+                "C) Diyabet hastasında ayak ülseri ve amputasyonu önlemek için diyabetik ayak bakımı eğitimi verilmesi",
+                "D) İnme geçiren hastaya yürüme yetisini kazandırmak için fizik tedavi uygulanması",
+                "E) Meme kanseri şüphesiyle mamografi çektirilmesi"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Aşılama, henüz hastalık başlamadan önce spesifik koruma sağlayarak yeni vaka oluşumunu (insidansı) engelleyen klasik bir Birincil (Primer) Koruma yöntemidir. Pap-smear ve mamografi ikincil, diyabetik ayak ve inme rehabilitasyonu üçüncül korumadır."
+        }
+    },
+    # 23
+    {
+        "slideNumber": 23,
+        "title": "Koruma Düzeyleri - II: İkincil, Üçüncül ve Dördüncül Korunma",
+        "subtitle": "Erken Tanı ve Taramalar, Komplikasyonların Önlenmesi, Rehabilitasyon ve İyatrojenez",
+        "content": (
+            "İkincil (Sekonder) Korunma; patolojik süreç biyolojik olarak başlamış ancak henüz klinik belirti ve semptom vermemiş olan 'pre-semptomatik' (subklinik) dönemde "
+            "devreye girer. Temel amacı; hastalığı en erken evrede yakalayarak ilerlemesini durdurmak, tamamen iyileştirmek ve kalıcı hasarları önlemektir. İkincil korumanın "
+            "ana omurgasını 'Hastalık Taramaları' (Screening) oluşturur. Taramalar klinik olarak sağlıklı görünen kitlelere uygulanır. Örnekler: Serviks kanseri için Pap-smear "
+            "ve HPV-DNA testi, meme kanseri için mamografi, kolorektal kanser için gaitada gizli kan testi, yenidoğanda fenilketonüri ve konjenital hipotiroidi için topuk "
+            "kanı taraması, hipertansiyon erken tanısı için rutin kan basıncı ölçümü ve tüberküloz için tüberkülin deri testi (PPD). Taramalarla harcanan bütçe, hastalığın "
+            "ağır evre tedavi giderlerini önleyerek topluma kat kat geri döner.\n\n"
+            "Üçüncül (Tersiyer) Korunma; birincil ve ikincil koruma olanaklarından yararlanamamış, hastalığı klinik olarak oturmuş bireylerde uygulanır. Temel amacı; "
+            "hastalığın ilerlemesini sınırlandırmak, komplikasyonları ve sekelleri önlemek, sakatlığı en aza indirmek ve hastayı rehabilite ederek eski yaşamına döndürmektir. "
+            "Örnekler: Diyabeti olan bir hastanın göz komplikasyonlarının (retinopati) engellenmesi veya ayak amputasyonunun önlenmesi; miyokard enfarktüsü geçirmiş hastaya "
+            "kardiyak rehabilitasyon uygulanması; inme geçirmiş hastaya fizyoterapi verilerek yatağa bağımlılığın önlenmesi.\n\n"
+            "Modern halk sağlığı etiğinde tanımlanan Dördüncül (Kuaterner) Korunma ise; aşırı tıbbileştirme (overmedicalization), gereksiz tanısal tetkikler ve aşırı tedavi "
+            "riskleri altındaki hastayı koruma eylemidir. Tıbbın 'Primum non nocere' ilkesine dayanan bu düzey; hastayı gereksiz biyopsilerden, gereksiz ilaç yükünden "
+            "(polifarmasi) ve iyatrojenik (hekim kaynaklı) zararlardan korumayı hedefler."
+        ),
+        "importantPoint": "İkincil korumanın anahtarı 'presemptomatik dönemde erken tanı ve taramalardır' (Pap-smear, mamografi, tansiyon ölçümü). Üçüncül koruma ise oturmuş hastalığın komplikasyonlarını önleme ve 'rehabilitasyondur' (diyabetik ayak bakımı, inme sonrası fizyoterapi). Dördüncül koruma aşırı tanı ve tedaviden korumadır.",
+        "examTip": "'Semptomu olmayan sağlıklı popülasyonda serviks kanseri erken tanısı için Pap-smear yapılması hangi koruma düzeyine girer?' Yanıt: İkincil (Sekonder) Korunma. (Diyabet hastasında ayak amputasyonunu önleme çabası ise Üçüncül korumadır).",
+        "practiceQuestion": {
+            "question": "Koruma düzeyleri ve halk sağlığı uygulamaları ile ilgili aşağıdaki senaryolardan hangisi ÜÇÜNCÜL (TERSİYER) KORUNMA kapsamına girer?",
+            "options": [
+                "A) Toplumda sigara tüketimini azaltmak için tütün vergilerinin artırılması",
+                "B) Sağlıklı kadınlara serviks kanseri erken teşhisi için rutin Pap-smear taraması yapılması",
+                "C) Kronik diyabet tanısı olan bir hastada ayak amputasyonunu ve körlüğü engellemek amacıyla komplikasyon takibi ve rehabilitasyon uygulanması",
+                "D) Yenidoğan bebeğe hepatit B aşısı uygulanması",
+                "E) İftar çadırlarında ve lokantalarda tuzlukların masadan kaldırılması"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Diyabet tanısı almış hastada ayak amputasyonu veya retinopatinin önlenmesi, oturmuş hastalığın komplikasyonlarını sınırlandırma ve rehabilitasyon amacını taşıdığı için Üçüncül (Tersiyer) Korunmadır."
+        }
+    },
+    # 24
+    {
+        "slideNumber": 24,
+        "title": "Halk Sağlığı Uzmanının Rolü, Epidemiyolojik Geçiş ve Tek Sağlık",
+        "subtitle": "Omran'ın Epidemiyolojik Geçiş Kuramı, Halk Sağlığı Disiplininin Görevleri ve One Health",
+        "content": (
+            "Halk sağlığı uzmanlığı; toplumun sağlık düzeyini, mevcut ve gelişebilecek sağlık sorunlarını, bu sorunların biyolojik, çevresel ve sosyoekonomik nedenlerini "
+            "bilimsel epidemiyolojik tekniklerle saptayan çok yönlü bir uzmanlık dalıdır. Bir halk sağlığı uzmanı; sağlık politikaları geliştirerek çözümler üretir, "
+            "programların kontrol ve değerlendirmesini yapar, sağlık hizmetlerinin her kademesinde yöneticilik üstlenir. Araştırıcılık, danışmanlık, salgın incelemeleri "
+            "(filyasyon ve sürveyans), halkın sağlık eğitimi ve halk sağlığı laboratuvarlarının işletilmesinde doğrudan görev alır. Bireysel hekim tek bir hastayı tedavi ederken; "
+            "halk sağlığı uzmanı tüm kenti veya ülkeyi hastası olarak kabul eder ve sistemsel müdahaleler tasarlar.\n\n"
+            "20. yüzyıldan 21. yüzyıla geçerken insanlığın sağlık profili Abdel Omran'ın tanımladığı 'Epidemiyolojik Geçiş Kuramı' (Epidemiologic Transition) doğrultusunda "
+            "kökten değişmiştir: Geçmişte yüksek mortaliteye yol açan veba, kolera, tifo, çiçek gibi akut bulaşıcı hastalıkların ve malnütrisyonun yerini; gelişen sanitasyon, "
+            "aşılar ve yaşam koşullarıyla birlikte kardiyovasküler hastalıklar, kanserler, diyabet ve KOAH gibi kronik dejeneratif hastalıklar almıştır. Ancak günümüz "
+            "dünyası 'çifte hastalık yükü' (double burden of disease) ile karşı karşıyadır: Bir yandan kronik hastalıklar tırmanırken, diğer yandan COVID-19, SARS ve zoonotik "
+            "yeni pandemiler küresel sağlığı tehdit etmektedir.\n\n"
+            "Bu karmaşık tehditler karşısında geleceğin halk sağlığı vizyonu 'Tek Sağlık' (One Health) paradigmasında somutlaşmaktadır. Tek Sağlık; insan sağlığının, "
+            "evcil ve yabani hayvan sağlığı ile çevre/ekosistem sağlığından ayrılamaz bir bütün olduğunu kabul eden disiplinlerarası bir yaklaşımdır. İklim krizi, "
+            "antimikrobiyal direnç ve hızlı kentleşme çağında halk sağlığı; büyük veri analitiği, yapay zeka destekli erken uyarı sistemleri ve küresel dayanışma ile "
+            "insanlığın en hayati savunma kalkanıdır."
+        ),
+        "importantPoint": "Epidemiyolojik geçiş; ölüm nedenlerinin bulaşıcı ve enfeksiyöz hastalıklardan kronik, dejeneratif ve yaşam tarzı hastalıklarına (kalp-damar, kanser) kaymasıdır. 'Tek Sağlık' (One Health) ise insan, hayvan ve çevre sağlığını tek bir entegre ekosistem olarak ele alan çağdaş yaklaşımdır.",
+        "examTip": "'Bir toplumda sanitasyon, beslenme ve aşılamanın gelişmesiyle birlikte bulaşıcı hastalık ölümlerinin azalıp yerine kardiyovasküler hastalıklar ve kanser gibi kronik dejeneratif hastalıkların ön plana geçmesi sürecini tanımlayan kuram hangisidir?' Yanıt: Epidemiyolojik Geçiş Kuramı (Abdel Omran).",
+        "practiceQuestion": {
+            "question": "Çağdaş halk sağlığı vizyonu, epidemiyolojik geçiş ve halk sağlığı uzmanının görevleriyle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+            "options": [
+                "A) Epidemiyolojik geçiş kuramı, bulaşıcı hastalıkların yerini zamanla kronik dejeneratif hastalıkların aldığını tanımlar.",
+                "B) Halk sağlığı uzmanı sadece hastane ameliyathanelerinde cerrahi vaka sayısını artırmakla yükümlü olup toplum araştırması yapmaz.",
+                "C) Tek Sağlık (One Health) yaklaşımı insan, hayvan ve çevre sağlığının ayrılmaz bir bütün olduğunu savunur.",
+                "D) Halk sağlığı uzmanı; sürveyans, filyasyon, salgın incelemesi, sağlık politikası ve yönetimi alanlarında görev alır.",
+                "E) Günümüz toplumları hem kronik hastalıkların hem de yeni ortaya çıkan zoonotik pandemilerin oluşturduğu çifte yük ile karşı karşıyadır."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Halk sağlığı uzmanının temel görevi cerrahi ameliyat yapmak değil; toplumun sağlık düzeyini saptamak, epidemiyolojik araştırmalar yürütmek, salgın incelemek, sağlık politikası geliştirmek ve yöneticilik yapmaktır."
+        }
+    }
+]
+
+# Enrich each slide with spots and relatedQuestions for full compatibility
+for s in slides:
+    s["synthesisNarrative"] = s["content"]
+    s["spots"] = [
+        {
+            "type": "warning",
+            "badge": "🔴 ÖNEMLİ",
+            "text": s["importantPoint"],
+            "color": "rose"
+        },
+        {
+            "type": "exam",
+            "badge": "🔵 ÇIKMIŞ SORU",
+            "text": s["examTip"],
+            "color": "sky"
+        }
+    ]
+    s["spotPearls"] = s["spots"]
+    s["relatedQuestions"] = [
+        {
+            "id": f"prac-hs-{s['slideNumber']:03d}",
+            "question": s["practiceQuestion"]["question"],
+            "options": s["practiceQuestion"]["options"],
+            "correctAnswer": s["practiceQuestion"]["correctAnswer"],
+            "explanation": s["practiceQuestion"]["explanation"]
+        }
+    ]
+
+deck = {
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "title": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slides": slides
+}
+
+os.makedirs(os.path.dirname(target_path), exist_ok=True)
+with open(target_path, "w", encoding="utf-8") as f:
+    json.dump(deck, f, ensure_ascii=False, indent=2)
+
+print(f"Successfully generated {len(slides)} slides into {target_path}")

@@ -1,10 +1,11 @@
 import rawGlossary from './medical_glossary.json';
+import rawEncyclopedia from './medical_encyclopedia.json';
 
 /**
- * One reader for medical_glossary.json, whatever its current shape:
- * - an array of { term, definition, clinicalPearls, pronunciation, aliases, badgeColor }  (v1)
- * - an object keyed by term with { term, description, clinicalPearl, discipline, category } (v2)
- * Entries without any definition text are dropped so no empty card or popover is shown.
+ * Universal reader and synthesizer for medical terms:
+ * - Unifies medical_glossary.json (both string definitions and structured objects)
+ * - Merges medical_encyclopedia.json (rich pathology, pharmacology, and clinical diseases)
+ * Ensures every medical term, drug, disease, bacterium and virus has a live, interactive floating toast card!
  */
 export interface GlossaryEntry {
   term: string;
@@ -20,9 +21,11 @@ export interface GlossaryEntry {
 const CATEGORY_LABELS: Record<string, string> = {
   hastalik: 'Klinik hastalık',
   ilac: 'Farmakoloji',
-  genetik: 'Genetik',
-  patoloji: 'Tıbbi patoloji',
+  genetik: 'Genetik & Patoloji',
+  patoloji: 'Tıbbi Patoloji',
   patojen: 'Mikrobiyoloji',
+  bakteriyoloji: 'Bakteriyoloji',
+  viroloji: 'Viroloji',
 };
 
 const BADGE_BY_CATEGORY: Record<string, string> = {
@@ -31,26 +34,168 @@ const BADGE_BY_CATEGORY: Record<string, string> = {
   genetik: 'purple',
   patoloji: 'red',
   patojen: 'amber',
+  bakteriyoloji: 'red',
+  viroloji: 'rose',
 };
 
-const toEntry = (x: any): GlossaryEntry | null => {
-  if (!x || typeof x !== 'object' || !x.term) return null;
-  const definition = String(x.definition || x.description || '').trim();
-  if (!definition) return null;
-  const rawCat = String(x.category || x.discipline || 'Diğer');
-  const category = CATEGORY_LABELS[rawCat.toLocaleLowerCase('tr-TR')] || rawCat;
-  return {
-    term: String(x.term),
-    aliases: Array.isArray(x.aliases) ? x.aliases : undefined,
-    category,
-    pronunciation: x.pronunciation || undefined,
-    definition,
-    clinicalPearls: String(x.clinicalPearls || x.clinicalPearl || '').trim() || undefined,
-    badgeColor: x.badgeColor || BADGE_BY_CATEGORY[rawCat.toLocaleLowerCase('tr-TR')],
-    discipline: x.discipline || undefined,
-  };
-};
+// Map to deduplicate by normalized term
+const termMap = new Map<string, GlossaryEntry>();
 
-const source: any[] = Array.isArray(rawGlossary) ? (rawGlossary as any[]) : Object.values(rawGlossary as Record<string, any>);
+// 1. Process medical_glossary.json
+if (Array.isArray(rawGlossary)) {
+  for (const item of rawGlossary as any[]) {
+    if (!item) continue;
+    const term = String(item.term || '').trim();
+    const definition = String(item.definition || item.description || '').trim();
+    if (!term || !definition) continue;
 
-export const GLOSSARY: GlossaryEntry[] = source.map(toEntry).filter((e): e is GlossaryEntry => !!e);
+    const rawCat = String(item.category || item.discipline || 'Tıbbi Patoloji');
+    const category = CATEGORY_LABELS[rawCat.toLowerCase()] || rawCat;
+    const normKey = term.toLowerCase();
+
+    termMap.set(normKey, {
+      term,
+      aliases: Array.isArray(item.aliases) ? item.aliases : undefined,
+      category,
+      pronunciation: item.pronunciation || undefined,
+      definition,
+      clinicalPearls: String(item.clinicalPearls || item.clinicalPearl || '').trim() || undefined,
+      badgeColor: item.badgeColor || BADGE_BY_CATEGORY[rawCat.toLowerCase()] || 'blue',
+      discipline: item.discipline || undefined,
+    });
+  }
+} else if (rawGlossary && typeof rawGlossary === 'object') {
+  for (const [key, val] of Object.entries(rawGlossary as Record<string, any>)) {
+    if (!val) continue;
+
+    // Case A: string definition (glossary[term] = "açıklama")
+    if (typeof val === 'string') {
+      const definition = val.trim();
+      if (!definition) continue;
+      const term = key.trim();
+      const normKey = term.toLowerCase();
+
+      termMap.set(normKey, {
+        term,
+        category: 'Tıbbi Patoloji',
+        definition,
+        badgeColor: 'teal',
+      });
+      continue;
+    }
+
+    // Case B: object definition ({ term, description, category, ... })
+    if (typeof val === 'object') {
+      const term = String(val.term || key).trim();
+      const definition = String(val.definition || val.description || '').trim();
+      if (!term) continue;
+
+      const rawCat = String(val.category || val.discipline || 'Tıbbi Patoloji');
+      const category = CATEGORY_LABELS[rawCat.toLowerCase()] || rawCat;
+      const normKey = term.toLowerCase();
+
+      // Only save if has definition or fallback
+      if (definition) {
+        termMap.set(normKey, {
+          term,
+          aliases: Array.isArray(val.aliases) ? val.aliases : undefined,
+          category,
+          pronunciation: val.pronunciation || undefined,
+          definition,
+          clinicalPearls: String(val.clinicalPearls || val.clinicalPearl || '').trim() || undefined,
+          badgeColor: val.badgeColor || BADGE_BY_CATEGORY[rawCat.toLowerCase()] || 'purple',
+          discipline: val.discipline || undefined,
+        });
+      }
+    }
+  }
+}
+
+// 2. Process medical_encyclopedia.json (Enrich and fill definitions)
+if (Array.isArray(rawEncyclopedia)) {
+  for (const enc of rawEncyclopedia as any[]) {
+    if (!enc) continue;
+    const term = String(enc.term || enc.title || '').trim();
+    if (!term) continue;
+    const normKey = term.toLowerCase();
+
+    // Definition from definition, description, or summary
+    const definition = String(enc.definition || enc.description || enc.summary || '').trim();
+    if (!definition) continue;
+
+    // Clinical Pearls from examSpotPearls, lectureContextNotes, morphologyOrMechanism, pitfalls, or clinicalPearls
+    const pearlsArr: string[] = [];
+    if (Array.isArray(enc.examSpotPearls)) {
+      pearlsArr.push(...enc.examSpotPearls);
+    }
+    if (Array.isArray(enc.clinicalSignificance)) {
+      pearlsArr.push(...enc.clinicalSignificance);
+    }
+    if (Array.isArray(enc.highYieldFacts)) {
+      pearlsArr.push(...enc.highYieldFacts);
+    }
+    if (typeof enc.clinicalPearls === 'string' && enc.clinicalPearls.trim()) {
+      pearlsArr.push(enc.clinicalPearls.trim());
+    } else if (typeof enc.clinicalPearl === 'string' && enc.clinicalPearl.trim()) {
+      pearlsArr.push(enc.clinicalPearl.trim());
+    }
+    if (typeof enc.morphologyOrMechanism === 'string' && enc.morphologyOrMechanism.trim()) {
+      pearlsArr.push(`Mekanizma: ${enc.morphologyOrMechanism.trim()}`);
+    }
+    if (Array.isArray(enc.pitfallsAndWarnings)) {
+      pearlsArr.push(...enc.pitfallsAndWarnings);
+    }
+    const clinicalPearls = pearlsArr.slice(0, 3).join(' • ').trim() || undefined;
+
+    // Aliases from aliases, latinName, relatedTerms, and parentheses in term
+    const aliases: string[] = [];
+    if (enc.latinName && typeof enc.latinName === 'string') {
+      aliases.push(enc.latinName.trim());
+    }
+    if (Array.isArray(enc.aliases)) {
+      aliases.push(...enc.aliases.map((a: string) => String(a).trim()));
+    }
+    if (Array.isArray(enc.relatedTerms)) {
+      aliases.push(...enc.relatedTerms.map((t: string) => String(t).replace(/-/g, ' ').trim()));
+    }
+    const parenMatch = term.match(/^(.+?)\s*\((.+?)\)$/);
+    if (parenMatch) {
+      aliases.push(parenMatch[1].trim());
+      aliases.push(parenMatch[2].trim());
+    }
+
+    const existing = termMap.get(normKey);
+    if (existing) {
+      // Merge: prefer longer definition and combine pearls
+      if (!existing.definition || definition.length > existing.definition.length) {
+        existing.definition = definition;
+      }
+      if (!existing.clinicalPearls && clinicalPearls) {
+        existing.clinicalPearls = clinicalPearls;
+      }
+      if (aliases.length > 0) {
+        const mergedAliases = Array.from(new Set([...(existing.aliases || []), ...aliases])).filter(
+          (a) => a.toLowerCase() !== normKey
+        );
+        existing.aliases = mergedAliases.length > 0 ? mergedAliases : undefined;
+      }
+    } else {
+      const rawCat = String(enc.category || enc.discipline || 'Tıbbi Patoloji');
+      const category = CATEGORY_LABELS[rawCat.toLowerCase()] || rawCat;
+      const cleanAliases = Array.from(new Set(aliases)).filter((a) => a.toLowerCase() !== normKey);
+
+      termMap.set(normKey, {
+        term,
+        aliases: cleanAliases.length > 0 ? cleanAliases : undefined,
+        category,
+        definition,
+        clinicalPearls,
+        badgeColor: BADGE_BY_CATEGORY[rawCat.toLowerCase()] || 'rose',
+        discipline: enc.discipline || undefined,
+      });
+    }
+  }
+}
+
+export const GLOSSARY: GlossaryEntry[] = Array.from(termMap.values());
+

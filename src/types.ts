@@ -234,5 +234,6 @@ export type {
   DraftCompatibilityResult,
   DraftCluster,
   ClusterAnalysisSummary,
+  ClusterTuning,
   OptionAlignment
 } from './services/draftClusteringService';

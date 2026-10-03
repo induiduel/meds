@@ -1,7 +1,7 @@
 import { Committee, QuestionItem, LectureNote, AdminNotification } from '../types';
 import { FirestoreDbService, db as firestoreDb, filterCurrent2026_2027Committees } from './firestoreDb';
 import { SupabaseDbService, broadcastLiveEvent } from './supabaseDb';
-import { safeJsonFetch, getCustomApiUrl } from './api';
+import { safeJsonFetch, getCustomApiUrl, getLocalDb, saveLocalDb } from './api';
 import { systemHealthMonitor } from './systemHealthMonitor';
 import { pastQuestionsCache } from './pastQuestionsCache';
 
@@ -34,15 +34,16 @@ export interface DatabaseStatus {
 const DB_MODE_KEY = 'medsoru_active_db_mode';
 
 class MultiDbManager {
-  private activeMode: DatabaseMode = 'auto';
-  private firebaseQuotaExceeded = false;
-  private lastQuotaCheck = 0;
+  private activeMode: DatabaseMode = 'supabase';
+  private firebaseQuotaExceeded = true;
+  private lastQuotaCheck = Date.now();
 
   constructor() {
+    this.activeMode = 'supabase';
     if (typeof localStorage !== 'undefined') {
       const saved = localStorage.getItem(DB_MODE_KEY) as DatabaseMode | null;
-      if (saved && ['auto', 'supabase', 'firebase', 'local_pc'].includes(saved)) {
-        this.activeMode = saved;
+      if (saved && ['auto', 'supabase', 'local_pc'].includes(saved)) {
+        this.activeMode = saved === 'auto' ? 'supabase' : saved;
       }
     }
   }
@@ -61,45 +62,11 @@ class MultiDbManager {
 
   public markFirebaseQuotaExceeded() {
     this.firebaseQuotaExceeded = true;
-    this.lastQuotaCheck = Date.now();
-    if (typeof localStorage !== 'undefined') {
-      try {
-        localStorage.setItem('medsoru_fb_quota_exceeded', String(Date.now()));
-      } catch (_) {}
-    }
-    systemHealthMonitor.recordDatabaseError('firebase', new Error('Firebase Spark günlük okuma/yazma kotası aşıldı!'));
-    console.warn('[MultiDbManager] Firebase Spark günlük okuma/yazma kotası aşıldı! Otomatik olarak Supabase / Yerel PC devraldı.');
   }
 
   public isFirebaseQuotaExceeded(): boolean {
-    const QUOTA_BLOCK_DURATION = 6 * 3600 * 1000; // 6 saat boyunca gereksiz yere Firebase'e bekletme yapma
-    if (this.firebaseQuotaExceeded) {
-      if (Date.now() - this.lastQuotaCheck > QUOTA_BLOCK_DURATION) {
-        this.firebaseQuotaExceeded = false;
-        if (typeof localStorage !== 'undefined') {
-          try { localStorage.removeItem('medsoru_fb_quota_exceeded'); } catch (_) {}
-        }
-      }
-      return this.firebaseQuotaExceeded;
-    }
-
-    if (typeof localStorage !== 'undefined') {
-      try {
-        const stored = localStorage.getItem('medsoru_fb_quota_exceeded');
-        if (stored) {
-          const timestamp = Number(stored);
-          if (Date.now() - timestamp < QUOTA_BLOCK_DURATION) {
-            this.firebaseQuotaExceeded = true;
-            this.lastQuotaCheck = timestamp;
-            return true;
-          } else {
-            localStorage.removeItem('medsoru_fb_quota_exceeded');
-          }
-        }
-      } catch (_) {}
-    }
-
-    return false;
+    // Firestore veritabanı devreden çıkarıldı; tüm işlemler yerel / bulut Supabase üzerinden yürütülür.
+    return true;
   }
 
   /**
@@ -250,7 +217,17 @@ class MultiDbManager {
       return this.getLocalQuestions(committeeId);
     }
 
-    // 3. Auto / Firebase mode
+    // 3. Auto mode: Primary PostgreSQL with Realtime Subscriptions
+    if (mode === 'auto') {
+      try {
+        const supaQ = await SupabaseDbService.getQuestions(committeeId);
+        if (supaQ && supaQ.length > 0) return supaQ;
+      } catch (e) {
+        console.warn('[MultiDbManager] Supabase getQuestions failed, falling back to Firebase Spark:', e);
+      }
+    }
+
+    // 4. Firebase Spark Plan (Mirror / Fallback)
     if (!this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
       try {
         const fbQ = await FirestoreDbService.getQuestions(committeeId);
@@ -269,13 +246,15 @@ class MultiDbManager {
       }
     }
 
-    // 4. Fallback to Supabase
-    try {
-      const supaQ = await SupabaseDbService.getQuestions(committeeId);
-      if (supaQ && supaQ.length > 0) return supaQ;
-    } catch (e) {}
+    // 5. Secondary fallback to Supabase if not tried in auto
+    if (mode !== 'auto' && mode !== 'supabase') {
+      try {
+        const supaQ = await SupabaseDbService.getQuestions(committeeId);
+        if (supaQ && supaQ.length > 0) return supaQ;
+      } catch (e) {}
+    }
 
-    // 5. Final fallback to Local PC server
+    // 6. Final fallback to Local PC server
     return this.getLocalQuestions(committeeId);
   }
 
@@ -492,6 +471,18 @@ class MultiDbManager {
    * Saves to local PC, Supabase, AND mirrors to Firebase Spark plan!
    */
   public async saveQuestion(question: QuestionItem): Promise<void> {
+    // 0. Immediate local database synchronization
+    try {
+      const db = getLocalDb();
+      const existingIdx = db.questions.findIndex((q) => q.id === question.id);
+      if (existingIdx !== -1) {
+        db.questions[existingIdx] = question;
+      } else {
+        db.questions.push(question);
+      }
+      saveLocalDb(db);
+    } catch (_) {}
+
     const promises: Promise<any>[] = [];
 
     // 1. Local PC Express API
@@ -743,12 +734,56 @@ class MultiDbManager {
   }
 
   /**
-   * Delete Question from all databases
+   * Delete Question from all databases (Local DB, Express Server, Supabase, and Firebase Spark)
    */
   public async deleteQuestion(id: string): Promise<void> {
+    // 0. Immediate local database cleanup
+    try {
+      const db = getLocalDb();
+      if (db.questions.some((q) => q.id === id)) {
+        db.questions = db.questions.filter((q) => q.id !== id);
+        saveLocalDb(db);
+      }
+    } catch (_) {}
+
     const promises: Promise<any>[] = [];
-    promises.push(SupabaseDbService.deleteQuestion(id).catch(() => {}));
-    promises.push(FirestoreDbService.deleteQuestion(id).catch(() => {}));
+
+    // 1. Local PC Express API
+    promises.push(
+      (async () => {
+        try {
+          const customUrl = getCustomApiUrl();
+          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
+            return;
+          }
+          const endpoint = customUrl ? `${customUrl}/api/questions/${id}` : `/api/questions/${id}`;
+          await safeJsonFetch(endpoint, { method: 'DELETE' });
+        } catch (_) {}
+      })()
+    );
+
+    // 2. Supabase
+    promises.push(
+      (async () => {
+        try {
+          await SupabaseDbService.deleteQuestion(id);
+        } catch (e) {
+          console.warn('[MultiDbManager] Supabase deleteQuestion error:', e);
+        }
+      })()
+    );
+
+    // 3. Firebase Spark
+    promises.push(
+      (async () => {
+        try {
+          await FirestoreDbService.deleteQuestion(id);
+        } catch (e) {
+          console.warn('[MultiDbManager] Firestore deleteQuestion error:', e);
+        }
+      })()
+    );
+
     await Promise.allSettled(promises);
     broadcastLiveEvent('questions_changed', { eventType: 'DELETE', old: { id }, id });
   }

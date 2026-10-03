@@ -146,7 +146,7 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     hideTimeoutRef.current = window.setTimeout(() => {
       setActiveState(null);
       hideTimeoutRef.current = null;
-    }, 280);
+    }, 450);
   };
 
   return (
@@ -175,7 +175,10 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
  */
 const GlossaryLayer: React.FC = () => {
   const [fsHost, setFsHost] = useState<Element | null>(() => (typeof document !== 'undefined' ? document.fullscreenElement : null));
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
     const update = () => setFsHost(document.fullscreenElement);
     document.addEventListener('fullscreenchange', update);
     document.addEventListener('webkitfullscreenchange', update);
@@ -184,13 +187,16 @@ const GlossaryLayer: React.FC = () => {
       document.removeEventListener('webkitfullscreenchange', update);
     };
   }, []);
+
+  if (!mounted || typeof document === 'undefined') return null;
+
   const layer = (
-    <>
+    <div className="medical-glossary-portal-root">
       <FloatingGlossaryToast />
       <MedicalGlossaryDrawer />
-    </>
+    </div>
   );
-  return fsHost ? createPortal(layer, fsHost) : layer;
+  return createPortal(layer, fsHost || document.body);
 };
 
 // ---------------------------------------------------------------------------
@@ -343,7 +349,7 @@ export const FloatingGlossaryToast: React.FC = () => {
       top: `${top}px`,
       left: `${left}px`,
       width: `${cardWidth}px`,
-      zIndex: 9999,
+      zIndex: 99999,
     };
   } else {
     // Floating bottom toast / sheet
@@ -354,7 +360,7 @@ export const FloatingGlossaryToast: React.FC = () => {
       transform: 'translateX(-50%)',
       width: 'calc(100% - 32px)',
       maxWidth: '460px',
-      zIndex: 9999,
+      zIndex: 99999,
     };
   }
 
@@ -528,6 +534,12 @@ export const GlossaryTermSpan: React.FC<{
       role="button"
       tabIndex={0}
       onClick={handleClick}
+      onPointerDown={(e) => e.stopPropagation()}
+      onPointerUp={(e) => {
+        e.stopPropagation();
+        const rect = spanRef.current?.getBoundingClientRect();
+        showTerm(item, rect, 'tap');
+      }}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -536,10 +548,11 @@ export const GlossaryTermSpan: React.FC<{
       }}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
-      className="cursor-pointer font-medium text-teal-800 dark:text-teal-200 underline decoration-dashed decoration-teal-400/80 underline-offset-4 hover:bg-teal-500/10 dark:hover:bg-teal-400/20 px-0.5 rounded transition-all duration-150"
+      className="cursor-pointer font-semibold text-teal-800 dark:text-teal-200 bg-teal-500/15 dark:bg-teal-400/20 hover:bg-teal-500/25 dark:hover:bg-teal-400/30 border-b-2 border-teal-500/70 dark:border-teal-400/90 px-1 py-0.5 rounded transition-all duration-150 inline-flex items-baseline gap-0.5 select-text"
       title={`${item.term} (${item.category}) - Dokunun veya üzerine gelin`}
     >
-      {text}
+      <span>{text}</span>
+      <span className="text-[9px] text-teal-600 dark:text-teal-300 opacity-70 select-none">✦</span>
     </span>
   );
 };
@@ -557,26 +570,45 @@ export const RenderWithGlossaryTerms: React.FC<{
   const { regex, aliasToItem } = useMemo(() => {
     const map = new Map<string, GlossaryItem>();
     const patterns: string[] = [];
+    const STOP_WORDS = new Set(['ile', 've', 'bir', 'için', 'gibi', 'daha', 'çok', 'tip', 'her', 'bu', 'şu', 'veya', 'olan', 'göre']);
+
+    const addPattern = (raw: string, item: GlossaryItem) => {
+      const clean = raw.trim();
+      if (clean.length < 3) return;
+      const lower = clean.toLowerCase();
+      if (STOP_WORDS.has(lower)) return;
+      patterns.push(clean);
+      map.set(lower, item);
+      map.set(clean.toLocaleLowerCase('tr-TR'), item);
+    };
 
     glossaryList.forEach((item) => {
-      // Add term
+      // Add term directly
+      addPattern(item.term, item);
+
+      // Add clean term without parentheses
       const cleanTerm = item.term.replace(/\s*\([^)]*\)/g, '').trim();
-      if (cleanTerm.length >= 3) {
-        patterns.push(cleanTerm);
-        map.set(cleanTerm.toLowerCase(), item);
+      addPattern(cleanTerm, item);
+
+      // Add parenthetical contents if any
+      const parenMatch = item.term.match(/^(.+?)\s*\((.+?)\)$/);
+      if (parenMatch) {
+        addPattern(parenMatch[1], item);
+        addPattern(parenMatch[2], item);
       }
+
       // Add aliases
       item.aliases?.forEach((alias) => {
-        const cleanAlias = alias.trim();
-        if (cleanAlias.length >= 3) {
-          patterns.push(cleanAlias);
-          map.set(cleanAlias.toLowerCase(), item);
-        }
+        addPattern(alias, item);
       });
     });
 
     // Unique and sort by descending length
     const unique = Array.from(new Set(patterns)).sort((a, b) => b.length - a.length);
+
+    if (unique.length === 0) {
+      return { regex: /(?!x)x/, aliasToItem: map };
+    }
 
     // Escape regex special chars
     const escaped = unique.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
@@ -625,7 +657,7 @@ export const RenderWithGlossaryTerms: React.FC<{
         const termParts = rawContent.split(regex);
         const renderedContent = termParts.map((tPart, tIdx) => {
           if (!tPart) return null;
-          const matchedItem = aliasToItem.get(tPart.toLowerCase());
+          const matchedItem = aliasToItem.get(tPart.toLowerCase()) || aliasToItem.get(tPart.toLocaleLowerCase('tr-TR'));
           if (matchedItem) {
             return <GlossaryTermSpan key={tIdx} text={tPart} item={matchedItem} />;
           }

@@ -31,7 +31,10 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
   const [canRetryNow, setCanRetryNow] = useState<boolean>(false);
   const [customKey, setCustomKey] = useState<string>('');
   const [customGroqKey, setCustomGroqKey] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'groq' | 'gemini' | 'wait'>('groq');
+  const [customMuseSparkKey, setCustomMuseSparkKey] = useState<string>(() => {
+    return (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_muse_spark_api_key') : '') || '';
+  });
+  const [activeTab, setActiveTab] = useState<'muse-spark' | 'groq' | 'gemini' | 'wait'>('muse-spark');
   const [savedSuccess, setSavedSuccess] = useState(false);
 
   useEffect(() => {
@@ -56,6 +59,19 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
   }, [isOpen]);
 
   if (!isOpen) return null;
+
+  const handleSaveMuseSparkKey = () => {
+    if (customMuseSparkKey.trim()) {
+      localStorage.setItem('medsoru_muse_spark_api_key', customMuseSparkKey.trim());
+    } else {
+      localStorage.removeItem('medsoru_muse_spark_api_key');
+    }
+    setSavedSuccess(true);
+    setTimeout(() => {
+      if (onRetry) onRetry();
+      onClose();
+    }, 1000);
+  };
 
   const handleSaveGroqKey = () => {
     if (customGroqKey.trim()) {
@@ -131,38 +147,89 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
 
           {/* Solutions Tabs */}
           <div className="space-y-3">
-            <div className="flex border-b border-line text-[13px] font-semibold gap-4">
+            <div className="flex border-b border-line text-[13px] font-semibold gap-3 overflow-x-auto">
+              <button
+                type="button"
+                onClick={() => setActiveTab('muse-spark')}
+                className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
+                  activeTab === 'muse-spark' ? 'border-cyan-600 text-cyan-800 font-bold' : 'border-transparent text-ink-3 hover:text-ink'
+                }`}
+              >
+                <Cpu className="w-3.5 h-3.5 text-cyan-600" />
+                Muse Spark 1.3 Free (Kurtarıcı)
+              </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('groq')}
-                className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${
+                className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                   activeTab === 'groq' ? 'border-purple-600 text-purple-700' : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
                 <Zap className="w-3.5 h-3.5 text-purple-600" />
-                1. Seçenek: Ücretsiz Groq (Önerilen)
+                Ücretsiz Groq
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('gemini')}
-                className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${
+                className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                   activeTab === 'gemini' ? 'border-purple-600 text-purple-700' : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
                 <Key className="w-3.5 h-3.5 text-purple-600" />
-                2. Seçenek: Kendi Gemini Anahtarın
+                Kendi Gemini Anahtarın
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('wait')}
-                className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${
+                className={`pb-2 border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                   activeTab === 'wait' ? 'border-purple-600 text-purple-700' : 'border-transparent text-ink-3 hover:text-ink'
                 }`}
               >
                 <Clock className="w-3.5 h-3.5 text-purple-600" />
-                3. Bekle & Yeniden Dene
+                Bekle & Yeniden Dene
               </button>
             </div>
+
+            {/* TAB: MUSE SPARK 1.3 FREE */}
+            {activeTab === 'muse-spark' && (
+              <div className="p-4 rounded-xl border border-cyan-200 bg-cyan-50/50 space-y-3 text-[13px]">
+                <div className="flex items-center gap-2 text-cyan-900 font-bold">
+                  <span className="w-2.5 h-2.5 rounded-full bg-cyan-600 animate-pulse" />
+                  <span>Otomatik Kota Kurtarıcı Aktif</span>
+                </div>
+                <p className="text-cyan-950 m-0 leading-relaxed">
+                  <strong>Muse Spark 1.3 Free</strong>, sitede Google Gemini ve Groq Cloud kotalarının tamamı tükendiğinde soru sorma işlemlerinde otomatik devreye giren yüksek performanslı akıl yürütme modelidir.
+                </p>
+                <div className="p-2.5 rounded-lg bg-white border border-cyan-200 text-[12px] text-cyan-900 space-y-1">
+                  <div>✓ <strong>Model:</strong> Muse Spark 1.3 Free (Contributor Tier)</div>
+                  <div>✓ <strong>Çalışma Prensibi:</strong> Tüm AI limitleri dolduğunda sorularınız kesintisiz olarak Muse Spark üzerinden yanıtlanır.</div>
+                </div>
+                <div className="space-y-2 pt-1">
+                  <label className="block text-[12px] font-semibold text-cyan-950">
+                    Özel Muse Spark / OpenCode / OpenRouter Anahtarı (İsteğe Bağlı):
+                  </label>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="password"
+                      value={customMuseSparkKey}
+                      onChange={(e) => setCustomMuseSparkKey(e.target.value)}
+                      placeholder="OpenCode / Muse Spark API Anahtarı..."
+                      className="flex-1 h-9 px-3 rounded-lg border border-cyan-300 bg-white font-mono text-[12px] text-ink outline-0 focus:border-cyan-600"
+                    />
+                    <button
+                      type="button"
+                      onClick={handleSaveMuseSparkKey}
+                      className="h-9 px-4 rounded-lg bg-cyan-700 hover:bg-cyan-800 text-white font-semibold text-[13px] cursor-pointer transition-colors"
+                    >
+                      {savedSuccess ? 'Kaydedildi ✓' : 'Kaydet'}
+                    </button>
+                  </div>
+                  <p className="text-[11px] text-cyan-800 m-0">
+                    Anahtar girmeseniz dahi yerleşik Muse Spark 1.3 havuzu arka planda otomatik devreye girer.
+                  </p>
+                </div>
+              </div>
+            )}
 
             {/* TAB: GROQ */}
             {activeTab === 'groq' && (

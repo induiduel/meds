@@ -20,7 +20,7 @@ database_json/
 *.backup*
 *.bak
 __pycache__/
-.tmp_*
+.tmp*
 data/nested_fix_report.json
 data/local_rag_chunks.json
 data/_write_probe/
@@ -28,3 +28,9 @@ data/ds_work/
 data/ds_out/
 .meds_ds/
 scripts/_*
+
+# Local Supabase Server Data & Keys
+supabase-server/volumes/
+supabase-server/.env*
+supabase-server/local-supabase-keys.json
+supabase-server/backups/
