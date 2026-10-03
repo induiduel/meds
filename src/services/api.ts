@@ -722,6 +722,7 @@ export const ApiService = {
 
         if (initialFragment) existing.fragments.push(initialFragment);
         if (data.options) {
+          existing!.options = existing!.options || [];
           data.options.forEach((o) => {
             if (!o.text || !o.text.trim()) return;
             // Always archive option as a fragment
@@ -1346,7 +1347,7 @@ export const ApiService = {
     const res = await safeJsonFetch<{ results: SimilarPastQuestion[] }>('/api/past-questions/similar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, committeeId, limit: 3 }),
+      body: JSON.stringify({ text, committeeId, limit: 7 }),
     });
     return res.ok ? res.data?.results || [] : [];
   },

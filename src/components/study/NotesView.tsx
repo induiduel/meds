@@ -44,7 +44,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
       .sort((a, b) => Number(!!b.pinned) - Number(!!a.pinned) || b.updatedAt.localeCompare(a.updatedAt));
   }, [notes, query, filter]);
 
-  const active = notes.find((n) => n.id === activeId) || null;
+  const active = (notes || []).find((n) => n.id === activeId) || null;
 
   const create = () => {
     const now = new Date().toISOString();

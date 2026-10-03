@@ -48,14 +48,14 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
   const [aiChatOpen, setAiChatOpen] = useState(false);
 
   const committeeName = (id: string) => {
-    const c = committees.find((x) => x.id === id);
+    const c = (committees || []).find((x) => x.id === id);
     if (c) return committeeShortLabel(c).charAt(0) + committeeShortLabel(c).slice(1).toLocaleLowerCase('tr-TR');
     const m = id.match(/kurul(\d+)/i);
     return m ? `Kurul ${m[1]}` : /final/i.test(id) ? 'Final' : id;
   };
 
   const committeeIds = useMemo(() => {
-    const fromCommittees = committees.map((c) => c.id);
+    const fromCommittees = (committees || []).map((c) => c.id);
     const fromBank = new Set(bank.map((q) => q.committeeId).filter(Boolean));
     const ordered = fromCommittees.filter((id) => fromBank.has(id));
     const others = [...fromBank].filter((id) => !fromCommittees.includes(id)).sort();

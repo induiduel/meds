@@ -55,13 +55,13 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
   const finishedRef = useRef(false);
 
   const committeeName = (id: string) => {
-    const c = committees.find((x) => x.id === id);
+    const c = (committees || []).find((x) => x.id === id);
     if (c) return committeeShortLabel(c).charAt(0) + committeeShortLabel(c).slice(1).toLocaleLowerCase('tr-TR');
     const m = id.match(/kurul(\d+)/i);
     return m ? `Kurul ${m[1]}` : /final/i.test(id) ? 'Final' : id;
   };
   const committeeIds = useMemo(() => {
-    const fromCommittees = committees.map((c) => c.id);
+    const fromCommittees = (committees || []).map((c) => c.id);
     const fromBank = new Set(bank.map((q) => q.committeeId).filter(Boolean));
     const ordered = fromCommittees.filter((id) => fromBank.has(id));
     const others = [...fromBank].filter((id) => !fromCommittees.includes(id)).sort();
@@ -305,7 +305,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                       type="button"
                       onClick={() => {
                         setResult(h);
-                        setItems(h.questionIds.map((id) => bank.find((q) => q.id === id)).filter(Boolean) as StudyQuestion[]);
+                        setItems(h.questionIds.map((id) => (bank || []).find((q) => q.id === id)).filter(Boolean) as StudyQuestion[]);
                         setPhase('result');
                       }}
                       className="w-full grid grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-1 items-center py-2.5 border-b border-line-soft text-left cursor-pointer hover:bg-[#FAFBFC] rounded"

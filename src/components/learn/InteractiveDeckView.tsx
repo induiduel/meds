@@ -643,10 +643,10 @@ const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ lab
 };
 
 export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal }) => {
-  const allDecks = useMemo(
-    () => ((interactiveDecksData as unknown as InteractiveDeck[]) || []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0),
-    []
-  );
+  const allDecks = useMemo(() => {
+    const raw = ((interactiveDecksData as any)?.default || interactiveDecksData) as InteractiveDeck[];
+    return (Array.isArray(raw) ? raw : []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0);
+  }, []);
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
   const [playerViewMode, setPlayerViewMode] = useState<DeckViewMode>('interactive');
 
@@ -662,7 +662,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
   const disciplines = useMemo(() => {
     const m: Record<string, number> = {};
-    allDecks.forEach((d) => {
+    (allDecks || []).forEach((d) => {
       const g = disciplineGroup(d.discipline);
       m[g] = (m[g] || 0) + 1;
     });
@@ -672,15 +672,15 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
   const visible = useMemo(() => {
     const q = query.trim().toLocaleLowerCase('tr-TR');
-    return allDecks.filter((d) => {
+    return (allDecks || []).filter((d) => {
       if (discipline !== 'all' && disciplineGroup(d.discipline) !== discipline) return false;
       if (!q) return true;
       return [d.title, d.discipline, d.instructor, d.overview, ...(d.highYieldPearls || [])].join(' ').toLocaleLowerCase('tr-TR').includes(q);
     });
   }, [allDecks, discipline, query]);
 
-  const activeDeck = allDecks.find((d) => d.id === deckId) || null;
-  const totalSlides = allDecks.reduce((n, d) => n + d.slides.length, 0);
+  const activeDeck = (allDecks || []).find((d) => d.id === deckId) || null;
+  const totalSlides = (allDecks || []).reduce((n, d) => n + (d.slides?.length || 0), 0);
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
@@ -1507,7 +1507,9 @@ const GlobalTopicSearchModal: React.FC<{
         return;
       }
       // 5. Spot Pearls / Spots
-      const slideSpots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
+      const slideSpots = (slide.spotPearls && Array.isArray(slide.spotPearls) && slide.spotPearls.length > 0)
+        ? slide.spotPearls
+        : (Array.isArray((slide as any).spots) ? (slide as any).spots : []);
       const foundPearl = slideSpots.find((p: any) => {
         const str = typeof p === 'string' ? p : `${p?.badge ? p.badge + ' ' : ''}${p?.text || ''}`;
         return str.toLocaleLowerCase('tr-TR').includes(queryNorm);

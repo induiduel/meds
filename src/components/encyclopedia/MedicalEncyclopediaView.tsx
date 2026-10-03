@@ -115,7 +115,7 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   // Detail Modal State
   const [activeEntry, setActiveEntry] = useState<EncyclopediaEntry | null>(() => {
     if (initialTermId) {
-      return (rawEncyclopediaData as EncyclopediaEntry[]).find((e) => e.id === initialTermId) || null;
+      return ((rawEncyclopediaData as EncyclopediaEntry[]) || []).find((e) => e.id === initialTermId) || null;
     }
     return null;
   });
@@ -135,7 +135,7 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   // Extract unique Kuruls and Disciplines
   const availableDisciplines = useMemo(() => {
     const set = new Set<string>();
-    entries.forEach((e) => {
+    (entries || []).forEach((e) => {
       if (e.discipline) set.add(e.discipline);
     });
     return Array.from(set).sort();
@@ -144,7 +144,7 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   // Handle URL Param change
   useEffect(() => {
     if (initialTermId) {
-      const found = entries.find((e) => e.id === initialTermId);
+      const found = (entries || []).find((e) => e.id === initialTermId);
       if (found) setActiveEntry(found);
     }
   }, [initialTermId, entries]);
@@ -795,7 +795,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   </span>
                   <div className="flex items-center gap-1.5 flex-wrap">
                     {activeEntry.relatedItems.map((relId) => {
-                      const rel = entries.find((e) => e.id === relId);
+                      const rel = (entries || []).find((e) => e.id === relId);
                       return (
                         <button
                           key={relId}

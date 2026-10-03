@@ -448,7 +448,7 @@ export default function App() {
     setDriveUploadSuccess(null);
   };
 
-  const currentCommittee = committees.find((c) => c.id === selectedCommitteeId);
+  const currentCommittee = (committees || []).find((c) => c.id === selectedCommitteeId);
   const targetCount = currentCommittee?.targetCount || 100;
   const isAdmin = isAdminUser(currentUser);
 
@@ -737,7 +737,7 @@ export default function App() {
 
       // Send congratulations email in the background without blocking the UI
       if (currentUser && currentUser.email) {
-        const comm = committees.find((c) => c.id === data.committeeId);
+        const comm = (committees || []).find((c) => c.id === data.committeeId);
         const commName = comm?.name || 'Kurul Sınavı';
         const alreadySent = (currentUser.congratsSentCommittees || []).includes(data.committeeId);
 
@@ -801,7 +801,7 @@ export default function App() {
     }
     setIsGeneratingSlots(true);
     try {
-      const currentComm = committees.find((c) => c.id === selectedCommitteeId);
+      const currentComm = (committees || []).find((c) => c.id === selectedCommitteeId);
       const count = currentComm?.targetCount || 100;
       await ApiService.generateSlots(currentUser?.email || '', selectedCommitteeId, count);
       await fetchQuestions();

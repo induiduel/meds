@@ -142,7 +142,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
   // Kayıt defteri eşleşmesi: e-posta, uid veya görünen ad.
   const regOf = (u: UserActivityRow) =>
-    registeredUsers.find(
+    (registeredUsers || []).find(
       (r) =>
         (r.email && normKey(r.email) === u.key) ||
         (r.uid && normKey(r.uid) === u.key) ||
@@ -248,15 +248,15 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   }, [registeredUsers, userQuery]);
 
   const selectedReport = useMemo(
-    () => reports.find((r) => r.id === (selectedReportId || pendingReports[0]?.id)) || null,
+    () => (reports || []).find((r) => r.id === (selectedReportId || pendingReports[0]?.id)) || null,
     [reports, selectedReportId, pendingReports]
   );
 
   const moderatedQuestion: QuestionItem | null = useMemo(() => {
     if (!selectedReport) return null;
     return (
-      pastQuestions.find((q) => q.id === selectedReport.questionId) ||
-      questions.find((q) => q.id === selectedReport.questionId) ||
+      (pastQuestions || []).find((q) => q.id === selectedReport.questionId) ||
+      (questions || []).find((q) => q.id === selectedReport.questionId) ||
       null
     );
   }, [selectedReport, pastQuestions, questions]);
@@ -766,7 +766,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               adminEmail={adminEmail}
               adminName="Yönetici"
               committeeId={selectedCommitteeId}
-              committeeName={committees.find((c) => c.id === selectedCommitteeId)?.name}
+              committeeName={(committees || []).find((c) => c.id === selectedCommitteeId)?.name}
               questions={questions}
               onRefreshData={async () => {
                 await onRefreshData();
@@ -1224,14 +1224,14 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               {/* USER DETAIL DRAWER / CARD */}
               {selectedUserKey && (() => {
                 const selectedKeyNorm = normKey(selectedUserKey);
-                const reg = registeredUsers.find(
+                const reg = (registeredUsers || []).find(
                   (r) =>
                     (r.email && normKey(r.email) === selectedKeyNorm) ||
                     (r.uid && normKey(r.uid) === selectedKeyNorm) ||
                     (r.displayName && normKey(r.displayName) === selectedKeyNorm)
                 );
                 const u =
-                  activity.find((x) => x.key === selectedKeyNorm) || {
+                  (activity || []).find((x) => x.key === selectedKeyNorm) || {
                     key: selectedKeyNorm,
                     name: reg?.displayName || reg?.email || selectedUserKey,
                     email: reg?.email,
@@ -1400,8 +1400,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
               {/* MAIL SENDER MODAL */}
               {mailUserKey && (() => {
-                const fromReg = registeredUsers.find((r) => r.email === mailUserKey || r.uid === mailUserKey);
-                const fromAct = activity.find((x) => x.key === mailUserKey || x.email === mailUserKey);
+                const fromReg = (registeredUsers || []).find((r) => r.email === mailUserKey || r.uid === mailUserKey);
+                const fromAct = (activity || []).find((x) => x.key === mailUserKey || x.email === mailUserKey);
                 const displayName = fromReg?.displayName || fromAct?.name || 'Kullanıcı';
                 const targetEmail = fromReg?.email || fromAct?.email || (mailUserKey.includes('@') ? mailUserKey : '');
                 if (!targetEmail) return null;
