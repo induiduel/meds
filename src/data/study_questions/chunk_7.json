@@ -760,422 +760,460 @@
     "explanation": "CEA (Karsinoembriyonik antijen), kolorektal karsinomların tedavisinden sonra hastaların nüks ve metastaz açısından takibinde kullanılan en önemli serum tümör belirtecidir. Düzeyin yükselmesi nükse işaret eder."
   },
   {
-    "id": "pat-med-001",
+    "id": "prac-med-001",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 1,
-    "slideTitle": "Enflamasyon Mediyatörlerine Giriş ve Temel İlkeler",
+    "slideTitle": "Enflamasyonun Kimyasal Mediyatörlerine Giriş ve Temel İlkeler",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi plazma kaynaklı ve karaciğerde inaktif öncül olarak sentezlenen enflamasyon mediyatörlerinden biridir?",
+    "question": "Enflamasyonun kimyasal mediyatörlerinin genel özellikleri ve biyolojik davranışları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Histamin",
-      "B) Lökotrien B4",
-      "C) Kompleman C3 bileşeni",
-      "D) Prostaglandin E2",
-      "E) Platelet Aktive Edici Faktör (PAF)"
+      "A) Çoğu mediyatör lokal olarak üretilir ve yarı ömürleri oldukça kısadır",
+      "B) Mediyatörler mikrobiyal ürünlere (PAMP) veya nekrotik hücre ürünlerine (DAMP) yanıt olarak üretilir",
+      "C) Plazma kökenli mediyatörler karaciğerde aktif formda sentezlenip dolaşımda sürekli işlev görür",
+      "D) Birçok mediyatör pleiotropik etkiye sahip olup birden fazla hücre tipini etkileyebilir",
+      "E) Aşırı veya kontrolsüz mediyatör salınımı yaygın doku hasarı ve hemodinamik kollapsa yol açabilir"
     ],
-    "correctAnswer": "C",
-    "explanation": "Kompleman sistemi bileşenleri (C3, C5 vb.), kininler ve koagülasyon proteinleri karaciğerde sentezlenen ve dolaşımda inaktif gezen plazma kaynaklı mediyatörlerdir. Histamin, LTB4, PGE2 ve PAF ise hücre kaynaklı mediyatörlerdir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü plazma kökenli mediyatörler (kompleman, kinin ve pıhtılaşma faktörleri) karaciğerde aktif formda değil, inaktif öncül enzimler (zimojenler) olarak sentezlenip dolaşıma verilirler. Yalnızca enflamasyon veya doku hasarı odağında proteolitik kaskadlar aracılığıyla aktive edilirler. A, B, D ve E seçenekleri mediyatörlerin temel biyolojik özellikleridir."
   },
   {
-    "id": "pat-med-002",
+    "id": "prac-med-002",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 2,
-    "slideTitle": "Vazoaktif Aminler: Histamin ve Salınım Mekanizmaları",
+    "slideTitle": "Kimyasal Mediyatörlerin Sınıflandırılması: Hücresel ve Plazma Kökenli Ayrımı",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Akut enflamasyonun erken evresinde postkapiller venüllerde endotel kontraksiyonuna neden olarak ani ve geçici vasküler geçirgenlik artışına yol açan, mast hücre granüllerinde önceden depolanmış primer mediyatör aşağıdakilerden hangisidir?",
+    "question": "Hücre ve plazma kökenli kimyasal mediyatörlerin üretim ve depolanma özellikleri karşılaştırıldığında aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Histamin",
-      "B) Prostaglandin D2",
-      "C) Lökotrien B4",
-      "D) İnterlökin-6",
-      "E) Bradikinin"
+      "A) Prostaglandinler ve sitokinler mast hücre granüllerinde önceden depolanmış halde bulunur",
+      "B) Histamin, uyarılmayı takiben saatler süren gen transkripsiyonu ile de novo sentezlenen bir sitokindir",
+      "C) Plazma kaynaklı mediyatörlerin başlıca sentez yeri karaciğer olup dolaşımda inaktif zimojenler halinde bulunurlar",
+      "D) Kinin ve kompleman kaskadları sadece lökositler tarafından doku içinde sentezlenir",
+      "E) Platelet aktive edici faktör (PAF) plazmada bol miktarda depolanan bir proteindir"
     ],
-    "correctAnswer": "A",
-    "explanation": "Histamin mast hücre granüllerinde önceden depolanmış vazoaktif bir amindir ve erken geçici vasküler geçirgenlik artışının başlıca sorumlusudur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; kompleman, kinin ve pıhtılaşma faktörleri gibi plazma kaynaklı mediyatörler karaciğerde inaktif öncüller (zimojen) olarak üretilir ve proteolitik kesimle aktive olurlar. A yanlıştır (prostaglandinler ve sitokinler de novo sentezlenir); B yanlıştır (histamin granüllerde preforme depolanır); D yanlıştır (karaciğerde üretilirler); E yanlıştır (PAF hücre membran fosfolipidlerinden sentezlenen bir lipiddir)."
   },
   {
-    "id": "pat-med-003",
+    "id": "prac-med-003",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 3,
-    "slideTitle": "Serotonin (5-Hidroksitriptamin) ve Vasküler Regülasyon",
+    "slideTitle": "Vazoaktif Aminler I: Histamin Kaynakları, Depolanması ve Degranülasyon Mekanizmaları",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "İnsanda kan pulcuklarının (trombositler) agregasyonu esnasında yoğun granüllerinden salınan ve hemostatik odaklarda vazokonstriksiyona katkıda bulunan vazoaktif amin aşağıdakilerden hangisidir?",
+    "question": "Mast hücrelerinden histamin salınımını tetikleyen faktörlerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Histamin",
-      "B) Serotonin (5-HT)",
-      "C) Bradikinin",
-      "D) Dopamin",
-      "E) Prostasiklin"
+      "A) Antijenin mast hücresi yüzeyindeki FcεRI'ye bağlı komşu IgE moleküllerini çapraz bağlaması",
+      "B) Kompleman kaskadında oluşan C3a ve C5a anafilatoksinlerinin mast hücre reseptörlerine bağlanması",
+      "C) Dokuya uygulanan mekanik travma, aşırı ısı ve soğuk gibi fiziksel uyaranlar",
+      "D) Duyusal sinir uçlarından salınan substans P gibi nöropeptitlerin mast hücrelerini uyarması",
+      "E) C5b-9 membran atak kompleksinin mast hücre granüllerini fagosite etmesi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Trombositlerin yoğun (dense) granüllerinde depolanan ve agregasyon sırasında salınarak vazokonstriksiyon yapan temel vazoaktif amin serotonindir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü C5b-9 membran atak kompleksi (MAC), hedef hücre zarında litik por açarak ozmotik lizis oluşturan bir yapıdır; fagositoz yapamaz ve mast hücre degranülasyonunu bu yolla uyarmaz. Mast hücresi degranülasyonunu tetikleyen kompleman parçaları serbest çözünür anafilatoksinler olan C3a ve C5a'dır. A, B, C ve D seçenekleri degranülasyonu başlatan kanıtlanmış mekanizmalardır."
   },
   {
-    "id": "pat-med-004",
+    "id": "prac-med-004",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 4,
-    "slideTitle": "Araşidonik Asit Kaskadı ve Fosfolipaz A2 Aktivasyonu",
+    "slideTitle": "Vazoaktif Aminler II: Histamin Reseptörleri, Damarsal Etkiler ve Antihistaminikler",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Glukokortikoidlerin hem prostaglandinlerin hem de lökotrienlerin sentezini eş zamanlı olarak baskılayabilmesinin temel moleküler mekanizması aşağıdakilerden hangisidir?",
+    "question": "Histaminin mikrovasküler yataktaki etkileri ve reseptör mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) 5-lipoksijenaz enziminin yarışmalı inhibisyonu",
-      "B) H1 histamin reseptörlerinin desensitizasyonu",
-      "C) Anneksin A1 indüksiyonu ile Fosfolipaz A2 aktivitesinin bloke edilmesi",
-      "D) Tromboksan sentaz enziminin parçalanması",
-      "E) C3 konvertaz enziminin proteolizi"
+      "A) Arteriyollerde vazokonstriksiyon, venüllerde ise endotel gevşemesi oluşturarak kan akımını azaltır",
+      "B) Postkapiller venüllerde endotel hücre kasılmasına yol açarak hücreler arası aralıkları açar ve ani-geçici geçirgenlik artışı yapar",
+      "C) Enflamasyondaki vasküler geçirgenlik artışına aracılık eden temel reseptör H2 reseptörüdür",
+      "D) Endotel hücrelerinde apoptozu indükleyerek kalıcı ve geri dönüşsüz damar hasarı meydana getirir",
+      "E) H1 antihistaminikler mast hücre degranülasyonunu tamamen engelleyerek kompleman aktivasyonunu durdurur"
     ],
-    "correctAnswer": "C",
-    "explanation": "Glukokortikoidler Anneksin A1 (Lipokortin-1) üretimini artırarak Fosfolipaz A2'yi inhibe eder; böylece araşidonik asit serbestleşemez ve hem COX hem LOX kolları eş zamanlı bloke olur."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kusursuz bir tanımdır: Histamin, postkapiller venüllerdeki endotel hücrelerinin hücre iskeletini kasarak aralarındaki bağlantıları açar ve 15-30 dakika süren ani-geçici (immediate transient) plazma eksüdasyonuna yol açar. A yanlıştır (arteriyollerde vazodilatasyon yapar); C yanlıştır (enflamasyon reseptörü H1'dir, H2 mide asidini artırır); D yanlıştır (endotel hasarı değil fonksiyonel geri dönüşlü kasılmadır); E yanlıştır (antihistaminikler reseptör antagonistidir, komplemanı veya degranülasyonu durdurmaz)."
   },
   {
-    "id": "pat-med-005",
+    "id": "prac-med-005",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 5,
-    "slideTitle": "Siklooksijenaz İzoenzimleri: COX-1 ve COX-2 Karşılaştırması",
+    "slideTitle": "Vazoaktif Aminler III: Serotonin (5-Hidroksitriptamin) ve Trombosit Kaynaklı Vasküler Yanıtlar",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Mide mukozasında koruyucu prostaglandin sentezini sağlayan, böbrek perfüzyonunu koruyan ve trombositlerde TXA2 üretiminden sorumlu olan yapısal (konstitütif) siklooksijenaz izoenzimi aşağıdakilerden hangisidir?",
+    "question": "Serotonin (5-HT) mediyatörü ve enflamasyondaki rolü ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Siklooksijenaz-1 (COX-1)",
-      "B) Siklooksijenaz-2 (COX-2)",
-      "C) 5-Lipoksijenaz",
-      "D) 12-Lipoksijenaz",
-      "E) Fosfolipaz C"
+      "A) Kanda esas olarak trombositlerin yoğun granüllerinde depolanır ve agregasyon sırasında salınır",
+      "B) Trombositler serotonini de novo sentezleyemez, dolaşımdaki serotonini aktif olarak içlerine alırlar",
+      "C) İnsanlarda akut enflamasyonun vasküler permeabilite artışından sorumlu en baskın vazoaktif amin serotonindir",
+      "D) Gastrointestinal sistemdeki enterokromaffin hücreleri vücuttaki en büyük serotonin üretim kaynağıdır",
+      "E) Karsinoid sendromda aşırı serotonin salınımı vazomotor instabilite ve sağ kalp kapak fibrozu ile ilişkilidir"
     ],
-    "correctAnswer": "A",
-    "explanation": "COX-1 vücutta hemen her dokuda bazal bulunan konstitütif izoenzimdir; mide sitoproteksiyonu ve renal perfüzyondan sorumludur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü insanlarda akut enflamasyonun erken vasküler geçirgenlik artışından sorumlu primer vazoaktif amin histamindir. Serotonin insanda esas olarak trombosit agregasyonu ve hemostatik vazokonstriksiyonda rol oynar; vasküler permeabilite artırıcı etkisi sıçan ve fare gibi kemirgen modellerinde belirgindir. A, B, D ve E seçenekleri doğrudur."
   },
   {
-    "id": "pat-med-006",
+    "id": "prac-med-006",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 6,
-    "slideTitle": "Prostaglandinler: PGE2, PGD2 ve PGF2α Biyolojik Rolleri",
+    "slideTitle": "Araşidonik Asit Metabolizması (Eikozanoidler): Giriş ve Fosfolipaz A2 Aktivasyonu",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Sistemik enfeksiyon ve enflamasyon süreçlerinde interlökin-1 ve TNF etkisiyle hipotalamusta sentezlenerek vücut sıcaklık ayar noktasını yükselten ve ateşe yol açan temel mediyatör aşağıdakilerden hangisidir?",
+    "question": "Araşidonik asit metabolizması ve eikozanoid sentezinin regülasyonu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Prostaglandin E2 (PGE2)",
-      "B) Tromboksan A2 (TXA2)",
-      "C) Lökotrien B4 (LTB4)",
-      "D) Lipoksin A4 (LXA4)",
-      "E) Serotonin"
+      "A) Araşidonik asit hücre sitoplazmasında serbest ve yüksek konsantrasyonda depolanan bir doymuş yağ asididir",
+      "B) Fosfolipaz A2 enzimi inhibe edildiğinde lökotrien sentezi durur fakat prostaglandin sentezi artarak devam eder",
+      "C) Glukokortikoidler lipokortin-1 (anneksin A1) ekspresyonunu indükleyerek Fosfolipaz A2'yi inhibe eder ve eikozanoid üretimini kökten baskılar",
+      "D) Eikozanoidler 18 karbonlu doymamış yağ asitlerinden türetilen peptit yapılı sitokinlerdir",
+      "E) Aspirin Fosfolipaz A2 enzimini irreversibl asetilleyerek etki gösteren primer ajandır"
     ],
-    "correctAnswer": "A",
-    "explanation": "PGE2 hipotalamusta cAMP artışına neden olarak sıcaklık termostatını yükseltir ve ateşe (fever) neden olur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; glukokortikoidler nükleer reseptörleri aracılığıyla lipokortin-1 (anneksin A1) sentezini artırır ve bu protein cPLA2'yi doğrudan inhibe ederek serbest araşidonik asit çıkışını durdurur. A yanlıştır (membrana esterleşmiştir); B yanlıştır (her iki yolak da durur); D yanlıştır (20 karbonlu lipidlerdir); E yanlıştır (aspirin PLA2'yi değil COX enzimini asetiller)."
   },
   {
-    "id": "pat-med-007",
+    "id": "prac-med-007",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 7,
-    "slideTitle": "Prostasiklin (PGI2) ve Tromboksan A2 (TXA2) Karşıtlığı",
+    "slideTitle": "Siklooksijenaz (COX) Yolağı: COX-1 ve COX-2 İzoenzimleri ve Prostaglandin Sentezi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Vasküler endotel hücreleri tarafından sentezlenen, güçlü vazodilatatör etkiye sahip olan ve trombosit agregasyonunu inhibe ederek intakt damarlarda trombüs oluşumunu engelleyen eikozanoid hangisidir?",
+    "question": "Siklooksijenaz izoenzimleri (COX-1 ve COX-2) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Tromboksan A2",
-      "B) Prostasiklin (PGI2)",
-      "C) Lökotrien C4",
-      "D) Lökotrien B4",
-      "E) Prostaglandin F2α"
+      "A) COX-1 çoğu dokuda sürekli eksprese edilir ve mide mukozasında koruyucu prostaglandin sentezinden sorumludur",
+      "B) COX-2 bakteriyel endotoksin ve proenflamatuar sitokinlerle (IL-1, TNF) indüklenen başlıca izoenzimdir",
+      "C) Araşidonik asidin COX yolağındaki metabolizmasında oluşan ortak ana öncül molekül PGH2'dir",
+      "D) Trombositler çekirdeksiz olduklarından de novo COX-2 sentezleyemezler ve agregasyon için COX-1'e bağımlıdırlar",
+      "E) COX-2 enzimi sadece enfeksiyon anında aktive olur, sağlıklı böbrek ve endotel dokusunda hiçbir fizyolojik fonksiyonu bulunmaz"
     ],
-    "correctAnswer": "B",
-    "explanation": "Prostasiklin (PGI2) endotel kaynaklıdır; vazodilatasyon yapar ve trombosit kümeleşmesini engelleyerek damar açıklığını korur."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü COX-2 yalnızca enflamasyonla ilişkili değildir; vasküler endotel hücrelerinde antitrombotik PGI2 (prostasiklin) sentezinde ve böbrek medulla/makula densasında sıvı-elektrolit dengesinin korunmasında fizyolojik ve konstitütif görevlere de sahiptir. A, B, C ve D seçenekleri doğrudur."
   },
   {
-    "id": "pat-med-008",
+    "id": "prac-med-008",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 8,
-    "slideTitle": "5-Lipoksijenaz Yolu ve Lökotrien Biyosentezi",
+    "slideTitle": "Prostaglandinler: PGD2, PGE2 ve PGF2a'nın Enflamasyondaki Spesifik Rolleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Alerjik astım tedavisinde kullanılan Zileuton adlı ilacın primer hedefi olan ve araşidonik asitten lökotrien sentezinin ilk basamağını katalizleyen enzim hangisidir?",
+    "question": "Prostaglandin E2'nin (PGE2) enflamasyondaki biyolojik etkileri ve klinik sonuçları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Siklooksijenaz-2",
-      "B) 5-Lipoksijenaz",
-      "C) Tromboksan sentaz",
-      "D) Fosfolipaz C",
-      "E) Fosfodiesteraz-4"
+      "A) Hipotalamusta vücut ısısı ayar noktasını düşürerek hipotermi ve soğuk terlemeye yol açar",
+      "B) Periferik nosiseptörleri bradikinine ve diğer kimyasal uyaranlara karşı duyarlılaştırarak hiperaljezi oluşturur",
+      "C) Nötrofillerin fagositoz yeteneğini tamamen durduran en güçlü immünsüpresif mediyatördür",
+      "D) Trombositlerde agregasyonu kuvvetle indükleyerek primer hemostatik tıkacı oluşturan ana ajandır",
+      "E) Sadece karaciğer parankiminde depolanan ve dolaşıma asla salınmayan bir plazma proteinidir"
     ],
-    "correctAnswer": "B",
-    "explanation": "Zileuton 5-lipoksijenaz (5-LOX) enzimini seçici olarak inhibe ederek lökotrien sentezini engeller."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; PGE2 ağrı liflerini (nosiseptörleri) bradikinine ve mekanik uyaranlara karşı aşırı duyarlı hale getirerek enflamatuar hiperaljeziye yol açar. Hipotalamusta ise vücut termostatını yukarı çekerek ateşe neden olur (A yanlış). C, D ve E seçenekleri yanlıştır."
   },
   {
-    "id": "pat-med-009",
+    "id": "prac-med-009",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 9,
-    "slideTitle": "Lökotrien B4 (LTB4): Majör Lökosit Kemoatraktanı",
+    "slideTitle": "Tromboksan A2 (TXA2) ve Prostasiklin (PGI2) Dengesi: Tromboz ve Vasküler Bütünlük",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi akut enflamatuar odakta nötrofillerin kemotaksisini uyaran araşidonik asit 5-lipoksijenaz yolu lipid mediyatörüdür?",
+    "question": "Tromboksan A2 (TXA2) ve Prostasiklin (PGI2) dengesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Lökotrien C4",
-      "B) Lökotrien B4",
-      "C) Prostaglandin I2",
-      "D) Tromboksan A2",
-      "E) Lipoksin A4"
+      "A) TXA2 trombositler tarafından üretilir ve güçlü bir vazokonstriktör ile agregasyon indükleyicisidir",
+      "B) PGI2 vasküler endotel tarafından sentezlenir; vazodilatasyon yapar ve trombosit agregasyonunu engeller",
+      "C) Trombositler çekirdeksiz olduklarından yeni protein sentezleyemez ve TXA2 üretimi için COX-1'e bağımlıdırlar",
+      "D) Selektif COX-2 inhibitörleri TXA2 sentezini sıfırlayarak kanama diyatezine ve kontrolsüz hemorajiye yol açarlar",
+      "E) Sağlıklı damar duvarında endotelyal PGI2 üretimi trombüs oluşumunu engelleyen koruyucu bir mekanizmadır"
     ],
-    "correctAnswer": "B",
-    "explanation": "Lökotrien B4 (LTB4) nötrofiller için güçlü bir kemotaktik faktördür ve integrin adezyonunu uyarır."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü selektif COX-2 inhibitörleri TXA2'yi değil, endotelyal PGI2'yi baskılarlar. Trombositlerdeki COX-1 engellenmediği için TXA2 üretimi devam eder; terazi protrombotik tarafa kayarak kanama değil tam tersine tromboz, miyokard enfarktüsü ve inme riskinde artışa yol açar. A, B, C ve E seçenekleri doğrudur."
   },
   {
-    "id": "pat-med-010",
+    "id": "prac-med-010",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 10,
-    "slideTitle": "Sisteinil Lökotrienler (LTC4, LTD4, LTE4): SRS-A ve Astım",
+    "slideTitle": "Lipoksijenaz (5-LOX) Yolağı ve Nötrofil Kemotaksisi: LTB4",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Bronşiyal astım atağında bronş düz kaslarında histaminden çok daha güçlü ve uzamış spazma, venüler geçirgenlik artışına ve mukus hipersekresyonuna neden olan 'sisteinil lökotrienler' grubu aşağıdakilerden hangisinde doğru verilmiştir?",
+    "question": "Lökotrien B4 (LTB4) ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) LTA4, LTB4, LTC4",
-      "B) LTC4, LTD4, LTE4",
-      "C) PGD2, PGE2, PGF2α",
-      "D) LXA4, LXB4, LTB4",
-      "E) TXA2, PGI2, PAF"
+      "A) Siklooksijenaz-1 yolağında trombositler tarafından sentezlenen güçlü bir vazodilatatördür",
+      "B) Nötrofiller üzerinde güçlü kemotaktik etki gösterir, lökosit adezyonunu ve degranülasyonunu indükler",
+      "C) Bronşiyal düz kasları gevşeterek astım tedavisinde bronkodilatör olarak kullanılır",
+      "D) Mast hücrelerinden salınan preforme bir vazoaktif amin olup venüllerde anında aralık açar",
+      "E) Karaciğerde inaktif bir zimojen olarak sentezlenip pıhtılaşma kaskadında görev alır"
     ],
-    "correctAnswer": "B",
-    "explanation": "Sisteinil lökotrienler (SRS-A) LTC4, LTD4 ve LTE4'tür."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; LTB4 5-lipoksijenaz yolağında üretilen en güçlü nötrofil kemoatraktanıdır, integrin afinitesini artırır, degranülasyon ve süperoksit üretimini uyarır. A yanlıştır (5-LOX ürünüdür); C yanlıştır (bronkodilatör değildir); D yanlıştır (lipid mediyatördür); E yanlıştır (hücre kaynaklıdır)."
   },
   {
-    "id": "pat-med-011",
+    "id": "prac-med-011",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 11,
-    "slideTitle": "Lipoksinler (LXA4, LXB4): Enflamasyonun Freni ve Çözünme",
+    "slideTitle": "Sisteinil Lökotrienler (LTC4, LTD4, LTE4) ve Bronkospazm: Astım Patofizyolojisi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Lökosit-trombosit transsellüler metabolik işbirliği ile sentezlenen ve diğer eikozanoidlerin aksine nötrofil adezyonu ile kemotaksisini baskılayarak enflamasyonun rezolüsyonunu (çözünmesini) sağlayan lipid mediyatör hangisidir?",
+    "question": "Sisteinil lökotrienlerin (LTC4, LTD4, LTE4) patofizyolojik etkileri ve klinik önemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Lökotrien B4",
-      "B) Tromboksan A2",
-      "C) Lipoksin A4 (LXA4)",
-      "D) Prostaglandin D2",
-      "E) Platelet Aktive Edici Faktör"
+      "A) Bronş düz kaslarında histaminden kat kat güçlü ve uzun süreli bronkokonstriksiyon oluştururlar",
+      "B) Postkapiller venüllerde geçirgenliği belirgin derecede artırarak hava yolu mukozasında ödeme yol açarlar",
+      "C) Solunum yollarında kadeh (goblet) hücrelerinden ve submukozal bezlerden mukus sekresyonunu artırırlar",
+      "D) Pulmoner arteriyollerde ve bronşlarda güçlü vazodilatasyon ve bronkodilatasyon yaparak astımı rahatlatırlar",
+      "E) Tarihsel olarak anafilaksinin yavaş reaksiyon veren maddesi (SRS-A) olarak tanımlanmışlardır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Lipoksinler (LXA4, LXB4) anti-inflamatuar etkilidir; nötrofil rekrutmanını frenler ve yangının çözünmesini teşvik eder."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü sisteinil lökotrienler bronkodilatasyon değil, histaminden bin kat daha güçlü ve kalıcı bronkokonstriksiyon (bronkospazm) yaparlar. Postkapiller venüllerde ödem ve mukus tıkaçları oluşturarak astım atağını tetiklerler. A, B, C ve E seçenekleri doğru bilgileri içerir."
   },
   {
-    "id": "pat-med-012",
+    "id": "prac-med-012",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 12,
-    "slideTitle": "Araşidonik Asit Yolağını Hedefleyen Farmakolojik Ajanlar",
+    "slideTitle": "Eikozanoidleri Hedefleyen Farmakolojik Ajanlar: NSAİİ'ler, Koksibler ve Lökotrien Antagonistleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki ilaç-hedef eşleştirmelerinden hangisi YANLIŞTIR?",
+    "question": "Aspirin kullanan astımlı bir hastada aniden şiddetli nefes darlığı ve bronkospazm gelişmesinin patofizyolojik mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      "A) Zileuton — 5-lipoksijenaz enzimi inhibisyonu",
-      "B) Montelukast — CysLT1 lökotrien reseptör blokajı",
-      "C) Aspirin — Siklooksijenaz enzimlerinin asetilasyonu",
-      "D) Deksametazon — C5 konvertaz enzim inhibisyonu",
-      "E) Selekoksib — İndüklenebilir siklooksijenaz-2 (COX-2) inhibisyonu"
+      "A) Aspirinin mast hücrelerindeki H1 histamin reseptörlerini doğrudan aktive etmesi",
+      "B) Siklooksijenaz blokajı nedeniyle araşidonik asidin 5-lipoksijenaz yolağına kayarak aşırı sisteinil lökotrien üretimine yol açması",
+      "C) Plazmada kompleman C1 inhibitörünün tükenmesi sonucu bradikinin fırtınası oluşması",
+      "D) Trombositlerden masif serotonin salınımının pulmoner alveolleri parçalaması",
+      "E) Fosfolipaz A2 enziminin aşırı uyarılmasıyla membran fosfolipidlerinin erimesi"
     ],
-    "correctAnswer": "D",
-    "explanation": "Deksametazon (glukokortikoid) C5 konvertazı değil; lipokortin-1 indüksiyonu ile Fosfolipaz A2'yi inhibe eder."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; aspirin COX enzimini bloke ettiğinde serbest araşidonik asit metabolize edilmek üzere tek açık kanal olan 5-lipoksijenaz yolağına kayar (şant). Aşırı miktarda sentezlenen sisteinil lökotrienler (LTC4, LTD4, LTE4) bronş düz kaslarını şiddetle kasarak aspirinle indüklenen astım atağına yol açar."
   },
   {
-    "id": "pat-med-013",
+    "id": "prac-med-013",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 13,
-    "slideTitle": "Akut Enflamasyonun Ana Sitokinleri: TNF ve IL-1",
+    "slideTitle": "Enflamasyonun Çözünmesi (Resolüsyon) ve Lipoksinler (LXA4, LXB4)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Makrofajlarda mikrobiyal ürünler veya ürat kristalleriyle aktive olan NLRP3 inflamazom kompleksi, aşağıdaki enzimlerden hangisini aktive ederek pro-interlökin-1β'nın aktif forma dönüşmesini sağlar?",
+    "question": "Enflamasyonun çözünme (resolüsyon) fazında görev alan Lipoksinler (LXA4, LXB4) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Kaspaz-3",
-      "B) Kaspaz-1",
-      "C) Kaspaz-8",
-      "D) Kaspaz-9",
-      "E) Fosfolipaz A2"
+      "A) Araşidonik asitten türeyen ve enflamatuar yanıtı sonlandıran anti-enflamatuar lipid mediyatörlerdir",
+      "B) Nötrofillerin endotelyal adezyonunu, kemotaksisini ve dokuya toplanmasını kuvvetle inhibe ederler",
+      "C) Genellikle nötrofil-trombosit veya lökosit-endotel etkileşimi ile transselüler yolla sentezlenirler",
+      "D) Nötrofiller üzerinde LTB4'ten daha güçlü bir kemoatraktan etki göstererek akut pürülan eksüdayı artırırlar",
+      "E) Makrofajların dokudaki hücresel döküntüleri ve apoptotik nötrofilleri temizlemesini desteklerler"
     ],
-    "correctAnswer": "B",
-    "explanation": "İnflamazom kompleksi Kaspaz-1 enzimini proteolitik olarak aktive eder; Kaspaz-1 de pro-IL-1β'yı aktif IL-1'e dönüştürür."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü lipoksinler nötrofilleri çeken kemoatraktanlar değildir; tam aksine nötrofil kemotaksisini, adezyonunu ve toplanmasını durduran anti-enflamatuar ajanlardır (LTB4'ün fonksiyonel antagonistidirler). A, B, C ve E seçenekleri lipoksinlerin temel fizyolojik nitelikleridir."
   },
   {
-    "id": "pat-med-014",
+    "id": "prac-med-014",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 14,
-    "slideTitle": "TNF ve IL-1'in Lokal Endotelyal ve Lökositer Etkileri",
+    "slideTitle": "Akut Enflamasyonun Ana Sitokinleri I: Tümör Nekroz Faktörü (TNF-alfa) ve İnterlökin-1 (IL-1)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Akut enflamasyon alanında makrofajlardan salınan TNF ve IL-1 sitokinlerinin vasküler endotel hücreleri üzerindeki primer etkilerinden biri aşağıdakilerden hangisidir?",
+    "question": "Akut enflamasyonda Tümör Nekroz Faktörü (TNF) ve İnterlökin-1'in (IL-1) vasküler endotel üzerindeki temel etkisi aşağıdakilerden hangisidir?",
     "options": [
-      "A) E-selektin ve ICAM-1 adezyon moleküllerinin ekspresyonunu artırmak",
-      "B) Trombomodulin ekspresyonunu artırarak kanı sulandırmak",
-      "C) Vasküler geçirgenliği tamamen kapatmak",
-      "D) Endotel hücre proliferasyonunu derhal durdurmak",
-      "E) Nitrik oksit sentazı tamamen inhibe etmek"
+      "A) Endotelde adezyon moleküllerini (E-selektin, ICAM-1) baskılayarak lökosit göçünü tamamen engellemek",
+      "B) Endoteli aktive ederek E-selektin, ICAM-1 ve VCAM-1 ekspresyonunu artırmak ve prokoagülan fenotipe dönüştürmek",
+      "C) Endotel hücrelerini doğrudan nekroza uğratıp damar lümenini tamamen yok etmek",
+      "D) Plazmada kompleman C3 molekülünün karaciğerden sentezini durdurmak",
+      "E) Histamin H1 reseptörlerini parçalayarak vasküler tonusu artırmak"
     ],
-    "correctAnswer": "A",
-    "explanation": "TNF ve IL-1 endotel aktivasyonu yaparak E-selektin, ICAM-1 ve VCAM-1 ekspresyonunu güçlü şekilde artırır; lökosit rekrutmanını sağlar."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; TNF ve IL-1'in vasküler yataktaki temel fonksiyonu endotel aktivasyonudur. Lökosit adezyon moleküllerinin (E-selektin, ICAM-1, VCAM-1) ekspresyonunu indükler ve endoteli pıhtılaşmayı destekleyen prokoagülan bir duruma geçirirler. A tam tersidir; C, D ve E seçenekleri yanlıştır."
   },
   {
-    "id": "pat-med-015",
+    "id": "prac-med-015",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 15,
-    "slideTitle": "TNF ve IL-1'in Sistemik Etkileri: Akut Faz Yanıtı ve Septik Şok",
+    "slideTitle": "Sitokinlerin Sistemik Etkileri: Akut Faz Yanıtı, Kaşeksi ve Septik Şok",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Gram-negatif bakteriyel sepsis tablosunda masif endotoksin (LPS) salınımına bağlı olarak aşırı düzeyde üretilen; miyokardiyal kontraktiliteyi baskılayarak, yaygın vazodilatasyon ve DIC tablosuyla septik şoka yol açan primer sitokin hangisidir?",
+    "question": "Sepsis ve septik şok patogenezinde yüksek düzeylerde salınan TNF'nin yol açtığı sistemik patolojik etkilerle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Tümör Nekroz Faktörü (TNF)",
-      "B) İnterlökin-10",
-      "C) İnterferon-gamma",
-      "D) Transforming Growth Factor-beta (TGF-β)",
-      "E) İnterlökin-4"
+      "A) Sistemik vazodilatasyon ve yaygın vasküler geçirgenlik artışı ile dirençli hipotansiyona yol açması",
+      "B) Miyokard kasılmasını baskılayarak kardiyak debiyi düşürmesi",
+      "C) Mikrovasküler trombozları ve pıhtılaşma kaskadını tetikleyerek DIC gelişimini kolaylaştırması",
+      "D) Kemik iliğinde eritrosit ve lökosit üretimini tamamen sonlandırarak aplastik anemiye yol açması",
+      "E) Kronik evrede lipoprotein lipazı inhibe ederek ve iştahı keserek kaşeksi tablosu oluşturması"
     ],
-    "correctAnswer": "A",
-    "explanation": "Yüksek doz TNF sistemik dolaşımda miyokardiyal depresyona, vasküler kollapsa ve septik şoka neden olan temel sitokindir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü TNF kemik iliğinde üretimi durdurmaz; tam aksine koloni uyarıcı faktörleri (G-CSF) artırarak nötrofil üretimini ve salınımını tetikler ve kanda sola kaymalı lökositoz tablosu oluşturur. A, B, C ve E seçenekleri yüksek TNF düzeylerinin oluşturduğu iyi bilinen sistemik patolojik sonuçlardır."
   },
   {
-    "id": "pat-med-016",
+    "id": "prac-med-016",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 16,
-    "slideTitle": "İnterlökin-6 (IL-6), IL-17 ve Th17 Hücrelerinin Rolü",
+    "slideTitle": "İnterlökin-6 (IL-6), İnterlökin-17 (IL-17) ve Tip I İnterferonlar",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Th17 lenfositler tarafından üretilen, diğer hücrelerden kemokin salgılatarak nötrofillerin enfeksiyon veya kronik inflamasyon bölgesine toplanmasını (rekrutmanını) sağlayan ve psöriyazis patogenezinde rol oynayan sitokin hangisidir?",
+    "question": "Karaciğerden C-reaktif protein (CRP) ve fibrinojen gibi akut faz reaktanlarının sentezini uyararak eritrosit sedimentasyon hızını (ESH) artıran temel sitokin aşağıdakilerden hangisidir?",
     "options": [
-      "A) İnterlökin-4",
-      "B) İnterlökin-10",
-      "C) İnterlökin-17",
-      "D) İnterferon-alfa",
-      "E) Transforming Growth Factor-beta"
+      "A) İnterlökin-4 (IL-4)",
+      "B) İnterlökin-6 (IL-6)",
+      "C) İnterlökin-10 (IL-10)",
+      "D) Transforme edici büyüme faktörü-beta (TGF-β)",
+      "E) İnterferon-gama (IFN-γ)"
     ],
-    "correctAnswer": "C",
-    "explanation": "IL-17 Th17 hücrelerinden salınır; epitel ve stromadan nötrofil kemokinleri salgılatarak dokuya nötrofil çeker."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; İnterlökin-6 (IL-6), karaciğer hepatositleri üzerindeki reseptörleri aracılığıyla CRP, serum amiloid A ve fibrinojen gibi akut faz proteinlerinin sentezini indükleyen başlıca sitokindir. Fibrinojen artışı da ESH yüksekliğine neden olur. A (IL-4 Th2 yanıtı), C ve D (IL-10 ve TGF-beta anti-enflamatuar), E (IFN-gama makrofaj aktivatörü) farklı işlevlere sahiptir."
   },
   {
-    "id": "pat-med-017",
+    "id": "prac-med-017",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 17,
-    "slideTitle": "Kemokinler: Lökosit Trafiği ve Kemotaktik Gradiyent",
+    "slideTitle": "Kemokinler: Yapısal Gruplar (CXC, CC, C, CX3C) ve Lökosit Göçü",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Alerjik enflamasyonda eozinofillerin seçici olarak dokuya göçünü sağlayan 'Eotaksin (CCL11)' hangi kemokin ailesine aittir?",
+    "question": "Kemokinlerin yapısal sınıfları ve hedef hücre özgüllükleri ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) C-X-C kemokinler",
-      "B) C-C kemokinler",
-      "C) C kemokinler",
-      "D) CX3-C kemokinler",
-      "E) Sitotoksik defensinler"
+      "A) CXCL8 (İnterlökin-8) — Nötrofillerin selektif kemotaksisi ve aktivasyonu",
+      "B) Eotaksin (CCL11) — Nötrofillerin bakteriyel apse odağına süratle çekilmesi",
+      "C) Monosit Kemoatraktan Protein-1 (MCP-1) — Trombositlerin agregasyonunun durdurulması",
+      "D) Lenfotaktin (XCL1) — Eritrositlerin kılcal damarlara yönlendirilmesi",
+      "E) Fraktalkin (CX3CL1) — Mast hücrelerinin degranülasyonunun tamamen engellenmesi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Eotaksin (CCL11) C-C ailesine aittir ve monosit/eozinofil kemotaksisinde rol oynar."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; CXCL8 (IL-8) nötrofillerin primer kemotaktik CXC kemokinidir. B yanlıştır (Eotaksin eozinofilleri çeker); C yanlıştır (MCP-1 monositleri çeker); D ve E seçenekleri uydurma fonksiyonlardır."
   },
   {
-    "id": "pat-med-018",
+    "id": "prac-med-018",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 18,
-    "slideTitle": "Kompleman Sistemine Giriş ve 3 Aktivasyon Yolu",
+    "slideTitle": "Kompleman Sistemi I: Aktivasyon Yolakları (Klasik, Alternatif, Lektin) ve C3 Konvertaz",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi kompleman sisteminin 'Alternatif Yolu' aktivasyonunu tetikleyen unsurlardan biridir?",
+    "question": "Kompleman sisteminin aktivasyon yolları ve kritik basamakları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Antijene bağlanmış IgM molekülü",
-      "B) Mannoz bağlayıcı lektinin (MBL) fiksasyonu",
-      "C) Mikrobiyal yüzey molekülleri (LPS, polisakkaritler) ve Faktör B/D etkileşimi",
-      "D) C1q inhibitörü eksikliği",
-      "E) Bradikinin reseptör aktivasyonu"
+      "A) Alternatif yolak daima antijen-antikor komplekslerinin C1 bileşenine bağlanmasıyla başlar",
+      "B) Lektin yolağında C3 konvertaz oluşumu için T hücre reseptörlerinin uyarılması zorunludur",
+      "C) Klasik yolakta C4b2a, alternatif yolakta C3bBb kompleksi C3 konvertaz görevi görerek C3'ü parçalar",
+      "D) Kompleman proteinlerinin tamamı dalak beyaz pulpasında depolanıp enfeksiyon anında degranüle edilir",
+      "E) C3 parçalanması sadece hücre lizisine yol açar, enflamasyon veya opsonizasyon yapamaz"
     ],
-    "correctAnswer": "C",
-    "explanation": "Alternatif yol antikor gerektirmez; doğrudan mikrop yüzeyindeki polisakkarit ve endotoksinlere C3b'nin Faktör B ve D ile tutunmasıyla aktive olur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; klasik ve lektin yollarında C4b2a kompleksi, alternatif yolda ise C3bBb kompleksi C3 konvertaz aktivitesi göstererek C3'ü C3a ve C3b fragmanlarına ayırır. A yanlıştır (antikorla başlayan klasik yoldur); B yanlıştır (lektin yolu MBL ile başlar); D yanlıştır (karaciğerde sentezlenir); E yanlıştır (C3a anafilatoksin, C3b ise opsonindir)."
   },
   {
-    "id": "pat-med-019",
+    "id": "prac-med-019",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 19,
-    "slideTitle": "Komplemanın Efektör Fonksiyonları: Opsonizasyon, Anafilatoksinler ve MAC",
+    "slideTitle": "Kompleman Sistemi II: Efektör Fonksiyonlar (Anafilatoksinler, Opsonizasyon ve MAC)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Kompleman sisteminin aktivasyonu sonucu oluşan ürünlerden hangisi hem mast hücrelerinden histamin salınımını tetikleyen güçlü bir anafilatoksin, hem de nötrofiller için güçlü bir kemoatraktandır?",
+    "question": "Kompleman sisteminin efektör molekülleri ve fonksiyonları ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) C3b",
-      "B) C5a",
-      "C) C5b",
-      "D) C1q",
-      "E) C9"
+      "A) C3b — Opsonizasyon ve makrofaj fagositozunun uyarılması",
+      "B) C5a — Nötrofil kemotaksisi ve mast hücresinden histamin salınımı",
+      "C) C5b-9 — Hedef hücre membranında litik por açarak ozmotik lizis oluşturma (MAC)",
+      "D) C3a — Düz kas gevşemesi ve nötrofillerin fagositoz yeteneğinin yok edilmesi",
+      "E) iC3b — Lökosit yüzeyindeki CR3 reseptörüne bağlanarak fagositozu kolaylaştırma"
     ],
-    "correctAnswer": "B",
-    "explanation": "C5a kompleman sisteminin en güçlü anafilatoksini olup, aynı zamanda nötrofil kemotaksisini doğrudan uyaran majör faktördür."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü C3a anafilatoksindir; düz kası gevşetmez ve fagositozu engellemez. Mast hücrelerinden histamin salarak vasküler geçirgenliği artıran ve bronş düz kasını kasan pro-enflamatuar bir mediyatördür. A, B, C ve E seçenekleri doğru fonksiyon eşleştirmeleridir."
   },
   {
-    "id": "pat-med-020",
+    "id": "prac-med-020",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 20,
-    "slideTitle": "Kompleman Düzenleyici Proteinleri ve Klinik Hastalıklar",
+    "slideTitle": "Kompleman Düzenleyici Proteinleri ve İlişkili Klinik Hastalıklar (C1-INH, CD55/CD59, Faktör H)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Eritrosit yüzeyinde kompleman kaynaklı lizisi engelleyen CD55 (DAF) ve CD59 proteinlerinin hücre zarına tutunmasını sağlayan glikozilfosfatidilinozitol (GPI) çıpasının sentezlenememesi sonucu intravasküler hemolitik anemiyle seyreden hastalık hangisidir?",
+    "question": "Herediter Anjiyoödem (HAE) hastalığının etiyopatogenezi ve klinik tablosu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Herediter Sferositoz",
-      "B) Orak Hücreli Anemi",
-      "C) Paroksismal Noktürnal Hemoglobinüri (PNH)",
-      "D) Herediter Anjiyoödem",
-      "E) Glukoz-6-Fosfat Dehidrogenaz Eksikliği"
+      "A) Mast hücrelerinden aşırı histamin salınımı sonucu ortaya çıkar ve H1 antihistaminik tedavisine dramatik yanıt verir",
+      "B) C1 inhibitörü (C1-INH) eksikliği sonucu kallikrein-kinin sisteminin kontrolsüz aktivasyonu ve masif bradikinin üretimiyle gelişir",
+      "C) CD55 ve CD59 proteinlerinin aşırı ekspresyonu nedeniyle kanda pıhtılaşma faktörlerinin tükenmesi tablosudur",
+      "D) Sadece deride ürtiker plakları ile sınırlı kalır, laringeal ödem veya asfiksi riski taşımaz",
+      "E) Kompleman C3 eksikliğine bağlı olarak gelişen ağır bir pürülan bakteriyel enfeksiyon tablosudur"
     ],
-    "correctAnswer": "C",
-    "explanation": "PNH'de PIGA mutasyonu nedeniyle GPI çıpası yapılamaz; CD55 ve CD59 eksikliği sonucu eritrositler kompleman saldırısıyla lizise uğrar."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; Herediter Anjiyoödem C1-INH eksikliği nedeniyle gelişir. C1-INH kallikreini baskılayamadığı için yüksek molekül ağırlıklı kininojenden kontrolsüz miktarda Bradikinin üretilir. Ödemin primer sorumlusu bradikinindir, histamin değildir (antihistaminiklere yanıt vermez). Diğer seçenekler yanlıştır."
   },
   {
-    "id": "pat-med-021",
+    "id": "prac-med-021",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 21,
-    "slideTitle": "Kallikrein-Kinin Sistemi ve Bradikinin",
+    "slideTitle": "Plazma Kaynaklı Kaskadlar I: Hageman Faktörü (Faktör XII) ve Kallikrein-Kinin Sistemi (Bradikinin)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Hipertansiyon tedavisi amacıyla ACE inhibitörü başlanan bir hastada ilacın başlamasından 2 hafta sonra inatçı kuru öksürük ve dudaklarda anjiyoödem gelişmiştir. Bu klinik tablonun ortaya çıkmasında dokularda birikerek vasküler geçirgenliği artıran ve duyusal sinirleri uyaran mediyatör aşağıdakilerden hangisidir?",
+    "question": "Bradikinin mediyatörü ve Kallikrein-Kinin sistemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Lökotrien B4",
-      "B) Bradikinin",
-      "C) Tromboksan A2",
-      "D) Serotonin",
-      "E) Kompleman C3a"
+      "A) Enflamasyon sahasında nosiseptörleri uyararak doğrudan ağrı hissine yol açan temel mediyatörlerdendir",
+      "B) Arteriyollerde vazodilatasyon ve venüllerde belirgin vasküler geçirgenlik artışı meydana getirir",
+      "C) Plazmada Yüksek Molekül Ağırlıklı Kininojenden (HMWK) kallikrein enzimi aracılığıyla üretilir",
+      "D) Karaciğer parankiminde depolanan preforme bir vazoaktif amin olup trombosit tıkacını eritir",
+      "E) Anjiyotensin dönüştürücü enzim (ACE) tarafından inaktive edildiğinden, ACE inhibitörü kullananlarda birikerek öksürük yapabilir"
     ],
-    "correctAnswer": "B",
-    "explanation": "ACE enzimi bradikinini yıkar (Kininaz II). ACE inhibitörleri bradikinin birikimine neden olarak bronşial irritasyon (kuru öksürük) ve anjiyoödeme yol açar."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü bradikinin bir vazoaktif amin değil, plazmada proteolitik olarak açığa çıkarılan 9 aminoasitlik bir peptittir (kinin). Karaciğerde depolanmaz; plazmada dolaşan HMWK'den kallikrein aracılığıyla sentezlenir. A, B, C ve E seçenekleri bradikininin temel patofizyolojik ve farmakolojik özellikleridir."
   },
   {
-    "id": "pat-med-022",
+    "id": "prac-med-022",
     "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
     "slideNumber": 22,
-    "slideTitle": "Platelet Aktive Edici Faktör (PAF), Nitrik Oksit (NO) ve Özet Tablo",
+    "slideTitle": "Plazma Kaynaklı Kaskadlar II: Pıhtılaşma ve Fibrinolizis Sistemlerinin Enflamasyon Köprüleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Dönem 3 Kurul 1",
-    "question": "Akut enflamasyon sürecinde gelişen kardinal belirtiler ile bu belirtilerden primer sorumlu kimyasal mediyatör eşleştirmelerinden hangisi DOĞRUDUR?",
+    "question": "Pıhtılaşma ve fibrinolitik sistemlerin enflamasyonla olan etkileşimi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Ateş — Yalnızca Histamin",
-      "B) Kemotaksis — Lökotrien B4 ve C5a",
-      "C) Ağrı — Yalnızca Tromboksan A2",
-      "D) Vasküler geçirgenlik artışı — Yalnızca Lipoksin A4",
-      "E) Vazodilatasyon — Yalnızca Lökotrien C4"
+      "A) Trombin sadece fibrinojeni fibrine çevirir, lökositler veya endotel hücreleri üzerinde hiçbir reseptörü bulunmaz",
+      "B) Plazmin enzimi kompleman sistemini tamamen inaktive ederek C3a ve C5a oluşumunu engeller",
+      "C) Trombin PAR-1 reseptörlerini aktive ederek endotelde adezyon moleküllerini ve sitokin salınımını uyarırken; plazmin C3'ü parçalayarak C3a üretebilir",
+      "D) Fibrin oluşumu mikropların çevre dokulara yayılmasını kolaylaştıran bir patolojik süreçtir",
+      "E) Faktör XII pıhtılaşmayı aktive eder fakat kinin ve kompleman kaskadlarıyla hiçbir temas noktası yoktur"
     ],
-    "correctAnswer": "B",
-    "explanation": "Lökotrien B4 (LTB4) ve kompleman C5a nötrofillerin kemotaksisini sağlayan majör kemoatraktanlardır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; trombin PAR-1 reseptörlerini aktive ederek endotelde selektinleri, kemokinleri ve sitokinleri indükler. Fibrinolitik enzim plazmin ise C3'ü proteolitik olarak parçalayıp C3a anafilatoksinini açığa çıkarabilir. A, B, D ve E seçenekleri yanlıştır."
+  },
+  {
+    "id": "prac-med-023",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 23,
+    "slideTitle": "Platelet Aktive Edici Faktör (PAF) ve Nitrik Oksit (NO) Biyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Nitrik oksit (NO) sentezi ve izoenzimleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) eNOS endotelde konstitütif olarak bulunur ve ürettiği NO ile vazodilatasyon yaparak trombosit adezyonunu baskılar",
+      "B) iNOS makrofajlarda proenflamatuar sitokinler (IFN-γ) ve bakteriyel endotoksin ile indüklenen kalsiyumdan bağımsız enzimdir",
+      "C) Makrofaj iNOS kaynaklı NO, süperoksit anyonu ile birleşerek mikrobisidal peroksinitrit (ONOO-) radikalini oluşturur",
+      "D) Nitrik oksit intrasellüler cAMP düzeyini artırarak damar düz kaslarında şiddetli vazokonstriksiyon meydana getirir",
+      "E) L-arjinin, nitrik oksit sentaz enzimi için temel aminoasit substratıdır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü nitrik oksit hücre içi cAMP'yi değil, çözünür guanilat siklazı uyararak cGMP düzeyini artırır; vazokonstriksiyon değil tam tersine damar düz kasında güçlü bir gevşeme ve vazodilatasyon meydana getirir. A, B, C ve E seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-med-024",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 24,
+    "slideTitle": "Enflamasyon Mediyatörlerinin Fazlalığı, Sinerjisi ve Klinik-Terapötik Entegrasyon",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Enflamasyonun kimyasal mediyatörlerinin biyolojik yedekliliği (redundancy) ve farmakolojik hedeflenmesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Vasküler geçirgenlik artışı histamin, lökotrienler, bradikinin ve kompleman parçaları gibi çok sayıda farklı mediyatörle yürütülür",
+      "B) Biyolojik yedeklilik sayesinde tek bir mediyatör yolu mutasyonla veya mikropla bloke edilse dahi enflamatuar konak savunması sürdürülebilir",
+      "C) Klasik H1 antihistaminikler tüm lökotrien ve sitokin reseptörlerini de eş zamanlı bloke ettikleri için romatoid artrit tedavisinde birinci basamak seçenektir",
+      "D) Kortikosteroidler PLA2 inhibisyonu ve pro-enflamatuar gen transkripsiyonunu baskılayarak çoklu mediyatör yolaklarını aynı anda durdururlar",
+      "E) Ekulizumab, kompleman C5 molekülünü hedef alarak C5b-9 membran atak kompleksi oluşumunu engelleyen monoklonal bir antikordur"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü H1 antihistaminikler sadece H1 histamin reseptörünü bloke ederler; lökotrien, sitokin, kinin veya kompleman yolaklarına etki etmezler. Bu nedenle romatoid artrit gibi karmaşık sistemik enflamatuar hastalıklarda hiçbir terapötik yararları yoktur. A, B, D ve E seçenekleri doğru ilkelerdir."
   },
   {
     "id": "prac-hs-01",
@@ -1860,43 +1898,5 @@
     ],
     "correctAnswer": "B",
     "explanation": "Kiraz kırmızısı cilt rengi ve bilateral globus pallidus nekrozu Karbonmonoksit (CO) zehirlenmesinin patognomonik tablosudur. CO hemoglobine bağlanarak karboksihemoglobin oluşturur ve oksihemoglobin eğrisini sola kaydırarak ağır hücresel hipoksi yapar."
-  },
-  {
-    "id": "prac-gp-13",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Ağır Metal Toksisitesi: Kurşun Patolojisi ve İntoksikasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Eski boyalı bir evde yaşayan, karın ağrısı ve dikkat dağınıklığı şikayetiyle getirilen 4 yaşındaki çocuğun kan sayımında mikrositer anemi saptanıyor. Periferik yaymasında eritrositler içinde yaygın bazofilik noktalanma (basophilic stippling) izlenen bu çocukta patolojiden sorumlu ağır metal ve inhibe olan enzim ikilisi hangisidir?",
-    "options": [
-      "A) Cıva - Üroporfirinojen dekarboksilaz",
-      "B) Kurşun - Delta-aminolevülinik asit (ALA) dehidrataz",
-      "C) Arsenik - Tirozinaz",
-      "D) Kadmiyum - Ksantin oksidaz",
-      "E) Demir - Glukoz-6-fosfat dehidrogenaz"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kurşun intoksikasyonunda ALA dehidrataz ve ferroşelataz enzimleri inhibe olur; kanda serbest protoporfirin artar ve periferik yaymada ribozomal agregatlara bağlı bazofilik noktalanma tipiktir."
-  },
-  {
-    "id": "prac-gp-14",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Ağır Metal Toksisitesi: Cıva, Arsenik ve Kadmiyum Patolojileri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Yıllarca kuyu suyu içen bir hastada avuç içlerinde hiperkeratotik plaklar, tırnaklarda beyaz çizgilenmeler (Mees çizgileri) ve ciltte skuamöz hücreli karsinom gelişiyor. Karaciğer ultrasonunda kitle saptanan hastanın biyopsisinde hepatik anjiyosarkom tanısı konuyor. Bu tabloya yol açan en muhtemel çevresel toksin hangisidir?",
-    "options": [
-      "A) Kurşun",
-      "B) Arsenik",
-      "C) Kadmiyum",
-      "D) Cıva",
-      "E) Berilyum"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Palmar hiperkeratoz, Mees çizgileri, kutanöz skuamöz hücreli karsinom ve karaciğerde anjiyosarkom birlikteliği kronik Arsenik maruziyetinin klasik klinikopatolojik spektrumudur."
   }
 ]

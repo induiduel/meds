@@ -1,5 +1,43 @@
 [
   {
+    "id": "km-pq-17",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli",
+    "slideNumber": 17,
+    "slideTitle": "Ekstravazasyon ve Organ Tropizmi (Seed and Soil)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Karsinojenezin moleküler temelleri kapsamında 'Ekstravazasyon ve Organ Tropizmi (Seed and Soil)' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Paget'nin tohum ve toprak hipotezi, kemokin reseptörleri (CXCR4-CXCL12) ve metastaz kolonizasyonu.",
+      "B) Hücre zarında sodyum birikimi",
+      "C) Lizozomların kendiliğinden kaybolması",
+      "D) Ribozomların tamamen erimesi",
+      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Ekstravazasyon ve Organ Tropizmi (Seed and Soil), patolojik olarak 'Paget'nin tohum ve toprak hipotezi, kemokin reseptörleri (CXCR4-CXCL12) ve metastaz kolonizasyonu.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
+  },
+  {
+    "id": "km-pq-18",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli",
+    "slideNumber": 18,
+    "slideTitle": "İmmün Kaçış Mekanizmaları: PD-1/PD-L1 ve CTLA-4",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Karsinojenezin moleküler temelleri kapsamında 'İmmün Kaçış Mekanizmaları: PD-1/PD-L1 ve CTLA-4' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) T-hücreli sitotoksisiteden kaçış, antijen kaybı ve immünosüpresif mikroçevre.",
+      "B) Hücre zarında sodyum birikimi",
+      "C) Lizozomların kendiliğinden kaybolması",
+      "D) Ribozomların tamamen erimesi",
+      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. İmmün Kaçış Mekanizmaları: PD-1/PD-L1 ve CTLA-4, patolojik olarak 'T-hücreli sitotoksisiteden kaçış, antijen kaybı ve immünosüpresif mikroçevre.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
+  },
+  {
     "id": "km-pq-19",
     "deckId": "learn-karsinojenezin-molekuler-temeli",
     "deckTitle": "Karsinojenezin Moleküler Temeli",
@@ -1482,421 +1520,383 @@
     "explanation": "Doğru seçenek A'dır. Sıvı Biyopsi ve Geleceğin Onkolojik Tanısı, patolojik ve klinik olarak 'Dolaşımdaki tümör DNA'sı (ctDNA) ve dolaşan tümör hücreleri (CTC) analizi.' mekanizması ile karakterizedir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-1",
+    "id": "prac-sis-001",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 1,
-    "slideTitle": "Sistemik Hastalıklarda Glomerüler Hasar İlkeleri",
+    "slideTitle": "Sistemik Hastalıklarda Böbrek Tutulumuna Giriş ve Glomerüler Hasar Paternleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Sistemik Hastalıklarda Glomerüler Hasar İlkeleri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Böbrek biyopsisinde glomerüllerin yüzde 40'ında ve tutulan her bir glomerül yumağının sadece bir lobülünde nekroz ve skleroz saptanan bir hastanın patoloji raporundaki doğru histopatolojik dağılım tanımı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Dolaşan immün kompleksler, vaskülitler ve metabolik birikimlerin böbreğe etkisi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Diffüz global tutulum",
+      "B) Diffüz segmental tutulum",
+      "C) Fokal global tutulum",
+      "D) Fokal segmental tutulum",
+      "E) Mezangiyoproliferatif generalize tutulum"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Sistemik Hastalıklarda Glomerüler Hasar İlkeleri, patolojik ve klinik olarak 'Dolaşan immün kompleksler, vaskülitler ve metabolik birikimlerin böbreğe etkisi.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "Histopatolojide toplam glomerüllerin %50'sinden azının tutulması 'FOKAL' (<%50), %50 ve üzeri ise 'DİFFÜZ'dür. İncelenen tek bir glomerül yumağının sadece bir bölümünün (lobülünün) etkilenmesi 'SEGMENTAL', tüm glomerül yumağının tutulması ise 'GLOBAL' olarak adlandırılır. Soruda glomerüllerin %40'ı (<%50 = fokal) ve tutulan glomerülün sadece bir kısmı (= segmental) etkilendiği için doğru tanımlama 'Fokal segmental' lezyondur."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-2",
+    "id": "prac-sis-002",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 2,
-    "slideTitle": "Lupus Nefriti (SLE): Patogenez ve Klinik",
+    "slideTitle": "Diyabetik Nefropati Patogenezi: İleri Glikasyon Son Ürünleri (AGE) ve Hücresel Sinyal Yolakları",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Lupus Nefriti (SLE): Patogenez ve Klinik' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Diyabetik nefropati patogenezinde mezangiyal hücrelerden tip IV kolajen ve fibronektin sentezini doğrudan uyarırken matriks metalloproteinaz aktivitesini baskılayarak mezangiyal matriks genişlemesine yol açan temel profibrotik sitokin aşağıdakilerden hangisidir?",
     "options": [
-      "A) Anti-dsDNA antikorları, subendotelyal immün kompleksler ve hipokomplemanemi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) İnterlökin-6 (IL-6)",
+      "B) İnterferon-gama (IFN-γ)",
+      "C) Dönüştürücü büyüme faktörü-beta (TGF-β)",
+      "D) Trombosit kaynaklı büyüme faktörü-AA (PDGF-AA)",
+      "E) Vasküler endotelyal büyüme faktörü-C (VEGF-C)"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Lupus Nefriti (SLE): Patogenez ve Klinik, patolojik ve klinik olarak 'Anti-dsDNA antikorları, subendotelyal immün kompleksler ve hipokomplemanemi.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Diyabetik nefropatide non-enzimatik glikasyon (AGE) ve PKC aktivasyonu sonucu salgılanan en kritik profibrotik sitokin TGF-beta'dır (Transforming Growth Factor-beta). TGF-beta mezangiyal hücrelerde tip IV kolajen, laminin ve fibronektin sentezini kamçılarken, matriks yıkıcı metalloproteinazları (MMP) bloke ederek glomerülosklerozun ilerlemesine neden olur."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-3",
+    "id": "prac-sis-003",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 3,
-    "slideTitle": "Lupus Nefriti ISN/RPS Sınıflaması: Sınıf I ve II",
+    "slideTitle": "Diyabetik Nefropati: Renal Hemodinamik Evre, Hiperfiltrasyon ve ACEi/ARB Etkisi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Lupus Nefriti ISN/RPS Sınıflaması: Sınıf I ve II' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Tip 1 Diabetes Mellitus tanılı 24 yaşındaki bir hastada erken evre diyabetik nefropati gelişiminde izlenen glomerüler hemodinamik değişiklik ve ACE inhibitörlerinin bu süreçteki temel koruyucu etkisi aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
     "options": [
-      "A) Sınıf I Minimal mezanjiyal ve Sınıf II Mezanjiyal proliferatif lupus nefriti.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Afferent arteriyol konstriksiyonu / Afferent arteriyolü genişletmek",
+      "B) Efferent arteriyol dilatasyonu / Efferent arteriyolü kasmak",
+      "C) İntraglomerüler hipertansiyon / Efferent arteriyolde vazodilatasyon sağlayarak intraglomerüler basıncı düşürmek",
+      "D) Mezangiyal hücre apoptozu / Podosit sayısını artırmak",
+      "E) Renal plazma akımında azalma / Sistemik venöz dönüşü artırmak"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Lupus Nefriti ISN/RPS Sınıflaması: Sınıf I ve II, patolojik ve klinik olarak 'Sınıf I Minimal mezanjiyal ve Sınıf II Mezanjiyal proliferatif lupus nefriti.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Diyabetik nefropatinin hemodinamik evresinde afferent arteriyol genişlemiş, efferent arteriyol ise Anjiyotensin II etkisiyle daralmıştır; bu durum intraglomerüler hidrostatik basıncı (intraglomerüler hipertansiyon) ve GFR'yi (hiperfiltrasyon) artırır. ACE inhibitörleri ve ARB'ler Anjiyotensin II etkisini kırarak efferent arteriyolde seçici vazodilatasyon yapar ve glomerül içi hidrostatik basıncı düşürerek renoproteksiyon sağlar."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-4",
+    "id": "prac-sis-004",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 4,
-    "slideTitle": "Lupus Nefriti Sınıf III: Fokal Proliferatif",
+    "slideTitle": "Diyabetik Nefropatinin Klinik Evrelemesi: Mikroalbüminüriden Aşikar Nefropatiye",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Lupus Nefriti Sınıf III: Fokal Proliferatif' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Tip 2 diyabet tanısıyla 8 yıldır izlenen 52 yaşındaki bir hastanın rutin kontrolünde idrar tetkik çubuğu (dipstick) protein açısından negatif bulunmuştur. Ancak yapılan 24 saatlik idrar incelemesinde albümin atılımı 140 mg/gün olarak saptanmıştır. Bu klinik durum için en doğru tanımlama aşağıdakilerden hangisidir?",
     "options": [
-      "A) Glomerüllerin <%50'sinde segmental endokapiller proliferasyon ve nekroz.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Normoalbüminüri",
+      "B) Mikroalbüminüri (Başlangıç nefropatisi)",
+      "C) Makroalbüminüri (Aşikar nefropati)",
+      "D) Masif nefrotik sendrom",
+      "E) Son dönem böbrek yetmezliği"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Lupus Nefriti Sınıf III: Fokal Proliferatif, patolojik ve klinik olarak 'Glomerüllerin <%50'sinde segmental endokapiller proliferasyon ve nekroz.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "24 saatlik idrarda 30 ila 300 mg/gün arasında albümin saptanması 'Mikroalbüminüri' olarak tanımlanır. Standart idrar çubukları genellikle 300 mg/L'nin altındaki protein konsantrasyonlarına duyarsız olduğu için negatif sonuç verir. Bu evre nefropatinin uygun tedaviyle geri döndürülebileceği kritik başlangıç (incipient) evresidir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-5",
+    "id": "prac-sis-005",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 5,
-    "slideTitle": "Lupus Nefriti Sınıf IV: Diffüz Proliferatif (En Ağır Tip)",
+    "slideTitle": "Diyabetik Nefropati Morfolojisi: Glomerüler Bazal Membran Kalınlaşması ve Diffüz Glomerüloskleroz",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Lupus Nefriti Sınıf IV: Diffüz Proliferatif (En Ağır Tip)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Diyabetik nefropatili bir hastadan alınan böbrek biyopsisinde elektron mikroskopisi ve ışık mikroskopisi bulguları değerlendirildiğinde; sırasıyla elektron mikroskopisinde saptanan EN ERKEN yapısal değişiklik ve ışık mikroskopisinde EN SIK karşılaşılan lezyon aşağıdakilerin hangisinde doğru verilmiştir?",
     "options": [
-      "A) Glomerüllerin >%50'sinde kresentler, tel lüle (wire-loop) lezyonları ve akut böbrek hasarı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Kimmelstiel-Wilson nodülü / Fibrin cap lezyonu",
+      "B) Glomerüler bazal membran diffüz kalınlaşması / Diffüz glomerüloskleroz",
+      "C) Kresent oluşumu / Amiloid birikimi",
+      "D) Podosit sitoplazmasında tel ilmik / Kapsüler damla",
+      "E) Endotelyal fenestra kaybı / Hiperplastik arteriyoloskleroz"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Lupus Nefriti Sınıf IV: Diffüz Proliferatif (En Ağır Tip), patolojik ve klinik olarak 'Glomerüllerin >%50'sinde kresentler, tel lüle (wire-loop) lezyonları ve akut böbrek hasarı.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Diyabetik nefropatide elektron mikroskobik olarak saptanan EN ERKEN yapısal bulgu glomerüler bazal membran (GBM) diffüz kalınlaşmasıdır. Işık mikroskopisinde en sık görülen lezyon ise mezangiyal matriks artışıyla karakterize diffüz glomerülosklerozdur. (Kimmelstiel-Wilson nodülleri ise en spesifik/patogonomik olanıdır ancak en sık görüleni değildir)."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-6",
+    "id": "prac-sis-006",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 6,
-    "slideTitle": "Lupus Nefriti Sınıf V ve VI: Membranöz ve İlerlemiş Sklerozan",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Lupus Nefriti Sınıf V ve VI: Membranöz ve İlerlemiş Sklerozan' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) Subepitelyal IgG birikimi (nefrotik sendrom) ve son dönem sklerotik böbrek.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Lupus Nefriti Sınıf V ve VI: Membranöz ve İlerlemiş Sklerozan, patolojik ve klinik olarak 'Subepitelyal IgG birikimi (nefrotik sendrom) ve son dönem sklerotik böbrek.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-7",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
-    "slideNumber": 7,
-    "slideTitle": "İmmünfloresanda 'Full-House' Boyanma Modeli",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'İmmünfloresanda 'Full-House' Boyanma Modeli' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) IgG, IgA, IgM, C3 ve C1q'nun eşzamanlı pozitifliği (Lupus nefritinin moleküler imzası).",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. İmmünfloresanda 'Full-House' Boyanma Modeli, patolojik ve klinik olarak 'IgG, IgA, IgM, C3 ve C1q'nun eşzamanlı pozitifliği (Lupus nefritinin moleküler imzası).' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-8",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
-    "slideNumber": 8,
-    "slideTitle": "Diyabetik Nefropati: Epidemiyoloji ve Evreler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Diyabetik Nefropati: Epidemiyoloji ve Evreler' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) Son dönem böbrek yetmezliğinin en sık nedeni; mikroalbüminüriden açık proteinüriye geçiş.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Diyabetik Nefropati: Epidemiyoloji ve Evreler, patolojik ve klinik olarak 'Son dönem böbrek yetmezliğinin en sık nedeni; mikroalbüminüriden açık proteinüriye geçiş.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-9",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
-    "slideNumber": 9,
-    "slideTitle": "Non-Enzimatik Glikasyon (AGE) ve Hiperfiltrasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Non-Enzimatik Glikasyon (AGE) ve Hiperfiltrasyon' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) İleri glikasyon ürünleri, afferent/efferent tonus dengesizliği ve intraglomerüler hipertansiyon.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Non-Enzimatik Glikasyon (AGE) ve Hiperfiltrasyon, patolojik ve klinik olarak 'İleri glikasyon ürünleri, afferent/efferent tonus dengesizliği ve intraglomerüler hipertansiyon.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-10",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
-    "slideNumber": 10,
-    "slideTitle": "Diffüz Glomerüloskleroz ve Mezanjiyal Genişleme",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Diffüz Glomerüloskleroz ve Mezanjiyal Genişleme' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) Bazal membran kalınlaşması ve mezanjiyal matriks kollajen artışı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Diffüz Glomerüloskleroz ve Mezanjiyal Genişleme, patolojik ve klinik olarak 'Bazal membran kalınlaşması ve mezanjiyal matriks kollajen artışı.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-11",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
-    "slideNumber": 11,
     "slideTitle": "Nodüler Glomerüloskleroz: Kimmelstiel-Wilson Nodülleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Nodüler Glomerüloskleroz: Kimmelstiel-Wilson Nodülleri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Nefrotik sendrom ve ilerleyici böbrek yetmezliği nedeniyle biyopsi yapılan 58 yaşındaki bir hastanın böbrek histopatolojisinde; glomerül lobüllerinin merkezinde yerleşmiş, PAS pozitif boyanan, yuvarlak, hücreden fakir, lameller matriks nodülleri ve nodüllerin periferinde mikroanevrizmatik kılcal dilatasyonlar izlenmiştir. Bu lezyon için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Glomerül lobüllerinde PAS pozitif lameller aselüler nodüller (Diyabetin patognomonik bulgusu).",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Amiloidoz amorf depoziti",
+      "B) Fokal segmental glomerüloskleroz skarı",
+      "C) Kimmelstiel-Wilson nodülü (Nodüler glomerüloskleroz)",
+      "D) Kresentik glomerülonefrit hücresel hilali",
+      "E) Membranöz nefropati subepitelyal hörgücü"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Nodüler Glomerüloskleroz: Kimmelstiel-Wilson Nodülleri, patolojik ve klinik olarak 'Glomerül lobüllerinde PAS pozitif lameller aselüler nodüller (Diyabetin patognomonik bulgusu).' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Glomerül lobül merkezlerinde yuvarlak, asellüler, lameller ve PAS pozitif nodüller ile periferik kapiller anevrizmaların görülmesi diyabetik nefropatiye patognomonik olan 'Kimmelstiel-Wilson' nodülüdür (Nodüler glomerüloskleroz). Amiloidoz PAS zayıf/negatif olup amorf yapıdadır, lameller değildir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-12",
+    "id": "prac-sis-007",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
+    "slideNumber": 7,
+    "slideTitle": "Diyabetik Vasküler ve Eksüdatif Lezyonlar: Efferent Hiyalinoz, Kapsüler Damla ve Fibrin Cap",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek iğne biyopsisinde glomerüllerde Kimmelstiel-Wilson nodüllerinin yanı sıra Bowman kapsülü parietal tabakasında damla şeklinde eozinofilik protein birikimi ve hem afferent hem de efferent arteriyol duvarlarında lümeni daraltan homojen pembe hiyalin kalınlaşma izlenmiştir. Bu biyopside tanımlanan Bowman kapsülü lezyonu ve vasküler tutulum paterni için en doğru eşleştirme hangisidir?",
+    "options": [
+      "A) Fibrin cap / Benign nefroskleroz",
+      "B) Capsular drop (Kapsüler damla) / Diyabetik arteriyoloskleroz",
+      "C) Wire-loop lezyonu / Malign nefroskleroz",
+      "D) Hücresel kresent / Trombotik mikroanjiyopati",
+      "E) Amiloid plağı / PAN tutulumu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bowman kapsülü parietal yaprağında damla şeklinde hiyalin/protein birikimi 'Capsular drop' (Kapsüler damla) lezyonudur. Hem afferent hem de efferent arteriyolün birlikte hiyalin arteriyolosklerozla daralması ise Diabetes Mellitus'a son derece özgü bir vasküler tutulum paternidir (saf esansiyel hipertansiyonda efferent tutulum beklenmez)."
+  },
+  {
+    "id": "prac-sis-008",
+    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
+    "slideNumber": 8,
+    "slideTitle": "Sistemik Lupus Eritematozus (SLE) ve Lupus Nefriti Patogenezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Sistemik Lupus Eritematozus (SLE) tanılı 26 yaşındaki bir kadın hastada akut nefritik alevlenme döneminde glomerüler hasarı tetikleyen immünopatolojik aşırı duyarlılık tipi ve serumda beklenen kompleman düzeyi profili aşağıdakilerin hangisinde doğru verilmiştir?",
+    "options": [
+      "A) Tip I aşırı duyarlılık / Yüksek C3, normal C4",
+      "B) Tip II aşırı duyarlılık / Yüksek C1q, normal C3",
+      "C) Tip III aşırı duyarlılık / Düşük C3 ve düşük C4 (Hipokomplemanemi)",
+      "D) Tip IV aşırı duyarlılık / Normal C3 ve yüksek C5",
+      "E) Tip V aşırı duyarlılık / İzole faktör B düşüklüğü"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Lupus nefriti, nükleer antijen-antikor immün komplekslerinin dokuda birikmesi ve komplemanı aktive etmesiyle seyreden klasik bir Tip III aşırı duyarlılık reaksiyonudur. Klasik kompleman yolağının tüketilmesi sonucunda kanda serum C3 ve C4 seviyeleri belirgin derecede düşer (hipokomplemanemi)."
+  },
+  {
+    "id": "prac-sis-009",
+    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
+    "slideNumber": 9,
+    "slideTitle": "Lupus Nefritinde İmmünfloresan: \"Full-House\" Paterni ve Depozit Lokalizasyonları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Genç bir kadın hastada açıklanamayan hematüri ve proteinüri nedeniyle yapılan böbrek iğne biyopsisinin immünfloresan incelemesinde glomerüllerde IgG, IgA, IgM, C3 ve C1q antikorlarının tümüyle kuvvetli granüler boyanma saptanmıştır. Bu karakteristik immünfloresan paterni ve işaret ettiği primer tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Lineer tutulum / Goodpasture hastalığı",
+      "B) Pauci-immün patern / Granülomatozisli polianjiyit",
+      "C) Full-House paterni / Lupus nefriti",
+      "D) İzole IgA depolanması / Berger hastalığı",
+      "E) Maskelenmiş C3 paterni / Post-enfeksiyöz GN"
+    ],
+    "correctAnswer": 2,
+    "explanation": "İmmünfloresan mikroskopisinde üç immünglobulin sınıfı (IgG, IgA, IgM) ve iki temel kompleman komponentinin (C3, C1q) birlikte granüler pozitif boyanması 'Full-House' paterni olarak bilinir ve Sistemik Lupus Eritematozus (Lupus Nefriti) için son derece karakteristiktir."
+  },
+  {
+    "id": "prac-sis-010",
+    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
+    "slideNumber": 10,
+    "slideTitle": "Lupus Nefriti ISN/RPS Sınıflaması: Evre I (Minimal Mezangiyal) ve Evre II (Mezangiyal Proliferatif)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "SLE tanılı bir hastanın böbrek biyopsisinde ışık mikroskopisi incelemesinde glomerüller tamamen normal yapıda izlenmiş, ancak immünfloresan mikroskopisinde mezangiyal alanda granüler IgG ve C3 birikimi saptanmıştır. ISN/RPS sınıflamasına göre bu hastanın lupus nefriti evresi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Evre I: Minimal mezangiyal lupus nefriti",
+      "B) Evre II: Mezangiyal proliferatif lupus nefriti",
+      "C) Evre III: Fokal lupus nefriti",
+      "D) Evre IV: Diffüz proliferatif lupus nefriti",
+      "E) Evre V: Membranöz lupus nefriti"
+    ],
+    "correctAnswer": 0,
+    "explanation": "ISN/RPS sınıflamasına göre ışık mikroskopisinde glomerüllerin tamamen normal görüldüğü, ancak immünfloresan ve/veya elektron mikroskopisinde mezangiyal immün depozitlerin gösterildiği form 'Evre I: Minimal mezangiyal lupus nefriti'dir. Işık mikroskopisinde mezangiyal hücre artışı belirginleştiğinde ise Evre II adını alır."
+  },
+  {
+    "id": "prac-sis-011",
+    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
+    "slideNumber": 11,
+    "slideTitle": "Lupus Nefriti Evre III: Fokal Proliferatif Lupus Nefriti",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "SLE tanılı bir hastanın böbrek biyopsisinde toplam 20 glomerül incelenmiş ve bu glomerüllerin 7 tanesinde (%35) segmental endokapiller proliferasyon, kapiller duvarlarda nötrofil infiltrasyonu ve fokal fibrinoid nekroz odakları saptanmıştır. ISN/RPS sınıflamasına göre bu hastanın tanısı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Evre II: Mezangiyal proliferatif lupus nefriti",
+      "B) Evre III: Fokal lupus nefriti",
+      "C) Evre IV: Diffüz proliferatif lupus nefriti",
+      "D) Evre V: Membranöz lupus nefriti",
+      "E) Evre VI: İlerlemiş sklerozan lupus nefriti"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ISN/RPS sınıflamasında endokapiller proliferasyon ve nekrotizan lezyonların toplam glomerüllerin %50'sinden azında (<%50) bulunması 'Evre III: Fokal Lupus Nefriti' tanımını karşılar. Olguda 20 glomerülden 7'si (%35 < %50) tutulduğu için tanı Evre III'tür (eğer 10 veya daha fazlası tutulsaydı Evre IV olurdu)."
+  },
+  {
+    "id": "prac-sis-012",
+    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 12,
-    "slideTitle": "Diyabetik Vasküler Lezyonlar: Arteriyoloskleroz",
+    "slideTitle": "Lupus Nefriti Evre IV: Diffüz Proliferatif Lupus Nefriti (En Sık ve En Ağır Evre)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Diyabetik Vasküler Lezyonlar: Arteriyoloskleroz' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "SLE tanılı 28 yaşındaki bir kadında aniden gelişen oligüri, yaygın ödem, hematüri (eritrosit silindirleri) ve nefrotik düzeyde proteinüri saptanıyor. Yapılan böbrek biyopsisinde glomerüllerin %75'inde diffüz endokapiller proliferasyon, hücresel kresentler ve ışık mikroskopisinde kılcal duvarlarda belirgin kalınlaşmayla karakterize 'wire-loop' (tel ilmik) lezyonları izleniyor. Bu hasta için en olası patolojik evre aşağıdakilerden hangisidir?",
     "options": [
-      "A) Afferent ve özellikle EFFERENT arteriyolde hyalen kalınlaşma (Diyabete özgüdür).",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Evre II: Mezangiyal proliferatif lupus nefriti",
+      "B) Evre III: Fokal proliferatif lupus nefriti",
+      "C) Evre IV: Diffüz proliferatif lupus nefriti",
+      "D) Evre V: Membranöz lupus nefriti",
+      "E) Evre VI: İlerlemiş sklerozan lupus nefriti"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Diyabetik Vasküler Lezyonlar: Arteriyoloskleroz, patolojik ve klinik olarak 'Afferent ve özellikle EFFERENT arteriyolde hyalen kalınlaşma (Diyabete özgüdür).' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Glomerüllerin %50'sinden fazlasının (olguda %75) tutulduğu, diffüz proliferasyon, hücresel kresentler ve subendotelyal immün kompleks birikintilerinin oluşturduğu 'wire-loop' (tel ilmik) lezyonlarıyla seyreden tablo lupus nefritinin en sık ve en ağır formu olan 'Evre IV: Diffüz proliferatif lupus nefriti'dir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-13",
+    "id": "prac-sis-013",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 13,
-    "slideTitle": "Renal Amiloidoz: Patogenez ve Tipler",
+    "slideTitle": "Lupus Nefriti: Evre V (Membranöz) ve Evre VI (İlerlemiş Sklerozan)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Renal Amiloidoz: Patogenez ve Tipler' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Uzun süredir SLE tanısı olan ve son tahlillerinde serum kreatinini 6.5 mg/dL saptanan 44 yaşındaki bir hastaya yapılan böbrek biyopsisinde; incelenen glomerüllerin %94'ünde global skleroz, yaygın tübüler atrofi ve yoğun interstisyel fibrozis saptanmış, aktif proliferatif lezyon izlenmemiştir. ISN/RPS sınıflamasına göre bu hastanın patolojik evresi ve en uygun klinik yaklaşım aşağıdakilerden hangisidir?",
     "options": [
-      "A) AL amiloidoz (plazma hücre diskrazisi) ve AA amiloidoz (kronik enflamasyon).",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Evre III / Yüksek doz intravenöz pulse steroid",
+      "B) Evre IV / Siklofosfamid indüksiyon tedavisi",
+      "C) Evre V / Anti-CD20 Rituksimab infüzyonu",
+      "D) Evre VI / İmmünsüpresyondan kaçınma ve renal replasman (diyaliz/transplantasyon) hazırlığı",
+      "E) Evre II / ACE inhibitörü ile mikroalbüminüri takibi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Renal Amiloidoz: Patogenez ve Tipler, patolojik ve klinik olarak 'AL amiloidoz (plazma hücre diskrazisi) ve AA amiloidoz (kronik enflamasyon).' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "Biyopside glomerüllerin %90'ından fazlasının global skleroze olduğu evre 'ISN/RPS Evre VI: İlerlemiş Sklerozan Lupus Nefriti'dir. Bu evrede aktif immünolojik inflamasyon tükenmiş, geriye dönüşümsüz skar dokusu kalmıştır. Dolayısıyla agresif immünsüpresif tedavilerin hiçbir faydası yoktur, hastayı enfeksiyon riskine sokar; en uygun yaklaşım diyaliz ve böbrek nakli gibi renal replasman hazırlığıdır."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-14",
+    "id": "prac-sis-014",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 14,
-    "slideTitle": "Kongo Kırmızısı ve Polarize Mikroskopi",
+    "slideTitle": "Renal Amiloidoz: Biyokimyasal Tipler (AL ve AA) ve Patogenez",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Kongo Kırmızısı ve Polarize Mikroskopi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Tekrarlayan ateş, peritonit atakları ve artralji öyküsü olan 35 yaşındaki bir hastada nefrotik düzeyde proteinüri saptanmış ve yapılan böbrek biyopsisinde sekonder renal amiloidoz (AA tipi) tanısı konmuştur. Bu hastada dokularda biriken amiloid fibrillerinin kaynaklandığı prekürsör protein aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kongo kırmızısı ile boyanan amiloidin polarize ışıkta 'elma yeşili çift kırınım' (birefringence) vermesi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Monoklonal immünglobulin kappa hafif zinciri",
+      "B) Serum Amiloid A (SAA) proteini",
+      "C) Transtiretin (TTR)",
+      "D) Beta-2 mikroglobulin",
+      "E) Amiloid prekürsör protein (APP)"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Kongo Kırmızısı ve Polarize Mikroskopi, patolojik ve klinik olarak 'Kongo kırmızısı ile boyanan amiloidin polarize ışıkta 'elma yeşili çift kırınım' (birefringence) vermesi.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Ailesel Akdeniz Ateşi (FMF) gibi kronik otoenflamatuvar hastalıklarda ve romatoid artrit, tüberküloz gibi kronik inflamasyonlarda gelişen sekonder amiloidozun (Amiloid AA) prekürsör proteini, karaciğerde proinflamatuvar sitokinlerin uyarısıyla sentezlenen 'Serum Amiloid A'dır (SAA). AL amiloidozda ise monoklonal immünglobulin hafif zincirleri birikir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-15",
+    "id": "prac-sis-015",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 15,
-    "slideTitle": "Amiloidozda Glomerüler Tutulum ve Nefrotik Sendrom",
+    "slideTitle": "Renal Amiloidoz Morfolojisi: Kongo Kırmızısı ve Elma Yeşili Çift Kırıcılık",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Amiloidozda Glomerüler Tutulum ve Nefrotik Sendrom' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Ağır proteinüri ve bacaklarda ödem yakınmasıyla başvuran 62 yaşındaki bir hastanın böbrek biyopsisinde mezangiyal alanlarda ve kapiller bazal membranlarda amorf eozinofilik kitleler saptanmıştır. Bu depozitlerin amiloidoz lehine kesin tanısını koymak için uygulanması gereken özel boyama ve mikroskobik inceleme yöntemi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Masif proteinüri, hipoalbüminemi ve böbreğin balmumu kıvamında büyümesi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Periyodik Asit-Schiff (PAS) ile bazal membran lameller yapısının gösterilmesi",
+      "B) Masson trikrom boyası ile yoğun mavi kollajen liflerinin izlenmesi",
+      "C) Kongo kırmızısı (Congo red) ile polarize mikroskopta elma yeşili çift kırıcılık izlenmesi",
+      "D) Gümüşleme (Jones methenamine silver) ile GBM'de spike yapılarının gösterilmesi",
+      "E) Prusya mavisi ile hemosiderin pigment birikiminin kanıtlanması"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Amiloidozda Glomerüler Tutulum ve Nefrotik Sendrom, patolojik ve klinik olarak 'Masif proteinüri, hipoalbüminemi ve böbreğin balmumu kıvamında büyümesi.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Amiloidozun kesin histopatolojik tanısında altın standart, Kongo kırmızısı (Congo red) boyamasının polarize ışık mikroskobu altında incelenerek amiloid fibrillerinin çapraz beta yapısına bağlı 'elma yeşili çift kırıcılık' (apple-green birefringence) vermesidir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-16",
+    "id": "prac-sis-016",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 16,
-    "slideTitle": "Sistemik Vaskülitler ve Pauci-İmmün Glomerülonefrit",
+    "slideTitle": "Renal Amiloidozun Kliniği: Masif Nefrotik Sendrom ve Büyük/Normal Böbrek Paradoksu",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Sistemik Vaskülitler ve Pauci-İmmün Glomerülonefrit' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Masif anazarka ödem ve nefrotik düzeyde proteinüri (8.5 g/gün) saptanan 56 yaşındaki bir erkek hastanın laboratuvarında serum kreatinini 3.2 mg/dL olarak ölçülmüştür. Renal ultrasonografide her iki böbrek parankim ekojenitesi diffüz artmış, ancak böbrek boyutları sağda 132 mm, solda 135 mm (bilateral nefromegali) bulunmuştur. Bu klinik tablo için en olası ön tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) İmmünfloresanda antikor çökeltisi izlenmeyen (pauci-immün) nekrotizan kresentik GN.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Son dönem benign nefroskleroz",
+      "B) Renal Amiloidoz",
+      "C) Kronik piyelonefrit",
+      "D) Fokal segmental glomerüloskleroz son evre",
+      "E) Alport sendromu"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Sistemik Vaskülitler ve Pauci-İmmün Glomerülonefrit, patolojik ve klinik olarak 'İmmünfloresanda antikor çökeltisi izlenmeyen (pauci-immün) nekrotizan kresentik GN.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Kronik böbrek yetmezliğinde kural olarak böbrek boyutları küçülürken; nefrotik sendrom ve ilerleyici böbrek fonksiyon kaybına rağmen böbreklerin normalden büyük (nefromegali) kalması Renal Amiloidoz ve erken/orta evre Diyabetik Nefropatiye özgü bir paradokstur. Olgudaki masif nefrotik tablo ve bilateral nefromegali öncelikle renal amiloidozu düşündürür."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-17",
+    "id": "prac-sis-017",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 17,
-    "slideTitle": "Granülomatöz Polianjiyitis (Wegener) ve c-ANCA (PR3)",
+    "slideTitle": "Hızlı İlerleyen Glomerülonefrit (RPGN) ve Kresentik GN Mimarisi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Granülomatöz Polianjiyitis (Wegener) ve c-ANCA (PR3)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Hızlı İlerleyen Glomerülonefrit (RPGN) tablosunda böbrek biyopsisinde izlenen kresentlerin (hilallerin) patogenezinde Bowman boşluğuna sızarak parietal epitel proliferasyonunu başlatan temel molekül ve kresenti oluşturan hücresel bileşenler aşağıdakilerin hangisinde doğru verilmiştir?",
     "options": [
-      "A) Üst/alt solunum yolu nekrotizan granülomları, kavitasyon ve kresentik nefrit.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Albümin / Podositler ve endotel hücreleri",
+      "B) Fibrin / Parietal epitel hücreleri ve makrofajlar",
+      "C) İmmünglobulin A / Mezangiyal hücreler ve nötrofiller",
+      "D) Kompleman C5b-9 / Tübül epiteli ve bazofiller",
+      "E) Tip IV kolajen / Yalnızca fibroblastlar"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Granülomatöz Polianjiyitis (Wegener) ve c-ANCA (PR3), patolojik ve klinik olarak 'Üst/alt solunum yolu nekrotizan granülomları, kavitasyon ve kresentik nefrit.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Glomerüler kapiller duvar nekrozu ve yırtılması sonucu Bowman boşluğuna plazmadan Fibrin sızar. Fibrin uyarısıyla Bowman kapsülü parietal epitel hücreleri hızla çoğalır ve dolaşımdan gelen monosit/makrofajlarla birleşerek hücresel kresenti (hilal) oluşturur."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-18",
+    "id": "prac-sis-018",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 18,
-    "slideTitle": "Mikroskopik Polianjiyitis ve p-ANCA (MPO)",
+    "slideTitle": "Goodpasture Sendromu (Anti-GBM Hastalığı): Tip I Kresentik GN",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Mikroskopik Polianjiyitis ve p-ANCA (MPO)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Öksürükle kan tükürme (hemoptizi) ve idrarda çay rengi bulanıklık yakınmasıyla acil servise getirilen 22 yaşındaki bir sigara kullanıcısında oligüri ve yüksek serum kreatinini saptanmıştır. Yapılan böbrek biyopsisinde kresentik glomerülonefrit izlenmiş ve immünfloresan mikroskopisinde glomerüler bazal membran boyunca homojen, kesintisiz LİNEER IgG birikimi tespit edilmiştir. Bu hasta için en olası tanı ve otoantikorların hedefi olan yapı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Granülomsuz sistemik nekrotizan vaskülit ve hızlı ilerleyen böbrek yetmezliği.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Granülomatozisli polianjiyit / Proteinaz 3",
+      "B) Goodpasture sendromu / Tip IV kolajen alfa-3 zinciri NC1 domeni",
+      "C) Mikroskopik polianjiyit / Miyeloperoksidaz",
+      "D) Lupus nefriti Evre IV / Çift sarmallı DNA (dsDNA)",
+      "E) Post-enfeksiyöz GN / Streptokok pirojenik ekzotoksin B"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Mikroskopik Polianjiyitis ve p-ANCA (MPO), patolojik ve klinik olarak 'Granülomsuz sistemik nekrotizan vaskülit ve hızlı ilerleyen böbrek yetmezliği.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Akciğer kanaması (hemoptizi) ve akut kresentik glomerülonefrit tablosunda böbrek biyopsisinde glomerüler bazal membran boyunca kesintisiz LİNEER IgG pozitifliği Goodpasture sendromuna (Anti-GBM hastalığı) patognomoniktir. Otoantikorlar Tip IV kolajenin alfa-3 zincirinin NC1 domenine karşı gelişir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-19",
+    "id": "prac-sis-019",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 19,
-    "slideTitle": "Trombotik Mikroanjiyopatiler (TMA): Ortak Patoloji",
+    "slideTitle": "Sistemik Vaskülitler ve Pauci-İmmün Kresentik GN: ANCA İlişkili Glomerülonefrit",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Trombotik Mikroanjiyopatiler (TMA): Ortak Patoloji' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İnatçı pürülan sinüzit, akciğer grafisinde bilateral kaviter nodüller ve hızla ilerleyen böbrek yetmezliği saptanan 50 yaşındaki bir hastanın böbrek biyopsisinde glomerüllerde yaygın hücresel kresentler izlenmiş, ancak immünfloresan mikroskopisinde immünglobulin ve kompleman birikimi saptanmamıştır (pauci-immün). Bu hasta için en olası tanı ve pozitif çıkması beklenen serolojik belirteç aşağıdakilerden hangisidir?",
     "options": [
-      "A) Endotel hasarı, trombosit mikrotrombüsleri, kapiller lümen tıkanması ve şistositler.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Goodpasture sendromu / Anti-GBM antikoru",
+      "B) Mikroskopik polianjiyit / Anti-nükleer antikor (ANA)",
+      "C) Granülomatozisli polianjiyit (GPA) / c-ANCA (PR3-ANCA)",
+      "D) Henoch-Schönlein purpurası / Serum IgA düzeyi",
+      "E) Sistemik skleroz / Anti-Scl-70 antikoru"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Trombotik Mikroanjiyopatiler (TMA): Ortak Patoloji, patolojik ve klinik olarak 'Endotel hasarı, trombosit mikrotrombüsleri, kapiller lümen tıkanması ve şistositler.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Kaviter akciğer lezyonları, sinüzit (üst solunum yolu nekrotizan granülomları) ve böbrekte immünfloresanda depozit göstermeyen (pauci-immün) kresentik glomerülonefrit tablosu klasik 'Granülomatozisli Polianjiyit'tir (GPA / eski adıyla Wegener). Hastaların %90'ından fazlasında proteinaz 3'e karşı gelişen c-ANCA (PR3-ANCA) pozitiftir."
   },
   {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-20",
+    "id": "prac-sis-020",
     "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
     "slideNumber": 20,
-    "slideTitle": "Hemolitik Üremik Sendrom (HÜS): Shiga Toksin / EHEC",
+    "slideTitle": "Trombotik Mikroanjiyopatiler (TMA): Ortak Patogenez ve Doku Hasarı Mimarisi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Hemolitik Üremik Sendrom (HÜS): Shiga Toksin / EHEC' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Ani başlayan oligüri, sarılık ve peteşi yakınmasıyla başvuran bir hastada hemoglobin 7.8 g/dL, trombosit sayısı 28.000/mm³, serum kreatinini 3.8 mg/dL saptanmıştır. Direkt Coombs testi negatif olan hastanın periferik kan yaymasında yaygın miğfer hücreleri ve parçalanmış eritrositler (şistositler) izlenmiştir. Bu hastada eritrosit parçalanmasına ve trombositopeniye yol açan temel patolojik süreç aşağıdakilerden hangisidir?",
     "options": [
-      "A) Çocuklarda E. coli O157:H7 kanlı ishali sonrası akut böbrek hasarı, trombositopeni ve MAHA.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Dalakta otoantikor aracılı ekstravasküler opsonizasyon",
+      "B) Kemik iliğinde megakaryosit aplazisi",
+      "C) Glomerüler ve mikrovasküler lümende oluşan trombosit-fibrin mikrotrombüsleri",
+      "D) Eritrosit membranında spektrin ve ankirin genetik mutasyonu",
+      "E) Glukoz-6-fosfat dehidrogenaz enzimi eksikliğine bağlı Heinz cisimcikleri"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Hemolitik Üremik Sendrom (HÜS): Shiga Toksin / EHEC, patolojik ve klinik olarak 'Çocuklarda E. coli O157:H7 kanlı ishali sonrası akut böbrek hasarı, trombositopeni ve MAHA.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-21",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
-    "slideNumber": 21,
-    "slideTitle": "Atipik HÜS ve Kompleman Regülasyon Defektleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Atipik HÜS ve Kompleman Regülasyon Defektleri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) Faktör H, Faktör I veya CD46 mutasyonları sonucu kontrolsüz kompleman aktivasyonu.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Atipik HÜS ve Kompleman Regülasyon Defektleri, patolojik ve klinik olarak 'Faktör H, Faktör I veya CD46 mutasyonları sonucu kontrolsüz kompleman aktivasyonu.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-sistemik-hastaliklar-bobrek-hasari-pq-22",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı",
-    "slideNumber": 22,
-    "slideTitle": "Trombotik Trombositopenik Purpura (TTP): ADAMTS13 Defekti",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Hastalıklarda Böbrek Hasarı kapsamında 'Trombotik Trombositopenik Purpura (TTP): ADAMTS13 Defekti' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) vWF parçalayan ADAMTS13 metaloproteinaz eksikliği; multimerik vWF trombüsleri ve nörolojik bulgular.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Trombotik Trombositopenik Purpura (TTP): ADAMTS13 Defekti, patolojik ve klinik olarak 'vWF parçalayan ADAMTS13 metaloproteinaz eksikliği; multimerik vWF trombüsleri ve nörolojik bulgular.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Coombs negatif hemolitik anemi, trombositopeni ve şistosit varlığı 'Mikroanjiyopatik Hemolitik Anemi'yi (MAHA / TMA) gösterir. TMA tablosunda mikrovasküler endotel hasarı sonucu kapiller lümenlerde oluşan trombosit ve fibrin mikrotrombüsleri; hem trombositleri tüketerek trombositopeniye yol açar hem de lümenden geçen eritrositleri mekanik olarak parçalayarak şistositleri oluşturur."
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "totalQuestions": 1094,
+  "totalQuestions": 1096,
   "totalChunks": 11,
   "updatedAt": "2026-10-03",
   "description": "Öğren sayfasındaki ders içeriklerinden üretilmiş özgün çalışma ve pekiştirme soruları veritabanı (çıkmış sorulardan bağımsızdır).",
@@ -165,8 +165,7 @@
         "learn-urogenital-tumorlerde-genetik",
         "learn-bebek-beslenmesi",
         "learn-enfeksiyon-temel-kavramlar",
-        "learn-enfeksiyon-epidemiyoloji",
-        "learn-halk-sagligi-tarihcesi-ve"
+        "learn-enfeksiyon-epidemiyoloji"
       ],
       "disciplines": [
         "Tıbbi Patoloji",
@@ -178,7 +177,7 @@
     {
       "chunkId": "chunk_11",
       "filename": "chunk_11.json",
-      "questionCount": 94,
+      "questionCount": 96,
       "decksCovered": [
         "learn-halk-sagligi-tarihcesi-ve",
         "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",

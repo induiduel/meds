@@ -1,5 +1,43 @@
 [
   {
+    "id": "prac-gp-13",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Ağır Metal Toksisitesi: Kurşun Patolojisi ve İntoksikasyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Eski boyalı bir evde yaşayan, karın ağrısı ve dikkat dağınıklığı şikayetiyle getirilen 4 yaşındaki çocuğun kan sayımında mikrositer anemi saptanıyor. Periferik yaymasında eritrositler içinde yaygın bazofilik noktalanma (basophilic stippling) izlenen bu çocukta patolojiden sorumlu ağır metal ve inhibe olan enzim ikilisi hangisidir?",
+    "options": [
+      "A) Cıva - Üroporfirinojen dekarboksilaz",
+      "B) Kurşun - Delta-aminolevülinik asit (ALA) dehidrataz",
+      "C) Arsenik - Tirozinaz",
+      "D) Kadmiyum - Ksantin oksidaz",
+      "E) Demir - Glukoz-6-fosfat dehidrogenaz"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kurşun intoksikasyonunda ALA dehidrataz ve ferroşelataz enzimleri inhibe olur; kanda serbest protoporfirin artar ve periferik yaymada ribozomal agregatlara bağlı bazofilik noktalanma tipiktir."
+  },
+  {
+    "id": "prac-gp-14",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 14,
+    "slideTitle": "Ağır Metal Toksisitesi: Cıva, Arsenik ve Kadmiyum Patolojileri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Yıllarca kuyu suyu içen bir hastada avuç içlerinde hiperkeratotik plaklar, tırnaklarda beyaz çizgilenmeler (Mees çizgileri) ve ciltte skuamöz hücreli karsinom gelişiyor. Karaciğer ultrasonunda kitle saptanan hastanın biyopsisinde hepatik anjiyosarkom tanısı konuyor. Bu tabloya yol açan en muhtemel çevresel toksin hangisidir?",
+    "options": [
+      "A) Kurşun",
+      "B) Arsenik",
+      "C) Kadmiyum",
+      "D) Cıva",
+      "E) Berilyum"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Palmar hiperkeratoz, Mees çizgileri, kutanöz skuamöz hücreli karsinom ve karaciğerde anjiyosarkom birlikteliği kronik Arsenik maruziyetinin klasik klinikopatolojik spektrumudur."
+  },
+  {
     "id": "prac-gp-15",
     "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
     "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
@@ -2220,43 +2258,5 @@
     ],
     "correctAnswer": 0,
     "explanation": "Doğru yanıt A seçeneğidir. İntravazasyon ve Damar İçi Dolaşım Dinamikleri, patolojik olarak 'Tümör embolisi, trombosit kılıfı ile immün sistemden korunma ve anoikis direnci.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
-  },
-  {
-    "id": "km-pq-17",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 17,
-    "slideTitle": "Ekstravazasyon ve Organ Tropizmi (Seed and Soil)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Karsinojenezin moleküler temelleri kapsamında 'Ekstravazasyon ve Organ Tropizmi (Seed and Soil)' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Paget'nin tohum ve toprak hipotezi, kemokin reseptörleri (CXCR4-CXCL12) ve metastaz kolonizasyonu.",
-      "B) Hücre zarında sodyum birikimi",
-      "C) Lizozomların kendiliğinden kaybolması",
-      "D) Ribozomların tamamen erimesi",
-      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Ekstravazasyon ve Organ Tropizmi (Seed and Soil), patolojik olarak 'Paget'nin tohum ve toprak hipotezi, kemokin reseptörleri (CXCR4-CXCL12) ve metastaz kolonizasyonu.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
-  },
-  {
-    "id": "km-pq-18",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 18,
-    "slideTitle": "İmmün Kaçış Mekanizmaları: PD-1/PD-L1 ve CTLA-4",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Karsinojenezin moleküler temelleri kapsamında 'İmmün Kaçış Mekanizmaları: PD-1/PD-L1 ve CTLA-4' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) T-hücreli sitotoksisiteden kaçış, antijen kaybı ve immünosüpresif mikroçevre.",
-      "B) Hücre zarında sodyum birikimi",
-      "C) Lizozomların kendiliğinden kaybolması",
-      "D) Ribozomların tamamen erimesi",
-      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. İmmün Kaçış Mekanizmaları: PD-1/PD-L1 ve CTLA-4, patolojik olarak 'T-hücreli sitotoksisiteden kaçış, antijen kaybı ve immünosüpresif mikroçevre.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
   }
 ]
