@@ -640,8 +640,8 @@ async function callClientGeminiPool(
   for (let i = 0; i < freeGeminiPool.length; i++) {
     const currentKey = freeGeminiPool[i];
     const candidateModels = (model && model.startsWith('gemini'))
-      ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
-      : ['gemini-3.8-flash'];
+      ? [model, 'gemini-3.7-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
+      : ['gemini-3.7-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.8-flash'];
 
     for (const m of candidateModels) {
       try {
@@ -671,33 +671,41 @@ async function callClientGeminiPool(
         lastErr = err;
         const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
         if (isQuota) {
-          clientGeminiQuotaCooldownUntil = Date.now() + 5 * 60 * 1000;
-          console.warn(`[Client Gemini] ⚠️ ${currentKey.label} (${m}) kotaya takıldı (429).`);
-          break;
+          console.warn(`[Client Gemini] ⚠️ ${currentKey.label} (${m}) kotaya takıldı (429). Alternatif modele geçiliyor...`);
         }
       }
     }
   }
 
   if (CLIENT_BILLED_GEMINI_KEY && CLIENT_BILLED_GEMINI_KEY.key) {
-    try {
-      const ai = new GoogleGenAI({ apiKey: CLIENT_BILLED_GEMINI_KEY.key });
-      const geminiRes = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
-        contents: prompt,
-        config: isJson ? { responseMimeType: 'application/json' } : undefined
-      });
-      const text = geminiRes.text || (isJson ? '{}' : '');
-      return {
-        text,
-        providerUsed: 'Google Gemini (Faturalı)',
-        planUsed: `${CLIENT_BILLED_GEMINI_KEY.label} (gemini-3.8-flash)`
-      };
-    } catch (bErr: any) {
-      lastErr = bErr;
+    for (const bm of ['gemini-3.7-flash', 'gemini-3.5-flash', 'gemini-3.8-flash']) {
+      try {
+        const ai = new GoogleGenAI({ apiKey: CLIENT_BILLED_GEMINI_KEY.key });
+        const configPayload: any = {};
+        if (isJson) {
+          configPayload.responseMimeType = 'application/json';
+        }
+        if (systemInstruction) {
+          configPayload.systemInstruction = systemInstruction;
+        }
+        const geminiRes = await ai.models.generateContent({
+          model: bm,
+          contents: prompt,
+          config: configPayload
+        });
+        const text = geminiRes.text || (isJson ? '{}' : '');
+        return {
+          text,
+          providerUsed: 'Google Gemini (Faturalı)',
+          planUsed: `${CLIENT_BILLED_GEMINI_KEY.label} (${bm})`
+        };
+      } catch (bErr: any) {
+        lastErr = bErr;
+      }
     }
   }
 
+  clientGeminiQuotaCooldownUntil = Date.now() + 5 * 60 * 1000;
   throw lastErr || new Error('Google Gemini modelleri yanıt vermedi.');
 }
 
@@ -823,7 +831,7 @@ export async function callClientResilientAi(options: {
         fallbackUsed: true
       };
     } else {
-      const geminiRes = await callClientGeminiPool(prompt, customGeminiKey, 'gemini-3.8-flash', isJson, systemInstruction);
+      const geminiRes = await callClientGeminiPool(prompt, customGeminiKey, 'gemini-3.7-flash', isJson, systemInstruction);
       console.log(`[Client AI Multi-Provider] ✓ 2. DENEME (Yedek Google Gemini) başarıyla tamamlandı!`);
       return {
         text: geminiRes.text,

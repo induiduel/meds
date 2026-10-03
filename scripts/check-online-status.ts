@@ -241,32 +241,39 @@ async function testAiLimits(): Promise<void> {
   const groqKey = process.env.GROQ_API_KEY || '';
   if (groqKey && groqKey.startsWith('gsk_')) {
     try {
-      const gRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${groqKey}`,
-        },
-        body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
-          messages: [{ role: 'user', content: 'Ping' }],
-          max_tokens: 5,
-        })
-      });
-      if (gRes.ok) {
-        summary.aiKeysStatus.push({
-          label: '3. Sıra (Groq Cloud Llama 3.3 70B)',
-          ok: true,
-          status: 'Aktif & Yedek Hazır (Ücretsiz & Sınırsız)',
-          code: 200,
+      let groqSuccess = false;
+      for (const gm of ['openai/gpt-oss-120b', 'qwen/qwen3.8-27b', 'llama-3.3-70b-versatile']) {
+        const gRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${groqKey}`,
+          },
+          body: JSON.stringify({
+            model: gm,
+            messages: [{ role: 'user', content: 'Ping' }],
+            max_tokens: 5,
+          }),
+          signal: AbortSignal.timeout(5000),
         });
-        summary.aiOk = true;
-        console.log(`   ${GREEN}✓ 3. Sıra (Groq Cloud): Aktif (200 OK)${RESET}`);
-      } else {
+        if (gRes.ok) {
+          summary.aiKeysStatus.push({
+            label: `3. Sıra (Groq Cloud ${gm})`,
+            ok: true,
+            status: 'Aktif & Yedek Hazır (Ücretsiz & Sınırsız)',
+            code: 200,
+          });
+          summary.aiOk = true;
+          console.log(`   ${GREEN}✓ 3. Sıra (Groq Cloud ${gm}): Aktif (200 OK)${RESET}`);
+          groqSuccess = true;
+          break;
+        }
+      }
+      if (!groqSuccess) {
         summary.aiKeysStatus.push({
           label: '3. Sıra (Groq Cloud)',
           ok: false,
-          status: `Hata (${gRes.status})`,
+          status: 'Tüm Groq modelleri kota veya bağlantı hatası verdi',
         });
       }
     } catch (e: any) {
@@ -283,6 +290,48 @@ async function testAiLimits(): Promise<void> {
       status: 'Tanımlanmamış (GROQ_API_KEY boş)',
     });
     console.log(`   ${CYAN}ℹ️ 3. Sıra (Groq Cloud): Anahtar henüz tanımlanmamış.${RESET}`);
+  }
+
+  // 4. Muse Spark 1.3 Free Testi (Son Çare / Tüm Limitler Dolunca Otomatik Kurtarma)
+  const museKey = process.env.MUSE_SPARK_API_KEY || process.env.OPENCODE_API_KEY || process.env.OPENROUTER_API_KEY || '';
+  const museUrl = process.env.MUSE_SPARK_BASE_URL || 'https://opencode.ai/zen/v1';
+  try {
+    const mHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (museKey) mHeaders['Authorization'] = `Bearer ${museKey}`;
+    const mRes = await fetch(`${museUrl}/chat/completions`, {
+      method: 'POST',
+      headers: mHeaders,
+      body: JSON.stringify({
+        model: 'muse-spark-1.3-contributor-free',
+        messages: [{ role: 'user', content: 'Ping' }],
+        max_tokens: 5,
+      }),
+      signal: AbortSignal.timeout(5000),
+    });
+    if (mRes.ok) {
+      summary.aiKeysStatus.push({
+        label: '4. Sıra (Muse Spark 1.3 Free)',
+        ok: true,
+        status: 'Aktif & Kota Kurtarıcı Hazır',
+        code: 200,
+      });
+      summary.aiOk = true;
+      console.log(`   ${GREEN}✓ 4. Sıra (Muse Spark 1.3 Free): Aktif & Kota Kurtarıcı Hazır (200 OK)${RESET}`);
+    } else {
+      summary.aiKeysStatus.push({
+        label: '4. Sıra (Muse Spark 1.3 Free)',
+        ok: false,
+        status: `Hazırda Bekliyor (${mRes.status})`,
+      });
+      console.log(`   ${CYAN}ℹ️ 4. Sıra (Muse Spark 1.3 Free): Entegre & Hazırda Bekliyor (Limitler dolunca devreye girer)${RESET}`);
+    }
+  } catch (e: any) {
+    summary.aiKeysStatus.push({
+      label: '4. Sıra (Muse Spark 1.3 Free)',
+      ok: false,
+      status: `Hazırda Bekliyor (${e.message})`,
+    });
+    console.log(`   ${CYAN}ℹ️ 4. Sıra (Muse Spark 1.3 Free): Entegre & Hazırda Bekliyor (Limitler dolunca devreye girer)${RESET}`);
   }
 }
 

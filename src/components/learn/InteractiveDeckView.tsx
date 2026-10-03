@@ -1961,52 +1961,6 @@ const SlideCanvas: React.FC<{
           </section>
         )}
 
-        {/* 5. High-yield action bar (Questions, Flashcards, Notes) */}
-        <div className="rounded-xl border border-line bg-gradient-to-r from-accent-soft/20 via-white to-transparent p-2.5 sm:p-3 flex items-center justify-between gap-3 flex-wrap">
-          <div className="flex items-center gap-2 text-[12px] sm:text-[12.5px] font-medium text-ink-2">
-            <Sparkles className="w-3.5 h-3.5 text-accent shrink-0" />
-            <span>Bu konu için <strong>{flashcards.length} akıl kartı</strong> ve <strong>{(slide.relatedQuestions || []).length} çıkmış soru</strong> slayt üzerine yerleştirildi.</span>
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            {flashcards.length > 0 && onOpenFlashcards && (
-              <button
-                type="button"
-                onClick={onOpenFlashcards}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <BrainCircuit className="w-3.5 h-3.5" />
-                <span>Akıl Kartları ({flashcards.length})</span>
-              </button>
-            )}
-            {(slide.relatedQuestions || []).length > 0 && (
-              <button
-                type="button"
-                onClick={() => {
-                  const el = document.getElementById(`slide-questions-${slide.slideNumber}`);
-                  if (el) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                  } else if (onOpenQuestions) {
-                    onOpenQuestions();
-                  }
-                }}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
-              >
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Çıkmış Sorular ({(slide.relatedQuestions || []).length})</span>
-              </button>
-            )}
-            {onOpenNotes && (
-              <button
-                type="button"
-                onClick={onOpenNotes}
-                className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-ink-2 hover:text-ink text-[11.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <BookOpen className="w-3.5 h-3.5 text-accent" />
-                <span>Ders Notu Özeti</span>
-              </button>
-            )}
-          </div>
-        </div>
 
         {/* 6. Core content: formulas, tables, bullets, infographics */}
         <div className={`grid grid-cols-1 ${c.table && c.table.headers?.length > 0 ? '' : 'lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]'} gap-4 sm:gap-5 lg:gap-7 items-start`}>
@@ -2436,11 +2390,19 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
     ]
       .filter(Boolean)
       .join('\n');
+    // 1. Try server RAG endpoint first
     try {
       const res = await fetch('/api/rag/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: `${text}\n\n[Slayt ve ders bağlamı]:\n${ctx}`, discipline: deck.discipline, committeeId: deck.committee, mode: 'qa', limit: 4 }),
+        body: JSON.stringify({
+          query: `${text}\n\n[Slayt ve ders bağlamı]:\n${ctx}`,
+          discipline: deck.discipline,
+          committeeId: deck.committee,
+          mode: 'qa',
+          limit: 4,
+          customModel: 'gemini-3.7-flash',
+        }),
       });
       if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
         const data = await res.json();
@@ -2452,10 +2414,33 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
         }
       }
     } catch {
-      /* network failure: reported below */
+      /* network failure or server error: fall back to resilient client AI below */
     }
-    // No fallback summary: just tell the student it failed and let them retry
-    toast.error('AI yanıt veremedi', 'Sunucuya ulaşılamadı. Biraz sonra tekrar dene.', { label: 'Tekrar dene', onClick: () => ask(text) });
+
+    // 2. Resilient Client-Side Multi-Provider Fallback (Gemini Pool + Groq Cloud)
+    try {
+      const { callClientResilientAi } = await import('../../services/api');
+      const aiPrompt = `Öğrencinin Sorusu: "${text}"\n\n[Ders ve Slayt Bağlamı]:\n${ctx}\n\nLütfen bu ders notu ve slayt bağlamına sadık kalarak net, açıklayıcı ve sınav odaklı bir yanıt ver.`;
+      const clientRes = await callClientResilientAi({
+        prompt: aiPrompt,
+        model: 'gemini-3.7-flash',
+        responseFormat: 'text',
+        systemInstruction: 'Sen Tıp Fakültesi öğrencilerine ders slaytları üzerinden rehberlik eden kıdemli bir tıp akademisyenisin. Slayt içeriğine dayanarak doğru, net ve öğretici cevaplar ver.',
+      });
+
+      if (clientRes && clientRes.text) {
+        setAnswer(clientRes.text);
+        setRefs([
+          { title: `${deck.title} — Slayt #${slide.slideNumber} (${deck.discipline})` }
+        ]);
+        setLoading(false);
+        return;
+      }
+    } catch (clientErr: any) {
+      console.warn('Client resilient AI fallback failed:', clientErr);
+    }
+
+    toast.error('AI yanıt veremedi', 'Bağlantı kurulamadı. Lütfen tekrar deneyin.', { label: 'Tekrar dene', onClick: () => ask(text) });
     setLoading(false);
   };
 
