@@ -1,11 +1,315 @@
 [
   {
+    "id": "prac-bobrek-001",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 1,
+    "slideTitle": "Böbrek Neoplazmlarına Genel Giriş ve Renal Kortikal Adenomlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek ve üriner sistem neoplazmlarının epidemiyolojisi, sıklığı ve kortikal papiller adenomların patolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Alt idrar yolu neoplazmları böbrek parankim tümörlerine göre belirgin şekilde daha nadir izlenir",
+      "B) Otopsilerde sık saptanan küçük kortikal papiller adenomlar sitogenetik olarak Trizomi 7 ve 17 anomalilerini taşır",
+      "C) Böbrek kortikal adenomları morfolojik ve moleküler açıdan berrak hücreli karsinomun doğrudan öncülüdür",
+      "D) Erişkinlerde böbreğin en sık primer malign neoplazmı medulladaki toplayıcı kanallardan köken alan Bellini karsinomudur",
+      "E) Çapı 0,5 cm altındaki papiller kortikal adenomlar erken dönemde renal ven invazyonu yaparak hızla metastaz geliştirir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Otopsi serilerinde erişkinlerin %40'ına varan oranda rastlanan <0,5 cm boyutundaki renal kortikal papiller adenomlar, papiller renal hücreli karsinom ile ortak sitogenetik değişiklikleri (özellikle Trizomi 7, Trizomi 17 ve Y kaybı) paylaşırlar ve papiller karsinomun mikroskopik öncülleri olarak kabul edilirler.\n\nA yanlıştır; alt idrar yolu (özellikle mesane) tümörleri böbrek parankimal tümörlerinden yaklaşık 2 kat daha yaygındır.\nC yanlıştır; papiller adenomlar berrak hücreli değil, papiller renal karsinom ile morfolojik ve sitogenetik benzerlik gösterir.\nD yanlıştır; böbreğin en sık primer malignitesi kortikal tübüler epitelden kaynaklanan renal hücreli karsinomdur (%80-85), toplayıcı kanal karsinomu <%1'dir.\nE yanlıştır; bu adenomlar benign kabul edilir, metastaz yapmazlar ve klinik olarak sessizdirler."
+  },
+  {
+    "id": "prac-bobrek-002",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 2,
+    "slideTitle": "Renal Hücreli Karsinom (RCC): Epidemiyoloji ve Demografik Özellikler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Renal Hücreli Karsinomun (RCC) epidemiyolojik, demografik ve mortalite özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Primer böbrek malign neoplazmlarının yaklaşık %80-85'ini oluşturur",
+      "B) Tümörün histogenetik kökeni renal korteksteki tübüler epitel hücreleridir",
+      "C) Cinsiyet dağılımında belirgin kadın baskınlığı olup kadın/erkek oranı 3:1'dir",
+      "D) En sık 6. ve 7. dekatlarda (60-70 yaş aralığında) pik yapar",
+      "E) Biyolojik agresifliği ve tedavi direnci nedeniyle tanı alan hastaların yaklaşık %40'ı kaybedilir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir çünkü RCC kadınlarda değil, belirgin şekilde erkeklerde daha sık görülür; erkek/kadın oranı yaklaşık 2:1 (ikiye bir) düzeyindedir.\n\nA seçeneği doğrudur; böbreğin primer malign neoplazmlarının %80-85'ini oluşturur.\nB seçeneği doğrudur; tümör kortikal renal tübüler epitelden köken alır.\nD seçeneği doğrudur; 60-70 yaş aralığında zirve yapar.\nE seçeneği doğrudur; olguların yaklaşık %40'ı hastalık nedeniyle hayatını kaybetmektedir."
+  },
+  {
+    "id": "prac-bobrek-003",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 3,
+    "slideTitle": "Renal Hücreli Karsinomda Çevresel ve Yaşam Tarzı Risk Faktörleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Renal hücreli karsinomun (RCC) etyolojik risk faktörleri ve karsinojenik maruziyetleri ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Tütün (sigara) kullanımı — Kanıtlanmış en güçlü değiştirilebilir risk faktörü",
+      "B) Mesleki kadmiyum maruziyeti — Proksimal tübülde biriken karsinojenik ağır metal",
+      "C) Obezite — Hiperinsülinemi ve IGF-1 artışı üzerinden tübüler mitojenik uyarım",
+      "D) Hipertansiyon — İlaçtan bağımsız kronik mikrovasküler iskemi ve lipid peroksidasyonu",
+      "E) Alkol tüketimi — Renal ven endotelinde trombüs oluşturarak 30 kat kanser artışı"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E seçeneğidir çünkü alkol tüketiminin renal ven trombozu yaparak 30 kat RCC riski artırdığına dair hiçbir bilimsel veya patolojik veri yoktur (30 kat risk artışı diyaliz hastalarındaki edinilmiş kistik böbrek hastalığına özgüdür).\n\nA seçeneği doğrudur; sigara RCC için en güçlü değiştirilebilir risk faktörüdür.\nB seçeneği doğrudur; kadmiyum renal karsinojenezde en önemli mesleki ağır metaldir.\nC seçeneği doğrudur; obezite IGF-1, östrojen ve kronik inflamasyon üzerinden riski artırır.\nD seçeneği doğrudur; hipertansiyon bağımsız bir risk faktörüdür."
+  },
+  {
+    "id": "prac-bobrek-004",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 4,
+    "slideTitle": "Edinilmiş Kistik Böbrek Hastalığı (ACKD) ve Diyaliz Zemininde RCC Riski",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Sekiz yıldır hemodiyaliz programında olan 58 yaşındaki bir kronik böbrek yetmezliği hastasının rutin kontrolünde bilateral atrofik böbreklerinde çok sayıda kortikal kist ve sol böbrek kist duvarında solid kitle saptanıyor. Biyopside karsinom tanısı konulan bu hastanın patolojik süreciyle ilgili aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
+    "options": [
+      "A) Hastada altta yatan durum Edinilmiş Kistik Böbrek Hastalığı olup, RCC riski normale göre yaklaşık 30 kat artmıştır",
+      "B) Bu kistler otozomal dominant polikistik böbrek hastalığı (PKD1 mutasyonu) zemininde gelişmiştir",
+      "C) Diyaliz süresinin bu kistlerin ve karsinomun patogenezi ile herhangi bir epidemiyolojik ilişkisi yoktur",
+      "D) Diyaliz hastalarında gelişen böbrek kistlerinden sadece benign anjiyomiyolipom köken alabilir, karsinom gelişemez",
+      "E) Kist duvarında gelişen bu karsinomlar daima medüller toplayıcı kanallardan kaynaklanır ve oksalat içermez"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Kronik hemodiyaliz alan hastalarda son dönem böbrek zemininde 'Edinilmiş Kistik Böbrek Hastalığı' (ACKD) gelişir ve bu hastalarda kist epiteli atipikleşerek renal hücreli karsinom gelişme riskini yaklaşık 30 kat artırır.\n\nB yanlıştır; edinilmiş kistik hastalık edinseldir, herediter otozomal dominant polikistik böbrek hastalığı değildir.\nC yanlıştır; kist gelişimi diyaliz süresi ile doğrudan ilişkilidir (5-10 yılda %80-90'a çıkar).\nD yanlıştır; kist epitelinden renal hücreli karsinom gelişir, AML ise perisit kökenli mezenkimal bir tümördür.\nE yanlıştır; ACKD ile ilişkili karsinomlar sıklıkla kortikal tübül kaynaklı olup kalsiyum oksalat kristalleri içerir."
+  },
+  {
+    "id": "prac-bobrek-005",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 5,
+    "slideTitle": "Renal Hücreli Karsinomda Moleküler ve Histopatolojik Sınıflama",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Renal hücreli karsinomun üç ana histopatolojik alt tipi, nefron segment kökenleri ve moleküler profilleri ile ilgili aşağıdaki eşleştirmelerden hangisi KESİNLİKLE DOĞRUDUR?",
+    "options": [
+      "A) Berrak Hücreli RCC — Distal tübül epiteli — Trizomi 7 ve 17",
+      "B) Papiller RCC — Proksimal tübül epiteli — 3p25 VHL mutasyonu",
+      "C) Kromofob RCC — Toplayıcı kanal interkale hücresi — Aşırı hipodiploidi / çoklu kromozom kaybı",
+      "D) Berrak Hücreli RCC — Henle kulpu epiteli — WT1 delesyonu",
+      "E) Kromofob RCC — Glomerüler podositler — MET reseptör tirozin kinaz mutasyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Kromofob RCC kortikal toplayıcı tübüllerin interkale (ara) hücrelerinden köken alır ve sitogenetik olarak çok sayıda kromozomun eşzamanlı kaybı (aşırı hipodiploidi) ile karakterizedir.\n\nA yanlıştır; Berrak hücreli RCC proksimal tübülden köken alır ve 3p/VHL inaktivasyonu taşır.\nB yanlıştır; Papiller RCC distal tübülden köken alır ve Trizomi 7/17 ile MET aktivasyonu sergiler.\nD yanlıştır; Henle kulpu veya podositlerden bu karsinomlar köken almaz; WT1 Wilms tümörüne özgüdür.\nE yanlıştır; MET mutasyonu papiller RCC'ye özgüdür."
+  },
+  {
+    "id": "prac-bobrek-006",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 6,
+    "slideTitle": "Berrak Hücreli Renal Karsinom (ccRCC): Makroskopik Özellikler ve Büyüme Paterni",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefrektomi materyalinde böbrek korteksinde 7 cm çapında, çevresi fibröz psödokapsülle çevrili, kesit yüzü parlak altın sarısı renkte izlenen, yer yer nekroz ve kanama alanları içeren bir tümör kitlesi saptanıyor. Bu tümörün makroskopik olarak parlak altın sarısı görünmesinden sorumlu olan temel hücresel/biyokimyasal içerik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitoplazmada aşırı miktarda biriken nötral lipidler ve glikojen",
+      "B) Hücre içinde yoğun biriken melanin pigmenti ve hemosiderin granülleri",
+      "C) Tümör hücrelerinin intrasellüler musin ve asidik mukopolisakkarit üretmesi",
+      "D) Hücre sitoplazmasını tıka basa dolduran yoğun matür mitokondri birikimi",
+      "E) Fibröz stromada yaygın amiloid depolanması ve kalsifikasyonlar"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomun (ccRCC) makroskopik olarak parlak altın sarısı / turuncu renkte görünmesinin nedeni, proksimal tübül kökenli tümör hücrelerinin sitoplazmasında olağanüstü miktarda biriken serbest nötral lipidler, kolesterol esterleri ve glikojendir.\n\nB yanlıştır; hemosiderin kahverengi-pas rengi verir, melanin siyah-kahverengidir.\nC yanlıştır; ccRCC musin üretmez.\nD yanlıştır; yoğun mitokondri birikimi onkositoma özgüdür ve tümöre maun kahverengisi renk kazandırır.\nE yanlıştır; amiloidoz sarı parlak renk yapmaz, balmumu kıvamı verir."
+  },
+  {
+    "id": "prac-bobrek-007",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 7,
+    "slideTitle": "Von Hippel-Lindau (VHL) Hastalığı ve ccRCC Birlikteliği",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Otuz beş yaşında bir erkek hastada serebellar kistik kitle ve görme bulanıklığı nedeniyle yapılan incelemelerde serebellar hemanjiyoblastom ve retinal hemanjiyoblastom saptanıyor. Abdominal görüntülemesinde ise her iki böbrekte çok sayıda kist ve bilateral multifokal kortikal solid kitleler tespit ediliyor. Bu hastanın genetik analizinde hangi kromozom bölgesinde ve hangi gende fonksiyon kaybı mutasyonu saptanması beklenir?",
+    "options": [
+      "A) Kromozom 3p25 — VHL geni",
+      "B) Kromozom 7q31 — MET geni",
+      "C) Kromozom 11p13 — WT1 geni",
+      "D) Kromozom 16p13 — TSC2 geni",
+      "E) Kromozom 17p11 — FLCN geni"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Serebellar ve retinal hemanjiyoblastomlar ile bilateral, multifokal berrak hücreli renal karsinom birlikteliği otozomal dominant Von Hippel-Lindau (VHL) hastalığının klasik klinik tablosudur. VHL tümör süpresör geni Kromozom 3p25 lokusunda yer almaktadır.\n\nB yanlıştır; 7q31 MET geni herediter papiller renal karsinomda etkindir.\nC yanlıştır; 11p13 WT1 geni Wilms tümörü (WAGR, Denys-Drash) ile ilişkilidir.\nD yanlıştır; 16p13 TSC2 tüberoz skleroz ve anjiyomiyolipom ile ilişkilidir.\nE yanlıştır; 17p11 FLCN Birt-Hogg-Dubé sendromu ile ilişkilidir."
+  },
+  {
+    "id": "prac-bobrek-008",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 8,
+    "slideTitle": "VHL-HIF-VEGF Patogenetik Sinyal Yolağı ve Anjiyogenez Fırtınası",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Berrak hücreli renal karsinomun (ccRCC) moleküler patogenezinde rol oynayan VHL-HIF sinyal yolağı ile ilgili aşağıdaki biyolojik basamaklardan hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sağlıklı hücrede normoksik koşullarda prolil hidroksilaz enzimleri HIF-1alfa'yı hidroksiller",
+      "B) Fonksiyonel VHL proteini E3 ubikitin ligaz görevi görerek hidroksillenmiş HIF-1alfa'yı proteazomal yıkıma yönlendirir",
+      "C) VHL mutasyonu varlığında HIF-1alfa normoksik koşullarda dahi parçalanamaz ve sitoplazmada birikir",
+      "D) Nükleusa geçen HIF-1alfa doğrudan p53'ü aktive ederek tümör hücresinde apoptozu hızlandırır",
+      "E) Biriken HIF-1alfa; VEGF, PDGF ve GLUT-1 genlerinin aşırı transkripsiyonunu sağlayarak masif anjiyogenezi tetikler"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir çünkü nükleusa geçen HIF-1alfa p53'ü aktive edip apoptozu hızlandırmaz; aksine hücre sağkalımını, anjiyogenezi (VEGF), hücre proliferasyonunu (PDGF), glikolitik metabolizmayı (GLUT-1) ve tümör büyümesini şiddetle destekler.\n\nA seçeneği doğrudur; normokside prolil hidroksilaz HIF-1alfa'yı hidroksiller.\nB seçeneği doğrudur; VHL proteini E3 ubikitin ligaz kompleksi ile proteazomal yıkım sağlar.\nC seçeneği doğrudur; VHL yokluğunda HIF-1alfa normokside bile parçalanamaz.\nE seçeneği doğrudur; VEGF ve PDGF transkripsiyonu ile yoğun sinüzoidal damar ağı gelişir."
+  },
+  {
+    "id": "prac-bobrek-009",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 9,
+    "slideTitle": "Sporadik Berrak Hücreli Karsinomda Kromatin ve Epigenetik Modifikasyonlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Berrak hücreli renal karsinomda (ccRCC) kromozom 3p lokusunda yer alan genler ve hücresel metabolik değişiklikler ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK YANLIŞTIR?",
+    "options": [
+      "A) PBRM1 geni, ccRCC'de VHL'den sonra en sık (%40-50) somatik mutasyona uğrayan kromatin düzenleyici gendir",
+      "B) BAP1 mutasyonu taşıyan ccRCC tümörleri genellikle yüksek nükleer dereceye ve agresif klinik seyire sahiptir",
+      "C) SETD2 geni bir histon metiltransferazı olup kaybı genomik kararsızlığa zemin hazırlar",
+      "D) HIF ve MYC kooperasyonu sonucu mitokondriyal beta-oksidasyon aşırı hızlanır ve hücredeki tüm lipidler tüketilir",
+      "E) Sporadik ccRCC olgularının büyük çoğunluğunda kromozom 3'ün kısa kolunda (3p) genetik kayıp saptanır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir çünkü HIF ve MYC etkisiyle mitokondriyal yağ asidi oksidasyonu hızlanıp lipidler tüketilmez; aksine yağ asidi oksidasyonu baskılanır, sitoplazmada nötral lipidler ve glikojen biriktirilir. Tümörün karakteristik altın sarısı rengi ve berrak sitoplazması bu aşırı lipid birikiminden kaynaklanır.\n\nA seçeneği doğrudur; PBRM1 ccRCC'de %40-50 sıklıkla en sık ikinci mutasyondur.\nB seçeneği doğrudur; BAP1 kaybı agresif gidiş ve yüksek ISUP derecesi ile ilişkilidir.\nC seçeneği doğrudur; SETD2 histon metiltransferazıdır.\nE seçeneği doğrudur; sporadik vakaların >%90'ında 3p kaybı görülür."
+  },
+  {
+    "id": "prac-bobrek-010",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 10,
+    "slideTitle": "Berrak Hücreli Karsinomun Histopatolojisi ve Mikroskopik Mimarisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek rezeksiyon piyesinin histopatolojik incelemesinde; belirgin hücre zarlarına sahip, sitoplazması optik olarak berrak ve saydam görünen, tek biçimli yuvarlak çekirdekli epitel hücrelerinin zengin ince duvarlı sinüzoidal kapiller ağ ile çevrili yuvalar ve kordonlar oluşturduğu saptanıyor. Bu lezyonda hücre sitoplazmasının rutin ışık mikroskobunda optik olarak berrak görünmesinin patolojik mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitoplazmadaki aşırı lipid ve glikojenin doku takibindeki organik çözücülerde erimesi",
+      "B) Hücre içinde yoğun musin salgısının birikerek organelleri kenara itmesi",
+      "C) Hücrelerin aşırı hidropik şişme ve vakuoler dejenerasyon ile lizise uğraması",
+      "D) Sitoplazmada bol miktarda asidik mikroskopik veziküllerin bulunması",
+      "E) Hücre içinde yoğun amiloid fibrillerinin birikerek ışığı yansıtması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomda (ccRCC) sitoplazmanın berrak görünmesi, neoplastik hücrelerin içerdiği bol miktardaki lipid ve glikojenin, rutin doku takibi basamaklarında kullanılan dehidratasyon sıvıları (alkol) ve şeffaflaştırıcılar (ksilol) tarafından eritilerek uzaklaştırılması sonucudur.\n\nB yanlıştır; ccRCC musin salgılamaz, bu berraklık musinden kaynaklanmaz.\nC yanlıştır; bu durum dejeneratif hidropik şişme değil, neoplastik metabolik lipid birikimidir.\nD yanlıştır; mikroskopik veziküller kromofob RCC'ye özgüdür ve Hale boyası ile boyanır.\nE yanlıştır; amiloid ekstrasellüler birikintidir ve kongolu kırmızı ile boyanır."
+  },
+  {
+    "id": "prac-bobrek-011",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 11,
+    "slideTitle": "Berrak Hücreli Karsinomun Yayılım Yolları ve Renal Ven Trombozu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Altmış iki yaşında bir erkek hastada sağ yan ağrısı ve hematüri nedeniyle yapılan bilgisayarlı tomografide sağ böbrek korteksinde 8 cm'lik heterojen kitle, sağ renal ven lümenini dolduran ve vena kava inferior boyunca diyafram seviyesine kadar uzanan solid tümör trombüsü ile akciğerlerde bilateral çok sayıda 'top güllesi' şeklinde yuvarlak metastatik nodüller saptanıyor. Bu hastanın klinik ve patolojik yayılım özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tümörün renal ven ve VCI içine uzanımı RCC için son derece karakteristik bir makrovasküler yayılım biçimidir",
+      "B) Bu tümör sadece lenfatik yolla yayılır, hematojen yolla akciğere yayılması imkansızdır",
+      "C) RCC kemiğe metastaz yaptığında daima yoğun sklerotik osteoblastik lezyonlar oluşturur",
+      "D) VCI tutulumu saptandığında hastada primer tümör kesinlikle Wilms tümörüdür, ccRCC VCI'ye giremez",
+      "E) Renal ven invazyonu gösteren böbrek karsinomları TNM sınıflamasında evre T1a olarak kabul edilir"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Renal hücreli karsinomun en tipik biyolojik yayılım özelliklerinden biri renal vene ve oradan Vena Kava İnferior (VCI) içine katı tümör trombozu kolonu oluşturarak ilerlemesi ve hematojen yolla akciğerlere ('top güllesi' metastazları) yayılmasıdır.\n\nB yanlıştır; RCC esas olarak hematojen yolla yayılır.\nC yanlıştır; RCC kemik metastazları osteoblastik değil, osteolitiktir (kemik yıkıcıdır).\nD yanlıştır; VCI tümör trombüsü erişkinde ccRCC'nin en tipik özelliğidir.\nE yanlıştır; renal ven invazyonu evreyi doğrudan T3a yapar (T1a <4 cm organa sınırlı tümördür)."
+  },
+  {
+    "id": "prac-bobrek-012",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 12,
+    "slideTitle": "Papiller Renal Hücreli Karsinom (pRCC): Hücresel Köken ve Makroskopi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Papiller Renal Hücreli Karsinomun (pRCC) hücresel kökeni, makroskopik morfolojisi ve klinik büyüme özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Nefronun distal kıvrıntılı tübül epitel hücrelerinden köken alır",
+      "B) Tümör odakları sıklıkla multifokal ve bilateral olma eğilimi sergiler",
+      "C) Hücre içi lipid içeriğinin azlığı nedeniyle kesit yüzü ccRCC'ye göre daha mat kahverengimsi renktedir",
+      "D) Kırılgan papiller vasküler yapısı nedeniyle nekroz, kanama ve kistik dejenerasyon alanları sıktır",
+      "E) Proksimal tübülün toplayıcı kanala açılan papillasından kaynaklandığı için daima soliter ve altın sarısıdır"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E seçeneğidir çünkü papiller RCC proksimal tübülden kaynaklanmaz (distal tübülden kaynaklanır), altın sarısı değildir (mat sarı-kahverengidir) ve daima soliter değildir; aksine sıklıkla multifokal ve bilateral odaklarla karakterizedir.\n\nA seçeneği doğrudur; distal kıvrıntılı tübül kökenlidir.\nB seçeneği doğrudur; multifokalite ve bilateralite papiller RCC'nin klasik özelliğidir.\nC seçeneği doğrudur; lipit içeriği ccRCC'den daha düşüktür.\nD seçeneği doğrudur; nekroz, hemoraji ve kistik kavitasyonlar belirgindir."
+  },
+  {
+    "id": "prac-bobrek-013",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 13,
+    "slideTitle": "Papiller RCC Genetiği: Trizomiler ve MET Protoonkogeni",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Ailesinde multipl bilateral böbrek tümörü öyküsü olan 42 yaşındaki bir hastada yapılan genetik analizde kromozom 7q31 lokusunda yer alan bir reseptör tirozin kinaz geninde konstitütif aktive edici mutasyon saptanıyor. Tümör dokusunun sitogenetik analizinde ise Trizomi 7 ve Trizomi 17 tespit ediliyor. Bu hastadaki böbrek tümörünün histopatolojik alt tipi ve patogenezde rol oynayan ilgili onkogen aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Berrak Hücreli RCC — VHL",
+      "B) Papiller RCC — MET",
+      "C) Kromofob RCC — FLCN",
+      "D) Toplayıcı Kanal Karsinomu — RET",
+      "E) Wilms Tümörü — WT1"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Trizomi 7, Trizomi 17 anomalileri ve 7q31 lokusunda kodlanan MET reseptör tirozin kinaz mutasyonları Herediter Papiller Renal Hücreli Karsinomun (HPRC) ve sporadik papiller RCC'nin patognomonik moleküler özellikleridir.\n\nA yanlıştır; ccRCC 3p25 VHL mutasyonu ile gider.\nC yanlıştır; Kromofob RCC 17p11 FLCN ve hipodiploidi ile karakterizedir.\nD yanlıştır; Toplayıcı kanal karsinomu bu genetik profile sahip değildir.\nE yanlıştır; Wilms tümörü 11p13 WT1 delesyonu/mutasyonu taşır."
+  },
+  {
+    "id": "prac-bobrek-014",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 14,
+    "slideTitle": "Papiller RCC Histopatolojisi: Fibrovasküler Korlar ve Psammom Cisimcikleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Elli yaşında bir kadın hastanın böbrek kitle biyopsisinde; fibrovasküler papiller çıkıntılar etrafında dizilmiş kuboidal hücreler, papilla korlarının içinde yoğun lipid fagosite etmiş geniş vakuollü köpüksü makrofaj kümeleri ve çevre dokuda lameller konsantrik distrofik kalsifikasyon odakları (psammom cisimcikleri) izleniyor. Bu hasta için en olası histopatolojik tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Berrak hücreli renal karsinom",
+      "B) Papiller renal hücreli karsinom",
+      "C) Kromofob renal hücreli karsinom",
+      "D) Renal onkositom",
+      "E) Renal anjiyomiyolipom"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Parmak benzeri fibrovasküler papiller korlar, korların içinde lipid yüklü köpüksü (foamy) makrofaj/histiyosit infiltrasyonu ve lameller kalsifiye psammom cisimcikleri Papiller Renal Hücreli Karsinomun (pRCC) klasik histopatolojik triadıdır.\n\nA yanlıştır; ccRCC'de sinüzoidal damarlar etrafında berrak hücre yuvaları görülür, psammom cisimciği beklenmez.\nC yanlıştır; Kromofob RCC'de kalın bitki hücresi sınırları ve raisinoid nükleus izlenir.\nD yanlıştır; Onkositomda granüler eozinofilik hücre yuvaları ve mitokondriler görülür.\nE yanlıştır; Anjiyomiyolipom damar, düz kas ve yağ dokusundan oluşur."
+  },
+  {
+    "id": "prac-bobrek-015",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 15,
+    "slideTitle": "Kromofob Renal Hücreli Karsinom: Köken, Makroskopi ve Morfoloji",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek rezeksiyon materyalinde iyi sınırlı, soluk ten rengi-kahverengi renkte, nekroz ve kanama içermeyen homojen bir kitle saptanıyor. Mikroskopik incelemede; bitki hücrelerini andıran çok belirgin kalın hücre membranları, hafif eozinofilik retiküler sitoplazma, büzüşmüş kuru üzüm benzeri hiperkromatik nükleuslar ve çekirdeklerin etrafında geniş şeffaf perinükleer halolar izleniyor. Bu lezyonun hücresel kökeni ve patolojik tanısı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Proksimal kıvrıntılı tübül epiteli — Berrak hücreli renal karsinom",
+      "B) Distal kıvrıntılı tübül epiteli — Papiller renal karsinom",
+      "C) Kortikal toplayıcı tübül interkale hücresi — Kromofob renal karsinom",
+      "D) Medüller Bellini toplayıcı kanal hücresi — Toplayıcı kanal karsinomu",
+      "E) Primitif metanefrik blastem — Wilms tümörü"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Kortikal toplayıcı tübüllerin interkale (ara) hücrelerinden kaynaklanan, kalın bitki hücresi sınırları, kuru üzüm benzeri (raisinoid) büzüşmüş nükleuslar ve geniş perinükleer halo içeren böbrek tümörü Kromofob Renal Hücreli Karsinomdur (chRCC).\n\nA yanlıştır; ccRCC proksimal tübülden köken alır, zengin sinüzoidal damarlar ve optik olarak boş berrak sitoplazma içerir.\nB yanlıştır; papiller RCC distal tübülden köken alır ve fibrovasküler korlar içerir.\nD yanlıştır; toplayıcı kanal karsinomu medulladan köken alan agresif desmoplastik bir karsinomdur.\nE yanlıştır; Wilms tümörü pediatrik trifazik embriyonel bir tümördür."
+  },
+  {
+    "id": "prac-bobrek-016",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 16,
+    "slideTitle": "Kromofob RCC Özel Boyaları, Sitogenetiği ve Klinik Prognozu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kırk sekiz yaşında bir kadın hastada boyun bölgesinde çok sayıda kutanöz fibrofolikülom ve akciğer grafisinde bilateral büllöz kistler ile tekrarlayan spontan pnömotoraks saptanıyor. Abdominal tomografisinde sol böbrekte 5 cm çapında iyi sınırlı soluk kahverengi homojen kitle tespit ediliyor. Cerrahi rezeksiyon materyalinin histopatolojisinde bitki hücresi sınırları ve kuru üzüm nükleuslar izlenen bu kitle Hale'in kolloidal demir boyası ile diffüz sitoplazmik mavi boyanma veriyor. Bu hastadaki sendrom, ilgili gen ve böbrek tümörünün prognozu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Von Hippel-Lindau sendromu — VHL geni — Berrak hücreli RCC olup prognozu çok kötüdür",
+      "B) Birt-Hogg-Dubé sendromu — FLCN geni — Kromofob RCC olup prognozu diğer alt tiplere göre belirgin daha olumludur",
+      "C) Tüberoz Skleroz kompleksi — TSC1 geni — Anjiyomiyolipom olup spontan rüptürle öldürür",
+      "D) Li-Fraumeni sendromu — TP53 geni — Medüller karsinom olup erken evrede metastaz yapar",
+      "E) Cowden sendromu — PTEN geni — Onkositom olup Hale kolloidal demir boyası negatiftir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Kutanöz fibrofolikülomlar, pulmoner kistler, spontan pnömotoraks ve böbrekte Hale kolloidal demir boyası ile diffüz mavi boyanan kromofob renal hücreli karsinom birlikteliği otozomal dominant Birt-Hogg-Dubé sendromunun (FLCN geni) klasik tablosudur. Kromofob RCC, berrak hücreli ve papiller karsinomlara göre çok daha iyi prognozludur.\n\nA yanlıştır; VHL'de serebellar hemanjiyoblastom ve berrak hücreli RCC görülür, Hale boyası mavi boyamaz.\nC yanlıştır; Tüberoz sklerozda anjiyomiyolipom görülür, fibrofolikülom değil anjiyofibrom olur.\nD yanlıştır; Li-Fraumeni sendromu sarkom, meme kanseri ve lösemi ile seyreder.\nE yanlıştır; Onkositomda Hale boyası diffüz sitoplazmik boyanmaz (negatiftir)."
+  },
+  {
     "id": "prac-bobrek-017",
     "deckId": "learn-bobrek-tumorleri",
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 17,
     "slideTitle": "Yüksek Dereceli Nadir Maligniteler: Toplayıcı Kanal ve Renal Medüller Karsinom",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Yirmi iki yaşında orak hücre özelliği (HbAS) taşıyıcısı olduğu bilinen bir erkek hasta hematüri ve şiddetli sağ yan ağrısı ile başvuruyor. Görüntülemede sağ böbrek medullasında parankimi ve sinüsü infiltre eden 6 cm'lik sert kitle saptanıyor. Biyopsi materyalinde desmoplastik fibröz zemin içinde anaplastik hücre kordonları izleniyor ve immünohistokimyasal incelemede tümör hücrelerinde nükleer INI1 (SMARCB1) protein ekspresyonunun tamamen kaybolduğu görülüyor. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
     "options": [
@@ -24,7 +328,7 @@
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 18,
     "slideTitle": "Benign Renal Epitelyal Neoplazm: Renal Onkositom Patogenezi ve Makroskopi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Altmış beş yaşında bir erkek hastada tesadüfen saptanan böbrek kitlesi nedeniyle yapılan nefrektomi piyesinde; 6 cm çapında, çok iyi sınırlı, kesit yüzü homojen maun kahverengisi renkte izlenen, merkezinde açık renkli ışınsal uzantılar veren yıldız şeklinde fibröz bir skar barındıran benign lezyon saptanıyor. Bu tümörün hücresel kökeni ve makroskopik renginden sorumlu hücresel organel aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
@@ -43,7 +347,7 @@
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 19,
     "slideTitle": "Renal Onkositom Histopatolojisi ve Kromofob RCC ile Ayırıcı Tanı",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Patoloji laboratuvarına gelen böbrek kitle biyopsisinde yuvarlak nükleuslu, bol granüler eozinofilik sitoplazmalı hücrelerden oluşan bir neoplazm saptanıyor. Ayırıcı tanıda yer alan eozinofilik varyant kromofob renal hücreli karsinom ile benign renal onkositomun histokimyasal ve ultrastrüktürel ayrımı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -62,7 +366,7 @@
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 20,
     "slideTitle": "Renal Anjiyomiyolipom (AML), Tüberoz Skleroz ve Wunderlich Sendromu",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Yirmi sekiz yaşında mental retardasyonu ve yüzünde çok sayıda eritematöz papülleri (fasiyal anjiyofibrom) bulunan bir erkek hasta, ani başlayan şiddetli sağ yan ağrısı, taşikardi ve hipotansiyon (şok) tablosu ile acil servise getiriliyor. Bilgisayarlı tomografide sağ retroperitoneal boşlukta masif hematom ve sağ böbrek parankiminde bol yağ dansitesi içeren 7 cm'lik bir kitle saptanıyor. Bu hastadaki hayatı tehdit eden kanamanın (Wunderlich sendromu) geliştiği primer böbrek tümörü ve altta yatan kalıtsal sendrom aşağıdakilerden hangisidir?",
     "options": [
@@ -81,7 +385,7 @@
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 21,
     "slideTitle": "Pediatrik Renal Neoplazmlar: Wilms Tümörü (Nefroblastom) ve Genetik Birliktelikler",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Üç yaşında bir erkek çocukta rutin pediatrik muayenede aniridi (iris yokluğu) ve hipospadias saptanıyor. Batın palpasyonunda sol lomber bölgede devasa bir kitle palpe ediliyor. Biyopsi piyesinde primitif küçük mavi yuvarlak hücre tabakaları (blastem), abortif tübüler yapılar ve rabdomiyoblastik diferansiasyon gösteren gevşek iğsi hücreli stroma izleniyor. Bu hastadaki sendrom, ilgili kromozomal lokus ve tümör türü aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
     "options": [
@@ -100,7 +404,7 @@
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 22,
     "slideTitle": "Renal Hücreli Karsinomun Klinik Tablosu ve Klasik Tanısal Triad",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Renal Hücreli Karsinomun (RCC) klinik semptomları, klasik tanısal triadı ve başvuru özellikleri ile ilgili aşağıdaki ifadelerden hangisi KLİNİK VE PATOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
@@ -119,7 +423,7 @@
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 23,
     "slideTitle": "Renal Hücreli Karsinomun Paraneoplastik Sendromları ve Stauffer Sendromu",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Altmış yaşında sağ böbreğinde 9 cm'lik berrak hücreli karsinom saptanan bir hastanın laboratuvar testlerinde hematokrit %58 (polisitemi), serum kalsiyumu 12.5 mg/dL (hiperkalsemi), serum alkalen fosfatazı (ALP) yüksek ve karaciğeri palpabl (hepatomegali) bulunuyor. Karaciğer biyopsisinde ve abdominal BT'de karaciğerde hiçbir tümör metastazına rastlanmıyor. Başarılı bir radikal nefrektomi operasyonundan iki ay sonra hastanın hematokrit, kalsiyum, ALP ve karaciğer boyutlarının tamamen normale döndüğü gözleniyor. Bu hastadaki geri dönüşümlü non-metastatik karaciğer disfonksiyonu tablosu (Stauffer sendromu) patofizyolojik olarak hangi sitokin/faktörün tümörden aşırı salınması ile ilişkilidir?",
     "options": [
@@ -138,7 +442,7 @@
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 24,
     "slideTitle": "RCC Derecelendirmesi (WHO/ISUP), TNM Evrelemesi ve Prognostik Faktörler",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Elli beş yaşındaki bir hastanın sol radikal nefrektomi piyesinde; böbrek korteksinde 6 cm çapında berrak hücreli karsinom saptanıyor. Patolojik incelemede tümörün renal kapsülü aşarak perinefrik yağ dokusuna invaze olduğu, ayrıca renal ven ana kökü içinde tümör trombüsü bulunduğu, ancak Gerota fasyasını aşmadığı tespit ediliyor. Mikroskopide iğsi hücrelerden oluşan atipik sarkomatoid diferansiasyon alanları izleniyor. Bu hastanın WHO/ISUP derecesi ve TNM primer tümör (T) evresi aşağıdakilerden hangisinde doğru olarak verilmiştir?",
     "options": [
@@ -157,7 +461,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 1,
     "slideTitle": "Üriner Sistemin Embriyolojisi, Mesane Anatomisi ve Urakus Anomalileri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "28 yaşında bir erkek hasta, göbek deliğinden aralıklı berrak akıntı gelmesi ve son iki aydır suprapubik bölgede dolgunluk hissi şikayetiyle başvuruyor. Yapılan sistoskopide mesane kubbesinde (dome) lümene doğru ekzofitik büyüme gösteren, jelatinöz müsinöz materyal içeren ülsere bir kitle saptanıyor ve biyopsi alınıyor. Bu hastanın lezyonunun embriyolojik kökeni ve beklenen histopatolojik tanısı aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
@@ -176,7 +480,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 2,
     "slideTitle": "Ürotelyumun Normal Histolojisi, Şemsiye Hücreleri ve Üroplakin Bariyeri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mesane mukozasının normal histolojisi ve biyofiziksel bariyer fonksiyonu ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE HİSTOLOJİK AÇIDAN YANLIŞTIR?",
     "options": [
@@ -195,7 +499,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 3,
     "slideTitle": "Mesane Duvar Mimarisi ve Katmanları: Patolojik İnvazyonun Anatomik Zemini",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Transüretral mesane rezeksiyonu (TUR-M) uygulanan 64 yaşındaki bir hastanın patolojik incelemesinde, yüksek dereceli ürotelyal karsinom odaklarının lamina propria içerisindeki ince, kesintili düz kas liflerini infiltre ettiği, ancak derin kaba düz kas fasiküllerine (muskularis propria) ulaşmadığı izlenmiştir. Bu hastanın TNM evrelemesine göre primer patolojik tümör (pT) evresi aşağıdakilerden hangisidir?",
     "options": [
@@ -214,7 +518,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 4,
     "slideTitle": "Üreter Patolojileri: UPJ Tıkanıklığı ve Retroperitoneal Fibrozis (Ormond Hastalığı)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "52 yaşında bir erkek hasta, son üç aydır giderek artan künt bel ağrısı, halsizlik ve oligüri şikayetleriyle başvuruyor. Laboratuvar incelemesinde serum kreatinin düzeyi 3.8 mg/dL saptanıyor. Çekilen batın BT'sinde abdominal aorta ve iliak damarları çevreleyen, her iki üreteri mediale doğru çekerek dıştan komprese eden ve bilateral hidronefroza yol açan plak benzeri yoğun retroperitoneal yumuşak doku kitlesi izleniyor. Biyopside yoğun storiform fibrozis ve plazma hücre infiltrasyonu saptanıyor. Bu hastanın patolojisi ile ilgili en olası tanı ve altta yatan immünopatolojik mekanizma aşağıdakilerden hangisidir?",
     "options": [
@@ -233,7 +537,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 5,
     "slideTitle": "Mesane Divertikülleri ve Konjenital Bozukluklar",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Benign prostat hiperplazisine bağlı uzun süreli mesane çıkım obstrüksiyonu bulunan 68 yaşındaki bir erkek hastada sistoskopide mesane lateral duvarında 4 cm çapında bir divertikül ve içerisinde şüpheli papiller lezyon saptanıyor. Divertikül içinden alınan biyopside ürotelyal karsinom tanısı konuyor. Mesane divertikülleri ve burada gelişen tümörlerin biyolojik davranışı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -252,7 +556,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 6,
     "slideTitle": "Akut ve Kronik Bakteriyel Sistit: Etyopatogenez, Bakteriyel Faktörler ve Klinik",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "26 yaşında yeni evli bir kadın hasta, iki gündür devam eden şiddetli idrar yaparken yanma, dakikalar arayla idrara çıkma hissi ve suprapubik ağrı şikayetiyle acil servise başvuruyor. Fizik muayenede vücut sıcaklığı 36.7 °C, tansiyonu 115/75 mmHg ölçülüyor; kostovertebral açı hassasiyeti saptanmıyor ancak suprapubik palpasyonda hassasiyet alınıyor. Tam idrar analizinde bol lökosit, bol bakteri ve lökosit esteraz pozitifliği saptanıyor. Bu hastadaki klinik tablo, en olası etken ve patogenetik mekanizma aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
@@ -271,7 +575,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 7,
     "slideTitle": "Hemorajik Sistit: Siklofosfamid, Mesna ve Adenovirüs Enfeksiyonları",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Diffüz büyük B hücreli lenfoma tanısıyla Siklofosfamid içeren kemoterapi rejimi uygulanan 45 yaşındaki bir erkek hastada, tedavinin 3. gününde ani başlayan masif hematüri, dizüri ve pıhtı retansiyonu gelişiyor. Sistoskopide mesane mukozasında yaygın peteşiler, ürotelyal nekroz ve diffüz kanama alanları saptanıyor. Bu patolojik tablonun ortaya çıkışından sorumlu olan toksik metabolit ve bu toksisiteyi önlemek amacıyla kemoterapiye eklenmesi gereken spesifik koruyucu ajan aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
     "options": [
@@ -290,7 +594,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 8,
     "slideTitle": "İnterstisyel Sistit (Ağrılı Mesane Sendromu) ve Hunner Ülserleri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "42 yaşında bir kadın hasta, yaklaşık bir yıldır devam eden, mesanesi doldukça dayanılmaz hale gelen ve işeme ile kısmen rahatlayan şiddetli suprapubik ağrı şikayetiyle başvuruyor. Hasta günde yaklaşık 30 kez idrara çıktığını, defalarca antibiyotik tedavisi almasına rağmen hiçbir fayda görmediğini belirtiyor. Tekrarlanan idrar kültürlerinde bakteriyel üreme saptanmıyor. Genel anestezi altında yapılan sistoskopik hidrodistansiyonda mesane mukozasında eritemli, santrali fibrinli mukozal fissürler (Hunner lezyonları) gözleniyor ve biyopsi alınıyor. Bu hastanın biyopsisinde tanıyı desteklemesi beklenen en karakteristik histopatolojik bulgu aşağıdakilerden hangisidir?",
     "options": [
@@ -309,7 +613,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 9,
     "slideTitle": "Malakoplaki: Patogenez, von Hansemann Hücreleri ve Michaelis-Gutmann Cisimcikleri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Böbrek nakli nedeniyle immünsüpresif tedavi alan 54 yaşındaki bir kadın hastada tekrarlayan E. coli idrar yolu enfeksiyonları gelişiyor. Yapılan kontrol sistoskopisinde mesane trigonunda lümene doğru kabarıklık yapan, sarımsı-kahverengi, yumuşak kıvamlı mukozal plaklar izleniyor ve malignite şüphesiyle biyopsi alınıyor. Mikroskobik incelemede geniş granüler eozinofilik sitoplazmalı histiyositler (von Hansemann hücreleri) ve bu hücrelerin sitoplazmasında hedef tahtası şeklinde konsantrik tabakalanma gösteren bazofilik inklüzyon cisimcikleri saptanıyor. Bu cisimcikler Von Kossa boyası ile koyu kahverengi, Prusya mavisi ile parlak mavi boyanıyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
@@ -328,7 +632,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 10,
     "slideTitle": "Metaplazik ve Reaktif Mesane Lezyonları: Kistitis Sistika/Glandülaris ve Skuamöz Metaplazi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mesane patolojisinde karşılaşılan metaplazik ve reaktif lezyonlar ile bunların malignite potansiyelleri hakkındaki aşağıdaki eşleştirmelerden hangisi PATOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
@@ -347,7 +651,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 11,
     "slideTitle": "Mesane Tümörlerinin Epidemiyolojisi ve Majör Çevresel Risk Faktörleri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Tekstil boya ve kauçuk sanayiinde 25 yıl boyunca boya kimyasalları bölümünde ustabaşı olarak çalışan 66 yaşındaki bir erkek hasta, idrarda ağrısız pıhtılı kanama şikayetiyle başvuruyor. Yapılan sistoskopide mesane lateral duvarında 3 cm çapında papiller tümöral kitle saptanıyor. Bu hastada tümör gelişiminde rol oynayan en olası spesifik kimyasal karsinojen grubu ve patogenetik etki mekanizması aşağıdakilerden hangisidir?",
     "options": [
@@ -366,7 +670,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 12,
     "slideTitle": "Schistosoma haematobium ve Mesanenin Skuamöz Hücreli Karsinomu",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mısır'ın Nil Nehri deltası kırsalında yaşayan ve çiftçilik yapan 58 yaşındaki bir erkek hasta, yıllardır süren aralıklı idrarda kanama ve son altı aydır kilo kaybı şikayetiyle başvuruyor. Yapılan sistoskopide mesane arka duvarında 5 cm çapında, yüzeyi ülseronekrotik, ekzofitik ve sert bir kitle saptanarak rezeke ediliyor. Biyopsinin mikroskobik incelemesinde intersellüler köprüler oluşturan, bol miktarda keratin incisi içeren atipik skuamöz hücre adaları ve stromada etrafı yabancı cisim dev hücreleriyle çevrili kalsifiye parazit yumurtaları izleniyor. Bu hastada gelişen malignite tipi ve altta yatan etken aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
@@ -385,7 +689,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 13,
     "slideTitle": "Ürotelyal Neoplazmlara Genel Bakış ve DSÖ/ISUP Sınıflama Sistemi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mesane ürotelyal neoplazmlarının DSÖ/ISUP histopatolojik sınıflama ilkeleri ve prognostik kavramları ile ilgili aşağıdaki ifadelerden hangisi TIBBİ VE ONKOLOJİK AÇIDAN YANLIŞTIR?",
     "options": [
@@ -404,7 +708,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 14,
     "slideTitle": "Benign Ürotelyal Papiller Lezyonlar: Papillom ve İnverted Papillom",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "34 yaşında bir erkek hastada tesadüfi ultrasonografi sırasında mesane lateral duvarında 1.2 cm çapında tek bir papiller lezyon saptanıyor. Yapılan transüretral rezeksiyon materyalinin histopatolojik incelemesinde; ince fibrovasküler korlar üzerinde 5-6 hücre tabakası kalınlığında, nükleer polaritesi tamamen korunmuş, nükleusları monoton ve oval, nükleer hiperkromazi veya pleomorfizm içermeyen ürotelyum izleniyor. Yüzeyde sağlam şemsiye hücreleri saptanıyor ve hiçbir mitotik figüre rastlanmıyor. Bu hasta için en olası histopatolojik tanı aşağıdakilerden hangisidir?",
     "options": [
@@ -423,7 +727,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 15,
     "slideTitle": "Düşük Malignite Potansiyelli Papiller Ürotelyal Neoplazm (PUNLMP)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "58 yaşında bir erkek hastada hematüri araştırması sırasında mesane arka duvarında 2 cm çapında ekzofitik papiller kitle saptanarak TUR-M yapılıyor. Patolojik incelemede narin fibrovasküler korları örten ürotelyumun belirgin kalınlaştığı (14-16 tabaka) izleniyor. Ancak hücrelerin polaritesinin kusursuz korunduğu, nükleusların monoton ve oval olduğu, nükleer pleomorfizm ve hiperkromazinin bulunmadığı, mitotik figürlerin sadece bazal tabakada tek tük izlendiği ve yüzeyde şemsiye hücrelerinin mevcut olduğu görülüyor. Bu hastanın tanısı ve beklenen biyolojik davranışı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -442,7 +746,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 16,
     "slideTitle": "Düşük Dereceli (Low-Grade) Papiller Ürotelyal Karsinom",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "62 yaşında bir erkek hastada hematüri nedeniyle yapılan sistoskopide mesane sağ lateral duvarında 2.5 cm çapında mercan benzeri papiller kitle izlenerek rezeke ediliyor. Biyopsinin mikroskobik incelemesinde papiller yapılarda hafif füzyonlar, nükleer polaritede hafif-orta düzeyde dağınıklık, nükleus boyutlarında hafif varyasyon ve hafif hiperkromazi saptanıyor. Mitotik figürlerin epitelin alt ve orta üçte birinde sınırlı olduğu, hiçbir atipik mitotik figür bulunmadığı ve lamina propria invazyonunun olmadığı görülüyor. Bu hastanın patolojik tanısı ve klinik seyri için en doğru ifade aşağıdakilerden hangisidir?",
     "options": [
@@ -461,7 +765,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 17,
     "slideTitle": "Yüksek Dereceli (High-Grade) Papiller Ürotelyal Karsinom",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mesanesinde 4 cm çapında tabanı geniş papiller kitle saptanan 67 yaşındaki bir erkek hastanın rezeksiyon biyopsisinde; papillaların geniş solid tabakalar halinde kaynaştığı, nükleer polaritenin tamamen silindiği, belirgin nükleer pleomorfizm ve kaba heterokromatin adaları izleniyor. Epitelin en yüzeyel katlarında dahi çok sayıda tripolar atipik mitotik figür saptanıyor ve şemsiye hücrelerinin bulunmadığı görülüyor. Bu hastanın lezyonunun histopatolojik derecesi ve beklenen klinik davranışı aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
@@ -480,7 +784,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 18,
     "slideTitle": "Karsinoma İn Situ (CIS): Düz Malignite, 'Tarla Kanserleşmesi' ve Klinik Tehlike",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "60 yaşında sigara içicisi bir erkek hasta, altı aydır devam eden idrar yaparken yanma, sık idrara çıkma ve ani sıkışma şikayetleriyle başvuruyor. Tekrarlanan antibiyotik tedavilerine rağmen semptomları düzelmiyor. Standart beyaz ışık sistoskopisinde lümende belirgin bir papiller veya ekzofitik kitle izlenmiyor; sadece mesane arka duvarı ve kubbesinde kadifemsi, eritemli mukozal alanlar görülüyor. Yapılan idrar sitolojisinde ileri derecede pleomorfik, iri nükleollü, hiperkromatik yüksek dereceli malign ürotelyal hücreler saptanıyor. Bu hasta için en olası tanı ve bu lezyonun tedavi edilmediği takdirde beklenen biyolojik riski aşağıdakilerden hangisidir?",
     "options": [
@@ -499,7 +803,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 19,
     "slideTitle": "Ürotelyal Karsinojenezde İki Ayrı Yolak (Dual Track Model) ve Moleküler Genetik",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Ürotelyal karsinom patogenezinde kabul edilen 'İki Ayrı Yolak (Dual Track Model)' ve ilişkili moleküler genetik değişiklikler ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
@@ -518,7 +822,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 20,
     "slideTitle": "Ürotelyal Olmayan Mesane Maligniteleri: Skuamöz, Adenokarsinom ve Nöroendokrin Tümörler",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Spinal kord yaralanması nedeniyle 20 yıldır sürekli transüretral foley sonda kullanan 52 yaşındaki bir erkek hastada, sonda etrafından kanlı idrar gelmesi üzerine sistoskopi yapılıyor. Mesane tabanında 4 cm çapında sert, ülsere kitle saptanarak biyopsi alınıyor. Mikroskobik incelemede lümene doğru uzanan atipik skuamöz epitel adaları, bol miktarda intersellüler köprü ve sitoplazmik keratinizasyon (keratin incileri) izleniyor; ürotelyal karsinom komponentine rastlanmıyor. Bu hastada tümörün geliştiği öncül patolojik lezyon ve nihai histopatolojik tanı aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
@@ -537,7 +841,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 21,
     "slideTitle": "Klinik Başvuru, Semptomlar ve İdrar Sitolojisi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "64 yaşında bir erkek hasta, son üç aydır aralıklarla ortaya çıkan, ağrısız, pıhtılı idrar yapma şikayetiyle başvuruyor. Hasta kanamanın bazen iki hafta boyunca tamamen kaybolduğunu, sonra tekrar başladığını ifade ediyor. İdrar kültüründe üreme saptanmıyor. Yapılan idrar sitolojisi negatif olarak raporlanıyor. Bu hastanın klinik tablosu ve tanısal yönetimi ile ilgili aşağıdaki ifadelerden hangisi EN DOĞRUDUR?",
     "options": [
@@ -556,7 +860,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 22,
     "slideTitle": "Tanısal Altın Standart: Sistoskopi ve TUR-M (Patoloji Raporunun Hayati Önemi)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "65 yaşında bir erkek hastaya mesane sol duvarındaki 3 cm çaplı sesil kitle nedeniyle TUR-M uygulanıyor. Gelen patoloji raporunda: 'Yüksek dereceli ürotelyal karsinom, lamina propria invazyonu mevcuttur (pT1). Gönderilen rezeksiyon dilimlerinde muskularis propria (detrüsör kası) dokusu izlenmemiştir.' denilmektedir. Bu hasta için bir sonraki en doğru klinik ve cerrahi yaklaşım aşağıdakilerden hangisidir?",
     "options": [
@@ -575,7 +879,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 23,
     "slideTitle": "Mesane Kanseri TNM Evrelemesi: Kas İnvazyonunun Prognostik Eşiği",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "70 yaşındaki bir erkek hastanın mesane tümörü nedeniyle yapılan radikal sistektomi spesmeninin patolojik incelemesinde; yüksek dereceli ürotelyal karsinomun mesane duvarındaki kalın detrüsör kas liflerini (muskularis propria) tam kat infiltre ettiği, kas tabakasını aşarak perivezikal yağ dokusu içerisine mikroskopik tümör odakları şeklinde yayıldığı, ancak prostat stromasına ve komşu organlara ulaşmadığı saptanıyor. Çıkarılan 18 adet pelvik lenf nodunda metastaz izlenmiyor. Bu hastanın TNM sınıflamasına göre patolojik primer tümör evresi aşağıdakilerden hangisidir?",
     "options": [
@@ -594,7 +898,7 @@
     "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 24,
     "slideTitle": "Tedavi Stratejileri: İntravezikal BCG İmmünoterapisinden Radikal Sistektomiye",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "62 yaşında bir erkek hastaya yapılan TUR-M patolojisinde 'Yüksek dereceli pT1 ürotelyal karsinom ve yaygın Karsinoma İn Situ (CIS)' saptanıyor. Re-TUR materyalinde muskularis propria örnekleniyor ve kas invazyonu saptanmıyor (pT1). Bu hastada tümör nüksünü ve derin kas invazyonuna progresyonu önlemek amacıyla uygulanması gereken altın standart adjuvan tedavi yaklaşımı ve bu tedavinin etki mekanizması aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
@@ -612,456 +916,665 @@
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 1,
-    "slideTitle": "Neoplazi Kavramı ve Kanser Biyolojisine Giriş",
+    "slideTitle": "Neoplazi Tanımı ve Rupert Willis İlkesi",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
     "question": "Patolojide neoplazmı hiperplazi, hipertrofi ve metaplazi gibi hücresel adaptasyon süreçlerinden ayıran en temel biyolojik özellik aşağıdakilerden hangisidir?",
     "options": [
-      "A) Hücrelerde sitoplazmik granülasyon artışı",
+      "A) Hücrelerde sitoplazmik granülasyon ve mitokondri sayısının artması",
       "B) Başlatan uyaran ortadan kalksa bile büyümenin otonom biçimde devam etmesi",
-      "C) Daima inflamatuar mononükleer hücre infiltrasyonu içermesi",
-      "D) Yalnızca yaşlı bireylerde ortaya çıkması",
-      "E) Sadece mezenkimal dokulardan köken alması"
+      "C) Lezyonun daima mononükleer inflamatuar hücre infiltrasyonu içermesi",
+      "D) Lezyonun yalnızca ileri yaş grubundaki bireylerde ortaya çıkması",
+      "E) Sadece embriyonik mezenkimal dokulardan köken alabilmesi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Neoplazinin kardinal özelliği Rupert Willis tanımında belirtildiği üzere, uyaran ortadan kalksa bile otonom ve aşırı biçimde çoğalmayı sürdürmesidir. Adaptif süreçler ise uyaran kesildiğinde geriler."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Rupert Willis tanımında açıkça ifade edildiği üzere, neoplazinin en temel ayırt edici özelliği; süreci başlatan etiyolojik uyaran ortadan kalksa dahi proliferasyonun konak kontrolünden bağımsız olarak aşırı, koordinesiz ve otonom biçimde devam etmesidir. A seçeneğindeki organel değişiklikleri adaptif süreçlerde de görülür. C seçeneğindeki inflamasyon neoplaziye özgü değildir. D seçeneği yanlıştır; neoplaziler çocukluk dahil her yaşta görülebilir. E seçeneği yanlıştır; neoplaziler epitelyal, mezenkimal veya nöral tüm dokulardan gelişebilir."
   },
   {
     "id": "tb-pq-2",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 2,
-    "slideTitle": "Tümörlerin Klonal Kökeni ve Heterojenite",
+    "slideTitle": "Karsinogenezin Temel İlkeleri ve Klonal Evrim",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bir tümör dokusunun poliklonal bir reaktif hiperplazi mi yoksa monoklonal bir neoplazm mı olduğunu ayırt etmek amacıyla heterozigot kadınlarda aşağıdakilerden hangisinin analizi altın standart kabul edilir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Kemoterapiye başlangıçta tam yanıt veren ileri evre bir kolon adenokarsinomu olgusunda, 8 ay sonra aynı kemoterapötik ajanlara dirençli nüks odaklarının gelişmesi ve metastazların hızla büyümesi izlenmiştir. Bu klinik tablonun altında yatan temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      "A) Mitokondriyal DNA mutasyon oranı",
-      "B) X kromozomuna bağlı G6PD izozim dağılımı",
-      "C) Serum albümin elektroforezi",
-      "D) Hücre içi sodyum-potasyum ATPaz aktivitesi",
-      "E) Telomeraz enzim boyutu"
+      "A) Tümörün monoklonal yapısını kaybederek poliklonal enflamatuar dokuya dönüşmesi",
+      "B) Tümör parankim hücrelerinin stromal fibroblastlara transdiferansiyasyonu",
+      "C) Genomik instabilite zemininde gelişen ve tedaviye direnç sağlayan subklonların Darwinci seçilimi",
+      "D) Host immün sisteminin tümör hücrelerine karşı tolerans geliştirmesi sonucu DNA replikasyonunun durması",
+      "E) Tümör hücresi membranındaki desmozomların sayısının artarak ilaç girişini bloke etmesi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Heterozigot kadınlarda embriyonik dönemde tek bir X inaktive olduğundan reaktif lezyonlar mikst G6PD izozimleri taşır (poliklonal); neoplazmlar ise tek bir hücreden ürediği için sadece tek bir G6PD izozimi gösterir (monoklonal)."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Tümörler monoklonal olarak başlasalar da karsinogenez ilerledikçe genomik instabilite nedeniyle yeni mutasyonlar kazanan çok sayıda alt klon (subklon) türer. Kemoterapi duyarlı hücreleri yok ederken, kemoterapötik ilaca dirençli mutasyon taşıyan alt klonlar hayatta kalır ve Darwinci seleksiyon mekanizmasıyla kitleyi yeniden oluşturur (tümör progresyonu ve heterojenitesi). A seçeneği yanlıştır; tümör inflamatuar dokuya dönüşmez. B seçeneğindeki transdiferansiasyon direncin mekanizması değildir. D seçeneği yanlıştır; DNA replikasyonu durmaz aksine artar. E seçeneğindeki desmozom artışı direnç mekanizması değildir."
   },
   {
     "id": "tb-pq-3",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 3,
-    "slideTitle": "Tümörün İki Temel Bileşeni: Parankim ve Stroma",
+    "slideTitle": "Kanserin 8 Ayırt Edici Özelliği ve 2 Kolaylaştırıcı Faktörü",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "İnvaziv duktal meme karsinomunda kitlenin palpasyonda taş sertliğinde hissedilmesine neden olan, neoplastik hücrelerin fibroblastları stimüle etmesi sonucu gelişen yoğun kollajenöz stroma reaksiyonu aşağıdakilerden hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Bir onkoloji hastasına metastaz taraması amacıyla intravenöz yoldan 18F-florodeoksiglukoz (18F-FDG) enjekte edilmiş ve PET-BT görüntülemede multipl karaciğer ve kemik lezyonlarında yoğun radyoaktif tutulum izlenmiştir. Kanser hücrelerinin bu görüntüleme yönteminde yüksek tutulum göstermesini sağlayan ve yeterli oksijen varlığında bile glukozun laktata çevrilmesiyle karakterize metabolik fenomen aşağıdakilerden hangisidir?",
     "options": [
-      "A) Anaplazi",
-      "B) Desmoplazi",
-      "C) Metaplazi",
-      "D) Koryostomi",
-      "E) Displazi"
+      "A) Pasteur etkisi",
+      "B) Cori döngüsü",
+      "C) Warburg etkisi (aerobik glikoliz)",
+      "D) Krebs trikarboksilik asit döngüsü hiperaktivasyonu",
+      "E) Pentoz fosfat yolunun tam inaktivasyonu"
     ],
-    "correctAnswer": 0,
-    "explanation": "Desmoplazi, tümör hücrelerinin salgıladığı büyüme faktörleri ile çevre stromada aşırı kollajen ve fibröz doku birikimidir; tümöre skirröz (sert) özellik kazandırır."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Kanser hücrelerinin bol oksijen varlığında bile mitokondriyal oksidatif fosforilasyon yerine glikolitik yolu tercih ederek glukozu laktata dönüştürmesine 'Warburg etkisi' (aerobik glikoliz) denir. Kanser hücreleri GLUT1 glukoz taşıyıcılarını aşırı artırarak ortalama hücrelerden 20-30 kat fazla glukoz tüketir; bu durum glukoz analoğu olan 18F-FDG'nin tümör dokusunda yoğun birikmesini ve PET-BT'de parlamasını sağlar. Pasteur etkisi (A) oksijen varlığında glikolizin baskılanmasıdır (Warburg bunun tersidir). Cori döngüsü (B) kas ile karaciğer arasındaki laktat-glukoz döngüsüdür. D ve E seçenekleri kanser hücre metabolizmasını yansıtmaz."
   },
   {
     "id": "tb-pq-4",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 4,
-    "slideTitle": "Benign Mezenkimal ve Epitelyal Tümörlerin İsimlendirilmesi",
+    "slideTitle": "Tümörün Yapısal Mimarisi: Parankim ve Stroma",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki eşleştirmelerden hangisinde benign tümör ve köken aldığı doku tipi YANLIŞ verilmiştir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Bir patoloji asistanı incelediği karsinom preparatında tümörün iki temel bileşeni olan 'parankim' ve 'stroma' arasındaki biyolojik ilişkileri değerlendirmektedir. Bu iki tümöral bileşen ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      "A) Lipom — Yağ dokusu",
-      "B) Kondrom — Kıkırdak dokusu",
-      "C) Leiyomiyom — Çizgili kas dokusu",
-      "D) Hemanjiom — Kan damarı",
-      "E) Adenom — Glandüler epitel"
+      "A) Tümörün histopatolojik isimlendirilmesi ve malignite sınıflandırması stroma hücrelerinin fenotipine göre yapılır.",
+      "B) Tümör parankimi konak kökenli reaktif hücrelerden oluşurken, stroma klonal neoplastik hücreleri içerir.",
+      "C) Tümör parankimi ile stroma arasında herhangi bir kimyasal veya parakrin sinyal alışverişi bulunmaz.",
+      "D) Tümör parankimi neoplastik transforme klondan oluşurken; stroma tümörün kanlanmasını ve büyümesini sağlayan konak destek dokusudur.",
+      "E) Tümör stromasında hiçbir zaman yeni kan damarları veya ekstraselüler matriks elemanları bulunmaz."
     ],
-    "correctAnswer": 0,
-    "explanation": "Leiyomiyom düz kas dokusunun benign tümörüdür. Çizgili kas dokusunun benign tümörü ise 'Rabdomiyom'dur."
+    "correctAnswer": 3,
+    "explanation": "Doğru cevap D seçeneğidir. Tümörün biyolojik davranışını, adını ve genetik anormalliklerini taşıyan bileşen transforme klonal hücrelerden oluşan 'parankim'dir. 'Stroma' ise konak dokusundan köken alan, kan damarları, fibroblastlar ve hücre dışı matriks içeren, parankimin büyümesi ve kanlanması için mutlak gerekli olan reaktif destek dokusudur. A seçeneği yanlıştır; isimlendirme parankime göre yapılır. B seçeneği parankim ve stromanın yerini ters vermiştir. C seçeneği yanlıştır; aralarında yoğun iki yönlü parakrin sinyalleşme mevcuttur. E seçeneği yanlıştır; anjiyogenez ve matriks sentezi doğrudan stromada gerçekleşir."
   },
   {
     "id": "tb-pq-5",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 5,
-    "slideTitle": "Malign Tümör Terminolojisi: Karsinom ve Sarkom Ayrımı",
+    "slideTitle": "Desmoplazi ve Skiröz Karsinom Mekanizması",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Patoloji laboratuvarına gönderilen bir biyopside tümör hücrelerinin intersellüler köprüler ve keratin incileri oluşturduğu saptanmıştır. Bu tümörün en olası histopatolojik tanısı aşağıdakilerden hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "54 yaşındaki bir kadın hasta sol memesinde ele gelen sert kitle ve sol meme başında içeriye doğru çekilme (retraksiyon) şikayetiyle başvuruyor. Yapılan fizik muayenede üst dış kadranda 3 cm çapında, çevre dokulara fikse, taş gibi sert bir kitle palpe ediliyor. Biyopsi sonucu 'İnvaziv Duktal Karsinom (Skiröz Tip)' olarak raporlanıyor. Bu hastada kitlenin taş gibi sert olmasının ve meme başında retraksiyona yol açmasının temel histopatolojik mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      "A) Adenokarsinom",
-      "B) Skuamöz hücreli karsinom",
-      "C) Fibrosarkom",
-      "D) Leiyomiyosarkom",
-      "E) Rabdomiyosarkom"
+      "A) Tümör hücrelerinin intraselüler yoğun glikojen biriktirmesi",
+      "B) Tümör parankiminin uyardığı miyofibroblastlar aracılığıyla gelişen yoğun kollajenöz stroma (desmoplazi)",
+      "C) Lezyonun tamamen kazeifikasyon nekrozu ve distofik kalsifikasyonla dolması",
+      "D) Tümör hücrelerinin aşırı miktarda seröz sıvı salgılayarak kistik kitle oluşturması",
+      "E) Meme parankimindeki tüm adipositlerin lipom hücrelerine dönüşmesi"
     ],
-    "correctAnswer": 0,
-    "explanation": "İntersellüler köprüler ve keratin incisi (horn pearl) oluşumu, çok katlı yassı epitele diferansiasyonun kesin kanıtıdır ve Skuamöz Hücreli Karsinomun (Yassı Epitelyal Karsinom) patognomonik morfolojik bulgusudur."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. İnvaziv duktal karsinomlarda tümör parankim hücreleri bol miktarda TGF-beta ve PDGF salgılayarak çevre stromadaki fibroblastları miyofibroblastlara dönüştürür ve aşırı miktarda Tip I kollajen sentezletir. Bu duruma 'desmoplazi' (skiröz yanıt) adı verilir. Desmoplazi kitleye taş gibi sert bir kıvam kazandırır ve miyofibroblastik kontraksiyon meme başı retraksiyonuna yol açar. A seçeneğindeki glikojen birikimi berrak hücreli tümörlerde görülür, taş sertliği yapmaz. C seçeneği tüberküloz veya ileri nekroz bulgusudur. D seçeneği kistadenomlarda görülür, kistik kitleler fluktuan veya yumuşaktır. E seçeneği biyolojik olarak anlamsızdır."
   },
   {
     "id": "tb-pq-6",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 6,
-    "slideTitle": "Terminolojideki Kritik İstisnalar: '-om' İle Biten Malign Tümörler",
+    "slideTitle": "Benign Mezenkimal Tümörlerde İsimlendirme Kuralları",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki neoplazmlardan hangisi isimlendirmesinde '-om' eki taşımasına rağmen biyolojik davranış açısından daima MALİGN bir tümördür?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "38 yaşındaki bir kadın hasta menometroraji (aşırı ve düzensiz adet kanaması) ve pelvik dolgunluk hissi nedeniyle jinekoloji polikliniğine başvuruyor. Pelvik ultrasonda uterus korpusunda intramural yerleşimli, çevre miyometriyumdan keskin sınırla ayrılan, girdapsı (whirled) patern oluşturan düz kas hücre demetlerinden ibaret 4 cm'lik benign bir neoplazm saptanıyor. Bu lezyonun doğru histopatolojik isimlendirmesi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Adenom",
-      "B) Fibrom",
-      "C) Seminom",
-      "D) Lipom",
-      "E) Kondrom"
+      "A) Rabdomiyom",
+      "B) Leyomiyom",
+      "C) Leyomiyosarkom",
+      "D) Fibroadenom",
+      "E) Rabdomiyosarkom"
     ],
-    "correctAnswer": 0,
-    "explanation": "Seminom, testis germ hücrelerinden köken alan malign bir neoplazmdır. Adenom, fibrom, lipom ve kondrom ise benign neoplazmlardır."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Düz kas hücrelerinden köken alan iyi huylu (benign) neoplazm 'leyomiyom'dur (leiomyoma). Uterus miyometriyumunda son derece yaygın olup halk arasında 'miyom' olarak adlandırılır. A seçeneği (Rabdomiyom) çizgili kasın benign tümörüdür. C seçeneği (Leyomiyosarkom) düz kasın malign tümörüdür; atipi, mitotik artış ve nekroz içerir. D seçeneği (Fibroadenom) memenin mikst bifazik benign tümörüdür. E seçeneği (Rabdomiyosarkom) çizgili kasın malign tümörüdür."
   },
   {
     "id": "tb-pq-7",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 7,
-    "slideTitle": "Mikst (Karma) Tümörler ve Teratomlar",
+    "slideTitle": "Benign Epitelyal Tümörlerin Adlandırılması",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yirmi beş yaşında bir kadında overde saptanan kistik kitle rezeke ediliyor. Makroskopisinde kist içinde sebum, kıl yumakları ve bir adet diş izleniyor. Mikroskopisinde ise matür skuamöz epitel, yağ dokusu, kıkırdak ve bronş epitali saptanıyor. Bu lezyonun en olası patolojik tanısı nedir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "32 yaşındaki bir kadın hasta sol memesinde ağrısız, spontan kanlı meme başı akıntısı şikayetiyle başvuruyor. Yapılan duktografide subareolar ana süt kanallarından birinin lümeni içinde 0.8 cm boyutunda parmaksı intralüminal kitle izleniyor. Eksizyonel biyopside merkezinde kan damarları ve bağ dokusu içeren fibrovasküler korların bulunduğu ve etrafının çift sıralı iyi diferansiye epitel tabakasıyla döşeli olduğu tespit ediliyor. Bu lezyonun en olası histopatolojik tanısı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Pleomorfik adenom",
-      "B) Matür kistik teratom (Dermoid kist)",
-      "C) Hamartom",
-      "D) Koristom",
-      "E) Fibrosarkom"
+      "A) İnvaziv duktal karsinom",
+      "B) İntraduktal papillom",
+      "C) Medüller karsinom",
+      "D) Fibrokistik değişiklik kisti",
+      "E) Duktal karsinoma in situ"
     ],
-    "correctAnswer": 0,
-    "explanation": "Her üç germ yaprağına (ektoderm: deri/kıl, mezoderm: kıkırdak/yağ, endoderm: bronş epiteli) ait matür dokuların bir arada bulunduğu over kistik kitlesi matür kistik teratomdur (Dermoid kist)."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Genç kadınlarda tek taraflı spontan kanlı meme başı akıntısının en sık nedeni 'intraduktal papillom'dur. Papillomlar merkezinde fibrovasküler bir bağ dokusu ve damar koru barındıran, etrafı epitel ile çevrili parmaksı ekzofitik benign epitelyal lezyonlardır. A ve C seçenekleri malign karsinomlardır ve invaziv büyüme gösterirler. D seçeneği basit kistik lezyondur, papiller dallanma yapmaz. E seçeneğinde (DCIS) kanalları dolduran malign hücreler vardır ancak tipik benign çift tabakalı fibrovasküler papiller kor mimarisi izlenmez."
   },
   {
     "id": "tb-pq-8",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 8,
-    "slideTitle": "Hamartom ve Koristom: Neoplazm Taklitçileri",
+    "slideTitle": "Malign Epitelyal Neoplazmlar: Karsinom Kavramı",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Endoskopide mide duodenum bileşkesinde 1.5 cm'lik submukozal polipoid lezyon saptanan hastanın biyopsisinde normal yapıda pankreatik asinuslar ve Langerhans adacıkları izlenmiştir. Bu patolojik durumun en doğru tanımı aşağıdakilerden hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "62 yaşında, 40 paket-yıl sigara öyküsü olan bir erkek hasta kronik öksürük ve hemoptizi (öksürükle kan gelmesi) yakınmasıyla başvuruyor. Toraks BT'de sağ ana bronş lümenini daraltan santral yerleşimli bir kitle izleniyor. Bronkoskopik biyopsinin histopatolojik incelemesinde; atipik poligonal hücre adaları, hücreler arasında belirgin intersellüler köprüler ve tümör adalarının merkezinde konsantrik eozinofilik keratin incileri (horn pearls) saptanıyor. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Hamartom",
-      "B) Koristom (Heterotopi)",
-      "C) Pleomorfik adenom",
-      "D) Karsinoma in situ",
-      "E) Teratom"
+      "A) Bronşiyal karsinoid tümör",
+      "B) Küçük hücreli akciğer karsinomu",
+      "C) Akciğer adenokarsinomu",
+      "D) Skuamöz hücreli karsinom",
+      "E) Malign mezotelyoma"
     ],
-    "correctAnswer": 0,
-    "explanation": "Normal histolojik yapıdaki bir dokunun normalde bulunmaması gereken anatomik bir lokalizasyonda (midede pankreas dokusu) bulunmasına Koristom (Heterotopi / Ektopi) denir."
+    "correctAnswer": 3,
+    "explanation": "Doğru cevap D seçeneğidir. Sigara içenlerde santral bronş mukozasındaki skuamöz metaplazi ve displazi zemininde en sık gelişen karsinom 'skuamöz hücreli karsinom'dur. Mikroskopik olarak intersellüler köprülerin (desmozomlar) ve konsantrik laminasyon gösteren keratin incilerinin varlığı skuamöz diferansiasyonun kesin patognomonik kanıtıdır. A seçeneği (karsinoid tümör) nöroendokrin kaynaklıdır, 'tuz-biber' kromatin gösterir. B seçeneği (küçük hücreli karsinom) ezilme artefaktı ve dar sitoplazmalı küçük hücreler içerir, keratin yapmaz. C seçeneği (adenokarsinom) bez ve müsin yapar. E seçeneği plevra kaynaklıdır."
   },
   {
     "id": "tb-pq-9",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 9,
-    "slideTitle": "Diferansiyasyon ve Anaplazi Kavramları",
+    "slideTitle": "Malign Mezenkimal Neoplazmlar: Sarkomlar",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Patolojide neoplastik parankim hücrelerinin kaynaklandığı matür dokuya benzerliğini tamamen kaybetmesi, primitif ve ilkel bir hücresel morfoloji kazanması durumuna ne ad verilir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "16 yaşındaki bir erkek hasta sağ diz bölgesinde birkaç aydır giderek artan ağrı ve şişlik yakınmasıyla ortopedi polikliniğine getiriliyor. Çekilen direkt grafide distal femur metafizinde korteksi erode eden, periostu kaldırarak 'Codman üçgeni' oluşturan ve çevre yumuşak dokuya uzanan kemik destrüksiyonu alanı izleniyor. Yapılan biyopside pleomorfik iğsi ve anaplastik hücreler ile bu hücrelerin doğrudan arasına çökelttiği mineralize olmamış dantelsi pembe kemik matriksi (osteoid) alanları saptanıyor. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Metaplazi",
-      "B) Desmoplazi",
-      "C) Hipertrofi",
-      "D) Anaplazi",
-      "E) Heterotopi"
+      "A) Osteom",
+      "B) Kondrosarkom",
+      "C) Osteosarkom",
+      "D) Ewing sarkomu",
+      "E) Fibröz displazi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Diferansiasyonun tam kaybına 'Anaplazi' denir. Malign tümörlerin temel morfolojik ayırt edici özelliğidir."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Genç yaş grubunda diz çevresi kemik metafizinde (distal femur/proksimal tibia) en sık görülen primer malign kemik tümörü 'osteosarkom'dur. Periostu kaldırarak radyolojik olarak Codman üçgenine yol açar. Histopatolojik olarak anaplastik neoplastik hücrelerin doğrudan 'osteoid matriks' (mineralize olmamış kemik) üretmesi osteosarkom için patognomonik ve şart olan tanı kriteridir. A seçeneği benign matür kemik kitlesidir, destrüksiyon yapmaz. B seçeneğinde neoplastik kıkırdak matriksi baskındır. D seçeneği (Ewing) küçük yuvarlak mavi hücreli tümördür, t(11;22) taşır, osteoid yapmaz. E seçeneği benign gelişimsel fibro-osseöz lezyondur."
   },
   {
     "id": "tb-pq-10",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 10,
-    "slideTitle": "Anaplazinin Morfolojik Kriterleri",
+    "slideTitle": "Terminolojide Ölümcül İstisnalar: '-om' Ekli Maligniteler",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bir doku biyopsisinde saptanan aşağıdaki mikroskopik bulgulardan hangisi, lezyonun kesin olarak MALİGN olduğunu gösteren en güvenilir anaplazi kriteridir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Patoloji stajındaki bir tıp öğrencisi, tümör isimlendirme kurallarını çalışırken mezenkimal benign neoplazmların sonuna '-om' eki getirildiğini öğrenmiştir. Ancak hocası öğrenciden bu kurala uymayan, yani sonu '-om' ile bittiği halde biyolojik olarak invaziv, metastatik ve ölümcül olan MALİGN bir neoplazm örneği vermesini istemiştir. Öğrencinin vereceği aşağıdaki yanıtlardan hangisi bu duruma ÖRNEK OLUŞTURMAZ?",
     "options": [
-      "A) Sitoplazmada glikojen birikimi",
-      "B) Bipolar simetrik mitotik figürlerin sayısında hafif artış",
-      "C) Tripolar ve kuadripolar atipik mitotik figürler",
-      "D) Hücreler arası lenfosit infiltrasyonu",
-      "E) Fibroblast proliferasyonu"
+      "A) Melanom",
+      "B) Seminom",
+      "C) Leyomiyom",
+      "D) Mezotelyoma",
+      "E) Multipl miyelom"
     ],
-    "correctAnswer": 0,
-    "explanation": "Bipolar mitozlar benign rejeneratif durumlarda da sıkça görülebilir; ancak tripolar, kuadripolar veya çok kutuplu asimetrik atipik mitotik figürler malignitenin kesin patolojik kanıtıdır."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Leyomiyom (Leiomyoma), düz kas dokusundan köken alan gerçek bir BENİGN (iyi huylu) neoplazmdır ve '-om' ekini kurala uygun biçimde benign olarak taşır. Buna karşılık; Melanom (melanosit malignitesi), Seminom (testis germ hücre malignitesi), Mezotelyoma (seröz zar malignitesi) ve Multipl Miyelom (plazma hücre malignitesi), isimlerinin sonundaki '-om' ekine rağmen hiçbir zaman benign formu olmayan, daima MALİGN kabul edilen ölümcül neoplazmlardır."
   },
   {
     "id": "tb-pq-11",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 11,
-    "slideTitle": "Displazi ve Karsinoma İn Situ (CIS)",
+    "slideTitle": "Blastik Tümörler: Primitif Embriyonik Doku Maligniteleri",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Uterus serviks biyopsisinde skuamöz epitelin tüm katlarını dolduran pleomorfik, hiperkromatik hücreler izlenmiş, ancak bazal membranın tamamen sağlam olduğu ve stromaya geçiş olmadığı saptanmıştır. Bu lezyonun evresi ve metastaz riski için aşağıdakilerden hangisi doğrudur?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "3 yaşındaki bir kız çocuk ailesi tarafından çekilen fotoğraflarda sol göz bebeğinin beyaz parıldaması (lökokori) fark edilerek göz hekimine getiriliyor. Yapılan oftalmolojik muayenede sol retinada vitröz içine uzanan nodüler bir kitle saptanıyor. Enükleasyon materyalinin mikroskopik incelemesinde; dar sitoplazmalı, hiperkromatik çekirdekli küçük yuvarlak mavi hücrelerin merkezi bir lümen etrafında silindirik dizildiği 'Flexner-Wintersteiner rozetleri' izleniyor. Bu hastadaki malign neoplazm ve etiyolojisinde yer alan genetik defekt aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
     "options": [
-      "A) İnvaziv karsinom — Yüksek lenf nodu metastaz riski",
-      "B) Hafif displazi — Tamamen selim lezyon",
-      "C) Karsinoma in situ — Sıfır metastaz riski",
-      "D) Mikroinvaziv karsinom — Hematojen metastaz riski",
-      "E) Metaplazi — Malignite riski yok"
+      "A) Nöroblastom — N-MYC amplifikasyonu",
+      "B) Retinoblastom — RB1 tümör baskılayıcı gen inaktivasyonu",
+      "C) Nefroblastom — WT1 mutasyonu",
+      "D) Medülloblastom — APC mutasyonu",
+      "E) Rabdomiyosarkom — PAX3-FOXO1 füzyonu"
     ],
-    "correctAnswer": 0,
-    "explanation": "Epitelin tüm katlarını tutan ancak bazal membranı aşmamış lezyon Karsinoma in situ'dur (CIS). Bazal membran sağlam olduğu için lenfatik veya kan damarlarına erişim yoktur ve metastaz riski sıfırdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Çocuklarda lökokori (beyaz pupil refleksi) ile bulgu veren, retinada Flexner-Wintersteiner rozetleri oluşturan küçük yuvarlak hücreli primer malign tümör 'Retinoblastom'dur. Retinoblastom etiyolojisinde Knudson'ın iki vuruş hipotezinin prototipi olan RB1 (retinoblastom 1) tümör baskılayıcı geninin her iki kopyasının inaktivasyonu yatar. A seçeneği adrenal/sempatik zincir yerleşimli olup Homer-Wright psödorozetleri yapar. C seçeneği böbrekte yerleşir. D seçeneği beyincikte yerleşir. E seçeneği yumuşak doku tümörüdür."
   },
   {
     "id": "tb-pq-12",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 12,
-    "slideTitle": "Lokal Büyüme ve İnvazyon: Kapsül Mimarisi",
+    "slideTitle": "Mikst (Karma) Tümörler: Tek Germ Yaprağından Çeşitli Diferansiasyon",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki histopatolojik özelliklerden hangisi bir tümörün BENİGN olduğunu destekleyen en güçlü bulgudur?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "46 yaşındaki bir erkek hasta sağ kulak önünde ve çene köşesinde yaklaşık 4 yıldır yavaş büyüyen, ağrısız, hareketli kitle yakınmasıyla başvuruyor. Yapılan parotidektomi materyalinin histopatolojik incelemesinde; duktuslar oluşturan epitelyal hücre yuvaları ile bu hücrelerin arasında açık mavi-pembe renkli miksoid stroma ve belirgin kondroid (kıkırdak) doku adacıklarının bir arada bulunduğu saptanıyor. Tümör hücrelerinde belirgin nükleer atipi veya mitoz izlenmiyor. Bu hasta için en olası histopatolojik tanı ve tümörün histogenetik sınıfı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kapsülü delerek çevre yağ dokusuna uzanması",
-      "B) Belirgin fibröz bir kapsülle çevrili olup ekspansif büyümesi",
-      "C) Perinöral lenfatik boşluklarda tümör embolileri içermesi",
-      "D) Çevredeki kas liflerini destrükte etmesi",
-      "E) Geniş koagülasyon nekrozu alanları barındırması"
+      "A) Matür kistik teratom — Üç germ yapraklı tümör",
+      "B) Pleomorfik adenom — Tek germ yaprağından köken alan mikst tümör",
+      "C) Adenoid kistik karsinom — Malign tükürük bezi tümörü",
+      "D) Warthin tümörü — Onkositik lenfoid tümör",
+      "E) Mukoepidermoid karsinom — Malign epitelyal tümör"
     ],
-    "correctAnswer": 0,
-    "explanation": "Belirgin fibröz bir kapsül varlığı ve tümörün çevre dokuyu tahrip etmeksizin iterek (ekspansif) büyümesi benign neoplazmların en karakteristik özelliğidir."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Parotis bezinde epiteliyal duktus yapıları ile miksoid ve kıkırdak (kondroid) matriksin bir arada bulunduğu, atipinin izlenmediği benign neoplazm 'Pleomorfik adenom'dur (mikst tümör). Pleomorfik adenom tek bir germ yaprağından (ektoderm) köken alıp miyoepitelyal hücrelerin plastisitesi sayesinde mezenkimal benzeri stroma oluşturan monoklonal bir mikst tümördür. A seçeneği (teratom) gonadlarda görülür ve 3 germ yaprağını içerir. C ve E seçenekleri tükürük bezinin malign tümörleridir. D seçeneği (Warthin tümörü) çift sıralı onkositer epitel ve yoğun lenfoid stroma içerir, kıkırdak içermez."
   },
   {
     "id": "tb-pq-13",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 13,
-    "slideTitle": "Metastaz: Malignitenin Tartışmasız Kanıtı",
+    "slideTitle": "Teratomlar: Üç Germ Yaprağını İçeren Neoplazmlar",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki neoplazmlardan hangisi lokal olarak son derece invaziv ve destrüktif büyümesine rağmen, uzak organlara metastaz yapma potansiyeli hemen hemen HİÇ bulunmayan bir malign tümördür?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "24 yaşındaki bir kadın hasta rutin jinekolojik kontrol sırasında sağ adneksiyel bölgede saptanan 8 cm'lik kistik kitle nedeniyle opere ediliyor. Kist açıldığında içinden yoğun sarı yağlı bir sıvı ve saç kılları boşalıyor; kist duvarında sert kemiksi bir çıkıntı üzerinde tam gelişmiş iki adet diş izleniyor. Mikroskobik incelemede kist lümeninin çok katlı yassı epitel, yağ bezleri, respiratuar epitel ve matür hiyalin kıkırdak adacıkları ile çevrili olduğu; hiçbir immatür nöroepitelyal eleman içermediği saptanıyor. Bu lezyonun patolojik tanısı ve biyolojik davranışı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Malign melanom",
-      "B) Derinin bazal hücreli karsinomu (BCC)",
-      "C) Osteosarkom",
-      "D) Akciğer adenokarsinomu",
-      "E) Meme duktal karsinomu"
+      "A) İmmatür teratom — Yüksek dereceli malign",
+      "B) Matür kistik teratom (Dermoid kist) — Benign",
+      "C) Pleomorfik adenom — Benign mikst tümör",
+      "D) Karsinosarkom — Malign bifazik tümör",
+      "E) Endodermal sinüs tümörü — Malign germ hücreli tümör"
     ],
-    "correctAnswer": 0,
-    "explanation": "Bazal hücreli karsinom (BCC) lokal olarak kıkırdak ve kemiği tahrip edebilen agresif bir malignite olmasına rağmen metastaz oranı <%0.1 düzeyindedir; pratik olarak uzak metastaz yapmaz kabul edilir."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Genç kadınlarda overde kıl, diş, yağ bezleri, respiratuar epitel ve kıkırdak gibi 3 germ yaprağının tamamen matür dokularını içeren kistik neoplazm 'Matür Kistik Teratom'dur (Dermoid kist). İmmatür nöroepitelyal dokular içermediği sürece kural olarak BENİGN bir neoplazmdır. A seçeneği (immatür teratom) embriyonik nöroepitel içerir ve maligndir. C seçeneği parotiste sık görülen mikst tümördür. D seçeneği karsinom ve sarkomun bir arada olduğu malign tümördür. E seçeneği (yolk sac) Schiller-Duval cisimcikleri ve AFP artışı ile giden yüksek dereceli malign germ hücreli tümördür."
   },
   {
     "id": "tb-pq-14",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 14,
-    "slideTitle": "Lenfatik Yayılım Yolu ve Sentinel Lenf Nodu",
+    "slideTitle": "Neoplazi Benzeri Lezyonlar: Hamartom ve Koristom (Heterotopi)",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Meme karsinomu operasyonu sırasında tümör çevresine verilen mavi boyanın tutunduğu ilk lenf nodu rezeke edilmiş ve patolojik incelemede metastaz saptanmamıştır. Bu lenf nodunun adı ve cerrahi yaklaşım için aşağıdakilerden hangisi doğrudur?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Asemptomatik 52 yaşındaki bir erkeğin rutin akciğer grafisinde sağ akciğer alt lob periferinde 2.5 cm çapında, keskin sınırlı, içinde 'patlamış mısır (popcorn)' tarzında kalsifikasyonlar barındıran soliter nodül saptanıyor. Wedge rezeksiyon materyalinin mikroskopik incelemesinde; matür hiyalin kıkırdak lobülleri, olgun yağ dokusu alanları, fibröz stroma ve bu dokuların arasına sıkışmış silyalı respiratuar epitel yarıkları izleniyor. Bütün doku elemanları olgun ve benigndir ancak normal lobüler mimari tamamen kaybolmuştur. Bu hastadaki lezyonun patolojik tanısı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Virchow nodu — Tam aksiller diseksiyon yapılır",
-      "B) Sentinel lenf nodu — Diğer aksiller lenf nodlarının diseksiyonuna gerek yoktur",
-      "C) Sister Mary Joseph nodu — Kemoterapiye geçilir",
-      "D) Kruklen nodu — Karşı meme de rezeke edilir",
-      "E) Cloquet nodu — İnvaziv karsinom dışlanır"
+      "A) Akciğer adenokarsinomu",
+      "B) Koristom (Heterotopi)",
+      "C) Pulmoner kondroid hamartom",
+      "D) Matür kistik teratom",
+      "E) Bronşiyal karsinoid tümör"
     ],
-    "correctAnswer": 0,
-    "explanation": "Tümör lenfatik akımının ulaştığı ilk nod Sentinel Lenf Nodudur. Sentinel nodun metastaz açısından negatif olması durumunda aksiller lenf nodu diseksiyonu yapılmaz ve hasta morbiditeden korunur."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Akciğer parankiminde o organa normalde ait olan hiyalin kıkırdak, yağ, bağ dokusu ve respiratuar epitel gibi olgun dokuların kaotik ve düzensiz bir kitle oluşturmasına 'Pulmoner kondroid hamartom' denir. Radyolojik olarak popcorn kalsifikasyonu son derece tipiktir. A ve E seçenekleri malign neoplazmlardır. B seçeneğinde (koristom) doku yabancı bir organda olmalıdır (örneğin midede pankreas). D seçeneği (teratom) üç germ yaprağına ait dokular (deri, diş vb.) içerir ve gonadlarda/orta hatta yerleşir."
   },
   {
     "id": "tb-pq-15",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 15,
-    "slideTitle": "Hematojen Yayılım Yolu ve Organ Tercihleri",
+    "slideTitle": "Benign vs Malign: Dört Kardinal Ayırıcı Tanı Kriteri",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki malign epitelyal tümörlerden (karsinomlardan) hangisi lenfatik yayılımdan ziyade belirgin şekilde KAN DAMARI (hematojen) invazyonu göstererek kemik ve akciğere metastaz yapmasıyla bilinir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Patoloji laboratuvarına gönderilen bir doku kitlesinin benign veya malign olduğuna karar verilirken kullanılan kriterler ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE KLİNİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) Tiroid papiller karsinomu",
-      "B) Tiroid foliküler karsinomu",
-      "C) Meme invaziv duktal karsinomu",
-      "D) Deri skuamöz hücreli karsinomu",
-      "E) Kolon adenokarsinomu"
+      "A) Bir tümörün malign olduğunu tartışmasız kesinlikle kanıtlayan tek biyolojik özellik uzak metastaz varlığıdır.",
+      "B) Benign tümörler daima hızlı büyür ve çevre dokuları infiltre ederek destrükte eder.",
+      "C) Malign tümörler kural olarak çevre dokuyu iterek kalın fibröz bir kapsülle sınırlı kalırlar.",
+      "D) İyi diferansiye benign tümörlerde sıkça tripolar ve yıldızsı atipik mitoz figürleri izlenir.",
+      "E) Bir neoplazm anaplastik hücreler içeriyorsa kesinlikle benign kabul edilir."
     ],
     "correctAnswer": 0,
-    "explanation": "Tiroid papiller karsinomu lenfatik yolla servikal lenf nodlarına metastaz yaparken; Foliküler tiroid karsinomu kapsül ve kan damarı invazyonu yaparak hematojen yolla kemik ve akciğere metastaz yapar."
+    "explanation": "Doğru cevap A seçeneğidir. Neoplazinin biyolojik davranışını belirlemede 'metastaz' varlığı malignitenin tartışmasız ve kesin tek kanıtıdır. B seçeneği yanlıştır; benignler yavaş büyür ve infiltre etmez. C seçeneği yanlıştır; malignler kapsülsüzdür ve infiltratif büyür. D seçeneği yanlıştır; atipik mitoz figürleri maligniteye özgüdür. E seçeneği yanlıştır; anaplazi diferansiasyonun tamamen kaybı olup malignitenin kardinal işaretidir."
   },
   {
     "id": "tb-pq-16",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 16,
-    "slideTitle": "Vücut Boşluklarına Ekim (Transçölomik Yayılım)",
+    "slideTitle": "Kriter 1: Diferansiasyon Spektrumu ve Fonksiyonel Kapasite",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kırk beş yaşında kadın hastada bilateral over kitleleri saptanıyor. Rezeksiyon materyalinde müsin dolu sitoplazmaları nükleusu perifere itmiş taşlı yüzük hücreleri izleniyor. Bu hastada primer tümör odağı öncelikle hangi organda aranmalıdır?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Patolojik incelemede 'iyi diferansiye' olarak raporlanan malign bir tümör ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      "A) Tiroid bezi",
-      "B) Mide",
-      "C) Böbrek korteksi",
-      "D) Kemik iliği",
-      "E) Beyin serebellumu"
+      "A) Köken aldığı normal doku hücrelerine hem morfolojik hem de fonksiyonel olarak belirgin benzerlik gösterir.",
+      "B) Tamamen anaplastik hücrelerden oluşur ve köken doku ile hiçbir ilişkisi saptanamaz.",
+      "C) Hücre bölünmesinde daima çok sayıda tripolar ve kuadripolar atipik mitoz figürleri barındırır.",
+      "D) Hücrelerinde nükleus/sitoplazma oranı kural olarak 1:1 düzeyine kaymıştır.",
+      "E) Çevre dokuları hiçbir zaman invaze edemez ve cerrahi olarak enükleasyonla çıkarılabilir."
     ],
     "correctAnswer": 0,
-    "explanation": "Overlerde bilateral taşlı yüzük hücreli karsinom saptanması klasik Krukenberg tümörüdür. Krukenberg tümörünün en sık primer kaynağı mide karsinomudur (özellikle diffüz tip mide kanseri)."
+    "explanation": "Doğru cevap A seçeneğidir. İyi diferansiye tümörler (benign veya malign), köken aldıkları normal matür doku hücrelerine morfolojik yapı ve fonksiyonel kapasite açısından belirgin derecede benzerler (örneğin iyi diferansiye skuamöz karsinomun keratin yapması, iyi diferansiye hepatosellüler karsinomun safra salgılaması). B seçeneği indiferansiye/anaplastik tümörleri tanımlar. C seçeneğindeki tripolar mitozlar ve D seçeneğindeki 1:1 N/C oranı yüksek dereceli anaplastik malignitelerin özellikleridir. E seçeneği yanlıştır; iyi diferansiye olsa bile malign tümörler invazyon yapabilirler."
   },
   {
     "id": "tb-pq-17",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 17,
-    "slideTitle": "Benign ve Malign Neoplazmların Karşılaştırma Matrisi",
+    "slideTitle": "Kriter 1: Anaplazi Morfolojisi: Malignitenin Hücresel Damgası",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki özelliklerden hangisi bir neoplazmın benign veya malign olduğunu ayırt etmede KULLANILAMAZ?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Uyluk derin yumuşak dokusunda hızla büyüyen kitle nedeniyle opere edilen 58 yaşındaki bir hastanın histopatolojik incelemesinde; tümör dokusunda hücrelerin ve çekirdeklerin boyut ve şekillerinde aşırı varyasyon (pleomorfizm), kromatinin kaba topaklar oluşturduğu koyu mavi-siyah çekirdekler (hiperkromazi), nükleus/sitoplazma oranının 1:1'e yaklaştığı alanlar ve çok sayıda bizar hiperkromatik nükleus içeren tümör dev hücreleri saptanıyor. Bu mikroskobik bulgular bütünü patolojide aşağıdaki terimlerden hangisi ile tanımlanır?",
     "options": [
-      "A) Uzak organ metastazı yapması",
-      "B) Tümör hücrelerinin sitoplazmik büyüklüğü",
-      "C) Çevre dokulara infiltratif büyüme paterni",
-      "D) Kapsül varlığı ve sınırların düzgün olması",
-      "E) Tripolar atipik mitotik figürlerin varlığı"
+      "A) Metaplazi",
+      "B) Anaplazi",
+      "C) Hipertrofi",
+      "D) Apoptoz",
+      "E) Heterotopi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Sadece sitoplazmik büyüklük benign/malign ayrımında kullanılamaz (bazı benign onkositoma hücreleri de dev sitoplazmalıdır). Metastaz, infiltrasyon, kapsül ve atipik mitoz ise kesin ayırt edici parametrelerdir."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Pleomorfizm, nükleer hiperkromazi, nükleus/sitoplazma (N/C) oranının 1:1'e yaklaşması, kaba kromatin, dev nükleoller ve tümör dev hücrelerinin varlığı 'Anaplazi'nin (dediferansiasyon) klasik morfolojik kriterleridir. Anaplazi lezyonun malign olduğunu gösteren en güçlü hücresel belirteçtir. Metaplazi (A) bir matür hücre tipinin başka bir matür hücre tipine dönüşmesidir. Hipertrofi (C) hücre hacminin artmasıdır, nükleer anarşi içermez. Apoptoz (D) nükleer parçalanma ile giden fizyolojik ölümdür. Heterotopi (E) normal dokunun yanlış anatomik yerde bulunmasıdır."
   },
   {
     "id": "tb-pq-18",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 18,
-    "slideTitle": "Kanser Epidemiyolojisi: İnsidans ve Mortalite Dinamikleri",
+    "slideTitle": "Kriter 1: Mitotik Aktivite: Sayısal Artış vs Atipik Mitoz Figürleri",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Güncel epidemiyolojik verilere göre, kadınlarda kansere bağlı ölümlerde birinci sırada yer alan kanser türü aşağıdakilerden hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Deri eksizyonu yapılan bir lezyonun histopatolojik incelemesini yapan patolog, lezyonun iyi huylu bir reaktif süreç mi yoksa malign bir neoplazm mı olduğunu ayırt etmeye çalışmaktadır. Mikroskopta saptanan aşağıdaki hücresel bulgulardan hangisi, lezyonun kesin olarak MALİGN olduğunu gösteren EN GÜVENİLİR VE PATOGNOMONİK mikroskobik kanıttır?",
     "options": [
-      "A) Meme karsinomu",
-      "B) Akciğer karsinomu",
-      "C) Serviks karsinomu",
-      "D) Over karsinomu",
-      "E) Kolorektal karsinom"
+      "A) Çok sayıda normal iki kutuplu (bipolar) mitotik figürün varlığı",
+      "B) Hücre bölünmesinde anormal üç kutuplu (tripolar / yıldızsı) mitoz figürünün saptanması",
+      "C) Stromada zengin kapiller damar proliferasyonu ve anjiyogenez görülmesi",
+      "D) Sitoplazmada bol miktarda mitokondri ve granüllü endoplazmik retikulum birikimi",
+      "E) Lezyon çevresinde lenfosit ve histiyosit infiltrasyonunun bulunması"
     ],
-    "correctAnswer": 0,
-    "explanation": "Kadınlarda en sık tanı konulan kanser meme kanseri olmasına rağmen, kansere bağlı ölümlerde ilk sırayı hem erkeklerde hem kadınlarda Akciğer Karsinomu almaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Hücre bölünmesi sırasında mitotik iğ ipliklerinin sentrozom defektleri nedeniyle üç kutba ayrılmasıyla oluşan 'tripolar (atipik) mitoz figürleri' ve dört kutuplu (tetrapolar) mitozlar malign neoplazmlar için patognomoniktir ve benign/reaktif durumlarda asla görülmez. A seçeneğindeki bipolar mitozlar granülasyon dokusu ve normal dokularda da çok sıktır. C, D ve E seçenekleri inflamatuar, reaktif ve hiperplastik süreçlerde de yaygın olarak görülen non-spesifik bulgulardır."
   },
   {
     "id": "tb-pq-19",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 19,
-    "slideTitle": "Çevresel Karsinojenler ve Mesleki Maruziyetler",
+    "slideTitle": "Displazi: Atipik Epitelyal Proliferasyon ve Derecelendirme",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki karsinojen maddelerden hangisi p53 tümör supresör geninin 249. kodonunda spesifik bir mutasyona yol açarak Hepatosellüler Karsinom gelişimini tetikler?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "36 yaşındaki bir kadının rutin servikal tarama (Pap smear) sonucunda atipik hücreler saptanması üzerine servikal biyopsi yapılıyor. Histopatolojik incelemede; çok katlı yassı epitelin alt 2/3'lük kısmında hücrelerin polaritesini kaybettiği, çekirdeklerin hiperkromatik ve pleomorfik olduğu, normalde sadece bazalde görülen mitozların epitelin orta katında da bolca bulunduğu izleniyor. Ancak en yüzeyel tabakada kısmi yassılaşma korunmuş olup bazal membran tamamen intakttır. Bu lezyon için en doğru patolojik tanımlama ve klinik yaklaşım aşağıdakilerden hangisidir?",
     "options": [
-      "A) Asbest lifleri",
-      "B) Aflatoksin B1",
-      "C) Vinil klorür",
-      "D) Benzen",
-      "E) Dietilstilbestrol (DES)"
+      "A) İnvaziv skuamöz hücreli karsinom — Acil radikal histerektomi yapılmalıdır.",
+      "B) Orta dereceli displazi (CIN 2) — Preinvaziv öncü lezyondur, etken ortadan kalktığında geri dönebilme potansiyeli taşır.",
+      "C) Skuamöz metaplazi — Tamamen fizyolojik ve selim bir adaptasyon olup takip gerektirmez.",
+      "D) Karsinoma in situ — Metastaz riski %50 civarında olduğundan pelvik lenf nodu disseksiyonu şarttır.",
+      "E) Basit hiperplazi — Sadece hücre sayısının arttığı sitolojik atipisiz benign bir süreçtir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Aspergillus flavus mantarının ürettiği Aflatoksin B1, TP53 geninin 249. kodonunda karakteristik mutasyona (arginin yerine serin) yol açarak özellikle hepatit B virüsü ile sinerjistik şekilde karaciğer kanserini (HCC) tetikler."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Epitel kalınlığının alt 2/3'ünü tutan polarite kaybı, hiperkromazi ve mitozların orta tabakaya taşması 'orta dereceli displazi' (CIN 2 / High-grade SIL) bulgusudur. Displazi kanser ile eşanlamlı değildir; premalign bir lezyondur ve uygun takip/tedaviyle gerileyebilir. A seçeneği yanlıştır; bazal membran delinmemiştir, invazyon yoktur. C seçeneği yanlıştır; lezyon metaplazi değil belirgin atipi içeren displazidir. D seçeneği yanlıştır; tam kat atipi yoktur ve CIS evresinde metastaz riski %0'dır. E seçeneği yanlıştır; atipili nükleer bulgular mevcuttur."
   },
   {
     "id": "tb-pq-20",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 20,
-    "slideTitle": "Onkojenik Virüsler ve İnsan Kanserleri",
+    "slideTitle": "Karsinoma İn Situ (CIS): Preinvaziv Malignite Eşiği",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Onkojenik DNA virüsü olan Human Papillomavirus (HPV) tip 16 infeksiyonunda, viral E6 onkoproteininin konak hücrede doğrudan bağlanarak proteazomal yıkımına yol açtığı temel tümör supresör protein hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "42 yaşındaki bir kadının taranan servikal biyopsisinde; skuamöz epitelin en derin tabakasından en yüzeyine kadar tüm katlarında hücrelerin kutuplanmasını tamamen kaybettiği, aşırı derecede hiperkromatik ve pleomorfik nükleuslara sahip olduğu ve çok sayıda mitotik figürün yüzeye kadar ulaştığı görülüyor. Yapılan immünhistokimyasal Tip IV kollajen boyamasında bazal membranın epitel boyunca kesintisiz ve sağlam olduğu, subepitelyal stromada hiçbir tümör hücresinin bulunmadığı teyit ediliyor. Bu lezyon ile ilgili aşağıdaki ifadelerden hangisi TIBBİ VE ONKOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) Retinoblastom (RB)",
-      "B) p53 (TP53)",
-      "C) APC",
-      "D) VHL",
-      "E) WT1"
+      "A) Hastada uzak organ metastazı gelişme riski yaklaşık %30-40 arasındadır.",
+      "B) Tümör hücreleri bölgesel lenfatik damarları invaze etmiştir.",
+      "C) Lezyon karsinoma in situ evresindedir; temiz cerrahi sınırlarla tam çıkarıldığında kür şansı %100'dür.",
+      "D) Lezyon sadece hafif displazi gösterdiğinden hiçbir cerrahi girişim yapılmadan takip edilmelidir.",
+      "E) Bazal membran korunmuş olsa dahi kanda dolaşan tümör hücreleri (CTC) kesinlikle saptanır."
     ],
-    "correctAnswer": 0,
-    "explanation": "HPV'nin E6 onkoproteini p53'e bağlanarak ubiquitin ligaz (E6AP) aracılığıyla parçalanmasını sağlar; E7 proteini ise RB proteinini inaktive eder."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Epitel kalınlığının tamamını tutan atipik sitolojik değişikliklerin bulunduğu fakat bazal membranın tamamen sağlam kalarak stromaya hiçbir hücre geçişinin olmadığı lezyon 'Karsinoma İn Situ'dur (CIS / CIN 3). Stromadaki lenfatik veya kan damarlarına erişim olmadığından metastaz riski %0'dır ve temiz cerrahi sınırla tam eksizyon %100 kür sağlar. A, B ve E seçenekleri invaziv kanserin özellikleridir, CIS'te damar invazyonu veya metastaz olamaz. D seçeneği yanlıştır; tüm kat atipisi hafif displazi değil CIS'tir ve tedavi gerektirir."
   },
   {
     "id": "tb-pq-21",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 21,
-    "slideTitle": "Kalıtsal Kanser Sendromları ve Genetik Yatkınlık",
+    "slideTitle": "Kriter 2: Tümör Büyüme Hızı ve Siklus Kinetiği",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yirmi sekiz yaşında bir hastada kolonoskopide kalın bağırsağın tüm segmentlerini dolduran 1500 adet adenomatoz polip saptanmıştır. Bu hastadaki genetik bozukluk ve mutasyona uğrayan gen aşağıdakilerden hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Bir onkolog iki farklı malign tümörü karşılaştırmaktadır: Birincisi çene bölgesinde günler içinde iki katına çıkan ve mikroskopta neredeyse tüm hücreleri Ki-67 pozitif (aktif siklusta) olan Burkitt lenfoma; ikincisi ise aylar içinde çok yavaş büyüyen ve hücrelerinin sadece %10'u aktif siklusta olan ileri evre kolon adenokarsinomudur. Bu iki tümörün hücresel kinetiği ve kemoterapiye yanıtı dikkate alındığında aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      "A) BRCA1 geni delesyonu",
-      "B) VHL geni translokasyonu",
-      "C) APC geni mutasyonu (FAP sendromu)",
-      "D) RET onkogen mutasyonu",
-      "E) WT1 geni duplikasyonu"
+      "A) Kolon adenokarsinomu yüksek büyüme fraksiyonu nedeniyle kemoterapi ile tamamen kür edilebilir.",
+      "B) Burkitt lenfomanın büyüme fraksiyonu çok yüksek olduğundan, hücre siklusuna özgü kemoterapötik ajanlara dramatik derecede duyarlıdır.",
+      "C) Burkitt lenfoma hücrelerinin tek bir hücre döngüsü süresi normal kemik iliği hücrelerinden yaklaşık 50 kat daha kısadır.",
+      "D) Kolon adenokarsinomundaki hücrelerin tamamı sürekli olarak mitoz (M) evresinde bloke olmuştur.",
+      "E) Büyüme fraksiyonu düşük olan tümörlerde apoptoz hızı yeni hücre yapımından daima daha fazladır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Kolonda 100'ün üzerinde (genellikle binlerce) adenomatoz polip bulunması Familyal Adenomatoz Polipozis (FAP) için karakteristiktir ve 5q21 kromozomundaki APC tümör supresör geninin germ-line mutasyonu sonucu ortaya çıkar."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Konvansiyonel kemoterapi ilaçları aktif hücre döngüsündeki (proliferatif havuzdaki) hücreleri hedefler. Burkitt lenfoma gibi büyüme fraksiyonu neredeyse %100'e yaklaşan çok hızlı büyüyen tümörler kemoterapiye olağanüstü duyarlıdır ve kür şansı yüksektir. A seçeneği yanlıştır; kolon karsinomunun büyüme fraksiyonu düşüktür (%10-20), bu nedenle kemoterapiye dirençlidir. C seçeneği yanlıştır; malign hücrelerin hücre siklusu süresi normal hücrelerden daha kısa değildir. D seçeneği yanlıştır; kolon karsinomunda hücrelerin çoğu G0 istirahat fazındadır. E seçeneği yanlıştır; eğer apoptoz yapımı aşsaydı tümör gerilerdi."
   },
   {
     "id": "tb-pq-22",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 22,
-    "slideTitle": "Kanser Kaşeksisi ve Paraneoplastik Sendromlar",
+    "slideTitle": "Kriter 3: Lokal İnvazyon ve Büyüme Paternleri",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Akciğer hilusunda kitle saptanan ve biyopsisinde Küçük Hücreli Karsinom tanısı alan 60 yaşındaki bir hastada serum sodyum düzeyi 118 mEq/L (şiddetli hiponatremi) saptanmıştır. Bu tabloya yol açan en olası paraneoplastik sendrom ve ektopik hormon aşağıdakilerden hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Genel cerrahi ameliyathanesinde iki farklı hastadan çıkarılan meme kitleleri patolojiye gönderiliyor: Birinci kitle çevre dokudan keskin bir sınırla ayrılan, kalın fibröz bir kapsülle çevrili ve çevre meme dokusunu yalnızca iterek komprese etmiş 2 cm'lik mobil bir lezyondur. İkinci kitle ise kapsülsüz, çevre yağ dokusu ve kas fasyasına doğru yengeç kolları gibi uzanan düzensiz infiltratif uzantılara sahip, çevreye fikse bir lezyondur. Bu iki kitlenin lokal büyüme paterni ve histopatolojik doğası ile ilgili aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
     "options": [
-      "A) Cushing Sendromu — Ektopik Kortizol",
-      "B) Uygunsuz ADH Sendromu (SIADH) — Ektopik Vazopressin (ADH)",
-      "C) Hiperkalsemi — Ektopik PTHrP",
-      "D) Polisitemi — Ektopik Eritropoetin",
-      "E) Karsinoid Sendrom — Ektopik Serotonin"
+      "A) Birinci kitle malign karsinom olup çevre dokuyu destrükte etmiştir.",
+      "B) İkinci kitle ekspansif büyüyen benign bir lezyondur ve cerrahi olarak enükleasyonu çok kolaydır.",
+      "C) Birinci kitlenin fibröz kapsülü tümör ile konak doku arasında net bir sınır oluşturarak cerrahi enükleasyonu kolaylaştırır.",
+      "D) İkinci kitlenin tedavisinde sadece kitlenin kendisini sıyırarak çıkarmak (enükleasyon) kür sağlamak için yeterlidir.",
+      "E) Birinci kitlenin lenfatik ve hematojen yolla uzak metastaz yapma olasılığı %80'dir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Küçük hücreli akciğer karsinomunun en sık yol açtığı paraneoplastik sendromlardan biri Uygunsuz ADH Salınımı Sendromudur (SIADH). Ektopik ADH su tutulumuna ve dilüsyonel hiponatremiye yol açar."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Birinci kitle (fibroadenom benzeri) çevre dokuyu iterek komprese eden ve fibröz kapsül oluşturan tipik bir benign tümördür; kapsül çevre doku ile tümör arasında düzlemsel bir sınır oluşturarak lezyonun kolayca soyulup çıkarılmasını (enükleasyon) sağlar. İkinci kitle ise çevre dokuyu infiltre ve destrükte eden kapsülsüz malign bir karsinomdur. A ve B seçenekleri kitlelerin özelliklerini ters vermiştir. D seçeneği yanlıştır; malign tümörde infiltratif kollar nedeniyle geniş rezeksiyon gerekir. E seçeneği yanlıştır; benign tümörler metastaz yapmaz."
   },
   {
     "id": "tb-pq-23",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 23,
-    "slideTitle": "Tümör Derecelendirmesi (Grading) ve Evrelemesi (Staging)",
+    "slideTitle": "Kapsül İstisnaları ve Cerrahi Güvenlik Sınırı (Margin)",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign bir tümörün klinik ve patolojik değerlendirmesinde prognozu belirlemede en güvenilir parametrenin 'Tümör Evresi (Stage)' olmasının temel gerekçesi aşağıdakilerden hangisidir?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "35 yaşındaki bir kadının tiroid sağ lobunda saptanan 3 cm'lik soliter nodülden yapılan İnce İğne Aspirasyon Biyopsisi (İİAB) 'Foliküler Neoplazm' olarak raporlanıyor ve hastaya sağ tiroidektomi yapılıyor. Patoloğun bu lezyonun 'Foliküler Adenom' (benign) mu yoksa 'Foliküler Karsinom' (malign) mu olduğuna karar verebilmesi için histopatolojik kesitlerde KESİNLİKLE göstermesi gereken patognomonik morfolojik bulgu aşağıdakilerden hangisidir?",
     "options": [
-      "A) Yalnızca ışık mikroskobunda immünohistokimya ile ölçülebilmesi",
-      "B) Tümörün primer boyutunu, lenf nodu tutulumunu ve uzak metastaz durumunu yansıtması",
-      "C) Hücrelerin DNA ploidi düzeyini göstermesi",
-      "D) Sadece benign lezyonlarda uygulanabilir olması",
-      "E) Yaşlı hastalarda otomatik olarak Grade'e dönüşmesi"
+      "A) Kolloid sıvısının lümende bulunup bulunmaması",
+      "B) Tümör hücrelerinin çevre fibröz kapsülü tam kat delip geçmesi (kapsüler invazyon) veya vasküler invazyon",
+      "C) Hücrelerin immünhistokimyasal olarak tiroglobulin üretmesi",
+      "D) Sitoplazmada bol miktarda mitokondri birikimi olması",
+      "E) Tümör kitlesinin çapının 2 cm'den büyük olması"
     ],
-    "correctAnswer": 0,
-    "explanation": "Evreleme (Staging / TNM), tümörün anatomik yaygınlığını (boyut/derinlik, lenfatik tutulum ve uzak metastaz) ortaya koyduğu için prognozu ve sağkalımı dereceden (Grade) çok daha doğru yansıtır."
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Tiroid foliküler adenomu ile foliküler karsinom hücre morfolojisi ve sitolojik özellikler açısından farksızdır (bu nedenle İİAB ile ayırt edilemezler). İki lezyon arasındaki tek kesin ve altın standart ayrım kriteri; tümör dokusunun fibröz kapsülü tam kat aşıp çevre dokuya sızması (kapsüler invazyon) ve/veya kapsül içi damarları invaze etmesidir (vasküler invazyon). İnvazyon varsa foliküler karsinom, yoksa foliküler adenomdur. A, C ve D seçenekleri her iki lezyonda da ortaktır. E seçeneğindeki boyut tek başına malignite kanıtı olamaz."
   },
   {
     "id": "tb-pq-24",
     "deckId": "learn-tumor-biyolojisi-terminolojisi",
     "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
     "slideNumber": 24,
-    "slideTitle": "Tümör Belirteçleri ve Laboratuvar Tanı Yöntemleri",
+    "slideTitle": "Kriter 4: Metastaz - Malignitenin Tartışmasız Belirteci",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kolorektal adenokarsinom nedeniyle opere edilen ve tümör kitlesi cerrahi olarak tamamen çıkarılan bir hastanın takibinde, serumda aşağıdaki belirteçlerden hangisinin aylar sonra tekrar yükselmeye başlaması tümör nüksünü veya karaciğer metastazını en güçlü şekilde düşündürür?",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "72 yaşındaki bir çiftçinin sol burun kanadında 2 yıldır yavaş büyüyen, ortası ülsere, inci tanesi gibi parlak kabarık sınırlara sahip bir lezyon saptanıyor. Biyopside lezyonun dermise doğru uzanan palizatlanma gösteren atipik bazaloid hücre adalarından oluştuğu ve komşu nazal kıkırdağı erode ettiği izleniyor. Bu lezyonun derinin Bazal Hücreli Karsinomu (BCC) olduğu teşhis ediliyor. Bu tümörün biyolojik davranışı ve metastaz potansiyeli ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Kalsitonin",
-      "B) Karsinoembriyonik Antijen (CEA)",
-      "C) CA-125",
-      "D) Asit fosfataz",
-      "E) Troponin T"
+      "A) Erken evrede hızla regional lenf nodlarına ve akciğere hematojen metastaz yapar.",
+      "B) İleri derecede lokal infiltratif ve destrüktif büyümesine rağmen uzak metastaz yapma yeteneği pratik olarak sıfırdır.",
+      "C) Lezyon çevre dokuları iterek kalın bir fibröz kapsül oluşturur ve metastaz yapmaz.",
+      "D) Kan yoluyla öncelikle vertebra kemiklerine ve beyne tohumlanır.",
+      "E) Histolojik olarak karsinom olmasına rağmen biyolojik davranışı benign lipom ile tamamen aynıdır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Derinin Bazal Hücreli Karsinomu (BCC), derinin en sık görülen malign neoplazmıdır. Çevre kıkırdak ve kemik dokuları tahrip edecek kadar ileri derecede lokal invaziv ve destrüktif (ulcus rodens) olmasına karşın, uzak organlara veya bölgesel lenf nodlarına metastaz yapma potansiyeli pratik olarak sıfırdır (<%0.01). A ve D seçenekleri yanlıştır; metastaz yapmaz. C seçeneği yanlıştır; kapsülsüzdür ve infiltratiftir. E seçeneği yanlıştır; lokal kemik/kıkırdak tahribatı yaptığı için benign bir lezyonla eşdeğer tutulamaz."
+  },
+  {
+    "id": "tb-pq-25",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 25,
+    "slideTitle": "Metastaz Yolu I: Vücut Boşluklarına Tohumlanma",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "48 yaşındaki bir kadın hasta dispepsi, erken doyma, kilo kaybı ve son 2 aydır karında belirgin şişlik yakınmalarıyla başvuruyor. Yapılan pelvik muayene ve ultrasonda her iki overde multinodüler, solid kitleler (sağda 7 cm, solda 6 cm) ve batında yaygın asit saptanıyor. Over biyopsisinin mikroskopik incelemesinde; sitoplazmasında bol miktarda müsin vakuolü içeren ve nükleusu kenara itilmiş çok sayıda 'taşlı yüzük hücresi' izleniyor. Bu hastadaki bilateral over kitleleri için en olası tanı ve bu lezyona en sık kaynaklık eden primer tümör lokalizasyonu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Granüloza hücreli tümör — Uterus endometriyumu",
+      "B) Krukenberg tümörü — Mide mukozası",
+      "C) Brenner tümörü — Mesane ürotelyumu",
+      "D) Disgerminom — Karşı over germ hücreleri",
+      "E) Matür kistik teratom — Retroperitoneal totipotent hücreler"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Mide kaynaklı (özellikle diffüz taşlı yüzük hücreli) adenokarsinomun transsölomik veya lenfatik yolla overe metastaz yapması sonucu oluşan bilateral over neoplazmına 'Krukenberg tümörü' denir. Mikroskopta sitoplazmik müsinin nükleusu perifere ittiği taşlı yüzük hücreleri patognomoniktir. A seçeneği overin östrojen üreten primer stromal tümörüdür. C seçeneği benign transizyonel epitel adacıkları içeren tümördür. D seçeneği primer germ hücreli tümördür. E seçeneği dermoid kisttir."
+  },
+  {
+    "id": "tb-pq-26",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 26,
+    "slideTitle": "Metastaz Yolu II: Lenfatik Yayılım ve Sentinel Lenf Nodu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "52 yaşındaki bir kadın hastada sağ meme üst dış kadranda 2.2 cm çapında İnvaziv Duktal Karsinom saptanıyor. Cerrahi sırasında aksiller lenf nodu disseksiyonunun morbiditesinden (kronik kol lenfödemi) kaçınmak amacıyla tümör çevresine radyoaktif izotop ve mavi boya enjekte edilerek lenfatik drenajı alan ilk lenf nodu tespit edilip çıkarılıyor (sentinel lenf nodu biyopsisi). İntraoperatif frozen incelemede bu lenf düğümünde karsinom metastazı saptanmıyor. Bu hastada sentinel lenf nodunun negatif çıkması ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE KLİNİK OLARAK DOĞRUDUR?",
+    "options": [
+      "A) Hastaya derhal radikal mastektomi ve tam aksiller seviye I-II-III lenfadenektomi uygulanmalıdır.",
+      "B) Diğer aksiller lenf nodlarında metastaz bulunma olasılığı <%1 olduğundan ileri aksiller lenf nodu disseksiyonuna gerek yoktur.",
+      "C) Sentinel lenf nodunun negatif olması tümörün lenfatik yerine doğrudan kemik iliğine metastaz yaptığını kesin olarak kanıtlar.",
+      "D) Tümör parankimi kesinlikle karsinom değil benign bir adenomdur.",
+      "E) Sentinel nod negatifliği hastanın sağkalımı üzerinde hiçbir prognostik değere sahip değildir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Sentinel (bekçi) lenf nodu, primer tümörün lenfatik akımını karşılayan İLK lenf düğümüdür. Kanser hücreleri basamaklı bir yayılım izlediği için bekçi lenf nodunda metastaz yoksa, zincirin sonraki lenf nodlarında metastaz bulunma olasılığı %1'in altındadır. Bu durum gereksiz geniş aksiller disseksiyondan kaçınılmasını sağlar ve hastayı lenfödem komplikasyonundan korur. A seçeneği yanlıştır; tam disseksiyon yapılmaz. C seçeneği temelsizdir. D seçeneği yanlıştır; tümör invaziv karsinomdur. E seçeneği yanlıştır; nodal evreleme en güçlü prognostik faktördür."
+  },
+  {
+    "id": "tb-pq-27",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 27,
+    "slideTitle": "Metastaz Yolu III: Hematojen Yayılım ve Ven İnvazyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "60 yaşındaki bir erkek hasta hematüri (idrarda kan) ve sağ yan ağrısı şikayetleriyle başvuruyor. Yapılan batın BT'sinde sağ böbrek üst kutbunda 8 cm'lik kitle ve bu kitlenin sağ renal vene doğru uzanarak inferior vena kava lümeni içinde sağ atriyum girişine kadar kordon şeklinde bir tümör trombüsü oluşturduğu tespit ediliyor. Biyopsi sonucu 'Berrak Hücreli Renal Karsinom' olarak raporlanıyor. Bu hastada izlenen damar invazyonu ve karsinomların metastaz yolları dikkate alındığında, erken dönemde kural dışı olarak HEMATOJEN yolla yayılma eğiliminde olan diğer bir karsinom grubu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Mide adenokarsinomu",
+      "B) Papiller tiroid karsinomu",
+      "C) Serviks skuamöz hücreli karsinomu",
+      "D) Foliküler tiroid karsinomu",
+      "E) Meme duktal karsinomu"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru cevap D seçeneğidir. Karsinomlar kural olarak öncelikle bölgesel lenfatik yolla yayılırken; Renal Hücreli Karsinom (RCC), Foliküler Tiroid Karsinomu, Hepatosellüler Karsinom (HCC) ve Koryokarsinom ven invazyonu ile erken dönemde 'hematojen' yolla yayılan dört klasik karsinom istisnasıdır (Papiller tiroid karsinomu lenfatik yayılırken, foliküler karsinom kan damarlarını invaze ederek kemik ve akciğere hematojen gider). A, B, C ve E seçeneklerindeki karsinomlar klasik olarak ilk önce bölgesel lenfatik yolla metastaz yaparlar."
+  },
+  {
+    "id": "tb-pq-28",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 28,
+    "slideTitle": "Tümör Tropizmi: Seçici Organ Metastazı ve Paget Tohum-Toprak Hipotezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "68 yaşındaki bir erkek hasta bel ağrısı şikayetiyle başvuruyor. Çekilen lumbosakral omurga grafisinde ve BT'de L3 ve L4 vertebra gövdelerinde kemik dansitesinde belirgin artışla karakterize 'osteoblastik (sklerotik) metastatik odaklar' saptanıyor. Laboratuvar tetkiklerinde serum alkalen fosfataz ve PSA (prostat spesifik antijen) düzeyleri ileri derecede yüksek bulunuyor. Tümörlerin hedef organlara seçici yerleşimini (tropizm) açıklayan mekanizmalar dikkate alındığında, bu hastada izlenen tabloyu ve benzer şekilde üveal melanomun karaciğere veya akciğer karsinomunun adrenal bezlere metastaz yapmasını en iyi açıklayan onkolojik kavram aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Knudson'ın iki vuruş hipotezi",
+      "B) Stephen Paget'in Tohum ve Toprak hipotezi (Organ tropizmi)",
+      "C) Warburg etkisi (aerobik glikoliz)",
+      "D) Hayflick limiti ve telomeraz tükenmesi",
+      "E) Lyon hipotezi ve X kromozomu inaktivasyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Tümörlerin dolaşıma katıldıktan sonra rastgele değil, belirli organlara (örneğin prostat karsinomunun kemiğe osteoblastik lezyonlarla, akciğer karsinomunun adrenal bez ve beyne, üveal melanomun karaciğere) seçici olarak yerleşmesi ve büyümesi Stephen Paget'in 'Tohum ve Toprak Hipotezi' (Organotropizm) ile açıklanır. Kanser hücresi uygun reseptör-ligant ve biyokimyasal desteği sunan organda kolonize olur. Knudson hipotezi (A) tümör baskılayıcı gen inaktivasyonunu; Warburg etkisi (C) kanser metabolizmasını; Hayflick limiti (D) replikatif yaşlanmayı; Lyon hipotezi (E) monoklonaliteyi açıklar."
+  },
+  {
+    "id": "tb-pq-29",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 29,
+    "slideTitle": "Kanser Epidemiyolojisi: İnsidans, Mortalite ve Coğrafi Dinamikler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Güncel kanser epidemiyolojisi ve SEER (Surveillance, Epidemiology, and End Results) istatistikleri dikkate alındığında, derinin melanom dışı karsinomları hariç tutulduğunda, kadınlarda kansere bağlı ölümlerin (mortalite) BİRİNCİ SIRADAKİ en sık nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Meme karsinomu",
+      "B) Kolorektal karsinom",
+      "C) Akciğer ve bronş karsinomu",
+      "D) Over karsinomu",
+      "E) Uterus korpus karsinomu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Kanser epidemiyolojisinde kadınlarda en sık teşhis edilen (en yüksek insidanslı) kanser meme karsinomu (%31) olmasına karşın; hem erkeklerde hem de KADINLARDA KANSERE BAĞLI ÖLÜMLERİN (MORTALİTENİN) BİRİNCİ SIRADAKİ EN BÜYÜK NEDENİ AKCİĞER VE BRONŞ KARSİNOMUDUR (%21). Meme kanseri mortalitede ikinci sırada (%15), kolorektal kanser ise üçüncü sırada (%8) yer alır. Over ve uterus karsinomları mortalitede daha geridedir."
+  },
+  {
+    "id": "tb-pq-30",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 30,
+    "slideTitle": "Çevresel ve Mesleki Karsinojenler: Kimyasal ve Fiziksel Faktörler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Eski bir gemi söküm tersanesinde 25 yıl boyunca gemi izolasyon panelleri ve ısı yalıtım kaplamaları sökümünde çalışan 64 yaşındaki bir erkek hasta, ilerleyici nefes darlığı ve göğüs ağrısı şikayetleriyle başvuruyor. Çekilen toraks BT'de sağ hemitoraksta plevranın nodüler tarzda diffüz zırh gibi kalınlaştığı, akciğer parankimini çepeçevre sardığı ve plevral boşlukta masif hemorajik sıvı bulunduğu izleniyor. Plevral biyopside bifazik (epitelyal ve sarkomatoid hücreler) büyüme gösteren malign hücreler ve akciğer parankiminde altın sarısı ferruginöz asbest cisimcikleri saptanıyor. Bu hastanın mesleki maruziyeti ve gelişen malign neoplazm aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) Vinil klorür — Hepatik anjiyosarkom",
+      "B) Benzen — Akut lenfoblastik lösemi",
+      "C) Asbest — Malign mezotelyoma",
+      "D) Arsenik — Hepatosellüler karsinom",
+      "E) Kadmiyum — Tiroid karsinomu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Gemi söküm, izolasyon, tekstil ve fren balatalarında kullanılan asbest liflerine maruziyet, seröz plevral zarı döşeyen mezotel hücrelerinin malign transformasyonuna (**Malign Mezotelyoma**) yol açar. Plevranın zırh gibi kalınlaşması, hemorajik plörezi ve akciğerde asbest (ferruginöz) cisimcikleri patognomoniktir. A seçeneği (vinil klorür) karaciğer anjiyosarkomu yapar. B seçeneğinde benzen AML ile ilişkilidir. D seçeneğinde arsenik deri/akciğer kanseri yapar. E seçeneğinde kadmiyum prostat kanseriyle ilişkilidir."
+  },
+  {
+    "id": "tb-pq-31",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 31,
+    "slideTitle": "Edinilmiş Kanser Yatkınlığı: Kronik Enflamasyon ve Karsinogenez",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Mısır'dan Türkiye'ye göç eden 45 yaşındaki bir erkek hasta, son 6 aydır terminal hematüri (idrarın sonunda kanama) ve dizüri şikayetleriyle üroloji kliniğine başvuruyor. Yapılan sistoskopide mesane arka duvarında ülsere kitle izleniyor. Biyopside stroma içinde kalsifiye parazit yumurtaları çevresinde granülomatöz reaksiyon ve yüzeyde keratin incileri oluşturan malign epitel hücre adaları tespit ediliyor. Tümör 'Skuamöz Hücreli Karsinom' olarak raporlanıyor. Bu hastada malignite gelişimine zemin hazırlayan etiyolojik paraziter etken aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Schistosoma haematobium",
+      "B) Echinococcus granulosus",
+      "C) Fasciola hepatica",
+      "D) Taenia solium",
+      "E) Ascaris lumbricoides"
     ],
     "correctAnswer": 0,
-    "explanation": "CEA (Karsinoembriyonik antijen), kolorektal karsinomların tedavisinden sonra hastaların nüks ve metastaz açısından takibinde kullanılan en önemli serum tümör belirtecidir. Düzeyin yükselmesi nükse işaret eder."
+    "explanation": "Doğru cevap A seçeneğidir. Ortadoğu ve Afrika'da (özellikle Nil deltası) endemik olan Schistosoma haematobium, mesane venöz pleksusuna yerleşerek parazit yumurtalarını mesane duvarına bırakır. Gelişen kronik paraziter inflamasyon ürotelyal epitelde skuamöz metaplaziye ve ardından 'Mesane Skuamöz Hücreli Karsinomu' gelişimine yol açar. Mesane kanserlerinin >%90'ı sigara ilişkili ürotelyal karsinom iken şistozomiyazis zemininde gelişen kanser skuamöz hücreli karsinomdur. B seçeneği karaciğerde kist hidatik yapar. C seçeneği safra yollarında yerleşir. D ve E seçenekleri bağırsak parazitleridir."
+  },
+  {
+    "id": "tb-pq-32",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 32,
+    "slideTitle": "Prekürsör Lezyonlar ve Benign Tümörlerde Kanserleşme Riski",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "46 yaşındaki bir kadın hasta rutin jinekolojik check-up sırasında ultrasonda saptanan 3 adet asemptomatik intramural uterin leyomiyom (en büyüğü 3 cm) nedeniyle büyük bir endişeyle patoloğa danışıyor ve bu kitlelerin kansere dönüşüp dönmeyeceğini soruyor. Patoloğun modern tümör biyolojisi ve klonalite verilerine dayanarak hastaya vereceği EN DOĞRU TIBBİ BİLGİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Uterus leyomiyomları tedavi edilmezse vakaların yaklaşık %50'sinde leyomiyosarkoma dönüşür.",
+      "B) Uterin leyomiyomların leyomiyosarkoma malign transformasyon riski pratik olarak ihmal edilecek kadar düşüktür (<%0.1); sarkomlar hemen daima de novo (sıfırdan) gelişir.",
+      "C) Leyomiyomlar benign değil karsinoma in situ lezyonlarıdır ve derhal histerektomi yapılmalıdır.",
+      "D) Menopoza girildiğinde östrojen azalması nedeniyle leyomiyomlar kaçınılmaz olarak malignleşir.",
+      "E) Leyomiyomlar kan yoluyla akciğere metastaz yaparak osteosarkoma dönüşürler."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Uterin leyomiyomlar (kadınların en sık benign tümörü) ile malign leyomiyosarkomlar arasındaki genetik ilişki araştırıldığında, leyomiyosarkomların önceden var olan bir leyomiyomdan dönüşmek yerine neredeyse daima miyometriyumdan 'de novo' (sıfırdan bağımsız) ortaya çıktığı gösterilmiştir. Leyomiyomun malignleşme riski <%0.1 düzeyindedir (pratik olarak sıfırdır). A seçeneğindeki %50 risk kolon villöz adenomuna aittir. C seçeneği yanlıştır; leyomiyom karsinom değil benign mezenkimal tümördür. D seçeneği yanlıştır; menopozda östrojen çekilince leyomiyomlar küçülür ve hyalinize olur. E seçeneği biyolojik olarak anlamsızdır."
+  },
+  {
+    "id": "tb-pq-33",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 33,
+    "slideTitle": "Kanser Genleri: Onkogenler ve Tümör Baskılayıcı Genler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Hücre döngüsünün G1/S kontrol noktasında DNA hasarı meydana geldiğinde, hasarlı hücrenin S fazına kontrolsüzce geçişini engelleyen moleküler mekanizmalar incelenmektedir. Normal bir hücrede DNA çift zincir kırığı tespit edildiğinde hızla stabilize olarak hücre içi konsantrasyonu artan, ilk basamakta p21 (CDK inhibitörü) transkripsiyonunu uyararak siklusu G1'de durduran ve hasar onarılamayacak boyuttaysa pro-apoptotik BAX genini aktive ederek hücreyi programlı ölüme yönlendiren 'Genomun Muhafızı' lakaplı tümör baskılayıcı protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) RAS",
+      "B) HER2/ERBB2",
+      "C) TP53 (p53)",
+      "D) BCL-2",
+      "E) BRAF"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. TP53 geni tarafından kodlanan p53 proteini, genomun bütünlüğünü koruduğu için 'Genomun Muhafızı (Guardian of the Genome)' olarak adlandırılır. DNA hasarı olduğunda p53 artar, p21 sentezleterek hücreyi G1 fazında durdurur ve tamir sistemlerine zaman tanır. DNA hasarı onarılamazsa BAX ve PUMA'yı aktive ederek hücreyi apoptoza yollar. İnsan kanserlerinin >%50'sinde inaktiftir. RAS (A), HER2 (B) ve BRAF (E) onkogenlerdir (büyümeyi uyarırlar). BCL-2 (D) ise anti-apoptotik proteindir."
+  },
+  {
+    "id": "tb-pq-34",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 34,
+    "slideTitle": "DNA Tamir Sistemleri ve Genomik İnstabilite Sendromları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "38 yaşındaki bir erkek hasta sağ alt kadranda kitle ve demir eksikliği anemisi nedeniyle araştırılıyor. Kolonoskopide çekumda lümene doğru vejetan kitle saptanıyor ve adenokarsinom tanısı konuyor. Aile öyküsü sorgulandığında; hastanın babasının 42 yaşında kolon kanserinden, teyzesinin ise 44 yaşında endometriyal adenokarsinomdan vefat ettiği öğreniliyor. Hastanın kolon mukozasında yaygın adenomatöz polipozis izlenmiyor. Tümör dokusunun moleküler genetik analizinde 'DNA Mismatch Repair (MMR)' genlerinden MLH1 ekspresyonunun kaybolduğu ve mikrosatellit instabilitesi (MSI-High) bulunduğu saptanıyor. Bu ailede saptanan kalıtsal kanser sendromu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Familyal Adenomatöz Polipozis (FAP)",
+      "B) Li-Fraumeni sendromu",
+      "C) Lynch sendromu (Herediter Non-Polipozis Kolorektal Kanser)",
+      "D) Nörofibromatozis tip 1",
+      "E) Cowden sendromu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Erken yaşta (<50 yaş) kolonda (özellikle sağ kolonda) polipozis olmaksızın gelişen kolorektal kanser ve aile bireylerinde endometriyal kanser öyküsü ile DNA mismatch repair (MMR: MSH2, MLH1, MSH6) inaktivasyonu sonucu Mikrosatellit İnstabilitesi (MSI) birlikteliği 'Lynch Sendromu'nun (HNPCC) klasik patognomonik tablosudur. FAP (A) APC gen mutasyonuna bağlıdır ve kolonda binlerce polip bulunur. Li-Fraumeni (B) TP53 mutasyonuna bağlıdır (sarkom, meme, beyin). NF1 (D) nörofibromlarla gider. Cowden (E) PTEN mutasyonuna bağlı hamartom sendromudur."
+  },
+  {
+    "id": "tb-pq-35",
+    "deckId": "learn-tumor-biyolojisi-terminolojisi",
+    "deckTitle": "Tümör Biyolojisi, Terminolojisi ve Neoplaziye Giriş",
+    "slideNumber": 35,
+    "slideTitle": "Çok Aşamalı Karsinogenez, Sürücü Mutasyonlar ve Tümör İlerlemesi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 (Neoplazi ve Patolojiye Giriş)",
+    "question": "Metastatik akciğer adenokarsinomu tanısı alan bir hastanın yeni nesil dizileme (NGS) analizinde; tümör hücrelerinde EGFR L858R mutasyonu (sürücü mutasyon) ile birlikte genom boyunca dağılmış biyolojik olarak nötr nitelikte 1200 adet somatik yolcu (passenger) mutasyon saptanıyor. Hastaya EGFR tirozin kinaz inhibitörü başlanıyor ve tümör dramatik biçimde küçülüyor. Ancak 14 ay sonra tümör yeniden büyümeye başlıyor; yapılan yeniden biyopside başlangıçta önemsiz bir yolcu mutasyon olarak kabul edilen T790M mutasyonuna sahip bir subklonun ilaca direnç kazanarak kitleyi domine ettiği tespit ediliyor. Bu klinik vaka ve çok aşamalı karsinogenez süreci dikkate alındığında aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK YANLIŞTIR?",
+    "options": [
+      "A) Başlangıçtaki EGFR L858R mutasyonu karsinogenezi doğrudan yürüten ve hücreye büyüme avantajı sağlayan bir sürücü mutasyondur.",
+      "B) Yolcu mutasyonlar başlangıçta nötr olsalar da tedavi baskısı altında hayatta kalma avantajı sağlayarak yeni sürücü mutasyonlara dönüşebilirler.",
+      "C) İleri evre tümörler farklı genetik profillere sahip subklonlardan oluşan heterojen bir mozaiktir.",
+      "D) Karsinogenezde inisiasyon evresi reversibl (geri dönüşümlü) bir süreç olup promötör ajanlar DNA'da kalıcı mutasyon yaparlar.",
+      "E) Darwinci klonal seleksiyon mekanizması tedaviye dirençli kanser klonlarının zamanla baskın hale gelmesini açıklar."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru cevap D seçeneğidir (yanlış olan ifade D'dir). Karsinogenez basamaklarında İNİSİYASYON evresi kalıcı ve geri dönüşümsüz (irreversibl) bir DNA mutasyonudur; PROMÖTÖR ajanlar ise mutajen olmayıp (DNA mutasyonu yapmazlar) sadece inisiye olmuş hücrenin klonal proliferasyonunu uyarırlar ve etkileri erken evrede geri dönüşümlüdür (reversibldir). D seçeneği inisiasyon ve promosyonun özelliklerini tam tersine çevirerek hatalı bir genelleme yapmıştır. A, B, C ve E seçenekleri çok aşamalı karsinogenez, sürücü/yolcu mutasyon dinamiği ve tümör heterojenitesini kusursuz şekilde doğru özetlemektedir."
   },
   {
     "id": "prac-med-001",
@@ -1385,518 +1898,5 @@
     ],
     "correctAnswer": 0,
     "explanation": "A seçeneği doğrudur; CXCL8 (IL-8) nötrofillerin primer kemotaktik CXC kemokinidir. B yanlıştır (Eotaksin eozinofilleri çeker); C yanlıştır (MCP-1 monositleri çeker); D ve E seçenekleri uydurma fonksiyonlardır."
-  },
-  {
-    "id": "prac-med-018",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 18,
-    "slideTitle": "Kompleman Sistemi I: Aktivasyon Yolakları (Klasik, Alternatif, Lektin) ve C3 Konvertaz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kompleman sisteminin aktivasyon yolları ve kritik basamakları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Alternatif yolak daima antijen-antikor komplekslerinin C1 bileşenine bağlanmasıyla başlar",
-      "B) Lektin yolağında C3 konvertaz oluşumu için T hücre reseptörlerinin uyarılması zorunludur",
-      "C) Klasik yolakta C4b2a, alternatif yolakta C3bBb kompleksi C3 konvertaz görevi görerek C3'ü parçalar",
-      "D) Kompleman proteinlerinin tamamı dalak beyaz pulpasında depolanıp enfeksiyon anında degranüle edilir",
-      "E) C3 parçalanması sadece hücre lizisine yol açar, enflamasyon veya opsonizasyon yapamaz"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; klasik ve lektin yollarında C4b2a kompleksi, alternatif yolda ise C3bBb kompleksi C3 konvertaz aktivitesi göstererek C3'ü C3a ve C3b fragmanlarına ayırır. A yanlıştır (antikorla başlayan klasik yoldur); B yanlıştır (lektin yolu MBL ile başlar); D yanlıştır (karaciğerde sentezlenir); E yanlıştır (C3a anafilatoksin, C3b ise opsonindir)."
-  },
-  {
-    "id": "prac-med-019",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 19,
-    "slideTitle": "Kompleman Sistemi II: Efektör Fonksiyonlar (Anafilatoksinler, Opsonizasyon ve MAC)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kompleman sisteminin efektör molekülleri ve fonksiyonları ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) C3b — Opsonizasyon ve makrofaj fagositozunun uyarılması",
-      "B) C5a — Nötrofil kemotaksisi ve mast hücresinden histamin salınımı",
-      "C) C5b-9 — Hedef hücre membranında litik por açarak ozmotik lizis oluşturma (MAC)",
-      "D) C3a — Düz kas gevşemesi ve nötrofillerin fagositoz yeteneğinin yok edilmesi",
-      "E) iC3b — Lökosit yüzeyindeki CR3 reseptörüne bağlanarak fagositozu kolaylaştırma"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü C3a anafilatoksindir; düz kası gevşetmez ve fagositozu engellemez. Mast hücrelerinden histamin salarak vasküler geçirgenliği artıran ve bronş düz kasını kasan pro-enflamatuar bir mediyatördür. A, B, C ve E seçenekleri doğru fonksiyon eşleştirmeleridir."
-  },
-  {
-    "id": "prac-med-020",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 20,
-    "slideTitle": "Kompleman Düzenleyici Proteinleri ve İlişkili Klinik Hastalıklar (C1-INH, CD55/CD59, Faktör H)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Herediter Anjiyoödem (HAE) hastalığının etiyopatogenezi ve klinik tablosu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Mast hücrelerinden aşırı histamin salınımı sonucu ortaya çıkar ve H1 antihistaminik tedavisine dramatik yanıt verir",
-      "B) C1 inhibitörü (C1-INH) eksikliği sonucu kallikrein-kinin sisteminin kontrolsüz aktivasyonu ve masif bradikinin üretimiyle gelişir",
-      "C) CD55 ve CD59 proteinlerinin aşırı ekspresyonu nedeniyle kanda pıhtılaşma faktörlerinin tükenmesi tablosudur",
-      "D) Sadece deride ürtiker plakları ile sınırlı kalır, laringeal ödem veya asfiksi riski taşımaz",
-      "E) Kompleman C3 eksikliğine bağlı olarak gelişen ağır bir pürülan bakteriyel enfeksiyon tablosudur"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; Herediter Anjiyoödem C1-INH eksikliği nedeniyle gelişir. C1-INH kallikreini baskılayamadığı için yüksek molekül ağırlıklı kininojenden kontrolsüz miktarda Bradikinin üretilir. Ödemin primer sorumlusu bradikinindir, histamin değildir (antihistaminiklere yanıt vermez). Diğer seçenekler yanlıştır."
-  },
-  {
-    "id": "prac-med-021",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 21,
-    "slideTitle": "Plazma Kaynaklı Kaskadlar I: Hageman Faktörü (Faktör XII) ve Kallikrein-Kinin Sistemi (Bradikinin)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bradikinin mediyatörü ve Kallikrein-Kinin sistemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Enflamasyon sahasında nosiseptörleri uyararak doğrudan ağrı hissine yol açan temel mediyatörlerdendir",
-      "B) Arteriyollerde vazodilatasyon ve venüllerde belirgin vasküler geçirgenlik artışı meydana getirir",
-      "C) Plazmada Yüksek Molekül Ağırlıklı Kininojenden (HMWK) kallikrein enzimi aracılığıyla üretilir",
-      "D) Karaciğer parankiminde depolanan preforme bir vazoaktif amin olup trombosit tıkacını eritir",
-      "E) Anjiyotensin dönüştürücü enzim (ACE) tarafından inaktive edildiğinden, ACE inhibitörü kullananlarda birikerek öksürük yapabilir"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü bradikinin bir vazoaktif amin değil, plazmada proteolitik olarak açığa çıkarılan 9 aminoasitlik bir peptittir (kinin). Karaciğerde depolanmaz; plazmada dolaşan HMWK'den kallikrein aracılığıyla sentezlenir. A, B, C ve E seçenekleri bradikininin temel patofizyolojik ve farmakolojik özellikleridir."
-  },
-  {
-    "id": "prac-med-022",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 22,
-    "slideTitle": "Plazma Kaynaklı Kaskadlar II: Pıhtılaşma ve Fibrinolizis Sistemlerinin Enflamasyon Köprüleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Pıhtılaşma ve fibrinolitik sistemlerin enflamasyonla olan etkileşimi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Trombin sadece fibrinojeni fibrine çevirir, lökositler veya endotel hücreleri üzerinde hiçbir reseptörü bulunmaz",
-      "B) Plazmin enzimi kompleman sistemini tamamen inaktive ederek C3a ve C5a oluşumunu engeller",
-      "C) Trombin PAR-1 reseptörlerini aktive ederek endotelde adezyon moleküllerini ve sitokin salınımını uyarırken; plazmin C3'ü parçalayarak C3a üretebilir",
-      "D) Fibrin oluşumu mikropların çevre dokulara yayılmasını kolaylaştıran bir patolojik süreçtir",
-      "E) Faktör XII pıhtılaşmayı aktive eder fakat kinin ve kompleman kaskadlarıyla hiçbir temas noktası yoktur"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; trombin PAR-1 reseptörlerini aktive ederek endotelde selektinleri, kemokinleri ve sitokinleri indükler. Fibrinolitik enzim plazmin ise C3'ü proteolitik olarak parçalayıp C3a anafilatoksinini açığa çıkarabilir. A, B, D ve E seçenekleri yanlıştır."
-  },
-  {
-    "id": "prac-med-023",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 23,
-    "slideTitle": "Platelet Aktive Edici Faktör (PAF) ve Nitrik Oksit (NO) Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Nitrik oksit (NO) sentezi ve izoenzimleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) eNOS endotelde konstitütif olarak bulunur ve ürettiği NO ile vazodilatasyon yaparak trombosit adezyonunu baskılar",
-      "B) iNOS makrofajlarda proenflamatuar sitokinler (IFN-γ) ve bakteriyel endotoksin ile indüklenen kalsiyumdan bağımsız enzimdir",
-      "C) Makrofaj iNOS kaynaklı NO, süperoksit anyonu ile birleşerek mikrobisidal peroksinitrit (ONOO-) radikalini oluşturur",
-      "D) Nitrik oksit intrasellüler cAMP düzeyini artırarak damar düz kaslarında şiddetli vazokonstriksiyon meydana getirir",
-      "E) L-arjinin, nitrik oksit sentaz enzimi için temel aminoasit substratıdır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü nitrik oksit hücre içi cAMP'yi değil, çözünür guanilat siklazı uyararak cGMP düzeyini artırır; vazokonstriksiyon değil tam tersine damar düz kasında güçlü bir gevşeme ve vazodilatasyon meydana getirir. A, B, C ve E seçenekleri doğrudur."
-  },
-  {
-    "id": "prac-med-024",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 24,
-    "slideTitle": "Enflamasyon Mediyatörlerinin Fazlalığı, Sinerjisi ve Klinik-Terapötik Entegrasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enflamasyonun kimyasal mediyatörlerinin biyolojik yedekliliği (redundancy) ve farmakolojik hedeflenmesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Vasküler geçirgenlik artışı histamin, lökotrienler, bradikinin ve kompleman parçaları gibi çok sayıda farklı mediyatörle yürütülür",
-      "B) Biyolojik yedeklilik sayesinde tek bir mediyatör yolu mutasyonla veya mikropla bloke edilse dahi enflamatuar konak savunması sürdürülebilir",
-      "C) Klasik H1 antihistaminikler tüm lökotrien ve sitokin reseptörlerini de eş zamanlı bloke ettikleri için romatoid artrit tedavisinde birinci basamak seçenektir",
-      "D) Kortikosteroidler PLA2 inhibisyonu ve pro-enflamatuar gen transkripsiyonunu baskılayarak çoklu mediyatör yolaklarını aynı anda durdururlar",
-      "E) Ekulizumab, kompleman C5 molekülünü hedef alarak C5b-9 membran atak kompleksi oluşumunu engelleyen monoklonal bir antikordur"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır çünkü H1 antihistaminikler sadece H1 histamin reseptörünü bloke ederler; lökotrien, sitokin, kinin veya kompleman yolaklarına etki etmezler. Bu nedenle romatoid artrit gibi karmaşık sistemik enflamatuar hastalıklarda hiçbir terapötik yararları yoktur. A, B, D ve E seçenekleri doğru ilkelerdir."
-  },
-  {
-    "id": "prac-hs-01",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Aşırı Duyarlılık (Hipersensitivite) Kavramı ve 4 Temel Tip",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir patoloji laboratuvarında immünohistokimyasal incelemede, glomerül bazal membranında kesintisiz çizgisel (lineer) IgG birikimi ve nekrotizan hasar saptanıyor. Hastada akciğerde hemoptizi ve böbrekte hematüri mevcuttur. Bu tablonun gelişiminde rol oynayan temel immünopatolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Dolaşan immün komplekslerin subendotelyal çökmesi (Tip III)",
-      "B) Doku bazal membranındaki Tip IV kolajen alfa-3 zincirine karşı antikor aracılı doku hasarı (Tip II)",
-      "C) CD4+ Th1 hücrelerinin makrofaj aktivasyonu ve granülom oluşturması (Tip IV)",
-      "D) Alerjen maruziyeti ile IgE aracılı mast hücre degranülasyonu (Tip I)",
-      "E) CD8+ sitotoksik T lenfositlerinin perforin-granzim salınımı (Tip IV sitotoksisite)"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Goodpasture sendromu, glomerül ve alveol bazal membranında Tip IV kolajenin alfa-3 zincirine karşı gelişen otoantikorların (anti-GBM) yol açtığı prototip bir Tip II aşırı duyarlılık tablosudur. İmmünofloresanda Tip II'ye özgü lineer (çizgisel) floresans verir."
-  },
-  {
-    "id": "prac-hs-02",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Tip I Hipersensitivite: Duyarlanma (Sensitizasyon) Fazı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Alerjik astım patogenezinde rol oynayan Th2 hücre kaynaklı sitokinlerden hangisi, kemik iliğinde eozinofil öncüllerinin proliferasyonunu ve dokuya göçünü spesifik olarak uyarır?",
-    "options": [
-      "A) IL-4",
-      "B) IL-5",
-      "C) IL-13",
-      "D) IFN-γ",
-      "E) TGF-β"
-    ],
-    "correctAnswer": "B",
-    "explanation": "IL-5, eozinofil büyüme, aktivasyon ve kemotaksis faktörüdür. IL-4 IgE sınıf değişimini sağlar; IL-13 mukus salgısını artırır; IFN-γ ise Th1 sitokini olup Th2 yanıtını baskılar."
-  },
-  {
-    "id": "prac-hs-03",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Tip I Hipersensitivite: Efektör Faz & Erken Mediyatörler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki mast hücresi mediyatörlerinden hangisi granüllerde önceden depolanmış (preformed) olmayıp, membran fosfolipidlerinden arakidonik asit metabolizması sonucu yeni sentezlenen (de novo) bir mediyatördür?",
-    "options": [
-      "A) Histamin",
-      "B) Triptaz",
-      "C) Lökotrien C4",
-      "D) Kimaz",
-      "E) Heparin"
-    ],
-    "correctAnswer": "C",
-    "explanation": "Lökotrien C4, fosfolipaz A2 ve 5-lipoksijenaz yolağı ile hücre zarından anlık sentezlenen bir lipid mediyatördür. Histamin, triptaz, kimaz ve heparin ise granüllerde önceden depolanmış durumdadır."
-  },
-  {
-    "id": "prac-hs-04",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Tip I Hipersensitivite: Geç Faz Reaksiyonu ve Eozinofiller",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kronik atopik astım hastasının bronş lavajında saptanan ve hava yolu silialı epitel hücrelerinde nekroz ve dökülmeye neden olan en güçlü eozinofilik katyonik protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Majör Temel Protein (MBP)",
-      "B) Histaminaz",
-      "C) Arilsülfataz",
-      "D) Triptaz",
-      "E) İmmünoglobulin A"
-    ],
-    "correctAnswer": "A",
-    "explanation": "Majör Temel Protein (MBP), eozinofil granül çekirdeğinde yer alan ve doku epitelinde doğrudan nekroz ve epitelyal soyulmaya (deskuamasyon) yol açan en toksik proteindir."
-  },
-  {
-    "id": "prac-hs-05",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Tip I Klinik Spektrum: Anafilaksi, Atopi ve Tedavi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Penisilin enjeksiyonu sonrası 5 dakika içinde nefes darlığı, stridor, yaygın ürtiker ve tansiyon düşüklüğü (70/40 mmHg) gelişen 24 yaşındaki hastada derhal uygulanması gereken en uygun ilk basamak medikal tedavi hangisidir?",
-    "options": [
-      "A) İntravenöz Dekzametazon",
-      "B) İntramüsküler Epinefrin (Adrenalin)",
-      "C) Oral Difenhidramin",
-      "D) İnhaler Salbutamol tek başına",
-      "E) İntravenöz Kalsiyum Glukonat"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Sistemik anafilaksinin tek hayat kurtarıcı birinci basamak ilacı intramüsküler epinefrindir (adrenalin). Alfa-1 vazokonstrüksiyon ve beta-2 bronkodilatasyon/mast hücre stabilizasyonu sağlar. Kortikosteroid ve antihistaminikler yalnızca ikincil adjuvan tedavilerdir."
-  },
-  {
-    "id": "prac-hs-06",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Tip II Hipersensitivite: Opsonizasyon ve Fagositoz Mekanizması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Sarılık, splenomegali ve anemi saptanan 30 yaşındaki kadın hastanın periferik yaymasında mikrosferositler izleniyor ve Direkt Coombs testi IgG pozitif bulunuyor. Bu hastada eritrositlerin yıkım mekanizması aşağıdakilerden hangisiyle en iyi açıklanır?",
-    "options": [
-      "A) Damar içinde kompleman Membran Atak Kompleksi (MAC, C5b-9) ile doğrudan lizis",
-      "B) Dalak makrofajlarındaki Fcγ reseptörleri aracılığıyla opsonize eritrosit fagositozu",
-      "C) Dolaşan çözünür immün komplekslerin dalak sinüzoidlerinde endoteli tıkaması",
-      "D) CD8+ sitotoksik T lenfositlerinin perforin salgılayarak eritrositi apoptoza sokması",
-      "E) Mast hücre degranülasyonuna bağlı eritrosit lizisi"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Sıcak tip otoimmün hemolitik anemi (AIHA), eritrosit yüzeyindeki proteinlere IgG bağlanması ve bu opsonize eritrositlerin dalak makrofajlarının Fcγ reseptörlerince tanınarak fagosite edilmesi (ekstravasküler hemoliz) ile seyreder."
-  },
-  {
-    "id": "prac-hs-07",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Tip II Hipersensitivite: Kompleman ve Fc Reseptör Aracılı Enflamasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hemoptizi ve oligüri ile başvuran 28 yaşındaki erkek hastanın renal biyopsisinde hilal (kresent) oluşumu saptanıyor. İmmünofloresan incelemede glomerül kapiller duvarlarında kesintisiz, düzgün çizgisel (lineer) IgG birikimi saptanıyor. Bu hastada patolojiden sorumlu otoantikorun hedef molekülü hangisidir?",
-    "options": [
-      "A) Tip I kolajen fibrilleri",
-      "B) Tip IV kolajenin alfa-3 zinciri",
-      "C) Mezangiyal lökosit elastazı",
-      "D) Glomerül podosit nefrin proteini",
-      "E) Nötrofil sitoplazmik miyeloperoksidaz"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Goodpasture sendromunda otoantikorlar glomerül bazal membranındaki Tip IV kolajenin alfa-3 zincirinin non-kollajenöz (NC1) bölgesine bağlanır ve kesintisiz çizgisel (lineer) immünofloresan paterni verir."
-  },
-  {
-    "id": "prac-hs-08",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Tip II Hipersensitivite: Hücresel Disfonksiyon ve Reseptör Antikorları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Göz kapağında düşme (ptozis) ve çiğneme kaslarında günün ilerleyen saatlerinde artan güçsüzlük şikayetiyle başvuran 32 yaşındaki kadında doku biyopsisinde hiçbir nekroz veya enflamasyon izlenmiyor. Bu hastanın hastalığının patogenezindeki temel immün mekanizma hangisidir?",
-    "options": [
-      "A) İmmün komplekslerin motor nöron aksonlarına çökmesi",
-      "B) Motor son plaktaki asetilkolin reseptörlerinin antikor aracılığıyla bloke ve internalize edilmesi",
-      "C) CD8+ T lenfositlerinin iskelet kas liflerini perforinle parçalaması",
-      "D) Kolinesteraz enziminin genetik yokluğu",
-      "E) Mast hücrelerinden salınan histaminin sinir iletisini kesmesi"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Myasthenia Gravis, asetilkolin reseptörlerine karşı gelişen otoantikorların reseptörü bloke etmesi ve internalize ederek azaltması sonucu motor son plakta ileti yetersizliği yaratan prototip bir Tip II hücresel disfonksiyon hastalığıdır."
-  },
-  {
-    "id": "prac-hs-09",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "Tip III Hipersensitivite: İmmün Kompleks Patogenezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki antijen-antikor durumlarından hangisinde oluşan immün kompleksler, retiküloendotelyal sistem tarafından temizlenemeyip damar duvarlarına en yüksek oranda çökerek Tip III doku hasarı oluşturur?",
-    "options": [
-      "A) Aşırı antikor fazlalığında oluşan devasa kompleksler",
-      "B) Aşırı antijen fazlalığında oluşan minik monomerik kompleksler",
-      "C) Hafif antijen fazlalığında oluşan orta büyüklükteki kompleksler",
-      "D) Yalnızca IgA sınıfı monomerik kompleksler",
-      "E) Yalnızca IgE içeren mast hücresine bağlı kompleksler"
-    ],
-    "correctAnswer": "C",
-    "explanation": "Hafif antijen fazlalığında oluşan orta büyüklükteki immün kompleksler, hem makrofaj fagositozundan kaçacak kadar küçük hem de endotel aralıklarına takılıp çökecek kadar büyüktür; bu nedenle en patojenik olanlardır."
-  },
-  {
-    "id": "prac-hs-10",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Tip III Klinik Tablolar: Akut Serum Hastalığı ve Arthus Reaksiyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Deri nekrozu şüphesiyle biyopsi yapılan bir hastanın arteriyol duvarında fibrinoid nekroz saptanıyor. Hastaya 8 gün önce yabancı protein içerikli antitoksin verilmiş olduğu ve şu an ateş, artralji ile birlikte serum C3 ve C4 düzeylerinde belirgin düşüklük olduğu öğreniliyor. Bu hastadaki immünopatolojik tanı nedir?",
-    "options": [
-      "A) Akut Serum Hastalığı (Tip III)",
-      "B) Arthus Reaksiyonu (Tip II)",
-      "C) Sistemik Anafilaksi (Tip I)",
-      "D) Temas Dermatiti (Tip IV)",
-      "E) Atopik Ekzama (Tip I)"
-    ],
-    "correctAnswer": "A",
-    "explanation": "Yabancı protein temasından 7-10 gün sonra ortaya çıkan ateş, artralji, vaskülit ve serum kompleman tüketimi (hipokomplemantemi) tablosu prototip Sistemik Akut Serum Hastalığıdır (Tip III)."
-  },
-  {
-    "id": "prac-hs-11",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "Tip IV Hipersensitivite: Gecikmiş Tip Aşırı Duyarlılık (DTH) ve Th1 Yanıtı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Tüberküloz şüphesiyle PPD testi yapılan bir sağlık çalışanında 48 saat sonra kolda 18 mm çapında belirgin endürasyon saptanıyor. Bu lezyonun biyopsisinde saptanması beklenen temel hücresel infiltrat bileşeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Yoğun eozinofiller ve nötrofiller",
-      "B) Perivasküler CD4+ T lenfositleri ve aktive makrofajlar",
-      "C) Plazma hücreleri ve B lenfosit agregatları",
-      "D) Mast hücreleri ve bazofiller",
-      "E) Yalnızca eritrosit ekstravazasyonu ve fibrin"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Gecikmiş tip aşırı duyarlılıkta (DTH) perivasküler alanda toplanan CD4+ T lenfositleri ve bunların salgıladığı sitokinlerle aktive olan makrofaj infiltrasyonu (perivasküler manşonlaşma) izlenir."
-  },
-  {
-    "id": "prac-hs-12",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "Tip IV Hipersensitivite: Th17 Hücreleri ve CD8+ CTL Sitotoksisitesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Yeni aldığı nikel kaplama saati taktıktan 36 saat sonra bileğinde kaşıntılı, eritematöz ve minik veziküllerle karakterize egzamatöz lezyonlar gelişen bir hastada bu dermatolojik tablonun patogenezinde rol oynayan temel immünolojik süreç hangisidir?",
-    "options": [
-      "A) Nikelin mast hücrelerine bağlanarak doğrudan IgE bağımsız histamin salgılatması",
-      "B) Dolaşan anti-nikel immün komplekslerinin dermal kapillerleri tıkaması",
-      "C) Nikelin hapten olarak deri proteinlerine bağlanması ve duyarlaşmış T hücrelerinin Tip IV reaksiyon başlatması",
-      "D) Epidermal bazal membrana karşı IgG antikorlarının kompleman aktive etmesi",
-      "E) Nikelin derideki melanositleri fagosite eden makrofajları aktive etmesi"
-    ],
-    "correctAnswer": "C",
-    "explanation": "Nikel kontakt dermatiti klasik bir Tip IV gecikmiş aşırı duyarlılık tablosudur. Nikel hapten olarak cilt proteinlerine bağlanır, Langerhans hücrelerince lenf noduna taşınır ve duyarlaşan T hücreleri 24-48 saat sonra temas alanında spongiyotik dermatit tablosu oluşturur."
-  },
-  {
-    "id": "prac-hs-13",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "İmmünolojik Tolerans: Santral Toleransın Genetik Temeli ve AIRE Geni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Çocukluk çağında kronik mukokutanöz kandidiyazis, hipoparatiroidizm ve adrenal yetmezlik (Addison hastalığı) tanıları alan bir hastada, timik negatif seleksiyon sırasında periferik doku antijenlerinin ekspresyonundan sorumlu hangi gende mutasyon saptanması beklenir?",
-    "options": [
-      "A) FoxP3",
-      "B) AIRE",
-      "C) FAS (CD95)",
-      "D) CTLA-4",
-      "E) BTK"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kronik mukokutanöz kandidiyazis, hipoparatiroidizm ve adrenal yetmezlik triadı APECED (Otoimmün Poliendokrinopati Tip 1) sendromudur ve timusta periferik antijen sunumunu sağlayan AIRE gen mutasyonuna bağlıdır."
-  },
-  {
-    "id": "prac-hs-14",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "İmmünolojik Tolerans: Periferik Tolerans, Anerji ve Treg (FoxP3)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Erkek bir bebekte yaşamın ilk aylarında şiddetli inatçı kanlı/sulu ishal (enteropati), erken başlangıçlı Tip 1 diyabet ve yaygın egzama saptanıyor. Genetik analizde CD4+ CD25+ regülatuvar T hücre fonksiyon bozukluğu izleniyor. Bu hastada mutasyona uğramış transkripsiyon faktörü hangisidir?",
-    "options": [
-      "A) AIRE",
-      "B) FoxP3",
-      "C) T-bet",
-      "D) GATA-3",
-      "E) STAT3"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Erkek bebekte enteropati, endokrinopati (diyabet) ve dermatit birlikteliği X'e bağlı IPEX sendromudur. Bu tablo regülatuvar T hücrelerinin (Treg) ana transkripsiyon faktörü olan FoxP3 gen mutasyonu sonucu gelişir."
-  },
-  {
-    "id": "prac-hs-15",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 15,
-    "slideTitle": "Otoimmünite Gelişiminde Genetik ve Çevresel Faktörler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Geçirilmiş streptokok farenjitinden 3 hafta sonra göğüs ağrısı, üfürüm ve eklem ağrılarıyla başvuran bir çocukta, bakteriyel M proteinine karşı oluşan antikorların kalp kapakçıklarıyla çapraz reaksiyon vermesi aşağıdaki immünopatolojik mekanizmalardan hangisinin tipik örneğidir?",
-    "options": [
-      "A) Aşırı Duyarlılık Reaksiyonu Tip I",
-      "B) Moleküler Taklit (Molecular Mimicry)",
-      "C) Santral Tolerans Eksikliği",
-      "D) Reseptör Düzenlemesi Defekti",
-      "E) Kriptik Antijen İzolasyonu"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Patojen antijeninin (streptokok M proteini) konak doku antijenine (kardiyak miyozin/kapak glikoproteinleri) yapısal benzerliği nedeniyle antikorların konak dokusuna saldırması Moleküler Taklit (Molecular Mimicry) olarak adlandırılır."
-  },
-  {
-    "id": "prac-hs-16",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 16,
-    "slideTitle": "Sistemik Lupus Eritematozus (SLE): Patogenez ve Otoantikor Spektrumu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "SLE tanısı ile izlenen 26 yaşındaki kadın hastada rutin kontrolde proteinüri (2.5 g/gün) ve mikroskopik hematüri saptanıyor. Bu hastada lupus nefriti alevlenmesini doğrulamak için istenmesi gereken en uygun otoantikor ve kompleman tetkik ikilisi hangisidir?",
-    "options": [
-      "A) Anti-Histon yüksekliği ve C3/C4 artışı",
-      "B) Anti-dsDNA titresi yüksekliği ve C3/C4 seviyelerinde düşüş (hipokomplemantemi)",
-      "C) Yalnızca ANA pozitifliği ve C1 esteraz artışı",
-      "D) Anti-Sentromer antikor yüksekliği ve IgG4 artışı",
-      "E) Anti-CCP pozitifliği ve Romatoid Faktör artışı"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Lupus nefriti alevlenmesinde anti-dsDNA antikor titresi yükselir ve dolaşan immün komplekslerin komplemanı tüketmesi nedeniyle serum C3 ve C4 düzeyleri belirgin olarak düşer (hipokomplemantemi)."
-  },
-  {
-    "id": "prac-hs-17",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 17,
-    "slideTitle": "SLE: Organ Tutulumları, Lupus Nefriti ve Libman-Sacks",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "30 yaşında SLE tanılı kadın hastanın ekokardiyografisinde mitral kapak ön ve arka yaprakçıklarının her iki yüzeyine yerleşmiş küçük, steril, verrüköz nodüller saptanıyor. Kan kültürlerinde üreme olmayan bu hastada tanımlanan kardiyak lezyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut Romatizmal Kardit vejetasyonları",
-      "B) Subakut Bakteriyel Endokardit",
-      "C) Libman-Sacks Endokarditi",
-      "D) Non-Bakteriyel Trombotik (Marantik) Endokardit",
-      "E) Karsinoid Kalp Hastalığı"
-    ],
-    "correctAnswer": "C",
-    "explanation": "SLE hastalarında kapak yaprakçıklarının hem ön hem arka yüzüne yerleşen steril, küçük verrüköz lezyonlar Libman-Sacks endokarditidir."
-  },
-  {
-    "id": "prac-hs-18",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 18,
-    "slideTitle": "Romatoid Artrit (RA): Sinovit, Pannus ve Eklem Dışı Lezyonlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Her iki elinde sabah tutukluğu, MKF ve PİF eklemlerinde simetrik şişlik ve ağrı yakınması olan 45 yaşındaki kadında çekilen el grafisinde periartiküler erozyonlar saptanıyor. Bu hastada tanıyı kesinleştirmede özgüllüğü en yüksek olan laboratuvar testi hangisidir?",
-    "options": [
-      "A) Romatoid Faktör (RF)",
-      "B) Anti-Sitrülinlenmiş Peptid Antikoru (Anti-CCP)",
-      "C) Antinükleer Antikor (ANA)",
-      "D) Eritrosit Sedimantasyon Hızı (ESR)",
-      "E) Serum C-Reaktif Protein (CRP)"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Romatoid Artrit tanısında Anti-CCP (ACPA) %95'in üzerindeki özgüllüğü ile en spesifik biyobelirteçtir. RF daha sensitif olsa da diğer bağ dokusu hastalıklarında ve kronik enfeksiyonlarda da pozitifleşebilir."
-  },
-  {
-    "id": "prac-hs-19",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 19,
-    "slideTitle": "Sjögren Sendromu ve Sistemik Skleroz (Skleroderma)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Parmaklarında soğukta beyazlaşıp morarma (Raynaud), el derisinde gerginleşme ve yutma güçlüğü yakınması olan 50 yaşındaki hastada kalsinozis ve yüzde telenjiektaziler saptanıyor. Bu hastada pozitif çıkması en muhtemel otoantikor hangisidir?",
-    "options": [
-      "A) Anti-DNA Topoizomeraz I (Anti-Scl-70)",
-      "B) Anti-Sentromer Antikoru (ACA)",
-      "C) Anti-dsDNA",
-      "D) Anti-Smith",
-      "E) Anti-Jo-1"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kalsinozis, Raynaud, Özofagus dismotilitesi, Sklerodaktili ve Telenjiektazi bulguları CREST sendromuna işaret eder ve CREST sendromuna özgü otoantikor Anti-Sentromer Antikorudur (ACA)."
-  },
-  {
-    "id": "prac-hs-20",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 20,
-    "slideTitle": "İmmunoglobulin G4 (IgG4) İlişkili Hastalık (IgG4-RD)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Pankreas başında kitle nedeniyle opere edilen ve biyopsisinde malignite saptanmayan hastada, dokuda storiform (hasır örgü) tarzında fibrozis, ven lümenlerini tıkayan obliteratif flebit ve yoğun plazmosit infiltrasyonu izleniyor. İmmünohistokimyada bu plazmositlerin IgG4 pozitif olduğu gösteriliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) IgG4-İlişkili Hastalık (Tip 1 Otoimmün Pankreatit)",
-      "B) Duktal Adenokarsinom",
-      "C) Sistemik Lupus Eritematozus",
-      "D) Sarkoidoz Pankreatiti",
-      "E) Akut Nekrotizan Pankreatit"
-    ],
-    "correctAnswer": "A",
-    "explanation": "Storiform fibrozis, obliteratif flebit ve dokuda bol IgG4-pozitif plazma hücre infiltrasyonu triadı IgG4-İlişkili Hastalığın (bu olguda Tip 1 Otoimmün Pankreatit) patognomonik histolojik tablosudur."
   }
 ]

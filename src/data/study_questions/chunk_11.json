@@ -1,5 +1,898 @@
 [
   {
+    "id": "prac-bebek-beslenme-010",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 10,
+    "slideTitle": "Biyokimyasal Karşılaştırma I: Kazein ve Whey Fraksiyonları",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Anne sütü ile inek sütünün protein fraksiyonları ve özellikleri karşılaştırıldığında aşağıdaki ifadelerden hangisi doğru bir bilgidir?",
+    "options": [
+      "A) Anne sütünde kazein/whey oranı 80:20 olup inek sütünden daha sert pıhtı oluşturur.",
+      "B) İnek sütünde bulunan en önemli alerjen protein olan beta-laktoglobulin anne sütünde kesinlikle bulunmaz.",
+      "C) İnek sütünün mide boşalma süresi anne sütünden daha kısadır.",
+      "D) Anne sütü whey proteinlerinin büyük kısmını alfa-s1 kazein oluşturur.",
+      "E) Anne sütündeki toplam protein konsantrasyonu inek sütündekinden yaklaşık 3 kat daha fazladır."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Beta-laktoglobulin inek sütünün ana whey proteini ve süt çocukluğundaki en güçlü alerjendir; insan sütünde kesinlikle bulunmaz. Anne sütünde Kazein/Whey oranı 40:60 iken inek sütünde 80:20'dir. Anne sütü toplam proteini ~1 g/dL iken inek sütü ~3.3 g/dL'dir."
+  },
+  {
+    "id": "prac-bebek-beslenme-011",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 11,
+    "slideTitle": "Biyokimyasal Karşılaştırma II: Karbonhidratlar, Lipitler ve Biyoyararlanım",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Anne sütü ile inek sütünün karbonhidrat, demir ve yağ sindirimi parametreleri karşılaştırıldığında aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Anne sütündeki laktoz konsantrasyonu inek sütündekinden belirgin şekilde daha yüksektir.",
+      "B) Laktozun bağırsakta laktik aside fermente olması lümen pH'sını düşürerek kalsiyum ve demir emilimini kolaylaştırır.",
+      "C) Anne sütündeki demirin yaklaşık %50-60'ı emilirken, inek sütündeki demirin yalnızca %10'u emilebilir.",
+      "D) Anne sütü alan bebeğe erken dönemde meyve püresi başlanması demir emilimini %50'den %10'a düşürür.",
+      "E) İnek sütü yüksek miktarda safra tuzu bağımlı lipaz (BSSL) içerdiği için yağ emilim yüzdesi anne sütünden üstündür."
+    ],
+    "correctAnswer": 0,
+    "explanation": "BSSL (Safra Tuzu Bağımlı Lipaz) enzimi anne sütünde bulunur, inek sütünde bulunmaz. Bu sayede anne sütü yağı %95 oranında emilirken, inek sütü yağının %20-48'i sindirilemeden feçesle kaybedilir."
+  },
+  {
+    "id": "prac-bebek-beslenme-012",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 12,
+    "slideTitle": "Renal Solüt Yükü (RSL), Osmolarite ve İnfant Böbreğinin Korunması",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Süt çocuğu beslenmesinde Renal Solüt Yükü (RSL) ve osmolarite kavramları ile ilgili aşağıdaki klinik değerlendirmelerden hangisi yanlıştır?",
+    "options": [
+      "A) Anne sütünün osmolaritesi yaklaşık 286 mOsm/kg olup plazma ile izo-ozmolardır.",
+      "B) İnek sütünün potansiyel renal solüt yükü anne sütünün yaklaşık 3 katıdır.",
+      "C) İnek sütündeki sodyum ve potasyum miktarı anne sütündekinin yaklaşık 3 katı düzeyindedir.",
+      "D) Süt çocuğunun böbreği idrarı 1400 mOsm/kg düzeyine kadar konsantre edebildiği için inek sütünün solüt yükü dehidratasyon riski yaratmaz.",
+      "E) Gastroenterit geçiren ve inek sütüyle beslenen bir bebekte artan zorunlu su kaybı hipernatremik dehidratasyona yol açabilir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Süt çocuğunun böbrek konsantrasyon kapasitesi erişkin (1200-1400 mOsm/kg) düzeyinde değildir; maksimum 600-700 mOsm/kg'dır. Bu nedenle inek sütünün yüksek solüt yükünü atabilmek için çok fazla zorunlu su harcar ve akut hastalıklarda hızla dehidrate olur."
+  },
+  {
+    "id": "prac-bebek-beslenme-013",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 13,
+    "slideTitle": "Anne Sütünün İmmünolojik Mimarisi: Hücresel ve Sıvısal Savunma Faktörleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Anne sütünün immünolojik bileşenleri ve etki mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Sekretuvar IgA içerdiği sekretuvar komponent sayesinde mide asidi ve proteolitik enzimler tarafından parçalanmaz.",
+      "B) Enteromammarik dolaşım sayesinde annenin bağırsak florasındaki patojenlere karşı özgül sIgA antikorları anne sütüne geçer.",
+      "C) Laktoferrin serbest demiri bağlayarak demire bağımlı bakterilerin çoğalmasını engelleyen bakteriyostatik bir proteindir.",
+      "D) Lizozim bakterilerin hücre duvarındaki peptidoglikan tabakasını parçalayarak antibakteriyel etkinlik gösterir.",
+      "E) Sekretuvar IgA bebek tarafından hızla emilerek sistemik kan dolaşımına geçer ve fetal IgG düzeylerini artırır."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Sekretuvar IgA sistemik dolaşıma EMİLMEZ. Bağırsak lümeninde ve mukozal yüzeyde kalarak patojenlerin mukozaya yapışmasını (adhezyonunu) engeller (immün dışlama). Sistemik korumayı sağlayan antikor ise fetal dönemde plasentadan geçen maternal IgG'dir."
+  },
+  {
+    "id": "prac-bebek-beslenme-014",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 14,
+    "slideTitle": "İnsan Sütü Oligosakkaritleri (HMO), Prebiyotikler ve Mikrobiyota Kurulumu",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "İnsan sütü oligosakkaritlerinin (HMO) biyolojik özellikleri ve etki mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Anne sütünde laktoz ve yağdan sonra konsantrasyonu en yüksek üçüncü katı bileşendir.",
+      "B) Bebek tarafından pankreatik enzimlerle hidrolize edilerek temel glukoz kaynağı olarak emilir.",
+      "C) Bifidobacterium infantis için seçici prebiyotik substrat görevi görerek bağırsak florasını düzenler.",
+      "D) Bağırsak epitelindeki reseptörleri taklit eden 'yalancı reseptör' (decoy) etkisiyle patojenlerin mukozaya yapışmasını engeller.",
+      "E) Ürettikleri kısa zincirli yağ asitleri sayesinde kolon pH'sını asidik tutarak patojen kolonizasyonunu baskılar."
+    ],
+    "correctAnswer": 0,
+    "explanation": "HMO'lar bebek tarafından SİNDİRİLEMEZ. Bebekte bunları parçalayacak enzim yoktur. Sindirilmeden kolona geçer ve orada yararlı bakterileri (Bifidobakteriler) besler ve patojenleri tuzağa düşürür."
+  },
+  {
+    "id": "prac-bebek-beslenme-015",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 15,
+    "slideTitle": "Emzirme Nöroendokrinolojisi: Prolaktin ve Oksitosin Refleksleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Laktasyon nöroendokrinolojisi ve emzirme refleksleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Prolaktin ön hipofizden salgılanır ve meme alveollerinde süt sentezini uyarır.",
+      "B) Prolaktin düzeyi emzirme sonrasında pik yaparak bir sonraki emzirmenin sütünü hazırlar.",
+      "C) Oksitosin arka hipofizden salgılanarak alveol çevresindeki myoepitelyal hücreleri kasar ve sütü fışkırtır.",
+      "D) Oksitosin refleksi annenin ağrı, stres ve endişe duyması durumunda inhibe olur.",
+      "E) Prolaktin hormonu gündüz saatlerinde en yüksek seviyeye ulaştığı için gündüz emzirmeleri geceye göre süt yapımında daha etkilidir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Prolaktin hormonu sirkadiyen ritim gereği GECELERİ en yüksek seviyededir. Gece emzirmeleri süt yapımının sürdürülmesi ve prolaktin düzeylerinin korunması açısından gündüze göre çok daha kritiktir."
+  },
+  {
+    "id": "prac-bebek-beslenme-016",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 16,
+    "slideTitle": "Klinik Emzirme Yönetimi: Doğru Teknik, Meme Sorunları ve Saklama Kuralları",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Doğumdan sonraki 3. haftada sağ memesinde şiddetli ağrı, kızarıklık, sertlik ve 38.8°C ateş şikayetiyle başvuran ve klinik olarak akut puerperal mastit tanısı konulan emziren bir anneye yaklaşımda aşağıdakilerden hangisi yanlıştır?",
+    "options": [
+      "A) Uygun antibiyotik ve analjezik tedavi başlanmalıdır.",
+      "B) Bebeğin enfekte memeden emzirilmesine derhal son verilmeli ve o meme kurutulmalıdır.",
+      "C) Memedeki süt stazını gidermek için sık emzirme ve gerekirse sağma uygulanmalıdır.",
+      "D) Emzirme pozisyonu ve kavrama (latch-on) tekniği değerlendirilip düzeltilmelidir.",
+      "E) Sağılan anne sütü derin dondurucuda (-18°C) 3 aya kadar saklanabilir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Mastit tedavisinde en kritik basamak memenin boşaltılmasıdır. Emzirmenin kesilmesi süt stazını artırarak tabloyu meme absesine ilerletir. Anne uygun antibiyotik alırken bebeğini enfekte memeden de güvenle emzirmeye devam etmelidir."
+  },
+  {
+    "id": "prac-bebek-beslenme-017",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 17,
+    "slideTitle": "Emzirmenin Kontrendikasyonları: Kesin Engeller ve Yanlış Bilinen Mitler",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Anne sütü ile beslenme ve emzirmenin kontrendikasyonları ile ilgili aşağıdaki klinik eşleştirmelerden hangisi yanlıştır?",
+    "options": [
+      "A) Klasik Galaktozemi - Bebek için kesin emzirme kontrendikasyonudur.",
+      "B) Gelişmiş ülkelerde anne HIV pozitifliği - Kesin emzirme kontrendikasyonudur.",
+      "C) Annede HBsAg pozitifliği (Hepatit B) - Doğumda bebeğe aşı ve HBIG yapılsa dahi kesin emzirme kontrendikasyonudur.",
+      "D) Anneye radyoaktif iyot-131 tedavisi uygulanması - Geçici emzirme kontrendikasyonudur.",
+      "E) Aktif balgam pozitif tüberkülozlu anne - Doğrudan temas kesilir ancak sağılmış anne sütü bebeğe verilebilir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Hepatit B enfeksiyonu emzirme kontrendikasyonu DEĞİLDİR. Doğumdan sonraki ilk 12 saat içinde bebeğe Hepatit B aşısı ve Hepatit B hiperimmün globulini (HBIG) yapıldığı takdirde anne bebeğini güvenle emzirebilir."
+  },
+  {
+    "id": "prac-bebek-beslenme-018",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 18,
+    "slideTitle": "Tamamlayıcı Beslenme (Ek Gıda): Fizyolojik Gerekçeler ve 6. Ay Eşiği",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Tamamlayıcı beslenmeye (ek gıdalara) geçiş zamanlaması ve fizyolojik gerekçeleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Tamamlayıcı beslenmeye tam 6. ayın bitiminde (180. günde) başlanması önerilir.",
+      "B) Altıncı aydan sonra demir ve çinko depolarının tükenmesi ek gıdaya başlanmasının en önemli gerekçelerindendir.",
+      "C) İlk aylarda güçlü olan dilin dışarı itme (ekstrüzyon) refleksi 4-6. aylarda zayıflayarak kaybolur.",
+      "D) 4 aydan önce ek gıdalara başlanması bağırsak mukozal geçirgenliğinin yüksek olması nedeniyle alerji riskini artırır.",
+      "E) Anne sütü 6-12. aylar arasında bebeğin enerji gereksiniminin %90'ını tek başına karşılamayı sürdürür."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Anne sütü ilk 6 ayda gereksinimin %100'ünü karşılarken, 6-12. aylar arasında bu oran %50'ye, 12. aydan sonra ise %30'a düşer. Kalan açık tamamlayıcı besinlerle kapatılmalıdır."
+  },
+  {
+    "id": "prac-bebek-beslenme-019",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 19,
+    "slideTitle": "Tamamlayıcı Besinlerin Seçimi ve Uygulama Protokolü",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Altıncı ayını dolduran sağlıklı bir süt çocuğunda tamamlayıcı besinlere başlama ilkeleri ile ilgili aşağıdaki önerilerden hangisi yanlıştır?",
+    "options": [
+      "A) Yeni başlanan her gıda tek başına verilmeli ve alerji takibi için aralarında en az 3 gün beklenmelidir.",
+      "B) Başlangıçta yoğurt, sebze püresi ve meyve püresi gibi sindirimi kolay besinler tercih edilmelidir.",
+      "C) Çiğneme becerisinin gelişmesi için besinler blenderdan geçirilerek tamamen pürüzsüz sıvı hale getirilmelidir.",
+      "D) 7. aydan itibaren sebze pürelerine demir ve çinko desteği sağlamak amacıyla çift çekilmiş kıyma eklenmelidir.",
+      "E) Bebeklerin kendi kendine beslenmesini desteklemek amacıyla 8-9. aylarda parmak besinler sunulabilir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Besinlerin blenderdan geçirilerek tamamen pürüzsüz yapılması çiğneme refleksinin gelişimini engeller ve ileriki aylarda pütürlü gıdaların reddine yol açar. Besinler çatal arkasıyla ezilerek pütürlü kıvamda sunulmalıdır."
+  },
+  {
+    "id": "prac-bebek-beslenme-020",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 20,
+    "slideTitle": "Süt Çocuğunda Bir Yaş Altı Yasak Besinler ve Klinik Riskleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Dokuz aylık bir bebeğin beslenme öyküsünde büyükannesi tarafından öksürüğü geçsin diye günde iki tatlı kaşığı bal verildiği ve kahvaltılarda sulandırılmış inek sütü içirildiği öğreniliyor. Bu uygulamaların bebekte yol açabileceği klinik riskler ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+    "options": [
+      "A) Bal - İnfant Botulizmi (Hipotoni ve solunum arresti) / İnek Sütü - İntestinal gizli kanama ve demir eksikliği anemisi",
+      "B) Bal - Hiperkalsemi / İnek Sütü - Laktoz fazlalığına bağlı hipoglisemi",
+      "C) Bal - Çölyak hastalığı / İnek Sütü - K vitamini toksisitesi",
+      "D) Bal - Skorbüt hastalığı / İnek Sütü - Favizm krizi",
+      "E) Bal - Renal tübüler asidoz / İnek Sütü - Hiperkalemiye bağlı aritmi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bal Clostridium botulinum sporları içerdiği için 1 yaş altında infant botulizmi (gevşek bebek sendromu) riski taşır. İnek sütü ise mukozal mikrovasküler hasarla gizli kan kaybına, demir emilim bozukluğuna ve ağır demir eksikliği anemisine yol açar."
+  },
+  {
+    "id": "prac-bebek-beslenme-021",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 21,
+    "slideTitle": "Protein-Enerji Malnütrisyonu (PEM): Tanım, Epidemiyoloji ve Sınıflamalar",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Süt çocuğu ve çocukluk çağı malnütrisyonunun antropometrik sınıflamaları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Waterlow sınıflamasında 'yaşa göre boy' düşüklüğü kronik malnütrisyonu (bodurluk / stunting) gösterir.",
+      "B) Waterlow sınıflamasında 'boya göre ağırlık' düşüklüğü akut malnütrisyonu (çelimsizlik / wasting) gösterir.",
+      "C) Gomez sınıflamasında yaşa göre ağırlığı referans değerin %60'ının altında olan çocuk ağır (3. derece) malnütrisyon grubundadır.",
+      "D) DSÖ kriterlerine göre boya göre ağırlık Z-skoru <-3 SD olan veya nutrisyonel ödemi bulunan çocuk Ağır Akut Malnütrisyon (SAM) kabul edilir.",
+      "E) Pretibial ödemi olan bir çocukta boya göre ağırlık Z-skoru normal sınırlarda ise hasta malnütrisyon olarak sınıflandırılamaz."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Nutrisyonel ödem varlığı, tartı veya Z-skoru ne olursa olsun hastayı doğrudan en ağır malnütrisyon grubu olan 'Ağır Akut Malnütrisyon' (Kwashiorkor) sınıfına sokar. Ödem vücut ağırlığını yapay olarak artırabilir."
+  },
+  {
+    "id": "prac-bebek-beslenme-022",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 22,
+    "slideTitle": "Şiddetli Kalori Yetersizliği: Marasmus Kliniği ve Patofizyolojisi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Sekiz aylık bir bebek; aşırı zayıflık ve kilo alamama şikayetiyle getiriliyor. Fizik muayenede deri altı yağ dokusunun tamamen kaybolduğu, yanakların çöktüğü ve 'ihtiyar adam yüzü' görünümü olduğu, uyluk derisinin bol bir pantolon gibi sarktığı, belirgin kas atrofisi bulunduğu ancak pretibial ödemin OLMADIĞI saptanıyor. Laboratuvarında serum albümini 3.6 g/dL (normal) ölçülen ve iştahının açık olduğu gözlenen bu bebek için en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kwashiorkor",
+      "B) Marasmus",
+      "C) Çölyak Krizi",
+      "D) Kistik Fibrozis",
+      "E) Konjenital Nefrotik Sendrom"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Deri altı yağ dokusunun ve Bichat yastıkçıklarının erimesi ('ihtiyar adam yüzü'), kas atrofisi, 'torba pantolon' görünümü, normal serum albümini, iştahın açık olması ve en önemlisi ÖDEMİN OLMAMASI klasik Marasmus (kuru malnütrisyon) tablosudur."
+  },
+  {
+    "id": "prac-bebek-beslenme-023",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 23,
+    "slideTitle": "İleri Protein Yetersizliği: Kwashiorkor Kliniği ve Patofizyolojisi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "İki yaşında bir çocuk; annesinin yeni doğum yapması üzerine sütten kesilmiş ve sadece mısır ve nişasta lapası ile beslenmiştir. Fizik muayenede iki taraflı pretibial gode bırakan ödem, yüzde 'ay dede' görünümü, karında asit, belirgin hepatomegali, uyluklarda pul pul dökülen hiperpigmente lezyonlar ('pullu boya dermatozu') ve saçlarında açık-koyu renk bantlaşması saptanıyor. Laboratuvarında serum albümini 1.8 g/dL saptanan bu çocukta hepatomegalinin temel patofizyolojik nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Karaciğerde aşırı glikojen depolanması",
+      "B) Apolipoprotein sentez yetersizliğine bağlı olarak trigliseritlerin VLDL şeklinde karaciğerden atılamaması",
+      "C) Safra asidi sentezinin aşırı artması",
+      "D) Hepatik ven trombozu (Budd-Chiari sendromu)",
+      "E) Karaciğerde aşırı demir birikimi (Hemokromatozis)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Kwashiorkorda seçici protein eksikliği nedeniyle karaciğerde apolipoprotein sentezi durur. Karbonhidrattan sentezlenen yağlar (trigliseritler) VLDL haline getirilip kana verilemez; hepatositlerde birikerek ağır yağlı karaciğer ve hepatomegaliye yol açar."
+  },
+  {
+    "id": "prac-bebek-beslenme-024",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 24,
+    "slideTitle": "Ağır Malnütrisyonda Kritik Yönetim İlkeleri ve Refeeding Sendromu Riski",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Ağır akut malnütrisyon (SAM) tanısıyla hastaneye yatırılan bir süt çocuğunun ilk hafta (stabilizasyon fazı) yönetiminde aşağıdaki uygulamalardan hangisi KESİNLİKLE YAPILMAMALIDIR?",
+    "options": [
+      "A) Hipoglisemiyi önlemek amacıyla sık aralıklarla düşük proteinli F-75 diyeti ile beslenmesi",
+      "B) Dehidratasyon tedavisinde düşük sodyumlu, yüksek potasyumlu ReSoMal solüsyonunun kullanılması",
+      "C) Enfeksiyon bulgusu olmasa dahi geniş spektrumlu antibiyotik başlanması",
+      "D) Derin anemiyi düzeltmek amacıyla oral yüksek doz elemental demir tedavisi başlanması",
+      "E) Hipotermiyi önlemek için çocuğun sıcak tutulması ve kanguru bakımı uygulanması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Ağır malnütrisyonun stabilizasyon fazında KESİNLİKLE DEMİR VERİLMEZ. Transferrin azlığı nedeniyle serbest kalan demir serbest radikal hasarına, enfeksiyonların alevlenmesine ve fatal septik şoka yol açar. Demir tedavisi yalnızca rehabilitasyon fazında kilo alımı başladıktan sonra verilir."
+  },
+  {
+    "id": "prac-temel-001",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 1,
+    "slideTitle": "Enfeksiyon ve Enfeksiyon Hastalığı Kavramı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon ve enfeksiyon hastalığı kavramları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK ve TIBBİ açıdan DOĞRUDUR?",
+    "options": [
+      "A) Bir mikroorganizmanın konakta enfeksiyon oluşturabilmesi için mutlaka yüksek ateş ve lökositoz yapması şarttır.",
+      "B) Patojen bir mikroorganizmanın konakta yerleşip çoğalması, klinik belirti vermese dahi bir enfeksiyon durumudur.",
+      "C) Subklinik enfeksiyon geçiren bireylerde mikroorganizma çoğalmadığı için bulaştırıcılık potansiyelleri daima sıfırdır.",
+      "D) Enfeksiyon hastalığı geliştiren her bireyde etkenin virülansı aynı şiddette kalıcı doku hasarı bırakır.",
+      "E) Enfeksiyon dozu ne kadar yüksek olursa olsun konağın duyarlılığı hastalık oluşumunu tek başına engeller."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Enfeksiyon; mikroorganizmanın konağa girmesi, yerleşmesi ve çoğalmasıdır. Klinik belirti ve bulguların ortaya çıkması zorunludur denemez, zira subklinik enfeksiyonlar asemptomatiktir. Klinik bulgular eklendiğinde tablo 'enfeksiyon hastalığı' adını alır. Subklinik enfeksiyonlarda da etken çoğalır ve çevreye bulaştırılabilir."
+  },
+  {
+    "id": "prac-temel-002",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 2,
+    "slideTitle": "Enfeksiyon Hastalıklarının Patofizyolojisi ve Sistemik Belirtileri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon hastalıklarında sistemik yanıt ve ateş patofizyolojisi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Makrofajlardan salınan IL-1, IL-6 ve TNF-alfa temel endojen pirojen sitokinlerdir.",
+      "B) Endojen pirojenler hipotalamustaki termoregülasyon merkezinde PGE2 sentezini artırarak eşiği yükseltirler.",
+      "C) Salmonella Typhi ve Legionella enfeksiyonlarında yüksek ateşe karşın nabzın göreceli düşük kalması Faget bulgusu olarak bilinir.",
+      "D) Gram-negatif bakterilerin lipopolisakkariti (LPS) doğrudan hipotalamusa bağlanarak sitokin salınımı olmaksızın ateş yapar.",
+      "E) Karaciğerde CRP ve fibrinojen gibi akut faz reaktanlarının sentezini indükleyen temel sitokin IL-6'dır."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Lipopolisakkarit (LPS) bir ekzojen pirojendir; doğrudan hipotalamusu uyarmaktan ziyade öncelikle monosit/makrofajları uyararak IL-1, TNF-alfa ve IL-6 gibi endojen pirojenlerin salınmasını tetikler. Ateş bu endojen sitokinlerin hipotalamik OVLT bölgesinde PGE2 sentezletmesiyle oluşur."
+  },
+  {
+    "id": "prac-temel-003",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 3,
+    "slideTitle": "Enfeksiyon Etkenlerinin Biyolojik Spektrumu",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon etkenlerinin hücresel ve yapısal özellikleri karşılaştırıldığında aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Prionlar — Çift iplikli sarmal DNA genomu taşırlar.",
+      "B) Virüsler — Sitoplazmalarında 70S ribozom barındırırlar.",
+      "C) Bakteriler — Mitokondri organelinde oksidatif fosforilasyon yaparlar.",
+      "D) Mantarlar — Çekirdek zarı ve 80S ribozom içeren ökaryotik organizmalardır.",
+      "E) Mikoplazmalar — Kalın peptidoglikan hücre duvarına sahip prokaryotlardır."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Mantarlar gerçek çekirdek zarı, zarlı organelleri ve 80S ribozomları olan ökaryotik organizmalardır. Prionlar nükleik asit içermez; virüsler ribozom içermez; bakterilerde mitokondri yoktur (solunum hücre zarında gerçekleşir); mikoplazmaların ise hücre duvarı tamamen yoktur."
+  },
+  {
+    "id": "prac-temel-004",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 4,
+    "slideTitle": "Prionlar ve Bulaşıcı Süngerimsi Ensefalopatiler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Prionlar ve neden oldukları hastalıklar ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK ve KLİNİK açıdan YANLIŞTIR?",
+    "options": [
+      "A) Patolojik prion proteini (PrPSc), normal hücresel formun (PrPC) aksine beta-kırmalı tabakalardan zengindir.",
+      "B) Nükleik asit içermediklerinden dolayı ultraviyole ışınlarına ve nükleaz enzimlerine dirençlidirler.",
+      "C) Standart hastane otoklavlama protokolü (121°C'de 15 dakika) cerrahi aletlerdeki prionları tamamen inaktive eder.",
+      "D) Beyin biyopsisinde nöronal vakuolizasyon, spongiform dejenerasyon ve amiloid plaklar tipik histopatolojik bulgulardır.",
+      "E) Konakta belirgin bir hümoral ya da hücresel immün yanıt oluşturmadıkları için kanda spesifik antikor saptanamaz."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Prionlar standart otoklavlamaya (121°C) olağanüstü dirençlidir ve bu ısıyla inaktive edilemezler. Prion sterilizasyonu için 134°C'de en az 18 dakika ön vakumlu otoklav veya 1N NaOH çözeltisinde uzun süreli muamele gerekir. Diğer tüm seçenekler prionların temel özellikleridir."
+  },
+  {
+    "id": "prac-temel-005",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 5,
+    "slideTitle": "Virüsler: Zorunlu Hücre İçi Moleküler Parazitler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Virüslerin yapısal özellikleri ve laboratuvar dinamikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Hem DNA hem de RNA genomunu aynı viral partikül içinde eş zamanlı taşırlar.",
+      "B) Sitoplazmalarında yer alan 70S ribozomlar sayesinde kendi viral kapsid proteinlerini bağımsız sentezlerler.",
+      "C) Lipid zarf içeren virüsler mide asidine ve deterjanlara zarfsız virüslere kıyasla çok daha dirençlidir.",
+      "D) Bakterileri tutan standart laboratuvar filtrelerinden geçebilirler ve çoğalmak için mutlaka canlı sisteme ihtiyaç duyarlar.",
+      "E) Kanlı agar ve çikolata agar gibi zenginleştirilmiş cansız besiyerlerinde koloniler oluşturarak ürerler."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Virüsler bakterileri tutan filtrelerden geçebilen (filtre edilebilir) son derece küçük ajanlardır; ribozom ve metabolik enerji üreteçleri bulunmadığından çoğalabilmek için mutlaka canlı hücre kültürlerine veya embriyonlu yumurtaya gereksinim duyarlar. Asla cansız agarlarda üreyemezler."
+  },
+  {
+    "id": "prac-temel-006",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 6,
+    "slideTitle": "Bakteriyel Hücre Mimarisi ve Atipik Prokaryotlar: Klamidyalar",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Chlamydia cinsi bakterilerin biyolojik özellikleri ve patogenezi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Protein sentezi ve metabolik aktiviteleri için konak hücrenin ATP'sini kullanmak zorunda olan enerji parazitleridir.",
+      "B) Hücre dışında bulunan, çevre koşullarına dirençli ve enfeksiyöz olan form Retiküler Cisimcik'tir (RB).",
+      "C) Hücre duvarlarında klasik bakterilerde bulunan tipik peptidoglikan tabakası yer almaz.",
+      "D) Chlamydia trachomatis nongonokokal üretrit ve trahom gibi klinik tablolara yol açar.",
+      "E) Chlamydia psittaci enfekte kuş ve papağan sekresyonlarının solunmasıyla insanlara bulaşarak pnömoni yapar."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Klamidyalarda hücre dışında bulunan, çevresel etkenlere dirençli ve enfeksiyöz olan form 'Elementer Cisimcik'tir (EB). Retiküler Cisimcik (RB) ise konak hücresinin içinde yer alan, metabolik olarak aktif ve bölünen ancak hücre dışında enfeksiyöz olmayan formdur."
+  },
+  {
+    "id": "prac-temel-007",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 7,
+    "slideTitle": "Mikoplazmalar ve Riketsiyalar",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Mikoplazma ve Riketsiya bakterileri ile ilgili aşağıdaki klinik ve mikrobiyolojik ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Mycoplasma pneumoniae hücre duvarındaki kalın peptidoglikan tabakası nedeniyle penisilin tedavisine son derece duyarlıdır.",
+      "B) Mikoplazmalar sitoplazmik membranlarında kolesterol barındıran yegane prokaryotik mikroorganizmalardır.",
+      "C) Rickettsia türleri hücre dışında cansız kanlı agar besiyerlerinde hızla büyük koloniler oluşturarak ürerler.",
+      "D) Akdeniz Benekli Ateşi etkeni Rickettsia prowazekii olup sivrisinek sokması ile insana aktarılır.",
+      "E) Mikoplazmalar zorunlu hücre içi enerji paraziti olduklarından yapay besiyerlerinde hiçbir şekilde üretilemezler."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Mikoplazmaların hücre duvarı yoktur ve ozmotik dayanıklılıklarını sitoplazmik membranlarına kattıkları sterol/kolesterol molekülleriyle sağlarlar; bu durum prokaryotlar arasında benzersizdir. Hücre duvarları olmadığı için penisilinlere doğal dirençlidirler. Riketsiyalar zorunlu hücre içidir ve besiyerinde üremezler. Akdeniz benekli ateşi R. conorii tarafından kene ile bulaştırılır."
+  },
+  {
+    "id": "prac-temel-008",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 8,
+    "slideTitle": "Mantarlar ve Parazitler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Mantar ve parazitlerin biyolojik ve yapısal özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Mantar hücre zarında yer alan ergosterol molekülü temel antifungal ilaçların seçici etki hedefidir.",
+      "B) Candida albicans tek hücreli maya morfolojisine sahipken, Aspergillus türleri hif oluşturan küf mantarlarıdır.",
+      "C) Entamoeba histolytica hücre duvarı içeren çok hücreli bir helmint türüdür.",
+      "D) Sıtma etkeni Plasmodium türlerinin eşeyli üremesi dişi Anopheles sivrisineğinde gerçekleşir.",
+      "E) Enterobius vermicularis (kıl kurdu) silindirik yapıda bir nematod (yuvarlak solucan) örneğidir."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Entamoeba histolytica bir helmint değil; hücre duvarı bulunmayan, yalancı ayaklarıyla (psödopod) hareket eden tek hücreli bir 'protozoon'dur. Diğer tüm seçenekler mantar ve parazitoloji sınıflandırmasına tamamen uygundur."
+  },
+  {
+    "id": "prac-temel-009",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 9,
+    "slideTitle": "Patojenite ve Virülans Kavramları",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Patojenite, virülans ve enfeksiyon dozu kavramlarını tartışan bir hekim grubunun ifadelerinden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Patojenite bir mikroorganizmanın hastalık yapabilme kapasitesini tanımlayan niteliksel bir terimdir.",
+      "B) Virülans aynı türe ait farklı suşlar arasında belirgin farklılıklar gösterebilen niceliksel bir ölçüttür.",
+      "C) Bir bakterinin LD50 değeri ne kadar yüksekse o bakterinin öldürücülüğü ve virülansı o kadar yüksektir.",
+      "D) Shigella dysenteriae son derece düşük bir inokülum miktarıyla (10-100 bakteri) klinik hastalık başlatabilir.",
+      "E) Mide asiditesinin antasitlerle baskılanması Salmonella gibi yüksek inokülum isteyen patojenlerin enfeksiyon dozunu düşürür."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. LD50 (median lethal dose) ve ID50 değerleri virülans ile TERS orantılıdır. Bir bakterinin LD50 değerinin yüksek olması, hayvanların yarısını öldürmek için çok büyük miktarda bakteri gerektiğini, dolayısıyla bakterinin öldürücülük gücünün (virülansının) DÜŞÜK olduğunu gösterir."
+  },
+  {
+    "id": "prac-temel-010",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 10,
+    "slideTitle": "Bakteriyel Virülans Faktörleri: Adhezyon ve Biyofilm Matrisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel adhezyon ve biyofilm oluşumu ile ilgili aşağıdaki ifadelerden hangisi TIBBİ açıdan DOĞRUDUR?",
+    "options": [
+      "A) Bakterilerin dokuya tutunması için kullandığı Tip 1 pili böbrek parankiminde piyelonefrite özgü temel faktördür.",
+      "B) Biyofilm matriksi bakterilerin metabolik hızını artırarak antibiyotik duyarlılığını yüzlerce kat yükseltir.",
+      "C) Staphylococcus epidermidis'in damar içi kateterlerde oluşturduğu biyofilm slime tabakası fagositozu ve antibiyotik penetrasyonunu engeller.",
+      "D) Bakteriyel adhezyon engellense dahi bakteriler mukosiliyer klirensten etkilenmeden doku invazyonu yapabilir.",
+      "E) Quorum sensing mekanizması yalnızca konak hücreleri tarafından bakterileri yok etmek için salgılanan bir sitokindir."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Normal deri florası üyesi olan Staphylococcus epidermidis, kateter ve protez gibi yapay yüzeylere tutunarak ekzopolisakkarit matriks (slime tabakası) ile biyofilm oluşturur. Bu yapı bakteriyi hem nötrofil fagositozundan hem de antibiyotiklerden korur. Piyelonefrit için P-pili gerekir (Tip 1 pili sistitte rol oynar)."
+  },
+  {
+    "id": "prac-temel-011",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 11,
+    "slideTitle": "Bakteriyel Virülans Faktörleri: Kapsül ve İnvazyon Enzimleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel virülans faktörlerinden kapsül ve invaziv enzimler ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Bakteriyel kapsülün en temel patogenetik fonksiyonu nötrofil ve makrofaj fagositozunu engellemektir.",
+      "B) Splenektomi yapılmış bireyler kapsüllü bakterilerle gelişen fulminan bakteriyemi açısından yüksek risk altındadır.",
+      "C) Neisseria ve Streptococcus pneumoniae mukozaya tutunabilmek için sekretuar IgA'yı parçalayan IgA proteaz üretir.",
+      "D) Bacillus anthracis kapsülü tüm bakteriler gibi dallanmış polisakkarit zincirlerinden meydana gelir.",
+      "E) Hyaluronidaz enzimi bağ dokusu temel maddesini parçalayarak dokularda yayılma faktörü olarak görev yapar."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Bakterilerin neredeyse tamamında kapsül polisakkarit yapıda iken; Bacillus anthracis kapsülü bir istisna olarak 'poli-D-glutamik asit' yapısında bir POLİPEPTİD'dir. Bu özellik mikrobiyolojinin en klasik sınav sorularından biridir."
+  },
+  {
+    "id": "prac-temel-012",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 12,
+    "slideTitle": "Bakteriyel Toksinlerin Genel Mimarisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel ekzotoksinler ile endotoksinin karşılaştırılmasında aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Ekzotoksinler genellikle protein yapıda iken endotoksin lipopolisakkarit (LPS) yapısındadır.",
+      "B) Ekzotoksinler formaldehit ile muamele edilerek antijenik toksoid aşılara dönüştürülebilir.",
+      "C) Endotoksin yalnızca Gram negatif bakterilerin dış membranında yer alır ve kromozomal olarak kodlanır.",
+      "D) Endotoksin 100°C ısıya dakikalar içinde denatüre olurken, ekzotoksinler kaynatmaya olağanüstü dirençlidir.",
+      "E) Ekzotoksinlerin öldürücü dozu (toksisitesi) endotoksine kıyasla ağırlık başına çok daha düşüktür (daha güçlüdür)."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. İfade tam tersidir! Ekzotoksinler protein yapıda oldukları için ısıya duyarlıdırlar (termolabil; 60°C'de inaktive olurlar). Endotoksin ise lipopolisakkarit yapıda olduğu için ısıya dirençlidir (termostabil; 100°C'de saatlerce kaynatılsa dahi yapısı bozulmaz)."
+  },
+  {
+    "id": "prac-temel-013",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 13,
+    "slideTitle": "Endotoksin (LPS Lipid A) ve Septik Şok Patogenezi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Gram negatif bakteri endotoksininin (LPS) patofizyolojik etkileri ve septik şok mekanizması ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Endotoksinin makrofajları aktive eden ve toksisiteden sorumlu olan temel parçası O-spesifik polisakkarit zinciridir.",
+      "B) Lipid A, konak hücrelerinde spesifik olarak TLR2 reseptörünü uyararak antienflamatuar yanıtı başlatır.",
+      "C) İndüklenebilir nitrik oksit sentaz (iNOS) uyarımı sonucu artan NO düzeyi yaygın vazodilatasyon ve septik şoka yol açar.",
+      "D) Endotoksin pıhtılaşma kaskadını tamamen baskılayarak tromboz oluşumunu imkansız kılar.",
+      "E) Endotoksin formaldehit ile kolayca detoksifiye edilip insanlarda koruyucu toksoid aşı olarak kullanılır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Endotoksinin Lipid A parçası, makrofaj CD14/TLR4 reseptörünü uyarır; salınan TNF-alfa ve IL-1 endotelde iNOS aktivasyonunu indükler. Masif Nitrik Oksit (NO) salınımı periferik vazodilatasyona ve septik şokun inatçı hipotansiyonuna yol açar. Toksisiteden O-antijeni değil Lipid A sorumludur; TLR2 değil TLR4 uyarılır; DİK'te trombozlar gelişir ve LPS'den toksoid aşı üretilemez."
+  },
+  {
+    "id": "prac-temel-014",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 14,
+    "slideTitle": "A-B Tipi Ekzotoksinler ve Protein Sentez İnhibisyonu",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Corynebacterium diphtheriae ve Pseudomonas aeruginosa bakterilerinin ekzotoksinleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Her iki toksin de konak hücresinde adenilat siklazı aktive ederek cAMP düzeyini aşırı artırır.",
+      "B) İki toksin de Ökaryotik Uzama Faktörü-2'yi (EF-2) ADP-ribozilleyerek hücresel protein sentezini bloke eder.",
+      "C) Difteri toksini geni bakterinin kromozomunda yer alan doğal bir gen olup faj aktarımı gerektirmez.",
+      "D) Pseudomonas Ekzotoksin A motor son plaktan asetilkolin salınımını engelleyerek flask paralizi yapar.",
+      "E) Difteri toksininin A alt birimi hücre yüzeyindeki GM1 reseptörüne bağlanırken B alt birimi nükleusa göç eder."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Hem Difteri toksini hem de Pseudomonas Ekzotoksin A, ökaryotik protein sentezinde görevli Uzama Faktörü-2'yi (EF-2) ADP-ribozilleyerek inaktive eder ve hücrede protein translasyonunu durdurur. Difteri toksini geni lizojenik beta fajı ile kodlanır; A alt birimi katalitiktir, B birimi bağlanır."
+  },
+  {
+    "id": "prac-temel-015",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 15,
+    "slideTitle": "Hücresel İkinci Habercileri Bozan Ekzotoksinler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel toksinlerin hücre içi ikinci haberciler üzerindeki etkileri ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Kolera toksini — Gi proteinini uyararak hücre içi cAMP düzeyini düşürür.",
+      "B) ETEC Isıya Labil Toksin (LT) — Guanilat siklazı aktive ederek cGMP düzeyini artırır.",
+      "C) ETEC Isıya Stabil Toksin (ST) — Guanilat siklazı uyararak cGMP düzeyini artırır.",
+      "D) Boğmaca toksini — Gs proteinini doğrudan aktive ederek CFTR kanallarını bloke eder.",
+      "E) Difteri toksini — Adenilat siklazı aktive ederek pirinç suyu görünümünde ishale yol açar."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Enterotoksijenik E. coli'nin ısıya stabil toksini (ST), enterositlerde guanilat siklazı aktive ederek hücre içi cGMP'yi artırır ve klor sekresyonuna yol açar. Kolera toksini ve ETEC LT ise Gs proteinini uyararak cAMP'yi artırır; Boğmaca toksini Gi'yi inhibe ederek cAMP'yi artırır."
+  },
+  {
+    "id": "prac-temel-016",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 16,
+    "slideTitle": "Bakteriyel Nörotoksinler: Tetanospazmin ve Botulinum Toksini",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Clostridium tetani ve Clostridium botulinum nörotoksinlerinin etki mekanizmaları karşılaştırıldığında aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tetanospazmin motor son plakta asetilkolin reseptörlerini kompetitif olarak bloke eder.",
+      "B) Botulinum toksini medulla spinalisteki Renshaw hücrelerinde GABA salınımını artırarak gevşeme sağlar.",
+      "C) Her iki toksin de presinaptik vezikül füzyonunda görevli SNARE proteinlerini (sinaptobrevin) parçalayan çinko endopeptidazlardır.",
+      "D) Tetanospazmin yaygın flask paraliziye yol açarken, botulinum toksini risus sardonicus ve spastik kasılma yapar.",
+      "E) Botulinum toksini retrograd aksonal transport ile beyin sapına taşınarak inhibitör nöronları uyarır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Hem tetanospazmin hem de botulinum toksini nörotransmitter veziküllerinin presinaptik membrana kaynaşmasını sağlayan SNARE protein kompleksini (özellikle sinaptobrevin/VAMP) proteolitik olarak parçalayan çinko-bağımlı metalloproteinazlardır. Tetanoz inhibitör GABA/glisini bloke edip spastik felç yaparken; botulinum asetilkolini bloke edip flask felç yapar."
+  },
+  {
+    "id": "prac-temel-017",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 17,
+    "slideTitle": "Membran Parçalayan Toksinler ve Süperantijenler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel süperantijenlerin immünolojik etki mekanizması ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Antijen sunan hücre içinde işlenerek MHC Sınıf I molekülünün peptid yarığına yerleşirler.",
+      "B) B lenfositlerin yüzeyindeki membran IgM antikorlarını monoklonal olarak uyarırlar.",
+      "C) Antijen işleme basamağı olmaksızın MHC Sınıf II molekülü ile TCR'nin V-beta bölgesini doğrudan çapraz bağlarlar.",
+      "D) Konak hücresinde adenilat siklaz enzimini ADP-ribozilleyerek cAMP artışına neden olurlar.",
+      "E) Sitotoksik T lenfositlerin (CD8+) apoptoza gitmesine neden olarak derin lenfopeni tablosu oluştururlar."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Süperantijenlerin en temel ayırt edici özelliği, hiçbir antijen işleme (processing) sürecine gerek kalmadan, antijen sunan hücredeki MHC Sınıf II molekülü ile T lenfositteki TCR'nin değişken beta (Vβ) zincirini dış kısımlarından doğrudan çapraz bağlamalarıdır. Bu durum T lenfositlerin %20'ye varan poliklonal aktivasyonuna ve masif sitokin fırtınasına yol açar."
+  },
+  {
+    "id": "prac-temel-018",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 18,
+    "slideTitle": "Toksoid Aşılar ve Toksin-Antitoksin İmmünolojisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Toksoid aşılar ve antitoksin tedavisinin immünolojik prensipleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Toksoid elde edilirken ekzotoksinin toksik bölgesi inaktive edilirken antijenik epitopları korunur.",
+      "B) Difteri ve tetanoz aşıları ekzotoksinlerin formaldehit ile muamelesiyle üretilen klasik toksoid aşılardır.",
+      "C) Gram negatif bakterilerin endotoksininden (LPS) yüksek koruyuculukta toksoid aşılar yaygın olarak üretilmektedir.",
+      "D) Terapötik antitoksinler nöron içine girmiş veya reseptörüne bağlanmış toksini nötralize edemezler.",
+      "E) Pasif antitoksin uygulaması kanda serbest dolaşan toksin moleküllerini bağlayarak dokuya tutunmasını engeller."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Endotoksin (lipopolisakkarit / Lipid A) protein yapıda olmadığı ve zayıf antijenik olduğu için formaldehit muamelesiyle toksoid aşı haline GETİRİLEMEZ. Toksoid aşılar yalnızca protein yapısındaki bakteriyel ekzotoksinlerden elde edilebilir."
+  },
+  {
+    "id": "prac-temel-019",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 19,
+    "slideTitle": "İnsan Mikrobiyotası ve Kolonizasyon Direnci",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "İnsan vücudunun mikrobiyota dağılımı ve steril vücut bölgeleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sağlıklı bireylerde Beyin-Omurilik Sıvısı (BOS) ve kan dolaşımı tamamen sterildir.",
+      "B) Alt solunum yolları (trakea, bronşlar ve alveoller) yoğun bir kalıcı kommensal mikrobiyota barındırır.",
+      "C) Kalın bağırsak mikrobiyotasında Bacteroides cinsi zorunlu anaerobik bakteriler sayıca en baskın gruptur.",
+      "D) Üreme çağındaki kadınlarda vajina pH'ının asidik tutulmasında Lactobacillus türleri birincil role sahiptir.",
+      "E) Normal mikrobiyota patojen bakterilerin epitele tutunmasını 'kolonizasyon direnci' ile engeller."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Alt solunum yolları (trakea, bronşlar ve alveoller) mukosiliyer eskalatör ve alveoler makrofajlar sayesinde normal koşullarda tamamen 'STERİL' kabul edilen vücut bölgelerindendir; yoğun bir kalıcı mikrobiyota barındırmazlar. Üst solunum yolları (nazofarenks) ise floraya sahiptir."
+  },
+  {
+    "id": "prac-temel-020",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 20,
+    "slideTitle": "Disbiyozis ve Clostridioides difficile Koliti",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Geniş spektrumlu antibiyotik kullanımı sonrası gelişen psödomembranöz kolit ve Clostridioides difficile patogenezi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Hastalık antibiyotiklerin doğrudan kolon mukozasında asit salgısını artırması sonucu gelişir.",
+      "B) C. difficile sporları antibiyotik tedavisiyle tamamen yok olur ancak virüsler psödomembran oluşturur.",
+      "C) Normal anaerobik mikrobiyotanın baskılanması sonucu çimlenen C. difficile, Toksin A ve Toksin B salgılayarak mukozal nekroz yapar.",
+      "D) Kolon mukozasında oluşan psödomembran plakları yalnızca canlı eritrositlerden meydana gelir.",
+      "E) Tedavide birinci basamak yaklaşım hastaya derhal geniş spektrumlu intravenöz ampisilin başlanmasıdır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Geniş spektrumlu antibiyotik kullanımı normal kolon mikrobiyotasını baskılayarak kolonizasyon direncini kırar (disbiyozis). C. difficile sporları çimlenir ve enterotoksin (Toksin A) ile güçlü sitotoksin (Toksin B) salgılar. Toksinler enterosit aktin iskeletini parçalayarak sarı-beyaz psödomembranöz kolite yol açar."
+  },
+  {
+    "id": "prac-temel-021",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 21,
+    "slideTitle": "Fırsatçı Patojenler ve İmmün Yetmezlik Zeminleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "İmmün yetmezlik tipleri ve bu zeminlerde gelişen fırsatçı patojen eşleştirmelerinden hangisi KLİNİK açıdan YANLIŞTIR?",
+    "options": [
+      "A) Ağır Nötropeni (Nötrofil <500/uL) — Aspergillus fumigatus ve Pseudomonas aeruginosa",
+      "B) İlerlemiş HIV Enfeksiyonu (CD4 <200/uL) — Pneumocystis jirovecii ve Cryptococcus neoformans",
+      "C) Splenektomi (Dalaksız Hasta) — Streptococcus pneumoniae ve Neisseria meningitidis",
+      "D) Hücresel İmmün Yetmezlik — Mycobacterium tuberculosis ve Sitomegalovirüs (CMV)",
+      "E) Nötrofil Yetmezliği — Giardia duodenalis ve Enterobius vermicularis"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E seçeneğidir. Nötropenide (nötrofil yetmezliği) fagositer savunma çöktüğü için bakteriyel (Pseudomonas, S. aureus, Enterobacterales) ve anjiyoinvaziv fungal (Aspergillus, Mucor) enfeksiyonlar gelişir. Giardia ve kıl kurdu gibi paraziter enfeksiyonlar nötropeni ile doğrudan ilişkili majör fırsatçı enfeksiyonlar değildir."
+  },
+  {
+    "id": "prac-temel-022",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 22,
+    "slideTitle": "Konak Savunması ve Doğal Bariyerler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Konak savunmasını oluşturan doğal fiziksel ve kimyasal bariyerler ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sağlam derinin keratinize stratum corneum tabakası ve asidik pH'ı mikroorganizma invazyonuna karşı mekanik zırhtır.",
+      "B) Solunum yolundaki mukosiliyer eskalatör mikropları tutarak farenkse süpürür ve alt solunum yolunu steril tutar.",
+      "C) Mide asiditesinin proton pompa inhibitörleri ile baskılanması Salmonella ve Vibrio enfeksiyonu duyarlılığını artırır.",
+      "D) Vücut sekresyonlarında bulunan lizozim enzimi ökaryotik hücre zarlarındaki ergosterol moleküllerini parçalar.",
+      "E) Laktoferrin ortamdaki serbest demiri bağlayarak bakterilerin demir bağımlı enzim sistemlerini felç eder."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Lizozim enzimi ökaryotik hücrelerdeki ergosterole etki etmez! Lizozimin özgül substratı bakteriyel hücre duvarında bulunan peptidoglikan tabakasındaki N-asetilglukozamin (NAG) ile N-asetilmuramik asit (NAM) arasındaki beta-1,4 glikozidik bağlardır. Ergosterol mantar hücre zarında yer alır."
+  },
+  {
+    "id": "prac-temel-023",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 23,
+    "slideTitle": "Enfeksiyon Zinciri ve Bulaş Dinamikleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon zinciri, taşıyıcılık ve zoonotik enfeksiyonlar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Enfeksiyon zincirini kırmak için zincirin altı halkasından herhangi birinin engellenmesi yeterlidir.",
+      "B) Salmonella Typhi'nin kronik asemptomatik taşıyıcılığında bakteri safra kesesinde persistan kolonize olur.",
+      "C) Kuduz, bruselloz ve şarbon omurgalı hayvanlardan insanlara bulaşan klasik zoonotik hastalıklardır.",
+      "D) Hastanın kendi deri florasındaki koagülaz negatif stafilokokların kateter sepsisi yapması ekzojen enfeksiyon örneğidir.",
+      "E) Francisella tularensis enfekte tavşan ve kemiricilerle temas sonucu insanlara bulaşabilen bir zoonoz etkenidir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Hastanın kendi normal mikrobiyotasında (örneğin derisinde) bulunan bir mikroorganizmanın (koagülaz negatif stafilokoklar) doku bariyerinin bozulması sonucu enfeksiyon oluşturması 'ekzojen' değil, tipik bir 'ENDOJEN enfeksiyon' örneğidir. Ekzojen enfeksiyonlar dış kaynaktan (başka insan, hayvan, kontamine gıda/su) alınır."
+  },
+  {
+    "id": "prac-temel-024",
+    "deckId": "learn-enfeksiyon-temel-kavramlar",
+    "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar, Toksinler ve Patogenez",
+    "slideNumber": 24,
+    "slideTitle": "Enfeksiyon Hastalığının Doğal Seyri ve Klinik Evreleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon hastalıklarının klinik evreleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) İnkübasyon döneminde hastalığa özgü organ tutulum bulguları zirve yapar ve hasta yoğun bakım ihtiyacı duyar.",
+      "B) Prodromal dönem, özgül olmayan halsizlik ve hafif ateş gibi öncü belirtilerin görüldüğü ve bulaştırıcılığın yüksek olabildiği evredir.",
+      "C) Nekahat dönemine giren her hastada mikrobiyal saçılım kesin olarak durur ve portörlük gelişme riski tamamen sıfırlanır.",
+      "D) Akut akme (fastigium) evresinde vücutta hiçbir patojen mikroorganizma saptanamaz, yalnızca sekeller izlenir.",
+      "E) Ateşin basamak basamak günlere yayılarak düşmesi krizis; dakikalar içinde aniden düşmesi ise lizis olarak adlandırılır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Prodromal dönem, inkübasyonun bitiminde ortaya çıkan, hastalığa özgü olmayan halsizlik, baş ağrısı, kırgınlık gibi genel belirtilerin görüldüğü geçiş evresidir. Bu evrede mikrobiyal yük yüksek olduğundan bulaştırıcılık zirvede olabilir. Nekahat döneminde portörlük sürebilir; akme evresinde mikrop ve semptomlar zirvededir; ateşin aniden düşmesi krizis, yavaş düşmesi lizistir."
+  },
+  {
+    "id": "prac-epi-001",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 1,
+    "slideTitle": "Enfeksiyon Hastalıklarının Toplum Sağlığındaki Yeri ve Tarihsel Boyut",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon hastalıklarının tarihsel gelişimi ve günümüzdeki epidemiyolojik önemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sanitasyon, temiz içme suyu ve aşılamadaki gelişmeler gelişmiş ülkelerde enfeksiyon morbiditesini belirgin azaltmıştır.",
+      "B) Yeniden önem kazanan (re-emerging) enfeksiyonlar daha önce bilinen ancak aşı reddi veya direnç nedeniyle insidansı yeniden artan hastalıklardır.",
+      "C) Gelişmekte olan ülkelerde enfeksiyon hastalıkları günümüzde halk sağlığı önceliğini tamamen yitirmiş ve yerini kardiyovasküler hastalıklara bırakmıştır.",
+      "D) John Snow'un 1854 Londra kolera salgınındaki filyasyon ve kaynak kontrolü yaklaşımı modern enfeksiyon epidemiyolojisinin temel taşıdır.",
+      "E) Antimikrobiyal direnç ve ekolojik bozulmalar yeni patojenlerin insan popülasyonuna sıçramasını kolaylaştırmaktadır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Gelişmekte olan ve az gelişmiş ülkelerde enfeksiyon hastalıkları yetersiz sanitasyon, beslenme bozuklukları ve sağlık hizmetlerine erişim kısıtlılığı nedeniyle halen birincil mortalite ve morbidite nedenidir; önceliğini asla yitirmemiştir."
+  },
+  {
+    "id": "prac-epi-002",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 2,
+    "slideTitle": "Enfeksiyon ve Enfeksiyon Hastalığı Ayrımı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon ve enfestasyon kavramlarını tartışan öğrencilerin ifadelerinden hangisi epidemiyolojik ve mikrobiyolojik açıdan DOĞRUDUR?",
+    "options": [
+      "A) Enfeksiyon varlığından söz edebilmek için konakta mutlaka yüksek ateş ve lökositoz gibi klinik bulguların gelişmesi zorunludur.",
+      "B) Bir kişinin hepatit B virüsünü taşıması ve karaciğerinde çoğaltması, klinik belirti vermese dahi bir enfeksiyon durumudur.",
+      "C) Sarcoptes scabiei (uyuz etkeni) parazitinin deriye yerleşip tüneller açması klasik bir subklinik viral enfeksiyondur.",
+      "D) Enfestasyon terimi yalnızca hücre içi zorunlu bakteriler (Klamidya ve Riketsiya) için kullanılır.",
+      "E) Enfeksiyon hastalığı geliştirmeyen bir konağın etkeni başka bir duyarlı bireye bulaştırma potansiyeli tamamen sıfırdır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Enfeksiyon etkenin konakta yerleşip çoğalmasıdır; klinik belirti olmasa bile kişi enfektedir. Enfestasyon makroparazitler için kullanılır, ateş zorunlu değildir ve asemptomatik kişiler de bulaştırıcı olabilir."
+  },
+  {
+    "id": "prac-epi-003",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 3,
+    "slideTitle": "Konak (Host) Kavramı ve Konak Tipleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Parazitolojik döngüde konak kavramları ve biyolojik rolleri ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK KESİN (ANA) KONAK tanımına tam olarak uyar?",
+    "options": [
+      "A) Parazitin yalnızca kist formunun çevrede canlı kaldığı cansız toprak ortamı",
+      "B) Parazitin larva evresini geçirdiği ve yalnızca eşeysiz çoğalmanın gözlendiği canlı organizma",
+      "C) Parazitin erişkin formunun yaşadığı veya eşeyli (seksüel) üreme evresinin gerçekleştiği canlı organizma",
+      "D) Paraziti mekanik olarak ayaklarında taşıyıp hiçbir biyolojik değişim geçirmesine izin vermeyen karasinek",
+      "E) Parazitin konağa girmeden önce spor oluşturarak inaktif kaldığı su kaynakları"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Kesin (ana) konak; parazitin erişkin formunu barındıran veya eşeyli çoğalmanın gerçekleştiği canlıdır. Larva evresi ara konakta, mekanik taşıma ise mekanik vektörde gerçekleşir."
+  },
+  {
+    "id": "prac-epi-004",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 4,
+    "slideTitle": "Enfeksiyon Kaynağı (Rezervuar) ve Tipleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir enfeksiyon hastalığının küresel düzeyde tamamen yeryüzünden silinmesi (eradikasyonu) hedeflendiğinde, aşağıdaki epidemiyolojik özelliklerden hangisine sahip bir hastalıkta bu hedefe ulaşmak EN KOLAYDIR?",
+    "options": [
+      "A) Etkenin doğal rezervuarının toprak olması ve spor formunda on yıllarca canlı kalabilmesi",
+      "B) Doğal rezervuarının yabani kemirgenler ve yarasalar gibi geniş omurgalı popülasyonları olması",
+      "C) Patojenin yalnızca insan rezervuarında barınması, hayvan veya cansız rezervuarının bulunmaması",
+      "D) Etkenin su dağıtım şebekelerinde ve klimalarda biyofilm içinde serbestçe çoğalabilmesi",
+      "E) Etkenin artropod vektörler (keneler ve sivrisinekler) arasında transovaryal olarak aktarılabilmesi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Yalnızca insan rezervuarı olan hastalıklar (çiçek virüsü gibi), toplumda aşı ile bağışıklık sağlanıp zincir kırıldığında etken saklanacak başka bir konak bulamadığı için eradike edilebilir. Zoonozlar ve toprak rezervuarlı etkenler eradike edilemez."
+  },
+  {
+    "id": "prac-epi-005",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 5,
+    "slideTitle": "Portörlük (Taşıyıcılık) Epidemiyolojisi ve Tipleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir kreşte döküntülü hastalık salgını incelenirken, döküntüsü henüz başlamamış olan bir çocuğun oyun arkadaşlarına hastalığı bulaştırdığı, başka bir çocuğun ise klinik olarak tamamen iyileşmesine rağmen 3 hafta boyunca dışkısıyla etkeni saçmaya devam ettiği saptanmıştır. Bu iki çocuğun sergilediği portörlük tipleri sırasıyla aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kronik portörlük — Sağlıklı temaslı portörlüğü",
+      "B) İnkübasyon dönemi portörlüğü — Konvelasan dönem portörlüğü",
+      "C) Konvelasan dönem portörlüğü — İnkübasyon dönemi portörlüğü",
+      "D) Biyolojik portörlük — Mekanik vektörlük",
+      "E) Rezervuar portörlüğü — Akut septik portörlük"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Belirtiler başlamadan önceki kuluçka evresinde saçılım 'inkübasyon dönemi portörlüğü', hastalık klinik olarak iyileştikten sonra devam eden saçılım ise 'konvelasan dönem portörlüğü' olarak tanımlanır."
+  },
+  {
+    "id": "prac-epi-006",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 6,
+    "slideTitle": "Enfeksiyonun Zaman Aralıkları ve Bulaş Dinamiği",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir bulaşıcı hastalık epidemisinde, şüpheli temaslıların toplumdan tecrit edilerek gözlem altında tutulacağı sürenin (karantina süresi) hesaplanmasında aşağıdaki epidemiyolojik parametrelerden hangisi temel alınır?",
+    "options": [
+      "A) Hastalığın ortalama vaka fatalite hızı (CFR)",
+      "B) Etkenin laboratuvarda üreme süresi",
+      "C) Hastalığın bilinen en uzun (maksimum) inkübasyon periyodu",
+      "D) Hastanın antibiyotik tedavisi altındaki konvelasan süresi",
+      "E) Toplumdaki duyarlı bireylerin aşılanma oranı"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Karantina, henüz semptom göstermeyen sağlıklı temaslıların hastalığı geliştirip geliştirmeyeceğini anlamak için uygulanır; bu nedenle hastalığın bilinen en uzun (maksimum) inkübasyon periyodu kadar sürdürülür."
+  },
+  {
+    "id": "prac-epi-007",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 7,
+    "slideTitle": "Mikrobiyolojik Terminoloji: Kontaminasyon, Bakteriyemi, Viremi ve Sepsis Ayrımı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir hastadan alınan kan kültüründe Streptococcus viridans üremiş, ancak hastanın vital bulguları tamamen stabil seyretmiş ve herhangi bir organ yetmezliği gelişmemiştir. Başka bir yoğun bakım hastasında ise kanda Gram negatif basillerin çoğaldığı, hastada hipotansiyon, oligüri ve laktik asidozla seyreden ağır organ disfonksiyonu geliştiği saptanmıştır. Bu iki klinik durum sırasıyla hangi terimlerle ifade edilir?",
+    "options": [
+      "A) Kolonizasyon — Kontaminasyon",
+      "B) Bakteriyemi — Sepsis (Septik Şok)",
+      "C) Dezenfeksiyon — Sterilizasyon",
+      "D) Enfestasyon — Viremi",
+      "E) Asepsi — Antisepsi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Bakterilerin kanda geçici olarak bulunması bakteriyemidir. Kanda çoğalarak organ disfonksiyonu, hipotansiyon ve laktik asidoza yol açması ise sepsistir."
+  },
+  {
+    "id": "prac-epi-008",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 8,
+    "slideTitle": "Cansız Ortamların Arındırılması: Dezenfeksiyon, Sterilizasyon, Pastörizasyon ve Tindalizasyon",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Tıp fakültesi mikrobiyoloji laboratuvarında protein ve serum içeren ısıya duyarlı bir besi yerinin sporlar dahil tüm mikroorganizmalardan arındırılarak sterilize edilmesi planlanmaktadır. Bu sıvının 120°C otoklavda bozulacağı bilindiğine göre, 3 gün üst üste aralıklı ısıtma ve oda sıcaklığında bekletme prensibiyle uygulanması gereken yöntem aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pastörizasyon",
+      "B) Tindalizasyon",
+      "C) Filtrasyon",
+      "D) Kuru sıcak hava (Pastör fırını)",
+      "E) Alkol bazlı antisepsi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. 100°C üzerinde kimyasal yapısı bozulan sıvıların 3 gün üst üste 55-100°C'de ısıtılıp oda sıcaklığına soğutularak sporların açılmasının sağlanması ve öldürülmesi işlemi fraksiyone sterilizasyon olan tindalizasyondur."
+  },
+  {
     "id": "prac-epi-009",
     "deckId": "learn-enfeksiyon-epidemiyoloji",
     "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
@@ -1265,1118 +2158,5 @@
     ],
     "correctAnswer": "D",
     "explanation": "Otonom nöropati mesanede tam boşalamamaya ve yüksek post-voiding rezidüel idrara yol açarak enfeksiyon patogenezinde kritik bir rol oynar. Bu nedenle D seçeneğindeki ifade kesinlikle yanlıştır."
-  },
-  {
-    "id": "prac-use-014",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Katater İlişkili Üriner Sistem Enfeksiyonları (Kİ-ÜSE / CAUTI)",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Yoğun bakım ünitesinde 35 gündür kalıcı foley kateter ile izlenen bir hastada gelişen katater ilişkili üriner sistem enfeksiyonu (Kİ-ÜSE) patogenezi ve mikrobiyolojisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "30 günü aşan kataterizasyonlarda enfeksiyonlar %95 oranında tek bir bakteri suşuna (monomikrobiyal) bağlıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Katater varlığında bakteriüri riski kataterin takılı kaldığı her gün sabit kalır ve süreyle artış göstermez.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Uzun süreli kataterizasyonda olguların %95'i polimikrobiyaldir; bakteriler katater yüzeyinde antibiyotiklere dirençli biyofilm oluşturur.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Katater ilişkili enfeksiyonlarda en sık izole edilen mikroorganizma tartışmasız Streptococcus pneumoniae'dir.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Katater ilişkili asemptomatik bakteriürisi olan her hastaya derhal geniş spektrumlu karbapenem tedavisi başlanmalıdır.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "30 günden uzun kataterizasyonlarda enfeksiyonların %95'i polimikrobiyaldir. Bakterilerin katater yüzeyinde oluşturduğu biyofilm matriksi, antibiyotiklerin penetrasyonunu ve hücresel bağışıklığı engeller."
-  },
-  {
-    "id": "prac-use-015",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 15,
-    "slideTitle": "Ürosepsis: Patofizyoloji, Risk Grupları ve Klinik Yönetim",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "67 yaşında diyabetik bir hasta, sağ yan ağrısı, 39.5 °C ateş, titreme, hipotansiyon (80/50 mmHg), taşikardi ve konfüzyon tablosunda acile getiriliyor. Çekilen USG'de sağ üreteri tıkayan 12 mm'lik taş ve toplayıcı sistemde pürülan dilatasyon (piyonefroz) saptanıyor. Bu hastanın acil yönetiminde antibiyotik tedavisinin yanı sıra en kritik ve geciktirilmemesi gereken girişim hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Taşın derhal açık cerrahi ile çıkarılması",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hastanın sedatize edilerek spontan taş düşürmesinin beklenmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Perkütan nefrostomi veya JJ stent ile toplayıcı sistemin acil dekompresyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Yüksek doz loop diüretiği uygulanarak idrar debisinin artırılması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Ağrı kontrolü amacıyla intramüsküler analjezik verilip taburcu edilmesi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Obstrüktif üropati zemininde gelişen piyonefroz ve ürosepsiste hidrostatik basınç düşürülmezse piyelovenöz reflü ile bakteriyemi durdurulamaz. Bu nedenle acil nefrostomi veya stent ile idrar drenajı (dekompresyon) mutlak hayat kurtarıcı adımdır."
-  },
-  {
-    "id": "prac-use-016",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 16,
-    "slideTitle": "ÜSE Patogenezinde Konak-Patojen Etkileşimi: Fimbriyalar ve Adhezinler",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Üropatojenik Escherichia coli'nin (UPEC) patogenezinde rol oynayan virülans faktörleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tip 1 fimbriyalar D-mannoz kalıntılarına bağlanır ve özellikle mesane epitel hücrelerine tutunmada rol oynar.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "P-fimbriyalar eritrosit ve tübül epitelindeki Gal-Gal reseptörlerine bağlanarak akut piyelonefrit patogenezinde kritik görev üstlenir.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "P-fimbriyaların epitele tutunması ortamda serbest D-mannoz bulunması durumunda tamamen inhibe olur.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Bakteriyel adhezyon, idrar akımının mekanik yıkama gücünü aşmak için gereken ilk ve en zorunlu basamaktır.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "UPEC suşları demir kazanımı için aerobaktin gibi özelleşmiş sideroforlar salgılar.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "P-fimbriyalar 'mannoz-dirençli' adhezinlerdir; Gal-Gal reseptörlerine bağlanırlar ve ortamdaki D-mannoz tarafından inhibe edilemezler. Mannoz ile inhibe olan Tip 1 fimbriyalardır."
-  },
-  {
-    "id": "prac-use-017",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 17,
-    "slideTitle": "Enfeksiyonun Giriş Yolları: Asendan, Hematojen ve Lenfojen Mekanizmalar",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Üriner sistem enfeksiyonlarının patogenezinde mikroorganizmaların yayılım yolları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "ÜSE'lerin ezici çoğunluğu (%95+) periüretral alandan mesaneye ve böbreğe uzanan asendan yolla gelişir.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Vezikoüreteral reflü (VUR), asendan yolla bakterilerin mesaneden renal toplayıcı sisteme ulaşmasındaki en önemli defekttir.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hematojen yolla piyelonefrit ve parankim apsesi oluşumunda E. coli ve diğer Gram-negatif basiller primer rol oynar.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Staphylococcus aureus bakteriyemisi veya infektif endokardit varlığında böbrek parankimi hematojen yolla enfekte olabilir.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kadınlarda üretranın anatomik olarak kısa olması asendan enfeksiyonlara yatkınlığın temel nedenlerindendir.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Hematojen yolla piyelonefrit oluşumunda Gram-negatif basillerin rolü çok düşüktür; hematojen yayılım tipik olarak S. aureus bakteriyemisi veya sistemik mantar enfeksiyonlarında izlenir. Enterik Gram negatif basiller asendan yolla bulaşır."
-  },
-  {
-    "id": "prac-use-018",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 18,
-    "slideTitle": "Ürolojik Semptomatoloji: Hematüriye Klinik ve Laboratuvar Yaklaşımı",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "54 yaşında erkek hasta idrarda kan görme şikayetiyle başvuruyor. Yapılan tetkiklerde hematürinin miksiyonun tamamı boyunca devam ettiği ve idrar sedimentinde ağırlıklı olarak izomorfik eritrositlerin bulunduğu saptanıyor. Bu hastanın klinik yaklaşımı ile ilgili aşağıdaki ilkelerden hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İzomorfik eritrositler primer glomerülonefrit lehine olup hastaya derhal renal kortikal biyopsi yapılmalıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hematürinin miktarı patolojinin ciddiyetiyle doğru orantılıdır; ağrısız olduğu için ileri araştırma gerekmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Yetişkin bir hastada aksi kanıtlanana kadar ürolojik malignite dışlanmalı, sistoskopi ve üst üriner sistem görüntülemesi planlanmalıdır.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Miksiyonun tamamında görülen hematüri yalnızca distal üretral inflamasyona özgüdür.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İdrarda eritrosit görülmesi durumunda antibiyotik verilerek 6 ay sonra kontrole çağrılması yeterlidir.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Erişkinde hematüri aksi ispatlanana kadar ürolojik malignite (mesane/böbrek tümörü) kabul edilir. Total hematüri ve izomorfik eritrositler glomerül dışı ürolojik traktusu gösterdiğinden sistoskopi ve görüntüleme şarttır."
-  },
-  {
-    "id": "prac-use-019",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 19,
-    "slideTitle": "Üriner Ağrı Tipleri: Renal Kolik, İnflamatuar Ağrı ve İntraperitoneal Ayrım",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Acil servise sağ yan ağrısı şikayetiyle başvuran bir hastanın ayırıcı tanısında akut böbrek/üreter patolojisi ile intraperitoneal bir organ perforasyonu (peritonit) arasında kalınmıştır. Aşağıdaki klinik bulgulardan hangisi intraperitoneal bir patolojiden ziyade böbrek/üreter kaynaklı akut renal koliği en güçlü şekilde destekler?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hastanın karın ağrısını azaltmak için yatakta tamamen sırtüstü ve hareketsiz yatması",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Ağrının frenik sinir irritasyonu aracılığıyla sağ omuza yayılması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ağrının epigastrik bölgede sabit bir şekilde lokalize olması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hastanın hiçbir pozisyonda rahat edemeyip kıvranarak oda içinde sürekli hareket halinde olması",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Fizik muayenede yaygın defans ve rebound hassasiyeti saptanması",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Akut renal kolikte viseral gerilme nedeniyle hasta rahat bir pozisyon bulamaz ve sürekli kıvranıp hareket eder. İntraperitoneal inflamasyonda (peritonit) ise hasta periton temasını engellemek için yatakta kıpırdamadan yatar."
-  },
-  {
-    "id": "prac-use-020",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 20,
-    "slideTitle": "Alt Üriner Sistem Semptomları (AÜSS / LUTS): Sınıflandırma ve Dinamikler",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki alt üriner sistem semptomlarından hangisi mesanenin idrar depolama (irritatif) fazına ait semptomlar arasında yer almaz?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sık idrara çıkma (Frequency / Pollaküri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Gece idrara kalkma (Noktüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ani sıkışma hissi (Urgency)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İdrar yaparken ağrı ve yanma (Dizüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İdrara başlamada duraksama ve gecikme (Hesitancy)",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "İdrara başlamada gecikme ve duraksama (Hesitancy), mesane çıkım obstrüksiyonuna bağlı gelişen bir 'işeme (obstrüktif)' semptomudur. Pollaküri, noktüri, urgency ve dizüri ise depolama (irritatif) semptomlarıdır."
-  },
-  {
-    "id": "prac-use-021",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 21,
-    "slideTitle": "İrritatif ve Fonksiyonel Bozukluklar: Dizüri, İnkontinans, Pnömatüri ve Hematospermi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "62 yaşında diyabetik bir hasta, idrar yaparken hava kabarcıkları çıktığını (pnömatüri) ve idrarının kötü koktuğunu ifade ediyor. Hastanın yakın zamanda herhangi bir ürolojik girişim öyküsü bulunmamaktadır. Bu klinik bulgunun etyolojisinde öncelikle düşünülmesi gereken patolojiler hangi seçenekte doğru verilmiştir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Enterovezikal (kolovezikal) fistül veya gaz üreten mikroorganizmalarla gelişen amfizematöz enfeksiyon",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Benign prostat hiperplazisi veya primer üretra darlığı",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Basit böbrek kisti rüptürü veya glomerülonefrit",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Minimal değişiklik hastalığı veya nefrotik sendrom",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Saf stres tipi üriner inkontinans veya pelvik taban relaksasyonu",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Enstrümantasyon öyküsü olmayan bir hastada pnömatüri görülmesi ya bağırsak ile mesane arasında fistül varlığını (kolovezikal fistül) ya da diyabette gaz oluşturan bakterilerle (E. coli, Klebsiella) meydana gelen amfizematöz sistiti/piyelonefriti gösterir."
-  },
-  {
-    "id": "prac-use-022",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Sistit, Akut Piyelonefrit ve Kronik Piyelonefrit Klinik Tabloları",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "29 yaşında kadın hasta 2 gündür devam eden 39 °C ateş, titreme, sağ böbrek lojunda şiddetli yan ağrısı ve bulantı şikayetiyle başvuruyor. Fizik muayenede sağ kostovertebral açı hassasiyeti belirgin pozitif saptanıyor. Bu klinik tablonun tanısı ve patolojisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tablo basit akut sistit olup hastaya yalnızca 3 günlük oral tedavi verilip taburcu edilmelidir.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Yan ağrısı, ateş ve KVAH birlikteliği böbrek parankiminin akut bakteriyel enfeksiyonu olan Akut Piyelonefriti gösterir.",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Hastada yan ağrısı olmasına rağmen ateş olmaması nedeniyle piyelonefrit tanısı kesinlikle dışlanır.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu tablonun tanısı yalnızca renal biyopside glomerül nekrozu gösterilerek konulabilir.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Olguların tamamında etken cinsel yolla bulaşan Chlamydia trachomatis'tir.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Yüksek ateş, titreme, tek taraflı yan ağrısı ve kostovertebral açı hassasiyeti böbrek parankiminin akut süpüratif enfeksiyonu olan Akut Piyelonefritin kardinal klinik göstergeleridir."
-  },
-  {
-    "id": "prac-use-023",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Prostatit Sendromları ve NIH Sınıflaması: Akut, Kronik ve KP/KPAS",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "42 yaşında erkek hasta yüksek ateş (39.2 °C), titreme, perineal bölgede şiddetli dolgunluk ve ağrı, idrar yaparken yoğun yanma ve idrar yapamama (akut retansiyon) şikayetiyle acile başvuruyor. Bu hastanın klinik yaklaşımında kesinlikle kaçınılması gereken uygulama aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İntravenöz geniş spektrumlu antibiyotik başlanması",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan ve idrar kültürlerinin alınması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Sert parmakla rektal muayene ve tanısal prostat masajı yapılması",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Retansiyonu gidermek amacıyla suprapubik sistostomi planlanması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Vital bulguların ve kan basıncının yakın takibi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Akut bakteriyel prostatitte aşırı inflamasyon ve apse riski nedeniyle sert parmakla rektal muayene ve prostat masajı kontrendikedir; bakterilerin kana karışarak bakteriyemi ve septik şok oluşturma riski bulunur."
-  },
-  {
-    "id": "prac-use-024",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 24,
-    "slideTitle": "Skrotal İnflamasyonlar ve Üretritler: Orşit, Epididimit ve Üretrit Ayrımı",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Şüpheli cinsel ilişkiden 14 gün sonra başlayan hafif dizüri ve sabahları üretradan az miktarda gelen açık renkli, müköz/sulu akıntı şikayetiyle başvuran erkek hastanın akıntı yaymasında Gram-negatif diplokok görülmemiştir. Bu hastada en olası klinik tablo ve en sık sorumlu mikroorganizma aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Gonokokkal üretrit - Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Non-gonokokkal üretrit - Chlamydia trachomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Akut piyelonefrit - Escherichia coli",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kabakulak orşiti - Paramyxovirüs",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kronik sistit - Proteus mirabilis",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "10-21 günlük uzun kuluçka süresi, sinsi başlangıç, az miktarda sulu/müköz akıntı ve mikroskopide diplokok görülmemesi Chlamydia trachomatis kaynaklı Non-gonokokkal üretritin (NGU) tipik özellikleridir. Gonorede ise kuluçka 2-7 gün olup bol pürülan sarı akıntı görülür."
-  },
-  {
-    "id": "prac-spe-001",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 1,
-    "slideTitle": "Üriner Sistemin Spesifik Enfeksiyonlarına Giriş ve Genel Bakış",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdakilerden hangisi üriner sistemin 'spesifik' enfeksiyonlarını standart bakteriyel enfeksiyonlardan (non-spesifik İYE) ayıran temel klinik ve patolojik özelliklerden biri DEĞİLDİR?",
-    "options": [
-      "A) Doku düzeyinde granülomatöz reaksiyon, kazeifikasyon nekrozu veya belirgin fibrozis oluşturabilmeleri",
-      "B) Standart besiyerlerinde yapılan rutin idrar kültürlerinde etkenin genellikle ürememesi ve steril piyüri görülmesi",
-      "C) Radyolojik ve endoskopik olarak mesane ve böbrek malignitelerini taklit edebilen lezyonlar meydana getirmeleri",
-      "D) Etkenlerin sıklıkla genişlemiş spektrumlu beta-laktamaz (GSBL) salgılayan dirençli Escherichia coli suşları olması",
-      "E) İyileşme süreçlerinin sıklıkla üreter darlıkları ve mesane kapasitesinde geri dönüşsüz azalma ile sonuçlanması"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü GSBL salgılayan Escherichia coli suşları, klasik 'non-spesifik' bakteriyel üriner sistem enfeksiyonlarının dirençli formlarıdır. Spesifik enfeksiyonlar ise Mycobacterium tuberculosis, Schistosoma haematobium, Candida türleri, BK virüs gibi özel mikroorganizmaların oluşturduğu granülomatöz, paraziter veya viral patolojilerdir. A, B, C ve E seçenekleri spesifik enfeksiyonların kardinal özellikleridir."
-  },
-  {
-    "id": "prac-spe-002",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 2,
-    "slideTitle": "Genitoüriner Tüberküloz: Etiyoloji ve Mikrobiyolojik Özellikler",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Mycobacterium tuberculosis'in mikrobiyolojik özellikleri ve hücre duvarı yapısı ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Zorunlu aerobik özellikte olduğundan oksijenizasyonu yüksek dokuları (akciğer apeksleri ve böbrek korteksi) tercih eder",
-      "B) Hücre duvarındaki yüksek mikolik asit içeriği nedeniyle Ziehl-Neelsen boyamasında asit-alkol ile rengini kaybetmez",
-      "C) Jenerasyon süresi çok kısa olup (yaklaşık 20 dakika) rutin kanlı agarda 24 saat içinde koloniler oluşturur",
-      "D) Hücre duvarında bulunan kord faktörü (trehaloz 6,6-dimikolat) virülansta ve granülom oluşumunda kritik rol oynar",
-      "E) Yüzeyel mesane karsinomunda kullanılan intravezikal BCG aşısı Mycobacterium bovis kaynaklıdır ve tüberküloz reaksiyonuna yol açabilir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır çünkü M. tuberculosis son derece yavaş üreyen bir bakteridir; jenerasyon süresi yaklaşık 15-20 saattir (20 dakika olan E. coli'dir). Löwenstein-Jensen gibi özel katı besiyerlerinde makroskopik koloni vermesi 3 ila 8 hafta sürer, rutin kanlı agarda 24 saatte üremez."
-  },
-  {
-    "id": "prac-spe-003",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 3,
-    "slideTitle": "Genitoüriner Tüberküloz Patogenezi: Hematojen Yayılım ve Latens",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Genitoüriner tüberkülozun patogenezi ve yayılım dinamikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Enfeksiyon daima eksternal üretral meatus üzerinden asendan yolla mesaneye ve oradan böbreğe ulaşır",
-      "B) Primer akciğer enfeksiyonu sırasında hematojen yolla her iki böbrek korteksine ekilen basiller, yıllar sonra reaktive olarak toplayıcı sisteme desendan yolla yayılır",
-      "C) Klinik semptomlar primer akciğer enfeksiyonundan hemen 2-3 hafta sonra akut glomerülonefrit tablosuyla başlar",
-      "D) Hastalığın patogenezinde hücresel bağışıklığın rolü yoktur, tamamen kompleman bağımlı hümoral bağışıklık hakimdir",
-      "E) Hastaların tamamında eş zamanlı olarak kavitasyonel aktif akciğer tüberkülozu ve balgamda ARB pozitifliği saptanır"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği patogenezi kusursuz özetler: Primer akciğer enfeksiyonundaki bakteriyemi sırasında basiller bilateral böbrek korteksine hematojen ekilir; 5-25 yıllık bir latens döneminin ardından lokal reaktivasyonla medullaya ve pelvise erode olur, idrar akımıyla desendan yolla alt üriner sisteme yayılır. A yanlıştır (asendan değil hematojen başlar); C yanlıştır (yıllar sonra başlar); D yanlıştır (tip IV hücresel bağışıklık esastır); E yanlıştır (%20-50 hastada akciğer grafisi normaldir)."
-  },
-  {
-    "id": "prac-spe-004",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 4,
-    "slideTitle": "Renal Tüberküloz Patolojisi: Kazeifikasyon Nekrozundan Kavitasyona",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek tüberkülozunun mikroskopik ve makroskopik patolojik gelişimi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Granülomun karakteristik histolojik bulgusu periferik yerleşimli nükleuslara sahip Langhans dev hücreleridir",
-      "B) Medüller papillaların kazeöz nekroza uğrayarak toplayıcı sisteme açılması kavitasyonel lezyonları (kavern) başlatır",
-      "C) İnfundibulumların fibrotik skatrizasyonu sonucu obstrüksiyon ve izole hidrokaliks alanları meydana gelir",
-      "D) Lezyonlar böbrekte hiçbir zaman kazeöz nekroz yapmaz, sadece diffüz süpüratif nötrofilik infiltrasyonla seyreder",
-      "E) İleri evrede fonksiyonel renal parankim tamamen kaybolarak yerini kazeöz debris dolu multiloküle boşluklara bırakabilir"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü kazeifikasyon nekrozu tüberkülozun patognomonik histolojik belirtecidir. Diffüz süpüratif nötrofilik infiltrasyon ve mikroapseler ise akut piyelonefritin (akut bakteriyel non-spesifik enfeksiyon) tipik bulgusudur. A, B, C ve E seçenekleri renal tüberkülozun gerçek patolojik süreçlerini ifade eder."
-  },
-  {
-    "id": "prac-spe-005",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 5,
-    "slideTitle": "Son Evre Renal Tüberküloz: 'Camcı Macunu Böbrek' ve Otonefrektomi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Renal tüberkülozun son döneminde ortaya çıkan 'camcı macunu böbrek' (putty kidney) ve 'otonefrektomi' tablosu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Böbrek fonksiyonları artmıştır ve idrar çıkışı poliürik düzeydedir",
-      "B) Nekrotik parankimin yerini kalsifiye kazeöz debrisin alması sonucu böbrek fonksiyonunu tamamen kaybeder ve afonksiyone hale gelir",
-      "C) Lezyon kendi kendini sınırladığı için hastaya asla antitüberküloz ilaç tedavisi verilmemelidir",
-      "D) Tablo sadece akut bakteriyel piyelonefrit atakları sırasında gelişen geçici bir fonksiyonsuzluk durumudur",
-      "E) Böbrek hiçbir zaman kalsifiye olmaz, daima anevrizmatik genişlemiş vasküler yapılar içerir"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur: Camcı macunu böbrek (putty kidney), kazeo-kavernöz yıkım ve distrofik kalsifikasyon sonucu böbrek parankiminin tamamen tahrip olup fonksiyonunu yitirmesi (otonefrektomi) durumudur. A yanlıştır (organ afonsiyonedir); C yanlıştır (içinde canlı basil barındırabileceğinden medikal tedavi ve sıklıkla cerrahi gerekir); D yanlıştır (irreversibl kronik tüberküloz hasarıdır); E yanlıştır (yoğun distrofik kalsifikasyon patognomoniktir)."
-  },
-  {
-    "id": "prac-spe-006",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 6,
-    "slideTitle": "Üreter Tüberkülozu: Striktürler, Tirbuşon Üreter ve 'Golf Deliği' Orifis",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Genitoüriner tüberküloz seyrinde üreter ve üreterovezikal bileşkede izlenen patolojik değişikliklerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Üreter lümeninde ardışık darlık ve dilatasyonlar — Tespih tanesi (beaded) üreter görünümü",
-      "B) Fibrotik kısalma ve aks deviasyonu — Tirbuşon (corkscrew) üreter manzarası",
-      "C) Longitudinal kas liflerinin fibrozisle çekilmesi sonucu orifisin açık kalması — Golf deliği (golf-hole) üreter orifisi",
-      "D) Üreterovezikal valv mekanizmasının bozulması — Sekonder vezikoüreteral reflü (VUR) gelişimi",
-      "E) Üreter alt ucunda kistik balonlaşma ve kobranın başı görünümü — Üreter tüberkülozuna bağlı psödo-divertikül"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü üreter alt ucunun mesane içine kistik balonlaşması ve 'kobranın başı' (cobra-head) görünümü konjenital üreteroselin karakteristik radyolojik bulgusudur; tüberkülozla ilişkili değildir. A, B, C ve D seçeneklerindeki bulgular tüberkülozun klasik üreteral komplikasyonlarıdır."
-  },
-  {
-    "id": "prac-spe-007",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 7,
-    "slideTitle": "Mesane Tüberkülozu: Tüberküllerden 'Güdük/Yüksük Mesane'ye",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Mesane tüberkülozunun patofizyolojik seyri ve son dönem komplikasyonları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Enfeksiyon hiçbir zaman kas tabakasına geçmez, daima yalnızca yüzeyel transizyonel epitel ile sınırlı kalır",
-      "B) Detrusor kas liflerinin yerini fibrotik dokunun alması sonucu mesane kapasitesi dramatik biçimde küçülerek 'güdük/yüksük mesane' (thimble bladder) oluşur",
-      "C) Mesane kapasitesi 1000 mL'nin üzerine çıkarak aşırı gerilimli atonik mesane tablosu meydana gelir",
-      "D) İlk lezyonlar daima mesane kubbesinde (dome) başlar, trigon ve orifisler enfeksiyondan tamamen korunur",
-      "E) Tüberküloz sistiti hiçbir zaman dizüri veya pollaküri yapmaz, tamamen asemptomatik bir tablodur"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur: Detrusorun transmural tutulumu ve fibrozisi sonucu mesane kompliyansını kaybeder, hacmi 50 mL'nin altına iner ve rijit 'güdük mesane' (thimble bladder) tablosu ortaya çıkar. A yanlıştır (transmural tutulum tipiktir); C yanlıştır (kapasite artmaz, dramatik şekilde azalır); D yanlıştır (yerçekimi ve desendan idrar nedeniyle ilk lezyonlar trigonda başlar); E yanlıştır (şiddetli irritatif semptomlar görülür)."
-  },
-  {
-    "id": "prac-spe-008",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 8,
-    "slideTitle": "Erkek Genital Sistem Tüberkülozu: Epididimit, Prostatit ve 'Tespih Tanesi' Vas Deferens",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "32 yaşında erkek hasta, sağ skrotumda yaklaşık 4 aydır devam eden ağrısız şişlik ve skrotal deriden dışarıya aralıklı açık renkli sıvı sızması şikayetiyle başvuruyor. Fizik muayenede sağ epididim başında sert nodülarite, vas deferenste tespih tanesi şeklinde düğümcükler ve skrotum arka yüzünde cilde yapışık drene olan bir fistül ağzı palpe ediliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut gonokoksik epididimit",
-      "B) Fournier gangreni",
-      "C) Genitoüriner tüberküloz",
-      "D) Testis torsiyonu",
-      "E) Benign prostat hiperplazisi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C seçeneğidir. Genitoüriner tüberkülozda epididim başından başlayan sert nodüler kitle, vas deferenste tespih tanesi (beaded) nodülaritesi ve cilde açılan kronik drene skrotal sinüs/fistül patognomonik fizik muayene triadıdır. Akut bakteriyel/gonokoksik epididimit ani başlangıçlı, yüksek ateşli ve son derece ağrılıdır; fistül oluşturmaz. Testis torsiyonu akut iskemi tablosudur. Fournier gangreni fasyaları tutan hızla ilerleyen nekrotizan fasiittir."
-  },
-  {
-    "id": "prac-spe-009",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 9,
-    "slideTitle": "Ürogenital Tüberkülozda Klinik Tablo ve 'Steril Piyüri' Paradoksu",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "28 yaşında kadın hasta, 6 aydır devam eden idrar yaparken yanma ve sık idrara çıkma şikayetleriyle başvuruyor. Hastaya bu süreçte farklı hekimlerce 4 kür antibiyotik verilmiş ancak şikayetleri gerilememiştir. Yapılan tam idrar analizinde idrar pH'sı 5.2, lökosit 45/HPF, eritrosit 15/HPF saptanmış, rutin kanlı agar ve EMB idrar kültüründe ise mikroorganizma ürememiştir. Bu hasta için öncelikle düşünülmesi gereken patoloji aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut non-komplike sistit",
-      "B) Üriner sistem tüberkülozu",
-      "C) Aşırı aktif mesane sendromu",
-      "D) Üriner sistem taş hastalığı",
-      "E) Diyabetik sistopati"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B seçeneğidir. Standart antibiyotik tedavilerine yanıt vermeyen kronik dizüri ve pollaküri varlığında, idrar sedimentinde lökosit ve eritrosit bulunmasına rağmen standart kültürde bakteri ürememesi tablosu 'steril piyüri'dir. Steril piyürinin klasik prototipi ve ilk akla gelmesi gereken sebebi üriner sistem tüberkülozudur. Akut non-komplike sistitte kültürde sıklıkla E. coli ürer. Aşırı aktif mesanede piyüri olmaz. Taş hastalığı hematüri yapsa da steril piyürili kronik dizüri tablosunu açıklamakta tüberküloz kadar spesifik değildir."
-  },
-  {
-    "id": "prac-spe-010",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 10,
-    "slideTitle": "Ürogenital Tüberkülozda Laboratuvar ve Mikrobiyolojik Tanı",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Üriner sistem tüberkülozu şüphesi olan bir hastada mikrobiyolojik örnek toplama ve laboratuvar tanı yöntemleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) En doğru tanısal örnek, 24 saat boyunca oda ısısında biriktirilmiş idrarın tamamının gönderilmesidir",
-      "B) İdrar sedimentinden yapılan tek bir Ziehl-Neelsen boyamasının negatif olması tüberküloz tanısını kesin olarak ekarte ettirir",
-      "C) Tanısal başarıyı artırmak için ardışık en az 3 gün sabah verilen ilk idrar örneğinde ARB boyama, kültür ve PCR incelemesi yapılmalıdır",
-      "D) Löwenstein-Jensen besiyerine ekilen idrarda M. tuberculosis kolonileri genellikle ilk 12-24 saat içinde görünür hale gelir",
-      "E) İdrar PCR testleri tüberküloz tanısında tamamen etkisizdir ve hiçbir zaman kullanılmamalıdır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur: Basil atılımı intermittan olduğundan ardışık en az 3 sabah ilk idrarının incelenmesi tanı şansını %90'ın üzerine çıkarır. A yanlıştır (24 saatlik idrar kontamine olur ve basiller parçalanır); B yanlıştır (direkt mikroskopinin duyarlılığı düşüktür, negatif olması hastalığı ekarte ettirmez); D yanlıştır (Löwenstein-Jensen'de üreme 3-8 hafta sürer); E yanlıştır (PCR %95 üzeri duyarlılıkla saatler içinde tanı koydurur)."
-  },
-  {
-    "id": "prac-spe-011",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 11,
-    "slideTitle": "Genitoüriner Tüberkülozda Radyolojik Görüntüleme Bulguları",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "35 yaşında erkek hastanın kontrastlı üriner sistem görüntülemesinde üst kaliks boynunda fibrotik darlık, kaliks konturlarında papiller erozyona bağlı düzensiz 'güve yeniği' (moth-eaten) görünümü ve orta kaliksin kontrast tutmayarak silindiği ('hayalet kaliks') saptanıyor. Bu radyolojik bulgular öncelikle hangi spesifik enfeksiyonu düşündürmelidir?",
-    "options": [
-      "A) Renal kist hidatik",
-      "B) Böbrek tüberkülozu",
-      "C) Akut amibiyazis",
-      "D) Schistosoma haematobium infestasyonu",
-      "E) Akut non-spesifik sistit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B seçeneğidir. Papiller nekroz ve erozyon sonucu kaliks konturlarında oluşan 'güve yeniği' manzarası, infundibuler striktürler ve kontrast madde geçişinin engellenmesiyle oluşan 'hayalet kaliks' (phantom calyx) renal tüberkülozun klasik ve amfilerde en sık sorgulanan radyolojik bulgularıdır. Kist hidatikte kalsifiye kist duvarı ve kız veziküller görülür; sistitte üst üriner sistem parankimi sağlamdır."
-  },
-  {
-    "id": "prac-spe-012",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 12,
-    "slideTitle": "Genitoüriner Tüberkülozun Medikal ve Cerrahi Tedavi İlkeleri",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Genitoüriner tüberkülozun medikal ve cerrahi tedavi prensipleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Standart kemoterapide ilk 2 ay dörtlü (INH, RIF, PZA, EMB), sonraki 4 ay ikili (INH, RIF) rejim uygulanır",
-      "B) Üreterde belirgin darlık ve hidronefroz riski olan olgularda fibrotik skatrizasyonu azaltmak için rejime kortikosteroid eklenebilir",
-      "C) Cerrahi girişim gerektiren olgularda, canlı basil ekilimini ve fistülizasyonu önlemek için operasyon öncesi en az 3-4 hafta antitüberküloz tedavi verilmelidir",
-      "D) Otonefrektomi gelişmiş böbreklerde hiçbir ilaç tedavisi verilmeden doğrudan acil cerrahi nefrektomi yapılmalıdır",
-      "E) İleri derecede kontrakte mesane (thimble bladder) olgularında mesane kapasitesini artırmak için ogmentasyon sistoplastisi uygulanabilir"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü tüberkülozda preoperatif antitüberküloz tedavi verilmeden doğrudan cerrahi yapılması, yara yerine ve çevre dokulara basil ekilmesine ve tedaviye dirençli fistüllere yol açar; bu nedenle nefrektomi öncesi en az 3-4 hafta medikal tedavi şarttır. A, B, C ve E seçenekleri doğru tedavi ilkeleridir."
-  },
-  {
-    "id": "prac-spe-013",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 13,
-    "slideTitle": "Ürogenital Şistozomiyazis: Schistosoma haematobium Biyolojisi ve Patogenezi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Ürogenital şistozomiyazis ve etkeni Schistosoma haematobium ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) İnsana iyi pişmemiş sığır veya domuz etlerinin tüketilmesiyle kist hidatik şeklinde bulaşır",
-      "B) Erişkin solucanlar münhasıran inferior vena cava içinde serbestçe yüzer ve yumurta bırakmaz",
-      "C) İnsanlara serkaryaların tatlı sularda cildi delmesiyle bulaşır ve erişkin formlar vezikal venöz pleksusa yerleşir",
-      "D) Ara konakçısı karasal kene türleridir ve vektör ısırığıyla lenfatik sisteme aktarılır",
-      "E) Hastalık sadece gastrointestinal kanamalar yapar, üriner sisteme hiçbir etkisi bulunmaz"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur: S. haematobium tatlı sularda serbest yüzen serkaryaların sağlam insan derisini delip dolaşıma geçmesiyle bulaşır; erişkin çiftler vezikal venöz pleksusa yerleşerek mesane duvarına yumurtlar. A yanlıştır (etle bulaşan Taenia veya Trichinella'dır); B yanlıştır (venüllere yerleşip binlerce yumurta bırakırlar); D yanlıştır (ara konak tatlı su salyangozu Bulinus'tur); E yanlıştır (üriner sisteme özgü patoloji yapar)."
-  },
-  {
-    "id": "prac-spe-014",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 14,
-    "slideTitle": "Mesane Şistozomiyazisi Patolojisi: Granülomlar, Kumlu Yamalar ve Fibrozis",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Afrika seyahati öyküsü olan bir hastada mikroskopik hematüri nedeniyle yapılan sistoskopide, mesane mukozasında sarı-kahverengi kum serpilmiş hissi veren granüler kabarık alanlar ('sandy patches') ve psödopolipler gözleniyor. Alınan biyopside bol eozinofilli granülomatöz reaksiyon saptanıyor. Bu klinik tablonun en olası nedeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Schistosoma haematobium enfeksiyonu",
-      "B) Mycobacterium tuberculosis sistiti",
-      "C) İnterstisyel sistit (Hunner ülseri)",
-      "D) Corynebacterium urealyticum enkruste sistiti",
-      "E) Malakoplaki"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Sistoskopide izlenen 'kumlu yamalar' (sandy patches) kalsifiye parazit yumurtalarının oluşturduğu ve Schistosoma haematobium enfeksiyonu için karakteristik olan lezyonlardır. Tüberkülozda kazeöz granülomlar ve tüberküller görülür. İnterstisyel sistitte Hunner lezyonları vardır. Malakoplakide Michaelis-Gutmann cisimcikleri görülür."
-  },
-  {
-    "id": "prac-spe-015",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 15,
-    "slideTitle": "Schistosoma haematobium ve Mesanenin Skuamöz Hücreli Karsinomu İlişkisi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Mısır'ın kırsal bölgesinde çiftçilik yapan 50 yaşındaki erkek hasta masif hematüri ve pelvik ağrı şikayetiyle başvuruyor. Yapılan sistoskopide mesane kubbesinde büyük ekzofitik, ülsere bir kitle saptanıyor ve alınan biyopside keratin incileri içeren invaziv karsinom tanısı konuyor. Bu hastada malignite gelişimine zemin hazırlayan paraziter etken ve gelişen kanserin en olası histopatolojik tipi aşağıdakilerden hangisinde doğru verilmiştir?",
-    "options": [
-      "A) Schistosoma mansoni — Adenokarsinom",
-      "B) Schistosoma haematobium — Skuamöz hücreli karsinom",
-      "C) Echinococcus granulosus — Transizyonel hücreli karsinom",
-      "D) Wuchereria bancrofti — Renal hücreli karsinom",
-      "E) Enterobius vermicularis — Küçük hücreli nöroendokrin karsinom"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B seçeneğidir. Nil havzasında tatlı su teması olan hastalarda mesane karsinomunun en önemli paraziter etkeni Schistosoma haematobium'dur ve oluşturduğu kronik irritasyon/skuamöz metaplazi zemininde en sık 'Skuamöz Hücreli Karsinom' (SCC - keratin incileri içeren) gelişir. S. mansoni bağırsak tutulumu yapar. E. granulosus kist hidatik etkenidir."
-  },
-  {
-    "id": "prac-spe-016",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 16,
-    "slideTitle": "Üriner Şistozomiyazisin Klinik Tablosu, Tanı ve Tedavisi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Schistosoma haematobium infestasyonunun klinik bulguları, mikrobiyolojik tanısı ve tedavisi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) En tipik klinik prezantasyon miksiyonun son damlalarında belirginleşen 'terminal hematüri'dir",
-      "B) İdrar mikroskopisinde saptanan yumurtalar karakteristik olarak uçtan (terminal) dikenlidir",
-      "C) Yumurta atılımı öğle saatlerinde (10:00-14:00 arası) pik yaptığı için idrar örneği bu zaman diliminde toplanmalıdır",
-      "D) Medikal tedavisinde erişkin parazitleri felç eden Prazikuantel ilk seçenek ilaçtır",
-      "E) Yumurtaları lateral (yandan) dikenli olup idrarda hiçbir zaman mikroskopik olarak gösterilemez"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü Schistosoma haematobium yumurtaları lateral değil 'terminal (uçtan)' dikenlidir (lateral dikenli olan S. mansoni'dir) ve idrar santrifüj sedimentinde direkt bakı ile kolaylıkla gösterilebilir. A, B, C ve D seçenekleri S. haematobium'un doğru klinik, tanısal ve terapötik özellikleridir."
-  },
-  {
-    "id": "prac-spe-017",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 17,
-    "slideTitle": "Üriner Sistem Fungal Enfeksiyonları: Etiyoloji ve Risk Faktörleri",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Hastanede yatan bir hastada Candida türlerine bağlı üriner sistem enfeksiyonu gelişimi için aşağıdakilerden hangisi doğrudan bir risk faktörü DEĞİLDİR?",
-    "options": [
-      "A) Uzun süreli kalıcı foley kateterizasyon varlığı",
-      "B) Geniş spektrumlu antibiyotik kullanımı",
-      "C) Kontrolsüz diabetes mellitus ve glikozüri",
-      "D) İmmünsüpresif veya kemoterapötik ajan kullanımı",
-      "E) Genç yaşta spor yapma ve düzenli egzersiz alışkanlığı"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü genç yaş ve düzenli egzersiz fırsatçı fungal enfeksiyonlar için bir risk faktörü değildir. Fungal İYE'ler fırsatçı patojenlerle gelişir ve kalıcı foley kateter (A), geniş spektrumlu antibiyotiklerle floranın baskılanması (B), diyabetik glikozüri (C) ve immünsüpresyon (D) majör predispozan zeminlerdir."
-  },
-  {
-    "id": "prac-spe-018",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 18,
-    "slideTitle": "Fungal İYE Klinik Formları: Asemptomatik Kandidüri, Sistit ve Asendan Piyelonefrit",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Yoğun bakım ünitesinde yatmakta olan 68 yaşındaki bilinci kapalı, foley kateterli bir hastanın idrar kültüründe 50.000 CFU/mL Candida albicans ürüyor. Hastanın ateşi, lökositozu veya hemodinamik instabilitesi bulunmuyor. Bu aşamada yapılması gereken en uygun klinik yaklaşım aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Derhal yüksek doz intravenöz Amfoterisin B başlanması",
-      "B) İntravezikal sürekli flukonazol irrigasyonu uygulanması",
-      "C) Mevcut foley kateterin çekilmesi veya yenisiyle değiştirilerek klinik takip yapılması",
-      "D) Acil bilateral perkütan nefrostomi takılması",
-      "E) Geniş spektrumlu antibiyotik kombinasyonunun iki katına çıkarılması"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C seçeneğidir. Asemptomatik kandidürili, kateterize stabil hastalarda sistemik antifungal ilaç başlanması önerilmez; ilk ve en etkili adım kolonize olan foley kateterin çekilmesi veya değiştirilmesidir. Olguların yarısından fazlasında kandidüri kateter değişimiyle spontan temizlenir. Sistemik amfoterisin veya flukonazol ancak hasta semptomatikse, nötropenikse veya invaziv ürolojik girişim planlanıyorsa endikedir."
-  },
-  {
-    "id": "prac-spe-019",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 19,
-    "slideTitle": "Obstrüktif Fungal Nefropati: Mantar Topu (Fungus Ball / Bezoar) Patolojisi ve Yönetimi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Kontrolsüz diyabeti olan 55 yaşındaki kadın hasta ani gelişen yan ağrısı, yüksek ateş ve 24 saattir hiç idrar çıkaramama (anüri) şikayetiyle acil servise getiriliyor. Çekilen kontrastlı BT'de soliter olan sağ böbrek toplayıcı sisteminde üreteropelvik bileşkeyi tıkayan, kontrast tutmayan ve radyoopak olmayan yumuşak doku kitlesi (fungus ball) ve masif hidronefroz izleniyor. İdrar mikroskopisinde bol psödohif görülüyor. Bu hastanın acil yönetiminde aşağıdakilerden hangisi EN UYGUNDUR?",
-    "options": [
-      "A) Hastaya sadece oral flukonazol reçete edilerek ayaktan poliklinik takibine alınması",
-      "B) Acil perkütan nefrostomi takılarak obstrüksiyonun dekomprese edilmesi, mekanik temizlik ve lokal Amfoterisin B irrigasyonu planlanması",
-      "C) Acil radikal nefrektomi ile sağ böbreğin tamamen çıkarılması",
-      "D) Hastaya acil hemodiyaliz uygulanıp başka hiçbir ürolojik girişim yapılmaması",
-      "E) İdrar söktürücü yüksek doz furosemid infüzyonu başlanması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B seçeneğidir. Obstrüktif fungal nefropati ve mantar topu (fungus ball) varlığında acil ürolojik girişim zorunludur. Tıkanıklık soliter böbrekte anüriye yol açmıştır; ilk yapılması gereken acil perkütan nefrostomi ile böbreği dekomprese etmek, kitleyi mekanik olarak temizlemek ve nefrostomi kateterinden lokal Amfoterisin B irrigasyonu ile sistemik antifungal tedaviyi kombine etmektir. Soliter böbreğin nefrektomisi (C) kabul edilemez bir hatadır."
-  },
-  {
-    "id": "prac-spe-020",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 20,
-    "slideTitle": "Üriner Sistemin Viral Enfeksiyonları: BK Virüs Nefropatisi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek nakli yapılan ve takrolimus + mikofenolat mofetil kullanan bir hastada postoperatif 6. ayda serum kreatinin değerinde açıklanamayan artış saptanıyor. Yapılan idrar sitolojisinde nükleusları ileri derecede büyümüş, nükleer kromatini buzlu cam görünümünde homojen inklüzyonla dolmuş tübül epitel hücreleri ('Decoy hücreleri') tespit ediliyor. Bu hasta için en olası tanı ve yapılması gereken temel yaklaşım aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut hücresel rejeksiyon — Yüksek doz pulse steroid tedavisi verilmesi",
-      "B) BK virüs nefropatisi — İmmünsüpresif ilaç dozlarının kademeli olarak azaltılması",
-      "C) Candida piyelonefriti — İntravenöz flukonazol başlanması",
-      "D) Sitomegalovirüs glomerüliti — Gansiklovir tedavisi ve takrolimusun artırılması",
-      "E) Akut tübüler nekroz — Sıvı kısıtlaması ve acil diyaliz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B seçeneğidir. Böbrek nakli alıcılarında idrar sitolojisinde görülen 'Decoy hücreleri' (tuzak hücreler) BK virüs enfeksiyonunun karakteristik sitolojik belirtecidir. BK virüs ilişkili nefropatide (BKVAN) altta yatan neden aşırı immünsüpresyon olduğundan, temel tedavi yaklaşımı immünsüpresif rejimlerin (özellikle mikofenolat mofetil ve kalsinörin inhibitörleri) dozunun azaltılmasıdır. Rejeksiyon zannedilip pulse steroid verilmesi (A) virüs çoğalmasını hızlandırarak greft kaybına yol açar."
-  },
-  {
-    "id": "prac-spe-021",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 21,
-    "slideTitle": "Viral Hemorajik Sistit: Adenovirüs ve BK Virüs Tabloları",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Allogeneik kemik iliği nakli yapılan 22 yaşındaki lösemi hastasında naklin 25. gününde ani başlangıçlı şiddetli dizüri, suprapubik kramplar ve masif pıhtılı hematüri gelişiyor. İdrar kültüründe bakteri ve mantar üremeyen hastanın idrar PCR analizinde viral etken saptanıyor. Bu hastada hemorajik sistite yol açan en olası viral patojen çifti aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Adenovirüs ve BK virüs",
-      "B) Hepatit B virüsü ve Kuduz virüsü",
-      "C) İnfluenza A ve Rinovirüs",
-      "D) Rotavirüs ve Norovirüs",
-      "E) Kabakulak virüsü ve Poliovirüs"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Kemik iliği ve kök hücre nakli alıcılarında gelişen viral hemorajik sistitin en yaygın etkenleri Adenovirüs (özellikle serotip 11) ve BK Polyomavirüs'tür. Bu virüsler ürotelyal litik nekroz ve mikrovasküler hasar yaparak pıhtılı masif hematüriye yol açar. Diğer şıklardaki virüsler üriner sistemde hemorajik sistit tablosuna neden olmaz."
-  },
-  {
-    "id": "prac-spe-022",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 22,
-    "slideTitle": "Üriner Sistemin Nadir Paraziter ve Protozoal Enfeksiyonları: Amebiyazis ve Trikomoniyazis",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Entamoeba histolytica ve Trichomonas vaginalis'in üriner sistem tutulumları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Renal amebiyazis sıklıkla karaciğer amip apsesinin doğrudan komşulukla sağ böbreğe yayılması sonucu gelişebilir",
-      "B) Amebik kolit mesane duvarına fistülize olduğunda hastada pnömatüri (idrardan hava gelmesi) ve fekalüri görülebilir",
-      "C) Trichomonas vaginalis cinsel yolla bulaşarak erkeklerde inatçı üretrit ve kronik prostatit tablolarına yol açabilir",
-      "D) Her iki protozoonun tedavisinde DNA replikasyonunu bozan Metronidazol etkin bir tedavidir",
-      "E) Trichomonas vaginalis bir helmint olup yumurtaları terminal diken içerir ve prazikuantel ile tedavi edilir"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü Trichomonas vaginalis bir helmint (solucan) değil kamçılı bir protozoondur, yumurta bırakmaz (trofozoit formu vardır) ve tedavisi prazikuantel değil metronidazoldür. Terminal dikenli yumurta Schistosoma haematobium'a aittir. A, B, C ve D seçenekleri amebiyazis ve trikomoniyazisin doğru klinik ve farmakolojik özellikleridir."
-  },
-  {
-    "id": "prac-spe-023",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 23,
-    "slideTitle": "Renal ve Pelvik Aktinomikoz: Actinomyces israelii Enfeksiyonu",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "46 yaşında kadın hasta, sol yan ağrısı ve sol lomber bölgede deriden dışarıya cerahatli akıntı şikayetiyle başvuruyor. Çekilen kontrastlı batın BT'sinde sol böbrek alt polünden kaynaklanan, retroperitoneal fasyaları aşarak psoas kasına ve cilt altına invaze olan 'tahta sertliğinde' solid bir kitle ve cilt fistülü izleniyor. Fistül akıntısından yapılan mikroskobik incelemede sarı renkli 'kükürt granülleri' (sulfur granules) ve Gram-pozitif dallanan filamentöz bakteriler saptanıyor. Bu hasta için en olası tanı ve ilk tercih edilecek tedavi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Renal hücreli karsinom — Radikal nefrektomi",
-      "B) Renal aktinomikoz — Uzun süreli yüksek doz Penisilin tedavisi",
-      "C) Renal kist hidatik — Cerrahi kistektomi ve albendazol",
-      "D) Böbrek tüberkülozu — 6 aylık dörtlü antitüberküloz rejim",
-      "E) Fungal mantar topu — Nefrostomiden amfoterisin B irrigasyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B seçeneğidir. Fasyaları aşan tahta sertliğinde psödotümöral kitle, cilde açılan fistül ve cerahatte patognomonik sarı 'kükürt granülleri' (sulfur granules) varlığında Gram-pozitif dallanan filamentöz bakteri gösterilmesi Actinomyces israelii enfeksiyonunu (aktinomikoz) kanıtlar. Bu lezyon klinik ve radyolojik olarak maligniteyi mükemmel taklit eder. Aktinomikozun tedavisi cerrahi nefrektomi değil, aylar süren yüksek doz Penisilin tedavisidir."
-  },
-  {
-    "id": "prac-spe-024",
-    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
-    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
-    "slideNumber": 24,
-    "slideTitle": "Renal Kist Hidatik (Echinococcus granulosus) ve Spesifik Enfeksiyonların Ayırıcı Tanı Özeti",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Kırsal kesimde hayvancılıkla uğraşan 40 yaşındaki erkek hasta, şiddetli sağ renal kolik ağrısı ve idrar yaparken 'üzüm kabuğu veya şeffaf jelatinimsi küçük torbacıklar' düşürdüğünü ifade ediyor. İdrar çıkışı sırasında derisinde yaygın ürtiker, hipotansiyon ve bronkospazm gelişen hastanın ultrasonografisinde sağ böbrekte toplayıcı sistemle bağlantılı kistik bir lezyon saptanıyor. Bu hasta için en olası tanı ve tanımlanan patognomonik idrar bulgusu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Renal kist hidatik — Hidatüri",
-      "B) Genitoüriner tüberküloz — Steril piyüri",
-      "C) Schistosoma haematobium — Terminal hematüri",
-      "D) Obstrüktif fungal nefropati — Fungus ball",
-      "E) Renal aktinomikoz — Kükürt granülleri"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Renal kist hidatiğin (Echinococcus granulosus) toplayıcı sisteme rüptüre olmasıyla hastanın idrarında hidatik kist zarlarını ve kız vezikülleri düşürmesi tablosu 'hidatüri' olarak adlandırılır ve patognomoniktir. Kist içeriğinin toplayıcı sistemden sistemik emilimi anaflaktik reaksiyona (ürtiker, bronkospazm, hipotansiyon) yol açmıştır. B, C, D ve E seçenekleri diğer spesifik enfeksiyonların karakteristik bulgularıdır fakat hidatüri ve paraziter anafilaksi tablosunu açıklamaz."
-  },
-  {
-    "id": "prac-k1m-001",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 1,
-    "slideTitle": "Dönem 3 Kurul 1 Makro Mimarisi: Kurulun Felsefesi, Anabilim Dalı Dağılımları ve Soru Ağırlıkları",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Dönem 3 Kurul 1 (Ürogenital ve Obstetrik Kurulu) müfredat yapısı ve sınav soru dağılımı ile ilgili aşağıdaki değerlendirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Kurulda en yüksek ders saatine ve soru ağırlığına sahip anabilim dalı Tıbbi Patoloji'dir (%34.4).",
-      "B) Enfeksiyon Hastalıkları ders saati Patoloji'den daha fazla olup kurulun salt çoğunluğunu oluşturur.",
-      "C) Tıbbi Farmakoloji 12 saatlik ders hacmiyle sınavın üçüncü büyük belirleyici branşıdır.",
-      "D) Baraj kuralı sadece 10 saatin üzerindeki anabilim dalları için geçerli olduğundan 2 saatlik dersler etkisizdir.",
-      "E) Kadın Hastalıkları ve Doğum anabilim dalı 20 ders saati ile cerrahi branşların liderliğini yürütür."
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Kurul 1'de Tıbbi Patoloji 33 saatlik hacmiyle toplam 96 saatin %34.4'ünü oluşturarak açık ara en yüksek ders ve soru sayısına sahiptir. B yanlıştır; Enfeksiyon 22 saattir ve Patoloji'den (33 saat) azdır. C yanlıştır; Farmakoloji bu kurulda sadece 2 saattir. D yanlıştır; tıp fakültelerinde baraj kuralı ders saati gözetilmeksizin tüm anabilim dallarında geçerlidir. E yanlıştır; Kadın Hastalıkları ve Doğum bu kurulda 4 ders saatidir."
-  },
-  {
-    "id": "prac-k1m-002",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 2,
-    "slideTitle": "Komite Sınavı Anatomisi ve Klinik Vaka Sorusu Çözme Metodolojisi",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Dönem 3 komite sınavında klinik vaka sorusu çözen bir tıp öğrencisinin izlemesi gereken en rasyonel strateji aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Önce uzun vaka metninin tüm detaylarını ezberleyip ardından soru köküne geçmek",
-      "B) Önce soru kökünü okuyup neyin arandığını saptamak, ardından metindeki patognomonik morfolojik anahtar kelimeleri filtrelemek",
-      "C) Yaş ve cinsiyet gibi demografik verileri önemsiz kabul ederek doğrudan şıkları okumak",
-      "D) 'Hangisi yanlıştır' şeklindeki olumsuz soru köklerinde ilk doğru görünen seçeneği işaretlemek",
-      "E) Kararsız kalınan vaka sorularında klinik bulgu yerine sadece paraklinik grafiğe odaklanıp diğer verileri dışlamak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği en rasyonel sınav stratejisidir; önce soru kökü okunarak zihin hedefe odaklanır, ardından metindeki hasta yaşı, cinsiyeti ve mikroskopik patognomonik lezyonlar (örneğin kazeifikasyon, silindirler, kresentler) taranarak seçenekler hızla elenir. A gereksiz zaman kaybettirir, C yanlıştır çünkü demografi tanının en büyük belirtecidir, D sınav tuzaklarının ana kaynağıdır, E ise verileri izole ederek hata payını artırır."
-  },
-  {
-    "id": "prac-k1m-003",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 3,
-    "slideTitle": "Temel Patolojiye Giriş ve Hücresel Adaptasyonlar",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Kronik kontrolsüz sistemik hipertansiyonu olan 62 yaşındaki bir erkek hastanın ekokardiyografisinde sol ventrikül duvar kalınlığının belirgin arttığı ve konsantrik bir kitle artışı olduğu saptanıyor. Bu hastanın miyokard dokusundaki hücresel yanıt aşağıdakilerden hangisiyle en doğru şekilde açıklanır?",
-    "options": [
-      "A) Miyositlerin hücre siklusuna girerek sayılarının artması (Patolojik hiperplazi)",
-      "B) Çizgili kas liflerinin bölünme yeteneği olmadığından protein sentezi ve organel artışıyla boyutlarının büyümesi (Patolojik hipertrofi)",
-      "C) Miyokard dokusunun mekanik basınca dayanıklı fibröz dokuya dönüşmesi (Konnektif doku metaplazisi)",
-      "D) Miyositlerin otofaji ve proteazom aktivasyonu ile hacim kaybetmesi (Patolojik atrofi)",
-      "E) İnterstisyel kök hücrelerin transforme olarak yeni myokard lifleri oluşturması (Fizyolojik rejenerasyon)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; kardiyak miyositler kalıcı (permanent) hücrelerdir ve mitoz bölünme yetenekleri yoktur. Basınç yükü altında hücre sayısını artıramazlar (hiperplazi yapamazlar); sadece gen ekspresyonunu değiştirerek protein sentezini, miyofilament miktarını artırır ve hücre hacmini büyütürler (hipertrofi). A seçeneğindeki hiperplazi kalpte imkansızdır. C, D ve E seçenekleri bu patolojiyi açıklamaz."
-  },
-  {
-    "id": "prac-k1m-004",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 4,
-    "slideTitle": "Geri Dönüşlü ve Dönüşsüz Hücre Hasarı Mekanizmaları",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "İskemik doku hasarında geri dönüşlü (reversible) hasar evresinden geri dönüşsüz (irreversible) hücre ölümüne geçişi belirleyen en kritik moleküler ve yapısal değişiklik aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Hücre içi laktik asit birikimi ve sitoplazmik pH düşüşü",
-      "B) Endoplazmik retikulum membranının şişmesi ve ribozomların ayrılması",
-      "C) Kalıcı mitokondriyal disfonksiyon ve plazma membran bütünlüğünün masif kaybı",
-      "D) Hücre içi glikojen depolarının tükenmesi ve anaerobik glikoliz aktivasyonu",
-      "E) Na+/K+ ATPaz pompasının yavaşlaması sonucu hafif hücresel şişme gelişimi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; hücre hasarında 'geri dönüşsüzlük sınırı' (point of no return) iki temel olguyla tanımlanır: mitokondrinin kalıcı olarak ATP üretememesi (geçirgenlik geçiş gözeneği açılması) ve plazma membran bütünlüğünün geri dönüşsüz kaybıdır. A, B, D ve E seçeneklerinde sayılan değişiklikler (hücresel şişme, ribozom ayrılması, glikojen kaybı, asidoz) geri dönüşlü hasar evresinde görülür ve reperfüzyonla düzelebilir."
-  },
-  {
-    "id": "prac-k1m-005",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 5,
-    "slideTitle": "Nekroz Morfolojisi ve Tipleri",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik durum ve o durumda gelişmesi beklenen karakteristik nekroz tipi eşleştirmelerinden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Akut miyokard enfarktüsü — Koagülasyon nekrozu",
-      "B) Serebral arter oklüzyonuna bağlı iskemik inme — Likefaksiyon nekrozu",
-      "C) Pulmoner tüberküloz kavitesi — Kazeifikasyon nekrozu",
-      "D) Akut pankreatite bağlı peripankreatik doku hasarı — Yağ nekrozu",
-      "E) Poliarteritis nodoza (PAN) vaskülit lezyonu — Koagülasyon nekrozu"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneğindeki eşleştirme yanlıştır; Poliarteritis nodoza (PAN) gibi sistemik nekrotizan vaskülitlerde ve malign hipertansiyonda damar duvarında izlenen nekroz tipi Koagülasyon nekrozu değil, immün kompleksler ve fibrin sızıntısıyla karakterize FİBRİNOİD NEKROZ'dur. A, B, C ve D seçeneklerindeki eşleştirmeler tamamen doğrudur."
-  },
-  {
-    "id": "prac-k1m-006",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 6,
-    "slideTitle": "Apoptoz Moleküler Yolağı ve Hücre İçi Birikimler",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Apoptozun intrinsik (mitokondriyal) yolağında mitokondri dış membran geçirgenliğinin artması sonucu sitoplazmaya salınarak Apaf-1 adaptör proteini ile birleşip apoptozomu oluşturan ve Kaspaz-9'u aktive eden molekül aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sitokrom c",
-      "B) Fas Ligand (CD95L)",
-      "C) Tümör Nekrozis Faktör (TNF)",
-      "D) Perforin",
-      "E) Granzim B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; intrinsik (mitokondriyal) apoptotik yolakta Bax ve Bak oligomerleşerek mitokondri membranından sitoplazmaya Sitokrom c salınımını tetikler. Sitokrom c sitoplazmada Apaf-1 (Apoptotic protease activating factor-1) ile birleşerek apoptozom kompleksini kurar ve prokaspaz-9'u keserek aktif Kaspaz-9 haline getirir. B ve C ekstrinsik yolak ligandlarıdır. D ve E ise sitotoksik T ve NK hücrelerinin hücre öldürme mediyatörleridir."
-  },
-  {
-    "id": "prac-k1m-007",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 7,
-    "slideTitle": "Akut Enflamasyon Patofizyolojisi: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Akut bakteriyel pnömoni gelişen bir hastada nötrofillerin damar endotelinden damar dışı interstisyel alana göçü (transmigrasyon / diyapedez) sırasında hem lökosit hem de endotel hücre yüzeyinde eksprese edilerek bu geçişi sağlayan adezyon molekülü aşağıdakilerden hangisidir?",
-    "options": [
-      "A) L-selektin",
-      "B) E-selektin",
-      "C) PECAM-1 (CD31)",
-      "D) İntegrin alfa-4 beta-1 (VLA-4)",
-      "E) Sialil-Lewis X"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; nötrofil ve monositlerin interendotelyal kavşaklardan transmigrasyonunda (diyapedez) hücreler arası geçişi sağlayan temel molekül PECAM-1'dir (Platelet Endothelial Cell Adhesion Molecule-1 / CD31). L-selektin ve Sialil-Lewis X yuvarlanma (rolling) aşamasında, integrinler (VLA-4, LFA-1) ise sıkı adezyon aşamasında görev alır."
-  },
-  {
-    "id": "prac-k1m-008",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 8,
-    "slideTitle": "Enflamasyonun Kimyasal Mediyatörleri",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Akut enflamasyon sürecinde nötrofiller için en güçlü kemotaktik uyarıyı oluşturan, lökositlerin aktivasyonunu sağlayan ve lipoksijenaz (5-LOX) yolağında sentezlenen araşidonik asit metaboliti aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Prostasiklin (PGI2)",
-      "B) Tromboksan A2 (TXA2)",
-      "C) Lökotrien B4 (LTB4)",
-      "D) Lökotrien C4 (LTC4)",
-      "E) Prostaglandin E2 (PGE2)"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; Lökotrien B4 (LTB4), 5-lipoksijenaz yolağında üretilen ve nötrofiller için olağanüstü güçlü bir kemotaktik faktör olan araşidonik asit metabolitidir. PGI2 vazodilatasyon yapar; TXA2 trombosit agregasyonu yapar; LTC4 bronkokonstriksiyon ve permeabilite artışı yapar; PGE2 ise ateş ve ağrı reseptör duyarlılaşması yapar."
-  },
-  {
-    "id": "prac-k1m-009",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 9,
-    "slideTitle": "Kronik ve Granülomatöz Enflamasyon",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Granülomatöz enflamasyon patogenezinde, antijen sunan hücrelerle etkileşime giren CD4+ T helper-1 (Th1) lenfositlerin salgıladığı, doku makrofajlarını aktive ederek onları geniş eozinofilik sitoplazmalı 'epitelioid histiositlere' dönüştüren majör sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İnterlökin-4 (IL-4)",
-      "B) İnterferon-gama (IFN-γ)",
-      "C) İnterlökin-10 (IL-10)",
-      "D) Transforming Growth Factor-beta (TGF-β)",
-      "E) İnterlökin-5 (IL-5)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; Th1 lenfositlerden salınan İnterferon-gama (IFN-γ), monosit ve makrofajları aktive ederek klasik M1 yolağına sokan ve onları granülomun temel yapıtaşı olan 'epitelioid histiositlere' dönüştüren temel sitokindir. IL-4 ve IL-13 alternatif (M2) yolağı uyarır; IL-10 ve TGF-β immünsüpresif ve doku onarıcı sitokinlerdir; IL-5 ise eozinofil aktivatörüdür."
-  },
-  {
-    "id": "prac-k1m-010",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 10,
-    "slideTitle": "Doku Onarımı, Rejenerasyon ve Yara İyileşmesi",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Yara iyileşmesi sürecinde fibroblastların kemotaksisini sağlayan, kollajen ve fibronektin sentezini stimüle eden ve doku fibrozisinde en kritik profibrotik büyüme faktörü kabul edilen sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Epidermal Growth Factor (EGF)",
-      "B) Transforming Growth Factor-beta (TGF-β)",
-      "C) Vascular Endothelial Growth Factor (VEGF)",
-      "D) Tümör Nekrozis Faktör-alfa (TNF-α)",
-      "E) İnterlökin-2 (IL-2)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; TGF-β (Transforming Growth Factor-beta), doku onarımında ve patolojik fibrozis gelişiminde fibroblastları uyararak kollajen sentezini artıran, matriks metalloproteinazlarını (MMP) baskılayarak kollajen yıkımını engelleyen en güçlü profibrotik büyüme faktörüdür. VEGF anjiyogenezi uyarır; EGF epitelyal proliferasyonu tetikler."
-  },
-  {
-    "id": "prac-k1m-011",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 11,
-    "slideTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Kronik konjestif sağ kalp yetmezliği olan bir hastanın otopsisinde karaciğer kesitinde santral ven çevresindeki hepatositlerde konjesyon ve nekroz, portal alan çevresinde ise soluk sarı yağlı dejenerasyon alanlarının alacalı bir manzara oluşturduğu saptanıyor. Bu karakteristik makroskopik patolojik tablo aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Porselen safra kesesi",
-      "B) Muskat cevizi karaciğeri (Nutmeg liver)",
-      "C) Karaciğer kist hidatiği",
-      "D) Budd-Chiari sendromu trombüsü",
-      "E) Fokal nodüler hiperplazi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; kronik pasif karaciğer konjesyonunda (özellikle sağ kalp yetmezliğinde) santral ven ve sinüzoidlerde venöz göllenme, hipoksi ve nekroz gelişirken çevre hepatositler yağlanır. Bu durum makroskopik kesitte muskat cevizinin iç desenine benzeyen koyu kırmızı ve açık sarı alacalı 'muskat cevizi karaciğeri' (nutmeg liver) görünümünü oluşturur."
-  },
-  {
-    "id": "prac-k1m-012",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 12,
-    "slideTitle": "Tromboz, Emboli ve Enfarktüs Patofizyolojisi",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Motosiklet kazası geçiren 24 yaşındaki bir erkek hastada bilateral femur şaft kırığı saptanıyor. Ortopedik cerrahi stabilizasyondan 36 saat sonra hastada ani başlayan taşipne, dispne, ajitasyon, oryantasyon bozukluğu ve boyun ile aksiller bölgede basmakla solmayan peteşiyel döküntüler gelişiyor. Bu klinik tablo için en olası patoloji aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Alt ekstremite DVT'sine bağlı masif pulmoner tromboemboli",
-      "B) Kemik iliği kaynaklı Yağ Embolisi Sendromu",
-      "C) Vena kava rüptürüne bağlı hipovolemik şok",
-      "D) Klostridyal miyonöroza bağlı septik emboli",
-      "E) Dekompresyon hastalığına bağlı gaz embolisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; uzun kemik kırıkları (özellikle femur ve pelvis) sonrasında kemik iliğindeki yağ globüllerinin rüptüre venlere sızmasıyla 24-72 saat içinde Yağ Embolisi Sendromu tablosu gelişir. Klasik klinik triadı: 1) Solunum sıkıntısı (dispne, hipoksemi), 2) Nörolojik semptomlar (ajitasyon, konfüzyon, koma) ve 3) Ciltte trombositopeniye bağlı peteşiyel döküntülerdir (özellikle boyun, aksilla ve konjonktivada). Tromboembolide peteşiyel döküntü beklenmez."
   }
 ]

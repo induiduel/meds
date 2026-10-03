@@ -1,5 +1,37 @@
 [
   {
+    "id": "act-1791022798462-6zbxd",
+    "questionId": "d3-k1-pat-001",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Tıbbi Patoloji",
+    "topic": "Toksik Hücre Hasarı – Parasetamol (Asetaminofen) Toksisitesi ve NAPQI - Gelişmiş Vaka",
+    "interactionType": "refinement",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Gelişmiş klinik vaka sorusuna dönüştür",
+    "response": "[GELİŞMİŞ KLİNİK SENARYO]\n28-year-old female presents to the emergency department 12 hours after ingesting an unknown quantity of over-the-counter pain medication in a suicide attempt. She reports nausea, vomiting, and vague right upper quadrant discomfort. Vital signs: BP 118/72 mmHg, HR 102 bpm, RR 18/min, Temp 37.2°C, SpO2 98% on room air. Physical exam reveals mild scleral icterus and tenderness to palpation in the right upper quadrant without guarding. Laboratory results: AST 2,340 U/L (ref 0-35), ALT 2,780 U/L (ref 0-45), total bilirubin 1.8 mg/dL (ref 0.1-1.2), INR 1.6, serum acetaminophen level 28 µg/mL (measured 12 hours post-ingestion). Serum glutathione is markedly decreased. Abdominal ultrasound shows a normal biliary tree and no evidence of hepatic vascular obstruction.\n\n[SORU KÖKÜ]\nBased on the clinical picture, the most likely diagnosis is acute acetaminophen (paracetamol) toxicity. Which metabolite is primarily responsible for the hepatocellular injury observed in this patient?\n\n[DOĞRU CEVAP]: A\n\n[AÇIKLAMA]: Acetaminophen is primarily eliminated by glucuronidation and sulfation. A minor fraction is oxidized by CYP2E1 to N‑acetyl‑p‑benzoquinone imine (NAPQI). Under normal circumstances NAPQI is detoxified by conjugation with glutathione. In overdose, glutathione stores become exhausted, allowing NAPQI to bind cellular proteins and lipids, leading to oxidative stress, mitochondrial dysfunction, and centrilobular hepatic necrosis. The elevated transaminases, prolonged INR, and low glutathione level in this patient are classic for NAPQI‑mediated injury.\n\n[KLİNİK İNCİ]: In acetaminophen overdose, N‑acetylcysteine (NAC) is most effective when given within 8–10 hours of ingestion because it replenishes glutathione and directly detoxifies NAPQI.",
+    "contextSnapshot": {},
+    "metadata": {},
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1791022798462-6zbxd",
+    "createdAt": "2026-10-03T10:19:58.462Z"
+  },
+  {
+    "id": "act-1791022771308-tzlut",
+    "questionId": "d3-k1-pat-001",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Tıbbi Patoloji",
+    "topic": "Toksik Hücre Hasarı – Parasetamol (Asetaminofen) Toksisitesi ve NAPQI - Gelişmiş Vaka",
+    "interactionType": "refinement",
+    "userDisplayName": "Tıp Öğrencisi",
+    "prompt": "Gelişmiş klinik vaka sorusuna dönüştür",
+    "response": "[GELİŞMİŞ KLİNİK SENARYO]\n22 yaşında kadın tıp öğrencisi, ev arkadaşı tarafından bulantı, kusma, sarılık ve belirgin konfüzyon tablosuyla acil servise getiriliyor. Anamnez derinleştirildiğinde, hastanın yaklaşık 36 saat önce yüksek dozda reçetesiz satılan bir analjezik/antipiretik kombine preparatından özkıyım amacıyla yaklaşık 30-40 tablet aldığı öğreniliyor. Fizik muayenede kan basıncı 105/65 mmHg, nabız 112/dk, solunum sayısı 22/dk ve vücut sıcaklığı 37.1°C olarak ölçülüyor. Hastada sklera ve mukozalarda belirgin ikter, sağ üst kadranda palpasyonla derin hassasiyet ve bilateral asteriksis (flapping tremor) saptanıyor. Laboratuvar tetkiklerinde; serum AST: 8.420 U/L, ALT: 7.150 U/L, total bilirubin: 5.2 mg/dL, direkt bilirubin: 3.8 mg/dL, INR: 3.2 ve serum kreatinin: 2.1 mg/dL olarak raporlanıyor.\n\n[SORU KÖKÜ]\nBu hastanın tablosundan sorumlu olan toksik ajanın hepatik metabolizmasında, faz II glukuronidasyon ve sülfasyon kapasitesinin doygunluğa ulaşması ve intrasellüler glutatyon depolarının %70'ten fazla tükenmesi sonucunda hepatosit makromoleküllerine kovalent bağlanarak zon 3 (sentrilobüler) nekroza yol açan toksik elektrofilik ara ürün aşağıdakilerden hangisidir?\n\n[DOĞRU CEVAP]: C\n\n[AÇIKLAMA]: Hastanın kliniği ve dramatik şekilde fırlamış karaciğer enzimleri (AST/ALT > 1000-5000 U/L), koagülopati (INR artışı) ve ensefalopati tablosu, parasetamol (asetaminofen) intoksikasyonuna bağlı Akut Karaciğer Yetmezliği (Fulminan Hepatit) ile tam uyumludur. Parasetamol terapötik dozlarda %90-95 oranında Faz II konjugasyon reaksiyonlarıyla (glukuronidasyon ve sülfasyon) hepatik hasar yapmadan idrarla atılır. Ancak aşırı doz alımında bu yollar satüre olur ve ilaç Sitokrom P450 sistemi (özellikle CYP2E1) üzerinden N-asetil-p-benzokinonimin (NAPQI)'e çevrilir. NAPQI son derece reaktif ve sitotoksik bir ara üründür; fizyolojik şartlarda glutatyon (GSH) ile bağlanıp merkaptürik asit şeklinde zararsızca atılır. Glutatyon depoları %70-80 oranında tükendiğinde serbest kalan NAPQI, hepatosit nükleer/mitokondriyal proteinlerine kovalent bağlanır, oksidatif stres ve mitokondriyal permeabilite transisyonuna yol açarak tipik olarak en yüksek CYP2E1 ekspresyonuna ve en düşük oksijenlenmeye sahip Zon 3 (sentrilobüler bölge)'te masif koagülasyon nekrozuna neden olur. Bu hasarı önlemenin/tedavi etmenin yolu glutatyon prekürsörü olan N-asetilsistein (NAC) uygulamasıdır.\n\n[KLİNİK İNCİ]: Parasetamol toksisitesinde hepatik hasar Zon 3'ten (sentrilobüler) başlar çünkü mikrozomal enzimler (özellikle CYP2E1) perisantral alanda (Zon 3) en yüksek konsantrasyonda bulunur. Tedavide kullanılan N-asetilsistein (NAC), hücre içi glutatyon sentezini artırıp doğrudan NAPQI'yi redükte ederek karaciğer yetmezliği ve mortaliteyi engeller.",
+    "contextSnapshot": {},
+    "metadata": {},
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1791022771308-tzlut",
+    "createdAt": "2026-10-03T10:19:31.308Z"
+  },
+  {
     "id": "act-1790968835326-wmqj8",
     "committeeId": "donem3-kurul1",
     "discipline": "Tıp",

@@ -3348,315 +3348,155 @@
     "explanation": "Kordosentez (perkütan umbilikal kan örneklemesi, PUBS), umbilikal korddaki damarların yeterince gelişip güvenle girilebilir hale gelmesi için genellikle 18. gebelik haftasından SONRA (yaklaşık 18-24. haftalar) uygulanır; bu haftadan önce teknik olarak güvenli ve pratik değildir. Amniyosentez 15-18. haftalarda, CVS ise daha erken (10-12. hafta) yapılır ve CVS’nin en önemli avantajı, hücre kültürü beklemeden villus dokusunda doğrudan (direkt) kromozom analizi yapılabilmesidir. Not: Öğrenci notunda birden fazla şık şüpheli işaretlenmişti; ifadeler standart prenatal tanı zamanlamasına göre netleştirilip tek doğru yanlış şık (kordosentez zamanlaması) olacak şekilde düzenlenmiştir."
   },
   {
-    "id": "d3-k1-pat-015",
+    "id": "prac-akut-001",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 1,
-    "slideTitle": "Akut Enflamasyonun Tanımı ve Biyolojik Amacı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Enflamasyonun Tanımı, Biyolojik Amacı ve Temel Savunma Öğeleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Enflamasyonun genel tanımı, biyolojik amacı ve temel özellikleri dikkate alındığında, aşağıdaki ifadelerden hangisi biyolojik açıdan YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Enflamatuvar yanıt yalnızca vaskülarize canlı dokularda meydana gelebilen dinamik bir süreçtir.",
+      "B) Enflamasyonun temel hedeflerinden biri de nekrotik hücre ve doku kalıntılarını fagositozla ortamdan uzaklaştırmaktır.",
+      "C) Enflamasyon yanıtı sırasında rol alan savunma proteinleri ve lökositler normal fizyolojik koşullarda doku parankiminde bol miktarda depo edilmiş halde bekler.",
+      "D) Enflamatuvar yanıt nihai evresinde büyüme faktörleri ve sitokinler aracılığıyla doku onarım mekanizmalarını tetikler.",
+      "E) Koruyucu bir yanıt olmasına karşın enflamasyonun kontrolsüzce uzaması veya yanlış hedeflenmesi ağır doku yıkımına yol açabilir."
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır. Enflamasyonda görev alan ana savunma araçları (nötrofiller, monositler, antikorlar ve kompleman proteinleri) normal fizyolojik koşullarda dokularda depo halinde bulunmaz; dolaşımda kanda seyrederler. Enflamasyon süreci bu hücre ve proteinleri damar dışına sızdırarak hasarlı dokuya ulaştırır. A, B, D ve E seçeneklerindeki ifadeler enflamasyonun temel ilkelerine tamamen uygundur."
   },
   {
-    "id": "d3-k1-pat-015-293",
+    "id": "prac-akut-002",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 2,
-    "slideTitle": "Enflamasyonun Temel Öğeleri ve İki Uçlu Kılıç Niteliği",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Enflamasyonun Kardinal Belirtileri ve Tarihsel Gelişimi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Ayak bileğini burkan ve şiddetli ağrı, şişlik ve üzerine basamama şikayetiyle acil servise başvuran 22 yaşındaki bir hastada enflamasyonun kardinal belirtileri değerlendiriliyor. Bu patolojik süreçle ilgili aşağıdaki eşleştirmelerden hangisi Celsus ve Virchow'un tanımlamaları açısından DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Tumor - Rudolf Virchow tarafından tanımlanan mikrovasküler spazm bulgusu",
+      "B) Calor - Celsus tarafından tanımlanan, lokal doku metabolizmasının durmasına bağlı soğuma",
+      "C) Functio laesa - Rudolf Virchow tarafından eklenen ve dokunun görevini yapamamasını ifade eden beşinci kardinal belirti",
+      "D) Dolor - Celsus tarafından eklenen, yalnızca lökositlerin damar dışına göç etmesiyle ortaya çıkan duyusal felç",
+      "E) Rubor - Rudolf Virchow tarafından tanımlanan ve venöz geri akım yetmezliğine bağlı gelişen morarma"
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Enflamasyonun ilk 4 belirtisi (Rubor, Calor, Tumor, Dolor) milattan sonra 1. yüzyılda Celsus tarafından tanımlanmış; 5. belirti olan Functio laesa (fonksiyon kaybı) ise 19. yüzyılda patolojinin babası Rudolf Virchow tarafından eklenmiştir. A seçeneğinde tumor Celsus'a aittir ve ödemi ifade eder; B seçeneğinde calor soğuma değil arteriyel kan akımına bağlı ısı artışıdır; D ve E seçeneklerindeki ilişkilendirmeler yanlıştır."
   },
   {
-    "id": "d3-k1-pat-015-294",
+    "id": "prac-akut-003",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 3,
-    "slideTitle": "Akut ve Kronik Enflamasyonun Karşılaştırmalı Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Enflamatuvar Reaksiyonun Beş Temel Adımı: '5 R' Kuralı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Enflamatuvar yanıtın '5 R' kuralı (Recognition, Recruitment, Removal, Regulation, Repair) çerçevesinde, reaksiyonun sonlandırılmasını ve kontrol altında tutulmasını sağlayan 'Regulation' basamağında aşağıdaki moleküler olaylardan hangisinin gerçekleşmesi BEKLENMEZ?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Hasar odağındaki nötrofillerin 24-48 saat içinde hızla apoptoza uğraması",
+      "B) Araşidonik asit metabolizmasında pro-enflamatuvar lökotrienlerden antienflamatuvar lipoksinlere geçiş yapılması",
+      "C) Doku makrofajlarından yoğun miktarda interlökin-1 (IL-1) ve TNF-alfa salınarak lökosit göçünün katlanarak artırılması",
+      "D) Makrofajlar ve regülatuvar hücreler tarafından Transforming Growth Factor-beta (TGF-beta) üretilmesi",
+      "E) İnterlökin-10 (IL-10) salgılanarak pro-enflamatuvar sitokin sentezinin inhibe edilmesi"
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Regulation (düzenleme/sonlandırma) basamağında TNF ve IL-1 gibi pro-enflamatuvar sitokinlerin üretimi baskılanır; lökosit göçü artırılmaz, aksine durdurulur. Enflamasyonun sonlanması pasif bir tükeniş değil, aktif bir regülasyondur: Nötrofillerin apoptozu (A), araşidonik asit yolağında lökotrienlerden lipoksinlere geçiş (B), TGF-beta (D) ve IL-10 (E) gibi antienflamatuvar mediyatörlerin devreye girmesi bu evrenin temel olaylarıdır."
   },
   {
-    "id": "d3-k1-pat-015-295",
+    "id": "prac-akut-004",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 4,
-    "slideTitle": "Enflamasyonun Beş Ana Kardinal Bulgusu",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Akut ve Kronik Enflamasyonun Karşılaştırmalı Patolojisi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Aşağıdaki patolojik özelliklerden hangisi akut enflamasyonu kronik enflamasyondan ayıran en karakteristik bulgudur?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Lezyon odağında monosit, makrofaj ve plazma hücrelerinin predominant olması",
+      "B) Doku hasarının uzun süreli, yaygın ve kalıcı parankim kaybıyla sonuçlanması",
+      "C) Hasar sahasında anjiyogenez ile birlikte belirgin ekstraselüler matriks ve kollajen birikimi (fibrozis) izlenmesi",
+      "D) Dakikalar ve saatler içinde hızla gelişen yoğun vasküler permeabilite artışı, ödem ve nötrofil infiltrasyonu",
+      "E) Klinik semptomların genellikle sinsi, hafif düzeyde ve aylar süren dalgalanmalarla seyretmesi"
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Hızlı başlangıç (dakikalar-saatler), yoğun damar geçirgenliği artışına bağlı ödem sıvısı birikimi ve hücresel infiltratta nötrofillerin baskınlığı akut enflamasyonun temel özellikleridir. A, B, C ve E seçeneklerinde sıralanan özellikler (mononükleer infiltrat, kalıcı parankim kaybı, fibrozis ve sinsi seyir) kronik enflamasyona aittir."
   },
   {
-    "id": "d3-k1-pat-015-296",
+    "id": "prac-akut-005",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 5,
-    "slideTitle": "Enflamatuvar Yanıtın '5R' Basamağı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Akut Enflamasyonu Tetikleyen Başlıca Etiyolojik Faktörler",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Göğüs ağrısı şikayetiyle acil servise başvuran ve elektrokardiyografisinde ST elevasyonlu miyokard enfarktüsü saptanan 58 yaşındaki bir hastanın nekroze kalp dokusu biyopsisinde, hiçbir enfeksiyöz mikroorganizma saptanmamasına karşın erken dönemde yoğun nötrofil infiltrasyonu ve interstisyel ödem izleniyor. Bu steril enflamatuvar yanıtı başlatan primer moleküler mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Patojenle ilişkili moleküler paternlerin (PAMP) koroner arter endotelindeki selektinleri doğrudan parçalaması",
+      "B) İskemik nekroza uğrayan miyositlerden ekstraselüler ortama salınan tehlike sinyallerinin (DAMP) yerleşik makrofajları aktive etmesi",
+      "C) Dolaşımdaki B lenfositlerin kalp kası hücrelerine karşı antikor sentezleyerek komplemanı klasik yoldan tüketmesi",
+      "D) Plazma onkotik basıncının aniden yükselerek koroner venüllerde masif transüda göllenmesine yol açması",
+      "E) Miyokard hücrelerinin apoptoza giderek zarlarını koruması ve fagositoz uyarısı oluşturmaması"
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. İskemik hücre ölümü (koagülasyon nekrozu) sırasında hücre zarları parçalanır ve sitoplazmik/nükleer içerikler (ATP, ürik asit, HMGB1 vb.) ortama saçılır. Bu endojen maddeler Hasarla İlişkili Moleküler Paternler (DAMP) olarak adlandırılır. Doku makrofajları ve endotel hücreleri DAMP'ları tanıyarak steril bir akut enflamatuvar yanıt (nötrofil göçü ve ödem) başlatır. A seçeneğinde mikrop olmadığı için PAMP bulunmaz; C ve D seçenekleri etiyopatogenezle bağdaşmaz; nekrozda apoptozun aksine membran bütünlüğü bozulur."
   },
   {
-    "id": "d3-k1-pat-015-297",
+    "id": "prac-akut-006",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 6,
-    "slideTitle": "Mikropların ve Hasarlı Hücrelerin Tanınması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "İnflamatuvar Yanıtın Yol Açtığı Doku Hasarı ve Klinik Tablolar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Ağır bir ürosepsis tablosunu takiben yoğun bakım ünitesinde izlenen 64 yaşındaki bir hastada, solunum sayısında ani artış, hipoksemi ve bilateral yaygın akciğer infiltrasyonu gelişiyor. Hastaya Akut Solunum Sıkıntısı Sendromu (ARDS) tanısı konuyor. Bu hastanın akciğer parankiminde meydana gelen difüz doku hasarından birincil derecede sorumlu olan hücre tipi ve hasar mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Plazma hücreleri tarafından sentezlenen aşırı IgE antikorlarının bronş düz kasını kasması",
+      "B) Eozinofil lökositlerin Major Temel Protein (MBP) salgılayarak tip 2 pnömositleri parçalaması",
+      "C) Alveoler kapiller yatakta toplanan nötrofillerin salgıladığı serbest oksijen radikalleri (ROS) ve proteazlar",
+      "D) Doku mast hücrelerinin degranülasyonu sonucu salınan heparinin alveol içi masif kanamalara yol açması",
+      "E) CD8+ sitotoksik T lenfositlerin sürfaktan proteinlerini kompleman aracılığıyla lizise uğratması"
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. ARDS tablosunun temel patofizyolojisinde, pulmoner mikrosirkülasyonda yoğunlaşan nötrofillerin degranülasyonu, elastaz gibi lizozomal proteazların salınımı ve solunumsal patlama ile üretilen reaktif oksijen radikallerinin (ROS) endotel ve alveol epitelini eritmesi yatar. Robbins Tablo 2.2'de akut enflamatuvar doku hasarına prototip model olarak ARDS ve nötrofil hasarı vurgulanmaktadır. Diğer seçeneklerdeki hücreler ARDS'nin primer tetikleyicisi değildir."
   },
   {
-    "id": "d3-k1-pat-015-298",
+    "id": "prac-akut-007",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 7,
-    "slideTitle": "Akut Enflamasyonun 3 Ana Bileşeni",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Mikropların ve Hasarlı Hücrelerin Tanınması: Reseptör Sistemleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Birinci metatarsofalangeal ekleminde aniden başlayan zonklayıcı ağrı, kızarıklık ve şişlikle başvuran 45 yaşındaki bir erkek hastanın sinovyal sıvı incelemesinde monosodyum ürat kristalleri izleniyor. Bu kristallerin lökosit sitoplazmasında NLRP3 reseptörüne bağlanarak inflamazom kompleksini aktive ettiği ve bir proteolitik enzimi çalıştırarak sitokin olgunlaşmasını sağladığı biliniyor. İnflamazomun doğrudan aktive ettiği bu enzim ve sentezlenmesini sağladığı nihai pro-enflamatuvar sitokin aşağıdakilerin hangisinde birlikte verilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Miyeloperoksidaz - Lökotrien B4",
+      "B) Kaspaz-1 - İnterlökin-1beta (IL-1beta)",
+      "C) NADPH Oksidaz - Tümör Nekroz Faktörü-alfa (TNF-alfa)",
+      "D) Siklooksijenaz-2 (COX-2) - Prostaglandin E2",
+      "E) İndüklenebilir Nitrik Oksit Sentaz (iNOS) - İnterlökin-6"
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sitoplazmik bir sensör olan NLRP3, ürat kristalleri veya hücre dışı ATP gibi hasar sinyalleriyle (DAMP) uyarıldığında diğer proteinlerle oligomerize olarak 'İnflamazom' kompleksini kurar. İnflamazomun proteolitik bileşeni Kaspaz-1 enzimidir. Aktive olan kaspaz-1, sitoplazmada inaktif bekleyen öncül pro-IL-1beta molekülünü enzimatik olarak kırarak aktif ve sekrete edilebilir İnterlökin-1beta (IL-1beta) haline getirir. Bu yolak gut patogenezinin temelidir ve IL-1 antagonistleri (örn. anakinra) tedavide son derece etkilidir."
   },
   {
-    "id": "d3-k1-pat-015-299",
+    "id": "prac-akut-008",
     "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
     "slideNumber": 8,
-    "slideTitle": "Vasküler Değişiklikler: Vazodilatasyon ve Akım Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Akut Enflamasyonun Üç Ana Vasküler ve Hücresel Bileşeni",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Akut enflamasyon sürecinde gelişen hemodinamik ve hücresel olayların mikrosirkülasyon anatomisi ile ilişkisi dikkate alındığında, lökosit göçü (diapedez) ve vasküler geçirgenlik artışının en belirgin olarak gerçekleştiği vasküler segment aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
+      "A) Geniş çaplı elastik arterler",
+      "B) Prekapiller sfinkter içeren musküler arterioller",
+      "C) Gerçek (true) kapiller damarlar",
+      "D) Postkapiller venüller",
+      "E) Geniş toplayıcı ana venler"
     ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Akut enflamasyonda kimyasal mediyatörlerin (histamin, lökotrienler vb.) neden olduğu endotelyal aralıkların açılması ve lökositlerin damar lümeninden ekstravasküler alana transmigrasyonu (diapedez) esas olarak postkapiller venüllerde gerçekleşir. Arteriyoller esas olarak vazodilatasyon ve akım kontrolünden sorumludur; gerçek kapillerler ve büyük damarlar lökosit diapedezinin ana sahası değildir."
   }
 ]
