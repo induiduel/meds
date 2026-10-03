@@ -1140,820 +1140,460 @@
     "explanation": "Erken septik şokta NO salınımına bağlı sistemik vazodilatasyon geliştiğinden diğer şokların aksine cilt sıcak ve pembedir (sıcak şok); hipovolemik ve kardiyojenik şokta ise vazokonstriksiyon nedeniyle cilt soğuk ve soluktur."
   },
   {
-    "id": "q-kronik-enf-1",
+    "id": "prac-kronik-001",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 1,
-    "slideTitle": "Kronik Enflamasyonun Tanımı ve Patofizyolojik Temelleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kronik Enflamasyonun Tanımı ve Patolojik Triadı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Kronik enflamasyonun histopatolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi temel tanısal triadı en doğru şekilde özetler?",
     "options": [
-      {
-        "key": "A",
-        "text": "Belirgin damar genişlemesi ve yoğun nötrofil birikimi"
-      },
-      {
-        "key": "B",
-        "text": "Mononükleer lökosit infiltrasyonu"
-      },
-      {
-        "key": "C",
-        "text": "Parankimal doku yıkımı ve nekroz"
-      },
-      {
-        "key": "D",
-        "text": "Kollajen birikimi ve fibrozis gelişimi"
-      },
-      {
-        "key": "E",
-        "text": "Yeni damar oluşumu (anjiyogenez)"
-      }
+      "A) Yoğun nötrofilik infiltrasyon, masif seröz ödem ve tam epitel rejenerasyonu",
+      "B) Mononükleer hücre infiltrasyonu, aktif doku hasarı ve eşzamanlı anjiyogenez/fibrozis",
+      "C) Yalnızca fibröz skar dokusu gelişimi ve enflamatuvar hücrelerin tamamen kaybolması",
+      "D) Vasküler permeabilite artışına bağlı fibrinöz eksüda ve vasküler tromboz",
+      "E) Eozinofil lökosit hakimiyeti, mast hücre degranülasyonu ve mukoid dejenerasyon"
     ],
-    "correctAnswer": "A",
-    "explanation": "Yoğun nötrofil infiltrasyonu, belirgin vazodilatasyon ve ödem akut enflamasyonun kardinal bulgularıdır. Kronik enflamasyonda mononükleer hücreler, parankim hasarı, anjiyogenez ve fibrozis görülür."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kronik enflamasyonun histopatolojik triadı: Mononükleer lökosit (makrofaj, lenfosit, plazma hücresi) infiltrasyonu, inatçı etkene bağlı doku yıkımı ve eşzamanlı doku onarımı girişimleridir (anjiyogenez ve fibroblastik aktivite/fibrozis). Nötrofil ve yaygın seröz ödem akut enflamasyona özgüdür."
   },
   {
-    "id": "q-kronik-enf-2",
+    "id": "prac-kronik-002",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 2,
-    "slideTitle": "Kronik Enflamasyonun Nedenleri ve Etyolojik Spektrum",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Akut ve Kronik Enflamasyonun Karşılaştırmalı Patolojisi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Aşağıdakilerden hangisi kronik enflamasyonu akut enflamasyondan ayıran temel histopatolojik özelliklerden biridir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Ateroskleroz"
-      },
-      {
-        "key": "B",
-        "text": "Silikozis"
-      },
-      {
-        "key": "C",
-        "text": "Asbestozis"
-      },
-      {
-        "key": "D",
-        "text": "Romatoid Artrit"
-      },
-      {
-        "key": "E",
-        "text": "Tüberküloz"
-      }
+      "A) Erken dönemde vasküler permeabilite artışına bağlı zengin seröz eksüda birikimi",
+      "B) Lezyon odağında predominant hücre olarak nötrofil lökositlerin bulunması",
+      "C) Doku parankim hasarı ile birlikte eşzamanlı anjiyogenez ve kollajen birikiminin izlenmesi",
+      "D) Doku bazal membranlarının tamamen korunarak lezyonun iz bırakmadan iyileşmesi",
+      "E) Yalnızca vazoaktif aminlerin (histamin, serotonin) lokal salınımıyla sınırlı olması"
     ],
-    "correctAnswer": "A",
-    "explanation": "Ateroskleroz, damar duvarında endojen lipit ve kolesterol kristallerinin birikmesiyle tetiklenen kronik enflamatuar bir süreçtir. Silikozis ve asbestozis ekzojen ajanlardır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Kronik enflamasyonda akut süreçten farklı olarak doku yıkımı ile birlikte anjiyogenez ve kollajen birikimi (fibrozis) eşzamanlı olarak gerçekleşir. Nötrofil hakimiyeti, erken sıvı eksüdasyonu ve tam rezolüsyon akut enflamasyonun tipik bulgularıdır."
   },
   {
-    "id": "q-kronik-enf-3",
+    "id": "prac-kronik-003",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 3,
-    "slideTitle": "Mononükleer Fagosit Sistemi ve Makrofajların Kökeni",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kronik Enflamasyonun Etiyolojik Sınıflandırması",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Kronik enflamasyonun etiyolojisi düşünüldüğünde, aşağıdakilerden hangisi 'endojen toksik partikül birikimine bağlı gelişen kronik enflamasyon' sürecine en uygun örnektir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kupffer hücresi"
-      },
-      {
-        "key": "B",
-        "text": "İto (Yıldızsı) hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Hepatosit"
-      },
-      {
-        "key": "D",
-        "text": "Sinüs histiyositi"
-      },
-      {
-        "key": "E",
-        "text": "Langerhans hücresi"
-      }
+      "A) Taş ocağı işçisinde kristalize silika partiküllerinin solunmasıyla gelişen silikozis",
+      "B) Mycobacterium tuberculosis basillerinin fagozom-lizozom füzyonunu engellemesi",
+      "C) Arteryel intima tabakasında kolesterol kristalleri birikimiyle karakterize ateroskleroz",
+      "D) Tip 1 diyabette pankreas adacık beta hücrelerine karşı gelişen otoimmün insülit",
+      "E) Bronşiyal duvarda polen maruziyetiyle tetiklenen Th2 yanıtı ve mukus hipersekresyonu"
     ],
-    "correctAnswer": "A",
-    "explanation": "Karaciğerdeki doku yerleşik makrofajlara Kupffer hücreleri denir. İto hücreleri A vitamini depolar ve fibrozisten sorumludur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Ateroskleroz, arteryel intimatabakasında biriken endojen lipidlerin (özellikle okside LDL ve kolesterol kristalleri) makrofajlarca fagosite edilmesi ve inflamatuar yanıtı uyarmasıyla gelişen endojen toksik kronik enflamasyon modelidir. Silikozis eksojen toksik partiküldür; tüberküloz inatçı mikrobiyal etkendir; insülit ve astım immün aracılı tablolardır."
   },
   {
-    "id": "q-kronik-enf-4",
+    "id": "prac-kronik-004",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 4,
-    "slideTitle": "M1 (Klasik) ve M2 (Alternatif) Makrofaj Aktivasyonu",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Mononükleer Fagositik Sistem ve Makrofaj Biyogenezi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Mononükleer fagositik sistem ve monosit-makrofaj göçü ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "IL-4 ve IL-13"
-      },
-      {
-        "key": "B",
-        "text": "IFN-γ ve TNF-α"
-      },
-      {
-        "key": "C",
-        "text": "IL-1 ve IL-6"
-      },
-      {
-        "key": "D",
-        "text": "IL-12 ve IL-18"
-      },
-      {
-        "key": "E",
-        "text": "IL-17 ve IL-22"
-      }
+      "A) Monositler kanda haftalarca kalarak doğrudan kan dolaşımında fagosite edilmiş materyali sindirir",
+      "B) Dokuya göç eden makrofajlar mitoz bölünme yeteneğini tamamen kaybetmiş terminal hücrelerdir",
+      "C) Enflamatuvar odakta 48. saatten itibaren makrofajlar nötrofillerin yerini alarak baskın lökosit olur",
+      "D) Monositlerin endotelden dokuya geçişinde integrinler ve adezyon molekülleri rol oynamaz",
+      "E) Makrofajların dokudaki yaşam süresi nötrofillerde olduğu gibi 6 ila 12 saat arasında sınırlıdır"
     ],
-    "correctAnswer": "A",
-    "explanation": "Alternatif (M2) makrofaj aktivasyonunu Th2 kökenli IL-4 ve IL-13 sitokinleri tetikler. IFN-γ ise klasik M1 yolunu uyarır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Akut enflamatuar yanıtta ilk 6-24 saatte nötrofiller baskınken, 24-48 saat sonrasında monositler dokuya göç eder ve 48. saatten itibaren uzun ömürlü makrofajlar dominant popülasyon haline gelir. Makrofajlar dokuda aylarca yaşayabilir ve yerel olarak çoğalabilirler."
   },
   {
-    "id": "q-kronik-enf-5",
+    "id": "prac-kronik-005",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 5,
-    "slideTitle": "T Lenfosit Alt Grupları: Th1, Th2 ve Th17 Hücreleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Dokularda Yerleşik Makrofaj Popülasyonları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Mononükleer fagositik sistem elemanları ve bulundukları doku eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "IL-5"
-      },
-      {
-        "key": "B",
-        "text": "IFN-γ"
-      },
-      {
-        "key": "C",
-        "text": "IL-2"
-      },
-      {
-        "key": "D",
-        "text": "IL-17"
-      },
-      {
-        "key": "E",
-        "text": "TNF-α"
-      }
+      "A) Karaciğer — Kupffer hücresi",
+      "B) Akciğer — Alveolar makrofaj",
+      "C) Santral Sinir Sistemi — Mikroglia",
+      "D) Kemik Dokusu — Osteoklast",
+      "E) Epidermis — Melanosit"
     ],
-    "correctAnswer": "A",
-    "explanation": "IL-5, eozinofillerin güçlü aktivatörü ve büyüme faktörüdür. Paraziter enfeksiyonlarda Th2 lenfositlerince salınır."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır. Epidermisteki mononükleer fagosit/antijen sunucu hücre Langerhans hücresidir. Melanositler ise nöral krest kökenli melanin pigmenti üreten hücrelerdir; fagositik sisteme dahil değillerdir. A, B, C ve D eşleştirmeleri doğru doku makrofajlarıdır."
   },
   {
-    "id": "q-kronik-enf-6",
+    "id": "prac-kronik-006",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 6,
-    "slideTitle": "Plazma Hücreleri ve B Lenfosit Yanıtı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Makrofaj Aktivasyonunda M1 (Klasik) Yolak",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Klasik yolakla aktive olmuş (M1) bir makrofajın mikrobisidal yanıtı ve biyolojik özellikleri ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Plazma hücresi"
-      },
-      {
-        "key": "B",
-        "text": "Epiteloid histiyosit"
-      },
-      {
-        "key": "C",
-        "text": "Langhans dev hücresi"
-      },
-      {
-        "key": "D",
-        "text": "Eozinofil lökosit"
-      },
-      {
-        "key": "E",
-        "text": "Mast hücresi"
-      }
+      "A) Primer tetikleyici sitokin: IL-4 / Anahtar enzim: Arjinaz-1",
+      "B) Primer tetikleyici sitokin: IFN-γ / Anahtar enzim: İndüklenebilir nitrik oksit sentaz (iNOS)",
+      "C) Primer tetikleyici sitokin: IL-13 / Salınan mediyatör: TGF-beta",
+      "D) Temel hücresel fonksiyon: Fibroblast proliferasyonu ve kollajen sentezi",
+      "E) Salgılanan sitokin profili: IL-10 ve çözünür IL-1 reseptör antagonisti"
     ],
-    "correctAnswer": "A",
-    "explanation": "Saat kadranı kromatini, perinükleer solukluk ve Russell cisimcikleri antikor sentezleyen plazma hücresinin ayırt edici morfolojik özellikleridir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Klasik aktive M1 makrofajları Th1 hücre kaynaklı IFN-γ ve mikrobiyal LPS ile uyarılır. Karakteristik enzimi iNOS'tur ve L-arjininden NO üreterek mikrobisidal etki gösterir. IL-4/IL-13, Arjinaz-1, TGF-beta ve fibrozis ise alternatif M2 aktivasyonunun özellikleridir."
   },
   {
-    "id": "q-kronik-enf-7",
+    "id": "prac-kronik-007",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 7,
-    "slideTitle": "Eozinofiller ve Mast Hücreleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Makrofaj Aktivasyonunda M2 (Alternatif) Yolak",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Alternatif yolakla aktive olmuş (M2) makrofajların biyolojik fonksiyonları ve salgıladıkları mediyatörlerle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Charcot-Leyden kristalleri"
-      },
-      {
-        "key": "B",
-        "text": "Reinke kristalleri"
-      },
-      {
-        "key": "C",
-        "text": "Kolesterol kristalleri"
-      },
-      {
-        "key": "D",
-        "text": "Ürat kristalleri"
-      },
-      {
-        "key": "E",
-        "text": "Kalsiyum pirofosfat kristalleri"
-      }
+      "A) IL-4 ve IL-13 sitokinlerinin reseptörlerine bağlanmasıyla aktive olurlar",
+      "B) L-arjinin metabolizmasında arjinaz enzimini kullanarak ornitin ve prolin üretimini artırırlar",
+      "C) Masif miktarda nitrik oksit (NO) ve reaktif oksijen ürünleri (ROS) sentezleyerek doku nekrozuna yol açarlar",
+      "D) Salgıladıkları TGF-β ve PDGF aracılığıyla fibroblast kemotaksisi ve kollajen sentezini uyarırlar",
+      "E) IL-10 ve TGF-β salgılayarak anti-enflamatuvar ve immünsüpresif etki gösterirler"
     ],
-    "correctAnswer": "A",
-    "explanation": "Charcot-Leyden kristalleri, parçalanan eozinofillerin membran proteinlerinden oluşan ve astım balgamında sıkça görülen kristal yapılardır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır. Masif NO ve ROS üreterek mikrobisidal etki ve doku hasarı oluşturan hücre M1 makrofajıdır. Alternatif aktive M2 makrofajlarının mikrobisidal toksin üretimi baskılanmıştır; odak noktaları anti-enflamatuvar etki, anjiyogenez ve doku onarımı/fibrozisdir."
   },
   {
-    "id": "q-kronik-enf-8",
+    "id": "prac-kronik-008",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 8,
-    "slideTitle": "Granülomatöz Enflamasyonun Tanımı ve Mimarisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "M1 ve M2 Fenotipik Spektrumu ve Plastisite",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Makrofaj plastisitesi ve M1/M2 denge bozuklukları dikkate alındığında, aşırı ve kontrolsüz M2 aktivasyonunun en olası patolojik sonucu aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Epiteloid histiyosit topluluğu"
-      },
-      {
-        "key": "B",
-        "text": "Kazeifikasyon nekrozu"
-      },
-      {
-        "key": "C",
-        "text": "Langhans tipi dev hücre"
-      },
-      {
-        "key": "D",
-        "text": "Yoğun nötrofilik infiltrasyon"
-      },
-      {
-        "key": "E",
-        "text": "Kalsifikasyon odakları"
-      }
+      "A) Akut kazeöz nekroz ve dokuda kavitasyon oluşumu",
+      "B) Lökopeni ve sistemik septik şok tablosu",
+      "C) Doku parankiminin yerini yoğun ekstraselüler matriksin alması ve organ fibrozisi",
+      "D) Damar duvarında endotel hücrelerinin apoptozu ve masif iç kanama",
+      "E) Nötrofillerin aşırı göçüyle karakterize fulminan süpüratif apse formasyonu"
     ],
-    "correctAnswer": "A",
-    "explanation": "Granülom tanısı için epiteloid histiyositlerin odak oluşturması şarttır. Nekroz veya dev hücre bulunmasa bile epiteloid histiyosit kümesi granülomdur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Alternatif (M2) makrofaj aktivasyonunun kontrolsüz ve uzamış olması, aşırı miktarda TGF-β, PDGF ve FGF üretimine yol açarak fibroblastları ve miyofibroblastları uyarır; bu durum parankim kaybı ve organ fibrozisi (örneğin siroz veya akciğer fibrozisi) ile sonuçlanır. Doku erimesi ve kavitasyon M1 hasarıdır."
   },
   {
-    "id": "q-kronik-enf-9",
+    "id": "prac-kronik-009",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 9,
-    "slideTitle": "Çok Çekirdekli Dev Hücre Tipleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "T Lenfosit Alt Tipleri ve Polarizasyon",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "CD4+ T yardımcı lenfosit alt grupları, salgıladıkları anahtar sitokinler ve fonksiyonları ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Langhans tipi dev hücre"
-      },
-      {
-        "key": "B",
-        "text": "Yabancı cisim tipi dev hücre"
-      },
-      {
-        "key": "C",
-        "text": "Touton tipi dev hücre"
-      },
-      {
-        "key": "D",
-        "text": "Osteoklast"
-      },
-      {
-        "key": "E",
-        "text": "Megakaryosit"
-      }
+      "A) Th1 hücresi — IL-5 salgılar — Eozinofil lökositlerin aktivasyonunu sağlar",
+      "B) Th2 hücresi — IFN-γ salgılar — Klasik (M1) makrofaj aktivasyonunu uyarır",
+      "C) Th17 hücresi — IL-17 salgılar — Kemokinler aracılığıyla nötrofil ve monosit toplanmasını uyarır",
+      "D) Th1 hücresi — IL-4 salgılar — B lenfositlerinden IgE sentezini indükler",
+      "E) Th2 hücresi — IL-12 salgılar — Doğal katil (NK) hücre sitotoksisitesini artırır"
     ],
-    "correctAnswer": "A",
-    "explanation": "Nükleusların hücre çeperinde at nalı şeklinde dizilmesi Langhans dev hücresinin tipik özelliğidir ve tüberkülozda karakteristiktir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Th17 lenfositleri IL-17 salgılayarak endotel ve epitelden kemokin üretimini indükler, böylece bölgeye yoğun nötrofil ve monosit toplanmasını sağlarlar. Th1 IFN-γ salar (M1 aktivasyonu), Th2 ise IL-4, IL-5 (eozinofil) ve IL-13 salgılar."
   },
   {
-    "id": "q-kronik-enf-10",
+    "id": "prac-kronik-010",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 10,
-    "slideTitle": "Kazeöz ve Non-Kazeöz Granülom Ayrımı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Makrofaj-Lenfosit İki Yönlü Kısır Döngüsü",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Kronik enflamasyonda makrofaj ve T lenfositler arasında kurulan iki yönlü etkileşim döngüsüyle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sarkoidoz"
-      },
-      {
-        "key": "B",
-        "text": "Primer Tüberküloz"
-      },
-      {
-        "key": "C",
-        "text": "Histoplazmoz"
-      },
-      {
-        "key": "D",
-        "text": "Kedi Tırmığı Hastalığı"
-      },
-      {
-        "key": "E",
-        "text": "Sifiliz"
-      }
+      "A) Makrofajlar T lenfositlerine IL-4 salgılayarak Th1 farklılaşmasını engeller",
+      "B) T lenfositleri makrofajları aktive etmek için öncelikle IL-10 ve IL-13 sitokinlerini kullanır",
+      "C) Makrofajlar antijen sunumuyla birlikte IL-12 salgılar; aktive Th1 hücreleri ise IFN-γ üreterek makrofajları uyarır",
+      "D) Bu döngü negatif geri besleme niteliğinde olup enflamasyonun birkaç günde kendiliğinden sönmesini sağlar",
+      "E) Döngü yalnızca B lenfositlerinin plazma hücresine dönüşmesiyle tetiklenir ve T hücrelerine bağımlı değildir"
     ],
-    "correctAnswer": "A",
-    "explanation": "Kazeöz nekroz içermeyen, sıkı ve dar lenfosit kuşaklı non-kazeöz (çıplak) granülomlar sarkoidozun en karakteristik histopatolojik bulgusudur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Makrofajlar antijen sunumu yapıp IL-12 salgılayarak naif T lenfositlerini Th1 hücrelerine dönüştürür. Aktive Th1 lenfositleri ise IFN-γ salgılayarak makrofajları klasik yoldan (M1) kuvvetle aktive eder. Bu pozitif feedback döngüsü kronik yangının devamını sağlar."
   },
   {
-    "id": "q-kronik-enf-11",
+    "id": "prac-kronik-011",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 11,
-    "slideTitle": "Tüberküloz Patolojisi ve Granülom Oluşum Mekanizması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Plazma Hücreleri ve B Lenfosit İnfiltrasyonu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Kronik enflamasyonlu bir doku biyopsisinde; eksantrik yerleşimli 'araba tekerleği' kromatinli nükleusu, perinükleer soluk zonu ve sitoplazmasında immünglobulin birikimine bağlı eozinofilik Russell cisimcikleri bulunan hücre aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Tümör Nekroz Faktörü-alfa (TNF-α)"
-      },
-      {
-        "key": "B",
-        "text": "İnterlökin-4"
-      },
-      {
-        "key": "C",
-        "text": "İnterlökin-5"
-      },
-      {
-        "key": "D",
-        "text": "Transforme edici büyüme faktörü-beta (TGF-β)"
-      },
-      {
-        "key": "E",
-        "text": "Vasküler endotelyal büyüme faktörü (VEGF)"
-      }
+      "A) Epiteloid histiyosit",
+      "B) Plazma hücresi",
+      "C) Mast hücresi",
+      "D) Eozinofil lökosit",
+      "E) Fibroblast"
     ],
-    "correctAnswer": "A",
-    "explanation": "TNF-α, tüberküloz granülomunun organizasyonunu ve mikobakterilerin hapsedilmesini sağlayan temel sitokindir. Anti-TNF ilaçlar granülomu yıkarak reaktivasyona neden olur."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Eksantrik yerleşimli araba tekerleği/saat kadranı nükleusu, perinükleer açık renkli Golgi halosu ve aşırı immünglobulin birikimine bağlı Russell cisimcikleri plazma hücresinin karakteristik histomorfolojik özellikleridir."
   },
   {
-    "id": "q-kronik-enf-12",
+    "id": "prac-kronik-012",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 12,
-    "slideTitle": "Sarkoidoz Patolojisi ve İntraselüler İnklüzyonlar",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Eozinofiller ve Kronik Enflamasyon",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Helmint enfeksiyonu veya kronik alerjik enflamasyon alanında bol miktarda bulunan, parazit kütikulasını zedeleyen fakat konak epitelinde de nekroza yol açan Major Basic Protein (MBP) içeren hücre aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Schaumann cisimcikleri"
-      },
-      {
-        "key": "B",
-        "text": "Asteroid cisimcikleri"
-      },
-      {
-        "key": "C",
-        "text": "Russell cisimcikleri"
-      },
-      {
-        "key": "D",
-        "text": "Psammom cisimcikleri"
-      },
-      {
-        "key": "E",
-        "text": "Councilman cisimcikleri"
-      }
+      "A) Nötrofil lökosit",
+      "B) Bazofil lökosit",
+      "C) Eozinofil lökosit",
+      "D) Epiteloid histiyosit",
+      "E) Plazma hücresi"
     ],
-    "correctAnswer": "A",
-    "explanation": "Sarkoidoz granülomlarındaki dev hücrelerde bulunan konsantrik laminasyonlu kalsifiye yapılara Schaumann cisimcikleri adı verilir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Eozinofil lökositlerin spesifik granüllerinde yüksek konsantrasyonda bulunan Major Basic Protein (MBP), parazitlere karşı toksik olan ancak kronik enflamasyonda (örneğin bronşiyal astımda) epitel hasarına yol açan temel katyonik proteindir."
   },
   {
-    "id": "q-kronik-enf-13",
+    "id": "prac-kronik-013",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 13,
-    "slideTitle": "Granülomatöz Hastalıkların Karşılaştırmalı Ayırıcı Tanısı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Mast Hücreleri ve Kronikleşmede Rol Oynayan Nötrofiller",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Aşağıdaki klinik-patolojik durumlardan hangisinde, tablonun kronik seyirli olmasına rağmen histopatolojik incelemede bol miktarda aktif nötrofil lökosit infiltrasyonu görülmesi en tipiktir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kedi tırmığı hastalığı"
-      },
-      {
-        "key": "B",
-        "text": "Tüberküloz"
-      },
-      {
-        "key": "C",
-        "text": "Sarkoidoz"
-      },
-      {
-        "key": "D",
-        "text": "Lepra"
-      },
-      {
-        "key": "E",
-        "text": "Bruselloz"
-      }
+      "A) Sarkoidoz hiler lenfadenopatisi",
+      "B) Hashimoto tiroiditi",
+      "C) Sekestr kemik odağı içeren kronik osteomiyelit",
+      "D) Tersiyer sifilis gom lezyonu",
+      "E) Silikozise bağlı pulmoner nodül"
     ],
-    "correctAnswer": "A",
-    "explanation": "Merkezinde nötrofil kümeleri içeren yıldızsı nekrotizan granülom ve Warthin-Starry ile basil görülmesi Bartonella henselae (kedi tırmığı hastalığı) için tipiktir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Kronik osteomiyelitte ölü kemik dokusu (sekestr) fagositozla yok edilemediği ve bakteriyel biyofilmleri barındırdığı için, aylar süren kronik bir süreç olmasına rağmen nötrofilik infiltrasyon kesintisiz olarak devam eder. Sarkoidoz, Hashimoto, sifilis ve silikoziste mononükleer hücreler ve granülomlar hakimdir."
   },
   {
-    "id": "q-kronik-enf-14",
+    "id": "prac-kronik-014",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 14,
-    "slideTitle": "Kronik Enflamasyonda Sistemik Belirtiler ve Akut Faz Yanıtı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Granülomatöz Enflamasyonun Tanımı ve Patogenezi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "İmmün granülom gelişiminde makrofajların epiteloid histiyositlere dönüşümünü indükleyen ve granülom mimarisini başlatan en kritik T lenfosit kaynaklı sitokin aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "İnterlökin-6 (IL-6)"
-      },
-      {
-        "key": "B",
-        "text": "İnterlökin-4"
-      },
-      {
-        "key": "C",
-        "text": "İnterferon-gama"
-      },
-      {
-        "key": "D",
-        "text": "İnterlökin-10"
-      },
-      {
-        "key": "E",
-        "text": "Transforme edici büyüme faktörü-beta"
-      }
+      "A) İnterlökin-4 (IL-4)",
+      "B) İnterferon-gama (IFN-γ)",
+      "C) İnterlökin-10 (IL-10)",
+      "D) Transforming Growth Factor-beta (TGF-β)",
+      "E) İnterlökin-5 (IL-5)"
     ],
-    "correctAnswer": "A",
-    "explanation": "Hepatik akut faz proteinlerinin (CRP, Fibrinojen, SAA) sentezinden sorumlu primer regülatör sitokin IL-6'dır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Granülomatöz enflamasyonda aktive Th1 lenfositlerinden salgılanan İnterferon-gama (IFN-γ), dokudaki makrofajları uyararak onları epiteloid histiyositlere dönüştüren ve granülomun hücresel çatısını kuran en temel sitokindir."
   },
   {
-    "id": "q-kronik-enf-15",
+    "id": "prac-kronik-015",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 15,
-    "slideTitle": "Doku Onarımı, Rejenerasyon ve Skar Oluşumu",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Epiteloid Histiyositlerin Biyolojisi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Granülomatöz lezyonların merkezini oluşturan epiteloid histiyositlerin sitomorfolojik ve fonksiyonel özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Fagositoz kapasiteleri klasik makrofajlara göre katbekat artmıştır",
+      "B) Hücre sınırları çok keskin olup bol miktarda musin salgılarlar",
+      "C) Nükleusları hiperkromatik, piknotik ve at nalı şeklinde periferik dizilimlidir",
+      "D) Bol eozinofilik sitoplazmalı, veziküler 'terlik tabanı' nükleuslu ve salgı kapasitesi yüksek hücrelerdir",
+      "E) Kemik iliğindeki B lenfositlerinin terminal farklılaşmasıyla meydana gelirler"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Epiteloid histiyositler; geniş soluk eozinofilik sitoplazmalı, belirsiz sınırlı, veziküler 'terlik/ayakkabı tabanı' biçiminde nükleuslu hücrelerdir. Fagositoz yetenekleri azalmış, protein ve sitokin salgı kapasiteleri ise belirgin olarak artmıştır."
   },
   {
-    "id": "q-kronik-enf-16",
+    "id": "prac-kronik-016",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 16,
-    "slideTitle": "Anjiyogenez Mekanizması ve Büyüme Faktörleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Çok Çekirdekli Dev Hücrelerin Oluşumu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Granülomatöz enflamasyon odağında saptanan çok çekirdekli dev hücrelerin biyogenezi ve özellikleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Tek bir makrofajın sitokinezi olmaksızın art arda çok sayıda mitoz bölünme geçirmesiyle oluşurlar",
+      "B) Epiteloid histiyositlerin hücre zarlarının füzyonu (birbirine kaynaşması) sonucu meydana gelirler",
+      "C) Granülomatöz enflamasyon tanısı koyabilmek için biyopside mutlaka dev hücre görülmesi zorunludur",
+      "D) Bu dev hücreler kemik iliğindeki megakaryositlerin dokuya göç etmiş formlarıdır",
+      "E) Sitoplazmalarında fagozom oluşturma yetenekleri tamamen kaybolmuştur ve metabolik olarak inaktiftirler"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Çok çekirdekli dev hücreler endomitozla değil; IFN-γ ve sitokinlerin etkisiyle epiteloid histiyositlerin hücre zarlarının birbirine kaynaşması (füzyon) sonucu oluşurlar. Granülom tanısı için esas olan epiteloid histiyosit kümesidir; dev hücre şart değildir."
   },
   {
-    "id": "q-kronik-enf-17",
+    "id": "prac-kronik-017",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 17,
-    "slideTitle": "Fibroblast Aktivasyonu ve Fibrozis Patogenezi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Dev Hücre Tipleri ve Morfolojik Ayrımı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Deri lezyonu biyopsisinde; merkezde nükleusların oluşturduğu bir çember ve bu çemberin periferinde lipid vakuolleri nedeniyle soluk-berrak görünen sitoplazma halkası içeren çok çekirdekli dev hücre aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Langhans dev hücresi",
+      "B) Yabancı cisim dev hücresi",
+      "C) Touton dev hücresi",
+      "D) Aschoff dev hücresi",
+      "E) Reed-Sternberg hücresi"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Touton dev hücresi, santralde yerleşmiş nükleus halkası ve bunun çevresini saran köpüksü, berrak, lipid yüklü sitoplazma kuşağı ile karakterizedir. Ksantomlar ve jüvenil ksantogranülom için tipiktir. Langhans hücresinde nükleuslar periferik at nalı şeklinde dizilir."
   },
   {
-    "id": "q-kronik-enf-18",
+    "id": "prac-kronik-018",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 18,
-    "slideTitle": "Yara İyileşmesi Evreleri: Primer ve Sekonder İyileşme",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kazeifiye vs Non-Kazeifiye Granülom Ayrımı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Aşağıdaki hastalıklardan hangisinin karakteristik histopatolojik lezyonu 'santral kazeifikasyon nekrozu içeren kazeifiye granülom' tablosudur?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Sarkoidoz",
+      "B) Crohn hastalığı",
+      "C) Mycobacterium tuberculosis enfeksiyonu",
+      "D) Berilyum maruziyeti (Berilyozis)",
+      "E) Silikon implant rüptürüne bağlı yabancı cisim reaksiyonu"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Mycobacterium tuberculosis enfeksiyonu kazeifiye granülomların (tüberküllerin) klasik prototipidir; merkezinde amorf granüler peynir benzeri kazeöz nekroz bulunur. Sarkoidoz, Crohn hastalığı, berilyozis ve yabancı cisim reaksiyonları ise tipik olarak non-kazeifiye (nekrozsuz) granülomlar oluşturur."
   },
   {
-    "id": "q-kronik-enf-19",
+    "id": "prac-kronik-019",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 19,
-    "slideTitle": "Patolojik Onarım: Keloid ve Hipertrofik Skar Ayrımı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Tüberküloz Granülomu (Tüberkül)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Primer pulmoner tüberküloz patolojisinde; akciğer parankiminde subplevral yerleşimli kazeifiye granülom odağı ile buna eşlik eden kazeifiye hiler lenfadenopatinin oluşturduğu anatomik lezyon kompleksi aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Aschoff nodülü",
+      "B) Ghon kompleksi",
+      "C) Charcot-Leyden kristali",
+      "D) Gamna-Gandy cisimciği",
+      "E) Councilman cisimciği"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Primer tüberkülozda akciğer parankimindeki kazeifiye lezyon (Ghon odağı) ile drene eden hiler lenf nodundaki kazeifiye granülomun birlikteliğine 'Ghon kompleksi' adı verilir. İlerleyen dönemde kalsifiye olduğunda Ranke kompleksi adını alır."
   },
   {
-    "id": "q-kronik-enf-20",
+    "id": "prac-kronik-020",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 20,
-    "slideTitle": "Otoimmün Enflamasyon ve Tersiyer Lenfoid Dokular",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Treponema pallidum ve Sifilitik Gom (Gumma)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Karaciğerde kitle lezyonu nedeniyle opere edilen hastanın biyopsisinde; santralde lastik kıvamlı nekroz, çevresinde bol miktarda plazma hücresi infiltrasyonu ve küçük arterlerde endarteritis obliterans saptanmıştır. Bu tablo için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Tüberküloz tüberkülü",
+      "B) Tersiyer sifilis gom lezyonu",
+      "C) Sarkoidoz nodülü",
+      "D) Kedi tırmığı hastalığı",
+      "E) Eozinofilik granülom"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Lastik/kauçuksu kıvamda nekroz (gom nekrozu), lezyon çevresinde belirgin plazma hücresi hakimiyeti ve damar lümenlerini tıkayan endarteritis obliterans, Treponema pallidum'un neden olduğu tersiyer sifilis gom (gumma) lezyonunun klasik triadıdır."
   },
   {
-    "id": "q-kronik-enf-21",
+    "id": "prac-kronik-021",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 21,
-    "slideTitle": "Granülasyon Dokusunun Histopatolojik Bileşenleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kedi Tırmığı Hastalığı ve Nekrotizan Granülomlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Genç bir hastanın kolunda kedi tırmalaması sonrası gelişen aksiller lenfadenopati biyopsisinde; merkezinde nötrofil lökosit birikimi içeren mikroapseler ve çevresinde epiteloid histiyositlerden oluşan yıldızsı (stellat) nekrotizan granülomlar izlenmiştir. En olası etken mikroorganizma aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Mycobacterium leprae",
+      "B) Treponema pallidum",
+      "C) Bartonella henselae",
+      "D) Leishmania donovani",
+      "E) Toxoplasma gondii"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Kedi tırmığı hastalığı (Bartonella henselae), lenf nodlarında merkezinde nötrofil lökositlerin oluşturduğu apseler ve periferinde epiteloid histiyosit kuşakları bulunan 'yıldızsı / stellat süpüratif nekrotizan granülomlar' ile karakterizedir."
   },
   {
-    "id": "q-kronik-enf-22",
+    "id": "prac-kronik-022",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 22,
-    "slideTitle": "Kronik Enflamasyon ve Karsinojenez İlişkisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Non-Kazeifiye Granülomların Baş Tacı: Sarkoidoz",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Genç kadın hastada akciğer grafisinde bilateral hiler lenfadenopati saptanıyor. Transbronşiyal akciğer biyopsisinde santral nekroz içermeyen, çevresinde belirgin lenfosit halkası bulunmayan (çıplak granülom), dev hücrelerinde Schaumann ve asteroid cisimcikleri içeren granülomlar görülüyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Primer Tüberküloz",
+      "B) Sarkoidoz",
+      "C) Silikozis",
+      "D) Kedi Tırmığı Hastalığı",
+      "E) Romatoid Nodül"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Bilateral hiler lenfadenopati, nekroz içermeyen 'çıplak' non-kazeifiye granülomlar ve dev hücrelerde konsantrik Schaumann cisimcikleri ile yıldızsı Asteroid cisimciklerinin varlığı Sarkoidoz için klasik histopatolojik bulgulardır."
   },
   {
-    "id": "q-kronik-enf-23",
+    "id": "prac-kronik-023",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 23,
-    "slideTitle": "Klinik Patoloji İncileri ve Sınav Tuzakları",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Gastrointestinal Granülomlar ve Crohn Hastalığı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Kronik ishal ve karın ağrısı olan hastanın terminal ileum rezeksiyon materyalinde; atlamalı (skip) lezyonlar, bağırsak duvarının tüm katlarını tutan transmural mononükleer infiltrasyon, fissür tarzı derin ülserler ve submukozada non-kazeifiye granülomlar izleniyor. Bu hasta için en olası patolojik tanı nedir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) Ülseratif Kolit",
+      "B) Crohn Hastalığı",
+      "C) İskemik Kolit",
+      "D) Psödomembranöz Enterokolit",
+      "E) Çölyak Hastalığı"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Transmural tutulum (bağırsak duvarının tüm katları), atlamalı lezyonlar, fissürler ve histopatolojik olarak non-kazeifiye granülomların saptanması Crohn Hastalığı için patognomoniktir. Ülseratif Kolit sadece mukoza ve submukozayla sınırlıdır ve granülom içermez."
   },
   {
-    "id": "q-kronik-enf-24",
+    "id": "prac-kronik-024",
     "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
+    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 24,
-    "slideTitle": "Kronik ve Granülomatöz Enflamasyon Sentez Özeti",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Yabancı Cisim Granülomları ve Kronik Enflamasyonun Sistemik Sonuçları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": null,
+    "question": "Yıllardır kronik granülomatöz tüberküloz veya romatoid artrit tanısıyla takip edilen bir hastada masif proteinüri ve böbrek yetmezliği gelişiyor. Böbrek biyopsisinde glomerüllerde amorf birikim saptanıyor. Bu sistemik tablonun patogenezinde rol oynayan temel protein prekürsörü aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Miyofibroblast"
-      },
-      {
-        "key": "B",
-        "text": "Endotel hücresi"
-      },
-      {
-        "key": "C",
-        "text": "Perisit"
-      },
-      {
-        "key": "D",
-        "text": "Mast hücresi"
-      },
-      {
-        "key": "E",
-        "text": "Histiyosit"
-      }
+      "A) İmmünglobulin hafif zinciri (AL)",
+      "B) Transtiretin (ATTR)",
+      "C) Serum Amiloid A (SAA)",
+      "D) Beta-2 mikroglobulin",
+      "E) Kalsitonin öncül proteini"
     ],
-    "correctAnswer": "A",
-    "explanation": "Miyofibroblastlar yara kontraksiyonunu sağlayarak doku defektini daraltan anahtar hücrelerdir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Kronik enflamatuvar ve granülomatöz hastalıklarda (tüberküloz, romatoid artrit, bronşektazi vb.) makrofaj ve lökosit kaynaklı sitokinlerin (IL-6, IL-1, TNF) karaciğeri uyarması sonucu üretilen Serum Amiloid A (SAA) proteini artar ve dokularda Sekonder Sistemik (AA) Amiloidozis şeklinde çökerek organ yetmezliğine yol açar."
   },
   {
     "id": "km-pq-1",

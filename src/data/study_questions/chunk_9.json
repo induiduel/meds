@@ -152,1372 +152,1372 @@
     "explanation": "Doğru yanıt A seçeneğidir. Moleküler Patolojiden Hedefe Yönelik Tedavilere (Hassas Tıp), patolojik olarak 'Biyomarker testleri, NGS panelleri ve kişiselleştirilmiş onkoloji özeti.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-1",
+    "id": "itg-pq-1",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 1,
-    "slideTitle": "RB (Retinoblastom) Yolu ve G1/S Kontrolü",
+    "slideTitle": "İleri Tümör Genetiği ve Moleküler Onkolojiye Bütüncül Giriş",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'RB (Retinoblastom) Yolu ve G1/S Kontrolü' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Moleküler onkoloji prensiplerine göre, karsinojenez sürecini başlatan ve sürdüren hücresel genetik hasar tipiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
     "options": [
-      "A) Hipofosforile RB aktif E2F baskılar; hiperfosforile RB inaktif E2F serbest kalır.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Hasar hücreyi hemen lizise ve koagülasyon nekrozuna götüren letal bir hasardır",
+      "B) Hücreyi öldürmeyen (non-lethal) genetik hasar atasal hücrede klonal genişlemeyi başlatır",
+      "C) Tümörler poliklonal kökenli olup her hücre bağımsız karsinojenik hasarla ortaya çıkar",
+      "D) Malign transformasyon için tek bir sürücü mutasyon daima yeterlidir",
+      "E) Genomik instabilite sadece benign neoplazmlarda görülen geçici bir adaptasyondur"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. RB (Retinoblastom) Yolu ve G1/S Kontrolü, patolojik ve klinik olarak 'Hipofosforile RB aktif E2F baskılar; hiperfosforile RB inaktif E2F serbest kalır.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Karsinojenezin en temel ilkesi hasarın hücreyi öldürmeyen (non-lethal) olmasıdır. Hücre ölmez; mutasyonu taşıyarak klonal proliferasyona başlar ve monoklonal kökenden zamanla klonal heterojeniteye evrilir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-2",
+    "id": "itg-pq-2",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 2,
-    "slideTitle": "Knudson İki Vuruş (Two-Hit) Hipotezi",
+    "slideTitle": "Retinoblastom (RB) Geni ve İki Vuruş (Two-Hit) Hipotezi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Knudson İki Vuruş (Two-Hit) Hipotezi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "On sekiz aylık bir kız çocukta her iki gözde lökokori (beyaz refle) saptanmış ve yapılan incelemede bilateral retinoblastom teşhisi konulmuştur. Bu hastanın genetik patogenezi ve gelecekteki klinik riskleri ile ilgili aşağıdaki ifadelerden hangisi en doğrudur?",
     "options": [
-      "A) Kalıtsal retinoblastomda 1. darbe germline; sporadik olanda iki darbe somatiktir.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Hastanın vücudundaki tüm somatik hücrelerde 13q14 lokusundaki her iki RB1 aleli de baştan beri mutasyonludur",
+      "B) Tümör gelişimi için retina hücrelerinde sadece tek bir somatik mutasyon yeterli olmuştur",
+      "C) Bu hastada adolesan dönemde osteosarkom gelişme riski genel popülasyondan farksızdır",
+      "D) Hastalık ebeveynden otozomal resesif kalıtımla aktarılmış olup ikinci bir vuruşa ihtiyaç duyulmaz",
+      "E) RB proteini sürekli hipofosforile kalarak E2F transkripsiyon faktörünü aşırı aktive etmiştir"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Knudson İki Vuruş (Two-Hit) Hipotezi, patolojik ve klinik olarak 'Kalıtsal retinoblastomda 1. darbe germline; sporadik olanda iki darbe somatiktir.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Bilateral retinoblastom ailesel formdur. Hasta germ hattında bir mutant alelle doğmuştur (tüm vücut hücreleri heterozigottur). Retina hücresinde tek bir ek somatik mutasyon (ikinci vuruş) meydana gelmesi iki alelin de kaybına ve tümör oluşumuna yeterlidir. Ayrıca bu hastalarda osteosarkom riski dramatik şekilde yüksektir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-3",
+    "id": "itg-pq-3",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 3,
-    "slideTitle": "Siklin D/CDK4 ve RB Ekseni Onkojenik Değişiklikleri",
+    "slideTitle": "RB Proteini, E2F Transkripsiyon Faktörleri ve G1/S Kontrol Noktası",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Siklin D/CDK4 ve RB Ekseni Onkojenik Değişiklikleri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Hücre döngüsünün G1/S kontrol noktasında Retinoblastom (RB) proteininin fonksiyonel durumu ve moleküler etkileşimleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
     "options": [
-      "A) CDKN2A (p16) kaybı, Siklin D1 amplifikasyonu ve CDK4 mutasyonları.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Hipofosforile RB inaktif olup E2F'nin S fazı genlerini uyarmasına izin verir",
+      "B) Hiperfosforile RB histon deasetilazları (HDAC) toplayarak kromatini transkripsiyona kapatır",
+      "C) Hipofosforile RB E2F faktörlerini bağlayarak tecrit eder ve hücre döngüsünü G1'de durdurur",
+      "D) Siklin D-CDK4/6 kompleksi RB'yi defosforile ederek aktif hale getirir",
+      "E) E2F faktörlerinin serbest kalması için RB proteininin proteazomda tamamen parçalanması şarttır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Siklin D/CDK4 ve RB Ekseni Onkojenik Değişiklikleri, patolojik ve klinik olarak 'CDKN2A (p16) kaybı, Siklin D1 amplifikasyonu ve CDK4 mutasyonları.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "RB proteini hipofosforile iken aktiftir; E2F transkripsiyon faktörlerine bağlanarak onları inaktif tutar ve HDAC toplayarak S fazı genlerinin ifadesini kilitler. Siklin-CDK kompleksleri tarafından hiperfosforile edildiğinde ise inaktive olur ve E2F serbest kalır."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-4",
+    "id": "itg-pq-4",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 4,
-    "slideTitle": "Onkojenik Virüsler ve RB İnaktivasyonu",
+    "slideTitle": "Siklin D – CDK4/6 – p16 (CDKN2A) – RB Ekseni ve Onkojenik Bozulmalar",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Onkojenik Virüsler ve RB İnaktivasyonu' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Pankreas adenokarsinomu ve kutanöz malign melanomda çok yüksek oranda inaktive olan, 9p21 kromozom lokusunda kodlanan ve CDK4/6 komplekslerini fizyolojik olarak inhibe ederek RB proteininin hipofosforile kalmasını sağlayan tümör baskılayıcı molekül aşağıdakilerden hangisidir?",
     "options": [
-      "A) HPV E7, Adenovirüs E1A ve SV40 T antijeninin RB'ye bağlanıp parçalaması.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) p21CIP1 (CDKN1A)",
+      "B) p16INK4A (CDKN2A)",
+      "C) p27KIP1 (CDKN1B)",
+      "D) Siklin E1",
+      "E) MDM2"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Onkojenik Virüsler ve RB İnaktivasyonu, patolojik ve klinik olarak 'HPV E7, Adenovirüs E1A ve SV40 T antijeninin RB'ye bağlanıp parçalaması.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "CDKN2A geninin ürünü olan p16INK4A, CDK4 ve CDK6 kinazlarına bağlanarak onların Siklin D ile birleşip RB'yi fosforillemesini engeller. Bu genin delesyon veya metilasyonu pankreas kanseri ve melanomda RB inaktivasyonunun en sık nedenidir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-5",
+    "id": "itg-pq-5",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 5,
-    "slideTitle": "TP53: Genomun Baş Gardiyanı",
+    "slideTitle": "Onkojenik DNA Virüsleri ve RB / p53 İnaktivasyonu",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'TP53: Genomun Baş Gardiyanı' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Serviks skuamöz hücreli karsinomu patogenezinde yüksek riskli Human Papillomavirus (HPV) tip 16 onkoproteinlerinin konak hücre siklus bekçileri üzerindeki etkileri ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
     "options": [
-      "A) DNA hasarında ATM/ATR kinazlar p53'ü fosforiller; MDM2 yıkımından kurtarır.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) E6: RB'yi defosforile eder — E7: p53'ü fosforilleyerek stabilize eder",
+      "B) E7: Hipofosforile RB'ye bağlanıp E2F'yi serbest bırakır — E6: p53'ü proteazomal yıkıma hedefler",
+      "C) E6: CDK4'ü inhibe eder — E7: MDM2'yi parçalayarak p53'ü artırır",
+      "D) E7: E-kadherin sentezini artırır — E6: Telomeraz aktivitesini tamamen susturur",
+      "E) E7: Siklin D yıkımını uyarır — E6: Kaspaz-3 aktivasyonunu doğrudan tetikler"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. TP53: Genomun Baş Gardiyanı, patolojik ve klinik olarak 'DNA hasarında ATM/ATR kinazlar p53'ü fosforiller; MDM2 yıkımından kurtarır.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "HPV'nin yüksek riskli tiplerinde E7 onkoproteini hipofosforile RB'ye bağlanıp E2F'yi serbest bırakarak hücreyi S fazına sokar; E6 onkoproteini ise p53'ü E6AP aracılığıyla ubikitinleyip proteazomda yıkarak apoptozdan kaçışı sağlar."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-6",
+    "id": "itg-pq-6",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 6,
-    "slideTitle": "p53'ün Downstream Hedefleri: p21, GADD45 ve BAX",
+    "slideTitle": "TP53: Genomun Baş Muhafızı (Guardian of the Genome)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'p53'ün Downstream Hedefleri: p21, GADD45 ve BAX' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Normal hücresel koşullarda p53 düzeylerinin son derece düşük tutulmasını sağlayan, stres anında ise ATM kinaz aracılı fosforilasyon nedeniyle p53'e bağlanamayarak onun nükleer birikimine izin veren moleküler düzenleyici aşağıdakilerden hangisidir?",
     "options": [
-      "A) p21 ile G1 duraklaması, GADD45 ile DNA onarımı, başarısızsa Bax/Puma ile apoptoz.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) MDM2",
+      "B) E2F1",
+      "C) p21CIP1",
+      "D) BAX",
+      "E) GADD45"
     ],
     "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. p53'ün Downstream Hedefleri: p21, GADD45 ve BAX, patolojik ve klinik olarak 'p21 ile G1 duraklaması, GADD45 ile DNA onarımı, başarısızsa Bax/Puma ile apoptoz.' mekanizması ile karakterizedir."
+    "explanation": "MDM2 bir E3 ubikitin ligaz olup p53'e bağlanarak onu proteazomal yıkıma hedefler. Hücre DNA hasarına uğradığında ATM/ATR kinazları p53'ü fosforiller; bu fosforilasyon p53'ün MDM2'den ayrılmasını ve hücrede birikerek tetramer oluşturmasını sağlar."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-7",
+    "id": "itg-pq-7",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 7,
-    "slideTitle": "Li-Fraumeni Sendromu",
+    "slideTitle": "p53 Hücresel Yanıtları: Geçici Blokaj, Senesens ve Apoptoz Kararı",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Li-Fraumeni Sendromu' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İyonizan radyasyona maruz kalan normal bir epitel hücresinde ATM kinaz tarafından aktive edilen p53'ün, hücreyi G1 evresinde durdurup DNA replikasyonuna geçişi engellemek için transkripsiyonunu doğrudan indüklediği temel siklin bağımlı kinaz inhibitörü protein aşağıdakilerden hangisidir?",
     "options": [
-      "A) TP53 germline mutasyonu; genç yaşta sarkom, meme kanseri, lösemi ve adrenal karsinom.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) p16INK4A",
+      "B) p21CIP1",
+      "C) p27KIP1",
+      "D) p57KIP2",
+      "E) p15INK4B"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Li-Fraumeni Sendromu, patolojik ve klinik olarak 'TP53 germline mutasyonu; genç yaşta sarkom, meme kanseri, lösemi ve adrenal karsinom.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "p53'ün doğrudan transkripsiyonunu başlattığı en temel CDK inhibitörü p21CIP1 (CDKN1A)'dir. p21, Siklin D-CDK4 ve Siklin E-CDK2'yi inhibe ederek RB'yi hipofosforile tutar ve G1/S geçişini bloke eder. p16 ve p15 ise p53 bağımsız yolaklarla uyarılır."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-8",
+    "id": "itg-pq-8",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 8,
-    "slideTitle": "MDM2 Aşırı Aktivasyonu ve Nutlin Tedavisi",
+    "slideTitle": "TP53 Somatik Mutasyonları ve Li-Fraumeni Sendromu",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'MDM2 Aşırı Aktivasyonu ve Nutlin Tedavisi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Yirmi dört yaşında bir kadın hastada sağ memede invaziv duktal karsinom saptanmıştır. Aile öyküsü sorgulandığında erkek kardeşinin 7 yaşında rabdomyosarkomdan vefat ettiği, annesinin ise 32 yaşında adrenokortikal karsinom nedeniyle opere edildiği öğrenilmiştir. Bu hastada saptanması en olası kalıtsal genetik mutasyon aşağıdakilerden hangisidir?",
     "options": [
-      "A) p53'ü yıkan MDM2 amplifikasyonu ve yeni hedefe yönelik antagonistler.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) BRCA1 germline delesyonu",
+      "B) TP53 germline mutasyonu",
+      "C) APC germline mutasyonu",
+      "D) PTEN germline mutasyonu",
+      "E) RET germline mutasyonu"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. MDM2 Aşırı Aktivasyonu ve Nutlin Tedavisi, patolojik ve klinik olarak 'p53'ü yıkan MDM2 amplifikasyonu ve yeni hedefe yönelik antagonistler.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Genç yaşta meme kanseri, rabdomyosarkom (yumuşak doku sarkomu) ve adrenal korteks karsinomu birlikteliği otozomal dominant geçişli Li-Fraumeni sendromunun klasik tablosudur. Altta yatan defekt germ hattı TP53 gen mutasyonudur."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-9",
+    "id": "itg-pq-9",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 9,
-    "slideTitle": "TGF-β Sinyal Yolu: Tümör Baskılayıcı Rol",
+    "slideTitle": "TGF-β Sinyal Yolağı: Normal Hücrede Güçlü Tümör Baskılayıcı Fren",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'TGF-β Sinyal Yolu: Tümör Baskılayıcı Rol' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Normal bağırsak epitelyumunda Transforme Edici Büyüme Faktörü-Beta (TGF-β) sinyal yolağının hücre proliferasyonunu G1 evresinde durdurma mekanizması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) SMAD sinyali ile hücre siklusunu durduran normal sitokin kontrolü.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) TGF-β Tip I ve Tip II reseptörleri serin/treonin kinaz aktivitesi gösterir",
+      "B) Reseptör aktivasyonu sitoplazmik SMAD2 ve SMAD3 proteinlerini fosforiller",
+      "C) Fosforile SMAD proteinleri ko-aracı SMAD4 ile birleşerek nükleusa transloke olur",
+      "D) Nükleustaki SMAD kompleksi p15 ve p21 CDK inhibitörlerinin ekspresyonunu artırır",
+      "E) SMAD kompleksi c-MYC onkogeninin transkripsiyonunu uyararak Siklin D sentezini hızlandırır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. TGF-β Sinyal Yolu: Tümör Baskılayıcı Rol, patolojik ve klinik olarak 'SMAD sinyali ile hücre siklusunu durduran normal sitokin kontrolü.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "SMAD kompleksi c-MYC onkogeninin transkripsiyonunu uyarmaz; tam aksine c-MYC genini güçlü şekilde baskılar (represyon). MYC'in baskılanması ve p15/p21'in uyarılması hücrenin bölünmesini durduran temel moleküler mekanizmadır."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-10",
+    "id": "itg-pq-10",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 10,
-    "slideTitle": "TGF-β'nın İki Yüzü: Baskılayıcıdan İnvazyon Faktörüne",
+    "slideTitle": "TGF-β'nın İki Yüzü: İleri Evre Tümörlerde İnvazyon ve İmmünsüpresyon",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'TGF-β'nın İki Yüzü: Baskılayıcıdan İnvazyon Faktörüne' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İleri evre malign tümörlerde aşırı salgılanan TGF-β'nın tümör mikroçevresi ve neoplastik hücre davranışı üzerindeki biyolojik etkileri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) İleri evre tümörlerde büyüme durdurucu yanıt kaybolur; EMT ve metastaz kamçılanır.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Sitotoksik CD8+ T lenfositlerin ve doğal katil (NK) hücrelerin antitümöral fonksiyonlarını baskılar",
+      "B) Epitelyal-Mezenkimal Geçişi (EMT) tetikleyerek hücrelerin invazyon yeteneğini artırır",
+      "C) SNAIL ve TWIST transkripsiyon faktörlerini aktive ederek E-kadherin ekspresyonunu baskılar",
+      "D) Tümör hücrelerinde p15 ve p21 düzeylerini artırarak onları kalıcı apoptoza sürükler",
+      "E) Fibroblastları aktive ederek desmoplastik stroma gelişimini kamçılar"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. TGF-β'nın İki Yüzü: Baskılayıcıdan İnvazyon Faktörüne, patolojik ve klinik olarak 'İleri evre tümörlerde büyüme durdurucu yanıt kaybolur; EMT ve metastaz kamçılanır.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "İleri evre tümör hücreleri TGF-β'nın büyüme baskılayıcı ve apoptotik etkilerine karşı direnç kazanmıştır (reseptör veya SMAD4 kaybı nedeniyle). Bu nedenle TGF-β artık tümör hücresinde p15/p21 aracılı apoptoz yapamaz; tam aksine tümörün lehine çalışarak EMT, invazyon ve immünosüpresyon sağlar."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-11",
+    "id": "itg-pq-11",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 11,
-    "slideTitle": "E-Kadherin (CDH1) ve Kontakt İnhibisyonu",
+    "slideTitle": "E-Kadherin, Kateninler, NF2 (Merlin) ve Temas İnhibisyonu",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'E-Kadherin (CDH1) ve Kontakt İnhibisyonu' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Altmış yaşında bir kadın hastanın meme biyopsisinde tek sıra dizilim gösteren (Indian file paterni) ve tübüler yapı oluşturmayan kohezyonsuz malign hücre infiltrasyonu izlenmiştir. İmmünhistokimyasal incelemede bu hücrelerin membranöz E-kadherin boyanmasının tamamen negatif olduğu saptanmıştır. Bu tümörün histopatolojik tanısı ve patogenezinde rol oynayan temel genetik defekt aşağıdakilerden hangisidir?",
     "options": [
-      "A) Hücreler arası adezyon, beta-katenin sekestrasyonu ve diffüz mide karsinomu.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) İnvaziv duktal karsinom — ERBB2 (HER2) amplifikasyonu",
+      "B) Medüller karsinom — TP53 delesyonu",
+      "C) İnvaziv lobüler karsinom — CDH1 inaktivasyonu",
+      "D) Müsinöz karsinom — KRAS mutasyonu",
+      "E) Metaplastik karsinom — APC gen inaktivasyonu"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. E-Kadherin (CDH1) ve Kontakt İnhibisyonu, patolojik ve klinik olarak 'Hücreler arası adezyon, beta-katenin sekestrasyonu ve diffüz mide karsinomu.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Membranöz E-kadherin kaybı ve tek sıra halinde hücre infiltrasyonu (kızılderili yürüyüşü) invaziv lobüler meme karsinomunun patognomonik özelliğidir. Altta yatan temel moleküler olay CDH1 geninin mutasyon veya epigenetik susturulma ile fonksiyon kaybına uğramasıdır."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-12",
+    "id": "itg-pq-12",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 12,
-    "slideTitle": "NF2 Geni ve Merlin Proteini",
+    "slideTitle": "WNT / β-Katenin Yolağı ve APC Yıkım Kompleksi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'NF2 Geni ve Merlin Proteini' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "WNT / β-katenin sinyal yolağının dinlenme halindeki ve aktif durumdaki regülasyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) Nörofibromatozis Tip 2, Merlin ile temas inhibisyonunun sürdürülmesi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) WNT uyarısı yokken sitoplazmik serbest β-katenin düzeyleri çok düşük tutulur",
+      "B) β-katenin yıkım kompleksi APC, Aksin, CK1 ve GSK3β proteinlerini içerir",
+      "C) GSK3β tarafından fosforillenen β-katenin doğrudan nükleusa geçerek TCF'yi inhibe eder",
+      "D) WNT ligandı Frizzled ve LRP5/6 reseptörlerine bağlandığında Dishevelled (Dvl) aktive olur",
+      "E) Nükleusta biriken β-katenin TCF/LEF ile birleşerek c-MYC ve Siklin D1 transkripsiyonunu uyarır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. NF2 Geni ve Merlin Proteini, patolojik ve klinik olarak 'Nörofibromatozis Tip 2, Merlin ile temas inhibisyonunun sürdürülmesi.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "GSK3β tarafından fosforillenen β-katenin nükleusa geçmez; tam aksine bu fosforilasyon β-TrCP tarafından tanınarak β-kateninin 26S proteazomda parçalanmasına yol açar. Nükleusa ancak fosforillenmemiş, yıkımdan kaçmış serbest β-katenin gidebilir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-13",
+    "id": "itg-pq-13",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 13,
-    "slideTitle": "WNT / APC / β-Katenin Yolağı ve Yıkım Kompleksi",
+    "slideTitle": "APC Kaybı, Ailesel Adenomatöz Polipozis (FAP) ve Kolorektal Karsinojenez",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'WNT / APC / β-Katenin Yolağı ve Yıkım Kompleksi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Yirmi yaşında asemptomatik bir erkek hastada yapılan tarama kolonoskopisinde tüm kolona yayılmış 500'den fazla tübüler adenom saptanmıştır. Çene radyografisinde multipl mandibuler osteomlar izlenmiştir. Bu hastanın genetik patogenezi ve kolon kanseri riski ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
     "options": [
-      "A) APC, Axin ve GSK3-beta'nın beta-katenini yıkarak nükleusa geçişini engellemesi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Hastada DNA uyumsuzluk onarım geni MSH2'de germ hattı mutasyonu mevcuttur",
+      "B) Hastalık kromozom 5q21 lokusundaki APC gen mutasyonu sonucu gelişmiş olup kolektomi yapılmazsa kanser riski %100'dür",
+      "C) Tümör oluşumu hücre içi serbest β-katenin düzeylerinin tamamen sıfırlanmasına bağlıdır",
+      "D) Hastadaki lezyonlar Lynch sendromu tablosu olup ekstracolonik osteomlar rastlantısaldır",
+      "E) WNT ligandları Frizzled reseptörlerine bağlanamadığı için hücreler diferansiye olamamıştır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. WNT / APC / β-Katenin Yolağı ve Yıkım Kompleksi, patolojik ve klinik olarak 'APC, Axin ve GSK3-beta'nın beta-katenini yıkarak nükleusa geçişini engellemesi.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Yüzlerce adenom ve osteom birlikteliği FAP varyantı olan Gardner sendromudur. Kromozom 5q21'deki APC gen mutasyonundan kaynaklanır. Profilaktik kolektomi yapılmayan hastalarda 40 yaşına kadar %100 invaziv kolorektal adenokarsinom gelişir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-14",
+    "id": "itg-pq-14",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 14,
-    "slideTitle": "APC Kaybı ve Kolorektal Karsinogenez",
+    "slideTitle": "Onkojenik Metabolizma ve Warburg Etkisi (Aerobik Glikoliz)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'APC Kaybı ve Kolorektal Karsinogenez' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Malign tümör hücrelerinde yeterli oksijen varlığında dahi ATP üretiminin mitokondriyal oksidatif fosforilasyon yerine büyük oranda laktik asit fermantasyonuna kayması (Warburg etkisi) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) Familyal Adenomatoz Polipozis (FAP) ve sporadik kolon adenokarsinomu başlangıcı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Glukoz başına net 2 mol ATP üretilmesine rağmen glukoz tüketim hızı dramatik olarak artmıştır",
+      "B) Glikoliz ara ürünleri pentoz fosfat yolağına yönlendirilerek riboz-5-fosfat ve NADPH sentezlenir",
+      "C) Temel biyolojik amaç hücrenin ihtiyacı olan nükleotid, lipid ve aminoasit karbon iskeletlerini temin etmektir",
+      "D) Bu fenomen yalnızca kanser hücrelerine özgü olup hızlı bölünen hiçbir normal hücrede görülmez",
+      "E) Üretilen laktatın mikroçevreye atılması asidik ortam yaratarak invazyonu kolaylaştırır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. APC Kaybı ve Kolorektal Karsinogenez, patolojik ve klinik olarak 'Familyal Adenomatoz Polipozis (FAP) ve sporadik kolon adenokarsinomu başlangıcı.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "Warburg etkisi sadece kansere özgü değildir; hızlı bölünen sağlıklı hücreler (örneğin antijenle uyarılmış prolifere olan lenfositler ve embriyonik dokular) de biyosentetik gereksinimleri nedeniyle aerobik glikoliz kullanır. Tümörlerde fark, bu programın onkogenik mutasyonlarla kalıcı ve kontrolsüz hale gelmesidir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-15",
+    "id": "itg-pq-15",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 15,
-    "slideTitle": "VHL (Von Hippel-Lindau) ve Oksijen Algılama",
+    "slideTitle": "Warburg Etkisinin Klinik Görüntülemesi: 18F-FDG PET Biyolojisi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'VHL (Von Hippel-Lindau) ve Oksijen Algılama' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Akciğer karsinomu tanısıyla kemoterapi alan bir hastanın tedavi yanıtını değerlendirmek amacıyla çekilen 18F-FDG PET/BT incelemesinde mediastinal lenf nodlarındaki glukoz tutulumunun tamamen kaybolduğu izlenmiştir. 18F-florodeoksiglukozun tümör hücrelerinde yüksek oranda tutulmasını ve hücre içinde birikerek metabolik tuzağa düşmesini sağlayan moleküler basamaklar ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) Normokside HIF-1alfa hidroksillenip VHL ile yıkanır; hipokside birikir.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Kanser hücrelerinde glukoz alımı GLUT1 ve GLUT3 taşıyıcılarının artışı ile hızlandırılmıştır",
+      "B) Sitoplazmaya giren FDG hekzokinaz enzimi tarafından FDG-6-fosfata dönüştürülür",
+      "C) FDG-6-fosfat fosfoglukoz izomeraz enzimi tarafından kolayca fruktoz-6-fosfata çevrilerek Krebs döngüsüne girer",
+      "D) Tümör hücrelerinde glukoz-6-fosfataz düzeyi çok düşük olduğundan FDG-6-fosfat hücre dışına kaçamaz",
+      "E) PET incelemesi tümör kitlesinde boyut küçülmesi olmadan önce fonksiyonel metabolik yanıtı gösterebilir"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. VHL (Von Hippel-Lindau) ve Oksijen Algılama, patolojik ve klinik olarak 'Normokside HIF-1alfa hidroksillenip VHL ile yıkanır; hipokside birikir.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "FDG molekülünün 2. karbonunda -OH grubu yerine flor bağlı olduğundan fosfoglukoz izomeraz enzimi bu molekülü tanıyamaz ve fruktoz-6-fosfata dönüştüremez. Bu nedenle FDG-6-fosfat glikolize devam edemez ve hücre içinde kilitlenir (metabolik tuzak)."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-16",
+    "id": "itg-pq-16",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 16,
-    "slideTitle": "VHL Kaybı ve Berrak Hücreli Böbrek Karsinomu",
+    "slideTitle": "Onkogenler ve Tümör Süpresörlerin Metabolik Düzenlemesi: MYC, PI3K/AKT/mTOR ve p53",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'VHL Kaybı ve Berrak Hücreli Böbrek Karsinomu' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Kanser hücrelerinde metabolik yolakların onkogenler ve tümör süpresör genler tarafından kontrol edilmesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) VHL inaktivasyonu sonucu kontrolsüz VEGF ve PDGF salınımı, aşırı anjiyogenez.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) c-MYC onkoproteini glutaminaz enzimini aktive ederek tümör hücresini glutamin bağımlısı haline getirir",
+      "B) PI3K/AKT/mTOR yolağı glukoz taşıyıcılarını zarda artırır ve de novo lipid sentezini tetikler",
+      "C) Yabani tip p53, TIGAR proteinini indükleyerek glikolitik akışı yavaşlatır",
+      "D) p53 tarafından ekspresyonu artırılan SCO2, mitokondriyal elektron taşıma zinciri Kompleks IV montajını destekler",
+      "E) TP53 gen inaktivasyonu durumunda SCO2 seviyeleri artarak mitokondriyal oksidatif fosforilasyon hızlanır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. VHL Kaybı ve Berrak Hücreli Böbrek Karsinomu, patolojik ve klinik olarak 'VHL inaktivasyonu sonucu kontrolsüz VEGF ve PDGF salınımı, aşırı anjiyogenez.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "TP53 gen inaktivasyonu durumunda SCO2 seviyeleri artmaz; tam aksine azalır. SCO2 desteği çöken mitokondride sitokrom c oksidaz (Kompleks IV) montajı bozulur ve hücre mitokondriyal solunumu terk ederek aerobik glikolize (Warburg etkisine) kayar."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-17",
+    "id": "itg-pq-17",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 17,
-    "slideTitle": "PTEN Tümör Supresörü ve Cowden Sendromu",
+    "slideTitle": "İzositrat Dehidrogenaz (IDH1/IDH2) Mutasyonları ve Neomorfik Enzim Aktivitesi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'PTEN Tümör Supresörü ve Cowden Sendromu' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Gliomlar ve akut miyeloid lösemide saptanan izositrat dehidrogenaz 1 (IDH1) gen mutasyonlarının enzimatik aktivite ve metabolik ürünler üzerindeki etkisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
     "options": [
-      "A) PIP3'ü PIP2'ye yıkarak PI3K/AKT yolağını durduran majör lipid fosfataz.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Enzim aktivitesi tamamen kaybolur ve hücrede izositrat birikerek apoptozu tetikler",
+      "B) Enzim neomorfik aktivite kazanarak alfa-ketoglutaratı 2-hidroksiglutarata (2-HG) dönüştürür",
+      "C) Enzim aşırı aktifleşerek hücre içi NADPH düzeylerini toksik boyutlara ulaştırır",
+      "D) IDH1 mutasyonu sadece mitokondriyal DNA'da meydana gelen delesyonlardan kaynaklanır",
+      "E) Mutant enzim laktatı glukoza çevirerek glikoneogenezi durdurur"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. PTEN Tümör Supresörü ve Cowden Sendromu, patolojik ve klinik olarak 'PIP3'ü PIP2'ye yıkarak PI3K/AKT yolağını durduran majör lipid fosfataz.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "IDH1 mutasyonu neomorfik (yeni işlev kazandırıcı) bir mutasyondur. Enzim normal substratı olan izositrat yerine reaksiyon ürünü olan alfa-ketoglutaratı substrat olarak kullanır ve onu doğrudan '2-hidroksiglutarat (2-HG)' adlı onkometabolite indirger."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-18",
+    "id": "itg-pq-18",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 18,
-    "slideTitle": "WT1 ve Wilms Tümörü",
+    "slideTitle": "Onkometabolit 2-Hidroksiglutarat (2-HG), TET2 İnhibisyonu ve CIMP Fenotipi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'WT1 ve Wilms Tümörü' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İzositrat dehidrogenaz (IDH) mutasyonu taşıyan diffüz gliomlarda ve akut miyeloid lösemide biriken onkometabolit 2-hidroksiglutaratın (2-HG) hücresel diferansiyasyonu engelleyerek neoplastik transformasyonu tetikleme mekanizması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
     "options": [
-      "A) Böbrek embriyonal nefoblastomu, WAGR sendromu ve Denys-Drash sendromu.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) DNA metiltransferaz (DNMT) enzimlerini doğrudan parçalayarak küresel hipometilasyona yol açar",
+      "B) Alfa-ketoglutarat bağımlı TET2 DNA demetilazını inhibe ederek yaygın CpG hipermetilasyonuna (CIMP) neden olur",
+      "C) Histon asetiltransferazları aktive ederek kromatini sürekli açık ve gevşek tutar",
+      "D) Sitoplazmada p53 proteinine bağlanıp onu doğrudan ubikitinleyerek apoptozu engeller",
+      "E) Mitokondriyal elektron taşıma zincirini tamamen bloke ederek hücreyi laktik asidozla öldürür"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. WT1 ve Wilms Tümörü, patolojik ve klinik olarak 'Böbrek embriyonal nefoblastomu, WAGR sendromu ve Denys-Drash sendromu.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "2-HG yapısal olarak alfa-ketoglutarata benzer ve α-KG bağımlı dioksijenaz olan TET2 DNA demetilaz enzimini kompetitif olarak inhibe eder. TET2 bloke olunca DNA demetile edilemez; genom çapında CpG hipermetilasyonu (CIMP fenotipi) gelişir ve matürasyon genleri susturularak diferansiyasyon kilitlenir."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-19",
+    "id": "itg-pq-19",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 19,
-    "slideTitle": "Warburg Etkisi (Aerobik Glikoliz) Metabolizması",
+    "slideTitle": "IDH Mutasyonlarının Klinik Spektrumu ve Hedefe Yönelik İnhibitörler",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Warburg Etkisi (Aerobik Glikoliz) Metabolizması' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Kırk yaşında bir erkek hastaya yapılan kraniyotomi sonrası temporal lob kitlesi patolojisinde infiltratif astrositer tümör saptanmıştır. Moleküler analizde tümör hücrelerinde IDH1 R132H mutasyonu pozitif, 1p/19q ko-delesyonu ise negatif bulunmuştur. Bu hastanın patolojik sınıflaması ve klinik prognozu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
     "options": [
-      "A) Kanser hücrelerinin oksijen varlığında bile glikolizi tercih etmesi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Tümör IDH-yabani tip klasik primer glioblastom olup prognozu son derece kötüdür",
+      "B) Tümör oligodendrogliom olup 1p/19q kaybı olmadan da bu tanı kesinleşir",
+      "C) Tümör IDH-mutant astrositomdur ve IDH-yabani tip glioblastomlara kıyasla belirgin şekilde daha iyi prognoza sahiptir",
+      "D) IDH mutasyonu tümörde TET2'nin aşırı çalışarak küresel hipometilasyon yapmasına yol açmıştır",
+      "E) Bu hastada hedefe yönelik anti-IDH tedavisi olarak Enasidenib tek seçenektir"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Warburg Etkisi (Aerobik Glikoliz) Metabolizması, patolojik ve klinik olarak 'Kanser hücrelerinin oksijen varlığında bile glikolizi tercih etmesi.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "IDH1 mutasyonu pozitif ve 1p/19q ko-delesyonu negatif olan diffüz gliomlar güncel sınıflamada 'Astrositom, IDH-mutant' olarak adlandırılır. Bu hastalar IDH-yabani tip glioblastom olgularına göre belirgin olarak daha uzun sağkalım ve iyi prognoz gösterirler."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-20",
+    "id": "itg-pq-20",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 20,
-    "slideTitle": "Warburg Etkisinin Biyosentetik Rasyoneli",
+    "slideTitle": "Hücresel Otofaji: Kanserde İki Ucu Keskin Kılıç (Dual Role)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Warburg Etkisinin Biyosentetik Rasyoneli' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Hücresel otofajinin kanser patogenezindeki ve tedavi direncindeki rolü ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) ATP değil; aminoasit, lipid ve nükleotid sentezi için karbon iskeleti üretimi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Erken evrede hasarlı organelleri ve reaktif oksijen türlerini temizleyerek tümör baskılayıcı rol oynar",
+      "B) Otofaji düzenleyicisi Beclin-1 geninin tek alel kaybı bazı meme ve over karsinomlarında saptanır",
+      "C) İleri evre tümörlerde avasküler hipoksi ve besinsizlik stresinde tümör hücresinin canlı kalmasını destekler",
+      "D) Sitotoksik kemoterapi alan tümör hücrelerinde otofajinin aktive olması tedaviye bağlı hücre ölümünü daima hızlandırır",
+      "E) Hidroksiklorokin lizozom fonksiyonunu bozarak otofajik degradasyonu bloke eden bir ajandır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Warburg Etkisinin Biyosentetik Rasyoneli, patolojik ve klinik olarak 'ATP değil; aminoasit, lipid ve nükleotid sentezi için karbon iskeleti üretimi.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "Sitotoksik kemoterapi alan tümör hücrelerinde otofajinin aktive olması hücre ölümünü hızlandırmaz; tam aksine hasarlı organelleri geri dönüştürerek hücrenin hayatta kalmasını ve metabolik uykuya (dormancy) geçerek tedaviye direnç kazanmasını sağlar."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-21",
+    "id": "itg-pq-21",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 21,
-    "slideTitle": "PET-BT ve 18F-FDG Görüntüleme Temeli",
+    "slideTitle": "Tümör Anjiyogenezi ve Hipoksi Yanıtı: VHL – HIF-1α – VEGF Ekseni",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'PET-BT ve 18F-FDG Görüntüleme Temeli' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Von Hippel-Lindau sendromu bulunan ve böbreğinde berrak hücreli renal hücreli karsinom saptanan bir hastada tümör dokusunun aşırı damarsal olmasında rol oynayan moleküler patogenez basamakları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) Glukoz taşıyıcı GLUT1 aşırılığı ve tümörün FDG tutulumu.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Hastada fonksiyonel VHL proteini sentezlenememektedir",
+      "B) Prolil hidroksilazlar HIF-1α'yı hidroksillese bile VHL eksikliği nedeniyle ubikitinasyon gerçekleşemez",
+      "C) Hücre içi HIF-1α düzeyleri normoksik koşullarda bile aşırı derecede yükselir",
+      "D) Nükleusa geçen HIF-1α VEGF ve PDGF gibi anjiyojenik faktörlerin transkripsiyonunu uyarır",
+      "E) HIF-1α birikimi tümör hücresinde GLUT1 ekspresyonunu baskılayarak glukoz tüketimini tamamen durdurur"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. PET-BT ve 18F-FDG Görüntüleme Temeli, patolojik ve klinik olarak 'Glukoz taşıyıcı GLUT1 aşırılığı ve tümörün FDG tutulumu.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "HIF-1α birikimi GLUT1 ekspresyonunu baskılamaz; tam aksine hipoksik adaptasyon gereği GLUT1 glukoz taşıyıcılarının ve tüm glikolitik enzimlerin transkripsiyonunu güçlü şekilde artırarak glukoz tüketimini hızlandırır."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-22",
+    "id": "itg-pq-22",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 22,
-    "slideTitle": "Onkometabolitler: İzositrat Dehidrogenaz (IDH1 / IDH2)",
+    "slideTitle": "Tümör Damarlarının Anormal Morfolojisi ve Anti-Anjiyojenik Tedaviler",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Onkometabolitler: İzositrat Dehidrogenaz (IDH1 / IDH2)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastatik kolorektal adenokarsinom tanısıyla kemoterapi rejimine anti-anjiyojenik monoklonal antikor Bevacizumab eklenen bir hastada tümör damarlanması ve tedaviye direnç mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) IDH mutasyonu sonucu 2-hidroksiglutarat (2-HG) birikimi ve DNA hipermetilasyonu.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Bevacizumab doğrudan dolaşımdaki VEGF-A molekülüne bağlanarak reseptör aktivasyonunu engeller",
+      "B) Tümör damarları normal doku damarlarına kıyasla belirgin perisit eksikliği ve yüksek vasküler geçirgenlik gösterir",
+      "C) Tedavi başlangıcında tümör içi interstisyel sıvı basıncı düşerek kemoterapötik ilaç penetrasyonu artabilir",
+      "D) Tümör hücreleri zamanla FGF ve PDGF gibi alternatif büyüme faktörleri salgılayarak anti-VEGF blokajından kaçabilir",
+      "E) Bevacizumab monoterapisi tek başına tümör damarlarını kalıcı olarak kurutarak tam kür sağlar"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Onkometabolitler: İzositrat Dehidrogenaz (IDH1 / IDH2), patolojik ve klinik olarak 'IDH mutasyonu sonucu 2-hidroksiglutarat (2-HG) birikimi ve DNA hipermetilasyonu.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "Bevacizumab tek başına tümör damarlarını kalıcı olarak yok edip tam kür sağlayamaz; sağkalımı genellikle aylar düzeyinde uzatır. Tümörler zamanla alternatif anjiyojenik faktörlere (FGF, PDGF) geçer, çevre damarları sarar (vasküler ko-opsiyon) veya hipoksi derinleştikçe daha invaziv bir fenotipe bürünürler."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-23",
+    "id": "itg-pq-23",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 23,
-    "slideTitle": "IDH Mutasyonlu Gliomlar ve Akut Miyeloid Lösemi",
+    "slideTitle": "Kanser Epigenetiği: DNA Metilasyonu, Histon Kodu ve Non-Coding RNA'lar",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'IDH Mutasyonlu Gliomlar ve Akut Miyeloid Lösemi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Malign tümörlerin epigenetik mekanizmaları ve kodlamayan RNA düzenlemeleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) IDH1 R132H mutasyonu glioblastom alt grubunda iyi prognoz göstergesidir.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Tümör baskılayıcı genlerin promoter CpG adacıklarının hipermetilasyonu transkripsiyonu susturur",
+      "B) Sporadik kolon kanserlerinde MLH1 gen susturulması sıklıkla promoter hipermetilasyonuna bağlıdır",
+      "C) Onkojenik bir mikroRNA olan miR-21, PTEN tümör süpresörünü baskılayarak PI3K/AKT yolunu aktive eder",
+      "D) Tümör süpresör let-7 mikroRNA'sı RAS onkogen ekspresyonunu dizginleyen koruyucu bir moleküldür",
+      "E) Kanser hücrelerinde genomik heterokromatin bölgelerinde masif hipermetilasyon gelişerek genom aşırı stabilize olur"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. IDH Mutasyonlu Gliomlar ve Akut Miyeloid Lösemi, patolojik ve klinik olarak 'IDH1 R132H mutasyonu glioblastom alt grubunda iyi prognoz göstergesidir.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "Kanser hücrelerinde heterokromatin bölgelerinde ve retrotranspozonlarda hipermetilasyon değil, tam aksine 'küresel genomik hipometilasyon' gelişir. Bu hipometilasyon kromatinin gevşemesine, transpozonların aktifleşmesine ve masif genomik instabiliteye yol açar. Hipermetilasyon ise lokal olarak tümör baskılayıcı gen promoterlarında görülür."
   },
   {
-    "id": "learn-ileri-tumor-genetigi-metabolizmasi-pq-24",
+    "id": "itg-pq-24",
     "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
     "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
     "slideNumber": 24,
-    "slideTitle": "Tümör Genetiği ve Metabolizması Sentez Özeti",
+    "slideTitle": "Replikatif Ölümsüzlük (Replicative Immortality): Telomeraz ve ALT Yolağı",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "İleri Tümör Genetiği ve Metabolizması kapsamında 'Tümör Genetiği ve Metabolizması Sentez Özeti' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Malign neoplazmların sınırsız replikatif potansiyel (ölümsüzlük) kazanması ve telomer biyolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
-      "A) Supresör kaybı, sinyal aktivasyonu ve metabolik adaptasyonun ortak tablosu.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Normal somatik hücrelerde her hücre bölünmesinde uç replikasyon problemi nedeniyle telomerler kısalır",
+      "B) p53 ve RB yolları inaktif olan hücreler telomer erozyonuna rağmen bölünerek köprü-kırılma-birleşme döngülerine girerler",
+      "C) İnsan kanserlerinin yaklaşık %90'ında telomer boyu telomeraz enziminin reaktivasyonu ile korunur",
+      "D) Glioblastom ve melanomda en sık saptanan TERT mutasyonu proteinin katalitik bölgesindeki missense mutasyonudur",
+      "E) Telomeraz negatif bazı sarkom ve astrositomlarda telomerler ALT (Alternatif Telomer Uzaması) yolağı ile korunur"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümör Genetiği ve Metabolizması Sentez Özeti, patolojik ve klinik olarak 'Supresör kaybı, sinyal aktivasyonu ve metabolik adaptasyonun ortak tablosu.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "Glioblastom, melanom ve mesane karsinomunda saptanan TERT mutasyonları protein kodlayan katalitik bölgede değil; TERT geni promoter bölgesinde (C228T, C250T) yer alan non-coding transkripsiyonel mutasyonlardır. Bu mutasyonlar yeni bağlanma bölgeleri yaratarak TERT ekspresyonunu artırır."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-1",
+    "id": "imm-pq-01",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 1,
-    "slideTitle": "Tümör İmmünolojisine Giriş ve İmmün Gözetim",
+    "slideTitle": "Tümör İmmünolojisine Giriş ve İmmün Gözetim (Immune Surveillance)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Tümör İmmünolojisine Giriş ve İmmün Gözetim' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Böbrek transplantasyonu nedeniyle 6 yıldır siklosporin ve mikofenolat mofetil tedavisi almakta olan 48 yaşındaki bir erkek hastada servikal lenfadenopati gelişiyor. Biyopside EBV-pozitif Diffüz Büyük B Hücreli Lenfoma tanısı konuyor. Bu hastada malignite gelişiminin patogenetik mekanizması ve tümör immünolojisi prensipleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Bağışıklık sisteminin neoplastik klonları erken aşamada tanıması ve yok etmesi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) İmmünsüpresif tedavi gören transplant hastalarında karsinogenez riski sadece kimyasal karsinojenlerin birikimine bağlıdır.",
+      "B) İmmün yetmezlik zemininde gelişen malignitelerin ezici çoğunluğu onkojenik virüslerle (EBV, HHV-8, HPV) ilişkilidir.",
+      "C) Tümör dokusunda yoğun CD8+ sitotoksik T lenfosit infiltrasyonu (TIL) bulunması daima kötü prognoz işaretidir.",
+      "D) Kalsinörin inhibitörleri tümör antijenlerinin hücre yüzeyindeki neoantijen yükünü doğrudan artırarak mutasyon yapar.",
+      "E) Sağlıklı bireylerde immün gözetim yalnızca hümoral B hücre antikorları aracılığıyla yürütülür, T hücrelerinin rolü yoktur."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümör İmmünolojisine Giriş ve İmmün Gözetim, patolojik ve klinik olarak 'Bağışıklık sisteminin neoplastik klonları erken aşamada tanıması ve yok etmesi.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "İmmün yetmezlik durumlarında (organ nakli alıcıları, AIDS vb.) ortaya çıkan neoplazilerin en karakteristik özelliği, büyük çoğunluğunun onkojenik virüsler (özellikle EBV, HHV-8 ve HPV) tarafından indüklenmesidir. Sağlıklı bireylerde hücresel immünite (özellikle CD8+ T hücreleri) viral protein eksprese eden hücreleri sürekli denetim altında tutar; hücresel bağışıklık çöktüğünde bu viral onkogenler kontrolsüz proliferasyonu tetikler. Tümör dokusunda CD8+ TIL varlığı kötü değil, bağımsız İYİ PROGNOZ kriteridir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-2",
+    "id": "imm-pq-02",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 2,
-    "slideTitle": "Tümör Antijenleri Sınıflaması",
+    "slideTitle": "Neoantijenler ve Tümör Mutasyon Yükü (TMB)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Tümör Antijenleri Sınıflaması' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastatik kolorektal karsinom tanısı alan 54 yaşındaki bir kadın hastanın tümör dokusu moleküler genetik analizinde MLH1 ekspresyon kaybı ve yüksek düzeyde mikrosatellit instabilitesi (MSI-H) saptanmıştır. Bu hastanın immünolojik profili ve immünoterapiye yanıtı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Neoantijenler, overeksprese antijenler, farklılaşma antijenleri ve viral antijenler.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Tümör mutasyon yükü çok düşük olduğu için bağışıklık sistemi bu hücreleri tanıyamaz.",
+      "B) Bu tümörde oluşan neoantijenlere karşı hastanın timusunda negatif seleksiyonla tam bir öz-tolerans gelişmiştir.",
+      "C) Çok sayıda çerçeve kayması mutasyonu sonucu yüksek miktarda neoantijen eksprese eder ve Anti-PD-1 tedavisine mükemmel yanıt verir.",
+      "D) Bu hastada immün kaçış yalnızca MHC Sınıf II moleküllerinin kaybıyla sınırlıdır, CD8+ CTL'ler aktive olamaz.",
+      "E) Mikrosatellit instabilitesi olan tümörler yalnızca kutanöz skuamöz karsinomlarda checkpoint yanıtını artırır, viseral organlarda etkisizdir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümör Antijenleri Sınıflaması, patolojik ve klinik olarak 'Neoantijenler, overeksprese antijenler, farklılaşma antijenleri ve viral antijenler.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "DNA mismatch repair (MMR; örn. MLH1 kaybı) defekti olan tümörlerde mikrosatellit instabilitesi (MSI-H) gelişir. Bu durum binlerce çerçeve kayması (frameshift) mutasyonuna yol açar ve hücre yüzeyinde MHC Sınıf I ile sunulan bol miktarda 'neoantijen' üretilir. Bu neoantijenlere karşı öz-tolerans bulunmadığı için güçlü bir immün tanıma mevcuttur; kontrol noktası inhibitörleri (Anti-PD-1) ile bu T hücreleri serbest bırakıldığında tümör dramatik şekilde geriler."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-3",
+    "id": "imm-pq-03",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 3,
-    "slideTitle": "Neoantijenler ve Mutasyon Yükü",
+    "slideTitle": "Aşırı Eksprese Edilen veya Aberan Proteinler ve Diferansiyasyon Antijenleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Neoantijenler ve Mutasyon Yükü' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastatik malign melanom tanısıyla immünoterapi başlanan 52 yaşındaki bir erkek hastanın 4. ay kontrolünde gövdesinde ve ekstremitelerinde yama tarzında belirgin depigmente cilt lezyonları (vitiligo) saptanıyor. Biyopside epidermisteki melanositlerin lenfositik infiltrasyonla tahrip edildiği izleniyor. Bu klinik tablonun patolojik ve immünolojik açıklaması aşağıdakilerden hangisidir?",
     "options": [
-      "A) Sürücü mutasyonların ürettiği yabancı peptidler ve yüksek mutasyon yükünün immünoterapiye yanıtı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) İmmünoterapi ilacının melanosit DNA'sında doğrudan sitotoksik mutasyon yapması sonucu oluşan bir komplikasyondur.",
+      "B) Tümör hücrelerinin tirozinaz diferansiyasyon antijenini tamamen kaybederek immün sistemden kaçtığını gösterir.",
+      "C) Aktive olan sitotoksik T lenfositlerin hem melanom hem de normal melanositlerdeki tirozinaz/Melan-A antijenlerine çapraz yanıt vermesidir ve iyi prognoz göstergesidir.",
+      "D) Hastada eş zamanlı gelişen sistemik lupus eritematozus tablosudur ve immünoterapinin derhal kesilmesini gerektirir.",
+      "E) Tümörün nöroendokrin diferansiasyona uğrayarak melanin üretimini durdurduğunu gösteren kötü prognoz bulgusudur."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Neoantijenler ve Mutasyon Yükü, patolojik ve klinik olarak 'Sürücü mutasyonların ürettiği yabancı peptidler ve yüksek mutasyon yükünün immünoterapiye yanıtı.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Tirozinaz ve Melan-A (MART-1), melanosit diferansiyasyon antijenleridir. Hem melanom hücrelerinde hem de normal epidermal melanositlerde bulunurlar. İmmünoterapi ile bu antijenlere karşı güçlü bir CTL yanıtı uyarıldığında, tümör hücreleri yok edilirken normal melanositler de çapraz immüniteyle hasara uğrar ve vitiligo tablosu ortaya çıkar. Bu durum konakta etkili bir antitümöral yanıt oluştuğunu gösterir ve klinik olarak uzamış sağkalım ve iyi prognoz ile koreledir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-4",
+    "id": "imm-pq-04",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 4,
-    "slideTitle": "Kanser-Testis Antijenleri (MAGE)",
+    "slideTitle": "Kanser-Testis (Cancer-Testis / CTA) Antijenleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Kanser-Testis Antijenleri (MAGE)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Malign melanom ve akciğer skuamöz hücreli karsinomunda yüksek düzeyde saptanan MAGE-A3 ve NY-ESO-1 gibi 'Kanser-Testis Antijenleri' (CTA) ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE İMMÜNOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) Yalnızca testis germ hücrelerinde ve çeşitli karsinomlarda saptanan sessiz antijenler.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Normal erişkin karaciğer ve böbrek tübül hücrelerinde yüksek düzeyde eksprese edilirler.",
+      "B) Testis germ hücrelerinde MHC Sınıf I ekspresyonu bulunmadığı için T hücrelerinde bu antijenlere karşı öz-tolerans gelişmemiştir.",
+      "C) Bu antijenleri hedefleyen immünoterapiler testis spermatogenezini geri dönüşümsüz olarak tahrip eder.",
+      "D) Kanser-testis antijenleri daima kromozomal translokasyonlar sonucu oluşan mutant füzyon proteinleridir.",
+      "E) Yalnızca benign adenomlarda bulunurlar, invaziv karsinomlara geçişte epigenetik olarak susturulurlar."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Kanser-Testis Antijenleri (MAGE), patolojik ve klinik olarak 'Yalnızca testis germ hücrelerinde ve çeşitli karsinomlarda saptanan sessiz antijenler.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Kanser-Testis Antijenleri (CTA; MAGE, NY-ESO-1), fizyolojik olarak sadece testis germ hücrelerinde eksprese edilir. Testis germ hücreleri yüzeyinde MHC Sınıf I molekülü bulunmadığından ve kan-testis bariyeri mevcut olduğundan, gelişmekte olan T lenfositleri bu antijenlerle temas edemez ve tolerans gelişmez. Solid tümörlerde DNA hipometilasyonu ile yeniden eksprese edildiklerinde, tümör hücresindeki MHC-I ile sunularak güçlü bir immün tanıma sağlarlar. Testis germ hücreleri MHC-I taşımadığı için T hücre tedavileri testisi hedefleyip hasarlayamaz."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-5",
+    "id": "imm-pq-05",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 5,
-    "slideTitle": "Fetal ve Farklılaşma Antijenleri (CEA, AFP, CD20)",
+    "slideTitle": "Onkoviral Antijenler ve Virüs Aracılı Maligniteler",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Fetal ve Farklılaşma Antijenleri (CEA, AFP, CD20)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "36 yaşındaki bir kadının rutin jinekolojik smear taramasında yüksek dereceli skuamöz intraepitelyal lezyon (HSIL) saptanıyor. Biyopside HPV Tip 16 DNA pozitifliği gösteriliyor. Bu hastanın servikal epitelinde viral transformasyonun gerçekleşmesinde rol oynayan HPV E6 ve E7 onkoproteinlerinin hücresel etkileri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Embriyonik dönemde aktif olan ve tümörde yeniden eksprese edilen antijenler.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) E6 proteini p53'ü doğrudan fosforilleyerek DNA tamir kapasitesini artırır.",
+      "B) E7 proteini hipofosforile Retinoblastom (RB) proteinine bağlanıp inaktive ederek E2F transkripsiyon faktörünü serbest bırakır.",
+      "C) E6 proteini B hücresindeki CD40 reseptörünü taklit ederek sitokin fırtınası başlatır.",
+      "D) E7 proteini kaspaz-8 aktivasyonunu tetikleyerek servikal epitelde yaygın apoptoza yol açar.",
+      "E) E6 ve E7 proteinleri hücre yüzeyinde MHC Sınıf II moleküllerini artırarak lenfositik lizisi hızlandırır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Fetal ve Farklılaşma Antijenleri (CEA, AFP, CD20), patolojik ve klinik olarak 'Embriyonik dönemde aktif olan ve tümörde yeniden eksprese edilen antijenler.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Yüksek riskli HPV (Tip 16 ve 18) karsinogenezinde E7 onkoproteini, hipofosforile (aktif) Retinoblastom (RB) proteinine bağlanarak onu inaktive eder. RB inaktive olunca serbest kalan E2F transkripsiyon faktörü hücre siklusunu zorla G1'den S fazına geçirir. E6 ise p53 tümör baskılayıcı proteinini ubikitin-proteazom yolağıyla parçalar. Bu iki mekanizma apoptozu engelleyip kontrolsüz DNA sentezi sağlayarak malign transformasyona yol açar."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-6",
+    "id": "imm-pq-06",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 6,
-    "slideTitle": "Antitümör İmmünitenin Efektörleri: CD8+ CTL'ler",
+    "slideTitle": "Onkofetal Antijenler: Karsinoembriyonik Antijen (CEA) ve Alfa-Fetoprotein (AFP)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Antitümör İmmünitenin Efektörleri: CD8+ CTL'ler' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Kolon adenokarsinomu nedeniyle küratif cerrahi rezeksiyon uygulanan 62 yaşındaki bir erkeğin ameliyat öncesi serum CEA düzeyi 24 ng/mL (normal: <3 ng/mL) iken postoperatif 1. ayda 1.8 ng/mL'ye gerilemiştir. Ameliyattan 14 ay sonra yapılan rutin kontrolde asemptomatik olan hastanın serum CEA düzeyi 38 ng/mL olarak saptanıyor. Bu klinik tablonun en olası nedeni ve CEA'nın immünolojik özellikleri ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) MHC Sınıf I ile sunulan tümör antijenlerini granzim ve perforinle yok eden katil T hücreleri.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) CEA güçlü bir sitotoksik neoantijen olduğu için hastada immün sistemin tümörü tamamen temizlediğini gösterir.",
+      "B) Kolorektal kanser nüksü ve olası karaciğer metastazı gelişmiştir; CEA tolerans nedeniyle zayıf immünojenik bir takip belirtecidir.",
+      "C) Hastada yeni bir primer bazal hücreli karsinom geliştiğini gösteren spesifik bir belirteçtir.",
+      "D) CEA düzeyindeki bu artış ameliyat bölgesinde cerrahi sütür reaksiyonuna bağlı gelişen fizyolojik bir inflamasyon yanıtıdır.",
+      "E) CEA fetal dönemde hiç sentezlenmediği için ancak ileri evre kanserlerde mutasyonla ortaya çıkan bir tümöre özgü antijendir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Antitümör İmmünitenin Efektörleri: CD8+ CTL'ler, patolojik ve klinik olarak 'MHC Sınıf I ile sunulan tümör antijenlerini granzim ve perforinle yok eden katil T hücreleri.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Karsinoembriyonik Antijen (CEA), onkofetal bir glikoproteindir. Fetal bağırsakta üretilir, erişkinde susturulur, kolorektal karsinomda yeniden sentezlenir. Fetal dönemde var olduğu için konakta tam tolerans mevcuttur; bu nedenle immünojenitesi zayıftır ve taramada değil takipte kullanılır. Başarılı cerrahi sonrası normale inen CEA'nın takiplerde belirgin ve ilerleyici artış göstermesi, en sık karaciğer metastazı olmak üzere tümör nüksünün en güvenilir ve erken biyokimyasal kanıtıdır."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-7",
+    "id": "imm-pq-07",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 7,
-    "slideTitle": "Doğal Katil (NK) Hücreleri ve 'Missing Self' Hipotezi",
+    "slideTitle": "Dendritik Hücreler ve Çapraz Sunum (Cross-Presentation)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Doğal Katil (NK) Hücreleri ve 'Missing Self' Hipotezi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Primer meme karsinomu gelişen bir hastanın lenf nodunda tümör antijenlerine karşı spesifik sitotoksik T lenfosit (CD8+ CTL) yanıtının başlatılabilmesi için dendritik hücrelerin gerçekleştirdiği moleküler ve hücresel mekanizma ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) MHC Sınıf I ekspresyonunu kaybeden kaçak tümör hücrelerini öldüren lenfositler.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Dendritik hücreler tümör döküntülerini yalnızca MHC Sınıf II ile sunar; CD8+ T hücreleri tümörü doğrudan tanıyamaz.",
+      "B) Eksojen tümör antijenleri dendritik hücre tarafından sitoplazmaya kaçırılıp proteazomda işlenir ve MHC Sınıf I üzerinde naif CD8+ T lenfositlerine çapraz sunulur.",
+      "C) Dendritik hücreler aktivasyon için B7 molekülünü baskılayarak T hücresindeki CTLA-4 reseptörünü uyarmak zorundadır.",
+      "D) CD8+ T hücrelerinin aktivasyonunda kostimülasyona ihtiyaç yoktur; sadece TCR-MHC teması tam aktivasyon için yeterlidir.",
+      "E) Çapraz sunum yalnızca eritrositler ve trombositler tarafından yürütülen non-spesifik bir filtrasyon sürecidir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Doğal Katil (NK) Hücreleri ve 'Missing Self' Hipotezi, patolojik ve klinik olarak 'MHC Sınıf I ekspresyonunu kaybeden kaçak tümör hücrelerini öldüren lenfositler.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Tümör antijenlerine karşı CD8+ CTL yanıtının başlatılması, dendritik hücrelerin gerçekleştirdiği 'Çapraz Sunum' (Cross-presentation) mekanizmasına dayanır. Fagositozla alınan eksojen tümör proteinleri sitozole aktarılır, proteazomda parçalanır ve TAP aracılığıyla ER'de MHC Sınıf I molekülüne yüklenir. Dendritik hücre bu peptit-MHC-I kompleksini B7-CD28 kostimülasyonu eşliğinde naif CD8+ T hücrelerine sunarak sitotoksik klonların çoğalmasını sağlar."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-8",
+    "id": "imm-pq-08",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 8,
-    "slideTitle": "Tümörle İlişkili Makrofajlar (TAM): M1 vs M2",
+    "slideTitle": "Sitotoksik T Lenfositler (CD8+ CTL): Birincil Efektör Güç",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Tümörle İlişkili Makrofajlar (TAM): M1 vs M2' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Sitotoksik CD8+ T lenfositlerin bir malign melanom hücresini immünolojik sinaps aracılığıyla tanıdıktan sonra hedef hücrede perforin ve granzim B salgılayarak apoptoz indükleme süreci ile ilgili aşağıdaki ifadelerden hangisi BİYOKİMYASAL VE PATOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) M1 antitümöral ve mikrobisidal iken; M2 immünosüpresif ve anjiyogeniktir.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Perforin lizozom membranını eriterek hidrolazların serbest kalmasını sağlar, plazma zarına etki etmez.",
+      "B) Granzim B bir serin proteazdır; doğrudan pro-kaspaz 3'ü keserek aktive eder ve Bid proteini üzerinden mitokondriyal apoptozu tetikler.",
+      "C) CTL sitotoksisitesi hedef hücrede hücresel şişme ve membran yırtılmasıyla giden primer lizis (nekroz) tablosu oluşturur.",
+      "D) FasL-Fas etkileşimi mitokondriden bağımsız olarak hücre siklusunu zorla G2 fazında dondurur.",
+      "E) Sitotoksik T hücreleri tümör hücresini öldürürken asla sitokin salgılamaz, sadece fiziksel temasla çalışır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümörle İlişkili Makrofajlar (TAM): M1 vs M2, patolojik ve klinik olarak 'M1 antitümöral ve mikrobisidal iken; M2 immünosüpresif ve anjiyogeniktir.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Sitotoksik T lenfositlerin (CD8+ CTL) temel öldürme silahı perforin ve granzim B granülleridir. Perforin plazma membranında transmembran hidrofilik porlar açar. Granzim B bu porlardan sitoplazmaya girerek: 1) Doğrudan yürütücü pro-kaspaz 3'ü kesip aktive eder, 2) Pro-apoptotik Bcl-2 üyesi olan Bid proteinini keserek tBid haline getirir; tBid mitokondriden sitokrom c salınımını ve kaspaz-9 aktivasyonunu tetikler. Böylece hedef hücre hızla apoptoza gider."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-9",
+    "id": "imm-pq-09",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 9,
-    "slideTitle": "Tümörün İmmün Kaçış Mekanizmaları",
+    "slideTitle": "Doğal Katil (NK) Hücreler ve 'Kayıp Benlik' (Missing Self) Prensibi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Tümörün İmmün Kaçış Mekanizmaları' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Bir akciğer karsinomu hücresinde Beta-2 mikroglobulin gen delesyonu sonucu hücre yüzeyinde Majör Histokompatibilite Kompleksi Sınıf I (MHC-I) ekspresyonunun tamamen kaybolduğu saptanıyor. Bu hücresel değişiklik sonrasında hastanın bağışıklık hücrelerinin tümöre vereceği yanıt ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) MHC Sınıf I kaybı, antijen negatif varyant seçilimi ve TAP proteini defektleri.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) CD8+ CTL'ler tümör hücresini daha kolay tanır ve perforin salınımını artırır.",
+      "B) Tümör hücresi NK hücrelerinin inhibitör KIR reseptörlerini uyararak doğal katil lizisinden tamamen kurtulur.",
+      "C) CD8+ CTL'lerin tanıma yeteneği kaybolurken; NK hücreleri üzerindeki inhibitör sinyal kalkar ('Missing-Self') ve tümör hücresi NK hücrelerince hedef alınır.",
+      "D) Dendritik hücreler tümör hücresini doğrudan eritrosite dönüştürerek dalakta fagositozunu sağlar.",
+      "E) MHC-I kaybı yalnızca B lenfositlerinin plazma hücresine dönüşmesini engeller, sitotoksisiteyi etkilemez."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümörün İmmün Kaçış Mekanizmaları, patolojik ve klinik olarak 'MHC Sınıf I kaybı, antijen negatif varyant seçilimi ve TAP proteini defektleri.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "MHC Sınıf I ekspresyonunun kaybı, tümör hücresini CD8+ CTL'lerin tanımasından kurtarır (immün kaçış). Ancak organizmanın bu kaçışa karşı geliştirdiği denge mekanizması Doğal Katil (NK) hücrelerdir. NK hücrelerinin yüzeyindeki KIR inhibitör reseptörleri normalde MHC-I'e bağlanarak NK hücresini frenler. MHC-I kaybolduğunda fren kalkar ('Missing-Self' prensibi); tümör hücresindeki stres molekülleri (MICA/B) NKG2D'yi uyararak NK hücresinin tümörü hızla parçalamasını sağlar."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-10",
+    "id": "imm-pq-10",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 10,
-    "slideTitle": "İmmünosüpresif Sitokinler: TGF-β, IL-10 ve VEGF",
+    "slideTitle": "Makrofaj Polarizasyonu ve Tümör İlişkili Makrofajlar (TAM)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'İmmünosüpresif Sitokinler: TGF-β, IL-10 ve VEGF' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İnvaziv duktal meme karsinomu tanısı alan bir hastanın mastektomi materyali immünohistokimyasal analizinde, tümör stromasında yoğun CD163 ve CD206 pozitif M2 fenotipinde Tümör İlişkili Makrofaj (TAM) infiltrasyonu saptanıyor. Bu makrofaj popülasyonunun tümör mikroçevresindeki biyolojik aktiviteleri ve prognoz ile ilişkisi hakkında hangisi DOĞRUDUR?",
     "options": [
-      "A) Tümör mikroçevresinde CTL ve dendritik hücre fonksiyonunu felç eden moleküller.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) iNOS aracılığıyla bol miktarda nitrik oksit sentezleyerek tümör hücrelerini apoptoza sokarlar ve prognozu düzeltirler.",
+      "B) IL-12 salgılayarak naif T lenfositlerini Th1 yönünde polarize edip tümör rejeksiyonunu sağlarlar.",
+      "C) VEGF salarak anjiyogenezi uyarır, matriks metalloproteinazlar salarak invazyonu kolaylaştırır ve kötü prognozla ilişkilidirler.",
+      "D) Tümör hücrelerindeki E-kaderin ekspresyonunu artırarak metastatik yayılımı tamamen durdururlar.",
+      "E) Yalnızca viral enfeksiyonlarda aktive olurlar, primer epiteliyal meme tümörlerinde fonksiyonları yoktur."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. İmmünosüpresif Sitokinler: TGF-β, IL-10 ve VEGF, patolojik ve klinik olarak 'Tümör mikroçevresinde CTL ve dendritik hücre fonksiyonunu felç eden moleküller.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "M2 fenotipindeki Tümör İlişkili Makrofajlar (TAM - CD163+, CD206+), alternatif yoldan aktive olmuş hücrelerdir. M1 makrofajların aksine anti-tümöral değil PRO-TÜMÖRAL çalışırlar. Tümör mikroçevresinde VEGF salgılayarak yeni tümör damarlarının oluşmasını (anjiyogenez) indükler, MMP-2 ve MMP-9 salgılayarak ekstrasellüler matriksi eritip invazyon ve metastazı kolaylaştırır, IL-10 ve TGF-beta salarak sitotoksik T hücrelerini baskılarlar. Bu nedenle solid tümörlerde yoğun M2 TAM varlığı bağımsız bir KÖTÜ PROGNOZ kriteridir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-11",
+    "id": "imm-pq-11",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 11,
-    "slideTitle": "Regülatuvar T Hücreleri (Treg) ve Miyeloid Kaynaklı Baskılayıcılar (MDSC)",
+    "slideTitle": "Antijen İşleme ve Sunum Yolunun Kaybı (İmmün Körlük)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Regülatuvar T Hücreleri (Treg) ve Miyeloid Kaynaklı Baskılayıcılar (MDSC)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastatik malign melanom tanısıyla Pembrolizumab (Anti-PD-1) tedavisi başlanan ve 18 ay boyunca tam radyolojik remisyonda kalan 59 yaşındaki bir hastada, 20. ayda karaciğerde yeni metastatik odaklar gelişiyor. Yapılan yeni biyopsi materyalinde tümör hücrelerinde Beta-2 mikroglobulin (B2M) geninde bialelik inaktive edici mutasyon saptanıyor. Bu direnç tablosunun patofizyolojik açıklaması hangisidir?",
     "options": [
-      "A) CD4+ CD25+ FoxP3+ Treg hücrelerinin antitümör bağışıklığı frenlemesi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) B2M mutasyonu tümör hücrelerinin hücre siklusunu hızlandırarak mitozu durdurulamaz hale getirmiştir.",
+      "B) B2M kaybı nedeniyle MHC Sınıf I molekülü hücre zarına taşınamamış; tümör hücreleri CTL tarafından tanınamaz hale gelerek edinsel immün kaçış sağlamıştır.",
+      "C) B2M proteini doğrudan PD-1 reseptörüne bağlandığı için ilacın etkinliğini artırmıştır.",
+      "D) Hastada pembrolizumaba karşı nötralizan IgE antikorları gelişmiştir.",
+      "E) B2M mutasyonu yalnızca eritrositlerde glikoz taşınmasını bozan selim bir polimorfizmdir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Regülatuvar T Hücreleri (Treg) ve Miyeloid Kaynaklı Baskılayıcılar (MDSC), patolojik ve klinik olarak 'CD4+ CD25+ FoxP3+ Treg hücrelerinin antitümör bağışıklığı frenlemesi.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Anti-PD-1 tedavisi alan hastalarda başlangıçta mükemmel yanıt varken aylar sonra nüks gelişmesine 'edinsel (sekonder) immünoterapi direnci' denir. Bunun en sık saptanan moleküler mekanizması Beta-2 mikroglobulin (B2M) gen mutasyonudur. B2M olmadan MHC Sınıf I katlanıp hücre zarına çıkamaz. Yüzeyinde MHC-I taşımayan tümör hücresi, etrafta çok sayıda aktive CD8+ T hücresi bulunsa bile tanınamaz ('İmmün Körlük') ve tümör progresyon gösterir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-12",
+    "id": "imm-pq-12",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 12,
-    "slideTitle": "İmmün Kontrol Noktaları: PD-1 ve PD-L1 Ekseni",
+    "slideTitle": "İmmün Kontrol Noktaları I: PD-1 / PD-L1 Yolağı ve T Hücre Tükenmişliği",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'İmmün Kontrol Noktaları: PD-1 ve PD-L1 Ekseni' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastatik küçük hücreli dışı akciğer karsinomu (KHDAK) tanısı alan bir hastanın tümör biyopsisinde immünohistokimyasal boyama ile tümör hücrelerinin %60'ında kuvvetli membranöz PD-L1 ekspresyonu (TPS > %50) saptanıyor. Bu hastaya başlanan Pembrolizumab monoklonal antikor tedavisinin hücresel ve moleküler etki mekanizması ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) Tümör yüzeyindeki PD-L1'in T hücresi üzerindeki PD-1'e bağlanarak T hücresini tüketmesi (exhaustion).",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Doğrudan tümör DNA'sına interkale olarak topoizomeraz enzimini inhibe eder.",
+      "B) Tümör hücrelerindeki VEGF reseptörünü bloke ederek anjiyogenezi durdurur.",
+      "C) T lenfositlerindeki PD-1 reseptörüne bağlanıp PD-L1 ile etkileşimini bloke ederek SHP-2 fosfataz aktivasyonunu engeller ve tükenmiş CTL'leri yeniden aktive eder.",
+      "D) B hücrelerinde antikor üretimini tamamen durdurarak otoimmün toksisiteyi engeller.",
+      "E) Yalnızca eritrosit membranındaki CD47 molekülünü kapatarak fagositozu artırır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. İmmün Kontrol Noktaları: PD-1 ve PD-L1 Ekseni, patolojik ve klinik olarak 'Tümör yüzeyindeki PD-L1'in T hücresi üzerindeki PD-1'e bağlanarak T hücresini tüketmesi (exhaustion).' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Pembrolizumab, T lenfosit yüzeyindeki PD-1 (CD279) eş-inhibitör reseptörüne bağlanan hümanize bir monoklonal antikordur. Tümör hücrelerindeki PD-L1'in PD-1'e bağlanmasını fiziksel olarak engelleyerek T hücresi içindeki SHP-2 fosfataz aktivasyonunu ve defosforilasyonu durdurur. Böylece T hücresindeki fren kaldırılır; 'tükenmiş' (exhausted) durumdaki sitotoksik CD8+ T lenfositleri yeniden aktive olarak tümörü lize eder."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-13",
+    "id": "imm-pq-13",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 13,
-    "slideTitle": "CTLA-4 Reseptörü ve Periferik Tolerans",
+    "slideTitle": "İmmün Kontrol Noktaları II: CTLA-4 Yolağı ve Lenfoid Düzenleme",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'CTLA-4 Reseptörü ve Periferik Tolerans' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastatik malign melanom tanısıyla İpilimumab (Anti-CTLA-4 monoklonal antikoru) tedavisi başlanan 50 yaşındaki bir hastada tedavinin 8. haftasında şiddetli baş ağrısı, görme alanı daralması, halsizlik ve hipotansiyon gelişiyor. Yapılan hormonal tetkiklerde ACTH, TSH ve LH/FSH düzeylerinin belirgin düştüğü, hipofiz MRG'sinde bezde difüz kontrast tutulumu ve genişleme saptanıyor. Bu klinik tablonun patofizyolojisi ve CTLA-4 fonksiyonu ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) B7 molekülüne CD28'den daha yüksek afiniteyle bağlanarak T hücresi aktivasyonunu erken aşamada durdurma.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) İpilimumab doğrudan hipofiz bezi hücrelerini enfekte eden rekombinant bir virüstür.",
+      "B) İpilimumab lenf nodunda B7-CD28 kostimülasyonu üzerindeki CTLA-4 frenini kaldırarak genel immün toleransı gevşetmiş ve otoimmün hipofizit tablosu gelişmiştir.",
+      "C) Hipofiz adenomu gelişmiştir ve acil cerrahi rezeksiyon yapılmalıdır.",
+      "D) CTLA-4 yalnızca periferik dokularda eksprese edildiği için bu tablo ilaca bağlı olamaz.",
+      "E) İpilimumab böbrekten sodyum atılımını artırarak hipofiz bezinde infarkta yol açmıştır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. CTLA-4 Reseptörü ve Periferik Tolerans, patolojik ve klinik olarak 'B7 molekülüne CD28'den daha yüksek afiniteyle bağlanarak T hücresi aktivasyonunu erken aşamada durdurma.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "İpilimumab, T hücre aktivasyonunu erken fazda frenleyen CTLA-4 molekülünü bloke eden bir monoklonal antikordur. CTLA-4 sistemik self-toleransın korunmasında kritik bir bekçidir. Blokajı ile T hücre aktivasyon eşiği düşer ve hastanın bağışıklık sistemi kendi dokularına da saldırabilir (immün ilişkili advers olaylar - irAE). En karakteristik endokrin komplikasyonu ön hipofiz bezinin lenfositik inflamasyonu olan 'Otoimmün Hipofizit'tir; panhipopituitarizm ve baş ağrısı ile seyreder. Tedavisinde yüksek doz sistemik steroid replasmanı gerekir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-14",
+    "id": "imm-pq-14",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 14,
-    "slideTitle": "Kontrol Noktası Blokajı (Checkpoint Blockade) İmmünoterapisi",
+    "slideTitle": "İmmünsüpresif Mikroçevre: Treg, MDSC, IDO ve Adenozin Yolağı",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Kontrol Noktası Blokajı (Checkpoint Blockade) İmmünoterapisi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Pankreas duktal adenokarsinomu zemininde tümör mikroçevresi incelenen bir hastada, tümör dokusunda yoğun CD4+ CD25+ FoxP3+ hücreler ve yüksek düzeyde İndolamin 2,3-dioksijenaz (IDO) enzim aktivitesi tespit ediliyor. Bu mikroçevresel faktörlerin antitümör lenfositler üzerindeki etkisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Pembrolizumab, Nivolumab (anti-PD1), Atezolizumab (anti-PDL1) ve İpilimumab (anti-CTLA4).",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) IDO enzimi triptofanı artırarak CD8+ sitotoksik T lenfositlerin litik granül salınımını uyarır.",
+      "B) FoxP3+ hücreler IL-2 salgılayarak naif CD8+ T lenfositlerinin patlayıcı çoğalmasını sağlarlar.",
+      "C) FoxP3+ hücreler yüksek afiniteli CD25 ile ortamdaki IL-2'yi tüketir; IDO ise esansiyel triptofanı parçalayarak T hücrelerini metabolik krize sokup apoptoza sürükler.",
+      "D) IDO enzimi doğrudan DNA mismatch repair proteinlerini tamir ederek tümör mutasyon yükünü sıfırlar.",
+      "E) Bu mikroçevre T hücrelerinde perforin gen transkripsiyonunu 10 kat artırarak tümörün nekrozuna yol açar."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Kontrol Noktası Blokajı (Checkpoint Blockade) İmmünoterapisi, patolojik ve klinik olarak 'Pembrolizumab, Nivolumab (anti-PD1), Atezolizumab (anti-PDL1) ve İpilimumab (anti-CTLA4).' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Tümör mikroçevresindeki en güçlü immünosüpresif hücresel aktörler Düzenleyici T hücreleridir (Treg: CD4+ CD25+ FoxP3+). Treg'ler yüksek afiniteli IL-2 reseptörü (CD25) sayesinde çevredeki IL-2 sitokinini tüketerek CD8+ CTL'leri sitokinsiz bırakır, ayrıca TGF-beta ve IL-10 salarlar. İndolamin 2,3-dioksijenaz (IDO) ise T lenfositlerin yaşaması için zorunlu olan L-triptofanı parçalayarak kinürenine dönüştürür; triptofansız kalan efektör T hücreleri G1 arrestine ve apoptoza uğrar."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-15",
+    "id": "imm-pq-15",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 15,
-    "slideTitle": "İnvazyon ve Metastaz Kaskadına Giriş",
+    "slideTitle": "İmmünoonkolojide Terapötik Ufuklar: CAR-T, Aşılar ve Psödoprogresyon",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'İnvazyon ve Metastaz Kaskadına Giriş' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Refrakter B hücreli akut lenfoblastik lösemi (B-ALL) nedeniyle CD19 hedefli CAR-T hücre infüzyonu yapılan 22 yaşındaki bir hastada infüzyondan 5 gün sonra 39.8°C ateş, taşikardi, hipotansiyon ve dispne gelişiyor. Laboratuvarda serum ferritin ve İnterlökin-6 (IL-6) düzeylerinin devasa yükseldiği saptanıyor. Bu hastanın klinik tablosu ve tedavisi ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) Primer odaktan ayrılma, matriks invazyonu, intravazasyon, dolaşım ve kolonizasyon zinciri.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Hastada graft-versus-host hastalığı gelişmiştir; acil radyoterapi uygulanmalıdır.",
+      "B) CAR-T hücrelerinin tümör hücrelerini öldüremediğini ve löseminin blastik krize girdiğini gösterir.",
+      "C) Tablo Sitokin Salınım Sendromudur (CRS); patogenezinde IL-6 başroldedir ve tedavisinde IL-6 reseptör antagonisti Tocilizumab kullanılır.",
+      "D) Hastaya acilen yüksek doz IL-2 infüzyonu verilerek CAR-T hücreleri uyarılmalıdır.",
+      "E) Yalnızca hafif bir alerjik reaksiyondur, antihistaminik verilip taburcu edilmelidir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. İnvazyon ve Metastaz Kaskadına Giriş, patolojik ve klinik olarak 'Primer odaktan ayrılma, matriks invazyonu, intravazasyon, dolaşım ve kolonizasyon zinciri.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Kimerik Antijen Reseptör T hücresi (CAR-T) infüzyonunun en sık ve en tehlikeli komplikasyonu Sitokin Salınım Sendromudur (CRS). İnfüze edilen T hücrelerinin ve aktive olan makrofajların devasa miktarda inflamatuar sitokin (özellikle İnterlökin-6 / IL-6, TNF-alfa ve IFN-gama) salgılamasıyla ortaya çıkar; yüksek ateş, vasküler kollaps ve şokla seyreder. Tedavisinde spesifik monoklonal anti-IL-6 reseptör antikoru olan Tocilizumab ve sistemik kortikosteroidler hayat kurtarıcıdır."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-16",
+    "id": "imm-pq-16",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 16,
-    "slideTitle": "EMT: Epitelyal-Mezenkimal Geçiş Programı",
+    "slideTitle": "Metastaz Biyolojisine Giriş ve Metastatik Verimsizlik",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'EMT: Epitelyal-Mezenkimal Geçiş Programı' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastaz biyolojisi, tümörlerin yayılım paternleri ve metastatik kaskadın dinamikleri ile ilgili aşağıdaki ifadelerden hangisi PATOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) SNAIL, TWIST transkripsiyonu ile E-kadherin kaybı, vimentin kazanımı ve motilite.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Primer tümörden dolaşıma dökülen her kanser hücresi eşit oranda makrometastaz oluşturma yeteneğine sahiptir.",
+      "B) Bazal hücreli karsinom lokal invazyon yapmaksızın kan yoluyla erkenden karaciğere metastaz yapar.",
+      "C) Metastatik kaskad biyolojik olarak son derece verimsiz bir süreçtir; dolaşıma dökülen hücrelerin %0.01'inden daha azı başarılı koloni kurabilir.",
+      "D) Malign karsinomlarda ölümlerin başlıca nedeni primer tümörün lokal basısıdır; metastaz sağkalımı etkilemez.",
+      "E) Metastaz yeteneği kazanımı yalnızca benign lipom ve adenomlarda görülen selim bir metaplazi şeklidir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. EMT: Epitelyal-Mezenkimal Geçiş Programı, patolojik ve klinik olarak 'SNAIL, TWIST transkripsiyonu ile E-kadherin kaybı, vimentin kazanımı ve motilite.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Metastaz biyolojik açıdan son derece zorlu ve düşük randımanlı bir süreçtir; bu kavrama 'Metastatik Verimsizlik' denir. Primer tümörden günde milyonlarca hücre dökülmesine rağmen dolaşımdaki mekanik sürtünme (shear stress), anoikis ve lökosit/NK lizisi nedeniyle hücrelerin %99.99'u ölür. Dolaşımdaki hücrelerin yalnızca %0.01'inden azı hedef organda ekstravaze olup makroskopik kitle haline gelebilir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-17",
+    "id": "imm-pq-17",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 17,
-    "slideTitle": "Hücreler Arası Bağların Çözülmesi: E-Kadherin Kaybı",
+    "slideTitle": "Epitelyal-Mezenkimal Geçiş (EMT): E-kaderin Kaybı ve Hareketlilik",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Hücreler Arası Bağların Çözülmesi: E-Kadherin Kaybı' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Kolorektal adenokarsinomun invaziv ön cephesinde yer alan tümör hücrelerinin epitelyal fenotipten mezenkimal fenotipe geçiş (EMT) göstermesi sürecinde meydana gelen moleküler değişiklikler ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) CDH1 inaktivasyonu ve kalsiyum bağımlı adezyon zonunun yıkımı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Sitokeratin ve E-kaderin ekspresyonu artarken, hücreler birbirine daha sıkı bağlanır.",
+      "B) SNAIL ve TWIST transkripsiyon faktörleri aktive olarak E-kaderin (CDH1) genini baskılar; hücre zarından serbest kalan beta-katenin nükleusa göç eder.",
+      "C) Hücre yüzeyindeki N-kaderin molekülleri parçalanıp yerini E-kaderine bırakır.",
+      "D) Beta-katenin proteazomda tamamen yıkıldığı için hücre siklusu G0 fazında durur.",
+      "E) EMT yalnızca iyi huylu polipoid adenomlarda görülür, invaziv karsinomlarda durur."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Hücreler Arası Bağların Çözülmesi: E-Kadherin Kaybı, patolojik ve klinik olarak 'CDH1 inaktivasyonu ve kalsiyum bağımlı adezyon zonunun yıkımı.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Epitelyal-Mezenkimal Geçiş (EMT), karsinom hücrelerinin invazyon ve hareketlilik kazanmasında anahtar adımdır. Stromal sinyallerle aktive olan SNAIL, TWIST ve SLUG transkripsiyon faktörleri, E-kaderin (CDH1) gen promotörünü susturur. Hücreler arası bağlantılar çözülür ve E-kaderine bağlı duran Beta-katenin sitoplazmada serbestleşir. Serbest beta-katenin nükleusa transloke olarak c-Myc ve Siklin D1 genlerini aktive eder; hücre amipsi hareketlilik kazanarak invazyona başlar."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-18",
+    "id": "imm-pq-18",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 18,
-    "slideTitle": "Bazal Membranın ve Matriksin Delinmesi: MMP-2 ve MMP-9",
+    "slideTitle": "Ekstrasellüler Matriks (ECM) ve Bazal Membran İnvazyonu",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Bazal Membranın ve Matriksin Delinmesi: MMP-2 ve MMP-9' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İnvaziv skuamöz hücreli akciğer karsinoması hücrelerinin epiteliyal bazal membranı aşarak altındaki bronşiyal submukoza bağ dokusuna invaze olabilmesi sürecinde gerçekleşen proteolitik mekanizmalar ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Tip IV kollajenaz aktivitesi, jelatinazlar ve katepsinlerin stromal yolu açması.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Bazal membranın ana bileşeni olan Tip IV kollajen, tümör hücrelerince salgılanan MMP-2 ve MMP-9 enzimleri tarafından proteolitik olarak parçalanır.",
+      "B) Tümör hücreleri bazal membrana integrinlerle değil, yalnızca immünglobulin A antikorlarıyla bağlanır.",
+      "C) Matriks metalloproteinazlar kalsiyum ve çinko iyonları varlığında tamamen inaktive olurlar.",
+      "D) uPA enzimi doğrudan tümör hücrelerinde DNA çift iplik kırığı oluşturarak apoptoz yapar.",
+      "E) Bazal membran yıkımı karsinomlarda görülmez; sadece benign siğillerde (verruka) izlenen bir olaydır."
     ],
     "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Bazal Membranın ve Matriksin Delinmesi: MMP-2 ve MMP-9, patolojik ve klinik olarak 'Tip IV kollajenaz aktivitesi, jelatinazlar ve katepsinlerin stromal yolu açması.' mekanizması ile karakterizedir."
+    "explanation": "Bazal membranın en kritik yapısal iskeleti Tip IV kollajen ağıdır. Karsinom hücrelerinin stroma içine invaze olabilmesi için Tip IV kollajenin eritilmesi şarttır. Bu görevi katalitik merkezinde çinko (Zn2+) bulunduran Matriks Metalloproteinaz-2 (MMP-2) ve Matriks Metalloproteinaz-9 (MMP-9; Tip IV jelatinazlar) üstlenir. Bu enzimler bazal membran bariyerini delerek tümör hücresinin interstisyel matriks içine hareket etmesini sağlar."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-19",
+    "id": "imm-pq-19",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 19,
-    "slideTitle": "Tümör Hücresinin Göçü ve Kemotaksi",
+    "slideTitle": "Tümör Hücre Motilitesi ve Göç Dinamiği",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Tümör Hücresinin Göçü ve Kemotaksi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Malign bir tümör hücresinin ekstrasellüler matriks içinde aktif lokomosyon (göç) göstermesi sırasında ön kutupta lamellipod oluşturması, hareket yönünü belirlemesi ve arka kutbunu kasarak ilerlemesinde görev alan hücre içi sinyal molekülleri ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) Fibronektin ve laminin parçalanma ürünlerine doğru ameboid ve mezenkimal hareket.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Lamellipod oluşumunu RhoA yönetirken, hücre arka kutbunun kasılmasını Rac1 sağlar.",
+      "B) Öncü kenarda lamellipod oluşumunu Rac1, filopod uzantılarını ve yönelimi Cdc42, arka kutup aktomiyosin kontraksiyonunu ise RhoA kontrol eder.",
+      "C) Hücresel göç yalnızca nükleer lamin proteinlerinin parçalanmasıyla pasif bir şekilde gerçekleşir.",
+      "D) HGF (Saçılma Faktörü) hücrelerin birbirine yapışmasını sağlayarak göçü tamamen durdurur.",
+      "E) Fokal Adezyon Kinaz (FAK) tümör hücresini apoptoza sokan bir ekstrinsik ölüm reseptörüdür."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümör Hücresinin Göçü ve Kemotaksi, patolojik ve klinik olarak 'Fibronektin ve laminin parçalanma ürünlerine doğru ameboid ve mezenkimal hareket.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Tümör hücresi motilitesi küçük Rho ailesi GTPazların kusursuz koordinasyonuna bağlıdır. Hücre ön kutbunda zarı iten yassı lamellipod çıkıntılarını Rac1 oluşturur; parmaksı duyusal filopod uzantılarını ve hücresel yönelimi (polarite) Cdc42 sağlar; hücre arka kutbundaki aktomiyosin liflerinin kasılarak hücre gövdesini ileri fırlatmasını ise RhoA yönetir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-20",
+    "id": "imm-pq-20",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 20,
-    "slideTitle": "İntravazasyon ve Damar İçine Sızma",
+    "slideTitle": "İntravazasyon: Vasküler ve Lenfatik Lümen İnvazyonu",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'İntravazasyon ve Damar İçine Sızma' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastatik kaskadda tümör hücrelerinin ekstrasellüler matriksten vasküler lümene girmesi (intravazasyon) ve farklı malignitelerin yayılım yolları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Tümör damarlarının zayıf endotel kavşaklarından lümene giriş.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Tümör içi damarların perisit tabakası çok kalın olduğu için hücreler damara giremez, yalnızca lenfatiklere geçer.",
+      "B) İntravazasyon endotel hücresi, M2 makrofaj ve invaziv tümör hücresinin oluşturduğu TMEM kapılarında lokal VEGF salınımıyla kolaylaşır.",
+      "C) Osteosarkom ve leiyomyosarkom gibi mezenkimal sarkomlar kural olarak öncelikle servikal lenf nodlarına yayılır.",
+      "D) Renal hücreli karsinom asla kan damarlarına girmez, sadece pelvik lenf nodlarını tutar.",
+      "E) Lenfatik kapillerlerin bazal membranı arterlerden daha kalın olduğu için karsinomlar lenfatik yolu kullanamaz."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. İntravazasyon ve Damar İçine Sızma, patolojik ve klinik olarak 'Tümör damarlarının zayıf endotel kavşaklarından lümene giriş.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "İntravazasyon sürecinde tümör hücreleri özelleşmiş mikroanatomik odaklar olan TMEM (Tumor Microenvironment of Metastasis) kapılarını kullanır. Bu yapı invaziv tümör hücresi, perivasküler M2 makrofaj ve damar endotel hücresinin doğrudan temasından oluşur. Makrofajın lokal olarak salgıladığı VEGF endotel kavşaklarını geçici olarak açar ve tümör hücresi lümene sızar. Karsinomlar kural olarak lenfatik yolla yayılırken sarkomlar doğrudan hematojen yolla venöz sisteme geçer."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-21",
+    "id": "imm-pq-21",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 21,
-    "slideTitle": "Damar İçi Dolaşımda Hayatta Kalma ve Trombosit Zırhı",
+    "slideTitle": "Dolaşımda Hayatta Kalma: Trombosit Zırhı ve Anoikis Direnci",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Damar İçi Dolaşımda Hayatta Kalma ve Trombosit Zırhı' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İntravazasyon yaparak kan dolaşımına katılan bir meme adenokarsinomu hücresinin dolaşımda canlı kalabilmesi, anoikisten kurtulması ve hedef organa ulaşabilmesi sürecinde gerçekleşen hücresel ve biyokimyasal mekanizmalar ile ilgili hangisi DOĞRUDUR?",
     "options": [
-      "A) Trombosit agregasyonu ile tümör embolisi oluşumu; NK hücrelerinden ve mekanik stresten korunma.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Dolaşıma çıkan tümör hücreleri daima tek tek dolaşır; trombositlerle temas ettiklerinde anında ölürler.",
+      "B) Tümör hücreleri doku faktörü eksprese ederek etraflarında koruyucu fibrin-trombosit zırhı kurar; bu yapı onları hemodinamik kayma stresinden ve NK hücre lizisinden korur.",
+      "C) Anoikis, tümör hücrelerinin damar endoteline yapışmasını hızlandıran pro-metastatik bir adezyon molekülüdür.",
+      "D) Kan dolaşımındaki yüksek hidrostatik basınç tümör hücrelerinde DNA tamir enzimlerini uyararak proliferasyonu artırır.",
+      "E) Trombositler salgıladıkları perforin enzimi ile tümör hücrelerini dolaşımda tamamen temizler."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Damar İçi Dolaşımda Hayatta Kalma ve Trombosit Zırhı, patolojik ve klinik olarak 'Trombosit agregasyonu ile tümör embolisi oluşumu; NK hücrelerinden ve mekanik stresten korunma.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Dolaşıma katılan tümör hücrelerinin hayatta kalabilmesindeki en hayati strateji trombositlerle kümeleşerek 'Tümör Hücresi-Trombosit Embolisi' oluşturmaktır. Tümör yüzeyindeki doku faktörü trombin üretimini tetikler ve trombositleri aktive eder. Oluşan fibrin-trombosit zırhı tümör hücresini hem hemodinamik kayma stresinin (shear stress) mekanik parçalayıcı etkisinden korur hem de hücre yüzeyindeki stres ligandlarını örterek Doğal Katil (NK) hücrelerinin öldürücü temasını engeller."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-22",
+    "id": "imm-pq-22",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 22,
-    "slideTitle": "Ekstravazasyon ve Hedef Endotele Tutunma",
+    "slideTitle": "Ekstravazasyon, Organ Tropizmi ve 'Tohum ve Toprak' Hipotezi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Ekstravazasyon ve Hedef Endotele Tutunma' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "71 yaşındaki bir erkek hasta son 3 aydır giderek artan bel ağrısı şikayetiyle başvuruyor. Çekilen lomber vertebra direkt grafisinde L2-L4 vertebralarda kemik dansitesinde belirgin artışla karakterize multipl radyoopak, sklerotik (osteoblastik) lezyonlar saptanıyor. Bu hastada kemik metastazına yol açan en olası primer neoplazi ve organ tropizmi mekanizması hangisidir?",
     "options": [
-      "A) Selektinler, integrinler ve CD44 aracılığıyla hedef organ kapiller yatağına yapışma.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Renal hücreli karsinom; osteoklastları aşırı uyararak kemik rezorpsiyonu yapmasıyla bilinir.",
+      "B) Prostat adenokarsinomu; endotelin-1 salınımı ve osteoblast uyarısıyla karakteristik osteoblastik metastaz oluşturur.",
+      "C) Kolon karsinomu; portal ven yoluyla omurgaya doğrudan kaval reflü ile yerleşir.",
+      "D) Malign melanom; melanositlerin kemik iliğinde kalsiyum biriktirmesi sonucu skleroz yapar.",
+      "E) Mide taşlı yüzük hücreli karsinomu; yalnızca over stromasına metastaz (Krukenberg) yapar, kemiğe gitmez."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Ekstravazasyon ve Hedef Endotele Tutunma, patolojik ve klinik olarak 'Selektinler, integrinler ve CD44 aracılığıyla hedef organ kapiller yatağına yapışma.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Kemik metastazları genellikle osteoklast aktivasyonuyla kemiği eriten osteolitik lezyonlar şeklinde görülür (örn. meme kanseri, akciğer kanseri, böbrek kanseri). Ancak Prostat Adenokarsinomu osteoblastları güçlü şekilde uyararak radyoopak, sklerotik 'Osteoblastik Kemik Metastazları' oluşturur. Prostat hücrelerinin salgıladığı Endotelin-1 (ET-1), TGF-beta ve BMP'ler osteoblastik kemik yapımını tetikler. Bu tablo Stephen Paget'nin 'Tohum ve Toprak' teorisinin klasik bir örneğidir."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-23",
+    "id": "imm-pq-23",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 23,
-    "slideTitle": "Organ Tropizmi: Paget'nin 'Seed and Soil' Hipotezi",
+    "slideTitle": "Premetastatik Niş ve Kolonizasyon (Anjiyogenik Anahtar)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Organ Tropizmi: Paget'nin 'Seed and Soil' Hipotezi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Metastaz sürecinde primer tümörün uzak organlarda 'Premetastatik Niş' hazırlaması, hedef dokuda kolonizasyon kurması ve anjiyogenik anahtarın devreye girmesi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Tümör hücresi (tohum) ile hedef organ mikroçevresinin (toprak) kemokin uyumu (CXCR4/CXCL12).",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Premetastatik niş hazırlığı hedef organda tümör hücreleri oluştuktan aylar sonra başlayan geç bir reaksiyondur.",
+      "B) Primer tümörün salgıladığı ekzozomlar ve sitokinler hedef organda VEGFR1+ kemik iliği öncüllerini toplayarak fibronektin zengini iniş pisti kurar; mikrometastazlar VEGF ile anjiyogenik anahtarı açmadan 1-2 mm'den büyük makrometastaz olamaz.",
+      "C) Tümör hücreleri hedef organda E-kaderin ekspresyonunu tamamen sıfırlayarak tek tek hücreler halinde kalır.",
+      "D) Mikrometastatik odaklar anjiyogeneze ihtiyaç duymadan sadece laktik asit difüzyonuyla 10 cm kitlelere ulaşabilir.",
+      "E) Fibronektin tümör hücrelerini lize eden bir doğal katil hücresi proteazıdır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Organ Tropizmi: Paget'nin 'Seed and Soil' Hipotezi, patolojik ve klinik olarak 'Tümör hücresi (tohum) ile hedef organ mikroçevresinin (toprak) kemokin uyumu (CXCR4/CXCL12).' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Primer tümör uzak hedef organı henüz hücreler ulaşmadan önce sistemik sinyaller ve ekzozomlarla hazırlar; buna 'Premetastatik Niş' denir. Bu süreçte kemik iliğinden mobilize olan VEGFR1+ myeloid progenitör hücreler hedef dokuda toplanır, fibronektin birikimi sağlar ve iniş pisti oluşturur. Hedefe ulaşan hücreler Mezenkimal-Epitelyal Geçiş (MET) ile yeniden E-kaderin kazanıp kolonize olurlar. Ancak difüzyon sınırı 1-2 mm olduğu için, VEGF ile 'Anjiyogenik Anahtar' açılmadan bu odaklar makroskopik makrometastaza büyüyemez."
   },
   {
-    "id": "learn-tumor-immunolojisi-metastaz-pq-24",
+    "id": "imm-pq-24",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
     "slideNumber": 24,
-    "slideTitle": "Metastatik Kolonizasyon ve Mikrometastazlar",
+    "slideTitle": "Tümör Dormansisi, Geç Nüksler ve Metastazın Tedavi Rasyoneli",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Tümör İmmünolojisi ve Metastaz Mekanizmaları kapsamında 'Metastatik Kolonizasyon ve Mikrometastazlar' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "14 yıl önce erken evre ER-pozitif meme karsinomu nedeniyle meme koruyucu cerrahi ve adjuvan hormonal tedavi alan ve o tarihten bu yana remisyonda olan 66 yaşındaki bir kadın hastada, geçirdiği ağır pnömoni ve sepsis tablosundan 2 ay sonra sırt ağrısı gelişiyor. Çekilen MRG'de torakal vertebralarda litik metastatik lezyonlar saptanıyor. Bu klinik nüks tablosu ve 'Tümör Dormansisi' biyolojisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Dormansi dönemi, anjiyogenez indüksiyonu ve makrometastaza dönüşüm.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Meme kanseri hücreleri vücutta 1 yıldan uzun süre asla canlı kalamaz; lezyonlar kesinlikle yeni bir primer multipl miyelomdur.",
+      "B) Kanser hücreleri kemik iliği nişinde G0 fazında hücresel dormanside uykuya yatmıştır; sepsis sırasında salınan sistemik inflamatuar sitokinler dormansiyi bozarak hücreleri replikasyona sokmuştur.",
+      "C) Dorman tümör hücreleri haftalık kemoterapi ile kolaylıkla yok edilebilir, çünkü metabolizmaları çok hızlıdır.",
+      "D) Tümör dormansisi yalnızca primer santral sinir sistemi tümörlerinde görülen bir tablodur.",
+      "E) ER-pozitif meme karsinomlarında geç nüks beklenmez; geç nüks yalnızca üçlü negatif tümörlerin özelliğidir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Metastatik Kolonizasyon ve Mikrometastazlar, patolojik ve klinik olarak 'Dormansi dönemi, anjiyogenez indüksiyonu ve makrometastaza dönüşüm.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "Östrojen Reseptörü Pozitif (ER+) meme karsinomu, tümör dormansisinin ve geç metastatik nükslerin en klasik örneğidir. Primer cerrahi sonrası mikrometastatik kanser kök hücreleri kemik iliğinde G0 fazında canlı kalır (hücresel dormansi). Bölünmedikleri için kemoterapiden etkilenmezler. Ağır sepsis, cerrahi travma veya immünsüpresyon gibi şiddetli sistemik inflamatuar süreçler (nötrofil NET'leri, sitokinler) bu uyuyan kök hücreleri uyararak yıllar sonra fulminan metastatik nükslere yol açabilir."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-1",
+    "id": "prac-tumor-001",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 1,
-    "slideTitle": "Tümörün Konakçı Üzerindeki Lokal Etkileri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Neoplazmların Konak Üzerindeki Lokal ve Mekanik Etkileri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Tümörün Konakçı Üzerindeki Lokal Etkileri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Tümörlerin konak organizma üzerindeki lokal ve mekanik kitle etkileri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Bası, lümen tıkanıklığı, ülserasyon, kanama ve sekonder enfeksiyonlar.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Sella turcica içine yerleşen 1 cm çapındaki bir benign hipofiz adenomu normal hipofiz dokusunu sıkıştırarak panhipopituitarizme yol açabilir.",
+      "B) Renal arter lümeninde gelişen milimetrik bir leiomyom iskemi yaratarak sekonder renovasküler hipertansiyona neden olabilir.",
+      "C) Ampulla Vateri veya koledok yerleşimli küçük karsinomlar safra akışını engelleyerek erken dönemde obstrüktif sarılık oluşturabilir.",
+      "D) Bir tümörün klinik ciddiyeti ve hayati riski, her zaman histolojik malignite derecesi ile doğru orantılıdır; benign lezyonlar ölümcül bası yapamaz.",
+      "E) İntralüminal polipoid bağırsak tümörleri peristaltizm ile ilerleyerek invajinasyon ve bağırsak obstrüksiyonuna yol açabilir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümörün Konakçı Üzerindeki Lokal Etkileri, patolojik ve klinik olarak 'Bası, lümen tıkanıklığı, ülserasyon, kanama ve sekonder enfeksiyonlar.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü bir tümörün klinik ciddiyeti ve yaşamsal tehdidi her zaman histopatolojik derecesiyle paralel gitmez; yerleştiği anatomik bölge çok daha belirleyicidir. Kafa içi kapalı kemik boşlukta (foramen magnum basısı yapan menenjiyom) veya kritik lüminal kanallarda yerleşen selim (benign) tümörler dahi herniasyon, solunum felci veya organ iskemisi yaparak ölümcül olabilir. A, B, C ve E seçenekleri mekanik kitle etkisinin klasik klinik örnekleridir."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-2",
+    "id": "prac-tumor-002",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 2,
-    "slideTitle": "Endokrin Tümörler ve Hormon Üretimi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Yüzey Ülserasyonu, Kanama ve İmmün Sistem Disfonksiyonu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Endokrin Tümörler ve Hormon Üretimi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Mukozal yüzey yerleşimli neoplazmlarda görülen yüzey ülserasyonu, kronik kanama ve immünite bozuklukları ile ilgili aşağıdaki klinik ve patolojik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Beta hücre adenomunda hipoglisemi, gastrinomada Zollinger-Ellison peptik ülseri.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Sağ kolon karsinomlarında lümen dar olduğu için ülserasyona bağlı kronik kanamadan ziyade akut mekanik obstrüksiyon ilk semptomdur.",
+      "B) Erişkin bir erkekte veya postmenopozal kadında saptanan açıklanamayan demir eksikliği anemisinde ilk olarak gastrointestinal malignite (özellikle sağ kolon) düşünülmelidir.",
+      "C) Tümör yüzeyinde gelişen sekonder bakteriyel enfeksiyonlar tümör dokusunun yıkımını yavaşlatarak koruyucu bir bariyer oluşturur.",
+      "D) Masif tümör yükü varlığında dalak ve kemik iliği metastazları polistemiye ve lökositoza yol açarak konak immünitesini güçlendirir.",
+      "E) Malign tümör hücrelerinde hücreler arası bağlantıların (E-kaderin) artması ülserasyon ve kanama riskini artıran temel hücresel faktördür."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Endokrin Tümörler ve Hormon Üretimi, patolojik ve klinik olarak 'Beta hücre adenomunda hipoglisemi, gastrinomada Zollinger-Ellison peptik ülseri.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Erişkin erkeklerde ve postmenopozal kadınlarda fizyolojik kan kaybı (menstrüasyon vb.) beklenmediğinden, saptanan demir eksikliği anemisi aksi kanıtlanana kadar gastrointestinal sistem malignitelerine (özellikle geniş lümende sinsi mikroskobik kanama yapan sağ kolon çekum adenokarsinomuna) bağlı kronik kan kaybı olarak kabul edilmeli ve kolonoskopik inceleme yapılmalıdır. A yanlıştır (sağ kolon geniştir, kanama sinsi anemi yapar; sol kolon dardır). C yanlıştır (enfeksiyon doku hasarını artırır ve sepsise yol açar). D yanlıştır (kemik iliği tutulumu nötropeni ve immün yetmezlik yapar). E yanlıştır (malign hücrelerde E-kaderin azalır)."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-3",
+    "id": "prac-tumor-003",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 3,
-    "slideTitle": "Kanser Kaşeksisinin Patogenezi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Endokrin Fonksiyon Gösteren Tümörler ve Otonom Hormon Sentezi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Kanser Kaşeksisinin Patogenezi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Endokrin bez neoplazmlarının hormon üretimi ve hormonal hiperfonksiyon sendromları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) TNF-alfa (Kaşektin), IL-1, IL-6 ve PIF aracılığıyla yağ ve iskelet kası yıkımı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Endokrin tümörlerde hormon üretimi ve klinik hiperfonksiyon sendromları, genellikle iyi diferansiye benign tümörlerde kötü diferansiye karsinomlara göre daha sıktır.",
+      "B) Pankreas Langerhans adacığı beta hücrelerinden köken alan insülinoma, paroksismal hipoglisemi ve Whipple triadı ile karakterizedir.",
+      "C) Adrenal korteksin zona glomerulosa tabakasından köken alan adenomlar aşırı aldosteron salgılayarak hipertansiyon ve hipokalemiye (Conn sendromu) neden olur.",
+      "D) Anaplastik karsinomlar doku maturasyonunu kaybettikçe özgül hormon sentezleme yeteneklerini artırarak daha şiddetli endokrinopatiler oluştururlar.",
+      "E) Adrenal medulladan köken alan feokromositoma aşırı katekolamin deşarjı ile paroksismal hipertansiyon krizleri, baş ağrısı ve çarpıntı yapar."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Kanser Kaşeksisinin Patogenezi, patolojik ve klinik olarak 'TNF-alfa (Kaşektin), IL-1, IL-6 ve PIF aracılığıyla yağ ve iskelet kası yıkımı.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü tümörler anaplastik hale geldikçe ve diferansiasyonlarını kaybettikçe hücresel fonksiyonel maturasyonlarını ve özgül hormon sentez yolaklarını kaybederler. Bu nedenle hormon salgılayan fonksiyonel endokrin sendromlar kural olarak iyi diferansiye benign adenomlarda anaplastik malign karsinomlara kıyasla belirgin biçimde daha sık ve etkindir. A, B, C ve E seçenekleri endokrin neoplazmların klasik patofizyolojik ve klinik özellikleridir."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-4",
+    "id": "prac-tumor-004",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 4,
-    "slideTitle": "Paraneoplastik Sendromlar: Genel Prensipler",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kanser Kaşeksisinin Patofizyolojisi ve Sitokin Ağı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Paraneoplastik Sendromlar: Genel Prensipler' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İleri evre kanser hastalarında görülen kanser kaşeksisinin patogenezi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Primer kitle veya metastaz ile açıklanamayan ektopik hormon ve antikor sendromları.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Kanser kaşeksisinde basit açlığın (starvasyon) aksine bazal metabolizma hızı artmış veya patolojik olarak yüksek seyreder.",
+      "B) Adipöz dokuda dolaşımdaki yağ asitlerinin depolanmasını sağlayan lipoprotein lipaz (LPL) enzimini inhibe eden temel sitokin TNF-alfa'dır.",
+      "C) İskelet kasında miyofibriler proteinlerin yıkımı temel olarak ubikitin-proteazom yolağının aşırı aktivasyonuyla gerçekleşir.",
+      "D) Kanser kaşeksisi sadece yetersiz gıda alımına bağlı bir tablo olduğundan agresif parenteral beslenme desteği ile tümör varlığında dahi tamamen düzeltilebilir.",
+      "E) IL-1 ve IL-6 gibi pro-enflamatuar sitokinler karaciğerde akut faz yanıtını uyarırken hipotalamus üzerinden iştahsızlığa (anoreksi) katkıda bulunur."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Paraneoplastik Sendromlar: Genel Prensipler, patolojik ve klinik olarak 'Primer kitle veya metastaz ile açıklanamayan ektopik hormon ve antikor sendromları.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü kanser kaşeksisi basit bir besin eksikliği veya açlık durumu değildir; sistemik sitokin aracılı katabolik bir yıkım tablosudur. Nedensel tümör kütlesi cerrahi veya onkolojik tedavilerle yok edilmedikçe, tek başına parenteral beslenme veya kalori desteği kaşeksinin ilerleyişini durduramaz veya geri döndüremez. A, B, C ve E seçenekleri kanser kaşeksisinin moleküler patogenezini doğru ifade eder."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-5",
+    "id": "prac-tumor-005",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 5,
-    "slideTitle": "Ektopik ACTH ve Cushing Sendromu",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Paraneoplastik Sendromlar: Genel İlkeler ve Klinik Önemi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Ektopik ACTH ve Cushing Sendromu' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Paraneoplastik sendromların genel ilkeleri ve klinik önemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Küçük hücreli akciğer karsinomunda ektopik proopiomelanokortin / ACTH üretimi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Paraneoplastik sendromlar tümörün lokal invazyonu veya metastatik lezyonlarının doğrudan basısı ile açıklanamayan sistemik tablolardır.",
+      "B) Kanserli olguların yaklaşık %10-15'inde görülür ve bazen gizli bir malignitenin ilk klinik belirtisi olarak erken tanı fırsatı sağlar.",
+      "C) Paraneoplastik bir sendromun varlığı, hastada mutlaka yaygın uzak organ metastazı (Evre IV) geliştiğini kanıtlar.",
+      "D) Paraneoplastik semptomlar klinik ve radyolojik olarak metastatik hastalığı taklit ederek yanlış evrelemeye (overstaging) yol açabilir.",
+      "E) Ektopik peptit sentezi ve tümör antijenlerine karşı oluşan otoantikorların normal dokularla çapraz reaksiyonu (moleküler taklit) iki temel patogenetik mekanizmadır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Ektopik ACTH ve Cushing Sendromu, patolojik ve klinik olarak 'Küçük hücreli akciğer karsinomunda ektopik proopiomelanokortin / ACTH üretimi.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü paraneoplastik sendromlar metastatik yayılıma bağlı DEĞİLDİR. Aksine, primer tümör henüz hiçbir metastaz yapmamışken ve erken lokalize evredeyken de paraneoplastik sendrom ortaya çıkabilir. Hatta paraneoplastik bulguların metastaz zannedilmesi hastanın yanlışlıkla Evre IV kabul edilmesine ve küratif cerrahi şansını kaçırmasına yol açabilir. A, B, D ve E seçenekleri paraneoplastik sendromların temel kavramlarıdır."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-6",
+    "id": "prac-tumor-006",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 6,
-    "slideTitle": "SIADH ve Hiponatremi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Majör Paraneoplastik Endokrinopatiler: Hiperkalsemi, Cushing ve SIADH",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'SIADH ve Hiponatremi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Kanser hastalarında görülen paraneoplastik endokrinopatilerle ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Küçük hücreli akciğer kanserinde uygunsuz ADH salınımı ve derin dilüsyonel hiponatremi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Paraneoplastik hiperkalsemi (PTHrP aracılı) — En sık Akciğer Skuamöz Hücreli Karsinomu",
+      "B) Ektopik ACTH salınımı ve Cushing sendromu — En sık Renal Hücreli Karsinom",
+      "C) Uygunsuz ADH salınımı (SIADH) — En sık Akciğer Adenokarsinomu",
+      "D) Paraneoplastik hipoglisemi (İnsülin benzeri büyüme faktörü) — En sık Tiroid Medüller Karsinomu",
+      "E) Eritropoetin salınımı ve polisitemi — En sık Akciğer Küçük Hücreli Karsinomu"
     ],
     "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. SIADH ve Hiponatremi, patolojik ve klinik olarak 'Küçük hücreli akciğer kanserinde uygunsuz ADH salınımı ve derin dilüsyonel hiponatremi.' mekanizması ile karakterizedir."
+    "explanation": "A seçeneği doğrudur. Kanser hastalarında en sık görülen paraneoplastik sendrom hiperkalsemidir ve kemik metastazı olmaksızın en sık Akciğer Skuamöz Hücreli Karsinomundan salgılanan PTHrP (Paratiroid Hormon İlişkili Protein) aracılığıyla meydana gelir. B ve C yanlıştır (Ektopik ACTH ve SIADH en sık Akciğer Küçük Hücreli Karsinomunda [SCLC] görülür). D yanlıştır (paraneoplastik hipoglisemi mezenkimal fibrosarkomlar ve retroperitoneal sarkomlarla ilişkilidir). E yanlıştır (paraneoplastik eritropoetin salınımı renal hücreli karsinom, serebellar hemanjiyom ve hepatosellüler karsinomda görülür)."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-7",
+    "id": "prac-tumor-007",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 7,
-    "slideTitle": "Hiperkalsemi: PTHrP vs Osteolitik Yayılım",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Nörolojik, Dermatolojik ve Vasküler Paraneoplastik Sendromlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Hiperkalsemi: PTHrP vs Osteolitik Yayılım' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Aşağıdaki paraneoplastik sendrom ve ilişkili klinik/patolojik mekanizma eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      "A) Skuamöz akciğer karsinomunda PTHrP; meme kanserinde kemik metastazı kaynaklı hiperkalsemi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Lambert-Eaton sendromu — Akciğer küçük hücreli karsinoması zemininde presinaptik voltaj kapılı kalsiyum kanallarına karşı antikor gelişimi",
+      "B) Saf kırmızı hücre aplazisi (Pure red cell aplasia) — Timoma zemininde eritroid öncüllerin immünolojik baskılanması",
+      "C) Trousseau sendromu (gezici tromboflebit) — Pankreas ve müsinöz adenokarsinomlarda müsinlerin pıhtılaşma faktörlerini aktive etmesi",
+      "D) Malign Akantozis Nigrikans — Mide adenokarsinomu zemininde büyüme faktörlerinin keratinositleri stimüle etmesi",
+      "E) Myastenia Gravis — Renal hücreli karsinom zemininde eritropoetin aracılı nöromusküler kavşak hasarı"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Hiperkalsemi: PTHrP vs Osteolitik Yayılım, patolojik ve klinik olarak 'Skuamöz akciğer karsinomunda PTHrP; meme kanserinde kemik metastazı kaynaklı hiperkalsemi.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü Myastenia Gravis renal hücreli karsinomla değil, Timoma ile güçlü birliktelik gösterir ve patogenezinde postsinaptik asetilkolin reseptörlerine (AChR) karşı gelişen otoantikorlar rol oynar (eritropoetin ile hiçbir ilgisi yoktur). A, B, C ve D seçeneklerindeki klinik sendrom, tümör ve mekanizma eşleştirmeleri tamamen doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-8",
+    "id": "prac-tumor-008",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 8,
-    "slideTitle": "Polisitemi (Eritrositoz) ve Ektopik EPO",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kanser Derecelendirmesi (Grading): Histopatolojik Diferansiasyon ve Agresiflik",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Polisitemi (Eritrositoz) ve Ektopik EPO' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Malign tümörlerde kanser derecelendirmesi (grading) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Renal hücreli karsinom ve serebellar hemanjoblastomda eritropoetin aşırılığı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Grading, doku kesitlerinin ışık mikroskobunda incelenmesine dayanan histopatolojik bir değerlendirmedir.",
+      "B) Bir tümörün bez (tübül) yapma veya keratin üretme yeteneğini koruması iyi diferansiye (Grade 1) göstergesidir.",
+      "C) Yüksek büyütme alanında (HPF) sayılan mitotik figür sayısının ve atipik mitozların artması derecenin yükseldiğini gösterir.",
+      "D) Grading, patologlar arasında hiçbir sübjektif değişkenlik içermeyen, tümör içi heterojeniteden etkilenmeyen mutlak bir ölçümdür.",
+      "E) Anaplastik (Grade 4) tümörler köken aldıkları normal dokuya ait hiçbir mimari ve sitolojik özellik barındırmazlar."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Polisitemi (Eritrositoz) ve Ektopik EPO, patolojik ve klinik olarak 'Renal hücreli karsinom ve serebellar hemanjoblastomda eritropoetin aşırılığı.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü grading (derecelendirme) ışık mikroskobunda yapılan görsel bir morfolojik inceleme olduğundan patologlar arasında gözlemci içi ve gözlemciler arası (intra/inter-observer) sübjektif değişkenlik gösterebilir. Ayrıca tümörün farklı alanlarında diferansiasyon derecesi değişebileceğinden (tümör içi heterojenite), sınırlı biyopsiler tüm tümörün derecesini tam yansıtmayabilir. Bu nedenle meme (Nottingham) ve prostatta (Gleason) skorlama sistemleri geliştirilmiştir. A, B, C ve E seçenekleri doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-9",
+    "id": "prac-tumor-009",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 9,
-    "slideTitle": "Nöromüsküler Paraneoplastik Sendromlar",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kanser Evrelemesi (Staging): Anatomik Yayılım ve Tedavi Seçimindeki Rol",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Nöromüsküler Paraneoplastik Sendromlar' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Kanser evrelemesi (staging) ile derecelendirme (grading) arasındaki klinik ve prognostik ilişki hakkında aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
     "options": [
-      "A) Lambert-Eaton miyastenik sendromu ve voltaj bağımlı kalsiyum kanal antikorları.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Hastanın sağkalım prognozunu belirlemede ve tedavi seçiminde Evreleme (Staging), Derecelendirmeden (Grading) çok daha üstün ve belirleyicidir.",
+      "B) Derecelendirme (Grading) klinik ve radyolojik bir inceleme iken, Evreleme (Staging) saf mikroskobik bir incelemedir.",
+      "C) Grade 1 (iyi diferansiye) olan bir tümör karaciğer metastazı yapsa dahi prognozu Evre I Grade 3 bir tümörden her zaman daha iyidir.",
+      "D) Cerrahi rezeksiyon kararı verilirken tümörün evresine bakılmaz, sadece histolojik derecesi esas alınır.",
+      "E) Aynı evrede bulunan iki hastada histolojik diferansiasyon derecesinin prognoz üzerinde hiçbir etkisi olamaz."
     ],
     "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Nöromüsküler Paraneoplastik Sendromlar, patolojik ve klinik olarak 'Lambert-Eaton miyastenik sendromu ve voltaj bağımlı kalsiyum kanal antikorları.' mekanizması ile karakterizedir."
+    "explanation": "A seçeneği kesinlikle doğrudur. Onkoloji patolojisinin altın kuralı: Prognozu (sağkalımı) belirlemede ve hastaya cerrahi, kemoterapi veya radyoterapi protokolü seçiminde Evreleme (Staging), Derecelendirmeden (Grading) çok daha güçlü, bağımsız ve belirleyicidir. B yanlıştır (tam tersidir; grading mikroskobik, staging klinik-radyolojik-anatomiktir). C yanlıştır (uzak metastazlı Grade 1 tümör Evre IV'tür ve prognozu çok kötüdür). D yanlıştır (cerrahi kararı doğrudan evreye bağlıdır). E yanlıştır (derecelendirme evre içinde ek prognostik bilgi sağlar)."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-10",
+    "id": "prac-tumor-010",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 10,
-    "slideTitle": "Trousseau Sendromu (Tromboflebitis Migrans)",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "TNM Evreleme Sistemi Mimarisi (AJCC / UICC)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Trousseau Sendromu (Tromboflebitis Migrans)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "AJCC / UICC tarafından belirlenen TNM evreleme sistemi mimarisi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Pankreas ve mide kanserlerinde müsin salınımı ile tekrarlayan gezici venöz trombozlar.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Tis (karsinoma in situ), epitelyal bazal membranı henüz aşmamış lezyonları tanımlar ve metastaz yapma potansiyeli yoktur.",
+      "B) T kategorisi organ spesifik kriterlere göre kitle çapını veya organ duvarındaki lokal invazyon derinliğini gösterir.",
+      "C) Bölgesel lenf nodlarında mikroskobik tümör metastazı saptanmaması N0 olarak kodlanır.",
+      "D) Uzak organ metastazının (M1) varlığı, primer tümörün boyutu (T) veya lenf nodu (N) ne olursa olsun tümörü doğrudan Evre IV yapar.",
+      "E) Lenf nodu metastazı saptanan her olgu (N1-N3), uzak organ metastazı olmasa dahi doğrudan Evre IV kabul edilir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Trousseau Sendromu (Tromboflebitis Migrans), patolojik ve klinik olarak 'Pankreas ve mide kanserlerinde müsin salınımı ile tekrarlayan gezici venöz trombozlar.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü uzak metastazı olmayan (M0) ancak bölgesel lenf nodu tutulumu bulunan (N1-N3) olgular Evre IV DEĞİL; primer tümörün boyutuna göre Evre II veya Evre III (lokal-bölgesel ileri evre) olarak sınıflandırılır. Bir tümörün Evre IV olabilmesi için kural olarak uzak organ metastazının (M1) bulunması gerekir. A, B, C ve D seçenekleri TNM sınıflamasının temel kurallarıdır."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-11",
+    "id": "prac-tumor-011",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 11,
-    "slideTitle": "Tümör Derecelendirmesi (Grading) İlkeleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Klinik Evreleme (cTNM) ile Patolojik Cerrahi Evreleme (pTNM) Karşılaştırması",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Tümör Derecelendirmesi (Grading) İlkeleri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Klinik evreleme (cTNM) ile patolojik cerrahi evreleme (pTNM) arasındaki farklar ve evreleme terminolojisi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Diferansiasyon derecesi ve mitoz sıklığına göre Grade I-IV sınıflaması.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) cTNM preoperatif fizik muayene, radyolojik görüntülemeler ve biyopsilerle ameliyat öncesi yapılır.",
+      "B) pTNM rezeke edilen cerrahi spesimenin ve çıkarılan lenf nodlarının mikroskobik histopatolojik incelenmesine dayanır.",
+      "C) Neoadjuvan (ameliyat öncesi) kemoradyoterapi uygulandıktan sonra çıkarılan spesimende yapılan patolojik evreleme 'ypTNM' olarak kodlanır.",
+      "D) Cerrahi sınırda mikroskobik olarak tümör hücresi saptanması patoloji raporunda 'R0 rezeksiyon' olarak tanımlanır.",
+      "E) pTNM, cerrahın veya radyoloğun gözden kaçırdığı mikroskobik lenf nodu metastazlarını göstererek klinik evreyi yukarı taşıyabilir (upstaging)."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümör Derecelendirmesi (Grading) İlkeleri, patolojik ve klinik olarak 'Diferansiasyon derecesi ve mitoz sıklığına göre Grade I-IV sınıflaması.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü cerrahi sınırda mikroskobik tümör kalması 'R1 rezeksiyon' olarak adlandırılır. 'R0 rezeksiyon', mikroskobik olarak tüm cerrahi sınırların temiz (tümörsüz) olduğunu ifade eder. 'R2 rezeksiyon' ise cerrahın gözle görülür makroskobik tümör bıraktığı durumdur. A, B, C ve E seçenekleri doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-12",
+    "id": "prac-tumor-012",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 12,
-    "slideTitle": "Tümör Evrelemesi (Staging) ve TNM Sistemi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Histopatolojik Biyopsi Yöntemleri ve Doku Takibi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Tümör Evrelemesi (Staging) ve TNM Sistemi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Histopatolojik biyopsi yöntemleri ve doku takibi ilkeleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Primer tümör boyutu/derinliği (T), lenf nodu (N) ve uzak metastaz (M) parametreleri.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Eksizyonel biyopsi küçük şüpheli kitlelerin salim doku marjini ile tamamen çıkarılması olup hem tanı hem tedavi sağlar.",
+      "B) Tru-cut (kalın iğne) biyopsisinin İİAB'ye temel üstünlüğü doku mimarisini koruyarak in situ-invaziv karsinom ayrımına olanak sağlamasıdır.",
+      "C) Biyopsi dokusunun fiksasyonunda altın standart %10 nötral tamponlu formalindir ve doku hacminin en az 10-20 katı fiksatif kullanılmalıdır.",
+      "D) Fiksasyonda gecikme olması doku morfolojisini etkilemez, yalnızca nükleer boyanmayı hafifçe artırarak tanıyı kolaylaştırır.",
+      "E) İnsizyonel biyopsi çevre dokulara zarar vermeden çıkarılamayacak büyük kitlelerden temsili doku parçası almak için uygulanır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Tümör Evrelemesi (Staging) ve TNM Sistemi, patolojik ve klinik olarak 'Primer tümör boyutu/derinliği (T), lenf nodu (N) ve uzak metastaz (M) parametreleri.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü fiksasyonda gecikme hücresel otolize, bakteriyel çürümeye, nükleer detay kaybına ve antijenlerin maskelenmesine yol açar; bu durum immünohistokimya ve FISH/NGS gibi moleküler genetik analizleri tamamen imkansız hale getirir. A, B, C ve E seçenekleri doğru biyopsi ve fiksasyon prensipleridir."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-13",
+    "id": "prac-tumor-013",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 13,
-    "slideTitle": "Evre vs Derece: Prognostik Karşılaştırma",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Evre vs Derece: Prognostik Karşılaştırma' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) Sağkalım ve tedavi seçiminde Evrelemenin Derecelendirmeye mutlak üstünlüğü.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Evre vs Derece: Prognostik Karşılaştırma, patolojik ve klinik olarak 'Sağkalım ve tedavi seçiminde Evrelemenin Derecelendirmeye mutlak üstünlüğü.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-14",
-    "deckId": "learn-tumor-evreleme-lab-tanisi",
-    "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
-    "slideNumber": 14,
-    "slideTitle": "Kanser Tanısında Histopatolojik Biyopsi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Kanser Tanısında Histopatolojik Biyopsi' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
-    "options": [
-      "A) Eksizyonel, insizyonel, tru-cut (kalın iğne) ve fırça biyopsisi prensipleri.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Kanser Tanısında Histopatolojik Biyopsi, patolojik ve klinik olarak 'Eksizyonel, insizyonel, tru-cut (kalın iğne) ve fırça biyopsisi prensipleri.' mekanizması ile karakterizedir."
-  },
-  {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-15",
-    "deckId": "learn-tumor-evreleme-lab-tanisi",
-    "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
-    "slideNumber": 15,
     "slideTitle": "İntraoperatif Konsültasyon (Frozen Section)",
-    "discipline": "Tıbbi Patoloji",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'İntraoperatif Konsültasyon (Frozen Section)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "İntraoperatif konsültasyon (frozen section) yöntemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Ameliyat esnasında cerrahi sınır ve doku benign/malign ayrımı.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Taze doku örneği kriyostatta -20°C ila -30°C'de dondurularak 10-15 dakika içinde cerraha mikroskobik tanı verilir.",
+      "B) Cerrahi rezeksiyon sınırlarının tümörden temiz olup olmadığının kontrolü en temel endikasyonlarından biridir.",
+      "C) Tiroid foliküler neoplazmlarında kapsüler veya vasküler invazyonu hızla ekarte ederek foliküler adenom-karsinom ayrımı yapmak için idealdir.",
+      "D) Dondurma artefaktı hücresel detayları bozabileceğinden kesin tanı mutlaka daha sonra rutin parafin kesitlerle teyit edilir.",
+      "E) Kemik ve kalsifiye lezyonlar kriyostat mikrotomunda dondurularak kesilemediği için frozen incelemeye uygun değildir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. İntraoperatif Konsültasyon (Frozen Section), patolojik ve klinik olarak 'Ameliyat esnasında cerrahi sınır ve doku benign/malign ayrımı.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü tiroid foliküler lezyonlarında foliküler adenom ile karsinom ayrımı tümör kapsülünün ve kapsüler kan damarlarının boydan boya taranmasını (kapsüler/vasküler invazyon) gerektirir. Bu inceleme ameliyat sırasında 1-2 dondurulmuş kesitle ASLA yapılamaz; frozen section bu lezyonlarda KESİNLİKLE ENDİKE DEĞİLDİR ve yanıltıcıdır. Kesin tanı kalıcı parafin kesitlerle konulur. A, B, D ve E seçenekleri doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-16",
+    "id": "prac-tumor-014",
+    "deckId": "learn-tumor-evreleme-lab-tanisi",
+    "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
+    "slideNumber": 14,
+    "slideTitle": "Sitolojik Tanı Yöntemleri: Eksfoliyatif Sitoloji ve İnce İğne Aspirasyonu (İİAB)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sitolojik tanı yöntemleri (eksfoliyatif sitoloji ve İİAB) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Malign hücrelerin yüzeylerden ve sıvılara kolayca dökülebilmesinin temel nedeni hücreler arası adezyon ve E-kaderin kaybıdır.",
+      "B) Servikovajinal Pap testi (Pap smear) servikal displazilerin erken teşhisini sağlayarak serviks kanseri mortalitesini dramatik azaltmıştır.",
+      "C) İnce iğne aspirasyon biyopsisi (İİAB) tiroid nodülleri ve tükürük bezi kitlelerinde ilk basamakta tercih edilen ucuz ve minimal invaziv bir yöntemdir.",
+      "D) İİAB doku mimarisini ve stromal ilişkiyi mükemmel gösterdiği için tümörün invazyon derinliğini ve evresini kesin olarak belirler.",
+      "E) Plevra veya periton sıvısında malign hücrelerin sitolojik olarak saptanması hastayı doğrudan Evre IV metastatik evreye sokar."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü İİAB yalnızca aspire edilen izole hücreleri veya küçük hücre kümelerini gösterir; doku mimarisini (stroma-tümör ilişkisini) ve bazal membran bütünlüğünü GÖSTEREMEZ. Bu nedenle tümörün invaziv olup olmadığını (in situ - invaziv ayrımını) ve invazyon derinliğini belirleyemez. A, B, C ve E seçenekleri sitolojinin temel prensipleridir."
+  },
+  {
+    "id": "prac-tumor-015",
+    "deckId": "learn-tumor-evreleme-lab-tanisi",
+    "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
+    "slideNumber": 15,
+    "slideTitle": "İmmünohistokimya (İHK): Prensipler ve Tanısal Strateji",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İmmünohistokimya (İHK) yöntemi, prensipleri ve boyanma paternleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Parafin kesitlerde formalin fiksasyonunun maskelediği antijenik epitoplar mikrodalga veya ısı ile antijen geri kazanımı (retrieval) yapılarak açığa çıkarılır.",
+      "B) Kromojenik reaksiyonda en sık kullanılan substrat DAB (diaminobenzidin) olup antijen bölgesinde kalıcı kahverengi çökelti oluşturur.",
+      "C) Östrojen reseptörü (ER), Progesteron reseptörü (PR) ve Ki-67 gibi proteinler tanısal olarak membranöz boyanma vermek zorundadır.",
+      "D) Sitokeratin ve Vimentin sitoplazmik; HER2/neu ve CD20 ise membranöz boyanma paternine sahiptir.",
+      "E) İHK; anaplastik tümörlerde köken tayini, primer odak tespiti ve hedefe yönelik tedavi seçiminde temel rol oynar."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü Östrojen Reseptörü (ER), Progesteron Reseptörü (PR), Ki-67 ve TTF-1 gibi moleküller transkripsiyon faktörü ve nükleer reseptör oldukları için MUTLAK NÜKLEER boyanma vermek zorundadır; sitoplazmik veya membranöz boyanmaları artefakt kabul edilir. Membranöz boyanma HER2, CD20 gibi yüzey reseptörlerine özgüdür. A, B, D ve E seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-tumor-016",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 16,
-    "slideTitle": "Sitolojik Yöntemler: İİAB ve Eksfolyatif Sitoloji",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Anaplastik ve Kötü Diferansiye Tümörlerde İHK Köken Paneli",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Sitolojik Yöntemler: İİAB ve Eksfolyatif Sitoloji' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Işık mikroskobunda hiçbir diferansiasyon göstermeyen 'büyük hücreli indiferansiye/anaplastik malign tümör' olgusunda uygulanan İHK köken paneli ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) İnce iğne aspirasyonu, servikal Pap-smear, plevral/peritoneal sıvı sitolojisi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Sitokeratin pozitifliği tümörün mezenkimal kökenli bir sarkom olduğunu kanıtlar.",
+      "B) CD45 (LCA - Lökosit Ortak Antijeni) pozitifliği lezyonun hematolenfoid kökenli bir malign lenfoma olduğunu gösterir.",
+      "C) Vimentin pozitifliği yalnızca karsinomlarda görülür, sarkomlarda kesinlikle negatiftir.",
+      "D) S100 ve SOX10 pozitifliği karsinom tanısını doğrulamada en özgül belirteç ikilisidir.",
+      "E) Çizgili kas diferansiasyonunu (rabdomyosarkom) doğrulamada nükleer Miyogenin negatif olmalıdır."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Sitolojik Yöntemler: İİAB ve Eksfolyatif Sitoloji, patolojik ve klinik olarak 'İnce iğne aspirasyonu, servikal Pap-smear, plevral/peritoneal sıvı sitolojisi.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. İndiferansiye bir neoplazmda CD45 (LCA - Leukocyte Common Antigen) pozitifliği tümörün lenfoma olduğunu kanıtlar. A yanlıştır (Sitokeratin epitelyal karsinom belirtecidir). C yanlıştır (Vimentin mezenkimal doku/sarkom belirtecidir). D yanlıştır (S100 ve SOX10 malign melanom belirteçleridir). E yanlıştır (Miyogenin çizgili kas diferansiasyonu için kuvvetli pozitif olmalıdır)."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-17",
+    "id": "prac-tumor-017",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 17,
-    "slideTitle": "İmmünohistokimya (İHK) Tanı Panelleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Nöroendokrin ve Vasküler Tümörlerin İmmünohistokimyasal Belirteçleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'İmmünohistokimya (İHK) Tanı Panelleri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Nöroendokrin ve vasküler tümörlerin immünohistokimyasal belirteçleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Andiferansiye tümörlerde antijenik profil ile köken tayini.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Kromogranin A, nörosekretuar granül proteini olup nöroendokrin diferansiasyon için özgüllüğü (spesifisitesi) en yüksek İHK belirtecidir.",
+      "B) Sinaptofizin presinaptik küçük vezikül proteini olup nöroendokrin tümörlerin tanısında son derece duyarlı bir sitoplazmik belirteçtir.",
+      "C) CD31 (PECAM-1), vasküler endotel hücreleri ve damarsal tümörler (anjiyosarkom) için en duyarlı ve özgül belirteçtir.",
+      "D) CD34 sadece vasküler endotelde boyanır; stromal tümörlerde (GIST) veya soliter fibröz tümörde asla pozitifleşmez.",
+      "E) Küçük hücreli akciğer karsinoması (SCLC) ve karsinoid tümörler Sinaptofizin ve Kromogranin A pozitifliği gösterir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. İmmünohistokimya (İHK) Tanı Panelleri, patolojik ve klinik olarak 'Andiferansiye tümörlerde antijenik profil ile köken tayini.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü CD34 vasküler endotelin yanı sıra hematopoetik kök hücrelerde, Soliter Fibröz Tümörde (SFT), Dermatofibrosarkoma Protuberans'ta (DFSP) ve Gastrointestinal Stromal Tümörlerde (GIST) de güçlü ve diffüz biçimde pozitiftir. A, B, C ve E seçenekleri doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-18",
+    "id": "prac-tumor-018",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 18,
-    "slideTitle": "Epitelyal ve Mezenkimal Belirteçler (Sitokeratin vs Vimentin)",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Metastatik Karsinomlarda Primer Odak Tayini İçin İHK Belirteçleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Epitelyal ve Mezenkimal Belirteçler (Sitokeratin vs Vimentin)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Bilinmeyen primer odaklı metastatik karsinomlarda primer organ odağını belirlemek için kullanılan İHK belirteçleri ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Karsinomda sitokeratin pozitifliği; sarkomda vimentin pozitifliği.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Nükleer CDX2 pozitifliği — Gastrointestinal sistem / Kolorektal adenokarsinom",
+      "B) Nükleer TTF-1 ve sitoplazmik Napsin A pozitifliği — Akciğer adenokarsinomu",
+      "C) PSA ve nükleer NKX3.1 pozitifliği — Prostat adenokarsinomu",
+      "D) Nükleer GATA3 pozitifliği — Meme ve ürotelyal (mesane) karsinomları",
+      "E) Nükleer WT1 pozitifliği — Mide taşlı yüzük hücreli karsinomu"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Epitelyal ve Mezenkimal Belirteçler (Sitokeratin vs Vimentin), patolojik ve klinik olarak 'Karsinomda sitokeratin pozitifliği; sarkomda vimentin pozitifliği.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü WT1 (Wilms Tümörü 1) nükleer pozitifliği Over Yüksek Dereceli Seröz Karsinomu ve malign mezotelyomada pozitiftir; mide taşlı yüzük hücreli karsinomunda WT1 negatiftir. A, B, C ve D seçeneklerindeki primer odak-İHK belirteç eşleştirmeleri tamamen doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-19",
+    "id": "prac-tumor-019",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 19,
-    "slideTitle": "Lenfoid ve Nöroendokrin Belirteçler (CD45, Sinaptofizin)",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Terapötik ve Prognostik İmmünohistokimyasal Belirteçler",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Lenfoid ve Nöroendokrin Belirteçler (CD45, Sinaptofizin)' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Meme karsinomunda terapötik ve prognostik İHK belirteçlerinin değerlendirilmesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Lökosit ortak antijeni CD45 ve nöroendokrin granül belirteci kromogranin.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Östrojen (ER) ve Progesteron (PR) reseptörleri nükleer boyanır ve hormonoterapiden (tamoksifen) fayda göreceğini predikte eder.",
+      "B) HER2/neu immünohistokimyasal olarak membranöz boyanma paternine göre 0'dan 3+'a kadar skorlanır.",
+      "C) HER2 İHK skoru 2+ (şüpheli/equivocal) bulunan olgularda anti-HER2 tedavi kararı öncesinde mutlaka FISH ile gen amplifikasyonu aranmalıdır.",
+      "D) Ki-67 proliferasyon indeksinin yüksek olması tümörün agresifliğini gösterirken sitotoksik kemoterapiye duyarlılığı artırır.",
+      "E) HER2 İHK skoru 1+ olan olgular doğrudan trastuzumab tedavisi için kesin pozitif kabul edilir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Lenfoid ve Nöroendokrin Belirteçler (CD45, Sinaptofizin), patolojik ve klinik olarak 'Lökosit ortak antijeni CD45 ve nöroendokrin granül belirteci kromogranin.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü HER2 İHK skoru 0 ve 1+ olan olgular kesinlikle NEGATİF kabul edilir ve trastuzumab verilmez. Yalnızca İHK skoru 3+ olanlar veya İHK 2+ olup FISH ile gen amplifikasyonu kanıtlanan olgular anti-HER2 tedaviden fayda görür. A, B, C ve D seçenekleri doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-20",
+    "id": "prac-tumor-020",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 20,
-    "slideTitle": "Serum Tümör Biyomarkerları İlkeleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Serum Tümör Belirteçleri: Genel İlkeler, Sınırlamalar ve Doğru Klinik Kullanım",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Serum Tümör Biyomarkerları İlkeleri' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Serum tümör belirteçlerinin genel özellikleri, biyolojik sınırlamaları ve klinik kullanım alanları ile ilgili aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
     "options": [
-      "A) Tarama testi olarak yetersizlik; tedavi yanıtı ve nüks takibinde vazgeçilmezlik.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Serum tümör belirteçleri yüksek duyarlılık ve özgüllükleri nedeniyle asemptomatik genel popülasyonda kanser tarama testi olarak rutin uygulanmalıdır.",
+      "B) Kanda bir tümör belirtecinin yüksek saptanması doku biyopsisi yapılmaksızın tek başına kesin kanser tanısı koydurur.",
+      "C) Tümör belirteçlerinin en değerli klinik kullanım alanı, cerrahi/kemoterapiye yanıtın izlenmesi ve relaps/nüksün erken saptanmasıdır.",
+      "D) Benign enflamatuar durumlarda tümör belirteçleri kesinlikle yükselmez, sadece malignitelerde artar.",
+      "E) Erken evre (Evre I) tümörlerde kitle boyutu küçük olsa dahi serum tümör belirteçleri daima referans aralığının çok üzerindedir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Serum Tümör Biyomarkerları İlkeleri, patolojik ve klinik olarak 'Tarama testi olarak yetersizlik; tedavi yanıtı ve nüks takibinde vazgeçilmezlik.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle doğrudur. Serum tümör belirteçlerinin onkolojideki en temel ve kanıtlanmış kullanım alanı; cerrahi rezeksiyon sonrası düzeyin tabana inmesiyle tedavi yanıtının takibi ve remisyondaki hastada tekrar yükselmesiyle nüksün klinik/radyolojik bulgulardan aylar önce erken saptanmasıdır. A, B, D ve E seçenekleri yanlıştır (düşük özgüllük ve duyarlılık nedeniyle genel tarama ve tek başına kesin tanı testi olarak kullanılamazlar; benign durumlarda da yükselebilirler; erken evrede normal kalabilirler)."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-21",
+    "id": "prac-tumor-021",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 21,
-    "slideTitle": "CEA ve PSA Klinik Kullanımı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Majör Serum Tümör Belirteçleri ve Klinik İlişkileri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'CEA ve PSA Klinik Kullanımı' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Majör serum tümör belirteçleri ve ilişkili oldukları malign neoplazmlar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Kolorektal karsinom nüks takibinde CEA; prostat kanseri takibinde PSA.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) CEA (karsinoembriyonik antijen), özellikle kolorektal karsinom cerrahisi sonrası nüks takibinde altın standarttır.",
+      "B) AFP (alfa-fetoprotein), hepatosellüler karsinom ve testis yolk sac (vitellüs kesesi) tümörlerinin belirtecidir.",
+      "C) Testisin saf Seminomalarında kanda AFP düzeyi belirgin olarak yükselir ve tanı koydurur.",
+      "D) CA-125 overin seröz karsinomlarında, CA 19-9 ise pankreas ve safra yolu adenokarsinomlarında izlem belirtecidir.",
+      "E) Kalsitonin, tiroid bezinin parafolliküler C hücrelerinden kaynaklanan tiroid medüller karsinomunun özgül belirtecidir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. CEA ve PSA Klinik Kullanımı, patolojik ve klinik olarak 'Kolorektal karsinom nüks takibinde CEA; prostat kanseri takibinde PSA.' mekanizması ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü testis tümörlerinde saf Seminomada AFP ASLA YÜKSELMEZ! Kanda AFP yüksekliği mutlak bir non-seminomatöz germ hücreli tümör (özellikle Yolk Sac tümörü komponenti) kanıtıdır. A, B, D ve E seçenekleri doğru tümör belirteci ilişkileridir."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-22",
+    "id": "prac-tumor-022",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 22,
-    "slideTitle": "AFP ve CA-125 Klinik Kullanımı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Moleküler Onkoloji ve Genomik Tanı Yöntemleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'AFP ve CA-125 Klinik Kullanımı' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Kanser tanısında kullanılan moleküler onkoloji ve genomik yöntemlerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) HCC ve yolk sac tümöründe AFP; over karsinomu nüks takibinde CA-125.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Reaktif lenfoid hiperplazi ile lenfoma ayrımı — PCR ile IgH veya TCR gen yeniden düzenlenmelerinin monoklonalitesinin saptanması",
+      "B) Kronik miyeloid lösemi (KML) — t(9;22) BCR-ABL füzyon geni",
+      "C) Ewing sarkomu — t(11;22) EWS-FLI1 füzyon transkripti",
+      "D) Çocukluk çağı nöroblastomunda kötü prognoz — MYCN gen amplifikasyonu (double minutes / HSR)",
+      "E) Meme kanserinde HER2 gen amplifikasyonunun doğrulanması — PCR ile JAK2 V617F mutasyon analizi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. AFP ve CA-125 Klinik Kullanımı, patolojik ve klinik olarak 'HCC ve yolk sac tümöründe AFP; over karsinomu nüks takibinde CA-125.' mekanizması ile karakterizedir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü meme kanserinde HER2 gen amplifikasyonu JAK2 mutasyonu ile değil, Floresan In Situ Hibridizasyon (FISH) yöntemi ile doğrulanır. JAK2 V617F mutasyonu ise miyeloproliferatif neoplazmların (özellikle Polisitemia Vera) belirtecidir. A, B, C ve D seçeneklerindeki moleküler anomaliler ve hastalık ilişkileri tamamen doğrudur."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-23",
+    "id": "prac-tumor-023",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 23,
-    "slideTitle": "Moleküler Genetik Testler: FISH, PCR ve NGS",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Terapötik Karar Vermede Moleküler Hedefler, Minimal Kalıntı Hastalık ve Sıvı Biyopsi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Moleküler Genetik Testler: FISH, PCR ve NGS' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Hedefe yönelik tedaviler, minimal kalıntı hastalık ve sıvı biyopsi kavramları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Gen amplifikasyonu, translokasyon ve nokta mutasyonlarının moleküler tayini.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) Kolorektal kanserde anti-EGFR monoklonal antikor (setuksimab) tedavisinin etkili olabilmesi için KRAS geninin mutant olması gerekir.",
+      "B) Akciğer adenokarsinomunda EGFR ekzon 19 delesyonu olan hastalarda tirozin kinaz inhibitörleri (osimertinib vb.) etkilidir.",
+      "C) Minimal kalıntı hastalık (MRD) tespiti yalnızca klasik ışık mikroskobunda H&E boyasıyla yapılan bir incelemedir.",
+      "D) Sıvı biyopsi yalnızca primer kitle çıkarıldıktan sonra tümör dokusundan alınan sıvı örneklerinin incelenmesidir.",
+      "E) Malign melanomda BRAF V600E mutasyonu saptandığında anti-HER2 tedavisi ilk tercihtir."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Moleküler Genetik Testler: FISH, PCR ve NGS, patolojik ve klinik olarak 'Gen amplifikasyonu, translokasyon ve nokta mutasyonlarının moleküler tayini.' mekanizması ile karakterizedir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Akciğer adenokarsinomunda EGFR tirozin kinaz alanındaki aktivasyon mutasyonları (ekzon 19 delesyonu ve L858R) EGFR tirozin kinaz inhibitörlerine (TKI) yüksek duyarlılık sağlar. A yanlıştır (KRAS mutant olursa anti-EGFR tedaviye dirençlidir; yabani tip [wild-type] olmalıdır). C yanlıştır (MRD qRT-PCR veya akış sitometrisi ile moleküler düzeyde ölçülür). D yanlıştır (sıvı biyopsi periferik kandan plazma ctDNA analizidir). E yanlıştır (BRAF V600E mutasyonunda BRAF/MEK inhibitörleri verilir)."
   },
   {
-    "id": "learn-tumor-evreleme-lab-tanisi-pq-24",
+    "id": "prac-tumor-024",
     "deckId": "learn-tumor-evreleme-lab-tanisi",
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 24,
-    "slideTitle": "Sıvı Biyopsi ve Geleceğin Onkolojik Tanısı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Modern Patolojide Entegre Tanı, İmmünoterapi Biyobelirteçleri ve Dijital Patoloji",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı kapsamında 'Sıvı Biyopsi ve Geleceğin Onkolojik Tanısı' konusu ile ilgili olarak aşağıdakilerden hangisi en doğrudur?",
+    "question": "Modern patolojide immünoterapi biyobelirteçleri ve dijital patoloji devrimi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Dolaşımdaki tümör DNA'sı (ctDNA) ve dolaşan tümör hücreleri (CTC) analizi.",
-      "B) Yalnızca benign adenomlarda görülen fizyolojik bir durumdur",
-      "C) Hücre çekirdeğinin kendiliğinden erimesine yol açar",
-      "D) Sadece yaşlı hastalarda geçici olarak gözlenir",
-      "E) Tümör hücresinde protein sentezini tamamen durdurur"
+      "A) DNA uyumsuzluk onarım eksikliği (dMMR / MSI-H) olan tümörler çok sayıda neoantijen ürettikleri için anti-PD-1 immünoterapisine dramatik yanıt verirler.",
+      "B) Mikrosatellit instabilitesi (MSI-H), FDA tarafından tümörün çıktığı doku ve organdan bağımsız (tumor-agnostic) onay alan ilk biyobelirteçtir.",
+      "C) Tümör Mutasyon Yükü (TMB), tümörün megabazı başına düşen mutasyon sayısını ifade eder ve yüksekliği immünoterapi duyarlılığı ile ilişkilidir.",
+      "D) PD-1 / PD-L1 yolağı tümör hücrelerinin sitotoksik T hücrelerini aktive ederek otoimmünite geliştirmesini sağlar.",
+      "E) Dijital patoloji ve yapay zeka algoritmaları, mitotik indeks ve Ki-67 skorlamasında patologlar arasındaki değişkenliği azaltarak standardizasyon sağlar."
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğru seçenek A'dır. Sıvı Biyopsi ve Geleceğin Onkolojik Tanısı, patolojik ve klinik olarak 'Dolaşımdaki tümör DNA'sı (ctDNA) ve dolaşan tümör hücreleri (CTC) analizi.' mekanizması ile karakterizedir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü PD-1 / PD-L1 yolağı T hücrelerini aktive etmez; tam aksine tümör hücreleri yüzeylerindeki PD-L1 ile T hücresindeki PD-1 reseptörüne bağlanarak sitotoksik T lenfosit yanıtını frenler ve immün kaçış sağlar. İmmünoterapi ilaçları (anti-PD-1 / anti-PD-L1) bu freni kaldırarak T hücrelerinin tümörü yok etmesini sağlar. A, B, C ve E seçenekleri immünoterapi ve dijital patolojinin temel ilkeleridir."
   },
   {
     "id": "prac-sis-001",
