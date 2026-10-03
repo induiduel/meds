@@ -94,6 +94,31 @@ const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.El
   { id: 'automation', label: 'Otomasyon', hint: 'Yedek saati, AI anahtarı, çalışma penceresi', icon: Settings },
 ];
 
+// v3: sections grouped in the sidebar
+const SECTION_GROUP: Record<ManageSection, string> = {
+  inbox: 'Genel',
+  drafts: 'İçerik',
+  moderation: 'İçerik',
+  users: 'Topluluk',
+  system: 'Sistem',
+  scripts: 'Sistem',
+  deepseek: 'Sistem',
+  automation: 'Sistem',
+};
+
+// Density: one control shrinks every list and card in the console (remembered per device)
+type Density = 'comfy' | 'compact' | 'tight';
+const DENSITY_ZOOM: Record<Density, number> = { comfy: 1, compact: 0.92, tight: 0.84 };
+const DENSITY_LABEL: Record<Density, string> = { comfy: 'Rahat', compact: 'Kompakt', tight: 'Sıkı' };
+const readDensity = (): Density => {
+  try {
+    const v = localStorage.getItem('medsoru_manage_density');
+    return v === 'compact' || v === 'tight' ? v : 'comfy';
+  } catch {
+    return 'comfy';
+  }
+};
+
 export const ManageConsole: React.FC<ManageConsoleProps> = ({
   adminEmail,
   committees,
@@ -105,6 +130,15 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   fullscreen = true,
 }) => {
   const [section, setSection] = useState<ManageSection>('inbox');
+  const [density, setDensityState] = useState<Density>(readDensity);
+  const setDensity = (d: Density) => {
+    setDensityState(d);
+    try {
+      localStorage.setItem('medsoru_manage_density', d);
+    } catch {
+      /* private mode: density lasts this visit */
+    }
+  };
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
 
@@ -560,8 +594,10 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           </div>
         </div>
         <nav aria-label="Yönetim bölümleri" className="flex lg:flex-col gap-1 px-2 py-2 lg:px-3 lg:py-0 overflow-x-auto flex-1 min-w-0">
-          {SECTIONS.map((sec) => {
+          {SECTIONS.map((sec, i) => {
             const on = section === sec.id;
+            const group = SECTION_GROUP[sec.id];
+            const groupStart = i === 0 || SECTION_GROUP[SECTIONS[i - 1].id] !== group;
             const Icon = sec.icon;
             const badge =
               sec.id === 'inbox'
@@ -572,8 +608,11 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                     ? activity.length
                     : undefined;
             return (
+              <React.Fragment key={sec.id}>
+              {groupStart && (
+                <span className="hidden lg:block px-3 pt-3 pb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3">{group}</span>
+              )}
               <button
-                key={sec.id}
                 type="button"
                 onClick={() => setSection(sec.id)}
                 aria-current={on ? 'page' : undefined}
@@ -587,6 +626,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                   <span className="hidden lg:inline font-mono text-[12px] text-ink-3">{badge}</span>
                 )}
               </button>
+              </React.Fragment>
             );
           })}
         </nav>
@@ -604,6 +644,22 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           <div className="min-w-0 flex-1">
             <h2 className="m-0 font-display font-bold text-[20px] sm:text-[22px] tracking-[-0.02em] leading-tight">{current.label}</h2>
             <p className="m-0 text-[13px] text-ink-2 truncate">{current.hint}</p>
+          </div>
+          <div role="radiogroup" aria-label="Yoğunluk" className="hidden sm:inline-flex gap-0.5 bg-canvas rounded-[11px] p-[3px] shrink-0">
+            {(['comfy', 'compact', 'tight'] as Density[]).map((d) => (
+              <button
+                key={d}
+                type="button"
+                role="radio"
+                aria-checked={density === d}
+                onClick={() => setDensity(d)}
+                className={`h-8 px-2.5 rounded-[8px] text-[12.5px] cursor-pointer whitespace-nowrap ${
+                  density === d ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.12)]' : 'text-ink-2 hover:text-ink'
+                }`}
+              >
+                {DENSITY_LABEL[d]}
+              </button>
+            ))}
           </div>
           <label className="sr-only" htmlFor="manage-committee">Kurul</label>
           <select
@@ -637,7 +693,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           </div>
         )}
 
-        <div className="flex-1 min-h-0 overflow-y-auto px-4 sm:px-6 py-4">
+        <div className="flex-1 min-h-0 overflow-y-auto px-4 sm:px-6 py-4" data-density={density} style={{ zoom: DENSITY_ZOOM[density] } as React.CSSProperties}>
           {section === 'inbox' && (
             <div className="flex flex-col gap-3">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
