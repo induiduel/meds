@@ -39,6 +39,8 @@ import { AdminScriptsTab } from '../AdminScriptsTab';
 import { AdminDriveSyncSettings } from '../AdminDriveSyncSettings';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 import { ManageDraftsSection } from './ManageDraftsSection';
+import { ManageDataSection } from './ManageDataSection';
+import { Table2 } from 'lucide-react';
 import { consoleLogBuffer, ManageLogEntry } from './ConsoleLogBuffer';
 import {
   DEFAULT_MANAGE_SETTINGS,
@@ -70,7 +72,7 @@ import {
   ManageServiceItem,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'inbox' | 'drafts' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
+export type ManageSection = 'inbox' | 'data' | 'drafts' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -86,6 +88,7 @@ interface ManageConsoleProps {
 
 const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.ElementType }[] = [
   { id: 'inbox', label: 'Gelen Kutusu', hint: 'Bildirim, yorum, taslak ve uyarılar', icon: Inbox },
+  { id: 'data', label: 'Tüm veriler', hint: 'Listele, sırala, seç, toplu işlem, CSV', icon: Table2 },
   { id: 'drafts', label: 'Taslaklar', hint: 'Topla, birleştir, sil, düzenle, AI ile dönüştür', icon: Layers },
   { id: 'moderation', label: 'Moderasyon', hint: 'Hatalı soruyu gör ve düzelt', icon: Wrench },
   { id: 'users', label: 'Kullanıcılar', hint: 'Kim ne kadar işlem yaptı', icon: Users },
@@ -97,6 +100,7 @@ const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.El
 // v3: sections grouped in the sidebar
 const SECTION_GROUP: Record<ManageSection, string> = {
   inbox: 'Genel',
+  data: 'İçerik',
   drafts: 'İçerik',
   moderation: 'İçerik',
   users: 'Topluluk',
@@ -815,6 +819,10 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                 </section>
               )}
             </div>
+          )}
+
+          {section === 'data' && (
+            <ManageDataSection adminEmail={adminEmail} questions={questions} committees={committees} onRefreshData={onRefreshData} />
           )}
 
           {section === 'drafts' && (
