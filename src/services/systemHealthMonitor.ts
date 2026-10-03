@@ -430,7 +430,14 @@ class SystemHealthMonitor {
       keysReport.push(...(serverRes.data.keys || []));
       serverGroqConfigured = Boolean(serverRes.data.groqConfigured);
     } else {
-      keysReport.push({ label: 'Sunucu AI Anahtarları', status: 'error', details: serverRes.error || 'Sunucuya ulaşılamadı.' });
+      const isStaticOrNotJson = (serverRes.error || '').includes('HTML/Statik') || serverRes.status === 404 || serverRes.status === 405;
+      keysReport.push({
+        label: 'Sunucu AI Anahtarları',
+        status: isStaticOrNotJson ? 'not_configured' : 'error',
+        details: isStaticOrNotJson
+          ? 'Statik barındırma ortamı aktif (Node.js API sunucusu bu etki alanında doğrudan çalışmıyor). İstemci modu veya özel API tüneli kullanılabilir.'
+          : (serverRes.error || 'Sunucuya ulaşılamadı.')
+      });
     }
 
     const anyKeyWorking = keysReport.some(k => k.status === 'ok');

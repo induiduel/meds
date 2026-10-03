@@ -48,6 +48,8 @@ export interface GlossaryContextValue {
 // ---------------------------------------------------------------------------
 // Context
 // ---------------------------------------------------------------------------
+export const GlossaryContext = createContext<GlossaryContextValue | null>(null);
+
 const fallbackGlossaryContext: GlossaryContextValue = {
   activeState: null,
   showTerm: () => {},
