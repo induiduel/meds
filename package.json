@@ -31,6 +31,8 @@
     "rag:index:all": "node scripts/index-rag-knowledge.mjs --limit 10000",
     "decks:build": "python scripts/build_learning_decks.py",
     "sync:deepseek": "python scripts/sync_deepseek_data.py",
+    "sync:drive": "node scripts/orchestrate_drive_curriculum_ai.mjs",
+    "sync:drive:dry": "node scripts/orchestrate_drive_curriculum_ai.mjs --dry-run",
     "glossary:build": "python scripts/generate_medical_glossary.py",
     "git:sync": "node scripts/auto-git-sync.mjs --once",
     "git:watch": "node scripts/auto-git-sync.mjs --interval=20"

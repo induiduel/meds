@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   ShieldCheck,
+  User,
   Inbox,
   Wrench,
   Users,
@@ -51,6 +52,7 @@ import {
   InboxReport,
   InboxComment,
   UserActivityRow,
+  ManageUser,
   loadManageInbox,
   loadManageUsers,
   normKey,
@@ -127,7 +129,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const [editingDraft, setEditingDraft] = useState<QuestionItem | null>(null);
 
   // Users
-  const [registeredUsers, setRegisteredUsers] = useState<Array<{ uid?: string; email?: string; displayName?: string; studentNumber?: string; role?: string; createdAt?: string; lastLoginAt?: string }>>([]);
+  const [registeredUsers, setRegisteredUsers] = useState<ManageUser[]>([]);
+  const [userTab, setUserTab] = useState<'registered' | 'activity'>('registered');
   const [userQuery, setUserQuery] = useState('');
   const [selectedUserKey, setSelectedUserKey] = useState<string | null>(null);
   const [mailUserKey, setMailUserKey] = useState<string | null>(null);
@@ -231,6 +234,18 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       (u) => u.name.toLowerCase().includes(q) || (u.email || '').toLowerCase().includes(q)
     );
   }, [activity, userQuery]);
+
+  const filteredRegisteredUsers = useMemo(() => {
+    const q = userQuery.toLowerCase().trim();
+    if (!q) return registeredUsers;
+    return registeredUsers.filter((u) => {
+      const name = (u.displayName || '').toLowerCase();
+      const email = (u.email || '').toLowerCase();
+      const num = (u.studentNumber || '').toLowerCase();
+      const uid = (u.uid || '').toLowerCase();
+      return name.includes(q) || email.includes(q) || num.includes(q) || uid.includes(q);
+    });
+  }, [registeredUsers, userQuery]);
 
   const selectedReport = useMemo(
     () => reports.find((r) => r.id === (selectedReportId || pendingReports[0]?.id)) || null,
@@ -343,18 +358,56 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     }
   };
 
+  const handleDeleteRegisteredUser = async (user: ManageUser) => {
+    if (!user.uid) {
+      setNotice('Silinecek kullanıcının kimlik (UID) bilgisi bulunamadı.');
+      return;
+    }
+    const isSelf =
+      (user.email || '').toLowerCase() === adminEmail.toLowerCase() ||
+      (user.email || '').toLowerCase() === 'nofrostlife@gmail.com';
+    if (isSelf) {
+      setNotice('Ana yönetici hesabı silinemez.');
+      return;
+    }
+    setBusyAction(`delreg-${user.uid}`);
+    try {
+      const res = await deleteManageUser(adminEmail, user.uid);
+      if (res.ok) {
+        setRegisteredUsers((prev) => prev.filter((r) => r.uid !== user.uid));
+        if (selectedUserKey && (selectedUserKey === normKey(user.email) || selectedUserKey === normKey(user.uid))) {
+          setSelectedUserKey(null);
+        }
+      }
+      setNotice(res.message);
+    } finally {
+      setBusyAction(null);
+      setConfirmDeleteUserKey(null);
+    }
+  };
+
   const handleDeleteUser = async (u: UserActivityRow) => {
     // Kayıt defteri eşleşmesi: e-posta, uid veya görünen ad (katkılar isimle de yazılır).
     const reg = regOf(u);
-    if (!reg?.uid) {
-      setNotice('Bu kullanıcı kayıt defterinde bulunamadı. Yalnızca isimsiz katkı izi olabilir; önce listeyi yenileyin.');
+    const targetUid = reg?.uid || (u.key.startsWith('std-') || u.key.length >= 10 ? u.key : null);
+    if (!targetUid) {
+      setNotice('Bu kullanıcı kayıt defterinde bulunamadı. Yalnızca isimsiz katkı izi olabilir; "Katkıları Temizle" butonunu kullanabilirsiniz.');
+      return;
+    }
+    const isSelf =
+      (u.email || reg?.email || '').toLowerCase() === adminEmail.toLowerCase() ||
+      (u.email || reg?.email || '').toLowerCase() === 'nofrostlife@gmail.com';
+    if (isSelf) {
+      setNotice('Ana yönetici hesabı silinemez.');
       return;
     }
     setBusyAction(`deluser-${u.key}`);
     try {
-      const res = await deleteManageUser(adminEmail, reg.uid);
+      const res = await deleteManageUser(adminEmail, targetUid);
       if (res.ok) {
-        setRegisteredUsers((prev) => prev.filter((r) => r.uid !== reg.uid));
+        setRegisteredUsers((prev) =>
+          prev.filter((r) => r.uid !== targetUid && r.email?.toLowerCase() !== (u.email || '').toLowerCase())
+        );
         if (selectedUserKey === u.key) setSelectedUserKey(null);
       }
       setNotice(res.message);
@@ -381,8 +434,14 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   };
 
   const handleSendMail = async () => {
-    const u = activity.find((x) => x.key === mailUserKey);
-    const to = u?.email || '';
+    let to = '';
+    const fromReg = registeredUsers.find((r) => r.email === mailUserKey || r.uid === mailUserKey);
+    if (fromReg?.email) {
+      to = fromReg.email;
+    } else {
+      const u = activity.find((x) => x.key === mailUserKey);
+      to = u?.email || '';
+    }
     if (!to || !mailSubject.trim() || !mailBody.trim()) {
       setNotice('Alıcı, konu ve mesaj zorunludur.');
       return;
@@ -779,92 +838,419 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           )}
 
           {section === 'users' && (
-            <div className="flex flex-col gap-3">
-              <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field max-w-md">
-                <Search className="w-4 h-4 text-ink-2 shrink-0" />
-                <span className="sr-only">Kullanıcı ara</span>
-                <input value={userQuery} onChange={(e) => setUserQuery(e.target.value)} placeholder="İsim veya e-posta ara" className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px]" />
-              </label>
-              <div className="rounded-xl border border-line overflow-x-auto">
-                <table className="w-full text-[14px] border-collapse min-w-[760px]">
-                  <thead className="bg-canvas text-[12px] text-ink-2">
-                    <tr>
-                      <th scope="col" className="text-left font-semibold px-3 py-2">Kullanıcı</th>
-                      <th scope="col" className="text-right font-semibold px-3 py-2">Soru</th>
-                      <th scope="col" className="text-right font-semibold px-3 py-2">Parça</th>
-                      <th scope="col" className="text-right font-semibold px-3 py-2">Şık</th>
-                      <th scope="col" className="text-right font-semibold px-3 py-2">Bildirim</th>
-                      <th scope="col" className="text-right font-semibold px-3 py-2">Yorum</th>
-                      <th scope="col" className="text-right font-semibold px-3 py-2">Toplam</th>
-                      <th scope="col" className="text-right font-semibold px-3 py-2"><span className="sr-only">İşlemler</span></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredUsers.slice(0, 100).map((u) => {
-                      const isSelfAdmin = (u.email || '').toLowerCase() === adminEmail.toLowerCase();
-                      const confirming = confirmDeleteUserKey === u.key;
-                      const confirmingPurge = confirmPurgeKey === u.key;
-                      const deleting = busyAction === `deluser-${u.key}`;
-                      const purging = busyAction === `purge-${u.key}`;
-                      const hasAccount = Boolean(regOf(u));
-                      return (
-                      <tr key={u.key} onClick={() => { setSelectedUserKey(selectedUserKey === u.key ? null : u.key); setConfirmDeleteUserKey(null); }}
-                        className={`border-t border-line-soft cursor-pointer ${selectedUserKey === u.key ? 'bg-accent-soft/40' : 'hover:bg-[#FAFBFC]'}`}>
-                        <td className="px-3 py-2">
-                          <div className="font-semibold truncate max-w-[240px]">{u.name}</div>
-                          {u.email && <div className="text-[12px] text-ink-3 truncate max-w-[240px]">{u.email}</div>}
-                        </td>
-                        <td className="px-3 py-2 text-right font-mono">{u.questions}</td>
-                        <td className="px-3 py-2 text-right font-mono">{u.fragments}</td>
-                        <td className="px-3 py-2 text-right font-mono">{u.options}</td>
-                        <td className="px-3 py-2 text-right font-mono">{u.reports}</td>
-                        <td className="px-3 py-2 text-right font-mono">{u.comments}</td>
-                        <td className="px-3 py-2 text-right font-mono font-bold">{u.total}</td>
-                        <td className="px-3 py-2 text-right whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
-                          {u.email && (
-                            <button type="button" title={`${u.name} kullanıcısına e-posta gönder`}
-                              onClick={() => { setMailUserKey(u.key); setMailSubject(''); setMailBody(''); }}
-                              className="h-8 px-2.5 mr-1.5 rounded-lg border border-line bg-white text-[12px] font-semibold text-ink-2 hover:text-accent hover:border-accent/50 cursor-pointer inline-flex items-center gap-1">
-                              <Mail className="w-3.5 h-3.5" /> Mail
-                            </button>
-                          )}
-                          {!isSelfAdmin && hasAccount && (
-                            <button type="button" title={confirming ? 'Onaylamak için tekrar bas' : `${u.name} kullanıcısını sil`}
-                              onClick={() => (confirming ? void handleDeleteUser(u) : setConfirmDeleteUserKey(u.key))}
-                              disabled={deleting}
-                              className={`h-8 px-2.5 rounded-lg text-[12px] font-semibold cursor-pointer inline-flex items-center gap-1 disabled:opacity-50 ${confirming ? 'bg-[#B4233C] text-white' : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'}`}>
-                              <Trash2 className="w-3.5 h-3.5" /> {deleting ? 'Siliniyor…' : confirming ? 'Emin misin?' : 'Sil'}
-                            </button>
-                          )}
-                          {!hasAccount && u.total > 0 && (
-                            <button type="button" title={confirmingPurge ? 'Onaylamak için tekrar bas' : `${u.name} isminin tüm katkı izlerini temizle (parça, şık, yorum, bildirim)`}
-                              onClick={() => (confirmingPurge ? void handlePurgeAuthor(u) : setConfirmPurgeKey(u.key))}
-                              disabled={purging}
-                              className={`h-8 px-2.5 rounded-lg text-[12px] font-semibold cursor-pointer inline-flex items-center gap-1 disabled:opacity-50 ${confirmingPurge ? 'bg-[#B4233C] text-white' : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'}`}>
-                              <Trash2 className="w-3.5 h-3.5" /> {purging ? 'Temizleniyor…' : confirmingPurge ? 'Emin misin?' : 'Temizle'}
-                            </button>
-                          )}
-                        </td>
-                      </tr>
-                      );
-                    })}
-                    {filteredUsers.length === 0 && (
-                      <tr><td colSpan={8} className="px-3 py-8 text-center text-ink-2">Kayıtlı işlem yok.</td></tr>
-                    )}
-                  </tbody>
-                </table>
+            <div className="flex flex-col gap-4">
+              {/* Sub-tab Navigation */}
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line-soft pb-3">
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => { setUserTab('registered'); setSelectedUserKey(null); setConfirmDeleteUserKey(null); }}
+                    className={`h-9 px-3.5 rounded-[10px] text-[13px] font-bold flex items-center gap-2 transition-all cursor-pointer ${
+                      userTab === 'registered'
+                        ? 'bg-accent text-white shadow-xs'
+                        : 'bg-field text-ink-2 hover:bg-line-soft hover:text-ink'
+                    }`}
+                  >
+                    <Users className="w-4 h-4" />
+                    <span>Kayıtlı Kullanıcılar (Sistem Hesapları)</span>
+                    <span className={`text-[11px] px-2 py-0.5 rounded-full font-mono font-bold ${
+                      userTab === 'registered' ? 'bg-white/20 text-white' : 'bg-line-2 text-ink'
+                    }`}>
+                      {registeredUsers.length}
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => { setUserTab('activity'); setSelectedUserKey(null); setConfirmDeleteUserKey(null); }}
+                    className={`h-9 px-3.5 rounded-[10px] text-[13px] font-bold flex items-center gap-2 transition-all cursor-pointer ${
+                      userTab === 'activity'
+                        ? 'bg-accent text-white shadow-xs'
+                        : 'bg-field text-ink-2 hover:bg-line-soft hover:text-ink'
+                    }`}
+                  >
+                    <Activity className="w-4 h-4" />
+                    <span>Amfi Katkı & Soru İstatistikleri</span>
+                    <span className={`text-[11px] px-2 py-0.5 rounded-full font-mono font-bold ${
+                      userTab === 'activity' ? 'bg-white/20 text-white' : 'bg-line-2 text-ink'
+                    }`}>
+                      {activity.length}
+                    </span>
+                  </button>
+                </div>
+
+                {/* Quick Metrics */}
+                <div className="flex items-center gap-2 text-[12px] text-ink-2">
+                  <span className="bg-field border border-line-2 px-2.5 py-1 rounded-lg">
+                    Toplam: <strong className="text-ink font-mono">{registeredUsers.length}</strong>
+                  </span>
+                  <span className="bg-field border border-line-2 px-2.5 py-1 rounded-lg">
+                    Öğrenci: <strong className="text-ink font-mono">{registeredUsers.filter((u) => u.role !== 'admin').length}</strong>
+                  </span>
+                  <span className="bg-amber-50 border border-amber-200 text-amber-800 px-2.5 py-1 rounded-lg font-medium">
+                    Yönetici: <strong className="font-mono">{registeredUsers.filter((u) => u.role === 'admin' || (u.email || '').toLowerCase() === 'nofrostlife@gmail.com').length}</strong>
+                  </span>
+                </div>
               </div>
+
+              {/* Search Bar */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field flex-1 max-w-md">
+                  <Search className="w-4 h-4 text-ink-2 shrink-0" />
+                  <span className="sr-only">Kullanıcı ara</span>
+                  <input
+                    value={userQuery}
+                    onChange={(e) => setUserQuery(e.target.value)}
+                    placeholder={userTab === 'registered' ? 'İsim, e-posta veya öğrenci no ara…' : 'İsim veya e-posta ara…'}
+                    className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px]"
+                  />
+                  {userQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setUserQuery('')}
+                      className="p-1 rounded text-ink-3 hover:text-ink cursor-pointer"
+                      title="Aramayı temizle"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                </label>
+                <div className="text-[12px] text-ink-3 font-medium">
+                  {userTab === 'registered'
+                    ? `Listelenen: ${filteredRegisteredUsers.length} / ${registeredUsers.length} kullanıcı`
+                    : `Listelenen: ${filteredUsers.length} / ${activity.length} aktivite`}
+                </div>
+              </div>
+
+              {/* VIEW 1: REGISTERED USERS TABLE */}
+              {userTab === 'registered' && (
+                <div className="rounded-xl border border-line overflow-x-auto bg-white shadow-2xs">
+                  <table className="w-full text-[14px] border-collapse min-w-[780px]">
+                    <thead className="bg-canvas text-[12px] text-ink-2 border-b border-line">
+                      <tr>
+                        <th scope="col" className="text-left font-bold text-ink px-3.5 py-2.5">Kullanıcı / Öğrenci</th>
+                        <th scope="col" className="text-left font-bold text-ink px-3.5 py-2.5">E-posta Adresi</th>
+                        <th scope="col" className="text-left font-bold text-ink px-3.5 py-2.5">Öğrenci No</th>
+                        <th scope="col" className="text-left font-bold text-ink px-3.5 py-2.5">Yetki Rolü</th>
+                        <th scope="col" className="text-left font-bold text-ink px-3.5 py-2.5">Kayıt Tarihi</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3.5 py-2.5 min-w-[180px]">İşlemler</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-line-soft">
+                      {filteredRegisteredUsers.map((u) => {
+                        const isSelfAdmin =
+                          (u.email || '').toLowerCase() === adminEmail.toLowerCase() ||
+                          (u.email || '').toLowerCase() === 'nofrostlife@gmail.com';
+                        const uKey = u.uid || u.email || 'user';
+                        const confirming = confirmDeleteUserKey === uKey;
+                        const deleting = busyAction === `delreg-${u.uid}`;
+                        const isAdminRole = u.role === 'admin' || isSelfAdmin;
+
+                        return (
+                          <tr
+                            key={uKey}
+                            onClick={() => {
+                              setSelectedUserKey(selectedUserKey === uKey ? null : uKey);
+                              setConfirmDeleteUserKey(null);
+                            }}
+                            className={`cursor-pointer transition-colors ${
+                              selectedUserKey === uKey ? 'bg-accent-soft/30' : 'hover:bg-[#FAFBFC]'
+                            }`}
+                          >
+                            {/* Avatar & Display Name */}
+                            <td className="px-3.5 py-3">
+                              <div className="flex items-center gap-2.5">
+                                <div
+                                  className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${
+                                    isAdminRole
+                                      ? 'bg-amber-100 text-amber-900 border border-amber-300'
+                                      : 'bg-teal-50 text-teal-800 border border-teal-200'
+                                  }`}
+                                >
+                                  {(u.displayName || u.email || 'Ö')[0].toUpperCase()}
+                                </div>
+                                <div className="min-w-0">
+                                  <div className="font-bold text-ink text-[13.5px] truncate max-w-[200px]">
+                                    {u.displayName || 'İsimsiz Öğrenci'}
+                                  </div>
+                                  {u.uid && (
+                                    <div className="text-[11px] text-ink-3 font-mono truncate max-w-[200px]">
+                                      ID: {u.uid.slice(0, 16)}...
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </td>
+
+                            {/* Email */}
+                            <td className="px-3.5 py-3">
+                              {u.email ? (
+                                <span className="font-mono text-[12px] text-ink-2 truncate block max-w-[230px]" title={u.email}>
+                                  {u.email}
+                                </span>
+                              ) : (
+                                <span className="text-ink-3 italic text-[12px]">-</span>
+                              )}
+                            </td>
+
+                            {/* Student Number */}
+                            <td className="px-3.5 py-3">
+                              {u.studentNumber ? (
+                                <span className="bg-field border border-line px-2 py-0.5 rounded font-mono text-[11px] font-semibold text-ink">
+                                  {u.studentNumber}
+                                </span>
+                              ) : (
+                                <span className="text-ink-3 text-[11px] italic">Girilmedi</span>
+                              )}
+                            </td>
+
+                            {/* Role */}
+                            <td className="px-3.5 py-3">
+                              {isAdminRole ? (
+                                <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 border border-amber-200 text-[11px] font-bold px-2 py-0.5 rounded-full">
+                                  <ShieldCheck className="w-3 h-3 text-amber-600" /> Yönetici
+                                </span>
+                              ) : (
+                                <span className="inline-flex items-center gap-1 bg-teal-50 text-teal-800 border border-teal-200 text-[11px] font-semibold px-2 py-0.5 rounded-full">
+                                  <User className="w-3 h-3 text-teal-600" /> Öğrenci
+                                </span>
+                              )}
+                            </td>
+
+                            {/* Created At */}
+                            <td className="px-3.5 py-3 text-ink-3 text-[12px] whitespace-nowrap">
+                              {u.createdAt
+                                ? new Date(u.createdAt).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' })
+                                : 'Kayıtlı'}
+                            </td>
+
+                            {/* Actions Column */}
+                            <td className="px-3.5 py-3 text-right whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
+                              <div className="flex items-center justify-end gap-1.5">
+                                {u.email && (
+                                  <button
+                                    type="button"
+                                    title={`${u.displayName || u.email} kullanıcısına e-posta gönder`}
+                                    onClick={() => {
+                                      setMailUserKey(u.email || u.uid || '');
+                                      setMailSubject('');
+                                      setMailBody('');
+                                    }}
+                                    className="h-8 px-2.5 rounded-lg border border-line bg-white text-[12px] font-semibold text-ink-2 hover:text-accent hover:border-accent/50 cursor-pointer inline-flex items-center gap-1 transition-colors"
+                                  >
+                                    <Mail className="w-3.5 h-3.5" /> Mail
+                                  </button>
+                                )}
+
+                                {isSelfAdmin ? (
+                                  <span
+                                    className="h-8 px-2.5 rounded-lg bg-slate-100 text-slate-500 text-[11px] font-semibold inline-flex items-center gap-1 cursor-not-allowed border border-slate-200"
+                                    title="Ana yönetici hesabı korumalıdır, silinemez."
+                                  >
+                                    <ShieldCheck className="w-3.5 h-3.5 text-slate-400" /> Korunan Hesap
+                                  </span>
+                                ) : (
+                                  <div className="inline-flex items-center gap-1">
+                                    {confirming ? (
+                                      <div className="inline-flex items-center gap-1">
+                                        <button
+                                          type="button"
+                                          onClick={() => void handleDeleteRegisteredUser(u)}
+                                          disabled={deleting}
+                                          className="h-8 px-3 rounded-lg bg-[#B4233C] hover:bg-[#91182D] text-white text-[12px] font-bold cursor-pointer inline-flex items-center gap-1 shadow-xs transition-colors"
+                                        >
+                                          <Trash2 className="w-3.5 h-3.5" /> {deleting ? 'Siliniyor…' : 'Evet, Sil!'}
+                                        </button>
+                                        <button
+                                          type="button"
+                                          onClick={() => setConfirmDeleteUserKey(null)}
+                                          disabled={deleting}
+                                          className="h-8 px-2 rounded-lg border border-line bg-white text-ink-2 text-[12px] font-semibold hover:bg-slate-100 cursor-pointer"
+                                        >
+                                          Vazgeç
+                                        </button>
+                                      </div>
+                                    ) : (
+                                      <button
+                                        type="button"
+                                        title={`${u.displayName || u.email || 'Bu kullanıcıyı'} veritabanından kalıcı olarak sil`}
+                                        onClick={() => setConfirmDeleteUserKey(uKey)}
+                                        disabled={deleting}
+                                        className="h-8 px-3 rounded-lg border border-[#FDA29B] bg-[#FEF3F2] hover:bg-[#FEE4E2] text-[#B4233C] text-[12px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all shadow-2xs"
+                                      >
+                                        <Trash2 className="w-3.5 h-3.5 text-[#B4233C]" />
+                                        <span>Kullanıcıyı Sil</span>
+                                      </button>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                      {filteredRegisteredUsers.length === 0 && (
+                        <tr>
+                          <td colSpan={6} className="px-3 py-10 text-center text-ink-2">
+                            {userQuery ? 'Arama kriterlerine uygun kullanıcı bulunamadı.' : 'Kayıtlı sistem kullanıcısı bulunmuyor.'}
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* VIEW 2: ACTIVITY / LEADERBOARD TABLE */}
+              {userTab === 'activity' && (
+                <div className="rounded-xl border border-line overflow-x-auto bg-white shadow-2xs">
+                  <table className="w-full text-[14px] border-collapse min-w-[780px]">
+                    <thead className="bg-canvas text-[12px] text-ink-2 border-b border-line">
+                      <tr>
+                        <th scope="col" className="text-left font-bold text-ink px-3 py-2.5">Kullanıcı</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3 py-2.5">Soru</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3 py-2.5">Parça</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3 py-2.5">Şık</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3 py-2.5">Bildirim</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3 py-2.5">Yorum</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3 py-2.5">Toplam</th>
+                        <th scope="col" className="text-right font-bold text-ink px-3 py-2.5 min-w-[180px]">İşlemler</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-line-soft">
+                      {filteredUsers.slice(0, 100).map((u) => {
+                        const isSelfAdmin = (u.email || '').toLowerCase() === adminEmail.toLowerCase();
+                        const confirming = confirmDeleteUserKey === u.key;
+                        const confirmingPurge = confirmPurgeKey === u.key;
+                        const deleting = busyAction === `deluser-${u.key}`;
+                        const purging = busyAction === `purge-${u.key}`;
+                        const hasAccount = Boolean(regOf(u));
+
+                        return (
+                          <tr
+                            key={u.key}
+                            onClick={() => {
+                              setSelectedUserKey(selectedUserKey === u.key ? null : u.key);
+                              setConfirmDeleteUserKey(null);
+                            }}
+                            className={`cursor-pointer transition-colors ${
+                              selectedUserKey === u.key ? 'bg-accent-soft/30' : 'hover:bg-[#FAFBFC]'
+                            }`}
+                          >
+                            <td className="px-3 py-2.5">
+                              <div className="font-semibold text-ink truncate max-w-[240px]">{u.name}</div>
+                              {u.email && <div className="text-[12px] text-ink-3 truncate max-w-[240px]">{u.email}</div>}
+                            </td>
+                            <td className="px-3 py-2.5 text-right font-mono">{u.questions}</td>
+                            <td className="px-3 py-2.5 text-right font-mono">{u.fragments}</td>
+                            <td className="px-3 py-2.5 text-right font-mono">{u.options}</td>
+                            <td className="px-3 py-2.5 text-right font-mono">{u.reports}</td>
+                            <td className="px-3 py-2.5 text-right font-mono">{u.comments}</td>
+                            <td className="px-3 py-2.5 text-right font-mono font-bold text-ink">{u.total}</td>
+                            <td className="px-3 py-2.5 text-right whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
+                              <div className="flex items-center justify-end gap-1.5">
+                                {u.email && (
+                                  <button
+                                    type="button"
+                                    title={`${u.name} kullanıcısına e-posta gönder`}
+                                    onClick={() => {
+                                      setMailUserKey(u.key);
+                                      setMailSubject('');
+                                      setMailBody('');
+                                    }}
+                                    className="h-8 px-2.5 rounded-lg border border-line bg-white text-[12px] font-semibold text-ink-2 hover:text-accent hover:border-accent/50 cursor-pointer inline-flex items-center gap-1"
+                                  >
+                                    <Mail className="w-3.5 h-3.5" /> Mail
+                                  </button>
+                                )}
+
+                                {isSelfAdmin ? (
+                                  <span
+                                    className="h-8 px-2.5 rounded-lg bg-slate-100 text-slate-500 text-[11px] font-semibold inline-flex items-center gap-1 border border-slate-200"
+                                    title="Ana yönetici hesabı"
+                                  >
+                                    <ShieldCheck className="w-3.5 h-3.5 text-slate-400" /> Yönetici
+                                  </span>
+                                ) : (
+                                  <>
+                                    {hasAccount && (
+                                      <button
+                                        type="button"
+                                        title={confirming ? 'Onaylamak için tekrar bas' : `${u.name} kullanıcısını sil`}
+                                        onClick={() => (confirming ? void handleDeleteUser(u) : setConfirmDeleteUserKey(u.key))}
+                                        disabled={deleting}
+                                        className={`h-8 px-3 rounded-lg text-[12px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all shadow-2xs disabled:opacity-50 ${
+                                          confirming
+                                            ? 'bg-[#B4233C] text-white hover:bg-[#91182D]'
+                                            : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'
+                                        }`}
+                                      >
+                                        <Trash2 className="w-3.5 h-3.5" /> {deleting ? 'Siliniyor…' : confirming ? 'Emin misin? Sil' : 'Kullanıcıyı Sil'}
+                                      </button>
+                                    )}
+                                    {!hasAccount && u.total > 0 && (
+                                      <button
+                                        type="button"
+                                        title={confirmingPurge ? 'Onaylamak için tekrar bas' : `${u.name} isminin tüm katkı izlerini temizle (parça, şık, yorum, bildirim)`}
+                                        onClick={() => (confirmingPurge ? void handlePurgeAuthor(u) : setConfirmPurgeKey(u.key))}
+                                        disabled={purging}
+                                        className={`h-8 px-2.5 rounded-lg text-[12px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all disabled:opacity-50 ${
+                                          confirmingPurge
+                                            ? 'bg-[#B4233C] text-white hover:bg-[#91182D]'
+                                            : 'border border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100'
+                                        }`}
+                                      >
+                                        <Trash2 className="w-3.5 h-3.5" /> {purging ? 'Temizleniyor…' : confirmingPurge ? 'Emin misin? Temizle' : 'Katkıları Temizle'}
+                                      </button>
+                                    )}
+                                  </>
+                                )}
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                      {filteredUsers.length === 0 && (
+                        <tr>
+                          <td colSpan={8} className="px-3 py-10 text-center text-ink-2">
+                            Aktivite kaydı bulunamadı.
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* USER DETAIL DRAWER / CARD */}
               {selectedUserKey && (() => {
-                const u = activity.find((x) => x.key === selectedUserKey);
-                if (!u) return null;
+                const selectedKeyNorm = normKey(selectedUserKey);
                 const reg = registeredUsers.find(
-                  (r) => (r.email || '').toLowerCase() === u.key || (r.uid || '').toLowerCase() === u.key
+                  (r) =>
+                    (r.email && normKey(r.email) === selectedKeyNorm) ||
+                    (r.uid && normKey(r.uid) === selectedKeyNorm) ||
+                    (r.displayName && normKey(r.displayName) === selectedKeyNorm)
                 );
+                const u =
+                  activity.find((x) => x.key === selectedKeyNorm) || {
+                    key: selectedKeyNorm,
+                    name: reg?.displayName || reg?.email || selectedUserKey,
+                    email: reg?.email,
+                    studentNumber: reg?.studentNumber,
+                    questions: 0,
+                    fragments: 0,
+                    options: 0,
+                    reports: 0,
+                    comments: 0,
+                    total: 0,
+                  };
+
                 const allQs = [...questions, ...pastQuestions];
-                const userQuestions = allQs.filter((q) =>
-                  normKey(q.contributedByUid || q.contributedByName) === u.key ||
-                  (q.fragments || []).some((f) => normKey(f.authorUid || f.author) === u.key)
+                const userQuestions = allQs.filter(
+                  (q) =>
+                    normKey(q.contributedByUid || q.contributedByName) === u.key ||
+                    (q.fragments || []).some((f) => normKey(f.authorUid || f.author) === u.key)
                 ).slice(0, 20);
+
                 const userMessages: { label: string; text: string }[] = [];
                 for (const q of allQs) {
                   for (const f of q.fragments || []) {
@@ -874,107 +1260,203 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                   }
                   if (userMessages.length >= 15) break;
                 }
+
                 const userReports = reports.filter((r) => normKey(r.reportedBy) === u.key).slice(0, 20);
                 const userComments = comments.filter((c) => normKey(c.author) === u.key).slice(0, 20);
-                const isAdmin = (reg?.email || u.email || '').toLowerCase() === adminEmail.toLowerCase();
+                const isAdmin =
+                  (reg?.email || u.email || '').toLowerCase() === adminEmail.toLowerCase() ||
+                  (reg?.email || u.email || '').toLowerCase() === 'nofrostlife@gmail.com';
+                const hasAccount = Boolean(reg);
+                const deleteConfirming = confirmDeleteUserKey === (reg?.uid || u.key);
+
                 return (
                   <section className="rounded-xl border border-accent/40 bg-accent-soft/20 p-4 flex flex-col gap-3">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-[15px] font-bold flex-1 min-w-[180px]">{u.name} — her bilgi</span>
+                      <div className="flex items-center gap-2 flex-1 min-w-[200px]">
+                        <span className="text-[16px] font-bold text-ink">{u.name}</span>
+                        {hasAccount && (
+                          <span className="text-[11px] bg-teal-100 text-teal-800 border border-teal-300 font-semibold px-2 py-0.5 rounded-full">
+                            Kayıtlı Hesap
+                          </span>
+                        )}
+                      </div>
+
                       {u.email && (
-                        <button type="button" onClick={() => { setMailUserKey(u.key); setMailSubject(''); setMailBody(''); }}
-                          className="h-9 px-3 rounded-[10px] bg-accent text-white text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer">
-                          <Mail className="w-3.5 h-3.5" /> Mail gönder
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setMailUserKey(u.email || u.key);
+                            setMailSubject('');
+                            setMailBody('');
+                          }}
+                          className="h-9 px-3.5 rounded-[10px] bg-accent text-white text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent-hover transition-colors"
+                        >
+                          <Mail className="w-3.5 h-3.5" /> Mail Gönder
                         </button>
                       )}
-                      {!isAdmin && reg?.uid && (
-                        <button type="button"
-                          onClick={() => (confirmDeleteUserKey === u.key ? void handleDeleteUser(u) : setConfirmDeleteUserKey(u.key))}
-                          disabled={busyAction === `deluser-${u.key}`}
-                          className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold cursor-pointer disabled:opacity-50 ${confirmDeleteUserKey === u.key ? 'bg-[#B4233C] text-white' : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C]'}`}>
-                          {confirmDeleteUserKey === u.key ? 'Emin misin? Sil' : 'Kullanıcıyı sil'}
+
+                      {!isAdmin && hasAccount && (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            deleteConfirming
+                              ? void (reg?.uid ? handleDeleteRegisteredUser(reg) : handleDeleteUser(u))
+                              : setConfirmDeleteUserKey(reg?.uid || u.key)
+                          }
+                          disabled={busyAction === `deluser-${u.key}` || (reg?.uid ? busyAction === `delreg-${reg.uid}` : false)}
+                          className={`h-9 px-4 rounded-[10px] text-[13px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all shadow-2xs disabled:opacity-50 ${
+                            deleteConfirming
+                              ? 'bg-[#B4233C] text-white hover:bg-[#91182D]'
+                              : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'
+                          }`}
+                        >
+                          <Trash2 className="w-4 h-4 text-[#B4233C]" />
+                          <span>{deleteConfirming ? 'Emin misiniz? Kalıcı Olarak Sil' : 'Kullanıcıyı Kalıcı Olarak Sil'}</span>
                         </button>
                       )}
-                      {!reg && u.total > 0 && (
-                        <button type="button" title="Kayıtlı hesabı yok; bu ismin katkı izlerini temizler"
+
+                      {!hasAccount && u.total > 0 && (
+                        <button
+                          type="button"
+                          title="Kayıtlı hesabı yok; bu ismin katkı izlerini temizler"
                           onClick={() => (confirmPurgeKey === u.key ? void handlePurgeAuthor(u) : setConfirmPurgeKey(u.key))}
                           disabled={busyAction === `purge-${u.key}`}
-                          className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold cursor-pointer disabled:opacity-50 ${confirmPurgeKey === u.key ? 'bg-[#B4233C] text-white' : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C]'}`}>
-                          {confirmPurgeKey === u.key ? 'Emin misin? Temizle' : 'Katkıları temizle'}
+                          className={`h-9 px-3.5 rounded-[10px] text-[13px] font-bold cursor-pointer inline-flex items-center gap-1.5 disabled:opacity-50 ${
+                            confirmPurgeKey === u.key
+                              ? 'bg-[#B4233C] text-white'
+                              : 'border border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100'
+                          }`}
+                        >
+                          <Trash2 className="w-4 h-4" />
+                          <span>{confirmPurgeKey === u.key ? 'Emin misin? Temizle' : 'Katkı İzlerini Temizle'}</span>
                         </button>
                       )}
-                      <button type="button" onClick={() => { setSelectedUserKey(null); setConfirmDeleteUserKey(null); }} className="h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold cursor-pointer">Kapat</button>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedUserKey(null);
+                          setConfirmDeleteUserKey(null);
+                        }}
+                        className="h-9 px-3.5 rounded-[10px] border border-line bg-white text-[13px] font-semibold cursor-pointer hover:bg-slate-50"
+                      >
+                        Kapat
+                      </button>
                     </div>
-                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-[12.5px] text-ink-2">
-                      {!reg && <span className="text-warn font-semibold">Kayıtlı hesabı yok — yalnızca katkı izi. "Katkıları temizle" ile izleri silebilirsiniz.</span>}
-                      {u.email && <span>E-posta: <strong className="text-ink">{u.email}</strong></span>}
-                      {u.studentNumber && <span>Numara: <strong className="text-ink">{u.studentNumber}</strong></span>}
+
+                    <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-ink-2">
+                      {!hasAccount && (
+                        <span className="text-amber-700 font-semibold bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                          Kayıtlı hesap bulunamadı — yalnızca geçmiş amfi katkı izi. İsterseniz "Katkı İzlerini Temizle" ile silebilirsiniz.
+                        </span>
+                      )}
+                      {u.email && <span>E-posta: <strong className="text-ink font-mono">{u.email}</strong></span>}
+                      {u.studentNumber && <span>Öğrenci No: <strong className="text-ink font-mono">{u.studentNumber}</strong></span>}
                       {reg?.role && <span>Rol: <strong className="text-ink">{reg.role}</strong></span>}
-                      {reg?.createdAt && <span>Kayıt: {new Date(reg.createdAt).toLocaleDateString('tr-TR')}</span>}
-                      {reg?.lastLoginAt && <span>Son giriş: {new Date(reg.lastLoginAt).toLocaleString('tr-TR')}</span>}
-                      <span>Toplam işlem: <strong className="text-ink font-mono">{u.total}</strong> (soru {u.questions} · parça {u.fragments} · şık {u.options} · bildirim {u.reports} · yorum {u.comments})</span>
+                      {reg?.createdAt && <span>Kayıt: <strong className="text-ink">{new Date(reg.createdAt).toLocaleDateString('tr-TR')}</strong></span>}
+                      {reg?.lastLoginAt && <span>Son Giriş: <strong className="text-ink">{new Date(reg.lastLoginAt).toLocaleString('tr-TR')}</strong></span>}
+                      <span>Toplam İşlem: <strong className="text-ink font-mono">{u.total}</strong> (soru {u.questions} · parça {u.fragments} · şık {u.options} · bildirim {u.reports} · yorum {u.comments})</span>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2">
-                      <div className="rounded-lg bg-white border border-line p-2.5">
-                        <div className="text-[12px] font-semibold text-ink-2 mb-1">Katkı verdiği sorular ({userQuestions.length})</div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2.5 pt-1">
+                      <div className="rounded-lg bg-white border border-line p-3">
+                        <div className="text-[12px] font-bold text-ink-2 mb-1.5">Katkı Verdiği Sorular ({userQuestions.length})</div>
                         {userQuestions.map((q) => (
-                          <div key={q.id} className="text-[13px] truncate">S.{q.questionNumber || '?'} · {q.topic || q.discipline}</div>
+                          <div key={q.id} className="text-[13px] truncate text-ink-2 py-0.5">S.{q.questionNumber || '?'} · {q.topic || q.discipline}</div>
                         ))}
-                        {userQuestions.length === 0 && <div className="text-[12px] text-ink-3">Yok</div>}
+                        {userQuestions.length === 0 && <div className="text-[12px] text-ink-3 italic">Katkı kaydı yok</div>}
                       </div>
-                      <div className="rounded-lg bg-white border border-line p-2.5">
-                        <div className="text-[12px] font-semibold text-ink-2 mb-1">Attığı mesajlar/parçalar ({userMessages.length})</div>
+
+                      <div className="rounded-lg bg-white border border-line p-3">
+                        <div className="text-[12px] font-bold text-ink-2 mb-1.5">Hafıza Parçaları / Mesajlar ({userMessages.length})</div>
                         {userMessages.map((m, i) => (
-                          <div key={i} className="text-[13px] mb-1"><span className="text-ink-3 text-[11.5px]">{m.label}: </span>{m.text.length > 120 ? m.text.slice(0, 120) + '…' : m.text}</div>
+                          <div key={i} className="text-[12.5px] mb-1.5 leading-snug">
+                            <span className="text-ink-3 font-semibold text-[11px]">{m.label}: </span>
+                            <span className="text-ink">{m.text.length > 110 ? m.text.slice(0, 110) + '…' : m.text}</span>
+                          </div>
                         ))}
-                        {userMessages.length === 0 && <div className="text-[12px] text-ink-3">Yok</div>}
+                        {userMessages.length === 0 && <div className="text-[12px] text-ink-3 italic">Mesaj kaydı yok</div>}
                       </div>
-                      <div className="rounded-lg bg-white border border-line p-2.5">
-                        <div className="text-[12px] font-semibold text-ink-2 mb-1">Hata bildirimleri ({userReports.length})</div>
+
+                      <div className="rounded-lg bg-white border border-line p-3">
+                        <div className="text-[12px] font-bold text-ink-2 mb-1.5">Hata Bildirimleri ({userReports.length})</div>
                         {userReports.map((r) => (
-                          <div key={r.id} className="text-[13px] truncate">{r.reason} · {r.questionTopic || r.questionId}</div>
+                          <div key={r.id} className="text-[12.5px] truncate text-ink-2 py-0.5">{r.reason} · {r.questionTopic || r.questionId}</div>
                         ))}
-                        {userReports.length === 0 && <div className="text-[12px] text-ink-3">Yok</div>}
+                        {userReports.length === 0 && <div className="text-[12px] text-ink-3 italic">Bildirim kaydı yok</div>}
                       </div>
-                      <div className="rounded-lg bg-white border border-line p-2.5">
-                        <div className="text-[12px] font-semibold text-ink-2 mb-1">Yorumlar ({userComments.length})</div>
+
+                      <div className="rounded-lg bg-white border border-line p-3">
+                        <div className="text-[12px] font-bold text-ink-2 mb-1.5">Yorumlar ({userComments.length})</div>
                         {userComments.map((c) => (
-                          <div key={c.id} className="text-[13px] truncate">{c.text}</div>
+                          <div key={c.id} className="text-[12.5px] truncate text-ink-2 py-0.5">{c.text}</div>
                         ))}
-                        {userComments.length === 0 && <div className="text-[12px] text-ink-3">Yok</div>}
+                        {userComments.length === 0 && <div className="text-[12px] text-ink-3 italic">Yorum kaydı yok</div>}
                       </div>
                     </div>
                   </section>
                 );
               })()}
+
+              {/* MAIL SENDER MODAL */}
               {mailUserKey && (() => {
-                const u = activity.find((x) => x.key === mailUserKey);
-                if (!u?.email) return null;
+                const fromReg = registeredUsers.find((r) => r.email === mailUserKey || r.uid === mailUserKey);
+                const fromAct = activity.find((x) => x.key === mailUserKey || x.email === mailUserKey);
+                const displayName = fromReg?.displayName || fromAct?.name || 'Kullanıcı';
+                const targetEmail = fromReg?.email || fromAct?.email || (mailUserKey.includes('@') ? mailUserKey : '');
+                if (!targetEmail) return null;
+
                 return (
-                  <section className="rounded-xl border border-line bg-white p-4 flex flex-col gap-2.5">
+                  <section className="rounded-xl border border-line bg-white p-4 flex flex-col gap-3 shadow-md">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4 text-accent" />
-                      <span className="text-[15px] font-bold flex-1">{u.name} &lt;{u.email}&gt; — e-posta gönder</span>
-                      <button type="button" onClick={() => setMailUserKey(null)} className="h-8 px-3 rounded-lg border border-line text-[12px] font-semibold cursor-pointer">Vazgeç</button>
+                      <span className="text-[15px] font-bold flex-1">
+                        {displayName} &lt;{targetEmail}&gt; — e-posta gönder
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setMailUserKey(null)}
+                        className="h-8 px-3 rounded-lg border border-line text-[12px] font-semibold cursor-pointer hover:bg-slate-50"
+                      >
+                        Vazgeç
+                      </button>
                     </div>
                     <label className="flex flex-col gap-1">
                       <span className="text-[12px] font-semibold text-ink-2">Konu</span>
-                      <input value={mailSubject} onChange={(e) => setMailSubject(e.target.value)} placeholder="Konu başlığı" className="h-10 border border-line-2 rounded-[10px] px-3 text-[14px] outline-0 focus:border-accent" />
+                      <input
+                        value={mailSubject}
+                        onChange={(e) => setMailSubject(e.target.value)}
+                        placeholder="Konu başlığı"
+                        className="h-10 border border-line-2 rounded-[10px] px-3 text-[14px] outline-0 focus:border-accent"
+                      />
                     </label>
                     <label className="flex flex-col gap-1">
                       <span className="text-[12px] font-semibold text-ink-2">Mesaj</span>
-                      <textarea value={mailBody} onChange={(e) => setMailBody(e.target.value)} rows={4} placeholder="Mesajınızı yazın…" className="border border-line-2 rounded-[10px] px-3 py-2.5 text-[14px] leading-relaxed outline-0 focus:border-accent resize-y" />
+                      <textarea
+                        value={mailBody}
+                        onChange={(e) => setMailBody(e.target.value)}
+                        rows={4}
+                        placeholder="Mesajınızı yazın…"
+                        className="border border-line-2 rounded-[10px] px-3 py-2.5 text-[14px] leading-relaxed outline-0 focus:border-accent resize-y"
+                      />
                     </label>
                     <div>
-                      <button type="button" onClick={() => { void handleSendMail(); }} disabled={sendingMail || !mailSubject.trim() || !mailBody.trim()}
-                        className="h-11 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] inline-flex items-center gap-2 cursor-pointer disabled:opacity-50">
+                      <button
+                        type="button"
+                        onClick={() => { void handleSendMail(); }}
+                        disabled={sendingMail || !mailSubject.trim() || !mailBody.trim()}
+                        className="h-11 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                      >
                         <Send className="w-4 h-4" /> {sendingMail ? 'Gönderiliyor…' : 'Gönder'}
                       </button>
                     </div>
                   </section>
                 );
               })()}
-              <p className="m-0 text-[12px] text-ink-3">Soru havuzu + çıkmış sorular + bildirim/yorum katkılarından hesaplanır. Kayıtlı kullanıcı bilgileriyle eşleştirilir.</p>
+
+              <p className="m-0 text-[12px] text-ink-3">
+                Kayıtlı sistem kullanıcıları Supabase ve yerel veritabanından çekilir. Katkı istatistikleri soru havuzu, çıkmış sorular, hafıza parçaları ve yorumlardan derlenir.
+              </p>
             </div>
           )}
 
