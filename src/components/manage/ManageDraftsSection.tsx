@@ -14,9 +14,16 @@ import {
   Trash2,
   Pencil,
   Sparkles,
+  X,
 } from 'lucide-react';
-import type { QuestionItem, ClusterAnalysisSummary, DraftCluster } from '../../types';
+import type { QuestionItem, ClusterAnalysisSummary, DraftCluster, ClusterTuning } from '../../types';
 import { ApiService } from '../../services/api';
+import {
+  CLUSTER_PRESETS,
+  blockPair,
+  clearBlockedPairs,
+  loadBlockedPairs,
+} from '../../services/draftClusteringService';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 import { sharedWordColors, Colored, WordLegend } from '../draftHighlight';
 import {
@@ -66,13 +73,26 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const [deletingIds, setDeletingIds] = useState<Set<string>>(new Set());
   const [confirmBatch, setConfirmBatch] = useState(false);
   const [confirmBulkDelete, setConfirmBulkDelete] = useState(false);
+  const [sensitivity, setSensitivity] = useState<'strict' | 'balanced' | 'loose'>(() => {
+    try {
+      const s = localStorage.getItem('medsoru_cluster_sensitivity');
+      return s === 'strict' || s === 'loose' ? s : 'balanced';
+    } catch {
+      return 'balanced';
+    }
+  });
+  const [anchorOverrides, setAnchorOverrides] = useState<Record<string, string>>({});
+  const [blockedCount, setBlockedCount] = useState(() => loadBlockedPairs().size);
+
+  const tuning: ClusterTuning = useMemo(() => ({ ...CLUSTER_PRESETS[sensitivity] }), [sensitivity]);
 
   const runAnalysis = async () => {
     if (!committeeId) return;
     setLoading(true);
     try {
-      const summary = await ApiService.getCommitteeDraftClusters(committeeId);
+      const summary = await ApiService.getCommitteeDraftClusters(committeeId, tuning);
       setAnalysis(summary);
+      setBlockedCount(loadBlockedPairs().size);
     } catch (e) {
       notify(e instanceof Error ? e.message : 'Analiz sırasında hata oluştu.');
     } finally {
@@ -83,7 +103,16 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   useEffect(() => {
     void runAnalysis();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [committeeId, questions.length]);
+  }, [committeeId, questions.length, sensitivity]);
+
+  const changeSensitivity = (s: 'strict' | 'balanced' | 'loose') => {
+    setSensitivity(s);
+    try {
+      localStorage.setItem('medsoru_cluster_sensitivity', s);
+    } catch {
+      /* yoksay */
+    }
+  };
 
   useEffect(() => {
     if (!confirmBatch) return;
@@ -159,14 +188,29 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const busy = loading || isBatchMerging || isManualMerging || isBulkDeleting || !!mergingClusterId;
 
   // ---------- actions ----------
+  const effectiveAnchorOf = (cluster: DraftCluster): QuestionItem => {
+    const overrideId = anchorOverrides[cluster.id];
+    if (!overrideId) return cluster.anchorQuestion;
+    const all = [cluster.anchorQuestion, ...cluster.satelliteDrafts.map((s) => s.question)];
+    return all.find((q) => q.id === overrideId) || cluster.anchorQuestion;
+  };
+
   const handleMergeCluster = async (cluster: DraftCluster) => {
+    const anchor = effectiveAnchorOf(cluster);
     setMergingClusterId(cluster.id);
     try {
-      const satelliteIds = cluster.satelliteDrafts.map((s) => s.question.id);
-      await ApiService.mergeDraftCluster(adminEmail, cluster.anchorQuestion.id, satelliteIds, adminName || 'Yönetici');
+      const satelliteIds = [cluster.anchorQuestion, ...cluster.satelliteDrafts.map((s) => s.question)]
+        .map((q) => q.id)
+        .filter((id) => id !== anchor.id);
+      await ApiService.mergeDraftCluster(adminEmail, anchor.id, satelliteIds, adminName || 'Yönetici');
       setLocallyMergedSatelliteIds((prev) => new Set([...prev, ...satelliteIds]));
-      setSelectedDraftIds((prev) => prev.filter((id) => !satelliteIds.includes(id)));
-      notify(`Soru #${cluster.anchorQuestion.questionNumber || 'Çapa'} için ${satelliteIds.length} taslak birleştirildi.`);
+      setSelectedDraftIds((prev) => prev.filter((id) => !satelliteIds.includes(id) && id !== anchor.id));
+      setAnchorOverrides((prev) => {
+        const next = { ...prev };
+        delete next[cluster.id];
+        return next;
+      });
+      notify(`Soru #${anchor.questionNumber || 'Çapa'} için ${satelliteIds.length} taslak birleştirildi.`);
       await onRefreshData();
       await runAnalysis();
     } catch (e) {
@@ -174,6 +218,27 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
     } finally {
       setMergingClusterId(null);
     }
+  };
+
+  const handleMarkNotSame = (anchorId: string, satelliteId: string) => {
+    const next = blockPair(anchorId, satelliteId);
+    setBlockedCount(next.size);
+    // Ekrandan da anında kaldır (görünüm); bir dahaki analizde zaten gelmez.
+    setAnalysis((prev) => {
+      if (!prev) return null;
+      const nextClusters = prev.clusters
+        .map((c) => ({ ...c, satelliteDrafts: c.satelliteDrafts.filter((s) => !(s.question.id === satelliteId && c.anchorQuestion.id === anchorId)) }))
+        .filter((c) => c.satelliteDrafts.length > 0);
+      return { ...prev, clusters: nextClusters, mergeableClustersCount: nextClusters.length };
+    });
+    notify('Bu ikisi artık aynı kümede gösterilmeyecek (kalıcı).');
+  };
+
+  const handleClearBlocked = () => {
+    clearBlockedPairs();
+    setBlockedCount(0);
+    notify('Engel listesi temizlendi; analiz yenileniyor.');
+    void runAnalysis();
   };
 
   const handleBatchMergeReady = async () => {
@@ -413,7 +478,19 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
             <p className="m-0 text-[13px] text-ink-3 truncate">{committeeName || 'Seçili kurul'} — topla, birleştir, sil, düzenle, AI ile dönüştür</p>
           </div>
         </div>
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 shrink-0 flex-wrap">
+          <div role="radiogroup" aria-label="Kümeleme hassasiyeti" className="inline-flex gap-1 bg-canvas rounded-[10px] p-[3px]" title="Sıkı: yalnızca güçlü eşleşmeler kümelenir. Gevşek: daha çok öneri gösterir.">
+            {([['strict', 'Sıkı'], ['balanced', 'Dengeli'], ['loose', 'Gevşek']] as const).map(([id, label]) => (
+              <button key={id} type="button" role="radio" aria-checked={sensitivity === id} onClick={() => changeSensitivity(id)}
+                className={`h-9 px-2.5 rounded-lg text-[13px] cursor-pointer whitespace-nowrap ${sensitivity === id ? 'bg-white font-semibold shadow text-ink' : 'text-ink-2'}`}>{label}</button>
+            ))}
+          </div>
+          {blockedCount > 0 && (
+            <button type="button" onClick={handleClearBlocked} title="Aynı değil engellerini temizle"
+              className="h-10 px-3 rounded-[10px] border border-line-2 text-[13px] font-semibold text-ink-2 cursor-pointer">
+              {blockedCount} engel × temizle
+            </button>
+          )}
           <button type="button" onClick={() => { void runAnalysis(); }} disabled={loading}
             className="h-10 px-3.5 rounded-[10px] border border-line-2 text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
             <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} /> Yeniden analiz
@@ -616,11 +693,13 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
         </div>
       ) : (
         filteredClusters.map((cluster) => {
-          const anchor = cluster.anchorQuestion;
+          const anchor = effectiveAnchorOf(cluster);
+          const members = [cluster.anchorQuestion, ...cluster.satelliteDrafts.map((sd) => sd.question)];
+          const satellites = members.filter((q) => q.id !== anchor.id);
           const open = expandedClusterId === cluster.id;
           const merging = mergingClusterId === cluster.id;
           const ready = cluster.status === 'ready_to_merge';
-          const clusterTexts = [anchor, ...cluster.satelliteDrafts.map((sd) => sd.question)].map(fullText);
+          const clusterTexts = members.map(fullText);
           const colors = sharedWordColors(clusterTexts);
           return (
             <article key={cluster.id} className={`rounded-[18px] bg-white border overflow-hidden ${ready ? 'border-[#CDEBD8]' : 'border-line'}`}>
@@ -633,8 +712,17 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                     <span className="text-[14.5px] font-semibold text-ink truncate">{cluster.detectedSubject || anchor.topic || anchor.discipline}</span>
                     <span className={`shrink-0 h-5 px-1.5 rounded-full text-[11.5px] font-mono font-semibold inline-flex items-center ${ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'}`}>%{cluster.overallConfidence}</span>
                   </span>
-                  <span className="text-[12.5px] text-ink-3 truncate">{anchor.discipline} · {cluster.satelliteDrafts.length} taslak birleşecek</span>
+                  <span className="text-[12.5px] text-ink-3 truncate">{anchor.discipline} · {satellites.length} taslak birleşecek</span>
                   <span className="mt-1"><WordLegend texts={clusterTexts} colors={colors} /></span>
+                  <label className="mt-1.5 flex items-center gap-1.5 text-[12px] text-ink-2">
+                    <span className="shrink-0">Çapa:</span>
+                    <select value={anchor.id} onChange={(e) => setAnchorOverrides((prev) => ({ ...prev, [cluster.id]: e.target.value }))}
+                      className="h-8 max-w-[260px] border border-line-2 rounded-lg px-1.5 text-[12.5px] bg-white cursor-pointer truncate" title="Birleşince ana soru olacak taslağı seç">
+                      {members.map((m) => (
+                        <option key={m.id} value={m.id}>{numLabel(m)} · {(m.topic || m.discipline || '').slice(0, 40)}</option>
+                      ))}
+                    </select>
+                  </label>
                 </span>
                 <button type="button" onClick={() => handleDissolveCluster(cluster.id)} title="Bu kümeyi dağıt (yalnızca görünüm)"
                   className="h-9 px-2.5 rounded-[10px] border border-line bg-white text-[12px] font-medium text-ink-2 hover:text-[#B4233C] items-center gap-1 cursor-pointer hidden sm:inline-flex">
@@ -672,30 +760,39 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                   <span className="pt-1"><DraftActions q={anchor} compact /></span>
                 </div>
                 <ul className={`list-none m-0 p-0 flex flex-col gap-1.5 ${open ? '' : 'max-h-[220px] overflow-y-auto'}`}>
-                  {cluster.satelliteDrafts.map((sat, idx) => (
-                    <li key={sat.question.id || idx} className="rounded-[12px] border border-line-soft px-3 py-2 flex flex-col gap-1">
-                      <div className="flex items-center gap-2 text-[12.5px] min-w-0 flex-wrap">
-                        <span className="font-semibold text-ink truncate">{sat.question.contributedByName || 'Anonim'}</span>
-                        <span className="text-ink-3 shrink-0">· {numLabel(sat.question)}</span>
-                        <span className="shrink-0 font-mono text-[12px] font-semibold text-ok">%{sat.compatibility.score}</span>
-                        <button type="button" onClick={() => handleDetachSatellite(cluster.id, sat.question.id)} title="Bu taslağı kümeden çıkar (yalnızca görünüm)"
-                          className="ml-auto text-[11.5px] px-2 py-0.5 rounded-[6px] text-ink-3 hover:text-[#B4233C] hover:bg-[#FEE4E2] border border-line-soft cursor-pointer inline-flex items-center gap-1 shrink-0">
-                          <Split className="w-3 h-3" /><span>Ayır</span>
-                        </button>
-                      </div>
-                      <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-2'}`}>
-                        {stemOf(sat.question) ? <Colored text={stemOf(sat.question)} colors={colors} /> : 'Metin'}
-                      </span>
-                      {open && sat.compatibility.reasons.length > 0 && (
-                        <span className="flex flex-wrap gap-1">
-                          {sat.compatibility.reasons.map((r, i) => (
-                            <span key={i} className="px-2 py-0.5 rounded-[7px] bg-canvas text-[11.5px] text-ink-2">{r}</span>
-                          ))}
+                  {satellites.map((satQ) => {
+                    const comp = cluster.satelliteDrafts.find((s) => s.question.id === satQ.id)?.compatibility;
+                    return (
+                      <li key={satQ.id} className="rounded-[12px] border border-line-soft px-3 py-2 flex flex-col gap-1">
+                        <div className="flex items-center gap-2 text-[12.5px] min-w-0 flex-wrap">
+                          <span className="font-semibold text-ink truncate">{satQ.contributedByName || 'Anonim'}</span>
+                          <span className="text-ink-3 shrink-0">· {numLabel(satQ)}</span>
+                          {comp && <span className="shrink-0 font-mono text-[12px] font-semibold text-ok">%{comp.score}</span>}
+                          <span className="ml-auto inline-flex items-center gap-1 shrink-0">
+                            <button type="button" onClick={() => handleDetachSatellite(cluster.id, satQ.id)} title="Bu taslağı kümeden çıkar (yalnızca görünüm)"
+                              className="text-[11.5px] px-2 py-0.5 rounded-[6px] text-ink-3 hover:text-[#B4233C] hover:bg-[#FEE4E2] border border-line-soft cursor-pointer inline-flex items-center gap-1">
+                              <Split className="w-3 h-3" /><span>Ayır</span>
+                            </button>
+                            <button type="button" onClick={() => handleMarkNotSame(anchor.id, satQ.id)} title="Bunlar farklı sorular — bir daha aynı kümede gösterme (kalıcı)"
+                              className="text-[11.5px] px-2 py-0.5 rounded-[6px] text-ink-3 hover:text-[#B4233C] hover:bg-[#FEE4E2] border border-line-soft cursor-pointer inline-flex items-center gap-1">
+                              <X className="w-3 h-3" /><span>Aynı değil</span>
+                            </button>
+                          </span>
+                        </div>
+                        <span className={`text-[13px] text-ink-2 leading-snug ${open ? '' : 'line-clamp-2'}`}>
+                          {stemOf(satQ) ? <Colored text={stemOf(satQ)} colors={colors} /> : 'Metin'}
                         </span>
-                      )}
-                      <span><DraftActions q={sat.question} compact /></span>
-                    </li>
-                  ))}
+                        {open && comp && comp.reasons.length > 0 && (
+                          <span className="flex flex-wrap gap-1">
+                            {comp.reasons.map((r, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded-[7px] bg-canvas text-[11.5px] text-ink-2">{r}</span>
+                            ))}
+                          </span>
+                        )}
+                        <span><DraftActions q={satQ} compact /></span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <button type="button" onClick={() => setExpandedClusterId(open ? null : cluster.id)}

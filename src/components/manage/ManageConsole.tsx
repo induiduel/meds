@@ -52,6 +52,8 @@ import {
   InboxComment,
   UserActivityRow,
   loadManageInbox,
+  loadManageUsers,
+  normKey,
   computeUserActivity,
   resolveInboxReport,
   deletePastComment,
@@ -62,6 +64,7 @@ import {
   triggerBackupNow,
   sendUserEmail,
   deleteManageUser,
+  purgeAuthorContributions,
   ManageServiceItem,
 } from '../../services/manageConsoleService';
 
@@ -132,6 +135,17 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const [mailBody, setMailBody] = useState('');
   const [sendingMail, setSendingMail] = useState(false);
   const [confirmDeleteUserKey, setConfirmDeleteUserKey] = useState<string | null>(null);
+  const [confirmPurgeKey, setConfirmPurgeKey] = useState<string | null>(null);
+
+  // Kayıt defteri eşleşmesi: e-posta, uid veya görünen ad.
+  const regOf = (u: UserActivityRow) =>
+    registeredUsers.find(
+      (r) =>
+        (r.email && normKey(r.email) === u.key) ||
+        (r.uid && normKey(r.uid) === u.key) ||
+        (r.displayName && normKey(r.displayName) === u.key) ||
+        (u.email && r.email && normKey(r.email) === normKey(u.email))
+    );
 
   // System
   const [health, setHealth] = useState<SystemOverallHealth>(() => systemHealthMonitor.getHealth());
@@ -171,7 +185,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       setPastQuestions(data.pastQuestions);
       setNotifications(data.notifications);
       setDrafts(data.drafts.length > 0 ? data.drafts : questions.filter((q) => q.status !== 'completed'));
-      const users = await ApiService.adminGetUsers(adminEmail).catch(() => []);
+      const users = await loadManageUsers(adminEmail).catch(() => []);
       setRegisteredUsers(users || []);
       const auto = await loadManageSettings();
       setSettings(auto);
@@ -330,11 +344,10 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   };
 
   const handleDeleteUser = async (u: UserActivityRow) => {
-    const reg = registeredUsers.find(
-      (r) => (r.email || '').toLowerCase() === u.key || (r.uid || '').toLowerCase() === u.key
-    );
+    // Kayıt defteri eşleşmesi: e-posta, uid veya görünen ad (katkılar isimle de yazılır).
+    const reg = regOf(u);
     if (!reg?.uid) {
-      setNotice('Bu kullanıcı kayıt defterinde bulunamadı (yalnızca katkı izi var).');
+      setNotice('Bu kullanıcı kayıt defterinde bulunamadı. Yalnızca isimsiz katkı izi olabilir; önce listeyi yenileyin.');
       return;
     }
     setBusyAction(`deluser-${u.key}`);
@@ -348,6 +361,22 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     } finally {
       setBusyAction(null);
       setConfirmDeleteUserKey(null);
+    }
+  };
+
+  const handlePurgeAuthor = async (u: UserActivityRow) => {
+    setBusyAction(`purge-${u.key}`);
+    try {
+      const res = await purgeAuthorContributions(committees, u.key);
+      setNotice(res.message);
+      if (res.ok) {
+        setConfirmPurgeKey(null);
+        if (selectedUserKey === u.key) setSelectedUserKey(null);
+        await onRefreshData();
+        await reloadInbox();
+      }
+    } finally {
+      setBusyAction(null);
     }
   };
 
@@ -757,7 +786,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                 <input value={userQuery} onChange={(e) => setUserQuery(e.target.value)} placeholder="İsim veya e-posta ara" className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px]" />
               </label>
               <div className="rounded-xl border border-line overflow-x-auto">
-                <table className="w-full text-[14px] border-collapse min-w-[640px]">
+                <table className="w-full text-[14px] border-collapse min-w-[760px]">
                   <thead className="bg-canvas text-[12px] text-ink-2">
                     <tr>
                       <th scope="col" className="text-left font-semibold px-3 py-2">Kullanıcı</th>
@@ -767,11 +796,19 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                       <th scope="col" className="text-right font-semibold px-3 py-2">Bildirim</th>
                       <th scope="col" className="text-right font-semibold px-3 py-2">Yorum</th>
                       <th scope="col" className="text-right font-semibold px-3 py-2">Toplam</th>
+                      <th scope="col" className="text-right font-semibold px-3 py-2"><span className="sr-only">İşlemler</span></th>
                     </tr>
                   </thead>
                   <tbody>
-                    {filteredUsers.slice(0, 100).map((u) => (
-                      <tr key={u.key} onClick={() => setSelectedUserKey(selectedUserKey === u.key ? null : u.key)}
+                    {filteredUsers.slice(0, 100).map((u) => {
+                      const isSelfAdmin = (u.email || '').toLowerCase() === adminEmail.toLowerCase();
+                      const confirming = confirmDeleteUserKey === u.key;
+                      const confirmingPurge = confirmPurgeKey === u.key;
+                      const deleting = busyAction === `deluser-${u.key}`;
+                      const purging = busyAction === `purge-${u.key}`;
+                      const hasAccount = Boolean(regOf(u));
+                      return (
+                      <tr key={u.key} onClick={() => { setSelectedUserKey(selectedUserKey === u.key ? null : u.key); setConfirmDeleteUserKey(null); }}
                         className={`border-t border-line-soft cursor-pointer ${selectedUserKey === u.key ? 'bg-accent-soft/40' : 'hover:bg-[#FAFBFC]'}`}>
                         <td className="px-3 py-2">
                           <div className="font-semibold truncate max-w-[240px]">{u.name}</div>
@@ -783,10 +820,36 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                         <td className="px-3 py-2 text-right font-mono">{u.reports}</td>
                         <td className="px-3 py-2 text-right font-mono">{u.comments}</td>
                         <td className="px-3 py-2 text-right font-mono font-bold">{u.total}</td>
+                        <td className="px-3 py-2 text-right whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
+                          {u.email && (
+                            <button type="button" title={`${u.name} kullanıcısına e-posta gönder`}
+                              onClick={() => { setMailUserKey(u.key); setMailSubject(''); setMailBody(''); }}
+                              className="h-8 px-2.5 mr-1.5 rounded-lg border border-line bg-white text-[12px] font-semibold text-ink-2 hover:text-accent hover:border-accent/50 cursor-pointer inline-flex items-center gap-1">
+                              <Mail className="w-3.5 h-3.5" /> Mail
+                            </button>
+                          )}
+                          {!isSelfAdmin && hasAccount && (
+                            <button type="button" title={confirming ? 'Onaylamak için tekrar bas' : `${u.name} kullanıcısını sil`}
+                              onClick={() => (confirming ? void handleDeleteUser(u) : setConfirmDeleteUserKey(u.key))}
+                              disabled={deleting}
+                              className={`h-8 px-2.5 rounded-lg text-[12px] font-semibold cursor-pointer inline-flex items-center gap-1 disabled:opacity-50 ${confirming ? 'bg-[#B4233C] text-white' : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'}`}>
+                              <Trash2 className="w-3.5 h-3.5" /> {deleting ? 'Siliniyor…' : confirming ? 'Emin misin?' : 'Sil'}
+                            </button>
+                          )}
+                          {!hasAccount && u.total > 0 && (
+                            <button type="button" title={confirmingPurge ? 'Onaylamak için tekrar bas' : `${u.name} isminin tüm katkı izlerini temizle (parça, şık, yorum, bildirim)`}
+                              onClick={() => (confirmingPurge ? void handlePurgeAuthor(u) : setConfirmPurgeKey(u.key))}
+                              disabled={purging}
+                              className={`h-8 px-2.5 rounded-lg text-[12px] font-semibold cursor-pointer inline-flex items-center gap-1 disabled:opacity-50 ${confirmingPurge ? 'bg-[#B4233C] text-white' : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'}`}>
+                              <Trash2 className="w-3.5 h-3.5" /> {purging ? 'Temizleniyor…' : confirmingPurge ? 'Emin misin?' : 'Temizle'}
+                            </button>
+                          )}
+                        </td>
                       </tr>
-                    ))}
+                      );
+                    })}
                     {filteredUsers.length === 0 && (
-                      <tr><td colSpan={7} className="px-3 py-8 text-center text-ink-2">Kayıtlı işlem yok.</td></tr>
+                      <tr><td colSpan={8} className="px-3 py-8 text-center text-ink-2">Kayıtlı işlem yok.</td></tr>
                     )}
                   </tbody>
                 </table>
@@ -799,20 +862,20 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                 );
                 const allQs = [...questions, ...pastQuestions];
                 const userQuestions = allQs.filter((q) =>
-                  (q.contributedByUid || q.contributedByName || '').toLowerCase() === u.key ||
-                  (q.fragments || []).some((f) => (f.authorUid || f.author || '').toLowerCase() === u.key)
+                  normKey(q.contributedByUid || q.contributedByName) === u.key ||
+                  (q.fragments || []).some((f) => normKey(f.authorUid || f.author) === u.key)
                 ).slice(0, 20);
                 const userMessages: { label: string; text: string }[] = [];
                 for (const q of allQs) {
                   for (const f of q.fragments || []) {
-                    if ((f.authorUid || f.author || '').toLowerCase() === u.key) {
+                    if (normKey(f.authorUid || f.author) === u.key) {
                       userMessages.push({ label: `S.${q.questionNumber || '?'} · ${q.topic || q.discipline}`, text: f.text });
                     }
                   }
                   if (userMessages.length >= 15) break;
                 }
-                const userReports = reports.filter((r) => (r.reportedBy || '').toLowerCase() === u.key).slice(0, 20);
-                const userComments = comments.filter((c) => (c.author || '').toLowerCase() === u.key).slice(0, 20);
+                const userReports = reports.filter((r) => normKey(r.reportedBy) === u.key).slice(0, 20);
+                const userComments = comments.filter((c) => normKey(c.author) === u.key).slice(0, 20);
                 const isAdmin = (reg?.email || u.email || '').toLowerCase() === adminEmail.toLowerCase();
                 return (
                   <section className="rounded-xl border border-accent/40 bg-accent-soft/20 p-4 flex flex-col gap-3">
@@ -832,9 +895,18 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                           {confirmDeleteUserKey === u.key ? 'Emin misin? Sil' : 'Kullanıcıyı sil'}
                         </button>
                       )}
+                      {!reg && u.total > 0 && (
+                        <button type="button" title="Kayıtlı hesabı yok; bu ismin katkı izlerini temizler"
+                          onClick={() => (confirmPurgeKey === u.key ? void handlePurgeAuthor(u) : setConfirmPurgeKey(u.key))}
+                          disabled={busyAction === `purge-${u.key}`}
+                          className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold cursor-pointer disabled:opacity-50 ${confirmPurgeKey === u.key ? 'bg-[#B4233C] text-white' : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C]'}`}>
+                          {confirmPurgeKey === u.key ? 'Emin misin? Temizle' : 'Katkıları temizle'}
+                        </button>
+                      )}
                       <button type="button" onClick={() => { setSelectedUserKey(null); setConfirmDeleteUserKey(null); }} className="h-9 px-3 rounded-[10px] border border-line bg-white text-[13px] font-semibold cursor-pointer">Kapat</button>
                     </div>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-[12.5px] text-ink-2">
+                      {!reg && <span className="text-warn font-semibold">Kayıtlı hesabı yok — yalnızca katkı izi. "Katkıları temizle" ile izleri silebilirsiniz.</span>}
                       {u.email && <span>E-posta: <strong className="text-ink">{u.email}</strong></span>}
                       {u.studentNumber && <span>Numara: <strong className="text-ink">{u.studentNumber}</strong></span>}
                       {reg?.role && <span>Rol: <strong className="text-ink">{reg.role}</strong></span>}
@@ -1051,13 +1123,13 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
               <section className="rounded-xl border border-line p-4 flex flex-col gap-3">
                 <h3 className="m-0 text-[16px] font-bold flex items-center gap-2"><Key className="w-4 h-4" /> AI API anahtarları</h3>
-                {([['gemini', 'Gemini API anahtarı'], ['groq', 'Groq anahtarı 1'], ['groq2', 'Groq anahtarı 2']] as const).map(([k, label]) => (
+                {([['gemini', 'Gemini API anahtarı'], ['groq', 'Groq anahtarı 1'], ['groq2', 'Groq anahtarı 2'], ['museSpark', 'Muse Spark 1.3 Free anahtarı (Kota Kurtarıcı)']] as const).map(([k, label]) => (
                   <label key={k} className="flex flex-col gap-1.5">
                     <span className="text-[13px] font-semibold">{label}</span>
                     <input type="password" autoComplete="off" value={aiKeys[k]} onChange={(e) => setAiKeys({ ...aiKeys, [k]: e.target.value })} placeholder="Yapıştır…" className="h-11 border border-line-2 rounded-[10px] px-3 text-[14px] font-mono bg-white outline-0 focus:border-accent" />
                   </label>
                 ))}
-                <p className="m-0 text-[12px] text-ink-3">Anahtarlar yalnızca bu tarayıcıda saklanır (mevcut uygulamanın kullandığı anahtarlarla aynı).</p>
+                <p className="m-0 text-[12px] text-ink-3">Anahtarlar yalnızca bu tarayıcıda saklanır (mevcut uygulamanın kullandığı anahtarlarla aynı). Muse Spark 1.3, Gemini ve Groq limitleri dolduğunda otomatik devreye girer.</p>
               </section>
 
               <section className="rounded-xl border border-line p-4 flex flex-col gap-3">
@@ -1081,6 +1153,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                     <option value="gemini-3.8-flash">gemini-3.8-flash</option>
                     <option value="openai/gpt-oss-120b">openai/gpt-oss-120b (Groq)</option>
                     <option value="qwen/qwen3.8-27b">qwen/qwen3.8-27b (Groq)</option>
+                    <option value="muse-spark-1.3-contributor-free">muse-spark-1.3-contributor-free (Muse Spark 1.3 Free)</option>
                   </select>
                 </label>
                 <label className="flex items-center gap-2 text-[14px] cursor-pointer">

@@ -36,6 +36,7 @@ export const DEFAULT_MANAGE_SETTINGS: ManageAutomationSettings = {
 const GEMINI_KEY = 'medsoru_gemini_api_key';
 const GROQ_KEY = 'medsoru_groq_api_key';
 const GROQ_KEY_2 = 'medsoru_groq_api_key_2';
+const MUSE_SPARK_KEY = 'medsoru_muse_spark_api_key';
 
 const readLS = (k: string): string => {
   try {
@@ -54,16 +55,20 @@ const writeLS = (k: string, v: string) => {
   }
 };
 
-export const getAiKeys = (): { gemini: string; groq: string; groq2: string } => ({
+export const getAiKeys = (): { gemini: string; groq: string; groq2: string; museSpark: string } => ({
   gemini: readLS(GEMINI_KEY),
   groq: readLS(GROQ_KEY),
   groq2: readLS(GROQ_KEY_2),
+  museSpark: readLS(MUSE_SPARK_KEY),
 });
 
-export const saveAiKeys = (keys: { gemini: string; groq: string; groq2: string }) => {
+export const saveAiKeys = (keys: { gemini: string; groq: string; groq2: string; museSpark?: string }) => {
   writeLS(GEMINI_KEY, keys.gemini.trim());
   writeLS(GROQ_KEY, keys.groq.trim());
   writeLS(GROQ_KEY_2, keys.groq2.trim());
+  if (keys.museSpark !== undefined) {
+    writeLS(MUSE_SPARK_KEY, keys.museSpark.trim());
+  }
 };
 
 export const loadManageSettings = async (): Promise<ManageAutomationSettings> => {

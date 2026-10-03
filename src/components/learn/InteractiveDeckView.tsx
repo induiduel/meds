@@ -47,6 +47,7 @@ import {
 } from './MedicalGlossaryPopover';
 import { AiThinking } from '../ui/Animations';
 import { HighlighterToolbar, Highlightable, isPenActive } from '../ui/Highlighter';
+import { SlideDrawingCanvas, DrawingModeToolbarTrigger } from './SlideDrawingCanvas';
 import { toast } from '../ui/Toast';
 
 // ---------------------------------------------------------------------------
@@ -1073,6 +1074,7 @@ const DeckPlayer: React.FC<{
           ))}
         </div>
         <HighlighterToolbar />
+        <DrawingModeToolbarTrigger />
         {onExportPdf && (
           <button
             type="button"
@@ -1746,8 +1748,9 @@ const SlideCanvas: React.FC<{
   return (
     <article
       ref={containerRef}
-      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 custom-scrollbar`}
+      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 custom-scrollbar relative`}
     >
+      <SlideDrawingCanvas scope={highlightScope || `slide:${slide.slideNumber}`} />
       <Highlightable
         scope={highlightScope || `slide:${slide.slideNumber}:${slide.title}`}
         className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6"

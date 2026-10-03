@@ -38,7 +38,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [isContextExpanded, setIsContextExpanded] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [preferredProvider, setPreferredProvider] = useState<'auto' | 'gemini' | 'groq'>('auto');
+  const [preferredProvider, setPreferredProvider] = useState<'auto' | 'gemini' | 'groq' | 'muse-spark'>('auto');
   const [selectedModel, setSelectedModel] = useState('gemini-3.8-flash');
   const [lastUsedProvider, setLastUsedProvider] = useState<string>('');
   const [pastInteractions, setPastInteractions] = useState<any[]>([]);
@@ -166,15 +166,15 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         setMessages((prev) => [...prev, assistantMsg]);
         if (res.providerUsed) setLastUsedProvider(res.providerUsed);
       } else {
-        const isTwo = Boolean(res.isTwoAttemptsFailed || res.attemptsCount === 2 || res.error?.includes('2 kez'));
-        if (isTwo) {
+        const isMulti = Boolean(res.isTwoAttemptsFailed || res.isThreeAttemptsFailed || (res.attemptsCount && res.attemptsCount >= 2) || res.error?.includes('kez'));
+        if (isMulti) {
           setTwoAttemptsFailed(true);
           setLastFailedText(text);
         }
         const errorMsg: QuestionChatMessage = {
           role: 'assistant',
-          content: isTwo
-            ? `⚠️ **2 KEZ DENENDİ VE BAŞARISIZ OLDU**\n\n${res.error || 'Hem birincil yapay zeka sağlayıcısı hem de alternatif yedek sağlayıcı (Google Gemini ve Groq Cloud) yanıt veremedi.'}\n\n💡 *Aşağıdaki **Tekrar Dene** butonuna basabilir veya üstteki **Ayarlar** menüsünden farklı bir model ya da API anahtarı seçebilirsiniz.*`
+          content: isMulti
+            ? `⚠️ **TÜM YAPAY ZEKA SAĞLAYICILARI DENENDİ VE BAŞARISIZ OLDU**\n\n${res.error || 'Google Gemini, Groq Cloud ve Muse Spark 1.3 Free sağlayıcılarının kotaları tükendi veya yanıt veremediler.'}\n\n💡 *Aşağıdaki **Tekrar Dene** butonuna basabilir veya üstteki **Ayarlar** menüsünden farklı bir model ya da API anahtarı seçebilirsiniz.*`
             : `⚠️ **Üzgünüm, bir sorun oluştu:** ${res.error || 'Yapay zeka yanıt üretemedi. Lütfen tekrar deneyin.'}`,
           timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
         };
@@ -404,9 +404,10 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 onChange={(e) => setPreferredProvider(e.target.value as any)}
                 className="bg-white border border-line-2 rounded px-2 py-1 text-ink outline-none"
               >
-                <option value="auto">Otomatik (Gemini + Groq Kesintisiz)</option>
+                <option value="auto">Otomatik (Gemini + Groq + Muse Spark Kurtarma)</option>
                 <option value="groq">Groq Cloud (Ultra Hızlı)</option>
                 <option value="gemini">Google Gemini (Tıbbi Muhakeme)</option>
+                <option value="muse-spark">Muse Spark 1.3 Free (Kurtarıcı)</option>
               </select>
             </div>
             <div className="flex items-center gap-2">
@@ -420,6 +421,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                 <option value="openai/gpt-oss-120b">Groq GPT-OSS 120B (Önerilen)</option>
                 <option value="qwen/qwen3.8-27b">Groq Qwen 27B (Türkçe Tıbbi)</option>
                 <option value="openai/gpt-oss-20b">Groq GPT-OSS 20B (Ultra Hızlı)</option>
+                <option value="muse-spark-1.3-contributor-free">Muse Spark 1.3 Free (Meta / OpenCode)</option>
               </select>
             </div>
           </div>
@@ -639,27 +641,33 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                   <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: '150ms' }} />
                   <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: '300ms' }} />
                 </div>
-                <span className={`text-xs font-sans ml-1 ${loadingStatus.includes('2. Deneme') || loadingStatus.includes('Alternatif') || loadingStatus.includes('diğer') ? 'text-amber-700 font-semibold' : 'text-ink-2 italic'}`}>
+                <span className={`text-xs font-sans ml-1 ${
+                  loadingStatus.includes('Muse Spark') || loadingStatus.includes('3. Deneme')
+                    ? 'text-cyan-800 font-bold bg-cyan-50 px-2 py-0.5 rounded border border-cyan-200'
+                    : loadingStatus.includes('2. Deneme') || loadingStatus.includes('Alternatif') || loadingStatus.includes('diğer')
+                      ? 'text-amber-700 font-semibold'
+                      : 'text-ink-2 italic'
+                }`}>
                   {loadingStatus}
                 </span>
               </div>
             </div>
           )}
 
-          {/* 2-Attempt Failure Alert Card */}
+          {/* 3-Attempt Failure Alert Card */}
           {twoAttemptsFailed && !isLoading && (
             <div className="p-3.5 bg-amber-50 border border-amber-300/80 rounded-2xl shadow-xs space-y-2.5 animate-fade-in text-ink">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 text-amber-900 font-bold text-[13px]">
                   <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
-                  <span>2 Kez Denendi ve Yanıt Alınamadı</span>
+                  <span>Yapay Zeka Kotaları Doldu</span>
                 </div>
                 <span className="text-[10px] bg-amber-200/90 text-amber-950 font-mono px-2 py-0.5 rounded-full font-bold">
-                  Gemini &amp; Groq Başarısız
+                  Gemini, Groq &amp; Muse Spark
                 </span>
               </div>
               <p className="text-[12px] text-amber-800/90 leading-relaxed m-0">
-                Sistem otomatik olarak önce birincil ardından yedek yapay zeka sağlayıcısını denedi ancak ikisi de yanıt veremedi. Aşağıdaki seçenekleri kullanarak sorunuzu tekrar gönderebilir veya modeli değiştirebilirsiniz.
+                Sistem sırasıyla Google Gemini, Groq Cloud ve son çare kurtarıcı Muse Spark 1.3 Free modellerini denedi ancak tüm servislerin kotaları doldu veya geçici olarak yanıt alınamadı. Aşağıdan tekrar deneyebilir veya Ayarlar menüsünden API anahtarınızı güncelleyebilirsiniz.
               </p>
               <div className="flex items-center flex-wrap gap-2 pt-0.5">
                 {lastFailedText && (

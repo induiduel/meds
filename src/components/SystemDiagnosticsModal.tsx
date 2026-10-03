@@ -48,6 +48,9 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
   const [customGroqKey2, setCustomGroqKey2] = useState<string>(() => {
     return (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_groq_api_key_2') : '') || '';
   });
+  const [customMuseSparkKey, setCustomMuseSparkKey] = useState<string>(() => {
+    return (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_muse_spark_api_key') : '') || '';
+  });
   const [customSupaUrl, setCustomSupaUrl] = useState<string>(() => getSupabaseConfig().url);
   const [customSupaKey, setCustomSupaKey] = useState<string>(() => getSupabaseConfig().key);
   const [dbMode, setDbMode] = useState<DatabaseMode>(() => multiDbManager.getActiveMode());
@@ -124,6 +127,12 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
         localStorage.setItem('medsoru_groq_api_key_2', customGroqKey2.trim());
       } else {
         localStorage.removeItem('medsoru_groq_api_key_2');
+      }
+
+      if (customMuseSparkKey.trim()) {
+        localStorage.setItem('medsoru_muse_spark_api_key', customMuseSparkKey.trim());
+      } else {
+        localStorage.removeItem('medsoru_muse_spark_api_key');
       }
     }
 
@@ -966,6 +975,22 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                   />
                   <span className="text-[11px] text-ink-3 mt-1 block">
                     Groq Cloud (OpenAI GPT-OSS 120B / Llama 3.3 / Qwen) kotasız ve ücretsizdir. Biri dolarsa diğeri otomatik devreye girer.
+                  </span>
+                </div>
+
+                <div>
+                  <label className="block text-[13px] font-semibold text-ink mb-1">
+                    Muse Spark 1.3 Free (Son Çare / Tüm Limitler Dolunca Otomatik Kurtarma)
+                  </label>
+                  <input
+                    type="password"
+                    value={customMuseSparkKey}
+                    onChange={(e) => setCustomMuseSparkKey(e.target.value)}
+                    placeholder="Muse Spark / OpenCode / OpenRouter Anahtarı (İsteğe Bağlı)"
+                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-[13px] text-ink font-mono focus:border-accent outline-0"
+                  />
+                  <span className="text-[11px] text-ink-3 mt-1 block">
+                    Gemini ve Groq limitleri dolduğunda otomatik devreye girer. Boş bırakıldığında yerleşik ücretsiz havuz kullanılır.
                   </span>
                 </div>
               </div>

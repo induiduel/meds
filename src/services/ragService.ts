@@ -353,7 +353,15 @@ Lütfen bu referansları temel alarak talimatı yerine getir.`;
     process.env.GEMINI_BILLED_KEY
   ].filter((k): k is string => Boolean(k && k.trim() && k !== 'MY_GEMINI_FREE_KEY_1'));
 
-  const candidateModels = [modelName, 'gemini-3.8-flash', 'gemini-flash-latest'].filter((v, idx, arr) => arr.indexOf(v) === idx);
+  const candidateModels = [
+    modelName,
+    'gemini-3.7-flash',
+    'gemini-3.5-flash',
+    'gemini-3.5-flash-lite',
+    'gemini-3.1-flash-lite',
+    'gemini-3.8-flash',
+    'gemini-flash-latest'
+  ].filter((v, idx, arr) => Boolean(v) && arr.indexOf(v) === idx);
   let response: any = null;
   let lastErr: any = null;
   let resolvedModel = modelName;
@@ -383,49 +391,117 @@ Lütfen bu referansları temel alarak talimatı yerine getir.`;
   }
 
   if (!response || !response.text) {
-    const decodeB64 = (s: string) => Buffer.from(s, 'base64').toString('utf8');
     const groqKeys = [
       process.env.GROQ_API_KEY,
-      process.env.GROQ_BACKUP_KEY_2,
-      decodeB64('Z3NrX1hiUktHakF1VksyTWtnTjhYd3lJV0dkeWIzRllJRU5LVlY2bklJRE9nMEdTTEFpeFhSeDcx')
+      process.env.GROQ_API_KEY_2,
+      process.env.GROQ_BACKUP_KEY_2
     ].filter(Boolean) as string[];
 
-    for (const gKey of groqKeys) {
-      try {
-        const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${gKey}`
-          },
-          body: JSON.stringify({
-            model: 'llama-3.3-70b-versatile',
-            messages: [
-              ...(systemInstruction ? [{ role: 'system', content: systemInstruction }] : []),
-              { role: 'user', content: userPrompt }
-            ],
-            temperature: 0.2,
-            max_tokens: 1500
-          })
-        });
+    const groqModels = ['openai/gpt-oss-120b', 'qwen/qwen3.8-27b', 'openai/gpt-oss-20b'];
 
-        if (groqRes.ok) {
-          const gData = await groqRes.json();
-          const groqText = gData.choices?.[0]?.message?.content;
-          if (groqText) {
-            response = { text: groqText };
-            resolvedModel = 'groq/llama-3.3-70b-versatile';
-            break;
+    for (const gKey of groqKeys) {
+      for (const gModel of groqModels) {
+        try {
+          const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${gKey}`
+            },
+            body: JSON.stringify({
+              model: gModel,
+              messages: [
+                ...(systemInstruction ? [{ role: 'system', content: systemInstruction }] : []),
+                { role: 'user', content: userPrompt }
+              ],
+              temperature: 0.2,
+              max_tokens: 1500
+            })
+          });
+
+          if (groqRes.ok) {
+            const gData = await groqRes.json();
+            const groqText = gData.choices?.[0]?.message?.content;
+            if (groqText) {
+              response = { text: groqText };
+              resolvedModel = `groq/${gModel}`;
+              break;
+            }
           }
+        } catch (gErr: any) {
+          lastErr = gErr;
         }
-      } catch (gErr: any) {
-        lastErr = gErr;
       }
+      if (response && response.text) break;
     }
   }
 
   if (!response || !response.text) {
-    throw lastErr || new Error('Yapay zeka modeli yanıt üretemedi.');
+    // 3. Muse Spark 1.3 Free (Son Çare / Kota Kurtarıcı)
+    const museKeys = [
+      process.env.MUSE_SPARK_API_KEY,
+      process.env.OPENCODE_API_KEY,
+      process.env.OPENROUTER_API_KEY,
+      'public-free-tier'
+    ].filter(Boolean) as string[];
+
+    const museUrls = [
+      process.env.MUSE_SPARK_BASE_URL,
+      'https://opencode.ai/zen/v1',
+      'https://openrouter.ai/api/v1',
+      'https://api.meta.ai/v1'
+    ].filter(Boolean) as string[];
+
+    const candidateMuseModels = [
+      'muse-spark-1.3-contributor-free',
+      'muse-spark-1.3-free',
+      'muse-spark-1.3',
+      'meta/muse-spark-1.3:free',
+      'meta/muse-spark-1.3'
+    ];
+
+    for (const mUrl of museUrls) {
+      for (const mKey of museKeys) {
+        for (const mModel of candidateMuseModels) {
+          try {
+            const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+            if (mKey && mKey !== 'public-free-tier') {
+              headers['Authorization'] = `Bearer ${mKey}`;
+            }
+            const mRes = await fetch(`${mUrl}/chat/completions`, {
+              method: 'POST',
+              headers,
+              body: JSON.stringify({
+                model: mModel,
+                messages: [
+                  ...(systemInstruction ? [{ role: 'system', content: systemInstruction }] : []),
+                  { role: 'user', content: userPrompt }
+                ],
+                temperature: 0.2,
+                max_tokens: 1500
+              })
+            });
+            if (mRes.ok) {
+              const mData = await mRes.json();
+              const museText = mData.choices?.[0]?.message?.content;
+              if (museText) {
+                response = { text: museText };
+                resolvedModel = `Muse Spark 1.3 Free (${mModel})`;
+                break;
+              }
+            }
+          } catch (mErr: any) {
+            lastErr = mErr;
+          }
+        }
+        if (response && response.text) break;
+      }
+      if (response && response.text) break;
+    }
+  }
+
+  if (!response || !response.text) {
+    throw lastErr || new Error('Yapay zeka modelleri (Gemini, Groq ve Muse Spark 1.3 Free) yanıt üretemedi.');
   }
 
   const answer = response.text || 'Yanıt üretilemedi.';
@@ -488,29 +564,42 @@ export async function* executeRagQueryStream(
     process.env.GEMINI_BILLED_KEY
   ].filter((k): k is string => Boolean(k && k.trim() && k !== 'MY_GEMINI_FREE_KEY_1'));
 
+  const candidateModels = [
+    modelName,
+    'gemini-3.7-flash',
+    'gemini-3.5-flash',
+    'gemini-3.5-flash-lite',
+    'gemini-3.1-flash-lite',
+    'gemini-3.8-flash',
+    'gemini-flash-latest'
+  ].filter((v, idx, arr) => Boolean(v) && arr.indexOf(v) === idx);
+
   let streamSuccess = false;
   for (const k of candidateKeys) {
-    try {
-      const client = new GoogleGenAI({ apiKey: k });
-      const streamRes = await client.models.generateContentStream({
-        model: modelName,
-        contents: userPrompt,
-        config: {
-          systemInstruction,
-          temperature: 0.2,
-          maxOutputTokens: 1500
-        }
-      });
+    for (const m of candidateModels) {
+      try {
+        const client = new GoogleGenAI({ apiKey: k });
+        const streamRes = await client.models.generateContentStream({
+          model: m,
+          contents: userPrompt,
+          config: {
+            systemInstruction,
+            temperature: 0.2,
+            maxOutputTokens: 1500
+          }
+        });
 
-      for await (const chunk of streamRes) {
-        if (chunk.text) {
-          yield { token: chunk.text, done: false };
+        for await (const chunk of streamRes) {
+          if (chunk.text) {
+            yield { token: chunk.text, done: false };
+          }
         }
-      }
-      streamSuccess = true;
-      yield { done: true, usedModel: modelName };
-      break;
-    } catch (_) {}
+        streamSuccess = true;
+        yield { done: true, usedModel: m };
+        break;
+      } catch (_) {}
+    }
+    if (streamSuccess) break;
   }
 
   if (!streamSuccess) {

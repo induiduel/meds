@@ -86,82 +86,7 @@
       "options": [],
       "upvotes": 0,
       "createdAt": "2026-10-02T14:23:50.62677+00:00",
-      "fragments": [
-        {
-          "id": "f-1790951030251-t6ke",
-          "text": "Hangi boya olduğunu değil, bu görüntüyü veren maddenin ne olduğunu soruyordu kökte.",
-          "type": "stem",
-          "author": "Dr House",
-          "likedBy": [],
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:23:50.251Z"
-        },
-        {
-          "id": "f-merged-1790983091687-cbhf",
-          "text": "[Birleştirilen Taslak #Belirsiz]: Kronik romatoid artrit tanısıyla takip edilen 58 yaşındaki kadın hastada son zamanlarda bilateral bacak ödemi ve proteinüri (6 g/gün) gelişiyor. Yapılan renal biyopsinin ışık mikroskobik incelemesinde, glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanıyor. Bu birikim Kongo kırmızısı (Congo red) boyası ile boyanıp polarize ışık mikroskobunda incelendiğinde elma yeşili çift kırınım (birefringe) gösteriyor.\n\nBu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T23:18:11.687Z"
-        },
-        {
-          "id": "f-1790951053241-1mbo",
-          "text": "Şıklarda amiloid, glikojen, kalsiyum, melanin ve kolesterol vardı.",
-          "type": "stem",
-          "author": "Dr House",
-          "likedBy": [],
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:24:13.241Z"
-        },
-        {
-          "id": "f-1790951018529-kul2",
-          "text": "ışık mikroskobunda 'elma yeşili refle / çift kırınım (apple-green birefringence)' veren yapıyı soruyordu.",
-          "type": "stem",
-          "author": "Dr House",
-          "likedBy": [],
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:23:38.529Z"
-        },
-        {
-          "id": "f-1790950963304-d8pn",
-          "text": "Soru tek cümlelik bir spot soruydu; polarize ışık mikroskobundan bahsediyordu.",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:22:43.304Z"
-        },
-        {
-          "id": "f-1790951042634-2z92",
-          "text": "Kongo kırmızısı (Congo red) boyasını soru metninin içine ipucu olarak vermişlerdi.\"",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T14:24:02.634Z"
-        },
-        {
-          "id": "f-merged-1790983486379-ao4g",
-          "author": "Anonim Katkıcı",
-          "text": "[Birleştirilen Taslak #10]: Türkiye'de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser türü aşağıdakilerden hangisidir?",
-          "type": "stem",
-          "timestamp": "2026-10-02T23:24:46.379Z",
-          "upvotes": 1
-        },
-        {
-          "id": "f-merged-1790983486379-hexp",
-          "author": "Dr House",
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "text": "[Birleştirilen Taslak #Belirsiz]: Kronik romatoid artrit tanısıyla takip edilen 58 yaşındaki kadın hastada son zamanlarda bilateral bacak ödemi ve proteinüri (6 g/gün) gelişiyor. Yapılan renal biyopsinin ışık mikroskobik incelemesinde, glomerüler bazal membranlarda ve mezanjiyumda hücresiz, amorf, eozinofilik ekstraselüler materyal birikimi saptanıyor. Bu birikim Kongo kırmızısı (Congo red) boyası ile boyanıp polarize ışık mikroskobunda incelendiğinde elma yeşili çift kırınım (birefringe) gösteriyor.\n\nBu hastada dokularda birikerek patolojiye yol açan madde aşağıdakilerden hangisidir?",
-          "type": "stem",
-          "timestamp": "2026-10-02T23:24:46.379Z",
-          "upvotes": 1
-        }
-      ],
+      "fragments": [],
       "revisions": [
         {
           "id": "rev-1790951030251",
@@ -190,7 +115,7 @@
           "changeSummary": "5 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-02T23:24:46.690Z",
+      "updatedAt": "2026-10-03T00:03:23.726Z",
       "discipline": "Tıbbi Patoloji",
       "committeeId": "donem3-kurul1",
       "questionNumber": 0,
@@ -525,13 +450,16 @@
         },
         {
           "id": "past-1790877034674-813824",
+          "tags": [],
           "topic": "Tiroid Neoplazileri ve Epidemiyolojisi",
           "status": "completed",
+          "options": [],
           "reports": [],
           "upvotes": 0,
           "comments": [],
           "examYear": "2021-2022",
           "createdAt": "2026-10-02T21:45:28.934214+00:00",
+          "fragments": [],
           "isSuspect": false,
           "updatedAt": "2026-10-02T23:22:43.952+00:00",
           "discipline": "Tıbbi Patoloji",
@@ -614,10 +542,7 @@
           },
           "matchedNoteTitle": "1",
           "matchedSlidePage": 3,
-          "isUnassignedNumber": false,
-          "tags": [],
-          "fragments": [],
-          "options": []
+          "isUnassignedNumber": false
         },
         {
           "id": "q-donem3-kurul1-unassigned-1790951053241",
@@ -928,102 +853,11 @@
       ],
       "topic": "Tıbbi Genetik Hatırlanan Soru",
       "status": "completed",
-      "options": [
-        {
-          "key": "A",
-          "text": "Down Sendromu",
-          "upvotes": 6,
-          "suggestedBy": "Dr House",
-          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "likedBy": []
-        },
-        {
-          "key": "B",
-          "text": "Edwards Sendromu",
-          "upvotes": 10,
-          "suggestedBy": "Dr House",
-          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
-        },
-        {
-          "key": "C",
-          "text": "Endokardiyal yastık defekti",
-          "upvotes": 1,
-          "suggestedBy": "Taslak Birleştirme"
-        },
-        {
-          "key": "D",
-          "text": "Fallot tetralojisi",
-          "upvotes": 1,
-          "suggestedBy": "Taslak Birleştirme"
-        }
-      ],
+      "options": [],
       "upvotes": 0,
       "isMerged": true,
       "createdAt": "2026-10-02T21:45:28.934214+00:00",
-      "fragments": [
-        {
-          "id": "f-1790967524671-hec2",
-          "text": "Ben fetal ultrason kısmını hatırlıyorum; birinci trimester taramasında ense saydamlığı (NT) belirgin artmıştı, burun kemiği de seçilemiyordu sanki",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T18:58:44.671Z"
-        },
-        {
-          "id": "f-1790967391168-u8je",
-          "text": "Anne yaşı ilerledikçe risk artar ama bu çocuklarda zeka geriliği genelde görülmez, tablo sadece fiziksel bulgularla sınırlıdır\nİpucu: Bence down sendromu",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T18:56:31.168Z"
-        },
-        {
-          "id": "f-opt-1790967391177-A",
-          "text": "A) Down Sendromu",
-          "type": "option",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T18:56:31.177Z"
-        },
-        {
-          "id": "f-1790967419200-5dc9",
-          "text": "21. kromozom trizomisidir; bebeklerde kas gevşekliği (hipotoni), basık burun kökü ve kalpte AV kanal defekti sık görülür.",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T18:56:59.200Z"
-        },
-        {
-          "id": "f-opt-1790967419207-A",
-          "text": "A) Edwards Sendromu",
-          "type": "option",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T18:56:59.207Z"
-        },
-        {
-          "id": "f-1790967544107-iqlx",
-          "text": "Detayları unuttum ama bebek doğduktan sonra kalbinde endokardiyal yastık (AV kanal) defekti ve batın grafisinde 'çift kabarcık' (double bubble) görüntüsü vardı.",
-          "type": "stem",
-          "author": "Dr House",
-          "upvotes": 1,
-          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-02T18:59:04.107Z"
-        },
-        {
-          "id": "f-1",
-          "text": "Down sendromunda görülen kardiyak defekt...",
-          "type": "stem",
-          "author": "Test Öğrenci",
-          "upvotes": 1,
-          "timestamp": "2026-10-02T19:56:50.291Z"
-        }
-      ],
+      "fragments": [],
       "revisions": [
         {
           "id": "rev-1790967524679",
@@ -1059,7 +893,7 @@
           "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-02T23:27:56.244Z",
+      "updatedAt": "2026-10-03T00:03:22.788Z",
       "discipline": "Tıbbi Genetik",
       "committeeId": "donem3-kurul1",
       "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi. [03.10.2026]: 3 taslak ile iç içe geçirildi.",

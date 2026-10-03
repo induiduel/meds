@@ -76,6 +76,80 @@ export interface ClusterAnalysisSummary {
 }
 
 // ==========================================
+// KÜMELEME HASSASİYET AYARI + "AYNI DEĞİL" ENGEL LİSTESİ
+// ==========================================
+
+export interface ClusterTuning {
+  /** Bu puanın üstü otomatik birleştirme adayıdır. */
+  autoThreshold: number;
+  /** Bu puanın üstü incelemeye değerdir. */
+  suggestThreshold: number;
+  /** Muğlak taslakların kümeye tutunma eşiği. */
+  vagueAttachThreshold: number;
+  /** Kümenin "hazır" sayılacağı ortalama güven. */
+  readyConfidence: number;
+  /** Çapa kalitesi eşiği (altı her zaman incelemeye düşer). */
+  anchorQualityThreshold: number;
+  /** "Aynı değil" işaretlenmiş id çiftleri. */
+  blocked?: Set<string>;
+}
+
+export const CLUSTER_PRESETS: Record<'strict' | 'balanced' | 'loose', Omit<ClusterTuning, 'blocked'>> = {
+  strict: { autoThreshold: 80, suggestThreshold: 50, vagueAttachThreshold: 55, readyConfidence: 75, anchorQualityThreshold: 50 },
+  balanced: { autoThreshold: 68, suggestThreshold: 38, vagueAttachThreshold: 45, readyConfidence: 70, anchorQualityThreshold: 40 },
+  loose: { autoThreshold: 60, suggestThreshold: 30, vagueAttachThreshold: 35, readyConfidence: 60, anchorQualityThreshold: 30 },
+};
+
+export const DEFAULT_CLUSTER_TUNING: Omit<ClusterTuning, 'blocked'> = CLUSTER_PRESETS.balanced;
+
+export function resolveTuning(tuning?: ClusterTuning): Required<Omit<ClusterTuning, 'blocked'>> & Pick<ClusterTuning, 'blocked'> {
+  const base = { ...DEFAULT_CLUSTER_TUNING, ...(tuning || {}) };
+  return base as Required<Omit<ClusterTuning, 'blocked'>> & Pick<ClusterTuning, 'blocked'>;
+}
+
+export const pairKey = (a: string, b: string) => [a || '', b || ''].sort().join('|');
+
+const BLOCK_KEY = 'medsoru_cluster_blocklist_v1';
+
+function readBlockStorage(): Set<string> {
+  try {
+    if (typeof localStorage === 'undefined') return new Set();
+    const raw = localStorage.getItem(BLOCK_KEY);
+    if (!raw) return new Set();
+    const arr = JSON.parse(raw);
+    return new Set(Array.isArray(arr) ? arr.filter((x) => typeof x === 'string') : []);
+  } catch {
+    return new Set();
+  }
+}
+
+/** Kullanıcının "aynı soru değil" dediği çiftler (kalıcı, tarayıcıda saklanır). */
+export function loadBlockedPairs(): Set<string> {
+  return readBlockStorage();
+}
+
+export function blockPair(a: string, b: string): Set<string> {
+  const next = readBlockStorage();
+  next.add(pairKey(a, b));
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(BLOCK_KEY, JSON.stringify([...next]));
+    }
+  } catch {
+    /* yoksay */
+  }
+  return next;
+}
+
+export function clearBlockedPairs(): void {
+  try {
+    if (typeof localStorage !== 'undefined') localStorage.removeItem(BLOCK_KEY);
+  } catch {
+    /* yoksay */
+  }
+}
+
+// ==========================================
 // TIBBİ KAVRAM VE SENDROM KÜMELERİ (MED-CONCEPT BANKS)
 // ==========================================
 
@@ -440,9 +514,28 @@ export function calculateOptionSetSimilarity(
 // ==========================================
 export function calculateDraftCompatibility(
   draftA: QuestionItem,
-  draftB: QuestionItem
+  draftB: QuestionItem,
+  tuning?: ClusterTuning
 ): DraftCompatibilityResult {
+  const t = resolveTuning(tuning);
   const reasons: string[] = [];
+
+  const distinct = (why: string): DraftCompatibilityResult => ({
+    score: 0,
+    recommendation: 'distinct',
+    reasons: [why],
+    stemSimilarity: 0,
+    optionSetSimilarity: 0,
+    sharedMedicalEntities: [],
+    sharedConcepts: [],
+    targetQuestionAlignment: 'conflicting',
+    matchedOptionAlignments: []
+  });
+
+  // -1. KULLANICI ENGELİ: daha önce "aynı soru değil" denmiş çift asla kümelenmez.
+  if (t.blocked?.has(pairKey(draftA.id, draftB.id))) {
+    return distinct('Daha önce farklı sorular olarak işaretlendi.');
+  }
 
   const textA = [
     draftA.topic,
@@ -496,7 +589,9 @@ export function calculateDraftCompatibility(
 
   let conceptBonus = 0;
   if (sharedConcepts.length > 0) {
-    conceptBonus = 65; // Kritik sendrom / kavram örtüşmesi!
+    // Tek bir kavram adı (65 puanlık eski taban) tek başına hükmetmez;
+    // asıl ağırlık kök + terim + şık kanıtındadır.
+    conceptBonus = 40;
     reasons.push(`Ortak tıbbi sendrom/kavram tespit edildi: "${sharedConcepts[0].name}".`);
   }
 
@@ -528,6 +623,20 @@ export function calculateDraftCompatibility(
     reasons.push(`Kritik tıbbi terimler ortak: ${sharedMedicalEntities.slice(0, 4).join(', ')}`);
   } else if (sharedMedicalEntities.length === 1) {
     reasons.push(`Ortak terim: ${sharedMedicalEntities[0]}`);
+  }
+
+  // 5b. KISA-METİN KORUMASI: iki taraf da bir-iki cümlelik ipucundan ibaretse,
+  // şık örtüşmesi ya da aynı soru numarası yoksa kümelenme yapılmaz.
+  const contentWords = (text: string) =>
+    normalizeMedicalText(text).split(' ').filter((w) => w.length > 2 && !MEDICAL_STOP_WORDS.has(w)).length;
+  const sameNumber =
+    !draftA.isUnassignedNumber && !draftB.isUnassignedNumber &&
+    Boolean(draftA.questionNumber) && draftA.questionNumber === draftB.questionNumber;
+  if (
+    contentWords(textA) < 8 && contentWords(textB) < 8 &&
+    optionMatch.matchedCount < 2 && !sameNumber
+  ) {
+    return distinct('Her iki taslak da çok kısa ve ortak şık/soru numarası yok; güvenli eşleşme kurulamadı.');
   }
 
   // 6. Doğru Cevap Tahmini Uyumu
@@ -578,12 +687,25 @@ export function calculateDraftCompatibility(
   let overallScore = 0;
 
   if (sharedConcepts.length > 0) {
-    // Tıbbi kavram (örn: Down sendromu) tespit edildiyse taban puan yüksektir
-    overallScore = conceptBonus + Math.min(35, stemSimilarity * 0.25 + sharedMedicalEntities.length * 5 + (sameDiscipline ? 10 : 0));
+    // Kavram örtüşmesi tabanı verir; otomasyon için kök/şık/sayı kanıtı şarttır.
+    // Aynı soru numarası, aynı kitapçık sorusuna işaret ettiği için ek destektir.
+    overallScore = conceptBonus + Math.min(40,
+      stemSimilarity * 0.35 +
+      sharedMedicalEntities.length * 6 +
+      (sameDiscipline ? 8 : 0) +
+      (sameNumber ? 10 : 0));
+    const weakEvidence =
+      stemSimilarity < 20 && sharedMedicalEntities.length < 2 && optionMatch.matchedCount < 2 && !sameNumber;
+    if (weakEvidence) {
+      overallScore = Math.min(overallScore, t.autoThreshold - 4);
+      reasons.push('Yalnızca kavram adı örtüşüyor; kök ve şık desteği zayıf olduğu için insan incelemesi gerekir.');
+    }
   } else if (optionMatch.matchedCount >= 2) {
-    overallScore = 75 + Math.min(25, sharedMedicalEntities.length * 5 + stemSimilarity * 0.15);
+    // En az 2 ortak şık güçlü sinyaldir; ama kök tamamen farklıysa temkinli olunur.
+    const optBase = (stemSimilarity >= 15 || sameNumber) ? 75 : 60;
+    overallScore = optBase + Math.min(25, sharedMedicalEntities.length * 5 + stemSimilarity * 0.15);
   } else if (sharedMedicalEntities.length >= 2) {
-    overallScore = 55 + Math.min(35, stemSimilarity * 0.35 + optionSetSimilarity * 0.25 + (sameDiscipline ? 10 : 0));
+    overallScore = 50 + Math.min(35, stemSimilarity * 0.35 + optionSetSimilarity * 0.25 + (sameDiscipline ? 10 : 0));
   } else {
     overallScore = (
       stemSimilarity * 0.45 +
@@ -598,9 +720,9 @@ export function calculateDraftCompatibility(
   overallScore = Math.max(0, Math.min(100, Math.round(overallScore)));
 
   let recommendation: 'auto_merge' | 'suggest_merge' | 'distinct';
-  if (overallScore >= 68 && targetAlignment !== 'conflicting') {
+  if (overallScore >= t.autoThreshold && targetAlignment !== 'conflicting') {
     recommendation = 'auto_merge';
-  } else if (overallScore >= 38 && targetAlignment !== 'conflicting') {
+  } else if (overallScore >= t.suggestThreshold && targetAlignment !== 'conflicting') {
     recommendation = 'suggest_merge';
   } else {
     recommendation = 'distinct';
@@ -826,8 +948,11 @@ export function unmergeQuestion(
 // ==========================================
 export function clusterDraftsForCommittee(
   questions: QuestionItem[],
-  committeeId: string
+  committeeId: string,
+  tuning?: ClusterTuning
 ): ClusterAnalysisSummary {
+  const t = resolveTuning(tuning);
+  if (!t.blocked) t.blocked = loadBlockedPairs();
   const commQuestions = questions.filter((q) => q.committeeId === committeeId);
 
   const scoredQuestions = commQuestions.map((q) => ({
@@ -853,7 +978,7 @@ export function clusterDraftsForCommittee(
       const candidate = scoredQuestions[j];
       if (assignedToCluster.has(candidate.question.id)) continue;
 
-      const comp = calculateDraftCompatibility(current.question, candidate.question);
+      const comp = calculateDraftCompatibility(current.question, candidate.question, t);
 
       if (comp.recommendation !== 'distinct') {
         satellites.push({
@@ -873,13 +998,16 @@ export function clusterDraftsForCommittee(
 
       const detectedSubject = satellites[0].compatibility.sharedConcepts?.[0] || current.question.topic;
 
+      // Çapa kalitesi düşükse küme ne kadar güvenli görünürse görünsün incelemeye düşer.
+      const anchorWeak = current.anchorScore.total < t.anchorQualityThreshold;
+
       clusters.push({
         id: `cluster-${current.question.id}-${Date.now()}`,
         committeeId,
         anchorQuestion: current.question,
         satelliteDrafts: satellites,
         overallConfidence: avgConfidence,
-        status: avgConfidence >= 65 ? 'ready_to_merge' : 'needs_review',
+        status: !anchorWeak && avgConfidence >= t.readyConfidence ? 'ready_to_merge' : 'needs_review',
         estimatedUniqueSlots: 1,
         detectedSubject
       });
@@ -900,8 +1028,8 @@ export function clusterDraftsForCommittee(
     let bestComp: DraftCompatibilityResult | null = null;
 
     for (const cluster of clusters) {
-      const comp = calculateDraftCompatibility(cluster.anchorQuestion, vagueQ);
-      if (comp.score > bestScore && comp.score >= 35 && comp.targetQuestionAlignment !== 'conflicting') {
+      const comp = calculateDraftCompatibility(cluster.anchorQuestion, vagueQ, t);
+      if (comp.score > bestScore && comp.score >= t.vagueAttachThreshold && comp.targetQuestionAlignment !== 'conflicting') {
         bestScore = comp.score;
         bestCluster = cluster;
         bestComp = comp;

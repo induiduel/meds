@@ -14275,118 +14275,132 @@
   {
     "id": "bax-proteini",
     "term": "Bax Proteini (Bcl-2 Associated X Protein)",
-    "latinName": "Bax proteinum",
+    "latinName": "Bcl-2-associated X protein",
     "aliases": [
       "Bax",
-      "Bcl-2-associated X",
-      "Pro-apoptotik Bax"
+      "BAX"
     ],
-    "category": "patoloji",
+    "category": "genetik",
     "kurul": "Kurul 1",
-    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
-    "instructorAndSource": "Prof. Dr. Hikmet Keleş (Hücre Hasarı ve Apoptoz / Robbins 11. Baskı)",
-    "definition": "Pro-apoptotik Bcl-2 ailesi üyesi çoklu alanlı (BH1, BH2, BH3) ana efektör proteindir. Normal sağlıklı hücrede inaktif bir monomer olarak sitoplazmada veya mitokondri dış zarına gevşek bağlı halde bekler. DNA hasarı (p53 uyarımı), büyüme faktörü yoksunluğu veya hücresel stres durumunda aktive olan BH3-only proteinleri (Bid, Bim, Puma) tarafından aktive edilir.",
-    "description": "Normalde sitozolde inaktif monomer olarak bulunan, p53 ve BH3-only sensörler ile uyarıldığında mitokondri dış zarına (MOM) göç edip oligomerleşerek sitokrom c salınım delikleri açan majör pro-apoptotik efektör protein.",
-    "morphologyOrMechanism": "Aktivasyon Mekanizması: DNA hasarı ➔ p53 indüksiyonu ➔ Puma/Noxa artışı ➔ Sitozolik Bax'ın konformasyonel değişimi ➔ Mitokondri dış zarına insersiyon ➔ Oligomerizasyon (Bak ile veya homo-oligomer) ➔ Mitokondriyal Dış Zar Geçirgenleşmesi (MOMP) ➔ Sitokrom c ve Smac/DIABLO salınımı. İnhibisyon: Anti-apoptotik Bcl-2 ve Bcl-xL proteinleri Bax ile heterodimer oluşturarak oligomerizasyonu doğrudan bloke eder.",
-    "differentialDiagnosis": "Bak proteini (normalde de mitokondri zarına gömülüdür, Bax ise sitozolden göç eder), Bcl-2 (anti-apoptotik antagonisti), Bim/Puma (aktivatör sensörler).",
-    "examSpotPearls": "🔴 **Önemli (Spot Kural):** Bax normalde sitozolde serbest monomerdir; p53 tarafından indüklenen Puma/Noxa ile aktive olup mitokondri zarına gider. Anti-apoptotik Bcl-2 tarafından tutularak nötralize edilir.",
-    "clinicalPearl": "Foliküler lenfomada t(14;18) translokasyonu sonucu aşırı üretilen Bcl-2, Bax proteinini sürekli heterodimer halinde tutarak apoptozu engeller ve neoplastik hücrelerin ölümsüzleşmesine yol açar.",
-    "pitfallsAndWarnings": "Bax tek başına bir sensör değildir; doğrudan zar kanalını açan 'efektör' proteindir. Sensör olanlar BH3-only proteinleridir (Bad, Bim, Bid, Puma, Noxa).",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "2) Hücre Hasarı ve Nekroz • Prof. Dr. Hikmet Keleş",
+    "definition": "Sitoplazmada inaktif monomer halinde bulunan ve p53 tarafından transkripsiyonel olarak regüle edilen ana pro-apoptotik Bcl-2 ailesi efektör proteinidir.",
+    "lectureContextNotes": "Amfide altı çizildi: Hücrede tamir edilemeyen ağır DNA hasarı oluştuğunda p53 aktive olur; p53 ilk iş olarak Bax sentezini uyarır. Bax sitoplazmadan mitokondriye göç ederek dış zarı deler.",
+    "morphologyOrMechanism": "Aktive olunca sitozolden mitokondri dış zarına transloke olur, Bak ile dimer/oligomer oluşturarak MOMP yaratır. Sitokrom c sitozole akar ve Apaf-1 ile birleşerek apoptozomu oluşturur.",
+    "differentialDiagnosis": "Bcl-2 ile heterodimer oluşturarak Bcl-2'nin anti-apoptotik etkisini titrasyonla dengeler. Bax/Bcl-2 oranı hücrenin yaşama veya ölme kaderini belirler.",
+    "examSpotPearls": "TUS İncisi: p53'ün apoptozu tetiklerken doğrudan ekspresyonunu artırdığı gen BAX'tır. Foliküler lenfomada ise tam tersine t(14;18) ile Bcl-2 aşırı artar ve Bax baskılanır.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Bax hücreyi yaşatmaz, ölüme sürükler. Bcl-2 yaşatır, Bax öldürür.",
     "relatedItems": [
       "bak-proteini",
-      "bcl-2-proteini",
+      "tp53-geni",
       "intrensek-apoptoz-yolagi",
-      "apaptozom"
+      "bcl-2"
     ],
-    "badgeColor": "rose",
-    "aiAuditScore": 100
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Ders slaytlarındaki p53-Bax ilişkisi ve intrinsik apoptoz basamakları ile %100 uyumludur.",
+      "sampleExamQuestion": "Hücre siklusunda p53 kontrolünde transkripsiyonu artırılarak mitokondri geçirgenliğini artıran protein hangisidir? (Cevap: Bax)"
+    }
   },
   {
     "id": "bak-proteini",
-    "term": "Bak Proteini (Bcl-2 Antagonist/Killer)",
-    "latinName": "Bak proteinum",
+    "term": "Bak Proteini (Bcl-2 Homologous Antagonist/Killer)",
+    "latinName": "Bcl-2 Antagonist Killer 1",
     "aliases": [
       "Bak",
-      "Bcl-2 homologous antagonist/killer"
+      "BAK1",
+      "Bak pro-apoptotik protein"
     ],
-    "category": "patoloji",
+    "category": "genetik",
     "kurul": "Kurul 1",
-    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
-    "instructorAndSource": "Prof. Dr. Hikmet Keleş (Hücre Hasarı ve Apoptoz / Robbins 11. Baskı)",
-    "definition": "Pro-apoptotik Bcl-2 ailesi üyesi çoklu alanlı (BH1-BH3) efektör proteindir. Bax'tan en temel farkı, normal dinlenme halindeki hücrede de doğrudan mitokondri dış zarına (MOM) transmembran uzantısıyla entegre şekilde yerleşik bulunmasıdır.",
-    "description": "Mitokondri dış zarına kalıcı olarak bağlı duran, normalde anti-apoptotik Mcl-1 ve Bcl-xL tarafından tutularak susturulan, ölüm sinyaliyle serbest kalıp oligomerleşerek zar gözeneği açan pro-apoptotik efektör protein.",
-    "morphologyOrMechanism": "Aktivasyon Mekanizması: Normalde Mcl-1 ve Bcl-xL proteinleri Bak'a bağlanarak onu inaktif konformasyonda tutar. Hücre stres sinyali aldığında BH3-only proteinleri (özellikle Noxa ve Puma) Mcl-1 ve Bcl-xL'yi bağlayarak Bak'ı serbest bırakır. Serbest kalan Bak molekülleri kendi aralarında ve Bax ile oligomerize olarak mitokondri dış zarında porlar açar ve Sitokrom c çıkışını sağlar.",
-    "differentialDiagnosis": "Bax proteini (sitozolik monomer iken Bak mitokondri zarına gömülüdür), Mcl-1 (Bak'ı zarda tutan primer anti-apoptotik protein).",
-    "examSpotPearls": "🔴 **Önemli Ayrım:** Bax sitoplazmadan mitokondriye göç ederken; Bak zaten mitokondri dış zarında hazır bekler. Bak'ın primer susturucusu Mcl-1 ve Bcl-xL'dir.",
-    "clinicalPearl": "Kemoterapiye dirençli tümörlerde hem Bax hem Bak gen delesyonu veya mutasyonu varsa mitokondriyal geçirgenlik açılamaz ve intrensek apoptoz tamamen felç olur.",
-    "pitfallsAndWarnings": "Bax ve Bak çift nakavt (Bax-/- Bak-/-) hücreler intrensek apoptotik uyaranların hiçbirine yanıt veremez.",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "2) Hücre Hasarı ve Nekroz • Prof. Dr. Hikmet Keleş",
+    "definition": "Mitokondri dış zarında yerleşik, pro-apoptotik Bcl-2 ailesi efektör proteinidir. Hücresel stres veya DNA hasarında oligomerleşerek mitokondri dış zar geçirgenliğini (MOMP) artırır ve Sitokrom c salınımını tetikler.",
+    "lectureContextNotes": "Prof. Dr. Hikmet Keleş derste vurguladı: Bax'tan farkı, Bak'ın normalde de mitokondri dış zarına integral olarak bağlı bulunmasıdır. Hücre içi ölüm sinyali (BH3-only proteinleri Bim, Bid, Puma) geldiğinde konformasyonel değişim geçirip Bax ile birlikte por oluşturur.",
+    "morphologyOrMechanism": "İntrinsik (mitokondriyal) apoptoz yolağının yürütücü efektörüdür. Anti-apoptotik Bcl-2 ve Bcl-xL tarafından nötralize edilirken, BH3-only proteinler tarafından aktive edilir. Por açılmasıyla Sitokrom c ve Smac/DIABLO sitozole dökülür.",
+    "differentialDiagnosis": "Bax sitozolden mitokondriye transloke olurken; Bak doğrudan mitokondri dış zarında bekler. İkisi de çift nakavt (Bax-/- Bak-/-) edildiğinde hücreler intrinsik apoptoza dirençli hale gelir.",
+    "examSpotPearls": "TUS & Komite Sorusu: Mitokondri membranında por açarak apoptozu yürüten pro-apoptotik proteinler Bax ve Bak'tır. Bunların aktivitesini engelleyenler Bcl-2, Bcl-xL ve Mcl-1'dir.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Bak bir kaspaz değildir; mitokondri dış zar poru açan bir Bcl-2 ailesi üyesidir.",
     "relatedItems": [
       "bax-proteini",
-      "bcl-2-proteini",
-      "intrensek-apoptoz-yolagi"
+      "bcl-2",
+      "intrensek-apoptoz-yolagi",
+      "sitokrom-c"
     ],
-    "badgeColor": "rose",
-    "aiAuditScore": 100
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Hücre hasarı ve apoptoz mekanizması ders slaytları ile tam uyumlu olarak doğrulanmıştır.",
+      "sampleExamQuestion": "Hücrede DNA hasarı sonucu mitokondri dış zarında oligomerize olarak Sitokrom c çıkışını sağlayan pro-apoptotik protein çifti hangisidir? (Cevap: Bax ve Bak)"
+    }
   },
   {
     "id": "intrensek-apoptoz-yolagi",
-    "term": "İntrensek Apoptoz Yolağı (Mitokondriyal Yol)",
-    "latinName": "Via apoptotica intrinseca / mitochondrialis",
+    "term": "İntrinsik Apoptoz Yolağı (Mitokondriyal Yol)",
+    "latinName": "Intrinsic Pathway of Apoptosis (Mitochondrial Pathway)",
     "aliases": [
-      "Mitokondriyal Apoptoz Yolu",
-      "İntrinsik Yol",
-      "Bcl-2 Regüleli Apoptoz"
+      "Mitokondriyal apoptoz",
+      "İntrensek yolak"
     ],
     "category": "patoloji",
     "kurul": "Kurul 1",
     "discipline": "Tıbbi Patoloji",
-    "instructorAndSource": "Prof. Dr. Hikmet Keleş (Apoptoz Mekanizmaları / Robbins 11. Baskı)",
-    "definition": "Hücre içi kaynaklı stresler (DNA hasarı, p53 indüksiyonu, radyasyon, kemoterapi, büyüme faktörü yoksunluğu, ER stresi) sonucu tetiklenen majör programlı hücre ölümü yolağıdır. Temel olay mitokondri dış zar geçirgenliğinin (MOMP) artması ve zarlar arası aralıktaki pro-apoptotik proteinlerin sitozole boşalmasıdır.",
-    "description": "DNA hasarı ve hücresel stresle tetiklenen, mitokondriden Sitokrom c salınımı, Apaf-1 ile apaptozom oluşumu ve başlatıcı Kaspaz-9 aktivasyonu ile yürütülen majör hücre içi apoptoz yolağı.",
-    "morphologyOrMechanism": "Kaskad Sırası:\n1. Hasar Algılama: BH3-only sensörleri (Bim, Bid, Puma, Noxa) aktive olur.\n2. Frenlerin Kaldırılması: Sensörler anti-apoptotik Bcl-2, Bcl-xL ve Mcl-1'i inhibe eder.\n3. Efektör Aktivasyonu: Bax ve Bak oligomerize olarak mitokondri dış zarında por açar.\n4. Molekül Salınımı: Sitokrom c ve Smac/DIABLO sitozole sızar.\n5. Apaptozom Kurulumu: Sitokrom c sitoplazmada Apaf-1 ve dATP ile birleşerek 7 kollu tekerlek yapısında Apaptozom oluşturur.\n6. Kaspaz Kaskadı: Apaptozom Prokaspaz-9'u keserek başlatıcı Kaspaz-9'u aktive eder; Kaspaz-9 da efektör Kaspaz-3 ve Kaspaz-7'yi kesip hücreyi parçalar.",
-    "differentialDiagnosis": "Ekstrensek Yol (Ölüm reseptörü / Fas / Kaspaz-8 bağımlıdır, mitokondri gerekmeyebilir).",
-    "examSpotPearls": "🔴 **Önemli:** İntrensek yolun anahtar başlatıcı kaspazı ==Kaspaz-9==dur. 🔵 **Çıkmış Soru:** \"Mitokondriden sitozole çıkarak Apaf-1 ile birleşip apaptozomu kuran molekül hangisidir?\" → ==Sitokrom c==.",
-    "clinicalPearl": "Bcl-2 aşırı ekspresyonu mitokondri zarını stabilize ederek Sitokrom c çıkışını bloke eder ve B-hücreli lenfomaların gelişmesine yol açar.",
-    "pitfallsAndWarnings": "İntrensek yolda Fas veya TNF reseptörü rol oynamaz; tetikleyiciler tamamen hücre içi stres ve p53 sinyalleridir.",
+    "instructorAndSource": "2) Hücre Hasarı ve Nekroz • Prof. Dr. Hikmet Keleş",
+    "definition": "DNA hasarı, hücresel stres, büyüme faktörü yoksunluğu veya yanlış katlanmış protein birikiminde devreye giren; mitokondriden Sitokrom c çıkışı ve Kaspaz-9 aktivasyonu ile yürütülen majör hücre ölüm yolağıdır.",
+    "lectureContextNotes": "Prof. Dr. Hikmet Keleş'in amfide adım adım çizdiği yolak: 1) BH3-only proteinler (Bim, Bid, Puma) uyarılır. 2) Bax ve Bak oligomerleşip zarda por açar. 3) Sitokrom c sitozole çıkar. 4) Apaf-1 ile birleşip tekerlek şeklinde Apoptozom oluşturur. 5) Prokaspaz-9 bağlanıp aktive olur. 6) Efektör Kaspaz-3 ve 7 hücreyi parçalar.",
+    "morphologyOrMechanism": "Bcl-2 ailesi protein dengesiyle kontrol edilir. Anti-apoptotikler (Bcl-2, Bcl-xL, Mcl-1) mitokondri zarını kapalı tutarken, pro-apoptotikler (Bax, Bak) por açar.",
+    "differentialDiagnosis": "Ekstrinsik yolakta reseptör (Fas/TNFR) ve Kaspaz-8 varken; İntrinsik yolakta mitokondri, Sitokrom c ve Kaspaz-9 vardır. Ortak yürütücü kaspaz ise Kaspaz-3'tür.",
+    "examSpotPearls": "TUS Sorusu: İntrinsik apoptoz yolağının başlatıcı kaspazı Kaspaz-9'dur. Ekstrinsik yolağın başlatıcı kaspazı ise Kaspaz-8'dir.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: İntrinsik yolakta Fas veya FADD rol almaz; mitokondri ve Apaf-1 rol alır.",
     "relatedItems": [
+      "ekstrensek-apoptoz-yolagi",
       "bax-proteini",
       "bak-proteini",
-      "kaspaz-9",
-      "kaspaz-3",
-      "apaptozom",
-      "bcl-2-proteini"
+      "bcl-2",
+      "kaspazlar"
     ],
-    "badgeColor": "teal",
-    "aiAuditScore": 100
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Hücre ölümü dersi intrinsik basamakları ile tam uyumlu.",
+      "sampleExamQuestion": "Mitokondriyal (intrinsik) apoptoz yolağında sitokrom c'nin Apaf-1 ile birleşerek oluşturduğu apoptozom kompleksi hangi başlatıcı kaspazı aktive eder? (Cevap: Kaspaz-9)"
+    }
   },
   {
     "id": "ekstrensek-apoptoz-yolagi",
-    "term": "Ekstrensek Apoptoz Yolağı (Ölüm Reseptörü Yolağı)",
-    "latinName": "Via apoptotica extrinseca / receptoris mortis",
+    "term": "Ekstrinsik Apoptoz Yolağı (Ölüm Reseptörü Yolağı)",
+    "latinName": "Extrinsic Pathway of Apoptosis (Death Receptor Pathway)",
     "aliases": [
-      "Ölüm Reseptörü Yolu",
-      "Fas/FasL Yolağı",
-      "Ekstrinsik Apoptoz"
+      "Ölüm reseptörü yolağı",
+      "Ekstrensek yolak",
+      "Fas/FasL yolağı"
     ],
     "category": "patoloji",
     "kurul": "Kurul 1",
-    "discipline": "Tıbbi Patoloji / İmmünoloji",
-    "instructorAndSource": "Prof. Dr. Hikmet Keleş (Apoptoz Mekanizmaları / Robbins 11. Baskı)",
-    "definition": "Hücre zarında bulunan TNF reseptör süperailesi üyeleri olan 'Ölüm Reseptörleri'nin (Fas/CD95, TNFR1, TRAIL reseptörleri DR4/DR5) hücre dışından ligantlarıyla uyarılmasıyla başlayan programlı hücre ölümü yolağıdır. Sitotoksik T lenfositleri (CTL) ve NK hücreleri tarafından virüsle enfekte veya tümöral hücrelerin öldürülmesinde primer kullanılır.",
-    "description": "Fas (CD95) veya TNFR1 ölüm reseptörlerinin ligantlarıyla trimerizasyonu, sitoplazmik FADD adaptörü ile DISC kompleksi kurulması ve başlatıcı Kaspaz-8 aktivasyonu ile yürütülen dış kaynaklı apoptoz yolağı.",
-    "morphologyOrMechanism": "Kaskad Sırası:\n1. Ligant Bağlanması: CTL üzerindeki FasL (Fas Ligand), hedef hücredeki Fas (CD95) reseptörüne bağlanır.\n2. Trimerizasyon ve DD Kümeleşmesi: Reseptörler trimerize olur; sitoplazmik Ölüm Alanları (Death Domain - DD) bir araya gelir.\n3. DISC Kurulumu: FADD (Fas-Associated Death Domain) adaptör proteini DD bölgelerine tutunur ve Prokaspaz-8'i toplar (DISC kompleksi).\n4. Başlatıcı Aktivasyon: Prokaspaz-8 oto-proteolitik kesimle aktif ==Kaspaz-8==e dönüşür.\n5. İnfaz ve Çapraz Köprü: Kaspaz-8 doğrudan efektör Kaspaz-3'ü aktive eder; ayrıca Bid proteinini keserek tBid oluşturur ve intrensek mitokondriyal yolu da tetikleyerek ölüm sinyalini amplifiye eder.\n6. İnhibitör: FLIP proteini Kaspaz-8'e bağlanıp DISC aktivasyonunu engeller.",
-    "differentialDiagnosis": "İntrensek Yol (Mitokondriyal / Kaspaz-9 bağımlı), Perforin-Granzim Yolu (Kaspaz-8 gerektirmeden Granzim B direkt Kaspaz-3'ü keser).",
-    "examSpotPearls": "🔴 **Önemli:** Ekstrensek yolun başlatıcı enzimi ==Kaspaz-8==dir (ve Kaspaz-10). 🔵 **Çıkmış Soru:** \"Ekstrensek yol ile intrensek yol arasındaki köprüyü kuran, Kaspaz-8 tarafından kesilip mitokondriye giden BH3-only proteini hangisidir?\" → ==Bid (tBid)==.",
-    "clinicalPearl": "Otoimmün Lenfoproliferatif Sendromda (ALPS) Fas veya FasL gen mutasyonu vardır; oto-reaktif T lenfositler apoptoza uğratılamaz ve lenfadenopati, splenomegali ile otoimmün sitopeniler gelişir.",
-    "pitfallsAndWarnings": "FLIP proteini Kaspaz-8 benzeri bir yapıya sahiptir ancak katalitik aktivitesi yoktur; bu nedenle Kaspaz-8'i yarışmalı olarak bloke eden bir apoptoz frenidir.",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "2) Hücre Hasarı ve Nekroz • Prof. Dr. Hikmet Keleş",
+    "definition": "Plazma membranında yer alan ölüm reseptörlerinin (Fas/CD95 veya TNFR1) ligandları ile kenetlenmesi sonucu FADD adaptör proteini aracılığıyla Kaspaz-8 ve 10'un aktive edilmesiyle başlayan apoptoz yolağıdır.",
+    "lectureContextNotes": "Amfi vurgusu: Fas-FasL etkileşimi özellikle otoreaktif lenfositlerin yok edilmesinde ve sitotoksik T lenfositlerin (CTL) virüsle enfekte veya tümör hücrelerini öldürmesinde esastır. Bu yolak hücresel protein c-FLIP tarafından inhibe edilir.",
+    "morphologyOrMechanism": "Reseptör trimerizasyonu gerçekleşir, sitoplazmik ölüm alanları (Death Domain - DD) bir araya gelir. FADD bağlanır ve DISC (Death-Inducing Signaling Complex) oluşur. Prokaspaz-8 oto-katalitik olarak aktifleşir.",
+    "differentialDiagnosis": "Kaspaz-8 doğrudan efektör Kaspaz-3'ü uyarabileceği gibi, Bid proteinini keserek tBid üretir ve mitokondriyal (intrinsik) yolağı da tetikleyebilir (iki yolun çapraz bağlantısı).",
+    "examSpotPearls": "Sınav Sorusu: Ekstrinsik apoptoz yolağında ölüm reseptörlerine bağlanan adaptör protein FADD, başlatıcı kaspaz ise Kaspaz-8'dir. Bu yolağın fizyolojik inhibitörü c-FLIP'tir.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Ekstrinsik yolak başlangıçta mitokondriden bağımsızdır; ilk aktive olan kaspaz 8'dir.",
     "relatedItems": [
-      "kaspaz-8",
-      "kaspaz-3",
       "intrensek-apoptoz-yolagi",
-      "flip-proteini"
+      "kaspazlar",
+      "apoptoz"
     ],
-    "badgeColor": "rose",
-    "aiAuditScore": 100
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Ders notlarındaki Fas/FADD/Kaspaz-8 basamakları ile %100 uyumludur.",
+      "sampleExamQuestion": "FasL'nin Fas (CD95) reseptörüne bağlanmasıyla oluşan DISC kompleksi hangi başlatıcı kaspazı aktive eder? (Cevap: Kaspaz-8)"
+    }
   },
   {
     "id": "kaspaz-8",
@@ -18250,6 +18264,258 @@
     "aiAudit": {
       "isVerified": true,
       "score": 100
+    }
+  },
+  {
+    "id": "m1-makrofaj",
+    "term": "M1 Makrofaj (Klasik Aktive Makrofaj)",
+    "latinName": "Classically Activated Macrophage (M1)",
+    "aliases": [
+      "M1",
+      "Klasik makrofaj",
+      "CAM"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "9) Kronik ve Granülamatöz Enflamasyon • Prof. Dr. Hikmet Keleş",
+    "definition": "Mikrobiyal ürünler (TLR ligandları, LPS) ve Th1 lenfositlerden salınan İnterferon-gama (IFN-γ) ile aktive olan, yoğun mikrobisidal, litik enzim ve pro-enflamatuar sitokin üreten klasik makrofaj fenotipidir.",
+    "lectureContextNotes": "Prof. Dr. Hikmet Keleş'in amfide üzerinde durduğu en kritik ayrım: M1 yıkıcıdır, savaşçıdır; patojenleri yok ederken çevre doku hasarına da yol açar. Lizozomal enzimler, NO ve ROS saçar.",
+    "morphologyOrMechanism": "İndüklenebilir nitrik oksit sentaz (iNOS) eksprese ederek L-argininden yüksek miktarda Nitrik Oksit (NO) üretir. Respiratuar patlama ile ROS üretir. IL-1, IL-6, IL-12, IL-23 ve TNF-α salgılayarak enflamasyonu alevlendirir.",
+    "differentialDiagnosis": "M2 makrofajlar ise IL-4/IL-13 ile uyarılır, doku onarımı ve fibrozis yapar (argınaz-1 kullanır, NO üretmez).",
+    "examSpotPearls": "TUS Sorusu: Klasik yoldan (M1) makrofaj aktivasyonunun en güçlü sitokin stimülatörü IFN-γ'dır (kaynağı Th1 ve NK hücreleri). M1'in en karakteristik enzimi iNOS'tur.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: M1 doku onarımı yapmaz; aktif mikrobisidal yıkım ve doku nekrozu yapar. Onarımı M2 üstlenir.",
+    "relatedItems": [
+      "m2-makrofaj",
+      "langhans-dev-hucre",
+      "kronik-enflamasyon",
+      "epiteloid-histiyosit"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Prof. Dr. Hikmet Keleş ders notları ile tam uyumlu M1 biyolojisi.",
+      "sampleExamQuestion": "Kronik enflamasyonda IFN-γ stimülasyonu ile indüklenen, iNOS üzerinden NO üreten ve doku hasarına yol açan makrofaj tipi hangisidir? (Cevap: M1 Klasik Makrofaj)"
+    }
+  },
+  {
+    "id": "m2-makrofaj",
+    "term": "M2 Makrofaj (Alternatif Aktive Makrofaj)",
+    "latinName": "Alternatively Activated Macrophage (M2)",
+    "aliases": [
+      "M2",
+      "Alternatif makrofaj",
+      "AAM"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "9) Kronik ve Granülamatöz Enflamasyon • Prof. Dr. Hikmet Keleş",
+    "definition": "Th2 lenfositlerden salınan İnterlökin-4 (IL-4) ve İnterlökin-13 (IL-13) tarafından aktive edilen; anti-enflamatuar etkili, doku onarımı, anjiyogenez ve skar oluşumunu (fibrozis) yöneten makrofaj fenotipidir.",
+    "lectureContextNotes": "Ders notunda açıkça belirtilmiştir: M2 hücreleri mikropları öldürmekten ziyade yangıyı söndürmek ve yıkılan çatıyı onarmakla görevlidir. Arginaz enzimini kullanarak prolin ve poliamin üretir (kollajen sentezi için hammadde).",
+    "morphologyOrMechanism": "TGF-β, IL-10, PDGF ve FGF salgılar. TGF-β fibroblast kemotaksisini ve kollajen sentezini uyarır; IL-10 ise lenfosit ve makrofaj aktivasyonunu frenler.",
+    "differentialDiagnosis": "M1 pro-enflamatuar ve tümöristatiktir; M2 ise immünosüpresiftir ve tümör mikroçevresinde (TAM - Tümörle İlişkili Makrofaj) tümörün invazyon ve anjiyogenezine zemin hazırlar.",
+    "examSpotPearls": "Komite & TUS İncisi: Alternatif makrofaj aktivasyonunu sağlayan sitokinler IL-4 ve IL-13'tür. M2'nin ürettiği ve fibrogenezisi başlatan ana sitokin TGF-beta'dır.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: M2 aktivasyonunda IFN-γ rol oynamaz; IFN-γ M2'yi inhibe eder, M1'i uyarır.",
+    "relatedItems": [
+      "m1-makrofaj",
+      "tgf-beta",
+      "doku-onarimi",
+      "kronik-enflamasyon"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Ders notundaki M1/M2 dikotomisi eksiksiz modellenmiştir.",
+      "sampleExamQuestion": "IL-4 ve IL-13 etkisiyle uyarılıp TGF-β ve IL-10 salgılayarak doku onarımı ve fibrozisi sağlayan makrofaj hangisidir? (Cevap: M2 Alternatif Makrofaj)"
+    }
+  },
+  {
+    "id": "epiteloid-histiyosit",
+    "term": "Epiteloid Histiyosit",
+    "latinName": "Epithelioid Histiocyte",
+    "aliases": [
+      "Epiteloid hücre",
+      "Epiteloid makrofaj"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "9) Kronik ve Granülamatöz Enflamasyon • Prof. Dr. Hikmet Keleş",
+    "definition": "Granülomatöz enflamasyonun tanımlayıcı temel hücresidir. Kronik IFN-γ uyarısıyla makrofajların geniş pembe granüler sitoplazmalı, soluk terlik/ayakkabı tabanı şeklinde veziküler nükleuslu epitele benzer morfoloji kazanmasıyla oluşur.",
+    "lectureContextNotes": "Prof. Dr. Hikmet Keleş'in sınavda sorduğu kritik kural: Granülom tanısı koyabilmek için dev hücre şart değildir, nekroz şart değildir; ancak EPİTELOİD HİSTİYOSİT KÜMESİ MUTLAKA ŞARTTIR!",
+    "morphologyOrMechanism": "Hücre sınırları belirsizleşir ve birbirine kenetlenir. Fagositoz kapasiteleri azalmış, buna karşın çevreye sekresyon (TNF-α, anjiyotensin dönüştürücü enzim - ACE) yapma kapasiteleri artmıştır.",
+    "differentialDiagnosis": "Epitel hücreleri ile karışabilir; ancak epiteloid histiyositler CD68 ve lizozim pozitiftir, sitokeratin negatiftir.",
+    "examSpotPearls": "Sınav Sorusu: Bir lezyona 'Granülom' denebilmesi için varlığı zorunlu olan tek yapı epiteloid histiyosit kümesidir.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Dev hücre olmasa bile epiteloid histiyosit kümesi granülom tanısı için yeterlidir.",
+    "relatedItems": [
+      "langhans-dev-hucre",
+      "kazeoz-nekroz",
+      "kronik-enflamasyon",
+      "sarkoidoz"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Patoloji amfi vurguları ve TUS soru şablonu ile birebir örtüşmektedir.",
+      "sampleExamQuestion": "Işık mikroskobunda soluk eozinofilik geniş sitoplazmalı, sınırları belirsiz, terlik tabanı nükleuslu modifiye makrofaj kümesi görülen lezyonda tanı nedir? (Cevap: Granülomatöz Enflamasyon / Epiteloid Histiyosit)"
+    }
+  },
+  {
+    "id": "langhans-dev-hucre",
+    "term": "Langhans Dev Hücresi",
+    "latinName": "Langhans Giant Cell",
+    "aliases": [
+      "Langhans hücresi",
+      "Tüberküloz dev hücresi"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "9) Kronik ve Granülamatöz Enflamasyon • Prof. Dr. Hikmet Keleş",
+    "definition": "Epiteloid histiyositlerin IFN-γ etkisiyle birbirleriyle kaynaşması (füzyonu) sonucu oluşan; çok sayıda çekirdeğin hücrenin periferinde at nalı veya yarım daire şeklinde dizildiği karakteristik multinükleer dev hücredir.",
+    "lectureContextNotes": "Ders slaytlarında vurgulandı: En sık Tüberküloz, Sarkoidoz ve diğer immün granülomlarda görülür. Langerhans hücresi (deri dendritik hücresi) ile karıştırılmamalıdır!",
+    "morphologyOrMechanism": "20 ila 50 veya daha fazla mononükleer fagositin füzyonuyla meydana gelir. Periferik nükleus halkası ve geniş santral eozinofilik sitoplazması tipiktir.",
+    "differentialDiagnosis": "Yabancı cisim dev hücresinde nükleuslar sitoplazmaya dağınık yerleşir. Touton dev hücresinde ise lipid halkası vardır.",
+    "examSpotPearls": "TUS & Komite Klasiği: At nalı dizilimli periferik çekirdekler = Langhans Dev Hücresi (İmmün granülom / Tüberküloz / Sarkoidoz).",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Langhans hücresi (patoloji) ile Langerhans hücresi (deri APC'si / Birbeck granülü) tamamen farklıdır; amfide hoca özellikle uyardı!",
+    "relatedItems": [
+      "epiteloid-histiyosit",
+      "kazeoz-nekroz",
+      "yabanci-cisim-dev-hucre",
+      "sarkoidoz"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Granülamatöz enflamasyon slaytları ile tam uyumlu terminoloji ve klinik ayrım.",
+      "sampleExamQuestion": "Akciğer biyopsisinde granülom odağında nükleusları periferde at nalı biçiminde dizilmiş multinükleer dev hücre hangisidir? (Cevap: Langhans Dev Hücresi)"
+    }
+  },
+  {
+    "id": "sarkoidoz",
+    "term": "Sarkoidoz",
+    "latinName": "Sarcoidosis",
+    "aliases": [
+      "Besnier-Boeck-Schaumann hastalığı"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "9) Kronik ve Granülamatöz Enflamasyon • Prof. Dr. Hikmet Keleş",
+    "definition": "Etiyolojisi bilinmeyen, sıklıkla genç erişkinlerde bilateral hiler lenfadenopati ve akciğer tutulumu yapan, kazeöz nekroz İÇERMEYEN (non-kazeöz) epiteloid granülomlarla karakterize sistemik hastalıktır.",
+    "lectureContextNotes": "Prof. Dr. Hikmet Keleş: Granülomların ortasında kazeöz nekroz olmaması (çıplak granülom) en temel ayırt edici özelliktir. Dev hücreler içinde Schaumann cisimcikleri ve Asteroid cisimcikleri sıktır.",
+    "morphologyOrMechanism": "Bilinmeyen antijene karşı kontrolsüz CD4+ Th1 immün yanıtı gelişir. CD4/CD8 oranı bronkoalveoler lavajda (BAL) 3.5'in üzerine çıkar. Granülom hücrelerinden 1-alfa hidroksilaz üretimi nedeniyle hiperkalsemi gelişir.",
+    "differentialDiagnosis": "Tüberkülozdan farkı: Tüberkülozda kazeöz nekroz varken, Sarkoidozda nekroz yoktur (non-kazeözdür).",
+    "examSpotPearls": "Sınav İncileri: Non-kazeöz granülom + Bilateral hiler LAP + Serum ACE yüksekliği + Hiperkalsemi/hiperkalsiüri + Schaumann/Asteroid cisimcikleri = Sarkoidoz.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Sarkoidoz granülomunda kazeöz nekroz GÖRÜLMEZ. Eğer kazeifikasyon varsa tüberküloz veya mantar enfeksiyonu düşünülmelidir.",
+    "relatedItems": [
+      "langhans-dev-hucre",
+      "epiteloid-histiyosit",
+      "kazeoz-nekroz"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Granülamatöz enflamasyon ders notu morfolojik kriterleri ile tam uyumlu.",
+      "sampleExamQuestion": "Akciğer ve hiler lenf nodu biyopsisinde kazeöz nekroz içermeyen granülomlar, dev hücrelerde Schaumann cisimcikleri ve serumda ACE yüksekliği saptanan hastada en olası tanı nedir? (Cevap: Sarkoidoz)"
+    }
+  },
+  {
+    "id": "charcot-leyden-kristalleri",
+    "term": "Charcot-Leyden Kristalleri",
+    "latinName": "Charcot-Leyden crystals",
+    "aliases": [
+      "Galektin-10 kristalleri"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "9) Kronik ve Granülamatöz Enflamasyon • Prof. Dr. Hikmet Keleş",
+    "definition": "Eozinofillerin lizisi ve degranülasyonu sonucu açığa çıkan eozinofil lizofosfolipaz (Galektin-10) proteininin çökelmesiyle oluşan, altıgen çift piramit şekilli kristallerdir.",
+    "lectureContextNotes": "Ders notunda eozinofilik enflamasyonun tipik bulgusu olarak belirtildi. Alerjik bronşiyal astım balgamında, alerjik rinitte ve paraziter enfeksiyon odaklarında (dışkı veya doku) görülür.",
+    "morphologyOrMechanism": "Elmas/iğne veya çift piramit şeklinde sivri uçlu eozinofilik kristallerdir. Eozinofil kökenli majör bazik protein (MBP) ve eozinofil peroksidaz ile birlikte doku hasarını yansıtır.",
+    "differentialDiagnosis": "Astımda balgamda görülen Curschmann spiralleri ve Creola cisimcikleri ile birlikte triad oluşturur.",
+    "examSpotPearls": "TUS Klasiği: Balgamda veya dokuda Charcot-Leyden kristallerinin görülmesi dokuda yoğun eozinofil infiltrasyonunun kesin kanıtıdır.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Nötrofil değil, eozinofil kaynaklıdır.",
+    "relatedItems": [
+      "kronik-enflamasyon",
+      "akut-enflamasyon"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Patoloji inflamasyon biyolojisi ile tam uyumlu.",
+      "sampleExamQuestion": "Alerjik astım hastasının balgam yaymasında görülen altıgen çift piramit biçimli eozinofil kaynaklı kristal yapı nedir? (Cevap: Charcot-Leyden Kristalleri)"
+    }
+  },
+  {
+    "id": "warburg-etkisi",
+    "term": "Warburg Etkisi (Aerobik Glikoliz)",
+    "latinName": "Warburg effect (Aerobic glycolysis)",
+    "aliases": [
+      "Aerobik glikoliz",
+      "Kanser metabolizması"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "18) İleri Tümör Genetiği ve Metabolizması • Prof. Dr. Hikmet Keleş",
+    "definition": "Kanser hücrelerinin, ortamda yeterli oksijen bulunmasına rağmen oksidatif fosforilasyon yerine glukozu hızla laktata dönüştüren yüksek hızlı glikoliz yolunu tercih etmesi fenomenidir.",
+    "lectureContextNotes": "Prof. Dr. Hikmet Keleş: 'Kanser hücresi neden ATP açısından verimsiz bir yolu seçer?' Çünkü glikoliz ara ürünleri (glukoz-6-fosfat vb.) yeni hücre yapımı için gereken lipit, aminoasit ve nükleotid sentezinde hammadde olarak kullanılır!",
+    "morphologyOrMechanism": "Glukoz taşıyıcıları (GLUT-1) ve hekzokinaz aşırı eksprese edilir. HIF-1α, MYC ve AKT/mTOR yolağı glikolitik enzimleri indükler. Mitokondriye pirüvat girişi kısıtlanır, laktat dehidrogenaz A (LDH-A) ile laktat üretilir.",
+    "differentialDiagnosis": "Normal dokular oksijensiz kaldığında anaerobik glikoliz yapar; kanser hücresi ise bol oksijende bile aerobik glikoliz yapar.",
+    "examSpotPearls": "Klinik & TUS Sorusu: 18F-FDG PET-BT görüntülemesi, kanser hücrelerinin Warburg etkisi sonucu normal hücrelere kıyasla 20-30 kat fazla glukoz tüketmesi prensibine dayanır.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Warburg etkisinde mitokondriler tamamen bozuk değildir; biyosentetik yapı taşlarını üretmeye optimize edilmiştir.",
+    "relatedItems": [
+      "tp53-geni",
+      "myc-onkogeni",
+      "tumor-evrelemesi"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "İleri tümör metabolizması dersi ile tam uyumlu klinik korelasyon.",
+      "sampleExamQuestion": "Kanser hücrelerinin bol oksijen varlığında bile glikolizi tercih ederek hızla laktat üretmesi ve PET-BT'de FDG tutulumuna yol açan metabolik fenomen nedir? (Cevap: Warburg Etkisi / Aerobik Glikoliz)"
+    }
+  },
+  {
+    "id": "tp53-geni",
+    "term": "TP53 Geni (p53 Proteini)",
+    "latinName": "Tumor Protein P53",
+    "aliases": [
+      "p53",
+      "TP53",
+      "Genomun gardiyanı"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "17) Karsinojenezin Moleküler Temeli • Prof. Dr. Hikmet Keleş",
+    "definition": "17p13.1 kromozomunda yer alan, insan kanserlerinde en sık mutasyona uğrayan (%50'den fazla), hücre siklusunu kontrol eden ve apoptozu indükleyen majör tümör baskılayıcı (supresör) gendir.",
+    "lectureContextNotes": "Prof. Dr. Hikmet Keleş'in amfideki ifadesi: 'p53 genomun baş gardiyanıdır.' DNA hasarında p21'i (CDKI) uyararak siklusu G1'de durdurur. Onarım başarısız olursa BAX ve PUMA'yı açarak hücreyi apoptoza yollar.",
+    "morphologyOrMechanism": "Normalde MDM2 ubikuitin ligaz tarafından yıkılarak düşük seviyede tutulur. DNA çift zincir kırıklarında ATM/ATR kinazlar p53'ü fosforiller, MDM2'den kurtarır. Stabilize p53 nükleusta p21, GADD45 ve Bax transkripsiyonunu başlatır.",
+    "differentialDiagnosis": "Germ-line (kalıtsal) mutasyonu Li-Fraumeni Sendromuna yol açar (erken yaşta sarkomlar, meme kanseri, lösemi, beyin tümörleri ve adrenal korteks karsinomu).",
+    "examSpotPearls": "Sınav Sorusu: İnsan tümörlerinde en sık mutasyona uğrayan gen TP53'tür. p53'ün hücre siklusunu G1 fazında durdurmak için transkripsiyonunu artırdığı siklin bağımlı kinaz inhibitörü p21'dir.",
+    "pitfallsAndWarnings": "🔴 Sınav Tuzağı: Onkogen değil, TÜMÖR BASKILAYICI (supresör) gendir; iki alelin de inaktive olması gerekir (Knudson'ın 2-hit kuralı).",
+    "relatedItems": [
+      "rb-geni",
+      "bax-proteini",
+      "li-fraumeni-sendromu"
+    ],
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-03",
+      "accuracyScore": 100,
+      "auditSummary": "Karsinojenezin moleküler temeli amfi notları ile %100 örtüşmektedir.",
+      "sampleExamQuestion": "DNA hasarı saptandığında p21 genini uyararak hücre siklusunu G1 fazında durduran ve mutasyonunda Li-Fraumeni sendromu görülen tümör supresör gen hangisidir? (Cevap: TP53)"
     }
   }
 ]

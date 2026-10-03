@@ -146,7 +146,7 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     hideTimeoutRef.current = window.setTimeout(() => {
       setActiveState(null);
       hideTimeoutRef.current = null;
-    }, 280);
+    }, 450);
   };
 
   return (
@@ -175,7 +175,10 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
  */
 const GlossaryLayer: React.FC = () => {
   const [fsHost, setFsHost] = useState<Element | null>(() => (typeof document !== 'undefined' ? document.fullscreenElement : null));
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
     const update = () => setFsHost(document.fullscreenElement);
     document.addEventListener('fullscreenchange', update);
     document.addEventListener('webkitfullscreenchange', update);
@@ -184,13 +187,16 @@ const GlossaryLayer: React.FC = () => {
       document.removeEventListener('webkitfullscreenchange', update);
     };
   }, []);
+
+  if (!mounted || typeof document === 'undefined') return null;
+
   const layer = (
-    <>
+    <div className="medical-glossary-portal-root">
       <FloatingGlossaryToast />
       <MedicalGlossaryDrawer />
-    </>
+    </div>
   );
-  return fsHost ? createPortal(layer, fsHost) : layer;
+  return createPortal(layer, fsHost || document.body);
 };
 
 // ---------------------------------------------------------------------------
@@ -343,7 +349,7 @@ export const FloatingGlossaryToast: React.FC = () => {
       top: `${top}px`,
       left: `${left}px`,
       width: `${cardWidth}px`,
-      zIndex: 9999,
+      zIndex: 99999,
     };
   } else {
     // Floating bottom toast / sheet
@@ -354,7 +360,7 @@ export const FloatingGlossaryToast: React.FC = () => {
       transform: 'translateX(-50%)',
       width: 'calc(100% - 32px)',
       maxWidth: '460px',
-      zIndex: 9999,
+      zIndex: 99999,
     };
   }
 
@@ -528,6 +534,12 @@ export const GlossaryTermSpan: React.FC<{
       role="button"
       tabIndex={0}
       onClick={handleClick}
+      onPointerDown={(e) => e.stopPropagation()}
+      onPointerUp={(e) => {
+        e.stopPropagation();
+        const rect = spanRef.current?.getBoundingClientRect();
+        showTerm(item, rect, 'tap');
+      }}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -536,10 +548,11 @@ export const GlossaryTermSpan: React.FC<{
       }}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
-      className="cursor-pointer font-medium text-teal-800 dark:text-teal-200 underline decoration-dashed decoration-teal-400/80 underline-offset-4 hover:bg-teal-500/10 dark:hover:bg-teal-400/20 px-0.5 rounded transition-all duration-150"
+      className="cursor-pointer font-semibold text-teal-800 dark:text-teal-200 bg-teal-500/15 dark:bg-teal-400/20 hover:bg-teal-500/25 dark:hover:bg-teal-400/30 border-b-2 border-teal-500/70 dark:border-teal-400/90 px-1 py-0.5 rounded transition-all duration-150 inline-flex items-baseline gap-0.5 select-text"
       title={`${item.term} (${item.category}) - Dokunun veya üzerine gelin`}
     >
-      {text}
+      <span>{text}</span>
+      <span className="text-[9px] text-teal-600 dark:text-teal-300 opacity-70 select-none">✦</span>
     </span>
   );
 };

@@ -31,7 +31,10 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
   const [canRetryNow, setCanRetryNow] = useState<boolean>(false);
   const [customKey, setCustomKey] = useState<string>('');
   const [customGroqKey, setCustomGroqKey] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'groq' | 'gemini' | 'wait'>('groq');
+  const [customMuseSparkKey, setCustomMuseSparkKey] = useState<string>(() => {
+    return (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_muse_spark_api_key') : '') || '';
+  });
+  const [activeTab, setActiveTab] = useState<'muse-spark' | 'groq' | 'gemini' | 'wait'>('muse-spark');
   const [savedSuccess, setSavedSuccess] = useState(false);
 
   useEffect(() => {
@@ -56,6 +59,19 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
   }, [isOpen]);
 
   if (!isOpen) return null;
+
+  const handleSaveMuseSparkKey = () => {
+    if (customMuseSparkKey.trim()) {
+      localStorage.setItem('medsoru_muse_spark_api_key', customMuseSparkKey.trim());
+    } else {
+      localStorage.removeItem('medsoru_muse_spark_api_key');
+    }
+    setSavedSuccess(true);
+    setTimeout(() => {
+      if (onRetry) onRetry();
+      onClose();
+    }, 1000);
+  };
 
   const handleSaveGroqKey = () => {
     if (customGroqKey.trim()) {

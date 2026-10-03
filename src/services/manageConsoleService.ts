@@ -109,14 +109,14 @@ export const computeUserActivity = (
   for (const q of allQuestions) {
     if (q.contributedByName || q.contributedByUid) {
       const row = ensure(
-        (q.contributedByUid || q.contributedByName || 'bilinmeyen').toLowerCase(),
+        normKey(q.contributedByUid || q.contributedByName || 'bilinmeyen'),
         q.contributedByName || 'İsimsiz katkı'
       );
       row.questions += 1;
     }
     for (const f of q.fragments || []) {
       const row = ensure(
-        (f.authorUid || f.author || 'bilinmeyen').toLowerCase(),
+        normKey(f.authorUid || f.author || 'bilinmeyen'),
         f.author || 'İsimsiz'
       );
       row.fragments += 1;
@@ -124,28 +124,49 @@ export const computeUserActivity = (
     for (const o of q.options || []) {
       if (!o.suggestedBy && !o.suggestedByUid) continue;
       const row = ensure(
-        (o.suggestedByUid || o.suggestedBy || 'bilinmeyen').toLowerCase(),
+        normKey(o.suggestedByUid || o.suggestedBy || 'bilinmeyen'),
         o.suggestedBy || 'İsimsiz'
       );
       row.options += 1;
     }
   }
   for (const r of reports || []) {
-    const row = ensure((r.reportedBy || 'bilinmeyen').toLowerCase(), r.reportedBy || 'İsimsiz bildirim');
+    const row = ensure(normKey(r.reportedBy || 'bilinmeyen'), r.reportedBy || 'İsimsiz bildirim');
     row.reports += 1;
   }
   for (const c of comments || []) {
-    const row = ensure((c.author || 'bilinmeyen').toLowerCase(), c.author || 'İsimsiz yorum');
+    const row = ensure(normKey(c.author || 'bilinmeyen'), c.author || 'İsimsiz yorum');
     row.comments += 1;
   }
+  // Kayıtlı kullanıcıları katkı satırlarıyla BİRLEŞTİR:
+  // aynı kişinin e-posta/uid/görünen-ad anahtarları tek satırda toplanır.
   for (const u of registeredUsers || []) {
-    const key = (u.email || u.uid || '').toLowerCase();
-    if (!key) continue;
-    const row = ensure(key, u.displayName || u.email || key);
-    row.email = u.email;
-    row.studentNumber = u.studentNumber;
+    const keys = [u.email, u.uid, u.displayName].map(normKey).filter(Boolean);
+    if (keys.length === 0) continue;
+    const primaryKey = normKey(u.email || u.uid);
+    let primary = map.get(primaryKey);
+    if (!primary) {
+      primary = { key: primaryKey, name: u.displayName || u.email || primaryKey, questions: 0, fragments: 0, options: 0, reports: 0, comments: 0, total: 0 };
+      map.set(primaryKey, primary);
+    }
+    for (const k of keys) {
+      if (k === primaryKey) continue;
+      const other = map.get(k);
+      if (other && other !== primary) {
+        primary.questions += other.questions;
+        primary.fragments += other.fragments;
+        primary.options += other.options;
+        primary.reports += other.reports;
+        primary.comments += other.comments;
+        map.delete(k);
+      }
+      map.set(k, primary);
+    }
+    if (!primary.name || primary.name === primaryKey) primary.name = u.displayName || u.email || primaryKey;
+    primary.email = u.email || primary.email;
+    primary.studentNumber = u.studentNumber || primary.studentNumber;
   }
-  const rows = [...map.values()];
+  const rows = [...new Set(map.values())];
   for (const r of rows) r.total = r.questions + r.fragments + r.options + r.reports + r.comments;
   return rows.sort((a, b) => b.total - a.total);
 };
@@ -343,6 +364,61 @@ export const triggerBackupNow = async (
 
 export const filterCommittees = (committees: Committee[]) => committees;
 
+/** Türkçe uyumlu anahtar normalizasyonu (İ/i, I/ı eşleşmeleri için). */
+export const normKey = (s: unknown): string => {
+  try {
+    return String(s || '').toLocaleLowerCase('tr-TR').trim();
+  } catch {
+    return String(s || '').toLowerCase().trim();
+  }
+};
+
+export interface ManageUser {
+  uid?: string;
+  email?: string;
+  displayName?: string;
+  studentNumber?: string;
+  role?: string;
+  createdAt?: string;
+  lastLoginAt?: string;
+}
+
+/** Kayıtlı kullanıcıları birleştir: sunucu JSON + Supabase (e-posta/uid'ye göre tekille). */
+export const loadManageUsers = async (adminEmail: string): Promise<ManageUser[]> => {
+  const [serverUsers, supaUsers] = await Promise.all([
+    ApiService.adminGetUsers(adminEmail).catch(() => []),
+    SupabaseDbService.getRegisteredUsers().catch(() => []),
+  ]);
+  const map = new Map<string, ManageUser>();
+  const keyOf = (u: any) =>
+    ((u.email || u.uid || '') as string).toLowerCase() || (u.uid || '').toLowerCase();
+  for (const u of [...(supaUsers || []), ...(serverUsers || [])]) {
+    if (!u) continue;
+    const key = keyOf(u);
+    if (!key) continue;
+    const shaped: ManageUser = {
+      uid: u.uid || (u as any).id,
+      email: u.email,
+      displayName: u.displayName || (u as any).display_name,
+      studentNumber: u.studentNumber || (u as any).student_number,
+      role: u.role,
+      createdAt: u.createdAt || (u as any).created_at,
+      lastLoginAt: u.lastLoginAt || (u as any).last_login_at || (u as any).updatedAt || (u as any).updated_at,
+    };
+    const prev = map.get(key);
+    map.set(key, {
+      uid: shaped.uid || prev?.uid,
+      email: shaped.email || prev?.email,
+      displayName: shaped.displayName || prev?.displayName,
+      studentNumber: shaped.studentNumber || prev?.studentNumber,
+      role: shaped.role || prev?.role,
+      createdAt: shaped.createdAt || prev?.createdAt,
+      lastLoginAt: shaped.lastLoginAt || prev?.lastLoginAt,
+    });
+  }
+  return [...map.values()];
+};
+
 /** Yönetici olarak bir kullanıcıya e-posta gönder (SMTP varsa gerçek, yoksa kayıt). */
 export const sendUserEmail = async (
   to: string,
@@ -374,5 +450,69 @@ export const deleteManageUser = async (
     return { ok: true, message: 'Kullanıcı silindi.' };
   } catch (e: unknown) {
     return { ok: false, message: e instanceof Error ? e.message : 'Kullanıcı silinemedi.' };
+  }
+};
+
+/** Kayıtsız (hayalet) yazarın tüm katkı izlerini temizle: parça, şık, yorum, bildirim. */
+export const purgeAuthorContributions = async (
+  committees: { id: string }[],
+  authorKey: string
+): Promise<{ ok: boolean; fragments: number; options: number; comments: number; reports: number; questionsTouched: number; message: string }> => {
+  const stat = { fragments: 0, options: 0, comments: 0, reports: 0, questionsTouched: 0 };
+  try {
+    for (const c of committees || []) {
+      let pool: QuestionItem[] = [];
+      try {
+        pool = await multiDbManager.getQuestions(c.id);
+      } catch {
+        continue;
+      }
+      for (const q of pool) {
+        const beforeF = (q.fragments || []).length;
+        const beforeO = (q.options || []).length;
+        const nextF = (q.fragments || []).filter((f) => normKey(f.authorUid || f.author) !== authorKey);
+        const nextO = (q.options || []).filter((o) => {
+          if (!o.suggestedBy && !o.suggestedByUid) return true;
+          return normKey(o.suggestedByUid || o.suggestedBy) !== authorKey;
+        });
+        if (nextF.length !== beforeF || nextO.length !== beforeO) {
+          stat.fragments += beforeF - nextF.length;
+          stat.options += beforeO - nextO.length;
+          stat.questionsTouched += 1;
+          try {
+            await multiDbManager.saveQuestion({ ...q, fragments: nextF, options: nextO, updatedAt: new Date().toISOString() });
+          } catch {
+            /* tekil hata tümünü durdurmaz */
+          }
+        }
+      }
+    }
+    let past: QuestionItem[] = [];
+    try {
+      past = await multiDbManager.getPastQuestions();
+    } catch {
+      past = [];
+    }
+    for (const q of past) {
+      const qAny = q as QuestionItem & { comments?: Array<{ id?: string; author: string; text: string }>; reports?: Array<{ id?: string; reason: string; reportedBy?: string }> };
+      const beforeC = (qAny.comments || []).length;
+      const beforeR = (qAny.reports || []).length;
+      const nextC = (qAny.comments || []).filter((cm) => normKey(cm.author) !== authorKey);
+      const nextR = (qAny.reports || []).filter((rp) => normKey(rp.reportedBy) !== authorKey);
+      if (nextC.length !== beforeC || nextR.length !== beforeR) {
+        stat.comments += beforeC - nextC.length;
+        stat.reports += beforeR - nextR.length;
+        stat.questionsTouched += 1;
+        try {
+          await multiDbManager.savePastQuestion({ ...q, updatedAt: new Date().toISOString(), comments: nextC, reports: nextR } as QuestionItem);
+        } catch {
+          /* tekil hata tümünü durdurmaz */
+        }
+      }
+    }
+    const total = stat.fragments + stat.options + stat.comments + stat.reports;
+    return { ok: true, ...stat, message: total > 0 ? `${total} katkı izi temizlendi (${stat.questionsTouched} soruda).` : 'Bu isme ait katkı izi bulunamadı.' };
+  } catch (e: unknown) {
+    return { ok: false, ...stat, message: e instanceof Error ? e.message : 'Temizleme başarısız.' };
   }
 };

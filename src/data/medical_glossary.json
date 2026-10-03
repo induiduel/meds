@@ -4611,12 +4611,17 @@
     "committee": "Kurul 1"
   },
   "bax proteini": {
-    "term": "Bax Proteini (Bcl-2 Associated X Protein)",
-    "category": "patoloji",
-    "description": "Normalde sitozolde inaktif monomer olarak bulunan, p53 ve BH3-only sensörler ile uyarıldığında mitokondri dış zarına (MOM) göç edip oligomerleşerek sitokrom c salınım delikleri açan majör pro-apoptotik efektör protein.",
-    "clinicalPearl": "Foliküler lenfomada t(14;18) translokasyonu sonucu aşırı üretilen Bcl-2, Bax proteinini sürekli heterodimer halinde tutarak apoptozu engeller ve neoplastik hücrelerin ölümsüzleşmesine yol açar.",
-    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
-    "committee": "Kurul 1"
+    "term": "Bax Proteini",
+    "aliases": [
+      "Bax",
+      "BAX"
+    ],
+    "category": "Genetik & Patoloji",
+    "description": "Sitoplazmada monomerik bulunan ve p53 tarafından ekspresyonu artırılan ana pro-apoptotik efektör protein.",
+    "clinicalPearl": "DNA hasarında p53 tarafından doğrudan indüklenir; mitokondriye transloke olarak por açar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Sitoplazmada monomerik bulunan ve p53 tarafından ekspresyonu artırılan ana pro-apoptotik efektör protein."
   },
   "bak proteini (bcl-2 antagonist/killer)": {
     "term": "Bak Proteini (Bcl-2 Antagonist/Killer)",
@@ -4627,12 +4632,17 @@
     "committee": "Kurul 1"
   },
   "bak proteini": {
-    "term": "Bak Proteini (Bcl-2 Antagonist/Killer)",
-    "category": "patoloji",
-    "description": "Mitokondri dış zarına kalıcı olarak bağlı duran, normalde anti-apoptotik Mcl-1 ve Bcl-xL tarafından tutularak susturulan, ölüm sinyaliyle serbest kalıp oligomerleşerek zar gözeneği açan pro-apoptotik efektör protein.",
-    "clinicalPearl": "Kemoterapiye dirençli tümörlerde hem Bax hem Bak gen delesyonu veya mutasyonu varsa mitokondriyal geçirgenlik açılamaz ve intrensek apoptoz tamamen felç olur.",
-    "discipline": "Tıbbi Patoloji / Tıbbi Biyoloji",
-    "committee": "Kurul 1"
+    "term": "Bak Proteini",
+    "aliases": [
+      "Bak",
+      "BAK1"
+    ],
+    "category": "Genetik & Patoloji",
+    "description": "Mitokondri dış zarında integral bulunan pro-apoptotik protein; Bax ile birlikte MOMP porunu açarak Sitokrom c salınımını tetikler.",
+    "clinicalPearl": "Bax ve Bak çift nakavt edilirse hücre intrinsik apoptoza direnç kazanır. Bcl-2 tarafından inhibe edilir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Mitokondri dış zarında integral bulunan pro-apoptotik protein; Bax ile birlikte MOMP porunu açarak Sitokrom c salınımını tetikler."
   },
   "i̇ntrensek apoptoz yolağı (mitokondriyal yol)": {
     "term": "İntrensek Apoptoz Yolağı (Mitokondriyal Yol)",
@@ -5874,5 +5884,158 @@
     "clinicalPearl": "Miyokard enfarktüsü sonrası ventrikül duvar disfonksiyonu ve atriyal fibrilasyonda sol atriyal apandikste sık oluşur. Sistemik arteriyel embolilerin en önemli kaynağıdır.",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1"
+  },
+  "m1 makrofaj": {
+    "term": "M1 Makrofaj",
+    "aliases": [
+      "M1",
+      "Klasik makrofaj"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "IFN-γ ve TLR agonistleri ile aktive olan, iNOS eksprese ederek NO ve ROS üreten, doku yıkımı yapan klasik makrofaj.",
+    "clinicalPearl": "IFN-gama en güçlü uyarıcısıdır. Mikrobisidal ve pro-enflamatuardır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "IFN-γ ve TLR agonistleri ile aktive olan, iNOS eksprese ederek NO ve ROS üreten, doku yıkımı yapan klasik makrofaj."
+  },
+  "m2 makrofaj": {
+    "term": "M2 Makrofaj",
+    "aliases": [
+      "M2",
+      "Alternatif makrofaj"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "IL-4 ve IL-13 ile aktive olan, TGF-β ve IL-10 salgılayarak doku onarımı, anjiyogenez ve fibrozisi sağlayan alternatif makrofaj.",
+    "clinicalPearl": "Arginaz-1 kullanır, NO üretmez. TGF-beta ile fibroblastik kollajen sentezini uyarır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "IL-4 ve IL-13 ile aktive olan, TGF-β ve IL-10 salgılayarak doku onarımı, anjiyogenez ve fibrozisi sağlayan alternatif makrofaj."
+  },
+  "epiteloid histiyosit": {
+    "term": "Epiteloid Histiyosit",
+    "aliases": [
+      "Epiteloid hücre",
+      "Epiteloid makrofaj"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "Geniş pembe granüler sitoplazmalı, terlik tabanı nükleuslu modifiye makrofaj; granülom tanısı için şart olan ana hücredir.",
+    "clinicalPearl": "Granülom tanısı koymak için dev hücre veya nekroz şart değildir; epiteloid histiyosit kümesi zorunludur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Geniş pembe granüler sitoplazmalı, terlik tabanı nükleuslu modifiye makrofaj; granülom tanısı için şart olan ana hücredir."
+  },
+  "langhans dev hücresi": {
+    "term": "Langhans Dev Hücresi",
+    "aliases": [
+      "Langhans hücresi",
+      "Langhans"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "Epiteloid histiyositlerin füzyonuyla oluşan, çekirdekleri periferde at nalı şeklinde dizilmiş çok çekirdekli dev hücre.",
+    "clinicalPearl": "Tüberküloz ve Sarkoidoz granülomlarında tipiktir. Derideki Langerhans hücresi ile karıştırılmamalıdır!",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Epiteloid histiyositlerin füzyonuyla oluşan, çekirdekleri periferde at nalı şeklinde dizilmiş çok çekirdekli dev hücre."
+  },
+  "sarkoidoz": {
+    "term": "Sarkoidoz",
+    "aliases": [
+      "Sarcoidosis"
+    ],
+    "category": "Klinik hastalık",
+    "description": "Bilateral hiler lenfadenopati ve akciğer tutulumu yapan, kazeöz nekroz İÇERMEYEN non-kazeöz granülomatöz sistemik hastalık.",
+    "clinicalPearl": "Non-kazeöz granülom + ACE yüksekliği + Hiperkalsemi + Schaumann ve Asteroid cisimcikleri.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Bilateral hiler lenfadenopati ve akciğer tutulumu yapan, kazeöz nekroz İÇERMEYEN non-kazeöz granülomatöz sistemik hastalık."
+  },
+  "schaumann cisimciği": {
+    "term": "Schaumann Cisimciği",
+    "aliases": [
+      "Schaumann cisimcikleri",
+      "Schaumann"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "Sarkoidoz granülom dev hücrelerinde izlenen konsantrik kalsiyum ve protein lamelleri içeren inklüzyon yapısı.",
+    "clinicalPearl": "Sarkoidoz dev hücre sitoplazmasında tipiktir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Sarkoidoz granülom dev hücrelerinde izlenen konsantrik kalsiyum ve protein lamelleri içeren inklüzyon yapısı."
+  },
+  "charcot-leyden kristalleri": {
+    "term": "Charcot-Leyden Kristalleri",
+    "aliases": [
+      "Galektin-10"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "Eozinofillerin lizisi sonucu Galektin-10 proteininin çökelmesiyle oluşan çift piramit şekilli altıgen kristaller.",
+    "clinicalPearl": "Alerjik astım balgamında ve paraziter doku infiltrasyonunda eozinofillerin varlığını kanıtlar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Eozinofillerin lizisi sonucu Galektin-10 proteininin çökelmesiyle oluşan çift piramit şekilli altıgen kristaller."
+  },
+  "warburg etkisi": {
+    "term": "Warburg Etkisi (Aerobik Glikoliz)",
+    "aliases": [
+      "Aerobik glikoliz",
+      "Warburg"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "Kanser hücrelerinin bol oksijen varlığında bile oksidatif fosforilasyon yerine glikolizle laktat üretmesi ve biyosentez yapması.",
+    "clinicalPearl": "18F-FDG PET-BT görüntülemesinde tümörün parlak tutulum göstermesinin temel metabolik mekanizmasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Kanser hücrelerinin bol oksijen varlığında bile oksidatif fosforilasyon yerine glikolizle laktat üretmesi ve biyosentez yapması."
+  },
+  "tp53 geni": {
+    "term": "TP53 Geni (p53)",
+    "aliases": [
+      "p53",
+      "TP53"
+    ],
+    "category": "Genetik & Patoloji",
+    "description": "İnsan kanserlerinde en sık mutasyona uğrayan, DNA hasarında p21 ile hücre siklusunu G1'de durduran genom gardiyanı tümör supresör gen.",
+    "clinicalPearl": "Kalıtsal germ-line mutasyonunda Li-Fraumeni sendromu görülür. Hasar onarılamazsa Bax ile apoptozu tetikler.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "İnsan kanserlerinde en sık mutasyona uğrayan, DNA hasarında p21 ile hücre siklusunu G1'de durduran genom gardiyanı tümör supresör gen."
+  },
+  "anaplazi": {
+    "term": "Anaplazi",
+    "aliases": [
+      "Diferansiyasyon kaybı",
+      "Anaplazik"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "Neoplastik hücrelerin kaynaklandığı olgun dokuya hücresel ve yapısal benzerliğini tamamen yitirmesi; malignitenin kardinal morfolojik bulgusu.",
+    "clinicalPearl": "Pleomorfizm, atipik mitozlar, nükleomegali ve nükleer hiperkromazi ile karakterizedir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Neoplastik hücrelerin kaynaklandığı olgun dokuya hücresel ve yapısal benzerliğini tamamen yitirmesi; malignitenin kardinal morfolojik bulgusu."
+  },
+  "desmoplazi": {
+    "term": "Desmoplazi",
+    "aliases": [
+      "Skirröz stroma"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "İnvaziv malign tümörlerin çevre dokudaki fibroblastları uyararak yoğun kollajenden zengin fibröz stroma oluşturması (taş sertliğinde kitle).",
+    "clinicalPearl": "İnvaziv duktal meme karsinomu ve pankreas duktal adenokarsinomunda kitleye taş sertliğini veren reaksiyondur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "İnvaziv malign tümörlerin çevre dokudaki fibroblastları uyararak yoğun kollajenden zengin fibröz stroma oluşturması (taş sertliğinde kitle)."
+  },
+  "karsinoma in situ": {
+    "term": "Karsinoma İn Situ (CIS)",
+    "aliases": [
+      "CIS",
+      "İntraepitelyal neoplazi"
+    ],
+    "category": "Tıbbi Patoloji",
+    "description": "Tümör hücrelerinin epitelin tüm katlarını doldurmasına rağmen bazal membranı AŞMADIĞI pre-invaziv malign neoplazi evresi.",
+    "clinicalPearl": "Bazal membran sağlam olduğu için damar veya lenfatik invazyon yapamaz; metastaz riski sıfırdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Tümör hücrelerinin epitelin tüm katlarını doldurmasına rağmen bazal membranı AŞMADIĞI pre-invaziv malign neoplazi evresi."
   }
 }
