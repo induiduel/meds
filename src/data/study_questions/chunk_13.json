@@ -1,5 +1,1116 @@
 [
   {
+    "id": "prac-use-016",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 16,
+    "slideTitle": "ÜSE Patogenezinde Konak-Patojen Etkileşimi: Fimbriyalar ve Adhezinler",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Üropatojenik Escherichia coli'nin (UPEC) patogenezinde rol oynayan virülans faktörleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tip 1 fimbriyalar D-mannoz kalıntılarına bağlanır ve özellikle mesane epitel hücrelerine tutunmada rol oynar.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "P-fimbriyalar eritrosit ve tübül epitelindeki Gal-Gal reseptörlerine bağlanarak akut piyelonefrit patogenezinde kritik görev üstlenir.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "P-fimbriyaların epitele tutunması ortamda serbest D-mannoz bulunması durumunda tamamen inhibe olur.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Bakteriyel adhezyon, idrar akımının mekanik yıkama gücünü aşmak için gereken ilk ve en zorunlu basamaktır.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "UPEC suşları demir kazanımı için aerobaktin gibi özelleşmiş sideroforlar salgılar.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "P-fimbriyalar 'mannoz-dirençli' adhezinlerdir; Gal-Gal reseptörlerine bağlanırlar ve ortamdaki D-mannoz tarafından inhibe edilemezler. Mannoz ile inhibe olan Tip 1 fimbriyalardır."
+  },
+  {
+    "id": "prac-use-017",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 17,
+    "slideTitle": "Enfeksiyonun Giriş Yolları: Asendan, Hematojen ve Lenfojen Mekanizmalar",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Üriner sistem enfeksiyonlarının patogenezinde mikroorganizmaların yayılım yolları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ÜSE'lerin ezici çoğunluğu (%95+) periüretral alandan mesaneye ve böbreğe uzanan asendan yolla gelişir.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Vezikoüreteral reflü (VUR), asendan yolla bakterilerin mesaneden renal toplayıcı sisteme ulaşmasındaki en önemli defekttir.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Hematojen yolla piyelonefrit ve parankim apsesi oluşumunda E. coli ve diğer Gram-negatif basiller primer rol oynar.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Staphylococcus aureus bakteriyemisi veya infektif endokardit varlığında böbrek parankimi hematojen yolla enfekte olabilir.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Kadınlarda üretranın anatomik olarak kısa olması asendan enfeksiyonlara yatkınlığın temel nedenlerindendir.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hematojen yolla piyelonefrit oluşumunda Gram-negatif basillerin rolü çok düşüktür; hematojen yayılım tipik olarak S. aureus bakteriyemisi veya sistemik mantar enfeksiyonlarında izlenir. Enterik Gram negatif basiller asendan yolla bulaşır."
+  },
+  {
+    "id": "prac-use-018",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 18,
+    "slideTitle": "Ürolojik Semptomatoloji: Hematüriye Klinik ve Laboratuvar Yaklaşımı",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "54 yaşında erkek hasta idrarda kan görme şikayetiyle başvuruyor. Yapılan tetkiklerde hematürinin miksiyonun tamamı boyunca devam ettiği ve idrar sedimentinde ağırlıklı olarak izomorfik eritrositlerin bulunduğu saptanıyor. Bu hastanın klinik yaklaşımı ile ilgili aşağıdaki ilkelerden hangisi doğrudur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "İzomorfik eritrositler primer glomerülonefrit lehine olup hastaya derhal renal kortikal biyopsi yapılmalıdır.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Hematürinin miktarı patolojinin ciddiyetiyle doğru orantılıdır; ağrısız olduğu için ileri araştırma gerekmez.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Yetişkin bir hastada aksi kanıtlanana kadar ürolojik malignite dışlanmalı, sistoskopi ve üst üriner sistem görüntülemesi planlanmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Miksiyonun tamamında görülen hematüri yalnızca distal üretral inflamasyona özgüdür.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "İdrarda eritrosit görülmesi durumunda antibiyotik verilerek 6 ay sonra kontrole çağrılması yeterlidir.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Erişkinde hematüri aksi ispatlanana kadar ürolojik malignite (mesane/böbrek tümörü) kabul edilir. Total hematüri ve izomorfik eritrositler glomerül dışı ürolojik traktusu gösterdiğinden sistoskopi ve görüntüleme şarttır."
+  },
+  {
+    "id": "prac-use-019",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 19,
+    "slideTitle": "Üriner Ağrı Tipleri: Renal Kolik, İnflamatuar Ağrı ve İntraperitoneal Ayrım",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Acil servise sağ yan ağrısı şikayetiyle başvuran bir hastanın ayırıcı tanısında akut böbrek/üreter patolojisi ile intraperitoneal bir organ perforasyonu (peritonit) arasında kalınmıştır. Aşağıdaki klinik bulgulardan hangisi intraperitoneal bir patolojiden ziyade böbrek/üreter kaynaklı akut renal koliği en güçlü şekilde destekler?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hastanın karın ağrısını azaltmak için yatakta tamamen sırtüstü ve hareketsiz yatması",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Ağrının frenik sinir irritasyonu aracılığıyla sağ omuza yayılması",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Ağrının epigastrik bölgede sabit bir şekilde lokalize olması",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Hastanın hiçbir pozisyonda rahat edemeyip kıvranarak oda içinde sürekli hareket halinde olması",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Fizik muayenede yaygın defans ve rebound hassasiyeti saptanması",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Akut renal kolikte viseral gerilme nedeniyle hasta rahat bir pozisyon bulamaz ve sürekli kıvranıp hareket eder. İntraperitoneal inflamasyonda (peritonit) ise hasta periton temasını engellemek için yatakta kıpırdamadan yatar."
+  },
+  {
+    "id": "prac-use-020",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 20,
+    "slideTitle": "Alt Üriner Sistem Semptomları (AÜSS / LUTS): Sınıflandırma ve Dinamikler",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki alt üriner sistem semptomlarından hangisi mesanenin idrar depolama (irritatif) fazına ait semptomlar arasında yer almaz?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sık idrara çıkma (Frequency / Pollaküri)",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Gece idrara kalkma (Noktüri)",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Ani sıkışma hissi (Urgency)",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "İdrar yaparken ağrı ve yanma (Dizüri)",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "İdrara başlamada duraksama ve gecikme (Hesitancy)",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "İdrara başlamada gecikme ve duraksama (Hesitancy), mesane çıkım obstrüksiyonuna bağlı gelişen bir 'işeme (obstrüktif)' semptomudur. Pollaküri, noktüri, urgency ve dizüri ise depolama (irritatif) semptomlarıdır."
+  },
+  {
+    "id": "prac-use-021",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 21,
+    "slideTitle": "İrritatif ve Fonksiyonel Bozukluklar: Dizüri, İnkontinans, Pnömatüri ve Hematospermi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "62 yaşında diyabetik bir hasta, idrar yaparken hava kabarcıkları çıktığını (pnömatüri) ve idrarının kötü koktuğunu ifade ediyor. Hastanın yakın zamanda herhangi bir ürolojik girişim öyküsü bulunmamaktadır. Bu klinik bulgunun etyolojisinde öncelikle düşünülmesi gereken patolojiler hangi seçenekte doğru verilmiştir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enterovezikal (kolovezikal) fistül veya gaz üreten mikroorganizmalarla gelişen amfizematöz enfeksiyon",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Benign prostat hiperplazisi veya primer üretra darlığı",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Basit böbrek kisti rüptürü veya glomerülonefrit",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Minimal değişiklik hastalığı veya nefrotik sendrom",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Saf stres tipi üriner inkontinans veya pelvik taban relaksasyonu",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Enstrümantasyon öyküsü olmayan bir hastada pnömatüri görülmesi ya bağırsak ile mesane arasında fistül varlığını (kolovezikal fistül) ya da diyabette gaz oluşturan bakterilerle (E. coli, Klebsiella) meydana gelen amfizematöz sistiti/piyelonefriti gösterir."
+  },
+  {
+    "id": "prac-use-022",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Sistit, Akut Piyelonefrit ve Kronik Piyelonefrit Klinik Tabloları",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "29 yaşında kadın hasta 2 gündür devam eden 39 °C ateş, titreme, sağ böbrek lojunda şiddetli yan ağrısı ve bulantı şikayetiyle başvuruyor. Fizik muayenede sağ kostovertebral açı hassasiyeti belirgin pozitif saptanıyor. Bu klinik tablonun tanısı ve patolojisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tablo basit akut sistit olup hastaya yalnızca 3 günlük oral tedavi verilip taburcu edilmelidir.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Yan ağrısı, ateş ve KVAH birlikteliği böbrek parankiminin akut bakteriyel enfeksiyonu olan Akut Piyelonefriti gösterir.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Hastada yan ağrısı olmasına rağmen ateş olmaması nedeniyle piyelonefrit tanısı kesinlikle dışlanır.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bu tablonun tanısı yalnızca renal biyopside glomerül nekrozu gösterilerek konulabilir.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Olguların tamamında etken cinsel yolla bulaşan Chlamydia trachomatis'tir.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Yüksek ateş, titreme, tek taraflı yan ağrısı ve kostovertebral açı hassasiyeti böbrek parankiminin akut süpüratif enfeksiyonu olan Akut Piyelonefritin kardinal klinik göstergeleridir."
+  },
+  {
+    "id": "prac-use-023",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Prostatit Sendromları ve NIH Sınıflaması: Akut, Kronik ve KP/KPAS",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "42 yaşında erkek hasta yüksek ateş (39.2 °C), titreme, perineal bölgede şiddetli dolgunluk ve ağrı, idrar yaparken yoğun yanma ve idrar yapamama (akut retansiyon) şikayetiyle acile başvuruyor. Bu hastanın klinik yaklaşımında kesinlikle kaçınılması gereken uygulama aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "İntravenöz geniş spektrumlu antibiyotik başlanması",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Kan ve idrar kültürlerinin alınması",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Sert parmakla rektal muayene ve tanısal prostat masajı yapılması",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Retansiyonu gidermek amacıyla suprapubik sistostomi planlanması",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Vital bulguların ve kan basıncının yakın takibi",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Akut bakteriyel prostatitte aşırı inflamasyon ve apse riski nedeniyle sert parmakla rektal muayene ve prostat masajı kontrendikedir; bakterilerin kana karışarak bakteriyemi ve septik şok oluşturma riski bulunur."
+  },
+  {
+    "id": "prac-use-024",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Skrotal İnflamasyonlar ve Üretritler: Orşit, Epididimit ve Üretrit Ayrımı",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Şüpheli cinsel ilişkiden 14 gün sonra başlayan hafif dizüri ve sabahları üretradan az miktarda gelen açık renkli, müköz/sulu akıntı şikayetiyle başvuran erkek hastanın akıntı yaymasında Gram-negatif diplokok görülmemiştir. Bu hastada en olası klinik tablo ve en sık sorumlu mikroorganizma aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Gonokokkal üretrit - Neisseria gonorrhoeae",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Non-gonokokkal üretrit - Chlamydia trachomatis",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Akut piyelonefrit - Escherichia coli",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kabakulak orşiti - Paramyxovirüs",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Kronik sistit - Proteus mirabilis",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "10-21 günlük uzun kuluçka süresi, sinsi başlangıç, az miktarda sulu/müköz akıntı ve mikroskopide diplokok görülmemesi Chlamydia trachomatis kaynaklı Non-gonokokkal üretritin (NGU) tipik özellikleridir. Gonorede ise kuluçka 2-7 gün olup bol pürülan sarı akıntı görülür."
+  },
+  {
+    "id": "prac-spe-001",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 1,
+    "slideTitle": "Üriner Sistemin Spesifik Enfeksiyonlarına Giriş ve Genel Bakış",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdakilerden hangisi üriner sistemin 'spesifik' enfeksiyonlarını standart bakteriyel enfeksiyonlardan (non-spesifik İYE) ayıran temel klinik ve patolojik özelliklerden biri DEĞİLDİR?",
+    "options": [
+      "A) Doku düzeyinde granülomatöz reaksiyon, kazeifikasyon nekrozu veya belirgin fibrozis oluşturabilmeleri",
+      "B) Standart besiyerlerinde yapılan rutin idrar kültürlerinde etkenin genellikle ürememesi ve steril piyüri görülmesi",
+      "C) Radyolojik ve endoskopik olarak mesane ve böbrek malignitelerini taklit edebilen lezyonlar meydana getirmeleri",
+      "D) Etkenlerin sıklıkla genişlemiş spektrumlu beta-laktamaz (GSBL) salgılayan dirençli Escherichia coli suşları olması",
+      "E) İyileşme süreçlerinin sıklıkla üreter darlıkları ve mesane kapasitesinde geri dönüşsüz azalma ile sonuçlanması"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü GSBL salgılayan Escherichia coli suşları, klasik 'non-spesifik' bakteriyel üriner sistem enfeksiyonlarının dirençli formlarıdır. Spesifik enfeksiyonlar ise Mycobacterium tuberculosis, Schistosoma haematobium, Candida türleri, BK virüs gibi özel mikroorganizmaların oluşturduğu granülomatöz, paraziter veya viral patolojilerdir. A, B, C ve E seçenekleri spesifik enfeksiyonların kardinal özellikleridir."
+  },
+  {
+    "id": "prac-spe-002",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 2,
+    "slideTitle": "Genitoüriner Tüberküloz: Etiyoloji ve Mikrobiyolojik Özellikler",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Mycobacterium tuberculosis'in mikrobiyolojik özellikleri ve hücre duvarı yapısı ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Zorunlu aerobik özellikte olduğundan oksijenizasyonu yüksek dokuları (akciğer apeksleri ve böbrek korteksi) tercih eder",
+      "B) Hücre duvarındaki yüksek mikolik asit içeriği nedeniyle Ziehl-Neelsen boyamasında asit-alkol ile rengini kaybetmez",
+      "C) Jenerasyon süresi çok kısa olup (yaklaşık 20 dakika) rutin kanlı agarda 24 saat içinde koloniler oluşturur",
+      "D) Hücre duvarında bulunan kord faktörü (trehaloz 6,6-dimikolat) virülansta ve granülom oluşumunda kritik rol oynar",
+      "E) Yüzeyel mesane karsinomunda kullanılan intravezikal BCG aşısı Mycobacterium bovis kaynaklıdır ve tüberküloz reaksiyonuna yol açabilir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü M. tuberculosis son derece yavaş üreyen bir bakteridir; jenerasyon süresi yaklaşık 15-20 saattir (20 dakika olan E. coli'dir). Löwenstein-Jensen gibi özel katı besiyerlerinde makroskopik koloni vermesi 3 ila 8 hafta sürer, rutin kanlı agarda 24 saatte üremez."
+  },
+  {
+    "id": "prac-spe-003",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 3,
+    "slideTitle": "Genitoüriner Tüberküloz Patogenezi: Hematojen Yayılım ve Latens",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Genitoüriner tüberkülozun patogenezi ve yayılım dinamikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Enfeksiyon daima eksternal üretral meatus üzerinden asendan yolla mesaneye ve oradan böbreğe ulaşır",
+      "B) Primer akciğer enfeksiyonu sırasında hematojen yolla her iki böbrek korteksine ekilen basiller, yıllar sonra reaktive olarak toplayıcı sisteme desendan yolla yayılır",
+      "C) Klinik semptomlar primer akciğer enfeksiyonundan hemen 2-3 hafta sonra akut glomerülonefrit tablosuyla başlar",
+      "D) Hastalığın patogenezinde hücresel bağışıklığın rolü yoktur, tamamen kompleman bağımlı hümoral bağışıklık hakimdir",
+      "E) Hastaların tamamında eş zamanlı olarak kavitasyonel aktif akciğer tüberkülozu ve balgamda ARB pozitifliği saptanır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği patogenezi kusursuz özetler: Primer akciğer enfeksiyonundaki bakteriyemi sırasında basiller bilateral böbrek korteksine hematojen ekilir; 5-25 yıllık bir latens döneminin ardından lokal reaktivasyonla medullaya ve pelvise erode olur, idrar akımıyla desendan yolla alt üriner sisteme yayılır. A yanlıştır (asendan değil hematojen başlar); C yanlıştır (yıllar sonra başlar); D yanlıştır (tip IV hücresel bağışıklık esastır); E yanlıştır (%20-50 hastada akciğer grafisi normaldir)."
+  },
+  {
+    "id": "prac-spe-004",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 4,
+    "slideTitle": "Renal Tüberküloz Patolojisi: Kazeifikasyon Nekrozundan Kavitasyona",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek tüberkülozunun mikroskopik ve makroskopik patolojik gelişimi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Granülomun karakteristik histolojik bulgusu periferik yerleşimli nükleuslara sahip Langhans dev hücreleridir",
+      "B) Medüller papillaların kazeöz nekroza uğrayarak toplayıcı sisteme açılması kavitasyonel lezyonları (kavern) başlatır",
+      "C) İnfundibulumların fibrotik skatrizasyonu sonucu obstrüksiyon ve izole hidrokaliks alanları meydana gelir",
+      "D) Lezyonlar böbrekte hiçbir zaman kazeöz nekroz yapmaz, sadece diffüz süpüratif nötrofilik infiltrasyonla seyreder",
+      "E) İleri evrede fonksiyonel renal parankim tamamen kaybolarak yerini kazeöz debris dolu multiloküle boşluklara bırakabilir"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü kazeifikasyon nekrozu tüberkülozun patognomonik histolojik belirtecidir. Diffüz süpüratif nötrofilik infiltrasyon ve mikroapseler ise akut piyelonefritin (akut bakteriyel non-spesifik enfeksiyon) tipik bulgusudur. A, B, C ve E seçenekleri renal tüberkülozun gerçek patolojik süreçlerini ifade eder."
+  },
+  {
+    "id": "prac-spe-005",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 5,
+    "slideTitle": "Son Evre Renal Tüberküloz: 'Camcı Macunu Böbrek' ve Otonefrektomi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Renal tüberkülozun son döneminde ortaya çıkan 'camcı macunu böbrek' (putty kidney) ve 'otonefrektomi' tablosu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Böbrek fonksiyonları artmıştır ve idrar çıkışı poliürik düzeydedir",
+      "B) Nekrotik parankimin yerini kalsifiye kazeöz debrisin alması sonucu böbrek fonksiyonunu tamamen kaybeder ve afonksiyone hale gelir",
+      "C) Lezyon kendi kendini sınırladığı için hastaya asla antitüberküloz ilaç tedavisi verilmemelidir",
+      "D) Tablo sadece akut bakteriyel piyelonefrit atakları sırasında gelişen geçici bir fonksiyonsuzluk durumudur",
+      "E) Böbrek hiçbir zaman kalsifiye olmaz, daima anevrizmatik genişlemiş vasküler yapılar içerir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur: Camcı macunu böbrek (putty kidney), kazeo-kavernöz yıkım ve distrofik kalsifikasyon sonucu böbrek parankiminin tamamen tahrip olup fonksiyonunu yitirmesi (otonefrektomi) durumudur. A yanlıştır (organ afonsiyonedir); C yanlıştır (içinde canlı basil barındırabileceğinden medikal tedavi ve sıklıkla cerrahi gerekir); D yanlıştır (irreversibl kronik tüberküloz hasarıdır); E yanlıştır (yoğun distrofik kalsifikasyon patognomoniktir)."
+  },
+  {
+    "id": "prac-spe-006",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 6,
+    "slideTitle": "Üreter Tüberkülozu: Striktürler, Tirbuşon Üreter ve 'Golf Deliği' Orifis",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Genitoüriner tüberküloz seyrinde üreter ve üreterovezikal bileşkede izlenen patolojik değişikliklerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Üreter lümeninde ardışık darlık ve dilatasyonlar — Tespih tanesi (beaded) üreter görünümü",
+      "B) Fibrotik kısalma ve aks deviasyonu — Tirbuşon (corkscrew) üreter manzarası",
+      "C) Longitudinal kas liflerinin fibrozisle çekilmesi sonucu orifisin açık kalması — Golf deliği (golf-hole) üreter orifisi",
+      "D) Üreterovezikal valv mekanizmasının bozulması — Sekonder vezikoüreteral reflü (VUR) gelişimi",
+      "E) Üreter alt ucunda kistik balonlaşma ve kobranın başı görünümü — Üreter tüberkülozuna bağlı psödo-divertikül"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü üreter alt ucunun mesane içine kistik balonlaşması ve 'kobranın başı' (cobra-head) görünümü konjenital üreteroselin karakteristik radyolojik bulgusudur; tüberkülozla ilişkili değildir. A, B, C ve D seçeneklerindeki bulgular tüberkülozun klasik üreteral komplikasyonlarıdır."
+  },
+  {
+    "id": "prac-spe-007",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 7,
+    "slideTitle": "Mesane Tüberkülozu: Tüberküllerden 'Güdük/Yüksük Mesane'ye",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Mesane tüberkülozunun patofizyolojik seyri ve son dönem komplikasyonları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Enfeksiyon hiçbir zaman kas tabakasına geçmez, daima yalnızca yüzeyel transizyonel epitel ile sınırlı kalır",
+      "B) Detrusor kas liflerinin yerini fibrotik dokunun alması sonucu mesane kapasitesi dramatik biçimde küçülerek 'güdük/yüksük mesane' (thimble bladder) oluşur",
+      "C) Mesane kapasitesi 1000 mL'nin üzerine çıkarak aşırı gerilimli atonik mesane tablosu meydana gelir",
+      "D) İlk lezyonlar daima mesane kubbesinde (dome) başlar, trigon ve orifisler enfeksiyondan tamamen korunur",
+      "E) Tüberküloz sistiti hiçbir zaman dizüri veya pollaküri yapmaz, tamamen asemptomatik bir tablodur"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur: Detrusorun transmural tutulumu ve fibrozisi sonucu mesane kompliyansını kaybeder, hacmi 50 mL'nin altına iner ve rijit 'güdük mesane' (thimble bladder) tablosu ortaya çıkar. A yanlıştır (transmural tutulum tipiktir); C yanlıştır (kapasite artmaz, dramatik şekilde azalır); D yanlıştır (yerçekimi ve desendan idrar nedeniyle ilk lezyonlar trigonda başlar); E yanlıştır (şiddetli irritatif semptomlar görülür)."
+  },
+  {
+    "id": "prac-spe-008",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 8,
+    "slideTitle": "Erkek Genital Sistem Tüberkülozu: Epididimit, Prostatit ve 'Tespih Tanesi' Vas Deferens",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "32 yaşında erkek hasta, sağ skrotumda yaklaşık 4 aydır devam eden ağrısız şişlik ve skrotal deriden dışarıya aralıklı açık renkli sıvı sızması şikayetiyle başvuruyor. Fizik muayenede sağ epididim başında sert nodülarite, vas deferenste tespih tanesi şeklinde düğümcükler ve skrotum arka yüzünde cilde yapışık drene olan bir fistül ağzı palpe ediliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut gonokoksik epididimit",
+      "B) Fournier gangreni",
+      "C) Genitoüriner tüberküloz",
+      "D) Testis torsiyonu",
+      "E) Benign prostat hiperplazisi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Genitoüriner tüberkülozda epididim başından başlayan sert nodüler kitle, vas deferenste tespih tanesi (beaded) nodülaritesi ve cilde açılan kronik drene skrotal sinüs/fistül patognomonik fizik muayene triadıdır. Akut bakteriyel/gonokoksik epididimit ani başlangıçlı, yüksek ateşli ve son derece ağrılıdır; fistül oluşturmaz. Testis torsiyonu akut iskemi tablosudur. Fournier gangreni fasyaları tutan hızla ilerleyen nekrotizan fasiittir."
+  },
+  {
+    "id": "prac-spe-009",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 9,
+    "slideTitle": "Ürogenital Tüberkülozda Klinik Tablo ve 'Steril Piyüri' Paradoksu",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "28 yaşında kadın hasta, 6 aydır devam eden idrar yaparken yanma ve sık idrara çıkma şikayetleriyle başvuruyor. Hastaya bu süreçte farklı hekimlerce 4 kür antibiyotik verilmiş ancak şikayetleri gerilememiştir. Yapılan tam idrar analizinde idrar pH'sı 5.2, lökosit 45/HPF, eritrosit 15/HPF saptanmış, rutin kanlı agar ve EMB idrar kültüründe ise mikroorganizma ürememiştir. Bu hasta için öncelikle düşünülmesi gereken patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut non-komplike sistit",
+      "B) Üriner sistem tüberkülozu",
+      "C) Aşırı aktif mesane sendromu",
+      "D) Üriner sistem taş hastalığı",
+      "E) Diyabetik sistopati"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Standart antibiyotik tedavilerine yanıt vermeyen kronik dizüri ve pollaküri varlığında, idrar sedimentinde lökosit ve eritrosit bulunmasına rağmen standart kültürde bakteri ürememesi tablosu 'steril piyüri'dir. Steril piyürinin klasik prototipi ve ilk akla gelmesi gereken sebebi üriner sistem tüberkülozudur. Akut non-komplike sistitte kültürde sıklıkla E. coli ürer. Aşırı aktif mesanede piyüri olmaz. Taş hastalığı hematüri yapsa da steril piyürili kronik dizüri tablosunu açıklamakta tüberküloz kadar spesifik değildir."
+  },
+  {
+    "id": "prac-spe-010",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 10,
+    "slideTitle": "Ürogenital Tüberkülozda Laboratuvar ve Mikrobiyolojik Tanı",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Üriner sistem tüberkülozu şüphesi olan bir hastada mikrobiyolojik örnek toplama ve laboratuvar tanı yöntemleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) En doğru tanısal örnek, 24 saat boyunca oda ısısında biriktirilmiş idrarın tamamının gönderilmesidir",
+      "B) İdrar sedimentinden yapılan tek bir Ziehl-Neelsen boyamasının negatif olması tüberküloz tanısını kesin olarak ekarte ettirir",
+      "C) Tanısal başarıyı artırmak için ardışık en az 3 gün sabah verilen ilk idrar örneğinde ARB boyama, kültür ve PCR incelemesi yapılmalıdır",
+      "D) Löwenstein-Jensen besiyerine ekilen idrarda M. tuberculosis kolonileri genellikle ilk 12-24 saat içinde görünür hale gelir",
+      "E) İdrar PCR testleri tüberküloz tanısında tamamen etkisizdir ve hiçbir zaman kullanılmamalıdır"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur: Basil atılımı intermittan olduğundan ardışık en az 3 sabah ilk idrarının incelenmesi tanı şansını %90'ın üzerine çıkarır. A yanlıştır (24 saatlik idrar kontamine olur ve basiller parçalanır); B yanlıştır (direkt mikroskopinin duyarlılığı düşüktür, negatif olması hastalığı ekarte ettirmez); D yanlıştır (Löwenstein-Jensen'de üreme 3-8 hafta sürer); E yanlıştır (PCR %95 üzeri duyarlılıkla saatler içinde tanı koydurur)."
+  },
+  {
+    "id": "prac-spe-011",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 11,
+    "slideTitle": "Genitoüriner Tüberkülozda Radyolojik Görüntüleme Bulguları",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "35 yaşında erkek hastanın kontrastlı üriner sistem görüntülemesinde üst kaliks boynunda fibrotik darlık, kaliks konturlarında papiller erozyona bağlı düzensiz 'güve yeniği' (moth-eaten) görünümü ve orta kaliksin kontrast tutmayarak silindiği ('hayalet kaliks') saptanıyor. Bu radyolojik bulgular öncelikle hangi spesifik enfeksiyonu düşündürmelidir?",
+    "options": [
+      "A) Renal kist hidatik",
+      "B) Böbrek tüberkülozu",
+      "C) Akut amibiyazis",
+      "D) Schistosoma haematobium infestasyonu",
+      "E) Akut non-spesifik sistit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Papiller nekroz ve erozyon sonucu kaliks konturlarında oluşan 'güve yeniği' manzarası, infundibuler striktürler ve kontrast madde geçişinin engellenmesiyle oluşan 'hayalet kaliks' (phantom calyx) renal tüberkülozun klasik ve amfilerde en sık sorgulanan radyolojik bulgularıdır. Kist hidatikte kalsifiye kist duvarı ve kız veziküller görülür; sistitte üst üriner sistem parankimi sağlamdır."
+  },
+  {
+    "id": "prac-spe-012",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 12,
+    "slideTitle": "Genitoüriner Tüberkülozun Medikal ve Cerrahi Tedavi İlkeleri",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Genitoüriner tüberkülozun medikal ve cerrahi tedavi prensipleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Standart kemoterapide ilk 2 ay dörtlü (INH, RIF, PZA, EMB), sonraki 4 ay ikili (INH, RIF) rejim uygulanır",
+      "B) Üreterde belirgin darlık ve hidronefroz riski olan olgularda fibrotik skatrizasyonu azaltmak için rejime kortikosteroid eklenebilir",
+      "C) Cerrahi girişim gerektiren olgularda, canlı basil ekilimini ve fistülizasyonu önlemek için operasyon öncesi en az 3-4 hafta antitüberküloz tedavi verilmelidir",
+      "D) Otonefrektomi gelişmiş böbreklerde hiçbir ilaç tedavisi verilmeden doğrudan acil cerrahi nefrektomi yapılmalıdır",
+      "E) İleri derecede kontrakte mesane (thimble bladder) olgularında mesane kapasitesini artırmak için ogmentasyon sistoplastisi uygulanabilir"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü tüberkülozda preoperatif antitüberküloz tedavi verilmeden doğrudan cerrahi yapılması, yara yerine ve çevre dokulara basil ekilmesine ve tedaviye dirençli fistüllere yol açar; bu nedenle nefrektomi öncesi en az 3-4 hafta medikal tedavi şarttır. A, B, C ve E seçenekleri doğru tedavi ilkeleridir."
+  },
+  {
+    "id": "prac-spe-013",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 13,
+    "slideTitle": "Ürogenital Şistozomiyazis: Schistosoma haematobium Biyolojisi ve Patogenezi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Ürogenital şistozomiyazis ve etkeni Schistosoma haematobium ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) İnsana iyi pişmemiş sığır veya domuz etlerinin tüketilmesiyle kist hidatik şeklinde bulaşır",
+      "B) Erişkin solucanlar münhasıran inferior vena cava içinde serbestçe yüzer ve yumurta bırakmaz",
+      "C) İnsanlara serkaryaların tatlı sularda cildi delmesiyle bulaşır ve erişkin formlar vezikal venöz pleksusa yerleşir",
+      "D) Ara konakçısı karasal kene türleridir ve vektör ısırığıyla lenfatik sisteme aktarılır",
+      "E) Hastalık sadece gastrointestinal kanamalar yapar, üriner sisteme hiçbir etkisi bulunmaz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur: S. haematobium tatlı sularda serbest yüzen serkaryaların sağlam insan derisini delip dolaşıma geçmesiyle bulaşır; erişkin çiftler vezikal venöz pleksusa yerleşerek mesane duvarına yumurtlar. A yanlıştır (etle bulaşan Taenia veya Trichinella'dır); B yanlıştır (venüllere yerleşip binlerce yumurta bırakırlar); D yanlıştır (ara konak tatlı su salyangozu Bulinus'tur); E yanlıştır (üriner sisteme özgü patoloji yapar)."
+  },
+  {
+    "id": "prac-spe-014",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 14,
+    "slideTitle": "Mesane Şistozomiyazisi Patolojisi: Granülomlar, Kumlu Yamalar ve Fibrozis",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Afrika seyahati öyküsü olan bir hastada mikroskopik hematüri nedeniyle yapılan sistoskopide, mesane mukozasında sarı-kahverengi kum serpilmiş hissi veren granüler kabarık alanlar ('sandy patches') ve psödopolipler gözleniyor. Alınan biyopside bol eozinofilli granülomatöz reaksiyon saptanıyor. Bu klinik tablonun en olası nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Schistosoma haematobium enfeksiyonu",
+      "B) Mycobacterium tuberculosis sistiti",
+      "C) İnterstisyel sistit (Hunner ülseri)",
+      "D) Corynebacterium urealyticum enkruste sistiti",
+      "E) Malakoplaki"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Sistoskopide izlenen 'kumlu yamalar' (sandy patches) kalsifiye parazit yumurtalarının oluşturduğu ve Schistosoma haematobium enfeksiyonu için karakteristik olan lezyonlardır. Tüberkülozda kazeöz granülomlar ve tüberküller görülür. İnterstisyel sistitte Hunner lezyonları vardır. Malakoplakide Michaelis-Gutmann cisimcikleri görülür."
+  },
+  {
+    "id": "prac-spe-015",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 15,
+    "slideTitle": "Schistosoma haematobium ve Mesanenin Skuamöz Hücreli Karsinomu İlişkisi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Mısır'ın kırsal bölgesinde çiftçilik yapan 50 yaşındaki erkek hasta masif hematüri ve pelvik ağrı şikayetiyle başvuruyor. Yapılan sistoskopide mesane kubbesinde büyük ekzofitik, ülsere bir kitle saptanıyor ve alınan biyopside keratin incileri içeren invaziv karsinom tanısı konuyor. Bu hastada malignite gelişimine zemin hazırlayan paraziter etken ve gelişen kanserin en olası histopatolojik tipi aşağıdakilerden hangisinde doğru verilmiştir?",
+    "options": [
+      "A) Schistosoma mansoni — Adenokarsinom",
+      "B) Schistosoma haematobium — Skuamöz hücreli karsinom",
+      "C) Echinococcus granulosus — Transizyonel hücreli karsinom",
+      "D) Wuchereria bancrofti — Renal hücreli karsinom",
+      "E) Enterobius vermicularis — Küçük hücreli nöroendokrin karsinom"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Nil havzasında tatlı su teması olan hastalarda mesane karsinomunun en önemli paraziter etkeni Schistosoma haematobium'dur ve oluşturduğu kronik irritasyon/skuamöz metaplazi zemininde en sık 'Skuamöz Hücreli Karsinom' (SCC - keratin incileri içeren) gelişir. S. mansoni bağırsak tutulumu yapar. E. granulosus kist hidatik etkenidir."
+  },
+  {
+    "id": "prac-spe-016",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 16,
+    "slideTitle": "Üriner Şistozomiyazisin Klinik Tablosu, Tanı ve Tedavisi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Schistosoma haematobium infestasyonunun klinik bulguları, mikrobiyolojik tanısı ve tedavisi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) En tipik klinik prezantasyon miksiyonun son damlalarında belirginleşen 'terminal hematüri'dir",
+      "B) İdrar mikroskopisinde saptanan yumurtalar karakteristik olarak uçtan (terminal) dikenlidir",
+      "C) Yumurta atılımı öğle saatlerinde (10:00-14:00 arası) pik yaptığı için idrar örneği bu zaman diliminde toplanmalıdır",
+      "D) Medikal tedavisinde erişkin parazitleri felç eden Prazikuantel ilk seçenek ilaçtır",
+      "E) Yumurtaları lateral (yandan) dikenli olup idrarda hiçbir zaman mikroskopik olarak gösterilemez"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü Schistosoma haematobium yumurtaları lateral değil 'terminal (uçtan)' dikenlidir (lateral dikenli olan S. mansoni'dir) ve idrar santrifüj sedimentinde direkt bakı ile kolaylıkla gösterilebilir. A, B, C ve D seçenekleri S. haematobium'un doğru klinik, tanısal ve terapötik özellikleridir."
+  },
+  {
+    "id": "prac-spe-017",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 17,
+    "slideTitle": "Üriner Sistem Fungal Enfeksiyonları: Etiyoloji ve Risk Faktörleri",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Hastanede yatan bir hastada Candida türlerine bağlı üriner sistem enfeksiyonu gelişimi için aşağıdakilerden hangisi doğrudan bir risk faktörü DEĞİLDİR?",
+    "options": [
+      "A) Uzun süreli kalıcı foley kateterizasyon varlığı",
+      "B) Geniş spektrumlu antibiyotik kullanımı",
+      "C) Kontrolsüz diabetes mellitus ve glikozüri",
+      "D) İmmünsüpresif veya kemoterapötik ajan kullanımı",
+      "E) Genç yaşta spor yapma ve düzenli egzersiz alışkanlığı"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü genç yaş ve düzenli egzersiz fırsatçı fungal enfeksiyonlar için bir risk faktörü değildir. Fungal İYE'ler fırsatçı patojenlerle gelişir ve kalıcı foley kateter (A), geniş spektrumlu antibiyotiklerle floranın baskılanması (B), diyabetik glikozüri (C) ve immünsüpresyon (D) majör predispozan zeminlerdir."
+  },
+  {
+    "id": "prac-spe-018",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 18,
+    "slideTitle": "Fungal İYE Klinik Formları: Asemptomatik Kandidüri, Sistit ve Asendan Piyelonefrit",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Yoğun bakım ünitesinde yatmakta olan 68 yaşındaki bilinci kapalı, foley kateterli bir hastanın idrar kültüründe 50.000 CFU/mL Candida albicans ürüyor. Hastanın ateşi, lökositozu veya hemodinamik instabilitesi bulunmuyor. Bu aşamada yapılması gereken en uygun klinik yaklaşım aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Derhal yüksek doz intravenöz Amfoterisin B başlanması",
+      "B) İntravezikal sürekli flukonazol irrigasyonu uygulanması",
+      "C) Mevcut foley kateterin çekilmesi veya yenisiyle değiştirilerek klinik takip yapılması",
+      "D) Acil bilateral perkütan nefrostomi takılması",
+      "E) Geniş spektrumlu antibiyotik kombinasyonunun iki katına çıkarılması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Asemptomatik kandidürili, kateterize stabil hastalarda sistemik antifungal ilaç başlanması önerilmez; ilk ve en etkili adım kolonize olan foley kateterin çekilmesi veya değiştirilmesidir. Olguların yarısından fazlasında kandidüri kateter değişimiyle spontan temizlenir. Sistemik amfoterisin veya flukonazol ancak hasta semptomatikse, nötropenikse veya invaziv ürolojik girişim planlanıyorsa endikedir."
+  },
+  {
+    "id": "prac-spe-019",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 19,
+    "slideTitle": "Obstrüktif Fungal Nefropati: Mantar Topu (Fungus Ball / Bezoar) Patolojisi ve Yönetimi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Kontrolsüz diyabeti olan 55 yaşındaki kadın hasta ani gelişen yan ağrısı, yüksek ateş ve 24 saattir hiç idrar çıkaramama (anüri) şikayetiyle acil servise getiriliyor. Çekilen kontrastlı BT'de soliter olan sağ böbrek toplayıcı sisteminde üreteropelvik bileşkeyi tıkayan, kontrast tutmayan ve radyoopak olmayan yumuşak doku kitlesi (fungus ball) ve masif hidronefroz izleniyor. İdrar mikroskopisinde bol psödohif görülüyor. Bu hastanın acil yönetiminde aşağıdakilerden hangisi EN UYGUNDUR?",
+    "options": [
+      "A) Hastaya sadece oral flukonazol reçete edilerek ayaktan poliklinik takibine alınması",
+      "B) Acil perkütan nefrostomi takılarak obstrüksiyonun dekomprese edilmesi, mekanik temizlik ve lokal Amfoterisin B irrigasyonu planlanması",
+      "C) Acil radikal nefrektomi ile sağ böbreğin tamamen çıkarılması",
+      "D) Hastaya acil hemodiyaliz uygulanıp başka hiçbir ürolojik girişim yapılmaması",
+      "E) İdrar söktürücü yüksek doz furosemid infüzyonu başlanması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Obstrüktif fungal nefropati ve mantar topu (fungus ball) varlığında acil ürolojik girişim zorunludur. Tıkanıklık soliter böbrekte anüriye yol açmıştır; ilk yapılması gereken acil perkütan nefrostomi ile böbreği dekomprese etmek, kitleyi mekanik olarak temizlemek ve nefrostomi kateterinden lokal Amfoterisin B irrigasyonu ile sistemik antifungal tedaviyi kombine etmektir. Soliter böbreğin nefrektomisi (C) kabul edilemez bir hatadır."
+  },
+  {
+    "id": "prac-spe-020",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 20,
+    "slideTitle": "Üriner Sistemin Viral Enfeksiyonları: BK Virüs Nefropatisi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek nakli yapılan ve takrolimus + mikofenolat mofetil kullanan bir hastada postoperatif 6. ayda serum kreatinin değerinde açıklanamayan artış saptanıyor. Yapılan idrar sitolojisinde nükleusları ileri derecede büyümüş, nükleer kromatini buzlu cam görünümünde homojen inklüzyonla dolmuş tübül epitel hücreleri ('Decoy hücreleri') tespit ediliyor. Bu hasta için en olası tanı ve yapılması gereken temel yaklaşım aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut hücresel rejeksiyon — Yüksek doz pulse steroid tedavisi verilmesi",
+      "B) BK virüs nefropatisi — İmmünsüpresif ilaç dozlarının kademeli olarak azaltılması",
+      "C) Candida piyelonefriti — İntravenöz flukonazol başlanması",
+      "D) Sitomegalovirüs glomerüliti — Gansiklovir tedavisi ve takrolimusun artırılması",
+      "E) Akut tübüler nekroz — Sıvı kısıtlaması ve acil diyaliz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Böbrek nakli alıcılarında idrar sitolojisinde görülen 'Decoy hücreleri' (tuzak hücreler) BK virüs enfeksiyonunun karakteristik sitolojik belirtecidir. BK virüs ilişkili nefropatide (BKVAN) altta yatan neden aşırı immünsüpresyon olduğundan, temel tedavi yaklaşımı immünsüpresif rejimlerin (özellikle mikofenolat mofetil ve kalsinörin inhibitörleri) dozunun azaltılmasıdır. Rejeksiyon zannedilip pulse steroid verilmesi (A) virüs çoğalmasını hızlandırarak greft kaybına yol açar."
+  },
+  {
+    "id": "prac-spe-021",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 21,
+    "slideTitle": "Viral Hemorajik Sistit: Adenovirüs ve BK Virüs Tabloları",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Allogeneik kemik iliği nakli yapılan 22 yaşındaki lösemi hastasında naklin 25. gününde ani başlangıçlı şiddetli dizüri, suprapubik kramplar ve masif pıhtılı hematüri gelişiyor. İdrar kültüründe bakteri ve mantar üremeyen hastanın idrar PCR analizinde viral etken saptanıyor. Bu hastada hemorajik sistite yol açan en olası viral patojen çifti aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Adenovirüs ve BK virüs",
+      "B) Hepatit B virüsü ve Kuduz virüsü",
+      "C) İnfluenza A ve Rinovirüs",
+      "D) Rotavirüs ve Norovirüs",
+      "E) Kabakulak virüsü ve Poliovirüs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Kemik iliği ve kök hücre nakli alıcılarında gelişen viral hemorajik sistitin en yaygın etkenleri Adenovirüs (özellikle serotip 11) ve BK Polyomavirüs'tür. Bu virüsler ürotelyal litik nekroz ve mikrovasküler hasar yaparak pıhtılı masif hematüriye yol açar. Diğer şıklardaki virüsler üriner sistemde hemorajik sistit tablosuna neden olmaz."
+  },
+  {
+    "id": "prac-spe-022",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 22,
+    "slideTitle": "Üriner Sistemin Nadir Paraziter ve Protozoal Enfeksiyonları: Amebiyazis ve Trikomoniyazis",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Entamoeba histolytica ve Trichomonas vaginalis'in üriner sistem tutulumları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Renal amebiyazis sıklıkla karaciğer amip apsesinin doğrudan komşulukla sağ böbreğe yayılması sonucu gelişebilir",
+      "B) Amebik kolit mesane duvarına fistülize olduğunda hastada pnömatüri (idrardan hava gelmesi) ve fekalüri görülebilir",
+      "C) Trichomonas vaginalis cinsel yolla bulaşarak erkeklerde inatçı üretrit ve kronik prostatit tablolarına yol açabilir",
+      "D) Her iki protozoonun tedavisinde DNA replikasyonunu bozan Metronidazol etkin bir tedavidir",
+      "E) Trichomonas vaginalis bir helmint olup yumurtaları terminal diken içerir ve prazikuantel ile tedavi edilir"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü Trichomonas vaginalis bir helmint (solucan) değil kamçılı bir protozoondur, yumurta bırakmaz (trofozoit formu vardır) ve tedavisi prazikuantel değil metronidazoldür. Terminal dikenli yumurta Schistosoma haematobium'a aittir. A, B, C ve D seçenekleri amebiyazis ve trikomoniyazisin doğru klinik ve farmakolojik özellikleridir."
+  },
+  {
+    "id": "prac-spe-023",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 23,
+    "slideTitle": "Renal ve Pelvik Aktinomikoz: Actinomyces israelii Enfeksiyonu",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "46 yaşında kadın hasta, sol yan ağrısı ve sol lomber bölgede deriden dışarıya cerahatli akıntı şikayetiyle başvuruyor. Çekilen kontrastlı batın BT'sinde sol böbrek alt polünden kaynaklanan, retroperitoneal fasyaları aşarak psoas kasına ve cilt altına invaze olan 'tahta sertliğinde' solid bir kitle ve cilt fistülü izleniyor. Fistül akıntısından yapılan mikroskobik incelemede sarı renkli 'kükürt granülleri' (sulfur granules) ve Gram-pozitif dallanan filamentöz bakteriler saptanıyor. Bu hasta için en olası tanı ve ilk tercih edilecek tedavi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Renal hücreli karsinom — Radikal nefrektomi",
+      "B) Renal aktinomikoz — Uzun süreli yüksek doz Penisilin tedavisi",
+      "C) Renal kist hidatik — Cerrahi kistektomi ve albendazol",
+      "D) Böbrek tüberkülozu — 6 aylık dörtlü antitüberküloz rejim",
+      "E) Fungal mantar topu — Nefrostomiden amfoterisin B irrigasyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Fasyaları aşan tahta sertliğinde psödotümöral kitle, cilde açılan fistül ve cerahatte patognomonik sarı 'kükürt granülleri' (sulfur granules) varlığında Gram-pozitif dallanan filamentöz bakteri gösterilmesi Actinomyces israelii enfeksiyonunu (aktinomikoz) kanıtlar. Bu lezyon klinik ve radyolojik olarak maligniteyi mükemmel taklit eder. Aktinomikozun tedavisi cerrahi nefrektomi değil, aylar süren yüksek doz Penisilin tedavisidir."
+  },
+  {
+    "id": "prac-spe-024",
+    "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+    "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları (Tüberküloz, Şistozomiyazis, Fungal ve Viral İYE)",
+    "slideNumber": 24,
+    "slideTitle": "Renal Kist Hidatik (Echinococcus granulosus) ve Spesifik Enfeksiyonların Ayırıcı Tanı Özeti",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Kırsal kesimde hayvancılıkla uğraşan 40 yaşındaki erkek hasta, şiddetli sağ renal kolik ağrısı ve idrar yaparken 'üzüm kabuğu veya şeffaf jelatinimsi küçük torbacıklar' düşürdüğünü ifade ediyor. İdrar çıkışı sırasında derisinde yaygın ürtiker, hipotansiyon ve bronkospazm gelişen hastanın ultrasonografisinde sağ böbrekte toplayıcı sistemle bağlantılı kistik bir lezyon saptanıyor. Bu hasta için en olası tanı ve tanımlanan patognomonik idrar bulgusu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Renal kist hidatik — Hidatüri",
+      "B) Genitoüriner tüberküloz — Steril piyüri",
+      "C) Schistosoma haematobium — Terminal hematüri",
+      "D) Obstrüktif fungal nefropati — Fungus ball",
+      "E) Renal aktinomikoz — Kükürt granülleri"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Renal kist hidatiğin (Echinococcus granulosus) toplayıcı sisteme rüptüre olmasıyla hastanın idrarında hidatik kist zarlarını ve kız vezikülleri düşürmesi tablosu 'hidatüri' olarak adlandırılır ve patognomoniktir. Kist içeriğinin toplayıcı sistemden sistemik emilimi anaflaktik reaksiyona (ürtiker, bronkospazm, hipotansiyon) yol açmıştır. B, C, D ve E seçenekleri diğer spesifik enfeksiyonların karakteristik bulgularıdır fakat hidatüri ve paraziter anafilaksi tablosunu açıklamaz."
+  },
+  {
+    "id": "prac-k1m-001",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 1,
+    "slideTitle": "Dönem 3 Kurul 1 Makro Mimarisi: Kurulun Felsefesi, Anabilim Dalı Dağılımları ve Soru Ağırlıkları",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Dönem 3 Kurul 1 (Ürogenital ve Obstetrik Kurulu) müfredat yapısı ve sınav soru dağılımı ile ilgili aşağıdaki değerlendirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Kurulda en yüksek ders saatine ve soru ağırlığına sahip anabilim dalı Tıbbi Patoloji'dir (%34.4).",
+      "B) Enfeksiyon Hastalıkları ders saati Patoloji'den daha fazla olup kurulun salt çoğunluğunu oluşturur.",
+      "C) Tıbbi Farmakoloji 12 saatlik ders hacmiyle sınavın üçüncü büyük belirleyici branşıdır.",
+      "D) Baraj kuralı sadece 10 saatin üzerindeki anabilim dalları için geçerli olduğundan 2 saatlik dersler etkisizdir.",
+      "E) Kadın Hastalıkları ve Doğum anabilim dalı 20 ders saati ile cerrahi branşların liderliğini yürütür."
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Kurul 1'de Tıbbi Patoloji 33 saatlik hacmiyle toplam 96 saatin %34.4'ünü oluşturarak açık ara en yüksek ders ve soru sayısına sahiptir. B yanlıştır; Enfeksiyon 22 saattir ve Patoloji'den (33 saat) azdır. C yanlıştır; Farmakoloji bu kurulda sadece 2 saattir. D yanlıştır; tıp fakültelerinde baraj kuralı ders saati gözetilmeksizin tüm anabilim dallarında geçerlidir. E yanlıştır; Kadın Hastalıkları ve Doğum bu kurulda 4 ders saatidir."
+  },
+  {
+    "id": "prac-k1m-002",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 2,
+    "slideTitle": "Komite Sınavı Anatomisi ve Klinik Vaka Sorusu Çözme Metodolojisi",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Dönem 3 komite sınavında klinik vaka sorusu çözen bir tıp öğrencisinin izlemesi gereken en rasyonel strateji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Önce uzun vaka metninin tüm detaylarını ezberleyip ardından soru köküne geçmek",
+      "B) Önce soru kökünü okuyup neyin arandığını saptamak, ardından metindeki patognomonik morfolojik anahtar kelimeleri filtrelemek",
+      "C) Yaş ve cinsiyet gibi demografik verileri önemsiz kabul ederek doğrudan şıkları okumak",
+      "D) 'Hangisi yanlıştır' şeklindeki olumsuz soru köklerinde ilk doğru görünen seçeneği işaretlemek",
+      "E) Kararsız kalınan vaka sorularında klinik bulgu yerine sadece paraklinik grafiğe odaklanıp diğer verileri dışlamak"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği en rasyonel sınav stratejisidir; önce soru kökü okunarak zihin hedefe odaklanır, ardından metindeki hasta yaşı, cinsiyeti ve mikroskopik patognomonik lezyonlar (örneğin kazeifikasyon, silindirler, kresentler) taranarak seçenekler hızla elenir. A gereksiz zaman kaybettirir, C yanlıştır çünkü demografi tanının en büyük belirtecidir, D sınav tuzaklarının ana kaynağıdır, E ise verileri izole ederek hata payını artırır."
+  },
+  {
+    "id": "prac-k1m-003",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 3,
+    "slideTitle": "Temel Patolojiye Giriş ve Hücresel Adaptasyonlar",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Kronik kontrolsüz sistemik hipertansiyonu olan 62 yaşındaki bir erkek hastanın ekokardiyografisinde sol ventrikül duvar kalınlığının belirgin arttığı ve konsantrik bir kitle artışı olduğu saptanıyor. Bu hastanın miyokard dokusundaki hücresel yanıt aşağıdakilerden hangisiyle en doğru şekilde açıklanır?",
+    "options": [
+      "A) Miyositlerin hücre siklusuna girerek sayılarının artması (Patolojik hiperplazi)",
+      "B) Çizgili kas liflerinin bölünme yeteneği olmadığından protein sentezi ve organel artışıyla boyutlarının büyümesi (Patolojik hipertrofi)",
+      "C) Miyokard dokusunun mekanik basınca dayanıklı fibröz dokuya dönüşmesi (Konnektif doku metaplazisi)",
+      "D) Miyositlerin otofaji ve proteazom aktivasyonu ile hacim kaybetmesi (Patolojik atrofi)",
+      "E) İnterstisyel kök hücrelerin transforme olarak yeni myokard lifleri oluşturması (Fizyolojik rejenerasyon)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; kardiyak miyositler kalıcı (permanent) hücrelerdir ve mitoz bölünme yetenekleri yoktur. Basınç yükü altında hücre sayısını artıramazlar (hiperplazi yapamazlar); sadece gen ekspresyonunu değiştirerek protein sentezini, miyofilament miktarını artırır ve hücre hacmini büyütürler (hipertrofi). A seçeneğindeki hiperplazi kalpte imkansızdır. C, D ve E seçenekleri bu patolojiyi açıklamaz."
+  },
+  {
+    "id": "prac-k1m-004",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 4,
+    "slideTitle": "Geri Dönüşlü ve Dönüşsüz Hücre Hasarı Mekanizmaları",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "İskemik doku hasarında geri dönüşlü (reversible) hasar evresinden geri dönüşsüz (irreversible) hücre ölümüne geçişi belirleyen en kritik moleküler ve yapısal değişiklik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hücre içi laktik asit birikimi ve sitoplazmik pH düşüşü",
+      "B) Endoplazmik retikulum membranının şişmesi ve ribozomların ayrılması",
+      "C) Kalıcı mitokondriyal disfonksiyon ve plazma membran bütünlüğünün masif kaybı",
+      "D) Hücre içi glikojen depolarının tükenmesi ve anaerobik glikoliz aktivasyonu",
+      "E) Na+/K+ ATPaz pompasının yavaşlaması sonucu hafif hücresel şişme gelişimi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; hücre hasarında 'geri dönüşsüzlük sınırı' (point of no return) iki temel olguyla tanımlanır: mitokondrinin kalıcı olarak ATP üretememesi (geçirgenlik geçiş gözeneği açılması) ve plazma membran bütünlüğünün geri dönüşsüz kaybıdır. A, B, D ve E seçeneklerinde sayılan değişiklikler (hücresel şişme, ribozom ayrılması, glikojen kaybı, asidoz) geri dönüşlü hasar evresinde görülür ve reperfüzyonla düzelebilir."
+  },
+  {
+    "id": "prac-k1m-005",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 5,
+    "slideTitle": "Nekroz Morfolojisi ve Tipleri",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki klinik durum ve o durumda gelişmesi beklenen karakteristik nekroz tipi eşleştirmelerinden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Akut miyokard enfarktüsü — Koagülasyon nekrozu",
+      "B) Serebral arter oklüzyonuna bağlı iskemik inme — Likefaksiyon nekrozu",
+      "C) Pulmoner tüberküloz kavitesi — Kazeifikasyon nekrozu",
+      "D) Akut pankreatite bağlı peripankreatik doku hasarı — Yağ nekrozu",
+      "E) Poliarteritis nodoza (PAN) vaskülit lezyonu — Koagülasyon nekrozu"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneğindeki eşleştirme yanlıştır; Poliarteritis nodoza (PAN) gibi sistemik nekrotizan vaskülitlerde ve malign hipertansiyonda damar duvarında izlenen nekroz tipi Koagülasyon nekrozu değil, immün kompleksler ve fibrin sızıntısıyla karakterize FİBRİNOİD NEKROZ'dur. A, B, C ve D seçeneklerindeki eşleştirmeler tamamen doğrudur."
+  },
+  {
+    "id": "prac-k1m-006",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 6,
+    "slideTitle": "Apoptoz Moleküler Yolağı ve Hücre İçi Birikimler",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Apoptozun intrinsik (mitokondriyal) yolağında mitokondri dış membran geçirgenliğinin artması sonucu sitoplazmaya salınarak Apaf-1 adaptör proteini ile birleşip apoptozomu oluşturan ve Kaspaz-9'u aktive eden molekül aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitokrom c",
+      "B) Fas Ligand (CD95L)",
+      "C) Tümör Nekrozis Faktör (TNF)",
+      "D) Perforin",
+      "E) Granzim B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; intrinsik (mitokondriyal) apoptotik yolakta Bax ve Bak oligomerleşerek mitokondri membranından sitoplazmaya Sitokrom c salınımını tetikler. Sitokrom c sitoplazmada Apaf-1 (Apoptotic protease activating factor-1) ile birleşerek apoptozom kompleksini kurar ve prokaspaz-9'u keserek aktif Kaspaz-9 haline getirir. B ve C ekstrinsik yolak ligandlarıdır. D ve E ise sitotoksik T ve NK hücrelerinin hücre öldürme mediyatörleridir."
+  },
+  {
+    "id": "prac-k1m-007",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 7,
+    "slideTitle": "Akut Enflamasyon Patofizyolojisi: Vasküler Değişiklikler ve Hücresel Olaylar",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Akut bakteriyel pnömoni gelişen bir hastada nötrofillerin damar endotelinden damar dışı interstisyel alana göçü (transmigrasyon / diyapedez) sırasında hem lökosit hem de endotel hücre yüzeyinde eksprese edilerek bu geçişi sağlayan adezyon molekülü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) L-selektin",
+      "B) E-selektin",
+      "C) PECAM-1 (CD31)",
+      "D) İntegrin alfa-4 beta-1 (VLA-4)",
+      "E) Sialil-Lewis X"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; nötrofil ve monositlerin interendotelyal kavşaklardan transmigrasyonunda (diyapedez) hücreler arası geçişi sağlayan temel molekül PECAM-1'dir (Platelet Endothelial Cell Adhesion Molecule-1 / CD31). L-selektin ve Sialil-Lewis X yuvarlanma (rolling) aşamasında, integrinler (VLA-4, LFA-1) ise sıkı adezyon aşamasında görev alır."
+  },
+  {
+    "id": "prac-k1m-008",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 8,
+    "slideTitle": "Enflamasyonun Kimyasal Mediyatörleri",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Akut enflamasyon sürecinde nötrofiller için en güçlü kemotaktik uyarıyı oluşturan, lökositlerin aktivasyonunu sağlayan ve lipoksijenaz (5-LOX) yolağında sentezlenen araşidonik asit metaboliti aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Prostasiklin (PGI2)",
+      "B) Tromboksan A2 (TXA2)",
+      "C) Lökotrien B4 (LTB4)",
+      "D) Lökotrien C4 (LTC4)",
+      "E) Prostaglandin E2 (PGE2)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; Lökotrien B4 (LTB4), 5-lipoksijenaz yolağında üretilen ve nötrofiller için olağanüstü güçlü bir kemotaktik faktör olan araşidonik asit metabolitidir. PGI2 vazodilatasyon yapar; TXA2 trombosit agregasyonu yapar; LTC4 bronkokonstriksiyon ve permeabilite artışı yapar; PGE2 ise ateş ve ağrı reseptör duyarlılaşması yapar."
+  },
+  {
+    "id": "prac-k1m-009",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 9,
+    "slideTitle": "Kronik ve Granülomatöz Enflamasyon",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Granülomatöz enflamasyon patogenezinde, antijen sunan hücrelerle etkileşime giren CD4+ T helper-1 (Th1) lenfositlerin salgıladığı, doku makrofajlarını aktive ederek onları geniş eozinofilik sitoplazmalı 'epitelioid histiositlere' dönüştüren majör sitokin aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İnterlökin-4 (IL-4)",
+      "B) İnterferon-gama (IFN-γ)",
+      "C) İnterlökin-10 (IL-10)",
+      "D) Transforming Growth Factor-beta (TGF-β)",
+      "E) İnterlökin-5 (IL-5)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; Th1 lenfositlerden salınan İnterferon-gama (IFN-γ), monosit ve makrofajları aktive ederek klasik M1 yolağına sokan ve onları granülomun temel yapıtaşı olan 'epitelioid histiositlere' dönüştüren temel sitokindir. IL-4 ve IL-13 alternatif (M2) yolağı uyarır; IL-10 ve TGF-β immünsüpresif ve doku onarıcı sitokinlerdir; IL-5 ise eozinofil aktivatörüdür."
+  },
+  {
+    "id": "prac-k1m-010",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 10,
+    "slideTitle": "Doku Onarımı, Rejenerasyon ve Yara İyileşmesi",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Yara iyileşmesi sürecinde fibroblastların kemotaksisini sağlayan, kollajen ve fibronektin sentezini stimüle eden ve doku fibrozisinde en kritik profibrotik büyüme faktörü kabul edilen sitokin aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Epidermal Growth Factor (EGF)",
+      "B) Transforming Growth Factor-beta (TGF-β)",
+      "C) Vascular Endothelial Growth Factor (VEGF)",
+      "D) Tümör Nekrozis Faktör-alfa (TNF-α)",
+      "E) İnterlökin-2 (IL-2)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; TGF-β (Transforming Growth Factor-beta), doku onarımında ve patolojik fibrozis gelişiminde fibroblastları uyararak kollajen sentezini artıran, matriks metalloproteinazlarını (MMP) baskılayarak kollajen yıkımını engelleyen en güçlü profibrotik büyüme faktörüdür. VEGF anjiyogenezi uyarır; EGF epitelyal proliferasyonu tetikler."
+  },
+  {
+    "id": "prac-k1m-011",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 11,
+    "slideTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Kronik konjestif sağ kalp yetmezliği olan bir hastanın otopsisinde karaciğer kesitinde santral ven çevresindeki hepatositlerde konjesyon ve nekroz, portal alan çevresinde ise soluk sarı yağlı dejenerasyon alanlarının alacalı bir manzara oluşturduğu saptanıyor. Bu karakteristik makroskopik patolojik tablo aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Porselen safra kesesi",
+      "B) Muskat cevizi karaciğeri (Nutmeg liver)",
+      "C) Karaciğer kist hidatiği",
+      "D) Budd-Chiari sendromu trombüsü",
+      "E) Fokal nodüler hiperplazi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; kronik pasif karaciğer konjesyonunda (özellikle sağ kalp yetmezliğinde) santral ven ve sinüzoidlerde venöz göllenme, hipoksi ve nekroz gelişirken çevre hepatositler yağlanır. Bu durum makroskopik kesitte muskat cevizinin iç desenine benzeyen koyu kırmızı ve açık sarı alacalı 'muskat cevizi karaciğeri' (nutmeg liver) görünümünü oluşturur."
+  },
+  {
+    "id": "prac-k1m-012",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 12,
+    "slideTitle": "Tromboz, Emboli ve Enfarktüs Patofizyolojisi",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Motosiklet kazası geçiren 24 yaşındaki bir erkek hastada bilateral femur şaft kırığı saptanıyor. Ortopedik cerrahi stabilizasyondan 36 saat sonra hastada ani başlayan taşipne, dispne, ajitasyon, oryantasyon bozukluğu ve boyun ile aksiller bölgede basmakla solmayan peteşiyel döküntüler gelişiyor. Bu klinik tablo için en olası patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Alt ekstremite DVT'sine bağlı masif pulmoner tromboemboli",
+      "B) Kemik iliği kaynaklı Yağ Embolisi Sendromu",
+      "C) Vena kava rüptürüne bağlı hipovolemik şok",
+      "D) Klostridyal miyonöroza bağlı septik emboli",
+      "E) Dekompresyon hastalığına bağlı gaz embolisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; uzun kemik kırıkları (özellikle femur ve pelvis) sonrasında kemik iliğindeki yağ globüllerinin rüptüre venlere sızmasıyla 24-72 saat içinde Yağ Embolisi Sendromu tablosu gelişir. Klasik klinik triadı: 1) Solunum sıkıntısı (dispne, hipoksemi), 2) Nörolojik semptomlar (ajitasyon, konfüzyon, koma) ve 3) Ciltte trombositopeniye bağlı peteşiyel döküntülerdir (özellikle boyun, aksilla ve konjonktivada). Tromboembolide peteşiyel döküntü beklenmez."
+  },
+  {
+    "id": "prac-k1m-013",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 13,
+    "slideTitle": "Neoplaziye Giriş ve Terminoloji",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki tümör terminolojisi eşleştirmelerinden hangisi, son ekine rağmen biyolojik davranışı açısından kesinlikle MALİGN bir neoplaziyi temsil eder?",
+    "options": [
+      "A) Leiomyom",
+      "B) Fibroadenom",
+      "C) Seminom",
+      "D) Rhabdomyom",
+      "E) Hemanjiom"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; Seminom, testis germ hücrelerinden köken alan ve son eki '-om' ile bitmesine rağmen %100 malign olan bir neoplazidir. Leiomyom düz kasın, fibroadenom memenin, rhabdomyom çizgili kasın, hemanjiom ise damarların benign tümörleridir."
+  },
+  {
+    "id": "prac-k1m-014",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 14,
+    "slideTitle": "Karsinogenezin Moleküler Temelleri, Onkogenler ve Tümör Evrelemesi",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Hücre siklusunun G1/S kontrol noktasında nöbetçi görev yapan, normalde hipofosforile formda bulunarak E2F transkripsiyon faktörünü inaktif tutan, ancak Siklin D / CDK4 kompleksi tarafından fosforillendiğinde E2F'yi serbest bırakarak DNA replikasyonuna izin veren tümör baskılayıcı protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) TP53",
+      "B) Retinoblastom (RB) proteini",
+      "C) BRCA1",
+      "D) APC proteini",
+      "E) PTEN"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; Retinoblastom (RB) geni ürünü olan pRB proteini, hipofosforile iken E2F transkripsiyon faktörüne bağlanarak hücrenin S fazına geçişini engeller. Siklin D-CDK4 tarafından hiperfosforillendiğinde E2F serbest kalır ve siklus ilerler. TP53 ise p21 aracılığıyla CDK'ları inhibe eder."
+  },
+  {
+    "id": "prac-k1m-015",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 15,
+    "slideTitle": "Renal Glomerülopatiler: Nefrotik ve Nefritik Sendrom Patofizyolojisi",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Geçirdiği streptokoksik farenjitten 2 hafta sonra idrar renginde çay rengi koyulaşma, oligüri, yüzde ödem ve hipertansiyon şikayetleriyle başvuran 9 yaşındaki bir erkek çocuğun yapılan böbrek biyopsisinde immünfloresan mikroskopide granüler 'yıldızlı gökyüzü' tarzında IgG ve C3 birikimi saptanıyor. Bu hastanın elektron mikroskopi incelemesinde aşağıdaki bulgulardan hangisinin görülmesi beklenir?",
+    "options": [
+      "A) Podosit ayaksı çıkıntılarında izole silinme dışında hiçbir birikimin olmaması",
+      "B) Subepitelyal yerleşimli hörgüç benzeri (humps) elektron-yoğun birikimler",
+      "C) Glomerüler bazal membran boyunca düzgün kesintisiz lineer IgG depolanması",
+      "D) Mezanjiyumda yaygın amiloid fibril birikimleri",
+      "E) Bazal membran içinde 'diken ve kubbe' (spike and dome) şeklinde gümüşleşme"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; vaka klasik bir Akut Poststreptokoksik Glomerülonefrit (APSGN) tablosudur. APSGN'nin elektron mikroskobundaki karakteristik patognomonik bulgusu epitel hücreleri ile bazal membran arasında kubbeleşen subepitelyal elektron-yoğun hörgüçlerdir (subepithelial humps). A Minimal değişiklik, C Goodpasture (Anti-GBM), E Membranöz nefropati bulgularıdır."
+  },
+  {
+    "id": "prac-k1m-016",
+    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
+    "slideNumber": 16,
+    "slideTitle": "Renal Tübülointerstisyel ve Vasküler Patolojiler",
+    "discipline": "Kurul Koordinatörlüğü",
+    "committee": "Kurul 1",
+    "question": "Pnömoni tedavisi amacıyla ampisilin başlanan 48 yaşındaki bir kadın hastada tedavinin 10. gününde ateş, gövdede eritematöz makülopapüler döküntü, serum kreatinin düzeyinde ani yükselme ve periferik kanda belirgin eozinofili saptanıyor. İdrar tetkikinde lökosit silendirleri ve Hansel boyaması ile eozinofilüri tespit ediliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut poststreptokoksik glomerülonefrit",
+      "B) İlaca bağlı akut alerjik interstisyel nefrit",
+      "C) İskemik akut tübüler nekroz",
+      "D) Üropatojen E. coli'ye bağlı akut piyelonefrit",
+      "E) Fokal segmental glomerüloskleroz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; antibiyotik (özellikle sentetik penisilinler, sefalosporinler) veya NSAİİ kullanımı sonrası gelişen ateş, döküntü, akut böbrek yetmezliği, periferik eozinofili ve idrarda eozinofilüri tablosu ilaca bağlı akut alerjik interstisyel nefrit için klasiktir. İlaç kesildiğinde renal fonksiyonlar hızla toparlar."
+  },
+  {
     "id": "prac-k1m-017",
     "deckId": "learn-donem3-kurul1-mufredat-rehberi",
     "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",

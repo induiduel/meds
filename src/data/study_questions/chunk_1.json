@@ -2170,862 +2170,650 @@
     "explanation": "Tekrarlayan İYE ikiye ayrılır: 1) Reenfeksiyon: Tedavi bitiminden >2 hafta sonra genellikle FARKLI bir bakteriyle (veya aynı bakterinin farklı suşuyla) dış ortamdan/bağırsaktan yeniden bulaşma sonucu gelişir (tekrarlayan olguların %80-90'ı böyledir). 2) Relaps (Bakteriyel persistans): Tedavi bitiminden sonraki İLK 2 HAFTA İÇİNDE, AYNI bakteriyle nükseder; böbrek taşı, kaval enfekte odak, prostatit veya yetersiz tedavi süresine bağlıdır."
   },
   {
-    "id": "d3-k1-pat-005",
+    "id": "prac-odem-001",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 1,
-    "slideTitle": "Hemodinamik Denge ve Sıvı Değişimi Temelleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "slideTitle": "Hemodinamik Denge ve Sıvı Homeostazına Giriş: Dolaşım Sisteminin Temel Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Dolaşım sisteminde hücresel perfüzyonun ve mikrosirkülasyon düzeyindeki sıvı dengesinin fizyolojik sürdürülmesi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Sağlıklı dokularda interstisyum, gaz difüzyonunu kolaylaştırmak amacıyla kuruya yakın ve jel kıvamında tutulur.",
+      "B) Kapiller yataktan interstisyuma net sıvı geçişi normalde sıfırdır ve hiçbir koşulda lenfatik drenaja ihtiyaç duyulmaz.",
+      "C) Plazma proteinlerinin oluşturduğu onkotik basınç, sıvının damar lümeni içerisinde tutulmasını sağlayan ana kuvvettir.",
+      "D) Prekapiller arteriyollerin aktif genişlemesi dokuda oksijenlenmiş kan miktarını artırarak hiperemiye neden olur.",
+      "E) Dokudan venöz kanın boşalmasının mekanik olarak engellenmesi deoksijene kanın birikimiyle seyreden konjesyona yol açar."
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin (%10 tamponlanmış formaldehit), doku proteinlerini çapraz bağlayarak otolizi ve bakteriyel bozulmayı önlediği, ucuz ve dokuya iyi nüfuz ettiği için rutin histopatolojik incelemede en yaygın kullanılan tespit sıvısıdır. Ksilen doku saydamlaştırma (clearing) aşamasında, parafin gömme aşamasında, alkol ise dehidratasyon aşamasında kullanılır; hiçbiri birincil tespit ajanı değildir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği yanlıştır. Normal fizyolojik koşullarda kapiller arteriyol ucunda dışarı süzülen sıvı miktarı, venül ucunda geri emilen sıvı miktarından her zaman çok az miktarda fazladır. Yani net sıvı geçişi kesinlikle 'sıfır' değildir; bu günlük yaklaşık 2-4 litrelik net interstisyel sıvı fazlası, doku lenfatikleri tarafından toplanıp torasik kanal aracılığıyla venöz dolaşıma geri kazandırılır. Lenfatik drenaj olmazsa normal koşullarda bile lenfödem gelişir. A, C, D ve E seçenekleri ise normal hemodinamik dengenin tartışmasız temel doğrularıdır."
   },
   {
-    "id": "d3-k1-pat-021",
+    "id": "prac-odem-002",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 2,
-    "slideTitle": "Starling Hipotezi ve Transkapiller Kuvvetler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi plazma onkotik basıncını azaltan durumlardan biri değildir?",
+    "slideTitle": "Vücut Sıvı Kompartmanları: İntraselüler ve Ekstraselüler Hacim Dengesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş kilogram ağırlığında sağlıklı genç bir erişkin erkekte vücut sıvı kompartmanlarının dağılımı ve fraksiyonları ile ilgili aşağıdaki hesaplama ve eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
+      "A) Toplam vücut suyu yaklaşık 42 litredir; bunun yaklaşık 28 litresi intraselüler, 14 litresi ekstraselüler kompartmandadır.",
+      "B) Ekstraselüler sıvının en büyük bölümünü intravasküler plazma oluşturur ve yaklaşık 11 litredir.",
+      "C) İntravasküler plazma hacmi toplam vücut ağırlığının yaklaşık %20'sine karşılık gelir.",
+      "D) Doku interstisyel aralığı toplam vücut suyunun üçte ikisini barındırır.",
+      "E) Hücre içi sıvı hacmi hücre dışı sıvı hacminden daha düşüktür ve dehidratasyonda ilk tükenen alandır."
     ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği kesinlikle doğrudur. 70 kg bir erişkinde vücut ağırlığının %60'ı sudur (70 x 0.60 = 42 litre). Bu 42 litrenin 2/3'ü hücre içi (yaklaşık 28 litre), 1/3'ü ise hücre dışıdır (yaklaşık 14 litre). 14 litrelik ekstraselüler sıvının yaklaşık %80'i (11-11.5 litre) interstisyel aralıkta, %20'si (yaklaşık 3-3.5 litre, yani vücut ağırlığının ~%5'i) ise intravasküler plazmadadır. Dolayısıyla B, C, D ve E seçeneklerindeki oranlar ve hacimler tamamen hatalıdır."
   },
   {
-    "id": "d3-k1-pat-001",
+    "id": "prac-odem-003",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 3,
-    "slideTitle": "Hiperemi ve Konjesyon: Tanım, Mekanizma ve Farklar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
+    "slideTitle": "Mikrosirkülasyonda Starling Kuvvetleri: Hidrostatik ve Onkotik Basınç Dengesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Mikrosirkülasyonda transkapiller sıvı dengesini açıklayan Starling hipotezi ve kuvvetleri dikkate alındığında, aşağıdaki durumlardan hangisi doku aralığına NET SIVI KAÇIŞINI (filtrasyonu) DOĞRUDAN AZALTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "NAPQI (N-asetil-p-benzokinonimin)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Asetaldehit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Etanol",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Salisilat",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Morfin",
-        "isCorrect": false
-      }
+      "A) Prekapiller arteriyollerin belirgin vazodilatasyonu",
+      "B) Postkapiller venüllerde obstrüksiyon sonucu venöz basınç artışı",
+      "C) Ağır proteinüriye bağlı serum albümin konsantrasyonunda düşüş",
+      "D) Şiddetli dehidratasyon ve hiperproteinemi sonucu plazma onkotik basıncının yükselmesi",
+      "E) İnterstisyel lenfatik kanalların tümöral infiltrasyonla tıkanması"
     ],
-    "correctAnswer": "A",
-    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Starling denkleminde net filtrasyon basıncı = [(Pc - Pi) - (πc - πi)] şeklindedir. Plazma onkotik basıncının (πc) yükselmesi, sıvıyı damar lümeni içine çeken kuvveti artırır; bu durum doku aralığına net sıvı kaçışını azaltır ve hatta interstisyumdan damar içine sıvı emilimini teşvik eder. A, B ve C seçenekleri net filtrasyon kuvvetini artırarak ödeme neden olur. E seçeneği ise filtrelenen sıvının geri taşınmasını engelleyerek dokuda sıvı birikmesine yol açar."
   },
   {
-    "id": "past-1790877035597-173945",
+    "id": "prac-odem-004",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 4,
-    "slideTitle": "Akut ve Kronik Pulmoner Konjesyon Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Konjestif kalp yetmezliği zemininde gelişen kronik pasif karaciğer konjesyonunda, makroskopik olarak kırmızı-kahverengi konjesyone alanlar ile soluk/yağlı parankimin bir arada bulunmasıyla karakterize “muskat cevizi” (nutmeg) karaciğer görünümüne yol açan temel patolojik süreç aşağıdakilerden hangisidir?",
+    "slideTitle": "Ödem ve Efüzyon Tanımı: İnterstisyel Sıvı Dinamikleri ve Vücut Boşlukları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Altmış yaşında dekompanse kalp yetmezliği ve siroz tanıları olan bir hastanın fizik muayenesinde her iki bacakta uyluğa kadar uzanan masif gode bırakan ödem, karında ileri derecede distansiyon ve dalgalanma hissi, oskültasyonda bilateral akciğer bazallerinde ve kalp seslerinde belirgin derinden gelme saptanmıştır. Radyolojik incelemede bilateral plevral boşluklarda, perikart aralığında ve tüm peritoneal kavitede yaygın serbest sıvı birikimi izlenmiştir.\n\nBu hastada mevcut olan klinik ve patolojik tabloyu en doğru tanımlayan tıbbi terim aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Periportal fibrozis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Sentrolobüler hemorajik nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Sentrolobüler iskemik nekroz",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Zahn infarktı",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Sentroportal nekroz",
-        "isCorrect": false
-      }
+      "A) Lokalize lenfödem",
+      "B) Anasarka",
+      "C) İzole hidroperiton",
+      "D) Herediter anjiyoödem",
+      "E) Fokal vazojenik ödem"
     ],
-    "correctAnswer": "B",
-    "explanation": "【Temel Patofizyolojik / Farmakolojik Mekanizma】: Sağ kalp yetmezliği sistemik venöz basıncı artırarak inferior vena kava ve hepatik venler üzerinden karaciğer sinüzoidlerinde retrograd konjesyona (kronik pasif konjesyon) yol açar. Karaciğer lobülünde santral vene en yakın olan Zon 3 (sentrolobüler bölge), hepatik arteriyel oksijenlenmeden en uzak bölgedir. Konjestif basınca eşlik eden sol kalp yetmezliği kaynaklı kardiyak debi düşüşü (hipoperfüzyon), Zon 3 hepatositlerinde derin anoksiye yol açar. Artan hidrostatik basınçla eritrositlerin Disse aralığına ve parankime ekstravazasyonu ile anoksik hücre ölümü birleştiğinde sentrolobüler hemorajik nekroz tablosu oluşur.\n\n【Doğru Yanıtın Tıbbi Gerekçesi】: Makroskopik olarak santral ven etrafındaki nekrotik, kanla dolu, çökmüş kırmızı-kahverengi alanların; daha iyi oksijenlenen ve nispeten korunan (ancak hafif hipoksiye sekonder steatoz geliştiren) periferik/periportal (Zon 1) sarımsı-açık kahverengi alanlarla alacalı bir desen oluşturması muskat cevizi (nutmeg) karaciğer olarak tanımlanır. Bu görünümün doğrudan histolojik karşılığı sentrolobüler hemorajik nekrozdur.\n\n【Çeldirici Seçeneklerin Tıbbi Analizi】:\n- A) Periportal fibrozis: Zon 1 çevresinde fibrozis olup Schistosoma mansoni enfeksiyonunda (pipestem fibrozis) veya kronik kolestatik/biliyer hastalıklarda izlenir; konjestif yetmezlikte tutulum öncelikle Zon 3'tedir.\n- C) Sentrolobüler iskemik nekroz: İzole şok ve ağır hipoperfüzyonda (iskemik hepatit/şok karaciğeri) hemoraji olmaksızın soluk koagülasyon nekrozu olarak görülebilir; muskat görüntüsünün ayırt edici koyu kırmızı komponentini oluşturan sinüzoidal konjesyon ve eritrosit ekstravazasyonunu (hemoraji) kapsamaz.\n- D) Zahn infarktı: İntrahepatik portal ven dallarının trombozu/tıkanması sonucu gelişen, gerçek nekroz içermeyen, hepatoselüler atrofi ve aşırı sinüzoidal konjesyonla karakterize psödoinfarkttır.\n- E) Sentroportal nekroz: Toksik veya viral hepatitlerde santral ven ile portal alan arasındaki köprüleşme nekrozunu (bridging necrosis) ifade eder; nutmeg karaciğerin primer mekanizması değildir.\n\n【Klinik İpucu (High-Yield Pearl)】: Nutmeg karaciğer zemininde konjesyonun kronikleşmesi durumunda santral ven çevresinden başlayıp komşu santral venlerle birleşen sentrosentral fibrozis gelişir; buna 'kardiyak siroz' (kardiyak skleroz) adı verilir. Portal ven ve safra duktusları içeren Zon 1 (periportal alan) bu süreçte en son etkilenen zondur."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Cilt ve cilt altı dokularda masif yaygın ödem bulunması ve buna plevral (hidrotoraks), perikardiyal (hidroperikardiyum) ve peritoneal (asit) boşluklardaki efüzyonların eşlik ettiği ağır, jeneralize sistemik sıvı birikimi tablosuna patolojide 'anasarka' adı verilir. Lokalize lenfödem veya anjiyoödem tek bir uzuv veya mukozal alanla sınırlıdır. İzole hidroperiton yalnızca periton boşluğundaki sıvıyı tanımlarken, hastada tüm seröz boşluklar ve cilt altı tutulmuştur."
   },
   {
-    "id": "d3-k1-pat-016",
+    "id": "prac-odem-005",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 5,
-    "slideTitle": "Akut ve Kronik Hepatik Konjesyon: 'Muskat Cevizi Karaciğer'",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi stabil (kararlı) doku örneğidir?",
+    "slideTitle": "Ödemin Birinci Mekanizması: Artmış Kapiller Hidrostatik Basınç ve Nedenleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uzun süreli uçak yolculuğu sonrasında sağ bacağında ani gelişen şişlik, gerginlik, kızarıklık ve baldır ağrısı şikayetiyle acil servise başvuran 54 yaşındaki bir hastanın fizik muayenesinde sağ kruris çapının sol tarafa göre 4 cm genişlediği ve pretibial bölgede gode bırakan ödem saptanıyor. Yapılan Doppler ultrasonografide sağ ana femoral vende lümeni tam tıkayan akut trombüs izleniyor.\n\nBu hastada gelişen tek taraflı bacak ödeminin patofizyolojisindeki PRİMER ve BAŞLATICI hemodinamik mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deri",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Gastrointestinal kanal epitel hücreleri",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Nöronlar",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Karaciğer",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Kardiyak kas hücreleri",
-        "isCorrect": false
-      }
+      "A) Plazma albümin düzeyinde akut düşüşe bağlı kolloid ozmotik basınç yetersizliği",
+      "B) Venöz dönüşün bozulması sonucu kapiller hidrostatik basıncın aşırı yükselmesi",
+      "C) Kas içi lenfatik kanalların mikroskobik endotelyal hipoplazisi",
+      "D) Böbreklerden sodyum ve su atılımının primer genetik bozukluğu",
+      "E) İnterstisyel matriks proteoglikanlarının kontrolsüz hiperozmolar sentezi"
     ],
-    "correctAnswer": "D",
-    "explanation": "Karaciğer parankim hücreleri (hepatositler) klasik stabil hücre örneğidir; normal koşullarda düşük mitotik aktivite gösterirler ancak hasar veya kayıp durumunda güçlü rejenerasyon kapasitesine sahiptirler (örn. kısmi hepatektomi sonrası). Deri epidermisi ve GİS epiteli sürekli yenilenen labil dokulardır; nöronlar ve kardiyak kas hücreleri ise mitotik kapasitesi olmayan (veya çok sınırlı) kalıcı/permanent hücrelerdir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Femoral ven trombozu, bacağın venöz kanının kalbe dönüşünü mekanik olarak engeller. Venöz lümende biriken kan geriye doğru hidrostatik basınç dalgası oluşturarak postkapiller venül ve kapiller hidrostatik basıncı (Pc) dramatik düzeyde artırır. Artan bu basınç sıvıyı interstisyuma iterek tek taraflı gode bırakan ödeme yol açar. Hastada hipoalbüminemi (A), lenfatik hipoplazi (C) veya renal retansiyon (D) gibi sistemik tablolar bulunmamaktadır."
   },
   {
-    "id": "d3-k1-pat-005-67",
+    "id": "prac-odem-006",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 6,
-    "slideTitle": "Ödem Kavramı ve Terminolojisi: Transüda vs Eksüda",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "slideTitle": "Kalp Yetmezliğinde Ödem Mekanizmaları: Düşük Kalp Debisi ve RAAS Kısır Döngüsü",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İskemik kardiyomiyopatiye bağlı konjestif kalp yetmezliği bulunan 68 yaşındaki bir erkek hastada son iki hafta içinde dispne, ortopne ve her iki bacakta pretibial gode bırakan masif ödem gelişiyor. Laboratuvar incelemesinde plazma renin aktivitesi ve aldosteron konsantrasyonunun belirgin şekilde arttığı saptanıyor.\n\nBu hastada ödem tablosunu derinleştiren sekonder hiperaldosteronizmin BAŞLATICI patofizyolojik tetiği aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Adrenal korteksin zona glomerulosa hücrelerinde gelişen primer fonksiyonel adenom",
+      "B) Karaciğerde anjiyotensinojen sentezinin genetik mutasyonla kontrolsüz artışı",
+      "C) Düşük kalp debisine bağlı efektif arteriyel kan hacminin azalması ve renal hipoperfüzyon",
+      "D) Pulmoner endotelde anjiyotensin dönüştürücü enzim (ACE) ekspresyonunun baskılanması",
+      "E) Proksimal tübüllerde sodyum-glukoz kotransporterlarının primer aşırı aktivasyonu"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin (%10 tamponlanmış formaldehit), doku proteinlerini çapraz bağlayarak otolizi ve bakteriyel bozulmayı önlediği, ucuz ve dokuya iyi nüfuz ettiği için rutin histopatolojik incelemede en yaygın kullanılan tespit sıvısıdır. Ksilen doku saydamlaştırma (clearing) aşamasında, parafin gömme aşamasında, alkol ise dehidratasyon aşamasında kullanılır; hiçbiri birincil tespit ajanı değildir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Konjestif kalp yetmezliğinde miyokard pompa fonksiyonunu yerine getiremez; ileriye doğru atılan kalp debisi düşer. Bu durum arteriyel yatakta algılanan 'efektif dolaşım hacmini' düşürür ve böbreklerde afferent perfüzyon basıncını azaltır (renal hipoperfüzyon). Jukstaglomerüler aparat bu durumu algılayarak renin salgılar ve RAAS kaskadını (sekonder hiperaldosteronizm) ateşler. Bu primer bir adrenal tümör (A) veya primer hepatik aşırı üretim (B) değildir."
   },
   {
-    "id": "d3-k1-pat-021-68",
+    "id": "prac-odem-007",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 7,
-    "slideTitle": "Ödeme Yol Açan 5 Temel Patofizyolojik Mekanizma",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi plazma onkotik basıncını azaltan durumlardan biri değildir?",
+    "slideTitle": "Ödemin İkinci Mekanizması: Azalmış Plazma Onkotik Basıncı ve Albümin Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Hipoalbüminemi zemininde gelişen jeneralize ödem tablolarının patofizyolojisi, plazma onkotik basıncı ve sıvı dengesi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
+      "A) Plazma onkotik basıncının en büyük kısmını immünoglobulin G oluşturur; albüminin bu basınca katkısı ihmal edilebilir düzeydedir.",
+      "B) Serum albümin konsantrasyonu 2.5 g/dL altına indiğinde transkapiller onkotik çekim gücü yetersiz kalır ve interstisyuma sıvı kaçar.",
+      "C) Karaciğer sirozunda albümin sentezi artsa da periferik dokularda aşırı yıkıldığı için hipoalbüminemi gelişir.",
+      "D) Hipoalbüminemiye bağlı ödemde intravasküler hacim arttığı için jukstaglomerüler aparatustan renin salınımı tamamen baskılanır.",
+      "E) Glomerüler filtrasyon bariyerinin hasar görmesi plazma proteinlerinin geri emilimini artırarak onkotik basıncı yükseltir."
     ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Normalde 3.5-5.0 g/dL olan serum albümini 2.5-3.0 g/dL altına düştüğünde onkotik basınç kritik eşiği kaybeder ve sıvı doku aralığına süzülür. A seçeneği yanlıştır çünkü onkotik basıncın %70-80'ini albümin oluşturur. C yanlıştır çünkü sirozda yıkım değil hepatosit kaybına bağlı 'sentez yetmezliği' vardır. D yanlıştır çünkü sıvı damar dışına kaçtığı için intravasküler hacim azalır ve RAAS baskılanmaz, tam aksine şiddetle uyarılır. E seçeneği ise filtrasyon hasarının protein kaybı (proteinüri) yaptığını göz ardı etmektedir."
   },
   {
-    "id": "d3-k1-pat-021-69",
+    "id": "prac-odem-008",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 8,
-    "slideTitle": "Azalmış Plazma Onkotik Basıncı ve Hipoalbüminemi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi plazma onkotik basıncını azaltan durumlardan biri değildir?",
+    "slideTitle": "Nefrotik Sendrom ve Karaciğer Sirozunda Hipoalbüminemi ve Ödem Patogenezi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik hepatit B zemininde karaciğer sirozu gelişen 58 yaşındaki bir erkek hastada karında belirgin distansiyon (masif asit) ve pretibial gode bırakan ödem izleniyor. Laboratuvar analizinde serum albümini 2.1 g/dL, idrarda protein negatif ve portal ven basıncı 22 mmHg (belirgin artmış) olarak tespit ediliyor.\n\nBu hastada peritoneal kavitede asit sıvısının toplanmasında rol oynayan TEMEL HEMODİNAMİK MEKANİZMA ÇİFTİ aşağıdakilerden hangisinde eksiksiz verilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
+      "A) Splanknik kapiller hidrostatik basınç artışı + Plazma kolloid ozmotik basınç azalması",
+      "B) İnterstisyel lenfatik aplazi + Primer aldosteron hipersekresyonu",
+      "C) Glomerüler porların genişlemesi + Pulmoner arteriyoler vazokonstriksiyon",
+      "D) Sistemik arteriyel hipertansiyon + Artmış eritrosit sedimentasyon hızı",
+      "E) İnterstisyel onkotik basınç çökmesi + Santral venöz basınç düşüklüğü"
     ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Sirozda asit gelişimi iki temel hemodinamik gücün birleşimidir: Portal hipertansiyon nedeniyle splanknik ve mezenterik kapiller yatakta hidrostatik basınç aşırı yükselir (Pc artışı); aynı zamanda karaciğer yetmezliğine bağlı hipoalbüminemi nedeniyle plazma kolloid ozmotik basıncı belirgin şekilde düşer (πc azalması). Sıvıyı dışarı iten kuvvet artarken damarda tutan kuvvet çöktüğü için periton boşluğunda litrelerce asit sıvısı göllenir. Diğer seçenekler bu tablonun patolojisini açıklamaz."
   },
   {
-    "id": "d3-k1-pat-061",
+    "id": "prac-odem-009",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 9,
-    "slideTitle": "Lenfatik Tıkanıklık ve Lenfödem Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi meme kanseri gelişme riskini artıran faktörlerden biri değildir (aksine koruyucudur)?",
+    "slideTitle": "Ödemin Üçüncü Mekanizması: Lenfatik Obstrüksiyon (Lenfödem) ve Klirens Yetmezliği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik lenfatik obstrüksiyona bağlı olarak gelişen lenfödem tablosunun patofizyolojik ve morfolojik evrimi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Atipili Duktal Epitelyal Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hormon Replasman Tedavisi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Lobüler Karsinoma İn Situ Varlığı",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Erken Menopoza Girmek",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Sklerozan Adenozis",
-        "isCorrect": false
-      }
+      "A) Lenfödem sıvısı proteinden tamamen yoksundur ve dansitesi 1.005'in altındadır.",
+      "B) Zamanla dokuda biriken yüksek proteinli sıvı fibroblastları uyararak interstisyel fibrozise ve gode bırakmayan sertliğe yol açar.",
+      "C) Lenfödem geliştikten sonra lenfatik endotel hücreleri hızla apoptoza gider ve interstisyel onkotik basınç sıfıra iner.",
+      "D) Kalp yetmezliği ödemi ile karşılaştırıldığında lenfödemde cilt enfeksiyonu riski tamamen ortadan kalkar.",
+      "E) Lenfödem yalnızca bilateral simetrik olarak başlar ve asla tek bir ekstremiteyi tutmaz."
     ],
-    "correctAnswer": "D",
-    "explanation": "Erken menopoz, ömür boyu maruz kalınan endojen östrojen süresini kısalttığı için meme kanseri riskini AZALTAN (koruyucu) bir faktördür; buna karşılık geç menopoz ve erken menarş riski artırır. Atipili duktal hiperplazi ve lobüler karsinoma in situ, proliferatif atipik lezyonlar olarak riski belirgin artırırken, hormon replasman tedavisi (özellikle kombine östrojen-progesteron) de riski artırdığı gösterilmiş bir faktördür. Sklerozan adenozis hafif proliferatif bir lezyon olup riski çok az artırır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Lenfatik obstrüksiyonda dokudan temizlenemeyen makromoleküller ve proteinler interstisyumda birikir (yüksek proteinli ödem). Bu proteinler kronik fibroblastik uyarım ve kollajen depolanması başlatır; sonuçta doku fibrotikleşir ve gode bırakmayan (non-pitting) karakteristik sert bir hal alır. A seçeneği yanlıştır çünkü sıvı proteinden zengindir. C yanlıştır çünkü interstisyel onkotik basınç düşmez, artar. D yanlıştır çünkü lenfatik staz enfeksiyona (selülit) belirgin yatkınlık yaratır. E yanlıştır çünkü lenfödem sıklıkla asimetrik ve tek taraflıdır (örneğin mastektomi sonrası kolda)."
   },
   {
-    "id": "d3-k1-enf-015",
+    "id": "prac-odem-010",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 10,
-    "slideTitle": "Subkutan (Periferik) Ödem: Gode Bırakan Ödem Dinamiği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi genital ülsere sebep olan mikroorganizmalardan değildir?",
+    "slideTitle": "Lenfödemin Özel Klinik Patolojileri: Aksiller Diseksiyon, Peau d'Orange ve Elefantiyazis",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Elli iki yaşında bir kadın hasta sağ memesinde ele gelen sert bir kitle ve üzerindeki deride kalınlaşma şikayetiyle başvuruyor. Fizik muayenede sağ meme cildinin yaygın olarak ödemli olduğu, ancak kıl foliküllerinin bulunduğu alanlarda deriye doğru çekintilerin oluştuğu ve cildin pürtüklü 'portakal kabuğu' (peau d'orange) manzarası kazandığı gözleniyor.\n\nBu hastada meme derisindeki karakteristik 'peau d'orange' görünümünün gelişmesinden sorumlu TEMEL HÜCRESEL VE PATOLOJİK MEKANİZMA aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Molluscum contagiosum",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Treponema pallidum",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Chlamydia trachomatis (LGV serotipleri)",
-        "isCorrect": false
-      }
+      "A) Pektoral kas arteriyollerinde aterosklerotik tıkanma sonucu gelişen iskemik nekroz",
+      "B) İnfiltratif tümör embolilerinin subdermal lenfatik damarları tıkaması ve Cooper ligamanlarının deriyi çekmesi",
+      "C) Karaciğerde albümin sentezinin baskılanmasına bağlı lokalize onkotik basınç çökmesi",
+      "D) İnternal torasik venin primer trombozu sonucu gelişen retrograd kapiller hidrostatik basınç artışı",
+      "E) Meme dokusunda stafilokok enfeksiyonuna bağlı fibrinöz eksüda birikimi"
     ],
-    "correctAnswer": "A",
-    "explanation": "Molluscum contagiosum, bir poksvirüsün yol açtığı ve karakteristik olarak ülser değil, ortası çökük (göbekli/umbilike), sedef görünümlü papüler lezyonlar oluşturan cinsel yolla bulaşan bir deri enfeksiyonudur; ders notunda 3-5 mm çaplı göbekli papüler lezyon olarak tanımlanır. Bu nedenle genital ülser etkenleri arasında sayılmaz ve doğru yanıt A'dır. Diğer seçenekler klasik genital ülser yapan CYBE etkenleridir: Treponema pallidum primer sifilizde şankr, yani kenarları düzgün, sert tabanlı, ağrısız bir ülser oluşturur; HSV tip 1 ve 2 vezikül, püstül ve ağrılı ülserlerle seyreder ve ülserlerin en sık enfeksiyöz sebebidir; Klebsiella granulomatis donovanozis (granüloma inguinale) etkeni olup subkutan papül, nodül ve ülser yapar, lenfadenopati görülmez; Chlamydia trachomatis'in L1-L3 serovarları lenfogranüloma venereum etkenidir ve papül, herpes benzeri ülser ile büyük, hassas bubolara yol açar. Klasik ülser etkenleri arasında Haemophilus ducreyi (şankroid) de bulunur; ağrılı, kenarları düzensiz, tabanı nekroz ve eksuda ile kaplı yumuşak ülser oluşturur."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Peau d'orange görünümü, meme karsinomu hücrelerinin derialtı lenfatik damarları infiltre edip tıkamasıyla oluşur. Tıkanan lenfatikler cildi ödemli hale getirir; ancak cildi derin fasyaya bağlayan Cooper ligamanları ödem sıvısıyla esneyemez ve deriyi içe doğru çekerek kıl foliküllerinin olduğu yerlerde çukurcuklar oluşturur. Bu durum portakal kabuğu manzarasını yaratır. Arter tıkanması (A), hipoalbüminemi (C), ven trombozu (D) veya akut enfeksiyon (E) bu spesifik görünüme neden olmaz."
   },
   {
-    "id": "d3-k1-enf-004",
+    "id": "prac-odem-011",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 11,
-    "slideTitle": "Akut Akciğer Ödemi (Pulmoner Ödem) Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi aerosol (havayolu) yoluyla bulaşan enfeksiyonlardan değildir?",
+    "slideTitle": "Ödemin Dördüncü Mekanizması: Primer ve Sekonder Sodyum ve Su Retansiyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Geçirdiği streptokokal farenjitten iki hafta sonra göz kapaklarında şişlik, idrar miktarında azalma ve idrar renginde koyulaşma (kola rengi) fark eden 9 yaşındaki bir çocukta kan basıncı 145/95 mmHg (yaşına göre yüksek) ölçülüyor. Laboratuvarda serum kreatinini yüksek, GFR belirgin azalmış, idrar analizinde dismorfik eritrositler ve eritrosit silindirleri saptanıyor; günlük proteinüri ise 0.8 gram (nefrotik düzeyde değil) olarak ölçülüyor.\n\nBu hastada periorbital ve periferik ödemin gelişmesindeki PRİMER PATOFİZYOLOJİK MEKANİZMA aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kızamık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Suçiçeği",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "SARS-CoV-2 enfeksiyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Neisseria meningitidis",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Tüberküloz",
-        "isCorrect": false
-      }
+      "A) Ağır albümin kaybına bağlı plazma kolloid ozmotik basıncının çökmesi",
+      "B) Glomerüler filtrasyon hızının akut düşüşüne bağlı primer sodyum ve su retansiyonu ve hipervolemi",
+      "C) İnterstisyel lenfatik kanalların immün kompleksler tarafından doğrudan tıkanması",
+      "D) Sistemik histamin salınımına bağlı yaygın mikrovasküler permeabilite artışı",
+      "E) Adrenal bezden primer aldosteron salgılayan bir tümörün gelişmesi"
     ],
-    "correctAnswer": "D",
-    "explanation": "Aerosol (hava yolu) ile bulaşma, havada uzun süre asılı kalabilen ve 5 μm'den küçük partiküller (damlacık çekirdeği) aracılığıyla gerçekleşir. Ders notunda solunum izolasyonunun, solunum yoluyla bulaşan 5 μm'den küçük partiküllerle oluşacak infeksiyonları önlemek için kullanıldığı ve bu partiküllerin havada asılı kalarak ya da toz partiküllerine yapışarak kaynaktan uzak noktalara ulaşabildiği belirtilir; bu nedenle solunum izolasyonunda tek kişilik oda, negatif basınç, saatte 6-12 kez hava değişimi ve N95 tipi maske gerekir. Notta solunum izolasyonu gerektiren etkenler kızamık, suçiçeği (dissemine zoster dahil), akciğer veya larinks tüberkülozu, Ebola ve KKKA olarak sayılır. Neisseria meningitidis ise damlacık izolasyonu yapılacak etkenler listesinde (Haemophilus influenzae tip b ile birlikte) yer alır; damlacık izolasyonu 5 μm'den büyük partiküllere yöneliktir, bu partiküller havada asılı kalmaz ve 1 metreden uzak mesafelere gidemez, dolayısıyla cerrahi maske ve en az 1 metre mesafe yeterlidir. Bu nedenle meningokoksik infeksiyonlarda hava yolu (aerosol) izolasyonu değil, damlacık izolasyonu uygulanır. SARS-CoV-2 de solunum yoluyla bulaşan etkenler arasında değerlendirilir; sorunun tek doğru cevabı damlacık yoluyla bulaşan Neisseria meningitidis'tir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Post-streptokokal glomerülonefrit (akut nefritik sendrom) tablosunda glomerüllerde diffüz proliferasyon ve lökosit infiltrasyonu vardır; bu durum GFR'yi aniden düşürür. Böbrekler sodyum ve suyu filtre edemez ve primer tuz-su retansiyonu gelişir. Artan intravasküler hacim (hipervolemi) hem sistemik kan basıncını yükseltir (hipertansiyon) hem de kapiller hidrostatik basıncı artırarak ödeme yol açar. Proteinüri subnefrotiktir (0.8 g), dolayısıyla hipoalbüminemi (A) primer neden değildir. Lenfatik tıkanıklık (C) veya histamin artışı (D) söz konusu değildir."
   },
   {
-    "id": "d3-k1-pat-007",
+    "id": "prac-odem-012",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 12,
-    "slideTitle": "Beyin Ödemi Patolojisi: Vazojenik vs Sitotoksik Ödem",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Aşağıdakilerden hangisi apoptozla ilişkili değildir?",
+    "slideTitle": "Ödemin Beşinci Mekanizması: Artmış Mikrovasküler Geçirgenlik ve Enflamatuar Ödem",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Derin ikinci derece termal yanık ve yaygın doku hasarı ile acil servise getirilen bir hastada hasarlı vücut bölgelerinde dakikalar içinde büller ve masif doku ödemi geliştiği gözleniyor. Sıvı analizinde toplanan sıvının proteinden ve lökositlerden son derece zengin olduğu belirleniyor.\n\nBu hastada doku ödemini başlatan TEMEL VASKÜLER PATOLOJİ aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sürekli çoğalan aktif hücrelerde apoptozla hücre sayısının azaltılması",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Opsonize hücrelerin fagositoz yoluyla ortadan kaldırılması",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Otoreaktif lenfositlerin ortadan kaldırılması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Sitotoksik T hücreleri tarafından başlatılan hücre ölümü",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Görevleri sona eren hücrelerin ortadan kaldırılması",
-        "isCorrect": false
-      }
+      "A) Karaciğerde protein üretiminin baskılanması sonucu plazma onkotik basıncının çökmesi",
+      "B) Endotel kontraksiyonu ve doğrudan termal endotel nekrozuna bağlı mikrovasküler permeabilite artışı",
+      "C) Sol ventrikül yetmezliğine bağlı pulmoner kapiller hidrostatik basınç yükselmesi",
+      "D) Prekapiller sfinkterlerin aşırı kasılarak kapiller perfüzyonu tamamen durdurması",
+      "E) Aksiller ve inguinal lenf nodlarının konjenital aplazisi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Opsonizasyon; bir mikroorganizma veya hücrenin, kompleman (C3b) veya antikorlarla kaplanarak fagositoza duyarlı hale getirilmesi işlemidir ve fagositik hücreler tarafından fagositoz ile temizlenmeyi ifade eder; bu bir nekroz/fagositoz mekanizmasıdır, apoptozun kendisi değildir. Buna karşılık, proliferasyon dengesinin korunması, otoreaktif lenfositlerin negatif seleksiyonla elenmesi, sitotoksik T hücre aracılı öldürme ve görevi biten hücrelerin (örn. embriyonik gelişimde) elimine edilmesi klasik apoptoz örnekleridir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Termal yanıklar hem histamin/bradikinin gibi mediyatörlerle interendotelyal aralıkların açılmasına (endotel kontraksiyonu) hem de doğrudan endotel hücre ölümüne (termal nekroz) yol açar. Damar duvarının mikrovasküler geçirgenliği kontrolsüzce artar; protein ve hücreler doku aralığına taşarak eksüdatif ödem ve bül oluşturur. Olay karaciğer yetmezliği (A), kalp yetmezliği (C) veya lenfatik aplazi (E) ile ilişkili değildir."
   },
   {
-    "id": "d3-k1-pat-022",
+    "id": "prac-odem-013",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 13,
-    "slideTitle": "Kanama (Hemoraji) ve Hemorajik Diyatez Kavramı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Deri, mukoza ve serozal yüzeylerde görülen, çapı 1-2 mm olan küçük kanama odaklarına ne ad verilir?",
+    "slideTitle": "Laboratuvar ve Klinik Ayrım: Transüda ve Eksüda Sıvılarının Karşılaştırmalı Patolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefes darlığı ve sağ yan ağrısı şikayetiyle başvuran 64 yaşındaki bir hastada sağ plevral aralıkta sıvı saptanarak tanısal torasentez uygulanıyor. Alınan sıvının biyokimyasal ve mikroskobik inceleme sonuçları şu şekildedir:\n- Görünüm: Sarımtırak-bulanık\n- Sıvı total proteini: 4.6 g/dL (Serum proteini: 6.8 g/dL; Oran: 0.67)\n- Sıvı LDH düzeyi: 380 U/L (Serum LDH: 420 U/L; Oran: 0.90)\n- Dansite (Özgül ağırlık): 1.024\n- Hücre sayımı: 14.500/μL (%82 nötrofil lökosit)\n- Rivalta testi: Pozitif\n\nBu laboratuvar profilinin işaret ettiği sıvı tipi ve en olası altta yatan patoloji eşleştirmesi aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Ekimoz",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Peteşi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Purpura",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hematom",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hemotoraks",
-        "isCorrect": false
-      }
+      "A) Transüda — Konjestif kalp yetmezliği",
+      "B) Transüda — Karaciğer sirozu",
+      "C) Transüda — Minimal lezyon hastalığına bağlı nefrotik sendrom",
+      "D) Eksüda — Bakteriyel pnömoniye sekonder parapnömonik efüzyon",
+      "E) Transüda — Ağır protein-enerji malnütrisyonu"
     ],
-    "correctAnswer": "B",
-    "explanation": "Peteşiler, kılcal damar veya venüllerden kaynaklanan, çapı 1-2 mm olan küçük, nokta tarzı kanama odaklarıdır; genellikle trombositopeni, trombosit fonksiyon bozukluğu veya vaskülit gibi durumlarda görülür. Purpura biraz daha büyük (3 mm-1 cm) kanama alanlarını, ekimoz ise daha büyük (&gt;1-2 cm) subkutan kanama alanlarını (morarma) tanımlar; hematom ise doku içinde toplanan belirgin kan birikimini ifade eder."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. İncelenen sıvıda protein >3.0 g/dL (4.6 g/dL), plevral/serum protein oranı >0.5 (0.67), LDH oranı >0.6 (0.90), dansite >1.020 (1.024), lökosit sayısı >1000/μL ve Rivalta testi pozitiftir. Bu bulguların tamamı Light kriterlerine göre tartışmasız bir 'Eksüda' tablosunu kanıtlar. Eksüdanın en yaygın nedeni akut enfeksiyonlar (bakteriyel pnömoni, tüberküloz) ve malignitelerdir. A, B, C ve E seçeneklerindeki hastalıklar ise kapiller hidrostatik basınç artışı veya onkotik basınç düşüşü ile karakterize olup düşük proteinli 'Transüda' üretirler."
   },
   {
-    "id": "d3-k1-pat-022-75",
+    "id": "prac-odem-014",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 14,
-    "slideTitle": "Küçük Yüzeyel Kanamalar: Peteşi ve Purpura Morfolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Deri, mukoza ve serozal yüzeylerde görülen, çapı 1-2 mm olan küçük kanama odaklarına ne ad verilir?",
+    "slideTitle": "Subkütan Ödem Morfolojisi: Gode Bırakan, Bağımlı ve Periorbital Ödem",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş iki yaşında geçirilmiş inme nedeniyle son üç aydır tamamen yatağa bağımlı olarak yaşayan ve bilinen konjestif kalp yetmezliği olan bir hastanın rutin vizitinde bacaklarında belirgin bir şişlik izlenmiyor. Ancak hastanın sırtı ve kalçası muayene edildiğinde sakrum üzerinde basmakla derin çukurluk bırakan masif ödem tespit ediliyor.\n\nBu yatalak hastada ödem sıvısının bacaklar yerine presakral bölgede toplanmasının TEMEL PATOFİZYOLOJİK VE ANATOMİK NEDENİ aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Ekimoz",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Peteşi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Purpura",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hematom",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hemotoraks",
-        "isCorrect": false
-      }
+      "A) Lumbosakral lenfatik kanalların yatak basısıyla primer tromboza uğraması",
+      "B) İntravasküler hidrostatik basıncın yer çekimi etkisiyle en alçakta kalan anatomik bölgede maksimuma ulaşması",
+      "C) Sakral derideki sebase bezlerin albümini doku aralığına aktif olarak pompalaması",
+      "D) Yatak istirahatinde böbreklerden renin salınımının tamamen kesilmesi",
+      "E) Glomerüler filtrasyonun sırtüstü pozisyonda on katına çıkarak protein kaçağı yaratması"
     ],
-    "correctAnswer": "B",
-    "explanation": "Peteşiler, kılcal damar veya venüllerden kaynaklanan, çapı 1-2 mm olan küçük, nokta tarzı kanama odaklarıdır; genellikle trombositopeni, trombosit fonksiyon bozukluğu veya vaskülit gibi durumlarda görülür. Purpura biraz daha büyük (3 mm-1 cm) kanama alanlarını, ekimoz ise daha büyük (&gt;1-2 cm) subkutan kanama alanlarını (morarma) tanımlar; hematom ise doku içinde toplanan belirgin kan birikimini ifade eder."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kalp yetmezliğine bağlı ödem 'bağımlı (dependent) ödem' karakterindedir; yani yer çekimi kuvvetinin etkisiyle venöz göllenmenin ve kapiller hidrostatik basıncın en yüksek olduğu en alçak anatomik bölgede toplanır. Ayaktaki bir kişide bu bölge ayak bilekleri ve bacaklarken; sürekli sırtüstü yatan hastada vücudun yer çekimi açısından en altta kalan bölgesi sakrum ve uyluk arkasıdır (presakral ödem). Bu nedenle yatalak hastada ödem bacaklarda değil sakrumda aranır. Diğer seçenekler biyofiziksel prensiplere aykırıdır."
   },
   {
-    "id": "d3-k1-pat-022-76",
+    "id": "prac-odem-015",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 15,
-    "slideTitle": "Büyük Kanamalar: Ekimoz ve Renk Değişimi Dinamiği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Deri, mukoza ve serozal yüzeylerde görülen, çapı 1-2 mm olan küçük kanama odaklarına ne ad verilir?",
+    "slideTitle": "Pulmoner Ödem Patofizyolojisi: Kardiyojenik ve Non-Kardiyojenik Mekanizmalar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş yaşında anterior miyokard enfarktüsü öyküsü bulunan bir erkek hasta, gece uykudan boğulma hissiyle uyanma (paroksismal noktürnal dispne) ve nefes darlığı şikayetiyle acil servise getiriliyor. Fizik muayenede takipneik ve taşikardik olan hastanın akciğer oskültasyonunda bilateral yaygın yaş raller (krepitan raller) ve S3 kalp sesi duyuluyor. Akciğer grafisinde bilateral hiler dolgunluk ve parankimal vasküler konjesyon izleniyor. Yapılan ekokardiyografide sol ventrikül ejeksiyon fraksiyonu %28 (belirgin azalmış) bulunuyor.\n\nBu hastada gelişen akut akciğer ödeminin TEMEL VE BAŞLATICI PATOFİZYOLOJİK MEKANİZMASI aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Ekimoz",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Peteşi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Purpura",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hematom",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hemotoraks",
-        "isCorrect": false
-      }
+      "A) Akciğer kapiller endotelinde yaygın immün kompleks depolanması",
+      "B) Sol ventrikül pompa yetersizliğine bağlı pulmoner venöz ve kapiller hidrostatik basınç artışı",
+      "C) Alveolo-kapiller membranda sürfaktan sentezinin genetik yetersizliği",
+      "D) Sistemik lenfatik sistemin primer hipoplazisine bağlı klirens durması",
+      "E) Karaciğerde albümin üretiminin miyokard enfarktüsü sonrası ani kesilmesi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Peteşiler, kılcal damar veya venüllerden kaynaklanan, çapı 1-2 mm olan küçük, nokta tarzı kanama odaklarıdır; genellikle trombositopeni, trombosit fonksiyon bozukluğu veya vaskülit gibi durumlarda görülür. Purpura biraz daha büyük (3 mm-1 cm) kanama alanlarını, ekimoz ise daha büyük (&gt;1-2 cm) subkutan kanama alanlarını (morarma) tanımlar; hematom ise doku içinde toplanan belirgin kan birikimini ifade eder."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sol ventrikülün kasılma gücünün çökmesi (EF %28) durumunda kan sol ventrikülden ileriye atılamaz. Bu durum geriye doğru sol atriyumda, pulmoner venlerde ve nihayetinde pulmoner kapiller yatakta kanın göllenmesine ve hidrostatik basıncın (PCWP) dramatik yükselmesine yol açar. Kapiller hidrostatik basınç plazma onkotik basıncını aşınca sıvı alveollere dökülerek kardiyojenik akciğer ödemi tablosunu oluşturur. İmmün kompleks (A), sürfaktan gen mutasyonu (C), lenfatik hipoplazi (D) veya ani albümin kesilmesi (E) söz konusu değildir."
   },
   {
-    "id": "d3-k4-pat-002",
+    "id": "prac-odem-016",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 16,
-    "slideTitle": "Vücut Kavitelerine Kanamalar: Seröz Boşluk İnvazyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Akut miyokard enfarktüsü sonrasında nekroze olan kardiyomiyositlerin makrofajlar tarafından yoğun olarak fagosite edildiği, granülasyon dokusunun henüz olgunlaşmadığı ve bu nedenle mekanik komplikasyonların (sol ventrikül serbest duvar rüptürü, ventriküler septal rüptür, papiller adale kopması) EN SIK görüldüğü zaman aralığı hangisidir?",
+    "slideTitle": "Pulmoner Ödem Morfolojisi ve Kliniği: Makroskopi, Histoloji ve Solunum İflası",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sol ventrikül disfonksiyonuna bağlı refrakter kardiyojenik şok ve akut akciğer ödemi nedeniyle kaybedilen bir hastanın otopsisinde akciğerlerin ağırlığı sağda 1150 gram, solda 1020 gram (normalin 2.5 katı) olarak tartılıyor. Akciğer kesit yüzeyinden bol miktarda pembe köpüklü sıvı sızdığı gözleniyor.\n\nBu otopsi materyalinden hazırlanan akciğer histopatolojik kesitlerinde ışık mikroskobunda aşağıdaki bulgulardan hangisinin izlenmesi BEKLENİR?",
     "options": [
-      {
-        "key": "A",
-        "text": "İlk 0 - 30 dakika",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "1 - 4 saat",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "12 - 24 saat",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "3 - 7. günler",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "2 - 8. haftalar",
-        "isCorrect": false
-      }
+      "A) Alveol lümenlerini tamamen tıkayan homojen soluk pembe (eozinofilik) proteinöz sıvı presipitatı",
+      "B) Alveol duvarlarında yaygın kazeifikasyon nekrozu ve Langhans dev hücreleri",
+      "C) Alveoler boşlukların tamamen nötrofil lökositler ve fibrin tıkaçlarıyla dolu gri hepatizasyon tablosu",
+      "D) İnterstisyumda atipik skuamöz hücre adaları ve keratin incileri",
+      "E) Alveol epitelinin tamamen dökülerek parankimin diffüz kemik dokusuna metaplazisi"
     ],
-    "correctAnswer": "D",
-    "explanation": "Miyokard enfarktüsünde 3. ve 7. günler arasında nötrofillerin yerini makrofajlar alır; nekrotik miyositler sindirilirken henüz kollajen sentezi yeterli değildir ve miyokard dokusu azami yumuşama (sararma/likefaksiyon) evresindedir. Serbest duvar rüptürü ve tamponad en sık bu dönemde meydana gelir."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Akut pulmoner ödemin histopatolojik karşılığı, genişlemiş konjesyone kapillerler ve alveol lümenlerini dolduran homojen, soluk eozinofilik (pembe) proteinöz transüda presipitatıdır. Kazeifikasyon nekrozu (B) tüberkülozda; lökosit ve fibrin dolu gri hepatizasyon (C) lober bakteriyel pnömonide; keratin incileri (D) skuamöz hücreli karsinomda; kemik metaplazisi (E) ise ileri derecede kronik distrofik durumlarda izlenir."
   },
   {
-    "id": "d3-k1-pat-056",
+    "id": "prac-odem-017",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 17,
-    "slideTitle": "Kanamanın Klinik Önemi: Hacim, Hız ve Lokalizasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Endometriyuma ait bez ve stromanın myometrium içine doğru büyümesine ne ad verilir?",
+    "slideTitle": "Serebral Ödem Patofizyolojisi: Vazojenik ve Sitotoksik Ödem Mekanizmaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Beyin cerrahisi kliniğinde sağ frontal lobda yüksek dereceli glioblastom tanısıyla takip edilen bir hastanın manyetik rezonans görüntülemesinde (MRG), tümör kitlesini çevreleyen beyaz cevher traktusları boyunca uzanan masif parankimal ödem saptanıyor. Biyokimyasal incelemeler bu ödem sıvısının plazma proteinlerinden zengin olduğunu ve endotelyal sıkı bağlantıların (tight junctions) parçalandığını gösteriyor.\n\nBu klinik ve radyolojik tabloyu oluşturan SEREBRAL ÖDEM TİPİ VE TEMEL PATOGENEZ aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Endometriozis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Endometrit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ektopik gebelik",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Adenomyozis",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Leiomyoma Uteri",
-        "isCorrect": false
-      }
+      "A) Sitotoksik ödem — Nöronal zarlarda Na+/K+ ATPaz pompasının akut genetik mutasyonu",
+      "B) Vazojenik ödem — Kan-beyin bariyerinin yapısal bozulması sonucu ekstraselüler aralığa protein ve sıvı sızması",
+      "C) İnterstisyel ödem — BOS rezorpsiyonunun aşırı artması sonucu araknoid villusların yırtılması",
+      "D) Ozmotik ödem — Sistemik plazma sodyumunun 165 mEq/L düzeyine fırlaması",
+      "E) Sitotoksik ödem — Yalnızca serebellar Purkinje hücrelerinde intraselüler glikojen birikimi"
     ],
-    "correctAnswer": "D",
-    "explanation": "Adenomyozis, endometrial bez ve stromanın miyometriyum içine doğrudan uzanması (myometriyal invazyon) ile karakterizedir ve genellikle uterusun diffüz büyümesine, ağrılı ve bol menstrüel kanamaya yol açar. Endometriozis ise endometrial dokunun uterus dışındaki (over, periton, fallop tüpü gibi) bölgelerde bulunmasını tanımlar; bu ikisi terminolojik olarak sık karıştırılır ancak lokalizasyonları farklıdır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tümörler (glioblastom, metastaz), apseler ve travma çevresinde gelişen ödem 'Vazojenik Ödem'dir. Patogenezinde neovaskülarizasyon veya inflamatuar mediyatörler nedeniyle endotelyal sıkı bağlantıların açılması ve Kan-Beyin Bariyerinin (KBB) yapısal çöküşü yatar. Protein ve sıvı damar dışına çıkarak hücreler arası (ekstraselüler) boşlukta, özellikle direncin az olduğu beyaz cevher traktusları boyunca yayılır. Sitotoksik ödem (A) hücre içi şişmedir ve iskemide görülür. İnterstisyel ödem (C) hidrosefalide periventriküler alanda görülür."
   },
   {
-    "id": "d3-k1-pat-002",
+    "id": "prac-odem-018",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 18,
-    "slideTitle": "Tromboz Patolojisine Giriş: Virchow Triadı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Neoplaziler ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "slideTitle": "Serebral Ödem Morfolojisi ve İntrakraniyal Basınç Artışı Sendromu (İBAS)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Araç içi trafik kazası sonrası kafa travması geçiren 24 yaşındaki bir hastada bilincin giderek kapandığı, fundoskopik bakıda bilateral optik disk sınırlarının silinip kabardığı (papilödem), kan basıncının 190/110 mmHg seviyesine yükseldiği, nabzının dakikada 48 atıma gerilediği (bradikardi) ve solunum paterninin düzensizleştiği tespit ediliyor.\n\nBu hastadaki klinik tabloyu açıklayan 'Cushing Triadı'nın ortaya çıkmasına yol açan TEMEL PATOLOJİK HADİSE aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Karsinomlar daha çok kan damarı yoluyla yayılır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan dolaşımı yoluyla metastazlar en çok iskelet kasına olur",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tümör diferansiyasyonu arttıkça normal hücrelere benzerliği azalır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kan damarı yoluyla metastazlar daha çok arter yoluyla olur",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Benign tümörler bazen malign tümörlerden daha hızlı büyüyebilir",
-        "isCorrect": true
-      }
+      "A) Karotis sinüsünde aterom plağı rüptürü sonucu vagal sinirin primer uyarılması",
+      "B) İntrakraniyal basıncın aşırı yükselmesi ve beyin sapı vazomotor merkezlerinin iskemik kompresyonu",
+      "C) Adrenal medullada feokromositoma krizinin travma ile tetiklenmesi",
+      "D) Renal arter stenozu sonucu glomerüllerden ani renin boşalması",
+      "E) Tirotoksik fırtınaya bağlı tiroid hormonlarının aşırı kardiyak etkisi"
     ],
-    "correctAnswer": "E",
-    "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Cushing Triadı (Hipertansiyon, Bradikardi ve Düzensiz Solunum), aşırı artmış kafa içi basıncının (İBAS) beyin sapını (medulla oblongata) mekanik olarak sıkıştırması ve vazomotor merkezlerde derin iskemiye yol açması sonucu ortaya çıkar. Beyin sapı iskemiyi aşabilmek için sempatik deşarjla sistemik kan basıncını yükseltir (hipertansiyon); aortik ve karotid baroreseptörler bu hipertansiyonu algılayarak refleks vagal bradikardi üretir; solunum merkezlerinin baskılanması ise solunum düzensizliğine yol açar. Karotis plağı (A), feokromositoma (C) veya renal arter stenozu (D) bu tablonun nedeni değildir."
   },
   {
-    "id": "d3-k1-pat-041",
+    "id": "prac-odem-019",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 19,
-    "slideTitle": "Trombüsün Morfolojisi: Zahn Çizgileri ve Postmortem Pıhtı Ayrımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Hemolitik Üremik Sendrom&apos;dan (HÜS) en sık sorumlu olan enfeksiyon etkeni hangisidir?",
+    "slideTitle": "Beyin Herniasyonları I: Subfalsin (Singulat) Herniasyon ve Anterior Arter İskemisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sol serebral hemisferde subdural hematom ve masif vazojenik ödem nedeniyle acil servise getirilen bir hastanın kraniyal bilgisayarlı tomografisinde, sol singulat girusun orta hattı aşarak falx cerebrinin serbest alt kenarının altından sağ hemisfer tarafına doğru belirgin biçimde itildiği (subfalsin herniasyon) ve orta hat şifti oluşturduğu saptanıyor.\n\nBu patolojik süreç sırasında doğrudan mekanik basıya uğrayarak iskemi ve enfarktüs riskiyle karşı karşıya kalan EN KRİTİK ARTERİYEL VASKÜLER YAPI aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "E. Coli (Shiga toksin üreten, O157:H7)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Streptekoklar",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Stafilokoklar",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Pnömokoklar",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Klebsiella",
-        "isCorrect": false
-      }
+      "A) Posterior İnferior Serebellar Arter (PICA)",
+      "B) Anterior Serebral Arter (ACA)",
+      "C) Orta Meningeal Arter",
+      "D) Baziler Arter",
+      "E) Oftalmik Arter"
     ],
-    "correctAnswer": "A",
-    "explanation": "Tipik (tipik/postdiyareik) hemolitik üremik sendromun en sık nedeni, Shiga benzeri toksin üreten E. coli O157:H7 suşları ile oluşan gastrointestinal enfeksiyondur. Bu toksin endotel hasarına, trombositlerin aktivasyonuna ve mikrotrombüs oluşumuna yol açarak akut böbrek yetmezliği, mikroanjiyopatik hemolitik anemi ve trombositopeni triadına neden olur. Atipik HÜS ise komplement düzenleyici protein mutasyonlarına bağlı gelişir ve prognozu daha kötüdür."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Subfalsin (singulat) herniasyonda singulat girus falx cerebrinin sert fibröz alt kenarının altından karşı tarafa kayarken, bu anatomik komşulukta yer alan Anterior Serebral Arteri (ACA) sıkıştırır. ACA oklüzyonu frontal korteksin medial yüzünde iskemik enfarktüse yol açar. PICA (A) tonsiller herniasyonda; orta meningeal arter (C) temporal kemik kırıklarında epidural hematom kaynağı olarak; baziler arter (D) pons basısında rol oynar."
   },
   {
-    "id": "study-q-learn-odem-hiperemi-konjesyon-s20",
+    "id": "prac-odem-020",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 20,
-    "slideTitle": "Arteriyel Trombüsler vs Venöz Trombüsler (Flebotromboz)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": null,
+    "slideTitle": "Beyin Herniasyonları II: Transtentoryal (Unkal) Herniasyon, 3. Sinir ve Duret Kanamaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sağ hemisferik epidural hematom nedeniyle bilinci kapanan 32 yaşındaki bir hastada sağ göz bebeğinin belirgin olarak genişlediği ve ışığa yanıt vermediği (sağ midriazis), sol kol ve bacağında ise flask hemipleji geliştiği saptanıyor. Acil cerrahiye alınamayan hastanın kısa süre sonra derin komaya girdiği ve kaybedildiği bildiriliyor. Otopside mezensefalon ve ponsta orta hatta uzanan çok odaklı alev şeklinde hemorajiler izleniyor.\n\nBu hastada ölüm öncesi gelişen midriazis ve otopside saptanan beyin sapı kanamalarından (Duret kanamaları) sorumlu olan PRİMER HERNİASYON TİPİ aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Arteriyel Trombüsler vs Venöz Trombüsler (Flebotromboz) sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
+      "A) Transtentoryal (Unkal) herniasyon",
+      "B) Subfalsin (Singulat) herniasyon",
+      "C) Transkalvaryal (Dışa) herniasyon",
+      "D) İzole foramen Luschka herniasyonu",
+      "E) Çift taraflı hipofizer herniasyon"
     ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Arteriyel Trombüsler vs Venöz Trombüsler (Flebotromboz)' başlığı altında incelenen bu mekanizma (ARTERİYEL TROMBÜS: Yüksek akımlı ortamda endotel hasarıyla başlar; trombositten zengindir (BEYAZ PIHTI); pıhtı kalbe doğru geriye (RETROGRAD...) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Temporal lob medialindeki unkusun tentorium cerebelli kenarından aşağıya doğru fıtıklaşmasına 'Transtentoryal (Unkal) Herniasyon' denir. Unkusun ilk bastığı yapı aynı taraf 3. kranial sinirdir; parasempatik liflerin felciyle 'ipsilateral midriazis' gelişir. Beyin sapının aşağıya doğru itilip çekilmesi ise baziler arterin paramedyan perforan damarlarını yırtarak mezensefalon ve ponsta ölümcül 'Duret Kanamalarına' neden olur. Subfalsin herniasyon (B) ACA basısı yapar, 3. siniri veya beyin sapını ezmez."
   },
   {
-    "id": "d3-k1-pat-006",
+    "id": "prac-odem-021",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 21,
-    "slideTitle": "Trombüsün Akıbeti: 4 Temel Patolojik Sonlanım",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": "Hücrede ATP azalması sonucu ortaya çıkan durumlardan hangisi doğru değildir?",
+    "slideTitle": "Beyin Herniasyonları III: Tonsiller Herniasyon ve Fatal Beyin Sapı Kompresyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Arka çukurda (serebellumda) masif hematom saptanan bir hastada derin koma hali gelişiyor. Yoğun bakımda izlenirken hastanın solunum eforunun aniden tamamen durduğu (apne), kalp hızının hızla 20/dakikaya gerilediği ve kardiyak arreste girerek resüsitasyona yanıt vermediği gözleniyor. Otopside serebellar tonsillerin foramen magnum sınırını 8 mm aşarak aşağıya doğru uzandığı ve omurilik soğanını (medulla oblongata) ezdiği doğrulanıyor.\n\nBu hastada doğrudan ölüme yol açan HERNİASYON TİPİ VE ETKİLENEN PRİMER VİTAL MERKEZ eşleştirmesi aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Hücre içine Ca++ girişi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hücre içine su girişi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hücre dışına Na+ çıkışı",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Hücre pH&apos;ının azalması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hücre içi glikojende azalma",
-        "isCorrect": false
-      }
+      "A) Tonsiller herniasyon — Medulla oblongatadaki primer kardiyak ve solunum merkezleri",
+      "B) Subfalsin herniasyon — Talamustaki duyusal röle çekirdekleri",
+      "C) Unkal herniasyon — Hipotalamustaki termoregülasyon merkezi",
+      "D) Transsfenoidal herniasyon — Optik kiyazmadaki vizüel lifler",
+      "E) Epifiz herniasyonu — Pinealositlerde melatonin salınım alanı"
     ],
-    "correctAnswer": "C",
-    "explanation": "ATP azaldığında Na+/K+-ATPaz pompası çalışamaz hale gelir; bu da hücre içine Na+ ve suyun girmesine (hücresel şişme) ve hücre içinden K+ çıkışına neden olur; yani Na+ hücreden ÇIKMAZ, tam tersine hücre İÇİNE girer. Aynı zamanda Ca++-ATPaz&apos;ın bozulmasıyla hücre içi Ca++ artar, anaerobik glikoliz artışıyla glikojen tüketilir ve laktik asit birikimiyle hücre içi pH düşer. Dolayısıyla yanlış olan ifade &apos;hücre dışına Na+ çıkışı&apos; seçeneğidir."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Serebellar tonsillerin foramen magnumdan aşağı fıtıklaşmasına 'Tonsiller Herniasyon' denir. Bu tablonun doğrudan ölüme yol açma mekanizması, foramen magnum kemik halkası içinde foranse olan tonsillerin medulla oblongatayı (bulbus) ezmesidir. Medulla oblongatada solunum ve dolaşımı yöneten primer vazomotor ve respiratuar merkezler bulunur; bası dakikalar içinde ani apne ve asistoli yaratır. Diğer şıklardaki yapılar bu mekanizmayı açıklamaz."
   },
   {
-    "id": "study-q-learn-odem-hiperemi-konjesyon-s22",
+    "id": "prac-odem-022",
     "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon, Tromboz ve Kanama",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
     "slideNumber": 22,
-    "slideTitle": "Hemodinamik Bozukluklar Büyük Entegrasyon ve Sınav Özeti",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Dolaşım, Hücre Hasarı ve İltihap (TIP 301)",
-    "question": null,
+    "slideTitle": "Hiperemi ve Konjesyon Karşılaştırması: Aktif Arteriyel Dolum vs Pasif Venöz Göllenme",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Patoloji dersinde hemodinamik bozukluklar konusu tartışılırken bir asistan hekim; akut bakteriyel farenjit odağındaki tonsil dokusu ile sağ kalp yetmezliği olan bir hastanın karaciğer dokusundaki vasküler değişiklikleri karşılaştırmaktadır.\n\nBu iki organda izlenen patolojik vasküler süreçlerin temel özellikleri ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Hemodinamik Bozukluklar Büyük Entegrasyon ve Sınav Özeti sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
+      "A) Akut farenjitteki süreç pasif bir konjesyondur; doku soğuk ve mavidir.",
+      "B) Kalp yetmezliğindeki karaciğer hiperemiktir ve yüksek oksihemoglobin içerir.",
+      "C) Akut farenjitte arteriyol dilatasyonuna bağlı aktif 'hiperemi' (kırmızı-sıcak doku); kalp yetmezliğinde ise venöz drenaj bozukluğuna bağlı pasif 'konjesyon' (siyanotik doku) mevcuttur.",
+      "D) Her iki süreç de prekapiller sfinkterlerin aşırı kasılmasıyla başlayan iskemik tablolardır.",
+      "E) Hiperemi kronik parankimal fibrozise yol açarken, konjesyon doku oksijenlenmesini artırır."
     ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Hemodinamik Bozukluklar Büyük Entegrasyon ve Sınav Özeti' başlığı altında incelenen bu mekanizma (Starling bozukluğunda: Kalp yetmezliği = Hidrostatik artış; Nefrotik/Siroz = Onkotik düşüş; Masif ödem = Anasarka....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle doğrudur. Akut farenjit gibi enflamatuar süreçlerde kimyasal mediyatörlerin (histamin vb.) uyarısıyla arteriyoller genişler ve dokuya bol oksijenli kan akar; bu aktif süreç 'hiperemi'dir (doku eritemli ve sıcaktır). Sağ kalp yetmezliğinde ise vena kava ve hepatik venlerde geriye doğru kan göllenir; bu pasif süreç 'konjesyon'dur (doku deoksihemoglobin nedeniyle siyanotik ve soğuktur). A, B, D ve E seçenekleri bu iki kavramın temel fizyopatolojisini tersine çevirmektedir."
+  },
+  {
+    "id": "prac-odem-023",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 23,
+    "slideTitle": "Akut ve Kronik Pulmoner Konjesyon: Kapiller Ektazi, Mikrohemoraji ve Septal Fibrozis",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Romatizmal kalp hastalığına bağlı ileri derece mitral kapak darlığı tanısı olan 45 yaşındaki bir kadında yıllar içinde efor dispnesi ve kronik öksürük derinleşmiştir. Yapılan akciğer biyopsisinde interalveoler septaların belirgin biçimde kalınlaştığı, kollajenöz fibröz doku artışı gösterdiği ve kapiller bazal membranların sertleştiği izleniyor.\n\nBu hastada alveol septalarında fibrotik kalınlaşmaya yol açan TEMEL PATOFİZYOLOJİK SÜREÇ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut bakteriyel lober pnömoni rezolüsyonu",
+      "B) Kronik sol atriyal ve pulmoner venöz hipertansiyona bağlı kronik pulmoner konjesyon",
+      "C) Alfa-1 antitripsin eksikliğine sekonder panasinöz amfizem gelişimi",
+      "D) Pulmoner arteriyollerde primer amiloid depolanması",
+      "E) Plevral mezotelyoma hücrelerinin interstisyel invazyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Mitral stenozu, sol atriyumun boşalmasını engeller; geriye doğru pulmoner venöz basıncı yıllar boyu yüksek tutar (kronik pasif konjesyon). Pulmoner kapiller yataktaki bu inatçı hidrostatik yük ve kronik interstisyel ödem, fibroblastları uyararak alveol septalarında kalınlaşma ve sekonder fibrozise (skleroz) yol açar. Bakteriyel pnömoni (A), amfizem (C), amiloidoz (D) veya mezotelyoma (E) mitral darlığının bu hemodinamik sürecini yansıtmaz."
+  },
+  {
+    "id": "prac-odem-024",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 24,
+    "slideTitle": "Kalp Yetmezliği Hücreleri ve Akciğerin Kahverengi Endurasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uzun yıllardır kronik iskemik kalp yetmezliği tedavisi gören 72 yaşındaki bir hastanın balgam yaymasında ve ölüm sonrası akciğer histopatolojik kesitlerinde; alveol boşluklarında kümelenmiş, geniş sitoplazmalı, içerisinde yoğun sarı-kahverengi granüler pigment barındıran hücreler saptanıyor. Bu granüllerin kimyasal yapısını doğrulamak amacıyla yapılan Prusya Mavisi (Perls) özel histokimyasal boyamasında sitoplazmik granüllerin kuvvetli pozitif masmavi boyandığı izleniyor.\n\nBu histopatolojik bulguların temsil ettiği hücresel yapı ve içerdiği temel pigment aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+    "options": [
+      "A) Pnömosit tip II hücreleri — Sürfaktan apoproteini",
+      "B) Alveoler makrofajlar (Kalp Yetmezliği Hücreleri) — Hemosiderin",
+      "C) Bronşiyal kadeh (goblet) hücreleri — Asit mukopolisakkarit",
+      "D) İnterstisyel fibroblastlar — Tropokollajen",
+      "E) Eozinofil lökositler — Charcot-Leyden kristalleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Alveol lümenlerinde dökülen eritrositleri yutan ve içerdikleri demiri hemosiderine dönüştüren alveoler makrofajlar 'Kalp Yetmezliği Hücreleri' (Heart Failure Cells) olarak adlandırılır. Hemosiderin demir pigmenti olduğu için Prusya Mavisi boyasında karakteristik olarak parlak mavi boyanır. Pnömositler (A), kadeh hücreleri (C), fibroblastlar (D) veya eozinofiller (E) bu hemosiderofaj profilini ve Prusya mavisi pozitifliğini göstermez."
+  },
+  {
+    "id": "prac-odem-025",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 25,
+    "slideTitle": "Akut Hepatik Konjesyon: Santral Ven Ektazisi, Sinüzoidler ve Sentrilobüler Hipoksi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut masif pulmoner emboli sonrasında akut sağ kalp yetmezliği gelişen 61 yaşındaki bir hastada karaciğer fonksiyon testlerinde ani AST ve ALT fırlaması (şok karaciğeri tablosu) izleniyor. Yapılan karaciğer histopatolojik incelemesinde santral ven çevresindeki hepatosit kordonlarında yaygın iskemik koagülasyon nekrozu ve sinüzoidal eritrosit göllenmesi saptanırken, portal alanların hemen etrafındaki hepatositlerin canlılığını koruduğu ancak sitoplazmalarında yağ vakuolleri barındırdığı görülüyor.\n\nKaraciğer parankiminde iskemik nekrozun öncelikle SANTRAL VEN ÇEVRESİNDE (ZON 3) sınırlı kalmasının TEMEL PATOFİZYOLOJİK NEDENİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Zon 3 hepatositlerinin safra kanaliküllerine en yakın hücre grubu olması",
+      "B) Sinüzoidal kan akımında Zon 3'ün oksijen ve besinden en fakir terminal perfüzyon zonu olması",
+      "C) Glukuronidasyon enzimlerinin yalnızca periportal alanda bulunması",
+      "D) Portal ven kanının doğrudan Zon 3'e boşalarak yüksek oksijen sağlaması",
+      "E) Kupffer hücrelerinin tamamının sentrilobüler alanda kümelenip hepatositleri fagosite etmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Rappaport karaciğer asinüs modelinde kan, portal triaddan (Zon 1) santral vene (Zon 3) doğru akar. Zon 3 hepatositleri sinüzoidal dolaşımın en sonundaki hücrelerdir ve fizyolojik olarak en düşük oksijen parsiyel basıncına sahiptirler. Akut konjesyon veya şokta venöz staz ve perfüzyon düşüşü geliştiğinde, bu hücreler hipoksiye en dayanıksız grup oldukları için ilk olarak sentrilobüler nekroza uğrarlar. Periportal Zon 1 ise hepatik arter girişine yakın olduğu için canlı kalmayı başarır."
+  },
+  {
+    "id": "prac-odem-026",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 26,
+    "slideTitle": "Kronik Pasif Hepatik Konjesyon ve \"Muskat Karaciğeri\" (Nutmeg Liver)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uzun yıllardır kronik kor pulmonale ve konstriktif perikardit tanılarıyla izlenen 67 yaşındaki bir hastanın otopsisinde; karaciğerin belirgin olarak büyüdüğü, kesit yüzeyinde ise koyu kırmızı-kahverengi çökük nekroz odakları ile bunların etrafını çevreleyen açık sarı-kahverengi kabarık canlı parankim adacıklarının iç içe geçerek tipik bir 'muskat cevizi kesiti' deseni oluşturduğu gözleniyor.\n\nBu hastada karaciğer kesit yüzeyinde izlenen AÇIK SARI-KAHVERENGİ ALANLARIN patolojik ve hücresel karşılığı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Santral ven çevresindeki hepatositlerde kazeöz nekroz gelişimi",
+      "B) Periportal alanda canlı kalan hepatositlerde gelişen intraselüler yağlanma (steatoz)",
+      "C) Glisson kapsülünde metastatik karsinom hücre odaklarının birikimi",
+      "D) Sinüzoidleri tamamen tıkayan fibrin trombüsleri ve hyalen membranlar",
+      "E) Safra kanallarında yaygın kalsifikasyon ve taş oluşumu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. 'Muskat karaciğeri' (Nutmeg liver) tablosunda iki zıt alanın kontrastı deseni oluşturur: Koyu kırmızı-kahverengi alanlar kanla dolu, nekroze olmuş ve çökmüş olan 'sentrilobüler (Zon 3)' alanlardır. Açık sarı alanlar ise canlılığını koruyan ancak hipoksiye bağlı olarak intraselüler trigliserit depolayan 'periportal (Zon 1)' hepatositlerin yağlanmasıdır (steatoz). Kazeöz nekroz (A) tüberkülozda görülür; metastaz (C) veya safra taşı (E) muskat desenini açıklamaz."
+  },
+  {
+    "id": "prac-odem-027",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 27,
+    "slideTitle": "Kardiyak Siroz (Kardiyak Skleroz) ve Karaciğer Konjesyonunun İleri Evreleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yirmi yıldır tedaviye dirençli konstriktif perikardit ve ağır sağ kalp yetmezliği bulunan 59 yaşındaki bir hastanın karaciğer iğne biyopsisinde; santral venler etrafında yoğun Tip I kollajen depolanması olduğu, bu fibröz bantların komşu santral venlerle birleşerek 'santral-santral köprüleşme fibrozisi' oluşturduğu ve lobül merkezlerindeki hepatosit kordonlarının atrofiye uğradığı saptanıyor.\n\nBu histopatolojik bulguların temsil ettiği İLERİ EVRE HEMODİNAMİK PATOLOJİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Primer biliyer kolanjit",
+      "B) Wilson hastalığı",
+      "C) Kardiyak siroz (Kardiyak skleroz)",
+      "D) Fokal nodüler hiperplazi",
+      "E) Akut fulminan hepatit A nekrozu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Uzun süreli sağ kalp yetmezliği ve konstriktif perikardite sekonder gelişen ileri evre hepatik konjesyon tablosunda, sentrilobüler hepatosit kaybı yerini fibröz dokuya bırakır. Santral venler çevresinde başlayan ve komşu santral venlere uzanan (santral-santral) köprüleşme fibrozisi 'Kardiyak Siroz'un (kardiyak skleroz) belirleyici özelliğidir. Primer biliyer kolanjitte (A) safra kanalı hasarı; Wilson hastalığında (B) bakır birikimi; fokal nodüler hiperplazide (D) santral stellat skar; hepatit A'da (E) ise masif panasinöz nekroz görülür."
+  },
+  {
+    "id": "prac-odem-028",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 28,
+    "slideTitle": "Kronik Konjestif Splenomegali ve Dalakta Gama-Gandy Cisimcikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Alkolik karaciğer sirozu ve portal venöz hipertansiyon nedeniyle splenektomi yapılan bir hastanın patoloji laboratuvarına gönderilen dalak spesimeni 850 gram ağırlığında (normalin 5 katı) ve ileri derecede sert kıvamda tartılıyor. Dalağın histopatolojik kesitlerinde kırmızı pulpa sinüzoidlerinin belirgin genişlediği ve stromada kollajen lifleri üzerine hemosiderin pigmenti ile kalsiyum tuzlarının çöktüğü odaksal organize siderofibrotik nodüller izleniyor.\n\nBu hastanın dalak dokusunda saptanan patognomonik siderofibrotik nodüllere verilen ÖZEL PATOLOJİK İSİM aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Aschoff cisimcikleri",
+      "B) Gama-Gandy cisimcikleri (Gandy-Gamna nodülleri)",
+      "C) Councilman cisimcikleri",
+      "D) Schaumann cisimcikleri",
+      "E) Michaelis-Gutmann cisimcikleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kronik konjestif splenomegalide sinüzoidal rüptürler sonucu gelişen mikrokanamaların hemosiderin, kalsiyum tuzları ve fibröz doku ile organize olmasıyla oluşan yapılara 'Gama-Gandy Cisimcikleri' (Gandy-Gamna nodülleri) denir. Aschoff cisimcikleri (A) akut romatizmal karditte; Councilman cisimcikleri (C) viral hepatitteki apoptotik hepatositlerde; Schaumann cisimcikleri (D) sarkoidozda; Michaelis-Gutmann cisimcikleri (E) ise malakoplakide izlenir."
+  },
+  {
+    "id": "prac-odem-029",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 29,
+    "slideTitle": "Kanama (Hemoraji) Patolojisine Giriş: Vasküler Bütünlük ve Hemorajik Diyatezler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Klinik patolojide 'Hemorajik Diyatez' kavramı ve kanama oluşturan mekanizmalar değerlendirildiğinde, aşağıdaki durumlardan hangisi KANAMANIN DAMAR DUVARI VEYA PRİMER HEMOSTAZ DÜZEYİNDEKİ bir bozukluğundan ZİYADE sekonder hemostatik (koagülasyon faktör) yetmezliğine bağlıdır?",
+    "options": [
+      "A) İmmün mekanizmalarla periferik kanda trombosit sayısının 15.000/μL düzeyine inmesi",
+      "B) Asetilsalisilik asit (aspirin) kullanımına bağlı siklooksijenaz-1 enzim inhibisyonu",
+      "C) C vitamini eksikliğine (iskorbüt) bağlı kollajen hidroksilasyon defekti ve kapiller kırılganlık",
+      "D) X'e bağlı resesif geçiş gösteren Faktör VIII eksikliği (Hemofili A)",
+      "E) Henoch-Schönlein purpurasında lökositoklastik vaskülit hasarı"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Hemofili A, pıhtılaşma kaskadında yer alan intrensek yol faktörü olan Faktör VIII'in kalıtsal eksikliğidir; yani bu doğrudan bir 'sekonder hemostaz (koagülasyon faktörü)' defektidir. Trombositopeni (A) ve aspirin kullanımı (B) primer hemostazdaki trombosit defektleridir. İskorbüt (C) ve vaskülit (E) ise damar duvarı bütünlüğünü bozan vasküler patolojilerdir."
+  },
+  {
+    "id": "prac-odem-030",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 30,
+    "slideTitle": "Küçük Yüzeyel Kanamalar: Peteşi (1-2 mm) ve Purpura (3-5 mm) Patolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kemoterapi tedavisi görmekte olan 42 yaşındaki bir lösemi hastasında bacaklarda ve ağız mukozasında birdenbire ortaya çıkan, basmakla solmayan, çapları 1-2 mm arasında değişen çok sayıda noktasal koyu kırmızı-mor kanama lezyonları saptanıyor. Tam kan sayımında hemoglobin 10.5 g/dL, lökosit 3.200/μL ve trombosit sayısı 12.000/μL (ağır trombositopeni) olarak rapor ediliyor.\n\nBu hastada saptanan 1-2 mm çapındaki yüzeyel kanama lezyonlarına verilen ÖZEL PATOLOJİK İSİM aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Ekimoz",
+      "B) Peteşi",
+      "C) Hematom",
+      "D) Hemartroz",
+      "E) Telanjiyektazi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Deri ve müköz membranlarda 1 ila 2 mm çapında noktasal, basmakla solmayan kanama odaklarına 'Peteşi' (Petechiae) denir. Ağır trombositopeni (<20.000/μL) peteşinin en klasik ve doğrudan nedenidir. Çapı 3-5 mm olanlara purpura; 1-2 cm'den büyük olan deri altı kanamalara ekimoz (A); dokuda kitle oluşturan kan birikimlerine hematom (C); eklem içine kanamaya ise hemartroz (D) denir. Telanjiyektazi (E) ise kalıcı kapiller genişlemedir ve diaskopide solar."
+  },
+  {
+    "id": "prac-odem-031",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 31,
+    "slideTitle": "Ekimoz (>1-2 cm) ve Hematom: Deri Altı Kanama ve Dokudaki Kitle Etkisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sol temporal kemiğe gelen sert bir cisim travması sonrası acil servise getirilen ve lucid interval (geçici iyileşme dönemi) sonrası hızla bilinci kapanan 19 yaşındaki bir gencin beyin tomografisinde; sol temporoparyetal bölgede durayı kemikten ayıran, bikonveks (mercek şeklinde) hiperdens kitle oluşturan ve orta hat yapılarını belirgin şekilde sağa iten 45 mililitrelik akut kan koleksiyonu izleniyor.\n\nBu hastada intrakraniyal boşlukta gelişerek kitle etkisi yapan bu kan koleksiyonunu tanımlayan EN UYGUN PATOLOJİK TERİM aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Subkütan ekimoz",
+      "B) Epidural hematom",
+      "C) Peteşiyal hemoraji",
+      "D) Hemotoraks",
+      "E) Senil purpura"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Temporal kemik kırıklarında arteria meningea medianın yırtılması sonucu dura mater ile kafatası kemiği arasında kitle oluşturan kan birikimine 'Epidural Hematom' adı verilir. Dokuda yer kaplayan ve kitle etkisi yaratan kan koleksiyonları hematom olarak adlandırılır. Ekimoz (A) ve purpura (E) cilt altı yüzeyel kanamalardır; peteşi (C) noktasal 1-2 mm kanamalardır; hemotoraks (D) ise plevral boşluktaki kanamadır."
+  },
+  {
+    "id": "prac-odem-032",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 32,
+    "slideTitle": "Hematomda Renk Değişiminin Biyokimyasal Kronolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uyluğuna sert bir futbol darbesi alan 22 yaşındaki bir sporcunun uyluk ön yüzünde başlangıçta mor-mavi renkli olan geniş ekimoz alanının, travmadan 5 gün sonra belirgin biçimde sarı-yeşil bir renk tonuna dönüştüğü gözleniyor.\n\nBu hematom odağında 5. günde gözlenen SARI-YEŞİL RENK DEĞİŞİKLİĞİNDEN doğrudan sorumlu olan biyokimyasal hemoglobin yıkım ürünleri aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+    "options": [
+      "A) Melanin ve lipofuscin",
+      "B) Biliverdin ve bilirubin",
+      "C) Karboksihemoglobin ve methemoglobin",
+      "D) Ürik asit kristalleri ve kalsiyum pirofosfat",
+      "E) Fibrinojen ve D-dimer kompleksleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Doku içi kanamada (ekimoz) dökülen eritrositler makrofajlar tarafından fagosite edilir. Makrofajlardaki heme oksijenaz enzimi hemoglobini parçalayarak yeşil renkli 'biliverdin'e, ardından 'bilirubin'e (sarı-yeşil) dönüştürür. Bu durum lezyonun sarı-yeşil renk almasını sağlar. Daha sonra demir hemosiderine (altın sarısı-kahverengi) dönüşür. Melanin/lipofuscin (A), karboksihemoglobin (C), ürik asit (D) veya fibrin (E) bu renk evriminde rol almaz."
+  },
+  {
+    "id": "prac-odem-033",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 33,
+    "slideTitle": "Seröz Boşluk Kanamaları: Hemotoraks, Hemoperiton, Hemartroz ve Tamponad",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut anterior miyokard enfarktüsü nedeniyle koroner yoğun bakım ünitesinde izlenen 66 yaşındaki bir erkek hastada, enfarktüsün 5. gününde aniden şiddetli göğüs ağrısı, derin hipotansiyon (kan basıncı 60/40 mmHg), boyun venlerinde ileri derecede dolgunluk ve oskültasyonda kalp seslerinin adeta duyulamayacak kadar derinden gelmesi tablosu gelişiyor ve hasta elektromekanik disosiyasyon ile kaybediliyor. Otopside perikardiyal kese içerisinde 280 mililitre pıhtılaşmış taze kan ve sol ventrikül anterior serbest duvarında transmural bir yırtık saptanıyor.\n\nBu hastada doğrudan ölüme yol açan HEMODİNAMİK MEKANİZMA VE KLİNİK TABLO aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hemoperikardiyum ve Kardiyak Tamponad",
+      "B) İntraalveoler hemorajiye bağlı asfiksi",
+      "C) Masif hemotoraksa bağlı trakeal deviasyon",
+      "D) İzole hemoperitoneum ve hipovolemik şok",
+      "E) İnterkostal hematom ve torasik kompartman sendromu"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Miyokard enfarktüsünün 3-7. günlerinde makrofajların nekrotik miyositleri temizlemesi ve dokunun en zayıf evrede olması nedeniyle 'miyokard serbest duvar rüptürü' gelişebilir. Ventriküldeki yüksek basınçlı kan hızla perikardiyal keseye dolar (Hemoperikardiyum). Rijit perikard esneyemediği için 200-300 ml kan diyastolik dolumu tamamen bloke eder ve 'Kardiyak Tamponad' oluşturur. Gelişen klinik tablo klasik Beck triadıdır (hipotansiyon, juguler venöz dolgunluk, derinden gelen kalp sesleri). Olay plevrada (C), batında (D) veya alveolde (B) değildir."
+  },
+  {
+    "id": "prac-odem-034",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 34,
+    "slideTitle": "Kanama Hacmi, Hızı, Anatomik Lokalizasyonu ve Demir Metabolizması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Patoloji stajında demir metabolizması ve kanama tipleri arasındaki ilişkiyi inceleyen bir tıp öğrencisi; kronik mide ülserine bağlı dışkıda gizli kanaması olan bir hasta ile trafik kazası sonrası uyluk derin kas dokusu içinde masif hematom gelişen bir hastanın hematolojik parametrelerini karşılaştırmaktadır.\n\nBu iki hastanın uzun dönem hematolojik ve metabolik sonuçları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Mide ülseri hastasında demir dışkıyla kaybedilmediği için eritropoiez hızla artar.",
+      "B) Uyluk içi hematomu olan hastada demir doku makrofajlarınca geri kazanıldığından demir eksikliği anemisi gelişmez; aşırı hemolize bağlı sarılık gelişebilir.",
+      "C) Uyluk içi hematomu olan hastada eritrositler vücut dışına atıldığı için ağır demir eksikliği anemisi kaçınılmazdır.",
+      "D) Her iki hastada da demir depoları eşit oranda tükenir ve ferritin düzeyleri sıfırlanır.",
+      "E) Mide ülserinde dış kanama olduğu için serbest bilirubin hızla yükselerek masif nükleer sarılığa yol açar."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Kanamanın dışarıya mı yoksa kapalı bir iç kompartmana mı olduğu demir homeostazının temel belirleyicisidir: Uyluk kas içi hematomu gibi iç kanamalarda eritrositler vücut içinde hapsolur; makrofajlar lizise uğrayan eritrositlerdeki demiri hemosiderin ve ferritin üzerinden tamamen geri kazanarak yeniden kullanıma sokar. Bu nedenle iç hematomlarda demir eksikliği anemisi GELİŞMEZ. Ancak parçalanan devasa hem miktarı indirekt bilirubine dönüşerek hastada geçici sarılık (ikter) yaratabilir. Mide ülserinde ise kan ve demir gastrointestinal yoldan dış ortama atıldığı için demir eksikliği anemisi gelişir. Diğer seçenekler bu temel fizyopatolojiyi ihlal etmektedir."
   },
   {
     "id": "prac-acs-001",
@@ -3102,233 +2890,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "Önceden var olan romatizmal mitral darlığının gebeliğin hemodinamik yüküyle dekompanse olması 'Dolaylı Obstetrik Ölüm' nedenidir. Atoni, eklampsi, amniyon sıvı embolisi ve plasenta previa ise doğrudan obstetrik sürece bağlı gelişen 'Doğrudan Obstetrik Ölüm' nedenleridir."
-  },
-  {
-    "id": "prac-acs-005",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 5,
-    "slideTitle": "Bebek Ölüm Hızı (BÖH / IMR): Tanımı, Hesaplama ve Sosyoekonomik Önemi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Bir ilde bir yıl içinde 20.000 canlı doğum gerçekleşmiş, aynı yıl içinde 1 yaşını doldurmadan ölen bebek sayısı 200 olarak tespit edilmiştir. Bu ilin Bebek Ölüm Hızı (BÖH) binde kaçtır?",
-    "options": [
-      "A) Binde 1",
-      "B) Binde 5",
-      "C) Binde 10",
-      "D) Binde 20",
-      "E) Binde 100"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Bebek Ölüm Hızı = (0-1 Yaş Ölümleri / Canlı Doğum Sayısı) * 1.000 = (200 / 20.000) * 1.000 = Binde 10'dur."
-  },
-  {
-    "id": "prac-acs-006",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 6,
-    "slideTitle": "Neonatal Ölüm Hızı: Erken vs Geç Neonatal Dönem ve Doğum Hizmetleri Kalitesi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki sağlık göstergelerinden hangisi doğrudan doğum salonu şartları, obstetrik bakım kalitesi, intrapartum asfiksi ve yenidoğan yoğun bakım hizmetlerinin etkinliğini en duyarlı yansıtır?",
-    "options": [
-      "A) Post-neonatal ölüm hızı",
-      "B) Erken neonatal ölüm hızı",
-      "C) Kaba ölüm hızı",
-      "D) Genel doğurganlık hızı",
-      "E) Anne ölüm hızı"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Erken neonatal ölüm hızı (0-7 gün ölümleri), prematürite, RDS, intrapartum asfiksi ve konjenital anomaliler kaynaklı olup doğrudan prenatal bakım, doğum salonu ve obstetrik bakım kalitesinin aynasıdır. Post-neonatal dönem ise çevre ve beslenme koşullarını yansıtır."
-  },
-  {
-    "id": "prac-acs-007",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 7,
-    "slideTitle": "Post-Neonatal, Beş Yaş Altı ve Perinatal Ölüm Hızları",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Perinatal Ölüm Hızı (PÖH) hesaplanırken kullanılan formülün pay ve paydasında yer alan bileşenler aşağıdakilerden hangisinde eksiksiz ve doğru olarak verilmiştir?",
-    "options": [
-      "A) Pay: 0-28 gün ölümleri / Payda: Canlı doğum sayısı * 1.000",
-      "B) Pay: 28. hafta sonrası ölü doğumlar + Erken neonatal ölümler / Payda: Toplam doğum sayısı (Canlı + Ölü) * 1.000",
-      "C) Pay: 28. hafta sonrası ölü doğumlar + Tüm neonatal ölümler / Payda: Canlı doğum sayısı * 1.000",
-      "D) Pay: İlk 7 gün ölümleri / Payda: 15-49 yaş kadın nüfusu * 100.000",
-      "E) Pay: 0-1 yaş ölümleri / Payda: Toplam nüfus * 1.000"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Perinatal ölüm hızı, 28. gebelik haftasından sonraki ölü doğumlar ile ilk 7 gün içindeki erken neonatal ölümlerin toplamının TOPLAM DOĞUM (Canlı + Ölü) sayısına bölünüp 1.000 ile çarpılmasıyla hesaplanır."
-  },
-  {
-    "id": "prac-acs-008",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 8,
-    "slideTitle": "Doğum Öncesi Bakım (DÖB) Felsefesi, Tarihçesi ve Kessner İndeksi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Kessner İndeksi'ne göre bir gebenin 'yeterli doğum öncesi bakım' aldığının kabul edilebilmesi için gereken asgari kriterler aşağıdakilerden hangisinde tam olarak verilmiştir?",
-    "options": [
-      "A) Bakımın 2. trimesterde başlaması, en az 6 kez izlem yapılması ve hastanede olması",
-      "B) Bakımın ilk 3 ay içinde başlaması, gebelik boyunca en az 4 kez yapılması ve eğitimli sağlık personeli tarafından verilmesi",
-      "C) Doğum öncesinde en az 1 kez ultrason yapılması ve kan tahlillerinin eksiksiz olması",
-      "D) Gebeliğin son ayında haftada bir aile hekimine başvurulması",
-      "E) Doğumun mutlaka üniversite hastanesinde sezaryen ile planlanmış olması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kessner İndeksi'ne göre yeterli bakımın 3 vazgeçilmez kriteri vardır: İlk izlemin gebeliğin ilk 3 ayı içinde başlaması, gebelik boyunca en az 4 izlem yapılması ve bakımın yetkin/eğitimli bir sağlık personeli tarafından sunulmasıdır."
-  },
-  {
-    "id": "prac-acs-009",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 9,
-    "slideTitle": "T.C. Sağlık Bakanlığı Güncel DÖB Protokolü ve İzlem Takvimi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "T.C. Sağlık Bakanlığı Doğum Öncesi Bakım Yönetim Rehberi'ne göre komplikasyonsuz normal bir gebelikte yapılması gereken 2. ve 3. izlemlerin önerilen gebelik haftaları aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
-    "options": [
-      "A) 2. İzlem: 10-14. hafta — 3. İzlem: 20-24. hafta",
-      "B) 2. İzlem: 18-24. hafta — 3. İzlem: 30-32. hafta",
-      "C) 2. İzlem: 14-18. hafta — 3. İzlem: 24-28. hafta",
-      "D) 2. İzlem: 24-28. hafta — 3. İzlem: 36-38. hafta",
-      "E) 2. İzlem: 16-20. hafta — 3. İzlem: 32-36. hafta"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Sağlık Bakanlığı güncel protokolüne göre: 1. izlem 0-14. hafta, 2. izlem 18-24. hafta, 3. izlem 30-32. hafta ve 4. izlem 36-38. haftalar arasında yapılmalıdır."
-  },
-  {
-    "id": "prac-acs-010",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 10,
-    "slideTitle": "DÖB 1. İzlem (İlk 14 Hafta): Kapsamlı Anamnez, Risk Değerlendirmesi ve Klinik Muayene",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Son adet tarihinin (SAT) ilk günü 10 Mayıs 2025 olan sağlıklı bir gebenin Naegele kuralına göre tahmini doğum tarihi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) 17 Şubat 2026",
-      "B) 17 Ocak 2026",
-      "C) 3 Şubat 2026",
-      "D) 17 Mart 2026",
-      "E) 10 Şubat 2026"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Naegele kuralı: Gün + 7, Ay - 3, Yıl + 1. Gün: 10 + 7 = 17. Ay: Mayıs (5. ay) - 3 = Şubat (2. ay). Yıl: 2025 + 1 = 2026. Tahmini doğum tarihi 17 Şubat 2026'dır."
-  },
-  {
-    "id": "prac-acs-011",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 11,
-    "slideTitle": "DÖB 1. İzlem Laboratuvar Paneli ve Fetal Anomali Tarama Testleri",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "16 haftalık bir gebenin ikinci trimester üçlü anomali tarama testinde maternal serum parametreleri değerlendiriliyor. Fetusunda Down Sendromu (Trizomi 21) bulunan bir gebede bu belirteçlerin beklenen yönü aşağıdakilerden hangisidir?",
-    "options": [
-      "A) AFP yüksek — uE3 yüksek — hCG düşük",
-      "B) AFP düşük — uE3 düşük — hCG yüksek",
-      "C) AFP yüksek — uE3 düşük — hCG düşük",
-      "D) AFP normal — uE3 yüksek — hCG yüksek",
-      "E) AFP düşük — uE3 yüksek — hCG normal"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Down Sendromu (Trizomi 21) taramasında karakteristik biyokimyasal profil: Maternal serum Alfa-Fetoprotein (AFP) DÜŞÜK, Serbest Estriol (uE3) DÜŞÜK, hCG ise YÜKSEKTİR. (Dörtlü testte İnhibin-A da yüksektir)."
-  },
-  {
-    "id": "prac-acs-012",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 12,
-    "slideTitle": "DÖB 2. İzlem (18-24. Hafta): Fetal Büyüme, Fundus Yüksekliği, Rh Uyuşmazlığı ve OGTT",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Komplikasyonsuz seyreden 20 haftalık gebe bir kadının fizik muayenesinde uterus fundusunun anatomik olarak hangi seviyede palpe edilmesi beklenir?",
-    "options": [
-      "A) Simfizis pubis üst kenarında",
-      "B) Simfizis pubis ile umbilicus'un tam orta noktasında",
-      "C) Tam umbilicus (göbek) seviyesinde",
-      "D) Ksifoid çıkıntı seviyesinde",
-      "E) Ksifoid çıkıntı ile göbek ortasında"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Normal gebelikte 12. haftada fundus simfizis pubis seviyesinde; 16. haftada simfizis-göbek ortasında; 20. haftada ise tam göbek (umbilicus) hizasındadır. 36. haftada ksifoid çıkıntıya ulaşır."
-  },
-  {
-    "id": "prac-acs-013",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 13,
-    "slideTitle": "DÖB 3. ve 4. İzlemler (30-32 ve 36-38. Haftalar): Prezentasyon, Leopold Manevraları ve Doğum Planı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "37 haftalık bir gebenin muayenesinde hekim, ellerini uterusun her iki yan duvarına yerleştirerek bir tarafta düz, sert ve dirençli bir yüzey; diğer tarafta ise küçük nodüler hareketli parçalar palpe ediyor. Bu muayene hangi Leopold manevrasıdır ve temel klinik amacı nedir?",
-    "options": [
-      "A) 1. Leopold Manevrası — Fundustaki fetal kutbu belirlemek",
-      "B) 2. Leopold Manevrası — Fetal sırtı bularak FKS dinleme odağını saptamak",
-      "C) 3. Leopold Manevrası — Pawlik tutuşuyla prezentasyonu saptamak",
-      "D) 4. Leopold Manevrası — Fetusun pelvise angaje olup olmadığını değerlendirmek",
-      "E) Vajinal tuşe — Servikal dilatasyon ve efasmanı ölçmek"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Uterusun iki yan duvarına eller konularak düz-dirençli fetal sırt ile ekstremitelerin palpe edilmesi 2. Leopold Manevrasıdır. Fetal sırtın yeri saptanarak Fetal Kalp Seslerinin (FKS) en net duyulacağı odak belirlenir."
-  },
-  {
-    "id": "prac-acs-014",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 14,
-    "slideTitle": "Gebelikte Tehlike İşaretleri ve İvedi Sevk Kriterleri",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "32 haftalık bir gebe aile sağlığı merkezine rutin kontrole geliyor. Yapılan değerlendirmede aşağıdaki bulgulardan hangisinin varlığı, hastanın derhal ikinci/üçüncü basamak bir hastaneye ACİL SEVK EDİLMESİNİ GEREKTİRMEZ?",
-    "options": [
-      "A) Kan basıncının 150/95 mmHg ve idrar striptinde protein 2+ bulunması",
-      "B) Laboratuvar tahlilinde hemoglobin düzeyinin 6.2 g/dl saptanması",
-      "C) Gebe tarafından epigastrik bölgede şiddetli ağrı ve görmede parıltılar tariflenmesi",
-      "D) Akşamları ayak bileklerinde ortaya çıkan ve dinlenmekle gerileyen hafif pretibial ödem",
-      "E) Fetal kalp seslerinin el doppleri ile dakikada 95 vuru (bradikardi) olarak duyulması"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Akşamları ayak bileklerinde oluşan ve istirahatle gerileyen ödem, venöz basıya bağlı normal 'fizyolojik ödem'dir; tansiyon ve idrar normalse sevk gerektirmez. Preeklampsi bulguları (A, C), Hb < 7 g/dl (B) ve fetal bradikardi (E) ise mutlak acil sevk gerektirir."
-  },
-  {
-    "id": "prac-acs-015",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 15,
-    "slideTitle": "Gebelikte Fizyolojik Değişiklikler, Kilo Artışı Dinamikleri ve Ödem",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Gebelikte kilo artışı ve ödem mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE KLİNİK OLARAK YANLIŞTIR?",
-    "options": [
-      "A) Normal kilolu bir kadında gebelik boyunca beklenen toplam kilo artışı ortalama 9-13 kg'dır",
-      "B) İlk trimesterde annenin toplam 1-1.5 kg, sonrasında ayda ortalama 1.5-2 kg alması beklenir",
-      "C) Plazma hacminin eritrosit kitlesinden fazla artması fizyolojik hemodilüsyon anemisine yol açar",
-      "D) Sabahları yüzde ve ellerde aniden gelişen ödem preeklampsi açısından patolojik bir tehlike işaretidir",
-      "E) Akşamları ayak bileklerinde oluşan ödem doğrudan akut glomerülonefrit göstergesidir ve gebelikte asla görülmez"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Akşamları ayak bileklerinde görülen ödem gebelikte son derece yaygın olan fizyolojik bir durumdur (vena kava inferiora bası ve venöz staz sonucu). Glomerülonefrit göstergesi değildir. Diğer tüm seçenekler gebelik fizyolojisine uygun doğru ifadelerdir."
-  },
-  {
-    "id": "prac-acs-016",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
-    "slideNumber": 16,
-    "slideTitle": "Gebelik Toksemileri: Gestasyonel Hipertansiyon, Preeklampsi ve Eklampsi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "34 haftalık bir gebenin izleminde kan basıncı 155/100 mmHg ölçülüyor. İdrar tahlilinde proteinüri saptanmayan hastanın laboratuvarında trombosit sayısı 75.000/μL ve AST/ALT düzeyleri normalin 3 katı bulunuyor. Bu hastanın tanısı ve konvülsiyon profilaksisinde ilk tercih edilecek ilaç aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Gestasyonel Hipertansiyon — Diazepam",
-      "B) Preeklampsi — Magnezyum Sülfat",
-      "C) Kronik Hipertansiyon — Fenitoin",
-      "D) Eklampsi — Sodyum Nitroprussid",
-      "E) HELLP Sendromu — Mannitol"
-    ],
-    "correctAnswer": 1,
-    "explanation": "20. haftadan sonra tansiyon yüksekliğine eşlik eden trombositopeni (<100.000) ve KC enzim yüksekliği proteinüri olmasa dahi Preeklampsi tanısı koydurur. Konvülsiyon profilaksisinde altın standart ilaç Magnezyum Sülfattır."
   }
 ]

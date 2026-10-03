@@ -1,5 +1,233 @@
 [
   {
+    "id": "prac-acs-005",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 5,
+    "slideTitle": "Bebek Ölüm Hızı (BÖH / IMR): Tanımı, Hesaplama ve Sosyoekonomik Önemi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Bir ilde bir yıl içinde 20.000 canlı doğum gerçekleşmiş, aynı yıl içinde 1 yaşını doldurmadan ölen bebek sayısı 200 olarak tespit edilmiştir. Bu ilin Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "options": [
+      "A) Binde 1",
+      "B) Binde 5",
+      "C) Binde 10",
+      "D) Binde 20",
+      "E) Binde 100"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Bebek Ölüm Hızı = (0-1 Yaş Ölümleri / Canlı Doğum Sayısı) * 1.000 = (200 / 20.000) * 1.000 = Binde 10'dur."
+  },
+  {
+    "id": "prac-acs-006",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 6,
+    "slideTitle": "Neonatal Ölüm Hızı: Erken vs Geç Neonatal Dönem ve Doğum Hizmetleri Kalitesi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki sağlık göstergelerinden hangisi doğrudan doğum salonu şartları, obstetrik bakım kalitesi, intrapartum asfiksi ve yenidoğan yoğun bakım hizmetlerinin etkinliğini en duyarlı yansıtır?",
+    "options": [
+      "A) Post-neonatal ölüm hızı",
+      "B) Erken neonatal ölüm hızı",
+      "C) Kaba ölüm hızı",
+      "D) Genel doğurganlık hızı",
+      "E) Anne ölüm hızı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Erken neonatal ölüm hızı (0-7 gün ölümleri), prematürite, RDS, intrapartum asfiksi ve konjenital anomaliler kaynaklı olup doğrudan prenatal bakım, doğum salonu ve obstetrik bakım kalitesinin aynasıdır. Post-neonatal dönem ise çevre ve beslenme koşullarını yansıtır."
+  },
+  {
+    "id": "prac-acs-007",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 7,
+    "slideTitle": "Post-Neonatal, Beş Yaş Altı ve Perinatal Ölüm Hızları",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Perinatal Ölüm Hızı (PÖH) hesaplanırken kullanılan formülün pay ve paydasında yer alan bileşenler aşağıdakilerden hangisinde eksiksiz ve doğru olarak verilmiştir?",
+    "options": [
+      "A) Pay: 0-28 gün ölümleri / Payda: Canlı doğum sayısı * 1.000",
+      "B) Pay: 28. hafta sonrası ölü doğumlar + Erken neonatal ölümler / Payda: Toplam doğum sayısı (Canlı + Ölü) * 1.000",
+      "C) Pay: 28. hafta sonrası ölü doğumlar + Tüm neonatal ölümler / Payda: Canlı doğum sayısı * 1.000",
+      "D) Pay: İlk 7 gün ölümleri / Payda: 15-49 yaş kadın nüfusu * 100.000",
+      "E) Pay: 0-1 yaş ölümleri / Payda: Toplam nüfus * 1.000"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Perinatal ölüm hızı, 28. gebelik haftasından sonraki ölü doğumlar ile ilk 7 gün içindeki erken neonatal ölümlerin toplamının TOPLAM DOĞUM (Canlı + Ölü) sayısına bölünüp 1.000 ile çarpılmasıyla hesaplanır."
+  },
+  {
+    "id": "prac-acs-008",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 8,
+    "slideTitle": "Doğum Öncesi Bakım (DÖB) Felsefesi, Tarihçesi ve Kessner İndeksi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Kessner İndeksi'ne göre bir gebenin 'yeterli doğum öncesi bakım' aldığının kabul edilebilmesi için gereken asgari kriterler aşağıdakilerden hangisinde tam olarak verilmiştir?",
+    "options": [
+      "A) Bakımın 2. trimesterde başlaması, en az 6 kez izlem yapılması ve hastanede olması",
+      "B) Bakımın ilk 3 ay içinde başlaması, gebelik boyunca en az 4 kez yapılması ve eğitimli sağlık personeli tarafından verilmesi",
+      "C) Doğum öncesinde en az 1 kez ultrason yapılması ve kan tahlillerinin eksiksiz olması",
+      "D) Gebeliğin son ayında haftada bir aile hekimine başvurulması",
+      "E) Doğumun mutlaka üniversite hastanesinde sezaryen ile planlanmış olması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Kessner İndeksi'ne göre yeterli bakımın 3 vazgeçilmez kriteri vardır: İlk izlemin gebeliğin ilk 3 ayı içinde başlaması, gebelik boyunca en az 4 izlem yapılması ve bakımın yetkin/eğitimli bir sağlık personeli tarafından sunulmasıdır."
+  },
+  {
+    "id": "prac-acs-009",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 9,
+    "slideTitle": "T.C. Sağlık Bakanlığı Güncel DÖB Protokolü ve İzlem Takvimi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "T.C. Sağlık Bakanlığı Doğum Öncesi Bakım Yönetim Rehberi'ne göre komplikasyonsuz normal bir gebelikte yapılması gereken 2. ve 3. izlemlerin önerilen gebelik haftaları aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
+    "options": [
+      "A) 2. İzlem: 10-14. hafta — 3. İzlem: 20-24. hafta",
+      "B) 2. İzlem: 18-24. hafta — 3. İzlem: 30-32. hafta",
+      "C) 2. İzlem: 14-18. hafta — 3. İzlem: 24-28. hafta",
+      "D) 2. İzlem: 24-28. hafta — 3. İzlem: 36-38. hafta",
+      "E) 2. İzlem: 16-20. hafta — 3. İzlem: 32-36. hafta"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sağlık Bakanlığı güncel protokolüne göre: 1. izlem 0-14. hafta, 2. izlem 18-24. hafta, 3. izlem 30-32. hafta ve 4. izlem 36-38. haftalar arasında yapılmalıdır."
+  },
+  {
+    "id": "prac-acs-010",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 10,
+    "slideTitle": "DÖB 1. İzlem (İlk 14 Hafta): Kapsamlı Anamnez, Risk Değerlendirmesi ve Klinik Muayene",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Son adet tarihinin (SAT) ilk günü 10 Mayıs 2025 olan sağlıklı bir gebenin Naegele kuralına göre tahmini doğum tarihi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) 17 Şubat 2026",
+      "B) 17 Ocak 2026",
+      "C) 3 Şubat 2026",
+      "D) 17 Mart 2026",
+      "E) 10 Şubat 2026"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Naegele kuralı: Gün + 7, Ay - 3, Yıl + 1. Gün: 10 + 7 = 17. Ay: Mayıs (5. ay) - 3 = Şubat (2. ay). Yıl: 2025 + 1 = 2026. Tahmini doğum tarihi 17 Şubat 2026'dır."
+  },
+  {
+    "id": "prac-acs-011",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 11,
+    "slideTitle": "DÖB 1. İzlem Laboratuvar Paneli ve Fetal Anomali Tarama Testleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "16 haftalık bir gebenin ikinci trimester üçlü anomali tarama testinde maternal serum parametreleri değerlendiriliyor. Fetusunda Down Sendromu (Trizomi 21) bulunan bir gebede bu belirteçlerin beklenen yönü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) AFP yüksek — uE3 yüksek — hCG düşük",
+      "B) AFP düşük — uE3 düşük — hCG yüksek",
+      "C) AFP yüksek — uE3 düşük — hCG düşük",
+      "D) AFP normal — uE3 yüksek — hCG yüksek",
+      "E) AFP düşük — uE3 yüksek — hCG normal"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Down Sendromu (Trizomi 21) taramasında karakteristik biyokimyasal profil: Maternal serum Alfa-Fetoprotein (AFP) DÜŞÜK, Serbest Estriol (uE3) DÜŞÜK, hCG ise YÜKSEKTİR. (Dörtlü testte İnhibin-A da yüksektir)."
+  },
+  {
+    "id": "prac-acs-012",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 12,
+    "slideTitle": "DÖB 2. İzlem (18-24. Hafta): Fetal Büyüme, Fundus Yüksekliği, Rh Uyuşmazlığı ve OGTT",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Komplikasyonsuz seyreden 20 haftalık gebe bir kadının fizik muayenesinde uterus fundusunun anatomik olarak hangi seviyede palpe edilmesi beklenir?",
+    "options": [
+      "A) Simfizis pubis üst kenarında",
+      "B) Simfizis pubis ile umbilicus'un tam orta noktasında",
+      "C) Tam umbilicus (göbek) seviyesinde",
+      "D) Ksifoid çıkıntı seviyesinde",
+      "E) Ksifoid çıkıntı ile göbek ortasında"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Normal gebelikte 12. haftada fundus simfizis pubis seviyesinde; 16. haftada simfizis-göbek ortasında; 20. haftada ise tam göbek (umbilicus) hizasındadır. 36. haftada ksifoid çıkıntıya ulaşır."
+  },
+  {
+    "id": "prac-acs-013",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 13,
+    "slideTitle": "DÖB 3. ve 4. İzlemler (30-32 ve 36-38. Haftalar): Prezentasyon, Leopold Manevraları ve Doğum Planı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "37 haftalık bir gebenin muayenesinde hekim, ellerini uterusun her iki yan duvarına yerleştirerek bir tarafta düz, sert ve dirençli bir yüzey; diğer tarafta ise küçük nodüler hareketli parçalar palpe ediyor. Bu muayene hangi Leopold manevrasıdır ve temel klinik amacı nedir?",
+    "options": [
+      "A) 1. Leopold Manevrası — Fundustaki fetal kutbu belirlemek",
+      "B) 2. Leopold Manevrası — Fetal sırtı bularak FKS dinleme odağını saptamak",
+      "C) 3. Leopold Manevrası — Pawlik tutuşuyla prezentasyonu saptamak",
+      "D) 4. Leopold Manevrası — Fetusun pelvise angaje olup olmadığını değerlendirmek",
+      "E) Vajinal tuşe — Servikal dilatasyon ve efasmanı ölçmek"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Uterusun iki yan duvarına eller konularak düz-dirençli fetal sırt ile ekstremitelerin palpe edilmesi 2. Leopold Manevrasıdır. Fetal sırtın yeri saptanarak Fetal Kalp Seslerinin (FKS) en net duyulacağı odak belirlenir."
+  },
+  {
+    "id": "prac-acs-014",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 14,
+    "slideTitle": "Gebelikte Tehlike İşaretleri ve İvedi Sevk Kriterleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "32 haftalık bir gebe aile sağlığı merkezine rutin kontrole geliyor. Yapılan değerlendirmede aşağıdaki bulgulardan hangisinin varlığı, hastanın derhal ikinci/üçüncü basamak bir hastaneye ACİL SEVK EDİLMESİNİ GEREKTİRMEZ?",
+    "options": [
+      "A) Kan basıncının 150/95 mmHg ve idrar striptinde protein 2+ bulunması",
+      "B) Laboratuvar tahlilinde hemoglobin düzeyinin 6.2 g/dl saptanması",
+      "C) Gebe tarafından epigastrik bölgede şiddetli ağrı ve görmede parıltılar tariflenmesi",
+      "D) Akşamları ayak bileklerinde ortaya çıkan ve dinlenmekle gerileyen hafif pretibial ödem",
+      "E) Fetal kalp seslerinin el doppleri ile dakikada 95 vuru (bradikardi) olarak duyulması"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Akşamları ayak bileklerinde oluşan ve istirahatle gerileyen ödem, venöz basıya bağlı normal 'fizyolojik ödem'dir; tansiyon ve idrar normalse sevk gerektirmez. Preeklampsi bulguları (A, C), Hb < 7 g/dl (B) ve fetal bradikardi (E) ise mutlak acil sevk gerektirir."
+  },
+  {
+    "id": "prac-acs-015",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 15,
+    "slideTitle": "Gebelikte Fizyolojik Değişiklikler, Kilo Artışı Dinamikleri ve Ödem",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Gebelikte kilo artışı ve ödem mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE KLİNİK OLARAK YANLIŞTIR?",
+    "options": [
+      "A) Normal kilolu bir kadında gebelik boyunca beklenen toplam kilo artışı ortalama 9-13 kg'dır",
+      "B) İlk trimesterde annenin toplam 1-1.5 kg, sonrasında ayda ortalama 1.5-2 kg alması beklenir",
+      "C) Plazma hacminin eritrosit kitlesinden fazla artması fizyolojik hemodilüsyon anemisine yol açar",
+      "D) Sabahları yüzde ve ellerde aniden gelişen ödem preeklampsi açısından patolojik bir tehlike işaretidir",
+      "E) Akşamları ayak bileklerinde oluşan ödem doğrudan akut glomerülonefrit göstergesidir ve gebelikte asla görülmez"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Akşamları ayak bileklerinde görülen ödem gebelikte son derece yaygın olan fizyolojik bir durumdur (vena kava inferiora bası ve venöz staz sonucu). Glomerülonefrit göstergesi değildir. Diğer tüm seçenekler gebelik fizyolojisine uygun doğru ifadelerdir."
+  },
+  {
+    "id": "prac-acs-016",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 16,
+    "slideTitle": "Gebelik Toksemileri: Gestasyonel Hipertansiyon, Preeklampsi ve Eklampsi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "34 haftalık bir gebenin izleminde kan basıncı 155/100 mmHg ölçülüyor. İdrar tahlilinde proteinüri saptanmayan hastanın laboratuvarında trombosit sayısı 75.000/μL ve AST/ALT düzeyleri normalin 3 katı bulunuyor. Bu hastanın tanısı ve konvülsiyon profilaksisinde ilk tercih edilecek ilaç aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Gestasyonel Hipertansiyon — Diazepam",
+      "B) Preeklampsi — Magnezyum Sülfat",
+      "C) Kronik Hipertansiyon — Fenitoin",
+      "D) Eklampsi — Sodyum Nitroprussid",
+      "E) HELLP Sendromu — Mannitol"
+    ],
+    "correctAnswer": 1,
+    "explanation": "20. haftadan sonra tansiyon yüksekliğine eşlik eden trombositopeni (<100.000) ve KC enzim yüksekliği proteinüri olmasa dahi Preeklampsi tanısı koydurur. Konvülsiyon profilaksisinde altın standart ilaç Magnezyum Sülfattır."
+  },
+  {
     "id": "prac-acs-017",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
@@ -1226,7 +1454,7 @@
     "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir."
   },
   {
-    "id": "d3-k1-tbg-001-138",
+    "id": "d3-k1-tbg-001-150",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 7,
@@ -1304,7 +1532,7 @@
     "explanation": "Vankomisin, gram-pozitif bakterilerin hücre duvarı sentezini\n(peptidoglikan) hedef alan büyük bir glikopeptit molekülüdür ve gram-\nnegatif bakterilerin dış membranını geçemediğinden, E. coli gibi gram-\nnegatif bakteriler vankomisine doğal (intrinsik) olarak dirençlidir. Diğer\neşleştirmeler yanlıştır: E. coli ampisiline kazanılmış mekanizmalarla\ndirençli olabilir ama bu doğal direnç değildir; S. aureus vankomisine\ngenellikle duyarlıdır; P. aeruginosa piperasiline (özellikle tazobaktam ile\nkombine) duyarlı olabilir; N. gonorrhoeae seftriaksona halen duyarlıdır\n(tedavide kullanılır)."
   },
   {
-    "id": "d3-k1-tbg-001-140",
+    "id": "d3-k1-tbg-001-152",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 9,
@@ -1343,7 +1571,7 @@
     "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
   },
   {
-    "id": "d3-k1-tbg-001-141",
+    "id": "d3-k1-tbg-001-153",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 10,
@@ -1499,7 +1727,7 @@
     "explanation": "Doku Faktörü Yolak İnhibitörü (TFPI), doku faktörü-Faktör VIIa kompleksini ve Faktör Xa&apos;yı inhibe ederek ekstrensek koagülasyon yolağını baskılayan bir antikoagülan proteindir; fibrinolitik sistemle değil koagülasyon kaskadının inhibisyonuyla ilgilidir. Plazmin, fibrini parçalayan ana enzimdir; doku plazminojen aktivatörü, ürokinaz ve streptokinaz ise plazminojeni plazmine çevirerek fibrinolizi başlatan/aktive eden ajanlardır."
   },
   {
-    "id": "d3-k1-tbg-001-145",
+    "id": "d3-k1-tbg-001-157",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 14,
@@ -1694,7 +1922,7 @@
     "explanation": "Kan bağışı taramasında kullanılan testler (ELISA gibi) yüksek duyarlılığa\nsahip olmakla birlikte yalancı pozitiflik verebilir; bu nedenle ilk tarama\ntesti pozitif çıkan bir örnekte kesin tanı konmadan önce mutlaka daha\nspesifik bir doğrulama testi (Western blot/immünoblot veya HIV\nRNA/PCR gibi) yapılmalıdır. Doğrulama testi sonuçlanmadan hastaya\nkesin tanı konulmamalı, tedavi başlanmamalı ve aksine yanlış pozitif\nolduğu da söylenmemelidir."
   },
   {
-    "id": "d3-k1-pat-002-150",
+    "id": "d3-k1-pat-002",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 19,
@@ -1733,7 +1961,7 @@
     "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
   },
   {
-    "id": "d3-k1-tbg-001-151",
+    "id": "d3-k1-tbg-001-163",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 20,
@@ -1811,7 +2039,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-003-153",
+    "id": "d3-k1-enf-003-165",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 2,
@@ -2201,7 +2429,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-013-163",
+    "id": "d3-k1-enf-013-175",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 12,
@@ -2279,7 +2507,7 @@
     "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
   },
   {
-    "id": "d3-k1-enf-004-165",
+    "id": "d3-k1-enf-004",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 14,
@@ -2318,7 +2546,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-004-166",
+    "id": "d3-k1-enf-004-178",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 15,
@@ -2435,7 +2663,7 @@
     "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
   },
   {
-    "id": "d3-k1-enf-009-169",
+    "id": "d3-k1-enf-009-181",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 18,
@@ -2474,7 +2702,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-054-170",
+    "id": "d3-k1-enf-054-182",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 19,
@@ -2513,7 +2741,7 @@
     "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
   },
   {
-    "id": "d3-k1-enf-009-171",
+    "id": "d3-k1-enf-009-183",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 20,
@@ -2708,7 +2936,7 @@
     "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede, o\nhastalığın o toplumdaki beklenen/alışılmış (bazal, endemik) sıklığının\nbelirgin şekilde üzerinde görülmesidir. Bu kavram mutlak bir sayı değil,\nhastalığın normal düzeyine göre gösterdiği artışı ifade eder. Endemi,\nhastalığın bir bölgede sürekli ve alışılmış düzeyde bulunmasıdır;\npandemi ise epideminin kıtalar arası çok geniş coğrafi alanlara\nyayılmasıdır."
   },
   {
-    "id": "d3-k1-enf-026-176",
+    "id": "d3-k1-enf-026-188",
     "deckId": "learn-halk-sagligi-salgin-has",
     "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
     "slideNumber": 5,
@@ -3174,273 +3402,5 @@
     ],
     "correctAnswer": "A",
     "explanation": "Primer koruma: Hastalık henüz biyolojik olarak başlamadan önce sağlıklı bireyleri korumaktır (aşılama, beslenme desteği, kişisel koruyucu donanım). Sekonder koruma: Hastalık başlamış ancak henüz klinik belirti vermemişken asemptomatik dönemde erken tanı konulmasıdır (tüm tarama testleri: topuk kanı taraması, mamografi, pap-smear vb.)."
-  },
-  {
-    "id": "d3-k1-hs-004",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 17,
-    "slideTitle": "Halk Sağlığında Koruma Düzeyleri ve Salgınla İlişkisi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi birincil koruma değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Bağışıklama",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tansiyon ölçümü",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Aile planlaması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yeterli ve dengeli beslenme",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Sağlık eğitimi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Birincil (primer) koruma, hastalık henüz ortaya çıkmadan riskleri\nazaltmaya yönelik önlemleri kapsar (bağışıklama, sağlık eğitimi, yeterli-\ndengeli beslenme, aile planlaması gibi). Tansiyon ölçümü ise henüz\nbelirti vermeyen bir hastalığın (hipertansiyonun) erken yakalanmasına\nyönelik bir tarama işlemidir; bu nedenle ikincil (sekonder) koruma\nkapsamına girer."
-  },
-  {
-    "id": "d3-k1-hs-007",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 18,
-    "slideTitle": "Büyük Sentez: Salgın Yönetim Algoritması ve Kurul 1 Altın İpuçları",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde daha fazla görülmesi aşağıdaki\ntanımlardan hangisine karşılık gelir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Pandemi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Endemi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Epidemi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Sporadik",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Sekülar (saküler) değişim",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede,\nbeklenen/alışılmış (bazal) sıklığının belirgin şekilde üzerinde\ngörülmesidir. Endemi bir bölgede sürekli ve alışılmış düzeyde görülmeyi,\npandemi epideminin çok geniş coğrafi alanlara (kıtalar arası)\nyayılmasını, sporadik ise ara sıra tek tük olgular halinde görülmeyi ifade\neder."
-  },
-  {
-    "id": "prac-hucre-001",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Hücresel Homeostaz, Stres ve Hasar Spektrumu",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hücrenin fizyolojik homeostazı, strese adaptasyonu ve hücre hasarı arasındaki patofizyolojik ilişki değerlendirildiğinde, aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Hücre hasarı yalnızca genetik mutasyonlar sonucu meydana gelir, çevresel stresler doğrudan adaptasyona yol açar.",
-      "B) Zararlı bir etken hücrenin adaptif kapasitesini aştığında ya da hücre doğrudan hasarlayıcı bir etkenle karşılaştığında hücre hasarı başlar.",
-      "C) Reversibl hücre hasarı evresinde plazma membran bütünlüğü kalıcı olarak parçalanır ve çevre dokuda yoğun lökosit infiltrasyonu gelişir.",
-      "D) Apoptoz, hücre zarının parçalanması ve hücre içeriğinin dokuya dökülmesiyle karakterize kontrolsüz bir kaza sonucu ölümdür.",
-      "E) İrreversibl hücre hasarı geliştikten sonra zararlı etken ortamdan uzaklaştırılsa dahi hücre eski sağlıklı yapısına ve işlevine tam olarak geri dönebilir."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Hücreye uygulanan stres adaptif kapasiteyi aştığında ya da toksin gibi doğrudan öldürücü uyaranlar uygulandığında hücre hasarı başlar. A seçeneği yanlıştır; hücre hasarı hipoksi, iskemi, enfeksiyon, toksinler gibi sayısız çevresel etkenle gelişir. C seçeneği yanlıştır; reversibl hasarda plazma zarı bütünlüğü korunur, zar parçalanması ve yangı nekrozun (irreversibl) özelliğidir. D seçeneği yanlıştır; apoptoz programlı, zarın korunduğu ve yangı oluşturmayan ölümdür. E seçeneği yanlıştır; irreversibl hasara geçen bir hücre uyaran kalksa bile canlılığını kurtaramaz ve ölür."
-  },
-  {
-    "id": "prac-hucre-002",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Hücre Hasarının Başlıca Nedenleri ve Etyolojik Sınıflama",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hücre hasarına yol açan etyolojik etkenler ve bunların hücresel etki mekanizmaları ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
-    "options": [
-      "A) İskemi — Dokuda arteriyel kan akımının kesilmesi sonucu hem oksijenin hem de besin maddelerinin eş zamanlı tükenmesi",
-      "B) İmmünolojik reaksiyonlar — Vücudun kendi doku antijenlerine karşı otoantikor üretmesi sonucu hücre zarlarının tahrip olması",
-      "C) Karbonmonoksit zehirlenmesi — Dokunun arteriyel kan akımının tamamen kesilmesiyle karakterize saf mekanik vasküler tıkanma",
-      "D) Cıva klorür intoksikasyonu — Hücre membran proteinlerindeki sülfhidril gruplarına bağlanarak doğrudan hücresel toksisite gelişimi",
-      "E) İyonize radyasyon — Su moleküllerinin radyolizi ile son derece reaktif hidroksil serbest radikallerinin üretilmesi ve DNA zincir kırıkları"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Karbonmonoksit (CO) zehirlenmesi mekanik bir arteriyel tıkanma (iskemi) değildir; kan akımı korunmuştur ancak CO'nun hemoglobine oksijenden 200 kat daha yüksek afiniteyle bağlanması sonucu kanın oksijen taşıma kapasitesi düşer ve anemik hipoksi gelişir. A, B, D ve E seçeneklerindeki patofizyolojik mekanizmalar tamamen doğrudur."
-  },
-  {
-    "id": "prac-hucre-003",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Hipoksi ve İskemi: Tanımlar ve Kritik Patofizyolojik Fark",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "62 yaşındaki bir erkek hasta akut mezenter arter trombozu nedeniyle acil cerrahiye alınıyor. İntraoperatif incelemede ince bağırsak anslarının nekroze olduğu izleniyor. Bu hastadaki iskemik hasarın, KOAH alevlenmesine bağlı saf hipoksik bir hastadaki bağırsak hasarına kıyasla ÇOK DAHA HIZLI VE AĞIR nekroza yol açmasının temel patofizyolojik nedeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İskemide glukoz desteğinin kesilmesi ve laktik asit gibi metabolitlerin dokudan uzaklaştırılamaması",
-      "B) İskemik dokuda süperoksit dismutaz enziminin aşırı miktarda sentezlenerek hücreyi patlatması",
-      "C) Hipokside hücre içi kalsiyum derişiminin sıfıra inmesi sonucu hücrenin büzüşüp korunması",
-      "D) Saf hipokside protein sentezinin iskemiden daha hızlı durarak enerji tasarrufu sağlaması",
-      "E) İskemide hücresel mitokondri membran potansiyelinin aşırı hiperpolarize olması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. İskemide perfüzyon tamamen durduğu için dokuya hem oksijen hem de anaerobik glikoliz için zorunlu olan ekstrasellüler glukoz gelişi kesilir. Ayrıca anaerobik solunumla üretilen laktik asit kanda taşınamadığından hücre içinde birikir ve ağır asidoz yaparak enzimleri çökertir. Saf hipokside ise perfüzyon sürdüğü için glukoz sağlanmaya ve laktat temizlenmeye devam eder. B, C, D ve E seçenekleri biyolojik gerçeklerle çelişir."
-  },
-  {
-    "id": "prac-hucre-004",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Kimyasal Toksinler ve Çevresel Etkenlerle Hücre Hasarı",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kuru temizleme atölyesinde çalışan bir işçi, yüksek konsantrasyonda karbontetraklorür (CCl4) buharına maruz kaldıktan sonra akut karaciğer yetmezliği tablosuyla hastaneye kaldırılıyor. Yapılan biyopside karaciğerde sentrilobüler bölgede yaygın lipid birikimi ve nekroz saptanıyor. Bu patolojik tablonun gelişimindeki temel biyokimyasal mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) CCl4'ün doğrudan nükleer membrana bağlanarak histon asetilasyonunu inhibe etmesi",
-      "B) CCl4'ün hepatosit düz ER'sinde sitokrom P450 ile CCl3• serbest radikaline dönüşüp lipid peroksidasyonunu başlatması",
-      "C) CCl4'ün lizozomal asit fosfatazı uyararak hücre içi proteinlerin aşırı fosforillenmesine yol açması",
-      "D) CCl4'ün hücre dışı kalsiyumu bağlayarak sitoplazmik kalsiyum düzeyini sıfıra indirmesi",
-      "E) CCl4'ün mitokondride elektron transport zincirinde kompleks II'yi aşırı aktive ederek ATP fazlalığı oluşturması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Karbontetraklorür toksisitesi klasik bir indirekt toksisite modelidir. CCl4, karaciğer düz endoplazmik retikulumundaki sitokrom P450 (özellikle CYP2E1) enzimi tarafından CCl3• serbest radikaline metabolize edilir. Bu radikal doymamış membran yağ asitlerine saldırarak otokatalitik lipid peroksidasyonunu tetikler, ER membranlarını parçalar, apolipoprotein sentezini durdurup yağlanmaya ve nihayetinde hücresel nekroza yol açar. Diğer şıklar mekanizma ile uyuşmaz."
-  },
-  {
-    "id": "prac-hucre-005",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Hücre Hasarında Genel Prensipler ve Hücresel Duyarlılık",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Tam kardiyak arrest (dolaşım durması) geçiren bir hastada başarılı resüsitasyon sağlanana kadar geçen sürede farklı organ ve dokuların iskemik hasara duyarlılıkları karşılaştırıldığında, hücresel canlılığını EN KISA SÜREDE kaybeden ve İLK OLARAK irreversibl nekroza giden hücre grubu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kalp ventrikül miyositleri",
-      "B) İskelet kası lifleri",
-      "C) Serebral korteks nöronları",
-      "D) Cilt dermisindeki fibroblastlar",
-      "E) Renal toplayıcı kanal epitel hücreleri"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Farklı hücre tiplerinin iskemiye dirençleri büyük değişkenlik gösterir. Serebral korteks nöronları yüksek metabolik hızları ve glikojen rezervlerinin olmaması nedeniyle tam iskemiye yalnızca 3 ila 5 dakika dayanabilir ve en erken ölen hücrelerdir. Miyositler 20-30 dakika, renal tübül hücreleri 30-60 dakika, iskelet kası ve fibroblastlar ise saatlerce canlı kalabilir."
-  },
-  {
-    "id": "prac-hucre-006",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Reversibl (Geri Dönüşümlü) Hücre Hasarının Tanımı ve Dinamiği",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Geri dönüşümlü (reversibl) hücre hasarı evresindeki bir hücrenin yapısal ve fonksiyonel özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Hücre membran bütünlüğü tamamen parçalanmış ve intrasellüler enzimler kana sızmıştır.",
-      "B) Zararlı etken ortadan kaldırıldığında iyon dengesizliği düzelir ve organeller normal yapısına dönebilir.",
-      "C) Çekirdekte irreversibl DNA parçalanmasına bağlı tipik karyolizis tablosu yerleşmiştir.",
-      "D) Hücrenin kasılma gibi özgül fonksiyonları morfolojik ölüm gerçekleştikten sonra kaybolur.",
-      "E) Lizozom zarları parçalanarak asit hidrolazlar sitoplazmada otolitik sindirimi tamamlamıştır."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Reversibl hücre hasarında hücrenin temel yapı taşları (mitokondri, çekirdek, plazma zarı) henüz onarılamaz bir hasara uğramamıştır; bu nedenle zararlı etken kalktığında hücre iyon dengesini sağlayarak eski sağlıklı durumuna döner. A, C ve E seçenekleri irreversibl nekrozun bulgularıdır. D seçeneği yanlıştır; fonksiyonel kayıp morfolojik ölümden saatler önce (dakikalar içinde) ortaya çıkar."
-  },
-  {
-    "id": "prac-hucre-007",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Hücresel Şişme (Hidropik Değişim / Vakuoler Dejenerasyon): Mekanizma ve Işık Mikroskopisi",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hafif iskemik hasara maruz kalan bir karaciğer dokusunun ışık mikroskobik incelemesinde hepatositlerin hacimce büyüdüğü, sitoplazmalarında optik olarak boş, berrak mikro-vakuollerin oluştuğu izleniyor (hidropik değişim). Bu hücrelerde sitoplazmik vakuolizasyonun ve şişmenin ortaya çıkmasına yol açan İLK BİYOKİMYASAL KUSUR aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Lizozomal asit hidrolazların nükleer membranı eritmesi",
-      "B) Mitokondriyal ATP sentezinin azalması sonucu plazma membranı Na⁺/K⁺ ATPaz pompasının yetersiz kalması",
-      "C) Kaspaz-3 enziminin sitoskeletal aktin filamentlerini parçalaması",
-      "D) Doymamış yağ asitlerinin kontrolsüz otokatalitik peroksidasyona uğraması",
-      "E) Sitoplazmada apoferritin proteininin demirle aşırı doyması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Hücresel şişmenin ve hidropik değişimin temel patofizyolojik mekanizması, iskemide ATP üretiminin düşmesi sonucu membran Na⁺/K⁺ ATPaz pompasının iflas etmesidir. Pompa durunca hücre içine Na⁺ ve su girer; aşırı sıvı endoplazmik retikulum sisternalarını şişirerek ışık mikroskobunda berrak vakuoller (hidropik değişim) oluşturur. A, C ve D şıkları irreversibl hasar ve apoptoz/nekroz aşamalarıdır."
-  },
-  {
-    "id": "prac-hucre-008",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Hücresel Şişmenin Makroskopik ve Ultrastrüktürel Bulguları",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Deneysel iskemi oluşturulmuş bir tavşan böbreğinde erken (reversibl) evrede alınan proksimal tübül hücrelerinin transmisyon elektron mikroskobu (TEM) incelemesinde aşağıdakilerden hangisinin görülmesi BEKLENMEZ?",
-    "options": [
-      "A) Apikal lümene bakan mikrovillüslerin silinmesi ve küntleşmesi",
-      "B) Plazma membranında dışa doğru kabarcıklanmalar (blebbing) oluşması",
-      "C) Plazma zarı bütünlüğünün tamamen yırtılması ve hücresel içeriğin interstisyuma dökülmesi",
-      "D) Granüllü endoplazmik retikulumdan ribozomların ayrılması (detachment)",
-      "E) Hasarlanan membran fosfolipidlerinden köken alan konsantrik miyelin figürleri"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Plazma zarı bütünlüğünün tamamen parçalanması, yırtılması ve hücre içeriğinin çevre dokuya dökülmesi 'irreversibl hasarın (nekroz)' kesin kanıtıdır; geri dönüşümlü hasarda plazma zarı blebler oluştursa dahi sürekliliğini ve bariyer fonksiyonunu korur. Mikrovillus kaybı, blebler, ribozomların ER'den ayrılması ve miyelin figürleri reversibl hasarın iyi bilinen ultrastrüktürel bulgularıdır."
-  },
-  {
-    "id": "prac-hucre-009",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "Yağlı Değişim (Steatoz): Trigliserit Birikimi ve Organ Tutulumları",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Protein-kalori malnütrisyonu (Kwashiorkor) teşhisi konulan 4 yaşındaki bir çocuğun karaciğer iğne biyopsisinde hepatositlerin sitoplazmasında çekirdeği kenara iten geniş lipid vakuolleri (makroveziküler steatoz) saptanıyor. Bu klinik tabloda hepatik yağ birikimine yol açan ASIL PATOFİZYOLOJİK DEĞİŞİKLİK aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Diyetteki aminoasit yetersizliği nedeniyle trigliseritleri dolaşıma taşıyan apolipoproteinlerin sentezlenememesi",
-      "B) Karaciğerde karnitin palmitoil transferaz enziminin aşırı çalışarak serbest yağ asitlerini tüketmesi",
-      "C) Hepatik safra kanallarının tıkanması sonucu kolesterol esterlerinin hepatosit içinde göllenmesi",
-      "D) Karaciğerde aşırı insülin salgısına bağlı olarak lipogenez enzimlerinin kontrolsüz indüksiyonu",
-      "E) Lizozomlarda sfingomiyelinaz enzim aktivitesinin genetik olarak eksik olması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Kwashiorkor tablosunda ağır protein eksikliği vardır. Karaciğerde trigliseritlerin kanda taşınabilmesi için apolipoproteinlerle birleşerek VLDL oluşturması gerekir. Protein yetersizliğinde apolipoprotein sentezi durur; üretilen trigliseritler hepatositlerden dışarı atılamaz ve sitoplazmada birikerek masif steatoz oluşturur. Diğer şıklar bu tablonun mekanizmasıyla ilgili değildir."
-  },
-  {
-    "id": "prac-hucre-010",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Reversibl Hasardan İrreversibl Hasara Geçiş: Kritik Eşik ve Zamanlama",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Akut koroner arter tıkanıklığı gelişen bir hastada iskemik kardiyomiyosit hasarının reversibl evreden irreversibl nekroz evresine geçtiğini KESİN OLARAK kanıtlayan en temel hücresel ve moleküler bulgu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sitoplazmik glikojen depolarının tükenmesi ve anaerobik glikolizin hızlanması",
-      "B) Endoplazmik retikulum sisternalarının genişlemesi ve hafif hücresel şişme",
-      "C) Plazma membranı bütünlüğünün geri döndürülemez biçimde parçalanması ve kalıcı mitokondri disfonksiyonu",
-      "D) Miyositlerin elektriksel uyarılara yanıt veremeyerek kasılma fonksiyonunu durdurması",
-      "E) Granüllü endoplazmik retikulum zarlarından ribozomların geçici olarak ayrışması"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Hücre hasarında reversibl evre ile irreversibl evre (hücre ölümü) arasındaki sınırı iki temel biyokimyasal olay çizer: 1) Kalıcı mitokondri disfonksiyonu (oksidatif fosforilasyonun geri döndürülemez çöküşü) ve 2) Plazma ve lizozom zarlarının bütünlüğünün kalıcı kaybı. Glikojen tükenmesi (A), ER dilatasyonu (B), kasılmanın durması (D) ve ribozom ayrılması (E) reversibl evrede de görülen erken bulgulardır."
   }
 ]
