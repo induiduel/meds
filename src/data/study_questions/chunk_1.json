@@ -3030,305 +3030,305 @@
   {
     "id": "prac-acs-001",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 1,
-    "slideTitle": "Ana Çocuk Sağlığı (AÇS): Genel Çerçeve ve Öncelikli Risk Grubu",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Ana ve Çocuk Sağlığı (AÇS): Genel Çerçeve, Biyososyal Öncelik ve Hassas Grup Kavramı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Halk sağlığında anne ve çocuk sağlığının öncelikli risk grubu olarak kabul edilmesinin temel nedenleri arasında aşağıdakilerden hangisi yer almaz?",
+    "question": "Halk sağlığında ana ve çocuk sağlığının 'öncelikli hassas grup' olarak kabul edilmesinin temel gerekçeleri arasında aşağıdakilerden hangisi YER ALMAZ?",
     "options": [
-      "A) Nüfusun sayısal olarak büyük bir kısmını oluşturmaları",
-      "B) Büyüme, gelişme ve gebelik nedeniyle biyolojik olarak hastalıklara daha duyarlı olmaları",
-      "C) Sağlık düzeylerinin ülkenin gelişmişlik düzeyini en duyarlı yansıtan gösterge olması",
-      "D) Sağlık göstergelerinin sadece genetik faktörlere bağlı olup çevre ve beslenmeden etkilenmemesi",
-      "E) Önleyici hizmetlerle morbidite ve mortalitelerinin büyük oranda önlenebilir olması"
+      "A) Kadın ve çocukların birlikte toplum nüfusunun yaklaşık yarısını oluşturması",
+      "B) Büyüme, gelişme ve gebelik gibi süreçlerin biyolojik kırılganlığı artırması",
+      "C) Bu gruptaki hastalık ve ölümlerin büyük kısmının koruyucu hekimlikle önlenebilir olması",
+      "D) Sağlık düzeylerinin o toplumun sosyoekonomik gelişmişliğini yansıtan en hassas gösterge olması",
+      "E) Anne ve çocuk morbiditesinin tamamen genetik faktörlere bağlı olup çevresel şartlardan etkilenmemesi"
     ],
-    "correctAnswer": 3,
-    "explanation": "AÇS morbidite ve mortalitesi genetikten çok sosyoekonomik durum, beslenme, hijyen ve sağlık hizmetlerine erişim gibi çevresel faktörlerden etkilenir ve önlenebilir."
+    "correctAnswer": 4,
+    "explanation": "Anne ve çocuk sağlığı morbidite ve mortalitesi genetik faktörlerden ziyade doğrudan beslenme, hijyen, çevre sağlığı ve sağlık hizmetlerine erişim gibi çevresel ve sosyoekonomik faktörlere bağlıdır ve büyük oranda önlenebilirdir. A, B, C ve D seçenekleri AÇS'nin öncelikli grup kabul edilmesinin temel epidemiyolojik gerekçeleridir."
   },
   {
     "id": "prac-acs-002",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 2,
-    "slideTitle": "Anne Ölümü ve Anne Ölüm Oranı (AÖO): Tanım ve Hesaplama",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Demografik Göstergeler ve Doğurganlık Ölçütleri: KDH, GDH ve TDH Dinamikleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Dünya Sağlık Örgütü (DSÖ) kriterlerine göre bir ölümün 'Anne Ölümü' olarak kaydedilebilmesi için gebeliğin sonlanmasından itibaren geçmesi gereken maksimum süre ne kadardır?",
+    "question": "Toplam nüfusu 1.000.000, 15-49 yaş kadın nüfusu 250.000 olan bir bölgede bir yıl içinde 5.000 canlı doğum gerçekleşmiştir. Bu bölgenin Kaba Doğum Hızı (KDH) ve Genel Doğurganlık Hızı (GDH) değerleri sırasıyla aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
-      "A) 7 gün",
-      "B) 28 gün",
-      "C) 42 gün (6 hafta)",
-      "D) 3 ay",
-      "E) 1 yıl"
+      "A) KDH: Binde 5 — GDH: Binde 20",
+      "B) KDH: Binde 20 — GDH: Binde 5",
+      "C) KDH: Binde 5 — GDH: Binde 50",
+      "D) KDH: Binde 10 — GDH: Binde 25",
+      "E) KDH: Binde 2.5 — GDH: Binde 10"
     ],
-    "correctAnswer": 2,
-    "explanation": "DSÖ tanımına göre gebelik süresince veya gebeliğin sonlanmasından sonraki 42 gün (lohusalık sonuna kadar) içinde obstetrik nedenlerle gelişen ölümler Anne Ölümü kabul edilir."
+    "correctAnswer": 0,
+    "explanation": "KDH = (Canlı Doğum / Toplam Nüfus) * 1.000 = (5.000 / 1.000.000) * 1.000 = Binde 5. GDH = (Canlı Doğum / 15-49 Yaş Kadın Nüfusu) * 1.000 = (5.000 / 250.000) * 1.000 = Binde 20. Doğru eşleştirme A seçeneğidir."
   },
   {
     "id": "prac-acs-003",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 3,
-    "slideTitle": "Anne Ölümlerinin Başlıca Nedenleri: Doğrudan vs Dolaylı Nedenler",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Anne Ölümü ve Anne Ölüm Oranı (AÖO / MMR): Epidemiyolojik Tanım ve Hesaplama",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Dünya genelinde doğrudan anne ölümlerinin en sık görülen nedeni aşağıdakilerden hangisidir?",
+    "question": "Dünya Sağlık Örgütü (DSÖ) kriterlerine göre, bir ölüm vakasının 'Anne Ölümü' olarak sınıflandırılabilmesi için gebeliğin sonlanmasından itibaren geçebilecek azami süre ve formüldeki payda çarpanı hangisinde doğru verilmiştir?",
     "options": [
-      "A) Puerperal sepsis",
-      "B) Postpartum kanamalar (özellikle uterin atoni)",
-      "C) Eklampsi nöbetleri",
-      "D) Amniyon sıvı embolisi",
-      "E) Ektopik gebelik rüptürü"
+      "A) 28 gün — 1.000 Canlı Doğum",
+      "B) 42 gün — 100.000 Canlı Doğum",
+      "C) 42 gün — 1.000 Canlı Doğum",
+      "D) 1 yıl — 100.000 Kadın Nüfusu",
+      "E) 7 gün — 10.000 Canlı Doğum"
     ],
     "correctAnswer": 1,
-    "explanation": "Doğrudan obstetrik anne ölümlerinin küresel çapta en sık nedeni doğum sonrası masif kanamalardır (özellikle uterin atoni)."
+    "explanation": "DSÖ tanımına göre gebelik süresince veya gebeliğin sonlanmasından sonraki ilk 42 gün (6 hafta / lohusalık dönemi) içinde obstetrik nedenlerle gelişen ölümler Anne Ölümü sayılır ve Anne Ölüm Oranı (AÖO) 100.000 canlı doğumda ifade edilir."
   },
   {
     "id": "prac-acs-004",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 4,
-    "slideTitle": "Doğum Öncesi Bakım (DÖB): Protokoller ve İzlem Takvimi",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Anne Ölümlerinin Nedenleri: Doğrudan ve Dolaylı Obstetrik Faktörler",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "T.C. Sağlık Bakanlığı Doğum Öncesi Bakım Yönetim Rehberi'ne göre düşük riskli normal bir gebelikte yapılması gereken asgari izlem sayısı kaçtır?",
+    "question": "Aşağıdaki klinik tablolardan hangisi 'Doğrudan Obstetrik Anne Ölümü' nedenleri arasında YER ALMAZ?",
     "options": [
-      "A) En az 1",
-      "B) En az 2",
-      "C) En az 4",
-      "D) En az 8",
-      "E) En az 12"
+      "A) Doğum sonrasında gelişen uterin atoniye bağlı masif hemoraji",
+      "B) Eklampsi nöbeti sonrası gelişen intraserebral kanama",
+      "C) Önceden mevcut olan romatizmal mitral darlığına bağlı peripartum akut akciğer ödemi",
+      "D) Doğum eylemi sırasında gelişen amniyon sıvı embolisi",
+      "E) Plasenta previa totalise bağlı kontrol altına alınamayan obstetrik kanama"
     ],
     "correctAnswer": 2,
-    "explanation": "Sağlık Bakanlığı kılavuzlarına göre komplikasyonsuz sağlıklı bir gebelikte asgari standart izlem sayısı en az 4'tür."
+    "explanation": "Önceden var olan romatizmal mitral darlığının gebeliğin hemodinamik yüküyle dekompanse olması 'Dolaylı Obstetrik Ölüm' nedenidir. Atoni, eklampsi, amniyon sıvı embolisi ve plasenta previa ise doğrudan obstetrik sürece bağlı gelişen 'Doğrudan Obstetrik Ölüm' nedenleridir."
   },
   {
     "id": "prac-acs-005",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 5,
-    "slideTitle": "Gebelikte Rutin Profilaksi Programları: Demir ve D Vitamini Desteği",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Bebek Ölüm Hızı (BÖH / IMR): Tanımı, Hesaplama ve Sosyoekonomik Önemi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Nöral tüp defekti (spina bifida/anansefali) öyküsü bulunmayan ve gebelik planlayan sağlıklı bir kadında folik asit desteği ne zaman başlamalı ve günlük doz ne kadar olmalıdır?",
+    "question": "Bir ilde bir yıl içinde 20.000 canlı doğum gerçekleşmiş, aynı yıl içinde 1 yaşını doldurmadan ölen bebek sayısı 200 olarak tespit edilmiştir. Bu ilin Bebek Ölüm Hızı (BÖH) binde kaçtır?",
     "options": [
-      "A) Gebelik testinin pozitif çıktığı gün — 100 mcg",
-      "B) Gebe kalmadan en az 1 ay önce — 400 mcg (0.4 mg)",
-      "C) Gebeliğin 20. haftasında — 4 mg",
-      "D) Yalnızca doğumdan sonra — 1 mg",
-      "E) Gebeliğin 36. haftasında — 5 mg"
+      "A) Binde 1",
+      "B) Binde 5",
+      "C) Binde 10",
+      "D) Binde 20",
+      "E) Binde 100"
     ],
-    "correctAnswer": 1,
-    "explanation": "Nöral tüp defektlerini önlemek için standart folik asit desteği gebelikten en az 1 ay önce başlanmalı ve günde 400 mikrogram (0.4 mg) olarak ilk trimester sonuna kadar verilmelidir."
+    "correctAnswer": 2,
+    "explanation": "Bebek Ölüm Hızı = (0-1 Yaş Ölümleri / Canlı Doğum Sayısı) * 1.000 = (200 / 20.000) * 1.000 = Binde 10'dur."
   },
   {
     "id": "prac-acs-006",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 6,
-    "slideTitle": "Bebek ve Çocuk Ölüm Göstergeleri: Bebek Ölüm Hızı (BÖH)",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Neonatal Ölüm Hızı: Erken vs Geç Neonatal Dönem ve Doğum Hizmetleri Kalitesi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Bir toplumda postneonatal ölüm hızının (29-365 gün) yüksek olması öncelikle aşağıdakilerden hangisinin yetersiz olduğunu gösterir?",
+    "question": "Aşağıdaki sağlık göstergelerinden hangisi doğrudan doğum salonu şartları, obstetrik bakım kalitesi, intrapartum asfiksi ve yenidoğan yoğun bakım hizmetlerinin etkinliğini en duyarlı yansıtır?",
     "options": [
-      "A) Anne karnındaki genetik tarama testlerinin",
-      "B) Çevre sağlığı, beslenme koşulları ve enfeksiyon kontrolünün",
-      "C) Yenidoğan yoğun bakım kuvöz sayısının",
-      "D) Sezaryen ameliyathane donanımının",
-      "E) Doğumhanedeki fetal monitörizasyonun"
+      "A) Post-neonatal ölüm hızı",
+      "B) Erken neonatal ölüm hızı",
+      "C) Kaba ölüm hızı",
+      "D) Genel doğurganlık hızı",
+      "E) Anne ölüm hızı"
     ],
     "correctAnswer": 1,
-    "explanation": "Postneonatal ölümler (1 ay - 1 yaş arası) en sık pnömoni, ishal ve beslenme yetersizliğinden kaynaklandığı için doğrudan çevre sağlığı ve sosyoekonomik koşulların aynasıdır."
+    "explanation": "Erken neonatal ölüm hızı (0-7 gün ölümleri), prematürite, RDS, intrapartum asfiksi ve konjenital anomaliler kaynaklı olup doğrudan prenatal bakım, doğum salonu ve obstetrik bakım kalitesinin aynasıdır. Post-neonatal dönem ise çevre ve beslenme koşullarını yansıtır."
   },
   {
     "id": "prac-acs-007",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 7,
-    "slideTitle": "Yenidoğan Tarama Programları (NTP): Topuk Kanı Taraması",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Post-Neonatal, Beş Yaş Altı ve Perinatal Ölüm Hızları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki hastalıklardan hangisi Türkiye'de Sağlık Bakanlığı Ulusal Yenidoğan Tarama Programı kapsamında topuk kanından rutin olarak taranan hastalıklardan biri değildir?",
+    "question": "Perinatal Ölüm Hızı (PÖH) hesaplanırken kullanılan formülün pay ve paydasında yer alan bileşenler aşağıdakilerden hangisinde eksiksiz ve doğru olarak verilmiştir?",
     "options": [
-      "A) Fenilketonüri (FKU)",
-      "B) Konjenital Hipotiroidi (KHT)",
-      "C) Duchenne Muskuler Distrofi (DMD)",
-      "D) Biyotinidaz Eksikliği",
-      "E) Kistik Fibrozis (KF)"
+      "A) Pay: 0-28 gün ölümleri / Payda: Canlı doğum sayısı * 1.000",
+      "B) Pay: 28. hafta sonrası ölü doğumlar + Erken neonatal ölümler / Payda: Toplam doğum sayısı (Canlı + Ölü) * 1.000",
+      "C) Pay: 28. hafta sonrası ölü doğumlar + Tüm neonatal ölümler / Payda: Canlı doğum sayısı * 1.000",
+      "D) Pay: İlk 7 gün ölümleri / Payda: 15-49 yaş kadın nüfusu * 100.000",
+      "E) Pay: 0-1 yaş ölümleri / Payda: Toplam nüfus * 1.000"
     ],
-    "correctAnswer": 2,
-    "explanation": "DMD yenidoğan topuk kanı taramasında yer almaz. Rutin taranan 6 hastalık: FKU, Hipotiroidi, Biyotinidaz, Kistik Fibrozis, KAH ve SMA'dır."
+    "correctAnswer": 1,
+    "explanation": "Perinatal ölüm hızı, 28. gebelik haftasından sonraki ölü doğumlar ile ilk 7 gün içindeki erken neonatal ölümlerin toplamının TOPLAM DOĞUM (Canlı + Ölü) sayısına bölünüp 1.000 ile çarpılmasıyla hesaplanır."
   },
   {
     "id": "prac-acs-008",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 8,
-    "slideTitle": "Çocukluk Çağı Aşı Takvimi ve Aşı ile Önlenebilir Hastalıklar",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "Doğum Öncesi Bakım (DÖB) Felsefesi, Tarihçesi ve Kessner İndeksi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "T.C. Sağlık Bakanlığı aşı takvimine göre sağlıklı bir bebeğe doğumdan hemen sonra (hastaneden çıkmadan) uygulanan İLK aşı hangisidir?",
+    "question": "Kessner İndeksi'ne göre bir gebenin 'yeterli doğum öncesi bakım' aldığının kabul edilebilmesi için gereken asgari kriterler aşağıdakilerden hangisinde tam olarak verilmiştir?",
     "options": [
-      "A) BCG (Verem)",
-      "B) Hepatit B 1. doz",
-      "C) KKK (Kızamık-Kızamıkçık-Kabakulak)",
-      "D) DaBT-İPA-Hib",
-      "E) Oral Polio Aşısı"
+      "A) Bakımın 2. trimesterde başlaması, en az 6 kez izlem yapılması ve hastanede olması",
+      "B) Bakımın ilk 3 ay içinde başlaması, gebelik boyunca en az 4 kez yapılması ve eğitimli sağlık personeli tarafından verilmesi",
+      "C) Doğum öncesinde en az 1 kez ultrason yapılması ve kan tahlillerinin eksiksiz olması",
+      "D) Gebeliğin son ayında haftada bir aile hekimine başvurulması",
+      "E) Doğumun mutlaka üniversite hastanesinde sezaryen ile planlanmış olması"
     ],
     "correctAnswer": 1,
-    "explanation": "Doğumda bebeğe uygulanan ilk aşı Hepatit B aşısının birinci dozudur. BCG aşısı ise 2. ayın sonunda yapılır."
+    "explanation": "Kessner İndeksi'ne göre yeterli bakımın 3 vazgeçilmez kriteri vardır: İlk izlemin gebeliğin ilk 3 ayı içinde başlaması, gebelik boyunca en az 4 izlem yapılması ve bakımın yetkin/eğitimli bir sağlık personeli tarafından sunulmasıdır."
   },
   {
     "id": "prac-acs-009",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 9,
-    "slideTitle": "Bebek Beslenmesi: Anne Sütü ve Tamamlayıcı Beslenme İlkeleri",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "T.C. Sağlık Bakanlığı Güncel DÖB Protokolü ve İzlem Takvimi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Doğumdan sonraki ilk birkaç gün salgılanan, bebeğin bağırsak mukozasını enfeksiyonlara karşı koruyan ve Salgısal IgA (sIgA) açısından son derece zengin olan ilk süte ne ad verilir?",
+    "question": "T.C. Sağlık Bakanlığı Doğum Öncesi Bakım Yönetim Rehberi'ne göre komplikasyonsuz normal bir gebelikte yapılması gereken 2. ve 3. izlemlerin önerilen gebelik haftaları aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
     "options": [
-      "A) Kolostrum (Ağız sütü)",
-      "B) Geçiş sütü",
-      "C) Olgun süt",
-      "D) Laktoferrin sütü",
-      "E) Kazein sütü"
+      "A) 2. İzlem: 10-14. hafta — 3. İzlem: 20-24. hafta",
+      "B) 2. İzlem: 18-24. hafta — 3. İzlem: 30-32. hafta",
+      "C) 2. İzlem: 14-18. hafta — 3. İzlem: 24-28. hafta",
+      "D) 2. İzlem: 24-28. hafta — 3. İzlem: 36-38. hafta",
+      "E) 2. İzlem: 16-20. hafta — 3. İzlem: 32-36. hafta"
     ],
-    "correctAnswer": 0,
-    "explanation": "Doğum sonrası ilk günlerde salgılanan protein ve sIgA'dan zengin ilk süte Kolostrum (ağız sütü) denir."
+    "correctAnswer": 1,
+    "explanation": "Sağlık Bakanlığı güncel protokolüne göre: 1. izlem 0-14. hafta, 2. izlem 18-24. hafta, 3. izlem 30-32. hafta ve 4. izlem 36-38. haftalar arasında yapılmalıdır."
   },
   {
     "id": "prac-acs-010",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 10,
-    "slideTitle": "Büyüme ve Gelişmenin İzlenmesi: Persentil Eğrileri ve Gelişim Basamakları",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "DÖB 1. İzlem (İlk 14 Hafta): Kapsamlı Anamnez, Risk Değerlendirmesi ve Klinik Muayene",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Doğum ağırlığı 3.200 gram olan zamanında doğmuş sağlıklı bir bebeğin 1 yaşını doldurduğunda (12. ayında) beklenen ortalama vücut ağırlığı yaklaşık ne kadar olmalıdır?",
+    "question": "Son adet tarihinin (SAT) ilk günü 10 Mayıs 2025 olan sağlıklı bir gebenin Naegele kuralına göre tahmini doğum tarihi aşağıdakilerden hangisidir?",
     "options": [
-      "A) 6.400 gram",
-      "B) 7.500 gram",
-      "C) 9.600 gram (Doğum kilosunun 3 katı)",
-      "D) 12.500 gram",
-      "E) 15.000 gram"
+      "A) 17 Şubat 2026",
+      "B) 17 Ocak 2026",
+      "C) 3 Şubat 2026",
+      "D) 17 Mart 2026",
+      "E) 10 Şubat 2026"
     ],
-    "correctAnswer": 2,
-    "explanation": "Normal bir bebek ortalama 5. ayda doğum kilosunun 2 katına, 1 yaşında ise doğum kilosunun 3 katına (3.2 x 3 = ~9.6 kg) ulaşır."
+    "correctAnswer": 0,
+    "explanation": "Naegele kuralı: Gün + 7, Ay - 3, Yıl + 1. Gün: 10 + 7 = 17. Ay: Mayıs (5. ay) - 3 = Şubat (2. ay). Yıl: 2025 + 1 = 2026. Tahmini doğum tarihi 17 Şubat 2026'dır."
   },
   {
     "id": "prac-acs-011",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 11,
-    "slideTitle": "Bebeklerde D Vitamini ve Demir Profilaksisi Protokolleri",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "DÖB 1. İzlem Laboratuvar Paneli ve Fetal Anomali Tarama Testleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Zamanında (term) ve normal doğum kilosuyla dünyaya gelen sağlıklı bir bebeğe raşitizmi ve demir eksikliği anemisini önlemek amacıyla D vitamini ve demir profilaksisi ne zaman başlanmalıdır?",
+    "question": "16 haftalık bir gebenin ikinci trimester üçlü anomali tarama testinde maternal serum parametreleri değerlendiriliyor. Fetusunda Down Sendromu (Trizomi 21) bulunan bir gebede bu belirteçlerin beklenen yönü aşağıdakilerden hangisidir?",
     "options": [
-      "A) D vitamini 1. haftada — Demir 4. ayda",
-      "B) D vitamini 6. ayda — Demir 1. yaşta",
-      "C) D vitamini doğumda — Demir doğumda",
-      "D) D vitamini 4. ayda — Demir 1. haftada",
-      "E) Sadece anemi çıkarsa başlanmalıdır"
+      "A) AFP yüksek — uE3 yüksek — hCG düşük",
+      "B) AFP düşük — uE3 düşük — hCG yüksek",
+      "C) AFP yüksek — uE3 düşük — hCG düşük",
+      "D) AFP normal — uE3 yüksek — hCG yüksek",
+      "E) AFP düşük — uE3 yüksek — hCG normal"
     ],
-    "correctAnswer": 0,
-    "explanation": "Sağlık Bakanlığı protokolüne göre D vitamini doğumdan sonraki ilk hafta içinde (400 IU/gün), profilaktik demir ise term bebekte 4. ayda başlanır."
+    "correctAnswer": 1,
+    "explanation": "Down Sendromu (Trizomi 21) taramasında karakteristik biyokimyasal profil: Maternal serum Alfa-Fetoprotein (AFP) DÜŞÜK, Serbest Estriol (uE3) DÜŞÜK, hCG ise YÜKSEKTİR. (Dörtlü testte İnhibin-A da yüksektir)."
   },
   {
     "id": "prac-acs-012",
     "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
     "slideNumber": 12,
-    "slideTitle": "Ders 2-AÇS Kapsamlı Sentezi: Ana Çocuk Sağlığı İzleminin Klinik Kodları",
-    "discipline": "Halk Sağlığı",
+    "slideTitle": "DÖB 2. İzlem (18-24. Hafta): Fetal Büyüme, Fundus Yüksekliği, Rh Uyuşmazlığı ve OGTT",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki halk sağlığı göstergelerinden hangisinin hesaplanmasında paydada '100.000 Canlı Doğum' kullanılır?",
+    "question": "Komplikasyonsuz seyreden 20 haftalık gebe bir kadının fizik muayenesinde uterus fundusunun anatomik olarak hangi seviyede palpe edilmesi beklenir?",
     "options": [
-      "A) Bebek Ölüm Hızı",
-      "B) Neonatal Ölüm Hızı",
-      "C) Anne Ölüm Oranı (AÖO)",
-      "D) Beş Yaş Altı Ölüm Hızı",
-      "E) Kaba Doğum Hızı"
+      "A) Simfizis pubis üst kenarında",
+      "B) Simfizis pubis ile umbilicus'un tam orta noktasında",
+      "C) Tam umbilicus (göbek) seviyesinde",
+      "D) Ksifoid çıkıntı seviyesinde",
+      "E) Ksifoid çıkıntı ile göbek ortasında"
     ],
     "correctAnswer": 2,
-    "explanation": "Bebek, neonatal ve beş yaş altı ölüm hızlarında paydada 1.000 canlı doğum kullanılırken; Anne Ölüm Oranında (AÖO) paydada 100.000 Canlı Doğum kullanılır."
+    "explanation": "Normal gebelikte 12. haftada fundus simfizis pubis seviyesinde; 16. haftada simfizis-göbek ortasında; 20. haftada ise tam göbek (umbilicus) hizasındadır. 36. haftada ksifoid çıkıntıya ulaşır."
   },
   {
-    "id": "cybe-q-001",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 1,
-    "slideTitle": "Cinsel Yolla Bulaşan Enfeksiyonlara Giriş ve Bulaş Dinamiği",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Aşağıdaki cinsel yolla bulaşan enfeksiyon etkenlerinden hangisi gebelik sırasında transplasental yolla fetüse geçerek konjenital enfeksiyon tablosuna yol açabilir?",
+    "id": "prac-acs-013",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 13,
+    "slideTitle": "DÖB 3. ve 4. İzlemler (30-32 ve 36-38. Haftalar): Prezentasyon, Leopold Manevraları ve Doğum Planı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "37 haftalık bir gebenin muayenesinde hekim, ellerini uterusun her iki yan duvarına yerleştirerek bir tarafta düz, sert ve dirençli bir yüzey; diğer tarafta ise küçük nodüler hareketli parçalar palpe ediyor. Bu muayene hangi Leopold manevrasıdır ve temel klinik amacı nedir?",
     "options": [
-      "A) Trichomonas vaginalis",
-      "B) Treponema pallidum",
-      "C) Haemophilus ducreyi",
-      "D) Phthirus pubis",
-      "E) Sarcoptes scabiei"
+      "A) 1. Leopold Manevrası — Fundustaki fetal kutbu belirlemek",
+      "B) 2. Leopold Manevrası — Fetal sırtı bularak FKS dinleme odağını saptamak",
+      "C) 3. Leopold Manevrası — Pawlik tutuşuyla prezentasyonu saptamak",
+      "D) 4. Leopold Manevrası — Fetusun pelvise angaje olup olmadığını değerlendirmek",
+      "E) Vajinal tuşe — Servikal dilatasyon ve efasmanı ölçmek"
     ],
     "correctAnswer": 1,
-    "explanation": "Treponema pallidum (Sifiliz) plasentayı geçerek konjenital sifiliz (Hutchinson dişleri, eyer burun, sağırlık) yapabilen klasik transplasental patojendir."
+    "explanation": "Uterusun iki yan duvarına eller konularak düz-dirençli fetal sırt ile ekstremitelerin palpe edilmesi 2. Leopold Manevrasıdır. Fetal sırtın yeri saptanarak Fetal Kalp Seslerinin (FKS) en net duyulacağı odak belirlenir."
   },
   {
-    "id": "cybe-q-002",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 2,
-    "slideTitle": "CYBE Etkenlerinin Mikrobiyolojik Sınıflandırılması",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Aşağıdaki mikroorganizmalardan hangisi hücre içi obligat yaşam döngüsüne sahip olup beta-laktam antibiyotiklere doğal direnç gösteren en sık bakteriyel CYBE etkenidir?",
+    "id": "prac-acs-014",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 14,
+    "slideTitle": "Gebelikte Tehlike İşaretleri ve İvedi Sevk Kriterleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "32 haftalık bir gebe aile sağlığı merkezine rutin kontrole geliyor. Yapılan değerlendirmede aşağıdaki bulgulardan hangisinin varlığı, hastanın derhal ikinci/üçüncü basamak bir hastaneye ACİL SEVK EDİLMESİNİ GEREKTİRMEZ?",
     "options": [
-      "A) Neisseria gonorrhoeae",
-      "B) Haemophilus ducreyi",
-      "C) Chlamydia trachomatis",
-      "D) Treponema pallidum",
-      "E) Gardnerella vaginalis"
+      "A) Kan basıncının 150/95 mmHg ve idrar striptinde protein 2+ bulunması",
+      "B) Laboratuvar tahlilinde hemoglobin düzeyinin 6.2 g/dl saptanması",
+      "C) Gebe tarafından epigastrik bölgede şiddetli ağrı ve görmede parıltılar tariflenmesi",
+      "D) Akşamları ayak bileklerinde ortaya çıkan ve dinlenmekle gerileyen hafif pretibial ödem",
+      "E) Fetal kalp seslerinin el doppleri ile dakikada 95 vuru (bradikardi) olarak duyulması"
     ],
-    "correctAnswer": 2,
-    "explanation": "Chlamydia trachomatis obligat hücre içi bakteridir; peptidoglikan duvarı klasik olmadığından ve hücre içine girdiğinden beta-laktamlar etkisizdir; makrolid (azitromisin) veya tetrasiklin (doksisiklin) kullanılır."
+    "correctAnswer": 3,
+    "explanation": "Akşamları ayak bileklerinde oluşan ve istirahatle gerileyen ödem, venöz basıya bağlı normal 'fizyolojik ödem'dir; tansiyon ve idrar normalse sevk gerektirmez. Preeklampsi bulguları (A, C), Hb < 7 g/dl (B) ve fetal bradikardi (E) ise mutlak acil sevk gerektirir."
   },
   {
-    "id": "cybe-q-003",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 3,
-    "slideTitle": "Vajinal Akıntı Sendromu: Vajinit ve Servisit Ayrımı",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Cinsel ilişki sonrası kanama (postkoital kanama), derin disparoni ve spekulum muayenesinde servikal os'tan pürülan eksuda gelişi ile başvuran bir kadında en olası tanı ve öncelikli etken çifti hangisidir?",
+    "id": "prac-acs-015",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 15,
+    "slideTitle": "Gebelikte Fizyolojik Değişiklikler, Kilo Artışı Dinamikleri ve Ödem",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Gebelikte kilo artışı ve ödem mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE KLİNİK OLARAK YANLIŞTIR?",
     "options": [
-      "A) Vulvovajinal Kandidiyazis — Candida albicans & glabrata",
-      "B) Bakteriyel Vajinozis — Gardnerella vaginalis & Prevotella",
-      "C) Mukopürülan Servisit — Chlamydia trachomatis & Neisseria gonorrhoeae",
-      "D) Trikomonal Vajinit — Trichomonas vaginalis & Giardia",
-      "E) Atrofik Vajinit — Hipoöstrojenizm"
+      "A) Normal kilolu bir kadında gebelik boyunca beklenen toplam kilo artışı ortalama 9-13 kg'dır",
+      "B) İlk trimesterde annenin toplam 1-1.5 kg, sonrasında ayda ortalama 1.5-2 kg alması beklenir",
+      "C) Plazma hacminin eritrosit kitlesinden fazla artması fizyolojik hemodilüsyon anemisine yol açar",
+      "D) Sabahları yüzde ve ellerde aniden gelişen ödem preeklampsi açısından patolojik bir tehlike işaretidir",
+      "E) Akşamları ayak bileklerinde oluşan ödem doğrudan akut glomerülonefrit göstergesidir ve gebelikte asla görülmez"
     ],
-    "correctAnswer": 2,
-    "explanation": "Servikal os'tan pürülan akıntı, frajilite ve postkoital kanama 'Mukopürülan Servisit' tablosudur; baş şüpheliler Chlamydia trachomatis ve Neisseria gonorrhoeae'dir."
+    "correctAnswer": 4,
+    "explanation": "Akşamları ayak bileklerinde görülen ödem gebelikte son derece yaygın olan fizyolojik bir durumdur (vena kava inferiora bası ve venöz staz sonucu). Glomerülonefrit göstergesi değildir. Diğer tüm seçenekler gebelik fizyolojisine uygun doğru ifadelerdir."
   },
   {
-    "id": "cybe-q-004",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 4,
-    "slideTitle": "Vajinit Ayırıcı Tanısı: Trikomoniyazis, Kandidiyazis ve Bakteriyel Vajinozis",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Vajinal akıntı yakınmasıyla başvuran bir kadında vajinal pH 4.0 olarak ölçülmüş, mikroskopide bol psödohif ve tomurcuklanan mayalar izlenmiştir. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
+    "id": "prac-acs-016",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 16,
+    "slideTitle": "Gebelik Toksemileri: Gestasyonel Hipertansiyon, Preeklampsi ve Eklampsi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "34 haftalık bir gebenin izleminde kan basıncı 155/100 mmHg ölçülüyor. İdrar tahlilinde proteinüri saptanmayan hastanın laboratuvarında trombosit sayısı 75.000/μL ve AST/ALT düzeyleri normalin 3 katı bulunuyor. Bu hastanın tanısı ve konvülsiyon profilaksisinde ilk tercih edilecek ilaç aşağıdakilerden hangisidir?",
     "options": [
-      "A) Bakteriyel Vajinozis",
-      "B) Vulvovajinal Kandidiyazis",
-      "C) Trikomoniyazis",
-      "D) Mukopürülan Servisit",
-      "E) Deskuamatif Enflamatuvar Vajinit"
+      "A) Gestasyonel Hipertansiyon — Diazepam",
+      "B) Preeklampsi — Magnezyum Sülfat",
+      "C) Kronik Hipertansiyon — Fenitoin",
+      "D) Eklampsi — Sodyum Nitroprussid",
+      "E) HELLP Sendromu — Mannitol"
     ],
     "correctAnswer": 1,
-    "explanation": "Normal/asidik pH (<4.5) varlığı ve mikroskopide psödohiflerin görülmesi Vulvovajinal Kandidiyazis tanısını kesinleştirir."
+    "explanation": "20. haftadan sonra tansiyon yüksekliğine eşlik eden trombositopeni (<100.000) ve KC enzim yüksekliği proteinüri olmasa dahi Preeklampsi tanısı koydurur. Konvülsiyon profilaksisinde altın standart ilaç Magnezyum Sülfattır."
   }
 ]

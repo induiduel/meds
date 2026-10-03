@@ -1,383 +1,995 @@
 [
   {
-    "id": "cybe-q-005",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 5,
-    "slideTitle": "Vajinal Akıntıda Tanı Yöntemleri ve Amsel Kriterleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Aşağıdakilerden hangisi Bakteriyel Vajinozis tanısında kullanılan 'Amsel Kriterleri' arasında yer ALMAZ?",
+    "id": "prac-acs-017",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 17,
+    "slideTitle": "Gebelikte Rutin Profilaksi Programları: Folik Asit, Demir, D Vitamini ve Td Aşısı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "T.C. Sağlık Bakanlığı Ana Çocuk Sağlığı kılavuzlarına göre gebelere yönelik yürütülen rutin mikronütrient ve aşı profilaksisi ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Vajinal sıvıda pH değerinin 4.5'in üzerinde olması",
-      "B) Salin ıslak preparatta lökosit silendirlerinin saptanması",
-      "C) %10 KOH damlatıldığında amin (balık) kokusunun açığa çıkması",
-      "D) Mikroskobik incelemede Clue Cell (ipucu hücresi) varlığı",
-      "E) İnce, homojen, gri-beyaz vajinal akıntı varlığı"
+      "A) Demir desteği: 4. haftadan başlayıp sadece doğuma kadar verilir",
+      "B) D vitamini desteği: 12. haftadan başlayıp doğum sonrasındaki 6. ayın sonuna kadar sürdürülür",
+      "C) Folik asit desteği: Sadece doğumdan sonraki lohusalık döneminde 400 mcg verilir",
+      "D) Tetanoz (Td) aşısı: 1. trimesterin ilk 4 haftasında 3 doz halinde tamamlanır",
+      "E) Önceki gebeliğinde meningomiyeloselli bebek öyküsü olana gebelikte folik asit verilmesi kontrendikedir"
     ],
     "correctAnswer": 1,
-    "explanation": "Lökosit silendirleri piyelonefritte idrarda görülen yapıdır; vajinal akıntıda görülmez ve Amsel kriteri değildir."
+    "explanation": "Sağlık Bakanlığı protokolüne göre D vitamini desteği 12. gebelik haftasında başlar ve doğum sonrası 6. ayın sonuna kadar (günde 1200 IU) sürdürülür. Demir ise 16. haftada başlar ve doğum sonrası 3. aya kadar verilir."
+  },
+  {
+    "id": "prac-acs-018",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 18,
+    "slideTitle": "Doğum Hizmetleri, Doğum Şekli ve Sezaryen Epidemiyolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Dünya Sağlık Örgütü'nün (DSÖ) tıbben kabul edilebilir ve önerilen sezaryen oranı üst sınırı ile sezaryen oranlarını denetlemek ve klinik standardizasyon sağlamak için önerdiği sınıflama sistemi hangisinde doğru verilmiştir?",
+    "options": [
+      "A) %5 — Kessner İndeksi",
+      "B) %10-15 — Robson On Grup Sınıflaması",
+      "C) %25-30 — Apgar Skorlama Sistemi",
+      "D) %40 — Bishop Servikal Skorlaması",
+      "E) %50 — Tanner Evrelemesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "DSÖ'nün kabul edilebilir gördüğü sezaryen tavan oranı %10-15 aralığıdır. Sezaryen endikasyonlarını ve oranlarını uluslararası düzeyde izlemek için kullanılan standart sistem ise 'Robson On Grup Sınıflaması'dır."
+  },
+  {
+    "id": "prac-acs-019",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 19,
+    "slideTitle": "Doğum Sonu Bakım (Lohusalık / Puerperium İzlemleri)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Normal spontan vajinal doğum yapan sağlıklı bir lohusanın doğum sonrası 12. günde yapılan fizik muayenesinde uterus fundusunun durumu ve normal loşi özelliği aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) Fundus göbek hizasındadır — Kötü kokulu pürülan akıntı",
+      "B) Fundus simfizis pubis arkasına çekilmiş olup karından palpe edilemez — Lochia alba (sarımsı-beyaz akıntı)",
+      "C) Fundus ksifoid çıkıntıdadır — Parlak kırmızı kanama (Lochia rubra)",
+      "D) Fundus umbilicus ile ksifoid ortasındadır — Yeşil renkli loşi",
+      "E) Fundus pelvisten tamamen çıkmıştır — Hiç akıntı olmaması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğum sonrası 10-12. günlerde uterus fundusu simfizis pubis arkasına inerek karından palpe edilemez hale gelir. 10. günden itibaren gelen akıntı ise lökosit ve mukus içeren sarımsı-beyaz renkli Lochia alba'dır."
+  },
+  {
+    "id": "prac-acs-020",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 20,
+    "slideTitle": "15-49 Yaş Kadın İzlemleri ve Üreme Sağlığı / Aile Planlaması Danışmanlığı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Halk sağlığı ilkelerine ve Dünya Sağlık Örgütü (DSÖ) kılavuzlarına göre, maternal anemi, düşük doğum ağırlıklı bebek ve bebek ölüm hızını en aza indirmek için iki canlı doğum arasında önerilen ASGARİ SÜRE ne kadardır?",
+    "options": [
+      "A) En az 6 ay",
+      "B) En az 12 ay (1 yıl)",
+      "C) En az 24 ay (2 yıl)",
+      "D) En az 48 ay (4 yıl)",
+      "E) En az 60 ay (5 yıl)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "DSÖ ve uluslararası halk sağlığı rehberlerine göre maternal depoların yenilenmesi ve perinatal mortalitenin önlenmesi için iki canlı doğum arasındaki ideal asgari süre en az 24 aydır (2 yıl)."
+  },
+  {
+    "id": "prac-acs-021",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 21,
+    "slideTitle": "Yenidoğan ve Süt Çocuğu İzlem Protokolü ve İlk Fizik Muayene",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Zorlu vajinal doğum sonrası 2. günde muayene edilen term bir yenidoğanın paryetal kemiği üzerinde fluktuasyon veren şişlik saptanıyor. Şişliğin sütür çizgilerini kesinlikle aşmadığı belirleniyor. En olası tanı ve bu tabloyla ilgili doğru klinik yaklaşım hangisidir?",
+    "options": [
+      "A) Kaput suksedaneum — Acil cerrahi drenaj yapılmalıdır",
+      "B) Sefal hematom — Subperiostal kanamadır, iğneyle aspire edilmemeli, spontan rezorpsiyon beklenmelidir",
+      "C) Subgaleal hematom — Kan kaybı şoku için derhal kraniyotomi yapılmalıdır",
+      "D) Epidural hematom — Derhal lomber ponksiyon yapılmalıdır",
+      "E) Kraniyosinostoz — Acil kemik rezeksiyonu gerekir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sütür çizgilerini aşmayan kafa derisi şişliği subperiostal kanama olan Sefal Hematomdur. Enfeksiyon riski nedeniyle kesinlikle aspire edilmez veya drene edilmez; kendiliğinden rezorbe olması beklenir ve hiperbilirubinemi açısından takip edilir."
+  },
+  {
+    "id": "prac-acs-022",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 22,
+    "slideTitle": "Yenidoğan Ulusal Metabolik Tarama Programı (Topuk Kanı - Guthrie Kartı)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Doğum salonunda doğduktan 6 saat sonra ailesinin ısrarıyla taburcu edilen bir yenidoğandan taburculuk öncesi topuk kanı alınıyor. Bu bebekle ilgili halk sağlığı ve laboratuvar açısından en doğru yaklaşım aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Alınan kan testi ömür boyu geçerlidir, tekrar teste gerek yoktur",
+      "B) Bebek henüz yeterli protein/süt almadığından Fenilketonüri testi yalancı negatif çıkabilir; ilk hafta içinde mutlaka ikinci topuk kanı alınmalıdır",
+      "C) Kan sadece 1 yaşında tekrarlanmalıdır",
+      "D) Topuk kanı yalnızca kord kanından alınabilir, bebekten alınamaz",
+      "E) Bebek beslenmediği için Konjenital Hipotiroidi testi daima yalancı pozitif çıkar"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fenilketonüride kanda fenilalanin birikmesi için bebeğin en az 24-48 saat proteinle beslenmesi gerekir. İlk 24 saat içinde alınan kanlarda Fenilketonüri yalancı negatif çıkabileceğinden, yaşamın ilk haftasında mutlaka ikinci bir topuk kanı örneği alınmalıdır."
+  },
+  {
+    "id": "prac-acs-023",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 23,
+    "slideTitle": "Diğer Ulusal Yenidoğan Taramaları: İşitme, Görme ve Gelişimsel Kalça Displazisi (GKD)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Birinci ay sağlam çocuk izleminde oftalmoskop ile yapılan kırmızı refle testinde sağ gözde normal kırmızı yansıma alınırken, sol pupillada beyaz parlak bir yansıma (lökokori) saptanıyor. Bu bebekte öncelikle ekarte edilmesi gereken hayatı tehdit edici en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Retinoblastom",
+      "B) Konjenital dakriyosistit",
+      "C) Toksik eritem",
+      "D) Kaput suksedaneum",
+      "E) Fizyolojik sarılık"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Pupillada beyaz refle (Lökokori) saptanması çocukluk çağının en sık primer intraoküler malign tümörü olan Retinoblastom ve görmeyi tehdit eden Konjenital Katarakt açısından acil oftalmoloji sevkini gerektiren mutlak bir alarm bulgusudur."
+  },
+  {
+    "id": "prac-acs-024",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 24,
+    "slideTitle": "Büyüme ve Gelişmenin İzlenmesi: Somatometrik Standartlar, Fontanel ve Persentil Eğrileri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "3200 gram doğan, term ve sağlıklı büyüyen bir bebeğin 1 yaş (12. ay) kontrolünde beklenen yaklaşık vücut ağırlığı, boy uzunluğu ve ön fontanel durumu aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) 6.400 g — 60 cm — Ön fontanel tamamen açık (4x4 cm)",
+      "B) 9.600 g — 75 cm — Ön fontanel kapanmış veya kapanmak üzeredir (9-18. ay aralığı)",
+      "C) 12.800 g — 100 cm — Ön fontanel 4. ayda kapanmıştır",
+      "D) 7.500 g — 65 cm — Ön fontanel 2. ayda kapanmalıdır",
+      "E) 15.000 g — 90 cm — Ön fontanel 3 yaşına kadar açık kalmalıdır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "1 yaşında normal bir bebeğin ağırlığı doğum kilosunun yaklaşık 3 katına (3.200 x 3 = ~9.600 g), boyu doğum boyunun 1.5 katına (~75 cm) ulaşır. Ön fontanel ise normalde 9-18. aylar arasında kapandığından 1 yaşında ya kapanmış ya da kapanmak üzere küçülmüştür."
+  },
+  {
+    "id": "cybe-q-001",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
+    "slideNumber": 1,
+    "slideTitle": "CYBE Epidemiyolojisi, Bulaş Dinamikleri ve Genel Yaklaşım İlkeleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Kadında semptom bulunmaması Neisseria gonorrhoeae enfeksiyonunu kesin olarak dışlar."
+      },
+      {
+        "key": "B",
+        "text": "Neisseria gonorrhoeae kadınlarda yaklaşık %50 oranında asemptomatik seyredebileceğinden, hasta taranmalı ve ampirik olarak tedavi edilmelidir.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Kadınlarda asemptomatik seyir klamidya enfeksiyonlarında son derece nadirdir."
+      },
+      {
+        "key": "D",
+        "text": "Partnerin tedavisi tamamlandıktan sonra kadının tedavi almasına gerek kalmaz."
+      },
+      {
+        "key": "E",
+        "text": "Gonore enfeksiyonu varlığı HIV bulaş riskini etkilemez."
+      }
+    ],
+    "correctAnswer": 1,
+    "explanation": "Kadın genital sisteminde gonokok enfeksiyonları yaklaşık %50 oranında klinik olarak asemptomatik seyredebilir. Bu nedenle partnerinde gonore saptanan asemptomatik kadınlar taranmalı ve temas öyküsü nedeniyle derhal tedaviye alınmalıdır (B doğru). Semptom olmaması enfeksiyonu dışlamaz (A yanlış). Kadınlarda klamidya %90'a varan oranlarda asemptomatiktir (C yanlış). Tedavi edilmeyen asemptomatik partner reenfeksiyona ('ping-pong') yol açar (D yanlış). Gonokoksik mukozal inflamasyon nötrofil ve CD4+ lenfosit infiltrasyonuna yol açarak HIV bulaş riskini katbekat artırır (E yanlış)."
+  },
+  {
+    "id": "cybe-q-002",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
+    "slideNumber": 2,
+    "slideTitle": "Vajinal Akıntı ve Vajinit Sendromuna Klinik & Farmakolojik Yaklaşım",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Trichomonas vaginalis enfeksiyonu - Tek doz Azitromisin 1 g oral"
+      },
+      {
+        "key": "B",
+        "text": "Vulvovajinal Kandidiyazis - Tek doz Flukonazol 150 mg oral"
+      },
+      {
+        "key": "C",
+        "text": "Bakteriyel Vajinozis - Oral Metronidazol 2x500 mg 7 gün (veya intravajinal jel)",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Gonokoksik Servisit - İM Seftriakson 500 mg tek doz"
+      },
+      {
+        "key": "E",
+        "text": "Klamidya Servisiti - Oral Doksisiklin 2x100 mg 7 gün"
+      }
+    ],
+    "correctAnswer": 2,
+    "explanation": "Homojen grimsi akıntı, pH > 4.5, pozitif Whiff testi ve mikroskopide clue cell varlığı Amsel kriterlerinden 4'ünü de karşılar ve Bakteriyel Vajinozis için patognomoniktir. Tedavide anaerob florayı ve Gardnerella'yı hedefleyen oral Metronidazol (veya oral/topikal Klindamisin) ilk seçenektir (C doğru). Trikomoniyaziste sarı-yeşil köpüklü akıntı ve hareketli trofozoitler olurdu (A yanlış). Kandidiyaziste pH asidiktir (<4.5) ve hifler görülür (B yanlış). Gonore ve klamidya endoservisit yapar, vajinit bulgularıyla değil mukopürülan servikal akıntıyla gelir (D ve E yanlış)."
+  },
+  {
+    "id": "cybe-q-003",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
+    "slideNumber": 3,
+    "slideTitle": "Üretrit ve Servisit Sendromları: Gonokoksik ve Non-Gonokoksik Ayrımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Gram boyama sonucu tanı için yetersizdir; tedaviye başlamak için NAAT sonucu beklenmelidir."
+      },
+      {
+        "key": "B",
+        "text": "Tablo Chlamydia trachomatis üretritidir ve tek doz Azitromisin yeterlidir."
+      },
+      {
+        "key": "C",
+        "text": "Tanı akut gonokoksik üretrittir; Neisseria gonorrhoeae hedeflenirken klamidya ko-enfeksiyonu dışlanamadığı için ikili tedavi verilmelidir.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Hastada saptanan diplokoklar hücre dışında olsaydı gonore tanısı kesinleşirdi."
+      },
+      {
+        "key": "E",
+        "text": "Bu hastanın cinsel partnerinde benzer semptomlar gelişene kadar tedavi verilmemelidir."
+      }
+    ],
+    "correctAnswer": 2,
+    "explanation": "Erkek hastada akut başlangıçlı pürülan akıntıda intrasellüler Gram-negatif diplokok görülmesi Neisseria gonorrhoeae için %95'in üzerinde özgüllükle tanı koydurur. Gonore tanısı alan olgularda klamidya ko-enfeksiyonu sıklığı %30-40'a ulaştığından ve klamidya dışlanamadığından seftriaksona ek olarak klamidyayı kapsayan rejim (Doksisiklin) eklenmelidir (C doğru). Erkekte Gram yayma tanı için yeterlidir, sonuç beklenmeden tedavi başlanır (A yanlış). Klamidya hücre içi diplokok yapmaz (B yanlış). Tanı koydurucu olan hücre içi (intrasellüler) yerleşimdir (D yanlış). Partner semptomsuz olsa bile mutlaka tedavi edilmelidir (E yanlış)."
+  },
+  {
+    "id": "cybe-q-004",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
+    "slideNumber": 4,
+    "slideTitle": "Sifilis (Treponema pallidum) Etyopatogenezi ve Klinik Evreleme",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Lökositoklastik vaskülit - Kondiloma aküminata"
+      },
+      {
+        "key": "B",
+        "text": "Obliteratif endarterit - Kondiloma lata",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Fibrinoid nekroz - Ulkus molle"
+      },
+      {
+        "key": "D",
+        "text": "Granülomatöz dev hücreli arterit - Donovan cisimciği"
+      },
+      {
+        "key": "E",
+        "text": "Tromboanjitis obliterans - Gom"
+      }
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hastadaki tablo 2 ay önceki primer sert şankrı takiben gelişen sekonder sifilistir. Sekonder sifiliste el ayası-ayak tabanı döküntüleri ve perianal bölgede düz/geniş tabanlı masere lezyonlar olan kondiloma lata görülür. Treponema pallidum'un doku hasarındaki temel histopatolojik mekanizma ise küçük damarlarda perivasküler plazma hücre infiltrasyonuyla giden obliteratif endarterittir (B doğru). Kondiloma aküminata HPV tip 6-11 lezyonudur (A yanlış). Ulkus molle şankroiddir (C yanlış). Donovan cisimcikleri granüloma inguinale bulgusudur (D yanlış)."
+  },
+  {
+    "id": "cybe-q-005",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
+    "slideNumber": 5,
+    "slideTitle": "Sifilis Tanı Yöntemleri ve Serolojik Algoritmalar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Hastada immün yetmezlik vardır ve antikor üretememiştir; direkt kültür yapılmalıdır."
+      },
+      {
+        "key": "B",
+        "text": "Sekonder sifiliste antikorlar henüz oluşmamıştır; 6 hafta sonra test tekrarlanmalıdır."
+      },
+      {
+        "key": "C",
+        "text": "Aşırı antikor fazlalığına bağlı prozone fenomeni gelişmiştir; serum dilüe edilerek test tekrarlanmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "T. pallidum hücre duvarı mutasyona uğramıştır; karanlık alan mikroskopisi istenmelidir."
+      },
+      {
+        "key": "E",
+        "text": "RPR sadece nörosifiliste pozitiftir; BOS incelemesi yapılmalıdır."
+      }
+    ],
+    "correctAnswer": 2,
+    "explanation": "Sekonder sifilis kanda spirokiteminin ve antikor titresinin en yüksek olduğu evredir. Antikor konsantrasyonu aşırı yüksek olduğunda antijen-antikor kafes agregasyonu engellenir ve test yalancı negatif sonuç verir; bu duruma 'prozone fenomeni' denir. Serum 1:10, 1:100 oranında dilüe edilerek test tekrarlandığında güçlü pozitiflik saptanır (C doğru). Sifilis yapay besiyerinde üretilemez (A yanlış). Sekonder evrede antikorlar en tepe noktadadır (B yanlış). RPR primer, sekonder ve latent evrelerde kanda bakılır (E yanlış)."
   },
   {
     "id": "cybe-q-006",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 6,
-    "slideTitle": "CYBE'den Korunma İlkeleri, Danışmanlık ve Bariyer Yöntemler",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Cinsel yolla bulaşan enfeksiyonlardan korunmada lateks kondom kullanımı ile ilgili aşağıdaki ifadelerden hangisi bilimsel olarak DOĞRUDUR?",
+    "slideTitle": "Primer, Sekonder ve Erken Latent Sifilis Tedavisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Kondom kullanımı genital herpes ve HPV dahil tüm etkenlere karşı %100 mutlak koruma sağlar",
-      "B) Kondom yalnızca gebeliği önler, HIV veya Gonore geçişini hiçbir şekilde engellemez",
-      "C) Semen ve vajinal sıvıyla bulaşan HIV ve klamidyaya karşı yüksek koruma sağlarken; kondom dışı cilt temasıyla geçen HPV ve HSV lezyonlarında koruyuculuğu sınırlıdır",
-      "D) Partner tedavisi yapıldığı sürece kondom kullanılmasına hiçbir zaman gerek yoktur",
-      "E) Yağ bazlı kayganlaştırıcılar lateks kondomun dayanıklılığını ve koruyuculuğunu artırır"
+      {
+        "key": "A",
+        "text": "Kristalize Penisilin G 18-24 MU/gün İV, 14 gün"
+      },
+      {
+        "key": "B",
+        "text": "Benzatin Penisilin G 2.4 MU İM tek doz",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Benzatin Penisilin G 2.4 MU İM, haftada bir toplam 3 doz"
+      },
+      {
+        "key": "D",
+        "text": "Tek doz Azitromisin 1 g oral"
+      },
+      {
+        "key": "E",
+        "text": "Seftriakson 250 mg İM tek doz"
+      }
     ],
-    "correctAnswer": 2,
-    "explanation": "Kondom sıvı geçişli etkenlere (HIV, gonore, klamidya) karşı çok etkilidir; ancak prezervatifle örtülmeyen perine/skrotum cildinde yerleşen HSV ve HPV'de ciltten cilde temasla bulaş engellenemez."
+    "correctAnswer": 1,
+    "explanation": "Primer sert şankr saptanan bu erken sifilis olgusunda standart küratif tedavi tek doz intramüsküler Benzatin Penisilin G 2.4 milyon ünitedir (B doğru). Kristalize penisilin İV nörosifilis tedavisinde kullanılır (A yanlış). Haftalık 3 doz Benzatin Penisilin rejimi geç latent, süresi bilinmeyen latent veya kardiyovasküler tersiyer sifiliste endikedir (C yanlış). Azitromisin direnç nedeniyle erken sifiliste önerilmez (D yanlış). Seftriakson tek doz gonore tedavisidir (E yanlış)."
   },
   {
     "id": "cybe-q-007",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 7,
-    "slideTitle": "Üretral Akıntı ve Üretrit Sendromu",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Şüpheli cinsel ilişkiden 3 gün sonra şiddetli dizüri ve bol sarı-yeşil pürülan akıntı ile başvuran erkek hastanın akıntı yaymasında lökosit içinde Gram negatif diplokoklar saptanmıştır. En olası tanı hangisidir?",
+    "slideTitle": "Geç Latent, Tersiyer Sifilis ve Nörosifilis Tedavi Protokolleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Non-gonokoksik üretrit (Klamidya)",
-      "B) Akut Gonokoksik Üretrit",
-      "C) Trikomonal üretrit",
-      "D) Akut bakteriyel sistit",
-      "E) Mikoplazma üretriti"
+      {
+        "key": "A",
+        "text": "Benzatin Penisilin G 2.4 MU İM tek doz"
+      },
+      {
+        "key": "B",
+        "text": "Benzatin Penisilin G 2.4 MU İM haftada bir, toplam 3 hafta"
+      },
+      {
+        "key": "C",
+        "text": "Sulu Kristalize Penisilin G 18-24 MU/gün İV (4 saatte bir veya sürekli infüzyon), 10-14 gün",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Oral Doksisiklin 2x100 mg, 14 gün"
+      },
+      {
+        "key": "E",
+        "text": "Oral Seftriakson 500 mg tek doz"
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Kısa kuluçka süresi, bol pürülan akıntı ve nötrofil içi Gram (-) diplokok varlığı Akut Gonokoksik Üretrit (Neisseria gonorrhoeae) için tipiktir."
+    "correctAnswer": 2,
+    "explanation": "Tabes dorsalis ve genel parezi bulguları ile BOS VDRL pozitifliği kesinleşmiş nörosifilisi gösterir. Nörosifilis tedavisinde Benzatin Penisilin G'nin BOS penetrasyonu yetersiz olduğundan kesinlikle yeri yoktur (A ve B yanlış). Kılavuzlarca önerilen altın standart rejim, BOS'ta bakterisidal düzey sağlayabilen Sulu Kristalize Penisilin G'nin 18-24 MU/gün dozunda intravenöz olarak 10-14 gün uygulanmasıdır (C doğru). Doksisiklin ve oral sefalosporinler nörosifiliste ilk seçenek olamaz (D ve E yanlış)."
   },
   {
     "id": "cybe-q-008",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 8,
-    "slideTitle": "CYBE'de Asemptomatik Taşıyıcılık ve 'Buzdağı Olgusu'",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Kadınlarda %90'a varan oranlarda asemptomatik seyrederek fark edilmeyen, tedavi edilmediğinde ise kronik tubal hasar, infertilite ve dış gebelik riskine yol açan en yaygın bakteriyel CYBE hangisidir?",
+    "slideTitle": "Gebelikte Sifilis ve Penisilin Alerjisi Yönetimi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Haemophilus ducreyi",
-      "B) Neisseria gonorrhoeae",
-      "C) Chlamydia trachomatis",
-      "D) Treponema pallidum",
-      "E) Gardnerella vaginalis"
+      {
+        "key": "A",
+        "text": "Gebelikte güvenli olduğu bilinen oral Doksisiklin 2x100 mg, 14 gün başlanmalıdır."
+      },
+      {
+        "key": "B",
+        "text": "Plasentayı mükemmel geçtiği bilinen oral Eritromisin 4x500 mg, 14 gün verilmelidir."
+      },
+      {
+        "key": "C",
+        "text": "Hasta hastane koşullarında penisilin desensitizasyonuna alınmalı ve ardından Benzatin Penisilin G ile tedavi edilmelidir.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Doğuma kadar tedavi ertelenmeli, doğum eyleminde sezaryen yapılmalıdır."
+      },
+      {
+        "key": "E",
+        "text": "Tek doz oral Azitromisin 2 g verilerek tedavi tamamlanmalıdır."
+      }
     ],
     "correctAnswer": 2,
-    "explanation": "Chlamydia trachomatis kadınlarda %80-90 oranında asemptomatik kalarak sessiz salpenjite, tubal skarlaşmaya ve infertiliteye yol açar."
+    "explanation": "Gebelikte sifilis tedavisinde konjenital enfeksiyonu önlediği ve fetüsü intrauterin tedavi ettiği kanıtlanmış tek ajan penisilindir. Penisilin alerjisi olan gebelerde Doksisiklin teratojenitesi (kemik-diş) nedeniyle kesinlikle kontrendikedir (A yanlış). Eritromisin plasentayı geçemediğinden fetüsü tedavi edemez (B yanlış). Azitromisin direnç ve yetersiz plasental geçiş nedeniyle önerilmez (E yanlış). Tedavinin ertelenmesi ölü doğum veya ağır konjenital hasarla sonuçlanır (D yanlış). Tek doğru ve zorunlu yaklaşım hastayı desensitize edip penisilinle tedavi etmektir (C doğru)."
   },
   {
     "id": "cybe-q-009",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 9,
-    "slideTitle": "Majör Komplikasyon: Pelvik İnflamatuvar Hastalık (PİH)",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Alt karın ağrısı ve pürülan vajinal akıntısı olan 24 yaşındaki kadının bimanuel jinekolojik muayenesinde serviks hareket ettirildiğinde şiddetli hassasiyet (Chandelier belirtisi) saptanmıştır. Bu hastada öncelikli tanı nedir?",
+    "slideTitle": "Jarisch-Herxheimer Reaksiyonu: Mekanizma, Klinik ve Tedavi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Akut Apandisit",
-      "B) Pelvik İnflamatuvar Hastalık (PİH)",
-      "C) Over Kist Rüptürü",
-      "D) Basit Bakteriyel Vajinozis",
-      "E) Endometriozis"
+      {
+        "key": "A",
+        "text": "Akut penisilin anafilaksisidir; derhal intramüsküler adrenalin uygulanmalıdır."
+      },
+      {
+        "key": "B",
+        "text": "Tablo Jarisch-Herxheimer reaksiyonudur; treponema lizisi ve TNF-alfa salınımına bağlıdır, semptomatik antipiretik ile izlenmelidir.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Penisilin dozu yetersiz kalmıştır; derhal intravenöz seftriaksona geçilmelidir."
+      },
+      {
+        "key": "D",
+        "text": "Hastada dirençli T. pallidum suşu vardır; tedavi kesilip antibiyogram beklenmelidir."
+      },
+      {
+        "key": "E",
+        "text": "Bu reaksiyon sadece tersiyer sifilisli olgularda görülür."
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Servikal hareket hassasiyeti (avize belirtisi), alt karın ağrısı ve pürülan akıntı Pelvik İnflamatuvar Hastalığın (PİH) temel klinik göstergesidir."
+    "explanation": "Penisilin enjeksiyonundan 2-8 saat sonra gelişen titreme, yüksek ateş, taşikardi ve mevcut lezyonlarda geçici eritem artışı Jarisch-Herxheimer reaksiyonunun klasik prezentasyonudur. Bronkospazm ve ürtiker olmaması anafilaksiyi dışlar (A yanlış). Olay bakterilerin parçalanmasıyla açığa çıkan pirojenik sitokinlere (özellikle TNF-alfa, IL-6) bağlıdır; antibiyotik kesilmez, parasetamol ve hidrasyonla 12-24 saatte düzelir (B doğru). T. pallidum penisiline direnç geliştirmez (D yanlış). JHR en sık spiroket yükünün en yüksek olduğu sekonder evrede görülür (E yanlış)."
   },
   {
     "id": "cybe-q-010",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 10,
-    "slideTitle": "Sistemik Komplikasyonlar: Fitz-Hugh-Curtis ve Dissemine Gonokok",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "PİH öyküsü olan genç bir kadın hastada sağ üst kadran ağrısı gelişmiş; laparoskopide karaciğer kapsülü ile ön karın duvarı arasında fibröz 'keman teli' yapışıklıkları izlenmiştir. Bu klinik sendrom aşağıdakilerden hangisidir?",
+    "slideTitle": "Gonore (Neisseria gonorrhoeae): Patogenez ve Klinik Tablolar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Budd-Chiari Sendromu",
-      "B) Fitz-Hugh-Curtis Sendromu",
-      "C) Gilbert Sendromu",
-      "D) Mirizzi Sendromu",
-      "E) Lemierre Sendromu"
+      {
+        "key": "A",
+        "text": "Dissemine Gonokoksik Enfeksiyon - Pili antijenik varyasyonu ve IgA1 proteaz",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Reaktif Artrit - Treponema pallidum obliteratif endarteriti"
+      },
+      {
+        "key": "C",
+        "text": "Lyme Hastalığı - Borrelia burgdorferi flagellin mutasyonu"
+      },
+      {
+        "key": "D",
+        "text": "Septik Stafilokoksik Artrit - Protein A Fc bağlanması"
+      },
+      {
+        "key": "E",
+        "text": "Klamidya Artriti - Retiküler cisimcik toksini"
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Klamidya veya gonoreye ikincil gelişen perihepatit ve 'keman teli' yapışıklıkları Fitz-Hugh-Curtis Sendromudur."
+    "correctAnswer": 0,
+    "explanation": "Genç hastada tenosinovit, akral püstüler dermatit ve gezici artrit tablosu Dissemine Gonokok Enfeksiyonu (DGE)'nun klasik kliniğidir. Neisseria gonorrhoeae'nin mukozal immüniteden kaçmasında pili genlerindeki antijenik varyasyon ve sekretuar IgA'yı parçalayan IgA1 proteaz enzimi temel rol oynar (A doğru). Treponema pallidum tenosinovit-dermatit tablosu yapmaz (B yanlış). Diğer şıklardaki etken ve mekanizma eşleştirmeleri bu tabloyla uyumsuzdur (C, D, E yanlış)."
   },
   {
     "id": "cybe-q-011",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 11,
-    "slideTitle": "Erkekte Komplikasyonlar: Epididimit, Epididimoorşit ve Prostatit",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Erkekte Komplikasyonlar: Epididimit, Epididimoorşit ve Prostatit kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Gonore Tedavisi ve Antimikrobiyal Direnç Mekanizmaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Erkekte Komplikasyonlar: Epididimit, Epididimoorşit ve Prostatit sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) 35 yaş altı erkek epididimitinde etken Klamidya ve Gonore iken; 35 yaş üstünde E. coli'dir.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Oral Siprofloksasin 500 mg tek doz"
+      },
+      {
+        "key": "B",
+        "text": "İntramüsküler Gentamisin 240 mg tek doz + Oral Azitromisin 2 g tek doz",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Oral Sefiksim 400 mg tek doz"
+      },
+      {
+        "key": "D",
+        "text": "İntramüsküler Benzatin Penisilin G 2.4 MU tek doz"
+      },
+      {
+        "key": "E",
+        "text": "Oral Metronidazol 2 g tek doz"
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: 35 yaş altı erkek epididimitinde etken Klamidya ve Gonore iken; 35 yaş üstünde E. coli'dir."
+    "explanation": "Gonokok tedavisinde sefalosporin veya penisilin anafilaksisi olan olgularda beta-laktamlar (sefiksim, penisilin) kesinlikle kontrendikedir (C ve D yanlış). Florokinolonlara (siprofloksasin) karşı yaygın gyrA mutasyonları nedeniyle monoterapi başarısızdır (A yanlış). Metronidazol paraziter ve anaerobik etkilidir (E yanlış). Kılavuzlarca önerilen güvenilir ve etkin alternatif rejim tek doz İM Gentamisin 240 mg + oral Azitromisin 2 g kombinasyonudur (B doğru)."
   },
   {
     "id": "cybe-q-012",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 12,
-    "slideTitle": "CYBE Laboratuvar Tanı Yöntemleri ve Kültür Şartları",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "CYBE Laboratuvar Tanı Yöntemleri ve Kültür Şartları kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Klamidya Enfeksiyonları (Chlamydia trachomatis): Biyoloji ve Klinik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) CYBE Laboratuvar Tanı Yöntemleri ve Kültür Şartları sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Neisseria gonorrhoeae soğuğa dayanıksızdır, hasta başı Thayer-Martin besiyerine ekilir ve %5-10 CO2 ortamında ürer.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Retiküler cisimcik hücre dışında haftalarca canlı kalarak bulaşmayı sağlayan enfeksiyöz formdur."
+      },
+      {
+        "key": "B",
+        "text": "Elementer cisimcik hücre içine girdikten sonra metabolik olarak aktif olan retiküler cisimciğe dönüşür.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "A, B, C serovarları cinsel yolla bulaşarak pelvik inflamatuar hastalığa yol açar."
+      },
+      {
+        "key": "D",
+        "text": "C. trachomatis kendi ATP'sini yüksek düzeyde sentezleyebildiğinden hücre dışı besiyerlerinde kolayca ürer."
+      },
+      {
+        "key": "E",
+        "text": "D-K serovarları yenidoğanda hiperakut kornea perforasyonuna yol açan oftalmi yapar."
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Neisseria gonorrhoeae soğuğa dayanıksızdır, hasta başı Thayer-Martin besiyerine ekilir ve %5-10 CO2 ortamında ürer."
+    "explanation": "C. trachomatis'in enfeksiyöz formu olan elementer cisimcik hücreye endositozla girdikten sonra fagozom içinde bölünerek çoğalan metabolik aktif retiküler cisimciğe dönüşür (B doğru). Enfeksiyöz ve hücre dışı form EB'dir, RB hücre dışında dayanıksızdır (A yanlış). A-C serovarları trahom yapar, cinsel yolla bulaşmaz (C yanlış). Bakteri zorunlu hücre içidir ve konak ATP'sine bağımlıdır (D yanlış). Hiperakut kornea perforasyonu yapan oftalmi N. gonorrhoeae'ye aittir (E yanlış)."
   },
   {
     "id": "cybe-q-013",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 13,
-    "slideTitle": "Trikomoniyazis Tedavi İlkeleri ve Partner Yönetimi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Trikomoniyazis Tedavi İlkeleri ve Partner Yönetimi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Ürogenital Klamidya Tedavisi ve Özel Hasta Popülasyonları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Trikomoniyazis Tedavi İlkeleri ve Partner Yönetimi sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Trikomoniyaziste partner tedavisi ZORUNLUDUR; partner tedavi edilmezse reenfeksiyon kaçınılmazdır.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Doksisiklin 100 mg 2x1, 7 gün başlanmalı; kür testine gerek duyulmamalıdır."
+      },
+      {
+        "key": "B",
+        "text": "Siprofloksasin 500 mg 2x1, 7 gün verilmeli; 1 hafta sonra kontrol edilmelidir."
+      },
+      {
+        "key": "C",
+        "text": "Azitromisin 1 g oral tek doz verilmeli; tedaviden 3-4 hafta sonra NAAT ile kür testi yapılmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Asemptomatik olduğu için doğuma kadar tedavi verilmemelidir."
+      },
+      {
+        "key": "E",
+        "text": "Eritromisin estolat 500 mg 4x1, 14 gün verilmelidir."
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Trikomoniyaziste partner tedavisi ZORUNLUDUR; partner tedavi edilmezse reenfeksiyon kaçınılmazdır."
+    "correctAnswer": 2,
+    "explanation": "Gebelikte klamidya tedavisinde ilk seçenek tek doz 1 g oral Azitromisindir. Doksisiklin ve kinolonlar gebelikte kontrendikedir (A ve B yanlış). Asemptomatik klamidya tedavi edilmezse erken doğum, membran rüptürü ve yenidoğanda pnömoni/konjonktivite yol açar (D yanlış). Eritromisin estolat gebelikte kolestatik hepatotoksisite riski nedeniyle kontrendikedir (E yanlış). Gebelerde tedaviden 3-4 hafta sonra kür testi yapılması zorunludur (C doğru)."
   },
   {
     "id": "cybe-q-014",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 14,
-    "slideTitle": "Klamidya Enfeksiyonu Tedavi Protokolleri ve LGV Yönetimi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Klamidya Enfeksiyonu Tedavi Protokolleri ve LGV Yönetimi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Lenfogranüloma Venereum (LGV) ve Genital Ülser Ayırıcı Tanısı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Klamidya Enfeksiyonu Tedavi Protokolleri ve LGV Yönetimi sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Gebelikte Doksisiklin mutlak kontrendikedir; klamidya saptanan gebede ilk tercih Azitromisin 1g tek dozdur!",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Bubo derhal cerrahi olarak bistüriyle insize edilip drene edilmeli, 7 gün Doksisiklin verilmelidir."
+      },
+      {
+        "key": "B",
+        "text": "Lezyon kalın iğneyle aspire edilmeli ve oral Doksisiklin 100 mg 2x1 tam 21 gün uygulanmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Tek doz İM Seftriakson 250 mg verilerek lezyonun kendi kendine patlaması beklenmelidir."
+      },
+      {
+        "key": "D",
+        "text": "Tek doz oral Azitromisin 1 g verilmesi kür için yeterlidir."
+      },
+      {
+        "key": "E",
+        "text": "İntravenöz Kristalize Penisilin G 18-24 MU/gün 14 gün başlanmalıdır."
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Gebelikte Doksisiklin mutlak kontrendikedir; klamidya saptanan gebede ilk tercih Azitromisin 1g tek dozdur!"
+    "explanation": "Geçici ağrısız primer lezyon, ağrılı süpüratif inguinal lenfadenit ve oluk işareti (groove sign) C. trachomatis L1-L3 serovarlarına bağlı Lenfogranüloma Venereum (LGV)'un tipik bulgularıdır. LGV'de doku penetrasyonunu sağlamak için tedavi süresi tam 21 gün Doksisiklindir. Bubo lezyonlarına cerrahi insizyon uygulanması kronik iyileşmeyen fistüllere yol açacağı için kontrendikedir; gerginliği gidermek için iğne aspirasyonu yapılır (B doğru, A yanlış). Tek doz azitromisin veya seftriakson LGV'de yetersizdir (C ve D yanlış). Penisilin T. pallidum içindir (E yanlış)."
   },
   {
     "id": "cybe-q-015",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 15,
-    "slideTitle": "Gonore Tedavisi ve Antimikrobiyal Direnç Yönetimi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Gonore Tedavisi ve Antimikrobiyal Direnç Yönetimi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Genital Herpes (HSV-1 ve HSV-2): Viroloji ve Patofizyoloji",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Gonore Tedavisi ve Antimikrobiyal Direnç Yönetimi sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Gonore tedavisinde ilk seçenek Seftriakson 500 mg tek doz intramüsküler enjeksiyondur.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Virüs primer enfeksiyon sonrası sakral ön boynuz motor nöronlarında latent kalır."
+      },
+      {
+        "key": "B",
+        "text": "Antiviral tedaviler latent fazdaki episomal viral DNA'yı tamamen yok ederek kesin kür sağlar."
+      },
+      {
+        "key": "C",
+        "text": "Genital herpes bulaşmalarının büyük bölümü görünür ülser veya vezikülün bulunmadığı subklinik viral saçılım döneminde gerçekleşir.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "HSV-1 genital enfeksiyonlarının klinik rekürrens sıklığı HSV-2'den çok daha yüksektir."
+      },
+      {
+        "key": "E",
+        "text": "Tzanck yaymasında saptanan multinükleer dev hücreler sitomegalovirüse özgüdür."
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Gonore tedavisinde ilk seçenek Seftriakson 500 mg tek doz intramüsküler enjeksiyondur."
+    "correctAnswer": 2,
+    "explanation": "Epidemiyolojik çalışmalar HSV-2 bulaşmalarının %70'ten fazlasının asemptomatik/subklinik viral saçılım günlerinde gerçekleştiğini kanıtlamıştır (C doğru). Virüs ön boynuz motor nöronlarında değil, sakral arka kök DUYUSAL ganglionlarında latent kalır (A yanlış). Hiçbir antiviral ilaç latent episomları yok edemez, kür sağlamaz (B yanlış). Genital bölgede HSV-2 rekürrens oranı HSV-1'den çok daha yüksektir (D yanlış). Tzanck yaymasındaki multinükleer dev hücreler HSV ve VZV için karakteristiktir (E yanlış)."
   },
   {
     "id": "cybe-q-016",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 16,
-    "slideTitle": "Pelvik İnflamatuvar Hastalık (PİH) Tedavi Protokolleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Pelvik İnflamatuvar Hastalık (PİH) Tedavi Protokolleri kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Antiherpetik İlaçların Farmakolojisi: Asiklovir, Valasiklovir ve Famsiklovir",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Pelvik İnflamatuvar Hastalık (PİH) Tedavi Protokolleri sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Tuboovaryan abse varlığı, gebelik ve peritonit bulguları PİH hastasında mutlak hastaneye yatış endikasyonudur.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Asiklovir ilk fosforilasyonunu insan konak hücresine ait timidin kinaz enzimi ile gerçekleştirir."
+      },
+      {
+        "key": "B",
+        "text": "Asiklovir trifosfat yapısındaki 3'-OH grubu sayesinde viral DNA zincir uzamasını stimüle eder."
+      },
+      {
+        "key": "C",
+        "text": "Valasiklovir, asiklovirin L-valil esteri ön-ilacı olup oral biyoyararlanımı asiklovire göre 3-5 kat daha yüksektir.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Asiklovir direnci en sık viral DNA polimerazın mutasyonuyla gelişir; timidin kinaz mutasyonları direnç yapmaz."
+      },
+      {
+        "key": "E",
+        "text": "Oral asiklovir %90'ın üzerinde mükemmel biyoyararlanıma sahip olduğundan günde tek doz kullanılır."
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Tuboovaryan abse varlığı, gebelik ve peritonit bulguları PİH hastasında mutlak hastaneye yatış endikasyonudur."
+    "correctAnswer": 2,
+    "explanation": "Valasiklovir, oral biyoyararlanımı %15-20 olan asiklovirin intestinal peptid taşıyıcılarıyla emilen L-valil ester prodrug formudur; biyoyararlanımı %54'tür ve karaciğerde hızla asiklovire dönüşür (C doğru). Asiklovirin ilk fosforilasyonu sadece viral timidin kinaz tarafından yapılır (A yanlış). 3'-OH grubu içermediği için zincir sonlandırıcıdır (B yanlış). Direnç en sık viral timidin kinaz gen mutasyonlarıyla (TK-negatif suşlar) gelişir (D yanlış). Oral asiklovirin biyoyararlanımı düşüktür ve günde 5 kez alınması gerekir (E yanlış)."
   },
   {
     "id": "cybe-q-017",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 17,
-    "slideTitle": "Genital Herpes (HSV-1 ve HSV-2) Kliniği ve Antiviral Tedavi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Genital Herpes (HSV-1 ve HSV-2) Kliniği ve Antiviral Tedavi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Genital Herpes Tedavi Protokolleri: İlk Atak, Nüks ve Baskılama",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Genital Herpes (HSV-1 ve HSV-2) Kliniği ve Antiviral Tedavi sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) HSV virüsü sakral duyusal gangliyonlarda latent kalır; antiviral tedavi virüsü eradike etmez, semptom ve rekürrensi baskılar.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Normal spontan vajinal doğum yaptırılmalı, bebeğe doğum sonrası topikal asiklovir sürülmelidir."
+      },
+      {
+        "key": "B",
+        "text": "Doğum kanalından geçerken oluşabilecek ölümcül neonatal herpes enfeksiyonunu önlemek için acil Sezaryen doğum yapılmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Lezyonlara triklorasetik asit sürülerek normal vajinal doğuma izin verilmelidir."
+      },
+      {
+        "key": "D",
+        "text": "Anneye tek doz intramüsküler seftriakson yapılıp normal doğum beklenmelidir."
+      },
+      {
+        "key": "E",
+        "text": "Vajinal doğum yaptırılmalı, kordon klemplenmeden önce antiviral aşı uygulanmalıdır."
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: HSV virüsü sakral duyusal gangliyonlarda latent kalır; antiviral tedavi virüsü eradike etmez, semptom ve rekürrensi baskılar."
+    "explanation": "Doğum eylemi sırasında aktif genital herpes lezyonları veya vezikülleri varlığında normal doğum kanalından geçiş sırasında yenidoğana doğrudan virüs bulaşır; bu durum yenidoğanda %50 mortalite ile seyreden dissemine neonatal herpes ve nekrotizan ensefalite yol açar. Kılavuzlarca mutlak endikasyon acil Sezaryen doğum yapılmasıdır (B doğru). Normal doğum kontrendikedir (A, C, D, E yanlış)."
   },
   {
     "id": "cybe-q-018",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 18,
-    "slideTitle": "Şankroid (Ulkus Molle): Haemophilus ducreyi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Şankroid (Ulkus Molle): Haemophilus ducreyi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Şankroid (Haemophilus ducreyi): Klinik Özellikler ve Tedavi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Şankroid (Ulkus Molle): Haemophilus ducreyi sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Şankroid ülseri ağrılı ve yumuşaktır; Sifiliz şankrı ise ağrısız ve serttir (endüredir).",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Primer Sifilis - Benzatin Penisilin G 2.4 MU İM tek doz"
+      },
+      {
+        "key": "B",
+        "text": "Genital Herpes - Valasiklovir 2x1 g oral, 10 gün"
+      },
+      {
+        "key": "C",
+        "text": "Şankroid (Haemophilus ducreyi) - Azitromisin 1 g oral tek doz (veya Seftriakson 250 mg İM tek doz)",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Granuloma Inguinale - Doksisiklin 2x100 mg, 21 gün"
+      },
+      {
+        "key": "E",
+        "text": "Lenfogranüloma Venereum - Metronidazol 2 g oral tek doz"
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Şankroid ülseri ağrılı ve yumuşaktır; Sifiliz şankrı ise ağrısız ve serttir (endüredir)."
+    "correctAnswer": 2,
+    "explanation": "Ağrılı, yumuşak tabanlı, pürülan genital ülser, süpüratif tek taraflı bubo ve Gram boyamada balık sürüsü görünümü Haemophilus ducreyi enfeksiyonunun (Şankroid / Ulkus Molle) patognomonik tablosudur. Sifilis şankrı ağrısız ve serttir (A yanlış). Herpes vezikülo-ülseratif seyreder (B yanlış). Donovanosis ağrısız granülasyon dokusu yapar (D yanlış). Tedavide tek doz oral Azitromisin 1 g veya tek doz İM Seftriakson 250 mg ilk seçenektir (C doğru)."
   },
   {
     "id": "cybe-q-019",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 19,
-    "slideTitle": "Anogenital Siğiller (Kondiloma Akuminata): HPV Kliniği ve Tedavisi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Anogenital Siğiller (Kondiloma Akuminata): HPV Kliniği ve Tedavisi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Granuloma Inguinale (Donovanosis - Klebsiella granulomatis)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Anogenital Siğiller (Kondiloma Akuminata): HPV Kliniği ve Tedavisi sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Gebelikte kondiloma akuminata tedavisinde podofilotoksin kontrendikedir; Triklorasetik Asit (TCA) veya Kriyoterapi tercih edilir.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Şankroid - Tek doz oral Azitromisin 1 g"
+      },
+      {
+        "key": "B",
+        "text": "Primer Sifilis - Benzatin Penisilin G 2.4 MU İM tek doz"
+      },
+      {
+        "key": "C",
+        "text": "Granuloma Inguinale (Donovanosis) - Oral Azitromisin (haftada 1 g veya 500 mg/gün), en az 3 hafta",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Lenfogranüloma Venereum - Doksisiklin 100 mg 2x1, 7 gün"
+      },
+      {
+        "key": "E",
+        "text": "Genital Tüberküloz - İzoniazid ve Rifampisin 6 ay"
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Gebelikte kondiloma akuminata tedavisinde podofilotoksin kontrendikedir; Triklorasetik Asit (TCA) veya Kriyoterapi tercih edilir."
+    "correctAnswer": 2,
+    "explanation": "Ağrısız parlak kırmızı dana eti görünümünde granülasyon dokusu, gerçek LAP yerine psödobubo varlığı ve Giemsa/Wright boyamada emniyet pimi şeklinde intrasellüler Donovan cisimcikleri Klebsiella granulomatis enfeksiyonunun (Granuloma Inguinale / Donovanosis) patognomonik tablosudur. Tedavide lezyonlar tamamen iyileşene kadar (en az 3 hafta) oral Azitromisin ilk seçenektir (C doğru). Şankroid ağrılıdır ve balık sürüsü basiller içerir (A yanlış). Sifilis şankrı endüre sert ülserdir (B yanlış). LGV'de ağrılı oluk belirtili bubolar olur (D yanlış)."
   },
   {
     "id": "cybe-q-020",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 20,
-    "slideTitle": "Genital Ülserlerin Ayırıcı Tanı Algoritması",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Genital Ülserlerin Ayırıcı Tanı Algoritması kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Trikomoniyazis (Trichomonas vaginalis): Biyoloji, Klinik ve Tedavi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Genital Ülserlerin Ayırıcı Tanı Algoritması sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Ağrısız sert ülser = Sifiliz; Ağrılı pürülan yumuşak ülser + süpüratif bubo = Şankroid; Ağrılı veziküller = Herpes.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "İlaç süt ürünleriyle alınmamalıdır; partner tedavisinde tek doz azitromisin verilmelidir."
+      },
+      {
+        "key": "B",
+        "text": "Tedavi süresince ve bittikten sonraki en az 48 saat alkol tüketilmemelidir (disülfiram reaksiyonu riski); cinsel partner de mutlaka eş zamanlı tedavi edilmelidir.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "İlaç QT aralığını uzattığından EKG çekilmelidir; partner semptomsuzsa tedaviye gerek yoktur."
+      },
+      {
+        "key": "D",
+        "text": "İlaç sadece vajinal ovül olarak kullanılmalıdır; sistemik emilimi tehlikelidir."
+      },
+      {
+        "key": "E",
+        "text": "Metronidazol geniş spektrumlu penisilindir; penisilin alerjisi sorgulanmalıdır."
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Ağrısız sert ülser = Sifiliz; Ağrılı pürülan yumuşak ülser + süpüratif bubo = Şankroid; Ağrılı veziküller = Herpes."
+    "explanation": "Metronidazol aldehit dehidrogenaz enzimini inhibe ettiğinden alkolle birlikte alındığında asetaldehit birikir ve şiddetli disülfiram benzeri reaksiyon oluşur; en az 48 saat alkol yasaklanmalıdır. Ayrıca T. vaginalis CYBE olduğundan partner asemptomatik olsa bile reenfeksiyonu önlemek için mutlaka eş zamanlı tedavi edilmelidir (B doğru). Sütle etkileşen tetrasiklinlerdir (A yanlış). Metronidazol nitroimidazol türevidir, penisilin değildir (E yanlış). Oral sistemik tedavi vajinal kremden belirgin üstündür (D yanlış)."
   },
   {
     "id": "cybe-q-021",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 21,
-    "slideTitle": "HIV Temas Sonrası Profilaksi (PEP - Post-Exposure Prophylaxis)",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "HIV Temas Sonrası Profilaksi (PEP - Post-Exposure Prophylaxis) kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Anogenital Siğiller (Kondiloma Aküminata - HPV 6 & 11) ve Medikal Tedavi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) HIV Temas Sonrası Profilaksi (PEP - Post-Exposure Prophylaxis) sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) HIV temas sonrası profilaksi en geç ilk 72 saat içinde başlatılmalı ve tam 28 gün sürdürülmelidir!",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Viral timidin kinaz tarafından fosforillenerek viral DNA polimerazı inhibe eder."
+      },
+      {
+        "key": "B",
+        "text": "Toll-like reseptör 7 (TLR-7) agonisti olarak endojen interferon-alfa ve proinflamatuar sitokin salınımını uyarır, konak hücresel immünitesini aktive eder.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Tübüline bağlanarak mikrotübül polimerizasyonunu bozar ve mitozu metafazda bloke eder."
+      },
+      {
+        "key": "D",
+        "text": "Proteinleri kimyasal olarak koagüle ederek kostik doku nekrozu yapar."
+      },
+      {
+        "key": "E",
+        "text": "Viral nöraminidaz enzimini bloke ederek virüsün hücreden salınmasını önler."
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: HIV temas sonrası profilaksi en geç ilk 72 saat içinde başlatılmalı ve tam 28 gün sürdürülmelidir!"
+    "explanation": "İmikimod bir TLR-7 agonistidir; monosit, makrofaj ve dendritik hücrelerden endojen IFN-alfa, TNF-alfa ve IL-12 salınımını indükleyerek virüse karşı sitotoksik T ve NK hücresi yanıtını kuvvetlendirir (B doğru). Viral timidin kinaz asiklovir içindir (A yanlış). Tübülin inhibisyonu podofilotoksine aittir (C yanlış). Protein koagülasyonu triklorasetik asidin (TCA) kostik mekanizmasıdır (D yanlış). Nöraminidaz inhibitörleri oseltamivir gibi influenza ilaçlarıdır (E yanlış)."
   },
   {
     "id": "cybe-q-022",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 22,
-    "slideTitle": "Hepatit B ve C Cinsel Bulaş Riski ve Korunma",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Hepatit B ve C Cinsel Bulaş Riski ve Korunma kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Kondilomlarda Hekim Uygulamalı Tedaviler ve HPV Aşı Profilaksisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Hepatit B ve C Cinsel Bulaş Riski ve Korunma sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Hepatit B aşısı cinsel yolla bulaşan enfeksiyonlara karşı ilk geliştirilen ve kanseri (primer karaciğer kanserini) önleyen aşıdır.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Topikal Podofilotoksin %0.5 solüsyon"
+      },
+      {
+        "key": "B",
+        "text": "Sistemik Doksisiklin 2x100 mg oral"
+      },
+      {
+        "key": "C",
+        "text": "Lezyonlara topikal Triklorasetik Asit (%80-90 TCA) uygulaması veya Kriyoterapi",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Topikal Podofilin reçinesi %25"
+      },
+      {
+        "key": "E",
+        "text": "Oral Asiklovir 5x200 mg 14 gün"
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Hepatit B aşısı cinsel yolla bulaşan enfeksiyonlara karşı ilk geliştirilen ve kanseri (primer karaciğer kanserini) önleyen aşıdır."
+    "correctAnswer": 2,
+    "explanation": "Gebelikte sitotoksik antimitotik ajanlar olan podofilotoksin ve podofilin reçinesi teratojenik ve fetotoksik oldukları için kesinlikle kontrendikedir (A ve D yanlış). Doksisiklin kemik-diş toksisitesi nedeniyle kontrendikedir (B yanlış). Asiklovir herpes ilacıdır, HPV'ye etkisi yoktur (E yanlış). Gebelikte kondilom tedavisinde sistemik emilimi olmayan kostik Triklorasetik Asit (TCA) veya fiziksel dondurma yapan Kriyoterapi ilk seçenek güvenli yöntemlerdir (C doğru)."
   },
   {
     "id": "cybe-q-023",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 23,
-    "slideTitle": "Gebelikte Cinsel Yolla Bulaşan Hastalıklar ve Fetal Riskler",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Gebelikte Cinsel Yolla Bulaşan Hastalıklar ve Fetal Riskler kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Pelvik İnflamatuar Hastalık (PİH): Ayaktan ve Yatarak Tedavi Rejimleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) Gebelikte Cinsel Yolla Bulaşan Hastalıklar ve Fetal Riskler sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) Doğum eylemi sırasında annede aktif genital herpes lezyonu varsa bebek kesinlikle vajinal doğurtulmaz, derhal SEZARYENE alınır!",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Ayaktan oral Doksisiklin 2x100 mg 14 gün verilerek evine gönderilmelidir."
+      },
+      {
+        "key": "B",
+        "text": "Hastaneye yatırılmalı ve intravenöz Klindamisin 3x900 mg + Gentamisin başlanmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Tek doz intramüsküler Seftriakson 250 mg yapılıp 3 gün sonra kontrole çağrılmalıdır."
+      },
+      {
+        "key": "D",
+        "text": "Sadece oral Metronidazol 2 g tek doz başlanmalıdır."
+      },
+      {
+        "key": "E",
+        "text": "Tıbbi tedavi denenmeden derhal acil bilateral ooferektomi yapılmalıdır."
+      }
     ],
     "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: Doğum eylemi sırasında annede aktif genital herpes lezyonu varsa bebek kesinlikle vajinal doğurtulmaz, derhal SEZARYENE alınır!"
+    "explanation": "Tuboovaryan abse (TOA) varlığı PİH'de mutlak hastaneye yatış ve parenteral tedavi endikasyonudur (A ve C yanlış). TOA polimikrobiyal olup anaerobik bakteriler tablonun merkezindedir. Bu tabloda en etkin rejim, anaerop etkinliği ve abse penetrasyonu mükemmel olan intravenöz Klindamisin ile Gram-negatif aeropları kapatan Gentamisin kombinasyonudur (B doğru). Metronidazol tek başına yetersizdir (D yanlış). Rüptür veya sepsis olmadıkça acil cerrahi değil, önce parenteral antibiyotik tedavisi uygulanır (E yanlış)."
   },
   {
     "id": "cybe-q-024",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi İlkeleri",
     "slideNumber": 24,
-    "slideTitle": "CYBE Klinik Yaklaşım, Sendromik Yönetim ve Sınav İncileri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "CYBE Klinik Yaklaşım, Sendromik Yönetim ve Sınav İncileri kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "slideTitle": "Cinsel Partner Yönetimi, Korunma ve Profilaksi İlkeleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": null,
     "options": [
-      "A) CYBE Klinik Yaklaşım, Sendromik Yönetim ve Sınav İncileri sürecinde hiçbir tedavi veya takip gerekmez",
-      "B) CYBE'lerde tanı ne olursa olsun partner tedavisi yapılmadığı sürece hastanın iyileşmesi geçicidir; ping-pong reenfeksiyonu gelişir.",
-      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
-      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
-      "E) Tedavide yalnızca antiasitler kullanılır"
+      {
+        "key": "A",
+        "text": "Tek dozluk antimikrobiyal tedavi alan hastalar ertesi gün korunmasız cinsel ilişkiye girebilir."
+      },
+      {
+        "key": "B",
+        "text": "Partner tedavisinde sadece son 7 gün içindeki partnerler sorgulanmalı, semptomsuz olanlara tedavi verilmemelidir."
+      },
+      {
+        "key": "C",
+        "text": "Şüpheli riskli cinsel temas sonrası HIV Temas Sonrası Profilaksisi (PEP) en geç ilk 72 saat içinde başlanmalı ve 28 gün sürdürülmelidir.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Kondom kullanımı HPV ve genital herpes gibi deri lezyonlarıyla bulaşan etkenlere karşı %100 mutlak koruma sağlar."
+      },
+      {
+        "key": "E",
+        "text": "Hepatit C virüsüne karşı geliştirilmiş yüksek koruyuculukta rekombinant bir aşı mevcuttur."
+      }
     ],
-    "correctAnswer": 1,
-    "explanation": "Doğru klinik yaklaşım: CYBE'lerde tanı ne olursa olsun partner tedavisi yapılmadığı sürece hastanın iyileşmesi geçicidir; ping-pong reenfeksiyonu gelişir."
+    "correctAnswer": 2,
+    "explanation": "HIV temas sonrası profilaksisi (PEP) en geç ilk 72 saat içinde başlanmalı ve 28 gün 3'lü antiretroviral rejimle sürdürülmelidir (C doğru). Tek doz tedavilerden sonra en az 7 gün cinsel perhiz zorunludur (A yanlış). Partner yönetiminde son 60 gün taranır ve semptomsuz olanlar da tedavi edilir (B yanlış). Kondom örtmediği cilt alanlarındaki HSV, HPV ve şankr lezyonlarına karşı kısmi korur, %100 korumaz (D yanlış). Hepatit C'nin aşısı yoktur (E yanlış)."
   },
   {
     "id": "d3-k1-tbg-001",
@@ -614,7 +1226,7 @@
     "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir."
   },
   {
-    "id": "d3-k1-tbg-001-126",
+    "id": "d3-k1-tbg-001-138",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 7,
@@ -692,7 +1304,7 @@
     "explanation": "Vankomisin, gram-pozitif bakterilerin hücre duvarı sentezini\n(peptidoglikan) hedef alan büyük bir glikopeptit molekülüdür ve gram-\nnegatif bakterilerin dış membranını geçemediğinden, E. coli gibi gram-\nnegatif bakteriler vankomisine doğal (intrinsik) olarak dirençlidir. Diğer\neşleştirmeler yanlıştır: E. coli ampisiline kazanılmış mekanizmalarla\ndirençli olabilir ama bu doğal direnç değildir; S. aureus vankomisine\ngenellikle duyarlıdır; P. aeruginosa piperasiline (özellikle tazobaktam ile\nkombine) duyarlı olabilir; N. gonorrhoeae seftriaksona halen duyarlıdır\n(tedavide kullanılır)."
   },
   {
-    "id": "d3-k1-tbg-001-128",
+    "id": "d3-k1-tbg-001-140",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 9,
@@ -731,7 +1343,7 @@
     "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
   },
   {
-    "id": "d3-k1-tbg-001-129",
+    "id": "d3-k1-tbg-001-141",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 10,
@@ -887,7 +1499,7 @@
     "explanation": "Doku Faktörü Yolak İnhibitörü (TFPI), doku faktörü-Faktör VIIa kompleksini ve Faktör Xa&apos;yı inhibe ederek ekstrensek koagülasyon yolağını baskılayan bir antikoagülan proteindir; fibrinolitik sistemle değil koagülasyon kaskadının inhibisyonuyla ilgilidir. Plazmin, fibrini parçalayan ana enzimdir; doku plazminojen aktivatörü, ürokinaz ve streptokinaz ise plazminojeni plazmine çevirerek fibrinolizi başlatan/aktive eden ajanlardır."
   },
   {
-    "id": "d3-k1-tbg-001-133",
+    "id": "d3-k1-tbg-001-145",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 14,
@@ -1082,7 +1694,7 @@
     "explanation": "Kan bağışı taramasında kullanılan testler (ELISA gibi) yüksek duyarlılığa\nsahip olmakla birlikte yalancı pozitiflik verebilir; bu nedenle ilk tarama\ntesti pozitif çıkan bir örnekte kesin tanı konmadan önce mutlaka daha\nspesifik bir doğrulama testi (Western blot/immünoblot veya HIV\nRNA/PCR gibi) yapılmalıdır. Doğrulama testi sonuçlanmadan hastaya\nkesin tanı konulmamalı, tedavi başlanmamalı ve aksine yanlış pozitif\nolduğu da söylenmemelidir."
   },
   {
-    "id": "d3-k1-pat-002-138",
+    "id": "d3-k1-pat-002-150",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 19,
@@ -1121,7 +1733,7 @@
     "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
   },
   {
-    "id": "d3-k1-tbg-001-139",
+    "id": "d3-k1-tbg-001-151",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 20,
@@ -1199,7 +1811,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-003-141",
+    "id": "d3-k1-enf-003-153",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 2,
@@ -1589,7 +2201,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-013-151",
+    "id": "d3-k1-enf-013-163",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 12,
@@ -1667,7 +2279,7 @@
     "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
   },
   {
-    "id": "d3-k1-enf-004-153",
+    "id": "d3-k1-enf-004-165",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 14,
@@ -1706,7 +2318,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-004-154",
+    "id": "d3-k1-enf-004-166",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 15,
@@ -1823,7 +2435,7 @@
     "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
   },
   {
-    "id": "d3-k1-enf-009-157",
+    "id": "d3-k1-enf-009-169",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 18,
@@ -1862,7 +2474,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-054-158",
+    "id": "d3-k1-enf-054-170",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 19,
@@ -1901,7 +2513,7 @@
     "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
   },
   {
-    "id": "d3-k1-enf-009-159",
+    "id": "d3-k1-enf-009-171",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 20,
@@ -2096,7 +2708,7 @@
     "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede, o\nhastalığın o toplumdaki beklenen/alışılmış (bazal, endemik) sıklığının\nbelirgin şekilde üzerinde görülmesidir. Bu kavram mutlak bir sayı değil,\nhastalığın normal düzeyine göre gösterdiği artışı ifade eder. Endemi,\nhastalığın bir bölgede sürekli ve alışılmış düzeyde bulunmasıdır;\npandemi ise epideminin kıtalar arası çok geniş coğrafi alanlara\nyayılmasıdır."
   },
   {
-    "id": "d3-k1-enf-026-164",
+    "id": "d3-k1-enf-026-176",
     "deckId": "learn-halk-sagligi-salgin-has",
     "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
     "slideNumber": 5,
@@ -2642,7 +3254,7 @@
     "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede,\nbeklenen/alışılmış (bazal) sıklığının belirgin şekilde üzerinde\ngörülmesidir. Endemi bir bölgede sürekli ve alışılmış düzeyde görülmeyi,\npandemi epideminin çok geniş coğrafi alanlara (kıtalar arası)\nyayılmasını, sporadik ise ara sıra tek tük olgular halinde görülmeyi ifade\neder."
   },
   {
-    "id": "d3-k1-enf-001-178",
+    "id": "d3-k1-enf-001-190",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 1,
@@ -2681,7 +3293,7 @@
     "explanation": "Epidemi (salgın), bir hastalığın veya sağlıkla ilgili olayın belirli bir bölgede beklenen yani alışılmış düzeyin belirgin şekilde üzerinde görülmesidir; tanım mutlak bir olgu sayısına değil, hastalığın kendi normal düzeyine göre gösterdiği artışa dayanır. Bu nedenle doğru yanıt B seçeneğidir. A seçeneği hastalığın toplulukta alışılmış sıklıkta görülmesini tanımlar ve bu endemi kavramıdır. C seçeneğindeki düşük oranda görülme ile D seçeneğindeki hiç görülmeme, beklenenin altında kalma ya da hastalığın yokluğu durumunu anlatır ve epidemi tanımıyla çelişir. E seçeneği ise hastalığın yüksek fakat sabit bir oranda sürekli görülmesini ifade eder; süreklilik ve sabitlik endemi ile ilişkilidir, epidemi ise beklenen düzeyin aşılmasını vurgular. Ayırt edici ipucu: endemi eşik değerdir, epidemi bu eşiğin aşılmasıdır, pandemi ise salgının kıtalar arası çok geniş alana yayılmasıdır."
   },
   {
-    "id": "d3-k1-pat-001-179",
+    "id": "d3-k1-pat-001-191",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 2,
@@ -2759,7 +3371,7 @@
     "explanation": "Beyaz (anemik) infarktüs, tek (uç) arteriyel kan akımına sahip, yoğun/kompakt dokulu solid organlarda (kalp, dalak, böbrek gibi) görülür; burada nekrotik alana kanama sınırlıdır. Kırmızı (hemorajik) infarktüs ise venöz oklüzyonlarda, gevşek/süngerimsi dokularda, çift kanlanması olan organlarda (akciğer gibi) veya önceden staz olan dokularda görülür; akciğer, hem bronşiyal hem pulmoner arter dolaşımına sahip olduğu ve gevşek dokulu olduğu için tipik olarak kırmızı infarktüs geçirir, beyaz değil."
   },
   {
-    "id": "d3-k1-pat-001-181",
+    "id": "d3-k1-pat-001-193",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 4,
@@ -2876,7 +3488,7 @@
     "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
   },
   {
-    "id": "d3-k1-pat-006-184",
+    "id": "d3-k1-pat-006-196",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 7,
@@ -2915,7 +3527,7 @@
     "explanation": "ATP azaldığında Na+/K+-ATPaz pompası çalışamaz hale gelir; bu da hücre içine Na+ ve suyun girmesine (hücresel şişme) ve hücre içinden K+ çıkışına neden olur; yani Na+ hücreden ÇIKMAZ, tam tersine hücre İÇİNE girer. Aynı zamanda Ca++-ATPaz&apos;ın bozulmasıyla hücre içi Ca++ artar, anaerobik glikoliz artışıyla glikojen tüketilir ve laktik asit birikimiyle hücre içi pH düşer. Dolayısıyla yanlış olan ifade &apos;hücre dışına Na+ çıkışı&apos; seçeneğidir."
   },
   {
-    "id": "d3-k1-pat-006-185",
+    "id": "d3-k1-pat-006-197",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 8,
@@ -3030,473 +3642,5 @@
     ],
     "correctAnswer": "D",
     "explanation": "Koilositoz, HPV enfeksiyonunun karakteristik sitopatik etkisidir; enfekte skuamöz hücrelerde nükleer büyüme, hiperkromazi, binükleasyon ve nükleus etrafında belirgin berrak bir halo (perinükleer vakuolizasyon) ile tanınır. Kondiloma lata sifiliz ile ilişkilidir; kondiloma akuminata HPV&apos;nin oluşturduğu genital siğillerin klinik adıdır, CIN ise HPV&apos;ye bağlı displastik değişikliklerin genel adıdır."
-  },
-  {
-    "id": "d3-k1-pat-016-188",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "Yağlanma (Steatoz / Yağlı Dejenerasyon) Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Aşağıdakilerden hangisi stabil (kararlı) doku örneğidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deri",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Gastrointestinal kanal epitel hücreleri",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Nöronlar",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Karaciğer",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Kardiyak kas hücreleri",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Karaciğer parankim hücreleri (hepatositler) klasik stabil hücre örneğidir; normal koşullarda düşük mitotik aktivite gösterirler ancak hasar veya kayıp durumunda güçlü rejenerasyon kapasitesine sahiptirler (örn. kısmi hepatektomi sonrası). Deri epidermisi ve GİS epiteli sürekli yenilenen labil dokulardır; nöronlar ve kardiyak kas hücreleri ise mitotik kapasitesi olmayan (veya çok sınırlı) kalıcı/permanent hücrelerdir."
-  },
-  {
-    "id": "study-q-learn-hucre-hasari-hucre-olumu-s12",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "Reversibl Hasarın Ultrastrüktürel ve Membran Bulguları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Programlı hücre ölümünde plazma zarı bütünlüğü korunurken, nükleer kromatin kondansasyonu ve kaspaz aktivasyonu gerçekleşir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Apoptoz daima çevre dokularda şiddetli nötrofilik infiltrasyon ve lökositoz ile seyreder.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hücre ölümü sürecinde mitokondri dış zar geçirgenliğinin artması daima nekroz lehinedir.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kaspaz enzimleri yalnızca lizozomal asit hidrolazların sitoplazmaya sızmasıyla aktive olur.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hücresel büzüşme yalnızca osmotik şok durumunda gözlenir, programlı ölümde hücre daima şişer.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Apoptozda hücre zarı bütünlüğü korunur, apoptotik cisimcikler oluşur ve yangısal reaksiyon gelişmeden temizlenir. Kaspazlar ana yürütücü enzimlerdir."
-  },
-  {
-    "id": "study-q-learn-hucre-hasari-hucre-olumu-s13",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Geri Dönüşümsüz (İrreversibl) Hasara Geçişin 2 Kritik Eşiği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Programlı hücre ölümünde plazma zarı bütünlüğü korunurken, nükleer kromatin kondansasyonu ve kaspaz aktivasyonu gerçekleşir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Apoptoz daima çevre dokularda şiddetli nötrofilik infiltrasyon ve lökositoz ile seyreder.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hücre ölümü sürecinde mitokondri dış zar geçirgenliğinin artması daima nekroz lehinedir.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kaspaz enzimleri yalnızca lizozomal asit hidrolazların sitoplazmaya sızmasıyla aktive olur.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hücresel büzüşme yalnızca osmotik şok durumunda gözlenir, programlı ölümde hücre daima şişer.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Apoptozda hücre zarı bütünlüğü korunur, apoptotik cisimcikler oluşur ve yangısal reaksiyon gelişmeden temizlenir. Kaspazlar ana yürütücü enzimlerdir."
-  },
-  {
-    "id": "d3-k1-pat-001-191",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Hücre Ölümü Tiplerine Genel Bakış: Nekroz vs Apoptoz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "NAPQI (N-asetil-p-benzokinonimin)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Asetaldehit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Etanol",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Salisilat",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Morfin",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
-  },
-  {
-    "id": "d3-k1-pat-001-192",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 15,
-    "slideTitle": "Nekrozun Genel Özellikleri ve Enflamasyon Tetiklenmesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "NAPQI (N-asetil-p-benzokinonimin)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Asetaldehit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Etanol",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Salisilat",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Morfin",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
-  },
-  {
-    "id": "d3-k1-pat-039",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 16,
-    "slideTitle": "Nekrozun Sitoplazmik Değişiklikleri: Yoğun Eozinofili",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Böbrekte &apos;tiroidizasyon&apos; bulgusu görüldüğü patoloji hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kronik Pyelonefrit",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Nekrotizan Papillit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Perinefritik Apse",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Piyonefroz",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Fokal Segmentel Glomeruloskleroz",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Kronik pyelonefritte, tekrarlayan enfeksiyon ve skarlaşma sürecinde bazı tübüller atrofiye uğrayarak dilate olur ve içlerinde eozinofilik kolloid benzeri silendirler birikir; bu görünüm mikroskopik olarak tiroid folikülüne benzediği için &apos;tiroidizasyon&apos; olarak adlandırılır. Bu bulgu kronik pyelonefritin karakteristik histopatolojik özelliklerinden biridir ve diğer şıklardaki akut/süpüratif böbrek patolojilerinde beklenmez."
-  },
-  {
-    "id": "d3-k1-pat-055-194",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 17,
-    "slideTitle": "Nekrozun Nükleer Değişiklikleri: Piknoz, Karyoreksis, Karyolizis",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "HPV enfeksiyonunun viral sitopatik etkisi sonucu hücrelerde oluşan, perinükleer halo ile karakterize değişikliğe verilen isim nedir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kondiloma Lata",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kondiloma Akuminata",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Servikal İntraepitelyal Neoplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Koilositoz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Vulvar İntraepitelyal Neoplazi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Koilositoz, HPV enfeksiyonunun karakteristik sitopatik etkisidir; enfekte skuamöz hücrelerde nükleer büyüme, hiperkromazi, binükleasyon ve nükleus etrafında belirgin berrak bir halo (perinükleer vakuolizasyon) ile tanınır. Kondiloma lata sifiliz ile ilişkilidir; kondiloma akuminata HPV&apos;nin oluşturduğu genital siğillerin klinik adıdır, CIN ise HPV&apos;ye bağlı displastik değişikliklerin genel adıdır."
-  },
-  {
-    "id": "d3-k1-pat-028",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 18,
-    "slideTitle": "Doku Nekrozu Kalıpları 1: Koagülatif Nekroz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Aşağıdaki hücre tiplerinden hangisi kalıcı (permanent) hücre grubuna aittir ve önemli bir yenilenme (rejenerasyon) yeteneğine sahip değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kalp kası hücresi (kardiyomiyosit)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Hepatosit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Vasküler endotel hücresi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kolon mukoza epitel hücresi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Fibroblast",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Hücreler yenilenme kapasitelerine göre labil (sürekli bölünen; örn. epitel hücreleri, hematopoietik hücreler), stabil/kuiesan (normalde durgun ama uyarıyla bölünebilen; örn. hepatosit, endotel, fibroblast) ve kalıcı/permanent (bölünme kapasitesini doğumdan sonra büyük ölçüde kaybeden; örn. kardiyomiyositler, nöronlar, iskelet kası hücreleri) olarak sınıflandırılır. Kalp kası hücreleri kalıcı hücre grubunda olduğu için hasar sonrası yenilenmez, kaybedilen doku fibrozis (skar) ile onarılır; bu nedenle miyokard infarktüsü sonrası kontraktil doku kaybı kalıcıdır."
-  },
-  {
-    "id": "d3-k1-pat-005-196",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 19,
-    "slideTitle": "Doku Nekrozu Kalıpları 2: Likefaksiyon (Sıvılaşma) Nekrozu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Formalin (%10 tamponlanmış formaldehit), doku proteinlerini çapraz bağlayarak otolizi ve bakteriyel bozulmayı önlediği, ucuz ve dokuya iyi nüfuz ettiği için rutin histopatolojik incelemede en yaygın kullanılan tespit sıvısıdır. Ksilen doku saydamlaştırma (clearing) aşamasında, parafin gömme aşamasında, alkol ise dehidratasyon aşamasında kullanılır; hiçbiri birincil tespit ajanı değildir."
-  },
-  {
-    "id": "d3-k1-pat-044",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 20,
-    "slideTitle": "Doku Nekrozu Kalıpları 3: Gangrenöz Nekroz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Hastalığın hızlı ve progresif olarak ilerleyeceğinin (RPGN - hızlı ilerleyen glomerülonefrit) göstergesi olan mikroskobik glomerül değişikliği aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kimmelstiel-Wilson lezyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Bowman kapsülü içinde yarım ay (crescent) şeklinde parietal epitel proliferasyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Glomerüloskleroz",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bazal membran kalınlaşması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Podositlerde düzleşme (foot process effacement)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Hızlı ilerleyen (kresentik) glomerülonefritin histopatolojik işareti, Bowman kapsülü boşluğunda parietal epitel hücreleri, monositler/makrofajlar ve fibrinin proliferasyonuyla oluşan yarım ay (crescent) şeklindeki yapılardır. Bu kresentler glomerül kapiler yumağını sıkıştırarak hızla ilerleyen böbrek yetmezliğine yol açar ve haftalar-aylar içinde diyalize kadar giden kötü prognozla ilişkilidir. Kimmelstiel-Wilson lezyonu diyabetik nefropatiye, podosit düzleşmesi ise minimal değişiklik hastalığı gibi nefrotik tablo veren hastalıklara özgüdür."
-  },
-  {
-    "id": "d3-k1-pat-008-198",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Doku Nekrozu Kalıpları 4: Kazeöz Nekroz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Granülomatöz inflamasyon hangi tip aşırı duyarlılık reaksiyonu sonucu oluşur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tip 1",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tip 2",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tip 3",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Geç tip (Tip 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "T hücre aracılı sitotoksisite",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
-  },
-  {
-    "id": "d3-k1-pat-029",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Doku Nekrozu Kalıpları 5: Yağ Nekrozu ve Sabunlaşma",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Aşağıdakilerden hangisi/hangileri metastatik kalsifikasyona neden olur? I- Hiperparatiroidizm II- Sarkoidoz III- Kronik böbrek yetmezliği IV- Aterom plağı",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yalnız I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yalnız I ve III",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Yalnız II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız IV",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
   }
 ]

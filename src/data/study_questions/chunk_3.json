@@ -1,6 +1,474 @@
 [
   {
-    "id": "d3-k1-pat-002-200",
+    "id": "d3-k1-pat-016-200",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 11,
+    "slideTitle": "Yağlanma (Steatoz / Yağlı Dejenerasyon) Patolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Aşağıdakilerden hangisi stabil (kararlı) doku örneğidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Deri",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Gastrointestinal kanal epitel hücreleri",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Nöronlar",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Karaciğer",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Kardiyak kas hücreleri",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Karaciğer parankim hücreleri (hepatositler) klasik stabil hücre örneğidir; normal koşullarda düşük mitotik aktivite gösterirler ancak hasar veya kayıp durumunda güçlü rejenerasyon kapasitesine sahiptirler (örn. kısmi hepatektomi sonrası). Deri epidermisi ve GİS epiteli sürekli yenilenen labil dokulardır; nöronlar ve kardiyak kas hücreleri ise mitotik kapasitesi olmayan (veya çok sınırlı) kalıcı/permanent hücrelerdir."
+  },
+  {
+    "id": "study-q-learn-hucre-hasari-hucre-olumu-s12",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 12,
+    "slideTitle": "Reversibl Hasarın Ultrastrüktürel ve Membran Bulguları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Programlı hücre ölümünde plazma zarı bütünlüğü korunurken, nükleer kromatin kondansasyonu ve kaspaz aktivasyonu gerçekleşir.",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Apoptoz daima çevre dokularda şiddetli nötrofilik infiltrasyon ve lökositoz ile seyreder.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Hücre ölümü sürecinde mitokondri dış zar geçirgenliğinin artması daima nekroz lehinedir.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kaspaz enzimleri yalnızca lizozomal asit hidrolazların sitoplazmaya sızmasıyla aktive olur.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Hücresel büzüşme yalnızca osmotik şok durumunda gözlenir, programlı ölümde hücre daima şişer.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Apoptozda hücre zarı bütünlüğü korunur, apoptotik cisimcikler oluşur ve yangısal reaksiyon gelişmeden temizlenir. Kaspazlar ana yürütücü enzimlerdir."
+  },
+  {
+    "id": "study-q-learn-hucre-hasari-hucre-olumu-s13",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Geri Dönüşümsüz (İrreversibl) Hasara Geçişin 2 Kritik Eşiği",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Programlı hücre ölümünde plazma zarı bütünlüğü korunurken, nükleer kromatin kondansasyonu ve kaspaz aktivasyonu gerçekleşir.",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Apoptoz daima çevre dokularda şiddetli nötrofilik infiltrasyon ve lökositoz ile seyreder.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Hücre ölümü sürecinde mitokondri dış zar geçirgenliğinin artması daima nekroz lehinedir.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kaspaz enzimleri yalnızca lizozomal asit hidrolazların sitoplazmaya sızmasıyla aktive olur.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Hücresel büzüşme yalnızca osmotik şok durumunda gözlenir, programlı ölümde hücre daima şişer.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Apoptozda hücre zarı bütünlüğü korunur, apoptotik cisimcikler oluşur ve yangısal reaksiyon gelişmeden temizlenir. Kaspazlar ana yürütücü enzimlerdir."
+  },
+  {
+    "id": "d3-k1-pat-001-203",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 14,
+    "slideTitle": "Hücre Ölümü Tiplerine Genel Bakış: Nekroz vs Apoptoz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "NAPQI (N-asetil-p-benzokinonimin)",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Asetaldehit",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Etanol",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Salisilat",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Morfin",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
+  },
+  {
+    "id": "d3-k1-pat-001-204",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 15,
+    "slideTitle": "Nekrozun Genel Özellikleri ve Enflamasyon Tetiklenmesi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "NAPQI (N-asetil-p-benzokinonimin)",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Asetaldehit",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Etanol",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Salisilat",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Morfin",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
+  },
+  {
+    "id": "d3-k1-pat-039",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 16,
+    "slideTitle": "Nekrozun Sitoplazmik Değişiklikleri: Yoğun Eozinofili",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Böbrekte &apos;tiroidizasyon&apos; bulgusu görüldüğü patoloji hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kronik Pyelonefrit",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Nekrotizan Papillit",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Perinefritik Apse",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Piyonefroz",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Fokal Segmentel Glomeruloskleroz",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Kronik pyelonefritte, tekrarlayan enfeksiyon ve skarlaşma sürecinde bazı tübüller atrofiye uğrayarak dilate olur ve içlerinde eozinofilik kolloid benzeri silendirler birikir; bu görünüm mikroskopik olarak tiroid folikülüne benzediği için &apos;tiroidizasyon&apos; olarak adlandırılır. Bu bulgu kronik pyelonefritin karakteristik histopatolojik özelliklerinden biridir ve diğer şıklardaki akut/süpüratif böbrek patolojilerinde beklenmez."
+  },
+  {
+    "id": "d3-k1-pat-055-206",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 17,
+    "slideTitle": "Nekrozun Nükleer Değişiklikleri: Piknoz, Karyoreksis, Karyolizis",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "HPV enfeksiyonunun viral sitopatik etkisi sonucu hücrelerde oluşan, perinükleer halo ile karakterize değişikliğe verilen isim nedir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kondiloma Lata",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Kondiloma Akuminata",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Servikal İntraepitelyal Neoplazi",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Koilositoz",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Vulvar İntraepitelyal Neoplazi",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Koilositoz, HPV enfeksiyonunun karakteristik sitopatik etkisidir; enfekte skuamöz hücrelerde nükleer büyüme, hiperkromazi, binükleasyon ve nükleus etrafında belirgin berrak bir halo (perinükleer vakuolizasyon) ile tanınır. Kondiloma lata sifiliz ile ilişkilidir; kondiloma akuminata HPV&apos;nin oluşturduğu genital siğillerin klinik adıdır, CIN ise HPV&apos;ye bağlı displastik değişikliklerin genel adıdır."
+  },
+  {
+    "id": "d3-k1-pat-028",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 18,
+    "slideTitle": "Doku Nekrozu Kalıpları 1: Koagülatif Nekroz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Aşağıdaki hücre tiplerinden hangisi kalıcı (permanent) hücre grubuna aittir ve önemli bir yenilenme (rejenerasyon) yeteneğine sahip değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kalp kası hücresi (kardiyomiyosit)",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Hepatosit",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Vasküler endotel hücresi",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kolon mukoza epitel hücresi",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Fibroblast",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Hücreler yenilenme kapasitelerine göre labil (sürekli bölünen; örn. epitel hücreleri, hematopoietik hücreler), stabil/kuiesan (normalde durgun ama uyarıyla bölünebilen; örn. hepatosit, endotel, fibroblast) ve kalıcı/permanent (bölünme kapasitesini doğumdan sonra büyük ölçüde kaybeden; örn. kardiyomiyositler, nöronlar, iskelet kası hücreleri) olarak sınıflandırılır. Kalp kası hücreleri kalıcı hücre grubunda olduğu için hasar sonrası yenilenmez, kaybedilen doku fibrozis (skar) ile onarılır; bu nedenle miyokard infarktüsü sonrası kontraktil doku kaybı kalıcıdır."
+  },
+  {
+    "id": "d3-k1-pat-005-208",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 19,
+    "slideTitle": "Doku Nekrozu Kalıpları 2: Likefaksiyon (Sıvılaşma) Nekrozu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Alkol",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Serum fizyolojik",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Ksilen",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Parafin",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Formalin",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "Formalin (%10 tamponlanmış formaldehit), doku proteinlerini çapraz bağlayarak otolizi ve bakteriyel bozulmayı önlediği, ucuz ve dokuya iyi nüfuz ettiği için rutin histopatolojik incelemede en yaygın kullanılan tespit sıvısıdır. Ksilen doku saydamlaştırma (clearing) aşamasında, parafin gömme aşamasında, alkol ise dehidratasyon aşamasında kullanılır; hiçbiri birincil tespit ajanı değildir."
+  },
+  {
+    "id": "d3-k1-pat-044",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 20,
+    "slideTitle": "Doku Nekrozu Kalıpları 3: Gangrenöz Nekroz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Hastalığın hızlı ve progresif olarak ilerleyeceğinin (RPGN - hızlı ilerleyen glomerülonefrit) göstergesi olan mikroskobik glomerül değişikliği aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kimmelstiel-Wilson lezyonu",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Bowman kapsülü içinde yarım ay (crescent) şeklinde parietal epitel proliferasyonu",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Glomerüloskleroz",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bazal membran kalınlaşması",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Podositlerde düzleşme (foot process effacement)",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Hızlı ilerleyen (kresentik) glomerülonefritin histopatolojik işareti, Bowman kapsülü boşluğunda parietal epitel hücreleri, monositler/makrofajlar ve fibrinin proliferasyonuyla oluşan yarım ay (crescent) şeklindeki yapılardır. Bu kresentler glomerül kapiler yumağını sıkıştırarak hızla ilerleyen böbrek yetmezliğine yol açar ve haftalar-aylar içinde diyalize kadar giden kötü prognozla ilişkilidir. Kimmelstiel-Wilson lezyonu diyabetik nefropatiye, podosit düzleşmesi ise minimal değişiklik hastalığı gibi nefrotik tablo veren hastalıklara özgüdür."
+  },
+  {
+    "id": "d3-k1-pat-008-210",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Doku Nekrozu Kalıpları 4: Kazeöz Nekroz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Granülomatöz inflamasyon hangi tip aşırı duyarlılık reaksiyonu sonucu oluşur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tip 1",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Tip 2",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Tip 3",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Geç tip (Tip 4)",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "T hücre aracılı sitotoksisite",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
+  },
+  {
+    "id": "d3-k1-pat-029",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Doku Nekrozu Kalıpları 5: Yağ Nekrozu ve Sabunlaşma",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Aşağıdakilerden hangisi/hangileri metastatik kalsifikasyona neden olur? I- Hiperparatiroidizm II- Sarkoidoz III- Kronik böbrek yetmezliği IV- Aterom plağı",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yalnız I, II ve III",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Yalnız I ve III",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Yalnız II ve IV",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Yalnız IV",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "I, II, III ve IV",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
+  },
+  {
+    "id": "d3-k1-pat-002-212",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 23,
@@ -39,7 +507,7 @@
     "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
   },
   {
-    "id": "d3-k1-pat-002-201",
+    "id": "d3-k1-pat-002-213",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 24,
@@ -78,7 +546,7 @@
     "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
   },
   {
-    "id": "d3-k1-pat-031-202",
+    "id": "d3-k1-pat-031-214",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 1,
@@ -117,7 +585,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-001-203",
+    "id": "d3-k1-pat-001-215",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 2,
@@ -195,7 +663,7 @@
     "explanation": "GINA kılavuzlarına göre astımda bronkodilatör reversibilite kriteri: Kısa etkili beta-2 agonist inhalasyonundan 10-15 dakika sonra FEV1'de bazale göre en az %12 VE mutlak olarak en az 200 mL düzelme olmasıdır."
   },
   {
-    "id": "d3-k1-pat-031-205",
+    "id": "d3-k1-pat-031-217",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 4,
@@ -234,7 +702,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-206",
+    "id": "d3-k1-pat-031-218",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 5,
@@ -273,7 +741,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-207",
+    "id": "d3-k1-pat-031-219",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 6,
@@ -390,7 +858,7 @@
     "explanation": "HKMP'nin patognomonik histolojik bulgusu 'miyosit disarray'dir (miyositlerin yönelim bozukluğu / kaotik dallanması). Normal paralel hiyerarşi kaybolmuştur, aralarda yoğun kollajenöz fibrozis bulunur; bu zemin fatal ventriküler aritmilerin ana kaynağıdır."
   },
   {
-    "id": "d3-k1-pat-002-210",
+    "id": "d3-k1-pat-002-222",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 9,
@@ -429,7 +897,7 @@
     "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
   },
   {
-    "id": "d3-k1-pat-021-211",
+    "id": "d3-k1-pat-021-223",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 10,
@@ -624,7 +1092,7 @@
     "explanation": "Endometrioid (Tip 1) karsinomun patogenezinde PTEN genindeki değişiklikler tipik olarak SOMATİK mutasyonlardır, germline (kalıtsal) mutasyonlar değildir; germline PTEN mutasyonu nadir görülen Cowden sendromuna özgüdür ve sporadik endometrioid karsinomların genel patogenezini tanımlamaz, bu nedenle bu ifade yanlıştır. Tip 1 karsinomların prototipi östrojene bağlı endometrioid karsinom olup atipili hiperplaziden gelişir; Tip 2&apos;nin prototipi ise TP53 mutasyonlu, atrofik endometriyum zemininde gelişen seröz karsinomdur ve prognozu daha kötüdür."
   },
   {
-    "id": "d3-k1-pat-031-216",
+    "id": "d3-k1-pat-031-228",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 15,
@@ -663,7 +1131,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-039-217",
+    "id": "d3-k1-pat-039-229",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 16,
@@ -702,7 +1170,7 @@
     "explanation": "Kronik pyelonefritte, tekrarlayan enfeksiyon ve skarlaşma sürecinde bazı tübüller atrofiye uğrayarak dilate olur ve içlerinde eozinofilik kolloid benzeri silendirler birikir; bu görünüm mikroskopik olarak tiroid folikülüne benzediği için &apos;tiroidizasyon&apos; olarak adlandırılır. Bu bulgu kronik pyelonefritin karakteristik histopatolojik özelliklerinden biridir ve diğer şıklardaki akut/süpüratif böbrek patolojilerinde beklenmez."
   },
   {
-    "id": "d3-k3-pat-017-218",
+    "id": "d3-k3-pat-017-230",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 17,
@@ -780,7 +1248,7 @@
     "explanation": "【Temel Patofizyolojik / Farmakolojik Mekanizma】: Etanol hepatositlerde üç ana enzim sistemiyle metabolize edilir: Düşük-orta düzeydeki alkol maruziyetinde sitozolik Alkol Dehidrojenaz (ADH); minör düzeyde peroksizomal Katalaz; ve özellikle kronik maruziyet veya yüksek serum düzeylerinde devreye giren Mikrozomal Etanol Oksidasyon Sistemi (MEOS). MEOS'un katalitik çekirdeğini Sitokrom P450 CYP2E1 izoformu oluşturur. Bu sistem NADPH ve moleküler oksijen kullanarak etanolü asetaldehite oksitlerken reaktif oksijen türleri (ROS) üretir.\n\n【Doğru Yanıtın Tıbbi Gerekçesi】: Hücre fraksiyonasyonu çalışmalarında 'mikrozom' fraksiyonu, hücrenin parçalanmasıyla vesiküllere ayrılan düz ve granüllü endoplazmik retikulum (ER) membranlarını temsil eder. CYP2E1 dahil olmak üzere tüm Sitokrom P450 monooksijenaz enzim kompleksleri düz endoplazmik retikulum (mikrozomal) zarına gömülüdür. Bu nedenle MEOS aktivitesi mikrozomal fraksiyonda yer alır.\n\n【Çeldirici Seçeneklerin Tıbbi Analizi】:\n- B) Sitozol: Alkolün fizyolojik/bazal metabolizmasında görev yapan Alkol Dehidrojenaz (ADH) enziminin bulunduğu kompartmandır; CYP2E1 sitozolik değildir.\n- C) Peroksizom: Hidrojen peroksit (H2O2) bağımlı olarak etanolü asetaldehite dönüştüren 'Katalaz' enziminin lokalizasyonudur.\n- D) Mitokondri: Etanol oksidasyonunun ikinci basamağı olan asetaldehitin asetata dönüşümünü sağlayan Aldehit Dehidrojenaz 2 (ALDH2) enziminin lokalizasyonudur.\n- E) Lizozom: Asit hidrolazları içeren ve primer olarak otofaji/heterofaji ile makromolekül yıkımından sorumlu organeldir; alkolün oksidatif metabolizmasında doğrudan bir rolü yoktur.\n\n【Klinik İpucu (High-Yield Pearl)】: Kronik alkol tüketimi CYP2E1'i transkripsiyonel ve post-translasyonel (stabilizasyon) olarak indükler. İndüklenen CYP2E1, parasetamol (asetaminofen) metabolizmasını toksik ara ürün olan NAPQI (N-asetil-p-benzokinon imin) yönüne kaydırarak kronik alkoliklerde terapötik parasetamol dozlarında bile fulminan hepatotoksisite riskini dramatik biçimde artırır."
   },
   {
-    "id": "d3-k1-pat-007-220",
+    "id": "d3-k1-pat-007-232",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 19,
@@ -819,7 +1287,7 @@
     "explanation": "Opsonizasyon; bir mikroorganizma veya hücrenin, kompleman (C3b) veya antikorlarla kaplanarak fagositoza duyarlı hale getirilmesi işlemidir ve fagositik hücreler tarafından fagositoz ile temizlenmeyi ifade eder; bu bir nekroz/fagositoz mekanizmasıdır, apoptozun kendisi değildir. Buna karşılık, proliferasyon dengesinin korunması, otoreaktif lenfositlerin negatif seleksiyonla elenmesi, sitotoksik T hücre aracılı öldürme ve görevi biten hücrelerin (örn. embriyonik gelişimde) elimine edilmesi klasik apoptoz örnekleridir."
   },
   {
-    "id": "d3-k1-pat-031-221",
+    "id": "d3-k1-pat-031-233",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 20,
@@ -858,7 +1326,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-222",
+    "id": "d3-k1-pat-031-234",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 21,
@@ -936,7 +1404,7 @@
     "explanation": "Bu soru, Karabük Üniversitesi Tıp Fakültesi Dönem 3 Bütünleme Sınavı müfredatında yer alan Tıbbi Patoloji ders kurulundaki temel mekanizmaları sorgulamaktadır. İlgili konunun amfi ders notları, ulusal çekirdek eğitim programı (ÇEP) ve klinik kılavuzlara göre doğru yanıt A seçeneğidir. Çeldirici seçeneklerde yer alan parametreler klinik ve patolojik ayırıcı tanıda farklı antitelere aittir."
   },
   {
-    "id": "d3-k1-pat-031-224",
+    "id": "d3-k1-pat-031-236",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 23,
@@ -975,7 +1443,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-225",
+    "id": "d3-k1-pat-031-237",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 24,
@@ -1242,7 +1710,7 @@
     "explanation": "mTOR uyarılması yaşlanmayı yavaşlatmaz, tam tersine hızlandırır! Ömrü uzatan mekanizma mTOR'un baskılanması, AMPK ve Sirtuinlerin uyarılmasıdır."
   },
   {
-    "id": "d3-k1-enf-003-238",
+    "id": "d3-k1-enf-003-250",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 1,
@@ -1281,7 +1749,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-003-239",
+    "id": "d3-k1-enf-003-251",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 2,
@@ -1320,7 +1788,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-028-240",
+    "id": "d3-k1-enf-028-252",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 3,
@@ -1359,7 +1827,7 @@
     "explanation": "Chlamydia trachomatis, zorunlu hücre içi (obligat intraselüler) bir\nbakteri olduğundan standart gram boyama ile görülemez ve rutin kültür\nbesiyerlerinde üremez. Bu nedenle üretral/servikal akıntı örneğinde\nartmış PMNL sayısına rağmen gram boyamada herhangi bir\nmikroorganizma görülememesi, klasik olarak Chlamydia trachomatis\nenfeksiyonunu (nongonokoksik üretrit/servisit) düşündürür; tanı için\nnükleik asit amplifikasyon testleri (NAAT/PCR) kullanılır."
   },
   {
-    "id": "d3-k1-enf-017-241",
+    "id": "d3-k1-enf-017-253",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 4,
@@ -1398,7 +1866,7 @@
     "explanation": "Gonokoksik enfeksiyonlarda (ve genel olarak tüm CYBE'lerde) yeniden\nenfeksiyonu önlemek ve toplumsal yayılımı durdurmak için, hastanın\nson 60 gün içindeki cinsel partnerlerinin mutlaka değerlendirilmesi ve\neş zamanlı (ampirik) tedavi edilmesi gerekir; 'partner tedavisine gerek\nyoktur' ifadesi bu nedenle yanlıştır. Güncel tedavi yaklaşımı artan direnç\nnedeniyle tek doz seftriakson esasına dayanır; klamidya birlikteliği\ndışlanamıyorsa doksisiklin eklenir."
   },
   {
-    "id": "d3-k1-enf-006-242",
+    "id": "d3-k1-enf-006-254",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 5,
@@ -1437,7 +1905,7 @@
     "explanation": "Özefagus, konjonktiva, kolon ve vajen gibi dış ortamla/mukozal yüzeyle\ntemas eden bölgelerde normal (kommensal) mikrobiyal flora bulunur.\nÜreterler ise mesane ve böbrekler gibi normalde sterildir; bu bölgelerde\nmikroorganizma varlığı patolojik kabul edilir."
   },
   {
-    "id": "d3-k1-enf-024-243",
+    "id": "d3-k1-enf-024-255",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 6,
@@ -1476,7 +1944,7 @@
     "explanation": "Ureaplasma urealyticum, hücre duvarı olmayan (Mycoplasma\nailesinden) küçük bir bakteridir ve cinsel yönden aktif sağlıklı bireylerin\ngenital florasında da sıklıkla kolonizasyon şeklinde bulunabilir. Bu\nnedenle genital örnek kültüründe üremesi tek başına patojen olduğu ve\ntedavi gerektirdiği anlamına gelmez; klinik bulgularla birlikte\ndeğerlendirilmelidir. Hücre duvarı olmadığından gram boyanmaz ve\npenisilin gibi hücre duvarı sentezini hedefleyen antibiyotiklere doğal\nolarak dirençlidir (tedavide makrolid/tetrasiklin grubu tercih edilir)."
   },
   {
-    "id": "d3-k3-far-009-244",
+    "id": "d3-k3-far-009-256",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 7,
@@ -1515,7 +1983,7 @@
     "explanation": "Amikasin, bakteriyel modifiye edici enzimlere karşı en dayanıklı aminoglikoziddir. Gentamisin ve tobramisine direnç geliştiğinde spektrum genişliği sayesinde hastane kaynaklı dirençli Pseudomonas ve Klebsiella suşlarında hayat kurtarıcıdır."
   },
   {
-    "id": "d3-k1-enf-007-245",
+    "id": "d3-k1-enf-007-257",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 8,
@@ -1554,7 +2022,7 @@
     "explanation": "İndirek temas bulaşı, kontamine cansız ara yüzeyler (glukometre,\ntansiyon aleti, ortak kullanılan cihazlar) veya sağlık personelinin elleri\naracılığıyla mikroorganizmanın hastadan hastaya taşınmasıdır. Kan\ntransfüzyonu ise doğrudan (parenteral) bir bulaş yoludur;\ndolaylı/indirekt temas kategorisine girmez."
   },
   {
-    "id": "d3-k1-enf-005-246",
+    "id": "d3-k1-enf-005-258",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 9,
@@ -1593,7 +2061,7 @@
     "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
   },
   {
-    "id": "d3-k1-enf-009-247",
+    "id": "d3-k1-enf-009-259",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 10,
@@ -1632,7 +2100,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-013-248",
+    "id": "d3-k1-enf-013-260",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 11,
@@ -1671,7 +2139,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-013-249",
+    "id": "d3-k1-enf-013-261",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 12,
@@ -1710,7 +2178,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-010-250",
+    "id": "d3-k1-enf-010-262",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 13,
@@ -1749,7 +2217,7 @@
     "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
   },
   {
-    "id": "d3-k1-enf-004-251",
+    "id": "d3-k1-enf-004-263",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 14,
@@ -1788,7 +2256,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-004-252",
+    "id": "d3-k1-enf-004-264",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 15,
@@ -1827,7 +2295,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-011-253",
+    "id": "d3-k1-enf-011-265",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 16,
@@ -1866,7 +2334,7 @@
     "explanation": "Hastane enfeksiyon kontrol uygulamasında (kurumdan kuruma\ndeğişebilen renk kodlamalarında), temas izolasyonu gerektiren\nhastaların oda kapılarına genellikle kırmızı yıldız işareti asılır. Bu görsel\nkodlama, sağlık personelinin ve ziyaretçilerin gerekli koruyucu önlemleri\n(eldiven, önlük vb.) almadan odaya girmesini engellemeyi amaçlar."
   },
   {
-    "id": "d3-k5-aci-011-254",
+    "id": "d3-k5-aci-011-266",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 17,
@@ -1905,7 +2373,7 @@
     "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
   },
   {
-    "id": "d3-k1-enf-009-255",
+    "id": "d3-k1-enf-009-267",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 18,
@@ -1944,7 +2412,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-054-256",
+    "id": "d3-k1-enf-054-268",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 19,
@@ -1983,7 +2451,7 @@
     "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
   },
   {
-    "id": "d3-k1-enf-009-257",
+    "id": "d3-k1-enf-009-269",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 20,
@@ -2022,7 +2490,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-tbg-003-258",
+    "id": "d3-k1-tbg-003-270",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 1,
@@ -2217,7 +2685,7 @@
     "explanation": "Genç, cinsel aktif erkeklerde (<35 yaş) akut epididimit/prostatitin en sık\nnedeni cinsel yolla bulaşan etkenlerdir (Chlamydia trachomatis,\nNeisseria gonorrhoeae). 35 yaş üzerindeki erkeklerde ise, özellikle eşlik\neden mesane çıkım obstrüksiyonu (BPH), üriner kateterizasyon veya\nenstrümantasyon öyküsü varlığında, tipik üriner patojenler (başta\nEscherichia coli olmak üzere diğer koliform gram-negatif bakteriler) en\nsık etkendir."
   },
   {
-    "id": "d3-k1-tbg-003-263",
+    "id": "d3-k1-tbg-003-275",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 6,
@@ -2256,7 +2724,7 @@
     "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir."
   },
   {
-    "id": "d3-k1-pat-052-264",
+    "id": "d3-k1-pat-052-276",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 7,
@@ -2334,7 +2802,7 @@
     "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'İnversiyonlar: Parasentrik ve Perisentrik İnversiyon Ayrımı' başlığı altında incelenen bu mekanizma (PARASENTRİK İNVERSİYON (Sentromersiz): İnversiyona uğrayan segment sentromeri İÇERMEZ, kromozomun tek bir kolunda gerçekleşir (paracentric =...) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
   },
   {
-    "id": "d3-k1-enf-054-266",
+    "id": "d3-k1-enf-054-278",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 9,
@@ -2451,7 +2919,7 @@
     "explanation": "Pomeroy tekniği, fallop tüpünün ampüller veya istmik kısmından bir ilmek (loop) oluşturulup emilebilir sütürle (katgüt) bağlanması ve aradaki halkanın eksize edilmesi esasına dayanır. Basit, hızlı ve yüksek başarı oranına sahip olduğu için postpartum ve elektif laparotomilerde en sık uygulanan tubal sterilizasyon yöntemidir."
   },
   {
-    "id": "d3-k1-tbg-011-269",
+    "id": "d3-k1-tbg-011-281",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 12,
@@ -2607,7 +3075,7 @@
     "explanation": "Fetal kistik higroma, Turner sendromunun (45,X) en karakteristik prenatal ultrasonografik bulgusudur; lenfatik sistemin gelişim bozukluğuna bağlı gelişir ve sıklıkla koarktasyo aorta ile birlikte konotrunkal/septal kalp defektlerine (ASD, VSD, biküspit aort kapağı) eşlik eder. Down, Edwards ve Patau sendromlarında da artmış ense kalınlığı görülebilir, ancak yaygın kistik higroma ile birlikte geniş septal defekt kombinasyonu klasik olarak Turner sendromunu düşündürür."
   },
   {
-    "id": "d3-k1-tbg-002-273",
+    "id": "d3-k1-tbg-002-285",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 16,
@@ -2646,7 +3114,7 @@
     "explanation": "Fetal kistik higroma, Turner sendromunun (45,X) en karakteristik prenatal ultrasonografik bulgusudur; lenfatik sistemin gelişim bozukluğuna bağlı gelişir ve sıklıkla koarktasyo aorta ile birlikte konotrunkal/septal kalp defektlerine (ASD, VSD, biküspit aort kapağı) eşlik eder. Down, Edwards ve Patau sendromlarında da artmış ense kalınlığı görülebilir, ancak yaygın kistik higroma ile birlikte geniş septal defekt kombinasyonu klasik olarak Turner sendromunu düşündürür."
   },
   {
-    "id": "d3-k1-pat-052-274",
+    "id": "d3-k1-pat-052-286",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 17,
@@ -2685,7 +3153,7 @@
     "explanation": "Parsiyel (kısmi) mol hidatiform, tipik olarak TRİPLOİD (en sık 69,XXY; dispermik fertilizasyon sonucu) bir karyotipe sahiptir, diploid değildir; bu nedenle &apos;diploid 46,XX&apos; ifadesi yanlıştır. Komplet mol ise genellikle androgenetik diploid (46,XX, tek spermin boş bir yumurtayı döllemesi sonucu duplikasyonuyla) karyotipe sahiptir ve fetal doku içermez. Komplet molde villuslarda diffüz ödem ve çepeçevre trofoblastik proliferasyon görülürken, parsiyel molde bu değişiklikler daha fokaldir ve fetal doku bulunabilir. Koryokarsinom gelişme riski komplet molde (~%2) parsiyel mole göre belirgin daha yüksektir."
   },
   {
-    "id": "d3-k1-tbg-003-275",
+    "id": "d3-k1-tbg-003-287",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 18,
@@ -2763,7 +3231,7 @@
     "explanation": "Artmış nukal translusens (NT), başta Down, Edwards ve Patau sendromları olmak üzere otozomal trizomilerle ve Turner sendromuyla (lenfatik gelişim bozukluğu/kistik higromaya bağlı) güçlü şekilde ilişkilidir ve birinci trimester kombine tarama testinin temelini oluşturur. Klinefelter sendromu (47,XXY) ise genellikle belirgin bir fenotipik/yapısal anomaliye yol açmadığından NT artışı ile karakteristik olarak ilişkilendirilmez; tanısı çoğunlukla postnatal dönemde veya rastlantısal olarak konur."
   },
   {
-    "id": "d3-k1-tbg-002-277",
+    "id": "d3-k1-tbg-002-289",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 20,
@@ -2919,7 +3387,7 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-281",
+    "id": "d3-k1-pat-015-293",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 2,
@@ -2958,7 +3426,7 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-282",
+    "id": "d3-k1-pat-015-294",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 3,
@@ -2997,7 +3465,7 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-283",
+    "id": "d3-k1-pat-015-295",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 4,
@@ -3036,7 +3504,7 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-284",
+    "id": "d3-k1-pat-015-296",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 5,
@@ -3075,7 +3543,7 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-285",
+    "id": "d3-k1-pat-015-297",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 6,
@@ -3114,7 +3582,7 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-286",
+    "id": "d3-k1-pat-015-298",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 7,
@@ -3153,479 +3621,11 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-287",
+    "id": "d3-k1-pat-015-299",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 8,
     "slideTitle": "Vasküler Değişiklikler: Vazodilatasyon ve Akım Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-021-288",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 9,
-    "slideTitle": "Mikrovasküler Geçirgenlik: Eksüda, Transüda ve Ödem Ayrımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
-  },
-  {
-    "id": "d3-k1-pat-021-289",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 10,
-    "slideTitle": "Artmış Vasküler Geçirgenliğin 4 Temel Mekanizması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
-  },
-  {
-    "id": "d3-k1-pat-015-290",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 11,
-    "slideTitle": "Staz, Vasküler Konjesyon ve Lenfatik Yanıt",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-017",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 12,
-    "slideTitle": "Lökosit Rekrutmanı: Marjinasyon ve Yuvarlanma",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-292",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 13,
-    "slideTitle": "Selektin Ailesi ve Weibel-Palade Cisimcikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-293",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 14,
-    "slideTitle": "Sıkı Adezyon ve İntegrinler: Yüksek Afiniteye Geçiş",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-294",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 15,
-    "slideTitle": "Lökosit Adezyon Eksiklikleri ve Klinik Tablolar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-295",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 16,
-    "slideTitle": "Transmigrasyon (Diapedez) ve Bazal Membran Geçişi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-027",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 17,
-    "slideTitle": "Kemotaksi ve Kemotaktik Faktörler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon → Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu → Marjinasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adhezyon → Marjinasyon → Transmigrasyon → Lökosit aktivasyonu → Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi → Lökosit aktivasyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Lökosit aktivasyonu → Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalarla gerçekleşir: önce lökositler damar duvarına yakın akım hattına kayar (marjinasyon) ve selektinler aracılığıyla gevşek/geçici olarak yuvarlanır; ardından integrinler aracılığıyla endotele sıkıca yapışır (adhezyon); sonra endotel hücreleri arasından damar dışına geçer (transmigrasyon/diyapedez); son olarak kemokin gradyanını izleyerek hasar/enfeksiyon bölgesine yönelir (kemotaksi) ve orada aktive olarak (lökosit aktivasyonu) fagositoz ve diğer efektör işlevlerini yerine getirir."
-  },
-  {
-    "id": "d3-k1-pat-027-297",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 18,
-    "slideTitle": "Lökosit Zamanlaması ve Kinetiği: Nötrofil vs Makrofaj",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon → Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu → Marjinasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adhezyon → Marjinasyon → Transmigrasyon → Lökosit aktivasyonu → Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi → Lökosit aktivasyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Lökosit aktivasyonu → Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalarla gerçekleşir: önce lökositler damar duvarına yakın akım hattına kayar (marjinasyon) ve selektinler aracılığıyla gevşek/geçici olarak yuvarlanır; ardından integrinler aracılığıyla endotele sıkıca yapışır (adhezyon); sonra endotel hücreleri arasından damar dışına geçer (transmigrasyon/diyapedez); son olarak kemokin gradyanını izleyerek hasar/enfeksiyon bölgesine yönelir (kemotaksi) ve orada aktive olarak (lökosit aktivasyonu) fagositoz ve diğer efektör işlevlerini yerine getirir."
-  },
-  {
-    "id": "d3-k1-pat-015-298",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 19,
-    "slideTitle": "Fagositoz Basamakları ve Opsonizasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-015-299",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 20,
-    "slideTitle": "Hücre İçi Öldürme: ROS, MPO Sistemi ve Genetik Hastalıklar",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": null,

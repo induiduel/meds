@@ -1,5 +1,233 @@
 [
   {
+    "id": "prac-gp-01",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 1,
+    "slideTitle": "İnsan Genomu Mimarisi, Kodlamayan DNA ve Genomik Çeşitlilik",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hücrede transkribe edildikten sonra sitoplazmada Dicer enzimi ile işlenen, RISC kompleksi içine girerek hedef mRNA'ların 3' translasyona uğramayan bölgesine (3'-UTR) bağlanan ve protein sentezini baskılayan yaklaşık 22 nükleotidlik düzenleyici molekül hangisidir?",
+    "options": [
+      "A) Ribozomal RNA (rRNA)",
+      "B) Transfer RNA (tRNA)",
+      "C) MikroRNA (miRNA)",
+      "D) Küçük nükleer RNA (snRNA)",
+      "E) Heterojen nükleer RNA (hnRNA)"
+    ],
+    "correctAnswer": "C",
+    "explanation": "miRNA'lar yaklaşık 22 nükleotidlik tek iplikli kodlamayan RNA'lardır. Dicer ile işlenip RISC kompleksine yüklenir ve hedef mRNA'nın translasyonunu durdurarak post-transkripsiyonel susturma yaparlar."
+  },
+  {
+    "id": "prac-gp-02",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 2,
+    "slideTitle": "Genetik Varyasyonlar: Tek Nükleotid Polimorfizmi (SNP) ve Kopya Sayısı (CNV)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdaki genetik varyasyon türlerinden hangisi insan genomunda sayısal olarak en sık rastlanan, bireyler arasında her 1000 bazda bir görülen ve multifaktöryel hastalıklara yatkınlığı haritalamada kullanılan tek bazlık değişimdir?",
+    "options": [
+      "A) Kopya Sayısı Varyasyonu (CNV)",
+      "B) Tek Nükleotid Polimorfizmi (SNP)",
+      "C) Dengeli Translokasyon",
+      "D) Halka Kromozom",
+      "E) İzokromozom"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Tek Nükleotid Polimorfizmleri (SNP), genomda 10 milyondan fazla bulunan ve her 1000 bazda bir rastlanan en sık varyasyon biçimidir."
+  },
+  {
+    "id": "prac-gp-03",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 3,
+    "slideTitle": "Epigenetik Düzenleme: DNA Metilasyonu, Histon Kodu ve Kromatin",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Bir tümör hücresinde p16 (CDKN2A) tümör süpresör gen dizisinde hiçbir delesyon veya nokta mutasyonu saptanmamasına rağmen proteinin hiç üretilmediği görülüyor. Promotor bölgesinin incelenmesinde CpG adacıklarında aşırı metilasyon tespit ediliyor. Bu gen susturma mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Reseptör Düzenlemesi",
+      "B) Nonsense Mutasyon",
+      "C) Epigenetik Susturma (DNA Hipermetilasyonu)",
+      "D) Alternatif Splicing",
+      "E) Gen Amplifikasyonu"
+    ],
+    "correctAnswer": "C",
+    "explanation": "DNA dizisi değişmeden promotor CpG adacıklarının metillenmesi sonucu genin inaktive olması klasik epigenetik susturma (DNA hipermetilasyonu) mekanizmasıdır."
+  },
+  {
+    "id": "prac-gp-04",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 4,
+    "slideTitle": "Mendel Tipi Tek Gen Bozuklukları ve Otozomal Dominant Kalıtım",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi otozomal dominant kalıtım gösteren hastalıkların genel özelliklerinden biri DEĞİLDİR?",
+    "options": [
+      "A) Kuşak atlamadan vertikal geçiş göstermesi",
+      "B) Etkilenen ebeveynin çocuğuna aktarma riskinin %50 olması",
+      "C) Sıklıkla metabolik enzim eksikliklerinden kaynaklanması",
+      "D) Değişken ekspresyon ve eksik penetrans görülebilmesi",
+      "E) Erkek ve kadın çocuklarda eşit oranda ortaya çıkması"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Metabolik enzim eksiklikleri kural olarak Otozomal Resesif kalıtılır; çünkü enzimlerin %50 aktivitesi normal homeostaz için genellikle yeterlidir. Otozomal dominant hastalıklar ise yapısal proteinler ve reseptör defektlerinden kaynaklanır."
+  },
+  {
+    "id": "prac-gp-05",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 5,
+    "slideTitle": "Marfan Sendromu: Fibrillin-1 (FBN1) ve TGF-β Sinyal Yolağı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Marfan sendromunda fibrillin-1 gen kusurunun yanı sıra patogenezde rol oynayan ve elastik liflerin proteolitik yıkımını tetikleyen, aşırı sinyal iletimi gösteren sitokin/büyüme faktörü yolağı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Epidermal Büyüme Faktörü (EGF)",
+      "B) Dönüştürücü Büyüme Faktörü-Beta (TGF-β)",
+      "C) Vasküler Endotelyal Büyüme Faktörü (VEGF)",
+      "D) İnterlökin-2 (IL-2)",
+      "E) Tümör Nekrozis Faktörü-Alfa (TNF-α)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Normal fibrillin-1 molekülleri latent TGF-β'yı sekestre eder. Fibrillin-1 kusurunda kontrolsüz serbest kalan TGF-β, matriks metalloproteinaz aktivasyonuna ve elastik doku harabiyetine neden olur."
+  },
+  {
+    "id": "prac-gp-06",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 6,
+    "slideTitle": "Marfan Sendromu: Kardiyovasküler, Oküler ve İskelet Morfolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşırı uzun boylu, kol açıklığı boyundan uzun olan, pektus ekskavatum ve bilateral lensinde yukarı-dışa subluksasyon saptanan 19 yaşındaki basketbolcuda ani başlayan yırtıcı göğüs ağrısı sonrası ölüm gerçekleşiyor. Otopsinde çıkan aortta intimal yırtık ve perikardiyal tamponad saptanıyor. Aort duvarının mikroskobik incelemesinde saptanması en muhtemel patolojik lezyon hangisidir?",
+    "options": [
+      "A) Dev hücreli aortit",
+      "B) Kistik medyal nekroz",
+      "C) Sifilitik endarterit obliterans",
+      "D) Mönckeberg medial kalsinozisi",
+      "E) Fibrinoid damar nekrozu"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Marfan sendromunda elastik tunika medyanın zayıflaması, elastik liflerin parçalanması ve amorf mukoid matriks birikimiyle karakterize Kistik Medyal Nekroz gelişir ve bu durum ölümcül aort diseksiyonuna yol açar."
+  },
+  {
+    "id": "prac-gp-07",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 7,
+    "slideTitle": "Otozomal Resesif Kalıtım ve Kistik Fibrozis (CFTR) Patogenezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Beyaz ırkta en sık görülen ölümcül otozomal resesif hastalık olan Kistik Fibrozis'in en yaygın mutasyonu olan Delta-F508'in hücresel patogenezi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hücre zarında klor kanalının açılmasını engelleyen sinyal iletim kusuru",
+      "B) mRNA sentezinin hiç yapılamaması (null mutasyon)",
+      "C) Protein katlanma kusuru nedeniyle endoplazmik retikulumda yıkılması ve zara ulaşamaması",
+      "D) Klor kanalının klor yerine bikarbonat geçirmeye başlaması",
+      "E) Aşırı aktifleşerek hücre içine aşırı klor pompalaması"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Delta-F508 mutasyonunda amino asit delesyonu proteinin anormal katlanmasına neden olur; protein endoplazmik retikulumda kalite kontrol mekanizmasınca tutulur, proteazomlarda yıkılır ve apikal membrana hiç ulaşamaz (Sınıf II taşıma kusuru)."
+  },
+  {
+    "id": "prac-gp-08",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 8,
+    "slideTitle": "Kistik Fibrozis: Doku Özgül İyon Taşınması ve Organ Patolojileri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Doğumdan sonra mekonyum çıkaramayan ve ileus operasyonuna alınan bir bebeğin büyüme döneminde kronik öksürük, steatore (yağlı ishal) ve büyüme geriliği gelişiyor. Balgam kültüründe mukoid Pseudomonas aeruginosa üreyen bu çocukta kesin tanı için istenmesi gereken en uygun test hangisidir?",
+    "options": [
+      "A) Ter Klorür Testi (Pilokarpin iyontoforezi)",
+      "B) Dışkıda Gizli Kan Testi",
+      "C) Serum Alfa-1 Antitripsin düzeyi",
+      "D) Bronkoalveoler lavaj sitolojisi",
+      "E) Akciğer biyopsisinde granülom aranması"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mekonyum ileusu, büyüme geriliği, steatore ve Pseudomonas bronşiti klasik Kistik Fibrozis tablosudur; altın standart tanı yöntemi terde klor düzeyini ölçen Ter Testidir."
+  },
+  {
+    "id": "prac-gp-09",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 9,
+    "slideTitle": "Sitogenetik Bozukluklar: Down Sendromu (Trizomi 21) Etiyopatogenezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "42 yaşındaki bir gebeden doğan ve Down sendromu tanısı alan bebeğin sitogenetik analizinde 47,XY,+21 saptanıyor. Bu hastadaki sayısal kromozom anomalisine yol açan en muhtemel hücresel mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Oogenez Mayoz I sırasında kromozomların ayrılamaması (non-disjunction)",
+      "B) Spermatogenez Mayoz II sırasında sentromer bölünme kusuru",
+      "C) Post-zigotik erken mitotik ayrılmama",
+      "D) 14 ve 21. kromozomlar arası dengeli Robertsonian translokasyonu",
+      "E) Perisentrik inversiyon"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Down sendromu olgularının %95'i maternal mayotik non-disjunction (özellikle oogenez Mayoz I'de ayrılmama) sonucu gelişir ve bu durum ileri anne yaşı ile doğrudan ilişkilidir."
+  },
+  {
+    "id": "prac-gp-10",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 10,
+    "slideTitle": "Down Sendromu: Klinikopatolojik Tutulumlar ve Yaşam Seyri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Doğumda epikantus, basık burun kökü ve avuç içinde tek transvers çizgi saptanan bir bebekte doğumdan 24 saat sonra safralı kusma başlıyor. Çekilen direkt batın grafisinde midede ve proksimal duodenumda hava-sıvı seviyesi ('çift baloncuk' görünümü) saptanıyor. Bu bebekteki gastrointestinal patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pilor Stenozu",
+      "B) Duodenal Atrezi",
+      "C) İntususepsiyon",
+      "D) Mekonyum İleusu",
+      "E) Özofagus Atrezisi"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Down sendromu ile güçlü birliktelik gösteren, doğumdan hemen sonra safralı kusma ve direkt grafide 'çift baloncuk (double bubble)' görünümü veren lezyon Duodenal Atrezidir."
+  },
+  {
+    "id": "prac-gp-11",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 11,
+    "slideTitle": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hava kirliliği yoğun olan bir metropolde yaşayan bireylerde uzun dönemde aterosklerotik plak instabilitesi ve akut koroner sendrom riskinin artmasından sorumlu olan, alveol seviyesine kadar ulaşıp makrofaj aktivasyonu ile sistemik enflamatuar sitokin salınımını tetikleyen temel partiküler kirletici boyutu hangisidir?",
+    "options": [
+      "A) PM50",
+      "B) PM20",
+      "C) PM10",
+      "D) PM2.5",
+      "E) Yalnızca kaba polenler"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Çapı 2.5 mikrometreden küçük partiküller (PM2.5) üst solunum yollarındaki filtreleri aşarak doğrudan alveollere iner, makrofajlarca yutulur ve salınan mediyatörler sistemik dolaşıma karışarak ateroskleroz ve kardiyovasküler mortaliteyi artırır."
+  },
+  {
+    "id": "prac-gp-12",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 12,
+    "slideTitle": "Karbonmonoksit (CO) ve Hipoksi Patolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kışın sobalı evde baygın bulunan bir hastanın dudaklarında ve derisinde kiraz kırmızısı renk saptanıyor. Çekilen beyin manyetik rezonans görüntülemesinde bilateral globus pallidusta simetrik nekroz alanları izleniyor. Bu hastadaki zehirlenme etkeni ve temel patofizyolojik mekanizma hangisidir?",
+    "options": [
+      "A) Siyanür - Methemoglobin oluşumu",
+      "B) Karbonmonoksit - Karboksihemoglobin oluşumu ve oksihemoglobin eğrisinin sola kayması",
+      "C) Kurşun - ALA dehidrataz enzim inhibisyonu",
+      "D) Arsenik - Piruvat dehidrogenaz blokajı",
+      "E) Metil alkol - Formik asit retinit hasarı"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kiraz kırmızısı cilt rengi ve bilateral globus pallidus nekrozu Karbonmonoksit (CO) zehirlenmesinin patognomonik tablosudur. CO hemoglobine bağlanarak karboksihemoglobin oluşturur ve oksihemoglobin eğrisini sola kaydırarak ağır hücresel hipoksi yapar."
+  },
+  {
     "id": "prac-gp-13",
     "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
     "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
@@ -1598,305 +1826,77 @@
   {
     "id": "km-pq-1",
     "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
     "slideNumber": 1,
-    "slideTitle": "Karsinojenezin Moleküler Temeline Giriş ve Hallmarks of Cancer",
+    "slideTitle": "Moleküler Karsinojenezin Temel İlkeleri: Non-Lethal Genetik Hasar ve Monoklonal Başlangıç",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Moleküler karsinojenezin temel prensiplerine göre, malign neoplazmların gelişimini başlatan hücresel hasar türü aşağıdakilerden hangisidir?",
+    "question": "Malign bir neoplazmın moleküler patogenezinde yer alan klonalite, mutasyon türleri ve karsinojenez ilkeleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      "A) Akut ölümcül lizozomal membran rüptürü",
-      "B) Hücreyi öldürmeyen (non-lethal) kalıtsal/somatik genetik hasar",
-      "C) Masif sitoplazmik kalsiyum akışı ile koagülasyon nekrozu",
-      "D) Sadece mitokondriyal krista kaybı",
-      "E) İskemik hücre şişmesi"
+      "A) Malign transformasyonu başlatan genetik hasar hücreyi derhal nekroza götüren letal bir lezyondur",
+      "B) Tümörler başlangıçtan itibaren poliklonal kökenli olup her bir odak bağımsız hücrelerden türer",
+      "C) Yolcu (passenger) mutasyonlar hücreye doğrudan selektif büyüme avantajı sağlayan ana sürücülerdir",
+      "D) Başlangıçta monoklonal olan tümör, zamanla ek sürücü mutasyonların birikimiyle klonal heterojenite kazanır",
+      "E) Klonal heterojenite geliştikçe tümör hücrelerinin kemoterapiye duyarlılığı artar ve tedavi kolaylaşır"
     ],
-    "correctAnswer": 0,
-    "explanation": "Karsinojenezin merkezinde hücreyi öldürmeyen (non-lethal) genetik hasar yer alır. Hücre ölmez; mutasyonu yavru hücrelere aktararak özerk çoğalma döngüsüne girer."
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Kanser tek bir transforme hücreden monoklonal olarak başlar; ancak zaman içinde genomik instabilite ve ek sürücü/yolcu mutasyonların birikmesiyle genetik açıdan farklı alt klonlar (tümör heterojenitesi) gelişir.\n\nA yanlıştır; hasar öldürücü olsaydı neoplazi değil nekroz oluşurdu, hasar non-lethal olmalıdır.\nB yanlıştır; tümörler poliklonal değil, monoklonal başlar.\nC yanlıştır; hücreye büyüme avantajı sağlayanlar sürücü (driver) mutasyonlardır, yolcu mutasyonlar nötraldir.\nE yanlıştır; klonal heterojenite geliştikçe dirençli subklonlar seçilir ve tedaviye direnç artar."
   },
   {
     "id": "km-pq-2",
     "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
     "slideNumber": 2,
-    "slideTitle": "Kanser Genlerinin Dört Ana Sınıfı",
+    "slideTitle": "Karsinojenezin Üç Temel Evresi: İnisiyasyon, Promosyon ve Progresyon Dinamikleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki gen sınıflarından hangisinde meydana gelen tek bir alelik mutasyon (heterozigot durum), 'fonksiyon kazanımı' (gain-of-function) mekanizması ile doğrudan neoplastik transformasyonu tetikleyebilir?",
+    "question": "Deneysel kimyasal karsinojenez basamakları (inisiyasyon, promosyon, progresyon) incelendiğinde, aşağıdaki senaryolardan hangisinde deney hayvanında MALİGN TÜMÖR GELİŞİMİ BEKLENİR?",
     "options": [
-      "A) DNA mismatch repair genleri",
-      "B) Proto-onkogenler",
-      "C) Hücre siklusu freni olan tümör supresör genler (RB)",
-      "D) Genom gardiyanı tümör supresör genler (TP53)",
-      "E) Homolog rekombinasyon tamir genleri (BRCA1)"
+      "A) Yalnızca tek doz başlatıcı (inisyatör) karsinojen uygulanıp bırakılması",
+      "B) Yalnızca haftada iki kez olmak üzere uzun süre tekrarlayan dozda promotör uygulanması",
+      "C) Önce haftalarca promotör uygulanması, ardından tek doz başlatıcı karsinojen verilmesi",
+      "D) Tek doz başlatıcı karsinojen uygulandıktan sonra, araları aylar süren çok seyrek promotör maruziyeti",
+      "E) Tek doz başlatıcı karsinojen uygulandıktan sonra, belirli aralıklarla tekrarlayan promotör uygulaması yapılması"
     ],
-    "correctAnswer": 0,
-    "explanation": "Proto-onkogenler dominant etkilidir. Tek bir kopyalarında meydana gelen mutasyon (gain-of-function) onkoprotein üretimi için yeterlidir. Diğer seçeneklerdeki tümör supresör ve DNA tamir genlerinde ise her iki alelin de inaktive olması (loss-of-function) gerekir."
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Tümör oluşumu için kural: Önce inisyatör ile hücre DNA'sında kalıcı mutasyon oluşturulmalı, ardından promotör belirli sıklıkta ve tekrarlayan dozlarda uygulanarak başlatılmış hücrenin klonal proliferasyonu tetiklenmelidir.\n\nA yanlıştır; tek başına inisyatör tümör kütlesi oluşturmak için yetersizdir.\nB yanlıştır; promotörler mutajenik değildir, tek başlarına tümör başlatamazlar.\nC yanlıştır; promotör inisyatörden önce verilirse hiçbir etki göstermez.\nD yanlıştır; promosyon geri dönüşümlü olduğundan maruziyet aralıkları çok uzatılırsa etki kaybolur."
   },
   {
     "id": "km-pq-3",
     "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
     "slideNumber": 3,
-    "slideTitle": "Büyüme Faktörleri ve Otokrin Uyarım Döngüsü",
+    "slideTitle": "Kanser Genlerinin Dört Temel Sınıfı ve Genetik Davranış Kuralları",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Malign tümör hücrelerinin dışarıdan herhangi bir parakrin büyüme faktörü uyarısına ihtiyaç duymadan, kendi sentezledikleri büyüme faktörlerini kendi yüzey reseptörlerine bağlayarak sürekli mitoza girmesi mekanizmasına ne ad verilir?",
+    "question": "Kanser genlerinin sınıfları ve moleküler mekanizmaları göz önüne alındığında, aşağıdaki eşleştirmelerden hangisi BİYOLOJİK ETKİ VE GENETİK KALITIM MEKANİZMASI AÇISINDAN YANLIŞTIR?",
     "options": [
-      "A) Parakrin inhibisyon",
-      "B) Otokrin stimülasyon",
-      "C) Jukstakrin adhezyon",
-      "D) Endokrin regülasyon",
-      "E) Kontakt inhibisyonu"
+      "A) KRAS – Proto-onkogen – İşlev kazanımı (gain-of-function) – Dominant etki",
+      "B) RB1 – Gatekeeper tümör baskılayıcı – İşlev kaybı (loss-of-function) – Hücresel düzeyde resesif etki",
+      "C) MLH1 – DNA uyumsuzluk onarımı (caretaker) – İnaktivasyonu mutatör fenotipe yol açar",
+      "D) BCL2 – Anti-apoptotik gen – Aşırı ekspresyonu apoptoza direnç sağlar",
+      "E) TP53 – Onkogen – Tek bir alelin mutasyonu hücrede tümör baskılayıcı proteini aşırı aktive eder"
     ],
-    "correctAnswer": 0,
-    "explanation": "Kanser hücrelerinin kendi büyüme faktörlerini üretip kendi reseptörlerine bağlaması ve özerk çoğalması 'Otokrin Stimülasyon' olarak adlandırılır."
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. TP53 bir onkogen değil, genomun koruyucusu olan klasik bir **tümör baskılayıcı (gatekeeper)** gendir. TP53 mutasyonları işlev kaybına (loss-of-function) yol açar ve hücrenin DNA hasarına karşı durmasını veya apoptoza gitmesini engeller. Proteini aşırı aktive etmez, freni bozar.\n\nA doğrudur; KRAS proto-onkogendir, tek alel mutasyonuyla dominant aktive olur.\nB doğrudur; RB1 gatekeeper tümör süpresördür ve iki vuruşla inaktive olur.\nC doğrudur; MLH1 caretaker gendir, kaybı mikrosatellit instabilitesine yol açar.\nD doğrudur; BCL2 anti-apoptotiktir, foliküler lenfomada t(14;18) ile aşırı üretilerek apoptozu bloke eder."
   },
   {
     "id": "km-pq-4",
     "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
     "slideNumber": 4,
-    "slideTitle": "Reseptör Tirozin Kinazlar (RTK): EGFR ve HER2/neu",
+    "slideTitle": "Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer): Hanahan ve Weinberg Çerçevesi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
-    "question": "Kırk iki yaşında kadın hastanın meme karsinomu biyopsisinde floresan in situ hibridizasyon (FISH) ile 17q kromozomunda gen amplifikasyonu saptanmıştır. Bu hastada hedefe yönelik monoklonal antikor tedavisi (Trastuzumab) için hedef alınan onkoprotein aşağıdakilerden hangisidir?",
+    "question": "Hanahan ve Weinberg tarafından belirlenen 'Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer)' kavramına göre, aşağıdakilerden hangisi doğrudan 8 temel biyolojik yetenekten biri olmayıp, bu yeteneklerin kazanılmasını hızlandıran **'olanak sağlayıcı özellik (enabling characteristic)'** grubunda yer alır?",
     "options": [
-      "A) c-KIT",
-      "B) HER2 / neu (ERBB2)",
-      "C) BRAF",
-      "D) ALK",
-      "E) RET"
+      "A) Sınırsız replikasyon potansiyeli (telomeraz aktivasyonu)",
+      "B) İndüklenen sürekli anjiyogenez (VEGF salgısı)",
+      "C) Hücresel enerji metabolizmasının yeniden programlanması (Warburg etkisi)",
+      "D) Genomik istikrarsızlık ve mutatör fenotip gelişimi",
+      "E) İmmün yıkımdan kaçış (PD-L1 aşırı ekspresyonu)"
     ],
-    "correctAnswer": 0,
-    "explanation": "HER2/neu (ERBB2) geni 17q12 kromozomunda yer alır ve meme karsinomlarında amplifiye olduğunda Trastuzumab (Herceptin) monoklonal antikoru için doğrudan terapötik hedeftir."
-  },
-  {
-    "id": "km-pq-5",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 5,
-    "slideTitle": "İntraselüler Sinyal İletiminin Şahı: RAS Onkogeni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Pankreas karsinomlu bir hastadan alınan tümör dokusunda KRAS geninin 12. kodonunda nokta mutasyonu saptanmıştır. Bu mutasyonun tümör hücresinde yol açtığı temel biyokimyasal sonuç aşağıdakilerden hangisidir?",
-    "options": [
-      "A) RAS'ın plazma membranından nükleusa göç etmesi",
-      "B) RAS'ın GTPaz aktivitesini kaybederek sürekli GTP'ye bağlı aktif formda kilitlenmesi",
-      "C) p53 proteininin aşırı fosforilasyonu",
-      "D) Hücre içi kalsiyum depolarının boşalması",
-      "E) Telomerlerin hızla kısalması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "RAS nokta mutasyonları (kodon 12, 13, 61), proteinin içsel GTPaz aktivitesini ve GAP duyarlılığını ortadan kaldırır. RAS, GTP'yi hidroliz edemez ve sürekli aktif kalarak downstream MAPK yolağını durmaksızın uyarır."
-  },
-  {
-    "id": "km-pq-6",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 6,
-    "slideTitle": "BRAF Onkogeni ve V600E Nokta Mutasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Metastatik malign melanom tanısı alan bir hastada Vemurafenib tedavisine başlanabilmesi için tümör dokusunda aşağıdaki genetik mutasyonlardan hangisinin varlığı aranmalıdır?",
-    "options": [
-      "A) BCR-ABL translokasyonu",
-      "B) BRAF V600E nokta mutasyonu",
-      "C) HER2 amplifikasyonu",
-      "D) APC delesyonu",
-      "E) RET füzyonu"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Vemurafenib, mutant BRAF V600E kinazını selektif olarak inhibe eden küçük moleküldür. Tedavi öncesi tümör dokusunda BRAF V600E mutasyonunun moleküler testle gösterilmesi zorunludur."
-  },
-  {
-    "id": "km-pq-7",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 7,
-    "slideTitle": "Nükleer Transkripsiyon Faktörleri: MYC Onkogen Ailesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Üç yaşındaki bir çocuğun böbrek üstü bezinde kitle saptanmış ve nöroblastom tanısı konmuştur. Genetik incelemede tümör hücrelerinde 'çift dakika kromozomlar' (double minutes) saptanmıştır. Bu hastada kötü prognozla ilişkili amplifiye olan onkogen aşağıdakilerden hangisidir?",
-    "options": [
-      "A) c-KIT",
-      "B) N-MYC",
-      "C) RET",
-      "D) BCL-2",
-      "E) HER2"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Nöroblastomda çift dakika kromozomlar (dmin) veya homojen boyanan bölgeler (HSR) şeklinde gen amplifikasyonu gösteren ve en önemli kötü prognoz kriteri olan onkogen N-MYC'tir."
-  },
-  {
-    "id": "km-pq-8",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 8,
-    "slideTitle": "Hücre Siklusu Kontrolü: Siklinler, CDK'lar ve Siklin D1",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bir lenf nodu biyopsisinde mantle zonu genişleten küçük B hücreli bir neoplazm saptanmış ve sitogenetikte t(11;14) translokasyonu doğrulanmıştır. Bu translokasyon sonucu aşırı eksprese edilen hücre siklusu regülatörü hangisidir?",
-    "options": [
-      "A) c-MYC",
-      "B) BCL-2",
-      "C) Siklin D1",
-      "D) MDM2",
-      "E) HER2"
-    ],
-    "correctAnswer": 0,
-    "explanation": "t(11;14) translokasyonu, 11q13'teki Siklin D1 (CCND1) genini 14q32'deki immünoglobulin ağır zincir promotörü altına taşır ve Mantle Hücreli Lenfomanın patognomonik genetik sürücüsüdür."
-  },
-  {
-    "id": "km-pq-9",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 9,
-    "slideTitle": "Kromozomal Translokasyonlar ve Füzyon Genleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kemik iliği biyopsisinde miyeloid seride belirgin sola kayma saptanan ve sitogenetik analizinde t(9;22)(q34;q11) resiprokal translokasyonu gösterilen bir hastada üretilen onkojenik kimerik protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) PML-RARA",
-      "B) BCR-ABL1",
-      "C) EWS-FLI1",
-      "D) EML4-ALK",
-      "E) PAX3-FOXO1"
-    ],
-    "correctAnswer": 0,
-    "explanation": "t(9;22) translokasyonu (Philadelphia kromozomu), 9q34'teki ABL1 ile 22q11'deki BCR genlerini birleştirerek konstitütif aktif BCR-ABL1 tirozin kinazını üretir ve KML'nin tanısal göstergesidir."
-  },
-  {
-    "id": "km-pq-10",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 10,
-    "slideTitle": "Apoptozdan Kaçış: BCL-2 ve Foliküler Lenfoma",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Lenf nodu biyopsisinde neoplastik foliküller oluşturan B hücreli lenfoma saptanan hastada, apoptozu engelleyerek tümör gelişimine yol açan t(14;18) translokasyonunun aşırı eksprese ettirdiği protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) c-MYC",
-      "B) BCL-2",
-      "C) BAX",
-      "D) Siklin D1",
-      "E) p53"
-    ],
-    "correctAnswer": 0,
-    "explanation": "t(14;18) translokasyonu, 18. kromozomdaki BCL-2 genini 14. kromozomdaki immünoglobulin ağır zincir lokusuna taşır ve anti-apoptotik BCL-2 proteininin aşırı üretilmesine yol açarak Foliküler Lenfomayı başlatır."
-  },
-  {
-    "id": "km-pq-11",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 11,
-    "slideTitle": "Sınırsız Replikatif Potansiyel: Telomeraz ve Hücresel Yaşlanma",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kanser hücrelerinin normal somatik hücrelerdeki replikatif yaşlanmayı (senesens) aşarak sınırsız bölünme kapasitesi (replikatif ölümsüzlük) kazanmasını sağlayan temel moleküler mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kaspaz-3 enziminin aşırı sentezi",
-      "B) Telomeraz enzim aktivitesinin yeniden kazanılması",
-      "C) Ribozom biyogenezinin durması",
-      "D) Hücre içi kalsiyum pompalarının durması",
-      "E) Aktin miyozin ipliklerinin erimesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kanser hücreleri telomeraz enzimini (TERT) reaktive ederek her bölünmede kısalan telomer boyunu sabit tutar ve böylece Hayflick sınırına takılmaksızın sınırsız replikatif potansiyel (ölümsüzlük) elde eder."
-  },
-  {
-    "id": "km-pq-12",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 12,
-    "slideTitle": "Kalıcı Anjiyogenez İndüksiyonu: VEGF ve Anjiyojenik Şalter",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign bir neoplazmın merkezinde hipoksi gelişmesi sonucu degrade olmaktan kurtulup nükleusa geçen ve VEGF gen transkripsiyonunu başlatarak tümör anjiyogenezini tetikleyen transkripsiyon faktörü aşağıdakilerden hangisidir?",
-    "options": [
-      "A) HIF-1α",
-      "B) E2F",
-      "C) NF-κB",
-      "D) STAT3",
-      "E) SMAD4"
-    ],
-    "correctAnswer": 0,
-    "explanation": "HIF-1α (Hypoxia-Inducible Factor 1-alpha), hipoksi koşullarında stabilize olur ve VEGF ile bFGF gibi anjiyojenik faktörlerin transkripsiyonunu başlatarak tümör neovaskülarizasyonunu sağlar."
-  },
-  {
-    "id": "km-pq-13",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 13,
-    "slideTitle": "E-Kadherin Kaybı ve İnvazyonun Başlangıcı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Karsinojenezin moleküler temelleri kapsamında 'E-Kadherin Kaybı ve İnvazyonun Başlangıcı' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kanser hücrelerinin birbirinden ayrılması, CDH1 mutasyonları ve kalsiyum bağımlı adezyon.",
-      "B) Hücre zarında sodyum birikimi",
-      "C) Lizozomların kendiliğinden kaybolması",
-      "D) Ribozomların tamamen erimesi",
-      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. E-Kadherin Kaybı ve İnvazyonun Başlangıcı, patolojik olarak 'Kanser hücrelerinin birbirinden ayrılması, CDH1 mutasyonları ve kalsiyum bağımlı adezyon.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
-  },
-  {
-    "id": "km-pq-14",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 14,
-    "slideTitle": "Ekstraselüler Matriksin Yıkımı: Tip IV Kollajenaz ve MMP'ler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Karsinojenezin moleküler temelleri kapsamında 'Ekstraselüler Matriksin Yıkımı: Tip IV Kollajenaz ve MMP'ler' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Matriks metalloproteinazlar (MMP-2, MMP-9), katepsinler ve bazal membran delinmesi.",
-      "B) Hücre zarında sodyum birikimi",
-      "C) Lizozomların kendiliğinden kaybolması",
-      "D) Ribozomların tamamen erimesi",
-      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Ekstraselüler Matriksin Yıkımı: Tip IV Kollajenaz ve MMP'ler, patolojik olarak 'Matriks metalloproteinazlar (MMP-2, MMP-9), katepsinler ve bazal membran delinmesi.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
-  },
-  {
-    "id": "km-pq-15",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 15,
-    "slideTitle": "Hücre Göçü ve Epitelyal-Mezenkimal Geçiş (EMT)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Karsinojenezin moleküler temelleri kapsamında 'Hücre Göçü ve Epitelyal-Mezenkimal Geçiş (EMT)' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) SNAIL, TWIST transkripsiyon faktörleri, vimentin kazanımı ve motilite artışı.",
-      "B) Hücre zarında sodyum birikimi",
-      "C) Lizozomların kendiliğinden kaybolması",
-      "D) Ribozomların tamamen erimesi",
-      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Hücre Göçü ve Epitelyal-Mezenkimal Geçiş (EMT), patolojik olarak 'SNAIL, TWIST transkripsiyon faktörleri, vimentin kazanımı ve motilite artışı.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
-  },
-  {
-    "id": "km-pq-16",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli",
-    "slideNumber": 16,
-    "slideTitle": "İntravazasyon ve Damar İçi Dolaşım Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Karsinojenezin moleküler temelleri kapsamında 'İntravazasyon ve Damar İçi Dolaşım Dinamikleri' sürecinde rol oynayan en belirleyici patolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Tümör embolisi, trombosit kılıfı ile immün sistemden korunma ve anoikis direnci.",
-      "B) Hücre zarında sodyum birikimi",
-      "C) Lizozomların kendiliğinden kaybolması",
-      "D) Ribozomların tamamen erimesi",
-      "E) Sitoplazmik lipidlerin spontan kristalleşmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. İntravazasyon ve Damar İçi Dolaşım Dinamikleri, patolojik olarak 'Tümör embolisi, trombosit kılıfı ile immün sistemden korunma ve anoikis direnci.' mekanizması ile karakterizedir ve tümör biyolojisinin kardinal özelliklerindendir."
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Genomik istikrarsızlık (genomic instability) ve tümörü destekleyen enflamasyon (tumor-promoting inflammation), kanserin 8 temel fonksiyonel yeteneğinden biri değil; bu yeteneklerin ortaya çıkmasını kolaylaştıran iki 'olanak sağlayıcı özellik (enabling characteristics)'ten biridir.\n\nA, B, C ve E seçenekleri ise kanserin sekiz temel biyolojik ayırt edici yeteneği (hallmark) arasında yer alır."
   }
 ]

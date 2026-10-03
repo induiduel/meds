@@ -1,5 +1,233 @@
 [
   {
+    "id": "prac-tum-021",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Pediyatrik vs Erişkin Böbrek Tümörleri: Karşılaştırmalı Ayrım",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "2 yaşındaki bir çocuğun karnında saptanan kitlenin adrenal kaynaklı Nöroblastom değil, böbrek parankim kaynaklı Wilms Tümörü olduğunu en çok destekleyen bulgu hangisidir?",
+    "options": [
+      "A) İdrarda VMA (vanilmandelik asit) yüksekliği",
+      "B) Kitlenin batında orta hattı geçmemesi ve böbrek parankimini genişletmesi",
+      "C) BT'de kitle içinde yoğun kaba kalsifikasyonlar izlenmesi",
+      "D) Kemik iliğinde rozet oluşturan hücrelerin görülmesi",
+      "E) N-MYC onkogen amplifikasyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Wilms tümörü böbrek parankiminde yuvarlak sınırlı büyür ve orta hattı geçmez; nöroblastom ise orta hattı geçer, kalsifiyedir ve katekolamin (VMA) salgılar."
+  },
+  {
+    "id": "prac-tum-022",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Böbrek Tümörleri Büyük Patoloji Karşılaştırma Matrisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki böbrek tümörü ve hücresel köken eşleştirmelerinden hangisi yanlıştır?",
+    "options": [
+      "A) Berrak hücreli RCC — Proksimal tübül epiteli",
+      "B) Renal onkositoma — Toplayıcı kanal interkale hücreleri",
+      "C) Kromofob RCC — Toplayıcı kanal interkale hücreleri",
+      "D) Wilms tümörü — Metanefrik blastem kalıntıları",
+      "E) Anjiyomiyolipom — Podosit slit diyaframı"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Anjiyomiyolipom podositlerden değil, perivasküler epiteloid mezenkimal hücrelerden (PEComa) kaynaklanır."
+  },
+  {
+    "id": "prac-tum-023",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri Patolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Böbrek Kitlelerine Klinik ve Radyolojik Tanı Algoritması",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "58 yaşındaki bir hastada rastlantısal olarak saptanan 5 cm'lik solid kortikal böbrek kitlesinde kontrastlı BT'de belirgin kontrast tutulumu izleniyor. Metastaz saptanmayan bu hastada standart klinik yaklaşım ne olmalıdır?",
+    "options": [
+      "A) Cerrahi öncesi kesin tanı için böbrek iğne biyopsisi yapmak",
+      "B) Biyopsi yapmadan doğrudan cerrahi rezeksiyon (nefrektomi) planlamak",
+      "C) 6 ay sonra ultrasonla takip etmek",
+      "D) Sistemik kemoterapi başlamak",
+      "E) Yüksek doz radyoterapi uygulamak"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rezektabl solid renal kitlelerde tümör ekimi riski ve cerrahi endikasyonun net olması nedeniyle ameliyat öncesi iğne biyopsisi yapılmaz, doğrudan nefrektomiye gidilir."
+  },
+  {
+    "id": "prac-tum-024",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri Patolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Ders 26 Kapsamlı Sentezi: Böbrek Tümörleri Patolojisinin Klinik Kodları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki böbrek tümörü ve genetik mekanizma eşleştirmelerinden hangisi yanlıştır?",
+    "options": [
+      "A) Berrak hücreli RCC — Kromozom 3p delesyonu ve VHL inaktivasyonu",
+      "B) Papiller RCC — Trizomi 7, trizomi 17 ve MET protoonkogen aktivasyonu",
+      "C) Wilms tümörü — Kromozom 11p13 (WT1) ve 11p15 (WT2)",
+      "D) Anjiyomiyolipom — TSC1 ve TSC2 mutasyonları",
+      "E) Kromofob RCC — Kromozom 3p delesyonu ve VHL aşırı ifadesi"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Kromozom 3p delesyonu ve VHL inaktivasyonu Berrak Hücreli RCC'ye özgüdür. Kromofob RCC'de VHL mutasyonu bulunmaz; yaygın kromozom kayıpları (hipodiploidi) görülür."
+  },
+  {
+    "id": "prac-mes-001",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 1,
+    "slideTitle": "Alt İdrar Yolu ve Ürotelyum Biyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Üriner sistem toplayıcı boşluklarını (renal pelvis, üreter, mesane) döşeyen ürotelyumun lümen yüzeyinde yer alan ve idrar bileşenlerinin dokuya sızmasını engelleyen en yüzeyel hücre tabakası hangisidir?",
+    "options": [
+      "A) Podositler",
+      "B) Şemsiye hücreleri (Umbrella cells)",
+      "C) İnterkale hücreler",
+      "D) Juxtaglomerüler hücreler",
+      "E) Von Hansemann histiyositleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ürotelyumun en üst katmanında yer alan şemsiye hücreleri üroplakin plakları sayesinde geçirimsiz osmolar bariyeri oluşturur."
+  },
+  {
+    "id": "prac-mes-002",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 2,
+    "slideTitle": "Üreter Bozuklukları: UPJ Tıkanıklığı ve Retroperitoneal Fibrozis",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Bebeklik ve erken çocukluk döneminde konjenital hidronefrozun açık ara en sık görülen anatomik nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Posterior üretral valv",
+      "B) Üreteropelvik bileşke (UPJ) darlığı / obstrüksiyonu",
+      "C) Retroperitoneal fibrozis",
+      "D) Üreterosel",
+      "E) Mesane ekstrofisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Üreteropelvik bileşke (UPJ) obstrüksiyonu çocuklarda konjenital hidronefrozun en sık nedenidir."
+  },
+  {
+    "id": "prac-mes-003",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 3,
+    "slideTitle": "Mesane Divertikülleri: Patogenez ve Kanser Yayılım Riski",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Mesane divertikülü içerisinde gelişen bir ürotelyal karsinomun standart mesane duvarında gelişen tümörlere kıyasla çok daha hızlı perivezikal yayılım göstermesinin ve evre atlamasının temel anatomik nedeni nedir?",
+    "options": [
+      "A) Divertikül epitelinin şemsiye hücrelerinden yoksun olması",
+      "B) Divertikül duvarında muskularis propria (kalın detrisör kas tabakası) bulunmaması",
+      "C) Divertikül içinde kan akımının olmaması",
+      "D) Divertikül mukozasının keratinize olması",
+      "E) Divertikülün sadece böbrek kutbunda yerleşmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Edinsel psödodivertikül duvarı sadece mukoza ve lamina propriadan ibarettir; muskularis propria bulunmadığı için tümörler doğrudan perivezikal dokuya (T3) invaze olur."
+  },
+  {
+    "id": "prac-mes-004",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 4,
+    "slideTitle": "Sistit Patolojisi: Akut Bakteriyel Sistit ve Sık Etkenler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "22 yaşındaki yeni evli bir kadında dizüri ve sık idrara çıkma şikayetleri ile yapılan idrar kültüründe koagülaz negatif, novobiyosine dirençli Gram-pozitif kok ürüyor. En olası etken hangisidir?",
+    "options": [
+      "A) Staphylococcus aureus",
+      "B) Staphylococcus epidermidis",
+      "C) Staphylococcus saprophyticus",
+      "D) Streptococcus agalactiae",
+      "E) Enterococcus faecalis"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Genç kadınlarda akut sistite yol açan koagülaz negatif ve novobiyosine dirençli stafilokok Staphylococcus saprophyticus'tur (balayı sistiti)."
+  },
+  {
+    "id": "prac-mes-005",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 5,
+    "slideTitle": "Özel Sistit Tipleri: Hemorajik, İnterstisyel (Hunner Ülseri) ve Eozinofilik",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Lenfoma nedeniyle siklofosfamid kemoterapisi alan bir hastada masif ağrılı hematüri gelişiyor. Bu toksik hemorajik sistit tablosundan sorumlu idrar metaboliti ve önleyici ajan hangisidir?",
+    "options": [
+      "A) Ürik asit — Allopurinol",
+      "B) Akrolein — MESNA",
+      "C) Hidroksiüre — Folinik asit",
+      "D) Siklosporin — Kortikosteroid",
+      "E) Metotreksat — N-asetilsistein"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Siklofosfamidin mesane toksisitesinden sorumlu metaboliti Akroleindir; idrarda akroleini bağlayarak hemorajik sistiti önleyen ajan MESNA'dır."
+  },
+  {
+    "id": "prac-mes-006",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 6,
+    "slideTitle": "Kronik İrritasyon, Metaplazi ve Schistosoma haematobium",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nil nehri havzasında yaşayan ve kronik idrar yolu enfeksiyonu öyküsü olan bir hastanın mesane biyopsisinde lamina propriada kalsifiye parazit yumurtaları ve yaygın keratinize skuamöz metaplazi izleniyor. Bu hastada gelişme riski en yüksek olan mesane malignitesi hangisidir?",
+    "options": [
+      "A) Papiller ürotelyal karsinom",
+      "B) Skuamöz hücreli karsinom (SCC)",
+      "C) Mesane adenokarsinomu",
+      "D) Küçük hücreli nöroendokrin karsinom",
+      "E) Rabdomiyosarkom"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Schistosoma haematobium enfeksiyonu mesanede kronik skuamöz metaplazi oluşturarak baskın olarak Skuamöz Hücreli Karsinom gelişimine yol açar."
+  },
+  {
+    "id": "prac-mes-007",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 7,
+    "slideTitle": "Mesane Tümörlerine Giriş ve Saha Kanseri (Field Cancerization) Kavramı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Boya ve kauçuk fabrikasında 25 yıl çalışan bir işçide mesane kanseri saptanıyor. Bu endüstriyel mesleki maruziyette ürotelyal karsinojenezden sorumlu temel kimyasal karsinojen grubu hangisidir?",
+    "options": [
+      "A) Asbest lifleri",
+      "B) Aromatik aminler / Arilaminler (2-naftilamin, benzidin)",
+      "C) Alkol türevleri",
+      "D) Polisistein bileşikleri",
+      "E) Ağır cıva tuzları"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Boya, kauçuk ve tekstil sanayiinde kullanılan aromatik aminler (arilaminler, özellikle 2-naftilamin) mesane karsinogenezinde klasik mesleki etkendir."
+  },
+  {
+    "id": "prac-mes-008",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 8,
+    "slideTitle": "Ürotelyal Karsinomda İki Ayrı Genetik ve Morfolojik Yol",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Mesane karsinomunda düşük dereceli, non-invaziv papiller ürotelyal tümörlerin gelişiminde en sık mutasyona uğrayan onkogen aşağıdakilerden hangisidir?",
+    "options": [
+      "A) TP53",
+      "B) FGFR3",
+      "C) RB1",
+      "D) VHL",
+      "E) MET"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Düşük dereceli papiller ürotelyal neoplazmların yaklaşık %70'inde FGFR3 geninde aktive edici mutasyonlar saptanır."
+  },
+  {
     "id": "prac-mes-009",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
     "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
@@ -1670,233 +1898,5 @@
     ],
     "correctAnswer": "C",
     "explanation": "FMF, Romatoid Artrit veya kronik osteomiyelit gibi uzun süren kronik enflamatuar durumlarda gelişen sekonder amiloidoz AA tipindedir ve karaciğerden salınan Serum Amiloid A (SAA) proteininin birikmesiyle oluşur."
-  },
-  {
-    "id": "prac-gp-01",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "İnsan Genomu Mimarisi, Kodlamayan DNA ve Genomik Çeşitlilik",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hücrede transkribe edildikten sonra sitoplazmada Dicer enzimi ile işlenen, RISC kompleksi içine girerek hedef mRNA'ların 3' translasyona uğramayan bölgesine (3'-UTR) bağlanan ve protein sentezini baskılayan yaklaşık 22 nükleotidlik düzenleyici molekül hangisidir?",
-    "options": [
-      "A) Ribozomal RNA (rRNA)",
-      "B) Transfer RNA (tRNA)",
-      "C) MikroRNA (miRNA)",
-      "D) Küçük nükleer RNA (snRNA)",
-      "E) Heterojen nükleer RNA (hnRNA)"
-    ],
-    "correctAnswer": "C",
-    "explanation": "miRNA'lar yaklaşık 22 nükleotidlik tek iplikli kodlamayan RNA'lardır. Dicer ile işlenip RISC kompleksine yüklenir ve hedef mRNA'nın translasyonunu durdurarak post-transkripsiyonel susturma yaparlar."
-  },
-  {
-    "id": "prac-gp-02",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Genetik Varyasyonlar: Tek Nükleotid Polimorfizmi (SNP) ve Kopya Sayısı (CNV)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki genetik varyasyon türlerinden hangisi insan genomunda sayısal olarak en sık rastlanan, bireyler arasında her 1000 bazda bir görülen ve multifaktöryel hastalıklara yatkınlığı haritalamada kullanılan tek bazlık değişimdir?",
-    "options": [
-      "A) Kopya Sayısı Varyasyonu (CNV)",
-      "B) Tek Nükleotid Polimorfizmi (SNP)",
-      "C) Dengeli Translokasyon",
-      "D) Halka Kromozom",
-      "E) İzokromozom"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Tek Nükleotid Polimorfizmleri (SNP), genomda 10 milyondan fazla bulunan ve her 1000 bazda bir rastlanan en sık varyasyon biçimidir."
-  },
-  {
-    "id": "prac-gp-03",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Epigenetik Düzenleme: DNA Metilasyonu, Histon Kodu ve Kromatin",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir tümör hücresinde p16 (CDKN2A) tümör süpresör gen dizisinde hiçbir delesyon veya nokta mutasyonu saptanmamasına rağmen proteinin hiç üretilmediği görülüyor. Promotor bölgesinin incelenmesinde CpG adacıklarında aşırı metilasyon tespit ediliyor. Bu gen susturma mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Reseptör Düzenlemesi",
-      "B) Nonsense Mutasyon",
-      "C) Epigenetik Susturma (DNA Hipermetilasyonu)",
-      "D) Alternatif Splicing",
-      "E) Gen Amplifikasyonu"
-    ],
-    "correctAnswer": "C",
-    "explanation": "DNA dizisi değişmeden promotor CpG adacıklarının metillenmesi sonucu genin inaktive olması klasik epigenetik susturma (DNA hipermetilasyonu) mekanizmasıdır."
-  },
-  {
-    "id": "prac-gp-04",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Mendel Tipi Tek Gen Bozuklukları ve Otozomal Dominant Kalıtım",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi otozomal dominant kalıtım gösteren hastalıkların genel özelliklerinden biri DEĞİLDİR?",
-    "options": [
-      "A) Kuşak atlamadan vertikal geçiş göstermesi",
-      "B) Etkilenen ebeveynin çocuğuna aktarma riskinin %50 olması",
-      "C) Sıklıkla metabolik enzim eksikliklerinden kaynaklanması",
-      "D) Değişken ekspresyon ve eksik penetrans görülebilmesi",
-      "E) Erkek ve kadın çocuklarda eşit oranda ortaya çıkması"
-    ],
-    "correctAnswer": "C",
-    "explanation": "Metabolik enzim eksiklikleri kural olarak Otozomal Resesif kalıtılır; çünkü enzimlerin %50 aktivitesi normal homeostaz için genellikle yeterlidir. Otozomal dominant hastalıklar ise yapısal proteinler ve reseptör defektlerinden kaynaklanır."
-  },
-  {
-    "id": "prac-gp-05",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Marfan Sendromu: Fibrillin-1 (FBN1) ve TGF-β Sinyal Yolağı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Marfan sendromunda fibrillin-1 gen kusurunun yanı sıra patogenezde rol oynayan ve elastik liflerin proteolitik yıkımını tetikleyen, aşırı sinyal iletimi gösteren sitokin/büyüme faktörü yolağı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Epidermal Büyüme Faktörü (EGF)",
-      "B) Dönüştürücü Büyüme Faktörü-Beta (TGF-β)",
-      "C) Vasküler Endotelyal Büyüme Faktörü (VEGF)",
-      "D) İnterlökin-2 (IL-2)",
-      "E) Tümör Nekrozis Faktörü-Alfa (TNF-α)"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Normal fibrillin-1 molekülleri latent TGF-β'yı sekestre eder. Fibrillin-1 kusurunda kontrolsüz serbest kalan TGF-β, matriks metalloproteinaz aktivasyonuna ve elastik doku harabiyetine neden olur."
-  },
-  {
-    "id": "prac-gp-06",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Marfan Sendromu: Kardiyovasküler, Oküler ve İskelet Morfolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşırı uzun boylu, kol açıklığı boyundan uzun olan, pektus ekskavatum ve bilateral lensinde yukarı-dışa subluksasyon saptanan 19 yaşındaki basketbolcuda ani başlayan yırtıcı göğüs ağrısı sonrası ölüm gerçekleşiyor. Otopsinde çıkan aortta intimal yırtık ve perikardiyal tamponad saptanıyor. Aort duvarının mikroskobik incelemesinde saptanması en muhtemel patolojik lezyon hangisidir?",
-    "options": [
-      "A) Dev hücreli aortit",
-      "B) Kistik medyal nekroz",
-      "C) Sifilitik endarterit obliterans",
-      "D) Mönckeberg medial kalsinozisi",
-      "E) Fibrinoid damar nekrozu"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Marfan sendromunda elastik tunika medyanın zayıflaması, elastik liflerin parçalanması ve amorf mukoid matriks birikimiyle karakterize Kistik Medyal Nekroz gelişir ve bu durum ölümcül aort diseksiyonuna yol açar."
-  },
-  {
-    "id": "prac-gp-07",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Otozomal Resesif Kalıtım ve Kistik Fibrozis (CFTR) Patogenezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Beyaz ırkta en sık görülen ölümcül otozomal resesif hastalık olan Kistik Fibrozis'in en yaygın mutasyonu olan Delta-F508'in hücresel patogenezi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Hücre zarında klor kanalının açılmasını engelleyen sinyal iletim kusuru",
-      "B) mRNA sentezinin hiç yapılamaması (null mutasyon)",
-      "C) Protein katlanma kusuru nedeniyle endoplazmik retikulumda yıkılması ve zara ulaşamaması",
-      "D) Klor kanalının klor yerine bikarbonat geçirmeye başlaması",
-      "E) Aşırı aktifleşerek hücre içine aşırı klor pompalaması"
-    ],
-    "correctAnswer": "C",
-    "explanation": "Delta-F508 mutasyonunda amino asit delesyonu proteinin anormal katlanmasına neden olur; protein endoplazmik retikulumda kalite kontrol mekanizmasınca tutulur, proteazomlarda yıkılır ve apikal membrana hiç ulaşamaz (Sınıf II taşıma kusuru)."
-  },
-  {
-    "id": "prac-gp-08",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Kistik Fibrozis: Doku Özgül İyon Taşınması ve Organ Patolojileri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Doğumdan sonra mekonyum çıkaramayan ve ileus operasyonuna alınan bir bebeğin büyüme döneminde kronik öksürük, steatore (yağlı ishal) ve büyüme geriliği gelişiyor. Balgam kültüründe mukoid Pseudomonas aeruginosa üreyen bu çocukta kesin tanı için istenmesi gereken en uygun test hangisidir?",
-    "options": [
-      "A) Ter Klorür Testi (Pilokarpin iyontoforezi)",
-      "B) Dışkıda Gizli Kan Testi",
-      "C) Serum Alfa-1 Antitripsin düzeyi",
-      "D) Bronkoalveoler lavaj sitolojisi",
-      "E) Akciğer biyopsisinde granülom aranması"
-    ],
-    "correctAnswer": "A",
-    "explanation": "Mekonyum ileusu, büyüme geriliği, steatore ve Pseudomonas bronşiti klasik Kistik Fibrozis tablosudur; altın standart tanı yöntemi terde klor düzeyini ölçen Ter Testidir."
-  },
-  {
-    "id": "prac-gp-09",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "Sitogenetik Bozukluklar: Down Sendromu (Trizomi 21) Etiyopatogenezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "42 yaşındaki bir gebeden doğan ve Down sendromu tanısı alan bebeğin sitogenetik analizinde 47,XY,+21 saptanıyor. Bu hastadaki sayısal kromozom anomalisine yol açan en muhtemel hücresel mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Oogenez Mayoz I sırasında kromozomların ayrılamaması (non-disjunction)",
-      "B) Spermatogenez Mayoz II sırasında sentromer bölünme kusuru",
-      "C) Post-zigotik erken mitotik ayrılmama",
-      "D) 14 ve 21. kromozomlar arası dengeli Robertsonian translokasyonu",
-      "E) Perisentrik inversiyon"
-    ],
-    "correctAnswer": "A",
-    "explanation": "Down sendromu olgularının %95'i maternal mayotik non-disjunction (özellikle oogenez Mayoz I'de ayrılmama) sonucu gelişir ve bu durum ileri anne yaşı ile doğrudan ilişkilidir."
-  },
-  {
-    "id": "prac-gp-10",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Down Sendromu: Klinikopatolojik Tutulumlar ve Yaşam Seyri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Doğumda epikantus, basık burun kökü ve avuç içinde tek transvers çizgi saptanan bir bebekte doğumdan 24 saat sonra safralı kusma başlıyor. Çekilen direkt batın grafisinde midede ve proksimal duodenumda hava-sıvı seviyesi ('çift baloncuk' görünümü) saptanıyor. Bu bebekteki gastrointestinal patoloji aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Pilor Stenozu",
-      "B) Duodenal Atrezi",
-      "C) İntususepsiyon",
-      "D) Mekonyum İleusu",
-      "E) Özofagus Atrezisi"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Down sendromu ile güçlü birliktelik gösteren, doğumdan hemen sonra safralı kusma ve direkt grafide 'çift baloncuk (double bubble)' görünümü veren lezyon Duodenal Atrezidir."
-  },
-  {
-    "id": "prac-gp-11",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hava kirliliği yoğun olan bir metropolde yaşayan bireylerde uzun dönemde aterosklerotik plak instabilitesi ve akut koroner sendrom riskinin artmasından sorumlu olan, alveol seviyesine kadar ulaşıp makrofaj aktivasyonu ile sistemik enflamatuar sitokin salınımını tetikleyen temel partiküler kirletici boyutu hangisidir?",
-    "options": [
-      "A) PM50",
-      "B) PM20",
-      "C) PM10",
-      "D) PM2.5",
-      "E) Yalnızca kaba polenler"
-    ],
-    "correctAnswer": "D",
-    "explanation": "Çapı 2.5 mikrometreden küçük partiküller (PM2.5) üst solunum yollarındaki filtreleri aşarak doğrudan alveollere iner, makrofajlarca yutulur ve salınan mediyatörler sistemik dolaşıma karışarak ateroskleroz ve kardiyovasküler mortaliteyi artırır."
-  },
-  {
-    "id": "prac-gp-12",
-    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
-    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "Karbonmonoksit (CO) ve Hipoksi Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kışın sobalı evde baygın bulunan bir hastanın dudaklarında ve derisinde kiraz kırmızısı renk saptanıyor. Çekilen beyin manyetik rezonans görüntülemesinde bilateral globus pallidusta simetrik nekroz alanları izleniyor. Bu hastadaki zehirlenme etkeni ve temel patofizyolojik mekanizma hangisidir?",
-    "options": [
-      "A) Siyanür - Methemoglobin oluşumu",
-      "B) Karbonmonoksit - Karboksihemoglobin oluşumu ve oksihemoglobin eğrisinin sola kayması",
-      "C) Kurşun - ALA dehidrataz enzim inhibisyonu",
-      "D) Arsenik - Piruvat dehidrogenaz blokajı",
-      "E) Metil alkol - Formik asit retinit hasarı"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kiraz kırmızısı cilt rengi ve bilateral globus pallidus nekrozu Karbonmonoksit (CO) zehirlenmesinin patognomonik tablosudur. CO hemoglobine bağlanarak karboksihemoglobin oluşturur ve oksihemoglobin eğrisini sola kaydırarak ağır hücresel hipoksi yapar."
   }
 ]

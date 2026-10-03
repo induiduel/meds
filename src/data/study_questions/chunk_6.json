@@ -1,5 +1,233 @@
 [
   {
+    "id": "prac-nef-017",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 17,
+    "slideTitle": "Renal Amiloidoz: Patoloji, Kongo Kırmızısı ve Polarizasyon",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Tekrarlayan karın ağrısı ve ateş atakları olan FMF hastasında gelişen nefrotik sendrom nedeniyle yapılan böbrek biyopsisinde, amorf aselüler eozinofilik birikimlerin amiloid olduğunu kesinleştiren yöntem hangisidir?",
+    "options": [
+      "A) PAS boyasında bazal membranın kalınlaşması",
+      "B) Gümüşleme boyasında tram-track çift kontur izlenmesi",
+      "C) Kongo kırmızısı boyaması sonrası polarize mikroskopta elma yeşili çift kırılma saptanması",
+      "D) İmmünofloresanda granüler IgG pozitifliği",
+      "E) Ziehl-Neelsen boyasında asido-rezistan basillerin görülmesi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Kongo kırmızısı boyası sonrası polarize mikroskopta elma yeşili çift kırılma (apple-green birefringence) amiloidozun patognomonik altın standart mikroskobik kanıtıdır."
+  },
+  {
+    "id": "prac-nef-018",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 18,
+    "slideTitle": "Nefrotik Sendromda Biyopsi Endikasyonları ve Ayırıcı Tanı Algoritması",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki nefrotik sendrom nedenlerinin hangisinde serum C3 kompleman düzeyinin belirgin olarak düşmesi beklenir?",
+    "options": [
+      "A) Minimal değişiklik hastalığı",
+      "B) Membranöz nefropati",
+      "C) Membranoproliferatif glomerülonefrit Tip I",
+      "D) Primer Fokal segmental glomerüloskleroz",
+      "E) Renal amiloidoz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "MPGN Tip I klasik kompleman yolunu aktive ederek C3 ve C4 düşüklüğüne yol açar. MDH, FSGS, Membranöz ve Amiloidozda kompleman düzeyleri normaldir."
+  },
+  {
+    "id": "prac-nef-019",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 19,
+    "slideTitle": "Konjenital ve İnfantil Nefrotik Sendromlar: Genetik Defektler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Doğumdan itibaren masif proteinürisi olan, dev plasenta öyküsü bulunan ve biyopsisinde tubuluslarda mikrokistik genişlemeler izlenen konjenital nefrotik sendromlu bebekte mutasyon hangi gendedir?",
+    "options": [
+      "A) NPHS1 (Nefrin)",
+      "B) NPHS2 (Podosin)",
+      "C) ACTN4",
+      "D) COL4A5",
+      "E) GLA"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Fin tipi konjenital nefrotik sendrom NPHS1 geni mutasyonuna bağlı nefrin eksikliği sonucu gelişir; mikrokistik tubuler dilatasyon karakteristiktir."
+  },
+  {
+    "id": "prac-nef-020",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 20,
+    "slideTitle": "Podositopatilerde Elektron Mikroskobunun Rolü ve Morfolojik Özeti",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Glomerülopatiler ve elektron mikroskobundaki tipik immün depozit lokalizasyonu eşleştirmelerinden hangisi yanlıştır?",
+    "options": [
+      "A) Membranöz nefropati — Subepitelyal depozitler",
+      "B) Poststreptokokkal GN — Subepitelyal 'hörgüç' (humps)",
+      "C) MPGN Tip I — Subendotelyal depozitler",
+      "D) Yoğun birikim hastalığı (DDD) — İntramembranöz kurdele birikim",
+      "E) Minimal değişiklik hastalığı — Belirgin mezangiyal yoğun depozitler"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Minimal Değişiklik Hastalığında hiçbir lokalizasyonda immün kompleks depoziti bulunmaz; elektron mikroskobundaki tek bulgu podosit ayaksı çıkıntılarının silinmesidir."
+  },
+  {
+    "id": "prac-nef-021",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Nefrotik Sendromda Tubulointerstisyel Hasar ve Lipoid Nefroz Özellikleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kronik glomerüler hastalıklarda böbrek yetmezliğine ilerlemeyi ve uzun dönem prognozu en güçlü tahmin ettiren histopatolojik lezyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Glomerüllerdeki podosit hipertrofisi",
+      "B) Tübülointerstisyel atrofi ve fibrozisin yaygınlığı",
+      "C) Bowman kapsülünün kalınlaşması",
+      "D) Kapiller lümendeki trombosit agregasyonu",
+      "E) Yalnızca mezangiyal hücre sayısı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Nefrolojik patolojide tübülointerstisyel hasar, atrofi ve fibrozisin derecesi, glomerüler lezyonun tipinden bağımsız olarak son dönem böbrek yetmezliğine gidişin en güçlü prognostik göstergesidir."
+  },
+  {
+    "id": "prac-nef-022",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Nefrotik Sendromlu Hastaya Genel Yaklaşım ve Özet Akış Şeması",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromlu bir hastada intraglomerüler hidrostatik basıncı ve proteinüriyi azaltmak amacıyla başlanan ACE inhibitörlerinin temel renal hemodinamik etki mekanizması hangisidir?",
+    "options": [
+      "A) Afferent arteriyolü daraltmak",
+      "B) Eferent arteriyolde vazodilatasyon sağlamak",
+      "C) Glomerüler bazal membranın negatif yükünü artırmak",
+      "D) Podosit slit diyaframlarını mekanik olarak kapatmak",
+      "E) Proksimal tubulustan albümin geri emilimini inhibe etmek"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ACE inhibitörleri anjiyotensin II'yi baskılayarak eferent arteriyolü dilate eder; bu sayede glomerül içi kapiller hidrostatik basınç düşer ve protein kaçağı azalır."
+  },
+  {
+    "id": "prac-nef-023",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Nefrotik Sendrom: Ayırıcı Tanı ve Büyük Karşılaştırma Tablosu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki eşleştirmelerden hangisinde glomerüler hastalık ile serum kompleman düzeyi ve patolojik bulgusu doğru verilmiştir?",
+    "options": [
+      "A) Minimal Değişiklik Hastalığı — Düşük C3 — Subendotelyal depozit",
+      "B) Membranöz Nefropati — Normal C3 — Subepitelyal 'spike and dome' depozit",
+      "C) MPGN Tip I — Normal C3 ve C4 — Yalnızca podosit ayaksı çıkıntı silinmesi",
+      "D) Yoğun Birikim Hastalığı (DDD) — Yüksek C3 — Subepitelyal hörgüç",
+      "E) FSGS — Düşük C4 — İntramembranöz kurdele depozit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Membranöz nefropatide serum kompleman düzeyi normaldir ve histopatolojide subepitelyal depozitlerle birlikte 'spike and dome' görünümü karakteristiktir."
+  },
+  {
+    "id": "prac-nef-024",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Ders 19 Kapsamlı Sentezi: Nefrotik Sendrom Patolojisinin Klinik Kodları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki klinik tablolardan hangisinde hastaya doğrudan ampirik kortikosteroid başlanması gerekirken biyopsi endikasyonu bulunmaz?",
+    "options": [
+      "A) Bacaklarında ödem ve 4 g/gün proteinüri ile başvuran 45 yaşındaki erkek",
+      "B) Tip 2 diyabeti ve 5 g/gün proteinürisi olan 55 yaşındaki kadın",
+      "C) Ani başlayan yaygın ödem ve 4 g/gün selektif proteinürisi olan, mikroskopik hematürisi bulunmayan 3 yaşındaki çocuk",
+      "D) Ani başlayan nefrotik sendrom ve anti-PLA2R negatifliği olan 65 yaşındaki erkek",
+      "E) Hepatit C pozitifliği, purpura ve mikst nefrotik tablosu olan 40 yaşındaki hasta"
+    ],
+    "correctAnswer": 2,
+    "explanation": "3 yaşındaki çocukta tipik prezentasyonla gelen nefrotik sendromun %90 nedeni Minimal Değişiklik Hastalığı olduğundan doğrudan steroid başlanır, böbrek biyopsisi yapılmaz."
+  },
+  {
+    "id": "prac-nefr-001",
+    "deckId": "learn-glomeruler-hastaliklar-nefritik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "slideNumber": 1,
+    "slideTitle": "Nefritik Sendrom: Klinik Tanım ve Kardinal Bulgular",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki idrar sedimenti bulgularından hangisi bir hematürinin alt idrar yolu kaynaklı (taş/tümör) değil, kesinlikle glomerüler enflamasyona (nefritik sendrom) bağlı olduğunu kanıtlar?",
+    "options": [
+      "A) Çok sayıda lökosit ve bakteri",
+      "B) İzosellüler taze eritrositler",
+      "C) Dismorfik eritrositler ve eritrosit silindirleri",
+      "D) Ürik asit kristalleri",
+      "E) Oval yağ cisimcikleri"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Dismorfik eritrositler ve eritrosit silindirleri kanamanın glomerül filtrasyon bariyerinden ve tubulus lümeninden kaynaklandığını gösteren patognomonik nefritik sendrom bulgularıdır."
+  },
+  {
+    "id": "prac-nefr-002",
+    "deckId": "learn-glomeruler-hastaliklar-nefritik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "slideNumber": 2,
+    "slideTitle": "Nefritik Sendrom Patofizyolojisi: Enflamasyon ve GFR Çöküşü",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefritik sendromda hipertansiyon ve ödem gelişimindeki primer patofizyolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hipoalbüminemiye bağlı plazma onkotik basıncının çökmesi",
+      "B) GFR düşüşüne bağlı gelişen primer renal sodyum ve su retansiyonu",
+      "C) Renal arter darlığına bağlı malign renin deşarjı",
+      "D) İzole aldosteron salgılayan adenom varlığı",
+      "E) İdrarla yüksek oranda albümin kaybı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Nefritik sendromda GFR'nin ani düşmesi sonucu böbreklerden tuz ve su atılamaz; gelişen primer hipervolemi hipertansiyon ve periorbital ödeme yol açar."
+  },
+  {
+    "id": "prac-nefr-003",
+    "deckId": "learn-glomeruler-hastaliklar-nefritik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "slideNumber": 3,
+    "slideTitle": "Akut Poststreptokokkal Glomerülonefrit (APSGN): Etyopatogenez ve Latent Periyot",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "8 yaşındaki bir erkek çocukta streptokokkal boğaz enfeksiyonundan 12 gün sonra koyu renkli idrar, periorbital ödem ve tansiyon yüksekliği gelişiyor. Bu tabloda sorumlu en olası nefritojenik streptokok M serotipi hangisidir?",
+    "options": [
+      "A) M tipi 12",
+      "B) M tipi 49",
+      "C) M tipi 2",
+      "D) M tipi 57",
+      "E) M tipi 60"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Streptokokkal farenjit sonrası gelişen akut glomerülonefritte en sık sorumlu nefritojenik serotip M tipi 12'dir. M tipi 49 ise cilt enfeksiyonları (impetigo) sonrası nefritten sorumludur."
+  },
+  {
+    "id": "prac-nefr-004",
+    "deckId": "learn-glomeruler-hastaliklar-nefritik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "slideNumber": 4,
+    "slideTitle": "APSGN Morfolojisi: Diffüz Proliferatif Eksüdatif Glomerülonefrit",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Akut poststreptokokkal glomerülonefrit tanılı bir çocuğun böbrek biyopsisinde ışık mikroskobunda beklenen karakteristik histopatolojik lezyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Glomerüllerin normal izlendiği podosit silinmesi",
+      "B) Diffüz endokapiller proliferasyon ve lökosit infiltrasyonu ile karakterize hiperselülarite",
+      "C) Kapiller duvarda diffüz spike and dome kalınlaşması",
+      "D) Bowman aralığını tamamen dolduran fibröz hilaller",
+      "E) Sadece afferent arteriyolde hyalinozis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "APSGN'nin ışık mikroskobu bulgusu endotel ve mezangiyal proliferasyonun yanı sıra yoğun nötrofil infiltrasyonu içeren diffüz proliferatif (eksüdatif) glomerülonefrittir."
+  },
+  {
     "id": "prac-nefr-005",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
     "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
@@ -1670,233 +1898,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "Sunitinib VEGF reseptör tirozin kinazını bloke ederek tümörün aşırı vaskülarizasyonunu baskılayan hedefe yönelik standart ajandır."
-  },
-  {
-    "id": "prac-tum-021",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Pediyatrik vs Erişkin Böbrek Tümörleri: Karşılaştırmalı Ayrım",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "2 yaşındaki bir çocuğun karnında saptanan kitlenin adrenal kaynaklı Nöroblastom değil, böbrek parankim kaynaklı Wilms Tümörü olduğunu en çok destekleyen bulgu hangisidir?",
-    "options": [
-      "A) İdrarda VMA (vanilmandelik asit) yüksekliği",
-      "B) Kitlenin batında orta hattı geçmemesi ve böbrek parankimini genişletmesi",
-      "C) BT'de kitle içinde yoğun kaba kalsifikasyonlar izlenmesi",
-      "D) Kemik iliğinde rozet oluşturan hücrelerin görülmesi",
-      "E) N-MYC onkogen amplifikasyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Wilms tümörü böbrek parankiminde yuvarlak sınırlı büyür ve orta hattı geçmez; nöroblastom ise orta hattı geçer, kalsifiyedir ve katekolamin (VMA) salgılar."
-  },
-  {
-    "id": "prac-tum-022",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Böbrek Tümörleri Büyük Patoloji Karşılaştırma Matrisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki böbrek tümörü ve hücresel köken eşleştirmelerinden hangisi yanlıştır?",
-    "options": [
-      "A) Berrak hücreli RCC — Proksimal tübül epiteli",
-      "B) Renal onkositoma — Toplayıcı kanal interkale hücreleri",
-      "C) Kromofob RCC — Toplayıcı kanal interkale hücreleri",
-      "D) Wilms tümörü — Metanefrik blastem kalıntıları",
-      "E) Anjiyomiyolipom — Podosit slit diyaframı"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Anjiyomiyolipom podositlerden değil, perivasküler epiteloid mezenkimal hücrelerden (PEComa) kaynaklanır."
-  },
-  {
-    "id": "prac-tum-023",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Böbrek Kitlelerine Klinik ve Radyolojik Tanı Algoritması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "58 yaşındaki bir hastada rastlantısal olarak saptanan 5 cm'lik solid kortikal böbrek kitlesinde kontrastlı BT'de belirgin kontrast tutulumu izleniyor. Metastaz saptanmayan bu hastada standart klinik yaklaşım ne olmalıdır?",
-    "options": [
-      "A) Cerrahi öncesi kesin tanı için böbrek iğne biyopsisi yapmak",
-      "B) Biyopsi yapmadan doğrudan cerrahi rezeksiyon (nefrektomi) planlamak",
-      "C) 6 ay sonra ultrasonla takip etmek",
-      "D) Sistemik kemoterapi başlamak",
-      "E) Yüksek doz radyoterapi uygulamak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Rezektabl solid renal kitlelerde tümör ekimi riski ve cerrahi endikasyonun net olması nedeniyle ameliyat öncesi iğne biyopsisi yapılmaz, doğrudan nefrektomiye gidilir."
-  },
-  {
-    "id": "prac-tum-024",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 24,
-    "slideTitle": "Ders 26 Kapsamlı Sentezi: Böbrek Tümörleri Patolojisinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki böbrek tümörü ve genetik mekanizma eşleştirmelerinden hangisi yanlıştır?",
-    "options": [
-      "A) Berrak hücreli RCC — Kromozom 3p delesyonu ve VHL inaktivasyonu",
-      "B) Papiller RCC — Trizomi 7, trizomi 17 ve MET protoonkogen aktivasyonu",
-      "C) Wilms tümörü — Kromozom 11p13 (WT1) ve 11p15 (WT2)",
-      "D) Anjiyomiyolipom — TSC1 ve TSC2 mutasyonları",
-      "E) Kromofob RCC — Kromozom 3p delesyonu ve VHL aşırı ifadesi"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Kromozom 3p delesyonu ve VHL inaktivasyonu Berrak Hücreli RCC'ye özgüdür. Kromofob RCC'de VHL mutasyonu bulunmaz; yaygın kromozom kayıpları (hipodiploidi) görülür."
-  },
-  {
-    "id": "prac-mes-001",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Alt İdrar Yolu ve Ürotelyum Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Üriner sistem toplayıcı boşluklarını (renal pelvis, üreter, mesane) döşeyen ürotelyumun lümen yüzeyinde yer alan ve idrar bileşenlerinin dokuya sızmasını engelleyen en yüzeyel hücre tabakası hangisidir?",
-    "options": [
-      "A) Podositler",
-      "B) Şemsiye hücreleri (Umbrella cells)",
-      "C) İnterkale hücreler",
-      "D) Juxtaglomerüler hücreler",
-      "E) Von Hansemann histiyositleri"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ürotelyumun en üst katmanında yer alan şemsiye hücreleri üroplakin plakları sayesinde geçirimsiz osmolar bariyeri oluşturur."
-  },
-  {
-    "id": "prac-mes-002",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Üreter Bozuklukları: UPJ Tıkanıklığı ve Retroperitoneal Fibrozis",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bebeklik ve erken çocukluk döneminde konjenital hidronefrozun açık ara en sık görülen anatomik nedeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Posterior üretral valv",
-      "B) Üreteropelvik bileşke (UPJ) darlığı / obstrüksiyonu",
-      "C) Retroperitoneal fibrozis",
-      "D) Üreterosel",
-      "E) Mesane ekstrofisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Üreteropelvik bileşke (UPJ) obstrüksiyonu çocuklarda konjenital hidronefrozun en sık nedenidir."
-  },
-  {
-    "id": "prac-mes-003",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Mesane Divertikülleri: Patogenez ve Kanser Yayılım Riski",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Mesane divertikülü içerisinde gelişen bir ürotelyal karsinomun standart mesane duvarında gelişen tümörlere kıyasla çok daha hızlı perivezikal yayılım göstermesinin ve evre atlamasının temel anatomik nedeni nedir?",
-    "options": [
-      "A) Divertikül epitelinin şemsiye hücrelerinden yoksun olması",
-      "B) Divertikül duvarında muskularis propria (kalın detrisör kas tabakası) bulunmaması",
-      "C) Divertikül içinde kan akımının olmaması",
-      "D) Divertikül mukozasının keratinize olması",
-      "E) Divertikülün sadece böbrek kutbunda yerleşmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Edinsel psödodivertikül duvarı sadece mukoza ve lamina propriadan ibarettir; muskularis propria bulunmadığı için tümörler doğrudan perivezikal dokuya (T3) invaze olur."
-  },
-  {
-    "id": "prac-mes-004",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Sistit Patolojisi: Akut Bakteriyel Sistit ve Sık Etkenler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "22 yaşındaki yeni evli bir kadında dizüri ve sık idrara çıkma şikayetleri ile yapılan idrar kültüründe koagülaz negatif, novobiyosine dirençli Gram-pozitif kok ürüyor. En olası etken hangisidir?",
-    "options": [
-      "A) Staphylococcus aureus",
-      "B) Staphylococcus epidermidis",
-      "C) Staphylococcus saprophyticus",
-      "D) Streptococcus agalactiae",
-      "E) Enterococcus faecalis"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Genç kadınlarda akut sistite yol açan koagülaz negatif ve novobiyosine dirençli stafilokok Staphylococcus saprophyticus'tur (balayı sistiti)."
-  },
-  {
-    "id": "prac-mes-005",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Özel Sistit Tipleri: Hemorajik, İnterstisyel (Hunner Ülseri) ve Eozinofilik",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Lenfoma nedeniyle siklofosfamid kemoterapisi alan bir hastada masif ağrılı hematüri gelişiyor. Bu toksik hemorajik sistit tablosundan sorumlu idrar metaboliti ve önleyici ajan hangisidir?",
-    "options": [
-      "A) Ürik asit — Allopurinol",
-      "B) Akrolein — MESNA",
-      "C) Hidroksiüre — Folinik asit",
-      "D) Siklosporin — Kortikosteroid",
-      "E) Metotreksat — N-asetilsistein"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Siklofosfamidin mesane toksisitesinden sorumlu metaboliti Akroleindir; idrarda akroleini bağlayarak hemorajik sistiti önleyen ajan MESNA'dır."
-  },
-  {
-    "id": "prac-mes-006",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Kronik İrritasyon, Metaplazi ve Schistosoma haematobium",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Nil nehri havzasında yaşayan ve kronik idrar yolu enfeksiyonu öyküsü olan bir hastanın mesane biyopsisinde lamina propriada kalsifiye parazit yumurtaları ve yaygın keratinize skuamöz metaplazi izleniyor. Bu hastada gelişme riski en yüksek olan mesane malignitesi hangisidir?",
-    "options": [
-      "A) Papiller ürotelyal karsinom",
-      "B) Skuamöz hücreli karsinom (SCC)",
-      "C) Mesane adenokarsinomu",
-      "D) Küçük hücreli nöroendokrin karsinom",
-      "E) Rabdomiyosarkom"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Schistosoma haematobium enfeksiyonu mesanede kronik skuamöz metaplazi oluşturarak baskın olarak Skuamöz Hücreli Karsinom gelişimine yol açar."
-  },
-  {
-    "id": "prac-mes-007",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Mesane Tümörlerine Giriş ve Saha Kanseri (Field Cancerization) Kavramı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Boya ve kauçuk fabrikasında 25 yıl çalışan bir işçide mesane kanseri saptanıyor. Bu endüstriyel mesleki maruziyette ürotelyal karsinojenezden sorumlu temel kimyasal karsinojen grubu hangisidir?",
-    "options": [
-      "A) Asbest lifleri",
-      "B) Aromatik aminler / Arilaminler (2-naftilamin, benzidin)",
-      "C) Alkol türevleri",
-      "D) Polisistein bileşikleri",
-      "E) Ağır cıva tuzları"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Boya, kauçuk ve tekstil sanayiinde kullanılan aromatik aminler (arilaminler, özellikle 2-naftilamin) mesane karsinogenezinde klasik mesleki etkendir."
-  },
-  {
-    "id": "prac-mes-008",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Ürotelyal Karsinomda İki Ayrı Genetik ve Morfolojik Yol",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Mesane karsinomunda düşük dereceli, non-invaziv papiller ürotelyal tümörlerin gelişiminde en sık mutasyona uğrayan onkogen aşağıdakilerden hangisidir?",
-    "options": [
-      "A) TP53",
-      "B) FGFR3",
-      "C) RB1",
-      "D) VHL",
-      "E) MET"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Düşük dereceli papiller ürotelyal neoplazmların yaklaşık %70'inde FGFR3 geninde aktive edici mutasyonlar saptanır."
   }
 ]
