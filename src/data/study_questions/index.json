@@ -1,5 +1,5 @@
 {
-  "totalQuestions": 1108,
+  "totalQuestions": 1112,
   "totalChunks": 12,
   "updatedAt": "2026-10-03",
   "description": "Öğren sayfasındaki ders içeriklerinden üretilmiş özgün çalışma ve pekiştirme soruları veritabanı (çıkmış sorulardan bağımsızdır).",
@@ -20,7 +20,7 @@
         "Üroloji / Tıbbi Biyokimya & Patoloji",
         "Üroloji / Enfeksiyon Hastalıkları",
         "Tıbbi Patoloji",
-        "Tıp"
+        "Halk Sağlığı"
       ]
     },
     {
@@ -36,10 +36,9 @@
         "learn-hucre-hasari-hucre-olumu"
       ],
       "disciplines": [
-        "Tıp",
-        "Tıbbi Genetik",
-        "Enfeksiyon Hastalıkları",
         "Halk Sağlığı",
+        "Enfeksiyon Hastalıkları",
+        "Tıbbi Genetik",
         "Tıbbi Patoloji"
       ]
     },
@@ -91,8 +90,8 @@
       ],
       "disciplines": [
         "Tıbbi Patoloji",
-        "Enfeksiyon Hastalıkları",
-        "Tıp"
+        "Tıp",
+        "Tıbbi Genetik"
       ]
     },
     {
@@ -107,6 +106,7 @@
         "learn-bobrek-tumorleri"
       ],
       "disciplines": [
+        "Tıp",
         "Tıbbi Patoloji"
       ]
     },
@@ -122,6 +122,7 @@
         "learn-asiri-duyarlilik-ve-otoimmunite"
       ],
       "disciplines": [
+        "Tıp",
         "Tıbbi Patoloji"
       ]
     },
@@ -130,15 +131,14 @@
       "filename": "chunk_8.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-asiri-duyarlilik-ve-otoimmunite",
         "learn-genetik-pediatrik-cevresel-patoloji",
         "learn-tromboz-patofizyolojisi-tam",
         "learn-iskemi-infarktus-ve-sok",
-        "learn-kronik-ve-granulamatoz-enflamasyon",
-        "learn-karsinojenezin-molekuler-temeli"
+        "learn-kronik-ve-granulamatoz-enflamasyon"
       ],
       "disciplines": [
-        "Tıbbi Patoloji",
-        "Tıp"
+        "Tıbbi Patoloji"
       ]
     },
     {
@@ -153,8 +153,7 @@
         "learn-sistemik-hastaliklar-bobrek-hasari"
       ],
       "disciplines": [
-        "Tıbbi Patoloji",
-        "Tıp"
+        "Tıbbi Patoloji"
       ]
     },
     {
@@ -196,7 +195,7 @@
     {
       "chunkId": "chunk_12",
       "filename": "chunk_12.json",
-      "questionCount": 8,
+      "questionCount": 12,
       "decksCovered": [
         "learn-donem3-kurul1-mufredat-rehberi"
       ],

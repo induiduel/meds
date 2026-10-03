@@ -1,5 +1,81 @@
 [
   {
+    "id": "prac-hs-21",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Transplantasyon İmmünolojisi ve Organ Reddi Tipleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Böbrek naklinden 3 hafta sonra serum kreatinini yükselen hastanın allogreft biyopsisinde kortikal tübül epiteli arasına CD8+ T lenfositlerinin sızdığı (tubulit) ve renal arteriyol intima tabakasında lenfositik enflamasyon (endotelit) izleniyor. Bu hastadaki rejeksiyon tipi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hiperakut rejeksiyon",
+      "B) Akut hücresel (T hücre-aracılı) rejeksiyon",
+      "C) Kronik intimal sklerozan rejeksiyon",
+      "D) Graft-versus-Host hastalığı",
+      "E) İlaç toksisitesine bağlı tübüler nekroz"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Nakilden haftalar sonra gelişen, interstisyel lenfosit infiltrasyonu, tübül epiteli arasına lenfosit sızması (tubulit) ve arteriyel intimal infiltrasyon (endotelit) Akut Hücresel Rejeksiyonun tanısal bulgularıdır."
+  },
+  {
+    "id": "prac-hs-22",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Kök Hücre Nakli ve Graft-versus-Host Hastalığı (GVHD)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Akut miyeloid lösemi nedeniyle allojeneik kemik iliği nakli yapılan 35 yaşındaki erkek hastada, nakilden 25 gün sonra avuç içlerinden başlayan yaygın döküntü, hiperbilirubinemi (sarılık) ve günde 2 litreye varan sulu-kanlı ishal gelişiyor. Kolon biyopsisinde kript epitel hücrelerinde yaygın apoptoz izleniyor. Bu klinik tablonun primer sorumlusu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Alıcının B lenfositlerince üretilen donör karşıtı antikorlar",
+      "B) Donör kök hücre greftindeki alloreaktif T lenfositleri",
+      "C) Sitomegalovirüs (CMV) süperenfeksiyonu",
+      "D) Yüksek doz kemoterapinin doğrudan mukozal toksisitesi",
+      "E) Mast hücrelerinin ani sistemik degranülasyonu"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kemik iliği naklinden sonra cilt döküntüsü, kolestatik sarılık ve kanlı ishal ile seyreden tablo Akut GVHD'dir. Donör grefti içindeki olgun T lenfositlerinin alıcının HLA antijenlerine saldırması sonucu gelişir."
+  },
+  {
+    "id": "prac-hs-23",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Primer ve Sekonder İmmün Yetmezlikler: SCID, Bruton, DiGeorge ve HIV",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Doğumdan sonra göbek kordonu 4. haftada düşen, tekrarlayan nekrotizan deri enfeksiyonları geçiren bir bebekte kanda aşırı nötrofili (55.000/μL) saptanmasına rağmen, deri enfeksiyon alanında hiç püy (cerahat) oluşmadığı görülüyor. Bu hastadaki moleküler defekt aşağıdakilerden hangisidir?",
+    "options": [
+      "A) NADPH oksidaz enzim eksikliği",
+      "B) CD18 (beta-2 integrin) lökosit adhezyon molekül eksikliği",
+      "C) Bruton tirozin kinaz mutasyonu",
+      "D) Adenozin deaminaz (ADA) enzim yokluğu",
+      "E) CD40 ligand (CD154) eksikliği"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Göbek kordonunun geç düşmesi, belirgin kanda lökositoz olmasına rağmen enfeksiyon bölgesine lökositlerin geçememesi ve püy oluşmaması Lökosit Adhezyon Defekti Tip 1 (LAD-1; CD18 integrin eksikliği) için patognomoniktir."
+  },
+  {
+    "id": "prac-hs-24",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Amiloidoz: Fibril Biyolojisi, Tipleri ve Klinikopatoloji",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "15 yıldır Ailevi Akdeniz Ateşi (FMF) nedeniyle takip edilen ve ataklarını düzensiz geçiren 38 yaşındaki hastada pretibial ödem ve 6 g/gün proteinüri ile nefrotik sendrom gelişiyor. Yapılan böbrek biyopsisinde glomerüllerde biriken maddenin Kongo kırmızısı ile elma yeşili çift kırılma verdiği saptanıyor. Bu hastada biriken amiloidin öncül proteini aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İmmünoglobulin lambda hafif zinciri",
+      "B) Transtiretin",
+      "C) Serum Amiloid A (SAA)",
+      "D) Beta-2 mikroglobulin",
+      "E) Amiloid Prekürsör Protein (APP)"
+    ],
+    "correctAnswer": "C",
+    "explanation": "FMF, Romatoid Artrit veya kronik osteomiyelit gibi uzun süren kronik enflamatuar durumlarda gelişen sekonder amiloidoz AA tipindedir ve karaciğerden salınan Serum Amiloid A (SAA) proteininin birikmesiyle oluşur."
+  },
+  {
     "id": "prac-gp-01",
     "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
     "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
@@ -1373,7 +1449,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 1,
     "slideTitle": "Kronik Enflamasyonun Tanımı ve Patolojik Triadı",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kronik enflamasyonun histopatolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi temel tanısal triadı en doğru şekilde özetler?",
     "options": [
@@ -1392,7 +1468,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 2,
     "slideTitle": "Akut ve Kronik Enflamasyonun Karşılaştırmalı Patolojisi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Aşağıdakilerden hangisi kronik enflamasyonu akut enflamasyondan ayıran temel histopatolojik özelliklerden biridir?",
     "options": [
@@ -1411,7 +1487,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 3,
     "slideTitle": "Kronik Enflamasyonun Etiyolojik Sınıflandırması",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kronik enflamasyonun etiyolojisi düşünüldüğünde, aşağıdakilerden hangisi 'endojen toksik partikül birikimine bağlı gelişen kronik enflamasyon' sürecine en uygun örnektir?",
     "options": [
@@ -1430,7 +1506,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 4,
     "slideTitle": "Mononükleer Fagositik Sistem ve Makrofaj Biyogenezi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mononükleer fagositik sistem ve monosit-makrofaj göçü ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
@@ -1449,7 +1525,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 5,
     "slideTitle": "Dokularda Yerleşik Makrofaj Popülasyonları",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mononükleer fagositik sistem elemanları ve bulundukları doku eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
@@ -1468,7 +1544,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 6,
     "slideTitle": "Makrofaj Aktivasyonunda M1 (Klasik) Yolak",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Klasik yolakla aktive olmuş (M1) bir makrofajın mikrobisidal yanıtı ve biyolojik özellikleri ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1487,7 +1563,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 7,
     "slideTitle": "Makrofaj Aktivasyonunda M2 (Alternatif) Yolak",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Alternatif yolakla aktive olmuş (M2) makrofajların biyolojik fonksiyonları ve salgıladıkları mediyatörlerle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
     "options": [
@@ -1506,7 +1582,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 8,
     "slideTitle": "M1 ve M2 Fenotipik Spektrumu ve Plastisite",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Makrofaj plastisitesi ve M1/M2 denge bozuklukları dikkate alındığında, aşırı ve kontrolsüz M2 aktivasyonunun en olası patolojik sonucu aşağıdakilerden hangisidir?",
     "options": [
@@ -1525,7 +1601,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 9,
     "slideTitle": "T Lenfosit Alt Tipleri ve Polarizasyon",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "CD4+ T yardımcı lenfosit alt grupları, salgıladıkları anahtar sitokinler ve fonksiyonları ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1544,7 +1620,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 10,
     "slideTitle": "Makrofaj-Lenfosit İki Yönlü Kısır Döngüsü",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kronik enflamasyonda makrofaj ve T lenfositler arasında kurulan iki yönlü etkileşim döngüsüyle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1563,7 +1639,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 11,
     "slideTitle": "Plazma Hücreleri ve B Lenfosit İnfiltrasyonu",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kronik enflamasyonlu bir doku biyopsisinde; eksantrik yerleşimli 'araba tekerleği' kromatinli nükleusu, perinükleer soluk zonu ve sitoplazmasında immünglobulin birikimine bağlı eozinofilik Russell cisimcikleri bulunan hücre aşağıdakilerden hangisidir?",
     "options": [
@@ -1582,7 +1658,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 12,
     "slideTitle": "Eozinofiller ve Kronik Enflamasyon",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Helmint enfeksiyonu veya kronik alerjik enflamasyon alanında bol miktarda bulunan, parazit kütikulasını zedeleyen fakat konak epitelinde de nekroza yol açan Major Basic Protein (MBP) içeren hücre aşağıdakilerden hangisidir?",
     "options": [
@@ -1601,7 +1677,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 13,
     "slideTitle": "Mast Hücreleri ve Kronikleşmede Rol Oynayan Nötrofiller",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Aşağıdaki klinik-patolojik durumlardan hangisinde, tablonun kronik seyirli olmasına rağmen histopatolojik incelemede bol miktarda aktif nötrofil lökosit infiltrasyonu görülmesi en tipiktir?",
     "options": [
@@ -1620,7 +1696,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 14,
     "slideTitle": "Granülomatöz Enflamasyonun Tanımı ve Patogenezi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "İmmün granülom gelişiminde makrofajların epiteloid histiyositlere dönüşümünü indükleyen ve granülom mimarisini başlatan en kritik T lenfosit kaynaklı sitokin aşağıdakilerden hangisidir?",
     "options": [
@@ -1639,7 +1715,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 15,
     "slideTitle": "Epiteloid Histiyositlerin Biyolojisi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Granülomatöz lezyonların merkezini oluşturan epiteloid histiyositlerin sitomorfolojik ve fonksiyonel özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1658,7 +1734,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 16,
     "slideTitle": "Çok Çekirdekli Dev Hücrelerin Oluşumu",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Granülomatöz enflamasyon odağında saptanan çok çekirdekli dev hücrelerin biyogenezi ve özellikleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
@@ -1677,7 +1753,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 17,
     "slideTitle": "Dev Hücre Tipleri ve Morfolojik Ayrımı",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Deri lezyonu biyopsisinde; merkezde nükleusların oluşturduğu bir çember ve bu çemberin periferinde lipid vakuolleri nedeniyle soluk-berrak görünen sitoplazma halkası içeren çok çekirdekli dev hücre aşağıdakilerden hangisidir?",
     "options": [
@@ -1696,7 +1772,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 18,
     "slideTitle": "Kazeifiye vs Non-Kazeifiye Granülom Ayrımı",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Aşağıdaki hastalıklardan hangisinin karakteristik histopatolojik lezyonu 'santral kazeifikasyon nekrozu içeren kazeifiye granülom' tablosudur?",
     "options": [
@@ -1715,7 +1791,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 19,
     "slideTitle": "Tüberküloz Granülomu (Tüberkül)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Primer pulmoner tüberküloz patolojisinde; akciğer parankiminde subplevral yerleşimli kazeifiye granülom odağı ile buna eşlik eden kazeifiye hiler lenfadenopatinin oluşturduğu anatomik lezyon kompleksi aşağıdakilerden hangisidir?",
     "options": [
@@ -1734,7 +1810,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 20,
     "slideTitle": "Treponema pallidum ve Sifilitik Gom (Gumma)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Karaciğerde kitle lezyonu nedeniyle opere edilen hastanın biyopsisinde; santralde lastik kıvamlı nekroz, çevresinde bol miktarda plazma hücresi infiltrasyonu ve küçük arterlerde endarteritis obliterans saptanmıştır. Bu tablo için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
@@ -1753,7 +1829,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 21,
     "slideTitle": "Kedi Tırmığı Hastalığı ve Nekrotizan Granülomlar",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Genç bir hastanın kolunda kedi tırmalaması sonrası gelişen aksiller lenfadenopati biyopsisinde; merkezinde nötrofil lökosit birikimi içeren mikroapseler ve çevresinde epiteloid histiyositlerden oluşan yıldızsı (stellat) nekrotizan granülomlar izlenmiştir. En olası etken mikroorganizma aşağıdakilerden hangisidir?",
     "options": [
@@ -1772,7 +1848,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 22,
     "slideTitle": "Non-Kazeifiye Granülomların Baş Tacı: Sarkoidoz",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Genç kadın hastada akciğer grafisinde bilateral hiler lenfadenopati saptanıyor. Transbronşiyal akciğer biyopsisinde santral nekroz içermeyen, çevresinde belirgin lenfosit halkası bulunmayan (çıplak granülom), dev hücrelerinde Schaumann ve asteroid cisimcikleri içeren granülomlar görülüyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
@@ -1791,7 +1867,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 23,
     "slideTitle": "Gastrointestinal Granülomlar ve Crohn Hastalığı",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kronik ishal ve karın ağrısı olan hastanın terminal ileum rezeksiyon materyalinde; atlamalı (skip) lezyonlar, bağırsak duvarının tüm katlarını tutan transmural mononükleer infiltrasyon, fissür tarzı derin ülserler ve submukozada non-kazeifiye granülomlar izleniyor. Bu hasta için en olası patolojik tanı nedir?",
     "options": [
@@ -1810,7 +1886,7 @@
     "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
     "slideNumber": 24,
     "slideTitle": "Yabancı Cisim Granülomları ve Kronik Enflamasyonun Sistemik Sonuçları",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Yıllardır kronik granülomatöz tüberküloz veya romatoid artrit tanısıyla takip edilen bir hastada masif proteinüri ve böbrek yetmezliği gelişiyor. Böbrek biyopsisinde glomerüllerde amorf birikim saptanıyor. Bu sistemik tablonun patogenezinde rol oynayan temel protein prekürsörü aşağıdakilerden hangisidir?",
     "options": [
@@ -1822,81 +1898,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "C seçeneği doğrudur. Kronik enflamatuvar ve granülomatöz hastalıklarda (tüberküloz, romatoid artrit, bronşektazi vb.) makrofaj ve lökosit kaynaklı sitokinlerin (IL-6, IL-1, TNF) karaciğeri uyarması sonucu üretilen Serum Amiloid A (SAA) proteini artar ve dokularda Sekonder Sistemik (AA) Amiloidozis şeklinde çökerek organ yetmezliğine yol açar."
-  },
-  {
-    "id": "km-pq-1",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 1,
-    "slideTitle": "Moleküler Karsinojenezin Temel İlkeleri: Non-Lethal Genetik Hasar ve Monoklonal Başlangıç",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign bir neoplazmın moleküler patogenezinde yer alan klonalite, mutasyon türleri ve karsinojenez ilkeleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
-    "options": [
-      "A) Malign transformasyonu başlatan genetik hasar hücreyi derhal nekroza götüren letal bir lezyondur",
-      "B) Tümörler başlangıçtan itibaren poliklonal kökenli olup her bir odak bağımsız hücrelerden türer",
-      "C) Yolcu (passenger) mutasyonlar hücreye doğrudan selektif büyüme avantajı sağlayan ana sürücülerdir",
-      "D) Başlangıçta monoklonal olan tümör, zamanla ek sürücü mutasyonların birikimiyle klonal heterojenite kazanır",
-      "E) Klonal heterojenite geliştikçe tümör hücrelerinin kemoterapiye duyarlılığı artar ve tedavi kolaylaşır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Kanser tek bir transforme hücreden monoklonal olarak başlar; ancak zaman içinde genomik instabilite ve ek sürücü/yolcu mutasyonların birikmesiyle genetik açıdan farklı alt klonlar (tümör heterojenitesi) gelişir.\n\nA yanlıştır; hasar öldürücü olsaydı neoplazi değil nekroz oluşurdu, hasar non-lethal olmalıdır.\nB yanlıştır; tümörler poliklonal değil, monoklonal başlar.\nC yanlıştır; hücreye büyüme avantajı sağlayanlar sürücü (driver) mutasyonlardır, yolcu mutasyonlar nötraldir.\nE yanlıştır; klonal heterojenite geliştikçe dirençli subklonlar seçilir ve tedaviye direnç artar."
-  },
-  {
-    "id": "km-pq-2",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 2,
-    "slideTitle": "Karsinojenezin Üç Temel Evresi: İnisiyasyon, Promosyon ve Progresyon Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Deneysel kimyasal karsinojenez basamakları (inisiyasyon, promosyon, progresyon) incelendiğinde, aşağıdaki senaryolardan hangisinde deney hayvanında MALİGN TÜMÖR GELİŞİMİ BEKLENİR?",
-    "options": [
-      "A) Yalnızca tek doz başlatıcı (inisyatör) karsinojen uygulanıp bırakılması",
-      "B) Yalnızca haftada iki kez olmak üzere uzun süre tekrarlayan dozda promotör uygulanması",
-      "C) Önce haftalarca promotör uygulanması, ardından tek doz başlatıcı karsinojen verilmesi",
-      "D) Tek doz başlatıcı karsinojen uygulandıktan sonra, araları aylar süren çok seyrek promotör maruziyeti",
-      "E) Tek doz başlatıcı karsinojen uygulandıktan sonra, belirli aralıklarla tekrarlayan promotör uygulaması yapılması"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E'dir. Tümör oluşumu için kural: Önce inisyatör ile hücre DNA'sında kalıcı mutasyon oluşturulmalı, ardından promotör belirli sıklıkta ve tekrarlayan dozlarda uygulanarak başlatılmış hücrenin klonal proliferasyonu tetiklenmelidir.\n\nA yanlıştır; tek başına inisyatör tümör kütlesi oluşturmak için yetersizdir.\nB yanlıştır; promotörler mutajenik değildir, tek başlarına tümör başlatamazlar.\nC yanlıştır; promotör inisyatörden önce verilirse hiçbir etki göstermez.\nD yanlıştır; promosyon geri dönüşümlü olduğundan maruziyet aralıkları çok uzatılırsa etki kaybolur."
-  },
-  {
-    "id": "km-pq-3",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 3,
-    "slideTitle": "Kanser Genlerinin Dört Temel Sınıfı ve Genetik Davranış Kuralları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kanser genlerinin sınıfları ve moleküler mekanizmaları göz önüne alındığında, aşağıdaki eşleştirmelerden hangisi BİYOLOJİK ETKİ VE GENETİK KALITIM MEKANİZMASI AÇISINDAN YANLIŞTIR?",
-    "options": [
-      "A) KRAS – Proto-onkogen – İşlev kazanımı (gain-of-function) – Dominant etki",
-      "B) RB1 – Gatekeeper tümör baskılayıcı – İşlev kaybı (loss-of-function) – Hücresel düzeyde resesif etki",
-      "C) MLH1 – DNA uyumsuzluk onarımı (caretaker) – İnaktivasyonu mutatör fenotipe yol açar",
-      "D) BCL2 – Anti-apoptotik gen – Aşırı ekspresyonu apoptoza direnç sağlar",
-      "E) TP53 – Onkogen – Tek bir alelin mutasyonu hücrede tümör baskılayıcı proteini aşırı aktive eder"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E'dir. TP53 bir onkogen değil, genomun koruyucusu olan klasik bir **tümör baskılayıcı (gatekeeper)** gendir. TP53 mutasyonları işlev kaybına (loss-of-function) yol açar ve hücrenin DNA hasarına karşı durmasını veya apoptoza gitmesini engeller. Proteini aşırı aktive etmez, freni bozar.\n\nA doğrudur; KRAS proto-onkogendir, tek alel mutasyonuyla dominant aktive olur.\nB doğrudur; RB1 gatekeeper tümör süpresördür ve iki vuruşla inaktive olur.\nC doğrudur; MLH1 caretaker gendir, kaybı mikrosatellit instabilitesine yol açar.\nD doğrudur; BCL2 anti-apoptotiktir, foliküler lenfomada t(14;18) ile aşırı üretilerek apoptozu bloke eder."
-  },
-  {
-    "id": "km-pq-4",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 4,
-    "slideTitle": "Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer): Hanahan ve Weinberg Çerçevesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hanahan ve Weinberg tarafından belirlenen 'Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer)' kavramına göre, aşağıdakilerden hangisi doğrudan 8 temel biyolojik yetenekten biri olmayıp, bu yeteneklerin kazanılmasını hızlandıran **'olanak sağlayıcı özellik (enabling characteristic)'** grubunda yer alır?",
-    "options": [
-      "A) Sınırsız replikasyon potansiyeli (telomeraz aktivasyonu)",
-      "B) İndüklenen sürekli anjiyogenez (VEGF salgısı)",
-      "C) Hücresel enerji metabolizmasının yeniden programlanması (Warburg etkisi)",
-      "D) Genomik istikrarsızlık ve mutatör fenotip gelişimi",
-      "E) İmmün yıkımdan kaçış (PD-L1 aşırı ekspresyonu)"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Genomik istikrarsızlık (genomic instability) ve tümörü destekleyen enflamasyon (tumor-promoting inflammation), kanserin 8 temel fonksiyonel yeteneğinden biri değil; bu yeteneklerin ortaya çıkmasını kolaylaştıran iki 'olanak sağlayıcı özellik (enabling characteristics)'ten biridir.\n\nA, B, C ve E seçenekleri ise kanserin sekiz temel biyolojik ayırt edici yeteneği (hallmark) arasında yer alır."
   }
 ]

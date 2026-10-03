@@ -1,5 +1,81 @@
 [
   {
+    "id": "km-pq-1",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 1,
+    "slideTitle": "Moleküler Karsinojenezin Temel İlkeleri: Non-Lethal Genetik Hasar ve Monoklonal Başlangıç",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Malign bir neoplazmın moleküler patogenezinde yer alan klonalite, mutasyon türleri ve karsinojenez ilkeleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
+    "options": [
+      "A) Malign transformasyonu başlatan genetik hasar hücreyi derhal nekroza götüren letal bir lezyondur",
+      "B) Tümörler başlangıçtan itibaren poliklonal kökenli olup her bir odak bağımsız hücrelerden türer",
+      "C) Yolcu (passenger) mutasyonlar hücreye doğrudan selektif büyüme avantajı sağlayan ana sürücülerdir",
+      "D) Başlangıçta monoklonal olan tümör, zamanla ek sürücü mutasyonların birikimiyle klonal heterojenite kazanır",
+      "E) Klonal heterojenite geliştikçe tümör hücrelerinin kemoterapiye duyarlılığı artar ve tedavi kolaylaşır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Kanser tek bir transforme hücreden monoklonal olarak başlar; ancak zaman içinde genomik instabilite ve ek sürücü/yolcu mutasyonların birikmesiyle genetik açıdan farklı alt klonlar (tümör heterojenitesi) gelişir.\n\nA yanlıştır; hasar öldürücü olsaydı neoplazi değil nekroz oluşurdu, hasar non-lethal olmalıdır.\nB yanlıştır; tümörler poliklonal değil, monoklonal başlar.\nC yanlıştır; hücreye büyüme avantajı sağlayanlar sürücü (driver) mutasyonlardır, yolcu mutasyonlar nötraldir.\nE yanlıştır; klonal heterojenite geliştikçe dirençli subklonlar seçilir ve tedaviye direnç artar."
+  },
+  {
+    "id": "km-pq-2",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 2,
+    "slideTitle": "Karsinojenezin Üç Temel Evresi: İnisiyasyon, Promosyon ve Progresyon Dinamikleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Deneysel kimyasal karsinojenez basamakları (inisiyasyon, promosyon, progresyon) incelendiğinde, aşağıdaki senaryolardan hangisinde deney hayvanında MALİGN TÜMÖR GELİŞİMİ BEKLENİR?",
+    "options": [
+      "A) Yalnızca tek doz başlatıcı (inisyatör) karsinojen uygulanıp bırakılması",
+      "B) Yalnızca haftada iki kez olmak üzere uzun süre tekrarlayan dozda promotör uygulanması",
+      "C) Önce haftalarca promotör uygulanması, ardından tek doz başlatıcı karsinojen verilmesi",
+      "D) Tek doz başlatıcı karsinojen uygulandıktan sonra, araları aylar süren çok seyrek promotör maruziyeti",
+      "E) Tek doz başlatıcı karsinojen uygulandıktan sonra, belirli aralıklarla tekrarlayan promotör uygulaması yapılması"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Tümör oluşumu için kural: Önce inisyatör ile hücre DNA'sında kalıcı mutasyon oluşturulmalı, ardından promotör belirli sıklıkta ve tekrarlayan dozlarda uygulanarak başlatılmış hücrenin klonal proliferasyonu tetiklenmelidir.\n\nA yanlıştır; tek başına inisyatör tümör kütlesi oluşturmak için yetersizdir.\nB yanlıştır; promotörler mutajenik değildir, tek başlarına tümör başlatamazlar.\nC yanlıştır; promotör inisyatörden önce verilirse hiçbir etki göstermez.\nD yanlıştır; promosyon geri dönüşümlü olduğundan maruziyet aralıkları çok uzatılırsa etki kaybolur."
+  },
+  {
+    "id": "km-pq-3",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 3,
+    "slideTitle": "Kanser Genlerinin Dört Temel Sınıfı ve Genetik Davranış Kuralları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kanser genlerinin sınıfları ve moleküler mekanizmaları göz önüne alındığında, aşağıdaki eşleştirmelerden hangisi BİYOLOJİK ETKİ VE GENETİK KALITIM MEKANİZMASI AÇISINDAN YANLIŞTIR?",
+    "options": [
+      "A) KRAS – Proto-onkogen – İşlev kazanımı (gain-of-function) – Dominant etki",
+      "B) RB1 – Gatekeeper tümör baskılayıcı – İşlev kaybı (loss-of-function) – Hücresel düzeyde resesif etki",
+      "C) MLH1 – DNA uyumsuzluk onarımı (caretaker) – İnaktivasyonu mutatör fenotipe yol açar",
+      "D) BCL2 – Anti-apoptotik gen – Aşırı ekspresyonu apoptoza direnç sağlar",
+      "E) TP53 – Onkogen – Tek bir alelin mutasyonu hücrede tümör baskılayıcı proteini aşırı aktive eder"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. TP53 bir onkogen değil, genomun koruyucusu olan klasik bir **tümör baskılayıcı (gatekeeper)** gendir. TP53 mutasyonları işlev kaybına (loss-of-function) yol açar ve hücrenin DNA hasarına karşı durmasını veya apoptoza gitmesini engeller. Proteini aşırı aktive etmez, freni bozar.\n\nA doğrudur; KRAS proto-onkogendir, tek alel mutasyonuyla dominant aktive olur.\nB doğrudur; RB1 gatekeeper tümör süpresördür ve iki vuruşla inaktive olur.\nC doğrudur; MLH1 caretaker gendir, kaybı mikrosatellit instabilitesine yol açar.\nD doğrudur; BCL2 anti-apoptotiktir, foliküler lenfomada t(14;18) ile aşırı üretilerek apoptozu bloke eder."
+  },
+  {
+    "id": "km-pq-4",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 4,
+    "slideTitle": "Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer): Hanahan ve Weinberg Çerçevesi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hanahan ve Weinberg tarafından belirlenen 'Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer)' kavramına göre, aşağıdakilerden hangisi doğrudan 8 temel biyolojik yetenekten biri olmayıp, bu yeteneklerin kazanılmasını hızlandıran **'olanak sağlayıcı özellik (enabling characteristic)'** grubunda yer alır?",
+    "options": [
+      "A) Sınırsız replikasyon potansiyeli (telomeraz aktivasyonu)",
+      "B) İndüklenen sürekli anjiyogenez (VEGF salgısı)",
+      "C) Hücresel enerji metabolizmasının yeniden programlanması (Warburg etkisi)",
+      "D) Genomik istikrarsızlık ve mutatör fenotip gelişimi",
+      "E) İmmün yıkımdan kaçış (PD-L1 aşırı ekspresyonu)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Genomik istikrarsızlık (genomic instability) ve tümörü destekleyen enflamasyon (tumor-promoting inflammation), kanserin 8 temel fonksiyonel yeteneğinden biri değil; bu yeteneklerin ortaya çıkmasını kolaylaştıran iki 'olanak sağlayıcı özellik (enabling characteristics)'ten biridir.\n\nA, B, C ve E seçenekleri ise kanserin sekiz temel biyolojik ayırt edici yeteneği (hallmark) arasında yer alır."
+  },
+  {
     "id": "km-pq-5",
     "deckId": "learn-karsinojenezin-molekuler-temeli",
     "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
@@ -1297,7 +1373,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 1,
     "slideTitle": "Neoplazmların Konak Üzerindeki Lokal ve Mekanik Etkileri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Tümörlerin konak organizma üzerindeki lokal ve mekanik kitle etkileri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1316,7 +1392,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 2,
     "slideTitle": "Yüzey Ülserasyonu, Kanama ve İmmün Sistem Disfonksiyonu",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Mukozal yüzey yerleşimli neoplazmlarda görülen yüzey ülserasyonu, kronik kanama ve immünite bozuklukları ile ilgili aşağıdaki klinik ve patolojik ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1335,7 +1411,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 3,
     "slideTitle": "Endokrin Fonksiyon Gösteren Tümörler ve Otonom Hormon Sentezi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Endokrin bez neoplazmlarının hormon üretimi ve hormonal hiperfonksiyon sendromları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1354,7 +1430,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 4,
     "slideTitle": "Kanser Kaşeksisinin Patofizyolojisi ve Sitokin Ağı",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "İleri evre kanser hastalarında görülen kanser kaşeksisinin patogenezi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1373,7 +1449,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 5,
     "slideTitle": "Paraneoplastik Sendromlar: Genel İlkeler ve Klinik Önemi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Paraneoplastik sendromların genel ilkeleri ve klinik önemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1392,7 +1468,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 6,
     "slideTitle": "Majör Paraneoplastik Endokrinopatiler: Hiperkalsemi, Cushing ve SIADH",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kanser hastalarında görülen paraneoplastik endokrinopatilerle ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1411,7 +1487,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 7,
     "slideTitle": "Nörolojik, Dermatolojik ve Vasküler Paraneoplastik Sendromlar",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Aşağıdaki paraneoplastik sendrom ve ilişkili klinik/patolojik mekanizma eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
@@ -1430,7 +1506,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 8,
     "slideTitle": "Kanser Derecelendirmesi (Grading): Histopatolojik Diferansiasyon ve Agresiflik",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Malign tümörlerde kanser derecelendirmesi (grading) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1449,7 +1525,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 9,
     "slideTitle": "Kanser Evrelemesi (Staging): Anatomik Yayılım ve Tedavi Seçimindeki Rol",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kanser evrelemesi (staging) ile derecelendirme (grading) arasındaki klinik ve prognostik ilişki hakkında aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
     "options": [
@@ -1468,7 +1544,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 10,
     "slideTitle": "TNM Evreleme Sistemi Mimarisi (AJCC / UICC)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "AJCC / UICC tarafından belirlenen TNM evreleme sistemi mimarisi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1487,7 +1563,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 11,
     "slideTitle": "Klinik Evreleme (cTNM) ile Patolojik Cerrahi Evreleme (pTNM) Karşılaştırması",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Klinik evreleme (cTNM) ile patolojik cerrahi evreleme (pTNM) arasındaki farklar ve evreleme terminolojisi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1506,7 +1582,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 12,
     "slideTitle": "Histopatolojik Biyopsi Yöntemleri ve Doku Takibi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Histopatolojik biyopsi yöntemleri ve doku takibi ilkeleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1525,7 +1601,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 13,
     "slideTitle": "İntraoperatif Konsültasyon (Frozen Section)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "İntraoperatif konsültasyon (frozen section) yöntemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1544,7 +1620,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 14,
     "slideTitle": "Sitolojik Tanı Yöntemleri: Eksfoliyatif Sitoloji ve İnce İğne Aspirasyonu (İİAB)",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Sitolojik tanı yöntemleri (eksfoliyatif sitoloji ve İİAB) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1563,7 +1639,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 15,
     "slideTitle": "İmmünohistokimya (İHK): Prensipler ve Tanısal Strateji",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "İmmünohistokimya (İHK) yöntemi, prensipleri ve boyanma paternleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1582,7 +1658,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 16,
     "slideTitle": "Anaplastik ve Kötü Diferansiye Tümörlerde İHK Köken Paneli",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Işık mikroskobunda hiçbir diferansiasyon göstermeyen 'büyük hücreli indiferansiye/anaplastik malign tümör' olgusunda uygulanan İHK köken paneli ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1601,7 +1677,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 17,
     "slideTitle": "Nöroendokrin ve Vasküler Tümörlerin İmmünohistokimyasal Belirteçleri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Nöroendokrin ve vasküler tümörlerin immünohistokimyasal belirteçleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1620,7 +1696,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 18,
     "slideTitle": "Metastatik Karsinomlarda Primer Odak Tayini İçin İHK Belirteçleri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Bilinmeyen primer odaklı metastatik karsinomlarda primer organ odağını belirlemek için kullanılan İHK belirteçleri ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1639,7 +1715,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 19,
     "slideTitle": "Terapötik ve Prognostik İmmünohistokimyasal Belirteçler",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Meme karsinomunda terapötik ve prognostik İHK belirteçlerinin değerlendirilmesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1658,7 +1734,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 20,
     "slideTitle": "Serum Tümör Belirteçleri: Genel İlkeler, Sınırlamalar ve Doğru Klinik Kullanım",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Serum tümör belirteçlerinin genel özellikleri, biyolojik sınırlamaları ve klinik kullanım alanları ile ilgili aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
     "options": [
@@ -1677,7 +1753,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 21,
     "slideTitle": "Majör Serum Tümör Belirteçleri ve Klinik İlişkileri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Majör serum tümör belirteçleri ve ilişkili oldukları malign neoplazmlar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1696,7 +1772,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 22,
     "slideTitle": "Moleküler Onkoloji ve Genomik Tanı Yöntemleri",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Kanser tanısında kullanılan moleküler onkoloji ve genomik yöntemlerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1715,7 +1791,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 23,
     "slideTitle": "Terapötik Karar Vermede Moleküler Hedefler, Minimal Kalıntı Hastalık ve Sıvı Biyopsi",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Hedefe yönelik tedaviler, minimal kalıntı hastalık ve sıvı biyopsi kavramları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
@@ -1734,7 +1810,7 @@
     "deckTitle": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
     "slideNumber": 24,
     "slideTitle": "Modern Patolojide Entegre Tanı, İmmünoterapi Biyobelirteçleri ve Dijital Patoloji",
-    "discipline": "Tıp",
+    "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "question": "Modern patolojide immünoterapi biyobelirteçleri ve dijital patoloji devrimi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
@@ -1822,81 +1898,5 @@
     ],
     "correctAnswer": 1,
     "explanation": "24 saatlik idrarda 30 ila 300 mg/gün arasında albümin saptanması 'Mikroalbüminüri' olarak tanımlanır. Standart idrar çubukları genellikle 300 mg/L'nin altındaki protein konsantrasyonlarına duyarsız olduğu için negatif sonuç verir. Bu evre nefropatinin uygun tedaviyle geri döndürülebileceği kritik başlangıç (incipient) evresidir."
-  },
-  {
-    "id": "prac-sis-005",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
-    "slideNumber": 5,
-    "slideTitle": "Diyabetik Nefropati Morfolojisi: Glomerüler Bazal Membran Kalınlaşması ve Diffüz Glomerüloskleroz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Diyabetik nefropatili bir hastadan alınan böbrek biyopsisinde elektron mikroskopisi ve ışık mikroskopisi bulguları değerlendirildiğinde; sırasıyla elektron mikroskopisinde saptanan EN ERKEN yapısal değişiklik ve ışık mikroskopisinde EN SIK karşılaşılan lezyon aşağıdakilerin hangisinde doğru verilmiştir?",
-    "options": [
-      "A) Kimmelstiel-Wilson nodülü / Fibrin cap lezyonu",
-      "B) Glomerüler bazal membran diffüz kalınlaşması / Diffüz glomerüloskleroz",
-      "C) Kresent oluşumu / Amiloid birikimi",
-      "D) Podosit sitoplazmasında tel ilmik / Kapsüler damla",
-      "E) Endotelyal fenestra kaybı / Hiperplastik arteriyoloskleroz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Diyabetik nefropatide elektron mikroskobik olarak saptanan EN ERKEN yapısal bulgu glomerüler bazal membran (GBM) diffüz kalınlaşmasıdır. Işık mikroskopisinde en sık görülen lezyon ise mezangiyal matriks artışıyla karakterize diffüz glomerülosklerozdur. (Kimmelstiel-Wilson nodülleri ise en spesifik/patogonomik olanıdır ancak en sık görüleni değildir)."
-  },
-  {
-    "id": "prac-sis-006",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
-    "slideNumber": 6,
-    "slideTitle": "Nodüler Glomerüloskleroz: Kimmelstiel-Wilson Nodülleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Nefrotik sendrom ve ilerleyici böbrek yetmezliği nedeniyle biyopsi yapılan 58 yaşındaki bir hastanın böbrek histopatolojisinde; glomerül lobüllerinin merkezinde yerleşmiş, PAS pozitif boyanan, yuvarlak, hücreden fakir, lameller matriks nodülleri ve nodüllerin periferinde mikroanevrizmatik kılcal dilatasyonlar izlenmiştir. Bu lezyon için en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Amiloidoz amorf depoziti",
-      "B) Fokal segmental glomerüloskleroz skarı",
-      "C) Kimmelstiel-Wilson nodülü (Nodüler glomerüloskleroz)",
-      "D) Kresentik glomerülonefrit hücresel hilali",
-      "E) Membranöz nefropati subepitelyal hörgücü"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Glomerül lobül merkezlerinde yuvarlak, asellüler, lameller ve PAS pozitif nodüller ile periferik kapiller anevrizmaların görülmesi diyabetik nefropatiye patognomonik olan 'Kimmelstiel-Wilson' nodülüdür (Nodüler glomerüloskleroz). Amiloidoz PAS zayıf/negatif olup amorf yapıdadır, lameller değildir."
-  },
-  {
-    "id": "prac-sis-007",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
-    "slideNumber": 7,
-    "slideTitle": "Diyabetik Vasküler ve Eksüdatif Lezyonlar: Efferent Hiyalinoz, Kapsüler Damla ve Fibrin Cap",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek iğne biyopsisinde glomerüllerde Kimmelstiel-Wilson nodüllerinin yanı sıra Bowman kapsülü parietal tabakasında damla şeklinde eozinofilik protein birikimi ve hem afferent hem de efferent arteriyol duvarlarında lümeni daraltan homojen pembe hiyalin kalınlaşma izlenmiştir. Bu biyopside tanımlanan Bowman kapsülü lezyonu ve vasküler tutulum paterni için en doğru eşleştirme hangisidir?",
-    "options": [
-      "A) Fibrin cap / Benign nefroskleroz",
-      "B) Capsular drop (Kapsüler damla) / Diyabetik arteriyoloskleroz",
-      "C) Wire-loop lezyonu / Malign nefroskleroz",
-      "D) Hücresel kresent / Trombotik mikroanjiyopati",
-      "E) Amiloid plağı / PAN tutulumu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bowman kapsülü parietal yaprağında damla şeklinde hiyalin/protein birikimi 'Capsular drop' (Kapsüler damla) lezyonudur. Hem afferent hem de efferent arteriyolün birlikte hiyalin arteriyolosklerozla daralması ise Diabetes Mellitus'a son derece özgü bir vasküler tutulum paternidir (saf esansiyel hipertansiyonda efferent tutulum beklenmez)."
-  },
-  {
-    "id": "prac-sis-008",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
-    "slideNumber": 8,
-    "slideTitle": "Sistemik Lupus Eritematozus (SLE) ve Lupus Nefriti Patogenezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik Lupus Eritematozus (SLE) tanılı 26 yaşındaki bir kadın hastada akut nefritik alevlenme döneminde glomerüler hasarı tetikleyen immünopatolojik aşırı duyarlılık tipi ve serumda beklenen kompleman düzeyi profili aşağıdakilerin hangisinde doğru verilmiştir?",
-    "options": [
-      "A) Tip I aşırı duyarlılık / Yüksek C3, normal C4",
-      "B) Tip II aşırı duyarlılık / Yüksek C1q, normal C3",
-      "C) Tip III aşırı duyarlılık / Düşük C3 ve düşük C4 (Hipokomplemanemi)",
-      "D) Tip IV aşırı duyarlılık / Normal C3 ve yüksek C5",
-      "E) Tip V aşırı duyarlılık / İzole faktör B düşüklüğü"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Lupus nefriti, nükleer antijen-antikor immün komplekslerinin dokuda birikmesi ve komplemanı aktive etmesiyle seyreden klasik bir Tip III aşırı duyarlılık reaksiyonudur. Klasik kompleman yolağının tüketilmesi sonucunda kanda serum C3 ve C4 seviyeleri belirgin derecede düşer (hipokomplemanemi)."
   }
 ]

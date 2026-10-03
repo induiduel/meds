@@ -1,5 +1,81 @@
 [
   {
+    "id": "prac-epi-009",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 9,
+    "slideTitle": "Bulaşma Zinciri (Chain of Infection)",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir bölgede aniden patlak veren su kaynaklı bir tifo salgınında halk sağlığı ekibi derhal şebeke suyunun süperklorlamasını yapmış ve halka kaynatılmış su tüketimi çağrısında bulunmuştur. Bu müdahale enfeksiyon zincirinin hangi bileşenini doğrudan hedef alarak zinciri kırmayı amaçlamaktadır?",
+    "options": [
+      "A) Duyarlı yeni konakçının genetik direncini",
+      "B) Mikroorganizmanın virülans ve antijenik yapısını",
+      "C) Bulaşma yolunu (aracı su şebekesini)",
+      "D) Parazitin eşeyli üreme döngüsünü",
+      "E) Toplumun doğal pasif bağışıklık düzeyini"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Suyun klorlanması ve kaynatılması, etkenin kaynaktan yeni konağa taşınmasını sağlayan bulaşma yolunu (araç) ortadan kaldırarak zinciri kırar."
+  },
+  {
+    "id": "prac-epi-010",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 10,
+    "slideTitle": "Enfeksiyon Etkeninin Kaynaktan Çıkış Yolları",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir enfeksiyon etkeninin toplumda çok kısa sürede binlerce kişiye ulaşarak kitlesel patlamalara (eksplozif salgınlara) yol açabilmesi için, kaynaktan aşağıdaki anatomik yolların hangisiyle çıkması epidemiyolojik olarak EN BÜYÜK avantaja sahiptir?",
+    "options": [
+      "A) Ürogenital mukozal sekresyonlar",
+      "B) Sağlam deriden dökülen keratinize skuamlar",
+      "C) Solunum yolu sekresyonları (aerosol ve damlacıklar)",
+      "D) Derin kas dokusu biyopsi materyali",
+      "E) Gözyaşı bezi sekresyonları"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Solunum yoluyla çıkan patojenler hava hareketleriyle hızla geniş alanlara yayılarak kapalı ortamlardaki tüm duyarlı bireyleri dakikalar içinde enfekte edebilir; en hızlı ve kitlesel yayılım potansiyeline sahiptir."
+  },
+  {
+    "id": "prac-epi-011",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 11,
+    "slideTitle": "Doğrudan Bulaşma Yolları (Direct Transmission)",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir acil serviste meningokok menenjiti ön tanısı alan bir hastanın öksürükle çevreye saçtığı partiküllerin fiziksel özellikleri ve bulaş dinamiği incelenmektedir. Bu hastadan 1 metre mesafede duran bir stajyer doktora bulaşma riski varken, 4 metre uzakta duran ve havalandırma akımında bulunan personele bulaşma riski saptanmamıştır. Bu durum aşağıdaki bulaşma mekanizmalarından hangisiyle açıklanır?",
+    "options": [
+      "A) Damlacık çekirdeği ile hava yolu (airborne) bulaşması",
+      "B) Biyolojik vektörler aracılığıyla inokülasyon",
+      "C) Doğrudan büyük damlacık (droplet) yoluyla yakın temas bulaşması",
+      "D) Fomitler üzerinden endirekt fekal-oral aktarım",
+      "E) Su şebekesi kaynaklı eksplozif araç bulaşması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Büyük damlacıklar (>5 µm) yerçekimi nedeniyle 1-2 metre içinde hızla yere çöker, havada asılı kalıp 4 metreye gidemez. Bu nedenle yakın mesafede doğrudan damlacık bulaşı gerçekleşir."
+  },
+  {
+    "id": "prac-epi-012",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 12,
+    "slideTitle": "Dolaylı Bulaşma: Hava Yolu (Airborne) Dinamikleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Tüberküloz şüphesiyle yatırılan bir hastanın bulunduğu odaya girecek olan sağlık çalışanlarının koruyucu ekipman seçimi ve odanın havalandırma koşulları ile ilgili aşağıdaki ifadelerden hangisi BİLİMSEL OLARAK DOĞRUDUR?",
+    "options": [
+      "A) Tüberküloz damlacık yoluyla bulaştığı için personelin standart cerrahi maske takması ve odanın pozitif basınçlı olması yeterlidir.",
+      "B) Tüberküloz damlacık çekirdekleri (<5 µm) ile hava yoluyla bulaştığından N95/FFP2 partikül tutucu maske takılmalı ve oda negatif basınçlı olmalıdır.",
+      "C) Tüberküloz yalnızca vektörler aracılığıyla bulaştığı için odanın pencerelerine sineklik takılması temel önlemdir.",
+      "D) Tüberküloz etkeni havada 5 saniyeden fazla kalamadığından herhangi bir solunum korumasına gerek yoktur.",
+      "E) Tüberküloz sadece hastanın kanıyla doğrudan temas sonucu bulaşır, hava yoluyla hiçbir ilişkisi yoktur."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. M. tuberculosis <5 µm damlacık çekirdekleri ile havada asılı kalır. Korunmada negatif basınçlı oda (havanın koridora kaçmaması için) ve N95/FFP2 filtreli maske zorunludur."
+  },
+  {
     "id": "prac-epi-013",
     "deckId": "learn-enfeksiyon-epidemiyoloji",
     "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
@@ -2302,81 +2378,5 @@
     ],
     "correctAnswer": 1,
     "explanation": "B seçeneği doğrudur; uzun kemik kırıkları (özellikle femur ve pelvis) sonrasında kemik iliğindeki yağ globüllerinin rüptüre venlere sızmasıyla 24-72 saat içinde Yağ Embolisi Sendromu tablosu gelişir. Klasik klinik triadı: 1) Solunum sıkıntısı (dispne, hipoksemi), 2) Nörolojik semptomlar (ajitasyon, konfüzyon, koma) ve 3) Ciltte trombositopeniye bağlı peteşiyel döküntülerdir (özellikle boyun, aksilla ve konjonktivada). Tromboembolide peteşiyel döküntü beklenmez."
-  },
-  {
-    "id": "prac-k1m-013",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 13,
-    "slideTitle": "Neoplaziye Giriş ve Terminoloji",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki tümör terminolojisi eşleştirmelerinden hangisi, son ekine rağmen biyolojik davranışı açısından kesinlikle MALİGN bir neoplaziyi temsil eder?",
-    "options": [
-      "A) Leiomyom",
-      "B) Fibroadenom",
-      "C) Seminom",
-      "D) Rhabdomyom",
-      "E) Hemanjiom"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; Seminom, testis germ hücrelerinden köken alan ve son eki '-om' ile bitmesine rağmen %100 malign olan bir neoplazidir. Leiomyom düz kasın, fibroadenom memenin, rhabdomyom çizgili kasın, hemanjiom ise damarların benign tümörleridir."
-  },
-  {
-    "id": "prac-k1m-014",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 14,
-    "slideTitle": "Karsinogenezin Moleküler Temelleri, Onkogenler ve Tümör Evrelemesi",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Hücre siklusunun G1/S kontrol noktasında nöbetçi görev yapan, normalde hipofosforile formda bulunarak E2F transkripsiyon faktörünü inaktif tutan, ancak Siklin D / CDK4 kompleksi tarafından fosforillendiğinde E2F'yi serbest bırakarak DNA replikasyonuna izin veren tümör baskılayıcı protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) TP53",
-      "B) Retinoblastom (RB) proteini",
-      "C) BRCA1",
-      "D) APC proteini",
-      "E) PTEN"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; Retinoblastom (RB) geni ürünü olan pRB proteini, hipofosforile iken E2F transkripsiyon faktörüne bağlanarak hücrenin S fazına geçişini engeller. Siklin D-CDK4 tarafından hiperfosforillendiğinde E2F serbest kalır ve siklus ilerler. TP53 ise p21 aracılığıyla CDK'ları inhibe eder."
-  },
-  {
-    "id": "prac-k1m-015",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 15,
-    "slideTitle": "Renal Glomerülopatiler: Nefrotik ve Nefritik Sendrom Patofizyolojisi",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Geçirdiği streptokoksik farenjitten 2 hafta sonra idrar renginde çay rengi koyulaşma, oligüri, yüzde ödem ve hipertansiyon şikayetleriyle başvuran 9 yaşındaki bir erkek çocuğun yapılan böbrek biyopsisinde immünfloresan mikroskopide granüler 'yıldızlı gökyüzü' tarzında IgG ve C3 birikimi saptanıyor. Bu hastanın elektron mikroskopi incelemesinde aşağıdaki bulgulardan hangisinin görülmesi beklenir?",
-    "options": [
-      "A) Podosit ayaksı çıkıntılarında izole silinme dışında hiçbir birikimin olmaması",
-      "B) Subepitelyal yerleşimli hörgüç benzeri (humps) elektron-yoğun birikimler",
-      "C) Glomerüler bazal membran boyunca düzgün kesintisiz lineer IgG depolanması",
-      "D) Mezanjiyumda yaygın amiloid fibril birikimleri",
-      "E) Bazal membran içinde 'diken ve kubbe' (spike and dome) şeklinde gümüşleşme"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; vaka klasik bir Akut Poststreptokoksik Glomerülonefrit (APSGN) tablosudur. APSGN'nin elektron mikroskobundaki karakteristik patognomonik bulgusu epitel hücreleri ile bazal membran arasında kubbeleşen subepitelyal elektron-yoğun hörgüçlerdir (subepithelial humps). A Minimal değişiklik, C Goodpasture (Anti-GBM), E Membranöz nefropati bulgularıdır."
-  },
-  {
-    "id": "prac-k1m-016",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 16,
-    "slideTitle": "Renal Tübülointerstisyel ve Vasküler Patolojiler",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Pnömoni tedavisi amacıyla ampisilin başlanan 48 yaşındaki bir kadın hastada tedavinin 10. gününde ateş, gövdede eritematöz makülopapüler döküntü, serum kreatinin düzeyinde ani yükselme ve periferik kanda belirgin eozinofili saptanıyor. İdrar tetkikinde lökosit silendirleri ve Hansel boyaması ile eozinofilüri tespit ediliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut poststreptokoksik glomerülonefrit",
-      "B) İlaca bağlı akut alerjik interstisyel nefrit",
-      "C) İskemik akut tübüler nekroz",
-      "D) Üropatojen E. coli'ye bağlı akut piyelonefrit",
-      "E) Fokal segmental glomerüloskleroz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; antibiyotik (özellikle sentetik penisilinler, sefalosporinler) veya NSAİİ kullanımı sonrası gelişen ateş, döküntü, akut böbrek yetmezliği, periferik eozinofili ve idrarda eozinofilüri tablosu ilaca bağlı akut alerjik interstisyel nefrit için klasiktir. İlaç kesildiğinde renal fonksiyonlar hızla toparlar."
   }
 ]

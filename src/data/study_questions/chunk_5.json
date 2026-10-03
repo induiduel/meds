@@ -76,393 +76,469 @@
     "explanation": "C seçeneği doğrudur; Tüm Lam Görüntüleme (WSI) ve yapay zekâ araçları telepatoloji konsültasyonunu, Ki-67 sayımını ve tanısal doğruluğu artıran devrimsel teknolojilerdir. A yanlıştır; moleküler veriler akıllı ilaç seçiminin temelidir. B yanlıştır; klinik bilgi olmadan doğru patolojik tanı konulamaz. D yanlıştır; tümör konseylerinin merkezinde patolog yer alır. E yanlıştır; cam preparatlar ve parafin bloklar yasal olarak en az 20-30 yıl arşivde saklanır."
   },
   {
-    "id": "prac-gen-001",
+    "id": "prac-genital-001",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 1,
-    "slideTitle": "Genital Enfeksiyonlara Giriş ve Klinik Sınıflama",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Vajinal Ekosistem, Mikrobiyota Mimarisi ve Doğal Savunma Mekanizmaları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki genital enfeksiyon etkenlerinden hangisi karakteristik olarak genital ülserle değil, pürülan endoservikal ve üretral akıntı ile prezante olur?",
+    "question": "Sağlıklı bir kadında vajinal mikroçevrenin korunması, laktobasil florası ve fizyolojik asidite dinamikleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE MİKROBİYOLOJİK AÇIDAN YANLIŞTIR?",
     "options": [
-      "A) Treponema pallidum",
-      "B) Herpes Simplex Virus Tip 2",
-      "C) Neisseria gonorrhoeae",
-      "D) Haemophilus ducreyi",
-      "E) Klebsiella granulomatis"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Neisseria gonorrhoeae mukopürülan servisit ve üretrit etkenidir; ülseratif lezyon oluşturmaz. Diğer seçenekler genital ülser etkenleridir."
-  },
-  {
-    "id": "prac-gen-002",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 2,
-    "slideTitle": "Genital Ülserlerin Ayırıcı Tanısı: Ağrılı vs Ağrısız Lezyonlar",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Genital bölgesinde son derece ağrılı, yumuşak kenarlı, tabanı nekrotik akıntılı derin ülser ve kasığında fluktuasyon veren süpüratif ağrılı bubo saptanan hastada en olası etken hangisidir?",
-    "options": [
-      "A) Treponema pallidum",
-      "B) Haemophilus ducreyi",
-      "C) Chlamydia trachomatis L2",
-      "D) Klebsiella granulomatis",
-      "E) Human Papilloma Virus"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Son derece ağrılı yumuşak ülser ve süpüratif lenfadenit (bubo) Haemophilus ducreyi'nin yol açtığı Şankroid (yumuşak şankr) tablosudur."
-  },
-  {
-    "id": "prac-gen-003",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 3,
-    "slideTitle": "Normal Vajinal Ekosistem ve Laktobasil Dengesi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Üreme çağındaki sağlıklı bir kadında vajina lümeninin asidik pH'da (3.8-4.5) kalmasını ve patojen bakterilere karşı doğal savunmayı sağlayan temel flora elemanı hangisidir?",
-    "options": [
-      "A) Gardnerella vaginalis",
-      "B) Candida albicans",
-      "C) Lactobacillus türleri (Döderlein basilleri)",
-      "D) Ureaplasma urealyticum",
-      "E) Streptococcus agalactiae"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Vajen epitelindeki glikojenden laktik asit sentezleyerek asidik pH oluşturan temel koruyucu mikroorganizma Laktobasillerdir."
-  },
-  {
-    "id": "prac-gen-004",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 4,
-    "slideTitle": "Vulvovajinal Kandidiyazis: Patogenez, Klinik ve Tedavi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Yoğun vajinal kaşıntı ve beyaz peynir kesiği benzeri kokusuz akıntısı olan bir kadında ölçülen vajinal pH 4.0 (normal) saptanıyor. Nativ preparatta psödohifler görülen bu hastada en olası etken ve tedavi hangisidir?",
-    "options": [
-      "A) Gardnerella vaginalis — Oral Metronidazol",
-      "B) Candida albicans — Tek doz oral Flukonazol",
-      "C) Trichomonas vaginalis — Tek doz Metronidazol",
-      "D) Chlamydia trachomatis — Doksisiklin",
-      "E) Neisseria gonorrhoeae — Seftriakson"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Normal vajinal pH (<4.5), yoğun kaşıntı, peynir kesiği akıntı ve psödohifler Candida albicans enfeksiyonunu gösterir; tedavide oral flukonazol kullanılır."
-  },
-  {
-    "id": "prac-gen-005",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 5,
-    "slideTitle": "Bakteriyel Vajinozis (BV): Patogenez ve Floranın Çöküşü",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Bakteriyel Vajinozis patogenezinde vajinal ekosistemde meydana gelen temel mikrobiyolojik değişiklik aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Laktobasillerin aşırı çoğalarak pH'yı 3.0'a düşürmesi",
-      "B) Hidrojen peroksit üreten Laktobasillerin kaybolması ve Gardnerella vaginalis ile anaerobların aşırı çoğalması",
-      "C) Sadece Candida albicans türlerinin biyofilm yapması",
-      "D) Treponema pallidum spiroketlerinin invazyonu",
-      "E) HSV-2 virüsünün nöral ganglionlara yerleşmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bakteriyel vajinozisin temel patogenetik basamağı hidrojen peroksit üreten laktobasillerin kaybı ve anaerobik bakterilerle Gardnerella vaginalis'in masif artışıdır."
-  },
-  {
-    "id": "prac-gen-006",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 6,
-    "slideTitle": "Bakteriyel Vajinoziste Amsel Kriterleri ve 'İpucu Hücreleri' (Clue Cells)",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Kötü kokulu vajinal akıntısı olan bir kadında vajinal pH 5.2 ölçülüyor; %10 KOH damlatıldığında balık kokusu alınıyor ve mikroskopta sınırları bakterilerce örtülmüş 'Clue Cells' (ipucu hücreleri) izleniyor. Tanı nedir?",
-    "options": [
-      "A) Vulvovajinal kandidiyazis",
-      "B) Bakteriyel vajinozis",
-      "C) Trikomoniyazis",
-      "D) Atrofik vajinit",
-      "E) Gonokokkal servisit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Homojen akıntı, pH >4.5, pozitif Whiff testi ve Clue cells varlığı Bakteriyel Vajinozisin Amsel tanı kriterleridir."
-  },
-  {
-    "id": "prac-gen-007",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 7,
-    "slideTitle": "Bakteriyel Vajinozis: Obstetrik Komplikasyonlar ve Tedavi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Bakteriyel vajinozis tedavisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      "A) Tedavide birinci seçenek oral tek doz flukonazoldür",
-      "B) Tüm olgularda asemptomatik erkek cinsel partnerin de eş zamanlı tedavisi zorunludur",
-      "C) Standart tedavi oral veya topikal Metronidazol ile anaerobların baskılanmasıdır",
-      "D) Gebelikte tedavi verilmesi kesinlikle kontrendikedir",
-      "E) Tedavi sonrasında laktobasillerin çoğalması engellenmelidir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Bakteriyel vajinozisin standart tedavisi oral veya intravajinal Metronidazoldür; rutin partner tedavisi gerekmez."
-  },
-  {
-    "id": "prac-gen-008",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 8,
-    "slideTitle": "Trikomanas Enfeksiyonu (Trichomoniasis): Biyoloji ve Klinik",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Kötü kokulu, sarı-yeşil renkli, bol köpüklü vajinal akıntı ve spekulum muayenesinde servikste yaygın peteşiyel eritematöz odaklar ('çilek serviks') izlenen hastada en olası etken hangisidir?",
-    "options": [
-      "A) Candida albicans",
-      "B) Gardnerella vaginalis",
-      "C) Trichomonas vaginalis",
-      "D) Neisseria gonorrhoeae",
-      "E) Treponema pallidum"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Köpüklü sarı-yeşil akıntı ve servikste 'çilek serviks' (kolpitis makularis) manzarası paraziter bir enfeksiyon olan Trichomonas vaginalis'e özgüdür."
-  },
-  {
-    "id": "prac-gen-009",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 9,
-    "slideTitle": "Trikomoniyazis Tanı ve Tedavisi: Nativ Preparat ve Eş Tedavisi Zorunluluğu",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Vajinal akıntı şikayeti olan bir hastanın taze nativ preparatında kamçıları ile aktif burgu hareketi yapan hareketli mikroorganizmalar saptanıyor. Bu hastanın yönetiminde atlanmaması gereken en kritik basamak hangisidir?",
-    "options": [
-      "A) Hastaya topikal nistatin fitil başlanması",
-      "B) Asemptomatik cinsel partnerin de eş zamanlı olarak oral Metronidazol ile tedavi edilmesi",
-      "C) Hastaya oral doksisiklin tedavisi verilmesi",
-      "D) Hastanın rahmine acil RİA takılması",
-      "E) Sadece vajinal duş önerilmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Trichomonas vaginalis kesin cinsel yolla bulaşan bir patojendir; reenfeksiyonu engellemek için asemptomatik partnerin de mutlaka eş zamanlı tedavi edilmesi şarttır."
-  },
-  {
-    "id": "prac-gen-010",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 10,
-    "slideTitle": "Vajinitlerin Büyük Karşılaştırma Atlası",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki eşleştirmelerden hangisinde vajinal enfeksiyon tipi, vajinal pH ve mikroskobik bulgu doğru olarak verilmiştir?",
-    "options": [
-      "A) Bakteriyel vajinozis — pH <4.5 — Psödohifler",
-      "B) Candida vulvovajiniti — pH <4.5 — Tomurcuklanan maya ve psödohifler",
-      "C) Trichomoniasis — pH <4.0 — Clue cells",
-      "D) Candida vulvovajiniti — pH >5.5 — Hareketli trofozoitler",
-      "E) Bakteriyel vajinozis — pH <4.0 — Bol lökosit silindirleri"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Candida vulvovajinitinde vajinal pH normaldir (<4.5) ve mikroskopta psödohifler ile tomurcuklanan maya hücreleri izlenir."
-  },
-  {
-    "id": "prac-gen-011",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 11,
-    "slideTitle": "Servisit Patolojisi: Mukopürülan Endoservikal Enflamasyon",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Cinsel olarak aktif 24 yaşındaki bir kadında spekulum muayenesinde endoservikal kanaldan mukopürülan sarı akıntı sızdığı ve eküvyonla temas edildiğinde serviksin kolayca kanadığı (servikal frajilite) izleniyor. Bu tabloda öncelikle taranması gereken iki majör etken hangisidir?",
-    "options": [
-      "A) Candida albicans ve Gardnerella vaginalis",
-      "B) Chlamydia trachomatis ve Neisseria gonorrhoeae",
-      "C) Treponema pallidum ve HSV-2",
-      "D) HPV Tip 16 ve Tip 18",
-      "E) E. coli ve Klebsiella pneumoniae"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Mukopürülan servisit ve servikal frajilite tablosunun en sık iki etkeni Chlamydia trachomatis ve Neisseria gonorrhoeae'dir."
-  },
-  {
-    "id": "prac-gen-012",
-    "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
-    "slideNumber": 12,
-    "slideTitle": "Pelvik Enflamatuar Hastalık (PİH): Patogenez ve Asendan Yayılım",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1",
-    "question": "Aşağıdakilerden hangisi Pelvik Enflamatuar Hastalık (PİH) gelişiminde asendan yayılım basamaklarından biri değildir?",
-    "options": [
-      "A) Endometrit",
-      "B) Akut salpenjit",
-      "C) Tuboovaryan abse",
-      "D) Bartolin bezi apsesi",
-      "E) Pelvik peritonit"
+      "A) Overlerden salgılanan östrojen hormonu, vajinal skuamöz epitelde glikojen sentez ve depolanmasını doğrudan uyarır.",
+      "B) Döderlein basilleri glikojeni anaerobik fermantasyonla laktik aside dönüştürerek normal vajinal pH'yı 3.8 - 4.5 aralığında sabitler.",
+      "C) Lactobacillus crispatus ve L. jensenii tarafından üretilen hidrojen peroksit, katalaz aktivitesi bulunmayan zorunlu anaerobları inhibe eder.",
+      "D) Menstrüel kanama ve ejakülasyon sonrası vajina lümenine ulaşan semen, alkali pH değerleri nedeniyle laktobasillerin aktivitesini artırarak vajinal asiditeyi daha da derinleştirir.",
+      "E) Sık uygulanan vajinal duşlar, koruyucu laktobasil biyofilmini mekanik olarak uzaklaştırarak ortam pH'sını yükseltir ve patojen yerleşimini kolaylaştırır."
     ],
     "correctAnswer": 3,
-    "explanation": "Bartolin bezi vulvada yer alan bir dış genital yapıdır; üst genital traktüsün asendan enfeksiyonu (PİH) kapsamında yer almaz."
+    "explanation": "D seçeneğindeki ifade tamamen yanlıştır. Menstrüel kanın pH'sı fizyolojik olarak 7.4, seminal plazmanın pH'sı ise 7.2 - 8.0 arasındadır. Her iki vücut sıvısı da bazik niteliktedir ve vajina lümenine ulaştıklarında laktik asidi nötralize ederek ortamı alkalileştirirler (pH > 4.5). Bu durum laktobasil aktivitesini artırmaz, aksine geçici olarak baskılar ve anaerobik bakterilerin çoğalması için zemin hazırlar. A, B, C ve E seçenekleri ise vajinal biyoloji ve savunma mekanizmalarının temel doğrularıdır."
   },
   {
-    "id": "prac-gen-013",
+    "id": "prac-genital-002",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 2,
+    "slideTitle": "Vajinit ve Vajinozislerde Ayırıcı Tanı Masası ve Klinik Algoritma",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Polikliniğe yoğun vajinal akıntı ve genital rahatsızlık şikayetiyle başvuran üç farklı hastanın klinik ve laboratuvar bulguları aşağıda özetlenmiştir:\n- 1. Hasta: Homojen gri akıntı, vajinal pH 5.2, Whiff testi (+), mikroskopta epitel sınırları silinmiş kokobasil kümeleri.\n- 2. Hasta: Çökelek kıvamında adherent beyaz akıntı, şiddetli kaşıntı, vajinal pH 4.0, Whiff testi (-).\n- 3. Hasta: Bol sarı-yeşil köpüklü akıntı, servikste peteşiyal kanama odakları, vajinal pH 6.0, mikroskopta bol lökosit.\nBu hastaların en olası klinik tanıları sırasıyla hangi seçenekte doğru olarak eşleştirilmiştir?",
+    "options": [
+      "A) Bakteriyel Vajinozis - Vulvovajinal Kandidiyazis - Trikomonas Vajiniti",
+      "B) Vulvovajinal Kandidiyazis - Bakteriyel Vajinozis - Trikomonas Vajiniti",
+      "C) Trikomonas Vajiniti - Bakteriyel Vajinozis - Vulvovajinal Kandidiyazis",
+      "D) Bakteriyel Vajinozis - Trikomonas Vajiniti - Vulvovajinal Kandidiyazis",
+      "E) Fizyolojik Lökore - Vulvovajinal Kandidiyazis - Bakteriyel Vajinozis"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği kesinlikle doğrudur. 1. Hastada pH > 4.5, Whiff pozitifliği ve Clue cell (kokobasil kaplı epitel) varlığı klasik Bakteriyel Vajinozisi tanımlar. 2. Hastada pH'nın 4.0 (normal <= 4.5) olması, Whiff negatifliği, yoğun kaşıntı ve çökelek benzeri akıntı Vulvovajinal Kandidiyazis için patognomoniktir. 3. Hastada ise pH'nın belirgin yüksekliği (6.0), sarı-yeşil köpüklü pürülan akıntı, bol lökosit ve servikal peteşiler ('çilek serviks') Trikomonas vajinitinin tipik klinik tablosudur."
+  },
+  {
+    "id": "prac-genital-003",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 3,
+    "slideTitle": "Bakteriyel Vajinozis (BV): Patogenez, Disbiyozis ve Mikrobiyal Sinerji",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel vajinozisin patogenezi, mikrobiyal biyofilm dinamikleri ve klinik özellikleri ile ilgili aşağıdaki ifadelerden hangisi TIBBİ OLARAK DOĞRUDUR?",
+    "options": [
+      "A) Hastalık tablosuna yoğun polimorfonükleer lökosit infiltrasyonu ve vajen mukozasında yaygın eritematöz ülserasyonlar eşlik eder.",
+      "B) Tipik balık kokusu, anaerobik bakterilerin amino asitleri dekarboksile ederek putresin ve kadaverin gibi uçucu aminleri üretmesi sonucu ortaya çıkar.",
+      "C) Gardnerella vaginalis tek başına monomikrobiyal olarak enfeksiyonu oluşturur; anaerob bakterilerin tabloya katkısı bulunmaz.",
+      "D) Cinsel ilişki sonrasında semenin asidik özelliği sayesinde koku tamamen kaybolur ve hasta rahatlar.",
+      "E) Vajinal biyopsilerde endoservikal glandların nekrotizan granülomatöz tutulumu patognomoniktir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Bakteriyel vajinoziste anaerob bakteriler (Atopobium, Mobiluncus, Prevotella vb.) amino asitleri parçalayarak putresin, kadaverin ve trimetilamin gibi bazik uçucu aminler üretirler; bu aminler karakteristik çürümüş balık kokusundan sorumludur. A yanlıştır çünkü lökosit infiltrasyonu ve mukoza eritemi yoktur. C yanlıştır çünkü hastalık polimikrobiyaldir. D yanlıştır çünkü semen baziktir ve kokuyu şiddetlendirir. E yanlıştır çünkü endoserviks tutulmaz."
+  },
+  {
+    "id": "prac-genital-004",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 4,
+    "slideTitle": "Bakteriyel Vajinozis Tanısında Amsel Kriterleri ve Nugent Skorlaması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel vajinozis şüphesiyle incelenen bir hastada klinik ve mikrobiyolojik tanı yöntemlerinin geçerliliği ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Amsel kriterlerine göre klinik tanı koyabilmek için tanımlanan dört kriterden en az üçünün pozitif bulunması gerekmektedir.",
+      "B) Mikroskop altında incelenen skuamöz epitel hücrelerinin sınırlarının bakterilerce silinmesiyle oluşan 'Clue Cell' oranının en az %20 olması tanısal bir Amsel kriteridir.",
+      "C) Gram boyalı yaymada Laktobasil, Gardnerella ve kıvrık basilli Mobiluncus morfotipini puanlayan Nugent skorlamasında 7-10 puan kesin BV kabul edilir.",
+      "D) Vajinal kültürde Gardnerella vaginalis üremesi, sağlıklı asemptomatik kadınlarda asla görülmediği için kesin tanı koydurucu altın standarttır.",
+      "E) Vajinal sekresyona %10 KOH damlatılmasıyla açığa çıkan balık kokusu (Whiff testi), Amsel kriterleri arasında yer alan temel bulgulardan biridir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneğindeki ifade yanlıştır. Gardnerella vaginalis sağlıklı ve asemptomatik kadınların yaklaşık %30-40'ının normal vajinal florasında düşük sayılarda kommensal olarak bulunabilir. Bu nedenle vajinal kültürde G. vaginalis üremesi tek başına tanı koydurmaz ve altın standart kabul edilmez. Altın standart tanı yöntemi, floradaki disbiyotik morfoloji değişimini kantitatif olarak puanlayan Gram boyamalı 'Nugent Skorlama Sistemi'dir (7-10 puan). A, B, C ve E seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-genital-005",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 5,
+    "slideTitle": "Bakteriyel Vajinozis Tedavi Prensipleri ve Obstetrik-Jinekolojik Komplikasyonlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "24 haftalık gebe bir kadın, tipik balık kokulu gri-beyaz vajinal akıntı yakınmasıyla başvuruyor. Yapılan muayenede vajinal pH 5.3, Whiff testi pozitif ve yaymada %30 Clue cell saptanarak Bakteriyel Vajinozis tanısı kesinleştiriliyor. Bu hastanın klinik yönetimi ve hastalığın olası riskleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Gebelik boyunca fetotoksik riskler nedeniyle bakteriyel vajinozise yönelik hiçbir medikal tedavi verilmemelidir.",
+      "B) Hastalığın nüksünü önlemek amacıyla hastanın asemptomatik erkek cinsel partnerine de eşzamanlı olarak oral metronidazol tedavisi başlanmalıdır.",
+      "C) Tedavi edilmeyen bakteriyel vajinozis; amniyotik zarların litik yıkımı ve prostaglandin salınımı nedeniyle erken membran rüptürü (EMR) ve preterm doğum riskini artırır.",
+      "D) Hastalığın kesin tedavisinde tek başına alkalileştirici vajinal duş uygulamaları yeterli kür sağlar.",
+      "E) Gebelikte ilk tercih edilecek ilaç oral yoldan yüksek doz tek doz flukonazol olmalıdır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle doğrudur. Bakteriyel vajinozis bakterilerinin salgıladığı litik enzimler (sialidaz, musinaz) ve desidual sitokin yanıtı amniyotik zarları zayıflatarak Erken Membran Rüptürü (EMR), Preterm Eylem ve Doğum Sonu Endometrit riskini artırır; bu nedenle semptomatik gebeler tedavi edilmelidir. A yanlıştır çünkü gebelerde metronidazol güvenle kullanılır. B yanlıştır çünkü BV'de heteroseksüel eş tedavisi önerilmez. D yanlıştır çünkü vajinal duş florayı daha da bozar. E yanlıştır çünkü flukonazol antifungaldir ve gebelikte oral kullanımı kontrendikedir."
+  },
+  {
+    "id": "prac-genital-006",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 6,
+    "slideTitle": "Vulvovajinal Kandidiyazis (VVK): Mikoloji, Etiyoloji ve İmmünopatogenez",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Vulvovajinal kandidiyazisin mikrobiyolojik özellikleri, tür dağılımı ve konağa ait predispozan faktörler ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Akut vulvovajinal kandidiyazis ataklarının yaklaşık %85-90'ından Candida albicans sorumludur.",
+      "B) Geniş spektrumlu antibiyotik kullanımı, koruyucu laktobasil popülasyonunu baskılayarak mantarların aşırı çoğalmasına zemin hazırlar.",
+      "C) Tedaviye dirençli ve inatçı rekürren olgularda en sık izole edilen non-albicans tür olan Candida glabrata, standart flukonazol tedavisine sıklıkla dirençlidir.",
+      "D) Gebelikte yükselen östrojen düzeyleri vajinal epitelde glikojen depolanmasını azaltarak mantarların enerji kaynağını tüketir ve kandidiyazis riskini düşürür.",
+      "E) Kontrolsüz diabetes mellitus hastalarında doku glikoz seviyesinin yüksekliği ve nötrofil fagositozunun bozulması kandidiyazis gelişimini kolaylaştırır."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneğindeki ifade tamamen yanlıştır. Gebelikte over ve plasentadan salgılanan yüksek östrojen düzeyleri, vajinal epitelde glikojen depolanmasını azaltmaz; AKSİNE BELİRGİN DERECEDE ARTIRIR. Artan glikojen mantarlar için zengin bir besiyeri sağlar; ayrıca östrojen mantar üzerindeki reseptörlere bağlanarak germ tüpü ve hif oluşumunu uyarır. Dolayısıyla gebelik kandidiyazis riskini düşürmez, tam tersine en önemli risk faktörlerinden biridir. A, B, C ve E seçenekleri mikrobiyolojik açıdan doğrudur."
+  },
+  {
+    "id": "prac-genital-007",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 7,
+    "slideTitle": "Vulvovajinal Kandidiyazis Klinik Tablosu, Tanısal İnceleme ve Normal pH İlkesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "28 yaşında bir kadın hasta, üç gündür devam eden dayanılmaz vulvar kaşıntı, yanma ve idrar yaparken dış genital bölgede sızlama şikayetiyle başvuruyor. Spekulum muayenesinde vajen duvarına yapışık beyaz, süt kesiği kıvamında plaklar ve vulvada belirgin ödem-eritem saptanıyor. Bu hastada tanıyı destekleyecek laboratuvar ve mikroskopi bulguları açısından aşağıdakilerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Vajinal pH ölçümünün 5.8 düzeyinde saptanması ve Whiff testinde yoğun balık kokusu alınması beklenir.",
+      "B) Vajinal pH'nın normal asidik sınırlarda (<= 4.5) olması ve %10 KOH preparatında psödohif ve tomurcuklanan blastosporların görülmesi beklenir.",
+      "C) Serum fizyolojik preparatında skuamöz epitel hücre sınırlarını silen kokobasillerin (%30 Clue cell) izlenmesi beklenir.",
+      "D) Vajinal yaymada epitel hücrelerinden çok daha fazla sayıda hareketli kamçılı mikroorganizmaların saptanması beklenir.",
+      "E) Whiff testi pozitifliği bu hastalığın varlığını kesin olarak belgeleyen altın standart laboratuvar yöntemidir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Hastanın klinik tablosu (şiddetli pruritus vulvae, vulvar eritem-ödem, eksternal dizüri ve kesilmiş süt/çökelek benzeri adheran akıntı) klasik Vulvovajinal Kandidiyazistir. Kandidiyaziste vajinal pH fizyolojik olarak NORMAL KALIR (pH <= 4.5), Whiff testi negatiftir ve %10 KOH damlatılan preparatta epitel hücreleri erirken geriye refraktil psödohifler ile blastosporlar kalır. A seçeneği ve C seçeneği Bakteriyel Vajinozisi, D seçeneği ise Trikomonas vajinitini tarif etmektedir."
+  },
+  {
+    "id": "prac-genital-008",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 8,
+    "slideTitle": "Vulvovajinal Kandidiyaziste Tedavi: Komplike Olmayan vs Rekürren Olgular",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Son bir yıl içerisinde mikolojik kültür ile doğrulanmış 5 kez Candida albicans vajiniti atağı geçiren ve her defasında kısa süreli topikal tedavilerle semptomları geçici olarak düzelip yeniden nükseden 32 yaşındaki gebe olmayan bir kadında en uygun klinik ve farmakolojik yaklaşım aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Cinsel partnerine yüksek doz oral metronidazol tedavisi verilerek kadına herhangi bir tedavi başlanmamalıdır.",
+      "B) Akut remisyon için 1., 4. ve 7. günlerde oral flukonazol (150 mg) verilmeli, ardından 6 ay süreyle haftada bir 150 mg oral flukonazol idame tedavisi uygulanmalıdır.",
+      "C) Hastaya hiçbir antifungal verilmeyip yalnızca günde iki kez alkalileştirici vajinal duş önerilmelidir.",
+      "D) Sistemik geniş spektrumlu ampisilin tedavisi başlanarak vajinal bakteriyel floranın tamamen yok edilmesi hedeflenmelidir.",
+      "E) Yalnızca tek doz 150 mg oral flukonazol verilerek hasta kontrole çağrılmadan taburcu edilmelidir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Yılda 4 veya daha fazla kültürle kanıtlanmış kandidiyazis atağı geçirilmesi 'Rekürren Vulvovajinal Kandidiyazis' (RVVK) olarak tanımlanır. Bu olgularda kısa süreli tedaviler yetersiz kalır. Altın standart yaklaşım: Akut enfeksiyonu kontrol altına almak için oral flukonazol 150 mg'ın 1., 4. ve 7. günlerde (toplam 3 doz) uygulanması, ardından klinik iyileşme sağlanınca nüksleri önlemek amacıyla 6 ay boyunca haftada bir kez 150 mg oral flukonazol ile idame tedavisinin sürdürülmesidir. Eş tedavisi (A), vajinal duş (C) veya antibiyotik (D) tamamen hatalı ve kontrendikedir."
+  },
+  {
+    "id": "prac-genital-009",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 9,
+    "slideTitle": "Trikomanas Vajiniti: Parazitolojik Biyoloji, Cinsel Bulaş ve Virülans",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Trichomonas vaginalis'in hücresel morfolojisi, yaşam döngüsü ve patojenite mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
+    "options": [
+      "A) Parazitin yaşam döngüsünde kalın duvarlı dirençli bir kist formu bulunmaz; yalnızca hareketli trofozoit formu mevcuttur.",
+      "B) Hücrenin ön kutbunda 4 serbest kamçı, gövde boyunca dalgalı zar ve arka kutuptan dışarı uzanan hiyalin bir aksostil yer alır.",
+      "C) Dış ortam koşullarına ve kuruluğa aşırı derecede dirençli kistleri sayesinde enfeksiyon temel olarak klorlu havuz sularından ve kuru havlulardan bulaşır.",
+      "D) Sistein proteinaz enzimleri salgılayarak konak epitel hücrelerinde litik hasar oluşturur ve yoğun polimorfonükleer lökosit infiltrasyonunu tetikler.",
+      "E) Vajinal mukozada oluşturduğu kapiller hasar ve mikronerozlar nedeniyle HIV bulaş riskini anlamlı derecede artırır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle yanlıştır. Trichomonas vaginalis'in kist formu YOKTUR; dış ortamda kuruluğa ve ısıya karşı son derece duyarlıdır. Bu nedenle enfeksiyon havuz sularından veya kuru havlulardan bulaşmaz; bulaşma hemen daima canlı trofozoitlerin doğrudan cinsel temasla transferi sonucu gerçekleşir. A, B, D ve E seçenekleri parazitin morfolojik, biyolojik ve klinik özelliklerini doğru yansıtmaktadır."
+  },
+  {
+    "id": "prac-genital-010",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 10,
+    "slideTitle": "Trikomanas Enfeksiyonunda Klinik Bulgular: Çilek Serviks ve Tanı Yöntemleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "30 yaşında kadın hasta, bir haftadır devam eden bol miktarda, sarı-yeşil renkli, köpüklü ve kötü kokulu vajinal akıntı şikayetiyle başvuruyor. Spekulum muayenesinde vajinal mukozanın ileri derecede hiperemik olduğu ve serviks üzerinde yaygın peteşiyal eritematöz kanama odaklarının ('çilek serviks') bulunduğu gözleniyor. Bu hastanın tanısı ve laboratuvar incelemesi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Hastalığın etkeni Candida glabrata olup vajinal pH fizyolojik sınırlarda (<= 4.5) kalmıştır.",
+      "B) Vajinal pH > 4.5 olup taze serum fizyolojik preparatında yoğun lökositler arasında dönme hareketi yapan kamçılı trofozoitlerin görülmesi tanı koydurucudur.",
+      "C) Tanı için Gram boyamasında skuamöz epitel sınırlarını silen 'Clue Cell' aranması yeterlidir.",
+      "D) Serviksteki lezyonlar primer sifilizin sert şankrını temsil etmekte olup karanlık saha mikroskopisi yapılmalıdır.",
+      "E) Whiff testi bu klinik tabloda istisnasız daima negatif sonuç verir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Sarı-yeşil, köpüklü, kötü kokulu akıntı ve servikste peteşiyal eritem odaklarıyla karakterize 'çilek serviks' (kolpitis makularis) Trichomonas vaginalis enfeksiyonu için patognomoniktir. Trikomoniyaziste vajinal pH yükselir (> 4.5) ve taze ıslak salin preparatında bol PNL lökosit arasında kendi ekseninde dönme/sıçrama hareketi yapan kamçılı trofozoitlerin görülmesiyle klinik tanı kesinleşir. A adayı kandidiyazisi, C adayı bakteriyel vajinozisi, D adayı sifilizi tarif etmektedir."
+  },
+  {
+    "id": "prac-genital-011",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 11,
+    "slideTitle": "Trikomanas Vajiniti Tedavisi, Eş Tedavisinin Zorunluluğu ve Perinatal Riskler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Trichomonas vaginalis enfeksiyonunun farmakolojik tedavisi, partner yönetimi ve ilaç etkileşimleri ile ilgili aşağıdaki ifadelerden hangisi KLİNİK OLARAK YANLIŞTIR?",
+    "options": [
+      "A) Parazit üretra ve paraüretral bezlere de invaze olduğu için tek başına intravajinal topikal tedaviler yetersizdir, mutlaka sistemik tedavi uygulanmalıdır.",
+      "B) 'Ping-pong' tarzı reenfeksiyonları önlemek amacıyla hastanın asemptomatik erkek cinsel partneri de mutlaka eşzamanlı olarak sistemik tedaviye alınmalıdır.",
+      "C) Metronidazol tedavisi alan hastalar, hepatik aldehit dehidrogenaz inhibisyonu sonucu disülfiram benzeri reaksiyon gelişebileceğinden alkol kullanımından kaçınmalıdır.",
+      "D) Bakteriyel vajinoziste olduğu gibi trikomoniyaziste de erkek partnerin tedavi edilmesinin nüks oranları üzerine hiçbir etkisi yoktur, bu nedenle eş tedavisi önerilmez.",
+      "E) Laktasyondaki bir anneye tek doz 2 g metronidazol verildiğinde ilacın süte geçişi nedeniyle 12-24 saat süreyle emzirmeye ara verilmelidir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneğindeki ifade tamamen yanlıştır. Bakteriyel vajinoziste heteroseksüel eş tedavisi rutin olarak önerilmezken; Trichomonas vaginalis enfeksiyonunda cinsel partnerin eşzamanlı tedavisi ZORUNLUDUR! Erkekler asemptomatik taşıyıcıdır ve tedavi edilmezlerse kadın partner ilk ilişkide tekrar enfekte olur ('Ping-Pong Enfeksiyonu'). A, B, C ve E seçeneklerindeki tüm kurallar trikomoniyazis yönetiminin temel farmako-klinik ilkeleridir."
+  },
+  {
+    "id": "prac-genital-012",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 12,
+    "slideTitle": "Genital Ülseratif Hastalıklar Algoritması: Ağrılı ve Ağrısız Lezyonların Ayrımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "26 yaşında erkek hasta, penis gövdesinde yaklaşık 1.5 cm çapında, kenarları deriden kabarık, tabanı temiz granülasyon dokusuyla kaplı ve parmakla tutulduğunda kıkırdak kıvamında sert bir ülser ile başvuruyor. Hasta lezyonun tamamen ağrısız olduğunu belirtiyor. Fizik muayenede her iki kasıkta bilateral, ağrısız, sert ve lastik kıvamında lenf nodları palpe ediliyor. Bu klinik tablo için en olası tanı ve etken mikroorganizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Şankroid - Haemophilus ducreyi",
+      "B) Genital Herpes - Herpes Simplex Virüs Tip 2",
+      "C) Primer Sifiliz (Sert Şankr) - Treponema pallidum",
+      "D) Lenfogranüloma Venerum - Chlamydia trachomatis L1-L3",
+      "E) Granüloma İnguinale - Klebsiella granulomatis"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle doğrudur. Penis gövdesinde tek, ağrısız, kenarları düzgün ve kalkık, tabanı sert ('kıkırdak kıvamında indürasyon') ülser ve bilateral ağrısız lastik kıvamında lenfadenopati Treponema pallidum enfeksiyonunun neden olduğu 'Primer Sifiliz'in (Sert Şankr / Hunterian Şankrı) klasik ve patognomonik tablosudur. Şankroid (A) ve Genital Herpes (B) son derece ağrılı lezyonlardır. LGV (D) primerde geçici küçük papül yapar ve oluk belirtili bubo ile seyreder. Granüloma inguinale (E) ise LAP yapmaz, psödobubo ve kanamalı sığır eti görünümü oluşturur."
+  },
+  {
+    "id": "prac-genital-013",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 13,
-    "slideTitle": "PİH Klinik Tanı Kriterleri: Servikal Hareket Hassasiyeti ('Chandelier Belirtisi')",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Genital Herpes Simplex (HSV) Enfeksiyonları ve Şankroid (Yumuşak Şankr)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Kasık ağrısı ve ateşi olan 22 yaşındaki bir kadında bimanuel jinekolojik muayenede serviksin sağa-sola hareket ettirilmesiyle masif ağrı hissedildiği ('chandelier' belirtisi) ve bilateral adneksiyal hassasiyet olduğu saptanıyor. En olası tanı hangisidir?",
+    "question": "22 yaşında erkek hasta, cinsel temastan 5 gün sonra penis başında aniden beliren, kenarları düzensiz ve altı oyuk, tabanı kirli gri-sarı nekrotik eksüda ile kaplı, parmakla tutulduğunda yumuşak ve son derece ağrılı bir ülser ile başvuruyor. Sol kasıkta yaklaşık 4 cm çapında, aşırı hassas, cildi kızarık ve fluktuasyon veren süpüratif bir lenf nodu kitlesi (bubo) palpe ediliyor. Lezyon eksüdasının Gram boyamasında hücre dışında ve nötrofillerin çevresinde paralel 'balık sürüsü' dizilimi gösteren Gram-negatif kokobasiller saptanıyor. Bu hasta için en olası tanı ve en uygun birinci basamak tedavi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Akut apandisit",
-      "B) Pelvik Enflamatuar Hastalık (PİH)",
-      "C) Over kist rüptürü",
-      "D) Endometriozis",
-      "E) İnterstisyel sistit"
+      "A) Primer Sifiliz - Benzatin Penisilin G 2.4 milyon ünite IM tek doz",
+      "B) Genital Herpes - Oral Valasiklovir 1000 mg günde 2 kez 10 gün",
+      "C) Şankroid - Tek doz Seftriakson 250 mg IM veya tek doz Azitromisin 1 g oral",
+      "D) Lenfogranüloma Venerum - Oral Doksisiklin 100 mg günde 2 kez 21 gün",
+      "E) Granüloma İnguinale - Oral Doksisiklin 100 mg günde 2 kez 14 gün"
     ],
-    "correctAnswer": 1,
-    "explanation": "Servikal hareket hassasiyeti (chandelier belirtisi) ve adneksiyal ağrı Pelvik Enflamatuar Hastalığın (PİH) en karakteristik muayene bulgusudur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle doğrudur. Son derece ağrılı, tabanı pürülan ve nekrotik, yumuşak tabanlı genital ülser; tek taraflı süpüratif fluktuan büyük inguinal lenf nodu (bubo) ve mikroskopta 'balık sürüsü' (school of fish) manzarası oluşturan Gram-negatif kokobasiller Haemophilus ducreyi'nin etken olduğu Şankroid (Yumuşak Şankr) için patognomoniktir. Birinci basamak standart tedavi tek doz Seftriakson (250 mg IM) veya tek doz Azitromisin'dir (1 g oral). Bubo kesinlikle cerrahi olarak kesilmemeli, gerekirse iğneyle drene edilmelidir."
   },
   {
-    "id": "prac-gen-014",
+    "id": "prac-genital-014",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 14,
-    "slideTitle": "Fitz-Hugh-Curtis Sendromu ve PİH'in Uzun Dönem Sekelleri",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Sifiliz (Primer Şankr), Lenfogranüloma Venerum ve Granüloma İnguinale",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Geçirilmiş pelvik enfeksiyon öyküsü olan genç bir kadında sağ üst kadran ağrısı gelişiyor. Laparoskopide karaciğer kapsülü ile karın duvarı arasında ince 'keman teli' (violin-string) tarzında fibröz yapışıklıklar izleniyor. Tanı nedir?",
+    "question": "34 yaşında bir denizci, kasık bölgesinde yavaş büyüyen, tamamen ağrısız, parlak kırmızı kadife görünümünde granülasyon dokusuyla kaplı ('beefy-red') ve hafif bir temasta dahi kolayca kanayan derin ülseratif lezyonlar ile başvuruyor. Fizik muayenede kasıkta ele gelen kitlelerin gerçek lenfadenopati olmadığı, cilt altı granülasyon infiltrasyonuna bağlı 'psödobubo' karakterinde olduğu belirleniyor. Ülser kenarından yapılan doku kazıntısının Giemsa boyamasında büyük makrofajların sitoplazması içinde iki ucu koyu boyanan 'emniyet pimi' görünümünde intraselüler cisimcikler saptanıyor. Bu hasta için en olası tanı ve etken patojen aşağıdakilerden hangisidir?",
     "options": [
-      "A) Budd-Chiari sendromu",
-      "B) Fitz-Hugh-Curtis sendromu",
-      "C) Meigs sendromu",
-      "D) Asherman sendromu",
-      "E) Sheehan sendromu"
+      "A) Şankroid - Haemophilus ducreyi",
+      "B) Primer Sifiliz - Treponema pallidum",
+      "C) Lenfogranüloma Venerum - Chlamydia trachomatis L1-L3",
+      "D) Granüloma İnguinale (Donovanosis) - Klebsiella granulomatis",
+      "E) Genital Herpes - Herpes Simplex Virüs Tip 2"
     ],
-    "correctAnswer": 1,
-    "explanation": "PİH zemininde karaciğer kapsülü ile parietal periton arasında oluşan 'keman teli' yapışıklıkları Fitz-Hugh-Curtis Sendromunun (perihepatit) patognomonik lezyonudur."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği kesinlikle doğrudur. Ağrısız, parlak dana eti kırmızısı ('beefy-red') granülasyonlu, temasla kolay kanayan ülseratif lezyonlar, gerçek lenfadenopatinin bulunmayışı (psödobubo varlığı) ve Giemsa boyamasında makrofaj sitoplazmasında 'emniyet pimi' (safety-pin) manzarası oluşturan Donovan cisimciklerinin gösterilmesi Klebsiella granulomatis'in (eski adıyla Calymmatobacterium granulomatis) yol açtığı 'Granüloma İnguinale' (Donovanosis) için patognomoniktir. Sifiliz (B) şankrı sert tabanlıdır ve gerçek bilateral LAP yapar; LGV (C) oluk belirtisi ve gerçek bubo ile seyreder."
   },
   {
-    "id": "prac-gen-015",
+    "id": "prac-genital-015",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 15,
-    "slideTitle": "PİH ve Servisit Tedavi Protokolleri: Geniş Spektrumlu Kombinasyonlar",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Ekzofitik Anogenital Lezyonlar: HPV (Kondiloma Aküminata) ve Molluscum Contagiosum",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Pelvik Enflamatuar Hastalık (PİH) tanısı alan ayaktan bir hastada Gonore, Klamidya ve anaerob bakterileri kapsayan birinci basamak ampirik tedavi kombinasyonu hangisidir?",
+    "question": "25 yaşında kadın hasta, vulva ve perianal bölgesinde son iki ay içinde hızla çoğalan, karnabahar benzeri pürtüklü yüzeye sahip, ten renginde ekzofitik kitleler yakınmasıyla başvuruyor. Lezyonların tamamen ağrısız olduğu öğreniliyor. Alınan biyopsi örneğinde epidermis tabakasında akantoz, hiperkeratoz ve nükleus çevresinde geniş berrak vakuolizasyon (halo) içeren atipik 'Koilosit' hücreleri izleniyor. Bu klinik tablo ve etken patojen ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) Yalnızca tek doz oral siprofloksasin",
-      "B) İM Seftriakson + Oral Doksisiklin + Oral Metronidazol",
-      "C) Yalnızca oral amoksisilin",
-      "D) Tek doz intramusküler penisilin G",
-      "E) Yalnızca oral flukonazol"
+      "A) Lezyonların etkeni Poxvirüs ailesinden Molluscum Contagiosum virüsüdür ve hücre sitoplazmasında Henderson-Patterson cisimcikleri izlenir.",
+      "B) Bu lezyonların (Kondiloma Aküminata) %90'ından fazlasından düşük onkojenik riskli Human Papillomavirus Tip 6 ve Tip 11 sorumludur.",
+      "C) Bu tablo primer sifilizin sekonder evre lezyonu olan kondiloma lata olup penisilin ile tedavi edilmelidir.",
+      "D) Lezyonların maligniteye dönüşüm riski %100 olup hastaya derhal radikal vulvektomi operasyonu planlanmalıdır.",
+      "E) Etken virüs membranöz zarflı ve parçalı RNA genomuna sahip retrovirüs ailesi üyesidir."
     ],
     "correctAnswer": 1,
-    "explanation": "CDC kılavuzlarına göre PİH ayaktan standart tedavisi İM Seftriakson + 14 gün oral Doksisiklin + oral Metronidazol kombinasyonudur."
+    "explanation": "B seçeneği kesinlikle doğrudur. Vulvada ve perianal bölgede karnabahar benzeri verrüköz ekzofitik lezyonlar (Kondiloma Aküminata) ve histopatolojide perinükleer halo içeren 'Koilosit' hücreleri Human Papillomavirus (HPV) enfeksiyonunu kanıtlar. Anogenital siğillerin %90'ından fazlasından düşük onkojenik potansiyelli HPV Tip 6 ve Tip 11 sorumludur; bu tiplerin malignite potansiyeli yok denecek kadar azdır. Molluscum (A) ortası göbekli papüller yapar. Kondiloma lata (C) geniş tabanlı düz lezyonlardır. HPV zarfsız bir DNA virüsüdür (E)."
   },
   {
-    "id": "prac-gen-016",
+    "id": "prac-genital-016",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 16,
-    "slideTitle": "Erkek Genital Enfeksiyonları: Akut ve Kronik Prostatit",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Mukopürülan Servisit: Klinik Özellikler, Etiyoloji ve Tanısal Yaklaşım",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Ateş, titreme, perineal ağrı ve idrar yapmada zorluk ile başvuran 45 yaşındaki bir erkekte rektal tuşede prostat son derece ödemli, sıcak ve aşırı hassas bulunuyor. Bu hastada sepsis ve bakteriyemi riskinden dolayı KESİNLİKLE YAPILMAMASI gereken girişim hangisidir?",
+    "question": "23 yaşında cinsel aktif bir kadın hasta, son zamanlarda fark ettiği sarımtırak vajinal akıntı ve cinsel ilişki sonrasında iç çamaşırında taze kan lekelenmeleri (postkoital kanama) şikayetiyle jinekoloji polikliniğine başvuruyor. Spekulum muayenesinde endoservikal ostiumdan sarı renkli pürülan eksüda aktığı izleniyor ve eküvyonla sürüntü alınırken serviksin son derece kolay kanadığı (servikal frajilite) gözleniyor. Bu klinik tablo için en olası tanı ve bu tabloya en sık yol açan iki mikroorganizma çifti aşağıdakilerden hangisidir?",
     "options": [
-      "A) İdrar kültürü almak",
-      "B) Kan kültürü almak",
-      "C) Prostat masajı yapmak",
-      "D) Damar yolu açıp hidrasyon sağlamak",
-      "E) Sistemik florokinolon başlamak"
+      "A) Bakteriyel Vajinozis - Gardnerella vaginalis ve Atopobium vaginae",
+      "B) Vulvovajinal Kandidiyazis - Candida albicans ve Candida glabrata",
+      "C) Mukopürülan Servisit - Chlamydia trachomatis ve Neisseria gonorrhoeae",
+      "D) Granüloma İnguinale - Klebsiella granulomatis ve Treponema pallidum",
+      "E) Genital Herpes - Herpes Simplex Virüs Tip 1 ve Tip 2"
     ],
     "correctAnswer": 2,
-    "explanation": "Akut bakteriyel prostatitte prostat masajı yapılması bakterilerin venöz pleksusa dökülerek fulminan bakteriyemi ve septik şoka yol açması riski nedeniyle kesinlikle kontrendikedir."
+    "explanation": "C seçeneği kesinlikle doğrudur. Endoservikal ostiumdan pürülan akıntı gelişi, temasla kolay kanama (servikal frajilite/friabilite) ve postkoital kanama öyküsü klasik 'Mukopürülan Servisit' tablosudur. Mukopürülan servisite en sık yol açan iki cinsel yolla bulaşan bakteri Chlamydia trachomatis ve Neisseria gonorrhoeae'dir. Bakteriyel vajinoziste (A) ve kandidiyaziste (B) endoserviks tutulmaz, frajilite ve postkoital kanama izlenmez."
   },
   {
-    "id": "prac-gen-017",
+    "id": "prac-genital-017",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 17,
-    "slideTitle": "Epididimit ve Orşit Patolojisi: Prehn Belirtisi ve Kabakulak",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Gonokok ve Klamidya Mikrobiyolojisi: Hücre İçi Yaşam Döngüsü ve Laboratuvar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "23 yaşındaki bekar bir erkekte ani başlayan tek taraflı skrotal ağrı ve şişlik saptanıyor. Doppler ultrasonda epididimde hiperemi saptanan ve Prehn belirtisi pozitif olan bu hastada en olası etken hangisidir?",
+    "question": "Neisseria gonorrhoeae ve Chlamydia trachomatis'in mikrobiyolojik özellikleri, hücre içi adaptasyonları ve laboratuvar tanı kriterleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Escherichia coli",
-      "B) Chlamydia trachomatis",
-      "C) Kabakulak virüsü",
-      "D) Mycobacterium tuberculosis",
-      "E) Pseudomonas aeruginosa"
+      "A) Neisseria gonorrhoeae nötrofil lökositlerin içinde Gram-negatif kahve çekirdeği biçimli diplokok morfolojisinde izlenir.",
+      "B) N. gonorrhoeae karbonhidrat fermantasyon testlerinde hem glikozu hem de maltozu fermente ederek asit üretir.",
+      "C) Modifiye Thayer-Martin besiyerinde normal florayı baskılamak amacıyla vankomisin, kolistin, nistatin ve trimetoprim bulunur.",
+      "D) Chlamydia trachomatis kendi ATP'sini sentezleyemeyen, peptidoglikan tabakası atipik zorunlu hücre içi bir bakteridir.",
+      "E) Chlamydia trachomatis'in konak hücreye giren infeksiyöz formu Elementer Cisimcik (EB), hücre içinde ikiye bölünerek çoğalan replikatif formu ise Retiküler Cisimcik'tir (RB)."
     ],
     "correctAnswer": 1,
-    "explanation": "35 yaş altındaki cinsel aktif genç erkeklerde akut epididimitin açık ara en sık etkeni Chlamydia trachomatis'tir (ikinci sırada Gonore)."
+    "explanation": "B seçeneğindeki ifade tamamen yanlıştır. Neisseria gonorrhoeae YALNIZCA GLİKOZU fermente eder; maltoz, laktoz ve sukrozu fermente ETMEZ. Hem glikoz hem maltozu fermente eden bakteri Neisseria meningitidis'tir; bu fermantasyon ayrımı iki patojeni ayıran en klasik mikrobiyolojik sınav sorusudur. A, C, D ve E seçeneklerindeki tüm bilgiler gonokok ve klamidya mikrobiyolojisinin temel doğrularıdır."
   },
   {
-    "id": "prac-gen-018",
+    "id": "prac-genital-018",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 18,
-    "slideTitle": "Genital Sistem Enfeksiyonlarında Laboratuvar Tanı Yöntemleri",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Pelvik İnflamatuar Hastalık (PİH): Tanım, Patogenez ve Asendan Yayılım Dinamiği",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Pürülan üretral akıntısı olan 26 yaşındaki bir erkeğin akıntı yaymasında lökosit sitoplazması içinde çok sayıda Gram-negatif diplokok izleniyor. Tanı nedir?",
+    "question": "Pelvik İnflamatuar Hastalığın (PİH) patogenezi, asendan yayılım basamakları ve mikrobiyal florası ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) Klamidyal üretrit",
-      "B) Gonokokkal üretrit (Gonore)",
-      "C) Trikomoniyazis",
-      "D) Üreaplazma üretriti",
-      "E) Sifiliz şankrı"
+      "A) PİH daima tek bir bakteri türünün (monomikrobiyal) yol açtığı, anaerob bakterilerin kesinlikle rol oynamadığı izole bir over enfeksiyonudur.",
+      "B) Primer başlatıcı etkenler çoğunlukla C. trachomatis ve N. gonorrhoeae olup servikal bariyer yıkıldıktan sonra tabloya vajinal anaeroblar ve enterik basillerin katıldığı polimikrobiyal bir enfeksiyon gelişir.",
+      "C) Servikal mukus tıkacı menstrüasyon sırasında daha da kalınlaşarak bakterilerin asendan yayılımını tamamen imkansız hale getirir.",
+      "D) Hastalık semptomları gebelikte overlerin aşırı büyümesi nedeniyle en sık üçüncü trimesterde ortaya çıkar.",
+      "E) PİH etiyolojisinde rol oynayan bakteriler yalnızca hematojen yolla yayılır, hiçbir zaman asendan mukozal yol kullanılmaz."
     ],
     "correctAnswer": 1,
-    "explanation": "Lökosit içi Gram-negatif diplokoklar Neisseria gonorrhoeae'nin (Gonore) patognomonik mikroskobik görüntüsüdür."
+    "explanation": "B seçeneği kesinlikle doğrudur. PİH'in patogenezi iki aşamalıdır: Cinsel yolla bulaşan primer patojenler (Chlamydia trachomatis ve Neisseria gonorrhoeae) endoservikal kolumnar epiteli parçalayarak servikal mukus tıkacını ve koruyucu bariyeri yıkar. Bu bariyer çöküşünün ardından vajinal endojen anaeroblar (Bacteroides, Prevotella), enterik bakteriler ve mikoplazmalar asendan yolla tüplere ve pelvise tırmanarak polimikrobiyal mikst bir enfeksiyon oluşturur. A yanlıştır çünkü polimikrobiyaldir. C yanlıştır çünkü menstrüasyonda mukus tıkacı kaybolur. D ve E tamamen hatalıdır."
   },
   {
-    "id": "prac-gen-019",
+    "id": "prac-genital-019",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 19,
-    "slideTitle": "Genital Ülser ve Enfeksiyonların Büyük Karşılaştırma Matrisi",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "Pelvik İnflamatuar Hastalıkta Klinik Tablo, Tanı Kriterleri ve Fizik Muayene",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki genital lezyonlardan hangisi tek, yuvarlak, tabanı temiz, sert endüre kenarlı ve TAMAMEN AĞRISIZ olması ile karakterizedir?",
+    "question": "21 yaşında cinsel aktif bir kadın hasta, menstrüasyonunun bitiminden iki gün sonra başlayan alt karın ağrısı, titremeyle yükselen ateş ve pürülan vajinal akıntı yakınmasıyla acil servise başvuruyor. Yapılan fizik muayenede vücut sıcaklığı 38.6 °C ölçülüyor; bimanuel jinekolojik muayenede serviksin sağa-sola hareket ettirilmesiyle hastanın şiddetli acı duyduğu ('Chandelier Belirtisi') ve her iki adneksiyel bölgede ileri derecede hassasiyet olduğu saptanıyor. Bu klinik tablonun tanısal yaklaşımı ile ilgili aşağıdaki ifadelerden hangisi CDC kılavuzlarına ve klinik kanıtlara göre DOĞRUDUR?",
     "options": [
-      "A) Herpes simpleks ülseri",
-      "B) Şankroid yumuşak şankrı",
-      "C) Primer Sifiliz sert şankrı",
-      "D) Behçet hastalığı oral/genital aftı",
-      "E) Follikülit"
+      "A) Hastada ampirik antibiyotik tedavisine başlamak için mutlaka laparoskopi yapılarak fallop tüplerinin doğrudan görülmesi beklenmelidir.",
+      "B) Servikal hareket hassasiyeti veya adneksiyal hassasiyet varlığı, tubal hasarı önlemek amacıyla ampirik PİH tedavisine derhal başlamak için yeterlidir.",
+      "C) Pelvik ultrasonografide over kisti saptanması PİH tanısını kesin olarak dışlar ve antibiyotik verilmemelidir.",
+      "D) Bu hastada kesin tanı ancak idrar kültüründe E. coli üremesi gösterildikten sonra konulabilir.",
+      "E) Semptomlar menstrüasyon sonrasında başladığı için tablo kesinlikle enfeksiyöz değildir, dismenore kabul edilmelidir."
     ],
-    "correctAnswer": 2,
-    "explanation": "Tek, temiz tabanlı, sert endüre ve ağrısız lezyon Treponema pallidum'un neden olduğu Primer Sifiliz Şankrıdır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. CDC Pelvik İnflamatuar Hastalık kılavuzlarına göre; cinsel aktif genç bir kadında alt karın/pelvik ağrı varlığında, bimanuel muayenede saptanan servikal hareket hassasiyeti (Chandelier belirtisi), uterus hassasiyeti veya adneksiyal hassasiyet bulgularından herhangi birinin varlığı ampirik PİH tedavisine derhal başlamak için yeterli minimal tanı kriteridir. Tedavideki gecikme kalıcı tubal fibrozis ve infertilite riskini katbekat artıracağından laparoskopi veya kültür sonucu beklenmez. A yanlıştır çünkü laparoskopi altın standart olsa da invazivdir ve tedavi için ön şart değildir."
   },
   {
-    "id": "prac-gen-020",
+    "id": "prac-genital-020",
     "deckId": "learn-genital-enfeksiyonlar",
-    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
     "slideNumber": 20,
-    "slideTitle": "Ders 2 Kapsamlı Sentezi: Genital Enfeksiyonların Klinik Kodları",
-    "discipline": "Enfeksiyon Hastalıkları",
+    "slideTitle": "PİH Sekelleri ve Fitz-Hugh-Curtis Sendromu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki eşleştirmelerden hangisinde genital enfeksiyon ve karakteristik klinik/patolojik bulgu yanlış verilmiştir?",
+    "question": "26 yaşında kadın hasta, bir hafta önce geçirdiği alt karın ağrısı ve pürülan vajinal akıntı atağının ardından, son üç gündür sağ kaburga altında derin nefes almakla ve öksürmekle şiddetlenen plöritik batma tarzında ağrı yakınmasıyla başvuruyor. Yapılan laboratuvar incelemesinde AST, ALT ve total bilirubin düzeyleri tamamen normal saptanıyor. Yapılan diagnostik laparoskopide karaciğer ön kapsülü ile anterior karın duvarı arasında ince, avasküler, saydam fibröz 'keman teli' (violin-string) adezyonları gözleniyor. Bu klinik tablo için en olası tanı ve bu sendromun en sık iki etkeni aşağıdakilerden hangisidir?",
     "options": [
-      "A) Bakteriyel vajinozis — Clue cells ve pozitif koku (Whiff) testi",
-      "B) Trichomonas vaginalis — Çilek serviks ve köpüklü akıntı",
-      "C) Candida albicans — Vajinal pH'nın 6.0'a yükselmesi",
-      "D) Fitz-Hugh-Curtis sendromu — Keman teli benzeri perihepatik yapışıklıklar",
-      "E) Şankroid — Ağrılı yumuşak ülser ve süpüratif lenfadenit"
+      "A) Akut Taşlı Kolesistit - Escherichia coli ve Klebsiella pneumoniae",
+      "B) Budd-Chiari Sendromu - Staphylococcus aureus ve Streptococcus pyogenes",
+      "C) Fitz-Hugh-Curtis Sendromu (Perihepatit) - Chlamydia trachomatis ve Neisseria gonorrhoeae",
+      "D) Primer Biliyer Kolanjit - Treponema pallidum ve Haemophilus ducreyi",
+      "E) Amebik Karaciğer Absesi - Entamoeba histolytica ve Giardia lamblia"
     ],
     "correctAnswer": 2,
-    "explanation": "Candida albicans enfeksiyonunda vajinal pH yükselmez; normal asidik sınırlarda (<4.5) kalır. pH'nın 6.0'a çıkması Trikomanas lehinedir."
+    "explanation": "C seçeneği kesinlikle doğrudur. PİH atağının ardından sağ üst kadran plöritik ağrısı, normal karaciğer fonksiyon testleri ve laparoskopide karaciğer kapsülü ile karın duvarı arasında 'keman teli' (violin-string) adezyonlarının görülmesi klasik 'Fitz-Hugh-Curtis Sendromu'dur (perihepatit). Bu sendromun en sık iki mikrobiyolojik etkeni asendan pelvik enfeksiyon yapan Chlamydia trachomatis ve Neisseria gonorrhoeae'dir. Eksüda sağ parakolik oluktan karaciğer kapsülüne ulaşır; parankim tutulmadığı için karaciğer enzimleri normaldir."
   },
   {
-    "id": "prac-genital-001",
+    "id": "prac-genital-021",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 21,
+    "slideTitle": "PİH ve Komplike Pelvik Enfeksiyonlarda Tedavi Protokolleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "27 yaşında kadın hasta, yüksek ateş (39.0 °C), şiddetli alt karın ağrısı ve pürülan vajinal akıntı ile başvuruyor. Pelvik ultrasonda sol adneksiyal alanda 6x5 cm boyutlarında, kalın duvarlı, içi yoğun partiküllü sıvı ile dolu Tubo-Ovaryan Abse (TOA) saptanıyor. Bu hastanın klinik yönetimi ve parenteral antibiyotik seçimi ile ilgili aşağıdaki yaklaşımlardan hangisi EN UYGUNDUR?",
+    "options": [
+      "A) Hasta ayaktan oral tek doz flukonazol ve 3 günlük amoksisilin tedavisiyle evine gönderilmelidir.",
+      "B) Hasta derhal hastaneye yatırılmalı ve parenteral Klindamisin + Gentamisin tedavisi başlanarak klinik yanıt yakından izlenmelidir.",
+      "C) Antibiyotik başlanmadan derhal acil total histerektomi ve bilateral ooforektomi yapılmalıdır.",
+      "D) Hastaya yalnızca oral metronidazol verilmeli, başka hiçbir antibiyotik kombinasyona eklenmemelidir.",
+      "E) TOA tamamen fizyolojik bir kist olduğu için medikal veya cerrahi hiçbir tedaviye gerek yoktur."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Tubo-ovaryan abse (TOA) saptanan olgular mutlak yatarak parenteral tedavi endikasyonudur. TOA polimikrobiyal olup yoğun anaerobik bakteriler (Bacteroides vb.) ve Gram-negatif enterik basiller içerir. Bu nedenle yatarak tedavide en etkili rejimlerden biri intravenöz Klindamisin (anaerobik spektrum) + Gentamisin (Gram-negatif spektrum) kombinasyonudur. Olguların %70-80'i medikal tedaviye yanıt verir; 48-72 saatte düzelmeyenlerde drenaj düşünülür. Ayaktan tedavi (A), acil radikal cerrahi (C) veya tekli rejimler (D) hatalıdır."
+  },
+  {
+    "id": "prac-genital-022",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 22,
+    "slideTitle": "Peripartum ve Postoperatif Pelvik Enfeksiyonlar: Koryoamniyonit ve Endometrit",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sezaryen ile doğum yapan 26 yaşında bir lohusa kadın, operasyonun 3. gününde 38.8 °C ateş, alt karında kramp tarzında şiddetli ağrı ve kötü kokulu vajinal akıntı (loşi) yakınmasıyla değerlendiriliyor. Fizik muayenede uterusun haftasına göre toparlanamadığı (subinvolüsyon) ve palpasyonla ileri derecede hassas olduğu saptanıyor. Yara yerinde enfeksiyon bulgusu izlenmiyor. Bu hastanın klinik tablosu, risk faktörleri ve standart parenteral tedavisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tablo postpartum endometrit olup sezaryen doğum bu enfeksiyonun en önemli bağımsız risk faktörüdür; altın standart tedavi intravenöz Klindamisin + Gentamisin kombinasyonudur.",
+      "B) Bu durum fizyolojik loşi birikimi olup hastaya hiçbir medikal tedavi verilmemeli ve hasta taburcu edilmelidir.",
+      "C) En olası etken izole Candida albicans olup hastaya oral yüksek doz flukonazol başlanmalıdır.",
+      "D) Hastalığın en sık etkeni Neisseria gonorrhoeae olup yalnızca tek doz intramüsküler penisilin yeterlidir.",
+      "E) Sezaryen doğum postpartum endometrit riskini vajinal doğuma kıyasla 10 kat azaltan en güvenli doğum şeklidir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği kesinlikle doğrudur. Sezaryen doğum sonrası 2-3. günlerde ortaya çıkan yüksek ateş, uterin hassasiyet ve kötü kokulu loşi klasik Postpartum Endometrit (puerperal sepsis) tablosudur. Sezaryen doğum, postpartum endometritin en kritik bağımsız risk faktörüdür (vajinal doğumda %2-5 iken sezaryende %20-55'tir). Polimikrobiyal (GBS, E. coli, anaeroblar) bir enfeksiyon olduğundan altın standart parenteral tedavi rejimi intravenöz Klindamisin + Gentamisin kombinasyonudur. B, C, D ve E seçenekleri tamamen yanlıştır."
+  },
+  {
+    "id": "prac-genital-023",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 23,
+    "slideTitle": "Erkek Genital Enfeksiyonları: Üretritler, Epididimit ve Orşit Spektrumu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Erkek genital sistem enfeksiyonları, üretrit sendromları ve epididimo-orşit etiyolojisi ile ilgili aşağıdaki ifadelerden hangisi MİKROBİYOLOJİK VE KLİNİK AÇIDAN YANLIŞTIR?",
+    "options": [
+      "A) Neisseria gonorrhoeae üretritinde akut, bol pürülan sarı akıntı görülür ve yaymada PNL içi Gram negatif diplokoklar saptanır.",
+      "B) Non-gonokoksik üretritin en sık etkeni Chlamydia trachomatis olup akıntı genellikle daha az miktarda ve mukoid karakterdedir.",
+      "C) 35 yaşın altındaki genç cinsel aktif erkeklerde gelişen akut epididimit olgularının en sık etkenleri Chlamydia trachomatis ve Neisseria gonorrhoeae'dir.",
+      "D) 35 yaşın üstündeki veya üriner kateterizasyon öyküsü bulunan erkeklerde epididimite en sık yol açan patojen Treponema pallidum'dur.",
+      "E) Post-pubertal erkeklerde kabakulak virüsü parotit atağını takiben akut orşite yol açabilir ve seminifer tübül atrofisiyle infertilite riski oluşturabilir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneğindeki ifade tamamen yanlıştır. 35 yaşın üstündeki erkeklerde veya üretral kateterizasyon/ürolojik girişim öyküsü olan hastalarda gelişen akut epididimit ve orşit olgularının en sık etkeni Treponema pallidum (sifiliz) değil; mesane ve idrar yolu kaynaklı enterik bakterilerdir (başta Escherichia coli [%60-80], Pseudomonas aeruginosa ve Enterokoklar). A, B, C ve E seçeneklerindeki tüm klinik ve mikrobiyolojik bilgiler tamamen doğrudur."
+  },
+  {
+    "id": "prac-genital-024",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar: Vajinitler, Servisitler, PİH ve Erkek Genital Patolojileri",
+    "slideNumber": 24,
+    "slideTitle": "Prostatit Sendromları ve Balanit/Balanopostit Patolojileri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "54 yaşında erkek hasta; aniden başlayan yüksek ateş (39.2 °C), titreme, perineal bölgede zonklayıcı şiddetli ağrı, idrar yaparken aşırı yanma ve idrar akımında zayıflama yakınmalarıyla acil servise başvuruyor. Yapılan fizik muayenede rektal tuşede prostat bezinin ileri derecede büyümüş, sıcak, ödemli ve dokunulmayacak kadar aşırı hassas olduğu belirleniyor. İdrar tahlilinde bol lökosit ve bakteri saptanıyor. Bu hastanın klinik yaklaşımı, kontrendike uygulamaları ve farmakoterapisi ile ilgili aşağıdaki ifadelerden hangisi HAYATİ DERECEDE DOĞRUDUR?",
+    "options": [
+      "A) Tanıyı kesinleştirmek ve prostat sıvısından kültür alabilmek için hastaya derhal kuvvetli tanısal prostat masajı uygulanmalıdır.",
+      "B) Bu klinik tablo Akut Bakteriyel Prostatit olup masif bakteriyemi ve septik şok riski nedeniyle prostat masajı yapılması KESİNLİKLE KONTRENDİKEDİR; lipid çözünürlüğü yüksek florokinolonlarla 4-6 hafta tedavi edilmelidir.",
+      "C) Hastanın semptomları 3 gün içinde düzeleceğinden toplam 3 günlük tek doz siprofloksasin tedavisi kür sağlamak için yeterlidir.",
+      "D) Bu tablo cinsel yolla bulaşan bir sifiliz şankrı olup birinci basamak tedavi tek doz intramüsküler penisilindir.",
+      "E) Prostat bezi tamamen aseptik olup hastaya hiçbir antibiyotik verilmeyip yalnızca sıcak oturma banyosu önerilmelidir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Ani başlayan yüksek ateş, perineal ağrı, dizüri, obstrüktif miksiyon semptomları ve rektal tuşede sıcak, şiş, dokunulmayacak kadar hassas prostat klasik Akut Bakteriyel Prostatit tablosudur. Bu tabloda en kritik kural PROSTAT MASAJININ KESİNLİKLE KONTRENDİKE OLMASIDIR! Masaj yapılması bakterileri doğrudan kan dolaşımına dökerek masif bakteriyemiye ve ölümcül septik şoka yol açar. Prostat dokusuna iyi penetre olan florokinolonlar veya TMP-SMX ile tedavi en az 4-6 hafta sürdürülmelidir. A seçeneğindeki masaj ölümcül bir hatadır; C seçeneğindeki 3 gün ise kronikleşmeye davetiyedir."
+  },
+  {
+    "id": "prac-genital-001-428",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 1,
     "slideTitle": "Cinsiyet Farklılaşmasına Giriş, Temel Evreler ve Fertilizasyon Dinamikleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Cinsiyet farklılaşmasının temel evreleri ve cinsiyet kromozomlarının sitogenetik özellikleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK YANLIŞTIR?",
     "options": [
       "A) Genetik cinsiyet fertilizasyon anında ovumu dölleyen spermin X veya Y taşımasına bağlı olarak belirlenir.",
@@ -475,13 +551,13 @@
     "explanation": "C seçeneği yanlıştır çünkü Barr cisimciği sayısı formülü (X kromozomu sayısı - 1)'dir. 47,XXY karyotipinde iki adet X kromozomu bulunduğundan (2 - 1 = 1) yalnızca BİR adet Barr cisimciği gözlenir. İki adet Barr cisimciği 47,XXX karyotipli bireylerde görülür. A, B, D ve E seçeneklerindeki ifadeler cinsiyet gelişiminin ve sitogenetiğinin temel doğru kurallarıdır."
   },
   {
-    "id": "prac-genital-002",
+    "id": "prac-genital-002-429",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 2,
     "slideTitle": "Alfred Jost Deneyleri ve Cinsiyet Farklılaşmasının Varsayılan (Default) Doğa Hipotezi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Erken embriyonik dönemde her iki testisi cerrahi olarak çıkarılan 46,XY karyotipli bir memeli fetusunda aşağıdaki anatomik ve fenotipik sonuçlardan hangisinin gerçekleşmesi beklenir?",
     "options": [
       "A) Wolff kanalları gelişir, dış genital organlar normal erkek yönünde farklılaşır.",
@@ -494,13 +570,13 @@
     "explanation": "C seçeneği doğrudur. Alfred Jost'un deneylerinde gösterildiği üzere, testisler çıkarıldığında Sertoli hücrelerinden AMH salınamaz (Müller kanalları gerileyemez, uterus ve tubalar gelişir) ve Leydig hücrelerinden testosteron salınamaz (Wolff kanalları dejenere olur). Androjen uyarısı almayan dış genitalya da varsayılan yolak olan dişi yönünde gelişir. Sonuçta dişi iç ve dış genital organları meydana gelir."
   },
   {
-    "id": "prac-genital-003",
+    "id": "prac-genital-003-430",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 3,
     "slideTitle": "Bipotansiyel Gonadın Oluşumu ve Erken Dönem Regülatör Genler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Bipotansiyel gonadın embriyolojik gelişimi ve erken regülatör genler ile ilgili aşağıdaki ifadelerden hangisi TIBBİ OLARAK YANLIŞTIR?",
     "options": [
       "A) Bipotansiyel gonad kabartısı mezonefrozun medial yüzeyindeki ara mezoderm ve çölyomik epitelden gelişir.",
@@ -513,13 +589,13 @@
     "explanation": "B seçeneği yanlıştır çünkü primordial germ hücreleri nöral krestten değil; epiblasttan köken alarak vitellüs kesesi (yolk sac) duvarına geçer ve oradan arka barsak dorsal mezenteri boyunca amipsi göç ile ürogenital kabartıya ulaşır. Nöral krest ile ilişkisi yoktur. A, C, D ve E seçenekleri bipotansiyel gonad biyolojisinin temel ve doğru kurallarıdır."
   },
   {
-    "id": "prac-genital-004",
+    "id": "prac-genital-004-431",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 4,
     "slideTitle": "Testis Farklılaşmasının Moleküler Orkestrasyonu: SRY ve SOX9 Yolağı",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Testis farklılaşmasının moleküler genetik kontrolü ve SRY-SOX9 yolağı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
       "A) SRY geni yaşam boyu Leydig hücrelerinden yüksek düzeyde eksprese edilerek testosteron üretimini doğrudan kontrol eder.",
@@ -532,13 +608,13 @@
     "explanation": "C seçeneği doğrudur. SRY ve SF-1 transkripsiyon faktörleri SOX9 geninin TESCO (Testis-Specific Enhancer of Sox9 Core) bölgesine bağlanarak SOX9'u aktive eder. A yanlıştır; SRY pre-Sertoli hücrelerinde 41. günde geçici olarak pik yapar. B yanlıştır; SOX9 17. kromozomda (otozomal) yer alır. D yanlıştır; FGF9 SOX9'u inhibe etmez, tam aksine pozitif feed-forward ile artırır ve WNT4'ü baskılar. E yanlıştır; SRY erken fetal evrede geçici olarak çalışır."
   },
   {
-    "id": "prac-genital-005",
+    "id": "prac-genital-005-432",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 5,
     "slideTitle": "Over Farklılaşmasının Aktif Moleküler Genetiği: RSPO1, WNT4, CTNNB1 ve FOXL2",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Over farklılaşmasında görev alan moleküler mekanizmalar ve genetik defektler ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK VE KLİNİK AÇIDAN YANLIŞTIR?",
     "options": [
       "A) WNT4 geninde homozigot mutasyon — SERKAL sendromu (Sex Reversal, böbrek, adrenal ve akciğer defektleri)",
@@ -551,13 +627,13 @@
     "explanation": "D seçeneği yanlıştır çünkü RSPO1 ve WNT4 aktivasyonu β-katenin (CTNNB1) proteininin yıkımını HIZLANDIRMAZ; tam aksine β-katenin yıkımını bloke ederek sitoplazmada birikmesini ve nükleusa geçmesini sağlar. Nükleusa geçen β-katenin ise SOX9'u aktive etmez, SOX9'u GÜÇLÜ ŞEKİLDE BASKILAR. A, B, C ve E seçeneklerindeki genetik mekanizmalar ve klinik tablolar tamamen doğrudur."
   },
   {
-    "id": "prac-genital-006",
+    "id": "prac-genital-006-433",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 6,
     "slideTitle": "İç Genital Kanalların Farklılaşması: Wolff (Mezonefrik) vs Müller (Paramezonefrik) Kanalları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "İç genital kanalların embriyolojik farklılaşması ve hormonal kontrolü ile ilgili aşağıdaki ifadelerden hangisi TIBBİ OLARAK YANLIŞTIR?",
     "options": [
       "A) Müller kanallarının gerilemesi Sertoli hücrelerinden salınan AMH glikoproteininin parakrin etkisiyle gerçekleşir.",
@@ -570,13 +646,13 @@
     "explanation": "C seçeneği yanlıştır çünkü seminal vezikül mezonefrik (Wolff) kanalından gelişirken; prostat bezi Wolff kanalından DEĞİL, ürogenital sinüsün endodermal epitelinden DHT uyarısıyla tomurcuklanarak gelişir. Bu klasik ve sık sorulan bir embriyoloji/üroloji sınav ayrımıdır. A, B, D ve E seçeneklerindeki ifadeler tamamen doğrudur."
   },
   {
-    "id": "prac-genital-007",
+    "id": "prac-genital-007-434",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 7,
     "slideTitle": "Dış Genital Organların Maskülinizasyonu: 5-Alfa Redüktaz ve DHT Bağımlı Diferansiasyon",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Dış genital organların embriyolojik gelişimi, homolog yapılar ve hormonal kontrol mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
       "A) Genital tüberkül erkekte glans penis ve korpus kavernozumu, dişide ise klitorisi oluşturur.",
@@ -589,13 +665,13 @@
     "explanation": "D seçeneği yanlıştır çünkü Wolff kanalı türevleri (epididim, duktus deferens, veziküla seminalis) DHT'ye DEĞİL, testis Leydig hücrelerinden salgılanan yüksek konsantrasyondaki lokal TESTOSTERON'a bağımlıdır. DHT ise dış genital organların (penis, skrotum) ve prostat bezinin gelişimi için zorunludur. A, B, C ve E seçeneklerindeki embriyolojik eşleştirmeler tamamen doğrudur."
   },
   {
-    "id": "prac-genital-008",
+    "id": "prac-genital-008-435",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 8,
     "slideTitle": "Cinsiyet Gelişim Bozuklukları (CGB / DSD) Sınıflandırması ve Chicago Konsensusu",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Cinsiyet Gelişim Bozuklukları (CGB) sınıflandırması ve Chicago Konsensus ilkeleri ile ilgili aşağıdaki eşleştirmelerden hangisi GÜNCEL TIBBİ YAKLAŞIMA GÖRE YANLIŞTIR?",
     "options": [
       "A) 47,XXY Klinefelter Sendromu — Cinsiyet Kromozomu CGB",
@@ -608,13 +684,13 @@
     "explanation": "E seçeneği yanlıştır çünkü Mayer-Rokitansky-Küster-Hauser (MRKH) sendromu 46,XX karyotipli kadınlarda görülen bir Müllerian agenezi/hipoplazi durumudur (uterovajinal agenezis). Gonadlar normal overlerdir ve endokrin fonksiyonları tamamen normaldir; dolayısıyla 46,XY CGB grubunda değil, 46,XX CGB (Müllerian gelişim anomalileri) sınıfında değerlendirilir. A, B, C ve D seçeneklerindeki sınıflandırmalar Chicago konsensusuna tamamen uygundur."
   },
   {
-    "id": "prac-genital-009",
+    "id": "prac-genital-009-436",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 9,
     "slideTitle": "46,XX CGB ve Fetal Androjen Fazlalığı: 21-Hidroksilaz Eksikliği (KAH) Patofizyolojisi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "21-hidroksilaz eksikliğine bağlı Konjenital Adrenal Hiperplazi patofizyolojisinde gerçekleşen biyokimyasal ve hormonal olaylar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
       "A) CYP21A2 gen defekti nedeniyle progesteron ve 17-hidroksiprogesteronun hidroksilasyonu aksar.",
@@ -627,13 +703,13 @@
     "explanation": "C seçeneği kesinlikle yanlıştır. Adrenal kortekste biriken öncüller (özellikle 17-OHP) östrojene değil; 17-20 liyaz enzimi üzerinden DHEA, androstenedion ve testosteron gibi güçlü ANDROJENLERE dönüşür. Bu androjen fazlalığı virilizasyonu engellemek şöyle dursun, 46,XX fetusta klitoromegali ve labioskrotal füzyon gibi belirgin virilizasyon bulgularının doğrudan nedenidir. A, B, D ve E seçenekleri KAH patofizyolojisinin temel basamaklarıdır."
   },
   {
-    "id": "prac-genital-010",
+    "id": "prac-genital-010-437",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 10,
     "slideTitle": "21-Hidroksilaz Eksikliğinin Klinik Spektrumu: Tuz Kaybettiren, Basit Virilizan ve Non-Klasik Tipler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Doğumdan sonra 10. günde fışkırır tarzda kusma, beslenememe ve letarji şikayetiyle getirilen 46,XY karyotipli bir erkek bebeğin laboratuvarında serum sodyumu 118 mEq/L (düşük), potasyumu 7.2 mEq/L (yüksek) ve kan şekeri 52 mg/dL (düşük) olarak saptanıyor. Fizik muayenede dış genital organları tamamen normal erkek görünümündedir.\nBu olguda en olası tanı ve patolojiden sorumlu enzim aşağıdakilerden hangisidir?",
     "options": [
       "A) Androjen Duyarsızlığı Sendromu — Androjen Reseptörü",
@@ -646,13 +722,13 @@
     "explanation": "B seçeneği doğrudur. 46,XY erkek bebeklerde klasik tuz kaybettirici 21-hidroksilaz eksikliğinde dış genital organlar normal olduğu için doğumda tanı konulamaz. Yaşamın 1-2. haftasında aldosteron ve kortizol yokluğuna bağlı olarak tuz kaybı krizi gelişir (hiponatremi, hiperkalemi, hipoglisemi, şok). Diğer seçeneklerdeki patolojiler elektrolit krizine ve adrenal yetmezliğe yol açmaz."
   },
   {
-    "id": "prac-genital-011",
+    "id": "prac-genital-011-438",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 11,
     "slideTitle": "KAH'ta Prenatal Tanı, Anne Tedavisi ve Yenidoğanda Acil Yönetim",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Daha önce tuz kaybettirici 21-hidroksilaz eksikliği olan bir çocuk doğurmuş olan taşıyıcı bir anne adayı tekrar hamile kaldığında uygulanan prenatal tanı ve tedavi protokolü ile ilgili aşağıdaki ifadelerden hangisi TIBBİ OLARAK DOĞRUDUR?",
     "options": [
       "A) Deksametazon tedavisine ancak 16. haftada yapılan amniyosentez sonucunda kız bebek olduğu kanıtlanınca başlanmalıdır.",
@@ -665,13 +741,13 @@
     "explanation": "C seçeneği doğrudur. Dış genital virilizasyon 7-8. haftada başladığı için deksametazon 6-8. haftada ampirik olarak başlanır. Moleküler ve sitogenetik analizle fetüsün erkek olduğu veya hastalığı taşımayan/taşıyıcı dişi olduğu kanıtlanırsa deksametazon kesilir; yalnızca etkilenmiş 46,XX kız fetuslarda doğuma kadar sürdürülür. A yanlıştır; 16. hafta çok geçtir. B yanlıştır; erkekte virilizasyon riski değil, beklenen fizyolojik süreçtir, ilaç kesilir. D yanlıştır; prednizolon plasentada inaktive olur, fetal ACTH'yi baskılayamaz."
   },
   {
-    "id": "prac-genital-012",
+    "id": "prac-genital-012-439",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 12,
     "slideTitle": "Nadir 46,XX CGB Nedenleri: Diğer Adrenal Enzim Defektleri, Aromataz Eksikliği ve Maternal Maruziyet",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Virilize dış genital organlarla (klitoromegali, labioskrotal füzyon) doğan 46,XX karyotipli bir yenidoğanın annesinde, gebeliğin son trimesterinde belirgin ses kalınlaşması, yüzde hirsutizm ve akne geliştiği; doğumdan birkaç ay sonra bu maternal bulguların kendiliğinden gerilediği öğreniliyor.\nBu anne ve bebekte altta yatan en olası genetik enzim defekti aşağıdakilerden hangisidir?",
     "options": [
       "A) 21-Hidroksilaz eksikliği (CYP21A2)",
@@ -684,13 +760,13 @@
     "explanation": "C seçeneği doğrudur. Plasental aromataz (CYP19A1) eksikliğinde fetustan gelen androjen öncülleri plasentada östrojene aromatize edilemez. Biriken androjenler hem dişi fetusu virilize eder hem de maternal dolaşıma sızarak gebelikte annede geçici virilizasyona yol açar. Doğumda plasentanın ayrılmasıyla maternal androjen kaynağı sonlanır ve annenin semptomları geriler. 21 ve 11 hidroksilaz eksikliklerinde maternal virilizasyon beklenmez."
   },
   {
-    "id": "prac-genital-013",
+    "id": "prac-genital-013-440",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 13,
     "slideTitle": "46,XY CGB Spektrumu ve Testis Gelişim Bozuklukları: Swyer Sendromu ve Gonadal Disgenezi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "16 yaşında fenotipik olarak dişi görünümündeki bir adölesan, göğüslerinin hiç gelişmemesi ve bugüne kadar hiç adet görmemesi (primer amenore) nedeniyle polikliniğe başvuruyor. Fizik muayenede meme dokusu Tanner evre 1 (gelişmemiş), dış genitalya normal dişi yapısındadır. Pelvik ultrasonda normal lokalizasyonda uterus ve tüpler izlenirken over dokusu yerine bilateral fibröz bantlar (streak gonad) saptanıyor. Sitogenetik analizde karyotip 46,XY olarak raporlanıyor.\nBu hasta için en olası tanı ve yapılması gereken en öncelikli cerrahi girişim aşağıdakilerden hangisidir?",
     "options": [
       "A) Komplet Androjen Duyarsızlığı Sendromu — Testislerin skrotuma indirilmesi",
@@ -703,13 +779,13 @@
     "explanation": "C seçeneği doğrudur. 46,XY karyotipine sahip, meme gelişimi olmayan, uterusu bulunan ve bilateral streak gonadları olan hasta Swyer Sendromudur (46,XY saf gonadal disgenezi). Testis gelişemediği için AMH salınamamış ve uterus korunmuştur. Y kromozomu taşıyan streak gonadlarda gonadoblastom ve disgerminom riski (%30-40) çok yüksek olduğundan derhal profilaktik gonadektomi yapılmalıdır. A seçeneğindeki CAIS'te meme gelişimi tamdır ve uterus yoktur."
   },
   {
-    "id": "prac-genital-014",
+    "id": "prac-genital-014-441",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 14,
     "slideTitle": "SOX9 Mutasyonları ve Kampomelik Displazi, WT1 Bozuklukları: Denys-Drash ve Frasier Sendromları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Doğumda uzun kemiklerinde ileri derecede eğrilik, çan şeklinde dar göğüs kafesi, yarık damak ve mikrognati saptanan bir yenidoğanın dış genital muayenesi tamamen normal dişi görünümündedir. Ancak sitogenetik karyotipleme sonucunda bebeğin kromozomal yapısının 46,XY olduğu belirleniyor.\nBu olguda hem iskelet displazisine hem de cinsiyet tersinmesine (sex reversal) yol açan en olası genetik mutasyon aşağıdakilerden hangisidir?",
     "options": [
       "A) WT1 geninde ekzon 9 misense mutasyonu",
@@ -722,13 +798,13 @@
     "explanation": "B seçeneği doğrudur. Tarif edilen klinik tablo Kampomelik Displazidir (kemik eğrilikleri, dar toraks, kraniyofasiyal defektler). Kampomelik displazi 17. kromozomda yer alan SOX9 geninin heterozigot mutasyonlarından kaynaklanır. SOX9 Sertoli hücre diferansiasyonunun anahtar genidir; eksikliğinde 46,XY genetik yapısına sahip bebeklerin yaklaşık %75'inde testis gelişemez ve dişi fenotipik cinsiyet tersinmesi (sex reversal) ortaya çıkar. Diğer genler iskelet displazisi yapmaz."
   },
   {
-    "id": "prac-genital-015",
+    "id": "prac-genital-015-442",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 15,
     "slideTitle": "Androjen Duyarsızlığı Sendromu (AIS): Komplet Form (CAIS / Testiküler Feminizasyon)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "17 yaşında bir genç kız, yaşıtları gibi meme gelişimi olmasına rağmen hiç adet görmemesi şikayetiyle başvuruyor. Fizik muayenede meme gelişimi Tanner evre 5 (tam olgun), ancak pubik ve aksiller kıllanmanın tamamen yok olduğu (Tanner evre 1) görülüyor. Jinekolojik muayenede vajinanın 3 cm derinlikte kör bir kese şeklinde sonlandığı saptanıyor. Pelvik ultrasonda uterus ve overler izlenemiyor; inguinal kanallarda bilateral testis dokusu saptanıyor. Karyotip 46,XY olarak belirleniyor.\nBu olgu ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
       "A) Hastalığın temelinde X kromozomunda yer alan Androjen Reseptör (AR) gen mutasyonu yatmaktadır.",
@@ -741,13 +817,13 @@
     "explanation": "D seçeneği kesinlikle yanlıştır. CAIS hastaları doğumdan itibaren tam bir dişi fenotipindedir, beyin dahil tüm dokular androjen etkisine kapalı olduğu için kadın cinsiyet kimliğini benimserler ve kendilerini tamamen kadın hissederler. Erkek cinsiyetine geçiş veya testosteron tedavisi KESİNLİKLE YAPILMAZ (zaten testosterona dokular yanıtsızdır). Hastaya psikolojik destek verilerek kadın olarak hayatına devam etmesi sağlanır; puberte sonrası gonadektomi yapılıp östrojen replasmanı verilir. A, B, C ve E seçenekleri CAIS'in klasik doğru özellikleridir."
   },
   {
-    "id": "prac-genital-016",
+    "id": "prac-genital-016-443",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 16,
     "slideTitle": "Parsiyel (PAIS - Reifenstein) ve Hafif (MAIS) Androjen Duyarsızlığı Sendromları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Doğumda mikrofallus, perineoskrotal hipospadias ve bifid (yarık) skrotum saptanan bir bebeğin pelvik ultrasonunda uterus ve over saptanamamış, bilateral testislerin inguinal kanalda yer aldığı belirlenmiştir. Karyotip analizi 46,XY olarak sonuçlanmıştır. Puberte döneminde hastada belirgin jinekomasti geliştiği izlenmiştir.\nBu olguda en olası tanı aşağıdakilerden hangisidir?",
     "options": [
       "A) 21-Hidroksilaz eksikliği (KAH)",
@@ -760,13 +836,13 @@
     "explanation": "C seçeneği doğrudur. 46,XY karyotipine sahip, testisleri olan, AMH salgılandığı için uterusu bulunmayan, ancak dış genitalyada yetersiz virilizasyon (mikrofallus, hipospadias, bifid skrotum) ve pubertede jinekomasti gelişen hasta klasik Parsiyel Androjen Duyarsızlığı Sendromudur (PAIS / Reifenstein sendromu). KAH 46,XX'te görülür ve uterus vardır. Swyer'da uterus vardır ve meme gelişmez. MRKH 46,XX kadınlarda görülür. Turner 45,X'tir."
   },
   {
-    "id": "prac-genital-017",
+    "id": "prac-genital-017-444",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 17,
     "slideTitle": "5-Alfa Redüktaz Tip 2 Eksikliği (SRD5A2): Biyokimya, Patoloji ve Pubertal Virilizasyon Fenomeni",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Doğumda kız çocuğu olarak nüfusa kaydedilen 14 yaşındaki bir birey, son bir yıldır sesinin kalınlaşması, kas kitlesinin artması ve klitorisinin büyüyerek penil yapı halini alması şikayetiyle getiriliyor. Fizik muayenede meme gelişiminin hiç olmadığı, labioskrotal kıvrımlarda bilateral palpabl testislerin bulunduğu, perineoskrotal hipospadias ve 5 cm'lik fallus mevcuttur. Ultrasonografide uterus ve overler izlenememiştir. Karyotip 46,XY'dir.\nBu olguda tanıyı doğrulamak için aşağıdaki laboratuvar bulgularından hangisinin saptanması beklenir?",
     "options": [
       "A) Serum 17-hidroksiprogesteron (17-OHP) düzeyinin aşırı yüksek olması",
@@ -779,13 +855,13 @@
     "explanation": "B seçeneği doğrudur. Tarif edilen klinik tablo klasik 5-Alfa Redüktaz Tip 2 Eksikliğidir (SRD5A2 mutasyonu, 'Guevedoces' tablosu). Testisler ve testosteron vardır, AMH nedeniyle uterus yoktur. Doğumda DHT eksikliği nedeniyle dişi sanılıp büyütülür; pubertede aşırı testosteron ve Tip 1 izoenzim etkisiyle virilize olur (ses kalınlaşır, fallus büyür, testisler iner; jinekomasti olmaz). Enzim bloğu testosteronun DHT'ye dönüşümünü engellediği için hCG uyarısı sonrası plazma Testosteron/DHT oranı (>20-30) belirgin yüksek bulunur. A KAH'ta, D Swyer'da, E CAIS/PAIS'te görülür."
   },
   {
-    "id": "prac-genital-018",
+    "id": "prac-genital-018-445",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 18,
     "slideTitle": "Leydig Hücre Hipoplazisi ve Persistan Müller Kanalı Sendromu (PMDS)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Sağ kasık fıtığı operasyonuna alınan 4 yaşında fenotipik olarak normal erkek yapısındaki bir çocuğun fıtık kesesi açıldığında kese içerisinde bir adet testis ile birlikte iyi gelişmiş bir uterus ve fallop tüpü izleniyor. Sitogenetik incelemede karyotip 46,XY olarak saptanıyor.\nBu çocukta altta yatan hastalık tablosu ve patolojiden sorumlu olabilecek en olası moleküler mekanizma aşağıdakilerden hangisidir?",
     "options": [
       "A) Konjenital Adrenal Hiperplazi — CYP21A2 mutasyonu",
@@ -798,13 +874,13 @@
     "explanation": "B seçeneği doğrudur. Fenotipik olarak tamamen normal erkek olan, Wolff türevleri bulunan bir çocukta fıtık kesesinde uterus ve fallop tüplerinin bulunması (Hernia Uteri Inguinalis) Persistan Müller Kanalı Sendromu (PMDS) için patognomoniktir. Hastalık Sertoli hücrelerinden salınan AMH genindeki (Tip 1) veya hedef dokudaki AMH Tip 2 Reseptör (AMHR2) genindeki (Tip 2) inaktive edici mutasyonlardan kaynaklanır. AMH sinyali olmadığı için Müller kanalları gerileyemez. Diğer tablolarda dış genitalya normal erkek görünümünde uterusla birlikte bulunmaz."
   },
   {
-    "id": "prac-genital-019",
+    "id": "prac-genital-019-446",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 19,
     "slideTitle": "Ovotestiküler CGB (Gerçek Hermafroditizm): Histopatoloji, Genetik Etyoloji ve Klinik",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Doğumda kuşkulu genitalya nedeniyle izlenen ve sağ gonad biyopsisinde primordial foliküller içeren over stroması, sol gonad biyopsisinde ise seminifer tübüller içeren testiküler doku saptanan bir bebeğin sitogenetik analizinde karyotip 46,XX (SRY negatif) olarak raporlanıyor.\nBu olgu ile ilgili aşağıdaki ifadelerden hangisi TIBBİ OLARAK DOĞRUDUR?",
     "options": [
       "A) Hastadaki tablo Swyer sendromu olup her iki gonad da en kısa sürede eksize edilmelidir.",
@@ -817,13 +893,13 @@
     "explanation": "B seçeneği doğrudur. Aynı bireyde hem over hem testis dokusunun histolojik olarak gösterilmesi Ovotestiküler CGB'dir (eski adıyla gerçek hermafroditizm). Bu hastalıkta en sık görülen karyotip %70 oranında 46,XX'tir ve olguların çoğu SRY-negatiftir. C yanlıştır çünkü over tarafında AMH olmadığı için sol/sağ asimetrisine bağlı Müller yapıları (hemiuterus/tüp) bulunabilir. D yanlıştır; over dokusu östrojeniyle pubertede meme gelişir. A Swyer değil; E KAH değildir."
   },
   {
-    "id": "prac-genital-020",
+    "id": "prac-genital-020-447",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 20,
     "slideTitle": "Mikst Gonadal Disgenezi (MGD - 45,X/46,XY Mozaizm) ve Kimerizm",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Doğumda ambigus genitalya saptanan bir bebeğin laparoskopik eksplorasyonunda sağ tarafta pelvise yerleşik bir streak gonad, sol tarafta ise disgenetik bir testis ile birlikte orta hatta rudimenter bir uterus ve fallop tüpü izleniyor. Yapılan kromozom analizinde hücrelerin bir kısmında 45,X, diğer kısmında ise 46,XY karyotipi saptanıyor.\nBu olgu için en olası tanı ve yaklaşım aşağıdakilerden hangisidir?",
     "options": [
       "A) 21-Hidroksilaz eksikliği — Acil hidrokortizon replasmanı",
@@ -836,13 +912,13 @@
     "explanation": "B seçeneği doğrudur. 45,X/46,XY mozaizmi zemininde bir tarafta streak gonad, karşı tarafta disgenetik testis ve sebat eden uterus bulunması klasik Mikst Gonadal Disgenezi (MGD) tablosudur. Y kromozomu taşıyan streak gonadlarda gonadoblastom riski çok yüksek (%25-35) olduğundan streak gonad acilen çıkarılmalıdır. KAH'ta karyotip 46,XX'tir; CAIS'te uterus yoktur; Swyer 46,XY homojendir; Klinefelter 47,XXY'dir."
   },
   {
-    "id": "prac-genital-021",
+    "id": "prac-genital-021-448",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 21,
     "slideTitle": "Kromozomal CGB: Turner Sendromu (45,X) ve Varyantları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "15 yaşında bir kız çocuğu boy kısalığı ve adet görmeme şikayetiyle endokrinoloji polikliniğine getiriliyor. Fizik muayenede boyu 3. persantilin altında, göğüs kafesi kalkan şeklinde geniş, meme gelişimi Tanner evre 1, boynunda yelelenme (pterigium kolli), düşük saç çizgisi ve kubitus valgus deformitesi saptanıyor. Ekokardiyografide aort koarktasyonu ve biküspit aort kapağı izleniyor.\nBu hasta ile ilgili aşağıdaki genetik ve klinik ifadelerden hangisi YANLIŞTIR?",
     "options": [
       "A) Hastada en olası kromozom anomalisi 45,X monozomisidir.",
@@ -855,13 +931,13 @@
     "explanation": "C seçeneği yanlıştır. Turner sendromunda (45,X) fetusun testis dokusu ve Sertoli hücreleri bulunmadığı için Anti-Müllerian Hormon (AMH) KESİNLİKLE SALGILANMAZ. AMH bulunmadığından Müller kanalları normal şekilde gelişir; dolayısıyla Turner sendromlu kadınlarda UTERUS, SERVİKS ve FALLOP TÜPLERİ TAMAMEN MEVCUTTUR. A, B, D ve E seçenekleri Turner sendromunun klasik doğru genetik ve endokrin bulgularıdır."
   },
   {
-    "id": "prac-genital-022",
+    "id": "prac-genital-022-449",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 22,
     "slideTitle": "Kromozomal CGB: Klinefelter Sendromu (47,XXY) ve 46,XX Erkekler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Evlilik sonrası 3 yıldır çocuk sahibi olamayan 28 yaşındaki bir erkek hasta infertilite polikliniğine başvuruyor. Fizik muayenede boyu 192 cm (uzun boy), kol açıklığı boyundan uzun (önotroid oran), bilateral jinekomasti mevcuttur. Genital muayenede bilateral testisler skrotumda ancak 2'şer ml hacminde ve sert kıvamda palpe ediliyor. Semen analizinde tam azospermi saptanıyor. Hormon profilinde total testosteron düşük, FSH ve LH ise belirgin olarak yüksek bulunuyor.\nBu hasta için en olası sitogenetik tanı aşağıdakilerden hangisidir?",
     "options": [
       "A) 47,XYY Sendromu",
@@ -874,13 +950,13 @@
     "explanation": "B seçeneği doğrudur. Uzun boy, önotroid vücut yapısı, bilateral jinekomasti, küçük ve sert testisler, azospermi ve hipergonadotropik hipogonadizm tablosu klasik 47,XXY Klinefelter Sendromudur. 47,XYY'de jinekomasti ve küçük sert testis beklenmez, fertilite sıklıkla korunmuştur. Turner 45,X kadın fenotipindedir. CAIS ve Swyer fenotipik olarak kadındır."
   },
   {
-    "id": "prac-genital-023",
+    "id": "prac-genital-023-450",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 23,
     "slideTitle": "Müllerian Kanal Anomalileri: Füzyon/Aprezisyon Defektleri ve MRKH Sendromu",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "16 yaşında bir genç kız, yaşıtları gibi göğüsleri ve kıllanması gelişmesine rağmen hiç adet görmemesi nedeniyle başvuruyor. Fizik muayenede meme gelişimi Tanner evre 5, pubik ve aksiller kıllanması normal kadın paterniyle uyumlu (Tanner evre 5) bulunuyor. Jinekolojik muayenede vajinanın 2 cm kör sonlandığı izleniyor. Pelvik ultrasonda bilateral overler normal foliküler yapıda izlenirken uterus ve serviks dokusu saptanamıyor. Karyotip analizi 46,XX olarak raporlanıyor.\nBu olgu için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
       "A) Komplet Androjen Duyarsızlığı Sendromu (CAIS)",
@@ -893,13 +969,13 @@
     "explanation": "C seçeneği doğrudur. Karyotipi 46,XX olan, overleri ve hormonları normal olduğu için meme gelişimi ve pubik kıllanması tam bulunan, ancak uterus ve üst vajinası olmayan (uterovajinal agenezis) hasta klasik Mayer-Rokitansky-Küster-Hauser (MRKH) sendromudur. CAIS'te karyotip 46,XY'dir ve pubik kıl yoktur. Swyer'da uterus vardır ve meme gelişmez. Turner 45,X'tir ve uterus vardır. KAH'ta uterus mevcuttur ve virilizasyon izlenir."
   },
   {
-    "id": "prac-genital-024",
+    "id": "prac-genital-024-451",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 24,
     "slideTitle": "İzole Dış Genital Anomaliler ve CGB'ye Bütüncül Klinik Tanı Algoritması",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Doğum odasında dış genital muayenesinde klitoromegali/mikrofallus ve labial füzyon saptanan bir yenidoğanda yapılan dikkatli fizik muayenede skrotumda veya kasık kanalında bilateral hiçbir gonad dokusu palpe edilemiyor. Bebeğin genel durumu stabildir.\nBu aşamada hekimin izlemesi gereken EN DOĞRU ve HAYAT KURTARICI ilk klinik yaklaşım aşağıdakilerden hangisidir?",
     "options": [
       "A) Bebeğin erkek olduğuna karar verilerek derhal sünnet operasyonuna sevk edilmesi",
@@ -1145,8 +1221,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 1,
     "slideTitle": "Prenatal Tanının Tanımı, Evrimi ve Temel Amaçları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Aşağıdakilerden hangisi prenatal tanı uygulamalarının temel amaçları ve klinik hedefleri arasında yer almaz?",
     "options": [
       "A) Riskli gebeliklerde ebeveynlerin anksiyetesini hafifletmek ve bilgilendirilmiş tercih hakkı sunmak",
@@ -1164,8 +1240,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 2,
     "slideTitle": "Prenatal Genetik Danışmanın İlkeleri ve Etik-Yasal Çerçeve",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Prenatal genetik danışma süreci ile ilgili olarak aşağıdaki ifadelerden hangisi biyoetik ve klinik iletişim kurallarına aykırıdır?",
     "options": [
       "A) Danışman hekim, ailenin sosyokültürel düzeyine uygun ve yönlendirici olmayan (non-directive) bir üslup kullanmalıdır",
@@ -1183,8 +1259,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 3,
     "slideTitle": "Prenatal Tanı Endikasyonları - I: İleri Maternal Yaş ve Aile Öyküsü",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "36 yaşında, 12 haftalık gebe bir kadının önceki gebeliğinden serbest Trizomi 21 (47,XY,+21) tanılı bir çocuğu bulunmaktadır. Ebeveynlerin periferik kan karyotip analizleri normaldir (46,XX ve 46,XY). Bu gebelikte fetüsün Down sendromlu olma riski nasıl hesaplanmalıdır?",
     "options": [
       "A) Risk genel toplum riskine eşittir (yaklaşık 1/800)",
@@ -1202,8 +1278,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 4,
     "slideTitle": "Prenatal Tanı Endikasyonları - II: Ebeveyn Kromozom Anomalileri ve Monogenik Riskler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Periferik kan karyotip analizi sonucunda 45,XX,rob(21q21q) tespit edilen 28 yaşındaki bir kadının gebeliğinde doğacak canlı bebeklerde Down sendromu (Trizomi 21) riski yüzde kaçtır?",
     "options": [
       "A) %1",
@@ -1221,8 +1297,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 5,
     "slideTitle": "İntrauterin Fetal Tedavi, Medikal Yönetim ve Yaşam Kurtarıcı Müdahaleler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Fetal ultrasonda 16. haftada megasistis, bilateral üreterohidronefroz ve belirgin oligohidramnios saptanan erkek bir fetüste intrauterin vezikoamniyotik şant yerleştirilmesinin en temel ve yaşam kurtarıcı gerekçesi aşağıdakilerden hangisidir?",
     "options": [
       "A) Fetüste Down sendromu gelişimini engellemek",
@@ -1240,8 +1316,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 6,
     "slideTitle": "Fetal Ultrasonografik İnceleme, Majör Malformasyonlar ve Minör Belirteçler (Soft Markers)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "İkinci trimester obstetrik ultrasonografisinde fötusta hiperekojenik barsak görünümü saptanan bir gebede, ayırıcı tanıda aşağıdaki patolojilerden hangisi öncelikle düşünülmez?",
     "options": [
       "A) Down Sendromu (Trizomi 21)",
@@ -1259,8 +1335,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 7,
     "slideTitle": "Birinci Trimester Kombine Tarama Testi (İkili Test): Biyokimyasal Parametreler ve NT",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "12. gebelik haftasında birinci trimester kombine tarama testi (ikili test) uygulanan bir gebede, fetüste Trizomi 21 (Down Sendromu) riskinin en yüksek olduğunu gösteren biyokimyasal ve ultrasonografik kombinasyon aşağıdakilerden hangisidir?",
     "options": [
       "A) PAPP-A yüksek, Serbest beta-hCG yüksek, NT normal",
@@ -1278,8 +1354,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 8,
     "slideTitle": "Birinci Trimester Taramasında Nazal Kemik, Doppler Akımları ve Trizomi Profilleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "12 haftalık bir gebenin ikili tarama testinde NT: 3.8 mm, PAPP-A: 0.15 MoM ve serbest beta-hCG: 0.18 MoM olarak raporlanmıştır. Duktus venozus Doppler incelemesinde ters 'a' dalgası izlenmiştir. Bu fötusta öncelikle hangi genetik anomali düşünülmelidir?",
     "options": [
       "A) Trizomi 21 (Down Sendromu)",
@@ -1297,8 +1373,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 9,
     "slideTitle": "Artmış Ense Saydamlığı (NT >= 3.5 mm) ve Kistik Higroma Klinik Algoritması",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "12. gebelik haftasında ultrasonografide bilateral internal septasyonlu kistik higroma ve 5.2 mm NT ölçülen bir fetüste koryon villus biyopsisi ile yapılan karyotip ve kromozomal mikrodizi (CMA) analizi 46,XX (normal) olarak raporlanmıştır. Bu olgunun ileri yönetiminde öncelikle hangi iki yaklaşım planlanmalıdır?",
     "options": [
       "A) Yalnızca rutin üçüncü trimester ultrasonu ve normal vajinal doğum planı",
@@ -1316,8 +1392,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 10,
     "slideTitle": "İkinci Trimester Üçlü Tarama Testi ve Belirteçlerin Biyolojik Dinamikleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "17. gebelik haftasında başvuran 32 yaşındaki bir gebenin üçlü tarama testinde laboratuvar sonuçları şu şekildedir: MSAFP: 0.35 MoM, uE3: 0.28 MoM, Total hCG: 0.30 MoM. Bu fötusta öncelikle hangi anöploidi riski düşünülmelidir?",
     "options": [
       "A) Trizomi 21 (Down Sendromu)",
@@ -1335,8 +1411,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 11,
     "slideTitle": "İkinci Trimester Dörtlü Tarama Testi ve Dimerik İnhibin-A'nın Rolü",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "16 haftalık bir gebenin ikinci trimester dörtlü tarama testinde MSAFP: 0.65 MoM, uE3: 0.60 MoM, Total hCG: 2.10 MoM ve Dimerik İnhibin-A: 1.95 MoM olarak rapor edilmiştir. Bu bulgular ışığında fötusta en yüksek risk taşıyan genetik durum hangisidir?",
     "options": [
       "A) Açık Nöral Tüp Defekti",
@@ -1354,8 +1430,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 12,
     "slideTitle": "Maternal Serum Alfa-Fetoprotein (MSAFP) Yüksekliği ve Fetal Patolojiler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "16 haftalık bir primigravid gebede yapılan maternal serum AFP taramasında MSAFP değeri 6.5 MoM (aşırı yüksek) olarak saptanmıştır. Yapılan detaylı ultrasonografide göbek kordonu insersiyonunun sağ tarafında, üzeri periton zarı ile örtülü olmayan ve amniyon sıvısı içinde serbestçe yüzen bağırsak ansları izlenmiştir. Bu gebede en olası tanı aşağıdakilerden hangisidir?",
     "options": [
       "A) Omfalosel",
@@ -1373,8 +1449,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 13,
     "slideTitle": "Nöral Tüp Defektleri (NTD): Patofizyoloji, Tanı, Ultrason Bulguları ve Folik Asit Profilaksisi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Daha önce miyelomeningoselli bir çocuk doğurma öyküsü olan 29 yaşındaki bir kadın yeniden gebe kalmayı planlamaktadır. Bu kadında nöral tüp defekti tekrarlama riskini anlamlı düzeyde azaltmak için en uygun folik asit başlama zamanı ve günlük dozu aşağıdakilerden hangisidir?",
     "options": [
       "A) Gebelik testinin pozitif çıktığı gün başlanmalı, günlük 0.4 mg verilmelidir",
@@ -1392,8 +1468,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 14,
     "slideTitle": "Hücresiz Fetal DNA Taraması (cfDNA / NIPT): Biyolojik Köken ve Analitik Teknolojiler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Hücresiz fötal DNA (cfDNA / NIPT) tarama testinin biyolojik özellikleri ve fötal fraksiyon dinamikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
       "A) Maternal plazmadaki hücresiz fetal DNA'nın ana kaynağı plasental sinsisyotrofoblast apoptozudur",
@@ -1411,8 +1487,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 15,
     "slideTitle": "Hücresiz Fetal DNA Taramasında Doğruluk Sınırları, Yalancı Sonuçlar ve Klinik Yönetim",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "25 yaşındaki primigravid bir gebenin 11. haftada yaptırdığı cfDNA (NIPT) taramasında Trizomi 21 riski 1/5 (yüksek risk) olarak rapor edilmiştir. Fetal ultrasonda herhangi bir majör malformasyon saptanmayan bu gebeye yaklaşımda bir sonraki en uygun klinik adım ne olmalıdır?",
     "options": [
       "A) NIPT'in saptama gücü >%99 olduğu için ek teste gerek duyulmaksızın gebelik derhal sonlandırılmalıdır",
@@ -1430,8 +1506,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 16,
     "slideTitle": "Koryon Villus Örneklemesi (CVS): Uygulama Tekniği, Zamanlaması ve Endikasyonları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Koryon villus örneklemesi (CVS) yöntemi ile ilgili aşağıdaki klinik ifadelerden hangisi yanlıştır?",
     "options": [
       "A) Standart uygulama aralığı 11-14. gebelik haftalarıdır",
@@ -1449,8 +1525,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 17,
     "slideTitle": "CVS Laboratuvar Dinamikleri: Direkt Analiz vs Uzun Süreli Kültür",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Koryon villus biyopsisi (CVS) materyalinden yapılan sitogenetik analiz yöntemleri karşılaştırıldığında, 'Direkt Yöntem'in 'Uzun Süreli Kültür Yöntemi'ne göre en belirgin avantajı aşağıdakilerden hangisidir?",
     "options": [
       "A) Çok daha yüksek bant çözünürlüğü (550-600 bant) sağlaması",
@@ -1468,8 +1544,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 18,
     "slideTitle": "Amniyosentez: Uygulama Tekniği, Fetal Hücre Dinamikleri ve Güvenlik Profili",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Prenatal tanı amacıyla 13. gebelik haftasında 'Erken Amniyosentez' uygulanmasının, 16. haftada uygulanan klasik amniyosenteze kıyasla fötusta belirgin artış gösteren en tipik ortopedik komplikasyonu aşağıdakilerden hangisidir?",
     "options": [
       "A) Akondroplazi",
@@ -1487,8 +1563,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 19,
     "slideTitle": "Amniyotik Sıvı Biyokimyası, Enzim Tayinleri ve Fetal Enfeksiyon Analizi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Fetal ultrasonografide 20. haftada periventriküler kalsifikasyonlar, mikrosefali ve intrauterin gelişme geriliği saptanan bir gebede fetal Sitomegalovirüs (CMV) enfeksiyonu şüphesi mevcuttur. Fetüsün enfekte olduğunu kesin olarak kanıtlayan en duyarlı prenatal tanı yöntemi aşağıdakilerden hangisidir?",
     "options": [
       "A) Maternal serumda CMV IgG avidite testinin yüksek çıkması",
@@ -1506,8 +1582,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 20,
     "slideTitle": "Kordosentez (Perkütan Umbilikal Kan Örneklemesi - PUBS): Endikasyonlar ve Riskler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "23 haftalık bir gebede ultrasonda multipl kardiyak ve serebral malformasyonlar saptanmıştır. Yasal tahliye süresi yaklaşan bu hastada en hızlı şekilde (48-72 saat içinde) tam sitogenetik karyotip analizi elde etmek için tercih edilmesi gereken invaziv yöntem aşağıdakilerden hangisidir?",
     "options": [
       "A) Kordosentez (Fetal kan örneklemesi)",
@@ -1525,8 +1601,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 21,
     "slideTitle": "Hızlı Moleküler Sitogenetik Yöntemler: QF-PCR ve Floresan İn Situ Hibridizasyon (FISH)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Amniyosentez materyalinden uygulanan QF-PCR analizinde, 21. kromozoma özgü üç farklı polimorfik STR lokusunda kapiller elektroforezde 1:1:1 floresan pik alanı oranı (triallelik patern) saptanmıştır. Bu fötal DNA profili aşağıdakilerden hangisi için kesin kanıttır?",
     "options": [
       "A) Normal diploid karyotip",
@@ -1544,8 +1620,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 22,
     "slideTitle": "Kromozomal Mikrodizi Analizi (CMA / Array-CGH) ve Yeni Nesil Dizileme (WES)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Fetal ultrasonografide Fallot tetralojisi ve timus hipoplazisi saptanan bir fetüste standart G-bantlama karyotip analizi 46,XX (normal) olarak raporlanmıştır. Bu olguda DiGeorge sendromu (22q11.2 delesyonu) gibi submikroskopik kromozomal delesyonları saptamak için öncelikle hangi moleküler genetik yöntem tercih edilmelidir?",
     "options": [
       "A) Maternal serumda dörtlü tarama testi",
@@ -1563,8 +1639,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 23,
     "slideTitle": "Prenatal Sitogenetikte Kritik Tanısal Problemler: Mozaizm, CPM ve Uniparental Dizomi (UPD)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Koryon villus biyopsisinde Trizomi 15 saptanan ancak daha sonra yapılan amniyosentezde 46,XX (normal diploid) karyotip belirlenen bir fetüste, trizomik kurtuluş (trisomy rescue) mekanizması sonucu gelişebilecek ve fötusta Prader-Willi sendromuna yol açabilecek epigenetik bozukluk aşağıdakilerden hangisidir?",
     "options": [
       "A) Paternal Uniparental Dizomi 15",
@@ -1582,8 +1658,8 @@
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
     "slideNumber": 24,
     "slideTitle": "Preimplantasyon Genetik Tanı (PGT): Yöntemler, Trofektoderm Biyopsisi ve Gelecek Perspektifleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
     "question": "Preimplantasyon Genetik Tanı (PGT) uygulamasında blastokist evresinde (5. gün) gerçekleştirilen 'Trofektoderm Biyopsisi' ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
     "options": [
       "A) Fötusu oluşturacak olan iç hücre kitlesine (ICM) dokunulmadan uygulanır",
@@ -1596,307 +1672,231 @@
     "explanation": "PGT tanısal güvenirliği çok yüksek bir yöntem olsa da, trofektoderm mozaizmi veya teknik artefaktlar nedeniyle PGT ile sağlanan gebeliklerde 1. veya 2. trimesterde invaziv prenatal tanı (CVS veya tercihen amniyosentez) ile sonucun doğrulanması uluslararası kılavuzlarca önerilmektedir; 'asla teyit gerekmez' ifadesi yanlıştır."
   },
   {
-    "id": "prac-nef-001",
+    "id": "nef-pq-1",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 1,
-    "slideTitle": "Nefrotik Sendrom: Klinik Tanım ve Kardinal Bulgular",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Glomerüler Filtrasyon Bariyerinin Mimarisi: Pencereli Endotel, GBM ve Podosit Üçlüsü",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdakilerden hangisi nefrotik sendromun klasik tanı kriterleri arasında yer almaz?",
+    "question": "Glomerüler filtrasyon bariyerinin anatomik ve fonksiyonel organizasyonu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Günlük 3.5 gramı aşan ağır proteinüri",
-      "B) Serum albümin düzeyinin 3 g/dL altına düşmesi",
-      "C) Belirgin dismorfik eritrositler ve eritrosit silindirleri içeren idrar sedimenti",
-      "D) Karaciğerde kompansatuar sentez artışına bağlı hiperkolesterolemi",
-      "E) Polarize ışık altında Maltese haçı görüntüsü veren oval yağ cisimcikleri"
+      "A) Kapiller endotel fenestraları 20-30 nm genişliğinde olup albüminin geçişini tamamen engeller",
+      "B) Filtrasyon bariyeri lümenden üriner boşluğa doğru sırasıyla pencereli endotel, GBM ve podosit ayak çıkıntılarından oluşur",
+      "C) Glomerüler bazal membranın orta katmanı olan lamina rara interna Tip I kollajenden zengindir",
+      "D) Podosit pediselleri arasındaki yarık diyaframı hücresel kan elemanlarını tutan ilk ve ana süzgeçtir",
+      "E) Glomerülde endotel hücre pencereleri kalın bir protein diyaframı ile tamamen kapalıdır"
     ],
-    "correctAnswer": 2,
-    "explanation": "Dismorfik eritrositler ve eritrosit silindirleri nefritik sendromun ayırt edici bulgusudur. Nefrotik sendromda idrar sedimenti genellikle hücresiz (bland) olup lipid damlacıkları ve hiyalen silindirler içerir."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Glomerüler filtrasyon bariyeri kan lümeninden Bowman aralığına doğru pencereli endotel, glomerüler bazal membran ve podositlerin oluşturduğu viseral epitel tabakasından meydana gelir.\n\nA yanlıştır; endotel fenestraları 70-100 nm'dir ve albümini tek başına tutamaz.\nC yanlıştır; GBM'de Tip I kollajen değil, Tip IV kollajen bulunur; lamina rara interna endotel komşuluğundaki iç kattır.\nD yanlıştır; kan hücrelerini tutan ilk engel podositler değil, pencereli endoteldir.\nE yanlıştır; glomerül kapiller endotel pencereleri diyaframsız (açık) porlardır."
   },
   {
-    "id": "prac-nef-002",
+    "id": "nef-pq-2",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 2,
-    "slideTitle": "Glomerüler Filtrasyon Bariyeri ve Podosit Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Glomerüler Bazal Membranın Biyokimyasal Ultrastrüktürü ve Anyonik Yük Bariyeri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Konjenital Fin tipi nefrotik sendromda primer defekt olan ve slit diyaframın ana iskeletini oluşturan protein aşağıdakilerden hangisidir?",
+    "question": "Glomerüler bazal membranın (GBM) biyokimyasal yapısı ve elektriksel yük seçiciliği ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      "A) Podosin",
-      "B) Nefrin",
-      "C) Alfa-aktinin-4",
-      "D) Tip IV kollajen alfa-5 zinciri",
-      "E) Laminin beta-2"
+      "A) GBM'deki polianyonik yükün temel kaynağı Tip I ve Tip III kollajen lifleridir",
+      "B) Matür GBM Tip IV kollajenin alfa-3, alfa-4 ve alfa-5 zincirlerinden zengin olup Goodpasture antijeni alfa-3 zincirinde yer alır",
+      "C) Serum albümini pozitif yüklü bir protein olduğu için GBM'deki pozitif yüklü proteinler tarafından itilir",
+      "D) Alport sendromunda heparan sülfat sentezleyen genlerde mutasyon sonucu sadece nefrotik sendrom görülür",
+      "E) Lamina densa tabakası tamamen lipidsi yapıda olup hidrofilik moleküllerin geçişini bloke eder"
     ],
     "correctAnswer": 1,
-    "explanation": "Fin tipi konjenital nefrotik sendrom NPHS1 geninde mutasyon sonucu nefrin proteininin sentezlenememesiyle oluşur ve doğumdan itibaren masif proteinüri ile seyreder."
+    "explanation": "Doğru yanıt B'dir. Matür GBM Tip IV kollajen alfa-3, alfa-4 ve alfa-5 zincirlerinden oluşur. Goodpasture hastalığında oluşan otoantikorlar alfa-3 zincirinin C-terminal küresel NC1 domainine bağlanarak lineer immünfloresan boyanma verir.\n\nA yanlıştır; GBM'de Tip I/III kollajen yoktur, anyonik yükün kaynağı heparan sülfattır.\nC yanlıştır; albümin negatif yüklüdür ve heparan sülfatın negatif yükü ile itilir.\nD yanlıştır; Alport sendromu *COL4A5* mutasyonuna bağlı Tip IV kollajen defektidir, heparan sülfat defekti değildir.\nE yanlıştır; lamina densa lipid değil, Tip IV kollajen ve lamininden zengin protein matriksidir."
   },
   {
-    "id": "prac-nef-003",
+    "id": "nef-pq-3",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 3,
-    "slideTitle": "Nefrotik Sendromun Komplikasyonları ve Tromboemboli Riski",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Podosit Biyolojisi ve Yarık Diyaframı (Slit Diaphragm) Moleküler Kompleksi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Membranöz nefropatili bir hastada gelişen ani sol yan ağrısı ve makroskopik hematüride en olası tromboembolik komplikasyon aşağıdakilerden hangisidir?",
+    "question": "Podosit mimarisinde yarık diyaframını (slit diaphragm) oluşturan moleküler bileşenler ve ilişkili genetik nefropatiler ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Splenik ven trombozu",
-      "B) Renal ven trombozu",
-      "C) Portal ven trombozu",
-      "D) Mezenterik arter embolisi",
-      "E) İntrakraniyal sinüs trombozu"
+      "A) Nefrin (*NPHS1*) mutasyonu - Alport sendromu ve sensörinöral işitme kaybı",
+      "B) Podosin (*NPHS2*) mutasyonu - Fin tipi konjenital nefrotik sendrom",
+      "C) Nefrin (*NPHS1*) mutasyonu - Fin tipi konjenital nefrotik sendrom",
+      "D) Alfa-aktinin-4 (*ACTN4*) mutasyonu - X'e bağlı Alport sendromu",
+      "E) TRPC6 kalsiyum kanalı mutasyonu - Minimal Değişiklik Hastalığı"
     ],
-    "correctAnswer": 1,
-    "explanation": "Nefrotik sendromda (özellikle Membranöz Nefropatide) AT-III kaybına bağlı hiperkoagülabilite sonucu en karakteristik komplikasyon renal ven trombozudur; akut yan ağrısı ve hematüriyle belirir."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Nefrin proteini *NPHS1* geni tarafından kodlanır ve mutasyonu Fin tipi konjenital nefrotik sendroma yol açar.\n\nA yanlıştır; Alport sendromu Tip IV kollajen gen (*COL4A5*) mutasyonudur.\nB yanlıştır; Fin tipi sendrom *NPHS1* (Nefrin) mutasyonudur, *NPHS2* (Podosin) ise steroide dirençli OD/OR FSGS yapar.\nD yanlıştır; *ACTN4* mutasyonu otozomal dominant FSGS'ye yol açar, Alport sendromuna değil.\nE yanlıştır; TRPC6 aşırı aktivasyonu OD ailesel FSGS yapar, Minimal Değişiklik Hastalığı yapmaz."
   },
   {
-    "id": "prac-nef-004",
+    "id": "nef-pq-4",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 4,
-    "slideTitle": "Minimal Değişiklik Hastalığı (MDH): Etyopatogenez ve Epidemiyoloji",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Glomerüler İmmün Hasar Mekanizmaları: Dolaşan ve İn Situ İmmün Kompleksler",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Çocukluk çağında ani başlayan yaygın ödem ve ağır proteinüri ile başvuran 4 yaşındaki hastada en olası primer glomerüler tanı aşağıdakilerden hangisidir?",
+    "question": "Glomerüler hastalıklarda immün hasar mekanizmaları ve immünfloresan bulguları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Membranöz nefropati",
-      "B) Fokal segmental glomerüloskleroz",
-      "C) Minimal değişiklik hastalığı",
-      "D) Membranoproliferatif glomerülonefrit tip I",
-      "E) IgA nefropatisi"
+      "A) Membranöz nefropatide podosit yüzeyindeki PLA2R antijenine karşı antikor bağlanması in situ immün kompleks modelidir",
+      "B) Dolaşımdaki immün komplekslerin glomerüle oturması immünfloresanda granüler birikim deseni oluşturur",
+      "C) Anti-GBM hastalığında otoantikorlar bazal membranın Tip IV kollajenine homojen bağlanarak lineer desen verir",
+      "D) Subendotelyal immün kompleksler lümene açık olduklarından nötrofilleri uyararak proliferatif nefritik hasara yol açar",
+      "E) Subepitelyal immün depozitler nötrofilleri masif olarak glomerüle çekerek nekrotizan hilal (kresent) oluşumunu tetikler"
     ],
-    "correctAnswer": 2,
-    "explanation": "2-6 yaş grubu çocuklarda nefrotik sendromun en sık nedeni (%90) Minimal Değişiklik Hastalığıdır."
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Subepitelyal depozitler glomerüler bazal membranın üriner tarafında (podosit altında) yer aldığından kapiller lümendeki lökositlerle doğrudan temas edemez. Bu nedenle nötrofilleri masif çekemez ve nekrotizan kresent oluşturmaz; tam aksine hücresiz, sakin glomerül ile masif proteinüri (nefrotik sendrom) tablosuna yol açar.\n\nA, B, C ve D seçeneklerindeki tüm bilgiler patofizyolojik olarak kesinlikle doğrudur."
   },
   {
-    "id": "prac-nef-005",
+    "id": "nef-pq-5",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 5,
-    "slideTitle": "Minimal Değişiklik Hastalığı: Morfoloji ve Mikroskobik Ayrım",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Nefrotik Sendromun Tanısal Pentadı ve Masif Proteinürinin Patofizyolojisi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Böbrek biyopsisinde ışık ve immünofloresan mikroskobunda belirgin patoloji izlenmeyen, ancak elektron mikroskobunda visseral epitel hücrelerinin ayaksı çıkıntılarında yaygın silinme saptanan hastada tanı nedir?",
+    "question": "Nefrotik sendromun tanısal kriterleri ve proteinüri patofizyolojisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Erken evre Membranöz nefropati",
-      "B) Minimal değişiklik hastalığı",
-      "C) Alport sendromu",
-      "D) Fokal segmental glomerüloskleroz hücresel varyant",
-      "E) C3 glomerulopatisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "LM ve İF tamamen normal iken EM'de podosit ayaksı çıkıntılarının silinmesi Minimal Değişiklik Hastalığı için tanı koydurucudur."
-  },
-  {
-    "id": "prac-nef-006",
-    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Minimal Değişiklik Hastalığı: Proteinüri Selektivitesi ve Tedavi Yanıtı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Minimal Değişiklik Hastalığı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Proteinüri yüksek oranda selektiftir ve baskın olarak albüminden oluşur",
-      "B) Çocuk hastalarda kortikosteroid tedavisine yanıt mükemmeldir (%90+)",
-      "C) Serum kompleman düzeyleri (C3 ve C4) belirgin derecede düşüktür",
-      "D) İlerleyici son dönem böbrek yetmezliği gelişimi son derece nadirdir",
-      "E) Sık relapslar görülebilmesine rağmen uzun dönem prognozu çok iyidir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Minimal Değişiklik Hastalığında kompleman aktivasyonu ve tüketimi gerçekleşmez; serum C3 ve C4 düzeyleri tamamen normaldir."
-  },
-  {
-    "id": "prac-nef-007",
-    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Fokal Segmental Glomerüloskleroz (FSGS): Tanım ve Sınıflama",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdakilerden hangisi Fokal Segmental Glomerüloskleroz (FSGS) gelişimine yol açan genetik mutasyonlardan biri değildir?",
-    "options": [
-      "A) NPHS2 (Podosin)",
-      "B) ACTN4 (Alfa-aktinin-4)",
-      "C) TRPC6",
-      "D) PLA2R1 (Fosfolipaz A2 reseptörü)",
-      "E) INF2"
+      "A) Erişkinde 24 saatlik idrarda 1.5 gram protein atılımı nefrotik sendrom tanısı için yeterlidir",
+      "B) Nefrotik sendromda hipoalbüminemi tanısı için serum albümin düzeyinin mutlaka < 1.0 g/dL olması şarttır",
+      "C) Minimal Değişiklik Hastalığında tipik olarak yüksek moleküler ağırlıklı immünglobulinlerin atıldığı non-selektif proteinüri görülür",
+      "D) Erişkinde > 3.5 g/gün proteinüri, hipoalbüminemi (< 3.0 g/dL), yaygın ödem ve hiperlipidemi tablosu nefrotik sendromu tanımlar",
+      "E) Karaciğer albümin sentezini artıramadığı için 500 mg/gün proteinüri bile hızla anazarkaya yol açar"
     ],
     "correctAnswer": 3,
-    "explanation": "PLA2R1 mutasyonu değil, PLA2R antijenine karşı otoantikor gelişimi Primer Membranöz Nefropatinin patogenezinde rol oynar. Diğerleri FSGS ile ilişkili podosit genleridir."
+    "explanation": "Doğru yanıt D'dir. Nefrotik sendromun klasik pentadı: Erişkinde >3.5 g/gün masif proteinüri, hipoalbüminemi (<3.0 g/dL), yaygın ödem, hiperlipidemi ve lipidüridir.\n\nA yanlıştır; erişkinde nefrotik eşik >3.5 g/gün'dür.\nB yanlıştır; tanısal eşik <3.0 g/dL'dir (genellikle <2.5 g/dL).\nC yanlıştır; Minimal Değişiklik Hastalığında non-selektif değil, selektif (saf albümin) proteinüri görülür.\nE yanlıştır; karaciğer günde 12-15 grama kadar albümin üretebilir, 500 mg/gün kayıp hipoalbüminemi yapmaz."
   },
   {
-    "id": "prac-nef-008",
+    "id": "nef-pq-6",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "FSGS: Morfolojik Özellikler ve Histopatolojik Varyantlar",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 6,
+    "slideTitle": "Nefrotik Ödem Patofizyolojisi: Starling Dengesi, Underfill ve Overfill Teorileri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "HIV pozitif bir hastada hızlı ilerleyen nefrotik sendrom ve böbrek yetmezliği saptanıyor. Biyopside glomerül kapillerlerinin kollabe olduğu ve podosit proliferasyonu izlendiğinde en olası FSGS morfolojik varyantı hangisidir?",
+    "question": "Nefrotik sendromlu bir hastada gelişen yaygın ödemin patofizyolojisinde yer alan mekanizmalar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Tip varyant",
-      "B) Perihiler varyant",
-      "C) Kollaps varyant",
-      "D) Hücresel varyant",
-      "E) NOS varyant"
+      "A) Hipoalbüminemiye bağlı plazma kolloid onkotik basıncının azalması sıvının interstisyel alana kaçışını kolaylaştırır",
+      "B) Efektif arteriyel kan hacminin azalması durumunda sempatik sistem ve RAAS aktive olarak sekonder sodyum tutulumunu uyarır",
+      "C) Overfill teorisinde filtre edilen plazminin kortikal toplayıcı tübüllerde ENaC kanallarını proteolitik olarak aktive ettiği gösterilmiştir",
+      "D) Nefrotik sendromda ödem gelişebilmesi için istisnasız tüm hastalarda ölçülen plazma renin ve aldosteron düzeylerinin aşırı yüksek olması şarttır",
+      "E) İnterstisyel doku hidrostatik basıncının düşük olduğu periorbital bölge nefrotik ödemin erken ve belirgin görüldüğü alanlardandır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Overfill teorisinin geçerli olduğu hastalarda intravasküler hacim genişlemiştir ve buna bağlı olarak plazma renin ve aldosteron düzeyleri baskılanmış (düşük) olabilir. Dolayısıyla tüm hastalarda RAAS'ın aşırı yüksek olması şart değildir.\n\nA, B, C ve E seçenekleri nefrotik ödem patofizyolojisinin kanıtlanmış temel kurallarıdır."
+  },
+  {
+    "id": "nef-pq-7",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 7,
+    "slideTitle": "Nefrotik Hiperlipidemi ve Lipidüri: Karaciğer Sentez Körüklenmesi ve Malta Haçı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromlu bir hastanın idrar incelemesinde saptanan oval yağ cisimcikleri ve hiperlipidemi patofizyolojisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Oval yağ cisimcikleri glomerül mezangiyal hücrelerinin doğrudan idrara dökülmesiyle oluşur",
+      "B) İdrar sedimentindeki lipid damlacıkları polarize ışık mikroskobunda karakteristik Malta Haçı (Maltese cross) paterni verir",
+      "C) Nefrotik hiperlipideminin tek nedeni bağırsaklardan kolesterol emiliminin yüzde yüz artmasıdır",
+      "D) Nefrotik hastalarda periferik kapiller endotelindeki Lipoprotein Lipaz (LPL) aktivitesi aşırı yükselir",
+      "E) Lipidüri bulgusu sadece nefritik sendromlu hastalarda görülüp nefrotik sendromda asla izlenmez"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Nefrotik sendromda idrara filtre olan kolesterol esterleri tübül epitel hücrelerinde fagosite edilerek oval yağ cisimcikleri oluşturur ve polarize ışık mikroskobunda karakteristik Malta Haçı (Maltese cross) çift kırınımı sergiler.\n\nA yanlıştır; oval yağ cisimcikleri mezangiyal hücre değil, lipid yüklenmiş proksimal tübül epitel hücreleridir.\nC yanlıştır; ana mekanizma karaciğerde ApoB sentezinin artması ve periferik klirensin azalmasıdır.\nD yanlıştır; LPL aktivitesi artmaz, tam aksine belirgin olarak azalır/baskılanır.\nE yanlıştır; lipidüri nefrotik sendromun kardinal bulgusudur."
+  },
+  {
+    "id": "nef-pq-8",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 8,
+    "slideTitle": "Nefrotik Sendromun Hayati Komplikasyonları: Enfeksiyon Riski ve Tromboemboli",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromlu bir hastada ortaya çıkan enfeksiyon ve tromboemboli komplikasyonlarının moleküler mekanizmaları ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) İdrarla immünglobulin G (IgG) kaybı - Streptococcus pneumoniae peritoniti ve sepsis yatkınlığı",
+      "B) İdrarla Kompleman Faktör B kaybı - Alternatif kompleman opsonizasyon defekti",
+      "C) İdrarla Antitrombin III (AT-III) kaybı - Plazma pıhtılaşma eğiliminde ve venöz tromboz riskinde artış",
+      "D) Karaciğerde fibrinojen sentezinin artması - Hiperkoagülabilite zeminini güçlendirme",
+      "E) İdrarla Fibrinojen ve Faktör VIII kaybı - Ağır hemofili benzeri spontan kanama diyatezi"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Nefrotik sendromda fibrinojen ve Faktör VIII idrarla kaybedilmez; aksine karaciğerin reaktif protein sentezi artışı nedeniyle serumda düzeyleri katbekat artar. Bu durum kanamaya değil, ağır tromboza (hiperkoagülabiliteye) yol açar.\n\nA, B, C ve D seçeneklerindeki tüm eşleştirmeler nefrotik patofizyolojinin en temel gerçekleridir."
+  },
+  {
+    "id": "nef-pq-9",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 9,
+    "slideTitle": "Nefrotik Sendromun Epidemiyolojisi ve Etyolojik Dağılımı: Çocuk vs Erişkin",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromun epidemiyolojisi, yaş gruplarına göre primer nedenlerin dağılımı ve tanısal yaklaşım ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Membranöz nefropati 2-6 yaş grubu çocuklarda nefrotik sendromun en sık primer nedenidir",
+      "B) Çocukluk çağında nefrotik sendromlu her hastaya steroid tedavisine başlamadan önce mutlaka böbrek biyopsisi yapılmalıdır",
+      "C) Minimal Değişiklik Hastalığı çocukluk çağı nefrotik sendromunun %65-90'ından sorumlu en sık primer nedendir",
+      "D) Erişkinlerde primer nefrotik sendrom olgularının %80'inden fazlasını Minimal Değişiklik Hastalığı oluşturur",
+      "E) Fokal segmental glomerüloskleroz sadece 70 yaş üstü geriatrik popülasyonda görülen nadir bir hastalıktır"
     ],
     "correctAnswer": 2,
-    "explanation": "HIV ilişkili nefropatide (HIVAN) en karakteristik histolojik form kapiller kollaps ve belirgin podosit hipertrofisi/hiperplazisi ile seyreden Kollaps varyant FSGS'dir."
+    "explanation": "Doğru yanıt C'dir. Minimal Değişiklik Hastalığı çocukluk çağı nefrotik sendromunun %65-90'ını oluşturarak açık ara en sık primer nedendir.\n\nA yanlıştır; membranöz nefropati çocuklarda <%5'tir, en sık neden MCD'dir.\nB yanlıştır; çocuklarda ilk basamakta biyopsi yapılmaz, doğrudan ampirik steroid başlanır.\nD yanlıştır; erişkinde MCD yalnızca %10-15'tir; en sık primer nedenler FSGS (%35) ve Membranözdür (%30).\nE yanlıştır; FSGS genç erişkinlerde ve çocuklarda da sık görülen majör bir glomerülopatidir."
   },
   {
-    "id": "prac-nef-009",
+    "id": "nef-pq-10",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "FSGS: Klinik Özellikler, Steroid Direnci ve Transplant Nüksü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Primer FSGS nedeniyle son dönem böbrek yetmezliğine girerek böbrek nakli yapılan bir hastada nakilden 48 saat sonra ağır nefrotik proteinüri başlamasını en iyi açıklayan patofizyolojik mekanizma hangisidir?",
-    "options": [
-      "A) Akut hücresel doku reddi (rejeksiyon)",
-      "B) Dolaşımdaki podosit toksik permeabilite faktörünün allogrefte hasar vermesi",
-      "C) Siklosporin toksisitesine bağlı tubuler nekroz",
-      "D) Vericide var olan asemptomatik nefrit",
-      "E) Sitomegalovirüs enfeksiyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Primer FSGS'nin nakil sonrası saatler-günler içinde allogreftte hızla nüks etmesi, dolaşımda podosit slit diyaframını bozan dolaşan bir permeabilite faktörünün varlığıyla açıklanır."
-  },
-  {
-    "id": "prac-nef-010",
-    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 10,
-    "slideTitle": "Membranöz Nefropati: Patogenez ve Otoantikorlar",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Minimal Değişiklik Hastalığı (MCD / Lipoid Nefroz): Klinik Epidemiyoloji ve Patogenez",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Erişkin bir hastada primer membranöz nefropati patogenezinde podosit yüzeyindeki hangi endojen antijene karşı gelişen otoantikorlar majör rol oynar?",
+    "question": "Minimal Değişiklik Hastalığının (Lipoid Nefroz) etyolojisi, patogenezi ve klinik birliktelikleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      "A) Megalin",
-      "B) M-tipi Fosfolipaz A2 Reseptörü (PLA2R)",
-      "C) Nefrin",
-      "D) Podokaliksin",
-      "E) Glomerüler bazal membran tip IV kollajen alfa-3 zinciri"
+      "A) Hastalık primer olarak B-lenfositlerinin Tip I kollajene karşı oluşturduğu kompleman bağlayan otoantikorlarla gelişir",
+      "B) En sık 50-70 yaş arası erkeklerde akciğer karsinomuna sekonder paraneoplastik komplikasyon olarak görülür",
+      "C) Patojenik mekanizmada T-lenfosit kökenli permeabilite sitokinleri rol oynar ve Hodgkin lenfoma ile belirgin birliktelik gösterir",
+      "D) Podositlerin bazal membrandan tamamen döküldüğü geri dönüşümsüz apoptoz kaskadı ana lezyondur",
+      "E) Aşılama veya üst solunum yolu enfeksiyonları hastalığın seyrini daima korur ve nüksleri engeller"
     ],
-    "correctAnswer": 1,
-    "explanation": "Primer membranöz nefropatili olguların yaklaşık %70-80'inde podosit M-tipi fosfolipaz A2 reseptörüne (PLA2R) karşı otoantikorlar saptanır."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Minimal Değişiklik Hastalığında T-hücre kökenli dolaşan permeabilite faktörleri (IL-13 vb.) podosit hasarını tetikler. Paraneoplastik olarak en sık Hodgkin lenfoma ile, ilaç olarak NSAİİ ile birliktelik gösterir.\n\nA yanlıştır; Tip I kollajene karşı antikor yoktur, immün depozitsiz bir hastalıktır.\nB yanlıştır; 2-6 yaş çocuklarda sıktır; akciğer kanseri ile ilişkili olan Membranöz Nefropatidir.\nD yanlıştır; podosit dökülmesi (denüdasyon) FSGS'de görülür, MCD'de ise geri dönüşümlü ayak silinmesi vardır.\nE yanlıştır; enfeksiyon ve aşılamalar atağı ve nüksleri tetikler."
   },
   {
-    "id": "prac-nef-011",
+    "id": "nef-pq-11",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 11,
-    "slideTitle": "Membranöz Nefropati: Morfoloji, 'Spike and Dome' ve Gümüşleme",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Minimal Değişiklik Hastalığında Üçlü Mikroskopi: Normal LM, Negatif IF ve Diffüz Podosit Silinmesi (EM)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Nefrotik sendromlu bir hastanın böbrek biyopsisinde gümüşleme boyamasında glomerül bazal membranında tipik 'spike and dome' (diken ve kubbe) manzarası ve İF'de kapiller duvarda granüler IgG birikimi saptanıyor. Tanı nedir?",
+    "question": "Dört yaşında bir çocuğun böbrek biyopsisinde ışık mikroskopisinde glomerüller tamamen normal izlenmiş, immünfloresan incelemede hiçbir immünglobulin veya kompleman boyanması saptanmamış, elektron mikroskopisinde ise immün depozit olmaksızın sadece podosit ayak uzantılarında yaygın silinme görülmüştür.\n\nBu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Poststreptokokkal glomerülonefrit",
-      "B) Membranöz nefropati",
-      "C) Membranoproliferatif glomerülonefrit tip I",
-      "D) Goodpasture hastalığı",
-      "E) Minimal değişiklik hastalığı"
+      "A) Membranöz Nefropati",
+      "B) Fokal Segmental Glomerüloskleroz (Tip varyantı)",
+      "C) Minimal Değişiklik Hastalığı",
+      "D) Postenfeksiyöz Glomerülonefrit",
+      "E) Membranoproliferatif Glomerulonefrit Tip I"
     ],
-    "correctAnswer": 1,
-    "explanation": "Gümüşleme boyasında 'spike and dome' görüntüsü ve granüler subepitelyal IgG birikimi Membranöz Nefropatinin patognomonik morfolojik bulgusudur."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Işık mikroskopisinde glomerüllerin normal olması, immünfloresanın negatif olması ve elektron mikroskopisinde elektron-dans depozit bulunmaksızın sadece podosit pedisellerinde diffüz silinme izlenmesi Minimal Değişiklik Hastalığının klasik ve patognomonik triadıdır.\n\nA yanlıştır; membranöz nefropatide subepitelyal granüler IgG ve C3 depozitleri ile spike-dome vardır.\nB yanlıştır; FSGS'de segmental skleroz ve IgM/C3 tuzaklanması görülür.\nD yanlıştır; postenfeksiyöz GN'de hiperhücrelilik, granüler 'yıldızlı gökyüzü' IF ve subepitelyal hörgüçler (humps) vardır.\nE yanlıştır; MPGN'de tramvay rayı çift kontur ve subendotelyal depozitler izlenir."
   },
   {
-    "id": "prac-nef-012",
+    "id": "nef-pq-12",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 12,
-    "slideTitle": "Membranöz Nefropati: Klinik Seyir ve 'Üçte Bir' Kuralı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Minimal Değişiklik Hastalığında Klinik Seyir, Yüksek Selektiviteli Proteinüri ve Steroid Yanıtı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Membranöz nefropatinin klinik seyri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "question": "Minimal Değişiklik Hastalığının klinik tablosu, idrar tetkiki özellikleri ve tedavi yanıtı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Hastaların tümü ilk 1 yıl içinde hızla son dönem böbrek yetmezliğine girer",
-      "B) Olguların yaklaşık üçte birinde kendiliğinden spontan remisyon görülebilir",
-      "C) Steroid monoterapisine çocuklardaki MDH gibi %90 yanıt verir",
-      "D) Proteinüri daima yüksek selektif albüminüriden ibarettir",
-      "E) Tromboembolik komplikasyonlar bu hastalıkta hiç görülmez"
+      "A) Hastaların tümünde başlangıçtan itibaren belirgin hipertansiyon ve makroskopik hematüri izlenir",
+      "B) İdrara filtre olan proteinlerin büyük kısmını immünglobulin G oluşturduğu için non-selektif proteinüri görülür",
+      "C) Pediyatrik olguların %90'ından fazlası kortikosteroid tedavisine hızlı ve tam remisyon ile yanıt verir",
+      "D) Kortikosteroid tedavisine yanıt oranı %10'un altında olup tüm hastalar 2 yılda diyalize girer",
+      "E) Relaps gösteren hiçbir hastada böbrek fonksiyonları düzelmez ve acil nefrektomi gerekir"
     ],
-    "correctAnswer": 1,
-    "explanation": "Membranöz nefropatide kabaca üçte bir kuralı geçerlidir; hastaların yaklaşık 1/3'ünde hastalık kendiliğinden remisyona girer."
-  },
-  {
-    "id": "prac-nef-013",
-    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Membranoproliferatif Glomerülonefrit (MPGN) Tip I: Klasik İmmün Kompleks Yolu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik Hepatit C enfeksiyonu olan bir hastada bacaklarda purpura, eklem ağrısı ve mikst nefrotik sendrom tablosu gelişiyor. Biyopside subendotelyal immün kompleksler saptanıyor. En olası tanı hangisidir?",
-    "options": [
-      "A) Membranöz nefropati",
-      "B) MPGN Tip I (Kriyoglobulinemik GN)",
-      "C) Minimal değişiklik hastalığı",
-      "D) Poststreptokokkal GN",
-      "E) Dens depozit hastalığı"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Hepatit C ve kriyoglobulinemi ile en kuvvetli ilişkisi olan glomerüler patoloji subendotelyal birikimlerle giden MPGN Tip I'dir."
-  },
-  {
-    "id": "prac-nef-014",
-    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "MPGN Morfolojisi: Çift Kontur ('Tram-Track') Görünümü ve Lobüler Patern",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek biyopsisinde glomerüllerde belirgin lobülasyon, mezangiyal interpozisyon ve gümüş boyamada kapiller duvarda 'tram-track' (tren rayı / çift kontur) görünümü saptanan hastada en olası tanı nedir?",
-    "options": [
-      "A) Membranöz nefropati",
-      "B) Membranoproliferatif glomerülonefrit Tip I",
-      "C) Minimal değişiklik hastalığı",
-      "D) Fokal segmental glomerüloskleroz",
-      "E) İnce bazal membran hastalığı"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Glomerülde lobüler mimari, mezangiyal interpozisyon ve gümüş boyamada 'tram-track' (çift kontur) görünümü MPGN Tip I'in ayırt edici morfolojisidir."
-  },
-  {
-    "id": "prac-nef-015",
-    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 15,
-    "slideTitle": "C3 Glomerülopatisi ve Yoğun Birikim Hastalığı (Dense Deposit Disease)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Serum C3 düzeyi aşırı düşük, C4 düzeyi normal saptanan bir hastanın böbrek biyopsisinde elektron mikroskobunda GBM laminasında kurdele şeklinde kesintisiz yoğun birikimler ve İF'de izole C3 pozitifliği saptanıyor. Bu tabloda sorumlu otoantikor hangisidir?",
-    "options": [
-      "A) Anti-PLA2R",
-      "B) C3 Nefritik Faktör (C3NeF)",
-      "C) Anti-GBM antikorları",
-      "D) c-ANCA (PR3-ANCA)",
-      "E) Anti-dsDNA"
-    ],
-    "correctAnswer": 1,
-    "explanation": "C3 Nefritik Faktör (C3NeF), C3 konvertazı stabilize ederek kontrolsüz alternatif yol aktivasyonuna yol açar ve Yoğun Birikim Hastalığının (DDD) temel patogenetik nedenidir."
-  },
-  {
-    "id": "prac-nef-016",
-    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
-    "slideNumber": 16,
-    "slideTitle": "Diyabetik Nefropati: Patogenez, Nodüler Skleroz (Kimmelstiel-Wilson) ve Mikroalbüminüri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "20 yıldır tip 2 diyabet tanısı olan hastanın böbrek biyopsisinde glomerüllerde PAS pozitif ovoid aselüler nodüler skleroz (Kimmelstiel-Wilson) ve hem afferent hem eferent arteriyolde hyalinozis izleniyor. Bu tablonun erken klinik habercisi hangisidir?",
-    "options": [
-      "A) Makroskopik ağrısız hematüri",
-      "B) Mikroalbüminüri (30-300 mg/gün albümin atılımı)",
-      "C) İdrarda lökosit silindirleri",
-      "D) Akut oligüri ve anüri",
-      "E) Serum C3 kompleman düşüklüğü"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Diyabetik nefropatinin en erken klinik göstergesi mikroalbüminüridir (30-300 mg/gün albümin atılımı); erken evrede ACE inhibitörleri ile hasar geri döndürülebilir."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Minimal Değişiklik Hastalığı kortikosteroid tedavisine dramatik yanıt verir; çocukların %90'ından fazlasında ilk haftalarda tam remisyon elde edilir.\n\nA yanlıştır; hematüri ve hipertansiyon kural olarak beklenmez.\nB yanlıştır; proteinüri non-selektif değil, yüksek derecede selektiftir (saf albüminüri).\nD yanlıştır; steroid yanıtsızlığı değil, yüksek steroid duyarlılığı tipiktir.\nE yanlıştır; relapslar sık olsa bile steroidle tekrar remisyona girer ve böbrek yetmezliğine ilerleme riski <%5'tir."
   }
 ]

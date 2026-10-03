@@ -1,611 +1,687 @@
 [
   {
-    "id": "prac-nef-017",
+    "id": "nef-pq-13",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 13,
+    "slideTitle": "Fokal Segmental Glomerüloskleroz (FSGS): Kavramsal Tanım, Epidemiyoloji ve APOL1 Risk Allelleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fokal Segmental Glomerülosklerozun (FSGS) kavramsal tanımı, epidemiyolojisi ve genetik mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
+    "options": [
+      "A) FSGS biyopsideki istisnasız tüm glomerüllerin tüm lobüllerini tutan diffüz ve global bir enflamasyondur",
+      "B) Afrika kökenli popülasyonda FSGS sıklığının yüksek olması APOL1 genindeki G1 ve G2 risk varyantları ile doğrudan ilişkilidir",
+      "C) FSGS yalnızca yenidoğan döneminde görülen ve kortikosteroid tedavisiyle daima gerileyen benign bir hastalıktır",
+      "D) APOL1 proteini normal şartlarda podositlerin çekirdeğinde transkripsiyonu durduran bir onkogen represörüdür",
+      "E) Fokal tutulum gösterdiği için böbreğin yüzeyel korteksinden alınan 2 adet glomerül içeren yetersiz biyopsi kesin tanı için yeterlidir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Afrika kökenli popülasyonda FSGS insidansı ve agresifliği, 22. kromozomdaki APOL1 geninin G1 ve G2 varyantları ile güçlü bir nedensel ilişki içerisindedir.\n\nA yanlıştır; lezyon fokal (bazı glomerüller) ve segmentaldir (lobülün bir parçası).\nC yanlıştır; erişkinlerde sıktır ve steroide dirençli progresif seyreder.\nD yanlıştır; APOL1 lizozomal ve iyon kanalı membran proteinidir, transkripsiyon faktörü değildir.\nE yanlıştır; fokal hastalıkta yüzeyel ve yetersiz biyopsi derin jukstamedüller lezyonları atlayarak yalancı tanıya yol açar."
+  },
+  {
+    "id": "nef-pq-14",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 14,
+    "slideTitle": "FSGS Patogenezi: Primer Dolaşan Permeabilite Faktörleri (suPAR) ve Podosit Dökülme Kaskadı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fokal Segmental Glomerülosklerozun (FSGS) moleküler patogenezi ve skleroz kaskadı ile ilgili aşağıdaki basamaklardan hangisi YANLIŞTIR?",
+    "options": [
+      "A) Dolaşımdaki suPAR gibi permeabilite faktörleri podosit yüzeyindeki integrin reseptörlerini aktive eder",
+      "B) Podositler hücre iskeletini kaybederek bazal membrandan dökülür ve geride çıplak GBM alanları bırakır",
+      "C) Çıplak kalan glomerüler bazal membran Bowman kapsülü ile temas ederek fibrinöz sineşi oluşturur",
+      "D) Podositler hasar gördüklerinde hızla mitoza girerek ve kitlelerini iki katına çıkararak dökülen hücrelerin yerini doldurur",
+      "E) Sinekşi alanında mezangiyal matriks kollajen sentezi artar ve hiyalin birikintileri kapiller lümeni kapatır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Podositler post-mitotik, terminal olarak diferansiye olmuş hücrelerdir; mitoz bölünme yetenekleri pratik olarak yoktur. Bu nedenle hasar gördüklerinde prolifere olarak yerlerini dolduramazlar; tam aksine sayıca azaldıkları için çıplak kalan alanlar sklerozla onarılır.\n\nA, B, C ve E seçenekleri FSGS'de skleroz oluşumunun kanıtlanmış histopatolojik basamaklarıdır."
+  },
+  {
+    "id": "nef-pq-15",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 15,
+    "slideTitle": "Sekonder FSGS Etyolojisi: Hiperfiltrasyon, Toksik Maddeler, HIVAN ve Genetik Mutasyonlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sekonder Fokal Segmental Glomerülosklerozun (FSGS) etyolojisi, patofizyolojik mekanizmaları ve genetik nedenleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Tek böbrekli hastalarda geriye kalan nefronlarda gelişen kompansatuar hiperfiltrasyon podosit dökülmesine ve sekonder FSGS'ye yol açabilir",
+      "B) İntravenöz eroin bağımlılığı ve yüksek doz pamidronat kullanımı sekonder podosit hasarı oluşturan toksik nedenlerdendir",
+      "C) Alfa-aktinin-4 (*ACTN4*) gen mutasyonu otozomal dominant ailesel FSGS tablolarına neden olan bir hücre iskeleti defektidir",
+      "D) Sekonder FSGS hastalarında ilk basamak tedavi istisnasız yüksek doz intravenöz kortikosteroid puls tedavisidir",
+      "E) HIV enfeksiyonu podositleri doğrudan enfekte ederek agresif seyirli kollapsing glomerülopatiye yol açabilir"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Sekonder FSGS olgularında temel mekanizma immünolojik veya dolaşan sitokinlere bağlı olmadığı için kortikosteroid tedavisine yanıt alınamaz; tam aksine yüksek doz steroid hastayı gereksiz toksisite ve enfeksiyon riskine sokar. Tedavi altta yatan nedenin çözülmesi (kilo verme, ilacın kesilmesi, HIV tedavisi) ve hemodinamik RAAS blokajıdır (ACEi/ARB).\n\nA, B, C ve E seçeneklerindeki tüm bilgiler sekonder FSGS'nin doğru ve önemli özellikleridir."
+  },
+  {
+    "id": "nef-pq-16",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 16,
+    "slideTitle": "FSGS'nin Histopatolojik Varyantları: Columbia Sınıflaması ve Kollapsing Glomerülopati",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fokal Segmental Glomerülosklerozun (FSGS) histopatolojik varyantları (Columbia Sınıflaması) ve klinik prognozları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Kollapsing varyant steroide en duyarlı ve kendiliğinden tam remisyona giren en masum histolojik tiptir",
+      "B) Perihiler varyant tipik olarak çocukluk çağı Hodgkin lenfomasına sekonder olarak üriner kutupta gelişir",
+      "C) Tip varyantı glomerülün üriner kutbunda yerleşir ve FSGS varyantları arasında prognozu en iyi olandır",
+      "D) HIV ile ilişkili nefropatide (HIVAN) tipik olarak Tip varyantı morfolojisi izlenir",
+      "E) Klasik (NOS) varyantta podosit hiperplazisi nedeniyle glomerül hilal benzeri yapılarla tamamen tıkanır"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Columbia sınıflamasına göre Tip varyantı (glomerular tip variant) lezyonun tübül çıkışındaki üriner kutupta yerleştiği formdur ve FSGS varyantları içerisinde kortikosteroid tedavisine en iyi yanıt veren, prognozu en yüz güldürücü tiptir.\n\nA yanlıştır; kollapsing varyant en agresif ve steroide en dirençli formdur.\nB yanlıştır; perihiler varyant vasküler kutupta yerleşir ve obezite/hiperfiltrasyon ile ilişkilidir.\nD yanlıştır; HIVAN tipik olarak kollapsing varyant paterni sergiler.\nE yanlıştır; podosit hiperplazisi ve psödokresent kollapsing varyantın özelliğidir."
+  },
+  {
+    "id": "nef-pq-17",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 17,
-    "slideTitle": "Renal Amiloidoz: Patoloji, Kongo Kırmızısı ve Polarizasyon",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "FSGS'de Üçlü Mikroskopi Bulguları: Segmental Skleroz, Köpüksü Makrofajlar ve Tuzaklanma",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tekrarlayan karın ağrısı ve ateş atakları olan FMF hastasında gelişen nefrotik sendrom nedeniyle yapılan böbrek biyopsisinde, amorf aselüler eozinofilik birikimlerin amiloid olduğunu kesinleştiren yöntem hangisidir?",
+    "question": "Fokal Segmental Glomerülosklerozlu (FSGS) bir hastanın böbrek biyopsisinde saptanan mikroskopik bulgular ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) PAS boyasında bazal membranın kalınlaşması",
-      "B) Gümüşleme boyasında tram-track çift kontur izlenmesi",
-      "C) Kongo kırmızısı boyaması sonrası polarize mikroskopta elma yeşili çift kırılma saptanması",
-      "D) İmmünofloresanda granüler IgG pozitifliği",
-      "E) Ziehl-Neelsen boyasında asido-rezistan basillerin görülmesi"
+      "A) İmmünfloresanda bazal membran boyunca kesintisiz lineer IgG boyanması izlenir",
+      "B) Sklerotik segmentlerde lipid fagosite etmiş köpüksü makrofajlar ve non-spesifik IgM/C3 tuzaklanması görülür",
+      "C) Elektron mikroskopisinde subepitelyal hörgüç (hump) tarzında elektron-dans immün kompleksler izlenir",
+      "D) Işık mikroskopisinde istisnasız tüm glomerüllerde diffüz nekrotizan kresentler (hilaller) mevcuttur",
+      "E) Sağlam görünen glomerül lobüllerinde elektron mikroskopisinde podosit ayak çıkıntıları tamamen korunmuştur"
     ],
-    "correctAnswer": 2,
-    "explanation": "Kongo kırmızısı boyası sonrası polarize mikroskopta elma yeşili çift kırılma (apple-green birefringence) amiloidozun patognomonik altın standart mikroskobik kanıtıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. FSGS'de ışık mikroskopisinde sklerotik alanlarda lipid yüklü köpüksü makrofajlar ve hiyalinoz saptanır; immünfloresanda bu sklerotik segmentlerde non-spesifik IgM ve C3 tuzaklanması (trapping) izlenir.\n\nA yanlıştır; lineer IgG Anti-GBM hastalığında görülür.\nC yanlıştır; subepitelyal hörgüçler Poststreptokoksik GN'de görülür.\nD yanlıştır; kresentler RPGN'nin bulgusudur.\nE yanlıştır; skleroz olmayan sağlam segmentlerde de podosit ayak çıkıntılarında diffüz silinme mevcuttur."
   },
   {
-    "id": "prac-nef-018",
+    "id": "nef-pq-18",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 18,
-    "slideTitle": "Nefrotik Sendromda Biyopsi Endikasyonları ve Ayırıcı Tanı Algoritması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "FSGS'nin Klinik Seyri, Non-Selektif Proteinüri, Steroid Direnci ve Greftte Erken Rekürrens",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki nefrotik sendrom nedenlerinin hangisinde serum C3 kompleman düzeyinin belirgin olarak düşmesi beklenir?",
+    "question": "Primer Fokal Segmental Glomerülosklerozun (FSGS) klinik seyri, laboratuvar özellikleri ve renal allogreft prognozu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Minimal değişiklik hastalığı",
-      "B) Membranöz nefropati",
-      "C) Membranoproliferatif glomerülonefrit Tip I",
-      "D) Primer Fokal segmental glomerüloskleroz",
-      "E) Renal amiloidoz"
+      "A) Proteinüri yüksek derecede seçici olup idrarda albümin harici hiçbir plazma proteini saptanmaz",
+      "B) Hastaların tümü kortikosteroid tedavisine 2 hafta içinde tam remisyon yanıtı verir ve kronik böbrek yetmezliği gelişmez",
+      "C) Mikroskopik hematüri ve arteriyel hipertansiyon Minimal Değişiklik Hastalığına göre çok daha sık eşlik eder",
+      "D) Böbrek nakli sonrasında hastalık dolaşımda faktör bulunmadığı için allogreftte asla nüks etmez",
+      "E) FSGS hastalarında 10 yıllık takipte son dönem böbrek yetmezliğine ilerleme riski sıfıra yakındır"
     ],
     "correctAnswer": 2,
-    "explanation": "MPGN Tip I klasik kompleman yolunu aktive ederek C3 ve C4 düşüklüğüne yol açar. MDH, FSGS, Membranöz ve Amiloidozda kompleman düzeyleri normaldir."
+    "explanation": "Doğru yanıt C'dir. FSGS hastalarında Minimal Değişiklik Hastalığına kıyasla mikroskopik hematüri (%30-50), arteryel hipertansiyon ve bozulmuş GFR belirgin derecede daha sıktır.\n\nA yanlıştır; proteinüri non-selektiftir (IgG kaçağı mevcuttur).\nB yanlıştır; steroide yanıt son derece düşüktür (%20-30).\nD yanlıştır; transplant sonrası allogreftte %30-50 gibi çok yüksek oranda nüks eder.\nE yanlıştır; hastaların %50'si 10 yıl içinde son dönem böbrek yetmezliğine (ESRD) ilerler."
   },
   {
-    "id": "prac-nef-019",
+    "id": "nef-pq-19",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 19,
-    "slideTitle": "Konjenital ve İnfantil Nefrotik Sendromlar: Genetik Defektler",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Membranöz Nefropati (MN): Genel Bakış, Epidemiyoloji ve PLA2R / THSD7A Otoantikorları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Doğumdan itibaren masif proteinürisi olan, dev plasenta öyküsü bulunan ve biyopsisinde tubuluslarda mikrokistik genişlemeler izlenen konjenital nefrotik sendromlu bebekte mutasyon hangi gendedir?",
+    "question": "Primer (idiyopatik) Membranöz Nefropatinin etyolojisi, patogenezi ve moleküler hedefleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
     "options": [
-      "A) NPHS1 (Nefrin)",
-      "B) NPHS2 (Podosin)",
-      "C) ACTN4",
-      "D) COL4A5",
-      "E) GLA"
+      "A) Hastalık primer olarak 2-6 yaş grubu çocuklarda T-hücre kaynaklı interlokinlerle gelişir",
+      "B) Olguların %70-80'inde podosit plazma membranındaki M-tipi Fosfolipaz A2 Reseptörüne (PLA2R) karşı otoantikorlar saptanır",
+      "C) İmmün kompleksler sistemik dolaşımda birleşerek glomerül endoteli altına subendotelyal olarak depolanır",
+      "D) Primer membranöz nefropatide podosit yüzeyindeki antijenlere bağlanan ana immünglobulin izotipi IgE'dir",
+      "E) Serum anti-PLA2R titreleri hastalık aktivitesi ile tamamen korelasyonsuz olup tanısal değeri yoktur"
     ],
-    "correctAnswer": 0,
-    "explanation": "Fin tipi konjenital nefrotik sendrom NPHS1 geni mutasyonuna bağlı nefrin eksikliği sonucu gelişir; mikrokistik tubuler dilatasyon karakteristiktir."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Primer Membranöz Nefropatili hastaların %70-80'inde podosit yüzeyinde yer alan M-tipi Fosfolipaz A2 Reseptörüne (PLA2R) karşı dolaşan IgG4 otoantikorları saptanır ve in situ subepitelyal immün kompleksler oluşur.\n\nA yanlıştır; 2-6 yaş çocuklarda T-hücre sitokinleriyle gelişen hastalık Minimal Değişikliktir.\nC yanlıştır; depozitler subendotelyal değil, in situ subepitelyaldir.\nD yanlıştır; ana immünglobulin izotipi IgE değil, IgG4'tür.\nE yanlıştır; anti-PLA2R titreleri hastalık aktivitesini, remisyonu ve nüksü izlemede mükemmel bir biyobelirteçtir."
   },
   {
-    "id": "prac-nef-020",
+    "id": "nef-pq-20",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 20,
-    "slideTitle": "Podositopatilerde Elektron Mikroskobunun Rolü ve Morfolojik Özeti",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Sekonder Membranöz Nefropati Etyolojisi: Malignite Taraması, SLE Evre V, Kronik Enfeksiyonlar ve İlaçlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Glomerülopatiler ve elektron mikroskobundaki tipik immün depozit lokalizasyonu eşleştirmelerinden hangisi yanlıştır?",
+    "question": "Sekonder Membranöz Nefropatinin etyolojisi, paraneoplastik ilişkileri ve ayırıcı tanı özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Membranöz nefropati — Subepitelyal depozitler",
-      "B) Poststreptokokkal GN — Subepitelyal 'hörgüç' (humps)",
-      "C) MPGN Tip I — Subendotelyal depozitler",
-      "D) Yoğun birikim hastalığı (DDD) — İntramembranöz kurdele birikim",
-      "E) Minimal değişiklik hastalığı — Belirgin mezangiyal yoğun depozitler"
+      "A) İleri yaştaki membranöz nefropatili olgularda akciğer, kolon ve mide karsinomu taraması mutlak endikasyondur",
+      "B) Romatoid artrit tedavisinde kullanılan altın tuzları ve D-penisilamin sekonder membranöz nefropatiyi tetikleyebilir",
+      "C) Sistemik Lupus Eritematozus zemininde gelişen Sınıf V nefrit membranöz histopatolojik patern sergiler",
+      "D) Çocukluk çağında sekonder membranöz nefropatinin en sık viral nedeni Kronik Hepatit B enfeksiyonudur",
+      "E) Sınıf V Lupus Nefritinde immünfloresan mikroskopisi daima tamamen negatif olup hiçbir immünglobulin saptanmaz"
     ],
     "correctAnswer": 4,
-    "explanation": "Minimal Değişiklik Hastalığında hiçbir lokalizasyonda immün kompleks depoziti bulunmaz; elektron mikroskobundaki tek bulgu podosit ayaksı çıkıntılarının silinmesidir."
+    "explanation": "Doğru yanıt E'dir. Sınıf V Membranöz Lupus Nefritinde immünfloresan asla negatif değildir; aksine tüm immünglobulin sınıflarının (IgG, IgA, IgM) ve kompleman bileşenlerinin (C3, C1q) aynı anda parlak olarak boyandığı karakteristik 'Full-House' immünfloresan paterni izlenir.\n\nA, B, C ve D seçeneklerindeki tüm klinik ve etyolojik bilgiler sekonder membranöz nefropatinin kesin doğrularıdır."
   },
   {
-    "id": "prac-nef-021",
+    "id": "nef-pq-21",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 21,
-    "slideTitle": "Nefrotik Sendromda Tubulointerstisyel Hasar ve Lipoid Nefroz Özellikleri",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Membranöz Nefropatide Karakteristik Morfoloji: Diffüz GBM Kalınlaşması ve Gümüşlemede Spike and Dome",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Kronik glomerüler hastalıklarda böbrek yetmezliğine ilerlemeyi ve uzun dönem prognozu en güçlü tahmin ettiren histopatolojik lezyon aşağıdakilerden hangisidir?",
+    "question": "Elli yaşında nefrotik sendromlu bir hastanın böbrek biyopsisinde; ışık mikroskopisinde hücresel proliferasyon izlenmeksizin glomerül kılcal duvarlarında diffüz kalınlaşma görülmüş, Jones methenamine gümüş boyamasında ise bazal membran boyunca karakteristik 'Spike and Dome' (Diken ve Kubbe) görünümü saptanmıştır.\n\nBu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Glomerüllerdeki podosit hipertrofisi",
-      "B) Tübülointerstisyel atrofi ve fibrozisin yaygınlığı",
-      "C) Bowman kapsülünün kalınlaşması",
-      "D) Kapiller lümendeki trombosit agregasyonu",
-      "E) Yalnızca mezangiyal hücre sayısı"
+      "A) Membranöz Nefropati",
+      "B) Membranoproliferatif Glomerulonefrit Tip I",
+      "C) Minimal Değişiklik Hastalığı",
+      "D) Fokal Segmental Glomerüloskleroz (NOS varyantı)",
+      "E) Akut Poststreptokoksik Glomerülonefrit"
     ],
-    "correctAnswer": 1,
-    "explanation": "Nefrolojik patolojide tübülointerstisyel hasar, atrofi ve fibrozisin derecesi, glomerüler lezyonun tipinden bağımsız olarak son dönem böbrek yetmezliğine gidişin en güçlü prognostik göstergesidir."
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Hücresel proliferasyon olmaksızın diffüz GBM kalınlaşması ve Jones gümüş boyamasında 'Spike and Dome' görünümü Membranöz Nefropatinin klasik ve patognomonik histolojik bulgusudur.\n\nB yanlıştır; MPGN'de yoğun hücresel proliferasyon ve tramvay rayı (çift kontur) vardır.\nC yanlıştır; Minimal Değişiklikte ışık mikroskopisi tamamen normaldir, spike oluşumu yoktur.\nD yanlıştır; FSGS'de fokal ve segmental skleroz izlenir, diffüz spike and dome görülmez.\nE yanlıştır; poststreptokoksik GN'de diffüz nötrofil infiltrasyonu ve endokapiller proliferasyon vardır."
   },
   {
-    "id": "prac-nef-022",
+    "id": "nef-pq-22",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 22,
-    "slideTitle": "Nefrotik Sendromlu Hastaya Genel Yaklaşım ve Özet Akış Şeması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Membranöz Nefropatide İmmünfloresan ve Elektron Mikroskopisi: Granüler IgG4/C3 ve Subepitelyal Depozitler",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Nefrotik sendromlu bir hastada intraglomerüler hidrostatik basıncı ve proteinüriyi azaltmak amacıyla başlanan ACE inhibitörlerinin temel renal hemodinamik etki mekanizması hangisidir?",
+    "question": "Membranöz Nefropatili bir hastanın böbrek biyopsisinde immünfloresan ve elektron mikroskopisi bulguları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Afferent arteriyolü daraltmak",
-      "B) Eferent arteriyolde vazodilatasyon sağlamak",
-      "C) Glomerüler bazal membranın negatif yükünü artırmak",
-      "D) Podosit slit diyaframlarını mekanik olarak kapatmak",
-      "E) Proksimal tubulustan albümin geri emilimini inhibe etmek"
+      "A) İmmünfloresanda bazal membran boyunca kesintisiz lineer IgA depozitleri izlenir",
+      "B) Elektron mikroskopisinde glomerüler bazal membran ile podositler arasında yerleşik subepitelyal elektron-dans depozitler saptanır",
+      "C) Depozitler sadece endotel altında subendotelyal alanda yerleşip kapiller lümeni tamamen tıkar",
+      "D) Podosit ayak çıkıntıları (pediseller) elektron mikroskopisinde tamamen normal anatomik yapısını korur",
+      "E) Membran atak kompleksi (C5b-9) oluşumu hastalığın patogenezinde hiçbir rol oynamaz"
     ],
     "correctAnswer": 1,
-    "explanation": "ACE inhibitörleri anjiyotensin II'yi baskılayarak eferent arteriyolü dilate eder; bu sayede glomerül içi kapiller hidrostatik basınç düşer ve protein kaçağı azalır."
+    "explanation": "Doğru yanıt B'dir. Membranöz Nefropatide elektron mikroskopisinde GBM ile podosit arasında yerleşmiş subepitelyal elektron-dans birikintiler ve podosit pedisellerinde diffüz silinme saptanır.\n\nA yanlıştır; lineer değil granülerdir ve biriken temel immünglobulin IgA değil, IgG4'tür.\nC yanlıştır; depozitler subendotelyal değil, subepitelyaldir.\nD yanlıştır; podosit pedisellerinde diffüz silinme izlenir.\nE yanlıştır; sublitik C5b-9 (MAC) podosit hasarının ana efektör mediyatörüdür."
   },
   {
-    "id": "prac-nef-023",
+    "id": "nef-pq-23",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 23,
-    "slideTitle": "Nefrotik Sendrom: Ayırıcı Tanı ve Büyük Karşılaştırma Tablosu",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Membranöz Nefropatinin Klinik Seyri, Üçte Bir Kuralı ve En Ağır Tromboemboli Riski",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki eşleştirmelerden hangisinde glomerüler hastalık ile serum kompleman düzeyi ve patolojik bulgusu doğru verilmiştir?",
+    "question": "Membranöz Nefropatinin klinik seyri, prognozu ve sistemik komplikasyonları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Minimal Değişiklik Hastalığı — Düşük C3 — Subendotelyal depozit",
-      "B) Membranöz Nefropati — Normal C3 — Subepitelyal 'spike and dome' depozit",
-      "C) MPGN Tip I — Normal C3 ve C4 — Yalnızca podosit ayaksı çıkıntı silinmesi",
-      "D) Yoğun Birikim Hastalığı (DDD) — Yüksek C3 — Subepitelyal hörgüç",
-      "E) FSGS — Düşük C4 — İntramembranöz kurdele depozit"
+      "A) Hastaların tümü tanıdan sonraki 6 ay içinde hızla diyalize girer ve spontan remisyon asla görülmez",
+      "B) Tüm primer glomerüler hastalıklar arasında tromboembolik olay ve Renal Ven Trombozu riski en yüksek olan hastalıktır",
+      "C) Kortikosteroid monoterapisine pediyatrik Minimal Değişiklik Hastalığı gibi %95 tam remisyon yanıtı verir",
+      "D) Proteinüri daima yüksek selektiviteli olup idrara sadece albümin geçer, IgG asla saptanmaz",
+      "E) Anti-PLA2R titreleri yükseldikçe hastanın kendiliğinden tam remisyona girdiği kesinleşir"
     ],
     "correctAnswer": 1,
-    "explanation": "Membranöz nefropatide serum kompleman düzeyi normaldir ve histopatolojide subepitelyal depozitlerle birlikte 'spike and dome' görünümü karakteristiktir."
+    "explanation": "Doğru yanıt B'dir. Membranöz Nefropati, tüm glomerüler hastalıklar içerisinde derin ven trombozu, pulmoner emboli ve özellikle Renal Ven Trombozu (RVT) gelişme riskinin açık ara en yüksek olduğu klinik antitedir.\n\nA yanlıştır; hastaların yaklaşık 1/3'ü kendiliğinden (spontan) remisyona girer (Üçte bir kuralı).\nC yanlıştır; steroid monoterapisine yanıt vermez.\nD yanlıştır; proteinüri non-selektiftir (IgG kaçağı mevcuttur).\nE yanlıştır; anti-PLA2R titresinin yükselmesi remisyonu değil, aktif hastalığı ve relapsı gösterir."
   },
   {
-    "id": "prac-nef-024",
+    "id": "nef-pq-24",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
     "slideNumber": 24,
-    "slideTitle": "Ders 19 Kapsamlı Sentezi: Nefrotik Sendrom Patolojisinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Nefrotik ve Nefritik Kesişimindeki Glomerülopatiler: MPGN Tip I, C3 Glomerülopatisi ve Sekonder Formlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik tablolardan hangisinde hastaya doğrudan ampirik kortikosteroid başlanması gerekirken biyopsi endikasyonu bulunmaz?",
+    "question": "Nefrotik-nefritik kesişimindeki glomerüler hastalıklar ve sekonder nefrotik sendrom patolojileri ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Bacaklarında ödem ve 4 g/gün proteinüri ile başvuran 45 yaşındaki erkek",
-      "B) Tip 2 diyabeti ve 5 g/gün proteinürisi olan 55 yaşındaki kadın",
-      "C) Ani başlayan yaygın ödem ve 4 g/gün selektif proteinürisi olan, mikroskopik hematürisi bulunmayan 3 yaşındaki çocuk",
-      "D) Ani başlayan nefrotik sendrom ve anti-PLA2R negatifliği olan 65 yaşındaki erkek",
-      "E) Hepatit C pozitifliği, purpura ve mikst nefrotik tablosu olan 40 yaşındaki hasta"
+      "A) MPGN Tip I - Mezangiyal interpozisyon ve bazal membranda 'Tramvay Rayı' (çift kontur) görünümü",
+      "B) Yoğun Birikim Hastalığı (DDD) - C3 Nefritik Faktör (C3NeF) ve intramembranöz kurdele benzeri mumsu depozitler",
+      "C) Kronik Hepatit C virüs enfeksiyonu - Kriyoglobülinemi zemininde sekonder MPGN Tip I gelişimi",
+      "D) Diyabetik Glomerüloskleroz - Mezangiyal nodüler Kimmelstiel-Wilson lezyonları",
+      "E) Yoğun Birikim Hastalığı (DDD) - Renal transplantasyon sonrası allogreftte nüks oranı kesinlikle sıfırdır"
     ],
-    "correctAnswer": 2,
-    "explanation": "3 yaşındaki çocukta tipik prezentasyonla gelen nefrotik sendromun %90 nedeni Minimal Değişiklik Hastalığı olduğundan doğrudan steroid başlanır, böbrek biyopsisi yapılmaz."
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Yoğun Birikim Hastalığında (Dense Deposit Disease - DDD) kanda dolaşan C3 Nefritik Faktör (C3NeF) ve alternatif yolak aşırı aktivasyonu devam ettiği için böbrek nakli sonrasında allogreftte nüks etme oranı sıfır değil; tam aksine %85-90 gibi dramatik düzeyde yüksektir.\n\nA, B, C ve D seçeneklerindeki tüm patofizyolojik ve morfolojik eşleştirmeler kusursuz şekilde doğrudur."
   },
   {
     "id": "prac-nefr-001",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 1,
-    "slideTitle": "Nefritik Sendrom: Klinik Tanım ve Kardinal Bulgular",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Nefritik Sendrom: Klinik Tanım ve Kardinal Tetrad",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki idrar sedimenti bulgularından hangisi bir hematürinin alt idrar yolu kaynaklı (taş/tümör) değil, kesinlikle glomerüler enflamasyona (nefritik sendrom) bağlı olduğunu kanıtlar?",
+    "question": "Aşağıdaki laboratuvar bulgularından hangisi bir hematürinin alt idrar yolu patolojilerine (taş, mesane karsinomu) değil, kesinlikle glomerüler yangıya (nefritik sendrom) bağlı olduğunu kanıtlayan en güvenilir bulgudur?",
     "options": [
-      "A) Çok sayıda lökosit ve bakteri",
-      "B) İzosellüler taze eritrositler",
-      "C) Dismorfik eritrositler ve eritrosit silindirleri",
-      "D) Ürik asit kristalleri",
-      "E) Oval yağ cisimcikleri"
+      "A) İdrar sedimentinde çok sayıda lökosit ve lökosit silindiri saptanması",
+      "B) İdrar sedimentinde dismorfik eritrositler (akantositler) ve eritrosit silendirleri görülmesi",
+      "C) İdrarda yoğun kalsiyum oksalat kristallerinin izlenmesi",
+      "D) İdrar analizinde parlak kırmızı renk ve pıhtılı kanama varlığı",
+      "E) 24 saatlik idrarda 4 gramın üzerinde selektif albüminüri ölçülmesi"
     ],
-    "correctAnswer": 2,
-    "explanation": "Dismorfik eritrositler ve eritrosit silindirleri kanamanın glomerül filtrasyon bariyerinden ve tubulus lümeninden kaynaklandığını gösteren patognomonik nefritik sendrom bulgularıdır."
+    "correctAnswer": 1,
+    "explanation": "Dismorfik eritrositler (özellikle akantositler) glomerül filtrasyon bariyerindeki yırtıklardan sızarken mekanik travmaya uğrar; tübüler lümende presipite olarak oluşan eritrosit silendirleri (RBC casts) ise hematürinin kesinlikle glomerüler nefritik bir enflamasyondan kaynaklandığının patognomonik kanıtıdır."
   },
   {
     "id": "prac-nefr-002",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 2,
-    "slideTitle": "Nefritik Sendrom Patofizyolojisi: Enflamasyon ve GFR Çöküşü",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Nefritik Sendrom Patofizyolojisi: Endokapiller Enflamasyon ve GFR Çöküşü",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Nefritik sendromda hipertansiyon ve ödem gelişimindeki primer patofizyolojik mekanizma aşağıdakilerden hangisidir?",
+    "question": "Nefritik sendromda gelişen hipertansiyon ve periorbital ödemin temel patofizyolojik mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      "A) Hipoalbüminemiye bağlı plazma onkotik basıncının çökmesi",
-      "B) GFR düşüşüne bağlı gelişen primer renal sodyum ve su retansiyonu",
-      "C) Renal arter darlığına bağlı malign renin deşarjı",
-      "D) İzole aldosteron salgılayan adenom varlığı",
-      "E) İdrarla yüksek oranda albümin kaybı"
+      "A) Şiddetli albüminüriye bağlı plazma onkotik basıncının çökmesi ve sekonder hiperaldosteronizm",
+      "B) Renal arter aterom plağına bağlı malign renin salgılanması",
+      "C) Glomerül kapiller tıkanıklığı ve GFR düşüşüne bağlı primer renal sodyum ve su retansiyonu (hipervolemi)",
+      "D) İzole kardiyak venöz göllenme ve sağ kalp yetmezliği",
+      "E) Tübüler epitel hasarına bağlı antidiüretik hormon (ADH) hipersekresyonu"
     ],
-    "correctAnswer": 1,
-    "explanation": "Nefritik sendromda GFR'nin ani düşmesi sonucu böbreklerden tuz ve su atılamaz; gelişen primer hipervolemi hipertansiyon ve periorbital ödeme yol açar."
+    "correctAnswer": 2,
+    "explanation": "Nefritik sendromda endotel proliferasyonu ve enflamatuar hücre tıkacı GFR'yi aniden düşürür. Böbrek sodyum ve suyu süzemez; gelişen primer hipervolemi (overfill mekanizması) kan basıncını yükseltir ve periorbital ödeme yol açar."
   },
   {
     "id": "prac-nefr-003",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 3,
-    "slideTitle": "Akut Poststreptokokkal Glomerülonefrit (APSGN): Etyopatogenez ve Latent Periyot",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "İdrar Sedimenti Analizi: Akantositler ve Eritrosit Silendirlerinin Patognomonisi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "8 yaşındaki bir erkek çocukta streptokokkal boğaz enfeksiyonundan 12 gün sonra koyu renkli idrar, periorbital ödem ve tansiyon yüksekliği gelişiyor. Bu tabloda sorumlu en olası nefritojenik streptokok M serotipi hangisidir?",
+    "question": "34 yaşında bir hastada idrar renginde koyulaşma şikayeti üzerine yapılan idrar analizinde bol miktarda eritrosit görülüyor. Faz kontrast mikroskopisinde 'Mickey Mouse başı' görünümünde veziküllü akantositler ve silendirler saptanıyor. Bu hastada silendirlerin matriksini oluşturan temel apikal tübüler glikoprotein aşağıdakilerden hangisidir?",
     "options": [
-      "A) M tipi 12",
-      "B) M tipi 49",
-      "C) M tipi 2",
-      "D) M tipi 57",
-      "E) M tipi 60"
+      "A) Albümin",
+      "B) Bence-Jones proteini",
+      "C) Tamm-Horsfall proteini (Üromodülin)",
+      "D) Beta-2 mikroglobulin",
+      "E) Alfa-1 antitripsin"
     ],
-    "correctAnswer": 0,
-    "explanation": "Streptokokkal farenjit sonrası gelişen akut glomerülonefritte en sık sorumlu nefritojenik serotip M tipi 12'dir. M tipi 49 ise cilt enfeksiyonları (impetigo) sonrası nefritten sorumludur."
+    "correctAnswer": 2,
+    "explanation": "Tübüler silendirlerin protein iskeletini Henle çıkan kalın kolu ve distal tübüllerden salgılanan Tamm-Horsfall proteini (üromodülin) oluşturur. Glomerülden kaçan eritrositlerin bu matriks içine presipite olmasıyla patognomonik eritrosit silendirleri meydana gelir."
   },
   {
     "id": "prac-nefr-004",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 4,
-    "slideTitle": "APSGN Morfolojisi: Diffüz Proliferatif Eksüdatif Glomerülonefrit",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Akut Post-Streptokoksik Glomerülonefrit (APSGN): Etyopatogenez ve Nefritojenik Suşlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Akut poststreptokokkal glomerülonefrit tanılı bir çocuğun böbrek biyopsisinde ışık mikroskobunda beklenen karakteristik histopatolojik lezyon aşağıdakilerden hangisidir?",
+    "question": "Streptokok enfeksiyonlarına bağlı glomerülonefrit patogenezinde; pozitif elektriksel yükü sayesinde glomerüler bazal membrandaki polianyonik yapılara tutunarak in situ immün kompleks oluşumunu tetikleyen temel nefritojenik antijen aşağıdakilerden hangisidir?",
     "options": [
-      "A) Glomerüllerin normal izlendiği podosit silinmesi",
-      "B) Diffüz endokapiller proliferasyon ve lökosit infiltrasyonu ile karakterize hiperselülarite",
-      "C) Kapiller duvarda diffüz spike and dome kalınlaşması",
-      "D) Bowman aralığını tamamen dolduran fibröz hilaller",
-      "E) Sadece afferent arteriyolde hyalinozis"
+      "A) Streptolizin O",
+      "B) Streptokokal Pirojenik Ekzotoksin B (SpeB)",
+      "C) Hiyalüronidaz",
+      "D) Streptokinaz",
+      "E) Pirojenik ekzotoksin A"
     ],
     "correctAnswer": 1,
-    "explanation": "APSGN'nin ışık mikroskobu bulgusu endotel ve mezangiyal proliferasyonun yanı sıra yoğun nötrofil infiltrasyonu içeren diffüz proliferatif (eksüdatif) glomerülonefrittir."
+    "explanation": "SpeB (Streptokokal Pirojenik Ekzotoksin B), katyonik yapısıyla glomerüler bazal membrana bağlanan ('planted antigen') ve antikorlarla birleşerek karakteristik subepitelyal hörgüçleri oluşturan temel nefritojenik streptokok antijenidir."
   },
   {
     "id": "prac-nefr-005",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 5,
-    "slideTitle": "APSGN: İmmünofloresan ('Yıldızlı Gökyüzü') ve Elektron Mikroskobu ('Hörgüçler')",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "APSGN Klinik Tablosu ve Latens Periyodunun Kritik Önemi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Nefritik sendromlu bir çocukta yapılan renal biyopside immünofloresanda tipik 'yıldızlı gökyüzü' paterni ve elektron mikroskobunda GBM üzerinde kubbe şeklinde 'subepitelyal hörgüçler' (humps) izleniyor. Tanı nedir?",
+    "question": "9 yaşındaki bir erkek çocuk, geçirdiği boğaz enfeksiyonunun 14. gününde sabahları göz çevresinde şişlik, idrar miktarında azalma ve koyu çay rengi idrar yapma şikayetiyle getiriliyor. Fizik muayenede kan basıncı 135/85 mmHg ölçülüyor. Bu hastanın klinik tablosunu, üst solunum yolu enfeksiyonunun 1. gününde hematüri ile başvuran benzer yaştaki bir hastadan ayıran en temel özellik aşağıdakilerden hangisidir?",
     "options": [
-      "A) Akut poststreptokokkal glomerülonefrit",
-      "B) Membranöz nefropati",
-      "C) Goodpasture sendromu",
-      "D) Alport sendromu",
-      "E) Fokal segmental glomerüloskleroz"
+      "A) Proteinürinin nefrotik düzeyde (>3.5 g/gün) olması",
+      "B) Boğaz enfeksiyonu ile hematüri arasında 1-3 haftalık latent dönemin bulunması",
+      "C) İdrarda dismorfik eritrositlerin saptanmaması",
+      "D) Hastalığın kız çocuklarında erkeklere göre belirgin sık görülmesi",
+      "E) Serum IgA düzeyinin aşırı yüksek ölçülmesi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Kaba granüler C3 yıldızlı gökyüzü paterni ve EM'deki subepitelyal hörgüçler (humps) akut poststreptokokkal glomerülonefritin patognomonik ikilisidir."
+    "correctAnswer": 1,
+    "explanation": "APSGN'de farenjitten sonra antikor üretimi ve immün kompleks birikimi için 1-3 haftalık (ortalama 10-14 gün) bir latent periyot şarttır. Enfeksiyonun 1-2. gününde ortaya çıkan hematüri ise tipik olarak IgA nefropatisine (senfarenjitik hematüri) işaret eder."
   },
   {
     "id": "prac-nefr-006",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 6,
-    "slideTitle": "APSGN: Serolojik Tanı, Kompleman Dinamiği ve Prognoz",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "APSGN Morfolojisi: Diffüz Endokapiller Proliferatif ve Eksüdatif GN",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Bacaklarındaki impetigo lezyonlarından 3 hafta sonra nefritik sendrom tablosuyla başvuran bir çocukta streptokok enfeksiyonunu kanıtlamak için en duyarlı serolojik test hangisidir?",
+    "question": "Oligürik nefritik sendrom nedeniyle böbrek biyopsisi yapılan bir hastanın ışık mikroskopisinde tüm glomerüllerde belirgin büyüme, kapiller lümenleri tıkayan yoğun nötrofil infiltrasyonu ve endotelyal-mezangiyal proliferasyona bağlı 'kansız glomerül' görünümü saptanıyor. Bu lezyonun en doğru patolojik tanımlaması hangisidir?",
     "options": [
-      "A) Anti-Streptolizin O (ASO)",
-      "B) Anti-DNAse B",
-      "C) C-reaktif protein",
-      "D) Anti-kardiyolipin antikorları",
-      "E) Romatoid faktör"
+      "A) Membranöz nefropati",
+      "B) Fokal segmental glomerüloskleroz",
+      "C) Diffüz endokapiller proliferatif ve eksüdatif glomerülonefrit",
+      "D) Minimal değişiklik hastalığı",
+      "E) Kronik sklerozan glomerülonefrit"
     ],
-    "correctAnswer": 1,
-    "explanation": "Cilt enfeksiyonlarında (impetigo) kolesterol streptolizini bağlayarak ASO yanıtını baskılar; bu nedenle cilt kaynaklı APSGN'de en güvenilir test Anti-DNAse B'dir."
+    "correctAnswer": 2,
+    "explanation": "APSGN'nin ışık mikroskobundaki prototipik lezyonu; endotel ve mezangiyal hücre proliferasyonu ile birlikte kapiller lümenleri tıkayan yoğun nötrofil infiltrasyonunun oluşturduğu 'diffüz endokapiller proliferatif ve eksüdatif glomerülonefrit' tablosudur."
   },
   {
     "id": "prac-nefr-007",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 7,
-    "slideTitle": "Hızlı İlerleyen Glomerülonefrit (RPGN) ve Kresent (Hilal) Patolojisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "APSGN: İmmünfloresan ('Yıldızlı Gökyüzü') ve Elektron Mikroskobu ('Hörgüçler')",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Hızlı ilerleyen glomerülonefritte (RPGN) Bowman aralığında izlenen kresentlerin (hilallerin) hücresel yapısını oluşturan temel hücre grubu aşağıdakilerden hangisidir?",
+    "question": "Nefritik sendrom tablosundaki 10 yaşındaki bir çocuğun böbrek biyopsisinde immünfloresan incelemede kaba granüler 'yıldızlı gökyüzü' tarzında C3 ve IgG pozitifliği, elektron mikroskobunda ise podosit tabanında kubbe şeklinde devasa elektron-yoğun hörgüçler (humps) saptanıyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Podositler (visseral epitel hücreleri)",
-      "B) Pariyetal epitel hücreleri ve makrofajlar",
-      "C) Glomerül endotel hücreleri",
-      "D) Mezangiyal matriks miyofibroblastları",
-      "E) Proksimal tubulus epitel hücreleri"
+      "A) Goodpasture sendromu",
+      "B) Membranöz nefropati",
+      "C) Akut poststreptokoksik glomerülonefrit",
+      "D) Alport sendromu",
+      "E) İnce bazal membran hastalığı"
     ],
-    "correctAnswer": 1,
-    "explanation": "Hilaller fibrin sızıntısına yanıt olarak çoğalan Bowman kapsülü pariyetal epitel hücreleri ve bölgeye göç eden makrofajlardan meydana gelir."
+    "correctAnswer": 2,
+    "explanation": "Kaba granüler C3 yıldızlı gökyüzü paterni ve elektron mikroskobunda podosit tabanında izlenen subepitelyal hörgüçler (subepithelial humps) akut poststreptokoksik glomerülonefritin (APSGN) patognomonik morfolojik ikilisidir."
   },
   {
     "id": "prac-nefr-008",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 8,
-    "slideTitle": "RPGN Tip I: Anti-GBM Hastalığı ve Goodpasture Sendromu",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "APSGN: Serolojik Tanı, Kompleman Kinetiği ve Uzun Dönem Prognoz",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Hemoptizi ve akut oligürik böbrek yetmezliği ile başvuran 24 yaşındaki erkek hastanın böbrek biyopsisinde immünofloresan mikroskopisinde glomerül kapiller duvarlarında kesintisiz lineer IgG pozitifliği saptanıyor. Bu antikorların hedef aldığı moleküler yapı hangisidir?",
+    "question": "Bacaklarındaki impetigo lezyonlarından 3 hafta sonra oligüri, periorbital ödem ve hipertansiyon gelişen 7 yaşındaki bir çocukta, geçirilmiş streptokok enfeksiyonunu kanıtlamak için istenecek en duyarlı ve özgül serolojik test aşağıdakilerden hangisidir?",
     "options": [
-      "A) Podosit nefrin proteini",
-      "B) Tip IV kollajen alfa-3 zincirinin NC1 domaini",
-      "C) M-tipi fosfolipaz A2 reseptörü",
-      "D) Streptokokkal SpeB antijeni",
-      "E) Nötrofil sitoplazmik miyeloperoksidaz"
+      "A) Anti-Streptolizin O (ASO)",
+      "B) Anti-DNAse B",
+      "C) Anti-nükleer antikor (ANA)",
+      "D) Romatoid Faktör (RF)",
+      "E) C-reaktif protein (CRP)"
     ],
     "correctAnswer": 1,
-    "explanation": "Goodpasture sendromu Tip IV kollajenin alfa-3 zincirine (NC1 domain) karşı gelişen otoantikorlara bağlıdır ve İF'de tipik lineer IgG deseni verir."
+    "explanation": "Cilt enfeksiyonlarında deri kolesterolü streptolizin O'yu bağlayıp nötralize ettiği için ASO genellikle yükselmez veya düşük kalır. Bu nedenle impetigo/piyodermi sonrası streptokok enfeksiyonunu kanıtlamada en güvenilir test Anti-DNAse B'dir."
   },
   {
     "id": "prac-nefr-009",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 9,
-    "slideTitle": "RPGN Tip II: İmmün Kompleks Aracılı Hilal Gelişimi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Hızlı İlerleyen Glomerülonefrit (RPGN) ve Kresentik Glomerülonefrit: Genel Kavram",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki kresentik glomerülonefrit (RPGN) tiplerinden hangisinin biyopsisinde immünofloresan incelemede granüler immün kompleks birikimi izlenmesi beklenir?",
+    "question": "Hızlı ilerleyen glomerülonefrit (RPGN) klinik tablosu sergileyen bir hastanın böbrek biyopsisinde histopatolojik olarak 'Kresentik Glomerülonefrit' tanısı konabilmesi için glomerüllerin en az yüzde kaçında kresent (hilal) izlenmesi şarttır?",
     "options": [
-      "A) Granülomatöz polianjiyitis (Wegener)",
-      "B) Goodpasture hastalığı",
-      "C) Lupus Nefriti Sınıf IV zemininde gelişen kresentik GN (RPGN Tip II)",
-      "D) Mikroskopik polianjiyitis",
-      "E) İzole Anti-GBM glomerülonefriti"
+      "A) %10",
+      "B) %20",
+      "C) %35",
+      "D) %50",
+      "E) %90"
     ],
-    "correctAnswer": 2,
-    "explanation": "RPGN Tip II immün kompleks aracılıdır (Lupus, Poststreptokokkal vb.) ve İF'de granüler depozitler içerir. Tip I lineer, Tip III ise pauci-immündür."
+    "correctAnswer": 3,
+    "explanation": "Patolojik sınıflamalara göre bir glomerülonefrite kresentik GN (RPGN morfolojisi) denebilmesi için böbrek biyopsisindeki glomerüllerin en az %50'sinde Bowman kapsülü içinde kresent (hilal) oluşumu saptanmalıdır."
   },
   {
     "id": "prac-nefr-010",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 10,
-    "slideTitle": "RPGN Tip III: Pauci-İmmün / ANCA Pozitif Glomerülonefrit",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kresentin (Hilal) Histogenezi ve Morfolojik Evrimi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Kronik pürülan sinüzit, akciğer grafisinde bilateral kaviteli nodüller ve hızlı ilerleyen böbrek yetmezliği olan 55 yaşındaki hastanın biyopsisinde nekrotizan kresentik GN saptanıyor, İF negatif geliyor. Bu hastada hangi serolojik belirtecin pozitif olması beklenir?",
+    "question": "Hızlı ilerleyen kresentik glomerülonefritte Bowman kapsülü boşluğunda yarım ay şeklinde çoğalarak kapiller yumağı ezen kresentlerin (hilallerin) yapısını oluşturan primer hücre grubu aşağıdakilerden hangisidir?",
     "options": [
-      "A) Anti-dsDNA",
-      "B) c-ANCA (Anti-PR3)",
-      "C) Anti-GBM",
-      "D) Anti-Sm",
-      "E) Anti-PLA2R"
+      "A) Podositler (visseral epitel hücreleri)",
+      "B) Kapiller endotel hücreleri",
+      "C) Bowman kapsülü pariyetal epitel hücreleri ve makrofajlar",
+      "D) Jukstaglomerüler granüler hücreler",
+      "E) Henle kulpu epitel hücreleri"
     ],
-    "correctAnswer": 1,
-    "explanation": "Üst-alt solunum yolu granülomları ve pauci-immün kresentik nefrit Granülomatöz Polianjiyitisin (Wegener) klasik tablosudur ve c-ANCA (PR3-ANCA) pozitifliği ile karakterizedir."
+    "correctAnswer": 2,
+    "explanation": "Kresent (hilal) oluşumunun hücresel bileşenini, Bowman aralığına sızan fibrinin mitojenik uyarısıyla çoğalan Bowman kapsülü pariyetal epitel hücreleri ve bölgeye infiltre olan monosit/makrofajlar oluşturur."
   },
   {
     "id": "prac-nefr-011",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 11,
-    "slideTitle": "Lupus Nefriti: Etyopatogenez ve DSÖ / ISN-RPS Sınıflaması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "RPGN Tip I: Anti-GBM Antikor Hastalığı ve Goodpasture Sendromu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Lupus nefriti sınıflamasında glomerüllerin %50 veya daha fazlasının tutulduğu, en ağır seyirli ve agresif immünsüpresif tedavi gerektiren form hangisidir?",
+    "question": "Nefroloji kliniğine nefes darlığı, öksürükle kan tükürme (hemoptizi) ve oligürik nefritik sendrom tablosuyla yatırılan 24 yaşındaki bir erkek hastanın böbrek biyopsisinde immünfloresan incelemede kapiller duvar boyunca kesintisiz LİNEER IgG ve C3 depolanması saptanıyor. Bu otoantikorların hedef aldığı spesifik antijenik yapı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Sınıf I Minimal mezangiyal",
-      "B) Sınıf II Mezangiyal proliferatif",
-      "C) Sınıf III Fokal lupus nefriti",
-      "D) Sınıf IV Diffüz proliferatif lupus nefriti",
-      "E) Sınıf V Membranöz lupus nefriti"
+      "A) Tip I kollajen alfa-1 zinciri",
+      "B) Tip IV kollajen alfa-3 zincirinin NC1 domaini",
+      "C) Fosfolipaz A2 reseptörü (PLA2R)",
+      "D) Nötral endopeptidaz",
+      "E) Streptokokal SpeB ekzotoksini"
     ],
-    "correctAnswer": 3,
-    "explanation": "Glomerüllerin %50'sinden fazlasının tutulduğu Sınıf IV Diffüz Lupus Nefriti en sık ve prognozu en kötü olan formdur."
+    "correctAnswer": 1,
+    "explanation": "Goodpasture sendromunda (Tip I RPGN) otoantikorlar, glomerüler ve alveolar bazal membranlarda bulunan Tip IV kollajenin alfa-3 zincirinin non-kollajenöz (NC1) domainine bağlanarak lineer immünfloresan paterni ve doku nekrozu oluşturur."
   },
   {
     "id": "prac-nefr-012",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 12,
-    "slideTitle": "Diffüz Lupus Nefriti (Sınıf IV): Tel Halka Lezyonları ve 'Full-House' İF Deseni",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "RPGN Tip II: İmmün Kompleks Aracılı Kresentik Glomerülonefrit",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "SLE tanılı bir hastanın böbrek biyopsisinde ışık mikroskobunda kapiller duvarda belirgin 'wire-loop' (tel halka) lezyonları, İF'de ise IgG, IgA, IgM, C3 ve C1q'nun tümünün pozitif boyandığı 'Full-House' paterni izleniyor. Bu hasta hangi lupus nefriti sınıfındadır?",
+    "question": "Sistemik lupus eritematozus (SLE) tanılı bir kadın hastada 2 hafta içinde hızlı kreatinin artışı, oligüri ve hematüri gelişiyor. Böbrek biyopsisinde glomerüllerin %70'inde kresentler ve immünfloresanda kapiller duvar ile mezangiyumda kaba granüler IgG, C3 ve C1q depolanması izleniyor. Bu hasta RPGN immünolojik sınıflamasında hangi grupta yer alır?",
     "options": [
-      "A) Sınıf I",
-      "B) Sınıf II",
-      "C) Sınıf IV",
-      "D) Sınıf V",
-      "E) Sınıf VI"
+      "A) Tip I RPGN (Anti-GBM antikor hastalığı)",
+      "B) Tip II RPGN (İmmün kompleks aracılı RPGN)",
+      "C) Tip III RPGN (Pauci-immün RPGN)",
+      "D) Alport ilişkili RPGN",
+      "E) Amiloidoz ilişkili RPGN"
     ],
-    "correctAnswer": 2,
-    "explanation": "Tel halka (wire-loop) lezyonları ve Full-House immünofloresan paterni en karakteristik olarak Sınıf IV Diffüz Proliferatif Lupus Nefritinde izlenir."
+    "correctAnswer": 1,
+    "explanation": "Lupus nefriti, APSGN veya IgA nefropatisi zemininde gelişen ve immünfloresanda granüler immün kompleks birikintileri sergileyen kresentik glomerülonefritler Tip II RPGN (immün kompleks aracılı) sınıfına girer."
   },
   {
     "id": "prac-nefr-013",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 13,
-    "slideTitle": "IgA Nefropatisi (Berger Hastalığı): Etyopatogenez ve Epidemiyoloji",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "RPGN Tip III: Pauci-İmmün Kresentik GN ve ANCA Vaskülitleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Primer glomerüler hastalıklar arasında dünya çapında en sık görülen ve patogenezinde anormal galaktoz-eksik IgA1 moleküllerinin mezangiyumda birikmesi rol oynayan antite hangisidir?",
+    "question": "Kronik sinüzit, burun kemiğinde çökme (semer burun) ve akciğer grafisinde kavitasyonel nodülleri olan 55 yaşındaki bir hastada akut böbrek yetmezliği gelişiyor. Böbrek biyopsisinde glomerüllerde kresentler ve fibrinoid nekroz saptanırken immünfloresanda immünoglobulin veya kompleman birikimi izlenmiyor (pauci-immün). Bu hastanın serumunda saptanması en olası otoantikor aşağıdakilerden hangisidir?",
     "options": [
-      "A) Minimal değişiklik hastalığı",
-      "B) Membranöz nefropati",
-      "C) IgA nefropatisi (Berger)",
-      "D) Poststreptokokkal GN",
-      "E) FSGS"
+      "A) Anti-GBM antikoru",
+      "B) Anti-dsDNA antikoru",
+      "C) c-ANCA (Anti-PR3)",
+      "D) Anti-PLA2R antikoru",
+      "E) Anti-kardiyolipin antikoru"
     ],
     "correctAnswer": 2,
-    "explanation": "Dünyada en sık görülen primer glomerülonefrit IgA nefropatisidir (Berger Hastalığı)."
+    "explanation": "Üst solunum yolu tutulumu (semer burun), akciğer kavitasyonları, pauci-immün kresentik glomerülonefrit birlikteliği Granülomatoz Polianjitis (GPA / Wegener) için tipiktir ve hastaların %90'ından fazlasında c-ANCA (PR3-ANCA) pozitiftir."
   },
   {
     "id": "prac-nefr-014",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 14,
-    "slideTitle": "IgA Nefropatisi: Klinik Tablo, 'Senfaranjitik Hematüri' ve Tanı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "IgA Nefropatisi (Berger Hastalığı): Etyopatogenez ve Dört Vuruş Hipotezi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "20 yaşındaki bir üniversite öğrencisi boğaz ağrısı ve ateş şikayetinin başladığı günün ertesi sabahı (24 saat sonra) idrarının çay renginde olduğunu fark ediyor. Tansiyonu normal, serum C3 düzeyi normal saptanıyor. En olası tanı hangisidir?",
+    "question": "Dünya çapında en sık görülen primer glomerülonefrit olan IgA nefropatisinin (Berger hastalığı) patogenezinde rol oynayan temel biyokimyasal/immünolojik defekt aşağıdakilerden hangisidir?",
     "options": [
-      "A) Akut poststreptokokkal glomerülonefrit",
-      "B) IgA nefropatisi (Berger)",
-      "C) Alport sendromu",
-      "D) C3 glomerulopatisi",
-      "E) Membranöz nefropati"
+      "A) Podokin geninde homozigot delesyon",
+      "B) Menteşe bölgesinde anormal galaktoz-eksik IgA1 (Gd-IgA1) sentezi ve otoantikor oluşumu",
+      "C) Tip IV kollajen alfa-5 zincirinin eksikliği",
+      "D) Kompleman Faktör H geninde inaktive edici mutasyon",
+      "E) Nötrofil miyeloperoksidazına karşı otoantikor gelişimi"
     ],
     "correctAnswer": 1,
-    "explanation": "Üst solunum yolu enfeksiyonundan sadece 1 gün sonra ortaya çıkan makroskopik hematüri ve normal C3 düzeyi senfaranjitik hematüriyi ve IgA nefropatisini gösterir."
+    "explanation": "IgA nefropatisinin 'dört vuruş' hipotezindeki birinci ve temel defekt; mukozal B hücrelerinde IgA1 menteşe bölgesinin yetersiz glikozilasyonu sonucu 'Galaktoz-Eksik IgA1' (Gd-IgA1) üretilmesidir."
   },
   {
     "id": "prac-nefr-015",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 15,
-    "slideTitle": "IgA Nefropatisi ve Henoch-Schönlein Purpurası (IgA Vasküliti) Morfolojisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "IgA Nefropatisi: Klinik Tablo, 'Senfarenjitik Hematüri' ve Oxford Sınıflaması",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "7 yaşındaki bir çocukta kalçalarda ve bacaklarda basmakla solmayan döküntüler (palpeabl purpura), karın ağrısı ve makroskopik hematüri gelişiyor. Yapılan böbrek biyopsisinde immünofloresan incelemede hangi birikimin izlenmesi beklenir?",
+    "question": "20 yaşında bir üniversite öğrencisi, boğaz ağrısı ve ateş şikayetinin başladığı günün ertesi sabahı (24 saat sonra) idrarının çay renginde gelmesi nedeniyle başvuruyor. Öyküsünden 8 ay önce de benzer bir gripal enfeksiyon sırasında idrarında kanama olduğu öğreniliyor. Fizik muayenede kan basıncı normaldir. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) GBM boyunca lineer IgG",
-      "B) Mezangiyumda granüler IgA",
-      "C) Subepitelyal alanda granüler IgG4",
-      "D) Kapiller duvarda kaba C3",
-      "E) Subendotelyal Full-House birikim"
+      "A) Akut poststreptokoksik glomerülonefrit",
+      "B) IgA nefropatisi (Berger hastalığı)",
+      "C) Goodpasture sendromu",
+      "D) Minimal değişiklik hastalığı",
+      "E) Membranöz nefropati"
     ],
     "correctAnswer": 1,
-    "explanation": "Henoch-Schönlein purpurasında (IgA vasküliti) böbrek biyopsisinde mezangiyal granüler IgA depozitleri izlenir."
+    "explanation": "Üst solunum yolu enfeksiyonunun başlangıcıyla eş zamanlı (1-2 gün içinde) gelişen ve tekrarlayan makroskopik hematüri atakları (senfarenjitik hematüri) genç erkeklerde IgA nefropatisinin (Berger hastalığı) en tipik klinik prezentasyonudur."
   },
   {
     "id": "prac-nefr-016",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 16,
-    "slideTitle": "Alport Sendromu: Genetik, Patogenez ve Klinik Triad",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "IgA Nefropatisi Morfolojisi ve Henoch-Schönlein Purpurası (IgA Vasküliti)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Tekrarlayan hematürisi olan 18 yaşındaki bir erkek hastada yapılan muayenede bilateral sensörinöral işitme kaybı ve gözde anterior lentikonus saptanıyor. Bu hastada mutasyona uğramış gen hangisidir?",
+    "question": "7 yaşındaki bir çocukta alt ekstremitelerde palpabl purpura, diz eklemlerinde artralji, kramp tarzı karın ağrısı ve idrarda hematüri saptanıyor. Yapılan böbrek biyopsisinde immünfloresan mikroskopide beklenen karakteristik tanısal bulgu aşağıdakilerden hangisidir?",
     "options": [
-      "A) COL4A5",
-      "B) NPHS1",
-      "C) PKD1",
-      "D) VHL",
-      "E) WT1"
+      "A) GBM boyunca kesintisiz lineer IgG birikimi",
+      "B) Glomerül mezangiyumunda baskın granüler IgA ve C3 depolanması",
+      "C) Kapiller duvarda subepitelyal spike and dome C3 birikimi",
+      "D) Lamina densada kurşun kalem tarzı elektron-yoğun şerit depozit",
+      "E) Negatif immünfloresan boyanma (pauci-immün)"
     ],
-    "correctAnswer": 0,
-    "explanation": "Alport sendromunun X'e bağlı formundan sorumlu gen Tip IV kollajen alfa-5 zincirini kodlayan COL4A5 genidir."
+    "correctAnswer": 1,
+    "explanation": "Palpabl purpura, artrit, karın ağrısı ve hematüri Henoch-Schönlein Purpurası (IgA vasküliti) tetradıdır. Renal tutulumu patolojik olarak IgA nefropatisi ile tamamen aynıdır; mezangiyumda baskın granüler IgA ve C3 birikimi gösterir."
   },
   {
     "id": "prac-nefr-017",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 17,
-    "slideTitle": "Alport Sendromu ve İnce Bazal Membran Hastalığı Morfolojisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Membranoproliferatif Glomerülonefrit (MPGN): Genel Özellikler ve Morfolojik Patern",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Ailesinde birçok kişide mikroskopik hematüri bulunan ancak hiçbirinde böbrek yetmezliği gelişmeyen 22 yaşındaki hastanın renal biyopsisinde elektron mikroskobunda GBM kalınlığının difüz olarak 180 nm'ye inceldiği, ancak lamelleşme veya sepet örgüsü bulunmadığı saptanıyor. Tanı nedir?",
+    "question": "Membranoproliferatif glomerülonefrit (MPGN) tanısı alan bir hastanın böbrek biyopsisinde gümüş boyasında izlenen karakteristik 'tramvay hattı' (tram-track / çift kontur) görünümünü oluşturan temel hücresel mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      "A) Alport sendromu",
-      "B) İnce bazal membran hastalığı (Benign ailesel hematüri)",
-      "C) Minimal değişiklik hastalığı",
-      "D) IgA nefropatisi",
-      "E) Poststreptokokkal GN"
+      "A) Podosit ayak çıkıntılarının lamina densaya doğru invazyonu",
+      "B) Mezangiyal hücre uzantılarının subendotelyal aralığa sokulması (mezangiyokapiller interpozisyon) ve yeni membran sentezi",
+      "C) Pariyetal epitel hücrelerinin Bowman kapsülü boyunca çoğalması",
+      "D) Nötrofillerin glomerül endotelini eriterek kapiller duvarı delmesi",
+      "E) Amiloid fibrillerinin bazal membran boyunca radial dizilimi"
     ],
     "correctAnswer": 1,
-    "explanation": "Homojen ve difüz GBM incelmesi (<250 nm) ve benign seyir İnce Bazal Membran Hastalığının (Benign ailesel hematüri) patognomonik tablosudur."
+    "explanation": "MPGN'deki 'tram-track' (çift kontur) görünümü; mezangiyal hücre sitoplazmik uzantılarının ve matriksin endotel ile bazal membran arasına girmesi (mezangiyokapiller interpozisyon) ve burada ikinci bir bazal membran katmanı sentezlenmesi sonucu oluşur."
   },
   {
     "id": "prac-nefr-018",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 18,
-    "slideTitle": "Nefritik Sendromda Kompleman Düzeylerine Göre Ayırıcı Tanı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "MPGN Tip I (İmmün Kompleks Aracılı): Etyoloji, Subendotelyal Depozitler ve Klinik",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki nefritik sendrom nedenlerinden hangisinde serum C3 ve C4 kompleman düzeylerinin normal olması beklenir?",
+    "question": "Kronik Hepatit C enfeksiyonu bulunan 48 yaşındaki bir hastada bacaklarda purpura, artralji, hipokomplementemi (düşük C3 ve C4) ve mikroskopik hematüri-proteinüri saptanıyor. Renal biyopside gümüş boyasında çift kontur (tram-track) görünümü ve elektron mikroskobunda subendotelyal depozitler izleniyor. En olası tanı nedir?",
     "options": [
-      "A) Akut poststreptokokkal glomerülonefrit",
-      "B) Diffüz proliferatif lupus nefriti",
-      "C) IgA nefropatisi (Berger)",
-      "D) MPGN Tip I",
-      "E) Subakut bakteriyel endokardit ilişkili nefrit"
+      "A) Minimal değişiklik hastalığı",
+      "B) Membranoproliferatif glomerülonefrit Tip I",
+      "C) Anti-GBM hastalığı",
+      "D) Alport sendromu",
+      "E) İnce bazal membran hastalığı"
     ],
-    "correctAnswer": 2,
-    "explanation": "IgA nefropatisinde serum kompleman düzeyleri (C3 ve C4) normal sınırlardadır. Diğer tüm seçeneklerde belirgin kompleman tüketimi ve hipokomplementemi izlenir."
+    "correctAnswer": 1,
+    "explanation": "Hepatit C enfeksiyonu, mikst kriyoglobulinemi, düşük C3/C4 kompleman düzeyleri, tram-track bazal membran görünümü ve subendotelyal immün depozitler MPGN Tip I'in klasik klinik-patolojik tablosudur."
   },
   {
     "id": "prac-nefr-019",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 19,
-    "slideTitle": "Kronik Glomerülonefrit: Son Dönem Böbrek Yetmezliğinin Nihai Morfolojisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "MPGN Tip II (Dens Depozit Hastalığı) ve C3 Glomerülopatisi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Son dönem böbrek yetmezliğine ilerlemiş kronik glomerülonefrit olgusunda otopside beklenen karakteristik makroskobik böbrek bulgusu hangisidir?",
+    "question": "14 yaşındaki bir hastada nefrotik/nefritik sendrom tablosu araştırılırken serum C3 düzeyi aşırı düşük, C1 ve C4 düzeyleri ise tamamen normal bulunuyor. Böbrek biyopsisinde elektron mikroskobunda glomerüler bazal membranın lamina densası boyunca kurdele şeklinde homojen, koyu elektron-dans birikimler saptanıyor. Bu patolojiden sorumlu otoantikor aşağıdakilerden hangisidir?",
     "options": [
-      "A) Asimetrik devasa boyutta kistik böbrekler",
-      "B) İki taraflı simetrik büzüşmüş, soluk renkli, ince granüler yüzeyli ve korteksi aşırı incelmiş böbrekler",
-      "C) Yalnızca sol böbrekte hidronefrotik büyüme",
-      "D) Pariyetal subkapsüler kanama odakları içeren devasa böbrekler",
-      "E) Kortikomedüller ayrımın keskinleştiği hiperemik böbrekler"
+      "A) Anti-GBM antikoru",
+      "B) Anti-PLA2R antikoru",
+      "C) C3 Nefretik Faktör (C3NeF)",
+      "D) Anti-proteinaz 3 (c-ANCA)",
+      "E) Anti-dsDNA antikoru"
     ],
-    "correctAnswer": 1,
-    "explanation": "Kronik glomerülonefritte her iki böbrek simetrik olarak küçülür, yüzeyi ince granüler hal alır ve parankim (özellikle korteks) ileri derecede incelir."
+    "correctAnswer": 2,
+    "explanation": "Alternatif kompleman yolağının C3 konvertazını (C3bBb) stabilize ederek kontrolsüz C3 tüketimine ve lamina densada homojen şerit elektron-yoğun depozitlere yol açan otoantikor C3 Nefretik Faktör'dür (C3NeF - Dens Depozit Hastalığı)."
   },
   {
     "id": "prac-nefr-020",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 20,
-    "slideTitle": "Glomerülonefritlerde İmmünofloresan Paternlerinin Karşılaştırmalı Atlası",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Lupus Nefriti: Etyopatogenez ve ISN/RPS Sınıflaması (Sınıf I - IV)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Böbrek biyopsisinde immünofloresan mikroskobunda glomerül kapiller duvarı boyunca kesintisiz lineer IgG boyanması aşağıdaki hastalıkların hangisi için patognomoniktir?",
+    "question": "Sistemik lupus eritematozus tanısıyla izlenen 26 yaşındaki bir kadında belirgin hematüri, hipertansiyon ve hızlı kreatinin yükselmesi gelişiyor. Böbrek biyopsisinde glomerüllerin %65'inde endokapiller proliferasyon, PAS boyasında belirgin 'tel halka' (wire-loop) lezyonları ve immünfloresanda IgG, IgA, IgM, C3 ve C1q pozitifliği ('full-house') izleniyor. Bu lezyon ISN/RPS sınıflamasına göre hangisidir?",
     "options": [
-      "A) Akut poststreptokokkal GN",
-      "B) Goodpasture sendromu (Anti-GBM hastalığı)",
-      "C) Membranöz nefropati",
-      "D) Lupus nefriti Sınıf IV",
-      "E) Granülomatöz polianjiyitis"
+      "A) Sınıf I (Minimal mezangiyal)",
+      "B) Sınıf II (Mezangiyal proliferatif)",
+      "C) Sınıf III (Fokal lupus nefriti)",
+      "D) Sınıf IV (Diffüz lupus nefriti)",
+      "E) Sınıf V (Membranöz lupus nefriti)"
     ],
-    "correctAnswer": 1,
-    "explanation": "Lineer IgG boyanması GBM'ye doğrudan bağlanan otoantikorları gösterir ve Goodpasture sendromu / Anti-GBM hastalığı için patognomoniktir."
+    "correctAnswer": 3,
+    "explanation": "Glomerüllerin >=%50'sinin tutulması, tel halka (wire-loop) kapiller kalınlaşmaları ve immünfloresanda 5 belirtecin birden boyandığı 'full-house' paterni ISN/RPS Sınıf IV (Diffüz Lupus Nefriti) için karakteristiktir."
   },
   {
     "id": "prac-nefr-021",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 21,
-    "slideTitle": "Nefritik Sendromlu Hastaya Klinik ve Laboratuvar Yaklaşımı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Lupus Nefriti (Sınıf V - VI) ve Kalıtsal Nefritlere Giriş",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik durumların hangisinde renal biyopsi yapılması kesinlikle endike DEĞİLDİR?",
+    "question": "Sistemik lupus eritematozus tanısıyla takip edilen bir hastanın böbrek biyopsisinde glomerüllerin %92'sinde global skleroz, belirgin tübüler atrofi ve interstisyel fibrozis saptanıyor. Aktif endokapiller proliferasyon izlenmiyor. ISN/RPS sınıflamasına göre bu hastanın lupus nefriti evresi aşağıdakilerden hangisidir?",
     "options": [
-      "A) Streptokokkal farenjitten 10 gün sonra tipik hafif nefritik sendrom geliştiren ve düzelme eğiliminde olan 7 yaşındaki çocuk",
-      "B) Akut nefrit tablosuna hemoptizinin eşlik ettiği 25 yaşındaki genç",
-      "C) Poststreptokokkal GN tanısı konan ancak 10 haftadır serum C3 düzeyi düşük seyreden hasta",
-      "D) Günler içinde kreatinini 1 mg/dL'den 4 mg/dL'ye yükselen 50 yaşındaki hasta",
-      "E) Sistemik lupus eritematozus tanılı hastada yeni başlayan proteinüri ve hematüri"
+      "A) Sınıf II",
+      "B) Sınıf III",
+      "C) Sınıf IV",
+      "D) Sınıf V",
+      "E) Sınıf VI"
     ],
-    "correctAnswer": 0,
-    "explanation": "Tipik klinik ve laboratuvarla seyreden çocukluk çağı APSGN olgularında prognoz %95 tam iyileşme olduğundan biyopsi endikasyonu yoktur."
+    "correctAnswer": 4,
+    "explanation": "Böbrek biyopsisinde glomerüllerin >=%90'ının sklerotik ve hyalinize olduğu, yaygın tübüler atrofinin eşlik ettiği son dönem böbrek hastalığı tablosu ISN/RPS Sınıf VI (İleri Sklerozan Lupus Nefriti) olarak tanımlanır."
   },
   {
     "id": "prac-nefr-022",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 22,
-    "slideTitle": "Nefrotik ve Nefritik Sendromların Karşılaştırmalı Büyük Klinik Matrisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Alport Sendromu ve İnce Bazal Membran Hastalığı: Genetik, Klinik ve EM Ayrımı",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki özelliklerden hangisi nefritik sendromu nefrotik sendromdan ayıran en güvenilir klinikopatolojik bulgudur?",
+    "question": "16 yaşında bir erkek çocuk, çocukluğundan beri süren idrarda kanama şikayetiyle başvuruyor. Fizik muayenede bilateral sensörinöral işitme kaybı ve göz muayenesinde anterior lentikonus saptanıyor. Hastanın böbrek biyopsisinde elektron mikroskobunda izlenmesi beklenen karakteristik patolojik lezyon aşağıdakilerden hangisidir?",
     "options": [
-      "A) 24 saatlik idrarda 4 gram albümin bulunması",
-      "B) İdrar sedimentinde eritrosit silindirlerinin ve dismorfik eritrositlerin saptanması",
-      "C) Serum albümin düzeyinin 2.2 g/dL olması",
-      "D) Pretibial gode bırakan yaygın ödem varlığı",
-      "E) Serumda total kolesterol ve trigliserid yüksekliği"
+      "A) Subepitelyal hörgüçler (humps)",
+      "B) Subendotelyal elektron-yoğun depozitler",
+      "C) Glomerüler bazal membranda lamelasyon ve 'sepet örgüsü' (basket-weave) görünümü",
+      "D) Podosit ayak çıkıntılarında izole silinme",
+      "E) Lamina densada homojen kurşun kalem tarzı şerit depozit"
     ],
-    "correctAnswer": 1,
-    "explanation": "Eritrosit silindirleri glomerül kapiller duvarındaki aktif nekrotizan ve proliferatif enflamasyonun (nefritik sendrom) doğrudan kanıtıdır."
+    "correctAnswer": 2,
+    "explanation": "Hematüri, sensörinöral işitme kaybı ve anterior lentikonus klasik Alport sendromu triadıdır. Alport sendromunda elektron mikroskobunda lamina densanın katmanlara ayrılması ve düzensiz kalınlaşıp incelmesiyle oluşan 'sepet örgüsü' (basket-weave) görünümü patognomoniktir."
   },
   {
     "id": "prac-nefr-023",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 23,
-    "slideTitle": "Nefritik Sendrom: Ayırıcı Tanı ve Patoloji Karşılaştırma Tablosu",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Glomerülonefritlerde Kompleman Kinetiği ve İmmünfloresan Ayırıcı Tanı Atlası",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki glomerüler hastalık ve elektron mikroskobundaki karakteristik bulgu eşleştirmelerinden hangisi yanlıştır?",
+    "question": "Oligürik nefritik sendrom tablosuyla başvuran 28 yaşındaki bir erkek hastanın laboratuvar incelemesinde serum C3 ve C4 düzeyleri tamamen normal sınırlarda saptanıyor. Bu hastada ayırıcı tanıda aşağıdaki hastalıklardan hangisi öncelikle DIŞLANMALIDIR (en az olasıdır)?",
     "options": [
-      "A) Akut poststreptokokkal GN — Subepitelyal hörgüçler (humps)",
-      "B) Membranöz nefropati — Subepitelyal depozitler ve spike-dome",
-      "C) Alport sendromu — GBM lamina densasında 'sepet örgüsü' (basket-weave)",
-      "D) IgA nefropatisi — Yaygın subendotelyal tel halka depozitleri",
-      "E) Minimal değişiklik hastalığı — Podosit ayaksı çıkıntılarında silinme"
+      "A) IgA nefropatisi",
+      "B) Goodpasture sendromu (Anti-GBM)",
+      "C) Granülomatoz polianjitis (Wegener)",
+      "D) Membranoproliferatif glomerülonefrit Tip I",
+      "E) Mikroskopik polianjitis"
     ],
     "correctAnswer": 3,
-    "explanation": "IgA nefropatisinde depozitler subendotelyal değil, MEZANGİYAL yerleşimlidir. Subendotelyal tel halka depozitleri Sınıf IV Lupus Nefritine özgüdür."
+    "explanation": "MPGN Tip I klasik kompleman yolağını aktive ederek daima serum C3 ve C4 düzeylerinde belirgin düşüşe (hipokomplementemi) yol açar. Kompleman düzeylerinin normal olması durumunda MPGN Tip I öncelikle dışlanmalıdır; IgA nefropatisi, Goodpasture ve ANCA vaskülitlerinde ise kompleman normaldir."
   },
   {
     "id": "prac-nefr-024",
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
+    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
     "slideNumber": 24,
-    "slideTitle": "Ders 20 Kapsamlı Sentezi: Nefritik Sendrom Patolojisinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Nefritik Sendrom Büyük Klinik Sentezi, Karşılaştırma Matrisi ve Sınav Kodları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik tablolardan hangisinde hastada kompleman düzeyinin (C3) DÜŞÜK olması ve farenjitten sonraki latent periyodun 10-14 gün olması beklenir?",
+    "question": "Aşağıdaki glomerüler hastalık ve immünfloresan mikroskopi eşleştirmelerinden hangisi YANLIŞTIR?",
     "options": [
-      "A) Akut poststreptokokkal glomerülonefrit",
-      "B) IgA nefropatisi (Berger)",
-      "C) Granülomatöz polianjiyitis (Wegener)",
-      "D) Goodpasture sendromu",
-      "E) Alport sendromu"
+      "A) Goodpasture sendromu - Glomerüler bazal membran boyunca kesintisiz lineer IgG birikimi",
+      "B) Akut poststreptokoksik GN - Kapiller duvarda kaba granüler yıldızlı gökyüzü C3 birikimi",
+      "C) IgA nefropatisi - Glomerül mezangiyumunda baskın granüler IgA ve C3 depolanması",
+      "D) Granülomatoz polianjitis (Wegener) - Kapiller duvarda yoğun subepitelyal spike and dome IgG birikimi",
+      "E) Lupus nefriti Sınıf IV - Kapiller duvar ve mezangiyumda full-house (IgG, IgA, IgM, C3, C1q) birikimi"
     ],
-    "correctAnswer": 0,
-    "explanation": "Farenjitten 10-14 gün sonra başlayan nefrit ve serum C3 düşüklüğü Akut Poststreptokokkal Glomerülonefritin (APSGN) klasik tablosudur."
+    "correctAnswer": 3,
+    "explanation": "Granülomatoz Polianjitis (GPA / Wegener), Tip III pauci-immün kresentik glomerülonefrittir; immünfloresanda belirgin immün kompleks veya antikor birikimi İZLENMEZ (negatiftir). 'Subepitelyal spike and dome' görünümü ise Membranöz Nefropatinin bulgusudur."
   },
   {
     "id": "prac-tub-001",
@@ -1520,383 +1596,307 @@
     "explanation": "Bilateral dev polikistik böbrekler, polikistik karaciğer ve intrakraniyal berry anevrizmaları Otozomal Dominant Polikistik Böbrek Hastalığının (ADPKD) klasik triadıdır."
   },
   {
-    "id": "prac-tum-001",
+    "id": "prac-bobrek-001",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 1,
-    "slideTitle": "Böbrek Neoplazmlarına Giriş ve Epidemiyoloji",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Böbrek Neoplazmlarına Genel Giriş ve Renal Kortikal Adenomlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Renal hücreli karsinom (RCC) etyolojisinde rol oynayan en güçlü ve kanıtlanmış değiştirilebilir edinsel risk faktörü aşağıdakilerden hangisidir?",
+    "question": "Böbrek ve üriner sistem neoplazmlarının epidemiyolojisi, sıklığı ve kortikal papiller adenomların patolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Kahve tüketimi",
-      "B) Sigara kullanımı",
-      "C) Alkol tüketimi",
-      "D) Kronik kalsiyum taşları",
-      "E) Aşırı tuz tüketimi"
+      "A) Alt idrar yolu neoplazmları böbrek parankim tümörlerine göre belirgin şekilde daha nadir izlenir",
+      "B) Otopsilerde sık saptanan küçük kortikal papiller adenomlar sitogenetik olarak Trizomi 7 ve 17 anomalilerini taşır",
+      "C) Böbrek kortikal adenomları morfolojik ve moleküler açıdan berrak hücreli karsinomun doğrudan öncülüdür",
+      "D) Erişkinlerde böbreğin en sık primer malign neoplazmı medulladaki toplayıcı kanallardan köken alan Bellini karsinomudur",
+      "E) Çapı 0,5 cm altındaki papiller kortikal adenomlar erken dönemde renal ven invazyonu yaparak hızla metastaz geliştirir"
     ],
     "correctAnswer": 1,
-    "explanation": "Sigara kullanımı Renal Hücreli Karsinom gelişiminde en güçlü ve en iyi dökümante edilmiş çevresel/edinsel risk faktörüdür."
+    "explanation": "Doğru yanıt B seçeneğidir. Otopsi serilerinde erişkinlerin %40'ına varan oranda rastlanan <0,5 cm boyutundaki renal kortikal papiller adenomlar, papiller renal hücreli karsinom ile ortak sitogenetik değişiklikleri (özellikle Trizomi 7, Trizomi 17 ve Y kaybı) paylaşırlar ve papiller karsinomun mikroskopik öncülleri olarak kabul edilirler.\n\nA yanlıştır; alt idrar yolu (özellikle mesane) tümörleri böbrek parankimal tümörlerinden yaklaşık 2 kat daha yaygındır.\nC yanlıştır; papiller adenomlar berrak hücreli değil, papiller renal karsinom ile morfolojik ve sitogenetik benzerlik gösterir.\nD yanlıştır; böbreğin en sık primer malignitesi kortikal tübüler epitelden kaynaklanan renal hücreli karsinomdur (%80-85), toplayıcı kanal karsinomu <%1'dir.\nE yanlıştır; bu adenomlar benign kabul edilir, metastaz yapmazlar ve klinik olarak sessizdirler."
   },
   {
-    "id": "prac-tum-002",
+    "id": "prac-bobrek-002",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
     "slideNumber": 2,
-    "slideTitle": "Renal Onkositoma: Maun Kahverengisi Kitle ve Yıldızsı Skar",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Renal Hücreli Karsinom (RCC): Epidemiyoloji ve Demografik Özellikler",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Nefrektomi materyalinde böbrek korteksinde 5 cm çapında, iyi sınırlı, maun kahverengisi kesit yüzü gösteren ve merkezinde yıldızsı fibröz skar bulunan bir tümör saptanıyor. Mikroskopta hücrelerin mitokondriden zengin yoğun eozinofilik granüler sitoplazmalı olduğu izleniyor. Tanı nedir?",
+    "question": "Renal Hücreli Karsinomun (RCC) epidemiyolojik, demografik ve mortalite özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Berrak hücreli renal karsinom",
-      "B) Renal onkositoma",
-      "C) Papiller renal karsinom",
-      "D) Anjiyomiyolipom",
-      "E) Wilms tümörü"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Maun kahverengisi renk, santral yıldızsı skar ve sitoplazması mitokondri dolu onkositer hücreler Renal Onkositomanın patognomonik triadıdır."
-  },
-  {
-    "id": "prac-tum-003",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Anjiyomiyolipom (AML) ve Tüberöz Skleroz Birlikteliği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yüzünde anjiyofibromları (adenoma sebaseum) ve zeka geriliği olan bir gençte bilateral dev böbrek kitleleri saptanıyor. Biyopside kalın duvarlı damarlar, düz kas ve yağ dokusu izleniyor. İmmünohistokimyada HMB-45 pozitif boyanan bu antite hangisidir?",
-    "options": [
-      "A) Renal hücreli karsinom",
-      "B) Anjiyomiyolipom (AML)",
-      "C) Renal onkositoma",
-      "D) Medüller karsinom",
-      "E) Jukstaglomerüler hücreli tümör"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Damar, kas ve yağ dokusu triadı içeren ve Tüberöz skleroz ile ilişkili HMB-45 pozitif tümör Anjiyomiyolipomdur (AML)."
-  },
-  {
-    "id": "prac-tum-004",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Renal Hücreli Karsinom (RCC): Berrak Hücreli Varyant ve VHL Genetiği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Berrak hücreli renal hücreli karsinomların (ccRCC) patogenezinde en sık saptanan kromozom anormalliği ve inaktive olan tümör süpresör gen aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kromozom 11p delesyonu — WT1",
-      "B) Kromozom 3p delesyonu — VHL",
-      "C) Kromozom 7 trizomisi — MET",
-      "D) Kromozom 17p delesyonu — TP53",
-      "E) Kromozom 13q delesyonu — RB1"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Berrak hücreli RCC patogenezinde kromozom 3p delesyonu ve VHL tümör süpresör geninin inaktivasyonu olguların %90'ından fazlasında saptanır."
-  },
-  {
-    "id": "prac-tum-005",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Berrak Hücreli RCC Morfolojisi: Makroskopi, Mikroskopi ve Vasküler Yayılım",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek üst kutbunda yerleşen altın sarısı renkli, kanamalı ve nekrotik bir kitle nedeniyle opere edilen hastanın patoloji raporunda tümörün renal ven lümenine invaze olarak tümör trombüsü oluşturduğu ve mikroskopta narin kapillerler çevresinde berrak sitoplazmalı hücrelerden oluştuğu belirtiliyor. Tanı nedir?",
-    "options": [
-      "A) Renal onkositoma",
-      "B) Berrak hücreli renal hücreli karsinom",
-      "C) Kromofob karsinom",
-      "D) Anjiyomiyolipom",
-      "E) Ürotelyal karsinom"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Altın sarısı renk, berrak sitoplazma ve renal ven invazyonu Berrak Hücreli Renal Hücreli Karsinomun (ccRCC) patognomonik tablosudur."
-  },
-  {
-    "id": "prac-tum-006",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Papiller Renal Hücreli Karsinom: MET Protoonkogeni ve Köpüksü Makrofajlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek rezeksiyon materyalinde bilateral multifokal kitleler izlenen hastada sitogenetikte trizomi 7 ve trizomi 17 saptanıyor. Mikroskopta fibrovasküler papiller korlar, psammom cisimcikleri ve köpüksü makrofajlar izlenen tümör hangisidir?",
-    "options": [
-      "A) Berrak hücreli karsinom",
-      "B) Papiller renal hücreli karsinom",
-      "C) Kromofob renal karsinom",
-      "D) Renal onkositoma",
-      "E) Medüller karsinom"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Trizomi 7/17, MET mutasyonu, papiller mimari, psammom cisimcikleri ve köpüksü makrofajlar Papiller RCC'nin karakteristik bulgularıdır."
-  },
-  {
-    "id": "prac-tum-007",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Kromofob Renal Hücreli Karsinom: Bitki Hücresi Görünümü ve Perinükleer Halo",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek kitlesi rezeke edilen hastanın biyopsisinde hücrelerin bitki hücresi gibi çok belirgin sınırlara sahip olduğu, sitoplazmada nükleus etrafında berrak bir halo (perinükleer halo) ve büzüşmüş 'kuru üzüm' benzeri nükleus bulunduğu görülüyor. Hale kolloidal demir boyası pozitif saptanan ve prognozu çok iyi olan bu tümör hangisidir?",
-    "options": [
-      "A) Berrak hücreli karsinom",
-      "B) Kromofob renal hücreli karsinom",
-      "C) Wilms tümörü",
-      "D) Renal sarkom",
-      "E) Toplayıcı kanal karsinomu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bitki hücresi sınırları, perinükleer halo, raisinoid nükleus ve kolloidal demir pozitifliği mükemmel prognozlu Kromofob RCC'nin ayırt edici özellikleridir."
-  },
-  {
-    "id": "prac-tum-008",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Wilms Tümörü (Nefroblastom): Çocukluk Çağının Nefrojenik Malignitesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "3 yaşındaki bir çocuğun karnında saptanan dev kitle nedeniyle yapılan nefrektomide mikroskopta primitif blastemal mavi hücreler, abortif glomerüloid yapılar ve iğsi hücreli stroma birlikteliği (trifazik patern) izleniyor. Tanı nedir?",
-    "options": [
-      "A) Nöroblastom",
-      "B) Wilms tümörü (Nefroblastom)",
-      "C) Renal berrak hücreli karsinom",
-      "D) Rabdomiyosarkom",
-      "E) Ewing sarkomu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Çocukluk çağında blastem, epitel ve stromadan oluşan trifazik histoloji Wilms Tümörünün (Nefroblastom) klasik patolojik imzasıdır."
-  },
-  {
-    "id": "prac-tum-009",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "Wilms Tümörü ile İlişkili Genetik Sendromlar: WAGR, Denys-Drash ve Beckwith-Wiedemann",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Doğumda makroglossi (büyük dil), omfalosel ve vücudun sağ yarısında belirgin büyüme (hemihipertrofi) saptanan 2 yaşındaki bir bebekte karında saptanan kitlenin en olası tanısı ve sorumlu genetik bölge hangisidir?",
-    "options": [
-      "A) Nöroblastom — N-MYC amplifikasyonu",
-      "B) Beckwith-Wiedemann sendromu ilişkili Wilms tümörü — Kromozom 11p15 (WT2 / IGF2)",
-      "C) WAGR sendromu — Kromozom 13q14",
-      "D) Denys-Drash sendromu — Kromozom 3p25",
-      "E) Li-Fraumeni sendromu — TP53"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Makroglossi, omfalosel ve hemihipertrofi Beckwith-Wiedemann sendromunun (11p15 / IGF2 imprinting bozukluğu) bulgularıdır ve Wilms tümörü riskini belirgin artırır."
-  },
-  {
-    "id": "prac-tum-010",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Renal Hücreli Karsinomda Klinik Tablo ve Klasik Triad",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Renal hücreli karsinomun (RCC) klasik semptom triadı olan hematüri, yan ağrısı ve palpabl kitle tablosunun hastaların tanı anında bir arada bulunma oranı yaklaşık ne kadardır?",
-    "options": [
-      "A) %10",
-      "B) %50",
-      "C) %75",
-      "D) %90",
-      "E) %100"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Klasik triad (hematüri, ağrı, palpabl kitle) hastaların yalnızca yaklaşık %10'unda bir arada izlenir ve genellikle ileri evre hastalığı simgeler."
-  },
-  {
-    "id": "prac-tum-011",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "RCC ve Paraneoplastik Sendromlar: Hormonlar ve Stauffer Sendromu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek kitlesi saptanan bir hastada karaciğer metastazı olmadığı halde serum alkalen fosfataz ve bilirubin düzeyleri yüksek bulunuyor, hepatomegali izleniyor. Nefrektomi sonrası karaciğer testleri tamamen normale dönüyor. Bu paraneoplastik tablo hangisidir?",
-    "options": [
-      "A) Cushing sendromu",
-      "B) Stauffer sendromu",
-      "C) Budd-Chiari sendromu",
-      "D) Gilbert sendromu",
-      "E) Zollinger-Ellison sendromu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Renal hücreli karsinomda metastaz olmaksızın gelişen ve nefrektomi sonrası düzelen paraneoplastik hepatik disfonksiyon tablosu Stauffer Sendromudur."
-  },
-  {
-    "id": "prac-tum-012",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "RCC Yayılım Yolları: Vasküler Trombüs, Lenfatik ve Organ Metastazları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "62 yaşındaki bir erkek hastada sol tarafta yeni başlayan, yatmakla küçülmeyen varikosel ve akciğer grafisinde 'top mermisi' görünümünde bilateral yuvarlak kitleler saptanıyor. En olası primer odak hangisidir?",
-    "options": [
-      "A) Prostat karsinomu",
-      "B) Renal hücreli karsinom",
-      "C) Mide adenokarsinomu",
-      "D) Kolon karsinomu",
-      "E) Testis seminomu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Sol renal venin tümör trombüsüyle tıkanması sol testiküler venöz drenajı bozarak sol varikosele yol açar; akciğere top mermisi metastazı Renal Hücreli Karsinom için klasiktir."
-  },
-  {
-    "id": "prac-tum-013",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Böbrek Tümörlerinde Evreleme: TNM Sistemi ve Gerota Fasyası Kuralı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek kesitinde 5 cm çapında olan ancak renal ven ana kökünü invaze ederek lümeni tıkayan bir renal hücreli karsinomun TNM sistemindeki T evresi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) T1b",
-      "B) T2a",
-      "C) T3a",
-      "D) T3b",
-      "E) T4"
+      "A) Primer böbrek malign neoplazmlarının yaklaşık %80-85'ini oluşturur",
+      "B) Tümörün histogenetik kökeni renal korteksteki tübüler epitel hücreleridir",
+      "C) Cinsiyet dağılımında belirgin kadın baskınlığı olup kadın/erkek oranı 3:1'dir",
+      "D) En sık 6. ve 7. dekatlarda (60-70 yaş aralığında) pik yapar",
+      "E) Biyolojik agresifliği ve tedavi direnci nedeniyle tanı alan hastaların yaklaşık %40'ı kaybedilir"
     ],
     "correctAnswer": 2,
-    "explanation": "Tümörün renal ven veya sinüs yağını invaze etmesi boyuttan bağımsız olarak lezyonu T3a evresine taşır."
+    "explanation": "Doğru yanıt C seçeneğidir çünkü RCC kadınlarda değil, belirgin şekilde erkeklerde daha sık görülür; erkek/kadın oranı yaklaşık 2:1 (ikiye bir) düzeyindedir.\n\nA seçeneği doğrudur; böbreğin primer malign neoplazmlarının %80-85'ini oluşturur.\nB seçeneği doğrudur; tümör kortikal renal tübüler epitelden köken alır.\nD seçeneği doğrudur; 60-70 yaş aralığında zirve yapar.\nE seçeneği doğrudur; olguların yaklaşık %40'ı hastalık nedeniyle hayatını kaybetmektedir."
   },
   {
-    "id": "prac-tum-014",
+    "id": "prac-bobrek-003",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "WHO / ISUP Nükleer Derecelendirme Sistemi (Fuhrman Modifikasyonu)",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 3,
+    "slideTitle": "Renal Hücreli Karsinomda Çevresel ve Yaşam Tarzı Risk Faktörleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Böbrek rezeksiyonunda berrak hücreli RCC tanısı alan bir tümörün histopatolojik incelemesinde yer yer malign iğsi hücreler içeren 'sarkomatoid diferansiasyon' alanları saptanıyor. Bu tümörün WHO/ISUP nükleer derecesi kaçtır?",
+    "question": "Renal hücreli karsinomun (RCC) etyolojik risk faktörleri ve karsinojenik maruziyetleri ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Derece 1",
-      "B) Derece 2",
-      "C) Derece 3",
-      "D) Derece 4",
-      "E) Derecelendirilemez"
+      "A) Tütün (sigara) kullanımı — Kanıtlanmış en güçlü değiştirilebilir risk faktörü",
+      "B) Mesleki kadmiyum maruziyeti — Proksimal tübülde biriken karsinojenik ağır metal",
+      "C) Obezite — Hiperinsülinemi ve IGF-1 artışı üzerinden tübüler mitojenik uyarım",
+      "D) Hipertansiyon — İlaçtan bağımsız kronik mikrovasküler iskemi ve lipid peroksidasyonu",
+      "E) Alkol tüketimi — Renal ven endotelinde trombüs oluşturarak 30 kat kanser artışı"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E seçeneğidir çünkü alkol tüketiminin renal ven trombozu yaparak 30 kat RCC riski artırdığına dair hiçbir bilimsel veya patolojik veri yoktur (30 kat risk artışı diyaliz hastalarındaki edinilmiş kistik böbrek hastalığına özgüdür).\n\nA seçeneği doğrudur; sigara RCC için en güçlü değiştirilebilir risk faktörüdür.\nB seçeneği doğrudur; kadmiyum renal karsinojenezde en önemli mesleki ağır metaldir.\nC seçeneği doğrudur; obezite IGF-1, östrojen ve kronik inflamasyon üzerinden riski artırır.\nD seçeneği doğrudur; hipertansiyon bağımsız bir risk faktörüdür."
+  },
+  {
+    "id": "prac-bobrek-004",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 4,
+    "slideTitle": "Edinilmiş Kistik Böbrek Hastalığı (ACKD) ve Diyaliz Zemininde RCC Riski",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sekiz yıldır hemodiyaliz programında olan 58 yaşındaki bir kronik böbrek yetmezliği hastasının rutin kontrolünde bilateral atrofik böbreklerinde çok sayıda kortikal kist ve sol böbrek kist duvarında solid kitle saptanıyor. Biyopside karsinom tanısı konulan bu hastanın patolojik süreciyle ilgili aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
+    "options": [
+      "A) Hastada altta yatan durum Edinilmiş Kistik Böbrek Hastalığı olup, RCC riski normale göre yaklaşık 30 kat artmıştır",
+      "B) Bu kistler otozomal dominant polikistik böbrek hastalığı (PKD1 mutasyonu) zemininde gelişmiştir",
+      "C) Diyaliz süresinin bu kistlerin ve karsinomun patogenezi ile herhangi bir epidemiyolojik ilişkisi yoktur",
+      "D) Diyaliz hastalarında gelişen böbrek kistlerinden sadece benign anjiyomiyolipom köken alabilir, karsinom gelişemez",
+      "E) Kist duvarında gelişen bu karsinomlar daima medüller toplayıcı kanallardan kaynaklanır ve oksalat içermez"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Kronik hemodiyaliz alan hastalarda son dönem böbrek zemininde 'Edinilmiş Kistik Böbrek Hastalığı' (ACKD) gelişir ve bu hastalarda kist epiteli atipikleşerek renal hücreli karsinom gelişme riskini yaklaşık 30 kat artırır.\n\nB yanlıştır; edinilmiş kistik hastalık edinseldir, herediter otozomal dominant polikistik böbrek hastalığı değildir.\nC yanlıştır; kist gelişimi diyaliz süresi ile doğrudan ilişkilidir (5-10 yılda %80-90'a çıkar).\nD yanlıştır; kist epitelinden renal hücreli karsinom gelişir, AML ise perisit kökenli mezenkimal bir tümördür.\nE yanlıştır; ACKD ile ilişkili karsinomlar sıklıkla kortikal tübül kaynaklı olup kalsiyum oksalat kristalleri içerir."
+  },
+  {
+    "id": "prac-bobrek-005",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 5,
+    "slideTitle": "Renal Hücreli Karsinomda Moleküler ve Histopatolojik Sınıflama",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Renal hücreli karsinomun üç ana histopatolojik alt tipi, nefron segment kökenleri ve moleküler profilleri ile ilgili aşağıdaki eşleştirmelerden hangisi KESİNLİKLE DOĞRUDUR?",
+    "options": [
+      "A) Berrak Hücreli RCC — Distal tübül epiteli — Trizomi 7 ve 17",
+      "B) Papiller RCC — Proksimal tübül epiteli — 3p25 VHL mutasyonu",
+      "C) Kromofob RCC — Toplayıcı kanal interkale hücresi — Aşırı hipodiploidi / çoklu kromozom kaybı",
+      "D) Berrak Hücreli RCC — Henle kulpu epiteli — WT1 delesyonu",
+      "E) Kromofob RCC — Glomerüler podositler — MET reseptör tirozin kinaz mutasyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Kromofob RCC kortikal toplayıcı tübüllerin interkale (ara) hücrelerinden köken alır ve sitogenetik olarak çok sayıda kromozomun eşzamanlı kaybı (aşırı hipodiploidi) ile karakterizedir.\n\nA yanlıştır; Berrak hücreli RCC proksimal tübülden köken alır ve 3p/VHL inaktivasyonu taşır.\nB yanlıştır; Papiller RCC distal tübülden köken alır ve Trizomi 7/17 ile MET aktivasyonu sergiler.\nD yanlıştır; Henle kulpu veya podositlerden bu karsinomlar köken almaz; WT1 Wilms tümörüne özgüdür.\nE yanlıştır; MET mutasyonu papiller RCC'ye özgüdür."
+  },
+  {
+    "id": "prac-bobrek-006",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 6,
+    "slideTitle": "Berrak Hücreli Renal Karsinom (ccRCC): Makroskopik Özellikler ve Büyüme Paterni",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefrektomi materyalinde böbrek korteksinde 7 cm çapında, çevresi fibröz psödokapsülle çevrili, kesit yüzü parlak altın sarısı renkte izlenen, yer yer nekroz ve kanama alanları içeren bir tümör kitlesi saptanıyor. Bu tümörün makroskopik olarak parlak altın sarısı görünmesinden sorumlu olan temel hücresel/biyokimyasal içerik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitoplazmada aşırı miktarda biriken nötral lipidler ve glikojen",
+      "B) Hücre içinde yoğun biriken melanin pigmenti ve hemosiderin granülleri",
+      "C) Tümör hücrelerinin intrasellüler musin ve asidik mukopolisakkarit üretmesi",
+      "D) Hücre sitoplazmasını tıka basa dolduran yoğun matür mitokondri birikimi",
+      "E) Fibröz stromada yaygın amiloid depolanması ve kalsifikasyonlar"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomun (ccRCC) makroskopik olarak parlak altın sarısı / turuncu renkte görünmesinin nedeni, proksimal tübül kökenli tümör hücrelerinin sitoplazmasında olağanüstü miktarda biriken serbest nötral lipidler, kolesterol esterleri ve glikojendir.\n\nB yanlıştır; hemosiderin kahverengi-pas rengi verir, melanin siyah-kahverengidir.\nC yanlıştır; ccRCC musin üretmez.\nD yanlıştır; yoğun mitokondri birikimi onkositoma özgüdür ve tümöre maun kahverengisi renk kazandırır.\nE yanlıştır; amiloidoz sarı parlak renk yapmaz, balmumu kıvamı verir."
+  },
+  {
+    "id": "prac-bobrek-007",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 7,
+    "slideTitle": "Von Hippel-Lindau (VHL) Hastalığı ve ccRCC Birlikteliği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Otuz beş yaşında bir erkek hastada serebellar kistik kitle ve görme bulanıklığı nedeniyle yapılan incelemelerde serebellar hemanjiyoblastom ve retinal hemanjiyoblastom saptanıyor. Abdominal görüntülemesinde ise her iki böbrekte çok sayıda kist ve bilateral multifokal kortikal solid kitleler tespit ediliyor. Bu hastanın genetik analizinde hangi kromozom bölgesinde ve hangi gende fonksiyon kaybı mutasyonu saptanması beklenir?",
+    "options": [
+      "A) Kromozom 3p25 — VHL geni",
+      "B) Kromozom 7q31 — MET geni",
+      "C) Kromozom 11p13 — WT1 geni",
+      "D) Kromozom 16p13 — TSC2 geni",
+      "E) Kromozom 17p11 — FLCN geni"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Serebellar ve retinal hemanjiyoblastomlar ile bilateral, multifokal berrak hücreli renal karsinom birlikteliği otozomal dominant Von Hippel-Lindau (VHL) hastalığının klasik klinik tablosudur. VHL tümör süpresör geni Kromozom 3p25 lokusunda yer almaktadır.\n\nB yanlıştır; 7q31 MET geni herediter papiller renal karsinomda etkindir.\nC yanlıştır; 11p13 WT1 geni Wilms tümörü (WAGR, Denys-Drash) ile ilişkilidir.\nD yanlıştır; 16p13 TSC2 tüberoz skleroz ve anjiyomiyolipom ile ilişkilidir.\nE yanlıştır; 17p11 FLCN Birt-Hogg-Dubé sendromu ile ilişkilidir."
+  },
+  {
+    "id": "prac-bobrek-008",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 8,
+    "slideTitle": "VHL-HIF-VEGF Patogenetik Sinyal Yolağı ve Anjiyogenez Fırtınası",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Berrak hücreli renal karsinomun (ccRCC) moleküler patogenezinde rol oynayan VHL-HIF sinyal yolağı ile ilgili aşağıdaki biyolojik basamaklardan hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sağlıklı hücrede normoksik koşullarda prolil hidroksilaz enzimleri HIF-1alfa'yı hidroksiller",
+      "B) Fonksiyonel VHL proteini E3 ubikitin ligaz görevi görerek hidroksillenmiş HIF-1alfa'yı proteazomal yıkıma yönlendirir",
+      "C) VHL mutasyonu varlığında HIF-1alfa normoksik koşullarda dahi parçalanamaz ve sitoplazmada birikir",
+      "D) Nükleusa geçen HIF-1alfa doğrudan p53'ü aktive ederek tümör hücresinde apoptozu hızlandırır",
+      "E) Biriken HIF-1alfa; VEGF, PDGF ve GLUT-1 genlerinin aşırı transkripsiyonunu sağlayarak masif anjiyogenezi tetikler"
     ],
     "correctAnswer": 3,
-    "explanation": "Sarkomatoid veya rabdoid diferansiasyonun varlığı, diğer nükleer özelliklerden bağımsız olarak tümörü doğrudan en yüksek derece olan WHO/ISUP Derece 4 yapar."
+    "explanation": "Doğru yanıt D seçeneğidir çünkü nükleusa geçen HIF-1alfa p53'ü aktive edip apoptozu hızlandırmaz; aksine hücre sağkalımını, anjiyogenezi (VEGF), hücre proliferasyonunu (PDGF), glikolitik metabolizmayı (GLUT-1) ve tümör büyümesini şiddetle destekler.\n\nA seçeneği doğrudur; normokside prolil hidroksilaz HIF-1alfa'yı hidroksiller.\nB seçeneği doğrudur; VHL proteini E3 ubikitin ligaz kompleksi ile proteazomal yıkım sağlar.\nC seçeneği doğrudur; VHL yokluğunda HIF-1alfa normokside bile parçalanamaz.\nE seçeneği doğrudur; VEGF ve PDGF transkripsiyonu ile yoğun sinüzoidal damar ağı gelişir."
   },
   {
-    "id": "prac-tum-015",
+    "id": "prac-bobrek-009",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 15,
-    "slideTitle": "Diğer Nadir Renal Karsinom Tipleri: Toplayıcı Kanal ve Medüller Karsinom",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 9,
+    "slideTitle": "Sporadik Berrak Hücreli Karsinomda Kromatin ve Epigenetik Modifikasyonlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Orak hücreli hemoglobinopati (HbAS) taşıyıcısı olan 22 yaşındaki siyahi bir erkekte hızla büyüyen medüller yerleşimli böbrek kitlesi saptanıyor. Biyopside nükleer INI-1 (SMARCB1) protein ekspresyonunun kaybolduğu saptanıyor. Tanı nedir?",
+    "question": "Berrak hücreli renal karsinomda (ccRCC) kromozom 3p lokusunda yer alan genler ve hücresel metabolik değişiklikler ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK YANLIŞTIR?",
     "options": [
-      "A) Berrak hücreli karsinom",
-      "B) Renal medüller karsinom",
-      "C) Renal onkositoma",
-      "D) Anjiyomiyolipom",
-      "E) Papiller karsinom tip 1"
+      "A) PBRM1 geni, ccRCC'de VHL'den sonra en sık (%40-50) somatik mutasyona uğrayan kromatin düzenleyici gendir",
+      "B) BAP1 mutasyonu taşıyan ccRCC tümörleri genellikle yüksek nükleer dereceye ve agresif klinik seyire sahiptir",
+      "C) SETD2 geni bir histon metiltransferazı olup kaybı genomik kararsızlığa zemin hazırlar",
+      "D) HIF ve MYC kooperasyonu sonucu mitokondriyal beta-oksidasyon aşırı hızlanır ve hücredeki tüm lipidler tüketilir",
+      "E) Sporadik ccRCC olgularının büyük çoğunluğunda kromozom 3'ün kısa kolunda (3p) genetik kayıp saptanır"
     ],
-    "correctAnswer": 1,
-    "explanation": "Orak hücre zemininde genç bireylerde gelişen ve INI-1 kaybı gösteren son derece agresif medüller tümör Renal Medüller Karsinomdur."
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir çünkü HIF ve MYC etkisiyle mitokondriyal yağ asidi oksidasyonu hızlanıp lipidler tüketilmez; aksine yağ asidi oksidasyonu baskılanır, sitoplazmada nötral lipidler ve glikojen biriktirilir. Tümörün karakteristik altın sarısı rengi ve berrak sitoplazması bu aşırı lipid birikiminden kaynaklanır.\n\nA seçeneği doğrudur; PBRM1 ccRCC'de %40-50 sıklıkla en sık ikinci mutasyondur.\nB seçeneği doğrudur; BAP1 kaybı agresif gidiş ve yüksek ISUP derecesi ile ilişkilidir.\nC seçeneği doğrudur; SETD2 histon metiltransferazıdır.\nE seçeneği doğrudur; sporadik vakaların >%90'ında 3p kaybı görülür."
   },
   {
-    "id": "prac-tum-016",
+    "id": "prac-bobrek-010",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 16,
-    "slideTitle": "Renal Papiller Adenom ve Karsinom Ayrım Kriterleri",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 10,
+    "slideTitle": "Berrak Hücreli Karsinomun Histopatolojisi ve Mikroskopik Mimarisi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Böbrek otopsisinde kortekste subkapsüler yerleşimli 3 mm çapında iyi sınırlı sarı lezyon saptanıyor. Mikroskopta papiller mimari izlenen bu asemptomatik küçük lezyonun en olası tanısı hangisidir?",
+    "question": "Böbrek rezeksiyon piyesinin histopatolojik incelemesinde; belirgin hücre zarlarına sahip, sitoplazması optik olarak berrak ve saydam görünen, tek biçimli yuvarlak çekirdekli epitel hücrelerinin zengin ince duvarlı sinüzoidal kapiller ağ ile çevrili yuvalar ve kordonlar oluşturduğu saptanıyor. Bu lezyonda hücre sitoplazmasının rutin ışık mikroskobunda optik olarak berrak görünmesinin patolojik mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      "A) Renal papiller adenom",
-      "B) İleri evre Berrak hücreli karsinom",
-      "C) Toplayıcı kanal karsinomu",
-      "D) Wilms tümörü",
-      "E) Malakoplaki"
+      "A) Sitoplazmadaki aşırı lipid ve glikojenin doku takibindeki organik çözücülerde erimesi",
+      "B) Hücre içinde yoğun musin salgısının birikerek organelleri kenara itmesi",
+      "C) Hücrelerin aşırı hidropik şişme ve vakuoler dejenerasyon ile lizise uğraması",
+      "D) Sitoplazmada bol miktarda asidik mikroskopik veziküllerin bulunması",
+      "E) Hücre içinde yoğun amiloid fibrillerinin birikerek ışığı yansıtması"
     ],
     "correctAnswer": 0,
-    "explanation": "Böbrek korteksinde birkaç milimetre çapında papiller mimari gösteren benign lezyonlar Renal Papiller Adenom olarak adlandırılır."
+    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomda (ccRCC) sitoplazmanın berrak görünmesi, neoplastik hücrelerin içerdiği bol miktardaki lipid ve glikojenin, rutin doku takibi basamaklarında kullanılan dehidratasyon sıvıları (alkol) ve şeffaflaştırıcılar (ksilol) tarafından eritilerek uzaklaştırılması sonucudur.\n\nB yanlıştır; ccRCC musin salgılamaz, bu berraklık musinden kaynaklanmaz.\nC yanlıştır; bu durum dejeneratif hidropik şişme değil, neoplastik metabolik lipid birikimidir.\nD yanlıştır; mikroskopik veziküller kromofob RCC'ye özgüdür ve Hale boyası ile boyanır.\nE yanlıştır; amiloid ekstrasellüler birikintidir ve kongolu kırmızı ile boyanır."
   },
   {
-    "id": "prac-tum-017",
+    "id": "prac-bobrek-011",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 17,
-    "slideTitle": "Kistik Renal Karsinomlar: Kistik Berrak Hücreli RCC ve Multiloküler Kistik Neoplazm",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 11,
+    "slideTitle": "Berrak Hücreli Karsinomun Yayılım Yolları ve Renal Ven Trombozu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Böbrekte çok sayıda kistik boşluktan oluşan, septalarında berrak hücreler izlenen ancak hiçbir solid tümör nodülü içermeyen lezyonun metastaz potansiyeli nedir?",
+    "question": "Altmış iki yaşında bir erkek hastada sağ yan ağrısı ve hematüri nedeniyle yapılan bilgisayarlı tomografide sağ böbrek korteksinde 8 cm'lik heterojen kitle, sağ renal ven lümenini dolduran ve vena kava inferior boyunca diyafram seviyesine kadar uzanan solid tümör trombüsü ile akciğerlerde bilateral çok sayıda 'top güllesi' şeklinde yuvarlak metastatik nodüller saptanıyor. Bu hastanın klinik ve patolojik yayılım özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) %80 metastaz yapar",
-      "B) %50 bölgesel lenf noduna yayılır",
-      "C) Metastaz yapmaz (%0 metastaz potansiyeli)",
-      "D) Sadece beyne metastaz yapar",
-      "E) Sadece kemik iliğine yayılır"
+      "A) Tümörün renal ven ve VCI içine uzanımı RCC için son derece karakteristik bir makrovasküler yayılım biçimidir",
+      "B) Bu tümör sadece lenfatik yolla yayılır, hematojen yolla akciğere yayılması imkansızdır",
+      "C) RCC kemiğe metastaz yaptığında daima yoğun sklerotik osteoblastik lezyonlar oluşturur",
+      "D) VCI tutulumu saptandığında hastada primer tümör kesinlikle Wilms tümörüdür, ccRCC VCI'ye giremez",
+      "E) Renal ven invazyonu gösteren böbrek karsinomları TNM sınıflamasında evre T1a olarak kabul edilir"
     ],
-    "correctAnswer": 2,
-    "explanation": "Düşük malign potansiyelli multiloküler kistik renal neoplazmda solid alan bulunmadığı sürece metastaz riski %0'dır."
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Renal hücreli karsinomun en tipik biyolojik yayılım özelliklerinden biri renal vene ve oradan Vena Kava İnferior (VCI) içine katı tümör trombozu kolonu oluşturarak ilerlemesi ve hematojen yolla akciğerlere ('top güllesi' metastazları) yayılmasıdır.\n\nB yanlıştır; RCC esas olarak hematojen yolla yayılır.\nC yanlıştır; RCC kemik metastazları osteoblastik değil, osteolitiktir (kemik yıkıcıdır).\nD yanlıştır; VCI tümör trombüsü erişkinde ccRCC'nin en tipik özelliğidir.\nE yanlıştır; renal ven invazyonu evreyi doğrudan T3a yapar (T1a <4 cm organa sınırlı tümördür)."
   },
   {
-    "id": "prac-tum-018",
+    "id": "prac-bobrek-012",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 18,
-    "slideTitle": "Renal Hücreli Karsinomlarda İmmünohistokimyasal Belirteç Haritası",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 12,
+    "slideTitle": "Papiller Renal Hücreli Karsinom (pRCC): Hücresel Köken ve Makroskopi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Böbrek tümörleri ayırıcı tanısında CK7 diffüz pozitif, AMACR (racemase) kuvvetli granüler pozitif boyanan tümör alt tipi hangisidir?",
+    "question": "Papiller Renal Hücreli Karsinomun (pRCC) hücresel kökeni, makroskopik morfolojisi ve klinik büyüme özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Berrak hücreli karsinom",
+      "A) Nefronun distal kıvrıntılı tübül epitel hücrelerinden köken alır",
+      "B) Tümör odakları sıklıkla multifokal ve bilateral olma eğilimi sergiler",
+      "C) Hücre içi lipid içeriğinin azlığı nedeniyle kesit yüzü ccRCC'ye göre daha mat kahverengimsi renktedir",
+      "D) Kırılgan papiller vasküler yapısı nedeniyle nekroz, kanama ve kistik dejenerasyon alanları sıktır",
+      "E) Proksimal tübülün toplayıcı kanala açılan papillasından kaynaklandığı için daima soliter ve altın sarısıdır"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E seçeneğidir çünkü papiller RCC proksimal tübülden kaynaklanmaz (distal tübülden kaynaklanır), altın sarısı değildir (mat sarı-kahverengidir) ve daima soliter değildir; aksine sıklıkla multifokal ve bilateral odaklarla karakterizedir.\n\nA seçeneği doğrudur; distal kıvrıntılı tübül kökenlidir.\nB seçeneği doğrudur; multifokalite ve bilateralite papiller RCC'nin klasik özelliğidir.\nC seçeneği doğrudur; lipit içeriği ccRCC'den daha düşüktür.\nD seçeneği doğrudur; nekroz, hemoraji ve kistik kavitasyonlar belirgindir."
+  },
+  {
+    "id": "prac-bobrek-013",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 13,
+    "slideTitle": "Papiller RCC Genetiği: Trizomiler ve MET Protoonkogeni",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ailesinde multipl bilateral böbrek tümörü öyküsü olan 42 yaşındaki bir hastada yapılan genetik analizde kromozom 7q31 lokusunda yer alan bir reseptör tirozin kinaz geninde konstitütif aktive edici mutasyon saptanıyor. Tümör dokusunun sitogenetik analizinde ise Trizomi 7 ve Trizomi 17 tespit ediliyor. Bu hastadaki böbrek tümörünün histopatolojik alt tipi ve patogenezde rol oynayan ilgili onkogen aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Berrak Hücreli RCC — VHL",
+      "B) Papiller RCC — MET",
+      "C) Kromofob RCC — FLCN",
+      "D) Toplayıcı Kanal Karsinomu — RET",
+      "E) Wilms Tümörü — WT1"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Trizomi 7, Trizomi 17 anomalileri ve 7q31 lokusunda kodlanan MET reseptör tirozin kinaz mutasyonları Herediter Papiller Renal Hücreli Karsinomun (HPRC) ve sporadik papiller RCC'nin patognomonik moleküler özellikleridir.\n\nA yanlıştır; ccRCC 3p25 VHL mutasyonu ile gider.\nC yanlıştır; Kromofob RCC 17p11 FLCN ve hipodiploidi ile karakterizedir.\nD yanlıştır; Toplayıcı kanal karsinomu bu genetik profile sahip değildir.\nE yanlıştır; Wilms tümörü 11p13 WT1 delesyonu/mutasyonu taşır."
+  },
+  {
+    "id": "prac-bobrek-014",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 14,
+    "slideTitle": "Papiller RCC Histopatolojisi: Fibrovasküler Korlar ve Psammom Cisimcikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Elli yaşında bir kadın hastanın böbrek kitle biyopsisinde; fibrovasküler papiller çıkıntılar etrafında dizilmiş kuboidal hücreler, papilla korlarının içinde yoğun lipid fagosite etmiş geniş vakuollü köpüksü makrofaj kümeleri ve çevre dokuda lameller konsantrik distrofik kalsifikasyon odakları (psammom cisimcikleri) izleniyor. Bu hasta için en olası histopatolojik tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Berrak hücreli renal karsinom",
       "B) Papiller renal hücreli karsinom",
-      "C) Renal onkositoma",
-      "D) Anjiyomiyolipom",
-      "E) Toplayıcı kanal karsinomu"
+      "C) Kromofob renal hücreli karsinom",
+      "D) Renal onkositom",
+      "E) Renal anjiyomiyolipom"
     ],
     "correctAnswer": 1,
-    "explanation": "CK7 ve AMACR (alfa-metilasil-KoA rasemaz) ko-pozitifliği Papiller Renal Hücreli Karsinom için karakteristik İHK profildir."
+    "explanation": "Doğru yanıt B seçeneğidir. Parmak benzeri fibrovasküler papiller korlar, korların içinde lipid yüklü köpüksü (foamy) makrofaj/histiyosit infiltrasyonu ve lameller kalsifiye psammom cisimcikleri Papiller Renal Hücreli Karsinomun (pRCC) klasik histopatolojik triadıdır.\n\nA yanlıştır; ccRCC'de sinüzoidal damarlar etrafında berrak hücre yuvaları görülür, psammom cisimciği beklenmez.\nC yanlıştır; Kromofob RCC'de kalın bitki hücresi sınırları ve raisinoid nükleus izlenir.\nD yanlıştır; Onkositomda granüler eozinofilik hücre yuvaları ve mitokondriler görülür.\nE yanlıştır; Anjiyomiyolipom damar, düz kas ve yağ dokusundan oluşur."
   },
   {
-    "id": "prac-tum-019",
+    "id": "prac-bobrek-015",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 19,
-    "slideTitle": "Herediter Renal Karsinom Sendromları",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 15,
+    "slideTitle": "Kromofob Renal Hücreli Karsinom: Köken, Makroskopi ve Morfoloji",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Cildinde fibrofolikülomlar, akciğer tomografisinde kistler ve bilateral böbrek tümörleri (kromofob RCC ve onkositoma) saptanan bir hastada mutasyona uğramış gen hangisidir?",
+    "question": "Böbrek rezeksiyon materyalinde iyi sınırlı, soluk ten rengi-kahverengi renkte, nekroz ve kanama içermeyen homojen bir kitle saptanıyor. Mikroskopik incelemede; bitki hücrelerini andıran çok belirgin kalın hücre membranları, hafif eozinofilik retiküler sitoplazma, büzüşmüş kuru üzüm benzeri hiperkromatik nükleuslar ve çekirdeklerin etrafında geniş şeffaf perinükleer halolar izleniyor. Bu lezyonun hücresel kökeni ve patolojik tanısı aşağıdakilerden hangisidir?",
     "options": [
-      "A) VHL",
-      "B) FLCN (Folikülin / Birt-Hogg-Dubé)",
-      "C) MET",
-      "D) WT1",
-      "E) TSC1"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Fibrofolikülomlar, pulmoner kistler ve kromofob RCC/onkositoma birlikteliği FLCN mutasyonuna bağlı Birt-Hogg-Dubé sendromunun tablosudur."
-  },
-  {
-    "id": "prac-tum-020",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 20,
-    "slideTitle": "RCC'de Cerrahi Tedavi ve Sistemik Tedavi Stratejileri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Metastatik berrak hücreli renal hücreli karsinom tedavisinde tümörün VHL inaktivasyonuna bağlı aşırı anjiyogenezini hedef alan tirozin kinaz inhibitörü ajan hangisidir?",
-    "options": [
-      "A) Sisplatin",
-      "B) Doksorubisin",
-      "C) Sunitinib",
-      "D) Metotreksat",
-      "E) Vinkristin"
+      "A) Proksimal kıvrıntılı tübül epiteli — Berrak hücreli renal karsinom",
+      "B) Distal kıvrıntılı tübül epiteli — Papiller renal karsinom",
+      "C) Kortikal toplayıcı tübül interkale hücresi — Kromofob renal karsinom",
+      "D) Medüller Bellini toplayıcı kanal hücresi — Toplayıcı kanal karsinomu",
+      "E) Primitif metanefrik blastem — Wilms tümörü"
     ],
     "correctAnswer": 2,
-    "explanation": "Sunitinib VEGF reseptör tirozin kinazını bloke ederek tümörün aşırı vaskülarizasyonunu baskılayan hedefe yönelik standart ajandır."
+    "explanation": "Doğru yanıt C seçeneğidir. Kortikal toplayıcı tübüllerin interkale (ara) hücrelerinden kaynaklanan, kalın bitki hücresi sınırları, kuru üzüm benzeri (raisinoid) büzüşmüş nükleuslar ve geniş perinükleer halo içeren böbrek tümörü Kromofob Renal Hücreli Karsinomdur (chRCC).\n\nA yanlıştır; ccRCC proksimal tübülden köken alır, zengin sinüzoidal damarlar ve optik olarak boş berrak sitoplazma içerir.\nB yanlıştır; papiller RCC distal tübülden köken alır ve fibrovasküler korlar içerir.\nD yanlıştır; toplayıcı kanal karsinomu medulladan köken alan agresif desmoplastik bir karsinomdur.\nE yanlıştır; Wilms tümörü pediatrik trifazik embriyonel bir tümördür."
+  },
+  {
+    "id": "prac-bobrek-016",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 16,
+    "slideTitle": "Kromofob RCC Özel Boyaları, Sitogenetiği ve Klinik Prognozu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kırk sekiz yaşında bir kadın hastada boyun bölgesinde çok sayıda kutanöz fibrofolikülom ve akciğer grafisinde bilateral büllöz kistler ile tekrarlayan spontan pnömotoraks saptanıyor. Abdominal tomografisinde sol böbrekte 5 cm çapında iyi sınırlı soluk kahverengi homojen kitle tespit ediliyor. Cerrahi rezeksiyon materyalinin histopatolojisinde bitki hücresi sınırları ve kuru üzüm nükleuslar izlenen bu kitle Hale'in kolloidal demir boyası ile diffüz sitoplazmik mavi boyanma veriyor. Bu hastadaki sendrom, ilgili gen ve böbrek tümörünün prognozu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Von Hippel-Lindau sendromu — VHL geni — Berrak hücreli RCC olup prognozu çok kötüdür",
+      "B) Birt-Hogg-Dubé sendromu — FLCN geni — Kromofob RCC olup prognozu diğer alt tiplere göre belirgin daha olumludur",
+      "C) Tüberoz Skleroz kompleksi — TSC1 geni — Anjiyomiyolipom olup spontan rüptürle öldürür",
+      "D) Li-Fraumeni sendromu — TP53 geni — Medüller karsinom olup erken evrede metastaz yapar",
+      "E) Cowden sendromu — PTEN geni — Onkositom olup Hale kolloidal demir boyası negatiftir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Kutanöz fibrofolikülomlar, pulmoner kistler, spontan pnömotoraks ve böbrekte Hale kolloidal demir boyası ile diffüz mavi boyanan kromofob renal hücreli karsinom birlikteliği otozomal dominant Birt-Hogg-Dubé sendromunun (FLCN geni) klasik tablosudur. Kromofob RCC, berrak hücreli ve papiller karsinomlara göre çok daha iyi prognozludur.\n\nA yanlıştır; VHL'de serebellar hemanjiyoblastom ve berrak hücreli RCC görülür, Hale boyası mavi boyamaz.\nC yanlıştır; Tüberoz sklerozda anjiyomiyolipom görülür, fibrofolikülom değil anjiyofibrom olur.\nD yanlıştır; Li-Fraumeni sendromu sarkom, meme kanseri ve lösemi ile seyreder.\nE yanlıştır; Onkositomda Hale boyası diffüz sitoplazmik boyanmaz (negatiftir)."
   }
 ]

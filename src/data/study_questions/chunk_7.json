@@ -1,535 +1,611 @@
 [
   {
-    "id": "prac-tum-021",
+    "id": "prac-bobrek-017",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Pediyatrik vs Erişkin Böbrek Tümörleri: Karşılaştırmalı Ayrım",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 17,
+    "slideTitle": "Yüksek Dereceli Nadir Maligniteler: Toplayıcı Kanal ve Renal Medüller Karsinom",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "2 yaşındaki bir çocuğun karnında saptanan kitlenin adrenal kaynaklı Nöroblastom değil, böbrek parankim kaynaklı Wilms Tümörü olduğunu en çok destekleyen bulgu hangisidir?",
+    "question": "Yirmi iki yaşında orak hücre özelliği (HbAS) taşıyıcısı olduğu bilinen bir erkek hasta hematüri ve şiddetli sağ yan ağrısı ile başvuruyor. Görüntülemede sağ böbrek medullasında parankimi ve sinüsü infiltre eden 6 cm'lik sert kitle saptanıyor. Biyopsi materyalinde desmoplastik fibröz zemin içinde anaplastik hücre kordonları izleniyor ve immünohistokimyasal incelemede tümör hücrelerinde nükleer INI1 (SMARCB1) protein ekspresyonunun tamamen kaybolduğu görülüyor. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
     "options": [
-      "A) İdrarda VMA (vanilmandelik asit) yüksekliği",
-      "B) Kitlenin batında orta hattı geçmemesi ve böbrek parankimini genişletmesi",
-      "C) BT'de kitle içinde yoğun kaba kalsifikasyonlar izlenmesi",
-      "D) Kemik iliğinde rozet oluşturan hücrelerin görülmesi",
-      "E) N-MYC onkogen amplifikasyonu"
+      "A) Berrak hücreli renal karsinom",
+      "B) Renal medüller karsinom",
+      "C) Papiller renal karsinom Tip 1",
+      "D) Renal onkositom",
+      "E) Kromofob renal karsinom"
     ],
     "correctAnswer": 1,
-    "explanation": "Wilms tümörü böbrek parankiminde yuvarlak sınırlı büyür ve orta hattı geçmez; nöroblastom ise orta hattı geçer, kalsifiyedir ve katekolamin (VMA) salgılar."
+    "explanation": "Doğru yanıt B seçeneğidir. Orak hücre özelliği (HbAS) veya anemisi (HbSS) olan genç bireylerde böbrek medullasından kaynaklanan, desmoplastik stroma içeren ve immünohistokimyasal olarak INI1 (SMARCB1) ekspresyon kaybı gösteren agresif karsinom Renal Medüller Karsinomdur (RMC).\n\nA yanlıştır; ccRCC kortekste yerleşir, 3p delesyonu taşır ve INI1 intakttır.\nC yanlıştır; papiller RCC distal tübül kökenlidir, orak hücre ile ilişkisi yoktur.\nD yanlıştır; Onkositom benign bir kortikal tümördür.\nE yanlıştır; Kromofob RCC hipodiploidi taşır ve prognozu çok iyidir."
   },
   {
-    "id": "prac-tum-022",
+    "id": "prac-bobrek-018",
     "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Böbrek Tümörleri Büyük Patoloji Karşılaştırma Matrisi",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 18,
+    "slideTitle": "Benign Renal Epitelyal Neoplazm: Renal Onkositom Patogenezi ve Makroskopi",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki böbrek tümörü ve hücresel köken eşleştirmelerinden hangisi yanlıştır?",
+    "question": "Altmış beş yaşında bir erkek hastada tesadüfen saptanan böbrek kitlesi nedeniyle yapılan nefrektomi piyesinde; 6 cm çapında, çok iyi sınırlı, kesit yüzü homojen maun kahverengisi renkte izlenen, merkezinde açık renkli ışınsal uzantılar veren yıldız şeklinde fibröz bir skar barındıran benign lezyon saptanıyor. Bu tümörün hücresel kökeni ve makroskopik renginden sorumlu hücresel organel aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
-      "A) Berrak hücreli RCC — Proksimal tübül epiteli",
-      "B) Renal onkositoma — Toplayıcı kanal interkale hücreleri",
-      "C) Kromofob RCC — Toplayıcı kanal interkale hücreleri",
-      "D) Wilms tümörü — Metanefrik blastem kalıntıları",
-      "E) Anjiyomiyolipom — Podosit slit diyaframı"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Anjiyomiyolipom podositlerden değil, perivasküler epiteloid mezenkimal hücrelerden (PEComa) kaynaklanır."
-  },
-  {
-    "id": "prac-tum-023",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Böbrek Kitlelerine Klinik ve Radyolojik Tanı Algoritması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "58 yaşındaki bir hastada rastlantısal olarak saptanan 5 cm'lik solid kortikal böbrek kitlesinde kontrastlı BT'de belirgin kontrast tutulumu izleniyor. Metastaz saptanmayan bu hastada standart klinik yaklaşım ne olmalıdır?",
-    "options": [
-      "A) Cerrahi öncesi kesin tanı için böbrek iğne biyopsisi yapmak",
-      "B) Biyopsi yapmadan doğrudan cerrahi rezeksiyon (nefrektomi) planlamak",
-      "C) 6 ay sonra ultrasonla takip etmek",
-      "D) Sistemik kemoterapi başlamak",
-      "E) Yüksek doz radyoterapi uygulamak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Rezektabl solid renal kitlelerde tümör ekimi riski ve cerrahi endikasyonun net olması nedeniyle ameliyat öncesi iğne biyopsisi yapılmaz, doğrudan nefrektomiye gidilir."
-  },
-  {
-    "id": "prac-tum-024",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 24,
-    "slideTitle": "Ders 26 Kapsamlı Sentezi: Böbrek Tümörleri Patolojisinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki böbrek tümörü ve genetik mekanizma eşleştirmelerinden hangisi yanlıştır?",
-    "options": [
-      "A) Berrak hücreli RCC — Kromozom 3p delesyonu ve VHL inaktivasyonu",
-      "B) Papiller RCC — Trizomi 7, trizomi 17 ve MET protoonkogen aktivasyonu",
-      "C) Wilms tümörü — Kromozom 11p13 (WT1) ve 11p15 (WT2)",
-      "D) Anjiyomiyolipom — TSC1 ve TSC2 mutasyonları",
-      "E) Kromofob RCC — Kromozom 3p delesyonu ve VHL aşırı ifadesi"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Kromozom 3p delesyonu ve VHL inaktivasyonu Berrak Hücreli RCC'ye özgüdür. Kromofob RCC'de VHL mutasyonu bulunmaz; yaygın kromozom kayıpları (hipodiploidi) görülür."
-  },
-  {
-    "id": "prac-mes-001",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Alt İdrar Yolu ve Ürotelyum Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Üriner sistem toplayıcı boşluklarını (renal pelvis, üreter, mesane) döşeyen ürotelyumun lümen yüzeyinde yer alan ve idrar bileşenlerinin dokuya sızmasını engelleyen en yüzeyel hücre tabakası hangisidir?",
-    "options": [
-      "A) Podositler",
-      "B) Şemsiye hücreleri (Umbrella cells)",
-      "C) İnterkale hücreler",
-      "D) Juxtaglomerüler hücreler",
-      "E) Von Hansemann histiyositleri"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ürotelyumun en üst katmanında yer alan şemsiye hücreleri üroplakin plakları sayesinde geçirimsiz osmolar bariyeri oluşturur."
-  },
-  {
-    "id": "prac-mes-002",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Üreter Bozuklukları: UPJ Tıkanıklığı ve Retroperitoneal Fibrozis",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bebeklik ve erken çocukluk döneminde konjenital hidronefrozun açık ara en sık görülen anatomik nedeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Posterior üretral valv",
-      "B) Üreteropelvik bileşke (UPJ) darlığı / obstrüksiyonu",
-      "C) Retroperitoneal fibrozis",
-      "D) Üreterosel",
-      "E) Mesane ekstrofisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Üreteropelvik bileşke (UPJ) obstrüksiyonu çocuklarda konjenital hidronefrozun en sık nedenidir."
-  },
-  {
-    "id": "prac-mes-003",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Mesane Divertikülleri: Patogenez ve Kanser Yayılım Riski",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Mesane divertikülü içerisinde gelişen bir ürotelyal karsinomun standart mesane duvarında gelişen tümörlere kıyasla çok daha hızlı perivezikal yayılım göstermesinin ve evre atlamasının temel anatomik nedeni nedir?",
-    "options": [
-      "A) Divertikül epitelinin şemsiye hücrelerinden yoksun olması",
-      "B) Divertikül duvarında muskularis propria (kalın detrisör kas tabakası) bulunmaması",
-      "C) Divertikül içinde kan akımının olmaması",
-      "D) Divertikül mukozasının keratinize olması",
-      "E) Divertikülün sadece böbrek kutbunda yerleşmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Edinsel psödodivertikül duvarı sadece mukoza ve lamina propriadan ibarettir; muskularis propria bulunmadığı için tümörler doğrudan perivezikal dokuya (T3) invaze olur."
-  },
-  {
-    "id": "prac-mes-004",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Sistit Patolojisi: Akut Bakteriyel Sistit ve Sık Etkenler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "22 yaşındaki yeni evli bir kadında dizüri ve sık idrara çıkma şikayetleri ile yapılan idrar kültüründe koagülaz negatif, novobiyosine dirençli Gram-pozitif kok ürüyor. En olası etken hangisidir?",
-    "options": [
-      "A) Staphylococcus aureus",
-      "B) Staphylococcus epidermidis",
-      "C) Staphylococcus saprophyticus",
-      "D) Streptococcus agalactiae",
-      "E) Enterococcus faecalis"
+      "A) Proksimal tübül epiteli — Endoplazmik retikulum",
+      "B) Distal tübül epiteli — Lizozomlar",
+      "C) Toplayıcı tübül interkale hücresi — Mitokondriler",
+      "D) Glomerüler mezangiyal hücre — Peroksizomlar",
+      "E) Medüller vasküler perisit — Golgi aygıtı"
     ],
     "correctAnswer": 2,
-    "explanation": "Genç kadınlarda akut sistite yol açan koagülaz negatif ve novobiyosine dirençli stafilokok Staphylococcus saprophyticus'tur (balayı sistiti)."
+    "explanation": "Doğru yanıt C seçeneğidir. Makroskopik olarak maun kahverengisi (mahogany brown) renkte olan ve merkezinde yıldız şeklinde fibröz skar (central stellate scar) içeren lezyon Renal Onkositomdur. Onkositom kortikal toplayıcı tübüllerin interkale (ara) hücrelerinden köken alır ve rengi sitoplazmasını dolduran aşırı sayıdaki mitokondrinin sitokrom pigmentlerinden kaynaklanır.\n\nA yanlıştır; ccRCC proksimal tübülden köken alır ve sarı renklidir.\nB yanlıştır; distal tübülden papiller RCC köken alır.\nD yanlıştır; mezangiyal hücreden onkositom gelişmez.\nE yanlıştır; perisitten anjiyomiyolipom köken alır."
   },
   {
-    "id": "prac-mes-005",
+    "id": "prac-bobrek-019",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 19,
+    "slideTitle": "Renal Onkositom Histopatolojisi ve Kromofob RCC ile Ayırıcı Tanı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Patoloji laboratuvarına gelen böbrek kitle biyopsisinde yuvarlak nükleuslu, bol granüler eozinofilik sitoplazmalı hücrelerden oluşan bir neoplazm saptanıyor. Ayırıcı tanıda yer alan eozinofilik varyant kromofob renal hücreli karsinom ile benign renal onkositomun histokimyasal ve ultrastrüktürel ayrımı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Hale'in kolloidal demir boyası onkositom sitoplazmasında diffüz mavi boyanma verirken kromofob RCC'de tamamen negatiftir",
+      "B) Elektron mikroskopisinde kromofob RCC sitoplazması mitokondrilerle, onkositom ise mikroskopik veziküllerle doludur",
+      "C) Hale'in kolloidal demir boyası kromofob RCC'de diffüz sitoplazmik mavi boyanma verirken onkositom sitoplazmasında negatiftir",
+      "D) Her iki tümör de proksimal kıvrıntılı tübül epitelinden köken aldığı için histokimyasal olarak ayrılamaz",
+      "E) Onkositomda kuru üzüm benzeri büzüşmüş hiperkromatik nükleuslar ve belirgin perinükleer halolar izlenir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Kromofob RCC hücrelerinde sitoplazmik mikroskopik veziküller nedeniyle Hale'in kolloidal demir boyası ile diffüz mavi boyanma görülür. Benign renal onkositomda ise bu mikroskopik veziküller bulunmadığından sitoplazma Hale boyası ile negatif kalır.\n\nA yanlıştır; tam tersi doğrudur (kromofob RCC diffüz mavidir, onkositom negatiftir).\nB yanlıştır; mitokondriler onkositomda, veziküller kromofob RCC'dedir.\nD yanlıştır; her ikisi de proksimal tübülden değil, toplayıcı tübül interkale hücresinden köken alır.\nE yanlıştır; kuru üzüm nükleus ve perinükleer halo onkositomda değil, kromofob RCC'de görülür."
+  },
+  {
+    "id": "prac-bobrek-020",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 20,
+    "slideTitle": "Renal Anjiyomiyolipom (AML), Tüberoz Skleroz ve Wunderlich Sendromu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yirmi sekiz yaşında mental retardasyonu ve yüzünde çok sayıda eritematöz papülleri (fasiyal anjiyofibrom) bulunan bir erkek hasta, ani başlayan şiddetli sağ yan ağrısı, taşikardi ve hipotansiyon (şok) tablosu ile acil servise getiriliyor. Bilgisayarlı tomografide sağ retroperitoneal boşlukta masif hematom ve sağ böbrek parankiminde bol yağ dansitesi içeren 7 cm'lik bir kitle saptanıyor. Bu hastadaki hayatı tehdit eden kanamanın (Wunderlich sendromu) geliştiği primer böbrek tümörü ve altta yatan kalıtsal sendrom aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Berrak hücreli karsinom — Von Hippel-Lindau sendromu",
+      "B) Anjiyomiyolipom — Tüberoz Skleroz kompleksi",
+      "C) Papiller karsinom — Herediter papiller renal karsinom",
+      "D) Wilms tümörü — WAGR sendromu",
+      "E) Kromofob karsinom — Birt-Hogg-Dubé sendromu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Fasiyal anjiyofibromlar ve mental retardasyon Tüberoz Sklerozun klasik bulgularıdır. Böbrekte bol yağ içeriği bulunan ve anevrizmatik displastik damarlarının spontan rüptürü sonucu masif retroperitoneal kanamaya (Wunderlich Sendromu) yol açan tümör Anjiyomiyolipomdur (AML).\n\nA yanlıştır; VHL'de serebellar hemanjiyoblastom ve berrak hücreli RCC görülür, masif spontan hematom AML kadar tipik değildir.\nC yanlıştır; HPRC'de yağ dokusu içermeyen papiller karsinomlar izlenir.\nD yanlıştır; WAGR aniridi ile gider ve Wilms pediatrik kitle yapar.\nE yanlıştır; Birt-Hogg-Dubé fibrofolikülom ve kromofob karsinom ile gider."
+  },
+  {
+    "id": "prac-bobrek-021",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 21,
+    "slideTitle": "Pediatrik Renal Neoplazmlar: Wilms Tümörü (Nefroblastom) ve Genetik Birliktelikler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Üç yaşında bir erkek çocukta rutin pediatrik muayenede aniridi (iris yokluğu) ve hipospadias saptanıyor. Batın palpasyonunda sol lomber bölgede devasa bir kitle palpe ediliyor. Biyopsi piyesinde primitif küçük mavi yuvarlak hücre tabakaları (blastem), abortif tübüler yapılar ve rabdomiyoblastik diferansiasyon gösteren gevşek iğsi hücreli stroma izleniyor. Bu hastadaki sendrom, ilgili kromozomal lokus ve tümör türü aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
+    "options": [
+      "A) WAGR Sendromu — Kromozom 11p13 delesyonu — Wilms Tümörü",
+      "B) Denys-Drash Sendromu — Kromozom 3p25 mutasyonu — Berrak Hücreli RCC",
+      "C) Beckwith-Wiedemann Sendromu — Kromozom 7q31 trizomisi — Papiller RCC",
+      "D) Birt-Hogg-Dubé Sendromu — Kromozom 17p11 mutasyonu — Kromofob RCC",
+      "E) Von Hippel-Lindau Sendromu — Kromozom 22q11 delesyonu — Renal Medüller Karsinom"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Aniridi, genitoüriner anomali ve Wilms tümörü birlikteliği Kromozom 11p13 mikrodelesyonu ile seyreden WAGR sendromudur (WT1 ve PAX6 gen delesyonu). Mikroskopik olarak blastemal, epitelyal ve stromal elemanlar içeren trifazik yapı Wilms tümörü (nefroblastom) için karakteristiktir.\n\nB yanlıştır; Denys-Drash sendromu psödohermafroditizm ve mezangiyal sklerozla seyreder, tümör yine Wilms tümörüdür (RCC değildir).\nC yanlıştır; Beckwith-Wiedemann 11p15 lokusundadır.\nD yanlıştır; Birt-Hogg-Dubé erişkinde kromofob RCC yapar.\nE yanlıştır; VHL 3p25'tedir ve berrak hücreli karsinom yapar."
+  },
+  {
+    "id": "prac-bobrek-022",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 22,
+    "slideTitle": "Renal Hücreli Karsinomun Klinik Tablosu ve Klasik Tanısal Triad",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Renal Hücreli Karsinomun (RCC) klinik semptomları, klasik tanısal triadı ve başvuru özellikleri ile ilgili aşağıdaki ifadelerden hangisi KLİNİK VE PATOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Hematüri, yan ağrısı ve palpabl kitle triadı hastaların %80'inden fazlasında erken evrede eksiksiz olarak mevcuttur",
+      "B) En sık görülen ilk klinik başvuru semptomu tipik olarak ağrısız ve aralıklı hematüridir",
+      "C) İdrarda kanama saptanan her hastada şiddetli disüri ve taşikardi bulunması RCC için kuraldır",
+      "D) Günümüzde yüksek çözünürlüklü radyolojik tekniklere rağmen tümörlerin tamamı ileri metastatik evrede yakalanır",
+      "E) Palpabl abdominal kitle tümörün Henle kulpu kaynaklı benign adenom olduğunu kanıtlar"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Renal hücreli karsinomda en sık ilk başvuru semptomu hastaların yarısından fazlasında (>%50) görülen ağrısız ve aralıklı (intermittan) hematüridir.\n\nA yanlıştır; klasik triad hastaların yalnızca %10'unda görülür ve ileri evre göstergesidir.\nC yanlıştır; RCC hematürisi ağrısızdır, enfeksiyon bulgusu olan disüri beklenmez.\nD yanlıştır; günümüzde vakaların %60'ından fazlası tesadüfen (insidentaloma) erken evrede saptanmaktadır.\nE yanlıştır; kitle malignite lehinedir, Henle kulpu adenomu diye bir antite yoktur."
+  },
+  {
+    "id": "prac-bobrek-023",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 23,
+    "slideTitle": "Renal Hücreli Karsinomun Paraneoplastik Sendromları ve Stauffer Sendromu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Altmış yaşında sağ böbreğinde 9 cm'lik berrak hücreli karsinom saptanan bir hastanın laboratuvar testlerinde hematokrit %58 (polisitemi), serum kalsiyumu 12.5 mg/dL (hiperkalsemi), serum alkalen fosfatazı (ALP) yüksek ve karaciğeri palpabl (hepatomegali) bulunuyor. Karaciğer biyopsisinde ve abdominal BT'de karaciğerde hiçbir tümör metastazına rastlanmıyor. Başarılı bir radikal nefrektomi operasyonundan iki ay sonra hastanın hematokrit, kalsiyum, ALP ve karaciğer boyutlarının tamamen normale döndüğü gözleniyor. Bu hastadaki geri dönüşümlü non-metastatik karaciğer disfonksiyonu tablosu (Stauffer sendromu) patofizyolojik olarak hangi sitokin/faktörün tümörden aşırı salınması ile ilişkilidir?",
+    "options": [
+      "A) İnterlökin-6 (IL-6)",
+      "B) Tümör Nekrozis Faktör-beta (TNF-β)",
+      "C) İnterferon-gama (IFN-γ)",
+      "D) Vasküler Endotelyal Büyüme Faktörü-C (VEGF-C)",
+      "E) Trombosit Kaynaklı Büyüme Faktörü-BB (PDGF-BB)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Renal hücreli karsinomda karaciğerde metastaz olmaksızın hepatomegali, ALP artışı ve karaciğer enzim disfonksiyonu ile seyreden ve tümörün cerrahi rezeksiyonu ile tamamen düzelen tablo 'Stauffer Sendromu'dur. Bu paraneoplastik tablonun ana mediyatörü neoplastik hücreler tarafından aşırı miktarda salgılanan İnterlökin-6'dır (IL-6).\n\nB, C, D ve E seçeneklerindeki sitokinler Stauffer sendromunun primer patogenetik mediyatörü değildir."
+  },
+  {
+    "id": "prac-bobrek-024",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 24,
+    "slideTitle": "RCC Derecelendirmesi (WHO/ISUP), TNM Evrelemesi ve Prognostik Faktörler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Elli beş yaşındaki bir hastanın sol radikal nefrektomi piyesinde; böbrek korteksinde 6 cm çapında berrak hücreli karsinom saptanıyor. Patolojik incelemede tümörün renal kapsülü aşarak perinefrik yağ dokusuna invaze olduğu, ayrıca renal ven ana kökü içinde tümör trombüsü bulunduğu, ancak Gerota fasyasını aşmadığı tespit ediliyor. Mikroskopide iğsi hücrelerden oluşan atipik sarkomatoid diferansiasyon alanları izleniyor. Bu hastanın WHO/ISUP derecesi ve TNM primer tümör (T) evresi aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) Grade 1 — T1b",
+      "B) Grade 2 — T2a",
+      "C) Grade 3 — T2b",
+      "D) Grade 4 — T3a",
+      "E) Grade 4 — T4"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Tümörün perinefrik yağ dokusuna invaze olması veya ana renal veni tutması, tümör boyutundan bağımsız olarak evreyi 'T3a' yapar (Gerota fasyasını aşsaydı T4 olurdu). Mikroskopide sarkomatoid veya rabdoid diferansiasyon bulunması ise tümörü alt tip ve nükleol boyutundan bağımsız olarak doğrudan 'WHO/ISUP Grade 4' yapar. Dolayısıyla doğru tanımlama Grade 4 ve T3a'dır.\n\nA, B, C yanlıştır; sarkomatoid diferansiasyon varken Grade 1-3 olamaz.\nE yanlıştır; Gerota fasyası aşılmadığı için T4 değildir, T3a'dır."
+  },
+  {
+    "id": "prac-mesane-001",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 1,
+    "slideTitle": "Üriner Sistemin Embriyolojisi, Mesane Anatomisi ve Urakus Anomalileri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "28 yaşında bir erkek hasta, göbek deliğinden aralıklı berrak akıntı gelmesi ve son iki aydır suprapubik bölgede dolgunluk hissi şikayetiyle başvuruyor. Yapılan sistoskopide mesane kubbesinde (dome) lümene doğru ekzofitik büyüme gösteren, jelatinöz müsinöz materyal içeren ülsere bir kitle saptanıyor ve biyopsi alınıyor. Bu hastanın lezyonunun embriyolojik kökeni ve beklenen histopatolojik tanısı aşağıdakilerden hangisinde doğru verilmiştir?",
+    "options": [
+      "A) Mezonefrik kanal kalıntısı - Düşük dereceli papiller ürotelyal karsinom",
+      "B) Allantois/Urakus lümen kalıntısı - Müsinöz adenokarsinom",
+      "C) Paramezonefrik kanal artığı - Skuamöz hücreli karsinom",
+      "D) Sinovajinal bulbus kalıntısı - Berrak hücreli karsinom",
+      "E) Ürorektal septum defekti - Rabdomiyosarkom"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Mesane kubbesinde (dome) yerleşen, göbek hattı ile ilişkili olabilen ve mikroskobik olarak müsinöz/glandüler differansiasyon gösteren kitleler, allantois uzantısı olan urakusun kapanma defektlerinden köken alan urakal karsinomlardır (en sık müsinöz adenokarsinom). Diğer seçeneklerdeki embriyolojik köken ve tümör eşleşmeleri mesane kubbesi kitleleri için karakteristik değildir."
+  },
+  {
+    "id": "prac-mesane-002",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 2,
+    "slideTitle": "Ürotelyumun Normal Histolojisi, Şemsiye Hücreleri ve Üroplakin Bariyeri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Mesane mukozasının normal histolojisi ve biyofiziksel bariyer fonksiyonu ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE HİSTOLOJİK AÇIDAN YANLIŞTIR?",
+    "options": [
+      "A) Normal ürotelyum lümeni döşeyen bazal, intermediyer ve en yüzeyde şemsiye hücrelerinden oluşur.",
+      "B) Şemsiye hücreleri sıklıkla çift çekirdekli olup lüminal yüzeylerinde asimetrik birim membran barındırır.",
+      "C) Üroplakin proteinleri (UPIa, UPIb, UPII, UPIIIa) hekzamerik plaklar oluşturarak kimyasal bariyeri kurar.",
+      "D) Mesane distansiyonunda ürotelyumun incelmesi hücrelerin apoptoza uğrayarak lümene dökülmesiyle gerçekleşir.",
+      "E) Diskoid/fuziform veziküller şemsiye hücre sitoplazmasında membran rezervuarı olarak görev yapar."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru cevap D seçeneğidir. Mesane idrarla dolup gerildiğinde ürotelyumun tabaka sayısının 5-7'den 2-3'e inmesi, kesinlikle apoptoz veya dökülme ile değil; hücrelerin plastisitesi, birbirleri üzerinde kayması (sliding) ve şemsiye hücrelerinin apikal yüzey alanını fuziform vezikül ekzositozu ile genişletmesi sayesinde gerçekleşir. Diğer seçeneklerdeki tüm histolojik ve moleküler bilgiler tamamen doğrudur."
+  },
+  {
+    "id": "prac-mesane-003",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 3,
+    "slideTitle": "Mesane Duvar Mimarisi ve Katmanları: Patolojik İnvazyonun Anatomik Zemini",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Transüretral mesane rezeksiyonu (TUR-M) uygulanan 64 yaşındaki bir hastanın patolojik incelemesinde, yüksek dereceli ürotelyal karsinom odaklarının lamina propria içerisindeki ince, kesintili düz kas liflerini infiltre ettiği, ancak derin kaba düz kas fasiküllerine (muskularis propria) ulaşmadığı izlenmiştir. Bu hastanın TNM evrelemesine göre primer patolojik tümör (pT) evresi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) pTa",
+      "B) pTis",
+      "C) pT1",
+      "D) pT2a",
+      "E) pT2b"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Tümörün lamina propriayı infiltre etmesi, ancak derin ana kas tabakası olan muskülaris propriaya (detrüsör) ulaşmamış olması pT1 olarak evrelenir. Lamina propriadaki ince, kesintili muskularis mukoza liflerinin infiltrasyonu pT2 anlamına gelmez. pT2 evresi için kalın muskularis propria demetlerinin invazyonu şarttır."
+  },
+  {
+    "id": "prac-mesane-004",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 4,
+    "slideTitle": "Üreter Patolojileri: UPJ Tıkanıklığı ve Retroperitoneal Fibrozis (Ormond Hastalığı)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "52 yaşında bir erkek hasta, son üç aydır giderek artan künt bel ağrısı, halsizlik ve oligüri şikayetleriyle başvuruyor. Laboratuvar incelemesinde serum kreatinin düzeyi 3.8 mg/dL saptanıyor. Çekilen batın BT'sinde abdominal aorta ve iliak damarları çevreleyen, her iki üreteri mediale doğru çekerek dıştan komprese eden ve bilateral hidronefroza yol açan plak benzeri yoğun retroperitoneal yumuşak doku kitlesi izleniyor. Biyopside yoğun storiform fibrozis ve plazma hücre infiltrasyonu saptanıyor. Bu hastanın patolojisi ile ilgili en olası tanı ve altta yatan immünopatolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Üreteropelvik bileşke darlığı - Sirküler kas displazisi",
+      "B) Ormond hastalığı - IgG4 ilişkili fibroinflamatuar hastalık",
+      "C) Malakoplaki - Makrofaj lizozomal fonksiyon kusuru",
+      "D) Kistitis sistika - Von Brunn adacık dilatasyonu",
+      "E) Schistosoma enfeksiyonu - Eozinofilik granülomatöz reaksiyon"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Abdominal aort ve üreterleri sararak medial deviasyona ve bilateral hidronefroza yol açan, storiform fibrozis ve plazmositik infiltratla seyreden retroperitoneal fibroinflamatuar kitle Ormond hastalığıdır (retroperitoneal fibrozis). Günümüzde idiyopatik formlarının büyük kısmının IgG4 ilişkili hastalık spektrumunda olduğu gösterilmiştir."
+  },
+  {
+    "id": "prac-mesane-005",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 5,
-    "slideTitle": "Özel Sistit Tipleri: Hemorajik, İnterstisyel (Hunner Ülseri) ve Eozinofilik",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Mesane Divertikülleri ve Konjenital Bozukluklar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Lenfoma nedeniyle siklofosfamid kemoterapisi alan bir hastada masif ağrılı hematüri gelişiyor. Bu toksik hemorajik sistit tablosundan sorumlu idrar metaboliti ve önleyici ajan hangisidir?",
+    "question": "Benign prostat hiperplazisine bağlı uzun süreli mesane çıkım obstrüksiyonu bulunan 68 yaşındaki bir erkek hastada sistoskopide mesane lateral duvarında 4 cm çapında bir divertikül ve içerisinde şüpheli papiller lezyon saptanıyor. Divertikül içinden alınan biyopside ürotelyal karsinom tanısı konuyor. Mesane divertikülleri ve burada gelişen tümörlerin biyolojik davranışı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Ürik asit — Allopurinol",
-      "B) Akrolein — MESNA",
-      "C) Hidroksiüre — Folinik asit",
-      "D) Siklosporin — Kortikosteroid",
-      "E) Metotreksat — N-asetilsistein"
+      "A) Edinsel divertiküller kalınlaşmış hipertrofik muskularis propria tabakası sayesinde perforasyona dirençlidir.",
+      "B) Divertikül duvarında muskularis propria bulunmadığından tümör hızla perivezikal yağ dokusuna (T3) invaze olabilir.",
+      "C) Divertikül içinde idrar akımı çok hızlı olduğundan taş oluşumu ve staz kesinlikle izlenmez.",
+      "D) Ekstrofiya vezika zemininde en sık gelişen tümör tipi küçük hücreli nöroendokrin karsinomdur.",
+      "E) Divertikül içi tümörlerde kas invaziv olmayan evre (T1) prognozu normal mesane duvarından çok daha iyidir."
     ],
     "correctAnswer": 1,
-    "explanation": "Siklofosfamidin mesane toksisitesinden sorumlu metaboliti Akroleindir; idrarda akroleini bağlayarak hemorajik sistiti önleyen ajan MESNA'dır."
+    "explanation": "Doğru cevap B seçeneğidir. Edinsel mesane divertikülleri mukoza ve submukozanın kas lifleri arasından fıtıklaşmasıyla oluşur; duvarlarında muskularis propria (detrüsör) tabakası bulunmaz. Bu nedenle tümör lamina propriayı aştığı anda arada koruyucu kas bariyeri olmadığı için doğrudan mesane dışına, perivezikal yağa (T3) yayılır. Ekstrofiya vezikada ise adenokarsinom riski artmıştır."
   },
   {
-    "id": "prac-mes-006",
+    "id": "prac-mesane-006",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 6,
-    "slideTitle": "Kronik İrritasyon, Metaplazi ve Schistosoma haematobium",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Akut ve Kronik Bakteriyel Sistit: Etyopatogenez, Bakteriyel Faktörler ve Klinik",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Nil nehri havzasında yaşayan ve kronik idrar yolu enfeksiyonu öyküsü olan bir hastanın mesane biyopsisinde lamina propriada kalsifiye parazit yumurtaları ve yaygın keratinize skuamöz metaplazi izleniyor. Bu hastada gelişme riski en yüksek olan mesane malignitesi hangisidir?",
+    "question": "26 yaşında yeni evli bir kadın hasta, iki gündür devam eden şiddetli idrar yaparken yanma, dakikalar arayla idrara çıkma hissi ve suprapubik ağrı şikayetiyle acil servise başvuruyor. Fizik muayenede vücut sıcaklığı 36.7 °C, tansiyonu 115/75 mmHg ölçülüyor; kostovertebral açı hassasiyeti saptanmıyor ancak suprapubik palpasyonda hassasiyet alınıyor. Tam idrar analizinde bol lökosit, bol bakteri ve lökosit esteraz pozitifliği saptanıyor. Bu hastadaki klinik tablo, en olası etken ve patogenetik mekanizma aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
-      "A) Papiller ürotelyal karsinom",
-      "B) Skuamöz hücreli karsinom (SCC)",
-      "C) Mesane adenokarsinomu",
-      "D) Küçük hücreli nöroendokrin karsinom",
-      "E) Rabdomiyosarkom"
+      "A) Akut sistit - Proteus mirabilis / İntraselüler inklüzyon cisimciği",
+      "B) Akut piyelonefrit - Klebsiella pneumoniae / Hematogen yayılım",
+      "C) Akut sistit - Üropatojenik E. coli / P fimbriyaları ile ürotelyuma tutunma",
+      "D) İnterstisyel sistit - Pseudomonas aeruginosa / Nörojenik mastosit degranülasyonu",
+      "E) Malakoplaki - Enterococcus faecalis / Makrofaj fagositoz yetersizliği"
     ],
-    "correctAnswer": 1,
-    "explanation": "Schistosoma haematobium enfeksiyonu mesanede kronik skuamöz metaplazi oluşturarak baskın olarak Skuamöz Hücreli Karsinom gelişimine yol açar."
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Genç bir kadında ateş ve yan ağrısı olmaksızın sadece pollaküri, dizüri ve suprapubik ağrı ile seyreden tablo akut sistittir (halk arasında balayı sistiti olarak da bilinir). Olguların %80'inden fazlasında etken Üropatojenik E. coli'dir (UPEC) ve bakterinin P fimbriyaları ile ürotelyal reseptörlere tutunması patogenezde ilk adımdır."
   },
   {
-    "id": "prac-mes-007",
+    "id": "prac-mesane-007",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 7,
-    "slideTitle": "Mesane Tümörlerine Giriş ve Saha Kanseri (Field Cancerization) Kavramı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Hemorajik Sistit: Siklofosfamid, Mesna ve Adenovirüs Enfeksiyonları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Boya ve kauçuk fabrikasında 25 yıl çalışan bir işçide mesane kanseri saptanıyor. Bu endüstriyel mesleki maruziyette ürotelyal karsinojenezden sorumlu temel kimyasal karsinojen grubu hangisidir?",
+    "question": "Diffüz büyük B hücreli lenfoma tanısıyla Siklofosfamid içeren kemoterapi rejimi uygulanan 45 yaşındaki bir erkek hastada, tedavinin 3. gününde ani başlayan masif hematüri, dizüri ve pıhtı retansiyonu gelişiyor. Sistoskopide mesane mukozasında yaygın peteşiler, ürotelyal nekroz ve diffüz kanama alanları saptanıyor. Bu patolojik tablonun ortaya çıkışından sorumlu olan toksik metabolit ve bu toksisiteyi önlemek amacıyla kemoterapiye eklenmesi gereken spesifik koruyucu ajan aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
     "options": [
-      "A) Asbest lifleri",
-      "B) Aromatik aminler / Arilaminler (2-naftilamin, benzidin)",
-      "C) Alkol türevleri",
-      "D) Polisistein bileşikleri",
-      "E) Ağır cıva tuzları"
+      "A) Fosforamid mustard - Folinik asit (Lökovorin)",
+      "B) Akrolein - Mesna (2-merkaptoetansülfonat)",
+      "C) Benzo[a]piren - N-asetilsistein",
+      "D) 2-Naftilamin - Deksrazoksan",
+      "E) Ürik asit - Allopurinol"
     ],
     "correctAnswer": 1,
-    "explanation": "Boya, kauçuk ve tekstil sanayiinde kullanılan aromatik aminler (arilaminler, özellikle 2-naftilamin) mesane karsinogenezinde klasik mesleki etkendir."
+    "explanation": "Doğru cevap B seçeneğidir. Siklofosfamid ve ifosfamidin karaciğerdeki metabolizması sonucu açığa çıkan 'akrolein', idrarla atılırken ürotelyuma doğrudan temas ederek toksik nekroza ve hemorajik sistite neden olur. Mesna (2-merkaptoetansülfonat), idrarda serbest akroleine bağlanarak nontoksik tiyoeter bileşiklerine dönüştürür ve bu tabloyu önler."
   },
   {
-    "id": "prac-mes-008",
+    "id": "prac-mesane-008",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 8,
-    "slideTitle": "Ürotelyal Karsinomda İki Ayrı Genetik ve Morfolojik Yol",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "İnterstisyel Sistit (Ağrılı Mesane Sendromu) ve Hunner Ülserleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Mesane karsinomunda düşük dereceli, non-invaziv papiller ürotelyal tümörlerin gelişiminde en sık mutasyona uğrayan onkogen aşağıdakilerden hangisidir?",
+    "question": "42 yaşında bir kadın hasta, yaklaşık bir yıldır devam eden, mesanesi doldukça dayanılmaz hale gelen ve işeme ile kısmen rahatlayan şiddetli suprapubik ağrı şikayetiyle başvuruyor. Hasta günde yaklaşık 30 kez idrara çıktığını, defalarca antibiyotik tedavisi almasına rağmen hiçbir fayda görmediğini belirtiyor. Tekrarlanan idrar kültürlerinde bakteriyel üreme saptanmıyor. Genel anestezi altında yapılan sistoskopik hidrodistansiyonda mesane mukozasında eritemli, santrali fibrinli mukozal fissürler (Hunner lezyonları) gözleniyor ve biyopsi alınıyor. Bu hastanın biyopsisinde tanıyı desteklemesi beklenen en karakteristik histopatolojik bulgu aşağıdakilerden hangisidir?",
     "options": [
-      "A) TP53",
-      "B) FGFR3",
-      "C) RB1",
-      "D) VHL",
-      "E) MET"
+      "A) Lamina propriada Michaelis-Gutmann cisimcikleri içeren histiyositler",
+      "B) Detrüsör kası ve lamina propriada belirgin mast hücresi infiltrasyonu",
+      "C) Ürotelyumda tam kat nükleer atipi ve polarite kaybı",
+      "D) Lamina propria içinde kistik genişlemiş Von Brunn adacıkları",
+      "E) Submukozada kazeifiye granülomatöz nekroz ve epiteloid histiyositler"
     ],
     "correctAnswer": 1,
-    "explanation": "Düşük dereceli papiller ürotelyal neoplazmların yaklaşık %70'inde FGFR3 geninde aktive edici mutasyonlar saptanır."
+    "explanation": "Doğru cevap B seçeneğidir. Mesane dolumuyla artıp işemeyle azalan pelvik ağrı, inatçı pollaküri, steril idrar kültürleri ve sistoskopide Hunner ülserleri İnterstisyel Sistit (Ağrılı Mesane Sendromu) tanısını koydurur. Histopatolojik incelemede lamina propriada ve detrüsör kas demetleri arasında belirgin mast hücresi infiltrasyonu patognomonik destekleyici bulgudur. Michaelis-Gutmann malakoplakide, tam kat atipi CIS'te, Brunn kistleri kistitis sistikada görülür."
   },
   {
-    "id": "prac-mes-009",
+    "id": "prac-mesane-009",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 9,
-    "slideTitle": "Ürotelyal Neoplazmların WHO / ISUP Histolojik Sınıflaması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Malakoplaki: Patogenez, von Hansemann Hücreleri ve Michaelis-Gutmann Cisimcikleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Mesane biyopsisinde papiller mimari gösteren ancak hücrelerinde belirgin polarite kaybı, dev hiperkromatik nükleuslar, nükleer pleomorfizm ve atipik mitozlar saptanan tümörün histopatolojik tanısı nedir?",
+    "question": "Böbrek nakli nedeniyle immünsüpresif tedavi alan 54 yaşındaki bir kadın hastada tekrarlayan E. coli idrar yolu enfeksiyonları gelişiyor. Yapılan kontrol sistoskopisinde mesane trigonunda lümene doğru kabarıklık yapan, sarımsı-kahverengi, yumuşak kıvamlı mukozal plaklar izleniyor ve malignite şüphesiyle biyopsi alınıyor. Mikroskobik incelemede geniş granüler eozinofilik sitoplazmalı histiyositler (von Hansemann hücreleri) ve bu hücrelerin sitoplazmasında hedef tahtası şeklinde konsantrik tabakalanma gösteren bazofilik inklüzyon cisimcikleri saptanıyor. Bu cisimcikler Von Kossa boyası ile koyu kahverengi, Prusya mavisi ile parlak mavi boyanıyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İnterstisyel sistit",
+      "B) Karsinoma in situ (CIS)",
+      "C) Malakoplaki",
+      "D) Kistitis glandülaris",
+      "E) Schistosoma granülomu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. İmmünsüpresif zeminde tekrarlayan E. coli enfeksiyonları, sarı-kahverengi mukozal plaklar, von Hansemann histiyositleri ve kalsiyum (Von Kossa pozitif) ile demir (Prusya mavisi pozitif) içeren hedef tahtası görünümlü Michaelis-Gutmann cisimcikleri MALAKOPLAKİ için patognomoniktir. Makrofajların bakterileri fagosite edip sindirememesi sonucu gelişir."
+  },
+  {
+    "id": "prac-mesane-010",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 10,
+    "slideTitle": "Metaplazik ve Reaktif Mesane Lezyonları: Kistitis Sistika/Glandülaris ve Skuamöz Metaplazi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Mesane patolojisinde karşılaşılan metaplazik ve reaktif lezyonlar ile bunların malignite potansiyelleri hakkındaki aşağıdaki eşleştirmelerden hangisi PATOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Kadın trigonunda non-keratinize skuamöz metaplazi - Yüksek dereceli ürotelyal karsinom öncülü",
+      "B) Keratinize skuamöz metaplazi (Lökoplaki) - Skuamöz hücreli karsinom için premalign lezyon",
+      "C) Polipoid sistit - Düşük dereceli papiller karsinomun intramukozal formu",
+      "D) Von Brunn adacıkları - İnvaziv karsinoma in situ gelişiminin zorunlu erken basamağı",
+      "E) Kistitis sistika - Yüksek dereceli rabdomiyosarkom öncüsü kistik neoplazm"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Mesane mukozasında keratin birikimi ile karakterize olan keratinize skuamöz metaplazi (lökoplaki), kronik irritasyon zemininde mesanenin Skuamöz Hücreli Karsinomu (SCC) gelişimi için kanıtlanmış premalign bir öncüldür. Kadın trigonundaki non-keratinize form benigndir; Von Brunn adacıkları ve polipoid sistit ise reaktif benign süreçlerdir."
+  },
+  {
+    "id": "prac-mesane-011",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 11,
+    "slideTitle": "Mesane Tümörlerinin Epidemiyolojisi ve Majör Çevresel Risk Faktörleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tekstil boya ve kauçuk sanayiinde 25 yıl boyunca boya kimyasalları bölümünde ustabaşı olarak çalışan 66 yaşındaki bir erkek hasta, idrarda ağrısız pıhtılı kanama şikayetiyle başvuruyor. Yapılan sistoskopide mesane lateral duvarında 3 cm çapında papiller tümöral kitle saptanıyor. Bu hastada tümör gelişiminde rol oynayan en olası spesifik kimyasal karsinojen grubu ve patogenetik etki mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Alifatik hidrokarbonlar - Akrolein aracılı doğrudan lizozomal membran lizisi",
+      "B) Aromatik aminler (2-naftilamin, benzidin) - İdrarda konsantre olarak ürotelyumda DNA eklentileri oluşturma",
+      "C) Asbest lifleri - Mezotelyal yüzeyde seröz kavitasyon ve kronik yabancı cisim granülomu",
+      "D) Nitrozaminler - Prostatik duktus epitelinde androjen reseptör süpresyonu",
+      "E) İnorganik kurşun tuzları - Detrüsör kas tabakasında düz kas kalsifikasyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Tekstil boya, kauçuk ve kimya sanayiinde çalışan işçilerde mesane ürotelyal karsinomuna yol açan temel karsinojen grubu aromatik aminlerdir (başta 2-naftilamin, benzidin ve 4-aminobifenil). Bu maddeler karaciğerde aktive olup idrarla atılırken mesane ürotelyumu ile temas eder ve DNA eklentileri (adducts) oluşturarak malign transformasyonu başlatır."
+  },
+  {
+    "id": "prac-mesane-012",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 12,
+    "slideTitle": "Schistosoma haematobium ve Mesanenin Skuamöz Hücreli Karsinomu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Mısır'ın Nil Nehri deltası kırsalında yaşayan ve çiftçilik yapan 58 yaşındaki bir erkek hasta, yıllardır süren aralıklı idrarda kanama ve son altı aydır kilo kaybı şikayetiyle başvuruyor. Yapılan sistoskopide mesane arka duvarında 5 cm çapında, yüzeyi ülseronekrotik, ekzofitik ve sert bir kitle saptanarak rezeke ediliyor. Biyopsinin mikroskobik incelemesinde intersellüler köprüler oluşturan, bol miktarda keratin incisi içeren atipik skuamöz hücre adaları ve stromada etrafı yabancı cisim dev hücreleriyle çevrili kalsifiye parazit yumurtaları izleniyor. Bu hastada gelişen malignite tipi ve altta yatan etken aşağıdakilerden hangisinde doğru verilmiştir?",
+    "options": [
+      "A) Ürotelyal karsinom - Schistosoma mansoni",
+      "B) Skuamöz hücreli karsinom - Schistosoma haematobium",
+      "C) Müsinöz adenokarsinom - Schistosoma japonicum",
+      "D) Küçük hücreli karsinom - Clonorchis sinensis",
+      "E) Berrak hücreli karsinom - Wuchereria bancrofti"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru cevap B seçeneğidir. Mısır ve Nil vadisinde vezikal venöz pleksusa yerleşen Schistosoma haematobium yumurtaları mesane duvarında granülom, kalsifikasyon ve keratinize skuamöz metaplaziye yol açar. Bu zemin üzerinde en sık gelişen malignite keratin incileri içeren SKUAMÖZ HÜCRELİ KARSİNOMDUR (SCC). Schistosoma mansoni ve japonicum ise portal ve mezenterik venleri tutarak karaciğer ve bağırsak patolojilerine yol açar."
+  },
+  {
+    "id": "prac-mesane-013",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 13,
+    "slideTitle": "Ürotelyal Neoplazmlara Genel Bakış ve DSÖ/ISUP Sınıflama Sistemi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Mesane ürotelyal neoplazmlarının DSÖ/ISUP histopatolojik sınıflama ilkeleri ve prognostik kavramları ile ilgili aşağıdaki ifadelerden hangisi TIBBİ VE ONKOLOJİK AÇIDAN YANLIŞTIR?",
+    "options": [
+      "A) Derece (Grade) sitolojik pleomorfizm, nükleer polarite kaybı ve mitotik aktiviteye göre tayin edilir.",
+      "B) Evre (Stage) tümörün mesane duvarındaki invazyon derinliğini yansıtır ve sağkalımı belirleyen en önemli faktördür.",
+      "C) PUNLMP kategorisi, belirgin sitolojik atipi içermeyen ve karsinom tanısı alması istenmeyen lezyonları tanımlar.",
+      "D) Düşük dereceli papiller karsinomlar biyolojik olarak sık nüks etmelerine rağmen kas invazyonu riskleri düşüktür.",
+      "E) Mesane karsinomlarında tümörün evresi (Stage) sadece sitolojik nükleol büyüklüğüne bakılarak mikroskopta belirlenir."
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru cevap E seçeneğidir. Tümörün evresi (Stage) kesinlikle nükleol büyüklüğü veya sitolojiye göre değil; tümörün mesane duvarındaki anatomik invazyon derinliğine göre (submukoza, detrüsör kası, perivezikal yağ vb.) belirlenir. Nükleol büyüklüğü, pleomorfizm ve polarite kaybı ise tümörün 'Derecesini' (Grade) belirleyen kriterlerdir. Diğer seçeneklerdeki tüm sınıflama ilkeleri tamamen doğrudur."
+  },
+  {
+    "id": "prac-mesane-014",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 14,
+    "slideTitle": "Benign Ürotelyal Papiller Lezyonlar: Papillom ve İnverted Papillom",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "34 yaşında bir erkek hastada tesadüfi ultrasonografi sırasında mesane lateral duvarında 1.2 cm çapında tek bir papiller lezyon saptanıyor. Yapılan transüretral rezeksiyon materyalinin histopatolojik incelemesinde; ince fibrovasküler korlar üzerinde 5-6 hücre tabakası kalınlığında, nükleer polaritesi tamamen korunmuş, nükleusları monoton ve oval, nükleer hiperkromazi veya pleomorfizm içermeyen ürotelyum izleniyor. Yüzeyde sağlam şemsiye hücreleri saptanıyor ve hiçbir mitotik figüre rastlanmıyor. Bu hasta için en olası histopatolojik tanı aşağıdakilerden hangisidir?",
     "options": [
       "A) Ürotelyal papillom",
-      "B) PUNLMP",
-      "C) Düşük dereceli papiller karsinom",
+      "B) Düşük malignite potansiyelli papiller ürotelyal neoplazm (PUNLMP)",
+      "C) Düşük dereceli papiller ürotelyal karsinom",
       "D) Yüksek dereceli papiller ürotelyal karsinom",
-      "E) İnvert papillom"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ağır nükleer pleomorfizm, polarite kaybı ve sık mitotik figürler Yüksek Dereceli Papiller Ürotelyal Karsinomun kriterleridir."
-  },
-  {
-    "id": "prac-mes-010",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Karsinoma İn Situ (CIS): Düz, Yüksek Dereceli Malign Lezyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistoskopide mesane tabanında kitle oluşturmayan, düz kadife kırmızısı mukozal alanlar izlenen ve idrar sitolojisinde yoğun anaplastik malign hücreler saptanan lezyonun patolojik tanısı hangisidir?",
-    "options": [
-      "A) Akut bakteriyel sistit",
-      "B) Ürotelyal papillom",
-      "C) Düz Karsinoma İn Situ (CIS)",
-      "D) Malakoplaki",
-      "E) Sistitis glandülaris"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Kitle yapmayan düz kadife kırmızısı mukoza ve idrar sitolojisinde yüksek dereceli malign hücreler Karsinoma İn Situ'nun (CIS) klasik prezentasyonudur."
-  },
-  {
-    "id": "prac-mes-011",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "İnvaziv Ürotelyal Karsinom ve Muskularis Propria İnvazyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Mesane kanseri tanısıyla TUR uygulanan bir hastada radikal sistektomi (mesanenin tamamen çıkarılması) endikasyonunu doğuran en kritik histopatolojik evreleme kriteri hangisidir?",
-    "options": [
-      "A) Şemsiye hücrelerinin kaybolması",
-      "B) Lamina propriaya tümör hücrelerinin sızması (T1)",
-      "C) Muskularis propria (detrisör kas tabakası) invazyonunun saptanması (T2)",
-      "D) Tümör içinde psammom cisimciği bulunması",
-      "E) İdrar sitolojisinde tek tük hücre görülmesi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Tümörün muskularis propria kas tabakasını invaze etmesi (T2 - kas invaziv mesane kanseri) radikal sistektominin kesin endikasyonunu oluşturur."
-  },
-  {
-    "id": "prac-mes-012",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "Mesane Kanserinde Klinik Tablo ve İdrar Sitolojisinin Gücü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "60 yaşındaki bir erkekte hiçbir ağrı veya dizüri olmaksızın aniden ortaya çıkan pıhtılı makroskopik hematüride ilk şüphelenilmesi ve ekarte edilmesi gereken malignite hangisidir?",
-    "options": [
-      "A) Akut bakteriyel sistit",
-      "B) Mesane ürotelyal karsinomu",
-      "C) Benign prostat hiperplazisi",
-      "D) Akut interstisyel nefrit",
-      "E) Renal onkositoma"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ağrısız makroskopik hematüri ileri yaşta mesane ürotelyal karsinomunun en tipik ve en sık görülen kardinal başvuru semptomudur."
-  },
-  {
-    "id": "prac-mes-013",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Mesane Kanserinin Nadir Varyantları: Skuamöz Hücreli, Adenokarsinom ve Nöroendokrin",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistoskopide mesane tavanında (kubbesinde) yerleşim gösteren ve biyopsisinde bol müsin üreten glandüler yapılar izlenen tümörün en olası kökeni hangisidir?",
-    "options": [
-      "A) Urakus kalıntısı (urakal adenokarsinom)",
-      "B) Von Brunn adacıkları",
-      "C) Prostatik üretra",
-      "D) Mezonefrik kanal artığı",
-      "E) Şemsiye hücreleri"
+      "E) Karsinoma in situ (CIS)"
     ],
     "correctAnswer": 0,
-    "explanation": "Mesane kubbesinde (dome) yerleşen müsinöz adenokarsinomlar patent kalmış embriyonik urakus artıklarından köken alır."
+    "explanation": "Doğru cevap A seçeneğidir. İnce fibrovasküler korları döşeyen epitelin normal ürotelyum kalınlığında (5-7 tabaka) olması, hücresel atipinin, pleomorfizmin ve mitozun bulunmaması 'Ürotelyal Papillom'un tanımlayıcı kriteridir. PUNLMP'de epitel kalınlaşmıştır (tabaka sayısı artmıştır); düşük dereceli karsinomda ise hafif atipi ve polarite kaybı başlar."
   },
   {
-    "id": "prac-mes-014",
+    "id": "prac-mesane-015",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Mesane Kanserinde TNM Evrelemesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Mesane rezeksiyon materyalinde ürotelyal karsinomun detrisör kas tabakasını (muskularis propria) tamamen aşarak perivezikal yağ dokusuna mikroskopik olarak yayıldığı saptandığında T evresi nedir?",
-    "options": [
-      "A) T1",
-      "B) T2b",
-      "C) T3a",
-      "D) T4a",
-      "E) Tis"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Perivezikal yağ dokusuna mikroskopik yayılım T3a evresi olarak tanımlanır."
-  },
-  {
-    "id": "prac-mes-015",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 15,
-    "slideTitle": "Yüzeyel Mesane Kanserinde İntravezikal BCG İmmünoterapisi",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Düşük Malignite Potansiyelli Papiller Ürotelyal Neoplazm (PUNLMP)",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Mesane Karsinoma İn Situ (CIS) tanısıyla intravezikal BCG tedavisi alan hastanın kontrol mesane biyopsisinde saptanması beklenen ve ilacın terapötik immün yanıt oluşturduğunu gösteren histopatolojik bulgu hangisidir?",
+    "question": "58 yaşında bir erkek hastada hematüri araştırması sırasında mesane arka duvarında 2 cm çapında ekzofitik papiller kitle saptanarak TUR-M yapılıyor. Patolojik incelemede narin fibrovasküler korları örten ürotelyumun belirgin kalınlaştığı (14-16 tabaka) izleniyor. Ancak hücrelerin polaritesinin kusursuz korunduğu, nükleusların monoton ve oval olduğu, nükleer pleomorfizm ve hiperkromazinin bulunmadığı, mitotik figürlerin sadece bazal tabakada tek tük izlendiği ve yüzeyde şemsiye hücrelerinin mevcut olduğu görülüyor. Bu hastanın tanısı ve beklenen biyolojik davranışı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Michaelis-Gutmann kalsifiye cisimcikleri",
-      "B) Lamina propriada kazeifiye olmayan granülomatöz enflamasyon",
-      "C) Yaygın skuamöz metaplazi",
-      "D) Amiloid birikimi",
-      "E) Tel halka (wire-loop) lezyonları"
+      "A) Ürotelyal papillomdur ve nüks riski kesinlikle sıfırdır.",
+      "B) PUNLMP'dir; kas invazyon riski çok düşüktür ancak lokal nüks yapabilir.",
+      "C) Yüksek dereceli ürotelyal karsinomdur ve acil radikal sistektomi gerektirir.",
+      "D) Düz karsinoma in situ lezyonudur ve idrar sitolojisi kuvvetle pozitiftir.",
+      "E) İnvaziv skuamöz karsinomdur ve parazit yumurtaları eşlik eder."
     ],
     "correctAnswer": 1,
-    "explanation": "İntravezikal BCG canlı mikobakteri içerdiğinden mesane mukozasında granülomatöz enflamasyon ve T hücresel immün yanıt oluşturarak antitümöral etki gösterir."
+    "explanation": "Doğru cevap B seçeneğidir. Belirgin şekilde kalınlaşmış ürotelyal tabakalanma gösteren, ancak polarite kaybı, sitolojik atipisi ve pleomorfizmi olmayan, mitozun sadece bazalde sınırlı kaldığı lezyon PUNLMP'dir. PUNLMP'nin kas invazyonuna ilerleme riski çok düşüktür (<%4), ancak olguların %25-35'inde yeni papiller lezyonlar şeklinde lokal nüks görülebilir."
   },
   {
-    "id": "prac-mes-016",
+    "id": "prac-mesane-016",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 16,
-    "slideTitle": "Ürotelyal Karsinomda İmmünohistokimyasal Belirteç Paneli",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Düşük Dereceli (Low-Grade) Papiller Ürotelyal Karsinom",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Karaciğerinde metastatik kitle saptanan bir hastanın biyopsisinde nükleer GATA3 pozitif, CK7 pozitif ve CK20 pozitif boyanma izleniyor. Bu metastazın en olası primer organ odağı hangisidir?",
+    "question": "62 yaşında bir erkek hastada hematüri nedeniyle yapılan sistoskopide mesane sağ lateral duvarında 2.5 cm çapında mercan benzeri papiller kitle izlenerek rezeke ediliyor. Biyopsinin mikroskobik incelemesinde papiller yapılarda hafif füzyonlar, nükleer polaritede hafif-orta düzeyde dağınıklık, nükleus boyutlarında hafif varyasyon ve hafif hiperkromazi saptanıyor. Mitotik figürlerin epitelin alt ve orta üçte birinde sınırlı olduğu, hiçbir atipik mitotik figür bulunmadığı ve lamina propria invazyonunun olmadığı görülüyor. Bu hastanın patolojik tanısı ve klinik seyri için en doğru ifade aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kolon adenokarsinomu",
-      "B) Mesane ürotelyal karsinomu",
-      "C) Prostat karsinomu",
-      "D) Renal berrak hücreli karsinom",
-      "E) Akciğer yassı hücreli karsinomu"
+      "A) PUNLMP - Hastada nüks riski kesinlikle beklenmez.",
+      "B) Düşük dereceli papiller ürotelyal karsinom - Lokal nüks riski yüksek (%50-60), kas invazyonu riski düşüktür.",
+      "C) Yüksek dereceli ürotelyal karsinom - Olguların %80'inde tanı anında kemik metastazı vardır.",
+      "D) Ürotelyal papillom - Sitolojik olarak tamamen normaldir ve ameliyat gerektirmez.",
+      "E) Karsinoma in situ - Papiller kitle oluşturmadan mukozada düz yayılım gösterir."
     ],
     "correctAnswer": 1,
-    "explanation": "GATA3 nükleer pozitifliği ve CK7+/CK20+ sitokeratin profili Ürotelyal Karsinom için karakteristik immünohistokimyasal imzadır."
+    "explanation": "Doğru cevap B seçeneğidir. Hafif polarite kaybı, hafif pleomorfizm ve hiperkromazi gösteren, mitozun alt/orta katlarda sınırlı kaldığı ve atipik mitoz içermeyen lezyon 'Düşük Dereceli Papiller Ürotelyal Karsinom'dur. Bu tümörlerin en karakteristik klinik özelliği %50-60 gibi çok yüksek lokal nüks oranı göstermeleridir; muskülaris propria invazyon riski ise oldukça düşüktür (<%10)."
   },
   {
-    "id": "prac-mes-017",
+    "id": "prac-mesane-017",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
     "slideNumber": 17,
-    "slideTitle": "Mesane Kanserinde Metastaz Yolları ve Hedef Organlar",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Yüksek Dereceli (High-Grade) Papiller Ürotelyal Karsinom",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Kas invaziv mesane ürotelyal karsinomunda bölgesel lenfatik yayılımın İLK gerçekleştiği anatomik lenf nodu istasyonu hangisidir?",
+    "question": "Mesanesinde 4 cm çapında tabanı geniş papiller kitle saptanan 67 yaşındaki bir erkek hastanın rezeksiyon biyopsisinde; papillaların geniş solid tabakalar halinde kaynaştığı, nükleer polaritenin tamamen silindiği, belirgin nükleer pleomorfizm ve kaba heterokromatin adaları izleniyor. Epitelin en yüzeyel katlarında dahi çok sayıda tripolar atipik mitotik figür saptanıyor ve şemsiye hücrelerinin bulunmadığı görülüyor. Bu hastanın lezyonunun histopatolojik derecesi ve beklenen klinik davranışı aşağıdakilerden hangisinde doğru verilmiştir?",
     "options": [
-      "A) Paraaortik lenf nodları",
-      "B) Obturatuar ve internal ilyak lenf nodları",
-      "C) Yüzeyel inguinal lenf nodları",
-      "D) Mediastinal lenf nodları",
-      "E) Aksiller lenf nodları"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Mesane lenfatik drenajı öncelikle obturatuar, internal ve eksternal ilyak pelvik lenf nodlarına dökülür."
-  },
-  {
-    "id": "prac-mes-018",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 18,
-    "slideTitle": "Üreter ve Renal Pelvis Ürotelyal Tümörleri: Üst Üriner Sistem Özellikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Renal pelviste yüksek dereceli ürotelyal karsinom saptanan bir hastada nüksleri önlemek amacıyla uygulanması gereken standart cerrahi rezeksiyon sınırı hangisidir?",
-    "options": [
-      "A) Yalnızca böbreğin çıkarılması (basit nefrektomi)",
-      "B) Nefroüreterektomi ve mesane kafı (cuff) rezeksiyonu",
-      "C) Yalnızca tümörün lazerle yakılması",
-      "D) Parsiyel nefrektomi",
-      "E) Sadece üreterin çıkarılması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Üst üriner sistem ürotelyal karsinomlarında tüm üreter boyunca nüks riskini önlemek için böbrek, tüm üreter ve mesaneye girdiği delik (kaf) birlikte çıkarılmalıdır (Radikal Nefroüreterektomi)."
-  },
-  {
-    "id": "prac-mes-019",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 19,
-    "slideTitle": "Mesane Karsinomunda Güncel Moleküler Sınıflama ve Hedefe Yönelik Tedaviler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Metastatik ürotelyal karsinom tanılı bir hastanın moleküler genetik analizinde FGFR3 aktive edici gen mutasyonu saptanıyor. Bu hastaya başlanabilecek hedefe yönelik selektif FGFR inhibitörü ilaç hangisidir?",
-    "options": [
-      "A) Erdafitinib",
-      "B) İmatinib",
-      "C) Trastuzumab",
-      "D) Sunitinib",
-      "E) Rituksimab"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Erdafitinib, FGFR mutasyonu veya füzyonu taşıyan ileri evre/metastatik ürotelyal karsinomda onaylı selektif FGFR tirozin kinaz inhibitörüdür."
-  },
-  {
-    "id": "prac-mes-020",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 20,
-    "slideTitle": "Mesane Lezyonlarında Histopatolojik Ayırıcı Tanı Atlası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "3 aydır foley mesane sondası takılı olan bir hastada kontrol sistoskopisinde mesane kubbesinde parmaksı polipoid lezyonlar izleniyor. Biyopside ödemli lamina propria üzerinde hafif hiperplastik ancak atipisiz ürotelyum saptanıyor. Tanı nedir?",
-    "options": [
-      "A) Yüksek dereceli papiller karsinom",
-      "B) Polipoid sistit",
-      "C) Malakoplaki",
-      "D) Schistosoma granülomu",
-      "E) Karsinoma in situ"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kronik kateter irritasyonuna yanıt olarak gelişen atipisiz polipoid mukozal reaksiyon Polipoid Sistit olarak tanımlanır."
-  },
-  {
-    "id": "prac-mes-021",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Mesane Kanserli Hastaya Klinik Yaklaşım ve Yönetim Algoritması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Mesane tümörü nedeniyle TUR-M uygulanan ve patolojisi 'Kasa invaze olmayan lamina propriaya sınırlı yüksek dereceli ürotelyal karsinom (T1)' olarak raporlanan hastada nüks ve progresyonu önlemek için en uygun sonraki adım hangisidir?",
-    "options": [
-      "A) Radyoterapi vermek",
-      "B) İntravezikal BCG immünoterapisi başlamak",
-      "C) Acil hemodiyalize almak",
-      "D) Hiçbir takip yapmamak",
-      "E) Kemik iliği nakli yapmak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "T1 yüksek dereceli kasa invaze olmayan mesane kanserlerinde TUR sonrası nüks ve kas invazyonu riskini en aza indiren standart tedavi intravezikal BCG'dir."
-  },
-  {
-    "id": "prac-mes-022",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Mesane Patolojileri Büyük Karşılaştırma Matrisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki mesane lezyonu ve karakteristik patolojik bulgu eşleştirmelerinden hangisi yanlıştır?",
-    "options": [
-      "A) İnterstisyel sistit — Hunner ülseri ve bol mast hücreleri",
-      "B) Schistosoma haematobium — Skuamöz metaplazi ve SCC riski",
-      "C) Urakus karsinomu — Mesane kubbesinde müsinöz adenokarsinom",
-      "D) Düşük dereceli papiller karsinom — TP53 mutasyonu ve erken kas invazyonu",
-      "E) Malakoplaki — Michaelis-Gutmann cisimcikleri"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Düşük dereceli papiller karsinomda TP53 değil FGFR3 mutasyonu görülür ve kas invazyonu nadirdir. TP53 mutasyonu ve kas invazyonu yüksek dereceli / düz yolak karsinomlarına aittir."
-  },
-  {
-    "id": "prac-mes-023",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Hematüri Ayırıcı Tanısı ve Ürolojik vs Nefrolojik Ayrım Algoritması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki hematüri özelliklerinden hangisi kanamanın bir glomerülonefrite (nefrolojik) değil, kesinlikle mesane tümörü veya ürolojik bir lezyona bağlı olduğunu kanıtlar?",
-    "options": [
-      "A) İdrarda dismorfik akantositlerin görülmesi",
-      "B) İdrar sedimentinde eritrosit silindirlerinin bulunması",
-      "C) İdrarda makroskopik kan pıhtılarının (clots) saptanması",
-      "D) Eşlik eden 3 g/gün proteinüri olması",
-      "E) Serum C3 kompleman düzeyinin düşük olması"
+      "A) Düşük dereceli karsinom - Sadece lokal nüks yapar, kas invazyonu beklenmez.",
+      "B) PUNLMP - Benign seyirlidir ve ek tedavi gerektirmez.",
+      "C) Yüksek dereceli ürotelyal karsinom - Yüksek oranda kas invazyonu ve metastaz potansiyeline sahiptir.",
+      "D) Ürotelyal papillom - Konservatif takip yeterlidir.",
+      "E) Malakoplaki - Antibiyotik tedavisiyle tamamen geriler."
     ],
     "correctAnswer": 2,
-    "explanation": "Glomerüler kanamalarda tübüler ürokinaz enzimi pıhtılaşmayı engeller, bu nedenle pıhtı görülmez. Makroskopik pıhtı varlığı kanamanın kesinlikle ekstraglomerüler / ürolojik kaynaklı (tümör, taş vb.) olduğunu kanıtlar."
+    "explanation": "Doğru cevap C seçeneğidir. Belirgin nükleer pleomorfizm, tam polarite kaybı, en üst katlarda dahi görülen tripolar atipik mitotik figürler ve kaynaşmış solid mimari 'Yüksek Dereceli Papiller Ürotelyal Karsinom'un açık tanımlayıcısıdır. Bu lezyonlar biyolojik olarak son derece agresiftir; olguların %80'inden fazlasında muskülaris propria invazyonu ve yüksek metastaz riski mevcuttur."
   },
   {
-    "id": "prac-mes-024",
+    "id": "prac-mesane-018",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
-    "slideNumber": 24,
-    "slideTitle": "Ders 26-B Kapsamlı Sentezi: Mesane Hastalıkları ve Tümörlerinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 18,
+    "slideTitle": "Karsinoma İn Situ (CIS): Düz Malignite, 'Tarla Kanserleşmesi' ve Klinik Tehlike",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Mesane ürotelyal karsinomlarının moleküler patogenezinde Karsinoma İn Situ (CIS) ve kas invaziv agresif karsinom gelişimi ile en güçlü ilişkili tümör süpresör gen mutasyonu hangisidir?",
+    "question": "60 yaşında sigara içicisi bir erkek hasta, altı aydır devam eden idrar yaparken yanma, sık idrara çıkma ve ani sıkışma şikayetleriyle başvuruyor. Tekrarlanan antibiyotik tedavilerine rağmen semptomları düzelmiyor. Standart beyaz ışık sistoskopisinde lümende belirgin bir papiller veya ekzofitik kitle izlenmiyor; sadece mesane arka duvarı ve kubbesinde kadifemsi, eritemli mukozal alanlar görülüyor. Yapılan idrar sitolojisinde ileri derecede pleomorfik, iri nükleollü, hiperkromatik yüksek dereceli malign ürotelyal hücreler saptanıyor. Bu hasta için en olası tanı ve bu lezyonun tedavi edilmediği takdirde beklenen biyolojik riski aşağıdakilerden hangisidir?",
     "options": [
-      "A) FGFR3",
-      "B) TP53",
-      "C) MET",
-      "D) VHL",
-      "E) WT1"
+      "A) Akut bakteriyel sistit - Piyelonefrite ilerleme riski <%1'dir.",
+      "B) İnterstisyel sistit - Mesane rüptürü gelişme riski %90'dır.",
+      "C) Malakoplaki - Karaciğere fagositer granülom metastazı riski vardır.",
+      "D) Karsinoma in situ (CIS) - %50-75 oranında kas invaziv karsinoma ilerleme riski taşır.",
+      "E) Ürotelyal papillom - Spontan gerileme riski %100'dür."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru cevap D seçeneğidir. Kitle oluşturmayan, düz mukozada eritemli yamalar şeklinde görülen, sistiti taklit eden irritatif semptomlar veren ve idrar sitolojisinde yüksek dereceli malign hücre dökülen antite 'Karsinoma İn Situ'dur (CIS). CIS son derece yüksek riskli bir neoplazmdır; intravezikal BCG ile tedavi edilmediği takdirde olguların %50 ila %75'i derin kas invaziv karsinoma (T2) ilerler."
+  },
+  {
+    "id": "prac-mesane-019",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 19,
+    "slideTitle": "Ürotelyal Karsinojenezde İki Ayrı Yolak (Dual Track Model) ve Moleküler Genetik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ürotelyal karsinom patogenezinde kabul edilen 'İki Ayrı Yolak (Dual Track Model)' ve ilişkili moleküler genetik değişiklikler ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Düşük dereceli papiller yolak - TP53 ve RB1 mutasyonları / Yüksek erken metastaz riski",
+      "B) İnvaziv düz (flat) yolak - FGFR3 aktive edici mutasyonları / Non-invaziv mükemmel prognoz",
+      "C) Düşük dereceli papiller yolak - Kromozom 9 kaybı ve FGFR3 mutasyonu / Yüksek nüks, düşük kas invazyonu",
+      "D) Karsinoma in situ - Sadece APC gen mutasyonu / Düşük dereceli narin papillom gelişimi",
+      "E) Ürotelyal papillom - TERT mutasyonu yokluğu / %100 kas invazyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Dual Track Model'e göre düşük dereceli papiller yolak; Kromozom 9 kayıpları (CDKN2A) ve FGFR3/HRAS aktive edici mutasyonları ile karakterizedir ve yüksek lokal nüks ancak düşük invazyon eğilimi sergiler. İnvaziv flat yolak ise TP53 ve RB1 inaktivasyonu ile gelişir ve erken dönemde derin kas invazyonu yapar."
+  },
+  {
+    "id": "prac-mesane-020",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 20,
+    "slideTitle": "Ürotelyal Olmayan Mesane Maligniteleri: Skuamöz, Adenokarsinom ve Nöroendokrin Tümörler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Spinal kord yaralanması nedeniyle 20 yıldır sürekli transüretral foley sonda kullanan 52 yaşındaki bir erkek hastada, sonda etrafından kanlı idrar gelmesi üzerine sistoskopi yapılıyor. Mesane tabanında 4 cm çapında sert, ülsere kitle saptanarak biyopsi alınıyor. Mikroskobik incelemede lümene doğru uzanan atipik skuamöz epitel adaları, bol miktarda intersellüler köprü ve sitoplazmik keratinizasyon (keratin incileri) izleniyor; ürotelyal karsinom komponentine rastlanmıyor. Bu hastada tümörün geliştiği öncül patolojik lezyon ve nihai histopatolojik tanı aşağıdakilerden hangisinde doğru verilmiştir?",
+    "options": [
+      "A) Urakal artık kisti - Müsinöz adenokarsinom",
+      "B) Keratinize skuamöz metaplazi (Lökoplaki) - Skuamöz hücreli karsinom",
+      "C) Kistitis sistika - Düşük dereceli papiller karsinom",
+      "D) Von Brunn adacıkları - İnvaziv ürotelyal karsinom",
+      "E) Michaelis-Gutmann cisimcikleri - Malakoplaki"
     ],
     "correctAnswer": 1,
-    "explanation": "TP53 (ve RB1) gen mutasyonu yüksek dereceli düz yolak, Karsinoma İn Situ ve erken kas invazyonu gösteren agresif mesane karsinomlarının temel moleküler sürücüsüdür."
+    "explanation": "Doğru cevap B seçeneğidir. Uzun süreli kalıcı foley kateter irritasyonu zemininde keratinize skuamöz metaplazi (lökoplaki) gelişir. Bu premalign zemin üzerinde keratin incileri ve intersellüler köprüler oluşturan malignite SKUAMÖZ HÜCRELİ KARSİNOMDUR (SCC). Batı dünyasında non-bilharsiyal skuamöz karsinomun en tipik etyolojisi budur."
+  },
+  {
+    "id": "prac-mesane-021",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 21,
+    "slideTitle": "Klinik Başvuru, Semptomlar ve İdrar Sitolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "64 yaşında bir erkek hasta, son üç aydır aralıklarla ortaya çıkan, ağrısız, pıhtılı idrar yapma şikayetiyle başvuruyor. Hasta kanamanın bazen iki hafta boyunca tamamen kaybolduğunu, sonra tekrar başladığını ifade ediyor. İdrar kültüründe üreme saptanmıyor. Yapılan idrar sitolojisi negatif olarak raporlanıyor. Bu hastanın klinik tablosu ve tanısal yönetimi ile ilgili aşağıdaki ifadelerden hangisi EN DOĞRUDUR?",
+    "options": [
+      "A) İdrar sitolojisi negatif olduğundan mesane malignitesi tamamen ekarte edilmiştir ve takibe gerek yoktur.",
+      "B) Ağrısız hematürinin kendiliğinden durması iyi huylu glomerülonefrit lehinedir.",
+      "C) İdrar sitolojisinin düşük dereceli tümörlerde duyarlılığı düşüktür; hastaya mutlaka sistoskopi yapılmalıdır.",
+      "D) Hasta genç yaş grubunda olduğundan ilk tercih olarak mesane biyopsisi yerine prostat masajı yapılmalıdır.",
+      "E) Sitolojinin negatif olması hastada Karsinoma İn Situ varlığını kesin olarak kanıtlar."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. İdrar sitolojisi düşük dereceli ürotelyal karsinomlarda sitolojik atipi hafif olduğu için olguların çoğunda (%60-70) yalancı negatif sonuç verir. Erişkinde ağrısız makroskopik hematürinin aralıklı olması tümör kanamalarının klasik özelliğidir. Negatif sitoloji tümörü asla ekarte ettirmez; bu hastaya derhal üst üriner sistem görüntülemesi ve SİSTOSKOPİ yapılmalıdır."
+  },
+  {
+    "id": "prac-mesane-022",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 22,
+    "slideTitle": "Tanısal Altın Standart: Sistoskopi ve TUR-M (Patoloji Raporunun Hayati Önemi)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "65 yaşında bir erkek hastaya mesane sol duvarındaki 3 cm çaplı sesil kitle nedeniyle TUR-M uygulanıyor. Gelen patoloji raporunda: 'Yüksek dereceli ürotelyal karsinom, lamina propria invazyonu mevcuttur (pT1). Gönderilen rezeksiyon dilimlerinde muskularis propria (detrüsör kası) dokusu izlenmemiştir.' denilmektedir. Bu hasta için bir sonraki en doğru klinik ve cerrahi yaklaşım aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kas dokusuna gerek yoktur; hastaya doğrudan radyoterapi başlanmalıdır.",
+      "B) Tümör tamamen çıkarıldığından hasta 1 yıl sonra kontrole çağrılmalıdır.",
+      "C) Atlanmış olası kas invazyonunu (T2) değerlendirmek için 2-6 hafta içinde Re-TUR (tekrar rezeksiyon) yapılmalıdır.",
+      "D) Hastaya beklemeden hemen palyatif kemoterapi verilmelidir.",
+      "E) Lamina propria invazyonu olan tüm hastalara Re-TUR yapılmaksızın doğrudan acil radikal nefrektomi uygulanmalıdır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru cevap C seçeneğidir. Patoloji raporunda pT1 ve yüksek derece saptanan, ancak biyopsi materyalinde muskularis propria (detrüsör) dokusu bulunmayan olgularda evreleme yetersizdir. Hastanın derin kas invaziv karsinom (T2) olup olmadığını kesinleştirmek amacıyla ilk ameliyattan 2-6 hafta sonra tabandan kas dokusu içeren RE-TUR (Tekrar Transüretral Rezeksiyon) yapılması standart kılavuz kuralıdır."
+  },
+  {
+    "id": "prac-mesane-023",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 23,
+    "slideTitle": "Mesane Kanseri TNM Evrelemesi: Kas İnvazyonunun Prognostik Eşiği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "70 yaşındaki bir erkek hastanın mesane tümörü nedeniyle yapılan radikal sistektomi spesmeninin patolojik incelemesinde; yüksek dereceli ürotelyal karsinomun mesane duvarındaki kalın detrüsör kas liflerini (muskularis propria) tam kat infiltre ettiği, kas tabakasını aşarak perivezikal yağ dokusu içerisine mikroskopik tümör odakları şeklinde yayıldığı, ancak prostat stromasına ve komşu organlara ulaşmadığı saptanıyor. Çıkarılan 18 adet pelvik lenf nodunda metastaz izlenmiyor. Bu hastanın TNM sınıflamasına göre patolojik primer tümör evresi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) pT1",
+      "B) pT2a",
+      "C) pT2b",
+      "D) pT3a",
+      "E) pT4a"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru cevap D seçeneğidir. Tümörün muskularis propriayı aşarak mesane çevresindeki perivezikal yağ dokusuna mikroskopik olarak yayılması Evre pT3a olarak tanımlanır. Eğer perivezikal yağda makroskopik olarak görülebilen bir kitle olsaydı pT3b olurdu. Kas içi sınırlı kalsaydı pT2, prostat stromasına geçseydi pT4a evresi verilirdi."
+  },
+  {
+    "id": "prac-mesane-024",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri: Sistitler, Ürotelyal Karsinom Sınıflaması, Karsinojenez ve Evreleme",
+    "slideNumber": 24,
+    "slideTitle": "Tedavi Stratejileri: İntravezikal BCG İmmünoterapisinden Radikal Sistektomiye",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "62 yaşında bir erkek hastaya yapılan TUR-M patolojisinde 'Yüksek dereceli pT1 ürotelyal karsinom ve yaygın Karsinoma İn Situ (CIS)' saptanıyor. Re-TUR materyalinde muskularis propria örnekleniyor ve kas invazyonu saptanmıyor (pT1). Bu hastada tümör nüksünü ve derin kas invazyonuna progresyonu önlemek amacıyla uygulanması gereken altın standart adjuvan tedavi yaklaşımı ve bu tedavinin etki mekanizması aşağıdakilerden hangisinde doğru verilmiştir?",
+    "options": [
+      "A) İntravezikal BCG immünoterapisi - Mesane mukozasında Th1 lenfosit ve makrofaj aktivasyonu ile IFN-gama ve TNF-alfa salınımı",
+      "B) Sistemik siklofosfamid kemoterapisi - İdrarda akrolein konsantrasyonunu artırarak ürotelyal nekroz oluşturma",
+      "C) Acil radikal sistektomi - BCG immünoterapisi CIS olgularında kesinlikle kontrendikedir",
+      "D) Sadece oral kinolon antibiyoterapisi - Fagositer lizozom sindirim defektini düzeltme",
+      "E) Mesaneye intravezikal radyoterapi verilmesi - Telomeraz enzimini doğrudan aktive etme"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru cevap A seçeneğidir. Yüksek riskli kas invaziv olmayan mesane karsinomunda (T1) ve özellikle Karsinoma İn Situ (CIS) varlığında altın standart tedavi İntravezikal BCG (Bacillus Calmette-Guérin) immünoterapisidir. BCG, lokal olarak ürotelyuma bağlanarak güçlü bir hücresel immün yanıt (Th1), CD4/CD8 T lenfosit aktivasyonu ve IFN-gama, TNF-alfa, IL-2 salınımı tetikleyerek tümör hücrelerini immünolojik olarak yok eder ve progresyonu önler."
   },
   {
     "id": "tb-pq-1",
@@ -1822,81 +1898,5 @@
     ],
     "correctAnswer": "A",
     "explanation": "Storiform fibrozis, obliteratif flebit ve dokuda bol IgG4-pozitif plazma hücre infiltrasyonu triadı IgG4-İlişkili Hastalığın (bu olguda Tip 1 Otoimmün Pankreatit) patognomonik histolojik tablosudur."
-  },
-  {
-    "id": "prac-hs-21",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Transplantasyon İmmünolojisi ve Organ Reddi Tipleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Böbrek naklinden 3 hafta sonra serum kreatinini yükselen hastanın allogreft biyopsisinde kortikal tübül epiteli arasına CD8+ T lenfositlerinin sızdığı (tubulit) ve renal arteriyol intima tabakasında lenfositik enflamasyon (endotelit) izleniyor. Bu hastadaki rejeksiyon tipi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Hiperakut rejeksiyon",
-      "B) Akut hücresel (T hücre-aracılı) rejeksiyon",
-      "C) Kronik intimal sklerozan rejeksiyon",
-      "D) Graft-versus-Host hastalığı",
-      "E) İlaç toksisitesine bağlı tübüler nekroz"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Nakilden haftalar sonra gelişen, interstisyel lenfosit infiltrasyonu, tübül epiteli arasına lenfosit sızması (tubulit) ve arteriyel intimal infiltrasyon (endotelit) Akut Hücresel Rejeksiyonun tanısal bulgularıdır."
-  },
-  {
-    "id": "prac-hs-22",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Kök Hücre Nakli ve Graft-versus-Host Hastalığı (GVHD)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Akut miyeloid lösemi nedeniyle allojeneik kemik iliği nakli yapılan 35 yaşındaki erkek hastada, nakilden 25 gün sonra avuç içlerinden başlayan yaygın döküntü, hiperbilirubinemi (sarılık) ve günde 2 litreye varan sulu-kanlı ishal gelişiyor. Kolon biyopsisinde kript epitel hücrelerinde yaygın apoptoz izleniyor. Bu klinik tablonun primer sorumlusu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Alıcının B lenfositlerince üretilen donör karşıtı antikorlar",
-      "B) Donör kök hücre greftindeki alloreaktif T lenfositleri",
-      "C) Sitomegalovirüs (CMV) süperenfeksiyonu",
-      "D) Yüksek doz kemoterapinin doğrudan mukozal toksisitesi",
-      "E) Mast hücrelerinin ani sistemik degranülasyonu"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kemik iliği naklinden sonra cilt döküntüsü, kolestatik sarılık ve kanlı ishal ile seyreden tablo Akut GVHD'dir. Donör grefti içindeki olgun T lenfositlerinin alıcının HLA antijenlerine saldırması sonucu gelişir."
-  },
-  {
-    "id": "prac-hs-23",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Primer ve Sekonder İmmün Yetmezlikler: SCID, Bruton, DiGeorge ve HIV",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Doğumdan sonra göbek kordonu 4. haftada düşen, tekrarlayan nekrotizan deri enfeksiyonları geçiren bir bebekte kanda aşırı nötrofili (55.000/μL) saptanmasına rağmen, deri enfeksiyon alanında hiç püy (cerahat) oluşmadığı görülüyor. Bu hastadaki moleküler defekt aşağıdakilerden hangisidir?",
-    "options": [
-      "A) NADPH oksidaz enzim eksikliği",
-      "B) CD18 (beta-2 integrin) lökosit adhezyon molekül eksikliği",
-      "C) Bruton tirozin kinaz mutasyonu",
-      "D) Adenozin deaminaz (ADA) enzim yokluğu",
-      "E) CD40 ligand (CD154) eksikliği"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Göbek kordonunun geç düşmesi, belirgin kanda lökositoz olmasına rağmen enfeksiyon bölgesine lökositlerin geçememesi ve püy oluşmaması Lökosit Adhezyon Defekti Tip 1 (LAD-1; CD18 integrin eksikliği) için patognomoniktir."
-  },
-  {
-    "id": "prac-hs-24",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları ve Otoimmünite Patolojisi",
-    "slideNumber": 24,
-    "slideTitle": "Amiloidoz: Fibril Biyolojisi, Tipleri ve Klinikopatoloji",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "15 yıldır Ailevi Akdeniz Ateşi (FMF) nedeniyle takip edilen ve ataklarını düzensiz geçiren 38 yaşındaki hastada pretibial ödem ve 6 g/gün proteinüri ile nefrotik sendrom gelişiyor. Yapılan böbrek biyopsisinde glomerüllerde biriken maddenin Kongo kırmızısı ile elma yeşili çift kırılma verdiği saptanıyor. Bu hastada biriken amiloidin öncül proteini aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İmmünoglobulin lambda hafif zinciri",
-      "B) Transtiretin",
-      "C) Serum Amiloid A (SAA)",
-      "D) Beta-2 mikroglobulin",
-      "E) Amiloid Prekürsör Protein (APP)"
-    ],
-    "correctAnswer": "C",
-    "explanation": "FMF, Romatoid Artrit veya kronik osteomiyelit gibi uzun süren kronik enflamatuar durumlarda gelişen sekonder amiloidoz AA tipindedir ve karaciğerden salınan Serum Amiloid A (SAA) proteininin birikmesiyle oluşur."
   }
 ]
