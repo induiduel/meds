@@ -32,15 +32,15 @@ interface MobileBottomNavProps {
 }
 
 const TABS: { id: AppTab; label: string; icon: React.ElementType }[] = [
-  { id: 'quick_add', label: 'Soru ekle', icon: SquarePen },
+  { id: 'quick_add', label: 'Ekle', icon: SquarePen },
   { id: 'learn', label: 'Öğren', icon: GraduationCap },
+  { id: 'flashcards', label: 'Kartlar', icon: Layers },
   { id: 'past_exams', label: 'Çıkmış', icon: Archive },
-  { id: 'study', label: 'Çalış', icon: ListChecks },
 ];
 
 const MORE: { id: AppTab; label: string; hint: string; icon: React.ElementType; tint: string }[] = [
   { id: 'glossary', label: 'Tıbbi Sözlük', hint: 'Hastalık & ilaç ansiklopedisi', icon: BookOpenText, tint: '#0F6E63' },
-  { id: 'flashcards', label: 'Ezber kartları', hint: 'Tıbbi terimler ve ders kartları', icon: Layers, tint: '#7C3AED' },
+  { id: 'study', label: 'Çalış', hint: 'Soru çöz, kendini test et', icon: ListChecks, tint: '#11804A' },
   { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#1E4FD8' },
   { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#B7791F' },
   { id: 'summaries', label: 'Ders özetleri', hint: 'Spot bilgiler', icon: BookOpen, tint: '#6D28D9' },
@@ -78,7 +78,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, set
     <>
       <nav
         aria-label="Alt menü"
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t border-line pt-1.5 pb-[max(env(safe-area-inset-bottom),8px)] print:hidden"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t border-line pt-1.5 pb-[max(env(safe-area-inset-bottom),8px)] print:hidden"
       >
         <div className="max-w-[720px] mx-auto grid grid-cols-5 px-1">
           {TABS.map(({ id, label, icon: Icon }) => {
@@ -102,7 +102,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, set
       </nav>
 
       {sheetOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 print:hidden" role="dialog" aria-modal="true" aria-label="Diğer sayfalar">
+        <div className="md:hidden fixed inset-0 z-50 print:hidden" role="dialog" aria-modal="true" aria-label="Diğer sayfalar">
           <button type="button" aria-label="Kapat" onClick={() => setSheetOpen(false)} className="absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
           <div className="absolute left-0 right-0 bottom-0 max-h-[85dvh] overflow-y-auto bg-white rounded-t-[24px] shadow-[0_-10px_40px_rgba(14,26,38,0.18)] px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)]">
             <div className="max-w-[640px] mx-auto flex flex-col gap-3">

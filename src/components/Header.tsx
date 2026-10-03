@@ -31,7 +31,7 @@ import {
 } from 'lucide-react';
 import { Committee } from '../types';
 import { AppUser } from '../services/auth';
-import { AppRoute, pathFor, linkClick } from '../router';
+import { AppRoute, pathFor, linkClick, ROUTE_TITLES } from '../router';
 
 export type AppTab = AppRoute;
 
@@ -354,20 +354,20 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="bg-white border-b border-line sticky top-0 z-30 print:hidden">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 sm:h-[60px] flex items-center gap-2 sm:gap-3 lg:gap-5">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 flex items-center gap-2 sm:gap-3">
+        {/* Phones: logo. Tablet/desktop: the rail carries the logo and menu, so show the page title */}
         <a
           href={pathFor('quick_add')}
           onClick={linkClick(() => setActiveTab('quick_add'))}
-          className="flex items-center gap-2 cursor-pointer shrink-0"
+          className="md:hidden flex items-center gap-2 cursor-pointer shrink-0"
           aria-label="MedSoru ana sayfa"
         >
           <BrandMark size={28} />
-          <span className="font-display font-bold text-[18px] sm:text-[19px] tracking-[-0.02em] text-ink">MedSoru</span>
+          <span className="font-display font-bold text-[18px] tracking-[-0.02em] text-ink">MedSoru</span>
         </a>
+        <span className="hidden md:block font-semibold text-[15px] text-ink truncate">{ROUTE_TITLES[activeTab] || 'MedSoru'}</span>
 
-        <PriorityNav items={NAV} active={activeTab} onSelect={setActiveTab} />
-
-        <span className="flex-1 lg:hidden" aria-hidden="true" />
+        <span className="flex-1" aria-hidden="true" />
 
         <button
           type="button"

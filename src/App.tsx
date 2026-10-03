@@ -25,6 +25,7 @@ import { MetricsBar } from './components/MetricsBar';
 import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { AppRail } from './components/AppRail';
 import { SectionLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 
@@ -954,6 +955,9 @@ export default function App() {
         )
       ) : (
       <>
+      {/* v3 shell: icon rail on tablet/desktop, bottom tabs on phones */}
+      <AppRail activeTab={activeTab} setActiveTab={setActiveTab} isAdmin={isAdmin} />
+      <div className="md:pl-[76px] flex-1 flex flex-col min-w-0">
       {/* Navigation Header with Google Auth & Drive */}
       <Header
         searchQuery={searchQuery}
@@ -999,7 +1003,7 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-[1280px] w-full mx-auto px-3 sm:px-8 pt-4 sm:pt-8 flex flex-col gap-4 sm:gap-6 pb-28 lg:pb-16">
+      <main className="flex-1 max-w-[1280px] w-full mx-auto px-3 sm:px-8 pt-4 sm:pt-6 flex flex-col gap-4 sm:gap-5 pb-28 md:pb-12">
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
@@ -1452,6 +1456,7 @@ export default function App() {
         onOpenAdminPanel={() => setActiveTab('admin')}
         onUploadToDrive={() => handleDriveUpload(false)}
       />
+      </div>
       </>
       )}
 

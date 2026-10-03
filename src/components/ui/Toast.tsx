@@ -102,7 +102,7 @@ export const ToastHost: React.FC = () => {
   const ui = (
     <div
       aria-live="assertive"
-      className="pointer-events-none fixed z-[100000] left-0 right-0 bottom-[calc(84px+env(safe-area-inset-bottom))] lg:bottom-6 px-3 flex flex-col items-center lg:items-end lg:right-6 lg:left-auto gap-2 print:hidden"
+      className="pointer-events-none fixed z-[100000] left-0 right-0 bottom-[calc(84px+env(safe-area-inset-bottom))] md:bottom-6 px-3 flex flex-col items-center md:items-end md:right-6 md:left-auto gap-2 print:hidden"
     >
       {list.map((t) => {
         const tone = TONE[t.kind];

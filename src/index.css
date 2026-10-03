@@ -15,18 +15,18 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --font-serif: "Geist", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #0E1A26;
-  --color-ink-2: #4A5868;
-  --color-ink-3: #5F6B79;
-  --color-line: #DCE2E8;
-  --color-line-2: #C9D2DB;
-  --color-line-soft: #EEF1F4;
-  --color-canvas: #F2F4F6;
-  --color-field: #F9FAFB;
+  --color-ink: #0B1626;
+  --color-ink-2: #47566A;
+  --color-ink-3: #637084;
+  --color-line: #E3E7ED;
+  --color-line-2: #CDD4DD;
+  --color-line-soft: #EEF1F5;
+  --color-canvas: #F3F5F8;
+  --color-field: #F7F8FA;
 
-  --color-accent: #1E4FD8;
-  --color-accent-hover: #1A43B8;
-  --color-accent-soft: #E8EEFD;
+  --color-accent: #2453E6;
+  --color-accent-hover: #1C45C9;
+  --color-accent-soft: #EAF0FE;
 
   --color-ok: #157A3E;
   --color-ok-bright: #1F9D55;
@@ -34,9 +34,9 @@
   --color-ok-tint: #F1FAF4;
   --color-warn: #A6530A;
   --color-warn-soft: #FCEFE0;
-  --color-bad: #C2410C;
-  --color-bad-text: #B13A0A;
-  --color-bad-soft: #FFF4ED;
+  --color-bad: #C2294A;
+  --color-bad-text: #B4233C;
+  --color-bad-soft: #FDECEF;
 
   --color-teal-50: #EEF3FE;
   --color-teal-100: #E0E9FD;
@@ -44,8 +44,8 @@
   --color-teal-300: #9DB6F6;
   --color-teal-400: #6A8EEE;
   --color-teal-500: #3F68E3;
-  --color-teal-600: #1E4FD8;
-  --color-teal-700: #1A43B8;
+  --color-teal-600: #2453E6;
+  --color-teal-700: #1C45C9;
   --color-teal-800: #183A96;
   --color-teal-900: #172F72;
   --color-teal-950: #0F1D47;
