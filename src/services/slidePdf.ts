@@ -517,10 +517,11 @@ export async function generateSlidePdfBlob(deck: InteractiveDeck, slides: SlideI
       y += 2.6;
       style('bold', 8.2, C.accent);
       doc.text(`${i + 1}.`, cx(), y);
-      line(q.stem, 5, 8.2, 3.6, C.ink);
+      line(typeof q === 'string' ? q : (q.stem || ''), 5, 8.2, 3.6, C.ink);
       y += 0.6;
-      const ans = q.correctAnswer || q.options.find((o) => o.isCorrect)?.key || '';
-      q.options.forEach((o) => {
+      const opts: any[] = Array.isArray(q.options) ? q.options : [];
+      const ans = q.correctAnswer || opts.find((o) => o?.isCorrect)?.key || '';
+      opts.forEach((o) => {
         const mark = highlight && o.key === ans;
         line([{ t: `${o.key})  ${clean(o.text)}`, b: mark }], 6, 7.8, 3.4, mark ? C.ok : C.ink, mark ? (x, yy) => {
           doc.setFillColor(C.okSoft[0], C.okSoft[1], C.okSoft[2]);
@@ -530,7 +531,7 @@ export async function generateSlidePdfBlob(deck: InteractiveDeck, slides: SlideI
       if (q.explanation || ans) {
         y += 0.8;
         line([{ t: `Cevap: ${ans || '—'}`, b: true }], 7, 6.8, 3.05, highlight ? C.ok : C.ink);
-        if (q.explanation) line(clean(q.explanation.replace(/【([^】]+)】\s*:?\s*/g, ' $1: ')), 7, 6.8, 3.05, C.ink2);
+        if (q.explanation) line(clean((q.explanation || '').replace(/【([^】]+)】\s*:?\s*/g, ' $1: ')), 7, 6.8, 3.05, C.ink2);
       }
       y += 1.6;
       if (y + 3 < BOTTOM) {

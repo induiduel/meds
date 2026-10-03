@@ -1528,15 +1528,20 @@ const GlobalTopicSearchModal: React.FC<{
         ? slide.relatedQuestions
         : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
       const foundQ = slideQuestions.find(
-        (rq: any) => (rq.stem || '').toLocaleLowerCase('tr-TR').includes(queryNorm) || (rq.explanation || '').toLocaleLowerCase('tr-TR').includes(queryNorm)
+        (rq: any) => {
+          if (!rq) return false;
+          if (typeof rq === 'string') return rq.toLocaleLowerCase('tr-TR').includes(queryNorm);
+          return (rq.stem || '').toLocaleLowerCase('tr-TR').includes(queryNorm) || (rq.explanation || '').toLocaleLowerCase('tr-TR').includes(queryNorm);
+        }
       );
       if (foundQ) {
+        const snippetText = typeof foundQ === 'string' ? foundQ : (foundQ.stem || '');
         matches.push({
           slideIndex: sIdx,
           slideNumber: slide.slideNumber,
           slideTitle: slide.title,
           matchedType: 'Çıkmış Soru',
-          snippet: (foundQ.stem || '').slice(0, 130) + '...',
+          snippet: snippetText.slice(0, 130) + '...',
         });
       }
     });
@@ -2501,15 +2506,37 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
   );
 };
 
-const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) => {
+const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> = ({ q, n }) => {
   const [picked, setPicked] = useState<string | null>(null);
   const [showExp, setShowExp] = useState(true);
-  const answer = q.correctAnswer || q.options.find((o) => o.isCorrect)?.key || '';
+
+  if (typeof q === 'string') {
+    return (
+      <article className="rounded-xl border border-amber-200 dark:border-amber-900/40 bg-amber-50/20 dark:bg-amber-950/10 p-3 flex flex-col gap-2 transition-all shadow-2xs">
+        <header className="flex items-center justify-between gap-2 text-[12px] text-ink-3">
+          <div className="flex items-center gap-1.5 min-w-0">
+            <span className="font-mono font-semibold px-1.5 py-0.5 rounded text-[11px] bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300">
+              Soru {n}
+            </span>
+            <span className="truncate font-medium text-ink-2">Klinik Tartışma & Muhakeme</span>
+          </div>
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-[10.5px] font-bold bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-700 flex items-center gap-1 shadow-2xs">
+            <Sparkles className="w-3 h-3 text-amber-600 dark:text-amber-400" />
+            Öz Değerlendirme
+          </span>
+        </header>
+        <p className="m-0 text-[14px] leading-[1.5] font-medium text-ink">{q}</p>
+      </article>
+    );
+  }
+
+  const options: SlideQuestionOption[] = Array.isArray(q?.options) ? q.options : [];
+  const answer = q?.correctAnswer || options.find((o) => o?.isCorrect)?.key || '';
   const done = picked !== null;
   const right = done && picked === answer;
   const isPractice =
-    Boolean(q.isPracticeQuestion) ||
-    Boolean(q.examYear && (q.examYear.includes('Çalışma') || q.examYear.includes('Özgün') || q.examYear.includes('Pekiştirme')));
+    Boolean(q?.isPracticeQuestion) ||
+    Boolean(q?.examYear && (q.examYear.includes('Çalışma') || q.examYear.includes('Özgün') || q.examYear.includes('Pekiştirme')));
 
   return (
     <article
@@ -2530,7 +2557,7 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) =>
           >
             S{n}
           </span>
-          <span className="truncate font-medium text-ink-2">{[q.examYear, q.topic].filter(Boolean).join(' · ')}</span>
+          <span className="truncate font-medium text-ink-2">{[q?.examYear, q?.topic].filter(Boolean).join(' · ')}</span>
         </div>
         {isPractice ? (
           <span className="shrink-0 px-2 py-0.5 rounded-full text-[10.5px] font-bold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700 flex items-center gap-1 shadow-2xs">
@@ -2544,42 +2571,44 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) =>
           </span>
         )}
       </header>
-      <p className="m-0 text-[14px] leading-[1.5] font-medium text-ink">{q.stem}</p>
-      <div role="radiogroup" aria-label={`Soru ${n} şıkları`} className="flex flex-col gap-1.5">
-        {q.options.map((o) => {
-          const isAns = o.key === answer;
-          const isPick = o.key === picked;
-          const cls = !done
-            ? 'border-line hover:border-accent bg-white dark:bg-surface-elevated'
-            : isAns
-              ? 'border-ok-bright bg-ok-tint dark:bg-ok/20 text-ok-bright'
-              : isPick
-                ? 'border-bad bg-bad-soft dark:bg-bad/20'
-                : 'border-line bg-white dark:bg-surface-elevated opacity-70';
-          return (
-            <button
-              key={o.key}
-              type="button"
-              role="radio"
-              aria-checked={isPick}
-              disabled={done}
-              onClick={() => setPicked(o.key)}
-              className={`w-full min-h-10 px-2.5 py-1.5 rounded-lg border text-left flex items-start gap-2 text-[13px] leading-snug transition-colors ${done ? 'cursor-default' : 'cursor-pointer'} ${cls}`}
-            >
-              <span className={`font-mono font-semibold shrink-0 ${done && isAns ? 'text-ok' : done && isPick ? 'text-bad-text' : 'text-ink-2'}`}>{o.key})</span>
-              <span className="flex-1 text-ink">{o.text}</span>
-              {done && isAns && <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />}
-              {done && isPick && !isAns && <XCircle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />}
-            </button>
-          );
-        })}
-      </div>
+      <p className="m-0 text-[14px] leading-[1.5] font-medium text-ink">{q?.stem || ''}</p>
+      {options.length > 0 && (
+        <div role="radiogroup" aria-label={`Soru ${n} şıkları`} className="flex flex-col gap-1.5">
+          {options.map((o) => {
+            const isAns = o.key === answer;
+            const isPick = o.key === picked;
+            const cls = !done
+              ? 'border-line hover:border-accent bg-white dark:bg-surface-elevated'
+              : isAns
+                ? 'border-ok-bright bg-ok-tint dark:bg-ok/20 text-ok-bright'
+                : isPick
+                  ? 'border-bad bg-bad-soft dark:bg-bad/20'
+                  : 'border-line bg-white dark:bg-surface-elevated opacity-70';
+            return (
+              <button
+                key={o.key}
+                type="button"
+                role="radio"
+                aria-checked={isPick}
+                disabled={done}
+                onClick={() => setPicked(o.key)}
+                className={`w-full min-h-10 px-2.5 py-1.5 rounded-lg border text-left flex items-start gap-2 text-[13px] leading-snug transition-colors ${done ? 'cursor-default' : 'cursor-pointer'} ${cls}`}
+              >
+                <span className={`font-mono font-semibold shrink-0 ${done && isAns ? 'text-ok' : done && isPick ? 'text-bad-text' : 'text-ink-2'}`}>{o.key})</span>
+                <span className="flex-1 text-ink">{o.text}</span>
+                {done && isAns && <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />}
+                {done && isPick && !isAns && <XCircle className="w-4 h-4 text-bad-text shrink-0 mt-0.5" />}
+              </button>
+            );
+          })}
+        </div>
+      )}
       {done && (
         <div className={`rounded-lg px-2.5 py-2 text-[13px] ${right ? 'bg-ok-soft dark:bg-ok/20 border border-ok/30' : 'bg-bad-soft dark:bg-bad/20 border border-bad/30'}`}>
           <div className="flex items-center justify-between gap-2">
             <strong className={right ? 'text-ok dark:text-emerald-400' : 'text-bad-text dark:text-rose-400'}>{right ? '✓ Tebrikler, Doğru Yanıt!' : `✕ Yanlış. Doğru cevap ${answer}`}</strong>
             <span className="flex gap-1">
-              {q.explanation && (
+              {q?.explanation && (
                 <button type="button" onClick={() => setShowExp((v) => !v)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
                   {showExp ? 'Açıklamayı gizle' : 'Açıklama'}
                 </button>
@@ -2589,7 +2618,7 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) =>
               </button>
             </span>
           </div>
-          {showExp && q.explanation && <p className="m-0 mt-1.5 text-ink-2 dark:text-ink-muted leading-[1.55] whitespace-pre-line">{q.explanation.replace(/\n(?!\n)/g, ' ')}</p>}
+          {showExp && q?.explanation && <p className="m-0 mt-1.5 text-ink-2 dark:text-ink-muted leading-[1.55] whitespace-pre-line">{q.explanation.replace(/\n(?!\n)/g, ' ')}</p>}
         </div>
       )}
     </article>
