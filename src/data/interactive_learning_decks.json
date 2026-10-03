@@ -79176,7 +79176,9 @@
       }
     ],
     "id": "learn-genital-enfeksiyonlar",
-    "category": "Dönem 3 Kurul 1"
+    "category": "Dönem 3 Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu"
   },
   {
     "deckId": "learn-dogumsal-genital-anomaliler",
@@ -83312,7 +83314,9 @@
       }
     ],
     "id": "learn-glomeruler-hastaliklar-nefrotik",
-    "category": "Dönem 3 Kurul 1"
+    "category": "Dönem 3 Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
   },
   {
     "deckId": "learn-glomeruler-hastaliklar-nefritik",
@@ -83344,18 +83348,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "İdrar sedimentinde dismorfik eritrositler (akantositler) ve eritrosit silendirlerinin saptanması, kanamanın taş veya tümör gibi ürolojik odaklardan değil, kesinlikle glomerüler enflamasyondan kaynaklandığının patognomonik kanıtıdır.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Nefritik sendromun klasik klinik tablosu; makroskopik/mikroskopik hematüri (eritrosit silendirleri ile), oligüri ve azotemi, primer renal sodyum-su retansiyonuna bağlı hipertansiyon ve periorbital ödem ile subnefrotik proteinüri tetradıdır.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: İdrar sedimentinde dismorfik eritrositler (akantositler) ve eritrosit silendirlerinin saptanması, kanamanın taş veya tümör gibi ürolojik odaklardan değil, kesinlikle glomerüler enflamasyondan kaynaklandığının patognomonik kanıtıdır.",
+          "🔵 ÇIKMIŞ SORU: Nefritik sendromun klasik klinik tablosu; makroskopik/mikroskopik hematüri (eritrosit silendirleri ile), oligüri ve azotemi, primer renal sodyum-su retansiyonuna bağlı hipertansiyon ve periorbital ödem ile subnefrotik proteinüri tetradıdır."
         ],
         "relatedQuestions": [
           {
@@ -83411,18 +83405,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Nefritik sendromda gelişen hipertansiyon ve ödemin temel nedeni, GFR çöküşü sonucu böbreğin sodyum ve suyu atamamasına bağlı gelişen primer hipervolemidir (overfill teorisi); nefrotik sendromdaki hipoonkotik mekanizmadan tamamen farklıdır.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Nefritik sendromda akut oligüri ve azotemi gelişiminden sorumlu primer patofizyolojik değişiklik; endotel/mezangiyal hücre proliferasyonu ve nötrofil infiltrasyonuyla kapiller lümenlerin tıkanması ve filtrasyon katsayısının (Kf) düşmesidir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Nefritik sendromda gelişen hipertansiyon ve ödemin temel nedeni, GFR çöküşü sonucu böbreğin sodyum ve suyu atamamasına bağlı gelişen primer hipervolemidir (overfill teorisi); nefrotik sendromdaki hipoonkotik mekanizmadan tamamen farklıdır.",
+          "🔵 ÇIKMIŞ SORU: Nefritik sendromda akut oligüri ve azotemi gelişiminden sorumlu primer patofizyolojik değişiklik; endotel/mezangiyal hücre proliferasyonu ve nötrofil infiltrasyonuyla kapiller lümenlerin tıkanması ve filtrasyon katsayısının (Kf) düşmesidir."
         ],
         "relatedQuestions": [
           {
@@ -83478,18 +83462,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Faz kontrast mikroskopisinde idrar sedimentinde eritrositlerin %5'ten fazlasının akantosit (G1 hücresi) olması ve eritrosit silendirlerinin görülmesi, kanamanın nefritik sendrom kökenli olduğunu kanıtlar.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "İdrar sedimentinde saptandığında nefritik sendrom veya aktif glomerülit varlığını kesinleştiren en spesifik patognomonik eleman eritrosit silendiridir (RBC cast).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Faz kontrast mikroskopisinde idrar sedimentinde eritrositlerin %5'ten fazlasının akantosit (G1 hücresi) olması ve eritrosit silendirlerinin görülmesi, kanamanın nefritik sendrom kökenli olduğunu kanıtlar.",
+          "🔵 ÇIKMIŞ SORU: İdrar sedimentinde saptandığında nefritik sendrom veya aktif glomerülit varlığını kesinleştiren en spesifik patognomonik eleman eritrosit silendiridir (RBC cast)."
         ],
         "relatedQuestions": [
           {
@@ -83545,18 +83519,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Streptokokal farenjit sonrası nefritten en sık sorumlu suş M tipi 12; impetigo (deri enfeksiyonu) sonrası nefritten en sık sorumlu suş M tipi 49'dur. GBM'ye bağlanan temel katyonik antijen ise SpeB'dir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Akut poststreptokoksik glomerülonefrit patogenezinde rol oynayan temel nefritojenik streptokok antijenleri; streptokokal pirojenik ekzotoksin B (SpeB) ve nefrit ilişkili plazmin reseptörüdür (NAPIr).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Streptokokal farenjit sonrası nefritten en sık sorumlu suş M tipi 12; impetigo (deri enfeksiyonu) sonrası nefritten en sık sorumlu suş M tipi 49'dur. GBM'ye bağlanan temel katyonik antijen ise SpeB'dir.",
+          "🔵 ÇIKMIŞ SORU: Akut poststreptokoksik glomerülonefrit patogenezinde rol oynayan temel nefritojenik streptokok antijenleri; streptokokal pirojenik ekzotoksin B (SpeB) ve nefrit ilişkili plazmin reseptörüdür (NAPIr)."
         ],
         "relatedQuestions": [
           {
@@ -83612,18 +83576,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Farenjit ile hematüri arasındaki latent süre APSGN'de 1-3 hafta; cilt enfeksiyonu sonrası APSGN'de 2-6 haftadır. Enfeksiyonun 1-2. gününde ortaya çıkan senfarenjitik hematüride ise ilk tanı IgA Nefropatisidir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Boğaz ağrısı ve ateş şikayeti geçtikten 12 gün sonra göz kapaklarında şişlik, tansiyon yüksekliği ve koyu kola renkli idrarla getirilen 8 yaşındaki çocukta en olası tanı Akut Poststreptokoksik Glomerülonefrittir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Farenjit ile hematüri arasındaki latent süre APSGN'de 1-3 hafta; cilt enfeksiyonu sonrası APSGN'de 2-6 haftadır. Enfeksiyonun 1-2. gününde ortaya çıkan senfarenjitik hematüride ise ilk tanı IgA Nefropatisidir.",
+          "🔵 ÇIKMIŞ SORU: Boğaz ağrısı ve ateş şikayeti geçtikten 12 gün sonra göz kapaklarında şişlik, tansiyon yüksekliği ve koyu kola renkli idrarla getirilen 8 yaşındaki çocukta en olası tanı Akut Poststreptokoksik Glomerülonefrittir."
         ],
         "relatedQuestions": [
           {
@@ -83679,18 +83633,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "APSGN'nin ışık mikroskopisindeki karakteristik tanısı 'Diffüz Endokapiller Proliferatif ve Eksüdatif Glomerülonefrit'tir; lümenlerin endotel proliferasyonu ve nötrofillerle tıkanması glomerülü soluk ve 'kansız' (bloodless) gösterir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Akut poststreptokoksik glomerülonefrit biyopsisinde ışık mikroskobunda glomerüllerin tümünde diffüz büyüme, endotelyal ve mezangiyal hücre proliferasyonu ile kapiller lümenleri tıkayan nötrofil infiltrasyonu izlenir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: APSGN'nin ışık mikroskopisindeki karakteristik tanısı 'Diffüz Endokapiller Proliferatif ve Eksüdatif Glomerülonefrit'tir; lümenlerin endotel proliferasyonu ve nötrofillerle tıkanması glomerülü soluk ve 'kansız' (bloodless) gösterir.",
+          "🔵 ÇIKMIŞ SORU: Akut poststreptokoksik glomerülonefrit biyopsisinde ışık mikroskobunda glomerüllerin tümünde diffüz büyüme, endotelyal ve mezangiyal hücre proliferasyonu ile kapiller lümenleri tıkayan nötrofil infiltrasyonu izlenir."
         ],
         "relatedQuestions": [
           {
@@ -83746,18 +83690,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "APSGN için patognomonik elektron mikroskopisi bulgusu podosit tabanında GBM dış yüzeyine oturan kubbe şeklindeki 'Subepitelyal Hörgüçler'dir (Humps). İmmünfloresanda ise kaba granüler 'Yıldızlı Gökyüzü' (Starry-sky) C3 ve IgG paterni görülür.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Çocukluk çağı nefritik sendromunda elektron mikroskobunda glomerüler bazal membranın epitelyal yüzeyinde hörgüç (hump) tarzında elektron-yoğun birikintiler saptanan hastalık Akut Poststreptokoksik Glomerülonefrittir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: APSGN için patognomonik elektron mikroskopisi bulgusu podosit tabanında GBM dış yüzeyine oturan kubbe şeklindeki 'Subepitelyal Hörgüçler'dir (Humps). İmmünfloresanda ise kaba granüler 'Yıldızlı Gökyüzü' (Starry-sky) C3 ve IgG paterni görülür.",
+          "🔵 ÇIKMIŞ SORU: Çocukluk çağı nefritik sendromunda elektron mikroskobunda glomerüler bazal membranın epitelyal yüzeyinde hörgüç (hump) tarzında elektron-yoğun birikintiler saptanan hastalık Akut Poststreptokoksik Glomerülonefrittir."
         ],
         "relatedQuestions": [
           {
@@ -83813,18 +83747,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "İmpetigo sonrası nefritte cilt lipidleri streptolizini inaktive ettiğinden ASO negatif kalabilir; tanıyı kanıtlayan altın standart test Anti-DNAse B'dir. Serum C3 düzeyi ise 6-8 hafta içinde mutlaka normale dönmelidir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Akut poststreptokoksik glomerülonefritte serum kompleman C3 seviyesinin normale dönmesi beklenen süre 6-8 haftadır; bu süreyi aşan hipokomplementemide öncelikle MPGN ve SLE düşünülmelidir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: İmpetigo sonrası nefritte cilt lipidleri streptolizini inaktive ettiğinden ASO negatif kalabilir; tanıyı kanıtlayan altın standart test Anti-DNAse B'dir. Serum C3 düzeyi ise 6-8 hafta içinde mutlaka normale dönmelidir.",
+          "🔵 ÇIKMIŞ SORU: Akut poststreptokoksik glomerülonefritte serum kompleman C3 seviyesinin normale dönmesi beklenen süre 6-8 haftadır; bu süreyi aşan hipokomplementemide öncelikle MPGN ve SLE düşünülmelidir."
         ],
         "relatedQuestions": [
           {
@@ -83880,18 +83804,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Hızlı ilerleyen glomerülonefrit (RPGN / Kresentik GN) tanısı konabilmesi için böbrek biyopsisinde incelenen glomerüllerin en az %50'sinde Bowman boşluğunu dolduran kresent (hilal) oluşumu bulunmalıdır.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Haftalar içinde oligüri, anüri ve akut böbrek yetmezliğine ilerleyen bir hastanın böbrek biyopsisinde glomerüllerin %75'inde Bowman aralığında kresentler saptanması RPGN (Kresentik GN) tablosudur.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Hızlı ilerleyen glomerülonefrit (RPGN / Kresentik GN) tanısı konabilmesi için böbrek biyopsisinde incelenen glomerüllerin en az %50'sinde Bowman boşluğunu dolduran kresent (hilal) oluşumu bulunmalıdır.",
+          "🔵 ÇIKMIŞ SORU: Haftalar içinde oligüri, anüri ve akut böbrek yetmezliğine ilerleyen bir hastanın böbrek biyopsisinde glomerüllerin %75'inde Bowman aralığında kresentler saptanması RPGN (Kresentik GN) tablosudur."
         ],
         "relatedQuestions": [
           {
@@ -83947,18 +83861,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Kresenti (hilal) oluşturan temel hücreler Bowman kapsülünün PARİYETAL epitel hücreleri ve göç eden monosit/makrofajlardır; süreci başlatan kritik molekül ise GBM yırtığından Bowman aralığına sızan FİBRİN'dir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Kresentik glomerülonefritte Bowman boşluğunda hilal oluşumunu tetikleyen en önemli plazma proteini fibrindir; hilal yapısının proliferatif hücresel elemanı pariyetal epitel hücreleridir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Kresenti (hilal) oluşturan temel hücreler Bowman kapsülünün PARİYETAL epitel hücreleri ve göç eden monosit/makrofajlardır; süreci başlatan kritik molekül ise GBM yırtığından Bowman aralığına sızan FİBRİN'dir.",
+          "🔵 ÇIKMIŞ SORU: Kresentik glomerülonefritte Bowman boşluğunda hilal oluşumunu tetikleyen en önemli plazma proteini fibrindir; hilal yapısının proliferatif hücresel elemanı pariyetal epitel hücreleridir."
         ],
         "relatedQuestions": [
           {
@@ -84014,18 +83918,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Tip I RPGN'de antikorlar Tip IV kollajen alfa-3 zincirinin NC1 domainine yöneliktir; immünfloresanda kesintisiz LİNEER IgG birikimi görülür. Pulmoner kanama (hemoptizi) eşlik ettiğinde Goodpasture Sendromu adını alır.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Hemoptizi ve hematüri ile başvuran genç bir hastanın böbrek biyopsisinde kresentik glomerülonefrit ve glomerül bazal membranı boyunca kesintisiz LİNEER IgG boyanması saptanması Goodpasture Sendromu (Anti-GBM) tanısını koydurur.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Tip I RPGN'de antikorlar Tip IV kollajen alfa-3 zincirinin NC1 domainine yöneliktir; immünfloresanda kesintisiz LİNEER IgG birikimi görülür. Pulmoner kanama (hemoptizi) eşlik ettiğinde Goodpasture Sendromu adını alır.",
+          "🔵 ÇIKMIŞ SORU: Hemoptizi ve hematüri ile başvuran genç bir hastanın böbrek biyopsisinde kresentik glomerülonefrit ve glomerül bazal membranı boyunca kesintisiz LİNEER IgG boyanması saptanması Goodpasture Sendromu (Anti-GBM) tanısını koydurur."
         ],
         "relatedQuestions": [
           {
@@ -84081,18 +83975,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Tip II RPGN immün kompleks aracılıdır; immünfloresanda LİNEER değil GRANÜLER birikim izlenir ve serum kompleman düzeyleri (C3, C4) sıklıkla düşüktür. En sık nedenler SLE Sınıf IV, APSGN ve IgA nefropatisidir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Hızlı ilerleyen kresentik glomerülonefrit tablosunda böbrek biyopsisinde immünfloresan incelemede kaba granüler immünoglobulin ve kompleman depolanması saptanması, lezyonun Tip II (immün kompleks ilişkili) RPGN olduğunu gösterir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Tip II RPGN immün kompleks aracılıdır; immünfloresanda LİNEER değil GRANÜLER birikim izlenir ve serum kompleman düzeyleri (C3, C4) sıklıkla düşüktür. En sık nedenler SLE Sınıf IV, APSGN ve IgA nefropatisidir.",
+          "🔵 ÇIKMIŞ SORU: Hızlı ilerleyen kresentik glomerülonefrit tablosunda böbrek biyopsisinde immünfloresan incelemede kaba granüler immünoglobulin ve kompleman depolanması saptanması, lezyonun Tip II (immün kompleks ilişkili) RPGN olduğunu gösterir."
         ],
         "relatedQuestions": [
           {
@@ -84148,18 +84032,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Pauci-immün kresentik GN'de (Tip III RPGN) immünfloresanda belirgin antikor/kompleman birikimi İZLENMEZ. Hastaların çoğunda ANCA pozitiftir; c-ANCA (PR3) Granülomatoz Polianjitiste (GPA), p-ANCA (MPO) Mikroskopik Polianjitiste (MPA) saptanır.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "İmmünfloresan incelemede glomerüllerde immün kompleks veya antikor birikimi saptanmayan (pauci-immün), ancak serumunda c-ANCA (PR3) pozitifliği ve akciğerde kavitasyonel lezyonları olan kresentik GN tablosu Granülomatoz Polianjitistir (Wegener).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Pauci-immün kresentik GN'de (Tip III RPGN) immünfloresanda belirgin antikor/kompleman birikimi İZLENMEZ. Hastaların çoğunda ANCA pozitiftir; c-ANCA (PR3) Granülomatoz Polianjitiste (GPA), p-ANCA (MPO) Mikroskopik Polianjitiste (MPA) saptanır.",
+          "🔵 ÇIKMIŞ SORU: İmmünfloresan incelemede glomerüllerde immün kompleks veya antikor birikimi saptanmayan (pauci-immün), ancak serumunda c-ANCA (PR3) pozitifliği ve akciğerde kavitasyonel lezyonları olan kresentik GN tablosu Granülomatoz Polianjitistir (Wegener)."
         ],
         "relatedQuestions": [
           {
@@ -84215,18 +84089,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Tüm dünyada en sık görülen primer glomerülonefrit IgA Nefropatisidir (Berger Hastalığı). Temel moleküler defekt, mukozal B lenfositlerinde 'Galaktoz-Eksik IgA1' (Gd-IgA1) üretimi ve mezangiyuma çökmesidir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Dünya genelinde tekrarlayan makroskopik veya mikroskopik hematüri ataklarının en sık primer glomerüler nedeni IgA nefropatisidir (Berger hastalığı).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Tüm dünyada en sık görülen primer glomerülonefrit IgA Nefropatisidir (Berger Hastalığı). Temel moleküler defekt, mukozal B lenfositlerinde 'Galaktoz-Eksik IgA1' (Gd-IgA1) üretimi ve mezangiyuma çökmesidir.",
+          "🔵 ÇIKMIŞ SORU: Dünya genelinde tekrarlayan makroskopik veya mikroskopik hematüri ataklarının en sık primer glomerüler nedeni IgA nefropatisidir (Berger hastalığı)."
         ],
         "relatedQuestions": [
           {
@@ -84282,18 +84146,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "IgA nefropatisinde makroskopik hematüri üst solunum yolu enfeksiyonunun başladığı ilk 1-2 gün içinde ortaya çıkar (senfarenjitik hematüri); APSGN'deki gibi haftalar süren latent dönem görülmez.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Üst solunum yolu enfeksiyonu başladıktan 1 gün sonra idrarından kan gelen ve tekrarlayan hematüri atakları tarifleyen 22 yaşındaki genç erkek hastada en olası tanı IgA Nefropatisidir (Berger hastalığı).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: IgA nefropatisinde makroskopik hematüri üst solunum yolu enfeksiyonunun başladığı ilk 1-2 gün içinde ortaya çıkar (senfarenjitik hematüri); APSGN'deki gibi haftalar süren latent dönem görülmez.",
+          "🔵 ÇIKMIŞ SORU: Üst solunum yolu enfeksiyonu başladıktan 1 gün sonra idrarından kan gelen ve tekrarlayan hematüri atakları tarifleyen 22 yaşındaki genç erkek hastada en olası tanı IgA Nefropatisidir (Berger hastalığı)."
         ],
         "relatedQuestions": [
           {
@@ -84349,18 +84203,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "IgA nefropatisinin immünfloresan mikroskopisindeki kesin tanısal bulgusu mezangiyumda baskın granüler IgA ve C3 birikimidir. Henoch-Schönlein Purpurası bu tablonun palpabl purpura, artralji ve karın ağrısı ile giden sistemik formudur.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Alt ekstremitelerinde palpabl purpurik döküntüleri, karın ağrısı ve mikroskopik hematürisi olan bir çocukta böbrek biyopsisinde mezangiyal granüler IgA birikimi saptanması durumunda tanı Henoch-Schönlein Purpurasıdır (IgA Vasküliti).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: IgA nefropatisinin immünfloresan mikroskopisindeki kesin tanısal bulgusu mezangiyumda baskın granüler IgA ve C3 birikimidir. Henoch-Schönlein Purpurası bu tablonun palpabl purpura, artralji ve karın ağrısı ile giden sistemik formudur.",
+          "🔵 ÇIKMIŞ SORU: Alt ekstremitelerinde palpabl purpurik döküntüleri, karın ağrısı ve mikroskopik hematürisi olan bir çocukta böbrek biyopsisinde mezangiyal granüler IgA birikimi saptanması durumunda tanı Henoch-Schönlein Purpurasıdır (IgA Vasküliti)."
         ],
         "relatedQuestions": [
           {
@@ -84416,18 +84260,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "MPGN'de ışık mikroskobunda gümüş boyasında GBM'de izlenen 'çift kontur' veya 'tramvay hattı' (tram-track) görünümünün temel nedeni; mezangiyal hücre sitoplazması ve matriksinin subendotelyal aralığa sokulmasıdır (mezangiyokapiller interpozisyon).",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Böbrek biyopsisinde lobülasyonu artmış büyük hiperselüler glomerüller, mezangiyal interpozisyon ve bazal membranda çift kontur (tram-track / tramvay hattı) görünümü saptanan lezyon Membranoproliferatif Glomerülonefrittir (MPGN).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: MPGN'de ışık mikroskobunda gümüş boyasında GBM'de izlenen 'çift kontur' veya 'tramvay hattı' (tram-track) görünümünün temel nedeni; mezangiyal hücre sitoplazması ve matriksinin subendotelyal aralığa sokulmasıdır (mezangiyokapiller interpozisyon).",
+          "🔵 ÇIKMIŞ SORU: Böbrek biyopsisinde lobülasyonu artmış büyük hiperselüler glomerüller, mezangiyal interpozisyon ve bazal membranda çift kontur (tram-track / tramvay hattı) görünümü saptanan lezyon Membranoproliferatif Glomerülonefrittir (MPGN)."
         ],
         "relatedQuestions": [
           {
@@ -84483,18 +84317,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "MPGN Tip I immün kompleks aracılıdır; en sık Hepatit C enfeksiyonu ve mikst kriyoglobulinemi ile ilişkilidir. Elektron mikroskobunda SUBENDOTELYAL elektron-yoğun depozitler izlenir ve klasik kompleman yolu aktivasyonuyla hem C3 hem C4 düşer.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Kronik Hepatit C enfeksiyonu olan bir hastada mikst kriyoglobulinemi zemininde nefrotik/nefritik sendrom geliştiğinde böbrek biyopsisinde beklenen en olası patolojik tablo MPGN Tip I'dir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: MPGN Tip I immün kompleks aracılıdır; en sık Hepatit C enfeksiyonu ve mikst kriyoglobulinemi ile ilişkilidir. Elektron mikroskobunda SUBENDOTELYAL elektron-yoğun depozitler izlenir ve klasik kompleman yolu aktivasyonuyla hem C3 hem C4 düşer.",
+          "🔵 ÇIKMIŞ SORU: Kronik Hepatit C enfeksiyonu olan bir hastada mikst kriyoglobulinemi zemininde nefrotik/nefritik sendrom geliştiğinde böbrek biyopsisinde beklenen en olası patolojik tablo MPGN Tip I'dir."
         ],
         "relatedQuestions": [
           {
@@ -84550,18 +84374,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Dens Depozit Hastalığında (eski Tip II MPGN) kanda C3 konvertazı stabilize eden C3 Nefretik Faktör (C3NeF) otoantikoru bulunur; serumda C3 sürekli derin düşüktür ancak C1 ve C4 normaldir. EM'de lamina densada şerit dense depozitler izlenir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Alternatif kompleman yolunun sürekli kontrolsüz aktivasyonu, kanda C3NeF varlığı, persistan derin C3 düşüklüğü ve EM'de GBM lamina densasında kurdele tarzı elektron-yoğun depozitlerle seyreden hastalık Dens Depozit Hastalığıdır (MPGN Tip II).",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Dens Depozit Hastalığında (eski Tip II MPGN) kanda C3 konvertazı stabilize eden C3 Nefretik Faktör (C3NeF) otoantikoru bulunur; serumda C3 sürekli derin düşüktür ancak C1 ve C4 normaldir. EM'de lamina densada şerit dense depozitler izlenir.",
+          "🔵 ÇIKMIŞ SORU: Alternatif kompleman yolunun sürekli kontrolsüz aktivasyonu, kanda C3NeF varlığı, persistan derin C3 düşüklüğü ve EM'de GBM lamina densasında kurdele tarzı elektron-yoğun depozitlerle seyreden hastalık Dens Depozit Hastalığıdır (MPGN Tip II)."
         ],
         "relatedQuestions": [
           {
@@ -84617,18 +84431,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Lupus nefritinin en sık ve en agresif formu Sınıf IV (Diffüz Lupus Nefriti) olup; biyopside masif subendotelyal immün komplekslerin oluşturduğu 'Tel Halka' (Wire-loop) lezyonları ve İF'de tüm antikorların boyandığı 'Full-House' paterni patognomoniktir.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "SLE tanılı bir hastanın böbrek biyopsisinde glomerüllerin %60'ında belirgin proliferasyon, kapiller duvarlarda tel halka (wire-loop) lezyonları ve immünfloresanda full-house pozitifliği saptanması ISN/RPS Sınıf IV (Diffüz Lupus Nefriti) tanısını koydurur.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Lupus nefritinin en sık ve en agresif formu Sınıf IV (Diffüz Lupus Nefriti) olup; biyopside masif subendotelyal immün komplekslerin oluşturduğu 'Tel Halka' (Wire-loop) lezyonları ve İF'de tüm antikorların boyandığı 'Full-House' paterni patognomoniktir.",
+          "🔵 ÇIKMIŞ SORU: SLE tanılı bir hastanın böbrek biyopsisinde glomerüllerin %60'ında belirgin proliferasyon, kapiller duvarlarda tel halka (wire-loop) lezyonları ve immünfloresanda full-house pozitifliği saptanması ISN/RPS Sınıf IV (Diffüz Lupus Nefriti) tanısını koydurur."
         ],
         "relatedQuestions": [
           {
@@ -84684,18 +84488,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Lupus nefriti Sınıf V membranöz nefropati tablosunda seyreder ve subepitelyal depozitlerle nefrotik sendrom yapar. Sınıf VI ise glomerüllerin >=%90'ının skleroze olduğu son dönem evredir. Kalıtsal nefritler Tip IV kollajen gen defektlerine bağlıdır.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "SLE hastasında masif nefrotik proteinüri geliştiğinde böbrek biyopsisinde subepitelyal depozitler ve kapiller bazal membran kalınlaşması izlenen morfolojik form Sınıf V (Membranöz) Lupus Nefritidir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Lupus nefriti Sınıf V membranöz nefropati tablosunda seyreder ve subepitelyal depozitlerle nefrotik sendrom yapar. Sınıf VI ise glomerüllerin >=%90'ının skleroze olduğu son dönem evredir. Kalıtsal nefritler Tip IV kollajen gen defektlerine bağlıdır.",
+          "🔵 ÇIKMIŞ SORU: SLE hastasında masif nefrotik proteinüri geliştiğinde böbrek biyopsisinde subepitelyal depozitler ve kapiller bazal membran kalınlaşması izlenen morfolojik form Sınıf V (Membranöz) Lupus Nefritidir."
         ],
         "relatedQuestions": [
           {
@@ -84751,18 +84545,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Alport sendromunda X'e bağlı COL4A5 mutasyonu sonucu hematüri + sensörinöral işitme kaybı + anterior lentikonus triadı görülür; EM'de GBM'de 'Sepet Örgüsü' (Basket-weave) lamelasyonu patognomoniktir. İnce bazal membran hastalığı ise işitme/göz bulgusu olmayan selim tablodur.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "İşitme kaybı, gözde lentikonus ve idrarda hematüri saptanan bir hastanın böbrek biyopsisinde elektron mikroskobunda lamina densada lamelasyon ve sepet örgüsü (basket-weave) görünümü saptanması Alport Sendromu tanısını koydurur.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Alport sendromunda X'e bağlı COL4A5 mutasyonu sonucu hematüri + sensörinöral işitme kaybı + anterior lentikonus triadı görülür; EM'de GBM'de 'Sepet Örgüsü' (Basket-weave) lamelasyonu patognomoniktir. İnce bazal membran hastalığı ise işitme/göz bulgusu olmayan selim tablodur.",
+          "🔵 ÇIKMIŞ SORU: İşitme kaybı, gözde lentikonus ve idrarda hematüri saptanan bir hastanın böbrek biyopsisinde elektron mikroskobunda lamina densada lamelasyon ve sepet örgüsü (basket-weave) görünümü saptanması Alport Sendromu tanısını koydurur."
         ],
         "relatedQuestions": [
           {
@@ -84818,18 +84602,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Nefritik sendromda kompleman düşüklüğü (hipokomplementemi) sadece dört ana hastalıkta görülür: APSGN (geçici 6-8 hf), MPGN Tip I ve II, Lupus Nefriti ve Kriyoglobulinemi/SBE. IgA nefropatisi, Goodpasture ve ANCA vaskülitlerinde kompleman normaldir!",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Nefritik sendrom tablosuyla başvuran bir hastada serum kompleman C3 ve C4 düzeylerinin normal bulunması, ayırıcı tanıda öncelikle IgA Nefropatisi, Goodpasture Sendromu veya Pauci-immün ANCA vaskülitlerini düşündürür.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Nefritik sendromda kompleman düşüklüğü (hipokomplementemi) sadece dört ana hastalıkta görülür: APSGN (geçici 6-8 hf), MPGN Tip I ve II, Lupus Nefriti ve Kriyoglobulinemi/SBE. IgA nefropatisi, Goodpasture ve ANCA vaskülitlerinde kompleman normaldir!",
+          "🔵 ÇIKMIŞ SORU: Nefritik sendrom tablosuyla başvuran bir hastada serum kompleman C3 ve C4 düzeylerinin normal bulunması, ayırıcı tanıda öncelikle IgA Nefropatisi, Goodpasture Sendromu veya Pauci-immün ANCA vaskülitlerini düşündürür."
         ],
         "relatedQuestions": [
           {
@@ -84885,18 +84659,8 @@
           }
         ],
         "spotPearls": [
-          {
-            "type": "warning",
-            "badge": "🔴 ÖNEMLİ:",
-            "text": "Nefritik sendrom ayırıcı tanısında altın şifreler: Senfarenjitik hematüri (1-2 gün) = IgA nefropatisi; Latensli hematüri (1-3 hf) ve geçici düşük C3 = APSGN; Lineer İF = Goodpasture; Pauci-immün İF = ANCA vasküliti; Tram-track ve C3NeF = MPGN.",
-            "color": "rose"
-          },
-          {
-            "type": "exam",
-            "badge": "🔵 ÇIKMIŞ SORU:",
-            "text": "Hemoptizi ve hematüri ile başvuran bir hastada pulmoner-renal sendrom ayırıcı tanısında; lineer İF veren Goodpasture Sendromu ile c-ANCA pozitifliği ve pauci-immün İF veren Granülomatoz Polianjitis (Wegener) iki temel antitedir.",
-            "color": "sky"
-          }
+          "🔴 ÖNEMLİ: Nefritik sendrom ayırıcı tanısında altın şifreler: Senfarenjitik hematüri (1-2 gün) = IgA nefropatisi; Latensli hematüri (1-3 hf) ve geçici düşük C3 = APSGN; Lineer İF = Goodpasture; Pauci-immün İF = ANCA vasküliti; Tram-track ve C3NeF = MPGN.",
+          "🔵 ÇIKMIŞ SORU: Hemoptizi ve hematüri ile başvuran bir hastada pulmoner-renal sendrom ayırıcı tanısında; lineer İF veren Goodpasture Sendromu ile c-ANCA pozitifliği ve pauci-immün İF veren Granülomatoz Polianjitis (Wegener) iki temel antitedir."
         ],
         "relatedQuestions": [
           {
@@ -84929,7 +84693,9 @@
           "explanation": "Granülomatoz Polianjitis (GPA / Wegener), Tip III pauci-immün kresentik glomerülonefrittir; immünfloresanda belirgin immün kompleks veya antikor birikimi İZLENMEZ (negatiftir). 'Subepitelyal spike and dome' görünümü ise Membranöz Nefropatinin bulgusudur."
         }
       }
-    ]
+    ],
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
   },
   {
     "id": "learn-tubulointerstisyel-hastaliklar",
@@ -89001,7 +88767,9 @@
       }
     ],
     "id": "learn-bobrek-tumorleri",
-    "category": "Dönem 3 Kurul 1"
+    "category": "Dönem 3 Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
   },
   {
     "deckId": "learn-mesane-hastaliklari-tumorleri",
@@ -90353,7 +90121,9 @@
       }
     ],
     "id": "learn-mesane-hastaliklari-tumorleri",
-    "category": "Dönem 3 Kurul 1"
+    "category": "Dönem 3 Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1"
   },
   {
     "id": "learn-tumor-biyolojisi-terminolojisi",

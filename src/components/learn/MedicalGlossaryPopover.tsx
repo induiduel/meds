@@ -48,14 +48,26 @@ export interface GlossaryContextValue {
 // ---------------------------------------------------------------------------
 // Context
 // ---------------------------------------------------------------------------
-export const GlossaryContext = createContext<GlossaryContextValue | null>(null);
+const fallbackGlossaryContext: GlossaryContextValue = {
+  activeState: null,
+  showTerm: () => {},
+  hideTerm: () => {},
+  lookupTerm: (termOrAlias: string) => {
+    const q = (termOrAlias || '').trim().toLowerCase();
+    return (GLOSSARY as unknown as GlossaryItem[]).find(
+      (g) => g.term.toLowerCase() === q || (g.aliases || []).some((a) => a.toLowerCase() === q)
+    );
+  },
+  glossaryList: GLOSSARY as unknown as GlossaryItem[],
+  isDrawerOpen: false,
+  setIsDrawerOpen: () => {},
+  currentSlideText: '',
+  setCurrentSlideText: () => {},
+};
 
 export const useGlossary = () => {
   const ctx = useContext(GlossaryContext);
-  if (!ctx) {
-    throw new Error('useGlossary must be used within a GlossaryProvider');
-  }
-  return ctx;
+  return ctx || fallbackGlossaryContext;
 };
 
 // ---------------------------------------------------------------------------

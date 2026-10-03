@@ -669,8 +669,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   const totalSlides = allDecks.reduce((n, d) => n + d.slides.length, 0);
 
   return (
-    <GlossaryProvider>
-      <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
+    <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
       <div className="flex flex-col md:flex-row md:items-end gap-3">
         <div className="min-w-0 flex-1">
           <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em]">Öğren</h1>
@@ -823,7 +822,6 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         />
       )}
       </div>
-    </GlossaryProvider>
   );
 };
 
@@ -878,7 +876,7 @@ const DeckPlayer: React.FC<{
       slide.professorAudioHighlight?.note,
       narrativeText,
       ...(slide.coreContent?.keyBullets || []).map((b) => `${b.title}: ${b.desc}`),
-      ...spotsList,
+      ...spotsList.map((p: any) => typeof p === 'string' ? p : `${p?.badge ? p.badge + ' ' : ''}${p?.text || ''}`),
       slide.coreContent?.table?.title,
       slide.coreContent?.table?.rows?.map((r) => r.join(' ')).join('\n'),
     ]
@@ -1461,14 +1459,18 @@ const GlobalTopicSearchModal: React.FC<{
       }
       // 5. Spot Pearls / Spots
       const slideSpots = (slide.spotPearls && slide.spotPearls.length > 0) ? slide.spotPearls : ((slide as any).spots || []);
-      const foundPearl = slideSpots.find((p: string) => p.toLocaleLowerCase('tr-TR').includes(queryNorm));
+      const foundPearl = slideSpots.find((p: any) => {
+        const str = typeof p === 'string' ? p : `${p?.badge ? p.badge + ' ' : ''}${p?.text || ''}`;
+        return str.toLocaleLowerCase('tr-TR').includes(queryNorm);
+      });
       if (foundPearl) {
+        const pearlStr = typeof foundPearl === 'string' ? foundPearl : `${foundPearl?.badge ? foundPearl.badge + ' ' : ''}${foundPearl?.text || ''}`;
         matches.push({
           slideIndex: sIdx,
           slideNumber: slide.slideNumber,
           slideTitle: slide.title,
           matchedType: 'Spot İnci',
-          snippet: foundPearl,
+          snippet: pearlStr,
         });
         return;
       }
@@ -2167,7 +2169,7 @@ const SlideCanvas: React.FC<{
 // - Normal = Genel Spot Bilgi
 // - Sub-bullets (alt madde) and Upper-bullets (üst madde)
 // ---------------------------------------------------------------------------
-const SpotList: React.FC<{ items: string[]; title?: string; note?: string; compact?: boolean }> = ({
+const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: string; compact?: boolean }> = ({
   items,
   title = 'Akılda tut',
   note,
@@ -2184,11 +2186,17 @@ const SpotList: React.FC<{ items: string[]; title?: string; note?: string; compa
     {note && <p className="m-0 -mt-1 text-[13px] text-[#8A4405]/80 dark:text-[#E6934A]/80">{note}</p>}
     <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-2' : 'gap-2.5'}`}>
       {items.map((p, i) => {
-        const isRed = /(?:🔴|🚨|⚠️|ölümcül|asla|acil|hayati|kritik|kontrendike|\[kırmızı|\[red|önemli)/i.test(p);
-        const isBlue = !isRed && /(?:🔵|❓|❔|çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|\[mavi|\[blue|\[çıkmış|soru:)/i.test(p);
+        const isObj = p && typeof p === 'object';
+        const pText: string = isObj ? (p.text || '') : String(p || '');
+        const pBadge: string = isObj ? (p.badge || '') : '';
+        const pType: string = isObj ? (p.type || '') : '';
+        const pColor: string = isObj ? (p.color || '') : '';
+
+        const isRed = pType === 'warning' || pColor === 'rose' || pBadge.includes('🔴') || /(?:🔴|🚨|⚠️|ölümcül|asla|acil|hayati|kritik|kontrendike|\[kırmızı|\[red|önemli)/i.test(pText);
+        const isBlue = !isRed && (pType === 'exam' || pColor === 'sky' || pBadge.includes('🔵') || /(?:🔵|❓|❔|çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|\[mavi|\[blue|\[çıkmış|soru:)/i.test(pText));
 
         // Split multi-line spot pearls to support main bullets and sub-bullets
-        const rawLines = p.split('\n');
+        const rawLines = pText.split('\n');
 
         return (
           <li
@@ -2206,15 +2214,15 @@ const SpotList: React.FC<{ items: string[]; title?: string; note?: string; compa
               <span className="inline-flex items-center gap-1.5">
                 {isRed ? (
                   <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-bold bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-200">
-                    <AlertCircle className="w-3 h-3" /> ÖNEMLİ
+                    <AlertCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🔴🚨⚠️]\s*/, '') : 'ÖNEMLİ'}
                   </span>
                 ) : isBlue ? (
                   <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200">
-                    <HelpCircle className="w-3 h-3" /> ÇIKMIŞ SORU
+                    <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🔵❓❔]\s*/, '') : 'ÇIKMIŞ SORU'}
                   </span>
                 ) : (
                   <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-semibold bg-amber-100/70 dark:bg-amber-950/40 text-[#9A4D06] dark:text-amber-300">
-                    ⚡ SPOT BİLGİ
+                    ⚡ {pBadge ? pBadge.replace(/^[⚡]\s*/, '') : 'SPOT BİLGİ'}
                   </span>
                 )}
               </span>
@@ -2547,7 +2555,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
       slide.professorAudioHighlight ? `Hocanın vurgusu (${slide.professorAudioHighlight.timestamp}): "${slide.professorAudioHighlight.quote}"` : '',
       slide.synthesisNarrative ? `Ders ve amfi sentezi: ${slide.synthesisNarrative}` : '',
       ...(slide.coreContent?.keyBullets || []).map((b) => `- ${b.title}: ${b.desc}`),
-      ...(slide.spotPearls || []).map((p) => `* ${p}`),
+      ...(slide.spotPearls || []).map((p: any) => `* ${typeof p === 'string' ? p : `${p?.badge ? p.badge + ' ' : ''}${p?.text || ''}`}`),
     ]
       .filter(Boolean)
       .join('\n');

@@ -63,6 +63,7 @@ const MedicalEncyclopediaView = React.lazy(() => import('./components/encycloped
 const ManageConsole = React.lazy(() => import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole })));
 
 const ViewFallback = () => <SectionLoader />;
+import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
 import { systemHealthMonitor } from './services/systemHealthMonitor';
 import { ApiService } from './services/api';
 import { multiDbManager } from './services/multiDbManager';
@@ -890,7 +891,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-canvas text-ink flex flex-col font-sans antialiased">
+    <GlossaryProvider>
+      <div className="min-h-screen bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
       {activeTab === 'practice' ? (
         <Suspense fallback={<ViewFallback />}>
@@ -1696,6 +1698,7 @@ export default function App() {
         </Suspense>
       )}
 
-    </div>
+      </div>
+    </GlossaryProvider>
   );
 }

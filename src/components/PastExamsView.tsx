@@ -863,7 +863,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const explanation = q.reconstruction?.explanation || q.explanation;
             const commentsCount = (q as any).comments?.length || 0;
             const expOpen = !!openExplanations[q.id];
-            const meta = [q.discipline || 'Tıp', formatCommitteeName(q.committeeId).split(':')[0], q.examYear].filter(Boolean).join(' · ');
+            const meta = [q.discipline || 'Tıp', (formatCommitteeName(q.committeeId) || '').split(':')[0], q.examYear].filter(Boolean).join(' · ');
             const setCardMode = (m: 'redacted' | 'raw' | 'split') => setCardViewOverrides((prev) => ({ ...prev, [q.id]: m }));
 
             const actions: ActionItem[] = [
@@ -1253,12 +1253,22 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     Sınav İçin Spot Hap Bilgiler:
                   </span>
                   <div className="bg-amber-50/60 border border-amber-200 rounded-xl p-3 space-y-1.5">
-                    {selectedLearnMatch.match.spotPearls.map((pearl, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-slate-800 text-xs">
-                        <span className="text-amber-600 font-bold shrink-0">•</span>
-                        <span>{pearl}</span>
-                      </div>
-                    ))}
+                    {selectedLearnMatch.match.spotPearls.map((pearl: any, i: number) => {
+                      const isObj = pearl && typeof pearl === 'object';
+                      const badgeText = isObj ? pearl.badge : null;
+                      const text = isObj ? pearl.text : String(pearl || '');
+                      return (
+                        <div key={i} className="flex items-start gap-1.5 text-slate-800 text-xs">
+                          <span className="text-amber-600 font-bold shrink-0">•</span>
+                          <div className="min-w-0 flex-1">
+                            {badgeText && (
+                              <span className="font-semibold text-amber-700 mr-1.5">{badgeText}</span>
+                            )}
+                            <span>{text}</span>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}

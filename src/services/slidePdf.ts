@@ -369,7 +369,9 @@ export async function generateSlidePdfBlob(deck: InteractiveDeck, slides: SlideI
   };
 
   const spotsBlock = (slide: SlideItem): Block | null => {
-    const items = (slide.spotPearls || []).filter((p) => clean(p));
+    const items = (slide.spotPearls || [])
+      .map((p: any) => typeof p === 'string' ? p : `${p?.badge ? p.badge + ': ' : ''}${p?.text || ''}`)
+      .filter((p) => clean(p));
     if (!items.length) return null;
     return (x, w, s) => {
       const pad = 3 * s;

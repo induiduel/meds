@@ -26,10 +26,66 @@ function normalizeTr(str: string): string {
     .replace(/ö/g, 'o').replace(/ç/g, 'c');
 }
 
+const STOP_KEYWORDS = new Set([
+  'hastalik', 'hastaliklar', 'hastaliklari', 'hastaliklarinin',
+  'nedir', 'nelerdir', 'hangisi', 'yanlistir', 'dogrudur',
+  'klinik', 'tedavi', 'tedavisi', 'bulgular', 'ozellikler',
+  'belirtiler', 'primer', 'sekonder', 'yonetim', 'uygulama',
+  'degildir', 'nedenle', 'birlikte', 'olarak', 'iliski', 'iliskili',
+  'asagidakilerden', 'ifadelerden', 'durumlardan', 'tanisi', 'tipleri'
+]);
+
+function isDisciplineCompatible(qDisc: string, deckDisc: string): boolean {
+  if (!qDisc || !deckDisc) return false;
+  const q = normalizeTr(qDisc);
+  const d = normalizeTr(deckDisc);
+  if (!q || !d) return false;
+  if (q === d) return true;
+
+  // Distinct medical branches that must NOT be confused with each other
+  const distinctBranches = [
+    ['patoloji'],
+    ['farmakoloji'],
+    ['dahiliye', 'ic hastaliklari', 'endokrinoloji', 'gastroenteroloji', 'nefroloji', 'hematoloji', 'romatoloji'],
+    ['uroloji'],
+    ['genetik'],
+    ['halk sagligi', 'toplum hekimligi'],
+    ['mikrobiyoloji', 'enfeksiyon'],
+    ['kardiyoloji'],
+    ['kadin hastaliklari', 'dogum', 'obstetrik', 'jinekoloji'],
+    ['cocuk', 'pediatri'],
+    ['noroloji'],
+    ['psikiyatri', 'ruh sagligi'],
+    ['biyokimya'],
+    ['fizyoloji'],
+    ['histoloji', 'embriyoloji'],
+    ['anatomi'],
+  ];
+
+  let qBranchIdx = -1;
+  let dBranchIdx = -1;
+
+  for (let i = 0; i < distinctBranches.length; i++) {
+    const list = distinctBranches[i];
+    if (qBranchIdx === -1 && list.some(term => q.includes(term))) {
+      qBranchIdx = i;
+    }
+    if (dBranchIdx === -1 && list.some(term => d.includes(term))) {
+      dBranchIdx = i;
+    }
+  }
+
+  if (qBranchIdx !== -1 && dBranchIdx !== -1) {
+    return qBranchIdx === dBranchIdx;
+  }
+
+  return q.includes(d) || d.includes(q);
+}
+
 class LearnMatcherService {
   private directIdMap = new Map<string, QuestionLearnMatch>();
   private directStemMap = new Map<string, QuestionLearnMatch>();
-  private slideIndex: Array<QuestionLearnMatch & { keywords: string[]; normDiscipline: string }> = [];
+  private slideIndex: Array<QuestionLearnMatch & { keywords: string[]; normDiscipline: string; rawDiscipline: string }> = [];
   private cache = new Map<string, QuestionLearnMatch | null>();
 
   constructor() {
@@ -75,15 +131,20 @@ class LearnMatcherService {
         }
 
         // 2. Keyword searchable index
+        const pearlsText = (s.spotPearls || [])
+          .map((p: any) => typeof p === 'string' ? p : `${p?.badge || ''} ${p?.text || ''}`)
+          .join(' ');
         const fullSlideText = normalizeTr(
-          `${d.title} ${d.discipline} ${s.title} ${s.badge} ${(s.spotPearls || []).join(' ')} ${s.synthesisNarrative || ''}`
+          `${d.title} ${deckDiscipline} ${s.title} ${s.badge} ${pearlsText} ${s.synthesisNarrative || ''}`
         );
-        const words = Array.from(new Set(fullSlideText.match(/[a-z]{5,}/g) || []));
+        const words = Array.from(new Set(fullSlideText.match(/[a-z]{5,}/g) || []))
+          .filter(w => !STOP_KEYWORDS.has(w));
 
         this.slideIndex.push({
           ...slideMatchBase,
           keywords: words,
-          normDiscipline: normalizeTr(deckDiscipline)
+          normDiscipline: normalizeTr(deckDiscipline),
+          rawDiscipline: deckDiscipline
         });
       }
     }
@@ -114,34 +175,42 @@ class LearnMatcherService {
     }
 
     // 3. Keyword / Topic match with strict discipline & multi-keyword requirement
-    const qDiscipline = normalizeTr(q.discipline || '');
-    const qText = normalizeTr(
-      `${q.topic || ''} ${q.discipline || ''} ${stem} ${q.reconstruction?.stem || ''}`
-    );
+    const qDiscipline = q.discipline || '';
+    if (!qDiscipline) {
+      this.cache.set(q.id, null);
+      return null;
+    }
+
+    const stemNorm = normalizeTr(stem);
+    const topicNorm = normalizeTr(q.topic || '');
+    const qText = `${topicNorm} ${normalizeTr(qDiscipline)} ${stemNorm}`;
 
     let bestMatch: QuestionLearnMatch | null = null;
     let highestScore = 0;
 
     for (const item of this.slideIndex) {
-      // Must match discipline
-      const isDisciplineMatch = qDiscipline && (
-        item.normDiscipline.includes(qDiscipline) ||
-        qDiscipline.includes(item.normDiscipline)
-      );
-      if (!isDisciplineMatch) continue;
+      // Must strictly be discipline compatible
+      if (!isDisciplineCompatible(qDiscipline, item.rawDiscipline)) {
+        continue;
+      }
 
       let score = 5;
       let matchedWordCount = 0;
 
       for (const kw of item.keywords) {
         if (kw.length >= 6 && qText.includes(kw)) {
-          score += 3;
+          // Extra weight if keyword is explicitly in question topic or question stem
+          if (topicNorm.includes(kw)) {
+            score += 5;
+          } else {
+            score += 3;
+          }
           matchedWordCount++;
         }
       }
 
-      // High confidence threshold: at least 3 distinct significant medical keywords
-      if (matchedWordCount >= 3 && score >= 14 && score > highestScore) {
+      // High confidence threshold: at least 3 distinct significant medical keywords and minimum score 16
+      if (matchedWordCount >= 3 && score >= 16 && score > highestScore) {
         highestScore = score;
         bestMatch = {
           ...item,
