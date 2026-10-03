@@ -17,19 +17,28 @@ import {
   CheckCircle2,
   BookOpen,
   ArrowRight,
+  ArrowLeft,
   HardDrive,
   Cloud,
+  ChevronLeft,
+  ChevronRight,
+  Compass,
 } from 'lucide-react';
-import type { InteractiveDeck } from './InteractiveDeckView';
+import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
 import { getDeckOriginalPdf, DeckPdfMeta } from '../../data/deckPdfCatalog';
+import { getSlidePdfLocation, SlidePdfLocation } from '../../services/slidePdfMappingService';
 
 export interface DeckPdfViewerProps {
   deck: InteractiveDeck;
   currentSlideNumber?: number;
+  currentSlide?: SlideItem;
+  targetPage?: number;
+  targetPageRange?: [number, number];
   onClose?: () => void;
   isSplitView?: boolean;
   onToggleSplitView?: () => void;
   compact?: boolean;
+  onPageChange?: (page: number) => void;
 }
 
 type PdfSourceType = 'drive' | 'local' | 'custom';
@@ -37,25 +46,47 @@ type PdfSourceType = 'drive' | 'local' | 'custom';
 export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   deck,
   currentSlideNumber = 1,
+  currentSlide,
+  targetPage: propTargetPage,
+  targetPageRange: propTargetPageRange,
   onClose,
   isSplitView = false,
   onToggleSplitView,
   compact = false,
+  onPageChange,
 }) => {
   const pdfMeta: DeckPdfMeta | undefined = useMemo(() => {
     return getDeckOriginalPdf(deck.id);
   }, [deck.id]);
 
-  const [sourceType, setSourceType] = useState<PdfSourceType>('drive');
+  // Compute slide-to-PDF location mapping
+  const slideLoc: SlidePdfLocation = useMemo(() => {
+    return getSlidePdfLocation(deck.id, currentSlideNumber, currentSlide, deck.slides?.length);
+  }, [deck.id, currentSlideNumber, currentSlide, deck.slides?.length]);
+
+  const activeTargetPage = propTargetPage ?? slideLoc.primaryPage;
+  const activePageRange = propTargetPageRange ?? slideLoc.pageRange;
+
+  const [activePage, setActivePage] = useState<number>(activeTargetPage);
+  const [sourceType, setSourceType] = useState<PdfSourceType>('local');
   const [customFileUrl, setCustomFileUrl] = useState<string | null>(null);
   const [customFileName, setCustomFileName] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [zoom, setZoom] = useState<number>(100);
   const [hasError, setHasError] = useState(false);
   const [isLocalServerAvailable, setIsLocalServerAvailable] = useState<boolean | null>(null);
+  const [pageInputVal, setPageInputVal] = useState<string>(String(activeTargetPage));
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Check if local backend endpoint is reachable
+  // Sync internal active page when currentSlideNumber or propTargetPage changes
+  useEffect(() => {
+    const newPage = propTargetPage ?? slideLoc.primaryPage;
+    setActivePage(newPage);
+    setPageInputVal(String(newPage));
+    onPageChange?.(newPage);
+  }, [propTargetPage, slideLoc.primaryPage, currentSlideNumber]);
+
+  // Check if local backend endpoint is reachable and has the PDF
   useEffect(() => {
     let active = true;
     const testLocalPdf = async () => {
@@ -66,11 +97,19 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
           method: 'HEAD',
         });
         if (active) {
-          setIsLocalServerAvailable(resp.ok);
-          // If local server is running and has the file, default to local or keep drive
+          if (resp.ok) {
+            setIsLocalServerAvailable(true);
+            setSourceType('local'); // Default to local for fast direct #page navigation
+          } else {
+            setIsLocalServerAvailable(false);
+            setSourceType('drive');
+          }
         }
       } catch {
-        if (active) setIsLocalServerAvailable(false);
+        if (active) {
+          setIsLocalServerAvailable(false);
+          setSourceType('drive');
+        }
       }
     };
     testLocalPdf();
@@ -88,32 +127,32 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     };
   }, [customFileUrl]);
 
-  // Construct iframe URL based on selected source type
+  // Construct iframe URL based on selected source type & activePage
   const pdfUrl = useMemo(() => {
     if (sourceType === 'custom' && customFileUrl) {
-      return `${customFileUrl}#page=${currentSlideNumber}&zoom=${zoom}`;
+      return `${customFileUrl}#page=${activePage}&zoom=${zoom}`;
     }
     if (sourceType === 'local' && (pdfMeta?.localFileName || pdfMeta?.fileName)) {
       const fn = pdfMeta.localFileName || pdfMeta.fileName;
-      return `/api/lecture-pdf/${encodeURIComponent(fn)}#page=${currentSlideNumber}&zoom=${zoom}`;
+      return `/api/lecture-pdf/${encodeURIComponent(fn)}#page=${activePage}&zoom=${zoom}`;
     }
     // Default: Google Drive Preview Embed
     if (pdfMeta?.fileId) {
       return `https://drive.google.com/file/d/${pdfMeta.fileId}/preview`;
     }
     return null;
-  }, [sourceType, customFileUrl, pdfMeta, currentSlideNumber, zoom]);
+  }, [sourceType, customFileUrl, pdfMeta, activePage, zoom]);
 
   // Direct download / open link
   const directLink = useMemo(() => {
     if (sourceType === 'custom' && customFileUrl) return customFileUrl;
     if (sourceType === 'local' && (pdfMeta?.localFileName || pdfMeta?.fileName)) {
-      return `/api/lecture-pdf/${encodeURIComponent(pdfMeta.localFileName || pdfMeta.fileName)}`;
+      return `/api/lecture-pdf/${encodeURIComponent(pdfMeta.localFileName || pdfMeta.fileName)}#page=${activePage}`;
     }
     if (pdfMeta?.driveUrl) return pdfMeta.driveUrl;
     if (pdfMeta?.fileId) return `https://drive.google.com/file/d/${pdfMeta.fileId}/view`;
     return null;
-  }, [sourceType, customFileUrl, pdfMeta]);
+  }, [sourceType, customFileUrl, pdfMeta, activePage]);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -126,6 +165,32 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     setIsLoading(true);
     setHasError(false);
   };
+
+  const handleJumpToPage = (p: number) => {
+    const safePage = Math.max(1, Math.min(slideLoc.totalPages || 300, p));
+    setActivePage(safePage);
+    setPageInputVal(String(safePage));
+    onPageChange?.(safePage);
+  };
+
+  const handlePageInputSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const val = parseInt(pageInputVal, 10);
+    if (!isNaN(val) && val > 0) {
+      handleJumpToPage(val);
+    }
+  };
+
+  // Generate range of buttons for the current slide mapping
+  const rangePages = useMemo(() => {
+    const [start, end] = activePageRange;
+    const pages: number[] = [];
+    const count = Math.min(6, end - start + 1);
+    for (let p = start; p < start + count; p++) {
+      pages.push(p);
+    }
+    return pages;
+  }, [activePageRange]);
 
   const displayName = customFileName || pdfMeta?.fileName || `${deck.title}.pdf`;
 
@@ -149,7 +214,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-white truncate max-w-[220px] sm:max-w-xs md:max-w-md" title={displayName}>
+              <span className="font-semibold text-white truncate max-w-[200px] sm:max-w-xs md:max-w-md" title={displayName}>
                 {displayName}
               </span>
               <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 shrink-0">
@@ -168,6 +233,22 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         <div className="flex items-center gap-1.5 ml-auto">
           {/* Source switch pills */}
           <div className="hidden sm:inline-flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-[11px]">
+            {isLocalServerAvailable && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSourceType('local');
+                  setIsLoading(true);
+                }}
+                className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
+                  sourceType === 'local' ? 'bg-emerald-600 text-white font-medium shadow-xs' : 'text-slate-400 hover:text-white'
+                }`}
+                title="Yerel Bilgisayar Veritabanından Doğrudan Sayfa Senkronizasyonu"
+              >
+                <HardDrive className="w-3 h-3" />
+                <span>Yerel</span>
+              </button>
+            )}
             {pdfMeta?.fileId && (
               <button
                 type="button"
@@ -182,22 +263,6 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               >
                 <Cloud className="w-3 h-3" />
                 <span>Drive</span>
-              </button>
-            )}
-            {isLocalServerAvailable && (
-              <button
-                type="button"
-                onClick={() => {
-                  setSourceType('local');
-                  setIsLoading(true);
-                }}
-                className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
-                  sourceType === 'local' ? 'bg-emerald-600 text-white font-medium shadow-xs' : 'text-slate-400 hover:text-white'
-                }`}
-                title="Yerel Bilgisayar Veritabanından Doğrudan Akış"
-              >
-                <HardDrive className="w-3 h-3" />
-                <span>Yerel</span>
               </button>
             )}
             {customFileUrl && (
@@ -265,7 +330,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
             <button
               type="button"
               onClick={onToggleSplitView}
-              title={isSplitView ? 'Tam Ekran PDF Yap' : 'Yan Yana Bölünmüş Ekran'}
+              title={isSplitView ? 'Sadece Slaytı Göster' : 'Yan Yana Bölünmüş Ekran'}
               className={`h-7 px-2 rounded-lg border inline-flex items-center gap-1 cursor-pointer transition-colors text-[11px] ${
                 isSplitView
                   ? 'bg-accent/20 border-accent/40 text-accent font-semibold'
@@ -305,13 +370,92 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         </div>
       </header>
 
+      {/* Synchronized Page Navigation Banner (İlişkilendirilmiş Sayfa Gezinme Çubuğu) */}
+      <div className="shrink-0 bg-slate-950/80 border-b border-slate-800/80 px-3 py-1.5 flex items-center justify-between gap-2 flex-wrap text-[11px]">
+        {/* Mapping info badge */}
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 text-accent font-medium">
+            <Compass className="w-3.5 h-3.5 animate-pulse" />
+            <span>Slayt #{currentSlideNumber} Kaynağı:</span>
+          </div>
+          <span className="font-semibold text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-md">
+            {slideLoc.citation}
+          </span>
+          <span className="text-slate-400 hidden md:inline">
+            (Toplam {slideLoc.totalPages} sayfa)
+          </span>
+        </div>
+
+        {/* Quick Jump Page Pills */}
+        <div className="flex items-center gap-1.5 ml-auto">
+          <div className="flex items-center gap-1">
+            <button
+              type="button"
+              onClick={() => handleJumpToPage(activePage - 1)}
+              disabled={activePage <= 1}
+              title="Önceki Sayfa"
+              className="w-6 h-6 rounded flex items-center justify-center bg-slate-900 border border-slate-800 text-slate-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+            >
+              <ChevronLeft className="w-3.5 h-3.5" />
+            </button>
+
+            {/* Quick Range Buttons */}
+            {rangePages.map((p) => (
+              <button
+                key={p}
+                type="button"
+                onClick={() => handleJumpToPage(p)}
+                className={`px-2 py-0.5 rounded text-[11px] font-mono cursor-pointer transition-colors ${
+                  activePage === p
+                    ? 'bg-accent text-white font-bold shadow-xs'
+                    : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800/80'
+                }`}
+                title={`Sayfa ${p}'e git`}
+              >
+                S.{p}
+              </button>
+            ))}
+
+            <button
+              type="button"
+              onClick={() => handleJumpToPage(activePage + 1)}
+              disabled={activePage >= (slideLoc.totalPages || 300)}
+              title="Sonraki Sayfa"
+              className="w-6 h-6 rounded flex items-center justify-center bg-slate-900 border border-slate-800 text-slate-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+            >
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          {/* Direct Page Input */}
+          <form onSubmit={handlePageInputSubmit} className="flex items-center gap-1 ml-1">
+            <span className="text-slate-500 font-mono text-[10px]">S:</span>
+            <input
+              type="number"
+              min="1"
+              max={slideLoc.totalPages || 300}
+              value={pageInputVal}
+              onChange={(e) => setPageInputVal(e.target.value)}
+              onBlur={() => {
+                const val = parseInt(pageInputVal, 10);
+                if (!isNaN(val) && val > 0) handleJumpToPage(val);
+              }}
+              className="w-11 h-6 bg-slate-900 border border-slate-700 rounded px-1 text-center font-mono text-[11px] text-white focus:outline-hidden focus:border-accent"
+              title="Doğrudan sayfa numarası girip Enter'a basın"
+            />
+          </form>
+        </div>
+      </div>
+
       {/* Main Viewer Area */}
       <div className="relative flex-1 min-h-0 w-full bg-slate-950 flex items-center justify-center overflow-hidden">
         {/* Loading Spinner */}
         {isLoading && (
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950/80 backdrop-blur-xs text-slate-200">
             <RefreshCw className="w-8 h-8 text-accent animate-spin" />
-            <p className="m-0 text-[13px] font-medium text-slate-300">Orijinal PDF hazırlanıyor…</p>
+            <p className="m-0 text-[13px] font-medium text-slate-300">
+              Orijinal PDF hazırlanıyor (Sayfa {activePage})…
+            </p>
             <span className="text-[11px] text-slate-500 font-mono">{displayName}</span>
           </div>
         )}
@@ -319,7 +463,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         {/* Main PDF iframe */}
         {pdfUrl && !hasError ? (
           <iframe
-            key={`${pdfUrl}-${sourceType}`}
+            key={`${pdfUrl}-${sourceType}-${activePage}`}
             src={pdfUrl}
             title={displayName}
             onLoad={() => setIsLoading(false)}
@@ -337,7 +481,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
             </div>
             <h3 className="m-0 text-[15px] font-bold text-white">PDF Sayfa İçinde Yüklenemedi</h3>
             <p className="m-0 text-[12px] text-slate-400 leading-relaxed">
-              Tarayıcınızın üçüncü taraf çerez ayarları Google Drive önizleyicisini engellemiş olabilir veya dosya bağlantısı doğrudan açılmalıdır.
+              Tarayıcınızın üçüncü taraf çerez ayarları Google Drive önizleyicisini engellemiş olabilir veya yerel sunucu bağlantısı kapalıdır.
             </p>
             <div className="flex items-center gap-2 pt-2 flex-wrap justify-center">
               {directLink && (
@@ -348,7 +492,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                   className="h-9 px-4 rounded-xl bg-accent hover:bg-accent-hover text-white text-[13px] font-semibold inline-flex items-center gap-2 transition-colors shadow-xs"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span>Google Drive'da Doğrudan Aç</span>
+                  <span>Google Drive'da Aç (Sayfa {activePage})</span>
                 </a>
               )}
               <button
@@ -367,21 +511,19 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
       {/* Footer Info Strip */}
       <footer className="shrink-0 bg-slate-950 border-t border-slate-800/80 px-3 py-1.5 flex items-center justify-between text-[11px] text-slate-400">
         <div className="flex items-center gap-2 truncate">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+          <span className={`w-2 h-2 rounded-full shrink-0 ${sourceType === 'local' ? 'bg-emerald-400' : 'bg-accent'}`} />
           <span className="truncate">
-            {sourceType === 'drive'
-              ? 'Google Drive Bulut Slaytı'
-              : sourceType === 'local'
-              ? 'Yerel Amfi PDF Veritabanı'
+            {sourceType === 'local'
+              ? 'Yerel Amfi PDF Motoru (Sayfa Senkronizasyonu Aktif)'
+              : sourceType === 'drive'
+              ? 'Google Drive Bulut Önizleyicisi'
               : 'Özel Kullanıcı PDF Dokümanı'}
           </span>
         </div>
         <div className="flex items-center gap-3 shrink-0">
-          {currentSlideNumber && (
-            <span className="font-mono text-slate-400">
-              İnteraktif Slayt: <strong className="text-white">#{currentSlideNumber}</strong>
-            </span>
-          )}
+          <span className="font-mono text-slate-400">
+            Aktif PDF Sayfası: <strong className="text-amber-400 font-bold">#{activePage}</strong> / {slideLoc.totalPages}
+          </span>
         </div>
       </footer>
     </div>

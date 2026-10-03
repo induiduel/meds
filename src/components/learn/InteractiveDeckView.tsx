@@ -40,9 +40,11 @@ import {
   Bot,
   Columns,
   Cloud,
+  Compass,
 } from 'lucide-react';
 import { DeckPdfViewer } from './DeckPdfViewer';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
+import { getSlidePdfLocation, SlidePdfLocation } from '../../services/slidePdfMappingService';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
 import {
   GlossaryProvider,
@@ -141,6 +143,17 @@ export interface SlideItem {
   spotPearls: string[];
   relatedQuestions: SlideRelatedQuestion[];
   aiPromptSuggestions: string[];
+  sourcePdf?: {
+    fileName: string;
+    fileId?: string;
+    startPage: number;
+    endPage: number;
+    primaryPage: number;
+    citation: string;
+  };
+  sourcePage?: number;
+  sourcePageRange?: [number, number];
+  sourceCitation?: string;
 }
 
 export interface InteractiveDeck {
@@ -864,6 +877,27 @@ const DeckPlayer: React.FC<{
 
   const slide = slides[index];
 
+  // Synchronized PDF page state
+  const [activePdfPage, setActivePdfPage] = useState<number>(() => {
+    const loc = getSlidePdfLocation(deck.id, slides[index]?.slideNumber, slides[index], n);
+    return loc.primaryPage;
+  });
+
+  // When slide index changes, sync target PDF page for split/pdf views
+  useEffect(() => {
+    if (!slides[index]) return;
+    const loc = getSlidePdfLocation(deck.id, slides[index].slideNumber, slides[index], n);
+    setActivePdfPage(loc.primaryPage);
+  }, [index, deck.id, slides, n]);
+
+  const handleOpenPdfAtPage = (targetPage?: number) => {
+    const loc = getSlidePdfLocation(deck.id, slides[index]?.slideNumber, slides[index], n);
+    const page = targetPage ?? loc.primaryPage;
+    setActivePdfPage(page);
+    setViewMode('split');
+    toast.info(`Orijinal Ders PDF'i Sayfa ${page} açıldı (${loc.citation})`);
+  };
+
   // Keep active slide text in sync with glossary provider for dynamic slide knowledge
   useEffect(() => {
     if (!slide || !setCurrentSlideText) return;
@@ -1204,7 +1238,11 @@ const DeckPlayer: React.FC<{
               <DeckPdfViewer
                 deck={deck}
                 currentSlideNumber={slide.slideNumber}
+                currentSlide={slide}
+                targetPage={activePdfPage}
+                targetPageRange={slide.sourcePageRange}
                 onToggleSplitView={() => setViewMode('split')}
+                onPageChange={(p) => setActivePdfPage(p)}
               />
             </div>
           ) : viewMode === 'split' ? (
@@ -1216,6 +1254,7 @@ const DeckPlayer: React.FC<{
               >
                 <SlideCanvas
                   key={`split-${index}`}
+                  deckId={deck.id}
                   slide={slide}
                   highlightScope={`deck:${deck.id}:${slide.slideNumber}`}
                   index={index}
@@ -1223,6 +1262,7 @@ const DeckPlayer: React.FC<{
                   paged
                   onNext={next}
                   onPrev={prev}
+                  onOpenPdfAtPage={handleOpenPdfAtPage}
                   onOpenQuestions={() => {
                     setTab('questions');
                     setPanelOpen(true);
@@ -1241,8 +1281,12 @@ const DeckPlayer: React.FC<{
                 <DeckPdfViewer
                   deck={deck}
                   currentSlideNumber={slide.slideNumber}
+                  currentSlide={slide}
+                  targetPage={activePdfPage}
+                  targetPageRange={slide.sourcePageRange}
                   isSplitView
                   onToggleSplitView={() => setViewMode('interactive')}
+                  onPageChange={(p) => setActivePdfPage(p)}
                 />
               </div>
             </div>
@@ -1250,6 +1294,7 @@ const DeckPlayer: React.FC<{
             <div className="absolute inset-0 p-2 sm:p-4 lg:p-6 flex" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <SlideCanvas
                 key={index}
+                deckId={deck.id}
                 slide={slide}
                 highlightScope={`deck:${deck.id}:${slide.slideNumber}`}
                 index={index}
@@ -1257,6 +1302,7 @@ const DeckPlayer: React.FC<{
                 paged
                 onNext={next}
                 onPrev={prev}
+                onOpenPdfAtPage={handleOpenPdfAtPage}
                 onOpenQuestions={() => {
                   setTab('questions');
                   setPanelOpen(true);
@@ -1284,10 +1330,12 @@ const DeckPlayer: React.FC<{
                   className="min-h-full snap-start p-2 sm:p-4 lg:p-6 flex"
                 >
                   <SlideCanvas
+                    deckId={deck.id}
                     slide={s}
                     highlightScope={`deck:${deck.id}:${s.slideNumber}`}
                     index={i}
                     total={n}
+                    onOpenPdfAtPage={handleOpenPdfAtPage}
                     onOpenQuestions={() => {
                       setTab('questions');
                       setPanelOpen(true);
@@ -1847,18 +1895,20 @@ export const KeyBulletsRenderer: React.FC<{
 // One slide, sized to the stage (16:9 feel on wide screens, scrolls inside if long)
 // ---------------------------------------------------------------------------
 const SlideCanvas: React.FC<{
+  deckId?: string;
   slide: SlideItem;
   index: number;
   total: number;
   onOpenQuestions?: () => void;
   onOpenFlashcards?: () => void;
   onOpenNotes?: () => void;
+  onOpenPdfAtPage?: (page?: number) => void;
   onNext?: () => void;
   onPrev?: () => void;
   paged?: boolean;
   /** Storage key for the student's own highlights on this slide */
   highlightScope?: string;
-}> = ({ slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, onNext, paged = false, highlightScope }) => {
+}> = ({ deckId = '', slide, index, total, onOpenQuestions, onOpenFlashcards, onOpenNotes, onOpenPdfAtPage, onNext, paged = false, highlightScope }) => {
   const [copied, setCopied] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -1866,6 +1916,10 @@ const SlideCanvas: React.FC<{
   useEffect(() => {
     containerRef.current?.scrollTo({ top: 0, behavior: 'instant' });
   }, [index, slide]);
+
+  const slidePdfLoc = useMemo(() => {
+    return getSlidePdfLocation(deckId, slide.slideNumber, slide, total);
+  }, [deckId, slide, total]);
 
   const hl = slide.professorAudioHighlight;
   const emph = hl ? EMPHASIS[hl.emphasisType] || EMPHASIS.pearl : null;
@@ -1906,6 +1960,17 @@ const SlideCanvas: React.FC<{
                 {slide.badge}
               </span>
             )}
+            {/* Orijinal Ders PDF'i Kaynak Çipi / Butonu */}
+            <button
+              type="button"
+              onClick={() => onOpenPdfAtPage?.(slidePdfLoc.startPage)}
+              title={`Orijinal ders sunumunda ${slidePdfLoc.citation} bölümünü yan ekranda aç`}
+              className="h-7 px-2.5 rounded-lg text-[11.5px] font-semibold bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-500/25 inline-flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer group active:scale-95"
+            >
+              <FileText className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
+              <span>Ders Notu: <strong>{slidePdfLoc.citation}</strong></span>
+              <ArrowRight className="w-3 h-3 text-amber-500/70 group-hover:translate-x-0.5 transition-transform" />
+            </button>
             <span className="hidden sm:inline-flex items-center gap-1 text-ink-3 text-[12px] font-medium">
               <span>•</span>
               <span>Dönem 3 Kurul 1 Patoloji ve Klinik Müfredatı</span>
@@ -1985,17 +2050,31 @@ const SlideCanvas: React.FC<{
                   </h3>
                 </div>
               </div>
-              {onOpenNotes && (
-                <button
-                  type="button"
-                  onClick={onOpenNotes}
-                  className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-[11.5px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
-                >
-                  <FileText className="w-3.5 h-3.5" />
-                  <span>Panelde Oku</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              )}
+              <div className="flex items-center gap-1.5 shrink-0">
+                {onOpenPdfAtPage && (
+                  <button
+                    type="button"
+                    onClick={() => onOpenPdfAtPage(slidePdfLoc.startPage)}
+                    title={`Orijinal ders sunumunun ${slidePdfLoc.citation} sayfalarını yan ekranda aç`}
+                    className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/25 text-[11.5px] font-semibold text-amber-800 dark:text-amber-300 inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs active:scale-95"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                    <span className="hidden sm:inline">PDF'te Aç</span>
+                    <span>({slidePdfLoc.citation})</span>
+                  </button>
+                )}
+                {onOpenNotes && (
+                  <button
+                    type="button"
+                    onClick={onOpenNotes}
+                    className="shrink-0 whitespace-nowrap h-7.5 px-2.5 rounded-lg bg-white border border-line text-[11.5px] font-semibold text-accent hover:bg-accent-soft inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    <span>Panelde Oku</span>
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
             </div>
             {/* Quick Medical Terms Pills for This Slide */}
             <SlideTermsPills
