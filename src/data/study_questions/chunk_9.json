@@ -1,5 +1,518 @@
 [
   {
+    "id": "prac-med-003",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 3,
+    "slideTitle": "Vazoaktif Aminler I: Histamin Kaynakları, Depolanması ve Degranülasyon Mekanizmaları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Mast hücrelerinden histamin salınımını tetikleyen faktörlerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Antijenin mast hücresi yüzeyindeki FcεRI'ye bağlı komşu IgE moleküllerini çapraz bağlaması",
+      "B) Kompleman kaskadında oluşan C3a ve C5a anafilatoksinlerinin mast hücre reseptörlerine bağlanması",
+      "C) Dokuya uygulanan mekanik travma, aşırı ısı ve soğuk gibi fiziksel uyaranlar",
+      "D) Duyusal sinir uçlarından salınan substans P gibi nöropeptitlerin mast hücrelerini uyarması",
+      "E) C5b-9 membran atak kompleksinin mast hücre granüllerini fagosite etmesi"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü C5b-9 membran atak kompleksi (MAC), hedef hücre zarında litik por açarak ozmotik lizis oluşturan bir yapıdır; fagositoz yapamaz ve mast hücre degranülasyonunu bu yolla uyarmaz. Mast hücresi degranülasyonunu tetikleyen kompleman parçaları serbest çözünür anafilatoksinler olan C3a ve C5a'dır. A, B, C ve D seçenekleri degranülasyonu başlatan kanıtlanmış mekanizmalardır."
+  },
+  {
+    "id": "prac-med-004",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 4,
+    "slideTitle": "Vazoaktif Aminler II: Histamin Reseptörleri, Damarsal Etkiler ve Antihistaminikler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Histaminin mikrovasküler yataktaki etkileri ve reseptör mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Arteriyollerde vazokonstriksiyon, venüllerde ise endotel gevşemesi oluşturarak kan akımını azaltır",
+      "B) Postkapiller venüllerde endotel hücre kasılmasına yol açarak hücreler arası aralıkları açar ve ani-geçici geçirgenlik artışı yapar",
+      "C) Enflamasyondaki vasküler geçirgenlik artışına aracılık eden temel reseptör H2 reseptörüdür",
+      "D) Endotel hücrelerinde apoptozu indükleyerek kalıcı ve geri dönüşsüz damar hasarı meydana getirir",
+      "E) H1 antihistaminikler mast hücre degranülasyonunu tamamen engelleyerek kompleman aktivasyonunu durdurur"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kusursuz bir tanımdır: Histamin, postkapiller venüllerdeki endotel hücrelerinin hücre iskeletini kasarak aralarındaki bağlantıları açar ve 15-30 dakika süren ani-geçici (immediate transient) plazma eksüdasyonuna yol açar. A yanlıştır (arteriyollerde vazodilatasyon yapar); C yanlıştır (enflamasyon reseptörü H1'dir, H2 mide asidini artırır); D yanlıştır (endotel hasarı değil fonksiyonel geri dönüşlü kasılmadır); E yanlıştır (antihistaminikler reseptör antagonistidir, komplemanı veya degranülasyonu durdurmaz)."
+  },
+  {
+    "id": "prac-med-005",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 5,
+    "slideTitle": "Vazoaktif Aminler III: Serotonin (5-Hidroksitriptamin) ve Trombosit Kaynaklı Vasküler Yanıtlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Serotonin (5-HT) mediyatörü ve enflamasyondaki rolü ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Kanda esas olarak trombositlerin yoğun granüllerinde depolanır ve agregasyon sırasında salınır",
+      "B) Trombositler serotonini de novo sentezleyemez, dolaşımdaki serotonini aktif olarak içlerine alırlar",
+      "C) İnsanlarda akut enflamasyonun vasküler permeabilite artışından sorumlu en baskın vazoaktif amin serotonindir",
+      "D) Gastrointestinal sistemdeki enterokromaffin hücreleri vücuttaki en büyük serotonin üretim kaynağıdır",
+      "E) Karsinoid sendromda aşırı serotonin salınımı vazomotor instabilite ve sağ kalp kapak fibrozu ile ilişkilidir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü insanlarda akut enflamasyonun erken vasküler geçirgenlik artışından sorumlu primer vazoaktif amin histamindir. Serotonin insanda esas olarak trombosit agregasyonu ve hemostatik vazokonstriksiyonda rol oynar; vasküler permeabilite artırıcı etkisi sıçan ve fare gibi kemirgen modellerinde belirgindir. A, B, D ve E seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-med-006",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 6,
+    "slideTitle": "Araşidonik Asit Metabolizması (Eikozanoidler): Giriş ve Fosfolipaz A2 Aktivasyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Araşidonik asit metabolizması ve eikozanoid sentezinin regülasyonu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Araşidonik asit hücre sitoplazmasında serbest ve yüksek konsantrasyonda depolanan bir doymuş yağ asididir",
+      "B) Fosfolipaz A2 enzimi inhibe edildiğinde lökotrien sentezi durur fakat prostaglandin sentezi artarak devam eder",
+      "C) Glukokortikoidler lipokortin-1 (anneksin A1) ekspresyonunu indükleyerek Fosfolipaz A2'yi inhibe eder ve eikozanoid üretimini kökten baskılar",
+      "D) Eikozanoidler 18 karbonlu doymamış yağ asitlerinden türetilen peptit yapılı sitokinlerdir",
+      "E) Aspirin Fosfolipaz A2 enzimini irreversibl asetilleyerek etki gösteren primer ajandır"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; glukokortikoidler nükleer reseptörleri aracılığıyla lipokortin-1 (anneksin A1) sentezini artırır ve bu protein cPLA2'yi doğrudan inhibe ederek serbest araşidonik asit çıkışını durdurur. A yanlıştır (membrana esterleşmiştir); B yanlıştır (her iki yolak da durur); D yanlıştır (20 karbonlu lipidlerdir); E yanlıştır (aspirin PLA2'yi değil COX enzimini asetiller)."
+  },
+  {
+    "id": "prac-med-007",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 7,
+    "slideTitle": "Siklooksijenaz (COX) Yolağı: COX-1 ve COX-2 İzoenzimleri ve Prostaglandin Sentezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Siklooksijenaz izoenzimleri (COX-1 ve COX-2) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) COX-1 çoğu dokuda sürekli eksprese edilir ve mide mukozasında koruyucu prostaglandin sentezinden sorumludur",
+      "B) COX-2 bakteriyel endotoksin ve proenflamatuar sitokinlerle (IL-1, TNF) indüklenen başlıca izoenzimdir",
+      "C) Araşidonik asidin COX yolağındaki metabolizmasında oluşan ortak ana öncül molekül PGH2'dir",
+      "D) Trombositler çekirdeksiz olduklarından de novo COX-2 sentezleyemezler ve agregasyon için COX-1'e bağımlıdırlar",
+      "E) COX-2 enzimi sadece enfeksiyon anında aktive olur, sağlıklı böbrek ve endotel dokusunda hiçbir fizyolojik fonksiyonu bulunmaz"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü COX-2 yalnızca enflamasyonla ilişkili değildir; vasküler endotel hücrelerinde antitrombotik PGI2 (prostasiklin) sentezinde ve böbrek medulla/makula densasında sıvı-elektrolit dengesinin korunmasında fizyolojik ve konstitütif görevlere de sahiptir. A, B, C ve D seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-med-008",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 8,
+    "slideTitle": "Prostaglandinler: PGD2, PGE2 ve PGF2a'nın Enflamasyondaki Spesifik Rolleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Prostaglandin E2'nin (PGE2) enflamasyondaki biyolojik etkileri ve klinik sonuçları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Hipotalamusta vücut ısısı ayar noktasını düşürerek hipotermi ve soğuk terlemeye yol açar",
+      "B) Periferik nosiseptörleri bradikinine ve diğer kimyasal uyaranlara karşı duyarlılaştırarak hiperaljezi oluşturur",
+      "C) Nötrofillerin fagositoz yeteneğini tamamen durduran en güçlü immünsüpresif mediyatördür",
+      "D) Trombositlerde agregasyonu kuvvetle indükleyerek primer hemostatik tıkacı oluşturan ana ajandır",
+      "E) Sadece karaciğer parankiminde depolanan ve dolaşıma asla salınmayan bir plazma proteinidir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; PGE2 ağrı liflerini (nosiseptörleri) bradikinine ve mekanik uyaranlara karşı aşırı duyarlı hale getirerek enflamatuar hiperaljeziye yol açar. Hipotalamusta ise vücut termostatını yukarı çekerek ateşe neden olur (A yanlış). C, D ve E seçenekleri yanlıştır."
+  },
+  {
+    "id": "prac-med-009",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 9,
+    "slideTitle": "Tromboksan A2 (TXA2) ve Prostasiklin (PGI2) Dengesi: Tromboz ve Vasküler Bütünlük",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Tromboksan A2 (TXA2) ve Prostasiklin (PGI2) dengesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) TXA2 trombositler tarafından üretilir ve güçlü bir vazokonstriktör ile agregasyon indükleyicisidir",
+      "B) PGI2 vasküler endotel tarafından sentezlenir; vazodilatasyon yapar ve trombosit agregasyonunu engeller",
+      "C) Trombositler çekirdeksiz olduklarından yeni protein sentezleyemez ve TXA2 üretimi için COX-1'e bağımlıdırlar",
+      "D) Selektif COX-2 inhibitörleri TXA2 sentezini sıfırlayarak kanama diyatezine ve kontrolsüz hemorajiye yol açarlar",
+      "E) Sağlıklı damar duvarında endotelyal PGI2 üretimi trombüs oluşumunu engelleyen koruyucu bir mekanizmadır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü selektif COX-2 inhibitörleri TXA2'yi değil, endotelyal PGI2'yi baskılarlar. Trombositlerdeki COX-1 engellenmediği için TXA2 üretimi devam eder; terazi protrombotik tarafa kayarak kanama değil tam tersine tromboz, miyokard enfarktüsü ve inme riskinde artışa yol açar. A, B, C ve E seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-med-010",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 10,
+    "slideTitle": "Lipoksijenaz (5-LOX) Yolağı ve Nötrofil Kemotaksisi: LTB4",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Lökotrien B4 (LTB4) ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Siklooksijenaz-1 yolağında trombositler tarafından sentezlenen güçlü bir vazodilatatördür",
+      "B) Nötrofiller üzerinde güçlü kemotaktik etki gösterir, lökosit adezyonunu ve degranülasyonunu indükler",
+      "C) Bronşiyal düz kasları gevşeterek astım tedavisinde bronkodilatör olarak kullanılır",
+      "D) Mast hücrelerinden salınan preforme bir vazoaktif amin olup venüllerde anında aralık açar",
+      "E) Karaciğerde inaktif bir zimojen olarak sentezlenip pıhtılaşma kaskadında görev alır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; LTB4 5-lipoksijenaz yolağında üretilen en güçlü nötrofil kemoatraktanıdır, integrin afinitesini artırır, degranülasyon ve süperoksit üretimini uyarır. A yanlıştır (5-LOX ürünüdür); C yanlıştır (bronkodilatör değildir); D yanlıştır (lipid mediyatördür); E yanlıştır (hücre kaynaklıdır)."
+  },
+  {
+    "id": "prac-med-011",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 11,
+    "slideTitle": "Sisteinil Lökotrienler (LTC4, LTD4, LTE4) ve Bronkospazm: Astım Patofizyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Sisteinil lökotrienlerin (LTC4, LTD4, LTE4) patofizyolojik etkileri ve klinik önemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Bronş düz kaslarında histaminden kat kat güçlü ve uzun süreli bronkokonstriksiyon oluştururlar",
+      "B) Postkapiller venüllerde geçirgenliği belirgin derecede artırarak hava yolu mukozasında ödeme yol açarlar",
+      "C) Solunum yollarında kadeh (goblet) hücrelerinden ve submukozal bezlerden mukus sekresyonunu artırırlar",
+      "D) Pulmoner arteriyollerde ve bronşlarda güçlü vazodilatasyon ve bronkodilatasyon yaparak astımı rahatlatırlar",
+      "E) Tarihsel olarak anafilaksinin yavaş reaksiyon veren maddesi (SRS-A) olarak tanımlanmışlardır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü sisteinil lökotrienler bronkodilatasyon değil, histaminden bin kat daha güçlü ve kalıcı bronkokonstriksiyon (bronkospazm) yaparlar. Postkapiller venüllerde ödem ve mukus tıkaçları oluşturarak astım atağını tetiklerler. A, B, C ve E seçenekleri doğru bilgileri içerir."
+  },
+  {
+    "id": "prac-med-012",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 12,
+    "slideTitle": "Eikozanoidleri Hedefleyen Farmakolojik Ajanlar: NSAİİ'ler, Koksibler ve Lökotrien Antagonistleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aspirin kullanan astımlı bir hastada aniden şiddetli nefes darlığı ve bronkospazm gelişmesinin patofizyolojik mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Aspirinin mast hücrelerindeki H1 histamin reseptörlerini doğrudan aktive etmesi",
+      "B) Siklooksijenaz blokajı nedeniyle araşidonik asidin 5-lipoksijenaz yolağına kayarak aşırı sisteinil lökotrien üretimine yol açması",
+      "C) Plazmada kompleman C1 inhibitörünün tükenmesi sonucu bradikinin fırtınası oluşması",
+      "D) Trombositlerden masif serotonin salınımının pulmoner alveolleri parçalaması",
+      "E) Fosfolipaz A2 enziminin aşırı uyarılmasıyla membran fosfolipidlerinin erimesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; aspirin COX enzimini bloke ettiğinde serbest araşidonik asit metabolize edilmek üzere tek açık kanal olan 5-lipoksijenaz yolağına kayar (şant). Aşırı miktarda sentezlenen sisteinil lökotrienler (LTC4, LTD4, LTE4) bronş düz kaslarını şiddetle kasarak aspirinle indüklenen astım atağına yol açar."
+  },
+  {
+    "id": "prac-med-013",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 13,
+    "slideTitle": "Enflamasyonun Çözünmesi (Resolüsyon) ve Lipoksinler (LXA4, LXB4)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Enflamasyonun çözünme (resolüsyon) fazında görev alan Lipoksinler (LXA4, LXB4) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Araşidonik asitten türeyen ve enflamatuar yanıtı sonlandıran anti-enflamatuar lipid mediyatörlerdir",
+      "B) Nötrofillerin endotelyal adezyonunu, kemotaksisini ve dokuya toplanmasını kuvvetle inhibe ederler",
+      "C) Genellikle nötrofil-trombosit veya lökosit-endotel etkileşimi ile transselüler yolla sentezlenirler",
+      "D) Nötrofiller üzerinde LTB4'ten daha güçlü bir kemoatraktan etki göstererek akut pürülan eksüdayı artırırlar",
+      "E) Makrofajların dokudaki hücresel döküntüleri ve apoptotik nötrofilleri temizlemesini desteklerler"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü lipoksinler nötrofilleri çeken kemoatraktanlar değildir; tam aksine nötrofil kemotaksisini, adezyonunu ve toplanmasını durduran anti-enflamatuar ajanlardır (LTB4'ün fonksiyonel antagonistidirler). A, B, C ve E seçenekleri lipoksinlerin temel fizyolojik nitelikleridir."
+  },
+  {
+    "id": "prac-med-014",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 14,
+    "slideTitle": "Akut Enflamasyonun Ana Sitokinleri I: Tümör Nekroz Faktörü (TNF-alfa) ve İnterlökin-1 (IL-1)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Akut enflamasyonda Tümör Nekroz Faktörü (TNF) ve İnterlökin-1'in (IL-1) vasküler endotel üzerindeki temel etkisi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Endotelde adezyon moleküllerini (E-selektin, ICAM-1) baskılayarak lökosit göçünü tamamen engellemek",
+      "B) Endoteli aktive ederek E-selektin, ICAM-1 ve VCAM-1 ekspresyonunu artırmak ve prokoagülan fenotipe dönüştürmek",
+      "C) Endotel hücrelerini doğrudan nekroza uğratıp damar lümenini tamamen yok etmek",
+      "D) Plazmada kompleman C3 molekülünün karaciğerden sentezini durdurmak",
+      "E) Histamin H1 reseptörlerini parçalayarak vasküler tonusu artırmak"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; TNF ve IL-1'in vasküler yataktaki temel fonksiyonu endotel aktivasyonudur. Lökosit adezyon moleküllerinin (E-selektin, ICAM-1, VCAM-1) ekspresyonunu indükler ve endoteli pıhtılaşmayı destekleyen prokoagülan bir duruma geçirirler. A tam tersidir; C, D ve E seçenekleri yanlıştır."
+  },
+  {
+    "id": "prac-med-015",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 15,
+    "slideTitle": "Sitokinlerin Sistemik Etkileri: Akut Faz Yanıtı, Kaşeksi ve Septik Şok",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Sepsis ve septik şok patogenezinde yüksek düzeylerde salınan TNF'nin yol açtığı sistemik patolojik etkilerle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sistemik vazodilatasyon ve yaygın vasküler geçirgenlik artışı ile dirençli hipotansiyona yol açması",
+      "B) Miyokard kasılmasını baskılayarak kardiyak debiyi düşürmesi",
+      "C) Mikrovasküler trombozları ve pıhtılaşma kaskadını tetikleyerek DIC gelişimini kolaylaştırması",
+      "D) Kemik iliğinde eritrosit ve lökosit üretimini tamamen sonlandırarak aplastik anemiye yol açması",
+      "E) Kronik evrede lipoprotein lipazı inhibe ederek ve iştahı keserek kaşeksi tablosu oluşturması"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü TNF kemik iliğinde üretimi durdurmaz; tam aksine koloni uyarıcı faktörleri (G-CSF) artırarak nötrofil üretimini ve salınımını tetikler ve kanda sola kaymalı lökositoz tablosu oluşturur. A, B, C ve E seçenekleri yüksek TNF düzeylerinin oluşturduğu iyi bilinen sistemik patolojik sonuçlardır."
+  },
+  {
+    "id": "prac-med-016",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 16,
+    "slideTitle": "İnterlökin-6 (IL-6), İnterlökin-17 (IL-17) ve Tip I İnterferonlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Karaciğerden C-reaktif protein (CRP) ve fibrinojen gibi akut faz reaktanlarının sentezini uyararak eritrosit sedimentasyon hızını (ESH) artıran temel sitokin aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İnterlökin-4 (IL-4)",
+      "B) İnterlökin-6 (IL-6)",
+      "C) İnterlökin-10 (IL-10)",
+      "D) Transforme edici büyüme faktörü-beta (TGF-β)",
+      "E) İnterferon-gama (IFN-γ)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; İnterlökin-6 (IL-6), karaciğer hepatositleri üzerindeki reseptörleri aracılığıyla CRP, serum amiloid A ve fibrinojen gibi akut faz proteinlerinin sentezini indükleyen başlıca sitokindir. Fibrinojen artışı da ESH yüksekliğine neden olur. A (IL-4 Th2 yanıtı), C ve D (IL-10 ve TGF-beta anti-enflamatuar), E (IFN-gama makrofaj aktivatörü) farklı işlevlere sahiptir."
+  },
+  {
+    "id": "prac-med-017",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 17,
+    "slideTitle": "Kemokinler: Yapısal Gruplar (CXC, CC, C, CX3C) ve Lökosit Göçü",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kemokinlerin yapısal sınıfları ve hedef hücre özgüllükleri ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) CXCL8 (İnterlökin-8) — Nötrofillerin selektif kemotaksisi ve aktivasyonu",
+      "B) Eotaksin (CCL11) — Nötrofillerin bakteriyel apse odağına süratle çekilmesi",
+      "C) Monosit Kemoatraktan Protein-1 (MCP-1) — Trombositlerin agregasyonunun durdurulması",
+      "D) Lenfotaktin (XCL1) — Eritrositlerin kılcal damarlara yönlendirilmesi",
+      "E) Fraktalkin (CX3CL1) — Mast hücrelerinin degranülasyonunun tamamen engellenmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; CXCL8 (IL-8) nötrofillerin primer kemotaktik CXC kemokinidir. B yanlıştır (Eotaksin eozinofilleri çeker); C yanlıştır (MCP-1 monositleri çeker); D ve E seçenekleri uydurma fonksiyonlardır."
+  },
+  {
+    "id": "prac-med-018",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 18,
+    "slideTitle": "Kompleman Sistemi I: Aktivasyon Yolakları (Klasik, Alternatif, Lektin) ve C3 Konvertaz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kompleman sisteminin aktivasyon yolları ve kritik basamakları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Alternatif yolak daima antijen-antikor komplekslerinin C1 bileşenine bağlanmasıyla başlar",
+      "B) Lektin yolağında C3 konvertaz oluşumu için T hücre reseptörlerinin uyarılması zorunludur",
+      "C) Klasik yolakta C4b2a, alternatif yolakta C3bBb kompleksi C3 konvertaz görevi görerek C3'ü parçalar",
+      "D) Kompleman proteinlerinin tamamı dalak beyaz pulpasında depolanıp enfeksiyon anında degranüle edilir",
+      "E) C3 parçalanması sadece hücre lizisine yol açar, enflamasyon veya opsonizasyon yapamaz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; klasik ve lektin yollarında C4b2a kompleksi, alternatif yolda ise C3bBb kompleksi C3 konvertaz aktivitesi göstererek C3'ü C3a ve C3b fragmanlarına ayırır. A yanlıştır (antikorla başlayan klasik yoldur); B yanlıştır (lektin yolu MBL ile başlar); D yanlıştır (karaciğerde sentezlenir); E yanlıştır (C3a anafilatoksin, C3b ise opsonindir)."
+  },
+  {
+    "id": "prac-med-019",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 19,
+    "slideTitle": "Kompleman Sistemi II: Efektör Fonksiyonlar (Anafilatoksinler, Opsonizasyon ve MAC)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kompleman sisteminin efektör molekülleri ve fonksiyonları ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) C3b — Opsonizasyon ve makrofaj fagositozunun uyarılması",
+      "B) C5a — Nötrofil kemotaksisi ve mast hücresinden histamin salınımı",
+      "C) C5b-9 — Hedef hücre membranında litik por açarak ozmotik lizis oluşturma (MAC)",
+      "D) C3a — Düz kas gevşemesi ve nötrofillerin fagositoz yeteneğinin yok edilmesi",
+      "E) iC3b — Lökosit yüzeyindeki CR3 reseptörüne bağlanarak fagositozu kolaylaştırma"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü C3a anafilatoksindir; düz kası gevşetmez ve fagositozu engellemez. Mast hücrelerinden histamin salarak vasküler geçirgenliği artıran ve bronş düz kasını kasan pro-enflamatuar bir mediyatördür. A, B, C ve E seçenekleri doğru fonksiyon eşleştirmeleridir."
+  },
+  {
+    "id": "prac-med-020",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 20,
+    "slideTitle": "Kompleman Düzenleyici Proteinleri ve İlişkili Klinik Hastalıklar (C1-INH, CD55/CD59, Faktör H)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Herediter Anjiyoödem (HAE) hastalığının etiyopatogenezi ve klinik tablosu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Mast hücrelerinden aşırı histamin salınımı sonucu ortaya çıkar ve H1 antihistaminik tedavisine dramatik yanıt verir",
+      "B) C1 inhibitörü (C1-INH) eksikliği sonucu kallikrein-kinin sisteminin kontrolsüz aktivasyonu ve masif bradikinin üretimiyle gelişir",
+      "C) CD55 ve CD59 proteinlerinin aşırı ekspresyonu nedeniyle kanda pıhtılaşma faktörlerinin tükenmesi tablosudur",
+      "D) Sadece deride ürtiker plakları ile sınırlı kalır, laringeal ödem veya asfiksi riski taşımaz",
+      "E) Kompleman C3 eksikliğine bağlı olarak gelişen ağır bir pürülan bakteriyel enfeksiyon tablosudur"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; Herediter Anjiyoödem C1-INH eksikliği nedeniyle gelişir. C1-INH kallikreini baskılayamadığı için yüksek molekül ağırlıklı kininojenden kontrolsüz miktarda Bradikinin üretilir. Ödemin primer sorumlusu bradikinindir, histamin değildir (antihistaminiklere yanıt vermez). Diğer seçenekler yanlıştır."
+  },
+  {
+    "id": "prac-med-021",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 21,
+    "slideTitle": "Plazma Kaynaklı Kaskadlar I: Hageman Faktörü (Faktör XII) ve Kallikrein-Kinin Sistemi (Bradikinin)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Bradikinin mediyatörü ve Kallikrein-Kinin sistemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Enflamasyon sahasında nosiseptörleri uyararak doğrudan ağrı hissine yol açan temel mediyatörlerdendir",
+      "B) Arteriyollerde vazodilatasyon ve venüllerde belirgin vasküler geçirgenlik artışı meydana getirir",
+      "C) Plazmada Yüksek Molekül Ağırlıklı Kininojenden (HMWK) kallikrein enzimi aracılığıyla üretilir",
+      "D) Karaciğer parankiminde depolanan preforme bir vazoaktif amin olup trombosit tıkacını eritir",
+      "E) Anjiyotensin dönüştürücü enzim (ACE) tarafından inaktive edildiğinden, ACE inhibitörü kullananlarda birikerek öksürük yapabilir"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü bradikinin bir vazoaktif amin değil, plazmada proteolitik olarak açığa çıkarılan 9 aminoasitlik bir peptittir (kinin). Karaciğerde depolanmaz; plazmada dolaşan HMWK'den kallikrein aracılığıyla sentezlenir. A, B, C ve E seçenekleri bradikininin temel patofizyolojik ve farmakolojik özellikleridir."
+  },
+  {
+    "id": "prac-med-022",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 22,
+    "slideTitle": "Plazma Kaynaklı Kaskadlar II: Pıhtılaşma ve Fibrinolizis Sistemlerinin Enflamasyon Köprüleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Pıhtılaşma ve fibrinolitik sistemlerin enflamasyonla olan etkileşimi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Trombin sadece fibrinojeni fibrine çevirir, lökositler veya endotel hücreleri üzerinde hiçbir reseptörü bulunmaz",
+      "B) Plazmin enzimi kompleman sistemini tamamen inaktive ederek C3a ve C5a oluşumunu engeller",
+      "C) Trombin PAR-1 reseptörlerini aktive ederek endotelde adezyon moleküllerini ve sitokin salınımını uyarırken; plazmin C3'ü parçalayarak C3a üretebilir",
+      "D) Fibrin oluşumu mikropların çevre dokulara yayılmasını kolaylaştıran bir patolojik süreçtir",
+      "E) Faktör XII pıhtılaşmayı aktive eder fakat kinin ve kompleman kaskadlarıyla hiçbir temas noktası yoktur"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; trombin PAR-1 reseptörlerini aktive ederek endotelde selektinleri, kemokinleri ve sitokinleri indükler. Fibrinolitik enzim plazmin ise C3'ü proteolitik olarak parçalayıp C3a anafilatoksinini açığa çıkarabilir. A, B, D ve E seçenekleri yanlıştır."
+  },
+  {
+    "id": "prac-med-023",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 23,
+    "slideTitle": "Platelet Aktive Edici Faktör (PAF) ve Nitrik Oksit (NO) Biyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Nitrik oksit (NO) sentezi ve izoenzimleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) eNOS endotelde konstitütif olarak bulunur ve ürettiği NO ile vazodilatasyon yaparak trombosit adezyonunu baskılar",
+      "B) iNOS makrofajlarda proenflamatuar sitokinler (IFN-γ) ve bakteriyel endotoksin ile indüklenen kalsiyumdan bağımsız enzimdir",
+      "C) Makrofaj iNOS kaynaklı NO, süperoksit anyonu ile birleşerek mikrobisidal peroksinitrit (ONOO-) radikalini oluşturur",
+      "D) Nitrik oksit intrasellüler cAMP düzeyini artırarak damar düz kaslarında şiddetli vazokonstriksiyon meydana getirir",
+      "E) L-arjinin, nitrik oksit sentaz enzimi için temel aminoasit substratıdır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır çünkü nitrik oksit hücre içi cAMP'yi değil, çözünür guanilat siklazı uyararak cGMP düzeyini artırır; vazokonstriksiyon değil tam tersine damar düz kasında güçlü bir gevşeme ve vazodilatasyon meydana getirir. A, B, C ve E seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-med-024",
+    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
+    "slideNumber": 24,
+    "slideTitle": "Enflamasyon Mediyatörlerinin Fazlalığı, Sinerjisi ve Klinik-Terapötik Entegrasyon",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Enflamasyonun kimyasal mediyatörlerinin biyolojik yedekliliği (redundancy) ve farmakolojik hedeflenmesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Vasküler geçirgenlik artışı histamin, lökotrienler, bradikinin ve kompleman parçaları gibi çok sayıda farklı mediyatörle yürütülür",
+      "B) Biyolojik yedeklilik sayesinde tek bir mediyatör yolu mutasyonla veya mikropla bloke edilse dahi enflamatuar konak savunması sürdürülebilir",
+      "C) Klasik H1 antihistaminikler tüm lökotrien ve sitokin reseptörlerini de eş zamanlı bloke ettikleri için romatoid artrit tedavisinde birinci basamak seçenektir",
+      "D) Kortikosteroidler PLA2 inhibisyonu ve pro-enflamatuar gen transkripsiyonunu baskılayarak çoklu mediyatör yolaklarını aynı anda durdururlar",
+      "E) Ekulizumab, kompleman C5 molekülünü hedef alarak C5b-9 membran atak kompleksi oluşumunu engelleyen monoklonal bir antikordur"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü H1 antihistaminikler sadece H1 histamin reseptörünü bloke ederler; lökotrien, sitokin, kinin veya kompleman yolaklarına etki etmezler. Bu nedenle romatoid artrit gibi karmaşık sistemik enflamatuar hastalıklarda hiçbir terapötik yararları yoktur. A, B, D ve E seçenekleri doğru ilkelerdir."
+  },
+  {
+    "id": "prac-adh-001",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 1,
+    "slideTitle": "Aşırı Duyarlılık Reaksiyonlarına Giriş ve İmmünopatolojik Temeller",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Aşırı duyarlılık (hipersensitivite) reaksiyonlarının etyopatogenezi ve genel immünopatolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Doku hasarını oluşturan efektör yolaklar, enfeksiyonlara karşı gelişen normal koruyucu immün yolaklarla temel mekanizma açısından aynıdır",
+      "B) Otoantijenlerin konaktan tamamen temizlenememesi, otoimmün aşırı duyarlılık hastalıklarının kronik ve tekrarlayıcı seyretmesine yol açar",
+      "C) Aşırı duyarlılık yalnızca daha önce karşılaşılmamış yabancı antijenlere karşı ilk temasta gelişen primer yanıtlardan ibarettir",
+      "D) Mycobacterium tuberculosis enfeksiyonunda doku nekrozunun birincil nedeni basilin toksinlerinden ziyade konağın geliştirdiği T hücre yanıtıdır",
+      "E) Genetik yatkınlığı olan bireylerde normalde zararsız olan çevresel proteinlere karşı patolojik immün yanıt gelişebilir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü aşırı duyarlılık reaksiyonlarının gelişebilmesi için immün sistemin ilgili antijenle daha önceden mutlaka karşılaşmış ve 'duyarlılaşmış' (sensitize olmuş) olması şarttır. İlk temas sensitizasyon fazıdır ve genellikle klinik doku hasarı oluşturmaz; hasar duyarlılaşmış bireyin antijenle yeniden karşılaşması sonucu ortaya çıkar. A, B, D ve E seçenekleri aşırı duyarlılığın temel patolojik ilkelerini doğru ifade etmektedir."
+  },
+  {
+    "id": "prac-adh-002",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 2,
+    "slideTitle": "Gell ve Coombs Sınıflaması: Dört Tip Aşırı Duyarlılığın Karşılaştırmalı Mimarisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Aşırı duyarlılık reaksiyonlarının Gell ve Coombs sınıflamasına göre temel mekanizmaları ve immünolojik bileşenleri karşılaştırıldığında aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tip I: Dolaşan immün komplekslerin endotel altına çökmesi ve plazminojen aktivasyonu",
+      "B) Tip II: Antikorlardan tamamen bağımsız CD8+ T lenfosit sitotoksisitesi",
+      "C) Tip III: Doku hücre yüzeyine sabitlenmiş antijenlere karşı IgE antikorlarının bağlanması",
+      "D) Tip IV: Duyarlılaşmış T lenfositlerin saldığı sitokinler ve CTL aktivitesi ile yürütülen hücresel hasar",
+      "E) Tip I: Kompleman aktivasyonu sonucu oluşan membran atak kompleksi ile masif eritrosit lizisi"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur; Tip IV aşırı duyarlılık reaksiyonları antikor bağımsız olup, CD4+ T hücrelerinden salınan sitokinler (DTH) ve CD8+ sitotoksik T lenfositlerin direkt hücresel sitotoksisitesi ile yürütülür. A seçeneği Tip III'ü, B seçeneği Tip IV'ü, C seçeneği Tip II mekanizmasını yanlış tanımlamıştır (Tip II'de IgG/IgM rol oynar, IgE değil). E seçeneği ise Tip II sitotoksik kompleman hasarıdır."
+  },
+  {
+    "id": "prac-adh-003",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 3,
+    "slideTitle": "Tip I Aşırı Duyarlılık: Duyarlılaşma (Sensitizasyon), Th2 Yanıtı ve IgE Üretimi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tip I aşırı duyarlılık reaksiyonunun duyarlılaşma (sensitizasyon) fazında rol alan sitokinler ve moleküler olaylar ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Naif B lenfositlerin IgE üretmeye başlaması temel olarak makrofaj kaynaklı IFN-gama uyarısıyla gerçekleşir",
+      "B) IL-5, B lenfositlerin yüzeyindeki Fc gama reseptörlerini aktive ederek IgG yapımını durdurur",
+      "C) Alerjen-spesifik IgE antikorları mast hücrelerinin yüzeyindeki düşük afiniteli FcγRII reseptörlerine bağlanır",
+      "D) Th2 lenfositlerden salgılanan IL-4 ve IL-13, B hücrelerinde IgE izotipine sınıf değişimini tetikleyen anahtar sitokinlerdir",
+      "E) Duyarlılaşma fazı tamamlandığında mast hücreleri derhal degranüle olarak masif doku nekrozuna neden olur"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur; Th2 lenfositler tarafından salgılanan IL-4 ve IL-13 sitokinleri B lenfositlerin immünoglobulin ağır zincir gen lokusunda sınıf değişimini (class switching) yöneterek IgE üretimini sağlar. A seçeneği yanlıştır çünkü IFN-gama Th1 sitokini olup IgE üretimini baskılar; B seçeneği yanlıştır çünkü IL-5 eozinofillerin büyüme ve farklılaşma faktörüdür; C seçeneği yanlıştır çünkü IgE'yi bağlayan reseptör FcεRI'dir; E seçeneği yanlıştır çünkü duyarlılaşma evresinde degranülasyon olmaz, hücre sadece silahlanır."
+  },
+  {
+    "id": "prac-adh-004",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 4,
+    "slideTitle": "Mast Hücresi Aktivasyonu ve Mediyatörleri: Preforme Granüller ve De Novo Eikozanoidler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tip I aşırı duyarlılık reaksiyonunda mast hücrelerinin aktivasyonu ve salınan kimyasal mediyatörlerin biyolojik etkileri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Mast hücresi degranülasyonunun tetiklenebilmesi için antijenin hücre yüzeyindeki komşu IgE moleküllerini çapraz bağlaması gerekir",
+      "B) Sistemik anafilaksi tanısını doğrulamada serumda triptaz enzim düzeyinin ölçülmesi altın standart biyobelirteçtir",
+      "C) Sisteinil-lökotrienler (LTC4, LTD4, LTE4), bronkokonstriksiyon oluşturma gücü bakımından histaminden belirgin derecede daha zayıftır",
+      "D) Araşidonik asit siklooksijenaz yolağından üretilen prostaglandin D2 (PGD2), güçlü vazodilatasyon ve bronkospazma yol açar",
+      "E) Histamin H1 reseptörleri üzerinden postkapiller venüllerde endotelyal kontraksiyon yaparak doku ödemini başlatır"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır çünkü sisteinil-lökotrienler (LTC4, LTD4, LTE4) bronş düz kaslarını kasma ve mikrovasküler geçirgenliği artırma bakımından histaminden zayıf değil, tam tersine HİSTAMİNDEN YAKLAŞIK 1000 KAT DAHA GÜÇLÜ ve uzun etkilidir. A, B, D ve E seçenekleri mast hücre fizyopatolojisine dair tamamen doğru bilimsel verilerdir."
+  },
+  {
+    "id": "prac-adh-005",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 5,
+    "slideTitle": "Tip I Aşırı Duyarlılığın Fazları: Erken (İmmüdiat) ve Geç Faz Reaksiyonları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Atopik astım tanılı bir hastada alerjen maruziyetinden 6 saat sonra ortaya çıkan, nefes darlığında belirgin artış ve mukozal doku hasarı ile karakterize geç faz reaksiyonunun patolojisinde aşağıdaki hücre ve moleküllerden hangisi birincil derecede sorumludur?",
+    "options": [
+      "A) Plazma hücreleri tarafından salgılanan IgM antikorları ve klasik kompleman kaskadı",
+      "B) Eozinofiller tarafından salgılanan Majör Bazik Protein (MBP) ve Eozinofil Katyonik Protein (ECP)",
+      "C) CD8+ sitotoksik T lenfositlerin perforin-granzim aracılığıyla endotel hücrelerini öldürmesi",
+      "D) Nötrofillerin membran atak kompleksi (C5b-9) oluşturarak bronş düz kasını nekroza uğratması",
+      "E) Yalnızca preforme histaminin H2 reseptörlerini uyararak gastrik asit hipersekresyonu yapması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; Tip I aşırı duyarlılığın geç faz reaksiyonu maruziyetten 2-24 saat sonra gelişir ve bu evrede dokuya toplanan eozinofillerin salgıladığı Majör Bazik Protein (MBP) ve Eozinofil Katyonik Protein (ECP) epitel hücrelerini doğrudan parçalayarak hava yolu hasarına yol açar. A seçeneği Tip II/III mekanizmasıdır; C seçeneği Tip IV sitotoksik yanıttır; D seçeneği kompleman kaskadıdır; E seçeneğinde histamin erken fazda etkilidir ve H2 reseptörü bronş hasarından sorumlu değildir."
+  },
+  {
     "id": "prac-adh-006",
     "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
     "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
@@ -1385,518 +1898,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "C seçeneği doğrudur. K vitamini bağımlı faktörler Faktör II, VII, IX ve X ile antikoagülan Protein C ve S'tir (akılda tutma şifresi: 1972 ve CS). Faktör VIII ise K vitaminine bağımlı DEĞİLDİR; endotel hücreleri ve sinüzoidal hücreler tarafından sentezlenen ve dolaşımda von Willebrand Faktörüne (vWF) bağlı olarak taşınan bir kofaktör glikoproteindir. Dolayısıyla varfarin Faktör VIII'in gama-karboksilasyonunu etkilemez. A, B, D ve E seçeneklerindeki faktörler K vitaminine mutlak bağımlıdır."
-  },
-  {
-    "id": "prac-tromboz-011",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 11,
-    "slideTitle": "İn Vitro ve İn Vivo Koagülasyon Modelleri: PT, aPTT ve Hücresel Gerçeklik",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Rutin elektif cerrahi öncesi yapılan koagülasyon taramasında hiçbir kanama öyküsü ve klinik semptomu bulunmayan 35 yaşındaki bir hastada aPTT süresinin 95 saniye (belirgin uzamış), PT/INR ve trombosit sayısının ise tamamen normal olduğu saptanmıştır. Yapılan ileri faktör analizinde Faktör XII (Hageman faktörü) aktivitesinin <%1 (ağır eksiklik) olduğu tespit edilmiştir. Bu hastanın klinik tablosunda belirgin bir kanama diyatezinin görülmemesinin en temel patofizyolojik nedeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Faktör XII'nin koagülasyon kaskadında sadece inhibitör bir rol oynaması",
-      "B) İn vivo hemostazın temas yolağı yerine Doku Faktörü-Faktör VIIa kompleksi ile başlatılması ve trombinin Faktör XI'i doğrudan aktive edebilmesi",
-      "C) Karaciğerin Faktör XII eksikliğini kompanse etmek için aşırı miktarda Faktör VIII sentezlemesi",
-      "D) Hastanın trombositlerinin Faktör XII olmadan da fibrin polimerizasyonunu doğrudan yapabilmesi",
-      "E) Fibrinolitik sistemin doğuştan felç olması nedeniyle pıhtının hiç erimemesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Faktör XII (Hageman faktörü), in vitro cam tüpte aPTT testini başlatan temas aktivatörüdür; ancak in vivo canlı damarda fizyolojik pıhtılaşma temas yolağıyla değil subendotelyal Doku Faktörü-Faktör VIIa kompleksi ile başlar. Üretilen eser miktardaki trombin, geriye dönük olarak Faktör XI'i doğrudan aktive ederek Faktör XII'ye hiçbir ihtiyaç duymadan kaskadı yürütür. Bu nedenle FXII eksikliği olanlar kanamaz. A, C, D ve E seçenekleri biyolojik gerçeklikle bağdaşmaz."
-  },
-  {
-    "id": "prac-tromboz-012",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 12,
-    "slideTitle": "Trombinin (Faktör IIa) Merkezî Rolü ve Çift Yönlü Biyolojik Etkileri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Hemostaz ve tromboz patofizyolojisinde merkezî rol oynayan serin proteaz trombinin (Faktör IIa) biyolojik fonksiyonları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
-    "options": [
-      "A) Çözünür fibrinojen molekülünden fibrinopeptidleri keserek fibrin monomerlerinin oluşumunu sağlar.",
-      "B) Pıhtının stabilitesini artıran transglutaminaz enzimi Faktör XIII'ü proteolitik olarak aktive eder.",
-      "C) Trombosit zarı üzerindeki PAR reseptörlerini uyararak trombosit agregasyonunu ve granül salınımını tetikler.",
-      "D) Sağlam endotel yüzeyinde trombomodulin molekülüne bağlandığında antikoagülan Protein C'yi aktive eder.",
-      "E) Fibrinolitik kaskadı doğrudan başlatmak üzere plazminojeni doğrudan keserek aktif plazmine dönüştürür."
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır. Trombin plazminojeni doğrudan kesip plazmine DÖNÜŞTÜRMEZ; plazminojeni plazmine dönüştüren enzimler Doku Plazminojen Aktivatörü (t-PA) ve ürokinazdır (u-PA). Trombin tam aksine fibrin pıhtısını oluşturan ana proteazdır. A, B, C ve D seçeneklerindeki ifadeler trombinin prokoagülan, hücresel aktivatör ve trombomodulin aracılı antikoagülan fonksiyonlarını kusursuz şekilde açıklamaktadır."
-  },
-  {
-    "id": "prac-tromboz-013",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 13,
-    "slideTitle": "Pıhtının Stabilizasyonu ve Çapraz Bağlanma: Faktör XIIIa ve Pıhtı Retraksiyonu",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Doğumdan 4 gün sonra göbek kordonu kesisinden sızıntı şeklinde kanaması başlayan yenidoğanın laboratuvar incelemesinde trombosit sayısı, kanama zamanı, Protrombin Zamanı (PT) ve aPTT test sonuçları tamamen normal sınırda bulunmuştur. Ancak hastadan alınan kan pıhtısının 5 molar üre veya monokloroasetik asit solüsyonuna konulduğunda hızla eriyip çözündüğü gözlenmiştir. Bu yenidoğanda hemostazın pıhtı stabilizasyon evresinde aksayan biyokimyasal mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Trombosit GpIb reseptör eksikliği",
-      "B) Fibrin monomerleri arasında kovalent izopeptid çapraz bağlarını kuran Faktör XIIIa enzim aktivitesinin eksikliği",
-      "C) Doku faktörü yolağı inhibitörünün (TFPI) aşırı sentezi",
-      "D) Fibrinojenin trombine bağlanma bölgesinde mutasyon",
-      "E) Plazminojen aktivatör inhibitör-1 (PAI-1) fazlalığı"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Vaka klasik konjenital Faktör XIII eksikliğini tarif etmektedir. Faktör XIII, koagülasyon kaskadının tarama testleri olan PT ve aPTT pıhtılaşma son noktası (gevşek jel oluşumu) ile ölçüldüğü için standart testlerde normal sonuç verir. Ancak kovalent çapraz bağlanma yapılamadığı için pıhtı zayıftır ve üre solüsyonunda çözünür; tipik olarak göbek kordonu kanaması ve gecikmiş yara kanamaları görülür. A, C, D ve E seçenekleri bu tabloyu açıklamaz."
-  },
-  {
-    "id": "prac-tromboz-014",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 14,
-    "slideTitle": "Pıhtılaşmayı Sınırlandıran Doğal Antikoagülan Mekanizmalar",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Sağlıklı vasküler yatakta hemostatik tıkacın kontrolsüz şekilde damar boyunca yayılmasını önleyen doğal antikoagülan mekanizmalar incelendiğinde, Aktive Protein C (APC) ve kofaktörü Protein S kompleksinin proteolitik olarak yıkarak inaktive ettiği pıhtılaşma kaskadı bileşenleri aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Faktör IIa (Trombin) ve Fibrinojen",
-      "B) Faktör VIIa ve Doku Faktörü",
-      "C) Faktör Va ve Faktör VIIIa",
-      "D) Faktör IXa ve Faktör Xa",
-      "E) Faktör XIIa ve Prekallikrein"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Aktive Protein C (APC), kofaktörü olan Protein S varlığında koagülasyon kaskadının iki kritik hızlandırıcı kofaktörü olan aktif Faktör Va ve aktif Faktör VIIIa'yı spesifik peptid bağlarından keserek inaktive eder. Trombin ve Faktör Xa'yı yıkan ana inhibitör Antitrombin III'tür; Doku Faktörü-VIIa'yı yıkan ise TFPI'dir. Dolayısıyla doğru yanıt C seçeneğidir."
-  },
-  {
-    "id": "prac-tromboz-015",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 15,
-    "slideTitle": "Fibrinolitik Sistem ve Plazmin Biyolojisi: Fibrinin Kontrollü Yıkımı",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Sol bacağında ağrı ve şişlik şikayetiyle acil servise başvuran 45 yaşındaki bir hastada derin ven trombozundan (DVT) şüphelenilerek D-dimer testi istenmiş ve sonucun belirgin olarak yüksek (>3500 ng/mL) olduğu saptanmıştır. Bu hastada ölçülen D-dimer molekülünün patofizyolojik kökeni ve biyokimyasal anlamı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Karaciğer tarafından akut faz reaktörü olarak sentezlenen bir proenzimdir.",
-      "B) Yalnızca trombosit alfa granüllerinden salınan bir büyüme faktörüdür.",
-      "C) Faktör XIIIa tarafından kovalent çapraz bağlanmış fibrin ağının aktif plazmin tarafından parçalanmasıyla ortaya çıkan spesifik bir yıkım ürünüdür.",
-      "D) Doku faktörünün Faktör VIIa ile birleşmesi sırasında açığa çıkan inaktif bir peptittir.",
-      "E) Serbest fibrinojen molekülünün trombin tarafından kesilmesiyle oluşan fibrinopeptit A parçasıdır."
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. D-dimer, Faktör XIIIa tarafından kovalent olarak çapraz bağlanmış olgun fibrin polimerlerinin aktif plazmin enzimi tarafından proteolitik olarak parçalanması sonucu ortaya çıkan spesifik bir fibrin yıkım ürünüdür. Vücutta hem pıhtı oluştuğunu (trombin + FXIIIa aktivitesi) hem de bu pıhtının eritilmeye çalışıldığını (plazmin aktivitesi) kanıtlar. Karaciğerde doğrudan üretilmez, trombosit granülünde bulunmaz veya fibrinopeptit parçası değildir."
-  },
-  {
-    "id": "prac-tromboz-016",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 16,
-    "slideTitle": "Sağlıklı Endotelin Antitrombotik ve Tromboresistans Özellikleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Sağlıklı bir vasküler endotel tabakasının kanın akışkanlığını korumak ve intravasküler tromboz gelişimini engellemek için sergilediği biyokimyasal antitrombotik mekanizmalar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Sürekli olarak lümene salınan prostasiklin (PGI2) ve nitrik oksit (NO), trombosit agregasyonunu güçlü şekilde inhibe eder.",
-      "B) Endotel zarı üzerindeki CD39 (ADPaz), trombosit toplanmasını uyaran serbest ADP'yi parçalayarak etkisizleştirir.",
-      "C) Endotel glikokaliksindeki heparin benzeri moleküller, Antitrombin III'ü aktive ederek koagülasyon faktörlerini inaktive eder.",
-      "D) Endotel hücresi, trombin üretimini artırmak amacıyla yüzeyinde sürekli yüksek konsantrasyonda Doku Faktörü eksprese eder.",
-      "E) Endotel kaynaklı t-PA sentezi, damar yüzeyinde oluşabilecek fibrin birikintilerinin erken evrede eritilmesini sağlar."
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır. Sağlıklı bir endotel hücresi yüzeyinde Doku Faktörü eksprese ETMEZ; aksine doku faktörünü subendotelyal katmanda dolaşımdan tamamen saklar ve yüzeyinde TFPI sentezleyerek doku faktörü yolağını baskılar. Endotelde doku faktörünün eksprese edilmesi ancak endotel hasar gördüğünde veya enflamatuvar sitokinlerle aktive olduğunda (patolojik pro-trombotik fenotip) gerçekleşir. A, B, C ve E seçeneklerindeki ifadeler endotelin antitrombotik özelliklerini doğru açıklamaktadır."
-  },
-  {
-    "id": "prac-tromboz-017",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 17,
-    "slideTitle": "Trombozun Tanımı ve Virchow Triadı: Patofizyolojik Çerçeve",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Patoloji dersinde Rudolf Virchow tarafından tanımlanan ve intravasküler tromboz patofizyolojisini açıklayan klasik 'Virchow Triadı' tartışılmaktadır. Virchow triadının bileşenleri ve klinik görünümleri ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
-    "options": [
-      "A) Endotel Hasarı — Akut miyokard enfarktüsünde aterosklerotik plak çatlaması zemininde koroner arter trombozu",
-      "B) Anormal Kan Akımı (Staz) — Uzun süre yatağa bağımlı hastalarda alt ekstremite derin venlerinde gelişen flebotromboz",
-      "C) Anormal Kan Akımı (Türbülans) — Aort anevrizması lümeninde lamine duvar trombüslerinin gelişmesi",
-      "D) Hiperkoagülabilite — Faktör V Leiden mutasyonu olan genç bir hastada tekrarlayan venöz tromboemboli",
-      "E) Endotel Bütünlüğü — Sağlıklı damarda yüksek oranda prostasiklin ve nitrik oksit salınarak masif oklüzif trombüs oluşturulması"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır. Sağlıklı endotelden salgılanan prostasiklin (PGI2) ve nitrik oksit (NO), masif trombüs OLUŞTURMAZ; tam aksine trombosit agregasyonunu engelleyip vazodilatasyon yaparak damarı tromboza karşı koruyan temel antitrombotik mekanizmalardır. A, B, C ve D seçeneklerindeki eşleştirmeler Virchow triadının üç sacayağını (endotel hasarı, staz/türbülans ve hiperkoagülabilite) kusursuz klinik örneklerle açıklamaktadır."
-  },
-  {
-    "id": "prac-tromboz-018",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 18,
-    "slideTitle": "Virchow Triadı 1. Ayak: Endotel Hasarı ve Pro-trombotik Endotel Fenotipi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Ağır sigara içicisi ve kontrolsüz hipertansiyonu olan 55 yaşındaki bir hastada vasküler endotel hücrelerinin kronik hemodinamik ve biyokimyasal strese maruz kalması sonucunda 'pro-trombotik endotel fenotipi' gelişmiştir. Bu hastanın vasküler endotelinde tromboz gelişimini kolaylaştıran moleküler değişiklikler değerlendirildiğinde, aşağıdaki moleküllerden hangisinin düzeyinde bir ARTIŞ olması BEKLENMEZ?",
-    "options": [
-      "A) Yüzey Doku Faktörü (TF) ekspresyonu",
-      "B) Von Willebrand Faktörü (vWF) salgılanması",
-      "C) Plazminojen Aktivatör İnhibitör-1 (PAI-1) üretimi",
-      "D) Trombomodulin ve Endotelyal Protein C Reseptörü (EPCR) ekspresyonu",
-      "E) Lökosit adezyon molekülleri (ICAM-1, VCAM-1) ekspresyonu"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği doğrudur. Pro-trombotik endotel aktivasyonunda, doğal antikoagülan sistemin temel taşı olan Trombomodulin ve EPCR ekspresyonu ARTMAZ, tam aksine belirgin şekilde AZALIR (down-regüle olur). Böylece Protein C aktive edilemez ve tromboz kolaylaşır. Buna karşılık prokoagülan olan Doku Faktörü ve vWF artar; fibrinolizi baskılayan PAI-1 artar; enflamasyonu çeken adezyon molekülleri (ICAM-1, VCAM-1) artar. Bu nedenle D seçeneğindeki artış beklentisi yanlıştır."
-  },
-  {
-    "id": "prac-tromboz-019",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 19,
-    "slideTitle": "Virchow Triadı 2. Ayak: Anormal Kan Akımı – Staz ve Türbülans Dinamikleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Hemodinamik akım paternleri ile intravasküler tromboz mekanizmaları arasındaki ilişki değerlendirildiğinde, venöz stazın (kan akımında durgunluk) derin ven trombozunu tetiklemesinde rol oynayan aşağıdaki mekanizmalardan hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
-    "options": [
-      "A) Trombositlerin lümen merkezindeki akımdan ayrılarak endotel yüzeyine doğru marjinasyon göstermesi",
-      "B) Aktive olan pıhtılaşma faktörlerinin hasar sahasından yıkanıp uzaklaştırılmasının (washout) engellenmesi",
-      "C) Karaciğer kaynaklı yeni antikoagülan inhibitörlerin hasarlı damar yatağına akışının yavaşlaması",
-      "D) Kan akım hızının aşırı artmasına bağlı olarak endotel yüzeyinden koruyucu doku faktörünün sökülüp atılması",
-      "E) Venöz lümende kanın göllenmesine bağlı olarak endotel hücrelerinde hipoksik hasar ve aktivasyon gelişmesi"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır. Staz kan akım hızının artması değil, tam tersine aşırı derecede azalması veya durmasıdır; ayrıca doku faktörü koruyucu bir molekül olmayıp güçlü bir prokoagülandır. A, B, C ve E seçeneklerindeki mekanizmalar (trombosit marjinasyonu, faktör yıkanmasının durması, antikoagülan temininin gecikmesi ve endotelyal hipoksi) stazın venöz tromboz oluşturma basamaklarını eksiksiz açıklar."
-  },
-  {
-    "id": "prac-tromboz-020",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 20,
-    "slideTitle": "Staz ve Türbülansa Yol Açan Başlıca Klinik Durumlar",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Kronik atriyal fibrilasyon tanısı olan ve antikoagülan tedavisini düzenli kullanmayan 74 yaşındaki bir kadın hasta, aniden gelişen sağ tarafında tam felç ve konuşamama (afazi) tablosuyla acil servise getirilmiştir. Çekilen beyin diffüzyon manyetik rezonans görüntülemesinde sol orta serebral arter (MCA) sulama alanında geniş akut iskemik enfarktüs saptanmıştır. Bu hastada serebral emboliye kaynaklık eden kardiyak mural trombüsün gelişmesinde rol oynayan temel hemodinamik mekanizma ve en olası anatomik lokalizasyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sağ ventrikül apeksinde yüksek akım hızına bağlı türbülans",
-      "B) Sol atriyal apendikste koordineli kasılma kaybına bağlı kan akımı stazı",
-      "C) Asendan aortada masif vazodilatasyona bağlı hızlı kan akımı",
-      "D) Pulmoner vende mekanik kapak aşınması",
-      "E) İnteratriyal septumda foramen ovale açıklığına bağlı şant"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Atriyal fibrilasyonda atriyumların koordineli mekanik kasılması ortadan kalkar; özellikle kanın göllendiği sol atriyal apendikste belirgin staz meydana gelir. Burada oluşan mural trombüs parçalanıp koptuğunda sistemik arteriyel dolaşıma fırlar ve en sık orta serebral arteri (MCA) tıkayarak kardiyoembolik iskemik inmeye yol açar. Diğer seçeneklerdeki mekanizma ve yerleşimler bu klinik tabloyu açıklamaz."
-  },
-  {
-    "id": "prac-tromboz-021",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 21,
-    "slideTitle": "Virchow Triadı 3. Ayak: Hiperkoagülabilite (Trombofili) Sınıflaması",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Ailesinde erken yaşta geçirilmiş derin ven trombozu öyküsü bulunan 28 yaşındaki bir erkek hasta, sağ bacağında ani gelişen ağrılı şişlik nedeniyle başvuruyor. Yapılan doppler ultrasonografide femoral vende derin ven trombozu saptanıyor. Primer (kalıtsal) hiperkoagülabilite açısından yapılan taramada toplumda EN SIK rastlanan genetik bozukluk aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Konjenital Antitrombin III eksikliği",
-      "B) Faktör V Leiden (Arg506Gln) mutasyonu",
-      "C) Protein C gen delesyonu",
-      "D) Homozigot sistatyonin beta-sentaz mutasyonu",
-      "E) Fibrinojen alfa zincir agenezisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Beyaz ırkta toplumun yaklaşık %2-15'inde görülen ve kalıtsal (primer) trombofili nedenleri arasında açık ara EN SIK rastlanan genetik bozukluk Faktör V Leiden (Arg506Gln) mutasyonudur. İkinci en sık neden Protrombin G20210A mutasyonudur (%1-2). Antitrombin III, Protein C ve Protein S eksiklikleri ise çok daha nadir (<%1) görülen primer defektlerdir. Homosistinüri ise çok nadirdir."
-  },
-  {
-    "id": "prac-tromboz-022",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 22,
-    "slideTitle": "Primer Hiperkoagülabilite: Faktör V Leiden ve Aktive Protein C Direnci (APCR)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Oral kontraseptif kullanmaya başladıktan 3 ay sonra sağ bacağında masif iliofemoral derin ven trombozu ve ardından segmental pulmoner emboli gelişen 24 yaşındaki bir kadın hastanın yapılan genetik analizinde Faktör V geninde heterozigot nokta mutasyonu saptanmıştır. Bu hastada venöz tromboza yol açan moleküler mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Faktör V proteininde 506. pozisyondaki arjininin glutamine dönüşmesi sonucu Aktive Protein C tarafından proteolitik inaktivasyona direnç gelişmesi",
-      "B) Protrombin geninin promotör bölgesinde delesyon gelişerek trombin üretiminin baskılanması",
-      "C) Antitrombin III molekülünün heparini bağlama bölgesinde konjenital mutasyon",
-      "D) Protein S proteininin hücre zarında eksprese edilememesi",
-      "E) Fibrinojen molekülünün kovalent izopeptid bağları kuramaması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur. Vaka klasik Faktör V Leiden mutasyonunu ve OKS ile olan sinerjistik tromboz riskini tarif etmektedir. Faktör V Leiden'de 506. pozisyondaki Arjinin Glutamin'e dönüşür (Arg506Gln). Bu mutasyon Aktive Protein C'nin (APC) kesim bölgesini ortadan kaldırır ve Aktive Protein C Direnci (APCR) gelişir; Faktör Va inaktive edilemediği için pıhtılaşma kontrolsüzce ilerler. B seçeneğinde tarif edilen protrombin mutasyonu 3'-UTR bölgesindedir; C ve D seçenekleri diğer trombofili mekanizmalarıdır."
-  },
-  {
-    "id": "prac-tromboz-023",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 23,
-    "slideTitle": "Primer Hiperkoagülabilite: Protrombin G20210A Mutasyonu ve Diğer Genetik Defektler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Derin ven trombozu atağı geçiren 38 yaşındaki bir kadın hastaya hastaneye yatırılmadan doğrudan yüksek doz oral Varfarin tedavisi başlanmıştır. Tedavinin 3. gününde hastanın her iki memesinde ve uyluk cildinde aniden şiddetli ağrı, eritematöz plaklar ve hızla siyah renkli büllöz nekrotik ülserasyonlar (deri kangreni) gelişmiştir. Biyopside cilt altı mikrovasküler venüllerde yaygın fibrin mikrotrombüsleri saptanmıştır. Bu feci klinik komplikasyonun altında yatan primer patofizyolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Hastada önceden var olan konjenital Protein C eksikliği zemininde, varfarinin kısa yarı ömürlü Protein C'yi hızla tüketerek geçici bir hiperkoagülabl fırtına yaratması",
-      "B) Varfarinin doğrudan mast hücre degranülasyonu yaparak anafilaksiye yol açması",
-      "C) Faktör XIII'ün aşırı uyarılması sonucu cildin kalsifiye olması",
-      "D) Endotel hücrelerinden aşırı miktarda t-PA salgılanarak cildin eritilmesi",
-      "E) Varfarinin trombosit sayısını sıfıra indirerek kanamaya bağlı doku çürümesi yapması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur. Tarif edilen tablo tıp literatüründe klasik 'Varfarin Kaynaklı Deri Nekrozu'dur. K vitamini bağımlı faktörler içinde antikoagülan Protein C'nin yarı ömrü en kısadır (~6 saat); oysa Faktör II, IX ve X günlerce kanda kalır. Varfarin başlandığında Protein C hemen sıfırlanırken prokoagülan faktörler aktif kalır. Eğer hastada altta yatan bir Protein C (veya S) eksikliği varsa, denge tamamen tromboz lehine döner; yağ dokusundan zengin meme ve uyluk kapillerlerinde mikrotrombozlar ve yaygın doku nekrozu gelişir. Bunu önlemek için varfarin daima heparinle köprülenerek başlanır."
-  },
-  {
-    "id": "prac-tromboz-024",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 24,
-    "slideTitle": "Sekonder Hiperkoagülabilite: Genel Klinik Tablolar ve Yüksek Risk Grupları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Yaygın pretibial ödem, periorbital şişlik ve 24 saatlik idrarda 8.5 gram proteinüri saptanan 42 yaşındaki bir erkek hastada aniden sol yan ağrısı ve makroskopik hematüri gelişmiştir. Yapılan renal doppler ultrasonografide sol renal vende tıkayıcı trombüs saptanmıştır. Bu nefrotik sendromlu hastada renal ven trombozu gelişimine zemin hazırlayan en temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Glomerüllerden aşırı miktarda kalsiyum sızarak pıhtılaşmayı doğrudan uyarması",
-      "B) İdrarla masif miktarda Antitrombin III kaybedilmesi ve karaciğerde fibrinojen sentezinin kompansatuvar artışı",
-      "C) Böbrek tübüllerinde eritropoietin sentezinin durması",
-      "D) Hastanın trombositlerinin idrar yolunda enfekte olması",
-      "E) Trombomodulin moleküllerinin idrarla dışarı atılarak yok olması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Nefrotik sendromda glomerül geçirgenliğinin bozulması nedeniyle albümine benzer molekül ağırlığına sahip olan Antitrombin III (AT-III) idrarla masif olarak kaybedilir. Plazmada AT-III seviyesi dramatik biçimde düşerken, karaciğer onkotik basıncı toparlamak için kontrolsüzce büyük moleküllü proteinleri (fibrinojen) üretir. Bu antikoagülan kaybı ve prokoagülan artışı tablosu, özellikle böbrek venlerinde (renal ven trombozu) ve derin bacak venlerinde ağır trombozlara yol açar. Diğer seçenekler nefrotik sendrom trombozunu açıklamaz."
-  },
-  {
-    "id": "prac-tromboz-025",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 25,
-    "slideTitle": "Antifosfolipid Antikor Sendromu (APS): İmmünolojik Tromboz Paradoksu",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "31 yaşındaki bir kadın hasta, ilki 9. haftada ve ikincisi 16. haftada olmak üzere iki kez açıklanamayan gebelik kaybı (fetal kayıp) ve sol bacağında ağrılı derin ven trombozu şikayetiyle başvuruyor. Rutin koagülasyon profilinde aPTT süresi 62 saniye (uzamış), trombosit sayısı 110.000/µL ve sifiliz tarama testi olan VDRL pozitif bulunuyor; ancak treponemal spesifik doğrulama testi (FTA-ABS) negatif sonuçlanıyor. Bu hastanın klinik tablosunu, laboratuvar paradoksunu ve gebelik kayıplarını açıklayan en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Primer Fibrinolizis Bozukluğu",
-      "B) Von Willebrand Hastalığı Tip 3",
-      "C) Antifosfolipid Antikor Sendromu (APS)",
-      "D) Konjenital Faktör VIII Eksikliği (Hemofili A)",
-      "E) Bernard-Soulier Sendromu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Vaka klasik Antifosfolipid Antikor Sendromu (APS) tablosudur. Tekrarlayan fetal kayıplar (plasental enfarktlar), venöz tromboz, hafif trombositopeni, fosfolipid antikorlarına bağlı in vitro uzamış aPTT (lupus antikoagülanı) ve kardiyolipine çapraz reaksiyona bağlı yalancı pozitif VDRL testi APS'nin kusursuz tanısal ipuçlarıdır. Hemofili ve von Willebrand hastalığı kanama diyatezidir, tromboz yapmaz; Bernard-Soulier ise dev trombositlerle giden kanama bozukluğudur."
-  },
-  {
-    "id": "prac-tromboz-026",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 26,
-    "slideTitle": "Heparin Kaynaklı Trombositopeni (HIT Tip II): İlaç Aracılı Trombotik Fırtına",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Ortopedik kalça protezi operasyonu sonrası venöz tromboemboli profilaksisi amacıyla standart fraksiyone edilmemiş heparin (UFH) başlanan 68 yaşındaki bir hastada, tedavinin 7. gününde başlangıçta 260.000/µL olan trombosit sayısı aniden 75.000/µL'ye gerilemiştir. Eşzamanlı olarak hastanın sol ayağında soğukluk, solukluk, nabızsızlık ve şiddetli ağrı gelişmiş; yapılan anjiyografide sol femoral arterde trombositten zengin oklüzif trombüs saptanmıştır. Bu iatrojenik klinik tablonun moleküler immünopatolojisinden sorumlu olan temel mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Heparinin kemik iliğindeki megakaryositleri doğrudan zehirleyerek trombosit üretimini durdurması",
-      "B) Heparin ve Platelet Faktör 4 (PF4) kompleksine karşı gelişen IgG otoantikorlarının trombosit FcγRIIa reseptörlerini çapraz bağlayarak kontrolsüz agregasyonu tetiklemesi",
-      "C) Heparinin Antitrombin III'ü mutasyona uğratarak koagülasyonu aşırı hızlandırması",
-      "D) Dalak makrofajlarının heparin kaplı eritrositleri yutarak dalağı tıkaması",
-      "E) Fibrinojen moleküllerinin heparin tarafından parçalanarak fibrin oluşumunun durması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Vaka, standart heparin tedavisinin 5-10. günlerinde ortaya çıkan Heparin Kaynaklı Trombositopeni (HIT Tip II) tablosudur. Pozitif yüklü PF4 ile heparinin kompleksine karşı IgG otoantikorları gelişir. Bu immün kompleksler trombosit yüzeyindeki FcγRIIa reseptörlerini çapraz bağlar; trombositler kanda kontrolsüzce kümeleşir ve damarları tıkar (akut bacak iskemisi - 'beyaz pıhtı'). Trombositler pıhtılarda tüketildiği için kanda sayıları >%50 oranında düşer. Tedavide heparin derhal kesilmeli ve direkt trombin inhibitörüne geçilmelidir."
-  },
-  {
-    "id": "prac-tromboz-027",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 27,
-    "slideTitle": "Kanser ve Tromboz: Trousseau Sendromu ve Tromboflebitis Migrans",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Son 3 ayda 12 kilo kaybeden, halsizlik ve iştahsızlık şikayeti olan 61 yaşındaki bir erkek hasta, sol kolunda ağrılı kızarık bir damar sertliği fark etmiştir. Bu lezyon bir hafta içinde gerilemiş ancak hemen ardından sağ uyluk ve sağ ön kol yüzeyel venlerinde yeni ağrılı, eritematöz, kordon benzeri sert venöz lezyonlar ortaya çıkmıştır (gezici tromboflebit). Fizik muayenede hafif sarılık saptanan hastada Trousseau sendromu düşünülmüştür. Bu hastada paraneoplastik trombozu tetikleyen ve altta yatan en olası primer malignite aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Derinin bazal hücreli karsinomu",
-      "B) Pankreas kuyruk veya gövde yerleşimli müsinöz adenokarsinomu",
-      "C) Tiroidin papiller mikrokarsinomu",
-      "D) Beyin glioblastoması",
-      "E) Prostat benign hiperplazisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Tarif edilen klinik tablo tıp dünyasında Trousseau sendromu olarak bilinen Tromboflebitis Migrans (gezici tromboflebit) tablosudur. Farklı anatomik lokalizasyonlardaki venöz yataklarda yer değiştiren bu trombozlar, müsin salgılayan adenokarsinomların klasik paraneoplastik bir tezahürüdür ve en sık gizli seyreden pankreas gövde/kuyruk karsinomlarında, mide karsinomlarında ve akciğer adenokarsinomlarında görülür. Tümör hücrelerinden salınan prokoagülan müsinler ve doku faktörü yüklü veziküller bu tabloyu tetikler. Diğer seçeneklerdeki tümörlerin böyle bir ilişkisi yoktur."
-  },
-  {
-    "id": "prac-tromboz-028",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 28,
-    "slideTitle": "Trombüs Morfolojisi ve Zahn Çizgileri (Lines of Zahn)",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Şüpheli bir ölüm vakasında yapılan adli otopside, abdominal aort lümeninde damar duvarına sıkıca yapışmış, kuru, kırılgan ve lümeni daraltan bir kitle saptanmıştır. Kitleden alınan doku örneğinin histopatolojik incelemesinde, açık renkli trombosit-fibrin tabakaları ile koyu renkli eritrositten zengin tabakaların birbirini takip eden ritmik çizgilenmeler oluşturduğu (Zahn çizgileri) gözlenmiştir. Bu mikroskobik bulgu adli tıp ve patoloji açısından aşağıdaki sonuçlardan hangisini KESİN OLARAK kanıtlar?",
-    "options": [
-      "A) Pıhtının ölümden saatler sonra yerçekimi etkisiyle çöktüğünü",
-      "B) Pıhtının hasta henüz hayattayken ve damarda aktif kan akımı varken (intravital) oluştuğunu",
-      "C) Hastada konjenital Faktör XIII eksikliği bulunduğunu",
-      "D) Hastanın ölüm anında derin hipotermiye maruz kaldığını",
-      "E) Pıhtının tamamen bakteriyel kolonilerden ibaret olduğunu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Zahn çizgileri (Lines of Zahn), yalnızca dolaşımın ve kan akımının aktif olduğu canlı bir organizmada trombosit/fibrin ile eritrositlerin dinamik laminasyonu sonucu oluşur. Bu nedenle histopatolojide bir pıhtıda Zahn çizgilerinin görülmesi, o lezyonun ölümden sonra (postmortem) değil, kişi henüz hayattayken (antemortem/intravital) geliştiğinin kesin ve tartışmasız kanıtıdır. Ölüm sonrası pıhtılarda akım olmadığı için Zahn çizgisi oluşamaz."
-  },
-  {
-    "id": "prac-tromboz-029",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 29,
-    "slideTitle": "Arteriyel Trombüsler, Venöz Trombüsler (Flebotromboz) ve Mural Trombüsler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Arteriyel ve venöz trombüslerin etiyopatolojik özellikleri, hücresel kompozisyonları ve büyüme yönleri karşılaştırıldığında, aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
-    "options": [
-      "A) Venöz trombüsler kan akımının tersine doğru retrograd büyürken, arteriyel trombüsler kalbe doğru anterograd uzanır.",
-      "B) Arteriyel trombüsler yüksek akım altında eritrositlerin bol birikmesi nedeniyle koyu kırmızı renklidir.",
-      "C) Arteriyel trombüsler sıklıkla endotel hasarı zemininde gelişir, trombositten zengindir ve akımın tersine doğru ilerler.",
-      "D) Venöz trombüslerin oluşumunda endotelin fiziksel denudasyonu mutlak bir ön koşuldur.",
-      "E) Mural trombüsler yalnızca mikroskobik kapiller damarlarda gözlenen tıkayıcı tıkaclardır."
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Arteriyel trombüsler genellikle aterosklerotik plak çatlaması gibi endotel hasarı zemininde başlar; yüksek akım eritrositleri süpürdüğü için trombosit ve fibrinden zengin beyaz trombüslerdir ve geriye doğru (retrograd) büyüme eğilimindedir. A seçeneği yanlıştır çünkü büyüme yönleri tam tersidir (arteriyel retrograd, venöz anterograd). B seçeneği yanlıştır çünkü arteriyel trombüsler beyaz, venöz trombüsler kırmızıdır. D seçeneği yanlıştır çünkü venöz trombozda ana etken endotel hasarı değil stazdır. E seçeneği yanlıştır çünkü mural trombüsler kalp ve aort gibi geniş boşluklarda duvara yapışık pıhtılardır."
-  },
-  {
-    "id": "prac-tromboz-030",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 30,
-    "slideTitle": "Gerçek Trombüs ile Postmortem (Ölüm Sonrası) Pıhtı Ayrımı",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Bir adli tıp uzmanı, ani ölüm vakasında yaptığı otopside inferior vena cava lümenini incelemektedir. Lümen içerisinde damarı genişleten bir pıhtı kitlesi görmüş ve forseps ile tuttuğunda pıhtının damar duvarına hiçbir yapışıklık göstermeden, damarın iç kalıbı şeklinde kolaylıkla ve parçalanmadan dışarı çıktığını gözlemlemiştir. Pıhtı kesitinde alt kısmın koyu kırmızı jelatinimsi (Frenk üzümü jölesi), üst kısmın ise berrak sarımtırak yağ dokusu benzeri (tavuk yağı) olduğu saptanmıştır. Bu makroskopik özellikler aşağıdaki tanılardan hangisiyle KESİN OLARAK uyumludur?",
-    "options": [
-      "A) Organize olmuş eski femoral ven trombüsü",
-      "B) Ölüm sonrası gelişen postmortem pıhtı",
-      "C) Akut oklüzif aterosklerotik arteriyel trombüs",
-      "D) Enfektif endokardit vejetasyonu",
-      "E) Trousseau sendromuna bağlı gezici tromboflebit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Tarif edilen bulgular (damar duvarına yapışmama, forsepsle lümen kalıbı şeklinde pürüzsüz çıkma, elastik jelatinimsi kıvam, yerçekimi sedimantasyonuyla oluşan alt koyu kırmızı 'Frenk üzümü jölesi' ve üst sarı 'tavuk yağı' görünümü) ölüm sonrası cesette gelişen masum Postmortem Pıhtı'nın klasik tanımlayıcı özellikleridir. Gerçek bir antemortem trombüs olsaydı duvara sıkıca yapışık, kuru, mat, kırılgan olurdu ve Zahn çizgileri içerirdi."
-  },
-  {
-    "id": "prac-tromboz-031",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 31,
-    "slideTitle": "Kalp Kapak Vejetasyonları: Enfektif, Marantik (NBTE) ve Libman-Sacks Ayrımı",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Evre IV metastatik pankreas adenokarsinomu nedeniyle takip edilen 59 yaşındaki kaşektik bir erkek hastada aniden sağ hemiparezi gelişmiş ve beyin tomografisinde embolik iskemik inme saptanmıştır. Yapılan transözofageal ekokardiyografide mitral kapağın kapanma çizgisi boyunca dizilmiş, 2-4 mm boyutlarında, kapak yaprakçıklarında herhangi bir perforasyon veya doku destrüksiyonu yapmamış steril nodüler vejetasyonlar tespit edilmiştir. Kan kültürlerinde üreme olmayan bu hastadaki kalp lezyonunun patolojik tanısı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut bakteriyel enfektif endokardit",
-      "B) Bakteriyel Olmayan Trombotik Endokardit (NBTE / Marantik Endokardit)",
-      "C) Libman-Sacks endokarditi",
-      "D) Romatizmal kalp hastalığı Aschoff nodülü",
-      "E) Sifilitik aortit vejetasyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Vaka, yaygın kanserli (özellikle müsinöz karsinomlar) ve kaşektik hastalarda görülen Bakteriyel Olmayan Trombotik Endokardit (NBTE / Marantik endokardit) tablosudur. NBTE'de vejetasyonlar steril fibrin ve trombosit yığınlarından oluşur; kan kültürleri negatiftir; kapağın dokusunu yıkmaz veya delmez; ancak kapağa gevşek tutunduğu için kolayca koparak beyin ve periferik organlara emboli atar. Enfektif endokarditte kültür pozitiftir ve kapak tahrip olur; Libman-Sacks ise SLE'de kapağın her iki yüzeyindedir."
-  },
-  {
-    "id": "prac-tromboz-032",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 32,
-    "slideTitle": "Trombüsün Akıbeti: Propagasyon, Embolizasyon, Dissolüsyon, Organizasyon ve Rekanalizasyon",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Kronik femoral ven trombozu öyküsü olan 52 yaşındaki bir hastanın radyolojik ve histopatolojik incelemesinde, eski trombüs kitlesinin damar duvarına kaynaştığı, fibröz bağ dokusu ile yer değiştirdiği ve kitlenin içinde endotel ile döşeli yeni mikroskobik kapiller kanalların oluşarak damarın proksimali ile distali arasında kısmi kan geçişini sağladığı gözlenmiştir. Ayrıca pıhtı merkezinde distrofik kalsifikasyon odakları saptanmıştır. Bu patolojik evrimsel süreç aşağıdakilerden hangisiyle adlandırılır?",
-    "options": [
-      "A) Akut septik nekroz",
-      "B) Organizasyon ve rekanalizasyon",
-      "C) Masif paradoksal embolizasyon",
-      "D) Fibrinoid dejenerasyon",
-      "E) Primer trombolitik dissolüsyon"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Trombüsün lizise uğrayamadığı durumlarda damar duvarından içine endotel hücreleri ve fibroblastların girmesiyle bağ dokusuna dönüşmesine 'organizasyon', endotel tomurcuklanmasıyla açılan yeni kapiller lümenlerin kan akımını kısmen yeniden tesis etmesine ise 'rekanalizasyon' adı verilir. Merkezde kalsiyum birikmesiyle flebolit (ven taşı) oluşabilir. A, C, D ve E seçenekleri bu histolojik süreci tanımlamaz."
-  },
-  {
-    "id": "prac-tromboz-033",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 33,
-    "slideTitle": "Dissemine İntravasküler Koagülasyon (DIC / DİK): Tüketim Koagülopatisi ve Mikrotrombozlar",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Zorlu bir doğum eylemi sırasında aniden dispne, siyanoz ve kardiyojenik şok tablosuna giren 28 yaşındaki bir lohusada amniyon sıvı embolisi geliştiği düşünülmüştür. Yoğun bakıma alınan hastanın endotrakeal tüpünden, idrar sondasından ve tüm damar yolu ponksiyon alanlarından durdurulamayan sızıntı şeklinde kanamalar başlamış; cildinde yaygın peteşi ve ekimozlar belirmiştir. Laboratuvarda: Trombosit sayısı 28.000/µL, PT 38 saniye (belirgin uzamış), aPTT 85 saniye (belirgin uzamış), plazma fibrinojeni 60 mg/dL (ağır hipofibrinojemi), D-dimer >15.000 ng/mL bulunmuş ve periferik yaymada bol miktarda miğfer hücresi (şistosit) saptanmıştır. Bu hastadaki hayatı tehdit eden tablonun patolojik tanısı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İmmün Trombositopenik Purpura (ITP)",
-      "B) Dissemine İntravasküler Koagülasyon (DIC / Tüketim Koagülopatisi)",
-      "C) İzole Faktör V Leiden mutasyonu",
-      "D) Bernard-Soulier Sendromu",
-      "E) Glanzmann Trombastenisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Vaka obstetrik bir felaket olan amniyon sıvı embolisini takiben gelişen akut Dissemine İntravasküler Koagülasyon (DIC) tablosudur. Amniyon sıvısındaki yüksek miktardaki Doku Faktörü maternal dolaşıma karışarak masif trombin üretimine yol açmış; mikrotrombozlar kapillerlerde eritrositleri parçalayarak şistositleri üretmiş; ardından koagülasyon faktörleri ve trombositler hızla tükendiği için (tüketim koagülopatisi) trombositopeni, hipofibrinojemi, uzamış PT ve aPTT ile masif kanamalar ortaya çıkmıştır. ITP'de sadece trombosit düşüktür, PT/aPTT ve fibrinojen normaldir. Bernard-Soulier ve Glanzmann konjenital trombosit fonksiyon bozukluklarıdır."
-  },
-  {
-    "id": "prac-tromboz-034",
-    "deckId": "learn-tromboz-patofizyolojisi-tam",
-    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
-    "slideNumber": 34,
-    "slideTitle": "Tromboz Patofizyolojisi Klinik Sentezi, Komplikasyonlar ve Farmakoterapötik Hedefler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Klinik patoloji ve farmakoterapi dersinde arteriyel ve venöz trombozların patofizyolojik mekanizmaları ile bunlara yönelik hedefe yönelik ilaç stratejileri karşılaştırılmaktadır. Aşağıdaki klinik durum ve primer farmakolojik hedef eşleştirmelerinden hangisi BİYOLOJİK VE KLİNİK AÇIDAN DOĞRUDUR?",
-    "options": [
-      "A) Koroner arter plak rüptürüne bağlı arteriyel tromboz profilaksisi — Yalnızca t-PA infüzyonu",
-      "B) Bacak derin ven trombozunun (DVT) tedavisi ve pulmoner emboli korunması — Trombosit COX-1 enzim inhibitörü düşük doz aspirin",
-      "C) Aterosklerotik serebrovasküler iskemik inme sekonder korunması — Trombosit agregasyonunu hedefleyen antiplatelet ajanlar (aspirin veya klopidogrel)",
-      "D) Atriyal fibrilasyona bağlı sol atriyal apendiks trombozu profilaksisi — Yalnızca rekombinant Faktör XIIIa verilmesi",
-      "E) Gebelikte derin ven trombozu profilaksisi — Teratojenik oral Varfarin tedavisi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Aterosklerotik arteriyel trombozlarda (koroner, serebral) primer mekanizma endotel hasarı ve trombosit agregasyonu olduğu için tedavinin ve sekonder korunmanın temel taşı antiplatelet ajanlardır (aspirin, klopidogrel). A seçeneği yanlıştır çünkü t-PA profilaktik değil akut litik ajandır. B seçeneği yanlıştır çünkü venöz trombozda aspirin primer tercih değildir, antikoagülanlar (heparin, DOAC) esastır. D seçeneği yanlıştır çünkü FXIIIa pıhtıyı eritmez aksine sertleştirir. E seçeneği yanlıştır çünkü varfarin teratojendir, gebelikte LMWH kullanılır."
-  },
-  {
-    "id": "emboli-q1",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Emboli Patofizyolojisi: Tanım, Fiziksel Durumlar ve Dolaşım Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Vasküler lümende taşınarak tıkanmaya yol açan emboli olgularının etiyolojisi değerlendirildiğinde, tüm klinik vakaların %95'inden fazlasını oluşturan en sık emboli tipi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Uzun kemik kırığı sonrası gelişen yağ embolisi",
-      "B) Derin ven veya intrakardiyak trombüslerden kopan tromboemboli",
-      "C) Dalgıçlarda gözlenen dekompresyon nitrojen gaz embolisi",
-      "D) Doğum travması sonrası amniyon sıvısı embolisi",
-      "E) Aterosklerotik plak rüptürüne bağlı kolesterol kristal embolisi"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Embolilerin ezici çoğunluğu (>%95) venöz veya arteriyel trombüslerden kopan parçaların dolaşımda sürüklenmesiyle oluşan tromboembolilerdir."
-  },
-  {
-    "id": "tromboz-infarkt-q2",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Pulmoner Tromboembolizm (PTE): Kaynaklar ve DVT İlişkisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Klinikte pulmoner tromboembolizm (PTE) tanısı alan bir hastada, embolinin koptuğu primer anatomik vasküler yatak en yüksek olasılıkla aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Üst ekstremite sefalik ve bazilik venleri",
-      "B) Karın duvarı yüzeyel epigastrik venleri",
-      "C) Alt ekstremite diz üstü derin venleri (femoral, popliteal, iliyak venler)",
-      "D) Mezenterik venöz pleksus",
-      "E) Renal venler"
-    ],
-    "correctAnswer": "C",
-    "explanation": "Pulmoner embolilerin %95'ten fazlası alt ekstremitenin diz üstü derin venlerinden (özellikle femoral, popliteal ve iliak venler) kaynaklanır."
-  },
-  {
-    "id": "tromboz-infarkt-q3",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Eyer Emboli (Saddle Embolus) ve Masif Pulmoner Emboli",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Kalça protezi operasyonunun 4. gününde aniden şiddetli nefes darlığı, siyanoz ve senkop gelişen 68 yaşındaki hasta resüsitasyona yanıt vermeyerek kaybediliyor. Otopside ana pulmoner arter çatallanmasını tamamen tıkayan dev bir trombüs kitlesi (eyer emboli) saptanıyor. Bu hastada ani ölüme yol açan temel patofizyolojik süreç aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akciğer parankiminde yaygın masif hemorajik enfarktüs gelişimi",
-      "B) Pulmoner yatağın akut tıkanması sonucu gelişen akut sağ kalp yetmezliği (kor pulmonale) ve kardiyak debinin çökmesi",
-      "C) Koroner arterlerin refleks spazmına bağlı akut sol ventrikül enfarktüsü",
-      "D) Beyin sapında diffüz nörojenik vazodilatasyon",
-      "E) Akut alveolit ve sürfaktan kaybı"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Eyer embolisinde akciğer parankiminde enfarktüs oluşmaya vakit kalmaz; pulmoner vasküler yatağın >%60'ı aniden tıkandığı için akut sağ kalp yetmezliği (akut kor pulmonale), sol ventriküle kan dönememesi ve kardiyojenik şok ile ani ölüm meydana gelir."
   }
 ]

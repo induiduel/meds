@@ -1,5 +1,1058 @@
 [
   {
+    "id": "d3-k1-enf-009",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 10,
+    "slideTitle": "İzolasyon Önlemlerinin 2 Kademeli Mimarisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
+  },
+  {
+    "id": "d3-k1-enf-013",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 11,
+    "slideTitle": "Standart Önlemler ve El Hijyeni İlkeleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
+  },
+  {
+    "id": "d3-k1-enf-013-202",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 12,
+    "slideTitle": "Güvenli Enjeksiyon ve Kesici-Delici Alet Yaralanmalarından Korunma",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
+  },
+  {
+    "id": "d3-k1-enf-010",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 13,
+    "slideTitle": "Temas İzolasyonu (Kırmızı Yıldız) ve Çoğul Dirençli Mikroorganizmalar",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tek kişilik oda, mümkün değilse aynı mikroorganizma ile enfekte/kolonize hastaların\naynı odaya yerleştirilmesi (kohortlama)",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Odalar/hastalar arasında malzeme veya tıbbi cihazların ortak kullanımının önlenmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Kişisel koruyucu ekipmanların (KKE) hasta odasından ayrılmadan çıkarılması",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Odadan ayrıldıktan sonra el hijyeni uygulanması",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Odaya girmeden önce N95 maske takılması",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
+  },
+  {
+    "id": "d3-k1-enf-004",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 14,
+    "slideTitle": "Damlacık İzolasyonu (Mavi Çiçek) ve 1 Metre Güvenlik Kuralı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kızamık",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Suçiçeği",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "SARS-CoV-2 enfeksiyonu",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Neisseria meningitidis",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Tüberküloz",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
+  },
+  {
+    "id": "d3-k1-enf-004-205",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 15,
+    "slideTitle": "Solunum (Hava Yolu) İzolasyonu (Sarı Yaprak) ve Negatif Basınç",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kızamık",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Suçiçeği",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "SARS-CoV-2 enfeksiyonu",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Neisseria meningitidis",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Tüberküloz",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
+  },
+  {
+    "id": "d3-k1-enf-011",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 16,
+    "slideTitle": "Üç İzolasyon Tipinin ve Hastane Sembollerinin Karşılaştırma Matrisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hastanelerde kullanılan enfeksiyon kontrol işaretlerinden hangisi temas izolasyonunu simgeler?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sarı yaprak",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Mavi papatya/çiçek",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Kırmızı yıldız",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Yeşil üçgen",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Turuncu daire",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hastane enfeksiyon kontrol uygulamasında (kurumdan kuruma\ndeğişebilen renk kodlamalarında), temas izolasyonu gerektiren\nhastaların oda kapılarına genellikle kırmızı yıldız işareti asılır. Bu görsel\nkodlama, sağlık personelinin ve ziyaretçilerin gerekli koruyucu önlemleri\n(eldiven, önlük vb.) almadan odaya girmesini engellemeyi amaçlar."
+  },
+  {
+    "id": "d3-k5-aci-011",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 17,
+    "slideTitle": "Kişisel Koruyucu Ekipman (KKE) Giyme ve Çıkarma Protokolü",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Akut toksik madde zehirlenmelerinde gastrointestinal dekontaminasyon yöntemleri değerlendirildiğinde güncel kılavuzlarda aspirasyon riski ve özofagus perforasyonu tehlikesi nedeniyle artık RUTİN OLARAK KULLANILMAYAN ve önerilmeyen yöntem aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "İpeka şurubu veya mekanik uyarı ile hastayı kusturma",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "İlk 1 saat içinde tek doz aktif kömür uygulaması",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Bilinç açık veya entübe hastada orogastrik tüp ile mide yıkama",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Demir ve lityum zehirlenmesinde tüm bağırsak irrigasyonu (PEG)",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Spesifik antidot uygulanması",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
+  },
+  {
+    "id": "d3-k1-enf-009-208",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 18,
+    "slideTitle": "Çoğul İlaç Dirençli Bakteriler (MDRO) ve Antibiyotik Yönetimi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
+  },
+  {
+    "id": "d3-k1-enf-054-209",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 19,
+    "slideTitle": "Koruyucu Ortam (Ters İzolasyon) ve Nötropenik Hasta Yönetimi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Febril nötropeni için hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mutlak nötrofil sayısı <500/mm³",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Vücut sıcaklığı ≥38.3°C ya da 1 saat ara ile ≥38°C",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Mukozit varlığında kandidemi riski artar",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Uzamış nötropeni küf enfeksiyonu riskini artırır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Febril nötropenide izole hümoral immün yetmezlik vardır",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
+  },
+  {
+    "id": "d3-k1-enf-009-210",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 20,
+    "slideTitle": "Büyük Sentez: İzolasyon Karar Ağacı ve Kurul 1 Altın İpuçları",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
+  },
+  {
+    "id": "d3-k1-hs-001",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 1,
+    "slideTitle": "Bulaşıcı Hastalıkların Yeniden Ortaya Çıkışı ve 1970 Yanılgısı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Halk sağlığı kavramının başlıca ilkeleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sağlık bir insanlık hakkıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Tedavi edici hizmetler koruyucu hizmetlerden önceliklidir",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Hastalıkların nedenleri sosyal, biyolojik ve fiziksel etmenlerdir",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kişinin hastalığı aynı zamanda ailenin de sorunudur",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Sağlık hizmeti bir ekip hizmetidir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Halk sağlığının temel felsefesinde koruyucu hizmetler tedavi edici\nhizmetlerden önceliklidir (\"önce koru\" ilkesi); bir hastalığı ortaya\nçıkmadan önlemek, ortaya çıktıktan sonra tedavi etmekten her zaman\ndaha etkili ve ekonomiktir. Diğer ifadeler (sağlığın bir insanlık hakkı\nolması, hastalık nedenlerinin çok boyutlu olması, hastalığın aile boyutu,\nekip hizmeti olması) halk sağlığının kabul edilen temel ilkeleridir."
+  },
+  {
+    "id": "past-1790877043881-186862",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 2,
+    "slideTitle": "21. Yüzyılda Salgınların Dinamikleri: Küreselleşme ve Jet Hızı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hangisi influenza virüsleri A (pandemik H1N1 dahil) ve B ile enfeksiyonun tedavisi ve profilaksisi için kullanılan bir antiviral nöraminidaz inhibitörüdür?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Darunavir",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Tenofovir",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Oseltamivir",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Ritonavir",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Nelfinavir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili INFLUENZA kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır."
+  },
+  {
+    "id": "study-q-learn-halk-sagligi-salgin-has-s3",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 3,
+    "slideTitle": "Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı' başlığı altında incelenen bu mekanizma (%70 HAYVAN KAYNAKLI KURALI: İnsanlarda yeni ortaya çıkan enfeksiyon patojenlerinin yaklaşık %70'İ HAYVAN KAYNAKLIDIR (zoonotik kökenli)....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+  },
+  {
+    "id": "d3-k1-enf-001",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 4,
+    "slideTitle": "Epidemiyolojik Dağılım Kalıpları: Endemi, Epidemi, Pandemi, Sporadi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Epidemi (salgın) kavramı için hangisi doğru bir tanımdır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bir hastalığın bir toplulukta alışılmış sıklıkta görülmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Bir hastalığın bir toplulukta alışılmış seyrinden daha fazla görülmesi",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Bir hastalığın bir toplulukta düşük oranda görülmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bir hastalığın bir toplulukta hiç görülmemesi",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Bir hastalığın bir toplulukta çok yüksek, sabit bir oranda sürekli görülmesi",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede, o\nhastalığın o toplumdaki beklenen/alışılmış (bazal, endemik) sıklığının\nbelirgin şekilde üzerinde görülmesidir. Bu kavram mutlak bir sayı değil,\nhastalığın normal düzeyine göre gösterdiği artışı ifade eder. Endemi,\nhastalığın bir bölgede sürekli ve alışılmış düzeyde bulunmasıdır;\npandemi ise epideminin kıtalar arası çok geniş coğrafi alanlara\nyayılmasıdır."
+  },
+  {
+    "id": "d3-k1-enf-026-215",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 5,
+    "slideTitle": "Epidemik Fazlar ve Salgın Eğrisinin 4 Aşaması",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Üretrit sebebiyle izlenen bir hastada ateş yüksekliği gelişmesi halinde ayırıcı tanıda yer alması gerekenler için\nhangisi doğrudur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sadece epididimit düşünülmelidir",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Sadece orşit düşünülmelidir",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Sadece disemine gonokok enfeksiyonu düşünülmelidir",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Sadece skrotal apse düşünülmelidir",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Epididimit, orşit, disemine gonokok enfeksiyonu ve skrotal apsenin hepsi\ndüşünülmelidir",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "Üretrit tanılı bir hastada ateş yüksekliğinin eklenmesi, enfeksiyonun\nbasit üretritin ötesine geçerek komplike bir tabloya ilerlediğini\ndüşündürür. Bu durumda epididimit, orşit, skrotal apse gibi lokal yayılım\nkomplikasyonları ve dissemine gonokok enfeksiyonu (artrit-dermatit\nsendromu; ateş, poliartralji, püstüler döküntü ile seyreden sistemik bir\ntablo) ayırıcı tanıda mutlaka düşünülmelidir."
+  },
+  {
+    "id": "d3-k2-ah-002",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 6,
+    "slideTitle": "Salgını Bekleme, Erken Teşhis ve Klinisyenin Rolü",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Türkiye Kanser Erken Teşhis, Tarama ve Eğitim Merkezleri (KETEM) ve Aile Hekimliği kanser tarama standartları ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Serviks kanseri taraması 30-65 yaş kadınlarda 5 yılda bir HPV-DNA ve Pap Smear ile yapılır",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Meme kanseri taraması 40-69 yaş kadınlarda 2 yılda bir mamografi ile yapılır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Kolorektal kanser taraması 50-70 yaş kadın ve erkeklerde 2 yılda bir gaitada gizli kan testi (GGK) ile yapılır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "18-35 yaş arası tüm sağlıklı erkeklerde her yıl rutin tarama kolonoskopisi uygulanır",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Meme farkındalığı için 20 yaş üzeri kadınlara her ay kendi kendine meme muayenesi önerilir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Kolorektal kanser taraması 50-70 yaş grubuna yöneliktir (2 yılda bir GGK, 10 yılda bir kolonoskopi). 18-35 yaş arasındaki sağlıklı asemptomatik erkeklerde her yıl kolonoskopi yapılması tıbben anlamsız, zararlı ve protokol dışıdır."
+  },
+  {
+    "id": "study-q-learn-halk-sagligi-salgin-has-s7",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 7,
+    "slideTitle": "Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması' başlığı altında incelenen bu mekanizma (İLK VAKA KURALI: Sınırlama (containment) İLK VAKA TEŞHİS EDİLDİĞİ ANDA BAŞLAMALIDIR; patojen henüz laboratuvarda tam izole edilmemiş olsa da...) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+  },
+  {
+    "id": "d3-k1-hs-016",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 8,
+    "slideTitle": "Hastalık Mücadele Düzeyleri: Kontrol, Eliminasyon ve Eradikasyon",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Bir enfeksiyon hastalığının etkeniyle birlikte yeryüzünden tamamen yok edilmesi aşağıdaki tanımlardan\nhangisiyle ifade edilir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Endemi",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Epidemiyoloji",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Eradikasyon",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Epidemi",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Pandemi",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Eradikasyon, bir hastalığın etkeninin doğadaki tüm rezervuarlarıyla\n(insan, hayvan, çevre) birlikte tamamen ve kalıcı olarak yok edilmesidir;\ngünümüzde çiçek hastalığı, eradike edilmiş tek insan hastalığıdır."
+  },
+  {
+    "id": "d3-k5-coc-001",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 9,
+    "slideTitle": "Salgına Yanıt Sisteminin 4 Temel Ayağı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Türkiye'de Sağlık Bakanlığı koordinasyonunda yenidoğan bebeklerden taburcu olmadan önce alınan topuk kanı (Guthrie kartı) ile taranan metabolik ve genetik hastalıklar arasında aşağıdakilerden hangileri yer alır?\n\nI. Konjenital Hipotiroidi\nII. Spinal Müsküler Atrofi (SMA)\nIII. Konjenital Adrenal Hiperplazi (KAH)\nIV. Konjenital Glokom",
+    "options": [
+      {
+        "key": "A",
+        "text": "I, II ve III",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "I ve II",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "II ve IV",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Yalnız I",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "I, II, III ve IV",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Türkiye Ulusal Yenidoğan Tarama Programında topuk kanından taranan 6 hastalık vardır: 1) Fenilketonüri (FKÜ), 2) Konjenital Hipotiroidi (KH), 3) Biyotinidaz Eksikliği, 4) Kistik Fibrozis (KF), 5) Konjenital Adrenal Hiperplazi (KAH) ve 6) Spinal Müsküler Atrofi (SMA). Konjenital glokom topuk kanından taranmaz; göz muayenesi ve kırmızı refle testi ile taranır."
+  },
+  {
+    "id": "past-1790877479725-612842",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 10,
+    "slideTitle": "Kurumlar Arası Koordinasyon ve Acil Operasyon Merkezleri (EOC)",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Cerebellum çekirdeklerinden hangisi neocerebellum ile ilgili fonksiyona sahiptir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Nucleus globosus",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Nucleus fastigii",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Nucleus emboliformis",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Nucleus interpositum",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Nucleus dentatus",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 3 Diüretik İlaçlar kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır."
+  },
+  {
+    "id": "past-1790877034973-262905",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 11,
+    "slideTitle": "Sağlık Enformasyonu ve Sürveyans Sistemi: Kişi, Zaman ve Yer",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Bir bölgede ortaya çıkan yeni bir viral solunum yolu epidemisinde sürveyans ekiplerince yürütülen filyasyon ve tanı çalışmaları sonucunda klinik ve laboratuvar olarak doğrulanmış toplam 250.000 vaka kayıtlara geçmiştir. Takip süresi sonunda bu enfeksiyona bağlı olarak toplam 5.000 hastanın hayatını kaybettiği saptanmıştır.\n\nBuna göre, söz konusu salgının olgu fatalite hızı (vaka-fatalite hızı) yüzde kaçtır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "%2",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "%4",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "%6",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "%10",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "%15",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "【Doğrulanmış Tıbbi Gerekçe (Eşleşme: %100)】:\nVaka-fatalite hızı (Case Fatality Rate - CFR), belirli bir hastalık veya salgın sırasında, tanı almış (klinik ve/veya laboratuvar olarak doğrulanmış) vaka sayısı içindeki ölüm sayısının yüzdesi olarak hesaplanır. Formül: (Ölüm Sayısı / Toplam Vaka Sayısı) x 100. Soruda verilen değerlere göre: (5.000 / 250.000) x 100 = 0.02 x 100 = %2. Bu hesaplama halk sağlığı ve epidemiyoloji literatüründe (CDC, WHO, Gordis Epidemiology) standarttır. Amfi slaytları bu spesifik hesaplama sorusuyla doğrudan ilişkili değildir (uyum skoru yüksek olsa da içerik farklı), ancak uluslararası literatür ve temel matematiksel mantık iddia edilen cevabı kesin olarak doğrular.\n\n【Amfi Slayt Referansı】: \"2021final11_230619_142606\" (Slayt #2)\n\n【Klinik İpucu】: Vaka-fatalite hızı (CFR) ile Ölüm Hızı (Mortality Rate) karıştırılmamalıdır. CFR sadece hastalananlar arasındaki ölümleri ölçer (hastalığın şiddetini yansıtır), Ölüm Hızı ise genel popülasyondaki ölümleri ölçer (popülasyon riskini yansıtır). Salgın başlangıcında CFR genellikle yüksek çıkar ve zamanla düşebilir (dengeye oturur)."
+  },
+  {
+    "id": "d3-k6-hal-003",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 12,
+    "slideTitle": "Risk İletişimi ve İnfodemi ile Mücadele: Üç Altın Kural",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Çalışma yaşamında bir çalışana yönelik sistematik, kasıtlı, düşmanca ve sürekli olarak uygulanan Mobbing (işyerinde psikolojik taciz) davranış kategorileri değerlendirildiğinde aşağıdakilerden hangisi çalışanın \"kendini göstermesini ve iletişimini engellemeye\" yönelik davranışlar grubuna girer?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Çalışanın sözünün sürekli kesilmesi, yöneticisi tarafından azarlanması, çalışma arkadaşlarıyla konuşmasının yasaklanması ve fikirlerinin dikkate alınmaması",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Çalışanın arkasından asılsız dedikodu çıkarılması ve cinsel imalarda bulunulması",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Çalışana anlamsız, kapasitesinin çok altında veya yapamayacağı imkansız görevler verilmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Doğrudan fiziksel şiddet uygulanması veya tehdit edilmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "İşyerindeki ortak çalışma alanından uzaklaştırılıp izole odaya hapsedilmesi",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Leymann tarafından sınıflandırılan mobbing boyutları: 1) Kendini göstermeyi ve iletişimi engelleme (sözünü kesme, bağırma, sürekli eleştirme), 2) Sosyal ilişkilere saldırı (dışlama, izole etme, yok sayma), 3) Sosyal itibara saldırı (dedikodu, iftira, alay etme), 4) Yaşam kalitesi ve mesleki duruma saldırı (niteliksiz iş verme, anlamsız iş verme), 5) Doğrudan sağlığa saldırıdır."
+  },
+  {
+    "id": "d3-k1-enf-036",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 13,
+    "slideTitle": "Toplumsal Boyut: Sosyokültürel Faktörler ve Toplumun Katılımı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi HIV pozitif anneden bebeğe vertikal bulaş riskini artıran faktörlerden DEĞİLDİR?",
+    "options": [
+      {
+        "key": "A",
+        "text": "İkiz gebelik",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Maternal CD4 sayısının yüksek olması",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "AIDS'in eşlik etmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Vajinal doğum",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Uzamış membran rüptürü",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Anneden bebeğe HIV geçişini (vertikal bulaşı) belirleyen temel etken annedeki viral replikasyon düzeyi ve immün durumudur. Ders notunda riski artıran faktörler AIDS varlığı, CD4 sayısının düşük olması, viral yükün yüksek olması, ikiz bebek, koryoamniyonit, erken membran rüptürü ve emzirme olarak sayılmıştır. Bu nedenle AIDS'in eşlik etmesi (C) ve ikiz gebelik (A) ileri hastalık ile artmış virüs yükünü yansıttığı için riski artırır. Annenin tedavisinde viral yük 1000 kopyanın üzerinde veya bilinmiyorsa 38. haftada sezaryen önerilmesi, vajinal doğumun (D) ve membran rüptürünün (E) bebeğe geçişi kolaylaştırdığını gösterir. Buna karşılık maternal CD4 sayısının yüksek olması korunmuş immün durumu ve genellikle baskılanmış viral yükü gösterir; riski artırmaz, azaltır, bu nedenle 'DEĞİLDİR' sorusunun cevabı B'dir. Ayırt edici ipucu: riski artıran asıl değişken annede yüksek viral yük ve düşük CD4 sayısıdır."
+  },
+  {
+    "id": "study-q-learn-halk-sagligi-salgin-has-s14",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 14,
+    "slideTitle": "21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": null,
+    "options": [
+      {
+        "key": "A",
+        "text": "21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, '21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı' başlığı altında incelenen bu mekanizma (BUYURGAN DİLİN REDDİ: 21. yüzyılda insanlar artık tek taraflı, otoriter ve buyurgan dili kesinlikle benimsememektedir....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+  },
+  {
+    "id": "d3-k1-far-002",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 15,
+    "slideTitle": "Tedavi, Aşılar ve Destekleyici Bakımın Hayat Kurtaran Gücü",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Romatoid artrit, Crohn hastalığı ve ankilozan spondilit tedavisinde kullanılan, çözünür ve transmembran TNF-alfa'ya yüksek afiniteyle bağlanan kimerik monoklonal antikor (biyolojik ajan) hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Siklofosfamid",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "İnfliksimab",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Azatioprin",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Prednizolon",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Metotreksat",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "İnfliksimab, insan IgG1 sabit bölgesi ve fare değişken bölgesinden oluşan kimerik monoklonal bir anti-TNF-alfa antikorudur ve biyolojik ajan sınıfındadır. Siklofosfamid, azatioprin, prednizolon ve metotreksat ise konvansiyonel (küçük moleküllü kimyasal) immünosüpresiflerdir, monoklonal antikor biyolojik ajan değillerdir."
+  },
+  {
+    "id": "d3-k5-hal-015",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "slideNumber": 16,
+    "slideTitle": "Sağlık İşgücünün Korunması ve Sağlık Sisteminin Güçlendirilmesi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Koruyucu hekimlik düzeyleri değerlendirildiğinde aşağıdakilerden hangisi bir \"Birincil (Primer) Koruma\" uygulaması olmayıp \"İkincil (Sekonder) Koruma\" örneğidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yenidoğanlarda fenilketonüri ve konjenital hipotiroidi için topuk kanı taraması yapılması",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Bebeklere çocukluk çağı rutin aşılarının uygulanması",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Gebelere ve bebeklere profilaktik demir ve D vitamini desteği verilmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "İşyerinde gürültüye karşı kulaklık takılmasının sağlanması",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Topluma sağlıklı beslenme ve fiziksel aktivite eğitimi verilmesi",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Primer koruma: Hastalık henüz biyolojik olarak başlamadan önce sağlıklı bireyleri korumaktır (aşılama, beslenme desteği, kişisel koruyucu donanım). Sekonder koruma: Hastalık başlamış ancak henüz klinik belirti vermemişken asemptomatik dönemde erken tanı konulmasıdır (tüm tarama testleri: topuk kanı taraması, mamografi, pap-smear vb.)."
+  },
+  {
     "id": "d3-k1-hs-004",
     "deckId": "learn-halk-sagligi-salgin-has",
     "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
@@ -838,7 +1891,7 @@
     "explanation": "Doğru yanıt C'dir. Piroptoz (Pyroptosis), mikrobiyal enfeksiyonlara yanıt olarak gelişen yangısal bir programlı hücre ölümüdür. İntrasellüler inflamazom kompleksi prokaspaz-1'i aktive eder. Kaspaz-1 ise hem prokaspaz kaynaklı pro-IL-1β'yı aktif IL-1β'ya dönüştürür hem de Gazdermin D'yi keserek plazma zarında gözenekler açar; sonuçta hücre lize olur, çevreye IL-1 ve IL-18 saçılarak yoğun yangı ve ateş tablosu ortaya çıkar."
   },
   {
-    "id": "d3-k1-pat-031-242",
+    "id": "d3-k1-pat-031-269",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 1,
@@ -955,7 +2008,7 @@
     "explanation": "GINA kılavuzlarına göre astımda bronkodilatör reversibilite kriteri: Kısa etkili beta-2 agonist inhalasyonundan 10-15 dakika sonra FEV1'de bazale göre en az %12 VE mutlak olarak en az 200 mL düzelme olmasıdır."
   },
   {
-    "id": "d3-k1-pat-031-245",
+    "id": "d3-k1-pat-031-272",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 4,
@@ -994,7 +2047,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-246",
+    "id": "d3-k1-pat-031-273",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 5,
@@ -1033,7 +2086,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-247",
+    "id": "d3-k1-pat-031-274",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 6,
@@ -1150,7 +2203,7 @@
     "explanation": "HKMP'nin patognomonik histolojik bulgusu 'miyosit disarray'dir (miyositlerin yönelim bozukluğu / kaotik dallanması). Normal paralel hiyerarşi kaybolmuştur, aralarda yoğun kollajenöz fibrozis bulunur; bu zemin fatal ventriküler aritmilerin ana kaynağıdır."
   },
   {
-    "id": "d3-k1-pat-002-250",
+    "id": "d3-k1-pat-002-277",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 9,
@@ -1384,7 +2437,7 @@
     "explanation": "Endometrioid (Tip 1) karsinomun patogenezinde PTEN genindeki değişiklikler tipik olarak SOMATİK mutasyonlardır, germline (kalıtsal) mutasyonlar değildir; germline PTEN mutasyonu nadir görülen Cowden sendromuna özgüdür ve sporadik endometrioid karsinomların genel patogenezini tanımlamaz, bu nedenle bu ifade yanlıştır. Tip 1 karsinomların prototipi östrojene bağlı endometrioid karsinom olup atipili hiperplaziden gelişir; Tip 2&apos;nin prototipi ise TP53 mutasyonlu, atrofik endometriyum zemininde gelişen seröz karsinomdur ve prognozu daha kötüdür."
   },
   {
-    "id": "d3-k1-pat-031-256",
+    "id": "d3-k1-pat-031-283",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 15,
@@ -1579,7 +2632,7 @@
     "explanation": "Opsonizasyon; bir mikroorganizma veya hücrenin, kompleman (C3b) veya antikorlarla kaplanarak fagositoza duyarlı hale getirilmesi işlemidir ve fagositik hücreler tarafından fagositoz ile temizlenmeyi ifade eder; bu bir nekroz/fagositoz mekanizmasıdır, apoptozun kendisi değildir. Buna karşılık, proliferasyon dengesinin korunması, otoreaktif lenfositlerin negatif seleksiyonla elenmesi, sitotoksik T hücre aracılı öldürme ve görevi biten hücrelerin (örn. embriyonik gelişimde) elimine edilmesi klasik apoptoz örnekleridir."
   },
   {
-    "id": "d3-k1-pat-031-261",
+    "id": "d3-k1-pat-031-288",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 20,
@@ -1618,7 +2671,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-262",
+    "id": "d3-k1-pat-031-289",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 21,
@@ -1696,7 +2749,7 @@
     "explanation": "Bu soru, Karabük Üniversitesi Tıp Fakültesi Dönem 3 Bütünleme Sınavı müfredatında yer alan Tıbbi Patoloji ders kurulundaki temel mekanizmaları sorgulamaktadır. İlgili konunun amfi ders notları, ulusal çekirdek eğitim programı (ÇEP) ve klinik kılavuzlara göre doğru yanıt A seçeneğidir. Çeldirici seçeneklerde yer alan parametreler klinik ve patolojik ayırıcı tanıda farklı antitelere aittir."
   },
   {
-    "id": "d3-k1-pat-031-264",
+    "id": "d3-k1-pat-031-291",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 23,
@@ -1735,7 +2788,7 @@
     "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
   },
   {
-    "id": "d3-k1-pat-031-265",
+    "id": "d3-k1-pat-031-292",
     "deckId": "learn-hucresel-adaptasyon-ve-hu",
     "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
     "slideNumber": 24,
@@ -1905,578 +2958,5 @@
     ],
     "correctAnswer": 0,
     "explanation": "Doğru yanıt A'dır. ATM kinaz, çift iplik DNA kırıklarını algılayan anahtar proteindir. DNA çift iplik kırığı oluştuğunda MRN kompleksi aracılığıyla hasar bölgesine toplanır ve otofosforilasyonla aktive olarak p53, Chk2, BRCA1 gibi substratları fosforiller. ATM inaktivasyonu Ataksi-Telenjiektazi sendromuna neden olur; hastalarda serebellar dejenerasyon, okülokütanöz telenjiektaziler ve radyasyon hipersensitivitesi görülür. B seçeneğindeki WRN ve C seçeneğindeki BLM RecQ helikazlarıdır. D seçeneğindeki Lamin A nükleer lamina yapı taşıdır. E seçeneğindeki TERT ise telomeraz enziminin katalitik ünitesidir."
-  },
-  {
-    "id": "prac-yaslanma-008",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 8,
-    "slideTitle": "Replikatif Yaşlanma ve Hayflick Sınırı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücre biyolojisinde Leonard Hayflick tarafından tanımlanan ve normal insan somatik fibroblastlarının in vitro kültür ortamında sınırsız çoğalamayıp yaklaşık 50-60 bölünme döngüsü sonrasında kalıcı olarak bölünmeyi durdurduğunu ifade eden kavram ve bu durumun organizma için birincil evrimsel yararı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Apoptotik kriz — Doku atrofisini önlemek ve rejenerasyonu hızlandırmak",
-      "B) Hayflick sınırı — Hücrelerin sınırsız bölünerek malign transformasyona uğramasını engelleyen tümör süpresör bariyer",
-      "C) Warburg etkisi — Hücrelerin aerobik glikolize geçerek enerji tüketimini sınırlandırması",
-      "D) Nekroptozis — İltihapsız hücre ölümü sağlayarak otoimmüniteyi baskılamak",
-      "E) Epigenetik kayma — DNA metilasyonunu tamamen sıfırlayarak kök hücre farklılaşmasını sağlamak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Hayflick sınırı (replikatif senesans); normal somatik hücrelerin belirli bir bölünme sayısından (ortalama 50-60 döngü) sonra mitozu kalıcı olarak durdurmasıdır. Bu sınır, mutasyon biriktiren klonların sınırsız çoğalmasını engelleyerek malign transformasyonu (kanserleşmeyi) önleyen kritik bir evrimsel tümör süpresör mekanizmadır. A seçeneğindeki apoptotik kriz telomerler tamamen tükendiğinde devreye girer. C seçeneğindeki Warburg etkisi tümör hücrelerinin aerobik glikoliz metabolizmasıdır. D seçeneğindeki nekroptozis programlı nekrozdur. E seçeneğindeki epigenetik kayma ise yaşlanmayla DNA metilasyon paternlerinin bozulmasıdır."
-  },
-  {
-    "id": "prac-yaslanma-009",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 9,
-    "slideTitle": "Telomer Biyolojisi ve Uç Replikasyon Problemi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Ökaryotik hücrelerde doğrusal kromozomların uçlarında bulunan telomerlerin her hücre bölünmesinde kademeli olarak kısalmasına yol açan 'uç replikasyon problemi'nin (end-replication problem) temel moleküler ve biyokimyasal nedeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) DNA polimerazın her replikasyonda nükleotidleri rastgele hidroliz eden 5'->3' ekzonükleaz aktivitesine sahip olması",
-      "B) Kesintili zincirde (lagging strand) kromozomun en ucundaki RNA primerinin kaldırılmasından sonra DNA polimerazın serbest 3'-OH grubu bulamaması",
-      "C) Telomerik bölgedeki DNA metiltransferaz enzimlerinin guanin bazlarını aşırı metilleyerek transkripsiyonu durdurması",
-      "D) Topoizomeraz II enziminin telomer bölgesinde çözülmeyen süperkıvrımlar oluşturarak replikasyon çatalını kilitlemesi",
-      "E) Telomer bölgesindeki histon proteinlerinin asetillenerek DNA ipliklerinin birbirinden ayrılmasını imkansız kılması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. DNA polimeraz sentezi sadece 5'->3' yönünde yapabilir ve bir RNA primerinin sağladığı serbest 3'-OH ucuna ihtiyaç duyar. Kesintili zincirin en ucundaki primer söküldüğünde, DNA polimerazın uzatabileceği daha geride bir 3'-OH ucu olmadığı için bu terminal boşluk doldurulamaz ve her bölünmede 50-200 bazlık kayıp gerçekleşir; buna 'uç replikasyon problemi' denir. A seçeneği yanlıştır; ekzonükleaz aktivitesi hata düzeltme amaçlıdır, uç kaybının nedeni değildir. C, D ve E seçeneklerindeki mekanizmalar telomerik kısalmanın biyokimyasal temeli ile ilişkisizdir."
-  },
-  {
-    "id": "prac-yaslanma-010",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 10,
-    "slideTitle": "Telomer Koruyucu Başlığı: Shelterin Kompleksi ve T-Loop Mimarisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Telomer biyolojisinde, doğrusal kromozom uçlarının çift iplik DNA kırığı (DSB) olarak algılanmasını önleyen 'Shelterin' kompleksi üyeleri arasında yer alan; özellikle tek iplikli 3' G-overhang bölgesine özgül olarak bağlanarak ATR kinaz aracılı DNA hasar sinyalini doğrudan baskılayan protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) POT1 (Protection of Telomeres 1)",
-      "B) TRF1 (Telomeric Repeat-Binding Factor 1)",
-      "C) TRF2 (Telomeric Repeat-Binding Factor 2)",
-      "D) TIN2 (TRF1-interacting nuclear factor 2)",
-      "E) RAP1 (Repressor/Activator Protein 1)"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. POT1 (Protection of Telomeres 1), Shelterin kompleksinin tek iplikli telomerik DNA'ya (3' G-overhang) bağlanan özgül bileşenidir. Tek iplikli ucu örterek RPA (Replication Protein A) bağlanmasını ve dolayısıyla ATR kinazının aktive olmasını engeller. B seçeneğindeki TRF1 ve C seçeneğindeki TRF2 çift iplikli telomerik DNA'ya bağlanır; TRF2 özellikle ATM ve NHEJ'i baskılar. D seçeneğindeki TIN2 yapısal iskelet köprüsüdür. E seçeneğindeki RAP1 ise TRF2 ile etkileşen regülatör proteindir."
-  },
-  {
-    "id": "prac-yaslanma-011",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 11,
-    "slideTitle": "Telomer Aşınmasından Hücre Döngüsü Blokajına: ATM/ATR, p53 ve p21 Yolağı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Somatik hücrelerde telomer uzunluğu kritik bir eşiğin altına indiğinde tetiklenen ve replikatif senesansla sonuçlanan moleküler sinyal iletim zincirinde aşağıdaki olaylardan hangisi DİĞERLERİNDEN DAHA SONRA gerçekleşir?",
-    "options": [
-      "A) Koruyucu T-loop yapısının çözülmesi ve kromozom uçlarının çıplak kalması",
-      "B) ATM kinazın aktive olarak gama-H2AX odaklarını oluşturması",
-      "C) p53 tümör süpresör proteininin MDM2 aracılı proteazomal yıkımdan kurtularak stabilize olması",
-      "D) p21 (CDKN1A) gen ekspresyonunun artarak CDK kinaz komplekslerini inhibe etmesi",
-      "E) Retinoblastoma (Rb) proteininin hipofosforile kalarak E2F transkripsiyon faktörünü baskılaması ve G1 arresti"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E'dir. Sinyal kaskadının kronolojik sırası şöyledir: İlk olarak telomer aşınır ve T-loop çözülür (A). Çıplak uçları algılayan ATM aktive olur ve gama-H2AX odakları kurar (B). ATM/Chk2 etkisiyle p53 fosforillenir ve MDM2'den ayrılarak stabilize olur (C). Nükleustaki p53, p21 (CDKN1A) transkripsiyonunu artırır ve CDK'lar inhibe edilir (D). En son basamakta ise CDK'lar çalışamadığı için Rb proteini hipofosforile (aktif) kalır, E2F'i sımsıkı bağlar ve hücreyi geri dönüşsüz şekilde G1 fazında kilitler (E)."
-  },
-  {
-    "id": "prac-yaslanma-012",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 12,
-    "slideTitle": "Stres Kaynaklı Erken Senesans (SIPS) ve p16INK4a / Rb Yolağı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Dermatoloji polikliniğine başvuran 28 yaşındaki bir kadının sırtından eksize edilen 5 mm çapındaki pigmente lezyonun histopatolojik incelemesinde dermiste yuvalar oluşturan matür melanositler izleniyor ve intradermal melanositik nevüs tanısı konuyor. Genetik analizde melanositlerde BRAF V600E mutasyonu saptanmasına rağmen bu hücrelerin malign melanom gibi kontrolsüz prolifere olmayıp on yıllarca benign bir duraklama (Oncogene-Induced Senescence) içinde kalmasını sağlayan temel siklin bağımlı kinaz inhibitörü protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) p16INK4a (CDKN2A)",
-      "B) p21CIP1 (CDKN1A)",
-      "C) p27KIP1 (CDKN1B)",
-      "D) p57KIP2 (CDKN1C)",
-      "E) MDM2"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Onkogen aracılı senesansın (Oncogene-Induced Senescence - OIS) prototipik klinik örneği benign melanositik nevüslerdir. Bu lezyonlar aktive edici BRAF V600E mutasyonu taşır; ancak hücreler kontrolsüz çoğalmak yerine INK4a/ARF (CDKN2A) lokusunu aktive ederek yüksek düzeyde p16INK4a üretirler. p16INK4a, CDK4/6'yı inhibe eder ve Rb üzerinden hücreyi kalıcı G1 senesansına sokar. B seçeneğindeki p21 daha çok telomer aşınması ve p53 yanıtında görev alır. C ve D seçeneklerindeki p27 ve p57 KIP ailesi üyeleridir. E seçeneğindeki MDM2 ise p53'ü yıkan onkogendir."
-  },
-  {
-    "id": "prac-yaslanma-013",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 13,
-    "slideTitle": "Telomeraz Enzimi: TERT Katalitik Alt Birimi ve TERC RNA Şablonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Telomeraz enzim kompleksinin moleküler yapısı ve biyokimyasal etki mekanizması incelendiğinde, kromozomların 3' tek iplikli ucuna de novo TTAGGG tekrarlarının eklenmesinde doğrudan 'fiziksel şablon (kalıp)' görevi gören alt birim aşağıdakilerden hangisidir?",
-    "options": [
-      "A) TERT (Telomerase Reverse Transcriptase)",
-      "B) TERC / hTR (Telomerase RNA Component)",
-      "C) DKC1 (Diskerin)",
-      "D) TIN2 (TRF1-interacting nuclear factor 2)",
-      "E) TRF2 (Telomeric Repeat-Binding Factor 2)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Telomeraz kompleksinde sentezlenecek TTAGGG hekzanükleotid tekrarlarına kalıp (şablon) oluşturan molekül, kodlama yapmayan bir RNA olan TERC'tir (hTR). TERT ise (A seçeneği) bu RNA kalıbını okuyarak DNA polimerizasyonunu gerçekleştiren katalitik revers transkriptaz proteinidir. C seçeneğindeki Diskerin (DKC1) TERC RNA'sını stabilize eden yardımcı proteindir. D ve E seçeneklerindeki TIN2 ve TRF2 ise telomerazın değil, telomer koruyucu başlığı olan Shelterin kompleksinin üyeleridir."
-  },
-  {
-    "id": "prac-yaslanma-014",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 14,
-    "slideTitle": "Telomeraz Aktivitesinin Hücresel Dağılımı: Germ, Kök ve Somatik Hücreler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "İnsan organizmasında farklı hücre tiplerinde telomer uzunluğu dinamikleri ve telomeraz enzim aktivitesi karşılaştırıldığında aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
-    "options": [
-      "A) Farklılaşmış somatik hücreler TERT proteinini yüksek düzeyde sentezler fakat TERC RNA'sından yoksundur.",
-      "B) Germ hücrelerinde telomeraz aktivitesi tamamen kapalıdır; telomer boyu döllenme sonrasında zigotta uzatılır.",
-      "C) Hematopoetik kök hücrelerde telomeraz aktivitesi somatik hücreler gibi sıfır olup ilk bölünmede senesense girerler.",
-      "D) Erişkin kök hücrelerde telomeraz aktivitesi bazal düzeyde bulunur; telomer kısalmasını yavaşlatır ancak yaşlanmayla kök hücre havuzunun tükenmesini tamamen engelleyemez.",
-      "E) Kalp kası hücreleri ve nöronlar telomerazı reaktive ederek yaşam boyu telomer uzunluklarını sabit tutarlar."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Kök hücrelerde telomeraz enzimi aktiftir ancak bu aktivite telomer boyunu sabit tutmaya yetmez; bölünmelerle telomerler yavaşça kısalır ve ileri yaşta 'kök hücre havuzu tükenmesi' gerçekleşir. A seçeneği yanlıştır; somatik hücrelerde TERC RNA bulunur fakat TERT promotörü kapalıdır. B seçeneği yanlıştır; germ hücrelerinde telomeraz aktivitesi maksimumdur. C seçeneği yanlıştır; kök hücrelerde telomeraz aktiftir. E seçeneği yanlıştır; nöronlar ve kardiyomiyositler bölünmeyen kalıcı hücrelerdir ve telomeraz aktivitesi taşımazlar."
-  },
-  {
-    "id": "prac-yaslanma-015",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 15,
-    "slideTitle": "Telomeraz ve Neoplazi: Kanser Hücrelerinde Ölümsüzlük (İmmortalite)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "58 yaşında bir erkek hastada baş ağrısı ve nörolojik defisit nedeniyle yapılan beyin MRG'sinde frontal lobda nekrotik ve vasküler proliferasyon gösteren kitle saptanıyor; biyopside Glioblastoma multiforme tanısı konuyor. Tümör hücrelerinin sınırsız bölünme kapasitesi (replikatif immortalite) kazanmasında rol oynayan ve insan kanserlerinin yaklaşık %85-90'ında saptanan en yaygın moleküler mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) ATRX geninde inaktivasyon sonucu homolog rekombinasyon (ALT) yolağının açılması",
-      "B) TERT gen promotöründe yeni transkripsiyon faktörü bağlanma bölgeleri yaratan nokta mutasyonları ile telomerazın reaktivasyonu",
-      "C) Shelterin kompleksi proteini TRF2'nin aşırı üretimi sonucu telomerlerin tamamen parçalanması",
-      "D) Hücrelerin p53 ve p21 düzeylerini aşırı artırarak apoptoz kaskadını kalıcı olarak aktive etmesi",
-      "E) Telomerik TTAGGG hekzanükleotid tekrarlarının sitozin deaminasyonu ile urasile dönüştürülmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. İnsan malign tümörlerinin (özellikle glioblastom, melanom ve ürotelyal mesane kanserlerinin) %85-90'ında telomeraz reaktivasyonu görülür. Bu reaktivasyonun en sık mekanizması, TERT gen promotöründe (-124 ve -146 bp) meydana gelen ve yeni ETS transkripsiyon faktörü bağlanma bölgeleri oluşturan somatik C>T nokta mutasyonlarıdır. A seçeneğindeki ALT yolağı telomeraz negatif tümörlerin (%10-15, örn. sarkomlar) mekanizmasıdır. C seçeneğinde telomer parçalanması değil korunması söz konusudur. D seçeneğindeki p53/p21 artışı tümör oluşumunu engeller, kanserde genellikle inaktivedirler. E seçeneği ise gerçek dışı bir süreçtir."
-  },
-  {
-    "id": "prac-yaslanma-016",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 16,
-    "slideTitle": "Telomeropatiler: Kalıtsal Telomer Yetersizliği Sendromları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "22 yaşında bir erkek hasta tekrarlayan diş eti kanamaları ve halsizlik şikayetiyle başvuruyor. Fizik muayenede boyun derisinde retiküler hiperpigmente maküller, el tırnaklarında belirgin distrofi ve dilde beyaz lökoplakik plaklar izleniyor. Laboratuvar incelemesinde pansitopeni saptanıyor ve kemik iliği biyopsisinde hematopoetik serinin neredeyse tamamen kaybolduğu hiposellüler ilik (aplastik anemi) izleniyor. Hastanın moleküler genetik analizinde telomeraz yardımcı proteini Diskerin'i kodlayan DKC1 geninde mutasyon tespit ediliyor. Bu hastanın tanısı ve hastalığın temel patofizyolojik mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Fanconi Anemisi — DNA çapraz bağlarının onarılamaması sonucu kemik iliği nekrozu",
-      "B) Werner Sendromu — WRN DNA helikaz defektine bağlı osteosarkom gelişimi",
-      "C) Diskeratozis Konjenita — Telomeraz yetersizliği nedeniyle telomerlerin hızla aşınması ve kök hücre tükenmesi",
-      "D) Hutchinson-Gilford Projeria — Lamin A proteininin farnesillenememesi sonucu nükleer çöküş",
-      "E) Kseroderma Pigmentozum — Nükleotid eksizyon onarımı bozukluğu sonucu deri karsinomu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Klinik triad (deride retiküler pigmentasyon, tırnak distrofisi, oral lökoplaki) ve kemik iliği yetmezliği (aplastik anemi) ile DKC1 mutasyonu birlikteliği 'Diskeratozis Konjenita' için patognomoniktir. Diskeratozis Konjenita prototipik bir telomeropatidir; telomerler aşırı hızlı aşınır ve kök hücreler senesense girer. A seçeneğindeki Fanconi anemisi DNA interstrand crosslink onarım bozukluğudur ve farklı fiziksel anomalilerle seyreder. B seçeneğindeki Werner sendromu WRN helikaz defektidir. D seçeneğindeki Projeria Lamin A mutasyonudur. E seçeneğindeki Kseroderma pigmentozum ise NER defektidir ve UV duyarlılığı ile seyreder."
-  },
-  {
-    "id": "prac-yaslanma-017",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 17,
-    "slideTitle": "Senesent Hücrenin Fenotipi ve Belirteçleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bir araştırmacı, insan dermal fibroblast kültüründe hidrojen peroksit ile oksidatif stres oluşturduktan sonra hücrelerin morfolojik olarak genişleyip düzleştiğini ve bölünmeyi durdurduğunu gözlemliyor. Araştırmacının bu hücrelerin apoptoz veya nekroz yerine 'hücresel senesans' (yaşlanma) evresine girdiğini kesin olarak kanıtlamak için doku kesitinde pH 6.0 ortamında pozitifliğini göstermesi gereken sitokimyasal enzim aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Terminal deoksinükleotidil transferaz (TUNEL)",
-      "B) Senesans İlişkili Beta-Galaktozidaz (SA-β-Gal)",
-      "C) Laktat Dehidrogenaz (LDH)",
-      "D) Kaspaz-3 aktif formu",
-      "E) Alkalen Fosfataz (ALP)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Senesent hücrelerin saptanmasında en güvenilir ve evrensel sitokimyasal belirteç, pH 6.0'da çalışan Senesans İlişkili Beta-Galaktozidaz (SA-β-Gal) aktivitesidir. A seçeneğindeki TUNEL yöntemi apoptozdaki DNA kırıklarını gösterir. C seçeneğindeki LDH plazma zarı parçalanmasını ve nekrozu simgeler. D seçeneğindeki aktif Kaspaz-3 apoptozun infaz fazını işaret eder. E seçeneğindeki Alkalen Fosfataz ise osteoblastik aktivite ve kök hücre belirtecidir."
-  },
-  {
-    "id": "prac-yaslanma-018",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 18,
-    "slideTitle": "Senesans İlişkili Salgı Fenotipi (SASP) Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma biyolojisinde 'Senesans İlişkili Salgı Fenotipi' (SASP) sergileyen senesent hücrelerle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Metabolik olarak son derece aktif olup çevre dokuya yoğun biyoaktif moleküller salgılarlar.",
-      "B) Bcl-2 ve Bcl-xL gibi anti-apoptotik yolakları yukarı regüle ederek programlı hücre ölümüne karşı belirgin direnç kazanırlar.",
-      "C) Salgıladıkları matriks metalloproteinazlar (MMP-1, MMP-3, MMP-9) aracılığıyla ekstrasellüler matriks mimarisini parçalayabilirler.",
-      "D) Nükleer faktör kappa B (NF-κB) ve C/EBPβ transkripsiyon faktörleri SASP sitokinlerinin sürekli sentezinde kilit rol oynar.",
-      "E) Sitoplazmik membran bütünlüklerini tamamen kaybederek pasif nekroz geçirir ve hücre içi enzimlerini kontrolsüzce dokuya boşaltırlar."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E'dir. Senesent hücreler nekroza uğramış hücreler DEĞİLDİR; plazma membran bütünlükleri tamamen korunmuştur. Zarları sağlamdır, intrasellüler içerik pasif olarak dışarı dökülmez; aksine molekülleri veziküller ve aktif ekzositoz yoluyla son derece organize bir şekilde salgılarlar (SASP). A, B, C ve D seçeneklerindeki tüm ifadeler senesent hücrelerin hipermetabolik, apoptoza dirençli, MMP salgılayan ve NF-κB bağımlı biyolojisini doğru olarak açıklamaktadır."
-  },
-  {
-    "id": "prac-yaslanma-019",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 19,
-    "slideTitle": "Inflammaging: SASP Kaynaklı Kronik Steril Enflamasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "75 yaşındaki bir hastada belirgin bir enfeksiyon odağı, otoimmün hastalık veya malignite saptanmamasına rağmen yapılan rutin biyokimyasal taramalarda serum IL-6, TNF-alfa ve yüksek duyarlıklı CRP (hs-CRP) düzeyleri sürekli olarak hafif-orta derecede yüksek bulunmaktadır. Hastanın damar yatağında yaygın kalsifiye aterom plakları ve kas kütlesinde belirgin kayıp (sarkopeni) izleniyor. Bu klinik tabloyu en iyi açıklayan ve yaşlanmanın pro-inflamatuvar zeminini tanımlayan kavram aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut Faz Yanıtı",
-      "B) Inflammaging (İnflamatuvar Yaşlanma)",
-      "C) Granülomatöz İltihap",
-      "D) Tip I Aşırı Duyarlılık Reaksiyonu",
-      "E) İmmünolojik Tolerans"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Yaşlı bireylerde enfeksiyon veya açık otoimmünite olmaksızın serumda pro-inflamatuvar medyatörlerin (IL-6, TNF-α, CRP) kronik, hafif ve steril bir artış göstermesi; dokularda ateroskleroz ve sarkopeni gibi dejeneratif süreçleri hızlandırması 'Inflammaging' olarak adlandırılır. Bu durum senesent hücrelerin SASP sekresyonuna dayanır. A seçeneğindeki akut faz yanıtı enfeksiyon ve travmalara ani yanıttır. C seçeneği mikobakteriyel enfeksiyonlarda görülür. D seçeneği IgE aracılı alerjidir. E seçeneği ise otoantijenlere yanıtsızlıktır."
-  },
-  {
-    "id": "prac-yaslanma-020",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 20,
-    "slideTitle": "SASP'ın İki Yüzü: Yara İyileşmesi ile Neoplastik Progresyon Arasındaki İkilem",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kanser biyolojisinde yaşlanan doku mikroçevresi ve stroma hücrelerinin rolü araştırıldığında, senesent fibroblastların salgıladığı SASP faktörlerinin (özellikle IL-6, IL-8 ve TGF-beta) komşu pre-malign epitelyal hücrelerde E-kaderin kaybına, hücresel polaritenin silinmesine, mezenkimal belirteçlerin kazanılmasına ve invazif potansiyelin artmasına yol açtığı gözlenmiştir. Bu patolojik hücresel dönüşüm süreci aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Epitelyal-Mezenkimal Geçiş (EMT)",
-      "B) Desmoplastik Reaksiyon",
-      "C) İnflamazom Aktivasyonu",
-      "D) Onkotik Nekroz",
-      "E) Retrograd Metaplazi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Epitelyal-Mezenkimal Geçiş (EMT); epitelyal hücrelerin polarite ve hücre-hücre yapışma (E-kaderin) özelliklerini kaybederek mezenkimal, motil ve invazif bir fenotip (vimentin pozitif) kazanmasıdır. Senesent fibroblastların salgıladığı kronik SASP medyatörleri (TGF-β, IL-6) komşu kanser hücrelerinde EMT'yi tetikleyerek invazyon ve metastazı provoke eder. B seçeneğindeki desmoplazi tümör çevresinde yoğun kolajenöz stroma oluşumudur. C seçeneği IL-1β aktivasyonudur. D seçeneği şişmeyle giden nekrozdur. E seçeneği patolojide geçerli bir terim değildir."
-  },
-  {
-    "id": "prac-yaslanma-021",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 21,
-    "slideTitle": "Proteostazis (Protein Homeostazı) Ağı: Şaperonlar ve Katlanma Mekanizmaları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücrede protein sentezi sırasında polipeptit zincirlerinin açıkta kalan hidrofobik aminoasit kalıntılarına bağlanarak onların kontrolsüz agregat oluşturmasını engelleyen, doğru tersiyer konformasyonun kazanılmasına aracılık eden ve hücresel yaşlanmayla birlikte fonksiyonel kapasitesi azalan moleküler yapılar aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Moleküler Şaperonlar (Isı Şok Proteinleri - HSP70/90)",
-      "B) Matriks Metalloproteinazlar (MMP'ler)",
-      "C) Siklin Bağımlı Kinazlar (CDK'lar)",
-      "D) DNA Helikazlar (WRN, BLM)",
-      "E) Lizozomal Asit Fosfatazlar"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Moleküler şaperonlar (Hsp70, Hsp90 vb.), hidrofobik kalıntılara bağlanarak proteinlerin doğru katlanmasını sağlayan ve agregasyonu engelleyen temel hücresel araçlardır. Yaşlanmayla şaperon kapasitesi geriler ve protein agregasyonu başlar. B seçeneğindeki MMP'ler hücre dışı matriksi yıkar. C seçeneğindeki CDK'lar hücre döngüsünü ilerletir. D seçeneğindeki helikazlar DNA replikasyonunda görev alır. E seçeneğindeki asit fosfatazlar ise lizozomal hidrolazlardır."
-  },
-  {
-    "id": "prac-yaslanma-022",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 22,
-    "slideTitle": "Proteostaz İflası: Ubikuitin-Proteazom Sistemi (UPS) ve İntraselüler Agregatlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "76 yaşında progressif demans ve rijidite tablosu sergileyen bir hastanın otopsisinde substansiya nigrada dopaminerjik nöron kaybı ve kalan nöronların sitoplazmasında konsantrik lameller eozinofilik inklüzyonlar (Lewy cisimcikleri) izleniyor. İmmünohistokimyasal incelemede bu inklüzyonların yoğun ubikuitin ve hatalı katlanmış alfa-sinüklein agregatları içerdiği saptanıyor. Yaşlanma zemininde bu proteinlerin parçalanıp yok edilmesinde yetersiz kalan hücresel proteolitik sistem aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sitoplazmik Kaspaz Kaskadı",
-      "B) Ubikuitin-Proteazom Sistemi (26S Proteazom)",
-      "C) Nükleer Ekzonükleaz Aygıtı",
-      "D) Kompleman Membran Atak Kompleksi",
-      "E) Peroksizomal Katalaz Enzim Ağı"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Yanlış katlanmış çözünür proteinlerin ubikuitin ile işaretlenerek yıkıldığı ana hücresel aygıt 26S Proteazom'dur (Ubikuitin-Proteazom Sistemi - UPS). Yaşlanmayla UPS kapasitesinin yetersiz kalması sonucu alfa-sinüklein proteazomda yıkılamaz, ubikuitinle etiketli halde birikerek Lewy cisimciklerini oluşturur ve Parkinson hastalığına yol açar. A seçeneğindeki kaspazlar apoptozu yürütür. C seçeneği RNA/DNA keser. D seçeneği immün lizis yapar. E seçeneği ise H2O2 parçalar."
-  },
-  {
-    "id": "prac-yaslanma-023",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 23,
-    "slideTitle": "Otofaji-Lizozom Yolağının Yaşlanması ve Makrootofaji Bozukluğu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma sürecinde otofajik aktiviteyi inceleyen bir patolog, hücre sitoplazmasında hasarlı mitokondrilerin çift katlı membranlarla sarıldığını ancak primer lizozomlarla birleşmenin yetersiz kaldığını ve lizozom içi asidik pH'nın korunamadığını saptamıştır. Otofagozom zarının uzaması ve kapanması sırasında lipitlenerek (fosfatidiletanolamin konjugasyonu) membran yapısına katılan ve otofaji indüksiyonunun temel moleküler belirteci olan protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) LC3-II (Microtubule-associated protein 1A/1B-light chain 3)",
-      "B) Sitokrom c",
-      "C) Kaspaz-9",
-      "D) E-Kaderin",
-      "E) Progerin"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Otofajinin en kritik moleküler belirteci LC3 proteinidir. Sitozolik form olan LC3-I, fagofor zarı oluştuktan sonra fosfatidiletanolamin (PE) lipidi ile konjüge edilerek zara tutunur ve LC3-II adını alır. LC3-II miktarı otofagozom sayısını ve otofajik aktiviteyi doğrudan yansıtır. B seçeneğindeki Sitokrom c apoptoz tetikleyicisidir. C seçeneğindeki Kaspaz-9 apoptoz başlatıcısıdır. D seçeneğindeki E-kaderin adezyon molekülüdür. E seçeneğindeki Progerin ise Hutchinson-Gilford projeryasında biriken toksik proteindir."
-  },
-  {
-    "id": "prac-yaslanma-024",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 24,
-    "slideTitle": "Aşınma-Yıpranma Pigmenti: Lipofuscin ve Kahverengi Atrofi Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "84 yaşında ileri evre mide karsinomu ve ağır kanser kaşeksisi nedeniyle kaybedilen bir hastanın otopsisinde kalp ağırlığı 165 gram (belirgin küçülmüş) olarak ölçülüyor. Miyokard kesitinde kalp kasının koyu kahverengi renk aldığı ve subepikardiyal koroner arterlerin kıvrıntılı (tortuöz) bir görünüm sergilediği saptanıyor. Miyokardın histopatolojik incelemesinde atrofik kardiyomiyositlerin nükleus kutuplarında (perinükleer) ince granüler sarı-kahverengi pigment birikimi izleniyor. Yapılan Prusya mavisi (Prussian blue) boyamasında bu pigmentin boyanmadığı (negatif olduğu) tespit ediliyor. Bu hastadaki morfolojik tablo ve biriken pigment aşağıdakilerden hangisinde doğru olarak verilmiştir?",
-    "options": [
-      "A) Hemokromatozis — Hemosiderin",
-      "B) Kahverengi Atrofi — Lipofuscin",
-      "C) Alkaptonüri — Homojentisik asit",
-      "D) Wilson Hastalığı — Bakır",
-      "E) Antrakoz — Karbon partikülleri"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Kaşektik veya yaşlı bir hastada kalp ağırlığının azalması (miyosit atrofisi), koyu kahverengi miyokard rengi, koroner arterlerin tortuözitesi ve perinükleer yerleşimli, Prusya mavisi negatif sarı-kahverengi pigment varlığı 'Kahverengi Atrofi' (Brown Atrophy) ve 'Lipofuscin' pigmenti için patognomoniktir. Lipofuscin lipid peroksidasyonu ürünüdür ve demir içermediği için Prusya mavisi ile boyanmaz. A seçeneğindeki hemosiderin demir içerir ve Prusya mavisiyle masmavi boyanır (ayrıca organ büyür, atrofiye uğramaz). C seçeneğindeki alkaptonüri eklem kıkırdaklarında koyulaşma yapar. D seçeneğindeki bakır rodanin ile boyanır. E seçeneğindeki antrakoz ise akciğer ve lenf nodlarında siyah karbon birikimidir."
-  },
-  {
-    "id": "prac-yaslanma-025",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 25,
-    "slideTitle": "Mitokondriyal Disfonksiyon, Oksidatif Fosforilasyon Kaybı ve Mitofaji Yetersizliği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma biyolojisinde, elektron taşıma zincirinde hasar gören ve membran potansiyeli düşen disfonksiyonel mitokondrilerin dış zarlarında PINK1 kinazının birikmesi ve sitozolik Parkin (E3 ubiquitin ligaz) aracılığıyla etiketlenerek seçici bir otofajik süreçle lizozomlarda yıkılması olayına ne ad verilir?",
-    "options": [
-      "A) Piroptozis",
-      "B) Mitofaji",
-      "C) Heterofaji",
-      "D) Pinositoz",
-      "E) Onkozis"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Hasarlı ve disfonksiyonel mitokondrilerin PINK1/Parkin aksı ile tanınıp otofaji yoluyla seçici olarak temizlenmesine 'Mitofaji' adı verilir. Mitofaji yaşlanmayla birlikte geriler ve hasarlı mitokondriler hücrede birikir. A seçeneğindeki piroptozis inflamazom ve gazdermin aracılı iltihaplı ölümdür. C seçeneğindeki heterofaji dışarıdan fagositozla alınan maddelerin yıkımıdır. D seçeneği sıvı içilmesidir. E seçeneğindeki onkozis iskemik hücre şişmesidir."
-  },
-  {
-    "id": "prac-yaslanma-026",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 26,
-    "slideTitle": "Serbest Radikal Teorisi ve Oksidatif Hasar Kısır Döngüsü (Vicious Cycle)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma sürecinde mitokondriyal DNA'nın (mtDNA) nükleer DNA'ya kıyasla serbest oksijen radikalleri (ROS) tarafından oluşturulan mutasyonel hasarlara belirgin derecede daha duyarlı olmasının ve hasarın hızla birikmesinin en temel nedeni aşağıdakilerden hangisidir?",
-    "options": [
-      "A) mtDNA'nın koruyucu nükleozomal histon proteinlerinden yoksun olması ve gelişmiş DNA onarım enzimlerinin bulunmaması",
-      "B) mtDNA'nın doğrusal yapıda olması ve uç replikasyon problemi nedeniyle hızla kısalması",
-      "C) Mitokondri matriksinde süperoksit dismutaz (SOD) ve glutatyon gibi hiçbir antioksidan enzimin yer almaması",
-      "D) mtDNA replikasyonunun hücre siklusunun yalnızca M fazında duraksamalı olarak gerçekleşmesi",
-      "E) Mitokondri iç zarının hidrofilik moleküllere karşı tamamen geçirgen olması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. mtDNA'nın aşırı kırılgan olmasının temel nedenleri; histon kılıfı taşımayan çıplak halkasal DNA olması, nükleustaki gelişmiş onarım mekanizmalarından (NER, MMR vb.) yoksun olması ve ETS kaynaklı serbest radikallerin doğrudan çıkış noktasında yer almasıdır. B seçeneği yanlıştır; mtDNA doğrusal değil sirkülerdir (telomeri yoktur). C seçeneği yanlıştır; matriks içinde MnSOD (SOD2) gibi antioksidanlar bulunur ancak yoğun hasarı tamamen engelleyemez. D ve E seçenekleri biyolojik olarak hatalıdır."
-  },
-  {
-    "id": "prac-yaslanma-027",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 27,
-    "slideTitle": "Mitokondri Hasarından Hücre Ölümüne: İntrensek Apoptoz Yolağı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel hasar sonucu mitokondri dış membranında BAX ve BAK oligomerizasyonu ile açılan porlardan sitoplazmaya sızan Sitokrom c molekülünün; dATP varlığında Apaf-1 adaptör proteini ile bir araya gelerek oluşturduğu 'Apoptozom' kompleksi tarafından kesilerek aktive edilen başlatıcı kaspaz aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kaspaz-8",
-      "B) Kaspaz-9",
-      "C) Kaspaz-1",
-      "D) Kaspaz-4",
-      "E) Kaspaz-12"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. İntrensek (mitokondriyal) apoptoz yolağında Sitokrom c ve Apaf-1'in oluşturduğu Apoptozom tarafından aktive edilen başlatıcı kaspaz 'Kaspaz-9'dur. Aktif Kaspaz-9 daha sonra infazcı Kaspaz-3 ve 7'yi keser. A seçeneğindeki Kaspaz-8 ekstrinsek (ölüm reseptörü, Fas/FasL, TNF-R1) apoptoz yolağının başlatıcısıdır. C seçeneğindeki Kaspaz-1 inflamazom yolağında IL-1β üretimini ve piroptozisi sağlar. D ve E seçenekleri ise diğer özelleşmiş süreçlerde yer alır."
-  },
-  {
-    "id": "prac-yaslanma-028",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 28,
-    "slideTitle": "Besin Algılama ve Yaşlanma Sinyal Yolakları: İnsülin/IGF-1 ve mTOR Ekseni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma ve yaşam süresini kontrol eden metabolik sinyal ağları incelendiğinde, besin bolluğunda aktive olarak hücresel protein sentezini ve hücre büyümesini kamçılayan, buna karşılık ULK1 kompleksini fosforilleyerek otofajiyi (hücresel temizliği) baskılayan ve farmakolojik inhibisyonunun hayvan modellerinde yaşam süresini uzattığı gösterilen merkezi kinaz kompleksi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) mTORC1 (Mechanistic Target of Rapamycin Complex 1)",
-      "B) AMPK (AMP-Aktive Protein Kinaz)",
-      "C) SIRT1 (Sirtuin 1)",
-      "D) PGC-1alfa",
-      "E) ATM Kinaz"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. mTORC1 (Mechanistic Target of Rapamycin Complex 1); besin bolluğu, insülin, IGF-1 ve aminoasitler tarafından aktive edilen, protein sentezini uyarırken otofajiyi (ULK1 üzerinden) şiddetle baskılayan ana kinazdır. mTORC1 inhibisyonu (örn. Rapamisin ile) otofajiyi açar ve yaşam süresini uzatır. B seçeneğindeki AMPK ve C seçeneğindeki SIRT1 besin kıtlığında çalışan ömür uzatıcı koruyuculardır. D seçeneğindeki PGC-1α mitokondri biyogenezi faktörüdür. E seçeneğindeki ATM ise DNA hasar sensörüdür."
-  },
-  {
-    "id": "prac-yaslanma-029",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 29,
-    "slideTitle": "Kalori Kısıtlaması, AMPK ve Sirtuinler (SIRT1-7)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma biyolojisinde kalori kısıtlamasının (caloric restriction) yaşam süresini uzatıcı etkilerini araştıran bir çalışmada, açlık durumunda hücre içinde NAD+/NADH oranının artmasıyla aktive olan; PGC-1alfa ve FOXO transkripsiyon faktörlerini deasetile ederek antioksidan savunmayı artıran, buna karşılık NF-kappa B'yi deasetile ederek pro-inflamatuvar sitokin transkripsiyonunu baskılayan enzim ailesi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sirtuinler (SIRT1 - SIRT7)",
-      "B) Matriks Metalloproteinazlar (MMP'ler)",
-      "C) Siklin Bağımlı Kinazlar (CDK4/6)",
-      "D) Kaspazlar",
-      "E) Telomeraz Revers Transkriptaz"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Sirtuinler (SIRT1-7), NAD+ bağımlı protein deasetilazlardır. Kalori kısıtlamasında ve açlıkta artan NAD+ ile uyarılırlar. SIRT1; PGC-1α'yı deasetile ederek mitokondriyal biyogenez ve antioksidan enzimleri uyarır, NF-κB'yi deasetile ederek inflamatuvar genleri baskılar ve yaşam süresini uzatır. B seçeneğindeki MMP'ler matriksi parçalar. C seçeneğindeki CDK4/6 hücre döngüsünü ilerletir. D seçeneğindeki kaspazlar apoptoz enzimleridir. E seçeneğindeki telomeraz ise telomerleri uzatır."
-  },
-  {
-    "id": "prac-yaslanma-030",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 30,
-    "slideTitle": "Yaşlanmayı Hedefleyen Terapötik Yaklaşımlar: Senolitikler, Senomorfikler ve Biyolojik Saatler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma farmakolojisinde; yaşlanan dokularda birikerek kronik pro-inflamatuvar sitokinler (SASP) salgılayan senesent hücrelerin anti-apoptotik savunma yolaklarını (özellikle Bcl-2 ve Bcl-xL) hedef alarak, bu hücreleri çevre sağlıklı dokuya zarar vermeksizin seçici olarak apoptoza sevk edip dokudan temizleyen ilaç grubu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Senolitikler (Senolytics)",
-      "B) Alkille edici kemoterapötikler",
-      "C) Telomeraz aktivatörleri",
-      "D) Proteazom inhibitörleri",
-      "E) Antioksidan vitaminler (Vitamin E ve C)"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Dokularda biriken senesent hücreleri apoptoz mekanizmalarını tetikleyerek seçici bir şekilde ortadan kaldıran ajanlara 'Senolitik' ilaçlar (örneğin Navitoclax, Dasatinib + Quercetin) denir. B seçeneğindeki alkilleyiciler DNA hasarı yaparak hücreleri senesense sokar veya öldürür. C seçeneğindeki telomeraz aktivatörleri telomerleri uzatmayı hedefler. D seçeneğindeki proteazom inhibitörleri protein agregasyonunu artırır. E seçeneği ise genel serbest radikal temizleyicileridir."
-  },
-  {
-    "id": "prac-yaslanma-031",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 31,
-    "slideTitle": "Patoloji Amfisi Sentezi: Hücresel Yaşlanmanın En Kritik Sınav ve Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Tıbbi Patoloji amfi dersinde hücresel yaşlanma, replikatif senesans ve moleküler mekanizmalar konusu işlenirken öğretim üyesinin sunduğu aşağıdaki ifadelerden hangisi BİYOLOJİK VE PATOLOJİK OLARAK YANLIŞTIR?",
-    "options": [
-      "A) Replikatif senesansa giren somatik hücrelerde hücre döngüsü kalıcı ve geri dönüşsüz olarak G1 evresinde kilitlenir.",
-      "B) Werner sendromu WRN genindeki RecQ DNA helikaz defektine bağlı iken, Hutchinson-Gilford projeryasında nükleer zarfı bozan mutant protein Progerin'dir.",
-      "C) Lipofuscin pigmenti demir içerikli hemoglobin yıkım ürünü olup, doku kesitlerinde Prusya mavisi (Prussian blue) boyası ile koyu mavi boyanır.",
-      "D) Kanser hücrelerinin büyük çoğunluğu (-124 bp / -146 bp) TERT gen promotör mutasyonları ile telomerazı reaktive ederek sınırsız replikasyon potansiyeli kazanır.",
-      "E) Kalori kısıtlaması insülin/IGF-1 ve mTOR sinyalini baskılarken, hücresel NAD+ düzeyini artırarak SIRT1 deasetilaz aktivitesini uyarır."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir (yanlış olan ifade C seçeneğindedir). Lipofuscin pigmenti hemoglobin yıkım ürünü DEĞİLDİR; serbest radikal hasarı sonucu oluşan poliansatüre yağ asitlerinin lipid peroksidasyonu ve proteinlerle çapraz bağlanması ürünüdür. En önemlisi DEMİR İÇERMEZ ve Prusya mavisi boyası ile KESİNLİKLE BOYAMAZ (negatiftir). Demir içeren ve Prusya mavisiyle maviye boyanan pigment hemosiderindir. A, B, D ve E seçeneklerindeki tüm bilgiler dersimizin temel taşlarını oluşturan eksiksiz ve doğru bilimsel verilerdir."
-  },
-  {
-    "id": "d3-k1-enf-003-297",
-    "deckId": "learn-izolasyon-yontemleri",
-    "deckTitle": "İzolasyon Yöntemleri",
-    "slideNumber": 1,
-    "slideTitle": "Enfeksiyon Hastalıklarına Giriş ve Temel İlkeler",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Patojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Virülans",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Enfektivite",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İmmünojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Toksijenite",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
-  },
-  {
-    "id": "d3-k1-enf-003-298",
-    "deckId": "learn-izolasyon-yontemleri",
-    "deckTitle": "İzolasyon Yöntemleri",
-    "slideNumber": 2,
-    "slideTitle": "Patojenite ve Virülans Kavramlarının Kesin Ayrımı",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Patojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Virülans",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Enfektivite",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İmmünojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Toksijenite",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
-  },
-  {
-    "id": "d3-k1-enf-028-299",
-    "deckId": "learn-izolasyon-yontemleri",
-    "deckTitle": "İzolasyon Yöntemleri",
-    "slideNumber": 3,
-    "slideTitle": "Mikroorganizma Sınıflandırması: Prionlardan Parazitlere Biyolojik Spektrum",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretral/servikal akıntısı olan bir hastanın gram boyamasında mikroskop sahasında artmış sayıda PMNL (>2)\ngörülmesine rağmen herhangi bir mikroorganizma saptanamamıştır. En olası etken hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Trichomonas vaginalis",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Candida albicans",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Gardnerella vaginalis",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Chlamydia trachomatis, zorunlu hücre içi (obligat intraselüler) bir\nbakteri olduğundan standart gram boyama ile görülemez ve rutin kültür\nbesiyerlerinde üremez. Bu nedenle üretral/servikal akıntı örneğinde\nartmış PMNL sayısına rağmen gram boyamada herhangi bir\nmikroorganizma görülememesi, klasik olarak Chlamydia trachomatis\nenfeksiyonunu (nongonokoksik üretrit/servisit) düşündürür; tanı için\nnükleik asit amplifikasyon testleri (NAAT/PCR) kullanılır."
   }
 ]

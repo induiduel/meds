@@ -1,5 +1,518 @@
 [
   {
+    "id": "prac-vsk-010",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 10,
+    "slideTitle": "Otozomal Resesif Polikistik Böbrek Hastalığı (ARPKD): Genetik ve Patogenez",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Otozomal resesif polikistik böbrek hastalığında (ARPKD) kistik dilatasyonlar nefronun hangi anatomik segmentine sınırlıdır?",
+    "options": [
+      "A) Proksimal konvolüt tübüller",
+      "B) Henle kulpunun inen ince kolu",
+      "C) Toplayıcı kanallar (collecting ducts)",
+      "D) Yalnızca Bowman kapsülü",
+      "E) Afferent arteriyoller"
+    ],
+    "correctAnswer": 2,
+    "explanation": "ARPKD'de kistler seçici olarak kortikal ve medüller toplayıcı kanalların fuziform dilatasyonundan meydana gelir."
+  },
+  {
+    "id": "prac-vsk-011",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 11,
+    "slideTitle": "ARPKD Morfolojisi ve Konjenital Hepatik Fibrozis Birlikteliği",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Yenidoğan döneminde bilateral simetrik büyümüş böbrek kesitinde korteksten medullaya dik fuziform silindirik kistler izlenen ve karaciğer biyopsisinde safra duktus proliferasyonu ile konjenital hepatik fibrozis saptanan olguda tanı nedir?",
+    "options": [
+      "A) Otozomal dominant polikistik böbrek",
+      "B) Otozomal resesif polikistik böbrek (ARPKD)",
+      "C) Medüller sünger böbrek",
+      "D) Alport sendromu",
+      "E) Renal hücreli karsinom"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Korteksten medullaya dik fuziform kistler ve karaciğerde konjenital hepatik fibrozis ARPKD'nin patognomonik tablosudur."
+  },
+  {
+    "id": "prac-vsk-012",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 12,
+    "slideTitle": "ADPKD vs ARPKD: Karşılaştırmalı Büyük Klinikopatolojik Tablo",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdakilerden hangisi Otozomal Dominant Polikistik Böbrek Hastalığını (ADPKD) Otozomal Resesif formdan (ARPKD) ayıran temel özelliklerden biridir?",
+    "options": [
+      "A) Kistlerin sadece toplayıcı kanallarla sınırlı olması",
+      "B) Karaciğerde konjenital hepatik fibrozis bulunması",
+      "C) İntrakraniyal Willis poligonunda sakküler (Berry) anevrizmaların eşlik edebilmesi",
+      "D) Doğumda pulmoner hipoplaziye yol açması",
+      "E) Kromozom 6p mutasyonuna bağlı olması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Berry anevrizmaları ve subaraknoid kanama riski sadece ADPKD'ye özgüdür; ARPKD'de anevrizma izlenmez."
+  },
+  {
+    "id": "prac-vsk-013",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Medüller Sünger Böbrek ve Medüller Kistik Böbrek Hastalıkları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "12 yaşındaki bir çocukta poliüri, büyüme geriliği ve ilerleyici böbrek yetmezliği saptanıyor. Ultrasonografide her iki böbreğin küçülmüş olduğu ve sadece kortikomedüller bileşkede küçük kistlerin yer aldığı izleniyor. Çocukluk çağında bu tablonun en sık genetik nedeni hangisidir?",
+    "options": [
+      "A) Medüller sünger böbrek",
+      "B) Nefronofitizis (NPHP)",
+      "C) Otozomal dominant polikistik böbrek",
+      "D) Von Hippel-Lindau sendromu",
+      "E) Basit kortikal kist"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Çocuklarda küçülmüş böbrekler, kortikomedüller kistler ve erken böbrek yetmezliği ile seyreden en sık genetik antite Nefronofitizistir."
+  },
+  {
+    "id": "prac-vsk-014",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 14,
+    "slideTitle": "Basit Böbrek Kistleri ve Bosniak Radyolojik Sınıflaması",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Rutin batın ultrasonografisinde sol böbrek korteksinde 3 cm çapında, ince duvarlı, içerisinde septa veya solid nodül içermeyen, arkasında akustik güçlenme oluşturan anekoik kistik lezyon saptanan 55 yaşındaki asemptomatik hastada yaklaşım ne olmalıdır?",
+    "options": [
+      "A) Acil radikal nefrektomi",
+      "B) Lezyonun basit kist (Bosniak I) kabul edilerek ek tetkik ve tedaviye gerek duyulmaması",
+      "C) Böbrek biyopsisi ile kist duvarının örneklenmesi",
+      "D) Diyaliz hazırlığına başlanması",
+      "E) Yüksek doz kemoterapi verilmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "İnce duvarlı, içeriksiz ve akustik güçlenme veren anekoik kistler klasik benign basit böbrek kistleridir (Bosniak I); ek tedavi veya cerrahi gerektirmez."
+  },
+  {
+    "id": "prac-vsk-015",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 15,
+    "slideTitle": "Renal İnfarktüs ve Ateroembolik Böbrek Hastalığı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Koroner anjiyografi işleminden 2 gün sonra ayak parmaklarında morarma (mavi parmak sendromu), periferik kanda eozinofili ve akut böbrek yetmezliği gelişen hastanın böbrek biyopsisinde interlobüler arter lümenlerinde ne görülmesi beklenir?",
+    "options": [
+      "A) Bakteriyel vejetasyon tıkaçları",
+      "B) Bikonveks iğsi kolesterol yarıkları (kleftleri) ve dev hücre reaksiyonu",
+      "C) Amiloid fibrilleri",
+      "D) Konsantrik soğan zarı hiperplazisi",
+      "E) Fibrin başlığı lezyonları"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Aortik girişimler sonrası ateroembolik böbrek hastalığı gelişir; küçük arteriyollerde bikonveks kolesterol kristalleri yarıkları (cholesterol clefts) patognomoniktir."
+  },
+  {
+    "id": "prac-vsk-016",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 16,
+    "slideTitle": "Renal Kortikal Nekroz: Şok ve Obstetrik Felaketlerin Ağır Sonucu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Ablasyo plasenta nedeniyle acil sezaryene alınan ve masif kanama geçiren 34 yaşındaki kadında doğum sonrası tam anüri gelişiyor. Otopside her iki böbrek korteksinin diffüz sarı-beyaz koagülasyon nekrozuna uğradığı, medullanın ise korunduğu saptanıyor. Tanı nedir?",
+    "options": [
+      "A) Akut piyelonefrit",
+      "B) Diffüz renal kortikal nekroz",
+      "C) Akut interstisyel nefrit",
+      "D) Malign nefroskleroz",
+      "E) Fokal segmental glomerüloskleroz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ablasyo plasenta ve DİK zemininde gelişen bilateral kortikal iskemik harabiyet Diffüz Renal Kortikal Nekrozun patognomonik kliniğidir."
+  },
+  {
+    "id": "prac-vsk-017",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 17,
+    "slideTitle": "Orak Hücreli Anemi Nefropatisi: Medüller Hipoksi ve Papiller Hasar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Orak hücreli anemi hastalarında vasa rekta damarlarında eritrositlerin kolayca oraklaşarak mikrovasküler tıkanıklık ve papiller nekroz oluşturmasına zemin hazırlayan renal medüller ortam özelliği hangisidir?",
+    "options": [
+      "A) Yüksek oksijen basıncı ve alkaloz",
+      "B) Derin hipoksi, asidoz ve hiperosmolarite",
+      "C) Aşırı lenfatik akım",
+      "D) Hipotonik interstisyel sıvı",
+      "E) Yüksek perfüzyon basıncı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Böbrek medullasının düşük oksijen satürasyonu, asidik pH'sı ve yüksek osmolaritesi HbS polimerizasyonunu ve oraklaşmayı doğrudan tetikler."
+  },
+  {
+    "id": "prac-vsk-018",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 18,
+    "slideTitle": "Vasküler Böbrek Hastalıklarında Radyolojik ve Patolojik Görüntüleme",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Ailesinde ADPKD öyküsü olan 25 yaşındaki asemptomatik bir bireyde ultrasonografi ile kesin ADPKD tanısı koyabilmek için her iki böbrekte toplamda en az kaç adet kist saptanmalıdır?",
+    "options": [
+      "A) En az 1 kist",
+      "B) En az 3 kist (tek veya bilateral)",
+      "C) En az 10 kist",
+      "D) En az 20 kist",
+      "E) Yalnızca karaciğerde kist olması yeterlidir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ravine kriterlerine göre 15-39 yaş grubunda aile öyküsü olan bireyde her iki böbrekte toplam en az 3 kistin saptanması ADPKD için tanı koydurucudur."
+  },
+  {
+    "id": "prac-vsk-019",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 19,
+    "slideTitle": "Vasküler Böbrek Lezyonlarının Mikroskobik Atlası",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Malign hipertansiyon tanılı bir hastanın böbrek biyopsisinde interlobüler arterlerde izlenen düz kas hücrelerinin konsantrik laminer proliferasyonu ile karakterize lezyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hyalen arteriyoloskleroz",
+      "B) Hiperplastik arteriyoloskleroz (soğan zarı)",
+      "C) Mönckeberg medial kalsinozisi",
+      "D) Amiloid anjiyopatisi",
+      "E) Anevrizma diseksiyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Konsantrik laminer intimal düz kas proliferasyonu 'Hiperplastik arteriyoloskleroz' (soğan zarı lezyonu) olarak adlandırılır ve Malign Hipertansiyonun klasik bulgusudur."
+  },
+  {
+    "id": "prac-vsk-020",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 20,
+    "slideTitle": "Kistik Hastalıkların Genetik ve Moleküler Haritası",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Otozomal Dominant Polikistik Böbrek Hastalığında (ADPKD) kist büyümesini ve böbrek hacim artışını yavaşlatmak amacıyla kullanılan ve vazopressin V2 reseptörlerini bloke eden ilaç hangisidir?",
+    "options": [
+      "A) Spironolakton",
+      "B) Tolvaptan",
+      "C) Furosemid",
+      "D) Siklosporin",
+      "E) Eculizumab"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tolvaptan selektif bir vazopressin V2 reseptör antagonistidir; tübül hücresinde cAMP üretimini baskılayarak ADPKD'de kist büyümesini yavaşlatır."
+  },
+  {
+    "id": "prac-vsk-021",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Vasküler ve Kistik Hastalıklarda Klinik Yaklaşım ve Tarama Protokolleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hipertansiyon tedavisi için enalapril (ACE inhibitörü) başlanan 62 yaşındaki bir hastada 1 hafta sonra kreatinin değerinin 1.2 mg/dL'den 3.2 mg/dL'ye yükseldiği görülüyor. Bu hastada şüphelenilmesi gereken en olası vasküler tanı hangisidir?",
+    "options": [
+      "A) Tek taraflı basit kist rüptürü",
+      "B) İki taraflı (bilateral) renal arter stenozu",
+      "C) Benign nefroskleroz",
+      "D) Minimal değişiklik hastalığı",
+      "E) Renal ven trombozu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bilateral renal arter darlığında glomerül filtrasyonu eferent arteriyolün vazokonstriksiyonu ile korunur; ACE inhibitörü verilince eferent arteriyol gevşer ve akut anürik böbrek yetmezliği gelişir."
+  },
+  {
+    "id": "prac-vsk-022",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Vasküler Böbrek Hastalıkları Büyük Karşılaştırma Matrisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki vasküler böbrek hastalığı ve karakteristik histopatolojik lezyon eşleştirmelerinden hangisi yanlıştır?",
+    "options": [
+      "A) Benign nefroskleroz — Hyalen arteriyoloskleroz",
+      "B) Malign nefroskleroz — Konsantrik soğan zarı hiperplazisi ve fibrinoid nekroz",
+      "C) Ateroembolik böbrek hastalığı — Bikonveks iğsi kolesterol yarıkları",
+      "D) Renal kortikal nekroz — Glomerüllerde podosit ayaksı çıkıntı silinmesi",
+      "E) HÜS / TTP — Glomerül kapillerlerinde mikrovasküler trombüsler"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Renal kortikal nekrozda podosit silinmesi değil; tüm kortikal glomerül ve tübüllerin diffüz iskemik koagülasyon nekrozu izlenir."
+  },
+  {
+    "id": "prac-vsk-023",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Kistik Böbrek Hastalıkları Büyük Karşılaştırma Matrisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki kistik böbrek hastalıklarından hangisinde böbrek boyutları devasa büyümek yerine simetrik olarak KÜÇÜLMÜŞTÜR ve kistler sadece kortikomedüller bileşkede yerleşir?",
+    "options": [
+      "A) Otozomal dominant polikistik böbrek",
+      "B) Nefronofitizis",
+      "C) Otozomal resesif polikistik böbrek",
+      "D) Basit kortikal kist",
+      "E) Medüller sünger böbrek"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Nefronofitizis / Medüller Kistik Böbrek Hastalığında böbrekler ileri derecede büzüşmüş ve küçülmüştür; kistler karakteristik olarak kortikomedüller bileşkede sınırlıdır."
+  },
+  {
+    "id": "prac-vsk-024",
+    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
+    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Ders 23 Kapsamlı Sentezi: Vasküler ve Kistik Patolojinin Klinik Kodları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki klinik tablolardan hangisinde bilateral dev böbrekler, karaciğer kistleri ve intrakraniyal berry anevrizması rüptürü riski bir arada bulunur?",
+    "options": [
+      "A) Otozomal dominant polikistik böbrek hastalığı (ADPKD)",
+      "B) Otozomal resesif polikistik böbrek hastalığı (ARPKD)",
+      "C) Medüller sünger böbrek",
+      "D) Nefronofitizis",
+      "E) Malign hipertansif nefroskleroz"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bilateral dev polikistik böbrekler, polikistik karaciğer ve intrakraniyal berry anevrizmaları Otozomal Dominant Polikistik Böbrek Hastalığının (ADPKD) klasik triadıdır."
+  },
+  {
+    "id": "prac-bobrek-001",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 1,
+    "slideTitle": "Böbrek Neoplazmlarına Genel Giriş ve Renal Kortikal Adenomlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek ve üriner sistem neoplazmlarının epidemiyolojisi, sıklığı ve kortikal papiller adenomların patolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Alt idrar yolu neoplazmları böbrek parankim tümörlerine göre belirgin şekilde daha nadir izlenir",
+      "B) Otopsilerde sık saptanan küçük kortikal papiller adenomlar sitogenetik olarak Trizomi 7 ve 17 anomalilerini taşır",
+      "C) Böbrek kortikal adenomları morfolojik ve moleküler açıdan berrak hücreli karsinomun doğrudan öncülüdür",
+      "D) Erişkinlerde böbreğin en sık primer malign neoplazmı medulladaki toplayıcı kanallardan köken alan Bellini karsinomudur",
+      "E) Çapı 0,5 cm altındaki papiller kortikal adenomlar erken dönemde renal ven invazyonu yaparak hızla metastaz geliştirir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Otopsi serilerinde erişkinlerin %40'ına varan oranda rastlanan <0,5 cm boyutundaki renal kortikal papiller adenomlar, papiller renal hücreli karsinom ile ortak sitogenetik değişiklikleri (özellikle Trizomi 7, Trizomi 17 ve Y kaybı) paylaşırlar ve papiller karsinomun mikroskopik öncülleri olarak kabul edilirler.\n\nA yanlıştır; alt idrar yolu (özellikle mesane) tümörleri böbrek parankimal tümörlerinden yaklaşık 2 kat daha yaygındır.\nC yanlıştır; papiller adenomlar berrak hücreli değil, papiller renal karsinom ile morfolojik ve sitogenetik benzerlik gösterir.\nD yanlıştır; böbreğin en sık primer malignitesi kortikal tübüler epitelden kaynaklanan renal hücreli karsinomdur (%80-85), toplayıcı kanal karsinomu <%1'dir.\nE yanlıştır; bu adenomlar benign kabul edilir, metastaz yapmazlar ve klinik olarak sessizdirler."
+  },
+  {
+    "id": "prac-bobrek-002",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 2,
+    "slideTitle": "Renal Hücreli Karsinom (RCC): Epidemiyoloji ve Demografik Özellikler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Renal Hücreli Karsinomun (RCC) epidemiyolojik, demografik ve mortalite özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Primer böbrek malign neoplazmlarının yaklaşık %80-85'ini oluşturur",
+      "B) Tümörün histogenetik kökeni renal korteksteki tübüler epitel hücreleridir",
+      "C) Cinsiyet dağılımında belirgin kadın baskınlığı olup kadın/erkek oranı 3:1'dir",
+      "D) En sık 6. ve 7. dekatlarda (60-70 yaş aralığında) pik yapar",
+      "E) Biyolojik agresifliği ve tedavi direnci nedeniyle tanı alan hastaların yaklaşık %40'ı kaybedilir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir çünkü RCC kadınlarda değil, belirgin şekilde erkeklerde daha sık görülür; erkek/kadın oranı yaklaşık 2:1 (ikiye bir) düzeyindedir.\n\nA seçeneği doğrudur; böbreğin primer malign neoplazmlarının %80-85'ini oluşturur.\nB seçeneği doğrudur; tümör kortikal renal tübüler epitelden köken alır.\nD seçeneği doğrudur; 60-70 yaş aralığında zirve yapar.\nE seçeneği doğrudur; olguların yaklaşık %40'ı hastalık nedeniyle hayatını kaybetmektedir."
+  },
+  {
+    "id": "prac-bobrek-003",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 3,
+    "slideTitle": "Renal Hücreli Karsinomda Çevresel ve Yaşam Tarzı Risk Faktörleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Renal hücreli karsinomun (RCC) etyolojik risk faktörleri ve karsinojenik maruziyetleri ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Tütün (sigara) kullanımı — Kanıtlanmış en güçlü değiştirilebilir risk faktörü",
+      "B) Mesleki kadmiyum maruziyeti — Proksimal tübülde biriken karsinojenik ağır metal",
+      "C) Obezite — Hiperinsülinemi ve IGF-1 artışı üzerinden tübüler mitojenik uyarım",
+      "D) Hipertansiyon — İlaçtan bağımsız kronik mikrovasküler iskemi ve lipid peroksidasyonu",
+      "E) Alkol tüketimi — Renal ven endotelinde trombüs oluşturarak 30 kat kanser artışı"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E seçeneğidir çünkü alkol tüketiminin renal ven trombozu yaparak 30 kat RCC riski artırdığına dair hiçbir bilimsel veya patolojik veri yoktur (30 kat risk artışı diyaliz hastalarındaki edinilmiş kistik böbrek hastalığına özgüdür).\n\nA seçeneği doğrudur; sigara RCC için en güçlü değiştirilebilir risk faktörüdür.\nB seçeneği doğrudur; kadmiyum renal karsinojenezde en önemli mesleki ağır metaldir.\nC seçeneği doğrudur; obezite IGF-1, östrojen ve kronik inflamasyon üzerinden riski artırır.\nD seçeneği doğrudur; hipertansiyon bağımsız bir risk faktörüdür."
+  },
+  {
+    "id": "prac-bobrek-004",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 4,
+    "slideTitle": "Edinilmiş Kistik Böbrek Hastalığı (ACKD) ve Diyaliz Zemininde RCC Riski",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Sekiz yıldır hemodiyaliz programında olan 58 yaşındaki bir kronik böbrek yetmezliği hastasının rutin kontrolünde bilateral atrofik böbreklerinde çok sayıda kortikal kist ve sol böbrek kist duvarında solid kitle saptanıyor. Biyopside karsinom tanısı konulan bu hastanın patolojik süreciyle ilgili aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
+    "options": [
+      "A) Hastada altta yatan durum Edinilmiş Kistik Böbrek Hastalığı olup, RCC riski normale göre yaklaşık 30 kat artmıştır",
+      "B) Bu kistler otozomal dominant polikistik böbrek hastalığı (PKD1 mutasyonu) zemininde gelişmiştir",
+      "C) Diyaliz süresinin bu kistlerin ve karsinomun patogenezi ile herhangi bir epidemiyolojik ilişkisi yoktur",
+      "D) Diyaliz hastalarında gelişen böbrek kistlerinden sadece benign anjiyomiyolipom köken alabilir, karsinom gelişemez",
+      "E) Kist duvarında gelişen bu karsinomlar daima medüller toplayıcı kanallardan kaynaklanır ve oksalat içermez"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Kronik hemodiyaliz alan hastalarda son dönem böbrek zemininde 'Edinilmiş Kistik Böbrek Hastalığı' (ACKD) gelişir ve bu hastalarda kist epiteli atipikleşerek renal hücreli karsinom gelişme riskini yaklaşık 30 kat artırır.\n\nB yanlıştır; edinilmiş kistik hastalık edinseldir, herediter otozomal dominant polikistik böbrek hastalığı değildir.\nC yanlıştır; kist gelişimi diyaliz süresi ile doğrudan ilişkilidir (5-10 yılda %80-90'a çıkar).\nD yanlıştır; kist epitelinden renal hücreli karsinom gelişir, AML ise perisit kökenli mezenkimal bir tümördür.\nE yanlıştır; ACKD ile ilişkili karsinomlar sıklıkla kortikal tübül kaynaklı olup kalsiyum oksalat kristalleri içerir."
+  },
+  {
+    "id": "prac-bobrek-005",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 5,
+    "slideTitle": "Renal Hücreli Karsinomda Moleküler ve Histopatolojik Sınıflama",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Renal hücreli karsinomun üç ana histopatolojik alt tipi, nefron segment kökenleri ve moleküler profilleri ile ilgili aşağıdaki eşleştirmelerden hangisi KESİNLİKLE DOĞRUDUR?",
+    "options": [
+      "A) Berrak Hücreli RCC — Distal tübül epiteli — Trizomi 7 ve 17",
+      "B) Papiller RCC — Proksimal tübül epiteli — 3p25 VHL mutasyonu",
+      "C) Kromofob RCC — Toplayıcı kanal interkale hücresi — Aşırı hipodiploidi / çoklu kromozom kaybı",
+      "D) Berrak Hücreli RCC — Henle kulpu epiteli — WT1 delesyonu",
+      "E) Kromofob RCC — Glomerüler podositler — MET reseptör tirozin kinaz mutasyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Kromofob RCC kortikal toplayıcı tübüllerin interkale (ara) hücrelerinden köken alır ve sitogenetik olarak çok sayıda kromozomun eşzamanlı kaybı (aşırı hipodiploidi) ile karakterizedir.\n\nA yanlıştır; Berrak hücreli RCC proksimal tübülden köken alır ve 3p/VHL inaktivasyonu taşır.\nB yanlıştır; Papiller RCC distal tübülden köken alır ve Trizomi 7/17 ile MET aktivasyonu sergiler.\nD yanlıştır; Henle kulpu veya podositlerden bu karsinomlar köken almaz; WT1 Wilms tümörüne özgüdür.\nE yanlıştır; MET mutasyonu papiller RCC'ye özgüdür."
+  },
+  {
+    "id": "prac-bobrek-006",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 6,
+    "slideTitle": "Berrak Hücreli Renal Karsinom (ccRCC): Makroskopik Özellikler ve Büyüme Paterni",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefrektomi materyalinde böbrek korteksinde 7 cm çapında, çevresi fibröz psödokapsülle çevrili, kesit yüzü parlak altın sarısı renkte izlenen, yer yer nekroz ve kanama alanları içeren bir tümör kitlesi saptanıyor. Bu tümörün makroskopik olarak parlak altın sarısı görünmesinden sorumlu olan temel hücresel/biyokimyasal içerik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitoplazmada aşırı miktarda biriken nötral lipidler ve glikojen",
+      "B) Hücre içinde yoğun biriken melanin pigmenti ve hemosiderin granülleri",
+      "C) Tümör hücrelerinin intrasellüler musin ve asidik mukopolisakkarit üretmesi",
+      "D) Hücre sitoplazmasını tıka basa dolduran yoğun matür mitokondri birikimi",
+      "E) Fibröz stromada yaygın amiloid depolanması ve kalsifikasyonlar"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomun (ccRCC) makroskopik olarak parlak altın sarısı / turuncu renkte görünmesinin nedeni, proksimal tübül kökenli tümör hücrelerinin sitoplazmasında olağanüstü miktarda biriken serbest nötral lipidler, kolesterol esterleri ve glikojendir.\n\nB yanlıştır; hemosiderin kahverengi-pas rengi verir, melanin siyah-kahverengidir.\nC yanlıştır; ccRCC musin üretmez.\nD yanlıştır; yoğun mitokondri birikimi onkositoma özgüdür ve tümöre maun kahverengisi renk kazandırır.\nE yanlıştır; amiloidoz sarı parlak renk yapmaz, balmumu kıvamı verir."
+  },
+  {
+    "id": "prac-bobrek-007",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 7,
+    "slideTitle": "Von Hippel-Lindau (VHL) Hastalığı ve ccRCC Birlikteliği",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Otuz beş yaşında bir erkek hastada serebellar kistik kitle ve görme bulanıklığı nedeniyle yapılan incelemelerde serebellar hemanjiyoblastom ve retinal hemanjiyoblastom saptanıyor. Abdominal görüntülemesinde ise her iki böbrekte çok sayıda kist ve bilateral multifokal kortikal solid kitleler tespit ediliyor. Bu hastanın genetik analizinde hangi kromozom bölgesinde ve hangi gende fonksiyon kaybı mutasyonu saptanması beklenir?",
+    "options": [
+      "A) Kromozom 3p25 — VHL geni",
+      "B) Kromozom 7q31 — MET geni",
+      "C) Kromozom 11p13 — WT1 geni",
+      "D) Kromozom 16p13 — TSC2 geni",
+      "E) Kromozom 17p11 — FLCN geni"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Serebellar ve retinal hemanjiyoblastomlar ile bilateral, multifokal berrak hücreli renal karsinom birlikteliği otozomal dominant Von Hippel-Lindau (VHL) hastalığının klasik klinik tablosudur. VHL tümör süpresör geni Kromozom 3p25 lokusunda yer almaktadır.\n\nB yanlıştır; 7q31 MET geni herediter papiller renal karsinomda etkindir.\nC yanlıştır; 11p13 WT1 geni Wilms tümörü (WAGR, Denys-Drash) ile ilişkilidir.\nD yanlıştır; 16p13 TSC2 tüberoz skleroz ve anjiyomiyolipom ile ilişkilidir.\nE yanlıştır; 17p11 FLCN Birt-Hogg-Dubé sendromu ile ilişkilidir."
+  },
+  {
+    "id": "prac-bobrek-008",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 8,
+    "slideTitle": "VHL-HIF-VEGF Patogenetik Sinyal Yolağı ve Anjiyogenez Fırtınası",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Berrak hücreli renal karsinomun (ccRCC) moleküler patogenezinde rol oynayan VHL-HIF sinyal yolağı ile ilgili aşağıdaki biyolojik basamaklardan hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sağlıklı hücrede normoksik koşullarda prolil hidroksilaz enzimleri HIF-1alfa'yı hidroksiller",
+      "B) Fonksiyonel VHL proteini E3 ubikitin ligaz görevi görerek hidroksillenmiş HIF-1alfa'yı proteazomal yıkıma yönlendirir",
+      "C) VHL mutasyonu varlığında HIF-1alfa normoksik koşullarda dahi parçalanamaz ve sitoplazmada birikir",
+      "D) Nükleusa geçen HIF-1alfa doğrudan p53'ü aktive ederek tümör hücresinde apoptozu hızlandırır",
+      "E) Biriken HIF-1alfa; VEGF, PDGF ve GLUT-1 genlerinin aşırı transkripsiyonunu sağlayarak masif anjiyogenezi tetikler"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir çünkü nükleusa geçen HIF-1alfa p53'ü aktive edip apoptozu hızlandırmaz; aksine hücre sağkalımını, anjiyogenezi (VEGF), hücre proliferasyonunu (PDGF), glikolitik metabolizmayı (GLUT-1) ve tümör büyümesini şiddetle destekler.\n\nA seçeneği doğrudur; normokside prolil hidroksilaz HIF-1alfa'yı hidroksiller.\nB seçeneği doğrudur; VHL proteini E3 ubikitin ligaz kompleksi ile proteazomal yıkım sağlar.\nC seçeneği doğrudur; VHL yokluğunda HIF-1alfa normokside bile parçalanamaz.\nE seçeneği doğrudur; VEGF ve PDGF transkripsiyonu ile yoğun sinüzoidal damar ağı gelişir."
+  },
+  {
+    "id": "prac-bobrek-009",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 9,
+    "slideTitle": "Sporadik Berrak Hücreli Karsinomda Kromatin ve Epigenetik Modifikasyonlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Berrak hücreli renal karsinomda (ccRCC) kromozom 3p lokusunda yer alan genler ve hücresel metabolik değişiklikler ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK YANLIŞTIR?",
+    "options": [
+      "A) PBRM1 geni, ccRCC'de VHL'den sonra en sık (%40-50) somatik mutasyona uğrayan kromatin düzenleyici gendir",
+      "B) BAP1 mutasyonu taşıyan ccRCC tümörleri genellikle yüksek nükleer dereceye ve agresif klinik seyire sahiptir",
+      "C) SETD2 geni bir histon metiltransferazı olup kaybı genomik kararsızlığa zemin hazırlar",
+      "D) HIF ve MYC kooperasyonu sonucu mitokondriyal beta-oksidasyon aşırı hızlanır ve hücredeki tüm lipidler tüketilir",
+      "E) Sporadik ccRCC olgularının büyük çoğunluğunda kromozom 3'ün kısa kolunda (3p) genetik kayıp saptanır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir çünkü HIF ve MYC etkisiyle mitokondriyal yağ asidi oksidasyonu hızlanıp lipidler tüketilmez; aksine yağ asidi oksidasyonu baskılanır, sitoplazmada nötral lipidler ve glikojen biriktirilir. Tümörün karakteristik altın sarısı rengi ve berrak sitoplazması bu aşırı lipid birikiminden kaynaklanır.\n\nA seçeneği doğrudur; PBRM1 ccRCC'de %40-50 sıklıkla en sık ikinci mutasyondur.\nB seçeneği doğrudur; BAP1 kaybı agresif gidiş ve yüksek ISUP derecesi ile ilişkilidir.\nC seçeneği doğrudur; SETD2 histon metiltransferazıdır.\nE seçeneği doğrudur; sporadik vakaların >%90'ında 3p kaybı görülür."
+  },
+  {
+    "id": "prac-bobrek-010",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 10,
+    "slideTitle": "Berrak Hücreli Karsinomun Histopatolojisi ve Mikroskopik Mimarisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek rezeksiyon piyesinin histopatolojik incelemesinde; belirgin hücre zarlarına sahip, sitoplazması optik olarak berrak ve saydam görünen, tek biçimli yuvarlak çekirdekli epitel hücrelerinin zengin ince duvarlı sinüzoidal kapiller ağ ile çevrili yuvalar ve kordonlar oluşturduğu saptanıyor. Bu lezyonda hücre sitoplazmasının rutin ışık mikroskobunda optik olarak berrak görünmesinin patolojik mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitoplazmadaki aşırı lipid ve glikojenin doku takibindeki organik çözücülerde erimesi",
+      "B) Hücre içinde yoğun musin salgısının birikerek organelleri kenara itmesi",
+      "C) Hücrelerin aşırı hidropik şişme ve vakuoler dejenerasyon ile lizise uğraması",
+      "D) Sitoplazmada bol miktarda asidik mikroskopik veziküllerin bulunması",
+      "E) Hücre içinde yoğun amiloid fibrillerinin birikerek ışığı yansıtması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomda (ccRCC) sitoplazmanın berrak görünmesi, neoplastik hücrelerin içerdiği bol miktardaki lipid ve glikojenin, rutin doku takibi basamaklarında kullanılan dehidratasyon sıvıları (alkol) ve şeffaflaştırıcılar (ksilol) tarafından eritilerek uzaklaştırılması sonucudur.\n\nB yanlıştır; ccRCC musin salgılamaz, bu berraklık musinden kaynaklanmaz.\nC yanlıştır; bu durum dejeneratif hidropik şişme değil, neoplastik metabolik lipid birikimidir.\nD yanlıştır; mikroskopik veziküller kromofob RCC'ye özgüdür ve Hale boyası ile boyanır.\nE yanlıştır; amiloid ekstrasellüler birikintidir ve kongolu kırmızı ile boyanır."
+  },
+  {
+    "id": "prac-bobrek-011",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 11,
+    "slideTitle": "Berrak Hücreli Karsinomun Yayılım Yolları ve Renal Ven Trombozu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Altmış iki yaşında bir erkek hastada sağ yan ağrısı ve hematüri nedeniyle yapılan bilgisayarlı tomografide sağ böbrek korteksinde 8 cm'lik heterojen kitle, sağ renal ven lümenini dolduran ve vena kava inferior boyunca diyafram seviyesine kadar uzanan solid tümör trombüsü ile akciğerlerde bilateral çok sayıda 'top güllesi' şeklinde yuvarlak metastatik nodüller saptanıyor. Bu hastanın klinik ve patolojik yayılım özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tümörün renal ven ve VCI içine uzanımı RCC için son derece karakteristik bir makrovasküler yayılım biçimidir",
+      "B) Bu tümör sadece lenfatik yolla yayılır, hematojen yolla akciğere yayılması imkansızdır",
+      "C) RCC kemiğe metastaz yaptığında daima yoğun sklerotik osteoblastik lezyonlar oluşturur",
+      "D) VCI tutulumu saptandığında hastada primer tümör kesinlikle Wilms tümörüdür, ccRCC VCI'ye giremez",
+      "E) Renal ven invazyonu gösteren böbrek karsinomları TNM sınıflamasında evre T1a olarak kabul edilir"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A seçeneğidir. Renal hücreli karsinomun en tipik biyolojik yayılım özelliklerinden biri renal vene ve oradan Vena Kava İnferior (VCI) içine katı tümör trombozu kolonu oluşturarak ilerlemesi ve hematojen yolla akciğerlere ('top güllesi' metastazları) yayılmasıdır.\n\nB yanlıştır; RCC esas olarak hematojen yolla yayılır.\nC yanlıştır; RCC kemik metastazları osteoblastik değil, osteolitiktir (kemik yıkıcıdır).\nD yanlıştır; VCI tümör trombüsü erişkinde ccRCC'nin en tipik özelliğidir.\nE yanlıştır; renal ven invazyonu evreyi doğrudan T3a yapar (T1a <4 cm organa sınırlı tümördür)."
+  },
+  {
+    "id": "prac-bobrek-012",
+    "deckId": "learn-bobrek-tumorleri",
+    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
+    "slideNumber": 12,
+    "slideTitle": "Papiller Renal Hücreli Karsinom (pRCC): Hücresel Köken ve Makroskopi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Papiller Renal Hücreli Karsinomun (pRCC) hücresel kökeni, makroskopik morfolojisi ve klinik büyüme özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Nefronun distal kıvrıntılı tübül epitel hücrelerinden köken alır",
+      "B) Tümör odakları sıklıkla multifokal ve bilateral olma eğilimi sergiler",
+      "C) Hücre içi lipid içeriğinin azlığı nedeniyle kesit yüzü ccRCC'ye göre daha mat kahverengimsi renktedir",
+      "D) Kırılgan papiller vasküler yapısı nedeniyle nekroz, kanama ve kistik dejenerasyon alanları sıktır",
+      "E) Proksimal tübülün toplayıcı kanala açılan papillasından kaynaklandığı için daima soliter ve altın sarısıdır"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E seçeneğidir çünkü papiller RCC proksimal tübülden kaynaklanmaz (distal tübülden kaynaklanır), altın sarısı değildir (mat sarı-kahverengidir) ve daima soliter değildir; aksine sıklıkla multifokal ve bilateral odaklarla karakterizedir.\n\nA seçeneği doğrudur; distal kıvrıntılı tübül kökenlidir.\nB seçeneği doğrudur; multifokalite ve bilateralite papiller RCC'nin klasik özelliğidir.\nC seçeneği doğrudur; lipit içeriği ccRCC'den daha düşüktür.\nD seçeneği doğrudur; nekroz, hemoraji ve kistik kavitasyonlar belirgindir."
+  },
+  {
     "id": "prac-bobrek-013",
     "deckId": "learn-bobrek-tumorleri",
     "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
@@ -1385,518 +1898,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "C seçeneği doğrudur; kompleman, kinin ve pıhtılaşma faktörleri gibi plazma kaynaklı mediyatörler karaciğerde inaktif öncüller (zimojen) olarak üretilir ve proteolitik kesimle aktive olurlar. A yanlıştır (prostaglandinler ve sitokinler de novo sentezlenir); B yanlıştır (histamin granüllerde preforme depolanır); D yanlıştır (karaciğerde üretilirler); E yanlıştır (PAF hücre membran fosfolipidlerinden sentezlenen bir lipiddir)."
-  },
-  {
-    "id": "prac-med-003",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 3,
-    "slideTitle": "Vazoaktif Aminler I: Histamin Kaynakları, Depolanması ve Degranülasyon Mekanizmaları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Mast hücrelerinden histamin salınımını tetikleyen faktörlerle ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Antijenin mast hücresi yüzeyindeki FcεRI'ye bağlı komşu IgE moleküllerini çapraz bağlaması",
-      "B) Kompleman kaskadında oluşan C3a ve C5a anafilatoksinlerinin mast hücre reseptörlerine bağlanması",
-      "C) Dokuya uygulanan mekanik travma, aşırı ısı ve soğuk gibi fiziksel uyaranlar",
-      "D) Duyusal sinir uçlarından salınan substans P gibi nöropeptitlerin mast hücrelerini uyarması",
-      "E) C5b-9 membran atak kompleksinin mast hücre granüllerini fagosite etmesi"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü C5b-9 membran atak kompleksi (MAC), hedef hücre zarında litik por açarak ozmotik lizis oluşturan bir yapıdır; fagositoz yapamaz ve mast hücre degranülasyonunu bu yolla uyarmaz. Mast hücresi degranülasyonunu tetikleyen kompleman parçaları serbest çözünür anafilatoksinler olan C3a ve C5a'dır. A, B, C ve D seçenekleri degranülasyonu başlatan kanıtlanmış mekanizmalardır."
-  },
-  {
-    "id": "prac-med-004",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 4,
-    "slideTitle": "Vazoaktif Aminler II: Histamin Reseptörleri, Damarsal Etkiler ve Antihistaminikler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Histaminin mikrovasküler yataktaki etkileri ve reseptör mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Arteriyollerde vazokonstriksiyon, venüllerde ise endotel gevşemesi oluşturarak kan akımını azaltır",
-      "B) Postkapiller venüllerde endotel hücre kasılmasına yol açarak hücreler arası aralıkları açar ve ani-geçici geçirgenlik artışı yapar",
-      "C) Enflamasyondaki vasküler geçirgenlik artışına aracılık eden temel reseptör H2 reseptörüdür",
-      "D) Endotel hücrelerinde apoptozu indükleyerek kalıcı ve geri dönüşsüz damar hasarı meydana getirir",
-      "E) H1 antihistaminikler mast hücre degranülasyonunu tamamen engelleyerek kompleman aktivasyonunu durdurur"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği kusursuz bir tanımdır: Histamin, postkapiller venüllerdeki endotel hücrelerinin hücre iskeletini kasarak aralarındaki bağlantıları açar ve 15-30 dakika süren ani-geçici (immediate transient) plazma eksüdasyonuna yol açar. A yanlıştır (arteriyollerde vazodilatasyon yapar); C yanlıştır (enflamasyon reseptörü H1'dir, H2 mide asidini artırır); D yanlıştır (endotel hasarı değil fonksiyonel geri dönüşlü kasılmadır); E yanlıştır (antihistaminikler reseptör antagonistidir, komplemanı veya degranülasyonu durdurmaz)."
-  },
-  {
-    "id": "prac-med-005",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 5,
-    "slideTitle": "Vazoaktif Aminler III: Serotonin (5-Hidroksitriptamin) ve Trombosit Kaynaklı Vasküler Yanıtlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Serotonin (5-HT) mediyatörü ve enflamasyondaki rolü ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Kanda esas olarak trombositlerin yoğun granüllerinde depolanır ve agregasyon sırasında salınır",
-      "B) Trombositler serotonini de novo sentezleyemez, dolaşımdaki serotonini aktif olarak içlerine alırlar",
-      "C) İnsanlarda akut enflamasyonun vasküler permeabilite artışından sorumlu en baskın vazoaktif amin serotonindir",
-      "D) Gastrointestinal sistemdeki enterokromaffin hücreleri vücuttaki en büyük serotonin üretim kaynağıdır",
-      "E) Karsinoid sendromda aşırı serotonin salınımı vazomotor instabilite ve sağ kalp kapak fibrozu ile ilişkilidir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır çünkü insanlarda akut enflamasyonun erken vasküler geçirgenlik artışından sorumlu primer vazoaktif amin histamindir. Serotonin insanda esas olarak trombosit agregasyonu ve hemostatik vazokonstriksiyonda rol oynar; vasküler permeabilite artırıcı etkisi sıçan ve fare gibi kemirgen modellerinde belirgindir. A, B, D ve E seçenekleri doğrudur."
-  },
-  {
-    "id": "prac-med-006",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 6,
-    "slideTitle": "Araşidonik Asit Metabolizması (Eikozanoidler): Giriş ve Fosfolipaz A2 Aktivasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Araşidonik asit metabolizması ve eikozanoid sentezinin regülasyonu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Araşidonik asit hücre sitoplazmasında serbest ve yüksek konsantrasyonda depolanan bir doymuş yağ asididir",
-      "B) Fosfolipaz A2 enzimi inhibe edildiğinde lökotrien sentezi durur fakat prostaglandin sentezi artarak devam eder",
-      "C) Glukokortikoidler lipokortin-1 (anneksin A1) ekspresyonunu indükleyerek Fosfolipaz A2'yi inhibe eder ve eikozanoid üretimini kökten baskılar",
-      "D) Eikozanoidler 18 karbonlu doymamış yağ asitlerinden türetilen peptit yapılı sitokinlerdir",
-      "E) Aspirin Fosfolipaz A2 enzimini irreversibl asetilleyerek etki gösteren primer ajandır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; glukokortikoidler nükleer reseptörleri aracılığıyla lipokortin-1 (anneksin A1) sentezini artırır ve bu protein cPLA2'yi doğrudan inhibe ederek serbest araşidonik asit çıkışını durdurur. A yanlıştır (membrana esterleşmiştir); B yanlıştır (her iki yolak da durur); D yanlıştır (20 karbonlu lipidlerdir); E yanlıştır (aspirin PLA2'yi değil COX enzimini asetiller)."
-  },
-  {
-    "id": "prac-med-007",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 7,
-    "slideTitle": "Siklooksijenaz (COX) Yolağı: COX-1 ve COX-2 İzoenzimleri ve Prostaglandin Sentezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Siklooksijenaz izoenzimleri (COX-1 ve COX-2) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) COX-1 çoğu dokuda sürekli eksprese edilir ve mide mukozasında koruyucu prostaglandin sentezinden sorumludur",
-      "B) COX-2 bakteriyel endotoksin ve proenflamatuar sitokinlerle (IL-1, TNF) indüklenen başlıca izoenzimdir",
-      "C) Araşidonik asidin COX yolağındaki metabolizmasında oluşan ortak ana öncül molekül PGH2'dir",
-      "D) Trombositler çekirdeksiz olduklarından de novo COX-2 sentezleyemezler ve agregasyon için COX-1'e bağımlıdırlar",
-      "E) COX-2 enzimi sadece enfeksiyon anında aktive olur, sağlıklı böbrek ve endotel dokusunda hiçbir fizyolojik fonksiyonu bulunmaz"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü COX-2 yalnızca enflamasyonla ilişkili değildir; vasküler endotel hücrelerinde antitrombotik PGI2 (prostasiklin) sentezinde ve böbrek medulla/makula densasında sıvı-elektrolit dengesinin korunmasında fizyolojik ve konstitütif görevlere de sahiptir. A, B, C ve D seçenekleri doğrudur."
-  },
-  {
-    "id": "prac-med-008",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 8,
-    "slideTitle": "Prostaglandinler: PGD2, PGE2 ve PGF2a'nın Enflamasyondaki Spesifik Rolleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Prostaglandin E2'nin (PGE2) enflamasyondaki biyolojik etkileri ve klinik sonuçları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Hipotalamusta vücut ısısı ayar noktasını düşürerek hipotermi ve soğuk terlemeye yol açar",
-      "B) Periferik nosiseptörleri bradikinine ve diğer kimyasal uyaranlara karşı duyarlılaştırarak hiperaljezi oluşturur",
-      "C) Nötrofillerin fagositoz yeteneğini tamamen durduran en güçlü immünsüpresif mediyatördür",
-      "D) Trombositlerde agregasyonu kuvvetle indükleyerek primer hemostatik tıkacı oluşturan ana ajandır",
-      "E) Sadece karaciğer parankiminde depolanan ve dolaşıma asla salınmayan bir plazma proteinidir"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; PGE2 ağrı liflerini (nosiseptörleri) bradikinine ve mekanik uyaranlara karşı aşırı duyarlı hale getirerek enflamatuar hiperaljeziye yol açar. Hipotalamusta ise vücut termostatını yukarı çekerek ateşe neden olur (A yanlış). C, D ve E seçenekleri yanlıştır."
-  },
-  {
-    "id": "prac-med-009",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 9,
-    "slideTitle": "Tromboksan A2 (TXA2) ve Prostasiklin (PGI2) Dengesi: Tromboz ve Vasküler Bütünlük",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Tromboksan A2 (TXA2) ve Prostasiklin (PGI2) dengesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) TXA2 trombositler tarafından üretilir ve güçlü bir vazokonstriktör ile agregasyon indükleyicisidir",
-      "B) PGI2 vasküler endotel tarafından sentezlenir; vazodilatasyon yapar ve trombosit agregasyonunu engeller",
-      "C) Trombositler çekirdeksiz olduklarından yeni protein sentezleyemez ve TXA2 üretimi için COX-1'e bağımlıdırlar",
-      "D) Selektif COX-2 inhibitörleri TXA2 sentezini sıfırlayarak kanama diyatezine ve kontrolsüz hemorajiye yol açarlar",
-      "E) Sağlıklı damar duvarında endotelyal PGI2 üretimi trombüs oluşumunu engelleyen koruyucu bir mekanizmadır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü selektif COX-2 inhibitörleri TXA2'yi değil, endotelyal PGI2'yi baskılarlar. Trombositlerdeki COX-1 engellenmediği için TXA2 üretimi devam eder; terazi protrombotik tarafa kayarak kanama değil tam tersine tromboz, miyokard enfarktüsü ve inme riskinde artışa yol açar. A, B, C ve E seçenekleri doğrudur."
-  },
-  {
-    "id": "prac-med-010",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 10,
-    "slideTitle": "Lipoksijenaz (5-LOX) Yolağı ve Nötrofil Kemotaksisi: LTB4",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Lökotrien B4 (LTB4) ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Siklooksijenaz-1 yolağında trombositler tarafından sentezlenen güçlü bir vazodilatatördür",
-      "B) Nötrofiller üzerinde güçlü kemotaktik etki gösterir, lökosit adezyonunu ve degranülasyonunu indükler",
-      "C) Bronşiyal düz kasları gevşeterek astım tedavisinde bronkodilatör olarak kullanılır",
-      "D) Mast hücrelerinden salınan preforme bir vazoaktif amin olup venüllerde anında aralık açar",
-      "E) Karaciğerde inaktif bir zimojen olarak sentezlenip pıhtılaşma kaskadında görev alır"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; LTB4 5-lipoksijenaz yolağında üretilen en güçlü nötrofil kemoatraktanıdır, integrin afinitesini artırır, degranülasyon ve süperoksit üretimini uyarır. A yanlıştır (5-LOX ürünüdür); C yanlıştır (bronkodilatör değildir); D yanlıştır (lipid mediyatördür); E yanlıştır (hücre kaynaklıdır)."
-  },
-  {
-    "id": "prac-med-011",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 11,
-    "slideTitle": "Sisteinil Lökotrienler (LTC4, LTD4, LTE4) ve Bronkospazm: Astım Patofizyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Sisteinil lökotrienlerin (LTC4, LTD4, LTE4) patofizyolojik etkileri ve klinik önemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Bronş düz kaslarında histaminden kat kat güçlü ve uzun süreli bronkokonstriksiyon oluştururlar",
-      "B) Postkapiller venüllerde geçirgenliği belirgin derecede artırarak hava yolu mukozasında ödeme yol açarlar",
-      "C) Solunum yollarında kadeh (goblet) hücrelerinden ve submukozal bezlerden mukus sekresyonunu artırırlar",
-      "D) Pulmoner arteriyollerde ve bronşlarda güçlü vazodilatasyon ve bronkodilatasyon yaparak astımı rahatlatırlar",
-      "E) Tarihsel olarak anafilaksinin yavaş reaksiyon veren maddesi (SRS-A) olarak tanımlanmışlardır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü sisteinil lökotrienler bronkodilatasyon değil, histaminden bin kat daha güçlü ve kalıcı bronkokonstriksiyon (bronkospazm) yaparlar. Postkapiller venüllerde ödem ve mukus tıkaçları oluşturarak astım atağını tetiklerler. A, B, C ve E seçenekleri doğru bilgileri içerir."
-  },
-  {
-    "id": "prac-med-012",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 12,
-    "slideTitle": "Eikozanoidleri Hedefleyen Farmakolojik Ajanlar: NSAİİ'ler, Koksibler ve Lökotrien Antagonistleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aspirin kullanan astımlı bir hastada aniden şiddetli nefes darlığı ve bronkospazm gelişmesinin patofizyolojik mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Aspirinin mast hücrelerindeki H1 histamin reseptörlerini doğrudan aktive etmesi",
-      "B) Siklooksijenaz blokajı nedeniyle araşidonik asidin 5-lipoksijenaz yolağına kayarak aşırı sisteinil lökotrien üretimine yol açması",
-      "C) Plazmada kompleman C1 inhibitörünün tükenmesi sonucu bradikinin fırtınası oluşması",
-      "D) Trombositlerden masif serotonin salınımının pulmoner alveolleri parçalaması",
-      "E) Fosfolipaz A2 enziminin aşırı uyarılmasıyla membran fosfolipidlerinin erimesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; aspirin COX enzimini bloke ettiğinde serbest araşidonik asit metabolize edilmek üzere tek açık kanal olan 5-lipoksijenaz yolağına kayar (şant). Aşırı miktarda sentezlenen sisteinil lökotrienler (LTC4, LTD4, LTE4) bronş düz kaslarını şiddetle kasarak aspirinle indüklenen astım atağına yol açar."
-  },
-  {
-    "id": "prac-med-013",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 13,
-    "slideTitle": "Enflamasyonun Çözünmesi (Resolüsyon) ve Lipoksinler (LXA4, LXB4)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enflamasyonun çözünme (resolüsyon) fazında görev alan Lipoksinler (LXA4, LXB4) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Araşidonik asitten türeyen ve enflamatuar yanıtı sonlandıran anti-enflamatuar lipid mediyatörlerdir",
-      "B) Nötrofillerin endotelyal adezyonunu, kemotaksisini ve dokuya toplanmasını kuvvetle inhibe ederler",
-      "C) Genellikle nötrofil-trombosit veya lökosit-endotel etkileşimi ile transselüler yolla sentezlenirler",
-      "D) Nötrofiller üzerinde LTB4'ten daha güçlü bir kemoatraktan etki göstererek akut pürülan eksüdayı artırırlar",
-      "E) Makrofajların dokudaki hücresel döküntüleri ve apoptotik nötrofilleri temizlemesini desteklerler"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü lipoksinler nötrofilleri çeken kemoatraktanlar değildir; tam aksine nötrofil kemotaksisini, adezyonunu ve toplanmasını durduran anti-enflamatuar ajanlardır (LTB4'ün fonksiyonel antagonistidirler). A, B, C ve E seçenekleri lipoksinlerin temel fizyolojik nitelikleridir."
-  },
-  {
-    "id": "prac-med-014",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 14,
-    "slideTitle": "Akut Enflamasyonun Ana Sitokinleri I: Tümör Nekroz Faktörü (TNF-alfa) ve İnterlökin-1 (IL-1)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Akut enflamasyonda Tümör Nekroz Faktörü (TNF) ve İnterlökin-1'in (IL-1) vasküler endotel üzerindeki temel etkisi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Endotelde adezyon moleküllerini (E-selektin, ICAM-1) baskılayarak lökosit göçünü tamamen engellemek",
-      "B) Endoteli aktive ederek E-selektin, ICAM-1 ve VCAM-1 ekspresyonunu artırmak ve prokoagülan fenotipe dönüştürmek",
-      "C) Endotel hücrelerini doğrudan nekroza uğratıp damar lümenini tamamen yok etmek",
-      "D) Plazmada kompleman C3 molekülünün karaciğerden sentezini durdurmak",
-      "E) Histamin H1 reseptörlerini parçalayarak vasküler tonusu artırmak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; TNF ve IL-1'in vasküler yataktaki temel fonksiyonu endotel aktivasyonudur. Lökosit adezyon moleküllerinin (E-selektin, ICAM-1, VCAM-1) ekspresyonunu indükler ve endoteli pıhtılaşmayı destekleyen prokoagülan bir duruma geçirirler. A tam tersidir; C, D ve E seçenekleri yanlıştır."
-  },
-  {
-    "id": "prac-med-015",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 15,
-    "slideTitle": "Sitokinlerin Sistemik Etkileri: Akut Faz Yanıtı, Kaşeksi ve Septik Şok",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Sepsis ve septik şok patogenezinde yüksek düzeylerde salınan TNF'nin yol açtığı sistemik patolojik etkilerle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Sistemik vazodilatasyon ve yaygın vasküler geçirgenlik artışı ile dirençli hipotansiyona yol açması",
-      "B) Miyokard kasılmasını baskılayarak kardiyak debiyi düşürmesi",
-      "C) Mikrovasküler trombozları ve pıhtılaşma kaskadını tetikleyerek DIC gelişimini kolaylaştırması",
-      "D) Kemik iliğinde eritrosit ve lökosit üretimini tamamen sonlandırarak aplastik anemiye yol açması",
-      "E) Kronik evrede lipoprotein lipazı inhibe ederek ve iştahı keserek kaşeksi tablosu oluşturması"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü TNF kemik iliğinde üretimi durdurmaz; tam aksine koloni uyarıcı faktörleri (G-CSF) artırarak nötrofil üretimini ve salınımını tetikler ve kanda sola kaymalı lökositoz tablosu oluşturur. A, B, C ve E seçenekleri yüksek TNF düzeylerinin oluşturduğu iyi bilinen sistemik patolojik sonuçlardır."
-  },
-  {
-    "id": "prac-med-016",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 16,
-    "slideTitle": "İnterlökin-6 (IL-6), İnterlökin-17 (IL-17) ve Tip I İnterferonlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Karaciğerden C-reaktif protein (CRP) ve fibrinojen gibi akut faz reaktanlarının sentezini uyararak eritrosit sedimentasyon hızını (ESH) artıran temel sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İnterlökin-4 (IL-4)",
-      "B) İnterlökin-6 (IL-6)",
-      "C) İnterlökin-10 (IL-10)",
-      "D) Transforme edici büyüme faktörü-beta (TGF-β)",
-      "E) İnterferon-gama (IFN-γ)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; İnterlökin-6 (IL-6), karaciğer hepatositleri üzerindeki reseptörleri aracılığıyla CRP, serum amiloid A ve fibrinojen gibi akut faz proteinlerinin sentezini indükleyen başlıca sitokindir. Fibrinojen artışı da ESH yüksekliğine neden olur. A (IL-4 Th2 yanıtı), C ve D (IL-10 ve TGF-beta anti-enflamatuar), E (IFN-gama makrofaj aktivatörü) farklı işlevlere sahiptir."
-  },
-  {
-    "id": "prac-med-017",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 17,
-    "slideTitle": "Kemokinler: Yapısal Gruplar (CXC, CC, C, CX3C) ve Lökosit Göçü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kemokinlerin yapısal sınıfları ve hedef hücre özgüllükleri ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) CXCL8 (İnterlökin-8) — Nötrofillerin selektif kemotaksisi ve aktivasyonu",
-      "B) Eotaksin (CCL11) — Nötrofillerin bakteriyel apse odağına süratle çekilmesi",
-      "C) Monosit Kemoatraktan Protein-1 (MCP-1) — Trombositlerin agregasyonunun durdurulması",
-      "D) Lenfotaktin (XCL1) — Eritrositlerin kılcal damarlara yönlendirilmesi",
-      "E) Fraktalkin (CX3CL1) — Mast hücrelerinin degranülasyonunun tamamen engellenmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; CXCL8 (IL-8) nötrofillerin primer kemotaktik CXC kemokinidir. B yanlıştır (Eotaksin eozinofilleri çeker); C yanlıştır (MCP-1 monositleri çeker); D ve E seçenekleri uydurma fonksiyonlardır."
-  },
-  {
-    "id": "prac-med-018",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 18,
-    "slideTitle": "Kompleman Sistemi I: Aktivasyon Yolakları (Klasik, Alternatif, Lektin) ve C3 Konvertaz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kompleman sisteminin aktivasyon yolları ve kritik basamakları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Alternatif yolak daima antijen-antikor komplekslerinin C1 bileşenine bağlanmasıyla başlar",
-      "B) Lektin yolağında C3 konvertaz oluşumu için T hücre reseptörlerinin uyarılması zorunludur",
-      "C) Klasik yolakta C4b2a, alternatif yolakta C3bBb kompleksi C3 konvertaz görevi görerek C3'ü parçalar",
-      "D) Kompleman proteinlerinin tamamı dalak beyaz pulpasında depolanıp enfeksiyon anında degranüle edilir",
-      "E) C3 parçalanması sadece hücre lizisine yol açar, enflamasyon veya opsonizasyon yapamaz"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; klasik ve lektin yollarında C4b2a kompleksi, alternatif yolda ise C3bBb kompleksi C3 konvertaz aktivitesi göstererek C3'ü C3a ve C3b fragmanlarına ayırır. A yanlıştır (antikorla başlayan klasik yoldur); B yanlıştır (lektin yolu MBL ile başlar); D yanlıştır (karaciğerde sentezlenir); E yanlıştır (C3a anafilatoksin, C3b ise opsonindir)."
-  },
-  {
-    "id": "prac-med-019",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 19,
-    "slideTitle": "Kompleman Sistemi II: Efektör Fonksiyonlar (Anafilatoksinler, Opsonizasyon ve MAC)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kompleman sisteminin efektör molekülleri ve fonksiyonları ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) C3b — Opsonizasyon ve makrofaj fagositozunun uyarılması",
-      "B) C5a — Nötrofil kemotaksisi ve mast hücresinden histamin salınımı",
-      "C) C5b-9 — Hedef hücre membranında litik por açarak ozmotik lizis oluşturma (MAC)",
-      "D) C3a — Düz kas gevşemesi ve nötrofillerin fagositoz yeteneğinin yok edilmesi",
-      "E) iC3b — Lökosit yüzeyindeki CR3 reseptörüne bağlanarak fagositozu kolaylaştırma"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü C3a anafilatoksindir; düz kası gevşetmez ve fagositozu engellemez. Mast hücrelerinden histamin salarak vasküler geçirgenliği artıran ve bronş düz kasını kasan pro-enflamatuar bir mediyatördür. A, B, C ve E seçenekleri doğru fonksiyon eşleştirmeleridir."
-  },
-  {
-    "id": "prac-med-020",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 20,
-    "slideTitle": "Kompleman Düzenleyici Proteinleri ve İlişkili Klinik Hastalıklar (C1-INH, CD55/CD59, Faktör H)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Herediter Anjiyoödem (HAE) hastalığının etiyopatogenezi ve klinik tablosu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Mast hücrelerinden aşırı histamin salınımı sonucu ortaya çıkar ve H1 antihistaminik tedavisine dramatik yanıt verir",
-      "B) C1 inhibitörü (C1-INH) eksikliği sonucu kallikrein-kinin sisteminin kontrolsüz aktivasyonu ve masif bradikinin üretimiyle gelişir",
-      "C) CD55 ve CD59 proteinlerinin aşırı ekspresyonu nedeniyle kanda pıhtılaşma faktörlerinin tükenmesi tablosudur",
-      "D) Sadece deride ürtiker plakları ile sınırlı kalır, laringeal ödem veya asfiksi riski taşımaz",
-      "E) Kompleman C3 eksikliğine bağlı olarak gelişen ağır bir pürülan bakteriyel enfeksiyon tablosudur"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; Herediter Anjiyoödem C1-INH eksikliği nedeniyle gelişir. C1-INH kallikreini baskılayamadığı için yüksek molekül ağırlıklı kininojenden kontrolsüz miktarda Bradikinin üretilir. Ödemin primer sorumlusu bradikinindir, histamin değildir (antihistaminiklere yanıt vermez). Diğer seçenekler yanlıştır."
-  },
-  {
-    "id": "prac-med-021",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 21,
-    "slideTitle": "Plazma Kaynaklı Kaskadlar I: Hageman Faktörü (Faktör XII) ve Kallikrein-Kinin Sistemi (Bradikinin)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bradikinin mediyatörü ve Kallikrein-Kinin sistemi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Enflamasyon sahasında nosiseptörleri uyararak doğrudan ağrı hissine yol açan temel mediyatörlerdendir",
-      "B) Arteriyollerde vazodilatasyon ve venüllerde belirgin vasküler geçirgenlik artışı meydana getirir",
-      "C) Plazmada Yüksek Molekül Ağırlıklı Kininojenden (HMWK) kallikrein enzimi aracılığıyla üretilir",
-      "D) Karaciğer parankiminde depolanan preforme bir vazoaktif amin olup trombosit tıkacını eritir",
-      "E) Anjiyotensin dönüştürücü enzim (ACE) tarafından inaktive edildiğinden, ACE inhibitörü kullananlarda birikerek öksürük yapabilir"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü bradikinin bir vazoaktif amin değil, plazmada proteolitik olarak açığa çıkarılan 9 aminoasitlik bir peptittir (kinin). Karaciğerde depolanmaz; plazmada dolaşan HMWK'den kallikrein aracılığıyla sentezlenir. A, B, C ve E seçenekleri bradikininin temel patofizyolojik ve farmakolojik özellikleridir."
-  },
-  {
-    "id": "prac-med-022",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 22,
-    "slideTitle": "Plazma Kaynaklı Kaskadlar II: Pıhtılaşma ve Fibrinolizis Sistemlerinin Enflamasyon Köprüleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Pıhtılaşma ve fibrinolitik sistemlerin enflamasyonla olan etkileşimi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Trombin sadece fibrinojeni fibrine çevirir, lökositler veya endotel hücreleri üzerinde hiçbir reseptörü bulunmaz",
-      "B) Plazmin enzimi kompleman sistemini tamamen inaktive ederek C3a ve C5a oluşumunu engeller",
-      "C) Trombin PAR-1 reseptörlerini aktive ederek endotelde adezyon moleküllerini ve sitokin salınımını uyarırken; plazmin C3'ü parçalayarak C3a üretebilir",
-      "D) Fibrin oluşumu mikropların çevre dokulara yayılmasını kolaylaştıran bir patolojik süreçtir",
-      "E) Faktör XII pıhtılaşmayı aktive eder fakat kinin ve kompleman kaskadlarıyla hiçbir temas noktası yoktur"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; trombin PAR-1 reseptörlerini aktive ederek endotelde selektinleri, kemokinleri ve sitokinleri indükler. Fibrinolitik enzim plazmin ise C3'ü proteolitik olarak parçalayıp C3a anafilatoksinini açığa çıkarabilir. A, B, D ve E seçenekleri yanlıştır."
-  },
-  {
-    "id": "prac-med-023",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 23,
-    "slideTitle": "Platelet Aktive Edici Faktör (PAF) ve Nitrik Oksit (NO) Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Nitrik oksit (NO) sentezi ve izoenzimleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) eNOS endotelde konstitütif olarak bulunur ve ürettiği NO ile vazodilatasyon yaparak trombosit adezyonunu baskılar",
-      "B) iNOS makrofajlarda proenflamatuar sitokinler (IFN-γ) ve bakteriyel endotoksin ile indüklenen kalsiyumdan bağımsız enzimdir",
-      "C) Makrofaj iNOS kaynaklı NO, süperoksit anyonu ile birleşerek mikrobisidal peroksinitrit (ONOO-) radikalini oluşturur",
-      "D) Nitrik oksit intrasellüler cAMP düzeyini artırarak damar düz kaslarında şiddetli vazokonstriksiyon meydana getirir",
-      "E) L-arjinin, nitrik oksit sentaz enzimi için temel aminoasit substratıdır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü nitrik oksit hücre içi cAMP'yi değil, çözünür guanilat siklazı uyararak cGMP düzeyini artırır; vazokonstriksiyon değil tam tersine damar düz kasında güçlü bir gevşeme ve vazodilatasyon meydana getirir. A, B, C ve E seçenekleri doğrudur."
-  },
-  {
-    "id": "prac-med-024",
-    "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
-    "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Hücre ve Plazma Kökenli Moleküler Yolaklar",
-    "slideNumber": 24,
-    "slideTitle": "Enflamasyon Mediyatörlerinin Fazlalığı, Sinerjisi ve Klinik-Terapötik Entegrasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enflamasyonun kimyasal mediyatörlerinin biyolojik yedekliliği (redundancy) ve farmakolojik hedeflenmesi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Vasküler geçirgenlik artışı histamin, lökotrienler, bradikinin ve kompleman parçaları gibi çok sayıda farklı mediyatörle yürütülür",
-      "B) Biyolojik yedeklilik sayesinde tek bir mediyatör yolu mutasyonla veya mikropla bloke edilse dahi enflamatuar konak savunması sürdürülebilir",
-      "C) Klasik H1 antihistaminikler tüm lökotrien ve sitokin reseptörlerini de eş zamanlı bloke ettikleri için romatoid artrit tedavisinde birinci basamak seçenektir",
-      "D) Kortikosteroidler PLA2 inhibisyonu ve pro-enflamatuar gen transkripsiyonunu baskılayarak çoklu mediyatör yolaklarını aynı anda durdururlar",
-      "E) Ekulizumab, kompleman C5 molekülünü hedef alarak C5b-9 membran atak kompleksi oluşumunu engelleyen monoklonal bir antikordur"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır çünkü H1 antihistaminikler sadece H1 histamin reseptörünü bloke ederler; lökotrien, sitokin, kinin veya kompleman yolaklarına etki etmezler. Bu nedenle romatoid artrit gibi karmaşık sistemik enflamatuar hastalıklarda hiçbir terapötik yararları yoktur. A, B, D ve E seçenekleri doğru ilkelerdir."
-  },
-  {
-    "id": "prac-adh-001",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
-    "slideNumber": 1,
-    "slideTitle": "Aşırı Duyarlılık Reaksiyonlarına Giriş ve İmmünopatolojik Temeller",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Aşırı duyarlılık (hipersensitivite) reaksiyonlarının etyopatogenezi ve genel immünopatolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Doku hasarını oluşturan efektör yolaklar, enfeksiyonlara karşı gelişen normal koruyucu immün yolaklarla temel mekanizma açısından aynıdır",
-      "B) Otoantijenlerin konaktan tamamen temizlenememesi, otoimmün aşırı duyarlılık hastalıklarının kronik ve tekrarlayıcı seyretmesine yol açar",
-      "C) Aşırı duyarlılık yalnızca daha önce karşılaşılmamış yabancı antijenlere karşı ilk temasta gelişen primer yanıtlardan ibarettir",
-      "D) Mycobacterium tuberculosis enfeksiyonunda doku nekrozunun birincil nedeni basilin toksinlerinden ziyade konağın geliştirdiği T hücre yanıtıdır",
-      "E) Genetik yatkınlığı olan bireylerde normalde zararsız olan çevresel proteinlere karşı patolojik immün yanıt gelişebilir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır çünkü aşırı duyarlılık reaksiyonlarının gelişebilmesi için immün sistemin ilgili antijenle daha önceden mutlaka karşılaşmış ve 'duyarlılaşmış' (sensitize olmuş) olması şarttır. İlk temas sensitizasyon fazıdır ve genellikle klinik doku hasarı oluşturmaz; hasar duyarlılaşmış bireyin antijenle yeniden karşılaşması sonucu ortaya çıkar. A, B, D ve E seçenekleri aşırı duyarlılığın temel patolojik ilkelerini doğru ifade etmektedir."
-  },
-  {
-    "id": "prac-adh-002",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
-    "slideNumber": 2,
-    "slideTitle": "Gell ve Coombs Sınıflaması: Dört Tip Aşırı Duyarlılığın Karşılaştırmalı Mimarisi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Aşırı duyarlılık reaksiyonlarının Gell ve Coombs sınıflamasına göre temel mekanizmaları ve immünolojik bileşenleri karşılaştırıldığında aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Tip I: Dolaşan immün komplekslerin endotel altına çökmesi ve plazminojen aktivasyonu",
-      "B) Tip II: Antikorlardan tamamen bağımsız CD8+ T lenfosit sitotoksisitesi",
-      "C) Tip III: Doku hücre yüzeyine sabitlenmiş antijenlere karşı IgE antikorlarının bağlanması",
-      "D) Tip IV: Duyarlılaşmış T lenfositlerin saldığı sitokinler ve CTL aktivitesi ile yürütülen hücresel hasar",
-      "E) Tip I: Kompleman aktivasyonu sonucu oluşan membran atak kompleksi ile masif eritrosit lizisi"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği doğrudur; Tip IV aşırı duyarlılık reaksiyonları antikor bağımsız olup, CD4+ T hücrelerinden salınan sitokinler (DTH) ve CD8+ sitotoksik T lenfositlerin direkt hücresel sitotoksisitesi ile yürütülür. A seçeneği Tip III'ü, B seçeneği Tip IV'ü, C seçeneği Tip II mekanizmasını yanlış tanımlamıştır (Tip II'de IgG/IgM rol oynar, IgE değil). E seçeneği ise Tip II sitotoksik kompleman hasarıdır."
-  },
-  {
-    "id": "prac-adh-003",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
-    "slideNumber": 3,
-    "slideTitle": "Tip I Aşırı Duyarlılık: Duyarlılaşma (Sensitizasyon), Th2 Yanıtı ve IgE Üretimi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Tip I aşırı duyarlılık reaksiyonunun duyarlılaşma (sensitizasyon) fazında rol alan sitokinler ve moleküler olaylar ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Naif B lenfositlerin IgE üretmeye başlaması temel olarak makrofaj kaynaklı IFN-gama uyarısıyla gerçekleşir",
-      "B) IL-5, B lenfositlerin yüzeyindeki Fc gama reseptörlerini aktive ederek IgG yapımını durdurur",
-      "C) Alerjen-spesifik IgE antikorları mast hücrelerinin yüzeyindeki düşük afiniteli FcγRII reseptörlerine bağlanır",
-      "D) Th2 lenfositlerden salgılanan IL-4 ve IL-13, B hücrelerinde IgE izotipine sınıf değişimini tetikleyen anahtar sitokinlerdir",
-      "E) Duyarlılaşma fazı tamamlandığında mast hücreleri derhal degranüle olarak masif doku nekrozuna neden olur"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği doğrudur; Th2 lenfositler tarafından salgılanan IL-4 ve IL-13 sitokinleri B lenfositlerin immünoglobulin ağır zincir gen lokusunda sınıf değişimini (class switching) yöneterek IgE üretimini sağlar. A seçeneği yanlıştır çünkü IFN-gama Th1 sitokini olup IgE üretimini baskılar; B seçeneği yanlıştır çünkü IL-5 eozinofillerin büyüme ve farklılaşma faktörüdür; C seçeneği yanlıştır çünkü IgE'yi bağlayan reseptör FcεRI'dir; E seçeneği yanlıştır çünkü duyarlılaşma evresinde degranülasyon olmaz, hücre sadece silahlanır."
-  },
-  {
-    "id": "prac-adh-004",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
-    "slideNumber": 4,
-    "slideTitle": "Mast Hücresi Aktivasyonu ve Mediyatörleri: Preforme Granüller ve De Novo Eikozanoidler",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Tip I aşırı duyarlılık reaksiyonunda mast hücrelerinin aktivasyonu ve salınan kimyasal mediyatörlerin biyolojik etkileri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Mast hücresi degranülasyonunun tetiklenebilmesi için antijenin hücre yüzeyindeki komşu IgE moleküllerini çapraz bağlaması gerekir",
-      "B) Sistemik anafilaksi tanısını doğrulamada serumda triptaz enzim düzeyinin ölçülmesi altın standart biyobelirteçtir",
-      "C) Sisteinil-lökotrienler (LTC4, LTD4, LTE4), bronkokonstriksiyon oluşturma gücü bakımından histaminden belirgin derecede daha zayıftır",
-      "D) Araşidonik asit siklooksijenaz yolağından üretilen prostaglandin D2 (PGD2), güçlü vazodilatasyon ve bronkospazma yol açar",
-      "E) Histamin H1 reseptörleri üzerinden postkapiller venüllerde endotelyal kontraksiyon yaparak doku ödemini başlatır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır çünkü sisteinil-lökotrienler (LTC4, LTD4, LTE4) bronş düz kaslarını kasma ve mikrovasküler geçirgenliği artırma bakımından histaminden zayıf değil, tam tersine HİSTAMİNDEN YAKLAŞIK 1000 KAT DAHA GÜÇLÜ ve uzun etkilidir. A, B, D ve E seçenekleri mast hücre fizyopatolojisine dair tamamen doğru bilimsel verilerdir."
-  },
-  {
-    "id": "prac-adh-005",
-    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
-    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
-    "slideNumber": 5,
-    "slideTitle": "Tip I Aşırı Duyarlılığın Fazları: Erken (İmmüdiat) ve Geç Faz Reaksiyonları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Atopik astım tanılı bir hastada alerjen maruziyetinden 6 saat sonra ortaya çıkan, nefes darlığında belirgin artış ve mukozal doku hasarı ile karakterize geç faz reaksiyonunun patolojisinde aşağıdaki hücre ve moleküllerden hangisi birincil derecede sorumludur?",
-    "options": [
-      "A) Plazma hücreleri tarafından salgılanan IgM antikorları ve klasik kompleman kaskadı",
-      "B) Eozinofiller tarafından salgılanan Majör Bazik Protein (MBP) ve Eozinofil Katyonik Protein (ECP)",
-      "C) CD8+ sitotoksik T lenfositlerin perforin-granzim aracılığıyla endotel hücrelerini öldürmesi",
-      "D) Nötrofillerin membran atak kompleksi (C5b-9) oluşturarak bronş düz kasını nekroza uğratması",
-      "E) Yalnızca preforme histaminin H2 reseptörlerini uyararak gastrik asit hipersekresyonu yapması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; Tip I aşırı duyarlılığın geç faz reaksiyonu maruziyetten 2-24 saat sonra gelişir ve bu evrede dokuya toplanan eozinofillerin salgıladığı Majör Bazik Protein (MBP) ve Eozinofil Katyonik Protein (ECP) epitel hücrelerini doğrudan parçalayarak hava yolu hasarına yol açar. A seçeneği Tip II/III mekanizmasıdır; C seçeneği Tip IV sitotoksik yanıttır; D seçeneği kompleman kaskadıdır; E seçeneğinde histamin erken fazda etkilidir ve H2 reseptörü bronş hasarından sorumlu değildir."
   }
 ]

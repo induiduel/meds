@@ -1,5 +1,708 @@
 [
   {
+    "id": "prac-sis-023",
+    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
+    "slideNumber": 23,
+    "slideTitle": "Hipertansif Nefroskleroz: Benign Nefroskleroz vs Malign Nefroskleroz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kan basıncı 220/130 mmHg ölçülen, papilödem, baş ağrısı ve akut böbrek yetmezliği tablosunda kaybedilen bir hastanın otopsisinde; böbrek dış yüzeyinde küçük peteşiyal kanamalar ('pire ısırığı' görünümü) izlenmiştir. Mikroskopik incelemede afferent arteriyol duvarlarında fibrinoid nekroz ve interlobüler arterlerde konsantrik intimal hücre proliferasyonu ('soğan zarı' lezyonu) saptanmıştır. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Benign nefroskleroz",
+      "B) Malign nefroskleroz",
+      "C) Polikistik böbrek hastalığı",
+      "D) Renal amiloidoz",
+      "E) Membranoproliferatif glomerülonefrit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Malign hipertansiyon seyrinde görülen; makroskopik olarak kortekste pire ısırığı (flea-bitten) peteşiyel kanamalar, mikroskopide afferent arteriyollerde fibrinoid nekroz ve interlobüler arterlerde konsantrik intimal düz kas proliferasyonunun oluşturduğu soğan zarı (onion-skin) lezyonu 'Malign Nefroskleroz' için patognomoniktir."
+  },
+  {
+    "id": "prac-sis-024",
+    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
+    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
+    "slideNumber": 24,
+    "slideTitle": "Kronik Böbrek Hastalığı Ortak Son Yolağı, APOL1 Genetiği ve Klinik Yönetim",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kronik böbrek hastalığının patogenezinde primer etiyolojiden bağımsız olarak nefron kaybının kendi kendini besleyen bir kısır döngü ile son dönem böbrek yetmezliğine ilerlemesini açıklayan temel hemodinamik mekanizma ve Afrika kökenlilerde riski artıran gen polimorfizmi aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
+    "options": [
+      "A) Afferent vazokonstriksiyon / HLA-B27",
+      "B) Sağlam kalan nefronlarda hiperfiltrasyon ve glomerüler hipertansiyon / APOL1",
+      "C) Tübüler bazal membran rüptürü / CFH mutasyonu",
+      "D) Mezangiyumda amiloid birikimi / MEFV",
+      "E) Selektif aldosteron eksikliği / ADAMTS13"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Brenner'in hiperfiltrasyon hipotezine göre nefron kaybı sonrası geriye kalan sağlam nefronlar kompansatuar olarak hipertrofiye uğrar ve intraglomerüler hipertansiyon/hiperfiltrasyon stresi altına girer; bu durum zamanla sekonder sklerozu tetikler. Afrika kökenli bireylerde bu süreci hızlandıran ve son dönem böbrek yetmezliği riskini yaklaşık 5 kat artıran genetik faktör APOL1 gen varyantıdır."
+  },
+  {
+    "id": "prac-urogen-001",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 1,
+    "slideTitle": "Ürogenital Sistem Tümörlerine Giriş ve Moleküler Onkolojik Temeller",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Ürogenital sistem tümörlerinin epidemiyolojisi ve moleküler genetik genel özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Erkeklerde en sık tanı alan ürogenital malignite prostat karsinomudur.",
+      "B) Kadınlarda en sık izlenen üriner sistem tümörü mesane ürotelyal karsinomudur.",
+      "C) Ürogenital tümörlerin tamamı çevresel mutajenlere bağlı gelişen somatik mutasyonlar sonucu oluşur; germline kalıtım bu sistemde rol oynamaz.",
+      "D) Testis germ hücreli tümörleri genç erişkin erkeklerde en sık görülen solid organ malignitesidir.",
+      "E) Moleküler genetik analizler, hedefe yönelik TKI ve immünoterapi seçiminde prediktif biyobelirteç olarak kullanılır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle yanlıştır; çünkü ürogenital sistem tümörlerinin yaklaşık %3 ila %10'u germline mutasyonlara bağlı herediter kanser sendromları (örneğin VHL, HLRCC, Birt-Hogg-Dubé, Lynch sendromu, HBOC) zemininde gelişir. A, B, D ve E seçenekleri doğru epidemiyolojik ve moleküler ilkelerdir."
+  },
+  {
+    "id": "prac-urogen-002",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 2,
+    "slideTitle": "Böbrek Hücreli Karsinomlara (RCC) Genel Bakış ve Histopatolojik/Moleküler Sınıflama",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Renal hücreli karsinomun (RCC) epidemiyolojik, histopatolojik ve klinik yayılım özellikleri ile ilgili aşağıdakilerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Erişkin böbrek tümörleri içerisinde en sık görülen alt tip kromofob renal hücreli karsinomdur.",
+      "B) RCC'nin en sık uzak metastaz yaptığı organ akciğerdir (%50-60).",
+      "C) Hastaların %90'ından fazlası hematüri, yan ağrısı ve palpabl kitle klasik triyadı ile başvurur.",
+      "D) Sigara kullanımı böbrek kanseri gelişimine karşı koruyucu bir faktördür.",
+      "E) Tanı anında uzak metastaz saptanan Evre IV hastalarda 5 yıllık sağkalım oranı %90'ın üzerindedir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; RCC hematojen yolla en sık akciğere (%50-60) metastaz yapar. A yanlıştır; en sık alt tip berrak hücreli RCC'dir (%70-75). C yanlıştır; klasik triyad hastaların <%10'unda görülür ve geç bulgudur. D yanlıştır; sigara majör risk faktörüdür. E yanlıştır; metastatik olgularda 5 yıllık sağkalım yaklaşık %15'tir."
+  },
+  {
+    "id": "prac-urogen-003",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 3,
+    "slideTitle": "Berrak Hücreli RCC (ccRCC) Genetiği: 3p Delesyonu ve VHL Gen İnaktivasyonu",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Berrak hücreli renal hücreli karsinomda (ccRCC) VHL geninin inaktivasyonu sonucu ortaya çıkan temel moleküler mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) HIF-alfa alt ünitelerinin prolil hidroksilazlar tarafından hidroksillenememesi",
+      "B) HIF-alfa alt ünitelerinin E3 ubikitin ligaz kompleksi tarafından ubikitinlenemeyip 26S proteazomal yıkımdan kaçması ve nükleusta birikmesi",
+      "C) VEGF ve PDGF reseptörlerinin hücre yüzeyinden internalize edilerek lizozomda hızla yıkılması",
+      "D) Rb proteininin fosforillenmesinin tamamen engellenmesi ve hücre siklusunun G0 fazında tutulması",
+      "E) Kromozom 7 ve 17 trizomisi sonucu MET tirozin kinaz reseptörünün aşırı üretilmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; VHL mutasyonu durumunda pVHL üretilemez veya fonksiyon göremez. Bu nedenle hidroksillenmiş HIF-alfa alt üniteleri ubikitinlenemez, 26S proteazomunda yıkılamaz, nükleusta stabilize olarak hedef genleri kontrolsüzce transkribe eder. A yanlıştır; mutasyon PHD enziminde değil pVHL'dedir. C yanlıştır; VEGF/PDGF üretimi artar. D ve E alakasız yolaklardır."
+  },
+  {
+    "id": "prac-urogen-004",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 4,
+    "slideTitle": "VHL Yolağında Moleküler Kaskad: HIF Birikimi, Anjiyogenez ve Hedefe Yönelik Tedaviler",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Von Hippel-Lindau (VHL) inaktivasyonuna bağlı berrak hücreli RCC patogenezinde, doğrudan HIF-2alfa alt ünitesine bağlanarak onun HIF-1beta ile heterodimerizasyonunu ve anjiyogenik gen ekspresyonunu engelleyen hedefe yönelik ilaç aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Belzutifan",
+      "B) Erdafitinib",
+      "C) Olaparib",
+      "D) Bikalutamid",
+      "E) Sisplatin"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Belzutifan (MK-6482), doğrudan HIF-2alfa'nın PAS-B domainine bağlanarak HIF-1beta ile heterodimerize olmasını ve HRE bölgelerine bağlanmasını spesifik olarak engelleyen ilk oral HIF-2alfa inhibitörüdür. VHL hastalığı ilişkili RCC'lerde ve ilerlemiş ccRCC'de FDA onaylıdır. Erdafitinib FGFR inhibitörüdür; Olaparib PARP inhibitörüdür; Bikalutamid antiandrojendir."
+  },
+  {
+    "id": "prac-urogen-005",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 5,
+    "slideTitle": "Von Hippel-Lindau (VHL) Sendromu: Klinik Spektrum ve Sistemik Manifestasyonlar",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "26 yaşında bir erkek hasta baş ağrısı, görme bozukluğu ve dirençli hipertansiyon yakınmalarıyla başvuruyor. Yapılan kranial MR'da serebellar kistik kitle (hemanjioblastom), göz dibi muayenesinde retinal anjiyom, batın BT'sinde ise bilateral adrenal bezde feokromositoma ve her iki böbrekte multipl kistlerle birlikte bilateral hipervasküler solid kitleler saptanıyor. Biyopsi sonucu berrak hücreli renal hücreli karsinom ile uyumlu geliyor.\n\nBu hastada sorumlu gen ve kromozomal lokasyon aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) MET - 7q31",
+      "B) VHL - 3p25.5",
+      "C) FLCN - 17p11.2",
+      "D) FH - 1q43",
+      "E) WT1 - 11p13"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; Serebellar hemanjioblastom, retinal anjiyom, feokromositoma ve bilateral multifokal berrak hücreli RCC birlikteliği Von Hippel-Lindau sendromunun patognomonik tablosudur. Sorumlu gen 3p25.5 bölgesinde yer alan VHL genidir. MET papiller RCC'de; FLCN Birt-Hogg-Dubé'de; FH HLRCC'de; WT1 Wilms tümöründe rol oynar."
+  },
+  {
+    "id": "prac-urogen-006",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 6,
+    "slideTitle": "Papiller Renal Hücreli Karsinom (pRCC) Genetiği ve Herediter Papiller RCC (HPRC)",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Papiller renal hücreli karsinomun (pRCC) sitogenetik ve moleküler özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tümörlerin %90'ında patognomonik olarak 3p25 delesyonu ve VHL inaktivasyonu saptanır.",
+      "B) En sık saptanan sayısal sitogenetik değişiklikler trizomi 7, trizomi 17 ve erkeklerde Y kromozomu kaybıdır.",
+      "C) Herediter papiller renal karsinomdan (HPRC) sorumlu temel gen kromozom 17p11'de yer alan FLCN genidir.",
+      "D) MET geni bir tümör süpresör gen olup pRCC gelişiminde çift taraflı delesyonla inaktive olur.",
+      "E) Tip 2 papiller RCC olguları daima Tip 1'e göre çok daha iyi prognozlu ve selim seyirlidir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; pRCC'de trizomi 7, trizomi 17 ve -Y en sık izlenen sayısal anomalilerdir. A yanlıştır; 3p delesyonu ve VHL ccRCC'ye özgüdür. C yanlıştır; HPRC'den sorumlu gen 7q31'deki MET genidir (FLCN Birt-Hogg-Dubé'dedir). D yanlıştır; MET bir protoonkogendir ve aktive edici mutasyonlarla onkogenik çalışır. E yanlıştır; Tip 2 pRCC çok daha yüksek dereceli ve agresiftir."
+  },
+  {
+    "id": "prac-urogen-007",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 7,
+    "slideTitle": "Kalıtsal Leiomyomatozis ve Renal Hücreli Kanser (HLRCC): Fumarat Hidrataz (FH) ve Agresif Tip 2 pRCC",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "28 yaşında bir kadın hasta, bacaklarında ve sırtında soğukta ağrıyan multipl kutanöz nodüller (leiomyomlar) nedeniyle dermatolojiye başvuruyor. Özgeçmişinde 24 yaşında dev uterus miyomları nedeniyle histerektomi geçirdiği öğreniliyor. Yapılan batın USG ve MR incelemesinde sol böbrekte 3 cm çapında, çevre dokuya invaze ve retroperitoneal lenf nodu metastazı yapmış solid lezyon saptanıyor. Biyopsi sonucu belirgin nükleollü Tip 2 papiller RCC (FH-eksik RCC) ile uyumlu geliyor.\n\nBu klinik tabloda rol oynayan temel biyokimyasal mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Fumarat birikimine bağlı prolil hidroksilaz (PHD) enzimlerinin inhibe olması ve HIF proteinlerinin parçalanamaması",
+      "B) Tüberin-hamartin kompleksinin aşırı çalışması sonucu mTORC1'in tamamen baskılanması",
+      "C) Folikülin eksikliğine bağlı olarak akciğer bazallerinde subplevral kistlerin yırtılması",
+      "D) MET tirozin kinaz reseptörünün ekzon 16 mutasyonu ile otofosforilasyona uğraması",
+      "E) 11p13 bölgesindeki PAX6 geninin delesyonu sonucu aniridi gelişmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Olgu Kalıtsal Leiomyomatozis ve Renal Hücreli Kanser (HLRCC) sendromudur. 1q43'teki FH (fumarat hidrataz) enzim inaktivasyonu sonucu biriken fumarat, prolil hidroksilazları yarışmalı inhibe eder. Prolinleri hidroksillenemeyen HIF-alfa pVHL tarafından tanınamaz ve parçalanamaz; bu da psödohipoksi ve agresif Tip 2 papiller RCC gelişimine yol açar."
+  },
+  {
+    "id": "prac-urogen-008",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 8,
+    "slideTitle": "Kromofob RCC, Onkositom ve Birt-Hogg-Dubé Sendromu (BHDS)",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "35 yaşında bir erkek hasta, acil servise ani başlayan nefes darlığı ve göğüs ağrısı ile başvuruyor. Çekilen akciğer grafisinde spontan pnömotoraks saptanıyor ve toraks BT'sinde bilateral bazallerde multipl ince duvarlı kistler izleniyor. Fizik muayenede hastanın burun ve yanak çevresinde çok sayıda kubbe şeklinde beyazımsı papüller (fibrofolikülomlar) görülüyor. Batın USG'sinde sağ böbrekte 4 cm çapında kitle saptanıyor ve nefrektomi materyalinde perinükleer halo içeren kromofob renal hücreli karsinom tanısı konuyor.\n\nBu hastada etiyolojiden sorumlu genetik mutasyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) 17p11.2 lokusundaki FLCN geni germline mutasyonu",
+      "B) 3p25.5 lokusundaki VHL geni germline mutasyonu",
+      "C) 7q31 lokusundaki MET geni aktive edici mutasyonu",
+      "D) 9q34 lokusundaki TSC1 geni mutasyonu",
+      "E) 1q43 lokusundaki FH geni delesyonu"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Kutanöz fibrofolikülomlar, akciğer kistleri/spontan pnömotoraks ve kromofob RCC birlikteliği Birt-Hogg-Dubé Sendromunun (BHDS) patognomonik tablosudur. BHDS, kromozom 17p11.2 lokusunda yer alan FLCN (folikülin) tümör süpresör genindeki germline mutasyonlar sonucu gelişir."
+  },
+  {
+    "id": "prac-urogen-009",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 9,
+    "slideTitle": "Tüberoz Skleroz Kompleksi (TSC): Genetik Temel, Renal Patolojiler ve mTOR İnhibisyonu",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Tüberoz skleroz kompleksi (TSC) patogenezinde rol oynayan hücresel sinyal yolağı ve hastalarda gelişen renal anjiyomiyolipomların tedavisinde kullanılan hedefe yönelik ajan aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
+    "options": [
+      "A) Wnt/Beta-katenin yolağı hiperaktivasyonu — Erdafitinib",
+      "B) Rheb üzerinden mTORC1 yolağı hiperaktivasyonu — Everolimus",
+      "C) VHL/HIF yolağı inaktivasyonu — Belzutifan",
+      "D) Homolog rekombinasyon kusuru — Olaparib",
+      "E) EGFR tirozin kinaz hiperaktivasyonu — Gefitinib"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; TSC1 (hamartin) ve TSC2 (tüberin) proteinleri Rheb küçük GTPaz'ını inaktif formda tutan bir GAP kompleksi oluşturur. Fonksiyon kaybında Rheb sürekli GTP bağlı kalır ve mTORC1 aşırı aktifleşir. Bu nedenle TSC ilişkili renal anjiyomiyolipomların medikal tedavisinde mTOR inhibitörleri (Everolimus/Sirolimus) kullanılır."
+  },
+  {
+    "id": "prac-urogen-010",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 10,
+    "slideTitle": "Pediyatrik Renal Tümör Genetiği: Wilms Tümörü (Nefroblastom), WAGR ve Denys-Drash Sendromları",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "2 yaşında bir erkek çocukta bilateral Wilms tümörü saptanıyor. Hastanın anamnezinde erken evrede proteinüri ve nefrotik sendrom geliştiği, yapılan böbrek biyopsisinde difüz mezangiyal skleroz izlendiği, genetik incelemede ise karyotipin 46,XY olmasına rağmen fenotipik olarak ambigus genitalya (gonadal disgenezis) bulunduğu tespit ediliyor.\n\nBu hastada en olası tanı ve sorumlu genetik anormallik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) WAGR sendromu — 11p13 lokusunda tam delesyon",
+      "B) Beckwith-Wiedemann sendromu — 11p15 lokusunda imprinting kaybı",
+      "C) Denys-Drash sendromu — WT1 geninde dominant negatif nokta mutasyonu",
+      "D) Birt-Hogg-Dubé sendromu — FLCN geninde delesyon",
+      "E) Von Hippel-Lindau sendromu — VHL geninde missense mutasyon"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; Difüz mezangiyal skleroz (erken nefropati/böbrek yetmezliği), 46,XY gonadal disgenezisi (ambigus genitalya) ve çok yüksek Wilms tümörü riski Denys-Drash sendromunun klasik triadıdır. WAGR'daki 11p13 delesyonunun aksine, Denys-Drash sendromunda WT1 geninin çinko parmak bölgesinde dominant negatif etki gösteren spesifik nokta mutasyonları bulunur."
+  },
+  {
+    "id": "prac-urogen-011",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 11,
+    "slideTitle": "Wilms Tümörü ve Beckwith-Wiedemann Sendromu: 11p15 Lokusu (WT2) ve Epigenetik İmprinting",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Yenidoğan döneminde omfalosel ve ağır hipoglisemi saptanan bir bebekte, izlemde dilin ağza sığmayacak kadar büyük olduğu (makroglossi) ve sağ bacağının sol bacağına göre belirgin şekilde kalın ve uzun olduğu (hemihipertrofi) fark ediliyor. 18. ayda yapılan rutin batın ultrasonografisinde sağ böbrekte kitle saptanarak Wilms tümörü teşhisi konuluyor.\n\nBu klinik sendroma ve tümör gelişimine yol açan temel moleküler epigenetik bozukluk aşağıdakilerden hangisidir?",
+    "options": [
+      "A) 11p15 lokusundaki imprinting kaybı (LOI) veya paternal üniparental dizomi sonucu IGF2 aşırı ekspresyonu",
+      "B) 11p13 lokusundaki PAX6 ve WT1 genlerinin mikrodelesyonu",
+      "C) 3p25 lokusundaki VHL geninin promotör hipermetilasyonu",
+      "D) 17p11 lokusundaki FLCN geninde çerçeve kayması mutasyonu",
+      "E) Kromozom 7 ve 17'de trizomi meydana gelmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Makroglossi, omfalosel, hemihipertrofi ve Wilms tümörü birlikteliği Beckwith-Wiedemann sendromunun (BWS) klasik tablosudur. BWS, kromozom 11p15.5 bölgesindeki imprinting kaybı (LOI), paternal üniparental dizomi (pUPD11) veya CDKN1C mutasyonları sonucu fetal büyüme faktörü olan IGF2'nin aşırı üretilmesiyle ortaya çıkar."
+  },
+  {
+    "id": "prac-urogen-012",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 12,
+    "slideTitle": "BAP1 Tümör Yatkınlık Sendromu ve Diğer Nadir Herediter Renal Kanserler",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "38 yaşında bir kadın hastada sağ gözde görme kaybı sonrası uveal melanom saptanıyor. Aile öyküsü derinleştirildiğinde babasının 45 yaşında asbest maruziyeti olmaksızın plevral malign mezotelyomadan ve amcasının 42 yaşında metastatik berrak hücreli RCC nedeniyle vefat ettiği öğreniliyor. Hastanın yapılan renal BT'sinde sol böbrekte yüksek nükleer dereceli berrak hücreli RCC ile uyumlu kitle saptanıyor.\n\nBu ailede araştırılması gereken en olası germline genetik mutasyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) BAP1 geni mutasyonu",
+      "B) FLCN geni mutasyonu",
+      "C) MET geni mutasyonu",
+      "D) RET geni mutasyonu",
+      "E) WT1 geni mutasyonu"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Uveal melanom, malign mezotelyoma, kutanöz melanom ve yüksek dereceli agresif berrak hücreli renal hücreli karsinom birlikteliği kromozom 3p21'de yer alan BAP1 (BRCA1-associated protein 1) tümör yatkınlık sendromunun klasik spektrumudur."
+  },
+  {
+    "id": "prac-urogen-013",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 13,
+    "slideTitle": "Mesane Kanserine Giriş: Epidemiyoloji, Risk Faktörleri ve İkili Patogenez Modeli",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Mesane kanserinin epidemiyolojik özellikleri ve ikili (dual-track) patogenetik modeli ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Mesane karsinomlarının %90'ından fazlası transizyonel/ürotelyal karsinom histolojisindedir.",
+      "B) Yeni tanı alan hastaların yaklaşık %75'i kas-invaziv olmayan mesane kanseri (NMIBC) evresindedir.",
+      "C) Papiller yolak sıklıkla karsinoma in situ (CIS) zemininden gelişir ve hızla derin kas invazyonu yapar.",
+      "D) Sigara kullanımı mesane kanseri gelişimindeki en önemli ve en yaygın etiyolojik risk faktörüdür.",
+      "E) Şistozomiyazis (Schistosoma haematobium) enfeksiyonu zemininde skuamöz hücreli mesane karsinomu riski artar."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır; karsinoma in situ (CIS) zemininden gelişen ve hızla derin kas tabakalarına invaze olan tümörler 'papiller' yolak değil, 'non-papiller invaziv' yolak ürünleridir. Papiller yolak ise hiperplazi zemininden gelişen, eksofitik, düşük dereceli ve kas invazyon potansiyeli düşük (Ta) lezyonlarla karakterizedir. A, B, D ve E seçenekleri doğrudur."
+  },
+  {
+    "id": "prac-urogen-014",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 14,
+    "slideTitle": "Non-İnvaziv Papiller Ürotelyal Karsinom Genetiği: FGFR3, HRAS ve Kromozom 9 Değişiklikleri",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Düşük dereceli, non-invaziv papiller ürotelyal karsinomların (Ta) moleküler patogenezinde en sık saptanan, MAPK yolağını aktive eden ve iyi prognozla ilişkili olan genetik mutasyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) TP53 inaktive edici nokta mutasyonu",
+      "B) RB1 gen delesyonu",
+      "C) FGFR3 aktive edici mutasyonu",
+      "D) BRCA2 çerçeve kayması mutasyonu",
+      "E) VHL gen inaktivasyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; Yüzeyel düşük dereceli papiller mesane karsinomlarının %70-85'inde FGFR3 reseptör tirozin kinaz geninde aktive edici somatik mutasyonlar saptanır. Bu mutasyon MAPK yolağını uyararak papiller proliferasyonu tetikler ve iyi prognozla ilişkilidir. TP53 ve RB1 invaziv karsinomlara özgüdür; BRCA2 prostat/meme; VHL berrak hücreli RCC'ye özgüdür."
+  },
+  {
+    "id": "prac-urogen-015",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 15,
+    "slideTitle": "Kas-İnvaziv Ürotelyal Karsinom Genetiği: TP53, RB1 ve TERT Promoter Mutasyonları",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Mesane kanserlerinin hem yüzeyel hem de invaziv formlarında %70-80 gibi yüksek bir sıklıkta saptanan, yeni ETS transkripsiyon faktörü bağlanma bölgeleri oluşturarak telomeraz enzim aktivitesini artıran ve hücresel ölümsüzlük sağlayan mutasyonel değişiklik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) TERT promotör mutasyonları (C228T / C250T)",
+      "B) FGFR3 ekzon 7 missense mutasyonu",
+      "C) HRAS kodon 12 nokta mutasyonu",
+      "D) VHL ekzon 1 delesyonu",
+      "E) TMPRSS2-ERG gen translokasyonu"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Mesane ürotelyal karsinomlarında en sık saptanan somatik mutasyon %70-80 sıklıkla TERT promotör mutasyonlarıdır (C228T ve C250T). Bu mutasyonlar ETS bağlanma motifi yaratarak telomeraz ters transkriptaz transkripsiyonunu artırır ve tümör hücresine replikatif ölümsüzlük kazandırır. İdrarda sıvı biyopsiyle erken tanıda kullanılır."
+  },
+  {
+    "id": "prac-urogen-016",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 16,
+    "slideTitle": "Mesane Kanserinde Moleküler Hedefe Yönelik Tedaviler ve İmmünoterapi",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Metastatik ürotelyal karsinom tanısıyla sisplatin bazlı kemoterapi alan ve 6 ay sonra progresyon gelişen 62 yaşındaki bir hastanın tümör dokusunda yapılan yeni nesil dizileme (NGS) analizinde FGFR3 geninde aktive edici S249C mutasyonu tespit ediliyor.\n\nBu hastada ikinci basamakta tercih edilmesi gereken FDA onaylı hedefe yönelik pan-FGFR tirozin kinaz inhibitörü ajan aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Erdafitinib",
+      "B) Aksitinib",
+      "C) Olaparib",
+      "D) Belzutifan",
+      "E) Kabozantinib"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Erdafitinib, platin kemoterapisi sırasında veya sonrasında progrese olan, duyarlı FGFR2 veya FGFR3 genetik mutasyonu/füzyonu taşıyan lokal ileri veya metastatik ürotelyal karsinomlu hastaların tedavisinde onaylanmış oral pan-FGFR tirozin kinaz inhibitörüdür. Aksitinib VEGFR inhibitörüdür; Olaparib PARP inhibitörüdür; Belzutifan HIF-2alfa inhibitörüdür."
+  },
+  {
+    "id": "prac-urogen-017",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 17,
+    "slideTitle": "Prostat Kanseri Genetiğine Giriş: Androjen Reseptör Sinyali ve Genomik Manzara",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Prostat adenokarsinomunun fizyopatolojisi, androjen sinyal iletimi ve genel moleküler yapısı ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Dihidrotestosteron (DHT), androjen reseptörüne (AR) bağlanarak nükleusa geçer ve ARE dizilerini uyarır.",
+      "B) Metastatik prostat karsinomlu hastaların yaklaşık %10-12'sinde germline DNA tamir gen mutasyonları saptanır.",
+      "C) Prostat kanseri hücreleri androjen hormonlarından tamamen bağımsız olup karsinogenezde östrojen reseptörleri primer rol oynar.",
+      "D) Birinci derece akrabalarında prostat kanseri öyküsü olan bireylerde kanser riski belirgin şekilde artar.",
+      "E) Metastatik prostat kanserinin başlangıç sistemik tedavisinin temelini androjen deprivasyon tedavisi (ADT) oluşturur."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle yanlıştır; prostat kanseri hücreleri büyüme, proliferasyon ve sağkalım açısından primer olarak androjen hormonlarına (testosteron ve DHT) ve androjen reseptörüne (AR) bağımlıdır. Tedavide kastrasyon (ADT) uygulanmasının temel biyolojik mantığı da budur. Diğer seçenekler doğru klinik ve moleküler prensiplerdir."
+  },
+  {
+    "id": "prac-urogen-018",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 18,
+    "slideTitle": "Prostat Kanserinde TMPRSS2-ERG Gen Füzyonu ve PTEN Kaybı",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Prostat kanserlerinde yaklaşık %50 sıklıkta saptanan, androjen reseptörü tarafından regüle edilen bir serin proteaz geni ile ETS ailesi onkogenik bir transkripsiyon faktörü geninin kromozom 21q22 üzerindeki delesyon veya inversiyonu sonucu oluşan yapısal genetik alterasyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) BCR-ABL1 gen füzyonu",
+      "B) TMPRSS2-ERG gen füzyonu",
+      "C) EML4-ALK gen füzyonu",
+      "D) FGFR3-TACC3 gen füzyonu",
+      "E) EWSR1-FLI1 gen füzyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; TMPRSS2-ERG füzyonu prostat kanserlerinin yaklaşık yarısında (%50) saptanan en yaygın yapısal kromozomal anomalidir. Kromozom 21q22'deki inversiyon/delesyon sonucu androjen yanıtlı TMPRSS2 geni ile ETS ailesi transkripsiyon faktörü ERG birleşir ve tümör invazyonunu tetikler."
+  },
+  {
+    "id": "prac-urogen-019",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 19,
+    "slideTitle": "Herediter Prostat Kanseri: BRCA2, HOXB13 ve DNA Hasar Tamir (DDR) Genleri",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Ailesinde erken yaşta meme ve prostat kanseri öyküsü bulunan 52 yaşında bir erkek hastada biyopside Gleason 9 (4+5) prostat adenokarsinomu ve kemik metastazı saptanıyor. Yapılan germline genetik testte homolog rekombinasyon tamir yolağında rol alan bir tümör süpresör geninde patojenik mutasyon saptanıyor.\n\nErkeklerde prostat kanseri riskini en yüksek oranda artıran ve en agresif histopatolojik seyirle ilişkili olan bu gen aşağıdakilerden hangisidir?",
+    "options": [
+      "A) BRCA2",
+      "B) VHL",
+      "C) FLCN",
+      "D) MET",
+      "E) WT1"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; BRCA2 germline mutasyonları erkeklerde prostat kanseri riskini 5 ila 8 kat artırarak en yüksek riski oluşturur. Ayrıca bu tümörler çok genç yaşta, yüksek Gleason skorlu (Gleason 8-10), hızlı kemik metastazı yapan ve sağkalımı en kısa olan agresif fenotiptedir. VHL böbrekte; FLCN BHD'de; MET papiller RCC'de; WT1 Wilms'tedir."
+  },
+  {
+    "id": "prac-urogen-020",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 20,
+    "slideTitle": "Kastrasyona Dirençli Prostat Kanseri (CRPC) ve PARP İnhibitörleri",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Metastatik kastrasyona dirençli prostat kanseri (mCRPC) tanısı olan ve somatik BRCA2 mutasyonu saptanan bir hastada, tek zincir DNA kırık tamirinde görevli PARP enzimini inhibe ederek tümör hücresini 'sentetik letalite' yoluyla apoptoza götüren hedefe yönelik ilaç aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Olaparib",
+      "B) Erdafitinib",
+      "C) Belzutifan",
+      "D) Everolimus",
+      "E) Kabozantinib"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; Olaparib (ve Rucaparib), PARP inhibitörüdür. BRCA1/2 veya diğer HRR gen mutasyonu taşıyan mCRPC olgularında tek zincir kırık tamirini engelleyerek replikasyon sırasında çift zincir kırıkları oluşturur ve homolog rekombinasyon kusuru olan tümör hücresini sentetik letalite mekanizmasıyla öldürür. Erdafitinib FGFR; Belzutifan HIF-2alfa; Everolimus mTOR; Kabozantinib MET/VEGFR inhibitörüdür."
+  },
+  {
+    "id": "prac-urogen-021",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 21,
+    "slideTitle": "Androjen Reseptör (AR) Varyantları ve Hormon Tedavisine Direnç Mekanizmaları",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Kastrasyona dirençli prostat kanseri (CRPC) nedeniyle takip edilen ve yeni nesil androjen yolağı inhibitörleri (Enzalutamid/Abirateron) tedavisine primer direnç geliştiren bir hastanın dolaşımdaki tümör hücrelerinde (CTC) yapılan analizde, androjen reseptörünün ligand bağlanma alanının (LBD) bulunmadığı ve reseptörün liganda bağımsız sürekli aktif kaldığı saptanıyor.\n\nBu direnç tablosundan sorumlu temel androjen reseptör splice varyantı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) AR-V7",
+      "B) BRCA2",
+      "C) TMPRSS2",
+      "D) ERG",
+      "E) HOXB13"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur; AR-V7 (Androgen Receptor Splice Variant 7), alternatif mRNA kırpılmasıyla ligand bağlama domaini (LBD) çıkartılmış, ancak nükleer transkripsiyon aktivasyon domeni korunan bir AR varyantıdır. Ligand cebi olmadığı için Enzalutamid veya Abirateron gibi hormonoterapilerden etkilenmez, sürekli nükleusta aktif kalarak mitozu sürdürür. Bu hastalarda kemoterapi tercih edilir."
+  },
+  {
+    "id": "prac-urogen-022",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 22,
+    "slideTitle": "Testis Germ Hücreli Tümörleri (TGCT): Sınıflama, Epidemiyoloji ve Risk Faktörleri",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Testiküler germ hücreli tümörlerin (TGCT) epidemiyolojisi, risk faktörleri ve histopatolojik alt tipleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) 20-35 yaş grubu genç erkeklerde en sık görülen katı organ malignitesidir.",
+      "B) Kriptorşidizm öyküsü olan bireylerde testis tümörü gelişme riski 4 ila 10 kat artar.",
+      "C) Klinefelter sendromlu (47,XXY) bireylerde özellikle mediastinal yerleşimli non-seminomatöz tümör riski yüksektir.",
+      "D) Seminomlar radyoterapiye tamamen dirençli olup sadece cerrahi nefrektomi ile tedavi edilir.",
+      "E) TGCT'li bir hastanın erkek kardeşinde testis tümörü gelişme riski yaklaşık 8-10 kat artmaktadır."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği kesinlikle yanlıştır; seminomlar radyoterapiye ve kemoterapiye (özellikle platin türevlerine) olağanüstü derecede duyarlıdır (radyosensitif). Ayrıca testis tümörlerinde nefrektomi değil radikal inguinal orşiektomi uygulanır. A, B, C ve E seçenekleri doğru epidemiyolojik ve klinik bilgilerdir."
+  },
+  {
+    "id": "prac-urogen-023",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 23,
+    "slideTitle": "Testis Tümörlerinde Patognomonik Genetik Belirteç: İzokromozom 12p ve KIT Geni",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "28 yaşında bir erkek hastada retroperitoneal alanda dev kitle saptanıyor. Yapılan biyopside indiferansiye malign yuvarlak hücreli tümör izleniyor. Primer tümör odağını saptamak ve lezyonun testiküler germ hücreli tümör (TGCT) kaynaklı olup olmadığını kesinleştirmek amacıyla sitogenetik inceleme planlanıyor.\n\nTGCT'lerin (seminom ve non-seminom) %90'ında saptanan ve tanıda patognomonik kabul edilen spesifik sitogenetik belirteç aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Trizomi 7 ve Trizomi 17",
+      "B) İzokromozom 12p [i(12p)]",
+      "C) 3p25 delesyonu",
+      "D) TMPRSS2-ERG translokasyonu",
+      "E) 11p13 mikrodelesyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; İzokromozom 12p [i(12p)], testiküler germ hücreli tümörlerin (hem seminom hem non-seminomların) yaklaşık %90'ında bulunan, retroperitoneal veya mediastinal kaynaklı bilinmeyen kitlelerde germ hücre orijinini kanıtlayan patognomonik sitogenetik belirteçtir. 12p'deki CCND2, KRAS ve NANOG gen dozaj artışıyla karsinogenezi tetikler."
+  },
+  {
+    "id": "prac-urogen-024",
+    "deckId": "learn-urogenital-tumorlerde-genetik",
+    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
+    "slideNumber": 24,
+    "slideTitle": "Ürogenital Sistemde Jinekolojik ve Herediter Kanser Kesişimleri: TCGA Endometrium, HBOC ve Genel Sentez",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1",
+    "question": "Endometriyum karsinomunun TCGA moleküler sınıflaması ve ürogenital herediter kanser sendromları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) POLE mutasyonlu endometriyal tümörler aşırı yüksek mutasyon yüküne (ultramutated) sahip olmalarına rağmen mükemmel bir klinik prognoz sergilerler.",
+      "B) TP53 mutasyonu taşıyan 'Copy-number high' endometriyal karsinomlar en agresif ve en kötü sağkalımlı grubu oluşturur.",
+      "C) Lynch sendromunda (dMMR) kadınlarda kolorektal kanser dışındaki en sık görülen malignite endometriyal karsinomdur.",
+      "D) BRCA1 ve BRCA2 mutasyonları sadece kadınlarda over kanseri yapar, erkeklerde ürogenital sistem kanseri riskine hiçbir etkisi yoktur.",
+      "E) Mikrosatellit instabilitesi yüksek (MSI-H) endometriyal ve prostat tümörleri immün kontrol noktası inhibitörlerine (anti-PD-1) yüksek yanıt verir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği kesinlikle yanlıştır; BRCA1 ve özellikle BRCA2 germline mutasyonları erkeklerde prostat kanseri riskini 5 ila 8 kat artırır, tümörün genç yaşta ve agresif (Gleason 8-10, metastatik) seyretmesine yol açar; ayrıca erkek meme kanseri riskini de belirgin şekilde artırır. A, B, C ve E seçenekleri doğru moleküler ve klinik ilkelerdir."
+  },
+  {
+    "id": "prac-bebek-beslenme-001",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 1,
+    "slideTitle": "Bebek Beslenmesinin Epidemiyolojisi ve Küresel Hedefler",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Dünya Sağlık Örgütü (DSÖ) ve UNICEF'in küresel çocuk sağlığı ve beslenme stratejileri doğrultusunda, optimal bebek beslenmesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Yenidoğanın doğumdan sonraki ilk 1 saat içinde emzirilmeye başlanması önerilir.",
+      "B) Yaşamın ilk 6 ayında anne sütü alan bebeğe sıcak iklimlerde dahi su verilmesine gerek yoktur.",
+      "C) Tamamlayıcı besinlere altıncı ayın bitiminde başlanmalı ve emzirme 2 yaşına veya daha sonrasına kadar sürdürülmelidir.",
+      "D) Dünyada beş yaş altı çocuk ölümlerinin yaklaşık yarısı malnütrisyonla ilişkilidir.",
+      "E) Bebek doğum ağırlığının iki katına ulaştığı 4. ayda anne sütü yetersizleştiğinden tamamlayıcı katı gıdalara geçilmelidir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Tamamlayıcı besinlere geçiş için önerilen zaman tam 6. ayın bitimidir (180. gün). İlk 6 ayda anne sütü bebeğin tüm enerji, sıvı ve makro-mikrobesin gereksinimlerini %100 oranında tek başına karşılar. 4. ayda bebeğin tartısının iki katına çıkması fizyolojik bir büyüme süreci olup ek gıdaya başlama endikasyonu değildir; aksine 6 aydan önce ek gıdaya başlamak alerji, enfeksiyon ve anne sütünün erken kesilmesi riskini doğurur."
+  },
+  {
+    "id": "prac-bebek-beslenme-002",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 2,
+    "slideTitle": "Süt Çocuğunda Fizyolojik Büyüme Dinamikleri ve Sıvı Dağılımı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Zamanında, normal spontan vajinal yolla 3200 gram ve 50 cm olarak doğan sağlıklı bir bebeğin büyüme basamakları ile ilgili aşağıdaki beklentilerden hangisi fizyolojik gelişim kurallarına uymaz?",
+    "options": [
+      "A) Bebeğin yaşamın 3. gününde tartısının 3000 grama gerilemesi patolojik kabul edilmez.",
+      "B) Bebeğin en geç 10-14. günlerde tekrar 3200 grama ulaşması beklenir.",
+      "C) Bebeğin 5. ay civarında tartısının yaklaşık 6400 gram olması beklenir.",
+      "D) Bebeğin 1 yaşındaki tahmini boyunun yaklaşık 100 cm olması beklenir.",
+      "E) Bebeğin 1 yaşındaki tahmini ağırlığının yaklaşık 9600 gram olması beklenir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bebeğin boyu ilk 1 yılda %50 artarak ortalama 75 cm'ye ulaşır. Doğum boyunun iki katına (50 cm x 2 = 100 cm) ulaştığı yaş 1 yaş değil, 4 yaştır. Diğer seçeneklerdeki 4-5. ayda ağırlığın 2 katına (6400 g) ve 1 yaşında 3 katına (9600 g) çıkması ile ilk günlerdeki %5-10 fizyolojik tartı kaybı tamamen doğrudur."
+  },
+  {
+    "id": "prac-bebek-beslenme-003",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 3,
+    "slideTitle": "Gastrointestinal ve Renal İmmatüritenin Beslenme Açısından Önemi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Süt çocuğunun gastrointestinal ve renal fizyolojisi ile ilgili aşağıdaki ifadelerden hangisi, beslenme yönetimi açısından doğru bir gerekçe sunmaz?",
+    "options": [
+      "A) Yenidoğanda mide kapasitesinin 10-20 mL olması nedeniyle ilk günlerde sık aralıklarla az miktarda besleme fizyolojiktir.",
+      "B) Gastrik asiditenin ilk haftalarda düşük olması, anne sütündeki sekretuvar IgA'nın denatüre olmadan bağırsağa ulaşmasını destekler.",
+      "C) Pankreatik amilaz aktivitesi doğumda erişkin düzeyinde olduğundan kompleks nişastalı katı gıdalar ilk aydan itibaren sindirilebilir.",
+      "D) Anne sütünün kazein/whey oranı sayesinde midede gevşek pıhtı oluşur ve mide boşalması inek sütüne göre daha hızlıdır.",
+      "E) İnfant böbreğinin idrar konsantrasyon kapasitesinin kısıtlı olması, yüksek solüt yüküne sahip gıdaların dehidratasyon riskini artırmasına neden olur."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Pankreatik amilaz aktivitesi yaşamın ilk 4-6 ayında neredeyse yoktur; kompleks polisakkaritleri sindiremez. Bu nedenle nişastalı ek gıdalara 6. aydan önce başlanmaz. Diğer tüm seçenekler doğru fizyolojik mekanizmaları açıklar."
+  },
+  {
+    "id": "prac-bebek-beslenme-004",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 4,
+    "slideTitle": "Süt Çocuğunda Enerji, Sıvı ve Makrobesin İhtiyaçları",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Üç aylık, sadece anne sütü ile beslenen, doğum tartısı 3200 g ve şu anki tartısı 6000 g olan sağlıklı bir süt çocuğunun beslenmesi ve hidrasyonu ile ilgili aşağıdaki klinik değerlendirmelerden hangisi yanlıştır?",
+    "options": [
+      "A) Günlük enerji gereksinimi yaklaşık 100-110 kcal/kg/gün düzeyindedir.",
+      "B) Bebeğin günde 6-8 kez bezini ıslatması ve huzurlu uyuması sıvı alımının yeterli olduğunu gösterir.",
+      "C) Yaz aylarında havanın çok sıcak olması durumunda her emzirme seansından sonra 30-50 mL kaynatılmış ılık su verilmelidir.",
+      "D) Bebeğin günlük sıvı gereksinimi yaklaşık 140-160 mL/kg/gün düzeyindedir.",
+      "E) Anne sütünün yaklaşık %87'si su olduğu için böbreklerin serbest su ihtiyacını eksiksiz karşılar."
+    ],
+    "correctAnswer": 0,
+    "explanation": "İlk 6 ay sadece anne sütü alan bir bebeğe aşırı sıcak havalarda bile su verilmemelidir. Ek su verilmesi mide hacmini kaplayarak anne sütü alımını azaltır, hiponatremi (su zehirlenmesi) riski yaratır ve kontaminasyonla ishale zemin hazırlar. Sıcak havalarda çözüm daha sık emzirmektir."
+  },
+  {
+    "id": "prac-bebek-beslenme-005",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 5,
+    "slideTitle": "Protein ve Yağ Metabolizması: Esansiyel Yağ Asitleri ve Taurin",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Anne sütünün biyokimyasal içeriğinde bulunan lipid ve amino asit fraksiyonları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Anne sütü enerjisinin yaklaşık %50'si yağlardan sağlanmaktadır.",
+      "B) Linoleik asit anne sütü enerjisinin yaklaşık %5'ini oluşturarak cilt bütünlüğü ve büyüme gereksinimini karşılar.",
+      "C) Anne sütünde serbest taurin konsantrasyonu inek sütüne göre 30-40 kat daha fazladır.",
+      "D) DHA ve ARA, retina fotoreseptör tabakası ve serebral korteks gelişimi için kritik öneme sahip LC-PUFA türevleridir.",
+      "E) Yenidoğan döneminde protein ihtiyacı erişkinden düşük olduğu için ilk 6 ayda kilogram başına 0.8 g protein verilmesi yeterlidir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Yenidoğan ve süt çocuğunda hızlı somatik büyüme nedeniyle kilogram başına protein ihtiyacı erişkinden (erişkin ~0.8-1.0 g/kg/gün) çok daha yüksektir. 0-6 ayda protein ihtiyacı 2.2 g/kg/gün, 7-12 ayda ise 1.6 g/kg/gün düzeyindedir."
+  },
+  {
+    "id": "prac-bebek-beslenme-006",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 6,
+    "slideTitle": "Mikrobesin Dengesi: Demir, Çinko, Kalsiyum-Fosfor ve Flor",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Süt çocuğu beslenmesinde demir ve kalsiyum-fosfor dengesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Anne sütündeki demirin biyoyararlanımı yaklaşık %50 iken, inek sütündeki demirin emilimi yaklaşık %10 düzeyindedir.",
+      "B) Term doğan sağlıklı bir bebeğin demir depoları genellikle doğum ağırlığının iki katına ulaştığı 4-6. aylara kadar yeterlidir.",
+      "C) İnek sütü ile beslenen yenidoğanlarda aşırı fosfor yüklenmesine bağlı olarak neonatal hipokalsemik tetani riski artar.",
+      "D) Anne sütündeki Ca/P oranı yaklaşık 2:1 olup kalsiyumun emilimi için optimal fizyolojik ortamı sağlar.",
+      "E) Anne sütü alan term bebeklere demir depolarının zengin olması nedeniyle 1 yaşına kadar hiçbir koşulda profilaktik demir verilmemelidir."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Term bebeklerin demir depoları 4-6. ayda tükenir. Anne sütü demirinin biyoyararlanımı yüksek olsa da mutlak miktarı düşüktür ve 4. aydan sonra artan kan volümünü karşılayamaz. Bu nedenle Sağlık Bakanlığı protokolüne göre tüm term bebeklere 4. aydan itibaren 1 mg/kg/gün profilaktik demir başlanması zorunludur."
+  },
+  {
+    "id": "prac-bebek-beslenme-007",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 7,
+    "slideTitle": "Vitamin Profili ve Yaşamın Başındaki Rutin Profilaksiler",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Yenidoğan ve süt çocuğu döneminde vitamin gereksinimleri ve rutin profilaksiler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Yenidoğanın hemorajik hastalığını önlemek amacıyla doğumu takiben 1 mg K vitamini intramüsküler uygulanır.",
+      "B) Anne sütü D vitamini açısından zengin olduğu için sadece anne sütü alan bebeklere ilk 6 ay D vitamini desteği gerekmez.",
+      "C) Katı vejetaryen annelerin anne sütü ile beslenen bebeklerinde B12 vitamini eksikliği ve megaloblastik anemi görülebilir.",
+      "D) Keçi sütü folik asit ve B12 vitamini açısından yetersiz olduğundan bebeklerde megaloblastik anemiye yol açabilir.",
+      "E) Anne sütü C vitamini açısından zengin olup ilk 6 ayda bebeğin gereksinimini tam olarak karşılar."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Anne sütü hemen tüm besin ögelerinden zengin olmasına rağmen D vitamininden fakirdir (litrede sadece 20-40 IU). Bu nedenle sadece anne sütü alanlar dahil tüm bebeklere doğumdan itibaren günlük 400 IU D vitamini profilaksisi verilmesi zorunludur."
+  },
+  {
+    "id": "prac-bebek-beslenme-008",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 8,
+    "slideTitle": "Laktasyonun Evreleri: Kolostrum, Geçiş Sütü ve Olgun Süt Dinamikleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Doğumdan sonraki ilk 4-5 gün boyunca salgılanan kolostrum (ağız sütü) ile olgun anne sütünün karşılaştırılması hakkında aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Kolostrumun protein içeriği olgun anne sütüne göre daha yüksektir.",
+      "B) Kolostrum sekretuvar IgA, laktoferrin ve lökositler açısından son derece zengindir.",
+      "C) Kolostrumun laktoz ve yağ konsantrasyonu olgun anne sütünden daha yüksektir.",
+      "D) Kolostrum içerdiği sodyum, potasyum ve klor gibi mineraller yönünden olgun sütten zengindir.",
+      "E) Kolostrum laksatif etkisiyle mekonyumun atılımını hızlandırarak neonatal sarılık riskini azaltır."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Kolostrum olgun süte göre DAHA AZ yağ ve DAHA AZ laktoz içerir. Buna karşılık protein, sodyum, klor, çinko, A vitamini, sIgA ve laktoferrin konsantrasyonu olgun sütten belirgin şekilde daha yüksektir."
+  },
+  {
+    "id": "prac-bebek-beslenme-009",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 9,
+    "slideTitle": "Emzirme Seansının İç Dinamiği: Ön Süt ile Son Süt Arasındaki Kritik Denge",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "İki aylık sağlıklı bir bebeğin annesi; bebeğin emzirme sonrasında sürekli ağladığını, karnında aşırı gaz olduğunu, dışkısının yeşil renkli, sulu ve köpüklü olduğunu ve son kontrolde yeterli kilo alamadığını belirtiyor. Öyküde annenin sütü bol olduğu için bebeği her iki memeden 5'er dakika emzirip bıraktığı öğreniliyor. Bu tablonun altında yatan temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Anne sütünde kazein oranının aşırı yüksek olması",
+      "B) Bebeğin yağdan zengin son sütü alamayıp laktozdan zengin ön sütü aşırı tüketmesi",
+      "C) Annede sekretuvar IgA eksikliğine bağlı sekonder enfeksiyon",
+      "D) Bebekte konjenital laktaz eksikliği tablosu",
+      "E) Anne sütünde renal solüt yükünün yüksek olması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bebek memeyi tamamen boşaltmadan diğer memeye geçirildiğinde, yağdan zengin kalorili 'son süt'ü alamaz; sadece su ve laktozdan zengin 'ön süt'ü alır. Aşırı laktoz kolonda bakterilerce fermente edilir; laktik asit ve hidrojen gazı açığa çıkarak infantil kolik, asidik-köpüklü yeşil dışkı, pişik ve kalori yetersizliğine bağlı kilo alamama tablosuna yol açar."
+  },
+  {
+    "id": "prac-bebek-beslenme-010",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 10,
+    "slideTitle": "Biyokimyasal Karşılaştırma I: Kazein ve Whey Fraksiyonları",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Anne sütü ile inek sütünün protein fraksiyonları ve özellikleri karşılaştırıldığında aşağıdaki ifadelerden hangisi doğru bir bilgidir?",
+    "options": [
+      "A) Anne sütünde kazein/whey oranı 80:20 olup inek sütünden daha sert pıhtı oluşturur.",
+      "B) İnek sütünde bulunan en önemli alerjen protein olan beta-laktoglobulin anne sütünde kesinlikle bulunmaz.",
+      "C) İnek sütünün mide boşalma süresi anne sütünden daha kısadır.",
+      "D) Anne sütü whey proteinlerinin büyük kısmını alfa-s1 kazein oluşturur.",
+      "E) Anne sütündeki toplam protein konsantrasyonu inek sütündekinden yaklaşık 3 kat daha fazladır."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Beta-laktoglobulin inek sütünün ana whey proteini ve süt çocukluğundaki en güçlü alerjendir; insan sütünde kesinlikle bulunmaz. Anne sütünde Kazein/Whey oranı 40:60 iken inek sütünde 80:20'dir. Anne sütü toplam proteini ~1 g/dL iken inek sütü ~3.3 g/dL'dir."
+  },
+  {
+    "id": "prac-bebek-beslenme-011",
+    "deckId": "learn-bebek-beslenmesi",
+    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
+    "slideNumber": 11,
+    "slideTitle": "Biyokimyasal Karşılaştırma II: Karbonhidratlar, Lipitler ve Biyoyararlanım",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Anne sütü ile inek sütünün karbonhidrat, demir ve yağ sindirimi parametreleri karşılaştırıldığında aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Anne sütündeki laktoz konsantrasyonu inek sütündekinden belirgin şekilde daha yüksektir.",
+      "B) Laktozun bağırsakta laktik aside fermente olması lümen pH'sını düşürerek kalsiyum ve demir emilimini kolaylaştırır.",
+      "C) Anne sütündeki demirin yaklaşık %50-60'ı emilirken, inek sütündeki demirin yalnızca %10'u emilebilir.",
+      "D) Anne sütü alan bebeğe erken dönemde meyve püresi başlanması demir emilimini %50'den %10'a düşürür.",
+      "E) İnek sütü yüksek miktarda safra tuzu bağımlı lipaz (BSSL) içerdiği için yağ emilim yüzdesi anne sütünden üstündür."
+    ],
+    "correctAnswer": 0,
+    "explanation": "BSSL (Safra Tuzu Bağımlı Lipaz) enzimi anne sütünde bulunur, inek sütünde bulunmaz. Bu sayede anne sütü yağı %95 oranında emilirken, inek sütü yağının %20-48'i sindirilemeden feçesle kaybedilir."
+  },
+  {
     "id": "prac-bebek-beslenme-012",
     "deckId": "learn-bebek-beslenmesi",
     "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
@@ -1195,1008 +1898,5 @@
     ],
     "correctAnswer": 4,
     "explanation": "İlk Çağ tıbbında mikrobiyolojik etkenler ve aşılar bilinmiyordu; mikroorganizmalar 17. yüzyılda Leeuwenhoek ile görülmüş, Germ Teorisi ise 19. yüzyılda Pasteur ve Koch ile kanıtlanmıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-3",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 3,
-    "slideTitle": "Rasyonel Tıbbın ve Etiğin Doğuşu: Hipokrat",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Hipokratik tıp felsefesi ve Humoral Patoloji Kuramı ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Hastalıkların tanrısal bir ceza değil, tamamen doğal ve çevresel nedenlerle meydana geldiğini savunmuştur.",
-      "B) Vücuttaki dört temel sıvıyı (humor) kan, balgam, sarı safra ve kara safra olarak tanımlamıştır.",
-      "C) Sağlık durumunu sıvıların dengede olması (eukrasia), hastalığı ise dengenin bozulması (dyskrasia) olarak açıklamıştır.",
-      "D) Tıbbın temel ahlaki ilkesini 'Primum non nocere' (Önce zarar verme) olarak formüle etmiştir.",
-      "E) Hastalıkların tek nedeninin genetik mutasyonlar olduğunu ileri sürerek çevrenin sağlığa etkisini bütünüyle reddetmiştir."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Hipokrat çevrenin (su, hava, mekanlar) sağlığa etkisini en güçlü vurgulayan hekimdir ('Havalar, Sular ve Yöreler Üzerine' eseri). Genetik mutasyon kavramı 20. yüzyıla aittir."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-4",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 4,
-    "slideTitle": "Roma Dönemi, Bergamalı Galen ve Kamu Sağlığı Mühendisliği",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Antik Roma dönemi kamu sağlığı uygulamaları ve tıp tarihi ile ilgili aşağıdakilerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Bergamalı Galen geliştirdiği formüllerle modern eczacılığın temeli olan galenik preparatları oluşturmuştur.",
-      "B) Romalılar şehirlerde su kemerleri ve kanalizasyon sistemlerini bütünüyle yasaklamışlardır.",
-      "C) Columella bataklıkların sağlığa faydalı olduğunu ve tüm yerleşimlerin bataklık kenarına kurulmasını savunmuştur.",
-      "D) Galenik tıp anlayışı sadece cerrahi girişimleri kapsar, ilaç tedavisini ve bitkisel preparatları reddeder.",
-      "E) Cloaca Maxima, Roma'da halkın temiz içme suyu ihtiyacını karşılamak için açılmış kutsal bir su kaynağıdır."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Bergamalı Galen bitkisel formülasyonlarıyla galenik preparatların ve eczacılığın kurucusudur. Romalılar su kemerleri ve kanalizasyon (Cloaca Maxima) inşa etmiş, Columella ise bataklıklardan sıtma nedeniyle kaçınılmasını öğütlemiştir."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-5",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 5,
-    "slideTitle": "İslam Uygarlığında Tıp ve Enfeksiyon Kavramı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Orta Çağ İslam tıbbı ve hekimlerinin halk sağlığına katkılarıyla ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Ebubekir Razi - Bağdat'ta et astırarak en geç kokuşmanın görüldüğü temiz havaya sahip bölgeye hastane yapılması",
-      "B) İbn-i Sina - Çiçek aşısını sığırlardan izole ederek dünyada ilk modern aşılamayı başlatması",
-      "C) İbn-ül Habib - Kolera etkenini mikroskop altında izole ederek vibrio adını vermesi",
-      "D) Ebubekir Razi - Broad Street su pompasının kolunu sökerek kolera salgınını durdurması",
-      "E) İbn-i Sina - Skorbüt hastalığının narenciye ile tedavi edileceğini donanma deneyleriyle kanıtlaması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Razi, et asma deneyiyle kokuşmanın en geç olduğu temiz havaya sahip alana hastane yapılmasını sağlamıştır. Çiçek aşısı Jenner'a, Broad Street Snow'a, skorbüt Lind'e aittir."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-6",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 6,
-    "slideTitle": "Orta Çağ Salgınları ve Karantina Kurumunun Doğuşu",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Tarihteki karantina uygulamaları ve Kara Ölüm salgını ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Karantina sözcüğü, İtalyanca kırk gün anlamına gelen 'quaranta giorni' teriminden türemiştir.",
-      "B) İlk organize tecrit uygulaması 1377'de Ragusa'da 30 günlük bekleme (trentina) şeklinde başlatılmıştır.",
-      "C) Kara Ölüm pandemisi Yersinia pestis etkeninin sıçan ve pireler aracılığıyla bulaşmasıyla yayılmıştır.",
-      "D) Karantina, etkeni mikro düzeyde bilinmeyen bulaşıcı hastalıklara karşı geliştirilmiş ilk organize savunma sistemlerindendir.",
-      "E) Karantina uygulaması ilk kez 20. yüzyılda Dünya Sağlık Örgütü tarafından keşfedilmiş ve uygulanmıştır."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Karantina 20. yüzyılda değil, 14. yüzyılda Orta Çağ'da Veba salgınları sırasında Ragusa ve Venedik'te ortaya çıkmış ve kurumsallaşmıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-7",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 7,
-    "slideTitle": "Beslenme Yetersizlikleri ve İlk Kontrollü Klinik Deney",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "James Lind'in 1753 yılındaki skorbüt araştırması halk sağlığı ve tıp metodolojisi açısından neden bir dönüm noktası kabul edilir?",
-    "options": [
-      "A) Tüberküloz basilini mikroskop altında ilk kez görüntülediği için",
-      "B) Tıp tarihinde benzer semptomlara sahip hastaları gruplara ayırarak ilk kontrollü klinik beslenme deneyini gerçekleştirdiği için",
-      "C) Hastalıkların genetik temellerini DNA analiziyle ortaya koyduğu için",
-      "D) Kuduz aşısını geliştirerek ilk aktif bağışıklamayı başlattığı için",
-      "E) Şehir kanalizasyon hatlarının kolera salgınlarını önlediğini gösterdiği için"
-    ],
-    "correctAnswer": 1,
-    "explanation": "James Lind, skorbütlü denizcileri benzer gruplara ayırıp farklı diyet takviyeleri vererek tıp tarihinin ilk kontrollü prospektif klinik deneyini gerçekleştirmiş ve narenciyenin iyileştirici etkisini kanıtlamıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-8",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 8,
-    "slideTitle": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Çiçek aşısı ve bağışıklama tarihi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Çiçek aşısı ilk kez Robert Koch tarafından tüberküloz basilinden üretilmiştir.",
-      "B) Edward Jenner, süt sağan kadınların sığır çiçeği geçirdikten sonra insan çiçeğine yakalanmadığını gözlemleyerek modern aşılamanın temelini atmıştır.",
-      "C) Variolasyon yöntemi ilk kez İngiltere'de icat edilmiş ve Osmanlı İmparatorluğu'na ihraç edilmiştir.",
-      "D) Çiçek hastalığı günümüzde dünya genelinde en sık ölüme neden olan bulaşıcı hastalık olmaya devam etmektedir.",
-      "E) Jenner'ın aşılama deneyi tarihte ilk kez penisilin antibiyotiğinin keşfedilmesini sağlamıştır."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Edward Jenner, süt sağanların sığır çiçeği (cowpox) geçirdikten sonra insan çiçeğine yakalanmadığını gözlemlemiş ve 1796'da aşılamayı (vaccination) başlatmıştır. Çiçek 1980'de DSÖ tarafından tamamen eradike edilmiştir."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-9",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 9,
-    "slideTitle": "Sanayi Devrimi ve Büyük Sanitasyon Hareketi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Edwin Chadwick'in 1842 yılında hazırladığı rapor ve başlattığı Sanitasyon Hareketi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Salgın hastalıklar ile çevre kirliliği, kötü kanalizasyon ve yoksulluk arasındaki bağı ortaya koymuştur.",
-      "B) Şehirlerde borulu temiz su temini ve kapalı kanalizasyon altyapısının kurulmasını savunmuştur.",
-      "C) İngiltere'de 1848 Halk Sağlığı Yasası'nın çıkarılmasına ve sağlık kurullarının oluşturulmasına zemin hazırlamıştır.",
-      "D) Toplum sağlığının korunmasını devletin ve yerel yönetimlerin temel kamusal sorumluluğu olarak tanımlamıştır.",
-      "E) Çevre koşullarının hastalıklarla hiçbir ilgisi olmadığını savunarak kanalizasyon inşaatlarının durdurulmasını talep etmiştir."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Chadwick aksine çevre koşullarının hastalıkların birincil nedeni olduğunu savunmuş ve kapalı kanalizasyon ile temiz su şebekesinin kurulmasını zorunlu kılmıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-10",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 10,
-    "slideTitle": "Modern Epidemiyolojinin Doğuşu: John Snow",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Dr. John Snow'un 1854 Broad Street kolera salgını sırasındaki incelemeleri ve modern epidemiyolojiye katkısı hakkında hangisi YANLIŞTIR?",
-    "options": [
-      "A) Hastalık vakalarını ve ölümleri harita üzerinde işaretleyerek kümelenmenin Broad Street su tulumbası çevresinde olduğunu saptamıştır.",
-      "B) Tulumbanın kolunu söktürerek suyun kullanımını engellemiş ve salgının yayılmasını durdurmuştur.",
-      "C) Koleranın miasma (pis hava) yoluyla değil, dışkı ile kirlenmiş içme suları aracılığıyla bulaştığını kanıtlamıştır.",
-      "D) Salgını durdurmak için hastaların tümüne tüberküloz antibiyotikleri dağıtmıştır.",
-      "E) Su şirketlerinin su kaynaklarını karşılaştırarak analitik epidemiyolojinin ilk klasik örneğini vermiştir."
-    ],
-    "correctAnswer": 3,
-    "explanation": "1854 yılında henüz antibiyotikler keşfedilmemişti (penisilin 1928'de bulundu). Snow müdahaleyi tulumba kolunu söktürerek çevre sağlığı/su sanitasyonu yöntemiyle yapmıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-11",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 11,
-    "slideTitle": "Mikrobiyoloji Devrimi ve Germ Kuramı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Louis Pasteur'ün tıp ve halk sağlığı tarihindeki devrim niteliğindeki katkıları arasında aşağıdakilerden hangisi YER ALMAZ?",
-    "options": [
-      "A) Kuğu boyunlu balon deneyleriyle kendiliğinden oluş (abiogenesis) kuramını kesin olarak çürütmesi",
-      "B) Gıda ve süt hijyeninde mikropları öldürmek için pastörizasyon yöntemini geliştirmesi",
-      "C) Hastalıkların dışarıdan giren canlı etkenlerle oluştuğunu gösteren Germ Kuramını kurması",
-      "D) Tavuk kolerası, şarbon ve kuduz aşılarını geliştirerek atenuasyon ilkesini tıp pratiğine sokması",
-      "E) Tüberküloz basilini ve kolera vibrionunu ilk kez saf kültürde izole ederek Koch postülatlarını yazması"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Tüberküloz basili, kolera etkeni izolasyonu ve Koch postülatları Robert Koch'a aittir; Louis Pasteur'e ait değildir."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-12",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 12,
-    "slideTitle": "Bakteriyolojinin Altın Çağı ve Robert Koch",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Robert Koch ve bakteriyolojinin gelişimi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) 1882 yılında tüberküloz etkeni olan Mycobacterium tuberculosis basilini keşfetmiştir.",
-      "B) 1883 yılında kolera etkenini (Vibrio cholerae) izole ederek su sanitasyonunun önemini mikrobiyolojik olarak doğrulamıştır.",
-      "C) Bir mikroorganizmanın hastalık etkeni olduğunu kanıtlamak için dört basamaklı Koch Postülatlarını tanımlamıştır.",
-      "D) Emil von Behring 1890'da difteri antitoksinini geliştirerek pasif bağışıklamanın temellerini atmıştır.",
-      "E) Koch, tüberkülozun genetik bir bozukluk olduğunu kanıtlayarak aşı ve hijyen çalışmalarının tüberkülozda etkisiz olduğunu ilan etmiştir."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Koch tüberkülozun genetik değil, bulaşıcı bir bakteriyel enfeksiyon olduğunu kanıtlamış ve etken olan tüberküloz basilini (Mycobacterium tuberculosis) izole etmiştir."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-13",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 13,
-    "slideTitle": "Vektörlerle Mücadele ve Entomolojinin Doğuşu: Sıtma",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Sıtma hastalığının tarihçesi ve vektör kontrolü ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Sıtma, etkeni ve biyolojisi bilinmeden çok önce Peru yerlilerince Kına-Kına ağacı kabuğuyla ampirik olarak tedavi edilmiştir.",
-      "B) Sıtma etkeni Plasmodium, 1880'de Charles Louis Alphonse Laveran tarafından kanda alyuvarlar içinde gösterilmiştir.",
-      "C) Sıtmanın insana anofel cinsi sivrisineklerle bulaştığının gösterilmesi tıbbi entomolojinin gelişimini başlatmıştır.",
-      "D) Sıtma etkeninin ve vektörünün bulunması bataklık ıslahı ve vektör kontrolü gibi çevre sağlığı müdahalelerine yol açmıştır.",
-      "E) Sıtma etkeni bir bakteridir ve Robert Koch tarafından Broad Street tulumbasından izole edilmiştir."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Sıtma etkeni bakteri değil, Plasmodium cinsine ait bir paraziter protozoondur ve 1880'de Laveran tarafından kanda keşfedilmiştir. Kolera ise bakteridir ve suyla bulaşır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-14",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 14,
-    "slideTitle": "Sosyal Tıp Hareketi ve Alfred Grotjahn",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Alfred Grotjahn'ın sosyal hekimlik kuramı ve ilkeleri ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Bir toplumdaki en önemli hastalıkların en çok öldüren, en sık görülen ve en çok sakat bırakan hastalıklar olduğunu belirtmiştir.",
-      "B) Sağlık hizmetlerinin yalnızca parası yeten seçkin sınıflara verilmesi gerektiğini, kamunun sağlık sorumluluğu olmadığını savunmuştur.",
-      "C) Biyolojik ve fiziksel çevre faktörlerinin etkisini sosyoekonomik etmenlerin koşulladığını ileri sürmüştür.",
-      "D) Bir kişinin hasta olmasının sadece bireysel bir durum değil, aile ve bütün toplumun sorunu olduğunu vurgulamıştır.",
-      "E) Anne, çocuk ve işçiler gibi özel risk gruplarının öncelikli olarak korunması gerektiğini ifade etmiştir."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Grotjahn aksine sağlık hizmetlerinin yalnızca seçkinler için değil halk kitleleri için kamusal bir hak ve zorunluluk olduğunu savunmuştur."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-15",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 15,
-    "slideTitle": "20. Yüzyıl Paradigma Değişimi: DSÖ ve Yunanistan Deneyimi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "1950'li yıllarda Yunanistan'da yaşanan sağlık krizi ve uluslararası yardım çalışmalarının tıp tarihindeki en önemli sonucu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Bebek ölümlerinin yalnızca hastane yatak sayısını artırarak çözülebileceğinin anlaşılması",
-      "B) Çevre koşulları, temiz su ve sosyoekonomik ortam düzeltilmedikçe hastanede tedavi etmenin kalıcı çözüm sağlamadığının ve koruyucu hekimliğin üstünlüğünün anlaşılması",
-      "C) Bulaşıcı hastalıkların tedavisinde aşıların tamamen etkisiz olduğunun gösterilmesi",
-      "D) Sağlık harcamalarının tamamen bireylerin kendi bütçesine bırakılması gerektiğinin kanıtlanması",
-      "E) Kötü beslenmenin genetik bir rahatsızlık olduğu ve hiçbir zaman önlenemeyeceğinin ortaya çıkması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Yunanistan deneyimi, hastanede tedavi edilen çocukların sağlıksız çevreye döndüklerinde tekrar hastalandığını göstererek koruyucu çevre önlemlerinin tedaviye üstünlüğünü kanıtlamıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-16",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 16,
-    "slideTitle": "Toplum Hekimliği Disiplini ve Kentucky Modeli",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Dr. Kurt W. Deuschle'nin Kentucky Üniversitesi'nde kurduğu Toplum Hekimliği disiplininin temel yaklaşımı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Hekimleri yalnızca üçüncü basamak ameliyathanelerinde cerrahi uzmanı olarak yetiştirmek",
-      "B) Sağlık personeli ekibiyle toplum içinde koruyucu ve tedavi edici hizmetleri entegre sunarak toplumun sağlık önceliklerini sahada saptamak ve çözmek",
-      "C) Bulaşıcı hastalıkların tedavisini hekimlerin görev alanından çıkarıp sadece kolluk kuvvetlerine devretmek",
-      "D) Çevre sağlığı ve istatistik çalışmalarını tıp fakültesi eğitiminden tamamen kaldırmak",
-      "E) Koruyucu hekimlik yerine yalnızca yüksek maliyetli ilaç araştırmalarına odaklanmak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kurt W. Deuschle, tıp eğitiminde toplum hekimliğinin amacını: Sağlık personeli ekibiyle toplumda koruyucu ve tedavi edici hekimliğin entegre uygulanması, sorunların önceliklendirilmesi ve değerlendirilmesi olarak tanımlamıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-17",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 17,
-    "slideTitle": "Türkiye'de Halk Sağlığının Mimarı: Prof. Dr. Nusret Fişek",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Prof. Dr. Nusret Fişek'in halk sağlığı tanımı ve vizyonu ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) İnsanı ana rahmine düştüğü andan ölümüne kadar tüm çevresiyle bir bütün olarak ele almıştır.",
-      "B) Sağlık hizmetini sadece hastaneye başvuran varlıklı bireylerin satın alabileceği bir ayrıcalık olarak görmüştür.",
-      "C) Fiziki, biyolojik, sosyal, kültürel ve psikolojik çevredeki olumsuzlukların giderilmesini temel hedef saymıştır.",
-      "D) Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu'nun (224 Sayılı Kanun) mimarıdır.",
-      "E) Erken tanı, tedavi ve koruyucu hekimliği entegre bir hizmet ve bilim dalı olarak tanımlamıştır."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Nusret Fişek, sağlığı bir insan hakkı olarak görmüş ve 'herkese eşit, nitelikli ve ücretsiz sağlık hizmeti' ilkesini savunmuştur. Hizmeti varlıklıların ayrıcalığı olarak görmemiştir."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-18",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 18,
-    "slideTitle": "Türkiye'de Sağlık Devrimi: 224 Sayılı Kanun",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun'un getirdiği örgütlenme modeli ve ilkelerle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Temel hizmet birimi yaklaşık 5.000-10.000 nüfusa hizmet veren Sağlık Ocaklarıdır.",
-      "B) Köylerde ebenin görev yaptığı en uç birim Sağlık Evidir.",
-      "C) Birinci basamakta koruyucu hizmetler ile ayaktan tedavi edici hizmetler bir ekip tarafından entegre olarak sunulur.",
-      "D) Kademeli sevk zinciri uygulanarak hastaların doğrudan üçüncü basamak hastanelere gitmesi zorunlu kılınmıştır.",
-      "E) Nüfusa dayalı kayıt sistemi (Ev halkı tespit fişleri) ile bölgedeki tüm bireyler izlenir."
-    ],
-    "correctAnswer": 3,
-    "explanation": "224 Sayılı Kanun'da sevk zinciri birinci basamaktan ikinci basamağa doğru kademeli olarak işler; hastaların doğrudan üçüncü basamağa gitmesi sevk zincirini bozar ve sistemin mantığına aykırıdır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-19",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 19,
-    "slideTitle": "Cumhuriyet Öncesi ve Erken Dönem Türk Sağlık Tarihi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Cumhuriyet dönemi halk sağlığı örgütlenmesi ve Dr. Refik Saydam dönemi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) 1928 yılında aşı ve serum üretimi için Refik Saydam Merkez Hıfzıssıhha Enstitüsü kurulmuştur.",
-      "B) 1930 yılında halk sağlığının temel çerçevesini çizen 1593 Sayılı Umumi Hıfzıssıhha Kanunu çıkarılmıştır.",
-      "C) Sıtma, trahom, frengi ve verem gibi yaygın halk sağlığı sorunlarıyla dikey mücadele teşkilatları ve dispanserler kurulmuştur.",
-      "D) Bu dönemde tüm aşı üretimi tamamen yasaklanmış ve dışa bağımlılık yasal zorunluluk haline getirilmiştir.",
-      "E) Osmanlı'dan devralınan telkihhane ve kuduz tedavihanesi geleneği Cumhuriyet döneminde kurumsallaştırılmıştır."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Refik Saydam döneminde Hıfzıssıhha Enstitüsü aşı ve serumları bizzat yerli olarak üretmiş, aşı ithalatı yerine aşı ihracatı yapılmıştır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-20",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 20,
-    "slideTitle": "Küresel Dönüm Noktası: Alma-Ata Bildirgesi (1978)",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "1978 Alma-Ata Bildirgesi'nde tanımlanan Temel Sağlık Hizmetleri (TSH) ilkeleri arasında aşağıdakilerden hangisi YER ALMAZ?",
-    "options": [
-      "A) Toplumsal eşitlik ve sağlık hizmetlerine erişimde fırsat eşitliği sağlanması",
-      "B) Sağlık hizmetlerinin planlanması ve yürütülmesinde toplumun katılımının sağlanması",
-      "C) Sağlık hizmetlerinin yalnızca dördüncül cerrahi hastanelerinde merkezileştirilmesi ve birinci basamağın kapatılması",
-      "D) Koruyucu hekimlik uygulamalarına tedavi edici hizmetler karşısında öncelik verilmesi",
-      "E) Tarım, su, eğitim ve konut gibi sektörlerin işbirliğini içeren multisektöryel yaklaşım"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Alma-Ata Bildirgesi birinci basamağı sağlık sisteminin merkezine koymuştur; hizmetlerin dördüncül cerrahi hastanelerde merkezileştirilmesi TSH ruhuna tamamen zıttır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-21",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 21,
-    "slideTitle": "Sağlığın Geliştirilmesi ve Ottawa Şartı (1986)",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "1986 Ottawa Şartı'nda belirlenen Sağlığın Geliştirilmesi (Health Promotion) beş temel eylem alanı arasında aşağıdakilerden hangisi YER ALMAZ?",
-    "options": [
-      "A) Sağlıklı kamu politikaları oluşturmak",
-      "B) Destekleyici çevreler yaratmak",
-      "C) Kişisel becerileri geliştirmek ve sağlık okuryazarlığını artırmak",
-      "D) Sağlık harcamalarını karşılayamayan bireyleri sağlık sigortası kapsamından tamamen çıkarmak",
-      "E) Sağlık hizmetlerini koruyucu ve geliştirici yönde yeniden yönlendirmek"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ottawa Şartı sosyal adalet ve hakkaniyeti savunur; yoksulları sigortadan çıkarmak gibi ayrımcı ve piyasacı uygulamalar Ottawa ilkelerine taban tabana zıttır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-22",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 22,
-    "slideTitle": "Koruma Düzeyleri - I: Primordial ve Birincil Korunma",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Koruma düzeyleri ile ilgili aşağıdaki uygulamalardan hangisi BİRİNCİL (PRİMER) KORUMA örneğidir?",
-    "options": [
-      "A) Çocuklara hepatit B ve kızamık aşılarının yapılması",
-      "B) Rahim ağzı kanserini semptomsuz evrede yakalamak için Pap-smear taraması yapılması",
-      "C) Diyabet hastasında ayak ülseri ve amputasyonu önlemek için diyabetik ayak bakımı eğitimi verilmesi",
-      "D) İnme geçiren hastaya yürüme yetisini kazandırmak için fizik tedavi uygulanması",
-      "E) Meme kanseri şüphesiyle mamografi çektirilmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Aşılama, henüz hastalık başlamadan önce spesifik koruma sağlayarak yeni vaka oluşumunu (insidansı) engelleyen klasik bir Birincil (Primer) Koruma yöntemidir. Pap-smear ve mamografi ikincil, diyabetik ayak ve inme rehabilitasyonu üçüncül korumadır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-23",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 23,
-    "slideTitle": "Koruma Düzeyleri - II: İkincil, Üçüncül ve Dördüncül Korunma",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Koruma düzeyleri ve halk sağlığı uygulamaları ile ilgili aşağıdaki senaryolardan hangisi ÜÇÜNCÜL (TERSİYER) KORUNMA kapsamına girer?",
-    "options": [
-      "A) Toplumda sigara tüketimini azaltmak için tütün vergilerinin artırılması",
-      "B) Sağlıklı kadınlara serviks kanseri erken teşhisi için rutin Pap-smear taraması yapılması",
-      "C) Kronik diyabet tanısı olan bir hastada ayak amputasyonunu ve körlüğü engellemek amacıyla komplikasyon takibi ve rehabilitasyon uygulanması",
-      "D) Yenidoğan bebeğe hepatit B aşısı uygulanması",
-      "E) İftar çadırlarında ve lokantalarda tuzlukların masadan kaldırılması"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Diyabet tanısı almış hastada ayak amputasyonu veya retinopatinin önlenmesi, oturmuş hastalığın komplikasyonlarını sınırlandırma ve rehabilitasyon amacını taşıdığı için Üçüncül (Tersiyer) Korunmadır."
-  },
-  {
-    "id": "q-learn-halk-sagligi-tarihcesi-ve-24",
-    "deckId": "learn-halk-sagligi-tarihcesi-ve",
-    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
-    "slideNumber": 24,
-    "slideTitle": "Halk Sağlığı Uzmanının Rolü, Epidemiyolojik Geçiş ve Tek Sağlık",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Çağdaş halk sağlığı vizyonu, epidemiyolojik geçiş ve halk sağlığı uzmanının görevleriyle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Epidemiyolojik geçiş kuramı, bulaşıcı hastalıkların yerini zamanla kronik dejeneratif hastalıkların aldığını tanımlar.",
-      "B) Halk sağlığı uzmanı sadece hastane ameliyathanelerinde cerrahi vaka sayısını artırmakla yükümlü olup toplum araştırması yapmaz.",
-      "C) Tek Sağlık (One Health) yaklaşımı insan, hayvan ve çevre sağlığının ayrılmaz bir bütün olduğunu savunur.",
-      "D) Halk sağlığı uzmanı; sürveyans, filyasyon, salgın incelemesi, sağlık politikası ve yönetimi alanlarında görev alır.",
-      "E) Günümüz toplumları hem kronik hastalıkların hem de yeni ortaya çıkan zoonotik pandemilerin oluşturduğu çifte yük ile karşı karşıyadır."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Halk sağlığı uzmanının temel görevi cerrahi ameliyat yapmak değil; toplumun sağlık düzeyini saptamak, epidemiyolojik araştırmalar yürütmek, salgın incelemek, sağlık politikası geliştirmek ve yöneticilik yapmaktır."
-  },
-  {
-    "id": "prac-use-001",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Üriner Sistem Enfeksiyonlarının Tanımı, Sınıflandırılması ve Klinik Spektrumu",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Üriner sistem enfeksiyonlarının tanımı ve klinik sınıflandırması dikkate alındığında, aşağıdaki ifadelerden hangisi doğru bir klinik yaklaşımı yansıtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Üriner sistem enfeksiyonu tanısı için yalnızca idrarda bakteri görülmesi yeterlidir, konak inflamatuar yanıtı aranmaz.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Mesane mukozasını tutan sistit tablosunda daima yüksek ateş, titreme ve flank ağrısı gibi sistemik toksisite bulguları beklenir.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Üst üriner sistem enfeksiyonları (akut piyelonefrit), böbrek parankiminin tutulumu nedeniyle sistemik inflamatuar bulgular ve yan ağrısı ile seyreder.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Asemptomatik seyreden tüm bakteriüri olgularında böbrek hasarını önlemek amacıyla derhal geniş spektrumlu antibiyotik başlanmalıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Üriner sistemde üretrovezikal bileşkenin proksimalinde normal fizyolojik şartlarda yoğun bir kommensal bakteri florası bulunur.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Piyelonefrit böbrek parankim ve toplayıcı sistemini tuttuğu için ateş, titreme ve yan ağrısı gibi sistemik bulgular oluşturur; sistitte ise inflamasyon mesane mukozasıyla sınırlı olduğundan sistemik ateş genellikle izlenmez. Sağlıklı bireylerde üretrovezikal bileşke proksimali sterildir."
-  },
-  {
-    "id": "prac-use-002",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Bakteriüri, Piyüri ve İdrar Örnekleme Tekniklerinin Güvenilirliği",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Poliklinik şartlarında üriner sistem enfeksiyonu şüphesiyle değerlendirilen bir hastanın idrar tetkikinde bol bakteri görülmesine karşın mikroskobik incelemede lökosit (piyüri) saptanmamıştır. Bu klinik tablo en yüksek olasılıkla aşağıdakilerden hangisini düşündürmelidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Akut piyelonefrit erken evresi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İdrar numunesinin kontaminasyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Böbrek tüberkülozu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Karsinoma in situ",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Üriner sistem obstrüktif taş hastalığı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Piyüri olmaksızın bakteriüri görülmesi enfeksiyondan ziyade idrar alma sırasındaki dış genital veya perineal kaynaklı kontaminasyonun en tipik göstergesidir. Gerçek ürotelyal invazyonda konağın inflamatuar yanıtı olarak daima piyüri eşlik eder."
-  },
-  {
-    "id": "prac-use-003",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Anlamlı Bakteriüri Kavramı ve Sayısal Koloni Eşikleri",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "İdrar yolu enfeksiyonu tanısında kullanılan anlamlı bakteriüri eşik değerleri ile ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kadınlarda akut komplike olmayan sistit: Orta akım idrarında >= 10^3 CFU/ml",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Erkeklerde orta akım idrarı: >= 10^4 CFU/ml",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kadınlarda akut komplike olmayan piyelonefrit: Orta akım idrarında >= 10^4 CFU/ml",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Suprapubik aspirasyon ile alınan idrar: Yalnızca >= 10^5 CFU/ml üreme olması halinde anlamlıdır",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Asemptomatik kadınlarda iki ardışık orta akım idrarında: >= 10^5 CFU/ml",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Suprapubik aspirasyon doğrudan steril mesaneden alındığı için kontaminasyon riski yoktur ve idrarda saptanan herhangi bir sayıda bakteri (1 CFU/ml dahi) anlamlı kabul edilir; 10^5 CFU/ml sınırı aranmaz."
-  },
-  {
-    "id": "prac-use-004",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Asemptomatik Bakteriüri (ASB): Tanı Kriterleri ve Tedavi Endikasyonları",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki hasta gruplarından hangisinde asemptomatik bakteriüri (>10^5 CFU/ml) saptanması durumunda rutin antimikrobiyal tedavi verilmesi kesinlikle önerilmez?",
-    "options": [
-      {
-        "key": "A",
-        "text": "14 haftalık gebe kadın",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Transüretral prostat rezeksiyonu (TUR-P) planlanan asemptomatik hasta",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kronik bakım evinde yaşayan, kalıcı üretral kateteri bulunan ve şikayeti olmayan 78 yaşındaki hasta",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Vezikoüreteral reflü şüphesiyle takip edilen 2 yaşındaki çocuk",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Rijit sistoskopi ve üreteral biyopsi uygulanacak olan hasta",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Kalıcı üretral kateteri olan veya kurumsal bakım alan asemptomatik yaşlı bireylerde bakteriüri kalıcı kolonizasyondur; antibiyotik vermek kolonizasyonu temizlemez aksine çoklu dirençli mikroorganizmaların gelişimine neden olur. Buna karşılık gebelerde ve mukozal kanamalı invaziv cerrahi öncesinde tedavi zorunludur."
-  },
-  {
-    "id": "prac-use-005",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Piyüri ve Bakteriüri Etkileşimi: Steril Piyüri ve Kontaminasyon Ayrımı",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Polikliniğe idrarda yanma şikayetiyle başvuran hastanın tam idrar tahlilinde bol lökosit (piyüri) saptanmış, ancak tekrarlanan rutin idrar kültürlerinde hiçbir bakteri ürememiştir. Bu hastada öncelikle dışlanması gereken patolojiler hangi seçenekte eksiksiz verilmiştir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Ürogenital tüberküloz - Üriner sistem taşı - Mesane karsinoması",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Diabetes insipidus - Polikistik böbrek hastalığı - Renal ven trombozu",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Akut tübüler nekroz - Minimal değişiklik hastalığı - Amiloidoz",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Glomerülonefrit - Renal hücreli karsinom - Basit böbrek kisti",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Akut böbrek yetmezliği - İnkontinans - Üretral darlık",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bakteriürisiz piyüri (steril piyüri) tablosunda mutlaka ürogenital tüberküloz (M. tuberculosis standart kültürde üremez), üriner sistem taşı (mekanik mukozal erozyon) ve mesane tümörleri/karsinoma in situ araştırılmalıdır."
-  },
-  {
-    "id": "prac-use-006",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Komplike ve Komplike Olmayan Üriner Sistem Enfeksiyonları",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki hasta profillerinden hangisinde gelişen üriner sistem enfeksiyonu 'komplike olmayan ÜSE' kapsamında değerlendirilebilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Nefrolitiyazis öyküsü olan ve yan ağrısı bulunan 45 yaşında erkek hasta",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Bilinen herhangi bir kronik hastalığı ve anatomik anomalisi bulunmayan 24 yaşında gebe olmayan kadın",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Tip 2 diyabeti ve nörojenik mesanesi olan 55 yaşında kadın hasta",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalıcı foley sonda takılı olan 70 yaşında yatağa bağımlı erkek hasta",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "18 haftalık gebe olup dizüri tarifleyen 28 yaşında kadın hasta",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Komplike olmayan ÜSE sadece üriner sistemde anatomik/fonksiyonel anomali veya taş bulunmayan, gebe olmayan, premenopozal sağlıklı erişkin kadınlarda tanımlanır. Erkek hastalar, gebeler, diyabetikler ve kateteri olanlar doğrudan komplike kategoridedir."
-  },
-  {
-    "id": "prac-use-007",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 7,
-    "slideTitle": "ÜSE Terminolojisinde İnce Ayrımlar: Rekürrens, Re-enfeksiyon, Persistans ve Süpresyon",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Akut sistit atağı nedeniyle 7 günlük uygun antibiyotik tedavisi tamamlanan ve semptomları tamamen gerileyen bir kadın hastada, tedavinin bitiminden 8 gün sonra aynı antibiyotiğe duyarlılık profili gösteren birebir aynı E. coli suşu ile klinik enfeksiyon tekrarlamıştır. Bu tabloyu en iyi tanımlayan kavram ve altta yatan olası mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Re-enfeksiyon - Yeni bir fekal bulaş odağı",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Rekürren enfeksiyon (Relaps) - Üriner sistemde bakteriyel persistans odağı",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Nozokomiyal süperenfeksiyon - Pseudomonas kolonizasyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Asemptomatik bakteriüri - İmmün tolerans gelişimi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Steril piyüri - Karsinoma in situ gelişimi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Başarılı tedavi sonrası iki haftadan kısa sürede aynı mikroorganizma ile tablonun alevlenmesi 'rekürren enfeksiyon'dur ve üriner sistemde antibiyotiklerin ulaşamadığı bir bakteriyel persistans odağını (taş, anatomik anomali, prostat odağı) düşündürür."
-  },
-  {
-    "id": "prac-use-008",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyolojisi ve Toplum Sağlığı Yükü",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Üriner sistem enfeksiyonlarının epidemiyolojik özellikleri ve hastane morbiditesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "ÜSE'ler nozokomiyal enfeksiyonların yaklaşık %40'ından sorumludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Nozokomiyal ÜSE olgularının büyük çoğunluğu üriner kateter uygulamaları ile ilişkilidir.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Poliklinik başvurularında kadınların başvuru sıklığı erkeklerin yaklaşık iki katıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Genç erişkin erkeklerde ÜSE insidansı kadınlara kıyasla belirgin şekilde daha yüksektir.",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "ÜSE'ye bağlı komplikasyonlar ve ürosepsis önemli mortalite nedenleri arasındadır.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Genç erişkin dönemde (15-50 yaş) ÜSE kadınlarda erkeklere göre katbekat fazladır; erkeklerde bu yaş grubunda bakteriüri prevalansı %0.1'in altındadır ve oldukça nadirdir."
-  },
-  {
-    "id": "prac-use-009",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 9,
-    "slideTitle": "Semptomatik ÜSE'de Yaşa ve Cinsiyete Göre Epidemiyolojik Risk Faktörleri",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "28 yaşında sağlıklı bir erkek hasta idrarda yanma ve sık idrara çıkma şikayetleriyle başvuruyor. Yapılan idrar kültüründe 10^4 CFU/ml E. coli üremesi saptanıyor. Bu hastanın epidemiyolojik değerlendirmesinde hekimin öncelikle göz önünde bulundurması gereken temel prensip aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Bu yaş grubundaki erkeklerde ÜSE çok sık görüldüğü için rutin 3 günlük tedavi verilip ileri tetkik yapılmamalıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Genç erkeklerde ÜSE son derece nadir (<%0.1) olduğundan, altta yatan ürolojik anatomik/fonksiyonel bir anomali mutlaka araştırılmalıdır.",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Erkek hastalarda saptanan E. coli üremesi daima asemptomatik kabul edilmeli ve tedavi edilmemelidir.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu yaş grubunda en sık etken Staphylococcus saprophyticus olduğu için kültür sonucu kontaminasyon kabul edilmelidir.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Erkeklerde idrar yolu enfeksiyonu gelişimi prostat kanserinin kesin öncül lezyonudur.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "15-50 yaş arası erkeklerde ÜSE prevalansı <%0.1 olup son derece nadirdir. Bu grupta gelişen bir enfeksiyon aksi ispatlanana kadar komplike kabul edilir ve altta yatan anatomik veya fonksiyonel üriner patoloji araştırılmalıdır."
-  },
-  {
-    "id": "prac-use-010",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 10,
-    "slideTitle": "ÜSE Etyolojisinde Mikrobiyal Spektrum ve Patojen Hiyerarşisi",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "21 yaşında üniversite öğrencisi kadın hasta, son 2 gündür devam eden ani başlangıçlı dizüri, sık idrara çıkma ve suprapubik rahatsızlık şikayetleriyle başvuruyor. Özgeçmişinde ek hastalık bulunmayan hastanın idrar kültüründe Gram-pozitif, koagülaz-negatif bir kok üremesi saptanıyor. Bu klinik tabloda E. coli'den sonra ikinci en olası etken olan bu mikroorganizma hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Staphylococcus aureus",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Streptococcus agalactiae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Staphylococcus saprophyticus",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Enterococcus faecalis",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Staphylococcus epidermidis",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Genç ve cinsel aktif kadınlarda komplike olmayan akut sistitin E. coli'den sonra ikinci en sık etkeni (%5-10) novobiyosine dirençli, koagülaz-negatif Staphylococcus saprophyticus'tur."
-  },
-  {
-    "id": "prac-use-011",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 11,
-    "slideTitle": "Özel Popülasyonlarda ÜSE: Pediyatrik ve Geriyatrik Dinamikler",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Çocukluk ve yaşlılık dönemindeki üriner sistem enfeksiyonu epidemiyolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yaşamın ilk 3 ayında erkek çocuklarda ÜSE görülme sıklığı kız çocuklarından fazladır.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Prepubertal dönemde kız çocuklarında ÜSE insidansı erkek çocukların yaklaşık üç katıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Huzurevlerinde kalan yaşlı bireylerde asemptomatik bakteriüri oranı %30-50 düzeylerine ulaşabilir.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yaşlılarda asemptomatik bakteriüri saptanan her hastaya böbrek fonksiyonlarını korumak için profilaktik antibiyotik başlanmalıdır.",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Yaşlı erkeklerde Proteus türlerinin etken olduğu enfeksiyonlar sıklıkla böbrek taşları ile ilişkilidir.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Yaşlılarda ve kurumsal bakım alanlarda ASB prevalansı çok yüksek olmasına karşın semptom veya mukozal kanamalı cerrahi endikasyonu yoksa antibiyotik verilmesi önerilmez; gereksiz tedavi dirençli patojenleri selekte eder."
-  },
-  {
-    "id": "prac-use-012",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 12,
-    "slideTitle": "Hamile Kadınlarda Üriner Sistem Enfeksiyonları",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "14 haftalık gebe bir kadının rutin ilk trimester kontrolünde alınan idrar kültüründe 10^5 CFU/ml E. coli üremesi saptanıyor. Hastanın hiçbir klinik şikayeti bulunmamaktadır. Bu klinik durum ve yönetimi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hastada dizüri ve ateş olmadığı için antibiyotik tedavisi verilmemeli, doğum sonrasına ertelenmelidir.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Gebelikte ASB tedavi edilmezse olguların %20-40'ında 2. ve 3. trimesterde akut piyelonefrit ve preterm doğum riski oluşur; derhal tedavi edilmelidir.",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Gebelikte hidronefroz oluşumu patolojik kabul edilmeli ve derhal cerrahi nefrostomi açılmalıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu hastada en olası etken Chlamydia trachomatis olup standart antibiyotiklere yanıtsızdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Asemptomatik gebelerde bakteriüri saptanması bebeğin tahliyesi (terapötik abortus) için mutlak endikasyondur.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Gebelerde ASB asemptomatik kalsa dahi hormonal staz nedeniyle %20-40 oranında akut piyelonefrit, erken doğum ve düşük doğum ağırlığına yol açar. Bu nedenle gebelerde ASB mutlak tedavi endikasyonudur."
-  },
-  {
-    "id": "prac-use-013",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Diyabet ve HIV/İmmünsüpresyon Zemininde Gelişen Ağır Üriner Enfeksiyonlar",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "58 yaşında kontrolsüz Tip 2 diyabet ve diyabetik nöropati öyküsü olan kadın hasta, yan ağrısı ve yüksek ateşle acile başvuruyor. Çekilen direkt üriner sistem grafisinde ve BT'de renal parankimde gaz kabarcıkları saptanıyor. Bu hastanın etyolojik ve klinik özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Diyabetik hastalarda Klebsiella kaynaklı piyelonefrit sıklığı diyabetik olmayanlara göre yaklaşık iki kat daha fazladır.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Görüntülemede gaz saptanması gaz oluşturan basillere bağlı gelişen amfizematöz piyelonefrit tablosudur.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Diyabetik kadınlarda ASB sıklığı genel popülasyona göre belirgin olarak artmıştır (%26'ya %6).",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Diyabetik hastalarda otonom nöropatiye bağlı rezidü idrar kalması enfeksiyon patogenezinde rol oynamaz.",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Glukozüri ve bozulmuş lökosit kemotaksisi bakteriyel üremeyi hızlandıran temel faktörlerdendir.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Otonom nöropati mesanede tam boşalamamaya ve yüksek post-voiding rezidüel idrara yol açarak enfeksiyon patogenezinde kritik bir rol oynar. Bu nedenle D seçeneğindeki ifade kesinlikle yanlıştır."
-  },
-  {
-    "id": "prac-use-014",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Katater İlişkili Üriner Sistem Enfeksiyonları (Kİ-ÜSE / CAUTI)",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "Yoğun bakım ünitesinde 35 gündür kalıcı foley kateter ile izlenen bir hastada gelişen katater ilişkili üriner sistem enfeksiyonu (Kİ-ÜSE) patogenezi ve mikrobiyolojisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "30 günü aşan kataterizasyonlarda enfeksiyonlar %95 oranında tek bir bakteri suşuna (monomikrobiyal) bağlıdır.",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Katater varlığında bakteriüri riski kataterin takılı kaldığı her gün sabit kalır ve süreyle artış göstermez.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Uzun süreli kataterizasyonda olguların %95'i polimikrobiyaldir; bakteriler katater yüzeyinde antibiyotiklere dirençli biyofilm oluşturur.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Katater ilişkili enfeksiyonlarda en sık izole edilen mikroorganizma tartışmasız Streptococcus pneumoniae'dir.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Katater ilişkili asemptomatik bakteriürisi olan her hastaya derhal geniş spektrumlu karbapenem tedavisi başlanmalıdır.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "30 günden uzun kataterizasyonlarda enfeksiyonların %95'i polimikrobiyaldir. Bakterilerin katater yüzeyinde oluşturduğu biyofilm matriksi, antibiyotiklerin penetrasyonunu ve hücresel bağışıklığı engeller."
-  },
-  {
-    "id": "prac-use-015",
-    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
-    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-    "slideNumber": 15,
-    "slideTitle": "Ürosepsis: Patofizyoloji, Risk Grupları ve Klinik Yönetim",
-    "discipline": "Üroloji",
-    "committee": "Kurul 1",
-    "question": "67 yaşında diyabetik bir hasta, sağ yan ağrısı, 39.5 °C ateş, titreme, hipotansiyon (80/50 mmHg), taşikardi ve konfüzyon tablosunda acile getiriliyor. Çekilen USG'de sağ üreteri tıkayan 12 mm'lik taş ve toplayıcı sistemde pürülan dilatasyon (piyonefroz) saptanıyor. Bu hastanın acil yönetiminde antibiyotik tedavisinin yanı sıra en kritik ve geciktirilmemesi gereken girişim hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Taşın derhal açık cerrahi ile çıkarılması",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hastanın sedatize edilerek spontan taş düşürmesinin beklenmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Perkütan nefrostomi veya JJ stent ile toplayıcı sistemin acil dekompresyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Yüksek doz loop diüretiği uygulanarak idrar debisinin artırılması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Ağrı kontrolü amacıyla intramüsküler analjezik verilip taburcu edilmesi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Obstrüktif üropati zemininde gelişen piyonefroz ve ürosepsiste hidrostatik basınç düşürülmezse piyelovenöz reflü ile bakteriyemi durdurulamaz. Bu nedenle acil nefrostomi veya stent ile idrar drenajı (dekompresyon) mutlak hayat kurtarıcı adımdır."
   }
 ]

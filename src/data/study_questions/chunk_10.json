@@ -1,402 +1,1105 @@
 [
   {
-    "id": "tromboz-infarkt-q4",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Akciğerin Çift Kan Dolaşımı ve Pulmoner Enfarktüs Mekanizması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Pulmoner emboli olgularının büyük bir kısmında akciğer dokusunda iskemik nekroz (enfarktüs) gelişmemesini sağlayan temel fizyolojik ve anatomik mekanizma aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-011",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 11,
+    "slideTitle": "İn Vitro ve İn Vivo Koagülasyon Modelleri: PT, aPTT ve Hücresel Gerçeklik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Rutin elektif cerrahi öncesi yapılan koagülasyon taramasında hiçbir kanama öyküsü ve klinik semptomu bulunmayan 35 yaşındaki bir hastada aPTT süresinin 95 saniye (belirgin uzamış), PT/INR ve trombosit sayısının ise tamamen normal olduğu saptanmıştır. Yapılan ileri faktör analizinde Faktör XII (Hageman faktörü) aktivitesinin <%1 (ağır eksiklik) olduğu tespit edilmiştir. Bu hastanın klinik tablosunda belirgin bir kanama diyatezinin görülmemesinin en temel patofizyolojik nedeni aşağıdakilerden hangisidir?",
     "options": [
-      "A) Akciğer parankiminin oksijen gereksiniminin sıfır olması",
-      "B) Aorttan köken alan bronşiyal arterler sayesinde akciğerin çift kan dolaşımına sahip olması",
-      "C) Alveollerdeki yüksek nitrojen gaz basıncı",
-      "D) Pulmoner venlerdeki kapakçıkların geriye kan akışını engellemesi",
-      "E) Akciğer endotelinde aşırı miktarda trombomodulin bulunması"
+      "A) Faktör XII'nin koagülasyon kaskadında sadece inhibitör bir rol oynaması",
+      "B) İn vivo hemostazın temas yolağı yerine Doku Faktörü-Faktör VIIa kompleksi ile başlatılması ve trombinin Faktör XI'i doğrudan aktive edebilmesi",
+      "C) Karaciğerin Faktör XII eksikliğini kompanse etmek için aşırı miktarda Faktör VIII sentezlemesi",
+      "D) Hastanın trombositlerinin Faktör XII olmadan da fibrin polimerizasyonunu doğrudan yapabilmesi",
+      "E) Fibrinolitik sistemin doğuştan felç olması nedeniyle pıhtının hiç erimemesi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Akciğer çift dolaşıma sahiptir (pulmoner arterler ve bronşiyal arterler). Pulmoner arter dalı tıkansa dahi bronşiyal dolaşım parankimi beslemeyi sürdürerek enfarktüs gelişimini önler."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Faktör XII (Hageman faktörü), in vitro cam tüpte aPTT testini başlatan temas aktivatörüdür; ancak in vivo canlı damarda fizyolojik pıhtılaşma temas yolağıyla değil subendotelyal Doku Faktörü-Faktör VIIa kompleksi ile başlar. Üretilen eser miktardaki trombin, geriye dönük olarak Faktör XI'i doğrudan aktive ederek Faktör XII'ye hiçbir ihtiyaç duymadan kaskadı yürütür. Bu nedenle FXII eksikliği olanlar kanamaz. A, C, D ve E seçenekleri biyolojik gerçeklikle bağdaşmaz."
   },
   {
-    "id": "tromboz-infarkt-q5",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Sistemik Tromboembolizm: İntrakardiyak Kaynaklar ve Hedefler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Atriyal fibrilasyonu olan 72 yaşındaki bir hastada aniden sağ bacakta şiddetli ağrı, solukluk, soğukluk ve nabızsızlık gelişiyor. Acil embolektomi ile femoral arter lümeninden trombüs çıkarılıyor. Bu hastada sistemik embolinin kaynaklandığı en olası intrakardiyak odak aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-012",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 12,
+    "slideTitle": "Trombinin (Faktör IIa) Merkezî Rolü ve Çift Yönlü Biyolojik Etkileri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Hemostaz ve tromboz patofizyolojisinde merkezî rol oynayan serin proteaz trombinin (Faktör IIa) biyolojik fonksiyonları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
     "options": [
-      "A) Sağ atriyum apendiksi",
-      "B) Sol atriyal apendiks mural trombüsü",
-      "C) Pulmoner arter kapak vejetasyonu",
-      "D) Vena kava inferior lümeni",
-      "E) Triküspit kapak kordaları"
+      "A) Çözünür fibrinojen molekülünden fibrinopeptidleri keserek fibrin monomerlerinin oluşumunu sağlar.",
+      "B) Pıhtının stabilitesini artıran transglutaminaz enzimi Faktör XIII'ü proteolitik olarak aktive eder.",
+      "C) Trombosit zarı üzerindeki PAR reseptörlerini uyararak trombosit agregasyonunu ve granül salınımını tetikler.",
+      "D) Sağlam endotel yüzeyinde trombomodulin molekülüne bağlandığında antikoagülan Protein C'yi aktive eder.",
+      "E) Fibrinolitik kaskadı doğrudan başlatmak üzere plazminojeni doğrudan keserek aktif plazmine dönüştürür."
     ],
-    "correctAnswer": "B",
-    "explanation": "Atriyal fibrilasyonda kanın göllenmesi ve staz nedeniyle mural trombüslerin en sık oluştuğu odak sol atriyal apendikstir; buradan kopan pıhtı sistemik arteriyel yolla bacak arterlerini tıkar."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır. Trombin plazminojeni doğrudan kesip plazmine DÖNÜŞTÜRMEZ; plazminojeni plazmine dönüştüren enzimler Doku Plazminojen Aktivatörü (t-PA) ve ürokinazdır (u-PA). Trombin tam aksine fibrin pıhtısını oluşturan ana proteazdır. A, B, C ve D seçeneklerindeki ifadeler trombinin prokoagülan, hücresel aktivatör ve trombomodulin aracılı antikoagülan fonksiyonlarını kusursuz şekilde açıklamaktadır."
   },
   {
-    "id": "tromboz-infarkt-q6",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Paradoksal Emboli: Sağdan Sola İntrakardiyak Şantlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "32 yaşında kadın hasta, sol bacağında ağrı ve şişlik (DVT) şikayeti varken aniden gelişen sağ hemipleji ve konuşma bozukluğu (akut iskemik inme) tablosuyla acil servise getiriliyor. Venöz sistemden kaynaklanan bir pıhtının beyin arterlerini tıkamasını açıklayan patolojik tablo ve altta yatan en olası defekt aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-013",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 13,
+    "slideTitle": "Pıhtının Stabilizasyonu ve Çapraz Bağlanma: Faktör XIIIa ve Pıhtı Retraksiyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Doğumdan 4 gün sonra göbek kordonu kesisinden sızıntı şeklinde kanaması başlayan yenidoğanın laboratuvar incelemesinde trombosit sayısı, kanama zamanı, Protrombin Zamanı (PT) ve aPTT test sonuçları tamamen normal sınırda bulunmuştur. Ancak hastadan alınan kan pıhtısının 5 molar üre veya monokloroasetik asit solüsyonuna konulduğunda hızla eriyip çözündüğü gözlenmiştir. Bu yenidoğanda hemostazın pıhtı stabilizasyon evresinde aksayan biyokimyasal mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      "A) Retrograd emboli - Aort koarktasyonu",
-      "B) Paradoksal emboli - Patent Foramen Ovale (PFO)",
-      "C) Amniyon sıvı embolisi - Mitral kapak prolapsusu",
-      "D) Yağ embolisi - Ventriküler anevrizma",
-      "E) Hava embolisi - Duktus arteriozus"
+      "A) Trombosit GpIb reseptör eksikliği",
+      "B) Fibrin monomerleri arasında kovalent izopeptid çapraz bağlarını kuran Faktör XIIIa enzim aktivitesinin eksikliği",
+      "C) Doku faktörü yolağı inhibitörünün (TFPI) aşırı sentezi",
+      "D) Fibrinojenin trombine bağlanma bölgesinde mutasyon",
+      "E) Plazminojen aktivatör inhibitör-1 (PAI-1) fazlalığı"
     ],
-    "correctAnswer": "B",
-    "explanation": "Venöz dolaşımdaki bir trombüsün intrakardiyak sağdan sola şant (en sık PFO veya ASD) aracılığıyla arteriyel sisteme geçerek serebral enfarktüs yapması 'paradoksal emboli' olarak adlandırılır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka klasik konjenital Faktör XIII eksikliğini tarif etmektedir. Faktör XIII, koagülasyon kaskadının tarama testleri olan PT ve aPTT pıhtılaşma son noktası (gevşek jel oluşumu) ile ölçüldüğü için standart testlerde normal sonuç verir. Ancak kovalent çapraz bağlanma yapılamadığı için pıhtı zayıftır ve üre solüsyonunda çözünür; tipik olarak göbek kordonu kanaması ve gecikmiş yara kanamaları görülür. A, C, D ve E seçenekleri bu tabloyu açıklamaz."
   },
   {
-    "id": "tromboz-infarkt-q7",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Yağ Embolisi Sendromu: Uzun Kemik Kırıkları ve Klinik Triad",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Motosiklet kazası sonrası izole kapalı femur cisim kırığı nedeniyle yatırılan 22 yaşındaki bir hastada travmanın 36. saatinde aniden takipne, şiddetli dispne, oryantasyon bozukluğu ve boyun ile aksilla bölgesinde yaygın peteşiyal döküntüler gelişiyor. Bu hastada patolojiyi açıklayan en olası tanı ve mekanizma aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-014",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 14,
+    "slideTitle": "Pıhtılaşmayı Sınırlandıran Doğal Antikoagülan Mekanizmalar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sağlıklı vasküler yatakta hemostatik tıkacın kontrolsüz şekilde damar boyunca yayılmasını önleyen doğal antikoagülan mekanizmalar incelendiğinde, Aktive Protein C (APC) ve kofaktörü Protein S kompleksinin proteolitik olarak yıkarak inaktive ettiği pıhtılaşma kaskadı bileşenleri aşağıdakilerden hangisidir?",
     "options": [
-      "A) Yağ Embolisi Sendromu - Kemik iliği yağının dolaşıma karışması ve serbest yağ asidi toksisitesi",
-      "B) Eyer embolisi - Vena kava inferior tıkanıklığı",
-      "C) Hipovolemik şok - Masif iç kanama",
-      "D) Anafilaktik şok - Analjezik alerjisi",
-      "E) Dekompresyon hastalığı - Azot gazı kabarcıkları"
+      "A) Faktör IIa (Trombin) ve Fibrinojen",
+      "B) Faktör VIIa ve Doku Faktörü",
+      "C) Faktör Va ve Faktör VIIIa",
+      "D) Faktör IXa ve Faktör Xa",
+      "E) Faktör XIIa ve Prekallikrein"
     ],
-    "correctAnswer": "A",
-    "explanation": "Uzun kemik (femur) kırığından 24-72 saat sonra ortaya çıkan solunum sıkıntısı, nörolojik semptomlar ve peteşiyal döküntü klasik Yağ Embolisi Sendromu triadıdır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Aktive Protein C (APC), kofaktörü olan Protein S varlığında koagülasyon kaskadının iki kritik hızlandırıcı kofaktörü olan aktif Faktör Va ve aktif Faktör VIIIa'yı spesifik peptid bağlarından keserek inaktive eder. Trombin ve Faktör Xa'yı yıkan ana inhibitör Antitrombin III'tür; Doku Faktörü-VIIa'yı yıkan ise TFPI'dir. Dolayısıyla doğru yanıt C seçeneğidir."
   },
   {
-    "id": "tromboz-infarkt-q8",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Gaz ve Hava Embolisi: Dekompresyon Hastalığı (Vurgun)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Derin deniz dalışı sonrasında hızla su yüzeyine çıkan profesyonel bir dalgıçta şiddetli eklem ve kas ağrıları (the bends) ile nefes darlığı (the chokes) gelişiyor. Yıllar sonra çekilen kalça grafisinde femur başında avasküler osteonekroz alanları (Caisson hastalığı) saptanıyor. Bu patolojide kanda gaz kabarcıkları oluşturarak emboliye yol açan gaz aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-015",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 15,
+    "slideTitle": "Fibrinolitik Sistem ve Plazmin Biyolojisi: Fibrinin Kontrollü Yıkımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sol bacağında ağrı ve şişlik şikayetiyle acil servise başvuran 45 yaşındaki bir hastada derin ven trombozundan (DVT) şüphelenilerek D-dimer testi istenmiş ve sonucun belirgin olarak yüksek (>3500 ng/mL) olduğu saptanmıştır. Bu hastada ölçülen D-dimer molekülünün patofizyolojik kökeni ve biyokimyasal anlamı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Karbonmonoksit ($CO$)",
-      "B) Karbondioksit ($CO_2$)",
-      "C) Azot ($N_2$)",
-      "D) Helyum ($He$)",
-      "E) Saf Oksijen ($O_2$)"
+      "A) Karaciğer tarafından akut faz reaktörü olarak sentezlenen bir proenzimdir.",
+      "B) Yalnızca trombosit alfa granüllerinden salınan bir büyüme faktörüdür.",
+      "C) Faktör XIIIa tarafından kovalent çapraz bağlanmış fibrin ağının aktif plazmin tarafından parçalanmasıyla ortaya çıkan spesifik bir yıkım ürünüdür.",
+      "D) Doku faktörünün Faktör VIIa ile birleşmesi sırasında açığa çıkan inaktif bir peptittir.",
+      "E) Serbest fibrinojen molekülünün trombin tarafından kesilmesiyle oluşan fibrinopeptit A parçasıdır."
     ],
-    "correctAnswer": "C",
-    "explanation": "Dekompresyon hastalığında Henry kanunu uyarınca yüksek basınçta kanda çözünmüş olan Azot (N2) gazı, ani basınç düşüşünde çözünürlüğünü kaybederek kanda mikro ve makro kabarcıklar halinde gaz embolisi oluşturur."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. D-dimer, Faktör XIIIa tarafından kovalent olarak çapraz bağlanmış olgun fibrin polimerlerinin aktif plazmin enzimi tarafından proteolitik olarak parçalanması sonucu ortaya çıkan spesifik bir fibrin yıkım ürünüdür. Vücutta hem pıhtı oluştuğunu (trombin + FXIIIa aktivitesi) hem de bu pıhtının eritilmeye çalışıldığını (plazmin aktivitesi) kanıtlar. Karaciğerde doğrudan üretilmez, trombosit granülünde bulunmaz veya fibrinopeptit parçası değildir."
   },
   {
-    "id": "tromboz-infarkt-q9",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Amniyon Sıvı Embolisi: Fetal Hücreler, Şok ve DİK",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Zorlu bir vajinal doğum eyleminin hemen ardından aniden şiddetli dispne, siyanoz, derin hipotansif şok ve nöbet geçiren primigravid bir kadında dakikalar içinde yaygın damar içi pıhtılaşma (DİK) ve vajinal masif kanama gelişiyor. Otopside maternal akciğer mikrosirkülasyonunda fetal skuamöz hücreler ve mekonyum debrisleri gösteriliyor. Bu klinik tablonun tanısı aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-016",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 16,
+    "slideTitle": "Sağlıklı Endotelin Antitrombotik ve Tromboresistans Özellikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sağlıklı bir vasküler endotel tabakasının kanın akışkanlığını korumak ve intravasküler tromboz gelişimini engellemek için sergilediği biyokimyasal antitrombotik mekanizmalar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      "A) Pulmoner tromboembolizm",
-      "B) Amniyon sıvısı embolisi",
-      "C) Yağ embolisi sendromu",
-      "D) Eklampsi krizi",
-      "E) Peripartum kardiyomiyopati"
+      "A) Sürekli olarak lümene salınan prostasiklin (PGI2) ve nitrik oksit (NO), trombosit agregasyonunu güçlü şekilde inhibe eder.",
+      "B) Endotel zarı üzerindeki CD39 (ADPaz), trombosit toplanmasını uyaran serbest ADP'yi parçalayarak etkisizleştirir.",
+      "C) Endotel glikokaliksindeki heparin benzeri moleküller, Antitrombin III'ü aktive ederek koagülasyon faktörlerini inaktive eder.",
+      "D) Endotel hücresi, trombin üretimini artırmak amacıyla yüzeyinde sürekli yüksek konsantrasyonda Doku Faktörü eksprese eder.",
+      "E) Endotel kaynaklı t-PA sentezi, damar yüzeyinde oluşabilecek fibrin birikintilerinin erken evrede eritilmesini sağlar."
     ],
-    "correctAnswer": "B",
-    "explanation": "Doğum sırasında aniden gelişen kardiyovasküler kollaps, solunum yetmezliği, DİK ve maternal akciğer damarlarında fetal skuamların görülmesi Amniyon Sıvısı Embolisi'nin klasik tablosudur."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır. Sağlıklı bir endotel hücresi yüzeyinde Doku Faktörü eksprese ETMEZ; aksine doku faktörünü subendotelyal katmanda dolaşımdan tamamen saklar ve yüzeyinde TFPI sentezleyerek doku faktörü yolağını baskılar. Endotelde doku faktörünün eksprese edilmesi ancak endotel hasar gördüğünde veya enflamatuvar sitokinlerle aktive olduğunda (patolojik pro-trombotik fenotip) gerçekleşir. A, B, C ve E seçeneklerindeki ifadeler endotelin antitrombotik özelliklerini doğru açıklamaktadır."
   },
   {
-    "id": "tromboz-infarkt-q10",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Enfarktüs Patofizyolojisi: İskemik Nekrozun Tanımı ve Etiyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Bir doku veya organda iskemik nekroz (enfarktüs) gelişimine yol açan etiyolojik mekanizmalar arasında açık ara en sık saptanan patolojik olay aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-017",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 17,
+    "slideTitle": "Trombozun Tanımı ve Virchow Triadı: Patofizyolojik Çerçeve",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Patoloji dersinde Rudolf Virchow tarafından tanımlanan ve intravasküler tromboz patofizyolojisini açıklayan klasik 'Virchow Triadı' tartışılmaktadır. Virchow triadının bileşenleri ve klinik görünümleri ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
     "options": [
-      "A) Lokal lenfatik drenajın tıkanması",
-      "B) Arteriyel damar lümeninin tromboz veya tromboemboli ile akut tıkanması",
-      "C) Hipotermi sonucu periferik vazokonstriksiyon",
-      "D) Eritrosit membranında ozmotik frajilite artışı",
-      "E) Histamin salınımıyla gelişen lokal arteriyel dilatasyon"
+      "A) Endotel Hasarı — Akut miyokard enfarktüsünde aterosklerotik plak çatlaması zemininde koroner arter trombozu",
+      "B) Anormal Kan Akımı (Staz) — Uzun süre yatağa bağımlı hastalarda alt ekstremite derin venlerinde gelişen flebotromboz",
+      "C) Anormal Kan Akımı (Türbülans) — Aort anevrizması lümeninde lamine duvar trombüslerinin gelişmesi",
+      "D) Hiperkoagülabilite — Faktör V Leiden mutasyonu olan genç bir hastada tekrarlayan venöz tromboemboli",
+      "E) Endotel Bütünlüğü — Sağlıklı damarda yüksek oranda prostasiklin ve nitrik oksit salınarak masif oklüzif trombüs oluşturulması"
     ],
-    "correctAnswer": "B",
-    "explanation": "Enfarktüs olgularının neredeyse tamamı (>%99) besleyici bir arterin tromboz veya emboli ile akut tıkanmasına sekonder gelişir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır. Sağlıklı endotelden salgılanan prostasiklin (PGI2) ve nitrik oksit (NO), masif trombüs OLUŞTURMAZ; tam aksine trombosit agregasyonunu engelleyip vazodilatasyon yaparak damarı tromboza karşı koruyan temel antitrombotik mekanizmalardır. A, B, C ve D seçeneklerindeki eşleştirmeler Virchow triadının üç sacayağını (endotel hasarı, staz/türbülans ve hiperkoagülabilite) kusursuz klinik örneklerle açıklamaktadır."
   },
   {
-    "id": "tromboz-infarkt-q11",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Beyaz (Soluk / Anemik) Enfarktüs: Solid Organlar ve Uç Arterler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Sol ventrikül mural trombüsünden kopan bir embolinin dalak arterinin bir dalını tıkaması sonucu dalak dokusunda kama şeklinde sarı-beyaz renkli, tabanı kapsüle oturan bir nekroz alanı (beyaz enfarktüs) gelişiyor. Dalakta enfarktüsün beyaz (soluk) olmasını sağlayan temel doku özelliği aşağıdakilerden hangisidir?",
+    "id": "prac-tromboz-018",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 18,
+    "slideTitle": "Virchow Triadı 1. Ayak: Endotel Hasarı ve Pro-trombotik Endotel Fenotipi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ağır sigara içicisi ve kontrolsüz hipertansiyonu olan 55 yaşındaki bir hastada vasküler endotel hücrelerinin kronik hemodinamik ve biyokimyasal strese maruz kalması sonucunda 'pro-trombotik endotel fenotipi' gelişmiştir. Bu hastanın vasküler endotelinde tromboz gelişimini kolaylaştıran moleküler değişiklikler değerlendirildiğinde, aşağıdaki moleküllerden hangisinin düzeyinde bir ARTIŞ olması BEKLENMEZ?",
     "options": [
-      "A) Çift kan dolaşımına ve zengin venöz kollaterallere sahip olması",
-      "B) Organın solid parankimli olması ve uç arter (end-artery) dolaşımına sahip olması",
-      "C) Parankimin aşırı gevşek ve süngerimsi bağ dokusundan oluşması",
-      "D) Enfarktüsün venöz drenaj bozukluğu zemininde gelişmesi",
-      "E) Doku içine yoğun reperfüzyon kanaması olması"
+      "A) Yüzey Doku Faktörü (TF) ekspresyonu",
+      "B) Von Willebrand Faktörü (vWF) salgılanması",
+      "C) Plazminojen Aktivatör İnhibitör-1 (PAI-1) üretimi",
+      "D) Trombomodulin ve Endotelyal Protein C Reseptörü (EPCR) ekspresyonu",
+      "E) Lökosit adezyon molekülleri (ICAM-1, VCAM-1) ekspresyonu"
     ],
-    "correctAnswer": "B",
-    "explanation": "Dalak, böbrek ve kalp gibi solid organlarda uç arter dolaşımı vardır; kollateral akım olmadığı ve parankim yoğun olduğu için kanama sızamaz ve soluk (beyaz) enfarktüs gelişir."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Pro-trombotik endotel aktivasyonunda, doğal antikoagülan sistemin temel taşı olan Trombomodulin ve EPCR ekspresyonu ARTMAZ, tam aksine belirgin şekilde AZALIR (down-regüle olur). Böylece Protein C aktive edilemez ve tromboz kolaylaşır. Buna karşılık prokoagülan olan Doku Faktörü ve vWF artar; fibrinolizi baskılayan PAI-1 artar; enflamasyonu çeken adezyon molekülleri (ICAM-1, VCAM-1) artar. Bu nedenle D seçeneğindeki artış beklentisi yanlıştır."
   },
   {
-    "id": "tromboz-infarkt-q12",
+    "id": "prac-tromboz-019",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 19,
+    "slideTitle": "Virchow Triadı 2. Ayak: Anormal Kan Akımı – Staz ve Türbülans Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Hemodinamik akım paternleri ile intravasküler tromboz mekanizmaları arasındaki ilişki değerlendirildiğinde, venöz stazın (kan akımında durgunluk) derin ven trombozunu tetiklemesinde rol oynayan aşağıdaki mekanizmalardan hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
+    "options": [
+      "A) Trombositlerin lümen merkezindeki akımdan ayrılarak endotel yüzeyine doğru marjinasyon göstermesi",
+      "B) Aktive olan pıhtılaşma faktörlerinin hasar sahasından yıkanıp uzaklaştırılmasının (washout) engellenmesi",
+      "C) Karaciğer kaynaklı yeni antikoagülan inhibitörlerin hasarlı damar yatağına akışının yavaşlaması",
+      "D) Kan akım hızının aşırı artmasına bağlı olarak endotel yüzeyinden koruyucu doku faktörünün sökülüp atılması",
+      "E) Venöz lümende kanın göllenmesine bağlı olarak endotel hücrelerinde hipoksik hasar ve aktivasyon gelişmesi"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır. Staz kan akım hızının artması değil, tam tersine aşırı derecede azalması veya durmasıdır; ayrıca doku faktörü koruyucu bir molekül olmayıp güçlü bir prokoagülandır. A, B, C ve E seçeneklerindeki mekanizmalar (trombosit marjinasyonu, faktör yıkanmasının durması, antikoagülan temininin gecikmesi ve endotelyal hipoksi) stazın venöz tromboz oluşturma basamaklarını eksiksiz açıklar."
+  },
+  {
+    "id": "prac-tromboz-020",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 20,
+    "slideTitle": "Staz ve Türbülansa Yol Açan Başlıca Klinik Durumlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik atriyal fibrilasyon tanısı olan ve antikoagülan tedavisini düzenli kullanmayan 74 yaşındaki bir kadın hasta, aniden gelişen sağ tarafında tam felç ve konuşamama (afazi) tablosuyla acil servise getirilmiştir. Çekilen beyin diffüzyon manyetik rezonans görüntülemesinde sol orta serebral arter (MCA) sulama alanında geniş akut iskemik enfarktüs saptanmıştır. Bu hastada serebral emboliye kaynaklık eden kardiyak mural trombüsün gelişmesinde rol oynayan temel hemodinamik mekanizma ve en olası anatomik lokalizasyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sağ ventrikül apeksinde yüksek akım hızına bağlı türbülans",
+      "B) Sol atriyal apendikste koordineli kasılma kaybına bağlı kan akımı stazı",
+      "C) Asendan aortada masif vazodilatasyona bağlı hızlı kan akımı",
+      "D) Pulmoner vende mekanik kapak aşınması",
+      "E) İnteratriyal septumda foramen ovale açıklığına bağlı şant"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Atriyal fibrilasyonda atriyumların koordineli mekanik kasılması ortadan kalkar; özellikle kanın göllendiği sol atriyal apendikste belirgin staz meydana gelir. Burada oluşan mural trombüs parçalanıp koptuğunda sistemik arteriyel dolaşıma fırlar ve en sık orta serebral arteri (MCA) tıkayarak kardiyoembolik iskemik inmeye yol açar. Diğer seçeneklerdeki mekanizma ve yerleşimler bu klinik tabloyu açıklamaz."
+  },
+  {
+    "id": "prac-tromboz-021",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 21,
+    "slideTitle": "Virchow Triadı 3. Ayak: Hiperkoagülabilite (Trombofili) Sınıflaması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ailesinde erken yaşta geçirilmiş derin ven trombozu öyküsü bulunan 28 yaşındaki bir erkek hasta, sağ bacağında ani gelişen ağrılı şişlik nedeniyle başvuruyor. Yapılan doppler ultrasonografide femoral vende derin ven trombozu saptanıyor. Primer (kalıtsal) hiperkoagülabilite açısından yapılan taramada toplumda EN SIK rastlanan genetik bozukluk aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Konjenital Antitrombin III eksikliği",
+      "B) Faktör V Leiden (Arg506Gln) mutasyonu",
+      "C) Protein C gen delesyonu",
+      "D) Homozigot sistatyonin beta-sentaz mutasyonu",
+      "E) Fibrinojen alfa zincir agenezisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Beyaz ırkta toplumun yaklaşık %2-15'inde görülen ve kalıtsal (primer) trombofili nedenleri arasında açık ara EN SIK rastlanan genetik bozukluk Faktör V Leiden (Arg506Gln) mutasyonudur. İkinci en sık neden Protrombin G20210A mutasyonudur (%1-2). Antitrombin III, Protein C ve Protein S eksiklikleri ise çok daha nadir (<%1) görülen primer defektlerdir. Homosistinüri ise çok nadirdir."
+  },
+  {
+    "id": "prac-tromboz-022",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 22,
+    "slideTitle": "Primer Hiperkoagülabilite: Faktör V Leiden ve Aktive Protein C Direnci (APCR)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Oral kontraseptif kullanmaya başladıktan 3 ay sonra sağ bacağında masif iliofemoral derin ven trombozu ve ardından segmental pulmoner emboli gelişen 24 yaşındaki bir kadın hastanın yapılan genetik analizinde Faktör V geninde heterozigot nokta mutasyonu saptanmıştır. Bu hastada venöz tromboza yol açan moleküler mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Faktör V proteininde 506. pozisyondaki arjininin glutamine dönüşmesi sonucu Aktive Protein C tarafından proteolitik inaktivasyona direnç gelişmesi",
+      "B) Protrombin geninin promotör bölgesinde delesyon gelişerek trombin üretiminin baskılanması",
+      "C) Antitrombin III molekülünün heparini bağlama bölgesinde konjenital mutasyon",
+      "D) Protein S proteininin hücre zarında eksprese edilememesi",
+      "E) Fibrinojen molekülünün kovalent izopeptid bağları kuramaması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Vaka klasik Faktör V Leiden mutasyonunu ve OKS ile olan sinerjistik tromboz riskini tarif etmektedir. Faktör V Leiden'de 506. pozisyondaki Arjinin Glutamin'e dönüşür (Arg506Gln). Bu mutasyon Aktive Protein C'nin (APC) kesim bölgesini ortadan kaldırır ve Aktive Protein C Direnci (APCR) gelişir; Faktör Va inaktive edilemediği için pıhtılaşma kontrolsüzce ilerler. B seçeneğinde tarif edilen protrombin mutasyonu 3'-UTR bölgesindedir; C ve D seçenekleri diğer trombofili mekanizmalarıdır."
+  },
+  {
+    "id": "prac-tromboz-023",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 23,
+    "slideTitle": "Primer Hiperkoagülabilite: Protrombin G20210A Mutasyonu ve Diğer Genetik Defektler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Derin ven trombozu atağı geçiren 38 yaşındaki bir kadın hastaya hastaneye yatırılmadan doğrudan yüksek doz oral Varfarin tedavisi başlanmıştır. Tedavinin 3. gününde hastanın her iki memesinde ve uyluk cildinde aniden şiddetli ağrı, eritematöz plaklar ve hızla siyah renkli büllöz nekrotik ülserasyonlar (deri kangreni) gelişmiştir. Biyopside cilt altı mikrovasküler venüllerde yaygın fibrin mikrotrombüsleri saptanmıştır. Bu feci klinik komplikasyonun altında yatan primer patofizyolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hastada önceden var olan konjenital Protein C eksikliği zemininde, varfarinin kısa yarı ömürlü Protein C'yi hızla tüketerek geçici bir hiperkoagülabl fırtına yaratması",
+      "B) Varfarinin doğrudan mast hücre degranülasyonu yaparak anafilaksiye yol açması",
+      "C) Faktör XIII'ün aşırı uyarılması sonucu cildin kalsifiye olması",
+      "D) Endotel hücrelerinden aşırı miktarda t-PA salgılanarak cildin eritilmesi",
+      "E) Varfarinin trombosit sayısını sıfıra indirerek kanamaya bağlı doku çürümesi yapması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Tarif edilen tablo tıp literatüründe klasik 'Varfarin Kaynaklı Deri Nekrozu'dur. K vitamini bağımlı faktörler içinde antikoagülan Protein C'nin yarı ömrü en kısadır (~6 saat); oysa Faktör II, IX ve X günlerce kanda kalır. Varfarin başlandığında Protein C hemen sıfırlanırken prokoagülan faktörler aktif kalır. Eğer hastada altta yatan bir Protein C (veya S) eksikliği varsa, denge tamamen tromboz lehine döner; yağ dokusundan zengin meme ve uyluk kapillerlerinde mikrotrombozlar ve yaygın doku nekrozu gelişir. Bunu önlemek için varfarin daima heparinle köprülenerek başlanır."
+  },
+  {
+    "id": "prac-tromboz-024",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 24,
+    "slideTitle": "Sekonder Hiperkoagülabilite: Genel Klinik Tablolar ve Yüksek Risk Grupları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yaygın pretibial ödem, periorbital şişlik ve 24 saatlik idrarda 8.5 gram proteinüri saptanan 42 yaşındaki bir erkek hastada aniden sol yan ağrısı ve makroskopik hematüri gelişmiştir. Yapılan renal doppler ultrasonografide sol renal vende tıkayıcı trombüs saptanmıştır. Bu nefrotik sendromlu hastada renal ven trombozu gelişimine zemin hazırlayan en temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Glomerüllerden aşırı miktarda kalsiyum sızarak pıhtılaşmayı doğrudan uyarması",
+      "B) İdrarla masif miktarda Antitrombin III kaybedilmesi ve karaciğerde fibrinojen sentezinin kompansatuvar artışı",
+      "C) Böbrek tübüllerinde eritropoietin sentezinin durması",
+      "D) Hastanın trombositlerinin idrar yolunda enfekte olması",
+      "E) Trombomodulin moleküllerinin idrarla dışarı atılarak yok olması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Nefrotik sendromda glomerül geçirgenliğinin bozulması nedeniyle albümine benzer molekül ağırlığına sahip olan Antitrombin III (AT-III) idrarla masif olarak kaybedilir. Plazmada AT-III seviyesi dramatik biçimde düşerken, karaciğer onkotik basıncı toparlamak için kontrolsüzce büyük moleküllü proteinleri (fibrinojen) üretir. Bu antikoagülan kaybı ve prokoagülan artışı tablosu, özellikle böbrek venlerinde (renal ven trombozu) ve derin bacak venlerinde ağır trombozlara yol açar. Diğer seçenekler nefrotik sendrom trombozunu açıklamaz."
+  },
+  {
+    "id": "prac-tromboz-025",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 25,
+    "slideTitle": "Antifosfolipid Antikor Sendromu (APS): İmmünolojik Tromboz Paradoksu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "31 yaşındaki bir kadın hasta, ilki 9. haftada ve ikincisi 16. haftada olmak üzere iki kez açıklanamayan gebelik kaybı (fetal kayıp) ve sol bacağında ağrılı derin ven trombozu şikayetiyle başvuruyor. Rutin koagülasyon profilinde aPTT süresi 62 saniye (uzamış), trombosit sayısı 110.000/µL ve sifiliz tarama testi olan VDRL pozitif bulunuyor; ancak treponemal spesifik doğrulama testi (FTA-ABS) negatif sonuçlanıyor. Bu hastanın klinik tablosunu, laboratuvar paradoksunu ve gebelik kayıplarını açıklayan en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Primer Fibrinolizis Bozukluğu",
+      "B) Von Willebrand Hastalığı Tip 3",
+      "C) Antifosfolipid Antikor Sendromu (APS)",
+      "D) Konjenital Faktör VIII Eksikliği (Hemofili A)",
+      "E) Bernard-Soulier Sendromu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Vaka klasik Antifosfolipid Antikor Sendromu (APS) tablosudur. Tekrarlayan fetal kayıplar (plasental enfarktlar), venöz tromboz, hafif trombositopeni, fosfolipid antikorlarına bağlı in vitro uzamış aPTT (lupus antikoagülanı) ve kardiyolipine çapraz reaksiyona bağlı yalancı pozitif VDRL testi APS'nin kusursuz tanısal ipuçlarıdır. Hemofili ve von Willebrand hastalığı kanama diyatezidir, tromboz yapmaz; Bernard-Soulier ise dev trombositlerle giden kanama bozukluğudur."
+  },
+  {
+    "id": "prac-tromboz-026",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 26,
+    "slideTitle": "Heparin Kaynaklı Trombositopeni (HIT Tip II): İlaç Aracılı Trombotik Fırtına",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ortopedik kalça protezi operasyonu sonrası venöz tromboemboli profilaksisi amacıyla standart fraksiyone edilmemiş heparin (UFH) başlanan 68 yaşındaki bir hastada, tedavinin 7. gününde başlangıçta 260.000/µL olan trombosit sayısı aniden 75.000/µL'ye gerilemiştir. Eşzamanlı olarak hastanın sol ayağında soğukluk, solukluk, nabızsızlık ve şiddetli ağrı gelişmiş; yapılan anjiyografide sol femoral arterde trombositten zengin oklüzif trombüs saptanmıştır. Bu iatrojenik klinik tablonun moleküler immünopatolojisinden sorumlu olan temel mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Heparinin kemik iliğindeki megakaryositleri doğrudan zehirleyerek trombosit üretimini durdurması",
+      "B) Heparin ve Platelet Faktör 4 (PF4) kompleksine karşı gelişen IgG otoantikorlarının trombosit FcγRIIa reseptörlerini çapraz bağlayarak kontrolsüz agregasyonu tetiklemesi",
+      "C) Heparinin Antitrombin III'ü mutasyona uğratarak koagülasyonu aşırı hızlandırması",
+      "D) Dalak makrofajlarının heparin kaplı eritrositleri yutarak dalağı tıkaması",
+      "E) Fibrinojen moleküllerinin heparin tarafından parçalanarak fibrin oluşumunun durması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka, standart heparin tedavisinin 5-10. günlerinde ortaya çıkan Heparin Kaynaklı Trombositopeni (HIT Tip II) tablosudur. Pozitif yüklü PF4 ile heparinin kompleksine karşı IgG otoantikorları gelişir. Bu immün kompleksler trombosit yüzeyindeki FcγRIIa reseptörlerini çapraz bağlar; trombositler kanda kontrolsüzce kümeleşir ve damarları tıkar (akut bacak iskemisi - 'beyaz pıhtı'). Trombositler pıhtılarda tüketildiği için kanda sayıları >%50 oranında düşer. Tedavide heparin derhal kesilmeli ve direkt trombin inhibitörüne geçilmelidir."
+  },
+  {
+    "id": "prac-tromboz-027",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 27,
+    "slideTitle": "Kanser ve Tromboz: Trousseau Sendromu ve Tromboflebitis Migrans",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Son 3 ayda 12 kilo kaybeden, halsizlik ve iştahsızlık şikayeti olan 61 yaşındaki bir erkek hasta, sol kolunda ağrılı kızarık bir damar sertliği fark etmiştir. Bu lezyon bir hafta içinde gerilemiş ancak hemen ardından sağ uyluk ve sağ ön kol yüzeyel venlerinde yeni ağrılı, eritematöz, kordon benzeri sert venöz lezyonlar ortaya çıkmıştır (gezici tromboflebit). Fizik muayenede hafif sarılık saptanan hastada Trousseau sendromu düşünülmüştür. Bu hastada paraneoplastik trombozu tetikleyen ve altta yatan en olası primer malignite aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Derinin bazal hücreli karsinomu",
+      "B) Pankreas kuyruk veya gövde yerleşimli müsinöz adenokarsinomu",
+      "C) Tiroidin papiller mikrokarsinomu",
+      "D) Beyin glioblastoması",
+      "E) Prostat benign hiperplazisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tarif edilen klinik tablo tıp dünyasında Trousseau sendromu olarak bilinen Tromboflebitis Migrans (gezici tromboflebit) tablosudur. Farklı anatomik lokalizasyonlardaki venöz yataklarda yer değiştiren bu trombozlar, müsin salgılayan adenokarsinomların klasik paraneoplastik bir tezahürüdür ve en sık gizli seyreden pankreas gövde/kuyruk karsinomlarında, mide karsinomlarında ve akciğer adenokarsinomlarında görülür. Tümör hücrelerinden salınan prokoagülan müsinler ve doku faktörü yüklü veziküller bu tabloyu tetikler. Diğer seçeneklerdeki tümörlerin böyle bir ilişkisi yoktur."
+  },
+  {
+    "id": "prac-tromboz-028",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 28,
+    "slideTitle": "Trombüs Morfolojisi ve Zahn Çizgileri (Lines of Zahn)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Şüpheli bir ölüm vakasında yapılan adli otopside, abdominal aort lümeninde damar duvarına sıkıca yapışmış, kuru, kırılgan ve lümeni daraltan bir kitle saptanmıştır. Kitleden alınan doku örneğinin histopatolojik incelemesinde, açık renkli trombosit-fibrin tabakaları ile koyu renkli eritrositten zengin tabakaların birbirini takip eden ritmik çizgilenmeler oluşturduğu (Zahn çizgileri) gözlenmiştir. Bu mikroskobik bulgu adli tıp ve patoloji açısından aşağıdaki sonuçlardan hangisini KESİN OLARAK kanıtlar?",
+    "options": [
+      "A) Pıhtının ölümden saatler sonra yerçekimi etkisiyle çöktüğünü",
+      "B) Pıhtının hasta henüz hayattayken ve damarda aktif kan akımı varken (intravital) oluştuğunu",
+      "C) Hastada konjenital Faktör XIII eksikliği bulunduğunu",
+      "D) Hastanın ölüm anında derin hipotermiye maruz kaldığını",
+      "E) Pıhtının tamamen bakteriyel kolonilerden ibaret olduğunu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Zahn çizgileri (Lines of Zahn), yalnızca dolaşımın ve kan akımının aktif olduğu canlı bir organizmada trombosit/fibrin ile eritrositlerin dinamik laminasyonu sonucu oluşur. Bu nedenle histopatolojide bir pıhtıda Zahn çizgilerinin görülmesi, o lezyonun ölümden sonra (postmortem) değil, kişi henüz hayattayken (antemortem/intravital) geliştiğinin kesin ve tartışmasız kanıtıdır. Ölüm sonrası pıhtılarda akım olmadığı için Zahn çizgisi oluşamaz."
+  },
+  {
+    "id": "prac-tromboz-029",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 29,
+    "slideTitle": "Arteriyel Trombüsler, Venöz Trombüsler (Flebotromboz) ve Mural Trombüsler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Arteriyel ve venöz trombüslerin etiyopatolojik özellikleri, hücresel kompozisyonları ve büyüme yönleri karşılaştırıldığında, aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Venöz trombüsler kan akımının tersine doğru retrograd büyürken, arteriyel trombüsler kalbe doğru anterograd uzanır.",
+      "B) Arteriyel trombüsler yüksek akım altında eritrositlerin bol birikmesi nedeniyle koyu kırmızı renklidir.",
+      "C) Arteriyel trombüsler sıklıkla endotel hasarı zemininde gelişir, trombositten zengindir ve akımın tersine doğru ilerler.",
+      "D) Venöz trombüslerin oluşumunda endotelin fiziksel denudasyonu mutlak bir ön koşuldur.",
+      "E) Mural trombüsler yalnızca mikroskobik kapiller damarlarda gözlenen tıkayıcı tıkaclardır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Arteriyel trombüsler genellikle aterosklerotik plak çatlaması gibi endotel hasarı zemininde başlar; yüksek akım eritrositleri süpürdüğü için trombosit ve fibrinden zengin beyaz trombüslerdir ve geriye doğru (retrograd) büyüme eğilimindedir. A seçeneği yanlıştır çünkü büyüme yönleri tam tersidir (arteriyel retrograd, venöz anterograd). B seçeneği yanlıştır çünkü arteriyel trombüsler beyaz, venöz trombüsler kırmızıdır. D seçeneği yanlıştır çünkü venöz trombozda ana etken endotel hasarı değil stazdır. E seçeneği yanlıştır çünkü mural trombüsler kalp ve aort gibi geniş boşluklarda duvara yapışık pıhtılardır."
+  },
+  {
+    "id": "prac-tromboz-030",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 30,
+    "slideTitle": "Gerçek Trombüs ile Postmortem (Ölüm Sonrası) Pıhtı Ayrımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir adli tıp uzmanı, ani ölüm vakasında yaptığı otopside inferior vena cava lümenini incelemektedir. Lümen içerisinde damarı genişleten bir pıhtı kitlesi görmüş ve forseps ile tuttuğunda pıhtının damar duvarına hiçbir yapışıklık göstermeden, damarın iç kalıbı şeklinde kolaylıkla ve parçalanmadan dışarı çıktığını gözlemlemiştir. Pıhtı kesitinde alt kısmın koyu kırmızı jelatinimsi (Frenk üzümü jölesi), üst kısmın ise berrak sarımtırak yağ dokusu benzeri (tavuk yağı) olduğu saptanmıştır. Bu makroskopik özellikler aşağıdaki tanılardan hangisiyle KESİN OLARAK uyumludur?",
+    "options": [
+      "A) Organize olmuş eski femoral ven trombüsü",
+      "B) Ölüm sonrası gelişen postmortem pıhtı",
+      "C) Akut oklüzif aterosklerotik arteriyel trombüs",
+      "D) Enfektif endokardit vejetasyonu",
+      "E) Trousseau sendromuna bağlı gezici tromboflebit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tarif edilen bulgular (damar duvarına yapışmama, forsepsle lümen kalıbı şeklinde pürüzsüz çıkma, elastik jelatinimsi kıvam, yerçekimi sedimantasyonuyla oluşan alt koyu kırmızı 'Frenk üzümü jölesi' ve üst sarı 'tavuk yağı' görünümü) ölüm sonrası cesette gelişen masum Postmortem Pıhtı'nın klasik tanımlayıcı özellikleridir. Gerçek bir antemortem trombüs olsaydı duvara sıkıca yapışık, kuru, mat, kırılgan olurdu ve Zahn çizgileri içerirdi."
+  },
+  {
+    "id": "prac-tromboz-031",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 31,
+    "slideTitle": "Kalp Kapak Vejetasyonları: Enfektif, Marantik (NBTE) ve Libman-Sacks Ayrımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Evre IV metastatik pankreas adenokarsinomu nedeniyle takip edilen 59 yaşındaki kaşektik bir erkek hastada aniden sağ hemiparezi gelişmiş ve beyin tomografisinde embolik iskemik inme saptanmıştır. Yapılan transözofageal ekokardiyografide mitral kapağın kapanma çizgisi boyunca dizilmiş, 2-4 mm boyutlarında, kapak yaprakçıklarında herhangi bir perforasyon veya doku destrüksiyonu yapmamış steril nodüler vejetasyonlar tespit edilmiştir. Kan kültürlerinde üreme olmayan bu hastadaki kalp lezyonunun patolojik tanısı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut bakteriyel enfektif endokardit",
+      "B) Bakteriyel Olmayan Trombotik Endokardit (NBTE / Marantik Endokardit)",
+      "C) Libman-Sacks endokarditi",
+      "D) Romatizmal kalp hastalığı Aschoff nodülü",
+      "E) Sifilitik aortit vejetasyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka, yaygın kanserli (özellikle müsinöz karsinomlar) ve kaşektik hastalarda görülen Bakteriyel Olmayan Trombotik Endokardit (NBTE / Marantik endokardit) tablosudur. NBTE'de vejetasyonlar steril fibrin ve trombosit yığınlarından oluşur; kan kültürleri negatiftir; kapağın dokusunu yıkmaz veya delmez; ancak kapağa gevşek tutunduğu için kolayca koparak beyin ve periferik organlara emboli atar. Enfektif endokarditte kültür pozitiftir ve kapak tahrip olur; Libman-Sacks ise SLE'de kapağın her iki yüzeyindedir."
+  },
+  {
+    "id": "prac-tromboz-032",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 32,
+    "slideTitle": "Trombüsün Akıbeti: Propagasyon, Embolizasyon, Dissolüsyon, Organizasyon ve Rekanalizasyon",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik femoral ven trombozu öyküsü olan 52 yaşındaki bir hastanın radyolojik ve histopatolojik incelemesinde, eski trombüs kitlesinin damar duvarına kaynaştığı, fibröz bağ dokusu ile yer değiştirdiği ve kitlenin içinde endotel ile döşeli yeni mikroskobik kapiller kanalların oluşarak damarın proksimali ile distali arasında kısmi kan geçişini sağladığı gözlenmiştir. Ayrıca pıhtı merkezinde distrofik kalsifikasyon odakları saptanmıştır. Bu patolojik evrimsel süreç aşağıdakilerden hangisiyle adlandırılır?",
+    "options": [
+      "A) Akut septik nekroz",
+      "B) Organizasyon ve rekanalizasyon",
+      "C) Masif paradoksal embolizasyon",
+      "D) Fibrinoid dejenerasyon",
+      "E) Primer trombolitik dissolüsyon"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Trombüsün lizise uğrayamadığı durumlarda damar duvarından içine endotel hücreleri ve fibroblastların girmesiyle bağ dokusuna dönüşmesine 'organizasyon', endotel tomurcuklanmasıyla açılan yeni kapiller lümenlerin kan akımını kısmen yeniden tesis etmesine ise 'rekanalizasyon' adı verilir. Merkezde kalsiyum birikmesiyle flebolit (ven taşı) oluşabilir. A, C, D ve E seçenekleri bu histolojik süreci tanımlamaz."
+  },
+  {
+    "id": "prac-tromboz-033",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 33,
+    "slideTitle": "Dissemine İntravasküler Koagülasyon (DIC / DİK): Tüketim Koagülopatisi ve Mikrotrombozlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Zorlu bir doğum eylemi sırasında aniden dispne, siyanoz ve kardiyojenik şok tablosuna giren 28 yaşındaki bir lohusada amniyon sıvı embolisi geliştiği düşünülmüştür. Yoğun bakıma alınan hastanın endotrakeal tüpünden, idrar sondasından ve tüm damar yolu ponksiyon alanlarından durdurulamayan sızıntı şeklinde kanamalar başlamış; cildinde yaygın peteşi ve ekimozlar belirmiştir. Laboratuvarda: Trombosit sayısı 28.000/µL, PT 38 saniye (belirgin uzamış), aPTT 85 saniye (belirgin uzamış), plazma fibrinojeni 60 mg/dL (ağır hipofibrinojemi), D-dimer >15.000 ng/mL bulunmuş ve periferik yaymada bol miktarda miğfer hücresi (şistosit) saptanmıştır. Bu hastadaki hayatı tehdit eden tablonun patolojik tanısı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İmmün Trombositopenik Purpura (ITP)",
+      "B) Dissemine İntravasküler Koagülasyon (DIC / Tüketim Koagülopatisi)",
+      "C) İzole Faktör V Leiden mutasyonu",
+      "D) Bernard-Soulier Sendromu",
+      "E) Glanzmann Trombastenisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka obstetrik bir felaket olan amniyon sıvı embolisini takiben gelişen akut Dissemine İntravasküler Koagülasyon (DIC) tablosudur. Amniyon sıvısındaki yüksek miktardaki Doku Faktörü maternal dolaşıma karışarak masif trombin üretimine yol açmış; mikrotrombozlar kapillerlerde eritrositleri parçalayarak şistositleri üretmiş; ardından koagülasyon faktörleri ve trombositler hızla tükendiği için (tüketim koagülopatisi) trombositopeni, hipofibrinojemi, uzamış PT ve aPTT ile masif kanamalar ortaya çıkmıştır. ITP'de sadece trombosit düşüktür, PT/aPTT ve fibrinojen normaldir. Bernard-Soulier ve Glanzmann konjenital trombosit fonksiyon bozukluklarıdır."
+  },
+  {
+    "id": "prac-tromboz-034",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 34,
+    "slideTitle": "Tromboz Patofizyolojisi Klinik Sentezi, Komplikasyonlar ve Farmakoterapötik Hedefler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Klinik patoloji ve farmakoterapi dersinde arteriyel ve venöz trombozların patofizyolojik mekanizmaları ile bunlara yönelik hedefe yönelik ilaç stratejileri karşılaştırılmaktadır. Aşağıdaki klinik durum ve primer farmakolojik hedef eşleştirmelerinden hangisi BİYOLOJİK VE KLİNİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Koroner arter plak rüptürüne bağlı arteriyel tromboz profilaksisi — Yalnızca t-PA infüzyonu",
+      "B) Bacak derin ven trombozunun (DVT) tedavisi ve pulmoner emboli korunması — Trombosit COX-1 enzim inhibitörü düşük doz aspirin",
+      "C) Aterosklerotik serebrovasküler iskemik inme sekonder korunması — Trombosit agregasyonunu hedefleyen antiplatelet ajanlar (aspirin veya klopidogrel)",
+      "D) Atriyal fibrilasyona bağlı sol atriyal apendiks trombozu profilaksisi — Yalnızca rekombinant Faktör XIIIa verilmesi",
+      "E) Gebelikte derin ven trombozu profilaksisi — Teratojenik oral Varfarin tedavisi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Aterosklerotik arteriyel trombozlarda (koroner, serebral) primer mekanizma endotel hasarı ve trombosit agregasyonu olduğu için tedavinin ve sekonder korunmanın temel taşı antiplatelet ajanlardır (aspirin, klopidogrel). A seçeneği yanlıştır çünkü t-PA profilaktik değil akut litik ajandır. B seçeneği yanlıştır çünkü venöz trombozda aspirin primer tercih değildir, antikoagülanlar (heparin, DOAC) esastır. D seçeneği yanlıştır çünkü FXIIIa pıhtıyı eritmez aksine sertleştirir. E seçeneği yanlıştır çünkü varfarin teratojendir, gebelikte LMWH kullanılır."
+  },
+  {
+    "id": "prac-iskemi-infarktus-001",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
+    "slideNumber": 1,
+    "slideTitle": "Emboli Kavramı, Tanımı ve Fiziksel Yapılarına Göre Sınıflandırma",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Vasküler patoloji dersinde emboli kavramı ve klinik sonuçları tartışılırken, öğretim üyesi öğrencilerine emboli tipleri ve patofizyolojik etkileri hakkında bir soru yöneltmiştir. Aşağıdaki ifadelerden hangisi emboli biyolojisi ve genel patolojisi açısından YANLIŞTIR?",
+    "options": [
+      "A) Embolik materyal intravasküler alanda sadece katı trombüs parçalarından ibaret olmayıp sıvı veya gaz fazında da bulunabilir.",
+      "B) Klinik pratikte karşılaşılan embolilerin ezici çoğunluğu vasküler trombüslerden köken alan tromboembolilerdir.",
+      "C) Sistemik arteriyel dolaşıma giren bir embolinin en sık ve karakteristik patolojik sonucu hedef organda iskemik enfarktüs gelişimidir.",
+      "D) Derin ven trombozundan kopan bir pıhtı kitlesi, intakt kardiyak septum varlığında doğrudan sol ventriküle geçerek sistemik dolaşımı tıkar.",
+      "E) Pulmoner dolaşıma ulaşan büyük bir emboli, gaz değişimini bozmanın yanı sıra akut sağ kalp yüklenmesine ve ani ölüme yol açabilir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır. Normal anatomik koşullarda sistemik venöz sistemden (örneğin alt ekstremite derin venlerinden) kopan bir emboli, vena cava inferior ve sağ atriyum yoluyla sağ ventriküle, oradan da pulmoner arteriyel yatağa ulaşır; kardiyak septumda bir defekt (örneğin patent foramen ovale veya VSD) yoksa doğrudan sol kalbe ve sistemik arteriyel dolaşıma GEÇEMEZ. Eğer intrakardiyak şant varsa buna 'paradoksal emboli' adı verilir. A, B, C ve E seçenekleri emboli patolojisinin temel ilkelerini eksiksiz ve doğru şekilde açıklamaktadır."
+  },
+  {
+    "id": "prac-iskemi-infarktus-002",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 2,
+    "slideTitle": "Pulmoner Tromboembolizm (PTE) ve Derin Ven Trombozu (DVT) Bağlantısı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Total kalça protezi operasyonu geçiren ve postoperatif dönemde immobil kalan 68 yaşındaki bir kadın hastada ani gelişen nefes darlığı, taşikardi ve plöretik göğüs ağrısı ortaya çıkıyor. Çekilen BT pulmoner anjiyografide segmental pulmoner arter dallarında trombüs saptanıyor. Bu hastadaki pulmoner embolinin en olası anatomik kaynağı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sol ventrikül apikal mural trombüsü",
+      "B) Diz üstü derin bacak venleri (özellikle femoral ve popliteal venler)",
+      "C) Üst ekstremite sefalik ve bazilik venleri",
+      "D) Alt ekstremite yüzeyel safen ven sistemi",
+      "E) Portal ven ve süperior mezenterik ven kökleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Pulmoner tromboembolilerin yüzde 95'inden fazlası alt ekstremitelerin diz üstündeki derin venlerinden (v. poplitea, v. femoralis ve v. iliaca) köken alır; kalça ve diz cerrahisi sonrası immobilizasyon DVT için en yüksek risk faktörlerinden biridir. A seçeneği (sol ventrikül) sistemik arteriyel emboli kaynağıdır. C seçeneği nadirdir ve genellikle kateter ilişkili santral ven trombozlarında görülür. D seçeneği (safen venler) yüzeyel tromboflebit yapar, nadiren embolize olur. E seçeneği (portal ven) karaciğer sinüzoidlerine dökülür, sistemik venöz dolaşıma katılmaz."
+  },
+  {
+    "id": "prac-iskemi-infarktus-003",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 3,
+    "slideTitle": "Pulmoner Embolilerin Patolojik Spektrumu ve Klinik Sonuçları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Hastanede yatan hastalarda saptanan pulmoner tromboembolilerin klinik seyri, boyutu ve doku üzerindeki nihai akıbeti incelendiğinde, aşağıdaki ifadelerden hangisi PATOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Pulmoner embolilerin neredeyse tamamı ilk anda masif hemorajik akciğer enfarktüsü ile sonuçlanır.",
+      "B) Olguların yüzde 60-80'i klinik olarak sessiz seyreder ve pıhtı zamanla organize olarak damar duvarına katılır.",
+      "C) Küçük pulmoner emboliler akciğer dokusunda hiçbir zaman rezorbe edilemez ve daima kavitasyonlu apselere döner.",
+      "D) Pulmoner arter yatağının sadece yüzde 5'inin tıkanması dahi ani kardiyojenik şok ve akut kor pulmonale için yeterlidir.",
+      "E) Akciğer embolilerinde fibrinolitik sistem tamamen etkisizdir ve pıhtı lizisi hiçbir koşulda gerçekleşmez."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Pulmoner embolilerin yüzde 60-80'i küçük çaplıdır, asemptomatiktir ve zaman içerisinde endojen fibrinoliz ve endotelyal organizasyon süreçleriyle damar duvarına entegre olarak rezorbe edilir. A seçeneği yanlıştır çünkü akciğer çift kan dolaşımına sahip olduğundan embolilerin sadece yüzde 10'undan azında enfarktüs gelişir. C seçeneği yanlıştır, küçük emboliler apse yapmaz; aseptik organizasyonla iyileşir. D seçeneği yanlıştır; akut sağ kalp yetmezliği ve kardiyovasküler şok için pulmoner yatağın en az yüzde 50'sinin tıkanması gerekir. E seçeneği yanlıştır, endojen t-PA sistemi pıhtı lizisinde son derece aktiftir."
+  },
+  {
+    "id": "prac-iskemi-infarktus-004",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 4,
+    "slideTitle": "Masif ve Semer (Saddle) Pulmoner Emboli: Akut Sağ Kalp İflası ve Ani Ölüm",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Büyük bir ortopedik cerrahi sonrası yatağa bağımlı olan 72 yaşındaki bir erkek hasta, ayağa kalkmaya çalıştığı sırada aniden göğsünü tutarak yere yığılıyor. Şiddetli siyanoz, nabızsız elektriksel aktivite (PEA) saptanan hasta resüsitasyona yanıt vermeyerek 10 dakika içinde hayatını kaybediyor. Yapılan otopside truncus pulmonalis bifurkasyonunda her iki ana pulmoner arteri tıkayan 15 cm uzunluğunda kıvrımlı trombüs kitlesi ve sağ ventrikülde masif dilatasyon izleniyor. Bu hastada ani ölüme yol açan temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Her iki akciğerde gelişen yaygın koagülasyon nekrozu ve gangren",
+      "B) Akut kor pulmonale zemininde kardiyak debinin çökmesi ve elektromekanik disosiasyon",
+      "C) Serebral arterlerde gelişen yaygın trombosit tüketimi ve masif kanama",
+      "D) Koroner arterlerin akut trombozu sonucu gelişen transmural anteroseptal enfarktüs",
+      "E) Bronşiyal arter spazmına bağlı gelişen akut hipoksik solunum arresti"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Hastada tanımlanan klinik ve otopsideki morfolojik bulgular klasik bir 'semer (saddle) emboli' tablosudur. Pulmoner arter bifurkasyonunun tıkanması sağ ventrikülde akut aşırı basınç artışına ve akut sağ kalp yetmezliğine (akut kor pulmonale) yol açar. Akciğerlerden sol kalbe kan dönemediği için sol ventrikül debisi aniden sıfırlanır, elektromekanik disosiasyon gelişir ve hasta dakikalar içinde kaybedilir. Akciğer dokusunda enfarktüs gelişecek zaman bile kalmamıştır (A yanlıştır). Primer koroner oklüzyon veya serebral patoloji mevcut değildir (C ve D yanlıştır)."
+  },
+  {
+    "id": "prac-iskemi-infarktus-005",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 5,
+    "slideTitle": "Akciğerin İkili Dolaşımı ve Pulmoner Hemorajik Enfarktüs Patogenezi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik iskemik kalp hastalığı ve konjestif sol kalp yetmezliği tanısıyla takip edilen 65 yaşındaki bir hastada aniden plöretik göğüs ağrısı, nefes darlığı ve öksürükle az miktarda taze kan çıkarma (hemoptizi) gelişiyor. Çekilen toraks BT'de sağ akciğer alt lob periferinde tabanı visseral plevraya dayanan, tepesi hilusa doğru yönelen kama şeklinde konsolidasyon alanı saptanıyor. Bu hastadaki akciğer lezyonunun makroskobik ve mikroskobik özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Lezyon kansız ve soluk renkte olup tipik bir beyaz (anemik) enfarktüs örneğidir.",
+      "B) Akciğerin tek bir uç artere sahip olması nedeniyle nekroz sahasına hiçbir şekilde eritrosit giremez.",
+      "C) Lezyon, bronşiyal dolaşımdan sızan kan ve alveolar hemoraji ile karakterize kırmızı (hemorajik) enfarktüstür.",
+      "D) Altta yatan sol kalp yetmezliği akciğer enfarktüsü gelişme riskini azaltan koruyucu bir faktördür.",
+      "E) Nekroz alanı beyin dokusunda olduğu gibi ilk 24 saat içinde primer likefaksiyon nekrozu gösterir."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Akciğer enfarktüsleri ikili kan dolaşımına (pulmoner ve bronşiyal arterler) ve gevşek parankim yapısına sahip organlarda görülen klasik 'kırmızı (hemorajik) enfarktüs' lezyonlarıdır. Tıkalı pulmoner artere rağmen bronşiyal damarlardan veya çevre kapillerlerden nekrotik alveolar boşluklara yoğun eritrosit ekstravazasyonu olur. Tabanı plevraya bakan kama şeklindedir ve hemoptizi/plöretik ağrı yapar. A ve B yanlıştır (beyaz değil kırmızıdır). D yanlıştır; sol kalp yetmezliği ve venöz konjesyon enfarktüs gelişme riskini artıran ana faktördür. E yanlıştır; akciğer enfarktüsü likefaksiyon değil koagülasyon nekrozudur."
+  },
+  {
+    "id": "prac-iskemi-infarktus-006",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 6,
+    "slideTitle": "Tekrarlayan Küçük Pulmoner Emboliler ve Kronik Tromboembolik Pulmoner Hipertansiyon (KTEPH)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Son iki yıldır giderek artan nefes darlığı, çabuk yorulma ve bacaklarda şişlik şikayetiyle başvuran 54 yaşındaki kadın hastanın ekokardiyografisinde pulmoner arter sistolik basıncı 65 mmHg (belirgin artmış), sağ ventrikül serbest duvar kalınlığı 8 mm (normalde <5 mm, konsantrik hipertrofi) ve sağ atriyum dilate saptanıyor. Sol ventrikül ejeksiyon fraksiyonu ve kapakları normal olan hastanın sintigrafisinde her iki akciğerde çok sayıda segmental perfüzyon defekti izleniyor. Bu hastadaki sağ ventrikül hipertrofisine yol açan en olası patolojik süreç aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Truncus pulmonalis'i tam tıkayan tek bir masif semer tromboemboli",
+      "B) Uzun süreli tekrarlayan küçük pulmoner embolilere bağlı kronik vasküler obliterasyon",
+      "C) Sol ventrikül anterior duvar enfarktüsüne bağlı akut kardiyojenik şok",
+      "D) Amniyon sıvısı embolizasyonuna bağlı akut anafilaktoid vazodilatasyon",
+      "E) Bronşiyal arter rüptürüne bağlı masif intraalveolar hemoraji"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Olguda kronik süreçte gelişen pulmoner hipertansiyon, sağ ventrikül konsantrik hipertrofisi ve sağ kalp yetmezliği (kronik kor pulmonale) tablosu mevcuttur. Perfüzyon sintigrafisindeki çok sayıda segmental defekt, tablonun 'tekrarlayan küçük pulmoner emboliler' zemininde geliştiğini (KTEPH) kanıtlamaktadır. A seçeneği (akut semer emboli) ani ölüm ve sağ ventrikülde hipertrofi değil 'akut dilatasyon' yapar. C seçeneği sol kalp yetmezliği yapar, bu hastada sol kalp fonksiyonları normaldir. D seçeneği dakikalar içinde gelişen akut obstetrik felakettir. E seçeneği kronik pulmoner hipertansiyon nedeni değildir."
+  },
+  {
+    "id": "prac-iskemi-infarktus-007",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 7,
+    "slideTitle": "Sistemik Tromboembolizm: Anatomik Kökenler ve Sol Kalp Kaynaklı Trombüsler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş iki yaşındaki erkek hasta, anterior miyokard enfarktüsü geçirdikten 3 hafta sonra aniden gelişen sağ tarafında tam felç ve konuşamama (afazi) tablosu ile acil servise getiriliyor. Çekilen difüzyon MR'da sol orta serebral arter (MCA) sulama alanında akut iskemik enfarktüs saptanıyor. Ekokardiyografide sol ventrikül apeksinde akinetik segment üzerinde hareketli kitle (trombüs) izleniyor. Bu hastadaki inme tablosunun patofizyolojik mekanizması ve kaynaklandığı yapı aşağıdakilerden hangisinde DOĞRU eşleştirilmiştir?",
+    "options": [
+      "A) Pulmoner venöz tromboz → Paradoksal emboli",
+      "B) Sol ventrikül mural trombüsü → Sistemik arteriyel tromboembolizm",
+      "C) Derin bacak ven trombozu → Semer pulmoner emboli",
+      "D) Aort kökü diseksiyonu → Retrograd koroner perfüzyon iflası",
+      "E) Sol atriyal miksoma → Sağ ventrikül obstrüksiyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Geçirilmiş transmural anterior MI sonrasında akinetik sol ventrikül apeksinde staz ve endotel hasarı zemininde 'sol ventrikül mural trombüsü' gelişir. Bu trombüsten kopan parçalar sol kalpten aortaya fırlatılarak sistemik arteriyel emboliye yol açar; bu vakada serebral dolaşıma (MCA) giderek iskemik inme oluşturmuştur. Sistemik arteriyel embolilerin en sık kökeni sol ventrikül enfarktüsleridir (%60-65). A seçeneği yanlıştır çünkü kardiyak şant tanımlanmamıştır. C seçeneği pulmoner dolaşımı tıkar. D ve E seçenekleri vaka ile uyumsuzdur."
+  },
+  {
+    "id": "prac-iskemi-infarktus-008",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 8,
+    "slideTitle": "Sistemik Embolilerin Hedef Organ Dağılımı ve Klinik İskemi Tabloları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Atriyal fibrilasyonu olan 76 yaşındaki bir kadın hastada sol atriyal apandiksten kopan mural trombüs parçalarının sistemik arteriyel dolaşıma dağıldığı tespit ediliyor. Sistemik tromboembolizmin organ dağılım sıklığı göz önüne alındığında, bu embolik kitlenin en yüksek olasılıkla yerleşeceği anatomik bölge aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pulmoner arter dalları",
+      "B) Alt ekstremite arterleri (örneğin femoral arter)",
+      "C) Renal arter ana gövdesi",
+      "D) Çölyak trunkus dalları",
+      "E) Splenik arter"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sol kalpten kaynaklanan sistemik arteriyel embolilerin en sık yerleştiği bölge yaklaşık yüzde 70 ila 75 oranla alt ekstremite arterleridir (özellikle iliak ve femoral arter dalları). İkinci sırada beyin (%10) yer alır. A seçeneği (pulmoner arter) sistemik venöz sistemden kaynaklanan embolilerin hedefidir; sol atriyal trombüs intakt septumda pulmoner artere gidemez. C, D ve E seçeneklerindeki viseral organlar sistemik embolilerin daha az bir kısmını (%1-5) oluşturur."
+  },
+  {
+    "id": "prac-iskemi-infarktus-009",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 9,
+    "slideTitle": "Yağ ve Kemik İliği Embolisi: Etyoloji ve Dolaşıma Giriş Mekanizması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Motosiklet kazası sonrası kapalı femur ve tibia kırığı saptanan 24 yaşındaki bir erkek hastanın kemik iliği ve vasküler patolojisi incelenmektedir. Travma sonrasında yağ ve kemik iliği parçacıklarının sistemik venöz dolaşıma karışmasını sağlayan temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Arteriyoler düz kas hipertrofisine bağlı gelişen retrograd akım",
+      "B) Medüller venöz sinüzoidlerin yırtılması ve kırık sahasındaki intramedüller basınç artışı",
+      "C) Karaciğerde aşırı VLDL sentezi ve kapiller endotel lizisi",
+      "D) Plazminojen aktivasyonuna bağlı subkutan yağ dokusunun destrüksiyonu",
+      "E) İntraosseöz lenfatik damarların vazodilatasyonu ve lenfödem gelişimi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kemik iliğinde venöz sinüzoidler sert kemik dokusuyla çevrilidir; kırık anında sinüzoid duvarları yırtılırken medüller kavitedeki hematom ve ödem kemik içi basıncı venöz basıncın üzerine çıkarır. Bu basınç gradyanı serbestleşen yağ damlacıklarını ve hematopoetik öncül hücreleri venöz lümene fırlatır. A, C, D ve E seçeneklerindeki mekanizmalar yağ embolisi fizyopatolojisinde yer almaz."
+  },
+  {
+    "id": "prac-iskemi-infarktus-010",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 10,
+    "slideTitle": "Yağ Embolisi Sendromu (FES): Klinik Triad ve İki Aşamalı Patogenez",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Araç içi trafik kazasında bilateral femur cisim kırığı geçiren 22 yaşındaki bir üniversite öğrencisi ortopedi servisine yatırılıyor. Yatışının 36. saatinde hastada aniden taşipne, nefes darlığı, ajitasyon ve oryantasyon bozukluğu gelişiyor. Fizik muayenede boyun, her iki aksilla ve konjonktivada basmakla solmayan multipl peteşiyal lezyonlar izleniyor. Akciğer grafisinde bilateral yaygın infiltrasyonlar ve laboratuvarda belirgin trombositopeni saptanıyor. Bu hastadaki klinik tablonun patogenezi ile ilgili aşağıdaki ifadelerden hangisi EN DOĞRUDUR?",
+    "options": [
+      "A) Derin ven kaynaklı tek bir büyük semer trombüsün bifurkasyonu tıkaması sonucu gelişen akut sağ kalp dilatasyonudur.",
+      "B) Dolaşıma katılan trigliseritlerin hidroliziyle açığa çıkan serbest yağ asitlerinin yaygın endotel hasarı ve kapiller permeabilite artışı oluşturmasıdır.",
+      "C) Amniyotik sıvının maternal dolaşıma geçerek tetiklediği akut anafilaktoid vazomotor kollapstır.",
+      "D) Clostridium perfringens enfeksiyonuna bağlı gelişen anaerobik gazlı gangren ve toksik şok tablosudur.",
+      "E) Aşırı kanamaya bağlı periferik dokularda hiçbir endotelyal hasar olmaksızın gelişen saf hipovolemik şoktur."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Hastada uzun kemik (femur) kırığı sonrası 36. saatte ortaya çıkan solunum yetmezliği (ARDS), konfüzyon/ajitasyon ve aksiller peteşiyal döküntü klasik 'Yağ Embolisi Sendromu (FES)' tablosudur. FES patogenezinde mikrosirkülasyona takılan trigliseritlerin lipazlarla serbest yağ asitlerine (FFA) dönüştürülmesi ve bu toksik yağ asitlerinin yaygın endotel hasarı, mikrovasküler geçirgenlik artışı (ARDS) ve trombosit tüketimi (peteşiler ve trombositopeni) yapması esastır. A seçeneğinde aksiller peteşi ve nörolojik latent triad görülmez. C obstetriktir. D gazlı gangrendir. E saf hipovolemiyi tanımlar."
+  },
+  {
+    "id": "prac-iskemi-infarktus-011",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 11,
+    "slideTitle": "Hava ve Gaz Embolisi: İatrojenik Nedenler ve Vasküler Tıkanma Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yoğun bakımda izlenen bir hastada subklavyen venöz kateter değişimi yapıldığı sırada hasta aniden derin bir nefes alıyor ve kateter lümeninden içeriye hızla hava emildiği fark ediliyor. Saniyeler içinde hastada derin siyanoz, şiddetli hipotansiyon, nabızsız kardiyak arrest gelişiyor ve stetoskopla prekordiyum dinlendiğinde tipik bir çalkantı sesi ('mill-wheel murmur') duyuluyor. Bu hastada kardiyovasküler kollapsa yol açan temel fiziksel patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sol atriyal apandiksten kopan trombüsün femoral arteri tıkaması",
+      "B) Sağ ventrikülde toplanan büyük hacimli havanın 'hava kilidi' oluşturarak pulmoner çıkış yolunu mekanik olarak tıkaması",
+      "C) Akciğer kapillerlerinde kemik iliği megakaryositlerinin birikmesi",
+      "D) Koroner sinüste kalsiyum kristallerinin çökmesi",
+      "E) Bronşiyal ven rüptürüne bağlı plevral kaviteye hava kaçağı (pnömotoraks)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Subklavyen kateter takılması veya çıkarılması esnasında derin inspiryumla oluşan negatif intratorasik basınç havayı venöz sisteme çeker. Venöz sisteme hızla giren 100 mL'nin üzerindeki hava sağ ventrikülde köpük kütlesi oluşturarak 'hava kilidi (air lock)' yapar; sağ ventrikül mekanik obstrüksiyona uğrar, pulmoner akım kesilir ve prekordiyumda tipik değirmen çarkı üfürümü (mill-wheel murmur) eşliğinde arrest gelişir. A seçeneği sistemik arteriyel embolidir. C kemik iliği embolisidir. E pnömotorakstır, damar içi hava kilidini açıklamaz."
+  },
+  {
+    "id": "prac-iskemi-infarktus-012",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 12,
+    "slideTitle": "Dekompresyon Hastalığı ve Caisson Hastalığı: Azot Kabarcıkları, Bends, Chokes ve Aseptik Kemik Nekrozu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tüplü dalış (scuba diving) yapan 32 yaşındaki bir su altı fotoğrafçısı, derin bir mağarada tüpündeki arıza nedeniyle dekompresyon basamaklarına uymaksızın aniden yüzeye çıkıyor. Yüzeye çıktıktan 20 dakika sonra her iki dizinde ve omuzlarında kıvrandırıcı şiddetli ağrı, substernal göğüs sıkışması, nefes darlığı ve şiddetli öksürük krizi başlıyor. Bu hastadaki patolojik süreç ve gelişebilecek kronik komplikasyonlar ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Kanda çözünmüş oksijen gazının trombüs haline gelmesi sonucu gelişen koroner tıkanmadır.",
+      "B) Akut tablo azot gazının kanda kabarcık oluşturmasıyla gelişmiştir; kronik formunda ise femur ve humerus başında aseptik osteonekroz gelişebilir.",
+      "C) Tablo primer olarak derin ven trombüsünün pulmoner arter bifurkasyonunu tıkamasından ibarettir.",
+      "D) Hastanın tedavisi için acilen venöz sistemden hava boşaltıcı laparotomi yapılmalıdır.",
+      "E) Periartiküler ağrının temel nedeni kalsiyum pirofosfat kristallerinin sinovyal sıvıda çökmesidir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Olguda ani dekompresyon sonrası kanda çözünmüş nitrojen (azot) gazının kabarcıklaşmasıyla gelişen akut dekompresyon hastalığı mevcuttur. Eklemlerdeki kıvrandırıcı ağrı 'the bends', solunum sıkıntısı ise pulmoner kapiller tutulum olan 'the chokes' tablosudur. Tekrarlayan maruziyetlerde kemik epifizlerinde iskemik hasara bağlı 'aseptik kemik nekrozu' (Caisson hastalığı) gelişir. A seçeneği yanlıştır çünkü sorumlu gaz oksijen değil azottur. C tromboembolidir. D rekompresyon odası gerektirir, laparotomi endike değildir. E psödoguttur."
+  },
+  {
+    "id": "prac-iskemi-infarktus-013",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Amniyon Sıvı Embolisi (AFE): Fetal Enkaz, Anafilaktoid Şok ve DİK Felaketi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Otuz iki yaşındaki multipar gebe kadının aktif eylem sırasında normal vajinal doğumu gerçekleştirilirken aniden şiddetli nefes darlığı, dudaklarda siyanoz, konvülsiyon ve tansiyonun ölçülemeyecek kadar düşmesi (şok) gelişiyor. Hızla entübe edilen hastanın epizyotomi hattından ve damar yolu giriş yerlerinden durdurulamayan masif kan sızıntıları başlıyor. Laboratuvarda PT ve aPTT belirgin uzamış, fibrinojen seviyesi kritik derecede düşmüş ve D-dimer aşırı yüksek bulunuyor. Anne tüm müdahalelere rağmen kaybediliyor. Bu hastada yapılan otopside maternal akciğer mikrosirkülasyonunda görülmesi en karakteristik olan histopatolojik bulgu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pulmoner arter dallarını tıkayan lamine Zahn çizgileri içeren dev trombüs kütlesi",
+      "B) Küçük pulmoner arteriyol ve kapiller lümenlerinde fetal skuamöz hücreler, verniks kazeoza ve lanugo kılları",
+      "C) Alveolar septumlarda kazeifiye granülomlar ve Langhans dev hücreleri",
+      "D) Pulmoner ven lümenlerinde kalsifiye aterom plağı kristalleri",
+      "E) Alveol boşluklarını dolduran yaygın hemosiderin yüklü makrofajlar (kalp hatası hücreleri)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Doğum sırasında ani kardiyopulmoner şok, dispne, siyanoz ve ardından tüketim koagülopatisi / yaygın damar içi pıhtılaşma (DİK) ile karakterize durdurulamayan kanama tablosu klasik 'Amniyon Sıvı Embolisi (AFE)' tablosudur. AFE'de maternal akciğer mikrosirkülasyonunun histopatolojik incelemesinde amniyon sıvısıyla taşınan fetal skuamöz epitel hücreleri, verniks kazeoza yağları ve lanugo kılları görülür. A seçeneği tromboemboliyi, C tüberkülozu, D aterom embolisini, E ise sol kalp yetmezliğine bağlı kronik pasif konjesyonu tanımlar."
+  },
+  {
+    "id": "prac-iskemi-infarktus-014",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 14,
+    "slideTitle": "İnfarktüs Patolojisine Giriş: Tanım, Etyolojik Nedenler ve Damar Tıkanıklığı Türleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Patoloji laboratuvarına gönderilen çeşitli cerrahi ve otopsi materyallerinde enfarktüs saptanan olgular incelenmektedir. İnfarktüs patogenezi ve vasküler tıkanma mekanizmaları değerlendirildiğinde, aşağıdaki klinik tablolardan hangisinde gelişen enfarktüsün primer mekanizması ARTERİYEL İNTRALÜMİNAL TIKANMA DEĞİLDİR?",
+    "options": [
+      "A) Sol anterior desendan (LAD) koroner arterde aterom plağı rüptürü sonrası tromboz",
+      "B) Atriyal fibrilasyon zemininde sol atriyumdan kopan embolinin süperior mezenterik arteri tıkaması",
+      "C) İnguinal fıtık kesesi içinde sıkışan ince barsak ansının venöz drenajının kesilerek boğulması (strangülasyon)",
+      "D) Aort mural trombüsünden kopan pıhtının sol ana renal arteri tıkaması",
+      "E) Sol atriyal mural trombüsün orta serebral arter (MCA) lümenini tıkaması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. İnguinal fıtık kesesinde boğulan (strangüle) ince barsak ansında primer mekanizma lümen içi arteriyel trombüs veya emboli değildir; barsak venlerinin fıtık boynunda dıştan mekanik olarak sıkışması (venöz oklüzyon ve staz) sonucu sekonder olarak perfüzyonun durması ve hemorajik enfarktüs gelişmesidir. A, B, D ve E seçeneklerindeki tüm patolojiler klasik intralüminal arteriyel tromboz veya arteriyel tromboembolizm örnekleridir."
+  },
+  {
+    "id": "prac-iskemi-infarktus-015",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 15,
+    "slideTitle": "Beyaz (Anemik) Enfarktüs: Katı Organlar, Tek Uç-Arter Mimarisi ve Kama Morfolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sistemik tromboemboli öyküsü olan 60 yaşındaki bir hastanın yapılan otopsisinde sol böbrek korteksinde tabanı böbrek fibröz kapsülüne oturan, tepesi hilusa doğru yönelmiş, keskin sınırlı, üçgen/kama şeklinde, soluk sarı-beyaz renkli ve sert kıvamda nekroz alanı izleniyor. Çevresinde dar, kırmızı bir hiperemi halkası dikkati çekiyor. Bu lezyonun patolojik tipi ve böbrekte bu morfolojide oluşmasının temel nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kırmızı enfarktüs; böbreğin çift kan dolaşımına sahip olması",
+      "B) Beyaz (anemik) enfarktüs; böbreğin katı organ olması ve tek uç-arter dolaşımına sahip olması",
+      "C) Likefaksiyon nekrozu; lökositlerin hidrolitik enzim salgılaması",
+      "D) Yağ nekrozu; lipaz enzimlerinin perirenal yağ dokusunu eritmesi",
+      "E) Kazeöz nekroz; mikobakteriyel basillerin granülom oluşturması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Böbrek, dalak ve kalp; kompakt katı parankime ve kollaterali olmayan tek uç arter (end-artery) kanlanmasına sahiptir. Bir interlober veya arkuat arter tıkandığında nekroz alanına kan sızamaz; ortaya tabanı kapsüle, tepesi tıkalı damara bakan kama şeklinde soluk, kansız bir lezyon olan 'beyaz (anemik) enfarktüs' çıkar. A seçeneği yanlıştır çünkü böbrek çift dolaşımlı değildir ve lezyon kırmızı değildir. C, D ve E seçeneklerindeki nekroz tipleri böbrek enfarktüsünü yansıtmaz."
+  },
+  {
+    "id": "prac-iskemi-infarktus-016",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 16,
     "slideTitle": "Kırmızı (Hemorajik) Enfarktüs: Çift Dolaşımlı ve Gevşek Dokular",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Şiddetli skrotal ağrı ile başvuran 16 yaşındaki bir erkekte spermatik kordun kendi etrafında dönmesi (testis torsiyonu) sonucu cerrahiye alınıyor. Testisin koyu mor-siyah renkte, aşırı kanlı ve nekroze olduğu saptanıyor. Testiste gelişen bu enfarktüsün kırmızı (hemorajik) olmasının primer patogenetik nedeni aşağıdakilerden hangisidir?",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "On altı yaşındaki bir erkek çocuk, aniden başlayan şiddetli sol skrotal ağrı, şişlik ve kızarıklık şikayetiyle acil servise getiriliyor. Yapılan Doppler ultrasonografide sol testise giden venöz kan akımının tamamen durduğu ve spermatik kordun kendi ekseni etrafında 360 derece döndüğü (testis torsiyonu) saptanıyor. Cerrahi eksplorasyonda testisin ileri derecede büyümüş, yumuşak, koyu mor-siyah renkte ve kanla göllenmiş olduğu görülüyor. Bu testisteki enfarktüsün kırmızı (hemorajik) tipte olmasının temel mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      "A) Uç arter oklüzyonu sonucu hiç kan girmemesi",
-      "B) Venöz drenajın tıkanması sonucu arteriyel kanın dokuda göllenmesi ve kanamalı nekroz",
-      "C) Testis parankiminin aşırı sert ve solid olması",
-      "D) Siyanür intoksikasyonu gelişmesi",
-      "E) Doku plazminojen aktivatörünün (t-PA) aşırı salınması"
+      "A) Testisin tek uç artere sahip olması ve parankiminin aşırı kompakt olması",
+      "B) Arteriyel kan girişinin sürmesine karşın venöz çıkışın mekanik olarak tıkanması ve kapiller yırtılma",
+      "C) Skrotum içinde primer likefaksiyon nekrozuna bağlı apse gelişimi",
+      "D) Fibröz kapsülün kalsifiye olarak arteriyel kanı tamamen bloke etmesi",
+      "E) Testiküler dokuda yağ nekrozu gelişerek sabunlaşma plakları oluşturması"
     ],
-    "correctAnswer": "B",
-    "explanation": "Testis torsiyonunda ince duvarlı venöz damarlar ilk tıkanır; arteriyel kan dokuya girmeye devam eder ancak çıkamadığı için masif venöz konjesyon, rüptür ve kırmızı (hemorajik) enfarktüs gelişir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Testis torsiyonu veya over torsiyonunda pedikülün dönmesiyle önce ince duvarlı venler tıkanır (venöz oklüzyon). Kalın duvarlı arterlerden kan girmeye devam eder fakat dışarı çıkamaz. Kapiller yatakta aşırı hidrostatik basınç artışı gelişir, kapillerler yırtılır ve parankim tamamen kanla dolarak 'kırmızı (hemorajik) enfarktüs' meydana gelir. A seçeneği beyaz enfarktüsün mekanizmasıdır. C, D ve E seçenekleri torsiyon patolojisini açıklamaz."
   },
   {
-    "id": "tromboz-infarkt-q13",
+    "id": "prac-iskemi-infarktus-017",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Enfarktüsün Morfolojisi: Kama Şekli ve Nekroz Tipleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Sol orta serebral arter (MCA) tıkanıklığı sonucu inme geçiren ve aylar sonra vefat eden bir hastanın beyin otopsisinde lezyon bölgesinde kistik bir boşluk saptanıyor. Beyin enfarktüslerinde koagülasyon nekrozu yerine görülen bu spesifik nekroz tipi aşağıdakilerden hangisidir?",
+    "slideNumber": 17,
+    "slideTitle": "Enfarkt Gelişimini ve Şiddetini Belirleyen Dört Temel Patofizyolojik Faktör",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kardiyovasküler patoloji dersinde öğretim üyesi öğrencilerine şu klinik durumu aktarıyor: 'Yetmiş beş yaşındaki bir hastada koroner anjiyografide sol ön inen (LAD) arterde %95 oranında yavaş gelişmiş aterosklerotik darlık saptanmasına rağmen hastada miyokard enfarktüsü gelişmemiştir. Buna karşılık 45 yaşındaki başka bir hastada aynı artere oturan küçük bir emboli dakikalar içinde geniş transmural enfarktüs oluşturmuştur.' Bu iki hasta arasındaki farkı açıklayan en temel patofizyolojik faktör aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kazeifikasyon nekrozu",
-      "B) Yağ nekrozu",
-      "C) Likefaksiyon (sıvılaşma / kollikuasyon) nekrozu",
-      "D) Fibrinoid nekroz",
-      "E) Gangrenöz nekroz"
+      "A) İkinci hastanın nöronlarının miyokard hücrelerinden daha dirençli olması",
+      "B) Tıkanmanın gelişme hızı ve buna bağlı kollateral dolaşım gelişimine zaman kalması",
+      "C) Birinci hastada koroner arterlerin çift dolaşım sistemine sahip olması",
+      "D) Genç hastada plazminojen aktivatör inhibitörünün genetik olarak eksik olması",
+      "E) Yaşlı hastada fibroblastların koagülasyon nekrozuna uğramaması"
     ],
-    "correctAnswer": "C",
-    "explanation": "Santral sinir sisteminde (beyin ve omurilik) iskemik hasar, zengin lipit içeriği ve otolitik enzimler nedeniyle koagülasyon nekrozu değil, likefaksiyon (sıvılaşma) nekrozu ile sonuçlanır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tıkanmanın gelişme hızı enfarktüsün ortaya çıkışında anahtar rol oynar. Yavaş gelişen kronik oklüzyonlarda iskemi anjiyogenezi uyarır ve alternatif interkoroner anastomozlar (kollateral damarlar) genişleyerek perfüzyonu devralır. Ani oklüzyonlarda ise kollateral dolaşımın gelişmesine zaman kalmadığından miyokard hızla nekroza gider. Koroner arterler çift dolaşımlı değildir (C yanlıştır). Hücresel direnç farkı aynı doku içinde bu durumu açıklamaz (A, D, E yanlıştır)."
   },
   {
-    "id": "tromboz-infarkt-q14",
+    "id": "prac-iskemi-infarktus-018",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "İskemi ve Enfarktüs Gelişimini Etkileyen Dört Kritik Faktör",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Ani ve tam bir arteriyel tıkanma durumunda hücresel düzeyde geri dönüşümsüz iskemik hasarın ve nekrozun en erken (en kısa sürede) başladığı doku/hücre grubu aşağıdakilerden hangisidir?",
+    "slideNumber": 18,
+    "slideTitle": "Enfarktüs Histopatolojisi: Koagülasyon Nekrozu, Hayalet Hücreler ve Çekirdek Değişiklikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut miyokard enfarktüsü tanısıyla yoğun bakımda izlenirken 48. saatte kardiyak rüptür nedeniyle kaybedilen bir hastanın otopsisinde kalbin sol ventrikül anterior duvarından histopatolojik kesit alınıyor. Mikroskobik incelemede miyositlerin hücre ana hatlarının ve doku mimarisinin korunduğu, sitoplazmaların parlak pembe (aşırı eozinofilik) boyandığı, ancak miyosit çekirdeklerinin tamamen eriyerek kaybolduğu (karyolizis) ve aralarda nötrofil infiltrasyonu olduğu gözleniyor. Bu histopatolojik lezyon aşağıdaki nekroz tiplerinden hangisinin tipik örneğidir?",
     "options": [
-      "A) İskelet kası lifleri",
-      "B) Beyin korteks nöronları (3-4 dakika)",
-      "C) Miyokard kas lifleri (20-30 dakika)",
-      "D) Cilt fibroblastları",
-      "E) Renal tübül epitel hücreleri"
+      "A) Likefaksiyon (sıvılaşma) nekrozu",
+      "B) Koagülasyon nekrozu",
+      "C) Kazeöz nekroz",
+      "D) Enzimatik yağ nekrozu",
+      "E) Fibrinoid nekroz"
     ],
-    "correctAnswer": "B",
-    "explanation": "Beyin nöronları iskemiye vücuttaki en duyarlı hücrelerdir; kan akımı kesildikten 3-4 dakika sonra geri dönüşümsüz hücre ölümü gerçekleşir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tanımlanan mikroskobik tablo; doku mimarisinin korunduğu, sitoplazmaların eozinofilik hayalet hücrelere dönüştüğü ve çekirdeklerin karyolizisle silindiği klasik 'koagülasyon nekrozu' tablosudur. İskemik miyokard enfarktüsünün karakteristik lezyonudur. Likefaksiyon nekrozu doku mimarisini tamamen eritir (beyinde ve apselerde görülür). Kazeöz nekroz tüberkülozda görülür ve amorf peynirimsi birikimdir. Yağ ve fibrinoid nekrozlar farklı patogenezlere sahiptir."
   },
   {
-    "id": "tromboz-infarkt-q15",
+    "id": "prac-iskemi-infarktus-019",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Şok Patofizyolojisi: Sistemik Hipoperfüzyon ve Hücresel Hipoksi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Şok tablosunun hücresel ve metabolik patofizyolojisi incelendiğinde, doku hipoperfüzyonuna yanıt olarak hücrede mitokondriyal solunumun durmasıyla tetiklenen ve kanda biriken temel biyokimyasal belirteç aşağıdakilerden hangisidir?",
+    "slideNumber": 19,
+    "slideTitle": "Santral Sinir Sistemi Enfarktüsü: Serebral İskemi, Likefaksiyon Nekrozu ve Gliozis",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş yaşındaki bir hasta sağ serebral hemisferde orta serebral arter sulama alanında geniş iskemik inme geçirdikten 6 ay sonra başka bir nedenden dolayı vefat ediyor. Yapılan otopside beynin sağ parietal lobunda sınırları belirgin, içi berrak sıvı ile dolu 4 cm çapında kistik bir boşluk (kavite) saptanıyor. Bu kistin duvarından alınan mikroskobik kesitte kollajen skar dokusu izlenmeyip, kist çevresinde çok sayıda lipid yüklü köpüksü makrofaj ve reaktif uzantılı astrosit proliferasyonu saptanıyor. Bu hastadaki iskemik beyin hasarının diğer organ enfarktüslerinden temel histopatolojik farkı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Piruvat kinaz eksikliği",
-      "B) Laktik asit (Laktik asidoz)",
-      "C) Serbest yağ asitleri düşüşü",
-      "D) Üre sentezinde masif artış",
-      "E) Glukoz-6-fosfataz birikimi"
+      "A) İskemiye koagülasyon nekrozu yerine hidrolitik enzimlerin dokuyu eritmesiyle likefaksiyon nekrozu yanıtı vermesi",
+      "B) Beyin dokusunda fibroblastların aşırı miktarda tip I kollajen sentezleyerek yoğun fibrotik skar oluşturması",
+      "C) Serebral enfarktüsün daima anaerobik bakteriyel süpürasyonla enfekte olarak kazeöz granüloma dönüşmesi",
+      "D) Miyelin kılıfların iskemiye tamamen duyarsız kalarak nöronal apoptozu engellemesi",
+      "E) İskemik hasar bölgesinde kalsiyum birikiminin olmaması ve yağ nekrozunun baskın olması"
     ],
-    "correctAnswer": "B",
-    "explanation": "Hipoperfüzyon nedeniyle oksijensiz kalan hücreler anaerobik glikolize geçer; piruvat laktata dönüştürülür ve kanda laktik asit birikerek metabolik laktik asidoz oluşturur."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Santral sinir sistemi enfarktüsleri genel iskemik kuralın tek büyük istisnasıdır; katı organlardaki koagülasyon nekrozunun aksine beyinde güçlü lizozomal enzim salınımı ve yüksek lipid içeriği nedeniyle 'likefaksiyon (sıvılaşma) nekrozu' gelişir. Doku sıvılaşır, köpüksü makrofajlarca temizlenir ve fibroblast skarı yerine kistik bir kavite ve astrositer proliferasyon (gliozis) ile iyileşir. B yanlıştır çünkü beyinde fibroblastik kollajen skar gelişmez. C, D ve E seçenekleri beyin enfarktüsü histopatolojisiyle uyumsuzdur."
   },
   {
-    "id": "tromboz-infarkt-q16",
+    "id": "prac-iskemi-infarktus-020",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Kardiyojenik Şok: Miyokardiyal Pompa Yetersizliği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Akut anterior miyokard enfarktüsü tanısıyla koroner yoğun bakımda izlenen 65 yaşındaki hastada kan basıncı 75/40 mmHg'ye geriliyor, taşikardi, dispne, akciğer bazallerinde yaygın yaş raller ve boyun venöz dolgunluğu gelişiyor; ekstremiteleri soğuk ve nemli bulunuyor. Bu hastada kardiyojenik şok tanısını destekleyen temel hemodinamik bulgular aşağıdakilerden hangisinde doğru verilmiştir?",
+    "slideNumber": 20,
+    "slideTitle": "Enfarktüs Dokusunun Onarımı: İnflamatuar İnfiltrasyon, Granülasyon Dokusu ve Skarlaşma",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İki yıl önce geçirilmiş transmural miyokard enfarktüsü öyküsü olan 62 yaşındaki bir hastanın ekokardiyografisinde sol ventrikül anterior duvarında incelme ve akinetik segment saptanıyor. Bu hastanın anterior duvarındaki eski enfarktüs sahasında mikroskobik olarak izlenmesi en olası temel patolojik yapı aşağıdakilerden hangisidir?",
     "options": [
-      "A) Kardiyak debi artmış, periferik vasküler direnç düşmüş",
-      "B) Kardiyak debi düşmüş, pulmoner kapiller uç basıncı (PCWP) yükselmiş ve periferik direnç artmış",
-      "C) Kardiyak debi normal, venöz doluş sıfırlanmış",
-      "D) Pulmoner kapiller uç basıncı düşmüş, cilt sıcak ve pembe",
-      "E) Sistemik vasküler direnç sıfıra inmiş"
+      "A) Bol mitoz gösteren ve hipertrofiye uğramış yeni kardiyomiyosit adacıkları",
+      "B) Yoğun tip I kollajen liflerinden oluşan, damardan fakir asellüler fibröz skar dokusu",
+      "C) Aktif kazeöz granülomatöz iltihap ve Langhans dev hücreleri",
+      "D) Yoğun nötrofilik lökosit birikimi ve doku otolizine bağlı apse formasyonu",
+      "E) İçi berrak beyin omurilik sıvısı benzeri sıvı ile dolu kistik likefaksiyon kaviteleri"
     ],
-    "correctAnswer": "B",
-    "explanation": "Kardiyojenik şokta sol ventrikül pompa yetmezliği nedeniyle kardiyak debi düşer; geride kan göllendiği için PCWP artar (akciğer ödemi); vücut tansiyonu korumak için vazokonstriksiyon yapar (SVR artar, cilt soğuk-nemli)."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Miyokard hücreleri kalıcı (permanent) hücrelerdir; iskemik ölüm sonrası bölünerek rejenere olamazlar. Eski miyokard enfarktüsü alanları (haftalar-aylar sonra) nekrotik enkazın temizlenmesi ve granülasyon dokusunun olgunlaşması sonucunda yoğun tip I kollajenden oluşan, damardan fakir, asellüler ve sert 'fibröz skar dokusu' ile yer değiştirir. Bu alan kasılamaz ve incelir. A seçeneği rejenerasyonun olmadığını göz ardı eder. C tüberkülozdur. D akut enfarktüsün erken evresidir. E beyin enfarktüsünün iyileşmesidir."
   },
   {
-    "id": "tromboz-infarkt-q17",
+    "id": "prac-iskemi-infarktus-021",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Hipovolemik Şok: İntravasküler Hacim Kaybı ve Kompansasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Trafik kazası sonrası dalak rüptürü nedeniyle masif intraabdominal kanaması olan 28 yaşındaki bir hastada gelişen hipovolemik şok tablosunda aşağıdakilerden hangisinin görülmesi beklenmez?",
+    "slideNumber": 21,
+    "slideTitle": "Septik İnfarktüs: Enfektif Vejetasyonlar, Süpüratif Enflamasyon ve Mikotik Anevrizmalar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ateş, üfürüm ve halsizlik şikayetleriyle başvuran intravenöz madde bağımlısı 34 yaşındaki bir hastada transözofageal ekokardiyografide aort kapağında 1.5 cm boyutunda frajil vejetasyon saptanıyor ve kan kültüründe Staphylococcus aureus ürüyor. Yatışının 3. gününde hastada ani gelişen sol yan ağrısı ve yüksek ateş atakları ortaya çıkıyor. Çekilen batın BT'sinde dalakta kama şeklinde, merkezinde sıvılaşma ve püy birikimi (kavitasyon) gösteren lezyon izleniyor. Bu hastadaki dalak lezyonunun patolojik tanısı ve olası damarsal komplikasyonu aşağıdakilerden hangisinde DOĞRU verilmiştir?",
     "options": [
-      "A) Taşikardi ve hipotansiyon",
-      "B) Cildin soğuk, soluk ve nemli olması",
-      "C) İdrar çıkışında belirgin azalma (oligüri)",
-      "D) Boyun venöz dolgunluğu ve bilateral yaygın akciğer ödemi",
-      "E) Santral venöz basıncın (CVP) belirgin düşmesi"
+      "A) Aseptik beyaz enfarktüs — Aort diseksiyonu",
+      "B) Septik enfarktüs (apse formasyonu) — Mikotik anevrizma gelişimi",
+      "C) Kırmızı enfarktüs — Portal ven trombozu",
+      "D) Likefaksiyon nekrozu — Kazeöz granülomatöz lenfadenit",
+      "E) Yağ nekrozu — Splenik psödokist"
     ],
-    "correctAnswer": "D",
-    "explanation": "Boyun venöz dolgunluğu ve akciğer ödemi volüm yüklenmesi veya kardiyojenik şokta görülür; hipovolemik şokta intravasküler hacim boşaldığı için boyun venleri kollabedir ve akciğerler temizdir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Enfektif endokardit vejetasyonundan kopan bakteri yüklü emboli dalak arterini tıkadığında hem iskemi hem de süpüratif enfeksiyon gelişir; bu lezyona 'septik enfarktüs' denir ve enfarktüs hızla bir apseye dönüşür. Ayrıca bakterilerin damar duvarını eritmesiyle 'mikotik (enfeksiyöz) anevrizma' gelişme riski çok yüksektir. A seçeneği steril trombüsler içindir (aseptik). C, D ve E seçenekleri vaka patolojisiyle uyumsuzdur."
   },
   {
-    "id": "tromboz-infarkt-q18",
+    "id": "prac-iskemi-infarktus-022",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Septik Şok 1: PAMP'lar, Toll-Like Reseptörler ve Sitokin Fırtınası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Gram-negatif sepsis ve septik şok patofizyolojisinde, bakteriyel hücre duvarı lipopolisakkaritinin (LPS / endotoksin) immün sistem hücreleri tarafından tanınarak masif TNF-alfa ve IL-1 salınımını başlatan temel hücresel reseptör kompleksi aşağıdakilerden hangisidir?",
+    "slideNumber": 22,
+    "slideTitle": "Şok Patofizyolojisine Giriş: Tanım, Sistemik Hipoperfüzyon ve Generalize Hücresel Hipoksi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yoğun bakımda hemodinamik instabilite nedeniyle takip edilen bir hastada gelişen şok tablosunun hücresel ve moleküler düzeydeki etkileri araştırılmaktadır. Şok patofizyolojisinde generalize hücresel hipoksinin erken evresinde meydana gelen metabolik ve biyokimyasal değişikliklerle ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) Mannoz reseptörü",
-      "B) Toll-Like Reseptör 4 (TLR4) ve CD14",
-      "C) CD40 ve CD40L",
-      "D) İntegrin alfa-4 beta-1",
-      "E) T hücre reseptörü (TCR)"
+      "A) Mitokondriyal ATP sentezi hızla artarak hücreyi koruyucu protein sentezine yönlendirir.",
+      "B) Oksidatif fosforilasyonun durması sonucu anaerobik glikoliz hızlanır, hücre içi pH düşer ve laktik asit birikir.",
+      "C) Na+/K+ ATPaz pompasının aşırı aktivasyonu hücre dışına masif su kaçışına ve hücrenin büzüşmesine yol açar.",
+      "D) Glukoz alımı GLUT-4 reseptörlerinin hiperaktivasyonu sayesinde on katına çıkar.",
+      "E) Lizozomal enzimler derhal inaktive olarak hücresel otolizi tamamen engeller."
     ],
-    "correctAnswer": "B",
-    "explanation": "LPS molekülü, monosit ve makrofaj yüzeyindeki CD14 kofaktörü aracılığıyla TLR4 (Toll-like receptor 4) reseptörüne bağlanarak sitokin fırtınasını tetikler."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Generalize hücresel hipoksinin başlamasıyla mitokondrilerde oksidatif fosforilasyon durur ve ATP üretimi çöker. Hücre enerji ihtiyacı için anaerobik glikolize geçer; bu süreç glikojeni tüketir ve laktik asit birikimine yol açarak hücre içi pH'yı düşürür (intraselüler asidoz). A yanlıştır (ATP düşer). C yanlıştır (pompa durur, hücre içine sodyum ve su girerek şişer). D yanlıştır (şokta insülin direnci gelişir). E yanlıştır (asidoz lizozomal enzimleri serbestleştirir)."
   },
   {
-    "id": "tromboz-infarkt-q19",
+    "id": "prac-iskemi-infarktus-023",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Septik Şok 2: Sistemik Endotel Hasarı, Vazodilatasyon ve DİK",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Ürosepsis zemininde yoğun bakımda takip edilen bir hastada hipotansiyon olmasına rağmen ekstremitelerin sıcak ve pembe olduğu saptanıyor. Septik şokun bu erken evresinde periferik vazodilatasyona yol açarak sistemik vasküler direncin düşmesine neden olan temel mediyatör aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Endotelin-1",
-      "B) Nitrik Oksit (NO)",
-      "C) Tromboksan A2",
-      "D) Anjiyotensin II",
-      "E) Lökotrien C4"
-    ],
-    "correctAnswer": "B",
-    "explanation": "Septik şokta proenflamatuar sitokinler endotel ve damar düz kasında iNOS enzimini uyararak yüksek miktarda Nitrik Oksit (NO) sentezletir; NO güçlü vazodilatasyon yaparak erken dönemde 'sıcak şok' tablosuna yol açar."
-  },
-  {
-    "id": "tromboz-infarkt-q20",
-    "deckId": "learn-iskemi-infarktus-ve-sok",
-    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Özel Şok Tipleri: Nörojenik Şok ve Anafilaktik Şok",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Trafik kazasında C5 vertebra kırığı ve spinal kord kesisi saptanan 24 yaşındaki bir hastada kan basıncı 70/40 mmHg olarak ölçülüyor. Fizik muayenede taşikardi yerine nabzın 48/dakika (bradikardi) olduğu ve cildin sıcak-kuru olduğu tespit ediliyor. Bu klinik tablo aşağıdaki şok tiplerinden hangisine özgüdür?",
+    "slideNumber": 23,
+    "slideTitle": "Kardiyojenik Şok: Miyokard Pompa İflası, Çıkış Yolu Obstrüksiyonu ve Hemodinamik Bozukluklar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Geniş anterior miyokard enfarktüsü geçiren 58 yaşındaki bir erkek hastada göğüs ağrısının 6. saatinde kan basıncı 75/40 mmHg'ye düşüyor, kalp hızı 125/dk bulunuyor. Hastanın bilinci bulanık, ekstremiteleri soğuk ve soluk, boyun venleri belirgin dolgun izleniyor. Akciğer oskültasyonunda bilateral yaygın yaş raller (akciğer ödemi) duyuluyor. Pulmoner arter kateterizasyonunda kardiyak debi 1.6 L/dk/m² (belirgin düşük), pulmoner kapiller uç basıncı (PCWP) 26 mmHg (normal <12 mmHg, belirgin yüksek) ve sistemik vasküler direnç (SVR) yüksek ölçülüyor. Bu hastanın klinik tablosu ve şok tipi aşağıdakilerden hangisidir?",
     "options": [
       "A) Hipovolemik şok",
-      "B) Kardiyojenik şok",
+      "B) Septik şok (erken hiperdinamik faz)",
       "C) Nörojenik şok",
-      "D) Obstrüktif şok",
-      "E) Septik şok"
+      "D) Kardiyojenik şok",
+      "E) Anafilaktik şok"
     ],
-    "correctAnswer": "C",
-    "explanation": "Spinal kord hasarında sempatik vazomotor uyarının kesilmesiyle gelişen nörojenik şokta, taşikardi yanıtı oluşamaz; hipotansiyon ile birlikte paradoksal bradikardi ve sıcak-kuru cilt görülür."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Geniş anterior MI sonrası gelişen hipotansiyon, düşük kardiyak debi, yüksek pulmoner kapiller dolum basıncı (PCWP >18 mmHg, akciğer ödemi) ve periferik vazokonstriksiyon (soğuk ekstremiteler, yüksek SVR) kardiyojenik şokun klasik tablosudur. Hipovolemik şokta PCWP düşüktür ve akciğer ödemi görülmez. Septik ve anafilaktik şokta sistemik vasküler direnç (SVR) düşüktür ve erken dönemde ekstremiteler sıcaktır. Nörojenik şokta vazomotor tonus kaybı ve bradikardi hakimdir."
   },
   {
-    "id": "tromboz-infarkt-q21",
+    "id": "prac-iskemi-infarktus-024",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Şokun Üç Evresi: Kompanse, Progresif ve İrreversibl",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Şok tablosunda olan bir hastada yoğun sıvı resüsitasyonuna ve yüksek doz inotropik/vazopressör ajanlara rağmen kardiyak fonksiyonların giderek çökmesi, tübüler epitelin yaygın nekrozu (anüri), bağırsak florasının kana karışması ve hücresel düzeyde lizozomal enzimlerin sitozole dökülerek otolizi başlatması şokun hangi evresinde olduğunu gösterir?",
+    "slideNumber": 24,
+    "slideTitle": "Hipovolemik Şok: İntravasküler Hacim Kaybı, Dolaşım Çöküşü ve Telafi Yanıtları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Motosiklet kazası geçiren 20 yaşındaki bir genç, dalak rüptürüne bağlı masif intraabdominal kanama tablosuyla acil servise getiriliyor. Fizik muayenede kan basıncı 70/35 mmHg, nabız 135/dk, filiform (zayıf ve hızlı), solunumu yüzeysel ve hızlı saptanıyor. Hastanın ekstremiteleri buz gibi soğuk, soluk ve nemli izleniyor. Santral venöz kateter takıldığında CVP 1 cmH2O (normal 5-10 cmH2O) olarak ölçülüyor. Bu hastanın hemodinamik profili ve şok patolojisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Nonprogresif evre",
-      "B) Kompanse erken evre",
-      "C) İrreversibl (geri dönüşümsüz) evre",
-      "D) İzole kardiyojenik evre",
-      "E) Pre-şok dönemi"
+      "A) Kardiyak dolum basınçları (önyük) aşırı artmış, akciğer ödemi gelişmiştir.",
+      "B) Periferik vazodilatasyon nedeniyle ekstremiteler sıcak ve kızarıktır.",
+      "C) Efektif kan hacmi kaybına sekonder hipovolemik şok gelişmiştir; sempatik deşarjla kompanse edici periferik vazokonstriksiyon mevcuttur.",
+      "D) Primer miyokard kontraktilite kaybına bağlı kardiyojenik şok tablosudur.",
+      "E) Parasempatik tonus artışına bağlı generalize arteriyoler gevşeme söz konusudur."
     ],
-    "correctAnswer": "C",
-    "explanation": "Tedaviyle hemodinaminin düzeltilmesine rağmen organ yetmezliklerinin durdurulamadığı, yaygın hücresel nekroz ve lizozomal enzim kaçağının olduğu evre şokun irreversibl (geri dönüşümsüz) evresidir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Dalak rüptürüne bağlı masif iç kanama klasik bir 'hipovolemik şok' tablosudur. İntravasküler hacmin kaybı CVP ve ventrikül önyükünü düşürür. Baroreseptörler aracılığıyla sempatik sistem aktive olur; katekolamin deşarjı taşikardiye ve hayati organları perfüze edebilmek için periferik arteriyollerde vazokonstriksiyona (yüksek SVR) yol açar. Bu nedenle ekstremiteler soğuk ve soluktur. A seçeneği kardiyojeniktir. B septik şokun erken fazıdır. D ve E seçenekleri yanlıştır."
   },
   {
-    "id": "tromboz-infarkt-q22",
+    "id": "prac-iskemi-infarktus-025",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Şokun Organ Morfolojisi 1: Şok Böbreği (Akut Tübüler Nekroz)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Ağır hemorajik şok sonrasında oligüri gelişen ve idrar sedimentinde tipik çamur rengi granüler silendirler saptanan bir hastada gelişen iskemik akut tübüler nekrozda (şok böbreği), hipoksik hasara en duyarlı olan nefron segmenti aşağıdakilerden hangisidir?",
+    "slideNumber": 25,
+    "slideTitle": "Septik Şok Patogenezi 1: PAMP/DAMP Algılanması, TLR Sinyali ve Aşırı Sitokin Yanıtı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ürosepsis ve septik şok tablosuyla yoğun bakıma yatırılan 68 yaşındaki bir diyabetik hastanın kan kültüründe Escherichia coli ürüyor. Bu hastada Gram-negatif bakterinin hücre duvarında bulunan lipopolisakkaritin (LPS / endotoksin) konak bağışıklık hücreleri tarafından tanınması ve sistemik inflamatuar kaskadı ateşlemesinde rol oynayan temel yüzey reseptörü ve primer proinflamatuar sitokin çifti aşağıdakilerden hangisidir?",
     "options": [
-      "A) Distal kıvrıntılı tübül",
-      "B) Toplayıcı kanallar",
-      "C) Proksimal kıvrıntılı tübül epiteli",
-      "D) Glomerüler mezangiyal hücreler",
-      "E) Henle kulpunun ince inen kolu"
+      "A) TLR2 — İnterlökin-10 ve TGF-beta",
+      "B) CD4 — İnterlökin-4 ve İnterlökin-5",
+      "C) TLR4 / CD14 — Tümör Nekroz Faktörü (TNF) ve İnterlökin-1 (IL-1)",
+      "D) Mannoz reseptörü — İnterferon-gama",
+      "E) Fas reseptörü — Kaspaz-8 ve Kaspaz-3"
     ],
-    "correctAnswer": "C",
-    "explanation": "Böbrekte metabolik transport yükü ve oksijen tüketimi en yüksek olan hücreler proksimal tübül epiteli olduğundan iskemik şok hasarına en duyarlı bölgedir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Gram-negatif bakterilerin lipopolisakkariti (LPS), dolaşımda LBP ile birleştikten sonra makrofaj ve dendritik hücre yüzeyindeki CD14 ve 'Toll-Like Reseptör 4 (TLR4)' kompleksine bağlanır. Bu bağlanma intraselüler NF-κB yolunu aktive ederek septik şokun iki birincil anahtar sitokini olan 'TNF-alfa ve IL-1'in masif salınımını (sitokin fırtınası) tetikler. TLR2 Gram-pozitif ürünleri tanır. Diğer reseptör ve sitokin kombinasyonları septik şokun primer başlatıcısı değildir."
   },
   {
-    "id": "tromboz-infarkt-q23",
+    "id": "prac-iskemi-infarktus-026",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Şok Akciğeri (ARDS) ve Adrenal Bezler (Waterhouse-Friderichsen)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Yüksek ateş, peteşiyal döküntüler ve meningeal irritasyon bulgularıyla acile getirilen 5 yaşındaki çocukta saatler içinde fulminan septik şok gelişiyor ve hasta kaybediliyor. Otopside her iki böbrek üstü bezinin (adrenallerin) tamamen kanamalı nekrozla harap olduğu saptanıyor. Bu klinik ve patolojik antite aşağıdakilerden hangisidir?",
+    "slideNumber": 26,
+    "slideTitle": "Septik Şok Patogenezi 2: Endotelyal Aktivasyon, Mikrovasküler Tromboz (DİK) ve Metabolik Bozukluklar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Septik şok patofizyolojisinde endotel hücrelerinin aktive olması ve koagülasyon dengesinin bozulması sonucunda gelişen 'yaygın damar içi pıhtılaşma (DİK)' tablosunun moleküler mekanizmaları incelenmektedir. Aşağıdaki endotelyal değişikliklerden hangisi septik şokta mikrovasküler tromboz gelişimini DOĞRUDAN TETİKLEYEN faktörlerden biri DEĞİLDİR?",
     "options": [
-      "A) Cushing sendromu",
-      "B) Waterhouse-Friderichsen sendromu",
-      "C) Conn sendromu",
-      "D) Sheehan sendromu",
-      "E) Goodpasture sendromu"
+      "A) Endotel yüzeyinde Doku Faktörü (Tromboplastin) ekspresyonunun belirgin şekilde artması",
+      "B) Trombomodulin ve endotelyal Protein C reseptörü (EPCR) sentezinin baskılanması",
+      "C) Fibrinolizi bloke eden Plazminojen Aktivatör İnhibitör-1 (PAI-1) üretiminin artması",
+      "D) Doku Faktörü Yol İnhibitörü (TFPI) düzeylerinin azalması",
+      "E) Endotelden salınan doku plazminojen aktivatörü (t-PA) miktarının aşırı artarak pıhtıları kontrolsüzce eritmesi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Meningokoksemiye bağlı fulminan sepsiste bilateral sürrenal bezlerin masif hemorajik nekrozu ve akut adrenal yetmezlik gelişmesi Waterhouse-Friderichsen sendromu olarak adlandırılır."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır (ve dolayısıyla doğru yanıttır). Septik şokta endotelde t-PA artışı olmaz; tam tersine fibrinolizi güçlü şekilde baskılayan Plazminojen Aktivatör İnhibitör-1 (PAI-1) seviyeleri aşırı artar. Bu durum pıhtıların lizisini engeller ve yaygın mikrovasküler trombozun (DİK) kalıcı olmasına yol açar. A, B, C ve D seçenekleri septik şokta prokoagülan durumun ortaya çıkışındaki temel moleküler mekanizmaları (TF artışı, trombomodulin/protein C azalması, TFPI azalması, PAI-1 artışı) eksiksiz olarak yansıtmaktadır."
   },
   {
-    "id": "tromboz-infarkt-q24",
+    "id": "prac-iskemi-infarktus-027",
     "deckId": "learn-iskemi-infarktus-ve-sok",
     "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
-    "slideNumber": null,
-    "slideTitle": "Şokun Klinik Seyri, Çoklu Organ Yetmezliği (MODS) ve Mortalite",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 2 / 1. Kurul (Hücre ve Doku Hasarı Mekanizmaları)",
-    "question": "Farklı şok tiplerinin klinik özellikleri karşılaştırıldığında, erken dönemde periferik vasküler direncin düşmesine bağlı olarak hastanın cildinin sıcak ve pembe olması (sıcak şok) en karakteristik olarak hangi şok tipinde gözlenir?",
+    "slideNumber": 27,
+    "slideTitle": "Nörojenik Şok ve Anafilaktik Şok: Vazomotor Tonus Kaybı ve Aşırı Duyarlılık Yanıtı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sığ suya balıklama atlama sonrası boyun travması geçiren 19 yaşındaki bir genç acil servise getiriliyor. C5 düzeyinde tam omurilik kesisi saptanan hastanın fizik muayenesinde kan basıncı 75/40 mmHg, nabız 48/dk (bradikardik) bulunuyor. Hastanın tüm ekstremitelerinin ve gövdesinin şok tablosunda beklenenin aksine sıcak, pembe ve kuru olduğu dikkati çekiyor. Bu hastadaki hipotansiyon ve hemodinamik tablonun patofizyolojik mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      "A) Masif kanamaya bağlı hipovolemik şok",
-      "B) Geniş miyokard enfarktüsüne bağlı kardiyojenik şok",
-      "C) Gram-negatif bakteriyemiye bağlı erken septik şok",
-      "D) Kardiyak tamponada bağlı obstrüktif şok",
-      "E) Ağır dehidratasyona bağlı hipovolemik şok"
+      "A) Masif iç kanamaya bağlı intravasküler hacim çökmesi",
+      "B) Periferik sempatik vazomotor tonusun aniden kaybolması ve venöz kan göllenmesi (nörojenik şok)",
+      "C) Aşırı katekolamin deşarjına bağlı sistemik vasküler direncin aşırı yükselmesi",
+      "D) Mast hücrelerinden masif histamin salınımına bağlı anafilaksi",
+      "E) Sol ventrikül serbest duvar rüptürüne bağlı kardiyak tamponad"
     ],
-    "correctAnswer": "C",
-    "explanation": "Erken septik şokta NO salınımına bağlı sistemik vazodilatasyon geliştiğinden diğer şokların aksine cilt sıcak ve pembedir (sıcak şok); hipovolemik ve kardiyojenik şokta ise vazokonstriksiyon nedeniyle cilt soğuk ve soluktur."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Yüksek seviyeli servikal kord travması sonrası sempatik otonomik çıkış tamamen felç olur. Damar düz kasları tonusunu kaybeder, yaygın arteriyoler ve venöz vazodilatasyon gelişir. Sempatik lifler kalbi uyaramadığı için kompanse edici taşikardi gelişemez, tam tersine karşılanmamış vagal tonus nedeniyle 'bradikardi' görülür. Periferik vazodilatasyon cildin sıcak ve pembe kalmasına neden olur. Bu klasik 'nörojenik şok' tablosudur. A ve C seçeneklerinde taşikardi ve soğuk cilt beklenir. D anafilaksidir. E kardiyojenik mekanizmadır."
+  },
+  {
+    "id": "prac-iskemi-infarktus-028",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 28,
+    "slideTitle": "Şokun Evreleri 1: Nonprogresif (Kompanse) Evre ve Nöroendokrin Telafi Mekanizmaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Gastrointestinal kanama nedeniyle acil servise getirilen bir hastada şokun nonprogresif (kompanse) evresinde olduğu belirleniyor. Bu evrede hastanın kardiyovasküler ve renal sisteminde vital organ perfüzyonunu sürdürmek amacıyla devreye giren adaptif kompansasyon mekanizmalarıyla ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Baroreseptör reflekslerin tetiklenmesiyle sempatik deşarj artar ve taşikardi gelişir.",
+      "B) Renal kan akımının azalması renin salınımını uyararak anjiyotensin II ve aldosteron üretimini artırır.",
+      "C) Nörohipofizden salınan antidiüretik hormon (ADH) böbreklerden serbest su geri emilimini artırır.",
+      "D) Deri ve splanknik yatakta gelişen masif vazodilatasyon kanın çevre dokularda göllenmesine yol açar.",
+      "E) Cilt ve iskelet kası arteriyollerindeki vazokonstriksiyon kan akımını beyin ve kalp gibi yaşamsal organlara yönlendirir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır. Nonprogresif (kompanse) evrede deri ve splanknik yatakta vazodilatasyon DEĞİL, tam aksine katekolaminler ve anjiyotensin II aracılığıyla güçlü bir 'vazokonstriksiyon' gelişir. Bu vazokonstriksiyonun temel amacı periferik vasküler direnci artırmak ve kanı yaşamsal organlara (kalp ve beyin) yönlendirmektir (santralizasyon). Vazodilatasyon ve göllenme progresif evrenin sonlarında ve septik şokta görülür. A, B, C ve E seçenekleri kompanse evrenin temel fizyolojik yanıtlarını doğru açıklamaktadır."
+  },
+  {
+    "id": "prac-iskemi-infarktus-029",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 29,
+    "slideTitle": "Şokun Evreleri 2: Progresif Evre, Doku Asidozu ve Mikrosirkülasyonda Kan Göllenmesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ağır pnömoni zemininde sepsis gelişen 70 yaşındaki bir hastada kan basıncı 80/45 mmHg, arteriyel kan gazında pH 7.22, laktat seviyesi 5.8 mmol/L (belirgin yüksek) ve baz açığı -9 saptanıyor. İdrar çıkışı saatte 10 mL'ye (oligüri) gerileyen hastada prekapiller sfinkterlerin gevşediği ve mikrosirkülasyonda kan göllenmesi olduğu belirleniyor. Bu hastanın şokun hangi evresinde olduğu ve gelişen vazomotor bozulmanın temel nedeni aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+    "options": [
+      "A) Nonprogresif evre — Aşırı sempatik vazokonstriksiyon",
+      "B) Progresif evre — Dokularda biriken laktik asit ve asidoza bağlı prekapiller sfinkter felci",
+      "C) İrreversibl evre — Beyin sapı ölümü ve otoliz",
+      "D) Kompanse evre — Böbreklerden aşırı aldosteron salınımı",
+      "E) İyileşme evresi — Doku plazminojen aktivatörünün tükenmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Hastada derinleşen doku hipoperfüzyonu, belirgin metabolik laktik asidoz (pH 7.22, laktat 5.8), oligüri ve mikrosirkülasyonda kan göllenmesi şokun 'progresif (ilerleyici) evresi'ni tanımlar. Bu evrede dokularda biriken laktik asit ve asidoz, prekapiller sfinkterlerdeki sempatik vazokonstriktör tonusu kırarak vazomotor felce ve kapiller kan göllenmesine neden olur. Nonprogresif evrede asidoz kompanse edilmiştir. İrreversibl evrede tedaviye hiçbir yanıt alınamaz. Doğru yanıt B'dir."
+  },
+  {
+    "id": "prac-iskemi-infarktus-030",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 30,
+    "slideTitle": "Şokun Evreleri 3: İrreversibl (Geri Dönüşümsüz) Evre, Hücresel Çöküş ve MODS",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ağır hemorajik şok tablosunda izlenen bir hastada uygulanan masif kan transfüzyonları ve yüksek doz vazopressör infüzyonuna rağmen kan basıncı geçici olarak yükseltildikten hemen sonra hasta multiorgan yetmezliğiyle kaybediliyor. Bu hastada şokun 'irreversibl (geri dönüşümsüz) evreye' girdiğini ve hücresel düzeyde ölümün kaçınılmaz hale geldiğini gösteren en temel biyolojik olay aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Baroreseptör reflekslerin sempatik deşarjı başlatması",
+      "B) Hücre membranında Na+/K+ ATPaz pompasının aktivitesini iki katına çıkarması",
+      "C) Lizozomal enzimlerin sitoplazmaya dökülerek intraselüler otolizi başlatması ve bağırsak bariyerinin yıkılarak endotokseminin tabloya eklenmesi",
+      "D) Böbrek tübüllerinde aldosteron aracılığıyla aşırı sodyum tutulumu",
+      "E) Karaciğerde aşırı albümin sentezlenmesi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Şokun irreversibl evresinde yaygın hücresel hasar öyle bir noktaya ulaşır ki, lizozomal membranlar parçalanır, asit hidrolazlar sitoplazmaya dökülerek hücresel otolizi başlatır ve ATP substratları tamamen tükenir. Eş zamanlı olarak bağırsak mukozal bariyeri nekroze olarak bakterilerin ve endotoksinlerin kana karışmasına (endotoksemi) yol açar. Bu aşamada hemodinami düzeltilse dahi hücreler ölmüştür ve MODS ile ölüm kaçınılmazdır. A, B ve D seçenekleri erken evreleri yansıtır."
+  },
+  {
+    "id": "prac-iskemi-infarktus-031",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 31,
+    "slideTitle": "Şok Morfolojisi: Böbreklerde Akut Tübüler Nekroz (ATN) ve Renal Yetmezlik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ağır yanık travması sonrası hipovolemik şoka giren 38 yaşındaki bir hastada yatışının ikinci gününde idrar çıkışı 24 saatte 150 mL'ye geriliyor (belirgin oligüri). Kan biyokimyasında BUN 85 mg/dL, kreatinin 4.2 mg/dL ve potasyum 6.1 mEq/L saptanıyor. İdrar mikroskopisinde bol miktarda dökülmüş renal tübül epitel hücresi ve 'kirli kahverengi granüler silendirler' izleniyor. Bu hastadaki böbrek hasarının histopatolojik tanısı ve iskemiye en duyarlı tübül segmenti aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+    "options": [
+      "A) Akut poststreptokoksik glomerülonefrit — Bowman kapsülü",
+      "B) İskemik akut tübüler nekroz (ATN) — Proksimal kıvrıntılı tübül ve Henle kalın çıkan kolu",
+      "C) Renal amiloidoz — Distal toplayıcı kanallar",
+      "D) Kronik interstisyel nefrit — Glomerül podositleri",
+      "E) Minimal değişiklik hastalığı — Henle kulpu inen ince kolu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Şok zemininde gelişen oligürik akut böbrek hasarı, idrarda kirli kahverengi granüler silendirlerin görülmesi klasik 'iskemik Akut Tübüler Nekroz (ATN)' tablosudur. Yüksek metabolik ATP ihtiyaçları nedeniyle renal iskemiye en hassas yapılar 'proksimal kıvrıntılı tübüller' ve 'Henle kulpunun medüller kalın çıkan kolu'dur. Glomerüller genellikle bu erken evrede morfolojik olarak sağlamdır. Diğer seçenekler şok patolojisini açıklamaz."
+  },
+  {
+    "id": "prac-iskemi-infarktus-032",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 32,
+    "slideTitle": "Şok Morfolojisi: Akciğerlerde Diffüz Alveoler Hasar (DAD / ARDS) ve Şok Akciğeri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Gram-negatif bakteriyel sepsis tanısıyla yoğun bakımda takip edilen 52 yaşındaki bir kadın hastada yatışının 24. saatinde ani gelişen taşipne, şiddetli nefes darlığı ve derin siyanoz gelişiyor. Yüksek konsantrasyonda oksijen verilmesine rağmen arteriyel parsiyel oksijen basıncı (PaO2) yükselmiyor (refrakter hipoksemi). Akciğer grafisinde bilateral yaygın infiltrasyonlar izlenen hasta solunum yetmezliğinden kaybediliyor. Otopside her iki akciğerin ağır, koyu kırmızı ve et kıvamında olduğu görülüyor. Mikroskobik incelemede alveol iç yüzeylerini kaplayan fibrin ve nekrotik epitel enkazından zengin pembe renkli eozinofilik 'hyalen membranlar' saptanıyor. Bu hastadaki akciğer lezyonunun histopatolojik tanısı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kronik obstrüktif amfizem",
+      "B) Diffüz Alveoler Hasar (DAD / Şok Akciğeri / ARDS)",
+      "C) Lober pnomokok pnomonisi (gri hepatizasyon)",
+      "D) İdiopatik pulmoner hemosiderozis",
+      "E) Bronşiyal karsinoid tümör"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Septik şok zemininde gelişen refrakter hipoksemi, bilateral pulmoner ödem ve mikroskobide tipik pembe 'hyalen membranların' varlığı klasik 'Diffüz Alveoler Hasar (DAD) / Şok Akciğeri (ARDS)' tablosudur. Nötrofillerin endoteli ve tip I pnömositleri parçalaması sonucu zengin fibrinöz sıvı alveole sızar ve membranları oluşturur. A amfizemdir. C lober pnömonidir. D hemosiderozistir. E neoplazidir."
+  },
+  {
+    "id": "prac-iskemi-infarktus-033",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 33,
+    "slideTitle": "Şok Morfolojisi: Adrenal Bezlerde Lipid Tükenmesi, İskemik Ensefalopati ve Stres Ülserleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Vücut yüzeyinin %50'sini kapsayan ağır alev yanığı nedeniyle yoğun bakımda izlenen ve hipovolemik şok tedavisi gören 40 yaşındaki bir hastada yatışının 4. gününde ani başlayan hematemez (kahve telvesi şeklinde kusma) ve melena gelişiyor. Yapılan acil üst gastrointestinal endoskopide mide korpus ve antrumunda multipl, yüzeysel, kanamalı akut mukozal ülserasyonlar izleniyor. Bu hastadaki akut gastrik lezyonların patolojik adı ve oluşumundaki temel mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Cushing ülseri — Vagal uyarım sonucu aşırı hidroklorik asit hipersekresyonu",
+      "B) Curling ülseri — Şoka bağlı splanknik vazokonstriksiyon ve gastrik mukozal iskemi",
+      "C) Peptik ülser — Kronik Helicobacter pylori kolonizasyonu ve intestinal metaplazi",
+      "D) Zollinger-Ellison sendromu — Pankreatik gastrinoma kaynaklı gastrin hipersekresyonu",
+      "E) MALT lenfoma — B lenfosit proliferasyonuna bağlı kitle lezyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ağır yanık travması ve hipovolemik şok geçiren hastalarda splanknik vazokonstriksiyon sonucu mide mukozasının iskemik hasara uğramasıyla gelişen akut stres ülserlerine 'Curling ülseri' adı verilir. A seçeneği (Cushing ülseri) kafa travması veya intrakraniyal basınç artışında vagal çekirdek uyarımıyla gelişen ülserdir. C kronik peptik ülserdir. D gastrinomadır. E lenfomadır."
+  },
+  {
+    "id": "prac-iskemi-infarktus-034",
+    "deckId": "learn-iskemi-infarktus-ve-sok",
+    "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+    "slideNumber": 34,
+    "slideTitle": "Şok Hastasının Klinik Değerlendirmesi, Fenotipler ve Prognostik Belirleyiciler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Acil servise getirilen 65 yaşındaki bir hastada kan basıncı 80/40 mmHg, nabız 118/dk, vücut sıcaklığı 38.9 °C saptanıyor. Fizik muayenede hastanın periferik nabızlarının sıçrayıcı olduğu, ekstremitelerinin ve tüm cildinin sıcak, kızarık ve kuru olduğu dikkati çekiyor. Hastanın hemodinamik profilinde kardiyak debinin yüksek, sistemik vasküler direncin (SVR) ise aşırı derecede düşük olduğu ölçülüyor. Bu hastadaki klinik tablonun patolojik tipi ve diğer şok tiplerinden (kardiyojenik/hipovolemik) bu fizik muayene bulgusuyla ayrılmasının temel nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kardiyojenik şok — Sol ventrikül ejeksiyon gücünün aşırı artması",
+      "B) Hipovolemik şok — Böbreklerden aşırı sodyum ve su geri emilimi",
+      "C) Septik şok (erken hiperdinamik faz) — Sitokin ve nitrik oksit (NO) aracılı yaygın periferik vazodilatasyon",
+      "D) Nörojenik şok — Sempatik sinir sisteminin aşırı hiperaktivasyonu ve vazokonstriksiyon",
+      "E) Obstrüktif şok — Perikard yaprakları arasında masif fibrinöz eksüda birikimi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Hipovolemik ve kardiyojenik şokta kompanse edici sempatik vazokonstriksiyon nedeniyle cilt soğuk, soluk ve nemli olurken; septik şokun erken (hiperdinamik) fazında endotelden salınan yüksek miktardaki Nitrik Oksit (NO) ve prostasiklin yaygın arteriyoler vazodilatasyona yol açar. Sistemik vasküler direnç (SVR) çöker, kardiyak debi geçici olarak artar ve hastanın ekstremiteleri 'sıcak, pembe ve kızarık' görünür (sıcak şok). A, B, D ve E seçenekleri bu klinik ve hemodinamik tabloyu açıklamaz."
   },
   {
     "id": "prac-kronik-001",
@@ -1195,708 +1898,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "Doğru yanıt C'dir. Tarif edilen klinik tablo (güneşe aşırı hassasiyet, erken yaşta kutanöz melanom, çillenme, atrofi) otozomal resesif geçişli Kseroderma Pigmentozum (XP) hastalığıdır. XP'nin nedeni ultraviyole radyasyonun oluşturduğu siklobütan pirimidin dimerlerini ve hacimli lezyonları kesip çıkaran Nükleotid Eksizyon Onarımı (NER) yolundaki genetik kusurlardır.\n\nA MMR Lynch sendromunda,\nB BER tek baz oksidatif hasarlarında,\nD ve E çift iplik kırıklarında görevlidir."
-  },
-  {
-    "id": "km-pq-19",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 19,
-    "slideTitle": "Homolog Rekombinasyon Kusurları, BRCA1/BRCA2 Ekseni ve Sentetik Letalite",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Ailesinde erken yaşta meme ve over karsinomu öyküsü bulunan 41 yaşındaki bir kadın hastada yüksek dereceli seröz over karsinomu saptanıyor. Genetik testte BRCA1 geninde germ hattı delesyonu tespit ediliyor. Onkolog, DNA tek zincir kırıklarını onaran PARP enzimini inhibe eden Olaparib tedavisini planlıyor. Bu tedavinin mantığı, tek iplik tamiri bloke edildiğinde oluşan çift iplik kırıklarının tümör hücresindeki mevcut homolog rekombinasyon yetersizliği nedeniyle tamir edilemeyip hücrenin seçici ölüme gitmesidir.\n\nBu tedavi stratejisinin temelini oluşturan farmakogenetik kavram aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Haploinsüffisiyens",
-      "B) Sentetik letalite (Synthetic lethality)",
-      "C) İki vuruş kuralı (Two-hit)",
-      "D) Dominant negatif etki",
-      "E) Epigenetik imprinting"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Sentetik letalite (synthetic lethality), iki genetik bozukluğun tek başlarına hücreyi öldürmezken, eş zamanlı bulunduklarında hücre ölümüne yol açması durumudur. BRCA mutant hücrelerde çift iplik onarımı (HR) zaten bozuktur; ek olarak PARP inhibitörü ile tek iplik tamiri de engellenince tümör hücresi genomik çöküşle ölür, oysa BRCA'sı sağlam olan normal hücreler hayatta kalır.\n\nA tek alelin yetersizliğidir,\nC tümör süpresör iki vuruşudur,\nD mutant proteinin sağlamı bozmasıdır,\nE ebeveyne özgü gen ifadesidir."
-  },
-  {
-    "id": "km-pq-20",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 20,
-    "slideTitle": "DNA Polimeraz Proofreading Kusurları (POLE/POLD1) ve Lenfoid Genomik Kararsızlık",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Endometrium karsinomu tanısıyla opere edilen 54 yaşındaki bir hastanın tümör dokusu yeni nesil dizileme (NGS) ile incelendiğinde, megabaz başına 140 mutasyon (TMB: 140 mut/Mb, ultra-hipermutatör profil) ve tümör stromasında olağanüstü yoğun sitotoksik CD8+ T lenfosit infiltrasyonu saptanıyor. Tümörde mikrosatellit instabilitesi (MSI) negatif bulunuyor.\n\nBu hastadaki ultra-hipermutasyon tablosundan sorumlu olan enzim ve etkilenen katalitik bölge aşağıdakilerden hangisidir?",
-    "options": [
-      "A) DNA polimeraz beta – Baz eksizyon alanı",
-      "B) DNA polimeraz epsilon (POLE) – 3'→5' ekzonükleaz (proofreading) alanı",
-      "C) RNA polimeraz II – C-terminal domain (CTD)",
-      "D) Telomeraz ters transkriptaz (TERT) – Katalitik çekirdek",
-      "E) Topoizomeraz II – DNA ligasyon cebi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. DNA polimeraz epsilon (POLE) enziminin 3'→5' ekzonükleaz (proofreading/hata düzeltme) bölgesindeki mutasyonlar, insan kanserlerinde görülen en yüksek mutasyon yüküne (>100 mutasyon/Mb, ultra-hipermutasyon) yol açar. Bu hastalar zengin neoantijen yükü nedeniyle yoğun tümör içi lenfosit (TIL) içerir ve immün kontrol noktası inhibitörlerine çok iyi yanıt verir.\n\nA, C, D ve E seçeneklerindeki enzimler ultra-hipermutasyon fenotipinin nedeni değildir."
-  },
-  {
-    "id": "km-pq-21",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 21,
-    "slideTitle": "Tümörü Destekleyen Enflamasyon ve İyileşmeyen Yara Olarak Kanser Mikroçevresi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "İnvaziv duktal meme karsinomu tanısı alan bir hastanın tümör mikroçevresi immünohistokimyasal ve moleküler düzeyde incelendiğinde, neoplastik adacıkların etrafında yoğun mononükleer enflamatuar hücre infiltrasyonu gözleniyor. Bu enflamatuar hücrelerin tümörün büyümesini, anjiyogenezini ve metastazını kolaylaştırıcı (pro-tümöral) sinyaller ürettiği saptanıyor.\n\nAşağıdakilerden hangisi tümör mikroçevresindeki bu enflamatuar hücrelerin (özellikle M2 polarize TAM'ların) tümör ilerlemesine sağladığı biyolojik katkılardan biri DEĞİLDİR?",
-    "options": [
-      "A) VEGF salgılayarak yeni tümöral kapiller damar ağlarının oluşturulması",
-      "B) Matriks metalloproteinazlar (MMP-9) üreterek ekstrasellüler matriksin eritilmesi",
-      "C) EGF ve FGF salgılayarak tümör hücre proliferasyonunun uyarılması",
-      "D) Perforin ve granzim salgılayarak tümör hücrelerinde yaygın apoptozun tetiklenmesi",
-      "E) TGF-beta salgılayarak sitotoksik T hücre yanıtının baskılanması"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Perforin ve granzim salgısı, antijen tanıyan aktif CD8+ Sitotoksik T lenfositler ve Doğal Katil (NK) hücreler tarafından gerçekleştirilen ve tümör hücrelerini öldürmeyi amaçlayan ANTI-TÜMÖRAL koruyucu bir mekanizmadır. Oysa tümörü destekleyen enflamatuar hücreler (TAM - M2, MDSC, Treg) anjiyogenezi (VEGF), invazyonu (MMP-9), mitozu (EGF) ve immünosüpresyonu (TGF-β) tetikler; tümörü öldürmezler.\n\nA, B, C ve E seçenekleri enflamasyonun tümörü destekleyici doğrudan etkileridir."
-  },
-  {
-    "id": "km-pq-22",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 22,
-    "slideTitle": "Kimyasal Karsinojenez: Doğrudan ve Dolaylı Ajanlar, Metabolik Aktivasyon ve Karsinojenler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Afrika'nın kırsal bir bölgesinde uygunsuz nem koşullarında saklanan yer fıstığı ve mısır tüketen bir toplulukta karaciğer kitleleri ve hepatosellüler karsinom (HCC) insidansının çok yüksek olduğu gözleniyor. İzole edilen kanser dokularının moleküler dizilemesinde TP53 tümör baskılayıcı geninin 249. kodonunda karakteristik transversiyon mutasyonları saptanıyor.\n\nBu patolojide Aspergillus flavus kaynaklı Aflatoksin B1 mikotoksininin karaciğer hücrelerinde nihai karsinojenik epoksit bileşiğine dönüşmesini sağlayan ana enzim sistemi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Ksantin oksidaz",
-      "B) Sitokrom P-450 mikrozomal enzim sistemi",
-      "C) Glukoz-6-fosfat dehidrogenaz",
-      "D) Asetilkolinesteraz",
-      "E) Laktat dehidrogenaz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Aflatoksin B1 dolaylı etkili bir prokarsinojendir. Karsinojenik olabilmesi için karaciğerde endoplazmik retikulumda bulunan **Sitokrom P-450 monooksijenaz enzim sistemi** (özellikle CYP3A4 ve CYP1A2) tarafından metabolize edilerek DNA ile kovalent bağ kurabilen reaktif bir epoksit aracı moleküle dönüştürülmesi gerekir. Bu epoksit TP53 kodon 249'u mutasyona uğratarak hepatosellüler karsinomu tetikler.\n\nA, C, D ve E seçenekleri kimyasal karsinojenlerin metabolik aktivasyonunu yöneten temel enzimler değildir."
-  },
-  {
-    "id": "km-pq-23",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 23,
-    "slideTitle": "Radyasyon Karsinojenezi: İyonlaştırıcı Radyasyon ve Ultraviyole Işınları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Nükleer santral kazası sonrası çevre yerleşim yerlerinde yaşayan popülasyon uzun süreli epidemiyolojik takibe alınıyor. Kazadan yaklaşık 6-7 yıl sonra bölge halkında belirli bir malignite grubunun insidansında belirgin bir pik gözlenirken; meme ve akciğer gibi solid epitelyal karsinomların ancak 20-25 yıl sonra artış gösterdiği tespit ediliyor.\n\nİyonlaştırıcı radyasyon maruziyetini takiben en kısa latent dönemle (5-7 yıl) ortaya çıkan bu ilk malignite grubu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kolorektal adenokarsinomlar",
-      "B) Lösemiler (AML, KML)",
-      "C) Malign melanom",
-      "D) Glioblastoma multiforme",
-      "E) Prostat adenokarsinomu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. İyonlaştırıcı radyasyonun karsinojenik etkileri incelendiğinde (örneğin Hiroşima ve Nagazaki kurtulanlarında), maruziyet sonrası en kısa latent dönemle (ortalama 5-7 yıl) pik yapan neoplazmlar lösemilerdir (özellikle AML ve KML). Buna karşın meme, akciğer, kolon ve tiroid gibi solid karsinomların latent dönemi çok daha uzundur (15-30 yıl).\n\nA, C, D ve E seçeneklerindeki solid neoplazmlar kısa latent döneme sahip değildir."
-  },
-  {
-    "id": "km-pq-24",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 24,
-    "slideTitle": "Viral ve Mikrobiyal Karsinojenez: HTLV-1, HPV, EBV, H. pylori ve Hedefe Yönelik Tedaviler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "34 yaşındaki bir kadın hastada rutin servikal smear taramasında yüksek dereceli skuamöz intraepitelyal lezyon (HSIL / CIN 3) saptanıyor. Kolposkopik biyopside invaziv skuamöz hücreli karsinom teşhis ediliyor. Moleküler virolojik incelemede servikal epitel hücrelerinin genomuna yüksek riskli Human Papillomavirus Tip 16 (HPV 16) DNA'sının entegre olduğu ve viral onkoproteinlerin aşırı eksprese edildiği belirleniyor.\n\nBu karsinomun patogenezinde HPV 16'nın kodladığı E6 ve E7 viral onkoproteinlerinin konak hücresindeki etkileri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
-    "options": [
-      "A) E6 proteini RB'yi aktive ederken, E7 proteini p53'ün ekspresyonunu artırır",
-      "B) E6 proteini p53'ü ubikitinleyip proteazomda parçalatır; E7 proteini ise RB'ye bağlanıp E2F'yi serbest bırakır",
-      "C) E6 ve E7 proteinleri hücrede DNA mismatch repair (MMR) enzimlerini doğrudan aktive eder",
-      "D) E6 proteini mitokondride BAX porlarını açarak sitokrom c salınımını tetikler",
-      "E) E7 proteini siklin bağımlı kinaz inhibitörü p21'in transkripsiyonunu aşırı artırarak hücreyi G1'de kilitler"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Yüksek riskli HPV (16 ve 18) karsinojenezinde kilit mekanizma: Viral E6 proteini p53'e bağlanarak proteazomal yıkımını sağlar ve TERT'i uyarır. Viral E7 proteini ise Retinoblastom (RB) proteinine yüksek afiniteyle bağlanarak onu inaktive eder, serbest kalan E2F hücreyi kontrolsüz biçimde S fazına sokar; ayrıca p21 CDK inhibitörünü de baskılar.\n\nA tam tersidir,\nC viral onkoproteinler tamiri artırmaz,\nD E6 apoptozu bloke eder (BAX'ı açmaz),\nE E7 p21'i artırmaz, tam tersine inhibe eder."
-  },
-  {
-    "id": "itg-pq-1",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 1,
-    "slideTitle": "İleri Tümör Genetiği ve Moleküler Onkolojiye Bütüncül Giriş",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Moleküler onkoloji prensiplerine göre, karsinojenez sürecini başlatan ve sürdüren hücresel genetik hasar tipiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      "A) Hasar hücreyi hemen lizise ve koagülasyon nekrozuna götüren letal bir hasardır",
-      "B) Hücreyi öldürmeyen (non-lethal) genetik hasar atasal hücrede klonal genişlemeyi başlatır",
-      "C) Tümörler poliklonal kökenli olup her hücre bağımsız karsinojenik hasarla ortaya çıkar",
-      "D) Malign transformasyon için tek bir sürücü mutasyon daima yeterlidir",
-      "E) Genomik instabilite sadece benign neoplazmlarda görülen geçici bir adaptasyondur"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Karsinojenezin en temel ilkesi hasarın hücreyi öldürmeyen (non-lethal) olmasıdır. Hücre ölmez; mutasyonu taşıyarak klonal proliferasyona başlar ve monoklonal kökenden zamanla klonal heterojeniteye evrilir."
-  },
-  {
-    "id": "itg-pq-2",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 2,
-    "slideTitle": "Retinoblastom (RB) Geni ve İki Vuruş (Two-Hit) Hipotezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "On sekiz aylık bir kız çocukta her iki gözde lökokori (beyaz refle) saptanmış ve yapılan incelemede bilateral retinoblastom teşhisi konulmuştur. Bu hastanın genetik patogenezi ve gelecekteki klinik riskleri ile ilgili aşağıdaki ifadelerden hangisi en doğrudur?",
-    "options": [
-      "A) Hastanın vücudundaki tüm somatik hücrelerde 13q14 lokusundaki her iki RB1 aleli de baştan beri mutasyonludur",
-      "B) Tümör gelişimi için retina hücrelerinde sadece tek bir somatik mutasyon yeterli olmuştur",
-      "C) Bu hastada adolesan dönemde osteosarkom gelişme riski genel popülasyondan farksızdır",
-      "D) Hastalık ebeveynden otozomal resesif kalıtımla aktarılmış olup ikinci bir vuruşa ihtiyaç duyulmaz",
-      "E) RB proteini sürekli hipofosforile kalarak E2F transkripsiyon faktörünü aşırı aktive etmiştir"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bilateral retinoblastom ailesel formdur. Hasta germ hattında bir mutant alelle doğmuştur (tüm vücut hücreleri heterozigottur). Retina hücresinde tek bir ek somatik mutasyon (ikinci vuruş) meydana gelmesi iki alelin de kaybına ve tümör oluşumuna yeterlidir. Ayrıca bu hastalarda osteosarkom riski dramatik şekilde yüksektir."
-  },
-  {
-    "id": "itg-pq-3",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 3,
-    "slideTitle": "RB Proteini, E2F Transkripsiyon Faktörleri ve G1/S Kontrol Noktası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücre döngüsünün G1/S kontrol noktasında Retinoblastom (RB) proteininin fonksiyonel durumu ve moleküler etkileşimleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      "A) Hipofosforile RB inaktif olup E2F'nin S fazı genlerini uyarmasına izin verir",
-      "B) Hiperfosforile RB histon deasetilazları (HDAC) toplayarak kromatini transkripsiyona kapatır",
-      "C) Hipofosforile RB E2F faktörlerini bağlayarak tecrit eder ve hücre döngüsünü G1'de durdurur",
-      "D) Siklin D-CDK4/6 kompleksi RB'yi defosforile ederek aktif hale getirir",
-      "E) E2F faktörlerinin serbest kalması için RB proteininin proteazomda tamamen parçalanması şarttır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "RB proteini hipofosforile iken aktiftir; E2F transkripsiyon faktörlerine bağlanarak onları inaktif tutar ve HDAC toplayarak S fazı genlerinin ifadesini kilitler. Siklin-CDK kompleksleri tarafından hiperfosforile edildiğinde ise inaktive olur ve E2F serbest kalır."
-  },
-  {
-    "id": "itg-pq-4",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 4,
-    "slideTitle": "Siklin D – CDK4/6 – p16 (CDKN2A) – RB Ekseni ve Onkojenik Bozulmalar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Pankreas adenokarsinomu ve kutanöz malign melanomda çok yüksek oranda inaktive olan, 9p21 kromozom lokusunda kodlanan ve CDK4/6 komplekslerini fizyolojik olarak inhibe ederek RB proteininin hipofosforile kalmasını sağlayan tümör baskılayıcı molekül aşağıdakilerden hangisidir?",
-    "options": [
-      "A) p21CIP1 (CDKN1A)",
-      "B) p16INK4A (CDKN2A)",
-      "C) p27KIP1 (CDKN1B)",
-      "D) Siklin E1",
-      "E) MDM2"
-    ],
-    "correctAnswer": 1,
-    "explanation": "CDKN2A geninin ürünü olan p16INK4A, CDK4 ve CDK6 kinazlarına bağlanarak onların Siklin D ile birleşip RB'yi fosforillemesini engeller. Bu genin delesyon veya metilasyonu pankreas kanseri ve melanomda RB inaktivasyonunun en sık nedenidir."
-  },
-  {
-    "id": "itg-pq-5",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 5,
-    "slideTitle": "Onkojenik DNA Virüsleri ve RB / p53 İnaktivasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Serviks skuamöz hücreli karsinomu patogenezinde yüksek riskli Human Papillomavirus (HPV) tip 16 onkoproteinlerinin konak hücre siklus bekçileri üzerindeki etkileri ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
-    "options": [
-      "A) E6: RB'yi defosforile eder — E7: p53'ü fosforilleyerek stabilize eder",
-      "B) E7: Hipofosforile RB'ye bağlanıp E2F'yi serbest bırakır — E6: p53'ü proteazomal yıkıma hedefler",
-      "C) E6: CDK4'ü inhibe eder — E7: MDM2'yi parçalayarak p53'ü artırır",
-      "D) E7: E-kadherin sentezini artırır — E6: Telomeraz aktivitesini tamamen susturur",
-      "E) E7: Siklin D yıkımını uyarır — E6: Kaspaz-3 aktivasyonunu doğrudan tetikler"
-    ],
-    "correctAnswer": 1,
-    "explanation": "HPV'nin yüksek riskli tiplerinde E7 onkoproteini hipofosforile RB'ye bağlanıp E2F'yi serbest bırakarak hücreyi S fazına sokar; E6 onkoproteini ise p53'ü E6AP aracılığıyla ubikitinleyip proteazomda yıkarak apoptozdan kaçışı sağlar."
-  },
-  {
-    "id": "itg-pq-6",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 6,
-    "slideTitle": "TP53: Genomun Baş Muhafızı (Guardian of the Genome)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Normal hücresel koşullarda p53 düzeylerinin son derece düşük tutulmasını sağlayan, stres anında ise ATM kinaz aracılı fosforilasyon nedeniyle p53'e bağlanamayarak onun nükleer birikimine izin veren moleküler düzenleyici aşağıdakilerden hangisidir?",
-    "options": [
-      "A) MDM2",
-      "B) E2F1",
-      "C) p21CIP1",
-      "D) BAX",
-      "E) GADD45"
-    ],
-    "correctAnswer": 0,
-    "explanation": "MDM2 bir E3 ubikitin ligaz olup p53'e bağlanarak onu proteazomal yıkıma hedefler. Hücre DNA hasarına uğradığında ATM/ATR kinazları p53'ü fosforiller; bu fosforilasyon p53'ün MDM2'den ayrılmasını ve hücrede birikerek tetramer oluşturmasını sağlar."
-  },
-  {
-    "id": "itg-pq-7",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 7,
-    "slideTitle": "p53 Hücresel Yanıtları: Geçici Blokaj, Senesens ve Apoptoz Kararı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "İyonizan radyasyona maruz kalan normal bir epitel hücresinde ATM kinaz tarafından aktive edilen p53'ün, hücreyi G1 evresinde durdurup DNA replikasyonuna geçişi engellemek için transkripsiyonunu doğrudan indüklediği temel siklin bağımlı kinaz inhibitörü protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) p16INK4A",
-      "B) p21CIP1",
-      "C) p27KIP1",
-      "D) p57KIP2",
-      "E) p15INK4B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "p53'ün doğrudan transkripsiyonunu başlattığı en temel CDK inhibitörü p21CIP1 (CDKN1A)'dir. p21, Siklin D-CDK4 ve Siklin E-CDK2'yi inhibe ederek RB'yi hipofosforile tutar ve G1/S geçişini bloke eder. p16 ve p15 ise p53 bağımsız yolaklarla uyarılır."
-  },
-  {
-    "id": "itg-pq-8",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 8,
-    "slideTitle": "TP53 Somatik Mutasyonları ve Li-Fraumeni Sendromu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yirmi dört yaşında bir kadın hastada sağ memede invaziv duktal karsinom saptanmıştır. Aile öyküsü sorgulandığında erkek kardeşinin 7 yaşında rabdomyosarkomdan vefat ettiği, annesinin ise 32 yaşında adrenokortikal karsinom nedeniyle opere edildiği öğrenilmiştir. Bu hastada saptanması en olası kalıtsal genetik mutasyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) BRCA1 germline delesyonu",
-      "B) TP53 germline mutasyonu",
-      "C) APC germline mutasyonu",
-      "D) PTEN germline mutasyonu",
-      "E) RET germline mutasyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Genç yaşta meme kanseri, rabdomyosarkom (yumuşak doku sarkomu) ve adrenal korteks karsinomu birlikteliği otozomal dominant geçişli Li-Fraumeni sendromunun klasik tablosudur. Altta yatan defekt germ hattı TP53 gen mutasyonudur."
-  },
-  {
-    "id": "itg-pq-9",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 9,
-    "slideTitle": "TGF-β Sinyal Yolağı: Normal Hücrede Güçlü Tümör Baskılayıcı Fren",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Normal bağırsak epitelyumunda Transforme Edici Büyüme Faktörü-Beta (TGF-β) sinyal yolağının hücre proliferasyonunu G1 evresinde durdurma mekanizması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) TGF-β Tip I ve Tip II reseptörleri serin/treonin kinaz aktivitesi gösterir",
-      "B) Reseptör aktivasyonu sitoplazmik SMAD2 ve SMAD3 proteinlerini fosforiller",
-      "C) Fosforile SMAD proteinleri ko-aracı SMAD4 ile birleşerek nükleusa transloke olur",
-      "D) Nükleustaki SMAD kompleksi p15 ve p21 CDK inhibitörlerinin ekspresyonunu artırır",
-      "E) SMAD kompleksi c-MYC onkogeninin transkripsiyonunu uyararak Siklin D sentezini hızlandırır"
-    ],
-    "correctAnswer": 4,
-    "explanation": "SMAD kompleksi c-MYC onkogeninin transkripsiyonunu uyarmaz; tam aksine c-MYC genini güçlü şekilde baskılar (represyon). MYC'in baskılanması ve p15/p21'in uyarılması hücrenin bölünmesini durduran temel moleküler mekanizmadır."
-  },
-  {
-    "id": "itg-pq-10",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 10,
-    "slideTitle": "TGF-β'nın İki Yüzü: İleri Evre Tümörlerde İnvazyon ve İmmünsüpresyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "İleri evre malign tümörlerde aşırı salgılanan TGF-β'nın tümör mikroçevresi ve neoplastik hücre davranışı üzerindeki biyolojik etkileri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Sitotoksik CD8+ T lenfositlerin ve doğal katil (NK) hücrelerin antitümöral fonksiyonlarını baskılar",
-      "B) Epitelyal-Mezenkimal Geçişi (EMT) tetikleyerek hücrelerin invazyon yeteneğini artırır",
-      "C) SNAIL ve TWIST transkripsiyon faktörlerini aktive ederek E-kadherin ekspresyonunu baskılar",
-      "D) Tümör hücrelerinde p15 ve p21 düzeylerini artırarak onları kalıcı apoptoza sürükler",
-      "E) Fibroblastları aktive ederek desmoplastik stroma gelişimini kamçılar"
-    ],
-    "correctAnswer": 3,
-    "explanation": "İleri evre tümör hücreleri TGF-β'nın büyüme baskılayıcı ve apoptotik etkilerine karşı direnç kazanmıştır (reseptör veya SMAD4 kaybı nedeniyle). Bu nedenle TGF-β artık tümör hücresinde p15/p21 aracılı apoptoz yapamaz; tam aksine tümörün lehine çalışarak EMT, invazyon ve immünosüpresyon sağlar."
-  },
-  {
-    "id": "itg-pq-11",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 11,
-    "slideTitle": "E-Kadherin, Kateninler, NF2 (Merlin) ve Temas İnhibisyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Altmış yaşında bir kadın hastanın meme biyopsisinde tek sıra dizilim gösteren (Indian file paterni) ve tübüler yapı oluşturmayan kohezyonsuz malign hücre infiltrasyonu izlenmiştir. İmmünhistokimyasal incelemede bu hücrelerin membranöz E-kadherin boyanmasının tamamen negatif olduğu saptanmıştır. Bu tümörün histopatolojik tanısı ve patogenezinde rol oynayan temel genetik defekt aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İnvaziv duktal karsinom — ERBB2 (HER2) amplifikasyonu",
-      "B) Medüller karsinom — TP53 delesyonu",
-      "C) İnvaziv lobüler karsinom — CDH1 inaktivasyonu",
-      "D) Müsinöz karsinom — KRAS mutasyonu",
-      "E) Metaplastik karsinom — APC gen inaktivasyonu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Membranöz E-kadherin kaybı ve tek sıra halinde hücre infiltrasyonu (kızılderili yürüyüşü) invaziv lobüler meme karsinomunun patognomonik özelliğidir. Altta yatan temel moleküler olay CDH1 geninin mutasyon veya epigenetik susturulma ile fonksiyon kaybına uğramasıdır."
-  },
-  {
-    "id": "itg-pq-12",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 12,
-    "slideTitle": "WNT / β-Katenin Yolağı ve APC Yıkım Kompleksi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "WNT / β-katenin sinyal yolağının dinlenme halindeki ve aktif durumdaki regülasyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) WNT uyarısı yokken sitoplazmik serbest β-katenin düzeyleri çok düşük tutulur",
-      "B) β-katenin yıkım kompleksi APC, Aksin, CK1 ve GSK3β proteinlerini içerir",
-      "C) GSK3β tarafından fosforillenen β-katenin doğrudan nükleusa geçerek TCF'yi inhibe eder",
-      "D) WNT ligandı Frizzled ve LRP5/6 reseptörlerine bağlandığında Dishevelled (Dvl) aktive olur",
-      "E) Nükleusta biriken β-katenin TCF/LEF ile birleşerek c-MYC ve Siklin D1 transkripsiyonunu uyarır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "GSK3β tarafından fosforillenen β-katenin nükleusa geçmez; tam aksine bu fosforilasyon β-TrCP tarafından tanınarak β-kateninin 26S proteazomda parçalanmasına yol açar. Nükleusa ancak fosforillenmemiş, yıkımdan kaçmış serbest β-katenin gidebilir."
-  },
-  {
-    "id": "itg-pq-13",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 13,
-    "slideTitle": "APC Kaybı, Ailesel Adenomatöz Polipozis (FAP) ve Kolorektal Karsinojenez",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yirmi yaşında asemptomatik bir erkek hastada yapılan tarama kolonoskopisinde tüm kolona yayılmış 500'den fazla tübüler adenom saptanmıştır. Çene radyografisinde multipl mandibuler osteomlar izlenmiştir. Bu hastanın genetik patogenezi ve kolon kanseri riski ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      "A) Hastada DNA uyumsuzluk onarım geni MSH2'de germ hattı mutasyonu mevcuttur",
-      "B) Hastalık kromozom 5q21 lokusundaki APC gen mutasyonu sonucu gelişmiş olup kolektomi yapılmazsa kanser riski %100'dür",
-      "C) Tümör oluşumu hücre içi serbest β-katenin düzeylerinin tamamen sıfırlanmasına bağlıdır",
-      "D) Hastadaki lezyonlar Lynch sendromu tablosu olup ekstracolonik osteomlar rastlantısaldır",
-      "E) WNT ligandları Frizzled reseptörlerine bağlanamadığı için hücreler diferansiye olamamıştır"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Yüzlerce adenom ve osteom birlikteliği FAP varyantı olan Gardner sendromudur. Kromozom 5q21'deki APC gen mutasyonundan kaynaklanır. Profilaktik kolektomi yapılmayan hastalarda 40 yaşına kadar %100 invaziv kolorektal adenokarsinom gelişir."
-  },
-  {
-    "id": "itg-pq-14",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 14,
-    "slideTitle": "Onkojenik Metabolizma ve Warburg Etkisi (Aerobik Glikoliz)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign tümör hücrelerinde yeterli oksijen varlığında dahi ATP üretiminin mitokondriyal oksidatif fosforilasyon yerine büyük oranda laktik asit fermantasyonuna kayması (Warburg etkisi) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Glukoz başına net 2 mol ATP üretilmesine rağmen glukoz tüketim hızı dramatik olarak artmıştır",
-      "B) Glikoliz ara ürünleri pentoz fosfat yolağına yönlendirilerek riboz-5-fosfat ve NADPH sentezlenir",
-      "C) Temel biyolojik amaç hücrenin ihtiyacı olan nükleotid, lipid ve aminoasit karbon iskeletlerini temin etmektir",
-      "D) Bu fenomen yalnızca kanser hücrelerine özgü olup hızlı bölünen hiçbir normal hücrede görülmez",
-      "E) Üretilen laktatın mikroçevreye atılması asidik ortam yaratarak invazyonu kolaylaştırır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Warburg etkisi sadece kansere özgü değildir; hızlı bölünen sağlıklı hücreler (örneğin antijenle uyarılmış prolifere olan lenfositler ve embriyonik dokular) de biyosentetik gereksinimleri nedeniyle aerobik glikoliz kullanır. Tümörlerde fark, bu programın onkogenik mutasyonlarla kalıcı ve kontrolsüz hale gelmesidir."
-  },
-  {
-    "id": "itg-pq-15",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 15,
-    "slideTitle": "Warburg Etkisinin Klinik Görüntülemesi: 18F-FDG PET Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Akciğer karsinomu tanısıyla kemoterapi alan bir hastanın tedavi yanıtını değerlendirmek amacıyla çekilen 18F-FDG PET/BT incelemesinde mediastinal lenf nodlarındaki glukoz tutulumunun tamamen kaybolduğu izlenmiştir. 18F-florodeoksiglukozun tümör hücrelerinde yüksek oranda tutulmasını ve hücre içinde birikerek metabolik tuzağa düşmesini sağlayan moleküler basamaklar ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Kanser hücrelerinde glukoz alımı GLUT1 ve GLUT3 taşıyıcılarının artışı ile hızlandırılmıştır",
-      "B) Sitoplazmaya giren FDG hekzokinaz enzimi tarafından FDG-6-fosfata dönüştürülür",
-      "C) FDG-6-fosfat fosfoglukoz izomeraz enzimi tarafından kolayca fruktoz-6-fosfata çevrilerek Krebs döngüsüne girer",
-      "D) Tümör hücrelerinde glukoz-6-fosfataz düzeyi çok düşük olduğundan FDG-6-fosfat hücre dışına kaçamaz",
-      "E) PET incelemesi tümör kitlesinde boyut küçülmesi olmadan önce fonksiyonel metabolik yanıtı gösterebilir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "FDG molekülünün 2. karbonunda -OH grubu yerine flor bağlı olduğundan fosfoglukoz izomeraz enzimi bu molekülü tanıyamaz ve fruktoz-6-fosfata dönüştüremez. Bu nedenle FDG-6-fosfat glikolize devam edemez ve hücre içinde kilitlenir (metabolik tuzak)."
-  },
-  {
-    "id": "itg-pq-16",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 16,
-    "slideTitle": "Onkogenler ve Tümör Süpresörlerin Metabolik Düzenlemesi: MYC, PI3K/AKT/mTOR ve p53",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kanser hücrelerinde metabolik yolakların onkogenler ve tümör süpresör genler tarafından kontrol edilmesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) c-MYC onkoproteini glutaminaz enzimini aktive ederek tümör hücresini glutamin bağımlısı haline getirir",
-      "B) PI3K/AKT/mTOR yolağı glukoz taşıyıcılarını zarda artırır ve de novo lipid sentezini tetikler",
-      "C) Yabani tip p53, TIGAR proteinini indükleyerek glikolitik akışı yavaşlatır",
-      "D) p53 tarafından ekspresyonu artırılan SCO2, mitokondriyal elektron taşıma zinciri Kompleks IV montajını destekler",
-      "E) TP53 gen inaktivasyonu durumunda SCO2 seviyeleri artarak mitokondriyal oksidatif fosforilasyon hızlanır"
-    ],
-    "correctAnswer": 4,
-    "explanation": "TP53 gen inaktivasyonu durumunda SCO2 seviyeleri artmaz; tam aksine azalır. SCO2 desteği çöken mitokondride sitokrom c oksidaz (Kompleks IV) montajı bozulur ve hücre mitokondriyal solunumu terk ederek aerobik glikolize (Warburg etkisine) kayar."
-  },
-  {
-    "id": "itg-pq-17",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 17,
-    "slideTitle": "İzositrat Dehidrogenaz (IDH1/IDH2) Mutasyonları ve Neomorfik Enzim Aktivitesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Gliomlar ve akut miyeloid lösemide saptanan izositrat dehidrogenaz 1 (IDH1) gen mutasyonlarının enzimatik aktivite ve metabolik ürünler üzerindeki etkisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      "A) Enzim aktivitesi tamamen kaybolur ve hücrede izositrat birikerek apoptozu tetikler",
-      "B) Enzim neomorfik aktivite kazanarak alfa-ketoglutaratı 2-hidroksiglutarata (2-HG) dönüştürür",
-      "C) Enzim aşırı aktifleşerek hücre içi NADPH düzeylerini toksik boyutlara ulaştırır",
-      "D) IDH1 mutasyonu sadece mitokondriyal DNA'da meydana gelen delesyonlardan kaynaklanır",
-      "E) Mutant enzim laktatı glukoza çevirerek glikoneogenezi durdurur"
-    ],
-    "correctAnswer": 1,
-    "explanation": "IDH1 mutasyonu neomorfik (yeni işlev kazandırıcı) bir mutasyondur. Enzim normal substratı olan izositrat yerine reaksiyon ürünü olan alfa-ketoglutaratı substrat olarak kullanır ve onu doğrudan '2-hidroksiglutarat (2-HG)' adlı onkometabolite indirger."
-  },
-  {
-    "id": "itg-pq-18",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 18,
-    "slideTitle": "Onkometabolit 2-Hidroksiglutarat (2-HG), TET2 İnhibisyonu ve CIMP Fenotipi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "İzositrat dehidrogenaz (IDH) mutasyonu taşıyan diffüz gliomlarda ve akut miyeloid lösemide biriken onkometabolit 2-hidroksiglutaratın (2-HG) hücresel diferansiyasyonu engelleyerek neoplastik transformasyonu tetikleme mekanizması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      "A) DNA metiltransferaz (DNMT) enzimlerini doğrudan parçalayarak küresel hipometilasyona yol açar",
-      "B) Alfa-ketoglutarat bağımlı TET2 DNA demetilazını inhibe ederek yaygın CpG hipermetilasyonuna (CIMP) neden olur",
-      "C) Histon asetiltransferazları aktive ederek kromatini sürekli açık ve gevşek tutar",
-      "D) Sitoplazmada p53 proteinine bağlanıp onu doğrudan ubikitinleyerek apoptozu engeller",
-      "E) Mitokondriyal elektron taşıma zincirini tamamen bloke ederek hücreyi laktik asidozla öldürür"
-    ],
-    "correctAnswer": 1,
-    "explanation": "2-HG yapısal olarak alfa-ketoglutarata benzer ve α-KG bağımlı dioksijenaz olan TET2 DNA demetilaz enzimini kompetitif olarak inhibe eder. TET2 bloke olunca DNA demetile edilemez; genom çapında CpG hipermetilasyonu (CIMP fenotipi) gelişir ve matürasyon genleri susturularak diferansiyasyon kilitlenir."
-  },
-  {
-    "id": "itg-pq-19",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 19,
-    "slideTitle": "IDH Mutasyonlarının Klinik Spektrumu ve Hedefe Yönelik İnhibitörler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kırk yaşında bir erkek hastaya yapılan kraniyotomi sonrası temporal lob kitlesi patolojisinde infiltratif astrositer tümör saptanmıştır. Moleküler analizde tümör hücrelerinde IDH1 R132H mutasyonu pozitif, 1p/19q ko-delesyonu ise negatif bulunmuştur. Bu hastanın patolojik sınıflaması ve klinik prognozu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
-    "options": [
-      "A) Tümör IDH-yabani tip klasik primer glioblastom olup prognozu son derece kötüdür",
-      "B) Tümör oligodendrogliom olup 1p/19q kaybı olmadan da bu tanı kesinleşir",
-      "C) Tümör IDH-mutant astrositomdur ve IDH-yabani tip glioblastomlara kıyasla belirgin şekilde daha iyi prognoza sahiptir",
-      "D) IDH mutasyonu tümörde TET2'nin aşırı çalışarak küresel hipometilasyon yapmasına yol açmıştır",
-      "E) Bu hastada hedefe yönelik anti-IDH tedavisi olarak Enasidenib tek seçenektir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "IDH1 mutasyonu pozitif ve 1p/19q ko-delesyonu negatif olan diffüz gliomlar güncel sınıflamada 'Astrositom, IDH-mutant' olarak adlandırılır. Bu hastalar IDH-yabani tip glioblastom olgularına göre belirgin olarak daha uzun sağkalım ve iyi prognoz gösterirler."
-  },
-  {
-    "id": "itg-pq-20",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 20,
-    "slideTitle": "Hücresel Otofaji: Kanserde İki Ucu Keskin Kılıç (Dual Role)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel otofajinin kanser patogenezindeki ve tedavi direncindeki rolü ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Erken evrede hasarlı organelleri ve reaktif oksijen türlerini temizleyerek tümör baskılayıcı rol oynar",
-      "B) Otofaji düzenleyicisi Beclin-1 geninin tek alel kaybı bazı meme ve over karsinomlarında saptanır",
-      "C) İleri evre tümörlerde avasküler hipoksi ve besinsizlik stresinde tümör hücresinin canlı kalmasını destekler",
-      "D) Sitotoksik kemoterapi alan tümör hücrelerinde otofajinin aktive olması tedaviye bağlı hücre ölümünü daima hızlandırır",
-      "E) Hidroksiklorokin lizozom fonksiyonunu bozarak otofajik degradasyonu bloke eden bir ajandır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Sitotoksik kemoterapi alan tümör hücrelerinde otofajinin aktive olması hücre ölümünü hızlandırmaz; tam aksine hasarlı organelleri geri dönüştürerek hücrenin hayatta kalmasını ve metabolik uykuya (dormancy) geçerek tedaviye direnç kazanmasını sağlar."
-  },
-  {
-    "id": "itg-pq-21",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 21,
-    "slideTitle": "Tümör Anjiyogenezi ve Hipoksi Yanıtı: VHL – HIF-1α – VEGF Ekseni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Von Hippel-Lindau sendromu bulunan ve böbreğinde berrak hücreli renal hücreli karsinom saptanan bir hastada tümör dokusunun aşırı damarsal olmasında rol oynayan moleküler patogenez basamakları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Hastada fonksiyonel VHL proteini sentezlenememektedir",
-      "B) Prolil hidroksilazlar HIF-1α'yı hidroksillese bile VHL eksikliği nedeniyle ubikitinasyon gerçekleşemez",
-      "C) Hücre içi HIF-1α düzeyleri normoksik koşullarda bile aşırı derecede yükselir",
-      "D) Nükleusa geçen HIF-1α VEGF ve PDGF gibi anjiyojenik faktörlerin transkripsiyonunu uyarır",
-      "E) HIF-1α birikimi tümör hücresinde GLUT1 ekspresyonunu baskılayarak glukoz tüketimini tamamen durdurur"
-    ],
-    "correctAnswer": 4,
-    "explanation": "HIF-1α birikimi GLUT1 ekspresyonunu baskılamaz; tam aksine hipoksik adaptasyon gereği GLUT1 glukoz taşıyıcılarının ve tüm glikolitik enzimlerin transkripsiyonunu güçlü şekilde artırarak glukoz tüketimini hızlandırır."
-  },
-  {
-    "id": "itg-pq-22",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 22,
-    "slideTitle": "Tümör Damarlarının Anormal Morfolojisi ve Anti-Anjiyojenik Tedaviler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Metastatik kolorektal adenokarsinom tanısıyla kemoterapi rejimine anti-anjiyojenik monoklonal antikor Bevacizumab eklenen bir hastada tümör damarlanması ve tedaviye direnç mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Bevacizumab doğrudan dolaşımdaki VEGF-A molekülüne bağlanarak reseptör aktivasyonunu engeller",
-      "B) Tümör damarları normal doku damarlarına kıyasla belirgin perisit eksikliği ve yüksek vasküler geçirgenlik gösterir",
-      "C) Tedavi başlangıcında tümör içi interstisyel sıvı basıncı düşerek kemoterapötik ilaç penetrasyonu artabilir",
-      "D) Tümör hücreleri zamanla FGF ve PDGF gibi alternatif büyüme faktörleri salgılayarak anti-VEGF blokajından kaçabilir",
-      "E) Bevacizumab monoterapisi tek başına tümör damarlarını kalıcı olarak kurutarak tam kür sağlar"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Bevacizumab tek başına tümör damarlarını kalıcı olarak yok edip tam kür sağlayamaz; sağkalımı genellikle aylar düzeyinde uzatır. Tümörler zamanla alternatif anjiyojenik faktörlere (FGF, PDGF) geçer, çevre damarları sarar (vasküler ko-opsiyon) veya hipoksi derinleştikçe daha invaziv bir fenotipe bürünürler."
-  },
-  {
-    "id": "itg-pq-23",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 23,
-    "slideTitle": "Kanser Epigenetiği: DNA Metilasyonu, Histon Kodu ve Non-Coding RNA'lar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign tümörlerin epigenetik mekanizmaları ve kodlamayan RNA düzenlemeleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Tümör baskılayıcı genlerin promoter CpG adacıklarının hipermetilasyonu transkripsiyonu susturur",
-      "B) Sporadik kolon kanserlerinde MLH1 gen susturulması sıklıkla promoter hipermetilasyonuna bağlıdır",
-      "C) Onkojenik bir mikroRNA olan miR-21, PTEN tümör süpresörünü baskılayarak PI3K/AKT yolunu aktive eder",
-      "D) Tümör süpresör let-7 mikroRNA'sı RAS onkogen ekspresyonunu dizginleyen koruyucu bir moleküldür",
-      "E) Kanser hücrelerinde genomik heterokromatin bölgelerinde masif hipermetilasyon gelişerek genom aşırı stabilize olur"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Kanser hücrelerinde heterokromatin bölgelerinde ve retrotranspozonlarda hipermetilasyon değil, tam aksine 'küresel genomik hipometilasyon' gelişir. Bu hipometilasyon kromatinin gevşemesine, transpozonların aktifleşmesine ve masif genomik instabiliteye yol açar. Hipermetilasyon ise lokal olarak tümör baskılayıcı gen promoterlarında görülür."
-  },
-  {
-    "id": "itg-pq-24",
-    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
-    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
-    "slideNumber": 24,
-    "slideTitle": "Replikatif Ölümsüzlük (Replicative Immortality): Telomeraz ve ALT Yolağı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign neoplazmların sınırsız replikatif potansiyel (ölümsüzlük) kazanması ve telomer biyolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Normal somatik hücrelerde her hücre bölünmesinde uç replikasyon problemi nedeniyle telomerler kısalır",
-      "B) p53 ve RB yolları inaktif olan hücreler telomer erozyonuna rağmen bölünerek köprü-kırılma-birleşme döngülerine girerler",
-      "C) İnsan kanserlerinin yaklaşık %90'ında telomer boyu telomeraz enziminin reaktivasyonu ile korunur",
-      "D) Glioblastom ve melanomda en sık saptanan TERT mutasyonu proteinin katalitik bölgesindeki missense mutasyonudur",
-      "E) Telomeraz negatif bazı sarkom ve astrositomlarda telomerler ALT (Alternatif Telomer Uzaması) yolağı ile korunur"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Glioblastom, melanom ve mesane karsinomunda saptanan TERT mutasyonları protein kodlayan katalitik bölgede değil; TERT geni promoter bölgesinde (C228T, C250T) yer alan non-coding transkripsiyonel mutasyonlardır. Bu mutasyonlar yeni bağlanma bölgeleri yaratarak TERT ekspresyonunu artırır."
-  },
-  {
-    "id": "imm-pq-01",
-    "deckId": "learn-tumor-immunolojisi-metastaz",
-    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-    "slideNumber": 1,
-    "slideTitle": "Tümör İmmünolojisine Giriş ve İmmün Gözetim (Immune Surveillance)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek transplantasyonu nedeniyle 6 yıldır siklosporin ve mikofenolat mofetil tedavisi almakta olan 48 yaşındaki bir erkek hastada servikal lenfadenopati gelişiyor. Biyopside EBV-pozitif Diffüz Büyük B Hücreli Lenfoma tanısı konuyor. Bu hastada malignite gelişiminin patogenetik mekanizması ve tümör immünolojisi prensipleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) İmmünsüpresif tedavi gören transplant hastalarında karsinogenez riski sadece kimyasal karsinojenlerin birikimine bağlıdır.",
-      "B) İmmün yetmezlik zemininde gelişen malignitelerin ezici çoğunluğu onkojenik virüslerle (EBV, HHV-8, HPV) ilişkilidir.",
-      "C) Tümör dokusunda yoğun CD8+ sitotoksik T lenfosit infiltrasyonu (TIL) bulunması daima kötü prognoz işaretidir.",
-      "D) Kalsinörin inhibitörleri tümör antijenlerinin hücre yüzeyindeki neoantijen yükünü doğrudan artırarak mutasyon yapar.",
-      "E) Sağlıklı bireylerde immün gözetim yalnızca hümoral B hücre antikorları aracılığıyla yürütülür, T hücrelerinin rolü yoktur."
-    ],
-    "correctAnswer": 1,
-    "explanation": "İmmün yetmezlik durumlarında (organ nakli alıcıları, AIDS vb.) ortaya çıkan neoplazilerin en karakteristik özelliği, büyük çoğunluğunun onkojenik virüsler (özellikle EBV, HHV-8 ve HPV) tarafından indüklenmesidir. Sağlıklı bireylerde hücresel immünite (özellikle CD8+ T hücreleri) viral protein eksprese eden hücreleri sürekli denetim altında tutar; hücresel bağışıklık çöktüğünde bu viral onkogenler kontrolsüz proliferasyonu tetikler. Tümör dokusunda CD8+ TIL varlığı kötü değil, bağımsız İYİ PROGNOZ kriteridir."
-  },
-  {
-    "id": "imm-pq-02",
-    "deckId": "learn-tumor-immunolojisi-metastaz",
-    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-    "slideNumber": 2,
-    "slideTitle": "Neoantijenler ve Tümör Mutasyon Yükü (TMB)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Metastatik kolorektal karsinom tanısı alan 54 yaşındaki bir kadın hastanın tümör dokusu moleküler genetik analizinde MLH1 ekspresyon kaybı ve yüksek düzeyde mikrosatellit instabilitesi (MSI-H) saptanmıştır. Bu hastanın immünolojik profili ve immünoterapiye yanıtı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Tümör mutasyon yükü çok düşük olduğu için bağışıklık sistemi bu hücreleri tanıyamaz.",
-      "B) Bu tümörde oluşan neoantijenlere karşı hastanın timusunda negatif seleksiyonla tam bir öz-tolerans gelişmiştir.",
-      "C) Çok sayıda çerçeve kayması mutasyonu sonucu yüksek miktarda neoantijen eksprese eder ve Anti-PD-1 tedavisine mükemmel yanıt verir.",
-      "D) Bu hastada immün kaçış yalnızca MHC Sınıf II moleküllerinin kaybıyla sınırlıdır, CD8+ CTL'ler aktive olamaz.",
-      "E) Mikrosatellit instabilitesi olan tümörler yalnızca kutanöz skuamöz karsinomlarda checkpoint yanıtını artırır, viseral organlarda etkisizdir."
-    ],
-    "correctAnswer": 2,
-    "explanation": "DNA mismatch repair (MMR; örn. MLH1 kaybı) defekti olan tümörlerde mikrosatellit instabilitesi (MSI-H) gelişir. Bu durum binlerce çerçeve kayması (frameshift) mutasyonuna yol açar ve hücre yüzeyinde MHC Sınıf I ile sunulan bol miktarda 'neoantijen' üretilir. Bu neoantijenlere karşı öz-tolerans bulunmadığı için güçlü bir immün tanıma mevcuttur; kontrol noktası inhibitörleri (Anti-PD-1) ile bu T hücreleri serbest bırakıldığında tümör dramatik şekilde geriler."
-  },
-  {
-    "id": "imm-pq-03",
-    "deckId": "learn-tumor-immunolojisi-metastaz",
-    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-    "slideNumber": 3,
-    "slideTitle": "Aşırı Eksprese Edilen veya Aberan Proteinler ve Diferansiyasyon Antijenleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Metastatik malign melanom tanısıyla immünoterapi başlanan 52 yaşındaki bir erkek hastanın 4. ay kontrolünde gövdesinde ve ekstremitelerinde yama tarzında belirgin depigmente cilt lezyonları (vitiligo) saptanıyor. Biyopside epidermisteki melanositlerin lenfositik infiltrasyonla tahrip edildiği izleniyor. Bu klinik tablonun patolojik ve immünolojik açıklaması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İmmünoterapi ilacının melanosit DNA'sında doğrudan sitotoksik mutasyon yapması sonucu oluşan bir komplikasyondur.",
-      "B) Tümör hücrelerinin tirozinaz diferansiyasyon antijenini tamamen kaybederek immün sistemden kaçtığını gösterir.",
-      "C) Aktive olan sitotoksik T lenfositlerin hem melanom hem de normal melanositlerdeki tirozinaz/Melan-A antijenlerine çapraz yanıt vermesidir ve iyi prognoz göstergesidir.",
-      "D) Hastada eş zamanlı gelişen sistemik lupus eritematozus tablosudur ve immünoterapinin derhal kesilmesini gerektirir.",
-      "E) Tümörün nöroendokrin diferansiasyona uğrayarak melanin üretimini durdurduğunu gösteren kötü prognoz bulgusudur."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Tirozinaz ve Melan-A (MART-1), melanosit diferansiyasyon antijenleridir. Hem melanom hücrelerinde hem de normal epidermal melanositlerde bulunurlar. İmmünoterapi ile bu antijenlere karşı güçlü bir CTL yanıtı uyarıldığında, tümör hücreleri yok edilirken normal melanositler de çapraz immüniteyle hasara uğrar ve vitiligo tablosu ortaya çıkar. Bu durum konakta etkili bir antitümöral yanıt oluştuğunu gösterir ve klinik olarak uzamış sağkalım ve iyi prognoz ile koreledir."
-  },
-  {
-    "id": "imm-pq-04",
-    "deckId": "learn-tumor-immunolojisi-metastaz",
-    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-    "slideNumber": 4,
-    "slideTitle": "Kanser-Testis (Cancer-Testis / CTA) Antijenleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign melanom ve akciğer skuamöz hücreli karsinomunda yüksek düzeyde saptanan MAGE-A3 ve NY-ESO-1 gibi 'Kanser-Testis Antijenleri' (CTA) ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE İMMÜNOLOJİK AÇIDAN DOĞRUDUR?",
-    "options": [
-      "A) Normal erişkin karaciğer ve böbrek tübül hücrelerinde yüksek düzeyde eksprese edilirler.",
-      "B) Testis germ hücrelerinde MHC Sınıf I ekspresyonu bulunmadığı için T hücrelerinde bu antijenlere karşı öz-tolerans gelişmemiştir.",
-      "C) Bu antijenleri hedefleyen immünoterapiler testis spermatogenezini geri dönüşümsüz olarak tahrip eder.",
-      "D) Kanser-testis antijenleri daima kromozomal translokasyonlar sonucu oluşan mutant füzyon proteinleridir.",
-      "E) Yalnızca benign adenomlarda bulunurlar, invaziv karsinomlara geçişte epigenetik olarak susturulurlar."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kanser-Testis Antijenleri (CTA; MAGE, NY-ESO-1), fizyolojik olarak sadece testis germ hücrelerinde eksprese edilir. Testis germ hücreleri yüzeyinde MHC Sınıf I molekülü bulunmadığından ve kan-testis bariyeri mevcut olduğundan, gelişmekte olan T lenfositleri bu antijenlerle temas edemez ve tolerans gelişmez. Solid tümörlerde DNA hipometilasyonu ile yeniden eksprese edildiklerinde, tümör hücresindeki MHC-I ile sunularak güçlü bir immün tanıma sağlarlar. Testis germ hücreleri MHC-I taşımadığı için T hücre tedavileri testisi hedefleyip hasarlayamaz."
-  },
-  {
-    "id": "imm-pq-05",
-    "deckId": "learn-tumor-immunolojisi-metastaz",
-    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-    "slideNumber": 5,
-    "slideTitle": "Onkoviral Antijenler ve Virüs Aracılı Maligniteler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "36 yaşındaki bir kadının rutin jinekolojik smear taramasında yüksek dereceli skuamöz intraepitelyal lezyon (HSIL) saptanıyor. Biyopside HPV Tip 16 DNA pozitifliği gösteriliyor. Bu hastanın servikal epitelinde viral transformasyonun gerçekleşmesinde rol oynayan HPV E6 ve E7 onkoproteinlerinin hücresel etkileri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) E6 proteini p53'ü doğrudan fosforilleyerek DNA tamir kapasitesini artırır.",
-      "B) E7 proteini hipofosforile Retinoblastom (RB) proteinine bağlanıp inaktive ederek E2F transkripsiyon faktörünü serbest bırakır.",
-      "C) E6 proteini B hücresindeki CD40 reseptörünü taklit ederek sitokin fırtınası başlatır.",
-      "D) E7 proteini kaspaz-8 aktivasyonunu tetikleyerek servikal epitelde yaygın apoptoza yol açar.",
-      "E) E6 ve E7 proteinleri hücre yüzeyinde MHC Sınıf II moleküllerini artırarak lenfositik lizisi hızlandırır."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Yüksek riskli HPV (Tip 16 ve 18) karsinogenezinde E7 onkoproteini, hipofosforile (aktif) Retinoblastom (RB) proteinine bağlanarak onu inaktive eder. RB inaktive olunca serbest kalan E2F transkripsiyon faktörü hücre siklusunu zorla G1'den S fazına geçirir. E6 ise p53 tümör baskılayıcı proteinini ubikitin-proteazom yolağıyla parçalar. Bu iki mekanizma apoptozu engelleyip kontrolsüz DNA sentezi sağlayarak malign transformasyona yol açar."
-  },
-  {
-    "id": "imm-pq-06",
-    "deckId": "learn-tumor-immunolojisi-metastaz",
-    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-    "slideNumber": 6,
-    "slideTitle": "Onkofetal Antijenler: Karsinoembriyonik Antijen (CEA) ve Alfa-Fetoprotein (AFP)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kolon adenokarsinomu nedeniyle küratif cerrahi rezeksiyon uygulanan 62 yaşındaki bir erkeğin ameliyat öncesi serum CEA düzeyi 24 ng/mL (normal: <3 ng/mL) iken postoperatif 1. ayda 1.8 ng/mL'ye gerilemiştir. Ameliyattan 14 ay sonra yapılan rutin kontrolde asemptomatik olan hastanın serum CEA düzeyi 38 ng/mL olarak saptanıyor. Bu klinik tablonun en olası nedeni ve CEA'nın immünolojik özellikleri ile ilgili hangisi DOĞRUDUR?",
-    "options": [
-      "A) CEA güçlü bir sitotoksik neoantijen olduğu için hastada immün sistemin tümörü tamamen temizlediğini gösterir.",
-      "B) Kolorektal kanser nüksü ve olası karaciğer metastazı gelişmiştir; CEA tolerans nedeniyle zayıf immünojenik bir takip belirtecidir.",
-      "C) Hastada yeni bir primer bazal hücreli karsinom geliştiğini gösteren spesifik bir belirteçtir.",
-      "D) CEA düzeyindeki bu artış ameliyat bölgesinde cerrahi sütür reaksiyonuna bağlı gelişen fizyolojik bir inflamasyon yanıtıdır.",
-      "E) CEA fetal dönemde hiç sentezlenmediği için ancak ileri evre kanserlerde mutasyonla ortaya çıkan bir tümöre özgü antijendir."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Karsinoembriyonik Antijen (CEA), onkofetal bir glikoproteindir. Fetal bağırsakta üretilir, erişkinde susturulur, kolorektal karsinomda yeniden sentezlenir. Fetal dönemde var olduğu için konakta tam tolerans mevcuttur; bu nedenle immünojenitesi zayıftır ve taramada değil takipte kullanılır. Başarılı cerrahi sonrası normale inen CEA'nın takiplerde belirgin ve ilerleyici artış göstermesi, en sık karaciğer metastazı olmak üzere tümör nüksünün en güvenilir ve erken biyokimyasal kanıtıdır."
-  },
-  {
-    "id": "imm-pq-07",
-    "deckId": "learn-tumor-immunolojisi-metastaz",
-    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-    "slideNumber": 7,
-    "slideTitle": "Dendritik Hücreler ve Çapraz Sunum (Cross-Presentation)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Primer meme karsinomu gelişen bir hastanın lenf nodunda tümör antijenlerine karşı spesifik sitotoksik T lenfosit (CD8+ CTL) yanıtının başlatılabilmesi için dendritik hücrelerin gerçekleştirdiği moleküler ve hücresel mekanizma ile ilgili hangisi DOĞRUDUR?",
-    "options": [
-      "A) Dendritik hücreler tümör döküntülerini yalnızca MHC Sınıf II ile sunar; CD8+ T hücreleri tümörü doğrudan tanıyamaz.",
-      "B) Eksojen tümör antijenleri dendritik hücre tarafından sitoplazmaya kaçırılıp proteazomda işlenir ve MHC Sınıf I üzerinde naif CD8+ T lenfositlerine çapraz sunulur.",
-      "C) Dendritik hücreler aktivasyon için B7 molekülünü baskılayarak T hücresindeki CTLA-4 reseptörünü uyarmak zorundadır.",
-      "D) CD8+ T hücrelerinin aktivasyonunda kostimülasyona ihtiyaç yoktur; sadece TCR-MHC teması tam aktivasyon için yeterlidir.",
-      "E) Çapraz sunum yalnızca eritrositler ve trombositler tarafından yürütülen non-spesifik bir filtrasyon sürecidir."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Tümör antijenlerine karşı CD8+ CTL yanıtının başlatılması, dendritik hücrelerin gerçekleştirdiği 'Çapraz Sunum' (Cross-presentation) mekanizmasına dayanır. Fagositozla alınan eksojen tümör proteinleri sitozole aktarılır, proteazomda parçalanır ve TAP aracılığıyla ER'de MHC Sınıf I molekülüne yüklenir. Dendritik hücre bu peptit-MHC-I kompleksini B7-CD28 kostimülasyonu eşliğinde naif CD8+ T hücrelerine sunarak sitotoksik klonların çoğalmasını sağlar."
   }
 ]

@@ -1,5 +1,518 @@
 [
   {
+    "id": "prac-odem-012",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 12,
+    "slideTitle": "Ödemin Beşinci Mekanizması: Artmış Mikrovasküler Geçirgenlik ve Enflamatuar Ödem",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Derin ikinci derece termal yanık ve yaygın doku hasarı ile acil servise getirilen bir hastada hasarlı vücut bölgelerinde dakikalar içinde büller ve masif doku ödemi geliştiği gözleniyor. Sıvı analizinde toplanan sıvının proteinden ve lökositlerden son derece zengin olduğu belirleniyor.\n\nBu hastada doku ödemini başlatan TEMEL VASKÜLER PATOLOJİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Karaciğerde protein üretiminin baskılanması sonucu plazma onkotik basıncının çökmesi",
+      "B) Endotel kontraksiyonu ve doğrudan termal endotel nekrozuna bağlı mikrovasküler permeabilite artışı",
+      "C) Sol ventrikül yetmezliğine bağlı pulmoner kapiller hidrostatik basınç yükselmesi",
+      "D) Prekapiller sfinkterlerin aşırı kasılarak kapiller perfüzyonu tamamen durdurması",
+      "E) Aksiller ve inguinal lenf nodlarının konjenital aplazisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Termal yanıklar hem histamin/bradikinin gibi mediyatörlerle interendotelyal aralıkların açılmasına (endotel kontraksiyonu) hem de doğrudan endotel hücre ölümüne (termal nekroz) yol açar. Damar duvarının mikrovasküler geçirgenliği kontrolsüzce artar; protein ve hücreler doku aralığına taşarak eksüdatif ödem ve bül oluşturur. Olay karaciğer yetmezliği (A), kalp yetmezliği (C) veya lenfatik aplazi (E) ile ilişkili değildir."
+  },
+  {
+    "id": "prac-odem-013",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 13,
+    "slideTitle": "Laboratuvar ve Klinik Ayrım: Transüda ve Eksüda Sıvılarının Karşılaştırmalı Patolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefes darlığı ve sağ yan ağrısı şikayetiyle başvuran 64 yaşındaki bir hastada sağ plevral aralıkta sıvı saptanarak tanısal torasentez uygulanıyor. Alınan sıvının biyokimyasal ve mikroskobik inceleme sonuçları şu şekildedir:\n- Görünüm: Sarımtırak-bulanık\n- Sıvı total proteini: 4.6 g/dL (Serum proteini: 6.8 g/dL; Oran: 0.67)\n- Sıvı LDH düzeyi: 380 U/L (Serum LDH: 420 U/L; Oran: 0.90)\n- Dansite (Özgül ağırlık): 1.024\n- Hücre sayımı: 14.500/μL (%82 nötrofil lökosit)\n- Rivalta testi: Pozitif\n\nBu laboratuvar profilinin işaret ettiği sıvı tipi ve en olası altta yatan patoloji eşleştirmesi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Transüda — Konjestif kalp yetmezliği",
+      "B) Transüda — Karaciğer sirozu",
+      "C) Transüda — Minimal lezyon hastalığına bağlı nefrotik sendrom",
+      "D) Eksüda — Bakteriyel pnömoniye sekonder parapnömonik efüzyon",
+      "E) Transüda — Ağır protein-enerji malnütrisyonu"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. İncelenen sıvıda protein >3.0 g/dL (4.6 g/dL), plevral/serum protein oranı >0.5 (0.67), LDH oranı >0.6 (0.90), dansite >1.020 (1.024), lökosit sayısı >1000/μL ve Rivalta testi pozitiftir. Bu bulguların tamamı Light kriterlerine göre tartışmasız bir 'Eksüda' tablosunu kanıtlar. Eksüdanın en yaygın nedeni akut enfeksiyonlar (bakteriyel pnömoni, tüberküloz) ve malignitelerdir. A, B, C ve E seçeneklerindeki hastalıklar ise kapiller hidrostatik basınç artışı veya onkotik basınç düşüşü ile karakterize olup düşük proteinli 'Transüda' üretirler."
+  },
+  {
+    "id": "prac-odem-014",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 14,
+    "slideTitle": "Subkütan Ödem Morfolojisi: Gode Bırakan, Bağımlı ve Periorbital Ödem",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş iki yaşında geçirilmiş inme nedeniyle son üç aydır tamamen yatağa bağımlı olarak yaşayan ve bilinen konjestif kalp yetmezliği olan bir hastanın rutin vizitinde bacaklarında belirgin bir şişlik izlenmiyor. Ancak hastanın sırtı ve kalçası muayene edildiğinde sakrum üzerinde basmakla derin çukurluk bırakan masif ödem tespit ediliyor.\n\nBu yatalak hastada ödem sıvısının bacaklar yerine presakral bölgede toplanmasının TEMEL PATOFİZYOLOJİK VE ANATOMİK NEDENİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Lumbosakral lenfatik kanalların yatak basısıyla primer tromboza uğraması",
+      "B) İntravasküler hidrostatik basıncın yer çekimi etkisiyle en alçakta kalan anatomik bölgede maksimuma ulaşması",
+      "C) Sakral derideki sebase bezlerin albümini doku aralığına aktif olarak pompalaması",
+      "D) Yatak istirahatinde böbreklerden renin salınımının tamamen kesilmesi",
+      "E) Glomerüler filtrasyonun sırtüstü pozisyonda on katına çıkarak protein kaçağı yaratması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kalp yetmezliğine bağlı ödem 'bağımlı (dependent) ödem' karakterindedir; yani yer çekimi kuvvetinin etkisiyle venöz göllenmenin ve kapiller hidrostatik basıncın en yüksek olduğu en alçak anatomik bölgede toplanır. Ayaktaki bir kişide bu bölge ayak bilekleri ve bacaklarken; sürekli sırtüstü yatan hastada vücudun yer çekimi açısından en altta kalan bölgesi sakrum ve uyluk arkasıdır (presakral ödem). Bu nedenle yatalak hastada ödem bacaklarda değil sakrumda aranır. Diğer seçenekler biyofiziksel prensiplere aykırıdır."
+  },
+  {
+    "id": "prac-odem-015",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 15,
+    "slideTitle": "Pulmoner Ödem Patofizyolojisi: Kardiyojenik ve Non-Kardiyojenik Mekanizmalar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş yaşında anterior miyokard enfarktüsü öyküsü bulunan bir erkek hasta, gece uykudan boğulma hissiyle uyanma (paroksismal noktürnal dispne) ve nefes darlığı şikayetiyle acil servise getiriliyor. Fizik muayenede takipneik ve taşikardik olan hastanın akciğer oskültasyonunda bilateral yaygın yaş raller (krepitan raller) ve S3 kalp sesi duyuluyor. Akciğer grafisinde bilateral hiler dolgunluk ve parankimal vasküler konjesyon izleniyor. Yapılan ekokardiyografide sol ventrikül ejeksiyon fraksiyonu %28 (belirgin azalmış) bulunuyor.\n\nBu hastada gelişen akut akciğer ödeminin TEMEL VE BAŞLATICI PATOFİZYOLOJİK MEKANİZMASI aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akciğer kapiller endotelinde yaygın immün kompleks depolanması",
+      "B) Sol ventrikül pompa yetersizliğine bağlı pulmoner venöz ve kapiller hidrostatik basınç artışı",
+      "C) Alveolo-kapiller membranda sürfaktan sentezinin genetik yetersizliği",
+      "D) Sistemik lenfatik sistemin primer hipoplazisine bağlı klirens durması",
+      "E) Karaciğerde albümin üretiminin miyokard enfarktüsü sonrası ani kesilmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sol ventrikülün kasılma gücünün çökmesi (EF %28) durumunda kan sol ventrikülden ileriye atılamaz. Bu durum geriye doğru sol atriyumda, pulmoner venlerde ve nihayetinde pulmoner kapiller yatakta kanın göllenmesine ve hidrostatik basıncın (PCWP) dramatik yükselmesine yol açar. Kapiller hidrostatik basınç plazma onkotik basıncını aşınca sıvı alveollere dökülerek kardiyojenik akciğer ödemi tablosunu oluşturur. İmmün kompleks (A), sürfaktan gen mutasyonu (C), lenfatik hipoplazi (D) veya ani albümin kesilmesi (E) söz konusu değildir."
+  },
+  {
+    "id": "prac-odem-016",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 16,
+    "slideTitle": "Pulmoner Ödem Morfolojisi ve Kliniği: Makroskopi, Histoloji ve Solunum İflası",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sol ventrikül disfonksiyonuna bağlı refrakter kardiyojenik şok ve akut akciğer ödemi nedeniyle kaybedilen bir hastanın otopsisinde akciğerlerin ağırlığı sağda 1150 gram, solda 1020 gram (normalin 2.5 katı) olarak tartılıyor. Akciğer kesit yüzeyinden bol miktarda pembe köpüklü sıvı sızdığı gözleniyor.\n\nBu otopsi materyalinden hazırlanan akciğer histopatolojik kesitlerinde ışık mikroskobunda aşağıdaki bulgulardan hangisinin izlenmesi BEKLENİR?",
+    "options": [
+      "A) Alveol lümenlerini tamamen tıkayan homojen soluk pembe (eozinofilik) proteinöz sıvı presipitatı",
+      "B) Alveol duvarlarında yaygın kazeifikasyon nekrozu ve Langhans dev hücreleri",
+      "C) Alveoler boşlukların tamamen nötrofil lökositler ve fibrin tıkaçlarıyla dolu gri hepatizasyon tablosu",
+      "D) İnterstisyumda atipik skuamöz hücre adaları ve keratin incileri",
+      "E) Alveol epitelinin tamamen dökülerek parankimin diffüz kemik dokusuna metaplazisi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Akut pulmoner ödemin histopatolojik karşılığı, genişlemiş konjesyone kapillerler ve alveol lümenlerini dolduran homojen, soluk eozinofilik (pembe) proteinöz transüda presipitatıdır. Kazeifikasyon nekrozu (B) tüberkülozda; lökosit ve fibrin dolu gri hepatizasyon (C) lober bakteriyel pnömonide; keratin incileri (D) skuamöz hücreli karsinomda; kemik metaplazisi (E) ise ileri derecede kronik distrofik durumlarda izlenir."
+  },
+  {
+    "id": "prac-odem-017",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 17,
+    "slideTitle": "Serebral Ödem Patofizyolojisi: Vazojenik ve Sitotoksik Ödem Mekanizmaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Beyin cerrahisi kliniğinde sağ frontal lobda yüksek dereceli glioblastom tanısıyla takip edilen bir hastanın manyetik rezonans görüntülemesinde (MRG), tümör kitlesini çevreleyen beyaz cevher traktusları boyunca uzanan masif parankimal ödem saptanıyor. Biyokimyasal incelemeler bu ödem sıvısının plazma proteinlerinden zengin olduğunu ve endotelyal sıkı bağlantıların (tight junctions) parçalandığını gösteriyor.\n\nBu klinik ve radyolojik tabloyu oluşturan SEREBRAL ÖDEM TİPİ VE TEMEL PATOGENEZ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitotoksik ödem — Nöronal zarlarda Na+/K+ ATPaz pompasının akut genetik mutasyonu",
+      "B) Vazojenik ödem — Kan-beyin bariyerinin yapısal bozulması sonucu ekstraselüler aralığa protein ve sıvı sızması",
+      "C) İnterstisyel ödem — BOS rezorpsiyonunun aşırı artması sonucu araknoid villusların yırtılması",
+      "D) Ozmotik ödem — Sistemik plazma sodyumunun 165 mEq/L düzeyine fırlaması",
+      "E) Sitotoksik ödem — Yalnızca serebellar Purkinje hücrelerinde intraselüler glikojen birikimi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tümörler (glioblastom, metastaz), apseler ve travma çevresinde gelişen ödem 'Vazojenik Ödem'dir. Patogenezinde neovaskülarizasyon veya inflamatuar mediyatörler nedeniyle endotelyal sıkı bağlantıların açılması ve Kan-Beyin Bariyerinin (KBB) yapısal çöküşü yatar. Protein ve sıvı damar dışına çıkarak hücreler arası (ekstraselüler) boşlukta, özellikle direncin az olduğu beyaz cevher traktusları boyunca yayılır. Sitotoksik ödem (A) hücre içi şişmedir ve iskemide görülür. İnterstisyel ödem (C) hidrosefalide periventriküler alanda görülür."
+  },
+  {
+    "id": "prac-odem-018",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 18,
+    "slideTitle": "Serebral Ödem Morfolojisi ve İntrakraniyal Basınç Artışı Sendromu (İBAS)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Araç içi trafik kazası sonrası kafa travması geçiren 24 yaşındaki bir hastada bilincin giderek kapandığı, fundoskopik bakıda bilateral optik disk sınırlarının silinip kabardığı (papilödem), kan basıncının 190/110 mmHg seviyesine yükseldiği, nabzının dakikada 48 atıma gerilediği (bradikardi) ve solunum paterninin düzensizleştiği tespit ediliyor.\n\nBu hastadaki klinik tabloyu açıklayan 'Cushing Triadı'nın ortaya çıkmasına yol açan TEMEL PATOLOJİK HADİSE aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Karotis sinüsünde aterom plağı rüptürü sonucu vagal sinirin primer uyarılması",
+      "B) İntrakraniyal basıncın aşırı yükselmesi ve beyin sapı vazomotor merkezlerinin iskemik kompresyonu",
+      "C) Adrenal medullada feokromositoma krizinin travma ile tetiklenmesi",
+      "D) Renal arter stenozu sonucu glomerüllerden ani renin boşalması",
+      "E) Tirotoksik fırtınaya bağlı tiroid hormonlarının aşırı kardiyak etkisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Cushing Triadı (Hipertansiyon, Bradikardi ve Düzensiz Solunum), aşırı artmış kafa içi basıncının (İBAS) beyin sapını (medulla oblongata) mekanik olarak sıkıştırması ve vazomotor merkezlerde derin iskemiye yol açması sonucu ortaya çıkar. Beyin sapı iskemiyi aşabilmek için sempatik deşarjla sistemik kan basıncını yükseltir (hipertansiyon); aortik ve karotid baroreseptörler bu hipertansiyonu algılayarak refleks vagal bradikardi üretir; solunum merkezlerinin baskılanması ise solunum düzensizliğine yol açar. Karotis plağı (A), feokromositoma (C) veya renal arter stenozu (D) bu tablonun nedeni değildir."
+  },
+  {
+    "id": "prac-odem-019",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 19,
+    "slideTitle": "Beyin Herniasyonları I: Subfalsin (Singulat) Herniasyon ve Anterior Arter İskemisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sol serebral hemisferde subdural hematom ve masif vazojenik ödem nedeniyle acil servise getirilen bir hastanın kraniyal bilgisayarlı tomografisinde, sol singulat girusun orta hattı aşarak falx cerebrinin serbest alt kenarının altından sağ hemisfer tarafına doğru belirgin biçimde itildiği (subfalsin herniasyon) ve orta hat şifti oluşturduğu saptanıyor.\n\nBu patolojik süreç sırasında doğrudan mekanik basıya uğrayarak iskemi ve enfarktüs riskiyle karşı karşıya kalan EN KRİTİK ARTERİYEL VASKÜLER YAPI aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Posterior İnferior Serebellar Arter (PICA)",
+      "B) Anterior Serebral Arter (ACA)",
+      "C) Orta Meningeal Arter",
+      "D) Baziler Arter",
+      "E) Oftalmik Arter"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Subfalsin (singulat) herniasyonda singulat girus falx cerebrinin sert fibröz alt kenarının altından karşı tarafa kayarken, bu anatomik komşulukta yer alan Anterior Serebral Arteri (ACA) sıkıştırır. ACA oklüzyonu frontal korteksin medial yüzünde iskemik enfarktüse yol açar. PICA (A) tonsiller herniasyonda; orta meningeal arter (C) temporal kemik kırıklarında epidural hematom kaynağı olarak; baziler arter (D) pons basısında rol oynar."
+  },
+  {
+    "id": "prac-odem-020",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 20,
+    "slideTitle": "Beyin Herniasyonları II: Transtentoryal (Unkal) Herniasyon, 3. Sinir ve Duret Kanamaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sağ hemisferik epidural hematom nedeniyle bilinci kapanan 32 yaşındaki bir hastada sağ göz bebeğinin belirgin olarak genişlediği ve ışığa yanıt vermediği (sağ midriazis), sol kol ve bacağında ise flask hemipleji geliştiği saptanıyor. Acil cerrahiye alınamayan hastanın kısa süre sonra derin komaya girdiği ve kaybedildiği bildiriliyor. Otopside mezensefalon ve ponsta orta hatta uzanan çok odaklı alev şeklinde hemorajiler izleniyor.\n\nBu hastada ölüm öncesi gelişen midriazis ve otopside saptanan beyin sapı kanamalarından (Duret kanamaları) sorumlu olan PRİMER HERNİASYON TİPİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Transtentoryal (Unkal) herniasyon",
+      "B) Subfalsin (Singulat) herniasyon",
+      "C) Transkalvaryal (Dışa) herniasyon",
+      "D) İzole foramen Luschka herniasyonu",
+      "E) Çift taraflı hipofizer herniasyon"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Temporal lob medialindeki unkusun tentorium cerebelli kenarından aşağıya doğru fıtıklaşmasına 'Transtentoryal (Unkal) Herniasyon' denir. Unkusun ilk bastığı yapı aynı taraf 3. kranial sinirdir; parasempatik liflerin felciyle 'ipsilateral midriazis' gelişir. Beyin sapının aşağıya doğru itilip çekilmesi ise baziler arterin paramedyan perforan damarlarını yırtarak mezensefalon ve ponsta ölümcül 'Duret Kanamalarına' neden olur. Subfalsin herniasyon (B) ACA basısı yapar, 3. siniri veya beyin sapını ezmez."
+  },
+  {
+    "id": "prac-odem-021",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 21,
+    "slideTitle": "Beyin Herniasyonları III: Tonsiller Herniasyon ve Fatal Beyin Sapı Kompresyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Arka çukurda (serebellumda) masif hematom saptanan bir hastada derin koma hali gelişiyor. Yoğun bakımda izlenirken hastanın solunum eforunun aniden tamamen durduğu (apne), kalp hızının hızla 20/dakikaya gerilediği ve kardiyak arreste girerek resüsitasyona yanıt vermediği gözleniyor. Otopside serebellar tonsillerin foramen magnum sınırını 8 mm aşarak aşağıya doğru uzandığı ve omurilik soğanını (medulla oblongata) ezdiği doğrulanıyor.\n\nBu hastada doğrudan ölüme yol açan HERNİASYON TİPİ VE ETKİLENEN PRİMER VİTAL MERKEZ eşleştirmesi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Tonsiller herniasyon — Medulla oblongatadaki primer kardiyak ve solunum merkezleri",
+      "B) Subfalsin herniasyon — Talamustaki duyusal röle çekirdekleri",
+      "C) Unkal herniasyon — Hipotalamustaki termoregülasyon merkezi",
+      "D) Transsfenoidal herniasyon — Optik kiyazmadaki vizüel lifler",
+      "E) Epifiz herniasyonu — Pinealositlerde melatonin salınım alanı"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Serebellar tonsillerin foramen magnumdan aşağı fıtıklaşmasına 'Tonsiller Herniasyon' denir. Bu tablonun doğrudan ölüme yol açma mekanizması, foramen magnum kemik halkası içinde foranse olan tonsillerin medulla oblongatayı (bulbus) ezmesidir. Medulla oblongatada solunum ve dolaşımı yöneten primer vazomotor ve respiratuar merkezler bulunur; bası dakikalar içinde ani apne ve asistoli yaratır. Diğer şıklardaki yapılar bu mekanizmayı açıklamaz."
+  },
+  {
+    "id": "prac-odem-022",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 22,
+    "slideTitle": "Hiperemi ve Konjesyon Karşılaştırması: Aktif Arteriyel Dolum vs Pasif Venöz Göllenme",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Patoloji dersinde hemodinamik bozukluklar konusu tartışılırken bir asistan hekim; akut bakteriyel farenjit odağındaki tonsil dokusu ile sağ kalp yetmezliği olan bir hastanın karaciğer dokusundaki vasküler değişiklikleri karşılaştırmaktadır.\n\nBu iki organda izlenen patolojik vasküler süreçlerin temel özellikleri ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Akut farenjitteki süreç pasif bir konjesyondur; doku soğuk ve mavidir.",
+      "B) Kalp yetmezliğindeki karaciğer hiperemiktir ve yüksek oksihemoglobin içerir.",
+      "C) Akut farenjitte arteriyol dilatasyonuna bağlı aktif 'hiperemi' (kırmızı-sıcak doku); kalp yetmezliğinde ise venöz drenaj bozukluğuna bağlı pasif 'konjesyon' (siyanotik doku) mevcuttur.",
+      "D) Her iki süreç de prekapiller sfinkterlerin aşırı kasılmasıyla başlayan iskemik tablolardır.",
+      "E) Hiperemi kronik parankimal fibrozise yol açarken, konjesyon doku oksijenlenmesini artırır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği kesinlikle doğrudur. Akut farenjit gibi enflamatuar süreçlerde kimyasal mediyatörlerin (histamin vb.) uyarısıyla arteriyoller genişler ve dokuya bol oksijenli kan akar; bu aktif süreç 'hiperemi'dir (doku eritemli ve sıcaktır). Sağ kalp yetmezliğinde ise vena kava ve hepatik venlerde geriye doğru kan göllenir; bu pasif süreç 'konjesyon'dur (doku deoksihemoglobin nedeniyle siyanotik ve soğuktur). A, B, D ve E seçenekleri bu iki kavramın temel fizyopatolojisini tersine çevirmektedir."
+  },
+  {
+    "id": "prac-odem-023",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 23,
+    "slideTitle": "Akut ve Kronik Pulmoner Konjesyon: Kapiller Ektazi, Mikrohemoraji ve Septal Fibrozis",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Romatizmal kalp hastalığına bağlı ileri derece mitral kapak darlığı tanısı olan 45 yaşındaki bir kadında yıllar içinde efor dispnesi ve kronik öksürük derinleşmiştir. Yapılan akciğer biyopsisinde interalveoler septaların belirgin biçimde kalınlaştığı, kollajenöz fibröz doku artışı gösterdiği ve kapiller bazal membranların sertleştiği izleniyor.\n\nBu hastada alveol septalarında fibrotik kalınlaşmaya yol açan TEMEL PATOFİZYOLOJİK SÜREÇ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut bakteriyel lober pnömoni rezolüsyonu",
+      "B) Kronik sol atriyal ve pulmoner venöz hipertansiyona bağlı kronik pulmoner konjesyon",
+      "C) Alfa-1 antitripsin eksikliğine sekonder panasinöz amfizem gelişimi",
+      "D) Pulmoner arteriyollerde primer amiloid depolanması",
+      "E) Plevral mezotelyoma hücrelerinin interstisyel invazyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Mitral stenozu, sol atriyumun boşalmasını engeller; geriye doğru pulmoner venöz basıncı yıllar boyu yüksek tutar (kronik pasif konjesyon). Pulmoner kapiller yataktaki bu inatçı hidrostatik yük ve kronik interstisyel ödem, fibroblastları uyararak alveol septalarında kalınlaşma ve sekonder fibrozise (skleroz) yol açar. Bakteriyel pnömoni (A), amfizem (C), amiloidoz (D) veya mezotelyoma (E) mitral darlığının bu hemodinamik sürecini yansıtmaz."
+  },
+  {
+    "id": "prac-odem-024",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 24,
+    "slideTitle": "Kalp Yetmezliği Hücreleri ve Akciğerin Kahverengi Endurasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uzun yıllardır kronik iskemik kalp yetmezliği tedavisi gören 72 yaşındaki bir hastanın balgam yaymasında ve ölüm sonrası akciğer histopatolojik kesitlerinde; alveol boşluklarında kümelenmiş, geniş sitoplazmalı, içerisinde yoğun sarı-kahverengi granüler pigment barındıran hücreler saptanıyor. Bu granüllerin kimyasal yapısını doğrulamak amacıyla yapılan Prusya Mavisi (Perls) özel histokimyasal boyamasında sitoplazmik granüllerin kuvvetli pozitif masmavi boyandığı izleniyor.\n\nBu histopatolojik bulguların temsil ettiği hücresel yapı ve içerdiği temel pigment aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+    "options": [
+      "A) Pnömosit tip II hücreleri — Sürfaktan apoproteini",
+      "B) Alveoler makrofajlar (Kalp Yetmezliği Hücreleri) — Hemosiderin",
+      "C) Bronşiyal kadeh (goblet) hücreleri — Asit mukopolisakkarit",
+      "D) İnterstisyel fibroblastlar — Tropokollajen",
+      "E) Eozinofil lökositler — Charcot-Leyden kristalleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Alveol lümenlerinde dökülen eritrositleri yutan ve içerdikleri demiri hemosiderine dönüştüren alveoler makrofajlar 'Kalp Yetmezliği Hücreleri' (Heart Failure Cells) olarak adlandırılır. Hemosiderin demir pigmenti olduğu için Prusya Mavisi boyasında karakteristik olarak parlak mavi boyanır. Pnömositler (A), kadeh hücreleri (C), fibroblastlar (D) veya eozinofiller (E) bu hemosiderofaj profilini ve Prusya mavisi pozitifliğini göstermez."
+  },
+  {
+    "id": "prac-odem-025",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 25,
+    "slideTitle": "Akut Hepatik Konjesyon: Santral Ven Ektazisi, Sinüzoidler ve Sentrilobüler Hipoksi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut masif pulmoner emboli sonrasında akut sağ kalp yetmezliği gelişen 61 yaşındaki bir hastada karaciğer fonksiyon testlerinde ani AST ve ALT fırlaması (şok karaciğeri tablosu) izleniyor. Yapılan karaciğer histopatolojik incelemesinde santral ven çevresindeki hepatosit kordonlarında yaygın iskemik koagülasyon nekrozu ve sinüzoidal eritrosit göllenmesi saptanırken, portal alanların hemen etrafındaki hepatositlerin canlılığını koruduğu ancak sitoplazmalarında yağ vakuolleri barındırdığı görülüyor.\n\nKaraciğer parankiminde iskemik nekrozun öncelikle SANTRAL VEN ÇEVRESİNDE (ZON 3) sınırlı kalmasının TEMEL PATOFİZYOLOJİK NEDENİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Zon 3 hepatositlerinin safra kanaliküllerine en yakın hücre grubu olması",
+      "B) Sinüzoidal kan akımında Zon 3'ün oksijen ve besinden en fakir terminal perfüzyon zonu olması",
+      "C) Glukuronidasyon enzimlerinin yalnızca periportal alanda bulunması",
+      "D) Portal ven kanının doğrudan Zon 3'e boşalarak yüksek oksijen sağlaması",
+      "E) Kupffer hücrelerinin tamamının sentrilobüler alanda kümelenip hepatositleri fagosite etmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Rappaport karaciğer asinüs modelinde kan, portal triaddan (Zon 1) santral vene (Zon 3) doğru akar. Zon 3 hepatositleri sinüzoidal dolaşımın en sonundaki hücrelerdir ve fizyolojik olarak en düşük oksijen parsiyel basıncına sahiptirler. Akut konjesyon veya şokta venöz staz ve perfüzyon düşüşü geliştiğinde, bu hücreler hipoksiye en dayanıksız grup oldukları için ilk olarak sentrilobüler nekroza uğrarlar. Periportal Zon 1 ise hepatik arter girişine yakın olduğu için canlı kalmayı başarır."
+  },
+  {
+    "id": "prac-odem-026",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 26,
+    "slideTitle": "Kronik Pasif Hepatik Konjesyon ve \"Muskat Karaciğeri\" (Nutmeg Liver)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uzun yıllardır kronik kor pulmonale ve konstriktif perikardit tanılarıyla izlenen 67 yaşındaki bir hastanın otopsisinde; karaciğerin belirgin olarak büyüdüğü, kesit yüzeyinde ise koyu kırmızı-kahverengi çökük nekroz odakları ile bunların etrafını çevreleyen açık sarı-kahverengi kabarık canlı parankim adacıklarının iç içe geçerek tipik bir 'muskat cevizi kesiti' deseni oluşturduğu gözleniyor.\n\nBu hastada karaciğer kesit yüzeyinde izlenen AÇIK SARI-KAHVERENGİ ALANLARIN patolojik ve hücresel karşılığı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Santral ven çevresindeki hepatositlerde kazeöz nekroz gelişimi",
+      "B) Periportal alanda canlı kalan hepatositlerde gelişen intraselüler yağlanma (steatoz)",
+      "C) Glisson kapsülünde metastatik karsinom hücre odaklarının birikimi",
+      "D) Sinüzoidleri tamamen tıkayan fibrin trombüsleri ve hyalen membranlar",
+      "E) Safra kanallarında yaygın kalsifikasyon ve taş oluşumu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. 'Muskat karaciğeri' (Nutmeg liver) tablosunda iki zıt alanın kontrastı deseni oluşturur: Koyu kırmızı-kahverengi alanlar kanla dolu, nekroze olmuş ve çökmüş olan 'sentrilobüler (Zon 3)' alanlardır. Açık sarı alanlar ise canlılığını koruyan ancak hipoksiye bağlı olarak intraselüler trigliserit depolayan 'periportal (Zon 1)' hepatositlerin yağlanmasıdır (steatoz). Kazeöz nekroz (A) tüberkülozda görülür; metastaz (C) veya safra taşı (E) muskat desenini açıklamaz."
+  },
+  {
+    "id": "prac-odem-027",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 27,
+    "slideTitle": "Kardiyak Siroz (Kardiyak Skleroz) ve Karaciğer Konjesyonunun İleri Evreleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yirmi yıldır tedaviye dirençli konstriktif perikardit ve ağır sağ kalp yetmezliği bulunan 59 yaşındaki bir hastanın karaciğer iğne biyopsisinde; santral venler etrafında yoğun Tip I kollajen depolanması olduğu, bu fibröz bantların komşu santral venlerle birleşerek 'santral-santral köprüleşme fibrozisi' oluşturduğu ve lobül merkezlerindeki hepatosit kordonlarının atrofiye uğradığı saptanıyor.\n\nBu histopatolojik bulguların temsil ettiği İLERİ EVRE HEMODİNAMİK PATOLOJİ aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Primer biliyer kolanjit",
+      "B) Wilson hastalığı",
+      "C) Kardiyak siroz (Kardiyak skleroz)",
+      "D) Fokal nodüler hiperplazi",
+      "E) Akut fulminan hepatit A nekrozu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Uzun süreli sağ kalp yetmezliği ve konstriktif perikardite sekonder gelişen ileri evre hepatik konjesyon tablosunda, sentrilobüler hepatosit kaybı yerini fibröz dokuya bırakır. Santral venler çevresinde başlayan ve komşu santral venlere uzanan (santral-santral) köprüleşme fibrozisi 'Kardiyak Siroz'un (kardiyak skleroz) belirleyici özelliğidir. Primer biliyer kolanjitte (A) safra kanalı hasarı; Wilson hastalığında (B) bakır birikimi; fokal nodüler hiperplazide (D) santral stellat skar; hepatit A'da (E) ise masif panasinöz nekroz görülür."
+  },
+  {
+    "id": "prac-odem-028",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 28,
+    "slideTitle": "Kronik Konjestif Splenomegali ve Dalakta Gama-Gandy Cisimcikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Alkolik karaciğer sirozu ve portal venöz hipertansiyon nedeniyle splenektomi yapılan bir hastanın patoloji laboratuvarına gönderilen dalak spesimeni 850 gram ağırlığında (normalin 5 katı) ve ileri derecede sert kıvamda tartılıyor. Dalağın histopatolojik kesitlerinde kırmızı pulpa sinüzoidlerinin belirgin genişlediği ve stromada kollajen lifleri üzerine hemosiderin pigmenti ile kalsiyum tuzlarının çöktüğü odaksal organize siderofibrotik nodüller izleniyor.\n\nBu hastanın dalak dokusunda saptanan patognomonik siderofibrotik nodüllere verilen ÖZEL PATOLOJİK İSİM aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Aschoff cisimcikleri",
+      "B) Gama-Gandy cisimcikleri (Gandy-Gamna nodülleri)",
+      "C) Councilman cisimcikleri",
+      "D) Schaumann cisimcikleri",
+      "E) Michaelis-Gutmann cisimcikleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kronik konjestif splenomegalide sinüzoidal rüptürler sonucu gelişen mikrokanamaların hemosiderin, kalsiyum tuzları ve fibröz doku ile organize olmasıyla oluşan yapılara 'Gama-Gandy Cisimcikleri' (Gandy-Gamna nodülleri) denir. Aschoff cisimcikleri (A) akut romatizmal karditte; Councilman cisimcikleri (C) viral hepatitteki apoptotik hepatositlerde; Schaumann cisimcikleri (D) sarkoidozda; Michaelis-Gutmann cisimcikleri (E) ise malakoplakide izlenir."
+  },
+  {
+    "id": "prac-odem-029",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 29,
+    "slideTitle": "Kanama (Hemoraji) Patolojisine Giriş: Vasküler Bütünlük ve Hemorajik Diyatezler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Klinik patolojide 'Hemorajik Diyatez' kavramı ve kanama oluşturan mekanizmalar değerlendirildiğinde, aşağıdaki durumlardan hangisi KANAMANIN DAMAR DUVARI VEYA PRİMER HEMOSTAZ DÜZEYİNDEKİ bir bozukluğundan ZİYADE sekonder hemostatik (koagülasyon faktör) yetmezliğine bağlıdır?",
+    "options": [
+      "A) İmmün mekanizmalarla periferik kanda trombosit sayısının 15.000/μL düzeyine inmesi",
+      "B) Asetilsalisilik asit (aspirin) kullanımına bağlı siklooksijenaz-1 enzim inhibisyonu",
+      "C) C vitamini eksikliğine (iskorbüt) bağlı kollajen hidroksilasyon defekti ve kapiller kırılganlık",
+      "D) X'e bağlı resesif geçiş gösteren Faktör VIII eksikliği (Hemofili A)",
+      "E) Henoch-Schönlein purpurasında lökositoklastik vaskülit hasarı"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Hemofili A, pıhtılaşma kaskadında yer alan intrensek yol faktörü olan Faktör VIII'in kalıtsal eksikliğidir; yani bu doğrudan bir 'sekonder hemostaz (koagülasyon faktörü)' defektidir. Trombositopeni (A) ve aspirin kullanımı (B) primer hemostazdaki trombosit defektleridir. İskorbüt (C) ve vaskülit (E) ise damar duvarı bütünlüğünü bozan vasküler patolojilerdir."
+  },
+  {
+    "id": "prac-odem-030",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 30,
+    "slideTitle": "Küçük Yüzeyel Kanamalar: Peteşi (1-2 mm) ve Purpura (3-5 mm) Patolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kemoterapi tedavisi görmekte olan 42 yaşındaki bir lösemi hastasında bacaklarda ve ağız mukozasında birdenbire ortaya çıkan, basmakla solmayan, çapları 1-2 mm arasında değişen çok sayıda noktasal koyu kırmızı-mor kanama lezyonları saptanıyor. Tam kan sayımında hemoglobin 10.5 g/dL, lökosit 3.200/μL ve trombosit sayısı 12.000/μL (ağır trombositopeni) olarak rapor ediliyor.\n\nBu hastada saptanan 1-2 mm çapındaki yüzeyel kanama lezyonlarına verilen ÖZEL PATOLOJİK İSİM aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Ekimoz",
+      "B) Peteşi",
+      "C) Hematom",
+      "D) Hemartroz",
+      "E) Telanjiyektazi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Deri ve müköz membranlarda 1 ila 2 mm çapında noktasal, basmakla solmayan kanama odaklarına 'Peteşi' (Petechiae) denir. Ağır trombositopeni (<20.000/μL) peteşinin en klasik ve doğrudan nedenidir. Çapı 3-5 mm olanlara purpura; 1-2 cm'den büyük olan deri altı kanamalara ekimoz (A); dokuda kitle oluşturan kan birikimlerine hematom (C); eklem içine kanamaya ise hemartroz (D) denir. Telanjiyektazi (E) ise kalıcı kapiller genişlemedir ve diaskopide solar."
+  },
+  {
+    "id": "prac-odem-031",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 31,
+    "slideTitle": "Ekimoz (>1-2 cm) ve Hematom: Deri Altı Kanama ve Dokudaki Kitle Etkisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sol temporal kemiğe gelen sert bir cisim travması sonrası acil servise getirilen ve lucid interval (geçici iyileşme dönemi) sonrası hızla bilinci kapanan 19 yaşındaki bir gencin beyin tomografisinde; sol temporoparyetal bölgede durayı kemikten ayıran, bikonveks (mercek şeklinde) hiperdens kitle oluşturan ve orta hat yapılarını belirgin şekilde sağa iten 45 mililitrelik akut kan koleksiyonu izleniyor.\n\nBu hastada intrakraniyal boşlukta gelişerek kitle etkisi yapan bu kan koleksiyonunu tanımlayan EN UYGUN PATOLOJİK TERİM aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Subkütan ekimoz",
+      "B) Epidural hematom",
+      "C) Peteşiyal hemoraji",
+      "D) Hemotoraks",
+      "E) Senil purpura"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Temporal kemik kırıklarında arteria meningea medianın yırtılması sonucu dura mater ile kafatası kemiği arasında kitle oluşturan kan birikimine 'Epidural Hematom' adı verilir. Dokuda yer kaplayan ve kitle etkisi yaratan kan koleksiyonları hematom olarak adlandırılır. Ekimoz (A) ve purpura (E) cilt altı yüzeyel kanamalardır; peteşi (C) noktasal 1-2 mm kanamalardır; hemotoraks (D) ise plevral boşluktaki kanamadır."
+  },
+  {
+    "id": "prac-odem-032",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 32,
+    "slideTitle": "Hematomda Renk Değişiminin Biyokimyasal Kronolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uyluğuna sert bir futbol darbesi alan 22 yaşındaki bir sporcunun uyluk ön yüzünde başlangıçta mor-mavi renkli olan geniş ekimoz alanının, travmadan 5 gün sonra belirgin biçimde sarı-yeşil bir renk tonuna dönüştüğü gözleniyor.\n\nBu hematom odağında 5. günde gözlenen SARI-YEŞİL RENK DEĞİŞİKLİĞİNDEN doğrudan sorumlu olan biyokimyasal hemoglobin yıkım ürünleri aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+    "options": [
+      "A) Melanin ve lipofuscin",
+      "B) Biliverdin ve bilirubin",
+      "C) Karboksihemoglobin ve methemoglobin",
+      "D) Ürik asit kristalleri ve kalsiyum pirofosfat",
+      "E) Fibrinojen ve D-dimer kompleksleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Doku içi kanamada (ekimoz) dökülen eritrositler makrofajlar tarafından fagosite edilir. Makrofajlardaki heme oksijenaz enzimi hemoglobini parçalayarak yeşil renkli 'biliverdin'e, ardından 'bilirubin'e (sarı-yeşil) dönüştürür. Bu durum lezyonun sarı-yeşil renk almasını sağlar. Daha sonra demir hemosiderine (altın sarısı-kahverengi) dönüşür. Melanin/lipofuscin (A), karboksihemoglobin (C), ürik asit (D) veya fibrin (E) bu renk evriminde rol almaz."
+  },
+  {
+    "id": "prac-odem-033",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 33,
+    "slideTitle": "Seröz Boşluk Kanamaları: Hemotoraks, Hemoperiton, Hemartroz ve Tamponad",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut anterior miyokard enfarktüsü nedeniyle koroner yoğun bakım ünitesinde izlenen 66 yaşındaki bir erkek hastada, enfarktüsün 5. gününde aniden şiddetli göğüs ağrısı, derin hipotansiyon (kan basıncı 60/40 mmHg), boyun venlerinde ileri derecede dolgunluk ve oskültasyonda kalp seslerinin adeta duyulamayacak kadar derinden gelmesi tablosu gelişiyor ve hasta elektromekanik disosiyasyon ile kaybediliyor. Otopside perikardiyal kese içerisinde 280 mililitre pıhtılaşmış taze kan ve sol ventrikül anterior serbest duvarında transmural bir yırtık saptanıyor.\n\nBu hastada doğrudan ölüme yol açan HEMODİNAMİK MEKANİZMA VE KLİNİK TABLO aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hemoperikardiyum ve Kardiyak Tamponad",
+      "B) İntraalveoler hemorajiye bağlı asfiksi",
+      "C) Masif hemotoraksa bağlı trakeal deviasyon",
+      "D) İzole hemoperitoneum ve hipovolemik şok",
+      "E) İnterkostal hematom ve torasik kompartman sendromu"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Miyokard enfarktüsünün 3-7. günlerinde makrofajların nekrotik miyositleri temizlemesi ve dokunun en zayıf evrede olması nedeniyle 'miyokard serbest duvar rüptürü' gelişebilir. Ventriküldeki yüksek basınçlı kan hızla perikardiyal keseye dolar (Hemoperikardiyum). Rijit perikard esneyemediği için 200-300 ml kan diyastolik dolumu tamamen bloke eder ve 'Kardiyak Tamponad' oluşturur. Gelişen klinik tablo klasik Beck triadıdır (hipotansiyon, juguler venöz dolgunluk, derinden gelen kalp sesleri). Olay plevrada (C), batında (D) veya alveolde (B) değildir."
+  },
+  {
+    "id": "prac-odem-034",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 34,
+    "slideTitle": "Kanama Hacmi, Hızı, Anatomik Lokalizasyonu ve Demir Metabolizması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Patoloji stajında demir metabolizması ve kanama tipleri arasındaki ilişkiyi inceleyen bir tıp öğrencisi; kronik mide ülserine bağlı dışkıda gizli kanaması olan bir hasta ile trafik kazası sonrası uyluk derin kas dokusu içinde masif hematom gelişen bir hastanın hematolojik parametrelerini karşılaştırmaktadır.\n\nBu iki hastanın uzun dönem hematolojik ve metabolik sonuçları ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Mide ülseri hastasında demir dışkıyla kaybedilmediği için eritropoiez hızla artar.",
+      "B) Uyluk içi hematomu olan hastada demir doku makrofajlarınca geri kazanıldığından demir eksikliği anemisi gelişmez; aşırı hemolize bağlı sarılık gelişebilir.",
+      "C) Uyluk içi hematomu olan hastada eritrositler vücut dışına atıldığı için ağır demir eksikliği anemisi kaçınılmazdır.",
+      "D) Her iki hastada da demir depoları eşit oranda tükenir ve ferritin düzeyleri sıfırlanır.",
+      "E) Mide ülserinde dış kanama olduğu için serbest bilirubin hızla yükselerek masif nükleer sarılığa yol açar."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Kanamanın dışarıya mı yoksa kapalı bir iç kompartmana mı olduğu demir homeostazının temel belirleyicisidir: Uyluk kas içi hematomu gibi iç kanamalarda eritrositler vücut içinde hapsolur; makrofajlar lizise uğrayan eritrositlerdeki demiri hemosiderin ve ferritin üzerinden tamamen geri kazanarak yeniden kullanıma sokar. Bu nedenle iç hematomlarda demir eksikliği anemisi GELİŞMEZ. Ancak parçalanan devasa hem miktarı indirekt bilirubine dönüşerek hastada geçici sarılık (ikter) yaratabilir. Mide ülserinde ise kan ve demir gastrointestinal yoldan dış ortama atıldığı için demir eksikliği anemisi gelişir. Diğer seçenekler bu temel fizyopatolojiyi ihlal etmektedir."
+  },
+  {
+    "id": "prac-acs-001",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 1,
+    "slideTitle": "Ana ve Çocuk Sağlığı (AÇS): Genel Çerçeve, Biyososyal Öncelik ve Hassas Grup Kavramı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Halk sağlığında ana ve çocuk sağlığının 'öncelikli hassas grup' olarak kabul edilmesinin temel gerekçeleri arasında aşağıdakilerden hangisi YER ALMAZ?",
+    "options": [
+      "A) Kadın ve çocukların birlikte toplum nüfusunun yaklaşık yarısını oluşturması",
+      "B) Büyüme, gelişme ve gebelik gibi süreçlerin biyolojik kırılganlığı artırması",
+      "C) Bu gruptaki hastalık ve ölümlerin büyük kısmının koruyucu hekimlikle önlenebilir olması",
+      "D) Sağlık düzeylerinin o toplumun sosyoekonomik gelişmişliğini yansıtan en hassas gösterge olması",
+      "E) Anne ve çocuk morbiditesinin tamamen genetik faktörlere bağlı olup çevresel şartlardan etkilenmemesi"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Anne ve çocuk sağlığı morbidite ve mortalitesi genetik faktörlerden ziyade doğrudan beslenme, hijyen, çevre sağlığı ve sağlık hizmetlerine erişim gibi çevresel ve sosyoekonomik faktörlere bağlıdır ve büyük oranda önlenebilirdir. A, B, C ve D seçenekleri AÇS'nin öncelikli grup kabul edilmesinin temel epidemiyolojik gerekçeleridir."
+  },
+  {
+    "id": "prac-acs-002",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 2,
+    "slideTitle": "Demografik Göstergeler ve Doğurganlık Ölçütleri: KDH, GDH ve TDH Dinamikleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Toplam nüfusu 1.000.000, 15-49 yaş kadın nüfusu 250.000 olan bir bölgede bir yıl içinde 5.000 canlı doğum gerçekleşmiştir. Bu bölgenin Kaba Doğum Hızı (KDH) ve Genel Doğurganlık Hızı (GDH) değerleri sırasıyla aşağıdakilerden hangisinde doğru verilmiştir?",
+    "options": [
+      "A) KDH: Binde 5 — GDH: Binde 20",
+      "B) KDH: Binde 20 — GDH: Binde 5",
+      "C) KDH: Binde 5 — GDH: Binde 50",
+      "D) KDH: Binde 10 — GDH: Binde 25",
+      "E) KDH: Binde 2.5 — GDH: Binde 10"
+    ],
+    "correctAnswer": 0,
+    "explanation": "KDH = (Canlı Doğum / Toplam Nüfus) * 1.000 = (5.000 / 1.000.000) * 1.000 = Binde 5. GDH = (Canlı Doğum / 15-49 Yaş Kadın Nüfusu) * 1.000 = (5.000 / 250.000) * 1.000 = Binde 20. Doğru eşleştirme A seçeneğidir."
+  },
+  {
+    "id": "prac-acs-003",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 3,
+    "slideTitle": "Anne Ölümü ve Anne Ölüm Oranı (AÖO / MMR): Epidemiyolojik Tanım ve Hesaplama",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Dünya Sağlık Örgütü (DSÖ) kriterlerine göre, bir ölüm vakasının 'Anne Ölümü' olarak sınıflandırılabilmesi için gebeliğin sonlanmasından itibaren geçebilecek azami süre ve formüldeki payda çarpanı hangisinde doğru verilmiştir?",
+    "options": [
+      "A) 28 gün — 1.000 Canlı Doğum",
+      "B) 42 gün — 100.000 Canlı Doğum",
+      "C) 42 gün — 1.000 Canlı Doğum",
+      "D) 1 yıl — 100.000 Kadın Nüfusu",
+      "E) 7 gün — 10.000 Canlı Doğum"
+    ],
+    "correctAnswer": 1,
+    "explanation": "DSÖ tanımına göre gebelik süresince veya gebeliğin sonlanmasından sonraki ilk 42 gün (6 hafta / lohusalık dönemi) içinde obstetrik nedenlerle gelişen ölümler Anne Ölümü sayılır ve Anne Ölüm Oranı (AÖO) 100.000 canlı doğumda ifade edilir."
+  },
+  {
+    "id": "prac-acs-004",
+    "deckId": "learn-ana-cocuk-sagligi",
+    "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
+    "slideNumber": 4,
+    "slideTitle": "Anne Ölümlerinin Nedenleri: Doğrudan ve Dolaylı Obstetrik Faktörler",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki klinik tablolardan hangisi 'Doğrudan Obstetrik Anne Ölümü' nedenleri arasında YER ALMAZ?",
+    "options": [
+      "A) Doğum sonrasında gelişen uterin atoniye bağlı masif hemoraji",
+      "B) Eklampsi nöbeti sonrası gelişen intraserebral kanama",
+      "C) Önceden mevcut olan romatizmal mitral darlığına bağlı peripartum akut akciğer ödemi",
+      "D) Doğum eylemi sırasında gelişen amniyon sıvı embolisi",
+      "E) Plasenta previa totalise bağlı kontrol altına alınamayan obstetrik kanama"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Önceden var olan romatizmal mitral darlığının gebeliğin hemodinamik yüküyle dekompanse olması 'Dolaylı Obstetrik Ölüm' nedenidir. Atoni, eklampsi, amniyon sıvı embolisi ve plasenta previa ise doğrudan obstetrik sürece bağlı gelişen 'Doğrudan Obstetrik Ölüm' nedenleridir."
+  },
+  {
     "id": "prac-acs-005",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana ve Çocuk Sağlığı Düzeyinin İzlenmesi, Mortalite Göstergeleri ve Tarama Programları",
@@ -1454,7 +1967,7 @@
     "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir."
   },
   {
-    "id": "d3-k1-tbg-001-150",
+    "id": "d3-k1-tbg-001-177",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 7,
@@ -1532,7 +2045,7 @@
     "explanation": "Vankomisin, gram-pozitif bakterilerin hücre duvarı sentezini\n(peptidoglikan) hedef alan büyük bir glikopeptit molekülüdür ve gram-\nnegatif bakterilerin dış membranını geçemediğinden, E. coli gibi gram-\nnegatif bakteriler vankomisine doğal (intrinsik) olarak dirençlidir. Diğer\neşleştirmeler yanlıştır: E. coli ampisiline kazanılmış mekanizmalarla\ndirençli olabilir ama bu doğal direnç değildir; S. aureus vankomisine\ngenellikle duyarlıdır; P. aeruginosa piperasiline (özellikle tazobaktam ile\nkombine) duyarlı olabilir; N. gonorrhoeae seftriaksona halen duyarlıdır\n(tedavide kullanılır)."
   },
   {
-    "id": "d3-k1-tbg-001-152",
+    "id": "d3-k1-tbg-001-179",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 9,
@@ -1571,7 +2084,7 @@
     "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
   },
   {
-    "id": "d3-k1-tbg-001-153",
+    "id": "d3-k1-tbg-001-180",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 10,
@@ -1727,7 +2240,7 @@
     "explanation": "Doku Faktörü Yolak İnhibitörü (TFPI), doku faktörü-Faktör VIIa kompleksini ve Faktör Xa&apos;yı inhibe ederek ekstrensek koagülasyon yolağını baskılayan bir antikoagülan proteindir; fibrinolitik sistemle değil koagülasyon kaskadının inhibisyonuyla ilgilidir. Plazmin, fibrini parçalayan ana enzimdir; doku plazminojen aktivatörü, ürokinaz ve streptokinaz ise plazminojeni plazmine çevirerek fibrinolizi başlatan/aktive eden ajanlardır."
   },
   {
-    "id": "d3-k1-tbg-001-157",
+    "id": "d3-k1-tbg-001-184",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 14,
@@ -1961,7 +2474,7 @@
     "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
   },
   {
-    "id": "d3-k1-tbg-001-163",
+    "id": "d3-k1-tbg-001-190",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 20,
@@ -2039,7 +2552,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-003-165",
+    "id": "d3-k1-enf-003-192",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 2,
@@ -2349,1058 +2862,5 @@
     ],
     "correctAnswer": "B",
     "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
-  },
-  {
-    "id": "d3-k1-enf-009",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 10,
-    "slideTitle": "İzolasyon Önlemlerinin 2 Kademeli Mimarisi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
-  },
-  {
-    "id": "d3-k1-enf-013",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 11,
-    "slideTitle": "Standart Önlemler ve El Hijyeni İlkeleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
-  },
-  {
-    "id": "d3-k1-enf-013-175",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 12,
-    "slideTitle": "Güvenli Enjeksiyon ve Kesici-Delici Alet Yaralanmalarından Korunma",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
-  },
-  {
-    "id": "d3-k1-enf-010",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 13,
-    "slideTitle": "Temas İzolasyonu (Kırmızı Yıldız) ve Çoğul Dirençli Mikroorganizmalar",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tek kişilik oda, mümkün değilse aynı mikroorganizma ile enfekte/kolonize hastaların\naynı odaya yerleştirilmesi (kohortlama)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Odalar/hastalar arasında malzeme veya tıbbi cihazların ortak kullanımının önlenmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kişisel koruyucu ekipmanların (KKE) hasta odasından ayrılmadan çıkarılması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Odadan ayrıldıktan sonra el hijyeni uygulanması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Odaya girmeden önce N95 maske takılması",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
-  },
-  {
-    "id": "d3-k1-enf-004",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 14,
-    "slideTitle": "Damlacık İzolasyonu (Mavi Çiçek) ve 1 Metre Güvenlik Kuralı",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kızamık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Suçiçeği",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "SARS-CoV-2 enfeksiyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Neisseria meningitidis",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Tüberküloz",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
-  },
-  {
-    "id": "d3-k1-enf-004-178",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 15,
-    "slideTitle": "Solunum (Hava Yolu) İzolasyonu (Sarı Yaprak) ve Negatif Basınç",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kızamık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Suçiçeği",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "SARS-CoV-2 enfeksiyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Neisseria meningitidis",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Tüberküloz",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
-  },
-  {
-    "id": "d3-k1-enf-011",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 16,
-    "slideTitle": "Üç İzolasyon Tipinin ve Hastane Sembollerinin Karşılaştırma Matrisi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hastanelerde kullanılan enfeksiyon kontrol işaretlerinden hangisi temas izolasyonunu simgeler?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sarı yaprak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Mavi papatya/çiçek",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kırmızı yıldız",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Yeşil üçgen",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Turuncu daire",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Hastane enfeksiyon kontrol uygulamasında (kurumdan kuruma\ndeğişebilen renk kodlamalarında), temas izolasyonu gerektiren\nhastaların oda kapılarına genellikle kırmızı yıldız işareti asılır. Bu görsel\nkodlama, sağlık personelinin ve ziyaretçilerin gerekli koruyucu önlemleri\n(eldiven, önlük vb.) almadan odaya girmesini engellemeyi amaçlar."
-  },
-  {
-    "id": "d3-k5-aci-011",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 17,
-    "slideTitle": "Kişisel Koruyucu Ekipman (KKE) Giyme ve Çıkarma Protokolü",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Akut toksik madde zehirlenmelerinde gastrointestinal dekontaminasyon yöntemleri değerlendirildiğinde güncel kılavuzlarda aspirasyon riski ve özofagus perforasyonu tehlikesi nedeniyle artık RUTİN OLARAK KULLANILMAYAN ve önerilmeyen yöntem aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İpeka şurubu veya mekanik uyarı ile hastayı kusturma",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "İlk 1 saat içinde tek doz aktif kömür uygulaması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bilinç açık veya entübe hastada orogastrik tüp ile mide yıkama",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Demir ve lityum zehirlenmesinde tüm bağırsak irrigasyonu (PEG)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Spesifik antidot uygulanması",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
-  },
-  {
-    "id": "d3-k1-enf-009-181",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 18,
-    "slideTitle": "Çoğul İlaç Dirençli Bakteriler (MDRO) ve Antibiyotik Yönetimi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
-  },
-  {
-    "id": "d3-k1-enf-054-182",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 19,
-    "slideTitle": "Koruyucu Ortam (Ters İzolasyon) ve Nötropenik Hasta Yönetimi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Febril nötropeni için hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Mutlak nötrofil sayısı <500/mm³",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Vücut sıcaklığı ≥38.3°C ya da 1 saat ara ile ≥38°C",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Mukozit varlığında kandidemi riski artar",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Uzamış nötropeni küf enfeksiyonu riskini artırır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Febril nötropenide izole hümoral immün yetmezlik vardır",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
-  },
-  {
-    "id": "d3-k1-enf-009-183",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 20,
-    "slideTitle": "Büyük Sentez: İzolasyon Karar Ağacı ve Kurul 1 Altın İpuçları",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
-  },
-  {
-    "id": "d3-k1-hs-001",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 1,
-    "slideTitle": "Bulaşıcı Hastalıkların Yeniden Ortaya Çıkışı ve 1970 Yanılgısı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Halk sağlığı kavramının başlıca ilkeleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sağlık bir insanlık hakkıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tedavi edici hizmetler koruyucu hizmetlerden önceliklidir",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Hastalıkların nedenleri sosyal, biyolojik ve fiziksel etmenlerdir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kişinin hastalığı aynı zamanda ailenin de sorunudur",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Sağlık hizmeti bir ekip hizmetidir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Halk sağlığının temel felsefesinde koruyucu hizmetler tedavi edici\nhizmetlerden önceliklidir (\"önce koru\" ilkesi); bir hastalığı ortaya\nçıkmadan önlemek, ortaya çıktıktan sonra tedavi etmekten her zaman\ndaha etkili ve ekonomiktir. Diğer ifadeler (sağlığın bir insanlık hakkı\nolması, hastalık nedenlerinin çok boyutlu olması, hastalığın aile boyutu,\nekip hizmeti olması) halk sağlığının kabul edilen temel ilkeleridir."
-  },
-  {
-    "id": "past-1790877043881-186862",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 2,
-    "slideTitle": "21. Yüzyılda Salgınların Dinamikleri: Küreselleşme ve Jet Hızı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hangisi influenza virüsleri A (pandemik H1N1 dahil) ve B ile enfeksiyonun tedavisi ve profilaksisi için kullanılan bir antiviral nöraminidaz inhibitörüdür?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Darunavir",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Tenofovir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oseltamivir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Ritonavir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nelfinavir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili INFLUENZA kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır."
-  },
-  {
-    "id": "study-q-learn-halk-sagligi-salgin-has-s3",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 3,
-    "slideTitle": "Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı' başlığı altında incelenen bu mekanizma (%70 HAYVAN KAYNAKLI KURALI: İnsanlarda yeni ortaya çıkan enfeksiyon patojenlerinin yaklaşık %70'İ HAYVAN KAYNAKLIDIR (zoonotik kökenli)....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
-  },
-  {
-    "id": "d3-k1-enf-001",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 4,
-    "slideTitle": "Epidemiyolojik Dağılım Kalıpları: Endemi, Epidemi, Pandemi, Sporadi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Epidemi (salgın) kavramı için hangisi doğru bir tanımdır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Bir hastalığın bir toplulukta alışılmış sıklıkta görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Bir hastalığın bir toplulukta alışılmış seyrinden daha fazla görülmesi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Bir hastalığın bir toplulukta düşük oranda görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bir hastalığın bir toplulukta hiç görülmemesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bir hastalığın bir toplulukta çok yüksek, sabit bir oranda sürekli görülmesi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede, o\nhastalığın o toplumdaki beklenen/alışılmış (bazal, endemik) sıklığının\nbelirgin şekilde üzerinde görülmesidir. Bu kavram mutlak bir sayı değil,\nhastalığın normal düzeyine göre gösterdiği artışı ifade eder. Endemi,\nhastalığın bir bölgede sürekli ve alışılmış düzeyde bulunmasıdır;\npandemi ise epideminin kıtalar arası çok geniş coğrafi alanlara\nyayılmasıdır."
-  },
-  {
-    "id": "d3-k1-enf-026-188",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 5,
-    "slideTitle": "Epidemik Fazlar ve Salgın Eğrisinin 4 Aşaması",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretrit sebebiyle izlenen bir hastada ateş yüksekliği gelişmesi halinde ayırıcı tanıda yer alması gerekenler için\nhangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sadece epididimit düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Sadece orşit düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Sadece disemine gonokok enfeksiyonu düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Sadece skrotal apse düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Epididimit, orşit, disemine gonokok enfeksiyonu ve skrotal apsenin hepsi\ndüşünülmelidir",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Üretrit tanılı bir hastada ateş yüksekliğinin eklenmesi, enfeksiyonun\nbasit üretritin ötesine geçerek komplike bir tabloya ilerlediğini\ndüşündürür. Bu durumda epididimit, orşit, skrotal apse gibi lokal yayılım\nkomplikasyonları ve dissemine gonokok enfeksiyonu (artrit-dermatit\nsendromu; ateş, poliartralji, püstüler döküntü ile seyreden sistemik bir\ntablo) ayırıcı tanıda mutlaka düşünülmelidir."
-  },
-  {
-    "id": "d3-k2-ah-002",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 6,
-    "slideTitle": "Salgını Bekleme, Erken Teşhis ve Klinisyenin Rolü",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Türkiye Kanser Erken Teşhis, Tarama ve Eğitim Merkezleri (KETEM) ve Aile Hekimliği kanser tarama standartları ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Serviks kanseri taraması 30-65 yaş kadınlarda 5 yılda bir HPV-DNA ve Pap Smear ile yapılır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Meme kanseri taraması 40-69 yaş kadınlarda 2 yılda bir mamografi ile yapılır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kolorektal kanser taraması 50-70 yaş kadın ve erkeklerde 2 yılda bir gaitada gizli kan testi (GGK) ile yapılır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "18-35 yaş arası tüm sağlıklı erkeklerde her yıl rutin tarama kolonoskopisi uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Meme farkındalığı için 20 yaş üzeri kadınlara her ay kendi kendine meme muayenesi önerilir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Kolorektal kanser taraması 50-70 yaş grubuna yöneliktir (2 yılda bir GGK, 10 yılda bir kolonoskopi). 18-35 yaş arasındaki sağlıklı asemptomatik erkeklerde her yıl kolonoskopi yapılması tıbben anlamsız, zararlı ve protokol dışıdır."
-  },
-  {
-    "id": "study-q-learn-halk-sagligi-salgin-has-s7",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 7,
-    "slideTitle": "Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması' başlığı altında incelenen bu mekanizma (İLK VAKA KURALI: Sınırlama (containment) İLK VAKA TEŞHİS EDİLDİĞİ ANDA BAŞLAMALIDIR; patojen henüz laboratuvarda tam izole edilmemiş olsa da...) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
-  },
-  {
-    "id": "d3-k1-hs-016",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 8,
-    "slideTitle": "Hastalık Mücadele Düzeyleri: Kontrol, Eliminasyon ve Eradikasyon",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir enfeksiyon hastalığının etkeniyle birlikte yeryüzünden tamamen yok edilmesi aşağıdaki tanımlardan\nhangisiyle ifade edilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Endemi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Epidemiyoloji",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Eradikasyon",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Epidemi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Pandemi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Eradikasyon, bir hastalığın etkeninin doğadaki tüm rezervuarlarıyla\n(insan, hayvan, çevre) birlikte tamamen ve kalıcı olarak yok edilmesidir;\ngünümüzde çiçek hastalığı, eradike edilmiş tek insan hastalığıdır."
-  },
-  {
-    "id": "d3-k5-coc-001",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 9,
-    "slideTitle": "Salgına Yanıt Sisteminin 4 Temel Ayağı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Türkiye'de Sağlık Bakanlığı koordinasyonunda yenidoğan bebeklerden taburcu olmadan önce alınan topuk kanı (Guthrie kartı) ile taranan metabolik ve genetik hastalıklar arasında aşağıdakilerden hangileri yer alır?\n\nI. Konjenital Hipotiroidi\nII. Spinal Müsküler Atrofi (SMA)\nIII. Konjenital Adrenal Hiperplazi (KAH)\nIV. Konjenital Glokom",
-    "options": [
-      {
-        "key": "A",
-        "text": "I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "I ve II",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız I",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Türkiye Ulusal Yenidoğan Tarama Programında topuk kanından taranan 6 hastalık vardır: 1) Fenilketonüri (FKÜ), 2) Konjenital Hipotiroidi (KH), 3) Biyotinidaz Eksikliği, 4) Kistik Fibrozis (KF), 5) Konjenital Adrenal Hiperplazi (KAH) ve 6) Spinal Müsküler Atrofi (SMA). Konjenital glokom topuk kanından taranmaz; göz muayenesi ve kırmızı refle testi ile taranır."
-  },
-  {
-    "id": "past-1790877479725-612842",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 10,
-    "slideTitle": "Kurumlar Arası Koordinasyon ve Acil Operasyon Merkezleri (EOC)",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Cerebellum çekirdeklerinden hangisi neocerebellum ile ilgili fonksiyona sahiptir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Nucleus globosus",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Nucleus fastigii",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Nucleus emboliformis",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nucleus interpositum",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nucleus dentatus",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 3 Diüretik İlaçlar kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır."
-  },
-  {
-    "id": "past-1790877034973-262905",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 11,
-    "slideTitle": "Sağlık Enformasyonu ve Sürveyans Sistemi: Kişi, Zaman ve Yer",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir bölgede ortaya çıkan yeni bir viral solunum yolu epidemisinde sürveyans ekiplerince yürütülen filyasyon ve tanı çalışmaları sonucunda klinik ve laboratuvar olarak doğrulanmış toplam 250.000 vaka kayıtlara geçmiştir. Takip süresi sonunda bu enfeksiyona bağlı olarak toplam 5.000 hastanın hayatını kaybettiği saptanmıştır.\n\nBuna göre, söz konusu salgının olgu fatalite hızı (vaka-fatalite hızı) yüzde kaçtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "%2",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "%4",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "%6",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "%10",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "%15",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "【Doğrulanmış Tıbbi Gerekçe (Eşleşme: %100)】:\nVaka-fatalite hızı (Case Fatality Rate - CFR), belirli bir hastalık veya salgın sırasında, tanı almış (klinik ve/veya laboratuvar olarak doğrulanmış) vaka sayısı içindeki ölüm sayısının yüzdesi olarak hesaplanır. Formül: (Ölüm Sayısı / Toplam Vaka Sayısı) x 100. Soruda verilen değerlere göre: (5.000 / 250.000) x 100 = 0.02 x 100 = %2. Bu hesaplama halk sağlığı ve epidemiyoloji literatüründe (CDC, WHO, Gordis Epidemiology) standarttır. Amfi slaytları bu spesifik hesaplama sorusuyla doğrudan ilişkili değildir (uyum skoru yüksek olsa da içerik farklı), ancak uluslararası literatür ve temel matematiksel mantık iddia edilen cevabı kesin olarak doğrular.\n\n【Amfi Slayt Referansı】: \"2021final11_230619_142606\" (Slayt #2)\n\n【Klinik İpucu】: Vaka-fatalite hızı (CFR) ile Ölüm Hızı (Mortality Rate) karıştırılmamalıdır. CFR sadece hastalananlar arasındaki ölümleri ölçer (hastalığın şiddetini yansıtır), Ölüm Hızı ise genel popülasyondaki ölümleri ölçer (popülasyon riskini yansıtır). Salgın başlangıcında CFR genellikle yüksek çıkar ve zamanla düşebilir (dengeye oturur)."
-  },
-  {
-    "id": "d3-k6-hal-003",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 12,
-    "slideTitle": "Risk İletişimi ve İnfodemi ile Mücadele: Üç Altın Kural",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Çalışma yaşamında bir çalışana yönelik sistematik, kasıtlı, düşmanca ve sürekli olarak uygulanan Mobbing (işyerinde psikolojik taciz) davranış kategorileri değerlendirildiğinde aşağıdakilerden hangisi çalışanın \"kendini göstermesini ve iletişimini engellemeye\" yönelik davranışlar grubuna girer?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Çalışanın sözünün sürekli kesilmesi, yöneticisi tarafından azarlanması, çalışma arkadaşlarıyla konuşmasının yasaklanması ve fikirlerinin dikkate alınmaması",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Çalışanın arkasından asılsız dedikodu çıkarılması ve cinsel imalarda bulunulması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Çalışana anlamsız, kapasitesinin çok altında veya yapamayacağı imkansız görevler verilmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Doğrudan fiziksel şiddet uygulanması veya tehdit edilmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İşyerindeki ortak çalışma alanından uzaklaştırılıp izole odaya hapsedilmesi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Leymann tarafından sınıflandırılan mobbing boyutları: 1) Kendini göstermeyi ve iletişimi engelleme (sözünü kesme, bağırma, sürekli eleştirme), 2) Sosyal ilişkilere saldırı (dışlama, izole etme, yok sayma), 3) Sosyal itibara saldırı (dedikodu, iftira, alay etme), 4) Yaşam kalitesi ve mesleki duruma saldırı (niteliksiz iş verme, anlamsız iş verme), 5) Doğrudan sağlığa saldırıdır."
-  },
-  {
-    "id": "d3-k1-enf-036",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 13,
-    "slideTitle": "Toplumsal Boyut: Sosyokültürel Faktörler ve Toplumun Katılımı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi HIV pozitif anneden bebeğe vertikal bulaş riskini artıran faktörlerden DEĞİLDİR?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İkiz gebelik",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Maternal CD4 sayısının yüksek olması",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "AIDS'in eşlik etmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Vajinal doğum",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Uzamış membran rüptürü",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Anneden bebeğe HIV geçişini (vertikal bulaşı) belirleyen temel etken annedeki viral replikasyon düzeyi ve immün durumudur. Ders notunda riski artıran faktörler AIDS varlığı, CD4 sayısının düşük olması, viral yükün yüksek olması, ikiz bebek, koryoamniyonit, erken membran rüptürü ve emzirme olarak sayılmıştır. Bu nedenle AIDS'in eşlik etmesi (C) ve ikiz gebelik (A) ileri hastalık ile artmış virüs yükünü yansıttığı için riski artırır. Annenin tedavisinde viral yük 1000 kopyanın üzerinde veya bilinmiyorsa 38. haftada sezaryen önerilmesi, vajinal doğumun (D) ve membran rüptürünün (E) bebeğe geçişi kolaylaştırdığını gösterir. Buna karşılık maternal CD4 sayısının yüksek olması korunmuş immün durumu ve genellikle baskılanmış viral yükü gösterir; riski artırmaz, azaltır, bu nedenle 'DEĞİLDİR' sorusunun cevabı B'dir. Ayırt edici ipucu: riski artıran asıl değişken annede yüksek viral yük ve düşük CD4 sayısıdır."
-  },
-  {
-    "id": "study-q-learn-halk-sagligi-salgin-has-s14",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 14,
-    "slideTitle": "21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, '21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı' başlığı altında incelenen bu mekanizma (BUYURGAN DİLİN REDDİ: 21. yüzyılda insanlar artık tek taraflı, otoriter ve buyurgan dili kesinlikle benimsememektedir....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
-  },
-  {
-    "id": "d3-k1-far-002",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 15,
-    "slideTitle": "Tedavi, Aşılar ve Destekleyici Bakımın Hayat Kurtaran Gücü",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Romatoid artrit, Crohn hastalığı ve ankilozan spondilit tedavisinde kullanılan, çözünür ve transmembran TNF-alfa'ya yüksek afiniteyle bağlanan kimerik monoklonal antikor (biyolojik ajan) hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Siklofosfamid",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İnfliksimab",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Azatioprin",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Prednizolon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metotreksat",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "İnfliksimab, insan IgG1 sabit bölgesi ve fare değişken bölgesinden oluşan kimerik monoklonal bir anti-TNF-alfa antikorudur ve biyolojik ajan sınıfındadır. Siklofosfamid, azatioprin, prednizolon ve metotreksat ise konvansiyonel (küçük moleküllü kimyasal) immünosüpresiflerdir, monoklonal antikor biyolojik ajan değillerdir."
-  },
-  {
-    "id": "d3-k5-hal-015",
-    "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-    "slideNumber": 16,
-    "slideTitle": "Sağlık İşgücünün Korunması ve Sağlık Sisteminin Güçlendirilmesi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Koruyucu hekimlik düzeyleri değerlendirildiğinde aşağıdakilerden hangisi bir \"Birincil (Primer) Koruma\" uygulaması olmayıp \"İkincil (Sekonder) Koruma\" örneğidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yenidoğanlarda fenilketonüri ve konjenital hipotiroidi için topuk kanı taraması yapılması",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bebeklere çocukluk çağı rutin aşılarının uygulanması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Gebelere ve bebeklere profilaktik demir ve D vitamini desteği verilmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İşyerinde gürültüye karşı kulaklık takılmasının sağlanması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Topluma sağlıklı beslenme ve fiziksel aktivite eğitimi verilmesi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Primer koruma: Hastalık henüz biyolojik olarak başlamadan önce sağlıklı bireyleri korumaktır (aşılama, beslenme desteği, kişisel koruyucu donanım). Sekonder koruma: Hastalık başlamış ancak henüz klinik belirti vermemişken asemptomatik dönemde erken tanı konulmasıdır (tüm tarama testleri: topuk kanı taraması, mamografi, pap-smear vb.)."
   }
 ]

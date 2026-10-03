@@ -1,6 +1,579 @@
 [
   {
-    "id": "d3-k1-enf-017-300",
+    "id": "prac-yaslanma-008",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 8,
+    "slideTitle": "Replikatif Yaşlanma ve Hayflick Sınırı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücre biyolojisinde Leonard Hayflick tarafından tanımlanan ve normal insan somatik fibroblastlarının in vitro kültür ortamında sınırsız çoğalamayıp yaklaşık 50-60 bölünme döngüsü sonrasında kalıcı olarak bölünmeyi durdurduğunu ifade eden kavram ve bu durumun organizma için birincil evrimsel yararı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Apoptotik kriz — Doku atrofisini önlemek ve rejenerasyonu hızlandırmak",
+      "B) Hayflick sınırı — Hücrelerin sınırsız bölünerek malign transformasyona uğramasını engelleyen tümör süpresör bariyer",
+      "C) Warburg etkisi — Hücrelerin aerobik glikolize geçerek enerji tüketimini sınırlandırması",
+      "D) Nekroptozis — İltihapsız hücre ölümü sağlayarak otoimmüniteyi baskılamak",
+      "E) Epigenetik kayma — DNA metilasyonunu tamamen sıfırlayarak kök hücre farklılaşmasını sağlamak"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Hayflick sınırı (replikatif senesans); normal somatik hücrelerin belirli bir bölünme sayısından (ortalama 50-60 döngü) sonra mitozu kalıcı olarak durdurmasıdır. Bu sınır, mutasyon biriktiren klonların sınırsız çoğalmasını engelleyerek malign transformasyonu (kanserleşmeyi) önleyen kritik bir evrimsel tümör süpresör mekanizmadır. A seçeneğindeki apoptotik kriz telomerler tamamen tükendiğinde devreye girer. C seçeneğindeki Warburg etkisi tümör hücrelerinin aerobik glikoliz metabolizmasıdır. D seçeneğindeki nekroptozis programlı nekrozdur. E seçeneğindeki epigenetik kayma ise yaşlanmayla DNA metilasyon paternlerinin bozulmasıdır."
+  },
+  {
+    "id": "prac-yaslanma-009",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 9,
+    "slideTitle": "Telomer Biyolojisi ve Uç Replikasyon Problemi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Ökaryotik hücrelerde doğrusal kromozomların uçlarında bulunan telomerlerin her hücre bölünmesinde kademeli olarak kısalmasına yol açan 'uç replikasyon problemi'nin (end-replication problem) temel moleküler ve biyokimyasal nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) DNA polimerazın her replikasyonda nükleotidleri rastgele hidroliz eden 5'->3' ekzonükleaz aktivitesine sahip olması",
+      "B) Kesintili zincirde (lagging strand) kromozomun en ucundaki RNA primerinin kaldırılmasından sonra DNA polimerazın serbest 3'-OH grubu bulamaması",
+      "C) Telomerik bölgedeki DNA metiltransferaz enzimlerinin guanin bazlarını aşırı metilleyerek transkripsiyonu durdurması",
+      "D) Topoizomeraz II enziminin telomer bölgesinde çözülmeyen süperkıvrımlar oluşturarak replikasyon çatalını kilitlemesi",
+      "E) Telomer bölgesindeki histon proteinlerinin asetillenerek DNA ipliklerinin birbirinden ayrılmasını imkansız kılması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. DNA polimeraz sentezi sadece 5'->3' yönünde yapabilir ve bir RNA primerinin sağladığı serbest 3'-OH ucuna ihtiyaç duyar. Kesintili zincirin en ucundaki primer söküldüğünde, DNA polimerazın uzatabileceği daha geride bir 3'-OH ucu olmadığı için bu terminal boşluk doldurulamaz ve her bölünmede 50-200 bazlık kayıp gerçekleşir; buna 'uç replikasyon problemi' denir. A seçeneği yanlıştır; ekzonükleaz aktivitesi hata düzeltme amaçlıdır, uç kaybının nedeni değildir. C, D ve E seçeneklerindeki mekanizmalar telomerik kısalmanın biyokimyasal temeli ile ilişkisizdir."
+  },
+  {
+    "id": "prac-yaslanma-010",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 10,
+    "slideTitle": "Telomer Koruyucu Başlığı: Shelterin Kompleksi ve T-Loop Mimarisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Telomer biyolojisinde, doğrusal kromozom uçlarının çift iplik DNA kırığı (DSB) olarak algılanmasını önleyen 'Shelterin' kompleksi üyeleri arasında yer alan; özellikle tek iplikli 3' G-overhang bölgesine özgül olarak bağlanarak ATR kinaz aracılı DNA hasar sinyalini doğrudan baskılayan protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) POT1 (Protection of Telomeres 1)",
+      "B) TRF1 (Telomeric Repeat-Binding Factor 1)",
+      "C) TRF2 (Telomeric Repeat-Binding Factor 2)",
+      "D) TIN2 (TRF1-interacting nuclear factor 2)",
+      "E) RAP1 (Repressor/Activator Protein 1)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. POT1 (Protection of Telomeres 1), Shelterin kompleksinin tek iplikli telomerik DNA'ya (3' G-overhang) bağlanan özgül bileşenidir. Tek iplikli ucu örterek RPA (Replication Protein A) bağlanmasını ve dolayısıyla ATR kinazının aktive olmasını engeller. B seçeneğindeki TRF1 ve C seçeneğindeki TRF2 çift iplikli telomerik DNA'ya bağlanır; TRF2 özellikle ATM ve NHEJ'i baskılar. D seçeneğindeki TIN2 yapısal iskelet köprüsüdür. E seçeneğindeki RAP1 ise TRF2 ile etkileşen regülatör proteindir."
+  },
+  {
+    "id": "prac-yaslanma-011",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 11,
+    "slideTitle": "Telomer Aşınmasından Hücre Döngüsü Blokajına: ATM/ATR, p53 ve p21 Yolağı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Somatik hücrelerde telomer uzunluğu kritik bir eşiğin altına indiğinde tetiklenen ve replikatif senesansla sonuçlanan moleküler sinyal iletim zincirinde aşağıdaki olaylardan hangisi DİĞERLERİNDEN DAHA SONRA gerçekleşir?",
+    "options": [
+      "A) Koruyucu T-loop yapısının çözülmesi ve kromozom uçlarının çıplak kalması",
+      "B) ATM kinazın aktive olarak gama-H2AX odaklarını oluşturması",
+      "C) p53 tümör süpresör proteininin MDM2 aracılı proteazomal yıkımdan kurtularak stabilize olması",
+      "D) p21 (CDKN1A) gen ekspresyonunun artarak CDK kinaz komplekslerini inhibe etmesi",
+      "E) Retinoblastoma (Rb) proteininin hipofosforile kalarak E2F transkripsiyon faktörünü baskılaması ve G1 arresti"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Sinyal kaskadının kronolojik sırası şöyledir: İlk olarak telomer aşınır ve T-loop çözülür (A). Çıplak uçları algılayan ATM aktive olur ve gama-H2AX odakları kurar (B). ATM/Chk2 etkisiyle p53 fosforillenir ve MDM2'den ayrılarak stabilize olur (C). Nükleustaki p53, p21 (CDKN1A) transkripsiyonunu artırır ve CDK'lar inhibe edilir (D). En son basamakta ise CDK'lar çalışamadığı için Rb proteini hipofosforile (aktif) kalır, E2F'i sımsıkı bağlar ve hücreyi geri dönüşsüz şekilde G1 fazında kilitler (E)."
+  },
+  {
+    "id": "prac-yaslanma-012",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 12,
+    "slideTitle": "Stres Kaynaklı Erken Senesans (SIPS) ve p16INK4a / Rb Yolağı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Dermatoloji polikliniğine başvuran 28 yaşındaki bir kadının sırtından eksize edilen 5 mm çapındaki pigmente lezyonun histopatolojik incelemesinde dermiste yuvalar oluşturan matür melanositler izleniyor ve intradermal melanositik nevüs tanısı konuyor. Genetik analizde melanositlerde BRAF V600E mutasyonu saptanmasına rağmen bu hücrelerin malign melanom gibi kontrolsüz prolifere olmayıp on yıllarca benign bir duraklama (Oncogene-Induced Senescence) içinde kalmasını sağlayan temel siklin bağımlı kinaz inhibitörü protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) p16INK4a (CDKN2A)",
+      "B) p21CIP1 (CDKN1A)",
+      "C) p27KIP1 (CDKN1B)",
+      "D) p57KIP2 (CDKN1C)",
+      "E) MDM2"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Onkogen aracılı senesansın (Oncogene-Induced Senescence - OIS) prototipik klinik örneği benign melanositik nevüslerdir. Bu lezyonlar aktive edici BRAF V600E mutasyonu taşır; ancak hücreler kontrolsüz çoğalmak yerine INK4a/ARF (CDKN2A) lokusunu aktive ederek yüksek düzeyde p16INK4a üretirler. p16INK4a, CDK4/6'yı inhibe eder ve Rb üzerinden hücreyi kalıcı G1 senesansına sokar. B seçeneğindeki p21 daha çok telomer aşınması ve p53 yanıtında görev alır. C ve D seçeneklerindeki p27 ve p57 KIP ailesi üyeleridir. E seçeneğindeki MDM2 ise p53'ü yıkan onkogendir."
+  },
+  {
+    "id": "prac-yaslanma-013",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 13,
+    "slideTitle": "Telomeraz Enzimi: TERT Katalitik Alt Birimi ve TERC RNA Şablonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Telomeraz enzim kompleksinin moleküler yapısı ve biyokimyasal etki mekanizması incelendiğinde, kromozomların 3' tek iplikli ucuna de novo TTAGGG tekrarlarının eklenmesinde doğrudan 'fiziksel şablon (kalıp)' görevi gören alt birim aşağıdakilerden hangisidir?",
+    "options": [
+      "A) TERT (Telomerase Reverse Transcriptase)",
+      "B) TERC / hTR (Telomerase RNA Component)",
+      "C) DKC1 (Diskerin)",
+      "D) TIN2 (TRF1-interacting nuclear factor 2)",
+      "E) TRF2 (Telomeric Repeat-Binding Factor 2)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Telomeraz kompleksinde sentezlenecek TTAGGG hekzanükleotid tekrarlarına kalıp (şablon) oluşturan molekül, kodlama yapmayan bir RNA olan TERC'tir (hTR). TERT ise (A seçeneği) bu RNA kalıbını okuyarak DNA polimerizasyonunu gerçekleştiren katalitik revers transkriptaz proteinidir. C seçeneğindeki Diskerin (DKC1) TERC RNA'sını stabilize eden yardımcı proteindir. D ve E seçeneklerindeki TIN2 ve TRF2 ise telomerazın değil, telomer koruyucu başlığı olan Shelterin kompleksinin üyeleridir."
+  },
+  {
+    "id": "prac-yaslanma-014",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 14,
+    "slideTitle": "Telomeraz Aktivitesinin Hücresel Dağılımı: Germ, Kök ve Somatik Hücreler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "İnsan organizmasında farklı hücre tiplerinde telomer uzunluğu dinamikleri ve telomeraz enzim aktivitesi karşılaştırıldığında aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
+    "options": [
+      "A) Farklılaşmış somatik hücreler TERT proteinini yüksek düzeyde sentezler fakat TERC RNA'sından yoksundur.",
+      "B) Germ hücrelerinde telomeraz aktivitesi tamamen kapalıdır; telomer boyu döllenme sonrasında zigotta uzatılır.",
+      "C) Hematopoetik kök hücrelerde telomeraz aktivitesi somatik hücreler gibi sıfır olup ilk bölünmede senesense girerler.",
+      "D) Erişkin kök hücrelerde telomeraz aktivitesi bazal düzeyde bulunur; telomer kısalmasını yavaşlatır ancak yaşlanmayla kök hücre havuzunun tükenmesini tamamen engelleyemez.",
+      "E) Kalp kası hücreleri ve nöronlar telomerazı reaktive ederek yaşam boyu telomer uzunluklarını sabit tutarlar."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Kök hücrelerde telomeraz enzimi aktiftir ancak bu aktivite telomer boyunu sabit tutmaya yetmez; bölünmelerle telomerler yavaşça kısalır ve ileri yaşta 'kök hücre havuzu tükenmesi' gerçekleşir. A seçeneği yanlıştır; somatik hücrelerde TERC RNA bulunur fakat TERT promotörü kapalıdır. B seçeneği yanlıştır; germ hücrelerinde telomeraz aktivitesi maksimumdur. C seçeneği yanlıştır; kök hücrelerde telomeraz aktiftir. E seçeneği yanlıştır; nöronlar ve kardiyomiyositler bölünmeyen kalıcı hücrelerdir ve telomeraz aktivitesi taşımazlar."
+  },
+  {
+    "id": "prac-yaslanma-015",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 15,
+    "slideTitle": "Telomeraz ve Neoplazi: Kanser Hücrelerinde Ölümsüzlük (İmmortalite)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "58 yaşında bir erkek hastada baş ağrısı ve nörolojik defisit nedeniyle yapılan beyin MRG'sinde frontal lobda nekrotik ve vasküler proliferasyon gösteren kitle saptanıyor; biyopside Glioblastoma multiforme tanısı konuyor. Tümör hücrelerinin sınırsız bölünme kapasitesi (replikatif immortalite) kazanmasında rol oynayan ve insan kanserlerinin yaklaşık %85-90'ında saptanan en yaygın moleküler mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) ATRX geninde inaktivasyon sonucu homolog rekombinasyon (ALT) yolağının açılması",
+      "B) TERT gen promotöründe yeni transkripsiyon faktörü bağlanma bölgeleri yaratan nokta mutasyonları ile telomerazın reaktivasyonu",
+      "C) Shelterin kompleksi proteini TRF2'nin aşırı üretimi sonucu telomerlerin tamamen parçalanması",
+      "D) Hücrelerin p53 ve p21 düzeylerini aşırı artırarak apoptoz kaskadını kalıcı olarak aktive etmesi",
+      "E) Telomerik TTAGGG hekzanükleotid tekrarlarının sitozin deaminasyonu ile urasile dönüştürülmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. İnsan malign tümörlerinin (özellikle glioblastom, melanom ve ürotelyal mesane kanserlerinin) %85-90'ında telomeraz reaktivasyonu görülür. Bu reaktivasyonun en sık mekanizması, TERT gen promotöründe (-124 ve -146 bp) meydana gelen ve yeni ETS transkripsiyon faktörü bağlanma bölgeleri oluşturan somatik C>T nokta mutasyonlarıdır. A seçeneğindeki ALT yolağı telomeraz negatif tümörlerin (%10-15, örn. sarkomlar) mekanizmasıdır. C seçeneğinde telomer parçalanması değil korunması söz konusudur. D seçeneğindeki p53/p21 artışı tümör oluşumunu engeller, kanserde genellikle inaktivedirler. E seçeneği ise gerçek dışı bir süreçtir."
+  },
+  {
+    "id": "prac-yaslanma-016",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 16,
+    "slideTitle": "Telomeropatiler: Kalıtsal Telomer Yetersizliği Sendromları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "22 yaşında bir erkek hasta tekrarlayan diş eti kanamaları ve halsizlik şikayetiyle başvuruyor. Fizik muayenede boyun derisinde retiküler hiperpigmente maküller, el tırnaklarında belirgin distrofi ve dilde beyaz lökoplakik plaklar izleniyor. Laboratuvar incelemesinde pansitopeni saptanıyor ve kemik iliği biyopsisinde hematopoetik serinin neredeyse tamamen kaybolduğu hiposellüler ilik (aplastik anemi) izleniyor. Hastanın moleküler genetik analizinde telomeraz yardımcı proteini Diskerin'i kodlayan DKC1 geninde mutasyon tespit ediliyor. Bu hastanın tanısı ve hastalığın temel patofizyolojik mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Fanconi Anemisi — DNA çapraz bağlarının onarılamaması sonucu kemik iliği nekrozu",
+      "B) Werner Sendromu — WRN DNA helikaz defektine bağlı osteosarkom gelişimi",
+      "C) Diskeratozis Konjenita — Telomeraz yetersizliği nedeniyle telomerlerin hızla aşınması ve kök hücre tükenmesi",
+      "D) Hutchinson-Gilford Projeria — Lamin A proteininin farnesillenememesi sonucu nükleer çöküş",
+      "E) Kseroderma Pigmentozum — Nükleotid eksizyon onarımı bozukluğu sonucu deri karsinomu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Klinik triad (deride retiküler pigmentasyon, tırnak distrofisi, oral lökoplaki) ve kemik iliği yetmezliği (aplastik anemi) ile DKC1 mutasyonu birlikteliği 'Diskeratozis Konjenita' için patognomoniktir. Diskeratozis Konjenita prototipik bir telomeropatidir; telomerler aşırı hızlı aşınır ve kök hücreler senesense girer. A seçeneğindeki Fanconi anemisi DNA interstrand crosslink onarım bozukluğudur ve farklı fiziksel anomalilerle seyreder. B seçeneğindeki Werner sendromu WRN helikaz defektidir. D seçeneğindeki Projeria Lamin A mutasyonudur. E seçeneğindeki Kseroderma pigmentozum ise NER defektidir ve UV duyarlılığı ile seyreder."
+  },
+  {
+    "id": "prac-yaslanma-017",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 17,
+    "slideTitle": "Senesent Hücrenin Fenotipi ve Belirteçleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Bir araştırmacı, insan dermal fibroblast kültüründe hidrojen peroksit ile oksidatif stres oluşturduktan sonra hücrelerin morfolojik olarak genişleyip düzleştiğini ve bölünmeyi durdurduğunu gözlemliyor. Araştırmacının bu hücrelerin apoptoz veya nekroz yerine 'hücresel senesans' (yaşlanma) evresine girdiğini kesin olarak kanıtlamak için doku kesitinde pH 6.0 ortamında pozitifliğini göstermesi gereken sitokimyasal enzim aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Terminal deoksinükleotidil transferaz (TUNEL)",
+      "B) Senesans İlişkili Beta-Galaktozidaz (SA-β-Gal)",
+      "C) Laktat Dehidrogenaz (LDH)",
+      "D) Kaspaz-3 aktif formu",
+      "E) Alkalen Fosfataz (ALP)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Senesent hücrelerin saptanmasında en güvenilir ve evrensel sitokimyasal belirteç, pH 6.0'da çalışan Senesans İlişkili Beta-Galaktozidaz (SA-β-Gal) aktivitesidir. A seçeneğindeki TUNEL yöntemi apoptozdaki DNA kırıklarını gösterir. C seçeneğindeki LDH plazma zarı parçalanmasını ve nekrozu simgeler. D seçeneğindeki aktif Kaspaz-3 apoptozun infaz fazını işaret eder. E seçeneğindeki Alkalen Fosfataz ise osteoblastik aktivite ve kök hücre belirtecidir."
+  },
+  {
+    "id": "prac-yaslanma-018",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 18,
+    "slideTitle": "Senesans İlişkili Salgı Fenotipi (SASP) Biyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel yaşlanma biyolojisinde 'Senesans İlişkili Salgı Fenotipi' (SASP) sergileyen senesent hücrelerle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Metabolik olarak son derece aktif olup çevre dokuya yoğun biyoaktif moleküller salgılarlar.",
+      "B) Bcl-2 ve Bcl-xL gibi anti-apoptotik yolakları yukarı regüle ederek programlı hücre ölümüne karşı belirgin direnç kazanırlar.",
+      "C) Salgıladıkları matriks metalloproteinazlar (MMP-1, MMP-3, MMP-9) aracılığıyla ekstrasellüler matriks mimarisini parçalayabilirler.",
+      "D) Nükleer faktör kappa B (NF-κB) ve C/EBPβ transkripsiyon faktörleri SASP sitokinlerinin sürekli sentezinde kilit rol oynar.",
+      "E) Sitoplazmik membran bütünlüklerini tamamen kaybederek pasif nekroz geçirir ve hücre içi enzimlerini kontrolsüzce dokuya boşaltırlar."
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Senesent hücreler nekroza uğramış hücreler DEĞİLDİR; plazma membran bütünlükleri tamamen korunmuştur. Zarları sağlamdır, intrasellüler içerik pasif olarak dışarı dökülmez; aksine molekülleri veziküller ve aktif ekzositoz yoluyla son derece organize bir şekilde salgılarlar (SASP). A, B, C ve D seçeneklerindeki tüm ifadeler senesent hücrelerin hipermetabolik, apoptoza dirençli, MMP salgılayan ve NF-κB bağımlı biyolojisini doğru olarak açıklamaktadır."
+  },
+  {
+    "id": "prac-yaslanma-019",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 19,
+    "slideTitle": "Inflammaging: SASP Kaynaklı Kronik Steril Enflamasyon",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "75 yaşındaki bir hastada belirgin bir enfeksiyon odağı, otoimmün hastalık veya malignite saptanmamasına rağmen yapılan rutin biyokimyasal taramalarda serum IL-6, TNF-alfa ve yüksek duyarlıklı CRP (hs-CRP) düzeyleri sürekli olarak hafif-orta derecede yüksek bulunmaktadır. Hastanın damar yatağında yaygın kalsifiye aterom plakları ve kas kütlesinde belirgin kayıp (sarkopeni) izleniyor. Bu klinik tabloyu en iyi açıklayan ve yaşlanmanın pro-inflamatuvar zeminini tanımlayan kavram aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akut Faz Yanıtı",
+      "B) Inflammaging (İnflamatuvar Yaşlanma)",
+      "C) Granülomatöz İltihap",
+      "D) Tip I Aşırı Duyarlılık Reaksiyonu",
+      "E) İmmünolojik Tolerans"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Yaşlı bireylerde enfeksiyon veya açık otoimmünite olmaksızın serumda pro-inflamatuvar medyatörlerin (IL-6, TNF-α, CRP) kronik, hafif ve steril bir artış göstermesi; dokularda ateroskleroz ve sarkopeni gibi dejeneratif süreçleri hızlandırması 'Inflammaging' olarak adlandırılır. Bu durum senesent hücrelerin SASP sekresyonuna dayanır. A seçeneğindeki akut faz yanıtı enfeksiyon ve travmalara ani yanıttır. C seçeneği mikobakteriyel enfeksiyonlarda görülür. D seçeneği IgE aracılı alerjidir. E seçeneği ise otoantijenlere yanıtsızlıktır."
+  },
+  {
+    "id": "prac-yaslanma-020",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 20,
+    "slideTitle": "SASP'ın İki Yüzü: Yara İyileşmesi ile Neoplastik Progresyon Arasındaki İkilem",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kanser biyolojisinde yaşlanan doku mikroçevresi ve stroma hücrelerinin rolü araştırıldığında, senesent fibroblastların salgıladığı SASP faktörlerinin (özellikle IL-6, IL-8 ve TGF-beta) komşu pre-malign epitelyal hücrelerde E-kaderin kaybına, hücresel polaritenin silinmesine, mezenkimal belirteçlerin kazanılmasına ve invazif potansiyelin artmasına yol açtığı gözlenmiştir. Bu patolojik hücresel dönüşüm süreci aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Epitelyal-Mezenkimal Geçiş (EMT)",
+      "B) Desmoplastik Reaksiyon",
+      "C) İnflamazom Aktivasyonu",
+      "D) Onkotik Nekroz",
+      "E) Retrograd Metaplazi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Epitelyal-Mezenkimal Geçiş (EMT); epitelyal hücrelerin polarite ve hücre-hücre yapışma (E-kaderin) özelliklerini kaybederek mezenkimal, motil ve invazif bir fenotip (vimentin pozitif) kazanmasıdır. Senesent fibroblastların salgıladığı kronik SASP medyatörleri (TGF-β, IL-6) komşu kanser hücrelerinde EMT'yi tetikleyerek invazyon ve metastazı provoke eder. B seçeneğindeki desmoplazi tümör çevresinde yoğun kolajenöz stroma oluşumudur. C seçeneği IL-1β aktivasyonudur. D seçeneği şişmeyle giden nekrozdur. E seçeneği patolojide geçerli bir terim değildir."
+  },
+  {
+    "id": "prac-yaslanma-021",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 21,
+    "slideTitle": "Proteostazis (Protein Homeostazı) Ağı: Şaperonlar ve Katlanma Mekanizmaları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücrede protein sentezi sırasında polipeptit zincirlerinin açıkta kalan hidrofobik aminoasit kalıntılarına bağlanarak onların kontrolsüz agregat oluşturmasını engelleyen, doğru tersiyer konformasyonun kazanılmasına aracılık eden ve hücresel yaşlanmayla birlikte fonksiyonel kapasitesi azalan moleküler yapılar aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Moleküler Şaperonlar (Isı Şok Proteinleri - HSP70/90)",
+      "B) Matriks Metalloproteinazlar (MMP'ler)",
+      "C) Siklin Bağımlı Kinazlar (CDK'lar)",
+      "D) DNA Helikazlar (WRN, BLM)",
+      "E) Lizozomal Asit Fosfatazlar"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Moleküler şaperonlar (Hsp70, Hsp90 vb.), hidrofobik kalıntılara bağlanarak proteinlerin doğru katlanmasını sağlayan ve agregasyonu engelleyen temel hücresel araçlardır. Yaşlanmayla şaperon kapasitesi geriler ve protein agregasyonu başlar. B seçeneğindeki MMP'ler hücre dışı matriksi yıkar. C seçeneğindeki CDK'lar hücre döngüsünü ilerletir. D seçeneğindeki helikazlar DNA replikasyonunda görev alır. E seçeneğindeki asit fosfatazlar ise lizozomal hidrolazlardır."
+  },
+  {
+    "id": "prac-yaslanma-022",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 22,
+    "slideTitle": "Proteostaz İflası: Ubikuitin-Proteazom Sistemi (UPS) ve İntraselüler Agregatlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "76 yaşında progressif demans ve rijidite tablosu sergileyen bir hastanın otopsisinde substansiya nigrada dopaminerjik nöron kaybı ve kalan nöronların sitoplazmasında konsantrik lameller eozinofilik inklüzyonlar (Lewy cisimcikleri) izleniyor. İmmünohistokimyasal incelemede bu inklüzyonların yoğun ubikuitin ve hatalı katlanmış alfa-sinüklein agregatları içerdiği saptanıyor. Yaşlanma zemininde bu proteinlerin parçalanıp yok edilmesinde yetersiz kalan hücresel proteolitik sistem aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitoplazmik Kaspaz Kaskadı",
+      "B) Ubikuitin-Proteazom Sistemi (26S Proteazom)",
+      "C) Nükleer Ekzonükleaz Aygıtı",
+      "D) Kompleman Membran Atak Kompleksi",
+      "E) Peroksizomal Katalaz Enzim Ağı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Yanlış katlanmış çözünür proteinlerin ubikuitin ile işaretlenerek yıkıldığı ana hücresel aygıt 26S Proteazom'dur (Ubikuitin-Proteazom Sistemi - UPS). Yaşlanmayla UPS kapasitesinin yetersiz kalması sonucu alfa-sinüklein proteazomda yıkılamaz, ubikuitinle etiketli halde birikerek Lewy cisimciklerini oluşturur ve Parkinson hastalığına yol açar. A seçeneğindeki kaspazlar apoptozu yürütür. C seçeneği RNA/DNA keser. D seçeneği immün lizis yapar. E seçeneği ise H2O2 parçalar."
+  },
+  {
+    "id": "prac-yaslanma-023",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 23,
+    "slideTitle": "Otofaji-Lizozom Yolağının Yaşlanması ve Makrootofaji Bozukluğu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel yaşlanma sürecinde otofajik aktiviteyi inceleyen bir patolog, hücre sitoplazmasında hasarlı mitokondrilerin çift katlı membranlarla sarıldığını ancak primer lizozomlarla birleşmenin yetersiz kaldığını ve lizozom içi asidik pH'nın korunamadığını saptamıştır. Otofagozom zarının uzaması ve kapanması sırasında lipitlenerek (fosfatidiletanolamin konjugasyonu) membran yapısına katılan ve otofaji indüksiyonunun temel moleküler belirteci olan protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) LC3-II (Microtubule-associated protein 1A/1B-light chain 3)",
+      "B) Sitokrom c",
+      "C) Kaspaz-9",
+      "D) E-Kaderin",
+      "E) Progerin"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Otofajinin en kritik moleküler belirteci LC3 proteinidir. Sitozolik form olan LC3-I, fagofor zarı oluştuktan sonra fosfatidiletanolamin (PE) lipidi ile konjüge edilerek zara tutunur ve LC3-II adını alır. LC3-II miktarı otofagozom sayısını ve otofajik aktiviteyi doğrudan yansıtır. B seçeneğindeki Sitokrom c apoptoz tetikleyicisidir. C seçeneğindeki Kaspaz-9 apoptoz başlatıcısıdır. D seçeneğindeki E-kaderin adezyon molekülüdür. E seçeneğindeki Progerin ise Hutchinson-Gilford projeryasında biriken toksik proteindir."
+  },
+  {
+    "id": "prac-yaslanma-024",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 24,
+    "slideTitle": "Aşınma-Yıpranma Pigmenti: Lipofuscin ve Kahverengi Atrofi Patolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "84 yaşında ileri evre mide karsinomu ve ağır kanser kaşeksisi nedeniyle kaybedilen bir hastanın otopsisinde kalp ağırlığı 165 gram (belirgin küçülmüş) olarak ölçülüyor. Miyokard kesitinde kalp kasının koyu kahverengi renk aldığı ve subepikardiyal koroner arterlerin kıvrıntılı (tortuöz) bir görünüm sergilediği saptanıyor. Miyokardın histopatolojik incelemesinde atrofik kardiyomiyositlerin nükleus kutuplarında (perinükleer) ince granüler sarı-kahverengi pigment birikimi izleniyor. Yapılan Prusya mavisi (Prussian blue) boyamasında bu pigmentin boyanmadığı (negatif olduğu) tespit ediliyor. Bu hastadaki morfolojik tablo ve biriken pigment aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) Hemokromatozis — Hemosiderin",
+      "B) Kahverengi Atrofi — Lipofuscin",
+      "C) Alkaptonüri — Homojentisik asit",
+      "D) Wilson Hastalığı — Bakır",
+      "E) Antrakoz — Karbon partikülleri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Kaşektik veya yaşlı bir hastada kalp ağırlığının azalması (miyosit atrofisi), koyu kahverengi miyokard rengi, koroner arterlerin tortuözitesi ve perinükleer yerleşimli, Prusya mavisi negatif sarı-kahverengi pigment varlığı 'Kahverengi Atrofi' (Brown Atrophy) ve 'Lipofuscin' pigmenti için patognomoniktir. Lipofuscin lipid peroksidasyonu ürünüdür ve demir içermediği için Prusya mavisi ile boyanmaz. A seçeneğindeki hemosiderin demir içerir ve Prusya mavisiyle masmavi boyanır (ayrıca organ büyür, atrofiye uğramaz). C seçeneğindeki alkaptonüri eklem kıkırdaklarında koyulaşma yapar. D seçeneğindeki bakır rodanin ile boyanır. E seçeneğindeki antrakoz ise akciğer ve lenf nodlarında siyah karbon birikimidir."
+  },
+  {
+    "id": "prac-yaslanma-025",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 25,
+    "slideTitle": "Mitokondriyal Disfonksiyon, Oksidatif Fosforilasyon Kaybı ve Mitofaji Yetersizliği",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel yaşlanma biyolojisinde, elektron taşıma zincirinde hasar gören ve membran potansiyeli düşen disfonksiyonel mitokondrilerin dış zarlarında PINK1 kinazının birikmesi ve sitozolik Parkin (E3 ubiquitin ligaz) aracılığıyla etiketlenerek seçici bir otofajik süreçle lizozomlarda yıkılması olayına ne ad verilir?",
+    "options": [
+      "A) Piroptozis",
+      "B) Mitofaji",
+      "C) Heterofaji",
+      "D) Pinositoz",
+      "E) Onkozis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Hasarlı ve disfonksiyonel mitokondrilerin PINK1/Parkin aksı ile tanınıp otofaji yoluyla seçici olarak temizlenmesine 'Mitofaji' adı verilir. Mitofaji yaşlanmayla birlikte geriler ve hasarlı mitokondriler hücrede birikir. A seçeneğindeki piroptozis inflamazom ve gazdermin aracılı iltihaplı ölümdür. C seçeneğindeki heterofaji dışarıdan fagositozla alınan maddelerin yıkımıdır. D seçeneği sıvı içilmesidir. E seçeneğindeki onkozis iskemik hücre şişmesidir."
+  },
+  {
+    "id": "prac-yaslanma-026",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 26,
+    "slideTitle": "Serbest Radikal Teorisi ve Oksidatif Hasar Kısır Döngüsü (Vicious Cycle)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel yaşlanma sürecinde mitokondriyal DNA'nın (mtDNA) nükleer DNA'ya kıyasla serbest oksijen radikalleri (ROS) tarafından oluşturulan mutasyonel hasarlara belirgin derecede daha duyarlı olmasının ve hasarın hızla birikmesinin en temel nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) mtDNA'nın koruyucu nükleozomal histon proteinlerinden yoksun olması ve gelişmiş DNA onarım enzimlerinin bulunmaması",
+      "B) mtDNA'nın doğrusal yapıda olması ve uç replikasyon problemi nedeniyle hızla kısalması",
+      "C) Mitokondri matriksinde süperoksit dismutaz (SOD) ve glutatyon gibi hiçbir antioksidan enzimin yer almaması",
+      "D) mtDNA replikasyonunun hücre siklusunun yalnızca M fazında duraksamalı olarak gerçekleşmesi",
+      "E) Mitokondri iç zarının hidrofilik moleküllere karşı tamamen geçirgen olması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. mtDNA'nın aşırı kırılgan olmasının temel nedenleri; histon kılıfı taşımayan çıplak halkasal DNA olması, nükleustaki gelişmiş onarım mekanizmalarından (NER, MMR vb.) yoksun olması ve ETS kaynaklı serbest radikallerin doğrudan çıkış noktasında yer almasıdır. B seçeneği yanlıştır; mtDNA doğrusal değil sirkülerdir (telomeri yoktur). C seçeneği yanlıştır; matriks içinde MnSOD (SOD2) gibi antioksidanlar bulunur ancak yoğun hasarı tamamen engelleyemez. D ve E seçenekleri biyolojik olarak hatalıdır."
+  },
+  {
+    "id": "prac-yaslanma-027",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 27,
+    "slideTitle": "Mitokondri Hasarından Hücre Ölümüne: İntrensek Apoptoz Yolağı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel hasar sonucu mitokondri dış membranında BAX ve BAK oligomerizasyonu ile açılan porlardan sitoplazmaya sızan Sitokrom c molekülünün; dATP varlığında Apaf-1 adaptör proteini ile bir araya gelerek oluşturduğu 'Apoptozom' kompleksi tarafından kesilerek aktive edilen başlatıcı kaspaz aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kaspaz-8",
+      "B) Kaspaz-9",
+      "C) Kaspaz-1",
+      "D) Kaspaz-4",
+      "E) Kaspaz-12"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. İntrensek (mitokondriyal) apoptoz yolağında Sitokrom c ve Apaf-1'in oluşturduğu Apoptozom tarafından aktive edilen başlatıcı kaspaz 'Kaspaz-9'dur. Aktif Kaspaz-9 daha sonra infazcı Kaspaz-3 ve 7'yi keser. A seçeneğindeki Kaspaz-8 ekstrinsek (ölüm reseptörü, Fas/FasL, TNF-R1) apoptoz yolağının başlatıcısıdır. C seçeneğindeki Kaspaz-1 inflamazom yolağında IL-1β üretimini ve piroptozisi sağlar. D ve E seçenekleri ise diğer özelleşmiş süreçlerde yer alır."
+  },
+  {
+    "id": "prac-yaslanma-028",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 28,
+    "slideTitle": "Besin Algılama ve Yaşlanma Sinyal Yolakları: İnsülin/IGF-1 ve mTOR Ekseni",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel yaşlanma ve yaşam süresini kontrol eden metabolik sinyal ağları incelendiğinde, besin bolluğunda aktive olarak hücresel protein sentezini ve hücre büyümesini kamçılayan, buna karşılık ULK1 kompleksini fosforilleyerek otofajiyi (hücresel temizliği) baskılayan ve farmakolojik inhibisyonunun hayvan modellerinde yaşam süresini uzattığı gösterilen merkezi kinaz kompleksi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) mTORC1 (Mechanistic Target of Rapamycin Complex 1)",
+      "B) AMPK (AMP-Aktive Protein Kinaz)",
+      "C) SIRT1 (Sirtuin 1)",
+      "D) PGC-1alfa",
+      "E) ATM Kinaz"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. mTORC1 (Mechanistic Target of Rapamycin Complex 1); besin bolluğu, insülin, IGF-1 ve aminoasitler tarafından aktive edilen, protein sentezini uyarırken otofajiyi (ULK1 üzerinden) şiddetle baskılayan ana kinazdır. mTORC1 inhibisyonu (örn. Rapamisin ile) otofajiyi açar ve yaşam süresini uzatır. B seçeneğindeki AMPK ve C seçeneğindeki SIRT1 besin kıtlığında çalışan ömür uzatıcı koruyuculardır. D seçeneğindeki PGC-1α mitokondri biyogenezi faktörüdür. E seçeneğindeki ATM ise DNA hasar sensörüdür."
+  },
+  {
+    "id": "prac-yaslanma-029",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 29,
+    "slideTitle": "Kalori Kısıtlaması, AMPK ve Sirtuinler (SIRT1-7)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel yaşlanma biyolojisinde kalori kısıtlamasının (caloric restriction) yaşam süresini uzatıcı etkilerini araştıran bir çalışmada, açlık durumunda hücre içinde NAD+/NADH oranının artmasıyla aktive olan; PGC-1alfa ve FOXO transkripsiyon faktörlerini deasetile ederek antioksidan savunmayı artıran, buna karşılık NF-kappa B'yi deasetile ederek pro-inflamatuvar sitokin transkripsiyonunu baskılayan enzim ailesi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sirtuinler (SIRT1 - SIRT7)",
+      "B) Matriks Metalloproteinazlar (MMP'ler)",
+      "C) Siklin Bağımlı Kinazlar (CDK4/6)",
+      "D) Kaspazlar",
+      "E) Telomeraz Revers Transkriptaz"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Sirtuinler (SIRT1-7), NAD+ bağımlı protein deasetilazlardır. Kalori kısıtlamasında ve açlıkta artan NAD+ ile uyarılırlar. SIRT1; PGC-1α'yı deasetile ederek mitokondriyal biyogenez ve antioksidan enzimleri uyarır, NF-κB'yi deasetile ederek inflamatuvar genleri baskılar ve yaşam süresini uzatır. B seçeneğindeki MMP'ler matriksi parçalar. C seçeneğindeki CDK4/6 hücre döngüsünü ilerletir. D seçeneğindeki kaspazlar apoptoz enzimleridir. E seçeneğindeki telomeraz ise telomerleri uzatır."
+  },
+  {
+    "id": "prac-yaslanma-030",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 30,
+    "slideTitle": "Yaşlanmayı Hedefleyen Terapötik Yaklaşımlar: Senolitikler, Senomorfikler ve Biyolojik Saatler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel yaşlanma farmakolojisinde; yaşlanan dokularda birikerek kronik pro-inflamatuvar sitokinler (SASP) salgılayan senesent hücrelerin anti-apoptotik savunma yolaklarını (özellikle Bcl-2 ve Bcl-xL) hedef alarak, bu hücreleri çevre sağlıklı dokuya zarar vermeksizin seçici olarak apoptoza sevk edip dokudan temizleyen ilaç grubu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Senolitikler (Senolytics)",
+      "B) Alkille edici kemoterapötikler",
+      "C) Telomeraz aktivatörleri",
+      "D) Proteazom inhibitörleri",
+      "E) Antioksidan vitaminler (Vitamin E ve C)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Dokularda biriken senesent hücreleri apoptoz mekanizmalarını tetikleyerek seçici bir şekilde ortadan kaldıran ajanlara 'Senolitik' ilaçlar (örneğin Navitoclax, Dasatinib + Quercetin) denir. B seçeneğindeki alkilleyiciler DNA hasarı yaparak hücreleri senesense sokar veya öldürür. C seçeneğindeki telomeraz aktivatörleri telomerleri uzatmayı hedefler. D seçeneğindeki proteazom inhibitörleri protein agregasyonunu artırır. E seçeneği ise genel serbest radikal temizleyicileridir."
+  },
+  {
+    "id": "prac-yaslanma-031",
+    "deckId": "learn-hucresel-yaslanma-ve-hucr",
+    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
+    "slideNumber": 31,
+    "slideTitle": "Patoloji Amfisi Sentezi: Hücresel Yaşlanmanın En Kritik Sınav ve Klinik Kodları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Tıbbi Patoloji amfi dersinde hücresel yaşlanma, replikatif senesans ve moleküler mekanizmalar konusu işlenirken öğretim üyesinin sunduğu aşağıdaki ifadelerden hangisi BİYOLOJİK VE PATOLOJİK OLARAK YANLIŞTIR?",
+    "options": [
+      "A) Replikatif senesansa giren somatik hücrelerde hücre döngüsü kalıcı ve geri dönüşsüz olarak G1 evresinde kilitlenir.",
+      "B) Werner sendromu WRN genindeki RecQ DNA helikaz defektine bağlı iken, Hutchinson-Gilford projeryasında nükleer zarfı bozan mutant protein Progerin'dir.",
+      "C) Lipofuscin pigmenti demir içerikli hemoglobin yıkım ürünü olup, doku kesitlerinde Prusya mavisi (Prussian blue) boyası ile koyu mavi boyanır.",
+      "D) Kanser hücrelerinin büyük çoğunluğu (-124 bp / -146 bp) TERT gen promotör mutasyonları ile telomerazı reaktive ederek sınırsız replikasyon potansiyeli kazanır.",
+      "E) Kalori kısıtlaması insülin/IGF-1 ve mTOR sinyalini baskılarken, hücresel NAD+ düzeyini artırarak SIRT1 deasetilaz aktivitesini uyarır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir (yanlış olan ifade C seçeneğindedir). Lipofuscin pigmenti hemoglobin yıkım ürünü DEĞİLDİR; serbest radikal hasarı sonucu oluşan poliansatüre yağ asitlerinin lipid peroksidasyonu ve proteinlerle çapraz bağlanması ürünüdür. En önemlisi DEMİR İÇERMEZ ve Prusya mavisi boyası ile KESİNLİKLE BOYAMAZ (negatiftir). Demir içeren ve Prusya mavisiyle maviye boyanan pigment hemosiderindir. A, B, D ve E seçeneklerindeki tüm bilgiler dersimizin temel taşlarını oluşturan eksiksiz ve doğru bilimsel verilerdir."
+  },
+  {
+    "id": "d3-k1-enf-003-324",
+    "deckId": "learn-izolasyon-yontemleri",
+    "deckTitle": "İzolasyon Yöntemleri",
+    "slideNumber": 1,
+    "slideTitle": "Enfeksiyon Hastalıklarına Giriş ve Temel İlkeler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Patojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Virülans",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Enfektivite",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "İmmünojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Toksijenite",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
+  },
+  {
+    "id": "d3-k1-enf-003-325",
+    "deckId": "learn-izolasyon-yontemleri",
+    "deckTitle": "İzolasyon Yöntemleri",
+    "slideNumber": 2,
+    "slideTitle": "Patojenite ve Virülans Kavramlarının Kesin Ayrımı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Patojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Virülans",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Enfektivite",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "İmmünojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Toksijenite",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
+  },
+  {
+    "id": "d3-k1-enf-028-326",
+    "deckId": "learn-izolasyon-yontemleri",
+    "deckTitle": "İzolasyon Yöntemleri",
+    "slideNumber": 3,
+    "slideTitle": "Mikroorganizma Sınıflandırması: Prionlardan Parazitlere Biyolojik Spektrum",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Üretral/servikal akıntısı olan bir hastanın gram boyamasında mikroskop sahasında artmış sayıda PMNL (>2)\ngörülmesine rağmen herhangi bir mikroorganizma saptanamamıştır. En olası etken hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Neisseria gonorrhoeae",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Chlamydia trachomatis",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Trichomonas vaginalis",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Candida albicans",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Gardnerella vaginalis",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Chlamydia trachomatis, zorunlu hücre içi (obligat intraselüler) bir\nbakteri olduğundan standart gram boyama ile görülemez ve rutin kültür\nbesiyerlerinde üremez. Bu nedenle üretral/servikal akıntı örneğinde\nartmış PMNL sayısına rağmen gram boyamada herhangi bir\nmikroorganizma görülememesi, klasik olarak Chlamydia trachomatis\nenfeksiyonunu (nongonokoksik üretrit/servisit) düşündürür; tanı için\nnükleik asit amplifikasyon testleri (NAAT/PCR) kullanılır."
+  },
+  {
+    "id": "d3-k1-enf-017-327",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 4,
@@ -39,7 +612,7 @@
     "explanation": "Gonokoksik enfeksiyonlarda (ve genel olarak tüm CYBE'lerde) yeniden\nenfeksiyonu önlemek ve toplumsal yayılımı durdurmak için, hastanın\nson 60 gün içindeki cinsel partnerlerinin mutlaka değerlendirilmesi ve\neş zamanlı (ampirik) tedavi edilmesi gerekir; 'partner tedavisine gerek\nyoktur' ifadesi bu nedenle yanlıştır. Güncel tedavi yaklaşımı artan direnç\nnedeniyle tek doz seftriakson esasına dayanır; klamidya birlikteliği\ndışlanamıyorsa doksisiklin eklenir."
   },
   {
-    "id": "d3-k1-enf-006-301",
+    "id": "d3-k1-enf-006-328",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 5,
@@ -78,7 +651,7 @@
     "explanation": "Özefagus, konjonktiva, kolon ve vajen gibi dış ortamla/mukozal yüzeyle\ntemas eden bölgelerde normal (kommensal) mikrobiyal flora bulunur.\nÜreterler ise mesane ve böbrekler gibi normalde sterildir; bu bölgelerde\nmikroorganizma varlığı patolojik kabul edilir."
   },
   {
-    "id": "d3-k1-enf-024-302",
+    "id": "d3-k1-enf-024-329",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 6,
@@ -117,7 +690,7 @@
     "explanation": "Ureaplasma urealyticum, hücre duvarı olmayan (Mycoplasma\nailesinden) küçük bir bakteridir ve cinsel yönden aktif sağlıklı bireylerin\ngenital florasında da sıklıkla kolonizasyon şeklinde bulunabilir. Bu\nnedenle genital örnek kültüründe üremesi tek başına patojen olduğu ve\ntedavi gerektirdiği anlamına gelmez; klinik bulgularla birlikte\ndeğerlendirilmelidir. Hücre duvarı olmadığından gram boyanmaz ve\npenisilin gibi hücre duvarı sentezini hedefleyen antibiyotiklere doğal\nolarak dirençlidir (tedavide makrolid/tetrasiklin grubu tercih edilir)."
   },
   {
-    "id": "d3-k3-far-009-303",
+    "id": "d3-k3-far-009-330",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 7,
@@ -156,7 +729,7 @@
     "explanation": "Amikasin, bakteriyel modifiye edici enzimlere karşı en dayanıklı aminoglikoziddir. Gentamisin ve tobramisine direnç geliştiğinde spektrum genişliği sayesinde hastane kaynaklı dirençli Pseudomonas ve Klebsiella suşlarında hayat kurtarıcıdır."
   },
   {
-    "id": "d3-k1-enf-007-304",
+    "id": "d3-k1-enf-007-331",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 8,
@@ -195,7 +768,7 @@
     "explanation": "İndirek temas bulaşı, kontamine cansız ara yüzeyler (glukometre,\ntansiyon aleti, ortak kullanılan cihazlar) veya sağlık personelinin elleri\naracılığıyla mikroorganizmanın hastadan hastaya taşınmasıdır. Kan\ntransfüzyonu ise doğrudan (parenteral) bir bulaş yoludur;\ndolaylı/indirekt temas kategorisine girmez."
   },
   {
-    "id": "d3-k1-enf-005-305",
+    "id": "d3-k1-enf-005-332",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 9,
@@ -234,7 +807,7 @@
     "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
   },
   {
-    "id": "d3-k1-enf-009-306",
+    "id": "d3-k1-enf-009-333",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 10,
@@ -273,7 +846,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-013-307",
+    "id": "d3-k1-enf-013-334",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 11,
@@ -312,7 +885,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-013-308",
+    "id": "d3-k1-enf-013-335",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 12,
@@ -351,7 +924,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-010-309",
+    "id": "d3-k1-enf-010-336",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 13,
@@ -390,7 +963,7 @@
     "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
   },
   {
-    "id": "d3-k1-enf-004-310",
+    "id": "d3-k1-enf-004-337",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 14,
@@ -429,7 +1002,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-004-311",
+    "id": "d3-k1-enf-004-338",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 15,
@@ -468,7 +1041,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-011-312",
+    "id": "d3-k1-enf-011-339",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 16,
@@ -507,7 +1080,7 @@
     "explanation": "Hastane enfeksiyon kontrol uygulamasında (kurumdan kuruma\ndeğişebilen renk kodlamalarında), temas izolasyonu gerektiren\nhastaların oda kapılarına genellikle kırmızı yıldız işareti asılır. Bu görsel\nkodlama, sağlık personelinin ve ziyaretçilerin gerekli koruyucu önlemleri\n(eldiven, önlük vb.) almadan odaya girmesini engellemeyi amaçlar."
   },
   {
-    "id": "d3-k5-aci-011-313",
+    "id": "d3-k5-aci-011-340",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 17,
@@ -546,7 +1119,7 @@
     "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
   },
   {
-    "id": "d3-k1-enf-009-314",
+    "id": "d3-k1-enf-009-341",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 18,
@@ -585,7 +1158,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-054-315",
+    "id": "d3-k1-enf-054-342",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 19,
@@ -624,7 +1197,7 @@
     "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
   },
   {
-    "id": "d3-k1-enf-009-316",
+    "id": "d3-k1-enf-009-343",
     "deckId": "learn-izolasyon-yontemleri",
     "deckTitle": "İzolasyon Yöntemleri",
     "slideNumber": 20,
@@ -663,7 +1236,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-tbg-003-317",
+    "id": "d3-k1-tbg-003-344",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 1,
@@ -858,7 +1431,7 @@
     "explanation": "Genç, cinsel aktif erkeklerde (<35 yaş) akut epididimit/prostatitin en sık\nnedeni cinsel yolla bulaşan etkenlerdir (Chlamydia trachomatis,\nNeisseria gonorrhoeae). 35 yaş üzerindeki erkeklerde ise, özellikle eşlik\neden mesane çıkım obstrüksiyonu (BPH), üriner kateterizasyon veya\nenstrümantasyon öyküsü varlığında, tipik üriner patojenler (başta\nEscherichia coli olmak üzere diğer koliform gram-negatif bakteriler) en\nsık etkendir."
   },
   {
-    "id": "d3-k1-tbg-003-322",
+    "id": "d3-k1-tbg-003-349",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 6,
@@ -897,7 +1470,7 @@
     "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir."
   },
   {
-    "id": "d3-k1-pat-052-323",
+    "id": "d3-k1-pat-052-350",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 7,
@@ -975,7 +1548,7 @@
     "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'İnversiyonlar: Parasentrik ve Perisentrik İnversiyon Ayrımı' başlığı altında incelenen bu mekanizma (PARASENTRİK İNVERSİYON (Sentromersiz): İnversiyona uğrayan segment sentromeri İÇERMEZ, kromozomun tek bir kolunda gerçekleşir (paracentric =...) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
   },
   {
-    "id": "d3-k1-enf-054-325",
+    "id": "d3-k1-enf-054-352",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 9,
@@ -1092,7 +1665,7 @@
     "explanation": "Pomeroy tekniği, fallop tüpünün ampüller veya istmik kısmından bir ilmek (loop) oluşturulup emilebilir sütürle (katgüt) bağlanması ve aradaki halkanın eksize edilmesi esasına dayanır. Basit, hızlı ve yüksek başarı oranına sahip olduğu için postpartum ve elektif laparotomilerde en sık uygulanan tubal sterilizasyon yöntemidir."
   },
   {
-    "id": "d3-k1-tbg-011-328",
+    "id": "d3-k1-tbg-011-355",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 12,
@@ -1248,7 +1821,7 @@
     "explanation": "Fetal kistik higroma, Turner sendromunun (45,X) en karakteristik prenatal ultrasonografik bulgusudur; lenfatik sistemin gelişim bozukluğuna bağlı gelişir ve sıklıkla koarktasyo aorta ile birlikte konotrunkal/septal kalp defektlerine (ASD, VSD, biküspit aort kapağı) eşlik eder. Down, Edwards ve Patau sendromlarında da artmış ense kalınlığı görülebilir, ancak yaygın kistik higroma ile birlikte geniş septal defekt kombinasyonu klasik olarak Turner sendromunu düşündürür."
   },
   {
-    "id": "d3-k1-tbg-002-332",
+    "id": "d3-k1-tbg-002-359",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 16,
@@ -1287,7 +1860,7 @@
     "explanation": "Fetal kistik higroma, Turner sendromunun (45,X) en karakteristik prenatal ultrasonografik bulgusudur; lenfatik sistemin gelişim bozukluğuna bağlı gelişir ve sıklıkla koarktasyo aorta ile birlikte konotrunkal/septal kalp defektlerine (ASD, VSD, biküspit aort kapağı) eşlik eder. Down, Edwards ve Patau sendromlarında da artmış ense kalınlığı görülebilir, ancak yaygın kistik higroma ile birlikte geniş septal defekt kombinasyonu klasik olarak Turner sendromunu düşündürür."
   },
   {
-    "id": "d3-k1-pat-052-333",
+    "id": "d3-k1-pat-052-360",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 17,
@@ -1326,7 +1899,7 @@
     "explanation": "Parsiyel (kısmi) mol hidatiform, tipik olarak TRİPLOİD (en sık 69,XXY; dispermik fertilizasyon sonucu) bir karyotipe sahiptir, diploid değildir; bu nedenle &apos;diploid 46,XX&apos; ifadesi yanlıştır. Komplet mol ise genellikle androgenetik diploid (46,XX, tek spermin boş bir yumurtayı döllemesi sonucu duplikasyonuyla) karyotipe sahiptir ve fetal doku içermez. Komplet molde villuslarda diffüz ödem ve çepeçevre trofoblastik proliferasyon görülürken, parsiyel molde bu değişiklikler daha fokaldir ve fetal doku bulunabilir. Koryokarsinom gelişme riski komplet molde (~%2) parsiyel mole göre belirgin daha yüksektir."
   },
   {
-    "id": "d3-k1-tbg-003-334",
+    "id": "d3-k1-tbg-003-361",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 18,
@@ -1404,7 +1977,7 @@
     "explanation": "Artmış nukal translusens (NT), başta Down, Edwards ve Patau sendromları olmak üzere otozomal trizomilerle ve Turner sendromuyla (lenfatik gelişim bozukluğu/kistik higromaya bağlı) güçlü şekilde ilişkilidir ve birinci trimester kombine tarama testinin temelini oluşturur. Klinefelter sendromu (47,XXY) ise genellikle belirgin bir fenotipik/yapısal anomaliye yol açmadığından NT artışı ile karakteristik olarak ilişkilendirilmez; tanısı çoğunlukla postnatal dönemde veya rastlantısal olarak konur."
   },
   {
-    "id": "d3-k1-tbg-002-336",
+    "id": "d3-k1-tbg-002-363",
     "deckId": "learn-kromozomal-hastaliklar-ve",
     "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
     "slideNumber": 20,
@@ -2165,978 +2738,5 @@
     ],
     "correctAnswer": 0,
     "explanation": "A seçeneği doğrudur. Nötrofil Ekstraselüler Tuzakları (NET), DNA, histonlar ve granül enzimlerinden oluşur. NETosis sırasında normalde hücre içinde gizli olan nükleer antijenler ekstraselüler ortama ve kan dolaşımına yoğun biçimde saçılır. Bu durum antinükleer antikor (ANA) ve anti-çift sarmallı DNA (anti-dsDNA) antikorlarının gelişimini tetikleyerek Sistemik Lupus Eritematozus (SLE) patogenezinde merkezi bir rol oynar. Diğer otoimmün hastalıklarda primer hedef nükleer kromatin antijenleri değildir."
-  },
-  {
-    "id": "prac-akut-035",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
-    "slideNumber": 35,
-    "slideTitle": "Lökosit Aracılı Doku Hasarı ve 'Frustrated Phagocytosis'",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Sistemik lupus eritematozus (SLE) tanılı bir hastada gelişen proliferatif glomerülonefrit tablosunda; böbrek biyopsisinde glomerül bazal membranı boyunca çökmüş yoğun immün kompleksler ve bu immün komplekslerin üzerine yapışmış bol miktarda nötrofil lökosit izleniyor. Elektron mikroskopisinde nötrofillerin bazal membran yüzeyini yutamadığı, ancak lizozomal granüllerini ve reaktif oksijen radikallerini doğrudan endotel ve bazal membran üzerine boşalttığı ve bazal membranda litik delikler açtığı saptanıyor. Patolojide lökosit aracılı bu özgün doku hasarı mekanizması aşağıdakilerden hangisi ile adlandırılır?",
-    "options": [
-      "A) Opsonizasyon yetmezliği",
-      "B) 'Frustrated' (Hüsrana Uğramış / Engellenmiş) fagositoz",
-      "C) Transsitoz arresti",
-      "D) Apoptozis indüksiyonu",
-      "E) Fibrinoid rezolüsyon"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Lökositlerin fagosite edemeyecekleri kadar geniş, düz biyolojik yüzeylere (glomerül bazal membranı, vasküler greftler, eklem kıkırdağı gibi) temas ettiklerinde fagozom oluşturamayıp lizozomal enzimlerini (elastaz, kollejenaz) ve serbest radikallerini doğrudan ekstraselüler alana boşaltmalarına patolojide 'Frustrated Phagocytosis' (Hüsrana uğramış fagositoz) adı verilir. Bu durum immün kompleks glomerülonefritlerindeki doku hasarının temel mekanizmasıdır."
-  },
-  {
-    "id": "prac-akut-036",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
-    "slideNumber": 36,
-    "slideTitle": "Akut Enflamasyonun Morfolojik Kalıpları: Seröz ve Fibrinöz Enflamasyon",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Kronik böbrek yetmezliği nedeniyle hemodiyaliz programında olan 52 yaşındaki bir erkek hasta, öne eğilmekle azalan batıcı göğüs ağrısı şikayetiyle başvuruyor. Oskültasyonda kalbin mezokardiyak odağında derimsi bir sürtünme sesi (perikardiyal friction rub) duyuluyor. Hastanın vefatı sonrası yapılan otopside kalp perikardiyumunun visseral ve paryetal yapraklarının üzerini kaplayan pürüzlü, tüylü, sarı-pembe renkli yoğun bir fibrin lifi tabakası izleniyor ('ekmek ve tereyağı' manzarası). Bu hastadaki akut enflamasyonun morfolojik tipi ve rezorbe edilememesi durumunda en olası uzun dönem patolojik sonucu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Seröz enflamasyon -- Malign mezotelyoma gelişimi",
-      "B) Fibrinöz enflamasyon -- Organizasyon ve konstriktif perikardit",
-      "C) Pürülan enflamasyon -- Kazeöz kavitasyon",
-      "D) Ülseratif enflamasyon -- Spontan koroner arter diseksiyonu",
-      "E) Granülomatöz enflamasyon -- Amiloidozis"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Vaka klasik Üremik Fibrinöz Perikardit'tir. Fibrinöz enflamasyonda yüksek vasküler permeabilite nedeniyle büyük fibrinojen molekülleri sızar ve seröz yüzeylerde fibrin ağı oluşturur; bu görünüm 'ekmek ve tereyağı' (bread-and-butter) olarak adlandırılır ve sürtünme sesine (friction rub) yol açar. Fibrin kütlesi fibrinoliz ile temizlenemezse, anjiyogenez ve fibroblast göçü ile fibröz dokuya dönüşür ('organizasyon') ve yapraklar birbirine yapışarak Konstriktif Perikardit meydana getirir."
-  },
-  {
-    "id": "prac-akut-037",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
-    "slideNumber": 37,
-    "slideTitle": "Akut Enflamasyonun Morfolojik Kalıpları: Süpüratif (Pürülan) Enflamasyon, Abse ve Ülser",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Ateş, balgamlı öksürük ve nefes darlığı ile başvuran 62 yaşındaki bir hastanın akciğer tomografisinde sağ alt lobda 4 cm çapında, hava-sıvı seviyesi veren kavitatuvar bir lezyon saptanıyor. Biyopside lezyonun merkezinde yoğun likefaksiyon nekrozu, hücre sınırları kaybolmuş parçalanmış nötrofil kitleleri ve Staphylococcus aureus kolonileri izleniyor; lezyonun çevresinde konjesyone damarlar ve yeni gelişen granülasyon dokusu dikkati çekiyor. Bu patolojik lezyonun en doğru tanımı ve beklenen iyileşme mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akciğer absesi -- Bağ dokusu organizasyonu ve skar oluşumu",
-      "B) Fibrinöz plörit -- Tam parankim rezolüsyonu",
-      "C) Seröz kist -- Epitelyal metaplazi",
-      "D) Kazeifiye tüberkülom -- Distrofik kalsifikasyon",
-      "E) Akciğer infarktüsü -- Koagülasyon nekrozu rezolüsyonu"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur. Lezyon klasik bir Akciğer Absesi'dir (süpüratif enflamasyon). Piyojenik bakteriler (Staphylococcus aureus) nötrofilleri çeker ve nötrofilik enzimler akciğer parankimini eriterek likefaksiyon nekrozuna uğratır; merkezde irin havuzu oluşur. Akciğer parankiminin çatısı (elastik ve retiküler iskelet) tamamen eridiği için bu lezyon anatomik olarak eski haline dönemez (rezolüsyon olamaz); granülasyon dokusu ve kollajen birikimiyle (fibrozis/skar) iyileşir."
-  },
-  {
-    "id": "prac-akut-038",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
-    "slideNumber": 38,
-    "slideTitle": "Akut Enflamasyonun Sonlanımı ve Akıbeti",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Pnömokoksik lobar pnömoni tanısıyla hastaneye yatırılan ve uygun antibiyotik tedavisi verilen 38 yaşındaki bir hastada, akut evrede alveol lümenleri nötrofil, eritrosit ve fibrin eksüdasıyla tamamen dolmasına karşın, alveolar bazal membran yapısının korunduğu saptanıyor. Tedaviden 4 hafta sonra çekilen kontrol akciğer grafisinde infiltrasyonun tamamen kaybolduğu, solunum fonksiyonlarının normale döndüğü ve akciğer parankiminin histopatolojik olarak hiçbir fibrozis veya iz bırakmaksızın eski anatomik yapısına kavuştuğu gözleniyor. Bu hastadaki akut enflamasyonun nihai klinik ve patolojik akıbeti aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Fibröz organizasyon ve karnifikasyon",
-      "B) Tam rezolüsyon (Rejenerasyon)",
-      "C) Kronik granülomatöz enflamasyon",
-      "D) Kavitasyon ve kistik bronşektazi",
-      "E) Fibrinoid nekroz ve apse formasyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Akut enflamasyonda doku hasarı sınırlı kaldığında, epitel hücreleri bölünebildiğinde, bazal membran çatısı sağlam olduğunda ve nötrofiller ile eksüda makrofajlar tarafından tamamen temizlendiğinde doku eski anatomik ve fonksiyonel durumuna döner. Bu olguya 'Tam Rezolüsyon' adı verilir. Akut bakteriyel lobar pnömoninin sekelsiz iyileşmesi tam rezolüsyonun en klasik tıbbi örneğidir. Skar veya kavitasyon doku çatısının yıkıldığı durumlarda ortaya çıkar."
-  },
-  {
-    "id": "pq-ke-001",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Kronik Enflamasyonun Tanımı ve Biyolojik Çerçevesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Altmış iki yaşında bir erkek hastanın akciğer biyopsisinde, alveoler septalarda yoğun makrofaj ve lenfosit infiltrasyonu, alveol epitelinde yaygın nekroz ve bu alanların komşuluğunda yeni oluşan kapiller damarlar ile kollajen lif üreten fibroblast odakları saptanmıştır. Bu hastadaki patolojik sürecin akut enflamasyondan ziyade kronik enflamasyondan yana değerlendirilmesinde en belirleyici morfolojik özellik aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Alveol lümenlerinde bol miktarda fibrinöz eksüda ve sıvı birikiminin olması",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Doku hasarı, mononükleer infiltrasyon ve bağ dokusu onarımının (fibrozis ve anjiyogenez) aynı anda eşzamanlı bulunması",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Kapiller endotel hücrelerinde yaygın lökosit yuvarlanması (rolling) görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İnterstisyel alanda nötrofil hakimiyetinde belirgin mikroskobik abse odaklarının izlenmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Lezyon çevresindeki postkapiller venüllerde endotel kontraksiyonuna bağlı aşırı vasküler geçirgenlik artışı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Kronik enflamasyonun patognomonik morfolojik üçlüsü; mononükleer lökosit infiltrasyonu, süregelen aktif parankim hasarı ve anjiyogenez ile fibrozisten oluşan onarım çabalarının AYNI ANDA eşzamanlı olarak bulunmasıdır.\nA seçeneği yanlıştır: Fibrinöz eksüda ve ödem akut enflamasyonun tipik vasküler bulgularıdır.\nC seçeneği yanlıştır: Lökosit yuvarlanması akut yangının erken lökosit rekrutman basamağıdır.\nD seçeneği yanlıştır: Nötrofil hakimiyeti ve abse formasyonu akut süpüratif enflamasyonun özelliğidir.\nE seçeneği yanlıştır: Histamin kaynaklı endotel kontraksiyonu akut vasküler geçirgenlik artışına aittir."
-  },
-  {
-    "id": "pq-ke-002",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Kronik Enflamasyonun Üçlü Sacayağı (Patolojik Triad)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Kronik C hepatiti tanılı 48 yaşındaki bir kadının karaciğer iğne biyopsisinde; portal alanlarda lenfosit ve plazma hücresi agregatları, komşu lobül parankiminde apoptotik/nekrotik hepatosit odakları (piecemeal nekroz) ve hasarlı sahalarda endotel tomurcuklanmaları ile fibroblastların oluşturduğu portal-portal fibröz köprüleşmeler izlenmiştir. Bu mikroskobik bulgular bütünü patolojide hangi kavramı en iyi şekilde tanımlamaktadır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Akut kataral hepatik reaksiyon",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kronik enflamasyonun üçlü sacayağı (infiltrat, yıkım ve onarım)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Tam parankimal rezolüsyon ile sonuçlanan akut hasar fazı",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Sadece iskemiye bağlı sekonder koagülasyon nekrozu odağı",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Tip I aşırı duyarlılık reaksiyonuna bağlı mast hücresi degranülasyonu",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Portal alanda mononükleer hücrelerin bulunması aktif enflamasyonu; parankimde hepatositlerin ölümü süregelen doku yıkımını; fibroblastik kollajen sentezi ve endotel tomurcuklanması ise onarım çabalarını simgeler. Bu üçlünün eşzamanlı varlığı kronik enflamasyonun temel sacayağıdır.\nA seçeneği yanlıştır: Kataral reaksiyon mukus salgılayan yüzeylerdeki akut iltihaptır.\nC seçeneği yanlıştır: Rezolüsyonda doku hasarı skar bırakmadan tamamen orijinal haline döner, oysa burada belirgin fibrozis ve parankim kaybı mevcuttur.\nD seçeneği yanlıştır: Koagülasyon nekrozu iskemiye özgüdür ve mononükleer aktif infiltrat triadını açıklamaz.\nE seçeneği yanlıştır: Tip I aşırı duyarlılık IgE ve mast hücreleri ile yürütülür, fibrotik köprüleşme yapmaz."
-  },
-  {
-    "id": "pq-ke-003",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Kronik Enflamasyonun Etyolojik Spektrumu ve İnatçı Enfeksiyonlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Otuz dört yaşında bir erkek hasta üç aydır süren kuru öksürük, gece terlemesi ve 7 kg kilo kaybı şikayetiyle başvuruyor. Çekilen akciğer grafisinde sağ apeks bölgesinde kalın duvarlı kaviter bir lezyon izleniyor. Yapılan bronkoalveoler lavaj biyopsisinde merkezinde asellüler nekroz, çevresinde bol sitoplazmalı histiyositler ve lenfosit yakası saptanıyor. Bu hastada kaviter akciğer hasarının ortaya çıkmasındaki temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Bakterinin salgıladığı güçlü ekzotoksinlerin doğrudan alveoler duvarları eritmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Klasik kompleman yolağının aşırı aktivasyonuyla membran atak komplekslerinin gelişmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Elimine edilemeyen patojene karşı gelişen T hücre aracılı gecikmiş tip aşırı duyarlılık yanıtı",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Dolaşımdaki IgE antikorlarının alveoler mast hücrelerini degranüle etmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Akut nötrofilik infiltrasyonun proteaz inhibitörlerini tamamen tüketmesi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: Tüberkülozda doku yıkımı ve kavite oluşumu basillerin ekzotoksinlerinden değil, basili yok edemeyen konağın geliştirdiği CD4+ Th1 hücreleri ve aktive makrofajların salgıladığı Tip IV (gecikmiş tip) aşırı duyarlılık mediyatörlerinden kaynaklanır.\nA seçeneği yanlıştır: M. tuberculosis primer ekzotoksin salgılamaz.\nB seçeneği yanlıştır: Membran atak kompleksi Neisseria gibi bakterilere karşı etkilidir, mikobakteri kazeifikasyon nekrozunu açıklamaz.\nD seçeneği yanlıştır: IgE bağımlı mast hücre yanıtı Tip I aşırı duyarlılıktır (astım, anafilaksi).\nE seçeneği yanlıştır: Nötrofilik proteaz fazlalığı amfizemde rol oynar, granülomatöz kavite oluşturmaz."
-  },
-  {
-    "id": "pq-ke-004",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "İmmün Aracılı Enflamatuar Hastalıklar ve Otoimmünite",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Kırk iki yaşında bir kadın hasta her iki el bileğinde, metakarpofalangeal ve proksimal interfalangeal eklemlerinde bir yılı aşkın süredir devam eden ağrı, şişlik ve sabahları bir saatten uzun süren eklem sertliği ile başvuruyor. Eklem aralığından yapılan sinovyal biyopside; sinovyal villuslarda belirgin dallanma ve hipertrofi, sinovya altında yoğun CD4+ lenfosit ve plazma hücre agregatları, yeni damar proliferasyonu ve kıkırdak yüzeyini istila eden pannus dokusu izleniyor. Bu patolojik tablonun kronikleşmesindeki en kritik etmen aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sinovyal kavitede Staphylococcus aureus üremesine bağlı devamlı proteolitik yıkım",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Sinovyal eklem antijenlerinin vücuttan temizlenememesi nedeniyle immün yanıtın kesintisiz tetiklenmesi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Eklem sıvısındaki hyaluronik asit miktarının genetik mutasyonla sıfırlanması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalsiyum pirofosfat dihidrat kristallerinin nötrofilleri doğrudan degranüle etmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Postkapiller venüllerde selektin moleküllerinin tamamen doğuştan yokluğu",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Romatoid artrit bir otoimmün hastalıktır. Vücudun kendi kollajen veya sitrüline proteinlerine karşı gelişen T ve B lenfosit yanıtı, antijen vücudun kendi dokusu olduğu için asla sonlandırılamaz; bu durum yangının kronikleşmesine ve pannus oluşumuna yol açar.\nA seçeneği yanlıştır: Bu tablo bakteriyel septik artrit değildir, otoimmün simetrik bir poliartrittir.\nC seçeneği yanlıştır: Hyaluronik asit kaybı kronik yangının nedeni değil, sonucundaki sıvı değişikliğidir.\nD seçeneği yanlıştır: Kalsiyum pirofosfat yalancı gut (psödogut) hastalığının etkenidir.\nE seçeneği yanlıştır: Selektin yokluğu lökosit adezyon defektine yol açar, otoimmüniteyi başlatmaz."
-  },
-  {
-    "id": "pq-ke-005",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Toksik ve İndigestibl Partiküllere Uzamış Maruziyet",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Yirmi yıldır kot taşlama ve kumlama işinde çalışan 44 yaşındaki bir erkek hasta, giderek artan nefes darlığı ve kuru öksürük yakınmasıyla göğüs hastalıkları kliniğine başvuruyor. Toraks bilgisayarlı tomografisinde her iki akciğer üst loblarında multipl nodüler opasiteler ve hiler lenf bezlerinde yumurta kabuğu kalsifikasyonu izleniyor. Akciğer kama rezeksiyonunda mikroskop altında konsantrik, hyalinize kollajen tabakalarından oluşan asellüler nodüller ve polarize ışık mikroskobunda çift kıran (birefringent) kristalin partiküller görülüyor. Bu hastadaki patolojik lezyonların oluşumunu başlatan en temel hücresel mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Alveoler makrofajların silika kristallerini sindiremeyip ölmesi ve sürekli inflamatuar mediyatör salması",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Tip II pnömositlerin aşırı sürfaktan üreterek alveol boşluklarını tıkaması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Nötrofillerin lizozomal miyeloperoksidaz enzimini kanda tüketen genetik defekti",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Mast hücrelerinin IgE aracılığıyla bronşiyal düz kas spazmını kronikleştirmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Endotel hücrelerinin selektin ekspresyonunu kaybetmesi sonucu lökosit göçünün durması",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru cevap A'dır: Kot taşlama ve kumlama işçilerinde solunan kristalin silika partikülleri alveoler makrofajlar tarafından fagosite edilir; ancak sindirilemediği için makrofaj lizozomlarını parçalayarak hücre ölümüne ve yoğun IL-1 ile fibroblast uyarımına yol açar. Bu döngü silikotik nodülleri ve yaygın fibrozisi doğurur.\nB seçeneği yanlıştır: Tip II pnömosit sürfaktan artışı pulmoner alveoler proteinoziste görülür.\nC seçeneği yanlıştır: Miyeloperoksidaz eksikliği mantar enfeksiyonlarına yatkınlık yapar, silikozis mekanizması değildir.\nD seçeneği yanlıştır: IgE bağımlı mast hücre spazmı astımda görülür, silikotik kollajen nodülleri yapmaz.\nE seçeneği yanlıştır: Lökosit göçünün durması yangıyı engeller, oysa burada kontrolsüz kronik yangı mevcuttur."
-  },
-  {
-    "id": "pq-ke-006",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Non-Klasik Hastalıklarda Kronik Düşük Dereceli Enflamasyon (Meta-enflamasyon)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Elli iki yaşında obez (BKİ: 36 kg/m²) bir erkek hastada açlık plazma glukozu 142 mg/dL ve HbA1c %7.8 saptanıyor. Yağ dokusu biyopsisinde genişlemiş adipositlerin etrafında at nalı veya taç şeklinde dizilmiş CD68 pozitif mononükleer hücre kümeleri (crown-like structures) izleniyor. İmmünohistokimyasal analizde bu hücrelerin yoğun miktarda TNF-alfa ve IL-6 eksprese ettiği görülüyor. Bu hastadaki metabolik tablonun patogenezinde rol oynayan kronik enflamatuar süreç patolojide en iyi hangi terimle adlandırılır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Akut süpüratif flegmon",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Metabolik enflamasyon (meta-enflamasyon)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Fibrinöz serozit",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Tip III immün kompleks vasküliti",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Eozinofilik nekrotizan granülomatozis",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Obezite, tip 2 diyabet ve aterosklerozda gözlenen, belirgin mikrobiyal patojen olmaksızın metabolik yükün (lipidler, serbest yağ asitleri) yağ dokusundaki makrofajları uyararak düşük düzeyde ama kronik TNF-alfa ve IL-6 salgılatmasına 'meta-enflamasyon' (metabolik enflamasyon) denir.\nA seçeneği yanlıştır: Flegmon sınırları belirsiz akut pürülan yaygın enfeksiyondur.\nC seçeneği yanlıştır: Fibrinöz serozit perikard veya plevrada akut fibrin çökmesidir.\nD seçeneği yanlıştır: Tip III vaskülit antijen-antikor komplekslerinin damarda çökmesidir (lupus gibi).\nE seçeneği yanlıştır: Eozinofilik granülomatozis (Churg-Strauss) astım ve sistemik granülomatöz vaskülitle seyreder."
-  },
-  {
-    "id": "pq-ke-007",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Mononükleer Fagosit Sisteminin Anatomisi ve Hücresel Bileşenleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Akut apandisit nedeniyle ameliyat edilen bir hastanın doku kesitlerinde ilk 12 saatte sadece nötrofil infiltrasyonu izlenirken, operasyondan 48 saat sonra gelişen apandiks güdüğü komplikasyonunda lezyon odağına bol miktarda fasulye çekirdekli mononükleer hücrelerin göç ettiği ve bu hücrelerin dokuda hızla lizozom zengini büyük fagositer hücrelere dönüştüğü izleniyor. Monositlerin kan dolaşımından ayrılarak bu subakut/kronik yangı sahasına yönelmesinde en kritik rolü oynayan kemotaktik faktör aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İnterlökin-8 (CXCL8)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Monosit kemoatraktan protein-1 (MCP-1 / CCL2)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökotrien B4 (LTB4)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kompleman fragmanı C3b",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Eotaksin-1 (CCL11)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Monositlerin enflamatuar dokulara selektif olarak rekrüte edilmesini sağlayan en özgül ve güçlü kemokin MCP-1 (Monocyte Chemoattractant Protein-1 / CCL2)'dir.\nA seçeneği yanlıştır: CXCL8 (IL-8) nötrofiller için en güçlü kemoatraktandır.\nC seçeneği yanlıştır: LTB4 nötrofil aktivasyonunda ve kemotaksisinde etkilidir.\nD seçeneği yanlıştır: C3b kemoatraktan değil, primer opsonindir (fagositozu kolaylaştırır).\nE seçeneği yanlıştır: Eotaksin (CCL11) eozinofillerin spesifik kemoatraktan kemokinidir."
-  },
-  {
-    "id": "pq-ke-008",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Doku Yerleşik Makrofajlarının Embriyonik Kökeni ve Dağılımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Deneysel bir immünoloji çalışmasında, farelerin kemik iliği hematopoetik kök hücreleri ölümcül doz radyasyonla tamamen yok edildikten sonra yeşil floresan protein (GFP) taşıyan donör kemik iliği hücreleri naklediliyor. Sağlıklı koşullarda takip edilen farelerin beyin dokusu incelendiğinde mikroglia hücrelerinin GFP içermediği ve radyasyon öncesi konak hücre havuzundan çoğalarak varlığını sürdürdüğü; ancak deneysel bir beyin absesi oluşturulduğunda lezyon odağını saran yeni makrofajların tamamının GFP pozitif donör kemik iliği monositlerinden köken aldığı saptanıyor. Bu deneysel bulgu doku makrofajlarının biyolojisi hakkında aşağıdaki yargılardan hangisini en doğru şekilde kanıtlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Beyindeki yerleşik mikroglialar yalnızca nötrofillerin fagositoz yapmasıyla oluşur",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Yerleşik doku makrofajları embriyonik kökenli olup lokal çoğalırken, enflamasyon anındaki makrofajlar kemik iliği monositlerinden derive olur",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Kemik iliği monositleri normalde merkezi sinir sistemi bariyerini asla geçemez",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Tüm doku makrofajları haftalık olarak kemik iliği kök hücrelerince baştan yaratılır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Floresan proteinler makrofajların fagositer yeteneğini tamamen felç eder",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Güncel Robbins Patoloji ve immünoloji verilerine göre; doku yerleşik makrofajları (mikroglia, Kupffer vb.) erken embriyonik dönemde vitellus kesesinden dokulara yerleşir ve kemik iliğinden bağımsız olarak yerel bölünmeyle yaşar. Ancak enflamatuar durumlarda dokuya hücum eden makrofajlar doğrudan kemik iliği kaynaklı monositlerden türer.\nA seçeneği yanlıştır: Mikroglia makrofajdır, nötrofillerden oluşmaz.\nC seçeneği yanlıştır: Yangı ve enfeksiyon varlığında monositler bariyeri rahatlıkla geçer.\nD seçeneği yanlıştır: Yerleşik makrofajlar kemik iliğinden haftalık yenilenmez, embriyonik klonlar olarak yıllarca yaşar.\nE seçeneği yanlıştır: GFP hücresel işlevleri bozan bir toksin değildir, standart bir işaretleyicidir."
-  },
-  {
-    "id": "pq-ke-009",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "Makrofajların Efektör Fonksiyonları ve Enflamasyondaki Merkezi Rolü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Yirmi altı yaşında bir kadın hastada yüzde malar raş, fotosensitivite, eklem ağrıları ve idrarda protein kaçağı saptanıyor. Laboratuvarda antinükleer antikor (ANA) ve anti-dsDNA pozitif bulunuyor. Yapılan immünopatolojik araştırmalarda hastanın doku makrofajlarında apoptotik hücrelerin yüzeyindeki 'beni ye' (eat-me) sinyallerini tanıyan reseptörlerin fonksiyonel olarak yetersiz olduğu ve apoptoza uğramış hücrelerin ortamdan temizlenemeyerek sekonder nekroza gittiği saptanıyor. Apoptotik hücrelerin makrofajlar tarafından normalde sessizce temizlenmesini sağlayan bu biyolojik süreç aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıvı damlacıklarının hücresel pinositozu",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Efferositoz (efferocytosis / apoptotik hücre temizliği)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Kompleman bağımlı opsonizasyon süreci",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Lizozomal otofaji ve organel sindirimi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Programlı nekroptozis ile litik hücre ölümü",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Makrofajların apoptoza uğramış hücre kalıntılarını çevreye yangısal sitokin salmadan, sessizce ve hızla fagositozla ortadan kaldırması işlemine 'efferositoz' adı verilir. Efferositozun aksaması durumunda apoptotik hücreler patlayarak sekonder nekroza gider, nükleer antijenler ortama saçılır ve SLE gibi otoimmün tablolar tetiklenir.\nA seçeneği yanlıştır: Pinositoz hücrenin sıvı damlacıklarını içmesidir.\nC seçeneği yanlıştır: Opsonizasyon antijenlerin antikor veya komplemanla kaplanarak fagositoza hazırlanmasıdır.\nD seçeneği yanlıştır: Otofaji hücrenin kendi yıpranmış organellerini lizozomda eritmesidir.\nE seçeneği yanlıştır: Nekroptozis programlı bir nekroz (hücre ölüm) biçimidir, temizlik mekanizması değildir."
-  },
-  {
-    "id": "pq-ke-010",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Makrofaj Aktivasyon Yolları: Klasik (M1) Polarizasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "İntrasellüler bir bakteri olan Listeria monocytogenes ile enfekte olan bir hastada, konak savunmasının erken döneminde CD4+ Th1 lenfositlerin aktive olarak ortama yüksek miktarda bir sitokin salgıladığı; bu sitokinin doku makrofajlarına bağlanarak onları klasik aktivasyon (M1) yolağına soktuğu, fagozom içi nitrik oksit ve süperoksit üretimini dramatik olarak artırdığı saptanıyor. Makrofajları klasik M1 mikrobisidal fenotipine polarize eden bu anahtar sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İnterlökin-4 (IL-4)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İnterlökin-10 (IL-10)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "İnterferon-gama (IFN-γ)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Transforme edici büyüme faktörü-beta (TGF-β)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnterlökin-13 (IL-13)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: Makrofajların klasik M1 aktivasyonunu sağlayan, intrasellüler patojenlere karşı fagozom-lizozom öldürme kapasitesini maksimize eden majör sitokin Th1 ve NK hücreleri tarafından üretilen İnterferon-gama (IFN-γ)'dır.\nA ve E seçenekleri yanlıştır: IL-4 ve IL-13 alternatif M2 yolunu aktive eden Th2 sitokinleridir.\nB ve D seçenekleri yanlıştır: IL-10 ve TGF-β immünosüpresif, anti-enflamatuar ve fibrogenik sitokinlerdir; M1 yolağını baskılarlar."
-  },
-  {
-    "id": "pq-ke-011",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "M1 Makrofajın Moleküler Silahları ve Doku Hasarı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Kronik kavitasyonel akciğer hastalığı olan bir hastanın biyopsisinde lezyon odağındaki CD68+ makrofajların yüksek düzeyde sitotoksik nitrik oksit (NO) sentezlediği ve bu molekülün süperoksit anyonları ile birleşerek güçlü doku harabiyeti yaratan peroksinitrit radikallerine dönüştüğü saptanıyor. Bu patolojik süreçte makrofajların L-arjinini substrat olarak kullanarak nitrik oksit üretmesini sağlayan ve IFN-gama uyarımıyla sentezlenen enzim aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Endotelyal nitrik oksit sentaz (eNOS)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Arjinaz-1 (Arg-1)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "İndüklenebilir nitrik oksit sentaz (iNOS)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Ksantin oksidaz",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nöronal nitrik oksit sentaz (nNOS)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: Makrofajlarda IFN-gama ve bakteriyel LPS uyarısıyla gen ekspresyonu indüklenen ve L-arjininden yüksek miktarda sitotoksik nitrik oksit üreten enzim indüklenebilir nitrik oksit sentazdır (iNOS veya NOS2).\nA ve E seçenekleri yanlıştır: eNOS ve nNOS fizyolojik olarak damar tonusu ve nörotransmisyonu düzenleyen yapısal (konstitütif) enzimlerdir, mikrobisidal burst yapmazlar.\nB seçeneği yanlıştır: Arjinaz-1 (Arg-1) alternatif M2 makrofajlarda L-arjinini ornitine çevirerek kollajen ve fibrozis sentezleten enzimdir, NO üretmez.\nD seçeneği yanlıştır: Ksantin oksidaz pürin katabolizmasında ürik asit üretir."
-  },
-  {
-    "id": "pq-ke-012",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "M1 Makrofaj Kaynaklı Pro-enflamatuar Sitokinler ve Kemokinler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "İmmünogenetik bir araştırma laboratuvarında, tekrarlayan intrasellüler bakteri enfeksiyonları geçiren bir çocukta, makrofajların fagositoz yapabilmesine rağmen T lenfositleri Th1 yönünde farklılaştıramadığı ve T hücrelerinden IFN-gama salınımının gerçekleşmediği saptanıyor. Moleküler analizde makrofajların sentezlediği bir heterodimerik sitokinin genetik delesyon nedeniyle üretilemediği gösteriliyor. Naif CD4+ T hücrelerinin Th1 alt grubuna farklılaşmasında primer rol oynayan bu makrofaj kökenli sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İnterlökin-4 (IL-4)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İnterlökin-10 (IL-10)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "İnterlökin-12 (IL-12)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "İnterlökin-5 (IL-5)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transforme edici büyüme faktörü-alfa (TGF-α)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: Makrofajlar ve dendritik hücreler tarafından sentezlenen İnterlökin-12 (IL-12), naif yardımcı T hücrelerinin Th1 hücresine farklılaşmasını sağlayan ve IFN-γ üretimini tetikleyen en kritik sitokindir. IL-12 eksikliğinde Th1 yanıtı gelişemez ve intrasellüler mikobakteriyel enfeksiyonlara ağır yatkınlık oluşur.\nA seçeneği yanlıştır: IL-4 naif hücreleri Th2 yönüne farklılaştırır.\nB seçeneği yanlıştır: IL-10 immün yanıtı baskılayan anti-enflamatuar bir sitokindir.\nD seçeneği yanlıştır: IL-5 Th2 hücrelerince üretilip eozinofilleri uyarır.\nE seçeneği yanlıştır: TGF-alfa epitel hücre proliferasyonunu uyaran bir büyüme faktörüdür."
-  },
-  {
-    "id": "pq-ke-013",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Makrofaj Aktivasyon Yolları: Alternatif (M2) Polarizasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Deneysel bir doku hasarı modelinde, akut yangı fazının gerilemesinin ardından hasar bölgesinde toplanan makrofajların fagositer enzim salınımını durdurduğu, buna karşılık anjiyogenezi uyaran büyüme faktörleri ve bağ dokusu sentezini tetikleyen mediyatörler salgılamaya başladığı izleniyor. İmmünolojik analizde bu morfolojik ve fonksiyonel dönüşümün (alternatif M2 polarizasyonu) CD4+ T helper hücreleri tarafından salınan sitokinler aracılığıyla gerçekleştiği anlaşılıyor. Makrofajları alternatif M2 onarım fenotipine sokan bu temel sitokin çifti aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İnterferon-gama ve Tümör nekroz faktörü-alfa",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İnterlökin-1 ve İnterlökin-6",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "İnterlökin-4 ve İnterlökin-13",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "İnterlökin-12 ve İnterlökin-23",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnterlökin-17 ve İnterlökin-22",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: Makrofajların alternatif (M2) aktivasyon yolağı Th2 lenfositleri tarafından üretilen İnterlökin-4 (IL-4) ve İnterlökin-13 (IL-13) tarafından uyarılır. Bu yolak yangıyı yatıştırır ve doku onarımını başlatır.\nA seçeneği yanlıştır: IFN-gama ve TNF klasik M1 mikrobisidal aktivasyonunu sağlar.\nB seçeneği yanlıştır: IL-1 ve IL-6 akut yangı ve akut faz yanıtının mediyatörleridir.\nD seçeneği yanlıştır: IL-12 ve IL-23 naif hücreleri sırasıyla Th1 ve Th17'ye farklılaştırır.\nE seçeneği yanlıştır: IL-17 ve IL-22 Th17 kaynaklı olup nötrofil rekrutmanı yapar."
-  },
-  {
-    "id": "pq-ke-014",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Alternatif M2 Makrofajın Efektör Molekülleri ve Onarım Fonksiyonları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Miyokard enfarktüsü geçiren 58 yaşındaki bir hastanın nekrotik miyokard dokusunda ikinci haftada yapılan incelemede, hasarlı alanın yoğun iğsi fibroblastlar, yeni oluşan kapillerler ve bol miktarda kollajen lifleri ile dolduğu izleniyor. İmmünohistokimyasal analizde bu onarım alanındaki makrofajların yüksek düzeyde Arjinaz-1 enzimi eksprese ettiği ve L-arjinini prolin öncüllerine dönüştürerek Tip I kollajen depolanmasını sağladığı gösteriliyor. Bu onarım sahasındaki fibroblastları aktive ederek kollajen sentezini en güçlü şekilde tetikleyen ve M2 makrofajlarca üretilen temel büyüme faktörü aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İnterlökin-12",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tümör nekroz faktörü-alfa",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Transforme edici büyüme faktörü-beta (TGF-β)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "İnterferon-gama",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Monosit kemoatraktan protein-1",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: M2 makrofajlar tarafından salgılanan TGF-beta (Transforming Growth Factor-beta), fibroblast proliferasyonunu, miyofibroblasta dönüşümü ve kollajen/matriks birikimini en güçlü uyaran, patolojik fibrozisin ve skar oluşumunun temel büyüme faktörüdür.\nA seçeneği yanlıştır: IL-12 Th1 hücrelerini uyarır, kollajen sentezletmez.\nB seçeneği yanlıştır: TNF-alfa pro-enflamatuar ve litik bir sitokindir.\nD seçeneği yanlıştır: IFN-gama M1 makrofaj aktivatörüdür ve fibrozisi inhibe edici etki gösterir.\nE seçeneği yanlıştır: MCP-1 monosit kemotaksisini sağlar, direkt kollajen sentezletmez."
-  },
-  {
-    "id": "pq-ke-015",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 15,
-    "slideTitle": "M1 ve M2 Fenotipik Dengesi, Plastisite ve Patolojik Fibrozis",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Altmış yaşında kronik alkol bağımlısı ve hepatit B enfeksiyonu olan bir erkek hastanın karaciğer eksplorasyonunda organ yüzeyinin diffüz nodüler bir hal aldığı ve sertleştiği izleniyor. Biyopside rejenerasyon nodüllerini çevreleyen kalın fibröz bantlar izleniyor. Elektron mikroskobunda ve immünohistokimyada Disse aralığında bulunan ve normalde A vitamini depolayan hücrelerin sitokinler etkisiyle lipid damlacıklarını kaybederek alfa-düz kas aktini eksprese eden miyofibroblastlara dönüştüğü ve yoğun Tip I kollajen ürettiği tespit ediliyor. Karaciğerde bu patolojik fibrozis sürecinde kollajen üreten bu hücre tipi aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kupffer hücreleri",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hepatik stellat hücreler (İto hücreleri)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Safra kanalikül epitel hücreleri (Kolanjiyositler)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Sinüzoidal endotel hücreleri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Matür hepatositler",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Karaciğerde kronik hasar ve M2/Kupffer makrofaj kaynaklı TGF-beta uyarımı sonucu A vitamini depolayan istirahat halindeki hepatik stellat hücreler (İto hücreleri) miyofibroblastlara dönüşerek ekstrasellüler matriks ve kollajen lifleri sentezleyen ana hücre haline gelir; sirozun patogenezindeki temel faildir.\nA seçeneği yanlıştır: Kupffer hücreleri makrofajdır; TGF-beta salgılayarak İto hücrelerini uyarır, kendileri primer kollajen lifi üretmez.\nC seçeneği yanlıştır: Kolanjiyositler safra kanallarını döşeyen epiteldir.\nD seçeneği yanlıştır: Endotel hücreleri sinüzoidleri döşer, kollajenöz skar üretmez.\nE seçeneği yanlıştır: Hepatositler parankim hücreleridir, nekroza uğrayan hedeflerdir."
-  },
-  {
-    "id": "pq-ke-016",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 16,
-    "slideTitle": "Kronik Enflamasyonda Lenfositlerin Rolü ve Makrofaj-Lenfosit Döngüsü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Kronik enflamatuar bir bağırsak lezyonunun patogenetik incelemesinde; dokuda toplanan makrofajların CD4+ lenfositlere antijen sunarken salgıladıkları bir sitokin ile lenfositleri aktive ettiği, aktive olan bu lenfositlerin ise ortama salgıladıkları güçlü bir lenfokin ile makrofajların fagositer ve lizozomal enzim aktivitesini katlayarak kendi kendini besleyen bir pozitif döngü (feed-forward loop) kurduğu saptanıyor. Kronik enflamasyonun persistan seyrinden sorumlu olan bu makrofaj-lenfosit döngüsündeki makrofaj ve T hücresi kaynaklı anahtar sitokin çifti aşağıdakilerden hangisinde doğru olarak verilmiştir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Makrofaj: IL-4 / T Lenfosit: IL-5",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Makrofaj: IL-10 / T Lenfosit: TGF-beta",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Makrofaj: IL-12 / T Lenfosit: IFN-gama",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Makrofaj: IL-1 / T Lenfosit: IL-2",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Makrofaj: TNF-alfa / T Lenfosit: IL-17",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: Makrofaj-T hücresi karşılıklı pozitif geri besleme döngüsünün temel moleküler çifti; makrofaj kaynaklı İnterlökin-12 (IL-12) ve T lenfosit (özellikle Th1) kaynaklı İnterferon-gama (IFN-γ)'dır. Bu döngü kronik iltihabın sönmesini engelleyen temel amplifikasyon eksenidir.\nA seçeneği yanlıştır: IL-4 ve IL-5 Th2 alerjik yanıtının elemanlarıdır.\nB seçeneği yanlıştır: IL-10 ve TGF-beta yangıyı baskılayan anti-enflamatuar moleküllerdir.\nD seçeneği yanlıştır: IL-1 ve IL-2 önemli sitokinler olsa da klasik Th1-makrofaj amplifikasyon aksının primer çifti IL-12 ve IFN-gama'dır.\nE seçeneği yanlıştır: TNF ve IL-17 nötrofil göçünü uyarır, klasik makrofaj döngüsünün ana aksı değildir."
-  },
-  {
-    "id": "pq-ke-017",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 17,
-    "slideTitle": "CD4+ T Helper Lenfosit Alt Tipleri: Th1 Hücreleri ve Hücresel Bağışıklık",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Yedi yaşında bir erkek çocukta tekrarlayan atipik mikobakteri ve Salmonella enfeksiyonları nedeniyle yapılan immünogenetik incelemede, T-bet transkripsiyon faktörünün normal eksprese edilmesine rağmen T lenfositlerin yüzeyindeki İnterferon-gama reseptör 1 (IFNGR1) geninde homozigot inaktive edici bir mutasyon saptanıyor. Bu hastada lenfositler normal miktarda IFN-gama üretebilmesine rağmen, doku makrofajlarının bu sinyali alamadığı ve fagozom içi öldürme mekanizmalarını devreye sokamadığı izleniyor. İntrasellüler patojenlere karşı bu savunma hattını yöneten ve IFN-gama üreten temel CD4+ yardımcı T hücre alt grubu aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Th2 hücreleri",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Th17 hücreleri",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Th1 hücreleri",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "T regülatuvar (Treg) hücreler",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Folliküler yardımcı T (Tfh) hücreleri",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru cevap C'dir: İntrasellüler bakterilere karşı savunmayı yöneten, T-bet transkripsiyon faktörü ile programlanan ve makrofajları aktive eden majör sitokin olan IFN-gama'yı salgılayan CD4+ T hücre alt grubu Th1 lenfositleridir.\nA seçeneği yanlıştır: Th2 hücreleri IL-4, IL-5, IL-13 üretir ve parazit/alerji savunmasını yönetir.\nB seçeneği yanlıştır: Th17 hücreleri IL-17 ve IL-22 üretir, nötrofilleri çeker.\nD seçeneği yanlıştır: Treg hücreleri FoxP3 eksprese eder ve bağışıklığı baskılar.\nE seçeneği yanlıştır: Tfh hücreleri germinal merkezde B hücrelerine yardım eder."
-  },
-  {
-    "id": "pq-ke-018",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 18,
-    "slideTitle": "CD4+ T Helper Lenfosit Alt Tipleri: Th2 Hücreleri ve Eozinofilik Enflamasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Yirmi dört yaşında bir kadın hasta çocukluğundan beri devam eden nefes darlığı, hırıltılı solunum ve öksürük nöbetleri ile başvuruyor. Yapılan laboratuvar tetkiklerinde periferik kanda belirgin eozinofili (1200/μL) ve total serum IgE düzeyinde aşırı artış saptanıyor. Balgam yaymasında bol miktarda eozinofil ve Charcot-Leyden kristalleri izleniyor. Akciğer biyopsisinde bronşiyal duvarda eozinofil infiltrasyonu, kadeh (goblet) hücre hiperplazisi ve subepitelyal kollajen kalınlaşması görülüyor. Bu hastadaki patolojik tabloyu yöneten CD4+ T hücre alt grubu ve eozinofillerin kemik iliğinden çıkışını sağlayan ana sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Th1 hücreleri / IFN-gama",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Th2 hücreleri / IL-5",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Th17 hücreleri / IL-17",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Treg hücreleri / IL-10",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Th1 hücreleri / IL-12",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Bronşiyal astım, alerjik reaksiyonlar ve paraziter enfeksiyonlar CD4+ Th2 lenfositleri tarafından yönetilir. Th2 hücrelerinin ürettiği İnterlökin-5 (IL-5), kemik iliğinden eozinofillerin farklılaşmasını, olgunlaşmasını, kana salınmasını ve dokuda hayatta kalmasını sağlayan en kritik sitokindir.\nA ve E seçenekleri yanlıştır: Th1 ve IFN-gama/IL-12 intrasellüler patojenlere ve granülomatöz yangıya aittir.\nC seçeneği yanlıştır: Th17 ve IL-17 nötrofilik infiltrasyon yapar, eozinofili yapmaz.\nD seçeneği yanlıştır: Treg ve IL-10 immün süpresyon sağlar."
-  },
-  {
-    "id": "pq-ke-019",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 19,
-    "slideTitle": "CD4+ T Helper Lenfosit Alt Tipleri: Th17 Hücreleri ve Nötrofilik Hasar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Otuz iki yaşında bir erkek hasta dizlerinde, dirseklerinde ve saçlı derisinde belirgin sınırları olan, üzeri gümüşi beyaz pullarla (skuam) kaplı eritematöz plaklar nedeniyle dermatoloji kliniğine başvuruyor. Lezyondan alınan deri biyopsisinde epidermiste belirgin parakeratoz, stratum spinosum hiperplazisi ve stratum korneum içinde toplanmış nötrofil kümeleri (Munro mikroabselleri) izleniyor. İmmünopatolojik analizde dermisteki T lenfositlerin yüksek oranda RORγt transkripsiyon faktörü taşıdığı ve bol miktarda bir sitokin salgılayarak endotelden nötrofil kemoatraktanlarını indüklediği saptanıyor. Sedef hastalığının (psöriyazis) bu histopatolojisinden primer sorumlu olan sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İnterlökin-4 (IL-4)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İnterlökin-5 (IL-5)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "İnterlökin-10 (IL-10)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İnterlökin-17 (IL-17)",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Transforme edici büyüme faktörü-beta (TGF-β)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru cevap D'dir: Sedef hastalığı (psöriyazis) patogenezinde RORγt taşıyan Th17 lenfositleri ve onların salgıladığı İnterlökin-17 (IL-17) merkezi rol oynar. IL-17 stroma ve endotelden CXCL kemokinleri salgılatarak epidermise nötrofil göçünü (Munro mikroabselleri) tetikler ve keratinosit proliferasyonunu hızlandırır.\nA ve B seçenekleri yanlıştır: IL-4 ve IL-5 Th2 kaynaklıdır, atopik dermatitte rol oynar.\nC ve E seçenekleri yanlıştır: IL-10 ve TGF-beta yangı baskılayıcı veya fibrogenik faktörlerdir."
-  },
-  {
-    "id": "pq-ke-020",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 20,
-    "slideTitle": "B Lenfositler, Plazma Hücreleri ve Morfolojik Özellikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Kırk sekiz yaşında bir hastaya dispeptik yakınmalar nedeniyle yapılan üst gastrointestinal endoskopide mide antrum mukozasından biyopsi alınıyor. Hematoksilen-eozin boyalı kesitlerin mikroskobik incelemesinde lamina propriada yoğun mononükleer hücre infiltrasyonu izleniyor. İnfiltratı oluşturan hücrelerin oval şekilli olduğu, sitoplazmalarının yoğun granüler endoplazmik retikulum içeriği nedeniyle koyu mavimsi-mor (bazofilik) boyandığı, nükleuslarının hücre kenarına itilmiş (eksantrik) olduğu, nükleer heterokromatinin radyal tarzda dizilerek saat kadranı / araba tekerleği deseni oluşturduğu ve çekirdeğin hemen yanında soluk boyanan bir perinükleer halonun (Golgi kompleksi) bulunduğu dikkati çekiyor. Bu biyopside tanımlanan karakteristik hücre tipi aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Alveoler makrofaj",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Plazma hücresi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Epiteloid histiyosit",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bağ dokusu mast hücresi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Doku nötrofili",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Soruda klasik patoloji tanımlaması yapılan hücre Plazma Hücresidir. Eksantrik yerleşimli nükleus, heterokromatinin periferde kümelenmesiyle oluşan saat kadranı (araba tekerleği) manzarası, GER zenginliğine bağlı bazofilik sitoplazma ve belirgin Golgi kompleksine denk gelen perinükleer açık renkli halo plazma hücresinin patognomonik morfolojik triadıdır.\nA seçeneği yanlıştır: Makrofajlar geniş köpüksü sitoplazmalı ve fasulye çekirdeklidir.\nC seçeneği yanlıştır: Epiteloid histiyositler soluk pembe sitoplazmalı, terlik/ayakkabı tabanı çekirdekli hücrelerdir.\nD seçeneği yanlıştır: Mast hücreleri metakromatik granüllere sahiptir, araba tekerleği kromatini göstermez.\nE seçeneği yanlıştır: Nötrofiller çok loblu (segmentli) nükleus içerir."
-  },
-  {
-    "id": "pq-ke-021",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Russell ve Dutcher Cisimcikleri: Plazma Hücresi İmmünoglobulin Birikimleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Elli dört yaşında kronik Helicobacter pylori gastriti olan bir hastanın mide mukozası biyopsisinde, lamina propriada lenfosit ve plazma hücrelerinden oluşan yoğun bir mononükleer infiltrat izleniyor. İncelemede bazı plazma hücrelerinin sitoplazmalarında granüler endoplazmik retikulum sisternalarının aşırı genişlemesiyle oluşmuş, parlak pembe (homojen eozinofilik), camsı görünümlü multipl intrasitoplazmik protein kürecikleri saptanıyor. Plazma hücrelerinde immünoglobulinlerin aşırı birikmesiyle oluşan bu sitoplazmik yapılara ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Councilman cisimciği",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Russell cisimciği",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Mallory-Denk cisimciği",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Lewy cisimciği",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Schaumann cisimciği",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Plazma hücresi granüler endoplazmik retikulum sisternalarında immünoglobulinlerin birikmesiyle oluşan homojen, camsı, parlak eozinofilik küreciklere Russell cisimciği adı verilir. Sitoplazması bu kürelerle dolu hücreye Mott hücresi denir.\nA seçeneği yanlıştır: Councilman cisimciği viral hepatitte apoptotik hepatosittir.\nC seçeneği yanlıştır: Mallory-Denk cisimciği hepatositlerde biriken sitokeratin (ara filaman) yumaklarıdır.\nD seçeneği yanlıştır: Lewy cisimciği Parkinson hastalığında nöronlarda biriken alfa-sinüklein inklüzyonudur.\nE seçeneği yanlıştır: Schaumann cisimciği sarkoidoz granülomlarında görülen konsantrik kalsiyum lamelleridir."
-  },
-  {
-    "id": "pq-ke-022",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Tersiyer Lenfoid Yapılar (TLS): Ektopik Lenfoid Neogenez",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Otuz sekiz yaşında bir kadın hastada diffüz ağrısız guatr ve hipotiroidi tablosu gelişiyor. Tiroidektomi spesimeninin mikroskobik incelemesinde tiroid foliküllerinin ileri derecede atrofiye uğradığı, folikül epitel hücrelerinin geniş, granüler, pembe sitoplazmalı onkositik hücrelere (Hürthle / Askanazy hücreleri) dönüştüğü ve foliküller arasındaki stromada belirgin germinal merkezler içeren sekonder lenfoid folikül yapıları ile yüksek endotelli venüllerin (HEV) geliştiği izleniyor. Non-lenfoid bir dokuda kronik immün uyarı sonucu oluşan bu organize lenfoid yapılara ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Langhans dev hücreleri",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tersiyer lenfoid yapılar (TLS)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Kazeifikasyon nekrozu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Granülasyon dokusu",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Fibrinoid nekroz odakları",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Kronik enflamasyon ve otoimmünite alanlarında (özellikle Hashimoto tiroiditi ve Romatoid Artrit) non-lenfoid parankimde gelişen, aktif germinal merkezleri, B/T zonları ve yüksek endotelli venülleri (HEV) bulunan organize ektopik lenfoid agregatlara Tersiyer Lenfoid Yapılar (TLS) veya Tersiyer Lenfoid Organlar denir.\nA seçeneği yanlıştır: Langhans hücreleri çok çekirdekli dev hücrelerdir, foliküler lenfoid organ değildir.\nC seçeneği yanlıştır: Kazeifikasyon nekrozu tüberkülozda görülen asellüler peynirimsi nekrozdur.\nD seçeneği yanlıştır: Granülasyon dokusu fibroblast ve kapiller damarlardan zengindir, organize germinal merkez içermez.\nE seçeneği yanlıştır: Fibrinoid nekroz immün kompleks vaskülitlerinde damar duvarında amorf protein birikimidir."
-  },
-  {
-    "id": "pq-ke-023",
-    "deckId": "learn-kronik-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon Patolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Eozinofiller ve Kronik Enflamasyondaki Rolleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Yirmi sekiz yaşında astım atağı nedeniyle acil servise başvuran bir hastadan alınan balgam örneğinin mikroskobik incelemesinde; çok sayıda iki loplu (gözlük şeklinde) çekirdeğe ve parlak kırmızı-turuncu sitoplazmik granüllere sahip eozinofiller izleniyor. Zemin araştırmasında bu hücrelerin parçalanması sonucu ortaya çıkan, renksiz, altıgen ve her iki ucu sivri bipiramidal kristal yapıları (Charcot-Leyden kristalleri) dikkati çekiyor. Eozinofillerin bu kristali oluşturan ve doku epitelinde erozyona yol açan sitoplazmik granül içeriği aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Miyeloperoksidaz",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Major basic protein ve eozinofil lizofosfolipazı (Galektin-10)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Alkalen fosfataz",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nötrofil spesifik granül proteini laktoferrin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nötrofil elastazı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru cevap B'dir: Eozinofillerin granüllerinde bulunan Major Basic Protein (MBP) doku epitelinde doğrudan toksik hasar yaparken; eozinofil kaynaklı lizofosfolipaz (Galektin-10) proteininin kristalleşmesiyle Charcot-Leyden kristalleri oluşur.\nA, C, D ve E seçenekleri yanlıştır: Miyeloperoksidaz, alkalen fosfataz, laktoferrin ve nötrofil elastazı primer veya sekonder nötrofil granül enzimleridir; Charcot-Leyden kristali yapmazlar."
   }
 ]

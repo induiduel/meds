@@ -1,5 +1,518 @@
 [
   {
+    "id": "q-learn-prenatal-tani-6",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 6,
+    "slideTitle": "Fetal Ultrasonografik İnceleme, Majör Malformasyonlar ve Minör Belirteçler (Soft Markers)",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "İkinci trimester obstetrik ultrasonografisinde fötusta hiperekojenik barsak görünümü saptanan bir gebede, ayırıcı tanıda aşağıdaki patolojilerden hangisi öncelikle düşünülmez?",
+    "options": [
+      "A) Down Sendromu (Trizomi 21)",
+      "B) Kistik Fibrozis",
+      "C) Konjenital Sitomegalovirüs (CMV) enfeksiyonu",
+      "D) Intraamniyotik kanama yutulması",
+      "E) Fetal nöral tüpün erken kapanması ve kraniyosinostoz"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Fetal ultrasonda ekojenik barsak; Trizomi 21 başta olmak üzere anöploidiler, kistik fibrozis (koyulaşmış mekonyum), intraamniyotik kanamanın fetüs tarafından yutulması ve konjenital CMV/Toksoplazma enfeksiyonlarında tipik olarak gözlenir. Nöral tüpün erken kapanması veya kraniyosinostoz ile ekojenik barsak arasında patogenetik bir ilişki yoktur."
+  },
+  {
+    "id": "q-learn-prenatal-tani-7",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 7,
+    "slideTitle": "Birinci Trimester Kombine Tarama Testi (İkili Test): Biyokimyasal Parametreler ve NT",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "12. gebelik haftasında birinci trimester kombine tarama testi (ikili test) uygulanan bir gebede, fetüste Trizomi 21 (Down Sendromu) riskinin en yüksek olduğunu gösteren biyokimyasal ve ultrasonografik kombinasyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) PAPP-A yüksek, Serbest beta-hCG yüksek, NT normal",
+      "B) PAPP-A düşük, Serbest beta-hCG yüksek, NT artmış",
+      "C) PAPP-A düşük, Serbest beta-hCG düşük, NT normal",
+      "D) PAPP-A yüksek, Serbest beta-hCG düşük, NT artmış",
+      "E) PAPP-A normal, Serbest beta-hCG normal, NT azalmış"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Down Sendromu (Trizomi 21) birinci trimester taramasında patognomonik üçlü: Maternal serum PAPP-A düzeyinin belirgin düşük olması (ortalama 0.4-0.5 MoM), Serbest beta-hCG düzeyinin artması (ortalama 2.0 MoM) ve ultrasonografik fetal ense saydamlığının (NT) kalınlaşmasıdır."
+  },
+  {
+    "id": "q-learn-prenatal-tani-8",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 8,
+    "slideTitle": "Birinci Trimester Taramasında Nazal Kemik, Doppler Akımları ve Trizomi Profilleri",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "12 haftalık bir gebenin ikili tarama testinde NT: 3.8 mm, PAPP-A: 0.15 MoM ve serbest beta-hCG: 0.18 MoM olarak raporlanmıştır. Duktus venozus Doppler incelemesinde ters 'a' dalgası izlenmiştir. Bu fötusta öncelikle hangi genetik anomali düşünülmelidir?",
+    "options": [
+      "A) Trizomi 21 (Down Sendromu)",
+      "B) Trizomi 18 (Edwards Sendromu)",
+      "C) Frajil X Sendromu",
+      "D) Klinefelter Sendromu (47,XXY)",
+      "E) İzole Nöral Tüp Defekti"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Trizomi 18'de (Edwards sendromu) birinci trimester belirteçlerinden PAPP-A ve serbest beta-hCG'nin her ikisi birden aşırı derecede baskılanmıştır (<0.2-0.3 MoM) ve NT belirgin artmıştır. Trizomi 21'de ise serbest beta-hCG yüksek seyreder. Bu nedenle her iki belirtecin aşırı düşük olduğu bu tablo Edwards sendromuna özgüdür."
+  },
+  {
+    "id": "q-learn-prenatal-tani-9",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 9,
+    "slideTitle": "Artmış Ense Saydamlığı (NT >= 3.5 mm) ve Kistik Higroma Klinik Algoritması",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "12. gebelik haftasında ultrasonografide bilateral internal septasyonlu kistik higroma ve 5.2 mm NT ölçülen bir fetüste koryon villus biyopsisi ile yapılan karyotip ve kromozomal mikrodizi (CMA) analizi 46,XX (normal) olarak raporlanmıştır. Bu olgunun ileri yönetiminde öncelikle hangi iki yaklaşım planlanmalıdır?",
+    "options": [
+      "A) Yalnızca rutin üçüncü trimester ultrasonu ve normal vajinal doğum planı",
+      "B) Noonan sendromu genetik paneli ve 18-20. haftalarda detaylı fetal ekokardiyografi",
+      "C) Acil sezaryen ile gebeliğin derhal sonlandırılması",
+      "D) Fetal kistik higromanın intrauterin iğne ile boşaltılması ve antibiyoterapi",
+      "E) Maternal serumda alfa-fetoprotein ölçümü ile yetinilmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Karyotipi ve mikrodizisi normal olan izole artmış NT ve kistik higroma olgularında monogenik sendromlar (özellikle Noonan sendromu/RASopatiler) ve konjenital kardiyak anomaliler yüksek sıklıkla görülür. Bu nedenle ileri genetik panel (Noonan paneli) ve fetal ekokardiyografi yapılması standart klinik algoritmadır."
+  },
+  {
+    "id": "q-learn-prenatal-tani-10",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 10,
+    "slideTitle": "İkinci Trimester Üçlü Tarama Testi ve Belirteçlerin Biyolojik Dinamikleri",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "17. gebelik haftasında başvuran 32 yaşındaki bir gebenin üçlü tarama testinde laboratuvar sonuçları şu şekildedir: MSAFP: 0.35 MoM, uE3: 0.28 MoM, Total hCG: 0.30 MoM. Bu fötusta öncelikle hangi anöploidi riski düşünülmelidir?",
+    "options": [
+      "A) Trizomi 21 (Down Sendromu)",
+      "B) Trizomi 18 (Edwards Sendromu)",
+      "C) Trizomi 13 (Patau Sendromu)",
+      "D) Turner Sendromu (45,X)",
+      "E) Triploidi Tip I"
+    ],
+    "correctAnswer": 1,
+    "explanation": "İkinci trimester üçlü tarama testinde AFP, uE3 ve hCG parametrelerinin her üçünün birden belirgin şekilde düşük (<0.4-0.5 MoM) çıkması Trizomi 18 (Edwards sendromu) için klasik ve ayırt edici risk paternidir. Down sendromunda ise hCG tipik olarak yüksektir."
+  },
+  {
+    "id": "q-learn-prenatal-tani-11",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 11,
+    "slideTitle": "İkinci Trimester Dörtlü Tarama Testi ve Dimerik İnhibin-A'nın Rolü",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "16 haftalık bir gebenin ikinci trimester dörtlü tarama testinde MSAFP: 0.65 MoM, uE3: 0.60 MoM, Total hCG: 2.10 MoM ve Dimerik İnhibin-A: 1.95 MoM olarak rapor edilmiştir. Bu bulgular ışığında fötusta en yüksek risk taşıyan genetik durum hangisidir?",
+    "options": [
+      "A) Açık Nöral Tüp Defekti",
+      "B) Edwards Sendromu (Trizomi 18)",
+      "C) Down Sendromu (Trizomi 21)",
+      "D) Turner Sendromu (45,X)",
+      "E) Fetal Gastroşizis"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Dörtlü tarama testinde MSAFP ve uE3'ün düşük, Total hCG ve Dimerik İnhibin-A'nın yüksek (yaklaşık 2 MoM) saptanması Down Sendromu (Trizomi 21) için karakteristik 'HI' kuralıdır. Nöral tüp ve karın duvarı defektlerinde AFP yüksek olur; Trizomi 18'de ise tüm belirteçler düşüktür."
+  },
+  {
+    "id": "q-learn-prenatal-tani-12",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 12,
+    "slideTitle": "Maternal Serum Alfa-Fetoprotein (MSAFP) Yüksekliği ve Fetal Patolojiler",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "16 haftalık bir primigravid gebede yapılan maternal serum AFP taramasında MSAFP değeri 6.5 MoM (aşırı yüksek) olarak saptanmıştır. Yapılan detaylı ultrasonografide göbek kordonu insersiyonunun sağ tarafında, üzeri periton zarı ile örtülü olmayan ve amniyon sıvısı içinde serbestçe yüzen bağırsak ansları izlenmiştir. Bu gebede en olası tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Omfalosel",
+      "B) Gastroşizis",
+      "C) Beckwith-Wiedemann Sendromu",
+      "D) Sakrokoksigeal Teratom",
+      "E) Spina Bifida Okkülta"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Göbek kordonunun sağında yer alan, üzerinde koruyucu membran bulunmayan ve amniyon sıvısında serbest yüzen bağırsak ansları Gastroşizis için tipiktir. Gastroşiziste koruyucu zar olmadığı için amniyona ve maternal kana aşırı miktarda AFP sızar (genellikle >4-5 MoM). Omfaloselde ise fıtıklaşan organların üzeri periton zarı ile kaplıdır ve AFP artışı daha ılımlıdır."
+  },
+  {
+    "id": "q-learn-prenatal-tani-13",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 13,
+    "slideTitle": "Nöral Tüp Defektleri (NTD): Patofizyoloji, Tanı, Ultrason Bulguları ve Folik Asit Profilaksisi",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Daha önce miyelomeningoselli bir çocuk doğurma öyküsü olan 29 yaşındaki bir kadın yeniden gebe kalmayı planlamaktadır. Bu kadında nöral tüp defekti tekrarlama riskini anlamlı düzeyde azaltmak için en uygun folik asit başlama zamanı ve günlük dozu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Gebelik testinin pozitif çıktığı gün başlanmalı, günlük 0.4 mg verilmelidir",
+      "B) Konsepsiyondan en az 1 ay önce başlanmalı, gebeliğin ilk trimesteri boyunca günlük 4 mg verilmelidir",
+      "C) İkinci trimesterin başında başlanmalı, doğuma kadar günlük 1 mg verilmelidir",
+      "D) Konsepsiyondan 6 ay önce başlanmalı, sadece haftada bir 5 mg verilmelidir",
+      "E) Sadece folik asitten zengin diyet önerilmeli, ilaç desteği verilmemelidir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Önceki gebeliğinde NTD öyküsü bulunan yüksek riskli kadınlarda tekrarlama riskini %75 oranında azaltmak amacıyla nöral tüp kapanma evresinden (fertilizasyon sonrası 28. gün) çok önce kanda ve dokularda yeterli folat düzeyine ulaşmak gerekir. Bu nedenle konsepsiyondan en az 1 ay (tercihen 3 ay) önce başlanarak ilk trimester boyunca günde 4 mg (4000 mcg) folik asit kullanımı standarttır."
+  },
+  {
+    "id": "q-learn-prenatal-tani-14",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 14,
+    "slideTitle": "Hücresiz Fetal DNA Taraması (cfDNA / NIPT): Biyolojik Köken ve Analitik Teknolojiler",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Hücresiz fötal DNA (cfDNA / NIPT) tarama testinin biyolojik özellikleri ve fötal fraksiyon dinamikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Maternal plazmadaki hücresiz fetal DNA'nın ana kaynağı plasental sinsisyotrofoblast apoptozudur",
+      "B) Doğumdan sonraki 24-48 saat içinde maternal dolaşımdan tamamen temizlenir",
+      "C) Güvenilir bir analiz için fötal fraksiyonun minimum %4 veya üzerinde olması gerekir",
+      "D) Maternal obezite ve yüksek vücut kitle indeksi fötal fraksiyonu artıran bir faktördür",
+      "E) Fetal DNA fragmanları maternal DNA parçacıklarına kıyasla ortalama olarak daha kısa boyuttadır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Maternal obezite (yüksek VKİ); genişleyen plazma hacminin yarattığı dilüsyon ve maternal yağ dokusu apoptozuna bağlı serbest maternal DNA salınımının artması nedeniyle fötal fraksiyonu (FF) düşürür; test başarısızlığına (no-call) yol açan en sık nedendir."
+  },
+  {
+    "id": "q-learn-prenatal-tani-15",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 15,
+    "slideTitle": "Hücresiz Fetal DNA Taramasında Doğruluk Sınırları, Yalancı Sonuçlar ve Klinik Yönetim",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "25 yaşındaki primigravid bir gebenin 11. haftada yaptırdığı cfDNA (NIPT) taramasında Trizomi 21 riski 1/5 (yüksek risk) olarak rapor edilmiştir. Fetal ultrasonda herhangi bir majör malformasyon saptanmayan bu gebeye yaklaşımda bir sonraki en uygun klinik adım ne olmalıdır?",
+    "options": [
+      "A) NIPT'in saptama gücü >%99 olduğu için ek teste gerek duyulmaksızın gebelik derhal sonlandırılmalıdır",
+      "B) Aileye NIPT'in bir tarama testi olduğu açıklanarak amniyosentez veya CVS ile invaziv sitogenetik doğrulama önerilmelidir",
+      "C) Sonucun yanlış olduğu kabul edilerek gebelik takibi rutin sonlandırılmalıdır",
+      "D) cfDNA testi hemen ertesi gün aynı laboratuvarda tekrarlanmalıdır",
+      "E) Fötal manyetik rezonans görüntüleme (MRG) ile beyin gelişimi incelenmelidir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "NIPT yüksek sensitiviteye sahip olmakla birlikte kesin tanı testi değil, bir tarama testidir. Özellikle genç gebelerde pozitif prediktif değer daha düşüktür; plasental mozaizm veya kaybolan ikiz gibi biyolojik yalancı pozitiflik nedenleri ekarte edilmeden asla gebelik sonlandırılamaz. Kesin tanı için invaziv test (CVS veya amniyosentez) şarttır."
+  },
+  {
+    "id": "q-learn-prenatal-tani-16",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 16,
+    "slideTitle": "Koryon Villus Örneklemesi (CVS): Uygulama Tekniği, Zamanlaması ve Endikasyonları",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Koryon villus örneklemesi (CVS) yöntemi ile ilgili aşağıdaki klinik ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Standart uygulama aralığı 11-14. gebelik haftalarıdır",
+      "B) 10. gebelik haftasından önce yapıldığında transvers ekstremite redüksiyon anomalileri riski belirgin artar",
+      "C) Alınan koryon villus materyalinden alfa-fetoprotein (AFP) ölçümü yapılarak açık nöral tüp defektleri taranabilir",
+      "D) Rh-negatif gebelerde işlem sonrası anti-D immünoglobulin profilaksisi uygulanmalıdır",
+      "E) Transabdominal veya transservikal yaklaşımlarla gerçek zamanlı ultrason eşliğinde gerçekleştirilir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "CVS trofoblast dokusu biyopsisidir; amniyotik sıvı alınmaz. AFP ölçümü ise fetal idrar ve serumdan amniyon sıvısına geçen bir proteine dayanır. Bu nedenle CVS materyalinden AFP ölçümü yapılamaz ve CVS ile nöral tüp defekti taranamaz (NTD taraması 16. haftada serum/amniyon AFP'si ve USG ile yapılır)."
+  },
+  {
+    "id": "q-learn-prenatal-tani-17",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 17,
+    "slideTitle": "CVS Laboratuvar Dinamikleri: Direkt Analiz vs Uzun Süreli Kültür",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Koryon villus biyopsisi (CVS) materyalinden yapılan sitogenetik analiz yöntemleri karşılaştırıldığında, 'Direkt Yöntem'in 'Uzun Süreli Kültür Yöntemi'ne göre en belirgin avantajı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Çok daha yüksek bant çözünürlüğü (550-600 bant) sağlaması",
+      "B) Maternal hücre kontaminasyonu riskinin bulunmaması ve çok kısa sürede sonuç vermesi",
+      "C) Plasentaya sınırlı mozaizmi kesin olarak ekarte edebilmesi",
+      "D) Amniyon sıvısındaki alfa-fetoprotein düzeyini eşzamanlı ölçebilmesi",
+      "E) Kromozom inversiyonlarını mikrodiziden daha duyarlı saptaması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CVS direkt yönteminde sitotrofoblastların spontan mitozu incelenir. Anneye ait desidua hücreleri spontan mitotik aktivite göstermediğinden direkt yöntemde maternal hücre kontaminasyonu riski yoktur ve 2-24 saatte sonuç alınır. Uzun süreli kültürde ise anne desidua fibroblastları besiyerinde çoğalarak kontaminasyona yol açabilir."
+  },
+  {
+    "id": "q-learn-prenatal-tani-18",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 18,
+    "slideTitle": "Amniyosentez: Uygulama Tekniği, Fetal Hücre Dinamikleri ve Güvenlik Profili",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Prenatal tanı amacıyla 13. gebelik haftasında 'Erken Amniyosentez' uygulanmasının, 16. haftada uygulanan klasik amniyosenteze kıyasla fötusta belirgin artış gösteren en tipik ortopedik komplikasyonu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akondroplazi",
+      "B) Talipes Ekinovarus (Çarpık ayak)",
+      "C) Konjenital Kalça Çıkığı",
+      "D) Skolyoz",
+      "E) Kraniyosinostoz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "15. haftadan önce yapılan erken amniyosentezde fötal membranların zayıflığına ve işlem sonrası amniyon sıvısı kaybına/oligohidramniosa bağlı mekanik kompresyon gelişir. Bu durum fötal ayaklarda tipik 'Talipes Ekinovarus' (çarpık ayak) deformitesi insidansında dramatik bir artışa neden olur."
+  },
+  {
+    "id": "q-learn-prenatal-tani-19",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 19,
+    "slideTitle": "Amniyotik Sıvı Biyokimyası, Enzim Tayinleri ve Fetal Enfeksiyon Analizi",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Fetal ultrasonografide 20. haftada periventriküler kalsifikasyonlar, mikrosefali ve intrauterin gelişme geriliği saptanan bir gebede fetal Sitomegalovirüs (CMV) enfeksiyonu şüphesi mevcuttur. Fetüsün enfekte olduğunu kesin olarak kanıtlayan en duyarlı prenatal tanı yöntemi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Maternal serumda CMV IgG avidite testinin yüksek çıkması",
+      "B) Maternal serumda CMV IgM antikorunun pozitif saptanması",
+      "C) Amniyotik sıvı süpernatantında Real-Time PCR ile CMV DNA'sının saptanması",
+      "D) Fetal kanda lökosit formülünün incelenmesi",
+      "E) Fetal ense saydamlığı ölçümünün tekrarlanması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Maternal serolojik testler (IgM, IgG avidite) yalnızca annenin enfeksiyon geçirip geçirmediğini gösterir; etkenin plasentayı geçerek fetüse ulaştığını kanıtlayamaz. Fetal böbrekler yoluyla idrarla amniyona atılan virüsün amniyotik sıvıda PCR ile saptanması intrauterin konjenital CMV enfeksiyonunun kesin ve altın standart tanı yöntemidir."
+  },
+  {
+    "id": "q-learn-prenatal-tani-20",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 20,
+    "slideTitle": "Kordosentez (Perkütan Umbilikal Kan Örneklemesi - PUBS): Endikasyonlar ve Riskler",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "23 haftalık bir gebede ultrasonda multipl kardiyak ve serebral malformasyonlar saptanmıştır. Yasal tahliye süresi yaklaşan bu hastada en hızlı şekilde (48-72 saat içinde) tam sitogenetik karyotip analizi elde etmek için tercih edilmesi gereken invaziv yöntem aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kordosentez (Fetal kan örneklemesi)",
+      "B) Standart ikinci trimester amniyosentezi",
+      "C) Transservikal koryon villus biyopsisi",
+      "D) Maternal kanda hücresiz fetal DNA analizi (cfDNA)",
+      "E) Fetoskopi ile cilt biyopsisi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Kordosentez ile elde edilen fetal kanda T lenfositleri fitohemaglutinin uyarısıyla 48-72 saat içinde bölünerek metafaza ulaşır. Amniyosentezde ise fibroblast benzeri amniyositlerin çoğalması 10-21 gün sürer. Bu nedenle geç haftalarda hızla karyotip elde etmek için kordosentez en uygun yöntemdir."
+  },
+  {
+    "id": "q-learn-prenatal-tani-21",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 21,
+    "slideTitle": "Hızlı Moleküler Sitogenetik Yöntemler: QF-PCR ve Floresan İn Situ Hibridizasyon (FISH)",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Amniyosentez materyalinden uygulanan QF-PCR analizinde, 21. kromozoma özgü üç farklı polimorfik STR lokusunda kapiller elektroforezde 1:1:1 floresan pik alanı oranı (triallelik patern) saptanmıştır. Bu fötal DNA profili aşağıdakilerden hangisi için kesin kanıttır?",
+    "options": [
+      "A) Normal diploid karyotip",
+      "B) Trizomi 21 (Down Sendromu)",
+      "C) Monozomi 21",
+      "D) Dengeli Robertsonian translokasyonu",
+      "E) Fetal nöral tüp defekti"
+    ],
+    "correctAnswer": 1,
+    "explanation": "QF-PCR analizinde STR lokuslarında üç farklı allelin eşit oranda (1:1:1) saptanması o kromozomdan üç kopya bulunduğunu gösteren triallelik trizomi paternidir. 21. kromozom lokuslarında bu tablonun izlenmesi Trizomi 21 (Down sendromu) varlığını kanıtlar."
+  },
+  {
+    "id": "q-learn-prenatal-tani-22",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 22,
+    "slideTitle": "Kromozomal Mikrodizi Analizi (CMA / Array-CGH) ve Yeni Nesil Dizileme (WES)",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Fetal ultrasonografide Fallot tetralojisi ve timus hipoplazisi saptanan bir fetüste standart G-bantlama karyotip analizi 46,XX (normal) olarak raporlanmıştır. Bu olguda DiGeorge sendromu (22q11.2 delesyonu) gibi submikroskopik kromozomal delesyonları saptamak için öncelikle hangi moleküler genetik yöntem tercih edilmelidir?",
+    "options": [
+      "A) Maternal serumda dörtlü tarama testi",
+      "B) Kromozomal Mikrodizi Analizi (CMA / Array-CGH)",
+      "C) Fetal kan gazı analizi",
+      "D) Amniyon sıvısı asetilkolinesteraz elektroforezi",
+      "E) Anne kanda indirekt Coombs testi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Standart karyotip analizi 5-10 Mb'den küçük mikrodelesyonları gösteremez. DiGeorge sendromuna yol açan 22q11.2 mikrodelesyonu submikroskopik boyuttadır (genellikle 1.5 - 3 Mb) ve kesin tanısı submikroskopik CNV'leri saptayabilen Kromozomal Mikrodizi (CMA / Array-CGH) veya spesifik FISH ile konur."
+  },
+  {
+    "id": "q-learn-prenatal-tani-23",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 23,
+    "slideTitle": "Prenatal Sitogenetikte Kritik Tanısal Problemler: Mozaizm, CPM ve Uniparental Dizomi (UPD)",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Koryon villus biyopsisinde Trizomi 15 saptanan ancak daha sonra yapılan amniyosentezde 46,XX (normal diploid) karyotip belirlenen bir fetüste, trizomik kurtuluş (trisomy rescue) mekanizması sonucu gelişebilecek ve fötusta Prader-Willi sendromuna yol açabilecek epigenetik bozukluk aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Paternal Uniparental Dizomi 15",
+      "B) Maternal Uniparental Dizomi 15",
+      "C) Dengeli resiprokal translokasyon",
+      "D) X kromozomu monozomisi",
+      "E) Frajil X trinükleotid tekrar artışı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Trizomi 15 olan bir zigotta fazla babadan gelen kromozomun atılmasıyla fötusta iki adet anneden gelen 15. kromozom kalırsa 'Maternal Uniparental Dizomi 15' (UPD 15) meydana gelir. 15q11-q13 bölgesindeki paternal aktif genlerin yokluğu fötusta Prader-Willi sendromu gelişimine neden olur."
+  },
+  {
+    "id": "q-learn-prenatal-tani-24",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 24,
+    "slideTitle": "Preimplantasyon Genetik Tanı (PGT): Yöntemler, Trofektoderm Biyopsisi ve Gelecek Perspektifleri",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Preimplantasyon Genetik Tanı (PGT) uygulamasında blastokist evresinde (5. gün) gerçekleştirilen 'Trofektoderm Biyopsisi' ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Fötusu oluşturacak olan iç hücre kitlesine (ICM) dokunulmadan uygulanır",
+      "B) 3. gün blastomer biyopsisine göre embriyonun gelişim potansiyeline zararı daha düşüktür",
+      "C) Analiz için 5-10 adet hücre alınabildiğinden DNA analiz doğruluğu daha yüksektir",
+      "D) Trofektoderm biyopsisi ile PGT yapılan gebeliklerde hiçbir koşulda prenatal invaziv teyit gerekmez",
+      "E) PGT-A, PGT-M ve PGT-SR endikasyonlarının tümünde başarıyla uygulanabilir"
+    ],
+    "correctAnswer": 3,
+    "explanation": "PGT tanısal güvenirliği çok yüksek bir yöntem olsa da, trofektoderm mozaizmi veya teknik artefaktlar nedeniyle PGT ile sağlanan gebeliklerde 1. veya 2. trimesterde invaziv prenatal tanı (CVS veya tercihen amniyosentez) ile sonucun doğrulanması uluslararası kılavuzlarca önerilmektedir; 'asla teyit gerekmez' ifadesi yanlıştır."
+  },
+  {
+    "id": "nef-pq-1",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 1,
+    "slideTitle": "Glomerüler Filtrasyon Bariyerinin Mimarisi: Pencereli Endotel, GBM ve Podosit Üçlüsü",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Glomerüler filtrasyon bariyerinin anatomik ve fonksiyonel organizasyonu ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Kapiller endotel fenestraları 20-30 nm genişliğinde olup albüminin geçişini tamamen engeller",
+      "B) Filtrasyon bariyeri lümenden üriner boşluğa doğru sırasıyla pencereli endotel, GBM ve podosit ayak çıkıntılarından oluşur",
+      "C) Glomerüler bazal membranın orta katmanı olan lamina rara interna Tip I kollajenden zengindir",
+      "D) Podosit pediselleri arasındaki yarık diyaframı hücresel kan elemanlarını tutan ilk ve ana süzgeçtir",
+      "E) Glomerülde endotel hücre pencereleri kalın bir protein diyaframı ile tamamen kapalıdır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Glomerüler filtrasyon bariyeri kan lümeninden Bowman aralığına doğru pencereli endotel, glomerüler bazal membran ve podositlerin oluşturduğu viseral epitel tabakasından meydana gelir.\n\nA yanlıştır; endotel fenestraları 70-100 nm'dir ve albümini tek başına tutamaz.\nC yanlıştır; GBM'de Tip I kollajen değil, Tip IV kollajen bulunur; lamina rara interna endotel komşuluğundaki iç kattır.\nD yanlıştır; kan hücrelerini tutan ilk engel podositler değil, pencereli endoteldir.\nE yanlıştır; glomerül kapiller endotel pencereleri diyaframsız (açık) porlardır."
+  },
+  {
+    "id": "nef-pq-2",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 2,
+    "slideTitle": "Glomerüler Bazal Membranın Biyokimyasal Ultrastrüktürü ve Anyonik Yük Bariyeri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Glomerüler bazal membranın (GBM) biyokimyasal yapısı ve elektriksel yük seçiciliği ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
+    "options": [
+      "A) GBM'deki polianyonik yükün temel kaynağı Tip I ve Tip III kollajen lifleridir",
+      "B) Matür GBM Tip IV kollajenin alfa-3, alfa-4 ve alfa-5 zincirlerinden zengin olup Goodpasture antijeni alfa-3 zincirinde yer alır",
+      "C) Serum albümini pozitif yüklü bir protein olduğu için GBM'deki pozitif yüklü proteinler tarafından itilir",
+      "D) Alport sendromunda heparan sülfat sentezleyen genlerde mutasyon sonucu sadece nefrotik sendrom görülür",
+      "E) Lamina densa tabakası tamamen lipidsi yapıda olup hidrofilik moleküllerin geçişini bloke eder"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Matür GBM Tip IV kollajen alfa-3, alfa-4 ve alfa-5 zincirlerinden oluşur. Goodpasture hastalığında oluşan otoantikorlar alfa-3 zincirinin C-terminal küresel NC1 domainine bağlanarak lineer immünfloresan boyanma verir.\n\nA yanlıştır; GBM'de Tip I/III kollajen yoktur, anyonik yükün kaynağı heparan sülfattır.\nC yanlıştır; albümin negatif yüklüdür ve heparan sülfatın negatif yükü ile itilir.\nD yanlıştır; Alport sendromu *COL4A5* mutasyonuna bağlı Tip IV kollajen defektidir, heparan sülfat defekti değildir.\nE yanlıştır; lamina densa lipid değil, Tip IV kollajen ve lamininden zengin protein matriksidir."
+  },
+  {
+    "id": "nef-pq-3",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 3,
+    "slideTitle": "Podosit Biyolojisi ve Yarık Diyaframı (Slit Diaphragm) Moleküler Kompleksi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Podosit mimarisinde yarık diyaframını (slit diaphragm) oluşturan moleküler bileşenler ve ilişkili genetik nefropatiler ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Nefrin (*NPHS1*) mutasyonu - Alport sendromu ve sensörinöral işitme kaybı",
+      "B) Podosin (*NPHS2*) mutasyonu - Fin tipi konjenital nefrotik sendrom",
+      "C) Nefrin (*NPHS1*) mutasyonu - Fin tipi konjenital nefrotik sendrom",
+      "D) Alfa-aktinin-4 (*ACTN4*) mutasyonu - X'e bağlı Alport sendromu",
+      "E) TRPC6 kalsiyum kanalı mutasyonu - Minimal Değişiklik Hastalığı"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Nefrin proteini *NPHS1* geni tarafından kodlanır ve mutasyonu Fin tipi konjenital nefrotik sendroma yol açar.\n\nA yanlıştır; Alport sendromu Tip IV kollajen gen (*COL4A5*) mutasyonudur.\nB yanlıştır; Fin tipi sendrom *NPHS1* (Nefrin) mutasyonudur, *NPHS2* (Podosin) ise steroide dirençli OD/OR FSGS yapar.\nD yanlıştır; *ACTN4* mutasyonu otozomal dominant FSGS'ye yol açar, Alport sendromuna değil.\nE yanlıştır; TRPC6 aşırı aktivasyonu OD ailesel FSGS yapar, Minimal Değişiklik Hastalığı yapmaz."
+  },
+  {
+    "id": "nef-pq-4",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 4,
+    "slideTitle": "Glomerüler İmmün Hasar Mekanizmaları: Dolaşan ve İn Situ İmmün Kompleksler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Glomerüler hastalıklarda immün hasar mekanizmaları ve immünfloresan bulguları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Membranöz nefropatide podosit yüzeyindeki PLA2R antijenine karşı antikor bağlanması in situ immün kompleks modelidir",
+      "B) Dolaşımdaki immün komplekslerin glomerüle oturması immünfloresanda granüler birikim deseni oluşturur",
+      "C) Anti-GBM hastalığında otoantikorlar bazal membranın Tip IV kollajenine homojen bağlanarak lineer desen verir",
+      "D) Subendotelyal immün kompleksler lümene açık olduklarından nötrofilleri uyararak proliferatif nefritik hasara yol açar",
+      "E) Subepitelyal immün depozitler nötrofilleri masif olarak glomerüle çekerek nekrotizan hilal (kresent) oluşumunu tetikler"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Subepitelyal depozitler glomerüler bazal membranın üriner tarafında (podosit altında) yer aldığından kapiller lümendeki lökositlerle doğrudan temas edemez. Bu nedenle nötrofilleri masif çekemez ve nekrotizan kresent oluşturmaz; tam aksine hücresiz, sakin glomerül ile masif proteinüri (nefrotik sendrom) tablosuna yol açar.\n\nA, B, C ve D seçeneklerindeki tüm bilgiler patofizyolojik olarak kesinlikle doğrudur."
+  },
+  {
+    "id": "nef-pq-5",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 5,
+    "slideTitle": "Nefrotik Sendromun Tanısal Pentadı ve Masif Proteinürinin Patofizyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromun tanısal kriterleri ve proteinüri patofizyolojisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Erişkinde 24 saatlik idrarda 1.5 gram protein atılımı nefrotik sendrom tanısı için yeterlidir",
+      "B) Nefrotik sendromda hipoalbüminemi tanısı için serum albümin düzeyinin mutlaka < 1.0 g/dL olması şarttır",
+      "C) Minimal Değişiklik Hastalığında tipik olarak yüksek moleküler ağırlıklı immünglobulinlerin atıldığı non-selektif proteinüri görülür",
+      "D) Erişkinde > 3.5 g/gün proteinüri, hipoalbüminemi (< 3.0 g/dL), yaygın ödem ve hiperlipidemi tablosu nefrotik sendromu tanımlar",
+      "E) Karaciğer albümin sentezini artıramadığı için 500 mg/gün proteinüri bile hızla anazarkaya yol açar"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Nefrotik sendromun klasik pentadı: Erişkinde >3.5 g/gün masif proteinüri, hipoalbüminemi (<3.0 g/dL), yaygın ödem, hiperlipidemi ve lipidüridir.\n\nA yanlıştır; erişkinde nefrotik eşik >3.5 g/gün'dür.\nB yanlıştır; tanısal eşik <3.0 g/dL'dir (genellikle <2.5 g/dL).\nC yanlıştır; Minimal Değişiklik Hastalığında non-selektif değil, selektif (saf albümin) proteinüri görülür.\nE yanlıştır; karaciğer günde 12-15 grama kadar albümin üretebilir, 500 mg/gün kayıp hipoalbüminemi yapmaz."
+  },
+  {
+    "id": "nef-pq-6",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 6,
+    "slideTitle": "Nefrotik Ödem Patofizyolojisi: Starling Dengesi, Underfill ve Overfill Teorileri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromlu bir hastada gelişen yaygın ödemin patofizyolojisinde yer alan mekanizmalar ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Hipoalbüminemiye bağlı plazma kolloid onkotik basıncının azalması sıvının interstisyel alana kaçışını kolaylaştırır",
+      "B) Efektif arteriyel kan hacminin azalması durumunda sempatik sistem ve RAAS aktive olarak sekonder sodyum tutulumunu uyarır",
+      "C) Overfill teorisinde filtre edilen plazminin kortikal toplayıcı tübüllerde ENaC kanallarını proteolitik olarak aktive ettiği gösterilmiştir",
+      "D) Nefrotik sendromda ödem gelişebilmesi için istisnasız tüm hastalarda ölçülen plazma renin ve aldosteron düzeylerinin aşırı yüksek olması şarttır",
+      "E) İnterstisyel doku hidrostatik basıncının düşük olduğu periorbital bölge nefrotik ödemin erken ve belirgin görüldüğü alanlardandır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Overfill teorisinin geçerli olduğu hastalarda intravasküler hacim genişlemiştir ve buna bağlı olarak plazma renin ve aldosteron düzeyleri baskılanmış (düşük) olabilir. Dolayısıyla tüm hastalarda RAAS'ın aşırı yüksek olması şart değildir.\n\nA, B, C ve E seçenekleri nefrotik ödem patofizyolojisinin kanıtlanmış temel kurallarıdır."
+  },
+  {
+    "id": "nef-pq-7",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 7,
+    "slideTitle": "Nefrotik Hiperlipidemi ve Lipidüri: Karaciğer Sentez Körüklenmesi ve Malta Haçı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromlu bir hastanın idrar incelemesinde saptanan oval yağ cisimcikleri ve hiperlipidemi patofizyolojisi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Oval yağ cisimcikleri glomerül mezangiyal hücrelerinin doğrudan idrara dökülmesiyle oluşur",
+      "B) İdrar sedimentindeki lipid damlacıkları polarize ışık mikroskobunda karakteristik Malta Haçı (Maltese cross) paterni verir",
+      "C) Nefrotik hiperlipideminin tek nedeni bağırsaklardan kolesterol emiliminin yüzde yüz artmasıdır",
+      "D) Nefrotik hastalarda periferik kapiller endotelindeki Lipoprotein Lipaz (LPL) aktivitesi aşırı yükselir",
+      "E) Lipidüri bulgusu sadece nefritik sendromlu hastalarda görülüp nefrotik sendromda asla izlenmez"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Nefrotik sendromda idrara filtre olan kolesterol esterleri tübül epitel hücrelerinde fagosite edilerek oval yağ cisimcikleri oluşturur ve polarize ışık mikroskobunda karakteristik Malta Haçı (Maltese cross) çift kırınımı sergiler.\n\nA yanlıştır; oval yağ cisimcikleri mezangiyal hücre değil, lipid yüklenmiş proksimal tübül epitel hücreleridir.\nC yanlıştır; ana mekanizma karaciğerde ApoB sentezinin artması ve periferik klirensin azalmasıdır.\nD yanlıştır; LPL aktivitesi artmaz, tam aksine belirgin olarak azalır/baskılanır.\nE yanlıştır; lipidüri nefrotik sendromun kardinal bulgusudur."
+  },
+  {
+    "id": "nef-pq-8",
+    "deckId": "learn-glomeruler-hastaliklar-nefrotik",
+    "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
+    "slideNumber": 8,
+    "slideTitle": "Nefrotik Sendromun Hayati Komplikasyonları: Enfeksiyon Riski ve Tromboemboli",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nefrotik sendromlu bir hastada ortaya çıkan enfeksiyon ve tromboemboli komplikasyonlarının moleküler mekanizmaları ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) İdrarla immünglobulin G (IgG) kaybı - Streptococcus pneumoniae peritoniti ve sepsis yatkınlığı",
+      "B) İdrarla Kompleman Faktör B kaybı - Alternatif kompleman opsonizasyon defekti",
+      "C) İdrarla Antitrombin III (AT-III) kaybı - Plazma pıhtılaşma eğiliminde ve venöz tromboz riskinde artış",
+      "D) Karaciğerde fibrinojen sentezinin artması - Hiperkoagülabilite zeminini güçlendirme",
+      "E) İdrarla Fibrinojen ve Faktör VIII kaybı - Ağır hemofili benzeri spontan kanama diyatezi"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Nefrotik sendromda fibrinojen ve Faktör VIII idrarla kaybedilmez; aksine karaciğerin reaktif protein sentezi artışı nedeniyle serumda düzeyleri katbekat artar. Bu durum kanamaya değil, ağır tromboza (hiperkoagülabiliteye) yol açar.\n\nA, B, C ve D seçeneklerindeki tüm eşleştirmeler nefrotik patofizyolojinin en temel gerçekleridir."
+  },
+  {
     "id": "nef-pq-9",
     "deckId": "learn-glomeruler-hastaliklar-nefrotik",
     "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi (MCD, FSGS ve Membranöz Nefropati)",
@@ -1385,518 +1898,5 @@
     ],
     "correctAnswer": 1,
     "explanation": "ADPKD'li hastaların %10-20'sinde intrakraniyal berry anevrizması bulunur ve rüptürü klasik olarak subaraknoid kanama tablosu oluşturur."
-  },
-  {
-    "id": "prac-vsk-010",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Otozomal Resesif Polikistik Böbrek Hastalığı (ARPKD): Genetik ve Patogenez",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Otozomal resesif polikistik böbrek hastalığında (ARPKD) kistik dilatasyonlar nefronun hangi anatomik segmentine sınırlıdır?",
-    "options": [
-      "A) Proksimal konvolüt tübüller",
-      "B) Henle kulpunun inen ince kolu",
-      "C) Toplayıcı kanallar (collecting ducts)",
-      "D) Yalnızca Bowman kapsülü",
-      "E) Afferent arteriyoller"
-    ],
-    "correctAnswer": 2,
-    "explanation": "ARPKD'de kistler seçici olarak kortikal ve medüller toplayıcı kanalların fuziform dilatasyonundan meydana gelir."
-  },
-  {
-    "id": "prac-vsk-011",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "ARPKD Morfolojisi ve Konjenital Hepatik Fibrozis Birlikteliği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yenidoğan döneminde bilateral simetrik büyümüş böbrek kesitinde korteksten medullaya dik fuziform silindirik kistler izlenen ve karaciğer biyopsisinde safra duktus proliferasyonu ile konjenital hepatik fibrozis saptanan olguda tanı nedir?",
-    "options": [
-      "A) Otozomal dominant polikistik böbrek",
-      "B) Otozomal resesif polikistik böbrek (ARPKD)",
-      "C) Medüller sünger böbrek",
-      "D) Alport sendromu",
-      "E) Renal hücreli karsinom"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Korteksten medullaya dik fuziform kistler ve karaciğerde konjenital hepatik fibrozis ARPKD'nin patognomonik tablosudur."
-  },
-  {
-    "id": "prac-vsk-012",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "ADPKD vs ARPKD: Karşılaştırmalı Büyük Klinikopatolojik Tablo",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdakilerden hangisi Otozomal Dominant Polikistik Böbrek Hastalığını (ADPKD) Otozomal Resesif formdan (ARPKD) ayıran temel özelliklerden biridir?",
-    "options": [
-      "A) Kistlerin sadece toplayıcı kanallarla sınırlı olması",
-      "B) Karaciğerde konjenital hepatik fibrozis bulunması",
-      "C) İntrakraniyal Willis poligonunda sakküler (Berry) anevrizmaların eşlik edebilmesi",
-      "D) Doğumda pulmoner hipoplaziye yol açması",
-      "E) Kromozom 6p mutasyonuna bağlı olması"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Berry anevrizmaları ve subaraknoid kanama riski sadece ADPKD'ye özgüdür; ARPKD'de anevrizma izlenmez."
-  },
-  {
-    "id": "prac-vsk-013",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "Medüller Sünger Böbrek ve Medüller Kistik Böbrek Hastalıkları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "12 yaşındaki bir çocukta poliüri, büyüme geriliği ve ilerleyici böbrek yetmezliği saptanıyor. Ultrasonografide her iki böbreğin küçülmüş olduğu ve sadece kortikomedüller bileşkede küçük kistlerin yer aldığı izleniyor. Çocukluk çağında bu tablonun en sık genetik nedeni hangisidir?",
-    "options": [
-      "A) Medüller sünger böbrek",
-      "B) Nefronofitizis (NPHP)",
-      "C) Otozomal dominant polikistik böbrek",
-      "D) Von Hippel-Lindau sendromu",
-      "E) Basit kortikal kist"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Çocuklarda küçülmüş böbrekler, kortikomedüller kistler ve erken böbrek yetmezliği ile seyreden en sık genetik antite Nefronofitizistir."
-  },
-  {
-    "id": "prac-vsk-014",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Basit Böbrek Kistleri ve Bosniak Radyolojik Sınıflaması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Rutin batın ultrasonografisinde sol böbrek korteksinde 3 cm çapında, ince duvarlı, içerisinde septa veya solid nodül içermeyen, arkasında akustik güçlenme oluşturan anekoik kistik lezyon saptanan 55 yaşındaki asemptomatik hastada yaklaşım ne olmalıdır?",
-    "options": [
-      "A) Acil radikal nefrektomi",
-      "B) Lezyonun basit kist (Bosniak I) kabul edilerek ek tetkik ve tedaviye gerek duyulmaması",
-      "C) Böbrek biyopsisi ile kist duvarının örneklenmesi",
-      "D) Diyaliz hazırlığına başlanması",
-      "E) Yüksek doz kemoterapi verilmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "İnce duvarlı, içeriksiz ve akustik güçlenme veren anekoik kistler klasik benign basit böbrek kistleridir (Bosniak I); ek tedavi veya cerrahi gerektirmez."
-  },
-  {
-    "id": "prac-vsk-015",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 15,
-    "slideTitle": "Renal İnfarktüs ve Ateroembolik Böbrek Hastalığı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Koroner anjiyografi işleminden 2 gün sonra ayak parmaklarında morarma (mavi parmak sendromu), periferik kanda eozinofili ve akut böbrek yetmezliği gelişen hastanın böbrek biyopsisinde interlobüler arter lümenlerinde ne görülmesi beklenir?",
-    "options": [
-      "A) Bakteriyel vejetasyon tıkaçları",
-      "B) Bikonveks iğsi kolesterol yarıkları (kleftleri) ve dev hücre reaksiyonu",
-      "C) Amiloid fibrilleri",
-      "D) Konsantrik soğan zarı hiperplazisi",
-      "E) Fibrin başlığı lezyonları"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Aortik girişimler sonrası ateroembolik böbrek hastalığı gelişir; küçük arteriyollerde bikonveks kolesterol kristalleri yarıkları (cholesterol clefts) patognomoniktir."
-  },
-  {
-    "id": "prac-vsk-016",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 16,
-    "slideTitle": "Renal Kortikal Nekroz: Şok ve Obstetrik Felaketlerin Ağır Sonucu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Ablasyo plasenta nedeniyle acil sezaryene alınan ve masif kanama geçiren 34 yaşındaki kadında doğum sonrası tam anüri gelişiyor. Otopside her iki böbrek korteksinin diffüz sarı-beyaz koagülasyon nekrozuna uğradığı, medullanın ise korunduğu saptanıyor. Tanı nedir?",
-    "options": [
-      "A) Akut piyelonefrit",
-      "B) Diffüz renal kortikal nekroz",
-      "C) Akut interstisyel nefrit",
-      "D) Malign nefroskleroz",
-      "E) Fokal segmental glomerüloskleroz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ablasyo plasenta ve DİK zemininde gelişen bilateral kortikal iskemik harabiyet Diffüz Renal Kortikal Nekrozun patognomonik kliniğidir."
-  },
-  {
-    "id": "prac-vsk-017",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 17,
-    "slideTitle": "Orak Hücreli Anemi Nefropatisi: Medüller Hipoksi ve Papiller Hasar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Orak hücreli anemi hastalarında vasa rekta damarlarında eritrositlerin kolayca oraklaşarak mikrovasküler tıkanıklık ve papiller nekroz oluşturmasına zemin hazırlayan renal medüller ortam özelliği hangisidir?",
-    "options": [
-      "A) Yüksek oksijen basıncı ve alkaloz",
-      "B) Derin hipoksi, asidoz ve hiperosmolarite",
-      "C) Aşırı lenfatik akım",
-      "D) Hipotonik interstisyel sıvı",
-      "E) Yüksek perfüzyon basıncı"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Böbrek medullasının düşük oksijen satürasyonu, asidik pH'sı ve yüksek osmolaritesi HbS polimerizasyonunu ve oraklaşmayı doğrudan tetikler."
-  },
-  {
-    "id": "prac-vsk-018",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 18,
-    "slideTitle": "Vasküler Böbrek Hastalıklarında Radyolojik ve Patolojik Görüntüleme",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Ailesinde ADPKD öyküsü olan 25 yaşındaki asemptomatik bir bireyde ultrasonografi ile kesin ADPKD tanısı koyabilmek için her iki böbrekte toplamda en az kaç adet kist saptanmalıdır?",
-    "options": [
-      "A) En az 1 kist",
-      "B) En az 3 kist (tek veya bilateral)",
-      "C) En az 10 kist",
-      "D) En az 20 kist",
-      "E) Yalnızca karaciğerde kist olması yeterlidir"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ravine kriterlerine göre 15-39 yaş grubunda aile öyküsü olan bireyde her iki böbrekte toplam en az 3 kistin saptanması ADPKD için tanı koydurucudur."
-  },
-  {
-    "id": "prac-vsk-019",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 19,
-    "slideTitle": "Vasküler Böbrek Lezyonlarının Mikroskobik Atlası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign hipertansiyon tanılı bir hastanın böbrek biyopsisinde interlobüler arterlerde izlenen düz kas hücrelerinin konsantrik laminer proliferasyonu ile karakterize lezyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Hyalen arteriyoloskleroz",
-      "B) Hiperplastik arteriyoloskleroz (soğan zarı)",
-      "C) Mönckeberg medial kalsinozisi",
-      "D) Amiloid anjiyopatisi",
-      "E) Anevrizma diseksiyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Konsantrik laminer intimal düz kas proliferasyonu 'Hiperplastik arteriyoloskleroz' (soğan zarı lezyonu) olarak adlandırılır ve Malign Hipertansiyonun klasik bulgusudur."
-  },
-  {
-    "id": "prac-vsk-020",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 20,
-    "slideTitle": "Kistik Hastalıkların Genetik ve Moleküler Haritası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Otozomal Dominant Polikistik Böbrek Hastalığında (ADPKD) kist büyümesini ve böbrek hacim artışını yavaşlatmak amacıyla kullanılan ve vazopressin V2 reseptörlerini bloke eden ilaç hangisidir?",
-    "options": [
-      "A) Spironolakton",
-      "B) Tolvaptan",
-      "C) Furosemid",
-      "D) Siklosporin",
-      "E) Eculizumab"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Tolvaptan selektif bir vazopressin V2 reseptör antagonistidir; tübül hücresinde cAMP üretimini baskılayarak ADPKD'de kist büyümesini yavaşlatır."
-  },
-  {
-    "id": "prac-vsk-021",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Vasküler ve Kistik Hastalıklarda Klinik Yaklaşım ve Tarama Protokolleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hipertansiyon tedavisi için enalapril (ACE inhibitörü) başlanan 62 yaşındaki bir hastada 1 hafta sonra kreatinin değerinin 1.2 mg/dL'den 3.2 mg/dL'ye yükseldiği görülüyor. Bu hastada şüphelenilmesi gereken en olası vasküler tanı hangisidir?",
-    "options": [
-      "A) Tek taraflı basit kist rüptürü",
-      "B) İki taraflı (bilateral) renal arter stenozu",
-      "C) Benign nefroskleroz",
-      "D) Minimal değişiklik hastalığı",
-      "E) Renal ven trombozu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bilateral renal arter darlığında glomerül filtrasyonu eferent arteriyolün vazokonstriksiyonu ile korunur; ACE inhibitörü verilince eferent arteriyol gevşer ve akut anürik böbrek yetmezliği gelişir."
-  },
-  {
-    "id": "prac-vsk-022",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Vasküler Böbrek Hastalıkları Büyük Karşılaştırma Matrisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki vasküler böbrek hastalığı ve karakteristik histopatolojik lezyon eşleştirmelerinden hangisi yanlıştır?",
-    "options": [
-      "A) Benign nefroskleroz — Hyalen arteriyoloskleroz",
-      "B) Malign nefroskleroz — Konsantrik soğan zarı hiperplazisi ve fibrinoid nekroz",
-      "C) Ateroembolik böbrek hastalığı — Bikonveks iğsi kolesterol yarıkları",
-      "D) Renal kortikal nekroz — Glomerüllerde podosit ayaksı çıkıntı silinmesi",
-      "E) HÜS / TTP — Glomerül kapillerlerinde mikrovasküler trombüsler"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Renal kortikal nekrozda podosit silinmesi değil; tüm kortikal glomerül ve tübüllerin diffüz iskemik koagülasyon nekrozu izlenir."
-  },
-  {
-    "id": "prac-vsk-023",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Kistik Böbrek Hastalıkları Büyük Karşılaştırma Matrisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki kistik böbrek hastalıklarından hangisinde böbrek boyutları devasa büyümek yerine simetrik olarak KÜÇÜLMÜŞTÜR ve kistler sadece kortikomedüller bileşkede yerleşir?",
-    "options": [
-      "A) Otozomal dominant polikistik böbrek",
-      "B) Nefronofitizis",
-      "C) Otozomal resesif polikistik böbrek",
-      "D) Basit kortikal kist",
-      "E) Medüller sünger böbrek"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Nefronofitizis / Medüller Kistik Böbrek Hastalığında böbrekler ileri derecede büzüşmüş ve küçülmüştür; kistler karakteristik olarak kortikomedüller bileşkede sınırlıdır."
-  },
-  {
-    "id": "prac-vsk-024",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 24,
-    "slideTitle": "Ders 23 Kapsamlı Sentezi: Vasküler ve Kistik Patolojinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik tablolardan hangisinde bilateral dev böbrekler, karaciğer kistleri ve intrakraniyal berry anevrizması rüptürü riski bir arada bulunur?",
-    "options": [
-      "A) Otozomal dominant polikistik böbrek hastalığı (ADPKD)",
-      "B) Otozomal resesif polikistik böbrek hastalığı (ARPKD)",
-      "C) Medüller sünger böbrek",
-      "D) Nefronofitizis",
-      "E) Malign hipertansif nefroskleroz"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Bilateral dev polikistik böbrekler, polikistik karaciğer ve intrakraniyal berry anevrizmaları Otozomal Dominant Polikistik Böbrek Hastalığının (ADPKD) klasik triadıdır."
-  },
-  {
-    "id": "prac-bobrek-001",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 1,
-    "slideTitle": "Böbrek Neoplazmlarına Genel Giriş ve Renal Kortikal Adenomlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek ve üriner sistem neoplazmlarının epidemiyolojisi, sıklığı ve kortikal papiller adenomların patolojik özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Alt idrar yolu neoplazmları böbrek parankim tümörlerine göre belirgin şekilde daha nadir izlenir",
-      "B) Otopsilerde sık saptanan küçük kortikal papiller adenomlar sitogenetik olarak Trizomi 7 ve 17 anomalilerini taşır",
-      "C) Böbrek kortikal adenomları morfolojik ve moleküler açıdan berrak hücreli karsinomun doğrudan öncülüdür",
-      "D) Erişkinlerde böbreğin en sık primer malign neoplazmı medulladaki toplayıcı kanallardan köken alan Bellini karsinomudur",
-      "E) Çapı 0,5 cm altındaki papiller kortikal adenomlar erken dönemde renal ven invazyonu yaparak hızla metastaz geliştirir"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B seçeneğidir. Otopsi serilerinde erişkinlerin %40'ına varan oranda rastlanan <0,5 cm boyutundaki renal kortikal papiller adenomlar, papiller renal hücreli karsinom ile ortak sitogenetik değişiklikleri (özellikle Trizomi 7, Trizomi 17 ve Y kaybı) paylaşırlar ve papiller karsinomun mikroskopik öncülleri olarak kabul edilirler.\n\nA yanlıştır; alt idrar yolu (özellikle mesane) tümörleri böbrek parankimal tümörlerinden yaklaşık 2 kat daha yaygındır.\nC yanlıştır; papiller adenomlar berrak hücreli değil, papiller renal karsinom ile morfolojik ve sitogenetik benzerlik gösterir.\nD yanlıştır; böbreğin en sık primer malignitesi kortikal tübüler epitelden kaynaklanan renal hücreli karsinomdur (%80-85), toplayıcı kanal karsinomu <%1'dir.\nE yanlıştır; bu adenomlar benign kabul edilir, metastaz yapmazlar ve klinik olarak sessizdirler."
-  },
-  {
-    "id": "prac-bobrek-002",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 2,
-    "slideTitle": "Renal Hücreli Karsinom (RCC): Epidemiyoloji ve Demografik Özellikler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Renal Hücreli Karsinomun (RCC) epidemiyolojik, demografik ve mortalite özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Primer böbrek malign neoplazmlarının yaklaşık %80-85'ini oluşturur",
-      "B) Tümörün histogenetik kökeni renal korteksteki tübüler epitel hücreleridir",
-      "C) Cinsiyet dağılımında belirgin kadın baskınlığı olup kadın/erkek oranı 3:1'dir",
-      "D) En sık 6. ve 7. dekatlarda (60-70 yaş aralığında) pik yapar",
-      "E) Biyolojik agresifliği ve tedavi direnci nedeniyle tanı alan hastaların yaklaşık %40'ı kaybedilir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C seçeneğidir çünkü RCC kadınlarda değil, belirgin şekilde erkeklerde daha sık görülür; erkek/kadın oranı yaklaşık 2:1 (ikiye bir) düzeyindedir.\n\nA seçeneği doğrudur; böbreğin primer malign neoplazmlarının %80-85'ini oluşturur.\nB seçeneği doğrudur; tümör kortikal renal tübüler epitelden köken alır.\nD seçeneği doğrudur; 60-70 yaş aralığında zirve yapar.\nE seçeneği doğrudur; olguların yaklaşık %40'ı hastalık nedeniyle hayatını kaybetmektedir."
-  },
-  {
-    "id": "prac-bobrek-003",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 3,
-    "slideTitle": "Renal Hücreli Karsinomda Çevresel ve Yaşam Tarzı Risk Faktörleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Renal hücreli karsinomun (RCC) etyolojik risk faktörleri ve karsinojenik maruziyetleri ile ilgili aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Tütün (sigara) kullanımı — Kanıtlanmış en güçlü değiştirilebilir risk faktörü",
-      "B) Mesleki kadmiyum maruziyeti — Proksimal tübülde biriken karsinojenik ağır metal",
-      "C) Obezite — Hiperinsülinemi ve IGF-1 artışı üzerinden tübüler mitojenik uyarım",
-      "D) Hipertansiyon — İlaçtan bağımsız kronik mikrovasküler iskemi ve lipid peroksidasyonu",
-      "E) Alkol tüketimi — Renal ven endotelinde trombüs oluşturarak 30 kat kanser artışı"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E seçeneğidir çünkü alkol tüketiminin renal ven trombozu yaparak 30 kat RCC riski artırdığına dair hiçbir bilimsel veya patolojik veri yoktur (30 kat risk artışı diyaliz hastalarındaki edinilmiş kistik böbrek hastalığına özgüdür).\n\nA seçeneği doğrudur; sigara RCC için en güçlü değiştirilebilir risk faktörüdür.\nB seçeneği doğrudur; kadmiyum renal karsinojenezde en önemli mesleki ağır metaldir.\nC seçeneği doğrudur; obezite IGF-1, östrojen ve kronik inflamasyon üzerinden riski artırır.\nD seçeneği doğrudur; hipertansiyon bağımsız bir risk faktörüdür."
-  },
-  {
-    "id": "prac-bobrek-004",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 4,
-    "slideTitle": "Edinilmiş Kistik Böbrek Hastalığı (ACKD) ve Diyaliz Zemininde RCC Riski",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sekiz yıldır hemodiyaliz programında olan 58 yaşındaki bir kronik böbrek yetmezliği hastasının rutin kontrolünde bilateral atrofik böbreklerinde çok sayıda kortikal kist ve sol böbrek kist duvarında solid kitle saptanıyor. Biyopside karsinom tanısı konulan bu hastanın patolojik süreciyle ilgili aşağıdaki ifadelerden hangisi KESİNLİKLE DOĞRUDUR?",
-    "options": [
-      "A) Hastada altta yatan durum Edinilmiş Kistik Böbrek Hastalığı olup, RCC riski normale göre yaklaşık 30 kat artmıştır",
-      "B) Bu kistler otozomal dominant polikistik böbrek hastalığı (PKD1 mutasyonu) zemininde gelişmiştir",
-      "C) Diyaliz süresinin bu kistlerin ve karsinomun patogenezi ile herhangi bir epidemiyolojik ilişkisi yoktur",
-      "D) Diyaliz hastalarında gelişen böbrek kistlerinden sadece benign anjiyomiyolipom köken alabilir, karsinom gelişemez",
-      "E) Kist duvarında gelişen bu karsinomlar daima medüller toplayıcı kanallardan kaynaklanır ve oksalat içermez"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Kronik hemodiyaliz alan hastalarda son dönem böbrek zemininde 'Edinilmiş Kistik Böbrek Hastalığı' (ACKD) gelişir ve bu hastalarda kist epiteli atipikleşerek renal hücreli karsinom gelişme riskini yaklaşık 30 kat artırır.\n\nB yanlıştır; edinilmiş kistik hastalık edinseldir, herediter otozomal dominant polikistik böbrek hastalığı değildir.\nC yanlıştır; kist gelişimi diyaliz süresi ile doğrudan ilişkilidir (5-10 yılda %80-90'a çıkar).\nD yanlıştır; kist epitelinden renal hücreli karsinom gelişir, AML ise perisit kökenli mezenkimal bir tümördür.\nE yanlıştır; ACKD ile ilişkili karsinomlar sıklıkla kortikal tübül kaynaklı olup kalsiyum oksalat kristalleri içerir."
-  },
-  {
-    "id": "prac-bobrek-005",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 5,
-    "slideTitle": "Renal Hücreli Karsinomda Moleküler ve Histopatolojik Sınıflama",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Renal hücreli karsinomun üç ana histopatolojik alt tipi, nefron segment kökenleri ve moleküler profilleri ile ilgili aşağıdaki eşleştirmelerden hangisi KESİNLİKLE DOĞRUDUR?",
-    "options": [
-      "A) Berrak Hücreli RCC — Distal tübül epiteli — Trizomi 7 ve 17",
-      "B) Papiller RCC — Proksimal tübül epiteli — 3p25 VHL mutasyonu",
-      "C) Kromofob RCC — Toplayıcı kanal interkale hücresi — Aşırı hipodiploidi / çoklu kromozom kaybı",
-      "D) Berrak Hücreli RCC — Henle kulpu epiteli — WT1 delesyonu",
-      "E) Kromofob RCC — Glomerüler podositler — MET reseptör tirozin kinaz mutasyonu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C seçeneğidir. Kromofob RCC kortikal toplayıcı tübüllerin interkale (ara) hücrelerinden köken alır ve sitogenetik olarak çok sayıda kromozomun eşzamanlı kaybı (aşırı hipodiploidi) ile karakterizedir.\n\nA yanlıştır; Berrak hücreli RCC proksimal tübülden köken alır ve 3p/VHL inaktivasyonu taşır.\nB yanlıştır; Papiller RCC distal tübülden köken alır ve Trizomi 7/17 ile MET aktivasyonu sergiler.\nD yanlıştır; Henle kulpu veya podositlerden bu karsinomlar köken almaz; WT1 Wilms tümörüne özgüdür.\nE yanlıştır; MET mutasyonu papiller RCC'ye özgüdür."
-  },
-  {
-    "id": "prac-bobrek-006",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 6,
-    "slideTitle": "Berrak Hücreli Renal Karsinom (ccRCC): Makroskopik Özellikler ve Büyüme Paterni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Nefrektomi materyalinde böbrek korteksinde 7 cm çapında, çevresi fibröz psödokapsülle çevrili, kesit yüzü parlak altın sarısı renkte izlenen, yer yer nekroz ve kanama alanları içeren bir tümör kitlesi saptanıyor. Bu tümörün makroskopik olarak parlak altın sarısı görünmesinden sorumlu olan temel hücresel/biyokimyasal içerik aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sitoplazmada aşırı miktarda biriken nötral lipidler ve glikojen",
-      "B) Hücre içinde yoğun biriken melanin pigmenti ve hemosiderin granülleri",
-      "C) Tümör hücrelerinin intrasellüler musin ve asidik mukopolisakkarit üretmesi",
-      "D) Hücre sitoplazmasını tıka basa dolduran yoğun matür mitokondri birikimi",
-      "E) Fibröz stromada yaygın amiloid depolanması ve kalsifikasyonlar"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomun (ccRCC) makroskopik olarak parlak altın sarısı / turuncu renkte görünmesinin nedeni, proksimal tübül kökenli tümör hücrelerinin sitoplazmasında olağanüstü miktarda biriken serbest nötral lipidler, kolesterol esterleri ve glikojendir.\n\nB yanlıştır; hemosiderin kahverengi-pas rengi verir, melanin siyah-kahverengidir.\nC yanlıştır; ccRCC musin üretmez.\nD yanlıştır; yoğun mitokondri birikimi onkositoma özgüdür ve tümöre maun kahverengisi renk kazandırır.\nE yanlıştır; amiloidoz sarı parlak renk yapmaz, balmumu kıvamı verir."
-  },
-  {
-    "id": "prac-bobrek-007",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 7,
-    "slideTitle": "Von Hippel-Lindau (VHL) Hastalığı ve ccRCC Birlikteliği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Otuz beş yaşında bir erkek hastada serebellar kistik kitle ve görme bulanıklığı nedeniyle yapılan incelemelerde serebellar hemanjiyoblastom ve retinal hemanjiyoblastom saptanıyor. Abdominal görüntülemesinde ise her iki böbrekte çok sayıda kist ve bilateral multifokal kortikal solid kitleler tespit ediliyor. Bu hastanın genetik analizinde hangi kromozom bölgesinde ve hangi gende fonksiyon kaybı mutasyonu saptanması beklenir?",
-    "options": [
-      "A) Kromozom 3p25 — VHL geni",
-      "B) Kromozom 7q31 — MET geni",
-      "C) Kromozom 11p13 — WT1 geni",
-      "D) Kromozom 16p13 — TSC2 geni",
-      "E) Kromozom 17p11 — FLCN geni"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Serebellar ve retinal hemanjiyoblastomlar ile bilateral, multifokal berrak hücreli renal karsinom birlikteliği otozomal dominant Von Hippel-Lindau (VHL) hastalığının klasik klinik tablosudur. VHL tümör süpresör geni Kromozom 3p25 lokusunda yer almaktadır.\n\nB yanlıştır; 7q31 MET geni herediter papiller renal karsinomda etkindir.\nC yanlıştır; 11p13 WT1 geni Wilms tümörü (WAGR, Denys-Drash) ile ilişkilidir.\nD yanlıştır; 16p13 TSC2 tüberoz skleroz ve anjiyomiyolipom ile ilişkilidir.\nE yanlıştır; 17p11 FLCN Birt-Hogg-Dubé sendromu ile ilişkilidir."
-  },
-  {
-    "id": "prac-bobrek-008",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 8,
-    "slideTitle": "VHL-HIF-VEGF Patogenetik Sinyal Yolağı ve Anjiyogenez Fırtınası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Berrak hücreli renal karsinomun (ccRCC) moleküler patogenezinde rol oynayan VHL-HIF sinyal yolağı ile ilgili aşağıdaki biyolojik basamaklardan hangisi YANLIŞTIR?",
-    "options": [
-      "A) Sağlıklı hücrede normoksik koşullarda prolil hidroksilaz enzimleri HIF-1alfa'yı hidroksiller",
-      "B) Fonksiyonel VHL proteini E3 ubikitin ligaz görevi görerek hidroksillenmiş HIF-1alfa'yı proteazomal yıkıma yönlendirir",
-      "C) VHL mutasyonu varlığında HIF-1alfa normoksik koşullarda dahi parçalanamaz ve sitoplazmada birikir",
-      "D) Nükleusa geçen HIF-1alfa doğrudan p53'ü aktive ederek tümör hücresinde apoptozu hızlandırır",
-      "E) Biriken HIF-1alfa; VEGF, PDGF ve GLUT-1 genlerinin aşırı transkripsiyonunu sağlayarak masif anjiyogenezi tetikler"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D seçeneğidir çünkü nükleusa geçen HIF-1alfa p53'ü aktive edip apoptozu hızlandırmaz; aksine hücre sağkalımını, anjiyogenezi (VEGF), hücre proliferasyonunu (PDGF), glikolitik metabolizmayı (GLUT-1) ve tümör büyümesini şiddetle destekler.\n\nA seçeneği doğrudur; normokside prolil hidroksilaz HIF-1alfa'yı hidroksiller.\nB seçeneği doğrudur; VHL proteini E3 ubikitin ligaz kompleksi ile proteazomal yıkım sağlar.\nC seçeneği doğrudur; VHL yokluğunda HIF-1alfa normokside bile parçalanamaz.\nE seçeneği doğrudur; VEGF ve PDGF transkripsiyonu ile yoğun sinüzoidal damar ağı gelişir."
-  },
-  {
-    "id": "prac-bobrek-009",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 9,
-    "slideTitle": "Sporadik Berrak Hücreli Karsinomda Kromatin ve Epigenetik Modifikasyonlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Berrak hücreli renal karsinomda (ccRCC) kromozom 3p lokusunda yer alan genler ve hücresel metabolik değişiklikler ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK YANLIŞTIR?",
-    "options": [
-      "A) PBRM1 geni, ccRCC'de VHL'den sonra en sık (%40-50) somatik mutasyona uğrayan kromatin düzenleyici gendir",
-      "B) BAP1 mutasyonu taşıyan ccRCC tümörleri genellikle yüksek nükleer dereceye ve agresif klinik seyire sahiptir",
-      "C) SETD2 geni bir histon metiltransferazı olup kaybı genomik kararsızlığa zemin hazırlar",
-      "D) HIF ve MYC kooperasyonu sonucu mitokondriyal beta-oksidasyon aşırı hızlanır ve hücredeki tüm lipidler tüketilir",
-      "E) Sporadik ccRCC olgularının büyük çoğunluğunda kromozom 3'ün kısa kolunda (3p) genetik kayıp saptanır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D seçeneğidir çünkü HIF ve MYC etkisiyle mitokondriyal yağ asidi oksidasyonu hızlanıp lipidler tüketilmez; aksine yağ asidi oksidasyonu baskılanır, sitoplazmada nötral lipidler ve glikojen biriktirilir. Tümörün karakteristik altın sarısı rengi ve berrak sitoplazması bu aşırı lipid birikiminden kaynaklanır.\n\nA seçeneği doğrudur; PBRM1 ccRCC'de %40-50 sıklıkla en sık ikinci mutasyondur.\nB seçeneği doğrudur; BAP1 kaybı agresif gidiş ve yüksek ISUP derecesi ile ilişkilidir.\nC seçeneği doğrudur; SETD2 histon metiltransferazıdır.\nE seçeneği doğrudur; sporadik vakaların >%90'ında 3p kaybı görülür."
-  },
-  {
-    "id": "prac-bobrek-010",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 10,
-    "slideTitle": "Berrak Hücreli Karsinomun Histopatolojisi ve Mikroskopik Mimarisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek rezeksiyon piyesinin histopatolojik incelemesinde; belirgin hücre zarlarına sahip, sitoplazması optik olarak berrak ve saydam görünen, tek biçimli yuvarlak çekirdekli epitel hücrelerinin zengin ince duvarlı sinüzoidal kapiller ağ ile çevrili yuvalar ve kordonlar oluşturduğu saptanıyor. Bu lezyonda hücre sitoplazmasının rutin ışık mikroskobunda optik olarak berrak görünmesinin patolojik mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sitoplazmadaki aşırı lipid ve glikojenin doku takibindeki organik çözücülerde erimesi",
-      "B) Hücre içinde yoğun musin salgısının birikerek organelleri kenara itmesi",
-      "C) Hücrelerin aşırı hidropik şişme ve vakuoler dejenerasyon ile lizise uğraması",
-      "D) Sitoplazmada bol miktarda asidik mikroskopik veziküllerin bulunması",
-      "E) Hücre içinde yoğun amiloid fibrillerinin birikerek ışığı yansıtması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Berrak Hücreli Renal Karsinomda (ccRCC) sitoplazmanın berrak görünmesi, neoplastik hücrelerin içerdiği bol miktardaki lipid ve glikojenin, rutin doku takibi basamaklarında kullanılan dehidratasyon sıvıları (alkol) ve şeffaflaştırıcılar (ksilol) tarafından eritilerek uzaklaştırılması sonucudur.\n\nB yanlıştır; ccRCC musin salgılamaz, bu berraklık musinden kaynaklanmaz.\nC yanlıştır; bu durum dejeneratif hidropik şişme değil, neoplastik metabolik lipid birikimidir.\nD yanlıştır; mikroskopik veziküller kromofob RCC'ye özgüdür ve Hale boyası ile boyanır.\nE yanlıştır; amiloid ekstrasellüler birikintidir ve kongolu kırmızı ile boyanır."
-  },
-  {
-    "id": "prac-bobrek-011",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 11,
-    "slideTitle": "Berrak Hücreli Karsinomun Yayılım Yolları ve Renal Ven Trombozu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Altmış iki yaşında bir erkek hastada sağ yan ağrısı ve hematüri nedeniyle yapılan bilgisayarlı tomografide sağ böbrek korteksinde 8 cm'lik heterojen kitle, sağ renal ven lümenini dolduran ve vena kava inferior boyunca diyafram seviyesine kadar uzanan solid tümör trombüsü ile akciğerlerde bilateral çok sayıda 'top güllesi' şeklinde yuvarlak metastatik nodüller saptanıyor. Bu hastanın klinik ve patolojik yayılım özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Tümörün renal ven ve VCI içine uzanımı RCC için son derece karakteristik bir makrovasküler yayılım biçimidir",
-      "B) Bu tümör sadece lenfatik yolla yayılır, hematojen yolla akciğere yayılması imkansızdır",
-      "C) RCC kemiğe metastaz yaptığında daima yoğun sklerotik osteoblastik lezyonlar oluşturur",
-      "D) VCI tutulumu saptandığında hastada primer tümör kesinlikle Wilms tümörüdür, ccRCC VCI'ye giremez",
-      "E) Renal ven invazyonu gösteren böbrek karsinomları TNM sınıflamasında evre T1a olarak kabul edilir"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A seçeneğidir. Renal hücreli karsinomun en tipik biyolojik yayılım özelliklerinden biri renal vene ve oradan Vena Kava İnferior (VCI) içine katı tümör trombozu kolonu oluşturarak ilerlemesi ve hematojen yolla akciğerlere ('top güllesi' metastazları) yayılmasıdır.\n\nB yanlıştır; RCC esas olarak hematojen yolla yayılır.\nC yanlıştır; RCC kemik metastazları osteoblastik değil, osteolitiktir (kemik yıkıcıdır).\nD yanlıştır; VCI tümör trombüsü erişkinde ccRCC'nin en tipik özelliğidir.\nE yanlıştır; renal ven invazyonu evreyi doğrudan T3a yapar (T1a <4 cm organa sınırlı tümördür)."
-  },
-  {
-    "id": "prac-bobrek-012",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri: Renal Hücreli Karsinom Tipleri, Onkositom, AML ve Klinik Yönetim",
-    "slideNumber": 12,
-    "slideTitle": "Papiller Renal Hücreli Karsinom (pRCC): Hücresel Köken ve Makroskopi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Papiller Renal Hücreli Karsinomun (pRCC) hücresel kökeni, makroskopik morfolojisi ve klinik büyüme özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Nefronun distal kıvrıntılı tübül epitel hücrelerinden köken alır",
-      "B) Tümör odakları sıklıkla multifokal ve bilateral olma eğilimi sergiler",
-      "C) Hücre içi lipid içeriğinin azlığı nedeniyle kesit yüzü ccRCC'ye göre daha mat kahverengimsi renktedir",
-      "D) Kırılgan papiller vasküler yapısı nedeniyle nekroz, kanama ve kistik dejenerasyon alanları sıktır",
-      "E) Proksimal tübülün toplayıcı kanala açılan papillasından kaynaklandığı için daima soliter ve altın sarısıdır"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E seçeneğidir çünkü papiller RCC proksimal tübülden kaynaklanmaz (distal tübülden kaynaklanır), altın sarısı değildir (mat sarı-kahverengidir) ve daima soliter değildir; aksine sıklıkla multifokal ve bilateral odaklarla karakterizedir.\n\nA seçeneği doğrudur; distal kıvrıntılı tübül kökenlidir.\nB seçeneği doğrudur; multifokalite ve bilateralite papiller RCC'nin klasik özelliğidir.\nC seçeneği doğrudur; lipit içeriği ccRCC'den daha düşüktür.\nD seçeneği doğrudur; nekroz, hemoraji ve kistik kavitasyonlar belirgindir."
   }
 ]

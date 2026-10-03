@@ -1,5 +1,708 @@
 [
   {
+    "id": "km-pq-19",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 19,
+    "slideTitle": "Homolog Rekombinasyon Kusurları, BRCA1/BRCA2 Ekseni ve Sentetik Letalite",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Ailesinde erken yaşta meme ve over karsinomu öyküsü bulunan 41 yaşındaki bir kadın hastada yüksek dereceli seröz over karsinomu saptanıyor. Genetik testte BRCA1 geninde germ hattı delesyonu tespit ediliyor. Onkolog, DNA tek zincir kırıklarını onaran PARP enzimini inhibe eden Olaparib tedavisini planlıyor. Bu tedavinin mantığı, tek iplik tamiri bloke edildiğinde oluşan çift iplik kırıklarının tümör hücresindeki mevcut homolog rekombinasyon yetersizliği nedeniyle tamir edilemeyip hücrenin seçici ölüme gitmesidir.\n\nBu tedavi stratejisinin temelini oluşturan farmakogenetik kavram aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Haploinsüffisiyens",
+      "B) Sentetik letalite (Synthetic lethality)",
+      "C) İki vuruş kuralı (Two-hit)",
+      "D) Dominant negatif etki",
+      "E) Epigenetik imprinting"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Sentetik letalite (synthetic lethality), iki genetik bozukluğun tek başlarına hücreyi öldürmezken, eş zamanlı bulunduklarında hücre ölümüne yol açması durumudur. BRCA mutant hücrelerde çift iplik onarımı (HR) zaten bozuktur; ek olarak PARP inhibitörü ile tek iplik tamiri de engellenince tümör hücresi genomik çöküşle ölür, oysa BRCA'sı sağlam olan normal hücreler hayatta kalır.\n\nA tek alelin yetersizliğidir,\nC tümör süpresör iki vuruşudur,\nD mutant proteinin sağlamı bozmasıdır,\nE ebeveyne özgü gen ifadesidir."
+  },
+  {
+    "id": "km-pq-20",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 20,
+    "slideTitle": "DNA Polimeraz Proofreading Kusurları (POLE/POLD1) ve Lenfoid Genomik Kararsızlık",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Endometrium karsinomu tanısıyla opere edilen 54 yaşındaki bir hastanın tümör dokusu yeni nesil dizileme (NGS) ile incelendiğinde, megabaz başına 140 mutasyon (TMB: 140 mut/Mb, ultra-hipermutatör profil) ve tümör stromasında olağanüstü yoğun sitotoksik CD8+ T lenfosit infiltrasyonu saptanıyor. Tümörde mikrosatellit instabilitesi (MSI) negatif bulunuyor.\n\nBu hastadaki ultra-hipermutasyon tablosundan sorumlu olan enzim ve etkilenen katalitik bölge aşağıdakilerden hangisidir?",
+    "options": [
+      "A) DNA polimeraz beta – Baz eksizyon alanı",
+      "B) DNA polimeraz epsilon (POLE) – 3'→5' ekzonükleaz (proofreading) alanı",
+      "C) RNA polimeraz II – C-terminal domain (CTD)",
+      "D) Telomeraz ters transkriptaz (TERT) – Katalitik çekirdek",
+      "E) Topoizomeraz II – DNA ligasyon cebi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. DNA polimeraz epsilon (POLE) enziminin 3'→5' ekzonükleaz (proofreading/hata düzeltme) bölgesindeki mutasyonlar, insan kanserlerinde görülen en yüksek mutasyon yüküne (>100 mutasyon/Mb, ultra-hipermutasyon) yol açar. Bu hastalar zengin neoantijen yükü nedeniyle yoğun tümör içi lenfosit (TIL) içerir ve immün kontrol noktası inhibitörlerine çok iyi yanıt verir.\n\nA, C, D ve E seçeneklerindeki enzimler ultra-hipermutasyon fenotipinin nedeni değildir."
+  },
+  {
+    "id": "km-pq-21",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 21,
+    "slideTitle": "Tümörü Destekleyen Enflamasyon ve İyileşmeyen Yara Olarak Kanser Mikroçevresi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "İnvaziv duktal meme karsinomu tanısı alan bir hastanın tümör mikroçevresi immünohistokimyasal ve moleküler düzeyde incelendiğinde, neoplastik adacıkların etrafında yoğun mononükleer enflamatuar hücre infiltrasyonu gözleniyor. Bu enflamatuar hücrelerin tümörün büyümesini, anjiyogenezini ve metastazını kolaylaştırıcı (pro-tümöral) sinyaller ürettiği saptanıyor.\n\nAşağıdakilerden hangisi tümör mikroçevresindeki bu enflamatuar hücrelerin (özellikle M2 polarize TAM'ların) tümör ilerlemesine sağladığı biyolojik katkılardan biri DEĞİLDİR?",
+    "options": [
+      "A) VEGF salgılayarak yeni tümöral kapiller damar ağlarının oluşturulması",
+      "B) Matriks metalloproteinazlar (MMP-9) üreterek ekstrasellüler matriksin eritilmesi",
+      "C) EGF ve FGF salgılayarak tümör hücre proliferasyonunun uyarılması",
+      "D) Perforin ve granzim salgılayarak tümör hücrelerinde yaygın apoptozun tetiklenmesi",
+      "E) TGF-beta salgılayarak sitotoksik T hücre yanıtının baskılanması"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Perforin ve granzim salgısı, antijen tanıyan aktif CD8+ Sitotoksik T lenfositler ve Doğal Katil (NK) hücreler tarafından gerçekleştirilen ve tümör hücrelerini öldürmeyi amaçlayan ANTI-TÜMÖRAL koruyucu bir mekanizmadır. Oysa tümörü destekleyen enflamatuar hücreler (TAM - M2, MDSC, Treg) anjiyogenezi (VEGF), invazyonu (MMP-9), mitozu (EGF) ve immünosüpresyonu (TGF-β) tetikler; tümörü öldürmezler.\n\nA, B, C ve E seçenekleri enflamasyonun tümörü destekleyici doğrudan etkileridir."
+  },
+  {
+    "id": "km-pq-22",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 22,
+    "slideTitle": "Kimyasal Karsinojenez: Doğrudan ve Dolaylı Ajanlar, Metabolik Aktivasyon ve Karsinojenler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Afrika'nın kırsal bir bölgesinde uygunsuz nem koşullarında saklanan yer fıstığı ve mısır tüketen bir toplulukta karaciğer kitleleri ve hepatosellüler karsinom (HCC) insidansının çok yüksek olduğu gözleniyor. İzole edilen kanser dokularının moleküler dizilemesinde TP53 tümör baskılayıcı geninin 249. kodonunda karakteristik transversiyon mutasyonları saptanıyor.\n\nBu patolojide Aspergillus flavus kaynaklı Aflatoksin B1 mikotoksininin karaciğer hücrelerinde nihai karsinojenik epoksit bileşiğine dönüşmesini sağlayan ana enzim sistemi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Ksantin oksidaz",
+      "B) Sitokrom P-450 mikrozomal enzim sistemi",
+      "C) Glukoz-6-fosfat dehidrogenaz",
+      "D) Asetilkolinesteraz",
+      "E) Laktat dehidrogenaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Aflatoksin B1 dolaylı etkili bir prokarsinojendir. Karsinojenik olabilmesi için karaciğerde endoplazmik retikulumda bulunan **Sitokrom P-450 monooksijenaz enzim sistemi** (özellikle CYP3A4 ve CYP1A2) tarafından metabolize edilerek DNA ile kovalent bağ kurabilen reaktif bir epoksit aracı moleküle dönüştürülmesi gerekir. Bu epoksit TP53 kodon 249'u mutasyona uğratarak hepatosellüler karsinomu tetikler.\n\nA, C, D ve E seçenekleri kimyasal karsinojenlerin metabolik aktivasyonunu yöneten temel enzimler değildir."
+  },
+  {
+    "id": "km-pq-23",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 23,
+    "slideTitle": "Radyasyon Karsinojenezi: İyonlaştırıcı Radyasyon ve Ultraviyole Işınları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Nükleer santral kazası sonrası çevre yerleşim yerlerinde yaşayan popülasyon uzun süreli epidemiyolojik takibe alınıyor. Kazadan yaklaşık 6-7 yıl sonra bölge halkında belirli bir malignite grubunun insidansında belirgin bir pik gözlenirken; meme ve akciğer gibi solid epitelyal karsinomların ancak 20-25 yıl sonra artış gösterdiği tespit ediliyor.\n\nİyonlaştırıcı radyasyon maruziyetini takiben en kısa latent dönemle (5-7 yıl) ortaya çıkan bu ilk malignite grubu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kolorektal adenokarsinomlar",
+      "B) Lösemiler (AML, KML)",
+      "C) Malign melanom",
+      "D) Glioblastoma multiforme",
+      "E) Prostat adenokarsinomu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. İyonlaştırıcı radyasyonun karsinojenik etkileri incelendiğinde (örneğin Hiroşima ve Nagazaki kurtulanlarında), maruziyet sonrası en kısa latent dönemle (ortalama 5-7 yıl) pik yapan neoplazmlar lösemilerdir (özellikle AML ve KML). Buna karşın meme, akciğer, kolon ve tiroid gibi solid karsinomların latent dönemi çok daha uzundur (15-30 yıl).\n\nA, C, D ve E seçeneklerindeki solid neoplazmlar kısa latent döneme sahip değildir."
+  },
+  {
+    "id": "km-pq-24",
+    "deckId": "learn-karsinojenezin-molekuler-temeli",
+    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
+    "slideNumber": 24,
+    "slideTitle": "Viral ve Mikrobiyal Karsinojenez: HTLV-1, HPV, EBV, H. pylori ve Hedefe Yönelik Tedaviler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "34 yaşındaki bir kadın hastada rutin servikal smear taramasında yüksek dereceli skuamöz intraepitelyal lezyon (HSIL / CIN 3) saptanıyor. Kolposkopik biyopside invaziv skuamöz hücreli karsinom teşhis ediliyor. Moleküler virolojik incelemede servikal epitel hücrelerinin genomuna yüksek riskli Human Papillomavirus Tip 16 (HPV 16) DNA'sının entegre olduğu ve viral onkoproteinlerin aşırı eksprese edildiği belirleniyor.\n\nBu karsinomun patogenezinde HPV 16'nın kodladığı E6 ve E7 viral onkoproteinlerinin konak hücresindeki etkileri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
+    "options": [
+      "A) E6 proteini RB'yi aktive ederken, E7 proteini p53'ün ekspresyonunu artırır",
+      "B) E6 proteini p53'ü ubikitinleyip proteazomda parçalatır; E7 proteini ise RB'ye bağlanıp E2F'yi serbest bırakır",
+      "C) E6 ve E7 proteinleri hücrede DNA mismatch repair (MMR) enzimlerini doğrudan aktive eder",
+      "D) E6 proteini mitokondride BAX porlarını açarak sitokrom c salınımını tetikler",
+      "E) E7 proteini siklin bağımlı kinaz inhibitörü p21'in transkripsiyonunu aşırı artırarak hücreyi G1'de kilitler"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Yüksek riskli HPV (16 ve 18) karsinojenezinde kilit mekanizma: Viral E6 proteini p53'e bağlanarak proteazomal yıkımını sağlar ve TERT'i uyarır. Viral E7 proteini ise Retinoblastom (RB) proteinine yüksek afiniteyle bağlanarak onu inaktive eder, serbest kalan E2F hücreyi kontrolsüz biçimde S fazına sokar; ayrıca p21 CDK inhibitörünü de baskılar.\n\nA tam tersidir,\nC viral onkoproteinler tamiri artırmaz,\nD E6 apoptozu bloke eder (BAX'ı açmaz),\nE E7 p21'i artırmaz, tam tersine inhibe eder."
+  },
+  {
+    "id": "itg-pq-1",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 1,
+    "slideTitle": "İleri Tümör Genetiği ve Moleküler Onkolojiye Bütüncül Giriş",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Moleküler onkoloji prensiplerine göre, karsinojenez sürecini başlatan ve sürdüren hücresel genetik hasar tipiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      "A) Hasar hücreyi hemen lizise ve koagülasyon nekrozuna götüren letal bir hasardır",
+      "B) Hücreyi öldürmeyen (non-lethal) genetik hasar atasal hücrede klonal genişlemeyi başlatır",
+      "C) Tümörler poliklonal kökenli olup her hücre bağımsız karsinojenik hasarla ortaya çıkar",
+      "D) Malign transformasyon için tek bir sürücü mutasyon daima yeterlidir",
+      "E) Genomik instabilite sadece benign neoplazmlarda görülen geçici bir adaptasyondur"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Karsinojenezin en temel ilkesi hasarın hücreyi öldürmeyen (non-lethal) olmasıdır. Hücre ölmez; mutasyonu taşıyarak klonal proliferasyona başlar ve monoklonal kökenden zamanla klonal heterojeniteye evrilir."
+  },
+  {
+    "id": "itg-pq-2",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 2,
+    "slideTitle": "Retinoblastom (RB) Geni ve İki Vuruş (Two-Hit) Hipotezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "On sekiz aylık bir kız çocukta her iki gözde lökokori (beyaz refle) saptanmış ve yapılan incelemede bilateral retinoblastom teşhisi konulmuştur. Bu hastanın genetik patogenezi ve gelecekteki klinik riskleri ile ilgili aşağıdaki ifadelerden hangisi en doğrudur?",
+    "options": [
+      "A) Hastanın vücudundaki tüm somatik hücrelerde 13q14 lokusundaki her iki RB1 aleli de baştan beri mutasyonludur",
+      "B) Tümör gelişimi için retina hücrelerinde sadece tek bir somatik mutasyon yeterli olmuştur",
+      "C) Bu hastada adolesan dönemde osteosarkom gelişme riski genel popülasyondan farksızdır",
+      "D) Hastalık ebeveynden otozomal resesif kalıtımla aktarılmış olup ikinci bir vuruşa ihtiyaç duyulmaz",
+      "E) RB proteini sürekli hipofosforile kalarak E2F transkripsiyon faktörünü aşırı aktive etmiştir"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bilateral retinoblastom ailesel formdur. Hasta germ hattında bir mutant alelle doğmuştur (tüm vücut hücreleri heterozigottur). Retina hücresinde tek bir ek somatik mutasyon (ikinci vuruş) meydana gelmesi iki alelin de kaybına ve tümör oluşumuna yeterlidir. Ayrıca bu hastalarda osteosarkom riski dramatik şekilde yüksektir."
+  },
+  {
+    "id": "itg-pq-3",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 3,
+    "slideTitle": "RB Proteini, E2F Transkripsiyon Faktörleri ve G1/S Kontrol Noktası",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücre döngüsünün G1/S kontrol noktasında Retinoblastom (RB) proteininin fonksiyonel durumu ve moleküler etkileşimleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      "A) Hipofosforile RB inaktif olup E2F'nin S fazı genlerini uyarmasına izin verir",
+      "B) Hiperfosforile RB histon deasetilazları (HDAC) toplayarak kromatini transkripsiyona kapatır",
+      "C) Hipofosforile RB E2F faktörlerini bağlayarak tecrit eder ve hücre döngüsünü G1'de durdurur",
+      "D) Siklin D-CDK4/6 kompleksi RB'yi defosforile ederek aktif hale getirir",
+      "E) E2F faktörlerinin serbest kalması için RB proteininin proteazomda tamamen parçalanması şarttır"
+    ],
+    "correctAnswer": 2,
+    "explanation": "RB proteini hipofosforile iken aktiftir; E2F transkripsiyon faktörlerine bağlanarak onları inaktif tutar ve HDAC toplayarak S fazı genlerinin ifadesini kilitler. Siklin-CDK kompleksleri tarafından hiperfosforile edildiğinde ise inaktive olur ve E2F serbest kalır."
+  },
+  {
+    "id": "itg-pq-4",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 4,
+    "slideTitle": "Siklin D – CDK4/6 – p16 (CDKN2A) – RB Ekseni ve Onkojenik Bozulmalar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Pankreas adenokarsinomu ve kutanöz malign melanomda çok yüksek oranda inaktive olan, 9p21 kromozom lokusunda kodlanan ve CDK4/6 komplekslerini fizyolojik olarak inhibe ederek RB proteininin hipofosforile kalmasını sağlayan tümör baskılayıcı molekül aşağıdakilerden hangisidir?",
+    "options": [
+      "A) p21CIP1 (CDKN1A)",
+      "B) p16INK4A (CDKN2A)",
+      "C) p27KIP1 (CDKN1B)",
+      "D) Siklin E1",
+      "E) MDM2"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CDKN2A geninin ürünü olan p16INK4A, CDK4 ve CDK6 kinazlarına bağlanarak onların Siklin D ile birleşip RB'yi fosforillemesini engeller. Bu genin delesyon veya metilasyonu pankreas kanseri ve melanomda RB inaktivasyonunun en sık nedenidir."
+  },
+  {
+    "id": "itg-pq-5",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 5,
+    "slideTitle": "Onkojenik DNA Virüsleri ve RB / p53 İnaktivasyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Serviks skuamöz hücreli karsinomu patogenezinde yüksek riskli Human Papillomavirus (HPV) tip 16 onkoproteinlerinin konak hücre siklus bekçileri üzerindeki etkileri ile ilgili aşağıdaki eşleştirmelerden hangisi doğrudur?",
+    "options": [
+      "A) E6: RB'yi defosforile eder — E7: p53'ü fosforilleyerek stabilize eder",
+      "B) E7: Hipofosforile RB'ye bağlanıp E2F'yi serbest bırakır — E6: p53'ü proteazomal yıkıma hedefler",
+      "C) E6: CDK4'ü inhibe eder — E7: MDM2'yi parçalayarak p53'ü artırır",
+      "D) E7: E-kadherin sentezini artırır — E6: Telomeraz aktivitesini tamamen susturur",
+      "E) E7: Siklin D yıkımını uyarır — E6: Kaspaz-3 aktivasyonunu doğrudan tetikler"
+    ],
+    "correctAnswer": 1,
+    "explanation": "HPV'nin yüksek riskli tiplerinde E7 onkoproteini hipofosforile RB'ye bağlanıp E2F'yi serbest bırakarak hücreyi S fazına sokar; E6 onkoproteini ise p53'ü E6AP aracılığıyla ubikitinleyip proteazomda yıkarak apoptozdan kaçışı sağlar."
+  },
+  {
+    "id": "itg-pq-6",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 6,
+    "slideTitle": "TP53: Genomun Baş Muhafızı (Guardian of the Genome)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Normal hücresel koşullarda p53 düzeylerinin son derece düşük tutulmasını sağlayan, stres anında ise ATM kinaz aracılı fosforilasyon nedeniyle p53'e bağlanamayarak onun nükleer birikimine izin veren moleküler düzenleyici aşağıdakilerden hangisidir?",
+    "options": [
+      "A) MDM2",
+      "B) E2F1",
+      "C) p21CIP1",
+      "D) BAX",
+      "E) GADD45"
+    ],
+    "correctAnswer": 0,
+    "explanation": "MDM2 bir E3 ubikitin ligaz olup p53'e bağlanarak onu proteazomal yıkıma hedefler. Hücre DNA hasarına uğradığında ATM/ATR kinazları p53'ü fosforiller; bu fosforilasyon p53'ün MDM2'den ayrılmasını ve hücrede birikerek tetramer oluşturmasını sağlar."
+  },
+  {
+    "id": "itg-pq-7",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 7,
+    "slideTitle": "p53 Hücresel Yanıtları: Geçici Blokaj, Senesens ve Apoptoz Kararı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "İyonizan radyasyona maruz kalan normal bir epitel hücresinde ATM kinaz tarafından aktive edilen p53'ün, hücreyi G1 evresinde durdurup DNA replikasyonuna geçişi engellemek için transkripsiyonunu doğrudan indüklediği temel siklin bağımlı kinaz inhibitörü protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) p16INK4A",
+      "B) p21CIP1",
+      "C) p27KIP1",
+      "D) p57KIP2",
+      "E) p15INK4B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "p53'ün doğrudan transkripsiyonunu başlattığı en temel CDK inhibitörü p21CIP1 (CDKN1A)'dir. p21, Siklin D-CDK4 ve Siklin E-CDK2'yi inhibe ederek RB'yi hipofosforile tutar ve G1/S geçişini bloke eder. p16 ve p15 ise p53 bağımsız yolaklarla uyarılır."
+  },
+  {
+    "id": "itg-pq-8",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 8,
+    "slideTitle": "TP53 Somatik Mutasyonları ve Li-Fraumeni Sendromu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Yirmi dört yaşında bir kadın hastada sağ memede invaziv duktal karsinom saptanmıştır. Aile öyküsü sorgulandığında erkek kardeşinin 7 yaşında rabdomyosarkomdan vefat ettiği, annesinin ise 32 yaşında adrenokortikal karsinom nedeniyle opere edildiği öğrenilmiştir. Bu hastada saptanması en olası kalıtsal genetik mutasyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) BRCA1 germline delesyonu",
+      "B) TP53 germline mutasyonu",
+      "C) APC germline mutasyonu",
+      "D) PTEN germline mutasyonu",
+      "E) RET germline mutasyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Genç yaşta meme kanseri, rabdomyosarkom (yumuşak doku sarkomu) ve adrenal korteks karsinomu birlikteliği otozomal dominant geçişli Li-Fraumeni sendromunun klasik tablosudur. Altta yatan defekt germ hattı TP53 gen mutasyonudur."
+  },
+  {
+    "id": "itg-pq-9",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 9,
+    "slideTitle": "TGF-β Sinyal Yolağı: Normal Hücrede Güçlü Tümör Baskılayıcı Fren",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Normal bağırsak epitelyumunda Transforme Edici Büyüme Faktörü-Beta (TGF-β) sinyal yolağının hücre proliferasyonunu G1 evresinde durdurma mekanizması ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) TGF-β Tip I ve Tip II reseptörleri serin/treonin kinaz aktivitesi gösterir",
+      "B) Reseptör aktivasyonu sitoplazmik SMAD2 ve SMAD3 proteinlerini fosforiller",
+      "C) Fosforile SMAD proteinleri ko-aracı SMAD4 ile birleşerek nükleusa transloke olur",
+      "D) Nükleustaki SMAD kompleksi p15 ve p21 CDK inhibitörlerinin ekspresyonunu artırır",
+      "E) SMAD kompleksi c-MYC onkogeninin transkripsiyonunu uyararak Siklin D sentezini hızlandırır"
+    ],
+    "correctAnswer": 4,
+    "explanation": "SMAD kompleksi c-MYC onkogeninin transkripsiyonunu uyarmaz; tam aksine c-MYC genini güçlü şekilde baskılar (represyon). MYC'in baskılanması ve p15/p21'in uyarılması hücrenin bölünmesini durduran temel moleküler mekanizmadır."
+  },
+  {
+    "id": "itg-pq-10",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 10,
+    "slideTitle": "TGF-β'nın İki Yüzü: İleri Evre Tümörlerde İnvazyon ve İmmünsüpresyon",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "İleri evre malign tümörlerde aşırı salgılanan TGF-β'nın tümör mikroçevresi ve neoplastik hücre davranışı üzerindeki biyolojik etkileri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Sitotoksik CD8+ T lenfositlerin ve doğal katil (NK) hücrelerin antitümöral fonksiyonlarını baskılar",
+      "B) Epitelyal-Mezenkimal Geçişi (EMT) tetikleyerek hücrelerin invazyon yeteneğini artırır",
+      "C) SNAIL ve TWIST transkripsiyon faktörlerini aktive ederek E-kadherin ekspresyonunu baskılar",
+      "D) Tümör hücrelerinde p15 ve p21 düzeylerini artırarak onları kalıcı apoptoza sürükler",
+      "E) Fibroblastları aktive ederek desmoplastik stroma gelişimini kamçılar"
+    ],
+    "correctAnswer": 3,
+    "explanation": "İleri evre tümör hücreleri TGF-β'nın büyüme baskılayıcı ve apoptotik etkilerine karşı direnç kazanmıştır (reseptör veya SMAD4 kaybı nedeniyle). Bu nedenle TGF-β artık tümör hücresinde p15/p21 aracılı apoptoz yapamaz; tam aksine tümörün lehine çalışarak EMT, invazyon ve immünosüpresyon sağlar."
+  },
+  {
+    "id": "itg-pq-11",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 11,
+    "slideTitle": "E-Kadherin, Kateninler, NF2 (Merlin) ve Temas İnhibisyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Altmış yaşında bir kadın hastanın meme biyopsisinde tek sıra dizilim gösteren (Indian file paterni) ve tübüler yapı oluşturmayan kohezyonsuz malign hücre infiltrasyonu izlenmiştir. İmmünhistokimyasal incelemede bu hücrelerin membranöz E-kadherin boyanmasının tamamen negatif olduğu saptanmıştır. Bu tümörün histopatolojik tanısı ve patogenezinde rol oynayan temel genetik defekt aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İnvaziv duktal karsinom — ERBB2 (HER2) amplifikasyonu",
+      "B) Medüller karsinom — TP53 delesyonu",
+      "C) İnvaziv lobüler karsinom — CDH1 inaktivasyonu",
+      "D) Müsinöz karsinom — KRAS mutasyonu",
+      "E) Metaplastik karsinom — APC gen inaktivasyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Membranöz E-kadherin kaybı ve tek sıra halinde hücre infiltrasyonu (kızılderili yürüyüşü) invaziv lobüler meme karsinomunun patognomonik özelliğidir. Altta yatan temel moleküler olay CDH1 geninin mutasyon veya epigenetik susturulma ile fonksiyon kaybına uğramasıdır."
+  },
+  {
+    "id": "itg-pq-12",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 12,
+    "slideTitle": "WNT / β-Katenin Yolağı ve APC Yıkım Kompleksi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "WNT / β-katenin sinyal yolağının dinlenme halindeki ve aktif durumdaki regülasyonu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) WNT uyarısı yokken sitoplazmik serbest β-katenin düzeyleri çok düşük tutulur",
+      "B) β-katenin yıkım kompleksi APC, Aksin, CK1 ve GSK3β proteinlerini içerir",
+      "C) GSK3β tarafından fosforillenen β-katenin doğrudan nükleusa geçerek TCF'yi inhibe eder",
+      "D) WNT ligandı Frizzled ve LRP5/6 reseptörlerine bağlandığında Dishevelled (Dvl) aktive olur",
+      "E) Nükleusta biriken β-katenin TCF/LEF ile birleşerek c-MYC ve Siklin D1 transkripsiyonunu uyarır"
+    ],
+    "correctAnswer": 2,
+    "explanation": "GSK3β tarafından fosforillenen β-katenin nükleusa geçmez; tam aksine bu fosforilasyon β-TrCP tarafından tanınarak β-kateninin 26S proteazomda parçalanmasına yol açar. Nükleusa ancak fosforillenmemiş, yıkımdan kaçmış serbest β-katenin gidebilir."
+  },
+  {
+    "id": "itg-pq-13",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 13,
+    "slideTitle": "APC Kaybı, Ailesel Adenomatöz Polipozis (FAP) ve Kolorektal Karsinojenez",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Yirmi yaşında asemptomatik bir erkek hastada yapılan tarama kolonoskopisinde tüm kolona yayılmış 500'den fazla tübüler adenom saptanmıştır. Çene radyografisinde multipl mandibuler osteomlar izlenmiştir. Bu hastanın genetik patogenezi ve kolon kanseri riski ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      "A) Hastada DNA uyumsuzluk onarım geni MSH2'de germ hattı mutasyonu mevcuttur",
+      "B) Hastalık kromozom 5q21 lokusundaki APC gen mutasyonu sonucu gelişmiş olup kolektomi yapılmazsa kanser riski %100'dür",
+      "C) Tümör oluşumu hücre içi serbest β-katenin düzeylerinin tamamen sıfırlanmasına bağlıdır",
+      "D) Hastadaki lezyonlar Lynch sendromu tablosu olup ekstracolonik osteomlar rastlantısaldır",
+      "E) WNT ligandları Frizzled reseptörlerine bağlanamadığı için hücreler diferansiye olamamıştır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Yüzlerce adenom ve osteom birlikteliği FAP varyantı olan Gardner sendromudur. Kromozom 5q21'deki APC gen mutasyonundan kaynaklanır. Profilaktik kolektomi yapılmayan hastalarda 40 yaşına kadar %100 invaziv kolorektal adenokarsinom gelişir."
+  },
+  {
+    "id": "itg-pq-14",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 14,
+    "slideTitle": "Onkojenik Metabolizma ve Warburg Etkisi (Aerobik Glikoliz)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Malign tümör hücrelerinde yeterli oksijen varlığında dahi ATP üretiminin mitokondriyal oksidatif fosforilasyon yerine büyük oranda laktik asit fermantasyonuna kayması (Warburg etkisi) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Glukoz başına net 2 mol ATP üretilmesine rağmen glukoz tüketim hızı dramatik olarak artmıştır",
+      "B) Glikoliz ara ürünleri pentoz fosfat yolağına yönlendirilerek riboz-5-fosfat ve NADPH sentezlenir",
+      "C) Temel biyolojik amaç hücrenin ihtiyacı olan nükleotid, lipid ve aminoasit karbon iskeletlerini temin etmektir",
+      "D) Bu fenomen yalnızca kanser hücrelerine özgü olup hızlı bölünen hiçbir normal hücrede görülmez",
+      "E) Üretilen laktatın mikroçevreye atılması asidik ortam yaratarak invazyonu kolaylaştırır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Warburg etkisi sadece kansere özgü değildir; hızlı bölünen sağlıklı hücreler (örneğin antijenle uyarılmış prolifere olan lenfositler ve embriyonik dokular) de biyosentetik gereksinimleri nedeniyle aerobik glikoliz kullanır. Tümörlerde fark, bu programın onkogenik mutasyonlarla kalıcı ve kontrolsüz hale gelmesidir."
+  },
+  {
+    "id": "itg-pq-15",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 15,
+    "slideTitle": "Warburg Etkisinin Klinik Görüntülemesi: 18F-FDG PET Biyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Akciğer karsinomu tanısıyla kemoterapi alan bir hastanın tedavi yanıtını değerlendirmek amacıyla çekilen 18F-FDG PET/BT incelemesinde mediastinal lenf nodlarındaki glukoz tutulumunun tamamen kaybolduğu izlenmiştir. 18F-florodeoksiglukozun tümör hücrelerinde yüksek oranda tutulmasını ve hücre içinde birikerek metabolik tuzağa düşmesini sağlayan moleküler basamaklar ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Kanser hücrelerinde glukoz alımı GLUT1 ve GLUT3 taşıyıcılarının artışı ile hızlandırılmıştır",
+      "B) Sitoplazmaya giren FDG hekzokinaz enzimi tarafından FDG-6-fosfata dönüştürülür",
+      "C) FDG-6-fosfat fosfoglukoz izomeraz enzimi tarafından kolayca fruktoz-6-fosfata çevrilerek Krebs döngüsüne girer",
+      "D) Tümör hücrelerinde glukoz-6-fosfataz düzeyi çok düşük olduğundan FDG-6-fosfat hücre dışına kaçamaz",
+      "E) PET incelemesi tümör kitlesinde boyut küçülmesi olmadan önce fonksiyonel metabolik yanıtı gösterebilir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "FDG molekülünün 2. karbonunda -OH grubu yerine flor bağlı olduğundan fosfoglukoz izomeraz enzimi bu molekülü tanıyamaz ve fruktoz-6-fosfata dönüştüremez. Bu nedenle FDG-6-fosfat glikolize devam edemez ve hücre içinde kilitlenir (metabolik tuzak)."
+  },
+  {
+    "id": "itg-pq-16",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 16,
+    "slideTitle": "Onkogenler ve Tümör Süpresörlerin Metabolik Düzenlemesi: MYC, PI3K/AKT/mTOR ve p53",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kanser hücrelerinde metabolik yolakların onkogenler ve tümör süpresör genler tarafından kontrol edilmesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) c-MYC onkoproteini glutaminaz enzimini aktive ederek tümör hücresini glutamin bağımlısı haline getirir",
+      "B) PI3K/AKT/mTOR yolağı glukoz taşıyıcılarını zarda artırır ve de novo lipid sentezini tetikler",
+      "C) Yabani tip p53, TIGAR proteinini indükleyerek glikolitik akışı yavaşlatır",
+      "D) p53 tarafından ekspresyonu artırılan SCO2, mitokondriyal elektron taşıma zinciri Kompleks IV montajını destekler",
+      "E) TP53 gen inaktivasyonu durumunda SCO2 seviyeleri artarak mitokondriyal oksidatif fosforilasyon hızlanır"
+    ],
+    "correctAnswer": 4,
+    "explanation": "TP53 gen inaktivasyonu durumunda SCO2 seviyeleri artmaz; tam aksine azalır. SCO2 desteği çöken mitokondride sitokrom c oksidaz (Kompleks IV) montajı bozulur ve hücre mitokondriyal solunumu terk ederek aerobik glikolize (Warburg etkisine) kayar."
+  },
+  {
+    "id": "itg-pq-17",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 17,
+    "slideTitle": "İzositrat Dehidrogenaz (IDH1/IDH2) Mutasyonları ve Neomorfik Enzim Aktivitesi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Gliomlar ve akut miyeloid lösemide saptanan izositrat dehidrogenaz 1 (IDH1) gen mutasyonlarının enzimatik aktivite ve metabolik ürünler üzerindeki etkisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      "A) Enzim aktivitesi tamamen kaybolur ve hücrede izositrat birikerek apoptozu tetikler",
+      "B) Enzim neomorfik aktivite kazanarak alfa-ketoglutaratı 2-hidroksiglutarata (2-HG) dönüştürür",
+      "C) Enzim aşırı aktifleşerek hücre içi NADPH düzeylerini toksik boyutlara ulaştırır",
+      "D) IDH1 mutasyonu sadece mitokondriyal DNA'da meydana gelen delesyonlardan kaynaklanır",
+      "E) Mutant enzim laktatı glukoza çevirerek glikoneogenezi durdurur"
+    ],
+    "correctAnswer": 1,
+    "explanation": "IDH1 mutasyonu neomorfik (yeni işlev kazandırıcı) bir mutasyondur. Enzim normal substratı olan izositrat yerine reaksiyon ürünü olan alfa-ketoglutaratı substrat olarak kullanır ve onu doğrudan '2-hidroksiglutarat (2-HG)' adlı onkometabolite indirger."
+  },
+  {
+    "id": "itg-pq-18",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 18,
+    "slideTitle": "Onkometabolit 2-Hidroksiglutarat (2-HG), TET2 İnhibisyonu ve CIMP Fenotipi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "İzositrat dehidrogenaz (IDH) mutasyonu taşıyan diffüz gliomlarda ve akut miyeloid lösemide biriken onkometabolit 2-hidroksiglutaratın (2-HG) hücresel diferansiyasyonu engelleyerek neoplastik transformasyonu tetikleme mekanizması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      "A) DNA metiltransferaz (DNMT) enzimlerini doğrudan parçalayarak küresel hipometilasyona yol açar",
+      "B) Alfa-ketoglutarat bağımlı TET2 DNA demetilazını inhibe ederek yaygın CpG hipermetilasyonuna (CIMP) neden olur",
+      "C) Histon asetiltransferazları aktive ederek kromatini sürekli açık ve gevşek tutar",
+      "D) Sitoplazmada p53 proteinine bağlanıp onu doğrudan ubikitinleyerek apoptozu engeller",
+      "E) Mitokondriyal elektron taşıma zincirini tamamen bloke ederek hücreyi laktik asidozla öldürür"
+    ],
+    "correctAnswer": 1,
+    "explanation": "2-HG yapısal olarak alfa-ketoglutarata benzer ve α-KG bağımlı dioksijenaz olan TET2 DNA demetilaz enzimini kompetitif olarak inhibe eder. TET2 bloke olunca DNA demetile edilemez; genom çapında CpG hipermetilasyonu (CIMP fenotipi) gelişir ve matürasyon genleri susturularak diferansiyasyon kilitlenir."
+  },
+  {
+    "id": "itg-pq-19",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 19,
+    "slideTitle": "IDH Mutasyonlarının Klinik Spektrumu ve Hedefe Yönelik İnhibitörler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kırk yaşında bir erkek hastaya yapılan kraniyotomi sonrası temporal lob kitlesi patolojisinde infiltratif astrositer tümör saptanmıştır. Moleküler analizde tümör hücrelerinde IDH1 R132H mutasyonu pozitif, 1p/19q ko-delesyonu ise negatif bulunmuştur. Bu hastanın patolojik sınıflaması ve klinik prognozu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      "A) Tümör IDH-yabani tip klasik primer glioblastom olup prognozu son derece kötüdür",
+      "B) Tümör oligodendrogliom olup 1p/19q kaybı olmadan da bu tanı kesinleşir",
+      "C) Tümör IDH-mutant astrositomdur ve IDH-yabani tip glioblastomlara kıyasla belirgin şekilde daha iyi prognoza sahiptir",
+      "D) IDH mutasyonu tümörde TET2'nin aşırı çalışarak küresel hipometilasyon yapmasına yol açmıştır",
+      "E) Bu hastada hedefe yönelik anti-IDH tedavisi olarak Enasidenib tek seçenektir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "IDH1 mutasyonu pozitif ve 1p/19q ko-delesyonu negatif olan diffüz gliomlar güncel sınıflamada 'Astrositom, IDH-mutant' olarak adlandırılır. Bu hastalar IDH-yabani tip glioblastom olgularına göre belirgin olarak daha uzun sağkalım ve iyi prognoz gösterirler."
+  },
+  {
+    "id": "itg-pq-20",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 20,
+    "slideTitle": "Hücresel Otofaji: Kanserde İki Ucu Keskin Kılıç (Dual Role)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hücresel otofajinin kanser patogenezindeki ve tedavi direncindeki rolü ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Erken evrede hasarlı organelleri ve reaktif oksijen türlerini temizleyerek tümör baskılayıcı rol oynar",
+      "B) Otofaji düzenleyicisi Beclin-1 geninin tek alel kaybı bazı meme ve over karsinomlarında saptanır",
+      "C) İleri evre tümörlerde avasküler hipoksi ve besinsizlik stresinde tümör hücresinin canlı kalmasını destekler",
+      "D) Sitotoksik kemoterapi alan tümör hücrelerinde otofajinin aktive olması tedaviye bağlı hücre ölümünü daima hızlandırır",
+      "E) Hidroksiklorokin lizozom fonksiyonunu bozarak otofajik degradasyonu bloke eden bir ajandır"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sitotoksik kemoterapi alan tümör hücrelerinde otofajinin aktive olması hücre ölümünü hızlandırmaz; tam aksine hasarlı organelleri geri dönüştürerek hücrenin hayatta kalmasını ve metabolik uykuya (dormancy) geçerek tedaviye direnç kazanmasını sağlar."
+  },
+  {
+    "id": "itg-pq-21",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 21,
+    "slideTitle": "Tümör Anjiyogenezi ve Hipoksi Yanıtı: VHL – HIF-1α – VEGF Ekseni",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Von Hippel-Lindau sendromu bulunan ve böbreğinde berrak hücreli renal hücreli karsinom saptanan bir hastada tümör dokusunun aşırı damarsal olmasında rol oynayan moleküler patogenez basamakları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Hastada fonksiyonel VHL proteini sentezlenememektedir",
+      "B) Prolil hidroksilazlar HIF-1α'yı hidroksillese bile VHL eksikliği nedeniyle ubikitinasyon gerçekleşemez",
+      "C) Hücre içi HIF-1α düzeyleri normoksik koşullarda bile aşırı derecede yükselir",
+      "D) Nükleusa geçen HIF-1α VEGF ve PDGF gibi anjiyojenik faktörlerin transkripsiyonunu uyarır",
+      "E) HIF-1α birikimi tümör hücresinde GLUT1 ekspresyonunu baskılayarak glukoz tüketimini tamamen durdurur"
+    ],
+    "correctAnswer": 4,
+    "explanation": "HIF-1α birikimi GLUT1 ekspresyonunu baskılamaz; tam aksine hipoksik adaptasyon gereği GLUT1 glukoz taşıyıcılarının ve tüm glikolitik enzimlerin transkripsiyonunu güçlü şekilde artırarak glukoz tüketimini hızlandırır."
+  },
+  {
+    "id": "itg-pq-22",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 22,
+    "slideTitle": "Tümör Damarlarının Anormal Morfolojisi ve Anti-Anjiyojenik Tedaviler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Metastatik kolorektal adenokarsinom tanısıyla kemoterapi rejimine anti-anjiyojenik monoklonal antikor Bevacizumab eklenen bir hastada tümör damarlanması ve tedaviye direnç mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Bevacizumab doğrudan dolaşımdaki VEGF-A molekülüne bağlanarak reseptör aktivasyonunu engeller",
+      "B) Tümör damarları normal doku damarlarına kıyasla belirgin perisit eksikliği ve yüksek vasküler geçirgenlik gösterir",
+      "C) Tedavi başlangıcında tümör içi interstisyel sıvı basıncı düşerek kemoterapötik ilaç penetrasyonu artabilir",
+      "D) Tümör hücreleri zamanla FGF ve PDGF gibi alternatif büyüme faktörleri salgılayarak anti-VEGF blokajından kaçabilir",
+      "E) Bevacizumab monoterapisi tek başına tümör damarlarını kalıcı olarak kurutarak tam kür sağlar"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Bevacizumab tek başına tümör damarlarını kalıcı olarak yok edip tam kür sağlayamaz; sağkalımı genellikle aylar düzeyinde uzatır. Tümörler zamanla alternatif anjiyojenik faktörlere (FGF, PDGF) geçer, çevre damarları sarar (vasküler ko-opsiyon) veya hipoksi derinleştikçe daha invaziv bir fenotipe bürünürler."
+  },
+  {
+    "id": "itg-pq-23",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 23,
+    "slideTitle": "Kanser Epigenetiği: DNA Metilasyonu, Histon Kodu ve Non-Coding RNA'lar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Malign tümörlerin epigenetik mekanizmaları ve kodlamayan RNA düzenlemeleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Tümör baskılayıcı genlerin promoter CpG adacıklarının hipermetilasyonu transkripsiyonu susturur",
+      "B) Sporadik kolon kanserlerinde MLH1 gen susturulması sıklıkla promoter hipermetilasyonuna bağlıdır",
+      "C) Onkojenik bir mikroRNA olan miR-21, PTEN tümör süpresörünü baskılayarak PI3K/AKT yolunu aktive eder",
+      "D) Tümör süpresör let-7 mikroRNA'sı RAS onkogen ekspresyonunu dizginleyen koruyucu bir moleküldür",
+      "E) Kanser hücrelerinde genomik heterokromatin bölgelerinde masif hipermetilasyon gelişerek genom aşırı stabilize olur"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Kanser hücrelerinde heterokromatin bölgelerinde ve retrotranspozonlarda hipermetilasyon değil, tam aksine 'küresel genomik hipometilasyon' gelişir. Bu hipometilasyon kromatinin gevşemesine, transpozonların aktifleşmesine ve masif genomik instabiliteye yol açar. Hipermetilasyon ise lokal olarak tümör baskılayıcı gen promoterlarında görülür."
+  },
+  {
+    "id": "itg-pq-24",
+    "deckId": "learn-ileri-tumor-genetigi-metabolizmasi",
+    "deckTitle": "İleri Tümör Genetiği ve Metabolizması",
+    "slideNumber": 24,
+    "slideTitle": "Replikatif Ölümsüzlük (Replicative Immortality): Telomeraz ve ALT Yolağı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Malign neoplazmların sınırsız replikatif potansiyel (ölümsüzlük) kazanması ve telomer biyolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "A) Normal somatik hücrelerde her hücre bölünmesinde uç replikasyon problemi nedeniyle telomerler kısalır",
+      "B) p53 ve RB yolları inaktif olan hücreler telomer erozyonuna rağmen bölünerek köprü-kırılma-birleşme döngülerine girerler",
+      "C) İnsan kanserlerinin yaklaşık %90'ında telomer boyu telomeraz enziminin reaktivasyonu ile korunur",
+      "D) Glioblastom ve melanomda en sık saptanan TERT mutasyonu proteinin katalitik bölgesindeki missense mutasyonudur",
+      "E) Telomeraz negatif bazı sarkom ve astrositomlarda telomerler ALT (Alternatif Telomer Uzaması) yolağı ile korunur"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Glioblastom, melanom ve mesane karsinomunda saptanan TERT mutasyonları protein kodlayan katalitik bölgede değil; TERT geni promoter bölgesinde (C228T, C250T) yer alan non-coding transkripsiyonel mutasyonlardır. Bu mutasyonlar yeni bağlanma bölgeleri yaratarak TERT ekspresyonunu artırır."
+  },
+  {
+    "id": "imm-pq-01",
+    "deckId": "learn-tumor-immunolojisi-metastaz",
+    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "slideNumber": 1,
+    "slideTitle": "Tümör İmmünolojisine Giriş ve İmmün Gözetim (Immune Surveillance)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Böbrek transplantasyonu nedeniyle 6 yıldır siklosporin ve mikofenolat mofetil tedavisi almakta olan 48 yaşındaki bir erkek hastada servikal lenfadenopati gelişiyor. Biyopside EBV-pozitif Diffüz Büyük B Hücreli Lenfoma tanısı konuyor. Bu hastada malignite gelişiminin patogenetik mekanizması ve tümör immünolojisi prensipleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) İmmünsüpresif tedavi gören transplant hastalarında karsinogenez riski sadece kimyasal karsinojenlerin birikimine bağlıdır.",
+      "B) İmmün yetmezlik zemininde gelişen malignitelerin ezici çoğunluğu onkojenik virüslerle (EBV, HHV-8, HPV) ilişkilidir.",
+      "C) Tümör dokusunda yoğun CD8+ sitotoksik T lenfosit infiltrasyonu (TIL) bulunması daima kötü prognoz işaretidir.",
+      "D) Kalsinörin inhibitörleri tümör antijenlerinin hücre yüzeyindeki neoantijen yükünü doğrudan artırarak mutasyon yapar.",
+      "E) Sağlıklı bireylerde immün gözetim yalnızca hümoral B hücre antikorları aracılığıyla yürütülür, T hücrelerinin rolü yoktur."
+    ],
+    "correctAnswer": 1,
+    "explanation": "İmmün yetmezlik durumlarında (organ nakli alıcıları, AIDS vb.) ortaya çıkan neoplazilerin en karakteristik özelliği, büyük çoğunluğunun onkojenik virüsler (özellikle EBV, HHV-8 ve HPV) tarafından indüklenmesidir. Sağlıklı bireylerde hücresel immünite (özellikle CD8+ T hücreleri) viral protein eksprese eden hücreleri sürekli denetim altında tutar; hücresel bağışıklık çöktüğünde bu viral onkogenler kontrolsüz proliferasyonu tetikler. Tümör dokusunda CD8+ TIL varlığı kötü değil, bağımsız İYİ PROGNOZ kriteridir."
+  },
+  {
+    "id": "imm-pq-02",
+    "deckId": "learn-tumor-immunolojisi-metastaz",
+    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "slideNumber": 2,
+    "slideTitle": "Neoantijenler ve Tümör Mutasyon Yükü (TMB)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Metastatik kolorektal karsinom tanısı alan 54 yaşındaki bir kadın hastanın tümör dokusu moleküler genetik analizinde MLH1 ekspresyon kaybı ve yüksek düzeyde mikrosatellit instabilitesi (MSI-H) saptanmıştır. Bu hastanın immünolojik profili ve immünoterapiye yanıtı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tümör mutasyon yükü çok düşük olduğu için bağışıklık sistemi bu hücreleri tanıyamaz.",
+      "B) Bu tümörde oluşan neoantijenlere karşı hastanın timusunda negatif seleksiyonla tam bir öz-tolerans gelişmiştir.",
+      "C) Çok sayıda çerçeve kayması mutasyonu sonucu yüksek miktarda neoantijen eksprese eder ve Anti-PD-1 tedavisine mükemmel yanıt verir.",
+      "D) Bu hastada immün kaçış yalnızca MHC Sınıf II moleküllerinin kaybıyla sınırlıdır, CD8+ CTL'ler aktive olamaz.",
+      "E) Mikrosatellit instabilitesi olan tümörler yalnızca kutanöz skuamöz karsinomlarda checkpoint yanıtını artırır, viseral organlarda etkisizdir."
+    ],
+    "correctAnswer": 2,
+    "explanation": "DNA mismatch repair (MMR; örn. MLH1 kaybı) defekti olan tümörlerde mikrosatellit instabilitesi (MSI-H) gelişir. Bu durum binlerce çerçeve kayması (frameshift) mutasyonuna yol açar ve hücre yüzeyinde MHC Sınıf I ile sunulan bol miktarda 'neoantijen' üretilir. Bu neoantijenlere karşı öz-tolerans bulunmadığı için güçlü bir immün tanıma mevcuttur; kontrol noktası inhibitörleri (Anti-PD-1) ile bu T hücreleri serbest bırakıldığında tümör dramatik şekilde geriler."
+  },
+  {
+    "id": "imm-pq-03",
+    "deckId": "learn-tumor-immunolojisi-metastaz",
+    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "slideNumber": 3,
+    "slideTitle": "Aşırı Eksprese Edilen veya Aberan Proteinler ve Diferansiyasyon Antijenleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Metastatik malign melanom tanısıyla immünoterapi başlanan 52 yaşındaki bir erkek hastanın 4. ay kontrolünde gövdesinde ve ekstremitelerinde yama tarzında belirgin depigmente cilt lezyonları (vitiligo) saptanıyor. Biyopside epidermisteki melanositlerin lenfositik infiltrasyonla tahrip edildiği izleniyor. Bu klinik tablonun patolojik ve immünolojik açıklaması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İmmünoterapi ilacının melanosit DNA'sında doğrudan sitotoksik mutasyon yapması sonucu oluşan bir komplikasyondur.",
+      "B) Tümör hücrelerinin tirozinaz diferansiyasyon antijenini tamamen kaybederek immün sistemden kaçtığını gösterir.",
+      "C) Aktive olan sitotoksik T lenfositlerin hem melanom hem de normal melanositlerdeki tirozinaz/Melan-A antijenlerine çapraz yanıt vermesidir ve iyi prognoz göstergesidir.",
+      "D) Hastada eş zamanlı gelişen sistemik lupus eritematozus tablosudur ve immünoterapinin derhal kesilmesini gerektirir.",
+      "E) Tümörün nöroendokrin diferansiasyona uğrayarak melanin üretimini durdurduğunu gösteren kötü prognoz bulgusudur."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Tirozinaz ve Melan-A (MART-1), melanosit diferansiyasyon antijenleridir. Hem melanom hücrelerinde hem de normal epidermal melanositlerde bulunurlar. İmmünoterapi ile bu antijenlere karşı güçlü bir CTL yanıtı uyarıldığında, tümör hücreleri yok edilirken normal melanositler de çapraz immüniteyle hasara uğrar ve vitiligo tablosu ortaya çıkar. Bu durum konakta etkili bir antitümöral yanıt oluştuğunu gösterir ve klinik olarak uzamış sağkalım ve iyi prognoz ile koreledir."
+  },
+  {
+    "id": "imm-pq-04",
+    "deckId": "learn-tumor-immunolojisi-metastaz",
+    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "slideNumber": 4,
+    "slideTitle": "Kanser-Testis (Cancer-Testis / CTA) Antijenleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Malign melanom ve akciğer skuamöz hücreli karsinomunda yüksek düzeyde saptanan MAGE-A3 ve NY-ESO-1 gibi 'Kanser-Testis Antijenleri' (CTA) ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE İMMÜNOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Normal erişkin karaciğer ve böbrek tübül hücrelerinde yüksek düzeyde eksprese edilirler.",
+      "B) Testis germ hücrelerinde MHC Sınıf I ekspresyonu bulunmadığı için T hücrelerinde bu antijenlere karşı öz-tolerans gelişmemiştir.",
+      "C) Bu antijenleri hedefleyen immünoterapiler testis spermatogenezini geri dönüşümsüz olarak tahrip eder.",
+      "D) Kanser-testis antijenleri daima kromozomal translokasyonlar sonucu oluşan mutant füzyon proteinleridir.",
+      "E) Yalnızca benign adenomlarda bulunurlar, invaziv karsinomlara geçişte epigenetik olarak susturulurlar."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Kanser-Testis Antijenleri (CTA; MAGE, NY-ESO-1), fizyolojik olarak sadece testis germ hücrelerinde eksprese edilir. Testis germ hücreleri yüzeyinde MHC Sınıf I molekülü bulunmadığından ve kan-testis bariyeri mevcut olduğundan, gelişmekte olan T lenfositleri bu antijenlerle temas edemez ve tolerans gelişmez. Solid tümörlerde DNA hipometilasyonu ile yeniden eksprese edildiklerinde, tümör hücresindeki MHC-I ile sunularak güçlü bir immün tanıma sağlarlar. Testis germ hücreleri MHC-I taşımadığı için T hücre tedavileri testisi hedefleyip hasarlayamaz."
+  },
+  {
+    "id": "imm-pq-05",
+    "deckId": "learn-tumor-immunolojisi-metastaz",
+    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "slideNumber": 5,
+    "slideTitle": "Onkoviral Antijenler ve Virüs Aracılı Maligniteler",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "36 yaşındaki bir kadının rutin jinekolojik smear taramasında yüksek dereceli skuamöz intraepitelyal lezyon (HSIL) saptanıyor. Biyopside HPV Tip 16 DNA pozitifliği gösteriliyor. Bu hastanın servikal epitelinde viral transformasyonun gerçekleşmesinde rol oynayan HPV E6 ve E7 onkoproteinlerinin hücresel etkileri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) E6 proteini p53'ü doğrudan fosforilleyerek DNA tamir kapasitesini artırır.",
+      "B) E7 proteini hipofosforile Retinoblastom (RB) proteinine bağlanıp inaktive ederek E2F transkripsiyon faktörünü serbest bırakır.",
+      "C) E6 proteini B hücresindeki CD40 reseptörünü taklit ederek sitokin fırtınası başlatır.",
+      "D) E7 proteini kaspaz-8 aktivasyonunu tetikleyerek servikal epitelde yaygın apoptoza yol açar.",
+      "E) E6 ve E7 proteinleri hücre yüzeyinde MHC Sınıf II moleküllerini artırarak lenfositik lizisi hızlandırır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Yüksek riskli HPV (Tip 16 ve 18) karsinogenezinde E7 onkoproteini, hipofosforile (aktif) Retinoblastom (RB) proteinine bağlanarak onu inaktive eder. RB inaktive olunca serbest kalan E2F transkripsiyon faktörü hücre siklusunu zorla G1'den S fazına geçirir. E6 ise p53 tümör baskılayıcı proteinini ubikitin-proteazom yolağıyla parçalar. Bu iki mekanizma apoptozu engelleyip kontrolsüz DNA sentezi sağlayarak malign transformasyona yol açar."
+  },
+  {
+    "id": "imm-pq-06",
+    "deckId": "learn-tumor-immunolojisi-metastaz",
+    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "slideNumber": 6,
+    "slideTitle": "Onkofetal Antijenler: Karsinoembriyonik Antijen (CEA) ve Alfa-Fetoprotein (AFP)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Kolon adenokarsinomu nedeniyle küratif cerrahi rezeksiyon uygulanan 62 yaşındaki bir erkeğin ameliyat öncesi serum CEA düzeyi 24 ng/mL (normal: <3 ng/mL) iken postoperatif 1. ayda 1.8 ng/mL'ye gerilemiştir. Ameliyattan 14 ay sonra yapılan rutin kontrolde asemptomatik olan hastanın serum CEA düzeyi 38 ng/mL olarak saptanıyor. Bu klinik tablonun en olası nedeni ve CEA'nın immünolojik özellikleri ile ilgili hangisi DOĞRUDUR?",
+    "options": [
+      "A) CEA güçlü bir sitotoksik neoantijen olduğu için hastada immün sistemin tümörü tamamen temizlediğini gösterir.",
+      "B) Kolorektal kanser nüksü ve olası karaciğer metastazı gelişmiştir; CEA tolerans nedeniyle zayıf immünojenik bir takip belirtecidir.",
+      "C) Hastada yeni bir primer bazal hücreli karsinom geliştiğini gösteren spesifik bir belirteçtir.",
+      "D) CEA düzeyindeki bu artış ameliyat bölgesinde cerrahi sütür reaksiyonuna bağlı gelişen fizyolojik bir inflamasyon yanıtıdır.",
+      "E) CEA fetal dönemde hiç sentezlenmediği için ancak ileri evre kanserlerde mutasyonla ortaya çıkan bir tümöre özgü antijendir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Karsinoembriyonik Antijen (CEA), onkofetal bir glikoproteindir. Fetal bağırsakta üretilir, erişkinde susturulur, kolorektal karsinomda yeniden sentezlenir. Fetal dönemde var olduğu için konakta tam tolerans mevcuttur; bu nedenle immünojenitesi zayıftır ve taramada değil takipte kullanılır. Başarılı cerrahi sonrası normale inen CEA'nın takiplerde belirgin ve ilerleyici artış göstermesi, en sık karaciğer metastazı olmak üzere tümör nüksünün en güvenilir ve erken biyokimyasal kanıtıdır."
+  },
+  {
+    "id": "imm-pq-07",
+    "deckId": "learn-tumor-immunolojisi-metastaz",
+    "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+    "slideNumber": 7,
+    "slideTitle": "Dendritik Hücreler ve Çapraz Sunum (Cross-Presentation)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Primer meme karsinomu gelişen bir hastanın lenf nodunda tümör antijenlerine karşı spesifik sitotoksik T lenfosit (CD8+ CTL) yanıtının başlatılabilmesi için dendritik hücrelerin gerçekleştirdiği moleküler ve hücresel mekanizma ile ilgili hangisi DOĞRUDUR?",
+    "options": [
+      "A) Dendritik hücreler tümör döküntülerini yalnızca MHC Sınıf II ile sunar; CD8+ T hücreleri tümörü doğrudan tanıyamaz.",
+      "B) Eksojen tümör antijenleri dendritik hücre tarafından sitoplazmaya kaçırılıp proteazomda işlenir ve MHC Sınıf I üzerinde naif CD8+ T lenfositlerine çapraz sunulur.",
+      "C) Dendritik hücreler aktivasyon için B7 molekülünü baskılayarak T hücresindeki CTLA-4 reseptörünü uyarmak zorundadır.",
+      "D) CD8+ T hücrelerinin aktivasyonunda kostimülasyona ihtiyaç yoktur; sadece TCR-MHC teması tam aktivasyon için yeterlidir.",
+      "E) Çapraz sunum yalnızca eritrositler ve trombositler tarafından yürütülen non-spesifik bir filtrasyon sürecidir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tümör antijenlerine karşı CD8+ CTL yanıtının başlatılması, dendritik hücrelerin gerçekleştirdiği 'Çapraz Sunum' (Cross-presentation) mekanizmasına dayanır. Fagositozla alınan eksojen tümör proteinleri sitozole aktarılır, proteazomda parçalanır ve TAP aracılığıyla ER'de MHC Sınıf I molekülüne yüklenir. Dendritik hücre bu peptit-MHC-I kompleksini B7-CD28 kostimülasyonu eşliğinde naif CD8+ T hücrelerine sunarak sitotoksik klonların çoğalmasını sağlar."
+  },
+  {
     "id": "imm-pq-08",
     "deckId": "learn-tumor-immunolojisi-metastaz",
     "deckTitle": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
@@ -1195,708 +1898,5 @@
     ],
     "correctAnswer": 1,
     "explanation": "MAHA (şistositler), derin trombositopeni, dalgalı nörolojik semptomlar, ateş ve hafif renal tutulum (klasik pentad) Trombotik Trombositopenik Purpura (TTP) tablosudur. TTP'nin patogenezinde ultra-büyük vWF multimerlerini parçalayan ADAMTS13 metalloproteaz enziminin otoantikorlarla inhibisyonu veya kalıtsal eksikliği yatar."
-  },
-  {
-    "id": "prac-sis-023",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
-    "slideNumber": 23,
-    "slideTitle": "Hipertansif Nefroskleroz: Benign Nefroskleroz vs Malign Nefroskleroz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kan basıncı 220/130 mmHg ölçülen, papilödem, baş ağrısı ve akut böbrek yetmezliği tablosunda kaybedilen bir hastanın otopsisinde; böbrek dış yüzeyinde küçük peteşiyal kanamalar ('pire ısırığı' görünümü) izlenmiştir. Mikroskopik incelemede afferent arteriyol duvarlarında fibrinoid nekroz ve interlobüler arterlerde konsantrik intimal hücre proliferasyonu ('soğan zarı' lezyonu) saptanmıştır. Bu hasta için en olası patolojik tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Benign nefroskleroz",
-      "B) Malign nefroskleroz",
-      "C) Polikistik böbrek hastalığı",
-      "D) Renal amiloidoz",
-      "E) Membranoproliferatif glomerülonefrit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Malign hipertansiyon seyrinde görülen; makroskopik olarak kortekste pire ısırığı (flea-bitten) peteşiyel kanamalar, mikroskopide afferent arteriyollerde fibrinoid nekroz ve interlobüler arterlerde konsantrik intimal düz kas proliferasyonunun oluşturduğu soğan zarı (onion-skin) lezyonu 'Malign Nefroskleroz' için patognomoniktir."
-  },
-  {
-    "id": "prac-sis-024",
-    "deckId": "learn-sistemik-hastaliklar-bobrek-hasari",
-    "deckTitle": "Sistemik Hastalıklarda Böbrek Hasarı: Diyabet, Lupus, Amiloidoz ve Vaskülitler",
-    "slideNumber": 24,
-    "slideTitle": "Kronik Böbrek Hastalığı Ortak Son Yolağı, APOL1 Genetiği ve Klinik Yönetim",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik böbrek hastalığının patogenezinde primer etiyolojiden bağımsız olarak nefron kaybının kendi kendini besleyen bir kısır döngü ile son dönem böbrek yetmezliğine ilerlemesini açıklayan temel hemodinamik mekanizma ve Afrika kökenlilerde riski artıran gen polimorfizmi aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
-    "options": [
-      "A) Afferent vazokonstriksiyon / HLA-B27",
-      "B) Sağlam kalan nefronlarda hiperfiltrasyon ve glomerüler hipertansiyon / APOL1",
-      "C) Tübüler bazal membran rüptürü / CFH mutasyonu",
-      "D) Mezangiyumda amiloid birikimi / MEFV",
-      "E) Selektif aldosteron eksikliği / ADAMTS13"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Brenner'in hiperfiltrasyon hipotezine göre nefron kaybı sonrası geriye kalan sağlam nefronlar kompansatuar olarak hipertrofiye uğrar ve intraglomerüler hipertansiyon/hiperfiltrasyon stresi altına girer; bu durum zamanla sekonder sklerozu tetikler. Afrika kökenli bireylerde bu süreci hızlandıran ve son dönem böbrek yetmezliği riskini yaklaşık 5 kat artıran genetik faktör APOL1 gen varyantıdır."
-  },
-  {
-    "id": "prac-urogen-001",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 1,
-    "slideTitle": "Ürogenital Sistem Tümörlerine Giriş ve Moleküler Onkolojik Temeller",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Ürogenital sistem tümörlerinin epidemiyolojisi ve moleküler genetik genel özellikleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Erkeklerde en sık tanı alan ürogenital malignite prostat karsinomudur.",
-      "B) Kadınlarda en sık izlenen üriner sistem tümörü mesane ürotelyal karsinomudur.",
-      "C) Ürogenital tümörlerin tamamı çevresel mutajenlere bağlı gelişen somatik mutasyonlar sonucu oluşur; germline kalıtım bu sistemde rol oynamaz.",
-      "D) Testis germ hücreli tümörleri genç erişkin erkeklerde en sık görülen solid organ malignitesidir.",
-      "E) Moleküler genetik analizler, hedefe yönelik TKI ve immünoterapi seçiminde prediktif biyobelirteç olarak kullanılır."
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği kesinlikle yanlıştır; çünkü ürogenital sistem tümörlerinin yaklaşık %3 ila %10'u germline mutasyonlara bağlı herediter kanser sendromları (örneğin VHL, HLRCC, Birt-Hogg-Dubé, Lynch sendromu, HBOC) zemininde gelişir. A, B, D ve E seçenekleri doğru epidemiyolojik ve moleküler ilkelerdir."
-  },
-  {
-    "id": "prac-urogen-002",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 2,
-    "slideTitle": "Böbrek Hücreli Karsinomlara (RCC) Genel Bakış ve Histopatolojik/Moleküler Sınıflama",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Renal hücreli karsinomun (RCC) epidemiyolojik, histopatolojik ve klinik yayılım özellikleri ile ilgili aşağıdakilerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Erişkin böbrek tümörleri içerisinde en sık görülen alt tip kromofob renal hücreli karsinomdur.",
-      "B) RCC'nin en sık uzak metastaz yaptığı organ akciğerdir (%50-60).",
-      "C) Hastaların %90'ından fazlası hematüri, yan ağrısı ve palpabl kitle klasik triyadı ile başvurur.",
-      "D) Sigara kullanımı böbrek kanseri gelişimine karşı koruyucu bir faktördür.",
-      "E) Tanı anında uzak metastaz saptanan Evre IV hastalarda 5 yıllık sağkalım oranı %90'ın üzerindedir."
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; RCC hematojen yolla en sık akciğere (%50-60) metastaz yapar. A yanlıştır; en sık alt tip berrak hücreli RCC'dir (%70-75). C yanlıştır; klasik triyad hastaların <%10'unda görülür ve geç bulgudur. D yanlıştır; sigara majör risk faktörüdür. E yanlıştır; metastatik olgularda 5 yıllık sağkalım yaklaşık %15'tir."
-  },
-  {
-    "id": "prac-urogen-003",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 3,
-    "slideTitle": "Berrak Hücreli RCC (ccRCC) Genetiği: 3p Delesyonu ve VHL Gen İnaktivasyonu",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Berrak hücreli renal hücreli karsinomda (ccRCC) VHL geninin inaktivasyonu sonucu ortaya çıkan temel moleküler mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) HIF-alfa alt ünitelerinin prolil hidroksilazlar tarafından hidroksillenememesi",
-      "B) HIF-alfa alt ünitelerinin E3 ubikitin ligaz kompleksi tarafından ubikitinlenemeyip 26S proteazomal yıkımdan kaçması ve nükleusta birikmesi",
-      "C) VEGF ve PDGF reseptörlerinin hücre yüzeyinden internalize edilerek lizozomda hızla yıkılması",
-      "D) Rb proteininin fosforillenmesinin tamamen engellenmesi ve hücre siklusunun G0 fazında tutulması",
-      "E) Kromozom 7 ve 17 trizomisi sonucu MET tirozin kinaz reseptörünün aşırı üretilmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; VHL mutasyonu durumunda pVHL üretilemez veya fonksiyon göremez. Bu nedenle hidroksillenmiş HIF-alfa alt üniteleri ubikitinlenemez, 26S proteazomunda yıkılamaz, nükleusta stabilize olarak hedef genleri kontrolsüzce transkribe eder. A yanlıştır; mutasyon PHD enziminde değil pVHL'dedir. C yanlıştır; VEGF/PDGF üretimi artar. D ve E alakasız yolaklardır."
-  },
-  {
-    "id": "prac-urogen-004",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 4,
-    "slideTitle": "VHL Yolağında Moleküler Kaskad: HIF Birikimi, Anjiyogenez ve Hedefe Yönelik Tedaviler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Von Hippel-Lindau (VHL) inaktivasyonuna bağlı berrak hücreli RCC patogenezinde, doğrudan HIF-2alfa alt ünitesine bağlanarak onun HIF-1beta ile heterodimerizasyonunu ve anjiyogenik gen ekspresyonunu engelleyen hedefe yönelik ilaç aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Belzutifan",
-      "B) Erdafitinib",
-      "C) Olaparib",
-      "D) Bikalutamid",
-      "E) Sisplatin"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Belzutifan (MK-6482), doğrudan HIF-2alfa'nın PAS-B domainine bağlanarak HIF-1beta ile heterodimerize olmasını ve HRE bölgelerine bağlanmasını spesifik olarak engelleyen ilk oral HIF-2alfa inhibitörüdür. VHL hastalığı ilişkili RCC'lerde ve ilerlemiş ccRCC'de FDA onaylıdır. Erdafitinib FGFR inhibitörüdür; Olaparib PARP inhibitörüdür; Bikalutamid antiandrojendir."
-  },
-  {
-    "id": "prac-urogen-005",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 5,
-    "slideTitle": "Von Hippel-Lindau (VHL) Sendromu: Klinik Spektrum ve Sistemik Manifestasyonlar",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "26 yaşında bir erkek hasta baş ağrısı, görme bozukluğu ve dirençli hipertansiyon yakınmalarıyla başvuruyor. Yapılan kranial MR'da serebellar kistik kitle (hemanjioblastom), göz dibi muayenesinde retinal anjiyom, batın BT'sinde ise bilateral adrenal bezde feokromositoma ve her iki böbrekte multipl kistlerle birlikte bilateral hipervasküler solid kitleler saptanıyor. Biyopsi sonucu berrak hücreli renal hücreli karsinom ile uyumlu geliyor.\n\nBu hastada sorumlu gen ve kromozomal lokasyon aşağıdakilerden hangisinde doğru olarak verilmiştir?",
-    "options": [
-      "A) MET - 7q31",
-      "B) VHL - 3p25.5",
-      "C) FLCN - 17p11.2",
-      "D) FH - 1q43",
-      "E) WT1 - 11p13"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; Serebellar hemanjioblastom, retinal anjiyom, feokromositoma ve bilateral multifokal berrak hücreli RCC birlikteliği Von Hippel-Lindau sendromunun patognomonik tablosudur. Sorumlu gen 3p25.5 bölgesinde yer alan VHL genidir. MET papiller RCC'de; FLCN Birt-Hogg-Dubé'de; FH HLRCC'de; WT1 Wilms tümöründe rol oynar."
-  },
-  {
-    "id": "prac-urogen-006",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 6,
-    "slideTitle": "Papiller Renal Hücreli Karsinom (pRCC) Genetiği ve Herediter Papiller RCC (HPRC)",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Papiller renal hücreli karsinomun (pRCC) sitogenetik ve moleküler özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Tümörlerin %90'ında patognomonik olarak 3p25 delesyonu ve VHL inaktivasyonu saptanır.",
-      "B) En sık saptanan sayısal sitogenetik değişiklikler trizomi 7, trizomi 17 ve erkeklerde Y kromozomu kaybıdır.",
-      "C) Herediter papiller renal karsinomdan (HPRC) sorumlu temel gen kromozom 17p11'de yer alan FLCN genidir.",
-      "D) MET geni bir tümör süpresör gen olup pRCC gelişiminde çift taraflı delesyonla inaktive olur.",
-      "E) Tip 2 papiller RCC olguları daima Tip 1'e göre çok daha iyi prognozlu ve selim seyirlidir."
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; pRCC'de trizomi 7, trizomi 17 ve -Y en sık izlenen sayısal anomalilerdir. A yanlıştır; 3p delesyonu ve VHL ccRCC'ye özgüdür. C yanlıştır; HPRC'den sorumlu gen 7q31'deki MET genidir (FLCN Birt-Hogg-Dubé'dedir). D yanlıştır; MET bir protoonkogendir ve aktive edici mutasyonlarla onkogenik çalışır. E yanlıştır; Tip 2 pRCC çok daha yüksek dereceli ve agresiftir."
-  },
-  {
-    "id": "prac-urogen-007",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 7,
-    "slideTitle": "Kalıtsal Leiomyomatozis ve Renal Hücreli Kanser (HLRCC): Fumarat Hidrataz (FH) ve Agresif Tip 2 pRCC",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "28 yaşında bir kadın hasta, bacaklarında ve sırtında soğukta ağrıyan multipl kutanöz nodüller (leiomyomlar) nedeniyle dermatolojiye başvuruyor. Özgeçmişinde 24 yaşında dev uterus miyomları nedeniyle histerektomi geçirdiği öğreniliyor. Yapılan batın USG ve MR incelemesinde sol böbrekte 3 cm çapında, çevre dokuya invaze ve retroperitoneal lenf nodu metastazı yapmış solid lezyon saptanıyor. Biyopsi sonucu belirgin nükleollü Tip 2 papiller RCC (FH-eksik RCC) ile uyumlu geliyor.\n\nBu klinik tabloda rol oynayan temel biyokimyasal mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Fumarat birikimine bağlı prolil hidroksilaz (PHD) enzimlerinin inhibe olması ve HIF proteinlerinin parçalanamaması",
-      "B) Tüberin-hamartin kompleksinin aşırı çalışması sonucu mTORC1'in tamamen baskılanması",
-      "C) Folikülin eksikliğine bağlı olarak akciğer bazallerinde subplevral kistlerin yırtılması",
-      "D) MET tirozin kinaz reseptörünün ekzon 16 mutasyonu ile otofosforilasyona uğraması",
-      "E) 11p13 bölgesindeki PAX6 geninin delesyonu sonucu aniridi gelişmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Olgu Kalıtsal Leiomyomatozis ve Renal Hücreli Kanser (HLRCC) sendromudur. 1q43'teki FH (fumarat hidrataz) enzim inaktivasyonu sonucu biriken fumarat, prolil hidroksilazları yarışmalı inhibe eder. Prolinleri hidroksillenemeyen HIF-alfa pVHL tarafından tanınamaz ve parçalanamaz; bu da psödohipoksi ve agresif Tip 2 papiller RCC gelişimine yol açar."
-  },
-  {
-    "id": "prac-urogen-008",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 8,
-    "slideTitle": "Kromofob RCC, Onkositom ve Birt-Hogg-Dubé Sendromu (BHDS)",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "35 yaşında bir erkek hasta, acil servise ani başlayan nefes darlığı ve göğüs ağrısı ile başvuruyor. Çekilen akciğer grafisinde spontan pnömotoraks saptanıyor ve toraks BT'sinde bilateral bazallerde multipl ince duvarlı kistler izleniyor. Fizik muayenede hastanın burun ve yanak çevresinde çok sayıda kubbe şeklinde beyazımsı papüller (fibrofolikülomlar) görülüyor. Batın USG'sinde sağ böbrekte 4 cm çapında kitle saptanıyor ve nefrektomi materyalinde perinükleer halo içeren kromofob renal hücreli karsinom tanısı konuyor.\n\nBu hastada etiyolojiden sorumlu genetik mutasyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) 17p11.2 lokusundaki FLCN geni germline mutasyonu",
-      "B) 3p25.5 lokusundaki VHL geni germline mutasyonu",
-      "C) 7q31 lokusundaki MET geni aktive edici mutasyonu",
-      "D) 9q34 lokusundaki TSC1 geni mutasyonu",
-      "E) 1q43 lokusundaki FH geni delesyonu"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Kutanöz fibrofolikülomlar, akciğer kistleri/spontan pnömotoraks ve kromofob RCC birlikteliği Birt-Hogg-Dubé Sendromunun (BHDS) patognomonik tablosudur. BHDS, kromozom 17p11.2 lokusunda yer alan FLCN (folikülin) tümör süpresör genindeki germline mutasyonlar sonucu gelişir."
-  },
-  {
-    "id": "prac-urogen-009",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 9,
-    "slideTitle": "Tüberoz Skleroz Kompleksi (TSC): Genetik Temel, Renal Patolojiler ve mTOR İnhibisyonu",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Tüberoz skleroz kompleksi (TSC) patogenezinde rol oynayan hücresel sinyal yolağı ve hastalarda gelişen renal anjiyomiyolipomların tedavisinde kullanılan hedefe yönelik ajan aşağıdakilerden hangisinde doğru eşleştirilmiştir?",
-    "options": [
-      "A) Wnt/Beta-katenin yolağı hiperaktivasyonu — Erdafitinib",
-      "B) Rheb üzerinden mTORC1 yolağı hiperaktivasyonu — Everolimus",
-      "C) VHL/HIF yolağı inaktivasyonu — Belzutifan",
-      "D) Homolog rekombinasyon kusuru — Olaparib",
-      "E) EGFR tirozin kinaz hiperaktivasyonu — Gefitinib"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; TSC1 (hamartin) ve TSC2 (tüberin) proteinleri Rheb küçük GTPaz'ını inaktif formda tutan bir GAP kompleksi oluşturur. Fonksiyon kaybında Rheb sürekli GTP bağlı kalır ve mTORC1 aşırı aktifleşir. Bu nedenle TSC ilişkili renal anjiyomiyolipomların medikal tedavisinde mTOR inhibitörleri (Everolimus/Sirolimus) kullanılır."
-  },
-  {
-    "id": "prac-urogen-010",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 10,
-    "slideTitle": "Pediyatrik Renal Tümör Genetiği: Wilms Tümörü (Nefroblastom), WAGR ve Denys-Drash Sendromları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "2 yaşında bir erkek çocukta bilateral Wilms tümörü saptanıyor. Hastanın anamnezinde erken evrede proteinüri ve nefrotik sendrom geliştiği, yapılan böbrek biyopsisinde difüz mezangiyal skleroz izlendiği, genetik incelemede ise karyotipin 46,XY olmasına rağmen fenotipik olarak ambigus genitalya (gonadal disgenezis) bulunduğu tespit ediliyor.\n\nBu hastada en olası tanı ve sorumlu genetik anormallik aşağıdakilerden hangisidir?",
-    "options": [
-      "A) WAGR sendromu — 11p13 lokusunda tam delesyon",
-      "B) Beckwith-Wiedemann sendromu — 11p15 lokusunda imprinting kaybı",
-      "C) Denys-Drash sendromu — WT1 geninde dominant negatif nokta mutasyonu",
-      "D) Birt-Hogg-Dubé sendromu — FLCN geninde delesyon",
-      "E) Von Hippel-Lindau sendromu — VHL geninde missense mutasyon"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; Difüz mezangiyal skleroz (erken nefropati/böbrek yetmezliği), 46,XY gonadal disgenezisi (ambigus genitalya) ve çok yüksek Wilms tümörü riski Denys-Drash sendromunun klasik triadıdır. WAGR'daki 11p13 delesyonunun aksine, Denys-Drash sendromunda WT1 geninin çinko parmak bölgesinde dominant negatif etki gösteren spesifik nokta mutasyonları bulunur."
-  },
-  {
-    "id": "prac-urogen-011",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 11,
-    "slideTitle": "Wilms Tümörü ve Beckwith-Wiedemann Sendromu: 11p15 Lokusu (WT2) ve Epigenetik İmprinting",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Yenidoğan döneminde omfalosel ve ağır hipoglisemi saptanan bir bebekte, izlemde dilin ağza sığmayacak kadar büyük olduğu (makroglossi) ve sağ bacağının sol bacağına göre belirgin şekilde kalın ve uzun olduğu (hemihipertrofi) fark ediliyor. 18. ayda yapılan rutin batın ultrasonografisinde sağ böbrekte kitle saptanarak Wilms tümörü teşhisi konuluyor.\n\nBu klinik sendroma ve tümör gelişimine yol açan temel moleküler epigenetik bozukluk aşağıdakilerden hangisidir?",
-    "options": [
-      "A) 11p15 lokusundaki imprinting kaybı (LOI) veya paternal üniparental dizomi sonucu IGF2 aşırı ekspresyonu",
-      "B) 11p13 lokusundaki PAX6 ve WT1 genlerinin mikrodelesyonu",
-      "C) 3p25 lokusundaki VHL geninin promotör hipermetilasyonu",
-      "D) 17p11 lokusundaki FLCN geninde çerçeve kayması mutasyonu",
-      "E) Kromozom 7 ve 17'de trizomi meydana gelmesi"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Makroglossi, omfalosel, hemihipertrofi ve Wilms tümörü birlikteliği Beckwith-Wiedemann sendromunun (BWS) klasik tablosudur. BWS, kromozom 11p15.5 bölgesindeki imprinting kaybı (LOI), paternal üniparental dizomi (pUPD11) veya CDKN1C mutasyonları sonucu fetal büyüme faktörü olan IGF2'nin aşırı üretilmesiyle ortaya çıkar."
-  },
-  {
-    "id": "prac-urogen-012",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 12,
-    "slideTitle": "BAP1 Tümör Yatkınlık Sendromu ve Diğer Nadir Herediter Renal Kanserler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "38 yaşında bir kadın hastada sağ gözde görme kaybı sonrası uveal melanom saptanıyor. Aile öyküsü derinleştirildiğinde babasının 45 yaşında asbest maruziyeti olmaksızın plevral malign mezotelyomadan ve amcasının 42 yaşında metastatik berrak hücreli RCC nedeniyle vefat ettiği öğreniliyor. Hastanın yapılan renal BT'sinde sol böbrekte yüksek nükleer dereceli berrak hücreli RCC ile uyumlu kitle saptanıyor.\n\nBu ailede araştırılması gereken en olası germline genetik mutasyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) BAP1 geni mutasyonu",
-      "B) FLCN geni mutasyonu",
-      "C) MET geni mutasyonu",
-      "D) RET geni mutasyonu",
-      "E) WT1 geni mutasyonu"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Uveal melanom, malign mezotelyoma, kutanöz melanom ve yüksek dereceli agresif berrak hücreli renal hücreli karsinom birlikteliği kromozom 3p21'de yer alan BAP1 (BRCA1-associated protein 1) tümör yatkınlık sendromunun klasik spektrumudur."
-  },
-  {
-    "id": "prac-urogen-013",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 13,
-    "slideTitle": "Mesane Kanserine Giriş: Epidemiyoloji, Risk Faktörleri ve İkili Patogenez Modeli",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Mesane kanserinin epidemiyolojik özellikleri ve ikili (dual-track) patogenetik modeli ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Mesane karsinomlarının %90'ından fazlası transizyonel/ürotelyal karsinom histolojisindedir.",
-      "B) Yeni tanı alan hastaların yaklaşık %75'i kas-invaziv olmayan mesane kanseri (NMIBC) evresindedir.",
-      "C) Papiller yolak sıklıkla karsinoma in situ (CIS) zemininden gelişir ve hızla derin kas invazyonu yapar.",
-      "D) Sigara kullanımı mesane kanseri gelişimindeki en önemli ve en yaygın etiyolojik risk faktörüdür.",
-      "E) Şistozomiyazis (Schistosoma haematobium) enfeksiyonu zemininde skuamöz hücreli mesane karsinomu riski artar."
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır; karsinoma in situ (CIS) zemininden gelişen ve hızla derin kas tabakalarına invaze olan tümörler 'papiller' yolak değil, 'non-papiller invaziv' yolak ürünleridir. Papiller yolak ise hiperplazi zemininden gelişen, eksofitik, düşük dereceli ve kas invazyon potansiyeli düşük (Ta) lezyonlarla karakterizedir. A, B, D ve E seçenekleri doğrudur."
-  },
-  {
-    "id": "prac-urogen-014",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 14,
-    "slideTitle": "Non-İnvaziv Papiller Ürotelyal Karsinom Genetiği: FGFR3, HRAS ve Kromozom 9 Değişiklikleri",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Düşük dereceli, non-invaziv papiller ürotelyal karsinomların (Ta) moleküler patogenezinde en sık saptanan, MAPK yolağını aktive eden ve iyi prognozla ilişkili olan genetik mutasyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) TP53 inaktive edici nokta mutasyonu",
-      "B) RB1 gen delesyonu",
-      "C) FGFR3 aktive edici mutasyonu",
-      "D) BRCA2 çerçeve kayması mutasyonu",
-      "E) VHL gen inaktivasyonu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; Yüzeyel düşük dereceli papiller mesane karsinomlarının %70-85'inde FGFR3 reseptör tirozin kinaz geninde aktive edici somatik mutasyonlar saptanır. Bu mutasyon MAPK yolağını uyararak papiller proliferasyonu tetikler ve iyi prognozla ilişkilidir. TP53 ve RB1 invaziv karsinomlara özgüdür; BRCA2 prostat/meme; VHL berrak hücreli RCC'ye özgüdür."
-  },
-  {
-    "id": "prac-urogen-015",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 15,
-    "slideTitle": "Kas-İnvaziv Ürotelyal Karsinom Genetiği: TP53, RB1 ve TERT Promoter Mutasyonları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Mesane kanserlerinin hem yüzeyel hem de invaziv formlarında %70-80 gibi yüksek bir sıklıkta saptanan, yeni ETS transkripsiyon faktörü bağlanma bölgeleri oluşturarak telomeraz enzim aktivitesini artıran ve hücresel ölümsüzlük sağlayan mutasyonel değişiklik aşağıdakilerden hangisidir?",
-    "options": [
-      "A) TERT promotör mutasyonları (C228T / C250T)",
-      "B) FGFR3 ekzon 7 missense mutasyonu",
-      "C) HRAS kodon 12 nokta mutasyonu",
-      "D) VHL ekzon 1 delesyonu",
-      "E) TMPRSS2-ERG gen translokasyonu"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Mesane ürotelyal karsinomlarında en sık saptanan somatik mutasyon %70-80 sıklıkla TERT promotör mutasyonlarıdır (C228T ve C250T). Bu mutasyonlar ETS bağlanma motifi yaratarak telomeraz ters transkriptaz transkripsiyonunu artırır ve tümör hücresine replikatif ölümsüzlük kazandırır. İdrarda sıvı biyopsiyle erken tanıda kullanılır."
-  },
-  {
-    "id": "prac-urogen-016",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 16,
-    "slideTitle": "Mesane Kanserinde Moleküler Hedefe Yönelik Tedaviler ve İmmünoterapi",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Metastatik ürotelyal karsinom tanısıyla sisplatin bazlı kemoterapi alan ve 6 ay sonra progresyon gelişen 62 yaşındaki bir hastanın tümör dokusunda yapılan yeni nesil dizileme (NGS) analizinde FGFR3 geninde aktive edici S249C mutasyonu tespit ediliyor.\n\nBu hastada ikinci basamakta tercih edilmesi gereken FDA onaylı hedefe yönelik pan-FGFR tirozin kinaz inhibitörü ajan aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Erdafitinib",
-      "B) Aksitinib",
-      "C) Olaparib",
-      "D) Belzutifan",
-      "E) Kabozantinib"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Erdafitinib, platin kemoterapisi sırasında veya sonrasında progrese olan, duyarlı FGFR2 veya FGFR3 genetik mutasyonu/füzyonu taşıyan lokal ileri veya metastatik ürotelyal karsinomlu hastaların tedavisinde onaylanmış oral pan-FGFR tirozin kinaz inhibitörüdür. Aksitinib VEGFR inhibitörüdür; Olaparib PARP inhibitörüdür; Belzutifan HIF-2alfa inhibitörüdür."
-  },
-  {
-    "id": "prac-urogen-017",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 17,
-    "slideTitle": "Prostat Kanseri Genetiğine Giriş: Androjen Reseptör Sinyali ve Genomik Manzara",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Prostat adenokarsinomunun fizyopatolojisi, androjen sinyal iletimi ve genel moleküler yapısı ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Dihidrotestosteron (DHT), androjen reseptörüne (AR) bağlanarak nükleusa geçer ve ARE dizilerini uyarır.",
-      "B) Metastatik prostat karsinomlu hastaların yaklaşık %10-12'sinde germline DNA tamir gen mutasyonları saptanır.",
-      "C) Prostat kanseri hücreleri androjen hormonlarından tamamen bağımsız olup karsinogenezde östrojen reseptörleri primer rol oynar.",
-      "D) Birinci derece akrabalarında prostat kanseri öyküsü olan bireylerde kanser riski belirgin şekilde artar.",
-      "E) Metastatik prostat kanserinin başlangıç sistemik tedavisinin temelini androjen deprivasyon tedavisi (ADT) oluşturur."
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği kesinlikle yanlıştır; prostat kanseri hücreleri büyüme, proliferasyon ve sağkalım açısından primer olarak androjen hormonlarına (testosteron ve DHT) ve androjen reseptörüne (AR) bağımlıdır. Tedavide kastrasyon (ADT) uygulanmasının temel biyolojik mantığı da budur. Diğer seçenekler doğru klinik ve moleküler prensiplerdir."
-  },
-  {
-    "id": "prac-urogen-018",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 18,
-    "slideTitle": "Prostat Kanserinde TMPRSS2-ERG Gen Füzyonu ve PTEN Kaybı",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Prostat kanserlerinde yaklaşık %50 sıklıkta saptanan, androjen reseptörü tarafından regüle edilen bir serin proteaz geni ile ETS ailesi onkogenik bir transkripsiyon faktörü geninin kromozom 21q22 üzerindeki delesyon veya inversiyonu sonucu oluşan yapısal genetik alterasyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) BCR-ABL1 gen füzyonu",
-      "B) TMPRSS2-ERG gen füzyonu",
-      "C) EML4-ALK gen füzyonu",
-      "D) FGFR3-TACC3 gen füzyonu",
-      "E) EWSR1-FLI1 gen füzyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; TMPRSS2-ERG füzyonu prostat kanserlerinin yaklaşık yarısında (%50) saptanan en yaygın yapısal kromozomal anomalidir. Kromozom 21q22'deki inversiyon/delesyon sonucu androjen yanıtlı TMPRSS2 geni ile ETS ailesi transkripsiyon faktörü ERG birleşir ve tümör invazyonunu tetikler."
-  },
-  {
-    "id": "prac-urogen-019",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 19,
-    "slideTitle": "Herediter Prostat Kanseri: BRCA2, HOXB13 ve DNA Hasar Tamir (DDR) Genleri",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Ailesinde erken yaşta meme ve prostat kanseri öyküsü bulunan 52 yaşında bir erkek hastada biyopside Gleason 9 (4+5) prostat adenokarsinomu ve kemik metastazı saptanıyor. Yapılan germline genetik testte homolog rekombinasyon tamir yolağında rol alan bir tümör süpresör geninde patojenik mutasyon saptanıyor.\n\nErkeklerde prostat kanseri riskini en yüksek oranda artıran ve en agresif histopatolojik seyirle ilişkili olan bu gen aşağıdakilerden hangisidir?",
-    "options": [
-      "A) BRCA2",
-      "B) VHL",
-      "C) FLCN",
-      "D) MET",
-      "E) WT1"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; BRCA2 germline mutasyonları erkeklerde prostat kanseri riskini 5 ila 8 kat artırarak en yüksek riski oluşturur. Ayrıca bu tümörler çok genç yaşta, yüksek Gleason skorlu (Gleason 8-10), hızlı kemik metastazı yapan ve sağkalımı en kısa olan agresif fenotiptedir. VHL böbrekte; FLCN BHD'de; MET papiller RCC'de; WT1 Wilms'tedir."
-  },
-  {
-    "id": "prac-urogen-020",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 20,
-    "slideTitle": "Kastrasyona Dirençli Prostat Kanseri (CRPC) ve PARP İnhibitörleri",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Metastatik kastrasyona dirençli prostat kanseri (mCRPC) tanısı olan ve somatik BRCA2 mutasyonu saptanan bir hastada, tek zincir DNA kırık tamirinde görevli PARP enzimini inhibe ederek tümör hücresini 'sentetik letalite' yoluyla apoptoza götüren hedefe yönelik ilaç aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Olaparib",
-      "B) Erdafitinib",
-      "C) Belzutifan",
-      "D) Everolimus",
-      "E) Kabozantinib"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; Olaparib (ve Rucaparib), PARP inhibitörüdür. BRCA1/2 veya diğer HRR gen mutasyonu taşıyan mCRPC olgularında tek zincir kırık tamirini engelleyerek replikasyon sırasında çift zincir kırıkları oluşturur ve homolog rekombinasyon kusuru olan tümör hücresini sentetik letalite mekanizmasıyla öldürür. Erdafitinib FGFR; Belzutifan HIF-2alfa; Everolimus mTOR; Kabozantinib MET/VEGFR inhibitörüdür."
-  },
-  {
-    "id": "prac-urogen-021",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 21,
-    "slideTitle": "Androjen Reseptör (AR) Varyantları ve Hormon Tedavisine Direnç Mekanizmaları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Kastrasyona dirençli prostat kanseri (CRPC) nedeniyle takip edilen ve yeni nesil androjen yolağı inhibitörleri (Enzalutamid/Abirateron) tedavisine primer direnç geliştiren bir hastanın dolaşımdaki tümör hücrelerinde (CTC) yapılan analizde, androjen reseptörünün ligand bağlanma alanının (LBD) bulunmadığı ve reseptörün liganda bağımsız sürekli aktif kaldığı saptanıyor.\n\nBu direnç tablosundan sorumlu temel androjen reseptör splice varyantı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) AR-V7",
-      "B) BRCA2",
-      "C) TMPRSS2",
-      "D) ERG",
-      "E) HOXB13"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur; AR-V7 (Androgen Receptor Splice Variant 7), alternatif mRNA kırpılmasıyla ligand bağlama domaini (LBD) çıkartılmış, ancak nükleer transkripsiyon aktivasyon domeni korunan bir AR varyantıdır. Ligand cebi olmadığı için Enzalutamid veya Abirateron gibi hormonoterapilerden etkilenmez, sürekli nükleusta aktif kalarak mitozu sürdürür. Bu hastalarda kemoterapi tercih edilir."
-  },
-  {
-    "id": "prac-urogen-022",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 22,
-    "slideTitle": "Testis Germ Hücreli Tümörleri (TGCT): Sınıflama, Epidemiyoloji ve Risk Faktörleri",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Testiküler germ hücreli tümörlerin (TGCT) epidemiyolojisi, risk faktörleri ve histopatolojik alt tipleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) 20-35 yaş grubu genç erkeklerde en sık görülen katı organ malignitesidir.",
-      "B) Kriptorşidizm öyküsü olan bireylerde testis tümörü gelişme riski 4 ila 10 kat artar.",
-      "C) Klinefelter sendromlu (47,XXY) bireylerde özellikle mediastinal yerleşimli non-seminomatöz tümör riski yüksektir.",
-      "D) Seminomlar radyoterapiye tamamen dirençli olup sadece cerrahi nefrektomi ile tedavi edilir.",
-      "E) TGCT'li bir hastanın erkek kardeşinde testis tümörü gelişme riski yaklaşık 8-10 kat artmaktadır."
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği kesinlikle yanlıştır; seminomlar radyoterapiye ve kemoterapiye (özellikle platin türevlerine) olağanüstü derecede duyarlıdır (radyosensitif). Ayrıca testis tümörlerinde nefrektomi değil radikal inguinal orşiektomi uygulanır. A, B, C ve E seçenekleri doğru epidemiyolojik ve klinik bilgilerdir."
-  },
-  {
-    "id": "prac-urogen-023",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 23,
-    "slideTitle": "Testis Tümörlerinde Patognomonik Genetik Belirteç: İzokromozom 12p ve KIT Geni",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "28 yaşında bir erkek hastada retroperitoneal alanda dev kitle saptanıyor. Yapılan biyopside indiferansiye malign yuvarlak hücreli tümör izleniyor. Primer tümör odağını saptamak ve lezyonun testiküler germ hücreli tümör (TGCT) kaynaklı olup olmadığını kesinleştirmek amacıyla sitogenetik inceleme planlanıyor.\n\nTGCT'lerin (seminom ve non-seminom) %90'ında saptanan ve tanıda patognomonik kabul edilen spesifik sitogenetik belirteç aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Trizomi 7 ve Trizomi 17",
-      "B) İzokromozom 12p [i(12p)]",
-      "C) 3p25 delesyonu",
-      "D) TMPRSS2-ERG translokasyonu",
-      "E) 11p13 mikrodelesyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; İzokromozom 12p [i(12p)], testiküler germ hücreli tümörlerin (hem seminom hem non-seminomların) yaklaşık %90'ında bulunan, retroperitoneal veya mediastinal kaynaklı bilinmeyen kitlelerde germ hücre orijinini kanıtlayan patognomonik sitogenetik belirteçtir. 12p'deki CCND2, KRAS ve NANOG gen dozaj artışıyla karsinogenezi tetikler."
-  },
-  {
-    "id": "prac-urogen-024",
-    "deckId": "learn-urogenital-tumorlerde-genetik",
-    "deckTitle": "Ürogenital Sistem Tümörlerinde Genetik ve Moleküler Belirteçler",
-    "slideNumber": 24,
-    "slideTitle": "Ürogenital Sistemde Jinekolojik ve Herediter Kanser Kesişimleri: TCGA Endometrium, HBOC ve Genel Sentez",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1",
-    "question": "Endometriyum karsinomunun TCGA moleküler sınıflaması ve ürogenital herediter kanser sendromları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) POLE mutasyonlu endometriyal tümörler aşırı yüksek mutasyon yüküne (ultramutated) sahip olmalarına rağmen mükemmel bir klinik prognoz sergilerler.",
-      "B) TP53 mutasyonu taşıyan 'Copy-number high' endometriyal karsinomlar en agresif ve en kötü sağkalımlı grubu oluşturur.",
-      "C) Lynch sendromunda (dMMR) kadınlarda kolorektal kanser dışındaki en sık görülen malignite endometriyal karsinomdur.",
-      "D) BRCA1 ve BRCA2 mutasyonları sadece kadınlarda over kanseri yapar, erkeklerde ürogenital sistem kanseri riskine hiçbir etkisi yoktur.",
-      "E) Mikrosatellit instabilitesi yüksek (MSI-H) endometriyal ve prostat tümörleri immün kontrol noktası inhibitörlerine (anti-PD-1) yüksek yanıt verir."
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği kesinlikle yanlıştır; BRCA1 ve özellikle BRCA2 germline mutasyonları erkeklerde prostat kanseri riskini 5 ila 8 kat artırır, tümörün genç yaşta ve agresif (Gleason 8-10, metastatik) seyretmesine yol açar; ayrıca erkek meme kanseri riskini de belirgin şekilde artırır. A, B, C ve E seçenekleri doğru moleküler ve klinik ilkelerdir."
-  },
-  {
-    "id": "prac-bebek-beslenme-001",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 1,
-    "slideTitle": "Bebek Beslenmesinin Epidemiyolojisi ve Küresel Hedefler",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Dünya Sağlık Örgütü (DSÖ) ve UNICEF'in küresel çocuk sağlığı ve beslenme stratejileri doğrultusunda, optimal bebek beslenmesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Yenidoğanın doğumdan sonraki ilk 1 saat içinde emzirilmeye başlanması önerilir.",
-      "B) Yaşamın ilk 6 ayında anne sütü alan bebeğe sıcak iklimlerde dahi su verilmesine gerek yoktur.",
-      "C) Tamamlayıcı besinlere altıncı ayın bitiminde başlanmalı ve emzirme 2 yaşına veya daha sonrasına kadar sürdürülmelidir.",
-      "D) Dünyada beş yaş altı çocuk ölümlerinin yaklaşık yarısı malnütrisyonla ilişkilidir.",
-      "E) Bebek doğum ağırlığının iki katına ulaştığı 4. ayda anne sütü yetersizleştiğinden tamamlayıcı katı gıdalara geçilmelidir."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Tamamlayıcı besinlere geçiş için önerilen zaman tam 6. ayın bitimidir (180. gün). İlk 6 ayda anne sütü bebeğin tüm enerji, sıvı ve makro-mikrobesin gereksinimlerini %100 oranında tek başına karşılar. 4. ayda bebeğin tartısının iki katına çıkması fizyolojik bir büyüme süreci olup ek gıdaya başlama endikasyonu değildir; aksine 6 aydan önce ek gıdaya başlamak alerji, enfeksiyon ve anne sütünün erken kesilmesi riskini doğurur."
-  },
-  {
-    "id": "prac-bebek-beslenme-002",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 2,
-    "slideTitle": "Süt Çocuğunda Fizyolojik Büyüme Dinamikleri ve Sıvı Dağılımı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Zamanında, normal spontan vajinal yolla 3200 gram ve 50 cm olarak doğan sağlıklı bir bebeğin büyüme basamakları ile ilgili aşağıdaki beklentilerden hangisi fizyolojik gelişim kurallarına uymaz?",
-    "options": [
-      "A) Bebeğin yaşamın 3. gününde tartısının 3000 grama gerilemesi patolojik kabul edilmez.",
-      "B) Bebeğin en geç 10-14. günlerde tekrar 3200 grama ulaşması beklenir.",
-      "C) Bebeğin 5. ay civarında tartısının yaklaşık 6400 gram olması beklenir.",
-      "D) Bebeğin 1 yaşındaki tahmini boyunun yaklaşık 100 cm olması beklenir.",
-      "E) Bebeğin 1 yaşındaki tahmini ağırlığının yaklaşık 9600 gram olması beklenir."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Bebeğin boyu ilk 1 yılda %50 artarak ortalama 75 cm'ye ulaşır. Doğum boyunun iki katına (50 cm x 2 = 100 cm) ulaştığı yaş 1 yaş değil, 4 yaştır. Diğer seçeneklerdeki 4-5. ayda ağırlığın 2 katına (6400 g) ve 1 yaşında 3 katına (9600 g) çıkması ile ilk günlerdeki %5-10 fizyolojik tartı kaybı tamamen doğrudur."
-  },
-  {
-    "id": "prac-bebek-beslenme-003",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 3,
-    "slideTitle": "Gastrointestinal ve Renal İmmatüritenin Beslenme Açısından Önemi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Süt çocuğunun gastrointestinal ve renal fizyolojisi ile ilgili aşağıdaki ifadelerden hangisi, beslenme yönetimi açısından doğru bir gerekçe sunmaz?",
-    "options": [
-      "A) Yenidoğanda mide kapasitesinin 10-20 mL olması nedeniyle ilk günlerde sık aralıklarla az miktarda besleme fizyolojiktir.",
-      "B) Gastrik asiditenin ilk haftalarda düşük olması, anne sütündeki sekretuvar IgA'nın denatüre olmadan bağırsağa ulaşmasını destekler.",
-      "C) Pankreatik amilaz aktivitesi doğumda erişkin düzeyinde olduğundan kompleks nişastalı katı gıdalar ilk aydan itibaren sindirilebilir.",
-      "D) Anne sütünün kazein/whey oranı sayesinde midede gevşek pıhtı oluşur ve mide boşalması inek sütüne göre daha hızlıdır.",
-      "E) İnfant böbreğinin idrar konsantrasyon kapasitesinin kısıtlı olması, yüksek solüt yüküne sahip gıdaların dehidratasyon riskini artırmasına neden olur."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Pankreatik amilaz aktivitesi yaşamın ilk 4-6 ayında neredeyse yoktur; kompleks polisakkaritleri sindiremez. Bu nedenle nişastalı ek gıdalara 6. aydan önce başlanmaz. Diğer tüm seçenekler doğru fizyolojik mekanizmaları açıklar."
-  },
-  {
-    "id": "prac-bebek-beslenme-004",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 4,
-    "slideTitle": "Süt Çocuğunda Enerji, Sıvı ve Makrobesin İhtiyaçları",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Üç aylık, sadece anne sütü ile beslenen, doğum tartısı 3200 g ve şu anki tartısı 6000 g olan sağlıklı bir süt çocuğunun beslenmesi ve hidrasyonu ile ilgili aşağıdaki klinik değerlendirmelerden hangisi yanlıştır?",
-    "options": [
-      "A) Günlük enerji gereksinimi yaklaşık 100-110 kcal/kg/gün düzeyindedir.",
-      "B) Bebeğin günde 6-8 kez bezini ıslatması ve huzurlu uyuması sıvı alımının yeterli olduğunu gösterir.",
-      "C) Yaz aylarında havanın çok sıcak olması durumunda her emzirme seansından sonra 30-50 mL kaynatılmış ılık su verilmelidir.",
-      "D) Bebeğin günlük sıvı gereksinimi yaklaşık 140-160 mL/kg/gün düzeyindedir.",
-      "E) Anne sütünün yaklaşık %87'si su olduğu için böbreklerin serbest su ihtiyacını eksiksiz karşılar."
-    ],
-    "correctAnswer": 0,
-    "explanation": "İlk 6 ay sadece anne sütü alan bir bebeğe aşırı sıcak havalarda bile su verilmemelidir. Ek su verilmesi mide hacmini kaplayarak anne sütü alımını azaltır, hiponatremi (su zehirlenmesi) riski yaratır ve kontaminasyonla ishale zemin hazırlar. Sıcak havalarda çözüm daha sık emzirmektir."
-  },
-  {
-    "id": "prac-bebek-beslenme-005",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 5,
-    "slideTitle": "Protein ve Yağ Metabolizması: Esansiyel Yağ Asitleri ve Taurin",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Anne sütünün biyokimyasal içeriğinde bulunan lipid ve amino asit fraksiyonları ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Anne sütü enerjisinin yaklaşık %50'si yağlardan sağlanmaktadır.",
-      "B) Linoleik asit anne sütü enerjisinin yaklaşık %5'ini oluşturarak cilt bütünlüğü ve büyüme gereksinimini karşılar.",
-      "C) Anne sütünde serbest taurin konsantrasyonu inek sütüne göre 30-40 kat daha fazladır.",
-      "D) DHA ve ARA, retina fotoreseptör tabakası ve serebral korteks gelişimi için kritik öneme sahip LC-PUFA türevleridir.",
-      "E) Yenidoğan döneminde protein ihtiyacı erişkinden düşük olduğu için ilk 6 ayda kilogram başına 0.8 g protein verilmesi yeterlidir."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Yenidoğan ve süt çocuğunda hızlı somatik büyüme nedeniyle kilogram başına protein ihtiyacı erişkinden (erişkin ~0.8-1.0 g/kg/gün) çok daha yüksektir. 0-6 ayda protein ihtiyacı 2.2 g/kg/gün, 7-12 ayda ise 1.6 g/kg/gün düzeyindedir."
-  },
-  {
-    "id": "prac-bebek-beslenme-006",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 6,
-    "slideTitle": "Mikrobesin Dengesi: Demir, Çinko, Kalsiyum-Fosfor ve Flor",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Süt çocuğu beslenmesinde demir ve kalsiyum-fosfor dengesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Anne sütündeki demirin biyoyararlanımı yaklaşık %50 iken, inek sütündeki demirin emilimi yaklaşık %10 düzeyindedir.",
-      "B) Term doğan sağlıklı bir bebeğin demir depoları genellikle doğum ağırlığının iki katına ulaştığı 4-6. aylara kadar yeterlidir.",
-      "C) İnek sütü ile beslenen yenidoğanlarda aşırı fosfor yüklenmesine bağlı olarak neonatal hipokalsemik tetani riski artar.",
-      "D) Anne sütündeki Ca/P oranı yaklaşık 2:1 olup kalsiyumun emilimi için optimal fizyolojik ortamı sağlar.",
-      "E) Anne sütü alan term bebeklere demir depolarının zengin olması nedeniyle 1 yaşına kadar hiçbir koşulda profilaktik demir verilmemelidir."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Term bebeklerin demir depoları 4-6. ayda tükenir. Anne sütü demirinin biyoyararlanımı yüksek olsa da mutlak miktarı düşüktür ve 4. aydan sonra artan kan volümünü karşılayamaz. Bu nedenle Sağlık Bakanlığı protokolüne göre tüm term bebeklere 4. aydan itibaren 1 mg/kg/gün profilaktik demir başlanması zorunludur."
-  },
-  {
-    "id": "prac-bebek-beslenme-007",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 7,
-    "slideTitle": "Vitamin Profili ve Yaşamın Başındaki Rutin Profilaksiler",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Yenidoğan ve süt çocuğu döneminde vitamin gereksinimleri ve rutin profilaksiler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Yenidoğanın hemorajik hastalığını önlemek amacıyla doğumu takiben 1 mg K vitamini intramüsküler uygulanır.",
-      "B) Anne sütü D vitamini açısından zengin olduğu için sadece anne sütü alan bebeklere ilk 6 ay D vitamini desteği gerekmez.",
-      "C) Katı vejetaryen annelerin anne sütü ile beslenen bebeklerinde B12 vitamini eksikliği ve megaloblastik anemi görülebilir.",
-      "D) Keçi sütü folik asit ve B12 vitamini açısından yetersiz olduğundan bebeklerde megaloblastik anemiye yol açabilir.",
-      "E) Anne sütü C vitamini açısından zengin olup ilk 6 ayda bebeğin gereksinimini tam olarak karşılar."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Anne sütü hemen tüm besin ögelerinden zengin olmasına rağmen D vitamininden fakirdir (litrede sadece 20-40 IU). Bu nedenle sadece anne sütü alanlar dahil tüm bebeklere doğumdan itibaren günlük 400 IU D vitamini profilaksisi verilmesi zorunludur."
-  },
-  {
-    "id": "prac-bebek-beslenme-008",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 8,
-    "slideTitle": "Laktasyonun Evreleri: Kolostrum, Geçiş Sütü ve Olgun Süt Dinamikleri",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Doğumdan sonraki ilk 4-5 gün boyunca salgılanan kolostrum (ağız sütü) ile olgun anne sütünün karşılaştırılması hakkında aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Kolostrumun protein içeriği olgun anne sütüne göre daha yüksektir.",
-      "B) Kolostrum sekretuvar IgA, laktoferrin ve lökositler açısından son derece zengindir.",
-      "C) Kolostrumun laktoz ve yağ konsantrasyonu olgun anne sütünden daha yüksektir.",
-      "D) Kolostrum içerdiği sodyum, potasyum ve klor gibi mineraller yönünden olgun sütten zengindir.",
-      "E) Kolostrum laksatif etkisiyle mekonyumun atılımını hızlandırarak neonatal sarılık riskini azaltır."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kolostrum olgun süte göre DAHA AZ yağ ve DAHA AZ laktoz içerir. Buna karşılık protein, sodyum, klor, çinko, A vitamini, sIgA ve laktoferrin konsantrasyonu olgun sütten belirgin şekilde daha yüksektir."
-  },
-  {
-    "id": "prac-bebek-beslenme-009",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 9,
-    "slideTitle": "Emzirme Seansının İç Dinamiği: Ön Süt ile Son Süt Arasındaki Kritik Denge",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "İki aylık sağlıklı bir bebeğin annesi; bebeğin emzirme sonrasında sürekli ağladığını, karnında aşırı gaz olduğunu, dışkısının yeşil renkli, sulu ve köpüklü olduğunu ve son kontrolde yeterli kilo alamadığını belirtiyor. Öyküde annenin sütü bol olduğu için bebeği her iki memeden 5'er dakika emzirip bıraktığı öğreniliyor. Bu tablonun altında yatan temel patofizyolojik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Anne sütünde kazein oranının aşırı yüksek olması",
-      "B) Bebeğin yağdan zengin son sütü alamayıp laktozdan zengin ön sütü aşırı tüketmesi",
-      "C) Annede sekretuvar IgA eksikliğine bağlı sekonder enfeksiyon",
-      "D) Bebekte konjenital laktaz eksikliği tablosu",
-      "E) Anne sütünde renal solüt yükünün yüksek olması"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Bebek memeyi tamamen boşaltmadan diğer memeye geçirildiğinde, yağdan zengin kalorili 'son süt'ü alamaz; sadece su ve laktozdan zengin 'ön süt'ü alır. Aşırı laktoz kolonda bakterilerce fermente edilir; laktik asit ve hidrojen gazı açığa çıkarak infantil kolik, asidik-köpüklü yeşil dışkı, pişik ve kalori yetersizliğine bağlı kilo alamama tablosuna yol açar."
-  },
-  {
-    "id": "prac-bebek-beslenme-010",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 10,
-    "slideTitle": "Biyokimyasal Karşılaştırma I: Kazein ve Whey Fraksiyonları",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Anne sütü ile inek sütünün protein fraksiyonları ve özellikleri karşılaştırıldığında aşağıdaki ifadelerden hangisi doğru bir bilgidir?",
-    "options": [
-      "A) Anne sütünde kazein/whey oranı 80:20 olup inek sütünden daha sert pıhtı oluşturur.",
-      "B) İnek sütünde bulunan en önemli alerjen protein olan beta-laktoglobulin anne sütünde kesinlikle bulunmaz.",
-      "C) İnek sütünün mide boşalma süresi anne sütünden daha kısadır.",
-      "D) Anne sütü whey proteinlerinin büyük kısmını alfa-s1 kazein oluşturur.",
-      "E) Anne sütündeki toplam protein konsantrasyonu inek sütündekinden yaklaşık 3 kat daha fazladır."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Beta-laktoglobulin inek sütünün ana whey proteini ve süt çocukluğundaki en güçlü alerjendir; insan sütünde kesinlikle bulunmaz. Anne sütünde Kazein/Whey oranı 40:60 iken inek sütünde 80:20'dir. Anne sütü toplam proteini ~1 g/dL iken inek sütü ~3.3 g/dL'dir."
-  },
-  {
-    "id": "prac-bebek-beslenme-011",
-    "deckId": "learn-bebek-beslenmesi",
-    "deckTitle": "Bebek Beslenmesi, Anne Sütü İmmünolojisi, Tamamlayıcı Beslenme ve Malnütrisyon",
-    "slideNumber": 11,
-    "slideTitle": "Biyokimyasal Karşılaştırma II: Karbonhidratlar, Lipitler ve Biyoyararlanım",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1",
-    "question": "Anne sütü ile inek sütünün karbonhidrat, demir ve yağ sindirimi parametreleri karşılaştırıldığında aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Anne sütündeki laktoz konsantrasyonu inek sütündekinden belirgin şekilde daha yüksektir.",
-      "B) Laktozun bağırsakta laktik aside fermente olması lümen pH'sını düşürerek kalsiyum ve demir emilimini kolaylaştırır.",
-      "C) Anne sütündeki demirin yaklaşık %50-60'ı emilirken, inek sütündeki demirin yalnızca %10'u emilebilir.",
-      "D) Anne sütü alan bebeğe erken dönemde meyve püresi başlanması demir emilimini %50'den %10'a düşürür.",
-      "E) İnek sütü yüksek miktarda safra tuzu bağımlı lipaz (BSSL) içerdiği için yağ emilim yüzdesi anne sütünden üstündür."
-    ],
-    "correctAnswer": 0,
-    "explanation": "BSSL (Safra Tuzu Bağımlı Lipaz) enzimi anne sütünde bulunur, inek sütünde bulunmaz. Bu sayede anne sütü yağı %95 oranında emilirken, inek sütü yağının %20-48'i sindirilemeden feçesle kaybedilir."
   }
 ]
