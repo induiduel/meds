@@ -37,21 +37,41 @@ for d in decks:
     if nshort:
         deck_map[nshort] = d
 
+import difflib
+
 # Compare with Drive PDFs
 matched_list = []
 missing_decks = []
 
 for p in pdfs:
     fname = p.get('name', '').replace('.pdf', '')
-    # Strip leading numbers like "1) ", "2) ", "'", etc.
     clean_name = re.sub(r'^\d+\s*[\)\.\-]\s*', '', fname).strip("'\" ")
     norm_fname = norm_text(clean_name)
 
-    found_deck = None
-    for k, d in deck_map.items():
-        if norm_fname in k or k in norm_fname or (len(norm_fname) > 6 and norm_fname[:10] in k):
-            found_deck = d
-            break
+    if 'ders program' in norm_fname or 'dersprogram' in norm_fname:
+        found_deck = next((d for d in decks if d.get('id') == 'learn-donem3-kurul1-mufredat-rehberi'), None)
+    else:
+        best_deck = None
+        best_score = 0.0
+        for d in decks:
+            did = norm_text(d.get('id', ''))
+            dtitle = norm_text(d.get('title', ''))
+            dshort = norm_text(d.get('shortTitle', ''))
+            score = 0.0
+            if norm_fname == dtitle or norm_fname == did or norm_fname == dshort:
+                score = 1.0
+            elif len(norm_fname) > 6 and (norm_fname in dtitle or dtitle in norm_fname):
+                score = 0.85
+            elif len(norm_fname) > 6 and (norm_fname in did or did in norm_fname):
+                score = 0.85
+            else:
+                s1 = difflib.SequenceMatcher(None, norm_fname, dtitle).ratio()
+                s2 = difflib.SequenceMatcher(None, norm_fname, did).ratio()
+                score = max(s1, s2)
+            if score > best_score:
+                best_score = score
+                best_deck = d
+        found_deck = best_deck if best_score >= 0.55 else None
 
     if found_deck:
         matched_list.append({

@@ -1,9 +1,23 @@
 {
-  "updatedAt": "2026-10-03T00:10:21.198Z",
+  "updatedAt": "2026-10-03T00:10:21.129Z",
   "totalDrivePdfs": 47,
-  "readyCount": 46,
-  "pendingCount": 1,
+  "readyCount": 47,
+  "pendingCount": 0,
   "readyDecks": [
+    {
+      "pdf": {
+        "id": "1Pt7CdqdFeoWnwZflCaGlR8Eg9nkan4Qk",
+        "name": "2026-27 D3 ders programı.pdf",
+        "mime": "application/pdf",
+        "isFolder": false,
+        "parentFolderId": "1JKMycay0Dx18tw4_2j2cZXgm9xLxYoi6",
+        "fullPath": "Meds_Drive_Root / Ders Programı  / 2026-27 D3 ders programı.pdf"
+      },
+      "cleanName": "27 D3 ders programı",
+      "deckId": "learn-donem3-kurul1-mufredat-rehberi",
+      "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Ağırlıkları",
+      "slideCount": 24
+    },
     {
       "pdf": {
         "id": "1QH4lySK6sYAOYHM-P3TpGbpVwo08lPFh",
@@ -42,8 +56,8 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Enfeksiyon Hastalıkları  / 3)İzolasyon yöntemleri.pdf"
       },
       "cleanName": "İzolasyon yöntemleri",
-      "deckId": "learn-enfeksiyon-hastaliklari",
-      "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+      "deckId": "learn-izolasyon-yontemleri",
+      "deckTitle": "İzolasyon Yöntemleri",
       "slideCount": 20
     },
     {
@@ -56,9 +70,9 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Enfeksiyon Hastalıkları  / 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf"
       },
       "cleanName": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
-      "deckId": "deck-urinary-tract-infections",
-      "deckTitle": "Üriner Sistem Enfeksiyonları",
-      "slideCount": 21
+      "deckId": "learn-enfeksiyon-temel-kavramlar",
+      "deckTitle": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+      "slideCount": 24
     },
     {
       "pdf": {
@@ -70,9 +84,9 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Halk Sağlığı  / 1)Halk SağlığıTarihçesi.pdf"
       },
       "cleanName": "Halk SağlığıTarihçesi",
-      "deckId": "learn-halk-sagligi-salgin-has",
-      "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
-      "slideCount": 18
+      "deckId": "learn-halk-sagligi-tarihcesi-ve",
+      "deckTitle": "Halk Sağlığı Tarihçesi ve Koruyucu Hekimlik",
+      "slideCount": 24
     },
     {
       "pdf": {
@@ -126,9 +140,9 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Halk Sağlığı  / 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf"
       },
       "cleanName": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri",
-      "deckId": "deck-urinary-tract-infections",
-      "deckTitle": "Üriner Sistem Enfeksiyonları",
-      "slideCount": 21
+      "deckId": "learn-enfeksiyon-epidemiyoloji",
+      "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri",
+      "slideCount": 24
     },
     {
       "pdf": {
@@ -308,8 +322,8 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 8)Enflamasyonun Kimyasal Mediyatörleri.pdf"
       },
       "cleanName": "Enflamasyonun Kimyasal Mediyatörleri",
-      "deckId": "deck-acute-inflammation-pathology",
-      "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+      "deckId": "learn-enflamasyon-kimyasal-mediyatorleri",
+      "deckTitle": "Enflamasyonun Kimyasal Mediyatörleri: Vazoaktif Aminler, Araşidonik Asit Metabolitleri, Sitokinler ve Kompleman Sistemi",
       "slideCount": 22
     },
     {
@@ -336,8 +350,8 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 10)Doku Onarımı ve Yara İyileşmesi.pdf"
       },
       "cleanName": "Doku Onarımı ve Yara İyileşmesi",
-      "deckId": "learn-kronik-enflamasyon",
-      "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
+      "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+      "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
       "slideCount": 22
     },
     {
@@ -364,9 +378,9 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 12) Tromboz Patofizyolojisi.pdf"
       },
       "cleanName": "Tromboz Patofizyolojisi",
-      "deckId": "learn-tromboz-patofizyolojisi",
-      "deckTitle": "Tromboz Patofizyolojisi, Virchow Triadı ve Trombofili",
-      "slideCount": 6
+      "deckId": "learn-tromboz-patofizyolojisi-tam",
+      "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+      "slideCount": 24
     },
     {
       "pdf": {
@@ -378,9 +392,9 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 13) Emboli,enfarktüs ve şok.pdf"
       },
       "cleanName": "Emboli,enfarktüs ve şok",
-      "deckId": "learn-emboli-enfarktus-sok",
-      "deckTitle": "Emboli Tipleri, Enfarktüs ve Şok Patofizyolojisi",
-      "slideCount": 4
+      "deckId": "learn-iskemi-infarktus-ve-sok",
+      "deckTitle": "İskemi, İnfarktüs ve Şok Patolojisi",
+      "slideCount": 24
     },
     {
       "pdf": {
@@ -490,8 +504,8 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Tıbbi Patoloji  / 21)Glomerüler Hastalıklar: Nefrotik Sendrom.pdf"
       },
       "cleanName": "Glomerüler Hastalıklar: Nefrotik Sendrom",
-      "deckId": "learn-glomeruler-hastaliklar-nefrotik",
-      "deckTitle": "Glomerüler Hastalıklar: Nefrotik Sendrom Patolojisi",
+      "deckId": "learn-glomeruler-hastaliklar-nefritik",
+      "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi",
       "slideCount": 22
     },
     {
@@ -630,9 +644,9 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Üroloji / 4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi'.pdf"
       },
       "cleanName": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-      "deckId": "deck-urinary-tract-infections",
-      "deckTitle": "Üriner Sistem Enfeksiyonları",
-      "slideCount": 21
+      "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+      "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+      "slideCount": 24
     },
     {
       "pdf": {
@@ -644,24 +658,10 @@
         "fullPath": "Meds_Drive_Root / Kurul 1 / Üroloji / 5) Üriner Sistemin Spesifik Enfeksiyonları.pdf"
       },
       "cleanName": "Üriner Sistemin Spesifik Enfeksiyonları",
-      "deckId": "deck-urinary-tract-infections",
-      "deckTitle": "Üriner Sistem Enfeksiyonları",
-      "slideCount": 21
+      "deckId": "learn-uriner-sistemin-spesifik-enfeksiyonlari",
+      "deckTitle": "Üriner Sistemin Spesifik Enfeksiyonları",
+      "slideCount": 24
     }
   ],
-  "pendingPdfs": [
-    {
-      "pdf": {
-        "id": "1Pt7CdqdFeoWnwZflCaGlR8Eg9nkan4Qk",
-        "name": "2026-27 D3 ders programı.pdf",
-        "mime": "application/pdf",
-        "isFolder": false,
-        "parentFolderId": "1JKMycay0Dx18tw4_2j2cZXgm9xLxYoi6",
-        "fullPath": "Meds_Drive_Root / Ders Programı  / 2026-27 D3 ders programı.pdf"
-      },
-      "cleanName": "27 D3 ders programı",
-      "normName": "27d3dersprogrami",
-      "fullPath": "Meds_Drive_Root / Ders Programı  / 2026-27 D3 ders programı.pdf"
-    }
-  ]
+  "pendingPdfs": []
 }

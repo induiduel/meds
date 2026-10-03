@@ -57,7 +57,10 @@ for p in pdfs:
             best_score = score
             best_deck = d
             
-    matched = best_deck if best_score >= 0.55 else None
+    if 'ders program' in nfn or 'dersprogram' in nfn:
+        matched = next((d for d in decks if d.get('id') == 'learn-donem3-kurul1-mufredat-rehberi'), None)
+    else:
+        matched = best_deck if best_score >= 0.55 else None
     report.append({
         'name': fn,
         'clean': clean,
