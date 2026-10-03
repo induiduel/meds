@@ -6037,5 +6037,113 @@
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1",
     "definition": "Tümör hücrelerinin epitelin tüm katlarını doldurmasına rağmen bazal membranı AŞMADIĞI pre-invaziv malign neoplazi evresi."
+  },
+  "üropatojenik escherichia coli": {
+    "term": "Üropatojenik Escherichia coli",
+    "category": "mikrobiyoloji",
+    "description": "Toplum kökenli komplike olmayan üriner sistem enfeksiyonlarının %75-90'ından sorumlu, özgül virülans faktörleri (Tip 1 pili, P fimbriyası, alfa-hemolizin) taşıyan E. coli alt grubudur.",
+    "clinicalPearl": "TUS & Komite Sorusu: Akut piyelonefrite neden olan UPEC suşlarının böbrek toplayıcı tübül epitelindeki digalaktozid (Gal-Gal) reseptörlerine bağlanmasını sağlayan adezin 'P fimbriyası (Pap pili)'dır.",
+    "discipline": "Üroloji / Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "definition": "Toplum kökenli komplike olmayan üriner sistem enfeksiyonlarının %75-90'ından sorumlu, özgül virülans faktörleri (Tip 1 pili, P fimbriyası, alfa-hemolizin) taşıyan E. coli alt grubudur."
+  },
+  "p fimbriyası": {
+    "term": "P Fimbriyası",
+    "category": "mikrobiyoloji",
+    "description": "Üropatojen E. coli suşlarında bulunan, renal tübül hücre yüzeyindeki alfa-D-galaktopiranozil-(1-4)-beta-D-galaktopiranozid (Gal-Gal) reseptörlerine özgül olarak bağlanan mannoz-dirençli adezindir.",
+    "clinicalPearl": "Komite Sorusu: E. coli'nin böbrek parankimini tutarak piyelonefrit yapmasından sorumlu virülans faktörü P fimbriyasıdır.",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Üropatojen E. coli suşlarında bulunan, renal tübül hücre yüzeyindeki alfa-D-galaktopiranozil-(1-4)-beta-D-galaktopiranozid (Gal-Gal) reseptörlerine özgül olarak bağlanan mannoz-dirençli adezindir."
+  },
+  "fournier gangreni": {
+    "term": "Fournier Gangreni",
+    "category": "uroloji",
+    "description": "Erkek perine, skrotum ve perianal dokularını tutan, fasyal planlar boyunca yıldırım hızıyla yayılan, mikst aerob-anaerob etkenlerle oluşan cerrahi acil bir nekrotizan fasiit tablosudur.",
+    "clinicalPearl": "TUS & Komite Sorusu: Fournier gangreninin tedavisinde tek başına antibiyotik ASLA yeterli değildir; ilk ve en kritik adım 'ACİL RADİKAL CERRAHİ DEBRİDMAN'dır.",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "definition": "Erkek perine, skrotum ve perianal dokularını tutan, fasyal planlar boyunca yıldırım hızıyla yayılan, mikst aerob-anaerob etkenlerle oluşan cerrahi acil bir nekrotizan fasiit tablosudur."
+  },
+  "ksantogranülamatöz piyelonefrit": {
+    "term": "Ksantogranülamatöz Piyelonefrit",
+    "category": "patoloji",
+    "description": "Böbreğin kronik obstrüksiyonu ve Proteus mirabilis enfeksiyonu zemininde gelişen, böbrek parankimini harap ederek lipid yüklü köpüksü histiyositlerle (ksantom hücreleri) dolduran destrüktif kronik granülomatöz lezyondur.",
+    "clinicalPearl": "Komite & TUS Sorusu: BT'de 'Ayı Pençesi' görünümü veren, Proteus enfeksiyonu ve staghorn taş zemininde gelişen ve RCC ile karışan kitle: Ksantogranülamatöz Piyelonefrit.",
+    "discipline": "Tıbbi Patoloji / Üroloji",
+    "committee": "Kurul 1",
+    "definition": "Böbreğin kronik obstrüksiyonu ve Proteus mirabilis enfeksiyonu zemininde gelişen, böbrek parankimini harap ederek lipid yüklü köpüksü histiyositlerle (ksantom hücreleri) dolduran destrüktif kronik granülomatöz lezyondur."
+  },
+  "malakoplaki ve michaelis-gutmann cisimcikleri": {
+    "term": "Malakoplaki ve Michaelis-Gutmann Cisimcikleri",
+    "category": "patoloji",
+    "description": "Kronik bakteriyel enfeksiyonlara (özellikle E. coli) karşı histiyositlerin fagozom-lizozom füzyon defekti sonucu bakterileri sindirememesiyle karakterize, mesanede sarı-yumuşak plaklar oluşturan granülomatöz hastalıktır.",
+    "clinicalPearl": "TUS & Komite Sorusu: Malakoplakinin patognomonik histopatolojik bulgusu olan konsantrik lamine kalsifiye yapılar: 'Michaelis-Gutmann cisimcikleri'dir (Von Kossa ve Prusya mavisi pozitif).",
+    "discipline": "Tıbbi Patoloji / Üroloji",
+    "committee": "Kurul 1",
+    "definition": "Kronik bakteriyel enfeksiyonlara (özellikle E. coli) karşı histiyositlerin fagozom-lizozom füzyon defekti sonucu bakterileri sindirememesiyle karakterize, mesanede sarı-yumuşak plaklar oluşturan granülomatöz hastalıktır."
+  },
+  "schistosoma haematobium": {
+    "term": "Schistosoma haematobium",
+    "category": "parazitoloji",
+    "description": "Tatlı su salyangozlarından dökülen serkaryaların deriyi delmesiyle bulaşan, vezikal venöz pleksusa yerleşerek mesane duvarında granülomatöz lezyonlar ve kalsifikasyon oluşturan trematod parazittir.",
+    "clinicalPearl": "Komite & TUS Sorusu: Mesanede transizyonel (ürotelyal) karsinom DEĞİL, 'Skuamöz Hücreli Karsinom' riskini belirgin artıran parazit Schistosoma haematobium'dur.",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "definition": "Tatlı su salyangozlarından dökülen serkaryaların deriyi delmesiyle bulaşan, vezikal venöz pleksusa yerleşerek mesane duvarında granülomatöz lezyonlar ve kalsifikasyon oluşturan trematod parazittir."
+  },
+  "steril piyüri": {
+    "term": "Steril Piyüri",
+    "category": "uroloji",
+    "description": "İdrar mikroskopisinde santrifüjsüz idrarda $\\ge 10$ lökosit/mm3 bulunmasına rağmen, standart bakteriyolojik besiyerlerinde (kanlı ve EMB agar) üreme olmaması durumudur.",
+    "clinicalPearl": "Komite Sorusu: Steril piyürinin en klasik ve ekarte edilmesi gereken enfeksiyöz nedeni Ürogenital Tüberkülozdur (3 ardışık sabah idrarında ARB ve kültür istenir).",
+    "discipline": "Üroloji / Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "definition": "İdrar mikroskopisinde santrifüjsüz idrarda $\\ge 10$ lökosit/mm3 bulunmasına rağmen, standart bakteriyolojik besiyerlerinde (kanlı ve EMB agar) üreme olmaması durumudur."
+  },
+  "temel üreme katsayısı": {
+    "term": "Temel Üreme Katsayısı",
+    "category": "epidemiyoloji",
+    "description": "Tümüyle duyarlı (hiç bağışıklığı olmayan) bir popülasyonda enfekte bir indeks vakanın bulaştırıcılık süresi boyunca doğrudan enfekte ettiği ortalama ikincil vaka sayısıdır.",
+    "clinicalPearl": "Komite & TUS Sorusu: Bir salgının durdurulabilmesi için efektif üreme sayısının (Rt) mutlaka 1'in altına (Rt < 1) indirilmesi zorunludur.",
+    "discipline": "Halk Sağlığı / Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "definition": "Tümüyle duyarlı (hiç bağışıklığı olmayan) bir popülasyonda enfekte bir indeks vakanın bulaştırıcılık süresi boyunca doğrudan enfekte ettiği ortalama ikincil vaka sayısıdır."
+  },
+  "sürü bağışıklığı eşiği": {
+    "term": "Sürü Bağışıklığı Eşiği",
+    "category": "epidemiyoloji",
+    "description": "Bir toplumda hastalığın yayılmasını durdurmak ve bağışık olmayan bireyleri de dolaylı olarak korumak için aşılanması veya bağışık olması gereken minimum nüfus yüzdesidir.",
+    "clinicalPearl": "TUS & Komite Sorusu: R0 değeri 4 olan bir hastalıkta salgını durdurmak için toplumun en az %75'i bağışık olmalıdır (1 - 1/4 = 0.75).",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "definition": "Bir toplumda hastalığın yayılmasını durdurmak ve bağışık olmayan bireyleri de dolaylı olarak korumak için aşılanması veya bağışık olması gereken minimum nüfus yüzdesidir."
+  },
+  "john snow ve broad street kolera salgını": {
+    "term": "John Snow ve Broad Street Kolera Salgını",
+    "category": "halk-sagligi",
+    "description": "1854 Londra Soho kolera salgınında vakaları harita üzerinde noktalayarak (spot map) hastalığın miasma (kötü hava) ile değil, Broad Street tulumbasından içilen kontamine su ile bulaştığını kanıtlayan ve tulumba kolunu söktürerek salgını durduran hekimdir.",
+    "clinicalPearl": "Komite & TUS Sorusu: Modern epidemiyolojinin kurucusu kimdir? Cevap: Dr. John Snow (1854 Londra Kolera Salgını).",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "definition": "1854 Londra Soho kolera salgınında vakaları harita üzerinde noktalayarak (spot map) hastalığın miasma (kötü hava) ile değil, Broad Street tulumbasından içilen kontamine su ile bulaştığını kanıtlayan ve tulumba kolunu söktürerek salgını durduran hekimdir."
+  },
+  "alma-ata bildirgesi": {
+    "term": "Alma-Ata Bildirgesi",
+    "category": "halk-sagligi",
+    "description": "1978 yılında DSÖ ve UNICEF öncülüğünde Kazakistan'ın Alma-Ata şehrinde kabul edilen, '2000 Yılında Herkes İçin Sağlık' hedefini ilan eden ve koruyucu hekimliği esas alan Temel Sağlık Hizmetleri (TSH) modelini başlatan tarihi bildirgedir.",
+    "clinicalPearl": "Komite Sorusu: 'Herkes İçin Sağlık 2000' sloganıyla Temel Sağlık Hizmetlerini küresel standart haline getiren uluslararası belge Alma-Ata Bildirgesi'dir.",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "definition": "1978 yılında DSÖ ve UNICEF öncülüğünde Kazakistan'ın Alma-Ata şehrinde kabul edilen, '2000 Yılında Herkes İçin Sağlık' hedefini ilan eden ve koruyucu hekimliği esas alan Temel Sağlık Hizmetleri (TSH) modelini başlatan tarihi bildirgedir."
+  },
+  "kuaterner koruma": {
+    "term": "Kuaterner Koruma",
+    "category": "halk-sagligi",
+    "description": "Aşırı tıbbileştirme (over-medicalization) ve iyatrojenik zarar riski taşıyan hastaları belirleyerek, onları gereksiz tetkik, polifarmasi, aşırı tanı ve invaziv tıbbi müdahalelerden koruma faaliyetidir.",
+    "clinicalPearl": "Komite & TUS Sorusu: Bir hekimin gereksiz tetkik ve polifarmasiyi engelleyerek hastayı tıbbi zarardan (iyatrojenezis) koruması 'Kuaterner Koruma'dır.",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "definition": "Aşırı tıbbileştirme (over-medicalization) ve iyatrojenik zarar riski taşıyan hastaları belirleyerek, onları gereksiz tetkik, polifarmasi, aşırı tanı ve invaziv tıbbi müdahalelerden koruma faaliyetidir."
   }
 }
