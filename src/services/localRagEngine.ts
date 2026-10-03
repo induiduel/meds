@@ -105,20 +105,38 @@ const TURKISH_STOPWORDS = new Set([
   'hangisidir', 'aşağıdakilerden', 'hangisi', 'nedir', 'aşağıdaki', 'vardır', 'yoktur',
   'doğrudur', 'yanlıştır', 'göre', 'ilgili', 'ilişkin', 'arasında', 'yer', 'alır', 'almaz',
   'belirtilmiştir', 'örnektir', 'adlandırılır', 'kabul', 'edilen', 'bulunur', 'bulunmaz',
-  'the', 'and', 'for', 'with', 'from', 'that', 'this', 'are', 'was'
+  'the', 'and', 'for', 'with', 'from', 'that', 'this', 'are', 'was',
+  // Phrases students use when describing a remembered exam question
+  'soru', 'sorusu', 'soruldu', 'sorulmuş', 'sorulmuştu', 'sordu', 'sorular', 'çıktı', 'çıkmış', 'çıkmıştı',
+  'geldi', 'gelmişti', 'vardı', 'sınav', 'sınavda', 'hakkında', 'alakalı', 'dair', 'şey', 'galiba', 'sanırım'
 ]);
+
+// Turkish is agglutinative ("böbrek", "böbreğin", "böbrekte"). A fixed 5-char prefix (F5 stemming)
+// is a cheap, well-known stemmer for Turkish retrieval. Measured on 300 past questions: full word +
+// stem beats stem-only and word-only (see CLAUDE.md "Retrieval").
+const STEM_LENGTH = 5;
 
 function hashContent(content: string): string {
   return crypto.createHash('md5').update(content.trim()).digest('hex');
 }
 
+// Fold Turkish characters so "böbrek", "bobrek", "IgE" and "ige" all match:
+// students often type without Turkish characters.
+const TR_FOLD: Record<string, string> = { ı: 'i', ç: 'c', ğ: 'g', ö: 'o', ş: 's', ü: 'u', â: 'a', î: 'i', û: 'u' };
+export function foldTurkish(text: string): string {
+  return text.toLocaleLowerCase('tr').replace(/[ıçğöşüâîû]/g, (ch) => TR_FOLD[ch] || ch);
+}
+const FOLDED_STOPWORDS = new Set(Array.from(TURKISH_STOPWORDS, (w) => foldTurkish(w)));
+
 function cleanTextForTokens(text: string): string[] {
-  return text
-    .toLowerCase()
+  return foldTurkish(text)
     .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'’“”…\[\]<>|\\+]/g, ' ')
     .split(/\s+/)
     .map(w => w.trim())
-    .filter(w => w.length >= 3 && !TURKISH_STOPWORDS.has(w));
+    .filter(w => w.length >= 3 && !FOLDED_STOPWORDS.has(w))
+    // Emit the full word (precision for exact terms) plus its stem (recall across suffixes).
+    // The '*' keeps stems from colliding with real 5-letter words.
+    .flatMap(w => (w.length > STEM_LENGTH ? [w, w.slice(0, STEM_LENGTH) + '*'] : [w]));
 }
 
 // Supabase Init
@@ -1191,7 +1209,7 @@ export async function searchLocalRag(
     loadLocalChunksFromFile();
   }
   const limit = options.limit || 5;
-  const cleanTokens = cleanTextForTokens(queryText);
+  const cleanTokens = Array.from(new Set(cleanTextForTokens(queryText)));
   if (cleanTokens.length === 0 && !options.queryEmbedding) return [];
 
   const N = memoryChunks.size || 1;
@@ -1215,7 +1233,8 @@ export async function searchLocalRag(
   // Sort by IDF descending: most discriminating / rare medical terms first
   tokenInfo.sort((x, y) => y.idf - x.idf);
   // Optimization: Prune query tokens to top 6 most informative terms (highest IDF) for ultra-fast evaluation (< 5ms)
-  const tokensToScore = tokenInfo.slice(0, 6);
+  // Score only the most informative terms; 12 balances quality and latency for long (full-question) queries.
+  const tokensToScore = tokenInfo.slice(0, 12);
 
   // 2. Accumulate candidate BM25 scores
   const candidateScores = new Map<string, number>();

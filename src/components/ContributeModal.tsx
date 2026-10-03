@@ -6,6 +6,7 @@ import { toast } from './ui/Toast';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { findRealtimeMatchingDraft, DraftCompatibilityResult } from '../services/draftClusteringService';
+import { ApiService, safeJsonFetch, type SimilarPastQuestion } from '../services/api';
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
 
@@ -155,11 +156,31 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fragmentText, discipline, topic, options, questions, committeeId]);
 
+  // Past exam questions that look like what the student remembers (debounced, retrieval only)
+  const [similarPast, setSimilarPast] = useState<SimilarPastQuestion[]>([]);
+  useEffect(() => {
+    const text = `${topic} ${fragmentText}`.trim();
+    if (text.length < 12) {
+      setSimilarPast([]);
+      return;
+    }
+    let cancelled = false;
+    const timer = setTimeout(async () => {
+      const results = await ApiService.findSimilarPastQuestions(text, committeeId || selectedCommitteeId);
+      if (!cancelled) setSimilarPast(results);
+    }, 600);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [fragmentText, topic, committeeId, selectedCommitteeId]);
+
   const [aiAssisting, setAiAssisting] = useState(false);
   const [aiSuggestion, setAiSuggestion] = useState<{
     suggestedStem?: string;
     suggestedOptions?: { key: string; text: string }[];
     probableAnswer?: string;
+    sources?: { title: string; pageNumber?: number }[];
   } | null>(null);
 
   // Escape closes (unless saving)
@@ -181,16 +202,18 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     if (!fragmentText.trim()) return;
     setAiAssisting(true);
     try {
-      const res = await fetch('/api/ai/quick-assist', {
+      const res = await safeJsonFetch<any>('/api/ai/quick-assist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          committeeId: committeeId || selectedCommitteeId,
           discipline,
           topic,
           fragment: fragmentText,
         }),
       });
-      const data = await res.json();
+      if (!res.ok || !res.data) throw new Error(res.error || 'AI önerisi alınamadı');
+      const data = res.data;
       setAiSuggestion(data);
       if (data.suggestedOptions) {
         let maxIdx = optionCount - 1;
@@ -434,6 +457,21 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                   </div>
                 )}
 
+                {similarPast.length > 0 && (
+                  <div className="ms-pop-in rounded-[14px] bg-canvas border border-line p-3 flex flex-col gap-2">
+                    <span className="text-[12.5px] font-semibold text-ink-2">Geçmiş sınavlarda benzer sorular</span>
+                    {similarPast.map((pq) => (
+                      <div key={pq.id} className="flex flex-col gap-0.5">
+                        <span className="text-[12px] text-ink-3">
+                          {[pq.discipline, pq.examYear].filter(Boolean).join(' · ')}
+                          {pq.claimedAnswer ? ` · Cevap: ${pq.claimedAnswer}` : ''}
+                        </span>
+                        <p className="m-0 text-[13.5px] text-ink-2 line-clamp-2">{pq.stem}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 {aiSuggestion?.suggestedStem && (
                   <div className="ms-pop-in rounded-[14px] bg-accent-soft/60 p-3 flex flex-col gap-1">
                     <span className="text-[12.5px] font-semibold text-accent inline-flex items-center gap-1.5">
@@ -441,6 +479,11 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                       AI'nın önerdiği soru kalıbı
                     </span>
                     <p className="m-0 text-[14px] text-ink leading-[1.55]">{aiSuggestion.suggestedStem}</p>
+                    {aiSuggestion.sources && aiSuggestion.sources.length > 0 && (
+                      <span className="text-[12px] text-ink-3">
+                        Kaynak: {aiSuggestion.sources.map((src) => src.title + (src.pageNumber ? ` (s.${src.pageNumber})` : '')).join(' · ')}
+                      </span>
+                    )}
                   </div>
                 )}
               </section>

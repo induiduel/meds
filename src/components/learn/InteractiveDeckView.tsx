@@ -48,6 +48,7 @@ import {
 import { AiThinking } from '../ui/Animations';
 import { HighlighterToolbar, Highlightable, isPenActive } from '../ui/Highlighter';
 import { toast } from '../ui/Toast';
+import { safeJsonFetch } from '../../services/api';
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -2420,13 +2421,14 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
       .filter(Boolean)
       .join('\n');
     try {
-      const res = await fetch('/api/rag/ask', {
+      // safeJsonFetch honours the custom API URL (GitHub Pages + tunnel setups)
+      const res = await safeJsonFetch<any>('/api/rag/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: `${text}\n\n[Slayt ve ders bağlamı]:\n${ctx}`, discipline: deck.discipline, committeeId: deck.committee, mode: 'qa', limit: 4 }),
       });
-      if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
-        const data = await res.json();
+      if (res.ok && res.data) {
+        const data = res.data;
         if (data.answer) {
           setAnswer(data.answer);
           setRefs(data.references || []);

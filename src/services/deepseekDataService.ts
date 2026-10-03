@@ -26,7 +26,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const DATA_DIR = path.resolve(PROJECT_ROOT, 'data');
-export const DEEPSEEK_DATA_DIR = process.env.MEDS_DEEPSEEK_DIR || 'C:\\Users\\indui\\Desktop\\meds_database\\deepseek_data';
+// Folder of raw DeepSeek exports to ingest. Optional: when unset, ingestion is disabled and the
+// existing data/deepseek_contributions.json is used as-is.
+export const DEEPSEEK_DATA_DIR = process.env.MEDS_DEEPSEEK_DIR || '';
 const DEEPSEEK_CONTRIBUTIONS_FILE = path.resolve(DATA_DIR, 'deepseek_contributions.json');
 
 export interface DeepSeekItem {
@@ -445,6 +447,18 @@ export async function scanAndIngestDeepSeekData(): Promise<DeepSeekSyncResult> {
     };
   }
 
+  if (!DEEPSEEK_DATA_DIR) {
+    return {
+      success: false,
+      filesScanned: 0,
+      itemsIngested: loadDeepSeekContributions().length,
+      chunksCreated: 0,
+      fileList: [],
+      lastSyncedAt: lastSyncTimestamp || new Date().toISOString(),
+      message: 'MEDS_DEEPSEEK_DIR tanımlı değil; DeepSeek klasör taraması kapalı.'
+    };
+  }
+
   isScanning = true;
   ensureDeepSeekFolder();
 
@@ -474,7 +488,12 @@ export async function scanAndIngestDeepSeekData(): Promise<DeepSeekSyncResult> {
       }
     }
 
-    saveDeepSeekContributions(allIngested);
+    // Never replace existing data with an empty scan (empty/missing folder on another machine).
+    if (allIngested.length > 0 || loadDeepSeekContributions().length === 0) {
+      saveDeepSeekContributions(allIngested);
+    } else {
+      console.warn('[DeepSeekService] Klasörde veri bulunamadı; mevcut deepseek_contributions.json korunuyor.');
+    }
     lastSyncTimestamp = new Date().toISOString();
 
     console.log(`[DeepSeekService] ✅ ${allIngested.length} adet DeepSeek verisi başarıyla işlendi ve havuza eklendi.`);
@@ -511,6 +530,10 @@ let watcherInitialized = false;
 export function initDeepSeekWatcher(onUpdateCallback?: () => void): void {
   if (watcherInitialized) return;
   watcherInitialized = true;
+  if (!DEEPSEEK_DATA_DIR) {
+    loadDeepSeekContributions();
+    return;
+  }
   ensureDeepSeekFolder();
 
   // Initial load

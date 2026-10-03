@@ -32,6 +32,17 @@ export interface ReconstructedQuestion {
   reconstructionQuality?: string;
   qualityScore?: number;
   isAiRefined?: boolean;
+  /** Course material / past questions the AI based this reconstruction on. */
+  sources?: SourceRef[];
+}
+
+export interface SourceRef {
+  documentId: string;
+  documentType: 'past_question' | 'lecture_slide' | 'summary' | 'transcript' | string;
+  title: string;
+  discipline?: string;
+  pageNumber?: number;
+  snippet: string;
 }
 
 export interface QuestionRevision {

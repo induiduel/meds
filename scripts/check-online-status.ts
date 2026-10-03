@@ -160,19 +160,18 @@ async function testSupabase(): Promise<void> {
 async function testAiLimits(): Promise<void> {
   console.log(`🤖 [3/3] Yapay Zeka (AI) Havuzu & Limitleri test ediliyor...`);
 
-  const b64 = (s: string) => Buffer.from(s, 'base64').toString('utf8');
   const keys = [
     {
       label: '1. Sıra (Gemini Ücretsiz Plan 1)',
-      key: process.env.GEMINI_API_KEY || b64('QVEuQWI4Uk42SjhMVjhRMHlyOTYyQ25iOXZFYWl2WUFwQno3eTlnNFFtZFNGSTlpbUI1NEE='),
+      key: process.env.GEMINI_API_KEY || '',
     },
     {
       label: '2. Sıra (Gemini Ücretsiz Plan 2)',
-      key: process.env.GEMINI_FREE_KEY_2 || b64('QVEuQWI4Uk42TDlpRHFmb3ZUdU5ROC00WjdERVJXZDd3LTRTdzVHM00zd1hyLUJIX3VJTHc='),
+      key: process.env.GEMINI_FREE_KEY_2 || '',
     },
     {
       label: '4. Sıra (Gemini Faturalı Plan)',
-      key: process.env.GEMINI_BILLED_KEY || b64('QVEuQWI4Uk42SUhQTHNRaGFSMl9LaEdXc2R0Vl9sMFhMT3hRMVd4dXRCUkJ0bGotdGYzV1E='),
+      key: process.env.GEMINI_BILLED_KEY || '',
     },
   ];
 

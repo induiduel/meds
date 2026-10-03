@@ -1,7 +1,7 @@
 import express from 'express';
 import compression from 'compression';
 import { createServer as createViteServer } from 'vite';
-import { GoogleGenAI, Type } from '@google/genai';
+import { Type } from '@google/genai';
 import nodemailer from 'nodemailer';
 import mammoth from 'mammoth';
 import dotenv from 'dotenv';
@@ -27,8 +27,6 @@ import {
   startDesktopFolderWatcherAndScheduler,
   stopDesktopFolderWatcherAndScheduler,
   isDesktopFolderWatcherActive,
-  findBestMatchingLectureSlides,
-  type SlideMatchResult,
   DESKTOP_DATABASE_DIR,
 } from './src/serverLectureNotes.ts';
 
@@ -66,6 +64,13 @@ import {
   saveUpgradedQuestion,
   type AdvancedQuestionData
 } from './src/services/questionUpgradeService.ts';
+
+import {
+  generateGeminiWithFallback,
+  generateResilientMedicalAi,
+  getTieredGeminiKeys,
+  getTieredGroqKeys,
+} from './src/services/aiProvider.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -221,379 +226,9 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Multi-Tier Gemini Key Pool & Groq Cloud Engine
-export interface KeyInfo {
-  key: string;
-  label: string;
-  isBilled: boolean;
+if (getTieredGeminiKeys().length === 0 && getTieredGroqKeys().length === 0) {
+  console.warn('[AI] ⚠️ .env içinde hiç AI anahtarı yok (GEMINI_API_KEY / GROQ_API_KEY). AI özellikleri çalışmayacak.');
 }
-
-const decodeB64 = (s: string) => Buffer.from(s, 'base64').toString('utf8');
-const DEFAULT_FREE_KEY_1 = decodeB64('QVEuQWI4Uk42SjhMVjhRMHlyOTYyQ25iOXZFYWl2WUFwQno3eTlnNFFtZFNGSTlpbUI1NEE=');
-const DEFAULT_FREE_KEY_2 = decodeB64('QVEuQWI4Uk42TDlpRHFmb3ZUdU5ROC00WjdERVJXZDd3LTRTdzVHM00zd1hyLUJIX3VJTHc=');
-const DEFAULT_BILLED_KEY = decodeB64('QVEuQWI4Uk42SUhQTHNRaGFSMl9LaEdXc2R0Vl9sMFhMT3hRMVd4dXRCUkJ0bGotdGYzV1E=');
-
-export function getFreeGeminiKeys(customKey?: string): KeyInfo[] {
-  const list: KeyInfo[] = [];
-
-  // 1. Custom key if passed by user or admin
-  if (customKey && customKey.trim() && customKey !== 'MY_GEMINI_API_KEY') {
-    list.push({ key: customKey.trim(), label: 'Kullanıcı Özel Anahtarı', isBilled: false });
-  }
-
-  // 2. Free Plan Key 1 (1. Sıra)
-  if (DEFAULT_FREE_KEY_1 && !list.some(x => x.key === DEFAULT_FREE_KEY_1)) {
-    list.push({ key: DEFAULT_FREE_KEY_1, label: 'Ücretsiz Plan 1 (Gemini)', isBilled: false });
-  }
-
-  // 3. Free Plan Key 2 (2. Sıra)
-  if (DEFAULT_FREE_KEY_2 && !list.some(x => x.key === DEFAULT_FREE_KEY_2)) {
-    list.push({ key: DEFAULT_FREE_KEY_2, label: 'Ücretsiz Plan 2 (Gemini)', isBilled: false });
-  }
-
-  // 4. Env Key if distinct from above
-  const envKey = process.env.GEMINI_API_KEY;
-  if (envKey && envKey.trim() && !list.some(x => x.key === envKey.trim())) {
-    list.push({ key: envKey.trim(), label: 'Sunucu .env Anahtarı', isBilled: false });
-  }
-
-  return list;
-}
-
-export function getBilledGeminiKey(): KeyInfo {
-  const billed = (process.env.GEMINI_BILLED_KEY || DEFAULT_BILLED_KEY).trim();
-  return { key: billed, label: 'Faturalandırmalı Plan (4. Sıra Son Çare)', isBilled: true };
-}
-
-export function getTieredGeminiKeys(customKey?: string): KeyInfo[] {
-  return [...getFreeGeminiKeys(customKey), getBilledGeminiKey()];
-}
-
-// Helper for resilient Gemini API calls with fallback
-export async function generateGeminiWithFallback(contents: any, config?: any) {
-  const geminiKeys = getTieredGeminiKeys();
-  const models = ['gemini-3.8-flash', 'gemini-flash-latest'];
-  let lastErr: any = null;
-
-  for (const keyInfo of geminiKeys) {
-    for (const m of models) {
-      try {
-        const { GoogleGenAI } = await import('@google/genai');
-        const client = new GoogleGenAI({ apiKey: keyInfo.key });
-        return await client.models.generateContent({
-          model: m,
-          contents,
-          config,
-        });
-      } catch (e: any) {
-        lastErr = e;
-      }
-    }
-  }
-  throw lastErr || new Error('Gemini API yanıt vermedi.');
-}
-
-// Groq Cloud Integration (Fast & Free OpenAI GPT-OSS 120B / Qwen / Llama 3.3)
-const getFallbackGroqKey = () =>
-  [46,58,34,22,4,121,42,16,1,125,63,49,11,63,38,59,13,61,13,120,35,51,32,31,30,14,45,48,43,122,15,16,127,49,3,27,2,31,59,38,4,27,59,42,59,125,28,32,14,17,25,39,44,124,60,42].map(c => String.fromCharCode(c ^ 73)).join('');
-
-const getFallbackGroqKey2 = () =>
-  [46,58,34,22,17,43,27,2,14,35,8,60,31,2,123,4,34,46,7,113,17,62,48,0,30,14,45,48,43,122,15,16,0,12,7,2,31,31,127,39,0,0,13,6,46,121,26,5,8,32,49,17,27,49,126,120].map(c => String.fromCharCode(c ^ 73)).join('');
-
-export function getTieredGroqKeys(customGroqKey?: string): { key: string; label: string }[] {
-  const keys: { key: string; label: string }[] = [];
-  if (customGroqKey && customGroqKey.trim()) {
-    keys.push({ key: customGroqKey.trim(), label: 'Özel / Admin Groq Anahtarı' });
-  }
-  const k1 = (process.env.GROQ_API_KEY || getFallbackGroqKey() || '').trim();
-  if (k1 && !keys.some(x => x.key === k1)) {
-    keys.push({ key: k1, label: '1. Ücretsiz Groq Anahtarı' });
-  }
-  const k2 = (process.env.GROQ_API_KEY_2 || getFallbackGroqKey2() || '').trim();
-  if (k2 && !keys.some(x => x.key === k2)) {
-    keys.push({ key: k2, label: '2. Ücretsiz Groq Anahtarı (Yedek)' });
-  }
-  return keys;
-}
-
-export async function callGroqCloud(
-  prompt: string,
-  model: string = 'openai/gpt-oss-120b',
-  customGroqKey?: string,
-  options?: {
-    systemPrompt?: string;
-    isJson?: boolean;
-    messages?: { role: string; content: string }[];
-  }
-): Promise<{ text: string; model: string; keyUsed: string }> {
-  const keys = getTieredGroqKeys(customGroqKey);
-  if (keys.length === 0) {
-    throw new Error('Groq Cloud API anahtarı (GROQ_API_KEY) tanımlı değil. Lütfen .env dosyasına ekleyin veya Ayarlar panelinden girin.');
-  }
-
-  const candidateModels = [
-    model && !model.startsWith('gemini') ? model : null,
-    'openai/gpt-oss-120b',
-    'qwen/qwen3.8-27b',
-    'openai/gpt-oss-20b',
-  ].filter(Boolean) as string[];
-
-  const isJson = options?.isJson !== false;
-  const sysMsg = options?.systemPrompt || (isJson
-    ? 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
-    : 'Sen Tıp Fakültesi öğrencilerine sınav sorularında rehberlik eden kıdemli bir tıp hocası ve eğitmenisin.');
-
-  const chatMessages: any[] = options?.messages && options.messages.length > 0
-    ? [
-        { role: 'system', content: sysMsg },
-        ...options.messages
-      ]
-    : [
-        { role: 'system', content: sysMsg },
-        { role: 'user', content: prompt }
-      ];
-
-  let lastErr: any = null;
-  for (let ki = 0; ki < keys.length; ki++) {
-    const currentKey = keys[ki];
-    for (const m of candidateModels) {
-      try {
-        const bodyPayload: any = {
-          model: m,
-          messages: chatMessages,
-          temperature: isJson ? 0.2 : 0.4
-        };
-        if (isJson) {
-          bodyPayload.response_format = { type: 'json_object' };
-        }
-
-        const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${currentKey.key}`,
-          },
-          body: JSON.stringify(bodyPayload)
-        });
-
-        if (!res.ok) {
-          const errText = await res.text();
-          console.warn(`[Groq Cloud] ⚠️ ${currentKey.label} (${m}) başarısız:`, errText);
-          lastErr = new Error(`Groq Cloud Hatası (${res.status}): ${errText}`);
-          const isQuota = /429|rate_limit|tokens/i.test(errText) || res.status === 429;
-          if (isQuota) {
-            console.log(`[Groq Cloud] 🔄 ${currentKey.label} limitine ulaşıldı, bir sonraki Groq anahtarına geçiliyor...`);
-            break;
-          }
-          continue;
-        }
-
-        const data: any = await res.json();
-        const text = data.choices?.[0]?.message?.content || (isJson ? '{}' : '');
-        return { text, model: m, keyUsed: currentKey.label };
-      } catch (err: any) {
-        lastErr = err;
-      }
-    }
-  }
-
-  throw lastErr || new Error('Groq Cloud modelleri yanıt vermedi.');
-}
-
-// In-memory cooldown cache when Gemini free tier hits 429 quota exhaustion (prevents 4-second delays per request)
-let serverGeminiQuotaCooldownUntil = 0;
-
-// Helper to call Google Gemini Key Pool (Free keys + Billed key)
-async function callGeminiPool(
-  prompt: string,
-  customGeminiKey?: string,
-  model?: string,
-  isJson: boolean = false,
-  systemInstruction?: string
-): Promise<{ text: string; providerUsed: string; planUsed: string }> {
-  const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
-  if (isGeminiInCooldown) {
-    throw new Error('Google Gemini API kotası aşıldığı için beklemede (429 RESOURCE_EXHAUSTED).');
-  }
-
-  const { GoogleGenAI } = await import('@google/genai');
-  const allGeminiKeys = getTieredGeminiKeys(customGeminiKey);
-  let lastErr: any = null;
-
-  for (let i = 0; i < allGeminiKeys.length; i++) {
-    const keyInfo = allGeminiKeys[i];
-    const candidateModels = (model && model.startsWith('gemini'))
-      ? [model, 'gemini-3.8-flash'].filter((v, idx, arr) => arr.indexOf(v) === idx)
-      : ['gemini-3.8-flash'];
-
-    for (const m of candidateModels) {
-      try {
-        console.log(`[Gemini Engine] ${keyInfo.label} (${m}) deneniyor... (Sıra: ${i + 1}/${allGeminiKeys.length})`);
-        const clientAi = new GoogleGenAI({ apiKey: keyInfo.key });
-        const configPayload: any = {};
-        if (isJson) {
-          configPayload.responseMimeType = 'application/json';
-        }
-        if (systemInstruction) {
-          configPayload.systemInstruction = systemInstruction;
-        }
-
-        const geminiRes = await clientAi.models.generateContent({
-          model: m,
-          contents: prompt,
-          config: configPayload,
-        });
-        const text = geminiRes.text || (isJson ? '{}' : '');
-        serverGeminiQuotaCooldownUntil = 0;
-        return {
-          text,
-          providerUsed: keyInfo.isBilled ? 'Google Gemini (Faturalı)' : 'Google Gemini',
-          planUsed: `${keyInfo.label} (${m})`,
-        };
-      } catch (err: any) {
-        lastErr = err;
-        const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(err.message || '');
-        if (isQuota) {
-          serverGeminiQuotaCooldownUntil = Date.now() + 5 * 60 * 1000;
-          console.warn(`[Gemini Engine] ⚠️ ${keyInfo.label} (${m}) kotaya takıldı (429).`);
-          break;
-        }
-      }
-    }
-  }
-
-  throw lastErr || new Error('Google Gemini modelleri yanıt vermedi.');
-}
-
-// Resilient Multi-Provider AI Caller with Automated 2-Phase Failover
-// Deneme 1: Birincil Sağlayıcı -> Deneme 2: Alternatif Yedek Sağlayıcı (Gemini <-> Groq)
-// 2 kez denenip ikisi de başarısız olursa açık uyarı fırlatır.
-export async function generateResilientMedicalAi(options: {
-  prompt: string;
-  customGeminiKey?: string;
-  customGroqKey?: string;
-  preferredProvider?: 'gemini' | 'groq' | 'auto';
-  model?: string;
-  responseFormat?: 'json' | 'text';
-  systemInstruction?: string;
-  messages?: { role: string; content: string }[];
-}): Promise<{ text: string; providerUsed: string; planUsed: string; attemptsCount: number; fallbackUsed?: boolean }> {
-  const {
-    prompt,
-    customGeminiKey,
-    customGroqKey,
-    preferredProvider = 'auto',
-    model,
-    responseFormat = 'json',
-    systemInstruction,
-    messages
-  } = options;
-
-  const isJson = responseFormat === 'json';
-  const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
-  const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
-
-  // Birincil ve İkincil (Yedek) Sağlayıcı Belirleme
-  const primaryProvider: 'groq' | 'gemini' = (isGroqExplicit || (isGeminiInCooldown && preferredProvider !== 'gemini')) ? 'groq' : (preferredProvider === 'gemini' ? 'gemini' : 'gemini');
-  const secondaryProvider: 'groq' | 'gemini' = primaryProvider === 'groq' ? 'gemini' : 'groq';
-
-  let attempt1Err: any = null;
-  let attempt2Err: any = null;
-
-  // =========================================================================
-  // 1. DENEME: BİRİNCİL SAĞLAYICI (PRIMARY ATTEMPT)
-  // =========================================================================
-  console.log(`[AI Multi-Provider] 🟢 1. DENEME: ${primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'} ile başlatılıyor...`);
-  try {
-    if (primaryProvider === 'groq') {
-      const groqModel = model && !model.startsWith('gemini') ? model : 'openai/gpt-oss-120b';
-      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
-        systemPrompt: systemInstruction,
-        isJson,
-        messages
-      });
-      return {
-        text: groqRes.text,
-        providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
-        planUsed: `Groq Cloud (${groqRes.model})`,
-        attemptsCount: 1,
-        fallbackUsed: false
-      };
-    } else {
-      const geminiRes = await callGeminiPool(prompt, customGeminiKey, model, isJson, systemInstruction);
-      return {
-        text: geminiRes.text,
-        providerUsed: geminiRes.providerUsed,
-        planUsed: geminiRes.planUsed,
-        attemptsCount: 1,
-        fallbackUsed: false
-      };
-    }
-  } catch (err: any) {
-    console.warn(`[AI Multi-Provider] ⚠️ 1. DENEME (${primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'}) BAŞARISIZ:`, err.message);
-    attempt1Err = err;
-  }
-
-  // =========================================================================
-  // 2. DENEME: OTOMATİK YEDEK SAĞLAYICI (SECONDARY / FALLBACK ATTEMPT)
-  // =========================================================================
-  console.log(`[AI Multi-Provider] 🔄 2. DENEME: 1. sağlayıcı yanıt vermedi. Yedek sağlayıcı ${secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'} deneniyor...`);
-  try {
-    if (secondaryProvider === 'groq') {
-      const groqModel = 'openai/gpt-oss-120b';
-      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
-        systemPrompt: systemInstruction,
-        isJson,
-        messages
-      });
-      console.log(`[AI Multi-Provider] ✓ 2. DENEME (Yedek Groq Cloud ${groqRes.model}) başarıyla tamamlandı!`);
-      return {
-        text: groqRes.text,
-        providerUsed: `Groq Cloud (${groqRes.keyUsed}) [2. Deneme Yedek]`,
-        planUsed: `Groq Cloud (${groqRes.model})`,
-        attemptsCount: 2,
-        fallbackUsed: true
-      };
-    } else {
-      const geminiRes = await callGeminiPool(prompt, customGeminiKey, 'gemini-3.8-flash', isJson, systemInstruction);
-      console.log(`[AI Multi-Provider] ✓ 2. DENEME (Yedek Google Gemini) başarıyla tamamlandı!`);
-      return {
-        text: geminiRes.text,
-        providerUsed: `${geminiRes.providerUsed} [2. Deneme Yedek]`,
-        planUsed: geminiRes.planUsed,
-        attemptsCount: 2,
-        fallbackUsed: true
-      };
-    }
-  } catch (err: any) {
-    console.error(`[AI Multi-Provider] ❌ 2. DENEME (${secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'}) DE BAŞARISIZ OLDU:`, err.message);
-    attempt2Err = err;
-  }
-
-  // =========================================================================
-  // 2 KEZ DENENDİ VE İKİ SAĞLAYICI DA YANIT VERMEDİ -> UYARI VER
-  // =========================================================================
-  const primaryName = primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
-  const secondaryName = secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
-  const failureError: any = new Error(
-    `2 kez denendi: Hem 1. sağlayıcı (${primaryName}) hem de 2. alternatif sağlayıcı (${secondaryName}) yanıt veremedi. Lütfen API anahtarlarınızı veya internet bağlantınızı kontrol edin.`
-  );
-  failureError.attemptsCount = 2;
-  failureError.isTwoAttemptsFailed = true;
-  failureError.primaryError = attempt1Err?.message || 'Bilinmeyen hata';
-  failureError.secondaryError = attempt2Err?.message || 'Bilinmeyen hata';
-  throw failureError;
-}
-
-// Default instance for lightweight background tasks
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY || DEFAULT_FREE_KEY_1,
-  httpOptions: {
-    headers: {
-      'User-Agent': 'aistudio-build',
-    },
-  },
-});
 
 // Database path & management
 const DATA_DIR = path.resolve(__dirname, 'data');
@@ -2010,82 +1645,90 @@ app.post('/api/questions/:id/claimed-answer', (req, res) => {
 
 // AI Reconstruction Endpoint using Gemini 3.8 Flash
 app.post('/api/questions/:id/ai-reconstruct', async (req, res) => {
-  const question = db.questions.find((q) => q.id === req.params.id);
+  // The question may live only in Firebase/Supabase on the client; accept it from the body too.
+  const stored = db.questions.find((q) => q.id === req.params.id);
+  const question: any = stored || req.body?.question;
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
 
-  if (question.fragments.length === 0 && question.options.length === 0) {
+  const fragments: any[] = question.fragments || [];
+  const options: any[] = question.options || [];
+  if (fragments.length === 0 && options.length === 0) {
     return res.status(400).json({ error: 'Rekonstrüksiyon için en az bir hatırlanan parça veya şık gereklidir.' });
   }
 
-  question.status = 'reconstructing';
-  saveDatabase();
+  if (stored) {
+    stored.status = 'reconstructing';
+    saveDatabase();
+  }
 
   try {
     const committee = db.committees.find((c) => c.id === question.committeeId);
+    const { findSourcesForQuestion, formatSourcesForPrompt, toSourceRef } = await import('./src/services/ragService.ts');
+    const sources = await findSourcesForQuestion(question);
 
-    const commentsList = (question.comments || []);
-    const commentsSummary = commentsList.length > 0
-      ? commentsList.map((c: any) => `- [${c.author || 'Öğrenci Yorumu'}]: "${c.text}"`).join('\n')
-      : 'Henüz ek yorum/düzeltme girilmedi.';
+    const comments: any[] = question.comments || [];
+    const prompt = `Sen Tıp Fakültesi Dönem 3 kurul sınavı sorularını rekonstrükte eden kıdemli bir tıp akademisyenisin.
+Öğrenciler sınavdan çıktıktan sonra bu soruyu parça parça hatırlayıp sisteme girdi. Görevin, bu parçaları
+fakültenin KENDİ ders materyalleri ve çıkmış sorularıyla eşleştirerek sınavda sorulan TEK soruyu ve 5 şıkkını yeniden kurmak.
 
-    const promptContext = `
-Sen Türkiye'deki Tıp Fakültesi Dönem 3 (veya TUS) kurul sınavı soruları hazırlama ve rekonstrüksiyonunda uzmanlaşmış kıdemli bir tıp akademisyenisin.
-Öğrenciler sınavdan çıktıktan sonra bu soruyu, şıklarını ve düzeltme önerilerini parça parça hatırlamış ve sisteme girmişlerdir.
-Senin görevin: Öğrencilerin girdiği dağınık hafıza kırıntılarını, ipuçlarını, önerilen şıkları, tartışmaları ve düzeltme yorumlarını analiz ederek;
-bu soruyu %100 tıbbi akademik doğruluğa ve sınav diline (vaka sorusu, klinik senaryo, patofizyoloji/farmakoloji standardı) uygun TEK BİR TAM SORU VE 5 ŞIK (A, B, C, D, E) haline getirmektir!
-
-Sınav & Kurul Bilgisi:
+SINAV BİLGİSİ
 - Kurul: ${committee ? committee.name : 'Dönem 3 Kurul Sınavı'}
-- Soru No: #${question.questionNumber}
-- Ders/Disiplin: ${question.discipline}
-- Konu Başlığı: ${question.topic}
-- Öğrencilerin genel hemfikir olduğu cevap: ${question.claimedAnswer || 'Belirtilmedi'}
+- Soru No: #${question.questionNumber || '?'}
+- Ders: ${question.discipline || 'Belirtilmedi'}
+- Konu: ${question.topic || 'Belirtilmedi'}
+- Öğrencilerin iddia ettiği cevap: ${question.claimedAnswer || 'Belirtilmedi'}
 
-Öğrencilerin Hatırladığı Parçalar & İpuçları:
-${question.fragments
-  .map(
-    (f, idx) =>
-      `${idx + 1}. [${f.author} - ${f.type}]: "${f.text}" (Onay/Upvote: ${f.upvotes})`
-  )
-  .join('\n')}
+ÖĞRENCİLERİN HATIRLADIKLARI
+${fragments.map((f, i) => `${i + 1}. [${f.type || 'parça'}] "${f.text}" (onay: ${f.upvotes || 0})`).join('\n') || '(parça yok)'}
 
-Öğrencilerin Girdiği Şıklar:
-${
-  question.options.length > 0
-    ? question.options
-        .map((o) => `${o.key}) ${o.text} (Öneren: ${o.suggestedBy}, Upvote: ${o.upvotes})`)
-        .join('\n')
-    : 'Henüz tam şık girilmedi.'
-}
+ÖĞRENCİLERİN GİRDİĞİ ŞIKLAR
+${options.map((o) => `${o.key}) ${o.text} (onay: ${o.upvotes || 0})`).join('\n') || '(şık yok)'}
 
-Öğrenci Yorumları, Düzeltme Önerileri ve İpuçları:
-${commentsSummary}
+YORUMLAR / DÜZELTMELER
+${comments.map((c) => `- "${c.text}"`).join('\n') || '(yorum yok)'}
 
-LÜTFEN ŞU KURALLARA KESİNLİKLE UY:
-1. YAZIM VE İMLA HATALARINI DOĞRUDAN DÜZELT: Öğrenci parçalarında veya yorumlarında belirtilen yazım/harf hatalarını ("biri- kir" yerine "birikir" yazılması gibi) doğrudan tespit et ve nihai soru köküne ile şıklara düzeltilmiş olarak yansıt.
-2. SORU KÖKÜ FORMÜLASYONU & OLUMSUZLUK: Eğer yorumlarda veya parçalarda sorunun "değildir" veya "yanlıştır" şeklinde sorulduğu belirtiliyorsa, soru kökünü kesinlikle olumsuz sınav formatında ("...aşağıdakilerden hangisi DEĞİLDİR?", "...hangisi YANLIŞTIR?") kurgula ve doğru yanıtı buna göre belirle.
-3. KUSURSUZ SINAV KÖKÜ (METİN SAFLIĞI): "stem" alanına sadece resmi sınav kağıdında yer alacak saf soru metnini yaz! Asla idari etiketler, "(Öğrenci Notu: ...)", "...kapsamında" gibi meta-metinler ekleme!
-4. 5 ADET ŞIK (A, B, C, D, E): Öğrencilerin hatırladığı geçerli şıkları koru ve dilini düzelt. Eksik şıkları tıp standartlarında mantıklı çeldiricilerle 5'e tamamla. Sıfırdan eklediğin şıklar için "isAiFilled: true", öğrencilerin girdiğini düzelttiklerin için "isAiFilled: false" yap.
-5. DOĞRU CEVAP & AÇIKLAMA: Tıbbi literatüre göre kesin doğru cevabı (A-E) seç. Robbins / Katzung / Guyton standardında patofizyolojik / farmakolojik etki mekanizmasını ve çeldiricilerin neden elendiğini "explanation" alanında açıkla.
-6. GÜVEN SKORU & NOTLAR: "confidenceScore" alanına 0-100 arası puan ver. Öğrencilerin hafıza parçaları arasındaki çelişkileri veya yapılan düzeltmeleri "notesAndDiscrepancies" alanında özetle.
-`;
+FAKÜLTE DERS MATERYALİ VE ÇIKMIŞ SORULAR (en alakalıdan aza doğru)
+${formatSourcesForPrompt(sources)}
+
+KURALLAR
+1. Soruyu öncelikle yukarıdaki kaynaklara dayandır. Hoca slaytta konuyu nasıl anlattıysa soru da o çerçevede kurulmalı.
+   Kaynaklarda olmayan bir bilgiyi kesin doğru gibi sunma.
+2. Kaynaklarda aynı konuda bir ÇIKMIŞ SORU varsa ve öğrenci parçalarıyla örtüşüyorsa, onun kökünü ve şıklarını temel al.
+3. Parçalarda "değildir / yanlıştır" geçiyorsa kökü olumsuz kur ("...hangisi DEĞİLDİR?").
+4. "stem" sadece sınav kağıdındaki saf soru metni olsun; meta ifade ekleme. Yazım hatalarını düzelt.
+5. Tam 5 şık (A-E). Öğrencilerin girdiği şıkları koru ve "isAiFilled": false yap; tamamladıkların "isAiFilled": true.
+6. "explanation": doğru cevabın gerekçesi ve çeldiricilerin neden yanlış olduğu, mümkünse kaynak numarasıyla ("[Kaynak 2]").
+7. "usedSources": gerçekten dayandığın kaynak numaraları. Hiçbiri uymuyorsa boş dizi ver ve bunu notlarda belirt.
+8. "confidenceScore" (0-100): parçalar ve kaynaklar ne kadar örtüşüyor. Kaynak yoksa 60'ı geçme.
+
+YALNIZCA ŞU JSON'U DÖN:
+{
+  "stem": "...",
+  "options": [{ "key": "A", "text": "...", "isAiFilled": false }],
+  "correctAnswer": "A",
+  "explanation": "...",
+  "usedSources": [1, 2],
+  "confidenceScore": 85,
+  "notesAndDiscrepancies": "Parçalar arasındaki çelişkiler, kaynakla uyuşmayan noktalar..."
+}`;
 
     const aiResult = await generateResilientMedicalAi({
-      prompt: promptContext,
+      prompt,
       customGeminiKey: req.body?.apiKey,
       customGroqKey: req.body?.groqApiKey,
       preferredProvider: req.body?.preferredProvider || 'auto',
-      model: 'gemini-3.8-flash'
+      model: 'gemini-3.8-flash',
     });
 
     const parsed = JSON.parse(aiResult.text?.trim() || '{}');
+    const usedIdx: number[] = Array.isArray(parsed.usedSources) ? parsed.usedSources : [];
+    const usedSources = usedIdx
+      .map((n) => sources[Number(n) - 1])
+      .filter(Boolean)
+      .map(toSourceRef);
 
-    // Ensure pure stem without leaked meta-prefixes
-    let cleanStem = (parsed.stem || 'Soru kökü derleniyor...').trim();
-    cleanStem = cleanStem.replace(/^.*kapsamında\s*\(Admin Talimatı:[^)]+\);\s*/gi, '');
-
-    question.reconstruction = {
-      stem: cleanStem,
+    const reconstruction = {
+      stem: String(parsed.stem || 'Soru kökü derlenemedi.').trim(),
       options: (parsed.options || []).map((o: any) => ({
         key: o.key as 'A' | 'B' | 'C' | 'D' | 'E',
         text: o.text,
@@ -2093,71 +1736,95 @@ LÜTFEN ŞU KURALLARA KESİNLİKLE UY:
       })),
       correctAnswer: (parsed.correctAnswer || 'A') as 'A' | 'B' | 'C' | 'D' | 'E',
       explanation: parsed.explanation || '',
-      confidenceScore: parsed.confidenceScore || 85,
+      confidenceScore: Number(parsed.confidenceScore) || 70,
       notesAndDiscrepancies: parsed.notesAndDiscrepancies || '',
+      sources: usedSources,
       lastUpdated: new Date().toISOString(),
     };
 
-    question.status = 'completed';
-    question.claimedAnswer = question.reconstruction.correctAnswer;
-    question.updatedAt = new Date().toISOString();
-    saveDatabase();
+    const updated = {
+      ...question,
+      reconstruction,
+      status: 'completed',
+      claimedAnswer: reconstruction.correctAnswer,
+      updatedAt: new Date().toISOString(),
+    };
+    if (stored) {
+      Object.assign(stored, updated);
+      saveDatabase();
+    }
+    mirrorQuestionToSupabase(updated);
 
-    // Mirror to Supabase if connected
-    mirrorQuestionToSupabase(question);
-
-    res.json({ reconstruction: question.reconstruction, question });
+    res.json({ reconstruction, question: updated, providerUsed: aiResult.planUsed });
   } catch (error: any) {
-    console.error('Gemini Reconstruction Error:', error);
-    question.status = 'gathering';
-    saveDatabase();
-
-    const errMsg = error?.message || '';
+    console.error('AI Reconstruction Error:', error);
+    if (stored) {
+      stored.status = 'gathering';
+      saveDatabase();
+    }
+    const errMsg = error?.message || 'Bilinmeyen hata';
     const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
-    const userMsg = isQuota
-      ? 'Google Gemini API aylık harcama limiti veya kotası aşıldı (Hata 429: Monthly Spending Cap Exceeded). Lütfen Google AI Studio (https://ai.studio/spend) üzerinden harcama limitinizi güncelleyin veya yeni bir API anahtarı ekleyin.'
-      : 'Yapay zeka rekonstrüksiyonu sırasında bir hata oluştu: ' + (errMsg || 'Bilinmeyen hata');
-
     res.status(isQuota ? 429 : 500).json({
-      error: userMsg,
+      error: isQuota
+        ? 'AI kotası aşıldı (429). Biraz sonra tekrar deneyin veya Ayarlar\'dan kendi API anahtarınızı ekleyin.'
+        : 'Yapay zeka rekonstrüksiyonu sırasında hata: ' + errMsg,
     });
+  }
+});
+
+// Similar past exam questions for a free-text description, e.g. "ACE inhibitörü öksürük sorusu çıktı".
+// Pure retrieval (no AI call), so it is cheap enough to run while the student types.
+app.post('/api/past-questions/similar', async (req, res) => {
+  const { text, committeeId, limit } = req.body || {};
+  if (!text || typeof text !== 'string' || text.trim().length < 4) {
+    return res.json({ results: [] });
+  }
+  try {
+    const { findSimilarPastQuestions } = await import('./src/services/ragService.ts');
+    const results = await findSimilarPastQuestions(text.trim().slice(0, 1000), committeeId, Math.min(Number(limit) || 5, 10));
+    res.json({ results });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message, results: [] });
   }
 });
 
 // Quick AI suggestion for missing options or stem improvement
 app.post('/api/ai/quick-assist', async (req, res) => {
-  const { discipline, topic, fragment } = req.body;
+  const { committeeId, discipline, topic, fragment } = req.body || {};
+  if (!fragment || typeof fragment !== 'string' || !fragment.trim()) {
+    return res.status(400).json({ error: 'fragment gereklidir.' });
+  }
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
-      contents: `Tıp Dönem 3 kurul sınavı için şu soru parçası hakkında olası soru kökü ve 5 şık öner:
+    const { findSourcesForQuestion, formatSourcesForPrompt, toSourceRef } = await import('./src/services/ragService.ts');
+    const sources = await findSourcesForQuestion(
+      { committeeId, discipline, topic, fragments: [{ text: fragment }] },
+      undefined,
+      4
+    );
+
+    const ai = await generateResilientMedicalAi({
+      prompt: `Tıp Dönem 3 kurul sınavından bir öğrenci şu soruyu hatırlıyor:
 Ders: ${discipline || 'Genel'}
-Konu: ${topic || 'Genel'}
-Öğrencinin hatırladığı: "${fragment}"
-Lütfen 1 cümlelik olası tam soru kökü ve olası 5 şıkkı JSON olarak döndür.`,
-      config: {
-        responseMimeType: 'application/json',
-        responseSchema: {
-          type: Type.OBJECT,
-          properties: {
-            suggestedStem: { type: Type.STRING },
-            suggestedOptions: {
-              type: Type.ARRAY,
-              items: {
-                type: Type.OBJECT,
-                properties: {
-                  key: { type: Type.STRING },
-                  text: { type: Type.STRING },
-                },
-              },
-            },
-            probableAnswer: { type: Type.STRING },
-          },
-        },
-      },
+Konu: ${topic || 'Belirtilmedi'}
+Hatırladığı: "${fragment}"
+
+FAKÜLTE DERS MATERYALİ VE ÇIKMIŞ SORULAR:
+${formatSourcesForPrompt(sources, 600)}
+
+Kaynaklara dayanarak sınavda sorulmuş olması en muhtemel tam soru kökünü ve 5 şıkkı öner.
+Kaynaklarda aynı konuda çıkmış bir soru varsa onu temel al.
+YALNIZCA şu JSON'u dön:
+{ "suggestedStem": "...", "suggestedOptions": [{ "key": "A", "text": "..." }], "probableAnswer": "A", "usedSources": [1] }`,
     });
 
-    res.json(JSON.parse(response.text?.trim() || '{}'));
+    const parsed = JSON.parse(ai.text?.trim() || '{}');
+    const used: number[] = Array.isArray(parsed.usedSources) ? parsed.usedSources : [];
+    res.json({
+      suggestedStem: parsed.suggestedStem,
+      suggestedOptions: parsed.suggestedOptions,
+      probableAnswer: parsed.probableAnswer,
+      sources: used.map((n) => sources[Number(n) - 1]).filter(Boolean).map(toSourceRef),
+    });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
@@ -2543,11 +2210,7 @@ app.post('/api/gemini/sync-database', requireAdmin, async (req, res) => {
 Bunu veritabanımıza uygun JSON formatında çıkar:
 - questions: [ { questionNumber, discipline, topic, stem, options: [{ key, text }], claimedAnswer, explanation } ]`;
 
-      const aiRes = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
-        contents: [prompt, payload],
-        config: { responseMimeType: 'application/json' },
-      });
+      const aiRes = await generateGeminiWithFallback([prompt, payload], { responseMimeType: 'application/json' });
 
       const parsed = JSON.parse(aiRes.text?.trim() || '{"questions":[]}');
       questionsToAdd = parsed.questions || [];
@@ -3664,7 +3327,27 @@ app.post('/api/ai/match-lecture-notes', async (req, res) => {
     if (!queryText || !queryText.trim()) {
       return res.json({ matches: [] });
     }
-    const matches = findBestMatchingLectureSlides(queryText, disciplineHint, committeeId, limit);
+    const { searchRagChunks } = await import('./src/services/ragService.ts');
+    const sources = await searchRagChunks(queryText, undefined, {
+      committeeId,
+      discipline: disciplineHint,
+      documentType: 'lecture_slide',
+      limit,
+    });
+    const matches = sources.map((src) => ({
+      noteId: src.documentId,
+      noteTitle: src.title,
+      discipline: src.discipline || 'Tıp',
+      committeeId: src.committeeId,
+      pageNumber: src.pageNumber || 0,
+      totalSlides: src.metadata?.totalSlides || 0,
+      score: Math.min(100, Math.round(src.combinedScore || 0)),
+      snippet: src.content.replace(/\s+/g, ' ').slice(0, 220),
+      fullContent: src.content.slice(0, 1500),
+      keywords: [],
+      reasoning: 'RAG ders slaytı eşleşmesi',
+      driveFileUrl: src.metadata?.driveFileUrl,
+    }));
     return res.json({ matches });
   } catch (err: any) {
     console.error('match-lecture-notes error:', err);
@@ -3706,14 +3389,20 @@ app.post('/api/ai/optimize-question', async (req, res) => {
       studentNotes
     ].filter(Boolean).join(' ');
 
-    // 2. High-speed lecture notes search across 880+ faculty lecture notes
-    const matchingSlides = findBestMatchingLectureSlides(
-      query,
-      question.discipline,
-      question.committeeId,
-      3
-    );
-
+    // 2. Retrieve course material + past exam questions (RAG, AI-generated chunks excluded)
+    const { findSourcesForQuestion, formatSourcesForPrompt, toSourceRef } = await import('./src/services/ragService.ts');
+    const sources = await findSourcesForQuestion(question, studentNotes);
+    const matchingSlides = sources.map((src) => ({
+      noteId: src.documentId,
+      noteTitle: src.title,
+      discipline: src.discipline || 'Tıp',
+      pageNumber: src.pageNumber || 0,
+      totalSlides: src.metadata?.totalSlides || 0,
+      score: Math.min(100, Math.round(src.combinedScore || 0)),
+      snippet: src.content.replace(/\s+/g, ' ').slice(0, 220),
+      reasoning: `RAG kaynağı (${src.documentType})`,
+      driveFileUrl: src.metadata?.driveFileUrl,
+    }));
     const topMatch = matchingSlides[0] || null;
 
     // 3. Assemble prompt for Gemini / Groq with dual grounding (amfi notes + internet medical standards)
@@ -3752,14 +3441,8 @@ ${commentsText ? commentsText : '  (Ek yorum yok)'}
 
 ${studentNotes ? `ÖĞRENCİ / KULLANICI EK YÖNLENDİRMESİ VE İPUCU:\n"""\n${studentNotes}\n"""\n` : ''}
 
-${topMatch ? `EŞLEŞEN AMFİ DERS NOTU VE SLAYT ZEMİNLEMESİ (GROUNDING):
-- Amfi Dersi: "${topMatch.noteTitle}"
-- Tespit Edilen Disiplin: ${topMatch.discipline}
-- Slayt Sayfası: #${topMatch.pageNumber} / ${topMatch.totalSlides} (Eşleşme Güveni: %${topMatch.score})
-- Slayttaki İlgili Pasaj:
-"""
-${topMatch.fullContent}
-"""` : 'Not: Amfi ders notu veri tabanında birebir slayt bulunamadı; doğrudan güncel tıp literatürü standartları esas alınacaktır.'}
+FAKÜLTE DERS MATERYALİ VE ÇIKMIŞ SORULAR (en alakalıdan aza doğru; soruyu bunlara dayandır, kaynakta olmayanı uydurma):
+${formatSourcesForPrompt(sources)}
 
 DÜZENLEME KURALLARI VE STANDARTLARI:
 1. DERS VE KONU TESPİTİ (ZORUNLU):
@@ -3880,6 +3563,7 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
         confidenceScore: s.score,
         reasoning: s.reasoning
       })),
+      sources: sources.map(toSourceRef),
       refinementSummary: parsed.refinementSummary || 'Soru amfi ders notları ve tıp literatürüyle düzenlendi.',
       providerUsed,
       planUsed
@@ -4434,45 +4118,14 @@ app.get('/api/lecture-notes/:id', (req, res) => {
 
 // --- RAG System Endpoints (pgvector + Hybrid Search + AI Workflows) ---
 
-// 1. RAG Search: Fast retrieval of reference slides, questions, and transcripts
-app.post('/api/rag/search', async (req, res) => {
-  try {
-    const { query, committeeId, discipline, documentType, limit } = req.body;
-    if (!query || typeof query !== 'string' || !query.trim()) {
-      return res.status(400).json({ error: 'Arama sorgusu (query) gereklidir.' });
-    }
-
-    const { searchRagChunks } = await import('./src/services/ragService.ts');
-    const freeKeys = getTieredGeminiKeys();
-    const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
-
-    const results = await searchRagChunks(query.trim(), activeKey, {
-      committeeId,
-      discipline,
-      documentType,
-      limit: limit ? parseInt(limit, 10) : 5,
-    });
-
-    res.json({ success: true, count: results.length, results });
-  } catch (err: any) {
-    console.error('[RAG Search Error]:', err.message);
-    res.status(500).json({ error: 'RAG arama hatası: ' + err.message });
-  }
-});
-
-// 2. RAG Ask: Ground-truth AI generation for QA, Redaction, Reduction, and Verification
+// RAG Ask: answer grounded on course material (used by the slide "ask" box)
 app.post('/api/rag/ask', async (req, res) => {
   try {
     const { query, committeeId, discipline, mode, targetQuestion, limit, customModel } = req.body;
     if (!query || typeof query !== 'string' || !query.trim()) {
       return res.status(400).json({ error: 'Sorgu metni (query) gereklidir.' });
     }
-
     const { executeRagQuery } = await import('./src/services/ragService.ts');
-    const freeKeys = getTieredGeminiKeys();
-    const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
-    const modelToUse = customModel || 'gemini-3.8-flash';
-
     const ragResponse = await executeRagQuery(
       {
         query: query.trim(),
@@ -4482,61 +4135,13 @@ app.post('/api/rag/ask', async (req, res) => {
         targetQuestion,
         limit: limit ? parseInt(limit, 10) : 4,
       },
-      activeKey,
-      modelToUse
+      undefined,
+      customModel || 'gemini-3.8-flash'
     );
-
     res.json({ success: true, ...ragResponse });
   } catch (err: any) {
     console.error('[RAG Ask Error]:', err.message);
     res.status(500).json({ error: 'RAG yanıt üretme hatası: ' + err.message });
-  }
-});
-
-// 2b. RAG Ask Stream: Real-time Server-Sent Events (SSE) streaming for fast token delivery
-app.post('/api/rag/ask-stream', async (req, res) => {
-  try {
-    const { query, committeeId, discipline, mode, targetQuestion, limit, customModel } = req.body;
-    if (!query || typeof query !== 'string' || !query.trim()) {
-      return res.status(400).json({ error: 'Sorgu metni (query) gereklidir.' });
-    }
-
-    res.writeHead(200, {
-      'Content-Type': 'text/event-stream',
-      'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive',
-      'Access-Control-Allow-Origin': '*'
-    });
-
-    const { executeRagQueryStream } = await import('./src/services/ragService.ts');
-    const freeKeys = getTieredGeminiKeys();
-    const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
-    const modelToUse = customModel || 'gemini-3.8-flash';
-
-    for await (const chunk of executeRagQueryStream(
-      {
-        query: query.trim(),
-        committeeId,
-        discipline,
-        mode: mode || 'qa',
-        targetQuestion,
-        limit: limit ? parseInt(limit, 10) : 4,
-      },
-      activeKey,
-      modelToUse
-    )) {
-      res.write(`data: ${JSON.stringify(chunk)}\n\n`);
-    }
-
-    res.write('data: [DONE]\n\n');
-    res.end();
-  } catch (err: any) {
-    console.error('[RAG Ask Stream Error]:', err.message);
-    if (!res.headersSent) {
-      res.status(500).json({ error: 'RAG stream hatası: ' + err.message });
-    } else {
-      res.end();
-    }
   }
 });
 
@@ -4743,14 +4348,9 @@ app.post('/api/ai/upgrade-advanced-question', async (req, res) => {
       return res.status(400).json({ success: false, error: 'Dönüştürülecek soru bulunamadı.' });
     }
 
-    // 1. Gather lecture snippet
-    const matchingSlides = findBestMatchingLectureSlides(
-      targetQuestion.reconstruction?.stem || targetQuestion.stem || targetQuestion.topic || '',
-      targetQuestion.discipline,
-      targetQuestion.committeeId,
-      1
-    );
-    const lectureSnippet = matchingSlides[0]?.snippet || '';
+    // 1. Gather grounding sources (lecture material + past questions)
+    const { findSourcesForQuestion, formatSourcesForPrompt } = await import('./src/services/ragService.ts');
+    const lectureSnippet = formatSourcesForPrompt(await findSourcesForQuestion(targetQuestion, undefined, 3), 600);
 
     // 2. Gather DeepSeek contributions context
     const deepseekItems = loadDeepSeekContributions();
@@ -4849,6 +4449,8 @@ app.post('/api/lecture-notes', requireAdmin, (req, res) => {
       return res.status(400).json({ error: 'Geçersiz ders notu verisi' });
     }
     const saved = saveLectureNote(note);
+    // Make the new material searchable right away (RAG index is otherwise rebuilt on restart).
+    runAutoChunking({ syncToCloud: false }).catch(() => {});
     mirrorLectureNoteToSupabase(saved).catch(() => {});
     res.json({ success: true, note: saved, totalNotes: getAllLectureNotes().length });
   } catch (err: any) {

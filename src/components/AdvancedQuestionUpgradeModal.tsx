@@ -16,6 +16,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import { QuestionItem } from '../types';
+import { safeJsonFetch } from '../services/api';
 
 interface AdvancedQuestionUpgradeModalProps {
   question: QuestionItem;
@@ -49,7 +50,7 @@ export const AdvancedQuestionUpgradeModal: React.FC<AdvancedQuestionUpgradeModal
     setErrorMsg(null);
 
     try {
-      const res = await fetch('/api/ai/upgrade-advanced-question', {
+      const res = await safeJsonFetch<any>('/api/ai/upgrade-advanced-question', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -60,9 +61,9 @@ export const AdvancedQuestionUpgradeModal: React.FC<AdvancedQuestionUpgradeModal
         })
       });
 
-      const data = await res.json();
-      if (!res.ok || !data.success) {
-        throw new Error(data.error || 'Gelişmiş soru üretilemedi.');
+      const data = res.data;
+      if (!res.ok || !data?.success) {
+        throw new Error(data?.error || res.error || 'Gelişmiş soru üretilemedi.');
       }
 
       setAdvancedResult(data.advancedQuestion);

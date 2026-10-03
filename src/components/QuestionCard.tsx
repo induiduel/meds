@@ -18,6 +18,13 @@ import {
 import { ActionMenu } from './ui/ActionMenu';
 import { QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
+
+const SOURCE_TYPE_LABELS: Record<string, string> = {
+  past_question: 'Çıkmış soru',
+  lecture_slide: 'Ders slaytı',
+  summary: 'Ders özeti',
+  transcript: 'Amfi kaydı',
+};
 import { StatusPill, questionStemText } from './QuickAddHero';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
@@ -572,6 +579,18 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                         <strong className="font-semibold">Hafıza notu: </strong>
                         {rec.notesAndDiscrepancies}
                       </span>
+                    </div>
+                  )}
+                  {rec?.sources && rec.sources.length > 0 && (
+                    <div className="flex flex-col gap-1.5 rounded-xl border border-line px-4 py-3 text-[13.5px]">
+                      <strong className="font-semibold text-ink">Dayandığı kaynaklar</strong>
+                      {rec.sources.map((src, i) => (
+                        <div key={`${src.documentId}-${i}`} className="text-ink-2">
+                          <span className="font-medium">{SOURCE_TYPE_LABELS[src.documentType] || 'Kaynak'}:</span>{' '}
+                          {src.title}
+                          {src.pageNumber ? ` · s.${src.pageNumber}` : ''}
+                        </div>
+                      ))}
                     </div>
                   )}
                 </section>

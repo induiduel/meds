@@ -1,9 +1,18 @@
+// RAG: retrieve course material (slides, summaries, transcripts, past exam questions)
+// and ground AI answers on it. Server-only.
+//
+// Retrieval order: local BM25 index (localRagEngine) -> Supabase pgvector (only if local
+// finds nothing). AI-generated chunks are excluded so model output never becomes a "source".
 import { GoogleGenAI } from '@google/genai';
 import { supabase } from './supabaseClient.ts';
-import { findBestMatchingLectureSlides } from '../serverLectureNotes.ts';
 import { searchLocalRag, type RagDocumentType } from './localRagEngine.ts';
-import fs from 'fs';
-import path from 'path';
+import { generateResilientMedicalAi, getTieredGeminiKeys } from './aiProvider.ts';
+import { getCachedLectureNotes } from '../serverLectureNotes.ts';
+
+/** Human-authored material that may be used as evidence. */
+export const GROUNDING_DOC_TYPES: RagDocumentType[] = ['past_question', 'lecture_slide', 'summary', 'transcript'];
+/** Course material only (no exam questions). */
+export const MATERIAL_DOC_TYPES: RagDocumentType[] = ['lecture_slide', 'summary', 'transcript'];
 
 export interface RagChunkResult {
   id: string;
@@ -36,189 +45,196 @@ export interface RagAskResponse {
   sourcesCount: number;
 }
 
-/**
- * Generate 768-dimensional embedding using Gemini embedding model
- */
+const DOC_TYPE_LABELS: Record<string, string> = {
+  past_question: 'Çıkmış Sınav Sorusu',
+  lecture_slide: 'Ders Slaytı',
+  summary: 'Ders Özeti',
+  transcript: 'Amfi Ses Transkripti',
+};
+
+/** Generate a 768-dim embedding (used only for the Supabase pgvector path). */
 export async function generateEmbedding(text: string, apiKey: string): Promise<number[]> {
   const client = new GoogleGenAI({ apiKey });
   const res = await client.models.embedContent({
     model: 'gemini-embedding-001',
     contents: [text],
-    config: { outputDimensionality: 768 }
+    config: { outputDimensionality: 768 },
   });
-  if (res.embeddings && res.embeddings.length > 0 && res.embeddings[0].values) {
-    return res.embeddings[0].values;
-  }
-  throw new Error('Embedding üretilemedi.');
+  const values = res.embeddings?.[0]?.values;
+  if (!values) throw new Error('Embedding üretilemedi.');
+  return values;
 }
 
-// In-Memory Query Embedding Cache (LRU up to 200 items)
-const queryEmbeddingCache = new Map<string, number[]>();
-
-export async function getCachedOrNewEmbedding(text: string, apiKey: string): Promise<number[]> {
-  const norm = text.trim().toLowerCase();
-  if (queryEmbeddingCache.has(norm)) {
-    return queryEmbeddingCache.get(norm)!;
-  }
-  const emb = await generateEmbedding(text, apiKey);
-  if (queryEmbeddingCache.size > 200) {
-    const firstKey = queryEmbeddingCache.keys().next().value;
-    if (firstKey) queryEmbeddingCache.delete(firstKey);
-  }
-  queryEmbeddingCache.set(norm, emb);
-  return emb;
+// The same deck is often uploaded several times under slightly different titles, so
+// chunk headers differ. Compare the tail of the body and the title+page instead.
+function dedupeKeys(r: { content: string; title: string; pageNumber?: number }): string[] {
+  const norm = (t: string) => t.toLocaleLowerCase('tr').replace(/[^a-z0-9çğıöşü]+/g, '');
+  return [`body:${norm(r.content).slice(-300)}`, `page:${norm(r.title)}#${r.pageNumber ?? ''}`];
 }
 
-// In-Memory RAG Ask Response Cache (LRU with 30-min TTL)
-interface CachedRagResponse {
-  response: RagAskResponse;
-  expiresAt: number;
-}
-const ragResponseCache = new Map<string, CachedRagResponse>();
-
-function getCachedRagResponse(key: string): RagAskResponse | null {
-  const item = ragResponseCache.get(key);
-  if (!item) return null;
-  if (Date.now() > item.expiresAt) {
-    ragResponseCache.delete(key);
-    return null;
-  }
-  return item.response;
+// Many "lecture notes" are actually uploaded exam dumps (question PDFs). They are not course
+// material: citing them as a "slide" would just echo questions back. A note counts as an exam dump
+// when most of its pages look like exam questions.
+export function isExamLikePage(content: string): boolean {
+  if (/Sıra\s*No\s*Cevap|Cevabınız/i.test(content)) return true;
+  const q = (content.match(/hangisi(dir)?|hangileri|aşağıdakilerden|nedir\s*\?|\?\s*$/gim) || []).length;
+  const opts = (content.match(/(^|\s)[a-eA-E]\s*[).]\s+\S/gm) || []).length;
+  const ans = (content.match(/cevap\s*[:=]|doğru cevap/gi) || []).length;
+  const numberedQuestions = (content.match(/(^|\s)\d{1,3}\s*[-.)]\s*[^?]{5,120}\?/g) || []).length; // "12- Kibas bulguları?"
+  return (q >= 2 && opts >= 4) || q >= 3 || ans >= 2 || numberedQuestions >= 2;
 }
 
-function setCachedRagResponse(key: string, response: RagAskResponse, ttlMs: number = 30 * 60 * 1000): void {
-  if (ragResponseCache.size > 150) {
-    const first = ragResponseCache.keys().next().value;
-    if (first) ragResponseCache.delete(first);
+let examDumpCache: { source: unknown; ids: Set<string> } | null = null;
+export function getExamDumpNoteIds(): Set<string> {
+  const notes = getCachedLectureNotes();
+  if (examDumpCache && examDumpCache.source === notes) return examDumpCache.ids;
+  const ids = new Set<string>();
+  for (const note of notes) {
+    // Ignore OCR debris pages ("- - -"): only pages with real text count toward the ratio.
+    const pages = (note.pages || []).filter((p: any) => (p.content?.match(/[a-zA-ZçğıöşüÇĞİÖŞÜ]/g) || []).length >= 40);
+    if (pages.length === 0) continue;
+    const examPages = pages.filter((p: any) => isExamLikePage(p.content)).length;
+    if (examPages / pages.length >= 0.5) ids.add(note.id);
   }
-  ragResponseCache.set(key, { response, expiresAt: Date.now() + ttlMs });
+  examDumpCache = { source: notes, ids };
+  return ids;
+}
+
+async function searchCloud(
+  query: string,
+  apiKey: string,
+  options: { committeeId?: string; discipline?: string; documentType?: string; limit: number }
+): Promise<RagChunkResult[]> {
+  if (!supabase || !apiKey) return [];
+  const run = async (): Promise<RagChunkResult[]> => {
+    const embedding = await generateEmbedding(query, apiKey);
+    const { data, error } = await supabase.rpc('hybrid_match_rag_chunks', {
+      query_text: query,
+      query_embedding: embedding,
+      match_count: options.limit,
+      filter_committee: options.committeeId || null,
+      filter_discipline: options.discipline || null,
+      filter_doc_type: options.documentType || null,
+    });
+    if (error || !Array.isArray(data)) return [];
+    return data
+      .filter((item: any) => GROUNDING_DOC_TYPES.includes(item.document_type))
+      .map((item: any) => ({
+        id: item.id,
+        documentId: item.document_id,
+        documentType: item.document_type,
+        committeeId: item.committee_id,
+        discipline: item.discipline,
+        title: item.title,
+        pageNumber: item.page_number,
+        content: item.content,
+        metadata: item.metadata,
+        similarity: item.similarity,
+        combinedScore: item.combined_score,
+      }));
+  };
+  const timeout = new Promise<RagChunkResult[]>((resolve) => setTimeout(() => resolve([]), 1500));
+  try {
+    return await Promise.race([run(), timeout]);
+  } catch {
+    return [];
+  }
 }
 
 /**
- * Retrieve most relevant chunks from local BM25 engine or fallback to cloud search
+ * Find the most relevant human-authored chunks for a query.
+ * `documentType` narrows to a single type; otherwise all GROUNDING_DOC_TYPES are searched.
  */
 export async function searchRagChunks(
   query: string,
-  apiKey: string,
+  apiKey?: string,
   options: {
     committeeId?: string;
     discipline?: string;
     documentType?: string;
+    documentTypes?: RagDocumentType[];
     limit?: number;
-    threshold?: number;
   } = {}
 ): Promise<RagChunkResult[]> {
   const limit = options.limit || 5;
+  const documentTypes = options.documentType
+    ? [options.documentType as RagDocumentType]
+    : (options.documentTypes || GROUNDING_DOC_TYPES).filter((t) => GROUNDING_DOC_TYPES.includes(t));
 
-  // 1. High-speed local search across all 9 data types (in-memory BM25 index: < 5ms)
-  let localResults: RagChunkResult[] = [];
+  let results: RagChunkResult[] = [];
   try {
-    const docTypes = options.documentType ? [options.documentType as RagDocumentType] : undefined;
-    const lRes = await searchLocalRag(query, {
+    // Over-fetch so de-duplication and exam-dump filtering still leave `limit` results.
+    const local = await searchLocalRag(query, {
       committeeId: options.committeeId,
       discipline: options.discipline,
-      documentTypes: docTypes,
-      limit: limit
+      documentTypes,
+      limit: limit * 8,
     });
-    if (lRes && lRes.length > 0) {
-      localResults = lRes.map(item => ({
-        id: item.id,
-        documentId: item.documentId,
-        documentType: item.documentType,
-        committeeId: item.committeeId,
-        discipline: item.discipline,
-        title: item.title,
-        pageNumber: item.pageNumber,
-        content: item.content,
-        metadata: item.metadata,
-        similarity: item.similarity,
-        combinedScore: item.matchScore
-      }));
-    }
-  } catch (localErr: any) {
-    console.warn('[RagService] Yerel RAG arama uyarısı:', localErr.message);
+    results = local.map((item) => ({
+      id: item.id,
+      documentId: item.documentId,
+      documentType: item.documentType,
+      committeeId: item.committeeId,
+      discipline: item.discipline,
+      title: item.title,
+      pageNumber: item.pageNumber,
+      content: item.content,
+      metadata: item.metadata,
+      similarity: item.similarity,
+      combinedScore: item.matchScore,
+    }));
+  } catch (err: any) {
+    console.warn('[RagService] Yerel RAG arama uyarısı:', err.message);
   }
 
-  // Fast-Path: If local BM25 returned matches from the 55,000 course chunks,
-  // return immediately in < 5ms without blocking on external Gemini Embedding API + Supabase RPC!
-  if (localResults.length > 0) {
-    return localResults.slice(0, limit);
+  if (results.length === 0) {
+    const key = apiKey || getTieredGeminiKeys()[0]?.key || '';
+    results = await searchCloud(query, key, { ...options, limit: limit * 2 });
   }
 
-  // 2. Try Supabase pgvector / hybrid search if cloud is configured and local matches were sparse
-  let cloudResults: RagChunkResult[] = [];
-  if (supabase && apiKey) {
-    try {
-      // Use 1500ms timeout guard to prevent network hang
-      const cloudFetch = async () => {
-        const embedding = await getCachedOrNewEmbedding(query, apiKey);
-        const { data: hybridData, error: hybridError } = await supabase.rpc('hybrid_match_rag_chunks', {
-          query_text: query,
-          query_embedding: embedding,
-          match_count: limit,
-          filter_committee: options.committeeId || null,
-          filter_discipline: options.discipline || null,
-          filter_doc_type: options.documentType || null
-        });
-
-        if (!hybridError && Array.isArray(hybridData) && hybridData.length > 0) {
-          return hybridData.map((item: any) => ({
-            id: item.id,
-            documentId: item.document_id,
-            documentType: item.document_type,
-            committeeId: item.committee_id,
-            discipline: item.discipline,
-            title: item.title,
-            pageNumber: item.page_number,
-            content: item.content,
-            metadata: item.metadata,
-            similarity: item.similarity,
-            combinedScore: item.combined_score
-          }));
-        }
-        return [];
-      };
-
-      const timeoutPromise = new Promise<RagChunkResult[]>((resolve) => setTimeout(() => resolve([]), 1500));
-      cloudResults = await Promise.race([cloudFetch(), timeoutPromise]);
-    } catch (_) {}
+  const examDumps = getExamDumpNoteIds();
+  const seen = new Set<string>();
+  const unique: RagChunkResult[] = [];
+  for (const r of results) {
+    if (r.documentType === 'lecture_slide' && examDumps.has(r.documentId)) continue;
+    const keys = dedupeKeys(r);
+    if (keys.some((k) => seen.has(k))) continue;
+    keys.forEach((k) => seen.add(k));
+    unique.push(r);
+    if (unique.length >= limit) break;
   }
-
-  // 3. Merge & Deduplicate
-  const merged = new Map<string, RagChunkResult>();
-  for (const c of cloudResults) {
-    merged.set(c.id, c);
-  }
-  for (const l of localResults) {
-    if (!merged.has(l.id)) {
-      merged.set(l.id, l);
-    }
-  }
-
-  if (merged.size > 0) {
-    return Array.from(merged.values())
-      .sort((a, b) => (b.combinedScore || b.similarity || 0) - (a.combinedScore || a.similarity || 0))
-      .slice(0, limit);
-  }
-
-  // 4. Fallback using lecture slides in-memory search
-  const localSlides = findBestMatchingLectureSlides(query, options.discipline, options.committeeId, limit);
-  return localSlides.map((s, idx) => ({
-    id: `local-slide-${idx}`,
-    documentId: s.noteId,
-    documentType: 'lecture_slide',
-    committeeId: s.committeeId,
-    discipline: s.discipline,
-    title: s.noteTitle,
-    pageNumber: s.pageNumber,
-    content: s.fullContent || s.snippet,
-    similarity: Math.min(1.0, s.score / 100),
-    metadata: {
-      totalSlides: s.totalSlides,
-      reasoning: s.reasoning
-    }
-  }));
+  return unique;
 }
+
+/** Render retrieved chunks as numbered sources for a prompt. */
+export function formatSourcesForPrompt(sources: RagChunkResult[], maxCharsPerSource = 900): string {
+  if (sources.length === 0) {
+    return 'Ders materyallerinde ilgili kaynak bulunamadı. Genel tıp bilgisine dayan ve bunu notlarda açıkça belirt.';
+  }
+  return sources
+    .map((ref, idx) => {
+      const label = DOC_TYPE_LABELS[ref.documentType] || ref.documentType;
+      const page = ref.pageNumber ? ` (s. ${ref.pageNumber})` : '';
+      const body = ref.content.length > maxCharsPerSource ? ref.content.slice(0, maxCharsPerSource) + '…' : ref.content;
+      return `--- [KAYNAK ${idx + 1}: ${label} | ${ref.discipline || 'Tıp'} - ${ref.title}${page}] ---\n${body.trim()}`;
+    })
+    .join('\n\n');
+}
+
+/** Compact source descriptor returned to the client for display. */
+export function toSourceRef(ref: RagChunkResult) {
+  return {
+    documentId: ref.documentId,
+    documentType: ref.documentType,
+    title: ref.title,
+    discipline: ref.discipline,
+    pageNumber: ref.pageNumber,
+    snippet: ref.content.replace(/\s+/g, ' ').slice(0, 220),
+  };
+}
+
+// Response cache for /api/rag/ask (30 min, max 150 entries)
+const ragResponseCache = new Map<string, { response: RagAskResponse; expiresAt: number }>();
 
 /**
  * Build tailored system prompts for each medical mode
@@ -262,21 +278,17 @@ Kurallar:
 }
 
 /**
- * Execute AI generation with ground-truth RAG context (with Response Caching & Context Compression)
+ * Answer a query grounded on retrieved course material.
  */
 export async function executeRagQuery(
   options: RagAskOptions,
-  apiKey: string,
+  apiKey?: string,
   modelName: string = 'gemini-3.8-flash'
 ): Promise<RagAskResponse> {
   const mode = options.mode || 'qa';
-
-  // 1. Check in-memory RAG response cache for instant 0ms responses
   const cacheKey = `${mode}:${options.committeeId || ''}:${options.discipline || ''}:${options.query.trim().toLowerCase()}`;
-  const cached = getCachedRagResponse(cacheKey);
-  if (cached) {
-    return cached;
-  }
+  const cached = ragResponseCache.get(cacheKey);
+  if (cached && cached.expiresAt > Date.now()) return cached.response;
 
   const effectiveQuery = (mode === 'redact' && options.targetQuestion)
     ? `${options.query} ${options.targetQuestion.rawStem || options.targetQuestion.stem || ''} ${options.targetQuestion.claimedAnswer || ''}`.trim()
@@ -285,48 +297,12 @@ export async function executeRagQuery(
   const references = await searchRagChunks(effectiveQuery, apiKey, {
     committeeId: options.committeeId,
     discipline: options.discipline,
-    limit: options.limit || 4
+    limit: options.limit || 4,
   });
+  const contextBlock = formatSourcesForPrompt(references, 550);
 
-  // 2. Build compact, compressed context block (caps length to 550 chars per reference to speed up TTFT)
-  let contextBlock = '';
-  if (references.length > 0) {
-    contextBlock = references.map((ref, idx) => {
-      const typeLabel = ref.documentType === 'deepseek_contribution'
-        ? '🤖 DeepSeek Akademik Katkı & Düzenleme'
-        : ref.documentType === 'past_question' 
-        ? '📋 Çıkmış Sınav Sorusu' 
-        : ref.documentType === 'active_question'
-        ? '📝 Güncel Sınav Sorusu'
-        : ref.documentType === 'transcript'
-        ? '🎙️ Amfi Ses Transkripti'
-        : ref.documentType === 'summary'
-        ? '📚 Ders Özeti & Spot Bilgi'
-        : ref.documentType === 'ai_qa'
-        ? '💡 Önceki AI Soru-Cevap Analizi'
-        : ref.documentType === 'ai_refinement'
-        ? '🛠️ Yapay Zeka Soru Düzeltme & Zeminleme'
-        : ref.documentType === 'user_contribution'
-        ? '👥 Öğrenci Sınav Hatırlaması'
-        : `📑 Ders Slaytı (Slayt #${ref.pageNumber || '?'})`;
-
-      const compressedContent = ref.content.length > 550
-        ? ref.content.slice(0, 550) + '...\n[İlgili bölüm özetlendi]'
-        : ref.content;
-
-      return `--- [KAYNAK ${idx + 1}: ${typeLabel} | ${ref.discipline || 'Tıp'} - ${ref.title}] ---
-${compressedContent.trim()}
-`;
-    }).join('\n\n');
-  } else {
-    contextBlock = 'Özel referans parçacığı bulunamadı, genel tıbbi müfredat prensiplerine göre yanıtla.';
-  }
-
-  const systemInstruction = buildSystemPrompt(mode);
-
-  let userPrompt = '';
-  if (mode === 'redact' && options.targetQuestion) {
-    userPrompt = `REDAKTE EDİLECEK HAM SORU:
+  const userPrompt = mode === 'redact' && options.targetQuestion
+    ? `REDAKTE EDİLECEK HAM SORU:
 ${JSON.stringify(options.targetQuestion, null, 2)}
 
 ÖĞRENCİ / KULLANICI TALİMATI:
@@ -335,188 +311,84 @@ ${options.query}
 GÜVENİLİR DERS VE ÇIKMIŞ SORU REFERANSLARI:
 ${contextBlock}
 
-Lütfen yukarıdaki amfi notlarına dayanarak soruyu kusursuz bir şekilde redakte et.`;
-  } else {
-    userPrompt = `SORU / TALEP:
+Lütfen yukarıdaki amfi notlarına dayanarak soruyu kusursuz bir şekilde redakte et.`
+    : `SORU / TALEP:
 ${options.query}
 
 GÜVENİLİR DERS VE ÇIKMIŞ SORU REFERANSLARI:
 ${contextBlock}
 
 Lütfen bu referansları temel alarak talimatı yerine getir.`;
-  }
 
-  const candidateKeys = [
-    apiKey,
-    process.env.GEMINI_FREE_KEY_2,
-    process.env.GEMINI_API_KEY,
-    process.env.GEMINI_BILLED_KEY
-  ].filter((k): k is string => Boolean(k && k.trim() && k !== 'MY_GEMINI_FREE_KEY_1'));
-
-  const candidateModels = [modelName, 'gemini-3.8-flash', 'gemini-flash-latest'].filter((v, idx, arr) => arr.indexOf(v) === idx);
-  let response: any = null;
-  let lastErr: any = null;
-  let resolvedModel = modelName;
-
-  for (const k of candidateKeys) {
-    for (const m of candidateModels) {
-      try {
-        const client = new GoogleGenAI({ apiKey: k });
-        response = await client.models.generateContent({
-          model: m,
-          contents: userPrompt,
-          config: {
-            systemInstruction: systemInstruction,
-            temperature: 0.2, // Low temperature for high factual accuracy
-            maxOutputTokens: 1500, // Optimized token budget
-          }
-        });
-        if (response && response.text) {
-          resolvedModel = m;
-          break;
-        }
-      } catch (err: any) {
-        lastErr = err;
-      }
-    }
-    if (response && response.text) break;
-  }
-
-  if (!response || !response.text) {
-    const decodeB64 = (s: string) => Buffer.from(s, 'base64').toString('utf8');
-    const groqKeys = [
-      process.env.GROQ_API_KEY,
-      process.env.GROQ_BACKUP_KEY_2,
-      decodeB64('Z3NrX1hiUktHakF1VksyTWtnTjhYd3lJV0dkeWIzRllJRU5LVlY2bklJRE9nMEdTTEFpeFhSeDcx')
-    ].filter(Boolean) as string[];
-
-    for (const gKey of groqKeys) {
-      try {
-        const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${gKey}`
-          },
-          body: JSON.stringify({
-            model: 'llama-3.3-70b-versatile',
-            messages: [
-              ...(systemInstruction ? [{ role: 'system', content: systemInstruction }] : []),
-              { role: 'user', content: userPrompt }
-            ],
-            temperature: 0.2,
-            max_tokens: 1500
-          })
-        });
-
-        if (groqRes.ok) {
-          const gData = await groqRes.json();
-          const groqText = gData.choices?.[0]?.message?.content;
-          if (groqText) {
-            response = { text: groqText };
-            resolvedModel = 'groq/llama-3.3-70b-versatile';
-            break;
-          }
-        }
-      } catch (gErr: any) {
-        lastErr = gErr;
-      }
-    }
-  }
-
-  if (!response || !response.text) {
-    throw lastErr || new Error('Yapay zeka modeli yanıt üretemedi.');
-  }
-
-  const answer = response.text || 'Yanıt üretilemedi.';
-
-  const finalResponse: RagAskResponse = {
-    answer,
-    mode,
-    references,
-    usedModel: resolvedModel,
-    sourcesCount: references.length
-  };
-
-  // Cache response for 30 minutes
-  setCachedRagResponse(cacheKey, finalResponse);
-
-  return finalResponse;
-}
-
-/**
- * Real-time token streaming generator for RAG generation
- */
-export async function* executeRagQueryStream(
-  options: RagAskOptions,
-  apiKey: string,
-  modelName: string = 'gemini-3.8-flash'
-): AsyncGenerator<{ token?: string; done?: boolean; references?: RagChunkResult[]; usedModel?: string }> {
-  const mode = options.mode || 'qa';
-  const effectiveQuery = (mode === 'redact' && options.targetQuestion)
-    ? `${options.query} ${options.targetQuestion.rawStem || options.targetQuestion.stem || ''} ${options.targetQuestion.claimedAnswer || ''}`.trim()
-    : options.query;
-
-  const references = await searchRagChunks(effectiveQuery, apiKey, {
-    committeeId: options.committeeId,
-    discipline: options.discipline,
-    limit: options.limit || 4
+  const ai = await generateResilientMedicalAi({
+    prompt: userPrompt,
+    customGeminiKey: apiKey,
+    model: modelName,
+    responseFormat: 'text',
+    systemInstruction: buildSystemPrompt(mode),
   });
 
-  // Yield references first so UI can render source citations immediately!
-  yield { references, done: false };
+  const response: RagAskResponse = {
+    answer: ai.text || 'Yanıt üretilemedi.',
+    mode,
+    references,
+    usedModel: ai.planUsed,
+    sourcesCount: references.length,
+  };
 
-  let contextBlock = '';
-  if (references.length > 0) {
-    contextBlock = references.map((ref, idx) => {
-      const compressed = ref.content.length > 550
-        ? ref.content.slice(0, 550) + '...\n[İlgili bölüm özetlendi]'
-        : ref.content;
-      return `--- [KAYNAK ${idx + 1}: ${ref.discipline || 'Tıp'} - ${ref.title}] ---\n${compressed.trim()}`;
-    }).join('\n\n');
-  } else {
-    contextBlock = 'Özel referans parçacığı bulunamadı, genel tıbbi müfredat prensiplerine göre yanıtla.';
+  if (ragResponseCache.size > 150) {
+    const first = ragResponseCache.keys().next().value;
+    if (first) ragResponseCache.delete(first);
   }
-
-  const systemInstruction = buildSystemPrompt(mode);
-  const userPrompt = `SORU / TALEP:\n${options.query}\n\nGÜVENİLİR DERS VE ÇIKMIŞ SORU REFERANSLARI:\n${contextBlock}\n\nLütfen bu referansları temel alarak yanıtla.`;
-
-  const candidateKeys = [
-    apiKey,
-    process.env.GEMINI_FREE_KEY_2,
-    process.env.GEMINI_API_KEY,
-    process.env.GEMINI_BILLED_KEY
-  ].filter((k): k is string => Boolean(k && k.trim() && k !== 'MY_GEMINI_FREE_KEY_1'));
-
-  let streamSuccess = false;
-  for (const k of candidateKeys) {
-    try {
-      const client = new GoogleGenAI({ apiKey: k });
-      const streamRes = await client.models.generateContentStream({
-        model: modelName,
-        contents: userPrompt,
-        config: {
-          systemInstruction,
-          temperature: 0.2,
-          maxOutputTokens: 1500
-        }
-      });
-
-      for await (const chunk of streamRes) {
-        if (chunk.text) {
-          yield { token: chunk.text, done: false };
-        }
-      }
-      streamSuccess = true;
-      yield { done: true, usedModel: modelName };
-      break;
-    } catch (_) {}
-  }
-
-  if (!streamSuccess) {
-    // Non-streaming fallback
-    const res = await executeRagQuery(options, apiKey, modelName);
-    yield { token: res.answer, done: true, usedModel: res.usedModel };
-  }
+  ragResponseCache.set(cacheKey, { response, expiresAt: Date.now() + 30 * 60 * 1000 });
+  return response;
 }
 
+/** Build a retrieval query from everything students remembered about a question. */
+export function buildQuestionSearchQuery(question: any, extra?: string): string {
+  const parts = [
+    question.topic,
+    question.reconstruction?.stem || question.rawQuestion?.stem || question.rawStem,
+    ...(question.fragments || []).map((f: any) => f.text),
+    ...(question.options || []).map((o: any) => o.text),
+    ...(question.comments || []).map((c: any) => c.text),
+    extra,
+  ];
+  return parts
+    .filter((p) => typeof p === 'string' && p.trim() && !/^Soru #\d+$/.test(p.trim()))
+    .join(' ')
+    .slice(0, 2000);
+}
+
+const isRealDiscipline = (d?: string) => Boolean(d && d.trim() && !/^(Belirtilmedi|Tıp|Genel)$/i.test(d.trim()));
+
+/** Course material and past exam questions most relevant to a student-recalled question. */
+export async function findSourcesForQuestion(question: any, extra?: string, limit = 6): Promise<RagChunkResult[]> {
+  const query = buildQuestionSearchQuery(question, extra);
+  if (!query.trim()) return [];
+  const results = await searchRagChunks(query, undefined, {
+    committeeId: question.committeeId,
+    discipline: isRealDiscipline(question.discipline) ? question.discipline : undefined,
+    limit: limit + 1,
+  });
+  // A past question being edited must not be cited as evidence for itself.
+  return results.filter((r) => !question.id || r.documentId !== question.id).slice(0, limit);
+}
+
+/** Past exam questions similar to a free-text description ("ACE inhibitörü öksürük sorusu çıktı"). */
+export async function findSimilarPastQuestions(text: string, committeeId?: string, limit = 5) {
+  const results = await searchRagChunks(text, undefined, { committeeId, documentType: 'past_question', limit });
+  return results.map((r) => {
+    const stemMatch = r.content.match(/Soru Kökü:\n([\s\S]*?)\n\nSeçenekler:/);
+    return {
+      id: r.documentId,
+      title: r.title,
+      discipline: r.discipline,
+      committeeId: r.committeeId,
+      examYear: r.metadata?.examYear,
+      claimedAnswer: r.metadata?.claimedAnswer,
+      stem: (stemMatch?.[1] || r.content).trim().slice(0, 400),
+      score: r.combinedScore,
+    };
+  });
+}

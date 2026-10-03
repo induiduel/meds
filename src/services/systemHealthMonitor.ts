@@ -11,7 +11,7 @@
 
 import { SupabaseDbService, getSupabaseConfig } from './supabaseDb';
 import { FirestoreDbService } from './firestoreDb';
-import { CLIENT_FREE_GEMINI_KEYS, CLIENT_BILLED_GEMINI_KEY } from './api';
+import { safeJsonFetch } from './api';
 
 export type ServiceStatus = 'healthy' | 'warning' | 'critical' | 'unknown';
 
@@ -380,81 +380,52 @@ class SystemHealthMonitor {
     const customGroqKey = (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_groq_api_key') : '') || '';
     const customGeminiKey = (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_gemini_api_key') : '') || '';
 
-    const testKeys = [
-      ...(customGeminiKey ? [{ key: customGeminiKey, label: 'Kullanıcı Özel Gemini Anahtarı', isBilled: false }] : []),
-      ...CLIENT_FREE_GEMINI_KEYS,
-      ...(CLIENT_BILLED_GEMINI_KEY ? [CLIENT_BILLED_GEMINI_KEY] : [])
-    ];
+    // User's own key (saved in Settings) is pinged from the browser; server keys are
+    // checked by the backend, which only returns labels and statuses.
+    const classify = (label: string, statusCode: number, errMsg: string): AiKeyHealth => {
+      if (/spending cap/i.test(errMsg)) {
+        return { label, status: 'spending_cap_exceeded', statusCode: 429, details: 'Aylık proje harcama sınırı aşıldı.' };
+      }
+      if (statusCode === 429 || /quota|resource_exhausted/i.test(errMsg)) {
+        return { label, status: 'quota_exceeded', statusCode: 429, details: 'Dakikalık/günlük istek limiti aşıldı.' };
+      }
+      if (statusCode === 503) {
+        return { label, status: 'high_demand', statusCode: 503, details: 'Sunucu aşırı yüklü, geçici yoğunluk.' };
+      }
+      return { label, status: 'error', statusCode, details: errMsg };
+    };
 
-    let anyKeyWorking = false;
-    let anyQuotaExceeded = false;
-
-    // Sadece ilk 2 anahtarı hızlı pingleyelim (kullanıcıyı bekletmemek için)
-    for (let i = 0; i < Math.min(testKeys.length, 3); i++) {
-      const k = testKeys[i];
+    if (customGeminiKey) {
+      const label = 'Kullanıcı Özel Gemini Anahtarı';
       try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash?key=${k.key}`, {
+        const res = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash', {
           method: 'GET',
-          headers: { 'Accept': 'application/json' }
+          headers: { Accept: 'application/json', 'x-goog-api-key': customGeminiKey },
         });
-        const data = await res.json();
         if (res.ok) {
-          keysReport.push({
-            label: k.label,
-            status: 'ok',
-            model: 'gemini-3.8-flash',
-            statusCode: 200,
-            details: 'Model hazır ve yanıt veriyor.',
-          });
-          anyKeyWorking = true;
+          keysReport.push({ label, status: 'ok', model: 'gemini-3.8-flash', statusCode: 200, details: 'Model hazır ve yanıt veriyor.' });
         } else {
-          const errMsg = data.error?.message || '';
-          const is429 = res.status === 429 || /quota|resource_exhausted/i.test(errMsg);
-          const isSpendingCap = /spending cap/i.test(errMsg);
-          const is503 = res.status === 503;
-
-          if (isSpendingCap) {
-            keysReport.push({
-              label: k.label,
-              status: 'spending_cap_exceeded',
-              statusCode: 429,
-              details: 'Aylık proje harcama sınırı aşıldı.',
-            });
-            anyQuotaExceeded = true;
-          } else if (is429) {
-            keysReport.push({
-              label: k.label,
-              status: 'quota_exceeded',
-              statusCode: 429,
-              details: 'Dakikalık/günlük istek limiti aşıldı.',
-            });
-            anyQuotaExceeded = true;
-          } else if (is503) {
-            keysReport.push({
-              label: k.label,
-              status: 'high_demand',
-              statusCode: 503,
-              details: 'Sunucu aşırı yüklü, geçici yoğunluk.',
-            });
-          } else {
-            keysReport.push({
-              label: k.label,
-              status: 'error',
-              statusCode: res.status,
-              details: errMsg,
-            });
-          }
+          const data = await res.json().catch(() => ({}));
+          keysReport.push(classify(label, res.status, data.error?.message || ''));
         }
       } catch (e: any) {
-        keysReport.push({
-          label: k.label,
-          status: 'error',
-          details: e.message,
-        });
+        keysReport.push({ label, status: 'error', details: e.message });
       }
     }
 
-    const groqOk = Boolean(customGroqKey && customGroqKey.startsWith('gsk_'));
+    let serverGroqConfigured = false;
+    const serverRes = await safeJsonFetch<{ keys: AiKeyHealth[]; groqConfigured: boolean }>('/api/ai/key-health');
+    if (serverRes.ok && serverRes.data) {
+      keysReport.push(...(serverRes.data.keys || []));
+      serverGroqConfigured = Boolean(serverRes.data.groqConfigured);
+    } else {
+      keysReport.push({ label: 'Sunucu AI Anahtarları', status: 'error', details: serverRes.error || 'Sunucuya ulaşılamadı.' });
+    }
+
+    const anyKeyWorking = keysReport.some(k => k.status === 'ok');
+    const anyQuotaExceeded = keysReport.some(k => k.status === 'quota_exceeded' || k.status === 'spending_cap_exceeded');
+
+    const groqOk = serverGroqConfigured || Boolean(customGroqKey && customGroqKey.startsWith('gsk_'));
     this.currentHealth.ai = {
       status: anyKeyWorking ? 'ready' : (groqOk ? 'ready' : (anyQuotaExceeded ? 'all_exhausted' : 'degraded')),
       keys: keysReport,
