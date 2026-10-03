@@ -1,5 +1,549 @@
 [
   {
+    "id": "d3-k1-enf-005-400",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 9,
+    "slideTitle": "Bulaş (Taşınma) Şekilleri: Temas, Damlacık ve Solunum (Aerosol) Dinamikleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdaki eylemlerden hangisinde en çok sayıda solunum partikülü saçılımı olur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Öksürme",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Hapşırma",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Bağırma",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Şarkı söyleme",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Konuşma",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
+  },
+  {
+    "id": "d3-k1-enf-009-401",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 10,
+    "slideTitle": "İzolasyon Önlemlerinin 2 Kademeli Mimarisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
+  },
+  {
+    "id": "d3-k1-enf-013-402",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 11,
+    "slideTitle": "Standart Önlemler ve El Hijyeni İlkeleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
+  },
+  {
+    "id": "d3-k1-enf-013-403",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 12,
+    "slideTitle": "Güvenli Enjeksiyon ve Kesici-Delici Alet Yaralanmalarından Korunma",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
+  },
+  {
+    "id": "d3-k1-enf-010-404",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 13,
+    "slideTitle": "Temas İzolasyonu (Kırmızı Yıldız) ve Çoğul Dirençli Mikroorganizmalar",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tek kişilik oda, mümkün değilse aynı mikroorganizma ile enfekte/kolonize hastaların\naynı odaya yerleştirilmesi (kohortlama)",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Odalar/hastalar arasında malzeme veya tıbbi cihazların ortak kullanımının önlenmesi",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Kişisel koruyucu ekipmanların (KKE) hasta odasından ayrılmadan çıkarılması",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Odadan ayrıldıktan sonra el hijyeni uygulanması",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Odaya girmeden önce N95 maske takılması",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
+  },
+  {
+    "id": "d3-k1-enf-004-405",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 14,
+    "slideTitle": "Damlacık İzolasyonu (Mavi Çiçek) ve 1 Metre Güvenlik Kuralı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kızamık",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Suçiçeği",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "SARS-CoV-2 enfeksiyonu",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Neisseria meningitidis",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Tüberküloz",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
+  },
+  {
+    "id": "d3-k1-enf-004-406",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 15,
+    "slideTitle": "Solunum (Hava Yolu) İzolasyonu (Sarı Yaprak) ve Negatif Basınç",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kızamık",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Suçiçeği",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "SARS-CoV-2 enfeksiyonu",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Neisseria meningitidis",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Tüberküloz",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
+  },
+  {
+    "id": "d3-k1-enf-011-407",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 16,
+    "slideTitle": "Üç İzolasyon Tipinin ve Hastane Sembollerinin Karşılaştırma Matrisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hastanelerde kullanılan enfeksiyon kontrol işaretlerinden hangisi temas izolasyonunu simgeler?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sarı yaprak",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Mavi papatya/çiçek",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Kırmızı yıldız",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Yeşil üçgen",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Turuncu daire",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Hastane enfeksiyon kontrol uygulamasında (kurumdan kuruma\ndeğişebilen renk kodlamalarında), temas izolasyonu gerektiren\nhastaların oda kapılarına genellikle kırmızı yıldız işareti asılır. Bu görsel\nkodlama, sağlık personelinin ve ziyaretçilerin gerekli koruyucu önlemleri\n(eldiven, önlük vb.) almadan odaya girmesini engellemeyi amaçlar."
+  },
+  {
+    "id": "d3-k5-aci-011-408",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 17,
+    "slideTitle": "Kişisel Koruyucu Ekipman (KKE) Giyme ve Çıkarma Protokolü",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Akut toksik madde zehirlenmelerinde gastrointestinal dekontaminasyon yöntemleri değerlendirildiğinde güncel kılavuzlarda aspirasyon riski ve özofagus perforasyonu tehlikesi nedeniyle artık RUTİN OLARAK KULLANILMAYAN ve önerilmeyen yöntem aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "İpeka şurubu veya mekanik uyarı ile hastayı kusturma",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "İlk 1 saat içinde tek doz aktif kömür uygulaması",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Bilinç açık veya entübe hastada orogastrik tüp ile mide yıkama",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Demir ve lityum zehirlenmesinde tüm bağırsak irrigasyonu (PEG)",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Spesifik antidot uygulanması",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
+  },
+  {
+    "id": "d3-k1-enf-009-409",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 18,
+    "slideTitle": "Çoğul İlaç Dirençli Bakteriler (MDRO) ve Antibiyotik Yönetimi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
+  },
+  {
+    "id": "d3-k1-enf-054-410",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 19,
+    "slideTitle": "Koruyucu Ortam (Ters İzolasyon) ve Nötropenik Hasta Yönetimi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Febril nötropeni için hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mutlak nötrofil sayısı <500/mm³",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Vücut sıcaklığı ≥38.3°C ya da 1 saat ara ile ≥38°C",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Mukozit varlığında kandidemi riski artar",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Uzamış nötropeni küf enfeksiyonu riskini artırır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Febril nötropenide izole hümoral immün yetmezlik vardır",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
+  },
+  {
+    "id": "d3-k1-enf-009-411",
+    "deckId": "learn-enfeksiyon-izolasyon",
+    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
+    "slideNumber": 20,
+    "slideTitle": "Büyük Sentez: İzolasyon Karar Ağacı ve Kurul 1 Altın İpuçları",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
+  },
+  {
+    "id": "prac-patgir-001",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
+    "slideNumber": 1,
+    "slideTitle": "Patolojinin Tanımı, Kapsamı ve Tıptaki Köprü Rolü",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Patolojinin tıptaki yeri, tanımı ve temel kapsamı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Yalnızca kadavralar üzerinde çalışır ve yaşayan hastaların tedavi süreçleriyle ilgilenmez",
+      "B) Fonksiyonel bozukluklarla ilgilenmeyip sadece organ ağırlıklarını ölçen yardımcı bir laboratuvar dalıdır",
+      "C) Temel tıp bilimleri ile klinik bilimler arasında köprü kurarak yapısal değişikliklerle klinik bulguları sentezler",
+      "D) Kanser tanısında görüntüleme yöntemleri altın standart olduğundan patolojik incelemeye gerek duyulmaz",
+      "E) Hastalıkların gelişim mekanizmalarını (patogenez) dışlayarak yalnızca etiyolojik ajanları tanımlar"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur çünkü patoloji; anatomi, histoloji ve fizyoloji gibi temel bilimlerle klinik bilimler arasında köprü kurarak hücresel/morfolojik lezyonlar ile hastanın semptom ve bulgularını korele eder. A yanlıştır çünkü yaşayan hastalardan alınan cerrahi biyopsiler patolojinin ana yüküdür. B ve E yanlıştır; patoloji patogenez ve klinik sonuçları derinlemesine inceler. D yanlıştır; kanserde kesin tanının tartışmasız altın standardı patolojidir."
+  },
+  {
+    "id": "prac-patgir-002",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
+    "slideNumber": 2,
+    "slideTitle": "Hastalık Sürecinin Dört Temel Bileşeni",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Hastalık sürecini oluşturan dört temel bileşen ve bunların tanımları ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Patogenez: Hastalığı başlatan genetik mutasyon veya mikroorganizma gibi temel neden",
+      "B) Etiyoloji: Hücre ve dokularda ortaya çıkan makroskopik ve mikroskopik yapısal lezyonlar",
+      "C) Morfolojik Değişiklikler: Hastanın hekime ifade ettiği subjektif ağrı ve halsizlik şikayetleri",
+      "D) Patogenez: Etiyolojik ajanın başlattığı moleküler, hücresel ve dokusal mekanizmalar zinciri",
+      "E) Klinik Sonuç: Yalnızca otopsi sırasında makroskopik olarak ölçülen organ boyutları"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur çünkü patogenez, etiyolojik faktörün başlattığı moleküler, biyokimyasal ve hücresel mekanizmalar bütünüdür. A etiyolojinin, B morfolojik değişikliklerin, C klinik semptomların tanımıdır. E seçeneğindeki klinik sonuçlar ise hastanın semptom, bulgu ve laboratuvar parametrelerini ifade eder."
+  },
+  {
+    "id": "prac-patgir-003",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
+    "slideNumber": 3,
+    "slideTitle": "Patolojinin Tarihsel Evrimi: Antik Çağdan Organ Patolojisine",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Patolojinin tarihsel gelişimi ve inflamasyonun kardinal bulguları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Celsus inflamasyonun 4 belirtisini rubor, calor, dolor ve tumor olarak tanımlamıştır",
+      "B) Galen inflamasyonun beşinci belirtisi olarak 'functio laesa'yı (fonksiyon kaybı) eklemiştir",
+      "C) Giovanni Battista Morgagni yaklaşık 700 otopsi deneyimiyle patolojik anatominin temelini atmıştır",
+      "D) Şerefeddin Sabuncuoğlu ilk resimli Türkçe cerrahi tıp eseri olan Cerrahiyetü'l-Haniyye'yi yazmıştır",
+      "E) Morgagni hastalıkların organlarda değil yalnızca vücut sıvılarında (humoral) yerleştiğini savunmuştur"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü Giovanni Battista Morgagni humoral patoloji teorisini yıkarak hastalıkların doğrudan belirli organlarda yerleştiğini (organ patolojisi) kanıtlamıştır. A, B, C ve D seçenekleri tıp tarihi açısından tamamen doğru ve sınav değeri yüksek bilgilerdir."
+  },
+  {
+    "id": "prac-patgir-004",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
+    "slideNumber": 4,
+    "slideTitle": "Rudolf Virchow ve Hücresel Patoloji Kuramı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Rudolf Virchow ve Hücresel Patoloji Kuramı ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) 'Omnis cellula e cellula' ilkesiyle her hücrenin başka bir hücreden bölündüğünü savunmuştur",
+      "B) Hastalıkların temelinin organ sıvılarında (humor) değil hücre zedelenmesinde olduğunu göstermiştir",
+      "C) Tromboz patogenezindeki endotel hasarı, staz ve hiperkoagülabiliteyi (Virchow Triadı) tanımlamıştır",
+      "D) Mide karsinomunun sol supraklaviküler lenf nodu metastazı 'Virchow Düğümü' olarak adlandırılır",
+      "E) Mikroskobun tanısal değerini reddederek yalnızca çıplak gözle makroskopik incelemeyi savunmuştur"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır çünkü Rudolf Virchow mikroskobun patoloji laboratuvarına sistematik girişini sağlayan, cerrahi ve otopsi materyallerini mikroskop altında inceleyerek hücresel patolojiyi kuran en büyük isimdir. A, B, C ve D seçenekleri Virchow'un tıp literatürüne kazandırdığı ölümsüz katkılardır."
+  },
+  {
     "id": "prac-patgir-005",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
@@ -836,7 +1380,7 @@
     "explanation": "B seçeneği kesinlikle doğrudur. Ani başlayan yüksek ateş, perineal ağrı, dizüri, obstrüktif miksiyon semptomları ve rektal tuşede sıcak, şiş, dokunulmayacak kadar hassas prostat klasik Akut Bakteriyel Prostatit tablosudur. Bu tabloda en kritik kural PROSTAT MASAJININ KESİNLİKLE KONTRENDİKE OLMASIDIR! Masaj yapılması bakterileri doğrudan kan dolaşımına dökerek masif bakteriyemiye ve ölümcül septik şoka yol açar. Prostat dokusuna iyi penetre olan florokinolonlar veya TMP-SMX ile tedavi en az 4-6 hafta sürdürülmelidir. A seçeneğindeki masaj ölümcül bir hatadır; C seçeneğindeki 3 gün ise kronikleşmeye davetiyedir."
   },
   {
-    "id": "prac-genital-001-444",
+    "id": "prac-genital-001-460",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 1,
@@ -855,7 +1399,7 @@
     "explanation": "C seçeneği yanlıştır çünkü Barr cisimciği sayısı formülü (X kromozomu sayısı - 1)'dir. 47,XXY karyotipinde iki adet X kromozomu bulunduğundan (2 - 1 = 1) yalnızca BİR adet Barr cisimciği gözlenir. İki adet Barr cisimciği 47,XXX karyotipli bireylerde görülür. A, B, D ve E seçeneklerindeki ifadeler cinsiyet gelişiminin ve sitogenetiğinin temel doğru kurallarıdır."
   },
   {
-    "id": "prac-genital-002-445",
+    "id": "prac-genital-002-461",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 2,
@@ -874,7 +1418,7 @@
     "explanation": "C seçeneği doğrudur. Alfred Jost'un deneylerinde gösterildiği üzere, testisler çıkarıldığında Sertoli hücrelerinden AMH salınamaz (Müller kanalları gerileyemez, uterus ve tubalar gelişir) ve Leydig hücrelerinden testosteron salınamaz (Wolff kanalları dejenere olur). Androjen uyarısı almayan dış genitalya da varsayılan yolak olan dişi yönünde gelişir. Sonuçta dişi iç ve dış genital organları meydana gelir."
   },
   {
-    "id": "prac-genital-003-446",
+    "id": "prac-genital-003-462",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 3,
@@ -893,7 +1437,7 @@
     "explanation": "B seçeneği yanlıştır çünkü primordial germ hücreleri nöral krestten değil; epiblasttan köken alarak vitellüs kesesi (yolk sac) duvarına geçer ve oradan arka barsak dorsal mezenteri boyunca amipsi göç ile ürogenital kabartıya ulaşır. Nöral krest ile ilişkisi yoktur. A, C, D ve E seçenekleri bipotansiyel gonad biyolojisinin temel ve doğru kurallarıdır."
   },
   {
-    "id": "prac-genital-004-447",
+    "id": "prac-genital-004-463",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 4,
@@ -912,7 +1456,7 @@
     "explanation": "C seçeneği doğrudur. SRY ve SF-1 transkripsiyon faktörleri SOX9 geninin TESCO (Testis-Specific Enhancer of Sox9 Core) bölgesine bağlanarak SOX9'u aktive eder. A yanlıştır; SRY pre-Sertoli hücrelerinde 41. günde geçici olarak pik yapar. B yanlıştır; SOX9 17. kromozomda (otozomal) yer alır. D yanlıştır; FGF9 SOX9'u inhibe etmez, tam aksine pozitif feed-forward ile artırır ve WNT4'ü baskılar. E yanlıştır; SRY erken fetal evrede geçici olarak çalışır."
   },
   {
-    "id": "prac-genital-005-448",
+    "id": "prac-genital-005-464",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 5,
@@ -931,7 +1475,7 @@
     "explanation": "D seçeneği yanlıştır çünkü RSPO1 ve WNT4 aktivasyonu β-katenin (CTNNB1) proteininin yıkımını HIZLANDIRMAZ; tam aksine β-katenin yıkımını bloke ederek sitoplazmada birikmesini ve nükleusa geçmesini sağlar. Nükleusa geçen β-katenin ise SOX9'u aktive etmez, SOX9'u GÜÇLÜ ŞEKİLDE BASKILAR. A, B, C ve E seçeneklerindeki genetik mekanizmalar ve klinik tablolar tamamen doğrudur."
   },
   {
-    "id": "prac-genital-006-449",
+    "id": "prac-genital-006-465",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 6,
@@ -950,7 +1494,7 @@
     "explanation": "C seçeneği yanlıştır çünkü seminal vezikül mezonefrik (Wolff) kanalından gelişirken; prostat bezi Wolff kanalından DEĞİL, ürogenital sinüsün endodermal epitelinden DHT uyarısıyla tomurcuklanarak gelişir. Bu klasik ve sık sorulan bir embriyoloji/üroloji sınav ayrımıdır. A, B, D ve E seçeneklerindeki ifadeler tamamen doğrudur."
   },
   {
-    "id": "prac-genital-007-450",
+    "id": "prac-genital-007-466",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 7,
@@ -969,7 +1513,7 @@
     "explanation": "D seçeneği yanlıştır çünkü Wolff kanalı türevleri (epididim, duktus deferens, veziküla seminalis) DHT'ye DEĞİL, testis Leydig hücrelerinden salgılanan yüksek konsantrasyondaki lokal TESTOSTERON'a bağımlıdır. DHT ise dış genital organların (penis, skrotum) ve prostat bezinin gelişimi için zorunludur. A, B, C ve E seçeneklerindeki embriyolojik eşleştirmeler tamamen doğrudur."
   },
   {
-    "id": "prac-genital-008-451",
+    "id": "prac-genital-008-467",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 8,
@@ -988,7 +1532,7 @@
     "explanation": "E seçeneği yanlıştır çünkü Mayer-Rokitansky-Küster-Hauser (MRKH) sendromu 46,XX karyotipli kadınlarda görülen bir Müllerian agenezi/hipoplazi durumudur (uterovajinal agenezis). Gonadlar normal overlerdir ve endokrin fonksiyonları tamamen normaldir; dolayısıyla 46,XY CGB grubunda değil, 46,XX CGB (Müllerian gelişim anomalileri) sınıfında değerlendirilir. A, B, C ve D seçeneklerindeki sınıflandırmalar Chicago konsensusuna tamamen uygundur."
   },
   {
-    "id": "prac-genital-009-452",
+    "id": "prac-genital-009-468",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 9,
@@ -1007,7 +1551,7 @@
     "explanation": "C seçeneği kesinlikle yanlıştır. Adrenal kortekste biriken öncüller (özellikle 17-OHP) östrojene değil; 17-20 liyaz enzimi üzerinden DHEA, androstenedion ve testosteron gibi güçlü ANDROJENLERE dönüşür. Bu androjen fazlalığı virilizasyonu engellemek şöyle dursun, 46,XX fetusta klitoromegali ve labioskrotal füzyon gibi belirgin virilizasyon bulgularının doğrudan nedenidir. A, B, D ve E seçenekleri KAH patofizyolojisinin temel basamaklarıdır."
   },
   {
-    "id": "prac-genital-010-453",
+    "id": "prac-genital-010-469",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 10,
@@ -1026,7 +1570,7 @@
     "explanation": "B seçeneği doğrudur. 46,XY erkek bebeklerde klasik tuz kaybettirici 21-hidroksilaz eksikliğinde dış genital organlar normal olduğu için doğumda tanı konulamaz. Yaşamın 1-2. haftasında aldosteron ve kortizol yokluğuna bağlı olarak tuz kaybı krizi gelişir (hiponatremi, hiperkalemi, hipoglisemi, şok). Diğer seçeneklerdeki patolojiler elektrolit krizine ve adrenal yetmezliğe yol açmaz."
   },
   {
-    "id": "prac-genital-011-454",
+    "id": "prac-genital-011-470",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 11,
@@ -1045,7 +1589,7 @@
     "explanation": "C seçeneği doğrudur. Dış genital virilizasyon 7-8. haftada başladığı için deksametazon 6-8. haftada ampirik olarak başlanır. Moleküler ve sitogenetik analizle fetüsün erkek olduğu veya hastalığı taşımayan/taşıyıcı dişi olduğu kanıtlanırsa deksametazon kesilir; yalnızca etkilenmiş 46,XX kız fetuslarda doğuma kadar sürdürülür. A yanlıştır; 16. hafta çok geçtir. B yanlıştır; erkekte virilizasyon riski değil, beklenen fizyolojik süreçtir, ilaç kesilir. D yanlıştır; prednizolon plasentada inaktive olur, fetal ACTH'yi baskılayamaz."
   },
   {
-    "id": "prac-genital-012-455",
+    "id": "prac-genital-012-471",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 12,
@@ -1064,7 +1608,7 @@
     "explanation": "C seçeneği doğrudur. Plasental aromataz (CYP19A1) eksikliğinde fetustan gelen androjen öncülleri plasentada östrojene aromatize edilemez. Biriken androjenler hem dişi fetusu virilize eder hem de maternal dolaşıma sızarak gebelikte annede geçici virilizasyona yol açar. Doğumda plasentanın ayrılmasıyla maternal androjen kaynağı sonlanır ve annenin semptomları geriler. 21 ve 11 hidroksilaz eksikliklerinde maternal virilizasyon beklenmez."
   },
   {
-    "id": "prac-genital-013-456",
+    "id": "prac-genital-013-472",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 13,
@@ -1083,7 +1627,7 @@
     "explanation": "C seçeneği doğrudur. 46,XY karyotipine sahip, meme gelişimi olmayan, uterusu bulunan ve bilateral streak gonadları olan hasta Swyer Sendromudur (46,XY saf gonadal disgenezi). Testis gelişemediği için AMH salınamamış ve uterus korunmuştur. Y kromozomu taşıyan streak gonadlarda gonadoblastom ve disgerminom riski (%30-40) çok yüksek olduğundan derhal profilaktik gonadektomi yapılmalıdır. A seçeneğindeki CAIS'te meme gelişimi tamdır ve uterus yoktur."
   },
   {
-    "id": "prac-genital-014-457",
+    "id": "prac-genital-014-473",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 14,
@@ -1102,7 +1646,7 @@
     "explanation": "B seçeneği doğrudur. Tarif edilen klinik tablo Kampomelik Displazidir (kemik eğrilikleri, dar toraks, kraniyofasiyal defektler). Kampomelik displazi 17. kromozomda yer alan SOX9 geninin heterozigot mutasyonlarından kaynaklanır. SOX9 Sertoli hücre diferansiasyonunun anahtar genidir; eksikliğinde 46,XY genetik yapısına sahip bebeklerin yaklaşık %75'inde testis gelişemez ve dişi fenotipik cinsiyet tersinmesi (sex reversal) ortaya çıkar. Diğer genler iskelet displazisi yapmaz."
   },
   {
-    "id": "prac-genital-015-458",
+    "id": "prac-genital-015-474",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 15,
@@ -1121,7 +1665,7 @@
     "explanation": "D seçeneği kesinlikle yanlıştır. CAIS hastaları doğumdan itibaren tam bir dişi fenotipindedir, beyin dahil tüm dokular androjen etkisine kapalı olduğu için kadın cinsiyet kimliğini benimserler ve kendilerini tamamen kadın hissederler. Erkek cinsiyetine geçiş veya testosteron tedavisi KESİNLİKLE YAPILMAZ (zaten testosterona dokular yanıtsızdır). Hastaya psikolojik destek verilerek kadın olarak hayatına devam etmesi sağlanır; puberte sonrası gonadektomi yapılıp östrojen replasmanı verilir. A, B, C ve E seçenekleri CAIS'in klasik doğru özellikleridir."
   },
   {
-    "id": "prac-genital-016-459",
+    "id": "prac-genital-016-475",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 16,
@@ -1140,7 +1684,7 @@
     "explanation": "C seçeneği doğrudur. 46,XY karyotipine sahip, testisleri olan, AMH salgılandığı için uterusu bulunmayan, ancak dış genitalyada yetersiz virilizasyon (mikrofallus, hipospadias, bifid skrotum) ve pubertede jinekomasti gelişen hasta klasik Parsiyel Androjen Duyarsızlığı Sendromudur (PAIS / Reifenstein sendromu). KAH 46,XX'te görülür ve uterus vardır. Swyer'da uterus vardır ve meme gelişmez. MRKH 46,XX kadınlarda görülür. Turner 45,X'tir."
   },
   {
-    "id": "prac-genital-017-460",
+    "id": "prac-genital-017-476",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 17,
@@ -1159,7 +1703,7 @@
     "explanation": "B seçeneği doğrudur. Tarif edilen klinik tablo klasik 5-Alfa Redüktaz Tip 2 Eksikliğidir (SRD5A2 mutasyonu, 'Guevedoces' tablosu). Testisler ve testosteron vardır, AMH nedeniyle uterus yoktur. Doğumda DHT eksikliği nedeniyle dişi sanılıp büyütülür; pubertede aşırı testosteron ve Tip 1 izoenzim etkisiyle virilize olur (ses kalınlaşır, fallus büyür, testisler iner; jinekomasti olmaz). Enzim bloğu testosteronun DHT'ye dönüşümünü engellediği için hCG uyarısı sonrası plazma Testosteron/DHT oranı (>20-30) belirgin yüksek bulunur. A KAH'ta, D Swyer'da, E CAIS/PAIS'te görülür."
   },
   {
-    "id": "prac-genital-018-461",
+    "id": "prac-genital-018-477",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 18,
@@ -1178,7 +1722,7 @@
     "explanation": "B seçeneği doğrudur. Fenotipik olarak tamamen normal erkek olan, Wolff türevleri bulunan bir çocukta fıtık kesesinde uterus ve fallop tüplerinin bulunması (Hernia Uteri Inguinalis) Persistan Müller Kanalı Sendromu (PMDS) için patognomoniktir. Hastalık Sertoli hücrelerinden salınan AMH genindeki (Tip 1) veya hedef dokudaki AMH Tip 2 Reseptör (AMHR2) genindeki (Tip 2) inaktive edici mutasyonlardan kaynaklanır. AMH sinyali olmadığı için Müller kanalları gerileyemez. Diğer tablolarda dış genitalya normal erkek görünümünde uterusla birlikte bulunmaz."
   },
   {
-    "id": "prac-genital-019-462",
+    "id": "prac-genital-019-478",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 19,
@@ -1197,7 +1741,7 @@
     "explanation": "B seçeneği doğrudur. Aynı bireyde hem over hem testis dokusunun histolojik olarak gösterilmesi Ovotestiküler CGB'dir (eski adıyla gerçek hermafroditizm). Bu hastalıkta en sık görülen karyotip %70 oranında 46,XX'tir ve olguların çoğu SRY-negatiftir. C yanlıştır çünkü over tarafında AMH olmadığı için sol/sağ asimetrisine bağlı Müller yapıları (hemiuterus/tüp) bulunabilir. D yanlıştır; over dokusu östrojeniyle pubertede meme gelişir. A Swyer değil; E KAH değildir."
   },
   {
-    "id": "prac-genital-020-463",
+    "id": "prac-genital-020-479",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 20,
@@ -1216,7 +1760,7 @@
     "explanation": "B seçeneği doğrudur. 45,X/46,XY mozaizmi zemininde bir tarafta streak gonad, karşı tarafta disgenetik testis ve sebat eden uterus bulunması klasik Mikst Gonadal Disgenezi (MGD) tablosudur. Y kromozomu taşıyan streak gonadlarda gonadoblastom riski çok yüksek (%25-35) olduğundan streak gonad acilen çıkarılmalıdır. KAH'ta karyotip 46,XX'tir; CAIS'te uterus yoktur; Swyer 46,XY homojendir; Klinefelter 47,XXY'dir."
   },
   {
-    "id": "prac-genital-021-464",
+    "id": "prac-genital-021-480",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 21,
@@ -1235,7 +1779,7 @@
     "explanation": "C seçeneği yanlıştır. Turner sendromunda (45,X) fetusun testis dokusu ve Sertoli hücreleri bulunmadığı için Anti-Müllerian Hormon (AMH) KESİNLİKLE SALGILANMAZ. AMH bulunmadığından Müller kanalları normal şekilde gelişir; dolayısıyla Turner sendromlu kadınlarda UTERUS, SERVİKS ve FALLOP TÜPLERİ TAMAMEN MEVCUTTUR. A, B, D ve E seçenekleri Turner sendromunun klasik doğru genetik ve endokrin bulgularıdır."
   },
   {
-    "id": "prac-genital-022-465",
+    "id": "prac-genital-022-481",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 22,
@@ -1254,7 +1798,7 @@
     "explanation": "B seçeneği doğrudur. Uzun boy, önotroid vücut yapısı, bilateral jinekomasti, küçük ve sert testisler, azospermi ve hipergonadotropik hipogonadizm tablosu klasik 47,XXY Klinefelter Sendromudur. 47,XYY'de jinekomasti ve küçük sert testis beklenmez, fertilite sıklıkla korunmuştur. Turner 45,X kadın fenotipindedir. CAIS ve Swyer fenotipik olarak kadındır."
   },
   {
-    "id": "prac-genital-023-466",
+    "id": "prac-genital-023-482",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 23,
@@ -1273,7 +1817,7 @@
     "explanation": "C seçeneği doğrudur. Karyotipi 46,XX olan, overleri ve hormonları normal olduğu için meme gelişimi ve pubik kıllanması tam bulunan, ancak uterus ve üst vajinası olmayan (uterovajinal agenezis) hasta klasik Mayer-Rokitansky-Küster-Hauser (MRKH) sendromudur. CAIS'te karyotip 46,XY'dir ve pubik kıl yoktur. Swyer'da uterus vardır ve meme gelişmez. Turner 45,X'tir ve uterus vardır. KAH'ta uterus mevcuttur ve virilizasyon izlenir."
   },
   {
-    "id": "prac-genital-024-467",
+    "id": "prac-genital-024-483",
     "deckId": "learn-dogumsal-genital-anomaliler",
     "deckTitle": "Doğumsal Genital Gelişim Anomalileri ve Cinsiyet Farklılaşma Bozuklukları",
     "slideNumber": 24,
@@ -1292,611 +1836,307 @@
     "explanation": "B seçeneği doğrudur. Kuşkulu genitalya ile doğan ve bilateral gonadları palpe edilemeyen bir bebekte aksi kanıtlanana kadar en sık ve en ölümcül neden olan 46,XX Konjenital Adrenal Hiperplazi (21-hidroksilaz eksikliği) düşünülmelidir. Bu bebekler ilk 1-2 haftada ölümcül tuz kaybı krizine girebilirler. Acilen serum elektrolitleri, 17-OHP, pelvik USG (uterus varlığı) ve karyotip çalışılmalı, yakın izleme alınmalıdır. Kesin tanı konulmadan cinsiyet ataması yapılmaz, sünnet yapılmaz."
   },
   {
-    "id": "prac-rep-001",
+    "id": "prac-doku-001",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 1,
-    "slideTitle": "Doku Onarımı: Tanım ve İki Temel Yol",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Doku Onarımının Tanımı, Biyolojik Önemi ve İki Temel Yolu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Hasar gören bir organda bağ dokusu birikimi (skar) olmadan tam parankimal rejenerasyonun gerçekleşebilmesi için bölünme yeteneğindeki hücrelerin varlığı dışında mutlak gerekli olan yapısal unsur hangisidir?",
+    "question": "Doku onarımı (repair) mekanizmaları kapsamında rejenerasyon ve skar dokusu oluşumu karşılaştırıldığında, aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) Yoğun nötrofil infiltrasyonu",
-      "B) Ekstraselüler matriks (ECM) ve bazal membran çatısının sağlam kalması",
-      "C) Mast hücre degranülasyonu",
-      "D) Sitokrom c salınımı",
-      "E) Yüksek düzeyde p16 ekspresyonu"
+      "A) Skar dokusu oluşumu, hasarlı organda orijinal parankimal fonksiyonların eksiksiz olarak geri kazanılmasını garanti eder.",
+      "B) Rejenerasyon yalnızca hasarlı parankim hücrelerinin bölünme yeteneğinin olmadığı ve stromanın tamamen parçalandığı dokularda gerçekleşir.",
+      "C) Yara izi (skar) gelişimi, hasarlı bölgeye fibröz bağ dokusu depolayarak mekanik dayanıklılık ve yapısal stabilite sağlar.",
+      "D) Akut enflamasyon yanıtı sona ermeden doku onarımı mekanizmalarını başlatan hiçbir büyüme faktörü ortama salınamaz.",
+      "E) Rejenerasyon ve fibröz onarım süreçleri insan organizmasındaki klinik yaralanmalarda asla aynı anda ve birlikte bulunamaz."
     ],
-    "correctAnswer": 1,
-    "explanation": "Hücreler bölünse bile yönlendirici ekstraselüler matriks ve bazal membran iskelesi çökmüşse organize parankim oluşamaz ve skarlaşma gerçekleşir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Skar oluşumu, hasarlı parankimin yerine fibröz bağ dokusu (başta kollajen) depolayarak hasarlı dokuya mekanik dayanıklılık ve yapısal stabilite kazandırır. A seçeneği yanlıştır çünkü skar dokusu fonksiyonel parankim hücresi içermez, dolayısıyla özelleşmiş fizyolojik fonksiyonları yerine getiremez. B seçeneği yanlıştır çünkü rejenerasyon stromanın korunduğu ve hücrelerin çoğalma yeteneğinde olduğu dokularda görülür. D seçeneği yanlıştır çünkü enflamasyon esnasında aktive makrofajlar ve trombositler onarımı başlatan büyüme faktörlerini salgılar. E seçeneği yanlıştır çünkü birçok yaralanmada rejenerasyon ve skar oluşumu bir arada gerçekleşir."
   },
   {
-    "id": "prac-rep-002",
+    "id": "prac-doku-002",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 2,
-    "slideTitle": "Hücre Çoğalma Kapasitesine Göre Dokular",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Rejenerasyonun Biyolojik Koşulları ve Doku İskeletinin Rolü",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki dokulardan hangisi hücre döngüsünü kalıcı olarak terk etmiş olup, nekroz veya infarktüs sonrasında hasarlı alanı sadece fibröz skar dokusu oluşturarak onarabilir?",
+    "question": "Ağır bir bakteriyel enfeksiyon geçiren iki farklı hastadan birincisinde karaciğerde geniş bir pyojenik apse odağı gelişirken, ikincisinde viral hepatite bağlı parankimal hasar ancak intakt retikülin çatısı gözlenmiştir. İkinci hastada karaciğer tamamen iyileşirken, birinci hastada geniş bir fibröz skar kalmasının en temel patolojik nedeni aşağıdakilerden hangisidir?",
     "options": [
-      "A) Karaciğer hepatositleri",
-      "B) İnce bağırsak mukozal epiteli",
-      "C) Kemik iliği öncül hücreleri",
-      "D) Erişkin kalp kası miyositleri",
-      "E) Deri epidermisi"
+      "A) Birinci hastadaki hepatositlerin G0 fazından hücre siklusuna girememesi",
+      "B) İkinci hastada büyüme faktörlerinin tamamen inaktive olması",
+      "C) Birinci hastada destekleyici bağ dokusu iskeletinin ve bazal membran çatısının tamamen tahrip olması",
+      "D) Viral hepatitte kök hücrelerin tamamen yok edilmesi",
+      "E) Karaciğer apsesinde anjiyogenez sürecinin hiç gerçekleşememesi"
     ],
-    "correctAnswer": 3,
-    "explanation": "Kardiyak miyositler ve nöronlar kalıcı (permanent) dokulardır; bölünme yetenekleri olmadığından hasar gördüklerinde daima skar dokusuyla iyileşirler."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Rejenerasyonun gerçekleşebilmesi için parankim hücrelerinin bölünme yeteneği kadar, hücrelerin organize olabileceği ekstraselüler matriks ve stroma iskeletinin korunmuş olması şarttır. Apse odağında proteolitik enzimler stroma ve bazal membran çatısını eritip yok ettiği için hepatositler organize olamaz ve defekt skar ile doldurulur. Viral hepatitte ise retikülin çatısı sağlam kaldığı için hepatositler bölünüp orijinal mimariyi yeniden inşa eder. A, B, D ve E seçenekleri mekanizmayı açıklamaz."
   },
   {
-    "id": "prac-rep-003",
+    "id": "prac-doku-003",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 3,
-    "slideTitle": "Karaciğer Rejenerasyonu: Moleküler Basamaklar ve İki Dalga",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Proliferasyon Kapasitesine Göre Dokular: Labil (Sürekli Bölünen) Dokular",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Parsiyel hepatektomi sonrası hepatositlerin G0 fazından G1 evresine geçmesini sağlayan hazırlık (priming) fazında rol oynayan temel sitokin çifti aşağıdakilerden hangisidir?",
+    "question": "Kemoterapi alan bir kanser hastasında antimitotik ilaçların hücre siklusunda aktif olarak bölünen hücreleri hedef alması sonucunda; saç dökülmesi, mukozit (oral ve intestinal mukoza ülserleri) ve pansitopeni (lökopeni, anemi, trombositopeni) geliştiği gözleniyor. Bu klinik tablonun ortaya çıkması, etkilenen dokuların aşağıdaki hücre proliferasyon kategorilerinden hangisine ait olmasıyla doğrudan ilişkilidir?",
     "options": [
-      "A) HGF ve VEGF",
-      "B) IL-6 ve TNF",
-      "C) TGF-beta ve PDGF",
-      "D) FGF ve İnterferon-gama",
-      "E) Eritropoietin ve TPO"
+      "A) Kalıcı (permanent) dokular",
+      "B) Stabil (quiescent) dokular",
+      "C) Labil (sürekli bölünen) dokular",
+      "D) Avasküler mezenkimal dokular",
+      "E) Postmitotik son-farklılaşmış dokular"
     ],
-    "correctAnswer": 1,
-    "explanation": "Hepatositlerin G0'dan G1'e uyarılması (priming) Kupffer hücrelerinden salgılanan IL-6 ve TNF aracılığıyla gerçekleşir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Labil dokular (kemik iliği hematopoietik hücreleri, gastrointestinal sistem kript epiteli, saç folikülü epiteli) fizyolojik olarak sürekli hücre siklusunda olup bölünürler. Bu nedenle kemoterapötik antimitotik ajanlara karşı son derece duyarlıdırlar ve kemoterapi yan etkisi olarak kemik iliği baskılanması ve mukozal ülserler bu dokularda gelişir. Stabil hücreler (karaciğer, böbrek vb.) normalde G0'da bekler (B), kalıcı hücreler (kalp kası, nöron) ise hiç bölünmez (A)."
   },
   {
-    "id": "prac-rep-004",
+    "id": "prac-doku-004",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 4,
-    "slideTitle": "Skarla Onarımın 4 Temel Aşaması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Stabil (Kiesent / Sessiz) Dokuların Proliferasyon Dinamikleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Doku hasarından sonra 3. ve 5. günler arasında yara tabanında izlenen, bol yeni kılcal damarlar (anjiyogenez), prolifere olan fibroblastlar ve ödemli gevşek ekstraselüler matriksten oluşan doku hangisidir?",
+    "question": "Canlı vericili karaciğer nakli ameliyatında sağlıklı bir donörün karaciğer sağ lobu cerrahi olarak rezeke edilerek alıcıya naklediliyor. Donörde kalan sol lob parankiminin yaklaşık 4-6 hafta içinde bölünerek orijinal karaciğer ağırlığına ve hacmine ulaştığı gözleniyor. Bu klinik süreçte hepatositlerin gerçekleştirdiği hücresel döngü hareketi aşağıdakilerden hangisinde doğru olarak tanımlanmıştır?",
     "options": [
-      "A) Granülamatöz doku",
-      "B) Granülasyon dokusu",
-      "C) Keloid dokusu",
-      "D) Osteoid doku",
-      "E) Fibröz kıkırdak"
+      "A) Hücre siklusunun S fazından apoptoza kaçış",
+      "B) Hücre siklusunun G0 fazından G1 fazına giriş ve aktif proliferasyon",
+      "C) Kalıcı postmitotik hücrelerin terminal diferansiyasyon göstermesi",
+      "D) Mayoz bölünme ile yeni hepatosit klonlarının oluşturulması",
+      "E) G2 kontrol noktasında geri dönüşsüz hücre siklusu arresti"
     ],
     "correctAnswer": 1,
-    "explanation": "Yara tabanında yeni damarlar, fibroblastlar ve gevşek ECM'den oluşan pembe doku Granülasyon Dokusudur (granülom ile karıştırılmamalıdır)."
+    "explanation": "B seçeneği doğrudur. Karaciğer hepatositleri tipik 'stabil (quiescent)' hücrelerdir. Normal fizyolojik durumda G0 fazında beklerler. Parsiyel hepatektomi gibi bir doku kaybı yaşandığında IL-6, HGF ve TGF-alfa gibi faktörlerin etkisiyle hızla G0'dan G1 fazına geçer ve bölünerek doku kütlesini tamamlarlar. A, C, D ve E seçenekleri hepatositlerin proliferatif biyolojisiyle bağdaşmaz."
   },
   {
-    "id": "prac-rep-005",
+    "id": "prac-doku-005",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 5,
-    "slideTitle": "Granülasyon Dokusu ve Anjiyogenez Mekanizması",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kalıcı (Nonproliferatif) Dokular ve Skarla Onarım Zorunluluğu",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Yara iyileşmesinde anjiyogenez sürecinde endotel hücrelerinin tomurcuklanmasını, göçünü ve erken damar proliferasyonunu uyaran en temel büyüme faktörü hangisidir?",
+    "question": "62 yaşında erkek hasta akut anterior miyokard enfarktüsü geçiriyor. Başarılı revaskülarizasyona rağmen sol ventrikül ön duvarında transmural nekroz geliştiği saptanıyor. Bu hastanın olaydan 6 ay sonra yapılan ekokardiyografisinde, nekroz alanında kasılmayan, incelmiş ve fibröz dokudan zengin akinetik bir skar dokusu izleniyor. Hasarlanan bölgenin yeni kas hücreleriyle rejenere olamayıp skar ile iyileşmesinin temel biyolojik nedeni aşağıdakilerden hangisidir?",
     "options": [
-      "A) Vasküler Endotelyal Büyüme Faktörü (VEGF)",
-      "B) İnterferon gama",
-      "C) İnterlökin-2",
-      "D) Eritropoietin",
-      "E) Trombopoietin"
+      "A) Hasar bölgesinde vasküler endotel büyüme faktörü (VEGF) salınımının hiç olmaması",
+      "B) Kardiyak miyositlerin mitotik bölünme yeteneğini kalıcı olarak kaybetmiş hücreler olması",
+      "C) İnfarj alanında makrofajların fagositoz yeteneğinin bulunmaması",
+      "D) Granülasyon dokusunun kalpte hiçbir zaman şekillenememesi",
+      "E) Miyokard dokusunda Tip I kollajen sentezinin genetik olarak engellenmiş olması"
     ],
-    "correctAnswer": 0,
-    "explanation": "VEGF endotel hücre proliferasyonu, göçü ve vazodilatasyonunu sağlayarak anjiyogenezin ana tetikleyicisidir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kalp kası hücreleri (kardiyak miyositler) postmitotik, kalıcı (permanent) dokulardır; hücre siklusunu geri dönüşsüz olarak terk etmişlerdir ve çoğalma kapasiteleri yoktur. Bu nedenle miyokard nekrozu alanları rejenerasyonla değil, kaçınılmaz olarak fibröz skar dokusu ile onarılır. A, C, D ve E seçenekleri yanlıştır; miyokard enfarktüsü sonrasında yoğun anjiyogenez (VEGF), makrofajik temizlik ve granülasyon dokusu aşamaları gerçekleşir ve yoğun Tip I kollajen birikir."
   },
   {
-    "id": "prac-rep-006",
+    "id": "prac-doku-006",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 6,
-    "slideTitle": "Doku Onarımında Temel Büyüme Faktörleri Haritası",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Kök Hücre Biyolojisi: Kendi Kendini Yenileme ve Asimetrik Replikasyon",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Doku onarımı ve yara iyileşmesi sürecinde fibroblast kemotaksisini uyaran, kollajen sentezini en güçlü artıran ve metalloproteinazları baskılayarak fibrozisi yöneten temel sitokin hangisidir?",
+    "question": "Kök hücrelerin biyolojik özellikleri ve bölünme mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      "A) Tümör Nekroz Faktörü (TNF)",
-      "B) İnterlökin-1",
-      "C) Transforming Growth Factor-beta (TGF-beta)",
-      "D) Vasküler Endotelyal Büyüme Faktörü (VEGF)",
-      "E) İnterlökin-8"
+      "A) Asimetrik replikasyonda her iki yavru hücre de anında terminal olarak farklılaşmış olgun doku hücresine dönüşür.",
+      "B) Blastokistin iç hücre kitlesinden elde edilen pluripotent kök hücreler plasenta ve amniyon gibi ekstraembriyonik zarları da oluşturabilir.",
+      "C) Asimetrik replikasyon sayesinde bir yavru hücre kök hücre havuzunda kalırken diğeri diferansiasyon yolağına girer.",
+      "D) Erişkin dokulardaki multipotent kök hücreler organizmadaki tüm hücre tiplerini sınırsızca üretme kapasitesine sahiptir.",
+      "E) Embriyonik kök hücrelerin kendi kendini yenileme (self-renewal) yeteneği bulunmaz."
     ],
     "correctAnswer": 2,
-    "explanation": "TGF-beta ekstraselüler matriks ve kollajen sentezini uyararak fibrozis ve skar oluşumunu yöneten ana fibrogenik faktördür."
+    "explanation": "C seçeneği doğrudur. Asimetrik replikasyon, kök hücrenin bölündüğünde bir yavru hücresini kök hücre olarak koruması (böylece kök havuzu tükenmez), diğer yavru hücreyi ise diferansiasyon yolağına sokması ilkesine dayanır. A seçeneği yanlıştır çünkü her iki yavru hücre farklılaşırsa kök hücre havuzu tükenir (simetrik diferansiasyon). B seçeneği yanlıştır çünkü ekstraembriyonik zarları totipotent hücreler oluşturur; pluripotent hücreler vücudun üç germ yaprağını oluşturabilir ancak plasentayı oluşturamaz. D seçeneği yanlıştır çünkü multipotent hücreler yalnızca ait oldukları doku soyunu üretebilirler. E seçeneği yanlıştır çünkü self-renewal kök hücrelerin temel tanımlayıcı özelliğidir."
   },
   {
-    "id": "prac-rep-007",
+    "id": "prac-doku-007",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 7,
-    "slideTitle": "Ekstraselüler Matriks (ECM) Bileşenleri: Kollajen, Elastin ve Glikoproteinler",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Erişkin (Doku) Kök Hücreleri ve Organ Spesifik Kök Hücre Nişleri",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Yara iyileşmesinin erken evresinde granülasyon dokusunda sentezlenen ilk kollajen tipi ve yaranın olgunlaşması sürecinde onun yerini alan mekanik dayanıklı kollajen tipi sırasıyla hangileridir?",
+    "question": "Gastrointestinal sistem biyopsisi incelenen bir hastada bağırsak epitel hücrelerinin fizyolojik turnover ve yenilenme kinetiği araştırılıyor. Bağırsak mukozasında 3-5 günde bir dökülen emici enterosit ve goblet hücrelerinin sürekli olarak yeniden üretilmesini sağlayan kök hücre havuzu histolojik olarak nerede lokalizedir?",
     "options": [
-      "A) Tip I kollajen — Tip II kollajen",
-      "B) Tip III kollajen — Tip I kollajen",
-      "C) Tip IV kollajen — Tip III kollajen",
-      "D) Tip II kollajen — Tip IV kollajen",
-      "E) Tip I kollajen — Tip IV kollajen"
+      "A) Villusların en tepe noktasındaki lümene bakan yüzeyde",
+      "B) Lamina propriadaki lenfoid agregatların merkezinde",
+      "C) Lieberkühn kriptlerinin tabanında (crypt base columnar cells)",
+      "D) Muskularis mukoza kas tabakasının derinliklerinde",
+      "E) Submukozadaki Meissner otonomik sinir pleksusunda"
     ],
-    "correctAnswer": 1,
-    "explanation": "Yaranın erken fazında önce narin Tip III kollajen sentezlenir; remodeling evresinde bunun yerini gerilme direnci yüksek Tip I kollajen alır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Bağırsak epitelinin multipotent kök hücreleri Lieberkühn kriptlerinin tabanında (crypt base) yer alır. Bu hücreler (Lgr5+ kript bazal kolumnar hücreler) bölünerek yukarı doğru göç eden hücreleri oluşturur ve bu hücreler villus tepesine ulaştıkça diferansiye olup en tepeden dökülürler. Villus tepesi (A) en yaşlı ve dökülmek üzere olan diferansiye hücreleri barındırır. Lamina propria (B), muskularis mukoza (D) ve submukoza (E) epitel kök hücre nişi değildir."
   },
   {
-    "id": "prac-rep-008",
+    "id": "prac-doku-008",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 8,
-    "slideTitle": "Yara İyileşmesinin Tipleri: Primer ve Sekonder İyileşme",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Karaciğer Kök Hücreleri: Hering Kanalları ve Oval Hücrelerin Rolü",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Geniş doku kaybı olan açık bir yaranın sekonder iyileşmesi sürecinde yara kenarlarını birbirine yaklaştırarak yara defektini büzüştüren (yara kontraksiyonu) temel hücre hangisidir?",
+    "question": "Kronik hepatit B enfeksiyonu zemininde siroz gelişen 54 yaşındaki bir hastanın karaciğer biyopsisinde, hepatositlerin hücresel yaşlanma (senesens) nedeniyle replikasyon kapasitelerinin tükendiği ve Hering kanalları çevresinde dar sitoplazmalı, oval nükleuslu küçük progenitör hücrelerin prolifere olduğu izleniyor. Karaciğer parankiminde saptanan bu bipotansiyel progenitör hücre popülasyonu aşağıdakilerden hangisidir?",
     "options": [
-      "A) Nötrofiller",
-      "B) Miyofibroblastlar",
-      "C) Mast hücreleri",
-      "D) Endotel hücreleri",
-      "E) Keratinositler"
+      "A) Kupffer hücreleri",
+      "B) İto (hepatik stellat) hücreleri",
+      "C) Karaciğer oval hücreleri",
+      "D) Sinüzoidal endotel hücreleri",
+      "E) Pit hücreleri (doğal katil hücreler)"
     ],
-    "correctAnswer": 1,
-    "explanation": "Miyofibroblastlar aktin filamentleri içerir ve kasılarak yara defektini küçültür (yara kontraksiyonu)."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Karaciğerde kronik hasar varlığında ve matür hepatosit proliferasyonu bloke olduğunda Hering kanallarında yer alan 'oval hücreler' (hepatik progenitör hücreler) aktive olur. Bu hücreler bipotansiyel olup hem hepatositlere hem de kolanjiyositlere farklılaşabilirler. Kupffer hücreleri (A) sinüzoidlerdeki yerleşik makrofajlardır. İto hücreleri (B) A vitamini depolayan ve sirozda kollajen üreten miyofibroblast benzeri hücrelerdir. Endotel hücreleri (D) damar döşemesidir. Pit hücreleri (E) karaciğerdeki NK hücreleridir."
   },
   {
-    "id": "prac-rep-009",
+    "id": "prac-doku-009",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 9,
-    "slideTitle": "Yara Gücünün Kazanılması ve Yeniden Şekillenme (Remodeling)",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Hücre Siklusunun Moleküler Kontrolü: Siklinler ve Siklin Bağımlı Kinazlar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Temiz bir cerrahi insizyonun iyileşmesi sürecinde 1. haftanın sonunda cerrahi dikişler alındığında yaranın gerilme direnci sağlam orijinal cildin yaklaşık yüzde kaçı kadardır?",
+    "question": "Hücre siklusunun faz geçişlerinde görev alan moleküler regülatörler incelendiğinde, Siklin Bağımlı Kinazlar (CDK) ve Siklin proteinleri ile ilgili aşağıdaki ifadelerden hangisi BİYOKİMYASAL AÇIDAN DOĞRUDUR?",
     "options": [
-      "A) %10",
-      "B) %30",
-      "C) %50",
-      "D) %80",
-      "E) %100"
+      "A) Hücre siklusu boyunca hücre içindeki Siklin protein konsantrasyonu tamamen sabit seyreder.",
+      "B) CDK enzimlerinin katalitik kinaz aktivitesi sergileyebilmesi için ilgili siklin proteinine bağlanması zorunludur.",
+      "C) G2 fazından Mitoz (M) fazına geçişi yöneten ana kompleks Siklin D ile CDK4/6 heterodimeridir.",
+      "D) CDK'lar hücre siklusu fazı tamamlandığında ubikitin-proteazom yolağında parçalanarak yok edilirler.",
+      "E) Siklin E-CDK2 kompleksi hücreyi M fazından G1 fazına geri döndürmekle görevlidir."
     ],
-    "correctAnswer": 0,
-    "explanation": "1. haftanın sonunda dikişler alındığında yara gücü sağlam dokunun sadece yaklaşık %10'u seviyesindedir; 3. ayda maksimum %70-80'e ulaşır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. CDK'lar (Siklin Bağımlı Kinazlar) tek başlarına enzimatik olarak inaktiftir; kinaz (fosforilasyon) fonksiyonlarını yerine getirebilmeleri için özgül siklin partnerlerine bağlanmaları şarttır. A seçeneği yanlıştır çünkü sabit olan CDK'dır, siklinler ise döngüsel olarak yükselip yıkılır. C seçeneği yanlıştır çünkü G2/M geçişini Siklin B-CDK1 yönetir (Siklin D-CDK4/6 ise G1 fazını yönetir). D seçeneği yanlıştır çünkü ubikitinlenen ve yıkılan siklinlerdir, CDK düzeyleri sabit kalır. E seçeneği yanlıştır çünkü Siklin E-CDK2 kompleksi G1'den S fazına geçişi sağlar."
   },
   {
-    "id": "prac-rep-010",
+    "id": "prac-doku-010",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 10,
-    "slideTitle": "Yara İyileşmesini Geciktiren Faktörler: Lokal ve Sistemik Engeller",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Hücre Siklusu Kontrol Noktaları, İnhibitörleri ve Tümör Baskılayıcılar",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdakilerden hangisi yara iyileşmesini geciktiren lokal faktörler arasında en sık karşılaşılan nedendir?",
+    "question": "İyonize radyasyona maruz kalan bir insan fibroblast kültüründe çift zincirli DNA kırıkları meydana geldiği saptanıyor. Hücrenin DNA hasarını onarmak amacıyla G1 fazında duraklatılması sürecinde, p53 transkripsiyon faktörünün uyarılmasıyla sentezlenen ve siklin-CDK komplekslerini inhibe ederek hücre siklusunu bloke eden temel efektör protein aşağıdakilerden hangisidir?",
     "options": [
-      "A) Çinko eksikliği",
-      "B) Yara yeri enfeksiyonu",
-      "C) C vitamini eksikliği",
-      "D) Protein malnütrisyonu",
-      "E) Sistemik kortikosteroid kullanımı"
+      "A) Retinoblastoma (Rb) proteini",
+      "B) E2F transkripsiyon faktörü",
+      "C) p21 (CDKN1A)",
+      "D) Siklin B1",
+      "E) Vasküler endotelyal büyüme faktörü (VEGF)"
     ],
-    "correctAnswer": 1,
-    "explanation": "Yara iyileşmesini bozan en sık lokal neden yara yeri enfeksiyonudur (diğer seçenekler sistemik faktörlerdir)."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. DNA hasarı meydana geldiğinde p53 proteini stabilize olur ve bir CDK inhibitörü olan p21'in (CDKN1A) transkripsiyonunu başlatır. p21 proteini Siklin-CDK komplekslerine bağlanıp onları inaktive ederek Rb fosforilasyonunu önler ve hücreyi G1/S kontrol noktasında durdurur. Rb (A) p53 tarafından değil fosforilasyon durumuyla regüle edilen bir proteindir. E2F (B) S fazını başlatan faktördür. Siklin B1 (D) G2/M geçişini sağlar. VEGF (E) anjiyogenez faktörüdür."
   },
   {
-    "id": "prac-rep-011",
+    "id": "prac-doku-011",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 11,
-    "slideTitle": "Aşırı Yara İzi Oluşumu: Hipertrofik Skar vs Keloid Ayrımı",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Büyüme Faktörlerinin Sinyal İletim Türleri: Otokrin, Parakrin ve Endokrin",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Kulağını deldirdikten 6 ay sonra delik bölgesinde orijinal delinme sınırlarını belirgin şekilde aşan, çevre sağlam deriye doğru genişleyen, kaşıntılı ve sert nodüler fibröz kitle gelişen siyah tenli hastada tanı nedir?",
+    "question": "Deri kesisi sonrası yara tabanına göç eden M2 fenotipindeki aktive bir doku makrofajının, sitoplazmasında sentezlediği Trombosit Kaynaklı Büyüme Faktörünü (PDGF) ekstraselüler aralığa salgılaması ve bu molekülün doku interstisyumu boyunca difüze olarak birkaç mikron ötedeki istirahat halindeki bir fibroblastın yüzey reseptörüne bağlanıp hücreyi aktive etmesi hangi sinyal iletim mekanizmasına örnektir?",
     "options": [
-      "A) Hipertrofik skar",
-      "B) Keloid",
-      "C) Dermatofibrom",
-      "D) Eksuberan granülasyon",
-      "E) Epidermal kist"
+      "A) Otokrin sinyalizasyon",
+      "B) Parakrin sinyalizasyon",
+      "C) Endokrin sinyalizasyon",
+      "D) Jukstakrin (kontakt bağımlı) sinyalizasyon",
+      "E) Sinaptik nörotransmisyon"
     ],
     "correctAnswer": 1,
-    "explanation": "Orijinal travma sınırlarını aşarak çevre sağlam dokuya taşan kaba fibroproliferatif lezyon Keloiddir (zenci ırkta sıktır)."
+    "explanation": "B seçeneği doğrudur. Bir hücrenin ürettiği molekülün yakın komşuluğundaki farklı bir hedef hücreyi interstisyel difüzyonla uyarması 'parakrin' sinyalizasyondur. Yara iyileşmesinde makrofajların fibroblastları uyarması klasik parakrin sinyale en somut örnektir. Otokrin (A) hücrenin kendi kendini uyarmasıdır. Endokrin (C) hormonun kana salınıp uzak organlara taşınmasıdır. Jukstakrin (D) hücrelerin zarlarındaki moleküllerin doğrudan fiziksel temasıyla sinyal iletmesidir. Sinaptik iletim (E) nöronal kavşaklarda görülür."
   },
   {
-    "id": "prac-rep-012",
+    "id": "prac-doku-012",
     "deckId": "learn-doku-onarimi-yara-iyilesmesi",
     "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 12,
-    "slideTitle": "Ders 9 Kapsamlı Sentezi: Doku Onarımı ve Yara İyileşmesinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
+    "slideTitle": "Büyüme Faktörü Reseptör Tipleri ve İntrasellüler Sinyal Yolakları",
+    "discipline": "Tıp",
     "committee": "Kurul 1",
-    "question": "Aşağıdaki ifadelerden hangisi yara iyileşmesi ve doku onarımı patolojisi ile ilgili olarak yanlıştır?",
+    "question": "Granülasyon dokusu oluşumu sırasında endotel hücrelerinin bölünmesini ve damar filizlenmesini uyarmak üzere salgılanan Vasküler Endotelyal Büyüme Faktörü (VEGF), endotel hücresinin plazma membranında aşağıdaki reseptör mekanizmalarından hangisini aktive ederek hücre içi sinyal kaskadını başlatır?",
     "options": [
-      "A) Granülasyon dokusunda erken dönemde Tip III kollajen baskındır",
-      "B) İyileşen bir yaranın mekanik gerilme gücü 1 yıl sonra sağlam derinin %100'üne ulaşır",
-      "C) Doku onarımında kollajen sentezini en güçlü uyaran sitokin TGF-beta'dır",
-      "D) Sekonder yara iyileşmesinde yara kontraksiyonunu miyofibroblastlar sağlar",
-      "E) C vitamini eksikliğinde kollajen prolin hidroksilasyonu bozulur"
+      "A) Yedi kez zarı geçen G proteini bağlantılı reseptör (GPCR)",
+      "B) İntrinsik tirozin kinaz aktivitesine sahip reseptör (Reseptör Tirozin Kinaz)",
+      "C) Hücre içi sitoplazmik nükleer steroid reseptörü",
+      "D) Ligand kapılı sodyum iyon kanalı reseptörü",
+      "E) Yalnızca serin/treonin kinaz aktivitesi gösteren Tip II TGF reseptörü"
     ],
     "correctAnswer": 1,
-    "explanation": "İyileşen bir yaranın gerilme direnci hiçbir zaman orijinal sağlam derinin %100'üne ulaşamaz; en fazla %70-80 seviyesinde platoya ulaşır."
+    "explanation": "B seçeneği doğrudur. VEGF (özellikle VEGFR-2 reseptörü üzerinden), EGF, PDGF ve FGF gibi polipeptid büyüme faktörleri intrinsik tirozin kinaz aktivitesine sahip transmembran reseptörlere (Reseptör Tirozin Kinazlar - RTK) bağlanır. Ligand bağlandığında reseptör dimerleşir, otofosforillenir ve Ras-MAPK ile PI3K/Akt yolaklarını tetikler. GPCR'lar (A) kemokinler ve hormonlarca kullanılır. Nükleer reseptörler (C) steroidler içindir. İyon kanalları (D) nörotransmitterler içindir. Serin/treonin kinaz reseptörleri (E) TGF-beta ailesine özgüdür."
   },
   {
-    "id": "q-learn-prenatal-tani-1",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 1,
-    "slideTitle": "Prenatal Tanının Tanımı, Evrimi ve Temel Amaçları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Aşağıdakilerden hangisi prenatal tanı uygulamalarının temel amaçları ve klinik hedefleri arasında yer almaz?",
-    "options": [
-      "A) Riskli gebeliklerde ebeveynlerin anksiyetesini hafifletmek ve bilgilendirilmiş tercih hakkı sunmak",
-      "B) Konjenital anomali saptanan her gebeliği tespit ederek gebeliğin zorunlu olarak tahliyesini sağlamak",
-      "C) Doğum sonrasında acil cerrahi veya yoğun bakım gerektirecek anomaliler için tersiyer merkez organizasyonu yapmak",
-      "D) Seçilmiş fetal hastalıklarda intrauterin medikal veya cerrahi tedavi olanaklarını devreye sokmak",
-      "E) Aile öyküsünde genetik hastalık bulunan çiftlere sağlıklı çocuk sahibi olabilme seçenekleri sunmak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Prenatal tanı uygulamalarının amacı asla 'saptanan her anomalide gebeliğin zorunlu tahliyesi' değildir. Prenatal tanı; fetüsü bir hasta olarak kabul eden fetal tıp felsefesiyle intrauterin tedavi seçeneklerini, doğum koşullarının tersiyer merkezlerde planlanmasını ve ailenin özerk kararı doğrultusunda gebeliğin yönetilmesini hedefler. Tahliye ancak ailenin özgür iradesi ve yasal çerçeve dahilinde bir seçenektir."
-  },
-  {
-    "id": "q-learn-prenatal-tani-2",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 2,
-    "slideTitle": "Prenatal Genetik Danışmanın İlkeleri ve Etik-Yasal Çerçeve",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Prenatal genetik danışma süreci ile ilgili olarak aşağıdaki ifadelerden hangisi biyoetik ve klinik iletişim kurallarına aykırıdır?",
-    "options": [
-      "A) Danışman hekim, ailenin sosyokültürel düzeyine uygun ve yönlendirici olmayan (non-directive) bir üslup kullanmalıdır",
-      "B) İnvaziv testlerin taşıdığı gebelik kaybı ve kültür başarısızlığı gibi teknik riskler aileye önceden bildirilmelidir",
-      "C) Test sonucu patolojik saptandığında hekim kendi ahlaki kanaatine dayanarak aileyi gebeliği sonlandırmaya zorlamalıdır",
-      "D) Biyokimyasal tarama testlerinde elde edilen risk oranları pozitif ve negatif prediktif değerleri açıklanarak somutlaştırılmalıdır",
-      "E) Fötal anomali durumunda gebeliği devam ettirmek isteyen ailelere doğum sonrası palyatif ve multidisipliner bakım planı sunulmalıdır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Genetik danışmanın temel biyoetik direği hasta özerkliğidir (otonomi). Hekim veya genetik uzmanı yönlendirici olmayan bir tutum takınmalı, asla kendi kişisel/ahlaki kanaatlerini empoze etmemeli ve aileyi hiçbir karara (terminasyon veya devam) zorlamamalıdır."
-  },
-  {
-    "id": "q-learn-prenatal-tani-3",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 3,
-    "slideTitle": "Prenatal Tanı Endikasyonları - I: İleri Maternal Yaş ve Aile Öyküsü",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "36 yaşında, 12 haftalık gebe bir kadının önceki gebeliğinden serbest Trizomi 21 (47,XY,+21) tanılı bir çocuğu bulunmaktadır. Ebeveynlerin periferik kan karyotip analizleri normaldir (46,XX ve 46,XY). Bu gebelikte fetüsün Down sendromlu olma riski nasıl hesaplanmalıdır?",
-    "options": [
-      "A) Risk genel toplum riskine eşittir (yaklaşık 1/800)",
-      "B) Ebeveynler normal olduğu için tekrarlama riski bulunmaz (%0)",
-      "C) Maternal yaşa bağlı mevcut risk üzerine yaklaşık %1 eklenerek hesaplanır",
-      "D) Tekrarlama riski kesin olarak %25'tir",
-      "E) Tekrarlama riski kesin olarak %50'dir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Önceki gebeliğinde de novo serbest trizomi öyküsü bulunan ve ebeveyn karyotipleri normal olan çiftlerde sonraki gebeliklerde anöploidi tekrarlama riski, maternal yaşa özgü arka plan riskine yaklaşık %1 ilave edilerek belirlenir (gonadal mozaizm veya nondisjunction yatkınlığı payı)."
-  },
-  {
-    "id": "q-learn-prenatal-tani-4",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 4,
-    "slideTitle": "Prenatal Tanı Endikasyonları - II: Ebeveyn Kromozom Anomalileri ve Monogenik Riskler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Periferik kan karyotip analizi sonucunda 45,XX,rob(21q21q) tespit edilen 28 yaşındaki bir kadının gebeliğinde doğacak canlı bebeklerde Down sendromu (Trizomi 21) riski yüzde kaçtır?",
-    "options": [
-      "A) %1",
-      "B) %10-15",
-      "C) %25",
-      "D) %50",
-      "E) %100"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Homolog Robertsonian translokasyonu taşıyıcısı olan [rob(21q21q)] bir ebeveyn sadece iki kopya 21 içeren (dizomik) veya hiç 21 içermeyen (nullizomik) gametler oluşturabilir. Nullizomik gametler döllendiğinde monozomi 21 oluşur ve letaldir. Döllenen dizomik gametler ise trizomi 21 oluşturur. Dolayısıyla canlı doğacak çocukların tamamı (%100) Down sendromlu olur."
-  },
-  {
-    "id": "q-learn-prenatal-tani-5",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 5,
-    "slideTitle": "İntrauterin Fetal Tedavi, Medikal Yönetim ve Yaşam Kurtarıcı Müdahaleler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Fetal ultrasonda 16. haftada megasistis, bilateral üreterohidronefroz ve belirgin oligohidramnios saptanan erkek bir fetüste intrauterin vezikoamniyotik şant yerleştirilmesinin en temel ve yaşam kurtarıcı gerekçesi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Fetüste Down sendromu gelişimini engellemek",
-      "B) Oligohidramniosa ikincil gelişecek ölümcül pulmoner hipoplaziyi ve Potter sekansını önlemek",
-      "C) Doğum eyleminin erken başlamasını provoke etmek",
-      "D) Fetal adrenal bez hiperplazisini baskılamak",
-      "E) Fetal nöral tüp defektini cerrahi olarak kapatmak"
-    ],
-    "correctAnswer": 1,
-    "explanation": "İkinci trimesterde amniyon sıvısının ana kaynağı fötal idrardır. Üretra obstrüksiyonuna (PUV) bağlı oligohidramnios gelişiminde toraks kompresyonu ve amniyon sıvısı solunumunun durması sonucu letal pulmoner hipoplazi ve Potter sekansı gelişir. Erken dönemde vezikoamniyotik şant takılması akciğer gelişimini kurtaran en kritik girişimdir."
-  },
-  {
-    "id": "q-learn-prenatal-tani-6",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 6,
-    "slideTitle": "Fetal Ultrasonografik İnceleme, Majör Malformasyonlar ve Minör Belirteçler (Soft Markers)",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "İkinci trimester obstetrik ultrasonografisinde fötusta hiperekojenik barsak görünümü saptanan bir gebede, ayırıcı tanıda aşağıdaki patolojilerden hangisi öncelikle düşünülmez?",
-    "options": [
-      "A) Down Sendromu (Trizomi 21)",
-      "B) Kistik Fibrozis",
-      "C) Konjenital Sitomegalovirüs (CMV) enfeksiyonu",
-      "D) Intraamniyotik kanama yutulması",
-      "E) Fetal nöral tüpün erken kapanması ve kraniyosinostoz"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Fetal ultrasonda ekojenik barsak; Trizomi 21 başta olmak üzere anöploidiler, kistik fibrozis (koyulaşmış mekonyum), intraamniyotik kanamanın fetüs tarafından yutulması ve konjenital CMV/Toksoplazma enfeksiyonlarında tipik olarak gözlenir. Nöral tüpün erken kapanması veya kraniyosinostoz ile ekojenik barsak arasında patogenetik bir ilişki yoktur."
-  },
-  {
-    "id": "q-learn-prenatal-tani-7",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 7,
-    "slideTitle": "Birinci Trimester Kombine Tarama Testi (İkili Test): Biyokimyasal Parametreler ve NT",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "12. gebelik haftasında birinci trimester kombine tarama testi (ikili test) uygulanan bir gebede, fetüste Trizomi 21 (Down Sendromu) riskinin en yüksek olduğunu gösteren biyokimyasal ve ultrasonografik kombinasyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) PAPP-A yüksek, Serbest beta-hCG yüksek, NT normal",
-      "B) PAPP-A düşük, Serbest beta-hCG yüksek, NT artmış",
-      "C) PAPP-A düşük, Serbest beta-hCG düşük, NT normal",
-      "D) PAPP-A yüksek, Serbest beta-hCG düşük, NT artmış",
-      "E) PAPP-A normal, Serbest beta-hCG normal, NT azalmış"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Down Sendromu (Trizomi 21) birinci trimester taramasında patognomonik üçlü: Maternal serum PAPP-A düzeyinin belirgin düşük olması (ortalama 0.4-0.5 MoM), Serbest beta-hCG düzeyinin artması (ortalama 2.0 MoM) ve ultrasonografik fetal ense saydamlığının (NT) kalınlaşmasıdır."
-  },
-  {
-    "id": "q-learn-prenatal-tani-8",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 8,
-    "slideTitle": "Birinci Trimester Taramasında Nazal Kemik, Doppler Akımları ve Trizomi Profilleri",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "12 haftalık bir gebenin ikili tarama testinde NT: 3.8 mm, PAPP-A: 0.15 MoM ve serbest beta-hCG: 0.18 MoM olarak raporlanmıştır. Duktus venozus Doppler incelemesinde ters 'a' dalgası izlenmiştir. Bu fötusta öncelikle hangi genetik anomali düşünülmelidir?",
-    "options": [
-      "A) Trizomi 21 (Down Sendromu)",
-      "B) Trizomi 18 (Edwards Sendromu)",
-      "C) Frajil X Sendromu",
-      "D) Klinefelter Sendromu (47,XXY)",
-      "E) İzole Nöral Tüp Defekti"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Trizomi 18'de (Edwards sendromu) birinci trimester belirteçlerinden PAPP-A ve serbest beta-hCG'nin her ikisi birden aşırı derecede baskılanmıştır (<0.2-0.3 MoM) ve NT belirgin artmıştır. Trizomi 21'de ise serbest beta-hCG yüksek seyreder. Bu nedenle her iki belirtecin aşırı düşük olduğu bu tablo Edwards sendromuna özgüdür."
-  },
-  {
-    "id": "q-learn-prenatal-tani-9",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 9,
-    "slideTitle": "Artmış Ense Saydamlığı (NT >= 3.5 mm) ve Kistik Higroma Klinik Algoritması",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "12. gebelik haftasında ultrasonografide bilateral internal septasyonlu kistik higroma ve 5.2 mm NT ölçülen bir fetüste koryon villus biyopsisi ile yapılan karyotip ve kromozomal mikrodizi (CMA) analizi 46,XX (normal) olarak raporlanmıştır. Bu olgunun ileri yönetiminde öncelikle hangi iki yaklaşım planlanmalıdır?",
-    "options": [
-      "A) Yalnızca rutin üçüncü trimester ultrasonu ve normal vajinal doğum planı",
-      "B) Noonan sendromu genetik paneli ve 18-20. haftalarda detaylı fetal ekokardiyografi",
-      "C) Acil sezaryen ile gebeliğin derhal sonlandırılması",
-      "D) Fetal kistik higromanın intrauterin iğne ile boşaltılması ve antibiyoterapi",
-      "E) Maternal serumda alfa-fetoprotein ölçümü ile yetinilmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Karyotipi ve mikrodizisi normal olan izole artmış NT ve kistik higroma olgularında monogenik sendromlar (özellikle Noonan sendromu/RASopatiler) ve konjenital kardiyak anomaliler yüksek sıklıkla görülür. Bu nedenle ileri genetik panel (Noonan paneli) ve fetal ekokardiyografi yapılması standart klinik algoritmadır."
-  },
-  {
-    "id": "q-learn-prenatal-tani-10",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 10,
-    "slideTitle": "İkinci Trimester Üçlü Tarama Testi ve Belirteçlerin Biyolojik Dinamikleri",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "17. gebelik haftasında başvuran 32 yaşındaki bir gebenin üçlü tarama testinde laboratuvar sonuçları şu şekildedir: MSAFP: 0.35 MoM, uE3: 0.28 MoM, Total hCG: 0.30 MoM. Bu fötusta öncelikle hangi anöploidi riski düşünülmelidir?",
-    "options": [
-      "A) Trizomi 21 (Down Sendromu)",
-      "B) Trizomi 18 (Edwards Sendromu)",
-      "C) Trizomi 13 (Patau Sendromu)",
-      "D) Turner Sendromu (45,X)",
-      "E) Triploidi Tip I"
-    ],
-    "correctAnswer": 1,
-    "explanation": "İkinci trimester üçlü tarama testinde AFP, uE3 ve hCG parametrelerinin her üçünün birden belirgin şekilde düşük (<0.4-0.5 MoM) çıkması Trizomi 18 (Edwards sendromu) için klasik ve ayırt edici risk paternidir. Down sendromunda ise hCG tipik olarak yüksektir."
-  },
-  {
-    "id": "q-learn-prenatal-tani-11",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 11,
-    "slideTitle": "İkinci Trimester Dörtlü Tarama Testi ve Dimerik İnhibin-A'nın Rolü",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "16 haftalık bir gebenin ikinci trimester dörtlü tarama testinde MSAFP: 0.65 MoM, uE3: 0.60 MoM, Total hCG: 2.10 MoM ve Dimerik İnhibin-A: 1.95 MoM olarak rapor edilmiştir. Bu bulgular ışığında fötusta en yüksek risk taşıyan genetik durum hangisidir?",
-    "options": [
-      "A) Açık Nöral Tüp Defekti",
-      "B) Edwards Sendromu (Trizomi 18)",
-      "C) Down Sendromu (Trizomi 21)",
-      "D) Turner Sendromu (45,X)",
-      "E) Fetal Gastroşizis"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Dörtlü tarama testinde MSAFP ve uE3'ün düşük, Total hCG ve Dimerik İnhibin-A'nın yüksek (yaklaşık 2 MoM) saptanması Down Sendromu (Trizomi 21) için karakteristik 'HI' kuralıdır. Nöral tüp ve karın duvarı defektlerinde AFP yüksek olur; Trizomi 18'de ise tüm belirteçler düşüktür."
-  },
-  {
-    "id": "q-learn-prenatal-tani-12",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 12,
-    "slideTitle": "Maternal Serum Alfa-Fetoprotein (MSAFP) Yüksekliği ve Fetal Patolojiler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "16 haftalık bir primigravid gebede yapılan maternal serum AFP taramasında MSAFP değeri 6.5 MoM (aşırı yüksek) olarak saptanmıştır. Yapılan detaylı ultrasonografide göbek kordonu insersiyonunun sağ tarafında, üzeri periton zarı ile örtülü olmayan ve amniyon sıvısı içinde serbestçe yüzen bağırsak ansları izlenmiştir. Bu gebede en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Omfalosel",
-      "B) Gastroşizis",
-      "C) Beckwith-Wiedemann Sendromu",
-      "D) Sakrokoksigeal Teratom",
-      "E) Spina Bifida Okkülta"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Göbek kordonunun sağında yer alan, üzerinde koruyucu membran bulunmayan ve amniyon sıvısında serbest yüzen bağırsak ansları Gastroşizis için tipiktir. Gastroşiziste koruyucu zar olmadığı için amniyona ve maternal kana aşırı miktarda AFP sızar (genellikle >4-5 MoM). Omfaloselde ise fıtıklaşan organların üzeri periton zarı ile kaplıdır ve AFP artışı daha ılımlıdır."
-  },
-  {
-    "id": "q-learn-prenatal-tani-13",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "id": "prac-doku-013",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 13,
-    "slideTitle": "Nöral Tüp Defektleri (NTD): Patofizyoloji, Tanı, Ultrason Bulguları ve Folik Asit Profilaksisi",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Daha önce miyelomeningoselli bir çocuk doğurma öyküsü olan 29 yaşındaki bir kadın yeniden gebe kalmayı planlamaktadır. Bu kadında nöral tüp defekti tekrarlama riskini anlamlı düzeyde azaltmak için en uygun folik asit başlama zamanı ve günlük dozu aşağıdakilerden hangisidir?",
+    "slideTitle": "Epitelyal Büyüme Faktörleri: EGF, TGF-alfa ve KGF (FGF-7)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Cerrahi insizyon yapılan bir hastanın deri yarasında 48. saatte yara kenarlarındaki bazal keratinositlerin sağlam dermis ve fibrin çatısı boyunca yaranın merkezine doğru göç ederek orta hatta birleştiği (re-epitelizasyon) gözleniyor. Yara tabanındaki stromal fibroblastlar tarafından salgılanarak doğrudan keratinositler üzerindeki özgül reseptörleri uyaran ve bu re-epitelizasyon sürecini en güçlü tetikleyen büyüme faktörü aşağıdakilerden hangisidir?",
     "options": [
-      "A) Gebelik testinin pozitif çıktığı gün başlanmalı, günlük 0.4 mg verilmelidir",
-      "B) Konsepsiyondan en az 1 ay önce başlanmalı, gebeliğin ilk trimesteri boyunca günlük 4 mg verilmelidir",
-      "C) İkinci trimesterin başında başlanmalı, doğuma kadar günlük 1 mg verilmelidir",
-      "D) Konsepsiyondan 6 ay önce başlanmalı, sadece haftada bir 5 mg verilmelidir",
-      "E) Sadece folik asitten zengin diyet önerilmeli, ilaç desteği verilmemelidir"
+      "A) Vasküler endotelyal büyüme faktörü-A (VEGF-A)",
+      "B) Keratinosit büyüme faktörü (KGF / FGF-7)",
+      "C) İnterlökin-10 (IL-10)",
+      "D) Eritropoietin (EPO)",
+      "E) Trombosit kaynaklı büyüme faktörü-BB (PDGF-BB)"
     ],
     "correctAnswer": 1,
-    "explanation": "Önceki gebeliğinde NTD öyküsü bulunan yüksek riskli kadınlarda tekrarlama riskini %75 oranında azaltmak amacıyla nöral tüp kapanma evresinden (fertilizasyon sonrası 28. gün) çok önce kanda ve dokularda yeterli folat düzeyine ulaşmak gerekir. Bu nedenle konsepsiyondan en az 1 ay (tercihen 3 ay) önce başlanarak ilk trimester boyunca günde 4 mg (4000 mcg) folik asit kullanımı standarttır."
+    "explanation": "B seçeneği doğrudur. Keratinosit Büyüme Faktörü (KGF), diğer adıyla FGF-7; fibroblastlar tarafından üretilen ve keratinositlerin proliferasyon, migrasyon ve diferansiasyonunu uyararak epitelizasyonu sağlayan klasik mezenkimal-epitelyal parakrin mediyatördür. VEGF (A) endotel hücrelerini uyarır. IL-10 (C) antienflamatuar sitokindir. EPO (D) eritrosit üretimini artırır. PDGF (E) fibroblast ve düz kas hücreleri için kemotaktik ve mitojeniktir."
   },
   {
-    "id": "q-learn-prenatal-tani-14",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "id": "prac-doku-014",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
     "slideNumber": 14,
-    "slideTitle": "Hücresiz Fetal DNA Taraması (cfDNA / NIPT): Biyolojik Köken ve Analitik Teknolojiler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Hücresiz fötal DNA (cfDNA / NIPT) tarama testinin biyolojik özellikleri ve fötal fraksiyon dinamikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "slideTitle": "Karaciğer Rejenerasyonunun Moleküler Orkestrasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Deneysel bir hayvan modelinde parsiyel hepatektomi uygulanarak karaciğer rejenerasyon mekanizmaları inceleniyor. Ameliyattan hemen sonra Kupffer hücreleri tarafından salgılanarak istirahat halindeki hepatositleri G0 fazından G1 fazına sokan ve onları mitojenik büyüme faktörlerine karşı duyarlı hale getiren (priming fazı) temel sitokinler aşağıdakilerden hangisinde birlikte verilmiştir?",
     "options": [
-      "A) Maternal plazmadaki hücresiz fetal DNA'nın ana kaynağı plasental sinsisyotrofoblast apoptozudur",
-      "B) Doğumdan sonraki 24-48 saat içinde maternal dolaşımdan tamamen temizlenir",
-      "C) Güvenilir bir analiz için fötal fraksiyonun minimum %4 veya üzerinde olması gerekir",
-      "D) Maternal obezite ve yüksek vücut kitle indeksi fötal fraksiyonu artıran bir faktördür",
-      "E) Fetal DNA fragmanları maternal DNA parçacıklarına kıyasla ortalama olarak daha kısa boyuttadır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Maternal obezite (yüksek VKİ); genişleyen plazma hacminin yarattığı dilüsyon ve maternal yağ dokusu apoptozuna bağlı serbest maternal DNA salınımının artması nedeniyle fötal fraksiyonu (FF) düşürür; test başarısızlığına (no-call) yol açan en sık nedendir."
-  },
-  {
-    "id": "q-learn-prenatal-tani-15",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 15,
-    "slideTitle": "Hücresiz Fetal DNA Taramasında Doğruluk Sınırları, Yalancı Sonuçlar ve Klinik Yönetim",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "25 yaşındaki primigravid bir gebenin 11. haftada yaptırdığı cfDNA (NIPT) taramasında Trizomi 21 riski 1/5 (yüksek risk) olarak rapor edilmiştir. Fetal ultrasonda herhangi bir majör malformasyon saptanmayan bu gebeye yaklaşımda bir sonraki en uygun klinik adım ne olmalıdır?",
-    "options": [
-      "A) NIPT'in saptama gücü >%99 olduğu için ek teste gerek duyulmaksızın gebelik derhal sonlandırılmalıdır",
-      "B) Aileye NIPT'in bir tarama testi olduğu açıklanarak amniyosentez veya CVS ile invaziv sitogenetik doğrulama önerilmelidir",
-      "C) Sonucun yanlış olduğu kabul edilerek gebelik takibi rutin sonlandırılmalıdır",
-      "D) cfDNA testi hemen ertesi gün aynı laboratuvarda tekrarlanmalıdır",
-      "E) Fötal manyetik rezonans görüntüleme (MRG) ile beyin gelişimi incelenmelidir"
-    ],
-    "correctAnswer": 1,
-    "explanation": "NIPT yüksek sensitiviteye sahip olmakla birlikte kesin tanı testi değil, bir tarama testidir. Özellikle genç gebelerde pozitif prediktif değer daha düşüktür; plasental mozaizm veya kaybolan ikiz gibi biyolojik yalancı pozitiflik nedenleri ekarte edilmeden asla gebelik sonlandırılamaz. Kesin tanı için invaziv test (CVS veya amniyosentez) şarttır."
-  },
-  {
-    "id": "q-learn-prenatal-tani-16",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 16,
-    "slideTitle": "Koryon Villus Örneklemesi (CVS): Uygulama Tekniği, Zamanlaması ve Endikasyonları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Koryon villus örneklemesi (CVS) yöntemi ile ilgili aşağıdaki klinik ifadelerden hangisi yanlıştır?",
-    "options": [
-      "A) Standart uygulama aralığı 11-14. gebelik haftalarıdır",
-      "B) 10. gebelik haftasından önce yapıldığında transvers ekstremite redüksiyon anomalileri riski belirgin artar",
-      "C) Alınan koryon villus materyalinden alfa-fetoprotein (AFP) ölçümü yapılarak açık nöral tüp defektleri taranabilir",
-      "D) Rh-negatif gebelerde işlem sonrası anti-D immünoglobulin profilaksisi uygulanmalıdır",
-      "E) Transabdominal veya transservikal yaklaşımlarla gerçek zamanlı ultrason eşliğinde gerçekleştirilir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "CVS trofoblast dokusu biyopsisidir; amniyotik sıvı alınmaz. AFP ölçümü ise fetal idrar ve serumdan amniyon sıvısına geçen bir proteine dayanır. Bu nedenle CVS materyalinden AFP ölçümü yapılamaz ve CVS ile nöral tüp defekti taranamaz (NTD taraması 16. haftada serum/amniyon AFP'si ve USG ile yapılır)."
-  },
-  {
-    "id": "q-learn-prenatal-tani-17",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 17,
-    "slideTitle": "CVS Laboratuvar Dinamikleri: Direkt Analiz vs Uzun Süreli Kültür",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Koryon villus biyopsisi (CVS) materyalinden yapılan sitogenetik analiz yöntemleri karşılaştırıldığında, 'Direkt Yöntem'in 'Uzun Süreli Kültür Yöntemi'ne göre en belirgin avantajı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Çok daha yüksek bant çözünürlüğü (550-600 bant) sağlaması",
-      "B) Maternal hücre kontaminasyonu riskinin bulunmaması ve çok kısa sürede sonuç vermesi",
-      "C) Plasentaya sınırlı mozaizmi kesin olarak ekarte edebilmesi",
-      "D) Amniyon sıvısındaki alfa-fetoprotein düzeyini eşzamanlı ölçebilmesi",
-      "E) Kromozom inversiyonlarını mikrodiziden daha duyarlı saptaması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "CVS direkt yönteminde sitotrofoblastların spontan mitozu incelenir. Anneye ait desidua hücreleri spontan mitotik aktivite göstermediğinden direkt yöntemde maternal hücre kontaminasyonu riski yoktur ve 2-24 saatte sonuç alınır. Uzun süreli kültürde ise anne desidua fibroblastları besiyerinde çoğalarak kontaminasyona yol açabilir."
-  },
-  {
-    "id": "q-learn-prenatal-tani-18",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 18,
-    "slideTitle": "Amniyosentez: Uygulama Tekniği, Fetal Hücre Dinamikleri ve Güvenlik Profili",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Prenatal tanı amacıyla 13. gebelik haftasında 'Erken Amniyosentez' uygulanmasının, 16. haftada uygulanan klasik amniyosenteze kıyasla fötusta belirgin artış gösteren en tipik ortopedik komplikasyonu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akondroplazi",
-      "B) Talipes Ekinovarus (Çarpık ayak)",
-      "C) Konjenital Kalça Çıkığı",
-      "D) Skolyoz",
-      "E) Kraniyosinostoz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "15. haftadan önce yapılan erken amniyosentezde fötal membranların zayıflığına ve işlem sonrası amniyon sıvısı kaybına/oligohidramniosa bağlı mekanik kompresyon gelişir. Bu durum fötal ayaklarda tipik 'Talipes Ekinovarus' (çarpık ayak) deformitesi insidansında dramatik bir artışa neden olur."
-  },
-  {
-    "id": "q-learn-prenatal-tani-19",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 19,
-    "slideTitle": "Amniyotik Sıvı Biyokimyası, Enzim Tayinleri ve Fetal Enfeksiyon Analizi",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Fetal ultrasonografide 20. haftada periventriküler kalsifikasyonlar, mikrosefali ve intrauterin gelişme geriliği saptanan bir gebede fetal Sitomegalovirüs (CMV) enfeksiyonu şüphesi mevcuttur. Fetüsün enfekte olduğunu kesin olarak kanıtlayan en duyarlı prenatal tanı yöntemi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Maternal serumda CMV IgG avidite testinin yüksek çıkması",
-      "B) Maternal serumda CMV IgM antikorunun pozitif saptanması",
-      "C) Amniyotik sıvı süpernatantında Real-Time PCR ile CMV DNA'sının saptanması",
-      "D) Fetal kanda lökosit formülünün incelenmesi",
-      "E) Fetal ense saydamlığı ölçümünün tekrarlanması"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Maternal serolojik testler (IgM, IgG avidite) yalnızca annenin enfeksiyon geçirip geçirmediğini gösterir; etkenin plasentayı geçerek fetüse ulaştığını kanıtlayamaz. Fetal böbrekler yoluyla idrarla amniyona atılan virüsün amniyotik sıvıda PCR ile saptanması intrauterin konjenital CMV enfeksiyonunun kesin ve altın standart tanı yöntemidir."
-  },
-  {
-    "id": "q-learn-prenatal-tani-20",
-    "deckId": "learn-prenatal-tani",
-    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
-    "slideNumber": 20,
-    "slideTitle": "Kordosentez (Perkütan Umbilikal Kan Örneklemesi - PUBS): Endikasyonlar ve Riskler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "23 haftalık bir gebede ultrasonda multipl kardiyak ve serebral malformasyonlar saptanmıştır. Yasal tahliye süresi yaklaşan bu hastada en hızlı şekilde (48-72 saat içinde) tam sitogenetik karyotip analizi elde etmek için tercih edilmesi gereken invaziv yöntem aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kordosentez (Fetal kan örneklemesi)",
-      "B) Standart ikinci trimester amniyosentezi",
-      "C) Transservikal koryon villus biyopsisi",
-      "D) Maternal kanda hücresiz fetal DNA analizi (cfDNA)",
-      "E) Fetoskopi ile cilt biyopsisi"
+      "A) İnterlökin-6 (IL-6) ve Tümör Nekroz Faktörü (TNF)",
+      "B) İnterlökin-10 (IL-10) ve TGF-beta",
+      "C) Vasküler endotelyal büyüme faktörü (VEGF) ve Angiopoietin-1",
+      "D) Eritropoietin ve Trombopoietin",
+      "E) İnterlökin-4 (IL-4) ve İnterlökin-13 (IL-13)"
     ],
     "correctAnswer": 0,
-    "explanation": "Kordosentez ile elde edilen fetal kanda T lenfositleri fitohemaglutinin uyarısıyla 48-72 saat içinde bölünerek metafaza ulaşır. Amniyosentezde ise fibroblast benzeri amniyositlerin çoğalması 10-21 gün sürer. Bu nedenle geç haftalarda hızla karyotip elde etmek için kordosentez en uygun yöntemdir."
+    "explanation": "A seçeneği doğrudur. Karaciğer rejenerasyonunun ilk adımı 'priming' (hazırlık) evresidir. Bu evrede Kupffer hücrelerinden salgılanan TNF ve IL-6 hepatositleri G0 dinlenme fazından çıkarıp G1 fazına sokar ve büyüme faktörlerine yanıt verebilir hale getirir. Proliferasyon ise HGF ve TGF-alfa ile sağlanır. B seçeneğinde yer alan TGF-beta terminasyon (durdurma) fazı inhibitörüdür. C seçeneği anjiyogenezle ilgilidir. D seçeneği hematopoezle ilgilidir. E seçeneği Th2 yanıtıdır."
+  },
+  {
+    "id": "prac-doku-015",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 15,
+    "slideTitle": "Vasküler Endotelyal Büyüme Faktörü (VEGF), HIF ve Damar Geçirgenliği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Deri kesisi sonrası granülasyon dokusu gelişim evresindeki bir hastanın yara tabanından alınan doku örneğinde, yeni oluşan kapiller damarların lümenlerinden çevre interstisyuma yoğun plazma sıvısı ve albümin sızdığı, dokunun ileri derecede ödemli olduğu saptanıyor. Yeni filizlenen endotel damarlarında bu masif vasküler permeabilite artışına yol açan ve aynı zamanda anjiyogenezin primer düzenleyicisi olan büyüme faktörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Epidermal büyüme faktörü (EGF)",
+      "B) Vasküler endotelyal büyüme faktörü (VEGF)",
+      "C) Keratinosit büyüme faktörü (KGF)",
+      "D) Tümör nekroz faktörü-alfa (TNF-alfa)",
+      "E) İnterlökin-2 (IL-2)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. VEGF (Vascular Endothelial Growth Factor), anjiyogenezi uyarmasının yanı sıra endotel hücreleri arasındaki bağlantıları gevşeterek aşırı damar geçirgenliğine yol açan en güçlü moleküldür (tarihsel adı Vasküler Permeabilite Faktörü - VPF'dir). Bu nedenle yeni gelişen granülasyon dokusu damarları sızıntılıdır ve yara ödemlidir. EGF (A) ve KGF (C) epitel hücrelerini uyarır. TNF-alfa (D) ve IL-2 (E) enflamatuar sitokinlerdir."
+  },
+  {
+    "id": "prac-doku-016",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 16,
+    "slideTitle": "Trombosit Kaynaklı Büyüme Faktörü (PDGF) ve FGF-1 / FGF-2",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yara iyileşmesi sürecinde trombositlerin alfa granüllerinden ve hasar alanındaki aktive doku makrofajlarından salgılanan; fibroblastlar, düz kas hücreleri ve nötrofiller için güçlü bir kemotaktik faktör olmanın yanı sıra mezenkimal hücre proliferasyonunu ve kollajen sentezini uyaran büyüme faktörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Trombosit kaynaklı büyüme faktörü (PDGF)",
+      "B) İnterlökin-1 (IL-1)",
+      "C) Granülosit koloni stimüle edici faktör (G-CSF)",
+      "D) Hepatosit büyüme faktörü (HGF)",
+      "E) Tümör nekroz faktörü-beta (TNF-beta)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Trombosit Kaynaklı Büyüme Faktörü (PDGF); trombosit alfa granülleri ve aktive makrofajlar tarafından salgılanır. Nötrofiller, makrofajlar, fibroblastlar ve düz kas hücreleri için hem güçlü bir kemotaktik molekül hem de mitojendir; fibroblast proliferasyonunu ve matriks sentezini uyarır. IL-1 (B) pro-enflamatuar sitokindir. G-CSF (C) nötrofil üretimini uyarır. HGF (D) hepatosit mitojenidir."
   }
 ]

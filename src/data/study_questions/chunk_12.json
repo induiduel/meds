@@ -1,5 +1,1196 @@
 [
   {
+    "id": "prac-epi-013",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 13,
+    "slideTitle": "Dolaylı Bulaşma: Ortak Araçlar (Vehicles) ve Fomitler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir kasabada yaşayan 400 kişide aynı hafta sonu aniden yüksek ateş, pirinç suyu görünümünde yoğun ishal ve kusma tablosu gelişmiştir. Yapılan filyasyon çalışmasında tüm hastaların aynı belediye içme suyu deposundan su tükettiği ve depoya yakın bir kanalizasyon borusunda kırık olduğu tespit edilmiştir. Bu salgının bulaşma yolu ve aracı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Doğrudan damlacık yolu — Hava",
+      "B) Dolaylı araç bulaşması — Kontamine su şebekesi (Fekal-oral)",
+      "C) Biyolojik vektör bulaşması — Sivrisinekler",
+      "D) Cinsel yolla doğrudan bulaşma — Genital sekresyonlar",
+      "E) Damlacık çekirdeği ile hava yolu — Havalandırma bacası"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Su şebekesinin kanalizasyonla kirlenmesi sonucu çok sayıda insanın aynı anda enfekte olması, fekal-oral döngüdeki 'dolaylı araç (su) bulaşması'nın klasik örneğidir."
+  },
+  {
+    "id": "prac-epi-014",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 14,
+    "slideTitle": "Dolaylı Bulaşma: Vektörler ve Vektörel Dinamikler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir eklembacaklının enfeksiyon etkenini bulaştırmasındaki rolü değerlendirilirken; etkenin eklembacaklının sindirim kanalında çoğaldığı ve belirli bir ekstrinsek inkübasyon periyodu sonrasında tükürük bezlerine geçerek kan emme sırasında yeni konağa aktarıldığı saptanmıştır. Bu eklembacaklının üstlendiği epidemiyolojik rol aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Mekanik vektörlük",
+      "B) Biyolojik vektörlük",
+      "C) Cansız fomit aktarımı",
+      "D) Doğrudan damlacık çekirdeği",
+      "E) İnkübasyon portörlüğü"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Etkenin vektör vücudunda çoğalması, doku invazyonu yapması veya ekstrinsek inkübasyon periyodu geçirmesi biyolojik vektörlüğün ayırt edici özelliğidir."
+  },
+  {
+    "id": "prac-epi-015",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 15,
+    "slideTitle": "Enfeksiyon Etkeninin Biyolojik ve Epidemiyolojik Özellikleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir tıp fakültesi öğrencisi stajında incelediği bakterinin özelliklerini listelemiştir:\nI. Gram pozitif sporlu basil olması\nII. Enfekte ettiği bireylerin %80'inde klinik hastalık tablosu oluşturması\nIII. Çevresel koşullara dayanıklı ısı dirençli ekzotoksin salgılaması\nIV. Temas eden duyarlı kişiler arasında yüksek sekonder atak hızına sahip olması\nBu özelliklerden hangileri bakterinin EPİDEMİYOLOJİK özellikleri arasında yer alır?",
+    "options": [
+      "A) Yalnız I",
+      "B) I ve III",
+      "C) II ve IV",
+      "D) II, III ve IV",
+      "E) I, II, III ve IV"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Gram boyanma (I) ve toksin yapısı (III) mikrobun intrensek mikrobiyolojik özellikleridir. Klinik hastalık oluşturma oranı (patojenite - II) ve sekonder atak hızı (bulaşıcılık - IV) ise konak-etken etkileşimine dayalı epidemiyolojik özelliklerdir."
+  },
+  {
+    "id": "prac-epi-016",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 16,
+    "slideTitle": "Patojenite, Virulans ve Enfektivite: Ölçüm Yöntemleri ve Klinik Korelasyon",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir toplumda iki farklı enfeksiyon etkeni (X ve Y virüsleri) incelenmiştir:\n- X virüsü ile enfekte olan 1.000 kişinin 950'sinde döküntü ve klinik hastalık tablosu gelişmiş, ancak hiç ölüm görülmemiştir.\n- Y virüsü ile enfekte olan 1.000 kişinin yalnızca 20'sinde klinik hastalık tablosu gelişmiş, ancak hastalanan bu 20 kişinin 18'i hayatını kaybetmiştir.\nBu verilere göre X ve Y virüslerinin patojenite ve virulans özellikleri ile ilgili aşağıdaki kıyaslamalardan hangisi DOĞRUDUR?",
+    "options": [
+      "A) X virüsünün virulansı Y'den yüksektir; Y virüsünün patojenitesi X'ten yüksektir.",
+      "B) X virüsünün patojenitesi yüksek, virulansı düşüktür; Y virüsünün patojenitesi düşük, virulansı çok yüksektir.",
+      "C) Her iki virüsün de hem patojenitesi hem de virulansı eşit düzeydedir.",
+      "D) X virüsünün enfektivitesi sıfırdır, Y virüsünün ID50 değeri ölçülemez.",
+      "E) Y virüsünün vaka fatalite hızı (CFR) X virüsünden düşüktür."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. X virüsü enfekte olanların %95'inde hastalık yapmış (yüksek patojenite), ama ölüm olmamış (düşük virulans). Y virüsü enfekte olanların sadece %2'sinde hastalık yapmış (düşük patojenite), fakat hastaların %90'ı ölmüş (çok yüksek virulans / CFR)."
+  },
+  {
+    "id": "prac-epi-017",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 17,
+    "slideTitle": "Doku Tropizmi, Transmisibilite ve İmmünojenite",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir virüsün insan vücuduna girdikten sonra yalnızca CD4+ T yardımcı lenfositlerine bağlanarak çoğalabilmesi ve santral sinir sistemi veya karaciğer dokusunu primer olarak enfekte etmemesi, virüsün hangi epidemiyolojik ve biyolojik özelliği ile açıklanır?",
+    "options": [
+      "A) Yüksek vaka fatalite hızı",
+      "B) Düşük intrensek enfektivite",
+      "C) Doku tropizmi (reseptör özgüllüğü)",
+      "D) Zayıf immünojenite",
+      "E) Mekanik transmisibilite"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C seçeneğidir. Etkenin konakta belirli hücre veya dokulara (burada CD4+ lenfositler) yönelmesi ve yüzey reseptörlerine bağlanması 'doku tropizmi' kavramıdır."
+  },
+  {
+    "id": "prac-epi-018",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 18,
+    "slideTitle": "Antimikrobiyal Direnç Epidemiyolojisi ve Seleksiyon Baskısı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir hastane yoğun bakım ünitesinde gereksiz ve geniş spektrumlu karbapenem kullanımının ardından, ünitede yatan hastaların kültürlerinde tüm karbapenemlere dirençli Klebsiella pneumoniae suşlarının salgın yaptığı gözlenmiştir. Bu dirençli suşların ortamda hakim hale gelmesini açıklayan temel epidemiyolojik ve evrimsel mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Karbapenemin bakterilerde anında yeni bir intrensek hücre duvarı sentezletmesi",
+      "B) Antibiyotik kullanımının duyarlı florayı yok ederek dirençli mutant suşlara çoğalma avantajı sağlayan seleksiyon baskısı yaratması",
+      "C) Bakterilerin pastörizasyon geçirerek virulanslarını artırması",
+      "D) Hastaların tümünde doğal pasif bağışıklığın aniden çökmesi",
+      "E) Hastanedeki su şebekesinde mekanik vektörlerin artması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Aşırı ve uygunsuz antibiyotik kullanımı ortamdaki duyarlı bakterileri elimine ederek dirençli klonların seçilmesini ve çoğalmasını (seleksiyon baskısı) sağlar."
+  },
+  {
+    "id": "prac-epi-019",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 19,
+    "slideTitle": "Konakçı Direnç Faktörleri ve Savunma Kademeleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir bireyin enfeksiyon etkenlerine karşı sahip olduğu savunma mekanizmaları incelendiğinde; derinin ter ve yağ bezlerince oluşturulan asit mantosu (pH ~5.5), midedeki hidroklorik asit bariyeri ve solunum yolundaki siliyer epitel hareketleri konak savunmasının hangi basamağını oluşturur?",
+    "options": [
+      "A) Özgül kazanılmış hücresel bağışıklık",
+      "B) Doğal direncin birinci basamak anatomik ve kimyasal bariyerleri",
+      "C) Yapay pasif hümoral antikor koruması",
+      "D) Sistemik sepsis ve dissemine intravasküler koagülasyon",
+      "E) Biyolojik vektör adaptasyon mekanizması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Deri bütünlüğü, asit manto, mide asidi ve siliyer hareketler mikropların dokuya girişini engelleyen birinci hat non-spesifik doğal direnç bariyerleridir."
+  },
+  {
+    "id": "prac-epi-020",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 20,
+    "slideTitle": "Bağışıklık Tipleri ve Sınıflandırması",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Paslı çivi batması şikayetiyle acil servise başvuran ve daha önce hiç aşılanmadığı öğrenilen bir hastaya, acil olarak nötralizasyon sağlamak amacıyla hazır at kaynaklı tetanoz antitoksini (tetanoz immünglobulini) enjekte edilmiştir. Bu tıbbi müdahale ile hastaya sağlanan bağışıklık türü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Doğal aktif bağışıklık",
+      "B) Yapay aktif bağışıklık",
+      "C) Doğal pasif bağışıklık",
+      "D) Yapay pasif bağışıklık",
+      "E) Türe has doğal bağışıklık"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Başka bir canlıda üretilmiş hazır antikorların (tetanoz antitoksini/serumu) insana enjeksiyonu 'yapay pasif bağışıklık'tır. İmmün bellek bırakmaz, etkisi anında başlar ancak geçicidir."
+  },
+  {
+    "id": "prac-epi-021",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 21,
+    "slideTitle": "Bulaşıcı Hastalıkların Toplum Dinamikleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir öğrenci yurdunda kalan 100 kişilik grupta 1 öğrencide kızamık tespit edilmiştir (indeks vaka). Bu 100 öğrenciden 60'ının daha önceden iki doz kızamık aşısı olduğu ve bağışık olduğu bilinmektedir. Kalan 40 aşısız temaslı öğrencinin 32'sinde inkübasyon süresi sonunda kızamık geliştiği saptanmıştır. Bu yurt ortamında kızamık için SEKONDER ATAK HIZI (SAR) yüzde kaçtır?",
+    "options": [
+      "A) %32",
+      "B) %40",
+      "C) %60",
+      "D) %80",
+      "E) %95"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Sekonder atak hızında paydada yalnızca duyarlı (aşısız) kişiler yer alır: 40 duyarlı temaslı. Hastalanan ikincil vaka sayısı: 32. SAR = (32 / 40) x 100 = %80'dir."
+  },
+  {
+    "id": "prac-epi-022",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 22,
+    "slideTitle": "Toplumsal Bağışıklık (Herd Immunity) ve Kritik Aşılama Eşiği",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Yeni ortaya çıkan bir solunum yolu virüsünün temel üreme katsayısı (R0) matematiksel modellemelerde 5 olarak hesaplanmıştır. Bu virüsün toplumda salgın yapmasını engellemek ve yayılımını durdurmak için toplumda sağlanması gereken ASGARİ toplumsal bağışıklık oranı (Herd Immunity Threshold - Hc) yüzde kaçtır?",
+    "options": [
+      "A) %20",
+      "B) %50",
+      "C) %70",
+      "D) %80",
+      "E) %95"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D seçeneğidir. Hc = 1 - (1 / R0) formülünden; Hc = 1 - (1 / 5) = 1 - 0.20 = 0.80, yani %80 olarak bulunur."
+  },
+  {
+    "id": "prac-epi-023",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 23,
+    "slideTitle": "Epidemiyolojik Sürveyans Tipleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir ülkede çocuk felcinin (Poliomiyelit) tamamen yok edilmesi (eradikasyonu) hedeflenmektedir. Bu amaçla halk sağlığı uzmanları rutin bildirimleri beklemekle yetinmeyip, her hafta ülkedeki tüm nöroloji ve pediatri kliniklerini bizzat ziyaret ederek 15 yaş altındaki tüm 'Akut Flaksid Paralizi' vakalarını hasta dosyalarından tek tek tespit etmektedir. Bu filyasyon ekibinin uyguladığı sürveyans türü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pasif sürveyans",
+      "B) Aktif sürveyans",
+      "C) Mekanik sürveyans",
+      "D) Doğal pasif sürveyans",
+      "E) Tindalize sürveyans"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Sağlık görevlilerinin rutin bildirimi beklemeden bizzat sahaya ve kliniklere giderek vakaları araştırması ve kayıtları incelemesi 'aktif sürveyans'tır."
+  },
+  {
+    "id": "prac-epi-024",
+    "deckId": "learn-enfeksiyon-epidemiyoloji",
+    "deckTitle": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri ve Bulaş Zinciri",
+    "slideNumber": 24,
+    "slideTitle": "Salgın İnceleme Basamakları ve Kontrol Stratejileri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bir hastanede COVID-19 PCR testi pozitif çıkan ve pnömoni bulguları olan bir hasta enfeksiyon servisinde tek kişilik negatif basınçlı odaya alınmıştır. Bu hasta ile aynı evde yaşayan, hiçbir şikayeti ve belirtisi bulunmayan sağlıklı eşi ise evinde 14 gün boyunca dışarı çıkmayacak şekilde temaslı takibine alınmıştır. Hastaya ve eşine uygulanan bu iki halk sağlığı tedbiri sırasıyla aşağıdakilerden hangisinde doğru terimlerle eşleştirilmiştir?",
+    "options": [
+      "A) Karantina — İzolasyon",
+      "B) İzolasyon — Karantina",
+      "C) Tindalizasyon — Pastörizasyon",
+      "D) Dezenfeksiyon — Antisepsi",
+      "E) Aktif sürveyans — Sentinel sürveyans"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B seçeneğidir. Hasta ve enfekte bireye bulaştırıcılık süresince uygulanan ayırma işlemi İZOLASYON; hasta ile temas etmiş sağlıklı bireye kuluçka süresince uygulanan kısıtlama işlemi ise KARANTİNA'dır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-1",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 1,
+    "slideTitle": "Halk Sağlığı Kavramı, Tanımı ve Felsefi Temelleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "C.E.A. Winslow'un 1920 yılında formüle ettiği klasik halk sağlığı tanımına göre aşağıdakilerden hangisi halk sağlığının temel bileşenlerinden veya hedeflerinden biri DEĞİLDİR?",
+    "options": [
+      "A) Organize edilmiş toplum çabalarıyla çevre sağlık koşullarının düzeltilmesi",
+      "B) Bulaşıcı hastalıkların kontrol altına alınması ve bireylere sağlık eğitimi verilmesi",
+      "C) Hastalıkların erken tanı ve tedavisini organize edecek sağlık örgütlerinin kurulması",
+      "D) Yüksek maliyetli üçüncül yoğun bakım ve ileri cerrahi merkezlerinin kâr odaklı yaygınlaştırılması",
+      "E) Yaşamın uzatılması, beden ve ruh sağlığı ile çalışma gücünün artırılması"
+    ],
+    "correctAnswer": 3,
+    "explanation": "C.E.A. Winslow'un 1920 tanımında çevre sanitasyonu, bulaşıcı hastalıkların kontrolü, sağlık eğitimi, erken tanı/tedavi teşkilatları ve yaşam standardının yükseltilmesi yer alır. Yüksek maliyetli kâr odaklı özel hastane yatırımları halk sağlığının değil, ticari/bireysel tıbbın konusudur."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-2",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 2,
+    "slideTitle": "İlk Çağlarda Sağlık Arayışı ve Hijyen Pratikleri",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "İlk Çağ uygarlıklarındaki sağlık ve hijyen pratikleriyle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Gılgamış Destanı, insanın ölümsüzlük ve hastalıklardan korunarak yaşamı uzatma arayışının tarihteki en eski yazılı edebi belgesidir.",
+      "B) Hammurabi Kanunları, hekimlerin tıbbi müdahalelerdeki yasal sorumluluklarını ve cerrahi kusurlarını düzenleyen ilk yazılı metinlerdendir.",
+      "C) Antik Mısır tıbbında vücut hijyeni, temiz su temini ve parazitlerden korunma kuralları papirüslerde yer almıştır.",
+      "D) Mezopotamya kazılarında bulunan pişmiş toprak drenaj boruları, çevre sağlığı ve kentsel atık kontrolünün erken örneklerindendir.",
+      "E) İlk Çağ tıbbında hastalıkların tamamen mikrobiyolojik etkenlerle oluştuğu kanıtlanmış ve modern aşılar uygulanmıştır."
+    ],
+    "correctAnswer": 4,
+    "explanation": "İlk Çağ tıbbında mikrobiyolojik etkenler ve aşılar bilinmiyordu; mikroorganizmalar 17. yüzyılda Leeuwenhoek ile görülmüş, Germ Teorisi ise 19. yüzyılda Pasteur ve Koch ile kanıtlanmıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-3",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 3,
+    "slideTitle": "Rasyonel Tıbbın ve Etiğin Doğuşu: Hipokrat",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Hipokratik tıp felsefesi ve Humoral Patoloji Kuramı ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Hastalıkların tanrısal bir ceza değil, tamamen doğal ve çevresel nedenlerle meydana geldiğini savunmuştur.",
+      "B) Vücuttaki dört temel sıvıyı (humor) kan, balgam, sarı safra ve kara safra olarak tanımlamıştır.",
+      "C) Sağlık durumunu sıvıların dengede olması (eukrasia), hastalığı ise dengenin bozulması (dyskrasia) olarak açıklamıştır.",
+      "D) Tıbbın temel ahlaki ilkesini 'Primum non nocere' (Önce zarar verme) olarak formüle etmiştir.",
+      "E) Hastalıkların tek nedeninin genetik mutasyonlar olduğunu ileri sürerek çevrenin sağlığa etkisini bütünüyle reddetmiştir."
+    ],
+    "correctAnswer": 4,
+    "explanation": "Hipokrat çevrenin (su, hava, mekanlar) sağlığa etkisini en güçlü vurgulayan hekimdir ('Havalar, Sular ve Yöreler Üzerine' eseri). Genetik mutasyon kavramı 20. yüzyıla aittir."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-4",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 4,
+    "slideTitle": "Roma Dönemi, Bergamalı Galen ve Kamu Sağlığı Mühendisliği",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Antik Roma dönemi kamu sağlığı uygulamaları ve tıp tarihi ile ilgili aşağıdakilerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Bergamalı Galen geliştirdiği formüllerle modern eczacılığın temeli olan galenik preparatları oluşturmuştur.",
+      "B) Romalılar şehirlerde su kemerleri ve kanalizasyon sistemlerini bütünüyle yasaklamışlardır.",
+      "C) Columella bataklıkların sağlığa faydalı olduğunu ve tüm yerleşimlerin bataklık kenarına kurulmasını savunmuştur.",
+      "D) Galenik tıp anlayışı sadece cerrahi girişimleri kapsar, ilaç tedavisini ve bitkisel preparatları reddeder.",
+      "E) Cloaca Maxima, Roma'da halkın temiz içme suyu ihtiyacını karşılamak için açılmış kutsal bir su kaynağıdır."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bergamalı Galen bitkisel formülasyonlarıyla galenik preparatların ve eczacılığın kurucusudur. Romalılar su kemerleri ve kanalizasyon (Cloaca Maxima) inşa etmiş, Columella ise bataklıklardan sıtma nedeniyle kaçınılmasını öğütlemiştir."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-5",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 5,
+    "slideTitle": "İslam Uygarlığında Tıp ve Enfeksiyon Kavramı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Orta Çağ İslam tıbbı ve hekimlerinin halk sağlığına katkılarıyla ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Ebubekir Razi - Bağdat'ta et astırarak en geç kokuşmanın görüldüğü temiz havaya sahip bölgeye hastane yapılması",
+      "B) İbn-i Sina - Çiçek aşısını sığırlardan izole ederek dünyada ilk modern aşılamayı başlatması",
+      "C) İbn-ül Habib - Kolera etkenini mikroskop altında izole ederek vibrio adını vermesi",
+      "D) Ebubekir Razi - Broad Street su pompasının kolunu sökerek kolera salgınını durdurması",
+      "E) İbn-i Sina - Skorbüt hastalığının narenciye ile tedavi edileceğini donanma deneyleriyle kanıtlaması"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Razi, et asma deneyiyle kokuşmanın en geç olduğu temiz havaya sahip alana hastane yapılmasını sağlamıştır. Çiçek aşısı Jenner'a, Broad Street Snow'a, skorbüt Lind'e aittir."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-6",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 6,
+    "slideTitle": "Orta Çağ Salgınları ve Karantina Kurumunun Doğuşu",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Tarihteki karantina uygulamaları ve Kara Ölüm salgını ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Karantina sözcüğü, İtalyanca kırk gün anlamına gelen 'quaranta giorni' teriminden türemiştir.",
+      "B) İlk organize tecrit uygulaması 1377'de Ragusa'da 30 günlük bekleme (trentina) şeklinde başlatılmıştır.",
+      "C) Kara Ölüm pandemisi Yersinia pestis etkeninin sıçan ve pireler aracılığıyla bulaşmasıyla yayılmıştır.",
+      "D) Karantina, etkeni mikro düzeyde bilinmeyen bulaşıcı hastalıklara karşı geliştirilmiş ilk organize savunma sistemlerindendir.",
+      "E) Karantina uygulaması ilk kez 20. yüzyılda Dünya Sağlık Örgütü tarafından keşfedilmiş ve uygulanmıştır."
+    ],
+    "correctAnswer": 4,
+    "explanation": "Karantina 20. yüzyılda değil, 14. yüzyılda Orta Çağ'da Veba salgınları sırasında Ragusa ve Venedik'te ortaya çıkmış ve kurumsallaşmıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-7",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 7,
+    "slideTitle": "Beslenme Yetersizlikleri ve İlk Kontrollü Klinik Deney",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "James Lind'in 1753 yılındaki skorbüt araştırması halk sağlığı ve tıp metodolojisi açısından neden bir dönüm noktası kabul edilir?",
+    "options": [
+      "A) Tüberküloz basilini mikroskop altında ilk kez görüntülediği için",
+      "B) Tıp tarihinde benzer semptomlara sahip hastaları gruplara ayırarak ilk kontrollü klinik beslenme deneyini gerçekleştirdiği için",
+      "C) Hastalıkların genetik temellerini DNA analiziyle ortaya koyduğu için",
+      "D) Kuduz aşısını geliştirerek ilk aktif bağışıklamayı başlattığı için",
+      "E) Şehir kanalizasyon hatlarının kolera salgınlarını önlediğini gösterdiği için"
+    ],
+    "correctAnswer": 1,
+    "explanation": "James Lind, skorbütlü denizcileri benzer gruplara ayırıp farklı diyet takviyeleri vererek tıp tarihinin ilk kontrollü prospektif klinik deneyini gerçekleştirmiş ve narenciyenin iyileştirici etkisini kanıtlamıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-8",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 8,
+    "slideTitle": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Çiçek aşısı ve bağışıklama tarihi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Çiçek aşısı ilk kez Robert Koch tarafından tüberküloz basilinden üretilmiştir.",
+      "B) Edward Jenner, süt sağan kadınların sığır çiçeği geçirdikten sonra insan çiçeğine yakalanmadığını gözlemleyerek modern aşılamanın temelini atmıştır.",
+      "C) Variolasyon yöntemi ilk kez İngiltere'de icat edilmiş ve Osmanlı İmparatorluğu'na ihraç edilmiştir.",
+      "D) Çiçek hastalığı günümüzde dünya genelinde en sık ölüme neden olan bulaşıcı hastalık olmaya devam etmektedir.",
+      "E) Jenner'ın aşılama deneyi tarihte ilk kez penisilin antibiyotiğinin keşfedilmesini sağlamıştır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Edward Jenner, süt sağanların sığır çiçeği (cowpox) geçirdikten sonra insan çiçeğine yakalanmadığını gözlemlemiş ve 1796'da aşılamayı (vaccination) başlatmıştır. Çiçek 1980'de DSÖ tarafından tamamen eradike edilmiştir."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-9",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 9,
+    "slideTitle": "Sanayi Devrimi ve Büyük Sanitasyon Hareketi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Edwin Chadwick'in 1842 yılında hazırladığı rapor ve başlattığı Sanitasyon Hareketi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Salgın hastalıklar ile çevre kirliliği, kötü kanalizasyon ve yoksulluk arasındaki bağı ortaya koymuştur.",
+      "B) Şehirlerde borulu temiz su temini ve kapalı kanalizasyon altyapısının kurulmasını savunmuştur.",
+      "C) İngiltere'de 1848 Halk Sağlığı Yasası'nın çıkarılmasına ve sağlık kurullarının oluşturulmasına zemin hazırlamıştır.",
+      "D) Toplum sağlığının korunmasını devletin ve yerel yönetimlerin temel kamusal sorumluluğu olarak tanımlamıştır.",
+      "E) Çevre koşullarının hastalıklarla hiçbir ilgisi olmadığını savunarak kanalizasyon inşaatlarının durdurulmasını talep etmiştir."
+    ],
+    "correctAnswer": 4,
+    "explanation": "Chadwick aksine çevre koşullarının hastalıkların birincil nedeni olduğunu savunmuş ve kapalı kanalizasyon ile temiz su şebekesinin kurulmasını zorunlu kılmıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-10",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 10,
+    "slideTitle": "Modern Epidemiyolojinin Doğuşu: John Snow",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Dr. John Snow'un 1854 Broad Street kolera salgını sırasındaki incelemeleri ve modern epidemiyolojiye katkısı hakkında hangisi YANLIŞTIR?",
+    "options": [
+      "A) Hastalık vakalarını ve ölümleri harita üzerinde işaretleyerek kümelenmenin Broad Street su tulumbası çevresinde olduğunu saptamıştır.",
+      "B) Tulumbanın kolunu söktürerek suyun kullanımını engellemiş ve salgının yayılmasını durdurmuştur.",
+      "C) Koleranın miasma (pis hava) yoluyla değil, dışkı ile kirlenmiş içme suları aracılığıyla bulaştığını kanıtlamıştır.",
+      "D) Salgını durdurmak için hastaların tümüne tüberküloz antibiyotikleri dağıtmıştır.",
+      "E) Su şirketlerinin su kaynaklarını karşılaştırarak analitik epidemiyolojinin ilk klasik örneğini vermiştir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "1854 yılında henüz antibiyotikler keşfedilmemişti (penisilin 1928'de bulundu). Snow müdahaleyi tulumba kolunu söktürerek çevre sağlığı/su sanitasyonu yöntemiyle yapmıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-11",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 11,
+    "slideTitle": "Mikrobiyoloji Devrimi ve Germ Kuramı",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Louis Pasteur'ün tıp ve halk sağlığı tarihindeki devrim niteliğindeki katkıları arasında aşağıdakilerden hangisi YER ALMAZ?",
+    "options": [
+      "A) Kuğu boyunlu balon deneyleriyle kendiliğinden oluş (abiogenesis) kuramını kesin olarak çürütmesi",
+      "B) Gıda ve süt hijyeninde mikropları öldürmek için pastörizasyon yöntemini geliştirmesi",
+      "C) Hastalıkların dışarıdan giren canlı etkenlerle oluştuğunu gösteren Germ Kuramını kurması",
+      "D) Tavuk kolerası, şarbon ve kuduz aşılarını geliştirerek atenuasyon ilkesini tıp pratiğine sokması",
+      "E) Tüberküloz basilini ve kolera vibrionunu ilk kez saf kültürde izole ederek Koch postülatlarını yazması"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Tüberküloz basili, kolera etkeni izolasyonu ve Koch postülatları Robert Koch'a aittir; Louis Pasteur'e ait değildir."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-12",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 12,
+    "slideTitle": "Bakteriyolojinin Altın Çağı ve Robert Koch",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Robert Koch ve bakteriyolojinin gelişimi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) 1882 yılında tüberküloz etkeni olan Mycobacterium tuberculosis basilini keşfetmiştir.",
+      "B) 1883 yılında kolera etkenini (Vibrio cholerae) izole ederek su sanitasyonunun önemini mikrobiyolojik olarak doğrulamıştır.",
+      "C) Bir mikroorganizmanın hastalık etkeni olduğunu kanıtlamak için dört basamaklı Koch Postülatlarını tanımlamıştır.",
+      "D) Emil von Behring 1890'da difteri antitoksinini geliştirerek pasif bağışıklamanın temellerini atmıştır.",
+      "E) Koch, tüberkülozun genetik bir bozukluk olduğunu kanıtlayarak aşı ve hijyen çalışmalarının tüberkülozda etkisiz olduğunu ilan etmiştir."
+    ],
+    "correctAnswer": 4,
+    "explanation": "Koch tüberkülozun genetik değil, bulaşıcı bir bakteriyel enfeksiyon olduğunu kanıtlamış ve etken olan tüberküloz basilini (Mycobacterium tuberculosis) izole etmiştir."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-13",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 13,
+    "slideTitle": "Vektörlerle Mücadele ve Entomolojinin Doğuşu: Sıtma",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Sıtma hastalığının tarihçesi ve vektör kontrolü ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Sıtma, etkeni ve biyolojisi bilinmeden çok önce Peru yerlilerince Kına-Kına ağacı kabuğuyla ampirik olarak tedavi edilmiştir.",
+      "B) Sıtma etkeni Plasmodium, 1880'de Charles Louis Alphonse Laveran tarafından kanda alyuvarlar içinde gösterilmiştir.",
+      "C) Sıtmanın insana anofel cinsi sivrisineklerle bulaştığının gösterilmesi tıbbi entomolojinin gelişimini başlatmıştır.",
+      "D) Sıtma etkeninin ve vektörünün bulunması bataklık ıslahı ve vektör kontrolü gibi çevre sağlığı müdahalelerine yol açmıştır.",
+      "E) Sıtma etkeni bir bakteridir ve Robert Koch tarafından Broad Street tulumbasından izole edilmiştir."
+    ],
+    "correctAnswer": 4,
+    "explanation": "Sıtma etkeni bakteri değil, Plasmodium cinsine ait bir paraziter protozoondur ve 1880'de Laveran tarafından kanda keşfedilmiştir. Kolera ise bakteridir ve suyla bulaşır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-14",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 14,
+    "slideTitle": "Sosyal Tıp Hareketi ve Alfred Grotjahn",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Alfred Grotjahn'ın sosyal hekimlik kuramı ve ilkeleri ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Bir toplumdaki en önemli hastalıkların en çok öldüren, en sık görülen ve en çok sakat bırakan hastalıklar olduğunu belirtmiştir.",
+      "B) Sağlık hizmetlerinin yalnızca parası yeten seçkin sınıflara verilmesi gerektiğini, kamunun sağlık sorumluluğu olmadığını savunmuştur.",
+      "C) Biyolojik ve fiziksel çevre faktörlerinin etkisini sosyoekonomik etmenlerin koşulladığını ileri sürmüştür.",
+      "D) Bir kişinin hasta olmasının sadece bireysel bir durum değil, aile ve bütün toplumun sorunu olduğunu vurgulamıştır.",
+      "E) Anne, çocuk ve işçiler gibi özel risk gruplarının öncelikli olarak korunması gerektiğini ifade etmiştir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Grotjahn aksine sağlık hizmetlerinin yalnızca seçkinler için değil halk kitleleri için kamusal bir hak ve zorunluluk olduğunu savunmuştur."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-15",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 15,
+    "slideTitle": "20. Yüzyıl Paradigma Değişimi: DSÖ ve Yunanistan Deneyimi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "1950'li yıllarda Yunanistan'da yaşanan sağlık krizi ve uluslararası yardım çalışmalarının tıp tarihindeki en önemli sonucu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Bebek ölümlerinin yalnızca hastane yatak sayısını artırarak çözülebileceğinin anlaşılması",
+      "B) Çevre koşulları, temiz su ve sosyoekonomik ortam düzeltilmedikçe hastanede tedavi etmenin kalıcı çözüm sağlamadığının ve koruyucu hekimliğin üstünlüğünün anlaşılması",
+      "C) Bulaşıcı hastalıkların tedavisinde aşıların tamamen etkisiz olduğunun gösterilmesi",
+      "D) Sağlık harcamalarının tamamen bireylerin kendi bütçesine bırakılması gerektiğinin kanıtlanması",
+      "E) Kötü beslenmenin genetik bir rahatsızlık olduğu ve hiçbir zaman önlenemeyeceğinin ortaya çıkması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Yunanistan deneyimi, hastanede tedavi edilen çocukların sağlıksız çevreye döndüklerinde tekrar hastalandığını göstererek koruyucu çevre önlemlerinin tedaviye üstünlüğünü kanıtlamıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-16",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 16,
+    "slideTitle": "Toplum Hekimliği Disiplini ve Kentucky Modeli",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Dr. Kurt W. Deuschle'nin Kentucky Üniversitesi'nde kurduğu Toplum Hekimliği disiplininin temel yaklaşımı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hekimleri yalnızca üçüncü basamak ameliyathanelerinde cerrahi uzmanı olarak yetiştirmek",
+      "B) Sağlık personeli ekibiyle toplum içinde koruyucu ve tedavi edici hizmetleri entegre sunarak toplumun sağlık önceliklerini sahada saptamak ve çözmek",
+      "C) Bulaşıcı hastalıkların tedavisini hekimlerin görev alanından çıkarıp sadece kolluk kuvvetlerine devretmek",
+      "D) Çevre sağlığı ve istatistik çalışmalarını tıp fakültesi eğitiminden tamamen kaldırmak",
+      "E) Koruyucu hekimlik yerine yalnızca yüksek maliyetli ilaç araştırmalarına odaklanmak"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Kurt W. Deuschle, tıp eğitiminde toplum hekimliğinin amacını: Sağlık personeli ekibiyle toplumda koruyucu ve tedavi edici hekimliğin entegre uygulanması, sorunların önceliklendirilmesi ve değerlendirilmesi olarak tanımlamıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-17",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 17,
+    "slideTitle": "Türkiye'de Halk Sağlığının Mimarı: Prof. Dr. Nusret Fişek",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Prof. Dr. Nusret Fişek'in halk sağlığı tanımı ve vizyonu ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) İnsanı ana rahmine düştüğü andan ölümüne kadar tüm çevresiyle bir bütün olarak ele almıştır.",
+      "B) Sağlık hizmetini sadece hastaneye başvuran varlıklı bireylerin satın alabileceği bir ayrıcalık olarak görmüştür.",
+      "C) Fiziki, biyolojik, sosyal, kültürel ve psikolojik çevredeki olumsuzlukların giderilmesini temel hedef saymıştır.",
+      "D) Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu'nun (224 Sayılı Kanun) mimarıdır.",
+      "E) Erken tanı, tedavi ve koruyucu hekimliği entegre bir hizmet ve bilim dalı olarak tanımlamıştır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Nusret Fişek, sağlığı bir insan hakkı olarak görmüş ve 'herkese eşit, nitelikli ve ücretsiz sağlık hizmeti' ilkesini savunmuştur. Hizmeti varlıklıların ayrıcalığı olarak görmemiştir."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-18",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 18,
+    "slideTitle": "Türkiye'de Sağlık Devrimi: 224 Sayılı Kanun",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun'un getirdiği örgütlenme modeli ve ilkelerle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Temel hizmet birimi yaklaşık 5.000-10.000 nüfusa hizmet veren Sağlık Ocaklarıdır.",
+      "B) Köylerde ebenin görev yaptığı en uç birim Sağlık Evidir.",
+      "C) Birinci basamakta koruyucu hizmetler ile ayaktan tedavi edici hizmetler bir ekip tarafından entegre olarak sunulur.",
+      "D) Kademeli sevk zinciri uygulanarak hastaların doğrudan üçüncü basamak hastanelere gitmesi zorunlu kılınmıştır.",
+      "E) Nüfusa dayalı kayıt sistemi (Ev halkı tespit fişleri) ile bölgedeki tüm bireyler izlenir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "224 Sayılı Kanun'da sevk zinciri birinci basamaktan ikinci basamağa doğru kademeli olarak işler; hastaların doğrudan üçüncü basamağa gitmesi sevk zincirini bozar ve sistemin mantığına aykırıdır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-19",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 19,
+    "slideTitle": "Cumhuriyet Öncesi ve Erken Dönem Türk Sağlık Tarihi",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Cumhuriyet dönemi halk sağlığı örgütlenmesi ve Dr. Refik Saydam dönemi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) 1928 yılında aşı ve serum üretimi için Refik Saydam Merkez Hıfzıssıhha Enstitüsü kurulmuştur.",
+      "B) 1930 yılında halk sağlığının temel çerçevesini çizen 1593 Sayılı Umumi Hıfzıssıhha Kanunu çıkarılmıştır.",
+      "C) Sıtma, trahom, frengi ve verem gibi yaygın halk sağlığı sorunlarıyla dikey mücadele teşkilatları ve dispanserler kurulmuştur.",
+      "D) Bu dönemde tüm aşı üretimi tamamen yasaklanmış ve dışa bağımlılık yasal zorunluluk haline getirilmiştir.",
+      "E) Osmanlı'dan devralınan telkihhane ve kuduz tedavihanesi geleneği Cumhuriyet döneminde kurumsallaştırılmıştır."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Refik Saydam döneminde Hıfzıssıhha Enstitüsü aşı ve serumları bizzat yerli olarak üretmiş, aşı ithalatı yerine aşı ihracatı yapılmıştır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-20",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 20,
+    "slideTitle": "Küresel Dönüm Noktası: Alma-Ata Bildirgesi (1978)",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "1978 Alma-Ata Bildirgesi'nde tanımlanan Temel Sağlık Hizmetleri (TSH) ilkeleri arasında aşağıdakilerden hangisi YER ALMAZ?",
+    "options": [
+      "A) Toplumsal eşitlik ve sağlık hizmetlerine erişimde fırsat eşitliği sağlanması",
+      "B) Sağlık hizmetlerinin planlanması ve yürütülmesinde toplumun katılımının sağlanması",
+      "C) Sağlık hizmetlerinin yalnızca dördüncül cerrahi hastanelerinde merkezileştirilmesi ve birinci basamağın kapatılması",
+      "D) Koruyucu hekimlik uygulamalarına tedavi edici hizmetler karşısında öncelik verilmesi",
+      "E) Tarım, su, eğitim ve konut gibi sektörlerin işbirliğini içeren multisektöryel yaklaşım"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Alma-Ata Bildirgesi birinci basamağı sağlık sisteminin merkezine koymuştur; hizmetlerin dördüncül cerrahi hastanelerde merkezileştirilmesi TSH ruhuna tamamen zıttır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-21",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 21,
+    "slideTitle": "Sağlığın Geliştirilmesi ve Ottawa Şartı (1986)",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "1986 Ottawa Şartı'nda belirlenen Sağlığın Geliştirilmesi (Health Promotion) beş temel eylem alanı arasında aşağıdakilerden hangisi YER ALMAZ?",
+    "options": [
+      "A) Sağlıklı kamu politikaları oluşturmak",
+      "B) Destekleyici çevreler yaratmak",
+      "C) Kişisel becerileri geliştirmek ve sağlık okuryazarlığını artırmak",
+      "D) Sağlık harcamalarını karşılayamayan bireyleri sağlık sigortası kapsamından tamamen çıkarmak",
+      "E) Sağlık hizmetlerini koruyucu ve geliştirici yönde yeniden yönlendirmek"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Ottawa Şartı sosyal adalet ve hakkaniyeti savunur; yoksulları sigortadan çıkarmak gibi ayrımcı ve piyasacı uygulamalar Ottawa ilkelerine taban tabana zıttır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-22",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 22,
+    "slideTitle": "Koruma Düzeyleri - I: Primordial ve Birincil Korunma",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Koruma düzeyleri ile ilgili aşağıdaki uygulamalardan hangisi BİRİNCİL (PRİMER) KORUMA örneğidir?",
+    "options": [
+      "A) Çocuklara hepatit B ve kızamık aşılarının yapılması",
+      "B) Rahim ağzı kanserini semptomsuz evrede yakalamak için Pap-smear taraması yapılması",
+      "C) Diyabet hastasında ayak ülseri ve amputasyonu önlemek için diyabetik ayak bakımı eğitimi verilmesi",
+      "D) İnme geçiren hastaya yürüme yetisini kazandırmak için fizik tedavi uygulanması",
+      "E) Meme kanseri şüphesiyle mamografi çektirilmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Aşılama, henüz hastalık başlamadan önce spesifik koruma sağlayarak yeni vaka oluşumunu (insidansı) engelleyen klasik bir Birincil (Primer) Koruma yöntemidir. Pap-smear ve mamografi ikincil, diyabetik ayak ve inme rehabilitasyonu üçüncül korumadır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-23",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 23,
+    "slideTitle": "Koruma Düzeyleri - II: İkincil, Üçüncül ve Dördüncül Korunma",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Koruma düzeyleri ve halk sağlığı uygulamaları ile ilgili aşağıdaki senaryolardan hangisi ÜÇÜNCÜL (TERSİYER) KORUNMA kapsamına girer?",
+    "options": [
+      "A) Toplumda sigara tüketimini azaltmak için tütün vergilerinin artırılması",
+      "B) Sağlıklı kadınlara serviks kanseri erken teşhisi için rutin Pap-smear taraması yapılması",
+      "C) Kronik diyabet tanısı olan bir hastada ayak amputasyonunu ve körlüğü engellemek amacıyla komplikasyon takibi ve rehabilitasyon uygulanması",
+      "D) Yenidoğan bebeğe hepatit B aşısı uygulanması",
+      "E) İftar çadırlarında ve lokantalarda tuzlukların masadan kaldırılması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Diyabet tanısı almış hastada ayak amputasyonu veya retinopatinin önlenmesi, oturmuş hastalığın komplikasyonlarını sınırlandırma ve rehabilitasyon amacını taşıdığı için Üçüncül (Tersiyer) Korunmadır."
+  },
+  {
+    "id": "q-learn-halk-sagligi-tarihcesi-ve-24",
+    "deckId": "learn-halk-sagligi-tarihcesi-ve",
+    "deckTitle": "Halk Sağlığı Tarihçesi, Felsefesi ve Koruyucu Hekimlik İlkeleri",
+    "slideNumber": 24,
+    "slideTitle": "Halk Sağlığı Uzmanının Rolü, Epidemiyolojik Geçiş ve Tek Sağlık",
+    "discipline": "Halk Sağlığı",
+    "committee": "Kurul 1",
+    "question": "Çağdaş halk sağlığı vizyonu, epidemiyolojik geçiş ve halk sağlığı uzmanının görevleriyle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "options": [
+      "A) Epidemiyolojik geçiş kuramı, bulaşıcı hastalıkların yerini zamanla kronik dejeneratif hastalıkların aldığını tanımlar.",
+      "B) Halk sağlığı uzmanı sadece hastane ameliyathanelerinde cerrahi vaka sayısını artırmakla yükümlü olup toplum araştırması yapmaz.",
+      "C) Tek Sağlık (One Health) yaklaşımı insan, hayvan ve çevre sağlığının ayrılmaz bir bütün olduğunu savunur.",
+      "D) Halk sağlığı uzmanı; sürveyans, filyasyon, salgın incelemesi, sağlık politikası ve yönetimi alanlarında görev alır.",
+      "E) Günümüz toplumları hem kronik hastalıkların hem de yeni ortaya çıkan zoonotik pandemilerin oluşturduğu çifte yük ile karşı karşıyadır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Halk sağlığı uzmanının temel görevi cerrahi ameliyat yapmak değil; toplumun sağlık düzeyini saptamak, epidemiyolojik araştırmalar yürütmek, salgın incelemek, sağlık politikası geliştirmek ve yöneticilik yapmaktır."
+  },
+  {
+    "id": "prac-use-001",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 1,
+    "slideTitle": "Üriner Sistem Enfeksiyonlarının Tanımı, Sınıflandırılması ve Klinik Spektrumu",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Üriner sistem enfeksiyonlarının tanımı ve klinik sınıflandırması dikkate alındığında, aşağıdaki ifadelerden hangisi doğru bir klinik yaklaşımı yansıtır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Üriner sistem enfeksiyonu tanısı için yalnızca idrarda bakteri görülmesi yeterlidir, konak inflamatuar yanıtı aranmaz.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Mesane mukozasını tutan sistit tablosunda daima yüksek ateş, titreme ve flank ağrısı gibi sistemik toksisite bulguları beklenir.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Üst üriner sistem enfeksiyonları (akut piyelonefrit), böbrek parankiminin tutulumu nedeniyle sistemik inflamatuar bulgular ve yan ağrısı ile seyreder.",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Asemptomatik seyreden tüm bakteriüri olgularında böbrek hasarını önlemek amacıyla derhal geniş spektrumlu antibiyotik başlanmalıdır.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Üriner sistemde üretrovezikal bileşkenin proksimalinde normal fizyolojik şartlarda yoğun bir kommensal bakteri florası bulunur.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Piyelonefrit böbrek parankim ve toplayıcı sistemini tuttuğu için ateş, titreme ve yan ağrısı gibi sistemik bulgular oluşturur; sistitte ise inflamasyon mesane mukozasıyla sınırlı olduğundan sistemik ateş genellikle izlenmez. Sağlıklı bireylerde üretrovezikal bileşke proksimali sterildir."
+  },
+  {
+    "id": "prac-use-002",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 2,
+    "slideTitle": "Bakteriüri, Piyüri ve İdrar Örnekleme Tekniklerinin Güvenilirliği",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Poliklinik şartlarında üriner sistem enfeksiyonu şüphesiyle değerlendirilen bir hastanın idrar tetkikinde bol bakteri görülmesine karşın mikroskobik incelemede lökosit (piyüri) saptanmamıştır. Bu klinik tablo en yüksek olasılıkla aşağıdakilerden hangisini düşündürmelidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Akut piyelonefrit erken evresi",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "İdrar numunesinin kontaminasyonu",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Böbrek tüberkülozu",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Karsinoma in situ",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Üriner sistem obstrüktif taş hastalığı",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Piyüri olmaksızın bakteriüri görülmesi enfeksiyondan ziyade idrar alma sırasındaki dış genital veya perineal kaynaklı kontaminasyonun en tipik göstergesidir. Gerçek ürotelyal invazyonda konağın inflamatuar yanıtı olarak daima piyüri eşlik eder."
+  },
+  {
+    "id": "prac-use-003",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 3,
+    "slideTitle": "Anlamlı Bakteriüri Kavramı ve Sayısal Koloni Eşikleri",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "İdrar yolu enfeksiyonu tanısında kullanılan anlamlı bakteriüri eşik değerleri ile ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kadınlarda akut komplike olmayan sistit: Orta akım idrarında >= 10^3 CFU/ml",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Erkeklerde orta akım idrarı: >= 10^4 CFU/ml",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Kadınlarda akut komplike olmayan piyelonefrit: Orta akım idrarında >= 10^4 CFU/ml",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Suprapubik aspirasyon ile alınan idrar: Yalnızca >= 10^5 CFU/ml üreme olması halinde anlamlıdır",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Asemptomatik kadınlarda iki ardışık orta akım idrarında: >= 10^5 CFU/ml",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Suprapubik aspirasyon doğrudan steril mesaneden alındığı için kontaminasyon riski yoktur ve idrarda saptanan herhangi bir sayıda bakteri (1 CFU/ml dahi) anlamlı kabul edilir; 10^5 CFU/ml sınırı aranmaz."
+  },
+  {
+    "id": "prac-use-004",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 4,
+    "slideTitle": "Asemptomatik Bakteriüri (ASB): Tanı Kriterleri ve Tedavi Endikasyonları",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki hasta gruplarından hangisinde asemptomatik bakteriüri (>10^5 CFU/ml) saptanması durumunda rutin antimikrobiyal tedavi verilmesi kesinlikle önerilmez?",
+    "options": [
+      {
+        "key": "A",
+        "text": "14 haftalık gebe kadın",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Transüretral prostat rezeksiyonu (TUR-P) planlanan asemptomatik hasta",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Kronik bakım evinde yaşayan, kalıcı üretral kateteri bulunan ve şikayeti olmayan 78 yaşındaki hasta",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Vezikoüreteral reflü şüphesiyle takip edilen 2 yaşındaki çocuk",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Rijit sistoskopi ve üreteral biyopsi uygulanacak olan hasta",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Kalıcı üretral kateteri olan veya kurumsal bakım alan asemptomatik yaşlı bireylerde bakteriüri kalıcı kolonizasyondur; antibiyotik vermek kolonizasyonu temizlemez aksine çoklu dirençli mikroorganizmaların gelişimine neden olur. Buna karşılık gebelerde ve mukozal kanamalı invaziv cerrahi öncesinde tedavi zorunludur."
+  },
+  {
+    "id": "prac-use-005",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 5,
+    "slideTitle": "Piyüri ve Bakteriüri Etkileşimi: Steril Piyüri ve Kontaminasyon Ayrımı",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Polikliniğe idrarda yanma şikayetiyle başvuran hastanın tam idrar tahlilinde bol lökosit (piyüri) saptanmış, ancak tekrarlanan rutin idrar kültürlerinde hiçbir bakteri ürememiştir. Bu hastada öncelikle dışlanması gereken patolojiler hangi seçenekte eksiksiz verilmiştir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ürogenital tüberküloz - Üriner sistem taşı - Mesane karsinoması",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Diabetes insipidus - Polikistik böbrek hastalığı - Renal ven trombozu",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Akut tübüler nekroz - Minimal değişiklik hastalığı - Amiloidoz",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Glomerülonefrit - Renal hücreli karsinom - Basit böbrek kisti",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Akut böbrek yetmezliği - İnkontinans - Üretral darlık",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bakteriürisiz piyüri (steril piyüri) tablosunda mutlaka ürogenital tüberküloz (M. tuberculosis standart kültürde üremez), üriner sistem taşı (mekanik mukozal erozyon) ve mesane tümörleri/karsinoma in situ araştırılmalıdır."
+  },
+  {
+    "id": "prac-use-006",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 6,
+    "slideTitle": "Komplike ve Komplike Olmayan Üriner Sistem Enfeksiyonları",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki hasta profillerinden hangisinde gelişen üriner sistem enfeksiyonu 'komplike olmayan ÜSE' kapsamında değerlendirilebilir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Nefrolitiyazis öyküsü olan ve yan ağrısı bulunan 45 yaşında erkek hasta",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Bilinen herhangi bir kronik hastalığı ve anatomik anomalisi bulunmayan 24 yaşında gebe olmayan kadın",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Tip 2 diyabeti ve nörojenik mesanesi olan 55 yaşında kadın hasta",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kalıcı foley sonda takılı olan 70 yaşında yatağa bağımlı erkek hasta",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "18 haftalık gebe olup dizüri tarifleyen 28 yaşında kadın hasta",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Komplike olmayan ÜSE sadece üriner sistemde anatomik/fonksiyonel anomali veya taş bulunmayan, gebe olmayan, premenopozal sağlıklı erişkin kadınlarda tanımlanır. Erkek hastalar, gebeler, diyabetikler ve kateteri olanlar doğrudan komplike kategoridedir."
+  },
+  {
+    "id": "prac-use-007",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 7,
+    "slideTitle": "ÜSE Terminolojisinde İnce Ayrımlar: Rekürrens, Re-enfeksiyon, Persistans ve Süpresyon",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Akut sistit atağı nedeniyle 7 günlük uygun antibiyotik tedavisi tamamlanan ve semptomları tamamen gerileyen bir kadın hastada, tedavinin bitiminden 8 gün sonra aynı antibiyotiğe duyarlılık profili gösteren birebir aynı E. coli suşu ile klinik enfeksiyon tekrarlamıştır. Bu tabloyu en iyi tanımlayan kavram ve altta yatan olası mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Re-enfeksiyon - Yeni bir fekal bulaş odağı",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Rekürren enfeksiyon (Relaps) - Üriner sistemde bakteriyel persistans odağı",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Nozokomiyal süperenfeksiyon - Pseudomonas kolonizasyonu",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Asemptomatik bakteriüri - İmmün tolerans gelişimi",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Steril piyüri - Karsinoma in situ gelişimi",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Başarılı tedavi sonrası iki haftadan kısa sürede aynı mikroorganizma ile tablonun alevlenmesi 'rekürren enfeksiyon'dur ve üriner sistemde antibiyotiklerin ulaşamadığı bir bakteriyel persistans odağını (taş, anatomik anomali, prostat odağı) düşündürür."
+  },
+  {
+    "id": "prac-use-008",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 8,
+    "slideTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyolojisi ve Toplum Sağlığı Yükü",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Üriner sistem enfeksiyonlarının epidemiyolojik özellikleri ve hastane morbiditesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ÜSE'ler nozokomiyal enfeksiyonların yaklaşık %40'ından sorumludur.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Nozokomiyal ÜSE olgularının büyük çoğunluğu üriner kateter uygulamaları ile ilişkilidir.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Poliklinik başvurularında kadınların başvuru sıklığı erkeklerin yaklaşık iki katıdır.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Genç erişkin erkeklerde ÜSE insidansı kadınlara kıyasla belirgin şekilde daha yüksektir.",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "ÜSE'ye bağlı komplikasyonlar ve ürosepsis önemli mortalite nedenleri arasındadır.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Genç erişkin dönemde (15-50 yaş) ÜSE kadınlarda erkeklere göre katbekat fazladır; erkeklerde bu yaş grubunda bakteriüri prevalansı %0.1'in altındadır ve oldukça nadirdir."
+  },
+  {
+    "id": "prac-use-009",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 9,
+    "slideTitle": "Semptomatik ÜSE'de Yaşa ve Cinsiyete Göre Epidemiyolojik Risk Faktörleri",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "28 yaşında sağlıklı bir erkek hasta idrarda yanma ve sık idrara çıkma şikayetleriyle başvuruyor. Yapılan idrar kültüründe 10^4 CFU/ml E. coli üremesi saptanıyor. Bu hastanın epidemiyolojik değerlendirmesinde hekimin öncelikle göz önünde bulundurması gereken temel prensip aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bu yaş grubundaki erkeklerde ÜSE çok sık görüldüğü için rutin 3 günlük tedavi verilip ileri tetkik yapılmamalıdır.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Genç erkeklerde ÜSE son derece nadir (<%0.1) olduğundan, altta yatan ürolojik anatomik/fonksiyonel bir anomali mutlaka araştırılmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Erkek hastalarda saptanan E. coli üremesi daima asemptomatik kabul edilmeli ve tedavi edilmemelidir.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bu yaş grubunda en sık etken Staphylococcus saprophyticus olduğu için kültür sonucu kontaminasyon kabul edilmelidir.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Erkeklerde idrar yolu enfeksiyonu gelişimi prostat kanserinin kesin öncül lezyonudur.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "15-50 yaş arası erkeklerde ÜSE prevalansı <%0.1 olup son derece nadirdir. Bu grupta gelişen bir enfeksiyon aksi ispatlanana kadar komplike kabul edilir ve altta yatan anatomik veya fonksiyonel üriner patoloji araştırılmalıdır."
+  },
+  {
+    "id": "prac-use-010",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 10,
+    "slideTitle": "ÜSE Etyolojisinde Mikrobiyal Spektrum ve Patojen Hiyerarşisi",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "21 yaşında üniversite öğrencisi kadın hasta, son 2 gündür devam eden ani başlangıçlı dizüri, sık idrara çıkma ve suprapubik rahatsızlık şikayetleriyle başvuruyor. Özgeçmişinde ek hastalık bulunmayan hastanın idrar kültüründe Gram-pozitif, koagülaz-negatif bir kok üremesi saptanıyor. Bu klinik tabloda E. coli'den sonra ikinci en olası etken olan bu mikroorganizma hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Staphylococcus aureus",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Streptococcus agalactiae",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Staphylococcus saprophyticus",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Enterococcus faecalis",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Staphylococcus epidermidis",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Genç ve cinsel aktif kadınlarda komplike olmayan akut sistitin E. coli'den sonra ikinci en sık etkeni (%5-10) novobiyosine dirençli, koagülaz-negatif Staphylococcus saprophyticus'tur."
+  },
+  {
+    "id": "prac-use-011",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 11,
+    "slideTitle": "Özel Popülasyonlarda ÜSE: Pediyatrik ve Geriyatrik Dinamikler",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "Çocukluk ve yaşlılık dönemindeki üriner sistem enfeksiyonu epidemiyolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yaşamın ilk 3 ayında erkek çocuklarda ÜSE görülme sıklığı kız çocuklarından fazladır.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Prepubertal dönemde kız çocuklarında ÜSE insidansı erkek çocukların yaklaşık üç katıdır.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Huzurevlerinde kalan yaşlı bireylerde asemptomatik bakteriüri oranı %30-50 düzeylerine ulaşabilir.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Yaşlılarda asemptomatik bakteriüri saptanan her hastaya böbrek fonksiyonlarını korumak için profilaktik antibiyotik başlanmalıdır.",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Yaşlı erkeklerde Proteus türlerinin etken olduğu enfeksiyonlar sıklıkla böbrek taşları ile ilişkilidir.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Yaşlılarda ve kurumsal bakım alanlarda ASB prevalansı çok yüksek olmasına karşın semptom veya mukozal kanamalı cerrahi endikasyonu yoksa antibiyotik verilmesi önerilmez; gereksiz tedavi dirençli patojenleri selekte eder."
+  },
+  {
+    "id": "prac-use-012",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 12,
+    "slideTitle": "Hamile Kadınlarda Üriner Sistem Enfeksiyonları",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "14 haftalık gebe bir kadının rutin ilk trimester kontrolünde alınan idrar kültüründe 10^5 CFU/ml E. coli üremesi saptanıyor. Hastanın hiçbir klinik şikayeti bulunmamaktadır. Bu klinik durum ve yönetimi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hastada dizüri ve ateş olmadığı için antibiyotik tedavisi verilmemeli, doğum sonrasına ertelenmelidir.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Gebelikte ASB tedavi edilmezse olguların %20-40'ında 2. ve 3. trimesterde akut piyelonefrit ve preterm doğum riski oluşur; derhal tedavi edilmelidir.",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Gebelikte hidronefroz oluşumu patolojik kabul edilmeli ve derhal cerrahi nefrostomi açılmalıdır.",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bu hastada en olası etken Chlamydia trachomatis olup standart antibiyotiklere yanıtsızdır.",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Asemptomatik gebelerde bakteriüri saptanması bebeğin tahliyesi (terapötik abortus) için mutlak endikasyondur.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Gebelerde ASB asemptomatik kalsa dahi hormonal staz nedeniyle %20-40 oranında akut piyelonefrit, erken doğum ve düşük doğum ağırlığına yol açar. Bu nedenle gebelerde ASB mutlak tedavi endikasyonudur."
+  },
+  {
+    "id": "prac-use-013",
+    "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
+    "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Diyabet ve HIV/İmmünsüpresyon Zemininde Gelişen Ağır Üriner Enfeksiyonlar",
+    "discipline": "Üroloji",
+    "committee": "Kurul 1",
+    "question": "58 yaşında kontrolsüz Tip 2 diyabet ve diyabetik nöropati öyküsü olan kadın hasta, yan ağrısı ve yüksek ateşle acile başvuruyor. Çekilen direkt üriner sistem grafisinde ve BT'de renal parankimde gaz kabarcıkları saptanıyor. Bu hastanın etyolojik ve klinik özellikleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Diyabetik hastalarda Klebsiella kaynaklı piyelonefrit sıklığı diyabetik olmayanlara göre yaklaşık iki kat daha fazladır.",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Görüntülemede gaz saptanması gaz oluşturan basillere bağlı gelişen amfizematöz piyelonefrit tablosudur.",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Diyabetik kadınlarda ASB sıklığı genel popülasyona göre belirgin olarak artmıştır (%26'ya %6).",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Diyabetik hastalarda otonom nöropatiye bağlı rezidü idrar kalması enfeksiyon patogenezinde rol oynamaz.",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "Glukozüri ve bozulmuş lökosit kemotaksisi bakteriyel üremeyi hızlandıran temel faktörlerdendir.",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Otonom nöropati mesanede tam boşalamamaya ve yüksek post-voiding rezidüel idrara yol açarak enfeksiyon patogenezinde kritik bir rol oynar. Bu nedenle D seçeneğindeki ifade kesinlikle yanlıştır."
+  },
+  {
     "id": "prac-use-014",
     "deckId": "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
     "deckTitle": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
@@ -1187,157 +2378,5 @@
     ],
     "correctAnswer": 1,
     "explanation": "B seçeneği doğrudur; antibiyotik (özellikle sentetik penisilinler, sefalosporinler) veya NSAİİ kullanımı sonrası gelişen ateş, döküntü, akut böbrek yetmezliği, periferik eozinofili ve idrarda eozinofilüri tablosu ilaca bağlı akut alerjik interstisyel nefrit için klasiktir. İlaç kesildiğinde renal fonksiyonlar hızla toparlar."
-  },
-  {
-    "id": "prac-k1m-017",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 17,
-    "slideTitle": "Böbrek ve Mesane Neoplazileri",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "61 yaşında erkek hasta sol yan ağrısı ve halsizlik şikayetleriyle başvuruyor. Yapılan tetkiklerde sol böbrek üst polde 6 cm çapında hipervasküler solid kitle ve sol renal ven içinde lümene uzanan trombüs saptanıyor. Laboratuvarda hemoglobin düzeyi 18.8 g/dL (polisitemi) bulunuyor. Biyopsi materyalinde bol glikojen ve lipit içeren berrak sitoplazmalı hücre adaları izleniyor. Bu tümörün moleküler patogenezinde en olası genetik defekt aşağıdakilerden hangisidir?",
-    "options": [
-      "A) 11p13 kromozomunda WT1 gen mutasyonu",
-      "B) 3p kromozomunda VHL gen delesyonu veya mutasyonu",
-      "C) RET proto-onkogen aktivasyonu",
-      "D) APC tümör baskılayıcı gen inaktivasyonu",
-      "E) FGFR3 tirozin kinaz mutasyonu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; vaka tipik bir Berrak Hücreli Renal Hücreli Karsinom (Clear Cell RCC)'dur. Renal ven invazyonu, eritropoietin salınımına bağlı polisitemi ve berrak sitoplazmalı hücreler patognomoniktir. Berrak hücreli RCC'lerin >%90'ında 3p delesyonu ve VHL tümör baskılayıcı geninin inaktivasyonu mevcuttur. WT1 Wilms tümöründe, RET MEN2'de, APC kolon kanserinde izlenir."
-  },
-  {
-    "id": "prac-k1m-018",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 18,
-    "slideTitle": "Kadın Genital Sistemi ve Meme Patolojisi",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Postmenopozal dönemde vajinal kanama şikayetiyle başvuran 58 yaşındaki bir kadının overinde 7 cm boyutunda solid-kistik kitle tespit ediliyor. Yapılan endometrial biyopside atipisiz endometrial hiperplazi izleniyor. Overdeki kitlenin histopatolojik incelemesinde eozinofilik sıvı içeren mikrofoliküler yapılar etrafında kahve çekirdeği yarıklı nükleusa sahip hücreler ve karakteristik Call-Exner cisimcikleri saptanıyor. Bu over tümörü aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Disgerminom",
-      "B) Matür kistik teratom",
-      "C) Granüloza hücreli tümör",
-      "D) Seröz kistadenokarsinom",
-      "E) Krukkenberg tümörü"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; Granüloza hücreli tümör, overin en sık cinsiyet kordon-stroma tümörüdür. Yüksek miktarda östrojen salgılar; bu östrojen endometriyumu aşırı uyararak postmenopozal kanama ve endometrial hiperplazi/karsinoma yol açar. Mikroskopide 'kahve çekirdeği' (coffee-bean) nükleus yarığı ve bez benzeri 'Call-Exner cisimcikleri' patognomoniktir."
-  },
-  {
-    "id": "prac-k1m-019",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 19,
-    "slideTitle": "Erkek Genital Sistemi Patolojisi ve Ürolojik Obstrüksiyon",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Tekrarlayan idrar yolu enfeksiyonu öyküsü olan 44 yaşındaki bir kadın hastanın yapılan idrar tahlilinde idrar pH'sı 8.0 (belirgin alkali) ve idrar kültüründe bol miktarda Proteus mirabilis ürüyor. Direkt üriner sistem grafisinde (DÜSG) sağ böbrek toplayıcı sisteminin tamamını kaliksler boyunca dolduran dallanmış radyoopak bir kalkül ('geyik boynuzu / staghorn kalkül') izleniyor. Bu hastadaki böbrek taşının en olası kimyasal bileşimi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Kalsiyum okzalat monohidrat",
-      "B) Saf ürik asit",
-      "C) Magnezyum amonyum fosfat (Struvit)",
-      "D) Sistin",
-      "E) Ksantin"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; Proteus mirabilis salgıladığı güçlü üreaz enzimi ile idrar üresini amonyak ve karbondioksite parçalayarak idrar pH'sını alkaliye (>7.2) yükseltir. Bu ortam magnezyum, amonyum ve fosfat iyonlarının hızla çökmesine ve tüm renal kaliksleri dolduran geyik boynuzu (staghorn) görünümlü struvit taşlarının oluşmasına zemin hazırlar. Ürik asit taşları ise asit idrarda oluşur ve radyolüsenttir."
-  },
-  {
-    "id": "prac-k1m-020",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 20,
-    "slideTitle": "Üriner Sistem ve Genital Enfeksiyonlar: Mikrobiyoloji ve Klinik",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Şüpheli cinsel ilişkiden 4 gün sonra peniste şiddetli yanma ve yoğun sarı-yeşil pürülan üretral akıntı şikayetiyle başvuran 23 yaşındaki bir erkek hastanın üretral akıntı yaymasında çok sayıda polimorfonükleer lökosit ve bu lökositlerin sitoplazması İÇİNDE çiftler halinde kahve çekirdeği şeklinde Gram-negatif diplokoklar saptanıyor. Bu hastadaki klinik tablo ve en olası etken aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Non-gonokoksik üretrit — Chlamydia trachomatis",
-      "B) Gonokoksik üretrit — Neisseria gonorrhoeae",
-      "C) Primer şankr — Treponema pallidum",
-      "D) Üretral trikomoniyazis — Trichomonas vaginalis",
-      "E) Genital herpes — Herpes Simplex Tip 2"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; kısa inkübasyon süresi (2-7 gün), bol pürülan üretral akıntı ve lökosit içi Gram-negatif kahve çekirdeği diplokokların görülmesi Neisseria gonorrhoeae'ya bağlı Gonokoksik Üretrit için patognomoniktir. Chlamydia trachomatis ise non-gonokoksik üretrit yapar; akıntı serözdür ve hücre içi diplokok görülmez."
-  },
-  {
-    "id": "prac-k1m-021",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 21,
-    "slideTitle": "Spesifik Ürogenital Enfeksiyonlar, Sifilis ve İntrauterin Enfeksiyonlar",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "34 yaşında bir kadın hasta 6 aydır devam eden, ampirik siprofloksasin ve fosfomisin tedavilerine yanıt vermeyen idrar yaparken yanma, sık idrara çıkma ve aralıklı mikroskopik hematüri yakınmalarıyla başvuruyor. Tam idrar tahlilinde idrar pH'sı 5.2 (asit), lökosit esteraz pozitif ve mikroskopide her sahada 25-30 lökosit görülüyor. Ancak hastanın ardışık üç kez yapılan rutin bakteriyolojik idrar kültüründe hiçbir mikroorganizma üremiyor ('steril piyüri'). Bu hasta için en olası ön tanı ve tanıyı kesinleştirmek için ilk istenmesi gereken tetkik aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut sistit — Tekrarlayan idrar kültürü",
-      "B) Genitoüriner tüberküloz — Sabah ilk idrarda Ziehl-Neelsen boyası ile ARB ve mikobakteri kültürü/PCR",
-      "C) İnterstisyel sistit — Mesane biyopsisi",
-      "D) Üriner şistozomiyazis — Dışkıda parazit yumurtası araması",
-      "E) Akut gonokoksik üretrit — Çikolata agarda kültür"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; antibiyotik tedavisine yanıtsız kronik sistit semptomları, asit idrarda bol lökosit bulunması ancak rutin kültürlerde üreme olmaması klasik 'Steril Piyüri' tablosudur ve bu tablonun bir numaralı spesifik nedeni Genitoüriner Tüberkülozdur. Kesin tanı sabah ilk idrarda Ziehl-Neelsen boyası ile ARB bakılması ve Lowenstein-Jensen besiyerinde kültür veya tüberküloz PCR ile konur."
-  },
-  {
-    "id": "prac-k1m-022",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 22,
-    "slideTitle": "Tıbbi Genetik: Dismorfoloji, Kromozomal Aberasyonlar ve Prenatal/Preimplantasyon Tanı",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Bilateral renal agenezi nedeniyle amniyon sıvısı üretemeyen ve şiddetli oligohidramniyoz gelişen bir fetüste intrauterin mekanik basıya bağlı olarak basık burun, basık kulaklar ve bilateral pes ekinovarus (çomak ayak) geliştiği saptanıyor. Bu klinik durumda ekstremitelerde gözlenen morfolojik defekt tipi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Malformasyon",
-      "B) Deformasyon",
-      "C) Disrupsiyon",
-      "D) Displazi",
-      "E) Agenezi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur; başlangıçta genetik ve intrensek olarak normal gelişen fetal yapıların uterus içi mekanik ve fiziksel bası güçleri (oligohidramniyoz, mekanik sıkışma) sonucu şekil bozukluğuna uğraması 'Deformasyon' olarak tanımlanır (Potter sekansı deformasyon tablosudur). Malformasyon intrensek gelişim hatasıdır; disrupsiyon ekstrinsik doku yıkımıdır."
-  },
-  {
-    "id": "prac-k1m-023",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 23,
-    "slideTitle": "Tıbbi Farmakoloji ve İmmünofarmakoloji",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Böbrek allograft transplantasyonu yapılan 42 yaşındaki bir hastada rejeksiyon profilaksisi amacıyla sitoplazmik FKBP-12 immünofiline bağlanarak Kalsinörin fosfataz aktivitesini inhibe eden, bu yolla NFAT nükleer translokasyonunu ve T lenfositlerden İnterlökin-2 (IL-2) sentezini bloke eden immünsüpresif ilaç aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Mikofenolat mofetil",
-      "B) Sirolimus (Rapamisin)",
-      "C) Takrolimus (FK506)",
-      "D) Azatioprin",
-      "E) Metotreksat"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; Takrolimus (FK506), FKBP-12 proteinine bağlanarak Kalsinörin fosfataz enzimini inhibe eden ve böylece NFAT aktivasyonunu engelleyip IL-2 transkripsiyonunu durduran güçlü bir kalsinörin inhibitörüdür. Siklosporin ise siklofiline bağlanarak kalsinörini inhibe eder. Sirolimus FKBP-12'ye bağlanır ancak kalsinörini değil mTOR'u inhibe eder. MMF IMPDH enzimini, Azatioprin pürin sentezini bozar."
-  },
-  {
-    "id": "prac-k1m-024",
-    "deckId": "learn-donem3-kurul1-mufredat-rehberi",
-    "deckTitle": "Dönem 3 Kurul 1: Müfredat Haritası, Komite Konuları, Hoca Vurguları ve Sınav Stratejileri",
-    "slideNumber": 24,
-    "slideTitle": "Halk Sağlığı, Epidemiyoloji ve Sağlık Yönetimi",
-    "discipline": "Kurul Koordinatörlüğü",
-    "committee": "Kurul 1",
-    "question": "Bir aile hekiminin polikliniğine başvuran 45 yaşındaki asemptomatik bir kadına serviks kanseri erken tanısı amacıyla Pap-smear testi uygulaması ve meme kanseri taraması için KETEM'e mamografi randevusu vermesi, halk sağlığı epidemiyolojisinde hangi korunma düzeyi kapsamında yer alır?",
-    "options": [
-      "A) Primordial korunma",
-      "B) Primer (birincil) korunma",
-      "C) Sekonder (ikincil) korunma",
-      "D) Tersiyer (üçüncül) korunma",
-      "E) Kuarterner (dördüncül) korunma"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; hastalık henüz klinik semptom vermemişken prekanseröz veya erken evrede tarama testleri (Pap-smear, mamografi, kolonoskopi, gaitada gizli kan, fenilketonüri taraması) ile saptanarak tedavi edilmesi 'Sekonder (İkincil) Korunma'dır. Primer korunma hastalığın ortaya çıkmasını önlemektir (aşılama gibi). Tersiyer korunma ise komplikasyonları ve sakatlığı önlemek (rehabilitasyon) içindir."
   }
 ]

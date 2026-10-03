@@ -1,6 +1,6 @@
 {
-  "totalQuestions": 1159,
-  "totalChunks": 12,
+  "totalQuestions": 1208,
+  "totalChunks": 13,
   "updatedAt": "2026-10-03",
   "description": "Öğren sayfasındaki ders içeriklerinden üretilmiş özgün çalışma ve pekiştirme soruları veritabanı (çıkmış sorulardan bağımsızdır).",
   "chunks": [
@@ -39,7 +39,7 @@
         "Halk Sağlığı",
         "Enfeksiyon Hastalıkları",
         "Tıbbi Genetik",
-        "Tıbbi Patoloji"
+        "Tıp"
       ]
     },
     {
@@ -51,14 +51,13 @@
         "learn-hucresel-adaptasyon-ve-hu",
         "learn-hucresel-yaslanma-ve-hucr",
         "learn-izolasyon-yontemleri",
-        "learn-kromozomal-hastaliklar-ve",
-        "deck-acute-inflammation-pathology"
+        "learn-kromozomal-hastaliklar-ve"
       ],
       "disciplines": [
+        "Tıp",
         "Tıbbi Patoloji",
         "Enfeksiyon Hastalıkları",
-        "Tıbbi Genetik",
-        "Tıp"
+        "Tıbbi Genetik"
       ]
     },
     {
@@ -66,13 +65,14 @@
       "filename": "chunk_4.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-kromozomal-hastaliklar-ve",
         "deck-acute-inflammation-pathology",
         "learn-kronik-enflamasyon",
         "learn-intraseluler-birikimler",
-        "learn-enfeksiyon-izolasyon",
-        "learn-patolojiye-giris"
+        "learn-enfeksiyon-izolasyon"
       ],
       "disciplines": [
+        "Tıbbi Genetik",
         "Tıp",
         "Tıbbi Patoloji",
         "Enfeksiyon Hastalıkları"
@@ -83,15 +83,17 @@
       "filename": "chunk_5.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-enfeksiyon-izolasyon",
         "learn-patolojiye-giris",
         "learn-genital-enfeksiyonlar",
         "learn-dogumsal-genital-anomaliler",
-        "learn-doku-onarimi-yara-iyilesmesi",
-        "learn-prenatal-tani"
+        "learn-doku-onarimi-yara-iyilesmesi"
       ],
       "disciplines": [
+        "Enfeksiyon Hastalıkları",
         "Tıbbi Patoloji",
-        "Tıbbi Genetik"
+        "Tıbbi Genetik",
+        "Tıp"
       ]
     },
     {
@@ -99,13 +101,14 @@
       "filename": "chunk_6.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-doku-onarimi-yara-iyilesmesi",
         "learn-prenatal-tani",
         "learn-glomeruler-hastaliklar-nefrotik",
         "learn-glomeruler-hastaliklar-nefritik",
-        "learn-tubulointerstisyel-hastaliklar",
-        "learn-vaskuler-kistik-bobrek-hastaliklari"
+        "learn-tubulointerstisyel-hastaliklar"
       ],
       "disciplines": [
+        "Tıp",
         "Tıbbi Genetik",
         "Tıbbi Patoloji"
       ]
@@ -115,10 +118,11 @@
       "filename": "chunk_7.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-tubulointerstisyel-hastaliklar",
+        "learn-vaskuler-kistik-bobrek-hastaliklari",
         "learn-bobrek-tumorleri",
         "learn-mesane-hastaliklari-tumorleri",
-        "learn-tumor-biyolojisi-terminolojisi",
-        "learn-enflamasyon-kimyasal-mediyatorleri"
+        "learn-tumor-biyolojisi-terminolojisi"
       ],
       "disciplines": [
         "Tıbbi Patoloji"
@@ -129,11 +133,10 @@
       "filename": "chunk_8.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-tumor-biyolojisi-terminolojisi",
         "learn-enflamasyon-kimyasal-mediyatorleri",
         "learn-asiri-duyarlilik-ve-otoimmunite",
-        "learn-genetik-pediatrik-cevresel-patoloji",
-        "learn-tromboz-patofizyolojisi-tam",
-        "learn-iskemi-infarktus-ve-sok"
+        "learn-genetik-pediatrik-cevresel-patoloji"
       ],
       "disciplines": [
         "Tıbbi Patoloji",
@@ -145,14 +148,15 @@
       "filename": "chunk_9.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-genetik-pediatrik-cevresel-patoloji",
+        "learn-tromboz-patofizyolojisi-tam",
         "learn-iskemi-infarktus-ve-sok",
         "learn-kronik-ve-granulamatoz-enflamasyon",
-        "learn-karsinojenezin-molekuler-temeli",
-        "learn-ileri-tumor-genetigi-metabolizmasi",
-        "learn-tumor-immunolojisi-metastaz"
+        "learn-karsinojenezin-molekuler-temeli"
       ],
       "disciplines": [
-        "Tıbbi Patoloji"
+        "Tıbbi Patoloji",
+        "Tıp"
       ]
     },
     {
@@ -160,16 +164,14 @@
       "filename": "chunk_10.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-karsinojenezin-molekuler-temeli",
+        "learn-ileri-tumor-genetigi-metabolizmasi",
         "learn-tumor-immunolojisi-metastaz",
         "learn-tumor-evreleme-lab-tanisi",
-        "learn-sistemik-hastaliklar-bobrek-hasari",
-        "learn-urogenital-tumorlerde-genetik",
-        "learn-bebek-beslenmesi"
+        "learn-sistemik-hastaliklar-bobrek-hasari"
       ],
       "disciplines": [
-        "Tıbbi Patoloji",
-        "Tıbbi Genetik",
-        "Halk Sağlığı"
+        "Tıbbi Patoloji"
       ]
     },
     {
@@ -177,29 +179,45 @@
       "filename": "chunk_11.json",
       "questionCount": 100,
       "decksCovered": [
+        "learn-sistemik-hastaliklar-bobrek-hasari",
+        "learn-urogenital-tumorlerde-genetik",
         "learn-bebek-beslenmesi",
         "learn-enfeksiyon-temel-kavramlar",
-        "learn-enfeksiyon-epidemiyoloji",
-        "learn-halk-sagligi-tarihcesi-ve",
-        "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji"
+        "learn-enfeksiyon-epidemiyoloji"
       ],
       "disciplines": [
+        "Tıbbi Patoloji",
+        "Tıbbi Genetik",
         "Halk Sağlığı",
-        "Enfeksiyon Hastalıkları",
-        "Üroloji"
+        "Enfeksiyon Hastalıkları"
       ]
     },
     {
       "chunkId": "chunk_12",
       "filename": "chunk_12.json",
-      "questionCount": 59,
+      "questionCount": 100,
       "decksCovered": [
+        "learn-enfeksiyon-epidemiyoloji",
+        "learn-halk-sagligi-tarihcesi-ve",
         "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
         "learn-uriner-sistemin-spesifik-enfeksiyonlari",
         "learn-donem3-kurul1-mufredat-rehberi"
       ],
       "disciplines": [
+        "Enfeksiyon Hastalıkları",
+        "Halk Sağlığı",
         "Üroloji",
+        "Kurul Koordinatörlüğü"
+      ]
+    },
+    {
+      "chunkId": "chunk_13",
+      "filename": "chunk_13.json",
+      "questionCount": 8,
+      "decksCovered": [
+        "learn-donem3-kurul1-mufredat-rehberi"
+      ],
+      "disciplines": [
         "Kurul Koordinatörlüğü"
       ]
     }

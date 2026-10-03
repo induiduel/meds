@@ -3254,393 +3254,193 @@
     "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede,\nbeklenen/alışılmış (bazal) sıklığının belirgin şekilde üzerinde\ngörülmesidir. Endemi bir bölgede sürekli ve alışılmış düzeyde görülmeyi,\npandemi epideminin çok geniş coğrafi alanlara (kıtalar arası)\nyayılmasını, sporadik ise ara sıra tek tük olgular halinde görülmeyi ifade\neder."
   },
   {
-    "id": "d3-k1-enf-001-190",
+    "id": "prac-hucre-001",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 1,
-    "slideTitle": "Hücre Hasarı Kavramı ve Homeostazın Bozulması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Epidemi (salgın) kavramının doğru tanımı aşağıdakilerden hangisidir?",
+    "slideTitle": "Hücresel Homeostaz, Stres ve Hasar Spektrumu",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hücrenin fizyolojik homeostazı, strese adaptasyonu ve hücre hasarı arasındaki patofizyolojik ilişki değerlendirildiğinde, aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Bir hastalığın bir toplulukta alışılmış sıklıkta görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Bir hastalığın bir toplulukta alışılmış seyrinden daha fazla görülmesi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Bir hastalığın bir toplulukta düşük oranda görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bir hastalığın bir toplulukta hiç görülmemesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bir hastalığın bir toplulukta çok yüksek, sabit bir oranda sürekli görülmesi",
-        "isCorrect": false
-      }
+      "A) Hücre hasarı yalnızca genetik mutasyonlar sonucu meydana gelir, çevresel stresler doğrudan adaptasyona yol açar.",
+      "B) Zararlı bir etken hücrenin adaptif kapasitesini aştığında ya da hücre doğrudan hasarlayıcı bir etkenle karşılaştığında hücre hasarı başlar.",
+      "C) Reversibl hücre hasarı evresinde plazma membran bütünlüğü kalıcı olarak parçalanır ve çevre dokuda yoğun lökosit infiltrasyonu gelişir.",
+      "D) Apoptoz, hücre zarının parçalanması ve hücre içeriğinin dokuya dökülmesiyle karakterize kontrolsüz bir kaza sonucu ölümdür.",
+      "E) İrreversibl hücre hasarı geliştikten sonra zararlı etken ortamdan uzaklaştırılsa dahi hücre eski sağlıklı yapısına ve işlevine tam olarak geri dönebilir."
     ],
-    "correctAnswer": "B",
-    "explanation": "Epidemi (salgın), bir hastalığın veya sağlıkla ilgili olayın belirli bir bölgede beklenen yani alışılmış düzeyin belirgin şekilde üzerinde görülmesidir; tanım mutlak bir olgu sayısına değil, hastalığın kendi normal düzeyine göre gösterdiği artışa dayanır. Bu nedenle doğru yanıt B seçeneğidir. A seçeneği hastalığın toplulukta alışılmış sıklıkta görülmesini tanımlar ve bu endemi kavramıdır. C seçeneğindeki düşük oranda görülme ile D seçeneğindeki hiç görülmeme, beklenenin altında kalma ya da hastalığın yokluğu durumunu anlatır ve epidemi tanımıyla çelişir. E seçeneği ise hastalığın yüksek fakat sabit bir oranda sürekli görülmesini ifade eder; süreklilik ve sabitlik endemi ile ilişkilidir, epidemi ise beklenen düzeyin aşılmasını vurgular. Ayırt edici ipucu: endemi eşik değerdir, epidemi bu eşiğin aşılmasıdır, pandemi ise salgının kıtalar arası çok geniş alana yayılmasıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Hücreye uygulanan stres adaptif kapasiteyi aştığında ya da toksin gibi doğrudan öldürücü uyaranlar uygulandığında hücre hasarı başlar. A seçeneği yanlıştır; hücre hasarı hipoksi, iskemi, enfeksiyon, toksinler gibi sayısız çevresel etkenle gelişir. C seçeneği yanlıştır; reversibl hasarda plazma zarı bütünlüğü korunur, zar parçalanması ve yangı nekrozun (irreversibl) özelliğidir. D seçeneği yanlıştır; apoptoz programlı, zarın korunduğu ve yangı oluşturmayan ölümdür. E seçeneği yanlıştır; irreversibl hasara geçen bir hücre uyaran kalksa bile canlılığını kurtaramaz ve ölür."
   },
   {
-    "id": "d3-k1-pat-001-191",
+    "id": "prac-hucre-002",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 2,
-    "slideTitle": "Stres ve Zararlı Uyaranlara Hücresel Yanıt Aşamaları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
+    "slideTitle": "Hücre Hasarının Başlıca Nedenleri ve Etyolojik Sınıflama",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hücre hasarına yol açan etyolojik etkenler ve bunların hücresel etki mekanizmaları ile ilgili aşağıdaki eşleştirmelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "NAPQI (N-asetil-p-benzokinonimin)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Asetaldehit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Etanol",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Salisilat",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Morfin",
-        "isCorrect": false
-      }
+      "A) İskemi — Dokuda arteriyel kan akımının kesilmesi sonucu hem oksijenin hem de besin maddelerinin eş zamanlı tükenmesi",
+      "B) İmmünolojik reaksiyonlar — Vücudun kendi doku antijenlerine karşı otoantikor üretmesi sonucu hücre zarlarının tahrip olması",
+      "C) Karbonmonoksit zehirlenmesi — Dokunun arteriyel kan akımının tamamen kesilmesiyle karakterize saf mekanik vasküler tıkanma",
+      "D) Cıva klorür intoksikasyonu — Hücre membran proteinlerindeki sülfhidril gruplarına bağlanarak doğrudan hücresel toksisite gelişimi",
+      "E) İyonize radyasyon — Su moleküllerinin radyolizi ile son derece reaktif hidroksil serbest radikallerinin üretilmesi ve DNA zincir kırıkları"
     ],
-    "correctAnswer": "A",
-    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Karbonmonoksit (CO) zehirlenmesi mekanik bir arteriyel tıkanma (iskemi) değildir; kan akımı korunmuştur ancak CO'nun hemoglobine oksijenden 200 kat daha yüksek afiniteyle bağlanması sonucu kanın oksijen taşıma kapasitesi düşer ve anemik hipoksi gelişir. A, B, D ve E seçeneklerindeki patofizyolojik mekanizmalar tamamen doğrudur."
   },
   {
-    "id": "d3-k1-pat-037",
+    "id": "prac-hucre-003",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 3,
-    "slideTitle": "Hücre Hasarının Başlıca Nedenleri: Hipoksi ve İskemi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Aşağıdaki organ/organlardan hangisinde/hangilerinde tipik olarak beyaz (anemik/iskemik) infarktüs görülür? I- Kalp II- Dalak III- Böbrek IV- Akciğer",
+    "slideTitle": "Hipoksi ve İskemi: Tanımlar ve Kritik Patofizyolojik Fark",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "62 yaşındaki bir erkek hasta akut mezenter arter trombozu nedeniyle acil cerrahiye alınıyor. İntraoperatif incelemede ince bağırsak anslarının nekroze olduğu izleniyor. Bu hastadaki iskemik hasarın, KOAH alevlenmesine bağlı saf hipoksik bir hastadaki bağırsak hasarına kıyasla ÇOK DAHA HIZLI VE AĞIR nekroza yol açmasının temel patofizyolojik nedeni aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yalnız I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yalnız I ve III",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Yalnız II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız IV",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
+      "A) İskemide glukoz desteğinin kesilmesi ve laktik asit gibi metabolitlerin dokudan uzaklaştırılamaması",
+      "B) İskemik dokuda süperoksit dismutaz enziminin aşırı miktarda sentezlenerek hücreyi patlatması",
+      "C) Hipokside hücre içi kalsiyum derişiminin sıfıra inmesi sonucu hücrenin büzüşüp korunması",
+      "D) Saf hipokside protein sentezinin iskemiden daha hızlı durarak enerji tasarrufu sağlaması",
+      "E) İskemide hücresel mitokondri membran potansiyelinin aşırı hiperpolarize olması"
     ],
-    "correctAnswer": "A",
-    "explanation": "Beyaz (anemik) infarktüs, tek (uç) arteriyel kan akımına sahip, yoğun/kompakt dokulu solid organlarda (kalp, dalak, böbrek gibi) görülür; burada nekrotik alana kanama sınırlıdır. Kırmızı (hemorajik) infarktüs ise venöz oklüzyonlarda, gevşek/süngerimsi dokularda, çift kanlanması olan organlarda (akciğer gibi) veya önceden staz olan dokularda görülür; akciğer, hem bronşiyal hem pulmoner arter dolaşımına sahip olduğu ve gevşek dokulu olduğu için tipik olarak kırmızı infarktüs geçirir, beyaz değil."
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. İskemide perfüzyon tamamen durduğu için dokuya hem oksijen hem de anaerobik glikoliz için zorunlu olan ekstrasellüler glukoz gelişi kesilir. Ayrıca anaerobik solunumla üretilen laktik asit kanda taşınamadığından hücre içinde birikir ve ağır asidoz yaparak enzimleri çökertir. Saf hipokside ise perfüzyon sürdüğü için glukoz sağlanmaya ve laktat temizlenmeye devam eder. B, C, D ve E seçenekleri biyolojik gerçeklerle çelişir."
   },
   {
-    "id": "d3-k1-pat-001-193",
+    "id": "prac-hucre-004",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 4,
-    "slideTitle": "Toksinler, Kimyasallar ve Çevresel Hasar Faktörleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
+    "slideTitle": "Kimyasal Toksinler ve Çevresel Etkenlerle Hücre Hasarı",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kuru temizleme atölyesinde çalışan bir işçi, yüksek konsantrasyonda karbontetraklorür (CCl4) buharına maruz kaldıktan sonra akut karaciğer yetmezliği tablosuyla hastaneye kaldırılıyor. Yapılan biyopside karaciğerde sentrilobüler bölgede yaygın lipid birikimi ve nekroz saptanıyor. Bu patolojik tablonun gelişimindeki temel biyokimyasal mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "NAPQI (N-asetil-p-benzokinonimin)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Asetaldehit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Etanol",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Salisilat",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Morfin",
-        "isCorrect": false
-      }
+      "A) CCl4'ün doğrudan nükleer membrana bağlanarak histon asetilasyonunu inhibe etmesi",
+      "B) CCl4'ün hepatosit düz ER'sinde sitokrom P450 ile CCl3• serbest radikaline dönüşüp lipid peroksidasyonunu başlatması",
+      "C) CCl4'ün lizozomal asit fosfatazı uyararak hücre içi proteinlerin aşırı fosforillenmesine yol açması",
+      "D) CCl4'ün hücre dışı kalsiyumu bağlayarak sitoplazmik kalsiyum düzeyini sıfıra indirmesi",
+      "E) CCl4'ün mitokondride elektron transport zincirinde kompleks II'yi aşırı aktive ederek ATP fazlalığı oluşturması"
     ],
-    "correctAnswer": "A",
-    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Karbontetraklorür toksisitesi klasik bir indirekt toksisite modelidir. CCl4, karaciğer düz endoplazmik retikulumundaki sitokrom P450 (özellikle CYP2E1) enzimi tarafından CCl3• serbest radikaline metabolize edilir. Bu radikal doymamış membran yağ asitlerine saldırarak otokatalitik lipid peroksidasyonunu tetikler, ER membranlarını parçalar, apolipoprotein sentezini durdurup yağlanmaya ve nihayetinde hücresel nekroza yol açar. Diğer şıklar mekanizma ile uyuşmaz."
   },
   {
-    "id": "d3-k1-pat-013",
+    "id": "prac-hucre-005",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 5,
-    "slideTitle": "Enfeksiyöz, İmmünolojik, Genetik ve Beslenme Dengesizlikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Birçok dokuda tıkayıcı damarsal hastalık ve yoğun fibrozis ile karakterli, maske yüz ve elde pençe görünümüne neden olan immünolojik bozukluk hangisidir?",
+    "slideTitle": "Hücre Hasarında Genel Prensipler ve Hücresel Duyarlılık",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Tam kardiyak arrest (dolaşım durması) geçiren bir hastada başarılı resüsitasyon sağlanana kadar geçen sürede farklı organ ve dokuların iskemik hasara duyarlılıkları karşılaştırıldığında, hücresel canlılığını EN KISA SÜREDE kaybeden ve İLK OLARAK irreversibl nekroza giden hücre grubu aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "SLE",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Skleroderma (Sistemik Skleroz)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Mikst Bağ Dokusu Hastalığı",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Poliarteritis Nodosa (PAN)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "IgG4 ilişkili hastalık",
-        "isCorrect": false
-      }
+      "A) Kalp ventrikül miyositleri",
+      "B) İskelet kası lifleri",
+      "C) Serebral korteks nöronları",
+      "D) Cilt dermisindeki fibroblastlar",
+      "E) Renal toplayıcı kanal epitel hücreleri"
     ],
-    "correctAnswer": "B",
-    "explanation": "Sistemik skleroz (skleroderma), aşırı kollajen birikimi ve fibrozis, küçük damarlarda obliteratif vaskülopati ve otoimmün fenomenlerle karakterize bir hastalıktır. Derinin ilerleyici sertleşmesi yüzde maske görünümüne (mimik kaybı, ince burun), ellerde ise kontraktürlere bağlı pençe eli görünümüne yol açar. Raynaud fenomeni, özofagus dismotilitesi ve pulmoner fibrozis de sık eşlik eden bulgulardır."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Farklı hücre tiplerinin iskemiye dirençleri büyük değişkenlik gösterir. Serebral korteks nöronları yüksek metabolik hızları ve glikojen rezervlerinin olmaması nedeniyle tam iskemiye yalnızca 3 ila 5 dakika dayanabilir ve en erken ölen hücrelerdir. Miyositler 20-30 dakika, renal tübül hücreleri 30-60 dakika, iskelet kası ve fibroblastlar ise saatlerce canlı kalabilir."
   },
   {
-    "id": "d3-k1-pat-008",
+    "id": "prac-hucre-006",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 6,
-    "slideTitle": "Hücre Hasarında Genel Prensipler ve Duyarlılık Faktörleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Granülomatöz inflamasyon hangi tip aşırı duyarlılık reaksiyonu sonucu oluşur?",
+    "slideTitle": "Reversibl (Geri Dönüşümlü) Hücre Hasarının Tanımı ve Dinamiği",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Geri dönüşümlü (reversibl) hücre hasarı evresindeki bir hücrenin yapısal ve fonksiyonel özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Tip 1",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tip 2",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tip 3",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Geç tip (Tip 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "T hücre aracılı sitotoksisite",
-        "isCorrect": false
-      }
+      "A) Hücre membran bütünlüğü tamamen parçalanmış ve intrasellüler enzimler kana sızmıştır.",
+      "B) Zararlı etken ortadan kaldırıldığında iyon dengesizliği düzelir ve organeller normal yapısına dönebilir.",
+      "C) Çekirdekte irreversibl DNA parçalanmasına bağlı tipik karyolizis tablosu yerleşmiştir.",
+      "D) Hücrenin kasılma gibi özgül fonksiyonları morfolojik ölüm gerçekleştikten sonra kaybolur.",
+      "E) Lizozom zarları parçalanarak asit hidrolazlar sitoplazmada otolitik sindirimi tamamlamıştır."
     ],
-    "correctAnswer": "D",
-    "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Reversibl hücre hasarında hücrenin temel yapı taşları (mitokondri, çekirdek, plazma zarı) henüz onarılamaz bir hasara uğramamıştır; bu nedenle zararlı etken kalktığında hücre iyon dengesini sağlayarak eski sağlıklı durumuna döner. A, C ve E seçenekleri irreversibl nekrozun bulgularıdır. D seçeneği yanlıştır; fonksiyonel kayıp morfolojik ölümden saatler önce (dakikalar içinde) ortaya çıkar."
   },
   {
-    "id": "d3-k1-pat-006-196",
+    "id": "prac-hucre-007",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 7,
-    "slideTitle": "Hücresel Hasarın Temel Biyokimyasal ve Organel Hedefleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Hücrede ATP azalması sonucu ortaya çıkan durumlardan hangisi doğru değildir?",
+    "slideTitle": "Hücresel Şişme (Hidropik Değişim / Vakuoler Dejenerasyon): Mekanizma ve Işık Mikroskopisi",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hafif iskemik hasara maruz kalan bir karaciğer dokusunun ışık mikroskobik incelemesinde hepatositlerin hacimce büyüdüğü, sitoplazmalarında optik olarak boş, berrak mikro-vakuollerin oluştuğu izleniyor (hidropik değişim). Bu hücrelerde sitoplazmik vakuolizasyonun ve şişmenin ortaya çıkmasına yol açan İLK BİYOKİMYASAL KUSUR aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Hücre içine Ca++ girişi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hücre içine su girişi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hücre dışına Na+ çıkışı",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Hücre pH&apos;ının azalması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hücre içi glikojende azalma",
-        "isCorrect": false
-      }
+      "A) Lizozomal asit hidrolazların nükleer membranı eritmesi",
+      "B) Mitokondriyal ATP sentezinin azalması sonucu plazma membranı Na⁺/K⁺ ATPaz pompasının yetersiz kalması",
+      "C) Kaspaz-3 enziminin sitoskeletal aktin filamentlerini parçalaması",
+      "D) Doymamış yağ asitlerinin kontrolsüz otokatalitik peroksidasyona uğraması",
+      "E) Sitoplazmada apoferritin proteininin demirle aşırı doyması"
     ],
-    "correctAnswer": "C",
-    "explanation": "ATP azaldığında Na+/K+-ATPaz pompası çalışamaz hale gelir; bu da hücre içine Na+ ve suyun girmesine (hücresel şişme) ve hücre içinden K+ çıkışına neden olur; yani Na+ hücreden ÇIKMAZ, tam tersine hücre İÇİNE girer. Aynı zamanda Ca++-ATPaz&apos;ın bozulmasıyla hücre içi Ca++ artar, anaerobik glikoliz artışıyla glikojen tüketilir ve laktik asit birikimiyle hücre içi pH düşer. Dolayısıyla yanlış olan ifade &apos;hücre dışına Na+ çıkışı&apos; seçeneğidir."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Hücresel şişmenin ve hidropik değişimin temel patofizyolojik mekanizması, iskemide ATP üretiminin düşmesi sonucu membran Na⁺/K⁺ ATPaz pompasının iflas etmesidir. Pompa durunca hücre içine Na⁺ ve su girer; aşırı sıvı endoplazmik retikulum sisternalarını şişirerek ışık mikroskobunda berrak vakuoller (hidropik değişim) oluşturur. A, C ve D şıkları irreversibl hasar ve apoptoz/nekroz aşamalarıdır."
   },
   {
-    "id": "d3-k1-pat-006-197",
+    "id": "prac-hucre-008",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 8,
-    "slideTitle": "İskemik Hasar Patogenezi: ATP Çöküşü ve İyon Dengesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Hücrede ATP azalması sonucu ortaya çıkan durumlardan hangisi doğru değildir?",
+    "slideTitle": "Hücresel Şişmenin Makroskopik ve Ultrastrüktürel Bulguları",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Deneysel iskemi oluşturulmuş bir tavşan böbreğinde erken (reversibl) evrede alınan proksimal tübül hücrelerinin transmisyon elektron mikroskobu (TEM) incelemesinde aşağıdakilerden hangisinin görülmesi BEKLENMEZ?",
     "options": [
-      {
-        "key": "A",
-        "text": "Hücre içine Ca++ girişi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hücre içine su girişi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hücre dışına Na+ çıkışı",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Hücre pH&apos;ının azalması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hücre içi glikojende azalma",
-        "isCorrect": false
-      }
+      "A) Apikal lümene bakan mikrovillüslerin silinmesi ve küntleşmesi",
+      "B) Plazma membranında dışa doğru kabarcıklanmalar (blebbing) oluşması",
+      "C) Plazma zarı bütünlüğünün tamamen yırtılması ve hücresel içeriğin interstisyuma dökülmesi",
+      "D) Granüllü endoplazmik retikulumdan ribozomların ayrılması (detachment)",
+      "E) Hasarlanan membran fosfolipidlerinden köken alan konsantrik miyelin figürleri"
     ],
-    "correctAnswer": "C",
-    "explanation": "ATP azaldığında Na+/K+-ATPaz pompası çalışamaz hale gelir; bu da hücre içine Na+ ve suyun girmesine (hücresel şişme) ve hücre içinden K+ çıkışına neden olur; yani Na+ hücreden ÇIKMAZ, tam tersine hücre İÇİNE girer. Aynı zamanda Ca++-ATPaz&apos;ın bozulmasıyla hücre içi Ca++ artar, anaerobik glikoliz artışıyla glikojen tüketilir ve laktik asit birikimiyle hücre içi pH düşer. Dolayısıyla yanlış olan ifade &apos;hücre dışına Na+ çıkışı&apos; seçeneğidir."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Plazma zarı bütünlüğünün tamamen parçalanması, yırtılması ve hücre içeriğinin çevre dokuya dökülmesi 'irreversibl hasarın (nekroz)' kesin kanıtıdır; geri dönüşümlü hasarda plazma zarı blebler oluştursa dahi sürekliliğini ve bariyer fonksiyonunu korur. Mikrovillus kaybı, blebler, ribozomların ER'den ayrılması ve miyelin figürleri reversibl hasarın iyi bilinen ultrastrüktürel bulgularıdır."
   },
   {
-    "id": "d3-k3-pat-017",
+    "id": "prac-hucre-009",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 9,
-    "slideTitle": "Geri Dönüşümlü (Reversibl) Hücre Hasarı Tanımı ve Sınırları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "Alkolik ve non-alkolik karaciğer yağlanması (NAFLD/NASH) patolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "slideTitle": "Yağlı Değişim (Steatoz): Trigliserit Birikimi ve Organ Tutulumları",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Protein-kalori malnütrisyonu (Kwashiorkor) teşhisi konulan 4 yaşındaki bir çocuğun karaciğer iğne biyopsisinde hepatositlerin sitoplazmasında çekirdeği kenara iten geniş lipid vakuolleri (makroveziküler steatoz) saptanıyor. Bu klinik tabloda hepatik yağ birikimine yol açan ASIL PATOFİZYOLOJİK DEĞİŞİKLİK aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yağlı karaciğer spektrumunda steatoz, steatohepatit ve parankimal fibrozis/siroz olmak üzere üç ana basamak izlenir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "NASH patogenezinde insülin direnci, tip 2 diyabet, morbid obezite ve hipertrigliseridemi majör tetikleyicilerdir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Mallory-Denk cisimcikleri sitokeratin 8 ve 18 içeren eozinofilik yumaklar olup karaciğerde SADECE alkol tüketimine bağlı steatohepatitte karşımıza çıkar",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Alkolik siroz gelişen olguların %10-20'sinde yaşam boyu hepatosellüler karsinom gelişme riski mevcuttur",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Non-alkolik yağlı karaciğer hastalığı toplumda asemptomatik transaminaz yüksekliğinin en sık nedenidir",
-        "isCorrect": false
-      }
+      "A) Diyetteki aminoasit yetersizliği nedeniyle trigliseritleri dolaşıma taşıyan apolipoproteinlerin sentezlenememesi",
+      "B) Karaciğerde karnitin palmitoil transferaz enziminin aşırı çalışarak serbest yağ asitlerini tüketmesi",
+      "C) Hepatik safra kanallarının tıkanması sonucu kolesterol esterlerinin hepatosit içinde göllenmesi",
+      "D) Karaciğerde aşırı insülin salgısına bağlı olarak lipogenez enzimlerinin kontrolsüz indüksiyonu",
+      "E) Lizozomlarda sfingomiyelinaz enzim aktivitesinin genetik olarak eksik olması"
     ],
-    "correctAnswer": "C",
-    "explanation": "Mallory-Denk cisimcikleri (ubikuitinlenmiş keratin 8/18 ara filamanları) alkolik hepatitte çok belirgin olsa da SADECE alkole özgü değildir; non-alkolik steatohepatit (NASH), Wilson hastalığı, alfa-1 antitiripsin eksikliği ve kronik kolestatik sendromlarda da görülebilir."
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Kwashiorkor tablosunda ağır protein eksikliği vardır. Karaciğerde trigliseritlerin kanda taşınabilmesi için apolipoproteinlerle birleşerek VLDL oluşturması gerekir. Protein yetersizliğinde apolipoprotein sentezi durur; üretilen trigliseritler hepatositlerden dışarı atılamaz ve sitoplazmada birikerek masif steatoz oluşturur. Diğer şıklar bu tablonun mekanizmasıyla ilgili değildir."
   },
   {
-    "id": "d3-k1-pat-055",
+    "id": "prac-hucre-010",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 10,
-    "slideTitle": "Hücresel Şişme (Hidropik Değişim): Makroskopi ve Mikroskopi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
-    "question": "HPV enfeksiyonunun viral sitopatik etkisi sonucu hücrelerde oluşan, perinükleer halo ile karakterize değişikliğe verilen isim nedir?",
+    "slideTitle": "Reversibl Hasardan İrreversibl Hasara Geçiş: Kritik Eşik ve Zamanlama",
+    "discipline": "Tıp",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Akut koroner arter tıkanıklığı gelişen bir hastada iskemik kardiyomiyosit hasarının reversibl evreden irreversibl nekroz evresine geçtiğini KESİN OLARAK kanıtlayan en temel hücresel ve moleküler bulgu aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kondiloma Lata",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kondiloma Akuminata",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Servikal İntraepitelyal Neoplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Koilositoz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Vulvar İntraepitelyal Neoplazi",
-        "isCorrect": false
-      }
+      "A) Sitoplazmik glikojen depolarının tükenmesi ve anaerobik glikolizin hızlanması",
+      "B) Endoplazmik retikulum sisternalarının genişlemesi ve hafif hücresel şişme",
+      "C) Plazma membranı bütünlüğünün geri döndürülemez biçimde parçalanması ve kalıcı mitokondri disfonksiyonu",
+      "D) Miyositlerin elektriksel uyarılara yanıt veremeyerek kasılma fonksiyonunu durdurması",
+      "E) Granüllü endoplazmik retikulum zarlarından ribozomların geçici olarak ayrışması"
     ],
-    "correctAnswer": "D",
-    "explanation": "Koilositoz, HPV enfeksiyonunun karakteristik sitopatik etkisidir; enfekte skuamöz hücrelerde nükleer büyüme, hiperkromazi, binükleasyon ve nükleus etrafında belirgin berrak bir halo (perinükleer vakuolizasyon) ile tanınır. Kondiloma lata sifiliz ile ilişkilidir; kondiloma akuminata HPV&apos;nin oluşturduğu genital siğillerin klinik adıdır, CIN ise HPV&apos;ye bağlı displastik değişikliklerin genel adıdır."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Hücre hasarında reversibl evre ile irreversibl evre (hücre ölümü) arasındaki sınırı iki temel biyokimyasal olay çizer: 1) Kalıcı mitokondri disfonksiyonu (oksidatif fosforilasyonun geri döndürülemez çöküşü) ve 2) Plazma ve lizozom zarlarının bütünlüğünün kalıcı kaybı. Glikojen tükenmesi (A), ER dilatasyonu (B), kasılmanın durması (D) ve ribozom ayrılması (E) reversibl evrede de görülen erken bulgulardır."
   }
 ]
