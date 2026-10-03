@@ -1,5 +1,641 @@
 [
   {
+    "id": "prac-dismorf-017",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 17,
+    "slideTitle": "Temel Yapısal Defekt 4: Displazi (Hücresel Organizasyon Bozukluğu)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "FGFR3 genindeki mutasyona bağlı olarak kıkırdak hücrelerinin endokondral kemikleşme basamağındaki hücresel organizasyonun bozulması sonucu tüm ekstremitelerinde rizomelik kısalık ve orantısız cücelik gelişen bir hastadaki bu patoloji aşağıdaki mekanizmalardan hangisiyle tanımlanır?",
+    "options": [
+      "A) Deformasyon",
+      "B) Disrupsiyon",
+      "C) Displazi",
+      "D) Sekans",
+      "E) Asosiasyon"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Belirli bir doku tipinde (burada kıkırdak ve kemik dokusu) hücresel düzeydeki enzim, protein veya reseptör kusuruna bağlı organizasyon bozukluğu Displazi olarak adlandırılır. Akondroplazi klasik bir iskelet displazisidir. Deformasyon dış mekanik baskıdır. Disrupsiyon normal dokunun nekroz/yıkımıdır. Sekans birincil hatanın zincirleme sonuçlarıdır. Asosiasyon ise rastlantısal olmayan birlikteliktir."
+  },
+  {
+    "id": "prac-dismorf-018",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 18,
+    "slideTitle": "Dört Temel Primer Defekt Mekanizmasının Karşılaştırmalı Sentezi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki patogenetik özellik eşleştirmelerinden hangisi tek primer yapısal defektlerin ayırıcı tanısında 'Mekanizma - Tipik Klinik Karakteristik' açısından YANLIŞTIR?",
+    "options": [
+      "A) Malformasyon - İntrensek organogenez hatası ve kendiliğinden geri dönüşümsüzlük",
+      "B) Deformasyon - Dış mekanik bası ve doğum sonrası yüksek geri dönüşümlülük (reversibilite)",
+      "C) Disrupsiyon - Vasküler kaza veya amniyotik bantla doku yıkımı ve çok düşük tekrarlama riski",
+      "D) Displazi - Dokuda hücresel organizasyon bozukluğu ve zamanla ilerleyici (progresif) seyir",
+      "E) Deformasyon - Belirli bir doku tipinde lizozomal enzim eksikliği ve hayat boyu ilerleyici organomegali"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir. Belirli bir doku tipinde enzim eksikliği ve zamanla ilerleyici birikim tablosu Deformasyon değil, Displazi (depo hastalıkları) mekanizmasıdır. Deformasyon ise dış mekanik kuvvetlere (oligohidramnios vb.) bağlı oluşan ve doğum sonrası konservatif yöntemlerle düzelen şekil bozukluğudur. A, B, C ve D seçeneklerindeki tanımlar ve klinik karakteristikler tamamen doğrudur."
+  },
+  {
+    "id": "prac-dismorf-019",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 19,
+    "slideTitle": "Birlikte Görülmelerine Göre Anomaliler: İzole Defektler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ailesinde ve akrabalarında hiçbir genetik hastalık öyküsü bulunmayan bir çiftin ilk çocuğunda izole ventriküler septal defekt (VSD) saptanmış, yapılan kapsamlı muayene ve ultrasonografilerde başka hiçbir minör veya majör anomaliye rastlanmamıştır. Bu ailenin bir sonraki gebeliğinde benzer bir kardiyak defekt görülme tekrarlama riski multifaktöriyel kalıtım ilkelerine göre yaklaşık yüzde KAÇTIR?",
+    "options": [
+      "A) %0.001",
+      "B) %3 - %5",
+      "C) %25",
+      "D) %50",
+      "E) %100"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir (%3-%5). İzole konjenital kalp defektleri, yarık dudak/damak ve pilor stenozu gibi tek bir organı tutan malformasyonlar kural olarak multifaktöriyel kalıtım gösterir. Ailede tek bir etkilenmiş birinci derece akraba (kardeş) bulunduğunda sonraki kardeş için tekrarlama riski yaklaşık %3 ila %5 arasındadır. %25 otozomal resesif, %50 otozomal dominant tek gen riskidir."
+  },
+  {
+    "id": "prac-dismorf-020",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 20,
+    "slideTitle": "Çoklu Defekt Paternleri: Sekans Kavramı ve Patogenetik Kaskad",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Dismorfolojide 'Sekans' kavramının tanımı ve mekanizması dikkate alındığında, aşağıdaki ifadelerden hangisi BU PATOGENETİK MODELİ EN DOĞRU ŞEKİLDE AÇIKLAR?",
+    "options": [
+      "A) Vücuttaki tüm dokularda aynı anda başlayan bağımsız ve rastlantısal gen mutasyonları topluluğudur.",
+      "B) Tek bir primer gelişimsel veya mekanik hatanın domino etkisi yaratarak ardışık sekonder anomalilere yol açmasıdır.",
+      "C) Yalnızca ileri anne yaşına bağlı olarak gelişen ve tüm kromozomların üçe katlandığı sayısal anöploidi tablosudur.",
+      "D) Hiçbir anatomik yapı bozukluğu içermeyen, yalnızca doğum sonrası enzim yetersizliğiyle giden tablodur.",
+      "E) Genetik kökeni kesin olarak aydınlatılmış multifaktöriyel izole parmak anomalilerinin genel adıdır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Sekans; tek bir primer gelişimsel defektin veya mekanik olayın bir domino taşı etkisi gibi zincirleme patofizyolojik sonuçlar doğurarak birden fazla sekonder anomaliye yol açması tablosudur (örn. Potter sekansı, Pierre Robin sekansı). A seçeneği yanlıştır. C seçeneği poliploidi/trizomidir. D seçeneği metabolik hastalıklardır. E seçeneği izole anomalilerdir."
+  },
+  {
+    "id": "prac-dismorf-021",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 21,
+    "slideTitle": "Prototip Sekans 1: Potter Sekansı (Oligohidramnios Dizisi)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bilateral renal agenezisi bulunan bir fetusta gelişen Potter sekansı sürecinde, doğumdan hemen sonra bebeğin hayatını kaybetmesine yol açan EN ÖLÜMCÜL sekonder patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Şiddetli pulmoner hipoplazi ve solunum yetmezliği",
+      "B) Bilateral pes ekinovarus deformitesi",
+      "C) Karın cildindeki çatlaklar ve purpura",
+      "D) Kulak heliksindeki minör kıvrım anomalisi",
+      "E) Fetal eritrositlerin aşırı proliferasyonu"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Potter sekansında oligohidramnios nedeniyle bronşiyal dallanma ve alveoler matürasyon için gerekli olan fetal akciğer sıvısı sirkülasyonu gerçekleşemez. Bu durum ağır ve ölümcül Pulmoner Hipoplaziye yol açar. Bebek doğum sonrası ilk dakikalarda/saatlerde respiratuar yetmezlikten kaybedilir. B seçeneğindeki kulüp ayak ve D seçeneğindeki kulak deformasyonları mekanik basıya bağlıdır ancak yaşamı anında tehdit etmez."
+  },
+  {
+    "id": "prac-dismorf-022",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 22,
+    "slideTitle": "Prototip Sekans 2 & 3: Pierre Robin ve Meningomiyelosel Sekansları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Doğum odasında solunum sıkıntısı gelişen bir yenidoğanın muayenesinde belirgin küçük alt çene (mikrognati), dilin farenkse doğru geriye kayarak hava yolunu tıkaması (glossobitis) ve geniş U-şekilli yarık damak saptanmıştır. Bu bebekteki yarık damağın oluşum mekanizması aşağıdakilerden hangisinde DOĞRU açıklanmıştır?",
+    "options": [
+      "A) Dudak ve damak taslağında primer hücresel nekroz gelişmesi",
+      "B) Hipoplastik mandibula nedeniyle arkaya ve yukarı itilen dilin palatin rafların füzyonunu mekanik olarak engellemesi",
+      "C) Amniyotik bantların sert damağı keserek iki parçaya ayırması",
+      "D) FGFR3 mutasyonuna bağlı kıkırdak organizasyon bozukluğu gelişmesi",
+      "E) Yalnızca anne karnında geçirilen viral kızamıkçık enfeksiyonuna bağlı doku atrofisi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Pierre Robin sekansında primer olay mandibula hipoplazisidir (mikrognati). Dil ağız tabanında yeterli alan bulamadığı için geriye ve yukarıya yer değiştirir (glossobitis). Yukarıda duran dil, 8. haftada orta hatta birleşmesi gereken palatin çıkıntıların arasına mekanik bir engel gibi girerek füzyonu önler ve geniş U-şekilli yarık damak oluşturur. Bu bir sekans modelidir."
+  },
+  {
+    "id": "prac-dismorf-023",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 23,
+    "slideTitle": "Çoklu Defekt Paternleri: Sendrom Kavramı ve Etiyolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yeni doğan bir bebekte epikantus, basık burun kökü, avuç içinde tek transvers fleksiyel çizgi (Simian çizgisi), atriyoventriküler septal defekt (AVSD) ve duodenal atrezi saptanmıştır. Yapılan genetik analizde serbest Trizomi 21 tespit edilmiştir. Bu bebekteki çoklu anomali tablosu aşağıdaki kategorilerden hangisine girer?",
+    "options": [
+      "A) Deformasyon Sekansı",
+      "B) İzole Malformasyon",
+      "C) Asosiasyon",
+      "D) Sendrom",
+      "E) Vasküler Disrupsiyon"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Doğru yanıt D'dir. Tek bir ortak genetik etiyolojiye (Trizomi 21) bağlı olarak birden fazla bağımsız organ sisteminde (yüz, el, kardiyovasküler sistem, gastrointestinal sistem) ortaya çıkan kalıplaşmış anomaliler topluluğu Sendrom (Down sendromu) olarak tanımlanır. Sekans tek bir hatanın zincirleme sonucudur. İzole malformasyon tek organı tutar. Asosiasyonda ortak genetik etiyoloji gösterilemez."
+  },
+  {
+    "id": "prac-dismorf-024",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 24,
+    "slideTitle": "Çoklu Defekt Paternleri: Asosiasyonlar ve VACTERL / MURCS Birlikteliği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Doğumda anal atrezi ve trakeoözofageal fistül saptanan bir bebeğin ekokardiyografisinde VSD izlenmiş, sağ ön kolda radius hipoplazisi ve başparmak yokluğu tespit edilmiştir. Aileye bu tablonun bir asosiasyon (VACTERL) olduğu açıklanmıştır. Genetik danışma sırasında ailenin sonraki gebeliğindeki tekrarlama riski hakkında aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Otozomal dominant kalıtıldığı için her gebelikte tekrarlama riski %50'dir.",
+      "B) X'e bağlı resesif kalıtıldığı için erkek çocuklarda tekrarlama riski %100'dür.",
+      "C) Ortak bir Mendeliyen kalıtım kalıbı olmayan sporadik bir tablo olduğundan tekrarlama riski oldukça düşüktür (<%1-2).",
+      "D) Mitokondriyal DNA mutasyonu olduğu için yalnızca anneden geçen çocuklarda %100 görülür.",
+      "E) Dengeli Robertsonyan translokasyona bağlı olduğu için her gebelikte kesin trizomi gelişir."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. VACTERL bir asosiasyondur. Asosiasyonlar bilinen tek bir genetik mutasyon veya kromozomal kusura dayanmaz; multifaktöriyel/sporadik gelişimsel olaylar olarak kabul edilir. Bu nedenle ailesel kalıtım göstermezler ve ailenin bir sonraki gebeliğinde tekrarlama riski genel toplum riskine yakın olup oldukça düşüktür (<%1-2). Bu durum genetik danışmada aileyi büyük ölçüde rahatlatır."
+  },
+  {
+    "id": "prac-dismorf-025",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 25,
+    "slideTitle": "Konjenital Anomalilerin Etiyolojik Dağılımı ve Tanı Olasılıkları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Konjenital anomalilerin genel etiyolojik dağılımı dikkate alındığında, toplumda canlı doğan bebeklerde görülen yapısal doğumsal defektlerin EN BÜYÜK YÜZDESİNİ aşağıdaki kategorilerden hangisi oluşturur?",
+    "options": [
+      "A) Sayısal kromozom anöploidileri (Trizomiler)",
+      "B) Tek gen mutasyonuna bağlı otozomal resesif metabolik hastalıklar",
+      "C) Etiyolojisi bilinmeyen (idiyopatik) olgular",
+      "D) Talidomid ve alkol gibi doğrudan teratojenik ilaç maruziyetleri",
+      "E) Sitomegalovirüs (CMV) kaynaklı intrauterin enfeksiyonlar"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Konjenital anomalilerin etiyolojik dağılımında en büyük dilimi %50 ila %60 oranıyla 'etiyolojisi bilinmeyen (idiyopatik)' olgular oluşturur. Bilinen nedenler arasında ise en sık kategori %20-25 ile multifaktöriyel kalıtımdır. Kromozom anomalileri %6-7, tek gen mutasyonları %7-8, teratojenler ise %7-10 oranında sorumludur."
+  },
+  {
+    "id": "prac-dismorf-026",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 26,
+    "slideTitle": "Dismorfik Hastaya Sistematik Klinik Yaklaşım ve Tanı Algoritması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki klinik tablolardan hangisi bir çocukta ileri dismorfolojik ve klinik genetik değerlendirme yapılmasını GEREKTİREN durumlardan biri DEĞİLDİR?",
+    "options": [
+      "A) Yaşıtlarına göre baş çevresinin -3 standart sapmanın altında (mikrosefali) olması",
+      "B) Birinci derece akrabalarda bulunmayan 3 adet minör anomalinin saptanması",
+      "C) Doğumda izole olarak saptanan ve ailesel özelliklerle uyumlu tek bir çil (efelid)",
+      "D) Motor-mental gelişim basamaklarında belirgin gerilik ve kaba yüz görünümü",
+      "E) Anormal genital görünüm (ambigüus genitelya) ve açıklanamayan şiddetli hipotoni"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Ailesel özelliklerle uyumlu, fizyolojik ve tek bir çil bulunması tamamen zararsız bir normal varyanttır; dismorfolojik değerlendirme endikasyonu oluşturmaz. Oysa mikrosefali (<-3 SD), 3+ minör anomali, psikomotor gerilik + kaba yüz ve ambigüus genitelya + hipotoni dismorfolojik değerlendirmenin en kesin ve acil endikasyonları arasında yer alır."
+  },
+  {
+    "id": "prac-dismorf-027",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 27,
+    "slideTitle": "Anamnez, Perinatal Öykü ve 3 Kuşaklı Pedigri Analizi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Klinik genetik polikliniğine başvuran 48 yaşındaki bir baba ve 24 yaşındaki sağlıklı annenin ilk gebeliğinden doğan bebekte rizo-mikromelik cücelik, makrosefali ve basık burun kökü ile Akondroplazi saptanmıştır. Ailede başka kimsede benzer hastalık öyküsü yoktur. Bu bebekteki yeni (de novo) mutasyonun ortaya çıkışında EN OLASI risk faktörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Genç maternal yaş (24 yaş)",
+      "B) İleri paternal yaş (48 yaş)",
+      "C) Gebelikte folik asit desteği alınması",
+      "D) Bebeğin makat prezantasyonla doğması",
+      "E) Anne ve babanın üçüncü dereceden akraba olması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. İleri baba yaşı (>40-45 yaş), spermatogenez sırasında DNA replikasyon basamaklarının sayısının çok yüksek olmasına bağlı olarak FGFR3 (Akondroplazi) ve FGFR2 (Apert sendromu) gibi genlerde yeni (de novo) otozomal dominant mutasyonların ortaya çıkmasında en güçlü risk faktörüdür. İleri anne yaşı ise trizomilerle (anöploidi) ilişkilidir. Folik asit desteği NTD'yi önler. Akondroplazi akraba evliliğiyle ilişkili otozomal resesif bir hastalık değildir."
+  },
+  {
+    "id": "prac-dismorf-028",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 28,
+    "slideTitle": "Fizik Muayenede Antropometri ve Kraniofasiyal / Ekstremite Belirteçleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fizik muayenede büyüme geriliği, mikromeli (küçük ekstremiteler), ince aşağı dönük üst dudak ve orta hatta birbiriyle tamamen birleşen kalın, gür kaşlar (sinopfris) saptanan bir çocukta akla gelmesi gereken İLK DİSMORFİK SENDROM aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Marfan Sendromu",
+      "B) Cornelia de Lange Sendromu",
+      "C) Akondroplazi",
+      "D) Klinefelter Sendromu",
+      "E) Nörofibromatozis Tip 1"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Sinopfris (orta hatta birleşen kaşlar), dar-ince aşağı dönük üst dudak, büyüme geriliği, mikrosefali, mental retardasyon ve mikromeli (ekstremite anomalileri) Cornelia de Lange sendromunun kardinal tanısal bulgularıdır. Marfan uzun boy ve araknodaktili ile gider. Akondroplazi orantısız rizomelik cüceliktir. Klinefelter 47,XXY olup uzun boy ve hipogonadizm yapar. NF1 café-au-lait lekeleriyle seyreder."
+  },
+  {
+    "id": "prac-dismorf-029",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 29,
+    "slideTitle": "Genetik Tanı Yöntemleri ve Laboratuvar Test Algoritması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Açıklanamayan zihinsel yetersizlik (mental retardasyon), otizm spektrum bulguları ve iki adet minör dismorfik yüz bulgusu olan ancak klinik muayenesinde bilinen spesifik tek bir sendroma (Down, Williams vb.) uymayan 4 yaşındaki bir çocukta güncel klinik genetik kılavuzlarına göre İLK BASAMAKTA (FIRST-TIER) tercih edilmesi gereken genetik test aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Tüm Genom Dizileme (WGS)",
+      "B) Tüm Ekzom Dizi Analizi (WES)",
+      "C) Kromozomal Mikroarray Analizi (CMA / array-CGH)",
+      "D) Yalnızca FGFR3 genine yönelik Sanger dizi analizi",
+      "E) Anne ve babadan mitokondriyal DNA dizi analizi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Güncel uluslararası tıbbi genetik konsensus kılavuzlarına (ACMG) göre, bilinen spesifik bir sendrom bulgusu taşımayan multipl konjenital anomalili, mental retardasyonlu veya otizm spektrum bozukluğu olan çocuklarda ilk basamakta (first-tier) uygulanması gereken test Kromozomal Mikroarray Analizidir (CMA / array-CGH). CMA submikroskopik CNV'leri yüksek çözünürlükle yakalar. WES ve WGS ise mikroarray normalse ve hedefe yönelik panellerden sonuç alınamazsa son basamakta düşünülür."
+  },
+  {
+    "id": "prac-dismorf-030",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 30,
+    "slideTitle": "Klasik Sendrom Modelleri: Williams, Prader-Willi ve Frajil X Sendromu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Zihinsel gerilik, otistik davranışlar (göz temasından kaçınma, el sallama), uzun ve dar yüz morfolojisi, belirgin kepçe kulaklar ve postpubertal dönemde bilateral belirgin makroorşidizm (iri testisler) saptanan 16 yaşındaki bir erkek hastada moleküler genetik analizde saptanması EN MUHTEMEL patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) 7q11.23 delesyonuna bağlı ELN gen kaybı",
+      "B) FGFR3 geninde glisin-arjinin nokta mutasyonu",
+      "C) FMR1 geninin 5' UTR bölgesinde CGG trinükleotid tekrarının >200 olması ve promoter hipermetilasyonu",
+      "D) 15q11-q13 bölgesinde maternal ifadenin kaybı (UPD15)",
+      "E) Tip I kollajen zincirini kodlayan COL1A1 geninde delesyon"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Tarif edilen klinik tablo (uzun dar yüz, büyük kulaklar, belirgin postpubertal makroorşidizm, zihinsel gerilik ve otizm bulguları) Frajil X Sendromunun klasik fenotipidir. Frajil X sendromu FMR1 geninin 5' UTR bölgesindeki (CGG)n trinükleotid tekrar sayısının 200'ün üzerine çıkması (tam mutasyon) ve promotörün hipermetilasyonu sonucu genin susturulmasıyla ortaya çıkar. A Williams sendromudur. B Akondroplazidir. D Angelman sendromudur. E Osteogenezis imperfektadır."
+  },
+  {
+    "id": "prac-dismorf-031",
+    "deckId": "learn-dismorfoloji-terminolojisi",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
+    "slideNumber": 31,
+    "slideTitle": "Klinik Genetik Prensipleri, Genetik Danışma ve Multidisipliner Yönetim",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fibrillin-1 (FBN1) geninde saptanan tek bir mutasyonun bir hastada hem gözde ektopia lentise (lens luksasyonu), hem iskelette aşırı boy uzaması ve araknodaktiliye, hem de kardiyovasküler sistemde asendan aort anevrizmasına yol açması durumu aşağıdaki genetik kavramlardan hangisiyle tanımlanır?",
+    "options": [
+      "A) Eksik Penetrans",
+      "B) Pleiotropi",
+      "C) Genomik İmprinting",
+      "D) X-inaktivasyonu (Lionizasyon)",
+      "E) Germline Mozaiklik"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Tek bir genetik kusurun (FBN1 mutasyonu) vücutta birbirinden bağımsız birden fazla organ sisteminde (göz, iskelet ve kardiyovasküler sistem) fenotipik belirtilere yol açması Pleiotropi olarak adlandırılır. Eksik penetrans genetik bozukluğu taşıyan birinde hiç bulgu olmamasıdır. Genomik imprinting ebeveyne özgü gen sessizleşmesidir. X-inaktivasyonu dişi hücrelerinde bir X'in susturulmasıdır. Germline mozaiklik ise gonadlarda izole mutasyon bulunmasıdır."
+  },
+  {
+    "id": "d3-k1-enf-003",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 1,
+    "slideTitle": "Enfeksiyon Hastalıklarına Giriş ve Temel İlkeler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Patojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Virülans",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Enfektivite",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "İmmünojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Toksijenite",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
+  },
+  {
+    "id": "d3-k1-enf-003-216",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 2,
+    "slideTitle": "Patojenite ve Virülans Kavramlarının Kesin Ayrımı",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Patojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Virülans",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Enfektivite",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "İmmünojenite",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Toksijenite",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
+  },
+  {
+    "id": "d3-k1-enf-028",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 3,
+    "slideTitle": "Mikroorganizma Sınıflandırması: Prionlardan Parazitlere Biyolojik Spektrum",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Üretral/servikal akıntısı olan bir hastanın gram boyamasında mikroskop sahasında artmış sayıda PMNL (>2)\ngörülmesine rağmen herhangi bir mikroorganizma saptanamamıştır. En olası etken hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Neisseria gonorrhoeae",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Chlamydia trachomatis",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Trichomonas vaginalis",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Candida albicans",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Gardnerella vaginalis",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Chlamydia trachomatis, zorunlu hücre içi (obligat intraselüler) bir\nbakteri olduğundan standart gram boyama ile görülemez ve rutin kültür\nbesiyerlerinde üremez. Bu nedenle üretral/servikal akıntı örneğinde\nartmış PMNL sayısına rağmen gram boyamada herhangi bir\nmikroorganizma görülememesi, klasik olarak Chlamydia trachomatis\nenfeksiyonunu (nongonokoksik üretrit/servisit) düşündürür; tanı için\nnükleik asit amplifikasyon testleri (NAAT/PCR) kullanılır."
+  },
+  {
+    "id": "d3-k1-enf-017",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 4,
+    "slideTitle": "Atipik Bakteriyel Ajanlar: Mikoplazma, Klamidya ve Riketsiyalar",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Neisseria gonorrhoeae enfeksiyonunun tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tek doz seftriakson (IM) ile tedavi edilir",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Eş zamanlı klamidya enfeksiyonu dışlanamıyorsa tedaviye doksisiklin eklenir",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Hastanın cinsel partnerinin tedavi edilmesine gerek yoktur",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Tedavi sonrası test-of-cure, faranjiyal enfeksiyon dışında rutin olarak gerekli değildir",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Gebelerde de seftriakson güvenle kullanılabilir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Gonokoksik enfeksiyonlarda (ve genel olarak tüm CYBE'lerde) yeniden\nenfeksiyonu önlemek ve toplumsal yayılımı durdurmak için, hastanın\nson 60 gün içindeki cinsel partnerlerinin mutlaka değerlendirilmesi ve\neş zamanlı (ampirik) tedavi edilmesi gerekir; 'partner tedavisine gerek\nyoktur' ifadesi bu nedenle yanlıştır. Güncel tedavi yaklaşımı artan direnç\nnedeniyle tek doz seftriakson esasına dayanır; klamidya birlikteliği\ndışlanamıyorsa doksisiklin eklenir."
+  },
+  {
+    "id": "d3-k1-enf-006",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 5,
+    "slideTitle": "Normal İnsan Mikrobiyotası (Florası) ve Vücudun Steril Bölgeleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdaki vücut bölgelerinden hangisinde normalde mikrobiyal flora bulunmaz?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Özefagus",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Konjonktiva",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Üreter",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Kolon",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Vajen",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Özefagus, konjonktiva, kolon ve vajen gibi dış ortamla/mukozal yüzeyle\ntemas eden bölgelerde normal (kommensal) mikrobiyal flora bulunur.\nÜreterler ise mesane ve böbrekler gibi normalde sterildir; bu bölgelerde\nmikroorganizma varlığı patolojik kabul edilir."
+  },
+  {
+    "id": "d3-k1-enf-024",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 6,
+    "slideTitle": "Kolonizasyon, Disbiyoz ve Fırsatçı (Opportunistik) Enfeksiyonlar",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Üretrit etkenlerinin araştırılmasında Ureaplasma urealyticum ile ilgili hangisi doğrudur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Genital kültürde üremesi tek başına klinik olarak anlamlı kabul edilir ve mutlaka tedavi\ngerektirir",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Sağlıklı bireylerin genital florasında da bulunabildiğinden, kültürde üremesi tek\nbaşına anlamlı kabul edilmez",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Gram boyamada kolayca görülebilen büyük bir bakteridir",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Standart gonokok kültür besiyerinde kolayca ürer",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Tedavisinde ilk seçenek penisilindir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Ureaplasma urealyticum, hücre duvarı olmayan (Mycoplasma\nailesinden) küçük bir bakteridir ve cinsel yönden aktif sağlıklı bireylerin\ngenital florasında da sıklıkla kolonizasyon şeklinde bulunabilir. Bu\nnedenle genital örnek kültüründe üremesi tek başına patojen olduğu ve\ntedavi gerektirdiği anlamına gelmez; klinik bulgularla birlikte\ndeğerlendirilmelidir. Hücre duvarı olmadığından gram boyanmaz ve\npenisilin gibi hücre duvarı sentezini hedefleyen antibiyotiklere doğal\nolarak dirençlidir (tedavide makrolid/tetrasiklin grubu tercih edilir)."
+  },
+  {
+    "id": "d3-k3-far-009",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 7,
+    "slideTitle": "Hastane Enfeksiyonları (Sağlık Hizmetiyle İlişkili Enfeksiyonlar - SHİE)",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kanamisinin yarı-sentetik türevi olan; moleküler yapısındaki koruyucu yan zincir sayesinde bakteriyel aminoglikozid inaktive edici asetilaz, adenilaz ve fosfotransferaz enzimlerinin çoğuna dirençli bulunan ve gentamisine dirençli nozokomiyal gram-negatif basillerde tercih edilen antibiyotik hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Netilmisin",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Spektinomisin",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Amikasin",
+        "isCorrect": true
+      },
+      {
+        "key": "D",
+        "text": "Paromomisin",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Neomisin",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Amikasin, bakteriyel modifiye edici enzimlere karşı en dayanıklı aminoglikoziddir. Gentamisin ve tobramisine direnç geliştiğinde spektrum genişliği sayesinde hastane kaynaklı dirençli Pseudomonas ve Klebsiella suşlarında hayat kurtarıcıdır."
+  },
+  {
+    "id": "d3-k1-enf-007",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 8,
+    "slideTitle": "Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi mikroorganizma bulaşı için indirek (dolaylı) temas yollarından değildir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sağlık personelinin elleri",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Glukometre",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Tansiyon ölçme aleti",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Hastalar arasında ortak kullanılan su ısıtma cihazı",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Kan transfüzyonu",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "İndirek temas bulaşı, kontamine cansız ara yüzeyler (glukometre,\ntansiyon aleti, ortak kullanılan cihazlar) veya sağlık personelinin elleri\naracılığıyla mikroorganizmanın hastadan hastaya taşınmasıdır. Kan\ntransfüzyonu ise doğrudan (parenteral) bir bulaş yoludur;\ndolaylı/indirekt temas kategorisine girmez."
+  },
+  {
+    "id": "d3-k1-enf-005",
+    "deckId": "learn-enfeksiyon-hastaliklari",
+    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
+    "slideNumber": 9,
+    "slideTitle": "Bulaş (Taşınma) Şekilleri: Temas, Damlacık ve Solunum (Aerosol) Dinamikleri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdaki eylemlerden hangisinde en çok sayıda solunum partikülü saçılımı olur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Öksürme",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Hapşırma",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Bağırma",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Şarkı söyleme",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Konuşma",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
+  },
+  {
     "id": "d3-k1-enf-009",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
@@ -78,7 +714,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-013-202",
+    "id": "d3-k1-enf-013-226",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 12,
@@ -195,7 +831,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-004-205",
+    "id": "d3-k1-enf-004-229",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 15,
@@ -312,7 +948,7 @@
     "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
   },
   {
-    "id": "d3-k1-enf-009-208",
+    "id": "d3-k1-enf-009-232",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 18,
@@ -351,7 +987,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-054-209",
+    "id": "d3-k1-enf-054",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 19,
@@ -390,7 +1026,7 @@
     "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
   },
   {
-    "id": "d3-k1-enf-009-210",
+    "id": "d3-k1-enf-009-234",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 20,
@@ -429,706 +1065,612 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-hs-001",
+    "id": "prac-salgin-001",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 1,
-    "slideTitle": "Bulaşıcı Hastalıkların Yeniden Ortaya Çıkışı ve 1970 Yanılgısı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Halk sağlığı kavramının başlıca ilkeleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+    "slideTitle": "Bulaşıcı Hastalıkların Tarihsel Seyri ve 1970'ler İllüzyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "1970'li yıllarda tıp dünyasında oluşan 'bulaşıcı hastalıkların insanlık için artık bir tehdit olmaktan çıktığı' yanılsamasının çöküşü ve modern enfeksiyon epidemiyolojisinin gerçekleri göz önüne alındığında, aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sağlık bir insanlık hakkıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tedavi edici hizmetler koruyucu hizmetlerden önceliklidir",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Hastalıkların nedenleri sosyal, biyolojik ve fiziksel etmenlerdir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kişinin hastalığı aynı zamanda ailenin de sorunudur",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Sağlık hizmeti bir ekip hizmetidir",
-        "isCorrect": false
-      }
+      "A) 1970'lerden günümüze kadar insanlarda hastalık oluşturan 1500'den fazla yeni patojen tanımlanmıştır.",
+      "B) Antimikrobiyal tedavilerin yaygınlaşması doğal seleksiyonla çoklu ilaç direncinin ortaya çıkışını hızlandırmıştır.",
+      "C) Çiçek hastalığının küresel eradikasyonu, tüm viral enfeksiyonların kalıcı olarak yeryüzünden silinebileceğini kanıtlamıştır.",
+      "D) Ekolojik habitat tahribatı ve ormansızlaşma, zoonotik ajanların insan konaklara sıçramasını kolaylaştırmıştır.",
+      "E) Küreselleşme ve kıtalararası hava yolu taşımacılığı lokal bir enfeksiyon odağının saatler içinde pandemik yayılmasına yol açabilmektedir."
     ],
-    "correctAnswer": "B",
-    "explanation": "Halk sağlığının temel felsefesinde koruyucu hizmetler tedavi edici\nhizmetlerden önceliklidir (\"önce koru\" ilkesi); bir hastalığı ortaya\nçıkmadan önlemek, ortaya çıktıktan sonra tedavi etmekten her zaman\ndaha etkili ve ekonomiktir. Diğer ifadeler (sağlığın bir insanlık hakkı\nolması, hastalık nedenlerinin çok boyutlu olması, hastalığın aile boyutu,\nekip hizmeti olması) halk sağlığının kabul edilen temel ilkeleridir."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır. Çiçek hastalığı (variola), yalnızca insana özgü olması, asemptomatik/kronik taşıyıcılığının bulunmaması, belirgin döküntülü kliniği ve son derece stabil/etkin bir aşısının bulunması sayesinde eradike edilebilmiştir. Hayvan rezervuarı olan, yüksek mutasyon geçiren ya da latent kalan enfeksiyonların çoğu için küresel eradikasyon mümkün değildir ve çiçek örneği genellenemez. A, B, D ve E seçenekleri ise modern salgın epidemiyolojisinin temel gerçekleridir."
   },
   {
-    "id": "past-1790877043881-186862",
+    "id": "prac-salgin-002",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 2,
-    "slideTitle": "21. Yüzyılda Salgınların Dinamikleri: Küreselleşme ve Jet Hızı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hangisi influenza virüsleri A (pandemik H1N1 dahil) ve B ile enfeksiyonun tedavisi ve profilaksisi için kullanılan bir antiviral nöraminidaz inhibitörüdür?",
+    "slideTitle": "Küresel Tehdit Oluşturan Yeni Patojenler: HIV/AIDS Pandemisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "HIV/AIDS epidemiyolojisi, küresel hastalık yükü ve enfeksiyon kontrol stratejileri ile ilgili aşağıdaki ifadelerden hangisi bilimsel olarak DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Darunavir",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Tenofovir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oseltamivir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Ritonavir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nelfinavir",
-        "isCorrect": false
-      }
+      "A) HIV aşısının yaygın kullanıma girmesiyle birlikte küresel insidans tamamen sıfırlanmıştır.",
+      "B) HIV pandemisi dünya genelinde 70 milyondan fazla kişiyi enfekte etmiş ve 35 milyondan fazla kişinin ölümüne yol açmıştır.",
+      "C) Antiretroviral tedaviler yalnızca semptomları hafifletir, viral yükü baskılayarak cinsel bulaş riskini azaltamaz.",
+      "D) HIV yalnızca kan transfüzyonuyla bulaşır; dikey (anneden bebeğe) geçiş bildirilmemiştir.",
+      "E) HIV enfeksiyonunda eliminasyon aşamasına ulaşılmış olup artık halk sağlığı sürveyansına ihtiyaç kalmamıştır."
     ],
-    "correctAnswer": "A",
-    "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili INFLUENZA kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ders notlarında ve DSÖ verilerinde açıkça vurgulandığı üzere, HIV pandemisi 70 milyondan fazla kişiyi enfekte etmiş ve 35 milyondan fazla insanın ölümüne neden olmuştur. A yanlıştır çünkü ruhsatlı bir HIV aşısı henüz yoktur. C yanlıştır çünkü ART viral yükü tespit edilemeyen düzeye indirerek cinsel bulaşı sıfırlar (B=B). D yanlıştır çünkü dikey bulaş ve korunmasız cinsel temas ana yollardır. E yanlıştır çünkü sürveyans ve kontrol kesintisiz devam etmektedir."
   },
   {
-    "id": "study-q-learn-halk-sagligi-salgin-has-s3",
+    "id": "prac-salgin-003",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 3,
-    "slideTitle": "Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": null,
+    "slideTitle": "Yeniden Önem Kazanan Kadim Tehditler: Veba ve Kolera",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Madagaskar'da 2017 yılında 209 kişinin ölümüyle sonuçlanan veba salgını ve günümüzde yılda 40'tan fazla görülen kolera salgınlarının halk sağlığı açısından ortak epidemiyolojik özelliği aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
+      "A) Her iki hastalığın da rezervuarı yalnızca insan olup hayvan konakları bulunmaz.",
+      "B) Geçmişte kontrol altına alındığı sanılan bu hastalıkların altyapı yetersizliği ve ekolojik bozulmalarla 'yeniden önem kazanan' (re-emerging) tehditler oluşturması.",
+      "C) Her iki hastalığın da etkeni antibiyotiklere karşı mutlak dirençli yeni viral patojenlerdir.",
+      "D) Her iki hastalık da yalnızca kan transfüzyonu ve cinsel yolla bulaş gösterir.",
+      "E) Her iki hastalığın da tedavisi imkansız olup destekleyici bakımın morbidite üzerinde hiçbir etkisi yoktur."
     ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Yeni Ortaya Çıkan Patojenler ve Zoonotik Tehdit: %70 Kuralı' başlığı altında incelenen bu mekanizma (%70 HAYVAN KAYNAKLI KURALI: İnsanlarda yeni ortaya çıkan enfeksiyon patojenlerinin yaklaşık %70'İ HAYVAN KAYNAKLIDIR (zoonotik kökenli)....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Veba (Yersinia pestis) ve kolera (Vibrio cholerae), tıp tarihinin kadim hastalıkları olup 'yeniden önem kazanan (re-emerging)' patojenlerin prototipidir. Sanitasyon çöküşü, yoksulluk ve yetersiz altyapı durumunda yeniden ölümcül salgınlara yol açarlar. A yanlıştır (veba zoonotiktir, kemirgen rezervuarı vardır). C yanlıştır (her ikisi de bakteridir). D yanlıştır (veba pire ve damlacıkla, kolera fekal-oral yolla bulaşır). E yanlıştır (her ikisinin de antibiyotik ve rehidrasyon tedavisi mevcuttur)."
   },
   {
-    "id": "d3-k1-enf-001",
+    "id": "prac-salgin-004",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 4,
-    "slideTitle": "Epidemiyolojik Dağılım Kalıpları: Endemi, Epidemi, Pandemi, Sporadi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Epidemi (salgın) kavramı için hangisi doğru bir tanımdır?",
+    "slideTitle": "Solunum Yolu Tehditleri ve Koronavirüsler: SARS-CoV ve MERS-CoV",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "2015 yılında Güney Kore'de yaşanan MERS-CoV salgınında tek bir seyahat ilişkili indeks vakanın 186 vaka ve 36 ölüme yol açması olayı, enfeksiyon kontrolü ve halk sağlığı açısından en çok hangi mekanizmanın önemini vurgulamaktadır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Bir hastalığın bir toplulukta alışılmış sıklıkta görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Bir hastalığın bir toplulukta alışılmış seyrinden daha fazla görülmesi",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Bir hastalığın bir toplulukta düşük oranda görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bir hastalığın bir toplulukta hiç görülmemesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bir hastalığın bir toplulukta çok yüksek, sabit bir oranda sürekli görülmesi",
-        "isCorrect": false
-      }
+      "A) MERS virüsünün yalnızca içme suyu şebekesiyle yayıldığını ve su klorlamasının tek çözüm olduğunu",
+      "B) Sağlık kuruluşlarında erken triyaj, seyahat anamnezi alma ve şüpheli olguları derhal izole etmenin nozokomiyal amplifikasyonu önlemedeki kritik rolünü",
+      "C) MERS virüsünün insandan insana bulaşmadığını, tüm vakaların develerle temas ettiğini",
+      "D) Sınır taramalarının ve filyasyonun solunum yolu enfeksiyonlarında hiçbir işe yaramadığını",
+      "E) MERS virüsünün fatalite hızının sıfır olduğunu ve kendi kendine sonlandığını"
     ],
-    "correctAnswer": "B",
-    "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede, o\nhastalığın o toplumdaki beklenen/alışılmış (bazal, endemik) sıklığının\nbelirgin şekilde üzerinde görülmesidir. Bu kavram mutlak bir sayı değil,\nhastalığın normal düzeyine göre gösterdiği artışı ifade eder. Endemi,\nhastalığın bir bölgede sürekli ve alışılmış düzeyde bulunmasıdır;\npandemi ise epideminin kıtalar arası çok geniş coğrafi alanlara\nyayılmasıdır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Güney Kore MERS salgını, hastanelerde erken triyaj yapılmaması, seyahat öyküsünün sorgulanmaması ve hastane içi dolaşımın kısıtlanmaması nedeniyle tek bir indeksten kaynaklanan muazzam bir nozokomiyal amplifikasyon örneğidir. A yanlıştır (suyla değil solunum ve yakın temasla bulaşır). C yanlıştır (hastane içi insandan insana bulaşmıştır). D yanlıştır (filyasyon ve temaslı karantinası salgını nihayetinde durdurmuştur). E yanlıştır (%35 civarı fataliteye sahiptir)."
   },
   {
-    "id": "d3-k1-enf-026-215",
+    "id": "prac-salgin-005",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 5,
-    "slideTitle": "Epidemik Fazlar ve Salgın Eğrisinin 4 Aşaması",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretrit sebebiyle izlenen bir hastada ateş yüksekliği gelişmesi halinde ayırıcı tanıda yer alması gerekenler için\nhangisi doğrudur?",
+    "slideTitle": "Viral Hemorajik Ateşler ve Arbovirüsler: Ebola ve Zika Tehdidi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "2014 Batı Afrika Ebola salgını ve 2015 Amerika kıtası Zika virüs salgını incelendiğinde, bu salgınlardan çıkarılan en temel halk sağlığı dersi aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sadece epididimit düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Sadece orşit düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Sadece disemine gonokok enfeksiyonu düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Sadece skrotal apse düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Epididimit, orşit, disemine gonokok enfeksiyonu ve skrotal apsenin hepsi\ndüşünülmelidir",
-        "isCorrect": true
-      }
+      "A) Viral hemorajik ateşlerde sürveyans sistemlerinin zayıflığı ve tanının 2 ay gibi gecikmesi felaket boyutunda yayılıma yol açarken; yeni arbovirüslerde teratojenik etkilerin erken tespiti kritik önem taşır.",
+      "B) Ebola virüsünün yalnızca hava yoluyla bulaştığı ve maske takmanın tek başına salgını tamamen bitirdiği kanıtlanmıştır.",
+      "C) Zika virüsünün yalnızca ileri yaştaki erkekleri etkilediği, gebeler ve fetüsler üzerinde hiçbir yan etkisi bulunmadığı gösterilmiştir.",
+      "D) Her iki salgında da sağlık personelinin kişisel koruyucu ekipman kullanmasına gerek olmadığı anlaşılmıştır.",
+      "E) Gelişmekte olan ülkelerdeki salgınların küresel yayılma potansiyeli bulunmadığı kesinleşmiştir."
     ],
-    "correctAnswer": "E",
-    "explanation": "Üretrit tanılı bir hastada ateş yüksekliğinin eklenmesi, enfeksiyonun\nbasit üretritin ötesine geçerek komplike bir tabloya ilerlediğini\ndüşündürür. Bu durumda epididimit, orşit, skrotal apse gibi lokal yayılım\nkomplikasyonları ve dissemine gonokok enfeksiyonu (artrit-dermatit\nsendromu; ateş, poliartralji, püstüler döküntü ile seyreden sistemik bir\ntablo) ayırıcı tanıda mutlaka düşünülmelidir."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Batı Afrika Ebola salgınında tanının 2 ay gecikmesi zayıf sürveyansın ne kadar ağır bir maliyet doğurduğunun kanıtıdır; Zika salgınında ise konjenital mikrosefali gibi teratojenik komplikasyonların erken aydınlatılması gebelerin korunması açısından kritik olmuştur. B yanlıştır (Ebola temas ve vücut sıvılarıyla bulaşır). C yanlıştır (Zika fetüste mikrosefali yapar). D yanlıştır (KKE sağlık personeli için hayatidir). E yanlıştır (tüm bu patojenler küresel tehdittir)."
   },
   {
-    "id": "d3-k2-ah-002",
+    "id": "prac-salgin-006",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 6,
-    "slideTitle": "Salgını Bekleme, Erken Teşhis ve Klinisyenin Rolü",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Türkiye Kanser Erken Teşhis, Tarama ve Eğitim Merkezleri (KETEM) ve Aile Hekimliği kanser tarama standartları ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+    "slideTitle": "21. Yüzyılda Salgın Dinamikleri: Hız, Mesafe ve Küreselleşme",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "21. yüzyılda bulaşıcı hastalık salgınlarının tarihteki salgınlara kıyasla çok daha hızlı küreselleşmesini ve 2009 H1N1 pandemisinin 9 ay gibi kısa bir sürede tüm kıtalara yayılmasını açıklayan temel epidemiyolojik mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Serviks kanseri taraması 30-65 yaş kadınlarda 5 yılda bir HPV-DNA ve Pap Smear ile yapılır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Meme kanseri taraması 40-69 yaş kadınlarda 2 yılda bir mamografi ile yapılır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kolorektal kanser taraması 50-70 yaş kadın ve erkeklerde 2 yılda bir gaitada gizli kan testi (GGK) ile yapılır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "18-35 yaş arası tüm sağlıklı erkeklerde her yıl rutin tarama kolonoskopisi uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Meme farkındalığı için 20 yaş üzeri kadınlara her ay kendi kendine meme muayenesi önerilir",
-        "isCorrect": false
-      }
+      "A) Patojenlerin tamamının artık yalnızca genetik laboratuvarlarında üretiliyor olması",
+      "B) Kıtalararası uçuş sürelerinin (12-24 saat), enfeksiyon etkenlerinin çoğunun kuluçka (inkübasyon) süresinden daha kısa olması nedeniyle asemptomatik kişilerin küresel dolaşımı",
+      "C) İnsanların bağışıklık sistemlerinin 21. yüzyılda tüm patojenlere karşı tamamen işlevsiz hale gelmiş olması",
+      "D) Dünya Sağlık Örgütü'nün tüm sınır tarama ve karantina protokollerini yasal olarak yasaklamış olması",
+      "E) Antibiyotiklerin artık hiçbir bakteriyel enfeksiyonda etki göstermemesi"
     ],
-    "correctAnswer": "D",
-    "explanation": "Kolorektal kanser taraması 50-70 yaş grubuna yöneliktir (2 yılda bir GGK, 10 yılda bir kolonoskopi). 18-35 yaş arasındaki sağlıklı asemptomatik erkeklerde her yıl kolonoskopi yapılması tıbben anlamsız, zararlı ve protokol dışıdır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ders notlarında vurgulandığı gibi, önceden lokal olan salgınlar günümüzde kıtalararası bir uçağın uçabildiği hızda küreselleşmektedir. Jet uçuş süreleri patojenlerin inkübasyon periyodundan kısa olduğu için, enfekte kişiler semptom göstermeden binlerce kilometre uzağa giderek yeni bulaş odakları başlatabilmektedir. A, C, D ve E seçenekleri bilimsel ve tarihsel gerçeklerle bağdaşmaz."
   },
   {
-    "id": "study-q-learn-halk-sagligi-salgin-has-s7",
+    "id": "prac-salgin-007",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 7,
-    "slideTitle": "Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": null,
+    "slideTitle": "Zoonotik Tehdit ve \"Tek Sağlık\" (One Health) Yaklaşımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yeni ortaya çıkan bulaşıcı hastalık patojenlerinin kökeni ve 'Tek Sağlık' (One Health) yaklaşımı ile ilgili aşağıdaki ifadelerden hangisi BİLİMSEL OLARAK DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
+      "A) Yeni ortaya çıkan insan patojenlerinin %70'inden fazlası hayvan kaynaklıdır (zoonoz).",
+      "B) İnsan salgınlarının hayvan sağlığı veya ekosistem dengesi ile hiçbir epidemiyolojik bağlantısı yoktur.",
+      "C) Canlı hayvan pazarlarında türlerin bir arada bulunması patojenlerin mutasyon ve sıçrama riskini bütünüyle ortadan kaldırır.",
+      "D) Tek Sağlık yaklaşımı yalnızca evcil kedi ve köpeklerin aşılanmasını hedefler, yaban hayatı ve çevre sağlığını dışlar.",
+      "E) Zoonotik patojenler insanlara bulaştığında asla insandan insana sekonder yayılım gösteremezler."
     ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Sınırlama (Containment), Mitigasyon ve Müdahale Zamanlaması' başlığı altında incelenen bu mekanizma (İLK VAKA KURALI: Sınırlama (containment) İLK VAKA TEŞHİS EDİLDİĞİ ANDA BAŞLAMALIDIR; patojen henüz laboratuvarda tam izole edilmemiş olsa da...) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Ders notlarında açıkça belirtildiği üzere, insanlarda ortaya çıkan patojenlerin %70'i hayvan kaynaklıdır. Bu nedenle hayvan ticareti, tarım ve çevre sağlığı salgın kontrolünün ayrılmaz parçalarıdır. B yanlıştır (bağlantı son derece güçlüdür). C yanlıştır (pazarlar sıçrama riskini artırır). D yanlıştır (Tek Sağlık insan, hayvan ve çevre sağlığını bütüncül ele alır). E yanlıştır (SARS, Ebola ve influenza gibi pek çok zoonoz insandan insana hızla yayılır)."
   },
   {
-    "id": "d3-k1-hs-016",
+    "id": "prac-salgin-008",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 8,
-    "slideTitle": "Hastalık Mücadele Düzeyleri: Kontrol, Eliminasyon ve Eradikasyon",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir enfeksiyon hastalığının etkeniyle birlikte yeryüzünden tamamen yok edilmesi aşağıdaki tanımlardan\nhangisiyle ifade edilir?",
+    "slideTitle": "Sağlık Sistemlerinin Direnci ve Kapasite Artışı (Surge Capacity)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Salgın hastalıklar döneminde sağlık sistemlerinin direncini (resilience) korumak ve sağlık hizmetlerinin sürdürülebilirliğini sağlamak amacıyla yapılması gereken en kritik müdahalelerle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Endemi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Epidemiyoloji",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Eradikasyon",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Epidemi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Pandemi",
-        "isCorrect": false
-      }
+      "A) Sağlık çalışanlarına nitelikli kişisel koruyucu ekipman (KKE) kesintisiz sağlanmalı ve işgücü güvenliği garanti altına alınmalıdır.",
+      "B) Sağlık sistemleri ani hasta akışına karşı personel, mekan ve ekipman kapasitesini hızla artırabilecek 'surge capacity' planlarına sahip olmalıdır.",
+      "C) Salgın döneminde tüm kaynaklar yalnızca acil servislere aktarılmalı, rutin kronik hastalık ve aşılama hizmetleri bütünüyle lağvedilmelidir.",
+      "D) Acil durumlarda test kiti, ilaç ve lojistik temini için bürokrasiden arındırılmış esnek bir sağlık finansmanı kurgulanmalıdır.",
+      "E) Sağlık personeline enfeksiyon kontrol ve triyaj protokolleri konusunda düzenli hizmet içi eğitim verilmelidir."
     ],
-    "correctAnswer": "C",
-    "explanation": "Eradikasyon, bir hastalığın etkeninin doğadaki tüm rezervuarlarıyla\n(insan, hayvan, çevre) birlikte tamamen ve kalıcı olarak yok edilmesidir;\ngünümüzde çiçek hastalığı, eradike edilmiş tek insan hastalığıdır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır. Salgınlarda temel halk sağlığı kuralı 'rutin temel sağlık hizmetlerinin sürekliliğini sağlamak'tır. Eğer rutin çocukluk aşılamaları, gebe takipleri ve kronik hastalık bakımı tamamen lağvedilirse; salgın dışı nedenlere bağlı mortalite (aşırı ölümler - excess mortality) bazen salgının kendi mortalitesini bile aşabilir (Ebola salgınında kızamık ve sıtma ölümlerinin artması gibi). A, B, D ve E seçenekleri ise dayanıklı bir sağlık sisteminin temel direkleridir."
   },
   {
-    "id": "d3-k5-coc-001",
+    "id": "prac-salgin-009",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 9,
-    "slideTitle": "Salgına Yanıt Sisteminin 4 Temel Ayağı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Türkiye'de Sağlık Bakanlığı koordinasyonunda yenidoğan bebeklerden taburcu olmadan önce alınan topuk kanı (Guthrie kartı) ile taranan metabolik ve genetik hastalıklar arasında aşağıdakilerden hangileri yer alır?\n\nI. Konjenital Hipotiroidi\nII. Spinal Müsküler Atrofi (SMA)\nIII. Konjenital Adrenal Hiperplazi (KAH)\nIV. Konjenital Glokom",
+    "slideTitle": "Enfeksiyon Zinciri (Chain of Infection) ve Kırılma Noktaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Enfeksiyon zincirinin basamakları ve halk sağlığı müdahalelerinin etki mekanizmaları dikkate alındığında, aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "I ve II",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız I",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
+      "A) Şebeke suyunun klorlanması — Bulaş yolunun (ortak araç) kesilmesi",
+      "B) Sağlık çalışanlarına hepatit B aşısı yapılması — Duyarlı konağın bağışık hale getirilmesi",
+      "C) Aktif tüberküloz hastasının negatif basınçlı odaya alınması — Çıkış kapısı ve hava yolu bulaşının kontrolü",
+      "D) Sıtma bölgesinde bataklıkların kurutulması ve larvasit uygulanması — Vektör aracılı bulaş yolunun engellenmesi",
+      "E) Kuduz şüpheli köpeğin karantinaya alınması — Duyarlı konak halkasının güçlendirilmesi"
     ],
-    "correctAnswer": "A",
-    "explanation": "Türkiye Ulusal Yenidoğan Tarama Programında topuk kanından taranan 6 hastalık vardır: 1) Fenilketonüri (FKÜ), 2) Konjenital Hipotiroidi (KH), 3) Biyotinidaz Eksikliği, 4) Kistik Fibrozis (KF), 5) Konjenital Adrenal Hiperplazi (KAH) ve 6) Spinal Müsküler Atrofi (SMA). Konjenital glokom topuk kanından taranmaz; göz muayenesi ve kırmızı refle testi ile taranır."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır. Kuduz şüpheli köpeğin karantinaya alınması ve gözlenmesi, enfeksiyon zincirinde 'Duyarlı konak' ile değil; 'Rezervuar/Kaynak' kontrolü ile ilgilidir. A, B, C ve D seçeneklerinde verilen müdahaleler ve hedef aldıkları enfeksiyon zinciri halkaları tamamen doğrudur."
   },
   {
-    "id": "past-1790877479725-612842",
+    "id": "prac-salgin-010",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 10,
-    "slideTitle": "Kurumlar Arası Koordinasyon ve Acil Operasyon Merkezleri (EOC)",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Cerebellum çekirdeklerinden hangisi neocerebellum ile ilgili fonksiyona sahiptir?",
+    "slideTitle": "Epidemiyolojik Temel Tanımlar: Sporadi, Endemi ve Hiperendemi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Halk sağlığı ve enfeksiyon epidemiyolojisinde kullanılan hastalık dağılım kalıpları ile ilgili aşağıdaki tanımlardan hangisi YANLIŞTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Nucleus globosus",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Nucleus fastigii",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Nucleus emboliformis",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nucleus interpositum",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nucleus dentatus",
-        "isCorrect": false
-      }
+      "A) Sporadi: Hastalığın belirli bir coğrafyada tek tük, birbirleriyle bağlantısız ve seyrek aralıklarla ortaya çıkmasıdır.",
+      "B) Endemi: Bir patojenin belirli bir bölgede alışılmış, beklenen olağan taban çizgisi (baseline) düzeyinde sürekli bulunmasıdır.",
+      "C) Hiperendemi: Hastalığın toplumda sürekli olarak çok yüksek insidans ve prevalans düzeyinde seyretmesidir.",
+      "D) Holoendemi: Bir hastalığın yalnızca ileri yaştaki geriatrik nüfusu etkileyip çocuklarda hiçbir enfeksiyon yapmamasıdır.",
+      "E) Epidemi: Bir bölgedeki vaka sayısının o bölge için geçmiş yıllara dayalı beklenen endemik sınırın belirgin üzerine çıkmasıdır."
     ],
-    "correctAnswer": "A",
-    "explanation": "[Klinik & Patolojik Değerlendirme]: Bu soru, Tıbbi Patoloji ders kurulunda amfi slaytlarında vurgulanan temel mekanizmayı sorgulamaktadır. İlgili 3 Diüretik İlaçlar kapsamında doğru yanıt A seçeneğidir. Klinik pratikte ve kurul sınavlarında çeldirici seçeneklerin etki mekanizmaları ve morfolojik bulguları ayırt edici nitelik taşır."
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır. Holoendemi; hastalığın erken çocukluk çağında toplumun neredeyse tamamını etkileyip yüksek prevalans gösterdiği, çocukların enfeksiyonu geçirmesi sonucu erişkin çağda bağışıklık kazandığı (ve bu nedenle erişkinde klinik tablonun seyrekleştiği) durumdur. Geriatrik nüfusla ilişkili bir tanım değildir. A, B, C ve E seçeneklerindeki tanımlar ise tamamen doğrudur."
   },
   {
-    "id": "past-1790877034973-262905",
+    "id": "prac-salgin-011",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 11,
-    "slideTitle": "Sağlık Enformasyonu ve Sürveyans Sistemi: Kişi, Zaman ve Yer",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir bölgede ortaya çıkan yeni bir viral solunum yolu epidemisinde sürveyans ekiplerince yürütülen filyasyon ve tanı çalışmaları sonucunda klinik ve laboratuvar olarak doğrulanmış toplam 250.000 vaka kayıtlara geçmiştir. Takip süresi sonunda bu enfeksiyona bağlı olarak toplam 5.000 hastanın hayatını kaybettiği saptanmıştır.\n\nBuna göre, söz konusu salgının olgu fatalite hızı (vaka-fatalite hızı) yüzde kaçtır?",
+    "slideTitle": "Epidemi (Salgın) ve Pandemi Kavramları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Halk sağlığı prensiplerine göre, aşağıdaki durumların hangisinde yalnızca 'TEK BİR VAKA' görülmesi dahi derhal resmi bir SALGIN (epidemi) olarak kabul edilir ve acil müdahale başlatılır?",
     "options": [
-      {
-        "key": "A",
-        "text": "%2",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "%4",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "%6",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "%10",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "%15",
-        "isCorrect": false
-      }
+      "A) Kış aylarında bir aile sağlığı merkezine bir günde 10 influenza benzeri üst solunum yolu vakası başvurması",
+      "B) Türkiye'de daha önce çocuk felci (polio) eliminasyonu ilan edilmişken, laboratuvarda doğrulanmış vahşi poliovirüs kaynaklı tek bir flask paralizi vakası saptanması",
+      "C) Üniversite kampüsünde bahar aylarında 5 öğrencide alerjik rinit tablosunun görülmesi",
+      "D) Endemik bir bölgede yaz mevsiminde beklenen sayıda kene tutunması vakasının bildirilmesi",
+      "E) Bir fabrikada 2 işçide hafif şiddette gerilim tipi baş ağrısı tespit edilmesi"
     ],
-    "correctAnswer": "A",
-    "explanation": "【Doğrulanmış Tıbbi Gerekçe (Eşleşme: %100)】:\nVaka-fatalite hızı (Case Fatality Rate - CFR), belirli bir hastalık veya salgın sırasında, tanı almış (klinik ve/veya laboratuvar olarak doğrulanmış) vaka sayısı içindeki ölüm sayısının yüzdesi olarak hesaplanır. Formül: (Ölüm Sayısı / Toplam Vaka Sayısı) x 100. Soruda verilen değerlere göre: (5.000 / 250.000) x 100 = 0.02 x 100 = %2. Bu hesaplama halk sağlığı ve epidemiyoloji literatüründe (CDC, WHO, Gordis Epidemiology) standarttır. Amfi slaytları bu spesifik hesaplama sorusuyla doğrudan ilişkili değildir (uyum skoru yüksek olsa da içerik farklı), ancak uluslararası literatür ve temel matematiksel mantık iddia edilen cevabı kesin olarak doğrular.\n\n【Amfi Slayt Referansı】: \"2021final11_230619_142606\" (Slayt #2)\n\n【Klinik İpucu】: Vaka-fatalite hızı (CFR) ile Ölüm Hızı (Mortality Rate) karıştırılmamalıdır. CFR sadece hastalananlar arasındaki ölümleri ölçer (hastalığın şiddetini yansıtır), Ölüm Hızı ise genel popülasyondaki ölümleri ölçer (popülasyon riskini yansıtır). Salgın başlangıcında CFR genellikle yüksek çıkar ve zamanla düşebilir (dengeye oturur)."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Çocuk felci (poliovirüs) gibi eliminasyonu sağlanmış veya çiçek hastalığı gibi eradike edilmiş etkenlerde 'beklenen vaka sayısı SIFIR'dır. Dolayısıyla tek bir doğrulanmış vaka dahi gözlense, gözlenen değer beklenen değerin üzerinde olduğu için doğrudan SALGIN kabul edilir ve derhal acil aşı filyasyon protokolleri başlatılır. A, C, D ve E seçenekleri tek başına acil salgın kriterini karşılamaz."
   },
   {
-    "id": "d3-k6-hal-003",
+    "id": "prac-salgin-012",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 12,
-    "slideTitle": "Risk İletişimi ve İnfodemi ile Mücadele: Üç Altın Kural",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Çalışma yaşamında bir çalışana yönelik sistematik, kasıtlı, düşmanca ve sürekli olarak uygulanan Mobbing (işyerinde psikolojik taciz) davranış kategorileri değerlendirildiğinde aşağıdakilerden hangisi çalışanın \"kendini göstermesini ve iletişimini engellemeye\" yönelik davranışlar grubuna girer?",
+    "slideTitle": "Salgının Epidemik Fazları: Ortaya Çıkıştan Sönmeye",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir toplulukta ortaya çıkan yeni bir bulaşıcı hastalık salgınının evreleri incelendiğinde, vaka sayılarının katlanarak arttığı, hastanelerin kapasitesini zorlayan yaygın toplum içi bulaşın görüldüğü ve ardından duyarlı havuzunun azalmasıyla salgının durduğu fazlar sırasıyla aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Çalışanın sözünün sürekli kesilmesi, yöneticisi tarafından azarlanması, çalışma arkadaşlarıyla konuşmasının yasaklanması ve fikirlerinin dikkate alınmaması",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Çalışanın arkasından asılsız dedikodu çıkarılması ve cinsel imalarda bulunulması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Çalışana anlamsız, kapasitesinin çok altında veya yapamayacağı imkansız görevler verilmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Doğrudan fiziksel şiddet uygulanması veya tehdit edilmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İşyerindeki ortak çalışma alanından uzaklaştırılıp izole odaya hapsedilmesi",
-        "isCorrect": false
-      }
+      "A) Lokal yayılım — İntrodüksiyon",
+      "B) İntrodüksiyon — Eradikasyon",
+      "C) Amplifikasyon — Sönme / Düşüş",
+      "D) Sönme — Eliminasyon",
+      "E) İnkübasyon — Prodromal faz"
     ],
-    "correctAnswer": "A",
-    "explanation": "Leymann tarafından sınıflandırılan mobbing boyutları: 1) Kendini göstermeyi ve iletişimi engelleme (sözünü kesme, bağırma, sürekli eleştirme), 2) Sosyal ilişkilere saldırı (dışlama, izole etme, yok sayma), 3) Sosyal itibara saldırı (dedikodu, iftira, alay etme), 4) Yaşam kalitesi ve mesleki duruma saldırı (niteliksiz iş verme, anlamsız iş verme), 5) Doğrudan sağlığa saldırıdır."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Ders notlarında salgının 4 epidemik fazı net olarak açıklanmıştır: 1. Topluluğa giriş (introdüksiyon), 2. Lokal yayılım, 3. Amplifikasyon (salgının patlaması ve zirve yapması), 4. Toplum bağışıklığı ile sönme. Soruda tanımlanan evreler 3. ve 4. evreler olan Amplifikasyon ve Sönmedir."
   },
   {
-    "id": "d3-k1-enf-036",
+    "id": "prac-salgin-013",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 13,
-    "slideTitle": "Toplumsal Boyut: Sosyokültürel Faktörler ve Toplumun Katılımı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi HIV pozitif anneden bebeğe vertikal bulaş riskini artıran faktörlerden DEĞİLDİR?",
+    "slideTitle": "Salgına Müdahalenin Üç Aşaması: Öngörü, Sınırlama ve Kontrol",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yeni ve ölümcül bir viral patojen şüphesiyle hastaneye başvuran ilk vakanın tespit edildiği bir senaryoda, halk sağlığı ve salgın yönetimi ilkelerine göre izlenmesi gereken EN DOĞRU yaklaşım aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "İkiz gebelik",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Maternal CD4 sayısının yüksek olması",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "AIDS'in eşlik etmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Vajinal doğum",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Uzamış membran rüptürü",
-        "isCorrect": false
-      }
+      "A) Patojenin gen dizilimi ve uluslararası kesin adı onaylanana kadar hiçbir temaslı takibi veya izolasyon yapılmamalıdır.",
+      "B) Patojenin tam mikrobiyolojik özellikleri henüz belirlenmemiş olsa dahi, sınırlama (containment) önlemleri ilk vakanın tespit edildiği anda derhal başlatılmalıdır.",
+      "C) İlk vaka taburcu edilerek toplum içinde amplifikasyon fazının oluşması beklenmelidir.",
+      "D) Sınırlama müdahalelerine ancak vaka sayısı 1000'i aştıktan sonra başlanmalıdır.",
+      "E) Etken bilinmediği için hastaya hiçbir destekleyici tedavi verilmemeli ve sağlık personeli koruyucu ekipman kullanmamalıdır."
     ],
-    "correctAnswer": "B",
-    "explanation": "Anneden bebeğe HIV geçişini (vertikal bulaşı) belirleyen temel etken annedeki viral replikasyon düzeyi ve immün durumudur. Ders notunda riski artıran faktörler AIDS varlığı, CD4 sayısının düşük olması, viral yükün yüksek olması, ikiz bebek, koryoamniyonit, erken membran rüptürü ve emzirme olarak sayılmıştır. Bu nedenle AIDS'in eşlik etmesi (C) ve ikiz gebelik (A) ileri hastalık ile artmış virüs yükünü yansıttığı için riski artırır. Annenin tedavisinde viral yük 1000 kopyanın üzerinde veya bilinmiyorsa 38. haftada sezaryen önerilmesi, vajinal doğumun (D) ve membran rüptürünün (E) bebeğe geçişi kolaylaştırdığını gösterir. Buna karşılık maternal CD4 sayısının yüksek olması korunmuş immün durumu ve genellikle baskılanmış viral yükü gösterir; riski artırmaz, azaltır, bu nedenle 'DEĞİLDİR' sorusunun cevabı B'dir. Ayırt edici ipucu: riski artıran asıl değişken annede yüksek viral yük ve düşük CD4 sayısıdır."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ders notlarında 'Sınırlama ilk vaka teşhis edildiği anda başlamalıdır (patojen tam belirlenmese bile)' ilkesi açıkça ve altı çizilerek belirtilmiştir. Patojenin detaylı analizini beklemek salgının katlanarak yayılmasına neden olur. A, C, D ve E seçenekleri halk sağlığı ilkelerine bütünüyle aykırıdır."
   },
   {
-    "id": "study-q-learn-halk-sagligi-salgin-has-s14",
+    "id": "prac-salgin-014",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 14,
-    "slideTitle": "21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": null,
+    "slideTitle": "Hastalık Kontrol Hedefleri: Kontrol, Eliminasyon ve Eradikasyon",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bulaşıcı hastalıklarla mücadelede 'Eliminasyon' ve 'Eradikasyon' kavramları arasındaki temel fark ve halk sağlığı uygulamalarına yansıması ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
+      "A) Eliminasyon sağlandığında aşılamaya gerek kalmazken, eradikasyonda aşı dozu iki katına çıkarılır.",
+      "B) Eliminasyon tanımlanmış bir coğrafi bölgede vaka insidansının sıfırlanmasıdır ve etken dünyada varlığını sürdürdüğü için aşı/sürveyans önlemleri devam ettirilmelidir; eradikasyon ise küresel kalıcı sıfırlamadır.",
+      "C) İnsanlık tarihinde bugüne kadar tüberküloz, kızamık ve sıtma tamamen eradike edilmiştir.",
+      "D) Eradikasyon yalnızca hayvan popülasyonlarında uygulanabilen bir kavram olup insan tıbbında yeri yoktur.",
+      "E) Bir hastalığın kontrol altına alınması ile eradikasyonu tamamen aynı anlama gelir ve terminolojik farkı yoktur."
     ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, '21. Yüzyılda İletişim Paradigması: Güven İnşası ve Dinleme Sanatı' başlığı altında incelenen bu mekanizma (BUYURGAN DİLİN REDDİ: 21. yüzyılda insanlar artık tek taraflı, otoriter ve buyurgan dili kesinlikle benimsememektedir....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ders notlarında net biçimde ifade edildiği gibi, eliminasyon tanımlanmış bir coğrafi alanda vaka görülmemesidir ancak müdahale önlemleri yeniden ortaya çıkışı önlemek için devam etmelidir. Eradikasyon ise dünya genelinde insidansın kalıcı olarak sıfırlanmasıdır. A yanlıştır (tam tersi). C yanlıştır (eradike edilen tek insan hastalığı çiçektir). D yanlıştır (çiçek eradike edilmiştir). E yanlıştır (kontrol, eliminasyon ve eradikasyon hiyerarşik farklı kavramlardır)."
   },
   {
-    "id": "d3-k1-far-002",
+    "id": "prac-salgin-015",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 15,
-    "slideTitle": "Tedavi, Aşılar ve Destekleyici Bakımın Hayat Kurtaran Gücü",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Romatoid artrit, Crohn hastalığı ve ankilozan spondilit tedavisinde kullanılan, çözünür ve transmembran TNF-alfa'ya yüksek afiniteyle bağlanan kimerik monoklonal antikor (biyolojik ajan) hangisidir?",
+    "slideTitle": "Salgına Müdahalenin Dört Temel Sacayağı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Halk sağlığı yönetiminde bir salgın yanıt sisteminde bulunması zorunlu olan 'Dört Temel Özellik' dikkate alındığında, aşağıdakilerden hangisi bu dört temel bileşenden biri DEĞİLDİR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Siklofosfamid",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İnfliksimab",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Azatioprin",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Prednizolon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metotreksat",
-        "isCorrect": false
-      }
+      "A) Kurumlar arası koordinasyon",
+      "B) Tam ve eksiksiz sağlık enformasyonu",
+      "C) Riski tam ve doğru bir şekilde aktarma (Risk iletişimi)",
+      "D) Tam ve eksiksiz sağlık müdahaleleri",
+      "E) Tüm sınırların süresiz olarak tüm ticari faaliyetlere kapatılması zorunluluğu"
     ],
-    "correctAnswer": "B",
-    "explanation": "İnfliksimab, insan IgG1 sabit bölgesi ve fare değişken bölgesinden oluşan kimerik monoklonal bir anti-TNF-alfa antikorudur ve biyolojik ajan sınıfındadır. Siklofosfamid, azatioprin, prednizolon ve metotreksat ise konvansiyonel (küçük moleküllü kimyasal) immünosüpresiflerdir, monoklonal antikor biyolojik ajan değillerdir."
+    "correctAnswer": 4,
+    "explanation": "E seçeneği yanlıştır. Ders notlarında salgına müdahalenin 4 temel özelliği net olarak sıralanmıştır: 1. Kurumlar arası koordinasyon, 2. Tam ve eksiksiz sağlık enformasyonu, 3. Riski tam ve doğru bir şekilde aktarma, 4. Tam ve eksiksiz sağlık müdahaleleri. Sınırların süresiz ve mutlak kapatılması genel bir sacayak veya zorunlu ilke değildir; Uluslararası Sağlık Tüzüğü (IHR) gereksiz ticari kısıtlamalardan kaçınılmasını tavsiye eder."
   },
   {
-    "id": "d3-k5-hal-015",
+    "id": "prac-salgin-016",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 16,
-    "slideTitle": "Sağlık İşgücünün Korunması ve Sağlık Sisteminin Güçlendirilmesi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Koruyucu hekimlik düzeyleri değerlendirildiğinde aşağıdakilerden hangisi bir \"Birincil (Primer) Koruma\" uygulaması olmayıp \"İkincil (Sekonder) Koruma\" örneğidir?",
+    "slideTitle": "Kurumlar Arası Koordinasyon ve Acil Operasyon Merkezi (EOC)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Salgın hastalık yanıtında 'Kurumlar Arası Koordinasyon'un etkili bir şekilde yürütülmesi için gereken temel operasyonel araç ve mekanizmalarla ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yenidoğanlarda fenilketonüri ve konjenital hipotiroidi için topuk kanı taraması yapılması",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bebeklere çocukluk çağı rutin aşılarının uygulanması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Gebelere ve bebeklere profilaktik demir ve D vitamini desteği verilmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İşyerinde gürültüye karşı kulaklık takılmasının sağlanması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Topluma sağlıklı beslenme ve fiziksel aktivite eğitimi verilmesi",
-        "isCorrect": false
-      }
+      "A) Salgın sırasında tüm kararlar yalnızca tek bir hekim tarafından alınmalı, diğer kurum ve sektörlerle hiçbir temas kurulmamalıdır.",
+      "B) Koordinasyonun başarısı için özel bir Acil Operasyon Merkezi (EOC), dinamik bir ortak eylem planı, irtibat listeleri ve gösterge tabloları (dashboards) kullanılmalıdır.",
+      "C) Ortak eylem planları salgın başlamadan önce hazırlanmalı ve salgın boyunca sahadaki gelişmeler ne olursa olsun asla güncellenmemelidir.",
+      "D) Gösterge tabloları ve haritalama araçları halk sağlığında bilgi kirliliği yarattığı için kullanılmamalıdır.",
+      "E) Farklı sektörlerin (güvenlik, eğitim, ulaştırma) salgın sürecine dahil edilmesi halk sağlığı etiğine tamamen aykırıdır."
     ],
-    "correctAnswer": "A",
-    "explanation": "Primer koruma: Hastalık henüz biyolojik olarak başlamadan önce sağlıklı bireyleri korumaktır (aşılama, beslenme desteği, kişisel koruyucu donanım). Sekonder koruma: Hastalık başlamış ancak henüz klinik belirti vermemişken asemptomatik dönemde erken tanı konulmasıdır (tüm tarama testleri: topuk kanı taraması, mamografi, pap-smear vb.)."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ders notlarında açıkça ifade edildiği üzere: Etkili koordinasyon özel bir fiziksel alan (Acil Operasyon Merkezi), irtibat listeleri ve toplantı izleme sistemi, durum geliştikçe güncellenen ortak bir eylem planı ve iletişim araçları (dashboard, haritalar) gerektirir. A, C, D ve E seçenekleri salgın koordinasyonunun temel mantığına aykırıdır."
   },
   {
-    "id": "d3-k1-hs-004",
+    "id": "prac-salgin-017",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 17,
-    "slideTitle": "Halk Sağlığında Koruma Düzeyleri ve Salgınla İlişkisi",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi birincil koruma değildir?",
+    "slideTitle": "CDC 10 Adımlı Salgın İnceleme Protokolü: Adım 1, 2 ve 3",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir il merkezinde son bir ayda bruselloz tanısı alan hasta sayısının geçmiş 5 yılın ortalamasına göre 3 kat arttığı bildirilmiştir. Yapılan saha incelemesinde hastaneye yeni bir enfeksiyon hastalıkları uzmanının atandığı ve rutin tetkiklere Wright aglütinasyon testini eklediği tespit edilmiştir. Bu durum CDC salgın inceleme protokolünün 2. adımı açısından nasıl yorumlanmalıdır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Bağışıklama",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tansiyon ölçümü",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Aile planlaması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yeterli ve dengeli beslenme",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Sağlık eğitimi",
-        "isCorrect": false
-      }
+      "A) Bu durum kesin bir biyoterörizm atağıdır ve derhal tüm kent karantinaya alınmalıdır.",
+      "B) Gerçek bir vaka artışı olmayıp; hekim farkındalığının ve tanısal taramanın artmasına bağlı 'Yapay Vaka Artışı' (Pseudo-outbreak) olasılığı öncelikle değerlendirilmelidir.",
+      "C) Tanı testi doğrulanmış olduğu için bu durum doğrudan mutlak bir salgındır ve başka incelemeye gerek yoktur.",
+      "D) Hastaların tamamına antibiyotik verilerek araştırma derhal sonlandırılmalıdır.",
+      "E) Bruselloz bildirimi zorunlu bir hastalık olmadığı için bu durum tamamen göz ardı edilmelidir."
     ],
-    "correctAnswer": "B",
-    "explanation": "Birincil (primer) koruma, hastalık henüz ortaya çıkmadan riskleri\nazaltmaya yönelik önlemleri kapsar (bağışıklama, sağlık eğitimi, yeterli-\ndengeli beslenme, aile planlaması gibi). Tansiyon ölçümü ise henüz\nbelirti vermeyen bir hastalığın (hipertansiyonun) erken yakalanmasına\nyönelik bir tarama işlemidir; bu nedenle ikincil (sekonder) koruma\nkapsamına girer."
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. CDC protokolünün 2. adımında salgının varlığı doğrulanırken 'yapay artışlar' (pseudo-outbreak) ekarte edilmelidir. Yeni bir hekimin gelmesi, tanı testinin değiştirilmesi veya taramaların sıklaşması vaka bildirimlerini yapay olarak artırabilir. Gerçek bir salgından söz edebilmek için bu faktörler kontrol edilmeli ve gözlenen vaka sayısının gerçek bir biyolojik artış olup olmadığı saptanmalıdır. A, C, D ve E seçenekleri yanlıştır."
   },
   {
-    "id": "d3-k1-hs-007",
+    "id": "prac-salgin-018",
     "deckId": "learn-halk-sagligi-salgin-has",
-    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
     "slideNumber": 18,
-    "slideTitle": "Büyük Sentez: Salgın Yönetim Algoritması ve Kurul 1 Altın İpuçları",
-    "discipline": "Halk Sağlığı",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde daha fazla görülmesi aşağıdaki\ntanımlardan hangisine karşılık gelir?",
+    "slideTitle": "CDC Salgın Protokolü: Adım 4 ve 5 (Vaka Tanımı ve Vaka Bulma)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir salgın incelemesinde '1-5 Eylül tarihleri arasında X fabrikasının yemekhanesinde öğle yemeği yiyen ve sonrasında ateş, karın ağrısı ile kanlı ishali olan çalışanlar' şeklinde yapılan bir tanımlama, CDC 10 adımlı protokolü açısından öncelikle hangi basamağı ifade etmektedir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Pandemi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Endemi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Epidemi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Sporadik",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Sekülar (saküler) değişim",
-        "isCorrect": false
-      }
+      "A) Hipotez testi için lojistik regresyon modeli kurulması",
+      "B) Kontrol önlemlerinin değerlendirilmesi",
+      "C) Çalışma vaka tanımı (Case definition) oluşturulması",
+      "D) Patojenin biyoterörizm risk skorlaması",
+      "E) Bulaş yoluna yönelik dezenfeksiyon protokolü hazırlanması"
     ],
-    "correctAnswer": "C",
-    "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede,\nbeklenen/alışılmış (bazal) sıklığının belirgin şekilde üzerinde\ngörülmesidir. Endemi bir bölgede sürekli ve alışılmış düzeyde görülmeyi,\npandemi epideminin çok geniş coğrafi alanlara (kıtalar arası)\nyayılmasını, sporadik ise ara sıra tek tük olgular halinde görülmeyi ifade\neder."
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Verilen örnekte zaman (1-5 Eylül), yer (X fabrikası yemekhanesi), kişi (çalışanlar) ve klinik kriterler (ateş, karın ağrısı, kanlı ishal) eksiksiz olarak belirtilmiştir. Bu ifade CDC protokolünün 4. adımı olan 'Çalışma Vaka Tanımının Oluşturulması'dır (Construct a case definition). A, B, D ve E seçenekleri bu tanımlamadan sonraki adımlarla ilgilidir."
+  },
+  {
+    "id": "prac-salgin-019",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 19,
+    "slideTitle": "CDC Salgın Protokolü: Adım 6 (Tanımlayıcı Epidemiyoloji)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir ilçede aniden artan dizanteri vakalarını inceleyen bir halk sağlığı uzmanı, hastaların ev adreslerini ilçe imar planı üzerine işaretlemiş ve vakaların tamamının belediyenin 3 numaralı su deposundan beslenen mahallelerde yoğunlaştığını görmüştür. Bu çalışma CDC protokolünün hangi basamağına ve hangi analiz türüne aittir?",
+    "options": [
+      "A) Adım 1: Saha çalışmasına hazırlık — Finansal planlama",
+      "B) Adım 6: Tanımlayıcı epidemiyoloji — Yer analizi (Nokta Haritası / Spot Map)",
+      "C) Adım 8: Analitik epidemiyoloji — Çift-kör randomize kontrollü deney",
+      "D) Adım 10: Bulguların raporlanması — Tıbbi makale yazımı",
+      "E) Adım 3: Tanıyı doğrulama — Biyokimyasal enzim analizi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vakaların harita üzerine yerleştirilerek mekânsal dağılımın ve kümelenmenin belirlenmesi, CDC protokolünün 6. adımı olan 'Tanımlayıcı Epidemiyoloji' kapsamında 'Yer Analizi'dir ve çizilen bu haritaya 'Nokta Haritası' (Spot Map) adı verilir. Tarihte John Snow'un Broad Street su tulumbasını bulduğu klasik yöntemin aynısıdır."
+  },
+  {
+    "id": "prac-salgin-020",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 20,
+    "slideTitle": "Epidemik Eğriler (Epi-Curve) I: Nokta Kaynaklı Salgınlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir otelde düzenlenen mezuniyet yemeğine katılan 150 kişiden 42'sinde yemekten 3 ila 8 saat sonra ani bulantı, kusma ve karın krampları gelişmiştir. Çizilen epidemik eğride vaka sayısının hızla yükselip tek bir tepe yaptığı, 12. saatten sonra yeni vaka çıkmadığı ve ikincil bulaşın olmadığı görülmüştür. Bu salgının kaynağı ve epidemik eğri tipi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Yayılımlı (Propagated) salgın — Hava yolu bulaşı",
+      "B) Nokta kaynaklı (Point Source) salgın — Ortak kaynaklı tek doz maruziyet",
+      "C) Sürekli ortak kaynaklı salgın — Kesintisiz su şebekesi kontaminasyonu",
+      "D) Aralıklı kaynaklı salgın — Vektör ilişkili bulaş",
+      "E) Holoendemik salgın — Kronik taşıyıcı maruziyeti"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tek bir etkinlikte (mezuniyet yemeği) ortak bir besinin tek doz tüketilmesi, ani ve dik yükseliş, tek bir tepe noktası ve tüm vakaların stafilokokal enterotoksin inkübasyon periyodu (1-8 saat) içine sığarak hızla sonlanması 'Nokta Kaynaklı Salgın'ın (Point Source Outbreak) klasik ve kusursuz tanımıdır. A kişiden kişiye bulaşır; C uzun sürer plato çizer; D aralıklı tepeler yapar."
+  },
+  {
+    "id": "prac-salgin-021",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 21,
+    "slideTitle": "Epidemik Eğriler II: Sürekli ve Aralıklı Ortak Kaynaklı Salgınlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir yerleşim yerinde içme suyu şebekesine kanalizasyon karışması sonucu başlayan Giardia lamblia salgınında, klorlama yapılmadığı için 4 hafta boyunca her gün yeni vakalar ortaya çıkmış ve epidemik eğri uzun bir plato oluşturmuştur. Belediyenin su hattını onarıp süperklorlama yapmasından 3 gün sonra yeni vaka çıkışı tamamen durmuştur. Bu salgının epidemiyolojik tipi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Nokta kaynaklı salgın",
+      "B) Yayılımlı (Propagated) salgın",
+      "C) Sürekli ortak kaynaklı (Continuous Common Source) salgın",
+      "D) Siklik salgın",
+      "E) Mevsimsel endemik varyasyon"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Maruziyetin haftalarca kesintisiz sürmesi, etkenin tek inkübasyon periyodunu aşması, eğrinin geniş bir plato çizmesi ve su şebekesi onarılıp dezenfekte edildiğinde (kaynak kesildiğinde) vakaların aniden sonlanması 'Sürekli Ortak Kaynaklı Salgın'ın (Continuous Common Source) ayırt edici özelliğidir. Nokta kaynakta maruziyet tek seferliktir; yayılımlıda ise kişiden kişiye bulaş dalgaları görülür."
+  },
+  {
+    "id": "prac-salgin-022",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 22,
+    "slideTitle": "Epidemik Eğriler III: Yayılımlı (Propagated) ve Karma Salgınlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir yatılı okulda tek bir öğrencide suçiçeği tanısı konulduktan tam 14 gün sonra 6 öğrencide daha döküntü başlamış, bundan yaklaşık 14 gün sonra ise 25 yeni öğrenci daha hastalanmıştır. Epidemik eğride 14'er günlük aralıklarla yükselen tepecikler gözlenmiştir. Bu salgının yayılma biçimi ve ardışık tepeler arasındaki 14 günlük sürenin epidemiyolojik anlamı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Nokta kaynaklı salgın — Kimyasal intoksikasyon süresi",
+      "B) Yayılımlı (Propagated) salgın — Etkenin ortalama inkübasyon (kuluçka) periyodu",
+      "C) Sürekli ortak kaynaklı salgın — Su borusundaki akış hızı",
+      "D) Aralıklı kaynaklı salgın — İklimsel sıcaklık dalgalanması",
+      "E) Toksik maruziyet — İlaç eliminasyon yarı ömrü"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Suçiçeği gibi damlacık ve temasla insandan insana bulaşan enfeksiyonlarda vakalar ardışık dalgalar halinde yayılır. İki tepe arasındaki zaman farkı (burada 14 gün), suçiçeği virüsünün (Varisella Zoster) ortalama kuluçka süresine (10-21 gün, ortalama 14 gün) denk gelir. Bu durum 'Yayılımlı (Propagated) Salgın'ın en klasik epidemiyolojik kanıtıdır."
+  },
+  {
+    "id": "prac-salgin-023",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 23,
+    "slideTitle": "CDC Salgın Protokolü: Adım 7 ve 8 (Hipotez Oluşturma ve Test Etme)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir şirket pikniğine katılan 100 çalışandan mayonezli tavuk yiyen 60 kişinin 30'u hastalanırken; tavuk yemeyen 40 kişinin yalnızca 2'si hastalanmıştır. Bu salgın incelemesinde tavuk yiyenlerin atak hızı (%60/100 değil, 30/60 = %50) ve tavuk yemenin Bağıl Riski (RR) sırasıyla aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Atak Hızı: %25 — Bağıl Risk: 2.5",
+      "B) Atak Hızı: %50 — Bağıl Risk: 10.0",
+      "C) Atak Hızı: %30 — Bağıl Risk: 1.0",
+      "D) Atak Hızı: %80 — Bağıl Risk: 0.5",
+      "E) Atak Hızı: %5 — Bağıl Risk: 20.0"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Hesaplama: 1. Tavuk yiyenlerde atak hızı = Hastalanan / Toplam tavuk yiyen = 30 / 60 = %50. 2. Tavuk yemeyenlerde atak hızı = Hastalanan / Toplam yemeyen = 2 / 40 = %5 (0.05). 3. Bağıl Risk (Relative Risk - RR) = Maruz kalanların atak hızı / Maruz kalmayanların atak hızı = %50 / %5 = 10.0. Tavuk yiyenlerin hastalanma riski yemeyenlere göre 10 kat fazladır ve tavuk temel bulaş kaynağıdır."
+  },
+  {
+    "id": "prac-salgin-024",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 24,
+    "slideTitle": "CDC Salgın Protokolü: Adım 9 ve 10 (Kontrol Önlemleri ve İletişim)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir ilçede bebeklerde yaygın şekilde görülen Salmonella salgınını araştıran bir epidemiyolog, ilk tanımlayıcı verilerde hastalanan bebeklerin tamamının belirli bir markaya ait aynı parti bebek mamasını tükettiğini saptamıştır. Mikrobiyolojik kültür sonuçlarının çıkmasına henüz 4 gün vardır. CDC salgın inceleme prensiplerine göre bu aşamada yapılması gereken EN DOĞRU hareket tarzı nedir?",
+    "options": [
+      "A) Kültür sonuçları ve analitik regresyon analizleri tamamlanana kadar 4 gün beklenmeli, hiçbir idari müdahale yapılmamalıdır.",
+      "B) Güçlü epidemiyolojik şüphe oluştuğu için söz konusu mama partisinin satışı derhal durdurulmalı, toplatılmalı ve aileler uyarılmalıdır.",
+      "C) Bebeklerin ailelerine ceza kesilmeli ve salgın soruşturması kapatılmalıdır.",
+      "D) Bebek maması üreticisine haber verilerek yeni partiler üretmesi tavsiye edilmelidir.",
+      "E) Soruşturma sonlandırılarak yalnızca 10. adımdaki bilimsel makale yazımına odaklanılmalıdır."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Halk sağlığının ve CDC protokolünün en temel aksiyomu; kontrol önlemlerini başlatmak için tüm laboratuvar süreçlerinin veya akademik raporlamanın bitmesinin BEKLENMEMESİDİR. Güçlü epidemiyolojik kanıt (bebek mamasının ortak tüketimi) elde edildiği anda mama partisi derhal toplatılarak yeni bebeklerin zehirlenmesi önlenmelidir. A, C, D ve E seçenekleri halk sağlığı etiğine ve yaşam hakkına aykırıdır."
+  },
+  {
+    "id": "prac-salgin-025",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 25,
+    "slideTitle": "Epidemiyolojik Sürveyans Türleri: Pasif, Aktif, Sentinel ve Sendromik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir ilde ortaya çıkan kolera salgını şüphesi üzerine, İl Sağlık Müdürlüğü bulaşıcı hastalıklar şubesi hekimlerinin her sabah tüm kamu ve özel hastane acil servislerini, mikrobiyoloji laboratuvarlarını ve poliklinikleri bizzat ziyaret ederek veya telefonla arayarak son 24 saatteki sulu ishal vakalarını tek tek kaydetmesi, hangi epidemiyolojik sürveyans yönteminin doğrudan örneğidir?",
+    "options": [
+      "A) Pasif sürveyans",
+      "B) Aktif sürveyans",
+      "C) Nöbetçi (Sentinel) sürveyans",
+      "D) Serolojik sürveyans",
+      "E) Kohort sürveyansı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sağlık otoritesinin hekimlerden bildirim formu gelmesini pasif şekilde beklemeyip, sahayı ve hastaneleri bizzat ziyaret ederek veya arayarak vakaları sistemli biçimde araması ve toplaması 'Aktif Sürveyans'ın (Active Surveillance) tanımıdır. Pasif sürveyansta bildirim klinisyenin rutin inisiyatifine bırakılır; sentinel sürveyansta ise sadece seçilmiş temsilci merkezler kullanılır."
+  },
+  {
+    "id": "prac-salgin-026",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 26,
+    "slideTitle": "Bulaşıcı Hastalıkların Bildirim Sistemleri: Grup A, B, C ve D",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Türkiye Bulaşıcı Hastalıklar Bildirim Sistemi ve Uluslararası Sağlık Tüzüğü (IHR) kapsamında; şüphesi dahi duyulduğunda en seri vasıta ile (telefon/faks) 24 saat içinde Bakanlığa ve DSÖ'ye bildirilmesi zorunlu olan 'Grup B Hastalıklar' arasında aşağıdakilerden hangisi YER ALMAZ?",
+    "options": [
+      "A) Kolera",
+      "B) Veba",
+      "C) Çiçek",
+      "D) Sarıhumma",
+      "E) Demir eksikliği anemisi"
+    ],
+    "correctAnswer": 4,
+    "explanation": "E seçeneği doğrudur. Demir eksikliği anemisi bulaşıcı bir hastalık değildir ve bildirim gruplarında yer almaz. Kolera, Veba, Çiçek ve Sarıhumma; uluslararası öneme haiz, 24 saat içinde en hızlı iletişim kanallarıyla bildirimi yasal olarak zorunlu olan klasik 'Grup B Bulaşıcı Hastalıklar'dır. Akut flask paralizi (polio) ve viral hemorajik ateşler de bu acil grupta yer alır."
+  },
+  {
+    "id": "prac-salgin-027",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 27,
+    "slideTitle": "Enfeksiyon Kontrol Stratejileri I: Kaynağa Yönelik Önlemler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bulaşıcı hastalıklarla mücadelede uygulanan aşağıdaki halk sağlığı müdahalelerinden hangisi 'KAYNAĞA YÖNELİK' önlemler sınıfında YER ALMAZ?",
+    "options": [
+      "A) Akut tüberküloz hastasının tespit edilerek negatif basınçlı odaya izole edilmesi",
+      "B) Restoran mutfağında aşçı olarak çalışan asemptomatik Salmonella typhi portörünün saptanıp tedavi edilmesi",
+      "C) Şehir içme suyu şebekesinin klorlanması ve su borularının dezenfeksiyonu",
+      "D) Kuş gribi salgını çıkan bir çiftlikteki enfekte tavukların itlaf edilmesi",
+      "E) Kuduz şüpheli hayvanın 10 gün boyunca karantinada müşahede altında tutulması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Şehir içme suyu şebekesinin klorlanması ve su sanitasyonu, enfeksiyon kaynağını değil; kaynağın sağlam kişilere ulaşmasını sağlayan 'BULAŞ YOLUNU' hedef alan bir önlemdir. A (hastanın izolasyonu), B (taşıyıcı/portör kontrolü), D (enfekte hayvan rezervuarının itlafı) ve E (hayvan kaynağın müşahedesi) doğrudan kaynağa yönelik önlemlerdir."
+  },
+  {
+    "id": "prac-salgin-028",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 28,
+    "slideTitle": "Enfeksiyon Kontrol Stratejileri II: Bulaş Yoluna Yönelik Önlemler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bir halk sağlığı biriminin bir köyde bruselloz salgınını önlemek amacıyla köylülere 'çiğ sütten peynir yapmamalarını, sütü mutlaka pastörize etmelerini veya kaynatmalarını' öğretmesi ve denetlemesi, enfeksiyon zincirinde öncelikle hangi halkayı kırmaya yöneliktir?",
+    "options": [
+      "A) Duyarlı konağın genetik direncini artırma",
+      "B) Patojenin bulaş yolunu (gıda aracılı geçiş) kesme",
+      "C) Patojenin rezervuarını itlaf etme",
+      "D) Hastalara kemoprofilaksi uygulama",
+      "E) Pasif bağışıklık sağlama"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sütün kaynatılması veya pastörize edilmesi, enfekte hayvan rezervuarını (koyun/keçi) doğrudan tedavi etmez; ancak sütün içindeki Brucella bakterilerini öldürerek gıda yoluyla insana ulaşmasını, yani 'BULAŞ YOLUNU' engeller. A, D ve E sağlam kişiye yönelikken; C hayvan rezervuarına yöneliktir."
+  },
+  {
+    "id": "prac-salgin-029",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 29,
+    "slideTitle": "Enfeksiyon Kontrol Stratejileri III: Duyarlı Konağa Yönelik Önlemler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Acil servise getirilen ve Neisseria meningitidis kaynaklı meningokoksik menenjit tanısı kesinleşen bir hastanın aynı evde yaşayan anne, baba ve kardeşlerine hastalık belirtileri ortaya çıkmadan önce oral rifampisin başlanması, enfeksiyon kontrolünde hangi stratejiye doğrudan örnektir?",
+    "options": [
+      "A) Rezervuarın itlafı",
+      "B) Bulaş yoluna yönelik su dezenfeksiyonu",
+      "C) Duyarlı temaslılara yönelik kemoprofilaksi",
+      "D) Pasif bağışıklama ile antikor transferi",
+      "E) Sendromik sürveyans bildirimi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Bulaşıcı bir hastalıkla yakın temas eden ancak henüz semptom göstermeyen duyarlı kişilere hastalığın yerleşmesini önlemek amacıyla antibiyotik (rifampisin, siprofloksasin veya seftriakson) verilmesi 'Kemoprofilaksi' (Chemoprophylaxis) uygulamasıdır ve duyarlı konağa yönelik koruyucu bir önlemdir. A hayvan kaynağı içindir; B bulaş yoluna yöneliktir; D aşı/serum değildir (ilaçtır)."
+  },
+  {
+    "id": "prac-salgin-030",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 30,
+    "slideTitle": "Hukuki ve Etik Boyut: Karantina ve İzolasyon Ayrımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Halk sağlığı mevzuatı ve enfeksiyon epidemiyolojisinde 'Karantina' ve 'İzolasyon' uygulamalarının hedefleri ve süreleri ile ilgili aşağıdaki karşılaştırmalardan hangisi KESİNLİKLE DOĞRUDUR?",
+    "options": [
+      "A) Karantina hasta kişilere uygulanırken; izolasyon sağlıklı temaslılara uygulanır.",
+      "B) İzolasyon süresi patojenin en uzun inkübasyon süresi kadardır; karantina ise ömür boyu sürer.",
+      "C) İzolasyon klinik olarak enfekte/hasta bireylere bulaştırıcılık süresi boyunca uygulanır; Karantina ise temas etmiş sağlıklı kişilere en uzun inkübasyon periyodu boyunca uygulanır.",
+      "D) Karantina yalnızca hayvanlara uygulanan bir yöntem olup insanlarda hukuken yasaktır.",
+      "E) İzolasyon uygulanan bir kişiye asla tıbbi tedavi verilemez."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Tıbbi ve yasal tanımlara göre: İzolasyon (tecrit), semptomatik veya kanıtlanmış HASTA bireylerin hastalığın bulaştırıcılık süresi boyunca sağlıklı toplumdan ayrılmasıdır. Karantina ise patojene maruz kaldığından şüphelenilen ancak henüz SEMPTOMSUZ/SAĞLIKLI olan temaslı bireylerin, etkenin en uzun inkübasyon (kuluçka) süresi boyunca gözlem altında tutulması veya hareketlerinin kısıtlanmasıdır. A, B, D ve E seçenekleri yanlıştır."
+  },
+  {
+    "id": "prac-salgin-031",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 31,
+    "slideTitle": "Bulaş Dinamikleri Matematiği: R0, Re ve Kritik Aşılama Oranı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yeni ortaya çıkan bir grip virüsünün temel üreme sayısı ($R_0$) 2.0 olarak hesaplanmıştır. Bu patojenin toplumda yayılmasını durdurmak ve toplum bağışıklığı eşiğine (Herd Immunity Threshold - HIT) ulaşmak için toplumun en az yüzde kaçının bağışık (aşılı veya hastalığı geçirmiş) olması gerekir?",
+    "options": [
+      "A) %20",
+      "B) %33",
+      "C) %50",
+      "D) %75",
+      "E) %95"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Toplum Bağışıklığı Eşiği (Herd Immunity Threshold - HIT) matematiksel formülü: HIT = 1 - (1 / R0) şeklindedir. Soruda verilen R0 = 2.0 değerini formülde yerine koyarsak: HIT = 1 - (1 / 2.0) = 1 - 0.50 = 0.50, yani %50 olarak bulunur. Toplumun en az %50'si bağışık hale geldiğinde Efektif Üreme Sayısı (Re) 1'in altına düşer ve salgın sönme eğilimine girer."
+  },
+  {
+    "id": "prac-salgin-032",
+    "deckId": "learn-halk-sagligi-salgin-has",
+    "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma Yöntemleri",
+    "slideNumber": 32,
+    "slideTitle": "Risk İletişimi, İnfodemi Yönetimi ve Destekleyici Bakım",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "2014 Batı Afrika Ebola salgınında spesifik bir antiviral tedavi veya ruhsatlı aşı bulunmamasına rağmen, hastaların vaka-fatalite hızının %75'ten %33'e dramatik şekilde düşürülmesini sağlayan temel halk sağlığı ve klinik müdahale faktörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hastalara yüksek doz geniş spektrumlu antibiyotik başlanması",
+      "B) Nitelikli sağlık personeli tarafından zamanında sağlanan agresif sıvı-elektrolit tedavisi ve kaliteli klinik destekleyici bakım",
+      "C) Tüm hastaların tedaviden mahrum bırakılarak doğal seleksiyona terk edilmesi",
+      "D) Hastane binalarının yıkılarak yerine açık hava kampları kurulması",
+      "E) Ebola virüsünün kendiliğinden genetik mutasyonla tamamen zararsız hale gelmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ders notlarında açıkça vurgulandığı üzere: 'Belirli bir hastalık için spesifik bir tedavi bulunmadığında bile, yeterli klinik önleyici yöntemler hayatları koruyabilir ve kurtarabilir. Bu durum 2014 yılında Batı Afrika'da Ebola'dan ölümlerde hastalar için daha iyi destekleyici bakım sağlanarak mortalitenin %75'ten %33'e düşürülmesi ile kanıtlanmıştır.' A yanlıştır (Ebola virüstür, antibiyotik etki etmez). C, D ve E seçenekleri bilimsel ve insani açıdan geçersizdir."
   },
   {
     "id": "prac-hucre-001",
@@ -1756,1207 +2298,5 @@
     ],
     "correctAnswer": 0,
     "explanation": "Doğru yanıt A'dır. Fibrinoid nekroz, arter duvarlarına immün komplekslerin ve plazma fibrininin çökmesiyle karakterize parlak eozinofilik amorf bir nekroz şeklidir ve sistemik nekrotizan bir vaskülit olan Poliarteritis Nodoza'nın (PAN) ve malign hipertansiyonun en karakteristik histopatolojik bulgusudur. Tüberküloz kazeöz nekroz, ateroskleroz distrofik kalsifikasyon/steatoz, serebral enfarkt likefaksiyon nekrozu ile gider."
-  },
-  {
-    "id": "prac-hucre-034",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 34,
-    "slideTitle": "Nekrozun Klinik ve Laboratuvar Belirteçleri: Dokudan Kana Sızan Proteinler",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Akut koroner sendrom şüphesiyle acil servise başvuran bir hastada kardiyak miyositlerin irreversibl nekroza uğradığını ve plazma zarlarının parçalandığını kanıtlamada kullanılan Kardiyak Troponin I ve T belirteçlerinin total Laktat Dehidrogenaz (LDH) veya AST'ye kıyasla klinik tanıda ALTIN STANDART kabul edilmesinin TEMEL NEDENİ aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Troponinlerin yalnızca hücre içi glikolizde görev alan basit enzimler olması",
-      "B) Troponin I ve T'nin kardiyak miyosit kasılma aparatına özgü izoformlar olması ve kardiyak doku spesifitelerinin son derece yüksek bulunması",
-      "C) Troponinin plazma zarından aktif transportla enerji harcanarak dışarı atılması",
-      "D) LDH enziminin yalnızca karaciğerde bulunup kalpte hiç yer almaması",
-      "E) Troponinlerin nükleer DNA replikasyonunu kontrol eden transkripsiyon faktörleri olması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Kardiyak Troponin I ve Troponin T (cTnI ve cTnT), kardiyak kas hücrelerine özgü aminoasit dizilimlerine sahip yapısal proteinlerdir. Diğer dokularda bulunmadıkları için kardiyak nekroza özgüllükleri (spesifiteleri) ve duyarlılıkları LDH veya AST gibi pek çok dokuda bulunan genel enzimlere kıyasla kat kat üstündür ve altın standarttır."
-  },
-  {
-    "id": "prac-hucre-035",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 35,
-    "slideTitle": "Endoplazmik Retikulum Stresi ve Yanlış Katlanmış Protein Birikimi",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Alzheimer hastalığı ve Parkinson hastalığı gibi nörodejeneratif hastalıklarda nöronların ilerleyici kaybında rol oynayan 'Endoplazmik Retikulum (ER) Stresi' patogenezi ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) ER stresinde hücreler derhal plazma membranını parçalayarak likefaksiyon nekrozu başlatır.",
-      "B) Yanlış katlanmış protein yükü adaptif kapasiteyi aştığında CHOP transkripsiyon faktörü aktive olarak mitokondriyal apoptozu tetikler.",
-      "C) Şaperon proteinleri yanlış katlanmış proteinleri nükleus içine taşıyarak DNA replikasyonunu hızlandırır.",
-      "D) Katlanmamış protein yanıtı (UPR) hücrede protein sentezini 10 katına çıkararak ER'yi aşırı doldurur.",
-      "E) ER stresinin nöronlarda hücre ölümüyle hiçbir ilişkisi yoktur, tamamen fizyolojik bir enerji depolamadır."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. ER stresi şiddetli ve ısrarcı olduğunda hücrenin adaptif mekanizmaları (UPR) yetersiz kalır. Bu aşamada ER sensörleri CHOP (C/EBP homologous protein) transkripsiyon faktörünü ve BH3-only pro-apoptotik proteinleri aktive eder; sonuçta mitokondriyal içsel yol üzerinden kaspazlar aktive olur ve hücre apoptoza gider."
-  },
-  {
-    "id": "prac-hucre-036",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 36,
-    "slideTitle": "Apoptoza Giriş: Programlı Ölüm, Fizyolojik ve Patolojik Roller",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Apoptozun fizyolojik ve patolojik rolleri ile morfolojik nitelikleri değerlendirildiğinde, aşağıdaki durumlardan hangisi FİZYOLOJİK BİR APOPTOZ SÜRECİNE örnek verilebilir?",
-    "options": [
-      "A) İyonize radyasyona maruz kalan hücrelerde p53 aracılığıyla hücre intiharının tetiklenmesi",
-      "B) Viral hepatit zemininde sitotoksik CD8+ T lenfositlerin hepatositleri yok ederek Councilman cisimciği oluşturması",
-      "C) Laktasyon (emzirme) dönemi sona eren bir kadında meme bezi epitelinin hormon çekilmesine bağlı olarak gerilemesi (involüsyonu)",
-      "D) Alzheimer hastalarında amiloid plakları etrafındaki nöronların ER stresi ile ölmesi",
-      "E) Duktusu taşla tıkanan parotis bezinde glandüler epitelin progresif atrofisi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Laktasyon bitiminde prolaktin ve östrojen/progesteron uyarısının çekilmesiyle meme epiteli fizyolojik hormon çekilmesi apoptozu ile küçülür ve involüsyona uğrar. Benzer şekilde menstrüasyonda endometriyum dökülmesi de fizyolojiktir. A, B, D ve E seçeneklerindeki durumlar (DNA hasarı, viral hepatit, nörodejenerasyon, duktus obstrüksiyonu) ise patolojik koşullarda tetiklenen apoptoz örnekleridir."
-  },
-  {
-    "id": "prac-hucre-037",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 37,
-    "slideTitle": "Apoptozun Morfolojisi ve Biyokimyasal Kaskadı",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bir doku kültürü deneyinde apoptoza girmekte olan hücrelerin makrofajlar tarafından çevre dokuda hiçbir yangısal reaksiyon oluşturulmaksızın hızla tanınmasını ve fagositozla yutulmasını (efrositoz) sağlayan EN KRİTİK MEMBRAN DEĞİŞİKLİĞİ aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Plazma zarının parçalanarak DAMP moleküllerinin ekstrasellüler alana saçılması",
-      "B) Normalde plazma zarının iç yaprağında bulunan fosfatidilserinin dış yaprağa ters dönmesi (flip-flop)",
-      "C) Zardaki sodyum-potasyum pompasının aşırı miktarda kalsiyum salgılaması",
-      "D) Membran kolesterolünün tamamen eriyerek nötrofilleri çekmesi",
-      "E) Endoplazmik retikulumun hücre dışına fırlatılarak makrofajı uyarması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Apoptoz sürecinde plazma zarının iç yaprağında yer alan fosfatidilserin molekülleri dış yaprağa transloke olur (flip-flop). Dış yüzeye çıkan fosfatidilserin makrofaj reseptörleri tarafından tanınan en temel 'beni ye' (eat-me) sinyalidir ve hücrelerin yangısız fagositozunu sağlar. A şıkkı nekrozun özelliğidir."
-  },
-  {
-    "id": "prac-hucre-038",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 38,
-    "slideTitle": "Mitokondriyal (İçsel) Apoptoz Yolağı ve BCL-2 Gen Ailesi",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Mitokondriyal (içsel) apoptoz yolağında, pro-apoptotik BAX ve BAK proteinlerinin mitokondri dış membranında oligomerize olarak gözenek açması sonucunda sitoplazmaya salınan ve sitozolde APAF-1 ile birleşerek 'apoptozom' kompleksini oluşturan kritik molekül aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sitokrom c",
-      "B) Malat dehidrogenaz",
-      "C) Süperoksit dismutaz",
-      "D) Kalsiyum fosfat kristalleri",
-      "E) Sitokrom P450 monooksijenaz"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Mitokondriyal içsel yolakta BAX ve BAK dış mitokondri zarını geçirgenleştirdiğinde zarlar arası boşlukta bulunan 'Sitokrom c' sitoplazmaya sızar. Sitokrom c sitozolde APAF-1 proteini ile bir araya gelerek heptamerik çark benzeri 'Apoptozom' kompleksini oluşturur ve prokaspaz-9'u aktive eder."
-  },
-  {
-    "id": "prac-hucre-039",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 39,
-    "slideTitle": "Ölüm Reseptörü (Dışsal) Apoptoz Yolağı ve Kaspaz Kaskadı",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Ölüm reseptörü aracılı (dışsal) apoptoz yolağında, Fas Ligandının (FasL) hedef hücre yüzeyindeki Fas (CD95) reseptörüne bağlanması sonrasında FADD adaptör proteini ile prokaspaz moleküllerinin bir araya gelmesiyle oluşan ve BAŞLATICI KASPAZ-8'in aktifleşmesini sağlayan multiprotein sinyal kompleksi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Apoptozom",
-      "B) İnflamazom",
-      "C) DISC (Death-Inducing Signaling Complex)",
-      "D) Proteazom",
-      "E) Splisozom"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Dışsal apoptoz yolağında Fas (CD95) reseptörünün uyarılmasıyla reseptör ölüm alanı, FADD adaptör proteini ve prokaspaz-8 bir araya gelerek 'DISC' (Death-Inducing Signaling Complex / Ölüm İndükleyici Sinyal Kompleksi) yapısını oluşturur ve kaspaz-8'i aktive eder. Apoptozom içsel yola aittir (APAF-1 + sitokrom c + kaspaz-9); inflamazom piroptozda rol oynar."
-  },
-  {
-    "id": "prac-hucre-040",
-    "deckId": "learn-hucre-hasari-hucre-olumu",
-    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
-    "slideNumber": 40,
-    "slideTitle": "Nekroz ile Apoptozun Karşılaştırılması ve Yeni Hücre Ölümü Biçimleri",
-    "discipline": "Tıp",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hücre ölümü biçimleri karşılaştırıldığında; hücre içi patojenlerin varlığında intrasellüler İNFLAMAZOM kompleksinin uyarılması, KASPAZ-1 enziminin aktifleşmesi, Gazdermin D gözeneklerinin açılması ve ortama masif miktarda İNTERLÖKİN-1 (IL-1β) salınarak şiddetli yangı ve ateş oluşturulmasıyla karakterize programlı hücre ölümü biçimi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Apoptoz",
-      "B) Koagülatif nekroz",
-      "C) Piroptoz (Pyroptosis)",
-      "D) Kazeöz nekroz",
-      "E) Otofaji"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Piroptoz (Pyroptosis), mikrobiyal enfeksiyonlara yanıt olarak gelişen yangısal bir programlı hücre ölümüdür. İntrasellüler inflamazom kompleksi prokaspaz-1'i aktive eder. Kaspaz-1 ise hem prokaspaz kaynaklı pro-IL-1β'yı aktif IL-1β'ya dönüştürür hem de Gazdermin D'yi keserek plazma zarında gözenekler açar; sonuçta hücre lize olur, çevreye IL-1 ve IL-18 saçılarak yoğun yangı ve ateş tablosu ortaya çıkar."
-  },
-  {
-    "id": "d3-k1-pat-031-269",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 1,
-    "slideTitle": "Hücre ve Biyolojik Homeostazın Dinamik Dengesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-001",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 2,
-    "slideTitle": "Hücresel Stres Spektrumu ve Temel Yanıt Paternleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Parasetamol (asetaminofen) toksisitesinde hepatositlere doğrudan hasar veren toksik ara metabolit hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "NAPQI (N-asetil-p-benzokinonimin)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Asetaldehit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Etanol",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Salisilat",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Morfin",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
-  },
-  {
-    "id": "d3-k4-gog-007",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 3,
-    "slideTitle": "Hücresel Adaptasyonun Biyolojik Tanımı ve Amacı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Bronşiyal astım tanısında hava yolu obstrüksiyonunun değişkenliğini ve geri dönüşümlü olduğunu göstermek için uygulanan erken reversibilite testinde pozitif yanıt kriteri hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İnhale kısa etkili beta-2 agonist (400 mcg salbutamol) sonrası FEV1 değerinde en az %12 VE 200 mL artış saptanması",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "FEV1 değerinde sadece 50 mL artış olması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "FVC değerinde %5 azalma görülmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "FEV1/FVC oranının %50'nin altına inmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "PEF değişkenliğinin <%5 olması",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "GINA kılavuzlarına göre astımda bronkodilatör reversibilite kriteri: Kısa etkili beta-2 agonist inhalasyonundan 10-15 dakika sonra FEV1'de bazale göre en az %12 VE mutlak olarak en az 200 mL düzelme olmasıdır."
-  },
-  {
-    "id": "d3-k1-pat-031-272",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 4,
-    "slideTitle": "Fizyolojik ve Patolojik Adaptasyonun Temel Ayrımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-031-273",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 5,
-    "slideTitle": "Başlıca Dört Hücresel Adaptasyon Tipi: Karşılaştırmalı Matris",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-031-274",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 6,
-    "slideTitle": "Hipertrofi: Tanım ve Hücresel/Organel Mekanizmaları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-k1-enf-047",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 7,
-    "slideTitle": "Fizyolojik Hipertrofi: Gebelik Uterusu ve İskelet Kası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi kadınlarda idrar yolu enfeksiyonu için risk faktörü DEĞİLDİR?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Östrojen fazlalığı",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Prostatik sekresyonların olmaması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Üretranın kısa olması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hamilelik",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Düşük sosyoekonomik durum",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Östrojen, vajinal epitelde laktobasil kolonizasyonunu destekleyerek\nasidik pH'ı korur ve patojen kolonizasyonunu engelleyerek üriner sistemi\nÜSE'ye karşı korur; bu nedenle östrojen eksikliği (fazlalığı değil) -özellikle\npostmenopozal dönemde- İYE riskini artırır. Kadınlarda üretranın kısa\nolması, erkeklerdeki antibakteriyel prostat sekresyonlarının\nbulunmaması, gebelik (üreter dilatasyonu, staz) ve düşük\nsosyoekonomik düzey (hijyen, sağlık hizmetine erişim) ise bilinen risk\nfaktörleridir."
-  },
-  {
-    "id": "d3-k4-pat-005",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 8,
-    "slideTitle": "Patolojik Hipertrofi: Miyokard Hipertrofisi ve Morfoloji",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hipertrofik Kardiyomiyopatinin (HKMP) histopatolojik incelemesinde miyokard dokusunda görülen en karakteristik mikroskobik morfolojik bulgu hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yaygın intersellüler amiloid birikimi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Miyosit liflerinin paralel diziliminin tamamen bozularak helezonik, kaotik ve çaprazlaşan yönlerde dizilmesi (Miyosit Disarray / Dezorganizasyonu) ve interstisyel fibrozis",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Yaygın lenfositik infiltrasyon ve kazeöz nekroz",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Miyosit sitoplazmasında demir birikimi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kardiyak sarkoidoz granülomları",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "HKMP'nin patognomonik histolojik bulgusu 'miyosit disarray'dir (miyositlerin yönelim bozukluğu / kaotik dallanması). Normal paralel hiyerarşi kaybolmuştur, aralarda yoğun kollajenöz fibrozis bulunur; bu zemin fatal ventriküler aritmilerin ana kaynağıdır."
-  },
-  {
-    "id": "d3-k1-pat-002-277",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 9,
-    "slideTitle": "Kardiyak Hipertrofinin Moleküler Sinyal Yolakları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Neoplaziler ile ilgili aşağıdakilerden hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Karsinomlar daha çok kan damarı yoluyla yayılır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan dolaşımı yoluyla metastazlar en çok iskelet kasına olur",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tümör diferansiyasyonu arttıkça normal hücrelere benzerliği azalır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kan damarı yoluyla metastazlar daha çok arter yoluyla olur",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Benign tümörler bazen malign tümörlerden daha hızlı büyüyebilir",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
-  },
-  {
-    "id": "d3-k1-pat-021",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 10,
-    "slideTitle": "Hipertrofiden Dekompansasyona ve Kalp Yetmezliğine Geçiş Sınırları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi plazma onkotik basıncını azaltan durumlardan biri değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
-  },
-  {
-    "id": "d3-k1-pat-014",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 11,
-    "slideTitle": "Hiperplazi: Tanım, Gereksinimler ve Hücresel Temeller",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi Graft versus Host Hastalığını (GVHH) tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Vericinin T hücrelerinin alıcının dokusunu yabancı olarak tanıyıp ona reaksiyon vermesi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Greftteki Class I MHC moleküllerini tanıyan konak CD8+ T hücrelerinin aktivasyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Konak CD4+ T hücrelerinin, işlenip sunulan verici moleküllerini tanıyıp reaksiyon vermesi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Konak CD4+ Th hücrelerinin, vericideki Class II moleküllerini tanıyarak proliferasyon ve sitokin oluşumuyla iltihabi reaksiyona neden olması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Hiçbiri",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Graft-versus-Host Hastalığı, özellikle kemik iliği/kök hücre naklinde, nakledilen greft içindeki immünkompetan verici T lenfositlerinin, immünsüprese alıcının (konağın) dokularını yabancı antijen olarak tanıyıp bu dokulara karşı immün reaksiyon başlatmasıyla oluşur. Diğer şıklardaki tanımlar ise konak lenfositlerinin greft dokusunu reddettiği (graft rejeksiyonu) mekanizmalarını tarif etmektedir; bunlar GVHH&apos;nin tam tersi süreçlerdir."
-  },
-  {
-    "id": "study-q-learn-hucresel-adaptasyon-ve-hu-s12",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 12,
-    "slideTitle": "Fizyolojik Hiperplazi: Hormonal ve Kompansatuar Tipler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Fizyolojik Hiperplazi: Hormonal ve Kompansatuar Tipler sürecinde bu basamak hastalığın patogenezinde veya fizyolojik kontrolünde primer anahtar rolü üstlenir.",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Bu süreçte gerçekleşen morfolojik değişiklikler yalnızca geri dönüşümsüz (irreversibl) evrede ortaya çıkar.",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bu tabloda klinik semptomların ortaya çıkması için sistemik antikor yanıtının tamamlanması zorunludur.",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Bu moleküler kaskad yalnızca genetik mutasyon zemininde tetiklenir, fizyolojik durumlarda gözlenmez.",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Bu patolojide hücresel hasar organel bütünlüğü korunarak yalnızca ekstraselüler alanda sınırlı kalır.",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Fizyolojik Hiperplazi: Hormonal ve Kompansatuar Tipler' başlığı altında incelenen bu mekanizma (1. HORMONAL HİPERPLAZİ: Puberte ve gebelikte dişi meme glandüler epitelinin çoğalması; menstrüel döngüde östrojenle endometrium proliferasyo...) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
-  },
-  {
-    "id": "d3-k1-pat-071",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 13,
-    "slideTitle": "Patolojik Hiperplazi: Hormon ve Büyüme Faktörü Dengesizliği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Benign prostat hiperplazisinin (BPH) patogenezinde prostatik stromal ve epitelyal hücre proliferasyonunun ana medyatörü hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Testosteron",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Dihidrotestosteron (DHT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Östrojen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Prolaktin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Insülin benzeri büyüme faktörü (IGF-1)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "BPH&apos;nin patogenezinde ana medyatör dihidrotestosterondur (DHT); testosteron, prostat stromal hücrelerinde bulunan 5-alfa redüktaz tip 2 enzimi tarafından DHT&apos;ye dönüştürülür. DHT, androjen reseptörüne testosterondan daha yüksek afinite ile bağlanarak büyüme faktörlerinin (özellikle FGF ve TGF-beta ailesi) salınımını uyarır ve hem stromal hem epitelyal hücre proliferasyonunu artırırken apoptozu azaltır. Bu mekanizma, 5-alfa redüktaz inhibitörlerinin (finasterid gibi) BPH tedavisinde kullanılmasının bilimsel temelidir."
-  },
-  {
-    "id": "d3-k1-pat-057",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 14,
-    "slideTitle": "Hiperplazi ve Kanser (Neoplazi) İlişkisi: Biyolojik Ayrım",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Endometrial karsinomlarla ilgili aşağıdakilerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tip 1 endometrial karsinomların prototipi endometrioid karsinomlardır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Tip 1 endometrial karsinomların prekürsör lezyonu, atipili endometrial hiperplazidir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Endometrioid karsinomun patogenezinde PTEN genindeki germline mutasyonlar ve uyuşmazlık tamir genleri rol oynar",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Tip 2 endometrial karsinomların prototipi seröz karsinomlardır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Seröz karsinomların prognozu endometrioid karsinomlara göre daha kötüdür",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Endometrioid (Tip 1) karsinomun patogenezinde PTEN genindeki değişiklikler tipik olarak SOMATİK mutasyonlardır, germline (kalıtsal) mutasyonlar değildir; germline PTEN mutasyonu nadir görülen Cowden sendromuna özgüdür ve sporadik endometrioid karsinomların genel patogenezini tanımlamaz, bu nedenle bu ifade yanlıştır. Tip 1 karsinomların prototipi östrojene bağlı endometrioid karsinom olup atipili hiperplaziden gelişir; Tip 2&apos;nin prototipi ise TP53 mutasyonlu, atrofik endometriyum zemininde gelişen seröz karsinomdur ve prognozu daha kötüdür."
-  },
-  {
-    "id": "d3-k1-pat-031-283",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 15,
-    "slideTitle": "Atrofi: Tanım ve Makroskopik/Mikroskopik Morfoloji",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-039",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 16,
-    "slideTitle": "Atrofinin Etiyolojik Nedenleri ve Klinik Paternleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Böbrekte &apos;tiroidizasyon&apos; bulgusu görüldüğü patoloji hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kronik Pyelonefrit",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Nekrotizan Papillit",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Perinefritik Apse",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Piyonefroz",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Fokal Segmentel Glomeruloskleroz",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Kronik pyelonefritte, tekrarlayan enfeksiyon ve skarlaşma sürecinde bazı tübüller atrofiye uğrayarak dilate olur ve içlerinde eozinofilik kolloid benzeri silendirler birikir; bu görünüm mikroskopik olarak tiroid folikülüne benzediği için &apos;tiroidizasyon&apos; olarak adlandırılır. Bu bulgu kronik pyelonefritin karakteristik histopatolojik özelliklerinden biridir ve diğer şıklardaki akut/süpüratif böbrek patolojilerinde beklenmez."
-  },
-  {
-    "id": "d3-k3-pat-017",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 17,
-    "slideTitle": "Atrofinin Biyokimyasal Mekanizmaları: Ubikuitin-Proteazom Yolağı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Alkolik ve non-alkolik karaciğer yağlanması (NAFLD/NASH) patolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yağlı karaciğer spektrumunda steatoz, steatohepatit ve parankimal fibrozis/siroz olmak üzere üç ana basamak izlenir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "NASH patogenezinde insülin direnci, tip 2 diyabet, morbid obezite ve hipertrigliseridemi majör tetikleyicilerdir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Mallory-Denk cisimcikleri sitokeratin 8 ve 18 içeren eozinofilik yumaklar olup karaciğerde SADECE alkol tüketimine bağlı steatohepatitte karşımıza çıkar",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Alkolik siroz gelişen olguların %10-20'sinde yaşam boyu hepatosellüler karsinom gelişme riski mevcuttur",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Non-alkolik yağlı karaciğer hastalığı toplumda asemptomatik transaminaz yüksekliğinin en sık nedenidir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Mallory-Denk cisimcikleri (ubikuitinlenmiş keratin 8/18 ara filamanları) alkolik hepatitte çok belirgin olsa da SADECE alkole özgü değildir; non-alkolik steatohepatit (NASH), Wilson hastalığı, alfa-1 antitiripsin eksikliği ve kronik kolestatik sendromlarda da görülebilir."
-  },
-  {
-    "id": "past-1790877035587-937082",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 18,
-    "slideTitle": "Otofaji: Hücresel Geri Dönüşüm Mekanizması ve Lizozomal Sindirim",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Etanol metabolizmasında yüksek kan alkol konsantrasyonlarında indüklenen Mikrozomal Etanol Oksidasyon Sistemi (MEOS) bünyesindeki Sitokrom P450 izoenzimi olan CYP2E1, hepatositlerde temel olarak hangi subselüler yapıda / organelde lokalizedir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Mikrozom (Düz Endoplazmik Retikulum)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Sitozol",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Peroksizom",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Mitokondri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Lizozom",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "【Temel Patofizyolojik / Farmakolojik Mekanizma】: Etanol hepatositlerde üç ana enzim sistemiyle metabolize edilir: Düşük-orta düzeydeki alkol maruziyetinde sitozolik Alkol Dehidrojenaz (ADH); minör düzeyde peroksizomal Katalaz; ve özellikle kronik maruziyet veya yüksek serum düzeylerinde devreye giren Mikrozomal Etanol Oksidasyon Sistemi (MEOS). MEOS'un katalitik çekirdeğini Sitokrom P450 CYP2E1 izoformu oluşturur. Bu sistem NADPH ve moleküler oksijen kullanarak etanolü asetaldehite oksitlerken reaktif oksijen türleri (ROS) üretir.\n\n【Doğru Yanıtın Tıbbi Gerekçesi】: Hücre fraksiyonasyonu çalışmalarında 'mikrozom' fraksiyonu, hücrenin parçalanmasıyla vesiküllere ayrılan düz ve granüllü endoplazmik retikulum (ER) membranlarını temsil eder. CYP2E1 dahil olmak üzere tüm Sitokrom P450 monooksijenaz enzim kompleksleri düz endoplazmik retikulum (mikrozomal) zarına gömülüdür. Bu nedenle MEOS aktivitesi mikrozomal fraksiyonda yer alır.\n\n【Çeldirici Seçeneklerin Tıbbi Analizi】:\n- B) Sitozol: Alkolün fizyolojik/bazal metabolizmasında görev yapan Alkol Dehidrojenaz (ADH) enziminin bulunduğu kompartmandır; CYP2E1 sitozolik değildir.\n- C) Peroksizom: Hidrojen peroksit (H2O2) bağımlı olarak etanolü asetaldehite dönüştüren 'Katalaz' enziminin lokalizasyonudur.\n- D) Mitokondri: Etanol oksidasyonunun ikinci basamağı olan asetaldehitin asetata dönüşümünü sağlayan Aldehit Dehidrojenaz 2 (ALDH2) enziminin lokalizasyonudur.\n- E) Lizozom: Asit hidrolazları içeren ve primer olarak otofaji/heterofaji ile makromolekül yıkımından sorumlu organeldir; alkolün oksidatif metabolizmasında doğrudan bir rolü yoktur.\n\n【Klinik İpucu (High-Yield Pearl)】: Kronik alkol tüketimi CYP2E1'i transkripsiyonel ve post-translasyonel (stabilizasyon) olarak indükler. İndüklenen CYP2E1, parasetamol (asetaminofen) metabolizmasını toksik ara ürün olan NAPQI (N-asetil-p-benzokinon imin) yönüne kaydırarak kronik alkoliklerde terapötik parasetamol dozlarında bile fulminan hepatotoksisite riskini dramatik biçimde artırır."
-  },
-  {
-    "id": "d3-k1-pat-007",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 19,
-    "slideTitle": "Otofaji ve Hücre Ölümü Arasındaki Biyolojik Köprü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi apoptozla ilişkili değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sürekli çoğalan aktif hücrelerde apoptozla hücre sayısının azaltılması",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Opsonize hücrelerin fagositoz yoluyla ortadan kaldırılması",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Otoreaktif lenfositlerin ortadan kaldırılması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Sitotoksik T hücreleri tarafından başlatılan hücre ölümü",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Görevleri sona eren hücrelerin ortadan kaldırılması",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Opsonizasyon; bir mikroorganizma veya hücrenin, kompleman (C3b) veya antikorlarla kaplanarak fagositoza duyarlı hale getirilmesi işlemidir ve fagositik hücreler tarafından fagositoz ile temizlenmeyi ifade eder; bu bir nekroz/fagositoz mekanizmasıdır, apoptozun kendisi değildir. Buna karşılık, proliferasyon dengesinin korunması, otoreaktif lenfositlerin negatif seleksiyonla elenmesi, sitotoksik T hücre aracılı öldürme ve görevi biten hücrelerin (örn. embriyonik gelişimde) elimine edilmesi klasik apoptoz örnekleridir."
-  },
-  {
-    "id": "d3-k1-pat-031-288",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 20,
-    "slideTitle": "Metaplazi: Tanım, Biyolojik Anlamı ve Kök Hücre Reprogramlaması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-031-289",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 21,
-    "slideTitle": "Epitelyal Skuamöz Metaplazi: Bronş ve Serviks Örnekleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-b-114",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 22,
-    "slideTitle": "Kolumnar Metaplazi: Barrett Özofagusu Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hangisi, özofagusun skuamöz mukozasında intestinal metaplazi ile karakterize olan, özefagus adenokarsinomu gelişme riski artışı ile karakterize olan, premalign bir durum olan özefagus hastalığıdır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiatus hernisi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Barrett özofagusu",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Eozinofilik özofajit",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Mallory-Weiss sendromu",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Akalazya",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bu soru, Karabük Üniversitesi Tıp Fakültesi Dönem 3 Bütünleme Sınavı müfredatında yer alan Tıbbi Patoloji ders kurulundaki temel mekanizmaları sorgulamaktadır. İlgili konunun amfi ders notları, ulusal çekirdek eğitim programı (ÇEP) ve klinik kılavuzlara göre doğru yanıt A seçeneğidir. Çeldirici seçeneklerde yer alan parametreler klinik ve patolojik ayırıcı tanıda farklı antitelere aittir."
-  },
-  {
-    "id": "d3-k1-pat-031-291",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 23,
-    "slideTitle": "Mezenkimal Metaplazi ve Metaplazinin 'İki Uçlu Kılıç' Karakteri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-031-292",
-    "deckId": "learn-hucresel-adaptasyon-ve-hu",
-    "deckTitle": "Hücresel Adaptasyonlar: Atrofi, Hipertrofi, Hiperplazi, Metaplazi ve Otofaji",
-    "slideNumber": 24,
-    "slideTitle": "Adaptasyon, Reversibl Hasar ve Hücre Ölümü Spektrumu: Entegrasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
-  },
-  {
-    "id": "prac-yaslanma-001",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 1,
-    "slideTitle": "Hücresel Yaşlanma: Biyolojik Tanım, Evrimsel Perspektif ve Homeostazın Bozulması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma biyolojisi ve kronolojik yaşlanma arasındaki farklar açısından aşağıdaki ifadelerden hangisi BİYOLOJİK VE PATOLOJİK OLARAK DOĞRUDUR?",
-    "options": [
-      "A) Kronolojik yaş ile hücresel yaşlanma düzeyi tüm bireylerde tamamen paralel ilerler ve genetik modifikasyonlardan etkilenmez.",
-      "B) Hücresel yaşlanma, organizmanın enerji depolarının pasif tükenmesi olup hiçbir genetik ya da transkripsiyonel regülasyona tabi değildir.",
-      "C) Biyolojik yaşlanma; moleküler hasar birikimi, epigenetik değişiklikler ve hücresel adaptasyon kapasitesinin kaybını yansıtan dinamik bir süreçtir.",
-      "D) Hücresel yaşlanma sadece kalıcı (bölünmeyen) nöron ve kardiyomiyositlerde görülür, labil kök hücreler yaşlanma fenotipinden tamamen muaftır.",
-      "E) Genç bireylerden alınan somatik hücreler in vitro kültür ortamında yaşlı bireylerden alınan hücrelerle tamamen aynı sayıda bölünme gerçekleştirir."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Biyolojik yaşlanma; somatik mutasyonlar, epigenetik kaymalar, telomer kısalması, protein agregasyonu ve metabolik stresin kümülatif etkisiyle ortaya çıkan dinamik bir hücresel süreçtir. A seçeneği yanlıştır; genetik ve çevresel faktörler nedeniyle biyolojik yaşlanma hızı kronolojik yaştan bağımsız farklılıklar gösterir. B seçeneği yanlıştır; yaşlanma mTOR, AMPK ve Sirtuin gibi son derece aktif genetik ve transkripsiyonel yolaklarca kontrol edilir. D seçeneği yanlıştır; kök hücreler de telomer aşınması ve DNA hasarıyla yaşlanır, bu da doku yenilenmesini durdurur. E seçeneği yanlıştır; Hayflick deneyinin gösterdiği üzere genç hücreler yaşlı donör hücrelerine kıyasla çok daha yüksek pasaj/bölünme kapasitesine sahiptir."
-  },
-  {
-    "id": "prac-yaslanma-002",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 2,
-    "slideTitle": "Yaşlanmanın Klinik ve Epidemiyolojik Önemi: Bağımsız Bir Hastalık ve Risk Faktörü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "72 yaşındaki bir hastada koroner arter hastalığı, tip 2 diabetes mellitus ve kognitif fonksiyonlarda gerileme saptanmıştır. Bu hastadaki çoklu sistemik patolojilerin ortak hücresel zeminini oluşturan yaşlanma mekanizmalarıyla ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Vasküler endotel hücrelerinin replikatif senesansa girmesi aterosklerotik lezyon oluşumunu kolaylaştırır.",
-      "B) Somatik hücrelerde on yıllar boyunca biriken DNA mutasyonları malign transformasyon eşiğini düşürür.",
-      "C) Yaşlanan parankim hücrelerinde protein homeostazının (proteostazis) bozulması nörodejeneratif süreçleri hızlandırır.",
-      "D) Yaşlanmayla birlikte organ fonksiyonel rezervinin azalması, hücrelerin bazal metabolik ihtiyaçlarını dahi karşılayamamasına ve çocukluk çağında kaçınılmaz ölüme neden olur.",
-      "E) Senesent hücrelerden salgılanan pro-inflamatuvar sitokinler, dokularda kronik steril bir enflamasyon (inflammaging) başlatır."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Yaşlanmayla birlikte organların fonksiyonel rezervi azalır; ancak bu azalma bazal koşullarda genellikle kompanse edilir ve yaşamı sürdürmeye yeterlidir. Asıl klinik dekompansasyon enfeksiyon, travma veya iskemi gibi metabolik talebi artıran akut stres durumlarında ortaya çıkar; dolayısıyla 'çocukluk çağında kaçınılmaz ölüme neden olur' ifadesi tamamen yanlıştır. A, B, C ve E seçeneklerindeki tüm önermeler hücresel yaşlanmanın ateroskleroz, kanser, nörodejenerasyon ve kronik enflamasyon patogenezindeki kanıtlanmış basamaklarını doğru olarak özetlemektedir."
-  },
-  {
-    "id": "prac-yaslanma-003",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 3,
-    "slideTitle": "Hücresel Yaşlanmanın Başlıca Mekanizmaları: Robbins Şekil 1.27 Entegrasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Robbins Patoloji'de özetlenen 'Hücresel Yaşlanma Mekanizmaları' (Şekil 1.27) modeline göre, aşağıdakilerden hangisi hücresel fonksiyonların ilerleyici kaybına ve doku yaşlanmasına yol açan temel moleküler mekanizmalardan biri DEĞİLDİR?",
-    "options": [
-      "A) Nükleer ve mitokondriyal DNA'da mutasyon birikimi ve DNA onarım sistemlerinin kapasite yetersizliği",
-      "B) Her hücre bölünmesinde telomerlerin ilerleyici aşınması sonucu gelişen replikatif senesans",
-      "C) Şaperon ve proteazom aktivitelerinin azalmasıyla hatalı katlanmış protein agregatlarının birikimi",
-      "D) Sirtuinlerin ve AMPK yolağının aşırı fizyolojik aktivasyonu sonucu hücresel protein sentezinin kontrolsüzce artması",
-      "E) Senesent hücrelerden salgılanan sitokinler ve hücresel artıklarla tetiklenen kalıcı düşük dereceli steril inflamasyon"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Sirtuinler (SIRT1-7) ve AMPK; besin kısıtlaması ve düşük enerji durumunda aktive olan, protein sentezini ve anabolik büyümeyi kontrolsüz artırmak yerine baskılayan, otofajiyi ve DNA onarımını uyararak yaşam süresini uzatan koruyucu enzimlerdir. Kontrolsüz protein sentezi ve hücre büyümesini tetikleyerek hücresel yıpranmayı hızlandıran yolak IGF-1/mTOR yolağıdır. A, B, C ve E seçeneklerinde sıralanan basamaklar Robbins Şekil 1.27'deki temel yaşlanma mekanizmalarını eksiksiz olarak ifade etmektedir."
-  },
-  {
-    "id": "prac-yaslanma-004",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 4,
-    "slideTitle": "Nükleer ve Mitokondriyal DNA Hasarı ve Onarım Sistemleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hücresel yaşlanma sürecinde DNA hasarı ve onarım mekanizmaları incelendiğinde, reaktif oksijen türlerinin (ROS) nükleotidlerde oluşturduğu oksidatif hasarın tanınmasında ve onarımında öncelikli olarak görev alan DNA tamir yolağı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Nükleotid Eksizyon Onarımı (NER)",
-      "B) Baz Eksizyon Onarımı (BER)",
-      "C) Homolog Olmayan Uç Birleşmesi (NHEJ)",
-      "D) Yanlış Eşleşme Onarımı (Mismatch Repair - MMR)",
-      "E) Homolog Rekombinasyon (HR)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Oksidatif stres ve ROS etkisiyle DNA bazlarında oluşan oksidasyon ürünleri (örneğin 8-okso-guanin) ve tek baz hasarları spesifik DNA glikozilazlar tarafından tanınır ve Baz Eksizyon Onarımı (BER) yolağı ile düzeltilir. A seçeneğindeki NER, UV ışığı kaynaklı pirimidin dimerleri ve DNA heliksini bozan hacimli lezyonları onarır. C seçeneğindeki NHEJ ve E seçeneğindeki HR, çift iplik DNA kırıklarının (DSB) onarımında görev alır. D seçeneğindeki MMR ise DNA replikasyonu sırasında polimerazın gözünden kaçan yanlış baz eşleşmelerini tamir eder."
-  },
-  {
-    "id": "prac-yaslanma-005",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 5,
-    "slideTitle": "Erken Yaşlanma Sendromları I: Werner Sendromu ve DNA Helikaz Defekti",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "32 yaşında bir erkek hasta saçlarında tamamen beyazlama ve alopesi, bilateral katarakt, bacak derisinde skleroderma benzeri incelme ve iyileşmeyen ülserler nedeniyle başvuruyor. Yapılan tetkiklerde ileri evre koroner ateroskleroz ve uyluk yerleşimli bir kitle saptanıyor; biyopside pleomorfik liposarkom tanısı konuyor. Bu hastada patogenetik olarak sorumlu olan gen ve bu genin kodladığı proteinin temel fonksiyonu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) LMNA geni — Nükleer zarf yapısal proteininin (Lamin A) oluşumu",
-      "B) WRN geni — DNA replikasyonu ve telomer bakımında görevli RecQ DNA helikaz",
-      "C) TERT geni — Telomer uçlarına TTAGGG tekrarları ekleyen revers transkriptaz",
-      "D) ATM geni — Çift iplik DNA kırıklarını algılayan nükleer kinaz",
-      "E) TP53 geni — Hücre döngüsünü G1 evresinde durduran transkripsiyon faktörü"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Vaka tipik bir Werner Sendromu (Erişkin Projeryası) tablosudur. Werner sendromu 8. kromozomdaki WRN gen mutasyonuna bağlı otozomal resesif bir hastalıktır. WRN proteini RecQ ailesi DNA helikaz ve ekzonükleaz aktivitesine sahiptir. Bu hastalarda katarakt, alopesi, sklerodermoid deri ve erken aterosklerozun yanı sıra genel popülasyondan farklı olarak epitelyal karsinomlar yerine mezenkimal kaynaklı maligniteler (sarkomlar) sıklıkla izlenir. A seçeneğindeki LMNA mutasyonu Hutchinson-Gilford Projeria sendromundan sorumludur. C seçeneğindeki TERT telomerazı kodlar ve telomeropatilerle ilişkilidir. D seçeneğindeki ATM ataksi-telenjiektazide, E seçeneğindeki TP53 ise Li-Fraumeni sendromunda bozuktur."
-  },
-  {
-    "id": "prac-yaslanma-006",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 6,
-    "slideTitle": "Erken Yaşlanma Sendromları II: Hutchinson-Gilford Projeria Sendromu ve Lamin A/Progerin",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "9 yaşında bir çocuk hasta ileri derecede boy kısalığı, mikrosellüler eklem sertlikleri, total saç kaybı (alopesi), deri altı yağ dokusunun yokluğu ve yüzde mikrognati ile getiriliyor. Yapılan anjiyografide koroner arterlerde yaygın kalsifiye aterosklerotik plaklar izleniyor. Moleküler analizde LMNA geninde pre-mRNA kırpılmasını bozan bir mutasyon ve nükleer zarda farnesillenmiş anormal bir protein birikimi tespit ediliyor. Bu hastadaki patogenetik süreçle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Hastalığın nedeni telomeraz enziminin katalitik alt birimi olan TERT'in aşırı aktivasyonudur.",
-      "B) Biriken toksik protein 'Progerin' olup, ZMPSTE24 endoproteazı tarafından farnesil ucunun kesilememesi sonucu oluşur.",
-      "C) Hastalık X'e bağlı resesif kalıtılır ve santral sinir sisteminde ağır mental retardasyon ile seyreder.",
-      "D) Hücresel düzeyde nükleer membran bütünlüğü korunur, temel defekt lizozomal enzimlerin eksikliğidir.",
-      "E) Hastalarda ölüm genellikle ileri yaşta (70 yaş üstü) gelişen osteosarkom metastazlarına bağlıdır."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Tanımlanan tablo Hutchinson-Gilford Projeria Sendromu'dur (HGPS). LMNA genindeki mutasyon kriptik bir splice bölgesini uyararak 50 aminoasitlik delesyonlu pre-lamin A üretimine yol açar. ZMPSTE24 kesim bölgesini yitiren bu protein kalıcı olarak farnesillenmiş kalır ve 'Progerin' adını alır. Progerin nükleer zarda birikerek nükleus mimarisini bozar. A seçeneği yanlıştır; telomeraz aktivasyonu değil nükleer lamin defekti vardır. C seçeneği yanlıştır; hastalık otozomal dominanttır ve mental gelişim tamamen korunur. D seçeneği yanlıştır; nükleer zarf belirgin şekilde bozulur (blebleşme). E seçeneği yanlıştır; ölüm erken çocuklukta (ortalama 13 yaş) miyokard enfarktüsü veya inmeden kaynaklanır."
-  },
-  {
-    "id": "prac-yaslanma-007",
-    "deckId": "learn-hucresel-yaslanma-ve-hucr",
-    "deckTitle": "Hücresel Yaşlanma Mekanizmaları ve Oksidatif Hasar",
-    "slideNumber": 7,
-    "slideTitle": "Diğer DNA Onarım Defekti ve Erken Yaşlanma Modelleri: Bloom, Rothmund-Thomson, Ataksi-Telenjiektazi ve Cockayne",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Çift iplik DNA kırıklarının (double-strand breaks) hücresel sensörü olan, radyasyon hasarı sonrasında p53 ve Chk2 kinazlarını fosforilleyerek hücre döngüsünü durduran, mutasyonunda ise ilerleyici serebellar ataksi, telenjiektaziler, immün yetmezlik ve erken hücresel yaşlanma tablosu ortaya çıkan protein aşağıdakilerden hangisidir?",
-    "options": [
-      "A) ATM (Ataxia-Telangiectasia Mutated)",
-      "B) WRN (Werner sendromu helikazı)",
-      "C) BLM (Bloom sendromu helikazı)",
-      "D) Lamin A (LMNA)",
-      "E) TERT (Telomeraz revers transkriptaz)"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. ATM kinaz, çift iplik DNA kırıklarını algılayan anahtar proteindir. DNA çift iplik kırığı oluştuğunda MRN kompleksi aracılığıyla hasar bölgesine toplanır ve otofosforilasyonla aktive olarak p53, Chk2, BRCA1 gibi substratları fosforiller. ATM inaktivasyonu Ataksi-Telenjiektazi sendromuna neden olur; hastalarda serebellar dejenerasyon, okülokütanöz telenjiektaziler ve radyasyon hipersensitivitesi görülür. B seçeneğindeki WRN ve C seçeneğindeki BLM RecQ helikazlarıdır. D seçeneğindeki Lamin A nükleer lamina yapı taşıdır. E seçeneğindeki TERT ise telomeraz enziminin katalitik ünitesidir."
   }
 ]

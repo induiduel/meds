@@ -1,5 +1,252 @@
 [
   {
+    "id": "prac-use-035",
+    "deckId": "deck-urinary-tract-infections",
+    "deckTitle": "Üriner Sistem Enfeksiyonları: Sistit, Piyelonefrit ve Renal Komplikasyonlar",
+    "slideNumber": 35,
+    "slideTitle": "Radyolojik ve Ürolojik Görüntüleme: USG, BT, DMSA ve VCUG",
+    "discipline": "Nefropatoloji ve Tıbbi Mikrobiyoloji",
+    "committee": "Ürogenital Sistem Komitesi",
+    "question": "Tekrarlayan ateşli idrar yolu enfeksiyonları geçiren 3 yaşındaki bir çocukta, geçirilmiş enfeksiyon ataklarına bağlı kalıcı renal kortikal skar dokusu varlığını ve fonksiyonel parankim kaybını EN YÜKSEK DUYARLILIKLA gösteren nükleer tıp görüntüleme yöntemi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) MAG3 (Merkaptoasetiltriglisin) sintigrafisi",
+      "B) DTPA (Dietilentriaminpentaasetik asit) dinamik sintigrafisi",
+      "C) DMSA (Teknesyum-99m Dimerkapto-süksinik asit) kortikal sintigrafisi",
+      "D) Kemik sintigrafisi (Tc-99m MDP)",
+      "E) Tiroid sintigrafisi (Tc-99m Perteknetat)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. DMSA (Tc-99m ile işaretli dimerkaptosüksinik asit), böbreğin proksimal tübül epitel hücrelerine bağlanarak biriken statik bir kortikal sintigrafi ajanıdır. Fonksiyonel tübüler dokuyu gösterdiği için enfeksiyon veya skar sonucu hasarlanan bölgeler izotop tutmaz (fokal fotopenik defekt). Çocuklarda reflü nefropatisine bağlı parankimal skar ve doku kaybını saptamada altın standart en duyarlı yöntemdir. MAG3 ve DTPA dinamik sintigrafiler olup toplayıcı sistem drenajını ve GFR'yi incelemede kullanılır."
+  },
+  {
+    "id": "prac-use-036",
+    "deckId": "deck-urinary-tract-infections",
+    "deckTitle": "Üriner Sistem Enfeksiyonları: Sistit, Piyelonefrit ve Renal Komplikasyonlar",
+    "slideNumber": 36,
+    "slideTitle": "Tedavi Prensipleri ve Korunma: Antibakteriyel Yaklaşım ve Nükslerin Yönetimi",
+    "discipline": "Nefropatoloji ve Tıbbi Mikrobiyoloji",
+    "committee": "Ürogenital Sistem Komitesi",
+    "question": "32 yaşındaki kadın hasta yüksek ateş (39.0°C), titreme, bulantı ve sol kostovertebral açı hassasiyeti ile acil servise başvuruyor. İdrar tahlilinde bol lökosit ve lökosit silindirleri saptanarak akut piyelonefrit tanısı konuyor. Bu hastanın ampirik farmakolojik tedavisinde, doku ve kan konsantrasyonuna ulaşamadığı ve yalnızca mesane lümeninde etki gösterdiği için KULLANILMASI KESİNLİKLE KONTRENDİKE OLAN antibiyotik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Seftriakson",
+      "B) Siprofloksasin",
+      "C) Nitrofurantoin",
+      "D) Piperasilin-Tazobaktam",
+      "E) Meropenem"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Nitrofurantoin oral yoldan alındıktan sonra hızla emilir ve doğrudan idrara filtre edilir; serumda ve böbrek parankim dokusunda terapötik düzeylere ulaşamaz. Bu nedenle yalnızca yüzeyel mesane mukozası enfeksiyonu olan akut sistitte kullanılır; renal parankimal tutulumun ve bakteriyemi riskinin olduğu akut piyelonefritte KESİNLİKLE KULLANILMAZ. Seftriakson, siprofloksasin, piperasilin-tazobaktam ve meropenem böbrek parankimine ve kana mükemmel penetre olan sistemik bakterisidal ajanlardır."
+  },
+  {
+    "id": "prac-odem-001",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 1,
+    "slideTitle": "Hemodinamik Denge ve Sıvı Homeostazına Giriş: Dolaşım Sisteminin Temel Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Dolaşım sisteminde hücresel perfüzyonun ve mikrosirkülasyon düzeyindeki sıvı dengesinin fizyolojik sürdürülmesi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
+    "options": [
+      "A) Sağlıklı dokularda interstisyum, gaz difüzyonunu kolaylaştırmak amacıyla kuruya yakın ve jel kıvamında tutulur.",
+      "B) Kapiller yataktan interstisyuma net sıvı geçişi normalde sıfırdır ve hiçbir koşulda lenfatik drenaja ihtiyaç duyulmaz.",
+      "C) Plazma proteinlerinin oluşturduğu onkotik basınç, sıvının damar lümeni içerisinde tutulmasını sağlayan ana kuvvettir.",
+      "D) Prekapiller arteriyollerin aktif genişlemesi dokuda oksijenlenmiş kan miktarını artırarak hiperemiye neden olur.",
+      "E) Dokudan venöz kanın boşalmasının mekanik olarak engellenmesi deoksijene kanın birikimiyle seyreden konjesyona yol açar."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği yanlıştır. Normal fizyolojik koşullarda kapiller arteriyol ucunda dışarı süzülen sıvı miktarı, venül ucunda geri emilen sıvı miktarından her zaman çok az miktarda fazladır. Yani net sıvı geçişi kesinlikle 'sıfır' değildir; bu günlük yaklaşık 2-4 litrelik net interstisyel sıvı fazlası, doku lenfatikleri tarafından toplanıp torasik kanal aracılığıyla venöz dolaşıma geri kazandırılır. Lenfatik drenaj olmazsa normal koşullarda bile lenfödem gelişir. A, C, D ve E seçenekleri ise normal hemodinamik dengenin tartışmasız temel doğrularıdır."
+  },
+  {
+    "id": "prac-odem-002",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 2,
+    "slideTitle": "Vücut Sıvı Kompartmanları: İntraselüler ve Ekstraselüler Hacim Dengesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yetmiş kilogram ağırlığında sağlıklı genç bir erişkin erkekte vücut sıvı kompartmanlarının dağılımı ve fraksiyonları ile ilgili aşağıdaki hesaplama ve eşleştirmelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Toplam vücut suyu yaklaşık 42 litredir; bunun yaklaşık 28 litresi intraselüler, 14 litresi ekstraselüler kompartmandadır.",
+      "B) Ekstraselüler sıvının en büyük bölümünü intravasküler plazma oluşturur ve yaklaşık 11 litredir.",
+      "C) İntravasküler plazma hacmi toplam vücut ağırlığının yaklaşık %20'sine karşılık gelir.",
+      "D) Doku interstisyel aralığı toplam vücut suyunun üçte ikisini barındırır.",
+      "E) Hücre içi sıvı hacmi hücre dışı sıvı hacminden daha düşüktür ve dehidratasyonda ilk tükenen alandır."
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği kesinlikle doğrudur. 70 kg bir erişkinde vücut ağırlığının %60'ı sudur (70 x 0.60 = 42 litre). Bu 42 litrenin 2/3'ü hücre içi (yaklaşık 28 litre), 1/3'ü ise hücre dışıdır (yaklaşık 14 litre). 14 litrelik ekstraselüler sıvının yaklaşık %80'i (11-11.5 litre) interstisyel aralıkta, %20'si (yaklaşık 3-3.5 litre, yani vücut ağırlığının ~%5'i) ise intravasküler plazmadadır. Dolayısıyla B, C, D ve E seçeneklerindeki oranlar ve hacimler tamamen hatalıdır."
+  },
+  {
+    "id": "prac-odem-003",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 3,
+    "slideTitle": "Mikrosirkülasyonda Starling Kuvvetleri: Hidrostatik ve Onkotik Basınç Dengesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Mikrosirkülasyonda transkapiller sıvı dengesini açıklayan Starling hipotezi ve kuvvetleri dikkate alındığında, aşağıdaki durumlardan hangisi doku aralığına NET SIVI KAÇIŞINI (filtrasyonu) DOĞRUDAN AZALTIR?",
+    "options": [
+      "A) Prekapiller arteriyollerin belirgin vazodilatasyonu",
+      "B) Postkapiller venüllerde obstrüksiyon sonucu venöz basınç artışı",
+      "C) Ağır proteinüriye bağlı serum albümin konsantrasyonunda düşüş",
+      "D) Şiddetli dehidratasyon ve hiperproteinemi sonucu plazma onkotik basıncının yükselmesi",
+      "E) İnterstisyel lenfatik kanalların tümöral infiltrasyonla tıkanması"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Starling denkleminde net filtrasyon basıncı = [(Pc - Pi) - (πc - πi)] şeklindedir. Plazma onkotik basıncının (πc) yükselmesi, sıvıyı damar lümeni içine çeken kuvveti artırır; bu durum doku aralığına net sıvı kaçışını azaltır ve hatta interstisyumdan damar içine sıvı emilimini teşvik eder. A, B ve C seçenekleri net filtrasyon kuvvetini artırarak ödeme neden olur. E seçeneği ise filtrelenen sıvının geri taşınmasını engelleyerek dokuda sıvı birikmesine yol açar."
+  },
+  {
+    "id": "prac-odem-004",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 4,
+    "slideTitle": "Ödem ve Efüzyon Tanımı: İnterstisyel Sıvı Dinamikleri ve Vücut Boşlukları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Altmış yaşında dekompanse kalp yetmezliği ve siroz tanıları olan bir hastanın fizik muayenesinde her iki bacakta uyluğa kadar uzanan masif gode bırakan ödem, karında ileri derecede distansiyon ve dalgalanma hissi, oskültasyonda bilateral akciğer bazallerinde ve kalp seslerinde belirgin derinden gelme saptanmıştır. Radyolojik incelemede bilateral plevral boşluklarda, perikart aralığında ve tüm peritoneal kavitede yaygın serbest sıvı birikimi izlenmiştir.\n\nBu hastada mevcut olan klinik ve patolojik tabloyu en doğru tanımlayan tıbbi terim aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Lokalize lenfödem",
+      "B) Anasarka",
+      "C) İzole hidroperiton",
+      "D) Herediter anjiyoödem",
+      "E) Fokal vazojenik ödem"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Cilt ve cilt altı dokularda masif yaygın ödem bulunması ve buna plevral (hidrotoraks), perikardiyal (hidroperikardiyum) ve peritoneal (asit) boşluklardaki efüzyonların eşlik ettiği ağır, jeneralize sistemik sıvı birikimi tablosuna patolojide 'anasarka' adı verilir. Lokalize lenfödem veya anjiyoödem tek bir uzuv veya mukozal alanla sınırlıdır. İzole hidroperiton yalnızca periton boşluğundaki sıvıyı tanımlarken, hastada tüm seröz boşluklar ve cilt altı tutulmuştur."
+  },
+  {
+    "id": "prac-odem-005",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 5,
+    "slideTitle": "Ödemin Birinci Mekanizması: Artmış Kapiller Hidrostatik Basınç ve Nedenleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uzun süreli uçak yolculuğu sonrasında sağ bacağında ani gelişen şişlik, gerginlik, kızarıklık ve baldır ağrısı şikayetiyle acil servise başvuran 54 yaşındaki bir hastanın fizik muayenesinde sağ kruris çapının sol tarafa göre 4 cm genişlediği ve pretibial bölgede gode bırakan ödem saptanıyor. Yapılan Doppler ultrasonografide sağ ana femoral vende lümeni tam tıkayan akut trombüs izleniyor.\n\nBu hastada gelişen tek taraflı bacak ödeminin patofizyolojisindeki PRİMER ve BAŞLATICI hemodinamik mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Plazma albümin düzeyinde akut düşüşe bağlı kolloid ozmotik basınç yetersizliği",
+      "B) Venöz dönüşün bozulması sonucu kapiller hidrostatik basıncın aşırı yükselmesi",
+      "C) Kas içi lenfatik kanalların mikroskobik endotelyal hipoplazisi",
+      "D) Böbreklerden sodyum ve su atılımının primer genetik bozukluğu",
+      "E) İnterstisyel matriks proteoglikanlarının kontrolsüz hiperozmolar sentezi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Femoral ven trombozu, bacağın venöz kanının kalbe dönüşünü mekanik olarak engeller. Venöz lümende biriken kan geriye doğru hidrostatik basınç dalgası oluşturarak postkapiller venül ve kapiller hidrostatik basıncı (Pc) dramatik düzeyde artırır. Artan bu basınç sıvıyı interstisyuma iterek tek taraflı gode bırakan ödeme yol açar. Hastada hipoalbüminemi (A), lenfatik hipoplazi (C) veya renal retansiyon (D) gibi sistemik tablolar bulunmamaktadır."
+  },
+  {
+    "id": "prac-odem-006",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 6,
+    "slideTitle": "Kalp Yetmezliğinde Ödem Mekanizmaları: Düşük Kalp Debisi ve RAAS Kısır Döngüsü",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İskemik kardiyomiyopatiye bağlı konjestif kalp yetmezliği bulunan 68 yaşındaki bir erkek hastada son iki hafta içinde dispne, ortopne ve her iki bacakta pretibial gode bırakan masif ödem gelişiyor. Laboratuvar incelemesinde plazma renin aktivitesi ve aldosteron konsantrasyonunun belirgin şekilde arttığı saptanıyor.\n\nBu hastada ödem tablosunu derinleştiren sekonder hiperaldosteronizmin BAŞLATICI patofizyolojik tetiği aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Adrenal korteksin zona glomerulosa hücrelerinde gelişen primer fonksiyonel adenom",
+      "B) Karaciğerde anjiyotensinojen sentezinin genetik mutasyonla kontrolsüz artışı",
+      "C) Düşük kalp debisine bağlı efektif arteriyel kan hacminin azalması ve renal hipoperfüzyon",
+      "D) Pulmoner endotelde anjiyotensin dönüştürücü enzim (ACE) ekspresyonunun baskılanması",
+      "E) Proksimal tübüllerde sodyum-glukoz kotransporterlarının primer aşırı aktivasyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Konjestif kalp yetmezliğinde miyokard pompa fonksiyonunu yerine getiremez; ileriye doğru atılan kalp debisi düşer. Bu durum arteriyel yatakta algılanan 'efektif dolaşım hacmini' düşürür ve böbreklerde afferent perfüzyon basıncını azaltır (renal hipoperfüzyon). Jukstaglomerüler aparat bu durumu algılayarak renin salgılar ve RAAS kaskadını (sekonder hiperaldosteronizm) ateşler. Bu primer bir adrenal tümör (A) veya primer hepatik aşırı üretim (B) değildir."
+  },
+  {
+    "id": "prac-odem-007",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 7,
+    "slideTitle": "Ödemin İkinci Mekanizması: Azalmış Plazma Onkotik Basıncı ve Albümin Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Hipoalbüminemi zemininde gelişen jeneralize ödem tablolarının patofizyolojisi, plazma onkotik basıncı ve sıvı dengesi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Plazma onkotik basıncının en büyük kısmını immünoglobulin G oluşturur; albüminin bu basınca katkısı ihmal edilebilir düzeydedir.",
+      "B) Serum albümin konsantrasyonu 2.5 g/dL altına indiğinde transkapiller onkotik çekim gücü yetersiz kalır ve interstisyuma sıvı kaçar.",
+      "C) Karaciğer sirozunda albümin sentezi artsa da periferik dokularda aşırı yıkıldığı için hipoalbüminemi gelişir.",
+      "D) Hipoalbüminemiye bağlı ödemde intravasküler hacim arttığı için jukstaglomerüler aparatustan renin salınımı tamamen baskılanır.",
+      "E) Glomerüler filtrasyon bariyerinin hasar görmesi plazma proteinlerinin geri emilimini artırarak onkotik basıncı yükseltir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Normalde 3.5-5.0 g/dL olan serum albümini 2.5-3.0 g/dL altına düştüğünde onkotik basınç kritik eşiği kaybeder ve sıvı doku aralığına süzülür. A seçeneği yanlıştır çünkü onkotik basıncın %70-80'ini albümin oluşturur. C yanlıştır çünkü sirozda yıkım değil hepatosit kaybına bağlı 'sentez yetmezliği' vardır. D yanlıştır çünkü sıvı damar dışına kaçtığı için intravasküler hacim azalır ve RAAS baskılanmaz, tam aksine şiddetle uyarılır. E seçeneği ise filtrasyon hasarının protein kaybı (proteinüri) yaptığını göz ardı etmektedir."
+  },
+  {
+    "id": "prac-odem-008",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 8,
+    "slideTitle": "Nefrotik Sendrom ve Karaciğer Sirozunda Hipoalbüminemi ve Ödem Patogenezi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik hepatit B zemininde karaciğer sirozu gelişen 58 yaşındaki bir erkek hastada karında belirgin distansiyon (masif asit) ve pretibial gode bırakan ödem izleniyor. Laboratuvar analizinde serum albümini 2.1 g/dL, idrarda protein negatif ve portal ven basıncı 22 mmHg (belirgin artmış) olarak tespit ediliyor.\n\nBu hastada peritoneal kavitede asit sıvısının toplanmasında rol oynayan TEMEL HEMODİNAMİK MEKANİZMA ÇİFTİ aşağıdakilerden hangisinde eksiksiz verilmiştir?",
+    "options": [
+      "A) Splanknik kapiller hidrostatik basınç artışı + Plazma kolloid ozmotik basınç azalması",
+      "B) İnterstisyel lenfatik aplazi + Primer aldosteron hipersekresyonu",
+      "C) Glomerüler porların genişlemesi + Pulmoner arteriyoler vazokonstriksiyon",
+      "D) Sistemik arteriyel hipertansiyon + Artmış eritrosit sedimentasyon hızı",
+      "E) İnterstisyel onkotik basınç çökmesi + Santral venöz basınç düşüklüğü"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Sirozda asit gelişimi iki temel hemodinamik gücün birleşimidir: Portal hipertansiyon nedeniyle splanknik ve mezenterik kapiller yatakta hidrostatik basınç aşırı yükselir (Pc artışı); aynı zamanda karaciğer yetmezliğine bağlı hipoalbüminemi nedeniyle plazma kolloid ozmotik basıncı belirgin şekilde düşer (πc azalması). Sıvıyı dışarı iten kuvvet artarken damarda tutan kuvvet çöktüğü için periton boşluğunda litrelerce asit sıvısı göllenir. Diğer seçenekler bu tablonun patolojisini açıklamaz."
+  },
+  {
+    "id": "prac-odem-009",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 9,
+    "slideTitle": "Ödemin Üçüncü Mekanizması: Lenfatik Obstrüksiyon (Lenfödem) ve Klirens Yetmezliği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik lenfatik obstrüksiyona bağlı olarak gelişen lenfödem tablosunun patofizyolojik ve morfolojik evrimi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Lenfödem sıvısı proteinden tamamen yoksundur ve dansitesi 1.005'in altındadır.",
+      "B) Zamanla dokuda biriken yüksek proteinli sıvı fibroblastları uyararak interstisyel fibrozise ve gode bırakmayan sertliğe yol açar.",
+      "C) Lenfödem geliştikten sonra lenfatik endotel hücreleri hızla apoptoza gider ve interstisyel onkotik basınç sıfıra iner.",
+      "D) Kalp yetmezliği ödemi ile karşılaştırıldığında lenfödemde cilt enfeksiyonu riski tamamen ortadan kalkar.",
+      "E) Lenfödem yalnızca bilateral simetrik olarak başlar ve asla tek bir ekstremiteyi tutmaz."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Lenfatik obstrüksiyonda dokudan temizlenemeyen makromoleküller ve proteinler interstisyumda birikir (yüksek proteinli ödem). Bu proteinler kronik fibroblastik uyarım ve kollajen depolanması başlatır; sonuçta doku fibrotikleşir ve gode bırakmayan (non-pitting) karakteristik sert bir hal alır. A seçeneği yanlıştır çünkü sıvı proteinden zengindir. C yanlıştır çünkü interstisyel onkotik basınç düşmez, artar. D yanlıştır çünkü lenfatik staz enfeksiyona (selülit) belirgin yatkınlık yaratır. E yanlıştır çünkü lenfödem sıklıkla asimetrik ve tek taraflıdır (örneğin mastektomi sonrası kolda)."
+  },
+  {
+    "id": "prac-odem-010",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 10,
+    "slideTitle": "Lenfödemin Özel Klinik Patolojileri: Aksiller Diseksiyon, Peau d'Orange ve Elefantiyazis",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Elli iki yaşında bir kadın hasta sağ memesinde ele gelen sert bir kitle ve üzerindeki deride kalınlaşma şikayetiyle başvuruyor. Fizik muayenede sağ meme cildinin yaygın olarak ödemli olduğu, ancak kıl foliküllerinin bulunduğu alanlarda deriye doğru çekintilerin oluştuğu ve cildin pürtüklü 'portakal kabuğu' (peau d'orange) manzarası kazandığı gözleniyor.\n\nBu hastada meme derisindeki karakteristik 'peau d'orange' görünümünün gelişmesinden sorumlu TEMEL HÜCRESEL VE PATOLOJİK MEKANİZMA aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pektoral kas arteriyollerinde aterosklerotik tıkanma sonucu gelişen iskemik nekroz",
+      "B) İnfiltratif tümör embolilerinin subdermal lenfatik damarları tıkaması ve Cooper ligamanlarının deriyi çekmesi",
+      "C) Karaciğerde albümin sentezinin baskılanmasına bağlı lokalize onkotik basınç çökmesi",
+      "D) İnternal torasik venin primer trombozu sonucu gelişen retrograd kapiller hidrostatik basınç artışı",
+      "E) Meme dokusunda stafilokok enfeksiyonuna bağlı fibrinöz eksüda birikimi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Peau d'orange görünümü, meme karsinomu hücrelerinin derialtı lenfatik damarları infiltre edip tıkamasıyla oluşur. Tıkanan lenfatikler cildi ödemli hale getirir; ancak cildi derin fasyaya bağlayan Cooper ligamanları ödem sıvısıyla esneyemez ve deriyi içe doğru çekerek kıl foliküllerinin olduğu yerlerde çukurcuklar oluşturur. Bu durum portakal kabuğu manzarasını yaratır. Arter tıkanması (A), hipoalbüminemi (C), ven trombozu (D) veya akut enfeksiyon (E) bu spesifik görünüme neden olmaz."
+  },
+  {
+    "id": "prac-odem-011",
+    "deckId": "learn-odem-hiperemi-konjesyon",
+    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
+    "slideNumber": 11,
+    "slideTitle": "Ödemin Dördüncü Mekanizması: Primer ve Sekonder Sodyum ve Su Retansiyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Geçirdiği streptokokal farenjitten iki hafta sonra göz kapaklarında şişlik, idrar miktarında azalma ve idrar renginde koyulaşma (kola rengi) fark eden 9 yaşındaki bir çocukta kan basıncı 145/95 mmHg (yaşına göre yüksek) ölçülüyor. Laboratuvarda serum kreatinini yüksek, GFR belirgin azalmış, idrar analizinde dismorfik eritrositler ve eritrosit silindirleri saptanıyor; günlük proteinüri ise 0.8 gram (nefrotik düzeyde değil) olarak ölçülüyor.\n\nBu hastada periorbital ve periferik ödemin gelişmesindeki PRİMER PATOFİZYOLOJİK MEKANİZMA aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Ağır albümin kaybına bağlı plazma kolloid ozmotik basıncının çökmesi",
+      "B) Glomerüler filtrasyon hızının akut düşüşüne bağlı primer sodyum ve su retansiyonu ve hipervolemi",
+      "C) İnterstisyel lenfatik kanalların immün kompleksler tarafından doğrudan tıkanması",
+      "D) Sistemik histamin salınımına bağlı yaygın mikrovasküler permeabilite artışı",
+      "E) Adrenal bezden primer aldosteron salgılayan bir tümörün gelişmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği kesinlikle doğrudur. Post-streptokokal glomerülonefrit (akut nefritik sendrom) tablosunda glomerüllerde diffüz proliferasyon ve lökosit infiltrasyonu vardır; bu durum GFR'yi aniden düşürür. Böbrekler sodyum ve suyu filtre edemez ve primer tuz-su retansiyonu gelişir. Artan intravasküler hacim (hipervolemi) hem sistemik kan basıncını yükseltir (hipertansiyon) hem de kapiller hidrostatik basıncı artırarak ödeme yol açar. Proteinüri subnefrotiktir (0.8 g), dolayısıyla hipoalbüminemi (A) primer neden değildir. Lenfatik tıkanıklık (C) veya histamin artışı (D) söz konusu değildir."
+  },
+  {
     "id": "prac-odem-012",
     "deckId": "learn-odem-hiperemi-konjesyon",
     "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
@@ -1733,1134 +1980,307 @@
     "explanation": "HIV temas sonrası profilaksisi (PEP) en geç ilk 72 saat içinde başlanmalı ve 28 gün 3'lü antiretroviral rejimle sürdürülmelidir (C doğru). Tek doz tedavilerden sonra en az 7 gün cinsel perhiz zorunludur (A yanlış). Partner yönetiminde son 60 gün taranır ve semptomsuz olanlar da tedavi edilir (B yanlış). Kondom örtmediği cilt alanlarındaki HSV, HPV ve şankr lezyonlarına karşı kısmi korur, %100 korumaz (D yanlış). Hepatit C'nin aşısı yoktur (E yanlış)."
   },
   {
-    "id": "d3-k1-tbg-001",
+    "id": "prac-dismorf-001",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 1,
-    "slideTitle": "Tıbbi Genetik ve Dismorfolojiye Giriş",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+    "slideTitle": "Tıbbi Genetiğe Giriş: Kalıtım, Biyolojik Varyasyon ve Sağlık-Hastalık Dengesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tıbbi genetik biliminin kapsamı ve temel ilkeleri dikkate alındığında, bu disiplinin klinik yaklaşımıyla ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK VE KLİNİK OLARAK DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yarık dudak-damak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nöral tüp defekti (spina bifida)",
-        "isCorrect": false
-      }
+      "A) Tıbbi genetik yalnızca tek gen hastalıklarıyla ilgilenir; multifaktöriyel ve çevresel etkileşimli hastalıklar çalışma alanı dışındadır.",
+      "B) Tıbbi genetik yaklaşımında odak noktası yalnızca hasta birey (proband) olup, aile üyelerinin risk profili değerlendirilmez.",
+      "C) Tıbbi genetik, insanlardaki kalıtım ve biyolojik varyasyonları inceleyerek tanı, prognoz ve aile temelli risk yönetimi sağlar.",
+      "D) Konjenital malformasyonların tamamı çevresel etkenlere bağlı geliştiğinden genetik mekanizmalarla açıklanamaz.",
+      "E) Moleküler düzeydeki nükleotid değişimleri klinik fenotipi etkilemediği için tıbbi genetik yalnızca mikroskopik kromozom analizine dayanır."
     ],
-    "correctAnswer": "C",
-    "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Tıbbi genetik, insanlardaki kalıtım ve varyasyon mekanizmalarını inceleyerek hastanın tanısı, prognozu ve ailesinin risk tayinini multidisipliner olarak yönetir. A seçeneği yanlıştır çünkü poligenik ve multifaktöriyel hastalıklar da genetiğin ana konusudur. B seçeneği yanlıştır; aile ağacı ve akrabaların risk tayini esastır. D seçeneği yanlıştır; malformasyonların önemli bölümü genetik veya multifaktöriyel kökenlidir. E seçeneği yanlıştır; tek bir nükleotid değişimi dahi ağır monogenik sendromlara yol açabilir ve moleküler analizler tıbbi genetiğin bel kemiğidir."
   },
   {
-    "id": "d3-k3-gen-002",
+    "id": "prac-dismorf-002",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 2,
-    "slideTitle": "Tıbbi Genetiğin Alt Disiplinleri ve Genetik Danışma",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aterosklerotik kardiyovasküler hastalıkların ve endotel disfonksiyonunun moleküler genetik zemininde doğrudan rol oynamayan mutasyonel mekanizma hangisidir?",
+    "slideTitle": "Tıbbi Genetiğin Uzmanlık Alanları ve Alt Disiplinleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İnsan topluluklarında kistik fibrozis veya talasemi gibi otozomal resesif hastalıkların taşıyıcılık sıklığını, alel frekanslarını ve akraba evliliğinin bu frekanslar üzerindeki etkilerini araştıran tıbbi genetik alt disiplini aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Pıhtılaşma faktörlerindeki mutasyonlar (Faktör V Leiden G1691A, Protrombin G20210A)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Matriks metalloproteinaz (MMP) genlerindeki aşırı ekspresyon varyantları",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Apolipoprotein E (ApoE) genindeki izoform polimorfizmleri",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Mitokondriyal DNA transfer RNA genlerindeki maternal mutasyonlar",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Endotelyal Nitrik Oksit Sentaz (eNOS) yolağındaki gen mutasyonları",
-        "isCorrect": false
-      }
+      "A) Sitogenetik",
+      "B) Popülasyon Genetiği",
+      "C) Moleküler Sitogenetik",
+      "D) Gelişimsel Genetik",
+      "E) Farmakogenomik"
     ],
-    "correctAnswer": "D",
-    "explanation": "Ateroskleroz multigenik kompleks bir hastalıktır: Lipid metabolizması (ApoE, LDLR), tromboz (Faktör V Leiden), endotel (eNOS) ve plak matriksi (MMP) genleri majör etkenlerdir. Mitokondriyal maternal tRNA mutasyonları ise MELAS ve MERRF gibi mitokondriyal miyopatilerin nedenidir, aterosklerozun primer sebebi değildir."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. İnsan topluluklarında alel frekanslarını, gen havuzunu ve akraba evliliği ile seçilim gibi faktörlerin toplumdaki genetik çeşitliliğe etkisini inceleyen alan Popülasyon Genetiğidir. Sitogenetik kromozomları inceler. Gelişimsel genetik embriyogenez kontrolünü araştırır. Moleküler sitogenetik submikroskopik kromozom defektlerini inceler. Farmakogenomik ise ilaç yanıtındaki genetik varyasyonlarla ilgilenir."
   },
   {
-    "id": "d3-k1-enf-054",
+    "id": "prac-dismorf-003",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 3,
-    "slideTitle": "Kromozomal Düzensizlikler: Sayısal ve Yapısal Spektrum",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Febril nötropeni için hangisi yanlıştır?",
+    "slideTitle": "Kromozomal Düzensizlikler: Sayısal ve Yapısal Değişiklikler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sitogenetik incelemede bir kromozomun sentromerini de içerecek şekilde iki kırık noktası arasında kalan segmentin 180 derece ters dönerek aynı kromozoma yapıştığı saptanmıştır. Bu yapısal kromozom anomalisi aşağıdakilerden hangisiyle adlandırılır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Mutlak nötrofil sayısı <500/mm³",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Vücut sıcaklığı ≥38.3°C ya da 1 saat ara ile ≥38°C",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Mukozit varlığında kandidemi riski artar",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Uzamış nötropeni küf enfeksiyonu riskini artırır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Febril nötropenide izole hümoral immün yetmezlik vardır",
-        "isCorrect": true
-      }
+      "A) Parasentrik İnversiyon",
+      "B) Perisentrik İnversiyon",
+      "C) Robertsonyan Translokasyon",
+      "D) İzokromozom",
+      "E) Ring (Halka) Kromozom"
     ],
-    "correctAnswer": "E",
-    "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Sentromeri içine alan iki kırık arasındaki ters dönme Perisentrik inversiyon olarak adlandırılır. Sentromeri içermeyen, yalnızca tek bir kolda gerçekleşen ters dönmeler ise Parasentrik inversiyondur. Robertsonyan translokasyon akrosentrik kromozomların füzyonudur. İzokromozom bir kolun kaybı ve diğer kolun duplikasyonudur. Ring kromozom ise uçların birleşmesiyle halka şeklini alan kromozomdur."
   },
   {
-    "id": "d3-k1-pat-018",
+    "id": "prac-dismorf-004",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 4,
-    "slideTitle": "Dismorfoloji ve Metabolik Hastalıklar Arasındaki Yapı-Fonksiyon Ayrımı",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Fenilketonüri (FKÜ) hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "slideTitle": "Dismorfoloji Kavramı, Tarihçesi ve Temel Felsefesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Dismorfoloji kavramının tarihçesi, etimolojisi ve temel klinik prensipleri göz önüne alındığında, aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Otozomal resesif geçişli bu hastalığın tanısını hayatının ilk 6 ayından önce koymak mümkün değildir",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Fenilalanin hidroksilaz enzim eksikliği ile oluşur",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tedavi edilmemiş hastalığın klinik bulguları arasında ağır mental retardasyon, nöbetler ve ciltte azalmış pigmentasyon sayılabilir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hayatın çok erken döneminde fenilalanin alımının kısıtlanmasıyla mental retardasyon önlenebilir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Diyet tedavisine devam etmeyen FKÜ&apos;lü kadın hastalar, fenilalanin metabolitlerinin transplasental geçişi sonucu malformasyonlu çocuklar doğurabilir",
-        "isCorrect": false
-      }
+      "A) Dismorfoloji terimi ilk kez 19. yüzyılda Gregor Mendel tarafından bezelye deneylerinde kullanılmıştır.",
+      "B) Bir fiziksel özelliğin dismorfik kabul edilmesi için etnik köken ve yaş faktörleri tamamen önemsizdir.",
+      "C) Dismorfoloji ilk kez 1960 yılında Dr. David W. Smith tarafından tanımlanmış olup normal morfogenezden sapmaları inceler.",
+      "D) Dismorfoloji yalnızca cerrahi olarak düzeltilebilen izole ekstremite ampütasyonlarıyla ilgilenir.",
+      "E) Tanımlanmış genetik sendrom sayısı 50'yi geçmediği için dismorfolojide tanı koymak oldukça basittir."
     ],
-    "correctAnswer": "A",
-    "explanation": "Fenilketonüri, doğumdan hemen sonra rutin yenidoğan tarama testleri (topuk kanı) ile tanınabilen bir hastalıktır; tanı hayatın ilk günlerinde/haftalarında konulabilir, &apos;ilk 6 aydan önce tanı konulamaz&apos; ifadesi yanlıştır ve erken tanı+diyet tedavisiyle ağır mental retardasyon önlenebilir. Hastalık, fenilalanin hidroksilaz enzim eksikliğine bağlı otozomal resesif bir metabolik hastalıktır; tedavisiz bırakıldığında mental retardasyon, nöbetler ve fenilalaninin melanin sentezini inhibe etmesine bağlı deri/saç pigment azalması görülür. Diyetine uymayan gebe FKÜ&apos;lü kadınlarda maternal fenilketonüri sendromu (mikrosefali, konjenital kalp defektleri, mental retardasyon) gelişebilir."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Dismorfoloji kavramı 1960 yılında Dr. David W. Smith tarafından tanımlanmış olup normal morfogenezden sapmaları ve doğumsal yapısal anomalileri inceler. A seçeneği yanlıştır; Mendel genetik kurallarını bulmuştur ancak dismorfoloji terimini kullanmamıştır. B seçeneği yanlıştır; bir özelliğin anomali sayılması için aynı yaş ve etnik orijindeki bireylerle karşılaştırılması zorunludur. D seçeneği yanlıştır; dismorfoloji tüm vücut sistemlerini ve sendromik paternleri inceler. E seçeneği yanlıştır; 2000'in üzerinde tanımlanmış sendrom bulunmaktadır."
   },
   {
-    "id": "d3-k1-pat-054",
+    "id": "prac-dismorf-005",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 5,
-    "slideTitle": "Konjenital Anomalilerin Boyutuna Göre Sınıflaması: Minör ve Majör Anomaliler",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi polikistik over hastalığında (PKOS) gözlenen bulgulardan biri değildir?",
+    "slideTitle": "Konjenital Anomali Epidemiyolojisi ve Doğumsal Defektlerin Dağılımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Konjenital anomalilerin epidemiyolojisi ve yaşamın ilk yılındaki seyri ile ilgili aşağıdaki ifadelerden hangisi İSTATİSTİKSEL VE KLİNİK OLARAK DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Hiperandrojenizm",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Düşük LDH seviyeleri",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Overde multiple folikül kistleri",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Menstruel düzensizlikler",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnfertilite",
-        "isCorrect": false
-      }
+      "A) Canlı doğan bebeklerin %20'sinde doğum anında cerrahi gerektiren majör malformasyon mevcuttur.",
+      "B) Doğumda majör anomali oranı %2-3 iken, iç organ anomalilerinin tespitiyle 1. yaş sonunda bu oran yaklaşık %5-6'ya ulaşır.",
+      "C) Doğumda gözle görülemeyen iç organ anomalileri 1. yaştan sonra tamamen gerileyerek yok olur.",
+      "D) Konjenital malformasyonların tamamı vücut yüzeyinde yer alır; kardiyak ve renal defektler malformasyon sayılmaz.",
+      "E) Tüm konjenital anomaliler mutlak surette kalıtsaldır ve anne-babada aynı fenotipik bulgular mevcuttur."
     ],
-    "correctAnswer": "B",
-    "explanation": "Polikistik over sendromunda klasik biyokimyasal bulgu, LH/FSH oranının yükselmesi ve hiperandrojenizmdir (yüksek testosteron/androstenedion); &apos;düşük LDH seviyeleri&apos; PKOS&apos;un tanımlayıcı bir laboratuvar bulgusu değildir ve bu şık PKOS bulguları arasında yer almaz. Hiperandrojenizm, çoklu folikül kistleri, oligo/amenore, hirsutizm ve infertilite PKOS&apos;un iyi bilinen klinik ve morfolojik özellikleridir. Not: Bazı sınav versiyonlarında bu soru &apos;hipoandrojenizm&apos; distraktörüyle sorulmuştur; PKOS&apos;ta gerçek bulgu hiperandrojenizmdir, hipoandrojenizm değildir."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Yenidoğan döneminde majör anomali sıklığı %2-3 iken, doğumda belirti vermeyen kardiyak, renal ve santral sinir sistemi anomalilerinin ilk yıl içinde tanı almasıyla kümülatif sıklık %5-6'ya yükselir. A seçeneği abartılıdır (%20 değil %2-3). C seçeneği yanlıştır; iç organ anomalileri gerilemez, tanı aldıkça oran artar. D seçeneği yanlıştır; kardiyak ve renal defektler majör malformasyonlardır. E seçeneği yanlıştır; anomalilerin çoğu sporadik veya multifaktöriyeldir."
   },
   {
-    "id": "d3-k1-tbg-003",
+    "id": "prac-dismorf-006",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 6,
-    "slideTitle": "Minör Anomaliler: Tanısal Değeri, Sendromik İpuçları ve '3 Kuralı'",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "5p kromozomunun kısa kolundaki delesyon (5p−) hangi genetik sendroma neden olur?",
+    "slideTitle": "Yapısal Defektler ile Metabolik Hastalıkların Karşılaştırmalı Ayrımı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yenidoğan yoğun bakım ünitesine yatırılan iki bebekten birincisinde doğumda izole yarık damak ve Fallot tetralojisi saptanırken; ikincisinde doğumda tamamen normal fizik muayene bulguları varken 36. saatte beslenmeyi takiben letarji, koma ve hiperamonyemi gelişmiştir. Bu iki bebeğin patofizyolojik sınıflandırması aşağıdakilerden hangisinde DOĞRU verilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Cri du chat (Kedi feryadı) sendromu",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Prader-Willi sendromu",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Williams sendromu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "DiGeorge sendromu (22q11 delesyonu)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Wolf-Hirschhorn sendromu",
-        "isCorrect": false
-      }
+      "A) Birinci bebek metabolik hastalık; İkinci bebek primer dismorfolojik malformasyondur.",
+      "B) Her iki bebek de intrauterin mekanik deformasyon kategorisindedir.",
+      "C) Birinci bebek primer yapısal anomali/dismorfoloji; İkinci bebek doğumsal metabolizma hastalığı tablosudur.",
+      "D) Her iki bebekte de doğumda anormal fonksiyon varken yapısal anatomi tamamen korunmuştur.",
+      "E) İkinci bebekteki tablo yalnızca cerrahi eksizyonla tedavi edilebilen bir majör anatomik defekttir."
     ],
-    "correctAnswer": "A",
-    "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Birinci bebekte doğumda belirgin anatomik yapı bozukluğu (yarık damak ve Fallot tetralojisi) mevcut olup primer yapısal anomali/dismorfoloji örneğidir. İkinci bebekte ise doğumda anatomik yapı normal olup beslenmeyle birlikte enzim defektine sekonder toksik metabolit birikimi (hiperamonyemi) geliştiğinden doğumsal metabolizma hastalığı tablosudur. A tam tersini iddia eder. B her ikisine deformasyon der. D birinci bebeğin yapısal anomalilerini yok sayar. E üre siklus/metabolik komayı cerrahi bir defekt gibi niteler."
   },
   {
-    "id": "d3-k1-tbg-001-177",
+    "id": "prac-dismorf-007",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 7,
-    "slideTitle": "Etiyopatogeneze Göre Anomaliler: Dört Temel Primer Defekt Matrisi",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+    "slideTitle": "Konjenital Anomalilerin Sınıflandırılması: Büyüklük, Oluşum ve Birliktelik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Konjenital anomalilerin uluslararası dismorfoloji uzlaşı kriterlerine göre sınıflandırılması konusunda aşağıdakilerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yarık dudak-damak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nöral tüp defekti (spina bifida)",
-        "isCorrect": false
-      }
+      "A) Konjenital anomaliler yalnızca cerrahi maliyetlerine göre ikiye ayrılır; mekanizma sınıflandırması tıbben terk edilmiştir.",
+      "B) Büyüklüklerine göre anomaliler minör ve majör; oluşum mekanizmasına göre malformasyon, deformasyon, disrupsiyon ve displazi olarak ayrılır.",
+      "C) Sendrom ve sekans tamamen aynı anlama gelen eşanlamlı kelimeler olup hiçbir patofizyolojik fark içermez.",
+      "D) Tüm minör anomaliler mutlaka ameliyatla düzeltilmek zorundadır, aksi takdirde ölümcüldür.",
+      "E) Asosiasyonlar, tek bir gende saptanan mutasyonun otozomal dominant kalıtıldığı kesinleşmiş durumlardır."
     ],
-    "correctAnswer": "C",
-    "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Dismorfolojide anomaliler büyüklüklerine göre minör ve majör; etiyopatogenetik oluşum şekline göre malformasyon, deformasyon, disrupsiyon ve displazi; birlikte görülmelerine göre izole, sekans, sendrom ve asosiasyon olarak sınıflandırılır. A seçeneği saçmadır. C seçeneği yanlıştır; sekans zincirleme kaskaddır, sendrom ise ortak etiyolojiye bağlı çoklu sistem tutulumudur. D seçeneği yanlıştır; minör anomaliler cerrahi gerektirmez. E seçeneği yanlıştır; asosiasyonların ortak genetik etiyolojisi bilinmemektedir ve sporadiktir."
   },
   {
-    "id": "d3-k1-enf-061",
+    "id": "prac-dismorf-008",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 8,
-    "slideTitle": "Malformasyon: Organogenez Dönemindeki Primer İntrinsik Hata",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Mikroorganizma ve doğal dirençli olduğu antibiyotik eşleşmelerinden hangisi doğrudur?",
+    "slideTitle": "Minör Anomaliler: Biyolojik Anlamı, Özellikleri ve Örnekleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fizik muayenede saptanan bir yapısal özelliğin 'minör anomali' olarak tanımlanabilmesi için aşağıdaki kriterlerden hangisini karşılaması GEREKİR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Escherichia coli – Ampisilin",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Staphylococcus aureus – Vankomisin",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Escherichia coli – Vankomisin",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Pseudomonas aeruginosa – Piperasilin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Neisseria gonorrhoeae – Seftriakson",
-        "isCorrect": false
-      }
+      "A) Genel popülasyonun %50'sinden fazlasında saptanması ve acil rezeksiyon gerektirmesi",
+      "B) Sağlıklı toplumun %4'ünden daha azında görülmesi ve ciddi medikal/cerrahi sonuç doğurmaması",
+      "C) Mutlak surette hastanın hayatını tehdit eden ağır solunum yetmezliğine yol açması",
+      "D) Yalnızca iç organlarda (kalp ve karaciğer) bulunması, dış yüzeyde asla görülmemesi",
+      "E) Sadece ileri yaş erişkinlerde ortaya çıkıp yenidoğan döneminde hiç bulunmaması"
     ],
-    "correctAnswer": "C",
-    "explanation": "Vankomisin, gram-pozitif bakterilerin hücre duvarı sentezini\n(peptidoglikan) hedef alan büyük bir glikopeptit molekülüdür ve gram-\nnegatif bakterilerin dış membranını geçemediğinden, E. coli gibi gram-\nnegatif bakteriler vankomisine doğal (intrinsik) olarak dirençlidir. Diğer\neşleştirmeler yanlıştır: E. coli ampisiline kazanılmış mekanizmalarla\ndirençli olabilir ama bu doğal direnç değildir; S. aureus vankomisine\ngenellikle duyarlıdır; P. aeruginosa piperasiline (özellikle tazobaktam ile\nkombine) duyarlı olabilir; N. gonorrhoeae seftriaksona halen duyarlıdır\n(tedavide kullanılır)."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Minör anomaliler; ciddi medikal, cerrahi veya kozmetik sonuç yaratmayan ve genel popülasyonda %4'ten daha az sıklıkta görülen morfolojik özelliklerdir. A seçeneği yanlıştır; %50'den sık olanlar normal varyanttır ve acil cerrahi gerektirmez. C seçeneği majör anomalilerin tanımıdır. D seçeneği yanlıştır; minör anomaliler çoğunlukla el, yüz ve kulak gibi dış vücut yüzeyinde saptanır. E seçeneği yanlıştır; anomaliler konjenital olup doğumda mevcuttur."
   },
   {
-    "id": "d3-k1-tbg-001-179",
+    "id": "prac-dismorf-009",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 9,
-    "slideTitle": "Deformasyon: Fetal Mekanik Kompresyon ve Kas-İskelet Distorsiyonu",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+    "slideTitle": "Minör Anomalilerin Klinik Önemi ve '3+ Minör Anomali' Kuralı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yenidoğan servisinde muayene edilen miadında bir bebeğin birinci derece akrabalarında herhangi bir dismorfik özellik bulunmazken; bebekte epikantus, klinodaktili ve avuç içinde tek transvers fleksiyel çizgi (Simian çizgisi) olmak üzere 3 adet minör anomali saptanmıştır. Dismorfolojik epidemiyoloji kurallarına göre bu bebekte gizli bir majör malformasyon veya genetik sendrom bulunma olasılığı yaklaşık yüzde KAÇTIR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yarık dudak-damak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nöral tüp defekti (spina bifida)",
-        "isCorrect": false
-      }
+      "A) %1",
+      "B) %5",
+      "C) %15",
+      "D) %50",
+      "E) %90"
     ],
-    "correctAnswer": "C",
-    "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
+    "correctAnswer": 4,
+    "explanation": "Doğru yanıt E'dir (%90). Pediatrik dismorfolojideki temel epidemiyolojik kurala göre, birinci derece akrabalarda mevcut olmayan 3 veya daha fazla minör anomaliye sahip bir yenidoğanda altta yatan gizli bir majör iç organ malformasyonu veya genetik/kromozomal sendrom bulunma olasılığı yaklaşık %90'dır. Bu nedenle bebek acilen kardiyak, renal ve nörolojik açıdan taranmalıdır."
   },
   {
-    "id": "d3-k1-tbg-001-180",
+    "id": "prac-dismorf-010",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 10,
-    "slideTitle": "Disrupsiyon: Normal Yapının Ekstrinsik veya Vasküler Yıkımı",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+    "slideTitle": "Nonspesifik ve Spesifik Minör Anomaliler ve Tanısal Yol Göstericilik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Dismorfik muayenede saptanan minör anomalilerin spesifik tanısal değerleri göz önüne alındığında, aşağıdaki eşleştirmelerden hangisi 'yüksek spesifikliğe sahip minör bulgu ve işaret ettiği sendromik spektrum' açısından EN DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yarık dudak-damak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nöral tüp defekti (spina bifida)",
-        "isCorrect": false
-      }
+      "A) Hipertelorizm - Yalnızca tek bir izole kemik hastalığında görülür",
+      "B) Saçta beyaz perçem (poliosis) ve iris heterokromisi - Waardenburg Sendromu",
+      "C) Telekantus - Sadece 1 sendromda tanımlanmış mutlak patognomonik bulgudur",
+      "D) Tek santral maksiller kesici diş - Hiçbir genetik hastalıkla ilişkisi olmayan fizyolojik varyanttır",
+      "E) Blefarofimozis - Yalnızca Down sendromunda görülen özgül bulgudur"
     ],
-    "correctAnswer": "C",
-    "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Saçta beyaz perçem (poliosis) ve iris heterokromisi az sayıda sendromda (yaklaşık 13-21 sendrom) görülen yüksek özgüllüğe sahip bulgulardır ve kraniofasiyal-işitme defektleriyle birlikte Waardenburg sendromunun en belirleyici klinik işaretleridir. A yanlıştır; hipertelorizm >400 sendromda görülür. C yanlıştır; telekantus >90 sendromda görülür. D yanlıştır; tek medyan kesici diş holoprozensefali orta hat defektinin kritik işaretidir. E yanlıştır; blefarofimozis >100 sendromda görülebilir."
   },
   {
-    "id": "d3-k1-pat-031",
+    "id": "prac-dismorf-011",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 11,
-    "slideTitle": "Displazi: Doku Düzeyinde Anormal Hücresel Organizasyon",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Belli bir strese duyarlı olan bir hücre tipinin yerini, olumsuz çevre koşullarına daha dayanıklı olan başka bir (farklılaşmış) hücre tipinin alması hangi adaptasyon tipini tanımlar?",
+    "slideTitle": "Majör Anomaliler: Tanımı, Organ Sistemleri ve Klinik Önemi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yenidoğan ünitesinde anal atrezi (imperfore anüs) saptanan bir bebekte klinik genetik ve dismorfolojik yaklaşım ilkelerine göre atılması gereken İLK VE EN UYGUN ADIM aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Hiperplazi",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hipertrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atrofi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Displazi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Metaplazi",
-        "isCorrect": true
-      }
+      "A) Hastanın izole bir vaka olduğu kabul edilerek hiçbir ek sistemik tarama yapılmadan taburcu edilmesi",
+      "B) Bu durumun minör anomali olduğu aileye söylenerek yalnızca 1 yıl sonra kontrole çağrılması",
+      "C) Defektin multipl bir sendrom veya asosiasyonun parçası olup olmadığını dışlamak için KVS, MSS ve omurga görüntülemelerinin yapılması",
+      "D) Anal atrezinin yalnızca anne sütü eksikliğine bağlı geliştiği belirtilerek diyet düzenlenmesi",
+      "E) Kromozom analizi yapılmaksızın bebeğe derhal deneysel gen terapisi başlanması"
     ],
-    "correctAnswer": "E",
-    "explanation": "Metaplazi, tam farklılaşmış bir hücre tipinin, genellikle kronik irritasyon veya strese yanıt olarak, aynı germ tabakasından köken alan başka bir farklılaşmış hücre tipi ile yer değiştirmesidir; bu değişim çoğunlukla daha az duyarlı/daha dayanıklı bir epiteli ortaya çıkarır (örn. sigara dumanına bağlı bronş silyalı kolumnar epitelin skuamöz epitele dönüşmesi, Barrett özofagusunda skuamöz epitelin kolumnar epitele dönüşmesi). Hiperplazi/hipertrofi hücre sayısı/boyutunda artışı, atrofi boyut/kütle azalmasını, displazi ise düzensiz, disorganize (henüz neoplastik olmayan) hücresel büyümeyi tanımlar."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Anal atrezi bir majör anomalidir ve tek başına izole olabileceği gibi VACTERL asosiasyonu veya diğer sendromların parçası olabilir. Bu nedenle bebekte gizli kardiyovasküler, vertebral ve renal defektlerin varlığını araştırmak amacıyla derhal KVS, MSS ve omurga görüntülemeleri yapılmalıdır. A seçeneği ihmaldir. B seçeneği yanlıştır; anal atrezi cerrahi gerektiren majör bir anomalidir. D ve E seçenekleri tıbben geçersizdir."
   },
   {
-    "id": "d3-k1-enf-002",
+    "id": "prac-dismorf-012",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 12,
-    "slideTitle": "Birlikte Görülmelerine Göre Anomaliler: Dağılım ve Kombinasyon Paternleri",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "“Bir yılda Türkiye'de yaşayan her 100.000 kişiden 45'i Kırım Kongo Kanamalı Ateşi hastalığına yakalanmaktadır”\nifadesi hangi epidemiyolojik kavramı karşılamaktadır?",
+    "slideTitle": "İntrauterin Gelişim Dönemleri, Morfogenez ve Teratoloji Penceresi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İntrauterin gelişim dönemleri ve teratoloji biyolojisi dikkate alındığında, teratojenik ajanlara bağlı majör yapısal malformasyonların (örn. nöral tüp defektleri, konjenital kalp anomalileri) oluşumu açısından EN KRİTİK VE EN DUYARLI ZAMAN ARALIĞI aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Prevalans",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "İnsidans",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Olgu fatalite hızı",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Atak hızı",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Mortalite",
-        "isCorrect": false
-      }
+      "A) Fertilizasyondan önceki ilk 48 saat",
+      "B) Gebeliğin 3. ile 8. haftaları arası (Organogenez Evresi)",
+      "C) Gebeliğin 20. ile 24. haftaları arası",
+      "D) Gebeliğin 34. ile 38. haftaları arası (Term Öncesi Evre)",
+      "E) Doğum eylemi sırasındaki ilk 6 saatlik periyot"
     ],
-    "correctAnswer": "B",
-    "explanation": "İnsidans, belirli bir zaman diliminde (burada bir yıl) bir toplulukta yeni\nortaya çıkan (yakalanma) olgu sayısının, risk altındaki nüfusa oranıdır.\nPrevalans ise belirli bir anda o hastalığa sahip tüm olguların (yeni+eski)\ntoplam nüfusa oranını gösterir. Olgu fatalite hızı, hastalığa yakalananlar\niçinde ölenlerin oranı; mortalite ise tüm nüfusta o hastalıktan ölenlerin\noranıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Embriyonik dönemin 3. ile 8. haftaları arası organogenez evresi olup organ taslaklarının farklılaştığı ve teratojenik ajanlara karşı en duyarlı olunan kritik penceredir. Majör yapısal malformasyonlar bu dönemde oluşur. İlk 2 haftada 'hep ya da hiç' kuralı işler. 9. haftadan sonraki fetal evrede ise doku büyümesi gerçekleşir; bu dönemde teratojenler kaba malformasyondan ziyade fonksiyonel/büyüme geriliği veya deformasyon yaratır."
   },
   {
-    "id": "d3-k1-pat-010",
+    "id": "prac-dismorf-013",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 13,
-    "slideTitle": "Sekanslar (Kaskadlar): Tek Primer Defektten Doğan Çığ Etkisi",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi fibrinolitik etkili değildir?",
+    "slideTitle": "Temel Yapısal Defekt 1: Malformasyon (Hatalı Biçimlenme)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Embriyogenez sırasında nöral tüpün kapanma sürecindeki primer intrensek duraklama nedeniyle lumbosakral bölgede miyelomeningosel ile doğan bir bebeğin bu yapısal defekti, oluşum mekanizmasına göre aşağıdaki sınıflardan hangisine girer?",
     "options": [
-      {
-        "key": "A",
-        "text": "Doku Faktörü Yolak İnhibitörü (TFPI)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Plazmin",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Doku Plazminojen Aktivatörü (tPA)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Streptokinaz",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Ürokinaz",
-        "isCorrect": false
-      }
+      "A) Malformasyon",
+      "B) Deformasyon",
+      "C) Disrupsiyon",
+      "D) Displazi",
+      "E) Asosiasyon"
     ],
-    "correctAnswer": "A",
-    "explanation": "Doku Faktörü Yolak İnhibitörü (TFPI), doku faktörü-Faktör VIIa kompleksini ve Faktör Xa&apos;yı inhibe ederek ekstrensek koagülasyon yolağını baskılayan bir antikoagülan proteindir; fibrinolitik sistemle değil koagülasyon kaskadının inhibisyonuyla ilgilidir. Plazmin, fibrini parçalayan ana enzimdir; doku plazminojen aktivatörü, ürokinaz ve streptokinaz ise plazminojeni plazmine çevirerek fibrinolizi başlatan/aktive eden ajanlardır."
+    "correctAnswer": 0,
+    "explanation": "Doğru yanıt A'dır. Malformasyon; organogenez evresinde dokunun kendi primer gelişim programındaki aksama, duraklama veya füzyon hatası sonucu oluşan kalıcı yapısal defekttir. Nöral tüpün kapanamaması (spina bifida / miyelomeningosel) klasik bir malformasyon örneğidir. Deformasyon dış mekanik baskı sonucu normal dokunun şekil değiştirmesidir. Disrupsiyon normal dokunun sonradan yıkıma uğramasıdır. Displazi dokudaki hücresel organizasyon bozukluğudur. Asosiasyon ise birlikte görülme şeklidir."
   },
   {
-    "id": "d3-k1-tbg-001-184",
+    "id": "prac-dismorf-014",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 14,
-    "slideTitle": "Potter Sekansı: Renal Agenezi, Oligohidramniyos ve Letal Pulmoner Hipoplazi",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
+    "slideTitle": "Temel Yapısal Defekt 2: Deformasyon (Mekanik Şekil Bozukluğu)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Uterus bikornisi bulunan ve gebeliği boyunca şiddetli oligohidramnios izlenen bir anneden doğan miadında bebeğin ayaklarında bilateral pes ekinovarus (çarpık ayak) saptanmış; ortopedi muayenesinde kemik ve damar taslaklarının normal olduğu ve alçılama/fizik tedaviyle tam düzelme sağlanabileceği belirtilmiştir. Bu bebekteki defektin temel patogenetik mekanizması aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Yarık dudak-damak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nöral tüp defekti (spina bifida)",
-        "isCorrect": false
-      }
+      "A) Malformasyon",
+      "B) Deformasyon",
+      "C) Disrupsiyon",
+      "D) Displazi",
+      "E) Genomik İmprinting"
     ],
-    "correctAnswer": "C",
-    "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Deformasyon; embriyolojik olarak normal gelişen doku ve organların intrauterin dönemde dış mekanik kuvvetlere (uterus bikornis anomalisi, oligohidramnios kompresyonu) maruz kalması sonucu ortaya çıkan ve konservatif tedavilerle geri dönüşümlü olan yapısal bozukluktur. Malformasyon intrensek doku hatasıdır. Disrupsiyon dokunun yıkımı/nekrozudur. Displazi dokudaki hücresel organizasyon bozukluğudur. Genomik imprinting ise epigenetik bir kalıtım modelidir."
   },
   {
-    "id": "d3-k4-pat-010",
+    "id": "prac-dismorf-015",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 15,
-    "slideTitle": "Asosiasyonlar (Birliktelikler): VACTERL ve MURCS",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Akciğerin nöroendokrin karsinomları arasında en yüksek dereceli ve en agresif olan; santral yerleşimli, sigara ile aşırı güçlü ilişkili; nükleus sitoplazma oranı aşırı yüksek, nükleolü seçilemeyen, ince granüler 'tuz-biber' kromatinli, ezilme (crush) artefaktı ve damar duvarlarında DNA birikimi (Azzopardi fenomeni) gösteren tümör hangisidir?",
+    "slideTitle": "Postnatal Deformasyonlar: Prematürite, Hipotoni ve Kafa Şekil Bozuklukları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yoğun bakımda 32. gebelik haftasında doğan ve belirgin hipotonisi olan bir bebeğin 2. ay kontrolünde kafatasının sol oksipital bölgesinde düzleşme (asimetri) fark edilmiştir. Çekilen kranyal grafide sütürlerin tamamen açık olduğu saptanmıştır. Bu bebekteki klinik tablo ve uygun yaklaşım aşağıdakilerden hangisinde DOĞRU olarak açıklanmıştır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Küçük Hücreli Akciğer Karsinomu (SCLC)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Tipik karsinoid tümör",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Atipik karsinoid tümör",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Büyük hücreli karsinom",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Müsinöz adenokarsinom",
-        "isCorrect": false
-      }
+      "A) Erken kapanan lambdoid kraniyosinostoz olup acil nöroşirürjikal kraniektomi gerektirir.",
+      "B) Postnatal mekanik basıya bağlı pozisyonel plagiosefali (deformasyon) olup pozisyon değiştirme ile düzelir.",
+      "C) İntrauterin vasküler kazaya bağlı gelişen geri dönüşümsüz bir serebral disrupsiyondur.",
+      "D) Lizozomal depo hastalığına bağlı ilerleyici bir kafa kemiği displazisidir.",
+      "E) Yalnızca yüksek doz radyoterapi ile düzeltilebilen malign bir kemik tümörüdür."
     ],
-    "correctAnswer": "A",
-    "explanation": "Küçük hücreli karsinomda tümör hücreleri olgun lenfositin 2 katı büyüklüğündedir. Nükleer kalıplanma (molding), tuz-biber kromatini, yüksek mitotik hız ve yaygın nekroz tipiktir. Nekroze hücrelerin DNA'sı damar duvarını boyar (Azzopardi etkisi). Cerrahiye uygun değildir; kemoradyoterapi verilir."
+    "correctAnswer": 1,
+    "explanation": "Doğru yanıt B'dir. Prematüre ve hipotonik bebeklerde sürekli aynı tarafa yatışa sekonder gelişen ve sütürlerin açık olduğu kafa düzleşmeleri postnatal deformasyon (pozisyonel plagiosefali) tablosudur. Sütürler açık olduğu için cerrahi gerektirmez; yatış pozisyonunun değiştirilmesi ve konservatif önlemlerle geri dönüşümlüdür. A seçeneği yanlıştır; sütürler açık olduğu için kraniyosinostoz değildir. C, D ve E seçenekleri alakasız patolojilerdir."
   },
   {
-    "id": "d3-k1-enf-026",
+    "id": "prac-dismorf-016",
     "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
+    "deckTitle": "Dismorfolojide Genetik Terminoloji, Malformasyonlar ve Klinik Yaklaşım",
     "slideNumber": 16,
-    "slideTitle": "Sendromlar: Ortak Etiyolojiye Dayanan İyi Tanımlanmış Anomali Kalıpları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretrit sebebiyle izlenen bir hastada ateş yüksekliği gelişmesi halinde ayırıcı tanıda yer alması gerekenler için\nhangisi doğrudur?",
+    "slideTitle": "Temel Yapısal Defekt 3: Disrupsiyon (Doku Yıkımı ve İnterrupsiyon)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Doğumda sağ el parmaklarında konstrüksiyon halkaları ve 2. ile 3. parmaklarda distal ampütasyon saptanan, yüzünde ise klasik anatomik yarık hatlarına uymayan asimetrik oblik bir doku defekti bulunan bebekte amniyotik bant sekelleri düşünülmüştür. Bu patolojinin oluşum mekanizması ve ailenin bir sonraki gebeliğindeki tekrarlama riski aşağıdakilerden hangisinde DOĞRU eşleştirilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sadece epididimit düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Sadece orşit düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Sadece disemine gonokok enfeksiyonu düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Sadece skrotal apse düşünülmelidir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Epididimit, orşit, disemine gonokok enfeksiyonu ve skrotal apsenin hepsi\ndüşünülmelidir",
-        "isCorrect": true
-      }
+      "A) Malformasyon - %25 (Otozomal resesif kalıtım riski)",
+      "B) Deformasyon - %50 (Otozomal dominant kalıtım riski)",
+      "C) Disrupsiyon - Çok düşük / İhmal edilebilir düzeyde (<%1)",
+      "D) Displazi - %100 (Mitokondriyal maternal aktarım riski)",
+      "E) Kromozomal delesyon - %10-15 dengeli translokasyon riski"
     ],
-    "correctAnswer": "E",
-    "explanation": "Üretrit tanılı bir hastada ateş yüksekliğinin eklenmesi, enfeksiyonun\nbasit üretritin ötesine geçerek komplike bir tabloya ilerlediğini\ndüşündürür. Bu durumda epididimit, orşit, skrotal apse gibi lokal yayılım\nkomplikasyonları ve dissemine gonokok enfeksiyonu (artrit-dermatit\nsendromu; ateş, poliartralji, püstüler döküntü ile seyreden sistemik bir\ntablo) ayırıcı tanıda mutlaka düşünülmelidir."
-  },
-  {
-    "id": "d3-k2-tbg-001",
-    "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
-    "slideNumber": 17,
-    "slideTitle": "Frajil X Sendromu: Dinamik Trinükleotid Tekrarı ve X'e Bağlı Mental Retardasyon",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki genetik sendromlardan hangisinde zeka düzeyi tipik olarak normaldir; belirgin mental retardasyon (zihinsel yetersizlik) birincil klinik tabloyu OLUŞTURMAZ?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Down Sendromu (Trizomi 21)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Williams Sendromu (7q11.23 mikrodelesyonu)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Turner Sendromu (45,X)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Prader-Willi Sendromu (15q11-13 delesyonu)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Frajil X Sendromu (FMR1 üçlü nükleotid tekrarı)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Turner sendromlu (45,X) kadınlarda zeka genellikle normaldir veya normale çok yakındır (bazı olgularda hafif uzaysal-algısal güçlükler olabilir ancak mental retardasyon sendromun bir parçası değildir). Down, Williams, Prader-Willi ve Frajil X sendromlarında ise orta-ağır düzeyde zihinsel yetersizlik karakteristiktir."
-  },
-  {
-    "id": "d3-k1-enf-008",
-    "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
-    "slideNumber": 18,
-    "slideTitle": "Dismorfik Hastada Tanı Algoritması ve Genetik Test Basamakları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kan bağışı öncesi yapılan tetkiklerde anti-HIV sonucu pozitif saptanan bir kişide yapılması gerekenler ile ilgili\nhangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Aile bireylerine bilgi verilerek izolasyon önerilir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Doğrulama testi istenir",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Sonucun yanlış pozitif olduğu söylenir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Doğrudan antiretroviral tedavi başlanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "2 hafta sonra seroloji tekrarı istenir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kan bağışı taramasında kullanılan testler (ELISA gibi) yüksek duyarlılığa\nsahip olmakla birlikte yalancı pozitiflik verebilir; bu nedenle ilk tarama\ntesti pozitif çıkan bir örnekte kesin tanı konmadan önce mutlaka daha\nspesifik bir doğrulama testi (Western blot/immünoblot veya HIV\nRNA/PCR gibi) yapılmalıdır. Doğrulama testi sonuçlanmadan hastaya\nkesin tanı konulmamalı, tedavi başlanmamalı ve aksine yanlış pozitif\nolduğu da söylenmemelidir."
-  },
-  {
-    "id": "d3-k1-pat-002",
-    "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
-    "slideNumber": 19,
-    "slideTitle": "NGS Varyant Analizi ve ACMG Sınıflama Kılavuzu",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Neoplaziler ile ilgili aşağıdakilerden hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Karsinomlar daha çok kan damarı yoluyla yayılır",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan dolaşımı yoluyla metastazlar en çok iskelet kasına olur",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tümör diferansiyasyonu arttıkça normal hücrelere benzerliği azalır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kan damarı yoluyla metastazlar daha çok arter yoluyla olur",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Benign tümörler bazen malign tümörlerden daha hızlı büyüyebilir",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
-  },
-  {
-    "id": "d3-k1-tbg-001-190",
-    "deckId": "learn-dismorfoloji-terminolojisi",
-    "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
-    "slideNumber": 20,
-    "slideTitle": "Sentez ve Özet: Dismorfolojik Karar Ağacı ve Kurul 1 Altın İpuçları",
-    "discipline": "Tıbbi Genetik",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki konjenital anomali örneklerinden hangisi bir “deformasyon”a örnektir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yarık dudak-damak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Amniyotik bant sendromuna bağlı ekstremite kesisi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Oligohidramnioza bağlı kraniyofasyal basıklık ve talipes deformitesi",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Trizomi 21’e bağlı çoklu organ anomalileri",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Nöral tüp defekti (spina bifida)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
-  },
-  {
-    "id": "d3-k1-enf-003",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 1,
-    "slideTitle": "Enfeksiyon Hastalıklarına Giriş ve Temel İlkeler",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Patojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Virülans",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Enfektivite",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İmmünojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Toksijenite",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
-  },
-  {
-    "id": "d3-k1-enf-003-192",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 2,
-    "slideTitle": "Patojenite ve Virülans Kavramlarının Kesin Ayrımı",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Patojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Virülans",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Enfektivite",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İmmünojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Toksijenite",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
-  },
-  {
-    "id": "d3-k1-enf-028",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 3,
-    "slideTitle": "Mikroorganizma Sınıflandırması: Prionlardan Parazitlere Biyolojik Spektrum",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretral/servikal akıntısı olan bir hastanın gram boyamasında mikroskop sahasında artmış sayıda PMNL (>2)\ngörülmesine rağmen herhangi bir mikroorganizma saptanamamıştır. En olası etken hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Trichomonas vaginalis",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Candida albicans",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Gardnerella vaginalis",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Chlamydia trachomatis, zorunlu hücre içi (obligat intraselüler) bir\nbakteri olduğundan standart gram boyama ile görülemez ve rutin kültür\nbesiyerlerinde üremez. Bu nedenle üretral/servikal akıntı örneğinde\nartmış PMNL sayısına rağmen gram boyamada herhangi bir\nmikroorganizma görülememesi, klasik olarak Chlamydia trachomatis\nenfeksiyonunu (nongonokoksik üretrit/servisit) düşündürür; tanı için\nnükleik asit amplifikasyon testleri (NAAT/PCR) kullanılır."
-  },
-  {
-    "id": "d3-k1-enf-017",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 4,
-    "slideTitle": "Atipik Bakteriyel Ajanlar: Mikoplazma, Klamidya ve Riketsiyalar",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Neisseria gonorrhoeae enfeksiyonunun tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tek doz seftriakson (IM) ile tedavi edilir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Eş zamanlı klamidya enfeksiyonu dışlanamıyorsa tedaviye doksisiklin eklenir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hastanın cinsel partnerinin tedavi edilmesine gerek yoktur",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Tedavi sonrası test-of-cure, faranjiyal enfeksiyon dışında rutin olarak gerekli değildir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Gebelerde de seftriakson güvenle kullanılabilir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Gonokoksik enfeksiyonlarda (ve genel olarak tüm CYBE'lerde) yeniden\nenfeksiyonu önlemek ve toplumsal yayılımı durdurmak için, hastanın\nson 60 gün içindeki cinsel partnerlerinin mutlaka değerlendirilmesi ve\neş zamanlı (ampirik) tedavi edilmesi gerekir; 'partner tedavisine gerek\nyoktur' ifadesi bu nedenle yanlıştır. Güncel tedavi yaklaşımı artan direnç\nnedeniyle tek doz seftriakson esasına dayanır; klamidya birlikteliği\ndışlanamıyorsa doksisiklin eklenir."
-  },
-  {
-    "id": "d3-k1-enf-006",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 5,
-    "slideTitle": "Normal İnsan Mikrobiyotası (Florası) ve Vücudun Steril Bölgeleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki vücut bölgelerinden hangisinde normalde mikrobiyal flora bulunmaz?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Özefagus",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Konjonktiva",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Üreter",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Kolon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Vajen",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Özefagus, konjonktiva, kolon ve vajen gibi dış ortamla/mukozal yüzeyle\ntemas eden bölgelerde normal (kommensal) mikrobiyal flora bulunur.\nÜreterler ise mesane ve böbrekler gibi normalde sterildir; bu bölgelerde\nmikroorganizma varlığı patolojik kabul edilir."
-  },
-  {
-    "id": "d3-k1-enf-024",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 6,
-    "slideTitle": "Kolonizasyon, Disbiyoz ve Fırsatçı (Opportunistik) Enfeksiyonlar",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretrit etkenlerinin araştırılmasında Ureaplasma urealyticum ile ilgili hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Genital kültürde üremesi tek başına klinik olarak anlamlı kabul edilir ve mutlaka tedavi\ngerektirir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Sağlıklı bireylerin genital florasında da bulunabildiğinden, kültürde üremesi tek\nbaşına anlamlı kabul edilmez",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Gram boyamada kolayca görülebilen büyük bir bakteridir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Standart gonokok kültür besiyerinde kolayca ürer",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Tedavisinde ilk seçenek penisilindir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Ureaplasma urealyticum, hücre duvarı olmayan (Mycoplasma\nailesinden) küçük bir bakteridir ve cinsel yönden aktif sağlıklı bireylerin\ngenital florasında da sıklıkla kolonizasyon şeklinde bulunabilir. Bu\nnedenle genital örnek kültüründe üremesi tek başına patojen olduğu ve\ntedavi gerektirdiği anlamına gelmez; klinik bulgularla birlikte\ndeğerlendirilmelidir. Hücre duvarı olmadığından gram boyanmaz ve\npenisilin gibi hücre duvarı sentezini hedefleyen antibiyotiklere doğal\nolarak dirençlidir (tedavide makrolid/tetrasiklin grubu tercih edilir)."
-  },
-  {
-    "id": "d3-k3-far-009",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 7,
-    "slideTitle": "Hastane Enfeksiyonları (Sağlık Hizmetiyle İlişkili Enfeksiyonlar - SHİE)",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kanamisinin yarı-sentetik türevi olan; moleküler yapısındaki koruyucu yan zincir sayesinde bakteriyel aminoglikozid inaktive edici asetilaz, adenilaz ve fosfotransferaz enzimlerinin çoğuna dirençli bulunan ve gentamisine dirençli nozokomiyal gram-negatif basillerde tercih edilen antibiyotik hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Netilmisin",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Spektinomisin",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Amikasin",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Paromomisin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Neomisin",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Amikasin, bakteriyel modifiye edici enzimlere karşı en dayanıklı aminoglikoziddir. Gentamisin ve tobramisine direnç geliştiğinde spektrum genişliği sayesinde hastane kaynaklı dirençli Pseudomonas ve Klebsiella suşlarında hayat kurtarıcıdır."
-  },
-  {
-    "id": "d3-k1-enf-007",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 8,
-    "slideTitle": "Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi mikroorganizma bulaşı için indirek (dolaylı) temas yollarından değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sağlık personelinin elleri",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Glukometre",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tansiyon ölçme aleti",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hastalar arasında ortak kullanılan su ısıtma cihazı",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kan transfüzyonu",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "İndirek temas bulaşı, kontamine cansız ara yüzeyler (glukometre,\ntansiyon aleti, ortak kullanılan cihazlar) veya sağlık personelinin elleri\naracılığıyla mikroorganizmanın hastadan hastaya taşınmasıdır. Kan\ntransfüzyonu ise doğrudan (parenteral) bir bulaş yoludur;\ndolaylı/indirekt temas kategorisine girmez."
-  },
-  {
-    "id": "d3-k1-enf-005",
-    "deckId": "learn-enfeksiyon-hastaliklari",
-    "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
-    "slideNumber": 9,
-    "slideTitle": "Bulaş (Taşınma) Şekilleri: Temas, Damlacık ve Solunum (Aerosol) Dinamikleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki eylemlerden hangisinde en çok sayıda solunum partikülü saçılımı olur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Öksürme",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hapşırma",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Bağırma",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Şarkı söyleme",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Konuşma",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
+    "correctAnswer": 2,
+    "explanation": "Doğru yanıt C'dir. Amniyotik bant sendromuna bağlı doku ampütasyonları ve atipik yarıklar, başlangıçta normal olan dokunun ekstrinsik fibröz bantlarla mekanik olarak tahrip edilmesiyle oluşan klasik bir Disrupsiyon örneğidir. Disrupsiyonlar genetik bir mutasyona dayanmaz; sporadik dışsal veya vasküler kazalar sonucu oluştuğu için ailenin bir sonraki gebeliğinde tekrarlama riski çok düşüktür (<%1)."
   }
 ]

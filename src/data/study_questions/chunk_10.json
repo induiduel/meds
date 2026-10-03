@@ -1,5 +1,727 @@
 [
   {
+    "id": "prac-adh-041",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 41,
+    "slideTitle": "Primer İmmün Yetmezlikler II: Faringeal Cep, Fagosit ve Kompleman Defektleri (Tablo 5.10)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tekrarlayan Staphylococcus aureus karaciğer abseleri, Serratia marcescens osteomiyeliti ve Aspergillus pnömonisi nedeniyle izlenen 6 yaşındaki bir erkek çocuğun nötrofillerinin bakterileri fagosite edebildiği ancak intrasellüler olarak öldüremediği saptanmıştır. Yapılan Nitroblue Tetrazolium (NBT) testinde nötrofillerin sarı boyayı mavi formazan kristallerine dönüştüremediği (solunumsal patlamanın gerçekleşmediği) görülmüştür. Bu hastadaki moleküler enzim kusuru aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Adenozin Deaminaz (ADA)",
+      "B) NADPH Oksidaz",
+      "C) Miyeloperoksidaz (MPO)",
+      "D) Glukoz-6-Fosfat Dehidrogenaz (G6PD)",
+      "E) Bruton Tirozin Kinaz (BTK)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; fagositoz yapan ancak solunumsal patlama (respiratory burst) üretemeyen ve katalaz-pozitif bakterilerle (S. aureus, Serratia, Aspergillus) tekrarlayan granülomatöz enfeksiyonlar geçiren hastadaki defekt 'NADPH Oksidaz' enzim kompleksinin eksikliğidir (Kronik Granülomatöz Hastalık - CGD). NADPH oksidaz eksikliğinde süperoksit anyonu (O2-) üretilemez ve NBT testi negatif kalır. A seçeneği SCID'dir; C seçeneğinde NBT testi normaldir; D seçeneği hemolitik anemidir; E seçeneği Bruton hastalığıdır."
+  },
+  {
+    "id": "prac-adh-042",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 42,
+    "slideTitle": "Sekonder İmmün Yetmezlikler ve HIV/AIDS İmmünopatolojisi (Tablo 5.11)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "HIV-1 ile enfekte 38 yaşındaki bir hastada nefes darlığı, kuru öksürük ve ateş gelişmiştir. Akciğer tomografisinde bilateral diffüz buzlu cam dansiteleri izlenmiş ve bronkoalveoler lavajda Pneumocystis jirovecii kistleri gösterilmiştir. Laboratuvar tetkikinde CD4+ T lenfosit sayısı 120 hücre/mm3 olarak ölçülmüştür. Bu hastada virüsün konak CD4+ T hücrelerine giriş aşamasında hücre zar füzyonunu doğrudan sağlayan viral zarf glikoproteini aşağıdakilerden hangisidir?",
+    "options": [
+      "A) gp120",
+      "B) gp41",
+      "C) p24",
+      "D) Revers transkriptaz",
+      "E) İntegraz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; HIV virüsünün zarfında iki temel glikoprotein yer alır. Yüzeydeki gp120 hedef hücrenin CD4 reseptörüne ve kemokin ko-reseptörlerine (CCR5/CXCR4) bağlanmadan sorumludur. gp120 bağlandıktan sonra konformasyonel değişikliğe uğrayarak transmembran proteini olan 'gp41'i açığa çıkarır. gp41 hidrofobik füzyon peptidini konak hücre zarına saplayarak viral zarf ile konak hücre membranının FÜZYONUNU ve virüs genomunun sitoplazmaya girişini sağlar (günümüzde enfuvirtid adlı ilaç gp41'i bloke eden bir füzyon inhibitörüdür). A seçeneği bağlanmadır; C seçeneği kapsid proteinidir; D ve E enzimatik proteinlerdir."
+  },
+  {
+    "id": "prac-adh-043",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 43,
+    "slideTitle": "Amiloidoz: Biyokimyasal Doğa, Fibril Mimarisi ve Polarize Işık Karakteri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefrotik düzeyde proteinüri ve kardiyomegali saptanan 62 yaşındaki bir hastanın böbrek biyopsisinde glomerül mezanjiyumunda ve interlobüler arter duvarlarında Hematoksilen-Eozin boyasıyla parlak pembe, amorf, asellüler homojen madde birikimi izlenmiştir. Bu birikintinin amiloidoz olduğunu kesin olarak kanıtlamak amacıyla uygulanması gereken histokimyasal boyama ve mikroskobik inceleme yöntemi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Periyodik Asit-Schiff (PAS) boyası ile tübül bazal membranlarının kalınlaşmasının gösterilmesi",
+      "B) Prusya mavisi boyası ile hücre içi hemosiderin demir granüllerinin mavi boyanması",
+      "C) Kongo kırmızısı (Congo red) boyaması sonrası polarize ışık mikroskobunda elma yeşili çift kırılmanın (birefringence) saptanması",
+      "D) Masson trikrom boyası ile interstisyel kollajen liflerinin maviye boyandığının gösterilmesi",
+      "E) Ziehl-Neelsen boyası ile asido-rezistan mikobakteri basillerinin aranması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur; amorf eozinofilik birikintinin amiloid olduğunu kesinleştiren altın standart patolojik yöntem Kongo Kırmızısı (Congo Red) boyası ve ardından polarize ışık mikroskobunda 'elma yeşili çift kırıcılık' (apple-green birefringence) parıltısının gösterilmesidir. Bu çift kırılma amiloid fibrillerinin çapraz beta-kırmalı yapısından kaynaklanır. A seçeneği bazal membran boyasıdır; B seçeneği demir boyasıdır; D seçeneği kollajen fibrozis boyasıdır; E seçeneği tüberküloz boyasıdır."
+  },
+  {
+    "id": "prac-adh-044",
+    "deckId": "learn-asiri-duyarlilik-ve-otoimmunite",
+    "deckTitle": "Aşırı Duyarlılık Reaksiyonları, Otoimmün Hastalıklar ve İmmün Yetmezlikler",
+    "slideNumber": 44,
+    "slideTitle": "Amiloidoz Sınıflaması, Fibril Tipleri, Klinik Tablolar ve Organ Tutulumları (Tablo 5.12)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Çocukluğundan beri tekrarlayan ateş ve karın ağrısı atakları (Ailevi Akdeniz Ateşi - FMF) olan 36 yaşındaki bir erkek hastada son altı ayda yaygın bacak ödemi ve halsizlik gelişmiştir. Yapılan 24 saatlik idrar analizinde 8.5 gram/gün masif proteinüri saptanmış, serum albumini 2.1 g/dL bulunmuştur. Yapılan böbrek biyopsisinde glomerüllerde Kongo kırmızısı ile pozitif boyanan ve polarize ışıkta elma yeşili çift kırılma veren amiloid birikimi izlenmiştir. Bu hastadaki birikintiyi oluşturan temel amiloid fibril proteini ve onun karaciğer kaynaklı prekürsörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Fibril: AL - Prekürsör: İmmünoglobulin kappa hafif zinciri",
+      "B) Fibril: AA - Prekürsör: Serum Amiloid A (SAA) proteini",
+      "C) Fibril: ATTR - Prekürsör: Yabani tip Transtiretin",
+      "D) Fibril: Aβ - Prekürsör: Amiloid Prekürsör Proteini (APP)",
+      "E) Fibril: A-Cal - Prekürsör: Kalsitonin hormonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur; Ailevi Akdeniz Ateşi (FMF) veya kronik inflamatuar hastalıklarda (Romatoid Artrit vb.) gelişen sekonder sistemik amiloidoz tablosu 'AA Amiloidoz'dur. Karaciğerde IL-6 ve TNF uyarısıyla aşırı sentezlenen Serum Amiloid A (SAA) akut faz reaktanı proteolitik bölünmeye uğrayarak 'AA' amiloid fibrillerine dönüşür. AA amiloidozunun en sık ve en ölümcül tutulum yeri böbreklerdir ve hastada olduğu gibi masif nefrotik sendrom tablosu meydana getirir. A seçeneği multipl miyelomdur; C seçeneği yaşlı kalbidir; D seçeneği Alzheimer hastalığıdır; E seçeneği medüller tiroid kanseridir."
+  },
+  {
+    "id": "prac-gp-01",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 1,
+    "slideTitle": "İnsan Genomu Mimarisi, Kodlamayan DNA ve Genomik Çeşitlilik",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hücrede transkribe edildikten sonra sitoplazmada Dicer enzimi ile işlenen, RISC kompleksi içine girerek hedef mRNA'ların 3' translasyona uğramayan bölgesine (3'-UTR) bağlanan ve protein sentezini baskılayan yaklaşık 22 nükleotidlik düzenleyici molekül hangisidir?",
+    "options": [
+      "A) Ribozomal RNA (rRNA)",
+      "B) Transfer RNA (tRNA)",
+      "C) MikroRNA (miRNA)",
+      "D) Küçük nükleer RNA (snRNA)",
+      "E) Heterojen nükleer RNA (hnRNA)"
+    ],
+    "correctAnswer": "C",
+    "explanation": "miRNA'lar yaklaşık 22 nükleotidlik tek iplikli kodlamayan RNA'lardır. Dicer ile işlenip RISC kompleksine yüklenir ve hedef mRNA'nın translasyonunu durdurarak post-transkripsiyonel susturma yaparlar."
+  },
+  {
+    "id": "prac-gp-02",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 2,
+    "slideTitle": "Genetik Varyasyonlar: Tek Nükleotid Polimorfizmi (SNP) ve Kopya Sayısı (CNV)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdaki genetik varyasyon türlerinden hangisi insan genomunda sayısal olarak en sık rastlanan, bireyler arasında her 1000 bazda bir görülen ve multifaktöryel hastalıklara yatkınlığı haritalamada kullanılan tek bazlık değişimdir?",
+    "options": [
+      "A) Kopya Sayısı Varyasyonu (CNV)",
+      "B) Tek Nükleotid Polimorfizmi (SNP)",
+      "C) Dengeli Translokasyon",
+      "D) Halka Kromozom",
+      "E) İzokromozom"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Tek Nükleotid Polimorfizmleri (SNP), genomda 10 milyondan fazla bulunan ve her 1000 bazda bir rastlanan en sık varyasyon biçimidir."
+  },
+  {
+    "id": "prac-gp-03",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 3,
+    "slideTitle": "Epigenetik Düzenleme: DNA Metilasyonu, Histon Kodu ve Kromatin",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Bir tümör hücresinde p16 (CDKN2A) tümör süpresör gen dizisinde hiçbir delesyon veya nokta mutasyonu saptanmamasına rağmen proteinin hiç üretilmediği görülüyor. Promotor bölgesinin incelenmesinde CpG adacıklarında aşırı metilasyon tespit ediliyor. Bu gen susturma mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Reseptör Düzenlemesi",
+      "B) Nonsense Mutasyon",
+      "C) Epigenetik Susturma (DNA Hipermetilasyonu)",
+      "D) Alternatif Splicing",
+      "E) Gen Amplifikasyonu"
+    ],
+    "correctAnswer": "C",
+    "explanation": "DNA dizisi değişmeden promotor CpG adacıklarının metillenmesi sonucu genin inaktive olması klasik epigenetik susturma (DNA hipermetilasyonu) mekanizmasıdır."
+  },
+  {
+    "id": "prac-gp-04",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 4,
+    "slideTitle": "Mendel Tipi Tek Gen Bozuklukları ve Otozomal Dominant Kalıtım",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşağıdakilerden hangisi otozomal dominant kalıtım gösteren hastalıkların genel özelliklerinden biri DEĞİLDİR?",
+    "options": [
+      "A) Kuşak atlamadan vertikal geçiş göstermesi",
+      "B) Etkilenen ebeveynin çocuğuna aktarma riskinin %50 olması",
+      "C) Sıklıkla metabolik enzim eksikliklerinden kaynaklanması",
+      "D) Değişken ekspresyon ve eksik penetrans görülebilmesi",
+      "E) Erkek ve kadın çocuklarda eşit oranda ortaya çıkması"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Metabolik enzim eksiklikleri kural olarak Otozomal Resesif kalıtılır; çünkü enzimlerin %50 aktivitesi normal homeostaz için genellikle yeterlidir. Otozomal dominant hastalıklar ise yapısal proteinler ve reseptör defektlerinden kaynaklanır."
+  },
+  {
+    "id": "prac-gp-05",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 5,
+    "slideTitle": "Marfan Sendromu: Fibrillin-1 (FBN1) ve TGF-β Sinyal Yolağı",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Marfan sendromunda fibrillin-1 gen kusurunun yanı sıra patogenezde rol oynayan ve elastik liflerin proteolitik yıkımını tetikleyen, aşırı sinyal iletimi gösteren sitokin/büyüme faktörü yolağı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Epidermal Büyüme Faktörü (EGF)",
+      "B) Dönüştürücü Büyüme Faktörü-Beta (TGF-β)",
+      "C) Vasküler Endotelyal Büyüme Faktörü (VEGF)",
+      "D) İnterlökin-2 (IL-2)",
+      "E) Tümör Nekrozis Faktörü-Alfa (TNF-α)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Normal fibrillin-1 molekülleri latent TGF-β'yı sekestre eder. Fibrillin-1 kusurunda kontrolsüz serbest kalan TGF-β, matriks metalloproteinaz aktivasyonuna ve elastik doku harabiyetine neden olur."
+  },
+  {
+    "id": "prac-gp-06",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 6,
+    "slideTitle": "Marfan Sendromu: Kardiyovasküler, Oküler ve İskelet Morfolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Aşırı uzun boylu, kol açıklığı boyundan uzun olan, pektus ekskavatum ve bilateral lensinde yukarı-dışa subluksasyon saptanan 19 yaşındaki basketbolcuda ani başlayan yırtıcı göğüs ağrısı sonrası ölüm gerçekleşiyor. Otopsinde çıkan aortta intimal yırtık ve perikardiyal tamponad saptanıyor. Aort duvarının mikroskobik incelemesinde saptanması en muhtemel patolojik lezyon hangisidir?",
+    "options": [
+      "A) Dev hücreli aortit",
+      "B) Kistik medyal nekroz",
+      "C) Sifilitik endarterit obliterans",
+      "D) Mönckeberg medial kalsinozisi",
+      "E) Fibrinoid damar nekrozu"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Marfan sendromunda elastik tunika medyanın zayıflaması, elastik liflerin parçalanması ve amorf mukoid matriks birikimiyle karakterize Kistik Medyal Nekroz gelişir ve bu durum ölümcül aort diseksiyonuna yol açar."
+  },
+  {
+    "id": "prac-gp-07",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 7,
+    "slideTitle": "Otozomal Resesif Kalıtım ve Kistik Fibrozis (CFTR) Patogenezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Beyaz ırkta en sık görülen ölümcül otozomal resesif hastalık olan Kistik Fibrozis'in en yaygın mutasyonu olan Delta-F508'in hücresel patogenezi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hücre zarında klor kanalının açılmasını engelleyen sinyal iletim kusuru",
+      "B) mRNA sentezinin hiç yapılamaması (null mutasyon)",
+      "C) Protein katlanma kusuru nedeniyle endoplazmik retikulumda yıkılması ve zara ulaşamaması",
+      "D) Klor kanalının klor yerine bikarbonat geçirmeye başlaması",
+      "E) Aşırı aktifleşerek hücre içine aşırı klor pompalaması"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Delta-F508 mutasyonunda amino asit delesyonu proteinin anormal katlanmasına neden olur; protein endoplazmik retikulumda kalite kontrol mekanizmasınca tutulur, proteazomlarda yıkılır ve apikal membrana hiç ulaşamaz (Sınıf II taşıma kusuru)."
+  },
+  {
+    "id": "prac-gp-08",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 8,
+    "slideTitle": "Kistik Fibrozis: Doku Özgül İyon Taşınması ve Organ Patolojileri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Doğumdan sonra mekonyum çıkaramayan ve ileus operasyonuna alınan bir bebeğin büyüme döneminde kronik öksürük, steatore (yağlı ishal) ve büyüme geriliği gelişiyor. Balgam kültüründe mukoid Pseudomonas aeruginosa üreyen bu çocukta kesin tanı için istenmesi gereken en uygun test hangisidir?",
+    "options": [
+      "A) Ter Klorür Testi (Pilokarpin iyontoforezi)",
+      "B) Dışkıda Gizli Kan Testi",
+      "C) Serum Alfa-1 Antitripsin düzeyi",
+      "D) Bronkoalveoler lavaj sitolojisi",
+      "E) Akciğer biyopsisinde granülom aranması"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mekonyum ileusu, büyüme geriliği, steatore ve Pseudomonas bronşiti klasik Kistik Fibrozis tablosudur; altın standart tanı yöntemi terde klor düzeyini ölçen Ter Testidir."
+  },
+  {
+    "id": "prac-gp-09",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 9,
+    "slideTitle": "Sitogenetik Bozukluklar: Down Sendromu (Trizomi 21) Etiyopatogenezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "42 yaşındaki bir gebeden doğan ve Down sendromu tanısı alan bebeğin sitogenetik analizinde 47,XY,+21 saptanıyor. Bu hastadaki sayısal kromozom anomalisine yol açan en muhtemel hücresel mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Oogenez Mayoz I sırasında kromozomların ayrılamaması (non-disjunction)",
+      "B) Spermatogenez Mayoz II sırasında sentromer bölünme kusuru",
+      "C) Post-zigotik erken mitotik ayrılmama",
+      "D) 14 ve 21. kromozomlar arası dengeli Robertsonian translokasyonu",
+      "E) Perisentrik inversiyon"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Down sendromu olgularının %95'i maternal mayotik non-disjunction (özellikle oogenez Mayoz I'de ayrılmama) sonucu gelişir ve bu durum ileri anne yaşı ile doğrudan ilişkilidir."
+  },
+  {
+    "id": "prac-gp-10",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 10,
+    "slideTitle": "Down Sendromu: Klinikopatolojik Tutulumlar ve Yaşam Seyri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Doğumda epikantus, basık burun kökü ve avuç içinde tek transvers çizgi saptanan bir bebekte doğumdan 24 saat sonra safralı kusma başlıyor. Çekilen direkt batın grafisinde midede ve proksimal duodenumda hava-sıvı seviyesi ('çift baloncuk' görünümü) saptanıyor. Bu bebekteki gastrointestinal patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pilor Stenozu",
+      "B) Duodenal Atrezi",
+      "C) İntususepsiyon",
+      "D) Mekonyum İleusu",
+      "E) Özofagus Atrezisi"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Down sendromu ile güçlü birliktelik gösteren, doğumdan hemen sonra safralı kusma ve direkt grafide 'çift baloncuk (double bubble)' görünümü veren lezyon Duodenal Atrezidir."
+  },
+  {
+    "id": "prac-gp-11",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 11,
+    "slideTitle": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hava kirliliği yoğun olan bir metropolde yaşayan bireylerde uzun dönemde aterosklerotik plak instabilitesi ve akut koroner sendrom riskinin artmasından sorumlu olan, alveol seviyesine kadar ulaşıp makrofaj aktivasyonu ile sistemik enflamatuar sitokin salınımını tetikleyen temel partiküler kirletici boyutu hangisidir?",
+    "options": [
+      "A) PM50",
+      "B) PM20",
+      "C) PM10",
+      "D) PM2.5",
+      "E) Yalnızca kaba polenler"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Çapı 2.5 mikrometreden küçük partiküller (PM2.5) üst solunum yollarındaki filtreleri aşarak doğrudan alveollere iner, makrofajlarca yutulur ve salınan mediyatörler sistemik dolaşıma karışarak ateroskleroz ve kardiyovasküler mortaliteyi artırır."
+  },
+  {
+    "id": "prac-gp-12",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 12,
+    "slideTitle": "Karbonmonoksit (CO) ve Hipoksi Patolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kışın sobalı evde baygın bulunan bir hastanın dudaklarında ve derisinde kiraz kırmızısı renk saptanıyor. Çekilen beyin manyetik rezonans görüntülemesinde bilateral globus pallidusta simetrik nekroz alanları izleniyor. Bu hastadaki zehirlenme etkeni ve temel patofizyolojik mekanizma hangisidir?",
+    "options": [
+      "A) Siyanür - Methemoglobin oluşumu",
+      "B) Karbonmonoksit - Karboksihemoglobin oluşumu ve oksihemoglobin eğrisinin sola kayması",
+      "C) Kurşun - ALA dehidrataz enzim inhibisyonu",
+      "D) Arsenik - Piruvat dehidrogenaz blokajı",
+      "E) Metil alkol - Formik asit retinit hasarı"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kiraz kırmızısı cilt rengi ve bilateral globus pallidus nekrozu Karbonmonoksit (CO) zehirlenmesinin patognomonik tablosudur. CO hemoglobine bağlanarak karboksihemoglobin oluşturur ve oksihemoglobin eğrisini sola kaydırarak ağır hücresel hipoksi yapar."
+  },
+  {
+    "id": "prac-gp-13",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Ağır Metal Toksisitesi: Kurşun Patolojisi ve İntoksikasyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Eski boyalı bir evde yaşayan, karın ağrısı ve dikkat dağınıklığı şikayetiyle getirilen 4 yaşındaki çocuğun kan sayımında mikrositer anemi saptanıyor. Periferik yaymasında eritrositler içinde yaygın bazofilik noktalanma (basophilic stippling) izlenen bu çocukta patolojiden sorumlu ağır metal ve inhibe olan enzim ikilisi hangisidir?",
+    "options": [
+      "A) Cıva - Üroporfirinojen dekarboksilaz",
+      "B) Kurşun - Delta-aminolevülinik asit (ALA) dehidrataz",
+      "C) Arsenik - Tirozinaz",
+      "D) Kadmiyum - Ksantin oksidaz",
+      "E) Demir - Glukoz-6-fosfat dehidrogenaz"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kurşun intoksikasyonunda ALA dehidrataz ve ferroşelataz enzimleri inhibe olur; kanda serbest protoporfirin artar ve periferik yaymada ribozomal agregatlara bağlı bazofilik noktalanma tipiktir."
+  },
+  {
+    "id": "prac-gp-14",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 14,
+    "slideTitle": "Ağır Metal Toksisitesi: Cıva, Arsenik ve Kadmiyum Patolojileri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Yıllarca kuyu suyu içen bir hastada avuç içlerinde hiperkeratotik plaklar, tırnaklarda beyaz çizgilenmeler (Mees çizgileri) ve ciltte skuamöz hücreli karsinom gelişiyor. Karaciğer ultrasonunda kitle saptanan hastanın biyopsisinde hepatik anjiyosarkom tanısı konuyor. Bu tabloya yol açan en muhtemel çevresel toksin hangisidir?",
+    "options": [
+      "A) Kurşun",
+      "B) Arsenik",
+      "C) Kadmiyum",
+      "D) Cıva",
+      "E) Berilyum"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Palmar hiperkeratoz, Mees çizgileri, kutanöz skuamöz hücreli karsinom ve karaciğerde anjiyosarkom birlikteliği kronik Arsenik maruziyetinin klasik klinikopatolojik spektrumudur."
+  },
+  {
+    "id": "prac-gp-15",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 15,
+    "slideTitle": "Tütün Dumanı ve Karsinojenez / Vaskülopati Patolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Günde 2 paket sigara içen 60 yaşındaki bir hastada hematüri saptanması üzerine yapılan sistoskopide mesanede papiller tümöral kitle izleniyor ve ürotelyal karsinom tanısı konuyor. Tütün dumanının mesane karsinojenezinde rol oynayan en önemli kimyasal karsinojenik bileşeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Karbonmonoksit",
+      "B) Aromatik Aminler (2-Naftilamin)",
+      "C) Nikotin",
+      "D) Akrolein",
+      "E) Katran fenolleri"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Tütün dumanında bulunan aromatik aminler (özellikle 2-naftilamin) karaciğerde metabolize edildikten sonra idrarla atılırken mesane ürotelyumu ile temas eder ve ürotelyal karsinom riskini belirgin artırır."
+  },
+  {
+    "id": "prac-gp-16",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 16,
+    "slideTitle": "Alkol Metabolizması ve Biyokimyasal Toksisite Yolları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kronik alkol bağımlısı bir hastada aşırı alkol alımından sonra açlık hipoglisemisi ve karaciğer biyopsisinde yaygın mikroveziküler ve makroveziküler steatoz saptanıyor. Alkolün karaciğerde bu biyokimyasal ve morfolojik değişiklikleri başlatmasındaki temel mekanizma hangisidir?",
+    "options": [
+      "A) İntraselüler ATP tüketimi ve fosfat kaybı",
+      "B) Alkol dehidrogenaz reaksiyonu sonucu sitozolik NADH/NAD+ oranının aşırı yükselmesi",
+      "C) Hücre içi kalsiyum tükenmesi",
+      "D) Glukokinaz enziminin genetik inaktivasyonu",
+      "E) Safra asidi sentezinin tamamen durması"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Alkolün alkol dehidrogenaz ve aldehit dehidrogenaz ile oksidasyonu ortamdaki NAD+'ı tüketir ve NADH/NAD+ oranını aşırı yükseltir. Bu durum glukoneogenezi ve yağ asidi oksidasyonunu durdurarak hipoglisemi ve steatoza yol açar."
+  },
+  {
+    "id": "prac-gp-17",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 17,
+    "slideTitle": "Alkolik Karaciğer Hastalığı Morfolojisi: Steatoz, Hepatit ve Siroz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Yıllardır yoğun alkol tüketen ve sarılık, ateş ile lökositoz tablosuyla başvuran 52 yaşındaki hastanın karaciğer biyopsisinde balonlaşmış hepatositlerin sitoplazmasında eozinofilik, ip yumağı tarzında sitokeratin inklüzyonları (Mallory-Denk cisimcikleri) ve bunları çevreleyen yoğun nötrofilik infiltrasyon saptanıyor. Bu hastadaki kesin tanı nedir?",
+    "options": [
+      "A) Hepatik Steatoz tek başına",
+      "B) Alkolik Hepatit (Steatohepatit)",
+      "C) Primer Bilier Kolanjit",
+      "D) Kronik Hepatit B enfeksiyonu",
+      "E) Karaciğer Hemanjiomu"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Balonlaşmış hepatosit nekrozu, Mallory-Denk cisimcikleri ve nötrofil lökosit infiltrasyonu Alkolik Hepatitin (Steatohepatit) klasik histopatolojik triadıdır."
+  },
+  {
+    "id": "prac-gp-18",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 18,
+    "slideTitle": "Şiddetli Akut Yetersiz Beslenme (SAM): Somatik ve Visseral Kompartmanlar",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Ağır beslenme yetersizliği olan iki çocuktan birincisinde iskelet kaslarının ileri derecede eridiği ancak serum albümin düzeyinin normal olduğu; ikincisinde ise kas erimesi az olmasına rağmen serum albümininin ileri derecede düşük ve yaygın ödemin olduğu saptanıyor. Bu iki çocuğun etkilendikleri protein kompartmanları sırasıyla hangisidir?",
+    "options": [
+      "A) 1. çocuk: Visseral kompartman / 2. çocuk: Somatik kompartman",
+      "B) 1. çocuk: Somatik kompartman / 2. çocuk: Visseral kompartman",
+      "C) Her iki çocukta da yalnızca somatik kompartman",
+      "D) Her iki çocukta da yalnızca visseral kompartman",
+      "E) Yalnızca yağ dokusu kompartmanı"
+    ],
+    "correctAnswer": "B",
+    "explanation": "İskelet kası erimesiyle seyredip albüminin korunduğu durum Somatik kompartman tutulumudur (Marasmus); albüminin düşüp ödemin geliştiği durum ise Visseral kompartman tutulumudur (Kwashiorkor)."
+  },
+  {
+    "id": "prac-gp-19",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 19,
+    "slideTitle": "Marasmus: Ağır Kalori Yoksunluğu ve Somatik Kas Erimesi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "9 aylık bir bebekte ileri derecede kilo kaybı, kol çevresinde aşırı incelme, temporal ve bukkal yağ dokusunun erimesi sonucu buruşuk 'yaşlı adam yüzü' görünümü saptanıyor. Muayenesinde batında asit veya ekstremitelerde gode bırakan ödem izlenmiyor ve serum albümin düzeyi 3.6 g/dL (normal) bulunuyor. Bu çocuk için en olası tanı nedir?",
+    "options": [
+      "A) Kwashiorkor",
+      "B) Marasmus",
+      "C) Çölyak Hastalığı",
+      "D) Kistik Fibrozis",
+      "E) Nefrotik Sendrom"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Aşırı somatik kas ve yağ dokusu erimesi, yaşlı adam yüzü görünümü olmasına rağmen serum albümininin normal olması ve ödemin bulunmaması Marasmus'un klasik tablosudur."
+  },
+  {
+    "id": "prac-gp-20",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 20,
+    "slideTitle": "Kwashiorkor: Protein Yoksunluğu, Masif Ödem ve Yağlı Karaciğer",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "2 yaşında anne sütünden kesildikten sonra sadece patates ve mısır lapası ile beslenen bir çocukta bacaklarda gode bırakan ödem, batında asit, deride pul pul dökülen emaye boya benzeri hiperpigmente lezyonlar saptanıyor. Palpasyonda karaciğeri 4 cm büyük bulunan bu çocukta hepatomegalinin temel histopatolojik nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kupffer hücrelerinde demir birikimi (hemosiderozis)",
+      "B) Hepatositlerde glikojen depolanması",
+      "C) Apolipoprotein sentez eksikliğine bağlı hepatik steatoz (trigliserit birikimi)",
+      "D) Hepatik ven trombozu (Budd-Chiari)",
+      "E) Karaciğerde amiloid birikimi"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Kwashiorkor'da diyetle protein alınamadığı için karaciğerde apolipoprotein sentezi durur; sentezlenen trigliseritler VLDL olarak kana salınamaz ve hepatositler içinde birikerek masif hepatik steatoza yol açar."
+  },
+  {
+    "id": "prac-gp-21",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Yeme Bozuklukları Patolojisi: Anoreksiya Nervoza vs. Bulimia Nervoza",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Beden kitle indeksi 22 kg/m² (normal) olan 20 yaşındaki bir üniversite öğrencisinde diş hekimi muayenesinde maksiller ön dişlerin lingual yüzeyinde mine tabakasının yaygın olarak eridiği saptanıyor. Hastanın el muayenesinde metakarpofalangeal eklem dorsalinde nasırlaşmış lezyonlar (Russell belirtisi) ve bilateral parotis bezi büyümesi izleniyor. Bu hasta için en olası tanı nedir?",
+    "options": [
+      "A) Anoreksiya Nervoza",
+      "B) Bulimia Nervoza",
+      "C) Primer Hiperparatiroidizm",
+      "D) Sjögren Sendromu",
+      "E) Gastroözofageal Reflü Hastalığı tek başına"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Normal vücut ağırlığına rağmen diş minesi erozyonu, parotis bezi hipertrofisi ve parmak sırtında Russell belirtisi bulunması klasik Bulimia Nervoza tablosudur."
+  },
+  {
+    "id": "prac-gp-22",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Obezite Patofizyolojisi: Nörohumoral Aks, Leptin ve Adiponektin",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Obezite patofizyolojisinde adipositler tarafından salgılanarak endotel hasarını önleyen, kasta serbest yağ asidi oksidasyonunu uyararak insülin duyarlılığını artıran ve obez bireylerde paradoksal olarak plazma düzeyi belirgin derecede AZALMIŞ olan adipokin hangisidir?",
+    "options": [
+      "A) Leptin",
+      "B) Adiponektin",
+      "C) Rezistin",
+      "D) Ghrelin",
+      "E) TNF-alfa"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Adiponektin ('yağ yakan/insülin duyarlılaştırıcı adipokin'), yağ dokusu kütlesi arttıkça kandaki seviyesi paradoksal olarak düşen yegane adipokindir ve düşüklüğü Tip 2 DM riskini artırır."
+  },
+  {
+    "id": "prac-gp-23",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Obezitenin Klinik Sonuçları ve Kanser Biyolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "62 yaşında postmenopozal ve obez (BMI 38 kg/m²) olan bir kadında vajinal kanama nedeniyle yapılan endometriyal biyopside endometrioid adenokarsinom saptanıyor. Bu hastada obezite ile tümör gelişimi arasındaki nedensel ilişkiyi en iyi açıklayan moleküler mekanizma hangisidir?",
+    "options": [
+      "A) Adipositlerden salınan aşırı leptinin doğrudan nükleer reseptörleri mutasyona uğratması",
+      "B) Adipoz dokudaki aromataz enzimi aracılığıyla androjenlerin östrojene dönüşmesi ve endometriyumu sürekli uyarması",
+      "C) Safra asitlerinin vajinal kanala geri akması",
+      "D) Glukagon hormonunun karsinojenik etkisi",
+      "E) Adiponektin fazlalığının endometriyal hiperplazi yapması"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Postmenopozal dönemde overler östrojen üretmez; ancak obez kadınlarda genişlemiş yağ dokusunda eksprese edilen aromataz enzimi böbrek üstü bezi androjenlerini östrojene çevirir. Progesteronla karşılanmayan bu östrojen endometriyumu uyararak kanser riskini dramatik artırır."
+  },
+  {
+    "id": "prac-gp-24",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Moleküler Patoloji Araçları: Karyotipleme, FISH ve Yeni Nesil Dizileme (NGS)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "İleri evre akciğer adenokarsinomu tanısı alan bir hastada, tek bir doku kesiti kullanılarak EGFR ekzon mutasyonları, ALK füzyonları, ROS1 translokasyonları, BRAF V600E ve KRAS mutasyonlarının tamamını aynı anda paralel olarak taramak için seçilmesi gereken en güncel ve kapsamlı moleküler patoloji yöntemi hangisidir?",
+    "options": [
+      "A) Standart G-Bantlama Karyotipi",
+      "B) Western Blot analizi",
+      "C) Yeni Nesil Dizileme (Next Generation Sequencing - NGS)",
+      "D) Serum protein elektroforezi",
+      "E) Klasik Agaroz Jel Elektroforezi"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Yeni Nesil Dizileme (NGS), milyonlarca DNA parçasını eşzamanlı olarak dizileyerek yüzlerce geni kapsayan multigen onkoloji panelleriyle hedeflenebilir tüm mutasyonları tek seferde ortaya koyan altın standart moleküler araçtır."
+  },
+  {
+    "id": "prac-tromboz-001",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 1,
+    "slideTitle": "Hemostaz ve Tromboza Giriş: Fizyolojik Savunmadan Patolojik İflasa",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Hemostaz ve tromboz kavramlarının patofizyolojik özellikleri, biyolojik amaçları ve vasküler yanıttaki rolleri karşılaştırıldığında, aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
+    "options": [
+      "A) Normal hemostaz, vasküler travma sonrası kanamayı sınırlamak için pıhtı oluşturan fizyolojik bir mekanizmadır.",
+      "B) Tromboz, hemostatik mekanizmaların uygunsuz ve aşırı aktivasyonu sonucu canlı damar içinde trombüs gelişmesidir.",
+      "C) Fizyolojik hemostaz sürecinde pıhtı hasar alanıyla sınırlı kalırken, trombozda pıhtı yayılma ve lümeni tıkama eğilimindedir.",
+      "D) Tromboz tablosunun oluşması için mutlaka büyük çaplı tam kat bir damar duvarı rüptürü ve dışa kanama varlığı zorunludur.",
+      "E) Hemostaz ve trombozun her ikisinde de trombositler, koagülasyon faktörleri ve endotel hücreleri temel hücresel ve moleküler aktörlerdir."
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği yanlıştır. Tromboz gelişimi için damar duvarında tam kat rüptür veya dışa kanama olması zorunlu DEĞİLDİR; tam aksine tromboz sıklıkla damar bütünlüğü korunmuşken, mikroskobik endotel disfonksiyonu, aterosklerotik plak çatlaması veya kan akımı anormallikleri (staz/türbülans) zemininde gelişir. A, B, C ve E seçeneklerindeki ifadeler hemostaz ve trombozun temel patolojik prensiplerini eksiksiz ve doğru şekilde yansıtmaktadır."
+  },
+  {
+    "id": "prac-tromboz-002",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 2,
+    "slideTitle": "Normal Hemostazın Dört Evresi ve Vasküler Yanıtın Kronolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kesici alet yaralanması sonrası cilt ve cilt altı dokularında kanama başlayan bir hastada fizyolojik hemostatik yanıtın evreleri incelenmektedir. Bu hastada gerçekleşen hücresel ve moleküler olayların kronolojik sıralaması aşağıdakilerden hangisinde DOĞRU verilmiştir?",
+    "options": [
+      "A) Primer hemostatik tıkaç → Fibrin polimerizasyonu → Arteriyoler spazm → Faktör XIIIa çapraz bağlanması",
+      "B) Arteriyoler vazokonstriksiyon → Trombosit tıkacı oluşumu → Doku faktörü aracılı fibrin birikimi → Pıhtı retraksiyonu ve stabilizasyon",
+      "C) Fibrinojenin fibrine dönüşümü → Endotelin salınımı → Trombosit adezyonu → Plazmin aktivasyonu",
+      "D) Faktör XIII aktivasyonu → Trombosit agregasyonu → Nörojenik vazokonstriksiyon → Doku faktörü salınımı",
+      "E) Trombosit degranülasyonu → Plazminojen aktivatörü salınımı → Arteriyoler vazodilatasyon → Sekonder hemostaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Damar yaralanmasını izleyen kronolojik sıra: İlk olarak lokal nörojenik refleksler ve endotelin salınımıyla 'Arteriyoler vazokonstriksiyon'; ardından trombositlerin vWF ile yapışıp kümeleştiği 'Primer hemostaz'; doku faktörünün koagülasyonu başlatıp trombin ve fibrin ürettiği 'Sekonder hemostaz'; ve son olarak Faktör XIIIa'nın fibrini çapraz bağlayıp trombositlerin kasıldığı 'Pıhtı retraksiyonu ve stabilizasyonu'dur. Diğer seçeneklerdeki sıralamalar bu kronolojiyi ihlal etmektedir."
+  },
+  {
+    "id": "prac-tromboz-003",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 3,
+    "slideTitle": "Birinci Evre: Nörohumoral Arteriyoler Vazokonstriksiyon Mekanizmaları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Cerrahi insizyon sırasında küçük bir arteriyolün kesilmesini takiben gözlenen akut hemostatik yanıtın ilk evresi olan arteriyoler vazokonstriksiyon ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Nitrik oksit ve prostasiklin düzeylerindeki ani artış ile indüklenir.",
+      "B) Nörojenik refleksler ve endotel kaynaklı güçlü bir vazokonstriktör olan endotelin-1 salınımıyla gerçekleşir.",
+      "C) Kalıcı bir hemostatik tıkaç sağlar ve koagülasyon kaskadına gereksinimi tamamen ortadan kaldırır.",
+      "D) Hasarlı alandaki kan akım hızını artırarak trombositlerin bölgeye daha hızlı çarpmasını hedefler.",
+      "E) Yalnızca büyük elastik arterlerde gözlenir; kapiller ve arteriyol düzeyinde bu mekanizma bulunmaz."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Damar yaralanmasını izleyen erken vazokonstriksiyon, lokal nörojenik refleksler ve hasarlı endotelden salınan endotelin-1 peptidi ile meydana gelir. A seçeneği yanlıştır çünkü NO ve PGI2 güçlü vazodilatatörlerdir. C seçeneği yanlıştır çünkü bu spazm geçicidir, kalıcı pıhtılaşma sağlamaz. D seçeneği yanlıştır çünkü amaç akımı artırmak değil, akımı azaltarak faktörlerin yıkanmasını önlemektir. E seçeneği yanlıştır çünkü vazokonstriksiyon özellikle düz kas içeren arteriyol düzeyinde en belirgindir."
+  },
+  {
+    "id": "prac-tromboz-004",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 4,
+    "slideTitle": "Trombosit Biyolojisi: Megakaryositten Dolaşıma Yapı ve Granül İçerikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Primer hemostaz sürecinde trombositlerin granül içerikleri ve fonksiyonları incelendiğinde, trombosit 'yoğun (delta) granüllerinde' bulunan ve hemostatik tıkacın büyümesinde ile koagülasyon reaksiyonlarında doğrudan rol oynayan molekül ikilisi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Fibrinojen ve Trombosit Kaynaklı Büyüme Faktörü (PDGF)",
+      "B) Von Willebrand Faktörü (vWF) ve Faktör V",
+      "C) P-selektin ve Fibronektin",
+      "D) Adenozin difosfat (ADP) ve İyonize Kalsiyum (Ca²⁺)",
+      "E) Transforming Growth Factor-beta (TGF-β) ve Protein C"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Yoğun (delta) granüller; ADP, ATP, iyonize kalsiyum ve serotonin gibi küçük molekülleri içerir. Fibrinojen, PDGF, vWF, Faktör V, P-selektin ve TGF-β ise protein yapıda olup alfa (α) granüllerinde depolanır. Protein C ise karaciğerde sentezlenen bir plazma proteinidir, trombosit granülünde bulunmaz."
+  },
+  {
+    "id": "prac-tromboz-005",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 5,
+    "slideTitle": "Primer Hemostazın Başlangıcı: Trombosit Adezyonu ve Moleküler Köprüler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Diş çekimi sonrasında durdurulamayan diş eti kanaması şikayetiyle başvuran 14 yaşındaki bir hastanın laboratuvar incelemesinde kanama zamanı uzamış, trombosit sayısı hafif düşük ve periferik yaymasında anormal derecede büyük (dev) trombositler saptanmıştır. Yapılan trombosit agregometri testinde ristosetin ile kümeleşme gerçekleşmediği, ancak normal plazma ilavesiyle de bu tablonun düzelmediği gözlenmiştir. Bu hastadaki primer moleküler defekt aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Glikoprotein IIb/IIIa reseptör kompleksi eksikliği",
+      "B) Trombosit yüzeyindeki Glikoprotein Ib (GpIb) reseptör eksikliği",
+      "C) Plazma von Willebrand Faktörü (vWF) multimerlerinin sentez defekti",
+      "D) Koagülasyon Faktörü VIII geninde delesyon",
+      "E) Trombosit siklooksijenaz-1 (COX-1) enzim inaktivasyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka, GpIb reseptör eksikliği ile karakterize Bernard-Soulier sendromunu tarif etmektedir. Bernard-Soulier sendromunda trombosit zarı üzerindeki GpIb eksik olduğu için vWF'ye bağlanamaz; ristosetin aglütinasyonu bozuktur ve dışarıdan normal plazma (vWF) verilmesiyle DÜZELMEZ (çünkü sorun plazmada değil trombosit reseptöründedir). Ayrıca dev trombositler tipik morfolojik bulgudur. vWF eksikliğinde (vWH) ise normal plazma verildiğinde ristosetin yanıtı düzelir. GpIIb/IIIa eksikliği ise Glanzmann trombastenisidir."
+  },
+  {
+    "id": "prac-tromboz-006",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 6,
+    "slideTitle": "Trombosit Aktivasyonu, Şekil Değişimi ve Yüzey Fosfolipid Polarizasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Vasküler zedelenme sahasında primer hemostazın başlamasıyla birlikte trombositlerde gözlenen şekil değişimi ve membran biyofiziği değişiklikleri değerlendirildiğinde, koagülasyon faktör komplekslerinin montajı için trombosit yüzeyinde gerçekleşen en kritik moleküler olay aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pozitif yüklü sfingomiyelinin dış zardan tamamen atılması",
+      "B) Negatif yüklü fosfatidilserin moleküllerinin iç yaprakçıktan dış hücre zarına translokasyonu",
+      "C) Membranın kolesterol içeriğinin sıfırlanarak akışkanlığın kaybolması",
+      "D) Hücre içi kalsiyum konsantrasyonunun sıfıra inmesi",
+      "E) Fibrinojen reseptörlerinin endositozla parçalanması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Trombosit aktivasyonu sırasında skramblaz enziminin devreye girmesiyle normalde iç yaprakta tutulan negatif yüklü fosfatidilserin dış yüzeye döner (flip-flop). Bu negatif yüzey, Ca²⁺ iyonları aracılığıyla pıhtılaşma faktörlerinin (tenaz ve protrombinaz kompleksleri) bağlanması için katalitik bir platform oluşturur. A, C, D ve E seçenekleri yanlıştır; hücre içi kalsiyum düşmez, tam tersine artar; reseptörler parçalanmaz, aksine aktive olur."
+  },
+  {
+    "id": "prac-tromboz-007",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 7,
+    "slideTitle": "Trombosit Degranülasyonu ve Ototrombotik İlerleme: Trombin, ADP ve TxA2",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kararsız angina pektoris tanısıyla takip edilen ve koroner stent uygulanan 58 yaşındaki bir erkek hastaya ikili antiplatelet tedavi kapsamında asetilsalisilik asit (aspirin) ve klopidogrel başlanıyor. Bu iki ilacın trombosit agregasyonunu engellemedeki primer moleküler etki mekanizmaları aşağıdakilerden hangisinde EKSİKSİZ ve DOĞRU olarak eşleştirilmiştir?",
+    "options": [
+      "A) Aspirin: GpIIb/IIIa reseptör blokajı — Klopidogrel: Trombin PAR-1 reseptör inhibisyonu",
+      "B) Aspirin: Siklooksijenaz-1 inhibisyonu ile TxA2 sentezinin baskılanması — Klopidogrel: P2Y12 ADP reseptör blokajı",
+      "C) Aspirin: Fosfodiesteraz aktivasyonu — Klopidogrel: von Willebrand Faktörü inaktivasyonu",
+      "D) Aspirin: P-selektin yıkımı — Klopidogrel: Kalsiyum kanallarının bloke edilmesi",
+      "E) Aspirin: Endotelin sentez engellenmesi — Klopidogrel: GpIb reseptör inhibisyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Aspirin, trombosit COX-1 enzimini geri dönüşümsüz olarak asetilleyerek güçlü bir pro-agregatör ve vazokonstriktör olan Tromboksan A2 (TxA2) sentezini engeller. Klopidogrel ise bir ön-ilaç olup aktif metaboliti trombosit yüzeyindeki P2Y12 pürinerjik ADP reseptörünü irreversibl olarak bloke eder ve ADP aracılı trombosit toplanmasını ve GpIIb/IIIa aktivasyonunu önler. Diğer seçeneklerdeki mekanizma eşleştirmeleri farmakolojik ve biyokimyasal olarak hatalıdır."
+  },
+  {
+    "id": "prac-tromboz-008",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 8,
+    "slideTitle": "Primer Hemostazın Tamamlanması: Trombosit Agregasyonu ve GpIIb/IIIa Kompleksi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sık tekrarlayan burun kanamaları ve diş eti kanamaları nedeniyle tetkik edilen 8 yaşındaki bir kız çocuğunun laboratuvar testlerinde trombosit sayısı 280.000/µL (normal), periferik yaymada trombosit morfolojisi normal, protrombin zamanı (PT) ve aPTT normal, ancak kanama zamanı belirgin olarak uzamış bulunuyor. Trombosit agregometri incelemesinde ristosetin ile trombosit kümeleşmesinin normal olduğu, fakat ADP, trombin ve kollajen ilavesiyle agregasyonun gerçekleşmediği saptanıyor. Bu klinik tablodan sorumlu olan genetik defekt aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Glikoprotein Ib (GpIb) reseptör geninde mutasyon",
+      "B) Glikoprotein IIb/IIIa (integrit αIIbβ3) reseptör defekti",
+      "C) Endotel hücrelerinden von Willebrand Faktörü salınım yetmezliği",
+      "D) Faktör XIII transglutaminaz enzim eksikliği",
+      "E) Trombosit alfa granül agenezi (Gri Trombosit Sendromu)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tarif edilen klinik ve laboratuvar tablosu Glanzmann trombastenisinin klasik tablosudur. Trombosit sayısı ve morfolojisi normaldir; GpIb-vWF etkileşimi sağlam olduğu için ristosetin testi normaldir. Ancak GpIIb/IIIa reseptörü eksik veya kusurlu olduğu için trombositler fibrinojen aracılığıyla birbirine bağlanamaz; ADP, trombin ve kollajen ile agregasyon sıfırdır. A seçeneği (Bernard-Soulier) dev trombositler ve bozuk ristosetin testi ile gider; C seçeneğinde (vWH) ristosetin testi bozuktur; D seçeneğinde primer hemostaz normaldir."
+  },
+  {
+    "id": "prac-tromboz-009",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 9,
+    "slideTitle": "Sekonder Hemostaza Giriş: Doku Faktörü ve Koagülasyon Kaskadının Başlatılması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Koroner arterinde stabil aterosklerotik plağı bulunan 62 yaşındaki bir hastada plağın aniden fissüre olması ve rüptüre olmasını takiben lümende hızla oklüzif trombüs gelişerek akut miyokard enfarktüsü tablosu ortaya çıkmıştır. Bu akut trombotik oklüzyonda, kaskadı in vivo olarak doğrudan başlatan ve dolaşımdaki Faktör VII ile birleşerek koagülasyonu ateşleyen subendotelyal prokoagülan molekül aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Trombomodulin",
+      "B) Doku Faktörü (Tromboplastin / TF)",
+      "C) Doku Plazminojen Aktivatörü (t-PA)",
+      "D) Faktör XII (Hageman Faktörü)",
+      "E) Protein S kofaktörü"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Canlı vücudunda (in vivo) koagülasyon kaskadının fizyolojik başlatıcısı Doku Faktörü'dür (Tromboplastin / Faktör III). Plak rüptürüyle lipit çekirdekteki bol doku faktörü açığa çıkar, Faktör VII/VIIa ile kompleks kurarak Faktör X ve IX'u aktive eder ve trombozu tetikler. Trombomodulin, t-PA ve Protein S antikoagülan ve fibrinolitik moleküllerdir. Faktör XII ise in vitro intrinsik yolu başlatır ancak in vivo koagülasyonun fizyolojik başlatıcısı değildir."
+  },
+  {
+    "id": "prac-tromboz-010",
+    "deckId": "learn-tromboz-patofizyolojisi-tam",
+    "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
+    "slideNumber": 10,
+    "slideTitle": "Hücre Yüzeyinde Koagülasyon: Kalsiyum Bağımlı Faktör Montajı ve Tenaz Kompleksleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Atriyal fibrilasyon nedeniyle varfarin tedavisi başlanan 70 yaşındaki bir hastada ilacın antikoagülan etki mekanizması incelenmektedir. Varfarin tedavisinin karaciğer düzeyinde K vitamini epoksit redüktaz enzimini inhibe etmesi sonucunda, aşağıdaki pıhtılaşma faktörlerinin hangisinde gama-karboksiglutamat (Gla) kalıntılarının sentezlenememesi nedeniyle kalsiyum aracılığıyla trombosit yüzeyine bağlanma yeteneği BOZULMAZ?",
+    "options": [
+      "A) Faktör II (Protrombin)",
+      "B) Faktör VII",
+      "C) Faktör VIII",
+      "D) Faktör IX",
+      "E) Faktör X"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. K vitamini bağımlı faktörler Faktör II, VII, IX ve X ile antikoagülan Protein C ve S'tir (akılda tutma şifresi: 1972 ve CS). Faktör VIII ise K vitaminine bağımlı DEĞİLDİR; endotel hücreleri ve sinüzoidal hücreler tarafından sentezlenen ve dolaşımda von Willebrand Faktörüne (vWF) bağlı olarak taşınan bir kofaktör glikoproteindir. Dolayısıyla varfarin Faktör VIII'in gama-karboksilasyonunu etkilemez. A, B, D ve E seçeneklerindeki faktörler K vitaminine mutlak bağımlıdır."
+  },
+  {
     "id": "prac-tromboz-011",
     "deckId": "learn-tromboz-patofizyolojisi-tam",
     "deckTitle": "Tromboz Patofizyolojisi ve Damar Tıkanıklıkları",
@@ -1176,727 +1898,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "C seçeneği doğrudur. Akut enflamatuar yanıtta ilk 6-24 saatte nötrofiller baskınken, 24-48 saat sonrasında monositler dokuya göç eder ve 48. saatten itibaren uzun ömürlü makrofajlar dominant popülasyon haline gelir. Makrofajlar dokuda aylarca yaşayabilir ve yerel olarak çoğalabilirler."
-  },
-  {
-    "id": "prac-kronik-005",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 5,
-    "slideTitle": "Dokularda Yerleşik Makrofaj Popülasyonları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Mononükleer fagositik sistem elemanları ve bulundukları doku eşleştirmelerinden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Karaciğer — Kupffer hücresi",
-      "B) Akciğer — Alveolar makrofaj",
-      "C) Santral Sinir Sistemi — Mikroglia",
-      "D) Kemik Dokusu — Osteoklast",
-      "E) Epidermis — Melanosit"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır. Epidermisteki mononükleer fagosit/antijen sunucu hücre Langerhans hücresidir. Melanositler ise nöral krest kökenli melanin pigmenti üreten hücrelerdir; fagositik sisteme dahil değillerdir. A, B, C ve D eşleştirmeleri doğru doku makrofajlarıdır."
-  },
-  {
-    "id": "prac-kronik-006",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 6,
-    "slideTitle": "Makrofaj Aktivasyonunda M1 (Klasik) Yolak",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Klasik yolakla aktive olmuş (M1) bir makrofajın mikrobisidal yanıtı ve biyolojik özellikleri ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Primer tetikleyici sitokin: IL-4 / Anahtar enzim: Arjinaz-1",
-      "B) Primer tetikleyici sitokin: IFN-γ / Anahtar enzim: İndüklenebilir nitrik oksit sentaz (iNOS)",
-      "C) Primer tetikleyici sitokin: IL-13 / Salınan mediyatör: TGF-beta",
-      "D) Temel hücresel fonksiyon: Fibroblast proliferasyonu ve kollajen sentezi",
-      "E) Salgılanan sitokin profili: IL-10 ve çözünür IL-1 reseptör antagonisti"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Klasik aktive M1 makrofajları Th1 hücre kaynaklı IFN-γ ve mikrobiyal LPS ile uyarılır. Karakteristik enzimi iNOS'tur ve L-arjininden NO üreterek mikrobisidal etki gösterir. IL-4/IL-13, Arjinaz-1, TGF-beta ve fibrozis ise alternatif M2 aktivasyonunun özellikleridir."
-  },
-  {
-    "id": "prac-kronik-007",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 7,
-    "slideTitle": "Makrofaj Aktivasyonunda M2 (Alternatif) Yolak",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Alternatif yolakla aktive olmuş (M2) makrofajların biyolojik fonksiyonları ve salgıladıkları mediyatörlerle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) IL-4 ve IL-13 sitokinlerinin reseptörlerine bağlanmasıyla aktive olurlar",
-      "B) L-arjinin metabolizmasında arjinaz enzimini kullanarak ornitin ve prolin üretimini artırırlar",
-      "C) Masif miktarda nitrik oksit (NO) ve reaktif oksijen ürünleri (ROS) sentezleyerek doku nekrozuna yol açarlar",
-      "D) Salgıladıkları TGF-β ve PDGF aracılığıyla fibroblast kemotaksisi ve kollajen sentezini uyarırlar",
-      "E) IL-10 ve TGF-β salgılayarak anti-enflamatuvar ve immünsüpresif etki gösterirler"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği yanlıştır. Masif NO ve ROS üreterek mikrobisidal etki ve doku hasarı oluşturan hücre M1 makrofajıdır. Alternatif aktive M2 makrofajlarının mikrobisidal toksin üretimi baskılanmıştır; odak noktaları anti-enflamatuvar etki, anjiyogenez ve doku onarımı/fibrozisdir."
-  },
-  {
-    "id": "prac-kronik-008",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 8,
-    "slideTitle": "M1 ve M2 Fenotipik Spektrumu ve Plastisite",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Makrofaj plastisitesi ve M1/M2 denge bozuklukları dikkate alındığında, aşırı ve kontrolsüz M2 aktivasyonunun en olası patolojik sonucu aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Akut kazeöz nekroz ve dokuda kavitasyon oluşumu",
-      "B) Lökopeni ve sistemik septik şok tablosu",
-      "C) Doku parankiminin yerini yoğun ekstraselüler matriksin alması ve organ fibrozisi",
-      "D) Damar duvarında endotel hücrelerinin apoptozu ve masif iç kanama",
-      "E) Nötrofillerin aşırı göçüyle karakterize fulminan süpüratif apse formasyonu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Alternatif (M2) makrofaj aktivasyonunun kontrolsüz ve uzamış olması, aşırı miktarda TGF-β, PDGF ve FGF üretimine yol açarak fibroblastları ve miyofibroblastları uyarır; bu durum parankim kaybı ve organ fibrozisi (örneğin siroz veya akciğer fibrozisi) ile sonuçlanır. Doku erimesi ve kavitasyon M1 hasarıdır."
-  },
-  {
-    "id": "prac-kronik-009",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 9,
-    "slideTitle": "T Lenfosit Alt Tipleri ve Polarizasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "CD4+ T yardımcı lenfosit alt grupları, salgıladıkları anahtar sitokinler ve fonksiyonları ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Th1 hücresi — IL-5 salgılar — Eozinofil lökositlerin aktivasyonunu sağlar",
-      "B) Th2 hücresi — IFN-γ salgılar — Klasik (M1) makrofaj aktivasyonunu uyarır",
-      "C) Th17 hücresi — IL-17 salgılar — Kemokinler aracılığıyla nötrofil ve monosit toplanmasını uyarır",
-      "D) Th1 hücresi — IL-4 salgılar — B lenfositlerinden IgE sentezini indükler",
-      "E) Th2 hücresi — IL-12 salgılar — Doğal katil (NK) hücre sitotoksisitesini artırır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Th17 lenfositleri IL-17 salgılayarak endotel ve epitelden kemokin üretimini indükler, böylece bölgeye yoğun nötrofil ve monosit toplanmasını sağlarlar. Th1 IFN-γ salar (M1 aktivasyonu), Th2 ise IL-4, IL-5 (eozinofil) ve IL-13 salgılar."
-  },
-  {
-    "id": "prac-kronik-010",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 10,
-    "slideTitle": "Makrofaj-Lenfosit İki Yönlü Kısır Döngüsü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik enflamasyonda makrofaj ve T lenfositler arasında kurulan iki yönlü etkileşim döngüsüyle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Makrofajlar T lenfositlerine IL-4 salgılayarak Th1 farklılaşmasını engeller",
-      "B) T lenfositleri makrofajları aktive etmek için öncelikle IL-10 ve IL-13 sitokinlerini kullanır",
-      "C) Makrofajlar antijen sunumuyla birlikte IL-12 salgılar; aktive Th1 hücreleri ise IFN-γ üreterek makrofajları uyarır",
-      "D) Bu döngü negatif geri besleme niteliğinde olup enflamasyonun birkaç günde kendiliğinden sönmesini sağlar",
-      "E) Döngü yalnızca B lenfositlerinin plazma hücresine dönüşmesiyle tetiklenir ve T hücrelerine bağımlı değildir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Makrofajlar antijen sunumu yapıp IL-12 salgılayarak naif T lenfositlerini Th1 hücrelerine dönüştürür. Aktive Th1 lenfositleri ise IFN-γ salgılayarak makrofajları klasik yoldan (M1) kuvvetle aktive eder. Bu pozitif feedback döngüsü kronik yangının devamını sağlar."
-  },
-  {
-    "id": "prac-kronik-011",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 11,
-    "slideTitle": "Plazma Hücreleri ve B Lenfosit İnfiltrasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik enflamasyonlu bir doku biyopsisinde; eksantrik yerleşimli 'araba tekerleği' kromatinli nükleusu, perinükleer soluk zonu ve sitoplazmasında immünglobulin birikimine bağlı eozinofilik Russell cisimcikleri bulunan hücre aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Epiteloid histiyosit",
-      "B) Plazma hücresi",
-      "C) Mast hücresi",
-      "D) Eozinofil lökosit",
-      "E) Fibroblast"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Eksantrik yerleşimli araba tekerleği/saat kadranı nükleusu, perinükleer açık renkli Golgi halosu ve aşırı immünglobulin birikimine bağlı Russell cisimcikleri plazma hücresinin karakteristik histomorfolojik özellikleridir."
-  },
-  {
-    "id": "prac-kronik-012",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 12,
-    "slideTitle": "Eozinofiller ve Kronik Enflamasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Helmint enfeksiyonu veya kronik alerjik enflamasyon alanında bol miktarda bulunan, parazit kütikulasını zedeleyen fakat konak epitelinde de nekroza yol açan Major Basic Protein (MBP) içeren hücre aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Nötrofil lökosit",
-      "B) Bazofil lökosit",
-      "C) Eozinofil lökosit",
-      "D) Epiteloid histiyosit",
-      "E) Plazma hücresi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Eozinofil lökositlerin spesifik granüllerinde yüksek konsantrasyonda bulunan Major Basic Protein (MBP), parazitlere karşı toksik olan ancak kronik enflamasyonda (örneğin bronşiyal astımda) epitel hasarına yol açan temel katyonik proteindir."
-  },
-  {
-    "id": "prac-kronik-013",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 13,
-    "slideTitle": "Mast Hücreleri ve Kronikleşmede Rol Oynayan Nötrofiller",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik-patolojik durumlardan hangisinde, tablonun kronik seyirli olmasına rağmen histopatolojik incelemede bol miktarda aktif nötrofil lökosit infiltrasyonu görülmesi en tipiktir?",
-    "options": [
-      "A) Sarkoidoz hiler lenfadenopatisi",
-      "B) Hashimoto tiroiditi",
-      "C) Sekestr kemik odağı içeren kronik osteomiyelit",
-      "D) Tersiyer sifilis gom lezyonu",
-      "E) Silikozise bağlı pulmoner nodül"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Kronik osteomiyelitte ölü kemik dokusu (sekestr) fagositozla yok edilemediği ve bakteriyel biyofilmleri barındırdığı için, aylar süren kronik bir süreç olmasına rağmen nötrofilik infiltrasyon kesintisiz olarak devam eder. Sarkoidoz, Hashimoto, sifilis ve silikoziste mononükleer hücreler ve granülomlar hakimdir."
-  },
-  {
-    "id": "prac-kronik-014",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 14,
-    "slideTitle": "Granülomatöz Enflamasyonun Tanımı ve Patogenezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "İmmün granülom gelişiminde makrofajların epiteloid histiyositlere dönüşümünü indükleyen ve granülom mimarisini başlatan en kritik T lenfosit kaynaklı sitokin aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İnterlökin-4 (IL-4)",
-      "B) İnterferon-gama (IFN-γ)",
-      "C) İnterlökin-10 (IL-10)",
-      "D) Transforming Growth Factor-beta (TGF-β)",
-      "E) İnterlökin-5 (IL-5)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Granülomatöz enflamasyonda aktive Th1 lenfositlerinden salgılanan İnterferon-gama (IFN-γ), dokudaki makrofajları uyararak onları epiteloid histiyositlere dönüştüren ve granülomun hücresel çatısını kuran en temel sitokindir."
-  },
-  {
-    "id": "prac-kronik-015",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 15,
-    "slideTitle": "Epiteloid Histiyositlerin Biyolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Granülomatöz lezyonların merkezini oluşturan epiteloid histiyositlerin sitomorfolojik ve fonksiyonel özellikleri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Fagositoz kapasiteleri klasik makrofajlara göre katbekat artmıştır",
-      "B) Hücre sınırları çok keskin olup bol miktarda musin salgılarlar",
-      "C) Nükleusları hiperkromatik, piknotik ve at nalı şeklinde periferik dizilimlidir",
-      "D) Bol eozinofilik sitoplazmalı, veziküler 'terlik tabanı' nükleuslu ve salgı kapasitesi yüksek hücrelerdir",
-      "E) Kemik iliğindeki B lenfositlerinin terminal farklılaşmasıyla meydana gelirler"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği doğrudur. Epiteloid histiyositler; geniş soluk eozinofilik sitoplazmalı, belirsiz sınırlı, veziküler 'terlik/ayakkabı tabanı' biçiminde nükleuslu hücrelerdir. Fagositoz yetenekleri azalmış, protein ve sitokin salgı kapasiteleri ise belirgin olarak artmıştır."
-  },
-  {
-    "id": "prac-kronik-016",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 16,
-    "slideTitle": "Çok Çekirdekli Dev Hücrelerin Oluşumu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Granülomatöz enflamasyon odağında saptanan çok çekirdekli dev hücrelerin biyogenezi ve özellikleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
-    "options": [
-      "A) Tek bir makrofajın sitokinezi olmaksızın art arda çok sayıda mitoz bölünme geçirmesiyle oluşurlar",
-      "B) Epiteloid histiyositlerin hücre zarlarının füzyonu (birbirine kaynaşması) sonucu meydana gelirler",
-      "C) Granülomatöz enflamasyon tanısı koyabilmek için biyopside mutlaka dev hücre görülmesi zorunludur",
-      "D) Bu dev hücreler kemik iliğindeki megakaryositlerin dokuya göç etmiş formlarıdır",
-      "E) Sitoplazmalarında fagozom oluşturma yetenekleri tamamen kaybolmuştur ve metabolik olarak inaktiftirler"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Çok çekirdekli dev hücreler endomitozla değil; IFN-γ ve sitokinlerin etkisiyle epiteloid histiyositlerin hücre zarlarının birbirine kaynaşması (füzyon) sonucu oluşurlar. Granülom tanısı için esas olan epiteloid histiyosit kümesidir; dev hücre şart değildir."
-  },
-  {
-    "id": "prac-kronik-017",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 17,
-    "slideTitle": "Dev Hücre Tipleri ve Morfolojik Ayrımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Deri lezyonu biyopsisinde; merkezde nükleusların oluşturduğu bir çember ve bu çemberin periferinde lipid vakuolleri nedeniyle soluk-berrak görünen sitoplazma halkası içeren çok çekirdekli dev hücre aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Langhans dev hücresi",
-      "B) Yabancı cisim dev hücresi",
-      "C) Touton dev hücresi",
-      "D) Aschoff dev hücresi",
-      "E) Reed-Sternberg hücresi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Touton dev hücresi, santralde yerleşmiş nükleus halkası ve bunun çevresini saran köpüksü, berrak, lipid yüklü sitoplazma kuşağı ile karakterizedir. Ksantomlar ve jüvenil ksantogranülom için tipiktir. Langhans hücresinde nükleuslar periferik at nalı şeklinde dizilir."
-  },
-  {
-    "id": "prac-kronik-018",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 18,
-    "slideTitle": "Kazeifiye vs Non-Kazeifiye Granülom Ayrımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki hastalıklardan hangisinin karakteristik histopatolojik lezyonu 'santral kazeifikasyon nekrozu içeren kazeifiye granülom' tablosudur?",
-    "options": [
-      "A) Sarkoidoz",
-      "B) Crohn hastalığı",
-      "C) Mycobacterium tuberculosis enfeksiyonu",
-      "D) Berilyum maruziyeti (Berilyozis)",
-      "E) Silikon implant rüptürüne bağlı yabancı cisim reaksiyonu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Mycobacterium tuberculosis enfeksiyonu kazeifiye granülomların (tüberküllerin) klasik prototipidir; merkezinde amorf granüler peynir benzeri kazeöz nekroz bulunur. Sarkoidoz, Crohn hastalığı, berilyozis ve yabancı cisim reaksiyonları ise tipik olarak non-kazeifiye (nekrozsuz) granülomlar oluşturur."
-  },
-  {
-    "id": "prac-kronik-019",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 19,
-    "slideTitle": "Tüberküloz Granülomu (Tüberkül)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Primer pulmoner tüberküloz patolojisinde; akciğer parankiminde subplevral yerleşimli kazeifiye granülom odağı ile buna eşlik eden kazeifiye hiler lenfadenopatinin oluşturduğu anatomik lezyon kompleksi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Aschoff nodülü",
-      "B) Ghon kompleksi",
-      "C) Charcot-Leyden kristali",
-      "D) Gamna-Gandy cisimciği",
-      "E) Councilman cisimciği"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Primer tüberkülozda akciğer parankimindeki kazeifiye lezyon (Ghon odağı) ile drene eden hiler lenf nodundaki kazeifiye granülomun birlikteliğine 'Ghon kompleksi' adı verilir. İlerleyen dönemde kalsifiye olduğunda Ranke kompleksi adını alır."
-  },
-  {
-    "id": "prac-kronik-020",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 20,
-    "slideTitle": "Treponema pallidum ve Sifilitik Gom (Gumma)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Karaciğerde kitle lezyonu nedeniyle opere edilen hastanın biyopsisinde; santralde lastik kıvamlı nekroz, çevresinde bol miktarda plazma hücresi infiltrasyonu ve küçük arterlerde endarteritis obliterans saptanmıştır. Bu tablo için en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Tüberküloz tüberkülü",
-      "B) Tersiyer sifilis gom lezyonu",
-      "C) Sarkoidoz nodülü",
-      "D) Kedi tırmığı hastalığı",
-      "E) Eozinofilik granülom"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Lastik/kauçuksu kıvamda nekroz (gom nekrozu), lezyon çevresinde belirgin plazma hücresi hakimiyeti ve damar lümenlerini tıkayan endarteritis obliterans, Treponema pallidum'un neden olduğu tersiyer sifilis gom (gumma) lezyonunun klasik triadıdır."
-  },
-  {
-    "id": "prac-kronik-021",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 21,
-    "slideTitle": "Kedi Tırmığı Hastalığı ve Nekrotizan Granülomlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Genç bir hastanın kolunda kedi tırmalaması sonrası gelişen aksiller lenfadenopati biyopsisinde; merkezinde nötrofil lökosit birikimi içeren mikroapseler ve çevresinde epiteloid histiyositlerden oluşan yıldızsı (stellat) nekrotizan granülomlar izlenmiştir. En olası etken mikroorganizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Mycobacterium leprae",
-      "B) Treponema pallidum",
-      "C) Bartonella henselae",
-      "D) Leishmania donovani",
-      "E) Toxoplasma gondii"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Kedi tırmığı hastalığı (Bartonella henselae), lenf nodlarında merkezinde nötrofil lökositlerin oluşturduğu apseler ve periferinde epiteloid histiyosit kuşakları bulunan 'yıldızsı / stellat süpüratif nekrotizan granülomlar' ile karakterizedir."
-  },
-  {
-    "id": "prac-kronik-022",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 22,
-    "slideTitle": "Non-Kazeifiye Granülomların Baş Tacı: Sarkoidoz",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Genç kadın hastada akciğer grafisinde bilateral hiler lenfadenopati saptanıyor. Transbronşiyal akciğer biyopsisinde santral nekroz içermeyen, çevresinde belirgin lenfosit halkası bulunmayan (çıplak granülom), dev hücrelerinde Schaumann ve asteroid cisimcikleri içeren granülomlar görülüyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Primer Tüberküloz",
-      "B) Sarkoidoz",
-      "C) Silikozis",
-      "D) Kedi Tırmığı Hastalığı",
-      "E) Romatoid Nodül"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Bilateral hiler lenfadenopati, nekroz içermeyen 'çıplak' non-kazeifiye granülomlar ve dev hücrelerde konsantrik Schaumann cisimcikleri ile yıldızsı Asteroid cisimciklerinin varlığı Sarkoidoz için klasik histopatolojik bulgulardır."
-  },
-  {
-    "id": "prac-kronik-023",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 23,
-    "slideTitle": "Gastrointestinal Granülomlar ve Crohn Hastalığı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik ishal ve karın ağrısı olan hastanın terminal ileum rezeksiyon materyalinde; atlamalı (skip) lezyonlar, bağırsak duvarının tüm katlarını tutan transmural mononükleer infiltrasyon, fissür tarzı derin ülserler ve submukozada non-kazeifiye granülomlar izleniyor. Bu hasta için en olası patolojik tanı nedir?",
-    "options": [
-      "A) Ülseratif Kolit",
-      "B) Crohn Hastalığı",
-      "C) İskemik Kolit",
-      "D) Psödomembranöz Enterokolit",
-      "E) Çölyak Hastalığı"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Transmural tutulum (bağırsak duvarının tüm katları), atlamalı lezyonlar, fissürler ve histopatolojik olarak non-kazeifiye granülomların saptanması Crohn Hastalığı için patognomoniktir. Ülseratif Kolit sadece mukoza ve submukozayla sınırlıdır ve granülom içermez."
-  },
-  {
-    "id": "prac-kronik-024",
-    "deckId": "learn-kronik-ve-granulamatoz-enflamasyon",
-    "deckTitle": "Kronik ve Granülomatöz Enflamasyon: Hücresel İmmünopatoloji ve Dokusal Reaksiyonlar",
-    "slideNumber": 24,
-    "slideTitle": "Yabancı Cisim Granülomları ve Kronik Enflamasyonun Sistemik Sonuçları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yıllardır kronik granülomatöz tüberküloz veya romatoid artrit tanısıyla takip edilen bir hastada masif proteinüri ve böbrek yetmezliği gelişiyor. Böbrek biyopsisinde glomerüllerde amorf birikim saptanıyor. Bu sistemik tablonun patogenezinde rol oynayan temel protein prekürsörü aşağıdakilerden hangisidir?",
-    "options": [
-      "A) İmmünglobulin hafif zinciri (AL)",
-      "B) Transtiretin (ATTR)",
-      "C) Serum Amiloid A (SAA)",
-      "D) Beta-2 mikroglobulin",
-      "E) Kalsitonin öncül proteini"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Kronik enflamatuvar ve granülomatöz hastalıklarda (tüberküloz, romatoid artrit, bronşektazi vb.) makrofaj ve lökosit kaynaklı sitokinlerin (IL-6, IL-1, TNF) karaciğeri uyarması sonucu üretilen Serum Amiloid A (SAA) proteini artar ve dokularda Sekonder Sistemik (AA) Amiloidozis şeklinde çökerek organ yetmezliğine yol açar."
-  },
-  {
-    "id": "km-pq-1",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 1,
-    "slideTitle": "Moleküler Karsinojenezin Temel İlkeleri: Non-Lethal Genetik Hasar ve Monoklonal Başlangıç",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign bir neoplazmın moleküler patogenezinde yer alan klonalite, mutasyon türleri ve karsinojenez ilkeleri ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK OLARAK DOĞRUDUR?",
-    "options": [
-      "A) Malign transformasyonu başlatan genetik hasar hücreyi derhal nekroza götüren letal bir lezyondur",
-      "B) Tümörler başlangıçtan itibaren poliklonal kökenli olup her bir odak bağımsız hücrelerden türer",
-      "C) Yolcu (passenger) mutasyonlar hücreye doğrudan selektif büyüme avantajı sağlayan ana sürücülerdir",
-      "D) Başlangıçta monoklonal olan tümör, zamanla ek sürücü mutasyonların birikimiyle klonal heterojenite kazanır",
-      "E) Klonal heterojenite geliştikçe tümör hücrelerinin kemoterapiye duyarlılığı artar ve tedavi kolaylaşır"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Kanser tek bir transforme hücreden monoklonal olarak başlar; ancak zaman içinde genomik instabilite ve ek sürücü/yolcu mutasyonların birikmesiyle genetik açıdan farklı alt klonlar (tümör heterojenitesi) gelişir.\n\nA yanlıştır; hasar öldürücü olsaydı neoplazi değil nekroz oluşurdu, hasar non-lethal olmalıdır.\nB yanlıştır; tümörler poliklonal değil, monoklonal başlar.\nC yanlıştır; hücreye büyüme avantajı sağlayanlar sürücü (driver) mutasyonlardır, yolcu mutasyonlar nötraldir.\nE yanlıştır; klonal heterojenite geliştikçe dirençli subklonlar seçilir ve tedaviye direnç artar."
-  },
-  {
-    "id": "km-pq-2",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 2,
-    "slideTitle": "Karsinojenezin Üç Temel Evresi: İnisiyasyon, Promosyon ve Progresyon Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Deneysel kimyasal karsinojenez basamakları (inisiyasyon, promosyon, progresyon) incelendiğinde, aşağıdaki senaryolardan hangisinde deney hayvanında MALİGN TÜMÖR GELİŞİMİ BEKLENİR?",
-    "options": [
-      "A) Yalnızca tek doz başlatıcı (inisyatör) karsinojen uygulanıp bırakılması",
-      "B) Yalnızca haftada iki kez olmak üzere uzun süre tekrarlayan dozda promotör uygulanması",
-      "C) Önce haftalarca promotör uygulanması, ardından tek doz başlatıcı karsinojen verilmesi",
-      "D) Tek doz başlatıcı karsinojen uygulandıktan sonra, araları aylar süren çok seyrek promotör maruziyeti",
-      "E) Tek doz başlatıcı karsinojen uygulandıktan sonra, belirli aralıklarla tekrarlayan promotör uygulaması yapılması"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E'dir. Tümör oluşumu için kural: Önce inisyatör ile hücre DNA'sında kalıcı mutasyon oluşturulmalı, ardından promotör belirli sıklıkta ve tekrarlayan dozlarda uygulanarak başlatılmış hücrenin klonal proliferasyonu tetiklenmelidir.\n\nA yanlıştır; tek başına inisyatör tümör kütlesi oluşturmak için yetersizdir.\nB yanlıştır; promotörler mutajenik değildir, tek başlarına tümör başlatamazlar.\nC yanlıştır; promotör inisyatörden önce verilirse hiçbir etki göstermez.\nD yanlıştır; promosyon geri dönüşümlü olduğundan maruziyet aralıkları çok uzatılırsa etki kaybolur."
-  },
-  {
-    "id": "km-pq-3",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 3,
-    "slideTitle": "Kanser Genlerinin Dört Temel Sınıfı ve Genetik Davranış Kuralları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kanser genlerinin sınıfları ve moleküler mekanizmaları göz önüne alındığında, aşağıdaki eşleştirmelerden hangisi BİYOLOJİK ETKİ VE GENETİK KALITIM MEKANİZMASI AÇISINDAN YANLIŞTIR?",
-    "options": [
-      "A) KRAS – Proto-onkogen – İşlev kazanımı (gain-of-function) – Dominant etki",
-      "B) RB1 – Gatekeeper tümör baskılayıcı – İşlev kaybı (loss-of-function) – Hücresel düzeyde resesif etki",
-      "C) MLH1 – DNA uyumsuzluk onarımı (caretaker) – İnaktivasyonu mutatör fenotipe yol açar",
-      "D) BCL2 – Anti-apoptotik gen – Aşırı ekspresyonu apoptoza direnç sağlar",
-      "E) TP53 – Onkogen – Tek bir alelin mutasyonu hücrede tümör baskılayıcı proteini aşırı aktive eder"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Doğru yanıt E'dir. TP53 bir onkogen değil, genomun koruyucusu olan klasik bir **tümör baskılayıcı (gatekeeper)** gendir. TP53 mutasyonları işlev kaybına (loss-of-function) yol açar ve hücrenin DNA hasarına karşı durmasını veya apoptoza gitmesini engeller. Proteini aşırı aktive etmez, freni bozar.\n\nA doğrudur; KRAS proto-onkogendir, tek alel mutasyonuyla dominant aktive olur.\nB doğrudur; RB1 gatekeeper tümör süpresördür ve iki vuruşla inaktive olur.\nC doğrudur; MLH1 caretaker gendir, kaybı mikrosatellit instabilitesine yol açar.\nD doğrudur; BCL2 anti-apoptotiktir, foliküler lenfomada t(14;18) ile aşırı üretilerek apoptozu bloke eder."
-  },
-  {
-    "id": "km-pq-4",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 4,
-    "slideTitle": "Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer): Hanahan ve Weinberg Çerçevesi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hanahan ve Weinberg tarafından belirlenen 'Kanserin Ayırt Edici Özellikleri (Hallmarks of Cancer)' kavramına göre, aşağıdakilerden hangisi doğrudan 8 temel biyolojik yetenekten biri olmayıp, bu yeteneklerin kazanılmasını hızlandıran **'olanak sağlayıcı özellik (enabling characteristic)'** grubunda yer alır?",
-    "options": [
-      "A) Sınırsız replikasyon potansiyeli (telomeraz aktivasyonu)",
-      "B) İndüklenen sürekli anjiyogenez (VEGF salgısı)",
-      "C) Hücresel enerji metabolizmasının yeniden programlanması (Warburg etkisi)",
-      "D) Genomik istikrarsızlık ve mutatör fenotip gelişimi",
-      "E) İmmün yıkımdan kaçış (PD-L1 aşırı ekspresyonu)"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Genomik istikrarsızlık (genomic instability) ve tümörü destekleyen enflamasyon (tumor-promoting inflammation), kanserin 8 temel fonksiyonel yeteneğinden biri değil; bu yeteneklerin ortaya çıkmasını kolaylaştıran iki 'olanak sağlayıcı özellik (enabling characteristics)'ten biridir.\n\nA, B, C ve E seçenekleri ise kanserin sekiz temel biyolojik ayırt edici yeteneği (hallmark) arasında yer alır."
-  },
-  {
-    "id": "km-pq-5",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 5,
-    "slideTitle": "Büyüme Faktörleri ve Otokrin Döngüler: PDGF, TGF-α ve FGF Patolojisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Malign beyin tümörlerinden glioblastom tanısı alan bir hastanın tümör dokusu moleküler olarak incelendiğinde, neoplastik hücrelerin dış bir büyüme uyarısı olmaksızın kendi ürettikleri ligantla otonom olarak çoğaldıkları (otokrin döngü) saptanıyor.\n\nBu patolojik süreçte görev alan ligant ve reseptör çifti aşağıdakilerden hangisidir?",
-    "options": [
-      "A) VEGF ve VEGFR",
-      "B) İnsülin ve IGF-1R",
-      "C) PDGF ve PDGFR",
-      "D) Eritropoietin ve EPOR",
-      "E) Trombopoietin ve c-MPL"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Glioblastomlarda en iyi dökümante edilmiş otokrin büyüme döngüsü PDGF (Platelet-Derived Growth Factor) ve onun reseptörü olan PDGFR ko-ekspresyonudur. Tümör hücreleri PDGF salgılar ve kendi yüzeylerindeki PDGFR'yi aktive ederek otonom bölünür.\n\nA seçeneğindeki VEGF/VEGFR esas olarak anjiyogenezden sorumludur.\nB, D ve E seçenekleri glioblastomun tipik otonom otokrin döngüsünü oluşturmaz."
-  },
-  {
-    "id": "km-pq-6",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 6,
-    "slideTitle": "Reseptör Tirozin Kinazlar (RTK): EGFR (ERBB1) ve HER2 (ERBB2) Onkogenleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "48 yaşında sigara öyküsü olmayan bir kadın hastada sağ akciğer periferinde 3 cm çapında kitle saptanıyor. Biyopside akciğer adenokarsinomu tanısı konuluyor. Moleküler patoloji analizinde tirozin kinaz inhibitörü tedavisine yüksek duyarlılık sağlayan ekzon 19 delesyonu tespit ediliyor.\n\nBu hastada hedefe yönelik tedavi başarısını öngören bu mutasyon aşağıdaki onkogenlerden hangisine aittir?",
-    "options": [
-      "A) ERBB1 (EGFR)",
-      "B) ERBB2 (HER2)",
-      "C) RET",
-      "D) ALK",
-      "E) c-KIT"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. Akciğer adenokarsinomlarında (özellikle sigara içmeyen kadınlarda) ekzon 19 delesyonu ve ekzon 21 L858R nokta mutasyonları ERBB1 (EGFR) geninde meydana gelir ve reseptör tirozin kinaz inhibitörlerine (Gefitinib, Erlotinib, Osimertinib) mükemmel yanıt sağlar.\n\nB (HER2) meme kanserinde amplifiye olur.\nC (RET) medüller tiroid kanserinde mutasyona uğrar.\nD (ALK) translokasyon (EML4-ALK) ile füzyon geni oluşturur.\nE (c-KIT) gastrointestinal stromal tümörlerde (GIST) etkindir."
-  },
-  {
-    "id": "km-pq-7",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 7,
-    "slideTitle": "Diğer Kritik Reseptör Tirozin Kinazlar: RET, ALK ve c-KIT (CD117)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "55 yaşında bir erkek hasta mide duvarında 6 cm çapında submukozal kitle nedeniyle opere ediliyor. Patolojik incelemede iğsi hücreli mezenkimal neoplazm saptanıyor ve immünohistokimyasal olarak CD117 (c-KIT) kuvvetli diffüz pozitif boyanıyor. Moleküler analizde c-KIT geninin ekzon 11 bölgesinde aktive edici mutasyon tespit ediliyor.\n\nBu hastada tümörün hücresel kökeni ve en uygun moleküler hedefe yönelik tedavi ajanı eşleştirmesi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Mide düz kas hücresi – Trastuzumab",
-      "B) Cajal interstisyel hücresi – İmatinib",
-      "C) Mide paryetal hücresi – Gefitinib",
-      "D) Gastrik Schwann hücresi – Vemurafenib",
-      "E) Mide enterokromaffin hücresi – Erlotinib"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. CD117 (c-KIT) pozitifliği ve ekzon 11 mutasyonu Gastrointestinal Stromal Tümör (GIST) için patognomoniktir. GIST'ler bağırsak motilitesini yöneten pacemaker hücreler olan **Cajal interstisyel hücrelerinden** köken alır. c-KIT tirozin kinaz aktivitesini bloke eden birinci basamak hedefe yönelik ajan **İmatinib (Gleevec)**tir.\n\nA, C, D ve E seçeneklerindeki köken hücreleri veya ilaç eşleştirmeleri yanlıştır."
-  },
-  {
-    "id": "km-pq-8",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 8,
-    "slideTitle": "RAS-MAPK Sinyal İletim Yolağı: GTP/GDP Döngüsü ve Kodon 12-13 Mutasyonları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Metastatik kolorektal karsinom tanısı alan 62 yaşındaki bir erkek hastaya hedefe yönelik anti-EGFR monoklonal antikor tedavisi (Setuksimab) planlanmaktadır. Ancak yapılan moleküler testte tümörde KRAS geninin kodon 12 bölgesinde aktive edici nokta mutasyonu saptanıyor.\n\nBu hastada anti-EGFR tedavisinin başarısız olmasının altında yatan temel moleküler mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) EGFR reseptörünün hücre yüzeyinden tamamen kaybolması",
-      "B) Hücre zarında GAP proteinlerinin aşırı ekspresyonu sonucu RAS'ın sürekli GDP'ye bağlı kalması",
-      "C) Mutant RAS'ın GTPaz aktivitesini yitirerek reseptör uyarısından bağımsız biçimde GTP bağlı aktif konumda kalması",
-      "D) Hücrede adenilat siklaz aktivitesinin durması ve cAMP eksikliği gelişmesi",
-      "E) Tümör hücrelerinin ekstrasellüler matriksi parçalama yeteneğini kaybetmesi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. KRAS kodon 12 mutasyonu, proteinin GTPaz aktivitesini ve GAP yanıtını bozar; RAS sürekli GTP-bağlı aktif durumda kilitlenir. Sinyal iletimi EGFR reseptörünün aşağısında otonom olarak sürdüğü için en baştaki EGFR'yi antikorla bloke etmek sinyal akışını durduramaz ve tedaviye direnç gelişir.\n\nA, B, D ve E seçenekleri bu moleküler direnç mekanizmasını açıklamaz."
-  },
-  {
-    "id": "km-pq-9",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 9,
-    "slideTitle": "BRAF Serin/Treonin Kinaz, V600E Mutasyonu ve Hedefe Yönelik Tedavi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sırtında hızla büyüyen, asimetrik, sınırları düzensiz ve alacalı renk dağılımı gösteren pigmente lezyon nedeniyle başvuran 52 yaşındaki bir hastada biyopsi ile invaziv nodüler melanom tanısı konuluyor. Metastatik taramada karaciğer ve akciğerde multipl lezyonlar saptanan hastada hedefe yönelik Vemurafenib tedavisi başlanabilmesi için biyopsi materyalinde hangi genetik lezyonun varlığı aranmalıdır?",
-    "options": [
-      "A) c-KIT ekzon 11 delesyonu",
-      "B) BRAF V600E nokta mutasyonu",
-      "C) EGFR ekzon 19 mikrodelesyonu",
-      "D) HER2 gen amplifikasyonu",
-      "E) BCR-ABL1 füzyon transkripti"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. Vemurafenib, BRAF V600E mutasyonu taşıyan kinaz proteinini seçici olarak bloke eden küçük molekül bir inhibitördür. Kutanöz melanomların %50-60'ında BRAF V600E mutasyonu bulunur ve bu mutasyonun varlığı Vemurafenib (veya Dabrafenib) tedavisinin mutlak şartıdır.\n\nA (c-KIT) GIST tedavisinde (İmatinib),\nC (EGFR) akciğer adenokarsinomunda (Gefitinib),\nD (HER2) meme kanserinde (Trastuzumab),\nE (BCR-ABL1) KML tedavisinde (İmatinib) hedeftir."
-  },
-  {
-    "id": "km-pq-10",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 10,
-    "slideTitle": "PI3K / AKT / mTOR Yolağı ve PTEN Lipid Fosfataz Freni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Ailesinde meme ve endometrium kanseri öyküsü bulunan 36 yaşındaki bir kadın hastada dilde papillomlar, yüzde trikilemmomlar ve tiroidde benign adenomatöz nodüller saptanıyor. Biyopside erken evre endometrioid tip endometrium karsinomu teşhis ediliyor. Genetik incelemede bu herediter hamartom sendromundan sorumlu olan tümör baskılayıcı gende inaktive edici mutasyon tespit ediliyor.\n\nBu hastada inaktive olan gen ve o genin hücredeki normal enzimatik işlevi aşağıdakilerden hangisinde DOĞRU olarak verilmiştir?",
-    "options": [
-      "A) APC – Beta-katenin yıkım kompleksini kurmak",
-      "B) RB1 – E2F transkripsiyon faktörlerini baskılamak",
-      "C) PTEN – PIP3'ü PIP2'ye dönüştüren lipid fosfataz aktivitesi",
-      "D) TP53 – DNA hasarında p21 transkripsiyonunu başlatmak",
-      "E) BRCA1 – Homolog rekombinasyon ile çift iplik kırıklarını onarmak"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Tarif edilen klinik tablo (mukokutanöz trikilemmomlar, papillomlar, tiroid lezyonları ve endometrium kanseri) otozomal dominant geçişli Cowden sendromudur. Cowden sendromuna yol açan tümör süpresör gen PTEN'dir. PTEN'in fizyolojik görevi lipid fosfataz olarak PIP3'ü PIP2'ye hidroliz etmek ve böylece PI3K/AKT/mTOR yolağını frenlemektir.\n\nA, B, D ve E seçenekleri diğer tümör süpresörlerin doğru fonksiyonlarıdır ancak Cowden sendromu ve tarif edilen tabloyla ilişkili değildir."
-  },
-  {
-    "id": "km-pq-11",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 11,
-    "slideTitle": "Tirozin Kinaz Füzyonları ve Philadelphia Kromozomu: t(9;22) BCR-ABL1",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Lökositoz (WBC: 120.000/uL), masif splenomegali ve periferik yaymada miyeloid serinin tüm maturasyon basamaklarının (blasttan parçalıya kadar) görülmesi üzerine kemik iliği biyopsisi yapılan 45 yaşındaki bir hastada sitogenetik analizde t(9;22)(q34;q11) translokasyonu saptanıyor.\n\nBu hastada malign klonun aşırı proliferasyonunu tetikleyen ve hedefe yönelik küçük molekül inhibitör tedavisine hedef oluşturan füzyon onkoproteini aşağıdakilerden hangisidir?",
-    "options": [
-      "A) PML-RARA transkripsiyon faktörü",
-      "B) BCR-ABL1 konstitütif tirozin kinaz",
-      "C) EML4-ALK kimerik kinaz",
-      "D) MYC-IGH füzyonu",
-      "E) PAX3-FOXO1 kimerik regülatör"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. t(9;22)(q34;q11) translokasyonu (Philadelphia kromozomu) Kronik Miyeloid Lösemi'nin (KML) ayırt edici genetik özelliğidir. Bu translokasyon sonucunda 9. kromozomdaki ABL1 tirozin kinaz geni ile 22. kromozomdaki BCR lokusu birleşerek konstitütif aktif BCR-ABL1 füzyon tirozin kinaz proteini üretilir. Bu onkoprotein İmatinib ile hedeflenir.\n\nA (PML-RARA) t(15;17) akut promiyelositik lösemide (APL),\nC (EML4-ALK) akciğer adenokarsinomunda,\nD (MYC-IGH) Burkitt lenfomada t(8;14) ile oluşur."
-  },
-  {
-    "id": "km-pq-12",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 12,
-    "slideTitle": "Nükleer Transkripsiyon Faktörleri: c-MYC, N-MYC ve L-MYC Onkogenleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "7 yaşında bir erkek çocuk çenede hızla büyüyen ağrısız kitle nedeniyle getiriliyor. Biyopside diffüz monomorfik orta boy B lenfoid hücre infiltrasyonu, bol mitoz, apoptoz ve aralarda nükleer enkaz içeren soluk makrofajların oluşturduğu 'yıldızlı gökyüzü' manzarası izleniyor. Sitogenetik analizde t(8;14)(q24;q32) translokasyonu saptanıyor.\n\nBu neoplazmın gelişiminde rol oynayan temel onkogen ve aktivasyon mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) c-KIT – Ekzon 11 bölgesinde aktive edici nokta mutasyonu",
-      "B) BCL2 – t(14;18) ile anti-apoptotik proteinin aşırı üretimi",
-      "C) c-MYC – İmmünoglobulin ağır zincir güçlendiricisi altına taşınarak aşırı eksprese edilmesi",
-      "D) TP53 – DNA bağlama bölgesinde missense mutasyon",
-      "E) ERBB2 – Kromozomal gen amplifikasyonu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Çenede kitle, yıldızlı gökyüzü manzarası ve t(8;14) translokasyonu Burkitt lenfoma için klasiktir. Bu translokasyonda 8. kromozomdaki c-MYC onkogeni, 14. kromozomdaki immünoglobulin ağır zincir (IGH) lokusunun regülatuvar elemanlarının altına taşınır ve protein yapısı bozulmaksızın transkripsiyonel olarak aşırı üretilir.\n\nA GIST ile,\nB Foliküler lenfoma ile,\nD Li-Fraumeni/birçok karsinom ile,\nE Meme kanseri amplifikasyonu ile ilişkilidir."
-  },
-  {
-    "id": "km-pq-13",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 13,
-    "slideTitle": "Apoptoz Düzenleyicileri, BCL-2 Ailesi ve Foliküler Lenfomada t(14;18)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Ağrısız yaygın lenfadenopati şikayetiyle başvuran 58 yaşındaki bir erkek hastanın lenf nodu biyopsisinde lenf nodu mimarisini silen, folikül benzeri nodüler yapılar oluşturan küçük çentikli lenfoid hücre infiltrasyonu izleniyor. İmmünohistokimyasal incelemede normal germinal merkezlerin aksine neoplastik foliküllerde BCL-2 proteini kuvvetli pozitif saptanıyor. Sitogenetik analizde t(14;18)(q32;q21) translokasyonu doğrulanıyor.\n\nBu neoplazmın gelişimine neden olan temel moleküler mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Apoptozun engellenmesi sonucu hücrelerin ölümden kaçarak yaşam sürelerinin uzaması",
-      "B) E2F transkripsiyon faktörünün aşırı salınımıyla mitoz hızının devasa artması",
-      "C) Telomeraz enziminin inhibe edilerek replikatif senesensin hızlandırılması",
-      "D) BAX ve BAK porlarının sürekli açık kalmasıyla sitokrom c sızıntısının tetiklenmesi",
-      "E) Tirozin kinaz reseptörlerinin liganttan bağımsız sürekli otofosforilasyonu"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Doğru yanıt A'dır. t(14;18) translokasyonu Foliküler Lenfoma için patognomoniktir. 18. kromozomdaki BCL-2 geni 14. kromozomdaki IGH lokusunun altına taşınır ve aşırı eksprese edilir. BCL-2 anti-apoptotik bir proteindir; BAX/BAK porlarını kapatarak mitokondriyal apoptozu bloke eder. Böylece hücreler aşırı bölünmekten ziyade ölmedikleri için lenfoid dokularda birikirler.\n\nB Burkitt lenfoma/RB kaybında,\nC senesens hızlanması tümörü engeller,\nD apoptozu tetikler (tam tersi),\nE RTK mutasyonlarında görülür."
-  },
-  {
-    "id": "km-pq-14",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 14,
-    "slideTitle": "Kanser Hücresinde Genetik Lezyon Tipleri: Nokta Mutasyonlar, Delesyonlar ve Amplifikasyonlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bir çocukta retroperitoneal yerleşimli adrenal kitle saptanıyor ve nöroblastom tanısı konuluyor. Tümör dokusunun sitogenetik analizinde hücre çekirdeklerinde normal kromozomların dışında yüzen, sentromeri bulunmayan (asentrik), dairesel yapıda çok sayıda küçük DNA parçacığı (çift dakikalar / double minutes) ve bazı kromozom kollarına entegre olmuş homojen boyanan bölgeler (HSR) tespit ediliyor.\n\nBu hastada saptanan bu sitogenetik anomaliler aşağıdaki lezyon türlerinden hangisine ve hangi onkogene aittir?",
-    "options": [
-      "A) Gen delesyonu – RB1",
-      "B) Resiprokal translokasyon – BCR-ABL1",
-      "C) Gen amplifikasyonu – MYCN (N-MYC)",
-      "D) Nokta mutasyonu – KRAS",
-      "E) Epigenetik susturma – MLH1"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Çift dakikalar (double minutes - dmin) ve homojen boyanan bölgeler (HSR), gen amplifikasyonunun (kopya sayısı artışı) sitogenetikteki iki klasik tezahürüdür. Nöroblastomda görülen bu amplifikasyon MYCN (N-MYC) onkogenine aittir ve kötü prognozu simgeler.\n\nA Elesyon kopya kaybıdır,\nB Translokasyon kromozom segment değişimidir,\nD Nokta mutasyon tek baz değişimidir,\nE Epigenetik susturma diziyi değiştirmez."
-  },
-  {
-    "id": "km-pq-15",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 15,
-    "slideTitle": "Anöploidi, Mitotik Kontrol Noktaları ve MikroRNA'lar (Onkomirler)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Moleküler onkoloji laboratuvarında küçük hücreli dışı akciğer karsinomu hücre hatları incelenirken, hücrelerde RAS proto-onkogeninin DNA dizisinde hiçbir nükleotid mutasyonu olmamasına rağmen, hücre sitoplazmasında RAS protein miktarının bazale göre katbekat yüksek olduğu saptanıyor. Detaylı analizde, normal hücrelerde RAS mRNA'sının 3'-UTR bölgesine bağlanarak translasyonunu engelleyen ve mRNA yıkımını sağlayan spesifik bir mikroRNA'nın bu kanser hücrelerinde tamamen kaybolduğu (susturulduğu) tespit ediliyor.\n\nNormalde RAS onkogenini post-transkripsiyonel düzeyde baskılayan bu tümör baskılayıcı mikroRNA aşağıdakilerden hangisidir?",
-    "options": [
-      "A) miR-21 (onkomir)",
-      "B) let-7 mikroRNA ailesi",
-      "C) U1 snRNA",
-      "D) Telomeraz RNA bileşeni (TERC)",
-      "E) Transfer RNA (tRNA-Met)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. let-7 mikroRNA ailesi, en iyi bilinen tümör baskılayıcı mikroRNA'dır. Fizyolojik görevi RAS ve MYC mRNA'larının 3'-UTR bölgelerine bağlanarak bunların translasyonunu engellemek ve yıkımını sağlamaktır. let-7 kaybı veya ekspresyon düşüklüğü, DNA dizisinde mutasyon olmasa dahi hücrede devasa miktarda RAS proteini üretilmesine ve kontrolsüz büyümeye neden olur.\n\nA (miR-21) onkomirdir, PTEN'i yıkar.\nC (U1 snRNA) splaysingde görevlidir.\nD (TERC) telomerazın RNA kalıbıdır.\nE translasyonel aminoasit taşıyıcısıdır."
-  },
-  {
-    "id": "km-pq-16",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 16,
-    "slideTitle": "Kanser Epigenetiği: Global Hipometilasyon ve CpG Ada Hipermetilasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "72 yaşındaki bir kadın hastada çekum yerleşimli kolorektal karsinom rezeke ediliyor. Patolojik incelemede müsinöz adenokarsinom ve tümör içi yoğun lenfosit infiltrasyonu (TIL) saptanıyor. Moleküler testte tümörde mikrosatellit instabilitesi (MSI-High) belirleniyor. İmmünohistokimyasal analizde MLH1 protein ekspresyonunun kaybolduğu; ancak yeni nesil dizilemede MLH1 gen dizisinde hiçbir delesyon veya mutasyon OLMADIĞI görülüyor.\n\nBu hastada tümör baskılayıcı MLH1 geninin inaktivasyonundan sorumlu olan epigenetik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Genomun genelinde yaygın histon metilasyonu",
-      "B) MLH1 geni promotör CpG adacıklarının edinsel hipermetilasyonu",
-      "C) Kodon 12 bölgesinde sitozin-timin transversiyonu",
-      "D) 14. kromozom IGH lokusu ile dengeli resiprokal translokasyon",
-      "E) Kromozom dışı çift dakikalar (double minutes) halinde çoğalma"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Doğru yanıt B'dir. İleri yaşta sağ kolon karsinomlarında mikrosatellit instabilitesinin (MSI) en sık nedeni germline mutasyon değil, sporadik **MLH1 gen promotörünün CpG adacıklarının edinsel hipermetilasyonudur**. DNA dizisinde mutasyon olmaksızın transkripsiyon durdurulur ve protein ekspresyonu kaybolur.\n\nA hipometilasyon instabilite yapar,\nC genetik mutasyondur,\nD translokasyondur,\nE amplifikasyondur."
-  },
-  {
-    "id": "km-pq-17",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 17,
-    "slideTitle": "DNA Uyumsuzluk Onarımı (MMR), Mikrosatellit İnstabilitesi (MSI) ve Lynch Sendromu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "39 yaşındaki bir kadın hastaya sağ kolon yerleşimli az diferansiye adenokarsinom tanısı konuluyor. Aile öyküsünde annesinin 44 yaşında kolon kanserinden, teyzesinin ise 42 yaşında endometrium kanserinden opere olduğu öğreniliyor. Tümör dokusunda yapılan moleküler analizde mikrosatellit instabilitesi (MSI-High) saptanıyor ve BRAF V600E mutasyonu NEGATİF bulunuyor.\n\nBu hastadaki kalıtsal sendrom ve en olası sorumlu gen çifti aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Familyal Adenomatöz Polipozis – APC ve MUTYH",
-      "B) Li-Fraumeni Sendromu – TP53 ve MDM2",
-      "C) Cowden Sendromu – PTEN ve PIK3CA",
-      "D) Lynch Sendromu (HNPCC) – MSH2 ve MLH1",
-      "E) Peutz-Jeghers Sendromu – STK11 ve SMAD4"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Doğru yanıt D'dir. Genç yaşta sağ kolon kanseri, ailede genç yaşta kolon ve endometrium kanseri öyküsü, tümörde mikrosatellit instabilitesi (MSI-High) ve sporadik belirteç olan BRAF V600E'nin negatif olması Lynch Sendromu (Herediter Non-Polipozis Kolorektal Kanser) için kusursuz bir tablodur. Lynch sendromu DNA uyumsuzluk onarım (MMR) genleri olan MSH2 ve MLH1 (veya MSH6/PMS2) germ hattı mutasyonlarıyla gelişir.\n\nA (FAP) binlerce poliple seyreder,\nB (Li-Fraumeni) TP53 ile sarkom/meme kanseridir,\nC (Cowden) PTEN ile hamartomlardır,\nE (Peutz-Jeghers) STK11 ile mukokutanöz pigmentasyon ve hamartomatöz poliplerdir."
-  },
-  {
-    "id": "km-pq-18",
-    "deckId": "learn-karsinojenezin-molekuler-temeli",
-    "deckTitle": "Karsinojenezin Moleküler Temeli: Onkogenler, Sinyal Yolakları ve Hallmarks of Cancer",
-    "slideNumber": 18,
-    "slideTitle": "Nükleotid Eksizyon Onarımı (NER), Pirimidin Dimerleri ve Kseroderma Pigmentozum",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "6 yaşındaki bir erkek çocuk açık tenli olup, hafif güneş maruziyeti sonrasında bile yüzünde ve kollarında büllöz eritemli lezyonlar, belirgin atrofi, yaygın çillenme ve pigmentasyon düzensizlikleri gelişmesi üzerine getiriliyor. Biyopside burun sırtındaki pigmente nodülden malign melanom teşhisi konuluyor. Moleküler genetik analizde DNA'da ultraviyole ışınlarının oluşturduğu pirimidin dimerlerini kesip çıkaran tamir sisteminde yer alan bir gende otozomal resesif mutasyon tespit ediliyor.\n\nBu hastada bozulmuş olan DNA onarım mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Uyumsuzluk onarımı (Mismatch Repair - MMR)",
-      "B) Baz eksizyon onarımı (Base Excision Repair - BER)",
-      "C) Nükleotid eksizyon onarımı (Nucleotide Excision Repair - NER)",
-      "D) Homolog rekombinasyon ile çift iplik onarımı (HR)",
-      "E) Non-homolog uç birleştirme (NHEJ)"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Doğru yanıt C'dir. Tarif edilen klinik tablo (güneşe aşırı hassasiyet, erken yaşta kutanöz melanom, çillenme, atrofi) otozomal resesif geçişli Kseroderma Pigmentozum (XP) hastalığıdır. XP'nin nedeni ultraviyole radyasyonun oluşturduğu siklobütan pirimidin dimerlerini ve hacimli lezyonları kesip çıkaran Nükleotid Eksizyon Onarımı (NER) yolundaki genetik kusurlardır.\n\nA MMR Lynch sendromunda,\nB BER tek baz oksidatif hasarlarında,\nD ve E çift iplik kırıklarında görevlidir."
   }
 ]

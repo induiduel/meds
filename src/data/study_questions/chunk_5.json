@@ -1,5 +1,807 @@
 [
   {
+    "id": "d3-k1-tbg-014",
+    "deckId": "learn-kromozomal-hastaliklar-ve",
+    "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
+    "slideNumber": 19,
+    "slideTitle": "Gonozomal Kromozom Hastalıkları: Klinefelter (47,XXY), 47,XYY ve 47,XXX",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Fetal ultrasonografide artmış ense saydamlığı (nukal translusens, NT) saptandığında, aşağıdaki genetik tanılardan hangisi bu bulguyla İLİŞKİLİ DEĞİLDİR?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Klinefelter sendromu (47,XXY)",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Down sendromu (Trizomi 21)",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Edwards sendromu (Trizomi 18)",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Patau sendromu (Trizomi 13)",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Turner sendromu (45,X)",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Artmış nukal translusens (NT), başta Down, Edwards ve Patau sendromları olmak üzere otozomal trizomilerle ve Turner sendromuyla (lenfatik gelişim bozukluğu/kistik higromaya bağlı) güçlü şekilde ilişkilidir ve birinci trimester kombine tarama testinin temelini oluşturur. Klinefelter sendromu (47,XXY) ise genellikle belirgin bir fenotipik/yapısal anomaliye yol açmadığından NT artışı ile karakteristik olarak ilişkilendirilmez; tanısı çoğunlukla postnatal dönemde veya rastlantısal olarak konur."
+  },
+  {
+    "id": "d3-k1-tbg-002-401",
+    "deckId": "learn-kromozomal-hastaliklar-ve",
+    "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
+    "slideNumber": 20,
+    "slideTitle": "Turner Sendromu (45,X): Karyotip Varyantları ve Kapsamlı Klinik",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Fetal ultrasonografide kistik higroma, geniş bir atriyal septal defekt (ASD) ve ventriküler septal defekt (VSD) saptanan bir gebede en olası tanı hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Turner sendromu (45,X)",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Down sendromu (Trizomi 21)",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Edwards sendromu (Trizomi 18)",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Patau sendromu (Trizomi 13)",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Klinefelter sendromu (47,XXY)",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Fetal kistik higroma, Turner sendromunun (45,X) en karakteristik prenatal ultrasonografik bulgusudur; lenfatik sistemin gelişim bozukluğuna bağlı gelişir ve sıklıkla koarktasyo aorta ile birlikte konotrunkal/septal kalp defektlerine (ASD, VSD, biküspit aort kapağı) eşlik eder. Down, Edwards ve Patau sendromlarında da artmış ense kalınlığı görülebilir, ancak yaygın kistik higroma ile birlikte geniş septal defekt kombinasyonu klasik olarak Turner sendromunu düşündürür."
+  },
+  {
+    "id": "past-1790877036469-877053",
+    "deckId": "learn-kromozomal-hastaliklar-ve",
+    "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
+    "slideNumber": 21,
+    "slideTitle": "Genomik İmprinting ve Uniparental Dizomi (UPD): Prader-Willi vs Angelman",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Bir gen bakımından dipolid olan gamet ile, haploid olan gametin oluşturduğu trizomik zigotta, homologların ayrılmaması sonucu oluşan dipolid bir zigot için hangisi yanlıştır?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Homolog kromozomların maternal ya da paternal olması önemlidir",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Bu durum uniparental dizominin nedenlerinden birisidir",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Maternal dizomi sonucunda oluşan Prader Willi sendromu örnek olabilir",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Paternal dizomi sonucunda oluşan Angelman Sendromu örnek olabilir",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Dizomilerde genomik imprinting rol almaz",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "【Patofizyolojik & Klinik Değerlendirme】:\nTıbbi Genetik kapsamında sorulan bu vaka/mekanizmada primer patoloji 'Dizomilerde genomik imprinting rol almaz' ile ilişkilidir.\n\n【Doğru Yanıt (E) Gerekçesi】:\nDoğru seçenek E olup, klinik pratikte biyokimyasal/histopatolojik belirteçler ve moleküler kaskad bu mekanizmayı doğrulamaktadır.\n\n【Çeldirici Seçeneklerin Değerlendirilmesi】:\nDiğer seçenekler alternatif klinik tablolarda veya farklı etyolojik süreçlerde gözlenmekte olup bu soru kökündeki klinik tabloya uymamaktadır.\n\n【Klinik İpucu】:\nTıbbi Genetik sınavlarında ayırıcı tanıda yer alan biyomarkerlar ve histopatolojik bulgular yüksek ayırt ediciliğe sahiptir."
+  },
+  {
+    "id": "d3-k1-tbg-009",
+    "deckId": "learn-kromozomal-hastaliklar-ve",
+    "deckTitle": "Kromozomal Hastalıklar ve Genetik Danışma",
+    "slideNumber": 22,
+    "slideTitle": "Büyük Sentez: Genetik Danışma İlkeleri, Rekürrens Riskleri ve Kurul 1 Altın İpuçları",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Prenatal invaziv tanı yöntemleriyle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Amniyosentez genellikle 15-18. gebelik haftaları arasında uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Koryon villus örneklemesi (CVS) 10-12. gebelik haftalarında uygulanır",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "CVS’nin amniyosenteze göre önemli bir avantajı, villus dokusunda direkt (kısa süreli) kromozom analizi yapılabilmesidir",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Kordosentez (PUBS) genellikle 18. gebelik haftasından önce güvenle uygulanabilir",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "CVS’de kullanılan hücreler trofoblast (sitotrofoblast) kökenlidir",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Kordosentez (perkütan umbilikal kan örneklemesi, PUBS), umbilikal korddaki damarların yeterince gelişip güvenle girilebilir hale gelmesi için genellikle 18. gebelik haftasından SONRA (yaklaşık 18-24. haftalar) uygulanır; bu haftadan önce teknik olarak güvenli ve pratik değildir. Amniyosentez 15-18. haftalarda, CVS ise daha erken (10-12. hafta) yapılır ve CVS’nin en önemli avantajı, hücre kültürü beklemeden villus dokusunda doğrudan (direkt) kromozom analizi yapılabilmesidir. Not: Öğrenci notunda birden fazla şık şüpheli işaretlenmişti; ifadeler standart prenatal tanı zamanlamasına göre netleştirilip tek doğru yanlış şık (kordosentez zamanlaması) olacak şekilde düzenlenmiştir."
+  },
+  {
+    "id": "prac-akut-001",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 1,
+    "slideTitle": "Enflamasyonun Tanımı, Biyolojik Amacı ve Temel Savunma Öğeleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Enflamasyonun genel tanımı, biyolojik amacı ve temel özellikleri dikkate alındığında, aşağıdaki ifadelerden hangisi biyolojik açıdan YANLIŞTIR?",
+    "options": [
+      "A) Enflamatuvar yanıt yalnızca vaskülarize canlı dokularda meydana gelebilen dinamik bir süreçtir.",
+      "B) Enflamasyonun temel hedeflerinden biri de nekrotik hücre ve doku kalıntılarını fagositozla ortamdan uzaklaştırmaktır.",
+      "C) Enflamasyon yanıtı sırasında rol alan savunma proteinleri ve lökositler normal fizyolojik koşullarda doku parankiminde bol miktarda depo edilmiş halde bekler.",
+      "D) Enflamatuvar yanıt nihai evresinde büyüme faktörleri ve sitokinler aracılığıyla doku onarım mekanizmalarını tetikler.",
+      "E) Koruyucu bir yanıt olmasına karşın enflamasyonun kontrolsüzce uzaması veya yanlış hedeflenmesi ağır doku yıkımına yol açabilir."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği yanlıştır. Enflamasyonda görev alan ana savunma araçları (nötrofiller, monositler, antikorlar ve kompleman proteinleri) normal fizyolojik koşullarda dokularda depo halinde bulunmaz; dolaşımda kanda seyrederler. Enflamasyon süreci bu hücre ve proteinleri damar dışına sızdırarak hasarlı dokuya ulaştırır. A, B, D ve E seçeneklerindeki ifadeler enflamasyonun temel ilkelerine tamamen uygundur."
+  },
+  {
+    "id": "prac-akut-002",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 2,
+    "slideTitle": "Enflamasyonun Kardinal Belirtileri ve Tarihsel Gelişimi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ayak bileğini burkan ve şiddetli ağrı, şişlik ve üzerine basamama şikayetiyle acil servise başvuran 22 yaşındaki bir hastada enflamasyonun kardinal belirtileri değerlendiriliyor. Bu patolojik süreçle ilgili aşağıdaki eşleştirmelerden hangisi Celsus ve Virchow'un tanımlamaları açısından DOĞRUDUR?",
+    "options": [
+      "A) Tumor - Rudolf Virchow tarafından tanımlanan mikrovasküler spazm bulgusu",
+      "B) Calor - Celsus tarafından tanımlanan, lokal doku metabolizmasının durmasına bağlı soğuma",
+      "C) Functio laesa - Rudolf Virchow tarafından eklenen ve dokunun görevini yapamamasını ifade eden beşinci kardinal belirti",
+      "D) Dolor - Celsus tarafından eklenen, yalnızca lökositlerin damar dışına göç etmesiyle ortaya çıkan duyusal felç",
+      "E) Rubor - Rudolf Virchow tarafından tanımlanan ve venöz geri akım yetmezliğine bağlı gelişen morarma"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Enflamasyonun ilk 4 belirtisi (Rubor, Calor, Tumor, Dolor) milattan sonra 1. yüzyılda Celsus tarafından tanımlanmış; 5. belirti olan Functio laesa (fonksiyon kaybı) ise 19. yüzyılda patolojinin babası Rudolf Virchow tarafından eklenmiştir. A seçeneğinde tumor Celsus'a aittir ve ödemi ifade eder; B seçeneğinde calor soğuma değil arteriyel kan akımına bağlı ısı artışıdır; D ve E seçeneklerindeki ilişkilendirmeler yanlıştır."
+  },
+  {
+    "id": "prac-akut-003",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 3,
+    "slideTitle": "Enflamatuvar Reaksiyonun Beş Temel Adımı: '5 R' Kuralı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Enflamatuvar yanıtın '5 R' kuralı (Recognition, Recruitment, Removal, Regulation, Repair) çerçevesinde, reaksiyonun sonlandırılmasını ve kontrol altında tutulmasını sağlayan 'Regulation' basamağında aşağıdaki moleküler olaylardan hangisinin gerçekleşmesi BEKLENMEZ?",
+    "options": [
+      "A) Hasar odağındaki nötrofillerin 24-48 saat içinde hızla apoptoza uğraması",
+      "B) Araşidonik asit metabolizmasında pro-enflamatuvar lökotrienlerden antienflamatuvar lipoksinlere geçiş yapılması",
+      "C) Doku makrofajlarından yoğun miktarda interlökin-1 (IL-1) ve TNF-alfa salınarak lökosit göçünün katlanarak artırılması",
+      "D) Makrofajlar ve regülatuvar hücreler tarafından Transforming Growth Factor-beta (TGF-beta) üretilmesi",
+      "E) İnterlökin-10 (IL-10) salgılanarak pro-enflamatuvar sitokin sentezinin inhibe edilmesi"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Regulation (düzenleme/sonlandırma) basamağında TNF ve IL-1 gibi pro-enflamatuvar sitokinlerin üretimi baskılanır; lökosit göçü artırılmaz, aksine durdurulur. Enflamasyonun sonlanması pasif bir tükeniş değil, aktif bir regülasyondur: Nötrofillerin apoptozu (A), araşidonik asit yolağında lökotrienlerden lipoksinlere geçiş (B), TGF-beta (D) ve IL-10 (E) gibi antienflamatuvar mediyatörlerin devreye girmesi bu evrenin temel olaylarıdır."
+  },
+  {
+    "id": "prac-akut-004",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 4,
+    "slideTitle": "Akut ve Kronik Enflamasyonun Karşılaştırmalı Patolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki patolojik özelliklerden hangisi akut enflamasyonu kronik enflamasyondan ayıran en karakteristik bulgudur?",
+    "options": [
+      "A) Lezyon odağında monosit, makrofaj ve plazma hücrelerinin predominant olması",
+      "B) Doku hasarının uzun süreli, yaygın ve kalıcı parankim kaybıyla sonuçlanması",
+      "C) Hasar sahasında anjiyogenez ile birlikte belirgin ekstraselüler matriks ve kollajen birikimi (fibrozis) izlenmesi",
+      "D) Dakikalar ve saatler içinde hızla gelişen yoğun vasküler permeabilite artışı, ödem ve nötrofil infiltrasyonu",
+      "E) Klinik semptomların genellikle sinsi, hafif düzeyde ve aylar süren dalgalanmalarla seyretmesi"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Hızlı başlangıç (dakikalar-saatler), yoğun damar geçirgenliği artışına bağlı ödem sıvısı birikimi ve hücresel infiltratta nötrofillerin baskınlığı akut enflamasyonun temel özellikleridir. A, B, C ve E seçeneklerinde sıralanan özellikler (mononükleer infiltrat, kalıcı parankim kaybı, fibrozis ve sinsi seyir) kronik enflamasyona aittir."
+  },
+  {
+    "id": "prac-akut-005",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 5,
+    "slideTitle": "Akut Enflamasyonu Tetikleyen Başlıca Etiyolojik Faktörler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Göğüs ağrısı şikayetiyle acil servise başvuran ve elektrokardiyografisinde ST elevasyonlu miyokard enfarktüsü saptanan 58 yaşındaki bir hastanın nekroze kalp dokusu biyopsisinde, hiçbir enfeksiyöz mikroorganizma saptanmamasına karşın erken dönemde yoğun nötrofil infiltrasyonu ve interstisyel ödem izleniyor. Bu steril enflamatuvar yanıtı başlatan primer moleküler mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Patojenle ilişkili moleküler paternlerin (PAMP) koroner arter endotelindeki selektinleri doğrudan parçalaması",
+      "B) İskemik nekroza uğrayan miyositlerden ekstraselüler ortama salınan tehlike sinyallerinin (DAMP) yerleşik makrofajları aktive etmesi",
+      "C) Dolaşımdaki B lenfositlerin kalp kası hücrelerine karşı antikor sentezleyerek komplemanı klasik yoldan tüketmesi",
+      "D) Plazma onkotik basıncının aniden yükselerek koroner venüllerde masif transüda göllenmesine yol açması",
+      "E) Miyokard hücrelerinin apoptoza giderek zarlarını koruması ve fagositoz uyarısı oluşturmaması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. İskemik hücre ölümü (koagülasyon nekrozu) sırasında hücre zarları parçalanır ve sitoplazmik/nükleer içerikler (ATP, ürik asit, HMGB1 vb.) ortama saçılır. Bu endojen maddeler Hasarla İlişkili Moleküler Paternler (DAMP) olarak adlandırılır. Doku makrofajları ve endotel hücreleri DAMP'ları tanıyarak steril bir akut enflamatuvar yanıt (nötrofil göçü ve ödem) başlatır. A seçeneğinde mikrop olmadığı için PAMP bulunmaz; C ve D seçenekleri etiyopatogenezle bağdaşmaz; nekrozda apoptozun aksine membran bütünlüğü bozulur."
+  },
+  {
+    "id": "prac-akut-006",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 6,
+    "slideTitle": "İnflamatuvar Yanıtın Yol Açtığı Doku Hasarı ve Klinik Tablolar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ağır bir ürosepsis tablosunu takiben yoğun bakım ünitesinde izlenen 64 yaşındaki bir hastada, solunum sayısında ani artış, hipoksemi ve bilateral yaygın akciğer infiltrasyonu gelişiyor. Hastaya Akut Solunum Sıkıntısı Sendromu (ARDS) tanısı konuyor. Bu hastanın akciğer parankiminde meydana gelen difüz doku hasarından birincil derecede sorumlu olan hücre tipi ve hasar mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Plazma hücreleri tarafından sentezlenen aşırı IgE antikorlarının bronş düz kasını kasması",
+      "B) Eozinofil lökositlerin Major Temel Protein (MBP) salgılayarak tip 2 pnömositleri parçalaması",
+      "C) Alveoler kapiller yatakta toplanan nötrofillerin salgıladığı serbest oksijen radikalleri (ROS) ve proteazlar",
+      "D) Doku mast hücrelerinin degranülasyonu sonucu salınan heparinin alveol içi masif kanamalara yol açması",
+      "E) CD8+ sitotoksik T lenfositlerin sürfaktan proteinlerini kompleman aracılığıyla lizise uğratması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. ARDS tablosunun temel patofizyolojisinde, pulmoner mikrosirkülasyonda yoğunlaşan nötrofillerin degranülasyonu, elastaz gibi lizozomal proteazların salınımı ve solunumsal patlama ile üretilen reaktif oksijen radikallerinin (ROS) endotel ve alveol epitelini eritmesi yatar. Robbins Tablo 2.2'de akut enflamatuvar doku hasarına prototip model olarak ARDS ve nötrofil hasarı vurgulanmaktadır. Diğer seçeneklerdeki hücreler ARDS'nin primer tetikleyicisi değildir."
+  },
+  {
+    "id": "prac-akut-007",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 7,
+    "slideTitle": "Mikropların ve Hasarlı Hücrelerin Tanınması: Reseptör Sistemleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Birinci metatarsofalangeal ekleminde aniden başlayan zonklayıcı ağrı, kızarıklık ve şişlikle başvuran 45 yaşındaki bir erkek hastanın sinovyal sıvı incelemesinde monosodyum ürat kristalleri izleniyor. Bu kristallerin lökosit sitoplazmasında NLRP3 reseptörüne bağlanarak inflamazom kompleksini aktive ettiği ve bir proteolitik enzimi çalıştırarak sitokin olgunlaşmasını sağladığı biliniyor. İnflamazomun doğrudan aktive ettiği bu enzim ve sentezlenmesini sağladığı nihai pro-enflamatuvar sitokin aşağıdakilerin hangisinde birlikte verilmiştir?",
+    "options": [
+      "A) Miyeloperoksidaz - Lökotrien B4",
+      "B) Kaspaz-1 - İnterlökin-1beta (IL-1beta)",
+      "C) NADPH Oksidaz - Tümör Nekroz Faktörü-alfa (TNF-alfa)",
+      "D) Siklooksijenaz-2 (COX-2) - Prostaglandin E2",
+      "E) İndüklenebilir Nitrik Oksit Sentaz (iNOS) - İnterlökin-6"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sitoplazmik bir sensör olan NLRP3, ürat kristalleri veya hücre dışı ATP gibi hasar sinyalleriyle (DAMP) uyarıldığında diğer proteinlerle oligomerize olarak 'İnflamazom' kompleksini kurar. İnflamazomun proteolitik bileşeni Kaspaz-1 enzimidir. Aktive olan kaspaz-1, sitoplazmada inaktif bekleyen öncül pro-IL-1beta molekülünü enzimatik olarak kırarak aktif ve sekrete edilebilir İnterlökin-1beta (IL-1beta) haline getirir. Bu yolak gut patogenezinin temelidir ve IL-1 antagonistleri (örn. anakinra) tedavide son derece etkilidir."
+  },
+  {
+    "id": "prac-akut-008",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 8,
+    "slideTitle": "Akut Enflamasyonun Üç Ana Vasküler ve Hücresel Bileşeni",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut enflamasyon sürecinde gelişen hemodinamik ve hücresel olayların mikrosirkülasyon anatomisi ile ilişkisi dikkate alındığında, lökosit göçü (diapedez) ve vasküler geçirgenlik artışının en belirgin olarak gerçekleştiği vasküler segment aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Geniş çaplı elastik arterler",
+      "B) Prekapiller sfinkter içeren musküler arterioller",
+      "C) Gerçek (true) kapiller damarlar",
+      "D) Postkapiller venüller",
+      "E) Geniş toplayıcı ana venler"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Akut enflamasyonda kimyasal mediyatörlerin (histamin, lökotrienler vb.) neden olduğu endotelyal aralıkların açılması ve lökositlerin damar lümeninden ekstravasküler alana transmigrasyonu (diapedez) esas olarak postkapiller venüllerde gerçekleşir. Arteriyoller esas olarak vazodilatasyon ve akım kontrolünden sorumludur; gerçek kapillerler ve büyük damarlar lökosit diapedezinin ana sahası değildir."
+  },
+  {
+    "id": "prac-akut-009",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 9,
+    "slideTitle": "Vasküler Çap ve Akım Dinamikleri: Vazokonstriksiyondan Hiperemiye",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Koluna sıcak kahve dökülen bir tıp öğrencisinde ilk birkaç saniye içinde deride hafif bir soluklaşma, ardından dakikalar içinde belirgin bir parlak kızarıklık (eritem) ve dokunmakla hissedilen belirgin bir sıcaklık artışı meydana geliyor. Bu hastada ortaya çıkan kızarıklık ve lokal ısı artışının temelinde yatan primer vasküler değişiklik ve mediyatör kombinasyonu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Postkapiller venüllerde spazm - Endotelin ve tromboksan A2",
+      "B) Prekapiller arteriollerde vazodilatasyon - Histamin ve nitrik oksit (NO)",
+      "C) Gerçek kapillerlerin trombüsle tıkanması - Serotonin ve adenozin",
+      "D) Lenfatik damarların kollabe olması - İnterlökin-10 ve TGF-beta",
+      "E) Büyük arterlerin lümen daralması - Norepinefrin ve vazopressin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Hasar sonrası ilk saniyelerdeki solukluk geçici nörojenik vazokonstriksiyona bağlıdır. Ardından dakikalar içinde mast hücrelerinden salınan histamin ve endotelyal nitrik oksit (NO) etkisiyle prekapiller arterioller genişler (vazodilatasyon). Bu vazodilatasyon mikrosirkülasyona hücum eden kan akımını artırır (aktif hiperemi) ve kızarıklık (rubor) ile sıcaklık artışına (calor) yol açar."
+  },
+  {
+    "id": "prac-akut-010",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 10,
+    "slideTitle": "Vasküler Permeabilite Artışı, Hemokonsantrasyon ve Staz",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut apandisit nedeniyle opere edilen bir hastanın perfore olmamış apendiks dokusunun histopatolojik incelemesinde; postkapiller venüllerde eritrositlerin birbirine yapışarak lümeni tamamen doldurduğu, kan akımının durma noktasına geldiği (staz) ve lökositlerin damar lümeninin merkezinden endotel yüzeyine doğru itildiği gözleniyor. Bu patolojik süreçte stazın gelişmesine ve lökosit marjinasyonuna zemin hazırlayan primer biyofiziksel mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Plazma sıvısı ve proteinlerinin vasküler geçirgenlik artışıyla interstisyuma kaçması sonucu gelişen hemokonsantrasyon ve artmış kan viskozitesi",
+      "B) Kemik iliğinde eritrosit üretiminin aniden durmasına bağlı gelişen aşırı hemodilüsyon",
+      "C) Endotelyal nitrik oksit sentezinin tamamen inhibe olması sonucu arteriollerin kalıcı spazma girmesi",
+      "D) Lökositlerin plazma albüminini parçalayarak damar içi onkotik basıncı aşırı yükseltmesi",
+      "E) Prekapiller sfinkterlerin kasılarak kapiller yatağa kan girişini tamamen bloke etmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Vasküler permeabilitenin dramatik şekilde artması sonucu su, tuz ve plazma proteinleri damar dışına sızar. İntravasküler sıvı hacminin azalması eritrositlerin konsantre olmasına (hemokonsantrasyon) ve kanın akışkanlık direncinin (viskozitesinin) belirgin şekilde yükselmesine yol açar. Kan akımı yavaşlar (staz); merkezdeki laminer akım bozulur ve lökositler damar duvarına doğru itilerek endotelle temas eder (marjinasyon). Diğer seçeneklerdeki mekanizmalar staz oluşumuyla uyumsuzdur."
+  },
+  {
+    "id": "prac-akut-011",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 11,
+    "slideTitle": "Vasküler Permeabilite Mekanizmaları - I: Endotel Hücre Kasılması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Piknikte kolunu bir arı sokan 16 yaşındaki bir gençte, sokulmadan yaklaşık 2 dakika sonra sokulan yerde belirgin bir kızarıklık ve ortasında 2 cm çapında kabarık, kaşıntılı, gergin bir ödem plağı (ürtiker/kabarıklık) gelişiyor. Yaklaşık 30 dakika sonra ise bu ödem plağının belirgin şekilde söndüğü gözleniyor. Bu klinik tabloda gelişen vasküler sızıntının histopatolojik tipi, etkilenen damar segmenti ve mediyatörü aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) Direkt endotel nekrozu - Tüm kapiller ve arteriyoller - İnterferon-gama",
+      "B) Endotel hücre kasılması (anında geçici yanıt) - Postkapiller venüller - Histamin",
+      "C) Lökosit aracılı endotel lizisi - Musküler arterler - Nötrofil elastazı",
+      "D) Artmış transsitoz kanalları - Geniş toplayıcı venler - Trombosit kaynaklı büyüme faktörü (PDGF)",
+      "E) İmmatür damar tomurcuklanması - Lenfatik kapillerler - Fibroblast büyüme faktörü (FGF)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Olay akut alerjik/toksik bir degranülasyondur. Mast hücrelerinden salınan histamin, postkapiller venüllerdeki endotel hücrelerinin hücre iskeletini (aktin-miyozin) kasarak interendotelyal aralıkları açar. Bu yanıt anında başlar ve 15-30 dakika içinde sonlanır ('anında geçici yanıt'). Direkt endotel nekrozu yanıklarda saatler-günler sürer; lökosit lizisi daha geç evrelerde görülür."
+  },
+  {
+    "id": "prac-akut-012",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 12,
+    "slideTitle": "Vasküler Permeabilite Mekanizmaları - II: Direkt ve Lökosit Bağımlı Endotel Hasarı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Alev yanığına maruz kalarak vücudunun %40'ında derin ikinci ve üçüncü derece yanıklar oluşan 34 yaşındaki bir hastada, yanık sahasından saatler ve günler boyu devam eden masif plazma kaçağı, ağır hipovolemik şok ve mikrosirkülasyonda yaygın trombüs oluşumu izleniyor. Bu hastadaki vasküler sızıntının histopatolojik mekanizması ve tutulan vasküler yatak özellikleri aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Yalnızca postkapiller venüllerde histamin uyarısıyla gelişen ve 30 dakikada gerileyen endotel retraksiyonu",
+      "B) Arteriyol, kapiller ve venülleri tutan, endotel nekrozu ve soyulmasına bağlı direkt vasküler hasar (anında kalıcı yanıt)",
+      "C) Yalnızca büyük musküler arterlerde elastik laminanın yırtılmasına bağlı masif kanama",
+      "D) Lenfatik kapillerlerin intralüminal polipleri nedeniyle drenajın tamamen mekanik olarak tıkanması",
+      "E) Endotel hücrelerinde transsitoz kanallarının aşırı kapanması sonucu damar içi hidrostatik basıncın patlaması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Ağır termal yanıklarda gelişen geçirgenlik artışı 'direkt endotel hasarı'dır. Bu hasarda endotel hücreleri doğrudan nekroze olur, parçalanır ve bazal membrandan dökülür. Reaksiyon hafif enflamasyondaki gibi sadece venüllerle sınırlı değildir; arteriyol, kapiller ve venülleri içeren tüm mikrovasküler yatağı tutar. Hasar anında başlar ve günler boyu sürer ('anında kalıcı yanıt'). Subendotelyal kollajenin açığa çıkmasıyla yaygın mikrovasküler tromboz gelişir."
+  },
+  {
+    "id": "prac-akut-013",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 13,
+    "slideTitle": "Vasküler Permeabilite Mekanizmaları - III: Transsitoz ve Anjiyogenez Sızıntısı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Açık karın ameliyatı sonrası sekonder iyileşmeye bırakılan bir laparotomi yarasında, 10. günde tabanda parlak kırmızı, granüler, narin bir doku (granülasyon dokusu) gelişiyor. Ancak cerrah bu granülasyon dokusunun son derece ödemli olduğunu ve hafif bir dokunmayla dahi bol miktarda seröz sıvı sızdırdığını gözlemliyor. Granülasyon dokusunda ödemin ve sıvı sızıntısının bu derece belirgin olmasının temel nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hasar sahasında lenfatik damarların kontrolsüz çoğalarak lenf sıvısını boşluğa dökmesi",
+      "B) Anjiyogenez ile yeni oluşan damarların endotel bağlantılarının immatür ve gevşek olması",
+      "C) Granülasyon dokusundaki fibroblastların lökositleri fagositozla tamamen yutması",
+      "D) Endotel hücre nekrozuna bağlı mikrosirkülasyonda yaygın oklüzif tromboz gelişmesi",
+      "E) Plazma onkotik basıncının sıfıra inerek damar içinde hiçbir protein kalmaması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Yara iyileşmesinde ve granülasyon dokusunda anjiyogenez (yeni damar tomurcuklanması) aktiftir. Yeni oluşan bu damar dalları immatürdür; intersellüler bağlantıları henüz tam oturmamış, perisit örtüsü eksik ve VEGF reseptörleri aşırı eksprese edilmiştir. Bu nedenle yeni damarlar doğası gereği aşırı geçirgendir ve granülasyon dokusunda belirgin ödeme yol açar."
+  },
+  {
+    "id": "prac-akut-014",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 14,
+    "slideTitle": "Sıvı Eksüdasyonunun Fiziği: Starling Hipotezi ve Ödem Patolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Starling hipotezine göre mikrovasküler yataktaki sıvı hareketini yöneten fiziksel kuvvetler dikkate alındığında, akut enflamatuvar bir odakta masif ödem gelişmesini tetikleyen EN KRİTİK primer patolojik değişiklik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Plazma onkotik basıncının venöz obstrüksiyon nedeniyle aniden 50 mmHg'ye yükselmesi",
+      "B) Mikrovasküler permeabilite artışına bağlı olarak plazma proteinlerinin ekstravasküler dokuya sızması ve interstisyel onkotik basıncı artırması",
+      "C) Lenfatik damarların kasılarak lenf sıvısını arteriyol lümenine geri pompalaması",
+      "D) Prekapiller sfinkterlerin aşırı kasılması sonucu kapiller hidrostatik basıncın sıfıra inmesi",
+      "E) Eritrositlerin lökositlerle birleşerek damar içi ozmotik basıncı tamamen nötralize etmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Enflamasyonda ödemin primer motor gücü mikrovasküler permeabilitenin bozulmasıdır. Endotel aralıklarından dışarı sızan proteinler (özellikle albümin), doku aralığında yüksek bir kolloid onkotik basınç yaratır. Bu durum suyu damar dışına çekerek masif enflamatuvar ödeme (eksüda) yol açar. Diğer seçenekler Starling prensipleriyle çelişmektedir."
+  },
+  {
+    "id": "prac-akut-015",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 15,
+    "slideTitle": "Eksüda ve Transüda: Klinik ve Biyokimyasal Ayırıcı Tanı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nefes darlığı ve göğüs ağrısı şikayetiyle başvuran 54 yaşındaki bir erkek hastanın torasentezinde plevra boşluğundan sarı-bulanık renkli sıvı aspire ediliyor. Sıvının biyokimyasal analizinde; protein düzeyi 4.4 g/dL (plevra/serum protein oranı 0.72), dansitesi 1.025, LDH düzeyi 480 IU/L saptanıyor ve mikroskobik incelemede bol miktarda nötrofil lökosit ile hücresel döküntü görülüyor. Rivalta testi pozitif olarak raporlanıyor. Bu plevral sıvının niteliği ve olası etiyolojisi aşağıdakilerin hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) Transüda - Konjestif kalp yetmezliğine bağlı hidrostatik basınç artışı",
+      "B) Transüda - Karaciğer sirozuna bağlı hipoalbüminemi ve azalmış kolloid onkotik basınç",
+      "C) Eksüda - Akut bakteriyel pnömoniye sekonder gelişen ampiyem / parapnömonik efüzyon",
+      "D) Transüda - Nefrotik sendroma bağlı masif proteinüri",
+      "E) Eksüda - Yalnızca duktus torasikus rüptürüne bağlı saf şilotoraks"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Sıvının proteini > 3.0 g/dL (plevra/serum oranı > 0.5), dansitesi > 1.020, LDH'sı yüksek, lökositten zengin ve Rivalta testi pozitiftir. Bu parametreler sıvının kesinlikle bir 'Eksüda' olduğunu kanıtlar. Eksüda, damar geçirgenliğinin bozulduğu enflamatuvar/enfeksiyöz süreçlerde (örn. bakteriyel pnömoni ve parapnömonik efüzyon) görülür. Kalp yetmezliği, siroz ve nefrotik sendrom ise düşük proteinli ve Rivalta negatif 'Transüda' oluşturur."
+  },
+  {
+    "id": "prac-akut-016",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 16,
+    "slideTitle": "Lenfatik Sistem Yanıtı: Lenf Akımı, Lenfanjit ve Reaktif Lenfadenit",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bahçede çalışırken sağ el işaret parmağını paslı bir telle çizen 28 yaşındaki bir işçide, 24 saat sonra parmakta zonklayıcı ağrı ve pürülan akıntı başlıyor. Fizik muayenede ön kol boyunca bilekten dirseğe ve oradan aksillaya doğru uzanan eritemli, sıcak ve hassas kırmızı çizgilenmeler ile sağ aksiller çukurda 2.5 cm çapında dokunmakla çok ağrılı, hareketli lenf nodu büyümesi saptanıyor. Bu hastada ön koldaki kırmızı çizgilenmeler ve aksilladaki ağrılı lenf nodu büyümesini en doğru tanımlayan patolojik terim çifti aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Flebit - Granülomatöz lenfoma",
+      "B) Erizipel - Malign metastatik lenfadenopati",
+      "C) Lenfanjit - Reaktif lenfadenit",
+      "D) Arteryel psödoanevrizma - Kazeifiye lenfadenit",
+      "E) Vaskülit - Foliküler lenfoma"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Enfeksiyon odağından (parmak) lenf noduna doğru lenfatik damarlar boyunca uzanan eritemli, hassas kırmızı çizgilenmeler lenf damarlarının ikincil enflamasyonu olan 'Lenfanjit' tablosudur. Mikropların ve enflamatuvar eksüdanın ulaştığı bölgesel lenf düğümünün immün yanıt ve ödemle büyümesi ve kapsül gerilmesine bağlı ağrılı hale gelmesi ise 'Reaktif Lenfadenit' olarak adlandırılır. Malign veya granülomatöz süreçler akut gelişen bu tabloyla uyumsuzdur."
+  },
+  {
+    "id": "prac-akut-017",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 17,
+    "slideTitle": "Hücresel Olaylar: Lökosit Göçünün Aşamaları ve Hücresel Kinetik",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut miyokard enfarktüsü geçiren ve koroner anjiyografiyle damarı açılamayan bir hastanın vefatı sonrası yapılan otopside, enfarktüs başlangıcından sonraki 12. saatte alınan miyokard doku kesiti ile 72. saatte alınan miyokard doku kesiti histopatolojik olarak karşılaştırılıyor. Akut enflamasyonun hücresel infiltrasyon kinetiği dikkate alındığında, bu iki zaman diliminde nekroz odağında izlenmesi beklenen predominant hücre tipleri aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
+    "options": [
+      "A) 12. saatte Makrofajlar -- 72. saatte Plazma hücreleri",
+      "B) 12. saatte Nötrofiller -- 72. saatte Monosit / Makrofajlar",
+      "C) 12. saatte CD8+ T lenfositler -- 72. saatte Nötrofiller",
+      "D) 12. saatte Eozinofiller -- 72. saatte Mast hücreleri",
+      "E) 12. saatte Fibroblastlar -- 72. saatte Nötrofiller"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Akut enflamatuvar yanıtta hücresel kinetik stereotipiktir: İlk 6-24 saatte kanda çok bulunan ve hızlı mobilize olan polimorfonükleer nötrofiller hakimdir (12. saatte nötrofil infiltrasyonu). Nötrofillerin dokudaki yarı ömrü 1-2 gündür ve apoptoza giderler. 24-48 saatten sonra ise dolaşımdan göç eden monositler dokuda makrofajlara dönüşerek nekrotik miyositleri temizlemek üzere sahaya hakim olur (72. saatte makrofaj infiltrasyonu)."
+  },
+  {
+    "id": "prac-akut-018",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 18,
+    "slideTitle": "Lökosit Göçü: Marjinasyon ve Yuvarlanma (Rolling) Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İntravital mikroskopi altında mezenterik mikrosirkülasyonu incelenen bir deney hayvanında lokal olarak histamin uygulandığında; postkapiller venüllerde kan akımının yavaşladığı, lökositlerin damar lümeninin merkezinden endotel yüzeyine doğru savrulduğu ve endotel üzerinde takla atar gibi kesintili olarak yuvarlandığı izleniyor. Lökositlerin damar duvarında bu şekilde yuvarlanmasını (rolling) sağlayan moleküler etkileşimin temel özelliği aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İntegrinler ile hücre dışı matriks proteinleri arasında kovalent ve geri dönüşsüz bağların kurulması",
+      "B) Selektinler ile karbonhidrat ligandları arasında düşük afiniteli, hızla bağlanıp ayrılabilen geçici bağların oluşması",
+      "C) PECAM-1 moleküllerinin lökosit zarını tamamen eriterek hücreyi endotel içine kaynaştırması",
+      "D) Kompleman membran atak kompleksinin (C5b-9) lökosit zarında iyon kanalları açması",
+      "E) Miyeloperoksidaz enziminin endotel glikokaliksini parçalayarak lökositi hareketsiz kılması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Yuvarlanma (rolling) evresi, selektin ailesi adezyon molekülleri ile bunların karbonhidrat ligandları (Sialyl-Lewis X) arasındaki düşük afiniteli ve geçici etkileşimlerle yönetilir. Bu zayıf bağlar kan akımının sürükleme gücüyle sürekli kopar ve lökosit ilerledikçe yeniden kurulur; böylece lökosit tam durmadan endotel üzerinde yuvarlanarak yavaşlar. İntegrinler ise daha sonraki 'sıkı adezyon' basamağında yüksek afiniteyle bağlanır."
+  },
+  {
+    "id": "prac-akut-019",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 19,
+    "slideTitle": "Yuvarlanmanın Moleküler Biyolojisi: Selektinler ve Sialyl-Lewis X",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Endotel hücrelerinde Weibel-Palade cisimcikleri içerisinde önceden depolanmış halde bulunan ve akut enflamatuvar bir uyaranla (örneğin histamin veya trombin salınımı) karşılaşıldığında, yeni bir gen transkripsiyonuna gerek kalmaksızın saniyeler içinde ekzositoz yoluyla endotel yüzeyine çıkan ve lökositlerin yuvarlanmasını başlatan adezyon molekülü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) E-selektin (CD62E)",
+      "B) P-selektin (CD62P)",
+      "C) L-selektin (CD62L)",
+      "D) ICAM-1 (CD54)",
+      "E) PECAM-1 (CD31)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. P-selektin endotel hücrelerinin Weibel-Palade cisimciklerinde ve trombositlerin alfa granüllerinde hazır depolanmıştır. Histamin, trombin veya PAF uyarısıyla saniyeler içinde hücre zarına transfer edilir ve nötrofil yuvarlanmasını başlatır. E-selektin ise depolanmaz, TNF ve IL-1 etkisiyle de novo sentezlenir (1-2 saat sürer). L-selektin lökosittedir; ICAM-1 integrin ligandıdır; PECAM-1 transmigrasyonda görev alır."
+  },
+  {
+    "id": "prac-akut-020",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 20,
+    "slideTitle": "Genetik Bozukluk: Lökosit Adezyon Kusuru Tip 2 (LAD-2)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tekrarlayan bakteriyel pnömoni ve deri abseleri nedeniyle tetkik edilen 3 yaşındaki bir erkek çocukta; belirgin boy kısalığı, mikrosefali, ağır zeka geriliği ve kaba yüz hatları saptanıyor. Laboratuvar incelemelerinde kanda belirgin lökositoz (nötrofil hakimiyeti) izlenirken, enfeksiyon odaklarında nötrofil infiltrasyonunun yetersiz olduğu görülüyor. Kan grubu tayininde hastanın eritrosit yüzeyinde H antijeni bulunmadığı (Bombay kan grubu fenotipi) anlaşılıyor. Bu hastada lökositlerin hasarlı dokuya göç kaskadında primer olarak bozulmuş olan evre ve sentezlenemeyen moleküler yapı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sıkı Adezyon -- Beta-2 integrin (CD18)",
+      "B) Yuvarlanma (Rolling) -- Sialyl-Lewis X (Fukozilasyon defekti)",
+      "C) Transmigrasyon (Diapedez) -- PECAM-1 (CD31)",
+      "D) Kemotaksis -- Kompleman C5a reseptörü",
+      "E) Fagozom-lizozom füzyonu -- LYST proteini"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka klasik Lökosit Adezyon Eksikliği Tip 2 (LAD-2) tablosudur. LAD-2'de Golgi GDP-fukoz taşıyıcı genindeki (SLC35C1) mutasyon nedeniyle proteinlerin fukozillenmesi bozulur. Selektinlerin temel ligandı olan Sialyl-Lewis X sentezlenemez ve lökositlerin endotel üzerinde 'Yuvarlanma' (rolling) basamağı felç olur. Fukoz eksikliği eritrosit H antijeni sentezini de engellediği için Bombay fenotipi gelişir; nörolojik gelişim geriliği tabloya eşlik eder. CD18 eksikliği ise LAD-1'dir ve zeka geriliği yapmaz."
+  },
+  {
+    "id": "prac-akut-021",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 21,
+    "slideTitle": "Lökosit Göçü: Sıkı Adezyon (Firm Adhesion) ve Kemokin Aktivasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Endotel yüzeyinde yuvarlanmakta olan bir nötrofilin, endotel membranındaki proteoglikanlara bağlı kemokinlerle (CXCL8 / IL-8) temas etmesi sonucu hücresel hareketini aniden durdurarak endotel yüzeyine sıkıca yapışması (firm adhesion) sürecinde gerçekleşen moleküler olay aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Lökosit yüzeyindeki selektinlerin kovalent bağlarla endotel kollejenine bağlanması",
+      "B) 'İçten-dışa sinyal' ile integrinlerin düşük afiniteli bükük formdan yüksek afiniteli açık konformasyona geçmesi ve kümelenmesi",
+      "C) Nötrofil azurofilik granüllerinin endotel hücresini tamamen eritmesi",
+      "D) Endotel hücrelerinin apoptoza uğrayarak lökositi fagositozla içine çekmesi",
+      "E) Plazma fibrinojeninin polimerize olarak lökositi damar lümenine yapıştırması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Sıkı adezyon (firm adhesion) basamağında en kritik moleküler mekanizma, kemokin uyarımıyla tetiklenen 'içten-dışa sinyal'dir (inside-out signaling). İntegrinler normalde inaktif, düşük afiniteli bükük (bent) durumdadır. Kemokin GPCR'ye bağlandığında hücre içi sinyaller integrin kuyruklarını ayırır; integrin molekülü dikleşerek açık/uzamış (extended) yüksek afiniteli forma geçer ve kümelenir. Bu yüksek afinite, endoteldeki ICAM-1'e sıkıca bağlanarak yuvarlanmayı durdurur."
+  },
+  {
+    "id": "prac-akut-022",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 22,
+    "slideTitle": "İntegrin Ailesi ve Endotelyal Ligandları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut enflamasyon sırasında nötrofillerin endotel hücresi üzerindeki ICAM-1 (Intercellular Adhesion Molecule-1) ligandına yüksek afiniteyle kenetlenmesini sağlayan ve yapısında CD18 polipeptid zinciri içeren beta-2 integrin molekülü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) VLA-4 (CD49d/CD29)",
+      "B) LFA-1 (CD11a/CD18)",
+      "C) P-selektin (CD62P)",
+      "D) PECAM-1 (CD31)",
+      "E) Sialyl-Lewis X"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. LFA-1 (Lymphocyte Function-Associated Antigen-1), bir alfa-L (CD11a) ve bir ortak beta-2 (CD18) zincirinden oluşan bir integrindir. Nötrofil ve monositlerin yüzeyinde bulunur ve endoteldeki temel ligandı ICAM-1'dir. VLA-4 bir beta-1 integrindir ve VCAM-1'e bağlanır. P-selektin yuvarlanmada, PECAM-1 transmigrasyonda görev alır; Sialyl-Lewis X ise bir karbonhidrattır."
+  },
+  {
+    "id": "prac-akut-023",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 23,
+    "slideTitle": "Genetik Bozukluk: Lökosit Adezyon Kusuru Tip 1 (LAD-1) ve Terapötik Blokerler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Doğumunun üzerinden 4 hafta geçmesine rağmen göbek kordonu halen düşmemiş olan bir aylık bir bebek, göbek çevresinde kızarıklık ve perianal bölgede derin nekrotik bir yara şikayetiyle getiriliyor. Fizik muayenede perianal lezyondan sürüntü alınıyor ancak hiçbir cerahat (püs) materyali saptanmıyor. Laboratuvar tetkiklerinde lökosit sayısı 78.000/uL (kanda %88 nötrofil) bulunuyor. Perianal yara biyopsisinde yoğun doku nekrozu ve bol bakteri izlenmesine karşın ekstravasküler alanda nötrofil lökosit infiltrasyonunun bulunmadığı dikkati çekiyor. Bu hastadaki moleküler genetik defekt ve lökosit göçünde bozulan basamak aşağıdakilerin hangisinde doğru verilmiştir?",
+    "options": [
+      "A) CD18 (beta-2 integrin) gen mutasyonu -- Sıkı Adezyon (Firm Adhesion)",
+      "B) SLC35C1 (fukoz taşıyıcı) gen mutasyonu -- Yuvarlanma (Rolling)",
+      "C) PECAM-1 gen mutasyonu -- Transmigrasyon (Diapedez)",
+      "D) NADPH oksidaz gen mutasyonu -- Solunumsal patlama",
+      "E) Miyeloperoksidaz gen defekti -- Hipokloröz asit sentezi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Vaka tipik Lökosit Adezyon Eksikliği Tip 1 (LAD-1) tablosudur. Beta-2 integrinlerin ortak zinciri olan CD18 mutasyonu nedeniyle nötrofiller endoteldeki ICAM-1'e bağlanamaz ve 'Sıkı Adezyon' basamağı gerçekleşemez. Nötrofiller damar dışına çıkamadığı için dokuda püs (cerahat) oluşamaz, nekrotik kordon kökünü eritemedikleri için göbek kordonu düşemez ve damar lümeninde biriktikleri için aşırı kanda nötrofili (>50.000/uL) gelişir. B seçeneği LAD-2'dir (yuvarlanma bozuktur); D seçeneği Kronik Granülomatöz Hastalıktır."
+  },
+  {
+    "id": "prac-akut-024",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 24,
+    "slideTitle": "Lökosit Göçü: Transmigrasyon (Diapedez) ve Bazal Membran Geçişi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İn vitro bir hücre kültürü modelinde nötrofillerin sitokinle uyarılmış vasküler endotel hücreleri üzerinde yuvarlandığı ve integrinleri aracılığıyla endotel yüzeyine sıkıca yapıştığı doğrulanıyor. Ancak ortama eklenen monoklonal bir antikorun, nötrofillerin endotel hücre kavşaklarından (bağlantı noktalarından) damar dışına geçişini (transmigrasyon / diapedez) tamamen engellediği ve nötrofillerin endotel yüzeyinde takılı kaldığı gözleniyor. Bu deneyde nötrofillerin transmigrasyonunu bloke etmek için kullanılan monoklonal antikor aşağıdaki adezyon moleküllerinden hangisine karşı geliştirilmiştir?",
+    "options": [
+      "A) L-selektin (CD62L)",
+      "B) P-selektin (CD62P)",
+      "C) PECAM-1 (CD31)",
+      "D) VCAM-1 (CD106)",
+      "E) ICAM-1 (CD54)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Lökositlerin interendotelyal kavşaklardan damar dışına süzülmesi (transmigrasyon / diapedez) basamağında primer rol oynayan molekül PECAM-1'dir (CD31). Hem lökositte hem endotelde bulunur ve homofilik etkileşimle lökositin geçişini sağlar. Selektinlerin (A ve B) blokajı yuvarlanmayı engeller; ICAM-1 ve VCAM-1 (D ve E) blokajı ise sıkı adezyonu engeller. Adezyon gerçekleştiği halde diapedezin durması PECAM-1 blokajına özgüdür."
+  },
+  {
+    "id": "prac-akut-025",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 25,
+    "slideTitle": "Lökosit Göçü: Kemotaksis ve Lokomosyonun Biyokimyasal Mekanizması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut apandisit tablosunda periapandiküler dokuya geçen nötrofillerin apendiks lümenindeki bakteriyel enfeksiyon odağına doğru kimyasal bir gradyan boyunca yönlendirilmiş hareketinde (kemotaksis), nötrofil yüzeyindeki G-protein kenetli reseptörlere bağlanarak hücre içi aktin polimerizasyonunu tetikleyen en güçlü ENDOJEN kemoatraktan kombinasyonu aşağıdakilerin hangisinde birlikte verilmiştir?",
+    "options": [
+      "A) İnterlökin-10, TGF-beta ve Bradikinin",
+      "B) Kompleman C5a, Lökotrien B4 (LTB4) ve İnterlökin-8 (IL-8)",
+      "C) Prostaglandin E2, Tromboksan A2 ve Histamin",
+      "D) İnterferon-gama, İnterlökin-4 ve Heparin",
+      "E) Vasküler Endotelyal Büyüme Faktörü (VEGF) ve Serotonin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Nötrofiller için en güçlü endojen kemotaktik ajanlar kompleman sisteminden C5a, araşidonik asit lipoksijenaz yolağından Lökotrien B4 (LTB4) ve kemokin ailesinden İnterlökin-8'dir (CXCL8). Bu ajanlar GPCR reseptörlerine bağlanarak hücre içi kalsiyum artışı ve hücre ön ucunda aktin polimerizasyonu ile filopod uzamasını sağlarlar. IL-10 ve TGF-beta antienflamatuvardır; prostaglandinler ve histamin kemotaksisten ziyade vazodilatasyon ve ağrı yaparlar."
+  },
+  {
+    "id": "prac-akut-026",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 26,
+    "slideTitle": "Akut Enflamasyonda Hücresel İnfiltratın İstisnaları ve Özel Durumlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Nötropenik bir kemoterapi hastasında gelişen nekrotik bir cilt lezyonunun (ektima gangrenozum) 5. gününde alınan doku biyopsisinde, genel hücresel kinetik kuralının (24-48 saatte makrofajlara geçiş) aksine, dokuda halen son derece yoğun bir nötrofilik infiltrasyonun kesintisiz devam ettiği saptanıyor. Bu lezyonda günlerce süren uzamış nötrofil infiltrasyonuna yol açan en olası patojen aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sitomegalovirüs (CMV)",
+      "B) Pseudomonas aeruginosa",
+      "C) Mycobacterium tuberculosis",
+      "D) Treponema pallidum",
+      "E) Ascaris lumbricoides"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Robbins patoloji metninde hücresel infiltrat kinetiğinin en önemli istisnası olarak Pseudomonas aeruginosa enfeksiyonları gösterilir. Bu bakterinin enfeksiyonlarında nötrofil infiltrasyonu 24-48 saat sonra makrofajlara yerini bırakmaz; günlerce nötrofil baskınlığı sürer. CMV viraldir ve lenfosit yapar; Tüberküloz ve Sifilis kronik granülomatöz mononükleer yanıt yapar; Ascaris ise eozinofili yapar."
+  },
+  {
+    "id": "prac-akut-027",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 27,
+    "slideTitle": "Nötrofiller ve Makrofajların Karşılaştırmalı Hücresel Biyolojisi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Akut enflamasyonda rol oynayan nötrofiller ile monosit/makrofajların hücresel ve biyokimyasal özellikleri karşılaştırıldığında, aşağıdaki ifadelerden hangisi MAKROFAJLAR için doğru, nötrofiller için YANLIŞTIR?",
+    "options": [
+      "A) Aktive olduklarında çekirdek kromatinini dışarı fırlatarak hücre dışı antimikrobiyal tuzaklar (NET) oluşturmaları",
+      "B) Dokudaki yaşam sürelerinin yalnızca 1-2 günle sınırlı olması ve hızla apoptoza gitmeleri",
+      "C) İndüklenebilir Nitrik Oksit Sentaz (iNOS) gen aktivasyonu yoluyla belirgin miktarda nitrik oksit (NO) üretmeleri ve zengin sitokin transkripsiyonu yapmaları",
+      "D) Azurofilik granüllerindeki miyeloperoksidaz enzimi ile hipokloröz asit (HOCl) sentezlemeleri",
+      "E) Yalnızca kemik iliğindeki hematopoietik kök hücrelerden köken alıp fetal dönemde dokuya yerleşememeleri"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Robbins Tablo 2.4'e göre; iNOS gen transkripsiyonu ile nitrik oksit (NO) üretimi ve masif sitokin sentezi makrofajların karakteristik fonksiyonudur (nötrofillerde NO ve sitokin üretimi çok düşüktür veya yoktur). A seçeneğindeki NET oluşumu nötrofillere özgüdür; B seçeneğindeki 1-2 günlük kısa ömür nötrofile aittir (makrofajlar haftalar-yıllar yaşar); D seçeneğindeki miyeloperoksidaz nötrofillerin primer granüllerindedir; E seçeneğinde ise doku makrofajları embriyonik vitellus kesesi kökenlidir."
+  },
+  {
+    "id": "prac-akut-028",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 28,
+    "slideTitle": "Fagositoz Adımları - I: Tanıma ve Opsonizasyonun Hayati Rolü",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Splenektomi (dalak çıkarılması) öyküsü olan 30 yaşındaki bir hastada kapsüllü bir bakteri olan Streptococcus pneumoniae sepsisi gelişiyor. Kapsüllü bakterilerin hücre duvarındaki polisakkarit kapsül, fagositlerin bakteriyi doğrudan tanımasını engellemektedir. Bu bakterinin nötrofil ve makrofajlar tarafından etkin bir şekilde fagosite edilebilmesi için yüzeyinin opsonin adı verilen konak plazma proteinleriyle kaplanması şarttır. Fagositik hücreler üzerindeki özgül reseptörlere bağlanarak fagositozu en güçlü şekilde artıran iki temel opsonin molekülü aşağıdakilerin hangisinde birlikte verilmiştir?",
+    "options": [
+      "A) İmmünglobulin E (IgE) ve Kompleman C5a",
+      "B) İmmünglobulin G'nin Fc parçası ve Kompleman C3b",
+      "C) İmmünglobulin M'nin Fab parçası ve Lökotrien B4",
+      "D) Fibrinojen ve Tümör Nekroz Faktörü-alfa (TNF-alfa)",
+      "E) Histamin ve Platelet Faktör 4"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Opsonizasyon, partiküllerin fagosit reseptörlerince kolayca tanınacak moleküllerle kaplanmasıdır. En güçlü ve temel iki opsonin; mikroba bağlanan IgG antikorlarının açıkta kalan Fc parçası (lökositteki Fc-gama reseptörüne bağlanır) ve kompleman kaskadında oluşan C3b / iC3b parçalarıdır (lökositteki CR1 ve CR3 reseptörlerine bağlanır). IgE alerjide, C5a ve LTB4 ise fagositozdan ziyade kemotaksiste görev alır."
+  },
+  {
+    "id": "prac-akut-029",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 29,
+    "slideTitle": "Fagositoz Adımları - II: Yutma (Engulfment) ve Fagolizozom Oluşumu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fagositoz sürecinde, opsonize edilmiş bir bakterinin nötrofil yüzey reseptörlerine bağlanmasını takiben gerçekleşen sitolojik olayların doğru kronolojik sıralaması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Fagolizozom oluşumu -> Psödopod uzaması -> Fagozom oluşumu -> Lizozomal enzim salınımı",
+      "B) Aktin bağımlı psödopod uzaması -> Fagozom vakuolü oluşumu -> Lizozom ile füzyon -> Fagolizozom içinde parçalanma",
+      "C) Lizozomların hücre dışına ekzositozu -> Fagozom oluşumu -> Çekirdek parçalanması -> Psödopod retraksiyonu",
+      "D) Hücre zarı nekrozu -> Fagozom füzyonu -> Psödopod kaybı -> Serbest radikal üretimi",
+      "E) Fagozom oluşumu -> NETosis -> Endositoz -> Fagolizozom oluşumu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Fagositozun bağlanmadan sonraki kronolojik basamakları: 1) Aktin polimerizasyonu ile podosit benzeri psödopodların mikrobu çevrelemesi, 2) Zarların kaynaşmasıyla hücre içinde Fagozom vakuolünün oluşması, 3) Fagozomun lizozom zarıyla kaynaşarak Fagolizozom oluşturması ve 4) Lizozomal enzimler ve ROS ile mikrobun fagolizozom içinde sindirilmesidir."
+  },
+  {
+    "id": "prac-akut-030",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 30,
+    "slideTitle": "Genetik Bozukluk: Chédiak-Higashi Sendromu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Sık tekrarlayan stafilokoksik deri apseleri ve otit atakları nedeniyle getirilen 4 yaşındaki bir kız çocuğunun fizik muayenesinde; açık ten rengi, güneşe aşırı hassasiyet (fotofobi) ve metalik gümüşi-gri renkte saçlar saptanıyor. Periferik kan yayması incelemesinde nötrofillerin ve lenfositlerin sitoplazmasında tek tük dev boyutlu, anormal azurofilik lizozomal granüller izleniyor. Bu hastanın hücresel patolojisinde fagositoz sürecinin hangi basamağında primer bir defekt mevcuttur?",
+    "options": [
+      "A) Selektinler aracılığıyla endotel üzerinde yuvarlanma (rolling)",
+      "B) İntegrinler aracılığıyla endotelyal ICAM-1'e sıkı adezyon",
+      "C) Psödopodlar aracılığıyla bakterinin yutulup fagozom oluşturulması",
+      "D) Fagozom vakuolünün lizozomla kaynaşması (Fagolizozom füzyonu)",
+      "E) Miyeloperoksidaz enzimi ile hipokloröz asit sentezi"
+    ],
+    "correctAnswer": 3,
+    "explanation": "D seçeneği doğrudur. Vaka klasik Chédiak-Higashi Sendromu'dur. Hastalıkta lizozomal taşıma regülatör proteinini kodlayan LYST geninde otozomal resesif mutasyon vardır. Mikrotübül polimerizasyonu ve vezikül füzyonu bozulur; dev lizozomlar fagozomla birleşemez (Fagozom-lizozom füzyon defekti). Bakteri yutulur fakat lizozomal enzimlerle sindirilemez. Melanozom transferi bozulduğu için parsiyel albinizm ve gümüşi saçlar eşlik eder."
+  },
+  {
+    "id": "prac-akut-031",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 31,
+    "slideTitle": "Hücre İçi Öldürme: Oksijene Bağımlı Yolak ve Solunumsal Patlama",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel bir enfeksiyon odağında fagositoz yapan bir nötrofilin lizozomal sindirim vakuolünde (fagolizozom) gerçekleşen solunumsal patlama (respiratory burst) sırasında, nötrofilin primer (azurofilik) granüllerinden salınan ve fizyolojik klorür iyonlarının varlığında hidrojen peroksiti ($H_2O_2$) son derece güçlü bir bakterisidal oksidan olan hipokloröz asite ($HOCl$) dönüştüren anahtar enzim aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Süperoksit Dismutaz (SOD)",
+      "B) Katalaz",
+      "C) Miyeloperoksidaz (MPO)",
+      "D) İndüklenebilir Nitrik Oksit Sentaz (iNOS)",
+      "E) Glutatyon Peroksidaz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Nötrofillerin primer (azurofilik) granüllerinde bol miktarda bulunan Miyeloperoksidaz (MPO) enzimi, fagositoz sırasında oluşan hidrojen peroksiti ($H_2O_2$) klorür ($Cl^-$) iyonlarıyla birleştirerek son derece reaktif ve güçlü bir dezenfektan olan hipokloröz asite ($HOCl$) dönüştürür. Süperoksit dismutaz süperoksitten $H_2O_2$ yapar; katalaz ve glutatyon peroksidaz ise serbest radikalleri yıkarak konağı koruyan antioksidan enzimlerdir."
+  },
+  {
+    "id": "prac-akut-032",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 32,
+    "slideTitle": "Genetik Bozukluk: Kronik Granülomatöz Hastalık (KGH / CGD) ve MPO Eksikliği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Tekrarlayan servikal lenfadenit, Serratia marcescens sepsisi ve karaciğerde multipl stafilokoksik abseler nedeniyle araştırılan 5 yaşındaki bir erkek çocuğun periferik kanından izole edilen nötrofillerin fagositoz yeteneğinin normal olduğu, ancak forbol miristat asetat (PMA) ile uyarıldıklarında süperoksit anyonu üretemedikleri saptanıyor. Dihidrorodamin (DHR) akım sitometri testinde nötrofillerde floresans sinyali gözlenmiyor. Bu hastadaki immünopatolojik tablonun ve duyarlılık gösterdiği mikroorganizmaların temel özelliği aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+    "options": [
+      "A) Miyeloperoksidaz eksikliği -- Yalnızca anaerobik Clostridium enfeksiyonlarına duyarlılık",
+      "B) NADPH oksidaz enzim defekti (KGH) -- Kendi hidrojen peroksitini yıkan katalaz pozitif mikroorganizmalar",
+      "C) CD18 integrin gen mutasyonu -- Kapsülsüz virüslere karşı aşırı duyarlılık",
+      "D) LYST gen mutasyonu -- Gram negatif diplokoklara karşı seçici immün yetmezlik",
+      "E) Kompleman C3 eksikliği -- Yalnızca paraziter helmint enfeksiyonları"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka klasik Kronik Granülomatöz Hastalık'tır (KGH). Membranöz NADPH oksidaz kompleksindeki genetik mutasyon (en sık X'e bağlı gp91phox) nedeniyle solunumsal patlama yapılamaz, süperoksit ve H2O2 üretilemez (DHR akım sitometrisi negatif). Katalaz pozitif mikroorganizmalar (S. aureus, Serratia marcescens, Aspergillus vb.) ürettikleri H2O2'yi katalaz enzimiyle yıktıkları için bu nötrofiller tarafından öldürülemez ve granülomatöz abselere yol açarlar. MPO eksikliğinde DHR testi normaldir; CD18 eksikliği LAD-1'dir; LYST defekti Chédiak-Higashi'dir."
+  },
+  {
+    "id": "prac-akut-033",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 33,
+    "slideTitle": "Hücre İçi Öldürme: Reaktif Azot Türleri (NO) ve Oksijenden Bağımsız Yolaklar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Fagositik hücrelerin mikroorganizmaları hücre içinde sindirirken kullandığı oksijenden bağımsız antimikrobiyal proteinler ve bunların etki mekanizmaları dikkate alındığında, nötrofil spesifik granüllerinden salınan ve bakterilerin üremek için mutlak gereksinim duyduğu ortamdaki serbest demir ($Fe^{3+}$) iyonlarını şelatlayarak bağlayan protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Defensin",
+      "B) Lizozim",
+      "C) Laktoferrin",
+      "D) Major Temel Protein (MBP)",
+      "E) Miyeloperoksidaz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Laktoferrin, nötrofillerin sekonder (spesifik) granüllerinde bulunan ve bakteriyostatik etki gösteren bir demir bağlayıcı proteindir. Bakterilerin DNA replikasyonu ve metabolizması için elzem olan serbest demir iyonlarını şelatlayarak ortamdan çeker ve bakterileri aç bırakır. Defensin mikrop membranında delikler açar; Lizozim bakteri duvarındaki peptidoglikanı hidrolize eder; MBP eozinofillerdedir; Miyeloperoksidaz ise oksijene bağımlı yolağın enzimidir."
+  },
+  {
+    "id": "prac-akut-034",
+    "deckId": "deck-acute-inflammation-pathology",
+    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
+    "slideNumber": 34,
+    "slideTitle": "Nötrofil Hücre Dışı Tuzakları (NET'ler - Neutrophil Extracellular Traps)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ağır bakteriyel sepsis tablosundaki bir hastanın periferik kanından alınan lökositlerin elektron mikroskopik incelemesinde; nötrofillerin nükleer zarlarının parçalandığı, nükleer kromatinin (DNA ve histonlar) azurofilik granül enzimleri (miyeloperoksidaz ve elastaz) ile karıştığı ve plazma zarının delinmesiyle hücre dışına visköz bir fibriler ağ şeklinde salındığı izleniyor. Nötrofillerin mikroorganizmaları ekstraselüler ortamda yakalamasını sağlayan bu 'faydalı intihar' sürecinin (NETosis), kontrolsüz gerçekleştiğinde patogenezine en çok katkı sağladığı otoimmün hastalık aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Sistemik Lupus Eritematozus (SLE)",
+      "B) Tip 1 Diabetes Mellitus",
+      "C) Hashimoto Tiroiditi",
+      "D) Myastenia Gravis",
+      "E) Çölyak Hastalığı"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Nötrofil Ekstraselüler Tuzakları (NET), DNA, histonlar ve granül enzimlerinden oluşur. NETosis sırasında normalde hücre içinde gizli olan nükleer antijenler ekstraselüler ortama ve kan dolaşımına yoğun biçimde saçılır. Bu durum antinükleer antikor (ANA) ve anti-çift sarmallı DNA (anti-dsDNA) antikorlarının gelişimini tetikleyerek Sistemik Lupus Eritematozus (SLE) patogenezinde merkezi bir rol oynar. Diğer otoimmün hastalıklarda primer hedef nükleer kromatin antijenleri değildir."
+  },
+  {
     "id": "prac-akut-035",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler, Hücresel Olaylar ve Morfolojik Paternler",
@@ -1753,7 +2555,7 @@
     "explanation": "Tropheryma whipplei, aktinomisetler grubundan hücre içi bir gram-pozitif basildir. Makrofajların lizozomlarında birikerek lamina propriyada köpüksü histiositler oluşturur; bu inklüzyonlar PAS pozitif ve Ziehl-Neelsen negatiftir (Mycobacterium avium ayrımında ZN negatifliği kritiktir)."
   },
   {
-    "id": "d3-k3-pat-017-447",
+    "id": "d3-k3-pat-017-485",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 4,
@@ -1792,7 +2594,7 @@
     "explanation": "Mallory-Denk cisimcikleri (ubikuitinlenmiş keratin 8/18 ara filamanları) alkolik hepatitte çok belirgin olsa da SADECE alkole özgü değildir; non-alkolik steatohepatit (NASH), Wilson hastalığı, alfa-1 antitiripsin eksikliği ve kronik kolestatik sendromlarda da görülebilir."
   },
   {
-    "id": "d3-k3-pat-017-448",
+    "id": "d3-k3-pat-017-486",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 5,
@@ -1909,7 +2711,7 @@
     "explanation": "Benign nefroskleroz, uzun süreli hafif-orta dereceli hipertansiyon veya yaşlanmaya bağlı olarak küçük arteriyollerin duvarında hiyalin materyal birikimi (hiyalin arterioloskleroz) ile karakterizedir; bu, damar duvarında lümen daralmasına ve kronik iskemik glomerüler/tübüler değişikliklere yol açar. Malign nefroskleroz ise şiddetli/malign hipertansiyonda görülen ve düz kas hücre proliferasyonuna bağlı &apos;soğan zarı&apos; görünümü (hiperplastik arterioloskleroz) ile ayırt edilir; bu farklı bir histolojik paterndir."
   },
   {
-    "id": "d3-k1-pat-021-451",
+    "id": "d3-k1-pat-021-489",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 8,
@@ -1948,7 +2750,7 @@
     "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
   },
   {
-    "id": "d3-k1-pat-009-452",
+    "id": "d3-k1-pat-009-490",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 9,
@@ -2065,7 +2867,7 @@
     "explanation": "Panasiner amfizem ve karaciğer sirozu kombinasyonu ALFA-1 ANTİTRİPSİN EKSİKLİĞİ'ne özgüdür. Wilson hastalığında akciğer tutulumu ve amfizem görülmez; hedef organlar karaciğer, beyin (bazal ganglionlar), göz (Kayser-Fleischer halkası) ve böbrektir."
   },
   {
-    "id": "d3-k3-pat-017-455",
+    "id": "d3-k3-pat-017-493",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 12,
@@ -2143,7 +2945,7 @@
     "explanation": "ATP azaldığında Na+/K+-ATPaz pompası çalışamaz hale gelir; bu da hücre içine Na+ ve suyun girmesine (hücresel şişme) ve hücre içinden K+ çıkışına neden olur; yani Na+ hücreden ÇIKMAZ, tam tersine hücre İÇİNE girer. Aynı zamanda Ca++-ATPaz&apos;ın bozulmasıyla hücre içi Ca++ artar, anaerobik glikoliz artışıyla glikojen tüketilir ve laktik asit birikimiyle hücre içi pH düşer. Dolayısıyla yanlış olan ifade &apos;hücre dışına Na+ çıkışı&apos; seçeneğidir."
   },
   {
-    "id": "d3-k1-pat-009-457",
+    "id": "d3-k1-pat-009-495",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 14,
@@ -2336,1247 +3138,5 @@
     ],
     "correctAnswer": "A",
     "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
-  },
-  {
-    "id": "d3-k1-pat-029-462",
-    "deckId": "learn-intraseluler-birikimler",
-    "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
-    "slideNumber": 19,
-    "slideTitle": "Distrofik Kalsifikasyon: Mekanizma, Başlatıcı Veziküller ve Aterom Plağı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi/hangileri metastatik kalsifikasyona neden olur? I- Hiperparatiroidizm II- Sarkoidoz III- Kronik böbrek yetmezliği IV- Aterom plağı",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yalnız I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yalnız I ve III",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Yalnız II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız IV",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
-  },
-  {
-    "id": "d3-k1-pat-049",
-    "deckId": "learn-intraseluler-birikimler",
-    "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
-    "slideNumber": 20,
-    "slideTitle": "Psammoma Cisimcikleri: Lameller Kalsifikasyon ve İlişkili Tümörler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Overin seröz tümörleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Overin en sık görülen malign tümörleri seröz tümörlerdir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kistik boşluklar genellikle berrak, seröz bir sıvı ile doludur",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hücreler genelde silyalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Papillaların uç kısmında sıklıkla psammom cisimciklerine rastlanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Uzak lenfatik ve hematojen metastazları sıktır",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Over kanserleri, özellikle yüksek dereceli seröz karsinomlar, en sık peritoneal yüzeyler boyunca transkölomik (direkt yayılım/ekilme) yolla yayılır; uzak lenfatik ve hematojen metastazlar nispeten geç dönemde ve daha az sıklıkla görülür. Seröz tümörler overin en sık görülen malign epitelyal tümör grubudur ve fallop tüpü epiteline benzer silyalı hücrelerden oluşur. Kistik alanlar tipik olarak berrak seröz sıvı içerir. Papilla uçlarında laminer kalsifikasyonlar olan psammom cisimcikleri karakteristiktir."
-  },
-  {
-    "id": "d3-k1-pat-029-464",
-    "deckId": "learn-intraseluler-birikimler",
-    "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
-    "slideNumber": 21,
-    "slideTitle": "Metastatik Kalsifikasyon: Hiperkalsemi Etiyolojisi ve Sistemik Nedenler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi/hangileri metastatik kalsifikasyona neden olur? I- Hiperparatiroidizm II- Sarkoidoz III- Kronik böbrek yetmezliği IV- Aterom plağı",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yalnız I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yalnız I ve III",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Yalnız II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız IV",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
-  },
-  {
-    "id": "d3-k5-far-013",
-    "deckId": "learn-intraseluler-birikimler",
-    "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
-    "slideNumber": 22,
-    "slideTitle": "Metastatik Kalsifikasyonun Hedef Organları: Asit Atılımı ve Doku Alkalinizasyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kronik eklem ağrısı nedeniyle non-selektif NSAİ ilaç (örneğin indometazin veya aspirin) kullanan bir hastada peptik ülser ve gastrointestinal kanama gelişmesinin temel moleküler mekanizması aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Mide mukozasında koruyucu prostaglandinlerin (özellikle PGE2 ve PGI2) sentezinden sorumlu konstitütif COX-1 enziminin inhibe edilmesi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Mide paryetal hücrelerinde H+/K+ ATPaz pompa sayısının artması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Gastrin hormon salgısının geri dönüşümsüz olarak durdurulması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Helicobacter pylori bakterisinin doğrudan mideye inoküle edilmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Gastrik venlerde yaygın vazodilatasyon ve kanama",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "COX-1 enzimi mide mukozasında devamlı olarak aktiftir (konstitütif) ve PGE2 ile PGI2 üretir. Bu prostaglandinler mukus salgısını, bikarbonat salgısını ve mukozal kan akımını artırır, mide asit salgısını ise baskılar. Non-selektif NSAİİ'ler COX-1'i bloke edince bu koruyucu kalkan çöker ve peptik ülser gelişir."
-  },
-  {
-    "id": "d3-k1-pat-029-466",
-    "deckId": "learn-intraseluler-birikimler",
-    "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
-    "slideNumber": 23,
-    "slideTitle": "Distrofik vs Metastatik Kalsifikasyon: Büyük Karşılaştırma Matrisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi/hangileri metastatik kalsifikasyona neden olur? I- Hiperparatiroidizm II- Sarkoidoz III- Kronik böbrek yetmezliği IV- Aterom plağı",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yalnız I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yalnız I ve III",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Yalnız II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız IV",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
-  },
-  {
-    "id": "d3-k1-pat-029-467",
-    "deckId": "learn-intraseluler-birikimler",
-    "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
-    "slideNumber": 24,
-    "slideTitle": "Sentez ve Özet: Hücre İçi Birikimler ve Kalsifikasyon Yol Haritası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi/hangileri metastatik kalsifikasyona neden olur? I- Hiperparatiroidizm II- Sarkoidoz III- Kronik böbrek yetmezliği IV- Aterom plağı",
-    "options": [
-      {
-        "key": "A",
-        "text": "Yalnız I, II ve III",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yalnız I ve III",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Yalnız II ve IV",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Yalnız IV",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "I, II, III ve IV",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
-  },
-  {
-    "id": "d3-k1-enf-003-468",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 1,
-    "slideTitle": "Enfeksiyon Hastalıklarına Giriş ve Temel İlkeler",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Patojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Virülans",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Enfektivite",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İmmünojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Toksijenite",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
-  },
-  {
-    "id": "d3-k1-enf-003-469",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 2,
-    "slideTitle": "Patojenite ve Virülans Kavramlarının Kesin Ayrımı",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Enfeksiyon etkenine duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Patojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Virülans",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Enfektivite",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "İmmünojenite",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Toksijenite",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
-  },
-  {
-    "id": "d3-k1-enf-028-470",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 3,
-    "slideTitle": "Mikroorganizma Sınıflandırması: Prionlardan Parazitlere Biyolojik Spektrum",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretral/servikal akıntısı olan bir hastanın gram boyamasında mikroskop sahasında artmış sayıda PMNL (>2)\ngörülmesine rağmen herhangi bir mikroorganizma saptanamamıştır. En olası etken hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Trichomonas vaginalis",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Candida albicans",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Gardnerella vaginalis",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Chlamydia trachomatis, zorunlu hücre içi (obligat intraselüler) bir\nbakteri olduğundan standart gram boyama ile görülemez ve rutin kültür\nbesiyerlerinde üremez. Bu nedenle üretral/servikal akıntı örneğinde\nartmış PMNL sayısına rağmen gram boyamada herhangi bir\nmikroorganizma görülememesi, klasik olarak Chlamydia trachomatis\nenfeksiyonunu (nongonokoksik üretrit/servisit) düşündürür; tanı için\nnükleik asit amplifikasyon testleri (NAAT/PCR) kullanılır."
-  },
-  {
-    "id": "d3-k1-enf-017-471",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 4,
-    "slideTitle": "Atipik Bakteriyel Ajanlar: Mikoplazma, Klamidya ve Riketsiyalar",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Neisseria gonorrhoeae enfeksiyonunun tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tek doz seftriakson (IM) ile tedavi edilir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Eş zamanlı klamidya enfeksiyonu dışlanamıyorsa tedaviye doksisiklin eklenir",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Hastanın cinsel partnerinin tedavi edilmesine gerek yoktur",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Tedavi sonrası test-of-cure, faranjiyal enfeksiyon dışında rutin olarak gerekli değildir",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Gebelerde de seftriakson güvenle kullanılabilir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Gonokoksik enfeksiyonlarda (ve genel olarak tüm CYBE'lerde) yeniden\nenfeksiyonu önlemek ve toplumsal yayılımı durdurmak için, hastanın\nson 60 gün içindeki cinsel partnerlerinin mutlaka değerlendirilmesi ve\neş zamanlı (ampirik) tedavi edilmesi gerekir; 'partner tedavisine gerek\nyoktur' ifadesi bu nedenle yanlıştır. Güncel tedavi yaklaşımı artan direnç\nnedeniyle tek doz seftriakson esasına dayanır; klamidya birlikteliği\ndışlanamıyorsa doksisiklin eklenir."
-  },
-  {
-    "id": "d3-k1-enf-006-472",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 5,
-    "slideTitle": "Normal İnsan Mikrobiyotası (Florası) ve Vücudun Steril Bölgeleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki vücut bölgelerinden hangisinde normalde mikrobiyal flora bulunmaz?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Özefagus",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Konjonktiva",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Üreter",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Kolon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Vajen",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Özefagus, konjonktiva, kolon ve vajen gibi dış ortamla/mukozal yüzeyle\ntemas eden bölgelerde normal (kommensal) mikrobiyal flora bulunur.\nÜreterler ise mesane ve böbrekler gibi normalde sterildir; bu bölgelerde\nmikroorganizma varlığı patolojik kabul edilir."
-  },
-  {
-    "id": "d3-k1-enf-024-473",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 6,
-    "slideTitle": "Kolonizasyon, Disbiyoz ve Fırsatçı (Opportunistik) Enfeksiyonlar",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Üretrit etkenlerinin araştırılmasında Ureaplasma urealyticum ile ilgili hangisi doğrudur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Genital kültürde üremesi tek başına klinik olarak anlamlı kabul edilir ve mutlaka tedavi\ngerektirir",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Sağlıklı bireylerin genital florasında da bulunabildiğinden, kültürde üremesi tek\nbaşına anlamlı kabul edilmez",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Gram boyamada kolayca görülebilen büyük bir bakteridir",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Standart gonokok kültür besiyerinde kolayca ürer",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Tedavisinde ilk seçenek penisilindir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Ureaplasma urealyticum, hücre duvarı olmayan (Mycoplasma\nailesinden) küçük bir bakteridir ve cinsel yönden aktif sağlıklı bireylerin\ngenital florasında da sıklıkla kolonizasyon şeklinde bulunabilir. Bu\nnedenle genital örnek kültüründe üremesi tek başına patojen olduğu ve\ntedavi gerektirdiği anlamına gelmez; klinik bulgularla birlikte\ndeğerlendirilmelidir. Hücre duvarı olmadığından gram boyanmaz ve\npenisilin gibi hücre duvarı sentezini hedefleyen antibiyotiklere doğal\nolarak dirençlidir (tedavide makrolid/tetrasiklin grubu tercih edilir)."
-  },
-  {
-    "id": "d3-k3-far-009-474",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 7,
-    "slideTitle": "Hastane Enfeksiyonları (Sağlık Hizmetiyle İlişkili Enfeksiyonlar - SHİE)",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Kanamisinin yarı-sentetik türevi olan; moleküler yapısındaki koruyucu yan zincir sayesinde bakteriyel aminoglikozid inaktive edici asetilaz, adenilaz ve fosfotransferaz enzimlerinin çoğuna dirençli bulunan ve gentamisine dirençli nozokomiyal gram-negatif basillerde tercih edilen antibiyotik hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Netilmisin",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Spektinomisin",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Amikasin",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Paromomisin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Neomisin",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Amikasin, bakteriyel modifiye edici enzimlere karşı en dayanıklı aminoglikoziddir. Gentamisin ve tobramisine direnç geliştiğinde spektrum genişliği sayesinde hastane kaynaklı dirençli Pseudomonas ve Klebsiella suşlarında hayat kurtarıcıdır."
-  },
-  {
-    "id": "d3-k1-enf-007-475",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 8,
-    "slideTitle": "Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi mikroorganizma bulaşı için indirek (dolaylı) temas yollarından değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sağlık personelinin elleri",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Glukometre",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Tansiyon ölçme aleti",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Hastalar arasında ortak kullanılan su ısıtma cihazı",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kan transfüzyonu",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "İndirek temas bulaşı, kontamine cansız ara yüzeyler (glukometre,\ntansiyon aleti, ortak kullanılan cihazlar) veya sağlık personelinin elleri\naracılığıyla mikroorganizmanın hastadan hastaya taşınmasıdır. Kan\ntransfüzyonu ise doğrudan (parenteral) bir bulaş yoludur;\ndolaylı/indirekt temas kategorisine girmez."
-  },
-  {
-    "id": "d3-k1-enf-005-476",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 9,
-    "slideTitle": "Bulaş (Taşınma) Şekilleri: Temas, Damlacık ve Solunum (Aerosol) Dinamikleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdaki eylemlerden hangisinde en çok sayıda solunum partikülü saçılımı olur?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Öksürme",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Hapşırma",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Bağırma",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Şarkı söyleme",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Konuşma",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
-  },
-  {
-    "id": "d3-k1-enf-009-477",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 10,
-    "slideTitle": "İzolasyon Önlemlerinin 2 Kademeli Mimarisi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
-  },
-  {
-    "id": "d3-k1-enf-013-478",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 11,
-    "slideTitle": "Standart Önlemler ve El Hijyeni İlkeleri",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
-  },
-  {
-    "id": "d3-k1-enf-013-479",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 12,
-    "slideTitle": "Güvenli Enjeksiyon ve Kesici-Delici Alet Yaralanmalarından Korunma",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Standart (evrensel) önlemler ile ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kullanılmış iğneler tekrar kılıflarına geçirilmemelidir (recapping yapılmamalı)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kan ve diğer vücut sıvılarının sıçrama ihtimali olan işlemlerde önlük ve eldiven\ngiyilmesi tek başına yeterlidir",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Eldiven çıkarıldıktan sonra da el hijyeni uygulanmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kesici-delici aletler delinmeye dayanıklı özel kutulara atılmalıdır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Kan ve vücut sıvısı ile kirlenmiş malzemeler uygun şekilde imha edilmelidir",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
-  },
-  {
-    "id": "d3-k1-enf-010-480",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 13,
-    "slideTitle": "Temas İzolasyonu (Kırmızı Yıldız) ve Çoğul Dirençli Mikroorganizmalar",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Tek kişilik oda, mümkün değilse aynı mikroorganizma ile enfekte/kolonize hastaların\naynı odaya yerleştirilmesi (kohortlama)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Odalar/hastalar arasında malzeme veya tıbbi cihazların ortak kullanımının önlenmesi",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kişisel koruyucu ekipmanların (KKE) hasta odasından ayrılmadan çıkarılması",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Odadan ayrıldıktan sonra el hijyeni uygulanması",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Odaya girmeden önce N95 maske takılması",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
-  },
-  {
-    "id": "d3-k1-enf-004-481",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 14,
-    "slideTitle": "Damlacık İzolasyonu (Mavi Çiçek) ve 1 Metre Güvenlik Kuralı",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kızamık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Suçiçeği",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "SARS-CoV-2 enfeksiyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Neisseria meningitidis",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Tüberküloz",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
-  },
-  {
-    "id": "d3-k1-enf-004-482",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 15,
-    "slideTitle": "Solunum (Hava Yolu) İzolasyonu (Sarı Yaprak) ve Negatif Basınç",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Aşağıdakilerden hangisi aerosol (havayolu) ile bulaşabilen enfeksiyonlardan değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Kızamık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Suçiçeği",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "SARS-CoV-2 enfeksiyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Neisseria meningitidis",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Tüberküloz",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
-  },
-  {
-    "id": "d3-k1-enf-011-483",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 16,
-    "slideTitle": "Üç İzolasyon Tipinin ve Hastane Sembollerinin Karşılaştırma Matrisi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Hastanelerde kullanılan enfeksiyon kontrol işaretlerinden hangisi temas izolasyonunu simgeler?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Sarı yaprak",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Mavi papatya/çiçek",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Kırmızı yıldız",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Yeşil üçgen",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Turuncu daire",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Hastane enfeksiyon kontrol uygulamasında (kurumdan kuruma\ndeğişebilen renk kodlamalarında), temas izolasyonu gerektiren\nhastaların oda kapılarına genellikle kırmızı yıldız işareti asılır. Bu görsel\nkodlama, sağlık personelinin ve ziyaretçilerin gerekli koruyucu önlemleri\n(eldiven, önlük vb.) almadan odaya girmesini engellemeyi amaçlar."
-  },
-  {
-    "id": "d3-k5-aci-011-484",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 17,
-    "slideTitle": "Kişisel Koruyucu Ekipman (KKE) Giyme ve Çıkarma Protokolü",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Akut toksik madde zehirlenmelerinde gastrointestinal dekontaminasyon yöntemleri değerlendirildiğinde güncel kılavuzlarda aspirasyon riski ve özofagus perforasyonu tehlikesi nedeniyle artık RUTİN OLARAK KULLANILMAYAN ve önerilmeyen yöntem aşağıdakilerden hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "İpeka şurubu veya mekanik uyarı ile hastayı kusturma",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "İlk 1 saat içinde tek doz aktif kömür uygulaması",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Bilinç açık veya entübe hastada orogastrik tüp ile mide yıkama",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Demir ve lityum zehirlenmesinde tüm bağırsak irrigasyonu (PEG)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Spesifik antidot uygulanması",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
-  },
-  {
-    "id": "d3-k1-enf-009-485",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 18,
-    "slideTitle": "Çoğul İlaç Dirençli Bakteriler (MDRO) ve Antibiyotik Yönetimi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
-  },
-  {
-    "id": "d3-k1-enf-054-486",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 19,
-    "slideTitle": "Koruyucu Ortam (Ters İzolasyon) ve Nötropenik Hasta Yönetimi",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "Febril nötropeni için hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Mutlak nötrofil sayısı <500/mm³",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Vücut sıcaklığı ≥38.3°C ya da 1 saat ara ile ≥38°C",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Mukozit varlığında kandidemi riski artar",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Uzamış nötropeni küf enfeksiyonu riskini artırır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Febril nötropenide izole hümoral immün yetmezlik vardır",
-        "isCorrect": true
-      }
-    ],
-    "correctAnswer": "E",
-    "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
-  },
-  {
-    "id": "d3-k1-enf-009-487",
-    "deckId": "learn-enfeksiyon-izolasyon",
-    "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
-    "slideNumber": 20,
-    "slideTitle": "Büyük Sentez: İzolasyon Karar Ağacı ve Kurul 1 Altın İpuçları",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Dönem 3 Kurul 1",
-    "question": "İzolasyon önlemleriyle ilgili hangisi yanlıştır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Damlacık izolasyonu ≥5 μm partiküllerin saçılımı ile bulaşan enfeksiyonlardan korunma\niçin uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Temas izolasyonu, çok ilaç direnci olan mikroorganizmaların bulaşını engellemek için\nuygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Solunum (hava yolu) izolasyonu, <5 μm partiküllerin saçılımı ile bulaşan\nenfeksiyonlardan korunma için uygulanır",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Temas izolasyonu, enterik enfeksiyona sebep olan mikroorganizmaların bulaşını\nengellemek için de kullanılır",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
-  },
-  {
-    "id": "prac-patgir-001",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 1,
-    "slideTitle": "Patolojinin Tanımı, Kapsamı ve Tıptaki Köprü Rolü",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Patolojinin tıptaki yeri, tanımı ve temel kapsamı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Yalnızca kadavralar üzerinde çalışır ve yaşayan hastaların tedavi süreçleriyle ilgilenmez",
-      "B) Fonksiyonel bozukluklarla ilgilenmeyip sadece organ ağırlıklarını ölçen yardımcı bir laboratuvar dalıdır",
-      "C) Temel tıp bilimleri ile klinik bilimler arasında köprü kurarak yapısal değişikliklerle klinik bulguları sentezler",
-      "D) Kanser tanısında görüntüleme yöntemleri altın standart olduğundan patolojik incelemeye gerek duyulmaz",
-      "E) Hastalıkların gelişim mekanizmalarını (patogenez) dışlayarak yalnızca etiyolojik ajanları tanımlar"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur çünkü patoloji; anatomi, histoloji ve fizyoloji gibi temel bilimlerle klinik bilimler arasında köprü kurarak hücresel/morfolojik lezyonlar ile hastanın semptom ve bulgularını korele eder. A yanlıştır çünkü yaşayan hastalardan alınan cerrahi biyopsiler patolojinin ana yüküdür. B ve E yanlıştır; patoloji patogenez ve klinik sonuçları derinlemesine inceler. D yanlıştır; kanserde kesin tanının tartışmasız altın standardı patolojidir."
-  },
-  {
-    "id": "prac-patgir-002",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 2,
-    "slideTitle": "Hastalık Sürecinin Dört Temel Bileşeni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hastalık sürecini oluşturan dört temel bileşen ve bunların tanımları ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Patogenez: Hastalığı başlatan genetik mutasyon veya mikroorganizma gibi temel neden",
-      "B) Etiyoloji: Hücre ve dokularda ortaya çıkan makroskopik ve mikroskopik yapısal lezyonlar",
-      "C) Morfolojik Değişiklikler: Hastanın hekime ifade ettiği subjektif ağrı ve halsizlik şikayetleri",
-      "D) Patogenez: Etiyolojik ajanın başlattığı moleküler, hücresel ve dokusal mekanizmalar zinciri",
-      "E) Klinik Sonuç: Yalnızca otopsi sırasında makroskopik olarak ölçülen organ boyutları"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği doğrudur çünkü patogenez, etiyolojik faktörün başlattığı moleküler, biyokimyasal ve hücresel mekanizmalar bütünüdür. A etiyolojinin, B morfolojik değişikliklerin, C klinik semptomların tanımıdır. E seçeneğindeki klinik sonuçlar ise hastanın semptom, bulgu ve laboratuvar parametrelerini ifade eder."
-  },
-  {
-    "id": "prac-patgir-003",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 3,
-    "slideTitle": "Patolojinin Tarihsel Evrimi: Antik Çağdan Organ Patolojisine",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Patolojinin tarihsel gelişimi ve inflamasyonun kardinal bulguları ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Celsus inflamasyonun 4 belirtisini rubor, calor, dolor ve tumor olarak tanımlamıştır",
-      "B) Galen inflamasyonun beşinci belirtisi olarak 'functio laesa'yı (fonksiyon kaybı) eklemiştir",
-      "C) Giovanni Battista Morgagni yaklaşık 700 otopsi deneyimiyle patolojik anatominin temelini atmıştır",
-      "D) Şerefeddin Sabuncuoğlu ilk resimli Türkçe cerrahi tıp eseri olan Cerrahiyetü'l-Haniyye'yi yazmıştır",
-      "E) Morgagni hastalıkların organlarda değil yalnızca vücut sıvılarında (humoral) yerleştiğini savunmuştur"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü Giovanni Battista Morgagni humoral patoloji teorisini yıkarak hastalıkların doğrudan belirli organlarda yerleştiğini (organ patolojisi) kanıtlamıştır. A, B, C ve D seçenekleri tıp tarihi açısından tamamen doğru ve sınav değeri yüksek bilgilerdir."
-  },
-  {
-    "id": "prac-patgir-004",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 4,
-    "slideTitle": "Rudolf Virchow ve Hücresel Patoloji Kuramı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Rudolf Virchow ve Hücresel Patoloji Kuramı ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) 'Omnis cellula e cellula' ilkesiyle her hücrenin başka bir hücreden bölündüğünü savunmuştur",
-      "B) Hastalıkların temelinin organ sıvılarında (humor) değil hücre zedelenmesinde olduğunu göstermiştir",
-      "C) Tromboz patogenezindeki endotel hasarı, staz ve hiperkoagülabiliteyi (Virchow Triadı) tanımlamıştır",
-      "D) Mide karsinomunun sol supraklaviküler lenf nodu metastazı 'Virchow Düğümü' olarak adlandırılır",
-      "E) Mikroskobun tanısal değerini reddederek yalnızca çıplak gözle makroskopik incelemeyi savunmuştur"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü Rudolf Virchow mikroskobun patoloji laboratuvarına sistematik girişini sağlayan, cerrahi ve otopsi materyallerini mikroskop altında inceleyerek hücresel patolojiyi kuran en büyük isimdir. A, B, C ve D seçenekleri Virchow'un tıp literatürüne kazandırdığı ölümsüz katkılardır."
-  },
-  {
-    "id": "prac-patgir-005",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 5,
-    "slideTitle": "Türkiye'de Patolojinin Tarihsel Gelişimi ve Kurumsallaşması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Türkiye'de patolojinin kurumsal gelişimi ve öncüleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Hamdi Suat Aknar ilk modern patoloji laboratuvarını ve yaklaşık 1800 kavanozluk müzeyi kurmuştur",
-      "B) 1933 Üniversite Reformu ile gelen Philipp Schwartz arşivleme sistemini ve kliniko-patolojik dersleri kurmuştur",
-      "C) Prof. Dr. Kamile Şevki Mutlu Ankara Numune Patoloji Laboratuvarı'nın ve AÜ Histoloji Kürsüsü'nün kurucusudur",
-      "D) Dr. Osman Nuri Aker Papanicolaou ile çalışıp servikal sitoloji yöntemini Türkiye'ye getirmiştir",
-      "E) Türkiye'de ilk patoloji laboratuvarı Cumhuriyet döneminden önce kapatılmış ve otopsi tamamen yasaklanmıştır"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü II. Mahmut döneminde 14 Mart 1827'de Mekteb-i Tıbbiye-i Şahane açılarak modern kadavra ve patoloji eğitiminin temelleri atılmış, Hamdi Suat Aknar 1904'ten itibaren Gülhane ve Darülfünun'da laboratuvar ve müzeyi geliştirmiştir. A, B, C ve D seçenekleri Türkiye tıp tarihi müfredatının temel doğrularıdır."
-  },
-  {
-    "id": "prac-patgir-006",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 6,
-    "slideTitle": "Patolojinin Ana Alt Dalları ve Disiplinlerarası Konumu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Genel Patoloji ile Özel (Sistemik) Patoloji arasındaki temel fark ve kapsam ayrımı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Genel patoloji yalnızca otopsi materyalleriyle ilgilenirken, özel patoloji yalnızca kan tahlillerini inceler",
-      "B) Ateroskleroz ve siroz genel patolojinin konusuyken; nekroz ve apoptoz özel patolojinin konusudur",
-      "C) Genel patoloji hücre zedelenmesi, inflamasyon ve neoplazi gibi evrensel temel mekanizmaları; özel patoloji ise organ sistemlerine özgü hastalıkları inceler",
-      "D) Özel patoloji cerrahi girişim gerektirmeyen durumları incelerken, genel patoloji ameliyat piyeslerini inceler",
-      "E) Genel patoloji yalnızca bitki ve hayvan hastalıklarını kapsayan teorik bir alandır"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur çünkü genel patoloji hücre hasarı, inflamasyon, onarım, hemodinami ve tümör biyolojisi gibi evrensel temel mekanizmaları ele alırken; özel patoloji bu mekanizmaların kardiyovasküler, solunum, GİS, renal gibi organ sistemlerindeki somut hastalıklarını inceler. B'de kavramlar ters verilmiştir."
-  },
-  {
-    "id": "prac-patgir-007",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 7,
-    "slideTitle": "Patoloji Laboratuvarına Gelen Materyaller: Biyopsi Türleri ve Endikasyonları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Biyopsi türleri ve endikasyonları ile ilgili aşağıdaki klinik durumlardan hangisinde EKSİZYONEL BİYOPSİ uygulanması en uygundur?",
-    "options": [
-      "A) Tüm batını dolduran 20 cm'lik inoperabl retroperitoneal dev kitle",
-      "B) Deride 4 mm çapında, asimetrik sınırlı, malign melanom şüpheli pigmente lezyon",
-      "C) Diffüz hepatomegali ve transaminaz yüksekliği olan karaciğer parankim hastalığı",
-      "D) Mide antrumunda endoskopide izlenen 1 cm'lik yüzeyel ülser lezyonu",
-      "E) Akciğer santral bronşunda lümeni tıkayan vejetan mukozal kitle"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur çünkü melanom şüpheli küçük pigmente lezyonlarda lezyonun tamamının çevre sağlam sınırla çıkarıldığı eksizyonel biyopsi altın standarttır; lezyonun parçalanması tümör kalınlığının (Breslow) ölçümünü bozar. A'da insizyonel biyopsi, C'de tru-cut/iğne biyopsisi, D ve E'de ise endoskopik forseps biyopsisi endikedir."
-  },
-  {
-    "id": "prac-patgir-008",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 8,
-    "slideTitle": "Rezeksiyon Materyalleri ve Makroskobik İnceleme İlkeleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Cerrahi rezeksiyon materyallerinin makroskobik diseksiyonu ve örneklenmesi ile ilgili aşağıdaki uygulamalardan hangisi YANLIŞTIR?",
-    "options": [
-      "A) Cerrahi rezeksiyon sınırları mikroskopik sınır değerlendirmesi için özel çini mürekkebiyle boyanır",
-      "B) Solid organlar tümör odaklarının kaçırılmaması için 5-10 mm aralıklarla paralel dilimlenir",
-      "C) Fiksatifin ve kimyasalların iyi nüfuz etmesi için kasetlenen doku parçaları 3-4 mm kalınlıkta kesilir",
-      "D) Çıkarılan piyesteki lenf nodlarının tamamı diseke edilip metastaz yönünden kasetlenir",
-      "E) Kimyasalların tasarrufu amacıyla tümörlü organ hiç dilimlenmeden bütün halde kasede konulur"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü bir organ bütün halde kasede sığmaz; ayrıca dilimlenmeyen dokunun içine formalin nüfuz edemez ve merkezde masif otoliz gerçekleşir. Doku mutlaka kurallara uygun diseke edilip 3-4 mm kalınlığında temsil edici parçalar kasetlenmelidir. A, B, C ve D seçenekleri makroskopi kılavuzlarının temel kurallarıdır."
-  },
-  {
-    "id": "prac-patgir-009",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 9,
-    "slideTitle": "Fiksasyonun Biyokimyasal Mekanizması ve Prensipleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Fiksasyonun amacı, biyokimyasal mekanizması ve %10 nötral tamponlu formalin kullanımı ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Fiksasyonun en birincil amacı lizozomal enzimlerin dokuyu eritmesini (otoliz) engellemektir",
-      "B) Formaldehit proteinler arasında kovalent metilen köprüleri kurarak çapraz bağlanma sağlar",
-      "C) %10'luk tamponlu formalin solüsyonunun gerçek formaldehit konsantrasyonu yaklaşık %3.7-4'tür",
-      "D) Fiksatif hacminin doku hacmine oranı en az 10 ila 20 kat olmalıdır",
-      "E) Formalinin dokuya penetrasyon hızı saatte 15-20 mm olduğundan doku kalınlığının hiçbir önemi yoktur"
-    ],
-    "correctAnswer": 4,
-    "explanation": "E seçeneği yanlıştır çünkü formalinin dokuya difüzyon hızı son derece yavaştır; saatte ortalama yalnızca 1 mm penetre olur. Bu nedenle kalın dokuların merkezine formalin ulaşamaz ve otoliz gelişir; doku parçaları mutlaka 3-5 mm kalınlıkta kesilmelidir. A, B, C ve D seçenekleri fiksasyonun temel ilkeleridir."
-  },
-  {
-    "id": "prac-patgir-010",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 10,
-    "slideTitle": "Hatalı Fiksasyonun Sonuçları ve Özel Fiksatifler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Hatalı fiksasyonun moleküler testlere etkisi ve özel fiksatifler ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Soğuk iskemi süresinin uzaması DNA ve RNA bütünlüğünü artırarak NGS başarısını yükseltir",
-      "B) Aşırı fiksasyon (dokunun formalinde haftalarca kalması) antijen maskelenmesine ve doku kırılganlığına yol açar",
-      "C) Testis biyopsilerinde nükleer detayları korumak için en çok tercih edilen fiksatif saf sudur",
-      "D) Elektron mikroskopisi incelemelerinde fiksatif olarak daima %10 nötral formalin kullanılır",
-      "E) Fiksasyonda gecikme olması immünohistokimyasal boyamalarda yalancı pozitifliklere neden olur"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur çünkü dokunun formalinde aşırı uzun süre kalması (overfixation) proteinler arasında aşırı çapraz bağ oluşturarak antijenik epitopları maskeler ve dokuyu kırılganlaştırır. A yanlıştır; iskemi nükleazları aktive ederek DNA/RNA'yı parçalar. C yanlıştır; Bouin fiksatifi kullanılır. D yanlıştır; elektron mikroskopisinde glutaraldehit kullanılır. E yanlıştır; antijen kaybına bağlı yalancı negatiflik görülür."
-  },
-  {
-    "id": "prac-patgir-011",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 11,
-    "slideTitle": "Doku Takibinin (Tissue Processing) Adımları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Histopatolojik doku takibinin (tissue processing) aşamaları ve kimyasal mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Dehidratasyon basamağında dokudaki alkolü uzaklaştırmak için bol su kullanılır",
-      "B) Ksilol, parafin ile karışmadığı için doku takibinin en sonunda parafinden sonra uygulanır",
-      "C) Dehidratasyon, şeffaflaştırma ve infiltrasyon sırasıyla alkol, ksilol ve erimiş parafin ile gerçekleştirilir",
-      "D) Parafin infiltrasyonu oda sıcaklığında katı parafin tozlarının dokuya dökülmesiyle yapılır",
-      "E) Dokunun doğrudan %100 alkole atılması hücre morfolojisini koruyan en güvenli yöntemdir"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur; doku takibinin standart sırası Dehidratasyon (artan alkol serileri), Şeffaflaştırma (ksilol) ve İnfiltrasyondur (erimiş parafin). A yanlıştır; dehidratasyon su uzaklaştırmadır. B yanlıştır; ksilol parafinle mükemmel karışır ve parafinden önce uygulanır. D yanlıştır; 56-58°C'de sıvı parafine emdirilir. E yanlıştır; doğrudan %100 alkol şiddetli büzüşme artefaktı yapar."
-  },
-  {
-    "id": "prac-patgir-012",
-    "deckId": "learn-patolojiye-giris",
-    "deckTitle": "Patolojiye Giriş ve Temel İlkeler: Hastalıkların Hücresel, Morfolojik ve Moleküler Temeli",
-    "slideNumber": 12,
-    "slideTitle": "Parafin Bloklama, Oryantasyon ve Mikrotomi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Doku bloklama, oryantasyon ve mikrotomi işlemleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Cilt biyopsilerinde epidermis ve dermis tüm katmanları göstermek için kesit yüzeyine dik yerleştirilir",
-      "B) Tübüler organlar lümen ve tüm duvar katmanlarını içerecek şekilde oryante edilir",
-      "C) Parafin bloklar amorf homojen katılaşma için gömme sonrası hızla soğutulur",
-      "D) Rutin ışık mikroskopisi için mikrotomda alınan standart kesit kalınlığı 30-50 mikrometredir",
-      "E) Su banyosunun sıcaklığı parafindeki kırışıklıkları açacak şekilde 40-45°C civarında tutulur"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği yanlıştır çünkü rutin ışık mikroskopisi için kesit kalınlığı 30-50 µm değil, 3 İLA 5 MİKROMETREDİR (µm). 30-50 µm aşırı kalındır ve ışık mikroskobunda hücreler koyu bir yığın halinde görünür. A, B, C ve E seçenekleri mikrotomi ve bloklama tekniğinin vazgeçilmez temel doğrularıdır."
   }
 ]

@@ -1,5 +1,727 @@
 [
   {
+    "id": "prac-doku-003",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 3,
+    "slideTitle": "Proliferasyon Kapasitesine Göre Dokular: Labil (Sürekli Bölünen) Dokular",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kemoterapi alan bir kanser hastasında antimitotik ilaçların hücre siklusunda aktif olarak bölünen hücreleri hedef alması sonucunda; saç dökülmesi, mukozit (oral ve intestinal mukoza ülserleri) ve pansitopeni (lökopeni, anemi, trombositopeni) geliştiği gözleniyor. Bu klinik tablonun ortaya çıkması, etkilenen dokuların aşağıdaki hücre proliferasyon kategorilerinden hangisine ait olmasıyla doğrudan ilişkilidir?",
+    "options": [
+      "A) Kalıcı (permanent) dokular",
+      "B) Stabil (quiescent) dokular",
+      "C) Labil (sürekli bölünen) dokular",
+      "D) Avasküler mezenkimal dokular",
+      "E) Postmitotik son-farklılaşmış dokular"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Labil dokular (kemik iliği hematopoietik hücreleri, gastrointestinal sistem kript epiteli, saç folikülü epiteli) fizyolojik olarak sürekli hücre siklusunda olup bölünürler. Bu nedenle kemoterapötik antimitotik ajanlara karşı son derece duyarlıdırlar ve kemoterapi yan etkisi olarak kemik iliği baskılanması ve mukozal ülserler bu dokularda gelişir. Stabil hücreler (karaciğer, böbrek vb.) normalde G0'da bekler (B), kalıcı hücreler (kalp kası, nöron) ise hiç bölünmez (A)."
+  },
+  {
+    "id": "prac-doku-004",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 4,
+    "slideTitle": "Stabil (Kiesent / Sessiz) Dokuların Proliferasyon Dinamikleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Canlı vericili karaciğer nakli ameliyatında sağlıklı bir donörün karaciğer sağ lobu cerrahi olarak rezeke edilerek alıcıya naklediliyor. Donörde kalan sol lob parankiminin yaklaşık 4-6 hafta içinde bölünerek orijinal karaciğer ağırlığına ve hacmine ulaştığı gözleniyor. Bu klinik süreçte hepatositlerin gerçekleştirdiği hücresel döngü hareketi aşağıdakilerden hangisinde doğru olarak tanımlanmıştır?",
+    "options": [
+      "A) Hücre siklusunun S fazından apoptoza kaçış",
+      "B) Hücre siklusunun G0 fazından G1 fazına giriş ve aktif proliferasyon",
+      "C) Kalıcı postmitotik hücrelerin terminal diferansiyasyon göstermesi",
+      "D) Mayoz bölünme ile yeni hepatosit klonlarının oluşturulması",
+      "E) G2 kontrol noktasında geri dönüşsüz hücre siklusu arresti"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Karaciğer hepatositleri tipik 'stabil (quiescent)' hücrelerdir. Normal fizyolojik durumda G0 fazında beklerler. Parsiyel hepatektomi gibi bir doku kaybı yaşandığında IL-6, HGF ve TGF-alfa gibi faktörlerin etkisiyle hızla G0'dan G1 fazına geçer ve bölünerek doku kütlesini tamamlarlar. A, C, D ve E seçenekleri hepatositlerin proliferatif biyolojisiyle bağdaşmaz."
+  },
+  {
+    "id": "prac-doku-005",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 5,
+    "slideTitle": "Kalıcı (Nonproliferatif) Dokular ve Skarla Onarım Zorunluluğu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "62 yaşında erkek hasta akut anterior miyokard enfarktüsü geçiriyor. Başarılı revaskülarizasyona rağmen sol ventrikül ön duvarında transmural nekroz geliştiği saptanıyor. Bu hastanın olaydan 6 ay sonra yapılan ekokardiyografisinde, nekroz alanında kasılmayan, incelmiş ve fibröz dokudan zengin akinetik bir skar dokusu izleniyor. Hasarlanan bölgenin yeni kas hücreleriyle rejenere olamayıp skar ile iyileşmesinin temel biyolojik nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hasar bölgesinde vasküler endotel büyüme faktörü (VEGF) salınımının hiç olmaması",
+      "B) Kardiyak miyositlerin mitotik bölünme yeteneğini kalıcı olarak kaybetmiş hücreler olması",
+      "C) İnfarj alanında makrofajların fagositoz yeteneğinin bulunmaması",
+      "D) Granülasyon dokusunun kalpte hiçbir zaman şekillenememesi",
+      "E) Miyokard dokusunda Tip I kollajen sentezinin genetik olarak engellenmiş olması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Kalp kası hücreleri (kardiyak miyositler) postmitotik, kalıcı (permanent) dokulardır; hücre siklusunu geri dönüşsüz olarak terk etmişlerdir ve çoğalma kapasiteleri yoktur. Bu nedenle miyokard nekrozu alanları rejenerasyonla değil, kaçınılmaz olarak fibröz skar dokusu ile onarılır. A, C, D ve E seçenekleri yanlıştır; miyokard enfarktüsü sonrasında yoğun anjiyogenez (VEGF), makrofajik temizlik ve granülasyon dokusu aşamaları gerçekleşir ve yoğun Tip I kollajen birikir."
+  },
+  {
+    "id": "prac-doku-006",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 6,
+    "slideTitle": "Kök Hücre Biyolojisi: Kendi Kendini Yenileme ve Asimetrik Replikasyon",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kök hücrelerin biyolojik özellikleri ve bölünme mekanizmaları ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Asimetrik replikasyonda her iki yavru hücre de anında terminal olarak farklılaşmış olgun doku hücresine dönüşür.",
+      "B) Blastokistin iç hücre kitlesinden elde edilen pluripotent kök hücreler plasenta ve amniyon gibi ekstraembriyonik zarları da oluşturabilir.",
+      "C) Asimetrik replikasyon sayesinde bir yavru hücre kök hücre havuzunda kalırken diğeri diferansiasyon yolağına girer.",
+      "D) Erişkin dokulardaki multipotent kök hücreler organizmadaki tüm hücre tiplerini sınırsızca üretme kapasitesine sahiptir.",
+      "E) Embriyonik kök hücrelerin kendi kendini yenileme (self-renewal) yeteneği bulunmaz."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Asimetrik replikasyon, kök hücrenin bölündüğünde bir yavru hücresini kök hücre olarak koruması (böylece kök havuzu tükenmez), diğer yavru hücreyi ise diferansiasyon yolağına sokması ilkesine dayanır. A seçeneği yanlıştır çünkü her iki yavru hücre farklılaşırsa kök hücre havuzu tükenir (simetrik diferansiasyon). B seçeneği yanlıştır çünkü ekstraembriyonik zarları totipotent hücreler oluşturur; pluripotent hücreler vücudun üç germ yaprağını oluşturabilir ancak plasentayı oluşturamaz. D seçeneği yanlıştır çünkü multipotent hücreler yalnızca ait oldukları doku soyunu üretebilirler. E seçeneği yanlıştır çünkü self-renewal kök hücrelerin temel tanımlayıcı özelliğidir."
+  },
+  {
+    "id": "prac-doku-007",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 7,
+    "slideTitle": "Erişkin (Doku) Kök Hücreleri ve Organ Spesifik Kök Hücre Nişleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Gastrointestinal sistem biyopsisi incelenen bir hastada bağırsak epitel hücrelerinin fizyolojik turnover ve yenilenme kinetiği araştırılıyor. Bağırsak mukozasında 3-5 günde bir dökülen emici enterosit ve goblet hücrelerinin sürekli olarak yeniden üretilmesini sağlayan kök hücre havuzu histolojik olarak nerede lokalizedir?",
+    "options": [
+      "A) Villusların en tepe noktasındaki lümene bakan yüzeyde",
+      "B) Lamina propriadaki lenfoid agregatların merkezinde",
+      "C) Lieberkühn kriptlerinin tabanında (crypt base columnar cells)",
+      "D) Muskularis mukoza kas tabakasının derinliklerinde",
+      "E) Submukozadaki Meissner otonomik sinir pleksusunda"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Bağırsak epitelinin multipotent kök hücreleri Lieberkühn kriptlerinin tabanında (crypt base) yer alır. Bu hücreler (Lgr5+ kript bazal kolumnar hücreler) bölünerek yukarı doğru göç eden hücreleri oluşturur ve bu hücreler villus tepesine ulaştıkça diferansiye olup en tepeden dökülürler. Villus tepesi (A) en yaşlı ve dökülmek üzere olan diferansiye hücreleri barındırır. Lamina propria (B), muskularis mukoza (D) ve submukoza (E) epitel kök hücre nişi değildir."
+  },
+  {
+    "id": "prac-doku-008",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 8,
+    "slideTitle": "Karaciğer Kök Hücreleri: Hering Kanalları ve Oval Hücrelerin Rolü",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Kronik hepatit B enfeksiyonu zemininde siroz gelişen 54 yaşındaki bir hastanın karaciğer biyopsisinde, hepatositlerin hücresel yaşlanma (senesens) nedeniyle replikasyon kapasitelerinin tükendiği ve Hering kanalları çevresinde dar sitoplazmalı, oval nükleuslu küçük progenitör hücrelerin prolifere olduğu izleniyor. Karaciğer parankiminde saptanan bu bipotansiyel progenitör hücre popülasyonu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kupffer hücreleri",
+      "B) İto (hepatik stellat) hücreleri",
+      "C) Karaciğer oval hücreleri",
+      "D) Sinüzoidal endotel hücreleri",
+      "E) Pit hücreleri (doğal katil hücreler)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Karaciğerde kronik hasar varlığında ve matür hepatosit proliferasyonu bloke olduğunda Hering kanallarında yer alan 'oval hücreler' (hepatik progenitör hücreler) aktive olur. Bu hücreler bipotansiyel olup hem hepatositlere hem de kolanjiyositlere farklılaşabilirler. Kupffer hücreleri (A) sinüzoidlerdeki yerleşik makrofajlardır. İto hücreleri (B) A vitamini depolayan ve sirozda kollajen üreten miyofibroblast benzeri hücrelerdir. Endotel hücreleri (D) damar döşemesidir. Pit hücreleri (E) karaciğerdeki NK hücreleridir."
+  },
+  {
+    "id": "prac-doku-009",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 9,
+    "slideTitle": "Hücre Siklusunun Moleküler Kontrolü: Siklinler ve Siklin Bağımlı Kinazlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Hücre siklusunun faz geçişlerinde görev alan moleküler regülatörler incelendiğinde, Siklin Bağımlı Kinazlar (CDK) ve Siklin proteinleri ile ilgili aşağıdaki ifadelerden hangisi BİYOKİMYASAL AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Hücre siklusu boyunca hücre içindeki Siklin protein konsantrasyonu tamamen sabit seyreder.",
+      "B) CDK enzimlerinin katalitik kinaz aktivitesi sergileyebilmesi için ilgili siklin proteinine bağlanması zorunludur.",
+      "C) G2 fazından Mitoz (M) fazına geçişi yöneten ana kompleks Siklin D ile CDK4/6 heterodimeridir.",
+      "D) CDK'lar hücre siklusu fazı tamamlandığında ubikitin-proteazom yolağında parçalanarak yok edilirler.",
+      "E) Siklin E-CDK2 kompleksi hücreyi M fazından G1 fazına geri döndürmekle görevlidir."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. CDK'lar (Siklin Bağımlı Kinazlar) tek başlarına enzimatik olarak inaktiftir; kinaz (fosforilasyon) fonksiyonlarını yerine getirebilmeleri için özgül siklin partnerlerine bağlanmaları şarttır. A seçeneği yanlıştır çünkü sabit olan CDK'dır, siklinler ise döngüsel olarak yükselip yıkılır. C seçeneği yanlıştır çünkü G2/M geçişini Siklin B-CDK1 yönetir (Siklin D-CDK4/6 ise G1 fazını yönetir). D seçeneği yanlıştır çünkü ubikitinlenen ve yıkılan siklinlerdir, CDK düzeyleri sabit kalır. E seçeneği yanlıştır çünkü Siklin E-CDK2 kompleksi G1'den S fazına geçişi sağlar."
+  },
+  {
+    "id": "prac-doku-010",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 10,
+    "slideTitle": "Hücre Siklusu Kontrol Noktaları, İnhibitörleri ve Tümör Baskılayıcılar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İyonize radyasyona maruz kalan bir insan fibroblast kültüründe çift zincirli DNA kırıkları meydana geldiği saptanıyor. Hücrenin DNA hasarını onarmak amacıyla G1 fazında duraklatılması sürecinde, p53 transkripsiyon faktörünün uyarılmasıyla sentezlenen ve siklin-CDK komplekslerini inhibe ederek hücre siklusunu bloke eden temel efektör protein aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Retinoblastoma (Rb) proteini",
+      "B) E2F transkripsiyon faktörü",
+      "C) p21 (CDKN1A)",
+      "D) Siklin B1",
+      "E) Vasküler endotelyal büyüme faktörü (VEGF)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. DNA hasarı meydana geldiğinde p53 proteini stabilize olur ve bir CDK inhibitörü olan p21'in (CDKN1A) transkripsiyonunu başlatır. p21 proteini Siklin-CDK komplekslerine bağlanıp onları inaktive ederek Rb fosforilasyonunu önler ve hücreyi G1/S kontrol noktasında durdurur. Rb (A) p53 tarafından değil fosforilasyon durumuyla regüle edilen bir proteindir. E2F (B) S fazını başlatan faktördür. Siklin B1 (D) G2/M geçişini sağlar. VEGF (E) anjiyogenez faktörüdür."
+  },
+  {
+    "id": "prac-doku-011",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 11,
+    "slideTitle": "Büyüme Faktörlerinin Sinyal İletim Türleri: Otokrin, Parakrin ve Endokrin",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Deri kesisi sonrası yara tabanına göç eden M2 fenotipindeki aktive bir doku makrofajının, sitoplazmasında sentezlediği Trombosit Kaynaklı Büyüme Faktörünü (PDGF) ekstraselüler aralığa salgılaması ve bu molekülün doku interstisyumu boyunca difüze olarak birkaç mikron ötedeki istirahat halindeki bir fibroblastın yüzey reseptörüne bağlanıp hücreyi aktive etmesi hangi sinyal iletim mekanizmasına örnektir?",
+    "options": [
+      "A) Otokrin sinyalizasyon",
+      "B) Parakrin sinyalizasyon",
+      "C) Endokrin sinyalizasyon",
+      "D) Jukstakrin (kontakt bağımlı) sinyalizasyon",
+      "E) Sinaptik nörotransmisyon"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Bir hücrenin ürettiği molekülün yakın komşuluğundaki farklı bir hedef hücreyi interstisyel difüzyonla uyarması 'parakrin' sinyalizasyondur. Yara iyileşmesinde makrofajların fibroblastları uyarması klasik parakrin sinyale en somut örnektir. Otokrin (A) hücrenin kendi kendini uyarmasıdır. Endokrin (C) hormonun kana salınıp uzak organlara taşınmasıdır. Jukstakrin (D) hücrelerin zarlarındaki moleküllerin doğrudan fiziksel temasıyla sinyal iletmesidir. Sinaptik iletim (E) nöronal kavşaklarda görülür."
+  },
+  {
+    "id": "prac-doku-012",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 12,
+    "slideTitle": "Büyüme Faktörü Reseptör Tipleri ve İntrasellüler Sinyal Yolakları",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Granülasyon dokusu oluşumu sırasında endotel hücrelerinin bölünmesini ve damar filizlenmesini uyarmak üzere salgılanan Vasküler Endotelyal Büyüme Faktörü (VEGF), endotel hücresinin plazma membranında aşağıdaki reseptör mekanizmalarından hangisini aktive ederek hücre içi sinyal kaskadını başlatır?",
+    "options": [
+      "A) Yedi kez zarı geçen G proteini bağlantılı reseptör (GPCR)",
+      "B) İntrinsik tirozin kinaz aktivitesine sahip reseptör (Reseptör Tirozin Kinaz)",
+      "C) Hücre içi sitoplazmik nükleer steroid reseptörü",
+      "D) Ligand kapılı sodyum iyon kanalı reseptörü",
+      "E) Yalnızca serin/treonin kinaz aktivitesi gösteren Tip II TGF reseptörü"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. VEGF (özellikle VEGFR-2 reseptörü üzerinden), EGF, PDGF ve FGF gibi polipeptid büyüme faktörleri intrinsik tirozin kinaz aktivitesine sahip transmembran reseptörlere (Reseptör Tirozin Kinazlar - RTK) bağlanır. Ligand bağlandığında reseptör dimerleşir, otofosforillenir ve Ras-MAPK ile PI3K/Akt yolaklarını tetikler. GPCR'lar (A) kemokinler ve hormonlarca kullanılır. Nükleer reseptörler (C) steroidler içindir. İyon kanalları (D) nörotransmitterler içindir. Serin/treonin kinaz reseptörleri (E) TGF-beta ailesine özgüdür."
+  },
+  {
+    "id": "prac-doku-013",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Epitelyal Büyüme Faktörleri: EGF, TGF-alfa ve KGF (FGF-7)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Cerrahi insizyon yapılan bir hastanın deri yarasında 48. saatte yara kenarlarındaki bazal keratinositlerin sağlam dermis ve fibrin çatısı boyunca yaranın merkezine doğru göç ederek orta hatta birleştiği (re-epitelizasyon) gözleniyor. Yara tabanındaki stromal fibroblastlar tarafından salgılanarak doğrudan keratinositler üzerindeki özgül reseptörleri uyaran ve bu re-epitelizasyon sürecini en güçlü tetikleyen büyüme faktörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Vasküler endotelyal büyüme faktörü-A (VEGF-A)",
+      "B) Keratinosit büyüme faktörü (KGF / FGF-7)",
+      "C) İnterlökin-10 (IL-10)",
+      "D) Eritropoietin (EPO)",
+      "E) Trombosit kaynaklı büyüme faktörü-BB (PDGF-BB)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Keratinosit Büyüme Faktörü (KGF), diğer adıyla FGF-7; fibroblastlar tarafından üretilen ve keratinositlerin proliferasyon, migrasyon ve diferansiasyonunu uyararak epitelizasyonu sağlayan klasik mezenkimal-epitelyal parakrin mediyatördür. VEGF (A) endotel hücrelerini uyarır. IL-10 (C) antienflamatuar sitokindir. EPO (D) eritrosit üretimini artırır. PDGF (E) fibroblast ve düz kas hücreleri için kemotaktik ve mitojeniktir."
+  },
+  {
+    "id": "prac-doku-014",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 14,
+    "slideTitle": "Karaciğer Rejenerasyonunun Moleküler Orkestrasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Deneysel bir hayvan modelinde parsiyel hepatektomi uygulanarak karaciğer rejenerasyon mekanizmaları inceleniyor. Ameliyattan hemen sonra Kupffer hücreleri tarafından salgılanarak istirahat halindeki hepatositleri G0 fazından G1 fazına sokan ve onları mitojenik büyüme faktörlerine karşı duyarlı hale getiren (priming fazı) temel sitokinler aşağıdakilerden hangisinde birlikte verilmiştir?",
+    "options": [
+      "A) İnterlökin-6 (IL-6) ve Tümör Nekroz Faktörü (TNF)",
+      "B) İnterlökin-10 (IL-10) ve TGF-beta",
+      "C) Vasküler endotelyal büyüme faktörü (VEGF) ve Angiopoietin-1",
+      "D) Eritropoietin ve Trombopoietin",
+      "E) İnterlökin-4 (IL-4) ve İnterlökin-13 (IL-13)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Karaciğer rejenerasyonunun ilk adımı 'priming' (hazırlık) evresidir. Bu evrede Kupffer hücrelerinden salgılanan TNF ve IL-6 hepatositleri G0 dinlenme fazından çıkarıp G1 fazına sokar ve büyüme faktörlerine yanıt verebilir hale getirir. Proliferasyon ise HGF ve TGF-alfa ile sağlanır. B seçeneğinde yer alan TGF-beta terminasyon (durdurma) fazı inhibitörüdür. C seçeneği anjiyogenezle ilgilidir. D seçeneği hematopoezle ilgilidir. E seçeneği Th2 yanıtıdır."
+  },
+  {
+    "id": "prac-doku-015",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 15,
+    "slideTitle": "Vasküler Endotelyal Büyüme Faktörü (VEGF), HIF ve Damar Geçirgenliği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Deri kesisi sonrası granülasyon dokusu gelişim evresindeki bir hastanın yara tabanından alınan doku örneğinde, yeni oluşan kapiller damarların lümenlerinden çevre interstisyuma yoğun plazma sıvısı ve albümin sızdığı, dokunun ileri derecede ödemli olduğu saptanıyor. Yeni filizlenen endotel damarlarında bu masif vasküler permeabilite artışına yol açan ve aynı zamanda anjiyogenezin primer düzenleyicisi olan büyüme faktörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Epidermal büyüme faktörü (EGF)",
+      "B) Vasküler endotelyal büyüme faktörü (VEGF)",
+      "C) Keratinosit büyüme faktörü (KGF)",
+      "D) Tümör nekroz faktörü-alfa (TNF-alfa)",
+      "E) İnterlökin-2 (IL-2)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. VEGF (Vascular Endothelial Growth Factor), anjiyogenezi uyarmasının yanı sıra endotel hücreleri arasındaki bağlantıları gevşeterek aşırı damar geçirgenliğine yol açan en güçlü moleküldür (tarihsel adı Vasküler Permeabilite Faktörü - VPF'dir). Bu nedenle yeni gelişen granülasyon dokusu damarları sızıntılıdır ve yara ödemlidir. EGF (A) ve KGF (C) epitel hücrelerini uyarır. TNF-alfa (D) ve IL-2 (E) enflamatuar sitokinlerdir."
+  },
+  {
+    "id": "prac-doku-016",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 16,
+    "slideTitle": "Trombosit Kaynaklı Büyüme Faktörü (PDGF) ve FGF-1 / FGF-2",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yara iyileşmesi sürecinde trombositlerin alfa granüllerinden ve hasar alanındaki aktive doku makrofajlarından salgılanan; fibroblastlar, düz kas hücreleri ve nötrofiller için güçlü bir kemotaktik faktör olmanın yanı sıra mezenkimal hücre proliferasyonunu ve kollajen sentezini uyaran büyüme faktörü aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Trombosit kaynaklı büyüme faktörü (PDGF)",
+      "B) İnterlökin-1 (IL-1)",
+      "C) Granülosit koloni stimüle edici faktör (G-CSF)",
+      "D) Hepatosit büyüme faktörü (HGF)",
+      "E) Tümör nekroz faktörü-beta (TNF-beta)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Trombosit Kaynaklı Büyüme Faktörü (PDGF); trombosit alfa granülleri ve aktive makrofajlar tarafından salgılanır. Nötrofiller, makrofajlar, fibroblastlar ve düz kas hücreleri için hem güçlü bir kemotaktik molekül hem de mitojendir; fibroblast proliferasyonunu ve matriks sentezini uyarır. IL-1 (B) pro-enflamatuar sitokindir. G-CSF (C) nötrofil üretimini uyarır. HGF (D) hepatosit mitojenidir."
+  },
+  {
+    "id": "prac-doku-017",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 17,
+    "slideTitle": "Fibrozisin Ana Orkestra Şefi: TGF-beta ve Pleiotropik Rolleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "İdyopatik pulmoner fibrozis tanısı konulan 64 yaşındaki bir hastanın akciğer biyopsisinde, alveol septalarında masif fibroblast proliferasyonu, yoğun Tip I kollajen depolanması ve matriks yıkımının tamamen baskılandığı izleniyor. Akciğer parankiminde kollajen sentezini en üst düzeye çıkaran, matriks metalloproteinazları (MMP) inhibe ederken doku metalloproteinaz inhibitörlerini (TIMP) indükleyen ve fibrozisin ana orkestra şefi kabul edilen sitokin aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İnterferon-gama (IFN-gama)",
+      "B) Transforming growth factor-beta (TGF-beta)",
+      "C) Tümör nekroz faktörü-alfa (TNF-alfa)",
+      "D) Vasküler endotelyal büyüme faktörü-C (VEGF-C)",
+      "E) Epidermal büyüme faktörü (EGF)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. TGF-beta hem fizyolojik yara onarımında fibröz skarın oluşmasını sağlayan hem de kronik fibrotik organ hastalıklarında (akciğer fibrozu, karaciğer sirozu, sistemik skleroz) aşırı kollajen birikimini tetikleyen en önemli fibrogenik sitokindir. Bu etkisini kollajen sentezini artırarak, MMP'leri baskılayarak ve TIMP'leri artırarak gerçekleştirir. IFN-gama (A) tam aksine fibroblast proliferasyonunu ve kollajen sentezini inhibe eden bir moleküldür. TNF-alfa (C), VEGF-C (D) ve EGF (E) fibrozisin ana regülatörü değildir."
+  },
+  {
+    "id": "prac-doku-018",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 18,
+    "slideTitle": "Ekstraselüler Matriksin (ECM) Mimarisi: İnterstisyel Matriks ve Bazal Membran",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Doku biyolojisi ve histopatoloji açısından ekstraselüler matriksin iki formu olan interstisyel matriks ve bazal membran karşılaştırıldığında, aşağıdaki eşleştirmelerden hangisi BAZAL MEMBRANIN karakteristik bir bileşenidir?",
+    "options": [
+      "A) Tip I fibriler kollajen",
+      "B) Tip II kıkırdak kollajeni",
+      "C) Tip IV ağsı kollajen ve Laminin",
+      "D) Yalnızca kondroitin sülfat içeren amorf jel",
+      "E) Fibrillin mikrofibrilleri ile sarılmış elastin merkez"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Bazal membran; lif oluşturmayan ağsı yapıda Tip IV kollajen, hücreleri bazal membrana bağlayan karakteristik adeziv glikoprotein olan Laminin, heparan sülfat proteoglikanı (perlekan) ve entaktin/nidogen içerir. Tip I kollajen (A) interstisyel matriks, kemik ve skarın ana bileşenidir. Tip II kollajen (B) kıkırdakta bulunur. Elastin ve fibrillin (E) elastik liflerin yapısındadır."
+  },
+  {
+    "id": "prac-doku-019",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 19,
+    "slideTitle": "Kollajen Biyosentezi, Tipleri (Tip I - V) ve Üçlü Heliks Stabilizasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Aylar süren uzun bir deniz yolculuğundan dönen ve taze meyve/sebze tüketmediği öğrenilen 45 yaşındaki bir gemicide; diş etlerinde spontan kanamalar, perifoliküler peteşiler, eklemlerde hemartroz ve 2 yıl önce geçirdiği apandisit ameliyatı skarının yeniden açıldığı (dehisens) saptanıyor. Bu hastada kollajen sentezinin bozulmasına ve doku mekanik direncinin çökmesine yol açan temel biyokimyasal defekt aşağıdakilerden hangisidir?",
+    "options": [
+      "A) DNA polimeraz enziminin timin dimerlerini onaramaması",
+      "B) Prolin ve lizin kalıntılarının hidroksillenememesi sonucu üçlü heliks yapısının kurulamaması",
+      "C) Elastin liflerinin fibrillin gen delesyonu nedeniyle sentezlenememesi",
+      "D) Fibroblastlarda Tip IV kollajenaz enziminin aşırı aktifleşmesi",
+      "E) Fibronektin proteininin integrin reseptörlerine bağlanma yeteneğini kaybetmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tarif edilen klinik tablo C vitamini eksikliğine bağlı 'Skorbüt' (Scurvy) hastalığıdır. Askorbik asit (C vitamini), prolil ve lizil hidroksilaz enzimlerinin esansiyel kofaktörüdür. Hidroksilasyon gerçekleşmediğinde kollajen polipeptid zincirleri arasında hidrojen bağları kurulamaz; üçlü heliks oluşamaz ve kollajen hücre içinde hızla degradasyona uğrar. Bunun sonucunda yeni kollajen yapılamaz, eski skarlar açılır ve damar kırılganlığına bağlı yaygın kanamalar gelişir. A seçeneği kseroderma pigmentozumdur. C seçeneği Marfan sendromudur. D ve E seçenekleri skorbüt tablosunu açıklamaz."
+  },
+  {
+    "id": "prac-doku-020",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 20,
+    "slideTitle": "Elastin, Fibrillin Mikrofibrilleri ve Marfan Sendromunun Moleküler Temeli",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "23 yaşında profesyonel bir basketbolcu antrenmanda aniden fenalaşarak acil servise getiriliyor. Fizik muayenede boyunun 2.08 m olduğu, kulaç mesafesinin boyunu aştığı (marfanoid habitus), el parmaklarının uzun ve ince olduğu (araknodaktili) ve göz muayenesinde bilateral yukarı-dışa lens subluksasyonu olduğu saptanıyor. Bilgisayarlı tomografide asendan aortada intima yırtığı ve psödolümen (aort diseksiyonu) izleniyor. Bu hastadaki patolojinin temelinde yer alan ve ekstraselüler elastik liflerin mikrofibriler çatısını oluşturan genetik bozukluk aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Tip IV kollajen gen mutasyonu (COL4A5)",
+      "B) Fibrillin-1 gen mutasyonu (FBN1)",
+      "C) Lizil hidroksilaz gen mutasyonu",
+      "D) FGFR3 gen mutasyonu",
+      "E) Distrofin gen delesyonu"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka klasik bir 'Marfan sendromu' tablosudur. Marfan sendromu, 15. kromozomda yer alan ve ekstraselüler matriksteki mikrofibrillerin temel yapıtaşı olan Fibrillin-1 proteinini kodlayan FBN1 genindeki otozomal dominant mutasyonlar sonucu gelişir. Fibrillin-1 yetersizliğinde aort duvarındaki elastik lifler bozulur ve kistik medial dejenerasyon zemininde aort diseksiyonu gelişir. COL4A5 mutasyonu (A) Alport sendromudur. Lizil hidroksilaz mutasyonu (C) Ehlers-Danlos kifo-skolyotik tipidir. FGFR3 (D) akondroplazidir. Distrofin (E) Duchenne müsküler distrofisidir."
+  },
+  {
+    "id": "prac-doku-021",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Hücre-Matriks Etkileşimleri: Fibronektin, Laminin ve İntegrinler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yara tabanına göç eden epidermal keratinositlerin ve dermal fibroblastların ekstraselüler matrikse tutunarak ilerlemesi ve canlılıklarını koruması inceleniyor. Fibronektin ve diğer matriks glikoproteinleri üzerinde bulunan ve transmembran integrin reseptörleri tarafından spesifik olarak tanınan kritik tripeptid aminoasit motifi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Glisin-Prolin-Hidroksiprolin",
+      "B) Arjinin-Glisin-Aspartik asit (RGD)",
+      "C) Metiyonin-Lizin-Fenilalanin",
+      "D) Serin-Treonin-Tirozin",
+      "E) Glutamin-Asparajin-Alanin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Fibronektin, vitronektin ve diğer birçok yapışkan hücre dışı matriks proteininde bulunan ve integrin reseptörlerinin alfa/beta zincirleri tarafından spesifik olarak tanınıp bağlanan evrensel hücresel adezyon motifi 'RGD' (Arg-Gly-Asp: Arjinin-Glisin-Aspartik asit) dizisidir. Glisin-Prolin-Hidroksiprolin (A) kollajenin üçlü heliks dizilimidir. Diğer seçenekler integrin bağlanma motifi değildir."
+  },
+  {
+    "id": "prac-doku-022",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Proteoglikanlar ve Hyaluronan: Hidrasyon ve Büyüme Faktörü Rezervuarı",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Ekstraselüler matriksin temel maddesini oluşturan glikozaminoglikanlar (GAG) ve proteoglikanlar ile ilgili aşağıdaki biyokimyasal ve fonksiyonel ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Hyaluronan molekülü endoplazmik retikulumda bir çekirdek proteine kovalent bağlanan ve yoğun sülfat içeren bir proteoglikandır.",
+      "B) Glikozaminoglikan zincirleri taşıdıkları yüksek pozitif elektrik yükü nedeniyle klor iyonlarını çekerek dokuyu dehidrate ederler.",
+      "C) Heparan sülfat proteoglikanları, FGF-2 gibi büyüme faktörlerini bağlayarak ekstraselüler alanda bir rezervuar görevi üstlenir.",
+      "D) Proteoglikanlar yalnızca dokuya çekme (gerilme) direnci kazandırmakla görevli olup sıkıştırma kuvvetlerine direnç gösteremezler.",
+      "E) Granülasyon dokusunda hyaluronan sentezinin artması hücre göçünü ve hücresel motiliteyi tamamen kilitler."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Heparan sülfat proteoglikanları (örneğin sindekan), bazik fibroblast büyüme faktörü (FGF-2) gibi büyüme faktörlerini ekstraselüler matrikste inaktif formda depolar; hasar anında bu faktörler serbest kalarak anjiyogenez ve fibroblast proliferasyonunu tetikler. A seçeneği yanlıştır çünkü hyaluronan çekirdek proteine bağlanmaz ve sülfatsızdır. B seçeneği yanlıştır çünkü GAG'lar kuvvetli negatif yüklüdür ve su tutarlar. D seçeneği yanlıştır çünkü proteoglikanlar çekme değil basma (kompresyon) kuvvetlerine direnç sağlar. E seçeneği yanlıştır çünkü hyaluronan hücre göçünü kitlemez, tam aksine sulu ortam sağlayarak göçü kolaylaştırır."
+  },
+  {
+    "id": "prac-doku-023",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Onarım Kaskadının 1. Evresi: Hemostaz, Fibrin Pıhtısı ve Akut Enflamasyon",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Temiz bir cerrahi kesi yapılan bir hastada operasyondan sonraki 48. saatte insizyon hattı mikroskobik olarak incelendiğinde; lökosit infiltrasyonunun niteliğinde belirgin bir değişim olduğu, nötrofillerin azaldığı ve ortama mononükleer hücrelerin hakim olduğu görülüyor. Bu 48. saat evresinde hem hücresel enkazı fagosite eden hem de PDGF, TGF-beta ve VEGF salgılayarak granülasyon dokusu oluşumunun moleküler tetiğini çeken temel hücre tipi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Plazma hücreleri",
+      "B) Eozinofil lökositler",
+      "C) Doku makrofajları",
+      "D) Bazofil lökositler",
+      "E) Sitotoksik T lenfositleri (CD8+)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Yara iyileşmesinin 24-48. saatlerinde nötrofiller hızla apoptoza gider ve hasar sahasına monosit/makrofajlar yerleşir. Makrofajlar yara iyileşmesinin kilit orkestra şefidir; nekrotik döküntüleri temizlerken eşzamanlı olarak PDGF, FGF, TGF-beta ve VEGF salgılayarak fibroblastları ve endotel hücrelerini aktive ederler. Plazma hücreleri (A) antikor üretir. Eozinofiller (B) alerji ve parazitlerde rol alır. Bazofiller (D) histamin salar. Sitotoksik T hücreleri (E) hücresel immünitede görevlidir."
+  },
+  {
+    "id": "prac-doku-024",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Onarım Kaskadının 2. Evresi: Anjiyogenez (Filizlenme / Sprouting)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yara iyileşmesi ve tümör anjiyogenezi sırasında mevcut damarlardan yeni kapiller damar filizlenmesi (sprouting) gerçekleşirken; bir endotel hücresinin öncü uç hücre (tip cell) haline gelerek göç etmesini sağlayan ve hemen komşuluğundaki endotel hücrelerinde Notch reseptörünü uyararak onların kontrolsüz filizlenmesini baskılayan ligand-reseptör sinyal aksı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Wnt / Frizzled yolağı",
+      "B) Delta-like ligand 4 (DLL4) / Notch yolağı",
+      "C) Hedgehog / Patched yolağı",
+      "D) Fas ligand / Fas reseptör yolağı",
+      "E) RANK ligand / RANK yolağı"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Anjiyogenezde VEGF uyarısıyla lider uç hücre (tip cell) seçilir. Bu uç hücre yüzeyinde DLL4 (Delta-like ligand 4) ekspresyonunu artırır. DLL4 arkadaki ve komşu endotel hücrelerindeki Notch reseptörlerine bağlanarak bu hücrelerde VEGFR-2 düzeyini düşürür ve onların da tip hücresi olmasını frenler (lateral inhibisyon). Bu sayede damar kaotik bir yumak olmak yerine düzenli dallanan bir lümen oluşturur. Wnt (A), Hedgehog (C), Fas (D) ve RANKL (E) anjiyogenik filizlenme ayrımında rol oynamaz."
+  },
+  {
+    "id": "prac-doku-025",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 25,
+    "slideTitle": "Granülasyon Dokusunun Histomorfolojisi ve Biyolojik Karakteri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Açık bırakılan geniş bir travmatik deri yarasının 5. gününde yara tabanını örten doku inceleniyor. Makroskopik olarak pembe-kırmızı renkte, nemli, minik tomurcuklu (granüler) bir yüzey izleniyor ve gazlı bezle hafifçe silindiğinde derhal sızıntı şeklinde kanadığı görülüyor. Biyopside çok sayıda immatür ince duvarlı kapiller damar, aktif fibroblastik proliferasyon, bol ödem sıvısı ve dağınık makrofajlar saptanıyor. Bu lezyon için en olası patolojik tanı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Granülomatöz enflamasyon",
+      "B) Granülasyon dokusu",
+      "C) Desmoid tümör (agresif fibromatozis)",
+      "D) Kavernöz hemanjiyom",
+      "E) Fibrinöz eksüda birikimi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Tarif edilen klinik ve histopatolojik tablo yara iyileşmesinin proliferatif fazında (3-5. günlerde) ortaya çıkan klasik 'Granülasyon dokusu'dur. Çok sayıda yeni kılcal damar, prolifere fibroblastlar, ödemli gevşek matriks ve kolay kanama granülasyon dokusunun patognomonik özellikleridir. Granülomatöz enflamasyon (A) epiteloid histiyositler ve dev hücrelerin oluşturduğu granülomlarla seyreder ve tamamen farklı bir kronik enflamasyon formudur. Desmoid tümör (C) neoplastik klonal bir fibroblast proliferasyonudur. Hemanjiyom (D) vasküler neoplazidir."
+  },
+  {
+    "id": "prac-doku-026",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 26,
+    "slideTitle": "Matriks Metalloproteinazlar (MMP'ler) ve Doku İnhibitörleri (TIMP'ler)",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Yara iyileşmesinde skar dokusunun olgunlaşması ve ekstraselüler matriksin yeniden şekillenmesi (remodeling) aşamasında görev alan interstisyel kollajenazlar (MMP-1, MMP-2, MMP-3) ile ilgili aşağıdaki ifadelerden hangisi BİYOKİMYASAL AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Katalitik merkezlerinde kofaktör olarak magnezyum iyonu taşırlar ve kalsiyum varlığında inaktive olurlar.",
+      "B) Hücre dışına aktif formda salgılanırlar ve hiçbir inhibitör molekül tarafından durdurulamazlar.",
+      "C) Fibriler kollajenleri (Tip I, II, III) özgül bir noktadan kesebilmek için esansiyel olarak Çinko (Zn2+) iyonuna bağımlıdırlar.",
+      "D) TGF-beta tarafından transkripsiyonları aşırı derecede indüklenerek skarın tamamen eritilmesi sağlanır.",
+      "E) Yalnızca nötrofillerin fagozomları içinde bulunup ekstraselüler aralığa asla salınamazlar."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Matriks Metalloproteinazlar (MMP'ler), adlarından da anlaşılacağı üzere katalitik merkezlerinde esansiyel kofaktör olarak bir metal olan 'Çinko' (Zn2+) iyonu taşırlar. İnterstisyel kollajenazlar üçlü heliks yapısındaki Tip I, II ve III fibriler kollajenleri parçalayabilen yegane enzimlerdir. A seçeneği yanlıştır çünkü magnezyum değil çinko taşırlar. B seçeneği yanlıştır çünkü inaktif prokollajenaz olarak salgılanırlar ve TIMP'ler tarafından inhibe edilirler. D seçeneği yanlıştır çünkü TGF-beta MMP'leri inhibe eder, TIMP'leri artırır. E seçeneği yanlıştır çünkü fibroblastlar ve makrofajlarca doku aralığına salgılanırlar."
+  },
+  {
+    "id": "prac-doku-027",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 27,
+    "slideTitle": "Onarım Kaskadının 3. Evresi: Remodeling ve Skar Maturasyonu",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Apandisit ameliyatı geçiren bir hastanın insizyon hattı 1. haftada hiperemik, pembe ve kabarık iken; ameliyattan 6 ay sonra yapılan kontrolde aynı insizyon bölgesinin soluk beyaz renkte, düzleşmiş ve son derece sert bir fibröz banda dönüştüğü gözleniyor. Bu skar maturasyonu sürecinde dokuda meydana gelen biyokimyasal ve histolojik değişimlerle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Granülasyon dokusundaki Tip I kollajen parçalanarak yerine gevşek Tip III kollajen yerleşmiştir.",
+      "B) Doku damarlanması katlanarak artmış ve kapiller endotel hücreleri kontrolsüz proliferasyona uğramıştır.",
+      "C) Erken dönemdeki Tip III kollajen MMP'ler ile yıkılmış, yerini yoğun çapraz bağlı Tip I kollajen almış ve damarlar apoptozla gerilemiştir.",
+      "D) Skar dokusundaki miyofibroblast sayısı ve hücre yoğunluğu zamanla katlanarak artmıştır.",
+      "E) Ekstraselüler matriksteki hyaluronan ve proteoglikan konsantrasyonu maksimum seviyeye ulaşmıştır."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Yara iyileşmesinin yeniden şekillenme (remodeling) evresinde iki temel olay gerçekleşir: Erken evredeki gevşek Tip III kollajen matriks metalloproteinazlar tarafından sindirilir ve yerini kalın demetler oluşturan, yüksek çekme direncine sahip Tip I kollajene bırakır. Eşzamanlı olarak granülasyon dokusunun aşırı damarsal ağı apoptozla geriler (vasküler regresyon); bu sayede kırmızı, kabarık taze yara soluk, beyaz ve sert olgun bir skara dönüşür. A, B, D ve E seçeneklerindeki ifadeler remodeling dinamikleriyle çelişir."
+  },
+  {
+    "id": "prac-doku-028",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 28,
+    "slideTitle": "Miyofibroblastlar ve Yara Kontraksiyonu Mekanizması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Açık eksizyonel bir cerrahi yaranın 10. gününde yara yüzey alanının başlangıçtaki boyutuna göre dramatik şekilde küçüldüğü ve kenarlarının merkeze doğru büzüldüğü gözleniyor. Yara tabanından alınan biyopside, sitoplazmalarında aktin ve miyozin demetleri barındıran, immünohistokimyasal incelemede 'alfa-düz kas aktini' (alfa-SMA) pozitifliği gösteren ve yara kontraksiyonundan sorumlu olan hücre popülasyonu aşağıdakilerden hangisidir?",
+    "options": [
+      "A) İskelet kası rabdomiyositleri",
+      "B) Miyofibroblastlar",
+      "C) Tip II alveoler pnömositler",
+      "D) Histiyositler (makrofajlar)",
+      "E) Epidermal melanositler"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Yara kontraksiyonunu (yara büzülmesini) yürüten temel hücreler 'miyofibroblastlar'dır. Bu hücreler fibroblastların TGF-beta etkisiyle fenotipik dönüşümü sonucu şekillenir. Sitoplazmalarında düz kas hücrelerine benzer şekilde kontraktil 'alfa-düz kas aktini' (alfa-SMA) lifleri taşırlar. Ekstraselüler matrikse tutunup kasılarak yara kenarlarını birbirine çekerler. İskelet kası miyositleri (A) yara tabanında kontraksiyon yapmaz. Makrofajlar (D) fagositoz ve sitokin salınımı yapar. Melanositler (E) pigment hücresidir."
+  },
+  {
+    "id": "prac-doku-029",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 29,
+    "slideTitle": "Primer Yara İyileşmesi (Per Primam Intentionem): Zaman Çizelgesi",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Elektif inguinal herni onarımı geçiren ve insizyon hattı cerrahi sütürlerle primer olarak kapatılan 32 yaşındaki sağlıklı bir hastada, ameliyat sonrası yara iyileşmesinin 48. saatindeki histopatolojik görünüm değerlendirildiğinde aşağıdakilerden hangisinin gerçekleşmiş olması BEKLENİR?",
+    "options": [
+      "A) Granülasyon dokusunun tamamen kaybolup yerini avasküler Tip I kollajen skarına bırakması",
+      "B) Epidermal keratinositlerin kesi hattı boyunca göç ederek orta hatta birleşmesi (re-epitelizasyonun tamamlanması)",
+      "C) Yara gerilme direncinin normal sağlam derinin %80'ine ulaşması",
+      "D) Miyofibroblastların yara alanını %90 oranında büzüştürerek aşırı kontraktür oluşturması",
+      "E) Nötrofillerin sayısının doruk noktaya ulaşarak pürülan eksüda oluşturması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Temiz ve kenarları yaklaştırılmış primer cerrahi kesilerde 24-48 saat içinde her iki yara kenarındaki bazal keratinositler pıhtının hemen altından ilerleyerek orta hatta birleşir ve re-epitelizasyon sürecini tamamlarlar. A seçeneği (olgun avasküler skar) haftalar-aylar sonra görülür. C seçeneği (%80 gerilme direnci) 3. ayda mümkündür; 48. saatte gerilme direnci ihmal edilebilir düzeydedir. D seçeneği (belirgin kontraksiyon) primer iyileşmede değil geniş sekonder yaralarda görülür. E seçeneğinde nötrofiller 24-48 saatte azalır ve yerini makrofajlara bırakır."
+  },
+  {
+    "id": "prac-doku-030",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 30,
+    "slideTitle": "Sekonder ve Tersiyer Yara İyileşmesi: Geniş Doku Kayıpları ve Eskar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki patolojik özelliklerden hangisi sekonder yara iyileşmesini (per secundam intentionem) primer yara iyileşmesinden (per primam intentionem) ayıran en belirgin karakteristik farktır?",
+    "options": [
+      "A) Sekonder iyileşmede ekstraselüler matriks proteinlerinin sentezlenmemesi",
+      "B) Sekonder iyileşmede epitelizasyonun 24 saat içinde eksiksiz tamamlanması",
+      "C) Sekonder iyileşmede çok daha büyük hacimde granülasyon dokusu oluşması ve belirgin yara kontraksiyonunun bulunması",
+      "D) Sekonder iyileşmede makrofajların fagositoz aktivitesinin bulunmaması",
+      "E) Sekonder iyileşmenin daima hiçbir skar izi bırakmadan tam doku rejenerasyonu ile sonuçlanması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Sekonder yara iyileşmesi geniş doku defektlerinde gerçekleşir. Bu nedenle defekti doldurmak için çok daha masif hacimde granülasyon dokusu üretilir ve yara kenarlarını yaklaştırmak için miyofibroblastlar aracılığıyla çok güçlü bir yara kontraksiyonu gerçekleşir; nihayetinde geniş bir skar bırakır. A seçeneği yanlıştır çünkü kollajen sentezi çok fazladır. B seçeneği yanlıştır çünkü re-epitelizasyon geniş alanda günler-haftalar sürer. D seçeneği yanlıştır çünkü makrofaj temizliği çok yoğundur. E seçeneği yanlıştır çünkü sekonder iyileşmede büyük bir skar kalır."
+  },
+  {
+    "id": "prac-doku-031",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 31,
+    "slideTitle": "Yara Gerilme Direnci (Tensile Strength) ve Zaman Dinamiği",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Batın cerrahisi geçiren 40 yaşındaki bir hastanın orta hat insizyon sütürleri postoperatif 7. günde alınıyor. Sütürlerin alındığı bu 1. haftanın sonunda insizyon hattının gerilme direnci (tensile strength) ve yaranın uzun vadeli nihai mekanik kapasitesi ile ilgili aşağıdaki ifadelerden hangisi BİYOMEKANİK AÇIDAN DOĞRUDUR?",
+    "options": [
+      "A) Sütürler alındığında yara direnci normal derinin %50'sine ulaşmıştır ve 1. ayda %100 olur.",
+      "B) Sütürlerin alındığı 1. haftada yara direnci normal derinin yaklaşık %10'udur ve 3. ayda maksimum %70-80'e ulaşır.",
+      "C) Yara gerilme direnci 48. saatte maksimum platoya ulaşır ve bir daha değişmez.",
+      "D) Skar dokusu remodeling tamamlandığında orijinal dokunun gerilme direncini aşarak %120 dirence ulaşır.",
+      "E) Sütürler alındığı anda yara gerilme direnci sıfırdır, ilk gerilme direnci 1. aydan sonra başlar."
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Yara gerilme direnci sütürlerin alındığı 1. haftada normal dokunun yaklaşık %10'u düzeyindedir. Sonraki haftalarda Tip I kollajen birikimi ve çapraz bağlanmasıyla hızla artar ve 3. ay civarında maksimum düzeyine ulaşarak plato yapar; bu nihai değer normal sağlam dokunun yaklaşık %70-80'i kadardır. Skar dokusu hiçbir zaman orijinal sağlam dokunun %100 gücüne ulaşamaz. A, C, D ve E seçenekleri yara gerilme direncinin biyomekanik eğrisine tamamen aykırıdır."
+  },
+  {
+    "id": "prac-doku-032",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 32,
+    "slideTitle": "Yara İyileşmesini Bozan Sistemik Faktörler: Beslenme, Diyabet ve İlaçlar",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Romatoid artrit nedeniyle uzun süredir yüksek doz sistemik prednizolon (glukokortikoid) tedavisi alan 58 yaşındaki bir kadına elektif kolesistektomi operasyonu uygulanıyor. Postoperatif 8. günde dikişleri alınan hastanın öksürme sonrasında cerrahi yarasının boylu boyunca açıldığı (dehisens) saptanıyor. Glukokortikoidlerin bu hastada yara gerilme direncini çökerterek yara açılmasına yol açan temel hücresel ve moleküler etkisi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Tip IV kollajenaz enziminin genetik olarak kalıcı delesyonu",
+      "B) TGF-beta üretimini baskılayarak fibroblast proliferasyonunu, anjiyogenezi ve kollajen sentezini inhibe etmesi",
+      "C) Plazminojen aktivatör inhibitörünü (PAI-1) bloke ederek masif fibrin birikimine yol açması",
+      "D) Keratinositlerin re-epitelizasyon hızını yüz kat artırarak granülasyon dokusunu boğması",
+      "E) Eritrositlerde hemoglobin sentezini durdurarak dokuyu sideroblastik anemiye sokması"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Glukokortikoidler (kortizon türevleri) güçlü anti-enflamatuar ve immünsüpresif ilaçlardır. Doku onarımında makrofaj aktivasyonunu baskılarlar, TGF-beta salınımını inhibe ederler; bunun sonucunda fibroblast göçü, anjiyogenez ve kollajen sentezi belirgin şekilde baskılanır. Yeterli kollajen üretilemediği için yaranın gerilme direnci son derece zayıf kalır ve karın içi basınç artışında (öksürme gibi) yara kolayca açılır (dehisens). A, C, D ve E seçenekleri glukokortikoidlerin yara üzerindeki etkilerini yansıtmaz."
+  },
+  {
+    "id": "prac-doku-033",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 33,
+    "slideTitle": "Lokal Faktörler ve Kronik İyileşmeyen Yaralar: Ülser Tipleri",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "72 yaşında kadın hasta her iki bacakta varisler, bacaklarda akşama doğru artan ödem ve sağ bacak iç bilek (medial malleol) üzerinde 6 aydır kapanmayan, tabanı kirli granülasyon dokusuyla kaplı geniş bir yara şikayetiyle başvuruyor. Yaranın etrafındaki derinin sertleştiği ve yoğun kahverengi pigmentasyon (hemosiderin depolanması) gösterdiği izleniyor. Bu hastadaki kronik yaranın en olası patolojik tanısı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Marjolin ülseri (yassı epitel hücreli karsinom)",
+      "B) Venöz bacak ülseri (staz ülseri)",
+      "C) Arteriyel yetmezlik ülseri",
+      "D) Nöropatik diyabetik mal perforan ülseri",
+      "E) Basınç (dekübit) ülseri"
+    ],
+    "correctAnswer": 1,
+    "explanation": "B seçeneği doğrudur. Vaka klasik bir 'Venöz bacak ülseri' (staz ülseri) tablosudur. Kronik venöz yetmezlik ve venöz hipertansiyon zemininde tipik olarak bacak alt üçte birinde medial malleol komşuluğunda gelişir. Kapiller göllenme sonucu doku oksijenlenmesi bozulur; damar dışına kaçan eritrositlerin yıkımıyla oluşan hemosiderin cilde tipik kahverengi staz dermatiti rengini verir. Marjolin ülseri (A) eski skarlar üzerinde gelişen karsinomdur. Arteriyel ülserler (C) ayak uçlarında ve parmaklarda soğuk, soluk ve ağrılı lezyonlardır. Diyabetik ülserler (D) ayak tabanı bası noktalarındadır. Dekübit (E) yatağa bağımlılarda sakrum veya topukta basıyla oluşur."
+  },
+  {
+    "id": "prac-doku-034",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 34,
+    "slideTitle": "Onarım Anomalileri: Hipertrofik Skar ve Keloid Karşılaştırması",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "21 yaşındaki siyahi bir kadın hasta kulak memesini deldirdikten 4 ay sonra küpe deliği çevresinde başlayan ve hızla büyüyerek tüm kulak memesini saran, karnabahar benzeri sert, kaşıntılı ve orijinal delme sınırlarının çok ötesine taşan tümöral bir kitle nedeniyle başvuruyor. Biyopside dermiste belirgin şekilde kalınlaşmış, eozinofilik, camsı homojen kollajen kütleleri (keloidal kollajen) saptanıyor. Bu lezyonun patolojik tanısı ve klinik davranışı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Lezyon hipertrofik skardır ve birkaç ay içinde kendiliğinden tamamen gerilemesi beklenir.",
+      "B) Lezyon desmoid tümördür ve Wnt/beta-katenin yolağındaki mutasyon sonucu gelişmiştir.",
+      "C) Lezyon keloiddir; orijinal yara sınırlarını aşar, kendiliğinden gerilemez ve cerrahi eksizyon sonrası nüks riski çok yüksektir.",
+      "D) Lezyon pyojenik granülomdur ve yoğun endotel proliferasyonu ile karakterizedir.",
+      "E) Lezyon dermatofibrosarkoma protuberanstır ve kollejen sentezi tamamen durmuştur."
+    ],
+    "correctAnswer": 2,
+    "explanation": "C seçeneği doğrudur. Tarif edilen klinik ve patolojik bulgular klasik bir 'Keloid' tablosudur. Keloid; yara sınırlarının dışına taşması, koyu tenli bireylerde genetik yatkınlıkla sık görülmesi, dermiste kalın camsı homojen kollajen birikimi göstermesi, kendiliğinden gerilememesi ve cerrahi eksizyon uygulandığında çok yüksek oranda nüks etmesi ile hipertrofik skardan kesin olarak ayrılır. Hipertrofik skar (A) yara sınırları içinde kalır ve gerileyebilir. Desmoid tümör (B) derin fasyalarda lokal invaziv neoplazidir. Piyojenik granülom (D) vasküler granülasyon lezyonudur."
+  },
+  {
+    "id": "prac-doku-035",
+    "deckId": "learn-doku-onarimi-yara-iyilesmesi",
+    "deckTitle": "Doku Onarımı, Yara İyileşmesi ve Skar Patolojisi",
+    "slideNumber": 35,
+    "slideTitle": "Onarımın Diğer Patolojik Komplikasyonları: Proud Flesh, Dehisens ve Kontraktürler",
+    "discipline": "Tıp",
+    "committee": "Kurul 1",
+    "question": "Açık travmatik bir deri yarasının takibinde, yara tabanından kaynaklanan parlak kırmızı, kolay kanayan vasküler granülasyon dokusunun çevre deri seviyesinin üzerine taşacak şekilde aşırı kabardığı ve bu kitle nedeniyle yara kenarlarındaki epitel hücrelerinin ilerleyemeyerek re-epitelizasyonun tamamen durduğu gözleniyor. Bu klinik antite ve patolojik durum aşağıdakilerden hangisi ile adlandırılır?",
+    "options": [
+      "A) Aşırı granülasyon dokusu (Proud flesh / Exuberant granulation)",
+      "B) İnsizyonel herni",
+      "C) Marfan sendromu",
+      "D) Skorbüt dermatiti",
+      "E) Arteriyel kangren"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A seçeneği doğrudur. Yara tabanında granülasyon dokusunun aşırı proliferasyon göstererek çevre epidermis seviyesinin üzerine taşmasına 'aşırı granülasyon dokusu' (exuberant granulation) veya halk arasında 'proud flesh' adı verilir. Bu kabarık doku epidermal keratinositlerin karşıdan karşıya göç etmesini mekanik olarak bloke eder ve yaranın epitelizasyonunu engeller. Tedavisi cerrahi eksizyon veya gümüş nitrat ile koterizasyondur. İnsizyonel herni (B) fasya defektidir. Marfan (C) genetik mikrofibril defektidir. Skorbüt (D) C vitamini eksikliğidir. Kangren (E) iskemik nekrozdur."
+  },
+  {
+    "id": "q-learn-prenatal-tani-1",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 1,
+    "slideTitle": "Prenatal Tanının Tanımı, Evrimi ve Temel Amaçları",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Aşağıdakilerden hangisi prenatal tanı uygulamalarının temel amaçları ve klinik hedefleri arasında yer almaz?",
+    "options": [
+      "A) Riskli gebeliklerde ebeveynlerin anksiyetesini hafifletmek ve bilgilendirilmiş tercih hakkı sunmak",
+      "B) Konjenital anomali saptanan her gebeliği tespit ederek gebeliğin zorunlu olarak tahliyesini sağlamak",
+      "C) Doğum sonrasında acil cerrahi veya yoğun bakım gerektirecek anomaliler için tersiyer merkez organizasyonu yapmak",
+      "D) Seçilmiş fetal hastalıklarda intrauterin medikal veya cerrahi tedavi olanaklarını devreye sokmak",
+      "E) Aile öyküsünde genetik hastalık bulunan çiftlere sağlıklı çocuk sahibi olabilme seçenekleri sunmak"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Prenatal tanı uygulamalarının amacı asla 'saptanan her anomalide gebeliğin zorunlu tahliyesi' değildir. Prenatal tanı; fetüsü bir hasta olarak kabul eden fetal tıp felsefesiyle intrauterin tedavi seçeneklerini, doğum koşullarının tersiyer merkezlerde planlanmasını ve ailenin özerk kararı doğrultusunda gebeliğin yönetilmesini hedefler. Tahliye ancak ailenin özgür iradesi ve yasal çerçeve dahilinde bir seçenektir."
+  },
+  {
+    "id": "q-learn-prenatal-tani-2",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 2,
+    "slideTitle": "Prenatal Genetik Danışmanın İlkeleri ve Etik-Yasal Çerçeve",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Prenatal genetik danışma süreci ile ilgili olarak aşağıdaki ifadelerden hangisi biyoetik ve klinik iletişim kurallarına aykırıdır?",
+    "options": [
+      "A) Danışman hekim, ailenin sosyokültürel düzeyine uygun ve yönlendirici olmayan (non-directive) bir üslup kullanmalıdır",
+      "B) İnvaziv testlerin taşıdığı gebelik kaybı ve kültür başarısızlığı gibi teknik riskler aileye önceden bildirilmelidir",
+      "C) Test sonucu patolojik saptandığında hekim kendi ahlaki kanaatine dayanarak aileyi gebeliği sonlandırmaya zorlamalıdır",
+      "D) Biyokimyasal tarama testlerinde elde edilen risk oranları pozitif ve negatif prediktif değerleri açıklanarak somutlaştırılmalıdır",
+      "E) Fötal anomali durumunda gebeliği devam ettirmek isteyen ailelere doğum sonrası palyatif ve multidisipliner bakım planı sunulmalıdır"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Genetik danışmanın temel biyoetik direği hasta özerkliğidir (otonomi). Hekim veya genetik uzmanı yönlendirici olmayan bir tutum takınmalı, asla kendi kişisel/ahlaki kanaatlerini empoze etmemeli ve aileyi hiçbir karara (terminasyon veya devam) zorlamamalıdır."
+  },
+  {
+    "id": "q-learn-prenatal-tani-3",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 3,
+    "slideTitle": "Prenatal Tanı Endikasyonları - I: İleri Maternal Yaş ve Aile Öyküsü",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "36 yaşında, 12 haftalık gebe bir kadının önceki gebeliğinden serbest Trizomi 21 (47,XY,+21) tanılı bir çocuğu bulunmaktadır. Ebeveynlerin periferik kan karyotip analizleri normaldir (46,XX ve 46,XY). Bu gebelikte fetüsün Down sendromlu olma riski nasıl hesaplanmalıdır?",
+    "options": [
+      "A) Risk genel toplum riskine eşittir (yaklaşık 1/800)",
+      "B) Ebeveynler normal olduğu için tekrarlama riski bulunmaz (%0)",
+      "C) Maternal yaşa bağlı mevcut risk üzerine yaklaşık %1 eklenerek hesaplanır",
+      "D) Tekrarlama riski kesin olarak %25'tir",
+      "E) Tekrarlama riski kesin olarak %50'dir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Önceki gebeliğinde de novo serbest trizomi öyküsü bulunan ve ebeveyn karyotipleri normal olan çiftlerde sonraki gebeliklerde anöploidi tekrarlama riski, maternal yaşa özgü arka plan riskine yaklaşık %1 ilave edilerek belirlenir (gonadal mozaizm veya nondisjunction yatkınlığı payı)."
+  },
+  {
+    "id": "q-learn-prenatal-tani-4",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 4,
+    "slideTitle": "Prenatal Tanı Endikasyonları - II: Ebeveyn Kromozom Anomalileri ve Monogenik Riskler",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Periferik kan karyotip analizi sonucunda 45,XX,rob(21q21q) tespit edilen 28 yaşındaki bir kadının gebeliğinde doğacak canlı bebeklerde Down sendromu (Trizomi 21) riski yüzde kaçtır?",
+    "options": [
+      "A) %1",
+      "B) %10-15",
+      "C) %25",
+      "D) %50",
+      "E) %100"
+    ],
+    "correctAnswer": 4,
+    "explanation": "Homolog Robertsonian translokasyonu taşıyıcısı olan [rob(21q21q)] bir ebeveyn sadece iki kopya 21 içeren (dizomik) veya hiç 21 içermeyen (nullizomik) gametler oluşturabilir. Nullizomik gametler döllendiğinde monozomi 21 oluşur ve letaldir. Döllenen dizomik gametler ise trizomi 21 oluşturur. Dolayısıyla canlı doğacak çocukların tamamı (%100) Down sendromlu olur."
+  },
+  {
+    "id": "q-learn-prenatal-tani-5",
+    "deckId": "learn-prenatal-tani",
+    "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
+    "slideNumber": 5,
+    "slideTitle": "İntrauterin Fetal Tedavi, Medikal Yönetim ve Yaşam Kurtarıcı Müdahaleler",
+    "discipline": "Tıbbi Genetik",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Fetal ultrasonda 16. haftada megasistis, bilateral üreterohidronefroz ve belirgin oligohidramnios saptanan erkek bir fetüste intrauterin vezikoamniyotik şant yerleştirilmesinin en temel ve yaşam kurtarıcı gerekçesi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Fetüste Down sendromu gelişimini engellemek",
+      "B) Oligohidramniosa ikincil gelişecek ölümcül pulmoner hipoplaziyi ve Potter sekansını önlemek",
+      "C) Doğum eyleminin erken başlamasını provoke etmek",
+      "D) Fetal adrenal bez hiperplazisini baskılamak",
+      "E) Fetal nöral tüp defektini cerrahi olarak kapatmak"
+    ],
+    "correctAnswer": 1,
+    "explanation": "İkinci trimesterde amniyon sıvısının ana kaynağı fötal idrardır. Üretra obstrüksiyonuna (PUV) bağlı oligohidramnios gelişiminde toraks kompresyonu ve amniyon sıvısı solunumunun durması sonucu letal pulmoner hipoplazi ve Potter sekansı gelişir. Erken dönemde vezikoamniyotik şant takılması akciğer gelişimini kurtaran en kritik girişimdir."
+  },
+  {
     "id": "q-learn-prenatal-tani-6",
     "deckId": "learn-prenatal-tani",
     "deckTitle": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
@@ -1176,727 +1898,5 @@
     ],
     "correctAnswer": 2,
     "explanation": "Alternatif kompleman yolağının C3 konvertazını (C3bBb) stabilize ederek kontrolsüz C3 tüketimine ve lamina densada homojen şerit elektron-yoğun depozitlere yol açan otoantikor C3 Nefretik Faktör'dür (C3NeF - Dens Depozit Hastalığı)."
-  },
-  {
-    "id": "prac-nefr-020",
-    "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
-    "slideNumber": 20,
-    "slideTitle": "Lupus Nefriti: Etyopatogenez ve ISN/RPS Sınıflaması (Sınıf I - IV)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik lupus eritematozus tanısıyla izlenen 26 yaşındaki bir kadında belirgin hematüri, hipertansiyon ve hızlı kreatinin yükselmesi gelişiyor. Böbrek biyopsisinde glomerüllerin %65'inde endokapiller proliferasyon, PAS boyasında belirgin 'tel halka' (wire-loop) lezyonları ve immünfloresanda IgG, IgA, IgM, C3 ve C1q pozitifliği ('full-house') izleniyor. Bu lezyon ISN/RPS sınıflamasına göre hangisidir?",
-    "options": [
-      "A) Sınıf I (Minimal mezangiyal)",
-      "B) Sınıf II (Mezangiyal proliferatif)",
-      "C) Sınıf III (Fokal lupus nefriti)",
-      "D) Sınıf IV (Diffüz lupus nefriti)",
-      "E) Sınıf V (Membranöz lupus nefriti)"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Glomerüllerin >=%50'sinin tutulması, tel halka (wire-loop) kapiller kalınlaşmaları ve immünfloresanda 5 belirtecin birden boyandığı 'full-house' paterni ISN/RPS Sınıf IV (Diffüz Lupus Nefriti) için karakteristiktir."
-  },
-  {
-    "id": "prac-nefr-021",
-    "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
-    "slideNumber": 21,
-    "slideTitle": "Lupus Nefriti (Sınıf V - VI) ve Kalıtsal Nefritlere Giriş",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sistemik lupus eritematozus tanısıyla takip edilen bir hastanın böbrek biyopsisinde glomerüllerin %92'sinde global skleroz, belirgin tübüler atrofi ve interstisyel fibrozis saptanıyor. Aktif endokapiller proliferasyon izlenmiyor. ISN/RPS sınıflamasına göre bu hastanın lupus nefriti evresi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Sınıf II",
-      "B) Sınıf III",
-      "C) Sınıf IV",
-      "D) Sınıf V",
-      "E) Sınıf VI"
-    ],
-    "correctAnswer": 4,
-    "explanation": "Böbrek biyopsisinde glomerüllerin >=%90'ının sklerotik ve hyalinize olduğu, yaygın tübüler atrofinin eşlik ettiği son dönem böbrek hastalığı tablosu ISN/RPS Sınıf VI (İleri Sklerozan Lupus Nefriti) olarak tanımlanır."
-  },
-  {
-    "id": "prac-nefr-022",
-    "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
-    "slideNumber": 22,
-    "slideTitle": "Alport Sendromu ve İnce Bazal Membran Hastalığı: Genetik, Klinik ve EM Ayrımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "16 yaşında bir erkek çocuk, çocukluğundan beri süren idrarda kanama şikayetiyle başvuruyor. Fizik muayenede bilateral sensörinöral işitme kaybı ve göz muayenesinde anterior lentikonus saptanıyor. Hastanın böbrek biyopsisinde elektron mikroskobunda izlenmesi beklenen karakteristik patolojik lezyon aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Subepitelyal hörgüçler (humps)",
-      "B) Subendotelyal elektron-yoğun depozitler",
-      "C) Glomerüler bazal membranda lamelasyon ve 'sepet örgüsü' (basket-weave) görünümü",
-      "D) Podosit ayak çıkıntılarında izole silinme",
-      "E) Lamina densada homojen kurşun kalem tarzı şerit depozit"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Hematüri, sensörinöral işitme kaybı ve anterior lentikonus klasik Alport sendromu triadıdır. Alport sendromunda elektron mikroskobunda lamina densanın katmanlara ayrılması ve düzensiz kalınlaşıp incelmesiyle oluşan 'sepet örgüsü' (basket-weave) görünümü patognomoniktir."
-  },
-  {
-    "id": "prac-nefr-023",
-    "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
-    "slideNumber": 23,
-    "slideTitle": "Glomerülonefritlerde Kompleman Kinetiği ve İmmünfloresan Ayırıcı Tanı Atlası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Oligürik nefritik sendrom tablosuyla başvuran 28 yaşındaki bir erkek hastanın laboratuvar incelemesinde serum C3 ve C4 düzeyleri tamamen normal sınırlarda saptanıyor. Bu hastada ayırıcı tanıda aşağıdaki hastalıklardan hangisi öncelikle DIŞLANMALIDIR (en az olasıdır)?",
-    "options": [
-      "A) IgA nefropatisi",
-      "B) Goodpasture sendromu (Anti-GBM)",
-      "C) Granülomatoz polianjitis (Wegener)",
-      "D) Membranoproliferatif glomerülonefrit Tip I",
-      "E) Mikroskopik polianjitis"
-    ],
-    "correctAnswer": 3,
-    "explanation": "MPGN Tip I klasik kompleman yolağını aktive ederek daima serum C3 ve C4 düzeylerinde belirgin düşüşe (hipokomplementemi) yol açar. Kompleman düzeylerinin normal olması durumunda MPGN Tip I öncelikle dışlanmalıdır; IgA nefropatisi, Goodpasture ve ANCA vaskülitlerinde ise kompleman normaldir."
-  },
-  {
-    "id": "prac-nefr-024",
-    "deckId": "learn-glomeruler-hastaliklar-nefritik",
-    "deckTitle": "Glomerüler Hastalıklar: Nefritik Sendrom Patolojisi (APSGN, RPGN, IgA Nefropatisi ve MPGN)",
-    "slideNumber": 24,
-    "slideTitle": "Nefritik Sendrom Büyük Klinik Sentezi, Karşılaştırma Matrisi ve Sınav Kodları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki glomerüler hastalık ve immünfloresan mikroskopi eşleştirmelerinden hangisi YANLIŞTIR?",
-    "options": [
-      "A) Goodpasture sendromu - Glomerüler bazal membran boyunca kesintisiz lineer IgG birikimi",
-      "B) Akut poststreptokoksik GN - Kapiller duvarda kaba granüler yıldızlı gökyüzü C3 birikimi",
-      "C) IgA nefropatisi - Glomerül mezangiyumunda baskın granüler IgA ve C3 depolanması",
-      "D) Granülomatoz polianjitis (Wegener) - Kapiller duvarda yoğun subepitelyal spike and dome IgG birikimi",
-      "E) Lupus nefriti Sınıf IV - Kapiller duvar ve mezangiyumda full-house (IgG, IgA, IgM, C3, C1q) birikimi"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Granülomatoz Polianjitis (GPA / Wegener), Tip III pauci-immün kresentik glomerülonefrittir; immünfloresanda belirgin immün kompleks veya antikor birikimi İZLENMEZ (negatiftir). 'Subepitelyal spike and dome' görünümü ise Membranöz Nefropatinin bulgusudur."
-  },
-  {
-    "id": "prac-tub-001",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Tübülointerstisyel Böbrek Hastalıkları: Genel Çerçeve ve Sınıflama",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik ve laboratuvar bulgularından hangisi bir primer glomerülonefritten ziyade tübülointerstisyel nefriti destekler?",
-    "options": [
-      "A) 24 saatlik idrarda 5 gram selektif albüminüri",
-      "B) İdrar sedimentinde dismorfik eritrositler ve eritrosit silindirleri",
-      "C) İdrar konsantrasyon yeteneğinde bozulmaya bağlı erken poliüri ve noktüri",
-      "D) Yüzde ve göz kapaklarında yaygın anazarka tipi ödem",
-      "E) Serumda kompleman C3 ve C4 düzeylerinin aşırı düşmesi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Tübül epitelinin medüller konsantrasyon mekanizması hasar gördüğünde en erken bulgu idrarı konsantre edememe (izostenüri), poliüri ve noktüridir. Masif albüminüri ve eritrosit silindirleri glomerül hasarına aittir."
-  },
-  {
-    "id": "prac-tub-002",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Akut Tübüler Hasar / Nekroz (ATH / ATN): İskemik vs Nefrotoksik Tipler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Septik şok tablosunda yoğun bakımda izlenen hastada ani gelişen oligüri sonrası yapılan idrar mikroskopisinde 'çamur rengi granüler silindirler' (muddy brown casts) saptanıyor. En olası tanı hangisidir?",
-    "options": [
-      "A) Akut poststreptokokkal glomerülonefrit",
-      "B) İskemik akut tübüler hasar / nekroz",
-      "C) Minimal değişiklik hastalığı",
-      "D) Üriner sistem taş obstrüksiyonu",
-      "E) Renal ven trombozu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Şok ve ağır hipotansiyon zemininde çamur rengi granüler silindirlerin izlenmesi iskemik Akut Tübüler Hasarın (ATH/ATN) klasik göstergesidir."
-  },
-  {
-    "id": "prac-tub-003",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Akut Piyelonefrit: Etyoloji ve Enfeksiyon Yolları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Toplum kökenli akut piyelonefrit olgularının %85'inden sorumlu olan ve böbrek toplayıcı kanallarına P-fimbriyalarıyla tutunan en sık mikroorganizma hangisidir?",
-    "options": [
-      "A) Proteus mirabilis",
-      "B) Klebsiella pneumoniae",
-      "C) Uropatojenik Escherichia coli (UPEC)",
-      "D) Pseudomonas aeruginosa",
-      "E) Staphylococcus saprophyticus"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Üropatojenik E. coli (UPEC) akut piyelonefritin açık ara en sık etkenidir ve P-fimbriyaları ile renal epitelyal reseptörlere bağlanır."
-  },
-  {
-    "id": "prac-tub-004",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Akut Piyelonefrit Morfolojisi: Süpüratif İnflamasyon ve Mikroabseler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Ateş, titreme, dizüri ve sağ yan ağrısı olan 30 yaşındaki bir kadında yapılan idrar mikroskopisinde sistiti ekarte ettirip kesin Akut Piyelonefrit tanısı koyduran bulgu hangisidir?",
-    "options": [
-      "A) Bol lökosit ve bakteri saptanması",
-      "B) Pozitif lökosit esteraz testi",
-      "C) İdrar sedimentinde lökosit silindirleri (WBC casts) görülmesi",
-      "D) İdrar kültüründe 10^5 koloni E. coli üremesi",
-      "E) Mikroskopik hematüri varlığı"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Lökosit silindirleri nötrofillerin böbrek tübüllerinde Tamm-Horsfall proteini ile silindir kalıbı oluşturmasıyla meydana gelir ve enfeksiyonun böbrek parankiminde olduğunu (piyelonefrit) kanıtlar."
-  },
-  {
-    "id": "prac-tub-005",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Akut Piyelonefritin Ağır Komplikasyonları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik durumlardan hangisi akut piyelonefrit seyrinde Renal Papiller Nekroz gelişimi açısından en yüksek risk faktörünü oluşturur?",
-    "options": [
-      "A) Genç yaşta gebelik",
-      "B) Kontrolsüz Diabetes Mellitus",
-      "C) Minimal değişiklik hastalığı",
-      "D) İzole kalsiyum taşları",
-      "E) Basit böbrek kisti"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Renal papiller nekrozun açık ara en sık görüldüğü klinik durum Diabetes Mellitus'tur (diyabetik mikroanjiyopati + enfeksiyon kombinasyonu)."
-  },
-  {
-    "id": "prac-tub-006",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Kronik Piyelonefrit ve Reflü Nefropatisi: Patogenez ve Skar Dağılımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik piyelonefritte kaba kortikal parankimal skarların ve kaliks küntleşmesinin en sık böbreğin üst ve alt kutuplarında (polar) yerleşmesinin temel anatomik nedeni nedir?",
-    "options": [
-      "A) Polar bölgelerde kan akımının daha fazla olması",
-      "B) Üst ve alt kutuplardaki bileşik kaliks papillalarının intrarenal reflüye izin veren morfolojisi",
-      "C) Glomerüllerin sadece kutuplarda yer alması",
-      "D) Polar bölgelerde kapsülün olmaması",
-      "E) Lenfatik drenajın kutuplarda tıkalı olması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Böbreğin üst ve alt kutuplarındaki bileşik kaliksler düzleşmiş veya konkav papillaya sahiptir; bu anatomik yapı idrarın toplayıcı kanallara geri kaçmasına (intrarenal reflü) izin vererek polar skarlara yol açar."
-  },
-  {
-    "id": "prac-tub-007",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Kronik Piyelonefrit Mikroskopisi: Tübüler 'Tiroidizasyon' ve İnterstisyel Fibrozis",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Böbrek biyopsisinde tübüllerin yer yer atrofiye uğradığı, bazı alanlarda ise dilate tübüllerin homojen pembe kolloid benzeri materyalle dolarak tiroid dokusuna benzer görünüm ('tiroidizasyon') oluşturduğu saptanan hastada en olası tanı hangisidir?",
-    "options": [
-      "A) Akut poststreptokokkal GN",
-      "B) Kronik piyelonefrit",
-      "C) Minimal değişiklik hastalığı",
-      "D) Membranöz nefropati",
-      "E) Akut interstisyel nefrit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Böbrek parankiminde tübüllerin dilate olup pembe silindirlerle dolması sonucu oluşan 'tiroidizasyon' manzarası Kronik Piyelonefrit için karakteristiktir."
-  },
-  {
-    "id": "prac-tub-008",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "Ksantogranülamatöz Piyelonefrit (XPN): Proteus, Taş ve Kanser Taklitçisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Renal pelviste büyük bir staghorn taş bulunan hastada BT'de böbrek parankimini harap eden sarı-turuncu kitle lezyonları saptanıyor. Biyopside bol miktarda lipid yüklü köpüksü histiyositler izleniyor. Renal karsinomu taklit eden bu antite hangisidir?",
-    "options": [
-      "A) Malakoplaki",
-      "B) Ksantogranülamatöz piyelonefrit",
-      "C) Renal onkositoma",
-      "D) Anjiyomiyolipom",
-      "E) Tuberoskleroz böbreği"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Staghorn taş zemininde sarı-turuncu nodüller ve köpüksü makrofaj infiltrasyonu ile giden ve RCC'yi taklit eden antite Ksantogranülamatöz Piyelonefrittir (XPN)."
-  },
-  {
-    "id": "prac-tub-009",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "Malakoplaki: Michaelis-Gutmann Cisimcikleri ve Makrofaj Lizozom Kusuru",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik üriner enfeksiyonu olan bir hastanın mesane mukozasından alınan biyopside, histiyosit sitoplazmalarında Von Kossa ve demir boyası ile boyanan konsantrik kalsifiye 'Michaelis-Gutmann cisimcikleri' saptanıyor. Tanı nedir?",
-    "options": [
-      "A) Ksantogranülamatöz sistit",
-      "B) Malakoplaki",
-      "C) Şistozomiyazis",
-      "D) Ürotelyal karsinom in situ",
-      "E) Folliküler sistit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Von Kossa pozitif Michaelis-Gutmann cisimcikleri makrofajların sindiremediği bakteri artıklarının mineralizasyonuyla oluşur ve Malakoplakinin patognomonik lezyonudur."
-  },
-  {
-    "id": "prac-tub-010",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 10,
-    "slideTitle": "Akut İlaç İlişkili İnterstisyel Nefrit (AİN): İmmünopatogenez",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Pnömoni tedavisi için ampisilin başlanan hastada 10 gün sonra kreatinin yükselmesi saptanıyor. Bu durumun ilacın doza bağlı nefrotoksisitesi değil, immün hipersensitivite aracılı Akut İnterstisyel Nefrit olduğunu kanıtlayan özellik hangisidir?",
-    "options": [
-      "A) Hasarın sadece ilacın çok yüksek kan seviyelerinde ortaya çıkması",
-      "B) İlacın dozuyla ilişkisiz olması ve küçük bir dozda bile reaksiyonun tetiklenebilmesi",
-      "C) Böbrek boyutlarının küçülmüş olması",
-      "D) Glomerüllerde tel halka lezyonlarının bulunması",
-      "E) İdrarda masif 10 gram albüminüri saptanması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Akut interstisyel nefrit immünolojik bir hipersensitivite (alerji) reaksiyonu olduğundan dozdan bağımsızdır; ilacın minimal dozu dahi reaksiyonu başlatabilir."
-  },
-  {
-    "id": "prac-tub-011",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 11,
-    "slideTitle": "Akut İnterstisyel Nefrit: Klinik Triad ve Hansel Boyası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Yeni bir antibiyotik tedavisi başlandıktan 12 gün sonra ateşi çıkan, vücudunda makülopapüler döküntü beliren ve kreatinini yükselen hastada Akut İnterstisyel Nefrit tanısını desteklemek için idrarda eozinofilleri gösteren boya hangisidir?",
-    "options": [
-      "A) Ziehl-Neelsen boyası",
-      "B) Hansel boyası",
-      "C) Kongo kırmızısı",
-      "D) Prusya mavisi",
-      "E) Von Kossa boyası"
-    ],
-    "correctAnswer": 1,
-    "explanation": "İdrar sedimentindeki eozinofil lökositleri göstermek için en hassas boyama yöntemi Hansel boyasıdır (Wright boyasına göre çok daha üstündür)."
-  },
-  {
-    "id": "prac-tub-012",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 12,
-    "slideTitle": "AİN Morfolojisi: İnterstisyel Eozinofiller, Tubulit ve Non-Nekrotizan Granülomlar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Akut İnterstisyel Nefrit tanılı bir hastanın böbrek biyopsisinde interstisyel alanda aşağıdaki enflamatuar hücrelerden hangisinin belirgin artışı tanıyı en çok destekler?",
-    "options": [
-      "A) Nötrofiller",
-      "B) Eozinofiller ve T lenfositler",
-      "C) Mast hücreleri ve bazofiller",
-      "D) Yalnızca B lenfositler",
-      "E) Multinükleer osteoklastlar"
-    ],
-    "correctAnswer": 1,
-    "explanation": "AİN histopatolojisinde interstisyel ödemle birlikte en karakteristik infiltrat T lenfositler ve eozinofil lökositlerdir."
-  },
-  {
-    "id": "prac-tub-013",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 13,
-    "slideTitle": "NSAİİ Nefropatisi: Çift Patoloji (AİN + Minimal Değişiklik Benzeri Nefrotik Sendrom)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kronik eklem ağrıları nedeniyle yoğun ibuprofen (NSAİİ) kullanan 60 yaşındaki bir hastada akut böbrek yetmezliği ve 6 g/gün masif proteinüri saptanıyor. Biyopside tübülointerstisyel nefrit ve elektron mikroskobunda podosit ayaksı çıkıntılarında yaygın silinme izleniyor. Bu klinik tabloyu açıklayan etken hangisidir?",
-    "options": [
-      "A) Penisilin toksisitesi",
-      "B) NSAİİ ilişkili nefropati",
-      "C) Streptokok süperantijeni",
-      "D) Kontrast nefropatisi",
-      "E) Sisplatin toksisitesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "NSAİİ'ler hem interstisyumu hasarlayarak AİN oluşturabilir hem de podosit ayaksı çıkıntılarını silerek nefrotik düzeyde proteinüriye (Minimal Değişiklik benzeri tablo) yol açabilir."
-  },
-  {
-    "id": "prac-tub-014",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 14,
-    "slideTitle": "Analjezik Nefropatisi: Kronik Toksisite, Papiller Nekroz ve Ürotelyal Malignite",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "30 yıldır kronik baş ağrısı nedeniyle fenasetin ve aspirin içeren analjezik karışımları tüketen bir kadında papiller nekroz zemininde gelişen böbrek yetmezliği saptanıyor. Bu hastada uzun dönemde hangi kanser türünün gelişme riski en yüksektir?",
-    "options": [
-      "A) Renal hücreli karsinom (berrak hücreli)",
-      "B) Renal pelvis kaynaklı ürotelyal (transizyonel) karsinom",
-      "C) Wilms tümörü",
-      "D) Renal anjiyosarkom",
-      "E) Prostat adenokarsinomu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Fenasetin içeren analjeziklerin kronik kullanımı renal toplayıcı sistemde (pelvis ve üreter) Ürotelyal Karsinom gelişme riskini belirgin derecede artırır."
-  },
-  {
-    "id": "prac-tub-015",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 15,
-    "slideTitle": "Miyelom Böbreği (Hafif Zincir Cast Nefropatisi): Patoloji ve Dev Hücre Reaksiyonu",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Sedimentasyon hızı çok yüksek, anemisi ve hiperkalsemisi olan 68 yaşındaki bir hastada gelişen böbrek yetmezliği nedeniyle yapılan biyopside tübüllerde kırıklar içeren eozinofilik silindirler ve çevresinde yabancı cisim dev hücre reaksiyonu saptanıyor. Tanı nedir?",
-    "options": [
-      "A) Akut poststreptokokkal GN",
-      "B) Miyelom böbreği (Hafif zincir cast nefropatisi)",
-      "C) Membranöz nefropati",
-      "D) Diyabetik glomerüloskleroz",
-      "E) Alport sendromu"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bence-Jones proteinlerinin tübüllerde oluşturduğu kırılgan silindirler ve multinükleer dev hücre reaksiyonu Multipl Miyelomun klasik böbrek tutulumudur (Cast Nefropatisi)."
-  },
-  {
-    "id": "prac-tub-016",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 16,
-    "slideTitle": "Ürat Nefropatisi ve Gut Böbreği",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Akut lösemi nedeniyle kemoterapi başlanan hastada saatler içinde anüri gelişiyor. İdrar mikroskopisinde bol miktarda iğne şeklinde ürik asit kristalleri izleniyor. Bu patolojide tübülleri tıkayan primer mekanizma hangisidir?",
-    "options": [
-      "A) Glomerüllerde subepitelyal hörgüçlerin birikmesi",
-      "B) Asidik idrar ortamında toplayıcı kanallarda ürik asit kristallerinin masif çökelmesi",
-      "C) Böbrek veninin trombozla tıkanması",
-      "D) Podosit ayaksı çıkıntılarının silinmesi",
-      "E) İnterstisyumda eozinofilik apse odaklarının oluşması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Tümör lizis sendromunda pürin yıkımı sonucu aşırı üretilen ürik asit asidik distal toplayıcı kanallarda kristalleşerek lümeni mekanik olarak tıkar ve akut böbrek hasarı yapar."
-  },
-  {
-    "id": "prac-tub-017",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 17,
-    "slideTitle": "Nefrokalsinozis: Hiperkalsemiye Bağlı Tübüler Kireçlenme",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Primer hiperparatiroidizm tanısı alan bir hastada bilateral böbrek medullasında yaygın kalsiyum depolanması (nefrokalsinozis) saptanıyor. Bu patolojik kalsifikasyon tipi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Distrofik kalsifikasyon",
-      "B) Metastatik kalsifikasyon",
-      "C) Hyalin dejenerasyonu",
-      "D) Amiloidoz",
-      "E) Fibrinoid nekroz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Serum kalsiyumunun yüksek olduğu zeminlerde normal dokularda kalsiyum birikmesi 'Metastatik Kalsifikasyon' olarak adlandırılır (Primer hiperparatiroidizm klasik örneğidir)."
-  },
-  {
-    "id": "prac-tub-018",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 18,
-    "slideTitle": "Ağır Metal ve Toksin Nefropatileri: Kurşun, Kadmiyum ve Balkan Nefropatisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Akü imalatında çalışan bir işçide böbrek yetmezliği, gut krizleri ve hipertansiyon saptanıyor. Biyopside proksimal tübül epitel hücre çekirdeklerinde asido-rezistan eozinofilik intranükleer inklüzyonlar izleniyor. Sorumlu ağır metal hangisidir?",
-    "options": [
-      "A) Cıva",
-      "B) Kadmiyum",
-      "C) Kurşun",
-      "D) Arsenik",
-      "E) Altın"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Kurşun nefropatisinde proksimal tübül epitel çekirdeklerinde kurşun-protein komplekslerinden oluşan asido-rezistan inklüzyonlar karakteristiktir; satürnin gut eşlik eder."
-  },
-  {
-    "id": "prac-tub-019",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 19,
-    "slideTitle": "IgG4 İlişkili Tübülointerstisyel Nefrit",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Retroperitoneal kitle ve otoimmün pankreatit öyküsü olan 58 yaşındaki hastada gelişen böbrek yetmezliği biyopsisinde interstisyumda 'storiform fibrozis', obliteratif flebit ve bol miktarda IgG4 pozitif plazma hücreleri izleniyor. Tanı nedir?",
-    "options": [
-      "A) Akut poststreptokokkal GN",
-      "B) IgG4 ilişkili tübülointerstisyel nefrit",
-      "C) Membranöz nefropati",
-      "D) Sarkoidoz böbreği",
-      "E) Malakoplaki"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Storiform fibrozis, obliteratif flebit ve IgG4+ plazma hücre infiltrasyonu IgG4 ilişkili tubulointerstisyel nefritin patognomonik üçlüsüdür."
-  },
-  {
-    "id": "prac-tub-020",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 20,
-    "slideTitle": "Tübülointerstisyel Hastalıklarda İdrar Sedimenti Haritası",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki idrar mikroskopisi bulgusu ve ilişkili olduğu tübülointerstisyel hastalık eşleştirmelerinden hangisi yanlıştır?",
-    "options": [
-      "A) Lökosit silindirleri — Akut piyelonefrit",
-      "B) Çamur rengi granüler silindirler — Akut tübüler nekroz (ATN)",
-      "C) İdrarda eozinofiller (Hansel+) — Akut ilaç ilişkili interstisyel nefrit",
-      "D) Eritrosit silindirleri — Minimal değişiklik hastalığı",
-      "E) Kırık silindirler ve Bence-Jones — Multipl miyelom"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Eritrosit silindirleri nefritik sendromun (APSGN, RPGN) bulgusudur; Minimal Değişiklik Hastalığında idrar hücresiz (bland) olup eritrosit silindiri içermez."
-  },
-  {
-    "id": "prac-tub-021",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Tübülointerstisyel Nefritlerde Biyopsi Endikasyonları ve Terapötik Yaklaşım",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Akut ilaç ilişkili interstisyel nefrit (AİN) tanısı düşünülen bir hastada tedavi yönetiminde atılması gereken İLK ve EN KRİTİK basamak aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Acil hemodiyaliz kateteri takılması",
-      "B) Şüpheli ilacın derhal kesilmesi",
-      "C) Yüksek doz siklofosfamid başlanması",
-      "D) Çift taraflı perkütan nefrostomi açılması",
-      "E) Hastaya geniş spektrumlu aminoglikozid başlanması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "AİN yönetiminde ilk basamak şüpheli tetikleyici ilacın derhal kesilmesidir; olguların önemli bir kısmı ilacın kesilmesiyle kendiliğinden düzelir."
-  },
-  {
-    "id": "prac-tub-022",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Akut vs Kronik Piyelonefrit: Patoloji Karşılaştırma Matrisi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki patolojik bulgulardan hangisi akut piyelonefritten ziyade KRONİK piyelonefrit tanısını kesin olarak destekler?",
-    "options": [
-      "A) Korteks yüzeyinde etrafı hiperemik küçük sarı mikroabseler",
-      "B) İnterstisyumda nötrofil infiltrasyonu",
-      "C) Böbrek kutuplarında kaba U-skarlar ve altındaki kalikslerin küntleşmesi",
-      "D) İdrarda lökosit silindirleri saptanması",
-      "E) Renal pelviste pürülan eksüda birikimi"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Böbrek kutuplarında kaba U-şekilli skarlar ve altındaki kalikslerin deforme olup küntleşmesi Kronik Piyelonefritin (Reflü nefropatisi) ayırt edici makroskobik bulgusudur."
-  },
-  {
-    "id": "prac-tub-023",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 23,
-    "slideTitle": "Tübülointerstisyel Hastalıklarda Ayırıcı Tanı ve Vaka Algoritması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik tablolardan hangisinde böbrek biyopsisinde distal tübüllerde kırılgan eozinofilik silindirler ve çevresinde yabancı cisim dev hücre reaksiyonu izlenmesi beklenir?",
-    "options": [
-      "A) Akut poststreptokokkal GN",
-      "B) Bence-Jones proteinürisi olan Multipl Miyelom hastası",
-      "C) Gentamisin kullanan septik hasta",
-      "D) E. coli ürosepsisi olan diyabetik hasta",
-      "E) FMF zemininde amiloidoz gelişen hasta"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Multipl miyelomda hafif zincirlerin toplayıcı tübüllerde birikmesiyle oluşan kırılgan silindirler ve multinükleer dev hücre reaksiyonu patognomoniktir."
-  },
-  {
-    "id": "prac-tub-024",
-    "deckId": "learn-tubulointerstisyel-hastaliklar",
-    "deckTitle": "Tübülointerstisyel Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 24,
-    "slideTitle": "Ders 22 Kapsamlı Sentezi: Tübülointerstisyel Patolojinin Klinik Kodları",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki klinik tablolardan hangisinde böbreğin üst ve alt kutuplarında derin U-şekilli skarlar, kaliks küntleşmesi ve mikroskopta tiroidizasyon izlenmesi beklenir?",
-    "options": [
-      "A) Akut ilaç ilişkili interstisyel nefrit",
-      "B) Vezikoüreteral reflüye bağlı Kronik Piyelonefrit",
-      "C) Minimal değişiklik hastalığı",
-      "D) Goodpasture sendromu",
-      "E) Akut ürik asit nefropatisi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kutup bölgelerinde (polar) U-şekilli kaba skarlar, kaliks deformasyonu ve mikroskopide tiroidizasyon Kronik Piyelonefritin (özellikle reflü nefropatisinin) patognomonik triadıdır."
-  },
-  {
-    "id": "prac-vsk-001",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 1,
-    "slideTitle": "Vasküler Böbrek Hastalıkları: Genel Giriş ve Patofizyolojik Çerçeve",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Renal damar yatağının primer lezyonları sonucunda gelişen parankimal hasarda glomerüllerden önce etkilenen ve iskemik atrofiye en duyarlı renal kompartman hangisidir?",
-    "options": [
-      "A) Podosit slit diyaframları",
-      "B) Proksimal tübüller ve Henle çıkan kalın kolu",
-      "C) Bowman kapsülü parietali",
-      "D) Mesane boynu",
-      "E) Renal pelvis mukozası"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Tübül epitel hücreleri yüksek metabolik ve aktif transport gereksinimleri nedeniyle renal vasküler iskemiye en duyarlı yapılardır."
-  },
-  {
-    "id": "prac-vsk-002",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 2,
-    "slideTitle": "Benign Nefroskleroz: Hyalen Arteriyoloskleroz ve 'Deri Manzarası' Böbrek",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "25 yıldır esansiyel hipertansiyonu olan 65 yaşındaki hastanın otopside böbrek yüzeyinde ince granüler 'tabaklanmış deri' (leather grain) görünümü izleniyor. Mikroskopta afferent arteriyollerde saptanması beklenen karakteristik vasküler lezyon hangisidir?",
-    "options": [
-      "A) Fibrinoid nekroz ve tromboz",
-      "B) Hyalen arteriyoloskleroz",
-      "C) Konsantrik soğan zarı hiperplazisi",
-      "D) Nekrotizan vaskülit ve lökositoklazi",
-      "E) Amiloid depolanması"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kronik benign hipertansiyonda afferent arteriyol duvarında plazma proteini sızıntısı ve matriks artışıyla karakterize 'hyalen arteriyoloskleroz' gelişir."
-  },
-  {
-    "id": "prac-vsk-003",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 3,
-    "slideTitle": "Malign Hipertansiyon ve Malign Nefroskleroz: Fibrinoid Nekroz ve Soğan Zarı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kan basıncı 220/130 mmHg ölçülen, papilödem ve akut oligürik böbrek yetmezliği gelişen hastanın böbrek kesitinde kortekste 'pire ısırığı' tarzı peteşiyel kanamalar, biyopside ise arteriyollerde konsantrik laminer 'soğan zarı' lezyonu ve fibrinoid nekroz saptanıyor. Tanı nedir?",
-    "options": [
-      "A) Benign nefroskleroz",
-      "B) Malign nefroskleroz",
-      "C) Minimal değişiklik hastalığı",
-      "D) Alport sendromu",
-      "E) Akut interstisyel nefrit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Diyastolik >120 mmHg, papilödem, pire ısırığı peteşileri, fibrinoid nekroz ve damarlarda konsantrik soğan zarı lezyonu Malign Nefrosklerozun klasik göstergeleridir."
-  },
-  {
-    "id": "prac-vsk-004",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 4,
-    "slideTitle": "Renal Arter Stenozu ve Renovasküler Hipertansiyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "28 yaşındaki bir kadında aniden başlayan dirençli hipertansiyon araştırılırken renal anjiyografide sağ renal arterin orta segmentinde tipik 'tespih tanesi' (string of beads) görünümü saptanıyor. En olası tanı hangisidir?",
-    "options": [
-      "A) Aterosklerotik renal arter stenozu",
-      "B) Fibromusküler displazi",
-      "C) Poliarteritis nodoza",
-      "D) Renal ven trombozu",
-      "E) Malign nefroskleroz"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Genç kadınlarda renal arterin orta-distalinde 'tespih tanesi' görüntüsü oluşturan darlık Fibromusküler Displaziye (özellikle medial fibroplazi) bağlıdır."
-  },
-  {
-    "id": "prac-vsk-005",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 5,
-    "slideTitle": "Trombotik Mikroanjiyopatiler (TMA): HÜS ve TTP Patogenezi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Kanlı ishal atağından 5 gün sonra solukluk, anüri ve hematüri gelişen 4 yaşındaki bir çocuğun periferik yaymasında çok sayıda şistosit (miğfer hücresi) ve trombositopeni saptanıyor. Bu tabloda endotel hasarını başlatan en olası patojen ve toksin hangisidir?",
-    "options": [
-      "A) Clostridium difficile enterotoksini",
-      "B) Shiga toksini üreten Escherichia coli O157:H7",
-      "C) Salmonella typhi endotoksini",
-      "D) Vibrio cholerae kolera toksini",
-      "E) Staphylococcus aureus enterotoksin B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kanlı ishal sonrası gelişen tipik HÜS tablosunun en sık nedeni E. coli O157:H7 suşunun salgıladığı Shiga toksinidir (STEC)."
-  },
-  {
-    "id": "prac-vsk-006",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 6,
-    "slideTitle": "Kistik Böbrek Hastalıkları: Genel Giriş ve Sınıflama",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Aşağıdaki kistik böbrek hastalıklarından hangisi uzun süreli hemodiyaliz tedavisi gören kronik son dönem böbrek yetmezliği hastalarında sekonder olarak gelişir ve renal karsinom riskini artırır?",
-    "options": [
-      "A) Otozomal dominant polikistik böbrek hastalığı",
-      "B) Medüller sünger böbrek",
-      "C) Edinsel (diyaliz ilişkili) kistik böbrek hastalığı",
-      "D) Nefronofitizis",
-      "E) Basit kortikal kist"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Yıllarca hemodiyaliz alan son dönem böbrek hastalarında edinsel kistler gelişir ve bu kistlerin epitelinden RCC gelişme riski yükselir."
-  },
-  {
-    "id": "prac-vsk-007",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 7,
-    "slideTitle": "Otozomal Dominant Polikistik Böbrek Hastalığı (ADPKD): Genetik ve Patogenez",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Otozomal Dominant Polikistik Böbrek Hastalığının (ADPKD) en sık görülen ve son dönem böbrek yetmezliğine daha erken yaşta ilerleyen formundan sorumlu gen ve kromozom lokalizasyonu hangisidir?",
-    "options": [
-      "A) PKHD1 — Kromozom 6",
-      "B) PKD1 — Kromozom 16",
-      "C) PKD2 — Kromozom 4",
-      "D) VHL — Kromozom 3",
-      "E) WT1 — Kromozom 11"
-    ],
-    "correctAnswer": 1,
-    "explanation": "ADPKD olgularının %85'inden sorumlu olan ve erken böbrek yetmezliğine yol açan mutasyon kromozom 16'daki PKD1 genindedir (Polisistin-1)."
-  },
-  {
-    "id": "prac-vsk-008",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 8,
-    "slideTitle": "ADPKD Morfolojisi: Devasa Böbrekler ve Kistlerin Yayılımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Otopside her iki böbreğin 3'er kilogram ağırlığa ulaştığı, tüm nefron segmentlerinden köken alan sayısız kistle kaplı olduğu ve kistler arasında parankimin bası atrofisine uğradığı saptanıyor. Tanı nedir?",
-    "options": [
-      "A) Medüller sünger böbrek",
-      "B) Otozomal dominant polikistik böbrek hastalığı",
-      "C) Otozomal resesif polikistik böbrek hastalığı",
-      "D) Nefronofitizis",
-      "E) Bilateral renal onkositoma"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bilateral kilogramlarca ağırlığa ulaşan devasa kistik böbrekler Otozomal Dominant Polikistik Böbrek Hastalığının (ADPKD) klasik makroskobik görünümüdür."
-  },
-  {
-    "id": "prac-vsk-009",
-    "deckId": "learn-vaskuler-kistik-bobrek-hastaliklari",
-    "deckTitle": "Vasküler ve Kistik Böbrek Hastalıkları Patolojisi",
-    "slideNumber": 9,
-    "slideTitle": "ADPKD Ekstrarenal Bulguları: Anevrizmalar ve Kistler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": "Bilateral polikistik böbrek hastalığı tanısıyla izlenen 42 yaşındaki bir hastada ani gelişen senkop ve şiddetli ense sertliği ile seyreden baş ağrısı tablosunda en olası serebrovasküler komplikasyon hangisidir?",
-    "options": [
-      "A) İntraserebral hematom",
-      "B) Willis poligonu Berry anevrizma rüptürüne bağlı subaraknoid kanama",
-      "C) Karotis arter diseksiyonu",
-      "D) Sagittal sinüs trombozu",
-      "E) Epidural hematom"
-    ],
-    "correctAnswer": 1,
-    "explanation": "ADPKD'li hastaların %10-20'sinde intrakraniyal berry anevrizması bulunur ve rüptürü klasik olarak subaraknoid kanama tablosu oluşturur."
   }
 ]

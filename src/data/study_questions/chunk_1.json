@@ -1,738 +1,649 @@
 [
   {
-    "id": "urol-luts-03",
+    "id": "q-deck-urinary-obstruction-1",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 1,
-    "slideTitle": "Üriner Obstrüksiyon: Temel Tanımlar, Terminoloji ve Kapsam",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Üriner Obstrüksiyon ve Terminolojik Temeller",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Üriner sistem patolojilerinde kullanılan terminoloji ile ilgili olarak; toplayıcı sistemin (renal pelvis ve kaliksler) dilatasyonunu ifade eden anatomik terim ile bu duruma ikincil böbrek parankiminde gelişen fonksiyonel ve hücresel hasarı tanımlayan terim hangi seçenekte doğru eşleştirilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "İdrar akış hızında azalma (Zayıf akım)"
-      },
-      {
-        "key": "B",
-        "text": "İdrarı tam boşaltamama hissi"
-      },
-      {
-        "key": "C",
-        "text": "İdrar sıklığı / Sık idrara çıkma (Pollaküri / Frequency)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "İşeme başlangıcında tutukluk (Hesitancy)"
-      },
-      {
-        "key": "E",
-        "text": "Kesintili işeme (Intermittency)"
-      }
+      "A) Obstrüktif nefropati — Obstrüktif üropati",
+      "B) Hidronefroz — Obstrüktif nefropati",
+      "C) Kaliektazi — Vezikoüreteral reflü",
+      "D) Obstrüktif üropati — Pyelonefrit",
+      "E) Hidroüreter — Glomerülonefrit"
     ],
-    "correctAnswer": "C",
-    "explanation": "Alt üriner sistem semptomları (LUTS); Depolama (irritatif), İşeme (obstrüktif) ve İşeme sonrası semptomlar olarak üçe ayrılır. Pollaküri (frequency), noktüri, urgency (ani sıkışma) ve sıkışma tipi inkontinans depolama semptomlarıdır. Zayıf akım, hesitancy (duraksama), intermittency (kesintili işeme) ve ıkınarak işeme ise işeme/obstrüksiyon semptomlarıdır."
+    "correctAnswer": 1,
+    "explanation": "Toplayıcı sistemin (pelvis ve kaliksler) anatomik genişlemesi 'Hidronefroz' olarak adlandırılır. Bu genişleme ve artan basınca ikincil olarak gelişen renal parankim (tübül ve interstisyum) hasarı ve fonksiyon kaybı ise 'Obstrüktif nefropati' terimiyle tanımlanır. Bu nedenle B seçeneği doğrudur."
   },
   {
-    "id": "urol-bph-path-01",
+    "id": "q-deck-urinary-obstruction-2",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 2,
-    "slideTitle": "Obstrüksiyonun Anatomik ve Klinik Sınıflandırması",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Üriner Obstrüksiyonun Etyolojik Sınıflandırması",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Aşağıdaki klinik tablolardan hangisinde bilateral üst üriner sistem dilatasyonu (bilateral hidroüreteronefroz) ve akut postrenal azotemi gelişme olasılığı en yüksektir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Testosteron"
-      },
-      {
-        "key": "B",
-        "text": "Dihidrotestosteron (DHT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Östrojen"
-      },
-      {
-        "key": "D",
-        "text": "Prolaktin"
-      },
-      {
-        "key": "E",
-        "text": "İnsülin benzeri büyüme faktörü (IGF-1)"
-      }
+      "A) Sağ üreteropelvik bileşkede 6 mm impakte taş",
+      "B) Sol proksimal üreteri çevreleyen idiyopatik retroperitoneal kitle",
+      "C) Mesane boynunu ve prostatik üretrayı tam tıkayan ileri evre prostat karsinomu",
+      "D) Sağ over kistinin sağ üretere tek taraflı basısı",
+      "E) Sol distal üreterde asemptomatik küçük üreterosel"
     ],
-    "correctAnswer": "B",
-    "explanation": "BPH patogenezinde temel androjenik medyatör dihidrotestosterondur (DHT). Testosteron, prostat stromal hücrelerinde bulunan Tip-2 5-alfa redüktaz enzimi ile DHT'ye dönüştürülür. DHT nükleer androjen reseptörlerine bağlanarak büyüme faktörlerinin (FGF, TGF-beta) transkripsiyonunu uyarır ve mesane çıkım obstrüksiyonuna zemin hazırlayan stromal ve epitelyal hiperplaziye yol açar."
+    "correctAnswer": 2,
+    "explanation": "Mesane boynu ve prostatik üretrayı tıkayan lezyonlar infravezikal obstrüksiyona yol açar. Mesane çıkımının tıkanması intravezikal basıncı artırarak her iki üreter orifisini dekompanse eder ve bilateral hidroüreteronefroz ile akut postrenal azotemiye neden olur. Diğer seçenekler tek taraflı (supravezikal) lezyonlardır."
   },
   {
-    "id": "urol-img-05",
+    "id": "q-deck-urinary-obstruction-3",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 3,
-    "slideTitle": "Renal Seviyedeki Obstrüksiyon Etyolojisi",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Renal Düzeydeki Obstrüksiyon Nedenleri",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Uzun yıllardır diabetes mellitus öyküsü olan 58 yaşındaki bir kadın hasta, aniden başlayan şiddetli sağ böğür ağrısı, makroskopik hematüri ve idrarda gri-beyaz doku parçaları düşürme şikayetiyle acil servise başvuruyor. Yapılan kontrassız BT'de sağ renal pelvis çıkımını tıkayan ve hidronefroza yol açan yumuşak doku dansitesinde obstrüktif materyal izleniyor. Bu hastadaki en olası patolojik tanı aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Direkt Üriner Sistem Grafisi (DÜSG)"
-      },
-      {
-        "key": "B",
-        "text": "Kontrassız Helikal / Düşük Doz Bilgisayarlı Tomografi (Taş Protokolü BT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "İntravenöz Pyelografi (IVP)"
-      },
-      {
-        "key": "D",
-        "text": "Baryumlu Üst Gastrointestinal Pasaj Grafisi"
-      },
-      {
-        "key": "E",
-        "text": "Renal Anjiyografi"
-      }
+      "A) Üreteropelvik bileşke darlığı",
+      "B) Nekrotik renal papilla obstrüksiyonu (Papiller nekroz)",
+      "C) Retroperitoneal fibrozis",
+      "D) Posterior üretral valv",
+      "E) Fibröz displazi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Kontrassız Helikal Bilgisayarlı Tomografi (Taş BT), %98'in üzerinde duyarlılık ve özgüllükle üst üriner sistem obstrüksiyonunun, taş varlığının, taş boyutunun, yerleşim yerinin ve sekonder obstrüksiyon bulgularının (üreteral dilatasyon, perinefritik stranding) saptanmasında altın standarttır. İntravenöz kontrast gerektirmez, dakikalar içinde sonuç verir."
+    "correctAnswer": 1,
+    "explanation": "Diyabetik hastalarda medüller mikrovasküler iskemiye bağlı papiller nekroz riski yüksektir. Nekroze olan papilla uçları toplayıcı sisteme dökülür (sloughed papilla), idrarla gri-beyaz doku parçaları şeklinde atılabilir veya renal pelvis çıkımını/üreteri tıkayarak taş koligini andıran akut obstrüksiyona ve hematüriye yol açar. Bu nedenle B seçeneği doğrudur."
   },
   {
-    "id": "urol-img-05-3",
+    "id": "q-deck-urinary-obstruction-4",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 4,
-    "slideTitle": "Üreter Düzeyindeki Obstrüksiyon Etyolojisi (İntrensek & Ekstrensek)",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Üreter Düzeyi Obstrüksiyon Nedenleri I",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Nefrolitiyazis tanısı olan bir hastada üretere düşen bir taşın anatomik olarak takılma ve obstrüksiyona yol açma olasılığının en yüksek olduğu, üreter lümeninin en dar bölgesi aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Direkt Üriner Sistem Grafisi (DÜSG)"
-      },
-      {
-        "key": "B",
-        "text": "Kontrassız Helikal / Düşük Doz Bilgisayarlı Tomografi (Taş Protokolü BT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "İntravenöz Pyelografi (IVP)"
-      },
-      {
-        "key": "D",
-        "text": "Baryumlu Üst Gastrointestinal Pasaj Grafisi"
-      },
-      {
-        "key": "E",
-        "text": "Renal Anjiyografi"
-      }
+      "A) Renal kaliks boynu (infundibulum)",
+      "B) Üreteropelvik bileşke (UPJ)",
+      "C) İliyak damarların üreter tarafından çaprazlandığı pelvik kenar",
+      "D) Üreterovezikal bileşke (UVJ / İntramural üreter)",
+      "E) Lumbal üreterin orta segmenti"
     ],
-    "correctAnswer": "B",
-    "explanation": "Kontrassız Helikal Bilgisayarlı Tomografi (Taş BT), %98'in üzerinde duyarlılık ve özgüllükle üst üriner sistem obstrüksiyonunun, taş varlığının, taş boyutunun, yerleşim yerinin ve sekonder obstrüksiyon bulgularının (üreteral dilatasyon, perinefritik stranding) saptanmasında altın standarttır. İntravenöz kontrast gerektirmez, dakikalar içinde sonuç verir."
+    "correctAnswer": 3,
+    "explanation": "Üreterin lümen çapı boyunca üç fizyolojik darlığı vardır: UPJ, iliyak damar çaprazı ve UVJ. Bunlar arasında lümenin en dar olduğu yer mesane duvarından geçen intramural segment yani üreterovezikal bileşkedir (UVJ). Taşların en sık impakte olduğu yer burasıdır. Bu nedenle D seçeneği doğrudur."
   },
   {
-    "id": "urol-bph-path-01-4",
+    "id": "q-deck-urinary-obstruction-5",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 5,
-    "slideTitle": "Alt Üriner Sistem (Mesane ve Üretra) Obstrüksiyonu Etyolojisi",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Üreter Düzeyi Obstrüksiyon Nedenleri II",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Sırt ve karın ağrısı ile başvuran 52 yaşındaki bir erkek hastanın laboratuvar incelemesinde serum kreatinin düzeyi 3.4 mg/dL bulunuyor. Çekilen kontrastlı batın BT'sinde abdominal aort bifurkasyonu ve iliak damarlar çevresinde retroperitoneal alanda üreterleri saran ve her iki üreteri orta hatta doğru (mediyale) deviye ederek bilateral hidroüreteronefroza neden olan dens bir fibröz plak saptanıyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Testosteron"
-      },
-      {
-        "key": "B",
-        "text": "Dihidrotestosteron (DHT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Östrojen"
-      },
-      {
-        "key": "D",
-        "text": "Prolaktin"
-      },
-      {
-        "key": "E",
-        "text": "İnsülin benzeri büyüme faktörü (IGF-1)"
-      }
+      "A) Retrokaval üreter",
+      "B) İdiyopatik retroperitoneal fibrozis (Ormond hastalığı)",
+      "C) Pelvik lipomatozis",
+      "D) Prune-Belly sendromu",
+      "E) Üreterosel"
     ],
-    "correctAnswer": "B",
-    "explanation": "BPH patogenezinde temel androjenik medyatör dihidrotestosterondur (DHT). Testosteron, prostat stromal hücrelerinde bulunan Tip-2 5-alfa redüktaz enzimi ile DHT'ye dönüştürülür. DHT nükleer androjen reseptörlerine bağlanarak büyüme faktörlerinin (FGF, TGF-beta) transkripsiyonunu uyarır ve mesane çıkım obstrüksiyonuna zemin hazırlayan stromal ve epitelyal hiperplaziye yol açar."
+    "correctAnswer": 1,
+    "explanation": "Abdominal aort çevresinde gelişen, üreterleri dıştan sararak orta hatta doğru (mediyale) çeken ve bilateral üreteral obstrüksiyon ile böbrek yetmezliğine yol açan dens fibröz plak varlığı İdiyopatik Retroperitoneal Fibrozis (Ormond hastalığı) için patognomoniktir. Bu nedenle B seçeneği doğrudur."
   },
   {
-    "id": "urol-luts-03-5",
+    "id": "q-deck-urinary-obstruction-6",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 6,
-    "slideTitle": "Alt Üriner Sistem Obstrüksiyonunda Kompansasyon Evresi",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Mesane ve Mesane Boynu Obstrüksiyonları",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Yetmiş iki yaşındaki bir erkek hasta, hafif idrar yapma zorluğu şikayeti varken gribal enfeksiyon nedeniyle reçetesiz bir soğuk algınlığı ilacı (antihistaminik ve alfa-adrenerjik dekonjestan içeren preparat) kullandıktan sonra aniden hiç idrar yapamama ve şiddetli alt karın ağrısı ile acil servise getiriliyor. Fizik muayenede suprapubik bölgede hassas, matite veren kitle palpe ediliyor. Bu hastada akut idrar retansiyonunu tetikleyen patofizyolojik mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "İdrar akış hızında azalma (Zayıf akım)"
-      },
-      {
-        "key": "B",
-        "text": "İdrarı tam boşaltamama hissi"
-      },
-      {
-        "key": "C",
-        "text": "İdrar sıklığı / Sık idrara çıkma (Pollaküri / Frequency)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "İşeme başlangıcında tutukluk (Hesitancy)"
-      },
-      {
-        "key": "E",
-        "text": "Kesintili işeme (Intermittency)"
-      }
+      "A) Akut tübüler nekroz gelişmesi",
+      "B) İlacın doğrudan renal arter spazmı yapması",
+      "C) Antikolinerjik etkiyle detrüsör kontraksiyonunun baskılanması ve alfa-adrenerjik etkiyle mesane boynu direncinin artması",
+      "D) Üreterovezikal bileşkeye aniden ürik asit taşının oturması",
+      "E) Posterior üretral valvin spazmı"
     ],
-    "correctAnswer": "C",
-    "explanation": "Alt üriner sistem semptomları (LUTS); Depolama (irritatif), İşeme (obstrüktif) ve İşeme sonrası semptomlar olarak üçe ayrılır. Pollaküri (frequency), noktüri, urgency (ani sıkışma) ve sıkışma tipi inkontinans depolama semptomlarıdır. Zayıf akım, hesitancy (duraksama), intermittency (kesintili işeme) ve ıkınarak işeme ise işeme/obstrüksiyon semptomlarıdır."
+    "correctAnswer": 2,
+    "explanation": "BPH zemininde antihistaminiklerin parasempatik (kolinerjik) blokajı detrüsör kasılmasını felç ederken; sempatomimetik dekonjestanlar mesane boynu ve prostatik düz kaslardaki alfa-1 reseptörleri uyararak çıkım direncini artırır. Bu çifte etki akut üriner retansiyona (glob vezikale) yol açar. Bu nedenle C seçeneği doğrudur."
   },
   {
-    "id": "urol-bph-path-01-6",
+    "id": "q-deck-urinary-obstruction-7",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 7,
-    "slideTitle": "Dekompansasyon Evresi: Trabekülasyon, Selül ve Divertiküller",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Üretra Düzeyi Obstrüksiyonları",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Antenatal ultrasonografide 32. gebelik haftasında erkek fetüste belirgin oligohidramniyos, mesane duvarında aşırı kalınlaşma (anahtar deliği / keyhole işareti) ve bilateral ileri derece hidroüreteronefroz saptanıyor. Doğum sonrasında erkek bebeğin acil radyolojik değerlendirmesinde en olası konjenital anomali aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Testosteron"
-      },
-      {
-        "key": "B",
-        "text": "Dihidrotestosteron (DHT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Östrojen"
-      },
-      {
-        "key": "D",
-        "text": "Prolaktin"
-      },
-      {
-        "key": "E",
-        "text": "İnsülin benzeri büyüme faktörü (IGF-1)"
-      }
+      "A) Üreteropelvik bileşke darlığı",
+      "B) Posterior üretral valv (PUV)",
+      "C) Ektopik üreterosel",
+      "D) Medüller sünger böbrek",
+      "E) Fimozis"
     ],
-    "correctAnswer": "B",
-    "explanation": "BPH patogenezinde temel androjenik medyatör dihidrotestosterondur (DHT). Testosteron, prostat stromal hücrelerinde bulunan Tip-2 5-alfa redüktaz enzimi ile DHT'ye dönüştürülür. DHT nükleer androjen reseptörlerine bağlanarak büyüme faktörlerinin (FGF, TGF-beta) transkripsiyonunu uyarır ve mesane çıkım obstrüksiyonuna zemin hazırlayan stromal ve epitelyal hiperplaziye yol açar."
+    "correctAnswer": 1,
+    "explanation": "Erkek fetüste mesane duvar kalınlaşması, dilate posterior üretra ile mesanenin 'anahtar deliği' (keyhole) görünümü vermesi, bilateral hidroüreteronefroz ve oligohidramniyos tablosu konjenital Posterior Üretral Valv (PUV) için tipiktir. Bu nedenle B seçeneği doğrudur."
   },
   {
-    "id": "urol-pod-02",
+    "id": "q-deck-urinary-obstruction-8",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 8,
-    "slideTitle": "Üst Üriner Sistem Obstrüksiyonu: Üreter Peristaltizm Dinamiği",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Yaşa ve Cinsiyete Göre Obstrüksiyon Etyolojisi",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Aşağıdaki eşleştirmelerden hangisinde yaş grubu ve bu grupta en sık izlenen üriner obstrüksiyon nedeni DOĞRU verilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kaybedilen idrar miktarının %100'ünden fazlası agresif şekilde intravenöz olarak yerine konulmalıdır."
-      },
-      {
-        "key": "B",
-        "text": "Poliüri daima kalıcıdır ve hastaya ömür boyu vazopressin başlanmalıdır."
-      },
-      {
-        "key": "C",
-        "text": "İdrar çıkışı saatlik izlenmeli; iatrojenik poliüri kısır döngüsünden kaçınmak için kaybedilen hacmin yaklaşık %50-75'i replase edilmelidir.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Postobstrüktif diürez sadece tek taraflı parsiyel obstrüksiyonlarda görülür."
-      },
-      {
-        "key": "E",
-        "text": "Serum potasyum ve magnezyum düzeyleri bu süreçte asla değişmez."
-      }
+      "A) Yenidoğan erkek — Benign prostat hiperplazisi",
+      "B) 30 yaşında erkek — Posterior üretral valv",
+      "C) 35 yaşında kadın — Üreter taşı ve gebelik",
+      "D) 70 yaşında erkek — Üreteropelvik bileşke darlığı",
+      "E) Yenidoğan kız — Prostatit apsesi"
     ],
-    "correctAnswer": "C",
-    "explanation": "Postobstrüktif diürez (POD), bilateral veya soliter böbrek tıkanıklığının dekompresyonu sonrası saatte >200 mL idrar çıkışıyla karakterizedir. Tedavideki en kritik kural iatrojenik poliüri kısır döngüsünü önlemektir: Hastaya çıkardığı idrar kadar (%100) sıvı verilirse, verilen sıvı ozmotik ve volüm yükü oluşturarak diürezi sürdürür. Bu nedenle idrar çıkışının %50-75'i replase edilmeli, elektrolitler (K, Mg, Na) yakından izlenmelidir."
+    "correctAnswer": 2,
+    "explanation": "20-50 yaş arası genç erişkin popülasyonda her iki cinste en sık görülen obstrüksiyon nedeni üreter taşlarıdır; kadınlarda ayrıca gebeliğe bağlı üreteral kompresyon sık görülür. Yenidoğan erkekte PUV, ileri yaş erkekte BPH, çocukta UPJ darlığı sıktır. Dolayısıyla C seçeneği doğrudur."
   },
   {
-    "id": "urol-img-05-8",
+    "id": "q-deck-urinary-obstruction-9",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 9,
-    "slideTitle": "Kaliks ve Papilla Morfolojisinde Basınç Değişiklikleri",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Üriner Sistemin Hidrodinamik Anatomisi",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Üriner sistemde idrarın renal kalikslerden mesaneye transportunda görev alan fizyolojik mekanizmalarla ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Direkt Üriner Sistem Grafisi (DÜSG)"
-      },
-      {
-        "key": "B",
-        "text": "Kontrassız Helikal / Düşük Doz Bilgisayarlı Tomografi (Taş Protokolü BT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "İntravenöz Pyelografi (IVP)"
-      },
-      {
-        "key": "D",
-        "text": "Baryumlu Üst Gastrointestinal Pasaj Grafisi"
-      },
-      {
-        "key": "E",
-        "text": "Renal Anjiyografi"
-      }
+      "A) İdrar transportu tamamen yerçekimi etkisiyle pasif olarak gerçekleşir.",
+      "B) Peristaltik dalgayı başlatan pacemaker hücreleri renal pelvisin minör kaliks fornikslerinde bulunur.",
+      "C) Üreter düz kas lifleri arasında elektriksel ileti desmozomlar aracılığıyla sağlanır, neksuslar görev almaz.",
+      "D) Üreterovezikal bileşkede retrograd akımı önleyen aktif çizgili kas sfinkteri bulunur.",
+      "E) Sirküler kas lifleri kasıldığında üreter lümeni genişler."
     ],
-    "correctAnswer": "B",
-    "explanation": "Kontrassız Helikal Bilgisayarlı Tomografi (Taş BT), %98'in üzerinde duyarlılık ve özgüllükle üst üriner sistem obstrüksiyonunun, taş varlığının, taş boyutunun, yerleşim yerinin ve sekonder obstrüksiyon bulgularının (üreteral dilatasyon, perinefritik stranding) saptanmasında altın standarttır. İntravenöz kontrast gerektirmez, dakikalar içinde sonuç verir."
+    "correctAnswer": 1,
+    "explanation": "Üreterik peristaltizmin elektriksel uyarı odağı minör kaliks fornikslerindeki atipik pacemaker düz kas hücreleridir. İleti neksuslar (gap junction) aracılığıyla yayılır. UVJ'de çizgili sfinkter yoktur, oblik submukozal tünel pasif flep-valv oluşturur. Sirküler kaslar lümeni daraltarak koaptasyon sağlar. Bu nedenle B seçeneği doğrudur."
   },
   {
-    "id": "urol-img-05-9",
+    "id": "q-deck-urinary-obstruction-10",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 10,
-    "slideTitle": "Koruyucu Basınç Azaltıcı Mekanizmalar: Pyelointerstisyel Reflü",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Supravezikal ve İnfravezikal Obstrüksiyon Ayrımı",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Daha önce bilinen bir böbrek hastalığı olmayan 45 yaşındaki bir erkek hasta, sağ böğür bölgesinde aniden başlayan, kasığa vuran şiddetli kolik ağrı ve mikroskopik hematüri ile acil servise başvuruyor. Fizik muayenede kostovertebral açı hassasiyeti saptanıyor. Yapılan biyokimyasal incelemede serum kreatinin düzeyi 0.9 mg/dL (normal) bulunuyor. Bu hastada renal fonksiyon testlerinin normal sınırlarda kalmasını en iyi açıklayan mekanizma aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Direkt Üriner Sistem Grafisi (DÜSG)"
-      },
-      {
-        "key": "B",
-        "text": "Kontrassız Helikal / Düşük Doz Bilgisayarlı Tomografi (Taş Protokolü BT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "İntravenöz Pyelografi (IVP)"
-      },
-      {
-        "key": "D",
-        "text": "Baryumlu Üst Gastrointestinal Pasaj Grafisi"
-      },
-      {
-        "key": "E",
-        "text": "Renal Anjiyografi"
-      }
+      "A) Obstrüksiyonun tam olmayıp idrarın taşa rağmen sızması",
+      "B) Sağ böbreğin tübüler sekresyonu artırarak kreatinini uzaklaştırması",
+      "C) Kontralateral sol böbreğin sağlam olması ve tek başına yeterli glomerüler filtrasyonu sürdürmesi",
+      "D) Üreterdeki sirküler kasların spazm çözücü refleks geliştirmesi",
+      "E) İntraluminal basıncın glomerüler filtrasyon basıncını aşamamış olması"
     ],
-    "correctAnswer": "B",
-    "explanation": "Kontrassız Helikal Bilgisayarlı Tomografi (Taş BT), %98'in üzerinde duyarlılık ve özgüllükle üst üriner sistem obstrüksiyonunun, taş varlığının, taş boyutunun, yerleşim yerinin ve sekonder obstrüksiyon bulgularının (üreteral dilatasyon, perinefritik stranding) saptanmasında altın standarttır. İntravenöz kontrast gerektirmez, dakikalar içinde sonuç verir."
+    "correctAnswer": 2,
+    "explanation": "Tek taraflı supravezikal obstrüksiyonlarda (örneğin tek taraflı üreter taşı), kontralateral böbrek sağlamsa vücudun metabolik atıklarını temizlemeye tek başına yeterlidir ve kompansatuar hiperfiltrasyon yapar. Serum kreatininin yükselmesi için total nefron fonksiyonunun %50'den fazlasının kaybedilmesi gerekir. Bu nedenle C seçeneği doğrudur."
   },
   {
-    "id": "urol-inf-hydro-04",
+    "id": "q-deck-urinary-obstruction-11",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 11,
-    "slideTitle": "Pyelolenfatik ve Pyelovenöz Reflü Dinamiği",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Akut Üreteral Obstrüksiyonda Tri-fazik Hemodinamik Yanıt",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Deneysel bir çalışmada laboratuvar hayvanında tek taraflı üreteral obstrüksiyon oluşturuluyor. Obstrüksiyonun ilk 90 dakikasında intraluminal üreter basıncının yükselmesiyle eşzamanlı olarak renal kan akımının (RBF) da arttığı gözleniyor. Bu erken evrede afferent arteriyoler vazodilatasyona yol açarak renal kan akımını artıran temel vasküler medyatör aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sadece oral antibiyotik başlanıp elektif şartlarda 2 hafta sonrasına ameliyat randevusu verilmesi"
-      },
-      {
-        "key": "B",
-        "text": "Tıkanmış toplayıcı sistemin derhal acil dekompresyonu (Double-J stent veya perkütan nefrostomi) ve parenteral geniş spektrumlu antibiyotik başlanması",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Hastaya yüksek doz diüretik verilerek taşın düşürülmeye zorlanması"
-      },
-      {
-        "key": "D",
-        "text": "Görüntüleme yapmadan doğrudan açık nefrektomi uygulanması"
-      },
-      {
-        "key": "E",
-        "text": "Sıvı kısıtlaması yapılarak idrar üretiminin durdurulması"
-      }
+      "A) Tromboksan A2 (TXA2)",
+      "B) Anjiyotensin II",
+      "C) Prostaglandin E2 (PGE2)",
+      "D) Endotelin-1",
+      "E) Vazopressin (ADH)"
     ],
-    "correctAnswer": "B",
-    "explanation": "Obstrüksiyon + Enfeksiyon (ateş, titreme, piyüri) = Mutlak Ürolojik Acil! Tıkanmış ve enfekte olmuş toplayıcı sistem kapalı bir abse gibidir; artan hidrostatik basınç pyelovenöz reflü ile bakterilerin ve endotoksinlerin doğrudan kana geçmesine ve dakikalar içinde üroseptik şoka yol açar. Tıkanıklık Double-J stent veya Perkütan Nefrostomi (PCN) ile acilen drene edilmeli ve parenteral antibiyoterapi verilmelidir."
+    "correctAnswer": 2,
+    "explanation": "Akut tek taraflı üreteral obstrüksiyonun Faz I (ilk 1-1.5 saat) döneminde, toplayıcı sistem gerilmesine yanıt olarak böbrekten Prostaglandin E2 (PGE2) ve nitrik oksit salınır. Bu medyatörler afferent arteriyolde vazodilatasyon yaparak RBF'yi geçici olarak artırır. Geç fazda ise TXA2 ve Ang-II vazokonstriksiyon yapar. Bu nedenle C seçeneği doğrudur."
   },
   {
-    "id": "urol-img-05-11",
+    "id": "q-deck-urinary-obstruction-12",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 12,
-    "slideTitle": "Forniks Rüptürü, İdrar Ekstravazasyonu ve Ürinom (Urinoma)",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Kronik Obstrüksiyonda İntrarenal ve Medüller Değişiklikler",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Kronik parsiyel üriner sistem obstrüksiyonu olan bir hastada gelişen renal fonksiyon bozuklukları ile ilgili olarak; böbrek parankiminde İLK bozulan tübüler fonksiyon ve buna bağlı ortaya çıkan en erken klinik semptom aşağıdakilerden hangisinde doğru olarak verilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Direkt Üriner Sistem Grafisi (DÜSG)"
-      },
-      {
-        "key": "B",
-        "text": "Kontrassız Helikal / Düşük Doz Bilgisayarlı Tomografi (Taş Protokolü BT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "İntravenöz Pyelografi (IVP)"
-      },
-      {
-        "key": "D",
-        "text": "Baryumlu Üst Gastrointestinal Pasaj Grafisi"
-      },
-      {
-        "key": "E",
-        "text": "Renal Anjiyografi"
-      }
+      "A) Glomerüler filtrasyon çöküşü — Anüri",
+      "B) İdrar konsantrasyon yeteneği kaybı — Noktüri ve poliüri",
+      "C) Glukoz geri emilim bozukluğu — Masif glikozüri",
+      "D) Ürik asit sekresyon fazlalığı — Ürikozüri",
+      "E) Proksimal tübül bikarbonat geri emilimi — Hipokalemi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Kontrassız Helikal Bilgisayarlı Tomografi (Taş BT), %98'in üzerinde duyarlılık ve özgüllükle üst üriner sistem obstrüksiyonunun, taş varlığının, taş boyutunun, yerleşim yerinin ve sekonder obstrüksiyon bulgularının (üreteral dilatasyon, perinefritik stranding) saptanmasında altın standarttır. İntravenöz kontrast gerektirmez, dakikalar içinde sonuç verir."
+    "correctAnswer": 1,
+    "explanation": "Kronik obstrüksiyonda bası ilk olarak medullayı etkilediği için Henle kulpu ve toplayıcı kanallardaki karşı akım mekanizması bozulur, Aquaporin-2 kanalları azalır ve İLK bozulan tübüler fonksiyon 'idrarı konsantre etme yeteneği' olur. Hastalar konsantrasyon defektine bağlı geceleri sık idrara çıkma (noktüri) ve poliüri ile seyreltik idrar (izostenüri) çıkarırlar. Bu nedenle B seçeneği doğrudur."
   },
   {
-    "id": "urol-pod-02-12",
+    "id": "q-deck-urinary-obstruction-13",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 13,
-    "slideTitle": "Renal Hemodinamik & Bifazik Yanıt",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Pelvikaliksiyel Sistemin Basınca Morfolojik Yanıtı",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Üriner obstrüksiyona ikincil gelişen hidronefroz tablosunda, artan intraluminal basıncın pelvikaliksiyel sistemde meydana getirdiği anatomik değişikliklerin kronolojik gelişim sırası aşağıdakilerin hangisinde DOĞRU verilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kaybedilen idrar miktarının %100'ünden fazlası agresif şekilde intravenöz olarak yerine konulmalıdır."
-      },
-      {
-        "key": "B",
-        "text": "Poliüri daima kalıcıdır ve hastaya ömür boyu vazopressin başlanmalıdır."
-      },
-      {
-        "key": "C",
-        "text": "İdrar çıkışı saatlik izlenmeli; iatrojenik poliüri kısır döngüsünden kaçınmak için kaybedilen hacmin yaklaşık %50-75'i replase edilmelidir.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Postobstrüktif diürez sadece tek taraflı parsiyel obstrüksiyonlarda görülür."
-      },
-      {
-        "key": "E",
-        "text": "Serum potasyum ve magnezyum düzeyleri bu süreçte asla değişmez."
-      }
+      "A) Kalikslerin tokmaklaşması (clubbing) → Forniks küntleşmesi → Papilla inversiyonu",
+      "B) Fornikslerin küntleşmesi → Papilla düzleşmesi ve inversiyonu → Kalikslerin tokmaklaşması (clubbing) ve parankim atrofisi",
+      "C) Papiller inversiyon → Glomerüler skleroz → Forniks küntleşmesi",
+      "D) Parankim bası atrofisi → Forniks küntleşmesi → Papiller düzleşme",
+      "E) Papilla düzleşmesi → Forniks küntleşmesi → Kaliks tokmaklaşması"
     ],
-    "correctAnswer": "C",
-    "explanation": "Postobstrüktif diürez (POD), bilateral veya soliter böbrek tıkanıklığının dekompresyonu sonrası saatte >200 mL idrar çıkışıyla karakterizedir. Tedavideki en kritik kural iatrojenik poliüri kısır döngüsünü önlemektir: Hastaya çıkardığı idrar kadar (%100) sıvı verilirse, verilen sıvı ozmotik ve volüm yükü oluşturarak diürezi sürdürür. Bu nedenle idrar çıkışının %50-75'i replase edilmeli, elektrolitler (K, Mg, Na) yakından izlenmelidir."
+    "correctAnswer": 1,
+    "explanation": "Toplayıcı sistemde hidrostatik basınç arttığında ilk olarak forniksler açılır ve küntleşir (blunting). Basınç devam ettikçe kaliks içindeki papilla düzleşir ve içeri çökerek tersine döner (inversiyon). Son aşamada infundibulumlar ve kaliksler tokmak gibi küresel olarak genişler (clubbing) ve parankim üzerine bası atrofisi uygular. Doğru sıra B seçeneğidir."
   },
   {
-    "id": "urol-pod-02-13",
+    "id": "q-deck-urinary-obstruction-14",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 14,
-    "slideTitle": "İskemi, Apoptoz ve İnterstisyel Fibrozis Patofizyolojisi",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Renal Parankimal Bası Atrofisi ve Histopatolojisi",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Uzun süreli üreteropelvik bileşke darlığı nedeniyle nefrektomi uygulanan bir hastanın böbrek spesimeninin histopatolojik incelemesinde; medüller piramitlerin tamamen silindiği, tübüler epitel hücrelerinde yaygın apoptoz, atrofi ve interstisyel fibrozis olduğu, buna karşın glomerüllerin mimarilerini büyük ölçüde koruduğu saptanıyor. Bu histopatolojik tablo aşağıdaki patolojik süreçlerden hangisi için en karakteristiktir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kaybedilen idrar miktarının %100'ünden fazlası agresif şekilde intravenöz olarak yerine konulmalıdır."
-      },
-      {
-        "key": "B",
-        "text": "Poliüri daima kalıcıdır ve hastaya ömür boyu vazopressin başlanmalıdır."
-      },
-      {
-        "key": "C",
-        "text": "İdrar çıkışı saatlik izlenmeli; iatrojenik poliüri kısır döngüsünden kaçınmak için kaybedilen hacmin yaklaşık %50-75'i replase edilmelidir.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Postobstrüktif diürez sadece tek taraflı parsiyel obstrüksiyonlarda görülür."
-      },
-      {
-        "key": "E",
-        "text": "Serum potasyum ve magnezyum düzeyleri bu süreçte asla değişmez."
-      }
+      "A) Hızlı ilerleyen kresentik glomerülonefrit",
+      "B) Akut poststreptokoksik glomerülonefrit",
+      "C) Kronik obstrüktif üropati (Hidronefrotik bası atrofisi)",
+      "D) Renal amiloidozis",
+      "E) Membranöz nefropati"
     ],
-    "correctAnswer": "C",
-    "explanation": "Postobstrüktif diürez (POD), bilateral veya soliter böbrek tıkanıklığının dekompresyonu sonrası saatte >200 mL idrar çıkışıyla karakterizedir. Tedavideki en kritik kural iatrojenik poliüri kısır döngüsünü önlemektir: Hastaya çıkardığı idrar kadar (%100) sıvı verilirse, verilen sıvı ozmotik ve volüm yükü oluşturarak diürezi sürdürür. Bu nedenle idrar çıkışının %50-75'i replase edilmeli, elektrolitler (K, Mg, Na) yakından izlenmelidir."
+    "correctAnswer": 2,
+    "explanation": "Kronik üriner obstrüksiyonda (obstrüktif nefropati/hidronefroz) intraluminal basınç artışı öncelikle medullayı ve tübülleri harap eder. Tübüllerde yaygın apoptoz ve interstisyel fibrozis gelişirken glomerüller hastalığın çok ileri evrelerine kadar yapısal bütünlüklerini korur. Glomerülonefritlerde ise temel hasar glomerüllerdedir. Doğru cevap C seçeneğidir."
   },
   {
-    "id": "urol-pod-02-14",
+    "id": "q-deck-urinary-obstruction-15",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 15,
-    "slideTitle": "GFR Geri Dönüş Potansiyeli ve Obstrüksiyon Süresi İlişkisi",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Moleküler Patogenez: Sitokinler, İskemi ve Fibrozis",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Üriner sistem obstrüksiyonunun kronik parankimal hasara ve nefroskleroza ilerlemesi sürecinde; interstisyuma infiltre olan mononükleer inflamatuar hücrelerden salınan, tübüler epitel hücrelerinde doğrudan apoptozu indükleyebilen proinflamatuar sitokin ile fibroblast aktivasyonunu ve Tip I/III kollajen birikimini uyararak kalıcı interstisyel fibrozise yol açan profibrotik büyüme faktörü hangi seçenekte doğru eşleştirilmiştir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kaybedilen idrar miktarının %100'ünden fazlası agresif şekilde intravenöz olarak yerine konulmalıdır."
-      },
-      {
-        "key": "B",
-        "text": "Poliüri daima kalıcıdır ve hastaya ömür boyu vazopressin başlanmalıdır."
-      },
-      {
-        "key": "C",
-        "text": "İdrar çıkışı saatlik izlenmeli; iatrojenik poliüri kısır döngüsünden kaçınmak için kaybedilen hacmin yaklaşık %50-75'i replase edilmelidir.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Postobstrüktif diürez sadece tek taraflı parsiyel obstrüksiyonlarda görülür."
-      },
-      {
-        "key": "E",
-        "text": "Serum potasyum ve magnezyum düzeyleri bu süreçte asla değişmez."
-      }
+      "A) İnterlökin-10 — Trombospondin",
+      "B) Tümör Nekrozis Faktör-alfa (TNF-α) — Dönüştürücü Büyüme Faktörü-beta (TGF-β)",
+      "C) İnterferon-gama — Vasküler Endotelyal Büyüme Faktörü (VEGF)",
+      "D) Eritropoietin — Bradikinin",
+      "E) Prostaglandin E2 — Renin"
     ],
-    "correctAnswer": "C",
-    "explanation": "Postobstrüktif diürez (POD), bilateral veya soliter böbrek tıkanıklığının dekompresyonu sonrası saatte >200 mL idrar çıkışıyla karakterizedir. Tedavideki en kritik kural iatrojenik poliüri kısır döngüsünü önlemektir: Hastaya çıkardığı idrar kadar (%100) sıvı verilirse, verilen sıvı ozmotik ve volüm yükü oluşturarak diürezi sürdürür. Bu nedenle idrar çıkışının %50-75'i replase edilmeli, elektrolitler (K, Mg, Na) yakından izlenmelidir."
+    "correctAnswer": 1,
+    "explanation": "Obstrüktif nefropatinin moleküler patogenezinde iki kilit sitokin rol oynar: TNF-α (tübüler epitel hücre apoptozunu indükleyen potent proinflamatuar sitokin) ve TGF-β (fibroblastları miyofibroblastlara dönüştürerek kollajen sentezini ve kalıcı interstisyel fibrozisi yöneten profibrotik faktör). Bu nedenle B seçeneği doğrudur."
   },
   {
-    "id": "urol-pod-02-15",
+    "id": "q-deck-urinary-obstruction-16",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 16,
-    "slideTitle": "Renal Kontrbalans Mekanizması (Hinman Hipotezi)",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Üst Üriner Sistemin Koruyucu Reflü Mekanizmaları",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Akut komplet üreteral obstrüksiyon zemininde intrapelvik basıncın aşırı yükselmesi durumunda; basıncı düşürerek glomerüler filtrasyonun devamını sağlamaya çalışan koruyucu mekanizmalardan EN SIK görüleni ve idrarın böbrek sinüsü ile perirenal alana geçişini tanımlayan yol aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kaybedilen idrar miktarının %100'ünden fazlası agresif şekilde intravenöz olarak yerine konulmalıdır."
-      },
-      {
-        "key": "B",
-        "text": "Poliüri daima kalıcıdır ve hastaya ömür boyu vazopressin başlanmalıdır."
-      },
-      {
-        "key": "C",
-        "text": "İdrar çıkışı saatlik izlenmeli; iatrojenik poliüri kısır döngüsünden kaçınmak için kaybedilen hacmin yaklaşık %50-75'i replase edilmelidir.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Postobstrüktif diürez sadece tek taraflı parsiyel obstrüksiyonlarda görülür."
-      },
-      {
-        "key": "E",
-        "text": "Serum potasyum ve magnezyum düzeyleri bu süreçte asla değişmez."
-      }
+      "A) Pyelovenöz reflü",
+      "B) Pyelolenfatik reflü",
+      "C) Pyelointerstisyel reflü",
+      "D) Vezikoüreteral reflü",
+      "E) Pyelotübüler reflü"
     ],
-    "correctAnswer": "C",
-    "explanation": "Postobstrüktif diürez (POD), bilateral veya soliter böbrek tıkanıklığının dekompresyonu sonrası saatte >200 mL idrar çıkışıyla karakterizedir. Tedavideki en kritik kural iatrojenik poliüri kısır döngüsünü önlemektir: Hastaya çıkardığı idrar kadar (%100) sıvı verilirse, verilen sıvı ozmotik ve volüm yükü oluşturarak diürezi sürdürür. Bu nedenle idrar çıkışının %50-75'i replase edilmeli, elektrolitler (K, Mg, Na) yakından izlenmelidir."
+    "correctAnswer": 2,
+    "explanation": "Üst üriner sistem obstrüksiyonunda artan intrapelvik basınca karşı devreye giren koruyucu mekanizmalar içinde EN SIK görüleni 'Pyelointerstisyel Reflü'dür. Basınçla forniks ve papilladan sızan idrar böbrek sinüsü ve perirenal alana geçer, oradan venöz ve lenfatik dolaşımla taşınır. Pyelovenöz reflü en az etkili olandır. Bu nedenle C seçeneği doğrudur."
   },
   {
-    "id": "urol-luts-03-16",
+    "id": "q-deck-urinary-obstruction-17",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 17,
-    "slideTitle": "Klinik Belirtiler ve Semptomatoloji (Akut vs Kronik)",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Forniks Rüptürü, Perirenal Ürinom ve İntrarenal Reflü",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Otuz iki yaşındaki bir erkek hasta, sağ yan tarafında kıvrandırıcı şiddette renal kolik ağrısı çekerken, acil serviste beklediği sırada aniden ağrısının bıçak gibi kesildiğini ve tamamen rahatladığını ifade ediyor. Çekilen kontrastlı batın tomografisinde sağ distal üreterde 5 mm taş, sağ böbrek çevresinde (Gerota fasyası içinde) sıvı koleksiyonu ve geç fazda kaliks forniksinden bu alana kontrast madde kaçağı saptanıyor. Bu hastada ağrının aniden kesilmesini ve radyolojik bulguları açıklayan patoloji aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "İdrar akış hızında azalma (Zayıf akım)"
-      },
-      {
-        "key": "B",
-        "text": "İdrarı tam boşaltamama hissi"
-      },
-      {
-        "key": "C",
-        "text": "İdrar sıklığı / Sık idrara çıkma (Pollaküri / Frequency)",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "İşeme başlangıcında tutukluk (Hesitancy)"
-      },
-      {
-        "key": "E",
-        "text": "Kesintili işeme (Intermittency)"
-      }
+      "A) Taşın mesaneye kendiliğinden düşmesi",
+      "B) Kaliks forniks rüptürü ve perirenal ürinom gelişimi",
+      "C) Renal arter embolisi",
+      "D) Akut pyelonefritin apseye dönüşmesi",
+      "E) Üreterosel perforasyonu"
     ],
-    "correctAnswer": "C",
-    "explanation": "Alt üriner sistem semptomları (LUTS); Depolama (irritatif), İşeme (obstrüktif) ve İşeme sonrası semptomlar olarak üçe ayrılır. Pollaküri (frequency), noktüri, urgency (ani sıkışma) ve sıkışma tipi inkontinans depolama semptomlarıdır. Zayıf akım, hesitancy (duraksama), intermittency (kesintili işeme) ve ıkınarak işeme ise işeme/obstrüksiyon semptomlarıdır."
+    "correctAnswer": 1,
+    "explanation": "Akut üreter taşına bağlı intrapelvik basınç aşırı yükseldiğinde kaliks forniksi yırtılır (forniks rüptürü). Forniks yırtılınca intrapelvik basınç aniden düşer ve renal kapsül gerilimi ortadan kalktığı için hastanın ağrısı bıçak gibi kesilir. İdrar perirenal alana sızarak ürinom oluşturur ve BT geç fazda kontrast kaçağı ile gösterilir. Doğru cevap B seçeneğidir."
   },
   {
-    "id": "urol-bph-path-01-17",
+    "id": "q-deck-urinary-obstruction-18",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 18,
-    "slideTitle": "Glob Vesicale: Tanı, Belirtiler ve Ani Dekompresyon Tehlikesi",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Obstrüksiyon Zemininde Enfeksiyon: Pyonefroz ve Ürosepsis",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Altmış yaşında bir kadın hasta, sağ böğür ağrısı, 39.5°C ateş, titreme, konfüzyon ve hipotansiyon (Tansiyon: 80/50 mmHg) tablosu ile acil servise getiriliyor. Yapılan acil batın ultrasonografisinde sağ üreteropelvik bileşkede 1 cm impakte taş ve sağ toplayıcı sistemde ekojenik debris içeren ileri derece hidronefroz (pyonefroz görünümü) saptanıyor. Laboratuvarında lökositoz (24.000/mm³) ve serum kreatinini 2.8 mg/dL bulunuyor. Sıvı resüsitasyonu ve geniş spektrumlu intravenöz antibiyotik başlanan bu hastada mortaliteyi önlemek için EN ACİL yapılması gereken hayat kurtarıcı girişim hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Testosteron"
-      },
-      {
-        "key": "B",
-        "text": "Dihidrotestosteron (DHT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Östrojen"
-      },
-      {
-        "key": "D",
-        "text": "Prolaktin"
-      },
-      {
-        "key": "E",
-        "text": "İnsülin benzeri büyüme faktörü (IGF-1)"
-      }
+      "A) Taşın acil olarak lazerle kırılması (Rijit üreteroskopi ve litotripsi)",
+      "B) Acil açık nefrektomi yapılması",
+      "C) Tıkanmış toplayıcı sistemin acilen dekomprese edilmesi (Double-J stent yerleştirilmesi veya Perkütan Nefrostomi açılması)",
+      "D) Yüksek doz diüretik infüzyonu ile taşın düşürülmeye çalışılması",
+      "E) Antibiyogram sonucu çıkana kadar invaziv hiçbir işlem yapılmadan beklenmesi"
     ],
-    "correctAnswer": "B",
-    "explanation": "BPH patogenezinde temel androjenik medyatör dihidrotestosterondur (DHT). Testosteron, prostat stromal hücrelerinde bulunan Tip-2 5-alfa redüktaz enzimi ile DHT'ye dönüştürülür. DHT nükleer androjen reseptörlerine bağlanarak büyüme faktörlerinin (FGF, TGF-beta) transkripsiyonunu uyarır ve mesane çıkım obstrüksiyonuna zemin hazırlayan stromal ve epitelyal hiperplaziye yol açar."
+    "correctAnswer": 2,
+    "explanation": "Obstrüksiyon zemininde toplayıcı sistem enfeksiyonu (enfekte hidronefroz/pyonefroz) ve üroseptik şok mutlak bir ürolojik acildir. Tıkanmış sistemdeki yüksek basınç pyelovenöz reflü ile bakterileri doğrudan kana pompaladığından, toplayıcı sistem Double-J stent veya Perkütan Nefrostomi ile derhal dekomprese edilmelidir. Enfeksiyon kontrol altına alınmadan taşa yönelik cerrahi yapılamaz. Doğru cevap C seçeneğidir."
   },
   {
-    "id": "urol-img-05-18",
+    "id": "q-deck-urinary-obstruction-19",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 19,
-    "slideTitle": "Radyolojik Tanı ve Görüntüleme Protokolleri",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Obstrüksiyonun Süresi ve Fonksiyonel Geri Dönebilirlik",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Deneysel memeli modellerinde ve klinik ürolojide komplet (tam) üreteral obstrüksiyonun süresi ile obstrüksiyon giderildikten sonra böbreğin geri kazanabileceği glomerüler filtrasyon fonksiyonu (GFR) arasındaki ilişki incelendiğinde; 6 haftalık tam tıkanıklık sonrasında beklenen fonksiyonel geri dönüş oranı aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Direkt Üriner Sistem Grafisi (DÜSG)"
-      },
-      {
-        "key": "B",
-        "text": "Kontrassız Helikal / Düşük Doz Bilgisayarlı Tomografi (Taş Protokolü BT)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "İntravenöz Pyelografi (IVP)"
-      },
-      {
-        "key": "D",
-        "text": "Baryumlu Üst Gastrointestinal Pasaj Grafisi"
-      },
-      {
-        "key": "E",
-        "text": "Renal Anjiyografi"
-      }
+      "A) %100",
+      "B) %75",
+      "C) %46",
+      "D) %35",
+      "E) %0 (Geri dönüşümsüz kayıp)"
     ],
-    "correctAnswer": "B",
-    "explanation": "Kontrassız Helikal Bilgisayarlı Tomografi (Taş BT), %98'in üzerinde duyarlılık ve özgüllükle üst üriner sistem obstrüksiyonunun, taş varlığının, taş boyutunun, yerleşim yerinin ve sekonder obstrüksiyon bulgularının (üreteral dilatasyon, perinefritik stranding) saptanmasında altın standarttır. İntravenöz kontrast gerektirmez, dakikalar içinde sonuç verir."
+    "correctAnswer": 4,
+    "explanation": "Deneysel üreteral obstrüksiyon çalışmalarında (köpek modelleri) 1 haftalık tam tıkanıklıkta GFR neredeyse tamamen dönerken, 2 haftalık tıkanıklıkta %46, 4 haftalık tıkanıklıkta %35 fonksiyon döner. Ancak 6 haftayı aşan tam tıkanıklıklarda nefronlar tamamen atrofiye uğradığı ve yaygın fibrozis geliştiği için fonksiyonel geri dönüş oranı %0'dır. Doğru cevap E seçeneğidir."
   },
   {
-    "id": "urol-inf-hydro-04-19",
+    "id": "q-deck-urinary-obstruction-20",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 20,
-    "slideTitle": "Tedavi Prensipleri, Acil Dekompresyon ve Enfekte Obstrüksiyon",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "Renal Kontrbalans Mekanizması",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Renal fizyolojide tanımlanan 'Renal Kontrbalans' (Renal Counterbalance / Hinman hipotezi) kavramı ve tek taraflı nefrektomi sonrası diğer böbrekte gelişen adaptasyon ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Sadece oral antibiyotik başlanıp elektif şartlarda 2 hafta sonrasına ameliyat randevusu verilmesi"
-      },
-      {
-        "key": "B",
-        "text": "Tıkanmış toplayıcı sistemin derhal acil dekompresyonu (Double-J stent veya perkütan nefrostomi) ve parenteral geniş spektrumlu antibiyotik başlanması",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Hastaya yüksek doz diüretik verilerek taşın düşürülmeye zorlanması"
-      },
-      {
-        "key": "D",
-        "text": "Görüntüleme yapmadan doğrudan açık nefrektomi uygulanması"
-      },
-      {
-        "key": "E",
-        "text": "Sıvı kısıtlaması yapılarak idrar üretiminin durdurulması"
-      }
+      "A) Karşı böbrekteki büyüme yeni nefronların sentezlenmesiyle (hiperplazi) gerçekleşir.",
+      "B) Tek taraflı uzun süreli obstrüksiyon açıldığında, diğer böbrek hipertrofiye uğramışsa açılan böbrek fonksiyonel talep görmeyerek hipotrofiye uğrayabilir.",
+      "C) Karşı böbrek hiçbir zaman sağlam böbreğin normal fonksiyonunun üzerine çıkamaz.",
+      "D) Renal kontrbalans sadece bilateral komplet anürilerde gözlenen bir fenomendir.",
+      "E) Hipotrofiye uğrayan böbrek histolojik olarak normal parankim yapısını tamamen korur."
     ],
-    "correctAnswer": "B",
-    "explanation": "Obstrüksiyon + Enfeksiyon (ateş, titreme, piyüri) = Mutlak Ürolojik Acil! Tıkanmış ve enfekte olmuş toplayıcı sistem kapalı bir abse gibidir; artan hidrostatik basınç pyelovenöz reflü ile bakterilerin ve endotoksinlerin doğrudan kana geçmesine ve dakikalar içinde üroseptik şoka yol açar. Tıkanıklık Double-J stent veya Perkütan Nefrostomi (PCN) ile acilen drene edilmeli ve parenteral antibiyoterapi verilmelidir."
+    "correctAnswer": 1,
+    "explanation": "Hinman'ın Renal Kontrbalans teorisine göre, tek taraflı tıkanıklık sırasında sağlam böbrek kompanse olarak hipertrofi geliştirir. Tıkanıklık geç dönemde açıldığında, vücudun iş yükünü hipertrofik böbrek zaten karşıladığı için kurtarılan böbreğe metabolik talep kalmaz ve böbrek daha da küçülerek hipotrofiye uğrayabilir. Karşı böbrek büyümesi hiperplazi değil hipertrofidir. Doğru cevap B seçeneğidir."
   },
   {
-    "id": "urol-pod-02-20",
+    "id": "q-deck-urinary-obstruction-21",
     "deckId": "deck-urinary-obstruction",
-    "deckTitle": "Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
     "slideNumber": 21,
-    "slideTitle": "Postobstrüktif Diürez (POD): Patofizyoloji ve Sıvı-Elektrolit Yönetimi",
-    "discipline": "Üroloji / Nefroloji",
-    "committee": "Kurul 5",
-    "question": null,
+    "slideTitle": "İnfravezikal Obstrüksiyona Mesane Yanıtı: Evre 1 (Kompansasyon)",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Altmış beş yaşında bir erkek hasta; idrara başlamakta güçlük çekme (hesitancy), idrar akım mesafesinde kısalma ve idrarını kesik kesik yapma (intermittency) şikayetleriyle üroloji polikliniğine başvuruyor. Hastaya yapılan ultrasonografik incelemede mesane duvarının kalınlaştığı ancak miksiyon hemen sonrasında mesanede hiç rezidüel idrar kalmadığı (Post-void residual = 0 mL) saptanıyor. Bu hastanın klinik tablosu infravezikal obstrüksiyonun hangi evresine uymaktadır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Kaybedilen idrar miktarının %100'ünden fazlası agresif şekilde intravenöz olarak yerine konulmalıdır."
-      },
-      {
-        "key": "B",
-        "text": "Poliüri daima kalıcıdır ve hastaya ömür boyu vazopressin başlanmalıdır."
-      },
-      {
-        "key": "C",
-        "text": "İdrar çıkışı saatlik izlenmeli; iatrojenik poliüri kısır döngüsünden kaçınmak için kaybedilen hacmin yaklaşık %50-75'i replase edilmelidir.",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Postobstrüktif diürez sadece tek taraflı parsiyel obstrüksiyonlarda görülür."
-      },
-      {
-        "key": "E",
-        "text": "Serum potasyum ve magnezyum düzeyleri bu süreçte asla değişmez."
-      }
+      "A) Kompansasyon evresi",
+      "B) İrritasyon evresi",
+      "C) Dekompansasyon evresi",
+      "D) Atonik mesane evresi",
+      "E) Taşma inkontinansı evresi"
     ],
-    "correctAnswer": "C",
-    "explanation": "Postobstrüktif diürez (POD), bilateral veya soliter böbrek tıkanıklığının dekompresyonu sonrası saatte >200 mL idrar çıkışıyla karakterizedir. Tedavideki en kritik kural iatrojenik poliüri kısır döngüsünü önlemektir: Hastaya çıkardığı idrar kadar (%100) sıvı verilirse, verilen sıvı ozmotik ve volüm yükü oluşturarak diürezi sürdürür. Bu nedenle idrar çıkışının %50-75'i replase edilmeli, elektrolitler (K, Mg, Na) yakından izlenmelidir."
+    "correctAnswer": 0,
+    "explanation": "İnfravezikal obstrüksiyonun 'Kompansasyon Evresi'nde mesane çıkım direncini yenmek için detrüsör hipertrofiye uğrar ve kuvvetli kasılır. Bu sayede mesane tamamen boşalır ve rezidüel idrar kalmaz (PVR = 0 mL). Ancak kas yorulduğu için hesitancy ve intermittency gibi obstrüktif işeme semptomları görülür. Rezidü idrar birikimi irritasyon (<50 mL) ve dekompansasyon (>500 mL) evrelerinde başlar. Doğru cevap A seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-22",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 22,
+    "slideTitle": "İnfravezikal Obstrüksiyona Mesane Yanıtı: Evre 2 (İrritasyon)",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Benign prostat hiperplazisi nedeniyle takip edilen 68 yaşındaki bir erkek hasta; son aylarda gündüzleri saat başı idrara çıktığını (pollaküri), geceleri en az 4-5 kez idrar hissiyle uyandığını (noktüri) ve idrar hissi geldiğinde tuvalete zor yetiştiğini (urgency) belirtiyor. Yapılan üriner sistem ultrasonografisinde mesane duvarında düzensiz kalınlaşma ve miksiyon sonrasında 35 mL rezidüel idrar saptanıyor. Bu klinik ve laboratuvar tablosu infravezikal obstrüksiyonun hangi evresi ile en uyumludur?",
+    "options": [
+      "A) Kompansasyon evresi",
+      "B) İrritasyon / konjesyon evresi",
+      "C) Dekompansasyon evresi",
+      "D) Taşma inkontinansı evresi",
+      "E) Terminal atrofik evre"
+    ],
+    "correctAnswer": 1,
+    "explanation": "İnfravezikal obstrüksiyonun 'İrritasyon / Konjesyon Evresi'nde mesane mukozasındaki venöz göllenme ve ödem sonucu mesane aşırı duyarlı hale gelir. Bu durum pollaküri, noktüri ve urgency gibi depolama semptomlarına yol açar. Bu evrede rezidüel idrar birikmeye başlamıştır ancak miktarı 50 mL'nin altındadır (hastada 35 mL). Dekompansasyon evresinde ise rezidüel idrar >500 mL olur. Doğru cevap B seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-23",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 23,
+    "slideTitle": "İnfravezikal Obstrüksiyona Mesane Yanıtı: Evre 3 (Dekompansasyon)",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Yetmiş dört yaşında erkek hasta, iştahsızlık, halsizlik, bacaklarda şişlik ve idrarını tam yapamama şikayetleriyle nefroloji kliniğine sevk ediliyor. Hastanın serum üresi 140 mg/dL, kreatinini 4.6 mg/dL saptanıyor. Çekilen batın ultrasonografisinde mesanede 850 mL rezidüel idrar, her iki üreterde ileri derece dilatasyon ve bilateral Grade 4 hidronefroz izleniyor. Bu hastada bilateral hidroüreteronefroz ve postrenal böbrek yetmezliğine yol açan infravezikal obstrüksiyon evresi ve gelişen sekonder patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Kompansasyon evresi — Primer üreteropelvik darlık",
+      "B) İrritasyon evresi — Akut tübüler nekroz",
+      "C) Dekompansasyon evresi — Sekonder vezikoüreteral reflü (VUR)",
+      "D) Kompansasyon evresi — Forniks rüptürü",
+      "E) İrritasyon evresi — Glomerüloskleroz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "İnfravezikal obstrüksiyonun 'Dekompansasyon Evresi'nde belirgin rezidüel idrar (>500 mL, hastada 850 mL) birikir. Mesanenin aşırı gerilmesi üreterotrigonal kompleksin flep-valv mekanizmasını bozarak Sekonder Vezikoüreteral Reflü (VUR) gelişimine yol açar. Yüksek mesane basıncı retrograd olarak üreter ve böbreklere iletilerek bilateral hidroüreteronefroz ve postrenal KBY oluşturur. Doğru cevap C seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-24",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 24,
+    "slideTitle": "Mesane Duvarının Morfolojik Dönüşüm Zinciri",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Benign prostat hiperplazisine bağlı uzun süreli mesane çıkım obstrüksiyonu olan bir hastaya hematüri araştırması amacıyla sistoskopi yapılıyor. Sistoskopide mesane duvarında hipertrofik düz kas demetlerinin oluşturduğu belirgin kabartılar (trabekülasyon) ve kas demetleri arasından perivezikal alana doğru fıtıklaşmış 4 cm çapında bir divertikül izleniyor. Bu edinsel mesane divertikülünün histopatolojik yapısı ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Duvarında kalınlaşmış ve hipertrofik muskularis propriya tabakası bulunur.",
+      "B) Gerçek divertikül yapısında olup tüm mesane duvar katmanlarını eksiksiz içerir.",
+      "C) Muskularis propriya tabakası içermez; duvarı yalnızca incelmiş mukoza, lamina propriya ve serozadan oluşur (psödodivertikül).",
+      "D) Duvarındaki aktif düz kas kontraksiyonları sayesinde miksiyon sırasında tamamen boşalır.",
+      "E) İçinde gelişen karsinomların mesane dışına yayılma riski normal mesane duvarına göre çok daha düşüktür."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mesane çıkım obstrüksiyonuna ikincil gelişen edinsel mesane divertikülleri, yüksek intravezikal basınca bağlı olarak mukozanın kas demetleri arasından dışarı fıtıklaşmasıyla oluşur. Bu nedenle duvarlarında muskularis propriya (düz kas tabakası) bulunmaz; yalnızca mukoza, bağ dokusu ve serozadan oluşurlar (psödodivertikül). Kas tabakası olmadığı için boşalamazlar ve tümörler kas bariyeri olmadığı için kolayca dışarı yayılır. Doğru cevap C seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-25",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 25,
+    "slideTitle": "Akut İdrar Retansiyonu ve Taşma İnkontinansı",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Yetmiş sekiz yaşında demans tanısı olan bir erkek hasta, bakım evinde altını sürekli ıslattığı ve idrar kaçırdığı gerekçesiyle üroloji polikliniğine getiriliyor. Fizik muayenede hastanın suprapubik bölgesinde göbeğe kadar uzanan, perküsyonda matite veren, düzgün yüzeyli kitle palpe ediliyor. Üretral kateter takıldığında aniden 1600 mL idrar boşalıyor. Bu hastadaki inkontinansın patofizyolojik tipi ve klinik adı aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Stres tipi inkontinans",
+      "B) Sıkışma (Urge) tipi inkontinans",
+      "C) Aşırı dolum / Taşma inkontinansı (Ischuria paradoxa)",
+      "D) Total sfinkterik yetmezlik inkontinansı",
+      "E) Fonksiyonel lokomotor inkontinans"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mesane çıkım obstrüksiyonu zemininde mesanenin aşırı dolması (hastada 1600 mL) ve detrüsörün dekompanse olması sonucu, intravezikal basıncın sfinkter direncini aşarak idrarın istemsizce damla damla taşması tablosuna 'Aşırı dolum / Taşma inkontinansı' (Ischuria Paradoxa) adı verilir. Hasta idrar kaçırıyor gibi görünse de gerçekte mesane dev bir retansiyon halindedir. Doğru cevap C seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-26",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 26,
+    "slideTitle": "Kronik Obstrüksiyonun Sistemik Yansımaları: Üremi ve Elektrolitler",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Prostat karsinomuna bağlı kronik infravezikal obstrüksiyon nedeniyle hastaneye yatırılan 76 yaşındaki bir erkek hastada serum kreatinini 6.8 mg/dL, potasyum düzeyi 6.9 mEq/L saptanıyor. Çekilen EKG'de prekordiyal derivasyonlarda dar tabanlı, yüksek ve sivri T dalgaları izleniyor. Hastanın ayrıca diş eti kanamaları ve melenası mevcut olup trombosit sayısı 240.000/mm³ (normal), kanama zamanı ise belirgin uzamış bulunuyor. Bu hastadaki hematolojik kanama eğilimini ve EKG bulgusunu açıklayan patofizyolojik mekanizmalar hangi seçenekte doğru verilmiştir?",
+    "options": [
+      "A) İmmün trombositopenik purpura — Hipokalsemi",
+      "B) Yaygın damariçi pıhtılaşması (DİK) — Hipokalemi",
+      "C) Üremik trombosit disfonksiyonu — Şiddetli hiperkalemi",
+      "D) Faktör VIII eksikliği — Hipernatremi",
+      "E) Kemik iliği aplazisi — Metabolik alkaloz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Kronik obstrüktif üropatide GFR'nin çökmesi potasyum atılımını durdurarak hayatı tehdit eden hiperkalemiye (EKG'de sivri T dalgaları) yol açar. Biriken üremik toksinler ise trombosit sayısını düşürmeksizin trombositlerin adezyon ve agregasyon yeteneğini bozarak (üremik trombosit disfonksiyonu / trombositopati) kanama zamanını uzatır ve mukozal/GİS kanamalara neden olur. Doğru cevap C seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-27",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 27,
+    "slideTitle": "Akut ve Kronik Obstrüksiyonda Klinik ve Fizik Muayene",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Yirmi sekiz yaşındaki bir erkek hasta, sol yan tarafında aniden başlayan, sol kasığına ve sol testisine doğru vuran, dalgalar halinde gelen kıvrandırıcı şiddetli ağrı, bulantı ve kusma şikayetiyle acil servise başvuruyor. Hasta muayene masasında duramamakta ve sürekli hareket etmektedir. Fizik muayenede sol kostovertebral açıda künt perküsyonla şiddetli hassasiyet saptanırken, karında defans veya rebound izlenmiyor. Bu hastadaki klinik tablonun patofizyolojik mekanizması aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Apandiks lümeninin lenfoid hiperplazi ile tıkanması",
+      "B) Akut üreteral obstrüksiyona ikincil toplayıcı sistem ve renal kapsül gerilmesi",
+      "C) Parietal peritonun bakteriyel eksüda ile irritasyonu",
+      "D) Mezenter arter trombozuna bağlı bağırsak iskemisi",
+      "E) Testis torsiyonuna bağlı iskemi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hastadaki tablo tipik akut sol renal koliktir (üreter taşı obstrüksiyonu). Akut idrar akım engelinde intrapelvik basınç aniden yükselir; renal toplayıcı sistem ve böbrek kapsülü gerilir. Bu gerilme T10-L2 dermatomlarına (kasığa ve testise) yansıyan, hastayı kıvrandıran şiddetli paroksizmal ağrıya ve vagal refleksle bulantı-kusmaya yol açar. Doğru cevap B seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-28",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 28,
+    "slideTitle": "Laboratuvar Değerlendirmesi: Biyokimya ve İdrar Analizi",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Şiddetli sol böğür ağrısı ile acil servise başvuran ve klinik olarak sol üreter taşı düşünülen 34 yaşındaki bir hastanın tam idrar tahlilinde eritrosit saptanmıyor (hematüri negatif). Çekilen kontrassız düşük doz batın BT'sinde ise sol üreterovezikal bileşkede 6 mm'lik kalsiyum taşı ve sol toplayıcı sistemde hidroüreteronefroz izleniyor. Bu hastada klinik ve radyolojik olarak üreter taşı olmasına rağmen idrar tahlilinde hematüri görülmemesini en iyi açıklayan mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Taşın üreter lümenini tamamen tıkaması nedeniyle kanamalı idrarın mesaneye ulaşamaması ve analiz edilen idrarın sadece sağ böbrekten gelmesi",
+      "B) Taşın kalsiyum değil ürik asit yapısında olması",
+      "C) İdrarın aşırı asidik olması nedeniyle eritrositlerin lizise uğraması",
+      "D) Hastanın non-steroid antiinflamatuar ilaç kullanmış olması",
+      "E) Mesane mukozasının eritrositleri fagositozla yok etmesi"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Akut komplet üreteral obstrüksiyonda taş lümeni tamamen tıkadığında, tıkanan taraftaki kanamalı idrar mesaneye akamaz. Mesanede biriken ve idrar tahliline gönderilen idrar yalnızca karşı sağlam böbreğin ürettiği normal idrardır. Bu nedenle komplet obstrüksiyonlu taş hastalarının %10-15'inde hematüri yalancı negatif çıkabilir. Doğru cevap A seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-29",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 29,
+    "slideTitle": "Radyolojik Tanı Yaklaşımı I: USG, Kontrassız BT ve MRG",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Kırk iki yaşındaki bir erkek hasta, sağ böğür bölgesinde aniden başlayan, kıvrandırıcı renal kolik ağrısı ve mikroskopik hematüri ile acil servise başvuruyor. Güncel uluslararası kılavuzlara göre bu hastada taş varlığını, taşın lokalizasyonunu ve sekonder obstrüksiyon bulgularını saptamada en yüksek duyarlılık ve özgüllüğe sahip altın standart radyolojik görüntüleme yöntemi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Direkt Üriner Sistem Grafisi (DÜSG)",
+      "B) İntravenöz Pyelografi (IVP)",
+      "C) Kontrassız Helikal Düşük Doz Bilgisayarlı Tomografi (Taş BT)",
+      "D) Kontrastlı Manyetik Rezonans Anjiyografi",
+      "E) Renal Sintigrafi (Tc-99m DTPA)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Akut böğür ağrısı ve nefrolitiyazis şüphesi olan hastalarda altın standart anatomik görüntüleme yöntemi 'Kontrassız Helikal Bilgisayarlı Tomografi'dir (Taş BT). %98'in üzerinde duyarlılık ve özgüllüğe sahiptir, intravenöz kontrast gerektirmez, dakikalar içinde taşın boyutunu, yerleşimini ve perinefritik stranding gibi sekonder obstrüksiyon bulgularını gösterir. Doğru cevap C seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-30",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 30,
+    "slideTitle": "Radyolojik Tanı Yaklaşımı II: IVP ve Dinamik Nükleer Tıp",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Doğuştan hidronefrozu olan 7 yaşındaki bir erkek çocuğun ultrasonografisinde sağ böbrek pelvisinde belirgin genişleme saptanıyor. Bu genişlemenin cerrahi girişim gerektiren gerçek bir mekanik üreteropelvik bileşke (UPJ) darlığına mı, yoksa cerrahi gerektirmeyen atonik non-obstrüktif bir dilatasyona mı bağlı olduğunu ayırt etmek amacıyla yapılan 99mTc-MAG3 diüretikli renal sintigrafide (Lasix renogramı) aşağıdaki bulgulardan hangisinin saptanması KESİN MEKANİK OBSTRÜKSİYON lehinedir?",
+    "options": [
+      "A) Furosemid enjeksiyonu sonrası radyoaktivitenin 5 dakikada yarıya inmesi (T1/2 < 10 dk)",
+      "B) Sağ böbrek diferansiyel fonksiyonunun %55 bulunması",
+      "C) Furosemid enjeksiyonu sonrasında toplayıcı sistemden radyoaktivite temizlenme yarı ömrünün 20 dakikanın üzerinde olması (T1/2 > 20 dk)",
+      "D) Mesanenin 15. dakikada tamamen dolması",
+      "E) Renal parankimde radyofarmasötik tutulumunun hiç olmaması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Diüretikli renal sintigrafide (Lasix renogramı) intravenöz furosemid verildikten sonra toplayıcı sistemdeki aktivitenin yarıya inme süresi (T1/2) hesaplanır. T1/2 süresinin 20 dakikanın üzerinde olması (T1/2 > 20 dk), diüretik uyarısına rağmen idrarın mekanik engel nedeniyle toplayıcı sistemden boşalamadığını kanıtlar ve cerrahi endikasyon oluşturur. T1/2 < 10 dk ise obstrüksiyon olmadığını gösterir. Doğru cevap C seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-31",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 31,
+    "slideTitle": "Postobstrüktif Diürez (POD) Patofizyolojisi",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Bilateral üreter taşına bağlı 5 gündür anürik olan ve serum kreatinini 8.2 mg/dL, üresi 190 mg/dL ölçülen 60 yaşındaki bir hastaya acil bilateral Double-J stent yerleştirilerek dekompresyon sağlanıyor. İşlemden sonraki ilk 4 saatte hastanın idrar torbasından saatte ortalama 450 mL idrar geldiği (masif poliüri) gözleniyor. Bu hastada gelişen postobstrüktif diürezin (POD) patofizyolojisinde aşağıdakilerden hangisinin rolü YOKTUR?",
+    "options": [
+      "A) Kanda birikmiş olan ürenin tübüler lümende yaptığı ozmotik diürez etkisi",
+      "B) Obstrüksiyon döneminde medüller interstisyel hiperosmotik gradyentin silinmiş olması (medullary washout)",
+      "C) Toplayıcı kanallarda Aquaporin-2 su kanallarının aşırı ekspresyonu (up-regülasyonu) ve aşırı su geri emilimi",
+      "D) Sıvı yüklenmesine ikincil Atriyal Natriüretik Peptid (ANP) salınım artışı",
+      "E) Henle kulpunda sodyum geri emilimini sağlayan taşıyıcıların down-regülasyonu"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Postobstrüktif diürezde Aquaporin-2 su kanalları UP-regüle değil, tam tersine belirgin şekilde DOWN-regüle olur (baskılanır). Bu baskılanma nedeniyle toplayıcı kanallar dolaşımdaki ADH'ya yanıt veremez ve suyu geri ememez; idrar sulu kalarak masif poliüri gelişir. Biriken üre ozmotik diürez yapar, medüller gradyent kaybolmuştur ve ANP artmıştır. Bu nedenle C seçeneğindeki ifade yanlıştır."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-32",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 32,
+    "slideTitle": "Postobstrüktif Diürezin Klinik Yönetimi",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Bilateral üreteral obstrüksiyonu Double-J stent takılarak dekomprese edilen 62 yaşındaki bir hastada ilk 24 saatte toplam 7.5 litre idrar çıkışı (postobstrüktif diürez) saptanıyor. Hastanın hemodinamik stabilitesini korumak ve 'iatrojenik poliüri kısır döngüsü'ne yol açmamak için sıvı replasmanı yönetimiyle ilgili aşağıdaki klinik yaklaşımlardan hangisi EN UYGUNDUR?",
+    "options": [
+      "A) Kaybedilen idrar hacminin %120'si kadar hipertonik tuzlu su verilmesi",
+      "B) Çıkarılan idrarın her mililitresine karşılık birebir (%100) intravenöz izotonik replasman yapılması",
+      "C) Bir önceki saatte çıkarılan idrar miktarının yaklaşık %50-75'inin potasyum eklenmiş hipotonik solüsyonla (%0.45 NaCl) replase edilmesi ve elektrolit takibi yapılması",
+      "D) Sıvı replasmanının tamamen kesilerek hastaya yüksek doz furosemid başlanması",
+      "E) Poliüriyi derhal durdurmak için yüksek doz vazopressin (ADH) infüzyonu uygulanması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Postobstrüktif diürezde hastaya çıkardığı idrar kadar (%100) sıvı verilirse iatrojenik poliüri kısır döngüsü gelişir ve diürez hiç durmaz. Doğru yaklaşım; kaybedilen sıvının yaklaşık %50-75'ini yerine koymak, elektrolitleri (özellikle K ve Mg) yakından izleyerek replase etmek ve hastanın aşırı dehidrate olmadan fizyolojik negatif balansta kalarak diürezi sonlandırmasını sağlamaktır. Doğru cevap C seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-33",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 33,
+    "slideTitle": "Ürolojik Acil Dekompresyon Endikasyonları ve Yöntemleri",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Soliter (tek) böbreği olan 55 yaşındaki bir erkek hasta, sağ üretere impakte olan 8 mm taş nedeniyle 24 saattir hiç idrar yapamama (anüri) ve nefes darlığı şikayetiyle acil servise başvuruyor. Serum kreatinini 7.4 mg/dL, potasyumu 6.5 mEq/L saptanıyor. Hastaya foley kateter takılıyor ancak mesaneden idrar gelmiyor. Bu hastada hiperkalemik kardiyak arrest ve kalıcı böbrek hasarını önlemek amacıyla derhal yapılması gereken EN UYGUN acil ürolojik girişim aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hastaya yüksek doz intravenöz furosemid uygulanması",
+      "B) Sağ toplayıcı sistemin acilen dekomprese edilmesi (Sağ Double-J stent takılması veya Perkütan Nefrostomi açılması)",
+      "C) Acil laparoskopik üreterolitotomi ameliyatına alınması",
+      "D) Sadece hemodiyaliz yapılıp cerrahi müdahale için 1 hafta beklenmesi",
+      "E) Mesaneye suprapubik sistostomi kateteri yerleştirilmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Soliter böbrekli bir hastada üreteral taş tıkanıklığı mutlak bir ürolojik acildir; hasta anüriye girmiştir ve hiperkalemi ile hayatı tehdit altındadır. Mesaneye foley takılması idrar getirmez çünkü tıkanıklık mesanenin üzerinde (supravezikal) üreterdedir. Bu nedenle sağ toplayıcı sistem acilen Double-J stent veya Perkütan Nefrostomi ile dekomprese edilmelidir. Doğru cevap B seçeneğidir."
+  },
+  {
+    "id": "q-deck-urinary-obstruction-34",
+    "deckId": "deck-urinary-obstruction",
+    "deckTitle": "Üriner Obstrüksiyon: Patofizyoloji, Kompansasyon Evreleri, Morfoloji ve Tedavi",
+    "slideNumber": 34,
+    "slideTitle": "Küratif Tedavi Stratejileri, Takip ve Prognoz",
+    "discipline": "Üroloji / Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Benign prostat hiperplazisine (BPH) bağlı mesane çıkım obstrüksiyonunun medikal tedavisinde kullanılan farmakolojik ajanlardan; prostat stromal ve vasküler düz kaslarındaki reseptörleri bloke ederek dakikalar/saatler içinde dinamik çıkım direncini azaltan ilaç grubu ile prostat dokusunda testosteronun dihidrotestosterona (DHT) dönüşümünü inhibe ederek 6-12 ay içinde prostat hacmini yaklaşık %20-25 küçülten mekanik etkili ilaç grubu hangi seçenekte doğru eşleştirilmiştir?",
+    "options": [
+      "A) Beta-3 agonistleri — Antikolinerjikler",
+      "B) Alfa-1 adrenerjik reseptör blokerleri — 5-alfa redüktaz inhibitörleri",
+      "C) Fosfodiesteraz-5 inhibitörleri — GnRH agonistleri",
+      "D) Muskarinik reseptör blokerleri — Kalsiyum kanal blokerleri",
+      "E) Loop diüretikleri — Potasyum tutucu diüretikler"
+    ],
+    "correctAnswer": 1,
+    "explanation": "BPH'nın medikal tedavisinde iki ana ilaç grubu sinerjik olarak kullanılır: 1) Alfa-1 adrenerjik reseptör blokerleri (tamsulosin, doksazosin vb.) prostat ve mesane boynu düz kaslarını gevşeterek dinamik obstrüksiyonu hızla rahatlatır. 2) 5-alfa redüktaz inhibitörleri (finasterid, dutasterid) Tip 1 ve/veya Tip 2 enzimi bloke ederek DHT sentezini durdurur; epitelyal apoptoz ile prostat hacmini uzun dönemde %20-25 küçülterek mekanik obstrüksiyonu geriletir. Doğru cevap B seçeneğidir."
   },
   {
     "id": "uro-q-01",
@@ -1987,252 +1898,5 @@
     ],
     "correctAnswer": 1,
     "explanation": "B seçeneği doğrudur. Suprapubik aspirasyon (SPA), mesane içindeki idrara ciltten doğrudan girilerek alınan ve üretra florasını tamamen baypas eden altın standart örnektir. Normal mesane idrarı steril olduğundan, SPA ile alınan örnekte tek bir bakteri kolonisi bile ürese (≥10¹-10² CFU/mL) gerçek enfeksiyon kanıtıdır; Kass'ın 10⁵ CFU/mL eşik değeri orta akım idrarı için geçerlidir, SPA için uygulanamaz. Torba idrarı (C) kontaminasyon riski en yüksek yöntemdir, SPA sonucunu çürütmek için kullanılamaz. Tedavi derhal başlanmalıdır."
-  },
-  {
-    "id": "prac-use-035",
-    "deckId": "deck-urinary-tract-infections",
-    "deckTitle": "Üriner Sistem Enfeksiyonları: Sistit, Piyelonefrit ve Renal Komplikasyonlar",
-    "slideNumber": 35,
-    "slideTitle": "Radyolojik ve Ürolojik Görüntüleme: USG, BT, DMSA ve VCUG",
-    "discipline": "Nefropatoloji ve Tıbbi Mikrobiyoloji",
-    "committee": "Ürogenital Sistem Komitesi",
-    "question": "Tekrarlayan ateşli idrar yolu enfeksiyonları geçiren 3 yaşındaki bir çocukta, geçirilmiş enfeksiyon ataklarına bağlı kalıcı renal kortikal skar dokusu varlığını ve fonksiyonel parankim kaybını EN YÜKSEK DUYARLILIKLA gösteren nükleer tıp görüntüleme yöntemi aşağıdakilerden hangisidir?",
-    "options": [
-      "A) MAG3 (Merkaptoasetiltriglisin) sintigrafisi",
-      "B) DTPA (Dietilentriaminpentaasetik asit) dinamik sintigrafisi",
-      "C) DMSA (Teknesyum-99m Dimerkapto-süksinik asit) kortikal sintigrafisi",
-      "D) Kemik sintigrafisi (Tc-99m MDP)",
-      "E) Tiroid sintigrafisi (Tc-99m Perteknetat)"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. DMSA (Tc-99m ile işaretli dimerkaptosüksinik asit), böbreğin proksimal tübül epitel hücrelerine bağlanarak biriken statik bir kortikal sintigrafi ajanıdır. Fonksiyonel tübüler dokuyu gösterdiği için enfeksiyon veya skar sonucu hasarlanan bölgeler izotop tutmaz (fokal fotopenik defekt). Çocuklarda reflü nefropatisine bağlı parankimal skar ve doku kaybını saptamada altın standart en duyarlı yöntemdir. MAG3 ve DTPA dinamik sintigrafiler olup toplayıcı sistem drenajını ve GFR'yi incelemede kullanılır."
-  },
-  {
-    "id": "prac-use-036",
-    "deckId": "deck-urinary-tract-infections",
-    "deckTitle": "Üriner Sistem Enfeksiyonları: Sistit, Piyelonefrit ve Renal Komplikasyonlar",
-    "slideNumber": 36,
-    "slideTitle": "Tedavi Prensipleri ve Korunma: Antibakteriyel Yaklaşım ve Nükslerin Yönetimi",
-    "discipline": "Nefropatoloji ve Tıbbi Mikrobiyoloji",
-    "committee": "Ürogenital Sistem Komitesi",
-    "question": "32 yaşındaki kadın hasta yüksek ateş (39.0°C), titreme, bulantı ve sol kostovertebral açı hassasiyeti ile acil servise başvuruyor. İdrar tahlilinde bol lökosit ve lökosit silindirleri saptanarak akut piyelonefrit tanısı konuyor. Bu hastanın ampirik farmakolojik tedavisinde, doku ve kan konsantrasyonuna ulaşamadığı ve yalnızca mesane lümeninde etki gösterdiği için KULLANILMASI KESİNLİKLE KONTRENDİKE OLAN antibiyotik aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Seftriakson",
-      "B) Siprofloksasin",
-      "C) Nitrofurantoin",
-      "D) Piperasilin-Tazobaktam",
-      "E) Meropenem"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Nitrofurantoin oral yoldan alındıktan sonra hızla emilir ve doğrudan idrara filtre edilir; serumda ve böbrek parankim dokusunda terapötik düzeylere ulaşamaz. Bu nedenle yalnızca yüzeyel mesane mukozası enfeksiyonu olan akut sistitte kullanılır; renal parankimal tutulumun ve bakteriyemi riskinin olduğu akut piyelonefritte KESİNLİKLE KULLANILMAZ. Seftriakson, siprofloksasin, piperasilin-tazobaktam ve meropenem böbrek parankimine ve kana mükemmel penetre olan sistemik bakterisidal ajanlardır."
-  },
-  {
-    "id": "prac-odem-001",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 1,
-    "slideTitle": "Hemodinamik Denge ve Sıvı Homeostazına Giriş: Dolaşım Sisteminin Temel Dinamikleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Dolaşım sisteminde hücresel perfüzyonun ve mikrosirkülasyon düzeyindeki sıvı dengesinin fizyolojik sürdürülmesi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN YANLIŞTIR?",
-    "options": [
-      "A) Sağlıklı dokularda interstisyum, gaz difüzyonunu kolaylaştırmak amacıyla kuruya yakın ve jel kıvamında tutulur.",
-      "B) Kapiller yataktan interstisyuma net sıvı geçişi normalde sıfırdır ve hiçbir koşulda lenfatik drenaja ihtiyaç duyulmaz.",
-      "C) Plazma proteinlerinin oluşturduğu onkotik basınç, sıvının damar lümeni içerisinde tutulmasını sağlayan ana kuvvettir.",
-      "D) Prekapiller arteriyollerin aktif genişlemesi dokuda oksijenlenmiş kan miktarını artırarak hiperemiye neden olur.",
-      "E) Dokudan venöz kanın boşalmasının mekanik olarak engellenmesi deoksijene kanın birikimiyle seyreden konjesyona yol açar."
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği yanlıştır. Normal fizyolojik koşullarda kapiller arteriyol ucunda dışarı süzülen sıvı miktarı, venül ucunda geri emilen sıvı miktarından her zaman çok az miktarda fazladır. Yani net sıvı geçişi kesinlikle 'sıfır' değildir; bu günlük yaklaşık 2-4 litrelik net interstisyel sıvı fazlası, doku lenfatikleri tarafından toplanıp torasik kanal aracılığıyla venöz dolaşıma geri kazandırılır. Lenfatik drenaj olmazsa normal koşullarda bile lenfödem gelişir. A, C, D ve E seçenekleri ise normal hemodinamik dengenin tartışmasız temel doğrularıdır."
-  },
-  {
-    "id": "prac-odem-002",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 2,
-    "slideTitle": "Vücut Sıvı Kompartmanları: İntraselüler ve Ekstraselüler Hacim Dengesi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Yetmiş kilogram ağırlığında sağlıklı genç bir erişkin erkekte vücut sıvı kompartmanlarının dağılımı ve fraksiyonları ile ilgili aşağıdaki hesaplama ve eşleştirmelerden hangisi DOĞRUDUR?",
-    "options": [
-      "A) Toplam vücut suyu yaklaşık 42 litredir; bunun yaklaşık 28 litresi intraselüler, 14 litresi ekstraselüler kompartmandadır.",
-      "B) Ekstraselüler sıvının en büyük bölümünü intravasküler plazma oluşturur ve yaklaşık 11 litredir.",
-      "C) İntravasküler plazma hacmi toplam vücut ağırlığının yaklaşık %20'sine karşılık gelir.",
-      "D) Doku interstisyel aralığı toplam vücut suyunun üçte ikisini barındırır.",
-      "E) Hücre içi sıvı hacmi hücre dışı sıvı hacminden daha düşüktür ve dehidratasyonda ilk tükenen alandır."
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği kesinlikle doğrudur. 70 kg bir erişkinde vücut ağırlığının %60'ı sudur (70 x 0.60 = 42 litre). Bu 42 litrenin 2/3'ü hücre içi (yaklaşık 28 litre), 1/3'ü ise hücre dışıdır (yaklaşık 14 litre). 14 litrelik ekstraselüler sıvının yaklaşık %80'i (11-11.5 litre) interstisyel aralıkta, %20'si (yaklaşık 3-3.5 litre, yani vücut ağırlığının ~%5'i) ise intravasküler plazmadadır. Dolayısıyla B, C, D ve E seçeneklerindeki oranlar ve hacimler tamamen hatalıdır."
-  },
-  {
-    "id": "prac-odem-003",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 3,
-    "slideTitle": "Mikrosirkülasyonda Starling Kuvvetleri: Hidrostatik ve Onkotik Basınç Dengesi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Mikrosirkülasyonda transkapiller sıvı dengesini açıklayan Starling hipotezi ve kuvvetleri dikkate alındığında, aşağıdaki durumlardan hangisi doku aralığına NET SIVI KAÇIŞINI (filtrasyonu) DOĞRUDAN AZALTIR?",
-    "options": [
-      "A) Prekapiller arteriyollerin belirgin vazodilatasyonu",
-      "B) Postkapiller venüllerde obstrüksiyon sonucu venöz basınç artışı",
-      "C) Ağır proteinüriye bağlı serum albümin konsantrasyonunda düşüş",
-      "D) Şiddetli dehidratasyon ve hiperproteinemi sonucu plazma onkotik basıncının yükselmesi",
-      "E) İnterstisyel lenfatik kanalların tümöral infiltrasyonla tıkanması"
-    ],
-    "correctAnswer": 3,
-    "explanation": "D seçeneği doğrudur. Starling denkleminde net filtrasyon basıncı = [(Pc - Pi) - (πc - πi)] şeklindedir. Plazma onkotik basıncının (πc) yükselmesi, sıvıyı damar lümeni içine çeken kuvveti artırır; bu durum doku aralığına net sıvı kaçışını azaltır ve hatta interstisyumdan damar içine sıvı emilimini teşvik eder. A, B ve C seçenekleri net filtrasyon kuvvetini artırarak ödeme neden olur. E seçeneği ise filtrelenen sıvının geri taşınmasını engelleyerek dokuda sıvı birikmesine yol açar."
-  },
-  {
-    "id": "prac-odem-004",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 4,
-    "slideTitle": "Ödem ve Efüzyon Tanımı: İnterstisyel Sıvı Dinamikleri ve Vücut Boşlukları",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Altmış yaşında dekompanse kalp yetmezliği ve siroz tanıları olan bir hastanın fizik muayenesinde her iki bacakta uyluğa kadar uzanan masif gode bırakan ödem, karında ileri derecede distansiyon ve dalgalanma hissi, oskültasyonda bilateral akciğer bazallerinde ve kalp seslerinde belirgin derinden gelme saptanmıştır. Radyolojik incelemede bilateral plevral boşluklarda, perikart aralığında ve tüm peritoneal kavitede yaygın serbest sıvı birikimi izlenmiştir.\n\nBu hastada mevcut olan klinik ve patolojik tabloyu en doğru tanımlayan tıbbi terim aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Lokalize lenfödem",
-      "B) Anasarka",
-      "C) İzole hidroperiton",
-      "D) Herediter anjiyoödem",
-      "E) Fokal vazojenik ödem"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Cilt ve cilt altı dokularda masif yaygın ödem bulunması ve buna plevral (hidrotoraks), perikardiyal (hidroperikardiyum) ve peritoneal (asit) boşluklardaki efüzyonların eşlik ettiği ağır, jeneralize sistemik sıvı birikimi tablosuna patolojide 'anasarka' adı verilir. Lokalize lenfödem veya anjiyoödem tek bir uzuv veya mukozal alanla sınırlıdır. İzole hidroperiton yalnızca periton boşluğundaki sıvıyı tanımlarken, hastada tüm seröz boşluklar ve cilt altı tutulmuştur."
-  },
-  {
-    "id": "prac-odem-005",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 5,
-    "slideTitle": "Ödemin Birinci Mekanizması: Artmış Kapiller Hidrostatik Basınç ve Nedenleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Uzun süreli uçak yolculuğu sonrasında sağ bacağında ani gelişen şişlik, gerginlik, kızarıklık ve baldır ağrısı şikayetiyle acil servise başvuran 54 yaşındaki bir hastanın fizik muayenesinde sağ kruris çapının sol tarafa göre 4 cm genişlediği ve pretibial bölgede gode bırakan ödem saptanıyor. Yapılan Doppler ultrasonografide sağ ana femoral vende lümeni tam tıkayan akut trombüs izleniyor.\n\nBu hastada gelişen tek taraflı bacak ödeminin patofizyolojisindeki PRİMER ve BAŞLATICI hemodinamik mekanizma aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Plazma albümin düzeyinde akut düşüşe bağlı kolloid ozmotik basınç yetersizliği",
-      "B) Venöz dönüşün bozulması sonucu kapiller hidrostatik basıncın aşırı yükselmesi",
-      "C) Kas içi lenfatik kanalların mikroskobik endotelyal hipoplazisi",
-      "D) Böbreklerden sodyum ve su atılımının primer genetik bozukluğu",
-      "E) İnterstisyel matriks proteoglikanlarının kontrolsüz hiperozmolar sentezi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Femoral ven trombozu, bacağın venöz kanının kalbe dönüşünü mekanik olarak engeller. Venöz lümende biriken kan geriye doğru hidrostatik basınç dalgası oluşturarak postkapiller venül ve kapiller hidrostatik basıncı (Pc) dramatik düzeyde artırır. Artan bu basınç sıvıyı interstisyuma iterek tek taraflı gode bırakan ödeme yol açar. Hastada hipoalbüminemi (A), lenfatik hipoplazi (C) veya renal retansiyon (D) gibi sistemik tablolar bulunmamaktadır."
-  },
-  {
-    "id": "prac-odem-006",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 6,
-    "slideTitle": "Kalp Yetmezliğinde Ödem Mekanizmaları: Düşük Kalp Debisi ve RAAS Kısır Döngüsü",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "İskemik kardiyomiyopatiye bağlı konjestif kalp yetmezliği bulunan 68 yaşındaki bir erkek hastada son iki hafta içinde dispne, ortopne ve her iki bacakta pretibial gode bırakan masif ödem gelişiyor. Laboratuvar incelemesinde plazma renin aktivitesi ve aldosteron konsantrasyonunun belirgin şekilde arttığı saptanıyor.\n\nBu hastada ödem tablosunu derinleştiren sekonder hiperaldosteronizmin BAŞLATICI patofizyolojik tetiği aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Adrenal korteksin zona glomerulosa hücrelerinde gelişen primer fonksiyonel adenom",
-      "B) Karaciğerde anjiyotensinojen sentezinin genetik mutasyonla kontrolsüz artışı",
-      "C) Düşük kalp debisine bağlı efektif arteriyel kan hacminin azalması ve renal hipoperfüzyon",
-      "D) Pulmoner endotelde anjiyotensin dönüştürücü enzim (ACE) ekspresyonunun baskılanması",
-      "E) Proksimal tübüllerde sodyum-glukoz kotransporterlarının primer aşırı aktivasyonu"
-    ],
-    "correctAnswer": 2,
-    "explanation": "C seçeneği doğrudur. Konjestif kalp yetmezliğinde miyokard pompa fonksiyonunu yerine getiremez; ileriye doğru atılan kalp debisi düşer. Bu durum arteriyel yatakta algılanan 'efektif dolaşım hacmini' düşürür ve böbreklerde afferent perfüzyon basıncını azaltır (renal hipoperfüzyon). Jukstaglomerüler aparat bu durumu algılayarak renin salgılar ve RAAS kaskadını (sekonder hiperaldosteronizm) ateşler. Bu primer bir adrenal tümör (A) veya primer hepatik aşırı üretim (B) değildir."
-  },
-  {
-    "id": "prac-odem-007",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 7,
-    "slideTitle": "Ödemin İkinci Mekanizması: Azalmış Plazma Onkotik Basıncı ve Albümin Dinamikleri",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Hipoalbüminemi zemininde gelişen jeneralize ödem tablolarının patofizyolojisi, plazma onkotik basıncı ve sıvı dengesi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
-    "options": [
-      "A) Plazma onkotik basıncının en büyük kısmını immünoglobulin G oluşturur; albüminin bu basınca katkısı ihmal edilebilir düzeydedir.",
-      "B) Serum albümin konsantrasyonu 2.5 g/dL altına indiğinde transkapiller onkotik çekim gücü yetersiz kalır ve interstisyuma sıvı kaçar.",
-      "C) Karaciğer sirozunda albümin sentezi artsa da periferik dokularda aşırı yıkıldığı için hipoalbüminemi gelişir.",
-      "D) Hipoalbüminemiye bağlı ödemde intravasküler hacim arttığı için jukstaglomerüler aparatustan renin salınımı tamamen baskılanır.",
-      "E) Glomerüler filtrasyon bariyerinin hasar görmesi plazma proteinlerinin geri emilimini artırarak onkotik basıncı yükseltir."
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği kesinlikle doğrudur. Normalde 3.5-5.0 g/dL olan serum albümini 2.5-3.0 g/dL altına düştüğünde onkotik basınç kritik eşiği kaybeder ve sıvı doku aralığına süzülür. A seçeneği yanlıştır çünkü onkotik basıncın %70-80'ini albümin oluşturur. C yanlıştır çünkü sirozda yıkım değil hepatosit kaybına bağlı 'sentez yetmezliği' vardır. D yanlıştır çünkü sıvı damar dışına kaçtığı için intravasküler hacim azalır ve RAAS baskılanmaz, tam aksine şiddetle uyarılır. E seçeneği ise filtrasyon hasarının protein kaybı (proteinüri) yaptığını göz ardı etmektedir."
-  },
-  {
-    "id": "prac-odem-008",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 8,
-    "slideTitle": "Nefrotik Sendrom ve Karaciğer Sirozunda Hipoalbüminemi ve Ödem Patogenezi",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Kronik hepatit B zemininde karaciğer sirozu gelişen 58 yaşındaki bir erkek hastada karında belirgin distansiyon (masif asit) ve pretibial gode bırakan ödem izleniyor. Laboratuvar analizinde serum albümini 2.1 g/dL, idrarda protein negatif ve portal ven basıncı 22 mmHg (belirgin artmış) olarak tespit ediliyor.\n\nBu hastada peritoneal kavitede asit sıvısının toplanmasında rol oynayan TEMEL HEMODİNAMİK MEKANİZMA ÇİFTİ aşağıdakilerden hangisinde eksiksiz verilmiştir?",
-    "options": [
-      "A) Splanknik kapiller hidrostatik basınç artışı + Plazma kolloid ozmotik basınç azalması",
-      "B) İnterstisyel lenfatik aplazi + Primer aldosteron hipersekresyonu",
-      "C) Glomerüler porların genişlemesi + Pulmoner arteriyoler vazokonstriksiyon",
-      "D) Sistemik arteriyel hipertansiyon + Artmış eritrosit sedimentasyon hızı",
-      "E) İnterstisyel onkotik basınç çökmesi + Santral venöz basınç düşüklüğü"
-    ],
-    "correctAnswer": 0,
-    "explanation": "A seçeneği doğrudur. Sirozda asit gelişimi iki temel hemodinamik gücün birleşimidir: Portal hipertansiyon nedeniyle splanknik ve mezenterik kapiller yatakta hidrostatik basınç aşırı yükselir (Pc artışı); aynı zamanda karaciğer yetmezliğine bağlı hipoalbüminemi nedeniyle plazma kolloid ozmotik basıncı belirgin şekilde düşer (πc azalması). Sıvıyı dışarı iten kuvvet artarken damarda tutan kuvvet çöktüğü için periton boşluğunda litrelerce asit sıvısı göllenir. Diğer seçenekler bu tablonun patolojisini açıklamaz."
-  },
-  {
-    "id": "prac-odem-009",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 9,
-    "slideTitle": "Ödemin Üçüncü Mekanizması: Lenfatik Obstrüksiyon (Lenfödem) ve Klirens Yetmezliği",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Kronik lenfatik obstrüksiyona bağlı olarak gelişen lenfödem tablosunun patofizyolojik ve morfolojik evrimi ile ilgili aşağıdaki ifadelerden hangisi BİYOLOJİK AÇIDAN DOĞRUDUR?",
-    "options": [
-      "A) Lenfödem sıvısı proteinden tamamen yoksundur ve dansitesi 1.005'in altındadır.",
-      "B) Zamanla dokuda biriken yüksek proteinli sıvı fibroblastları uyararak interstisyel fibrozise ve gode bırakmayan sertliğe yol açar.",
-      "C) Lenfödem geliştikten sonra lenfatik endotel hücreleri hızla apoptoza gider ve interstisyel onkotik basınç sıfıra iner.",
-      "D) Kalp yetmezliği ödemi ile karşılaştırıldığında lenfödemde cilt enfeksiyonu riski tamamen ortadan kalkar.",
-      "E) Lenfödem yalnızca bilateral simetrik olarak başlar ve asla tek bir ekstremiteyi tutmaz."
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği kesinlikle doğrudur. Lenfatik obstrüksiyonda dokudan temizlenemeyen makromoleküller ve proteinler interstisyumda birikir (yüksek proteinli ödem). Bu proteinler kronik fibroblastik uyarım ve kollajen depolanması başlatır; sonuçta doku fibrotikleşir ve gode bırakmayan (non-pitting) karakteristik sert bir hal alır. A seçeneği yanlıştır çünkü sıvı proteinden zengindir. C yanlıştır çünkü interstisyel onkotik basınç düşmez, artar. D yanlıştır çünkü lenfatik staz enfeksiyona (selülit) belirgin yatkınlık yaratır. E yanlıştır çünkü lenfödem sıklıkla asimetrik ve tek taraflıdır (örneğin mastektomi sonrası kolda)."
-  },
-  {
-    "id": "prac-odem-010",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 10,
-    "slideTitle": "Lenfödemin Özel Klinik Patolojileri: Aksiller Diseksiyon, Peau d'Orange ve Elefantiyazis",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Elli iki yaşında bir kadın hasta sağ memesinde ele gelen sert bir kitle ve üzerindeki deride kalınlaşma şikayetiyle başvuruyor. Fizik muayenede sağ meme cildinin yaygın olarak ödemli olduğu, ancak kıl foliküllerinin bulunduğu alanlarda deriye doğru çekintilerin oluştuğu ve cildin pürtüklü 'portakal kabuğu' (peau d'orange) manzarası kazandığı gözleniyor.\n\nBu hastada meme derisindeki karakteristik 'peau d'orange' görünümünün gelişmesinden sorumlu TEMEL HÜCRESEL VE PATOLOJİK MEKANİZMA aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Pektoral kas arteriyollerinde aterosklerotik tıkanma sonucu gelişen iskemik nekroz",
-      "B) İnfiltratif tümör embolilerinin subdermal lenfatik damarları tıkaması ve Cooper ligamanlarının deriyi çekmesi",
-      "C) Karaciğerde albümin sentezinin baskılanmasına bağlı lokalize onkotik basınç çökmesi",
-      "D) İnternal torasik venin primer trombozu sonucu gelişen retrograd kapiller hidrostatik basınç artışı",
-      "E) Meme dokusunda stafilokok enfeksiyonuna bağlı fibrinöz eksüda birikimi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği doğrudur. Peau d'orange görünümü, meme karsinomu hücrelerinin derialtı lenfatik damarları infiltre edip tıkamasıyla oluşur. Tıkanan lenfatikler cildi ödemli hale getirir; ancak cildi derin fasyaya bağlayan Cooper ligamanları ödem sıvısıyla esneyemez ve deriyi içe doğru çekerek kıl foliküllerinin olduğu yerlerde çukurcuklar oluşturur. Bu durum portakal kabuğu manzarasını yaratır. Arter tıkanması (A), hipoalbüminemi (C), ven trombozu (D) veya akut enfeksiyon (E) bu spesifik görünüme neden olmaz."
-  },
-  {
-    "id": "prac-odem-011",
-    "deckId": "learn-odem-hiperemi-konjesyon",
-    "deckTitle": "Hemodinamik Bozukluklar: Ödem, Hiperemi, Konjesyon ve Kanama",
-    "slideNumber": 11,
-    "slideTitle": "Ödemin Dördüncü Mekanizması: Primer ve Sekonder Sodyum ve Su Retansiyonu",
-    "discipline": "Tıp",
-    "committee": "Kurul 1",
-    "question": "Geçirdiği streptokokal farenjitten iki hafta sonra göz kapaklarında şişlik, idrar miktarında azalma ve idrar renginde koyulaşma (kola rengi) fark eden 9 yaşındaki bir çocukta kan basıncı 145/95 mmHg (yaşına göre yüksek) ölçülüyor. Laboratuvarda serum kreatinini yüksek, GFR belirgin azalmış, idrar analizinde dismorfik eritrositler ve eritrosit silindirleri saptanıyor; günlük proteinüri ise 0.8 gram (nefrotik düzeyde değil) olarak ölçülüyor.\n\nBu hastada periorbital ve periferik ödemin gelişmesindeki PRİMER PATOFİZYOLOJİK MEKANİZMA aşağıdakilerden hangisidir?",
-    "options": [
-      "A) Ağır albümin kaybına bağlı plazma kolloid ozmotik basıncının çökmesi",
-      "B) Glomerüler filtrasyon hızının akut düşüşüne bağlı primer sodyum ve su retansiyonu ve hipervolemi",
-      "C) İnterstisyel lenfatik kanalların immün kompleksler tarafından doğrudan tıkanması",
-      "D) Sistemik histamin salınımına bağlı yaygın mikrovasküler permeabilite artışı",
-      "E) Adrenal bezden primer aldosteron salgılayan bir tümörün gelişmesi"
-    ],
-    "correctAnswer": 1,
-    "explanation": "B seçeneği kesinlikle doğrudur. Post-streptokokal glomerülonefrit (akut nefritik sendrom) tablosunda glomerüllerde diffüz proliferasyon ve lökosit infiltrasyonu vardır; bu durum GFR'yi aniden düşürür. Böbrekler sodyum ve suyu filtre edemez ve primer tuz-su retansiyonu gelişir. Artan intravasküler hacim (hipervolemi) hem sistemik kan basıncını yükseltir (hipertansiyon) hem de kapiller hidrostatik basıncı artırarak ödeme yol açar. Proteinüri subnefrotiktir (0.8 g), dolayısıyla hipoalbüminemi (A) primer neden değildir. Lenfatik tıkanıklık (C) veya histamin artışı (D) söz konusu değildir."
   }
 ]
