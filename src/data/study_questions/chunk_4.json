@@ -3,552 +3,6 @@
     "id": "d3-k1-pat-015-300",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 7,
-    "slideTitle": "Akut Enflamasyonun 3 Ana Bileşeni",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-015-301",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 8,
-    "slideTitle": "Vasküler Değişiklikler: Vazodilatasyon ve Akım Dinamikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-021-302",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 9,
-    "slideTitle": "Mikrovasküler Geçirgenlik: Eksüda, Transüda ve Ödem Ayrımı",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
-  },
-  {
-    "id": "d3-k1-pat-021-303",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 10,
-    "slideTitle": "Artmış Vasküler Geçirgenliğin 4 Temel Mekanizması",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Nefrotik sendrom (proteinüri)",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Karaciğer sirozu (azalmış albümin sentezi)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Protein-enerji malnütrisyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kalp yetmezliği",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Protein kaybettiren enteropati",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
-  },
-  {
-    "id": "d3-k1-pat-015-304",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 11,
-    "slideTitle": "Staz, Vasküler Konjesyon ve Lenfatik Yanıt",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-017",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 12,
-    "slideTitle": "Lökosit Rekrutmanı: Marjinasyon ve Yuvarlanma",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-306",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 13,
-    "slideTitle": "Selektin Ailesi ve Weibel-Palade Cisimcikleri",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-307",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 14,
-    "slideTitle": "Sıkı Adezyon ve İntegrinler: Yüksek Afiniteye Geçiş",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-308",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 15,
-    "slideTitle": "Lökosit Adezyon Eksiklikleri ve Klinik Tablolar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-017-309",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 16,
-    "slideTitle": "Transmigrasyon (Diapedez) ve Bazal Membran Geçişi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalardan oluşur: önce lökositler damar duvarına yakın bölgeye kayar (marjinasyon), selektinler aracılığıyla endotel boyunca yuvarlanır (yuvarlanma/rolling), integrinler aracılığıyla sıkı tutunma sağlanır (adezyon), sonrasında PECAM-1 (CD31) aracılığıyla endotel hücreleri arasından geçerek damar dışına çıkar (transmigrasyon/diyapedez) ve son olarak kemokin gradiyentini takip ederek hasar/enfeksiyon bölgesine yönelir (kemotaksis). Bu sıralama, lökosit-endotel etkileşiminin temel adımlarını tanımlar."
-  },
-  {
-    "id": "d3-k1-pat-027",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 17,
-    "slideTitle": "Kemotaksi ve Kemotaktik Faktörler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon → Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu → Marjinasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adhezyon → Marjinasyon → Transmigrasyon → Lökosit aktivasyonu → Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi → Lökosit aktivasyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Lökosit aktivasyonu → Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalarla gerçekleşir: önce lökositler damar duvarına yakın akım hattına kayar (marjinasyon) ve selektinler aracılığıyla gevşek/geçici olarak yuvarlanır; ardından integrinler aracılığıyla endotele sıkıca yapışır (adhezyon); sonra endotel hücreleri arasından damar dışına geçer (transmigrasyon/diyapedez); son olarak kemokin gradyanını izleyerek hasar/enfeksiyon bölgesine yönelir (kemotaksi) ve orada aktive olarak (lökosit aktivasyonu) fagositoz ve diğer efektör işlevlerini yerine getirir."
-  },
-  {
-    "id": "d3-k1-pat-027-311",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 18,
-    "slideTitle": "Lökosit Zamanlaması ve Kinetiği: Nötrofil vs Makrofaj",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Marjinasyon → Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Adhezyon → Kemotaksi → Transmigrasyon → Lökosit aktivasyonu → Marjinasyon",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Adhezyon → Marjinasyon → Transmigrasyon → Lökosit aktivasyonu → Kemotaksi",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi → Lökosit aktivasyonu",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Lökosit aktivasyonu → Marjinasyon → Adhezyon → Transmigrasyon → Kemotaksi",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "Akut inflamasyonda lökosit göçü sırasıyla şu aşamalarla gerçekleşir: önce lökositler damar duvarına yakın akım hattına kayar (marjinasyon) ve selektinler aracılığıyla gevşek/geçici olarak yuvarlanır; ardından integrinler aracılığıyla endotele sıkıca yapışır (adhezyon); sonra endotel hücreleri arasından damar dışına geçer (transmigrasyon/diyapedez); son olarak kemokin gradyanını izleyerek hasar/enfeksiyon bölgesine yönelir (kemotaksi) ve orada aktive olarak (lökosit aktivasyonu) fagositoz ve diğer efektör işlevlerini yerine getirir."
-  },
-  {
-    "id": "d3-k1-pat-015-312",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 19,
-    "slideTitle": "Fagositoz Basamakları ve Opsonizasyon",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-015-313",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-    "slideNumber": 20,
-    "slideTitle": "Hücre İçi Öldürme: ROS, MPO Sistemi ve Genetik Hastalıklar",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "question": null,
-    "options": [
-      {
-        "key": "A",
-        "text": "Sıcaklık",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Kızarıklık",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Şişme",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Nekroz",
-        "isCorrect": true
-      },
-      {
-        "key": "E",
-        "text": "Ağrı",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "D",
-    "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
-  },
-  {
-    "id": "d3-k1-pat-015-314",
-    "deckId": "deck-acute-inflammation-pathology",
-    "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 21,
     "slideTitle": "Nitrik Oksit, NET'ler ve Lökosit Aracılı Doku Hasarı",
     "discipline": "Tıbbi Patoloji",
@@ -585,7 +39,7 @@
     "explanation": "İnflamasyonun klasik beş kardinal bulgusu; kızarıklık (rubor), sıcaklık artışı (calor), şişlik (tumor), ağrı (dolor) ve fonksiyon kaybıdır (functio laesa). Nekroz, doku hasarının bir sonucu olabilir ve bazı şiddetli inflamasyon türlerine (örn. süpüratif) eşlik edebilir ancak kardinal inflamasyon bulgularından biri olarak tanımlanmaz."
   },
   {
-    "id": "d3-k1-pat-015-315",
+    "id": "d3-k1-pat-015-301",
     "deckId": "deck-acute-inflammation-pathology",
     "deckTitle": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
     "slideNumber": 22,
@@ -663,7 +117,7 @@
     "explanation": "Tümör invazyonunun 4 basamağı: 1) Tümör hücrelerinin birbirinden ayrılması (E-kaderin kaybı), 2) Bazal membran bileşenlerine bağlanma (laminin ve integrin reseptörleri), 3) Bazal membran ve ekstrasellüler matriksin proteolitik yıkımı (MMP-2, MMP-9, katepsinler), 4) Göç ve motilitedir."
   },
   {
-    "id": "d3-k1-pat-013-317",
+    "id": "d3-k1-pat-013-303",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 2,
@@ -702,7 +156,7 @@
     "explanation": "Sistemik skleroz (skleroderma), aşırı kollajen birikimi ve fibrozis, küçük damarlarda obliteratif vaskülopati ve otoimmün fenomenlerle karakterize bir hastalıktır. Derinin ilerleyici sertleşmesi yüzde maske görünümüne (mimik kaybı, ince burun), ellerde ise kontraktürlere bağlı pençe eli görünümüne yol açar. Raynaud fenomeni, özofagus dismotilitesi ve pulmoner fibrozis de sık eşlik eden bulgulardır."
   },
   {
-    "id": "d3-k1-pat-008-318",
+    "id": "d3-k1-pat-008-304",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 3,
@@ -741,7 +195,7 @@
     "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
   },
   {
-    "id": "d3-k1-pat-013-319",
+    "id": "d3-k1-pat-013-305",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 4,
@@ -780,7 +234,7 @@
     "explanation": "Sistemik skleroz (skleroderma), aşırı kollajen birikimi ve fibrozis, küçük damarlarda obliteratif vaskülopati ve otoimmün fenomenlerle karakterize bir hastalıktır. Derinin ilerleyici sertleşmesi yüzde maske görünümüne (mimik kaybı, ince burun), ellerde ise kontraktürlere bağlı pençe eli görünümüne yol açar. Raynaud fenomeni, özofagus dismotilitesi ve pulmoner fibrozis de sık eşlik eden bulgulardır."
   },
   {
-    "id": "d3-k1-pat-008-320",
+    "id": "d3-k1-pat-008-306",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 5,
@@ -858,7 +312,7 @@
     "explanation": "Rabdomiyoma, iskelet veya kardiyak kas kökenli benign bir mezenkimal tümördür ve kardiyak rabdomiyomalar sıklıkla tuberoskleroz ile ilişkilidir. Seminom, lenfoma, malign mezotelyoma ve melanom ise tanım gereği malign tümörlerdir. Bu soru, benign/malign tümör terminolojisinin doğru ayırt edilmesini test etmektedir."
   },
   {
-    "id": "d3-k1-pat-013-322",
+    "id": "d3-k1-pat-013-308",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 7,
@@ -897,7 +351,7 @@
     "explanation": "Sistemik skleroz (skleroderma), aşırı kollajen birikimi ve fibrozis, küçük damarlarda obliteratif vaskülopati ve otoimmün fenomenlerle karakterize bir hastalıktır. Derinin ilerleyici sertleşmesi yüzde maske görünümüne (mimik kaybı, ince burun), ellerde ise kontraktürlere bağlı pençe eli görünümüne yol açar. Raynaud fenomeni, özofagus dismotilitesi ve pulmoner fibrozis de sık eşlik eden bulgulardır."
   },
   {
-    "id": "d3-k1-pat-013-323",
+    "id": "d3-k1-pat-013-309",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 8,
@@ -936,7 +390,7 @@
     "explanation": "Sistemik skleroz (skleroderma), aşırı kollajen birikimi ve fibrozis, küçük damarlarda obliteratif vaskülopati ve otoimmün fenomenlerle karakterize bir hastalıktır. Derinin ilerleyici sertleşmesi yüzde maske görünümüne (mimik kaybı, ince burun), ellerde ise kontraktürlere bağlı pençe eli görünümüne yol açar. Raynaud fenomeni, özofagus dismotilitesi ve pulmoner fibrozis de sık eşlik eden bulgulardır."
   },
   {
-    "id": "d3-k1-pat-007-324",
+    "id": "d3-k1-pat-007-310",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 9,
@@ -975,7 +429,7 @@
     "explanation": "Opsonizasyon; bir mikroorganizma veya hücrenin, kompleman (C3b) veya antikorlarla kaplanarak fagositoza duyarlı hale getirilmesi işlemidir ve fagositik hücreler tarafından fagositoz ile temizlenmeyi ifade eder; bu bir nekroz/fagositoz mekanizmasıdır, apoptozun kendisi değildir. Buna karşılık, proliferasyon dengesinin korunması, otoreaktif lenfositlerin negatif seleksiyonla elenmesi, sitotoksik T hücre aracılı öldürme ve görevi biten hücrelerin (örn. embriyonik gelişimde) elimine edilmesi klasik apoptoz örnekleridir."
   },
   {
-    "id": "d3-k1-pat-008-325",
+    "id": "d3-k1-pat-008-311",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 10,
@@ -1014,7 +468,7 @@
     "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
   },
   {
-    "id": "d3-k1-pat-039-326",
+    "id": "d3-k1-pat-039-312",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 11,
@@ -1092,7 +546,7 @@
     "explanation": "【Patofizyolojik & Klinik Değerlendirme】:\nTıbbi Mikrobiyoloji kapsamında sorulan bu vaka/mekanizmada primer patoloji 'Schistosomiazis' ile ilişkilidir.\n\n【Doğru Yanıt (B) Gerekçesi】:\nDoğru seçenek B olup, klinik pratikte biyokimyasal/histopatolojik belirteçler ve moleküler kaskad bu mekanizmayı doğrulamaktadır.\n\n【Çeldirici Seçeneklerin Değerlendirilmesi】:\nDiğer seçenekler alternatif klinik tablolarda veya farklı etyolojik süreçlerde gözlenmekte olup bu soru kökündeki klinik tabloya uymamaktadır.\n\n【Klinik İpucu】:\nTıbbi Mikrobiyoloji sınavlarında ayırıcı tanıda yer alan biyomarkerlar ve histopatolojik bulgular yüksek ayırt ediciliğe sahiptir."
   },
   {
-    "id": "d3-k1-pat-008-328",
+    "id": "d3-k1-pat-008-314",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 13,
@@ -1131,7 +585,7 @@
     "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
   },
   {
-    "id": "d3-k1-pat-008-329",
+    "id": "d3-k1-pat-008-315",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 14,
@@ -1209,7 +663,7 @@
     "explanation": "Kongo Kırmızısı (Congo Red), amiloid fibrillerinin çapraz beta kırma yapısına bağlanır. Işık mikroskobunda pembe-turuncu boyanırken, polarize filtre altında incelendiğinde patognomonik 'elma yeşili çift kırınım' (apple-green birefringence) sergiler."
   },
   {
-    "id": "d3-k1-pat-055-331",
+    "id": "d3-k1-pat-055-317",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 16,
@@ -1248,7 +702,7 @@
     "explanation": "Koilositoz, HPV enfeksiyonunun karakteristik sitopatik etkisidir; enfekte skuamöz hücrelerde nükleer büyüme, hiperkromazi, binükleasyon ve nükleus etrafında belirgin berrak bir halo (perinükleer vakuolizasyon) ile tanınır. Kondiloma lata sifiliz ile ilişkilidir; kondiloma akuminata HPV&apos;nin oluşturduğu genital siğillerin klinik adıdır, CIN ise HPV&apos;ye bağlı displastik değişikliklerin genel adıdır."
   },
   {
-    "id": "d3-k1-pat-008-332",
+    "id": "d3-k1-pat-008-318",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 17,
@@ -1287,7 +741,7 @@
     "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
   },
   {
-    "id": "d3-k1-pat-008-333",
+    "id": "d3-k1-pat-008-319",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 18,
@@ -1326,7 +780,7 @@
     "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
   },
   {
-    "id": "d3-k1-pat-013-334",
+    "id": "d3-k1-pat-013-320",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 19,
@@ -1365,7 +819,7 @@
     "explanation": "Sistemik skleroz (skleroderma), aşırı kollajen birikimi ve fibrozis, küçük damarlarda obliteratif vaskülopati ve otoimmün fenomenlerle karakterize bir hastalıktır. Derinin ilerleyici sertleşmesi yüzde maske görünümüne (mimik kaybı, ince burun), ellerde ise kontraktürlere bağlı pençe eli görünümüne yol açar. Raynaud fenomeni, özofagus dismotilitesi ve pulmoner fibrozis de sık eşlik eden bulgulardır."
   },
   {
-    "id": "d3-k1-pat-016-335",
+    "id": "d3-k1-pat-016-321",
     "deckId": "learn-kronik-enflamasyon",
     "deckTitle": "Kronik Enflamasyon, Granülomlar ve Doku Onarımı Patolojisi",
     "slideNumber": 20,
@@ -1599,7 +1053,7 @@
     "explanation": "Tropheryma whipplei, aktinomisetler grubundan hücre içi bir gram-pozitif basildir. Makrofajların lizozomlarında birikerek lamina propriyada köpüksü histiositler oluşturur; bu inklüzyonlar PAS pozitif ve Ziehl-Neelsen negatiftir (Mycobacterium avium ayrımında ZN negatifliği kritiktir)."
   },
   {
-    "id": "d3-k3-pat-017-341",
+    "id": "d3-k3-pat-017-327",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 4,
@@ -1638,7 +1092,7 @@
     "explanation": "Mallory-Denk cisimcikleri (ubikuitinlenmiş keratin 8/18 ara filamanları) alkolik hepatitte çok belirgin olsa da SADECE alkole özgü değildir; non-alkolik steatohepatit (NASH), Wilson hastalığı, alfa-1 antitiripsin eksikliği ve kronik kolestatik sendromlarda da görülebilir."
   },
   {
-    "id": "d3-k3-pat-017-342",
+    "id": "d3-k3-pat-017-328",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 5,
@@ -1755,7 +1209,7 @@
     "explanation": "Benign nefroskleroz, uzun süreli hafif-orta dereceli hipertansiyon veya yaşlanmaya bağlı olarak küçük arteriyollerin duvarında hiyalin materyal birikimi (hiyalin arterioloskleroz) ile karakterizedir; bu, damar duvarında lümen daralmasına ve kronik iskemik glomerüler/tübüler değişikliklere yol açar. Malign nefroskleroz ise şiddetli/malign hipertansiyonda görülen ve düz kas hücre proliferasyonuna bağlı &apos;soğan zarı&apos; görünümü (hiperplastik arterioloskleroz) ile ayırt edilir; bu farklı bir histolojik paterndir."
   },
   {
-    "id": "d3-k1-pat-021-345",
+    "id": "d3-k1-pat-021-331",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 8,
@@ -1794,7 +1248,7 @@
     "explanation": "Plazma onkotik basıncı, esas olarak plazma albümin konsantrasyonuna bağlıdır ve azalması ödeme yol açar; nefrotik sendromda idrarla, protein kaybettiren enteropatide barsaktan, sirozda azalmış hepatik sentez, malnütrisyonda ise yetersiz alım nedeniyle albümin düşer. Kalp yetmezliği ise ödemi başlıca artmış hidrostatik basınç (venöz konjesyon) ve sekonder sodyum-su retansiyonu yoluyla oluşturur; onkotik basınç azalması kalp yetmezliğinin birincil ödem mekanizması değildir."
   },
   {
-    "id": "d3-k1-pat-009-346",
+    "id": "d3-k1-pat-009-332",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 9,
@@ -1911,7 +1365,7 @@
     "explanation": "Panasiner amfizem ve karaciğer sirozu kombinasyonu ALFA-1 ANTİTRİPSİN EKSİKLİĞİ'ne özgüdür. Wilson hastalığında akciğer tutulumu ve amfizem görülmez; hedef organlar karaciğer, beyin (bazal ganglionlar), göz (Kayser-Fleischer halkası) ve böbrektir."
   },
   {
-    "id": "d3-k3-pat-017-349",
+    "id": "d3-k3-pat-017-335",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 12,
@@ -1950,7 +1404,7 @@
     "explanation": "Mallory-Denk cisimcikleri (ubikuitinlenmiş keratin 8/18 ara filamanları) alkolik hepatitte çok belirgin olsa da SADECE alkole özgü değildir; non-alkolik steatohepatit (NASH), Wilson hastalığı, alfa-1 antitiripsin eksikliği ve kronik kolestatik sendromlarda da görülebilir."
   },
   {
-    "id": "d3-k1-pat-006-350",
+    "id": "d3-k1-pat-006-336",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 13,
@@ -1989,7 +1443,7 @@
     "explanation": "ATP azaldığında Na+/K+-ATPaz pompası çalışamaz hale gelir; bu da hücre içine Na+ ve suyun girmesine (hücresel şişme) ve hücre içinden K+ çıkışına neden olur; yani Na+ hücreden ÇIKMAZ, tam tersine hücre İÇİNE girer. Aynı zamanda Ca++-ATPaz&apos;ın bozulmasıyla hücre içi Ca++ artar, anaerobik glikoliz artışıyla glikojen tüketilir ve laktik asit birikimiyle hücre içi pH düşer. Dolayısıyla yanlış olan ifade &apos;hücre dışına Na+ çıkışı&apos; seçeneğidir."
   },
   {
-    "id": "d3-k1-pat-009-351",
+    "id": "d3-k1-pat-009-337",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 14,
@@ -2028,7 +1482,7 @@
     "explanation": "Class II MHC molekülleri antijen sunan hücrelerde (makrofaj, dendritik hücre, B hücresi) bulunur ve hücre dışından fagositoz/endositoz ile alınıp lizozomal proteoliz sonucu oluşan peptitleri CD4+ T hücrelerine sunar; bu ekzojen antijen sunum yoludur. Class I moleküller ise tüm çekirdekli hücrelerde bulunur ve endojen (sitozolik) peptitleri CD8+ T hücrelerine sunar. MHC, antijenleri B hücrelerine değil T hücrelerine sunar; B hücreleri antijeni doğrudan yüzey immünoglobulinleriyle tanır. HLA geni insanda 6. kromozomda yer alır, 12. kromozomda değil."
   },
   {
-    "id": "d3-k1-uro-009-352",
+    "id": "d3-k1-uro-009-338",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 15,
@@ -2145,7 +1599,7 @@
     "explanation": "Prusya mavisi (Perls' Prussian Blue), ferrik (+3) demir iyonlarıyla potasyum ferrosiyanür reaksiyonu vererek hemosiderini belirgin parlak mavi renge boyar. Rodamin ve Orsein bakır birikiminde (Wilson hastalığı), Masson Trikrom kollajen liflerinde (fibrozis/siroz), PAS ise glikojen ve alfa-1 antitiripsin globüllerinde kullanılır."
   },
   {
-    "id": "d3-k1-pat-029-355",
+    "id": "d3-k1-pat-029-341",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 18,
@@ -2184,7 +1638,7 @@
     "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
   },
   {
-    "id": "d3-k1-pat-029-356",
+    "id": "d3-k1-pat-029-342",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 19,
@@ -2262,7 +1716,7 @@
     "explanation": "Over kanserleri, özellikle yüksek dereceli seröz karsinomlar, en sık peritoneal yüzeyler boyunca transkölomik (direkt yayılım/ekilme) yolla yayılır; uzak lenfatik ve hematojen metastazlar nispeten geç dönemde ve daha az sıklıkla görülür. Seröz tümörler overin en sık görülen malign epitelyal tümör grubudur ve fallop tüpü epiteline benzer silyalı hücrelerden oluşur. Kistik alanlar tipik olarak berrak seröz sıvı içerir. Papilla uçlarında laminer kalsifikasyonlar olan psammom cisimcikleri karakteristiktir."
   },
   {
-    "id": "d3-k1-pat-029-358",
+    "id": "d3-k1-pat-029-344",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 21,
@@ -2340,7 +1794,7 @@
     "explanation": "COX-1 enzimi mide mukozasında devamlı olarak aktiftir (konstitütif) ve PGE2 ile PGI2 üretir. Bu prostaglandinler mukus salgısını, bikarbonat salgısını ve mukozal kan akımını artırır, mide asit salgısını ise baskılar. Non-selektif NSAİİ'ler COX-1'i bloke edince bu koruyucu kalkan çöker ve peptik ülser gelişir."
   },
   {
-    "id": "d3-k1-pat-029-360",
+    "id": "d3-k1-pat-029-346",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 23,
@@ -2379,7 +1833,7 @@
     "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
   },
   {
-    "id": "d3-k1-pat-029-361",
+    "id": "d3-k1-pat-029-347",
     "deckId": "learn-intraseluler-birikimler",
     "deckTitle": "İntraselüler Birikimler ve Patolojik Kalsifikasyonlar",
     "slideNumber": 24,
@@ -2418,7 +1872,7 @@
     "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
   },
   {
-    "id": "d3-k1-enf-003-362",
+    "id": "d3-k1-enf-003-348",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 1,
@@ -2457,7 +1911,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-003-363",
+    "id": "d3-k1-enf-003-349",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 2,
@@ -2496,7 +1950,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-028-364",
+    "id": "d3-k1-enf-028-350",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 3,
@@ -2535,7 +1989,7 @@
     "explanation": "Chlamydia trachomatis, zorunlu hücre içi (obligat intraselüler) bir\nbakteri olduğundan standart gram boyama ile görülemez ve rutin kültür\nbesiyerlerinde üremez. Bu nedenle üretral/servikal akıntı örneğinde\nartmış PMNL sayısına rağmen gram boyamada herhangi bir\nmikroorganizma görülememesi, klasik olarak Chlamydia trachomatis\nenfeksiyonunu (nongonokoksik üretrit/servisit) düşündürür; tanı için\nnükleik asit amplifikasyon testleri (NAAT/PCR) kullanılır."
   },
   {
-    "id": "d3-k1-enf-017-365",
+    "id": "d3-k1-enf-017-351",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 4,
@@ -2574,7 +2028,7 @@
     "explanation": "Gonokoksik enfeksiyonlarda (ve genel olarak tüm CYBE'lerde) yeniden\nenfeksiyonu önlemek ve toplumsal yayılımı durdurmak için, hastanın\nson 60 gün içindeki cinsel partnerlerinin mutlaka değerlendirilmesi ve\neş zamanlı (ampirik) tedavi edilmesi gerekir; 'partner tedavisine gerek\nyoktur' ifadesi bu nedenle yanlıştır. Güncel tedavi yaklaşımı artan direnç\nnedeniyle tek doz seftriakson esasına dayanır; klamidya birlikteliği\ndışlanamıyorsa doksisiklin eklenir."
   },
   {
-    "id": "d3-k1-enf-006-366",
+    "id": "d3-k1-enf-006-352",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 5,
@@ -2613,7 +2067,7 @@
     "explanation": "Özefagus, konjonktiva, kolon ve vajen gibi dış ortamla/mukozal yüzeyle\ntemas eden bölgelerde normal (kommensal) mikrobiyal flora bulunur.\nÜreterler ise mesane ve böbrekler gibi normalde sterildir; bu bölgelerde\nmikroorganizma varlığı patolojik kabul edilir."
   },
   {
-    "id": "d3-k1-enf-024-367",
+    "id": "d3-k1-enf-024-353",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 6,
@@ -2652,7 +2106,7 @@
     "explanation": "Ureaplasma urealyticum, hücre duvarı olmayan (Mycoplasma\nailesinden) küçük bir bakteridir ve cinsel yönden aktif sağlıklı bireylerin\ngenital florasında da sıklıkla kolonizasyon şeklinde bulunabilir. Bu\nnedenle genital örnek kültüründe üremesi tek başına patojen olduğu ve\ntedavi gerektirdiği anlamına gelmez; klinik bulgularla birlikte\ndeğerlendirilmelidir. Hücre duvarı olmadığından gram boyanmaz ve\npenisilin gibi hücre duvarı sentezini hedefleyen antibiyotiklere doğal\nolarak dirençlidir (tedavide makrolid/tetrasiklin grubu tercih edilir)."
   },
   {
-    "id": "d3-k3-far-009-368",
+    "id": "d3-k3-far-009-354",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 7,
@@ -2691,7 +2145,7 @@
     "explanation": "Amikasin, bakteriyel modifiye edici enzimlere karşı en dayanıklı aminoglikoziddir. Gentamisin ve tobramisine direnç geliştiğinde spektrum genişliği sayesinde hastane kaynaklı dirençli Pseudomonas ve Klebsiella suşlarında hayat kurtarıcıdır."
   },
   {
-    "id": "d3-k1-enf-007-369",
+    "id": "d3-k1-enf-007-355",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 8,
@@ -2730,7 +2184,7 @@
     "explanation": "İndirek temas bulaşı, kontamine cansız ara yüzeyler (glukometre,\ntansiyon aleti, ortak kullanılan cihazlar) veya sağlık personelinin elleri\naracılığıyla mikroorganizmanın hastadan hastaya taşınmasıdır. Kan\ntransfüzyonu ise doğrudan (parenteral) bir bulaş yoludur;\ndolaylı/indirekt temas kategorisine girmez."
   },
   {
-    "id": "d3-k1-enf-005-370",
+    "id": "d3-k1-enf-005-356",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 9,
@@ -2769,7 +2223,7 @@
     "explanation": "Hapşırma (aksırma), tek seferde en yüksek sayıda solunum partikülünün\nyüksek hızla saçıldığı eylemdir (tek bir hapşırıkta on binlerce damlacık\noluşabilir). Öksürme de çok sayıda partikül saçar ancak hapşırmadan\nazdır; konuşma, şarkı söyleme ve bağırma ise sürekli/uzun süreli\nmaruziyetle bulaş riskini artırsa da tek seferde saçılan partikül sayısı\nbakımından hapşırmanın gerisinde kalır."
   },
   {
-    "id": "d3-k1-enf-009-371",
+    "id": "d3-k1-enf-009-357",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 10,
@@ -2808,7 +2262,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-013-372",
+    "id": "d3-k1-enf-013-358",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 11,
@@ -2847,7 +2301,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-013-373",
+    "id": "d3-k1-enf-013-359",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 12,
@@ -2886,7 +2340,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-010-374",
+    "id": "d3-k1-enf-010-360",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 13,
@@ -2925,7 +2379,7 @@
     "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
   },
   {
-    "id": "d3-k1-enf-004-375",
+    "id": "d3-k1-enf-004-361",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 14,
@@ -2964,7 +2418,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-004-376",
+    "id": "d3-k1-enf-004-362",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 15,
@@ -3003,7 +2457,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-011-377",
+    "id": "d3-k1-enf-011-363",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 16,
@@ -3042,7 +2496,7 @@
     "explanation": "Hastane enfeksiyon kontrol uygulamasında (kurumdan kuruma\ndeğişebilen renk kodlamalarında), temas izolasyonu gerektiren\nhastaların oda kapılarına genellikle kırmızı yıldız işareti asılır. Bu görsel\nkodlama, sağlık personelinin ve ziyaretçilerin gerekli koruyucu önlemleri\n(eldiven, önlük vb.) almadan odaya girmesini engellemeyi amaçlar."
   },
   {
-    "id": "d3-k5-aci-011-378",
+    "id": "d3-k5-aci-011-364",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 17,
@@ -3081,7 +2535,7 @@
     "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
   },
   {
-    "id": "d3-k1-enf-009-379",
+    "id": "d3-k1-enf-009-365",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 18,
@@ -3120,7 +2574,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-054-380",
+    "id": "d3-k1-enf-054-366",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 19,
@@ -3159,7 +2613,7 @@
     "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
   },
   {
-    "id": "d3-k1-enf-009-381",
+    "id": "d3-k1-enf-009-367",
     "deckId": "learn-enfeksiyon-izolasyon",
     "deckTitle": "Hastane Enfeksiyonları ve İzolasyon Önlemleri",
     "slideNumber": 20,
@@ -3198,705 +2652,611 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-pat-005-382",
+    "id": "patgir-q-001",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 1,
-    "slideTitle": "1-2-3. Öğrenim Hedefleri (1)",
+    "slideTitle": "Patolojinin Tanımı, Kapsamı ve Tıptaki Yeri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Patolojinin Tanımı, Kapsamı ve Tıptaki Yeri konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Patolojinin Tanımı, Kapsamı ve Tıptaki Yeri sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Patoloji temel bilimler ile klinik bilimler arasında köprü kuran 'hastalık bilimi'dir; kesin kanser tanısının altın standardıdır.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Patoloji temel bilimler ile klinik bilimler arasında köprü kuran 'hastalık bilimi'dir; kesin kanser tanısının altın standardıdır."
   },
   {
-    "id": "d3-k1-pat-005-383",
+    "id": "patgir-q-002",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 2,
-    "slideTitle": "“Patoloji” Sözcüğünün Kökeni",
+    "slideTitle": "Hastalık Sürecinin Dört Temel Bileşeni",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Hastalık Sürecinin Dört Temel Bileşeni konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Hastalık Sürecinin Dört Temel Bileşeni sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Etiyoloji hastalığın NEDENİ iken, Patogenez hastalığın gelişme MEKANİZMASIDIR.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Etiyoloji hastalığın NEDENİ iken, Patogenez hastalığın gelişme MEKANİZMASIDIR."
   },
   {
-    "id": "d3-k1-pat-005-384",
+    "id": "patgir-q-003",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 3,
-    "slideTitle": "11. Etiyoloji (Neden) –",
+    "slideTitle": "Rudolf Virchow ve Hücresel Patoloji Devrimi",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Rudolf Virchow ve Hücresel Patoloji Devrimi konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Rudolf Virchow ve Hücresel Patoloji Devrimi sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Modern patolojinin kurucusu Rudolf Virchow'dur; tüm hastalıkların temelinde hücresel düzeydeki bozulmalar yatar.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Modern patolojinin kurucusu Rudolf Virchow'dur; tüm hastalıkların temelinde hücresel düzeydeki bozulmalar yatar."
   },
   {
-    "id": "d3-k1-pat-005-385",
+    "id": "patgir-q-004",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 4,
-    "slideTitle": "16. Patoloji Uzmanının Rolü",
+    "slideTitle": "Patolojide İnceleme Materyalleri ve Biyopsi Çeşitleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Patolojide İnceleme Materyalleri ve Biyopsi Çeşitleri konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Patolojide İnceleme Materyalleri ve Biyopsi Çeşitleri sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Eksizyonel biyopside lezyonun tamamı çıkarılırken; insizyonel biyopside lezyonun sadece bir parçası tanı için kesilir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Eksizyonel biyopside lezyonun tamamı çıkarılırken; insizyonel biyopside lezyonun sadece bir parçası tanı için kesilir."
   },
   {
-    "id": "d3-k1-pat-005-386",
+    "id": "patgir-q-005",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 5,
-    "slideTitle": "20. Patolojinin Ana Alt Dalları",
+    "slideTitle": "Sitolojik İnceleme Yöntemleri: Eksfolyatif ve İnce İğne Aspirasyonu (İİAB)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Sitolojik İnceleme Yöntemleri: Eksfolyatif ve İnce İğne Aspirasyonu (İİAB) konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Sitolojik İnceleme Yöntemleri: Eksfolyatif ve İnce İğne Aspirasyonu (İİAB) sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) İİAB doku mimarisini göstermez, sadece hücresel detayları (atipiyi) gösterir; tiroid nodüllerinde ilk basamak tetkiktir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: İİAB doku mimarisini göstermez, sadece hücresel detayları (atipiyi) gösterir; tiroid nodüllerinde ilk basamak tetkiktir."
   },
   {
-    "id": "d3-k1-pat-005-387",
+    "id": "patgir-q-006",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 6,
-    "slideTitle": "24. Patoloji ve Fizyopatolojinin Ayrımı",
+    "slideTitle": "İntraoperatif Konsültasyon: 'Frozen' (Dondurma) Kesit",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "İntraoperatif Konsültasyon: 'Frozen' (Dondurma) Kesit konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) İntraoperatif Konsültasyon: 'Frozen' (Dondurma) Kesit sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Frozen incelemenin primer amacı cerrahi sınırı belirlemek ve cerrahi planı değiştirmektir; nihai kalıcı tanı parafin kesitte verilir!",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Frozen incelemenin primer amacı cerrahi sınırı belirlemek ve cerrahi planı değiştirmektir; nihai kalıcı tanı parafin kesitte verilir!"
   },
   {
-    "id": "d3-k1-pat-005-388",
+    "id": "patgir-q-007",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 7,
-    "slideTitle": "29. Türkiye’de Patolojinin Başlangıcı",
+    "slideTitle": "Doku Takibi Basamakları: Tespitten Mikrotom Kesitine",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Doku Takibi Basamakları: Tespitten Mikrotom Kesitine konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Doku Takibi Basamakları: Tespitten Mikrotom Kesitine sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Standart rutin doku fiksasyonunda kullanılan temel kimyasal %10'luk nötral tamponlu formalindir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Standart rutin doku fiksasyonunda kullanılan temel kimyasal %10'luk nötral tamponlu formalindir."
   },
   {
-    "id": "d3-k1-pat-005-389",
+    "id": "patgir-q-008",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 8,
-    "slideTitle": "33. Diğer Öncüler ve Sitopatolojinin Girişi",
+    "slideTitle": "Histopatolojik Boyama: Hematoksilen & Eozin (H&E) Temeli",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Histopatolojik Boyama: Hematoksilen & Eozin (H&E) Temeli konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Histopatolojik Boyama: Hematoksilen & Eozin (H&E) Temeli sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Hematoksilen baziktir, asidik nükleusu mavi-mora boyar; Eozin asidiktir, bazik sitoplazmayı pembeye boyar.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Hematoksilen baziktir, asidik nükleusu mavi-mora boyar; Eozin asidiktir, bazik sitoplazmayı pembeye boyar."
   },
   {
-    "id": "d3-k1-pat-005-390",
+    "id": "patgir-q-009",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 9,
-    "slideTitle": "37. Histokimyasal Boyalar – Örnekler",
+    "slideTitle": "Özel Histokimyasal Boyalar ve Tanısal Kullanımları",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Özel Histokimyasal Boyalar ve Tanısal Kullanımları konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Özel Histokimyasal Boyalar ve Tanısal Kullanımları sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Kongo kırmızısı ile boyanan amiloid, polarize ışık mikroskobunda karakteristik 'Elma Yeşili' refle verir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Kongo kırmızısı ile boyanan amiloid, polarize ışık mikroskobunda karakteristik 'Elma Yeşili' refle verir."
   },
   {
-    "id": "d3-k1-pat-005-391",
+    "id": "patgir-q-010",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 10,
-    "slideTitle": "42. Materyal Etiketleme ve Kayıt",
+    "slideTitle": "İmmünohistokimya (İHK) Prensipleri ve Tümör Belirteçleri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "İmmünohistokimya (İHK) Prensipleri ve Tümör Belirteçleri konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) İmmünohistokimya (İHK) Prensipleri ve Tümör Belirteçleri sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) İmmünohistokimyada epitel kökenli tümörleri (karsinom) gösteren temel belirteç Sitokeratindir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: İmmünohistokimyada epitel kökenli tümörleri (karsinom) gösteren temel belirteç Sitokeratindir."
   },
   {
-    "id": "d3-k1-pat-005-392",
+    "id": "patgir-q-011",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 11,
-    "slideTitle": "46. Fikzasyonun Amacı ve İlkeleri",
+    "slideTitle": "Moleküler Patoloji Yöntemleri ve Hedefe Yönelik Tedaviler",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Moleküler Patoloji Yöntemleri ve Hedefe Yönelik Tedaviler konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Moleküler Patoloji Yöntemleri ve Hedefe Yönelik Tedaviler sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Meme karsinomunda Trastuzumab (Herceptin) akıllı ilacını seçebilmek için HER2/neu gen amplifikasyonu FISH ile incelenir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Meme karsinomunda Trastuzumab (Herceptin) akıllı ilacını seçebilmek için HER2/neu gen amplifikasyonu FISH ile incelenir."
   },
   {
-    "id": "d3-k1-pat-005-393",
+    "id": "patgir-q-012",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 12,
-    "slideTitle": "Disseksiyondan sonra",
+    "slideTitle": "Patoloji Raporunun Anatomisi ve Standart Elemanları",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Patoloji Raporunun Anatomisi ve Standart Elemanları konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Patoloji Raporunun Anatomisi ve Standart Elemanları sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Patolojik evreleme (pTNM) daima cerrahi spesmenin mikroskopik incelenmesiyle belirlenir ve klinik evrelemeden (cTNM) daha güvenilirdir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Patolojik evreleme (pTNM) daima cerrahi spesmenin mikroskopik incelenmesiyle belirlenir ve klinik evrelemeden (cTNM) daha güvenilirdir."
   },
   {
-    "id": "d3-k1-pat-005-394",
+    "id": "patgir-q-013",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 13,
-    "slideTitle": "52. Kesit Alma (Mikrotomi)",
+    "slideTitle": "Hücresel Yanıt Spektrumu: Sağlıktan Hasara ve Ölüme",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Hücresel Yanıt Spektrumu: Sağlıktan Hasara ve Ölüme konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Hücresel Yanıt Spektrumu: Sağlıktan Hasara ve Ölüme sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Reversibl hasarın dönüm noktası membran bütünlüğünün bozulmasıdır; membran yırtılırsa hasar geri dönüşümsüzdür (irreversibl).",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Reversibl hasarın dönüm noktası membran bütünlüğünün bozulmasıdır; membran yırtılırsa hasar geri dönüşümsüzdür (irreversibl)."
   },
   {
-    "id": "d3-k1-pat-005-395",
+    "id": "patgir-q-014",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 14,
-    "slideTitle": "Kesit alma Mikrotom (wax)",
+    "slideTitle": "Otopsi ve Adli Patoloji: Tıbbi ve Hukuki Boyut",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Otopsi ve Adli Patoloji: Tıbbi ve Hukuki Boyut konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Otopsi ve Adli Patoloji: Tıbbi ve Hukuki Boyut sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Adli otopside ailenin rızası aranmaz; savcının veya mahkemenin yasal emri kesindir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Adli otopside ailenin rızası aranmaz; savcının veya mahkemenin yasal emri kesindir."
   },
   {
-    "id": "d3-k1-pat-005-396",
+    "id": "patgir-q-015",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 15,
-    "slideTitle": "Ø A. Bazik boya: hematoksilen",
+    "slideTitle": "Elektron Mikroskopisinin (EM) Patolojideki Yeri",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Elektron Mikroskopisinin (EM) Patolojideki Yeri konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Elektron Mikroskopisinin (EM) Patolojideki Yeri sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Minimal Değişiklik Hastalığında ışık mikroskopisi tamamen normaldir; podosit hasarı ancak Elektron Mikroskobu ile saptanabilir!",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Minimal Değişiklik Hastalığında ışık mikroskopisi tamamen normaldir; podosit hasarı ancak Elektron Mikroskobu ile saptanabilir!"
   },
   {
-    "id": "d3-k1-pat-005-397",
+    "id": "patgir-q-016",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 16,
-    "slideTitle": "Hematoksilen ve Eozin (H & E)",
+    "slideTitle": "Doku Bankacılığı ve Biyoetik",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Doku Bankacılığı ve Biyoetik konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Doku Bankacılığı ve Biyoetik sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Formalin DNA ve RNA'yı kısmen fragmante eder; bu nedenle derin genomik sekanslama için taze dondurulmuş doku (fresh frozen) idealdir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Formalin DNA ve RNA'yı kısmen fragmante eder; bu nedenle derin genomik sekanslama için taze dondurulmuş doku (fresh frozen) idealdir."
   },
   {
-    "id": "d3-k1-pat-005-398",
+    "id": "patgir-q-017",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 17,
-    "slideTitle": "Artefaktlar",
+    "slideTitle": "Artefaktlar (Doku Takip Hataları) ve Tanı Tuzakları",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Artefaktlar (Doku Takip Hataları) ve Tanı Tuzakları konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Artefaktlar (Doku Takip Hataları) ve Tanı Tuzakları sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Yetersiz fiksasyon doku merkezinde otolize yol açarak mikroskopik incelemeyi imkansız kılar.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Yetersiz fiksasyon doku merkezinde otolize yol açarak mikroskopik incelemeyi imkansız kılar."
   },
   {
-    "id": "d3-k1-pat-005-399",
+    "id": "patgir-q-018",
     "deckId": "learn-patolojiye-giris",
     "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
     "slideNumber": 18,
-    "slideTitle": "Ø I. Lamel",
+    "slideTitle": "Akım Sitometrisi (Flow Cytometry)",
     "discipline": "Tıbbi Patoloji",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "question": "Akım Sitometrisi (Flow Cytometry) konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Alkol",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Serum fizyolojik",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Ksilen",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Parafin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Formalin",
-        "isCorrect": true
-      }
+      "A) Akım Sitometrisi (Flow Cytometry) sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Akım sitometrisi saatler içinde hematolojik malignitelerde immünfenotipleme sağlayan en hızlı yöntemdir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
     ],
-    "correctAnswer": "E",
-    "explanation": "Formalin, formaldehit gazının sudaki %40'lık eriyiğinden %10'luk çözelti hâlinde hazırlanan fiksatiftir ve doku proteinlerindeki amino grupları arasında çapraz bağ (metilen köprüleri) oluşturarak dokuyu o andaki görünümünde sabitler. Böylece hücrelerin ısı, nem ve sindirici enzimlerin etkisiyle otolize uğraması ile bakterilerin bozucu etkisi engellenir; doku mikroskobik incelemeye ve boyamaya uygun hâle gelir. Ucuz olması, dokuya iyi nüfuz etmesi ve standart doku takibi protokollerine uyması nedeniyle patolojide rutin amaçla en yaygın kullanılan tespit sıvısıdır; kanlı dokularda hemoglobin ile birleşerek etkisini yitirebildiği için formalin sürekli değiştirilmelidir. Alkol (%70 etil alkol) yalnızca mecbur kalındığında alternatif fiksatif olarak kullanılabilir ve asıl olarak doku takibinin dehidratasyon basamağında yer alır; bu nedenle A şıkkı yanlıştır. Ksilen dehidratasyondan sonra şeffaflandırma (clearing), parafin ise infiltrasyon ve gömme basamağında kullanılır; hiçbiri birincil tespit ajanı değildir, bu nedenle C ve D şıkları yanlıştır. Serum fizyolojik dokuyu sabitlemez; yalnızca transport sırasında dokunun kurumasını kısmen önleyen fizyolojik bir ortamdır ve tespit sıvısı olarak kullanılamaz, bu nedenle B şıkkı da yanlıştır. Doku takibinin sırası tespit, dehidratasyon, şeffaflandırma ve infiltrasyon/gömme şeklindedir; formalin bu zincirin ilk ve en kritik basamağıdır."
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Akım sitometrisi saatler içinde hematolojik malignitelerde immünfenotipleme sağlayan en hızlı yöntemdir."
+  },
+  {
+    "id": "patgir-q-019",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
+    "slideNumber": 19,
+    "slideTitle": "Dijital Patoloji ve Telepatoloji",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Dijital Patoloji ve Telepatoloji konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Dijital Patoloji ve Telepatoloji sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Telepatoloji acil frozen kesitlerin merkezdeki uzman patoloğa uzaktan konsülte edilmesine imkan verir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Telepatoloji acil frozen kesitlerin merkezdeki uzman patoloğa uzaktan konsülte edilmesine imkan verir."
+  },
+  {
+    "id": "patgir-q-020",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
+    "slideNumber": 20,
+    "slideTitle": "Kalite Kontrol ve Laboratuvar Akreditasyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Kalite Kontrol ve Laboratuvar Akreditasyonu konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Kalite Kontrol ve Laboratuvar Akreditasyonu sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Numunenin yanlış etiketlenmesi en tehlikeli preanalitik patoloji hatasıdır.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Numunenin yanlış etiketlenmesi en tehlikeli preanalitik patoloji hatasıdır."
+  },
+  {
+    "id": "patgir-q-021",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
+    "slideNumber": 21,
+    "slideTitle": "Tümör Derecelendirmesi (Grading) Temelleri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Tümör Derecelendirmesi (Grading) Temelleri konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Tümör Derecelendirmesi (Grading) Temelleri sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Grade biyolojik agresifliği ve mikroskobik farklılaşmayı gösterirken; Evre (Stage) tümörün vücuttaki yayılım derecesini gösterir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Grade biyolojik agresifliği ve mikroskobik farklılaşmayı gösterirken; Evre (Stage) tümörün vücuttaki yayılım derecesini gösterir."
+  },
+  {
+    "id": "patgir-q-022",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
+    "slideNumber": 22,
+    "slideTitle": "Karsinogenezde Temel Kavramlar: Displazi ve Karsinoma İn Situ",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Karsinogenezde Temel Kavramlar: Displazi ve Karsinoma İn Situ konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Karsinogenezde Temel Kavramlar: Displazi ve Karsinoma İn Situ sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Karsinoma in situ bazal membranı aşmadığı için anjiyogenik damarlarla temas kuramaz ve kan/lenf yoluyla metastaz yapamaz!",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Karsinoma in situ bazal membranı aşmadığı için anjiyogenik damarlarla temas kuramaz ve kan/lenf yoluyla metastaz yapamaz!"
+  },
+  {
+    "id": "patgir-q-023",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
+    "slideNumber": 23,
+    "slideTitle": "Patolojide İmmünfenotipik Paneller",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Patolojide İmmünfenotipik Paneller konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Patolojide İmmünfenotipik Paneller sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) CK7 ve CK20 sitokeratin alt tipleri bilinmeyen primerli metastatik karsinomlarda köken tayininde ilk bakılan paneldir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: CK7 ve CK20 sitokeratin alt tipleri bilinmeyen primerli metastatik karsinomlarda köken tayininde ilk bakılan paneldir."
+  },
+  {
+    "id": "patgir-q-024",
+    "deckId": "learn-patolojiye-giris",
+    "deckTitle": "Patolojiye Giriş ve Temel İlkeler",
+    "slideNumber": 24,
+    "slideTitle": "Patoloji Dersinin Özeti ve Komite Sınav Stratejisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Patoloji Dersinin Özeti ve Komite Sınav Stratejisi konusunda aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Patoloji Dersinin Özeti ve Komite Sınav Stratejisi sürecinde histopatolojik incelemenin hiçbir değeri yoktur",
+      "B) Patolojiye Giriş dersi 3. sınıf boyunca göreceğiniz tüm organ patolojilerinin ortak grameri ve alfabesidir.",
+      "C) Doku incelemelerinde formalin yerine yalnızca su kullanılır",
+      "D) Bu kavram modern tıpta tamamen terk edilmiştir",
+      "E) Biyopside mikroskop kullanılmaz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru akademik yaklaşım: Patolojiye Giriş dersi 3. sınıf boyunca göreceğiniz tüm organ patolojilerinin ortak grameri ve alfabesidir."
+  },
+  {
+    "id": "prac-gen-001",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 1,
+    "slideTitle": "Genital Enfeksiyonlara Giriş ve Klinik Sınıflama",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki genital enfeksiyon etkenlerinden hangisi karakteristik olarak genital ülserle değil, pürülan endoservikal ve üretral akıntı ile prezante olur?",
+    "options": [
+      "A) Treponema pallidum",
+      "B) Herpes Simplex Virus Tip 2",
+      "C) Neisseria gonorrhoeae",
+      "D) Haemophilus ducreyi",
+      "E) Klebsiella granulomatis"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Neisseria gonorrhoeae mukopürülan servisit ve üretrit etkenidir; ülseratif lezyon oluşturmaz. Diğer seçenekler genital ülser etkenleridir."
+  },
+  {
+    "id": "prac-gen-002",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 2,
+    "slideTitle": "Genital Ülserlerin Ayırıcı Tanısı: Ağrılı vs Ağrısız Lezyonlar",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Genital bölgesinde son derece ağrılı, yumuşak kenarlı, tabanı nekrotik akıntılı derin ülser ve kasığında fluktuasyon veren süpüratif ağrılı bubo saptanan hastada en olası etken hangisidir?",
+    "options": [
+      "A) Treponema pallidum",
+      "B) Haemophilus ducreyi",
+      "C) Chlamydia trachomatis L2",
+      "D) Klebsiella granulomatis",
+      "E) Human Papilloma Virus"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Son derece ağrılı yumuşak ülser ve süpüratif lenfadenit (bubo) Haemophilus ducreyi'nin yol açtığı Şankroid (yumuşak şankr) tablosudur."
+  },
+  {
+    "id": "prac-gen-003",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 3,
+    "slideTitle": "Normal Vajinal Ekosistem ve Laktobasil Dengesi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Üreme çağındaki sağlıklı bir kadında vajina lümeninin asidik pH'da (3.8-4.5) kalmasını ve patojen bakterilere karşı doğal savunmayı sağlayan temel flora elemanı hangisidir?",
+    "options": [
+      "A) Gardnerella vaginalis",
+      "B) Candida albicans",
+      "C) Lactobacillus türleri (Döderlein basilleri)",
+      "D) Ureaplasma urealyticum",
+      "E) Streptococcus agalactiae"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Vajen epitelindeki glikojenden laktik asit sentezleyerek asidik pH oluşturan temel koruyucu mikroorganizma Laktobasillerdir."
+  },
+  {
+    "id": "prac-gen-004",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 4,
+    "slideTitle": "Vulvovajinal Kandidiyazis: Patogenez, Klinik ve Tedavi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Yoğun vajinal kaşıntı ve beyaz peynir kesiği benzeri kokusuz akıntısı olan bir kadında ölçülen vajinal pH 4.0 (normal) saptanıyor. Nativ preparatta psödohifler görülen bu hastada en olası etken ve tedavi hangisidir?",
+    "options": [
+      "A) Gardnerella vaginalis — Oral Metronidazol",
+      "B) Candida albicans — Tek doz oral Flukonazol",
+      "C) Trichomonas vaginalis — Tek doz Metronidazol",
+      "D) Chlamydia trachomatis — Doksisiklin",
+      "E) Neisseria gonorrhoeae — Seftriakson"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Normal vajinal pH (<4.5), yoğun kaşıntı, peynir kesiği akıntı ve psödohifler Candida albicans enfeksiyonunu gösterir; tedavide oral flukonazol kullanılır."
+  },
+  {
+    "id": "prac-gen-005",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 5,
+    "slideTitle": "Bakteriyel Vajinozis (BV): Patogenez ve Floranın Çöküşü",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel Vajinozis patogenezinde vajinal ekosistemde meydana gelen temel mikrobiyolojik değişiklik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Laktobasillerin aşırı çoğalarak pH'yı 3.0'a düşürmesi",
+      "B) Hidrojen peroksit üreten Laktobasillerin kaybolması ve Gardnerella vaginalis ile anaerobların aşırı çoğalması",
+      "C) Sadece Candida albicans türlerinin biyofilm yapması",
+      "D) Treponema pallidum spiroketlerinin invazyonu",
+      "E) HSV-2 virüsünün nöral ganglionlara yerleşmesi"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bakteriyel vajinozisin temel patogenetik basamağı hidrojen peroksit üreten laktobasillerin kaybı ve anaerobik bakterilerle Gardnerella vaginalis'in masif artışıdır."
+  },
+  {
+    "id": "prac-gen-006",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 6,
+    "slideTitle": "Bakteriyel Vajinoziste Amsel Kriterleri ve 'İpucu Hücreleri' (Clue Cells)",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Kötü kokulu vajinal akıntısı olan bir kadında vajinal pH 5.2 ölçülüyor; %10 KOH damlatıldığında balık kokusu alınıyor ve mikroskopta sınırları bakterilerce örtülmüş 'Clue Cells' (ipucu hücreleri) izleniyor. Tanı nedir?",
+    "options": [
+      "A) Vulvovajinal kandidiyazis",
+      "B) Bakteriyel vajinozis",
+      "C) Trikomoniyazis",
+      "D) Atrofik vajinit",
+      "E) Gonokokkal servisit"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Homojen akıntı, pH >4.5, pozitif Whiff testi ve Clue cells varlığı Bakteriyel Vajinozisin Amsel tanı kriterleridir."
+  },
+  {
+    "id": "prac-gen-007",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 7,
+    "slideTitle": "Bakteriyel Vajinozis: Obstetrik Komplikasyonlar ve Tedavi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Bakteriyel vajinozis tedavisi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "options": [
+      "A) Tedavide birinci seçenek oral tek doz flukonazoldür",
+      "B) Tüm olgularda asemptomatik erkek cinsel partnerin de eş zamanlı tedavisi zorunludur",
+      "C) Standart tedavi oral veya topikal Metronidazol ile anaerobların baskılanmasıdır",
+      "D) Gebelikte tedavi verilmesi kesinlikle kontrendikedir",
+      "E) Tedavi sonrasında laktobasillerin çoğalması engellenmelidir"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Bakteriyel vajinozisin standart tedavisi oral veya intravajinal Metronidazoldür; rutin partner tedavisi gerekmez."
+  },
+  {
+    "id": "prac-gen-008",
+    "deckId": "learn-genital-enfeksiyonlar",
+    "deckTitle": "Genital Enfeksiyonlar, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 8,
+    "slideTitle": "Trikomanas Enfeksiyonu (Trichomoniasis): Biyoloji ve Klinik",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1",
+    "question": "Kötü kokulu, sarı-yeşil renkli, bol köpüklü vajinal akıntı ve spekulum muayenesinde servikste yaygın peteşiyel eritematöz odaklar ('çilek serviks') izlenen hastada en olası etken hangisidir?",
+    "options": [
+      "A) Candida albicans",
+      "B) Gardnerella vaginalis",
+      "C) Trichomonas vaginalis",
+      "D) Neisseria gonorrhoeae",
+      "E) Treponema pallidum"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Köpüklü sarı-yeşil akıntı ve servikste 'çilek serviks' (kolpitis makularis) manzarası paraziter bir enfeksiyon olan Trichomonas vaginalis'e özgüdür."
   }
 ]

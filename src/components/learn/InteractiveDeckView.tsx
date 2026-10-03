@@ -37,7 +37,12 @@ import {
   FileText,
   FileDown,
   ArrowLeftRight,
+  Bot,
+  Columns,
+  Cloud,
 } from 'lucide-react';
+import { DeckPdfViewer } from './DeckPdfViewer';
+import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
 import {
   GlossaryProvider,
@@ -628,6 +633,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     []
   );
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
+  const [playerViewMode, setPlayerViewMode] = useState<DeckViewMode>('interactive');
 
   useEffect(() => {
     if (initialDeckId) {
@@ -728,6 +734,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                 <button
                   type="button"
                   onClick={() => {
+                    setPlayerViewMode('interactive');
                     setDeckId(d.id);
                     onDeckChange?.(d.id);
                   }}
@@ -762,13 +769,28 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                         <span className="block h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
                       </span>
                     </span>
-                    <span
-                      className={`h-[34px] px-3 rounded-[10px] inline-flex items-center gap-1.5 text-[13px] font-semibold shrink-0 ${
-                        started ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
-                      }`}
-                    >
-                      <Play className="w-3 h-3 fill-current" />
-                      {done ? 'Tekrar' : started ? 'Devam et' : 'Başla'}
+                    <span className="flex items-center gap-1.5 shrink-0">
+                      <span
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setPlayerViewMode('pdf');
+                          setDeckId(d.id);
+                          onDeckChange?.(d.id);
+                        }}
+                        title="Orijinal PDF Slaytını Aç"
+                        className="h-[34px] px-2.5 rounded-[10px] inline-flex items-center gap-1 text-[12px] font-semibold text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 transition-colors"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>PDF</span>
+                      </span>
+                      <span
+                        className={`h-[34px] px-3 rounded-[10px] inline-flex items-center gap-1.5 text-[13px] font-semibold ${
+                          started ? 'bg-accent text-white' : 'bg-accent-soft text-accent'
+                        }`}
+                      >
+                        <Play className="w-3 h-3 fill-current" />
+                        {done ? 'Tekrar' : started ? 'Devam et' : 'Başla'}
+                      </span>
                     </span>
                   </span>
                 </button>
@@ -781,6 +803,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       {activeDeck && (
         <DeckPlayer
           deck={activeDeck}
+          initialViewMode={playerViewMode}
           startAt={initialSlideNumber != null && initialSlideNumber > 0 ? initialSlideNumber - 1 : (progress[activeDeck.id]?.last ?? 0)}
           onProgress={(index) => {
             setProgress((prev) => {
@@ -806,18 +829,21 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 // ---------------------------------------------------------------------------
 // Player: full-viewport overlay, paged or scrolling, optional native fullscreen
 // ---------------------------------------------------------------------------
-type PanelTab = 'flashcards' | 'questions' | 'notes' | 'pearls' | 'ai';
+export type DeckViewMode = 'interactive' | 'pdf' | 'split';
+type PanelTab = 'flashcards' | 'questions' | 'notes' | 'pearls' | 'ai' | 'pdf';
 
 const DeckPlayer: React.FC<{
   deck: InteractiveDeck;
   startAt: number;
+  initialViewMode?: DeckViewMode;
   onProgress: (index: number) => void;
   onClose: () => void;
   onExportPdf?: (slideNumber: number) => void;
-}> = ({ deck, startAt, onProgress, onClose, onExportPdf }) => {
+}> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf }) => {
   const slides = deck.slides;
   const n = slides.length;
   const [index, setIndex] = useState(() => Math.min(Math.max(0, startAt), n - 1));
+  const [viewMode, setViewMode] = useState<DeckViewMode>(initialViewMode);
   const [mode, setMode] = useState<'paged' | 'scroll'>(() => {
     try {
       return localStorage.getItem('medsoru_learn_mode') === 'scroll' ? 'scroll' : 'paged';
@@ -1049,32 +1075,94 @@ const DeckPlayer: React.FC<{
         <span className="hidden sm:inline font-mono text-[13px] text-ink-2 px-1" aria-live="polite">
           {index + 1} / {n}
         </span>
-        <div role="radiogroup" aria-label="Görünüm" className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5">
-          {(
-            [
-              ['paged', GalleryHorizontal, 'Sayfa sayfa'],
-              ['scroll', Rows3, 'Kaydırarak'],
-            ] as const
-          ).map(([id, Icon, label]) => (
-            <button
-              key={id}
-              type="button"
-              role="radio"
-              aria-checked={mode === id}
-              aria-label={label}
-              title={label}
-              onClick={() => setMode(id)}
-              className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[13px] cursor-pointer ${
-                mode === id ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
-              }`}
-            >
-              <Icon className="w-4 h-4" />
-              <span className="hidden md:inline">{label}</span>
-            </button>
-          ))}
+
+        {/* View Mode Switcher: Interactive / Split / PDF */}
+        <div role="radiogroup" aria-label="Çalışma Modu" className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5 border border-line/60">
+          <button
+            type="button"
+            role="radio"
+            aria-checked={viewMode === 'interactive'}
+            aria-label="Etkileşimli Slaytlar"
+            title="Etkileşimli Slaytlar"
+            onClick={() => setViewMode('interactive')}
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+              viewMode === 'interactive'
+                ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                : 'text-ink-2 hover:text-ink'
+            }`}
+          >
+            <GalleryHorizontal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
+            <span className="hidden md:inline">Slaytlar</span>
+          </button>
+
+          <button
+            type="button"
+            role="radio"
+            aria-checked={viewMode === 'split'}
+            aria-label="Yan Yana (Slayt + Orijinal PDF)"
+            title="Yan Yana: Sol tarafta slayt, sağ tarafta hoca PDF'i"
+            onClick={() => setViewMode('split')}
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+              viewMode === 'split'
+                ? 'bg-white text-indigo-600 dark:text-indigo-400 font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                : 'text-ink-2 hover:text-ink'
+            }`}
+          >
+            <Columns className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
+            <span className="hidden md:inline">Yan Yana</span>
+          </button>
+
+          <button
+            type="button"
+            role="radio"
+            aria-checked={viewMode === 'pdf'}
+            aria-label="Orijinal Ders PDF'i"
+            title="Hocanın orijinal ders sunumu PDF'i"
+            onClick={() => setViewMode('pdf')}
+            className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
+              viewMode === 'pdf'
+                ? 'bg-white text-rose-600 dark:text-rose-400 font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                : 'text-ink-2 hover:text-ink'
+            }`}
+          >
+            <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-500" />
+            <span className="hidden md:inline">Orijinal PDF</span>
+          </button>
         </div>
-        <HighlighterToolbar />
-        <DrawingModeToolbarTrigger />
+
+        {viewMode === 'interactive' && (
+          <div role="radiogroup" aria-label="Görünüm" className="hidden xl:flex items-center h-9 bg-canvas rounded-[10px] p-0.5">
+            {(
+              [
+                ['paged', GalleryHorizontal, 'Sayfa sayfa'],
+                ['scroll', Rows3, 'Kaydırarak'],
+              ] as const
+            ).map(([id, Icon, label]) => (
+              <button
+                key={id}
+                type="button"
+                role="radio"
+                aria-checked={mode === id}
+                aria-label={label}
+                title={label}
+                onClick={() => setMode(id)}
+                className={`h-8 px-2 rounded-lg inline-flex items-center gap-1.5 text-[12px] cursor-pointer ${
+                  mode === id ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
+                }`}
+              >
+                <Icon className="w-3.5 h-3.5" />
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {viewMode !== 'pdf' && (
+          <>
+            <HighlighterToolbar />
+            <DrawingModeToolbarTrigger />
+          </>
+        )}
         {onExportPdf && (
           <button
             type="button"
@@ -1112,7 +1200,54 @@ const DeckPlayer: React.FC<{
       {/* Stage + panel */}
       <div className={`flex-1 min-h-0 grid grid-cols-1 ${panelOpen ? 'lg:grid-cols-[minmax(0,1fr)_420px]' : ''}`}>
         <div className="min-h-0 min-w-0 relative">
-          {mode === 'paged' ? (
+          {viewMode === 'pdf' ? (
+            <div className="absolute inset-0 p-2 sm:p-4 flex flex-col">
+              <DeckPdfViewer
+                deck={deck}
+                currentSlideNumber={slide.slideNumber}
+                onToggleSplitView={() => setViewMode('split')}
+              />
+            </div>
+          ) : viewMode === 'split' ? (
+            <div className="absolute inset-0 p-2 sm:p-3 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3">
+              <div
+                className="min-h-0 h-full flex flex-col rounded-[16px] overflow-hidden border border-line bg-white/50 backdrop-blur-sm relative shadow-sm"
+                onTouchStart={onTouchStart}
+                onTouchEnd={onTouchEnd}
+              >
+                <SlideCanvas
+                  key={`split-${index}`}
+                  slide={slide}
+                  highlightScope={`deck:${deck.id}:${slide.slideNumber}`}
+                  index={index}
+                  total={n}
+                  paged
+                  onNext={next}
+                  onPrev={prev}
+                  onOpenQuestions={() => {
+                    setTab('questions');
+                    setPanelOpen(true);
+                  }}
+                  onOpenFlashcards={() => {
+                    setTab('flashcards');
+                    setPanelOpen(true);
+                  }}
+                  onOpenNotes={() => {
+                    setTab('notes');
+                    setPanelOpen(true);
+                  }}
+                />
+              </div>
+              <div className="min-h-0 h-full flex flex-col rounded-[16px] overflow-hidden border border-line bg-white shadow-sm">
+                <DeckPdfViewer
+                  deck={deck}
+                  currentSlideNumber={slide.slideNumber}
+                  isSplitView
+                  onToggleSplitView={() => setViewMode('interactive')}
+                />
+              </div>
+            </div>
+          ) : mode === 'paged' ? (
             <div className="absolute inset-0 p-2 sm:p-4 lg:p-6 flex" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <SlideCanvas
                 key={index}
@@ -2170,11 +2305,12 @@ const InteractionPanel: React.FC<{
     { id: 'notes', label: 'Ders Notu' },
     { id: 'pearls', label: 'Spotlar' },
     { id: 'ai', label: "AI'ya sor" },
+    { id: 'pdf', label: 'PDF' },
   ];
 
   return (
     <>
-      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-5 gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
+      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-6 gap-0.5 sm:gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -2182,7 +2318,7 @@ const InteractionPanel: React.FC<{
             role="tab"
             aria-selected={tab === t.id}
             onClick={() => setTab(t.id)}
-            className={`h-9 rounded-[9px] text-[12px] cursor-pointer truncate ${tab === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
+            className={`h-8 sm:h-9 px-1 rounded-[9px] text-[11px] sm:text-[12px] cursor-pointer truncate ${tab === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
           >
             {t.label}
           </button>
@@ -2218,6 +2354,11 @@ const InteractionPanel: React.FC<{
           )
         )}
         {tab === 'ai' && <AskAi key={slide.slideNumber} deck={deck} slide={slide} />}
+        {tab === 'pdf' && (
+          <div className="flex-1 min-h-[460px] flex flex-col h-full rounded-xl overflow-hidden border border-line bg-white shadow-sm">
+            <DeckPdfViewer deck={deck} currentSlideNumber={slide.slideNumber} compact />
+          </div>
+        )}
       </div>
     </>
   );
@@ -2366,11 +2507,29 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion; n: number }> = ({ q, n }) =>
   );
 };
 
+const formatAiModelDisplayName = (raw?: string | null): string => {
+  if (!raw) return 'Google Gemini 3.8 Flash';
+  const val = raw.trim();
+  if (val.includes('3.8-flash')) return 'Google Gemini 3.8 Flash';
+  if (val.includes('3.7-flash')) return 'Google Gemini 3.7 Flash';
+  if (val.includes('3.5-flash-lite')) return 'Google Gemini 3.5 Flash Lite';
+  if (val.includes('3.5-flash')) return 'Google Gemini 3.5 Flash';
+  if (val.includes('3.1-flash-lite')) return 'Google Gemini 3.1 Flash Lite';
+  if (val.includes('gpt-oss-120b')) return 'Groq GPT-OSS 120B';
+  if (val.includes('gpt-oss-20b')) return 'Groq GPT-OSS 20B';
+  if (val.includes('qwen')) return 'Groq Qwen 27B';
+  if (val.includes('spark') || val.includes('muse')) return 'Muse Spark 1.3 Free';
+  return val;
+};
+
 const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, slide }) => {
   const [q, setQ] = useState('');
   const [loading, setLoading] = useState(false);
   const [answer, setAnswer] = useState<string | null>(null);
   const [refs, setRefs] = useState<any[]>([]);
+  const [selectedModel, setSelectedModel] = useState<string>('gemini-3.8-flash');
+  const [modelUsed, setModelUsed] = useState<string | null>(null);
+  const [copied, setCopied] = useState<boolean>(false);
 
   const ask = async (prompt?: string) => {
     const text = (prompt ?? q).trim();
@@ -2378,6 +2537,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
     setQ(text);
     setLoading(true);
     setAnswer(null);
+    setModelUsed(null);
     setRefs([]);
     const ctx = [
       `Ders: ${deck.title} (${deck.discipline} - ${deck.committee})`,
@@ -2401,13 +2561,14 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
           committeeId: deck.committee,
           mode: 'qa',
           limit: 4,
-          customModel: 'gemini-3.7-flash',
+          customModel: selectedModel,
         }),
       });
       if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
         const data = await res.json();
         if (data.answer) {
           setAnswer(data.answer);
+          setModelUsed(data.usedModel || selectedModel);
           setRefs(data.references || []);
           setLoading(false);
           return;
@@ -2421,15 +2582,21 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
     try {
       const { callClientResilientAi } = await import('../../services/api');
       const aiPrompt = `Öğrencinin Sorusu: "${text}"\n\n[Ders ve Slayt Bağlamı]:\n${ctx}\n\nLütfen bu ders notu ve slayt bağlamına sadık kalarak net, açıklayıcı ve sınav odaklı bir yanıt ver.`;
+      const isGroq = selectedModel.includes('gpt-oss') || selectedModel.includes('qwen') || selectedModel.includes('llama');
+      const isMuse = selectedModel.includes('spark') || selectedModel.includes('muse');
+      const preferredProvider = isMuse ? 'muse-spark' : (isGroq ? 'groq' : 'gemini');
+
       const clientRes = await callClientResilientAi({
         prompt: aiPrompt,
-        model: 'gemini-3.7-flash',
+        model: selectedModel,
+        preferredProvider,
         responseFormat: 'text',
         systemInstruction: 'Sen Tıp Fakültesi öğrencilerine ders slaytları üzerinden rehberlik eden kıdemli bir tıp akademisyenisin. Slayt içeriğine dayanarak doğru, net ve öğretici cevaplar ver.',
       });
 
       if (clientRes && clientRes.text) {
         setAnswer(clientRes.text);
+        setModelUsed(clientRes.planUsed || clientRes.providerUsed || selectedModel);
         setRefs([
           { title: `${deck.title} — Slayt #${slide.slideNumber} (${deck.discipline})` }
         ]);
@@ -2444,6 +2611,15 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
     setLoading(false);
   };
 
+  const handleCopy = () => {
+    if (!answer) return;
+    const modelTag = modelUsed ? `\n\n[Yapay Zeka Modeli: ${formatAiModelDisplayName(modelUsed)}]` : '';
+    navigator.clipboard.writeText(answer + modelTag);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    toast.success('Yanıt kopyalandı', modelUsed ? `Yapay zeka modeli (${formatAiModelDisplayName(modelUsed)}) bilgisiyle panoya alındı.` : undefined);
+  };
+
   return (
     <div className="flex flex-col gap-3">
       {(slide.aiPromptSuggestions || []).length > 0 && (
@@ -2455,7 +2631,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
               type="button"
               disabled={loading}
               onClick={() => ask(s)}
-              className="text-left rounded-lg border border-line px-2.5 py-2 text-[13px] leading-snug hover:border-accent cursor-pointer disabled:opacity-50"
+              className="text-left rounded-lg border border-line px-2.5 py-2 text-[13px] leading-snug hover:border-accent cursor-pointer disabled:opacity-50 transition-colors"
             >
               {s}
             </button>
@@ -2469,6 +2645,26 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
         }}
         className="flex flex-col gap-2"
       >
+        <div className="flex items-center justify-between gap-2 px-1">
+          <label htmlFor="deck-ai-model-select" className="text-[12px] font-semibold text-ink-2 inline-flex items-center gap-1.5">
+            <BrainCircuit className="w-3.5 h-3.5 text-accent" />
+            <span>Yapay Zeka Modeli:</span>
+          </label>
+          <select
+            id="deck-ai-model-select"
+            value={selectedModel}
+            disabled={loading}
+            onChange={(e) => setSelectedModel(e.target.value)}
+            className="bg-white dark:bg-slate-800 border border-line-2 rounded-md px-2 py-0.5 text-[11.5px] font-medium text-ink outline-none cursor-pointer focus:border-accent disabled:opacity-50"
+          >
+            <option value="gemini-3.8-flash">Google Gemini 3.8 Flash (Önerilen)</option>
+            <option value="gemini-3.7-flash">Google Gemini 3.7 Flash</option>
+            <option value="gemini-3.5-flash">Google Gemini 3.5 Flash</option>
+            <option value="openai/gpt-oss-120b">Groq GPT-OSS 120B</option>
+            <option value="qwen/qwen3.8-27b">Groq Qwen 27B (Türkçe)</option>
+            <option value="muse-spark-1.3-contributor-free">Muse Spark 1.3 Free</option>
+          </select>
+        </div>
         <label htmlFor="deck-ai-q" className="sr-only">
           Sorunu yaz
         </label>
@@ -2477,7 +2673,7 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
           rows={3}
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Bu slaytla ilgili sorunu yaz…"
+          placeholder="Bu slayt ve ders notuyla ilgili sorunu yaz…"
           className="resize-none border border-line-2 rounded-[10px] px-3 py-2.5 text-[14px] bg-field outline-0 focus:border-accent"
         />
         <button
@@ -2491,22 +2687,51 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
       </form>
       {loading && <AiThinking />}
       {answer && (
-        <div className="rounded-xl bg-accent-soft p-3 flex flex-col gap-2" role="status">
-          <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-accent">
-            <Sparkles className="w-3.5 h-3.5" /> Yanıt
-          </span>
-          <div className="text-[14px] leading-[1.6] text-ink whitespace-pre-line">
+        <div className="rounded-xl bg-accent-soft border border-accent/20 p-3.5 flex flex-col gap-2.5 shadow-2xs" role="status">
+          <div className="flex items-center justify-between gap-2 flex-wrap border-b border-accent/15 pb-2">
+            <span className="inline-flex items-center gap-1.5 text-[12.5px] font-bold text-accent">
+              <Sparkles className="w-3.5 h-3.5" /> AI Yanıtı
+            </span>
+            {modelUsed && (
+              <span
+                className="inline-flex items-center gap-1.5 text-[11px] font-medium bg-white/95 dark:bg-slate-800 text-ink-2 px-2.5 py-0.5 rounded-full border border-accent/25 shadow-2xs"
+                title={`Bu yanıtı üreten yapay zeka: ${modelUsed}`}
+              >
+                <Bot className="w-3.5 h-3.5 text-accent shrink-0" />
+                <span className="text-ink-3">Model:</span>
+                <span className="font-semibold text-accent font-mono">{formatAiModelDisplayName(modelUsed)}</span>
+              </span>
+            )}
+          </div>
+          <div className="text-[14px] leading-[1.65] text-ink whitespace-pre-line">
             <Rich text={answer.replace(/^#+\s*/gm, '').replace(/^>\s?/gm, '')} />
           </div>
           {refs.length > 0 && (
-            <ul className="list-none m-0 p-0 flex flex-col gap-1 border-t border-white/60 pt-2">
+            <ul className="list-none m-0 p-0 flex flex-col gap-1 border-t border-accent/15 pt-2">
               {refs.slice(0, 4).map((r: any, i: number) => (
-                <li key={i} className="text-[12px] text-ink-2 truncate">
-                  {r.title || r.noteTitle || r.source || `Kaynak ${i + 1}`}
+                <li key={i} className="text-[11.5px] text-ink-2 truncate flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                  <span>{r.title || r.noteTitle || r.source || `Kaynak ${i + 1}`}</span>
                 </li>
               ))}
             </ul>
           )}
+          <div className="flex items-center justify-between gap-2 pt-2 border-t border-accent/15 text-[11px] text-ink-3">
+            {modelUsed && (
+              <span className="inline-flex items-center gap-1 text-[11px] text-ink-2">
+                <span>Kullanılan Yapay Zeka:</span>
+                <strong className="text-ink font-mono font-medium">{formatAiModelDisplayName(modelUsed)}</strong>
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="inline-flex items-center gap-1 text-[11.5px] text-ink-2 hover:text-ink cursor-pointer px-2 py-0.5 rounded hover:bg-white/60 dark:hover:bg-white/10 transition-colors ml-auto"
+            >
+              {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? 'Kopyalandı' : 'Kopyala'}</span>
+            </button>
+          </div>
         </div>
       )}
     </div>

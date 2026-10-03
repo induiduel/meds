@@ -1,939 +1,383 @@
 [
   {
-    "id": "d3-k5-hal-002-100",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 17,
-    "slideTitle": "Doğum sonrası izlem Loğusa İzlemlerinin Amaçları;",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
-  },
-  {
-    "id": "d3-k5-hal-002-101",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 18,
-    "slideTitle": "15-49 Yaş Kadınlar",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
-  },
-  {
-    "id": "d3-k5-hal-002-102",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 19,
-    "slideTitle": "Neonatal Dönem: Yeni doğanın ilk 4 haftalık",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
-  },
-  {
-    "id": "d3-k5-hal-002-103",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 20,
-    "slideTitle": "Bebek izlem: 1.ve 2.izlem:hastanede 3.izlem : 1 haftada",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
-  },
-  {
-    "id": "d3-k5-hal-002-104",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 21,
-    "slideTitle": "Normal büyüyen bir bebeğin ağırlığının 5 ayda doğum",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
-  },
-  {
-    "id": "d3-k5-hal-002-105",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 22,
-    "slideTitle": "4 . Ay: Destekle oturur, iki elini birden kullanır, sesleri, lokalize et...",
-    "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
-  },
-  {
-    "id": "d3-k1-enf-016",
+    "id": "cybe-q-005",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
-    "slideNumber": 1,
-    "slideTitle": "CİNSEL YOLLA BULAŞAN",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
-  },
-  {
-    "id": "d3-k1-enf-016-107",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
-    "slideNumber": 2,
-    "slideTitle": "CYBİ NEDİR?",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
-  },
-  {
-    "id": "d3-k1-enf-016-108",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
-    "slideNumber": 3,
-    "slideTitle": "Etkenler: Bakteriler",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
-  },
-  {
-    "id": "d3-k1-enf-016-109",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
-    "slideNumber": 4,
-    "slideTitle": "Genel Özellikler",
-    "discipline": "Enfeksiyon Hastalıkları",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
-  },
-  {
-    "id": "d3-k1-enf-016-110",
-    "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 5,
-    "slideTitle": "Riskli gruplar",
+    "slideTitle": "Vajinal Akıntıda Tanı Yöntemleri ve Amsel Kriterleri",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Aşağıdakilerden hangisi Bakteriyel Vajinozis tanısında kullanılan 'Amsel Kriterleri' arasında yer ALMAZ?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Vajinal sıvıda pH değerinin 4.5'in üzerinde olması",
+      "B) Salin ıslak preparatta lökosit silendirlerinin saptanması",
+      "C) %10 KOH damlatıldığında amin (balık) kokusunun açığa çıkması",
+      "D) Mikroskobik incelemede Clue Cell (ipucu hücresi) varlığı",
+      "E) İnce, homojen, gri-beyaz vajinal akıntı varlığı"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Lökosit silendirleri piyelonefritte idrarda görülen yapıdır; vajinal akıntıda görülmez ve Amsel kriteri değildir."
   },
   {
-    "id": "d3-k1-enf-016-111",
+    "id": "cybe-q-006",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 6,
-    "slideTitle": "CYBİ’den Koruma",
+    "slideTitle": "CYBE'den Korunma İlkeleri, Danışmanlık ve Bariyer Yöntemler",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Cinsel yolla bulaşan enfeksiyonlardan korunmada lateks kondom kullanımı ile ilgili aşağıdaki ifadelerden hangisi bilimsel olarak DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Kondom kullanımı genital herpes ve HPV dahil tüm etkenlere karşı %100 mutlak koruma sağlar",
+      "B) Kondom yalnızca gebeliği önler, HIV veya Gonore geçişini hiçbir şekilde engellemez",
+      "C) Semen ve vajinal sıvıyla bulaşan HIV ve klamidyaya karşı yüksek koruma sağlarken; kondom dışı cilt temasıyla geçen HPV ve HSV lezyonlarında koruyuculuğu sınırlıdır",
+      "D) Partner tedavisi yapıldığı sürece kondom kullanılmasına hiçbir zaman gerek yoktur",
+      "E) Yağ bazlı kayganlaştırıcılar lateks kondomun dayanıklılığını ve koruyuculuğunu artırır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 2,
+    "explanation": "Kondom sıvı geçişli etkenlere (HIV, gonore, klamidya) karşı çok etkilidir; ancak prezervatifle örtülmeyen perine/skrotum cildinde yerleşen HSV ve HPV'de ciltten cilde temasla bulaş engellenemez."
   },
   {
-    "id": "d3-k1-enf-016-112",
+    "id": "cybe-q-007",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 7,
-    "slideTitle": "Yapılan çalışmalarda kondom kullanımının semen, üretral, vajinal veya",
+    "slideTitle": "Üretral Akıntı ve Üretrit Sendromu",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Şüpheli cinsel ilişkiden 3 gün sonra şiddetli dizüri ve bol sarı-yeşil pürülan akıntı ile başvuran erkek hastanın akıntı yaymasında lökosit içinde Gram negatif diplokoklar saptanmıştır. En olası tanı hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Non-gonokoksik üretrit (Klamidya)",
+      "B) Akut Gonokoksik Üretrit",
+      "C) Trikomonal üretrit",
+      "D) Akut bakteriyel sistit",
+      "E) Mikoplazma üretriti"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Kısa kuluçka süresi, bol pürülan akıntı ve nötrofil içi Gram (-) diplokok varlığı Akut Gonokoksik Üretrit (Neisseria gonorrhoeae) için tipiktir."
   },
   {
-    "id": "d3-k1-enf-016-113",
+    "id": "cybe-q-008",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 8,
-    "slideTitle": "CYBİ’den Koruma",
+    "slideTitle": "CYBE'de Asemptomatik Taşıyıcılık ve 'Buzdağı Olgusu'",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Kadınlarda %90'a varan oranlarda asemptomatik seyrederek fark edilmeyen, tedavi edilmediğinde ise kronik tubal hasar, infertilite ve dış gebelik riskine yol açan en yaygın bakteriyel CYBE hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Haemophilus ducreyi",
+      "B) Neisseria gonorrhoeae",
+      "C) Chlamydia trachomatis",
+      "D) Treponema pallidum",
+      "E) Gardnerella vaginalis"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 2,
+    "explanation": "Chlamydia trachomatis kadınlarda %80-90 oranında asemptomatik kalarak sessiz salpenjite, tubal skarlaşmaya ve infertiliteye yol açar."
   },
   {
-    "id": "d3-k1-enf-016-114",
+    "id": "cybe-q-009",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 9,
-    "slideTitle": "Aşılama HPV",
+    "slideTitle": "Majör Komplikasyon: Pelvik İnflamatuvar Hastalık (PİH)",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Alt karın ağrısı ve pürülan vajinal akıntısı olan 24 yaşındaki kadının bimanuel jinekolojik muayenesinde serviks hareket ettirildiğinde şiddetli hassasiyet (Chandelier belirtisi) saptanmıştır. Bu hastada öncelikli tanı nedir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Akut Apandisit",
+      "B) Pelvik İnflamatuvar Hastalık (PİH)",
+      "C) Over Kist Rüptürü",
+      "D) Basit Bakteriyel Vajinozis",
+      "E) Endometriozis"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Servikal hareket hassasiyeti (avize belirtisi), alt karın ağrısı ve pürülan akıntı Pelvik İnflamatuvar Hastalığın (PİH) temel klinik göstergesidir."
   },
   {
-    "id": "d3-k1-enf-016-115",
+    "id": "cybe-q-010",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 10,
-    "slideTitle": "Aşılama HPV",
+    "slideTitle": "Sistemik Komplikasyonlar: Fitz-Hugh-Curtis ve Dissemine Gonokok",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "PİH öyküsü olan genç bir kadın hastada sağ üst kadran ağrısı gelişmiş; laparoskopide karaciğer kapsülü ile ön karın duvarı arasında fibröz 'keman teli' yapışıklıkları izlenmiştir. Bu klinik sendrom aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Budd-Chiari Sendromu",
+      "B) Fitz-Hugh-Curtis Sendromu",
+      "C) Gilbert Sendromu",
+      "D) Mirizzi Sendromu",
+      "E) Lemierre Sendromu"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Klamidya veya gonoreye ikincil gelişen perihepatit ve 'keman teli' yapışıklıkları Fitz-Hugh-Curtis Sendromudur."
   },
   {
-    "id": "d3-k1-enf-016-116",
+    "id": "cybe-q-011",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 11,
-    "slideTitle": "Aşılama HBV",
+    "slideTitle": "Erkekte Komplikasyonlar: Epididimit, Epididimoorşit ve Prostatit",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Erkekte Komplikasyonlar: Epididimit, Epididimoorşit ve Prostatit kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Erkekte Komplikasyonlar: Epididimit, Epididimoorşit ve Prostatit sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) 35 yaş altı erkek epididimitinde etken Klamidya ve Gonore iken; 35 yaş üstünde E. coli'dir.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: 35 yaş altı erkek epididimitinde etken Klamidya ve Gonore iken; 35 yaş üstünde E. coli'dir."
   },
   {
-    "id": "d3-k1-enf-016-117",
+    "id": "cybe-q-012",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 12,
-    "slideTitle": "HCV BULAŞ RİSKİ ?",
+    "slideTitle": "CYBE Laboratuvar Tanı Yöntemleri ve Kültür Şartları",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "CYBE Laboratuvar Tanı Yöntemleri ve Kültür Şartları kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) CYBE Laboratuvar Tanı Yöntemleri ve Kültür Şartları sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Neisseria gonorrhoeae soğuğa dayanıksızdır, hasta başı Thayer-Martin besiyerine ekilir ve %5-10 CO2 ortamında ürer.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Neisseria gonorrhoeae soğuğa dayanıksızdır, hasta başı Thayer-Martin besiyerine ekilir ve %5-10 CO2 ortamında ürer."
   },
   {
-    "id": "d3-k1-enf-016-118",
+    "id": "cybe-q-013",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 13,
-    "slideTitle": "Temas sonrası anti-HCV 2-6 ayda, HCV RNA 1-3 hafta içinde pozitifleşir",
+    "slideTitle": "Trikomoniyazis Tedavi İlkeleri ve Partner Yönetimi",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Trikomoniyazis Tedavi İlkeleri ve Partner Yönetimi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Trikomoniyazis Tedavi İlkeleri ve Partner Yönetimi sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Trikomoniyaziste partner tedavisi ZORUNLUDUR; partner tedavi edilmezse reenfeksiyon kaçınılmazdır.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Trikomoniyaziste partner tedavisi ZORUNLUDUR; partner tedavi edilmezse reenfeksiyon kaçınılmazdır."
   },
   {
-    "id": "d3-k1-enf-016-119",
+    "id": "cybe-q-014",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 14,
-    "slideTitle": "Temas öncesi ve temas sonrası profilaksi",
+    "slideTitle": "Klamidya Enfeksiyonu Tedavi Protokolleri ve LGV Yönetimi",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Klamidya Enfeksiyonu Tedavi Protokolleri ve LGV Yönetimi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Klamidya Enfeksiyonu Tedavi Protokolleri ve LGV Yönetimi sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Gebelikte Doksisiklin mutlak kontrendikedir; klamidya saptanan gebede ilk tercih Azitromisin 1g tek dozdur!",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Gebelikte Doksisiklin mutlak kontrendikedir; klamidya saptanan gebede ilk tercih Azitromisin 1g tek dozdur!"
   },
   {
-    "id": "d3-k1-enf-016-120",
+    "id": "cybe-q-015",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 15,
-    "slideTitle": "Temas sonrası profilaksi-HIV:",
+    "slideTitle": "Gonore Tedavisi ve Antimikrobiyal Direnç Yönetimi",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Gonore Tedavisi ve Antimikrobiyal Direnç Yönetimi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Gonore Tedavisi ve Antimikrobiyal Direnç Yönetimi sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Gonore tedavisinde ilk seçenek Seftriakson 500 mg tek doz intramüsküler enjeksiyondur.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Gonore tedavisinde ilk seçenek Seftriakson 500 mg tek doz intramüsküler enjeksiyondur."
   },
   {
-    "id": "d3-k1-enf-016-121",
+    "id": "cybe-q-016",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 16,
-    "slideTitle": "Tenofovir + emtrisitabin +",
+    "slideTitle": "Pelvik İnflamatuvar Hastalık (PİH) Tedavi Protokolleri",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Pelvik İnflamatuvar Hastalık (PİH) Tedavi Protokolleri kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Pelvik İnflamatuvar Hastalık (PİH) Tedavi Protokolleri sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Tuboovaryan abse varlığı, gebelik ve peritonit bulguları PİH hastasında mutlak hastaneye yatış endikasyonudur.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Tuboovaryan abse varlığı, gebelik ve peritonit bulguları PİH hastasında mutlak hastaneye yatış endikasyonudur."
   },
   {
-    "id": "d3-k1-enf-016-122",
+    "id": "cybe-q-017",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 17,
-    "slideTitle": "Temas sonrası profilaksi-HIV:",
+    "slideTitle": "Genital Herpes (HSV-1 ve HSV-2) Kliniği ve Antiviral Tedavi",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Genital Herpes (HSV-1 ve HSV-2) Kliniği ve Antiviral Tedavi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Genital Herpes (HSV-1 ve HSV-2) Kliniği ve Antiviral Tedavi sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) HSV virüsü sakral duyusal gangliyonlarda latent kalır; antiviral tedavi virüsü eradike etmez, semptom ve rekürrensi baskılar.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: HSV virüsü sakral duyusal gangliyonlarda latent kalır; antiviral tedavi virüsü eradike etmez, semptom ve rekürrensi baskılar."
   },
   {
-    "id": "d3-k1-enf-016-123",
+    "id": "cybe-q-018",
     "deckId": "learn-cinsel-yolla-bulasan-enfe",
-    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi ve Tedavi",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
     "slideNumber": 18,
-    "slideTitle": "ÖZET:",
+    "slideTitle": "Şankroid (Ulkus Molle): Haemophilus ducreyi",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Dünya genelinde cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan hangisi değildir?",
+    "question": "Şankroid (Ulkus Molle): Haemophilus ducreyi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
     "options": [
-      {
-        "key": "A",
-        "text": "Chlamydia trachomatis",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Neisseria gonorrhoeae",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Klebsiella granulomatis",
-        "isCorrect": true
-      },
-      {
-        "key": "D",
-        "text": "Herpes simpleks virüs (HSV)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "İnsan papilloma virüsü (HPV)",
-        "isCorrect": false
-      }
+      "A) Şankroid (Ulkus Molle): Haemophilus ducreyi sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Şankroid ülseri ağrılı ve yumuşaktır; Sifiliz şankrı ise ağrısız ve serttir (endüredir).",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
     ],
-    "correctAnswer": "C",
-    "explanation": "Dünya genelinde en sık görülen cinsel yolla bulaşan enfeksiyonlar HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae'dir; CYBH yükünün büyük kısmından bu dört etken sorumludur. Klebsiella granulomatis ise granüloma inguinale (donovanozis) etkenidir ve dünya genelinde oldukça nadir görülen, esas olarak Papua Yeni Gine, Afrika, Hindistan ve Güney Amerika gibi tropik/subtropik bölgelerle sınırlı kalan bir bakteridir; bu nedenle sıklık açısından diğer şıklarla kıyaslanamaz ve doğru yanıt C'dir. A, B, D ve E seçeneklerindeki Chlamydia trachomatis, Neisseria gonorrhoeae, HSV ve HPV hem en sık görülen CYBE etkenleri arasındadır hem de önemli komplikasyonlara yol açar: gonore ve klamidya pelvik inflamatuar hastalık, ektopik gebelik ve infertiliteye; HPV serviks kanserine; HSV ise genital ülserlere neden olur. Ders notunda CYBE etkenleri bakteriler, virüsler ve parazitler başlıkları altında sıralanmakta, ancak dünya genelinde en sık görülenler vurgusu yalnızca HPV, HSV, Chlamydia trachomatis ve Neisseria gonorrhoeae için yapılmaktadır."
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Şankroid ülseri ağrılı ve yumuşaktır; Sifiliz şankrı ise ağrısız ve serttir (endüredir)."
+  },
+  {
+    "id": "cybe-q-019",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 19,
+    "slideTitle": "Anogenital Siğiller (Kondiloma Akuminata): HPV Kliniği ve Tedavisi",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Anogenital Siğiller (Kondiloma Akuminata): HPV Kliniği ve Tedavisi kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Anogenital Siğiller (Kondiloma Akuminata): HPV Kliniği ve Tedavisi sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Gebelikte kondiloma akuminata tedavisinde podofilotoksin kontrendikedir; Triklorasetik Asit (TCA) veya Kriyoterapi tercih edilir.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Gebelikte kondiloma akuminata tedavisinde podofilotoksin kontrendikedir; Triklorasetik Asit (TCA) veya Kriyoterapi tercih edilir."
+  },
+  {
+    "id": "cybe-q-020",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 20,
+    "slideTitle": "Genital Ülserlerin Ayırıcı Tanı Algoritması",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Genital Ülserlerin Ayırıcı Tanı Algoritması kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Genital Ülserlerin Ayırıcı Tanı Algoritması sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Ağrısız sert ülser = Sifiliz; Ağrılı pürülan yumuşak ülser + süpüratif bubo = Şankroid; Ağrılı veziküller = Herpes.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Ağrısız sert ülser = Sifiliz; Ağrılı pürülan yumuşak ülser + süpüratif bubo = Şankroid; Ağrılı veziküller = Herpes."
+  },
+  {
+    "id": "cybe-q-021",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 21,
+    "slideTitle": "HIV Temas Sonrası Profilaksi (PEP - Post-Exposure Prophylaxis)",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "HIV Temas Sonrası Profilaksi (PEP - Post-Exposure Prophylaxis) kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) HIV Temas Sonrası Profilaksi (PEP - Post-Exposure Prophylaxis) sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) HIV temas sonrası profilaksi en geç ilk 72 saat içinde başlatılmalı ve tam 28 gün sürdürülmelidir!",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: HIV temas sonrası profilaksi en geç ilk 72 saat içinde başlatılmalı ve tam 28 gün sürdürülmelidir!"
+  },
+  {
+    "id": "cybe-q-022",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 22,
+    "slideTitle": "Hepatit B ve C Cinsel Bulaş Riski ve Korunma",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Hepatit B ve C Cinsel Bulaş Riski ve Korunma kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Hepatit B ve C Cinsel Bulaş Riski ve Korunma sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Hepatit B aşısı cinsel yolla bulaşan enfeksiyonlara karşı ilk geliştirilen ve kanseri (primer karaciğer kanserini) önleyen aşıdır.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Hepatit B aşısı cinsel yolla bulaşan enfeksiyonlara karşı ilk geliştirilen ve kanseri (primer karaciğer kanserini) önleyen aşıdır."
+  },
+  {
+    "id": "cybe-q-023",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 23,
+    "slideTitle": "Gebelikte Cinsel Yolla Bulaşan Hastalıklar ve Fetal Riskler",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "Gebelikte Cinsel Yolla Bulaşan Hastalıklar ve Fetal Riskler kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) Gebelikte Cinsel Yolla Bulaşan Hastalıklar ve Fetal Riskler sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) Doğum eylemi sırasında annede aktif genital herpes lezyonu varsa bebek kesinlikle vajinal doğurtulmaz, derhal SEZARYENE alınır!",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: Doğum eylemi sırasında annede aktif genital herpes lezyonu varsa bebek kesinlikle vajinal doğurtulmaz, derhal SEZARYENE alınır!"
+  },
+  {
+    "id": "cybe-q-024",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 24,
+    "slideTitle": "CYBE Klinik Yaklaşım, Sendromik Yönetim ve Sınav İncileri",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
+    "question": "CYBE Klinik Yaklaşım, Sendromik Yönetim ve Sınav İncileri kapsamında aşağıdaki klinik ifadelerden hangisi DOĞRUDUR?",
+    "options": [
+      "A) CYBE Klinik Yaklaşım, Sendromik Yönetim ve Sınav İncileri sürecinde hiçbir tedavi veya takip gerekmez",
+      "B) CYBE'lerde tanı ne olursa olsun partner tedavisi yapılmadığı sürece hastanın iyileşmesi geçicidir; ping-pong reenfeksiyonu gelişir.",
+      "C) Bu hastalık yalnızca 65 yaş üzerinde görülür",
+      "D) Partner tedavisi yapılması hastalığın nüks riskini artırır",
+      "E) Tedavide yalnızca antiasitler kullanılır"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Doğru klinik yaklaşım: CYBE'lerde tanı ne olursa olsun partner tedavisi yapılmadığı sürece hastanın iyileşmesi geçicidir; ping-pong reenfeksiyonu gelişir."
   },
   {
     "id": "d3-k1-tbg-001",
@@ -1170,7 +614,7 @@
     "explanation": "5p− (5p kısa kol delesyonu), klasik olarak Cri du chat (kedi feryadı) sendromuna yol açar. Karakteristik bulgular arasında infant döneminde işitilen tiz, kedi miyavlamasını andıran ağlama sesi, mikrosefali, hipertelorizm, yuvarlak yüz ve orta-ağır düzeyde gelişimsel gerilik yer alır. Diğer şıklar da yapısal kromozom anomalisi sendromlarıdır ancak farklı delesyon bölgelerine (15q11-13, 7q11.23, 22q11.2, 4p16.3) aittir."
   },
   {
-    "id": "d3-k1-tbg-001-130",
+    "id": "d3-k1-tbg-001-126",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 7,
@@ -1248,7 +692,7 @@
     "explanation": "Vankomisin, gram-pozitif bakterilerin hücre duvarı sentezini\n(peptidoglikan) hedef alan büyük bir glikopeptit molekülüdür ve gram-\nnegatif bakterilerin dış membranını geçemediğinden, E. coli gibi gram-\nnegatif bakteriler vankomisine doğal (intrinsik) olarak dirençlidir. Diğer\neşleştirmeler yanlıştır: E. coli ampisiline kazanılmış mekanizmalarla\ndirençli olabilir ama bu doğal direnç değildir; S. aureus vankomisine\ngenellikle duyarlıdır; P. aeruginosa piperasiline (özellikle tazobaktam ile\nkombine) duyarlı olabilir; N. gonorrhoeae seftriaksona halen duyarlıdır\n(tedavide kullanılır)."
   },
   {
-    "id": "d3-k1-tbg-001-132",
+    "id": "d3-k1-tbg-001-128",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 9,
@@ -1287,7 +731,7 @@
     "explanation": "Deformasyon, önceden normal gelişmiş bir doku/organın doğum öncesi dönemde mekanik güçlerle (örn. oligohidramnioz, uterin kısıtlılık) şeklinin bozulmasıdır; malformasyondan farkı, altta yatan dokunun embriyolojik olarak normal olmasıdır. Oligohidramnioza bağlı Potter sekansındaki kraniyofasyal basıklık ve ekstremite deformiteleri klasik deformasyon örneğidir. Yarık damak ve nöral tüp defekti birer malformasyon, amniyotik bant kesisi ise bir disrupsiyon örneğidir. Not: Öğrenci notunda soru kısa (“deformasyonda görülen hastalık örneği: kraniyofasyal”) geçtiği için şıklar dismorfoloji terminolojisi (malformasyon / deformasyon / disrupsiyon) çerçevesinde tamamlanmıştır."
   },
   {
-    "id": "d3-k1-tbg-001-133",
+    "id": "d3-k1-tbg-001-129",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 10,
@@ -1443,7 +887,7 @@
     "explanation": "Doku Faktörü Yolak İnhibitörü (TFPI), doku faktörü-Faktör VIIa kompleksini ve Faktör Xa&apos;yı inhibe ederek ekstrensek koagülasyon yolağını baskılayan bir antikoagülan proteindir; fibrinolitik sistemle değil koagülasyon kaskadının inhibisyonuyla ilgilidir. Plazmin, fibrini parçalayan ana enzimdir; doku plazminojen aktivatörü, ürokinaz ve streptokinaz ise plazminojeni plazmine çevirerek fibrinolizi başlatan/aktive eden ajanlardır."
   },
   {
-    "id": "d3-k1-tbg-001-137",
+    "id": "d3-k1-tbg-001-133",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 14,
@@ -1638,7 +1082,7 @@
     "explanation": "Kan bağışı taramasında kullanılan testler (ELISA gibi) yüksek duyarlılığa\nsahip olmakla birlikte yalancı pozitiflik verebilir; bu nedenle ilk tarama\ntesti pozitif çıkan bir örnekte kesin tanı konmadan önce mutlaka daha\nspesifik bir doğrulama testi (Western blot/immünoblot veya HIV\nRNA/PCR gibi) yapılmalıdır. Doğrulama testi sonuçlanmadan hastaya\nkesin tanı konulmamalı, tedavi başlanmamalı ve aksine yanlış pozitif\nolduğu da söylenmemelidir."
   },
   {
-    "id": "d3-k1-pat-002-142",
+    "id": "d3-k1-pat-002-138",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 19,
@@ -1677,7 +1121,7 @@
     "explanation": "Karsinomlar öncelikle lenfatik yolla yayılır, hematojen yayılım daha çok sarkomlara özgüdür; bu nedenle ilk şık yanlıştır. İskelet kası ve dalak, sürekli kasılma hareketleri ve yüksek laktik asit içeriği nedeniyle metastaz için nadir görülen bölgelerdir. Tümör diferansiyasyonu arttıkça hücreler normal dokuya daha çok benzer, tam tersi doğru değildir. Damar içi yayılımda ince duvarlı ve düşük basınçlı venler arterlerden daha kolay invaze edilir. Buna karşın bazı benign tümörler (örn. gebelikte büyüyen leiomyomlar) bazı düşük dereceli malign tümörlerden daha hızlı büyüyebilir; bu istisnai ama doğru bir genellemedir."
   },
   {
-    "id": "d3-k1-tbg-001-143",
+    "id": "d3-k1-tbg-001-139",
     "deckId": "learn-dismorfoloji-terminolojisi",
     "deckTitle": "Dismorfolojide Genetik Terminoloji ve Malformasyonlar",
     "slideNumber": 20,
@@ -1755,7 +1199,7 @@
     "explanation": "Patojenite, bir mikroorganizmanın hastalık yapabilme yeteneğini\n(var/yok) ifade eden niteliksel bir kavramdır; virülans ise bu\npatojenitenin derecesini, yani oluşturduğu hastalığın şiddetini belirleyen\nniceliksel ölçüdür. Enfektivite, etkenin konakta yerleşip\nçoğalabilme/bulaşabilme yeteneğidir; immünojenite ise konakta bağışık\nyanıt oluşturabilme yeteneğidir."
   },
   {
-    "id": "d3-k1-enf-003-145",
+    "id": "d3-k1-enf-003-141",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 2,
@@ -2145,7 +1589,7 @@
     "explanation": "Kan ve diğer vücut sıvılarının sıçrama/damlama olasılığı bulunan\nişlemlerde (örn. doğum, cerrahi girişim, kan alma) sadece önlük ve\neldiven yeterli değildir; göz ve yüz mukozasının korunması için maske ile\nbirlikte gözlük veya yüz koruyucu (siperlik) de mutlaka kullanılmalıdır.\nDiğer seçenekler (iğnelerin kılıfına geçirilmemesi, el hijyeni, kesici-delici\nalet kutuları, atık imhası) standart önlemlerin doğru uygulamalarıdır."
   },
   {
-    "id": "d3-k1-enf-013-155",
+    "id": "d3-k1-enf-013-151",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 12,
@@ -2223,7 +1667,7 @@
     "explanation": "N95 (parçacık solunum) maske, hava yolu/solunum izolasyonu\ngerektiren durumlarda (örn. tüberküloz, kızamık, suçiçeği) kullanılır.\nTemas izolasyonunda esas önlemler el hijyeni, önlük-eldiven kullanımı,\ntek kişilik oda/kohortlama ve ortak malzeme kullanımının önlenmesidir;\nrutin olarak N95 maske gerekmez."
   },
   {
-    "id": "d3-k1-enf-004-157",
+    "id": "d3-k1-enf-004-153",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 14,
@@ -2262,7 +1706,7 @@
     "explanation": "Kızamık, suçiçeği, SARS-CoV-2 ve tüberküloz, havada uzun süre asılı\nkalabilen küçük partiküllerle (aerosol/droplet nuclei, <5 μm) bulaşabilen\nklasik hava yolu izolasyonu gerektiren etkenlerdir. Neisseria meningitidis\nise büyük solunum damlacıkları (≥5 μm) ile yakın temas sonucu bulaşır;\nhava yolu ile (aerosol) bulaşmaz, bu nedenle meningokoksik enfeksiyon\nşüphesinde damlacık izolasyonu yeterlidir."
   },
   {
-    "id": "d3-k1-enf-004-158",
+    "id": "d3-k1-enf-004-154",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 15,
@@ -2379,7 +1823,7 @@
     "explanation": "Zehirlenmelerde kusturma (ipeca şurubu verilmesi veya boğazın uyarılması) toksikolojik acillerde artık kesinlikle önerilmemektedir. Hem aspire edilerek kimyasal pnömoni oluşturma riski çok yüksektir, hem de korozif (asit/alkali) maddelerde özofagusu ikinci kez yakar ve rüptür riski oluşturur."
   },
   {
-    "id": "d3-k1-enf-009-161",
+    "id": "d3-k1-enf-009-157",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 18,
@@ -2418,7 +1862,7 @@
     "explanation": "Standart önlemler (eski adıyla evrensel önlemler), tanı veya enfeksiyon\ndurumundan bağımsız olarak tüm hastalara, kan/vücut sıvıları/mukoza ile\ntemas edilebilecek her durumda uygulanır; sadece HIV pozitif hastalara özgü\ndeğildir. Damlacık izolasyonu ≥5 μm'lik büyük partiküllerle (öksürük, hapşırık,\nkonuşma sırasında oluşan, kısa mesafede düşen damlacıklar) bulaşan etkenler\niçin (örn. influenza, boğmaca, meningokok); hava yolu (solunum) izolasyonu ise\n<5 μm'lik küçük partiküllerin (havada uzun süre asılı kalabilen droplet nuclei)\nbulaşabildiği etkenler için (örn. tüberküloz, kızamık, suçiçeği) uygulanır."
   },
   {
-    "id": "d3-k1-enf-054-162",
+    "id": "d3-k1-enf-054-158",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 19,
@@ -2457,7 +1901,7 @@
     "explanation": "Febril nötropeni, mutlak nötrofil sayısının <500/mm³ (veya <1000/mm³\nolup 48 saat içinde <500'e düşmesi beklenen) olduğu bir hastada, tek\nölçümde ≥38.3°C veya bir saat arayla ≥38°C ateş olarak tanımlanır. Bu\ndurumda temel immün defekt fagositer (nötrofil kaynaklı) bir\nbozukluktur; 'izole hümoral immün yetmezlik' ifadesi yanlıştır. Mukozit,\nbakteriyel/fungal translokasyona zemin hazırlayarak enfeksiyon riskini\nartırır; uzamış (>7-10 gün) nötropeni özellikle küf (Aspergillus gibi)\nenfeksiyonları riskini belirgin artırır."
   },
   {
-    "id": "d3-k1-enf-009-163",
+    "id": "d3-k1-enf-009-159",
     "deckId": "learn-enfeksiyon-hastaliklari",
     "deckTitle": "Enfeksiyon Hastalıkları - İzolasyon Yöntemleri",
     "slideNumber": 20,
@@ -2652,7 +2096,7 @@
     "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede, o\nhastalığın o toplumdaki beklenen/alışılmış (bazal, endemik) sıklığının\nbelirgin şekilde üzerinde görülmesidir. Bu kavram mutlak bir sayı değil,\nhastalığın normal düzeyine göre gösterdiği artışı ifade eder. Endemi,\nhastalığın bir bölgede sürekli ve alışılmış düzeyde bulunmasıdır;\npandemi ise epideminin kıtalar arası çok geniş coğrafi alanlara\nyayılmasıdır."
   },
   {
-    "id": "d3-k1-enf-026-168",
+    "id": "d3-k1-enf-026-164",
     "deckId": "learn-halk-sagligi-salgin-has",
     "deckTitle": "Salgın Hastalıklarda Kontrol, Sürveyans ve Korunma",
     "slideNumber": 5,
@@ -3198,7 +2642,7 @@
     "explanation": "Epidemi (salgın), bir hastalığın belirli bir toplum veya bölgede,\nbeklenen/alışılmış (bazal) sıklığının belirgin şekilde üzerinde\ngörülmesidir. Endemi bir bölgede sürekli ve alışılmış düzeyde görülmeyi,\npandemi epideminin çok geniş coğrafi alanlara (kıtalar arası)\nyayılmasını, sporadik ise ara sıra tek tük olgular halinde görülmeyi ifade\neder."
   },
   {
-    "id": "d3-k1-enf-001-182",
+    "id": "d3-k1-enf-001-178",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 1,
@@ -3237,7 +2681,7 @@
     "explanation": "Epidemi (salgın), bir hastalığın veya sağlıkla ilgili olayın belirli bir bölgede beklenen yani alışılmış düzeyin belirgin şekilde üzerinde görülmesidir; tanım mutlak bir olgu sayısına değil, hastalığın kendi normal düzeyine göre gösterdiği artışa dayanır. Bu nedenle doğru yanıt B seçeneğidir. A seçeneği hastalığın toplulukta alışılmış sıklıkta görülmesini tanımlar ve bu endemi kavramıdır. C seçeneğindeki düşük oranda görülme ile D seçeneğindeki hiç görülmeme, beklenenin altında kalma ya da hastalığın yokluğu durumunu anlatır ve epidemi tanımıyla çelişir. E seçeneği ise hastalığın yüksek fakat sabit bir oranda sürekli görülmesini ifade eder; süreklilik ve sabitlik endemi ile ilişkilidir, epidemi ise beklenen düzeyin aşılmasını vurgular. Ayırt edici ipucu: endemi eşik değerdir, epidemi bu eşiğin aşılmasıdır, pandemi ise salgının kıtalar arası çok geniş alana yayılmasıdır."
   },
   {
-    "id": "d3-k1-pat-001-183",
+    "id": "d3-k1-pat-001-179",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 2,
@@ -3315,7 +2759,7 @@
     "explanation": "Beyaz (anemik) infarktüs, tek (uç) arteriyel kan akımına sahip, yoğun/kompakt dokulu solid organlarda (kalp, dalak, böbrek gibi) görülür; burada nekrotik alana kanama sınırlıdır. Kırmızı (hemorajik) infarktüs ise venöz oklüzyonlarda, gevşek/süngerimsi dokularda, çift kanlanması olan organlarda (akciğer gibi) veya önceden staz olan dokularda görülür; akciğer, hem bronşiyal hem pulmoner arter dolaşımına sahip olduğu ve gevşek dokulu olduğu için tipik olarak kırmızı infarktüs geçirir, beyaz değil."
   },
   {
-    "id": "d3-k1-pat-001-185",
+    "id": "d3-k1-pat-001-181",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 4,
@@ -3432,7 +2876,7 @@
     "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
   },
   {
-    "id": "d3-k1-pat-006-188",
+    "id": "d3-k1-pat-006-184",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 7,
@@ -3471,7 +2915,7 @@
     "explanation": "ATP azaldığında Na+/K+-ATPaz pompası çalışamaz hale gelir; bu da hücre içine Na+ ve suyun girmesine (hücresel şişme) ve hücre içinden K+ çıkışına neden olur; yani Na+ hücreden ÇIKMAZ, tam tersine hücre İÇİNE girer. Aynı zamanda Ca++-ATPaz&apos;ın bozulmasıyla hücre içi Ca++ artar, anaerobik glikoliz artışıyla glikojen tüketilir ve laktik asit birikimiyle hücre içi pH düşer. Dolayısıyla yanlış olan ifade &apos;hücre dışına Na+ çıkışı&apos; seçeneğidir."
   },
   {
-    "id": "d3-k1-pat-006-189",
+    "id": "d3-k1-pat-006-185",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 8,
@@ -3588,7 +3032,7 @@
     "explanation": "Koilositoz, HPV enfeksiyonunun karakteristik sitopatik etkisidir; enfekte skuamöz hücrelerde nükleer büyüme, hiperkromazi, binükleasyon ve nükleus etrafında belirgin berrak bir halo (perinükleer vakuolizasyon) ile tanınır. Kondiloma lata sifiliz ile ilişkilidir; kondiloma akuminata HPV&apos;nin oluşturduğu genital siğillerin klinik adıdır, CIN ise HPV&apos;ye bağlı displastik değişikliklerin genel adıdır."
   },
   {
-    "id": "d3-k1-pat-016-192",
+    "id": "d3-k1-pat-016-188",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 11,
@@ -3705,7 +3149,7 @@
     "explanation": "Apoptozda hücre zarı bütünlüğü korunur, apoptotik cisimcikler oluşur ve yangısal reaksiyon gelişmeden temizlenir. Kaspazlar ana yürütücü enzimlerdir."
   },
   {
-    "id": "d3-k1-pat-001-195",
+    "id": "d3-k1-pat-001-191",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 14,
@@ -3744,7 +3188,7 @@
     "explanation": "Parasetamolün büyük kısmı glukuronidasyon ve sülfasyon ile zararsız hale getirilir; küçük bir kısmı ise sitokrom P450 (CYP2E1) yoluyla NAPQI adlı çok reaktif ve toksik bir ara ürüne dönüştürülür. Normalde NAPQI glutatyon ile hızla konjuge edilip zararsızlaştırılır. Aşırı doz alımında glutatyon depoları tükenince NAPQI hepatositlerin makromoleküllerine kovalent olarak bağlanarak sentrilobüler hepatik nekroza yol açar. Bu nedenle N-asetilsistein tedavisi glutatyonu yenileyerek antidot olarak kullanılır."
   },
   {
-    "id": "d3-k1-pat-001-196",
+    "id": "d3-k1-pat-001-192",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 15,
@@ -3822,7 +3266,7 @@
     "explanation": "Kronik pyelonefritte, tekrarlayan enfeksiyon ve skarlaşma sürecinde bazı tübüller atrofiye uğrayarak dilate olur ve içlerinde eozinofilik kolloid benzeri silendirler birikir; bu görünüm mikroskopik olarak tiroid folikülüne benzediği için &apos;tiroidizasyon&apos; olarak adlandırılır. Bu bulgu kronik pyelonefritin karakteristik histopatolojik özelliklerinden biridir ve diğer şıklardaki akut/süpüratif böbrek patolojilerinde beklenmez."
   },
   {
-    "id": "d3-k1-pat-055-198",
+    "id": "d3-k1-pat-055-194",
     "deckId": "learn-hucre-hasari-hucre-olumu",
     "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
     "slideNumber": 17,
@@ -3898,5 +3342,161 @@
     ],
     "correctAnswer": "A",
     "explanation": "Hücreler yenilenme kapasitelerine göre labil (sürekli bölünen; örn. epitel hücreleri, hematopoietik hücreler), stabil/kuiesan (normalde durgun ama uyarıyla bölünebilen; örn. hepatosit, endotel, fibroblast) ve kalıcı/permanent (bölünme kapasitesini doğumdan sonra büyük ölçüde kaybeden; örn. kardiyomiyositler, nöronlar, iskelet kası hücreleri) olarak sınıflandırılır. Kalp kası hücreleri kalıcı hücre grubunda olduğu için hasar sonrası yenilenmez, kaybedilen doku fibrozis (skar) ile onarılır; bu nedenle miyokard infarktüsü sonrası kontraktil doku kaybı kalıcıdır."
+  },
+  {
+    "id": "d3-k1-pat-005-196",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 19,
+    "slideTitle": "Doku Nekrozu Kalıpları 2: Likefaksiyon (Sıvılaşma) Nekrozu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Patolojide rutin amaçlar için en yaygın olarak kullanılan doku tespit (fiksasyon) sıvısı hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Alkol",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Serum fizyolojik",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Ksilen",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Parafin",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Formalin",
+        "isCorrect": true
+      }
+    ],
+    "correctAnswer": "E",
+    "explanation": "Formalin (%10 tamponlanmış formaldehit), doku proteinlerini çapraz bağlayarak otolizi ve bakteriyel bozulmayı önlediği, ucuz ve dokuya iyi nüfuz ettiği için rutin histopatolojik incelemede en yaygın kullanılan tespit sıvısıdır. Ksilen doku saydamlaştırma (clearing) aşamasında, parafin gömme aşamasında, alkol ise dehidratasyon aşamasında kullanılır; hiçbiri birincil tespit ajanı değildir."
+  },
+  {
+    "id": "d3-k1-pat-044",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 20,
+    "slideTitle": "Doku Nekrozu Kalıpları 3: Gangrenöz Nekroz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Hastalığın hızlı ve progresif olarak ilerleyeceğinin (RPGN - hızlı ilerleyen glomerülonefrit) göstergesi olan mikroskobik glomerül değişikliği aşağıdakilerden hangisidir?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kimmelstiel-Wilson lezyonu",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Bowman kapsülü içinde yarım ay (crescent) şeklinde parietal epitel proliferasyonu",
+        "isCorrect": true
+      },
+      {
+        "key": "C",
+        "text": "Glomerüloskleroz",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Bazal membran kalınlaşması",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "Podositlerde düzleşme (foot process effacement)",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Hızlı ilerleyen (kresentik) glomerülonefritin histopatolojik işareti, Bowman kapsülü boşluğunda parietal epitel hücreleri, monositler/makrofajlar ve fibrinin proliferasyonuyla oluşan yarım ay (crescent) şeklindeki yapılardır. Bu kresentler glomerül kapiler yumağını sıkıştırarak hızla ilerleyen böbrek yetmezliğine yol açar ve haftalar-aylar içinde diyalize kadar giden kötü prognozla ilişkilidir. Kimmelstiel-Wilson lezyonu diyabetik nefropatiye, podosit düzleşmesi ise minimal değişiklik hastalığı gibi nefrotik tablo veren hastalıklara özgüdür."
+  },
+  {
+    "id": "d3-k1-pat-008-198",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 21,
+    "slideTitle": "Doku Nekrozu Kalıpları 4: Kazeöz Nekroz",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Granülomatöz inflamasyon hangi tip aşırı duyarlılık reaksiyonu sonucu oluşur?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tip 1",
+        "isCorrect": false
+      },
+      {
+        "key": "B",
+        "text": "Tip 2",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Tip 3",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Geç tip (Tip 4)",
+        "isCorrect": true
+      },
+      {
+        "key": "E",
+        "text": "T hücre aracılı sitotoksisite",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Granülomatöz inflamasyon, Tip IV (gecikmiş tip / hücre aracılı) aşırı duyarlılık reaksiyonunun kronik bir formudur. Antijenin makrofajlar tarafından fagosite edilip yok edilememesi durumunda, CD4+ Th1 hücreleri IFN-gama salgılayarak makrofajları aktive eder ve bu makrofajlar epiteloid hücrelere ve dev hücrelere dönüşerek granülom oluşturur. Tüberküloz, sarkoidoz ve yabancı cisim reaksiyonları klasik örneklerdir."
+  },
+  {
+    "id": "d3-k1-pat-029",
+    "deckId": "learn-hucre-hasari-hucre-olumu",
+    "deckTitle": "Hücre Hasarı, Hücre Ölümü ve Nekroz Patolojisi",
+    "slideNumber": 22,
+    "slideTitle": "Doku Nekrozu Kalıpları 5: Yağ Nekrozu ve Sabunlaşma",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1 - Hücre Hasarı, İltihap ve Neoplazi (TIP 301)",
+    "question": "Aşağıdakilerden hangisi/hangileri metastatik kalsifikasyona neden olur? I- Hiperparatiroidizm II- Sarkoidoz III- Kronik böbrek yetmezliği IV- Aterom plağı",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yalnız I, II ve III",
+        "isCorrect": true
+      },
+      {
+        "key": "B",
+        "text": "Yalnız I ve III",
+        "isCorrect": false
+      },
+      {
+        "key": "C",
+        "text": "Yalnız II ve IV",
+        "isCorrect": false
+      },
+      {
+        "key": "D",
+        "text": "Yalnız IV",
+        "isCorrect": false
+      },
+      {
+        "key": "E",
+        "text": "I, II, III ve IV",
+        "isCorrect": false
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Metastatik kalsifikasyon, sistemik hiperkalsemiye bağlı olarak normal (sağlıklı) dokularda kalsiyum tuzlarının çökmesidir; hiperparatiroidizm, sarkoidoz (aşırı aktif makrofajların vitamin D&apos;yi aktive etmesiyle) ve kronik böbrek yetmezliği (sekonder hiperparatiroidizm ve fosfat retansiyonu yoluyla) hiperkalsemiye yol açarak metastatik kalsifikasyona neden olabilir. Aterom plağındaki kalsifikasyon ise DİSTROFİK kalsifikasyondur; burada serum kalsiyum düzeyi normaldir ve kalsiyum, önceden hasarlanmış/nekrotik dokuya (plak içindeki lipid/nekrotik debri) lokalize olarak çöker."
   }
 ]

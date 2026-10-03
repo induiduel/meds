@@ -1,6 +1,6 @@
 {
-  "totalQuestions": 1102,
-  "totalChunks": 12,
+  "totalQuestions": 1094,
+  "totalChunks": 11,
   "updatedAt": "2026-10-03",
   "description": "Öğren sayfasındaki ders içeriklerinden üretilmiş özgün çalışma ve pekiştirme soruları veritabanı (çıkmış sorulardan bağımsızdır).",
   "chunks": [
@@ -13,14 +13,16 @@
         "deck-urolithiasis-pathophysiology",
         "deck-urinary-tract-infections",
         "learn-odem-hiperemi-konjesyon",
-        "learn-ana-cocuk-sagligi"
+        "learn-ana-cocuk-sagligi",
+        "learn-cinsel-yolla-bulasan-enfe"
       ],
       "disciplines": [
         "Üroloji / Nefroloji",
         "Üroloji / Tıbbi Biyokimya & Patoloji",
         "Üroloji / Enfeksiyon Hastalıkları",
         "Tıbbi Patoloji",
-        "Halk Sağlığı"
+        "Halk Sağlığı",
+        "Enfeksiyon Hastalıkları"
       ]
     },
     {
@@ -28,7 +30,6 @@
       "filename": "chunk_2.json",
       "questionCount": 100,
       "decksCovered": [
-        "learn-ana-cocuk-sagligi",
         "learn-cinsel-yolla-bulasan-enfe",
         "learn-dismorfoloji-terminolojisi",
         "learn-enfeksiyon-hastaliklari",
@@ -36,9 +37,9 @@
         "learn-hucre-hasari-hucre-olumu"
       ],
       "disciplines": [
-        "Halk Sağlığı",
         "Enfeksiyon Hastalıkları",
         "Tıbbi Genetik",
+        "Halk Sağlığı",
         "Tıbbi Patoloji"
       ]
     },
@@ -69,7 +70,8 @@
         "learn-kronik-enflamasyon",
         "learn-intraseluler-birikimler",
         "learn-enfeksiyon-izolasyon",
-        "learn-patolojiye-giris"
+        "learn-patolojiye-giris",
+        "learn-genital-enfeksiyonlar"
       ],
       "disciplines": [
         "Tıbbi Patoloji",
@@ -81,17 +83,17 @@
       "filename": "chunk_5.json",
       "questionCount": 100,
       "decksCovered": [
-        "learn-patolojiye-giris",
         "learn-genital-enfeksiyonlar",
         "learn-dogumsal-genital-anomaliler",
         "learn-doku-onarimi-yara-iyilesmesi",
         "learn-prenatal-tani",
-        "learn-glomeruler-hastaliklar-nefrotik"
+        "learn-glomeruler-hastaliklar-nefrotik",
+        "learn-glomeruler-hastaliklar-nefritik"
       ],
       "disciplines": [
-        "Tıbbi Patoloji",
         "Enfeksiyon Hastalıkları",
-        "Tıbbi Genetik"
+        "Tıbbi Genetik",
+        "Tıbbi Patoloji"
       ]
     },
     {
@@ -99,11 +101,11 @@
       "filename": "chunk_6.json",
       "questionCount": 100,
       "decksCovered": [
-        "learn-glomeruler-hastaliklar-nefrotik",
         "learn-glomeruler-hastaliklar-nefritik",
         "learn-tubulointerstisyel-hastaliklar",
         "learn-vaskuler-kistik-bobrek-hastaliklari",
-        "learn-bobrek-tumorleri"
+        "learn-bobrek-tumorleri",
+        "learn-mesane-hastaliklari-tumorleri"
       ],
       "disciplines": [
         "Tıbbi Patoloji"
@@ -114,7 +116,6 @@
       "filename": "chunk_7.json",
       "questionCount": 100,
       "decksCovered": [
-        "learn-bobrek-tumorleri",
         "learn-mesane-hastaliklari-tumorleri",
         "learn-tumor-biyolojisi-terminolojisi",
         "learn-enflamasyon-kimyasal-mediyatorleri",
@@ -164,7 +165,8 @@
         "learn-urogenital-tumorlerde-genetik",
         "learn-bebek-beslenmesi",
         "learn-enfeksiyon-temel-kavramlar",
-        "learn-enfeksiyon-epidemiyoloji"
+        "learn-enfeksiyon-epidemiyoloji",
+        "learn-halk-sagligi-tarihcesi-ve"
       ],
       "disciplines": [
         "Tıbbi Patoloji",
@@ -176,29 +178,16 @@
     {
       "chunkId": "chunk_11",
       "filename": "chunk_11.json",
-      "questionCount": 100,
+      "questionCount": 94,
       "decksCovered": [
-        "learn-enfeksiyon-epidemiyoloji",
         "learn-halk-sagligi-tarihcesi-ve",
         "learn-uriner-sistem-enfeksiyonlari-epidemiyoloji",
         "learn-uriner-sistemin-spesifik-enfeksiyonlari",
         "learn-donem3-kurul1-mufredat-rehberi"
       ],
       "disciplines": [
-        "Enfeksiyon Hastalıkları",
         "Halk Sağlığı",
         "Üroloji",
-        "Kurul Koordinatörlüğü"
-      ]
-    },
-    {
-      "chunkId": "chunk_12",
-      "filename": "chunk_12.json",
-      "questionCount": 2,
-      "decksCovered": [
-        "learn-donem3-kurul1-mufredat-rehberi"
-      ],
-      "disciplines": [
         "Kurul Koordinatörlüğü"
       ]
     }

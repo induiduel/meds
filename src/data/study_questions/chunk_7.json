@@ -1,939 +1,307 @@
 [
   {
-    "id": "d3-k1-pat-046-600",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 21,
-    "slideTitle": "Wilms Tümörü: Genel Özellikler",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Çocukluk döneminde en sık görülen primer böbrek tümörü hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Renal hücreli karsinom",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Wilms tümörü (nefroblastom)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Anjiyomiyolipom",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Onkositom",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Papiller ürotelyal karsinom",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Wilms tümörü (nefroblastom), çocukluk çağının en sık görülen primer böbrek tümörüdür ve olguların büyük bölümü 2-5 yaş arasında tanı alır. Patogenezde embriyonel böbrek (metanefrik blastem) kalıntılarından gelişim ve WT1 tümör baskılayıcı genindeki mutasyon ile 11p13 delesyonu kritik rol oynar; histolojik olarak blastemal, stromal ve epitelyal bileşenlerden oluşan trifazik yapı gösterir. WAGR sendromu, Denys-Drash sendromu ve Beckwith-Wiedemann sendromu ile birlikteliği iyi bilinir. A şıkkındaki renal hücreli karsinom erişkin yaş grubunun tümörüdür, tanı yaşı ortalama 60-70'tir ve çocukta oldukça nadirdir. C şıkkındaki anjiyomiyolipom, tuberoz skleroz ile ilişkili benign mezenkimal bir tümördür ve çocukluk çağının primer böbrek kanseri değildir. D şıkkındaki onkositom erişkinde görülen benign renal tümördür. E şıkkındaki papiller ürotelyal karsinom ise böbrek parankiminin değil üriner sistemin (renal pelvis, üreter, mesane) tümörüdür. Ayırt edici ipucu: çocukta ele gelen abdominal kitleye aniridi veya hemihipertrofi eşlik ediyorsa Wilms tümörü düşünülmelidir."
-  },
-  {
-    "id": "d3-k1-pat-046-601",
-    "deckId": "learn-bobrek-tumorleri",
-    "deckTitle": "Böbrek Tümörleri Patolojisi",
-    "slideNumber": 22,
-    "slideTitle": "Genel Özet",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Çocukluk döneminde en sık görülen primer böbrek tümörü hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Renal hücreli karsinom",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "Wilms tümörü (nefroblastom)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Anjiyomiyolipom",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Onkositom",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Papiller ürotelyal karsinom",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Wilms tümörü (nefroblastom), çocukluk çağının en sık görülen primer böbrek tümörüdür ve olguların büyük bölümü 2-5 yaş arasında tanı alır. Patogenezde embriyonel böbrek (metanefrik blastem) kalıntılarından gelişim ve WT1 tümör baskılayıcı genindeki mutasyon ile 11p13 delesyonu kritik rol oynar; histolojik olarak blastemal, stromal ve epitelyal bileşenlerden oluşan trifazik yapı gösterir. WAGR sendromu, Denys-Drash sendromu ve Beckwith-Wiedemann sendromu ile birlikteliği iyi bilinir. A şıkkındaki renal hücreli karsinom erişkin yaş grubunun tümörüdür, tanı yaşı ortalama 60-70'tir ve çocukta oldukça nadirdir. C şıkkındaki anjiyomiyolipom, tuberoz skleroz ile ilişkili benign mezenkimal bir tümördür ve çocukluk çağının primer böbrek kanseri değildir. D şıkkındaki onkositom erişkinde görülen benign renal tümördür. E şıkkındaki papiller ürotelyal karsinom ise böbrek parankiminin değil üriner sistemin (renal pelvis, üreter, mesane) tümörüdür. Ayırt edici ipucu: çocukta ele gelen abdominal kitleye aniridi veya hemihipertrofi eşlik ediyorsa Wilms tümörü düşünülmelidir."
-  },
-  {
-    "id": "d3-k4-far-015",
+    "id": "prac-mes-009",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 1,
-    "slideTitle": "I- MESANE HASTALIKLARI VE TÜMÖRLERİ",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-603",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 2,
-    "slideTitle": "Alt İdrar Yolu: Ürotelyum",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-604",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 3,
-    "slideTitle": "Retroperitoneal Fibrozis",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-605",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 4,
-    "slideTitle": "Mesane Divertikülü: Klinik Önemi",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-606",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 5,
-    "slideTitle": "Özel Sistit Tipleri (Özet)",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-607",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 6,
-    "slideTitle": "Mesane ve Skuamöz Hücreli Karsinom",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-608",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 7,
-    "slideTitle": "lary tumor of the bladder. Cross-section of bladder with the upper secti...",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-609",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
-    "slideNumber": 8,
-    "slideTitle": "Şekil 16.17 İnvaziv olmayan düşük",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
-    ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
-  },
-  {
-    "id": "d3-k4-far-015-610",
-    "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 9,
-    "slideTitle": "Cinsel Yolla Bulaşan Enfeksiyonlar: Giriş",
+    "slideTitle": "Ürotelyal Neoplazmların WHO / ISUP Histolojik Sınıflaması",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Mesane biyopsisinde papiller mimari gösteren ancak hücrelerinde belirgin polarite kaybı, dev hiperkromatik nükleuslar, nükleer pleomorfizm ve atipik mitozlar saptanan tümörün histopatolojik tanısı nedir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Ürotelyal papillom",
+      "B) PUNLMP",
+      "C) Düşük dereceli papiller karsinom",
+      "D) Yüksek dereceli papiller ürotelyal karsinom",
+      "E) İnvert papillom"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 3,
+    "explanation": "Ağır nükleer pleomorfizm, polarite kaybı ve sık mitotik figürler Yüksek Dereceli Papiller Ürotelyal Karsinomun kriterleridir."
   },
   {
-    "id": "d3-k4-far-015-611",
+    "id": "prac-mes-010",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 10,
-    "slideTitle": "Tablo 16.2: Önemli Cinsel Yolla Bulaşan Hastalıklar, 2-2",
+    "slideTitle": "Karsinoma İn Situ (CIS): Düz, Yüksek Dereceli Malign Lezyon",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Sistoskopide mesane tabanında kitle oluşturmayan, düz kadife kırmızısı mukozal alanlar izlenen ve idrar sitolojisinde yoğun anaplastik malign hücreler saptanan lezyonun patolojik tanısı hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Akut bakteriyel sistit",
+      "B) Ürotelyal papillom",
+      "C) Düz Karsinoma İn Situ (CIS)",
+      "D) Malakoplaki",
+      "E) Sistitis glandülaris"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 2,
+    "explanation": "Kitle yapmayan düz kadife kırmızısı mukoza ve idrar sitolojisinde yüksek dereceli malign hücreler Karsinoma İn Situ'nun (CIS) klasik prezentasyonudur."
   },
   {
-    "id": "d3-k4-far-015-612",
+    "id": "prac-mes-011",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 11,
-    "slideTitle": "Sifilis: Bulaş ve Klinik Evreler",
+    "slideTitle": "İnvaziv Ürotelyal Karsinom ve Muskularis Propria İnvazyonu",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Mesane kanseri tanısıyla TUR uygulanan bir hastada radikal sistektomi (mesanenin tamamen çıkarılması) endikasyonunu doğuran en kritik histopatolojik evreleme kriteri hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Şemsiye hücrelerinin kaybolması",
+      "B) Lamina propriaya tümör hücrelerinin sızması (T1)",
+      "C) Muskularis propria (detrisör kas tabakası) invazyonunun saptanması (T2)",
+      "D) Tümör içinde psammom cisimciği bulunması",
+      "E) İdrar sitolojisinde tek tük hücre görülmesi"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 2,
+    "explanation": "Tümörün muskularis propria kas tabakasını invaze etmesi (T2 - kas invaziv mesane kanseri) radikal sistektominin kesin endikasyonunu oluşturur."
   },
   {
-    "id": "d3-k4-far-015-613",
+    "id": "prac-mes-012",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 12,
-    "slideTitle": "Primer Sifilis: Şankr",
+    "slideTitle": "Mesane Kanserinde Klinik Tablo ve İdrar Sitolojisinin Gücü",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "60 yaşındaki bir erkekte hiçbir ağrı veya dizüri olmaksızın aniden ortaya çıkan pıhtılı makroskopik hematüride ilk şüphelenilmesi ve ekarte edilmesi gereken malignite hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Akut bakteriyel sistit",
+      "B) Mesane ürotelyal karsinomu",
+      "C) Benign prostat hiperplazisi",
+      "D) Akut interstisyel nefrit",
+      "E) Renal onkositoma"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 1,
+    "explanation": "Ağrısız makroskopik hematüri ileri yaşta mesane ürotelyal karsinomunun en tipik ve en sık görülen kardinal başvuru semptomudur."
   },
   {
-    "id": "d3-k4-far-015-614",
+    "id": "prac-mes-013",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 13,
-    "slideTitle": "Konjenital Sifilis (Kısa Özet)",
+    "slideTitle": "Mesane Kanserinin Nadir Varyantları: Skuamöz Hücreli, Adenokarsinom ve Nöroendokrin",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Sistoskopide mesane tavanında (kubbesinde) yerleşim gösteren ve biyopsisinde bol müsin üreten glandüler yapılar izlenen tümörün en olası kökeni hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Urakus kalıntısı (urakal adenokarsinom)",
+      "B) Von Brunn adacıkları",
+      "C) Prostatik üretra",
+      "D) Mezonefrik kanal artığı",
+      "E) Şemsiye hücreleri"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 0,
+    "explanation": "Mesane kubbesinde (dome) yerleşen müsinöz adenokarsinomlar patent kalmış embriyonik urakus artıklarından köken alır."
   },
   {
-    "id": "d3-k4-far-015-615",
+    "id": "prac-mes-014",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 14,
-    "slideTitle": "Gonore: Klinik ve Komplikasyonlar",
+    "slideTitle": "Mesane Kanserinde TNM Evrelemesi",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Mesane rezeksiyon materyalinde ürotelyal karsinomun detrisör kas tabakasını (muskularis propria) tamamen aşarak perivezikal yağ dokusuna mikroskopik olarak yayıldığı saptandığında T evresi nedir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) T1",
+      "B) T2b",
+      "C) T3a",
+      "D) T4a",
+      "E) Tis"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 2,
+    "explanation": "Perivezikal yağ dokusuna mikroskopik yayılım T3a evresi olarak tanımlanır."
   },
   {
-    "id": "d3-k4-far-015-616",
+    "id": "prac-mes-015",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 15,
-    "slideTitle": "FIG. 16.21 Neisseria gonorrhoeae. Gram stain of urethral discharge demon...",
+    "slideTitle": "Yüzeyel Mesane Kanserinde İntravezikal BCG İmmünoterapisi",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Mesane Karsinoma İn Situ (CIS) tanısıyla intravezikal BCG tedavisi alan hastanın kontrol mesane biyopsisinde saptanması beklenen ve ilacın terapötik immün yanıt oluşturduğunu gösteren histopatolojik bulgu hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Michaelis-Gutmann kalsifiye cisimcikleri",
+      "B) Lamina propriada kazeifiye olmayan granülomatöz enflamasyon",
+      "C) Yaygın skuamöz metaplazi",
+      "D) Amiloid birikimi",
+      "E) Tel halka (wire-loop) lezyonları"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 1,
+    "explanation": "İntravezikal BCG canlı mikobakteri içerdiğinden mesane mukozasında granülomatöz enflamasyon ve T hücresel immün yanıt oluşturarak antitümöral etki gösterir."
   },
   {
-    "id": "d3-k4-far-015-617",
+    "id": "prac-mes-016",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 16,
-    "slideTitle": "Gonokok Dışı Üretrit / Servisit (NGU)",
+    "slideTitle": "Ürotelyal Karsinomda İmmünohistokimyasal Belirteç Paneli",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Karaciğerinde metastatik kitle saptanan bir hastanın biyopsisinde nükleer GATA3 pozitif, CK7 pozitif ve CK20 pozitif boyanma izleniyor. Bu metastazın en olası primer organ odağı hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Kolon adenokarsinomu",
+      "B) Mesane ürotelyal karsinomu",
+      "C) Prostat karsinomu",
+      "D) Renal berrak hücreli karsinom",
+      "E) Akciğer yassı hücreli karsinomu"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 1,
+    "explanation": "GATA3 nükleer pozitifliği ve CK7+/CK20+ sitokeratin profili Ürotelyal Karsinom için karakteristik immünohistokimyasal imzadır."
   },
   {
-    "id": "d3-k4-far-015-618",
+    "id": "prac-mes-017",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 17,
-    "slideTitle": "Lenfogranüloma Venereum (LGV)",
+    "slideTitle": "Mesane Kanserinde Metastaz Yolları ve Hedef Organlar",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Kas invaziv mesane ürotelyal karsinomunda bölgesel lenfatik yayılımın İLK gerçekleştiği anatomik lenf nodu istasyonu hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Paraaortik lenf nodları",
+      "B) Obturatuar ve internal ilyak lenf nodları",
+      "C) Yüzeyel inguinal lenf nodları",
+      "D) Mediastinal lenf nodları",
+      "E) Aksiller lenf nodları"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 1,
+    "explanation": "Mesane lenfatik drenajı öncelikle obturatuar, internal ve eksternal ilyak pelvik lenf nodlarına dökülür."
   },
   {
-    "id": "d3-k4-far-015-619",
+    "id": "prac-mes-018",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 18,
-    "slideTitle": "Şankroid (Yumuşak Şankr)",
+    "slideTitle": "Üreter ve Renal Pelvis Ürotelyal Tümörleri: Üst Üriner Sistem Özellikleri",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Renal pelviste yüksek dereceli ürotelyal karsinom saptanan bir hastada nüksleri önlemek amacıyla uygulanması gereken standart cerrahi rezeksiyon sınırı hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Yalnızca böbreğin çıkarılması (basit nefrektomi)",
+      "B) Nefroüreterektomi ve mesane kafı (cuff) rezeksiyonu",
+      "C) Yalnızca tümörün lazerle yakılması",
+      "D) Parsiyel nefrektomi",
+      "E) Sadece üreterin çıkarılması"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 1,
+    "explanation": "Üst üriner sistem ürotelyal karsinomlarında tüm üreter boyunca nüks riskini önlemek için böbrek, tüm üreter ve mesaneye girdiği delik (kaf) birlikte çıkarılmalıdır (Radikal Nefroüreterektomi)."
   },
   {
-    "id": "d3-k4-far-015-620",
+    "id": "prac-mes-019",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 19,
-    "slideTitle": "Trichomoniasis",
+    "slideTitle": "Mesane Karsinomunda Güncel Moleküler Sınıflama ve Hedefe Yönelik Tedaviler",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Metastatik ürotelyal karsinom tanılı bir hastanın moleküler genetik analizinde FGFR3 aktive edici gen mutasyonu saptanıyor. Bu hastaya başlanabilecek hedefe yönelik selektif FGFR inhibitörü ilaç hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Erdafitinib",
+      "B) İmatinib",
+      "C) Trastuzumab",
+      "D) Sunitinib",
+      "E) Rituksimab"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 0,
+    "explanation": "Erdafitinib, FGFR mutasyonu veya füzyonu taşıyan ileri evre/metastatik ürotelyal karsinomda onaylı selektif FGFR tirozin kinaz inhibitörüdür."
   },
   {
-    "id": "d3-k4-far-015-621",
+    "id": "prac-mes-020",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 20,
-    "slideTitle": "Genital HSV: Morfoloji ve Klinik",
+    "slideTitle": "Mesane Lezyonlarında Histopatolojik Ayırıcı Tanı Atlası",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "3 aydır foley mesane sondası takılı olan bir hastada kontrol sistoskopisinde mesane kubbesinde parmaksı polipoid lezyonlar izleniyor. Biyopside ödemli lamina propria üzerinde hafif hiperplastik ancak atipisiz ürotelyum saptanıyor. Tanı nedir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Yüksek dereceli papiller karsinom",
+      "B) Polipoid sistit",
+      "C) Malakoplaki",
+      "D) Schistosoma granülomu",
+      "E) Karsinoma in situ"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 1,
+    "explanation": "Kronik kateter irritasyonuna yanıt olarak gelişen atipisiz polipoid mukozal reaksiyon Polipoid Sistit olarak tanımlanır."
   },
   {
-    "id": "d3-k4-far-015-622",
+    "id": "prac-mes-021",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 21,
-    "slideTitle": "Human Papilloma Virus (HPV)",
+    "slideTitle": "Mesane Kanserli Hastaya Klinik Yaklaşım ve Yönetim Algoritması",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Mesane tümörü nedeniyle TUR-M uygulanan ve patolojisi 'Kasa invaze olmayan lamina propriaya sınırlı yüksek dereceli ürotelyal karsinom (T1)' olarak raporlanan hastada nüks ve progresyonu önlemek için en uygun sonraki adım hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) Radyoterapi vermek",
+      "B) İntravezikal BCG immünoterapisi başlamak",
+      "C) Acil hemodiyalize almak",
+      "D) Hiçbir takip yapmamak",
+      "E) Kemik iliği nakli yapmak"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 1,
+    "explanation": "T1 yüksek dereceli kasa invaze olmayan mesane kanserlerinde TUR sonrası nüks ve kas invazyonu riskini en aza indiren standart tedavi intravezikal BCG'dir."
   },
   {
-    "id": "d3-k4-far-015-623",
+    "id": "prac-mes-022",
     "deckId": "learn-mesane-hastaliklari-tumorleri",
-    "deckTitle": "Mesane Hastalıkları ve Tümörleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
     "slideNumber": 22,
-    "slideTitle": "HPV Aşısı",
+    "slideTitle": "Mesane Patolojileri Büyük Karşılaştırma Matrisi",
     "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Lenfoma, lösemi ve solid tümörlerin kemoterapisinde kullanılan alkilleyici ajan siklofosfamidin hepatik mikrozomal enzimlerle yıkımı sonucu açığa çıkan toksik akrolein metabolitine bağlı gelişen şiddetli hemorajik sistit komplikasyonunu önlemek için tedaviye eklenen spesifik koruyucu ajan hangisidir?",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki mesane lezyonu ve karakteristik patolojik bulgu eşleştirmelerinden hangisi yanlıştır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Deksrazoksan",
-        "isCorrect": false
-      },
-      {
-        "key": "B",
-        "text": "MESNA (2-merkaptoetansülfonat)",
-        "isCorrect": true
-      },
-      {
-        "key": "C",
-        "text": "Lökovorin (folinik asit)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Amifostin",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "N-asetilsistein",
-        "isCorrect": false
-      }
+      "A) İnterstisyel sistit — Hunner ülseri ve bol mast hücreleri",
+      "B) Schistosoma haematobium — Skuamöz metaplazi ve SCC riski",
+      "C) Urakus karsinomu — Mesane kubbesinde müsinöz adenokarsinom",
+      "D) Düşük dereceli papiller karsinom — TP53 mutasyonu ve erken kas invazyonu",
+      "E) Malakoplaki — Michaelis-Gutmann cisimcikleri"
     ],
-    "correctAnswer": "B",
-    "explanation": "Siklofosfamid karaciğerde sitokrom P450 ile aktif 4-hidroksisiklofosfamide, ardından akrolein ve fosforamid mustard'a dönüşür. Akrolein mesane epiteli için toksiktir; masif hematüri ve hemorajik sistit yapar. MESNA (2-merkaptoetansülfonat) idrarla atılırken sülfidril grubu üzerinden akroleini bağlar ve nontoksik bir konjugat oluşturarak mesane mukozasını korur; yeterli hidrasyonla birlikte uygulanır. Deksrazoksan (A) antrasiklin kardiyotoksisitesini önleyen demir şelatörüdür, mesane toksisitesinde etkisizdir. Lökovorin (C) metotreksat sonrası kurtarma ajanıdır. Amifostin (D) radyoterapiye bağlı kserostomi gibi durumlarda kullanılan serbest radikal temizleyicisidir. N-asetilsistein (E) parasetamol zehirlenmesinin antidotudur. Bu nedenle doğru yanıt B'dir."
+    "correctAnswer": 3,
+    "explanation": "Düşük dereceli papiller karsinomda TP53 değil FGFR3 mutasyonu görülür ve kas invazyonu nadirdir. TP53 mutasyonu ve kas invazyonu yüksek dereceli / düz yolak karsinomlarına aittir."
+  },
+  {
+    "id": "prac-mes-023",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 23,
+    "slideTitle": "Hematüri Ayırıcı Tanısı ve Ürolojik vs Nefrolojik Ayrım Algoritması",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki hematüri özelliklerinden hangisi kanamanın bir glomerülonefrite (nefrolojik) değil, kesinlikle mesane tümörü veya ürolojik bir lezyona bağlı olduğunu kanıtlar?",
+    "options": [
+      "A) İdrarda dismorfik akantositlerin görülmesi",
+      "B) İdrar sedimentinde eritrosit silindirlerinin bulunması",
+      "C) İdrarda makroskopik kan pıhtılarının (clots) saptanması",
+      "D) Eşlik eden 3 g/gün proteinüri olması",
+      "E) Serum C3 kompleman düzeyinin düşük olması"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Glomerüler kanamalarda tübüler ürokinaz enzimi pıhtılaşmayı engeller, bu nedenle pıhtı görülmez. Makroskopik pıhtı varlığı kanamanın kesinlikle ekstraglomerüler / ürolojik kaynaklı (tümör, taş vb.) olduğunu kanıtlar."
+  },
+  {
+    "id": "prac-mes-024",
+    "deckId": "learn-mesane-hastaliklari-tumorleri",
+    "deckTitle": "Mesane Hastalıkları ve Tümörleri Patolojisi",
+    "slideNumber": 24,
+    "slideTitle": "Ders 26-B Kapsamlı Sentezi: Mesane Hastalıkları ve Tümörlerinin Klinik Kodları",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Kurul 1",
+    "question": "Mesane ürotelyal karsinomlarının moleküler patogenezinde Karsinoma İn Situ (CIS) ve kas invaziv agresif karsinom gelişimi ile en güçlü ilişkili tümör süpresör gen mutasyonu hangisidir?",
+    "options": [
+      "A) FGFR3",
+      "B) TP53",
+      "C) MET",
+      "D) VHL",
+      "E) WT1"
+    ],
+    "correctAnswer": 1,
+    "explanation": "TP53 (ve RB1) gen mutasyonu yüksek dereceli düz yolak, Karsinoma İn Situ ve erken kas invazyonu gösteren agresif mesane karsinomlarının temel moleküler sürücüsüdür."
   },
   {
     "id": "tb-pq-1",
@@ -2378,5 +1746,157 @@
     ],
     "correctAnswer": "B",
     "explanation": "Marfan sendromunda elastik tunika medyanın zayıflaması, elastik liflerin parçalanması ve amorf mukoid matriks birikimiyle karakterize Kistik Medyal Nekroz gelişir ve bu durum ölümcül aort diseksiyonuna yol açar."
+  },
+  {
+    "id": "prac-gp-07",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 7,
+    "slideTitle": "Otozomal Resesif Kalıtım ve Kistik Fibrozis (CFTR) Patogenezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Beyaz ırkta en sık görülen ölümcül otozomal resesif hastalık olan Kistik Fibrozis'in en yaygın mutasyonu olan Delta-F508'in hücresel patogenezi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Hücre zarında klor kanalının açılmasını engelleyen sinyal iletim kusuru",
+      "B) mRNA sentezinin hiç yapılamaması (null mutasyon)",
+      "C) Protein katlanma kusuru nedeniyle endoplazmik retikulumda yıkılması ve zara ulaşamaması",
+      "D) Klor kanalının klor yerine bikarbonat geçirmeye başlaması",
+      "E) Aşırı aktifleşerek hücre içine aşırı klor pompalaması"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Delta-F508 mutasyonunda amino asit delesyonu proteinin anormal katlanmasına neden olur; protein endoplazmik retikulumda kalite kontrol mekanizmasınca tutulur, proteazomlarda yıkılır ve apikal membrana hiç ulaşamaz (Sınıf II taşıma kusuru)."
+  },
+  {
+    "id": "prac-gp-08",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 8,
+    "slideTitle": "Kistik Fibrozis: Doku Özgül İyon Taşınması ve Organ Patolojileri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Doğumdan sonra mekonyum çıkaramayan ve ileus operasyonuna alınan bir bebeğin büyüme döneminde kronik öksürük, steatore (yağlı ishal) ve büyüme geriliği gelişiyor. Balgam kültüründe mukoid Pseudomonas aeruginosa üreyen bu çocukta kesin tanı için istenmesi gereken en uygun test hangisidir?",
+    "options": [
+      "A) Ter Klorür Testi (Pilokarpin iyontoforezi)",
+      "B) Dışkıda Gizli Kan Testi",
+      "C) Serum Alfa-1 Antitripsin düzeyi",
+      "D) Bronkoalveoler lavaj sitolojisi",
+      "E) Akciğer biyopsisinde granülom aranması"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mekonyum ileusu, büyüme geriliği, steatore ve Pseudomonas bronşiti klasik Kistik Fibrozis tablosudur; altın standart tanı yöntemi terde klor düzeyini ölçen Ter Testidir."
+  },
+  {
+    "id": "prac-gp-09",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 9,
+    "slideTitle": "Sitogenetik Bozukluklar: Down Sendromu (Trizomi 21) Etiyopatogenezi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "42 yaşındaki bir gebeden doğan ve Down sendromu tanısı alan bebeğin sitogenetik analizinde 47,XY,+21 saptanıyor. Bu hastadaki sayısal kromozom anomalisine yol açan en muhtemel hücresel mekanizma aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Oogenez Mayoz I sırasında kromozomların ayrılamaması (non-disjunction)",
+      "B) Spermatogenez Mayoz II sırasında sentromer bölünme kusuru",
+      "C) Post-zigotik erken mitotik ayrılmama",
+      "D) 14 ve 21. kromozomlar arası dengeli Robertsonian translokasyonu",
+      "E) Perisentrik inversiyon"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Down sendromu olgularının %95'i maternal mayotik non-disjunction (özellikle oogenez Mayoz I'de ayrılmama) sonucu gelişir ve bu durum ileri anne yaşı ile doğrudan ilişkilidir."
+  },
+  {
+    "id": "prac-gp-10",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 10,
+    "slideTitle": "Down Sendromu: Klinikopatolojik Tutulumlar ve Yaşam Seyri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Doğumda epikantus, basık burun kökü ve avuç içinde tek transvers çizgi saptanan bir bebekte doğumdan 24 saat sonra safralı kusma başlıyor. Çekilen direkt batın grafisinde midede ve proksimal duodenumda hava-sıvı seviyesi ('çift baloncuk' görünümü) saptanıyor. Bu bebekteki gastrointestinal patoloji aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Pilor Stenozu",
+      "B) Duodenal Atrezi",
+      "C) İntususepsiyon",
+      "D) Mekonyum İleusu",
+      "E) Özofagus Atrezisi"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Down sendromu ile güçlü birliktelik gösteren, doğumdan hemen sonra safralı kusma ve direkt grafide 'çift baloncuk (double bubble)' görünümü veren lezyon Duodenal Atrezidir."
+  },
+  {
+    "id": "prac-gp-11",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 11,
+    "slideTitle": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Hava kirliliği yoğun olan bir metropolde yaşayan bireylerde uzun dönemde aterosklerotik plak instabilitesi ve akut koroner sendrom riskinin artmasından sorumlu olan, alveol seviyesine kadar ulaşıp makrofaj aktivasyonu ile sistemik enflamatuar sitokin salınımını tetikleyen temel partiküler kirletici boyutu hangisidir?",
+    "options": [
+      "A) PM50",
+      "B) PM20",
+      "C) PM10",
+      "D) PM2.5",
+      "E) Yalnızca kaba polenler"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Çapı 2.5 mikrometreden küçük partiküller (PM2.5) üst solunum yollarındaki filtreleri aşarak doğrudan alveollere iner, makrofajlarca yutulur ve salınan mediyatörler sistemik dolaşıma karışarak ateroskleroz ve kardiyovasküler mortaliteyi artırır."
+  },
+  {
+    "id": "prac-gp-12",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 12,
+    "slideTitle": "Karbonmonoksit (CO) ve Hipoksi Patolojisi",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Kışın sobalı evde baygın bulunan bir hastanın dudaklarında ve derisinde kiraz kırmızısı renk saptanıyor. Çekilen beyin manyetik rezonans görüntülemesinde bilateral globus pallidusta simetrik nekroz alanları izleniyor. Bu hastadaki zehirlenme etkeni ve temel patofizyolojik mekanizma hangisidir?",
+    "options": [
+      "A) Siyanür - Methemoglobin oluşumu",
+      "B) Karbonmonoksit - Karboksihemoglobin oluşumu ve oksihemoglobin eğrisinin sola kayması",
+      "C) Kurşun - ALA dehidrataz enzim inhibisyonu",
+      "D) Arsenik - Piruvat dehidrogenaz blokajı",
+      "E) Metil alkol - Formik asit retinit hasarı"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kiraz kırmızısı cilt rengi ve bilateral globus pallidus nekrozu Karbonmonoksit (CO) zehirlenmesinin patognomonik tablosudur. CO hemoglobine bağlanarak karboksihemoglobin oluşturur ve oksihemoglobin eğrisini sola kaydırarak ağır hücresel hipoksi yapar."
+  },
+  {
+    "id": "prac-gp-13",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 13,
+    "slideTitle": "Ağır Metal Toksisitesi: Kurşun Patolojisi ve İntoksikasyonu",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Eski boyalı bir evde yaşayan, karın ağrısı ve dikkat dağınıklığı şikayetiyle getirilen 4 yaşındaki çocuğun kan sayımında mikrositer anemi saptanıyor. Periferik yaymasında eritrositler içinde yaygın bazofilik noktalanma (basophilic stippling) izlenen bu çocukta patolojiden sorumlu ağır metal ve inhibe olan enzim ikilisi hangisidir?",
+    "options": [
+      "A) Cıva - Üroporfirinojen dekarboksilaz",
+      "B) Kurşun - Delta-aminolevülinik asit (ALA) dehidrataz",
+      "C) Arsenik - Tirozinaz",
+      "D) Kadmiyum - Ksantin oksidaz",
+      "E) Demir - Glukoz-6-fosfat dehidrogenaz"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Kurşun intoksikasyonunda ALA dehidrataz ve ferroşelataz enzimleri inhibe olur; kanda serbest protoporfirin artar ve periferik yaymada ribozomal agregatlara bağlı bazofilik noktalanma tipiktir."
+  },
+  {
+    "id": "prac-gp-14",
+    "deckId": "learn-genetik-pediatrik-cevresel-patoloji",
+    "deckTitle": "Genetik, Pediatrik ve Çevresel Hastalıklar Patolojisi",
+    "slideNumber": 14,
+    "slideTitle": "Ağır Metal Toksisitesi: Cıva, Arsenik ve Kadmiyum Patolojileri",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "Dönem 3 Kurul 1",
+    "question": "Yıllarca kuyu suyu içen bir hastada avuç içlerinde hiperkeratotik plaklar, tırnaklarda beyaz çizgilenmeler (Mees çizgileri) ve ciltte skuamöz hücreli karsinom gelişiyor. Karaciğer ultrasonunda kitle saptanan hastanın biyopsisinde hepatik anjiyosarkom tanısı konuyor. Bu tabloya yol açan en muhtemel çevresel toksin hangisidir?",
+    "options": [
+      "A) Kurşun",
+      "B) Arsenik",
+      "C) Kadmiyum",
+      "D) Cıva",
+      "E) Berilyum"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Palmar hiperkeratoz, Mees çizgileri, kutanöz skuamöz hücreli karsinom ve karaciğerde anjiyosarkom birlikteliği kronik Arsenik maruziyetinin klasik klinikopatolojik spektrumudur."
   }
 ]

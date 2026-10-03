@@ -4611,17 +4611,15 @@
     "committee": "Kurul 1"
   },
   "bax proteini": {
-    "term": "Bax Proteini",
+    "term": "Bax Proteini (Bcl-2-Associated X Protein)",
+    "meaning": "Sitozolde inaktif bulunan, p53 uyarısıyla aktive olup mitokondriye transloke olarak por açan ana pro-apoptotik proteindir.",
+    "category": "Patoloji",
+    "description": "Bax normalde sitoplazmada monomerik halde bulunur. Hücresel stres ve p53 aktivasyonu sonrasında mitokondri dış zarına göç eder, oligomerleşir ve Bak ile por kanalları açar. Anti-apoptotik Bcl-2 tarafından inhibe edilir; Bax/Bcl-2 oranı hücrenin yaşam veya ölüm kararını belirleyen ana biyokimyasal terazi görevi görür.",
+    "examBadge": "🔵 TUS / KOMİTE SORUSU",
     "aliases": [
-      "Bax",
-      "BAX"
-    ],
-    "category": "Genetik & Patoloji",
-    "description": "Sitoplazmada monomerik bulunan ve p53 tarafından ekspresyonu artırılan ana pro-apoptotik efektör protein.",
-    "clinicalPearl": "DNA hasarında p53 tarafından doğrudan indüklenir; mitokondriye transloke olarak por açar.",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "definition": "Sitoplazmada monomerik bulunan ve p53 tarafından ekspresyonu artırılan ana pro-apoptotik efektör protein."
+      "bax",
+      "bcl2l4"
+    ]
   },
   "bak proteini (bcl-2 antagonist/killer)": {
     "term": "Bak Proteini (Bcl-2 Antagonist/Killer)",
@@ -4632,17 +4630,16 @@
     "committee": "Kurul 1"
   },
   "bak proteini": {
-    "term": "Bak Proteini",
+    "term": "Bak Proteini (Bcl-2 Homologous Antagonist/Killer)",
+    "meaning": "Mitokondri dış membranında yerleşik, pro-apoptotik Bcl-2 ailesi üyesidir. Bax ile birlikte oligomerleşerek sitokrom c salınımını ve kaspaz aktivasyonunu tetikler.",
+    "category": "Patoloji",
+    "description": "Bak proteini normal koşullarda mitokondri dış membranında Bcl-2 ve Bcl-xL tarafından inaktif tutulur. DNA hasarı veya büyüme faktörü yokluğunda BH3-only proteinleri (Bid, Bim, Puma) tarafından aktive edilir. Aktive olan Bak, Bax ile birlikte MOMP (Mitochondrial Outer Membrane Permeabilization) porlarını oluşturarak mitokondriler arası mesafeden sitokrom c'nin sitoplazmaya çıkışını sağlar.",
+    "examBadge": "🔴 PRO-APOPTOTİK EFEKTÖR",
     "aliases": [
-      "Bak",
-      "BAK1"
-    ],
-    "category": "Genetik & Patoloji",
-    "description": "Mitokondri dış zarında integral bulunan pro-apoptotik protein; Bax ile birlikte MOMP porunu açarak Sitokrom c salınımını tetikler.",
-    "clinicalPearl": "Bax ve Bak çift nakavt edilirse hücre intrinsik apoptoza direnç kazanır. Bcl-2 tarafından inhibe edilir.",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
-    "definition": "Mitokondri dış zarında integral bulunan pro-apoptotik protein; Bax ile birlikte MOMP porunu açarak Sitokrom c salınımını tetikler."
+      "bak",
+      "bcl2l7",
+      "bak1"
+    ]
   },
   "i̇ntrensek apoptoz yolağı (mitokondriyal yol)": {
     "term": "İntrensek Apoptoz Yolağı (Mitokondriyal Yol)",
@@ -5472,16 +5469,14 @@
     "committee": "Kurul 1"
   },
   "apoptozom": {
-    "term": "Apoptozom",
-    "category": "patoloji",
-    "definition": "İntrensek apoptozda sitoplazmaya salınan Sitokrom c nin Apaf-1 ve dATP/ATP ile birleşerek oluşturduğu tekerlek benzeri 7 kollu (heptamerik) protein kompleksidir.",
-    "description": "İntrensek apoptozda sitoplazmaya salınan Sitokrom c nin Apaf-1 ve dATP/ATP ile birleşerek oluşturduğu tekerlek benzeri 7 kollu (heptamerik) protein kompleksidir.",
-    "clinicalPearl": "Prokaspaz-9 u bağlayarak dimerize eder ve otokatalitik aktivasyonla aktif Kaspaz-9 üretilmesini sağlar.",
-    "discipline": "Tıbbi Patoloji",
-    "committee": "Kurul 1",
+    "term": "Apoptozom (Apoptosome Kompleksi)",
+    "meaning": "Sitokrom c, Apaf-1 ve dATP'nin sitozolde birleşmesiyle oluşan, prokaspaz-9'u aktive eden tekerlek benzeri heptamerik ölüm kompleksidir.",
+    "category": "Patoloji / Biyokimya",
+    "description": "Mitokondriden çıkan sitokrom c sitozolde Apaf-1 (Apoptotic Protease Activating Factor-1) molekülüne bağlanır. dATP hidrolizi ile 7 adet Apaf-1/Sitokrom c ünitesi birleşerek heptamerik 'apoptozom' tekerlek yapısını kurar. Ortadaki CARD domainleri prokaspaz-9 moleküllerini toplar ve proteolitik aktivasyonunu sağlar.",
+    "examBadge": "🔴 HEPTAMERİK KOMPLEKS",
     "aliases": [
-      "Apaf-1 Kompleksi",
-      "Apoptosome"
+      "apoptosome",
+      "apaf-1 kompleksi"
     ]
   },
   "apaf-1 kompleksi": {
@@ -6145,5 +6140,41 @@
     "discipline": "Halk Sağlığı",
     "committee": "Kurul 1",
     "definition": "Aşırı tıbbileştirme (over-medicalization) ve iyatrojenik zarar riski taşıyan hastaları belirleyerek, onları gereksiz tetkik, polifarmasi, aşırı tanı ve invaziv tıbbi müdahalelerden koruma faaliyetidir."
+  },
+  "intrensek apoptoz yolagi": {
+    "term": "İntrensek (Mitokondriyal) Apoptoz Yolağı",
+    "meaning": "Hücre içi hasar ve stres sinyalleriyle mitokondriden sitokrom c salınımı ve kaspaz-9 aktivasyonu ile yürütülen programlı ölüm yolağıdır.",
+    "category": "Patoloji",
+    "description": "DNA hasarı, hipoksi, serbest radikaller veya büyüme faktörü yoksunluğu ile başlar. BH3-only proteinleri (Bim, Bid, Bad, Puma, Noxa) sensör olarak algılar -> Bax ve Bak aktive olur -> MOMP oluşur ve sitokrom c sitoplazmaya salınır -> Sitokrom c + Apaf-1 + dATP birleşerek Apoptozom kompleksini oluşturur -> İnisiyatör prokaspaz-9 aktive olur -> Yürütücü kaspazlar (kaspaz-3 ve kaspaz-6) kesilerek apoptoz tamamlanır.",
+    "examBadge": "🔴 MİTOKONDRİYAL KASPAS KASKADI",
+    "aliases": [
+      "mitokondriyal apoptoz",
+      "intrensek yolak",
+      "apoptoz mitokondriyal yol"
+    ]
+  },
+  "ekstrensek apoptoz yolagi": {
+    "term": "Ekstrensek (Ölüm Reseptörü) Apoptoz Yolağı",
+    "meaning": "Hücre yüzeyindeki ölüm reseptörlerine (Fas/CD95, TNFR1) ligand bağlanmasıyla kaspaz-8 üzerinden yürütülen ölüm yolağıdır.",
+    "category": "Patoloji",
+    "description": "Sitotoksik T lenfositleri (CTL) ve NK hücreleri tarafından kullanılır. FasL'ın Fas (CD95) reseptörüne bağlanmasıyla hücre içinde FADD adaptör proteini toplanır ve DISC (Death-Inducing Signaling Complex) oluşur. Bu kompleks prokaspaz-8'i otokatalitik olarak keserek kaspaz-8'i aktive eder. Kaspaz-8 doğrudan kaspaz-3'ü uyarabildiği gibi, Bid proteinini tBid haline getirerek intrensek mitokondriyal yolakla da çapraz bağlantı (cross-talk) kurar. FLIP proteini prokaspaz-8'e bağlanarak bu yolağı inhibe eder.",
+    "examBadge": "🔵 FAS-FASL / KASPAZ-8",
+    "aliases": [
+      "ekstrensek yolak",
+      "ölüm reseptörü yolağı",
+      "fas yolağı"
+    ]
+  },
+  "smac diablo": {
+    "term": "Smac / DIABLO Proteini",
+    "meaning": "Mitokondriden sitokrom c ile birlikte salınan ve IAP'leri (apoptoz inhibitörlerini) bloke ederek kaspazların çalışmasını serbest bırakan proteindir.",
+    "category": "Patoloji",
+    "description": "Hücre içinde kaspaz aktivasyonunu frenleyen en güçlü moleküller IAP (Inhibitor of Apoptosis Proteins / XIAP) ailesidir. Mitokondri membran geçirgenliği bozulduğunda sitoplazmaya sızan Smac/DIABLO, doğrudan IAP'lere bağlanarak onları nötralize eder ve kaspaz aktivasyonunun kesintisiz ilerlemesini güvenceye alır.",
+    "examBadge": "🔵 IAP İNHİBİTÖRÜ",
+    "aliases": [
+      "smac",
+      "diablo",
+      "smac-diablo"
+    ]
   }
 }

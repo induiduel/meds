@@ -3028,627 +3028,307 @@
     "explanation": "Detaylı Açıklama: Slayt içeriğinde vurgulandığı üzere, 'Hemodinamik Bozukluklar Büyük Entegrasyon ve Sınav Özeti' başlığı altında incelenen bu mekanizma (Starling bozukluğunda: Kalp yetmezliği = Hidrostatik artış; Nefrotik/Siroz = Onkotik düşüş; Masif ödem = Anasarka....) sürecin temel belirleyicisidir. Diğer seçenekler süreçteki geri dönüşümlülük, sistemik etkileşim ve organel hasarı dinamiklerini hatalı veya eksik genellemektedir."
   },
   {
-    "id": "d3-k5-hal-002",
+    "id": "prac-acs-001",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 1,
-    "slideTitle": "Ana Çocuk Sağlığı",
+    "slideTitle": "Ana Çocuk Sağlığı (AÇS): Genel Çerçeve ve Öncelikli Risk Grubu",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Halk sağlığında anne ve çocuk sağlığının öncelikli risk grubu olarak kabul edilmesinin temel nedenleri arasında aşağıdakilerden hangisi yer almaz?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Nüfusun sayısal olarak büyük bir kısmını oluşturmaları",
+      "B) Büyüme, gelişme ve gebelik nedeniyle biyolojik olarak hastalıklara daha duyarlı olmaları",
+      "C) Sağlık düzeylerinin ülkenin gelişmişlik düzeyini en duyarlı yansıtan gösterge olması",
+      "D) Sağlık göstergelerinin sadece genetik faktörlere bağlı olup çevre ve beslenmeden etkilenmemesi",
+      "E) Önleyici hizmetlerle morbidite ve mortalitelerinin büyük oranda önlenebilir olması"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 3,
+    "explanation": "AÇS morbidite ve mortalitesi genetikten çok sosyoekonomik durum, beslenme, hijyen ve sağlık hizmetlerine erişim gibi çevresel faktörlerden etkilenir ve önlenebilir."
   },
   {
-    "id": "d3-k5-hal-002-85",
+    "id": "prac-acs-002",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 2,
-    "slideTitle": "▪Dünya Bankası 2025 yılı verilerine göre dünya nüfusu 8.2 milyar olup, %...",
+    "slideTitle": "Anne Ölümü ve Anne Ölüm Oranı (AÖO): Tanım ve Hesaplama",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Dünya Sağlık Örgütü (DSÖ) kriterlerine göre bir ölümün 'Anne Ölümü' olarak kaydedilebilmesi için gebeliğin sonlanmasından itibaren geçmesi gereken maksimum süre ne kadardır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) 7 gün",
+      "B) 28 gün",
+      "C) 42 gün (6 hafta)",
+      "D) 3 ay",
+      "E) 1 yıl"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 2,
+    "explanation": "DSÖ tanımına göre gebelik süresince veya gebeliğin sonlanmasından sonraki 42 gün (lohusalık sonuna kadar) içinde obstetrik nedenlerle gelişen ölümler Anne Ölümü kabul edilir."
   },
   {
-    "id": "d3-k5-hal-002-86",
+    "id": "prac-acs-003",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 3,
-    "slideTitle": "15–49 yaş kadınlar 3 grupta değerlendirilir :",
+    "slideTitle": "Anne Ölümlerinin Başlıca Nedenleri: Doğrudan vs Dolaylı Nedenler",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Dünya genelinde doğrudan anne ölümlerinin en sık görülen nedeni aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Puerperal sepsis",
+      "B) Postpartum kanamalar (özellikle uterin atoni)",
+      "C) Eklampsi nöbetleri",
+      "D) Amniyon sıvı embolisi",
+      "E) Ektopik gebelik rüptürü"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 1,
+    "explanation": "Doğrudan obstetrik anne ölümlerinin küresel çapta en sık nedeni doğum sonrası masif kanamalardır (özellikle uterin atoni)."
   },
   {
-    "id": "d3-k5-hal-002-87",
+    "id": "prac-acs-004",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 4,
-    "slideTitle": "Gebe kadınların % 40 ı",
+    "slideTitle": "Doğum Öncesi Bakım (DÖB): Protokoller ve İzlem Takvimi",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "T.C. Sağlık Bakanlığı Doğum Öncesi Bakım Yönetim Rehberi'ne göre düşük riskli normal bir gebelikte yapılması gereken asgari izlem sayısı kaçtır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) En az 1",
+      "B) En az 2",
+      "C) En az 4",
+      "D) En az 8",
+      "E) En az 12"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 2,
+    "explanation": "Sağlık Bakanlığı kılavuzlarına göre komplikasyonsuz sağlıklı bir gebelikte asgari standart izlem sayısı en az 4'tür."
   },
   {
-    "id": "d3-k5-hal-002-88",
+    "id": "prac-acs-005",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 5,
-    "slideTitle": "Türkiye’de 2003 yılında Sağlıkta Dönüşüm Programının başlatılması ile an...",
+    "slideTitle": "Gebelikte Rutin Profilaksi Programları: Demir ve D Vitamini Desteği",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Nöral tüp defekti (spina bifida/anansefali) öyküsü bulunmayan ve gebelik planlayan sağlıklı bir kadında folik asit desteği ne zaman başlamalı ve günlük doz ne kadar olmalıdır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Gebelik testinin pozitif çıktığı gün — 100 mcg",
+      "B) Gebe kalmadan en az 1 ay önce — 400 mcg (0.4 mg)",
+      "C) Gebeliğin 20. haftasında — 4 mg",
+      "D) Yalnızca doğumdan sonra — 1 mg",
+      "E) Gebeliğin 36. haftasında — 5 mg"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 1,
+    "explanation": "Nöral tüp defektlerini önlemek için standart folik asit desteği gebelikten en az 1 ay önce başlanmalı ve günde 400 mikrogram (0.4 mg) olarak ilk trimester sonuna kadar verilmelidir."
   },
   {
-    "id": "d3-k5-hal-002-89",
+    "id": "prac-acs-006",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 6,
-    "slideTitle": "Ülkemizde ise ilk olarak 1961 yılında çıkarılan 224",
+    "slideTitle": "Bebek ve Çocuk Ölüm Göstergeleri: Bebek Ölüm Hızı (BÖH)",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Bir toplumda postneonatal ölüm hızının (29-365 gün) yüksek olması öncelikle aşağıdakilerden hangisinin yetersiz olduğunu gösterir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Anne karnındaki genetik tarama testlerinin",
+      "B) Çevre sağlığı, beslenme koşulları ve enfeksiyon kontrolünün",
+      "C) Yenidoğan yoğun bakım kuvöz sayısının",
+      "D) Sezaryen ameliyathane donanımının",
+      "E) Doğumhanedeki fetal monitörizasyonun"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 1,
+    "explanation": "Postneonatal ölümler (1 ay - 1 yaş arası) en sık pnömoni, ishal ve beslenme yetersizliğinden kaynaklandığı için doğrudan çevre sağlığı ve sosyoekonomik koşulların aynasıdır."
   },
   {
-    "id": "d3-k5-hal-002-90",
+    "id": "prac-acs-007",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 7,
-    "slideTitle": "İzlemlerdeki Amaçlar Gebe İzlemlerinin Amaçları;",
+    "slideTitle": "Yenidoğan Tarama Programları (NTP): Topuk Kanı Taraması",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki hastalıklardan hangisi Türkiye'de Sağlık Bakanlığı Ulusal Yenidoğan Tarama Programı kapsamında topuk kanından rutin olarak taranan hastalıklardan biri değildir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Fenilketonüri (FKU)",
+      "B) Konjenital Hipotiroidi (KHT)",
+      "C) Duchenne Muskuler Distrofi (DMD)",
+      "D) Biyotinidaz Eksikliği",
+      "E) Kistik Fibrozis (KF)"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 2,
+    "explanation": "DMD yenidoğan topuk kanı taramasında yer almaz. Rutin taranan 6 hastalık: FKU, Hipotiroidi, Biyotinidaz, Kistik Fibrozis, KAH ve SMA'dır."
   },
   {
-    "id": "d3-k5-hal-002-91",
+    "id": "prac-acs-008",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 8,
-    "slideTitle": "6.Anne adayının gebelik hijyeni, bebek bakımı,",
+    "slideTitle": "Çocukluk Çağı Aşı Takvimi ve Aşı ile Önlenebilir Hastalıklar",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "T.C. Sağlık Bakanlığı aşı takvimine göre sağlıklı bir bebeğe doğumdan hemen sonra (hastaneden çıkmadan) uygulanan İLK aşı hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) BCG (Verem)",
+      "B) Hepatit B 1. doz",
+      "C) KKK (Kızamık-Kızamıkçık-Kabakulak)",
+      "D) DaBT-İPA-Hib",
+      "E) Oral Polio Aşısı"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 1,
+    "explanation": "Doğumda bebeğe uygulanan ilk aşı Hepatit B aşısının birinci dozudur. BCG aşısı ise 2. ayın sonunda yapılır."
   },
   {
-    "id": "d3-k5-hal-002-92",
+    "id": "prac-acs-009",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 9,
-    "slideTitle": "2.Fizik Muayene: Boy, kilo, kan basıncı, kadının",
+    "slideTitle": "Bebek Beslenmesi: Anne Sütü ve Tamamlayıcı Beslenme İlkeleri",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Doğumdan sonraki ilk birkaç gün salgılanan, bebeğin bağırsak mukozasını enfeksiyonlara karşı koruyan ve Salgısal IgA (sIgA) açısından son derece zengin olan ilk süte ne ad verilir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Kolostrum (Ağız sütü)",
+      "B) Geçiş sütü",
+      "C) Olgun süt",
+      "D) Laktoferrin sütü",
+      "E) Kazein sütü"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 0,
+    "explanation": "Doğum sonrası ilk günlerde salgılanan protein ve sIgA'dan zengin ilk süte Kolostrum (ağız sütü) denir."
   },
   {
-    "id": "d3-k5-hal-002-93",
+    "id": "prac-acs-010",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 10,
-    "slideTitle": "Sigara, alkol alışkanlığı ve madde bağımlılığı",
+    "slideTitle": "Büyüme ve Gelişmenin İzlenmesi: Persentil Eğrileri ve Gelişim Basamakları",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Doğum ağırlığı 3.200 gram olan zamanında doğmuş sağlıklı bir bebeğin 1 yaşını doldurduğunda (12. ayında) beklenen ortalama vücut ağırlığı yaklaşık ne kadar olmalıdır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) 6.400 gram",
+      "B) 7.500 gram",
+      "C) 9.600 gram (Doğum kilosunun 3 katı)",
+      "D) 12.500 gram",
+      "E) 15.000 gram"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 2,
+    "explanation": "Normal bir bebek ortalama 5. ayda doğum kilosunun 2 katına, 1 yaşında ise doğum kilosunun 3 katına (3.2 x 3 = ~9.6 kg) ulaşır."
   },
   {
-    "id": "d3-k5-hal-002-94",
+    "id": "prac-acs-011",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 11,
-    "slideTitle": "6. Sevk Edilecek Durumlar:",
+    "slideTitle": "Bebeklerde D Vitamini ve Demir Profilaksisi Protokolleri",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Zamanında (term) ve normal doğum kilosuyla dünyaya gelen sağlıklı bir bebeğe raşitizmi ve demir eksikliği anemisini önlemek amacıyla D vitamini ve demir profilaksisi ne zaman başlanmalıdır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) D vitamini 1. haftada — Demir 4. ayda",
+      "B) D vitamini 6. ayda — Demir 1. yaşta",
+      "C) D vitamini doğumda — Demir doğumda",
+      "D) D vitamini 4. ayda — Demir 1. haftada",
+      "E) Sadece anemi çıkarsa başlanmalıdır"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 0,
+    "explanation": "Sağlık Bakanlığı protokolüne göre D vitamini doğumdan sonraki ilk hafta içinde (400 IU/gün), profilaktik demir ise term bebekte 4. ayda başlanır."
   },
   {
-    "id": "d3-k5-hal-002-95",
+    "id": "prac-acs-012",
     "deckId": "learn-ana-cocuk-sagligi",
     "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
     "slideNumber": 12,
-    "slideTitle": "2. Fizik Muayene: Ağırlık, kan basıncı, anemi bulgusu, uterus yüksekliği,",
+    "slideTitle": "Ders 2-AÇS Kapsamlı Sentezi: Ana Çocuk Sağlığı İzleminin Klinik Kodları",
     "discipline": "Halk Sağlığı",
-    "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "committee": "Kurul 1",
+    "question": "Aşağıdaki halk sağlığı göstergelerinden hangisinin hesaplanmasında paydada '100.000 Canlı Doğum' kullanılır?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Bebek Ölüm Hızı",
+      "B) Neonatal Ölüm Hızı",
+      "C) Anne Ölüm Oranı (AÖO)",
+      "D) Beş Yaş Altı Ölüm Hızı",
+      "E) Kaba Doğum Hızı"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 2,
+    "explanation": "Bebek, neonatal ve beş yaş altı ölüm hızlarında paydada 1.000 canlı doğum kullanılırken; Anne Ölüm Oranında (AÖO) paydada 100.000 Canlı Doğum kullanılır."
   },
   {
-    "id": "d3-k5-hal-002-96",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 13,
-    "slideTitle": "Fizik Muayene, Laboratuvar Testleri, Gebeye Verilecek İlaç Desteği, Teda...",
-    "discipline": "Halk Sağlığı",
+    "id": "cybe-q-001",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 1,
+    "slideTitle": "Cinsel Yolla Bulaşan Enfeksiyonlara Giriş ve Bulaş Dinamiği",
+    "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "question": "Aşağıdaki cinsel yolla bulaşan enfeksiyon etkenlerinden hangisi gebelik sırasında transplasental yolla fetüse geçerek konjenital enfeksiyon tablosuna yol açabilir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Trichomonas vaginalis",
+      "B) Treponema pallidum",
+      "C) Haemophilus ducreyi",
+      "D) Phthirus pubis",
+      "E) Sarcoptes scabiei"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 1,
+    "explanation": "Treponema pallidum (Sifiliz) plasentayı geçerek konjenital sifiliz (Hutchinson dişleri, eyer burun, sağırlık) yapabilen klasik transplasental patojendir."
   },
   {
-    "id": "d3-k5-hal-002-97",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 14,
-    "slideTitle": "Gebelikte ödemin sebepleri",
-    "discipline": "Halk Sağlığı",
+    "id": "cybe-q-002",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 2,
+    "slideTitle": "CYBE Etkenlerinin Mikrobiyolojik Sınıflandırılması",
+    "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "question": "Aşağıdaki mikroorganizmalardan hangisi hücre içi obligat yaşam döngüsüne sahip olup beta-laktam antibiyotiklere doğal direnç gösteren en sık bakteriyel CYBE etkenidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Neisseria gonorrhoeae",
+      "B) Haemophilus ducreyi",
+      "C) Chlamydia trachomatis",
+      "D) Treponema pallidum",
+      "E) Gardnerella vaginalis"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 2,
+    "explanation": "Chlamydia trachomatis obligat hücre içi bakteridir; peptidoglikan duvarı klasik olmadığından ve hücre içine girdiğinden beta-laktamlar etkisizdir; makrolid (azitromisin) veya tetrasiklin (doksisiklin) kullanılır."
   },
   {
-    "id": "d3-k5-hal-002-98",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 15,
-    "slideTitle": "TNSA -2018",
-    "discipline": "Halk Sağlığı",
+    "id": "cybe-q-003",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 3,
+    "slideTitle": "Vajinal Akıntı Sendromu: Vajinit ve Servisit Ayrımı",
+    "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "question": "Cinsel ilişki sonrası kanama (postkoital kanama), derin disparoni ve spekulum muayenesinde servikal os'tan pürülan eksuda gelişi ile başvuran bir kadında en olası tanı ve öncelikli etken çifti hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Vulvovajinal Kandidiyazis — Candida albicans & glabrata",
+      "B) Bakteriyel Vajinozis — Gardnerella vaginalis & Prevotella",
+      "C) Mukopürülan Servisit — Chlamydia trachomatis & Neisseria gonorrhoeae",
+      "D) Trikomonal Vajinit — Trichomonas vaginalis & Giardia",
+      "E) Atrofik Vajinit — Hipoöstrojenizm"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 2,
+    "explanation": "Servikal os'tan pürülan akıntı, frajilite ve postkoital kanama 'Mukopürülan Servisit' tablosudur; baş şüpheliler Chlamydia trachomatis ve Neisseria gonorrhoeae'dir."
   },
   {
-    "id": "d3-k5-hal-002-99",
-    "deckId": "learn-ana-cocuk-sagligi",
-    "deckTitle": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-    "slideNumber": 16,
-    "slideTitle": "Neden Doğum Öncesi Bakım Alınmamış ???",
-    "discipline": "Halk Sağlığı",
+    "id": "cybe-q-004",
+    "deckId": "learn-cinsel-yolla-bulasan-enfe",
+    "deckTitle": "Cinsel Yolla Bulaşan Enfeksiyonlarda Profilaksi, Tanı ve Tedavi İlkeleri",
+    "slideNumber": 4,
+    "slideTitle": "Vajinit Ayırıcı Tanısı: Trikomoniyazis, Kandidiyazis ve Bakteriyel Vajinozis",
+    "discipline": "Enfeksiyon Hastalıkları",
     "committee": "Kurul 1 - Ürogenital ve Obstetrik Kurulu",
-    "question": "Nüfusu 500.000 olan bir ilçede bir takvim yılı içerisinde toplam 10.000 canlı doğum gerçekleşmiştir. Aynı yıl içinde 10 ölü doğum meydana gelmiş, canlı doğan bebeklerden 30 tanesi ilk 28 gün içinde (neonatal), 10 tanesi ise 29-365. günler arasında (postneonatal) hayatını kaybetmiştir. Bu ilçedeki Bebek Ölüm Hızı (BÖH) binde kaçtır?",
+    "question": "Vajinal akıntı yakınmasıyla başvuran bir kadında vajinal pH 4.0 olarak ölçülmüş, mikroskopide bol psödohif ve tomurcuklanan mayalar izlenmiştir. Bu hastada en olası tanı aşağıdakilerden hangisidir?",
     "options": [
-      {
-        "key": "A",
-        "text": "Binde 4 (%0 4)",
-        "isCorrect": true
-      },
-      {
-        "key": "B",
-        "text": "Binde 3 (%0 3)",
-        "isCorrect": false
-      },
-      {
-        "key": "C",
-        "text": "Binde 5 (%0 5)",
-        "isCorrect": false
-      },
-      {
-        "key": "D",
-        "text": "Binde 9 (%0 9)",
-        "isCorrect": false
-      },
-      {
-        "key": "E",
-        "text": "Binde 1 (%0 1)",
-        "isCorrect": false
-      }
+      "A) Bakteriyel Vajinozis",
+      "B) Vulvovajinal Kandidiyazis",
+      "C) Trikomoniyazis",
+      "D) Mukopürülan Servisit",
+      "E) Deskuamatif Enflamatuvar Vajinit"
     ],
-    "correctAnswer": "A",
-    "explanation": "Bebek Ölüm Hızı (BÖH) Formülü: (Bir takvim yılında 1 yaşını doldurmadan ölen toplam bebek sayısı / Aynı yıl gerçekleşen CANLI doğum sayısı) x 1000. Ölü doğumlar payda ve paya dahil edilmez! Toplam 1 yaş altı ölüm: 30 (neonatal) + 10 (postneonatal) = 40 bebek ölümü. Canlı doğum sayısı = 10.000. BÖH = (40 / 10.000) x 1000 = binde 4'tür."
+    "correctAnswer": 1,
+    "explanation": "Normal/asidik pH (<4.5) varlığı ve mikroskopide psödohiflerin görülmesi Vulvovajinal Kandidiyazis tanısını kesinleştirir."
   }
 ]

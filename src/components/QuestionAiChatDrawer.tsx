@@ -594,8 +594,8 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                           <Database className="w-2.5 h-2.5" />
                           RAG Kütüphanesinde
                         </span>
-                        {msg.providerUsed && (
-                          <span className="font-mono text-[10px] opacity-75">{msg.providerUsed}</span>
+                        {(msg.planUsed || msg.providerUsed) && (
+                          <span className="font-mono text-[10px] opacity-75">{msg.planUsed || msg.providerUsed}</span>
                         )}
                         <button
                           type="button"

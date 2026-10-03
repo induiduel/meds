@@ -4773,6 +4773,43 @@ app.post('/api/automation/windows-service-notify', requireAdmin, (req, res) => {
   }
 });
 
+// Stream local lecture note PDF file directly
+app.get('/api/lecture-pdf/:filename', (req, res) => {
+  try {
+    const baseDir = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
+    const notlarDir = path.join(baseDir, 'ders_notlari_pdf');
+    const rawFilename = decodeURIComponent(req.params.filename);
+    const safeFilename = path.basename(rawFilename);
+
+    if (fs.existsSync(notlarDir)) {
+      const directPath = path.join(notlarDir, safeFilename);
+      if (fs.existsSync(directPath)) {
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `inline; filename="${encodeURIComponent(safeFilename)}"`);
+        return res.sendFile(directPath);
+      }
+
+      // Fuzzy matching by filename
+      const files = fs.readdirSync(notlarDir);
+      const cleanTarget = safeFilename.toLowerCase().replace(/\.pdf$/i, '').trim();
+      const matched = files.find(f => {
+        const cleanFile = f.toLowerCase().replace(/\.pdf$/i, '').trim();
+        return cleanFile === cleanTarget || cleanFile.includes(cleanTarget) || cleanTarget.includes(cleanFile);
+      });
+
+      if (matched) {
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `inline; filename="${encodeURIComponent(matched)}"`);
+        return res.sendFile(path.join(notlarDir, matched));
+      }
+    }
+
+    res.status(404).json({ error: 'PDF dosyası bulunamadı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'PDF açılırken hata: ' + err.message });
+  }
+});
+
 // Automation: Comprehensive live file & download status visualizer
 app.get('/api/automation/drive-files-status', (req, res) => {
   try {
@@ -4966,7 +5003,7 @@ app.post('/api/rag/ask', async (req, res) => {
     const { executeRagQuery } = await import('./src/services/ragService.ts');
     const freeKeys = getTieredGeminiKeys();
     const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
-    const modelToUse = customModel || 'gemini-3.7-flash';
+    const modelToUse = customModel || 'gemini-3.8-flash';
 
     const ragResponse = await executeRagQuery(
       {
@@ -5006,7 +5043,7 @@ app.post('/api/rag/ask-stream', async (req, res) => {
     const { executeRagQueryStream } = await import('./src/services/ragService.ts');
     const freeKeys = getTieredGeminiKeys();
     const activeKey = freeKeys[0]?.key || process.env.GEMINI_API_KEY || '';
-    const modelToUse = customModel || 'gemini-3.7-flash';
+    const modelToUse = customModel || 'gemini-3.8-flash';
 
     for await (const chunk of executeRagQueryStream(
       {
