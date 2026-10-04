@@ -874,7 +874,7 @@ const DeckPlayer: React.FC<{
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const stripRef = useRef<HTMLDivElement>(null);
   const programmatic = useRef(false);
-  const touch = useRef<{ x: number; y: number } | null>(null);
+  const touch = useRef<{ x: number; y: number; at: number } | null>(null);
 
   const slide = slides[index];
 
@@ -1040,19 +1040,24 @@ const DeckPlayer: React.FC<{
     return () => document.removeEventListener('keydown', onKey);
   });
 
-  // Swipe (paged mode)
+  // Swipe (paged mode). Yazı seçerken yanlışlıkla sayfa geçmesin: uzun basma,
+  // çoklu dokunma, kalem, seçili metin ve işaretleme modu kaydırmayı iptal eder.
   const onTouchStart = (e: React.TouchEvent) => {
     const t = e.touches[0];
-    touch.current = { x: t.clientX, y: t.clientY };
+    const stylus = (t as Touch & { touchType?: string }).touchType === 'stylus';
+    touch.current = e.touches.length === 1 && !stylus ? { x: t.clientX, y: t.clientY, at: Date.now() } : null;
   };
   const onTouchEnd = (e: React.TouchEvent) => {
-    // Selecting text with the highlighter must not flip the slide
-    if (!touch.current || mode !== 'paged' || isPenActive()) return;
-    const t = e.changedTouches[0];
-    const dx = t.clientX - touch.current.x;
-    const dy = t.clientY - touch.current.y;
+    const start = touch.current;
     touch.current = null;
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) (dx < 0 ? next : prev)();
+    if (!start || mode !== 'paged' || isPenActive()) return;
+    if (Date.now() - start.at > 450) return;
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed && sel.toString().trim()) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    if (Math.abs(dx) > 90 && Math.abs(dx) > Math.abs(dy) * 2) (dx < 0 ? next : prev)();
   };
 
   const iconBtn =
@@ -1068,16 +1073,18 @@ const DeckPlayer: React.FC<{
       className="fixed inset-0 z-[60] h-[100dvh] w-screen bg-canvas text-ink flex flex-col outline-none"
     >
       {/* Top bar */}
-      <header className="shrink-0 h-14 bg-white border-b border-line px-2 sm:px-3 flex items-center gap-1.5 sm:gap-2">
+      <header className="shrink-0 h-14 bg-white border-b border-line px-1.5 sm:px-3 flex items-center gap-1 sm:gap-1.5 min-w-0 overflow-x-auto no-scrollbar">
         <button type="button" onClick={onClose} aria-label="Sunumu kapat" title="Kapat (Esc)" className={iconBtn}>
           <X className="w-5 h-5" />
         </button>
         <div className="min-w-0 flex-1">
-          <div className="text-[12px] text-ink-2 truncate">
+          <div className="text-[11.5px] text-ink-3 truncate leading-tight">
             {deck.discipline}
             {deck.instructor ? ` · ${deck.instructor}` : ''}
           </div>
-          <div className="text-[15px] font-semibold truncate">{deck.shortTitle || deck.title}</div>
+          <div className="text-[15px] font-semibold truncate leading-tight" title={deck.title}>
+            {deck.shortTitle || deck.title}
+          </div>
         </div>
 
         {/* Global topic search trigger */}
@@ -1088,7 +1095,7 @@ const DeckPlayer: React.FC<{
           className="h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-ink text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
         >
           <Search className="w-4 h-4 text-accent" />
-          <span className="hidden md:inline">Ders İçi Arama</span>
+          <span className="hidden xl:inline">Ara</span>
           <kbd className="hidden lg:inline text-[10px] font-mono text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">Ctrl+K</kbd>
         </button>
 
@@ -1100,13 +1107,13 @@ const DeckPlayer: React.FC<{
           className="h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-teal-700 dark:hover:text-teal-400 text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
         >
           <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-          <span className="hidden md:inline">Tıbbi Sözlük</span>
-          <span className="text-[10.5px] font-bold bg-teal-500/10 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-full border border-teal-500/20">
+          <span className="hidden xl:inline">Sözlük</span>
+          <span className="hidden sm:inline text-[10.5px] font-bold bg-teal-500/10 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-full border border-teal-500/20">
             {glossaryList.length}
           </span>
         </button>
 
-        <span className="hidden sm:inline font-mono text-[13px] text-ink-2 px-1" aria-live="polite">
+        <span className="font-mono text-[12px] sm:text-[13px] text-ink-2 px-1.5 py-0.5 rounded-md bg-canvas shrink-0" aria-live="polite">
           {index + 1} / {n}
         </span>
 
@@ -1126,7 +1133,7 @@ const DeckPlayer: React.FC<{
             }`}
           >
             <GalleryHorizontal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
-            <span className="hidden md:inline">Slaytlar</span>
+            <span className="hidden 2xl:inline">Slaytlar</span>
           </button>
 
           <button
@@ -1143,7 +1150,7 @@ const DeckPlayer: React.FC<{
             }`}
           >
             <Columns className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="hidden md:inline">Yan Yana</span>
+            <span className="hidden 2xl:inline">Yan Yana</span>
           </button>
 
           <button
@@ -1160,7 +1167,7 @@ const DeckPlayer: React.FC<{
             }`}
           >
             <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-500" />
-            <span className="hidden md:inline">Orijinal PDF</span>
+            <span className="hidden 2xl:inline">Orijinal PDF</span>
           </button>
         </div>
 
@@ -1206,7 +1213,7 @@ const DeckPlayer: React.FC<{
             }}
             aria-label="Bu slaytı PDF olarak indir"
             title="Bu slaytı PDF yap"
-            className={iconBtn}
+            className={`${iconBtn} hidden md:flex`}
           >
             <FileDown className="w-5 h-5" />
           </button>
@@ -1222,7 +1229,7 @@ const DeckPlayer: React.FC<{
           {panelOpen ? <PanelRightClose className="w-5 h-5" /> : <PanelRightOpen className="w-5 h-5" />}
         </button>
         {canFullscreen && (
-          <button type="button" onClick={toggleFullscreen} aria-label={isFs ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (F)" className={iconBtn}>
+          <button type="button" onClick={toggleFullscreen} aria-label={isFs ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (F)" className={`${iconBtn} hidden md:flex`}>
             {isFs ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
           </button>
         )}
@@ -1292,7 +1299,7 @@ const DeckPlayer: React.FC<{
               </div>
             </div>
           ) : mode === 'paged' ? (
-            <div className="absolute inset-0 p-2 sm:p-4 lg:p-6 flex" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+            <div className="ms-swipe-stage absolute inset-0 p-2 sm:p-4 lg:p-6 flex" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <SlideCanvas
                 key={index}
                 deckId={deck.id}

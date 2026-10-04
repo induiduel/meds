@@ -108,6 +108,8 @@ export const SlideDrawingCanvas: React.FC<{
   const [strokes, setStrokes] = useState<DrawingStroke[]>(() => readScopeDrawings(scope));
   const currentStrokeRef = useRef<DrawingStroke | null>(null);
   const isDrawingRef = useRef(false);
+  const penSeenRef = useRef(false);
+  const activePointerRef = useRef<number | null>(null);
 
   // Sync with scope changes (when changing slides)
   useEffect(() => {
@@ -236,6 +238,11 @@ export const SlideDrawingCanvas: React.FC<{
     if (activeMode === 'none') return;
     const canvas = canvasRef.current;
     if (!canvas) return;
+    // Avuç içi reddi: bir kez kalem görüldüyse parmak/avuç dokunuşu çizmez.
+    if (e.pointerType === 'pen') penSeenRef.current = true;
+    else if (e.pointerType === 'touch' && penSeenRef.current) return;
+    if (isDrawingRef.current) return;
+    activePointerRef.current = e.pointerId;
 
     // Capture pointer to guarantee pointerup/move even outside element
     canvas.setPointerCapture(e.pointerId);
@@ -273,7 +280,7 @@ export const SlideDrawingCanvas: React.FC<{
   };
 
   const onPointerMove = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    if (!isDrawingRef.current) return;
+    if (!isDrawingRef.current || e.pointerId !== activePointerRef.current) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -299,8 +306,9 @@ export const SlideDrawingCanvas: React.FC<{
   };
 
   const onPointerUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    if (!isDrawingRef.current) return;
+    if (!isDrawingRef.current || e.pointerId !== activePointerRef.current) return;
     isDrawingRef.current = false;
+    activePointerRef.current = null;
     const canvas = canvasRef.current;
     if (canvas && canvas.hasPointerCapture(e.pointerId)) {
       canvas.releasePointerCapture(e.pointerId);

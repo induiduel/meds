@@ -28,7 +28,10 @@ import {
   MoreHorizontal,
   Mic,
   Layers,
+  Moon,
+  Sun,
 } from 'lucide-react';
+import { useTheme } from '../utils/theme';
 import { Committee } from '../types';
 import { AppUser } from '../services/auth';
 import { AppRoute, pathFor, linkClick, ROUTE_TITLES } from '../router';
@@ -268,6 +271,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  const { theme, toggle: toggleTheme } = useTheme();
   const [query, setQuery] = useState(searchQuery);
   const menuRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -368,6 +372,16 @@ export const Header: React.FC<HeaderProps> = ({
         <span className="hidden md:block font-semibold text-[15px] text-ink truncate">{ROUTE_TITLES[activeTab] || 'MedSoru'}</span>
 
         <span className="flex-1" aria-hidden="true" />
+
+        <button
+          type="button"
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç'}
+          title={theme === 'dark' ? 'Açık tema' : 'Koyu tema'}
+          className="w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer shrink-0 bg-canvas text-ink hover:bg-line-soft transition-colors"
+        >
+          {theme === 'dark' ? <Sun className="w-[18px] h-[18px]" /> : <Moon className="w-[18px] h-[18px]" />}
+        </button>
 
         <button
           type="button"

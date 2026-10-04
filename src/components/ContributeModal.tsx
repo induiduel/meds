@@ -458,16 +458,27 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 )}
 
                 {similarPast.length > 0 && (
-                  <div className="ms-pop-in rounded-[14px] bg-canvas border border-line p-3 flex flex-col gap-2">
-                    <span className="text-[12.5px] font-semibold text-ink-2">Geçmiş sınavlarda benzer sorular</span>
-                    {similarPast.map((pq) => (
-                      <div key={pq.id} className="flex flex-col gap-0.5">
-                        <span className="text-[12px] text-ink-3">
-                          {[pq.discipline, pq.examYear].filter(Boolean).join(' · ')}
-                          {pq.claimedAnswer ? ` · Cevap: ${pq.claimedAnswer}` : ''}
-                        </span>
-                        <p className="m-0 text-[13.5px] text-ink-2 line-clamp-2">{pq.stem}</p>
-                      </div>
+                  <div className="flex flex-col gap-1" aria-live="polite">
+                    <span className="text-[11.5px] font-semibold uppercase tracking-[.06em] text-ink-3">
+                      Benzer sorular · {similarPast.length}
+                    </span>
+                    {similarPast.map((pq, i) => (
+                      <details
+                        key={pq.id}
+                        className="ms-pop-in group rounded-[10px] border border-line bg-white open:bg-canvas transition-colors"
+                        style={{ animationDelay: `${i * 60}ms` }}
+                      >
+                        <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-[13px]">
+                          <span className="shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded-md bg-violet-50 text-violet-700">
+                            {pq.examYear || 'Çıkmış'}
+                          </span>
+                          <span className="min-w-0 flex-1 truncate text-ink-2 group-open:whitespace-normal" title={pq.stem}>
+                            {pq.stem}
+                          </span>
+                          {pq.claimedAnswer && <span className="shrink-0 font-mono text-[12px] text-ok">{pq.claimedAnswer}</span>}
+                        </summary>
+                        {pq.discipline && <div className="px-2.5 pb-2 text-[12px] text-ink-3">{pq.discipline}</div>}
+                      </details>
                     ))}
                   </div>
                 )}

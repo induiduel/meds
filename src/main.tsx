@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { installToastBridge } from './components/ui/Toast';
+import { applyTheme, readTheme } from './utils/theme';
+
+applyTheme(readTheme());
 
 // alert() and unhandled failures become friendly floating toasts
 installToastBridge();

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* The site is light-only. `dark:` styles apply solely inside the summary
-   reader's own dark themes, never because of the OS colour scheme. */
-@custom-variant dark (&:where(.reader-theme-dark, .reader-theme-dark *, .reader-theme-cobalt, .reader-theme-cobalt *));
+/* `dark:` styles apply when the user picks the dark app theme (html.theme-dark)
+   or inside the summary reader's own dark themes. */
+@custom-variant dark (&:where(.theme-dark, .theme-dark *, .reader-theme-dark, .reader-theme-dark *, .reader-theme-cobalt, .reader-theme-cobalt *));
 
 /* -------------------------------------------------------------
  * MedSoru design tokens
@@ -49,6 +49,42 @@
   --color-teal-800: #183A96;
   --color-teal-900: #172F72;
   --color-teal-950: #0F1D47;
+}
+
+/* -------------------------------------------------------------
+ * Koyu tema: aynı değişkenler yeniden tanımlanır. bg-white yüzey rengine
+ * döner; vurgu açılır, beyaz yazı ile kontrast 4.5:1 üstünde kalır.
+ * ------------------------------------------------------------- */
+html.theme-dark {
+  --color-white: #121A27;
+  --color-ink: #E7ECF3;
+  --color-ink-2: #A9B5C6;
+  --color-ink-3: #8A98AC;
+  --color-line: #243046;
+  --color-line-2: #33415A;
+  --color-line-soft: #1B2536;
+  --color-canvas: #0B111B;
+  --color-field: #182233;
+  --color-accent: #4F74F0;
+  --color-accent-hover: #6A8AF5;
+  --color-accent-soft: #1A2747;
+  --color-ok: #66D093;
+  --color-ok-soft: #11301F;
+  --color-ok-tint: #0F2619;
+  --color-warn: #F2AE68;
+  --color-warn-soft: #33230F;
+  --color-bad: #FF8FA0;
+  --color-bad-text: #FF8FA0;
+  --color-bad-soft: #3A1720;
+  --color-teal-50: #16213A;
+  --color-teal-100: #1A2747;
+  --color-slate-50: #141C2A;
+  --color-slate-100: #182233;
+  --color-gray-50: #141C2A;
+  --color-gray-100: #182233;
+}
+html.theme-switching, html.theme-switching * {
+  transition: background-color .25s ease, border-color .25s ease, color .2s ease !important;
 }
 
 html, body {
@@ -344,3 +380,8 @@ body {
 .ms-pen-blue ::selection { background: rgba(147, 197, 253, 0.85); color: inherit; }
 .ms-pen-eraser { cursor: cell; }
 .ms-pen-eraser ::selection { background: rgba(14, 26, 38, 0.12); color: inherit; }
+
+/* Kalem ve dokunma: metin alanlarında yanlışlıkla yakınlaştırma/geri gitme olmasın. */
+.ms-pen-surface { touch-action: none; -webkit-user-select: none; user-select: none; }
+.ms-swipe-stage { touch-action: pan-y pinch-zoom; overscroll-behavior-x: contain; }
+details > summary::-webkit-details-marker { display: none; }
