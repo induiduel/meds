@@ -234,14 +234,17 @@ def chat(model: str, prompt: str, system: str | None = None, as_json: bool = Fal
     # Dinamik GPU Yönetimi
     if num_gpu is not None:
         options["num_gpu"] = num_gpu
-    elif "gemma" not in model.lower():
+    elif "gemma" in model.lower():
+        # Gemma tek başına çalışırken RTX 4060 tüm 35 katmanını GPU'ya alır!
+        options["num_gpu"] = 99
+    else:
         # Model gemma harici bir model (örn: qwen, deepseek, medgemma vb.)
         if is_gemma_running():
             # Gemma çalışıyor -> VRAM çakışmasını önlemek için %90 CPU / %10 GPU
             options["num_gpu"] = 3
         else:
             # Gemma çalışmıyor -> GPU tamamen serbest, tam donanım hızlandırma!
-            pass
+            options["num_gpu"] = 99
 
     body = {"model": model, "messages": msgs, "stream": False, "think": False,
             "options": options}
