@@ -17,8 +17,9 @@ CREATE TABLE IF NOT EXISTS public.rag_chunks (
   title TEXT,                                        -- Not başlığı veya soru konusu
   page_number INTEGER,                               -- Slayt/Sayfa no (sorularda NULL veya soru no)
   content TEXT NOT NULL,                             -- Metin içeriği (arama yapılan asıl veri)
+  content_tsv tsvector GENERATED ALWAYS AS (to_tsvector('simple', content)) STORED,
   metadata JSONB DEFAULT '{}'::jsonb,                -- Ek bilgiler (şıklar, doğru cevap, öğretim üyesi vb.)
-  embedding vector(768),                             -- Gemini text-embedding-001 / 768 boyutlu kompakt vektör
+  embedding vector(1024),                            -- BGE-M3 1024 boyutlu yerel dense vektör
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
@@ -29,13 +30,13 @@ CREATE INDEX IF NOT EXISTS idx_rag_chunks_type ON public.rag_chunks (document_ty
 CREATE INDEX IF NOT EXISTS idx_rag_chunks_doc_id ON public.rag_chunks (document_id);
 CREATE INDEX IF NOT EXISTS idx_rag_chunks_type_doc ON public.rag_chunks (document_type, document_id);
 
--- Tam Metin Arama (Full-Text Search) İndeksi
-CREATE INDEX IF NOT EXISTS idx_rag_chunks_fts ON public.rag_chunks USING gin (to_tsvector('simple', content));
+-- Tam Metin Arama (Full-Text Search) Simple GIN İndeksi (Tıbbi terimleri bozmaz)
+CREATE INDEX IF NOT EXISTS idx_rag_chunks_tsv ON public.rag_chunks USING gin (content_tsv);
 
--- IVFFlat Vektör Benzerlik İndeksi (Kosinüs Benzerliği)
-CREATE INDEX IF NOT EXISTS idx_rag_chunks_embedding 
-  ON public.rag_chunks USING ivfflat (embedding vector_cosine_ops) 
-  WITH (lists = 100);
+-- HNSW Vektör Benzerlik İndeksi (IVFFlat yerine dinamik, yüksek hızlı ve sıfır-reindex gerektiren HNSW)
+CREATE INDEX IF NOT EXISTS idx_rag_chunks_hnsw 
+  ON public.rag_chunks USING hnsw (embedding vector_cosine_ops) 
+  WITH (m = 16, ef_construction = 64);
 
 -- 4. Temel Vektör Benzerlik Araması Fonksiyonu (match_rag_chunks)
 CREATE OR REPLACE FUNCTION match_rag_chunks (

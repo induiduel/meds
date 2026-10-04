@@ -33,13 +33,13 @@ CREATE TABLE IF NOT EXISTS public.student_ai_memory (
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- 4. Supabase Hibrit Arama Fonksiyonu (PostgreSQL Full-Text Search ts_rank + Cosine Similarity)
+-- 4. Supabase Hibrit Arama Fonksiyonu: Reciprocal Rank Fusion (RRF)
+-- RRF_Score(d) = 1 / (60 + rank_dense) + 1 / (60 + rank_fts)
 CREATE OR REPLACE FUNCTION hybrid_search_chunks (
     query_text TEXT,
-    query_embedding vector(768),
+    query_embedding vector(1024),
     match_count INT DEFAULT 10,
-    weight_dense FLOAT DEFAULT 0.6,
-    weight_fts FLOAT DEFAULT 0.4
+    rrf_k INT DEFAULT 60
 )
 RETURNS TABLE (
     id TEXT,
@@ -47,41 +47,47 @@ RETURNS TABLE (
     title TEXT,
     discipline TEXT,
     final_score FLOAT,
-    fts_rank FLOAT,
+    fts_rank INT,
+    dense_rank INT,
     dense_similarity FLOAT
 )
 LANGUAGE plpgsql
 AS $$
 BEGIN
     RETURN QUERY
-    WITH fts AS (
+    WITH fts_ranked AS (
         SELECT 
             rc.id,
-            ts_rank(to_tsvector('simple', rc.content), plainto_tsquery('simple', query_text)) AS rank
+            ROW_NUMBER() OVER (ORDER BY ts_rank_cd(to_tsvector('simple', rc.content), plainto_tsquery('simple', query_text)) DESC)::INT AS rank_fts
         FROM public.rag_chunks rc
         WHERE to_tsvector('simple', rc.content) @@ plainto_tsquery('simple', query_text)
+        LIMIT match_count * 3
     ),
-    dense AS (
+    dense_ranked AS (
         SELECT 
             rc.id,
-            1 - (rc.embedding <=> query_embedding) AS similarity
+            (1 - (rc.embedding <=> query_embedding))::FLOAT AS similarity,
+            ROW_NUMBER() OVER (ORDER BY rc.embedding <=> query_embedding ASC)::INT AS rank_dense
         FROM public.rag_chunks rc
         WHERE rc.embedding IS NOT NULL
-        ORDER BY rc.embedding <=> query_embedding
-        LIMIT match_count * 2
+        LIMIT match_count * 3
     )
     SELECT 
         rc.id,
         rc.content,
         rc.title,
         rc.discipline,
-        (COALESCE(dense.similarity, 0.0) * weight_dense + COALESCE(fts.rank, 0.0) * weight_fts)::FLOAT AS final_score,
-        COALESCE(fts.rank, 0.0)::FLOAT AS fts_rank,
-        COALESCE(dense.similarity, 0.0)::FLOAT AS dense_similarity
+        (
+            COALESCE(1.0 / (rrf_k + dr.rank_dense), 0.0) +
+            COALESCE(1.0 / (rrf_k + fr.rank_fts), 0.0)
+        )::FLOAT AS final_score,
+        fr.rank_fts,
+        dr.rank_dense,
+        COALESCE(dr.similarity, 0.0)::FLOAT AS dense_similarity
     FROM public.rag_chunks rc
-    LEFT JOIN fts ON rc.id = fts.id
-    LEFT JOIN dense ON rc.id = dense.id
-    WHERE fts.id IS NOT NULL OR dense.id IS NOT NULL
+    LEFT JOIN fts_ranked fr ON rc.id = fr.id
+    LEFT JOIN dense_ranked dr ON rc.id = dr.id
+    WHERE fr.id IS NOT NULL OR dr.id IS NOT NULL
     ORDER BY final_score DESC
     LIMIT match_count;
 END;

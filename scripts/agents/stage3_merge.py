@@ -41,6 +41,13 @@ EMB_CACHE = lib.STATE_DIR / "embcache.pkl"
 T_SCORE = float(__import__("os").environ.get("MEDS_MATCH_SCORE", "0.60"))
 T_MARGIN = float(__import__("os").environ.get("MEDS_MATCH_MARGIN", "0.03"))
 T_TERMS = int(__import__("os").environ.get("MEDS_MATCH_TERMS", "2"))
+
+# Hakem Ajan (Judge Agent - DeepSeek-R1) Eşikleri:
+# support_ratio >= 0.85: Otomatik onayla (verified)
+# 0.65 <= support_ratio < 0.85: Hakem Ajan kuyruğuna (referee_queue / needs_referee)
+# support_ratio < 0.65: Eksik kaynak / inceleme (needs_fix / rejected)
+T_VERIFIED_SUPPORT = 0.85
+T_REFEREE_SUPPORT = 0.65
 STOP = set(lib.tokens("hangisi hangileri aşağıdakilerden aşağıdaki doğrudur yanlıştır değildir olarak ile için gibi daha çok en bir "
                       "bu şu ve veya ya da olan olur olabilir görülür tanı tedavi hastalık hasta özellik özelliği sonucu sonuç "
                       "neden nedeni nedir nasıl hangi"))
@@ -457,6 +464,17 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
         QV = None
     ch_by_id = {c["chunk_id"]: c for c in idx.chunks}
     total_u = len(uniq)
+    # Varsa önceki zenginleştirilmiş soruları al
+    prev = {}
+    q_prev_path = lib.TEMP3 / "questions.jsonl"
+    if q_prev_path.exists():
+        try:
+            for item in lib.read_jsonl(q_prev_path):
+                if item.get("question_id"):
+                    prev[item["question_id"]] = item
+        except Exception:
+            pass
+
     for i, u in enumerate(uniq):
         qid = hashlib.sha1(qkey(u).encode()).hexdigest()[:12]
         if i % 5 == 0:
@@ -480,17 +498,38 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
         dec = decide(u, hits, idx)
         base["match"] = dec
         base["entities"] = dec.get("ortak_terimler", [])
+        
+        # Destek oranı (support_ratio) hesaplaması: Soru metninin amfi notundaki kelime karşılığı
+        cand_chunk_text = ch_by_id[dec["kanit_chunk"]]["text"] if dec.get("kanit_chunk") and dec["kanit_chunk"] in ch_by_id else ""
+        cand_tokens = set(lib.tokens(cand_chunk_text))
+        q_tokens = set(lib.tokens(qtext(u))) - STOP
+        support_ratio = (len(q_tokens & cand_tokens) / len(q_tokens)) if q_tokens else 0.0
+        base["support_ratio"] = round(float(support_ratio), 4)
+
         if dec["durum"] == "kesin":
             base.update(source_id=dec["kaynak"], ders=dec["ders"], konu=dec["konu"], evidence=[dec["kanit_chunk"]])
             if isinstance(dec.get("kurul"), int):
                 base["kurul"] = dec["kurul"] if base["kurul"] in (None, "final") else base["kurul"]
-            base["status"] = "verified"
+            
+            # Hakem Ajan Kuralları:
+            # support_ratio >= 0.85: Otomatik onayla (verified)
+            # 0.65 <= support_ratio < 0.85: Hakem Ajan (DeepSeek-R1) kuyruğu (referee_queue)
+            # support_ratio < 0.65: Eksik slayt / inceleme (needs_fix)
+            if support_ratio >= T_VERIFIED_SUPPORT:
+                base["status"] = "verified"
+            elif support_ratio >= T_REFEREE_SUPPORT:
+                base["status"] = "referee_queue"
+                base["issues"].append(f"Hakem Ajan (DeepSeek-R1) incelemesi bekliyor (destek={support_ratio:.2f})")
+            else:
+                base["status"] = "needs_fix"
+                base["issues"].append(f"Slayt desteği sınırda veya yetersiz ({support_ratio:.2f} < {T_REFEREE_SUPPORT})")
+
             old = prev.get(qid)
             if do_enrich and use_llm and old and old.get("enrichment_done"):
                 for k in ("enrichment", "explanation", "stem_detailed", "options_added", "enrichment_done"):
                     if k in old:
                         base[k] = old[k]
-            elif do_enrich and use_llm:
+            elif do_enrich and use_llm and base["status"] in ("verified", "referee_queue"):
                 e = enrich(u, ch_by_id[dec["kanit_chunk"]]["text"], dec["kanit_chunk"])
                 base["enrichment_done"] = True
                 if e:
@@ -503,12 +542,17 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
                         base["options_added"] = e["options_added"]
                     if "taxonomy_metadata" in e:
                         base["taxonomy_metadata"] = e["taxonomy_metadata"]
-                    base["status"] = "fixed"
+                    if base["status"] == "verified":
+                        base["status"] = "fixed"
                     # Dashboard canlı dönüşüm tablosuna bas
                     orig_sample = f"{u['stem'][:150]} (Şıklar: {len(u['options'])})"
                     new_sample = f"{base.get('stem_detailed') or u['stem'][:150]} (Açıklama: {base.get('explanation', '')[:100]}...)"
                     state.add_transformation(f"Kurul {base['kurul']} / Soru {u.get('no', '')}", "Aşama 3 Soru Zenginleştirme", orig_sample, new_sample)
-            out.append(base)
+            
+            if base["status"] in ("verified", "fixed"):
+                out.append(base)
+            else:
+                review.append(base)
         else:
             base["status"] = "needs_fix"
             base["issues"].append("kaynak kesinleşmedi: " + dec["neden"])
