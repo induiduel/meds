@@ -31,6 +31,9 @@ import {
   Radio,
   Server,
   Workflow,
+  Moon,
+  Sun,
+  ArrowLeft,
 } from 'lucide-react';
 import type { QuestionItem, Committee, QuestionOption } from '../../types';
 import { ApiService } from '../../services/api';
@@ -40,6 +43,7 @@ import { AdminScriptsTab } from '../AdminScriptsTab';
 import { AdminDriveSyncSettings } from '../AdminDriveSyncSettings';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 import { DraftStudio } from './DraftStudio';
+import { useTheme } from '../../utils/theme';
 import { ManageDraftsSection } from './ManageDraftsSection';
 import { ManageDataSection } from './ManageDataSection';
 import { Table2 } from 'lucide-react';
@@ -582,116 +586,129 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     }
   };
 
+  const { theme, toggle: toggleTheme } = useTheme();
   const current = SECTIONS.find((s) => s.id === section) || SECTIONS[0];
 
   return (
-    <div className={`w-full bg-white overflow-hidden grid text-ink ${
-      fullscreen
-        ? 'h-dvh min-h-dvh grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[264px_minmax(0,1fr)]'
-        : 'rounded-2xl border border-line min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)] grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[248px_minmax(0,1fr)]'
+    <div className={`ms-console w-full bg-canvas overflow-hidden flex flex-col text-ink ${
+      fullscreen ? 'h-dvh min-h-dvh' : 'rounded-2xl min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)]'
     }`}>
-      <aside className="bg-canvas border-b lg:border-b-0 lg:border-r border-line flex lg:flex-col min-w-0">
-        <div className="hidden lg:flex items-center gap-2.5 px-5 pt-5 pb-4">
-          <span className="w-9 h-9 rounded-[10px] bg-ink text-white flex items-center justify-center shrink-0">
-            <ShieldCheck className="w-[18px] h-[18px]" />
-          </span>
-          <div className="min-w-0">
-            <div className="font-display font-bold text-[17px] tracking-[-0.02em] leading-tight">Yönetim Konsolu</div>
-            <div className="text-[12px] text-ink-3 truncate" title={adminEmail}>manage · {adminEmail}</div>
-          </div>
+      {/* Üst çubuk: ana sayfalardaki gibi sade, yarı saydam */}
+      <header className="shrink-0 h-[60px] flex items-center gap-2 px-3 sm:px-5 bg-canvas/85 backdrop-blur-md">
+        <button type="button" onClick={onExit} className="flex items-center gap-2 cursor-pointer shrink-0 mr-1" title="Siteye dön" aria-label="Siteye dön">
+          <span className="w-7 h-7 rounded-[9px] bg-accent text-white flex items-center justify-center font-bold">+</span>
+          <span className="hidden sm:inline font-display font-bold text-[17px] tracking-[-0.02em]">MedSoru</span>
+        </button>
+        <span className="h-7 px-3 rounded-full bg-ink text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 shrink-0">
+          <ShieldCheck className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Yönetim</span>
+        </span>
+        <span className="hidden sm:block flex-1" />
+        <label className="sr-only" htmlFor="manage-committee">Kurul</label>
+        <select
+          id="manage-committee"
+          value={selectedCommitteeId}
+          onChange={(e) => onSelectCommittee(e.target.value)}
+          className="h-9 min-w-0 flex-1 sm:flex-none rounded-full px-3.5 text-[13px] bg-field border-0 cursor-pointer sm:max-w-[260px] truncate outline-0 focus:ring-2 focus:ring-accent"
+        >
+          {committees.map((c) => (
+            <option key={c.id} value={c.id}>{c.name}</option>
+          ))}
+        </select>
+        <div role="radiogroup" aria-label="Yoğunluk" className="hidden md:inline-flex gap-0.5 bg-field rounded-full p-[3px] shrink-0">
+          {(['comfy', 'compact', 'tight'] as Density[]).map((d) => (
+            <button
+              key={d}
+              type="button"
+              role="radio"
+              aria-checked={density === d}
+              onClick={() => setDensity(d)}
+              className={`h-[30px] px-3 rounded-full text-[12.5px] cursor-pointer whitespace-nowrap transition-colors ${
+                density === d ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
+              }`}
+            >
+              {DENSITY_LABEL[d]}
+            </button>
+          ))}
         </div>
-        <nav aria-label="Yönetim bölümleri" className="flex lg:flex-col gap-1 px-2 py-2 lg:px-3 lg:py-0 overflow-x-auto flex-1 min-w-0">
-          {SECTIONS.map((sec, i) => {
-            const on = section === sec.id;
-            const group = SECTION_GROUP[sec.id];
-            const groupStart = i === 0 || SECTION_GROUP[SECTIONS[i - 1].id] !== group;
-            const Icon = sec.icon;
-            const badge =
-              sec.id === 'inbox'
-                ? pendingReports.length + comments.length
-                : sec.id === 'drafts'
-                  ? drafts.length
-                  : sec.id === 'users'
-                    ? activity.length
-                    : undefined;
-            return (
-              <React.Fragment key={sec.id}>
-              {groupStart && (
-                <span className="hidden lg:block px-3 pt-3 pb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-3">{group}</span>
-              )}
-              <button
-                type="button"
-                onClick={() => setSection(sec.id)}
-                aria-current={on ? 'page' : undefined}
-                className={`shrink-0 lg:w-full min-h-10 px-3 rounded-[10px] flex items-center gap-2.5 text-left cursor-pointer transition-colors ${
-                  on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink hover:bg-white/60'
-                }`}
-              >
-                <Icon className={`w-[18px] h-[18px] shrink-0 ${on ? 'text-accent' : ''}`} />
-                <span className="text-[14px] whitespace-nowrap flex-1">{sec.label}</span>
-                {badge !== undefined && badge > 0 && (
-                  <span className="hidden lg:inline font-mono text-[12px] text-ink-3">{badge}</span>
-                )}
-              </button>
-              </React.Fragment>
-            );
-          })}
-        </nav>
         <button
           type="button"
-          onClick={onExit}
-          className="shrink-0 m-2 h-10 px-3 rounded-[10px] border border-line text-ink-2 hover:text-ink text-[13px] font-semibold cursor-pointer"
+          onClick={() => { void reloadInbox(); void onRefreshData(); }}
+          disabled={loading}
+          className="w-9 h-9 rounded-full inline-flex items-center justify-center text-ink-2 hover:text-ink hover:bg-field cursor-pointer disabled:opacity-50 shrink-0"
+          title="Yenile"
+          aria-label="Yenile"
         >
-          Siteye dön
+          <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
         </button>
-      </aside>
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="w-9 h-9 rounded-full inline-flex items-center justify-center text-ink-2 hover:text-ink hover:bg-field cursor-pointer shrink-0"
+          title={theme === 'dark' ? 'Açık tema' : 'Koyu tema'}
+          aria-label="Temayı değiştir"
+        >
+          {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+        </button>
+        <span className="hidden sm:flex w-9 h-9 rounded-full bg-field items-center justify-center text-[12px] font-semibold shrink-0" title={adminEmail}>
+          {(adminEmail || 'Y').charAt(0).toUpperCase()}
+        </span>
+      </header>
 
-      <div className="flex flex-col min-h-0 min-w-0">
-        <header className="flex items-center gap-3 px-4 sm:px-6 py-3 sm:py-4 border-b border-line shrink-0">
-          <div className="min-w-0 flex-1">
-            <h2 className="m-0 font-display font-bold text-[20px] sm:text-[22px] tracking-[-0.02em] leading-tight">{current.label}</h2>
-            <p className="m-0 text-[13px] text-ink-2 truncate">{current.hint}</p>
-          </div>
-          <div role="radiogroup" aria-label="Yoğunluk" className="hidden sm:inline-flex gap-0.5 bg-canvas rounded-[11px] p-[3px] shrink-0">
-            {(['comfy', 'compact', 'tight'] as Density[]).map((d) => (
-              <button
-                key={d}
-                type="button"
-                role="radio"
-                aria-checked={density === d}
-                onClick={() => setDensity(d)}
-                className={`h-8 px-2.5 rounded-lg text-[12.5px] cursor-pointer whitespace-nowrap ${
-                  density === d ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
-                }`}
-              >
-                {DENSITY_LABEL[d]}
-              </button>
-            ))}
-          </div>
-          <label className="sr-only" htmlFor="manage-committee">Kurul</label>
-          <select
-            id="manage-committee"
-            value={selectedCommitteeId}
-            onChange={(e) => onSelectCommittee(e.target.value)}
-            className="h-10 border border-line-2 rounded-[10px] px-2.5 text-[13px] bg-white cursor-pointer max-w-[220px]"
-          >
-            {committees.map((c) => (
-              <option key={c.id} value={c.id}>{c.name}</option>
-            ))}
-          </select>
+      <div className="flex-1 min-h-0 flex flex-col lg:flex-row">
+        {/* Yan menü: hap biçimli öğeler, ana sayfa sekmeleri gibi */}
+        <aside className="shrink-0 lg:w-[232px] flex lg:flex-col min-w-0 lg:pb-3">
+          <nav aria-label="Yönetim bölümleri" className="flex lg:flex-col gap-1 px-3 py-2 lg:py-1 overflow-x-auto no-scrollbar flex-1 min-w-0">
+            {SECTIONS.map((sec, i) => {
+              const on = section === sec.id;
+              const group = SECTION_GROUP[sec.id];
+              const groupStart = i === 0 || SECTION_GROUP[SECTIONS[i - 1].id] !== group;
+              const Icon = sec.icon;
+              const badge =
+                sec.id === 'inbox'
+                  ? pendingReports.length + comments.length
+                  : sec.id === 'drafts'
+                    ? drafts.length
+                    : sec.id === 'users'
+                      ? activity.length
+                      : undefined;
+              return (
+                <React.Fragment key={sec.id}>
+                  {groupStart && <span className="hidden lg:block px-3 pt-4 pb-1 text-[12px] font-medium text-ink-3">{group}</span>}
+                  <button
+                    type="button"
+                    onClick={() => setSection(sec.id)}
+                    aria-current={on ? 'page' : undefined}
+                    className={`shrink-0 lg:w-full h-10 px-3.5 rounded-full flex items-center gap-2.5 text-left cursor-pointer transition-colors ${
+                      on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-field'
+                    }`}
+                  >
+                    <Icon className="w-[18px] h-[18px] shrink-0" strokeWidth={on ? 2.3 : 2} />
+                    <span className="text-[14px] whitespace-nowrap flex-1">{sec.label}</span>
+                    {badge !== undefined && badge > 0 && (
+                      <span className={`hidden lg:inline-flex min-w-6 h-6 px-1.5 rounded-full items-center justify-center font-mono text-[11.5px] ${on ? 'bg-white text-accent' : 'bg-field text-ink-3'}`}>{badge}</span>
+                    )}
+                  </button>
+                </React.Fragment>
+              );
+            })}
+          </nav>
           <button
             type="button"
-            onClick={() => { void reloadInbox(); void onRefreshData(); }}
-            disabled={loading}
-            className="h-10 w-10 rounded-[10px] border border-line inline-flex items-center justify-center text-ink-2 hover:text-ink cursor-pointer disabled:opacity-50"
-            title="Yenile"
+            onClick={onExit}
+            className="hidden lg:flex shrink-0 mx-3 mt-2 h-10 px-3.5 rounded-full text-ink-2 hover:text-ink hover:bg-field text-[13.5px] font-medium items-center gap-2 cursor-pointer"
           >
-            <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+            <ArrowLeft className="w-4 h-4" /> Siteye dön
           </button>
-        </header>
+        </aside>
+
+      <div className="flex-1 flex flex-col min-h-0 min-w-0">
+        <div className="shrink-0 px-4 sm:px-8 pt-3 sm:pt-5 pb-2">
+          <h1 className="ms-page-title m-0 text-[24px] sm:text-[28px] text-ink">{current.label}</h1>
+          <p className="m-0 mt-1 text-[14px] text-ink-3 truncate">{current.hint}</p>
+        </div>
 
         {notice && (
-          <div role="status" className="mx-4 sm:mx-6 mt-3 px-4 py-2.5 rounded-xl bg-ok-soft text-[14px] text-ink flex items-center justify-between gap-3 shrink-0">
+          <div role="status" className="ms-pop-in mx-4 sm:mx-8 mt-1 mb-1 px-4 py-2.5 rounded-2xl bg-ok-soft text-[14px] text-ink flex items-center justify-between gap-3 shrink-0">
             <span className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
               {notice}
@@ -700,7 +717,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           </div>
         )}
 
-        <div className="flex-1 min-h-0 overflow-y-auto px-4 sm:px-6 py-4" data-density={density} style={{ zoom: DENSITY_ZOOM[density] } as React.CSSProperties}>
+        <main className="ms-console-body flex-1 min-h-0 overflow-y-auto px-4 sm:px-8 py-3 sm:py-4 flex flex-col" data-density={density} style={{ zoom: DENSITY_ZOOM[density] } as React.CSSProperties}>
           {section === 'inbox' && (
             <div className="flex flex-col gap-3">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -1732,7 +1749,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               <AdminDriveSyncSettings adminEmail={adminEmail} onRefreshData={onRefreshData} selectedCommitteeId={selectedCommitteeId} />
             </div>
           )}
-        </div>
+        </main>
+      </div>
       </div>
 
       {editingDraft && (

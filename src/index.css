@@ -768,3 +768,22 @@ html.ui-v3 .ms-page-title { font-weight: 600; letter-spacing: -0.03em; }
 html.ui-v3 header.sticky { border-bottom-color: transparent; background: color-mix(in srgb, var(--color-canvas) 85%, transparent); }
 html.ui-v3 header.sticky nav a[aria-current="page"],
 html.ui-v3 header.sticky nav a { border-radius: 999px; }
+
+/* Yönetim konsolu: ana sayfalarla aynı yüzey dili. Kenarlıklı kutular beyaz,
+   kenarsız ve hafif gölgeli kartlara döner; ikincil düğmeler tonlu ve hap biçimli. */
+.ms-console-body :is(div, section, article, li, aside, form, details).border.rounded-xl,
+.ms-console-body :is(div, section, article, li, aside, form, details).border.rounded-2xl,
+.ms-console-body :is(div, section, article, li, aside, form, details).border.rounded-\[10px\] {
+  background-color: var(--color-white);
+  border-color: transparent;
+  box-shadow: var(--shadow-sm);
+}
+.ms-console-body :is(button, a).border:not(.bg-accent):not([class*="bg-bad"]):not([class*="bg-ok"]) {
+  border-color: transparent;
+  background-color: var(--color-field);
+}
+.ms-console-body :is(button, a).border:not(.bg-accent):hover { background-color: var(--color-line); }
+.ms-console-body :is(button, a):is(.rounded-\[10px\], .rounded-lg, .rounded-xl) { border-radius: 999px; }
+.ms-console-body :is(input, select, textarea).border { background-color: var(--color-field); border-color: transparent; }
+.ms-console-body :is(input, select, textarea):focus { background-color: var(--color-white); border-color: var(--color-accent); }
+.ms-console-body table { border-radius: 16px; }
