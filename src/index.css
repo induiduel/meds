@@ -631,3 +631,7 @@ details > summary::-webkit-details-marker { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .ms-overlay, .ms-overlay > .ms-modal-panel { animation: none; }
 }
+
+/* Ana içerik flex sütunu: mx-auto ile ortalanan sayfa kapsayıcıları içeriğe göre
+   genişleyip telefonda ekrandan taşıyordu. Genişliği kapsayıcıya sabitler. */
+main.flex-col > .mx-auto { width: 100%; min-width: 0; }

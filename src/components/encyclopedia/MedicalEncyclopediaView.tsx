@@ -383,7 +383,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
           </div>
 
           {/* Quick Selects */}
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2 [&>select]:min-w-0 [&>select]:flex-1">
             <select
               value={selectedKurul}
               onChange={(e) => setSelectedKurul(e.target.value)}
