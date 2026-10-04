@@ -267,8 +267,8 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-teal-200/80 flex flex-col max-h-[92vh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
+      <div className="ms-modal-panel relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-teal-200/80 flex flex-col max-h-[92vh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
         
         {/* Header */}
         <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-cyan-900 px-5 py-4 text-white flex items-center justify-between shrink-0 shadow-sm border-b border-teal-700/50">

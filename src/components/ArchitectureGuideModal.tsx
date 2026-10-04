@@ -27,8 +27,8 @@ export const ArchitectureGuideModal: React.FC<ArchitectureGuideModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-white rounded-2xl max-w-3xl w-full shadow-2xl border border-slate-200 overflow-hidden my-6">
+    <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-3xl w-full shadow-2xl border border-slate-200 overflow-hidden my-6">
         {/* Header */}
         <div className="bg-gradient-to-r from-teal-800 via-teal-900 to-cyan-950 text-white p-5 flex items-center justify-between">
           <div className="flex items-center gap-3">

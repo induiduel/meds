@@ -96,11 +96,11 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div 
         role="dialog"
         aria-labelledby="ai-quota-title"
-        className="w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-line flex flex-col overflow-hidden"
+        className="ms-modal-panel w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-line flex flex-col overflow-hidden"
       >
         {/* Header */}
         <div className="px-5 sm:px-6 py-4 border-b border-line bg-purple-50 flex items-center justify-between">

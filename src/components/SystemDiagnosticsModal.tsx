@@ -341,11 +341,11 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div 
         role="dialog"
         aria-labelledby="diagnostics-modal-title"
-        className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl border border-line flex flex-col max-h-[92vh] overflow-hidden"
+        className="ms-modal-panel w-full max-w-4xl bg-white rounded-2xl shadow-2xl border border-line flex flex-col max-h-[92vh] overflow-hidden"
       >
         {/* Header */}
         <div className="px-5 sm:px-6 py-4 border-b border-line bg-canvas flex items-center justify-between shrink-0">

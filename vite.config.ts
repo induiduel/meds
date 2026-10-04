@@ -93,9 +93,12 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
         },
       },
-      // HMR is disabled in AI Studio iframe environment.
+      // HMR kapalı (iframe önizleme), ama dosya izleme açık: yoksa Vite ilk
+      // dönüştürdüğü modülü önbellekte tutar ve yenilemede eski kod gelir.
       hmr: false,
-      watch: null,
+      watch: {
+        ignored: ['**/data/**', '**/dist/**', '**/scripts/**', '**/.agents/**', '**/node_modules/**'],
+      },
       allowedHosts: true,
     },
   };

@@ -144,8 +144,8 @@ const AdminEditQuestionModalContent: React.FC<AdminEditQuestionModalProps & { qu
     'w-full bg-field border border-line-2 rounded-[10px] px-3 py-2 text-[14px] text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-[#7A8693]';
 
   return (
-    <div className="fixed inset-0 z-50 bg-[rgba(14,26,38,0.55)] flex items-stretch sm:items-center justify-center sm:p-4 overflow-y-auto">
-      <div className="bg-white w-full max-w-5xl sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)] overflow-hidden my-0 sm:my-6 flex flex-col max-h-dvh">
+    <div className="ms-overlay fixed inset-0 z-50 bg-[rgba(14,26,38,0.55)] flex items-stretch sm:items-center justify-center sm:p-4 overflow-y-auto">
+      <div className="ms-modal-panel bg-white w-full max-w-5xl sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)] overflow-hidden my-0 sm:my-6 flex flex-col max-h-dvh">
         {/* Header */}
         <div className="bg-ink text-white px-4 sm:px-5 py-3.5 flex items-center gap-3 shrink-0">
           <span className="w-9 h-9 rounded-[10px] bg-white/10 text-white flex items-center justify-center shrink-0">

@@ -396,3 +396,29 @@ details > summary::-webkit-details-marker { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .ms-sheet-up, .ms-slide-left, .ms-shake { animation: none; }
 }
+
+/* Ortak pencere kabuğu: tüm modallar aynı biçimde açılır, ekrandan taşmaz,
+   gövde kendi içinde kayar. Telefonda alttan çekmece gibi gelir. */
+.ms-overlay { animation: ms-fade-in .18s ease-out both; overscroll-behavior: contain; }
+.ms-overlay > .ms-modal-panel {
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  animation: ms-pop-in .24s cubic-bezier(.2,.9,.3,1.1) both;
+}
+@media (max-width: 639px) {
+  .ms-overlay { align-items: flex-end !important; padding: 0 !important; }
+  .ms-overlay > .ms-modal-panel {
+    width: 100%;
+    max-width: none;
+    max-height: 92dvh;
+    margin: 0;
+    border-radius: 18px 18px 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    animation: ms-sheet-up .28s cubic-bezier(.2,.8,.3,1) both;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ms-overlay, .ms-overlay > .ms-modal-panel { animation: none; }
+}

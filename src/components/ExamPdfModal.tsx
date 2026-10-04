@@ -557,7 +557,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
   return createPortal(
     <div
       id="exam-pdf-modal-portal"
-      className="pdf-modal-backdrop fixed inset-0 z-[80] bg-[rgba(14,26,38,0.5)] backdrop-blur-[2px] flex items-stretch sm:items-center justify-center sm:p-5"
+      className="ms-overlay pdf-modal-backdrop fixed inset-0 z-[80] bg-[rgba(14,26,38,0.5)] backdrop-blur-[2px] flex items-stretch sm:items-center justify-center sm:p-5"
       onMouseDown={(e) => e.target === e.currentTarget && onClose()}
     >
       <style>{`

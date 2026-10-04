@@ -66,7 +66,7 @@ export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ questi
 
   return (
     <div
-      className="fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in"
+      className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in"
       onMouseDown={(e) => e.target === e.currentTarget && !busy && onClose()}
     >
       <div

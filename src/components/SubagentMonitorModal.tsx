@@ -185,7 +185,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
   const isPcOnline = secondsAgo !== null && secondsAgo < 180;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
       <div className="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[92vh] flex flex-col border border-slate-800 overflow-hidden">
         
         {/* Header */}

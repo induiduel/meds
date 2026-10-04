@@ -46,8 +46,8 @@ export const AddCommitteeModal: React.FC<AddCommitteeModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden">
+    <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden">
         <div className="bg-teal-700 text-white p-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <FolderPlus className="w-5 h-5 text-teal-200" />
