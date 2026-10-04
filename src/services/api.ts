@@ -315,6 +315,15 @@ async function checkServer(): Promise<boolean> {
   return false;
 }
 
+export interface SourceRefLite {
+  documentId: string;
+  documentType: string;
+  title: string;
+  discipline?: string;
+  pageNumber?: number;
+  snippet: string;
+}
+
 export interface SimilarPastQuestion {
   id: string;
   title: string;
@@ -1340,6 +1349,16 @@ export const ApiService = {
         await multiDbManager.saveQuestion(q);
       } catch (e) {}
     }
+  },
+
+  /** Ders materyali / çıkmış soru kaynakları (yalnız arama, AI yok). */
+  async findSourcesForFragment(text: string, committeeId?: string, discipline?: string): Promise<SourceRefLite[]> {
+    const res = await safeJsonFetch<{ sources: SourceRefLite[] }>('/api/sources/for-fragment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, committeeId, discipline }),
+    });
+    return res.ok ? res.data?.sources || [] : [];
   },
 
   /** Past exam questions resembling what a student remembers (retrieval only, no AI cost). */

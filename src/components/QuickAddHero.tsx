@@ -7,7 +7,15 @@ import { pathFor, linkClick } from '../router';
 import { OptionsEditor } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
-import { ApiService, SimilarPastQuestion } from '../services/api';
+import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
+
+// Kaynak türü etiketi ve rengi (tasarımdaki Slayt / Özet / Çıkmış / Deşifre)
+const SOURCE_KIND: Record<string, { label: string; cls: string }> = {
+  lecture_slide: { label: 'Slayt', cls: 'bg-accent-soft text-accent' },
+  summary: { label: 'Özet', cls: 'bg-ok-soft text-ok' },
+  past_question: { label: 'Çıkmış', cls: 'bg-violet-50 text-violet-700' },
+  transcript: { label: 'Deşifre', cls: 'bg-warn-soft text-warn' },
+};
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
@@ -119,15 +127,39 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [texts, setTexts] = useState<Record<TextMode, string>>({ stem: '', clue: '' });
   const text = mode === 'option' ? '' : texts[mode];
 
+  const setText = (v: string) => mode !== 'option' && setTexts((prev) => ({ ...prev, [mode]: v }));
+  const [answerReason, setAnswerReason] = useState('');
+  const hasAnyText = Object.values(texts).some((t) => t.trim()) || !!answerReason.trim();
+  const [options, setOptions] = useState<Record<OptionKey, string>>({ A: '', B: '', C: '', D: '', E: '' });
+  const [optionCount, setOptionCount] = useState(1);
+  const [claimedAnswer, setClaimedAnswer] = useState<OptionKey | undefined>(undefined);
+  const [discipline, setDiscipline] = useState(disciplines[0]);
+  const [questionNumber, setQuestionNumber] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [similar, setSimilar] = useState<SimilarPastQuestion[]>([]);
+  const [sources, setSources] = useState<SourceRefLite[]>([]);
+
+  useEffect(() => {
+    if (!disciplines.includes(discipline)) setDiscipline(disciplines[0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [committee]);
+
+  // Pool stats for the selected committee
   // Yazarken benzer çıkmış sorular: 450 ms bekler, en az 12 karakter, en çok 3 sonuç
   useEffect(() => {
     const q = text.trim();
     if (mode === 'option' || q.length < 12) {
       setSimilar([]);
+      if (q.length < 12) setSources([]);
       return;
     }
     let alive = true;
     const t = window.setTimeout(() => {
+      ApiService.findSourcesForFragment(q, committee?.id, discipline)
+        .then((r) => alive && setSources(r.slice(0, 4)))
+        .catch(() => alive && setSources([]));
       ApiService.findSimilarPastQuestions(q, committee?.id)
         // Ham BM25 puanı sorgu uzunluğuyla büyür: kelime başına en az 14 ve en iyinin %70'i;
         // aksi halde alakasız "benzer" sorular gürültü yapar.
@@ -143,26 +175,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       alive = false;
       window.clearTimeout(t);
     };
-  }, [text, mode, committee?.id]);
-  const setText = (v: string) => mode !== 'option' && setTexts((prev) => ({ ...prev, [mode]: v }));
-  const [answerReason, setAnswerReason] = useState('');
-  const hasAnyText = Object.values(texts).some((t) => t.trim()) || !!answerReason.trim();
-  const [options, setOptions] = useState<Record<OptionKey, string>>({ A: '', B: '', C: '', D: '', E: '' });
-  const [optionCount, setOptionCount] = useState(1);
-  const [claimedAnswer, setClaimedAnswer] = useState<OptionKey | undefined>(undefined);
-  const [discipline, setDiscipline] = useState(disciplines[0]);
-  const [questionNumber, setQuestionNumber] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
-  const [formError, setFormError] = useState<string | null>(null);
-  const [similar, setSimilar] = useState<SimilarPastQuestion[]>([]);
+  }, [text, mode, committee?.id, discipline]);
 
-  useEffect(() => {
-    if (!disciplines.includes(discipline)) setDiscipline(disciplines[0]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [committee]);
-
-  // Pool stats for the selected committee
   const target = committee?.targetCount || 100;
   const completed = questions.filter((q) => q.status === 'completed').length;
   const drafts = questions.filter((q) => q.status !== 'completed' && (q.fragments.length > 0 || q.options.length > 0)).length;
@@ -243,9 +257,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const field = 'bg-field border border-transparent outline-0 focus:border-accent focus:bg-white';
 
   return (
-    <div className="w-full max-w-[640px] mx-auto flex flex-col gap-4 sm:gap-5 md:pt-6">
-      {/* Title + committee */}
-      <div className="flex flex-col items-start md:items-center gap-2.5 md:text-center">
+    <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-4 lg:gap-5 md:pt-2">
+      <div className="flex flex-col gap-3 min-w-0">
+      {/* Başlık + kurul (tasarım: sola hizalı, kompakt) */}
+      <div className="flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
+        <div className="flex flex-col gap-1.5 min-w-0">
         <label className="relative inline-flex items-center">
           <span className="sr-only">Kurul seç</span>
           <span
@@ -268,15 +284,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           </select>
           <ChevronDown className="pointer-events-none absolute right-2.5 w-3.5 h-3.5 opacity-70" aria-hidden="true" />
         </label>
-        <h1 className="m-0 font-display font-bold text-[30px] md:text-[44px] leading-[1.05] tracking-[-0.03em] text-ink">Aklında ne kaldı?</h1>
-        <p className="m-0 text-[15px] text-ink-2">Tek kelime bile işe yarar. Parçaları birleştirip soruyu birlikte kuruyoruz.</p>
+        <h1 className="m-0 font-bold text-[22px] md:text-[24px] leading-tight tracking-[-0.01em] text-ink">Hatırladığın soruyu yaz</h1>
+        </div>
+        <p className="m-0 text-[13px] text-ink-3">Parça parça da olur; gerisini kaynaklardan tamamlarız.</p>
       </div>
 
       {/* Composer */}
       <form
         onSubmit={handleSubmit}
         aria-busy={isSubmitting}
-        className="relative bg-white border border-line rounded-[20px] p-3 sm:p-4 flex flex-col gap-3 shadow-[0_1px_2px_rgba(14,26,38,0.04)]"
+        className="relative bg-white border border-line rounded-[12px] p-3 sm:p-5 flex flex-col gap-3"
       >
         <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
         <div role="radiogroup" aria-label="Ne ekliyorsun?" className="grid grid-cols-3 gap-1 bg-canvas rounded-[12px] p-1">
@@ -326,8 +343,19 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder={PLACEHOLDERS[mode]}
-              className={`resize-none rounded-[14px] px-3.5 py-3 text-[16px] leading-[1.55] text-ink placeholder:text-[#7A8693] min-h-[132px] sm:min-h-[148px] ${field}`}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                  e.preventDefault();
+                  e.currentTarget.form?.requestSubmit();
+                }
+              }}
+              className={`resize-y rounded-[10px] px-3.5 py-3 text-[15px] leading-[1.6] text-ink placeholder:text-ink-3 min-h-[132px] sm:min-h-[150px] ${field}`}
             />
+            <div className="flex items-center gap-1.5 text-[12px] text-ink-3 -mt-1">
+              <span className="font-mono">{text.length} karakter</span>
+              <span aria-hidden="true">·</span>
+              <span className="truncate">Şıkları “Şıklar” sekmesinden ekleyebilirsin</span>
+            </div>
           </>
         )}
 
@@ -427,11 +455,38 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         )}
       </form>
 
-      {/* Pool progress: one quiet line */}
+      </div>
+
+      {/* Sağ sütun: bulunan kaynaklar, havuz durumu, kısayol */}
+      <aside className="flex flex-col gap-3 min-w-0 lg:pt-[52px]">
+        <section className="bg-white border border-line rounded-[12px] px-4 py-3" aria-live="polite">
+          <h2 className="m-0 mb-1 text-[11px] font-semibold uppercase tracking-[.06em] text-ink-3">Bulunan kaynaklar</h2>
+          {sources.length === 0 ? (
+            <p className="m-0 py-2 text-[13px] text-ink-3">Yazmaya başlayınca soruna en yakın slayt, özet ve çıkmış sorular burada görünür.</p>
+          ) : (
+            <ul className="list-none m-0 p-0">
+              {sources.map((src, i) => {
+                const kind = SOURCE_KIND[src.documentType] || SOURCE_KIND.lecture_slide;
+                return (
+                  <li
+                    key={`${src.documentId}-${src.pageNumber ?? i}`}
+                    className="ms-pop-in flex items-center gap-2 py-2 border-t first:border-t-0 border-line text-[13px]"
+                    style={{ animationDelay: `${i * 60}ms` }}
+                    title={src.snippet}
+                  >
+                    <span className={`shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded-md ${kind.cls}`}>{kind.label}</span>
+                    <span className="min-w-0 flex-1 truncate text-ink">{src.title}</span>
+                    {src.pageNumber ? <span className="shrink-0 text-[12px] text-ink-3 font-mono">s.{src.pageNumber}</span> : null}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </section>
       <a
         href={pathFor('questions')}
         onClick={linkClick(() => onNavigateTab('questions'))}
-        className="group bg-white border border-line rounded-[16px] px-4 py-3 flex items-center gap-3 hover:border-line-2"
+        className="group bg-white border border-line rounded-[12px] px-4 py-3 flex items-center gap-3 hover:border-line-2"
       >
         <span className="flex-1 min-w-0 flex flex-col gap-1.5">
           <span className="flex items-baseline gap-2 text-[14px] min-w-0">
@@ -451,6 +506,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </span>
       </a>
+        <p className="hidden lg:block m-0 px-1 text-[12px] text-ink-3">
+          Kısayol: <kbd className="font-mono border border-line rounded px-1">Ctrl</kbd> + <kbd className="font-mono border border-line rounded px-1">Enter</kbd> gönderir.
+        </p>
+      </aside>
     </div>
   );
 };

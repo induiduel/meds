@@ -86,7 +86,7 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
 ];
 
 /** How many NAV entries the desktop bar may show before folding the rest into "Daha". */
-const NAV_PRIMARY = 6;
+const NAV_PRIMARY = 9;
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span
@@ -162,7 +162,7 @@ const PriorityNav: React.FC<{
   }, [open]);
 
   const itemCls = (on: boolean) =>
-    `h-10 px-2 xl:px-2.5 rounded-lg text-[14px] xl:text-[15px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 shrink-0 ${
+    `h-9 px-3 rounded-lg text-[13px] font-medium whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 shrink-0 ${
       on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
     }`;
   const shown = items.slice(0, Math.min(count, NAV_PRIMARY));
@@ -177,7 +177,7 @@ const PriorityNav: React.FC<{
           const Icon = item.icon;
           return (
             <span key={item.id} className={itemCls(item.id === active)}>
-              <Icon className="hidden xl:block w-4 h-4 shrink-0" />
+              <Icon className="hidden w-4 h-4 shrink-0" />
               {item.label}
             </span>
           );
@@ -193,7 +193,7 @@ const PriorityNav: React.FC<{
         const Icon = item.icon;
         return (
           <a key={item.id} href={pathFor(item.id)} onClick={linkClick(() => onSelect(item.id))} aria-current={on ? 'page' : undefined} className={itemCls(on)}>
-            <Icon className="hidden xl:block w-4 h-4 shrink-0" strokeWidth={on ? 2.3 : 2} />
+            <Icon className="hidden w-4 h-4 shrink-0" strokeWidth={on ? 2.3 : 2} />
             {item.label}
           </a>
         );
@@ -358,20 +358,22 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="bg-white border-b border-line sticky top-0 z-30 print:hidden">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 h-14 flex items-center gap-2 sm:gap-3">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-14 flex items-center gap-2 sm:gap-3">
         {/* Phones: logo. Tablet/desktop: the rail carries the logo and menu, so show the page title */}
         <a
           href={pathFor('quick_add')}
           onClick={linkClick(() => setActiveTab('quick_add'))}
-          className="md:hidden flex items-center gap-2 cursor-pointer shrink-0"
+          className="md:hidden lg:flex flex items-center gap-2 cursor-pointer shrink-0 lg:mr-3"
           aria-label="MedSoru ana sayfa"
         >
           <BrandMark size={28} />
           <span className="font-display font-bold text-[18px] tracking-[-0.02em] text-ink">MedSoru</span>
         </a>
-        <span className="hidden md:block font-semibold text-[15px] text-ink truncate">{ROUTE_TITLES[activeTab] || 'MedSoru'}</span>
+        {/* Tablet: ray menü solda, burada sayfa başlığı. Masaüstü: tasarımdaki gibi üstte yazılı menü */}
+        <span className="hidden md:block lg:hidden font-semibold text-[15px] text-ink truncate">{ROUTE_TITLES[activeTab] || 'MedSoru'}</span>
+        <PriorityNav items={NAV.filter((n) => n.id !== 'matrix')} active={activeTab} onSelect={setActiveTab} />
 
-        <span className="flex-1" aria-hidden="true" />
+        <span className="flex-1 lg:hidden" aria-hidden="true" />
 
         <button
           type="button"

@@ -57,7 +57,7 @@ export const AppRail: React.FC<AppRailProps> = ({ activeTab, setActiveTab, isAdm
   return (
     <nav
       aria-label="Ana menü"
-      className="hidden md:flex fixed left-0 top-0 bottom-0 z-40 w-[76px] flex-col items-center gap-0.5 bg-white border-r border-line pt-3.5 pb-3 overflow-y-auto no-scrollbar print:hidden"
+      className="hidden md:flex lg:hidden fixed left-0 top-0 bottom-0 z-40 w-[76px] flex-col items-center gap-0.5 bg-white border-r border-line pt-3.5 pb-3 overflow-y-auto no-scrollbar print:hidden"
     >
       <a
         href={pathFor('quick_add')}

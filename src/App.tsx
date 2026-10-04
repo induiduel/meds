@@ -957,7 +957,7 @@ export default function App() {
       <>
       {/* v3 shell: icon rail on tablet/desktop, bottom tabs on phones */}
       <AppRail activeTab={activeTab} setActiveTab={setActiveTab} isAdmin={isAdmin} />
-      <div className="md:pl-[76px] flex-1 flex flex-col min-w-0">
+      <div className="md:pl-[76px] lg:pl-0 flex-1 flex flex-col min-w-0">
       {/* Navigation Header with Google Auth & Drive */}
       <Header
         searchQuery={searchQuery}

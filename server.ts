@@ -6,6 +6,7 @@ import nodemailer from 'nodemailer';
 import mammoth from 'mammoth';
 import dotenv from 'dotenv';
 import path from 'path';
+import os from 'os';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
@@ -1303,14 +1304,12 @@ export async function executeAdminCommand(command: string, payload: any = {}, re
   }
 
   if (command === 'install_service') {
-    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-    exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action install-and-start`, () => {});
+    exec(serviceScriptCommand('install-and-start'), () => {});
     return { success: true, message: 'Windows Başlangıç ve Masaüstü servisi kuruldu ve başlatıldı.' };
   }
 
   if (command === 'stop_service') {
-    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-    exec(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action stop`, () => {});
+    exec(serviceScriptCommand('stop'), () => {});
     return { success: true, message: 'Windows senkronizasyon servisi durduruldu.' };
   }
 
@@ -2002,6 +2001,23 @@ app.post('/api/past-questions/similar', async (req, res) => {
     res.json({ results });
   } catch (err: any) {
     res.status(500).json({ error: err.message, results: [] });
+  }
+});
+
+// Soru eklerken sağ paneldeki "Bulunan kaynaklar": yalnızca arama, AI maliyeti yok
+app.post('/api/sources/for-fragment', async (req, res) => {
+  const { text, committeeId, discipline } = req.body || {};
+  if (!text || typeof text !== 'string' || text.trim().length < 12) return res.json({ sources: [] });
+  try {
+    const { findSourcesForQuestion, toSourceRef } = await import('./src/services/ragService.ts');
+    const sources = await findSourcesForQuestion(
+      { committeeId, discipline, fragments: [{ text: text.trim().slice(0, 1000) }] },
+      undefined,
+      4
+    );
+    res.json({ sources: sources.map(toSourceRef) });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message, sources: [] });
   }
 });
 
@@ -4227,12 +4243,22 @@ app.get('/api/automation/local-sync-status', (req, res) => {
   res.json(lastLocalSyncStatus);
 });
 
+// Platforma göre servis betiği komutu (Windows: PowerShell, Linux: bash/systemd)
+function serviceScriptCommand(action: string, extra: string[] = []): string {
+  if (process.platform === 'win32') {
+    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
+    const named = action === 'notify' ? ` -Title "${extra[0] || ''}" -Message "${extra[1] || ''}"` : '';
+    return `powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action ${action}${named}`;
+  }
+  const shScript = path.join(__dirname, 'scripts', 'manage-service.sh');
+  return `bash "${shScript}" ${action}` + extra.map(a => ` "${a}"`).join('');
+}
+
 // Automation: Windows Service Status, Desktop Shortcut & Startup Manager
 app.get('/api/automation/windows-service-status', (req, res) => {
   try {
     const { execSync } = require('child_process');
-    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-    const stdout = execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action status`, {
+    const stdout = execSync(serviceScriptCommand('status'), {
       timeout: 8000,
       encoding: 'utf8',
     });
@@ -4257,8 +4283,7 @@ app.get('/api/automation/windows-service-status', (req, res) => {
 app.post('/api/automation/windows-service-install', requireAdmin, (req, res) => {
   try {
     const { execSync } = require('child_process');
-    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-    const stdout = execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action install-and-start`, {
+    const stdout = execSync(serviceScriptCommand('install-and-start'), {
       timeout: 12000,
       encoding: 'utf8',
     });
@@ -4275,8 +4300,7 @@ app.post('/api/automation/windows-service-install', requireAdmin, (req, res) => 
 app.post('/api/automation/windows-service-stop', requireAdmin, (req, res) => {
   try {
     const { execSync } = require('child_process');
-    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
-    const stdout = execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action stop`, {
+    const stdout = execSync(serviceScriptCommand('stop'), {
       timeout: 8000,
       encoding: 'utf8',
     });
@@ -4293,10 +4317,9 @@ app.post('/api/automation/windows-service-stop', requireAdmin, (req, res) => {
 app.post('/api/automation/windows-service-notify', requireAdmin, (req, res) => {
   try {
     const { execSync } = require('child_process');
-    const psScript = path.join(__dirname, 'scripts', 'manage-service.ps1');
     const title = (req.body?.title || 'MedSoru Otomasyon Servisi 🚀').replace(/"/g, '');
     const message = (req.body?.message || 'Windows bildirim sistemi sorunsuz çalışıyor.').replace(/"/g, '');
-    execSync(`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${psScript}" -Action notify -Title "${title}" -Message "${message}"`, {
+    execSync(serviceScriptCommand('notify', [title, message]), {
       timeout: 8000,
       encoding: 'utf8',
     });
@@ -4312,7 +4335,7 @@ app.post('/api/automation/windows-service-notify', requireAdmin, (req, res) => {
 // Stream local lecture note PDF file directly
 app.get('/api/lecture-pdf/:filename', (req, res) => {
   try {
-    const baseDir = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
+    const baseDir = process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database';
     const notlarDir = path.join(baseDir, 'ders_notlari_pdf');
     const rawFilename = decodeURIComponent(req.params.filename);
     const safeFilename = path.basename(rawFilename);
@@ -4349,7 +4372,7 @@ app.get('/api/lecture-pdf/:filename', (req, res) => {
 // Automation: Comprehensive live file & download status visualizer
 app.get('/api/automation/drive-files-status', (req, res) => {
   try {
-    const baseDir = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
+    const baseDir = process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database';
     const sorularDir = path.join(baseDir, 'meds_sorular');
     const notlarDir = path.join(baseDir, 'ders_notlari_pdf');
     const notlarTxtDir = path.join(baseDir, 'ders_notlari_txt');
