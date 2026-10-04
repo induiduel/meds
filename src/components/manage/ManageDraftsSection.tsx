@@ -15,6 +15,7 @@ import {
   Pencil,
   Sparkles,
   X,
+  Wand2,
 } from 'lucide-react';
 import type { QuestionItem, ClusterAnalysisSummary, DraftCluster, ClusterTuning } from '../../types';
 import { ApiService } from '../../services/api';
@@ -26,6 +27,7 @@ import {
 } from '../../services/draftClusteringService';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 import { sharedWordColors, Colored, WordLegend } from '../draftHighlight';
+import { AiQuestionOptimizerModal } from '../AiQuestionOptimizerModal';
 import {
   deleteDraftEverywhere,
   reconstructDraft,
@@ -69,6 +71,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const [isManualMerging, setIsManualMerging] = useState(false);
   const [isBulkDeleting, setIsBulkDeleting] = useState(false);
   const [editingDraft, setEditingDraft] = useState<QuestionItem | null>(null);
+  const [optimizingQuestion, setOptimizingQuestion] = useState<QuestionItem | null>(null);
   const [reconstructingIds, setReconstructingIds] = useState<Set<string>>(new Set());
   const [deletingIds, setDeletingIds] = useState<Set<string>>(new Set());
   const [confirmBatch, setConfirmBatch] = useState(false);
@@ -435,6 +438,9 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
       <span className={`inline-flex items-center gap-1.5 ${compact ? '' : 'flex-wrap'}`} onClick={(e) => e.stopPropagation()}>
         <button type="button" onClick={() => setEditingDraft(q)} className={btn} title="Taslağı düzenle">
           <Pencil className="w-3.5 h-3.5" /><span>Düzenle</span>
+        </button>
+        <button type="button" onClick={() => setOptimizingQuestion(q)} className="h-8 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors" title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür">
+          <Wand2 className="w-3.5 h-3.5" /><span>AI ile Geliştir</span>
         </button>
         <button type="button" onClick={() => { void handleReconstruct(q); }} disabled={isRec} className={btn} title="Yapay zekaya tam soruya dönüştür">
           {isRec ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5" />}
@@ -814,6 +820,21 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
             await ApiService.adminUpdateQuestion(adminEmail, editingDraft.id, updated);
             setEditingDraft(null);
             notify('Taslak güncellendi.');
+            await onRefreshData();
+            await runAnalysis();
+          }}
+        />
+      )}
+
+      {optimizingQuestion && (
+        <AiQuestionOptimizerModal
+          question={optimizingQuestion}
+          isOpen={Boolean(optimizingQuestion)}
+          onClose={() => setOptimizingQuestion(null)}
+          currentUser={{ email: adminEmail, displayName: adminName || 'Yönetici' } as any}
+          onSaved={async () => {
+            setOptimizingQuestion(null);
+            notify('Taslak AI ile başarıyla geliştirildi.');
             await onRefreshData();
             await runAnalysis();
           }}

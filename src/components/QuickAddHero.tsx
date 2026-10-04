@@ -12,6 +12,7 @@ import {
   Square,
   Layers,
   X,
+  Wand2,
 } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
@@ -25,6 +26,7 @@ import { useUiVersion } from '../utils/uiVersion';
 import { findRealtimeMatchingDrafts, RealtimeMatchItem, DraftCompatibilityResult } from '../services/draftClusteringService';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
+import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
 
 // Benzerlik puanı kademesine göre renk ve stil haritası
 export const getScoreTier = (score: number) => {
@@ -198,10 +200,20 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [selectedMatchIds, setSelectedMatchIds] = useState<Set<string>>(new Set());
   const [isMergingSelected, setIsMergingSelected] = useState(false);
   const [smartAssistant, setSmartAssistant] = useState<SmartQuestionAssistantResult | null>(null);
+  const [optimizingQuestion, setOptimizingQuestion] = useState<QuestionItem | null>(null);
+  const [debouncedText, setDebouncedText] = useState('');
 
-  // Anlık taslak eşleme ve Kurul/Ders tahmin asistanı: 350ms debounced
+  // 1. Yazarken gecikmeli metin (debouncedText) güncelleme (250ms)
   useEffect(() => {
-    const q = text.trim();
+    const timer = window.setTimeout(() => {
+      setDebouncedText(text.trim());
+    }, 250);
+    return () => window.clearTimeout(timer);
+  }, [text]);
+
+  // 2. Anlık taslak eşleme ve Kurul/Ders tahmin asistanı: debouncedText üzerinden çalışır
+  useEffect(() => {
+    const q = debouncedText;
     if (mode === 'option' || q.length < 8 || !committee?.id) {
       setRealtimeMatches([]);
       setSelectedMatchIds(new Set());
@@ -209,41 +221,37 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       return;
     }
 
-    const timer = window.setTimeout(() => {
-      const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
+    const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
 
-      // 1. Akıllı Asistan Analizi (Kurul, Ders, Tıbbi Kavram & Çapraz Kurul Tespiti)
-      const assistantRes = getSmartQuestionAssistant(q, optionsList, committee.id);
-      setSmartAssistant(assistantRes);
+    // 1. Akıllı Asistan Analizi (Kurul, Ders, Tıbbi Kavram & Çapraz Kurul Tespiti)
+    const assistantRes = getSmartQuestionAssistant(q, optionsList, committee.id);
+    setSmartAssistant(assistantRes);
 
-      // 2. Taslak Eşleme (Çapraz Kurul Desteği ile)
-      const matches = findRealtimeMatchingDrafts(
-        {
-          committeeId: committee.id,
-          discipline,
-          topic: `${discipline} Hatırlanan Soru`,
-          text: q,
-          options: optionsList.length > 0 ? optionsList : undefined,
-        },
-        questions,
-        35, // En az %35 benzerlik
-        4,  // En fazla 4 aday göster
-        true // Çapraz kurul taslaklarını da göster
-      );
-      setRealtimeMatches(matches);
-      // Geçersiz kalan seçili id'leri temizle
-      setSelectedMatchIds((prev) => {
-        const validIds = new Set(matches.map((m) => m.question.id));
-        const next = new Set<string>();
-        prev.forEach((id) => {
-          if (validIds.has(id)) next.add(id);
-        });
-        return next;
+    // 2. Taslak Eşleme (Çapraz Kurul Desteği ile)
+    const matches = findRealtimeMatchingDrafts(
+      {
+        committeeId: committee.id,
+        discipline,
+        topic: `${discipline} Hatırlanan Soru`,
+        text: q,
+        options: optionsList.length > 0 ? optionsList : undefined,
+      },
+      questions,
+      35, // En az %35 benzerlik
+      4,  // En fazla 4 aday göster
+      true // Çapraz kurul taslaklarını da göster
+    );
+    setRealtimeMatches(matches);
+    // Geçersiz kalan seçili id'leri temizle
+    setSelectedMatchIds((prev) => {
+      const validIds = new Set(matches.map((m) => m.question.id));
+      const next = new Set<string>();
+      prev.forEach((id) => {
+        if (validIds.has(id)) next.add(id);
       });
-    }, 350);
-
-    return () => window.clearTimeout(timer);
-  }, [text, mode, committee?.id, discipline, options, questions]);
+      return next;
+    });
+  }, [debouncedText, mode, committee?.id, discipline, options, questions]);
 
   const toggleSelectMatch = (id: string) => {
     setSelectedMatchIds((prev) => {
@@ -354,12 +362,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     }
   };
 
-  // Tüm adayların ve kullanıcının metinlerindeki ortak kelime paleti
+  // Tüm adayların ve kullanıcının metinlerindeki ortak kelime paleti (debouncedText ile optimize edildi)
   const sharedColors = useMemo(() => {
-    if (realtimeMatches.length === 0 || !text.trim()) return new Map<string, string>();
-    const allStems = [text, ...realtimeMatches.map((m) => questionStemText(m.question))];
+    if (realtimeMatches.length === 0 || !debouncedText) return new Map<string, string>();
+    const allStems = [debouncedText, ...realtimeMatches.map((m) => questionStemText(m.question))];
     return sharedWordColors(allStems);
-  }, [realtimeMatches, text]);
+  }, [realtimeMatches, debouncedText]);
 
   useEffect(() => {
     if (!disciplines.includes(discipline)) setDiscipline(disciplines[0]);
@@ -367,9 +375,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   }, [committee]);
 
   // Pool stats for the selected committee
-  // Yazarken benzer çıkmış sorular: 450 ms bekler, en az 12 karakter, en çok 3 sonuç
+  // Yazarken benzer çıkmış sorular: debouncedText üzerinden çalışır, ana thread'i bloke etmez
   useEffect(() => {
-    const q = text.trim();
+    const q = debouncedText;
     if (mode === 'option' || q.length < 12) {
       setSimilar([]);
       if (q.length < 12) setSources([]);
@@ -390,12 +398,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           setSimilar((r || []).filter((x) => (x.score || 0) >= words * 14 && (x.score || 0) >= top * 0.7).slice(0, 3));
         })
         .catch(() => alive && setSimilar([]));
-    }, 450);
+    }, 200);
     return () => {
       alive = false;
       window.clearTimeout(t);
     };
-  }, [text, mode, committee?.id, discipline]);
+  }, [debouncedText, mode, committee?.id, discipline]);
 
   const target = committee?.targetCount || 100;
   const completed = questions.filter((q) => q.status === 'completed').length;
@@ -682,14 +690,25 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       </div>
 
                       <div className="flex items-center justify-between gap-2 pt-1">
-                        <button
-                          type="button"
-                          onClick={() => handleLinkToQuestion(q)}
-                          className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
-                        >
-                          <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                          {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
-                        </button>
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <button
+                            type="button"
+                            onClick={() => handleLinkToQuestion(q)}
+                            className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                          >
+                            <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                            {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setOptimizingQuestion(q)}
+                            className="h-7 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                            title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
+                          >
+                            <Wand2 className="w-3.5 h-3.5" />
+                            AI ile Dönüştür
+                          </button>
+                        </div>
                         {q.discipline && (
                           <span className="text-[11.5px] text-ink-3 truncate">{q.discipline}</span>
                         )}
@@ -1221,6 +1240,19 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           Kısayol: <kbd className="font-mono border border-line rounded px-1">Ctrl</kbd> + <kbd className="font-mono border border-line rounded px-1">Enter</kbd> gönderir.
         </p>
       </aside>
+
+      {optimizingQuestion && (
+        <AiQuestionOptimizerModal
+          question={optimizingQuestion}
+          isOpen={Boolean(optimizingQuestion)}
+          onClose={() => setOptimizingQuestion(null)}
+          currentUser={currentUser}
+          onSaved={(updated) => {
+            setOptimizingQuestion(null);
+            toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} başarıyla güncellendi.`);
+          }}
+        />
+      )}
     </div>
   );
 };

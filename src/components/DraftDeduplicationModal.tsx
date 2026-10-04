@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split, Trash2 } from 'lucide-react';
+import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split, Trash2, Wand2 } from 'lucide-react';
 import { toast } from './ui/Toast';
 import { CapsuleLoader, SuccessCheck } from './ui/Animations';
 import { sharedWordColors, Colored, WordLegend } from './draftHighlight';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
 import { ApiService } from '../services/api';
 import { AppUser } from '../services/auth';
+import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
 
 interface DraftDeduplicationModalProps {
   isOpen: boolean;
@@ -44,6 +45,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
   const [manuallyHiddenIds, setManuallyHiddenIds] = useState<Set<string>>(new Set());
   const [manualSearchQuery, setManualSearchQuery] = useState('');
   const [isManualMerging, setIsManualMerging] = useState(false);
+  const [optimizingQuestion, setOptimizingQuestion] = useState<QuestionItem | null>(null);
 
   const committeeId = committee?.id || '';
 
@@ -535,6 +537,15 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                           <div className="flex items-center gap-1.5 shrink-0">
                             <button
                               type="button"
+                              onClick={() => setOptimizingQuestion(q)}
+                              className="h-8 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12.5px] font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
+                              title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
+                            >
+                              <Wand2 className="w-3.5 h-3.5" />
+                              <span>AI ile Geliştir</span>
+                            </button>
+                            <button
+                              type="button"
                               onClick={() => setInspectingMergedId(isInspecting ? null : q.id)}
                               className="h-8 px-2.5 rounded-lg border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer"
                             >
@@ -973,6 +984,21 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
           )}
         </footer>
       </div>
+
+      {optimizingQuestion && (
+        <AiQuestionOptimizerModal
+          question={optimizingQuestion}
+          isOpen={Boolean(optimizingQuestion)}
+          onClose={() => setOptimizingQuestion(null)}
+          currentUser={currentUser}
+          onSaved={async () => {
+            setOptimizingQuestion(null);
+            await onRefreshData();
+            await runAnalysis();
+            toast.success('Taslak AI ile Geliştirildi', 'Soru amfi slaytları referansıyla güncellendi.');
+          }}
+        />
+      )}
     </div>
   );
 };
