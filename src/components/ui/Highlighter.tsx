@@ -32,6 +32,19 @@ const setTool = (patch: Partial<Tool>) => {
 /** True while the pen (or eraser) is on — gestures like swipe-to-next should pause. */
 export const isPenActive = () => tool.active;
 
+/** Kalem açık mı (React'te yeniden çizim tetikler). */
+export const usePenActive = () =>
+  useSyncExternalStore(
+    (cb) => {
+      toolListeners.add(cb);
+      return () => toolListeners.delete(cb);
+    },
+    () => tool.active,
+    () => tool.active
+  );
+/** Kalemi kapatır (işaretleme kilidindeki "Bitti" için). */
+export const stopPen = () => setTool({ active: false, eraser: false });
+
 const useTool = () =>
   useSyncExternalStore(
     (cb) => {

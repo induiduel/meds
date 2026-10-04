@@ -16,7 +16,7 @@ export interface SlidePdfLocation {
   totalPages: number;
 }
 
-const slidePdfMappings = slidePdfMappingsRaw as Record<
+const slidePdfMappings = slidePdfMappingsRaw as unknown as Record<
   string,
   {
     deckId: string;

@@ -42,6 +42,7 @@ import {
   Columns,
   Cloud,
   Compass,
+  Lock,
 } from 'lucide-react';
 import { DeckPdfViewer } from './DeckPdfViewer';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
@@ -54,8 +55,8 @@ import {
   useGlossary,
 } from './MedicalGlossaryPopover';
 import { AiThinking } from '../ui/Animations';
-import { HighlighterToolbar, Highlightable, isPenActive } from '../ui/Highlighter';
-import { SlideDrawingCanvas, DrawingModeToolbarTrigger } from './SlideDrawingCanvas';
+import { HighlighterToolbar, Highlightable, isPenActive, usePenActive, stopPen } from '../ui/Highlighter';
+import { SlideDrawingCanvas, DrawingModeToolbarTrigger, useDrawingGlobalState, setDrawingGlobalState } from './SlideDrawingCanvas';
 import { toast } from '../ui/Toast';
 import { safeJsonFetch } from '../../services/api';
 
@@ -875,6 +876,10 @@ const DeckPlayer: React.FC<{
   const stripRef = useRef<HTMLDivElement>(null);
   const programmatic = useRef(false);
   const touch = useRef<{ x: number; y: number; at: number } | null>(null);
+  // İşaretleme kilidi: kalem ya da çizim açıkken kaydırma sayfa çevirmez
+  const penOn = usePenActive();
+  const { activeMode: drawMode } = useDrawingGlobalState();
+  const marking = penOn || drawMode !== 'none';
 
   const slide = slides[index];
 
@@ -1050,7 +1055,7 @@ const DeckPlayer: React.FC<{
   const onTouchEnd = (e: React.TouchEvent) => {
     const start = touch.current;
     touch.current = null;
-    if (!start || mode !== 'paged' || isPenActive()) return;
+    if (!start || mode !== 'paged' || isPenActive() || marking) return;
     if (Date.now() - start.at > 450) return;
     const sel = window.getSelection();
     if (sel && !sel.isCollapsed && sel.toString().trim()) return;
@@ -1237,6 +1242,22 @@ const DeckPlayer: React.FC<{
       <div className="shrink-0 h-[3px] bg-line-soft" aria-hidden="true">
         <div className="h-full bg-accent transition-[width] duration-300" style={{ width: `${((index + 1) / n) * 100}%` }} />
       </div>
+      {marking && (
+        <div role="status" className="ms-pop-in shrink-0 flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-warn-soft text-warn text-[12.5px] font-medium">
+          <Lock className="w-3.5 h-3.5 shrink-0" />
+          <span className="flex-1 min-w-0 truncate">İşaretleme modu: kaydırma sayfa çevirmez. Kalem çizer, parmak kaydırır.</span>
+          <button
+            type="button"
+            onClick={() => {
+              stopPen();
+              setDrawingGlobalState({ activeMode: 'none' });
+            }}
+            className="shrink-0 h-7 px-2.5 rounded-md bg-white/70 hover:bg-white text-ink text-[12px] font-semibold cursor-pointer"
+          >
+            Bitti
+          </button>
+        </div>
+      )}
 
       {/* Stage + panel */}
       <div className={`flex-1 min-h-0 grid grid-cols-1 ${panelOpen ? 'lg:grid-cols-[minmax(0,1fr)_420px]' : ''}`}>

@@ -106,7 +106,6 @@ const SECTION_GROUP: Record<ManageSection, string> = {
   users: 'Topluluk',
   system: 'Sistem',
   scripts: 'Sistem',
-  deepseek: 'Sistem',
   automation: 'Sistem',
 };
 

@@ -7,6 +7,7 @@ import { pathFor, linkClick } from '../router';
 import { OptionsEditor } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
+import { ApiService, SimilarPastQuestion } from '../services/api';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
@@ -117,6 +118,32 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   type TextMode = Exclude<Mode, 'option'>;
   const [texts, setTexts] = useState<Record<TextMode, string>>({ stem: '', clue: '' });
   const text = mode === 'option' ? '' : texts[mode];
+
+  // Yazarken benzer çıkmış sorular: 450 ms bekler, en az 12 karakter, en çok 3 sonuç
+  useEffect(() => {
+    const q = text.trim();
+    if (mode === 'option' || q.length < 12) {
+      setSimilar([]);
+      return;
+    }
+    let alive = true;
+    const t = window.setTimeout(() => {
+      ApiService.findSimilarPastQuestions(q, committee?.id)
+        // Ham BM25 puanı sorgu uzunluğuyla büyür: kelime başına en az 14 ve en iyinin %70'i;
+        // aksi halde alakasız "benzer" sorular gürültü yapar.
+        .then((r) => {
+          if (!alive) return;
+          const words = q.split(/\s+/).filter((w) => w.length > 1).length || 1;
+          const top = r?.[0]?.score || 0;
+          setSimilar((r || []).filter((x) => (x.score || 0) >= words * 14 && (x.score || 0) >= top * 0.7).slice(0, 3));
+        })
+        .catch(() => alive && setSimilar([]));
+    }, 450);
+    return () => {
+      alive = false;
+      window.clearTimeout(t);
+    };
+  }, [text, mode, committee?.id]);
   const setText = (v: string) => mode !== 'option' && setTexts((prev) => ({ ...prev, [mode]: v }));
   const [answerReason, setAnswerReason] = useState('');
   const hasAnyText = Object.values(texts).some((t) => t.trim()) || !!answerReason.trim();
@@ -128,6 +155,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
+  const [similar, setSimilar] = useState<SimilarPastQuestion[]>([]);
 
   useEffect(() => {
     if (!disciplines.includes(discipline)) setDiscipline(disciplines[0]);
@@ -301,6 +329,45 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               className={`resize-none rounded-[14px] px-3.5 py-3 text-[16px] leading-[1.55] text-ink placeholder:text-[#7A8693] min-h-[132px] sm:min-h-[148px] ${field}`}
             />
           </>
+        )}
+
+        {similar.length > 0 && mode !== 'option' && (
+          <div className="flex flex-col gap-1" aria-live="polite">
+            <span className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase tracking-[.06em] text-ink-3">
+              Benzer çıkmış sorular
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" aria-hidden="true" />
+            </span>
+            {similar.map((s, i) => {
+              // Ham arama puanı yüzde değildir: çubuk yalnızca en iyi sonuca göre göreli yakınlığı gösterir
+              const top = similar[0]?.score || 0;
+              const rel = top > 0 && typeof s.score === 'number' ? Math.max(8, Math.round((s.score / top) * 100)) : null;
+              return (
+                <details
+                  key={s.id}
+                  className="ms-pop-in group rounded-[10px] border border-line bg-white open:bg-canvas hover:border-accent transition-colors"
+                  style={{ animationDelay: `${i * 70}ms` }}
+                >
+                  <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-[13px]">
+                    {rel !== null && (
+                      <span className="shrink-0 hidden sm:block w-9 h-1 rounded-full bg-line overflow-hidden" title="Göreli benzerlik">
+                        <span className="block h-full bg-accent" style={{ width: `${rel}%` }} />
+                      </span>
+                    )}
+                    <span className="min-w-0 flex-1 truncate group-open:whitespace-normal text-ink-2" title={s.stem}>
+                      {s.stem}
+                    </span>
+                    <span className="shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded-md bg-violet-50 text-violet-700">
+                      {s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış'}
+                    </span>
+                  </summary>
+                  <div className="px-2.5 pb-2 text-[12px] text-ink-3">
+                    {[s.discipline, s.title].filter(Boolean).join(' · ')}
+                    {s.claimedAnswer ? ` · Cevap: ${s.claimedAnswer}` : ''}
+                  </div>
+                </details>
+              );
+            })}
+          </div>
         )}
 
         <div className="flex flex-wrap sm:flex-nowrap items-center gap-2">
