@@ -561,7 +561,8 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
                         base["status"] = "fixed"
                     # Dashboard canlı dönüşüm tablosuna bas
                     orig_sample = f"{u['stem'][:150]} (Şıklar: {len(u['options'])})"
-                    new_sample = f"{base.get('stem_detailed') or u['stem'][:150]} (Açıklama: {base.get('explanation', '')[:100]}...)"
+                    expl_str = base.get("explanation") or ""
+                    new_sample = f"{base.get('stem_detailed') or u['stem'][:150]} (Açıklama: {expl_str[:100]}...)"
                     state.add_transformation(f"Kurul {base['kurul']} / Soru {u.get('no', '')}", "Aşama 3 Soru Zenginleştirme", orig_sample, new_sample)
             
             if base["status"] in ("verified", "fixed"):

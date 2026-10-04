@@ -42,13 +42,18 @@ def get_code_mtime() -> float:
     return max(mtimes) if mtimes else 0.0
 
 def get_process_start_time(pid: int) -> float:
-    """Linux /proc üzerinden sürecin başlama zamanını çeker"""
+    """Linux /proc üzerinden sürecin gerçek başlangıç epoch zamanını hesaplar"""
     try:
-        stat_file = Path(f"/proc/{pid}/stat")
-        if not stat_file.exists():
-            return 0.0
-        # stat dosyasının mtime'ı sürecin başlama anına çok yakındır
-        return stat_file.stat().st_mtime
+        btime = 0
+        with open("/proc/stat", "r", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("btime"):
+                    btime = int(line.split()[1])
+                    break
+        stat_parts = Path(f"/proc/{pid}/stat").read_text(encoding="utf-8").split()
+        starttime_ticks = int(stat_parts[21])
+        clk_tck = os.sysconf(os.sysconf_names["SC_CLK_TCK"])
+        return btime + (starttime_ticks / clk_tck)
     except Exception:
         return 0.0
 
@@ -73,8 +78,8 @@ def inspect_pipeline_freshness(last_code_mtime: float):
         pids = [int(p) for p in res.stdout.split() if p.strip()]
         for pid in pids:
             p_start = get_process_start_time(pid)
-            # Eğer kod, sürecin başlamasından sonra güncellendiyse (ve süreç en az 15 sn önce başladıysa)
-            if p_start > 0 and (last_code_mtime - p_start) > 15:
+            # Eğer kod, sürecin başlamasından sonra güncellendiyse (ve süreç kod değişikliğinden önce başladıysa)
+            if p_start > 0 and (last_code_mtime - p_start) > 2.0:
                 log(f"UYARI: stage3_merge (PID {pid}) eski kod ile çalışıyor! Kod güncellendiği için süreç güvenle yeniden başlatılıyor...")
                 subprocess.run(["kill", "-9", str(pid)], capture_output=True)
     except Exception as e:

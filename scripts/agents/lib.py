@@ -165,18 +165,18 @@ class State:
         write_json(self.path, self.data, indent=None)
 
     def add_transformation(self, file_rel: str, step_name: str, input_sample: str, output_sample: str):
-        """Yapay zekanın neyi neye dönüştürdüğünü dashboard tablosunda göstermek için son 10 dönüşümü kaydeder."""
+        """Yapay zekanın neyi neye dönüştürdüğünü dashboard tablosunda göstermek için dönüşüm geçmişini kaydeder."""
         history = self.data.setdefault("transform_history", [])
         history.append({
             "file": file_rel,
             "step": step_name,
-            "input": input_sample[:300].strip(),
-            "output": output_sample[:300].strip(),
+            "input": input_sample[:600].strip(),
+            "output": output_sample[:600].strip(),
             "ts": time.time()
         })
-        # Son 10 dönüşümü sakla
-        if len(history) > 10:
-            self.data["transform_history"] = history[-10:]
+        # Son 50 dönüşümü sakla (ayrıntılı açılır kapanır inceleme için)
+        if len(history) > 50:
+            self.data["transform_history"] = history[-50:]
         write_json(self.path, self.data, indent=None)
 
     def needs(self, stage: str, key: str, h: str, retry_failed_after: float = 6 * 3600) -> bool:

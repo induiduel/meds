@@ -9,6 +9,18 @@ PY = sys.executable
 log = lib.get_logger("runner")
 STATUS = Path(lib.STATE_DIR) / "status.json"
 IDLE = int(os.environ.get("MEDS_IDLE_SEC", "90"))
+LOCK_FILE = Path(lib.STATE_DIR) / "pipeline_runner.lock"
+
+def acquire_lock():
+    import fcntl
+    LOCK_FILE.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        f = open(LOCK_FILE, "w")
+        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return f
+    except (IOError, BlockingIOError):
+        log.warning("Başka bir pipeline_runner süreci zaten çalışıyor. Çıkılıyor.")
+        sys.exit(0)
 
 
 def ollama_up():
@@ -63,4 +75,5 @@ def main():
 
 
 if __name__ == "__main__":
+    _lock = acquire_lock()
     main()
