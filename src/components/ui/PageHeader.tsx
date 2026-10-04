@@ -36,7 +36,7 @@ export const PageHeader: React.FC<{
       {actions && <div className="flex flex-wrap items-center gap-2 shrink-0">{actions}</div>}
     </div>
     {stats && stats.length > 0 && (
-      <dl className="m-0 flex flex-wrap gap-2">
+      <dl className="ms-stats m-0 flex flex-wrap gap-2">
         {stats.map((s) => (
           <div key={s.label} className="min-w-[112px] bg-white border border-line rounded-xl px-3 py-2 flex flex-col">
             <dt className="text-[11.5px] font-medium text-ink-3">{s.label}</dt>

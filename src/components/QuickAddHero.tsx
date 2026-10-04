@@ -8,6 +8,7 @@ import { OptionsEditor } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
+import { useUiVersion } from '../utils/uiVersion';
 
 // Kaynak türü etiketi ve rengi (tasarımdaki Slayt / Özet / Çıkmış / Deşifre)
 const SOURCE_KIND: Record<string, { label: string; cls: string }> = {
@@ -139,6 +140,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
   const [similar, setSimilar] = useState<SimilarPastQuestion[]>([]);
+  const [simOpen, setSimOpen] = useState(false);
+  const { isV3 } = useUiVersion();
   const [sources, setSources] = useState<SourceRefLite[]>([]);
 
   useEffect(() => {
@@ -255,6 +258,141 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   };
 
   const field = 'bg-field border border-transparent outline-0 focus:border-accent focus:bg-white';
+
+  // v3 · minimal ana sayfa: tek alan, tek düğme. Benzerler ve şıklar yalnızca istenince.
+  if (isV3) {
+    return (
+      <div className="w-full max-w-[680px] mx-auto flex flex-col gap-5 pt-6 sm:pt-16">
+        <div className="flex flex-col items-center text-center gap-2">
+          <label className="relative inline-flex items-center text-[13px] text-ink-3">
+            <span className="sr-only">Kurul seç</span>
+            <span className={`w-1.5 h-1.5 rounded-full mr-2 ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} aria-hidden="true" />
+            <select
+              value={committee?.id || ''}
+              onChange={(e) => onSelectCommittee(e.target.value)}
+              className="appearance-none bg-transparent border-0 outline-0 cursor-pointer pr-4 text-ink-3 hover:text-ink [field-sizing:content]"
+            >
+              {sortedCommittees.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {titleCase(c)}
+                  {c.id === activeCommitteeId ? ' · toplama açık' : ''}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="pointer-events-none absolute right-0 w-3 h-3" aria-hidden="true" />
+          </label>
+          <h1 className="ms-page-title m-0 text-[30px] sm:text-[40px] text-ink">Aklında ne kaldı?</h1>
+        </div>
+
+        <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="relative flex flex-col gap-3">
+          <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
+          {mode === 'option' ? (
+            <div className="bg-white rounded-2xl p-3 shadow-sm">
+              <OptionsEditor
+                options={options}
+                onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
+                count={optionCount}
+                onCountChange={setOptionCount}
+                answer={claimedAnswer}
+                onAnswerChange={setClaimedAnswer}
+                reason={answerReason}
+                onReasonChange={setAnswerReason}
+              />
+            </div>
+          ) : (
+            <>
+              <label htmlFor="hatira" className="sr-only">Hatırladığın kısım</label>
+              <textarea
+                id="hatira"
+                rows={4}
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                    e.preventDefault();
+                    e.currentTarget.form?.requestSubmit();
+                  }
+                }}
+                placeholder="Tek kelime bile işe yarar…"
+                className="resize-none rounded-2xl px-4 py-3.5 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-field border-0 outline-0 focus:bg-white focus:ring-2 focus:ring-accent transition-[background,box-shadow] min-h-[140px]"
+              />
+            </>
+          )}
+
+          {similar.length > 0 && mode !== 'option' && (
+            <button
+              type="button"
+              onClick={() => setSimOpen((v) => !v)}
+              aria-expanded={simOpen}
+              className="ms-pop-in w-full min-h-11 px-4 rounded-2xl bg-field hover:bg-line flex items-center gap-3 text-left text-[14px] cursor-pointer"
+            >
+              <span className="h-6 min-w-6 px-2 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center justify-center">
+                {similar.length}
+              </span>
+              <span className="flex-1 text-ink-2">benzer çıkmış soru bulundu</span>
+              <span className="text-[13px] text-ink-3">{simOpen ? 'Gizle' : 'Göster'}</span>
+            </button>
+          )}
+          {simOpen && similar.length > 0 && mode !== 'option' && (
+            <ul className="list-none m-0 p-0 flex flex-col">
+              {similar.map((s, i) => (
+                <li key={s.id} className="ms-pop-in px-4 py-2.5 rounded-xl hover:bg-field text-[14px] text-ink-2" style={{ animationDelay: `${i * 60}ms` }} title={s.stem}>
+                  <span className="line-clamp-2">{s.stem}</span>
+                  <span className="block text-[12px] text-ink-3 mt-0.5">{[s.discipline, s.examYear].filter(Boolean).join(' · ')}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-[13px] text-ink-3">
+            <select
+              value={discipline}
+              onChange={(e) => setDiscipline(e.target.value)}
+              aria-label="Ders"
+              className="appearance-none bg-transparent border-0 outline-0 cursor-pointer max-w-[220px] truncate hover:text-ink [field-sizing:content]"
+            >
+              {disciplines.map((d) => (
+                <option key={d} value={d}>{d}</option>
+              ))}
+            </select>
+            <span aria-hidden="true">·</span>
+            <input
+              type="text"
+              inputMode="numeric"
+              value={questionNumber}
+              onChange={(e) => setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
+              placeholder="numara?"
+              aria-label="Soru numarası (bilmiyorsan boş bırak)"
+              className="w-[70px] bg-transparent border-0 outline-0 placeholder:text-ink-3 text-ink"
+            />
+            <button
+              type="button"
+              onClick={() => setMode(mode === 'option' ? 'stem' : 'option')}
+              className="h-8 px-3 rounded-full hover:bg-field text-accent font-semibold cursor-pointer"
+            >
+              {mode === 'option' ? 'Soru köküne dön' : claimedAnswer ? `Şıklar · ${claimedAnswer}` : 'Şık ekle'}
+            </button>
+            <span className="flex-1" />
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full sm:w-auto h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-[15px] sm:text-[14.5px] font-semibold cursor-pointer disabled:opacity-60 transition-colors"
+            >
+              {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
+            </button>
+          </div>
+
+          {formError && (
+            <div role="alert" className="ms-shake px-4 py-3 rounded-2xl bg-bad-soft text-bad-text text-[14px]">{formError}</div>
+          )}
+          {successMessage && (
+            <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-[14px] font-medium">Teşekkürler! {successMessage}</div>
+          )}
+        </form>
+      </div>
+    );
+  }
+
 
   return (
     <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-4 lg:gap-5 md:pt-2">

@@ -30,8 +30,10 @@ import {
   Layers,
   Moon,
   Sun,
+  Palette,
 } from 'lucide-react';
 import { useTheme } from '../utils/theme';
+import { useUiVersion } from '../utils/uiVersion';
 import { Committee } from '../types';
 import { AppUser } from '../services/auth';
 import { AppRoute, pathFor, linkClick } from '../router';
@@ -87,6 +89,8 @@ export const NAV: { id: AppTab; label: string; icon: React.ElementType }[] = [
 
 /** How many NAV entries the desktop bar may show before folding the rest into "Daha". */
 const NAV_PRIMARY = 9;
+/** v3: dört ana yer önde, gerisi "Daha" menüsünde. */
+const V3_ORDER: AppTab[] = ['quick_add', 'learn', 'study', 'questions', 'past_exams', 'glossary', 'flashcards', 'summaries', 'leaderboard', 'matrix'];
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span
@@ -112,7 +116,8 @@ const PriorityNav: React.FC<{
   items: { id: AppTab; label: string; icon: React.ElementType }[];
   active: AppTab;
   onSelect: (id: AppTab) => void;
-}> = ({ items, active, onSelect }) => {
+  max?: number;
+}> = ({ items, active, onSelect, max = NAV_PRIMARY }) => {
   const navRef = useRef<HTMLElement>(null);
   const measureRef = useRef<HTMLDivElement>(null);
   const moreRef = useRef<HTMLDivElement>(null);
@@ -165,8 +170,8 @@ const PriorityNav: React.FC<{
     `h-9 px-3 rounded-lg text-[13px] font-medium whitespace-nowrap cursor-pointer transition-colors inline-flex items-center gap-2 shrink-0 ${
       on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:text-ink hover:bg-canvas'
     }`;
-  const shown = items.slice(0, Math.min(count, NAV_PRIMARY));
-  const hidden = items.slice(Math.min(count, NAV_PRIMARY));
+  const shown = items.slice(0, Math.min(count, max));
+  const hidden = items.slice(Math.min(count, max));
   const activeHidden = hidden.some((i) => i.id === active);
 
   return (
@@ -272,6 +277,7 @@ export const Header: React.FC<HeaderProps> = ({
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const { theme, toggle: toggleTheme } = useTheme();
+  const { isV3, toggleUi } = useUiVersion();
   const [query, setQuery] = useState(searchQuery);
   const menuRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -370,7 +376,12 @@ export const Header: React.FC<HeaderProps> = ({
           <span className="font-display font-bold text-[18px] tracking-[-0.02em] text-ink">MedSoru</span>
         </a>
         {/* Tablet: ray menü solda, burada sayfa başlığı. Masaüstü: tasarımdaki gibi üstte yazılı menü */}
-        <PriorityNav items={NAV.filter((n) => n.id !== 'matrix')} active={activeTab} onSelect={setActiveTab} />
+        <PriorityNav
+          items={isV3 ? V3_ORDER.map((id) => NAV.find((n) => n.id === id)!).filter(Boolean) : NAV.filter((n) => n.id !== 'matrix')}
+          max={isV3 ? 4 : NAV_PRIMARY}
+          active={activeTab}
+          onSelect={setActiveTab}
+        />
 
         <span className="flex-1 lg:hidden" aria-hidden="true" />
 
@@ -447,6 +458,12 @@ export const Header: React.FC<HeaderProps> = ({
               <MenuItem icon={SquarePen} label="Soru katkısı yap" tone="accent" onClick={onOpenContributeModal} />
 
               <MenuItem icon={FileDown} label="PDF indir" onClick={onOpenPdfModal} />
+              <MenuItem
+                icon={Palette}
+                label={isV3 ? 'Tasarım: v3 minimal' : 'Tasarım: v2 kompakt'}
+                hint={isV3 ? 'v2’ye geç' : 'v3’e geç'}
+                onClick={toggleUi}
+              />
 
               {isAdmin && (
                 <>

@@ -4,8 +4,10 @@ import App from './App.tsx';
 import './index.css';
 import { installToastBridge } from './components/ui/Toast';
 import { applyTheme, readTheme } from './utils/theme';
+import { applyUiVersion } from './utils/uiVersion';
 
 applyTheme(readTheme());
+applyUiVersion();
 
 // alert() and unhandled failures become friendly floating toasts
 installToastBridge();

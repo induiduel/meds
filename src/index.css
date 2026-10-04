@@ -714,3 +714,57 @@ main.flex-col > *:nth-child(3) { animation-delay: .08s; }
   main.flex-col > * { animation: none; }
   :where(button):active { transform: none; }
 }
+
+/* =============================================================
+ * v3 · Minimal Material (html.ui-v3). v2 yedek olarak aynen durur:
+ * profil menüsü ya da ?ui=v2 ile geri dönülür.
+ * ============================================================= */
+html.ui-v3 {
+  --color-canvas: #F7F8FC;
+  --color-line: #ECEFF5;
+  --color-line-soft: #F1F3F8;
+  --color-field: #F0F2F8;
+  --color-accent: #2F5BEA;
+  --color-accent-hover: #2650D6;
+  --color-accent-soft: #E3E9FD;
+  --radius-xl: 14px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --shadow-xs: 0 1px 2px rgb(22 27 38 / 0.04);
+  --shadow-sm: 0 1px 3px rgb(22 27 38 / 0.05), 0 4px 14px rgb(22 27 38 / 0.05);
+}
+html.ui-v3.theme-dark {
+  --color-canvas: #0F131A;
+  --color-white: #171C25;
+  --color-line: #232A36;
+  --color-line-soft: #1D232E;
+  --color-field: #1D232E;
+  --color-accent: #6F8FF5;
+  --color-accent-hover: #8AA4FA;
+  --color-accent-soft: #22325E;
+}
+html.ui-v3 body { font-size: 14.5px; }
+
+/* Kenarlık yerine yüzey: kartlar gölgeyle ayrışır */
+html.ui-v3 main :is(div, section, article, li, a, aside, form).bg-white.border,
+html.ui-v3 main :is(div, section, article, li, a, aside, form).bg-white.border-line {
+  border-color: transparent;
+  box-shadow: var(--shadow-sm);
+}
+/* İkincil düğmeler: tonlu, kenarsız */
+html.ui-v3 main button.bg-white.border,
+html.ui-v3 main a.bg-white.border { background: var(--color-field); border-color: transparent; }
+html.ui-v3 main button.bg-white.border:hover { background: var(--color-line); }
+/* Ana eylem: hap biçimli */
+html.ui-v3 :is(button, a).bg-accent { border-radius: 999px; }
+html.ui-v3 main :is(input, select, textarea).bg-white { background: var(--color-field); border-color: transparent; }
+html.ui-v3 main :is(input, select, textarea):focus { background: var(--color-white); }
+
+/* Sayfa başlığı: yalnız başlık ve eylem */
+html.ui-v3 .ms-eyebrow, html.ui-v3 .ms-stats { display: none; }
+html.ui-v3 .ms-page-title { font-weight: 600; letter-spacing: -0.03em; }
+
+/* Üst çubuk: hap sekmeler, daha ferah */
+html.ui-v3 header.sticky { border-bottom-color: transparent; background: color-mix(in srgb, var(--color-canvas) 85%, transparent); }
+html.ui-v3 header.sticky nav a[aria-current="page"],
+html.ui-v3 header.sticky nav a { border-radius: 999px; }

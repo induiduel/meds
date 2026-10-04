@@ -47,6 +47,7 @@ import {
 } from 'lucide-react';
 import { DeckPdfViewer } from './DeckPdfViewer';
 import { PageHeader } from '../ui/PageHeader';
+import { useUiVersion } from '../../utils/uiVersion';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
 import { getSlidePdfLocation, SlidePdfLocation } from '../../services/slidePdfMappingService';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
@@ -683,6 +684,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   }, [allDecks, discipline, query]);
 
   const activeDeck = (allDecks || []).find((d) => d.id === deckId) || null;
+  const { isV3 } = useUiVersion();
   const totalSlides = (allDecks || []).reduce((n, d) => n + (d.slides?.length || 0), 0);
 
   return (
@@ -738,6 +740,16 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
           <p className="m-0 font-display text-[20px] font-bold">Bu aramada ders yok</p>
           <p className="m-0 mt-1 text-[14px] text-ink-2">Aramayı temizleyip başka bir ders seçebilirsin.</p>
         </div>
+      ) : isV3 ? (
+        <V3DeckList
+          decks={visible}
+          progress={progress}
+          onOpen={(id, pdf) => {
+            setPlayerViewMode(pdf ? 'pdf' : 'interactive');
+            setDeckId(id);
+            onDeckChange?.(id);
+          }}
+        />
       ) : (
         <ul className="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
           {visible.map((d) => {
@@ -2948,6 +2960,74 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
           </div>
         </div>
       )}
+    </div>
+  );
+};
+
+
+// ---------------------------------------------------------------------------
+// v3 · minimal katalog: "Kaldığın yer" kartı + sade ders listesi
+// ---------------------------------------------------------------------------
+const V3DeckList: React.FC<{
+  decks: InteractiveDeck[];
+  progress: Record<string, { seen?: number[]; last?: number } | undefined>;
+  onOpen: (id: string, pdf?: boolean) => void;
+}> = ({ decks, progress, onOpen }) => {
+  const resume = decks.find((d) => {
+    const seen = progress[d.id]?.seen?.length || 0;
+    return seen > 0 && seen < d.slides.length;
+  });
+  return (
+    <div className="flex flex-col gap-4 max-w-[760px] w-full">
+      {resume && (
+        <button
+          type="button"
+          onClick={() => onOpen(resume.id)}
+          className="ms-pop-in w-full text-left bg-white rounded-2xl shadow-sm px-5 py-4 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow"
+        >
+          <span className="flex-1 min-w-0 flex flex-col gap-1.5">
+            <span className="text-[12.5px] text-ink-3">Kaldığın yer · {disciplineGroup(resume.discipline)}</span>
+            <span className="text-[16px] font-semibold text-ink truncate">{resume.shortTitle || resume.title}</span>
+            <span className="h-1 rounded-full bg-line overflow-hidden">
+              <span
+                className="block h-full bg-accent rounded-full"
+                style={{ width: `${Math.round(((progress[resume.id]?.seen?.length || 0) / resume.slides.length) * 100)}%` }}
+              />
+            </span>
+          </span>
+          <span className="h-10 px-5 rounded-full bg-accent text-white text-[14px] font-semibold inline-flex items-center shrink-0">Devam et</span>
+        </button>
+      )}
+      <ul className="list-none m-0 p-0 flex flex-col">
+        {decks.map((d, i) => {
+          const seen = progress[d.id]?.seen?.length || 0;
+          const done = seen >= d.slides.length;
+          const qCount = d.slides.reduce((n, s) => n + (s.relatedQuestions?.length || 0), 0);
+          return (
+            <li key={d.id} className="ms-pop-in" style={{ animationDelay: `${Math.min(i, 12) * 30}ms` }}>
+              <button
+                type="button"
+                onClick={() => onOpen(d.id)}
+                className="w-full text-left px-4 py-3 rounded-2xl hover:bg-field flex items-center gap-3 cursor-pointer transition-colors"
+              >
+                <span className="flex-1 min-w-0">
+                  <span className="block text-[15px] font-medium text-ink truncate" title={d.title}>{d.title}</span>
+                  <span className="block text-[12.5px] text-ink-3 truncate">
+                    {disciplineGroup(d.discipline)} · {d.slides.length} slayt{qCount ? ` · ${qCount} soru` : ''}
+                  </span>
+                </span>
+                <span
+                  className={`shrink-0 h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center ${
+                    done ? 'bg-ok-soft text-ok' : seen ? 'bg-accent-soft text-accent' : 'bg-field text-ink-3'
+                  }`}
+                >
+                  {done ? 'Bitti' : seen ? `%${Math.round((seen / d.slides.length) * 100)}` : 'Yeni'}
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
