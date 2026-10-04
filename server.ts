@@ -2004,6 +2004,26 @@ app.post('/api/past-questions/similar', async (req, res) => {
   }
 });
 
+// Taslak stüdyosu · AI ile dönüştür: bulut + yerel Ollama modelleri (yönetici)
+app.get('/api/studio/ai-models', requireAdmin, async (_req, res) => {
+  try {
+    const { listStudioAiModels } = await import('./src/services/studioAiService.ts');
+    res.json(await listStudioAiModels());
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.post('/api/studio/ai-generate', requireAdmin, async (req, res) => {
+  const { target, input } = req.body || {};
+  if (!target || !input || !Array.isArray(input.fragments)) return res.status(400).json({ error: 'target ve input.fragments gerekli' });
+  try {
+    const { generateStudioQuestion } = await import('./src/services/studioAiService.ts');
+    res.json(await generateStudioQuestion(String(target), input));
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Soru eklerken sağ paneldeki "Bulunan kaynaklar": yalnızca arama, AI maliyeti yok
 app.post('/api/sources/for-fragment', async (req, res) => {
   const { text, committeeId, discipline } = req.body || {};

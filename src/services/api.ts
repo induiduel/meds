@@ -315,6 +315,40 @@ async function checkServer(): Promise<boolean> {
   return false;
 }
 
+export interface StudioAiModels {
+  cloud: { target: string; label: string; available: boolean };
+  local: { target: string; label: string; available: boolean }[];
+  embed: { model: string; available: boolean; role: string };
+  ollamaReachable: boolean;
+}
+export interface StudioAiInputLite {
+  committeeId?: string;
+  discipline?: string;
+  topic?: string;
+  stem?: string;
+  options?: Partial<Record<'A' | 'B' | 'C' | 'D' | 'E', string>>;
+  answer?: string;
+  fragments: { kind: string; text: string }[];
+  terms?: string[];
+  notes?: string;
+}
+export interface StudioAiResultLite {
+  target: string;
+  label: string;
+  ok: boolean;
+  error?: string;
+  ms: number;
+  question?: {
+    stem: string;
+    options: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
+    correctAnswer: 'A' | 'B' | 'C' | 'D' | 'E';
+    explanation: string;
+    confidence: number;
+  };
+  sources: SourceRefLite[];
+  reranked?: boolean;
+}
+
 export interface SourceRefLite {
   documentId: string;
   documentType: string;
@@ -1349,6 +1383,39 @@ export const ApiService = {
         await multiDbManager.saveQuestion(q);
       } catch (e) {}
     }
+  },
+
+  /** Taslak stüdyosu: kullanılabilir AI modelleri (bulut + yerel Ollama). */
+  async getStudioAiModels(adminEmail: string): Promise<StudioAiModels | null> {
+    const res = await safeJsonFetch<StudioAiModels>('/api/studio/ai-models', { headers: { 'x-admin-email': adminEmail || '' } });
+    return res.ok && res.data ? res.data : null;
+  },
+
+  /** Taslak stüdyosu: bir hedef modelle (cloud ya da yerel model adı) soru üretir. */
+  async studioAiGenerate(adminEmail: string, target: string, input: StudioAiInputLite): Promise<StudioAiResultLite> {
+    // Yerel modeller sunucuda sırayla çalışır; sıradaki model dakikalarca bekleyebilir
+    const res = await safeJsonFetch<StudioAiResultLite>('/api/studio/ai-generate', {
+      signal: AbortSignal.timeout(15 * 60_000),
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail || '' },
+      body: JSON.stringify({ target, input }),
+    });
+    if (res.ok && res.data) return res.data;
+    return { target, label: target, ok: false, error: res.error || 'İstek başarısız', ms: 0, sources: [] };
+  },
+
+  /** Yönetici: yeni soru kaydı (AI alternatifleri için). */
+  async adminCreateQuestion(adminEmail: string, q: QuestionItem): Promise<QuestionItem> {
+    if (adminEmail !== ADMIN_EMAIL) throw new Error('Yetkisiz işlem: yalnız sistem yöneticisi soru ekleyebilir.');
+    const db = getLocalDb();
+    db.questions.push(q);
+    saveLocalDb(db);
+    try {
+      await multiDbManager.saveQuestion(q);
+    } catch (e) {
+      console.warn('multiDbManager adminCreateQuestion fallback', e);
+    }
+    return q;
   },
 
   /** Ders materyali / çıkmış soru kaynakları (yalnız arama, AI yok). */

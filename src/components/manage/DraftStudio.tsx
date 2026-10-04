@@ -28,9 +28,14 @@ import {
   Merge,
   CircleDot,
   ListChecks,
+  Bot,
+  Cpu,
+  Cloud,
+  Loader2,
+  Star,
 } from 'lucide-react';
-import type { QuestionItem } from '../../types';
-import { ApiService } from '../../services/api';
+import type { QuestionItem, ReconstructedQuestion } from '../../types';
+import { ApiService, StudioAiModels, StudioAiResultLite } from '../../services/api';
 import {
   StudioState,
   StudioFragment,
@@ -160,6 +165,14 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
   const [editingGroup, setEditingGroup] = useState<string | null>(null);
   const [termDraft, setTermDraft] = useState('');
   const [mergeFrom, setMergeFrom] = useState<string | null>(null);
+  // AI ile dönüştür
+  const [aiFor, setAiFor] = useState<string | null>(null);
+  const [aiModels, setAiModels] = useState<StudioAiModels | null>(null);
+  const [aiTargets, setAiTargets] = useState<string[]>([]);
+  const [aiResults, setAiResults] = useState<Record<string, StudioAiResultLite | 'loading'>>({});
+  const [aiPick, setAiPick] = useState<string[]>([]);
+  const [aiPrimary, setAiPrimary] = useState<string | null>(null);
+  const [aiSaving, setAiSaving] = useState(false);
 
   // ---------------------------------------------------------------- türetilmiş veri
   const drafts = useMemo(
@@ -394,10 +407,11 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
   };
 
   /** Adayı gerçek soruya dönüştürür: parçaların taslaklarını birleştirir, alanları yazar. */
-  const convert = async (c: StudioCandidate) => {
+  const convert = (c: StudioCandidate) => convertWith(c);
+  const convertWith = async (c: StudioCandidate, extra: Partial<QuestionItem> = {}, quiet = false): Promise<string | null> => {
     if (!c.fragmentIds.length) {
       notify('Önce adaya en az bir parça ekle.');
-      return;
+      return null;
     }
     const draftIds = [...new Set(c.fragmentIds.map((id) => fragById.get(id)?.draftId).filter(Boolean) as string[])];
     const stemFrag = c.fragmentIds.map((id) => fragById.get(id)).find((f) => f?.kind === 'stem');
@@ -408,15 +422,304 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     setBusy(c.id);
     try {
       if (others.length) await ApiService.mergeDraftCluster(adminEmail, anchor, others, 'Taslak stüdyosu');
-      await ApiService.adminUpdateQuestion(adminEmail, anchor, candidateToQuestionPatch(c, discipline, groupPath(c.groupId)));
+      await ApiService.adminUpdateQuestion(adminEmail, anchor, { ...candidateToQuestionPatch(c, discipline, groupPath(c.groupId)), ...extra });
       updateCand(c.id, { status: 'done', convertedQuestionId: anchor });
-      notify(others.length ? `${draftIds.length} taslak tek soruda birleşti ve kaydedildi.` : 'Soru kaydedildi.');
-      await onRefreshData();
+      if (!quiet) {
+        notify(others.length ? `${draftIds.length} taslak tek soruda birleşti ve kaydedildi.` : 'Soru kaydedildi.');
+        await onRefreshData();
+      }
+      return anchor;
     } catch (e: any) {
       notify('Dönüştürülemedi: ' + (e?.message || 'bilinmeyen hata'));
+      return null;
     } finally {
       setBusy(null);
     }
+  };
+
+  // ---------------------------------------------------------------- AI ile dönüştür
+  const openAi = async (c: StudioCandidate) => {
+    setAiFor(c.id);
+    setAiResults({});
+    setAiPick([]);
+    setAiPrimary(null);
+    const m = aiModels || (await ApiService.getStudioAiModels(adminEmail));
+    if (m) {
+      setAiModels(m);
+      setAiTargets((prev) => (prev.length ? prev : ['cloud', ...m.local.filter((x) => x.available).map((x) => x.target)]));
+    } else setAiTargets(['cloud']);
+  };
+
+  const aiInputOf = (c: StudioCandidate) => {
+    const g = c.groupId ? groupById.get(c.groupId) : undefined;
+    return {
+      committeeId,
+      discipline: g?.discipline || fragById.get(c.fragmentIds[0])?.discipline,
+      topic: groupPath(c.groupId) || c.title,
+      stem: c.stem,
+      options: c.options,
+      answer: c.answer,
+      fragments: c.fragmentIds.map((id) => fragById.get(id)).filter((f): f is StudioFragment => !!f).map((f) => ({ kind: KIND_LABEL[f.kind], text: f.text })),
+      terms: c.terms,
+      notes: c.notes,
+    };
+  };
+
+  const runAi = (c: StudioCandidate) => {
+    if (!c.fragmentIds.length && !c.stem.trim()) {
+      notify('AI için önce adaya parça ekle ya da kök yaz.');
+      return;
+    }
+    const input = aiInputOf(c);
+    const targets = aiTargets.length ? aiTargets : ['cloud'];
+    setAiResults(Object.fromEntries(targets.map((t) => [t, 'loading' as const])));
+    setAiPick([]);
+    setAiPrimary(null);
+    // Hepsi aynı anda istenir; sunucu yerel modelleri sıraya koyar, sonuçlar geldikçe görünür
+    targets.forEach((t) =>
+      ApiService.studioAiGenerate(adminEmail, t, input).then((r) => {
+        setAiResults((prev) => ({ ...prev, [t]: r }));
+        if (r.ok) {
+          setAiPick((p) => (t === 'cloud' && !p.includes(t) ? [t, ...p] : p));
+          setAiPrimary((p) => p ?? (t === 'cloud' ? t : p));
+        }
+      })
+    );
+  };
+
+  const reconOf = (r: StudioAiResultLite): ReconstructedQuestion => ({
+    stem: r.question!.stem,
+    options: r.question!.options.map((o) => ({ ...o, isAiFilled: true, isCorrect: o.key === r.question!.correctAnswer })),
+    correctAnswer: r.question!.correctAnswer,
+    explanation: r.question!.explanation,
+    confidenceScore: r.question!.confidence,
+    lastUpdated: new Date().toISOString(),
+    isAiRefined: true,
+    notesAndDiscrepancies: `Taslak stüdyosunda üretildi · ${r.label}`,
+    sources: r.sources as ReconstructedQuestion['sources'],
+  });
+
+  const saveAi = async (c: StudioCandidate) => {
+    const picks = aiPick.filter((t) => {
+      const r = aiResults[t];
+      return r && r !== 'loading' && r.ok;
+    });
+    if (!picks.length) {
+      notify('Kaydetmek için en az bir sonucu işaretle.');
+      return;
+    }
+    const primary = aiPrimary && picks.includes(aiPrimary) ? aiPrimary : picks[0];
+    const g = c.groupId ? groupById.get(c.groupId) : undefined;
+    const discipline = g?.discipline || fragById.get(c.fragmentIds[0])?.discipline || 'Belirsiz';
+    setAiSaving(true);
+    let saved = 0;
+    try {
+      const pr = aiResults[primary] as StudioAiResultLite;
+      const anchor = await convertWith(
+        c,
+        {
+          reconstruction: reconOf(pr),
+          rawStem: pr.question!.stem,
+          options: pr.question!.options.map((o) => ({ key: o.key, text: o.text, upvotes: 0, isAiGenerated: true })),
+          claimedAnswer: pr.question!.correctAnswer,
+          status: 'reconstructing',
+        },
+        true
+      );
+      if (anchor) saved++;
+      for (const t of picks.filter((x) => x !== primary)) {
+        const r = aiResults[t] as StudioAiResultLite;
+        const q: QuestionItem = {
+          id: uid('alt'),
+          committeeId,
+          questionNumber: c.questionNumber || 0,
+          isUnassignedNumber: !c.questionNumber,
+          discipline,
+          topic: groupPath(c.groupId) || c.title || discipline,
+          status: 'reconstructing',
+          fragments: [],
+          options: r.question!.options.map((o) => ({ key: o.key, text: o.text, upvotes: 0, isAiGenerated: true })),
+          claimedAnswer: r.question!.correctAnswer,
+          rawStem: r.question!.stem,
+          reconstruction: reconOf(r),
+          tags: [...c.terms, 'ai-alternatif', `model:${t}`],
+          placementNotes: `Alternatif · ${r.label} · kaynak aday: ${c.title}${anchor ? ` · ana soru ${anchor}` : ''}`,
+          contributedByName: 'Taslak stüdyosu',
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        };
+        await ApiService.adminCreateQuestion(adminEmail, q);
+        saved++;
+      }
+      notify(`${saved} soru kaydedildi (ana: ${(aiResults[primary] as StudioAiResultLite).label}). Hepsi “inceleniyor” durumunda.`);
+      setAiFor(null);
+      await onRefreshData();
+    } catch (e: any) {
+      notify('Kaydedilemedi: ' + (e?.message || 'bilinmeyen hata'));
+    } finally {
+      setAiSaving(false);
+    }
+  };
+
+  const AiPanel = ({ c }: { c: StudioCandidate }) => {
+    const targets: { target: string; label: string; available: boolean; local: boolean }[] = [
+      { target: 'cloud', label: aiModels?.cloud.label || 'Bulut AI (Gemini → Groq)', available: true, local: false },
+      ...(aiModels?.local || []).map((m) => ({ ...m, local: true })),
+    ];
+    const results = Object.entries(aiResults);
+    const loadingCount = results.filter(([, r]) => r === 'loading').length;
+    const okCount = results.filter(([, r]) => r !== 'loading' && r.ok).length;
+    return (
+      <div className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] flex items-center justify-center p-3" onMouseDown={(e) => e.target === e.currentTarget && !aiSaving && setAiFor(null)}>
+        <div role="dialog" aria-modal="true" aria-label="AI ile dönüştür" className="ms-modal-panel bg-white rounded-2xl shadow-xl w-full max-w-[1180px] max-h-[92dvh] flex flex-col overflow-hidden">
+          <div className="flex items-center gap-3 px-5 py-3.5 border-b border-line">
+            <Bot className="w-5 h-5 text-accent" />
+            <div className="flex-1 min-w-0">
+              <b className="text-[15px]">AI ile dönüştür</b>
+              <div className="text-[12.5px] text-ink-3 truncate">{c.title || 'Adsız aday'} · {c.fragmentIds.length} parça · kaynaklara dayalı</div>
+            </div>
+            <button type="button" aria-label="Kapat" onClick={() => !aiSaving && setAiFor(null)} className="w-9 h-9 rounded-full hover:bg-field flex items-center justify-center cursor-pointer"><X className="w-4 h-4" /></button>
+          </div>
+          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain p-4 flex flex-col gap-4">
+            <section className="flex flex-col gap-2">
+              <span className={label}>Modeller · birden çok seçilebilir</span>
+              <div className="flex flex-wrap gap-2">
+                {targets.map((m) => {
+                  const on = aiTargets.includes(m.target);
+                  return (
+                    <button
+                      key={m.target}
+                      type="button"
+                      disabled={!m.available}
+                      onClick={() => setAiTargets((p) => (on ? p.filter((x) => x !== m.target) : [...p, m.target]))}
+                      aria-pressed={on}
+                      title={m.available ? '' : 'Ollama’da bu model yüklü değil'}
+                      className={`h-9 px-3 rounded-full text-[13px] inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${on ? 'bg-ink text-white font-semibold' : 'bg-field text-ink-2'}`}
+                    >
+                      {m.local ? <Cpu className="w-4 h-4" /> : <Cloud className="w-4 h-4" />}
+                      {m.label}
+                      {on && <Check className="w-3.5 h-3.5" />}
+                    </button>
+                  );
+                })}
+              </div>
+              <span className="text-[12px] text-ink-3">
+                {aiModels?.embed?.available ? `${aiModels.embed.model}: kaynakları anlam benzerliğine göre sıralar (gömme modeli, soru yazmaz). ` : ''}
+                {aiModels && !aiModels.ollamaReachable ? 'Ollama’ya ulaşılamadı; yalnız bulut çalışır. ' : ''}
+                Yerel modeller sırayla çalışır; ilk sonuç bulut ya da ilk biten modelden gelir.
+              </span>
+              <div className="flex items-center gap-2">
+                <button type="button" onClick={() => runAi(c)} disabled={loadingCount > 0} className="h-10 px-5 rounded-full bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer disabled:opacity-60">
+                  {loadingCount > 0 ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
+                  {loadingCount > 0 ? `${loadingCount} model çalışıyor…` : results.length ? 'Yeniden üret' : 'Soruları üret'}
+                </button>
+                {results.length > 0 && <span className="text-[12.5px] text-ink-3">{okCount} sonuç hazır</span>}
+              </div>
+            </section>
+
+            {results.length > 0 && (
+              <section className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                {results.map(([t, r]) => {
+                  const picked = aiPick.includes(t);
+                  if (r === 'loading')
+                    return (
+                      <div key={t} className="rounded-2xl bg-field p-4 flex items-center gap-3 text-[13px] text-ink-2 min-h-[120px]">
+                        <Loader2 className="w-5 h-5 animate-spin text-accent" />
+                        <span><b className="text-ink">{t === 'cloud' ? 'Bulut AI' : t}</b> soru yazıyor…</span>
+                      </div>
+                    );
+                  if (!r.ok)
+                    return (
+                      <div key={t} className="ms-pop-in rounded-2xl bg-bad-soft p-4 text-[13px] flex flex-col gap-1">
+                        <b className="text-bad-text">{r.label} · başarısız</b>
+                        <span className="text-ink-2">{r.error}</span>
+                        <button type="button" onClick={() => { setAiResults((p) => ({ ...p, [t]: 'loading' })); ApiService.studioAiGenerate(adminEmail, t, aiInputOf(c)).then((x) => setAiResults((p) => ({ ...p, [t]: x }))); }} className="self-start h-8 px-3 rounded-full bg-white text-[12.5px] font-semibold cursor-pointer mt-1">Tekrar dene</button>
+                      </div>
+                    );
+                  const q = r.question!;
+                  return (
+                    <article key={t} className={`ms-pop-in rounded-2xl p-4 flex flex-col gap-2.5 border-2 transition-colors ${picked ? 'border-accent bg-accent-soft/30' : 'border-line bg-white'}`}>
+                      <div className="flex items-center gap-2">
+                        <label className="inline-flex items-center gap-2 cursor-pointer flex-1 min-w-0">
+                          <input type="checkbox" checked={picked} onChange={() => setAiPick((p) => (picked ? p.filter((x) => x !== t) : [...p, t]))} className="w-4 h-4 accent-[var(--color-accent)]" />
+                          <span className="text-[13px] font-semibold truncate">{r.label}</span>
+                        </label>
+                        <span className="text-[11.5px] text-ink-3 font-mono">%{q.confidence} · {(r.ms / 1000).toFixed(1)} sn</span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setAiPrimary(t);
+                            setAiPick((p) => (p.includes(t) ? p : [...p, t]));
+                          }}
+                          title="Ana soru: adayın taslağına yazılır; diğer seçilenler alternatif olarak ayrı kaydedilir"
+                          className={`h-7 px-2.5 rounded-full text-[12px] inline-flex items-center gap-1 cursor-pointer ${aiPrimary === t ? 'bg-warn-soft text-warn font-semibold' : 'bg-field text-ink-3 hover:text-ink'}`}
+                        >
+                          <Star className="w-3.5 h-3.5" /> {aiPrimary === t ? 'Ana soru' : 'Ana yap'}
+                        </button>
+                      </div>
+                      {(() => {
+                        // Editörde iddia edilen cevap varsa ve model başka bir seçeneği doğru saydıysa uyar
+                        const claimed = c.answer ? fold(c.options[c.answer] || '').trim() : '';
+                        const modelText = fold(q.options.find((o) => o.key === q.correctAnswer)?.text || '');
+                        return claimed && modelText && !modelText.includes(claimed) && !claimed.includes(modelText) ? (
+                          <span className="self-start text-[12px] font-semibold px-2 py-0.5 rounded-full bg-warn-soft text-warn">
+                            Cevabı editördekiyle çelişiyor ({c.answer}: {c.options[c.answer!]})
+                          </span>
+                        ) : null;
+                      })()}
+                      <p className="m-0 text-[14px] leading-relaxed text-ink font-medium">{q.stem}</p>
+                      <ol className="list-none m-0 p-0 flex flex-col gap-1">
+                        {q.options.map((o) => (
+                          <li key={o.key} className={`flex gap-2 px-2.5 py-1.5 rounded-lg text-[13px] ${o.key === q.correctAnswer ? 'bg-ok-soft text-ok font-semibold' : 'bg-field text-ink-2'}`}>
+                            <b className="font-mono">{o.key}</b>
+                            <span>{o.text}</span>
+                          </li>
+                        ))}
+                      </ol>
+                      {q.explanation && <p className="m-0 text-[12.5px] text-ink-2 leading-relaxed line-clamp-5" title={q.explanation}>{q.explanation}</p>}
+                      {r.sources.length > 0 && (
+                        <div className="flex flex-wrap gap-1">
+                          {r.sources.map((src, i) => (
+                            <span key={i} className="text-[11.5px] px-2 py-0.5 rounded-full bg-field text-ink-3 truncate max-w-[260px]" title={src.snippet}>
+                              {src.title}{src.pageNumber ? ` · s.${src.pageNumber}` : ''}
+                            </span>
+                          ))}
+                          {r.reranked && <span className="text-[11px] text-ink-3">· bge-m3 ile sıralandı</span>}
+                        </div>
+                      )}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          updateCand(c.id, {
+                            stem: q.stem,
+                            options: Object.fromEntries(OPT_KEYS.map((k) => [k, q.options.find((o) => o.key === k)?.text || ''])) as StudioCandidate['options'],
+                            answer: q.correctAnswer,
+                          });
+                          notify('Sonuç editöre aktarıldı; dilediğin gibi düzenleyebilirsin.');
+                        }}
+                        className="self-start h-8 px-3 rounded-full text-accent hover:bg-accent-soft text-[12.5px] font-semibold cursor-pointer"
+                      >
+                        Editöre aktar
+                      </button>
+                    </article>
+                  );
+                })}
+              </section>
+            )}
+          </div>
+          <div className="flex flex-wrap items-center gap-2 px-5 py-3 border-t border-line">
+            <span className="text-[12.5px] text-ink-3 flex-1 min-w-[200px]">
+              {aiPick.length ? `${aiPick.length} seçili · ana soru adayın taslağına yazılır, diğerleri alternatif olarak ayrı kaydedilir.` : 'Kaydetmek için sonuçları işaretle; birden çok seçebilirsin.'}
+            </span>
+            <button type="button" onClick={() => setAiFor(null)} disabled={aiSaving} className="h-10 px-4 rounded-full bg-field text-[13.5px] font-semibold cursor-pointer">Kapat</button>
+            <button type="button" onClick={() => void saveAi(c)} disabled={aiSaving || aiPick.length === 0} className="h-10 px-5 rounded-full bg-accent hover:bg-accent-hover text-white text-[13.5px] font-semibold inline-flex items-center gap-2 cursor-pointer disabled:opacity-50">
+              {aiSaving && <Loader2 className="w-4 h-4 animate-spin" />}
+              Seçilenleri kaydet{aiPick.length ? ` (${aiPick.length})` : ''}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   const exportJson = () => {
@@ -1218,6 +1521,14 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           </button>
           <button
             type="button"
+            onClick={() => void openAi(c)}
+            className="h-9 px-4 rounded-full bg-ink text-white text-[13px] font-semibold cursor-pointer inline-flex items-center gap-1.5"
+            title="Bulut ve yerel AI modelleriyle soru ve alternatifler üret"
+          >
+            <Bot className="w-4 h-4" /> AI ile dönüştür
+          </button>
+          <button
+            type="button"
             disabled={busy === c.id}
             onClick={() => void convert(c)}
             className="h-9 px-4 rounded-full bg-accent hover:bg-accent-hover text-white text-[13px] font-semibold cursor-pointer inline-flex items-center gap-1.5 disabled:opacity-60"
@@ -1465,6 +1776,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           </aside>
         )}
       </div>
+      {aiFor && candById.get(aiFor) && AiPanel({ c: candById.get(aiFor)! })}
     </div>
   );
 };
