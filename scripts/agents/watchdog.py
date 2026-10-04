@@ -105,8 +105,60 @@ def check_pipeline_runner_alive():
         subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
         log("pipeline_runner.py arka planda güvenle başlatıldı ✓")
 
+def check_docker_containers():
+    """Tüm kritik Docker konteynerlerini denetler (meds-ollama, open-webui vb.)"""
+    env = os.environ.copy()
+    env["DOCKER_HOST"] = "unix:///var/run/docker.sock"
+    for cname in ["meds-ollama", "open-webui"]:
+        try:
+            res = subprocess.run(["docker", "inspect", "-f", "{{.State.Running}}", cname], env=env, capture_output=True, text=True)
+            if "true" not in res.stdout.lower():
+                log(f"UYARI: Konteyner '{cname}' durmuş! Otomatik olarak yeniden başlatılıyor...")
+                subprocess.run(["docker", "start", cname], env=env, capture_output=True)
+                log(f"Konteyner '{cname}' ayağa kaldırıldı ✓")
+        except Exception as e:
+            pass
+
+def check_supabase_health():
+    """Supabase yerel veritabanı ve REST servislerinin canlılığını denetler"""
+    try:
+        r = requests.get("http://127.0.0.1:8000/rest/v1/", headers={"apikey": os.environ.get("SUPABASE_ANON_KEY", "anon")}, timeout=3)
+        # 200 veya 401/404 bile olsa envoy ayaktadır
+    except Exception:
+        # Docker desktop altındaki supabase-db kontrolü
+        try:
+            res = subprocess.run(["docker", "ps", "--filter", "name=supabase-db", "--format", "{{.Status}}"], capture_output=True, text=True)
+            if not res.stdout.strip():
+                log("BİLGİ: Supabase yerel servisleri henüz başlatılmamış veya durdurulmuş.")
+        except Exception:
+            pass
+
+def check_dashboard_alive():
+    """Dashboard izleme sunucusunun (8085) çökmesini engeller"""
+    res = subprocess.run(["pgrep", "-f", "dashboard_server.py"], capture_output=True, text=True)
+    if not res.stdout.strip():
+        log("UYARI: dashboard_server.py (Port 8085) durmuş! Otomatik yeniden başlatılıyor...")
+        cmd = ["/usr/bin/python3", str(ROOT / "dashboard_server.py")]
+        subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+        log("dashboard_server.py yeniden başlatıldı ✓")
+
+def check_system_resources():
+    """Aşırı RAM ve Disk baskısını denetler, gerekirse önbellek temizler"""
+    try:
+        import psutil
+        mem = psutil.virtual_memory()
+        # Eğer kullanılabilir RAM %8'in altına düşerse
+        if mem.available < (0.08 * mem.total):
+            log(f"DİKKAT: Sistem belleği kritik seviyede (%{mem.percent} dolu)! VRAM ve önbellek tazeleme tetikleniyor...")
+            requests.post("http://127.0.0.1:11434/api/generate", json={"model": "gemma3:4b", "keep_alive": 0}, timeout=2)
+            requests.post("http://127.0.0.1:11434/api/generate", json={"model": "bge-m3:latest", "keep_alive": 0}, timeout=2)
+            import gc
+            gc.collect()
+    except Exception:
+        pass
+
 def main():
-    log("MedSoru Donanım & Pipeline Watchdog Servisi Başlatıldı.")
+    log("MedSoru Gelişmiş Otonom Sistem & Docker Watchdog Başlatıldı.")
     last_known_code_mtime = get_code_mtime()
 
     while True:
@@ -123,8 +175,17 @@ def main():
             # 2. Ollama ve GPU sağlığını denetle
             check_ollama_health()
 
-            # 3. Pipeline koşucusunun canlılığını sağla
+            # 3. Docker konteynerlerini denetle
+            check_docker_containers()
+
+            # 4. Pipeline koşucusunun canlılığını sağla
             check_pipeline_runner_alive()
+
+            # 5. Dashboard kokpitinin canlılığını sağla
+            check_dashboard_alive()
+
+            # 6. Sistem RAM/VRAM kaynak baskısını denetle
+            check_system_resources()
 
         except Exception as e:
             log(f"Watchdog genel döngü hatası: {e}")
