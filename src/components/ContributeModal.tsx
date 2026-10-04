@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { X, Sparkles, Stethoscope, AlertCircle, ArrowRight, ChevronDown } from 'lucide-react';
 import { OptionsEditor, OPTION_KEYS, OptionKey } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
@@ -6,7 +6,9 @@ import { toast } from './ui/Toast';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { findRealtimeMatchingDraft, DraftCompatibilityResult } from '../services/draftClusteringService';
+import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { ApiService, safeJsonFetch, type SimilarPastQuestion } from '../services/api';
+import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
 
@@ -80,6 +82,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
   const [realtimeMatch, setRealtimeMatch] = useState<{
     matchedQuestion?: QuestionItem;
     compatibility?: DraftCompatibilityResult;
+    contextHashtag?: string;
   } | null>(null);
 
   React.useEffect(() => {
@@ -123,14 +126,27 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
   const [answerReason, setAnswerReason] = useState('');
   const filledOptions = OPTION_KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
 
-  // Canlı Benzerlik Taraması (Debounce ile 350ms)
+  const [smartAssistant, setSmartAssistant] = useState<SmartQuestionAssistantResult | null>(null);
+
+  // Canlı Benzerlik Taraması & Akıllı Kurul/Ders Tahmini (Debounce ile 350ms)
   useEffect(() => {
-    if (!fragmentText || fragmentText.trim().length < 8 || !questions || questions.length === 0) {
+    if (!fragmentText || fragmentText.trim().length < 8) {
       setRealtimeMatch(null);
+      setSmartAssistant(null);
       return;
     }
 
     const timer = setTimeout(() => {
+      // 1. Akıllı Asistan Analizi (Kurul, Ders, Tıbbi Kavram & Çapraz Kurul Tespiti)
+      const assistantRes = getSmartQuestionAssistant(fragmentText, filledOptions, committeeId || selectedCommitteeId);
+      setSmartAssistant(assistantRes);
+
+      // 2. Taslak Eşleştirme
+      if (!questions || questions.length === 0) {
+        setRealtimeMatch(null);
+        return;
+      }
+
       const match = findRealtimeMatchingDraft(
         {
           committeeId: committeeId || selectedCommitteeId,
@@ -146,6 +162,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         setRealtimeMatch({
           matchedQuestion: match.matchedQuestion,
           compatibility: match.compatibility,
+          contextHashtag: match.contextHashtag,
         });
       } else {
         setRealtimeMatch(null);
@@ -155,6 +172,17 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fragmentText, discipline, topic, options, questions, committeeId]);
+
+  const matchedStem = useMemo(() => {
+    if (!realtimeMatch?.matchedQuestion) return '';
+    const q = realtimeMatch.matchedQuestion;
+    return q.reconstruction?.stem || (q as any)?.stem || q.fragments?.[0]?.text || q.topic || '';
+  }, [realtimeMatch]);
+
+  const sharedColors = useMemo(() => {
+    if (!realtimeMatch?.matchedQuestion || !fragmentText.trim() || !matchedStem) return new Map<string, string>();
+    return sharedWordColors([fragmentText, matchedStem]);
+  }, [realtimeMatch, fragmentText, matchedStem]);
 
   // Past exam questions that look like what the student remembers (debounced, retrieval only)
   const [similarPast, setSimilarPast] = useState<SimilarPastQuestion[]>([]);
@@ -427,18 +455,92 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                   className={`${fieldCls} h-11 text-[14px]`}
                 />
 
-                {realtimeMatch && (
-                  <div className="ms-pop-in rounded-xl bg-amber-50 border border-amber-300 p-3 flex flex-col gap-2">
-                    <div className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-amber-800 shrink-0" />
-                      <span className="flex-1 text-[13.5px] font-semibold text-amber-800">Benzer bir taslak var · %{realtimeMatch.compatibility?.score} uyum</span>
+                {/* Akıllı Kurul / Ders ve Konu Asistanı Bildirimi */}
+                {smartAssistant && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
+                  <div className="ms-pop-in rounded-xl bg-amber-500/10 border border-amber-300/80 p-3 flex flex-col gap-2">
+                    {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
+                      <div className="flex items-start justify-between gap-2.5 flex-wrap sm:flex-nowrap">
+                        <div className="flex items-start gap-2 text-[12.5px] text-amber-950 leading-snug">
+                          <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                          <div>
+                            <span className="font-bold">Kurul Önerisi: </span>
+                            {smartAssistant.crossCommitteeWarning}
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (smartAssistant.predictedCommittee) {
+                              setCommitteeId(smartAssistant.predictedCommittee.committeeId);
+                              if (smartAssistant.predictedDiscipline) {
+                                setDiscipline(smartAssistant.predictedDiscipline.discipline);
+                              }
+                              toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
+                            }
+                          }}
+                          className="shrink-0 h-7 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-[11.5px] font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                        >
+                          Bu Kurula Geç
+                          <ArrowRight className="w-3 h-3" />
+                        </button>
+                      </div>
+                    )}
+
+                    {smartAssistant.suggestedTopics.length > 0 && (
+                      <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900/80 flex items-center gap-1">
+                          <Sparkles className="w-3 h-3 text-amber-600" />
+                          Önerilen Konular:
+                        </span>
+                        {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => (
+                          <button
+                            key={i}
+                            type="button"
+                            onClick={() => setTopic(st.topic)}
+                            className="h-6 px-2.5 rounded-full bg-white hover:bg-amber-50 text-amber-950 text-[11.5px] font-semibold border border-amber-200 shadow-2xs inline-flex items-center gap-1 cursor-pointer transition-colors"
+                            title="Konu olarak seç"
+                          >
+                            {st.topic}
+                          </button>
+                        ))}
+                        {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
+                          <button
+                            type="button"
+                            onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}
+                            className="h-6 px-2 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-[11px] font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
+                            title="Dersi eşle"
+                          >
+                            Dersi "{smartAssistant.predictedDiscipline.discipline}" yap
+                          </button>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {realtimeMatch?.matchedQuestion && (
+                  <div className="ms-pop-in rounded-xl bg-amber-50/90 border border-amber-300 p-3.5 flex flex-col gap-2.5">
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className="h-6 px-2.5 rounded-full bg-amber-500/15 text-amber-900 text-[12px] font-semibold inline-flex items-center gap-1.5">
+                          <Sparkles className="w-3.5 h-3.5 text-amber-800 shrink-0" />
+                          Benzer bir taslak var · %{realtimeMatch.compatibility?.score} uyum
+                        </span>
+                        {realtimeMatch.contextHashtag && (
+                          <ContextBadge hashtag={realtimeMatch.contextHashtag} colorIndex={0} />
+                        )}
+                      </div>
                       <span className="text-[12px] font-mono text-amber-800/80">
                         {realtimeMatch.matchedQuestion?.questionNumber ? `S.${realtimeMatch.matchedQuestion.questionNumber}` : 'Numarasız'}
                       </span>
                     </div>
-                    <p className="m-0 text-[13.5px] text-ink-2 line-clamp-2">
-                      “{realtimeMatch.matchedQuestion?.reconstruction?.stem || (realtimeMatch.matchedQuestion as any)?.stem || realtimeMatch.matchedQuestion?.fragments?.[0]?.text}”
-                    </p>
+
+                    <div className="text-[13px] leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-amber-200/60">
+                      <Colored text={matchedStem} colors={sharedColors} />
+                    </div>
+
+                    <WordLegend texts={[fragmentText, matchedStem]} colors={sharedColors} />
+
                     {realtimeMatch.matchedQuestion?.questionNumber && (
                       <button
                         type="button"
@@ -448,8 +550,9 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                           setQuestionNumber(mq.questionNumber);
                           if (mq.discipline && mq.discipline !== 'Belirtilmedi') setDiscipline(mq.discipline);
                           if (mq.topic) setTopic(mq.topic);
+                          toast.success('Soruya bağlandı', `Soru #${mq.questionNumber} ile eşleştirildi.`);
                         }}
-                        className="self-start h-9 px-3 rounded-[10px] bg-amber-800 text-white text-[13px] font-semibold cursor-pointer"
+                        className="self-start h-9 px-3.5 rounded-[10px] bg-amber-800 hover:bg-amber-900 text-white text-[13px] font-semibold cursor-pointer shadow-xs transition-colors"
                       >
                         Bu soruya bağla (S.{realtimeMatch.matchedQuestion.questionNumber})
                       </button>

@@ -26,6 +26,7 @@ import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { loadDeepSeekContributions } from './deepseekDataService.ts';
+import { foldTurkish as foldTrUtil, FastFuzzyVocab, damerauLevenshtein } from '../utils/fuzzyMatching.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -122,9 +123,8 @@ function hashContent(content: string): string {
 
 // Fold Turkish characters so "böbrek", "bobrek", "IgE" and "ige" all match:
 // students often type without Turkish characters.
-const TR_FOLD: Record<string, string> = { ı: 'i', ç: 'c', ğ: 'g', ö: 'o', ş: 's', ü: 'u', â: 'a', î: 'i', û: 'u' };
 export function foldTurkish(text: string): string {
-  return text.toLocaleLowerCase('tr').replace(/[ıçğöşüâîû]/g, (ch) => TR_FOLD[ch] || ch);
+  return foldTrUtil(text);
 }
 const FOLDED_STOPWORDS = new Set(Array.from(TURKISH_STOPWORDS, (w) => foldTurkish(w)));
 
@@ -178,6 +178,7 @@ function getNextGeminiClient(): GoogleGenAI | null {
 let memoryChunks: Map<string, RagChunk> = new Map();
 // token -> Map<chunkId, termFrequency> for exact BM25 calculation
 let invertedIndex: Map<string, Map<string, number>> = new Map();
+const fuzzyVocab = new FastFuzzyVocab();
 let docLengths: Map<string, number> = new Map();
 let avgDocLength = 110;
 let isInitialized = false;
@@ -276,12 +277,20 @@ export async function saveLocalChunksToFile(forceImmediate: boolean = false): Pr
 function rebuildInvertedIndex(): void {
   invertedIndex.clear();
   docLengths.clear();
+  fuzzyVocab.clear();
   let totalDocLen = 0;
   for (const chunk of memoryChunks.values()) {
     indexChunkTokens(chunk);
     totalDocLen += (docLengths.get(chunk.id) || 0);
   }
   avgDocLength = memoryChunks.size > 0 ? totalDocLen / memoryChunks.size : 110;
+
+  // Build fuzzy vocabulary once from unique index keys (ultra-fast < 5ms)
+  for (const k of invertedIndex.keys()) {
+    if (!k.endsWith('*') && k.length >= 4) {
+      fuzzyVocab.add(k);
+    }
+  }
 }
 
 function indexChunkTokens(chunk: RagChunk): void {
@@ -1209,7 +1218,31 @@ export async function searchLocalRag(
     loadLocalChunksFromFile();
   }
   const limit = options.limit || 5;
-  const cleanTokens = Array.from(new Set(cleanTextForTokens(queryText)));
+  const rawWords = foldTurkish(queryText)
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'’“”…\[\]<>|\\+]/g, ' ')
+    .split(/\s+/)
+    .map((w) => w.trim())
+    .filter((w) => w.length >= 3 && !FOLDED_STOPWORDS.has(w));
+
+  const effectiveTokens: string[] = [];
+  for (const w of rawWords) {
+    if (fuzzyVocab.size() > 0 && !invertedIndex.has(w)) {
+      const hits = fuzzyVocab.findMatches(w, 2);
+      if (hits.length > 0) {
+        // En düşük mesafe ve en yüksek doküman frekansına göre sırala
+        hits.sort((a, b) => a.dist - b.dist || (invertedIndex.get(b.term)?.size || 0) - (invertedIndex.get(a.term)?.size || 0));
+        if (hits[0].dist <= (w.length >= 6 ? 2 : 1)) {
+          const best = hits[0].term;
+          effectiveTokens.push(best);
+          if (best.length > STEM_LENGTH) effectiveTokens.push(best.slice(0, STEM_LENGTH) + '*');
+          continue;
+        }
+      }
+    }
+    effectiveTokens.push(w);
+    if (w.length > STEM_LENGTH) effectiveTokens.push(w.slice(0, STEM_LENGTH) + '*');
+  }
+  const cleanTokens = Array.from(new Set(effectiveTokens));
   if (cleanTokens.length === 0 && !options.queryEmbedding) return [];
 
   const N = memoryChunks.size || 1;
@@ -1219,6 +1252,7 @@ export async function searchLocalRag(
 
   // 1. Calculate IDF for each query token present in the index
   const tokenInfo: Array<{ token: string; idf: number; postings: Map<string, number> }> = [];
+
   for (const t of cleanTokens) {
     const postings = invertedIndex.get(t);
     if (postings && postings.size > 0) {
@@ -1232,8 +1266,7 @@ export async function searchLocalRag(
 
   // Sort by IDF descending: most discriminating / rare medical terms first
   tokenInfo.sort((x, y) => y.idf - x.idf);
-  // Optimization: Prune query tokens to top 6 most informative terms (highest IDF) for ultra-fast evaluation (< 5ms)
-  // Score only the most informative terms; 12 balances quality and latency for long (full-question) queries.
+  // Optimization: Prune query tokens to top 12 most informative terms (highest IDF)
   const tokensToScore = tokenInfo.slice(0, 12);
 
   // 2. Accumulate candidate BM25 scores

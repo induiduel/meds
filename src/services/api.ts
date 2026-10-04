@@ -565,6 +565,7 @@ export const ApiService = {
     authorStudentNumber?: string;
     claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
     options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
+    targetQuestionId?: string;
   }): Promise<QuestionItem> {
     const db = getLocalDb();
     const isUnassigned = !!data.isUnknownNumber || !data.questionNumber || data.questionNumber <= 0;
@@ -583,6 +584,53 @@ export const ApiService = {
           upvotes: 1,
         }
       : null;
+
+    // Doğrudan belirli bir soruya bağlama
+    if (data.targetQuestionId) {
+      const explicitTarget = db.questions.find((q) => q.id === data.targetQuestionId);
+      if (explicitTarget) {
+        if (initialFragment) {
+          explicitTarget.fragments = explicitTarget.fragments || [];
+          explicitTarget.fragments.push(initialFragment);
+        }
+        if (data.options && data.options.length > 0) {
+          explicitTarget.options = explicitTarget.options || [];
+          data.options.forEach((o) => {
+            if (!o.text || !o.text.trim()) return;
+            explicitTarget.fragments.push({
+              id: `f-opt-${Date.now()}-${o.key}`,
+              author: data.author || 'Anonim',
+              authorUid: data.authorUid,
+              authorStudentNumber: data.authorStudentNumber,
+              text: `${o.key}) ${o.text.trim()}`,
+              type: 'option',
+              timestamp: new Date().toISOString(),
+              upvotes: 1,
+            });
+            const exOpt = explicitTarget.options.find((opt) => opt.key === o.key);
+            if (exOpt) {
+              exOpt.upvotes = (exOpt.upvotes || 1) + 1;
+            } else {
+              explicitTarget.options.push({
+                key: o.key,
+                text: o.text.trim(),
+                suggestedBy: data.author || 'Anonim',
+                suggestedByUid: data.authorUid,
+                upvotes: 1,
+              });
+            }
+          });
+          explicitTarget.options.sort((a, b) => a.key.localeCompare(b.key));
+        }
+        explicitTarget.status = 'gathering';
+        explicitTarget.updatedAt = new Date().toISOString();
+        saveLocalDb(db);
+        try {
+          await multiDbManager.saveQuestion(explicitTarget);
+        } catch (_) {}
+        return explicitTarget;
+      }
+    }
 
     if (isUnassigned) {
       // Akıllı Taslak Eşleme: Var olan sorular arasında yüksek uyum (%82+) var mı kontrol et

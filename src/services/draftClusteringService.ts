@@ -8,6 +8,7 @@
 import { QuestionItem, MemoryFragment, QuestionOption, QuestionRevision } from '../types';
 import { GoogleGenAI } from '@google/genai';
 import medicalConceptsRaw from '../data/medicalConcepts5000.json';
+import { areWordsFuzzyEqual, damerauLevenshtein, foldTurkish, toContextHashtag } from '../utils/fuzzyMatching.ts';
 
 // ==========================================
 // TİPLER VE VERİ YAPILARI
@@ -39,6 +40,7 @@ export interface DraftCompatibilityResult {
   optionSetSimilarity: number;
   sharedMedicalEntities: string[];
   sharedConcepts: string[];
+  contextHashtag?: string;
   targetQuestionAlignment: 'matching' | 'different_aspect' | 'conflicting';
   bookletNumberNote?: string;
   matchedOptionAlignments: OptionAlignment[];
@@ -276,7 +278,16 @@ export function detectMedicalConcepts(text: string, discipline?: string): Medica
   const discLower = discipline && discipline !== 'Belirtilmedi' ? discipline.toLowerCase() : null;
 
   for (const phrase of phrases) {
-    const hits = index.get(phrase);
+    let hits = index.get(phrase);
+    if (!hits && phrase.length >= 6) {
+      // Harf eksikliği ve yer değiştirmesi için terim bankasında bulanık arama
+      for (const [indexedTerm, concepts] of index.entries()) {
+        if (Math.abs(indexedTerm.length - phrase.length) <= 2 && areWordsFuzzyEqual(phrase, indexedTerm)) {
+          hits = concepts;
+          break;
+        }
+      }
+    }
     if (!hits) continue;
 
     for (const concept of hits) {
@@ -357,19 +368,32 @@ export function calculateLevenshteinSimilarity(str1: string, str2: string): numb
 }
 
 export function calculateTokenJaccard(textA: string, textB: string): number {
-  const tokensA = new Set(normalizeMedicalText(textA).split(' ').filter(w => w.length > 2 && !MEDICAL_STOP_WORDS.has(w)));
-  const tokensB = new Set(normalizeMedicalText(textB).split(' ').filter(w => w.length > 2 && !MEDICAL_STOP_WORDS.has(w)));
+  const tokensA = Array.from(new Set(normalizeMedicalText(textA).split(' ').filter(w => w.length > 2 && !MEDICAL_STOP_WORDS.has(w))));
+  const tokensB = Array.from(new Set(normalizeMedicalText(textB).split(' ').filter(w => w.length > 2 && !MEDICAL_STOP_WORDS.has(w))));
 
-  if (tokensA.size === 0 && tokensB.size === 0) return 0;
-  if (tokensA.size === 0 || tokensB.size === 0) return 0;
+  if (tokensA.length === 0 && tokensB.length === 0) return 0;
+  if (tokensA.length === 0 || tokensB.length === 0) return 0;
 
+  const setB = new Set(tokensB);
   let intersection = 0;
-  tokensA.forEach((token) => {
-    if (tokensB.has(token)) intersection++;
-  });
+  const matchedB = new Set<string>();
 
-  const union = new Set([...tokensA, ...tokensB]).size;
-  return (intersection / union) * 100;
+  for (const tokenA of tokensA) {
+    if (setB.has(tokenA)) {
+      intersection += 1.0;
+      matchedB.add(tokenA);
+    } else {
+      // Harf eksikliği (sendrmu -> sendromu) ve yer değiştirmesi (sendormu -> sendromu) denetimi
+      const fuzzyMatch = tokensB.find((b) => !matchedB.has(b) && areWordsFuzzyEqual(tokenA, b));
+      if (fuzzyMatch) {
+        intersection += 0.9;
+        matchedB.add(fuzzyMatch);
+      }
+    }
+  }
+
+  const union = tokensA.length + tokensB.length - intersection;
+  return Math.min(100, (intersection / Math.max(1, union)) * 100);
 }
 
 // ==========================================
@@ -728,6 +752,9 @@ export function calculateDraftCompatibility(
     recommendation = 'distinct';
   }
 
+  const primaryConcept = sharedConcepts[0]?.name || draftA.topic || draftB.topic || '';
+  const contextHashtag = toContextHashtag(primaryConcept);
+
   return {
     score: overallScore,
     recommendation,
@@ -736,6 +763,7 @@ export function calculateDraftCompatibility(
     optionSetSimilarity,
     sharedMedicalEntities,
     sharedConcepts: sharedConcepts.map((c) => c.name),
+    contextHashtag,
     targetQuestionAlignment: targetAlignment,
     bookletNumberNote,
     matchedOptionAlignments: optionMatch.alignments
@@ -1066,7 +1094,14 @@ export function clusterDraftsForCommittee(
 // ==========================================
 // 6. ANLIK YAZARKEN BENZERLİK ARAMA
 // ==========================================
-export function findRealtimeMatchingDraft(
+export interface RealtimeMatchItem {
+  question: QuestionItem;
+  compatibility: DraftCompatibilityResult;
+  contextHashtag?: string;
+  isCrossCommittee?: boolean;
+}
+
+export function findRealtimeMatchingDrafts(
   input: {
     committeeId: string;
     discipline?: string;
@@ -1074,14 +1109,13 @@ export function findRealtimeMatchingDraft(
     text: string;
     options?: Array<{ key: string; text: string }>;
   },
-  existingQuestions: QuestionItem[]
-): {
-  matchFound: boolean;
-  matchedQuestion?: QuestionItem;
-  compatibility?: DraftCompatibilityResult;
-} {
+  existingQuestions: QuestionItem[],
+  minScore = 35,
+  limit = 5,
+  includeCrossCommittee = true
+): RealtimeMatchItem[] {
   if (!input.text || input.text.trim().length < 6) {
-    return { matchFound: false };
+    return [];
   }
 
   const tempQuestion: QuestionItem = {
@@ -1111,30 +1145,79 @@ export function findRealtimeMatchingDraft(
     updatedAt: new Date().toISOString()
   };
 
-  const pool = existingQuestions.filter((q) => q.committeeId === input.committeeId);
+  const matches: RealtimeMatchItem[] = [];
 
-  let bestMatch: QuestionItem | null = null;
-  let bestComp: DraftCompatibilityResult | null = null;
-  let highestScore = 0;
-
-  for (const q of pool) {
+  // 1. Önce o anki kurul soruları taranır
+  const sameCommPool = existingQuestions.filter((q) => q.committeeId === input.committeeId);
+  for (const q of sameCommPool) {
     const comp = calculateDraftCompatibility(q, tempQuestion);
-    if (comp.score > highestScore && comp.score >= 45 && comp.targetQuestionAlignment !== 'conflicting') {
-      highestScore = comp.score;
-      bestMatch = q;
-      bestComp = comp;
+    if (comp.score >= minScore && comp.targetQuestionAlignment !== 'conflicting') {
+      const contextHashtag = comp.contextHashtag || toContextHashtag(q.topic || input.topic || '');
+      matches.push({
+        question: q,
+        compatibility: comp,
+        contextHashtag,
+        isCrossCommittee: false
+      });
     }
   }
 
-  if (bestMatch && bestComp) {
+  // 2. Çapraz kurul kontrolü: Eğer aynı kurulda güçlü eşleşme azsa diğer kurullardaki sorular da kontrol edilir
+  if (includeCrossCommittee && matches.length < 3) {
+    const otherPool = existingQuestions.filter((q) => q.committeeId !== input.committeeId);
+    for (const q of otherPool) {
+      // Çapraz kurulda eşleşme eşiği biraz daha yüksek tutulur (%50+)
+      const comp = calculateDraftCompatibility(q, tempQuestion);
+      if (comp.score >= Math.max(50, minScore + 10) && comp.targetQuestionAlignment !== 'conflicting') {
+        const contextHashtag = comp.contextHashtag || toContextHashtag(q.topic || input.topic || '');
+        matches.push({
+          question: q,
+          compatibility: comp,
+          contextHashtag,
+          isCrossCommittee: true
+        });
+      }
+    }
+  }
+
+  // En belirgin benzer soru ilk başta (aynı kurul sorularına hafif öncelik)
+  matches.sort((a, b) => {
+    const scoreA = a.compatibility.score + (a.isCrossCommittee ? 0 : 5);
+    const scoreB = b.compatibility.score + (b.isCrossCommittee ? 0 : 5);
+    return scoreB - scoreA;
+  });
+
+  return matches.slice(0, limit);
+}
+
+export function findRealtimeMatchingDraft(
+  input: {
+    committeeId: string;
+    discipline?: string;
+    topic?: string;
+    text: string;
+    options?: Array<{ key: string; text: string }>;
+  },
+  existingQuestions: QuestionItem[]
+): {
+  matchFound: boolean;
+  matchedQuestion?: QuestionItem;
+  compatibility?: DraftCompatibilityResult;
+  contextHashtag?: string;
+  allMatches?: RealtimeMatchItem[];
+} {
+  const allMatches = findRealtimeMatchingDrafts(input, existingQuestions, 35, 6);
+  if (allMatches.length > 0) {
     return {
       matchFound: true,
-      matchedQuestion: bestMatch,
-      compatibility: bestComp
+      matchedQuestion: allMatches[0].question,
+      compatibility: allMatches[0].compatibility,
+      contextHashtag: allMatches[0].contextHashtag,
+      allMatches
     };
   }
 
-  return { matchFound: false };
+  return { matchFound: false, allMatches: [] };
 }
 
 // ==========================================

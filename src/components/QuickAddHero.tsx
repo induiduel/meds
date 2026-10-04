@@ -1,5 +1,18 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, CheckCircle2, ChevronRight, ChevronDown, Check, CircleDashed, AlertCircle } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle2,
+  ChevronRight,
+  ChevronDown,
+  Check,
+  CircleDashed,
+  AlertCircle,
+  Sparkles,
+  CheckSquare,
+  Square,
+  Layers,
+  X,
+} from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
@@ -9,6 +22,43 @@ import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
 import { useUiVersion } from '../utils/uiVersion';
+import { findRealtimeMatchingDrafts, RealtimeMatchItem, DraftCompatibilityResult } from '../services/draftClusteringService';
+import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
+import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
+
+// Benzerlik puanı kademesine göre renk ve stil haritası
+export const getScoreTier = (score: number) => {
+  if (score >= 80) {
+    return {
+      tierName: 'Çok Yüksek Uyum',
+      pillBg: 'bg-emerald-500/15 text-emerald-900 border-emerald-300',
+      barColor: 'bg-emerald-500',
+      cardBorder: 'border-emerald-300 bg-emerald-50/50 hover:border-emerald-400',
+    };
+  }
+  if (score >= 65) {
+    return {
+      tierName: 'Yüksek Benzerlik',
+      pillBg: 'bg-amber-500/15 text-amber-900 border-amber-300',
+      barColor: 'bg-amber-500',
+      cardBorder: 'border-amber-300 bg-amber-50/50 hover:border-amber-400',
+    };
+  }
+  if (score >= 50) {
+    return {
+      tierName: 'Orta Benzerlik',
+      pillBg: 'bg-sky-500/15 text-sky-900 border-sky-300',
+      barColor: 'bg-sky-500',
+      cardBorder: 'border-sky-200 bg-sky-50/40 hover:border-sky-300',
+    };
+  }
+  return {
+    tierName: 'İlişkili Konu',
+    pillBg: 'bg-purple-500/15 text-purple-900 border-purple-200',
+    barColor: 'bg-purple-500',
+    cardBorder: 'border-purple-200 bg-purple-50/30 hover:border-purple-300',
+  };
+};
 
 // Kaynak türü etiketi ve rengi (tasarımdaki Slayt / Özet / Çıkmış / Deşifre)
 const SOURCE_KIND: Record<string, { label: string; cls: string }> = {
@@ -37,6 +87,7 @@ interface QuickAddHeroProps {
     authorStudentNumber?: string;
     claimedAnswer?: OptionKey;
     options?: { key: OptionKey; text: string }[];
+    targetQuestionId?: string;
   }) => Promise<void>;
   unassignedCount: number;
   totalQuestionsCount: number;
@@ -143,6 +194,172 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [simOpen, setSimOpen] = useState(false);
   const { isV3 } = useUiVersion();
   const [sources, setSources] = useState<SourceRefLite[]>([]);
+  const [realtimeMatches, setRealtimeMatches] = useState<RealtimeMatchItem[]>([]);
+  const [selectedMatchIds, setSelectedMatchIds] = useState<Set<string>>(new Set());
+  const [isMergingSelected, setIsMergingSelected] = useState(false);
+  const [smartAssistant, setSmartAssistant] = useState<SmartQuestionAssistantResult | null>(null);
+
+  // Anlık taslak eşleme ve Kurul/Ders tahmin asistanı: 350ms debounced
+  useEffect(() => {
+    const q = text.trim();
+    if (mode === 'option' || q.length < 8 || !committee?.id) {
+      setRealtimeMatches([]);
+      setSelectedMatchIds(new Set());
+      setSmartAssistant(null);
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
+
+      // 1. Akıllı Asistan Analizi (Kurul, Ders, Tıbbi Kavram & Çapraz Kurul Tespiti)
+      const assistantRes = getSmartQuestionAssistant(q, optionsList, committee.id);
+      setSmartAssistant(assistantRes);
+
+      // 2. Taslak Eşleme (Çapraz Kurul Desteği ile)
+      const matches = findRealtimeMatchingDrafts(
+        {
+          committeeId: committee.id,
+          discipline,
+          topic: `${discipline} Hatırlanan Soru`,
+          text: q,
+          options: optionsList.length > 0 ? optionsList : undefined,
+        },
+        questions,
+        35, // En az %35 benzerlik
+        4,  // En fazla 4 aday göster
+        true // Çapraz kurul taslaklarını da göster
+      );
+      setRealtimeMatches(matches);
+      // Geçersiz kalan seçili id'leri temizle
+      setSelectedMatchIds((prev) => {
+        const validIds = new Set(matches.map((m) => m.question.id));
+        const next = new Set<string>();
+        prev.forEach((id) => {
+          if (validIds.has(id)) next.add(id);
+        });
+        return next;
+      });
+    }, 350);
+
+    return () => window.clearTimeout(timer);
+  }, [text, mode, committee?.id, discipline, options, questions]);
+
+  const toggleSelectMatch = (id: string) => {
+    setSelectedMatchIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const selectAllMatches = () => {
+    setSelectedMatchIds(new Set(realtimeMatches.map((m) => m.question.id)));
+  };
+
+  const clearSelection = () => {
+    setSelectedMatchIds(new Set());
+  };
+
+  // Bir soruya doğrudan bağlama aksiyonu
+  const handleLinkToQuestion = (targetQ: QuestionItem) => {
+    if (targetQ.questionNumber) {
+      setQuestionNumber(String(targetQ.questionNumber));
+    }
+    if (targetQ.discipline && targetQ.discipline !== 'Belirtilmedi') {
+      setDiscipline(targetQ.discipline);
+    }
+    toast.success(
+      'Soruya bağlandı',
+      targetQ.questionNumber
+        ? `Parçan Soru #${targetQ.questionNumber} ile birleştirilecek.`
+        : 'Parçan mevcut taslağa eklenecek.'
+    );
+  };
+
+  // Seçilen taslakları gruplandırıp birleştirme
+  const handleMergeAndGroupSelected = async () => {
+    if (selectedMatchIds.size === 0) return;
+    const selectedList = realtimeMatches.filter((m) => selectedMatchIds.has(m.question.id));
+    if (selectedList.length === 0) return;
+
+    setIsMergingSelected(true);
+    try {
+      const anchor = selectedList[0].question;
+      const targetCommittee = committee || (committees && committees.length > 0 ? committees[0] : undefined);
+      if (!targetCommittee) {
+        toast.error('Hata', 'Kurul seçili değil.');
+        return;
+      }
+
+      if (selectedList.length > 1) {
+        // Çoklu seçim: Seçilen taslakları birleştir
+        const satellites = selectedList.slice(1).map((m) => m.question.id);
+        const adminName = currentUser?.displayName || 'Kullanıcı';
+        const adminEmail = currentUser?.email || 'admin@medsoru.local';
+        await ApiService.mergeDraftCluster(adminEmail, anchor.id, satellites, adminName);
+      }
+
+      // Kullanıcının yazdığı parçayı da bu anchor soruya ekle
+      const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
+      const fragmentText = [
+        texts.stem.trim(),
+        texts.clue.trim() ? `İpucu: ${texts.clue.trim()}` : '',
+        claimedAnswer && answerReason.trim() ? `Cevap notu (${claimedAnswer}): ${answerReason.trim()}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n');
+
+      if (fragmentText || optionsList.length > 0 || claimedAnswer) {
+        const savedName = localStorage.getItem(SAVED_NAME_KEY) || '';
+        await onSubmitContribution({
+          committeeId: targetCommittee.id,
+          questionNumber: anchor.questionNumber,
+          isUnknownNumber: !anchor.questionNumber,
+          discipline: anchor.discipline || discipline,
+          topic: `${anchor.discipline || discipline} Hatırlanan Soru`,
+          fragmentText: fragmentText || 'Benzer taslak birleştirme',
+          author: currentUser?.displayName || savedName || 'Dönem 3 Öğrencisi',
+          authorUid: currentUser?.uid,
+          authorStudentNumber: currentUser?.studentNumber || undefined,
+          claimedAnswer,
+          options: optionsList.length > 0 ? optionsList : undefined,
+          targetQuestionId: anchor.id,
+        });
+      }
+
+      toast.success(
+        'Taslaklar Birleştirildi!',
+        selectedList.length > 1
+          ? `${selectedList.length} adet taslak başarıyla tek bir soruda birleştirildi.`
+          : `Parçan Soru #${anchor.questionNumber || 'taslak'} ile birleştirildi.`
+      );
+
+      setTexts({ stem: '', clue: '' });
+      setOptions({ A: '', B: '', C: '', D: '', E: '' });
+      setOptionCount(1);
+      setAnswerReason('');
+      setClaimedAnswer(undefined);
+      setQuestionNumber('');
+      setSelectedMatchIds(new Set());
+      setRealtimeMatches([]);
+    } catch (err: any) {
+      toast.error('Birleştirme Başarısız', err?.message || 'Bir hata oluştu');
+    } finally {
+      setIsMergingSelected(false);
+    }
+  };
+
+  // Tüm adayların ve kullanıcının metinlerindeki ortak kelime paleti
+  const sharedColors = useMemo(() => {
+    if (realtimeMatches.length === 0 || !text.trim()) return new Map<string, string>();
+    const allStems = [text, ...realtimeMatches.map((m) => questionStemText(m.question))];
+    return sharedWordColors(allStems);
+  }, [realtimeMatches, text]);
 
   useEffect(() => {
     if (!disciplines.includes(discipline)) setDiscipline(disciplines[0]);
@@ -317,6 +534,213 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 className="resize-none rounded-2xl px-4 py-3.5 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-field border-0 outline-0 focus:bg-white focus:ring-2 focus:ring-accent transition-[background,box-shadow] min-h-[140px]"
               />
             </>
+          )}
+
+          {/* Akıllı Kurul & Ders Öneri ve Uyarı Kutusu */}
+          {smartAssistant && mode !== 'option' && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
+            <div className="ms-pop-in rounded-2xl bg-amber-500/10 border border-amber-300/80 p-3.5 flex flex-col gap-2.5">
+              {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
+                <div className="flex items-start justify-between gap-3 flex-wrap sm:flex-nowrap">
+                  <div className="flex items-start gap-2 text-[13px] text-amber-950 leading-snug">
+                    <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold">Kurul Uyuşmazlığı Olabilir: </span>
+                      {smartAssistant.crossCommitteeWarning}
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (smartAssistant.predictedCommittee) {
+                        onSelectCommittee(smartAssistant.predictedCommittee.committeeId);
+                        if (smartAssistant.predictedDiscipline) {
+                          setDiscipline(smartAssistant.predictedDiscipline.discipline);
+                        }
+                        toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
+                      }
+                    }}
+                    className="shrink-0 h-8 px-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-[12px] font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-xs"
+                  >
+                    Bu Kurula Geç
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
+
+              {/* Tespit Edilen Tıbbi Konular / Kavramlar */}
+              {smartAssistant.suggestedTopics.length > 0 && (
+                <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
+                  <span className="text-[11.5px] font-bold uppercase tracking-wider text-amber-900/80 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3 text-amber-600" />
+                    İlişkili Konu Önerileri:
+                  </span>
+                  {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => (
+                    <span
+                      key={i}
+                      className="h-6 px-2.5 rounded-full bg-white text-amber-950 text-[12px] font-semibold border border-amber-200 shadow-2xs inline-flex items-center gap-1"
+                    >
+                      {st.topic}
+                    </span>
+                  ))}
+                  {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
+                    <button
+                      type="button"
+                      onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}
+                      className="h-6 px-2.5 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-[12px] font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
+                      title="Dersi otomatik eşle"
+                    >
+                      Dersi "{smartAssistant.predictedDiscipline.discipline}" yap
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
+          {realtimeMatches.length > 0 && mode !== 'option' && (
+            <div className="flex flex-col gap-2.5">
+              <div className="flex items-center justify-between gap-2 px-1">
+                <span className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-wider text-ink-3">
+                  <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
+                  Benzer Taslaklar ({realtimeMatches.length})
+                </span>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}
+                    className="text-[12px] font-semibold text-accent hover:underline cursor-pointer"
+                  >
+                    {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi Bırak' : 'Tümünü Seç'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Benzer sorular listesi: En belirgin soru ilk sırada */}
+              <div className="flex flex-col gap-2">
+                {realtimeMatches.map((m, idx) => {
+                  const q = m.question;
+                  const stem = questionStemText(q);
+                  const isTop = idx === 0;
+                  const isSelected = selectedMatchIds.has(q.id);
+                  const tier = getScoreTier(m.compatibility.score);
+
+                  return (
+                    <div
+                      key={q.id}
+                      className={`ms-pop-in rounded-2xl border transition-all p-3.5 flex flex-col gap-2 relative ${
+                        isSelected
+                          ? 'border-accent bg-accent-soft/30 shadow-xs ring-1 ring-accent'
+                          : tier.cardBorder
+                      }`}
+                      style={{ animationDelay: `${idx * 60}ms` }}
+                    >
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <button
+                            type="button"
+                            onClick={() => toggleSelectMatch(q.id)}
+                            className="cursor-pointer text-ink-2 hover:text-ink focus:outline-none"
+                            title={isSelected ? 'Seçimi Kaldır' : 'Seç'}
+                            aria-label={`Soru ${q.questionNumber || 'taslak'} seç`}
+                          >
+                            {isSelected ? (
+                              <CheckSquare className="w-4 h-4 text-accent fill-accent-soft" />
+                            ) : (
+                              <Square className="w-4 h-4 text-ink-3 hover:text-ink" />
+                            )}
+                          </button>
+
+                          {isTop && (
+                            <span className="h-5 px-2 rounded-full bg-accent text-white text-[11px] font-bold uppercase tracking-wider">
+                              En Yakın
+                            </span>
+                          )}
+
+                          <span className={`h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center gap-1 border ${tier.pillBg}`}>
+                            <span className={`w-1.5 h-1.5 rounded-full ${tier.barColor}`} />
+                            %{m.compatibility.score} · {tier.tierName}
+                          </span>
+
+                          {m.isCrossCommittee && (
+                            <span className="h-5 px-2 rounded-full bg-purple-600 text-white text-[11px] font-bold uppercase tracking-wider">
+                              Farklı Kurul Taslağı
+                            </span>
+                          )}
+
+                          {m.contextHashtag && (
+                            <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />
+                          )}
+                        </div>
+
+                        <span className="text-[12px] font-mono font-bold text-ink-2">
+                          {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız'}
+                        </span>
+                      </div>
+
+                      <div className="text-[13px] leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-line-soft">
+                        <Colored text={stem} colors={sharedColors} />
+                      </div>
+
+                      <div className="flex items-center justify-between gap-2 pt-1">
+                        <button
+                          type="button"
+                          onClick={() => handleLinkToQuestion(q)}
+                          className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                        >
+                          <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                          {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
+                        </button>
+                        {q.discipline && (
+                          <span className="text-[11.5px] text-ink-3 truncate">{q.discipline}</span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Ortak kelimeler renk kılavuzu */}
+              <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
+
+              {/* Seçim yapıldığında ortaya çıkan bağlamsal çubuk */}
+              {selectedMatchIds.size > 0 && (
+                <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="w-6 h-6 rounded-full bg-accent text-white text-[12px] font-bold flex items-center justify-center shrink-0">
+                      {selectedMatchIds.size}
+                    </span>
+                    <span className="text-[13px] font-medium truncate">
+                      {selectedMatchIds.size === 1
+                        ? '1 soru seçildi'
+                        : `${selectedMatchIds.size} soru seçildi`}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2 shrink-0">
+                    <button
+                      type="button"
+                      onClick={clearSelection}
+                      className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-[12px] font-medium cursor-pointer transition-colors"
+                    >
+                      İptal
+                    </button>
+                    <button
+                      type="button"
+                      disabled={isMergingSelected}
+                      onClick={handleMergeAndGroupSelected}
+                      className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12.5px] font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
+                    >
+                      <Layers className="w-3.5 h-3.5" />
+                      {isMergingSelected
+                        ? 'Birleştiriliyor…'
+                        : selectedMatchIds.size === 1
+                        ? 'Bu Soru ile Birleştir'
+                        : `Seçilenleri Gruplandır & Birleştir (${selectedMatchIds.size})`}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           )}
 
           {similar.length > 0 && mode !== 'option' && (
@@ -496,6 +920,154 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               <span className="truncate">Şıkları “Şıklar” sekmesinden ekleyebilirsin</span>
             </div>
           </>
+        )}
+
+        {realtimeMatches.length > 0 && mode !== 'option' && (
+          <div className="flex flex-col gap-2.5">
+            <div className="flex items-center justify-between gap-2 px-1">
+              <span className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-wider text-ink-3">
+                <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
+                Benzer / Devamı Olan Taslaklar ({realtimeMatches.length})
+              </span>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}
+                  className="text-[12px] font-semibold text-accent hover:underline cursor-pointer"
+                >
+                  {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi Bırak' : 'Tümünü Seç'}
+                </button>
+              </div>
+            </div>
+
+            {/* Benzer sorular listesi: En belirgin soru ilk sırada */}
+            <div className="flex flex-col gap-2.5">
+              {realtimeMatches.map((m, idx) => {
+                const q = m.question;
+                const stem = questionStemText(q);
+                const isTop = idx === 0;
+                const isSelected = selectedMatchIds.has(q.id);
+                const tier = getScoreTier(m.compatibility.score);
+
+                return (
+                  <div
+                    key={q.id}
+                    className={`ms-pop-in rounded-xl border transition-all p-3.5 sm:p-4 flex flex-col gap-2.5 relative shadow-2xs ${
+                      isSelected
+                        ? 'border-accent bg-accent-soft/30 ring-1 ring-accent'
+                        : tier.cardBorder
+                    }`}
+                    style={{ animationDelay: `${idx * 60}ms` }}
+                  >
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <button
+                          type="button"
+                          onClick={() => toggleSelectMatch(q.id)}
+                          className="cursor-pointer text-ink-2 hover:text-ink focus:outline-none"
+                          title={isSelected ? 'Seçimi Kaldır' : 'Seç'}
+                          aria-label={`Soru ${q.questionNumber || 'taslak'} seç`}
+                        >
+                          {isSelected ? (
+                            <CheckSquare className="w-4 h-4 text-accent fill-accent-soft" />
+                          ) : (
+                            <Square className="w-4 h-4 text-ink-3 hover:text-ink" />
+                          )}
+                        </button>
+
+                        {isTop && (
+                          <span className="h-5 px-2 rounded-full bg-accent text-white text-[11px] font-bold uppercase tracking-wider">
+                            En Yakın
+                          </span>
+                        )}
+
+                        <span className={`h-6 px-2.5 rounded-full text-[12px] font-semibold inline-flex items-center gap-1.5 border ${tier.pillBg}`}>
+                          <span className={`w-1.5 h-1.5 rounded-full ${tier.barColor}`} />
+                          %{m.compatibility.score} uyum · {tier.tierName}
+                        </span>
+
+                        {m.contextHashtag && (
+                          <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />
+                        )}
+                      </div>
+
+                      <span className="text-[12px] font-mono font-bold text-ink-2">
+                        {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız Taslak'}
+                      </span>
+                    </div>
+
+                    <div className="text-[13.5px] leading-relaxed text-ink bg-white/95 rounded-xl p-3 border border-line-soft">
+                      <div className="text-[11px] font-semibold uppercase tracking-wider text-ink-3 mb-1 flex items-center justify-between">
+                        <span>Havuzdaki Taslak Metni:</span>
+                        {q.discipline && (
+                          <span className="font-normal text-[11.5px] text-ink-3">{q.discipline}</span>
+                        )}
+                      </div>
+                      <p className="m-0 line-clamp-3">
+                        <Colored text={stem} colors={sharedColors} />
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-line-soft/80">
+                      <button
+                        type="button"
+                        onClick={() => handleLinkToQuestion(q)}
+                        className="h-8 px-3 rounded-lg bg-white hover:bg-canvas text-ink text-[12.5px] font-semibold border border-line inline-flex items-center gap-1.5 cursor-pointer shadow-2xs transition-colors"
+                      >
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                        {q.questionNumber ? `Bu soruya bağla (S.${q.questionNumber})` : 'Bu taslağa bağla'}
+                      </button>
+                      <span className="text-[12px] text-ink-3">
+                        veya çoklu seçim yapıp birleştirebilirsin.
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Ortak kelimeler renk kılavuzu */}
+            <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
+
+            {/* Seçim yapıldığında ortaya çıkan bağlamsal çubuk */}
+            {selectedMatchIds.size > 0 && (
+              <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 sm:p-3.5 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="w-6 h-6 rounded-full bg-accent text-white text-[12px] font-bold flex items-center justify-center shrink-0">
+                    {selectedMatchIds.size}
+                  </span>
+                  <span className="text-[13px] font-medium truncate">
+                    {selectedMatchIds.size === 1
+                      ? '1 soru seçildi'
+                      : `${selectedMatchIds.size} soru seçildi`}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    type="button"
+                    onClick={clearSelection}
+                    className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-[12px] font-medium cursor-pointer transition-colors"
+                  >
+                    İptal
+                  </button>
+                  <button
+                    type="button"
+                    disabled={isMergingSelected}
+                    onClick={handleMergeAndGroupSelected}
+                    className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-[12.5px] font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
+                  >
+                    <Layers className="w-3.5 h-3.5" />
+                    {isMergingSelected
+                      ? 'Birleştiriliyor…'
+                      : selectedMatchIds.size === 1
+                      ? 'Bu Soru ile Birleştir'
+                      : `Seçilenleri Gruplandır & Birleştir (${selectedMatchIds.size})`}
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         )}
 
         {similar.length > 0 && mode !== 'option' && (

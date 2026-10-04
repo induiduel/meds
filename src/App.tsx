@@ -708,6 +708,7 @@ export default function App() {
     authorStudentNumber?: string;
     claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
     options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
+    targetQuestionId?: string;
   }) => {
     try {
       const savedQuestion = await ApiService.addQuestionContribution({
