@@ -354,12 +354,26 @@ def decide(q: dict, hits: list[dict], idx: Index) -> dict:
 
 
 ENRICH_SYSTEM = (
-    "Sen bir tıp sınavı soru editörüsün. Sana bir soru ve KAYNAK ders notu parçası verilir. "
-    "Yalnızca KAYNAKTA geçen bilgileri kullan; dışarıdan bilgi ekleme. JSON döndür: "
-    '{"aciklama":"doğru cevabın kaynaktan 1-3 cümlelik gerekçesi (cevap bilinmiyorsa boş)",'
-    '"stem_detayli":"soru kökünün kaynağa uygun, orijinalden %10-%50 daha ayrıntılı hali; anlamı ve cevabı değişmesin",'
-    '"eksik_siklar":{"E":"kaynakta geçen makul bir çeldirici"}} '
-    "eksik_siklar yalnızca eksik harfler için; çeldirici kaynak metinde geçen bir terim/kavram olmalı, doğru cevapla aynı olamaz."
+    "Sen uzman bir tıp fakültesi öğretim üyesi ve sınav komisyonu editörüsün. "
+    "Öğrencilerin sınav çıkışı hatırda kalan yarım/eksik not ettiği tıp sorularını, amfi ders slaytındaki "
+    "kanıt parçasını kullanarak tam ve akademik bir soruya dönüştüreceksin. "
+    "DERS NOTUNDA OLMAYAN DIŞ BİLGİ EKLEME; SADECE KAYNAKTAKİ BİLGİLERİ KULLAN.\n\n"
+    "GÖREVLER:\n"
+    "1. Soru kökü eksik, yarım, bozuk veya tek kelimelikse (örn: '76) en sık ve en nadir kmp sırasıyla nedir') "
+    "bunu ders notundaki tıbbi bağlama ve terminolojiye göre tam, anlaşılır ve akademik bir soru köküne dönüştür ('stem_detayli'). "
+    "Orijinal anlamı veya doğru cevabı değiştirme.\n"
+    "2. 'aciklama': Doğru cevabın ders notundaki doğrudan gerekçesi (1-3 net akademik cümle).\n"
+    "3. 'eksik_siklar': Eksik şıklar varsa ders notundaki çeldirici terimlerle 5 şıkka tamamla.\n"
+    "4. 'metadata': Sorunun ne sorduğu, hangi klinik hedefi içerdiği ve etiketleri.\n\n"
+    "JSON formatında döndür:\n"
+    "{\n"
+    '  "stem_detayli": "Genişletilmiş ve tamamlanmış akademik soru kökü",\n'
+    '  "aciklama": "Slayttan kanıtlı doğru cevap gerekçesi",\n'
+    '  "eksik_siklar": {"D": "çeldirici 1", "E": "çeldirici 2"},\n'
+    '  "ne_sormus": "Sorunun ölçtüğü temel bilgi veya patoloji",\n'
+    '  "alt_konu": "İlgili slayt alt başlığı",\n'
+    '  "terimler": ["Hastalık1", "Belirti1", "Gen/İlaç1"]\n'
+    "}"
 )
 
 
@@ -380,12 +394,13 @@ def enrich(q: dict, chunk_text: str, chunk_id: str) -> dict | None:
         return sum(t in src_t for t in tk) / len(tk) if tk else 1.0
 
     ac = r.get("aciklama")
-    if isinstance(ac, str) and ac.strip() and q.get("answer") and sup(ac) >= 0.85:
+    if isinstance(ac, str) and ac.strip() and q.get("answer") and sup(ac) >= 0.80:
         out["explanation"] = ac.strip()
     sd = r.get("stem_detayli")
-    if isinstance(sd, str):
-        ratio = len(sd) / max(1, len(q["stem"]))
-        if 1.1 <= ratio <= 1.5 and sup(sd) >= 0.85:
+    if isinstance(sd, str) and sd.strip():
+        # Yarım/hatırda kalan sorular kökten uzayabilir (örn 30 karakterden 150 karaktere)
+        # Dolayısıyla esnek üst sınır koyulur ve kelimelerin en az %75'i kaynakla desteklenir
+        if len(sd.strip()) > len(q["stem"]) and sup(sd) >= 0.75:
             out["stem_detailed"] = sd.strip()
     es = r.get("eksik_siklar")
     if isinstance(es, dict):
@@ -398,6 +413,18 @@ def enrich(q: dict, chunk_text: str, chunk_id: str) -> dict | None:
                 added[k] = v
         if added:
             out["options_added"] = added
+
+    # Zengin Tıbbi Metadata & Taksonomi Havuzu
+    metadata_tax = {}
+    if r.get("ne_sormus"):
+        metadata_tax["ne_sormus"] = str(r["ne_sormus"]).strip()
+    if r.get("alt_konu"):
+        metadata_tax["alt_konu"] = str(r["alt_konu"]).strip()
+    if isinstance(r.get("terimler"), list):
+        metadata_tax["terimler"] = [str(t).strip() for t in r["terimler"] if str(t).strip()]
+    if metadata_tax:
+        out["taxonomy_metadata"] = metadata_tax
+
     return out or None
 
 
@@ -458,6 +485,8 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
                         base["stem_detailed"] = e["stem_detailed"]
                     if "options_added" in e:
                         base["options_added"] = e["options_added"]
+                    if "taxonomy_metadata" in e:
+                        base["taxonomy_metadata"] = e["taxonomy_metadata"]
                     base["status"] = "fixed"
                     # Dashboard canlı dönüşüm tablosuna bas
                     orig_sample = f"{u['stem'][:150]} (Şıklar: {len(u['options'])})"
