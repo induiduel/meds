@@ -9,8 +9,23 @@
     {
       "name": "medsoru-dev",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["vite", "--config", "node_modules/.medsoru-preview/vite.config.mjs"],
+      "runtimeArgs": [
+        "vite",
+        "--config",
+        "node_modules/.medsoru-preview/vite.config.mjs"
+      ],
       "port": 5174
+    },
+    {
+      "name": "medsoru-yeni",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "--port",
+        "5175",
+        "--strictPort"
+      ],
+      "port": 5175
     }
   ]
 }

@@ -1077,7 +1077,7 @@ const DeckPlayer: React.FC<{
         <button type="button" onClick={onClose} aria-label="Sunumu kapat" title="Kapat (Esc)" className={iconBtn}>
           <X className="w-5 h-5" />
         </button>
-        <div className="min-w-0 flex-1">
+        <div className="min-w-[96px] flex-1">
           <div className="text-[11.5px] text-ink-3 truncate leading-tight">
             {deck.discipline}
             {deck.instructor ? ` · ${deck.instructor}` : ''}
@@ -1104,7 +1104,7 @@ const DeckPlayer: React.FC<{
           type="button"
           onClick={() => setIsDrawerOpen(true)}
           title="Tıbbi Terimler Sözlüğü (Latin İsimler, Bakteri, Virüs ve İlaçlar)"
-          className="h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-teal-700 dark:hover:text-teal-400 text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
+          className="hidden sm:inline-flex h-9 px-2.5 rounded-[10px] bg-canvas hover:bg-white border border-line text-ink-2 hover:text-teal-700 dark:hover:text-teal-400 text-[13px] font-medium items-center gap-1.5 cursor-pointer shrink-0 transition-colors"
         >
           <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
           <span className="hidden xl:inline">Sözlük</span>
@@ -1118,7 +1118,7 @@ const DeckPlayer: React.FC<{
         </span>
 
         {/* View Mode Switcher: Interactive / Split / PDF */}
-        <div role="radiogroup" aria-label="Çalışma Modu" className="flex items-center h-9 bg-canvas rounded-[10px] p-0.5 border border-line/60">
+        <div role="radiogroup" aria-label="Çalışma Modu" className="hidden md:flex items-center h-9 bg-canvas rounded-[10px] p-0.5 border border-line/60">
           <button
             type="button"
             role="radio"
@@ -2049,12 +2049,12 @@ const SlideCanvas: React.FC<{
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
         {narrative && (
           <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
-            <div className="flex items-center justify-between gap-2 border-b border-line pb-2.5">
-              <div className="flex items-center gap-2.5 min-w-0">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2.5">
+              <div className="flex items-center gap-2.5 min-w-[min(100%,220px)] flex-1">
                 <span className="w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
                   <BookOpen className="w-4 h-4" />
                 </span>
-                <div>
+                <div className="min-w-0">
                   <span className="text-[10.5px] font-bold uppercase tracking-wider text-accent block">
                     Öğrenim Bölümü • Detaylı Müfredat Analizi
                   </span>
