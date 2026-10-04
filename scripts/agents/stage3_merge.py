@@ -46,25 +46,41 @@ STOP = set(lib.tokens("hangisi hangileri aşağıdakilerden aşağıdaki doğrud
                       "neden nedeni nedir nasıl hangi"))
 
 
-# --------------------------------------------------------------------------- önbellekli embedding
-_cache: dict[str, np.ndarray] | None = None
+# --------------------------------------------------------------------------- SSD Disk Destekli Önbellek (Zero-RAM Leak)
+import diskcache
+
+SSD_CACHE_DIR = lib.STATE_DIR / "disk_emb_cache"
+_disk_cache = diskcache.Cache(str(SSD_CACHE_DIR))
+
+# Eski pickle önbelleğini SQLite diskcache'e taşı
+if EMB_CACHE.exists() and len(_disk_cache) == 0:
+    try:
+        old_data = pickle.loads(EMB_CACHE.read_bytes())
+        with _disk_cache.transact():
+            for k, v in old_data.items():
+                _disk_cache[k] = v
+        log.info("Eski önbellekten %d vektör SSD diskcache'e aktarıldı.", len(old_data))
+    except Exception as e:
+        log.warning("Önbellek taşıma uyarısı: %s", e)
 
 
 def embed_cached(texts: list[str]) -> np.ndarray:
-    global _cache
-    if _cache is None:
-        try:
-            _cache = pickle.loads(EMB_CACHE.read_bytes())
-        except Exception:  # noqa: BLE001
-            _cache = {}
+    if not texts:
+        return np.zeros((0, 1024), dtype="float32")
+
     keys = [hashlib.sha1((lib.MODEL_EMBED + t).encode()).hexdigest() for t in texts]
-    miss = [i for i, k in enumerate(keys) if k not in _cache]
+    miss = [i for i, k in enumerate(keys) if k not in _disk_cache]
+
     if miss:
+        # GPU RTX 4060 için toplu embedding
         vecs = lib.embed([texts[i][:2000] for i in miss])
-        for i, v in zip(miss, vecs):
-            _cache[keys[i]] = v
-        EMB_CACHE.write_bytes(pickle.dumps(_cache))
-    return np.stack([_cache[k] for k in keys]) if keys else np.zeros((0, 1024), dtype="float32")
+        with _disk_cache.transact():
+            for i, v in zip(miss, vecs):
+                _disk_cache[keys[i]] = v
+
+    # Doğrudan diskcache'ten çekerek RAM sızıntısını ve swap baskısını engelle
+    results = [_disk_cache[k] for k in keys]
+    return np.stack(results) if results else np.zeros((0, 1024), dtype="float32")
 
 
 # --------------------------------------------------------------------------- yardımcılar

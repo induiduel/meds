@@ -41,6 +41,14 @@ def main():
                 out = run(s)
                 res.append(out)
                 log.error(f"{s} rc={out['rc']}: {out['tail']}") if out["rc"] else None
+                # Aşama geçişlerinde RAM ve VRAM önbelleğini tazele
+                try:
+                    import requests, gc
+                    requests.post("http://127.0.0.1:11434/api/generate", json={"model": "gemma3:4b", "keep_alive": 0}, timeout=2)
+                    requests.post("http://127.0.0.1:11434/api/generate", json={"model": "bge-m3:latest", "keep_alive": 0}, timeout=2)
+                    gc.collect()
+                except Exception:
+                    pass
                 if out["rc"]:
                     break
             delay = IDLE if not any(o["rc"] for o in res) else min(delay * 2, 1800)
