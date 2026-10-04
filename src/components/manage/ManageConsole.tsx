@@ -30,6 +30,7 @@ import {
   Send,
   Radio,
   Server,
+  Workflow,
 } from 'lucide-react';
 import type { QuestionItem, Committee, QuestionOption } from '../../types';
 import { ApiService } from '../../services/api';
@@ -38,6 +39,7 @@ import { systemHealthMonitor, SystemOverallHealth } from '../../services/systemH
 import { AdminScriptsTab } from '../AdminScriptsTab';
 import { AdminDriveSyncSettings } from '../AdminDriveSyncSettings';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
+import { DraftStudio } from './DraftStudio';
 import { ManageDraftsSection } from './ManageDraftsSection';
 import { ManageDataSection } from './ManageDataSection';
 import { Table2 } from 'lucide-react';
@@ -72,7 +74,7 @@ import {
   ManageServiceItem,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'inbox' | 'data' | 'drafts' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
+export type ManageSection = 'inbox' | 'data' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -90,6 +92,7 @@ const SECTIONS: { id: ManageSection; label: string; hint: string; icon: React.El
   { id: 'inbox', label: 'Gelen Kutusu', hint: 'Bildirim, yorum, taslak ve uyarılar', icon: Inbox },
   { id: 'data', label: 'Tüm veriler', hint: 'Listele, sırala, seç, toplu işlem, CSV', icon: Table2 },
   { id: 'drafts', label: 'Taslaklar', hint: 'Topla, birleştir, sil, düzenle, AI ile dönüştür', icon: Layers },
+  { id: 'studio', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış, terimler', icon: Workflow },
   { id: 'moderation', label: 'Moderasyon', hint: 'Hatalı soruyu gör ve düzelt', icon: Wrench },
   { id: 'users', label: 'Kullanıcılar', hint: 'Kim ne kadar işlem yaptı', icon: Users },
   { id: 'scripts', label: 'Scriptler', hint: 'İstediğin betiği çalıştır', icon: Terminal },
@@ -102,6 +105,7 @@ const SECTION_GROUP: Record<ManageSection, string> = {
   inbox: 'Genel',
   data: 'İçerik',
   drafts: 'İçerik',
+  studio: 'İçerik',
   moderation: 'İçerik',
   users: 'Topluluk',
   system: 'Sistem',
@@ -824,6 +828,19 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             <ManageDataSection adminEmail={adminEmail} questions={questions} committees={committees} onRefreshData={onRefreshData} />
           )}
 
+          {section === 'studio' && (
+            <DraftStudio
+              adminEmail={adminEmail}
+              committeeId={selectedCommitteeId}
+              committeeName={(committees || []).find((c) => c.id === selectedCommitteeId)?.name}
+              questions={questions}
+              onRefreshData={async () => {
+                await onRefreshData();
+                await reloadInbox();
+              }}
+              notify={setNotice}
+            />
+          )}
           {section === 'drafts' && (
             <ManageDraftsSection
               adminEmail={adminEmail}
