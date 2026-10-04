@@ -385,3 +385,14 @@ body {
 .ms-pen-surface { touch-action: none; -webkit-user-select: none; user-select: none; }
 .ms-swipe-stage { touch-action: pan-y pinch-zoom; overscroll-behavior-x: contain; }
 details > summary::-webkit-details-marker { display: none; }
+
+/* Alttan açılan çekmece, sağdan kayan panel, sallanan hata alanı */
+@keyframes ms-sheet-up { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes ms-slide-left { from { transform: translateX(100%); } to { transform: none; } }
+@keyframes ms-shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+.ms-sheet-up { animation: ms-sheet-up .28s cubic-bezier(.2,.8,.3,1) both; }
+.ms-slide-left { animation: ms-slide-left .26s cubic-bezier(.2,.8,.3,1) both; }
+.ms-shake { animation: ms-shake .3s; }
+@media (prefers-reduced-motion: reduce) {
+  .ms-sheet-up, .ms-slide-left, .ms-shake { animation: none; }
+}

@@ -448,7 +448,15 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
 
         {/* Detail panel */}
         {openRow && (
-          <aside className="hidden lg:flex w-[320px] shrink-0 flex-col bg-white border border-line rounded-[14px] overflow-hidden sticky top-0 max-h-[calc(100dvh-220px)]">
+          <button type="button" aria-label="Paneli kapat" onClick={() => setOpenId(null)} className="ms-fade-in lg:hidden fixed inset-0 z-40 bg-[rgba(14,26,38,0.35)] cursor-default" />
+        )}
+        {openRow && (
+          <aside
+            role="dialog"
+            aria-label="Kayıt ayrıntısı"
+            onKeyDown={(e) => e.key === 'Escape' && setOpenId(null)}
+            className="ms-slide-left lg:animate-none fixed lg:sticky z-50 lg:z-auto top-0 right-0 bottom-0 w-[min(420px,92vw)] lg:w-[320px] shrink-0 flex flex-col bg-white border-l lg:border border-line lg:rounded-[14px] overflow-hidden lg:max-h-[calc(100dvh-220px)] shadow-[-12px_0_40px_rgba(14,26,38,0.16)] lg:shadow-none"
+          >
             <div className="flex items-center gap-2 px-3.5 py-3 border-b border-line">
               <span className="text-[14px] font-semibold flex-1 truncate">{String(ds.columns[0].value(openRow)) || 'Kayıt'}</span>
               <button type="button" onClick={() => setOpenId(null)} aria-label="Kapat" className="w-8 h-8 rounded-full inline-flex items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer">

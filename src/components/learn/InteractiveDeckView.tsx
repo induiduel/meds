@@ -865,7 +865,7 @@ const DeckPlayer: React.FC<{
     }
   });
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== 'undefined' && window.innerWidth >= 1100);
-  const [tab, setTab] = useState<PanelTab>('flashcards');
+  const [tab, setTab] = useState<PanelTab>('questions');
   const [isFs, setIsFs] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const { setIsDrawerOpen, glossaryList, setCurrentSlideText } = useGlossary();
@@ -1366,10 +1366,10 @@ const DeckPlayer: React.FC<{
         {panelOpen && (
           <>
             {/* phone/tablet: bottom sheet */}
-            <button type="button" aria-label="Paneli kapat" onClick={() => setPanelOpen(false)} className="lg:hidden fixed inset-0 z-[61] bg-[rgba(14,26,38,0.35)] cursor-default" />
+            <button type="button" aria-label="Paneli kapat" onClick={() => setPanelOpen(false)} className="ms-fade-in lg:hidden fixed inset-0 z-[61] bg-[rgba(14,26,38,0.35)] cursor-default" />
             <aside
               aria-label="Etkileşim paneli"
-              className="fixed lg:static z-[62] left-0 right-0 bottom-0 max-h-[78dvh] lg:max-h-none lg:h-full rounded-t-[18px] lg:rounded-none bg-white border-t lg:border-t-0 lg:border-l border-line flex flex-col min-h-0 shadow-[0_-12px_40px_rgba(14,26,38,0.18)] lg:shadow-none"
+              className="ms-sheet-up lg:animate-none fixed lg:static z-[62] left-0 right-0 bottom-0 max-h-[78dvh] lg:max-h-none lg:h-full rounded-t-[18px] lg:rounded-none bg-white border-t lg:border-t-0 lg:border-l border-line flex flex-col min-h-0 shadow-[0_-12px_40px_rgba(14,26,38,0.18)] lg:shadow-none"
             >
               <div className="lg:hidden flex justify-center pt-2" aria-hidden="true">
                 <span className="w-10 h-1 rounded-full bg-line-2" />
@@ -2402,33 +2402,34 @@ const InteractionPanel: React.FC<{
     : ((slide as any).practiceQuestion ? [(slide as any).practiceQuestion] : []);
   const cards = slide.flashcards || [];
 
-  const tabs: { id: PanelTab; label: string }[] = [
-    { id: 'flashcards', label: `Kartlar ${cards.length}` },
-    { id: 'questions', label: `Sorular ${qs.length}` },
-    { id: 'notes', label: 'Ders Notu' },
-    { id: 'pearls', label: 'Spotlar' },
-    { id: 'ai', label: "AI'ya sor" },
-    { id: 'pdf', label: 'PDF' },
+  // Sade panel: 4 sekme. PDF üst çubuktaki görünüm seçicide; spotlar notların altında.
+  const tabs: { id: PanelTab; label: string; count?: number }[] = [
+    { id: 'questions', label: 'Kendini sına', count: qs.length },
+    { id: 'flashcards', label: 'Kartlar', count: cards.length },
+    { id: 'notes', label: 'Notlar' },
+    { id: 'ai', label: 'Sor' },
   ];
+  const active: PanelTab = tab === 'pdf' ? 'questions' : tab === 'pearls' ? 'notes' : tab;
 
   return (
     <>
-      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-6 gap-0.5 sm:gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
+      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-4 gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
         {tabs.map((t) => (
           <button
             key={t.id}
             type="button"
             role="tab"
-            aria-selected={tab === t.id}
+            aria-selected={active === t.id}
             onClick={() => setTab(t.id)}
-            className={`h-8 sm:h-9 px-1 rounded-[9px] text-[11px] sm:text-[12px] cursor-pointer truncate ${tab === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
+            className={`h-9 px-1 rounded-[9px] text-[12.5px] cursor-pointer truncate inline-flex items-center justify-center gap-1 transition-colors ${active === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
           >
             {t.label}
+            {!!t.count && <span className="font-mono text-[11px] text-ink-3">{t.count}</span>}
           </button>
         ))}
       </div>
-      <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain p-3 flex flex-col gap-3">
-        {tab === 'flashcards' && (
+      <div key={active} className="ms-pop-in flex-1 min-h-0 overflow-y-auto overscroll-contain p-3 flex flex-col gap-3">
+        {active === 'flashcards' && (
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between px-1">
               <span className="text-[12px] text-ink-3">
@@ -2442,26 +2443,21 @@ const InteractionPanel: React.FC<{
             )}
           </div>
         )}
-        {tab === 'questions' &&
+        {active === 'questions' &&
           (qs.length === 0 ? (
             <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu slayta eşleşen soru yok.</p>
           ) : (
             qs.map((q, i) => <QuizCard key={`${slide.slideNumber}-${q.id}`} q={q} n={i + 1} />)
           ))}
-        {tab === 'notes' && <SlideNotesTab slide={slide} />}
-        {tab === 'pearls' && (
+        {active === 'notes' && <SlideNotesTab slide={slide} />}
+        {active === 'notes' && (
           (deck.highYieldPearls || []).length > 0 ? (
             <SpotList items={deck.highYieldPearls || []} title="Dersin spotları" note="Dersin tamamından en çok sorulan bilgiler" compact />
           ) : (
             <p className="m-0 text-[14px] text-ink-2 px-1 py-4">Bu ders için spot bilgi yok.</p>
           )
         )}
-        {tab === 'ai' && <AskAi key={slide.slideNumber} deck={deck} slide={slide} />}
-        {tab === 'pdf' && (
-          <div className="flex-1 min-h-[460px] flex flex-col h-full rounded-xl overflow-hidden border border-line bg-white shadow-sm">
-            <DeckPdfViewer deck={deck} currentSlideNumber={slide.slideNumber} compact />
-          </div>
-        )}
+        {active === 'ai' && <AskAi key={slide.slideNumber} deck={deck} slide={slide} />}
       </div>
     </>
   );
