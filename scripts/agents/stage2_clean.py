@@ -64,10 +64,12 @@ def llm_fix_is_safe(orig: str, fixed: str) -> bool:
 
 
 FIX_SYSTEM = (
-    "Sen bir Türkçe tıp metni düzeltmenisin. SADECE yazım, imla, Türkçe karakter (ç ğ ı İ ö ş ü) ve bozuk harf "
-    "hatalarını düzelt. Anlamı değiştirme, bilgi ekleme, çıkarma, özetleme, sıra değiştirme YAPMA. "
-    "Sayıları, birimleri, kısaltmaları, gen/ilaç adlarını ve satır yapısını aynen koru. "
-    "Yalnızca düzeltilmiş metni yaz, açıklama yazma."
+    "Sen bir Türkçe tıp metni düzeltmenisin. Aşağıdaki metin OCR taramasından çıkmış hatalı bir tıp fakültesi ders notudur.\n"
+    "Metnin tıbbi bağlamını bozmadan, kelimelerdeki harf ve rakam hatalarını (örneğin 0 yerine O, 1 yerine I, "
+    "'5taf11ococus' yerine 'Staphylococcus', 'M1yokard' yerine 'Miyokard' gibi) düzelt ve geçerli tıbbi terminolojiye uygun hale getir.\n"
+    "Anlamı değiştirme, dışarıdan bilgi ekleme, çıkarma veya özetleme yapma. "
+    "Sayıları, birimleri, kısaltmaları ve gen/ilaç adlarını aynen koru. "
+    "Yalnızca düzeltilmiş nihai metni yaz, açıklama ekleme."
 )
 
 

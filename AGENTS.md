@@ -108,11 +108,17 @@ erDiagram
 
 ## 4. Boru Hattı Aşamaları (Execution Pipeline)
 
-### Aşama 1: Ham Çıkarım (`stage1_extract.py`)
-- `downloads/` altındaki PDF ve PPTX dosyalarını PyMuPDF ve Qwen3-VL ile tarar. Metinleri `temp1/` altına JSON formatında yazar.
+### Aşama 1: Ham Çıkarım (`read_document.py` / `stage1_extract`)
+- `downloads/` altındaki PDF ve PPTX dosyalarını PyMuPDF, EasyOCR/Tesseract ve Qwen3-VL ile tarar. Metinleri `temp1/` altına JSON formatında yazar.
+- **İleri Seviye OCR İyileştirme Mimarisi (Faz 3 Sonrası Geri Dönüş Standardı):**
+  1. **Görüntü Ön İşleme (Pre-Processing):** Görseller Lanczos algoritmasıyla 2x büyütülür (300 DPI eşdeğeri), gri tonlama ve kontrast adaptasyonu uygulanır.
+  2. **Görüntü Dilimleme (Image Tiling / Slicing):** Yoğun ve çok sütunlu slaytlar 2x2 kadrana (quadrants) bölünerek Qwen-VL downsampling kaybı önlenir.
+  3. **VLM İçin Katı OCR Promptu:** Modele yorum yapmayan ve tıbbi tabloları Markdown formatında aktaran katı sistem promptu dayatılır.
+  4. **Hibrit OCR Hiyerarşisi:** Önce PyMuPDF dijital metin, ardından GPU EasyOCR / Tesseract, yetersiz kalınırsa Qwen3-VL devreye girer.
 
 ### Aşama 2: Türkçe Onarım ve Soru Ayrıştırma (`stage2_clean.py`)
 - OCR gürültülerini temizler, kırık hece ve Türkçe karakterleri düzeltir.
+- **LLM ile Post-OCR Tıbbi Onarım (Gemma 3 / Qwen):** OCR motorunun karıştırdığı harf/rakam hataları (0->O, 1->I) ve tıbbi terimler (`5taf11ococus` -> `Staphylococcus`) tıbbi bağlam bozulmadan onarılır.
 - Çıkmış sorulardan `no`, `stem` ve `A-E` seçeneklerini ayıklar (`temp2/`).
 - **Destek Oranı:** Soru içeriği amfi metninde en az %80 doğrulanmalıdır (`support_ratio >= 0.80`).
 

@@ -56,7 +56,62 @@ def clean_raw(text: str) -> str:
     return text.replace("\r\n", "\n").strip()
 
 
+def preprocess_image_for_ocr(pil_img):
+    """
+    1. Görüntü Ön İşleme (Pre-Processing) Pipelini:
+    - 2x Upscaling (LANCZOS)
+    - Kontrast artırma ve binarizasyon
+    """
+    try:
+        from PIL import ImageEnhance, ImageOps
+        # Çözünürlük Büyütme (Upscaling)
+        w, h = pil_img.size
+        if w < 1200 or h < 900:
+            pil_img = pil_img.resize((w * 2, h * 2), Image.Resampling.LANCZOS)
+        # Gri tonlama & Kontrast artırma
+        gray = ImageOps.grayscale(pil_img)
+        enhancer = ImageEnhance.Contrast(gray)
+        adjusted = enhancer.enhance(1.6)
+        return adjusted
+    except Exception:
+        return pil_img
+
+
+def slice_image_quadrants(pil_img) -> list:
+    """
+    2. Görüntü Dilimleme (Image Tiling / Slicing):
+    Büyük ve çok yazılı slaytları 2x2 4 kadrana bölerek Qwen-VL downsampling kaybını engeller.
+    """
+    w, h = pil_img.size
+    if w < 1000 or h < 800:
+        return [pil_img]
+    mid_x, mid_y = w // 2, h // 2
+    quadrants = [
+        pil_img.crop((0, 0, mid_x, mid_y)),          # Sol üst
+        pil_img.crop((mid_x, 0, w, mid_y)),          # Sağ üst
+        pil_img.crop((0, mid_y, mid_x, h)),          # Sol alt
+        pil_img.crop((mid_x, mid_y, w, h)),          # Sağ alt
+    ]
+    return quadrants
+
+
 def ocr_image(img) -> str:
+    """
+    4. Hibrit OCR Mimarisi:
+    Önce EasyOCR (varsa) veya Tesseract çalıştırılır.
+    """
+    # EasyOCR kontrolü
+    try:
+        import easyocr
+        reader = easyocr.Reader(['tr', 'en'], gpu=True)
+        results = reader.readtext(np.array(img), detail=0)
+        easy_text = " ".join(results).strip()
+        if easy_text and not lib.is_ocr_garbage(easy_text):
+            return easy_text
+    except Exception:
+        pass
+
+    # Tesseract OCR
     import pytesseract
     try:
         return pytesseract.image_to_string(img, lang=OCR_LANG, config="--oem 1 --psm 6")
@@ -64,14 +119,18 @@ def ocr_image(img) -> str:
         return ""
 
 
-def vision_ocr(png_bytes: bytes) -> str:
-    """Yerel Ollama görsel modeliyle (qwen3-vl:8b) sayfayı okur."""
+def vision_ocr_single(png_bytes: bytes) -> str:
+    """Tekil parça için Qwen3-VL ile katı promptlu OCR."""
     import requests
 
+    # 3. VLM İçin Katı OCR Promptu (Strict Prompting)
     prompt = (
-        "Sen uzman bir tıp OCR okuyucususun. Bu tıbbi görseldeki/slayttaki tüm metinleri, "
-        "tabloları ve yazıları Türkçe karakterleri (ç ğ ı İ ö ş ü) koruyarak, "
-        "yorum yapmadan olduğu gibi yaz. Eğer görselde okunabilir bir metin yoksa sadece BOŞ yaz."
+        "Sen yüksek hassasiyetli bir tıbbi OCR motorusun. "
+        "Sana verilen görseldeki metni BİREBİR çıkaracaksın. Hiçbir yorum ekleme, özetleme yapma ve metni değiştirme. "
+        "Türkçe karakterleri (ç ğ ı İ ö ş ü) ve tıbbi Latince terimleri koru. "
+        "Eğer tıbbi bir tablo varsa bunu Markdown tablosu formatında ver. "
+        "Eğer görselde okunmayan bir yer varsa oraya [OKUNAMIYOR] yaz. "
+        "Okunabilir hiçbir metin yoksa sadece BOŞ yaz."
     )
     r = requests.post(
         f"{OLLAMA_URL}/api/chat",
@@ -89,6 +148,29 @@ def vision_ocr(png_bytes: bytes) -> str:
     if out.upper() in {"BOŞ", "BOS", "BOŞTUR", "YOK"}:
         return ""
     return out
+
+
+def vision_ocr(png_bytes: bytes, pil_img=None) -> str:
+    """Yerel Ollama görsel modeliyle (qwen3-vl:8b) sayfayı dilimleyerek (slicing) okur."""
+    if pil_img is None:
+        from PIL import Image
+        pil_img = Image.open(io.BytesIO(png_bytes))
+
+    # Geniş/yoğun görsellerde dilimleme (slicing) uygula
+    w, h = pil_img.size
+    if w >= 1200 and h >= 900:
+        quads = slice_image_quadrants(pil_img)
+        texts = []
+        for q in quads:
+            buf = io.BytesIO()
+            q.save(buf, format="PNG")
+            t = vision_ocr_single(buf.getvalue())
+            if t:
+                texts.append(t)
+        if texts:
+            return "\n\n".join(texts)
+
+    return vision_ocr_single(png_bytes)
 
 
 def online_web_ocr(png_bytes: bytes) -> str:
@@ -159,21 +241,24 @@ def read_image_text(pil_img, use_ocr: bool, use_vision: bool) -> tuple[str, str]
     web_text = ""
     method = "ocr"
 
-    # 1. Motor: Tesseract OCR
+    # 1. Görüntü Ön İşleme (Upscaling + Kontrast)
+    proc_img = preprocess_image_for_ocr(pil_img)
+
+    # 1. Motor: Tesseract / EasyOCR
     if use_ocr:
-        raw_tess = clean_raw(ocr_image(pil_img))
+        raw_tess = clean_raw(ocr_image(proc_img))
         if not lib.is_ocr_garbage(raw_tess):
             tess_text = raw_tess
 
     buf = None
-    # 2. Motor: Yerel Görsel Yapay Zeka (Qwen3-VL)
+    # 2. Motor: Yerel Görsel Yapay Zeka (Qwen3-VL ile Dilimleme/Slicing)
     # Tesseract yetersiz kaldıysa, kısa ise veya şüpheliyse devreye girer
     if use_vision:
         buf = io.BytesIO()
-        pil_img.save(buf, format="PNG")
+        proc_img.save(buf, format="PNG")
         png_bytes = buf.getvalue()
         try:
-            raw_vis = clean_raw(vision_ocr(png_bytes))
+            raw_vis = clean_raw(vision_ocr(png_bytes, pil_img=proc_img))
             if not lib.is_ocr_garbage(raw_vis):
                 vision_text = raw_vis
                 method = "vision"
