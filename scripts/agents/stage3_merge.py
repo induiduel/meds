@@ -155,11 +155,12 @@ def doc_metadata(text: str, use_llm: bool) -> dict:
 def build_sources(use_llm: bool, state: lib.State) -> list[dict]:
     cur_items = curriculum_index()
     sources = []
-    for f in sorted(lib.TEMP2.rglob("*.json")):
+    all_files = [f for f in sorted(lib.TEMP2.rglob("*.json")) if lib.read_json(f, {}).get("meta", {}).get("doc_type") == "lecture_slide"]
+    total_files = len(all_files)
+    for idx_f, f in enumerate(all_files, 1):
         d = lib.read_json(f, {})
-        if d.get("meta", {}).get("doc_type") != "lecture_slide":
-            continue
         rel = d["rel"]
+        state.set_progress(rel, idx_f, total_files, f"Aşama 3 Slayt RAG & Vektör ({idx_f}/{total_files})")
         sid, did = find_source_id(rel)
         h = d.get("source_sha256") or ""
         key = f"{sid}:{h}:{len(cur_items)}"
@@ -412,9 +413,11 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
     else:
         QV = None
     ch_by_id = {c["chunk_id"]: c for c in idx.chunks}
-    prev = {r["question_id"]: r for r in lib.read_jsonl(lib.TEMP3 / "questions.jsonl")}
+    total_u = len(uniq)
     for i, u in enumerate(uniq):
         qid = hashlib.sha1(qkey(u).encode()).hexdigest()[:12]
+        if i % 5 == 0:
+            state.set_progress("Sorular", i + 1, total_u, f"Soru Eşleştirme & Zenginleştirme ({i+1}/{total_u})")
         base = {"question_id": qid, "donem": u["donem"], "kurul": u["kurul_hint"], "stem": u["stem"], "options": u["options"],
                 "answer": u.get("answer"), "explanation": None, "issues": list(u.get("issues", [])),
                 "seen_in": u["seen_in"][:12], "extraction": u.get("extraction"), "evidence": [], "ders": None,
@@ -456,6 +459,10 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
                     if "options_added" in e:
                         base["options_added"] = e["options_added"]
                     base["status"] = "fixed"
+                    # Dashboard canlı dönüşüm tablosuna bas
+                    orig_sample = f"{u['stem'][:150]} (Şıklar: {len(u['options'])})"
+                    new_sample = f"{base.get('stem_detailed') or u['stem'][:150]} (Açıklama: {base.get('explanation', '')[:100]}...)"
+                    state.add_transformation(f"Kurul {base['kurul']} / Soru {u.get('no', '')}", "Aşama 3 Soru Zenginleştirme", orig_sample, new_sample)
             out.append(base)
         else:
             base["status"] = "needs_fix"
