@@ -37,7 +37,7 @@ def main():
         res = []
         try:
             ollama_up()
-            for s in ("stage2_clean.py", "stage3_merge.py", "stage4_database.py"):
+            for s in ("stage2_clean.py", "stage3_merge.py", "stage4_database.py", "../advanced_ai/orchestrator.py"):
                 out = run(s)
                 res.append(out)
                 log.error(f"{s} rc={out['rc']}: {out['tail']}") if out["rc"] else None
