@@ -207,15 +207,42 @@ def ollama_models() -> set[str]:
         return set()
 
 
+def is_gemma_running() -> bool:
+    """Ollama üzerinde şu an aktif olarak çalışan modeller arasında gemma var mı kontrol eder."""
+    import requests
+    try:
+        r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=3)
+        if r.ok:
+            running = r.json().get("models", [])
+            return any("gemma" in m.get("name", "").lower() for m in running)
+    except Exception:
+        pass
+    return False
+
+
 def chat(model: str, prompt: str, system: str | None = None, as_json: bool = False, timeout: int = 120,
          num_predict: int = 2048, retries: int = 1, num_ctx: int = 8192, num_gpu: int | None = None):
-    """Yerel model çağrısı. num_gpu belirtilirse katmanların çoğu CPU'ya verilerek %90 CPU / %10 GPU çalıştırılabilir."""
+    """Yerel model çağrısı.
+    Kural: Gemma aktif olarak çalışıyorsa diğer modeller %90 CPU / %10 GPU (num_gpu=3) ile çalışır.
+    Gemma çalışmıyorsa diğer tüm modeller tam GPU hızında serbestçe çalışır.
+    """
     import requests
 
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
     options = {"temperature": 0, "num_predict": num_predict, "num_ctx": num_ctx}
+
+    # Dinamik GPU Yönetimi
     if num_gpu is not None:
         options["num_gpu"] = num_gpu
+    elif "gemma" not in model.lower():
+        # Model gemma harici bir model (örn: qwen, deepseek, medgemma vb.)
+        if is_gemma_running():
+            # Gemma çalışıyor -> VRAM çakışmasını önlemek için %90 CPU / %10 GPU
+            options["num_gpu"] = 3
+        else:
+            # Gemma çalışmıyor -> GPU tamamen serbest, tam donanım hızlandırma!
+            pass
+
     body = {"model": model, "messages": msgs, "stream": False, "think": False,
             "options": options}
     if as_json:
