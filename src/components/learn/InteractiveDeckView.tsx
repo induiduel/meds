@@ -43,6 +43,7 @@ import {
   Cloud,
   Compass,
   Lock,
+  ListTree,
 } from 'lucide-react';
 import { DeckPdfViewer } from './DeckPdfViewer';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
@@ -869,6 +870,23 @@ const DeckPlayer: React.FC<{
   const [tab, setTab] = useState<PanelTab>('questions');
   const [isFs, setIsFs] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  // Tasarımdaki sol içindekiler: geniş ekranda açık başlar, tercih hatırlanır
+  const [tocOpen, setTocOpen] = useState(() => {
+    try {
+      const v = localStorage.getItem('medsoru_learn_toc');
+      if (v) return v === '1';
+    } catch {
+      /* ignore */
+    }
+    return typeof window !== 'undefined' && window.innerWidth >= 1280;
+  });
+  useEffect(() => {
+    try {
+      localStorage.setItem('medsoru_learn_toc', tocOpen ? '1' : '0');
+    } catch {
+      /* ignore */
+    }
+  }, [tocOpen]);
   const { setIsDrawerOpen, glossaryList, setCurrentSlideText } = useGlossary();
   const rootRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -1082,6 +1100,16 @@ const DeckPlayer: React.FC<{
         <button type="button" onClick={onClose} aria-label="Sunumu kapat" title="Kapat (Esc)" className={iconBtn}>
           <X className="w-5 h-5" />
         </button>
+        <button
+          type="button"
+          onClick={() => setTocOpen((v) => !v)}
+          aria-pressed={tocOpen}
+          aria-label="İçindekiler"
+          title="İçindekiler"
+          className={`${iconBtn} hidden lg:flex ${tocOpen ? 'bg-accent-soft text-accent' : ''}`}
+        >
+          <ListTree className="w-5 h-5" />
+        </button>
         <div className="min-w-[96px] flex-1">
           <div className="text-[11.5px] text-ink-3 truncate leading-tight">
             {deck.discipline}
@@ -1260,7 +1288,43 @@ const DeckPlayer: React.FC<{
       )}
 
       {/* Stage + panel */}
-      <div className={`flex-1 min-h-0 grid grid-cols-1 ${panelOpen ? 'lg:grid-cols-[minmax(0,1fr)_420px]' : ''}`}>
+      <div className="flex-1 min-h-0 flex">
+        {tocOpen && (
+          <aside aria-label="İçindekiler" className="ms-fade-in hidden lg:flex w-[248px] shrink-0 flex-col bg-white border-r border-line min-h-0">
+            <div className="px-4 pt-3 pb-1.5 text-[11px] font-semibold uppercase tracking-[.06em] text-ink-3">Bölümler · {n}</div>
+            <ol className="list-none m-0 px-2 pb-3 flex-1 min-h-0 overflow-y-auto overscroll-contain flex flex-col gap-0.5">
+              {slides.map((sl, i) => {
+                const on = i === index;
+                const done = i < index;
+                return (
+                  <li key={sl.slideNumber ?? i}>
+                    <button
+                      type="button"
+                      onClick={() => goTo(i)}
+                      aria-current={on ? 'step' : undefined}
+                      className={`w-full min-h-[34px] px-2.5 rounded-lg flex items-center gap-2 text-left text-[13px] cursor-pointer transition-colors ${
+                        on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-2 hover:bg-canvas hover:text-ink'
+                      }`}
+                    >
+                      <span
+                        className={`w-4 h-4 rounded-full shrink-0 border-[1.5px] flex items-center justify-center ${
+                          done ? 'bg-ok border-ok text-white' : on ? 'border-accent' : 'border-line-2'
+                        }`}
+                        aria-hidden="true"
+                      >
+                        {done && <Check className="w-2.5 h-2.5" strokeWidth={3.5} />}
+                      </span>
+                      <span className="min-w-0 flex-1 truncate" title={sl.title}>
+                        {sl.title || `Slayt ${i + 1}`}
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ol>
+          </aside>
+        )}
+      <div className={`flex-1 min-w-0 min-h-0 grid grid-cols-1 ${panelOpen ? 'lg:grid-cols-[minmax(0,1fr)_400px]' : ''}`}>
         <div className="min-h-0 min-w-0 relative">
           {viewMode === 'pdf' ? (
             <div className="absolute inset-0 p-2 sm:p-4 flex flex-col">
@@ -1399,6 +1463,7 @@ const DeckPlayer: React.FC<{
             </aside>
           </>
         )}
+      </div>
       </div>
 
       {/* Bottom navigation: prev · thumbnails · next */}
