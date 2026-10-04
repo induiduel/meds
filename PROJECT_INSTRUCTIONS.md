@@ -31,6 +31,52 @@ flowchart TD
     G -->|Faz 3| I["Web Sitesi (nofrostlife.com.tr / localhost:3000)"]
 ```
 
+---
+
+## 🏗️ 2.1. Genel Sistem Mimarisi (Architecture Topology)
+
+Sistem 4 bağımsız katmanın birbiriyle uyum içinde çalışması üzerine kuruludur:
+
+```mermaid
+flowchart LR
+    subgraph UI ["1. Kullanıcı & İzleme Katmanı"]
+        Web["Web Sitesi (Port 3000)"]
+        Dash["Analiz Kokpiti (Port 8085)"]
+        OpenUI["Open WebUI (Port 8080)"]
+    end
+
+    subgraph Logic ["2. Zeka & Boru Hattı Katmanı"]
+        Runner["Pipeline Runner"]
+        Watchdog["Hardware Watchdog"]
+        AdvancedAI["GraphRAG + Hybrid BM25 + MemGPT"]
+    end
+
+    subgraph Models ["3. Yerel AI Donanım Motoru (RTX 4060)"]
+        Ollama["Ollama Docker Container"]
+        Gemma["gemma3:4b (-ngl 99)"]
+        BGEM3["bge-m3:latest (batch=64)"]
+        QwenVL["qwen3-vl:8b (OCR)"]
+    end
+
+    subgraph Storage ["4. Hibrit Depolama Katmanı"]
+        SSD["NVMe SSD (Diskcache SQLite / Chunks)"]
+        PG["PostgreSQL + pgvector (Supabase)"]
+    end
+
+    UI <--> Logic
+    Logic <--> Models
+    Logic <--> Storage
+```
+
+---
+
+## 🗄️ 2.2. Veritabanı ve Veri Şeması (Data Schema)
+
+- **`rag_chunks` Tablosu:** Slayt sayfalarının 900 karakterlik semantik blokları. İçerisinde `content`, `heading_path`, `quality_score` ve 1024/768 boyutlu vektör (`embedding vector`) tutulur. `IVFFlat` kosinüs indeksi ve PostgreSQL `GIN` tam metin arama (FTS) indeksine sahiptir.
+- **`medical_graph_nodes` & `medical_graph_edges`:** Hastalıklar, semptomlar, etken mikroorganizmalar ve ilaçların yönlü bilgi grafı (`DiGraph`).
+- **`student_ai_memory`:** MemGPT tablosu; öğrencinin zayıf/başarılı olduğu komiteleri ve son çözdüğü soruları saklar.
+- **`past_questions`:** Çıkmış tıp sınav soruları (`stem`, `options: {A..E}`, `answer`, `explanation`, `status: verified/fixed`).
+
 ### Aşama Detayları:
 - **Aşama 1 (`stage1_extract.py`):** 535 dosyanın tamamı okunur. Sayfa sayfa metinler ve taranmış slaytlar Qwen3-VL ile OCR'a dökülür.
 - **Aşama 2 (`stage2_clean.py`):** Karakter bozuklukları düzeltilir, 14.000'den fazla çıkmış soru numarası, kökü ve şıklarıyla ayrıştırılır.

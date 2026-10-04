@@ -59,6 +59,35 @@ MedSoru Project/
 
 ---
 
+## 2.1. Veritabanı ve Veri Şeması (Database Architecture)
+
+Proje, hem yerel NVMe SSD önbelleğinde (SQLite/JSONL) hem de PostgreSQL / Supabase üzerinde iki katmanlı ilişkisel ve vektörel bir şema kullanır:
+
+```mermaid
+erDiagram
+    COMMITTEES ||--o{ LECTURE_SLIDES : "içerir"
+    COMMITTEES ||--o{ PAST_QUESTIONS : "içerir"
+    LECTURE_SLIDES ||--o{ RAG_CHUNKS : "bölünür"
+    RAG_CHUNKS ||--o{ MEDICAL_GRAPH_NODES : "varlık_çıkarır"
+    MEDICAL_GRAPH_NODES ||--o{ MEDICAL_GRAPH_EDGES : "bağlanır"
+    PAST_QUESTIONS ||--o{ RAG_CHUNKS : "kanıt_gösterir"
+    STUDENT_AI_MEMORY ||--o{ PAST_QUESTIONS : "çözer"
+```
+
+### PostgreSQL / Supabase Tablo Şeması:
+1. **`committees`:** Tıp kurulu/komite tanımları (`id`, `name`, `academic_year`, `target_questions`).
+2. **`lecture_slides` & `rag_chunks`:** Slayt sayfaları ve 900 karakterlik semantik paragraflar.
+   - `id`: Benzersiz chunk ID (`{source_id}:p{page}:c{chunk_index}`)
+   - `content`: Metin içeriği
+   - `heading_path`: Dizin hiyerarşisi (`["Ders Adı", "Slayt Başlığı"]`)
+   - `embedding`: BGE-M3 (1024d) veya Gemini kompakt vektör (`vector(768)`)
+   - **İndeksler:** IVFFlat (`vector_cosine_ops`), GIN (`to_tsvector('simple', content)`)
+3. **`past_questions`:** Çıkmış sınav soruları (`question_id`, `stem`, `options`, `answer`, `explanation`, `status`).
+4. **`medical_graph_nodes` & `medical_graph_edges`:** GraphRAG tıbbi bilgi grafı.
+   - `nodes`: `node_type` (`Ders`, `Konu`, `Hastalik`, `Belirti`, `Ilac`, `Gen`, `Soru`)
+   - `edges`: `relation` (`NEDEN_OLUR`, `TEDAVİ_EDER`, `SEMPTOMUDUR`, `SORGULAR`, `İÇERİR`)
+5. **`student_ai_memory`:** MemGPT öğrenci profili, dönem, hedef ve zayıf kalınan kurullar (`JSONB`).
+
 ## 3. Donanım ve Model Kuralları (ZORUNLU)
 
 1. **GPU Offloading Kuralı:**  
