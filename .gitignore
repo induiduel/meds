@@ -34,3 +34,5 @@ supabase-server/volumes/
 supabase-server/.env*
 supabase-server/local-supabase-keys.json
 supabase-server/backups/
+
+.venv-ocr/

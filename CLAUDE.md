@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+> **Önce oku:** `../PROJE_TANITIMI.md` — projenin amacı, klasör yapısı (downloads/temp1-2-3/database) ve zorunlu boru hattı. Tüm ajanlar buna uygun davranmalıdır.
+
 MedSoru: shared exam-question pool for Turkish medical school (Dönem 3). Students submit fragments of
 questions they remember; the backend retrieves matching course material / past exam questions (RAG)
 and an LLM reconstructs the full question grounded on those sources. See README.md for the flow.
@@ -69,3 +71,17 @@ by many questions, so exact match is not expected). Stem-only and word-only were
 - `requireAdmin` trusts the `x-admin-email` header and loopback IPs (tunnel traffic is loopback):
   effectively unauthenticated. AI endpoints have no auth or rate limit.
 - Lecture data contains duplicate decks, chat exports with personal data, and empty OCR pages.
+
+## Paths
+
+- Proje kodu: `/home/indu/Masaüstü/MedSoru Project/meds`
+- Veritabanı klasörü (PDF'ler, `database_json/`, redakte sorular): `/home/indu/Masaüstü/MedSoru Project/meds_database`
+  — `.env` içindeki `MEDS_DATABASE_DIR` bunu gösterir; script/server varsayılanı da aynıdır. Yeni kodda bu yolu
+  hardcode etme, `process.env.MEDS_DATABASE_DIR` kullan.
+
+## Yeni veri hattı (scripts/pipeline/)
+
+Akış: Drive → `meds_downloads` (ham) → `meds_temp` (ara) → `meds_database` (temiz). Kapsam: Dönem 3.
+`00-init` iskelet, `01-inventory` envanter (`_manifest.json`), `02-download` artımlı indirme
+(`_downloads.json` durum; ücretsiz herkese açık indirme, olmazsa `GOOGLE_SERVICE_ACCOUNT_FILE`).
+Mevcut Supabase verisi yeni hat hazır olana kadar kullanılır, sonra silinmez: "eski" olarak saklanır.
