@@ -74,6 +74,39 @@ class MedicalGraphRAG:
         edges_out = [{"source": u, "target": v, "relation": sub.edges[u, v].get("relation", "BAĞLI")} for u, v in sub.edges]
         return {"nodes": nodes_out, "edges": edges_out}
 
+    def query_triples_text(self, term: str, depth: int = 2, max_triples: int = 15) -> str:
+        """
+        GraphRAG verilerini LLM'in doğrudan anlayacağı metinsel "Triple" (Üçlü) formatına çevirir:
+        <GRAF_İLİŞKİLERİ>
+        [Hastalık: Kistik Fibrozis] --> (Neden Olur) --> [Semptom: Bronşektazi]
+        </GRAF_İLİŞKİLERİ>
+        """
+        sub_data = self.query_subgraph(term, depth=depth)
+        edges = sub_data.get("edges", [])
+        if not edges:
+            return ""
+
+        rel_map = {
+            "NEDEN_OLUR": "Neden Olur",
+            "TEDAVİ_EDER": "Tedavi Eder",
+            "SEMPTOM_GÖSTERİR": "Semptomu Gösterir",
+            "İÇERİR": "İçerir",
+            "BAHSEDER": "Bahseder",
+            "SORGULAR": "Sorgular",
+            "REFERANS_ALIR": "Referans Alır",
+            "BAĞLI": "İlişkilidir"
+        }
+
+        triples = []
+        for e in edges[:max_triples]:
+            src = e["source"]
+            tgt = e["target"]
+            rel = rel_map.get(e.get("relation", ""), e.get("relation", "İlişkilidir"))
+            triples.append(f"[{src}] --> ({rel}) --> [{tgt}]")
+
+        formatted_triples = "\n".join(triples)
+        return f"<GRAF_İLİŞKİLERİ>\n{formatted_triples}\n</GRAF_İLİŞKİLERİ>"
+
     def save(self, path: Path = None):
         target = path or self.graph_path
         if target:

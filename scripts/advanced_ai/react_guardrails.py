@@ -39,24 +39,29 @@ class MedicalReActAgent:
         self.tools[name] = fn
         self.tool_descriptions[name] = description
 
-    def execute_react_cycle(self, question: str, max_steps: int = 4) -> Dict[str, Any]:
+    def execute_react_cycle(self, question: str, max_steps: int = 4, graph_triples: str = "") -> Dict[str, Any]:
         """
-        ReAct Döngüsü:
-        Thought: Modelin sonraki adımı planlaması
-        Action: Fonksiyon çağırma [FonksiyonAdı(arg=...)]
-        Observation: Fonksiyon çıktısı
-        Final Answer: Nihai yanıt
+        ReAct Döngüsü (XML ve Zorunlu CoT Akıl Yürütme ile Güçlendirilmiş):
+        <THOUGHT>: Adım adım klinik düşünce zinciri
+        <ACTION>: Fonksiyon çağırma [FonksiyonAdı(arg=...)]
+        <OBSERVATION>: Fonksiyon çıktısı
+        <YANIT>: Tıbbi kanıtlara dayalı nihai cevap
         """
         prompt_tools = "\n".join([f"- {name}: {desc}" for name, desc in self.tool_descriptions.items()])
+        graph_section = f"\n{graph_triples}\n" if graph_triples else ""
+        
         history = (
-            f"Kullanıcı Sorusu: {question}\n\n"
-            f"Kullanabileceğin Araçlar:\n{prompt_tools}\n\n"
+            "Sen uzman bir tıp fakültesi asistanısın. Yalnızca amfi ders slaytlarındaki kanıtlara dayan.\n"
+            f"{graph_section}"
+            f"<SORU>\n{question}\n</SORU>\n\n"
+            f"<KULLANILABİLİR_ARAÇLAR>\n{prompt_tools}\n</KULLANILABİLİR_ARAÇLAR>\n\n"
             "Format Kuralları:\n"
-            "Thought: Ne yapman gerektiğini açıkla.\n"
-            "Action: AracAdi(parametre)\n"
-            "Action sonrasında bekle, Observation sistem tarafından verilecek.\n"
-            "Bilgiyi doğruladığında:\n"
-            "Final Answer: Tıbbi kanıtlara dayalı net cevabını yaz.\n"
+            "<THOUGHT>: Klinik bulguları analiz et ve sonraki adımı planla.\n"
+            "<ACTION>: AracAdi(parametre)\n"
+            "(Action sonrasında bekle, <OBSERVATION> sistem tarafından verilecektir)\n\n"
+            "Soruyu çözdüğünde doğrudan:\n"
+            "<ANALİZ>: 1. Soru kökündeki anahtar klinik bulgu. 2. Slayt kanıtları. 3. Yanlış şıkların elenmesi.\n"
+            "<YANIT>: Doğru şık ve slayttan kanıtlı kısa akademik gerekçe.\n"
         )
 
         steps = []
@@ -65,8 +70,16 @@ class MedicalReActAgent:
             response = self.llm_chat_fn(history)
             history += "\n" + response
 
-            # Final Answer kontrolü
-            if "Final Answer:" in response:
+            # Final Answer / <YANIT> kontrolü
+            if "<YANIT>" in response:
+                final_ans = response.split("<YANIT>")[-1].split("</YANIT>")[0].strip()
+                return {
+                    "status": "success",
+                    "final_answer": final_ans,
+                    "steps": steps,
+                    "full_trace": history
+                }
+            elif "Final Answer:" in response:
                 final_ans = response.split("Final Answer:")[-1].strip()
                 return {
                     "status": "success",
@@ -75,8 +88,8 @@ class MedicalReActAgent:
                     "full_trace": history
                 }
 
-            # Action tespiti
-            action_match = re.search(r"Action:\s*(\w+)\((.*?)\)", response)
+            # Action tespiti (Action: ... veya <ACTION>...</ACTION>)
+            action_match = re.search(r"(?:<ACTION>|Action:\s*)(\w+)\((.*?)\)(?:</ACTION>)?", response)
             if action_match:
                 func_name = action_match.group(1)
                 func_arg = action_match.group(2).strip("\"'")

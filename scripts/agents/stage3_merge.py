@@ -201,16 +201,23 @@ def build_sources(use_llm: bool, state: lib.State) -> list[dict]:
                "extraction": "mixed" if any(p.get("method") not in ("metin", None) for p in d["pages"]) else "text",
                "quality_score": d["quality"], "konu": konu["konu"] if konu else None, "konu_eslesme_skoru": kscore,
                "metadata": md, "metadata_uretici": lib.MODEL_TEXT if md else None}
-        # chunk'lar
+        # chunk'lar (Öksüz Veri Çözümü: Context Metadata Injection)
         chunks = []
+        kurul_str = f"Komite {meta['kurul']}" if meta.get("kurul") else "Genel Komite"
+        ders_str = src["ders"] or "Genel Tıp"
+        konu_str = src["konu"] or title
+        
         for p in d["pages"]:
-            head = (p["text"].split("\n", 1)[0] or "")[:120]
+            head = (p["text"].split("\n", 1)[0] or "").strip()[:120]
+            context_prefix = f"[{kurul_str} | {ders_str} | Başlık: {head or konu_str}]\n"
             for ci, ps in enumerate(split_passages(p["text"])):
+                # Metnin başına statik bağlam bilgisini ekle (BGE-M3 ve LLM için öksüz kalmayı önler)
+                enriched_text = f"{context_prefix}{ps}"
                 chunks.append({"chunk_id": f"{sid}:p{p['n']}:c{ci}", "source_id": sid, "page": p["n"],
                                "heading_path": [src["ders"] or "", head] if head else [src["ders"] or ""],
-                               "text": ps, "doc_type": "lecture_slide", "donem": meta["donem"], "kurul": meta["kurul"],
+                               "text": enriched_text, "raw_text": ps, "doc_type": "lecture_slide", "donem": meta["donem"], "kurul": meta["kurul"],
                                "ders": src["ders"], "konu": src["konu"], "quality_score": p["quality"],
-                               "hash": hashlib.sha1(ps.encode()).hexdigest()[:16]})
+                               "hash": hashlib.sha1(enriched_text.encode()).hexdigest()[:16]})
         lib.write_json(SRC_DIR / f"{sid}.json", src)
         lib.write_jsonl(CHUNK_DIR / f"{sid}.jsonl", chunks)
         if chunks and lib.ollama_up():
@@ -377,21 +384,18 @@ def decide(q: dict, hits: list[dict], idx: Index) -> dict:
 
 
 ENRICH_SYSTEM = (
-    "Sen uzman bir tıp fakültesi öğretim üyesi ve sınav komisyonu editörüsün. "
-    "Öğrencilerin sınav çıkışı hatırda kalan yarım/eksik not ettiği tıp sorularını, amfi ders slaytındaki "
-    "kanıt parçasını kullanarak tam ve akademik bir soruya dönüştüreceksin. "
-    "DERS NOTUNDA OLMAYAN DIŞ BİLGİ EKLEME; SADECE KAYNAKTAKİ BİLGİLERİ KULLAN.\n\n"
-    "GÖREVLER:\n"
-    "1. Soru kökü eksik, yarım, bozuk veya tek kelimelikse (örn: '76) en sık ve en nadir kmp sırasıyla nedir') "
-    "bunu ders notundaki tıbbi bağlama ve terminolojiye göre tam, anlaşılır ve akademik bir soru köküne dönüştür ('stem_detayli'). "
-    "Orijinal anlamı veya doğru cevabı değiştirme.\n"
-    "2. 'aciklama': Doğru cevabın ders notundaki doğrudan gerekçesi (1-3 net akademik cümle).\n"
-    "3. 'eksik_siklar': Eksik şıklar varsa ders notundaki çeldirici terimlerle 5 şıkka tamamla.\n"
-    "4. 'metadata': Sorunun ne sorduğu, hangi klinik hedefi içerdiği ve etiketleri.\n\n"
+    "Sen uzman bir tıp fakültesi öğretim üyesi ve sınav komisyonu editörüsün.\n"
+    "DERS NOTUNDA OLMAYAN DIŞ BİLGİ EKLEME; SADECE SANA VERİLEN <SLAYT_KANITLARI> İÇERİĞİNDEKİ BİLGİLERİ KULLAN.\n\n"
+    "ZORUNLU DÜŞÜNCE ZİNCİRİ (CHAIN-OF-THOUGHT):\n"
+    "1. Aşama: Soru kökündeki anahtar klinik bulguyu ve patolojiyi tespit et.\n"
+    "2. Aşama: Bu bulguyu <SLAYT_KANITLARI> içindeki ilgili cümlelerle eşleştir.\n"
+    "3. Aşama: Şıkların doğruluğunu ve eksik çeldiricileri slayta göre doğrula.\n"
+    "4. Aşama: Soru kökünü akademik tıp diline genişletip sonucu JSON olarak bildir.\n\n"
     "JSON formatında döndür:\n"
     "{\n"
+    '  "analiz": "1-3. aşamaların adım adım klinik düşünce zinciri",\n'
     '  "stem_detayli": "Genişletilmiş ve tamamlanmış akademik soru kökü",\n'
-    '  "aciklama": "Slayttan kanıtlı doğru cevap gerekçesi",\n'
+    '  "aciklama": "Slayttan kanıtlı doğru cevap gerekçesi (1-3 net akademik cümle)",\n'
     '  "eksik_siklar": {"D": "çeldirici 1", "E": "çeldirici 2"},\n'
     '  "ne_sormus": "Sorunun ölçtüğü temel bilgi veya patoloji",\n'
     '  "alt_konu": "İlgili slayt alt başlığı",\n'
@@ -403,9 +407,20 @@ ENRICH_SYSTEM = (
 def enrich(q: dict, chunk_text: str, chunk_id: str) -> dict | None:
     import json as _j
 
-    payload = {"soru": {"kok": q["stem"], "siklar": q["options"], "cevap": q.get("answer")}, "kaynak": chunk_text[:2500]}
+    # XML Etiketleri ile Yapılandırılmış Prompt (Structured Context Injection)
+    structured_user_prompt = (
+        "Aşağıdaki <SLAYT_KANITLARI> içeriğine dayanarak <SORU>yu incele ve zenginleştir:\n\n"
+        f"<SLAYT_KANITLARI>\n{chunk_text[:2500]}\n</SLAYT_KANITLARI>\n\n"
+        f"<SORU>\n"
+        f"Kök: {q['stem']}\n"
+        f"Şıklar: {_j.dumps(q.get('options', {}), ensure_ascii=False)}\n"
+        f"Doğru Cevap: {q.get('answer') or 'Bilinmiyor'}\n"
+        f"</SORU>\n\n"
+        "Yukarıdaki adımlara uyarak sonucu geçerli bir JSON olarak döndür."
+    )
+
     try:
-        r = lib.chat(lib.MODEL_TEXT, _j.dumps(payload, ensure_ascii=False), system=ENRICH_SYSTEM, as_json=True, num_predict=900)
+        r = lib.chat(lib.MODEL_TEXT, structured_user_prompt, system=ENRICH_SYSTEM, as_json=True, num_predict=900)
     except Exception as e:  # noqa: BLE001
         log.warning("zenginleştirme hatası: %s", e)
         return None

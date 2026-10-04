@@ -118,13 +118,16 @@ erDiagram
 
 ### Aşama 3: RAG Bölümleme, Vektörleme & Zenginleştirme (`stage3_merge.py`)
 - Slaytları 900 karakter hedef ve 120 karakter overlap ile doğal paragraf sınırlarından böler (`split_passages`).
+- **Öksüz Veri Çözümü (Metadata Injection):** Her 900 karakterlik bloğun en başına `[Komite X | Ders | Başlık: ...]` öneki statik olarak gömülür; BGE-M3 vektörlemesi ve LLM bağlamı hiçbir zaman kaybolmaz.
 - Her chunk `bge-m3` ile 1024 boyutlu vektöre dönüştürülüp SSD `diskcache`'e kaydedilir.
 - Çıkmış sorular amfi slaytlarıyla kosinüs benzerliği + IDF terim örtüşmesiyle eşleştirilir.
 - **Hakem Ajan (Judge Agent) Kuralları:**
   - `support_ratio >= 0.85`: Otomatik onayla (`verified`), zenginleştirmeye al (`fixed`).
   - `0.65 <= support_ratio < 0.85`: Sınır vaka; `referee_queue` kuyruğuna atılarak DeepSeek-R1 Hakem Ajan incelemesine yönlendirilir.
   - `support_ratio < 0.65`: Eksik slayt / inceleme (`needs_fix` / `rejected`).
-- Eksik veya yarım sorular amfi slaytındaki kanıt metniyle akademik olarak detaylandırılır (`stem_detailed`), 5 şıkka tamamlanır (`options_added`) ve açıklaması (`explanation`) eklenir.
+- **Gemma 3 Düşünce Zinciri (CoT) & XML Yapılandırılmış Prompt:**
+  - LLM girdi ve çıktıları `<SLAYT_KANITLARI>`, `<SORU>`, `<ANALİZ>` ve `<YANIT>` XML etiketleriyle sınırlandırılır.
+  - Zenginleştirme ve çözümlerde 4 adımlı sıralı klinik akıl yürütme (Chain-of-Thought) zorunlu tutulur.
 
 ### Aşama 4: Doğrulama ve Veritabanı Taşıma (`stage4_database.py`)
 - Sadece `status == "verified"` veya `status == "fixed"` olan sorular `meds_database/` dizinine ve Supabase tablolarına aktarılır.
@@ -132,11 +135,12 @@ erDiagram
 
 ### Aşama 5: Gelişmiş AI Orkestratörü (`scripts/advanced_ai/orchestrator.py`)
 - Slayt ve sorular üzerinden **GraphRAG Tıbbi Bilgi Grafı** inşa eder (`medical_knowledge_graph.json`, ego-graph radius=2).
+  - **Graph Triples Formatı:** DiGraph ilişkileri LLM'e ham JSON yerine `[Varlık] --> (İlişki) --> [Varlık]` biçiminde metinsel üçlüler halinde beslenir.
 - `rank-bm25` indekslerini BGE-M3 matrisleriyle birleştirerek **Hibrit Arama Motorunu** ayağa kaldırır.
   - Sıralama standardı: **Reciprocal Rank Fusion (RRF)**:
     $$RRF\_Score(d) = \frac{1}{60 + rank_{dense}(d)} + \frac{1}{60 + rank_{sparse}(d)}$$
   - Çapraz Dikkat benzetimli hafif **Reranker** ile Top-20 aday Top-5'e indirgenerek LLM prompt yükü hafifletilir.
-- MemGPT öğrenci profilini ve ReAct guardrail denetimlerini başlatır.
+- **Bağlam Kanamasını (Context Bleeding) Engelleme:** Soru çözerken Ollama mesaj geçmişi her soruda sıfırlanır, MemGPT belleği sadece tekil sistem talimatı olarak enjekte edilir.
 
 ---
 

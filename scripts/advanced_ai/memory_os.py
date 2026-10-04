@@ -81,3 +81,14 @@ class HierarchicalMemoryOS:
             f"- Hakim Olunan Konular: {mastered}\n"
             f"- Öğrenci Notu: {self.profile.notes or 'Belirtilmedi'}\n"
         )
+
+    def render_isolated_system_instruction(self) -> str:
+        """
+        Bağlam Kanamasını (Context Bleeding) Önleyen Sistem Talimatı:
+        Eski sohbet geçmişi (messages) yüklenmez. Yalnızca öğrencinin zayıf olduğu
+        konular tekil bir sistem yönergesi olarak verilir.
+        """
+        if self.profile.weak_topics:
+            topics = ", ".join(self.profile.weak_topics[:3])
+            return f"Öğrenci {topics} konularında eksik; bu alanlardaki mekanizmaları ve kanıtları ayrıntılı açıkla."
+        return "Öğrencinin amfi sınav başarısı için kanıtlı, net ve akademik tıp açıklamaları sun."
