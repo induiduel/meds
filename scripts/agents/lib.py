@@ -281,7 +281,7 @@ def chat(model: str, prompt: str, system: str | None = None, as_json: bool = Fal
     raise RuntimeError(f"Ollama çağrısı başarısız ({model}): {last}")
 
 
-def embed(texts: list[str], model: str = MODEL_EMBED, batch: int = 16):
+def embed(texts: list[str], model: str = MODEL_EMBED, batch: int = 64):
     import numpy as np
     import requests
 

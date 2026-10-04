@@ -134,8 +134,8 @@ def doc_metadata(text: str, use_llm: bool) -> dict:
         return {}
     sample = text[:6500]
     try:
-        # %90 CPU / %10 GPU dağılımı (num_gpu=3 katman GPU, kalan tüm katmanlar 20 CPU çekirdeğine)
-        m = lib.chat(lib.MODEL_TEXT, sample, system=META_SYSTEM, as_json=True, num_predict=1500, num_gpu=3)
+        # Dinamik GPU hızlandırma (RTX 4060 tam katman yükleme)
+        m = lib.chat(lib.MODEL_TEXT, sample, system=META_SYSTEM, as_json=True, num_predict=1500)
     except Exception as e:  # noqa: BLE001
         log.warning("metadata LLM hatası: %s", e)
         return {}
