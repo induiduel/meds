@@ -13,6 +13,7 @@ import {
   Layers,
   X,
   Wand2,
+  Link2,
 } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
@@ -99,6 +100,7 @@ interface QuickAddHeroProps {
   isAdmin: boolean;
   currentUser?: AppUser | null;
   onOpenAdminPanel?: () => void;
+  onQuestionsUpdated?: () => Promise<void>;
 }
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
@@ -169,6 +171,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   questions = [],
   onNavigateTab,
   currentUser,
+  onQuestionsUpdated,
 }) => {
   const disciplines =
     committee?.disciplines && committee.disciplines.length > 0
@@ -189,6 +192,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [claimedAnswer, setClaimedAnswer] = useState<OptionKey | undefined>(undefined);
   const [discipline, setDiscipline] = useState(disciplines[0]);
   const [questionNumber, setQuestionNumber] = useState('');
+  const [linkedQuestion, setLinkedQuestion] = useState<QuestionItem | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
@@ -362,6 +366,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   // Bir soruya doğrudan bağlama aksiyonu
   const handleLinkToQuestion = (targetQ: QuestionItem) => {
+    setLinkedQuestion(targetQ);
     if (targetQ.questionNumber) {
       setQuestionNumber(String(targetQ.questionNumber));
     }
@@ -372,7 +377,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       'Soruya bağlandı',
       targetQ.questionNumber
         ? `Parçan Soru #${targetQ.questionNumber} ile birleştirilecek.`
-        : 'Parçan mevcut taslağa eklenecek.'
+        : 'Parçan mevcut taslağın katkılarına eklenecek.'
     );
   };
 
@@ -440,8 +445,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       setAnswerReason('');
       setClaimedAnswer(undefined);
       setQuestionNumber('');
+      setLinkedQuestion(null);
       setSelectedMatchIds(new Set());
       setRealtimeMatches([]);
+
+      if (onQuestionsUpdated) {
+        await onQuestionsUpdated();
+      }
     } catch (err: any) {
       toast.error('Birleştirme Başarısız', err?.message || 'Bir hata oluştu');
     } finally {
@@ -548,6 +558,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         authorStudentNumber: currentUser?.studentNumber || undefined,
         claimedAnswer,
         options: optionsList.length > 0 ? optionsList : undefined,
+        targetQuestionId: linkedQuestion?.id,
       });
       setTexts({ stem: '', clue: '' });
       setOptions({ A: '', B: '', C: '', D: '', E: '' });
@@ -555,12 +566,18 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       setAnswerReason('');
       setClaimedAnswer(undefined);
       setQuestionNumber('');
+      setLinkedQuestion(null);
       setSuccessMessage(
-        hasNumber
+        linkedQuestion
+          ? `Parçan Soru #${linkedQuestion.questionNumber || 'taslak'} katkılarına eklendi.`
+          : hasNumber
           ? `Soru ${num} için eklediğin parça havuza kaydedildi.`
           : 'Parçan havuza kaydedildi. Numarası bilinmeyenler benzerlerine göre yerleştirilir.'
       );
       setTimeout(() => setSuccessMessage(null), 6000);
+      if (onQuestionsUpdated) {
+        await onQuestionsUpdated();
+      }
     } catch (err: any) {
       setFormError('Kayıt sırasında bir hata oluştu: ' + (err?.message || 'bilinmeyen hata'));
       toast.error('Parça kaydedilemedi', err?.message || 'Bağlantını kontrol edip tekrar dene.');
@@ -636,6 +653,32 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     <Sparkles className="w-3.5 h-3.5 animate-spin" />
                     Benzer soru, kurul ve taslaklar taranıyor…
                   </span>
+                </div>
+              )}
+
+              {/* Seçili Soruya / Taslağa Bağlandı Rozeti */}
+              {linkedQuestion && (
+                <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-900 text-[13px]">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <Link2 className="w-4 h-4 text-teal-600 shrink-0" />
+                    <span className="font-semibold text-teal-950 truncate">
+                      {linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber} ile bağlandı` : 'Mevcut taslakla bağlandı'}
+                    </span>
+                    <span className="text-teal-700 text-[12px] hidden sm:inline truncate">
+                      (Yazdıkların bu sorunun katkılarına eklenecek)
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLinkedQuestion(null);
+                      setQuestionNumber('');
+                    }}
+                    className="p-1 text-teal-700 hover:text-teal-950 hover:bg-teal-100 rounded-lg cursor-pointer transition-colors shrink-0"
+                    title="Bağlantıyı kaldır"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
                 </div>
               )}
             </>
@@ -929,6 +972,22 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-[14px] font-medium">Teşekkürler! {successMessage}</div>
           )}
         </form>
+
+        {optimizingQuestion && (
+          <AiQuestionOptimizerModal
+            question={optimizingQuestion}
+            isOpen={Boolean(optimizingQuestion)}
+            onClose={() => setOptimizingQuestion(null)}
+            currentUser={currentUser}
+            onSaved={async (updated) => {
+              setOptimizingQuestion(null);
+              toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} başarıyla güncellendi.`);
+              if (onQuestionsUpdated) {
+                await onQuestionsUpdated();
+              }
+            }}
+          />
+        )}
       </div>
     );
   }
@@ -1044,6 +1103,32 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 </div>
               )}
             </div>
+
+            {/* Seçili Soruya / Taslağa Bağlandı Rozeti */}
+            {linkedQuestion && (
+              <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-teal-50 border border-teal-200 text-teal-900 text-[13px]">
+                <div className="flex items-center gap-2 min-w-0">
+                  <Link2 className="w-4 h-4 text-teal-600 shrink-0" />
+                  <span className="font-semibold text-teal-950 truncate">
+                    {linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber} ile bağlandı` : 'Mevcut taslakla bağlandı'}
+                  </span>
+                  <span className="text-teal-700 text-[12px] hidden sm:inline truncate">
+                    (Yazdıkların bu sorunun katkılarına eklenecek)
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLinkedQuestion(null);
+                    setQuestionNumber('');
+                  }}
+                  className="p-1 text-teal-700 hover:text-teal-950 hover:bg-teal-100 rounded-lg cursor-pointer transition-colors shrink-0"
+                  title="Bağlantıyı kaldır"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            )}
           </>
         )}
 
@@ -1141,6 +1226,15 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       >
                         <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
                         {q.questionNumber ? `Bu soruya bağla (S.${q.questionNumber})` : 'Bu taslağa bağla'}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setOptimizingQuestion(q)}
+                        className="h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-[12px] font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs"
+                        title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
+                      >
+                        <Wand2 className="w-3.5 h-3.5" />
+                        AI ile Dönüştür
                       </button>
                       <span className="text-[12px] text-ink-3">
                         veya çoklu seçim yapıp birleştirebilirsin.
@@ -1353,9 +1447,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           isOpen={Boolean(optimizingQuestion)}
           onClose={() => setOptimizingQuestion(null)}
           currentUser={currentUser}
-          onSaved={(updated) => {
+          onSaved={async (updated) => {
             setOptimizingQuestion(null);
             toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} başarıyla güncellendi.`);
+            if (onQuestionsUpdated) {
+              await onQuestionsUpdated();
+            }
           }}
         />
       )}

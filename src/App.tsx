@@ -816,17 +816,37 @@ export default function App() {
     }
   };
 
-  const completedQuestions = questions.filter(
+  // Bir başka soruya uydu olarak eklenmiş / birleştirilmiş taslakların kimlikleri:
+  // Bu sorular soru havuzunda bağımsız bir kart olarak değil, yalnızca birleştikleri ana sorunun katkılarında yer almalıdır.
+  const allMergedSatelliteIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const q of questions) {
+      if (q.mergedSatellites && q.mergedSatellites.length > 0) {
+        for (const sat of q.mergedSatellites) {
+          if (sat.id) ids.add(sat.id);
+        }
+      }
+    }
+    return ids;
+  }, [questions]);
+
+  // Sadece bağımsız (başka soruya yutulmamış) sorular
+  const standaloneQuestions = useMemo(() => {
+    if (allMergedSatelliteIds.size === 0) return questions;
+    return questions.filter((q) => !allMergedSatelliteIds.has(q.id));
+  }, [questions, allMergedSatelliteIds]);
+
+  const completedQuestions = standaloneQuestions.filter(
     (q) => q.status === 'completed' && q.reconstruction
   );
-  const gatheringQuestions = questions.filter(
+  const gatheringQuestions = standaloneQuestions.filter(
     (q) => q.status === 'gathering' || (q.status !== 'completed' && q.fragments.length > 0)
   );
-  const emptyQuestions = questions.filter(
+  const emptyQuestions = standaloneQuestions.filter(
     (q) => q.status === 'empty' && q.fragments.length === 0
   );
 
-  const myQuestions = questions.filter(
+  const myQuestions = standaloneQuestions.filter(
     (q) =>
       currentUser &&
       (q.contributedByUid === currentUser.uid ||
@@ -843,7 +863,7 @@ export default function App() {
 
   // Ultra-fast in-memory filtering: 0ms search & filter without network lag
   const filteredQuestions = useMemo(() => {
-    let result = questions;
+    let result = standaloneQuestions;
     if (selectedDiscipline && selectedDiscipline !== 'Tümü') {
       const discLower = selectedDiscipline.toLowerCase();
       result = result.filter((q) => q.discipline?.toLowerCase() === discLower);
@@ -872,7 +892,7 @@ export default function App() {
       );
     }
     return result;
-  }, [questions, selectedDiscipline, selectedStatus, searchQuery]);
+  }, [standaloneQuestions, selectedDiscipline, selectedStatus, searchQuery]);
 
   // Progressive rendering: Keep DOM lightweight with 30 cards at a time
   const [visibleCount, setVisibleCount] = useState<number>(30);
@@ -1090,6 +1110,7 @@ export default function App() {
             isAdmin={isAdmin}
             currentUser={currentUser}
             onOpenAdminPanel={() => setActiveTab('admin')}
+            onQuestionsUpdated={fetchQuestions}
           />
         )}
 

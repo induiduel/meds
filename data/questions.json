@@ -849,15 +849,26 @@
         "Tıbbi Genetik",
         "numarasız-hatırlanan",
         "Tıbbi Patoloji",
-        "taslak-birlestirildi"
+        "taslak-birlestirildi",
+        "taslak-eslesme-adayi"
       ],
-      "topic": "Tıbbi Genetik Hatırlanan Soru",
+      "topic": "Kromozomal Hastalıklar ve Dismorfoloji (Down Sendromu)",
       "status": "completed",
       "options": [],
       "upvotes": 0,
       "isMerged": true,
       "createdAt": "2026-10-02T21:45:28.934214+00:00",
-      "fragments": [],
+      "fragments": [
+        {
+          "id": "f-1791141886565-uwma",
+          "text": "down sendromu simian çizgisi endse saydamlığı",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-04T19:24:46.565Z"
+        }
+      ],
       "revisions": [
         {
           "id": "rev-1790967524679",
@@ -891,42 +902,100 @@
           "editedAt": "2026-10-02T23:17:52.922Z",
           "editorName": "Yönetici",
           "changeSummary": "3 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-merge-1791141984684",
+          "version": 5,
+          "editedAt": "2026-10-04T19:26:24.683Z",
+          "editorName": "Yönetici",
+          "changeSummary": "1 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-merge-1791142013131",
+          "version": 6,
+          "editedAt": "2026-10-04T19:26:53.130Z",
+          "editorName": "Yönetici",
+          "changeSummary": "1 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-1791142506210",
+          "version": 7,
+          "editedAt": "2026-10-04T19:35:06.210Z",
+          "editorName": "Yönetici",
+          "changeSummary": "Öğrenci hafıza parçalarındaki 'simian çizgisi' ve 'ense saydamlığı' verileri, fakülte slaytlarındaki 'Dismorfolojide Genetik Terminoloji (Slayt #37/#39)' içeriğiyle (duodenal atrezi, konjenital kalp defekti, simian çizgisi, hipotoni) tam uyumlu bir klinik vaka formatına dönüştürüldü. Eksik olan 5 seçenek amfi ders notlarındaki kromozomal hastalıklar bağlamında oluşturuldu ve yazım hataları giderilerek saf bir kurul sorusu hazırlandı.",
+          "stem": "Prenatal ultrasonografik incelemesinde birinci trimesterde artmış ense saydamlığı (NT) ve nazal kemik hipoplazisi saptanan; doğum sonrasında yapılan fizik muayenesinde kas hipotonisi, basık burun kökü, avuç içinde tek transvers palmar çizgi (simian çizgisi) ile birlikte ekokardiyografisinde atriyoventriküler septal defekt (endokardiyal yastık defekti) ve direkt batın grafisinde duodenal atrezi (çift kabarcık belirtisi) tespit edilen bir yenidoğan için en olası tanı aşağıdakilerden hangisidir?",
+          "discipline": "Tıbbi Genetik",
+          "topic": "Kromozomal Hastalıklar ve Dismorfoloji (Down Sendromu)",
+          "claimedAnswer": "A",
+          "options": [
+            {
+              "key": "A",
+              "text": "Down sendromu (Trizomi 21)",
+              "isAiFilled": false
+            },
+            {
+              "key": "B",
+              "text": "Edwards sendromu (Trizomi 18)",
+              "isAiFilled": false
+            },
+            {
+              "key": "C",
+              "text": "Patau sendromu (Trizomi 13)",
+              "isAiFilled": false
+            },
+            {
+              "key": "D",
+              "text": "Turner sendromu (45,X)",
+              "isAiFilled": false
+            },
+            {
+              "key": "E",
+              "text": "Klinefelter sendromu (47,XXY)",
+              "isAiFilled": false
+            }
+          ],
+          "explanation": "Down Sendromu (Trizomi 21), canlı doğumlarda en sık görülen otozomal kromozom anomalisidir. Birinci trimester tarama ultrasonografisinde artmış ense saydamlığı (nukal translusens - NT) ve burun kemiği (nazal kemik) hipoplazisi/agenezisi en önemli belirteçlerdendir. Postnatal dönemde hipotoni, brakisefali, basık burun kökü, yukarı çekik palpebral fissürler, Brushfield lekeleri, avuç içinde tek transvers fleksiyon çizgisi (simian çizgisi) ve birinci-ikinci ayak parmakları arasında ayrıklık (sandal aralığı) tipik dismorfik bulgulardır. Kardiyovasküler sistemde en sık görülen defekt atriyoventriküler septal defekt (endokardiyal yastık defekti / AV kanal), gastrointestinal sistemde ise duodenal stenoz veya duodenal atrezi (radyolojide 'çift hava kabarcığı - double bubble' görünümü) ve Hirschsprung hastalığıdır. \n\nÇeldiricilerin Değerlendirilmesi:\n- Edwards sendromu (Trizomi 18): İntrauterin gelişme geriliği, mikrosefali, mikrognati, düşük yerleşimli ve malforme kulaklar, üst üste binen parmaklar (clenched hands - 2. ve 5. parmakların diğerlerinin üzerine binmesi), rocker-bottom (beşik taban) ayak ve sıklıkla VSD ile seyreder.\n- Patau sendromu (Trizomi 13): Holoprozensefali, mikrosefali, mikroftalmi, yarık dudak/damak, postaksiyel polidaktili, aplazia kutis ve skrotal anomaliler ile karakterizedir.\n- Turner sendromu (45,X): Genişlemiş kistik higroma, yele boyun, lenfödem, aort koarktasyonu ve biküspit aort kapağı ile karakterizedir.\n- Klinefelter sendromu (47,XXY): Yenidoğan döneminde belirgin majör malformasyon oluşturmaz; pubertede hipergonadotropik hipogonadizm, jinekomasti ve uzun boy ile klinik verir."
         }
       ],
-      "updatedAt": "2026-10-03T00:03:22.788Z",
+      "updatedAt": "2026-10-04T19:35:07.635Z",
       "discipline": "Tıbbi Genetik",
       "committeeId": "donem3-kurul1",
-      "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi. [03.10.2026]: 3 taslak ile iç içe geçirildi.",
+      "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi. [03.10.2026]: 3 taslak ile iç içe geçirildi. [04.10.2026]: 1 taslak ile iç içe geçirildi. [04.10.2026]: 1 taslak ile iç içe geçirildi.",
       "questionNumber": 0,
       "reconstruction": {
-        "stem": "Birinci trimester taramasında artmış ense saydamlığı (NT) ve burun kemiğinin belirgin olmaması, doğum sonrası duodenal atrezia (çift kabarcık) ve endokardiyal yastık (AV kanal) defekti gösteren bir bebek için en olası tanı aşağıdakilerden hangisidir?",
+        "stem": "Prenatal ultrasonografik incelemesinde birinci trimesterde artmış ense saydamlığı (NT) ve nazal kemik hipoplazisi saptanan; doğum sonrasında yapılan fizik muayenesinde kas hipotonisi, basık burun kökü, avuç içinde tek transvers palmar çizgi (simian çizgisi) ile birlikte ekokardiyografisinde atriyoventriküler septal defekt (endokardiyal yastık defekti) ve direkt batın grafisinde duodenal atrezi (çift kabarcık belirtisi) tespit edilen bir yenidoğan için en olası tanı aşağıdakilerden hangisidir?",
         "options": [
           {
-            "text": "Down sendromu",
+            "key": "A",
+            "text": "Down sendromu (Trizomi 21)",
             "isAiFilled": false
           },
           {
-            "text": "Edwards sendromu",
+            "key": "B",
+            "text": "Edwards sendromu (Trizomi 18)",
             "isAiFilled": false
           },
           {
-            "text": "Endokardiyal yastık defekti",
+            "key": "C",
+            "text": "Patau sendromu (Trizomi 13)",
             "isAiFilled": false
           },
           {
-            "text": "Fallot tetralojisi",
+            "key": "D",
+            "text": "Turner sendromu (45,X)",
             "isAiFilled": false
           },
           {
-            "text": "Patau sendromu",
-            "isAiFilled": true
+            "key": "E",
+            "text": "Klinefelter sendromu (47,XXY)",
+            "isAiFilled": false
           }
         ],
-        "explanation": "Artmış nuchal translucency ve burun kemiğinin yokluğu, maternal yaşla artan risk, duodenal atrezia (double‑bubble) ve AV kanal defekti Down sendromunun (Trisomy 21) tipik bulgularıdır. Edwards sendromu (Trisomy 18) daha çok ciddi intrauterin büyüme geriliği, rocker‑bottom ayak ve overlapped parmaklarla seyreder; duodenal atrezia ve AV kanal defekti nadiren görülür. Endokardiyal yastık defekti tek başına bir sendrom değildir ve diğer bulgularla birlikte Down sendromunda sık rastlanır. Fallot tetralojisi kardiyak bir anomali olup, duodenal atrezya ve artmış NT ile ilişkili değildir. Patau sendromu (Trisomy 13) ise mikrocefali, oral fena, polidaktili gibi farklı bulgular gösterir, bu senaryoda bulunmaz.",
-        "lastUpdated": "2026-10-02T23:18:30.419Z",
         "correctAnswer": "A",
-        "confidenceScore": 95,
-        "notesAndDiscrepancies": "Öğrenciler Down ve Edwards sendromlarını karıştırmış; double‑bubble ve AV kanal defekti Down sendromuna özgü iken Edwards sendromunda nadirdir. Ayrıca bir seçenek olarak 'Endokardiyal yastık defekti' girilmiş, ancak bu bir tanı değil, bir bulgudur; sorunun doğru yanıtı Down sendromu olduğundan negatif bir biçim kullanılmadı."
+        "explanation": "Down Sendromu (Trizomi 21), canlı doğumlarda en sık görülen otozomal kromozom anomalisidir. Birinci trimester tarama ultrasonografisinde artmış ense saydamlığı (nukal translusens - NT) ve burun kemiği (nazal kemik) hipoplazisi/agenezisi en önemli belirteçlerdendir. Postnatal dönemde hipotoni, brakisefali, basık burun kökü, yukarı çekik palpebral fissürler, Brushfield lekeleri, avuç içinde tek transvers fleksiyon çizgisi (simian çizgisi) ve birinci-ikinci ayak parmakları arasında ayrıklık (sandal aralığı) tipik dismorfik bulgulardır. Kardiyovasküler sistemde en sık görülen defekt atriyoventriküler septal defekt (endokardiyal yastık defekti / AV kanal), gastrointestinal sistemde ise duodenal stenoz veya duodenal atrezi (radyolojide 'çift hava kabarcığı - double bubble' görünümü) ve Hirschsprung hastalığıdır. \n\nÇeldiricilerin Değerlendirilmesi:\n- Edwards sendromu (Trizomi 18): İntrauterin gelişme geriliği, mikrosefali, mikrognati, düşük yerleşimli ve malforme kulaklar, üst üste binen parmaklar (clenched hands - 2. ve 5. parmakların diğerlerinin üzerine binmesi), rocker-bottom (beşik taban) ayak ve sıklıkla VSD ile seyreder.\n- Patau sendromu (Trizomi 13): Holoprozensefali, mikrosefali, mikroftalmi, yarık dudak/damak, postaksiyel polidaktili, aplazia kutis ve skrotal anomaliler ile karakterizedir.\n- Turner sendromu (45,X): Genişlemiş kistik higroma, yele boyun, lenfödem, aort koarktasyonu ve biküspit aort kapağı ile karakterizedir.\n- Klinefelter sendromu (47,XXY): Yenidoğan döneminde belirgin majör malformasyon oluşturmaz; pubertede hipergonadotropik hipogonadizm, jinekomasti ve uzun boy ile klinik verir.",
+        "confidenceScore": 96,
+        "notesAndDiscrepancies": "Öğrenci hafıza parçalarındaki 'simian çizgisi' ve 'ense saydamlığı' verileri, fakülte slaytlarındaki 'Dismorfolojide Genetik Terminoloji (Slayt #37/#39)' içeriğiyle (duodenal atrezi, konjenital kalp defekti, simian çizgisi, hipotoni) tam uyumlu bir klinik vaka formatına dönüştürüldü. Eksik olan 5 seçenek amfi ders notlarındaki kromozomal hastalıklar bağlamında oluşturuldu ve yazım hataları giderilerek saf bir kurul sorusu hazırlandı.",
+        "lastUpdated": "2026-10-04T19:35:06.210Z"
       },
       "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
       "mergedSatellites": [
@@ -1223,12 +1292,238 @@
           "reconstruction": null,
           "mergedSatellites": [],
           "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1791141887444",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan",
+            "taslak-eslesme-adayi"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-04T19:24:47.997672+00:00",
+          "fragments": [
+            {
+              "id": "f-1791141886565-uwma",
+              "text": "down sendromu simian çizgisi endse saydamlığı",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-04T19:24:46.565Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1791141887445",
+              "stem": "down sendromu simian çizgisi endse saydamlığı",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-04T19:24:47.445Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-04T19:24:47.445+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "Olası Taslak Eşleşmesi: Soru #Belirsiz ile %65 benzerlik.",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
         }
       ],
       "contributedByName": "Dr House",
       "isUnassignedNumber": true,
       "examYear": "2026-2027",
-      "claimedAnswer": "A"
+      "claimedAnswer": "A",
+      "lectureReference": {
+        "noteId": "sum-k1-kromozomal_hastaliklar_ve_geneti_k_danis_ma_md",
+        "noteTitle": "Kromozomal Hastalıklar ve Genetik Danışma (Özet #6)",
+        "discipline": "Tıbbi Genetik",
+        "pageNumber": 6,
+        "totalSlides": 0,
+        "matchedSnippet": "[DERS ÖZETİ & SPOT BİLGİ] Ders / Branş: Tıbbi Genetik Konu / Başlık: Kromozomal Hastalıklar ve Genetik Danışma Kurul: donem3-kurul1 Bölüm: #6 Özet Metin: ## 5. Down Sendromu-fenoti̇p Yenidoğan Döneminde Hipotoni Karakte",
+        "confidenceScore": 100,
+        "reasoning": "RAG kaynağı (summary)"
+      }
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791090673803",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "Hirschsprung sorusu",
+      "status": "completed",
+      "fragments": [
+        {
+          "id": "f-1791090673803-mjgx",
+          "text": "Bir hastalık ismi verilmiş hangisi yanlıştır diye sorulmuş",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-04T05:11:13.803Z"
+        },
+        {
+          "id": "f-opt-1791090673804-A",
+          "text": "A) Erkek çocuklarda daha sık görülür",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-04T05:11:13.804Z"
+        },
+        {
+          "id": "f-1791090713693-39ii",
+          "text": "Hirschsprung hastalığı ile ilgili hangisi yanlıştır?",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-04T05:11:53.693Z"
+        },
+        {
+          "id": "f-opt-1791090713969-A",
+          "text": "A) Kız çocuklarında daha ağır seyreder",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-04T05:11:53.969Z"
+        },
+        {
+          "id": "f-1791090736538-l3qe",
+          "text": "Hirschsprung sorusu",
+          "type": "stem",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-04T05:12:16.538Z"
+        },
+        {
+          "id": "f-opt-1791090736542-A",
+          "text": "A) Rektum mutlaka etkilenir",
+          "type": "option",
+          "author": "Dr House",
+          "upvotes": 1,
+          "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-04T05:12:16.542Z"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Erkek çocuklarda daha sık görülür",
+          "suggestedBy": "Yönetici",
+          "upvotes": 0
+        },
+        {
+          "key": "B",
+          "text": "Kız çocuklarında daha ağır seyreder",
+          "suggestedBy": "Yönetici",
+          "upvotes": 0
+        },
+        {
+          "key": "C",
+          "text": "Nöral krest hücrelerinin çekumdan rektuma doğru ilerleyişindeki sorundan kaynaklanır",
+          "suggestedBy": "Yönetici",
+          "upvotes": 0
+        },
+        {
+          "key": "D",
+          "text": "Rektum mutlaka etkilenir",
+          "suggestedBy": "Yönetici",
+          "upvotes": 0
+        },
+        {
+          "key": "E",
+          "text": "Normal sinir uyarılarını alan proksimal kolon kontraktedir",
+          "suggestedBy": "Yönetici",
+          "upvotes": 1
+        }
+      ],
+      "tags": [
+        "hirschsprung",
+        "çocuklarında",
+        "ağır",
+        "seyreder",
+        "çocuklarda",
+        "görülür",
+        "rektum",
+        "mutlaka"
+      ],
+      "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+      "contributedByName": "Dr House",
+      "revisions": [
+        {
+          "id": "rev-1791090673803",
+          "stem": "Bir hastalık ismi verilmiş hangisi yanlıştır diye sorulmuş",
+          "topic": "Tıbbi Biyoloji ve Genetik Hatırlanan Soru",
+          "options": [
+            {
+              "key": "A",
+              "text": "Erkek çocuklarda daha sık görülür",
+              "upvotes": 1
+            }
+          ],
+          "version": 1,
+          "editedAt": "2026-10-04T05:11:13.803Z",
+          "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "discipline": "Tıbbi Biyoloji ve Genetik",
+          "editorName": "Dr House",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        }
+      ],
+      "createdAt": "2026-10-04T05:11:13.961976+00:00",
+      "updatedAt": "2026-10-04T15:03:15.166Z",
+      "upvotes": 0,
+      "reconstruction": {
+        "stem": "Hirschsprung hastalığı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Erkek çocuklarda daha sık görülür",
+            "isAiFilled": false
+          },
+          {
+            "key": "B",
+            "text": "Kız çocuklarında daha ağır seyreder",
+            "isAiFilled": false
+          },
+          {
+            "key": "C",
+            "text": "Nöral krest hücrelerinin çekumdan rektuma doğru ilerleyişindeki sorundan kaynaklanır",
+            "isAiFilled": false
+          },
+          {
+            "key": "D",
+            "text": "Rektum mutlaka etkilenir",
+            "isAiFilled": false
+          },
+          {
+            "key": "E",
+            "text": "Normal sinir uyarılarını alan proksimal kolon kontraktedir",
+            "isAiFilled": false
+          }
+        ],
+        "correctAnswer": "E",
+        "explanation": "Hirschsprung hastalığında agangliyonik bağırsak segmenti peristaltizm yapamaz, gevşeyemez ve fonksiyonel obstrüksiyon oluşturarak kontrakte (veya dar) kalır. Buna karşılık, normal sinir uyarılarını alan ve fonksiyonel tıkanıklığın proksimalinde yer alan kolon segmenti aşırı yük ve birikim nedeniyle progresif şekilde dilatasyona (megakolon) uğrar; bu nedenle 'kontraktedir' ifadesi yanlıştır [Kaynak 1, Kaynak 3].\n\nDiğer seçenekler doğrudur:\n- Hastalık erkeklerde kızlara oranla yaklaşık 4 kat daha sık görülür [Kaynak 1, Kaynak 2].\n- Kız çocuklarında görülme sıklığı daha düşük olmasına rağmen uzun segment tutulumu ve ailesel geçiş olasılığı daha yüksek olup klinik tablo daha ağır seyreder.\n- Patogenezde nöral krest hücrelerinin çekumdan rektuma (kraniokaudal) sefalokaudal göçündeki yetersizlik/duraklama yatar [Kaynak 1, Kaynak 2, Kaynak 5].\n- Aganglionozis daima anüsten/rektumdan başlar ve kraniyale doğru değişken uzunlukta uzanır; bu nedenle rektum olguların tamamında mutlaka etkilenir [Kaynak 1, Kaynak 3].",
+        "confidenceScore": 98,
+        "notesAndDiscrepancies": "Soru 2021-2022 Dönem 3 Kurul 1 çıkmış sorusuyla (Kaynak 1) birebir örtüşmektedir. Kaynak 1'de eski öğrenci aktarımlarından kalan şüpheli/hatalı cevap anahtarı ('A') bulunmakta olup ders slaytları (Kaynak 3) ve tıbbi patofizyoloji proksimal kolonun dilate olduğunu, aganglionik distal segmentin ise kontrakte kaldığını açıkça göstermektedir. Bu nedenle doğru yanıt kesin olarak E seçeneğidir.",
+        "lastUpdated": "2026-10-04T15:03:14.900Z"
+      },
+      "rawStem": "Hirschsprung sorusu",
+      "claimedAnswer": "E"
     }
   ]
 }
