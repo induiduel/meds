@@ -51,9 +51,11 @@ def main():
                     pass
                 if out["rc"]:
                     break
-            delay = IDLE if not any(o["rc"] for o in res) else min(delay * 2, 1800)
+            # Eğer hata rc=-9 (dışarıdan kod tazeleme) ise hemen 2 saniyede başla
+            had_kill = any(o.get("rc") == -9 for o in res)
+            delay = 2 if had_kill else (IDLE if not any(o["rc"] for o in res) else min(delay * 2, 300))
         except Exception as e:
-            delay = min(delay * 2, 1800)
+            delay = min(delay * 2, 300)
             res.append({"error": str(e)})
         STATUS.parent.mkdir(parents=True, exist_ok=True)
         STATUS.write_text(json.dumps({"time": time.strftime("%F %T"), "runs": res}, ensure_ascii=False, indent=1))
