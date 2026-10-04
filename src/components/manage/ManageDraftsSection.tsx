@@ -581,11 +581,37 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                 <div className="p-3.5 flex flex-col gap-2">
                   <p className="m-0 text-[14px] text-ink leading-relaxed">{stemOf(q) || 'Soru kökü henüz girilmemiş'}</p>
                   {isInspecting && q.mergedSatellites && q.mergedSatellites.length > 0 && (
-                    <div className="flex flex-col gap-2 mt-1">
+                    <div className="flex flex-col gap-2.5 mt-2 pt-2 border-t border-line-soft">
+                      <div className="text-[12px] font-semibold text-ink-3 uppercase tracking-wider">
+                        İç İçe Geçen Katkı ve Taslak Parçaları ({q.mergedSatellites.length})
+                      </div>
                       {q.mergedSatellites.map((sat, sIdx) => (
-                        <div key={sat.id || sIdx} className="rounded-[10px] bg-canvas border border-line-soft p-2.5 text-[13px]">
-                          <div className="font-semibold text-ink">Taslak #{sIdx + 1}: {sat.contributedByName || 'Anonim'}</div>
-                          <p className="m-0 text-ink-2">{stemOf(sat) || 'Metin girilmemiş'}</p>
+                        <div key={sat.id || sIdx} className="rounded-xl bg-canvas border border-line-soft p-3 text-[13px] flex flex-col gap-1.5">
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="font-semibold text-ink">
+                              Taslak #{sIdx + 1}: {sat.contributedByName || sat.author || 'Anonim Tıbbiyeli'}
+                            </span>
+                            <span className="text-[11.5px] text-ink-3 font-mono">{numLabel(sat)}</span>
+                          </div>
+                          <p className="m-0 text-ink-2 leading-relaxed">{stemOf(sat) || 'Metin girilmemiş'}</p>
+                          {sat.fragments && sat.fragments.length > 0 && (
+                            <div className="flex flex-col gap-1 mt-1 pl-2 border-l-2 border-accent/40">
+                              {sat.fragments.map((sf) => (
+                                <div key={sf.id} className="text-[12px] text-ink-3">
+                                  <span className="font-medium text-ink-2">{sf.author}:</span> “{sf.text}”
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                          {sat.options && sat.options.length > 0 && (
+                            <div className="flex flex-wrap gap-1 mt-1">
+                              {sat.options.map((opt) => (
+                                <span key={opt.key} className="px-2 py-0.5 rounded bg-white border border-line text-[11.5px]">
+                                  <strong>{opt.key})</strong> {opt.text}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>

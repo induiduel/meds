@@ -832,7 +832,13 @@ export default function App() {
       (q.contributedByUid === currentUser.uid ||
         (currentUser.displayName && q.contributedByName === currentUser.displayName) ||
         q.fragments.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
-        q.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)))
+        q.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)) ||
+        (q.mergedSatellites && q.mergedSatellites.some((sat) =>
+          sat.contributedByUid === currentUser.uid ||
+          (currentUser.displayName && sat.contributedByName === currentUser.displayName) ||
+          sat.fragments?.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
+          sat.options?.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName))
+        )))
   );
 
   // Ultra-fast in-memory filtering: 0ms search & filter without network lag
@@ -855,7 +861,14 @@ export default function App() {
           item.questionNumber?.toString() === q ||
           item.tags?.some((t) => t.toLowerCase().includes(q)) ||
           item.fragments?.some((f) => f.text.toLowerCase().includes(q)) ||
-          item.options?.some((o) => o.text.toLowerCase().includes(q))
+          item.options?.some((o) => o.text.toLowerCase().includes(q)) ||
+          item.mergedSatellites?.some((sat) =>
+            sat.topic?.toLowerCase().includes(q) ||
+            sat.reconstruction?.stem?.toLowerCase().includes(q) ||
+            sat.stem?.toLowerCase().includes(q) ||
+            sat.fragments?.some((f) => f.text.toLowerCase().includes(q)) ||
+            sat.options?.some((o) => o.text.toLowerCase().includes(q))
+          )
       );
     }
     return result;

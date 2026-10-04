@@ -15,6 +15,7 @@ import {
   AlertTriangle,
   Wand2,
   Trash2,
+  Layers,
 } from 'lucide-react';
 import { ActionMenu } from './ui/ActionMenu';
 import { QuestionItem } from '../types';
@@ -139,12 +140,71 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_device_token') || 'local_user' : 'local_user');
   const isQuestionLiked = !!question.likedBy?.includes(currentUserId);
 
+  // Satellites and merged contributions
+  const isMergedQuestion = Boolean(
+    question.isMerged ||
+    (question.mergedSatellites && question.mergedSatellites.length > 0) ||
+    question.tags?.includes('taslak-birlestirildi')
+  );
+  const satelliteCount = question.mergedSatellites?.length || 0;
+
+  // Derinlemesine kullanıcı katkı kontrolü (birleştirilmiş alt taslaklar dahil)
   const isMyQuestion =
     !!currentUser &&
     (question.contributedByUid === currentUser.uid ||
       (currentUser.email && question.contributedByName === currentUser.displayName) ||
       question.fragments.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
-      question.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)));
+      question.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)) ||
+      (question.mergedSatellites && question.mergedSatellites.some((sat) =>
+        sat.contributedByUid === currentUser.uid ||
+        (currentUser.displayName && sat.contributedByName === currentUser.displayName) ||
+        sat.fragments?.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
+        sat.options?.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName))
+      )));
+
+  // Tüm parçaları topla: ana sorunun parçaları + birleştirilen uydu taslakların parçaları
+  const allFragments = useMemo(() => {
+    const list: (typeof question.fragments[0] & { isSatellite?: boolean; satelliteAuthor?: string })[] = [
+      ...(question.fragments || [])
+    ];
+    if (question.mergedSatellites && question.mergedSatellites.length > 0) {
+      const seenTexts = new Set(list.map((f) => f.text.trim().toLowerCase()));
+      for (const sat of question.mergedSatellites) {
+        const satAuthor = sat.contributedByName || sat.author || 'Taslak Katkısı';
+        // 1. Uydu taslağın kökü
+        const satStem = sat.reconstruction?.stem || sat.stem || sat.rawStem || '';
+        if (satStem && !seenTexts.has(satStem.trim().toLowerCase())) {
+          seenTexts.add(satStem.trim().toLowerCase());
+          list.push({
+            id: `sat-stem-${sat.id}`,
+            text: satStem,
+            author: satAuthor,
+            authorUid: sat.contributedByUid,
+            type: 'stem',
+            timestamp: sat.updatedAt || sat.createdAt || new Date().toISOString(),
+            upvotes: sat.upvotes || 1,
+            isSatellite: true,
+            satelliteAuthor: satAuthor,
+          });
+        }
+        // 2. Uydu taslağın hafıza parçaları
+        if (sat.fragments && sat.fragments.length > 0) {
+          for (const sf of sat.fragments) {
+            const cleanText = sf.text.trim().toLowerCase();
+            if (!seenTexts.has(cleanText)) {
+              seenTexts.add(cleanText);
+              list.push({
+                ...sf,
+                isSatellite: true,
+                satelliteAuthor: sf.author || satAuthor,
+              });
+            }
+          }
+        }
+      }
+    }
+    return list;
+  }, [question.fragments, question.mergedSatellites]);
 
   const revisionCount = question.revisions?.length || 0;
 
@@ -269,6 +329,12 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
               )}
               {isMyQuestion && (
                 <span className="h-7 px-2.5 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center">Senin katkın</span>
+              )}
+              {isMergedQuestion && (
+                <span className="h-7 px-2.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[12px] font-semibold inline-flex items-center gap-1">
+                  <Layers className="w-3.5 h-3.5 text-emerald-600" />
+                  {satelliteCount > 0 ? `${satelliteCount + 1} taslak birleşik` : 'Birleşik taslak'}
+                </span>
               )}
             </div>
             <button
@@ -698,25 +764,30 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
 
             <section className="bg-white border border-line rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
               <div className="flex justify-between items-baseline">
-                <h4 className="m-0 text-[15px] font-semibold">Hafıza parçaları</h4>
-                <span className="font-mono text-[12px] text-ink-2">{question.fragments.length}</span>
+                <h4 className="m-0 text-[15px] font-semibold">Hafıza parçaları & katkılar</h4>
+                <span className="font-mono text-[12px] text-ink-2">{allFragments.length}</span>
               </div>
-              {question.fragments.length === 0 ? (
+              {allFragments.length === 0 ? (
                 <p className="m-0 text-[14px] text-ink-2">Henüz parça yok. İlk hatırlayan sen ol.</p>
               ) : (
                 <ol className="list-none m-0 p-0 flex flex-col max-h-[420px] overflow-y-auto">
-                  {question.fragments.map((frag, i) => {
+                  {allFragments.map((frag, i) => {
                     const liked = !!frag.likedBy?.includes(currentUserId);
-                    const last = i === question.fragments.length - 1;
+                    const last = i === allFragments.length - 1;
                     return (
                       <li key={frag.id} className={`grid grid-cols-[14px_minmax(0,1fr)] gap-3 ${last ? '' : 'pb-4'}`}>
                         <span className="flex flex-col items-center gap-1">
-                          <span className="w-2.5 h-2.5 rounded-full border-2 border-accent bg-white mt-[5px]" />
+                          <span className={`w-2.5 h-2.5 rounded-full border-2 ${frag.isSatellite ? 'border-emerald-500 bg-emerald-50' : 'border-accent bg-white'} mt-[5px]`} />
                           {!last && <span className="flex-1 w-0.5 bg-line-soft" />}
                         </span>
                         <span className="flex flex-col gap-1.5 min-w-0">
-                          <span className="flex gap-2 items-center text-[12px] text-ink-2">
+                          <span className="flex gap-2 items-center text-[12px] text-ink-2 flex-wrap">
                             <span className="font-semibold text-ink">{fragmentTypeLabel(frag.type)}</span>· <span className="truncate">{frag.author}</span>
+                            {frag.isSatellite && (
+                              <span className="px-1.5 py-0.2 rounded bg-emerald-100/70 border border-emerald-300 text-emerald-900 text-[10.5px] font-semibold">
+                                Birleştirilen Taslak
+                              </span>
+                            )}
                           </span>
                           <span className="text-[14px] leading-[1.5] break-words">“{frag.text}”</span>
                           <button

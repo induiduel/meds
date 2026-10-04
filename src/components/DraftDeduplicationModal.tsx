@@ -607,6 +607,15 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                                       <p className="m-0 text-ink-2 leading-snug">
                                         {stemOf(sat) || 'Metin girilmemiş'}
                                       </p>
+                                      {sat.fragments && sat.fragments.length > 0 && (
+                                        <div className="flex flex-col gap-1 mt-1 pl-2 border-l-2 border-accent/40">
+                                          {sat.fragments.map((sf) => (
+                                            <div key={sf.id} className="text-[11.5px] text-ink-3">
+                                              <span className="font-medium text-ink-2">{sf.author}:</span> “{sf.text}”
+                                            </div>
+                                          ))}
+                                        </div>
+                                      )}
                                       {sat.options && sat.options.length > 0 && (
                                         <div className="flex flex-wrap gap-1 mt-0.5">
                                           {sat.options.map((o) => (
