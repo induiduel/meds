@@ -1089,8 +1089,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         tabIndex={-1}
         className={`admin-panel bg-white w-full overflow-hidden grid ${
           isPage
-            ? 'h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)] min-h-[560px] rounded-[18px] border border-line'
-            : 'max-w-[1360px] h-full sm:h-[min(94vh,960px)] sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)]'
+            ? 'h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)] min-h-[560px] rounded-2xl border border-line'
+            : 'max-w-[1360px] h-full sm:h-[min(94vh,960px)] sm:rounded-2xl shadow-xl'
         } grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[248px_minmax(0,1fr)] outline-none text-ink`}
       >
         {/* ---------- Sidebar ---------- */}
@@ -1119,7 +1119,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   }}
                   aria-current={on ? 'page' : undefined}
                   className={`shrink-0 lg:w-full min-h-10 px-3 rounded-[10px] flex items-center gap-2.5 text-left cursor-pointer transition-colors ${
-                    on ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink hover:bg-white/60'
+                    on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink hover:bg-white/60'
                   }`}
                 >
                   <Icon className={`w-[18px] h-[18px] shrink-0 ${on ? 'text-accent' : ''}`} />
@@ -1231,7 +1231,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       aria-checked={qStatus === id}
                       onClick={() => setQStatus(id)}
                       className={`h-8 px-2.5 rounded-lg text-[13px] cursor-pointer whitespace-nowrap ${
-                        qStatus === id ? 'bg-white font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)] text-ink' : 'text-ink-2'
+                        qStatus === id ? 'bg-white font-semibold shadow-xs text-ink' : 'text-ink-2'
                       }`}
                     >
                       {label}
@@ -1286,7 +1286,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     </tr>
                   )}
                   {pagedQuestions.map((q) => (
-                    <tr key={q.id || 'q-' + q.questionNumber} className="border-t border-line-soft hover:bg-[#FAFBFC] align-top">
+                    <tr key={q.id || 'q-' + q.questionNumber} className="border-t border-line-soft hover:bg-blue-50 align-top">
                       <td className="px-3 py-2.5 font-mono text-[13px] text-ink-2">{q.isUnassignedNumber ? '—' : q.questionNumber || '?'}</td>
                       <td className="px-3 py-2.5 min-w-0">
                         <div className="text-[12px] font-semibold text-ink-2 truncate">

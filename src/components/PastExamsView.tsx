@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { PageHeader } from './ui/PageHeader';
 import {
   Sparkles,
   BookOpen,
@@ -547,31 +548,35 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     'w-full h-11 sm:h-10 rounded-[10px] bg-field border border-line px-3 text-[14px] text-ink cursor-pointer outline-0 focus:border-accent';
 
   return (
-    <div className="flex flex-col gap-3 sm:gap-4 pb-12 min-w-0 w-full max-w-[880px] mx-auto">
-      {/* Title */}
-      <div className="flex items-end gap-3">
-        <div className="min-w-0 flex-1">
-          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] text-ink">Dönem 3 Çıkmış Sorular</h1>
-          <p className="m-0 mt-1 text-[14px] text-ink-3">
-            Dönem 3 müfredatında {tabCounts.validCount.toLocaleString('tr-TR')} tam metin soru
-            {tabCounts.ambiguousCount > 0 && ` · ${tabCounts.ambiguousCount.toLocaleString('tr-TR')} inceleme bekliyor`}
-          </p>
-        </div>
-        <button
-          type="button"
-          onClick={handleManualSync}
-          disabled={cacheStatus.isSyncing}
-          aria-label="Güncellemeleri denetle"
-          title={`Cihazda ${questions.length.toLocaleString('tr-TR')} soru · güncellemeleri denetle`}
-          className="w-10 h-10 rounded-[10px] border border-line bg-white text-ink-2 flex items-center justify-center cursor-pointer hover:border-line-2 disabled:opacity-60 shrink-0"
-        >
-          <RefreshCw className={`w-4 h-4 ${cacheStatus.isSyncing ? 'animate-spin' : ''}`} />
-        </button>
-      </div>
+    <div className="flex flex-col gap-3 sm:gap-4 pb-12 min-w-0 w-full max-w-[960px] mx-auto">
+      <PageHeader
+        eyebrow="Dönem 3"
+        title="Çıkmış sorular"
+        description="Geçmiş sınavların tam metin soruları; cevap, açıklama ve kaynaklarıyla."
+        stats={[
+          { label: 'Tam metin soru', value: tabCounts.validCount.toLocaleString('tr-TR') },
+          ...(tabCounts.ambiguousCount > 0
+            ? [{ label: 'İnceleme bekliyor', value: tabCounts.ambiguousCount.toLocaleString('tr-TR'), tone: 'warn' as const }]
+            : []),
+        ]}
+        actions={
+          <button
+            type="button"
+            onClick={handleManualSync}
+            disabled={cacheStatus.isSyncing}
+            aria-label="Güncellemeleri denetle"
+            title={`Cihazda ${questions.length.toLocaleString('tr-TR')} soru · güncellemeleri denetle`}
+            className="h-10 px-3 rounded-[10px] border border-line bg-white text-ink-2 inline-flex items-center gap-2 text-[13px] font-semibold cursor-pointer hover:border-line-2 disabled:opacity-60 shrink-0"
+          >
+            <RefreshCw className={`w-4 h-4 ${cacheStatus.isSyncing ? 'animate-spin' : ''}`} />
+            <span className="hidden sm:inline">Güncelle</span>
+          </button>
+        }
+      />
 
       {/* Search + one filter button */}
       <div className="flex gap-2">
-        <label className="flex-1 min-w-0 flex items-center gap-2 h-11 px-3.5 rounded-[12px] bg-white border border-line focus-within:border-accent">
+        <label className="flex-1 min-w-0 flex items-center gap-2 h-11 px-3.5 rounded-xl bg-white border border-line focus-within:border-accent">
           <Search className="w-[17px] h-[17px] text-ink-3 shrink-0" />
           <span className="sr-only">Çıkmış sorularda ara</span>
           <input
@@ -582,7 +587,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               setCurrentPage(1);
             }}
             placeholder="Soru, şık ya da konu ara"
-            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-[#7A8693]"
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-slate-600"
           />
           {searchQuery && (
             <button type="button" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle" className="w-7 h-7 -mr-1 rounded-full flex items-center justify-center text-ink-3 hover:bg-canvas cursor-pointer">
@@ -597,7 +602,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             setDeepseekFilter((prev) => (prev === 'deepseek_only' ? 'all' : 'deepseek_only'));
             setCurrentPage(1);
           }}
-          className={`h-11 px-3 sm:px-3.5 rounded-[12px] border text-[13.5px] font-semibold flex items-center gap-1.5 cursor-pointer shrink-0 transition-all ${
+          className={`h-11 px-3 sm:px-3.5 rounded-xl border text-[13.5px] font-semibold flex items-center gap-1.5 cursor-pointer shrink-0 transition-all ${
             deepseekFilter === 'deepseek_only'
               ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white border-indigo-600 shadow-sm ring-2 ring-indigo-200'
               : 'bg-white border-line text-ink hover:border-indigo-300 hover:text-indigo-600'
@@ -620,7 +625,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           onClick={() => setFiltersOpen((v) => !v)}
           aria-expanded={filtersOpen}
           aria-label={`Filtrele${activeFilterChips.length ? `, ${activeFilterChips.length} etkin` : ''}`}
-          className={`relative h-11 px-3 sm:px-3.5 rounded-[12px] border text-[14px] font-semibold flex items-center gap-2 cursor-pointer shrink-0 transition-colors ${
+          className={`relative h-11 px-3 sm:px-3.5 rounded-xl border text-[14px] font-semibold flex items-center gap-2 cursor-pointer shrink-0 transition-colors ${
             filtersOpen ? 'bg-accent-soft border-accent text-accent' : 'bg-white border-line text-ink hover:border-line-2'
           }`}
         >
@@ -638,7 +643,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       {filtersOpen && (
         <div className="fixed inset-0 z-[60] flex items-end sm:static sm:z-auto sm:block" role="dialog" aria-label="Filtreler">
           <button type="button" aria-label="Kapat" onClick={() => setFiltersOpen(false)} className="sm:hidden absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
-          <div className="relative w-full max-h-[85dvh] overflow-y-auto sm:overflow-visible bg-white rounded-t-[24px] sm:rounded-[16px] sm:border sm:border-line px-4 pt-2 sm:pt-4 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-4 flex flex-col gap-4 shadow-[0_-10px_40px_rgba(14,26,38,0.18)] sm:shadow-none">
+          <div className="relative w-full max-h-[85dvh] overflow-y-auto sm:overflow-visible bg-white rounded-t-2xl sm:rounded-2xl sm:border sm:border-line px-4 pt-2 sm:pt-4 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-4 flex flex-col gap-4 shadow-lg sm:shadow-none">
             <span className="sm:hidden self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
             <div className="sm:hidden flex items-center">
               <span className="flex-1 text-[18px] font-bold">Filtrele</span>
@@ -773,7 +778,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
             <div className="flex flex-col gap-1.5">
               <span className="text-[12.5px] font-semibold text-ink-3">Görünüm</span>
-              <div role="radiogroup" aria-label="Görünüm" className="grid grid-cols-3 sm:inline-grid sm:w-[360px] gap-1 bg-canvas rounded-[12px] p-1">
+              <div role="radiogroup" aria-label="Görünüm" className="grid grid-cols-3 sm:inline-grid sm:w-[360px] gap-1 bg-canvas rounded-xl p-1">
                 {(
                   [
                     ['redacted', 'Düzenlenmiş'],
@@ -787,8 +792,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     role="radio"
                     aria-checked={viewMode === id}
                     onClick={() => setViewMode(id)}
-                    className={`h-9 rounded-[9px] text-[13.5px] cursor-pointer ${
-                      viewMode === id ? 'bg-white font-semibold text-ink shadow-[0_1px_3px_rgba(14,26,38,0.12)]' : 'text-ink-2'
+                    className={`h-9 rounded-lg text-[13.5px] cursor-pointer ${
+                      viewMode === id ? 'bg-white font-semibold text-ink shadow-xs' : 'text-ink-2'
                     }`}
                   >
                     {label}
@@ -837,11 +842,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
       {/* Questions Listing */}
       {isLoading ? (
-        <div className="bg-white rounded-[18px] border border-line">
+        <div className="bg-white rounded-2xl border border-line">
           <SectionLoader variant="book" label="Çıkmış sorular yükleniyor…" />
         </div>
       ) : paginatedQuestions.length === 0 ? (
-        <div className="bg-white rounded-[18px] border border-line px-6 py-12 text-center flex flex-col items-center gap-3">
+        <div className="bg-white rounded-2xl border border-line px-6 py-12 text-center flex flex-col items-center gap-3">
           <HelpCircle className="w-9 h-9 text-ink-3" />
           <p className="m-0 font-display text-[20px] font-bold">Eşleşen soru yok</p>
           <p className="m-0 text-[14px] text-ink-2 max-w-sm">Aramayı ya da filtreleri değiştirip yeniden dene.</p>
@@ -899,7 +904,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             ];
 
             return (
-              <article key={q.id} className="bg-white rounded-[18px] border border-line p-4 sm:p-5 flex flex-col gap-3.5">
+              <article key={q.id} className="bg-white rounded-2xl border border-line p-4 sm:p-5 flex flex-col gap-3.5">
                 <header className="flex items-center gap-2.5 min-w-0">
                   <span className="font-mono text-[13px] font-semibold text-ink shrink-0">#{q.questionNumber}</span>
                   <span className="text-[13px] text-ink-3 truncate min-w-0" title={formatCommitteeName(q.committeeId)}>
@@ -936,7 +941,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
                 {effectiveMode === 'split' ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div className="bg-canvas rounded-[14px] p-3.5 flex flex-col gap-2">
+                    <div className="bg-canvas rounded-xl p-3.5 flex flex-col gap-2">
                       <span className="text-[12px] font-semibold text-ink-3 uppercase tracking-[0.06em]">Ham metin</span>
                       <p className="m-0 text-[14.5px] text-ink leading-relaxed whitespace-pre-wrap">{q.fragments?.[0]?.text || stem}</p>
                       {q.options && q.options.length > 0 && (
@@ -950,7 +955,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         </ol>
                       )}
                     </div>
-                    <div className="bg-accent-soft/50 rounded-[14px] p-3.5 flex flex-col gap-2">
+                    <div className="bg-accent-soft/50 rounded-xl p-3.5 flex flex-col gap-2">
                       <span className="text-[12px] font-semibold text-accent uppercase tracking-[0.06em]">Düzenlenmiş</span>
                       <p className="m-0 text-[14.5px] text-ink font-medium leading-relaxed">{stem}</p>
                       {options.length > 0 && (
@@ -966,7 +971,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     </div>
                   </div>
                 ) : effectiveMode === 'raw' ? (
-                  <div className="bg-canvas rounded-[14px] p-3.5 flex flex-col gap-2.5">
+                  <div className="bg-canvas rounded-xl p-3.5 flex flex-col gap-2.5">
                     <span className="text-[12px] font-semibold text-ink-3 uppercase tracking-[0.06em]">Ham metin · {q.sourceFile || 'PDF kaynağı'}</span>
                     <p className="m-0 text-[15px] text-ink leading-relaxed whitespace-pre-wrap">
                       {(q as any).rawQuestion?.stem || q.fragments?.[0]?.text || q.rawStem || q.topic}
@@ -996,12 +1001,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                           return (
                             <li
                               key={opt.key}
-                              className={`grid grid-cols-[28px_minmax(0,1fr)_auto] items-center gap-2.5 px-3 py-2.5 rounded-[12px] border ${
-                                isCorrect ? 'bg-ok-tint border-[#9FD9B5]' : 'bg-white border-line-soft'
+                              className={`grid grid-cols-[28px_minmax(0,1fr)_auto] items-center gap-2.5 px-3 py-2.5 rounded-xl border ${
+                                isCorrect ? 'bg-ok-tint border-emerald-400' : 'bg-white border-line-soft'
                               }`}
                             >
                               <span
-                                className={`w-7 h-7 rounded-[8px] flex items-center justify-center font-mono text-[13px] font-semibold ${
+                                className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono text-[13px] font-semibold ${
                                   isCorrect ? 'bg-ok text-white' : 'bg-canvas text-ink-2'
                                 }`}
                               >
@@ -1015,7 +1020,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       </ol>
                     )}
                     {explanation && (
-                      <div className="rounded-[12px] bg-field">
+                      <div className="rounded-xl bg-field">
                         <button
                           type="button"
                           onClick={() => setOpenExplanations((prev) => ({ ...prev, [q.id]: !prev[q.id] }))}
@@ -1038,7 +1043,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                           <div className="px-3.5 pb-3.5 flex flex-col gap-2.5">
                             <p className="m-0 text-[14.5px] text-ink-2 leading-[1.6] whitespace-pre-line">{explanation}</p>
                             {(q.evidenceText || q.reconstruction?.evidenceText) && (
-                              <div className={`p-3 rounded-[12px] text-[13px] flex flex-col gap-1.5 shadow-2xs ${
+                              <div className={`p-3 rounded-xl text-[13px] flex flex-col gap-1.5 shadow-2xs ${
                                 isDeepSeekQuestion(q)
                                   ? 'bg-indigo-50/80 border border-indigo-200/80 text-indigo-950'
                                   : 'bg-amber-50/80 border border-amber-200/80 text-amber-950'
@@ -1073,7 +1078,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     onClick={() => handleToggleLike(q)}
                     aria-pressed={isLiked}
                     title={isLiked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
-                    className={`h-8 px-2.5 rounded-[9px] border inline-flex items-center gap-1.5 cursor-pointer transition-colors ${
+                    className={`h-8 px-2.5 rounded-lg border inline-flex items-center gap-1.5 cursor-pointer transition-colors ${
                       isLiked ? 'bg-accent-soft border-accent/30 text-accent font-semibold' : 'bg-white border-line text-ink-2 hover:border-line-2'
                     }`}
                   >
@@ -1084,7 +1089,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     type="button"
                     onClick={() => setExpandedCommentsQuestionId(expandedCommentsQuestionId === q.id ? null : q.id)}
                     aria-expanded={expandedCommentsQuestionId === q.id}
-                    className={`h-8 px-2.5 rounded-[9px] inline-flex items-center gap-1.5 cursor-pointer ${
+                    className={`h-8 px-2.5 rounded-lg inline-flex items-center gap-1.5 cursor-pointer ${
                       expandedCommentsQuestionId === q.id ? 'bg-canvas text-ink font-semibold' : 'text-ink-2 hover:bg-canvas'
                     }`}
                   >
@@ -1097,7 +1102,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       type="button"
                       onClick={() => setSelectedLearnMatch({ question: q, match: learnMatch })}
                       title={`${learnMatch.deckTitle} · slayt ${learnMatch.slideNumber}`}
-                      className="h-8 px-2.5 rounded-[9px] inline-flex items-center gap-1.5 text-accent font-semibold hover:bg-accent-soft cursor-pointer min-w-0"
+                      className="h-8 px-2.5 rounded-lg inline-flex items-center gap-1.5 text-accent font-semibold hover:bg-accent-soft cursor-pointer min-w-0"
                     >
                       <GraduationCap className="w-4 h-4 shrink-0" />
                       <span className="truncate max-w-[180px] sm:max-w-[260px]">Öğren · slayt {learnMatch.slideNumber}</span>
@@ -1106,7 +1111,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 </footer>
 
                 {expandedCommentsQuestionId === q.id && (
-                  <div className="bg-field rounded-[14px] p-3 flex flex-col gap-2.5">
+                  <div className="bg-field rounded-xl p-3 flex flex-col gap-2.5">
                     <div className="flex flex-col gap-2 max-h-56 overflow-y-auto">
                       {commentsCount > 0 ? (
                         (q as any).comments.map((c: any) => (

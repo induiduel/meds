@@ -44,7 +44,7 @@ export const AppRail: React.FC<AppRailProps> = ({ activeTab, setActiveTab, isAdm
         onClick={linkClick(() => setActiveTab(id))}
         aria-current={on ? 'page' : undefined}
         title={label}
-        className={`w-[62px] shrink-0 py-[7px] rounded-[12px] flex flex-col items-center gap-[3px] text-[11px] leading-none transition-colors ${
+        className={`w-[62px] shrink-0 py-[7px] rounded-xl flex flex-col items-center gap-[3px] text-[11px] leading-none transition-colors ${
           on ? 'bg-accent-soft text-accent font-semibold' : 'text-ink-3 hover:text-ink hover:bg-canvas font-medium'
         }`}
       >

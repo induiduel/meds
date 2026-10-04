@@ -215,7 +215,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 value={active.title}
                 onChange={(e) => update({ title: e.target.value })}
                 placeholder="Başlık"
-                className="border-0 outline-0 bg-transparent font-display text-[22px] sm:text-[24px] font-bold tracking-[-0.02em] placeholder:text-[#AEB8C3]"
+                className="border-0 outline-0 bg-transparent font-display text-[22px] sm:text-[24px] font-bold tracking-[-0.02em] placeholder:text-blue-400"
               />
               {active.questionStem && (
                 <div className="flex gap-2 items-start rounded-[10px] bg-canvas px-3 py-2.5 text-[13px] text-ink-2">
@@ -231,7 +231,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 value={active.body}
                 onChange={(e) => update({ body: e.target.value })}
                 placeholder="Notunu yaz… Madde için satır başına - koyabilirsin."
-                className="flex-1 min-h-[320px] resize-none border-0 outline-0 bg-transparent text-[15px] leading-[1.65] placeholder:text-[#8B96A3]"
+                className="flex-1 min-h-[320px] resize-none border-0 outline-0 bg-transparent text-[15px] leading-[1.65] placeholder:text-slate-500"
               />
               <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line-soft pt-3 text-[12px] text-ink-3">
                 <span>

@@ -73,8 +73,8 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
         return (
           <div
             key={k}
-            className={`ms-pop-in flex items-center gap-2 h-12 pl-1.5 pr-1.5 rounded-[12px] border transition-colors ${
-              on ? 'bg-ok-tint border-[#9FD9B5]' : 'bg-field border-transparent focus-within:border-accent focus-within:bg-white'
+            className={`ms-pop-in flex items-center gap-2 h-12 pl-1.5 pr-1.5 rounded-xl border transition-colors ${
+              on ? 'bg-ok-tint border-emerald-400' : 'bg-field border-transparent focus-within:border-accent focus-within:bg-white'
             }`}
           >
             <button
@@ -84,7 +84,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
               aria-label={on ? `${k} doğru cevap olarak işaretli, kaldırmak için dokun` : `${k} şıkkını doğru cevap olarak işaretle`}
               title={on ? 'Doğru cevap' : 'Doğru cevap olarak işaretle'}
               className={`w-9 h-9 rounded-[10px] flex items-center justify-center font-mono text-[14px] font-semibold shrink-0 cursor-pointer transition-all ${
-                on ? 'bg-ok text-white shadow-[0_4px_10px_rgba(21,122,62,0.3)]' : 'bg-white border border-line text-ink-2 hover:border-ok hover:text-ok'
+                on ? 'bg-ok text-white shadow-sm' : 'bg-white border border-line text-ink-2 hover:border-ok hover:text-ok'
               }`}
             >
               {on ? <Check className="w-4 h-4" strokeWidth={3} /> : k}
@@ -104,7 +104,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
               }}
               placeholder={`${k} şıkkı`}
               aria-label={`${k} şıkkı`}
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-[#7A8693]"
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-slate-600"
             />
             {on && <span className="hidden sm:inline text-[12px] font-semibold text-ok pr-1">Doğru</span>}
             {count > 1 && (
@@ -112,7 +112,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
                 type="button"
                 onClick={() => remove(k)}
                 aria-label={`${k} şıkkını kaldır`}
-                className="w-8 h-8 rounded-[9px] flex items-center justify-center text-ink-3 hover:text-ink hover:bg-white cursor-pointer shrink-0"
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-ink-3 hover:text-ink hover:bg-white cursor-pointer shrink-0"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -125,7 +125,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
         <button
           type="button"
           onClick={add}
-          className="self-start h-10 pl-2 pr-3.5 rounded-[12px] border border-dashed border-line-2 text-[14px] font-semibold text-accent inline-flex items-center gap-2 cursor-pointer hover:border-accent hover:bg-accent-soft/50 transition-colors"
+          className="self-start h-10 pl-2 pr-3.5 rounded-xl border border-dashed border-line-2 text-[14px] font-semibold text-accent inline-flex items-center gap-2 cursor-pointer hover:border-accent hover:bg-accent-soft/50 transition-colors"
         >
           <span className="w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center">
             <Plus className="w-3.5 h-3.5" strokeWidth={2.6} />
@@ -135,7 +135,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
       )}
 
       {answer && onReasonChange && (
-        <div className="ms-pop-in mt-1 rounded-[14px] bg-ok-tint border border-[#CDEBD8] p-3 flex flex-col gap-2">
+        <div className="ms-pop-in mt-1 rounded-xl bg-ok-tint border border-emerald-200 p-3 flex flex-col gap-2">
           <label htmlFor="answer-reason" className="text-[13.5px] font-semibold text-ok">
             Neden {answer}? <span className="font-normal text-ink-3">Fikrini yaz (isteğe bağlı)</span>
           </label>
@@ -145,7 +145,7 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
             value={reason}
             onChange={(e) => onReasonChange(e.target.value)}
             placeholder="Örn. hoca derste bu bulguyu özellikle vurgulamıştı…"
-            className="resize-none rounded-[10px] bg-white border border-transparent px-3 py-2.5 text-[15px] leading-[1.5] outline-0 focus:border-ok placeholder:text-[#7A8693]"
+            className="resize-none rounded-[10px] bg-white border border-transparent px-3 py-2.5 text-[15px] leading-[1.5] outline-0 focus:border-ok placeholder:text-slate-600"
           />
         </div>
       )}

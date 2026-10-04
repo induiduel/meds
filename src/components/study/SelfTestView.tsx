@@ -308,7 +308,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                         setItems(h.questionIds.map((id) => (bank || []).find((q) => q.id === id)).filter(Boolean) as StudyQuestion[]);
                         setPhase('result');
                       }}
-                      className="w-full grid grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-1 items-center py-2.5 border-b border-line-soft text-left cursor-pointer hover:bg-[#FAFBFC] rounded"
+                      className="w-full grid grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-1 items-center py-2.5 border-b border-line-soft text-left cursor-pointer hover:bg-blue-50 rounded"
                     >
                       <span className="text-[14px] font-semibold truncate">{h.title}</span>
                       <span className={`font-mono text-[14px] ${pct >= 70 ? 'text-ok' : pct >= 50 ? 'text-warn' : 'text-bad-text'}`}>%{pct}</span>
@@ -418,7 +418,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
               <span className="text-[13px] font-semibold text-ink-2">Optik form</span>
               <span className="flex gap-2 text-[11px] text-ink-3">
                 <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-accent" />Dolu</span>
-                <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-[#F59E0B]" />İşaretli</span>
+                <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-amber-600" />İşaretli</span>
               </span>
             </div>
             <div className="grid grid-cols-8 sm:grid-cols-10 lg:grid-cols-6 gap-1.5 max-h-[50vh] overflow-y-auto">
@@ -438,7 +438,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                     } ${a ? 'bg-accent text-white' : 'bg-canvas text-ink-2 hover:bg-line-soft'}`}
                   >
                     {a ? `${i + 1}${a}` : i + 1}
-                    {flagged && <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />}
+                    {flagged && <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-amber-600" />}
                   </button>
                 );
               })}
@@ -498,7 +498,7 @@ const ResultView: React.FC<{
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-3 sm:gap-5 items-start">
       <section className="flex flex-col gap-3 sm:gap-4">
-        <div className="bg-white border border-line rounded-[16px] p-4 sm:p-5 flex flex-col gap-3">
+        <div className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
           <div className="flex justify-between items-baseline gap-2">
             <h2 className="m-0 text-[15px] font-semibold truncate text-ink">{result.title}</h2>
             <span className="font-mono text-[12px] text-ink-3 shrink-0">{formatDuration(result.durationSec)}</span>
@@ -519,7 +519,7 @@ const ResultView: React.FC<{
             ].map(([l, n, c]) => (
               <div key={l as string} className="flex flex-col">
                 <span className="flex items-center gap-1.5 text-ink-2">
-                  <span className="w-2 h-2 rounded-[2px]" style={{ background: c as string }} />
+                  <span className="w-2 h-2 rounded-sm" style={{ background: c as string }} />
                   {l}
                 </span>
                 <span className="font-mono text-[18px] text-ink">{n}</span>
@@ -541,7 +541,7 @@ const ResultView: React.FC<{
                   </span>
                 </div>
                 <div className="h-1.5 rounded-full bg-line-soft">
-                  <div className={`h-1.5 rounded-full ${p >= 70 ? 'bg-ok-bright' : p >= 50 ? 'bg-[#F59E0B]' : 'bg-bad'}`} style={{ width: `${Math.max(2, p)}%` }} />
+                  <div className={`h-1.5 rounded-full ${p >= 70 ? 'bg-ok-bright' : p >= 50 ? 'bg-amber-600' : 'bg-bad'}`} style={{ width: `${Math.max(2, p)}%` }} />
                 </div>
               </div>
             );
@@ -601,7 +601,7 @@ const ResultView: React.FC<{
                     type="button"
                     onClick={() => setOpen(isOpen ? null : q.id)}
                     aria-expanded={isOpen}
-                    className="w-full grid grid-cols-[36px_minmax(0,1fr)_auto] gap-3 items-center px-4 py-3 text-left cursor-pointer hover:bg-[#FAFBFC]"
+                    className="w-full grid grid-cols-[36px_minmax(0,1fr)_auto] gap-3 items-center px-4 py-3 text-left cursor-pointer hover:bg-blue-50"
                   >
                     <span className="font-mono text-[13px] text-ink-2">{i + 1}</span>
                     <span className="flex flex-col gap-0.5 min-w-0">

@@ -296,7 +296,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
   };
 
   const fieldCls =
-    'w-full rounded-[12px] bg-field border border-transparent px-3.5 text-[15px] text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-[#7A8693]';
+    'w-full rounded-xl bg-field border border-transparent px-3.5 text-[15px] text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-slate-600';
   const labelCls = 'text-[12px] font-semibold uppercase tracking-[0.07em] text-ink-3';
 
   return (
@@ -308,12 +308,12 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         role="dialog"
         aria-modal="true"
         aria-labelledby="contribute-title"
-        className="relative w-full sm:max-w-[600px] max-h-[94dvh] sm:max-h-[92vh] bg-white rounded-t-[24px] sm:rounded-[24px] shadow-[0_30px_90px_rgba(14,26,38,0.32)] grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
+        className="relative w-full sm:max-w-[600px] max-h-[94dvh] sm:max-h-[92vh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
       >
         {/* Header */}
         <header className="flex items-center gap-3 px-5 pt-3 sm:pt-4 pb-3 border-b border-line-soft">
           <span className="sm:hidden absolute left-1/2 -translate-x-1/2 top-1.5 w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
-          <span className="w-10 h-10 rounded-[12px] bg-accent text-white flex items-center justify-center shrink-0 mt-1 sm:mt-0 shadow-[0_6px_16px_rgba(30,79,216,0.25)]">
+          <span className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 mt-1 sm:mt-0 shadow-md">
             <Stethoscope className="w-5 h-5" />
           </span>
           <div className="flex-1 min-w-0 mt-1 sm:mt-0">
@@ -370,7 +370,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                   </label>
                 </div>
                 <div className="flex items-center gap-2">
-                  <label className={`flex items-center gap-2 h-12 w-[132px] px-3.5 rounded-[12px] bg-field border border-transparent focus-within:border-accent focus-within:bg-white ${isUnknownNumber ? '' : ''}`}>
+                  <label className={`flex items-center gap-2 h-12 w-[132px] px-3.5 rounded-xl bg-field border border-transparent focus-within:border-accent focus-within:bg-white ${isUnknownNumber ? '' : ''}`}>
                     <span className="text-[13px] text-ink-3 shrink-0">Soru no</span>
                     <input
                       type="text"
@@ -384,7 +384,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                       }}
                       placeholder="?"
                       aria-label="Soru numarası (bilmiyorsan boş bırak)"
-                      className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-[#7A8693]"
+                      className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-slate-600"
                     />
                   </label>
                   <span className="text-[13px] text-ink-3">{isUnknownNumber ? 'Bilmiyorsan boş bırak, biz yerleştiririz.' : `${selectedComm?.targetCount || 150} sorudan biri`}</span>
@@ -401,7 +401,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                     type="button"
                     onClick={handleQuickAiAssist}
                     disabled={aiAssisting || !fragmentText.trim()}
-                    className="h-8 px-2.5 rounded-[9px] text-[13px] font-semibold text-accent bg-accent-soft inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                    className="h-8 px-2.5 rounded-lg text-[13px] font-semibold text-accent bg-accent-soft inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                   >
                     <Sparkles className={`w-3.5 h-3.5 ${aiAssisting ? 'animate-pulse' : ''}`} />
                     {aiAssisting ? 'AI düşünüyor…' : 'AI ile tamamla'}
@@ -428,11 +428,11 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 />
 
                 {realtimeMatch && (
-                  <div className="ms-pop-in rounded-[14px] bg-[#FFF9EF] border border-[#F2DDB8] p-3 flex flex-col gap-2">
+                  <div className="ms-pop-in rounded-xl bg-amber-50 border border-amber-300 p-3 flex flex-col gap-2">
                     <div className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-[#9A4D06] shrink-0" />
-                      <span className="flex-1 text-[13.5px] font-semibold text-[#8A4405]">Benzer bir taslak var · %{realtimeMatch.compatibility?.score} uyum</span>
-                      <span className="text-[12px] font-mono text-[#8A4405]/80">
+                      <Sparkles className="w-4 h-4 text-amber-800 shrink-0" />
+                      <span className="flex-1 text-[13.5px] font-semibold text-amber-800">Benzer bir taslak var · %{realtimeMatch.compatibility?.score} uyum</span>
+                      <span className="text-[12px] font-mono text-amber-800/80">
                         {realtimeMatch.matchedQuestion?.questionNumber ? `S.${realtimeMatch.matchedQuestion.questionNumber}` : 'Numarasız'}
                       </span>
                     </div>
@@ -449,7 +449,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                           if (mq.discipline && mq.discipline !== 'Belirtilmedi') setDiscipline(mq.discipline);
                           if (mq.topic) setTopic(mq.topic);
                         }}
-                        className="self-start h-9 px-3 rounded-[10px] bg-[#9A4D06] text-white text-[13px] font-semibold cursor-pointer"
+                        className="self-start h-9 px-3 rounded-[10px] bg-amber-800 text-white text-[13px] font-semibold cursor-pointer"
                       >
                         Bu soruya bağla (S.{realtimeMatch.matchedQuestion.questionNumber})
                       </button>
@@ -484,7 +484,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 )}
 
                 {aiSuggestion?.suggestedStem && (
-                  <div className="ms-pop-in rounded-[14px] bg-accent-soft/60 p-3 flex flex-col gap-1">
+                  <div className="ms-pop-in rounded-xl bg-accent-soft/60 p-3 flex flex-col gap-1">
                     <span className="text-[12.5px] font-semibold text-accent inline-flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
                       AI'nın önerdiği soru kalıbı
@@ -530,7 +530,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
               </section>
 
               {formError && (
-                <div role="alert" className="flex items-start gap-2 px-3 py-2.5 rounded-[12px] bg-bad-soft text-bad-text text-[14px]">
+                <div role="alert" className="flex items-start gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-[14px]">
                   <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-bad" />
                   <span>{formError}</span>
                 </div>
@@ -542,7 +542,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 type="button"
                 onClick={onClose}
                 disabled={isSubmitting}
-                className="h-12 sm:h-11 px-4 rounded-[12px] text-[15px] font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
+                className="h-12 sm:h-11 px-4 rounded-xl text-[15px] font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
               >
                 Vazgeç
               </button>
@@ -550,7 +550,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 type="submit"
                 form="contribute-form"
                 disabled={isSubmitting}
-                className="flex-1 sm:flex-none sm:ml-auto h-12 sm:h-11 px-6 rounded-[12px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 shadow-[0_6px_16px_rgba(30,79,216,0.25)]"
+                className="flex-1 sm:flex-none sm:ml-auto h-12 sm:h-11 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 shadow-md"
               >
                 Havuza ekle
                 <ArrowRight className="w-4 h-4" />
@@ -559,7 +559,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
           </>
         )}
 
-        <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" rounded="rounded-t-[24px] sm:rounded-[24px]" />
+        <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" rounded="rounded-t-2xl sm:rounded-2xl" />
       </div>
     </div>
   );

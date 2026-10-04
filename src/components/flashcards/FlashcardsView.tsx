@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { PageHeader } from '../ui/PageHeader';
 import { BookA, GraduationCap, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2 } from 'lucide-react';
 import { GLOSSARY } from '../../data/glossary';
 import { SectionLoader, SuccessCheck } from '../ui/Animations';
@@ -198,12 +199,12 @@ export const FlashcardsView: React.FC = () => {
 
   return (
     <div className="w-full max-w-[880px] mx-auto flex flex-col gap-4 min-w-0">
-      <div className="flex flex-col md:flex-row md:items-end gap-3">
-        <div className="min-w-0 flex-1">
-          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em]">Ezber kartları</h1>
-          <p className="m-0 mt-1 text-[14px] text-ink-3">Kartı çevir, bildiğini işaretle. Bildiklerin giderek daha seyrek gelir.</p>
-        </div>
-        <div role="radiogroup" aria-label="Kaynak" className="grid grid-cols-2 gap-1 bg-white border border-line rounded-[14px] p-1 md:w-[360px]">
+      <PageHeader
+        eyebrow="Aralıklı tekrar"
+        title="Ezber kartları"
+        description="Kartı çevir, bildiğini işaretle. Bildiklerin giderek daha seyrek gelir."
+        actions={
+        <div role="radiogroup" aria-label="Kaynak" className="grid grid-cols-2 gap-1 bg-white border border-line rounded-xl p-1 w-full sm:w-[360px]">
           {(
             [
               ['terms', BookA, `Tıbbi terimler · ${GLOSSARY_CARDS.length}`],
@@ -225,7 +226,8 @@ export const FlashcardsView: React.FC = () => {
             </button>
           ))}
         </div>
-      </div>
+        }
+      />
 
       {loading ? (
         <SectionLoader variant="book" label="Ders kartları yükleniyor…" />
@@ -254,7 +256,7 @@ export const FlashcardsView: React.FC = () => {
           </div>
 
           {/* Start panel */}
-          <section className="bg-white border border-line rounded-[20px] p-4 sm:p-5 flex flex-col gap-4">
+          <section className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-4">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
               {(
                 [
@@ -264,7 +266,7 @@ export const FlashcardsView: React.FC = () => {
                   ['mastered', 'Ezberlendi', counts.mastered],
                 ] as const
               ).map(([k, label, n]) => (
-                <div key={k} className="rounded-[14px] bg-canvas px-3 py-2.5 flex flex-col gap-0.5">
+                <div key={k} className="rounded-xl bg-canvas px-3 py-2.5 flex flex-col gap-0.5">
                   <span className="flex items-center gap-1.5 text-[12.5px] text-ink-2">
                     <span className="w-2 h-2 rounded-full" style={{ background: STATUS_DOT[k] }} />
                     {label}
@@ -292,7 +294,7 @@ export const FlashcardsView: React.FC = () => {
                     role="radio"
                     aria-checked={limit === n}
                     onClick={() => setLimit(n)}
-                    className={`h-8 px-2.5 rounded-[8px] text-[13px] cursor-pointer ${limit === n ? 'bg-white font-semibold text-ink shadow-[0_1px_3px_rgba(14,26,38,0.12)]' : 'text-ink-2'}`}
+                    className={`h-8 px-2.5 rounded-lg text-[13px] cursor-pointer ${limit === n ? 'bg-white font-semibold text-ink shadow-xs' : 'text-ink-2'}`}
                   >
                     {n === 0 ? 'Hepsi' : n}
                   </button>
@@ -305,7 +307,7 @@ export const FlashcardsView: React.FC = () => {
                 type="button"
                 onClick={() => buildSession(false)}
                 disabled={inGroup.length === 0}
-                className="flex-1 h-12 rounded-[14px] bg-accent hover:bg-accent-hover text-white text-[16px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-[0_6px_16px_rgba(30,79,216,0.25)]"
+                className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white text-[16px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-md"
               >
                 <Play className="w-4 h-4 fill-current" />
                 {counts.due + counts.new > 0 ? `Çalışmaya başla · ${startCount} kart` : 'Hepsini tekrar et'}
@@ -314,7 +316,7 @@ export const FlashcardsView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => buildSession(true)}
-                  className="h-12 px-4 rounded-[14px] border border-line bg-white text-[15px] font-semibold text-ink inline-flex items-center justify-center gap-2 cursor-pointer hover:border-line-2"
+                  className="h-12 px-4 rounded-xl border border-line bg-white text-[15px] font-semibold text-ink inline-flex items-center justify-center gap-2 cursor-pointer hover:border-line-2"
                 >
                   <Layers className="w-4 h-4" />
                   Tüm kartlar
@@ -325,7 +327,7 @@ export const FlashcardsView: React.FC = () => {
 
           {/* Browse */}
           <section className="flex flex-col gap-2">
-            <label className="flex items-center gap-2 h-11 px-3.5 rounded-[12px] bg-white border border-line focus-within:border-accent">
+            <label className="flex items-center gap-2 h-11 px-3.5 rounded-xl bg-white border border-line focus-within:border-accent">
               <Search className="w-4 h-4 text-ink-3 shrink-0" />
               <span className="sr-only">Kartlarda ara</span>
               <input
@@ -333,7 +335,7 @@ export const FlashcardsView: React.FC = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Kartlarda ara"
-                className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-[#7A8693]"
+                className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] sm:text-[15px] placeholder:text-slate-600"
               />
               <span className="text-[12.5px] text-ink-3 shrink-0">{visible.length} kart</span>
             </label>
@@ -376,7 +378,7 @@ const BrowseList: React.FC<{ cards: StudyCard[]; store: Record<string, CardState
                 type="button"
                 onClick={() => setOpen(isOpen ? null : c.id)}
                 aria-expanded={isOpen}
-                className={`w-full text-left rounded-[14px] border bg-white px-3.5 py-3 flex flex-col gap-1 cursor-pointer transition-colors ${
+                className={`w-full text-left rounded-xl border bg-white px-3.5 py-3 flex flex-col gap-1 cursor-pointer transition-colors ${
                   isOpen ? 'border-accent' : 'border-line hover:border-line-2'
                 }`}
               >
@@ -394,7 +396,7 @@ const BrowseList: React.FC<{ cards: StudyCard[]; store: Record<string, CardState
         <button
           type="button"
           onClick={() => setShown((n) => n + 48)}
-          className="self-center h-10 px-4 rounded-[12px] border border-line bg-white text-[14px] font-semibold text-ink cursor-pointer hover:border-line-2"
+          className="self-center h-10 px-4 rounded-xl border border-line bg-white text-[14px] font-semibold text-ink cursor-pointer hover:border-line-2"
         >
           Daha fazla göster · {cards.length - shown}
         </button>
@@ -475,7 +477,7 @@ const StudySession: React.FC<{
 
   if (done) {
     return (
-      <div className="w-full max-w-[520px] mx-auto bg-white border border-line rounded-[24px] px-6 py-10 flex flex-col items-center text-center gap-3 ms-pop-in">
+      <div className="w-full max-w-[520px] mx-auto bg-white border border-line rounded-2xl px-6 py-10 flex flex-col items-center text-center gap-3 ms-pop-in">
         <SuccessCheck size={104} />
         <h1 className="m-0 font-display font-bold text-[26px] tracking-[-0.02em]">Oturum bitti!</h1>
         <p className="m-0 text-[15px] text-ink-2">{total} kart çalıştın. Bildiklerin bir sonraki tekrara kadar dinlenecek.</p>
@@ -484,23 +486,23 @@ const StudySession: React.FC<{
             [
               ['Biliyorum', tally.good, 'text-ok', 'bg-ok-tint'],
               ['Zor', tally.hard, 'text-warn', 'bg-warn-soft'],
-              ['Tekrar', tally.again, 'text-[#B4233C]', 'bg-[#FFF1F3]'],
+              ['Tekrar', tally.again, 'text-rose-700', 'bg-rose-50'],
             ] as const
           ).map(([label, n, fg, bg]) => (
-            <div key={label} className={`rounded-[14px] ${bg} py-3`}>
+            <div key={label} className={`rounded-xl ${bg} py-3`}>
               <div className={`font-mono text-[22px] font-semibold ${fg}`}>{n}</div>
               <div className="text-[12.5px] text-ink-2">{label}</div>
             </div>
           ))}
         </div>
         <div className="flex gap-2 w-full mt-2">
-          <button type="button" onClick={onExit} className="flex-1 h-12 rounded-[14px] border border-line bg-white text-[15px] font-semibold cursor-pointer">
+          <button type="button" onClick={onExit} className="flex-1 h-12 rounded-xl border border-line bg-white text-[15px] font-semibold cursor-pointer">
             Kartlara dön
           </button>
           <button
             type="button"
             onClick={onRestart}
-            className="flex-1 h-12 rounded-[14px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer"
+            className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer"
           >
             <RotateCcw className="w-4 h-4" />
             Yeniden çalış
@@ -551,7 +553,7 @@ const StudySession: React.FC<{
         >
           {/* Front */}
           <span
-            className="absolute inset-0 rounded-[24px] bg-white border border-line shadow-[0_14px_40px_rgba(14,26,38,0.10)] [backface-visibility:hidden] flex flex-col p-5 sm:p-7 text-left"
+            className="absolute inset-0 rounded-2xl bg-white border border-line shadow-lg [backface-visibility:hidden] flex flex-col p-5 sm:p-7 text-left"
             style={{ opacity: flipped ? 0 : 1, transition: 'opacity 0s linear 0.25s' }}
             aria-hidden={flipped}
           >
@@ -569,7 +571,7 @@ const StudySession: React.FC<{
           </span>
           {/* Back */}
           <span
-            className="absolute inset-0 rounded-[24px] bg-white border border-accent/30 shadow-[0_14px_40px_rgba(30,79,216,0.14)] [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col p-5 sm:p-7 text-left overflow-y-auto"
+            className="absolute inset-0 rounded-2xl bg-white border border-accent/30 shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col p-5 sm:p-7 text-left overflow-y-auto"
             style={{ opacity: flipped ? 1 : 0, transition: 'opacity 0s linear 0.25s' }}
             aria-hidden={!flipped}
           >
@@ -579,8 +581,8 @@ const StudySession: React.FC<{
             <span className="flex-1 flex flex-col justify-center gap-3 py-3">
               <span className={`text-ink ${reverse ? 'font-display font-bold text-[28px] leading-[1.15] text-center' : 'text-[17px] sm:text-[18px] leading-[1.6]'}`}>{plain(back)}</span>
               {card.pearl && (
-                <span className="rounded-[14px] bg-[#FFF9EF] border border-[#F2DDB8] px-3.5 py-2.5 text-[14px] leading-[1.55] text-ink">
-                  <span className="block text-[12px] font-semibold text-[#8A4405] mb-0.5">Akılda tut</span>
+                <span className="rounded-xl bg-amber-50 border border-amber-300 px-3.5 py-2.5 text-[14px] leading-[1.55] text-ink">
+                  <span className="block text-[12px] font-semibold text-amber-800 mb-0.5">Akılda tut</span>
                   {plain(card.pearl)}
                 </span>
               )}
@@ -604,16 +606,16 @@ const StudySession: React.FC<{
         <div className="grid grid-cols-3 gap-2 ms-pop-in">
           {(
             [
-              ['again', 'Tekrar', '1', 'bg-[#FFF1F3] text-[#B4233C] hover:bg-[#FFE4E9]'],
-              ['hard', 'Zor', '2', 'bg-warn-soft text-warn hover:bg-[#FBE3C8]'],
-              ['good', 'Biliyorum', '3', 'bg-ok text-white hover:bg-[#126A35]'],
+              ['again', 'Tekrar', '1', 'bg-rose-50 text-rose-700 hover:bg-rose-100'],
+              ['hard', 'Zor', '2', 'bg-warn-soft text-warn hover:bg-amber-200'],
+              ['good', 'Biliyorum', '3', 'bg-ok text-white hover:bg-emerald-900'],
             ] as const
           ).map(([g, label, key, cls]) => (
             <button
               key={g}
               type="button"
               onClick={() => answer(g)}
-              className={`h-14 rounded-[16px] text-[15.5px] font-semibold inline-flex flex-col items-center justify-center cursor-pointer transition-colors ${cls}`}
+              className={`h-14 rounded-2xl text-[15.5px] font-semibold inline-flex flex-col items-center justify-center cursor-pointer transition-colors ${cls}`}
             >
               <span className="inline-flex items-center gap-1.5">
                 {g === 'good' && <Check className="w-4 h-4" strokeWidth={3} />}
@@ -627,7 +629,7 @@ const StudySession: React.FC<{
         <button
           type="button"
           onClick={() => setFlipped(true)}
-          className="h-14 rounded-[16px] bg-ink text-white text-[16px] font-semibold cursor-pointer hover:bg-[#1B2B3B]"
+          className="h-14 rounded-2xl bg-ink text-white text-[16px] font-semibold cursor-pointer hover:bg-blue-950"
         >
           Cevabı göster
         </button>

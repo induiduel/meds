@@ -141,11 +141,11 @@ const AdminEditQuestionModalContent: React.FC<AdminEditQuestionModalProps & { qu
   };
 
   const inputCls =
-    'w-full bg-field border border-line-2 rounded-[10px] px-3 py-2 text-[14px] text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-[#7A8693]';
+    'w-full bg-field border border-line-2 rounded-[10px] px-3 py-2 text-[14px] text-ink outline-0 focus:border-accent focus:bg-white placeholder:text-slate-600';
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 bg-[rgba(14,26,38,0.55)] flex items-stretch sm:items-center justify-center sm:p-4 overflow-y-auto">
-      <div className="ms-modal-panel bg-white w-full max-w-5xl sm:rounded-[20px] shadow-[0_24px_80px_rgba(14,26,38,0.28)] overflow-hidden my-0 sm:my-6 flex flex-col max-h-dvh">
+      <div className="ms-modal-panel bg-white w-full max-w-5xl sm:rounded-2xl shadow-xl overflow-hidden my-0 sm:my-6 flex flex-col max-h-dvh">
         {/* Header */}
         <div className="bg-ink text-white px-4 sm:px-5 py-3.5 flex items-center gap-3 shrink-0">
           <span className="w-9 h-9 rounded-[10px] bg-white/10 text-white flex items-center justify-center shrink-0">
@@ -252,13 +252,13 @@ const AdminEditQuestionModalContent: React.FC<AdminEditQuestionModalProps & { qu
               </label>
 
               {!canPublish && (
-                <p className="m-0 rounded-[12px] bg-warn-soft px-3 py-2 text-[13px] text-ink-2 flex items-start gap-2">
+                <p className="m-0 rounded-xl bg-warn-soft px-3 py-2 text-[13px] text-ink-2 flex items-start gap-2">
                   <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5 text-warn" />
                   <span>Redaksiyon tamamlanmadığı için kayıt <strong>taslak</strong> olarak saklanacak; mevcut doğrulanmış içerik silinmeyecek.</span>
                 </p>
               )}
               {error && (
-                <p role="alert" className="m-0 rounded-[12px] bg-bad-soft px-3 py-2 text-[13px] text-bad-text">{error}</p>
+                <p role="alert" className="m-0 rounded-xl bg-bad-soft px-3 py-2 text-[13px] text-bad-text">{error}</p>
               )}
             </div>
 
@@ -288,7 +288,7 @@ const AdminEditQuestionModalContent: React.FC<AdminEditQuestionModalProps & { qu
                 <h4 className="m-0 text-[13px] font-bold text-ink flex items-center gap-1.5">
                   <Eye className="w-4 h-4 text-ink-3" /> Canlı önizleme
                 </h4>
-                <div className="rounded-[12px] bg-white border border-line p-3 flex flex-col gap-2">
+                <div className="rounded-xl bg-white border border-line p-3 flex flex-col gap-2">
                   <p className="m-0 text-[13.5px] text-ink leading-relaxed">{stem.trim() || <span className="text-ink-3 italic">Soru kökü henüz yazılmadı…</span>}</p>
                   <div className="flex flex-col gap-1">
                     {OPT_KEYS.filter((k) => opts[k].trim()).map((k) => (

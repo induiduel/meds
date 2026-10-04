@@ -1,4 +1,5 @@
 import React from 'react';
+import { PageHeader } from './ui/PageHeader';
 import { Sparkles, Plus, Clock, HelpCircle, Layers } from 'lucide-react';
 import { QuestionItem } from '../types';
 
@@ -24,18 +25,14 @@ export const QuestionMatrix: React.FC<QuestionMatrixProps> = ({
   const slots = Array.from({ length: targetCount }, (_, i) => i + 1);
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-xs space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
-        <div>
-          <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-            <Layers className="w-5 h-5 text-teal-600" />
-            1-{targetCount} Soru Haritası ve Tamamlanma Durumu
-          </h2>
-          <p className="text-xs text-slate-500 mt-0.5">
-            Her kutucuk kurul sınavındaki bir soruyu temsil eder. Herhangi bir numaraya tıklayarak soruyu açabilir veya aklınızdaki parçayı ekleyebilirsiniz.
-          </p>
-        </div>
-
+    <div className="flex flex-col gap-4">
+    <PageHeader
+      eyebrow="Kurul görünümü"
+      title="Soru haritası"
+      description={`1–${targetCount} arası her kutu sınavdaki bir soru. Numaraya tıklayıp soruyu açabilir ya da aklındaki parçayı ekleyebilirsin.`}
+    />
+    <div className="bg-white rounded-2xl border border-line p-4 sm:p-6 shadow-xs space-y-5">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-line-soft">
         {/* Legend */}
         <div className="flex flex-wrap items-center gap-3 text-xs">
           <div className="flex items-center gap-1.5">
@@ -94,6 +91,7 @@ export const QuestionMatrix: React.FC<QuestionMatrixProps> = ({
           );
         })}
       </div>
+    </div>
     </div>
   );
 };

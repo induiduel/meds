@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { PageHeader } from './ui/PageHeader';
 import { 
   BookMarked, 
   Search, 
@@ -527,22 +528,18 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
   return (
     <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-      {/* Title + progress (light, compact) */}
-      <div className="bg-white border border-line rounded-[16px] p-4 sm:p-5 flex flex-col gap-3.5">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-3">
-          <div className="min-w-0">
-            <h2 className="m-0 font-display font-bold text-[24px] sm:text-[28px] leading-[1.1] tracking-[-0.03em] text-ink">Ders notları ve slaytlar</h2>
-            <p className="m-0 mt-1 text-[14px] text-ink-2 max-w-[720px]">
-              Drive'daki ders slaytları sayfa sayfa, yorumsuz metin olarak işlenir. Sorular bu sayfalarla eşleştirilir.
-            </p>
-          </div>
+      <PageHeader
+        eyebrow="Kaynak kütüphanesi"
+        title="Ders notları ve slaytlar"
+        description="Drive'daki ders slaytları sayfa sayfa, yorumsuz metin olarak işlenir. Sorular bu sayfalarla eşleştirilir."
+        actions={
           <div className="flex flex-wrap items-center gap-2 shrink-0">
             {isAdmin && (
               <button
                 type="button"
                 onClick={handleTriggerDesktopSync}
                 disabled={isSyncingDesktop}
-                className="h-10 px-3.5 rounded-[10px] border border-line-2 bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 cursor-pointer hover:border-ink-3 disabled:opacity-60"
+                className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-60"
                 title="Yerel ders notu klasörünü şimdi tara"
               >
                 {isSyncingDesktop ? <RefreshCw className="w-4 h-4 animate-spin" /> : <FolderOpen className="w-4 h-4" />}
@@ -553,7 +550,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               href={DRIVE_FOLDER_URL}
               target="_blank"
               rel="noreferrer"
-              className="h-10 px-3.5 rounded-[10px] border border-line-2 bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 hover:border-ink-3"
+              className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-[14px] font-semibold text-ink inline-flex items-center gap-2 hover:border-line-2"
             >
               <ExternalLink className="w-4 h-4" />
               Drive klasörü
@@ -569,8 +566,9 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               </button>
             )}
           </div>
-        </div>
-
+        }
+      />
+      <div className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5">
         {isAdmin && <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />}
 
         <div className="flex flex-col gap-1.5">
@@ -607,7 +605,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
           </div>
         )}
 
-        <div role="tablist" aria-label="Ders notu görünümü" className="grid grid-cols-2 gap-1 bg-canvas rounded-[12px] p-1">
+        <div role="tablist" aria-label="Ders notu görünümü" className="grid grid-cols-2 gap-1 bg-canvas rounded-xl p-1">
           {(
             [
               ['drive_catalog', FolderGit2, 'Slayt kataloğu', TOTAL_CATALOG_SLIDES],
@@ -622,8 +620,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                 role="tab"
                 aria-selected={on}
                 onClick={() => setActiveTab(id)}
-                className={`min-h-10 px-2 rounded-[9px] flex items-center justify-center gap-2 text-[14px] cursor-pointer ${
-                  on ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'
+                className={`min-h-10 px-2 rounded-lg flex items-center justify-center gap-2 text-[14px] cursor-pointer ${
+                  on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                 }`}
               >
                 <Icon className={`w-4 h-4 shrink-0 ${on ? 'text-accent' : ''}`} />

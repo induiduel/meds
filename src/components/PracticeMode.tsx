@@ -96,7 +96,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
       if (e.key === 'ArrowRight') return go(currentIndex + 1);
       if (e.key === 'ArrowLeft') return go(currentIndex - 1);
       const k = e.key.toUpperCase();
-      if (rec && /^[A-E]$/.test(k) && rec.options.some((o) => o.key === k)) handleSelect(k);
+      if (rec && /^[A-E]$/.test(k) && rec.options.some((o, i) => (o.key || 'ABCDE'[i]) === k)) handleSelect(k);
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
@@ -162,7 +162,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
               {position}/{total}
             </span>
           </div>
-          <span className="shrink-0 font-mono text-[13px] px-2.5 h-8 inline-flex items-center rounded-[9px] bg-canvas text-ink-2" aria-label="Geçen süre">
+          <span className="shrink-0 font-mono text-[13px] px-2.5 h-8 inline-flex items-center rounded-lg bg-canvas text-ink-2" aria-label="Geçen süre">
             {formatElapsed(elapsed)}
           </span>
           <button
@@ -195,7 +195,9 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
         <h1 className={`m-0 font-medium leading-[1.45] tracking-[-0.01em] ${rec.stem.length > 180 ? 'text-[17px] sm:text-[19px]' : 'text-[19px] sm:text-[23px]'}`}>{rec.stem}</h1>
 
         <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2">
-          {rec.options.map((opt) => {
+          {rec.options.map((o0, oi) => {
+            // Bazı kayıtlarda şık harfi yok: sıradan üret (A, B, C…)
+            const opt = { ...o0, key: o0.key || 'ABCDE'[oi] };
             const isThisCorrect = rec.correctAnswer === opt.key;
             const isPicked = userAnswer === opt.key;
             let box = 'border border-line bg-white hover:border-accent/60';
@@ -222,11 +224,11 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                 role="radio"
                 aria-checked={isPicked}
                 onClick={() => handleSelect(opt.key)}
-                className={`flex items-center gap-3 min-h-[52px] px-3 py-2.5 rounded-[14px] text-[15px] sm:text-[16px] leading-snug text-left transition-colors ${box} ${
+                className={`flex items-center gap-3 min-h-[52px] px-3 py-2.5 rounded-xl text-[15px] sm:text-[16px] leading-snug text-left transition-colors ${box} ${
                   isAnswered ? 'cursor-default' : 'cursor-pointer'
                 }`}
               >
-                <span className={`w-8 h-8 shrink-0 rounded-[9px] flex items-center justify-center font-mono text-[13px] font-semibold ${key}`}>{opt.key}</span>
+                <span className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-mono text-[13px] font-semibold ${key}`}>{opt.key}</span>
                 <span className="flex-1">{opt.text}</span>
                 {tag && <span className={`text-[12px] font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
               </button>
@@ -235,7 +237,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
         </div>
 
         {isAnswered && (
-          <section className={`rounded-[16px] px-4 py-4 flex flex-col gap-2 ${isCorrect ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
+          <section className={`rounded-2xl px-4 py-4 flex flex-col gap-2 ${isCorrect ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
             <span className={`font-semibold text-[15px] ${isCorrect ? 'text-ok' : 'text-bad-text'}`}>
               {isCorrect ? 'Doğru!' : `Doğru cevap ${rec.correctAnswer}`}
             </span>
@@ -269,7 +271,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             type="button"
             onClick={() => setNavOpen(true)}
             aria-haspopup="dialog"
-            className="h-12 px-3 rounded-[14px] border border-line bg-white inline-flex items-center gap-2 font-mono text-[14px] text-ink cursor-pointer shrink-0"
+            className="h-12 px-3 rounded-xl border border-line bg-white inline-flex items-center gap-2 font-mono text-[14px] text-ink cursor-pointer shrink-0"
           >
             <LayoutGrid className="w-[18px] h-[18px] text-ink-2" />
             {position}/{total}
@@ -279,7 +281,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             onClick={() => go(currentIndex - 1)}
             disabled={currentIndex === 0}
             aria-label="Önceki soru"
-            className="w-12 h-12 rounded-[14px] border border-line bg-white flex items-center justify-center cursor-pointer disabled:opacity-40 shrink-0"
+            className="w-12 h-12 rounded-xl border border-line bg-white flex items-center justify-center cursor-pointer disabled:opacity-40 shrink-0"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
@@ -287,7 +289,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             type="button"
             onClick={() => go(currentIndex + 1)}
             disabled={currentIndex >= total - 1}
-            className="flex-1 h-12 rounded-[14px] bg-accent hover:bg-accent-hover text-white font-semibold text-[16px] inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40"
+            className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-[16px] inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40"
           >
             {isAnswered ? 'Sonraki soru' : 'Atla'}
             <ArrowRight className="w-5 h-5" />
@@ -299,7 +301,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
       {navOpen && (
         <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center" role="dialog" aria-modal="true" aria-label="Soru gezgini">
           <button type="button" aria-label="Kapat" onClick={() => setNavOpen(false)} className="absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
-          <div className="relative w-full sm:max-w-[560px] max-h-[80dvh] overflow-y-auto bg-white rounded-t-[24px] sm:rounded-[20px] px-4 sm:px-5 pt-2 sm:pt-5 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-5 flex flex-col gap-3">
+          <div className="relative w-full sm:max-w-[560px] max-h-[80dvh] overflow-y-auto bg-white rounded-t-2xl sm:rounded-2xl px-4 sm:px-5 pt-2 sm:pt-5 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-5 flex flex-col gap-3">
             <span className="sm:hidden self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
             <div className="flex items-center gap-3">
               <span className="flex-1 text-[18px] font-bold">Sorular</span>

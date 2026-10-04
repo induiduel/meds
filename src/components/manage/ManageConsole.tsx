@@ -584,7 +584,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     <div className={`w-full bg-white overflow-hidden grid text-ink ${
       fullscreen
         ? 'h-dvh min-h-dvh grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[264px_minmax(0,1fr)]'
-        : 'rounded-[18px] border border-line min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)] grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[248px_minmax(0,1fr)]'
+        : 'rounded-2xl border border-line min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)] grid-cols-[minmax(0,1fr)] grid-rows-[auto_minmax(0,1fr)] lg:grid-rows-1 lg:grid-cols-[248px_minmax(0,1fr)]'
     }`}>
       <aside className="bg-canvas border-b lg:border-b-0 lg:border-r border-line flex lg:flex-col min-w-0">
         <div className="hidden lg:flex items-center gap-2.5 px-5 pt-5 pb-4">
@@ -620,7 +620,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                 onClick={() => setSection(sec.id)}
                 aria-current={on ? 'page' : undefined}
                 className={`shrink-0 lg:w-full min-h-10 px-3 rounded-[10px] flex items-center gap-2.5 text-left cursor-pointer transition-colors ${
-                  on ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink hover:bg-white/60'
+                  on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink hover:bg-white/60'
                 }`}
               >
                 <Icon className={`w-[18px] h-[18px] shrink-0 ${on ? 'text-accent' : ''}`} />
@@ -656,8 +656,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                 role="radio"
                 aria-checked={density === d}
                 onClick={() => setDensity(d)}
-                className={`h-8 px-2.5 rounded-[8px] text-[12.5px] cursor-pointer whitespace-nowrap ${
-                  density === d ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.12)]' : 'text-ink-2 hover:text-ink'
+                className={`h-8 px-2.5 rounded-lg text-[12.5px] cursor-pointer whitespace-nowrap ${
+                  density === d ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                 }`}
               >
                 {DENSITY_LABEL[d]}
@@ -774,7 +774,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                         <div className="text-[12px] text-ink-3 mt-0.5">{c.author} · {c.questionTopic || c.questionId}</div>
                       </div>
                       <button type="button" onClick={() => { void handleDeleteComment(c); }} disabled={busyAction === `comment-${c.id}`} title="Yorumu sil"
-                        className="h-8 px-2.5 rounded-lg border border-line text-[12px] font-semibold text-ink-2 hover:text-[#B4233C] hover:border-[#FECDCA] cursor-pointer shrink-0 disabled:opacity-50">Sil</button>
+                        className="h-8 px-2.5 rounded-lg border border-line text-[12px] font-semibold text-ink-2 hover:text-rose-700 hover:border-rose-200 cursor-pointer shrink-0 disabled:opacity-50">Sil</button>
                     </div>
                   ))}
                   {comments.length === 0 && <p className="m-0 px-3 py-6 text-center text-[14px] text-ink-2">Yorum yok.</p>}
@@ -796,7 +796,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                         <button type="button" onClick={() => { void handlePublishDraft(d); }} disabled={busyAction === `publish-${d.id}`} title="Taslağı onayla ve yayınla"
                           className="h-9 px-3 rounded-[10px] bg-ok text-white text-[13px] font-semibold inline-flex items-center gap-1 cursor-pointer disabled:opacity-50"><Send className="w-3.5 h-3.5" /> Yayınla</button>
                         <button type="button" onClick={() => { void handleDeleteDraft(d); }} disabled={busyAction === `deldraft-${d.id}`} title="Taslağı her yerden sil"
-                          className="h-9 px-3 rounded-[10px] border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] text-[13px] font-semibold cursor-pointer disabled:opacity-50">Sil</button>
+                          className="h-9 px-3 rounded-[10px] border border-rose-300 bg-rose-50 text-rose-700 text-[13px] font-semibold cursor-pointer disabled:opacity-50">Sil</button>
                       </div>
                     </div>
                   ))}
@@ -862,8 +862,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
               {selectedReport && (
                 <div className="rounded-xl border border-line overflow-hidden">
-                  <div className="px-4 py-3 bg-[#FFF5F7] border-b border-line-soft">
-                    <div className="text-[15px] font-bold flex items-center gap-2"><Flag className="w-4 h-4 text-[#B4233C]" /> {selectedReport.reason}</div>
+                  <div className="px-4 py-3 bg-rose-50 border-b border-line-soft">
+                    <div className="text-[15px] font-bold flex items-center gap-2"><Flag className="w-4 h-4 text-rose-700" /> {selectedReport.reason}</div>
                     <p className="m-0 mt-1 text-[14px] text-ink-2">{selectedReport.details || 'Detay girilmemiş.'}</p>
                     <div className="text-[12px] text-ink-3 mt-1">{selectedReport.reportedBy || 'Anonim'} · {selectedReport.createdAt ? new Date(selectedReport.createdAt).toLocaleString('tr-TR') : ''}</div>
                   </div>
@@ -874,7 +874,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                       <div className="text-[13px] text-ink-2">{moderatedQuestion.discipline} · {moderatedQuestion.topic} · S.{moderatedQuestion.questionNumber || '?'}</div>
                       <label className="flex flex-col gap-1.5">
                         <span className="text-[13px] font-semibold">Soru kökü</span>
-                        <textarea value={modStem} onChange={(e) => setModStem(e.target.value)} rows={4} className="rounded-[12px] bg-field border border-transparent px-3.5 py-3 text-[15px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
+                        <textarea value={modStem} onChange={(e) => setModStem(e.target.value)} rows={4} className="rounded-xl bg-field border border-transparent px-3.5 py-3 text-[15px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <label className="flex flex-col gap-1.5">
@@ -886,7 +886,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                       </div>
                       <label className="flex flex-col gap-1.5">
                         <span className="text-[13px] font-semibold">Açıklama</span>
-                        <textarea value={modExplanation} onChange={(e) => setModExplanation(e.target.value)} rows={3} className="rounded-[12px] bg-field border border-transparent px-3.5 py-3 text-[14px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
+                        <textarea value={modExplanation} onChange={(e) => setModExplanation(e.target.value)} rows={3} className="rounded-xl bg-field border border-transparent px-3.5 py-3 text-[14px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
                       </label>
                       <div className="flex gap-2">
                         <button type="button" onClick={() => { void handleSaveModeration(); }} disabled={isSavingMod || !modStem.trim()} className="h-11 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] inline-flex items-center gap-2 cursor-pointer disabled:opacity-50">
@@ -1016,7 +1016,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                               setConfirmDeleteUserKey(null);
                             }}
                             className={`cursor-pointer transition-colors ${
-                              selectedUserKey === uKey ? 'bg-accent-soft/30' : 'hover:bg-[#FAFBFC]'
+                              selectedUserKey === uKey ? 'bg-accent-soft/30' : 'hover:bg-blue-50'
                             }`}
                           >
                             {/* Avatar & Display Name */}
@@ -1119,7 +1119,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                                           type="button"
                                           onClick={() => void handleDeleteRegisteredUser(u)}
                                           disabled={deleting}
-                                          className="h-8 px-3 rounded-lg bg-[#B4233C] hover:bg-[#91182D] text-white text-[12px] font-bold cursor-pointer inline-flex items-center gap-1 shadow-xs transition-colors"
+                                          className="h-8 px-3 rounded-lg bg-rose-700 hover:bg-rose-800 text-white text-[12px] font-bold cursor-pointer inline-flex items-center gap-1 shadow-xs transition-colors"
                                         >
                                           <Trash2 className="w-3.5 h-3.5" /> {deleting ? 'Siliniyor…' : 'Evet, Sil!'}
                                         </button>
@@ -1138,9 +1138,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                                         title={`${u.displayName || u.email || 'Bu kullanıcıyı'} veritabanından kalıcı olarak sil`}
                                         onClick={() => setConfirmDeleteUserKey(uKey)}
                                         disabled={deleting}
-                                        className="h-8 px-3 rounded-lg border border-[#FDA29B] bg-[#FEF3F2] hover:bg-[#FEE4E2] text-[#B4233C] text-[12px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all shadow-2xs"
+                                        className="h-8 px-3 rounded-lg border border-rose-300 bg-rose-50 hover:bg-rose-100 text-rose-700 text-[12px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all shadow-2xs"
                                       >
-                                        <Trash2 className="w-3.5 h-3.5 text-[#B4233C]" />
+                                        <Trash2 className="w-3.5 h-3.5 text-rose-700" />
                                         <span>Kullanıcıyı Sil</span>
                                       </button>
                                     )}
@@ -1196,7 +1196,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                               setConfirmDeleteUserKey(null);
                             }}
                             className={`cursor-pointer transition-colors ${
-                              selectedUserKey === u.key ? 'bg-accent-soft/30' : 'hover:bg-[#FAFBFC]'
+                              selectedUserKey === u.key ? 'bg-accent-soft/30' : 'hover:bg-blue-50'
                             }`}
                           >
                             <td className="px-3 py-2.5">
@@ -1243,8 +1243,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                                         disabled={deleting}
                                         className={`h-8 px-3 rounded-lg text-[12px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all shadow-2xs disabled:opacity-50 ${
                                           confirming
-                                            ? 'bg-[#B4233C] text-white hover:bg-[#91182D]'
-                                            : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'
+                                            ? 'bg-rose-700 text-white hover:bg-rose-800'
+                                            : 'border border-rose-300 bg-rose-50 text-rose-700 hover:bg-rose-100'
                                         }`}
                                       >
                                         <Trash2 className="w-3.5 h-3.5" /> {deleting ? 'Siliniyor…' : confirming ? 'Emin misin? Sil' : 'Kullanıcıyı Sil'}
@@ -1258,7 +1258,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                                         disabled={purging}
                                         className={`h-8 px-2.5 rounded-lg text-[12px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all disabled:opacity-50 ${
                                           confirmingPurge
-                                            ? 'bg-[#B4233C] text-white hover:bg-[#91182D]'
+                                            ? 'bg-rose-700 text-white hover:bg-rose-800'
                                             : 'border border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100'
                                         }`}
                                       >
@@ -1369,11 +1369,11 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                           disabled={busyAction === `deluser-${u.key}` || (reg?.uid ? busyAction === `delreg-${reg.uid}` : false)}
                           className={`h-9 px-4 rounded-[10px] text-[13px] font-bold cursor-pointer inline-flex items-center gap-1.5 transition-all shadow-2xs disabled:opacity-50 ${
                             deleteConfirming
-                              ? 'bg-[#B4233C] text-white hover:bg-[#91182D]'
-                              : 'border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] hover:bg-[#FEE4E2]'
+                              ? 'bg-rose-700 text-white hover:bg-rose-800'
+                              : 'border border-rose-300 bg-rose-50 text-rose-700 hover:bg-rose-100'
                           }`}
                         >
-                          <Trash2 className="w-4 h-4 text-[#B4233C]" />
+                          <Trash2 className="w-4 h-4 text-rose-700" />
                           <span>{deleteConfirming ? 'Emin misiniz? Kalıcı Olarak Sil' : 'Kullanıcıyı Kalıcı Olarak Sil'}</span>
                         </button>
                       )}
@@ -1386,7 +1386,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                           disabled={busyAction === `purge-${u.key}`}
                           className={`h-9 px-3.5 rounded-[10px] text-[13px] font-bold cursor-pointer inline-flex items-center gap-1.5 disabled:opacity-50 ${
                             confirmPurgeKey === u.key
-                              ? 'bg-[#B4233C] text-white'
+                              ? 'bg-rose-700 text-white'
                               : 'border border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100'
                           }`}
                         >
@@ -1552,8 +1552,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               </div>
 
               {health.ai.keys.filter((k) => k.status === 'quota_exceeded' || k.status === 'spending_cap_exceeded').length > 0 && (
-                <div role="alert" className="rounded-xl border border-[#FECDCA] bg-[#FEF3F2] px-4 py-3 text-[14px] flex items-start gap-2">
-                  <AlertTriangle className="w-4 h-4 text-[#B4233C] shrink-0 mt-0.5" />
+                <div role="alert" className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-[14px] flex items-start gap-2">
+                  <AlertTriangle className="w-4 h-4 text-rose-700 shrink-0 mt-0.5" />
                   <span>Limite ulaşan AI anahtarları: {health.ai.keys.filter((k) => k.status !== 'ok').map((k) => `${k.label} (${k.status})`).join(' · ')}</span>
                 </div>
               )}
@@ -1580,8 +1580,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                   )}
                 </header>
                 {heartbeat && (
-                  <div className={`px-3 py-2 border-b border-line-soft text-[13px] flex items-center gap-2 ${heartbeat.isOnline ? 'bg-[#F6FEF9]' : 'bg-[#FEF3F2]'}`}>
-                    <Radio className={`w-4 h-4 ${heartbeat.isOnline ? 'text-ok' : 'text-[#B4233C]'}`} />
+                  <div className={`px-3 py-2 border-b border-line-soft text-[13px] flex items-center gap-2 ${heartbeat.isOnline ? 'bg-emerald-50' : 'bg-rose-50'}`}>
+                    <Radio className={`w-4 h-4 ${heartbeat.isOnline ? 'text-ok' : 'text-rose-700'}`} />
                     <span>Arka plan işçisi: <strong>{heartbeat.isOnline ? 'çevrimiçi' : 'çevrimdışı'}</strong>{heartbeat.diffSeconds !== undefined ? ` (${heartbeat.diffSeconds} sn önce)` : ''} · {heartbeat.message}</span>
                   </div>
                 )}
@@ -1618,7 +1618,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                   </button>
                   <button type="button" onClick={() => consoleLogBuffer.clear()} className="h-8 px-2.5 rounded-lg border border-line bg-white text-[12px] font-semibold cursor-pointer">Temizle</button>
                 </header>
-                <div className="max-h-[320px] overflow-y-auto bg-[#0B1220] text-slate-200 font-mono text-[12px] leading-relaxed p-3">
+                <div className="max-h-[320px] overflow-y-auto bg-blue-950 text-slate-200 font-mono text-[12px] leading-relaxed p-3">
                   {logs.filter((l) => logLevel === 'all' || l.level === logLevel).slice(-200).map((l) => (
                     <div key={l.id} className={`whitespace-pre-wrap break-all ${l.level === 'error' ? 'text-rose-400' : l.level === 'warn' ? 'text-amber-300' : 'text-slate-300'}`}>
                       [{l.ts.slice(11, 19)}][{l.level}][{l.source}] {l.message}
@@ -1648,7 +1648,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                   {settings.backupHours.map((h) => (
                     <span key={h} className="h-9 px-3 rounded-[10px] bg-canvas border border-line font-mono text-[14px] inline-flex items-center gap-2">
                       {h}
-                      <button type="button" aria-label={`${h} saatini sil`} onClick={() => setSettings({ ...settings, backupHours: settings.backupHours.filter((x) => x !== h) })} className="text-ink-3 hover:text-[#B4233C] cursor-pointer"><X className="w-3.5 h-3.5" /></button>
+                      <button type="button" aria-label={`${h} saatini sil`} onClick={() => setSettings({ ...settings, backupHours: settings.backupHours.filter((x) => x !== h) })} className="text-ink-3 hover:text-rose-700 cursor-pointer"><X className="w-3.5 h-3.5" /></button>
                     </span>
                   ))}
                 </div>
@@ -1688,7 +1688,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                     <input type="time" value={w.start} onChange={(e) => setSettings({ ...settings, aiWindows: settings.aiWindows.map((x, xi) => (xi === i ? { ...x, start: e.target.value } : x)) })} className="h-10 border border-line-2 rounded-[10px] px-3 text-[14px] bg-white" />
                     <span className="text-ink-3">→</span>
                     <input type="time" value={w.end} onChange={(e) => setSettings({ ...settings, aiWindows: settings.aiWindows.map((x, xi) => (xi === i ? { ...x, end: e.target.value } : x)) })} className="h-10 border border-line-2 rounded-[10px] px-3 text-[14px] bg-white" />
-                    <button type="button" aria-label="Pencereyi sil" onClick={() => setSettings({ ...settings, aiWindows: settings.aiWindows.filter((_, xi) => xi !== i) })} className="h-10 w-10 rounded-[10px] border border-line inline-flex items-center justify-center text-ink-3 hover:text-[#B4233C] cursor-pointer"><Trash2 className="w-4 h-4" /></button>
+                    <button type="button" aria-label="Pencereyi sil" onClick={() => setSettings({ ...settings, aiWindows: settings.aiWindows.filter((_, xi) => xi !== i) })} className="h-10 w-10 rounded-[10px] border border-line inline-flex items-center justify-center text-ink-3 hover:text-rose-700 cursor-pointer"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 ))}
                 <button type="button" onClick={() => setSettings({ ...settings, aiWindows: [...settings.aiWindows, { start: '02:00', end: '05:00' }] })} className="self-start h-10 px-4 rounded-[10px] border border-line-2 text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"><Plus className="w-4 h-4" /> Pencere ekle</button>

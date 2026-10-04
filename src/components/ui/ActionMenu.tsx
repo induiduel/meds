@@ -25,7 +25,7 @@ interface ActionMenuProps {
 const toneCls = {
   default: 'text-ink',
   accent: 'text-accent',
-  danger: 'text-[#B4233C]',
+  danger: 'text-rose-700',
 };
 
 /**
@@ -89,7 +89,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
                 className={`w-full flex items-center gap-3 text-left cursor-pointer disabled:opacity-50 ${toneCls[it.tone || 'default']} ${
                   big
                     ? `min-h-[52px] px-4 text-[15.5px] ${i > 0 ? 'border-t border-line' : ''}`
-                    : 'min-h-[38px] px-2.5 rounded-[9px] text-[14px] hover:bg-canvas'
+                    : 'min-h-[38px] px-2.5 rounded-lg text-[14px] hover:bg-canvas'
                 }`}
               >
                 {Icon && <Icon className={big ? 'w-5 h-5 shrink-0' : 'w-4 h-4 shrink-0 opacity-80'} />}
@@ -126,7 +126,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
               <button type="button" aria-label="Kapat" onClick={() => setOpen(false)} className="absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
               <div
                 role="menu"
-                className="absolute left-0 right-0 bottom-0 max-h-[80dvh] overflow-y-auto bg-white rounded-t-[24px] px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)] shadow-[0_-10px_40px_rgba(14,26,38,0.18)]"
+                className="absolute left-0 right-0 bottom-0 max-h-[80dvh] overflow-y-auto bg-white rounded-t-2xl px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)] shadow-lg"
               >
                 <span className="block mx-auto w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
                 <div className="flex items-center py-2">
@@ -143,7 +143,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
         ) : (
           <div
             role="menu"
-            className="absolute right-0 top-11 z-40 w-[248px] bg-white border border-line rounded-[14px] p-1.5 shadow-[0_16px_40px_rgba(14,26,38,0.14)]"
+            className="absolute right-0 top-11 z-40 w-[248px] bg-white border border-line rounded-xl p-1.5 shadow-lg"
           >
             {list(false)}
           </div>

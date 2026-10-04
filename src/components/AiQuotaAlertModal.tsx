@@ -132,7 +132,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
           {/* Explanation Alert */}
           <div className="p-3.5 rounded-xl bg-canvas border border-line text-[13px] space-y-1">
             <div className="font-semibold text-ink flex items-center gap-1.5">
-              <AlertTriangle className="w-4 h-4 text-[#F59E0B]" />
+              <AlertTriangle className="w-4 h-4 text-amber-600" />
               Neden bu uyarıyı aldınız?
             </div>
             <p className="text-ink-2 m-0 leading-relaxed">

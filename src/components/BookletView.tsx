@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PageHeader } from './ui/PageHeader';
 import { Printer, Download, Eye, EyeOff, FileText, CheckCircle2 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 
@@ -30,23 +31,18 @@ export const BookletView: React.FC<BookletViewProps> = ({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col gap-5">
       {/* Print Controls Bar (hidden in print media) */}
-      <div className="print:hidden bg-white rounded-xl border border-slate-200 p-4 shadow-xs flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-            <FileText className="w-4 h-4 text-teal-600" />
-            A4 Kurul Sınavı Soru Kitapçığı Görünümü
-          </h3>
-          <p className="text-xs text-slate-500">
-            Öğrencilerin katkıları ve AI ile tamamlanan soruların iki sütunlu klasik sınav kitapçığı formatı.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-2.5">
+      <PageHeader
+        className="print:hidden"
+        eyebrow="Yazdırılabilir"
+        title="A4 kitapçık"
+        description="Katkılar ve kaynaklarla tamamlanan soruların iki sütunlu klasik sınav kitapçığı."
+        actions={
+          <div className="flex flex-wrap items-center gap-2">
           <button
             onClick={() => setShowAnswerKey(!showAnswerKey)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
+            className={`h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
               showAnswerKey
                 ? 'bg-teal-50 border-teal-300 text-teal-800'
                 : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
@@ -58,7 +54,7 @@ export const BookletView: React.FC<BookletViewProps> = ({
 
           <button
             onClick={() => setShowExplanations(!showExplanations)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
+            className={`h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
               showExplanations
                 ? 'bg-emerald-50 border-emerald-300 text-emerald-800'
                 : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
@@ -69,13 +65,14 @@ export const BookletView: React.FC<BookletViewProps> = ({
 
           <button
             onClick={handlePrint}
-            className="bg-teal-700 hover:bg-teal-800 text-white px-4 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-xs cursor-pointer active:scale-95"
+            className="h-10 bg-accent hover:bg-accent-hover text-white px-4 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 shadow-xs cursor-pointer active:scale-95"
           >
             <Printer className="w-3.5 h-3.5" />
             <span>Yazdır / PDF Olarak Kaydet</span>
           </button>
-        </div>
-      </div>
+          </div>
+        }
+      />
 
       {/* A4 Printable Paper Container */}
       <div className="bg-white rounded-xl border border-slate-200 p-8 shadow-md max-w-4xl mx-auto print:shadow-none print:border-none print:p-0">

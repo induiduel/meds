@@ -15,14 +15,33 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --font-serif: "Geist", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #0B1626;
-  --color-ink-2: #47566A;
-  --color-ink-3: #637084;
-  --color-line: #E3E7ED;
-  --color-line-2: #CDD4DD;
-  --color-line-soft: #EEF1F5;
-  --color-canvas: #F3F5F8;
-  --color-field: #F7F8FA;
+  --color-ink: #0E1726;
+  --color-ink-2: #46546A;
+  --color-ink-3: #5F6C80;
+  --color-line: #E3E7EE;
+  --color-line-2: #CBD3DE;
+  --color-line-soft: #EEF1F6;
+  --color-canvas: #F4F6FA;
+  --color-field: #F6F7FA;
+
+  /* Tek köşe sistemi: kontrol 8–10, kart 12–16, pencere 16–20 */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 20px;
+
+  /* Yumuşak, katmanlı Material yükseltileri */
+  --shadow-2xs: 0 1px 0 rgb(14 23 38 / 0.04);
+  --shadow-xs: 0 1px 2px rgb(14 23 38 / 0.06);
+  --shadow-sm: 0 1px 2px rgb(14 23 38 / 0.05), 0 2px 8px rgb(14 23 38 / 0.05);
+  --shadow-md: 0 2px 4px rgb(14 23 38 / 0.05), 0 8px 20px rgb(14 23 38 / 0.08);
+  --shadow-lg: 0 4px 8px rgb(14 23 38 / 0.06), 0 16px 36px rgb(14 23 38 / 0.12);
+  --shadow-xl: 0 8px 16px rgb(14 23 38 / 0.08), 0 24px 60px rgb(14 23 38 / 0.18);
+  --shadow-2xl: 0 12px 24px rgb(14 23 38 / 0.1), 0 32px 80px rgb(14 23 38 / 0.24);
+
+  --ease-out-soft: cubic-bezier(.2, .8, .3, 1);
 
   --color-accent: #2453E6;
   --color-accent-hover: #1C45C9;
@@ -56,6 +75,11 @@
  * döner; vurgu açılır, beyaz yazı ile kontrast 4.5:1 üstünde kalır.
  * ------------------------------------------------------------- */
 html.theme-dark {
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35), 0 2px 8px rgb(0 0 0 / 0.25);
+  --shadow-md: 0 2px 4px rgb(0 0 0 / 0.35), 0 8px 20px rgb(0 0 0 / 0.35);
+  --shadow-lg: 0 4px 8px rgb(0 0 0 / 0.4), 0 16px 36px rgb(0 0 0 / 0.45);
+  --shadow-xl: 0 8px 16px rgb(0 0 0 / 0.45), 0 24px 60px rgb(0 0 0 / 0.55);
   --color-white: #121A27;
   --color-ink: #E7ECF3;
   --color-ink-2: #A9B5C6;
@@ -536,11 +560,11 @@ body {
 .ms-page { transform-box: view-box; transform-origin: 48px 38px; animation: ms-page 1.6s cubic-bezier(.6,.05,.3,1) infinite; }
 .ms-sheet { animation: ms-sheet 1.6s ease-in infinite; }
 .ms-sheet-2 { animation-delay: .8s; }
-.ms-ring { transform-box: fill-box; transform-origin: center; animation: ms-ring .35s cubic-bezier(.2,.9,.3,1.3) both; }
-.ms-check { stroke-dasharray: 40; animation: ms-check .4s .25s ease-out both; }
-.ms-confetti { transform-box: view-box; transform-origin: 40px 40px; animation: ms-confetti .9s .2s ease-out both; }
-.ms-fade-in { animation: ms-fade-in .2s ease-out both; }
-.ms-pop-in { animation: ms-pop-in .22s ease-out both; }
+.ms-ring { transform-box: fill-box; transform-origin: center; animation: ms-ring .35s cubic-bezier(.2,.9,.3,1.3) backwards; }
+.ms-check { stroke-dasharray: 40; animation: ms-check .4s .25s ease-out backwards; }
+.ms-confetti { transform-box: view-box; transform-origin: 40px 40px; animation: ms-confetti .9s .2s ease-out backwards; }
+.ms-fade-in { animation: ms-fade-in .2s ease-out backwards; }
+.ms-pop-in { animation: ms-pop-in .22s ease-out backwards; }
 
 @keyframes ms-look { 0%, 35%, 100% { transform: translateX(0); } 45%, 60% { transform: translateX(-2.5px); } 70%, 85% { transform: translateX(2.5px); } }
 @keyframes ms-dot { 0%, 60%, 100% { transform: translateY(0); opacity: .45; } 30% { transform: translateY(-3px); opacity: 1; } }
@@ -562,9 +586,9 @@ body {
 @keyframes ms-toast-in { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: none; } }
 @keyframes ms-toast-timer { from { width: 100%; } to { width: 0%; } }
 
-.ms-wobble { transform-origin: 50% 90%; animation: ms-wobble 1.1s ease-in-out .15s both, ms-float 2.4s ease-in-out 1.3s infinite; }
+.ms-wobble { transform-origin: 50% 90%; animation: ms-wobble 1.1s ease-in-out .15s backwards, ms-float 2.4s ease-in-out 1.3s infinite; }
 .ms-drop { transform-box: fill-box; animation: ms-drop 1.8s ease-in infinite; }
-.ms-toast-in { animation: ms-toast-in .28s cubic-bezier(.2,.9,.3,1.2) both; }
+.ms-toast-in { animation: ms-toast-in .28s cubic-bezier(.2,.9,.3,1.2) backwards; }
 .ms-toast-timer { animation: ms-toast-timer linear forwards; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -599,8 +623,8 @@ details > summary::-webkit-details-marker { display: none; }
 @keyframes ms-sheet-up { from { transform: translateY(100%); } to { transform: none; } }
 @keyframes ms-slide-left { from { transform: translateX(100%); } to { transform: none; } }
 @keyframes ms-shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
-.ms-sheet-up { animation: ms-sheet-up .28s cubic-bezier(.2,.8,.3,1) both; }
-.ms-slide-left { animation: ms-slide-left .26s cubic-bezier(.2,.8,.3,1) both; }
+.ms-sheet-up { animation: ms-sheet-up .28s cubic-bezier(.2,.8,.3,1) backwards; }
+.ms-slide-left { animation: ms-slide-left .26s cubic-bezier(.2,.8,.3,1) backwards; }
 .ms-shake { animation: ms-shake .3s; }
 @media (prefers-reduced-motion: reduce) {
   .ms-sheet-up, .ms-slide-left, .ms-shake { animation: none; }
@@ -608,13 +632,13 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* Ortak pencere kabuğu: tüm modallar aynı biçimde açılır, ekrandan taşmaz,
    gövde kendi içinde kayar. Telefonda alttan çekmece gibi gelir. */
-.ms-overlay { animation: ms-fade-in .18s ease-out both; overscroll-behavior: contain; }
+.ms-overlay { animation: ms-fade-in .18s ease-out backwards; overscroll-behavior: contain; }
 .ms-overlay > .ms-modal-panel {
   max-height: calc(100dvh - 24px);
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  animation: ms-pop-in .24s cubic-bezier(.2,.9,.3,1.1) both;
+  animation: ms-pop-in .24s cubic-bezier(.2,.9,.3,1.1) backwards;
 }
 @media (max-width: 639px) {
   .ms-overlay { align-items: flex-end !important; padding: 0 !important; }
@@ -625,7 +649,7 @@ details > summary::-webkit-details-marker { display: none; }
     margin: 0;
     border-radius: 18px 18px 0 0;
     padding-bottom: env(safe-area-inset-bottom);
-    animation: ms-sheet-up .28s cubic-bezier(.2,.8,.3,1) both;
+    animation: ms-sheet-up .28s cubic-bezier(.2,.8,.3,1) backwards;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -635,3 +659,58 @@ details > summary::-webkit-details-marker { display: none; }
 /* Ana içerik flex sütunu: mx-auto ile ortalanan sayfa kapsayıcıları içeriğe göre
    genişleyip telefonda ekrandan taşıyordu. Genişliği kapsayıcıya sabitler. */
 main.flex-col > .mx-auto { width: 100%; min-width: 0; }
+
+
+/* =============================================================
+ * MedSoru v4 arayüz katmanı — tüm sayfalarda ortak davranış
+ * ============================================================= */
+html { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-size: 14px; line-height: 1.5; font-feature-settings: "ss01", "cv11"; }
+
+/* Odak halkası: klavyeyle gezinmede her yerde aynı */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+:where(input, select, textarea):focus-visible { outline-offset: 0; }
+
+/* Basma hissi ve yumuşak geçişler (düzen kaydırmaz, yalnız ölçek) */
+:where(button, [role="button"], a.btn) {
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease, transform .08s ease;
+}
+:where(button:not(:disabled):not([aria-disabled="true"])):active { transform: scale(.98); }
+:where(button:disabled) { cursor: not-allowed; }
+
+/* İnce kaydırma çubukları */
+* { scrollbar-width: thin; scrollbar-color: var(--color-line-2) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--color-line-2); border-radius: 10px; border: 3px solid transparent; background-clip: content-box; }
+*::-webkit-scrollbar-thumb:hover { background-color: var(--color-ink-3); }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Sayfa açılışı: içerik yumuşakça belirir */
+@keyframes ms-page-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+main.flex-col > * { animation: ms-page-in .32s var(--ease-out-soft) backwards; }
+main.flex-col > *:nth-child(2) { animation-delay: .04s; }
+main.flex-col > *:nth-child(3) { animation-delay: .08s; }
+
+/* Sayfa başlığı (PageHeader) */
+.ms-page-title { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; }
+.ms-eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--color-accent); }
+
+/* Kart üstüne gelince hafif yükselme (yalnız fareli cihazlar) */
+@media (hover: hover) {
+  .ms-lift { transition: box-shadow .2s ease, border-color .2s ease, transform .2s var(--ease-out-soft); }
+  .ms-lift:hover { box-shadow: var(--shadow-md); border-color: var(--color-line-2); transform: translateY(-1px); }
+}
+
+/* Dokunmatik: küçük hedefleri büyüt, metin seçimini kolaylaştır */
+@media (pointer: coarse) {
+  :where(button, [role="button"], a, select, input[type="checkbox"], input[type="radio"]) { touch-action: manipulation; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main.flex-col > * { animation: none; }
+  :where(button):active { transform: none; }
+}

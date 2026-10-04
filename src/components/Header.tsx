@@ -34,7 +34,7 @@ import {
 import { useTheme } from '../utils/theme';
 import { Committee } from '../types';
 import { AppUser } from '../services/auth';
-import { AppRoute, pathFor, linkClick, ROUTE_TITLES } from '../router';
+import { AppRoute, pathFor, linkClick } from '../router';
 
 export type AppTab = AppRoute;
 
@@ -90,7 +90,7 @@ const NAV_PRIMARY = 9;
 
 export const BrandMark: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span
-    className="rounded-[9px] bg-accent flex items-center justify-center shrink-0"
+    className="rounded-lg bg-accent flex items-center justify-center shrink-0"
     style={{ width: size, height: size }}
   >
     <Plus className="text-white" style={{ width: size * 0.53, height: size * 0.53 }} strokeWidth={2.6} />
@@ -213,7 +213,7 @@ const PriorityNav: React.FC<{
             <ChevronDown className={`w-3.5 h-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
           </button>
           {open && (
-            <div role="menu" className="absolute left-0 top-11 min-w-[220px] bg-white border border-line rounded-2xl shadow-[0_12px_40px_rgba(14,26,38,0.16)] p-1.5 z-50">
+            <div role="menu" className="absolute left-0 top-11 min-w-[220px] bg-white border border-line rounded-2xl shadow-lg p-1.5 z-50">
               {hidden.map((item) => {
                 const Icon = item.icon;
                 const on = active === item.id;
@@ -357,20 +357,19 @@ export const Header: React.FC<HeaderProps> = ({
   );
 
   return (
-    <header className="bg-white border-b border-line sticky top-0 z-30 print:hidden">
+    <header className="bg-white/85 backdrop-blur-md backdrop-saturate-150 border-b border-line sticky top-0 z-30 print:hidden">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-14 flex items-center gap-2 sm:gap-3">
         {/* Phones: logo. Tablet/desktop: the rail carries the logo and menu, so show the page title */}
         <a
           href={pathFor('quick_add')}
           onClick={linkClick(() => setActiveTab('quick_add'))}
-          className="md:hidden lg:flex flex items-center gap-2 cursor-pointer shrink-0 lg:mr-3"
+          className="flex items-center gap-2 cursor-pointer shrink-0 lg:mr-3"
           aria-label="MedSoru ana sayfa"
         >
           <BrandMark size={28} />
           <span className="font-display font-bold text-[18px] tracking-[-0.02em] text-ink">MedSoru</span>
         </a>
         {/* Tablet: ray menü solda, burada sayfa başlığı. Masaüstü: tasarımdaki gibi üstte yazılı menü */}
-        <span className="hidden md:block lg:hidden font-semibold text-[15px] text-ink truncate">{ROUTE_TITLES[activeTab] || 'MedSoru'}</span>
         <PriorityNav items={NAV.filter((n) => n.id !== 'matrix')} active={activeTab} onSelect={setActiveTab} />
 
         <span className="flex-1 lg:hidden" aria-hidden="true" />
@@ -422,7 +421,7 @@ export const Header: React.FC<HeaderProps> = ({
           {menuOpen && (
             <div
               role="menu"
-              className="fixed sm:absolute left-3 right-3 sm:left-auto sm:right-0 top-[60px] sm:top-12 sm:w-[300px] max-h-[calc(100dvh-140px)] sm:max-h-[calc(100vh-96px)] overflow-y-auto bg-white border border-line rounded-2xl shadow-[0_12px_40px_rgba(14,26,38,0.16)] p-2 z-50"
+              className="fixed sm:absolute left-3 right-3 sm:left-auto sm:right-0 top-[60px] sm:top-12 sm:w-[300px] max-h-[calc(100dvh-140px)] sm:max-h-[calc(100vh-96px)] overflow-y-auto bg-white border border-line rounded-2xl shadow-lg p-2 z-50"
             >
               <div className="flex items-center gap-3 px-2 py-2.5">
                 <span className="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center text-[13px] font-semibold shrink-0">
@@ -504,7 +503,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onKeyDown={(e) => e.key === 'Escape' && setMobileSearchOpen(false)}
                 placeholder="Soru, konu, ders ara"
                 aria-label="Ara"
-                className="border-0 outline-0 bg-transparent text-[16px] sm:text-[15px] flex-1 min-w-0 placeholder:text-[#6B7785]"
+                className="border-0 outline-0 bg-transparent text-[16px] sm:text-[15px] flex-1 min-w-0 placeholder:text-slate-600"
               />
               <span className="hidden sm:inline text-[12px] text-ink-3 whitespace-nowrap">Enter ile ara · Esc ile kapat</span>
             </div>

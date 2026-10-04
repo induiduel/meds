@@ -248,10 +248,10 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   const btnSecondary =
     'shrink-0 whitespace-nowrap h-10 px-3.5 rounded-[10px] border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50';
   const mobileHidden = detailsOpen ? 'flex' : 'hidden sm:flex';
-  const field = 'border border-line-2 rounded-[10px] bg-white px-3 text-[15px] text-ink outline-0 focus:border-accent placeholder:text-[#6B7785]';
+  const field = 'border border-line-2 rounded-[10px] bg-white px-3 text-[15px] text-ink outline-0 focus:border-accent placeholder:text-slate-600';
 
   return (
-    <article className="bg-white border border-line rounded-[18px] overflow-hidden">
+    <article className="bg-white border border-line rounded-2xl overflow-hidden">
       <div className={`grid grid-cols-1 ${isExpanded ? 'lg:grid-cols-[minmax(0,1.75fr)_minmax(0,1fr)]' : ''}`}>
         {/* ---------------- Main column ---------------- */}
         <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 min-w-0">
@@ -308,7 +308,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                     {rows.map((o) => (
                       <li
                         key={o.key}
-                        className={`grid grid-cols-[32px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_180px] gap-x-3 sm:gap-x-4 items-center px-2.5 sm:px-4 py-2 sm:py-3 rounded-xl sm:rounded-[14px] ${
+                        className={`grid grid-cols-[32px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_180px] gap-x-3 sm:gap-x-4 items-center px-2.5 sm:px-4 py-2 sm:py-3 rounded-xl sm:rounded-xl ${
                           o.correct ? 'border-[1.5px] border-ok-bright bg-ok-tint' : o.ai ? 'border border-dashed border-line-2' : 'border border-line'
                         }`}
                       >
@@ -365,7 +365,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
 
               {/* Inline forms */}
               {showAddFragment && (
-                <form onSubmit={handleFragmentSubmit} className="flex flex-col gap-3 bg-canvas rounded-[14px] p-4">
+                <form onSubmit={handleFragmentSubmit} className="flex flex-col gap-3 bg-canvas rounded-xl p-4">
                   <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Parça türü">
                     {(
                       [
@@ -420,7 +420,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
               )}
 
               {showAddOption && (
-                <form onSubmit={handleOptionSubmit} className="flex flex-col gap-3 bg-canvas rounded-[14px] p-4">
+                <form onSubmit={handleOptionSubmit} className="flex flex-col gap-3 bg-canvas rounded-xl p-4">
                   <div className="flex gap-2">
                     <label className="sr-only" htmlFor={`optkey-${question.id}`}>
                       Şık harfi
@@ -615,8 +615,8 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
 
         {/* ---------------- Side column ---------------- */}
         {isExpanded && (
-          <aside className={`${mobileHidden} bg-[#FAFBFC] border-t lg:border-t-0 lg:border-l border-line p-3 sm:p-6 flex-col gap-3 sm:gap-5`}>
-            <section className="bg-white border border-line rounded-[14px] sm:rounded-[18px] p-4 sm:p-6 flex flex-col gap-4">
+          <aside className={`${mobileHidden} bg-blue-50 border-t lg:border-t-0 lg:border-l border-line p-3 sm:p-6 flex-col gap-3 sm:gap-5`}>
+            <section className="bg-white border border-line rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
               <h4 className="m-0 text-[15px] font-semibold">Yeniden kurulum</h4>
               <ul className="list-none m-0 p-0 flex flex-col gap-3 text-[14px]">
                 {checklist.map((c) => (
@@ -653,7 +653,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
             </section>
 
             {question.lectureReference && (
-              <section className="bg-white border border-line rounded-[14px] sm:rounded-[18px] p-4 sm:p-6 flex flex-col gap-3.5">
+              <section className="bg-white border border-line rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col gap-3.5">
                 <h4 className="m-0 text-[15px] font-semibold flex items-center justify-between">
                   <span>Kaynak slayt</span>
                   {question.lectureReference.confidenceScore ? (
@@ -696,7 +696,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
               </section>
             )}
 
-            <section className="bg-white border border-line rounded-[14px] sm:rounded-[18px] p-4 sm:p-6 flex flex-col gap-4">
+            <section className="bg-white border border-line rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
               <div className="flex justify-between items-baseline">
                 <h4 className="m-0 text-[15px] font-semibold">Hafıza parçaları</h4>
                 <span className="font-mono text-[12px] text-ink-2">{question.fragments.length}</span>

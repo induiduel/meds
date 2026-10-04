@@ -57,11 +57,11 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
   const pct = (n: number) => `${Math.min(100, (n / Math.max(totalTarget, 1)) * 100)}%`;
   const segBtn = (active: boolean) =>
     `h-8 px-3 rounded-lg text-[13px] cursor-pointer whitespace-nowrap ${
-      active ? 'bg-white font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)] text-ink' : 'text-ink-2'
+      active ? 'bg-white font-semibold shadow-xs text-ink' : 'text-ink-2'
     }`;
 
   return (
-    <div className="bg-white rounded-[18px] border border-line overflow-hidden">
+    <div className="bg-white rounded-2xl border border-line overflow-hidden">
       {/* Pool status strip */}
       <div className="px-4 sm:px-6 py-3 sm:py-5 flex flex-col gap-2.5 sm:gap-3 border-b border-line">
         <div className="flex flex-wrap items-baseline gap-x-4 sm:gap-x-6 gap-y-1.5">
@@ -100,7 +100,7 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
           className="flex h-2 rounded-full overflow-hidden gap-[3px] bg-line-soft"
         >
           {completedCount > 0 && <span className="bg-ok-bright" style={{ width: pct(completedCount) }} />}
-          {gatheringCount > 0 && <span className="bg-[#F59E0B]" style={{ width: pct(gatheringCount) }} />}
+          {gatheringCount > 0 && <span className="bg-amber-600" style={{ width: pct(gatheringCount) }} />}
         </div>
       </div>
 
@@ -115,7 +115,7 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
               placeholder="Soru no, hastalık, ilaç ya da anahtar kelime"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-[#6B7785]"
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-slate-600"
             />
           </label>
 

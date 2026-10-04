@@ -673,22 +673,22 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
       border: 'border-slate-200',
     },
     sepia: {
-      container: 'reader-theme-sepia bg-[#F4ECD8] text-[#2D2319]',
-      text: 'text-[#3E3224]',
-      card: 'bg-[#FCF8EE] border-[#DFD5C2] shadow-xs',
-      border: 'border-[#DFD5C2]',
+      container: 'reader-theme-sepia bg-amber-200 text-amber-950',
+      text: 'text-amber-900',
+      card: 'bg-amber-50 border-amber-300 shadow-xs',
+      border: 'border-amber-300',
     },
     dark: {
-      container: 'reader-theme-dark bg-[#0B0F17] text-slate-100',
+      container: 'reader-theme-dark bg-blue-950 text-slate-100',
       text: 'text-slate-200',
-      card: 'bg-[#151D2A] border-[#1E293B] shadow-lg',
-      border: 'border-[#1E293B]',
+      card: 'bg-blue-950 border-blue-950 shadow-lg',
+      border: 'border-blue-950',
     },
     cobalt: {
-      container: 'reader-theme-cobalt bg-[#0A192F] text-sky-100',
+      container: 'reader-theme-cobalt bg-blue-950 text-sky-100',
       text: 'text-slate-100',
-      card: 'bg-[#112240] border-[#1E3A5F] shadow-lg',
-      border: 'border-[#1E3A5F]',
+      card: 'bg-blue-950 border-blue-900 shadow-lg',
+      border: 'border-blue-900',
     },
   };
 
@@ -802,7 +802,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                   title={label}
                   onClick={() => setTheme(id)}
                   className={`w-8 h-8 rounded-lg flex items-center justify-center cursor-pointer ${
-                    theme === id ? 'bg-white text-accent shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
+                    theme === id ? 'bg-white text-accent shadow-xs' : 'text-ink-2 hover:text-ink'
                   }`}
                 >
                   <Icon className="w-4 h-4" />

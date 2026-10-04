@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { PageHeader } from './ui/PageHeader';
 import { 
   BookOpen, 
   Search, 
@@ -166,29 +167,28 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
 
   return (
     <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-      {/* Title */}
-      <div className="flex items-end justify-between gap-3">
-        <div className="min-w-0">
-          <h1 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em]">Ders özetleri</h1>
-          <p className="m-0 mt-1 text-[14px] text-ink-2">
-            {summaries.length} amfi dersinin özeti: klinik ipuçları, mekanizmalar, sınav tuzakları ve tablolar.
-          </p>
-        </div>
-        {onOpenPdfModal && (
-          <button
-            type="button"
-            onClick={onOpenPdfModal}
-            aria-label="PDF indir"
-            className="shrink-0 h-10 px-3 rounded-[10px] border border-line-2 bg-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-ink-3"
-          >
-            <Download className="w-4 h-4" />
-            <span className="hidden sm:inline">PDF indir</span>
-          </button>
-        )}
-      </div>
+      <PageHeader
+        eyebrow="Amfi notları"
+        title="Ders özetleri"
+        description="Klinik ipuçları, mekanizmalar, sınav tuzakları ve tablolar; ders ders, okunur biçimde."
+        stats={[{ label: 'Özet', value: summaries.length }]}
+        actions={
+          onOpenPdfModal && (
+            <button
+              type="button"
+              onClick={onOpenPdfModal}
+              aria-label="PDF indir"
+              className="shrink-0 h-10 px-3 rounded-[10px] border border-line bg-white text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2"
+            >
+              <Download className="w-4 h-4" />
+              <span className="hidden sm:inline">PDF indir</span>
+            </button>
+          )
+        }
+      />
 
       {/* Toolbar */}
-      <div className="bg-white border border-line rounded-[16px] p-3 sm:p-4 flex flex-col gap-2.5">
+      <div className="bg-white border border-line rounded-2xl p-3 sm:p-4 flex flex-col gap-2.5">
         <div role="radiogroup" aria-label="Kurul" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
           {(['all', 1, 2, 3, 4, 5, 6] as const).map((k) => {
             const on = selectedKurul === k;
@@ -220,7 +220,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Ders, konu ya da terim ara"
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-[#6B7785]"
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-slate-600"
             />
             {searchQuery && (
               <button type="button" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle" className="w-7 h-7 rounded-md flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer">
@@ -253,7 +253,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       </div>
 
       {filteredSummaries.length === 0 ? (
-        <div className="bg-white border border-line rounded-[16px] px-6 py-12 text-center flex flex-col items-center gap-2">
+        <div className="bg-white border border-line rounded-2xl px-6 py-12 text-center flex flex-col items-center gap-2">
           <h3 className="m-0 font-display text-[20px] font-bold tracking-[-0.02em]">Bu filtrede özet yok</h3>
           <p className="m-0 text-[14px] text-ink-2">Aramayı temizleyip farklı bir kurul seçebilirsin.</p>
         </div>
@@ -264,7 +264,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
               <button
                 type="button"
                 onClick={() => handleOpenSummary(s)}
-                className="w-full h-full text-left bg-white border border-line rounded-[14px] p-3.5 sm:p-4 flex flex-col gap-2 cursor-pointer hover:border-accent transition-colors group"
+                className="w-full h-full text-left bg-white border border-line rounded-xl p-3.5 sm:p-4 flex flex-col gap-2 cursor-pointer hover:border-accent transition-colors group"
               >
                 <span className="flex items-center gap-1.5 min-w-0">
                   <span className="shrink-0 h-6 px-2 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center">Kurul {s.kurul}</span>

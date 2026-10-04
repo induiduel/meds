@@ -76,8 +76,8 @@ const Face: React.FC<{ kind: ToastKind }> = ({ kind }) => {
 };
 
 const TONE: Record<ToastKind, { ring: string; title: string; bar: string }> = {
-  error: { ring: 'border-[#F3C9D1]', title: 'text-[#B4233C]', bar: 'bg-[#E0566E]' },
-  success: { ring: 'border-[#CDEBD8]', title: 'text-ok', bar: 'bg-ok-bright' },
+  error: { ring: 'border-rose-200', title: 'text-rose-700', bar: 'bg-rose-500' },
+  success: { ring: 'border-emerald-200', title: 'text-ok', bar: 'bg-ok-bright' },
   info: { ring: 'border-accent/20', title: 'text-accent', bar: 'bg-accent' },
 };
 
@@ -110,7 +110,7 @@ export const ToastHost: React.FC = () => {
           <div
             key={t.id}
             role={t.kind === 'error' ? 'alert' : 'status'}
-            className={`ms-toast-in pointer-events-auto relative w-full max-w-[400px] overflow-hidden rounded-[18px] bg-white border ${tone.ring} shadow-[0_18px_40px_rgba(14,26,38,0.18)] pl-2.5 pr-2 py-2.5 flex items-center gap-2.5`}
+            className={`ms-toast-in pointer-events-auto relative w-full max-w-[400px] overflow-hidden rounded-2xl bg-white border ${tone.ring} shadow-lg pl-2.5 pr-2 py-2.5 flex items-center gap-2.5`}
           >
             <Face kind={t.kind} />
             <div className="flex-1 min-w-0">
@@ -123,7 +123,7 @@ export const ToastHost: React.FC = () => {
                     dismiss(t.id);
                     t.action!.onClick();
                   }}
-                  className="mt-1.5 h-8 px-3 rounded-[9px] bg-canvas hover:bg-line-soft text-[13px] font-semibold text-ink cursor-pointer"
+                  className="mt-1.5 h-8 px-3 rounded-lg bg-canvas hover:bg-line-soft text-[13px] font-semibold text-ink cursor-pointer"
                 >
                   {t.action.label}
                 </button>

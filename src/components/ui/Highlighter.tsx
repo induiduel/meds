@@ -156,7 +156,7 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
         aria-pressed={t.active}
         title={t.active ? 'Kalemi kapat' : 'Fosforlu kalem'}
         className={`w-9 h-9 shrink-0 rounded-[10px] flex items-center justify-center cursor-pointer transition-colors ${
-          t.active ? 'bg-[#FEF3C7] text-[#92400E] ring-1 ring-inset ring-[#F59E0B]/50' : 'text-ink-2 hover:bg-canvas hover:text-ink'
+          t.active ? 'bg-amber-200 text-amber-800 ring-1 ring-inset ring-amber-600/50' : 'text-ink-2 hover:bg-canvas hover:text-ink'
         }`}
       >
         <PenIcon className="w-[18px] h-[18px]" />
@@ -173,7 +173,7 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
                 aria-pressed={on}
                 aria-label={`${c.label} kalem`}
                 title={c.label}
-                className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${on ? 'bg-white shadow-[0_1px_3px_rgba(14,26,38,0.18)]' : ''}`}
+                className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${on ? 'bg-white shadow-xs' : ''}`}
               >
                 <span className="w-4 h-4 rounded-full border border-black/10" style={{ background: c.swatch }} />
               </button>
@@ -185,7 +185,7 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
             aria-pressed={t.eraser}
             aria-label="Silgi"
             title="Silgi: işaretin üstüne dokun ya da seç"
-            className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${t.eraser ? 'bg-white text-ink shadow-[0_1px_3px_rgba(14,26,38,0.18)]' : 'text-ink-2'}`}
+            className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${t.eraser ? 'bg-white text-ink shadow-xs' : 'text-ink-2'}`}
           >
             <Eraser className="w-4 h-4" />
           </button>
@@ -198,7 +198,7 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
             }}
             aria-label="Bu sayfadaki işaretleri temizle"
             title="Bu sayfadaki işaretleri temizle"
-            className="w-7 h-7 rounded-full flex items-center justify-center text-ink-2 hover:text-[#B4233C] cursor-pointer"
+            className="w-7 h-7 rounded-full flex items-center justify-center text-ink-2 hover:text-rose-700 cursor-pointer"
           >
             <Trash2 className="w-4 h-4" />
           </button>

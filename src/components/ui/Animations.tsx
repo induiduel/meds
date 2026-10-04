@@ -118,7 +118,7 @@ export const AiThinking: React.FC<{ steps?: string[]; className?: string }> = ({
   }, [steps.length]);
 
   return (
-    <div role="status" aria-live="polite" className={`ms-pop-in rounded-[16px] bg-accent-soft/70 border border-accent/10 p-3.5 flex flex-col gap-3 ${className}`}>
+    <div role="status" aria-live="polite" className={`ms-pop-in rounded-2xl bg-accent-soft/70 border border-accent/10 p-3.5 flex flex-col gap-3 ${className}`}>
       <div className="flex items-center gap-3">
         <svg width="58" height="58" viewBox="0 0 64 64" className="shrink-0" aria-hidden="true">
           <g className="ms-twinkle">

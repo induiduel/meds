@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { PageHeader } from './ui/PageHeader';
 import {
   Mic,
   Headphones,
@@ -130,37 +131,13 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
-      {/* Header Banner */}
-      <div className="bg-gradient-to-r from-sky-900 via-indigo-900 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
-        <div className="absolute right-0 top-0 bottom-0 opacity-10 flex items-center pr-8 pointer-events-none">
-          <Headphones className="w-64 h-64 text-sky-300" />
-        </div>
-        <div className="relative z-10 max-w-2xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 text-sky-200 border border-sky-400/30 text-xs font-semibold">
-            <Mic className="w-3.5 h-3.5 animate-pulse text-sky-300" />
-            Amfi Ses Kayıtları & Kusursuz Transkripsiyonlar
-          </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Fakülte Derslerinin Ses Kaydı Transkriptleri
-          </h1>
-          <p className="text-sky-100/90 text-sm sm:text-base leading-relaxed">
-            Hocalarımızın amfide birebir anlattığı ders ses kayıtlarının yapay zeka tarafından 
-            kelimesi kelimesine çözümlenmiş ve tıbbi terminolojisi düzeltilmiş transkriptleri. 
-            RAG sistemine entegre edilmiştir.
-          </p>
-          <div className="flex flex-wrap items-center gap-4 pt-2 text-xs text-sky-200/80">
-            <span className="flex items-center gap-1.5 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10">
-              <Volume2 className="w-4 h-4 text-sky-300" />
-              {transcriptions.length} Ses Kaydı Çözümlendi
-            </span>
-            <span className="flex items-center gap-1.5 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10">
-              <Sparkles className="w-4 h-4 text-emerald-300" />
-              Vektör RAG Arama Aktif
-            </span>
-          </div>
-        </div>
-      </div>
+    <div className="w-full min-w-0 flex flex-col gap-4 sm:gap-5 pb-8">
+      <PageHeader
+        eyebrow="Amfi ses kayıtları"
+        title="Ses kayıtları"
+        description="Hocaların amfide anlattığı derslerin kelimesi kelimesine çözümlenmiş, tıbbi terimleri düzeltilmiş metinleri."
+        stats={[{ label: 'Çözümlenen kayıt', value: transcriptions.length }]}
+      />
 
       {/* Filter and Search Bar */}
       <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-xs flex flex-col sm:flex-row gap-3 items-center justify-between">

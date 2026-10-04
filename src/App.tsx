@@ -26,6 +26,7 @@ import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { AppRail } from './components/AppRail';
+import { PageHeader } from './components/ui/PageHeader';
 import { SectionLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 
@@ -925,7 +926,7 @@ export default function App() {
           </Suspense>
         ) : (
           <div className="min-h-dvh w-full bg-canvas flex items-center justify-center p-4">
-            <div className="max-w-[440px] w-full bg-white border border-line rounded-[18px] p-6 sm:p-8 flex flex-col items-center text-center gap-3">
+            <div className="max-w-[440px] w-full bg-white border border-line rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center gap-3">
               <span className="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </span>
@@ -1007,7 +1008,7 @@ export default function App() {
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
-          <div role="status" className="bg-ok-soft rounded-[14px] px-4 py-3 sm:px-5 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div role="status" className="bg-ok-soft rounded-xl px-4 py-3 sm:px-5 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
               <div>
@@ -1042,12 +1043,12 @@ export default function App() {
 
         {/* Celebration / Thank You Notification */}
         {congratsToast && (
-          <div role="status" className="bg-ink text-white rounded-[14px] px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between gap-3">
+          <div role="status" className="bg-ink text-white rounded-xl px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between gap-3">
             <div className="flex items-start gap-3">
-              <Sparkles className="w-5 h-5 text-[#FBBF24] shrink-0 mt-0.5" />
+              <Sparkles className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
               <div>
                 <p className="m-0 font-semibold text-[15px]">Teşekkürler!</p>
-                <p className="m-0 text-[14px] text-[#B8C3CF]">{congratsToast}</p>
+                <p className="m-0 text-[14px] text-blue-300">{congratsToast}</p>
               </div>
             </div>
             <button
@@ -1114,49 +1115,49 @@ export default function App() {
         {/* TAB 1: Questions List */}
         {activeTab === 'questions' && (
           <div className="flex flex-col gap-3 sm:gap-5">
-            <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
-              <nav aria-label="Konum" className="flex flex-wrap items-center gap-2 text-[14px] text-ink-2 min-w-0 flex-1">
-                <span className="hidden sm:inline">Soru havuzu</span>
-                <span aria-hidden="true" className="hidden sm:inline">/</span>
-                <label className="sr-only" htmlFor="pool-committee">Kurul</label>
-                <select
-                  id="pool-committee"
-                  value={selectedCommitteeId}
-                  onChange={(e) => setSelectedCommitteeId(e.target.value)}
-                  className="h-10 sm:h-9 pl-2 pr-7 rounded-lg border border-line bg-white text-ink font-semibold text-[14px] cursor-pointer w-full sm:w-auto sm:max-w-[60vw] truncate"
-                >
-                  {committees.map((c) => (
-                    <option key={c.id} value={c.id}>
-                      {c.name}
-                    </option>
-                  ))}
-                </select>
-                {searchQuery && (
-                  <>
-                    <span aria-hidden="true">/</span>
-                    <span className="text-ink font-semibold">“{searchQuery}”</span>
-                    <button
-                      type="button"
-                      onClick={() => setSearchQuery('')}
-                      className="h-8 px-2.5 rounded-lg text-accent font-semibold cursor-pointer"
-                    >
-                      Aramayı temizle
-                    </button>
-                  </>
-                )}
-              </nav>
-              <button
-                type="button"
-                onClick={() => {
-                  setContributeDefaultNumber(undefined);
-                  setIsContributeModalOpen(true);
-                }}
-                className="hidden sm:inline-flex h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] items-center gap-2 cursor-pointer"
-              >
-                <Plus className="w-4 h-4" strokeWidth={2.2} />
-                Soru ekle
-              </button>
-            </div>
+            <PageHeader
+              eyebrow="Kolektif arşiv"
+              title="Soru havuzu"
+              description="Herkesin hatırladığı parçalar burada birleşir; kaynaklarla tamamlanan sorular doğrulanır."
+              actions={
+                <>
+                  <label className="sr-only" htmlFor="pool-committee">Kurul</label>
+                  <select
+                    id="pool-committee"
+                    value={selectedCommitteeId}
+                    onChange={(e) => setSelectedCommitteeId(e.target.value)}
+                    className="h-10 pl-3 pr-8 rounded-[10px] border border-line bg-white text-ink font-semibold text-[14px] cursor-pointer w-full sm:w-auto sm:max-w-[360px] truncate"
+                  >
+                    {committees.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.name}
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setContributeDefaultNumber(undefined);
+                      setIsContributeModalOpen(true);
+                    }}
+                    className="hidden sm:inline-flex h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] items-center gap-2 cursor-pointer shadow-sm"
+                  >
+                    <Plus className="w-4 h-4" strokeWidth={2.2} />
+                    Soru ekle
+                  </button>
+                </>
+              }
+            >
+              {searchQuery && (
+                <div className="flex flex-wrap items-center gap-2 text-[14px] text-ink-2">
+                  <span>Arama:</span>
+                  <span className="text-ink font-semibold">“{searchQuery}”</span>
+                  <button type="button" onClick={() => setSearchQuery('')} className="h-8 px-2.5 rounded-lg text-accent font-semibold cursor-pointer hover:bg-accent-soft">
+                    Aramayı temizle
+                  </button>
+                </div>
+              )}
+            </PageHeader>
 
             {/* Filter and Stats Bar */}
             <MetricsBar
@@ -1181,12 +1182,12 @@ export default function App() {
 
             {/* Questions Stream */}
             {loading ? (
-              <div className="text-center py-16 bg-white rounded-[18px] border border-line">
+              <div className="text-center py-16 bg-white rounded-2xl border border-line">
                 <RefreshCw className="w-6 h-6 text-accent animate-spin mx-auto mb-3" />
                 <p className="m-0 text-[14px] text-ink-2">Soru havuzu yükleniyor…</p>
               </div>
             ) : poolQuestions.length === 0 ? (
-              <div className="bg-white rounded-[18px] border border-line px-6 py-14 text-center flex flex-col items-center gap-4">
+              <div className="bg-white rounded-2xl border border-line px-6 py-14 text-center flex flex-col items-center gap-4">
                 <div>
                   <h3 className="m-0 font-display text-[22px] font-bold tracking-[-0.02em]">
                     {filterMyQuestionsOnly ? 'Henüz katkıda bulunduğun soru yok' : 'Bu kriterlere uyan soru yok'}
@@ -1392,7 +1393,7 @@ export default function App() {
               />
             </Suspense>
           ) : (
-            <div className="max-w-[440px] w-full mx-auto mt-6 sm:mt-14 bg-white border border-line rounded-[18px] p-6 sm:p-8 flex flex-col items-center text-center gap-3">
+            <div className="max-w-[440px] w-full mx-auto mt-6 sm:mt-14 bg-white border border-line rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center gap-3">
               <span className="w-12 h-12 rounded-2xl bg-ink text-white flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </span>

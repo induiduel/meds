@@ -28,7 +28,7 @@ export function Segmented<T extends string | number>({
             aria-checked={on}
             onClick={() => onChange(o.value)}
             className={`shrink-0 whitespace-nowrap rounded-lg cursor-pointer ${size === 'sm' ? 'h-8 px-2.5 text-[13px]' : 'h-9 px-3 text-[14px]'} ${
-              on ? 'bg-white font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)] text-ink' : 'text-ink-2 hover:text-ink'
+              on ? 'bg-white font-semibold shadow-xs text-ink' : 'text-ink-2 hover:text-ink'
             }`}
           >
             {o.label}
@@ -47,7 +47,7 @@ export const Field: React.FC<{ label: string; children: React.ReactNode; classNa
 );
 
 export const selectCls = 'h-10 border border-line-2 rounded-[10px] px-3 text-[14px] font-normal text-ink bg-white cursor-pointer min-w-0';
-export const cardCls = 'bg-white border border-line rounded-[16px]';
+export const cardCls = 'bg-white border border-line rounded-2xl';
 export const btnPrimary =
   'h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
 export const btnSecondary =

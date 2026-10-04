@@ -42,7 +42,7 @@ export const Colored: React.FC<{ text: string; colors: Map<string, string> }> = 
       {parts.map((part, i) => {
         const c = i % 2 === 1 && part.length >= 4 ? colors.get(wordKey(part)) : undefined;
         return c ? (
-          <mark key={i} className="rounded-[4px] px-[2px] -mx-[1px] text-inherit" style={{ background: c }}>
+          <mark key={i} className="rounded-sm px-[2px] -mx-[1px] text-inherit" style={{ background: c }}>
             {part}
           </mark>
         ) : (
@@ -63,7 +63,7 @@ export const WordLegend: React.FC<{ texts: string[]; colors: Map<string, string>
     <span className="flex flex-wrap items-center gap-1">
       <span className="text-[11.5px] text-ink-3 mr-0.5">Ortak:</span>
       {[...colors.entries()].map(([k, c]) => (
-        <span key={k} className="h-5 px-1.5 rounded-[6px] text-[11.5px] text-ink inline-flex items-center" style={{ background: c }}>
+        <span key={k} className="h-5 px-1.5 rounded-md text-[11.5px] text-ink inline-flex items-center" style={{ background: c }}>
           {spelled.get(k) || k}
         </span>
       ))}

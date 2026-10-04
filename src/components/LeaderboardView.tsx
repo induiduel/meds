@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { PageHeader } from './ui/PageHeader';
 import { 
   Trophy, 
   Medal, 
@@ -215,26 +216,25 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
   return (
     <div className="w-full max-w-[880px] mx-auto flex flex-col gap-3 sm:gap-4 min-w-0">
-      {/* Title */}
-      <div className="flex items-end gap-3">
-        <div className="min-w-0 flex-1">
-          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em] text-ink">Sıralama</h1>
-          <p className="m-0 mt-1 text-[14px] text-ink-3">Soru kökü +10 · şık +5 · aldığın her beğeni +2</p>
-        </div>
-        <button
-          type="button"
-          onClick={onOpenContributeModal}
-          className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer shrink-0"
-        >
-          <Sparkles className="w-4 h-4" />
-          <span className="hidden sm:inline">Katkı yap</span>
-          <span className="sm:hidden">Ekle</span>
-        </button>
-      </div>
+      <PageHeader
+        eyebrow="Topluluk"
+        title="Sıralama"
+        description="Soru kökü +10 · şık +5 · aldığın her beğeni +2 puan."
+        actions={
+          <button
+            type="button"
+            onClick={onOpenContributeModal}
+            className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer shrink-0 shadow-sm"
+          >
+            <Sparkles className="w-4 h-4" />
+            Katkı yap
+          </button>
+        }
+      />
 
       {/* Scope + committee */}
       <div className="flex flex-wrap items-center gap-2">
-        <div role="radiogroup" aria-label="Kapsam" className="inline-grid grid-cols-2 gap-1 bg-white border border-line rounded-[12px] p-1">
+        <div role="radiogroup" aria-label="Kapsam" className="inline-grid grid-cols-2 gap-1 bg-white border border-line rounded-xl p-1">
           {(
             [
               ['current', 'Bu kurul'],
@@ -247,7 +247,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
               role="radio"
               aria-checked={filterScope === id}
               onClick={() => setFilterScope(id)}
-              className={`h-8 px-3 rounded-[9px] text-[13.5px] cursor-pointer whitespace-nowrap ${
+              className={`h-8 px-3 rounded-lg text-[13.5px] cursor-pointer whitespace-nowrap ${
                 filterScope === id ? 'bg-ink text-white font-semibold' : 'text-ink-2 hover:text-ink'
               }`}
             >
@@ -261,7 +261,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             <select
               value={selectedCommitteeId}
               onChange={(e) => onSelectCommittee(e.target.value)}
-              className="w-full sm:w-auto sm:max-w-[320px] h-10 rounded-[12px] bg-white border border-line px-3 text-[14px] text-ink cursor-pointer truncate"
+              className="w-full sm:w-auto sm:max-w-[320px] h-10 rounded-xl bg-white border border-line px-3 text-[14px] text-ink cursor-pointer truncate"
             >
               {committees.map((c) => (
                 <option key={c.id} value={c.id}>
@@ -275,7 +275,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
       {/* Your rank */}
       {me && (
-        <div className="bg-ink text-white rounded-[18px] px-4 sm:px-5 py-4 flex items-center gap-4">
+        <div className="bg-ink text-white rounded-2xl px-4 sm:px-5 py-4 flex items-center gap-4">
           <span className="font-display font-bold text-[34px] leading-none tracking-[-0.03em] w-14 text-center shrink-0">{myRank}.</span>
           <span className="flex-1 min-w-0">
             <span className="block text-[13px] text-white/60">Senin sıran</span>
@@ -294,9 +294,9 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
           {top3.map((item, i) => (
             <li
               key={item.id}
-              className={`bg-white border rounded-[18px] px-2 sm:px-4 pt-4 pb-3 flex flex-col items-center text-center gap-1.5 min-w-0 ${
+              className={`bg-white border rounded-2xl px-2 sm:px-4 pt-4 pb-3 flex flex-col items-center text-center gap-1.5 min-w-0 ${
                 item.isCurrentUser ? 'border-accent' : 'border-line'
-              } ${i === 0 ? 'shadow-[0_8px_24px_rgba(183,121,31,0.12)]' : ''}`}
+              } ${i === 0 ? 'shadow-md' : ''}`}
             >
               <span className="relative">
                 <span
@@ -317,7 +317,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
       )}
 
       {/* Full list */}
-      <div className="bg-white border border-line rounded-[18px] overflow-hidden">
+      <div className="bg-white border border-line rounded-2xl overflow-hidden">
         <div className="flex items-center gap-2 px-3 sm:px-4 py-2.5 border-b border-line-soft">
           <Search className="w-4 h-4 text-ink-3 shrink-0" />
           <input
@@ -326,7 +326,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Rumuz ya da öğrenci no ara"
             aria-label="Katkıcı ara"
-            className="flex-1 min-w-0 h-9 bg-transparent border-0 outline-0 text-[16px] sm:text-[14px] placeholder:text-[#7A8693]"
+            className="flex-1 min-w-0 h-9 bg-transparent border-0 outline-0 text-[16px] sm:text-[14px] placeholder:text-slate-600"
           />
           <span className="text-[12.5px] text-ink-3 shrink-0">{filteredLeaderboard.length} kişi</span>
         </div>

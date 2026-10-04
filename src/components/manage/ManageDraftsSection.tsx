@@ -430,7 +430,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const DraftActions: React.FC<{ q: QuestionItem; compact?: boolean }> = ({ q, compact }) => {
     const isRec = reconstructingIds.has(q.id);
     const isDel = deletingIds.has(q.id);
-    const btn = 'h-8 px-2.5 rounded-[8px] border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer disabled:opacity-50';
+    const btn = 'h-8 px-2.5 rounded-lg border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer disabled:opacity-50';
     return (
       <span className={`inline-flex items-center gap-1.5 ${compact ? '' : 'flex-wrap'}`} onClick={(e) => e.stopPropagation()}>
         <button type="button" onClick={() => setEditingDraft(q)} className={btn} title="Taslağı düzenle">
@@ -441,7 +441,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
           <span>{isRec ? 'Dönüşüyor…' : 'AI Dönüştür'}</span>
         </button>
         <button type="button" onClick={() => { void handleDeleteDraft(q); }} disabled={isDel}
-          className="h-8 px-2.5 rounded-[8px] border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] text-[12.5px] font-semibold hover:bg-[#FEE4E2] inline-flex items-center gap-1 cursor-pointer disabled:opacity-50" title="Taslağı her yerden sil">
+          className="h-8 px-2.5 rounded-lg border border-rose-300 bg-rose-50 text-rose-700 text-[12.5px] font-semibold hover:bg-rose-100 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50" title="Taslağı her yerden sil">
           {isDel ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Trash2 className="w-3.5 h-3.5" />}
           <span>{isDel ? 'Siliniyor…' : 'Sil'}</span>
         </button>
@@ -470,7 +470,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
     <div className="flex flex-col gap-3">
       <div className="flex flex-col xl:flex-row xl:items-center gap-2">
         <div className="flex items-center gap-2.5 min-w-0 flex-1">
-          <span className="w-10 h-10 rounded-[12px] bg-accent text-white flex items-center justify-center shrink-0">
+          <span className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shrink-0">
             <Layers className="w-5 h-5" />
           </span>
           <div className="min-w-0">
@@ -498,7 +498,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
           {readyCount > 0 && (
             <button type="button" disabled={isBatchMerging}
               onClick={() => (confirmBatch ? (setConfirmBatch(false), void handleBatchMergeReady()) : setConfirmBatch(true))}
-              className={`h-10 px-3.5 rounded-[10px] text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${confirmBatch ? 'bg-[#B4233C] text-white' : 'bg-ok text-white hover:bg-[#126A35]'}`}>
+              className={`h-10 px-3.5 rounded-[10px] text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${confirmBatch ? 'bg-rose-700 text-white' : 'bg-ok text-white hover:bg-emerald-900'}`}>
               <Zap className="w-4 h-4" />{confirmBatch ? 'Emin misin? Birleştir' : `Hazır ${readyCount} kümeyi birleştir`}
             </button>
           )}
@@ -507,7 +507,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
 
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
         {stats.map((s) => (
-          <div key={s.label} className="rounded-[14px] bg-canvas px-3 py-2 flex flex-col">
+          <div key={s.label} className="rounded-xl bg-canvas px-3 py-2 flex flex-col">
             <span className="flex items-center gap-1.5 text-[12px] text-ink-2">
               <span className="w-2 h-2 rounded-full" style={{ background: s.dot }} aria-hidden="true" />{s.label}
             </span>
@@ -520,12 +520,12 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
       </div>
 
       <div className="flex items-center gap-2">
-        <div role="tablist" aria-label="Taslak görünümü" className="flex gap-1 bg-canvas rounded-[12px] p-1 overflow-x-auto min-w-0">
+        <div role="tablist" aria-label="Taslak görünümü" className="flex gap-1 bg-canvas rounded-xl p-1 overflow-x-auto min-w-0">
           {tabs.map((t) => {
             const on = activeFilter === t.id;
             return (
               <button key={t.id} type="button" role="tab" aria-selected={on} onClick={() => setActiveFilter(t.id)}
-                className={`shrink-0 h-8 px-3 rounded-[9px] text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 ${on ? 'bg-white text-ink font-semibold shadow' : 'text-ink-2 hover:text-ink'}`}>
+                className={`shrink-0 h-8 px-3 rounded-lg text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 ${on ? 'bg-white text-ink font-semibold shadow' : 'text-ink-2 hover:text-ink'}`}>
                 {t.id === 'manual' && <GitMerge className="w-3.5 h-3.5" />}{t.label}
                 {t.count !== undefined && <span className={`font-mono text-[12px] ${on ? 'text-accent' : 'text-ink-3'}`}>{t.count}</span>}
               </button>
@@ -547,8 +547,8 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
             const isUnmerging = unmergingQuestionId === q.id;
             const satelliteCount = q.mergedSatellites?.length || q.fragments?.filter((f) => f.text.includes('[Birleştirilen Taslak')).length || 0;
             return (
-              <article key={q.id} className="rounded-[16px] bg-white border border-[#CDEBD8] overflow-hidden flex flex-col">
-                <div className="flex items-center gap-3 px-4 py-3 bg-[#F6FEF9] border-b border-[#E1F6EB] flex-wrap">
+              <article key={q.id} className="rounded-2xl bg-white border border-emerald-200 overflow-hidden flex flex-col">
+                <div className="flex items-center gap-3 px-4 py-3 bg-emerald-50 border-b border-emerald-100 flex-wrap">
                   <span className="w-9 h-9 rounded-[10px] bg-ok-soft text-ok font-mono text-[13px] font-bold flex items-center justify-center shrink-0">{numLabel(q)}</span>
                   <div className="flex-1 min-w-[200px]">
                     <div className="flex items-center gap-2">
@@ -562,11 +562,11 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                   <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
                     <DraftActions q={q} compact />
                     <button type="button" onClick={() => setInspectingMergedId(isInspecting ? null : q.id)}
-                      className="h-8 px-2.5 rounded-[8px] border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer">
+                      className="h-8 px-2.5 rounded-lg border border-line bg-white text-[12.5px] font-medium text-ink-2 hover:text-ink inline-flex items-center gap-1 cursor-pointer">
                       {isInspecting ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}<span>{isInspecting ? 'Kapat' : 'İncele'}</span>
                     </button>
                     <button type="button" onClick={() => { void handleUnmergeQuestion(q.id); }} disabled={isUnmerging}
-                      className="h-8 px-2.5 rounded-[8px] border border-[#FDA29B] bg-[#FEF3F2] text-[#B4233C] text-[12.5px] font-semibold hover:bg-[#FEE4E2] inline-flex items-center gap-1 cursor-pointer disabled:opacity-50">
+                      className="h-8 px-2.5 rounded-lg border border-rose-300 bg-rose-50 text-rose-700 text-[12.5px] font-semibold hover:bg-rose-100 inline-flex items-center gap-1 cursor-pointer disabled:opacity-50">
                       {isUnmerging ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Undo2 className="w-3.5 h-3.5" />}
                       <span>{isUnmerging ? 'Ayrılıyor…' : 'Ayır (Geri Al)'}</span>
                     </button>
@@ -593,11 +593,11 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
         <div className="flex flex-col gap-2.5">
           <p className="m-0 text-[13.5px] text-ink-2">Aynı soruya ait taslakları işaretleyin. Biri <strong className="text-ink">çapa</strong> olur; şıklar harmanlanır, mükerrerler temizlenir. <strong className="text-ink">Seçtiklerinizde ortak geçen kelimeler aynı renkle boyanır.</strong></p>
           {manualColors.size > 0 && <WordLegend texts={selectedQs.map(fullText)} colors={manualColors} />}
-          <label className="flex items-center gap-2 h-11 px-3.5 rounded-[12px] bg-white border border-line focus-within:border-accent">
+          <label className="flex items-center gap-2 h-11 px-3.5 rounded-xl bg-white border border-line focus-within:border-accent">
             <Search className="w-4 h-4 text-ink-3 shrink-0" />
             <span className="sr-only">Taslaklarda ara</span>
             <input type="search" placeholder="Metin, konu, ders ya da soru no ara" value={manualSearchQuery} onChange={(e) => setManualSearchQuery(e.target.value)}
-              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-[#7A8693]" />
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] placeholder:text-slate-600" />
             <span className="text-[12.5px] text-ink-3 shrink-0">{manualFilteredQuestions.length}</span>
           </label>
           <ul className="list-none m-0 p-0 flex flex-col gap-1.5">
@@ -605,9 +605,9 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
               const on = selectedDraftIds.includes(q.id);
               const isAnchor = on && manualAnchorId === q.id;
               return (
-                <li key={q.id} className={`rounded-[14px] border px-3 py-2.5 flex items-start gap-3 ${on ? 'bg-accent-soft/60 border-accent/40' : 'bg-white border-line'}`}>
+                <li key={q.id} className={`rounded-xl border px-3 py-2.5 flex items-start gap-3 ${on ? 'bg-accent-soft/60 border-accent/40' : 'bg-white border-line'}`}>
                   <button type="button" role="checkbox" aria-checked={on} onClick={() => toggleSelectDraft(q.id)} aria-label="Taslağı seç"
-                    className={`mt-0.5 w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 cursor-pointer ${on ? 'bg-accent text-white' : 'bg-white border border-line-2'}`}>
+                    className={`mt-0.5 w-5 h-5 rounded-md flex items-center justify-center shrink-0 cursor-pointer ${on ? 'bg-accent text-white' : 'bg-white border border-line-2'}`}>
                     {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
                   </button>
                   <span className="flex-1 min-w-0 flex flex-col gap-1">
@@ -622,7 +622,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                     {q.options && q.options.length > 0 && (
                       <span className="flex flex-wrap gap-1">
                         {q.options.map((o) => (
-                          <span key={o.key} className="max-w-[260px] truncate h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center">
+                          <span key={o.key} className="max-w-[260px] truncate h-6 px-2 rounded-md bg-canvas text-[12px] text-ink-2 inline-flex items-center">
                             <strong className="font-mono mr-1">{o.key}</strong><Colored text={o.text} colors={manualColors} />
                           </span>
                         ))}
@@ -635,7 +635,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
             })}
           </ul>
           {selectedDraftIds.length > 0 && (
-            <div className="sticky bottom-0 flex items-center gap-2 px-3 py-2.5 rounded-[14px] bg-ink text-white shadow-lg flex-wrap">
+            <div className="sticky bottom-0 flex items-center gap-2 px-3 py-2.5 rounded-xl bg-ink text-white shadow-lg flex-wrap">
               <span className="text-[13.5px] shrink-0"><strong>{selectedDraftIds.length}</strong> seçili</span>
               {selectedDraftIds.length >= 2 && (
                 <label className="relative min-w-0 flex-1 sm:flex-none sm:w-[280px]">
@@ -660,7 +660,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
               <button type="button"
                 onClick={() => (confirmBulkDelete ? void handleBulkDeleteSelected() : setConfirmBulkDelete(true))}
                 disabled={isBulkDeleting}
-                className={`h-10 px-4 rounded-[11px] text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0 ${confirmBulkDelete ? 'bg-[#B4233C] text-white' : 'bg-white/10 hover:bg-white/20'}`}>
+                className={`h-10 px-4 rounded-[11px] text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0 ${confirmBulkDelete ? 'bg-rose-700 text-white' : 'bg-white/10 hover:bg-white/20'}`}>
                 {isBulkDeleting ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
                 {confirmBulkDelete ? 'Emin misin? Sil' : 'Seçilenleri sil'}
               </button>
@@ -674,7 +674,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
             <div className="rounded-xl border border-line px-4 py-10 text-center text-[14px] text-ink-2">Muğlak taslak yok.</div>
           ) : (
             analysis.unmatchedVagueDrafts.map((q) => (
-              <div key={q.id} className="rounded-[14px] bg-white border border-line px-3.5 py-2.5 flex flex-col gap-1.5">
+              <div key={q.id} className="rounded-xl bg-white border border-line px-3.5 py-2.5 flex flex-col gap-1.5">
                 <span className="flex items-center gap-2 text-[12.5px] text-ink-3 min-w-0">
                   <span className="font-mono font-semibold text-ink">{numLabel(q)}</span>
                   <span className="truncate">{q.discipline}{q.topic ? ` · ${q.topic}` : ''}</span>
@@ -702,9 +702,9 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
           const clusterTexts = members.map(fullText);
           const colors = sharedWordColors(clusterTexts);
           return (
-            <article key={cluster.id} className={`rounded-[18px] bg-white border overflow-hidden ${ready ? 'border-[#CDEBD8]' : 'border-line'}`}>
+            <article key={cluster.id} className={`rounded-2xl bg-white border overflow-hidden ${ready ? 'border-emerald-200' : 'border-line'}`}>
               <div className="flex items-center gap-3 px-3.5 py-3 flex-wrap">
-                <span className={`w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 font-mono text-[13px] font-semibold ${ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'}`}>
+                <span className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-mono text-[13px] font-semibold ${ready ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'}`}>
                   {anchor.isUnassignedNumber || !anchor.questionNumber ? '?' : anchor.questionNumber}
                 </span>
                 <span className="flex-1 min-w-[220px] flex flex-col">
@@ -725,7 +725,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                   </label>
                 </span>
                 <button type="button" onClick={() => handleDissolveCluster(cluster.id)} title="Bu kümeyi dağıt (yalnızca görünüm)"
-                  className="h-9 px-2.5 rounded-[10px] border border-line bg-white text-[12px] font-medium text-ink-2 hover:text-[#B4233C] items-center gap-1 cursor-pointer hidden sm:inline-flex">
+                  className="h-9 px-2.5 rounded-[10px] border border-line bg-white text-[12px] font-medium text-ink-2 hover:text-rose-700 items-center gap-1 cursor-pointer hidden sm:inline-flex">
                   <Split className="w-3.5 h-3.5" /><span>Kümeyi Dağıt</span>
                 </button>
                 <button type="button" onClick={() => setExpandedClusterId(open ? null : cluster.id)} aria-expanded={open}
@@ -733,14 +733,14 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                   Karşılaştır<ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
                 </button>
                 <button type="button" onClick={() => { void handleMergeCluster(cluster); }} disabled={merging || busy}
-                  className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold text-white inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${ready ? 'bg-ok hover:bg-[#126A35]' : 'bg-ink hover:bg-[#1B2B3B]'}`}>
+                  className={`h-9 px-3 rounded-[10px] text-[13px] font-semibold text-white inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${ready ? 'bg-ok hover:bg-emerald-900' : 'bg-ink hover:bg-blue-950'}`}>
                   {merging ? <RefreshCw className="w-4 h-4 animate-spin" /> : <GitMerge className="w-4 h-4" />}
                   <span>{merging ? 'Birleştiriliyor…' : 'Birleştir'}</span>
                 </button>
               </div>
 
               <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-2 px-3.5 pb-3.5">
-                <div className="rounded-[14px] bg-canvas px-3 py-2.5 flex flex-col gap-1.5">
+                <div className="rounded-xl bg-canvas px-3 py-2.5 flex flex-col gap-1.5">
                   <span className="flex items-center gap-1.5 text-[12px] font-semibold text-accent">
                     <Layers className="w-3.5 h-3.5" />Çapa soru
                     <span className="ml-auto font-normal text-ink-3">{anchor.options?.length || 0} şık</span>
@@ -763,18 +763,18 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                   {satellites.map((satQ) => {
                     const comp = cluster.satelliteDrafts.find((s) => s.question.id === satQ.id)?.compatibility;
                     return (
-                      <li key={satQ.id} className="rounded-[12px] border border-line-soft px-3 py-2 flex flex-col gap-1">
+                      <li key={satQ.id} className="rounded-xl border border-line-soft px-3 py-2 flex flex-col gap-1">
                         <div className="flex items-center gap-2 text-[12.5px] min-w-0 flex-wrap">
                           <span className="font-semibold text-ink truncate">{satQ.contributedByName || 'Anonim'}</span>
                           <span className="text-ink-3 shrink-0">· {numLabel(satQ)}</span>
                           {comp && <span className="shrink-0 font-mono text-[12px] font-semibold text-ok">%{comp.score}</span>}
                           <span className="ml-auto inline-flex items-center gap-1 shrink-0">
                             <button type="button" onClick={() => handleDetachSatellite(cluster.id, satQ.id)} title="Bu taslağı kümeden çıkar (yalnızca görünüm)"
-                              className="text-[11.5px] px-2 py-0.5 rounded-[6px] text-ink-3 hover:text-[#B4233C] hover:bg-[#FEE4E2] border border-line-soft cursor-pointer inline-flex items-center gap-1">
+                              className="text-[11.5px] px-2 py-0.5 rounded-md text-ink-3 hover:text-rose-700 hover:bg-rose-100 border border-line-soft cursor-pointer inline-flex items-center gap-1">
                               <Split className="w-3 h-3" /><span>Ayır</span>
                             </button>
                             <button type="button" onClick={() => handleMarkNotSame(anchor.id, satQ.id)} title="Bunlar farklı sorular — bir daha aynı kümede gösterme (kalıcı)"
-                              className="text-[11.5px] px-2 py-0.5 rounded-[6px] text-ink-3 hover:text-[#B4233C] hover:bg-[#FEE4E2] border border-line-soft cursor-pointer inline-flex items-center gap-1">
+                              className="text-[11.5px] px-2 py-0.5 rounded-md text-ink-3 hover:text-rose-700 hover:bg-rose-100 border border-line-soft cursor-pointer inline-flex items-center gap-1">
                               <X className="w-3 h-3" /><span>Aynı değil</span>
                             </button>
                           </span>
@@ -785,7 +785,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
                         {open && comp && comp.reasons.length > 0 && (
                           <span className="flex flex-wrap gap-1">
                             {comp.reasons.map((r, i) => (
-                              <span key={i} className="px-2 py-0.5 rounded-[7px] bg-canvas text-[11.5px] text-ink-2">{r}</span>
+                              <span key={i} className="px-2 py-0.5 rounded-md bg-canvas text-[11.5px] text-ink-2">{r}</span>
                             ))}
                           </span>
                         )}

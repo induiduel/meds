@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { PageHeader } from '../ui/PageHeader';
 import { ListChecks, Target, NotebookPen, Zap } from 'lucide-react';
 import { Committee, QuestionItem } from '../../types';
 import { StudyQuestion, loadArchiveBank, buildBank, getProgress, getReview, getTestHistory, getNotes } from '../../services/studyStore';
@@ -90,27 +91,30 @@ export const StudyHub: React.FC<StudyHubProps> = ({
 
   return (
     <div className="flex flex-col gap-3 sm:gap-5">
-      <div className="flex items-end justify-between gap-3">
-        <div className="flex flex-col gap-1 min-w-0">
-          <h1 className="m-0 font-display font-bold text-[24px] sm:text-[32px] leading-[1.1] tracking-[-0.03em]">Çalış</h1>
-          <p className="m-0 text-[14px] text-ink-2">
-            {loading && bank.length === 0 ? 'Soru bankası yükleniyor…' : `${bank.length.toLocaleString('tr-TR')} çözümlü soru`} · Doğruluk %{stats.accuracy} · Tekrar listesinde{' '}
-            {stats.review}
-          </p>
-        </div>
-        <button
-          type="button"
-          onClick={onStartQuickTest}
-          disabled={!quickReady}
-          className={`${btnSecondary} shrink-0 px-3`}
-          title="Seçili kurulun kurulan sorularıyla tam ekran hızlı test"
-          aria-label="Havuzdan hızlı test"
-        >
-          <Zap className="w-4 h-4" /> <span className="hidden sm:inline">Havuzdan hızlı test</span>
-        </button>
-      </div>
+      <PageHeader
+        eyebrow="Pratik"
+        title="Çalış"
+        description={loading && bank.length === 0 ? 'Soru bankası yükleniyor…' : 'Soru çöz, kendini dene, notlarını tek yerde tut.'}
+        stats={[
+          { label: 'Çözümlü soru', value: bank.length.toLocaleString('tr-TR') },
+          { label: 'Doğruluk', value: `%${stats.accuracy}`, tone: 'ok' },
+          { label: 'Tekrar listesi', value: stats.review, tone: 'warn' },
+        ]}
+        actions={
+          <button
+            type="button"
+            onClick={onStartQuickTest}
+            disabled={!quickReady}
+            className={`${btnSecondary} shrink-0 px-3`}
+            title="Seçili kurulun kurulan sorularıyla tam ekran hızlı test"
+            aria-label="Havuzdan hızlı test"
+          >
+            <Zap className="w-4 h-4" /> <span className="hidden sm:inline">Havuzdan hızlı test</span>
+          </button>
+        }
+      />
 
-      <div role="tablist" aria-label="Çalışma bölümleri" className="grid grid-cols-3 gap-1 bg-white border border-line rounded-[14px] p-1">
+      <div role="tablist" aria-label="Çalışma bölümleri" className="grid grid-cols-3 gap-1 bg-white border border-line rounded-xl p-1">
         {tabs.map((t) => {
           const on = section === t.id;
           const Icon = t.icon;

@@ -46,6 +46,7 @@ import {
   ListTree,
 } from 'lucide-react';
 import { DeckPdfViewer } from './DeckPdfViewer';
+import { PageHeader } from '../ui/PageHeader';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
 import { getSlidePdfLocation, SlidePdfLocation } from '../../services/slidePdfMappingService';
 import interactiveDecksData from '../../data/interactive_learning_decks.json';
@@ -617,7 +618,7 @@ const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ lab
   }, [update]);
 
   const nudge = (dir: 1 | -1) => ref.current?.scrollBy({ left: dir * Math.max(200, (ref.current.clientWidth || 400) * 0.7), behavior: 'smooth' });
-  const arrow = 'absolute top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-line shadow-[0_2px_8px_rgba(14,26,38,0.12)] hidden sm:flex items-center justify-center text-ink cursor-pointer hover:border-line-2';
+  const arrow = 'absolute top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-line shadow-sm hidden sm:flex items-center justify-center text-ink cursor-pointer hover:border-line-2';
 
   return (
     <div className="relative -mx-3 sm:mx-0">
@@ -686,25 +687,28 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
-      <div className="flex flex-col md:flex-row md:items-end gap-3">
-        <div className="min-w-0 flex-1">
-          <h1 className="m-0 font-display font-bold text-[28px] sm:text-[30px] leading-[1.1] tracking-[-0.03em]">Öğren</h1>
-          <p className="m-0 mt-1 text-[14px] text-ink-3">
-            {allDecks.length} ders · {totalSlides} slayt · hocanın vurguları ve çıkmış sorularla
-          </p>
-        </div>
-        <label className="flex items-center gap-2 h-11 md:h-10 md:w-[300px] px-3 border border-line rounded-[12px] bg-white focus-within:border-accent">
-          <Search className="w-4 h-4 text-ink-3 shrink-0" />
-          <span className="sr-only">Derslerde ara</span>
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Ders ya da konu ara"
-            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] md:text-[14px] placeholder:text-[#7A8693]"
-          />
-        </label>
-      </div>
+      <PageHeader
+        eyebrow="Ders anlatımı"
+        title="Öğren"
+        description="Hocanın vurguları, ders notları ve çıkmış sorularla slayt slayt çalış."
+        stats={[
+          { label: 'Ders', value: allDecks.length },
+          { label: 'Slayt', value: totalSlides.toLocaleString('tr-TR'), tone: 'accent' },
+        ]}
+        actions={
+          <label className="flex items-center gap-2 h-10 w-full sm:w-[300px] px-3 border border-line rounded-[10px] bg-white focus-within:border-accent focus-within:ring-2 focus-within:ring-accent-soft">
+            <Search className="w-4 h-4 text-ink-3 shrink-0" />
+            <span className="sr-only">Derslerde ara</span>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Ders ya da konu ara"
+              className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[16px] md:text-[14px] placeholder:text-ink-3"
+            />
+          </label>
+        }
+      />
 
       <ScrollRow label="Ders">
         {[['all', allDecks.length] as [string, number], ...disciplines].map(([d, n]) => {
@@ -730,7 +734,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       </ScrollRow>
 
       {visible.length === 0 ? (
-        <div className="bg-white border border-line rounded-[16px] px-6 py-12 text-center">
+        <div className="bg-white border border-line rounded-2xl px-6 py-12 text-center">
           <p className="m-0 font-display text-[20px] font-bold">Bu aramada ders yok</p>
           <p className="m-0 mt-1 text-[14px] text-ink-2">Aramayı temizleyip başka bir ders seçebilirsin.</p>
         </div>
@@ -754,7 +758,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                     setDeckId(d.id);
                     onDeckChange?.(d.id);
                   }}
-                  className="w-full h-full text-left bg-white border border-line rounded-[16px] p-4 flex flex-col gap-2.5 cursor-pointer hover:border-accent hover:shadow-[0_6px_20px_rgba(14,26,38,0.06)] transition-all group"
+                  className="ms-lift w-full h-full text-left bg-white border border-line rounded-2xl p-4 flex flex-col gap-2.5 cursor-pointer group"
                 >
                   <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
                     <span className="w-2 h-2 rounded-full shrink-0" style={{ background: groupDot(group) }} aria-hidden="true" />
@@ -764,16 +768,16 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                   <span className="text-[16.5px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2 min-h-[2.6em]">{d.title}</span>
                   <span className="flex flex-wrap gap-1.5">
                     {d.instructor && (
-                      <span className="max-w-full h-6 px-2 rounded-[7px] bg-canvas text-[12px] text-ink-2 inline-flex items-center gap-1 min-w-0">
+                      <span className="max-w-full h-6 px-2 rounded-md bg-canvas text-[12px] text-ink-2 inline-flex items-center gap-1 min-w-0">
                         <User className="w-3 h-3 shrink-0" />
                         <span className="truncate">{d.instructor}</span>
                       </span>
                     )}
                     {cardCount > 0 && (
-                      <span className="h-6 px-2 rounded-[7px] bg-[#FDF2E1] text-[12px] text-[#9A4D06] inline-flex items-center">{cardCount} kart</span>
+                      <span className="h-6 px-2 rounded-md bg-amber-100 text-[12px] text-amber-800 inline-flex items-center">{cardCount} kart</span>
                     )}
                     {qCount > 0 && (
-                      <span className="h-6 px-2 rounded-[7px] bg-accent-soft text-[12px] text-accent inline-flex items-center">{qCount} soru</span>
+                      <span className="h-6 px-2 rounded-md bg-accent-soft text-[12px] text-accent inline-flex items-center">{qCount} soru</span>
                     )}
                   </span>
                   <span className="mt-auto pt-2.5 border-t border-line-soft flex items-center gap-3">
@@ -1161,7 +1165,7 @@ const DeckPlayer: React.FC<{
             onClick={() => setViewMode('interactive')}
             className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
               viewMode === 'interactive'
-                ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                ? 'bg-white text-accent font-semibold shadow-xs'
                 : 'text-ink-2 hover:text-ink'
             }`}
           >
@@ -1178,7 +1182,7 @@ const DeckPlayer: React.FC<{
             onClick={() => setViewMode('split')}
             className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
               viewMode === 'split'
-                ? 'bg-white text-indigo-600 dark:text-indigo-400 font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                ? 'bg-white text-indigo-600 dark:text-indigo-400 font-semibold shadow-xs'
                 : 'text-ink-2 hover:text-ink'
             }`}
           >
@@ -1195,7 +1199,7 @@ const DeckPlayer: React.FC<{
             onClick={() => setViewMode('pdf')}
             className={`h-8 px-2 sm:px-2.5 rounded-lg inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] cursor-pointer transition-colors ${
               viewMode === 'pdf'
-                ? 'bg-white text-rose-600 dark:text-rose-400 font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]'
+                ? 'bg-white text-rose-600 dark:text-rose-400 font-semibold shadow-xs'
                 : 'text-ink-2 hover:text-ink'
             }`}
           >
@@ -1221,7 +1225,7 @@ const DeckPlayer: React.FC<{
                 title={label}
                 onClick={() => setMode(id)}
                 className={`h-8 px-2 rounded-lg inline-flex items-center gap-1.5 text-[12px] cursor-pointer ${
-                  mode === id ? 'bg-white text-accent font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.1)]' : 'text-ink-2 hover:text-ink'
+                  mode === id ? 'bg-white text-accent font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -1341,7 +1345,7 @@ const DeckPlayer: React.FC<{
           ) : viewMode === 'split' ? (
             <div className="absolute inset-0 p-2 sm:p-3 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3">
               <div
-                className="min-h-0 h-full flex flex-col rounded-[16px] overflow-hidden border border-line bg-white/50 backdrop-blur-sm relative shadow-sm"
+                className="min-h-0 h-full flex flex-col rounded-2xl overflow-hidden border border-line bg-white/50 backdrop-blur-sm relative shadow-sm"
                 onTouchStart={onTouchStart}
                 onTouchEnd={onTouchEnd}
               >
@@ -1370,7 +1374,7 @@ const DeckPlayer: React.FC<{
                   }}
                 />
               </div>
-              <div className="min-h-0 h-full flex flex-col rounded-[16px] overflow-hidden border border-line bg-white shadow-sm">
+              <div className="min-h-0 h-full flex flex-col rounded-2xl overflow-hidden border border-line bg-white shadow-sm">
                 <DeckPdfViewer
                   deck={deck}
                   currentSlideNumber={slide.slideNumber}
@@ -1454,7 +1458,7 @@ const DeckPlayer: React.FC<{
             <button type="button" aria-label="Paneli kapat" onClick={() => setPanelOpen(false)} className="ms-fade-in lg:hidden fixed inset-0 z-[61] bg-[rgba(14,26,38,0.35)] cursor-default" />
             <aside
               aria-label="Etkileşim paneli"
-              className="ms-sheet-up lg:animate-none fixed lg:static z-[62] left-0 right-0 bottom-0 max-h-[78dvh] lg:max-h-none lg:h-full rounded-t-[18px] lg:rounded-none bg-white border-t lg:border-t-0 lg:border-l border-line flex flex-col min-h-0 shadow-[0_-12px_40px_rgba(14,26,38,0.18)] lg:shadow-none"
+              className="ms-sheet-up lg:animate-none fixed lg:static z-[62] left-0 right-0 bottom-0 max-h-[78dvh] lg:max-h-none lg:h-full rounded-t-2xl lg:rounded-none bg-white border-t lg:border-t-0 lg:border-l border-line flex flex-col min-h-0 shadow-lg lg:shadow-none"
             >
               <div className="lg:hidden flex justify-center pt-2" aria-hidden="true">
                 <span className="w-10 h-1 rounded-full bg-line-2" />
@@ -1483,7 +1487,7 @@ const DeckPlayer: React.FC<{
                 aria-current={on ? 'step' : undefined}
                 aria-label={`Slayt ${i + 1}: ${s.title}`}
                 title={s.title}
-                className={`shrink-0 h-9 sm:h-10 rounded-[9px] px-2.5 flex items-center gap-2 text-left cursor-pointer border transition-colors ${
+                className={`shrink-0 h-9 sm:h-10 rounded-lg px-2.5 flex items-center gap-2 text-left cursor-pointer border transition-colors ${
                   on ? 'border-accent bg-accent-soft text-accent' : 'border-line bg-white text-ink-2 hover:border-line-2'
                 }`}
               >
@@ -1646,7 +1650,7 @@ const GlobalTopicSearchModal: React.FC<{
 
   return (
     <div className="fixed inset-0 z-[70] bg-[rgba(14,26,38,0.5)] backdrop-blur-xs flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
-      <div className="w-full max-w-2xl bg-white border border-line rounded-[18px] shadow-2xl flex flex-col max-h-[85dvh] overflow-hidden animate-in fade-in duration-200">
+      <div className="w-full max-w-2xl bg-white border border-line rounded-2xl shadow-2xl flex flex-col max-h-[85dvh] overflow-hidden animate-in fade-in duration-200">
         {/* Modal Search Header */}
         <div className="p-3.5 sm:p-4 border-b border-line flex items-center gap-2.5">
           <Search className="w-5 h-5 text-accent shrink-0" />
@@ -1656,7 +1660,7 @@ const GlobalTopicSearchModal: React.FC<{
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Ders içinde konu, patofizyoloji, tanı, akıl kartı veya soru ara..."
-            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] sm:text-[16px] placeholder:text-[#6B7785]"
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[15px] sm:text-[16px] placeholder:text-slate-600"
           />
           {q && (
             <button type="button" onClick={() => setQ('')} className="p-1 text-ink-3 hover:text-ink cursor-pointer">
@@ -2041,7 +2045,7 @@ const SlideCanvas: React.FC<{
   return (
     <article
       ref={containerRef}
-      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-[18px] shadow-[0_2px_16px_rgba(14,26,38,0.06)] flex flex-col min-h-0 custom-scrollbar relative`}
+      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-2xl shadow-md flex flex-col min-h-0 custom-scrollbar relative`}
     >
       <SlideDrawingCanvas scope={highlightScope || `slide:${slide.slideNumber}`} />
       <Highlightable
@@ -2355,15 +2359,15 @@ const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: st
   note,
   compact = false,
 }) => (
-  <section className={`rounded-2xl border border-[#F2DDB8] bg-[#FFF9EF] dark:bg-[#1C1814] dark:border-[#523A1E] flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-3.5 sm:p-4 gap-3'}`}>
+  <section className={`rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950 dark:border-amber-900 flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-3.5 sm:p-4 gap-3'}`}>
     <header className="flex items-center gap-2">
-      <span className="w-7 h-7 rounded-[9px] bg-[#FCE9C6] dark:bg-[#3D2508] text-[#9A4D06] dark:text-[#E6934A] flex items-center justify-center shrink-0" aria-hidden="true">
+      <span className="w-7 h-7 rounded-lg bg-amber-200 dark:bg-amber-950 text-amber-800 dark:text-amber-500 flex items-center justify-center shrink-0" aria-hidden="true">
         <Lightbulb className="w-4 h-4" />
       </span>
-      <span className="text-[13.5px] font-semibold text-[#8A4405] dark:text-[#E6934A]">{title}</span>
-      <span className="ml-auto text-[12px] font-mono text-[#9A4D06]/70 dark:text-[#E6934A]/70">{items.length}</span>
+      <span className="text-[13.5px] font-semibold text-amber-800 dark:text-amber-500">{title}</span>
+      <span className="ml-auto text-[12px] font-mono text-amber-800/70 dark:text-amber-500/70">{items.length}</span>
     </header>
-    {note && <p className="m-0 -mt-1 text-[13px] text-[#8A4405]/80 dark:text-[#E6934A]/80">{note}</p>}
+    {note && <p className="m-0 -mt-1 text-[13px] text-amber-800/80 dark:text-amber-500/80">{note}</p>}
     <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-2' : 'gap-2.5'}`}>
       {items.map((p, i) => {
         const isObj = p && typeof p === 'object';
@@ -2381,7 +2385,7 @@ const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: st
         return (
           <li
             key={i}
-            className={`rounded-xl transition-all shadow-[0_1px_2px_rgba(0,0,0,0.04)] border flex flex-col ${
+            className={`rounded-xl transition-all shadow-xs border flex flex-col ${
               isRed
                 ? 'bg-red-50/80 dark:bg-red-950/25 border-red-200/90 dark:border-red-900/40 text-red-950 dark:text-red-100'
                 : isBlue
@@ -2401,7 +2405,7 @@ const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: st
                     <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🔵❓❔]\s*/, '') : 'ÇIKMIŞ SORU'}
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-semibold bg-amber-100/70 dark:bg-amber-950/40 text-[#9A4D06] dark:text-amber-300">
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-semibold bg-amber-100/70 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300">
                     ⚡ {pBadge ? pBadge.replace(/^[⚡]\s*/, '') : 'SPOT BİLGİ'}
                   </span>
                 )}
@@ -2412,7 +2416,7 @@ const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: st
                     ? 'bg-red-200 text-red-800 dark:bg-red-900/80 dark:text-red-100'
                     : isBlue
                     ? 'bg-blue-200 text-blue-800 dark:bg-blue-900/80 dark:text-blue-100'
-                    : 'bg-[#FCE9C6] text-[#9A4D06] dark:bg-amber-950/60 dark:text-amber-200'
+                    : 'bg-amber-200 text-amber-800 dark:bg-amber-950/60 dark:text-amber-200'
                 }`}
               >
                 {isRed ? '!' : isBlue ? '?' : i + 1}
@@ -2499,7 +2503,7 @@ const InteractionPanel: React.FC<{
 
   return (
     <>
-      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-4 gap-1 m-3 mb-0 bg-canvas rounded-[12px] p-1">
+      <div role="tablist" aria-label="Etkileşim" className="shrink-0 grid grid-cols-4 gap-1 m-3 mb-0 bg-canvas rounded-xl p-1">
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -2507,7 +2511,7 @@ const InteractionPanel: React.FC<{
             role="tab"
             aria-selected={active === t.id}
             onClick={() => setTab(t.id)}
-            className={`h-9 px-1 rounded-[9px] text-[12.5px] cursor-pointer truncate inline-flex items-center justify-center gap-1 transition-colors ${active === t.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.08)]' : 'text-ink-2 hover:text-ink'}`}
+            className={`h-9 px-1 rounded-lg text-[12.5px] cursor-pointer truncate inline-flex items-center justify-center gap-1 transition-colors ${active === t.id ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'}`}
           >
             {t.label}
             {!!t.count && <span className="font-mono text-[11px] text-ink-3">{t.count}</span>}

@@ -103,8 +103,8 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, set
 
       {sheetOpen && (
         <div className="md:hidden fixed inset-0 z-50 print:hidden" role="dialog" aria-modal="true" aria-label="Diğer sayfalar">
-          <button type="button" aria-label="Kapat" onClick={() => setSheetOpen(false)} className="absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
-          <div className="absolute left-0 right-0 bottom-0 max-h-[85dvh] overflow-y-auto bg-white rounded-t-[24px] shadow-[0_-10px_40px_rgba(14,26,38,0.18)] px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)]">
+          <button type="button" aria-label="Kapat" onClick={() => setSheetOpen(false)} className="ms-fade-in absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
+          <div className="ms-sheet-up absolute left-0 right-0 bottom-0 max-h-[85dvh] overflow-y-auto overscroll-contain bg-white rounded-t-2xl shadow-lg px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)]">
             <div className="max-w-[640px] mx-auto flex flex-col gap-3">
               <span className="self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
               <div className="flex items-center">

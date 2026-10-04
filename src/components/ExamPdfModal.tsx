@@ -583,11 +583,11 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
         aria-modal="true"
         aria-labelledby="pdf-modal-title"
         aria-busy={isGeneratingPdf}
-        className="relative pdf-modal-card bg-white w-full max-w-[1260px] h-full sm:h-[min(92vh,920px)] sm:rounded-[24px] shadow-[0_30px_90px_rgba(14,26,38,0.32)] overflow-hidden grid grid-rows-[auto_minmax(0,1fr)_auto] text-ink"
+        className="relative pdf-modal-card bg-white w-full max-w-[1260px] h-full sm:h-[min(92vh,920px)] sm:rounded-2xl shadow-xl overflow-hidden grid grid-rows-[auto_minmax(0,1fr)_auto] text-ink"
       >
         {/* ---------- Header ---------- */}
         <header className="no-print flex flex-wrap items-center gap-x-4 gap-y-3 px-4 sm:px-6 py-3.5 border-b border-line">
-          <span className="w-10 h-10 rounded-[12px] bg-accent text-white flex items-center justify-center shrink-0 shadow-[0_6px_16px_rgba(30,79,216,0.28)]">
+          <span className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-md">
             <FileDown className="w-5 h-5" />
           </span>
           <div className="min-w-0 flex-1 sm:flex-none sm:w-[260px]">
@@ -605,7 +605,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
             <X className="w-5 h-5" />
           </button>
           <div className="w-full sm:w-auto sm:flex-1 flex sm:justify-center">
-            <div role="radiogroup" aria-label="İçerik" className="w-full sm:w-[340px] grid grid-cols-2 gap-1 bg-canvas rounded-[14px] p-1">
+            <div role="radiogroup" aria-label="İçerik" className="w-full sm:w-[340px] grid grid-cols-2 gap-1 bg-canvas rounded-xl p-1">
               {(
                 [
                   ['questions', FileText, 'Sorular'],
@@ -621,7 +621,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                     aria-checked={on}
                     onClick={() => setContentType(id)}
                     className={`h-10 rounded-[11px] inline-flex items-center justify-center gap-2 text-[14px] cursor-pointer transition-all ${
-                      on ? 'bg-white text-ink font-semibold shadow-[0_1px_3px_rgba(14,26,38,0.14)]' : 'text-ink-2 hover:text-ink'
+                      on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                     }`}
                   >
                     <Icon className={`w-4 h-4 ${on ? 'text-accent' : ''}`} />
@@ -636,7 +636,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
         {/* ---------- Body ---------- */}
         <div className="pdf-modal-scrollable min-h-0 overflow-y-auto lg:overflow-hidden grid grid-cols-1 lg:grid-cols-[384px_minmax(0,1fr)]">
           {/* Settings */}
-          <aside className="no-print lg:overflow-y-auto bg-[#FAFBFC] lg:border-r border-line px-4 sm:px-6 py-5 flex flex-col gap-6 min-w-0">
+          <aside className="no-print lg:overflow-y-auto bg-blue-50 lg:border-r border-line px-4 sm:px-6 py-5 flex flex-col gap-6 min-w-0">
             {isSlides ? (
               <>
                 <Section title="Ders">
@@ -676,7 +676,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                       </button>
                     }
                   >
-                    <ul className="list-none m-0 p-1.5 bg-white border border-line rounded-[16px] max-h-[300px] overflow-y-auto flex flex-col gap-0.5">
+                    <ul className="list-none m-0 p-1.5 bg-white border border-line rounded-2xl max-h-[300px] overflow-y-auto flex flex-col gap-0.5">
                       {activeDeck.slides.map((sl) => {
                         const on = pickedSlides.includes(sl.slideNumber);
                         return (
@@ -695,7 +695,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                               }`}
                             >
                               <span
-                                className={`w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 transition-colors ${
+                                className={`w-5 h-5 rounded-md flex items-center justify-center shrink-0 transition-colors ${
                                   on ? 'bg-accent text-white' : 'bg-white border border-line-2'
                                 }`}
                               >
@@ -740,9 +740,9 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                             setBookletMode(m.id);
                             if (m.id === 'student') setIncludeAnswerMatrix(false);
                           }}
-                          className={`min-h-[92px] px-2 py-3 rounded-[16px] border flex flex-col items-center justify-center gap-1.5 text-center cursor-pointer transition-all ${
+                          className={`min-h-[92px] px-2 py-3 rounded-2xl border flex flex-col items-center justify-center gap-1.5 text-center cursor-pointer transition-all ${
                             on
-                              ? 'border-accent bg-accent-soft/60 shadow-[0_0_0_3px_rgba(30,79,216,0.12)]'
+                              ? 'border-accent bg-accent-soft/60 shadow-xs'
                               : 'border-line bg-white hover:border-line-2'
                           }`}
                         >
@@ -833,8 +833,8 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                           role="radio"
                           aria-checked={on}
                           onClick={() => setColumns(id)}
-                          className={`flex items-center gap-3 px-3 py-2.5 rounded-[14px] border text-left cursor-pointer transition-all ${
-                            on ? 'border-accent bg-accent-soft/60 shadow-[0_0_0_3px_rgba(30,79,216,0.12)]' : 'border-line bg-white hover:border-line-2'
+                          className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border text-left cursor-pointer transition-all ${
+                            on ? 'border-accent bg-accent-soft/60 shadow-xs' : 'border-line bg-white hover:border-line-2'
                           }`}
                         >
                           <PageGlyph cols={id === 'two' ? 2 : 1} on={on} />
@@ -866,13 +866,13 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                   </SwitchGroup>
                 </Section>
 
-                {loadError && <p className="m-0 text-[13px] text-warn bg-warn-soft rounded-[12px] px-3 py-2.5">{loadError}</p>}
+                {loadError && <p className="m-0 text-[13px] text-warn bg-warn-soft rounded-xl px-3 py-2.5">{loadError}</p>}
               </>
             )}
           </aside>
 
           {/* Preview */}
-          <section aria-label="Önizleme" className="no-print bg-[#EDF0F3] flex flex-col min-w-0 min-h-[62vh] lg:min-h-0 p-3 sm:p-5 gap-3">
+          <section aria-label="Önizleme" className="no-print bg-blue-100 flex flex-col min-w-0 min-h-[62vh] lg:min-h-0 p-3 sm:p-5 gap-3">
             <div className="flex items-center gap-2 px-1">
               <span className="text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-3">Önizleme</span>
               {pageCount && !isBuildingPreview && (
@@ -889,7 +889,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
               )}
             </div>
 
-            <div className="relative flex-1 min-h-[420px] rounded-[16px] overflow-hidden bg-white shadow-[0_12px_32px_rgba(14,26,38,0.12)] ring-1 ring-[rgba(14,26,38,0.06)]">
+            <div className="relative flex-1 min-h-[420px] rounded-2xl overflow-hidden bg-white shadow-lg ring-1 ring-[rgba(14,26,38,0.06)]">
               {previewUrl ? (
                 <iframe
                   key={previewUrl}
@@ -909,7 +909,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                     </>
                   ) : !canInlinePdf ? (
                     <>
-                      <span className="w-14 h-14 rounded-[16px] bg-accent-soft text-accent flex items-center justify-center">
+                      <span className="w-14 h-14 rounded-2xl bg-accent-soft text-accent flex items-center justify-center">
                         <FileDown className="w-7 h-7" />
                       </span>
                       <p className="m-0 text-[16px] font-semibold text-ink">{summary}</p>
@@ -917,7 +917,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                     </>
                   ) : (
                     <>
-                      <span className="w-14 h-14 rounded-[16px] bg-canvas text-ink-3 flex items-center justify-center">
+                      <span className="w-14 h-14 rounded-2xl bg-canvas text-ink-3 flex items-center justify-center">
                         {isSlides ? <GraduationCap className="w-7 h-7" /> : <FileText className="w-7 h-7" />}
                       </span>
                       <p className="m-0 text-[16px] font-semibold text-ink">{isSlides ? 'Slayt seç' : 'Bu seçimde soru yok'}</p>
@@ -934,7 +934,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
 
           {/* Print-only HTML booklet (used by "Yazdır" and the HTML download) */}
           {!isSlides && (
-            <div id="exam-printable-content" className="hidden print:block text-[#0e1a26]">
+            <div id="exam-printable-content" className="hidden print:block text-blue-950">
               <div className="header">
                 <div className="meta">MedSoru · Dönem {activeCommittee?.year || 3}</div>
                 <h1>{displayTitle}</h1>
@@ -1013,7 +1013,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                 onClick={handlePrint}
                 disabled={!canDownload}
                 title="Tarayıcının yazdırma penceresini açar"
-                className="h-11 px-3.5 rounded-[12px] border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50"
+                className="h-11 px-3.5 rounded-xl border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50"
               >
                 <Printer className="w-4 h-4" />
                 <span className="hidden sm:inline">Yazdır</span>
@@ -1023,7 +1023,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
                 onClick={handleDownloadHtml}
                 disabled={!canDownload}
                 title="İnternetsiz açılabilen tek dosya HTML kitapçık"
-                className="h-11 px-3.5 rounded-[12px] border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50"
+                className="h-11 px-3.5 rounded-xl border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50"
               >
                 <FileCode className="w-4 h-4" />
                 <span className="hidden sm:inline">HTML</span>
@@ -1034,7 +1034,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
             type="button"
             onClick={isSlides ? handleSlidePdfDownload : handleDirectPdfDownload}
             disabled={!canDownload || isGeneratingPdf}
-            className="flex-1 sm:flex-none h-11 px-6 rounded-[12px] bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_6px_16px_rgba(30,79,216,0.25)]"
+            className="flex-1 sm:flex-none h-11 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
           >
             {isGeneratingPdf ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
             {isGeneratingPdf ? 'Hazırlanıyor…' : 'PDF indir'}
@@ -1075,7 +1075,7 @@ const SelectField: React.FC<{
       value={value}
       disabled={disabled}
       onChange={(e) => onChange(e.target.value)}
-      className="appearance-none w-full h-[54px] pt-4 pl-3.5 pr-9 rounded-[14px] border border-line bg-white text-[14.5px] text-ink cursor-pointer outline-0 focus:border-accent focus:shadow-[0_0_0_3px_rgba(30,79,216,0.12)] truncate disabled:cursor-not-allowed"
+      className="appearance-none w-full h-[54px] pt-4 pl-3.5 pr-9 rounded-xl border border-line bg-white text-[14.5px] text-ink cursor-pointer outline-0 focus:border-accent focus:shadow-xs truncate disabled:cursor-not-allowed"
     >
       {children}
     </select>
@@ -1097,7 +1097,7 @@ function Segmented<T extends string>({
   return (
     <div className="flex flex-col gap-1.5">
       <span className="px-0.5 text-[12.5px] font-medium text-ink-2">{label}</span>
-      <div role="radiogroup" aria-label={label} className="grid gap-1 bg-[#EEF1F4] rounded-[12px] p-1" style={{ gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr))` }}>
+      <div role="radiogroup" aria-label={label} className="grid gap-1 bg-blue-100 rounded-xl p-1" style={{ gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr))` }}>
         {options.map(([id, text]) => {
           const on = value === id;
           return (
@@ -1107,8 +1107,8 @@ function Segmented<T extends string>({
               role="radio"
               aria-checked={on}
               onClick={() => onChange(id)}
-              className={`h-9 rounded-[9px] text-[13.5px] cursor-pointer transition-all ${
-                on ? 'bg-white text-ink font-semibold shadow-[0_1px_3px_rgba(14,26,38,0.14)]' : 'text-ink-2 hover:text-ink'
+              className={`h-9 rounded-lg text-[13.5px] cursor-pointer transition-all ${
+                on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
               }`}
             >
               {text}
@@ -1121,7 +1121,7 @@ function Segmented<T extends string>({
 }
 
 const SwitchGroup: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="bg-white border border-line rounded-[16px] divide-y divide-line-soft overflow-hidden">{children}</div>
+  <div className="bg-white border border-line rounded-2xl divide-y divide-line-soft overflow-hidden">{children}</div>
 );
 
 const SwitchRow: React.FC<{
@@ -1137,7 +1137,7 @@ const SwitchRow: React.FC<{
     aria-checked={checked}
     disabled={disabled}
     onClick={() => onChange(!checked)}
-    className="w-full flex items-center gap-3 min-h-[56px] px-4 py-2 text-left cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 hover:bg-[#FAFBFC]"
+    className="w-full flex items-center gap-3 min-h-[56px] px-4 py-2 text-left cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 hover:bg-blue-50"
   >
     <span className="flex-1 min-w-0">
       <span className="block text-[14px] font-medium text-ink">{label}</span>
@@ -1145,7 +1145,7 @@ const SwitchRow: React.FC<{
     </span>
     <span className={`relative w-[42px] h-[26px] rounded-full shrink-0 transition-colors ${checked ? 'bg-accent' : 'bg-line-2'}`} aria-hidden="true">
       <span
-        className={`absolute top-[3px] left-[3px] w-5 h-5 rounded-full bg-white shadow-[0_1px_3px_rgba(14,26,38,0.25)] transition-transform ${
+        className={`absolute top-[3px] left-[3px] w-5 h-5 rounded-full bg-white shadow-xs transition-transform ${
           checked ? 'translate-x-4' : ''
         }`}
       />
@@ -1174,13 +1174,13 @@ const FormatPicker: React.FC<{ value: 'a4' | 'tablet'; onChange: (v: 'a4' | 'tab
           role="radio"
           aria-checked={on}
           onClick={() => onChange(id)}
-          className={`flex items-center gap-3 px-3 py-2.5 rounded-[14px] border text-left cursor-pointer transition-all ${
-            on ? 'border-accent bg-accent-soft/60 shadow-[0_0_0_3px_rgba(30,79,216,0.12)]' : 'border-line bg-white hover:border-line-2'
+          className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border text-left cursor-pointer transition-all ${
+            on ? 'border-accent bg-accent-soft/60 shadow-xs' : 'border-line bg-white hover:border-line-2'
           }`}
         >
           <span className="w-8 h-10 flex items-center justify-center shrink-0" aria-hidden="true">
             <span
-              className={`rounded-[4px] border-[1.5px] ${on ? 'border-accent bg-white' : 'border-line-2 bg-white'} ${id === 'tablet' ? 'rounded-[6px]' : ''}`}
+              className={`rounded-sm border-[1.5px] ${on ? 'border-accent bg-white' : 'border-line-2 bg-white'} ${id === 'tablet' ? 'rounded-md' : ''}`}
               style={{ width: w, height: h }}
             />
           </span>
@@ -1197,7 +1197,7 @@ const FormatPicker: React.FC<{ value: 'a4' | 'tablet'; onChange: (v: 'a4' | 'tab
 /** Tiny page icon showing one or two text columns. */
 const PageGlyph: React.FC<{ cols: 1 | 2; on: boolean }> = ({ cols, on }) => (
   <span
-    className={`w-8 h-10 rounded-[5px] border flex gap-[3px] p-[5px] shrink-0 ${on ? 'border-accent bg-white' : 'border-line-2 bg-white'}`}
+    className={`w-8 h-10 rounded-sm border flex gap-[3px] p-[5px] shrink-0 ${on ? 'border-accent bg-white' : 'border-line-2 bg-white'}`}
     aria-hidden="true"
   >
     {Array.from({ length: cols }).map((_, i) => (

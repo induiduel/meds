@@ -287,7 +287,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
   return (
     <div className="flex flex-col gap-3 min-w-0">
       {/* Dataset picker */}
-      <div role="tablist" aria-label="Veri kümesi" className="flex gap-1 bg-canvas rounded-[12px] p-1 overflow-x-auto no-scrollbar self-start max-w-full">
+      <div role="tablist" aria-label="Veri kümesi" className="flex gap-1 bg-canvas rounded-xl p-1 overflow-x-auto no-scrollbar self-start max-w-full">
         {DATASETS.map((d) => (
           <button
             key={d.id}
@@ -295,8 +295,8 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
             role="tab"
             aria-selected={dsId === d.id}
             onClick={() => setDsId(d.id)}
-            className={`shrink-0 h-8 px-3 rounded-[9px] text-[13px] whitespace-nowrap cursor-pointer ${
-              dsId === d.id ? 'bg-white text-ink font-semibold shadow-[0_1px_2px_rgba(14,26,38,0.12)]' : 'text-ink-2 hover:text-ink'
+            className={`shrink-0 h-8 px-3 rounded-lg text-[13px] whitespace-nowrap cursor-pointer ${
+              dsId === d.id ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
             }`}
           >
             {d.label}
@@ -314,7 +314,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`${ds.label} içinde ara`}
-            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px] placeholder:text-[#7A8693]"
+            className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-[14px] placeholder:text-slate-600"
           />
         </label>
         <span className="text-[12.5px] text-ink-3 font-mono">{visible.length.toLocaleString('tr-TR')} kayıt</span>
@@ -329,9 +329,9 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
             Sütunlar
           </button>
           {colMenu && (
-            <div className="absolute right-0 top-10 z-30 w-[200px] bg-white border border-line rounded-[12px] shadow-[0_12px_32px_rgba(14,26,38,0.14)] p-1.5">
+            <div className="absolute right-0 top-10 z-30 w-[200px] bg-white border border-line rounded-xl shadow-lg p-1.5">
               {ds.columns.map((c) => (
-                <label key={c.key} className="flex items-center gap-2 h-8 px-2 rounded-[8px] hover:bg-canvas text-[13px] cursor-pointer">
+                <label key={c.key} className="flex items-center gap-2 h-8 px-2 rounded-lg hover:bg-canvas text-[13px] cursor-pointer">
                   <input
                     type="checkbox"
                     checked={!hidden[c.key]}
@@ -355,15 +355,15 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
 
       {/* Bulk bar */}
       {selected.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2 bg-ink text-white rounded-[12px] pl-3.5 pr-2 py-1.5">
+        <div className="flex flex-wrap items-center gap-2 bg-ink text-white rounded-xl pl-3.5 pr-2 py-1.5">
           <b className="text-[13px]">{selected.length} seçili</b>
           <span className="flex-1" />
-          <button type="button" onClick={() => exportCsv(true)} className="h-8 px-2.5 rounded-[8px] border border-white/25 text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer">
+          <button type="button" onClick={() => exportCsv(true)} className="h-8 px-2.5 rounded-lg border border-white/25 text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer">
             <Download className="w-3.5 h-3.5" />
             CSV
           </button>
           {ds.canVerify && (
-            <button type="button" disabled={busy} onClick={() => void runBulk('verify', selected)} className="h-8 px-2.5 rounded-[8px] border border-white/25 text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
+            <button type="button" disabled={busy} onClick={() => void runBulk('verify', selected)} className="h-8 px-2.5 rounded-lg border border-white/25 text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
               <CheckCircle2 className="w-3.5 h-3.5" />
               Doğrula
             </button>
@@ -373,13 +373,13 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
               type="button"
               disabled={busy}
               onClick={() => (confirmDelete ? void runBulk('delete', selected) : setConfirmDelete(true))}
-              className="h-8 px-2.5 rounded-[8px] bg-bad text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+              className="h-8 px-2.5 rounded-lg bg-bad text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
             >
               <Trash2 className="w-3.5 h-3.5" />
               {confirmDelete ? `Emin misin? ${selected.length} kaydı sil` : 'Sil'}
             </button>
           )}
-          <button type="button" onClick={() => setSelected([])} aria-label="Seçimi temizle" className="w-8 h-8 rounded-[8px] inline-flex items-center justify-center cursor-pointer">
+          <button type="button" onClick={() => setSelected([])} aria-label="Seçimi temizle" className="w-8 h-8 rounded-lg inline-flex items-center justify-center cursor-pointer">
             <X className="w-4 h-4" />
           </button>
         </div>
@@ -387,7 +387,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
 
       <div className="flex gap-3 min-w-0 items-start">
         {/* Table */}
-        <div className="flex-1 min-w-0 bg-white border border-line rounded-[14px] overflow-x-auto">
+        <div className="flex-1 min-w-0 bg-white border border-line rounded-xl overflow-x-auto">
           <div className="w-full min-w-[760px]">
             <div className="grid items-center gap-x-3 h-9 px-3 border-b border-line bg-field text-[12px] font-semibold text-ink-3 sticky top-0" style={{ gridTemplateColumns: grid }}>
               <input
@@ -455,7 +455,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
             role="dialog"
             aria-label="Kayıt ayrıntısı"
             onKeyDown={(e) => e.key === 'Escape' && setOpenId(null)}
-            className="ms-slide-left lg:animate-none fixed lg:sticky z-50 lg:z-auto top-0 right-0 bottom-0 w-[min(420px,92vw)] lg:w-[320px] shrink-0 flex flex-col bg-white border-l lg:border border-line lg:rounded-[14px] overflow-hidden lg:max-h-[calc(100dvh-220px)] shadow-[-12px_0_40px_rgba(14,26,38,0.16)] lg:shadow-none"
+            className="ms-slide-left lg:animate-none fixed lg:sticky z-50 lg:z-auto top-0 right-0 bottom-0 w-[min(420px,92vw)] lg:w-[320px] shrink-0 flex flex-col bg-white border-l lg:border border-line lg:rounded-xl overflow-hidden lg:max-h-[calc(100dvh-220px)] shadow-lg lg:shadow-none"
           >
             <div className="flex items-center gap-2 px-3.5 py-3 border-b border-line">
               <span className="text-[14px] font-semibold flex-1 truncate">{String(ds.columns[0].value(openRow)) || 'Kayıt'}</span>
@@ -480,13 +480,13 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
                     () => toast.error('Kopyalanamadı')
                   );
                 }}
-                className="h-8 px-2.5 rounded-[8px] border border-line text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer"
               >
                 <Copy className="w-3.5 h-3.5" />
                 JSON
               </button>
               {ds.canVerify && openRow.status !== 'completed' && (
-                <button type="button" disabled={busy} onClick={() => void runBulk('verify', [ds.idOf(openRow)])} className="h-8 px-2.5 rounded-[8px] border border-line text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
+                <button type="button" disabled={busy} onClick={() => void runBulk('verify', [ds.idOf(openRow)])} className="h-8 px-2.5 rounded-lg border border-line text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   Doğrula
                 </button>
@@ -499,7 +499,7 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
                     setSelected([ds.idOf(openRow)]);
                     setConfirmDelete(true);
                   }}
-                  className="h-8 px-2.5 rounded-[8px] bg-bad-soft text-bad-text text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                  className="h-8 px-2.5 rounded-lg bg-bad-soft text-bad-text text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                   Sil…

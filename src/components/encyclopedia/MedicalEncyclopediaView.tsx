@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { PageHeader } from '../ui/PageHeader';
 import {
   Search,
   BookOpenText,
@@ -318,48 +319,20 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   };
 
   return (
-    <div className="min-h-screen bg-canvas text-ink pb-24 sm:pb-16 pt-3 px-3 sm:px-6 max-w-7xl mx-auto">
-      {/* Page Header */}
-      <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-line pb-5">
-        <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-accent-soft text-accent text-[12px] font-bold mb-2">
-            <BookOpenText className="w-3.5 h-3.5" />
-            <span>Müfredat Kütüphanesi & Tıbbi Ansiklopedi</span>
-          </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-ink">
-            Tıbbi Terimler, Hastalıklar & İlaç Ansiklopedisi
-          </h1>
-          <p className="text-[13.5px] sm:text-[14.5px] text-ink-2 mt-1 max-w-3xl leading-relaxed">
-            Kurul 1 ve fakülte ders notlarından derlenen hastalıklar, patoloji bulguları, antimikrobiyal ilaçlar ve patojenler. Her madde amfi ders notu bağlamında korunur ve yapay zeka tarafından denetlenir.
-          </p>
-        </div>
-
-        {/* Global Summary Stats */}
-        <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-          <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white dark:bg-panel border border-line shadow-2xs">
-            <div className="w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center text-accent">
-              <BookOpenText className="w-4 h-4" />
-            </div>
-            <div>
-              <div className="text-[11px] text-ink-3 font-medium">Toplam Madde</div>
-              <div className="text-[15px] font-bold text-ink leading-none">{stats.total}</div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white dark:bg-panel border border-line shadow-2xs">
-            <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600">
-              <ShieldCheck className="w-4 h-4" />
-            </div>
-            <div>
-              <div className="text-[11px] text-ink-3 font-medium">AI Denetlendi</div>
-              <div className="text-[15px] font-bold text-emerald-600 leading-none">%{Math.round((stats.verified / stats.total) * 100)}</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="w-full min-w-0 text-ink pb-8">
+      <PageHeader
+        className="mb-5"
+        eyebrow="Müfredat kütüphanesi"
+        title="Sözlük & Ansiklopedi"
+        description="Ders notlarından derlenen hastalıklar, patoloji bulguları, ilaçlar ve patojenler. Her madde amfi notu bağlamında korunur."
+        stats={[
+          { label: 'Toplam madde', value: stats.total },
+          { label: 'Denetlenmiş', value: `%${stats.total ? Math.round((stats.verified / stats.total) * 100) : 0}`, tone: 'ok' },
+        ]}
+      />
 
       {/* Search and Filter Bar */}
-      <div className="bg-white dark:bg-panel border border-line rounded-2xl p-4 shadow-sm mb-6 flex flex-col gap-3.5">
+      <div className="bg-white border border-line rounded-2xl p-3 sm:p-4 shadow-xs mb-5 flex flex-col gap-3">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
           {/* Main Search Input */}
           <div className="relative flex-1">
@@ -636,7 +609,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
           role="dialog"
           aria-modal="true"
         >
-          <div className="w-full max-w-3xl bg-white dark:bg-panel border border-line rounded-[22px] shadow-2xl flex flex-col max-h-[90dvh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+          <div className="w-full max-w-3xl bg-white dark:bg-panel border border-line rounded-2xl shadow-2xl flex flex-col max-h-[90dvh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             {/* Modal Header */}
             <div className="p-4 sm:p-5 border-b border-line flex items-start justify-between gap-3 bg-canvas/40">
               <div className="min-w-0 flex-1">

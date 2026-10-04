@@ -284,7 +284,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           </select>
           <ChevronDown className="pointer-events-none absolute right-2.5 w-3.5 h-3.5 opacity-70" aria-hidden="true" />
         </label>
-        <h1 className="m-0 font-bold text-[22px] md:text-[24px] leading-tight tracking-[-0.01em] text-ink">Hatırladığın soruyu yaz</h1>
+        <span className="ms-eyebrow">Soru ekle</span>
+        <h1 className="ms-page-title m-0 text-[24px] sm:text-[28px] text-ink">Hatırladığın soruyu yaz</h1>
         </div>
         <p className="m-0 text-[13px] text-ink-3">Parça parça da olur; gerisini kaynaklardan tamamlarız.</p>
       </div>
@@ -293,10 +294,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       <form
         onSubmit={handleSubmit}
         aria-busy={isSubmitting}
-        className="relative bg-white border border-line rounded-[12px] p-3 sm:p-5 flex flex-col gap-3"
+        className="relative bg-white border border-line rounded-xl p-3 sm:p-5 flex flex-col gap-3"
       >
         <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
-        <div role="radiogroup" aria-label="Ne ekliyorsun?" className="grid grid-cols-3 gap-1 bg-canvas rounded-[12px] p-1">
+        <div role="radiogroup" aria-label="Ne ekliyorsun?" className="grid grid-cols-3 gap-1 bg-canvas rounded-xl p-1">
           {MODES.map((m) => {
             const on = mode === m.id;
             return (
@@ -306,8 +307,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 role="radio"
                 aria-checked={on}
                 onClick={() => setMode(m.id)}
-                className={`h-9 rounded-[9px] text-[13.5px] sm:text-[14px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center justify-center gap-1.5 ${
-                  on ? 'bg-white text-ink font-semibold shadow-[0_1px_3px_rgba(14,26,38,0.12)]' : 'text-ink-2 hover:text-ink'
+                className={`h-9 rounded-lg text-[13.5px] sm:text-[14px] whitespace-nowrap cursor-pointer transition-colors inline-flex items-center justify-center gap-1.5 ${
+                  on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
                 }`}
               >
                 {m.label}
@@ -404,7 +405,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             <select
               value={discipline}
               onChange={(e) => setDiscipline(e.target.value)}
-              className={`appearance-none w-full h-11 rounded-[12px] pl-3 pr-8 text-[14px] text-ink cursor-pointer truncate ${field}`}
+              className={`appearance-none w-full h-11 rounded-xl pl-3 pr-8 text-[14px] text-ink cursor-pointer truncate ${field}`}
             >
               {disciplines.map((d) => (
                 <option key={d} value={d}>
@@ -414,7 +415,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </select>
             <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" aria-hidden="true" />
           </label>
-          <label className="flex items-center gap-1.5 h-11 w-[104px] px-3 rounded-[12px] bg-field border border-transparent focus-within:border-accent focus-within:bg-white">
+          <label className="flex items-center gap-1.5 h-11 w-[104px] px-3 rounded-xl bg-field border border-transparent focus-within:border-accent focus-within:bg-white">
             <span className="text-[13px] text-ink-3">No</span>
             <input
               type="text"
@@ -423,14 +424,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               onChange={(e) => setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
               placeholder="?"
               aria-label="Soru numarası (bilmiyorsan boş bırak)"
-              className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-[#7A8693]"
+              className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-slate-600"
             />
           </label>
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`h-12 sm:h-11 px-5 rounded-[12px] text-white text-[15px] font-semibold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 w-full sm:w-auto transition-colors ${
-              canSubmit ? 'bg-accent hover:bg-accent-hover shadow-[0_6px_16px_rgba(30,79,216,0.25)]' : 'bg-accent/75'
+            className={`h-12 sm:h-11 px-5 rounded-xl text-white text-[15px] font-semibold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 w-full sm:w-auto transition-colors ${
+              canSubmit ? 'bg-accent hover:bg-accent-hover shadow-md' : 'bg-accent/75'
             }`}
           >
             {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
@@ -439,13 +440,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         </div>
 
         {formError && (
-          <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-[12px] bg-bad-soft text-bad-text text-[14px]">
+          <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-[14px]">
             <AlertCircle className="w-4 h-4 shrink-0 text-bad" />
             <span>{formError}</span>
           </div>
         )}
         {successMessage && (
-          <div role="status" className="ms-pop-in flex items-center gap-3 px-3 py-2 rounded-[14px] bg-ok-tint border border-[#CDEBD8]">
+          <div role="status" className="ms-pop-in flex items-center gap-3 px-3 py-2 rounded-xl bg-ok-tint border border-emerald-200">
             <SuccessCheck size={48} className="shrink-0 -my-1" />
             <span className="flex flex-col">
               <span className="text-[14.5px] font-semibold text-ok">Teşekkürler!</span>
@@ -459,7 +460,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
       {/* Sağ sütun: bulunan kaynaklar, havuz durumu, kısayol */}
       <aside className="flex flex-col gap-3 min-w-0 lg:pt-[52px]">
-        <section className="bg-white border border-line rounded-[12px] px-4 py-3" aria-live="polite">
+        <section className="bg-white border border-line rounded-xl px-4 py-3" aria-live="polite">
           <h2 className="m-0 mb-1 text-[11px] font-semibold uppercase tracking-[.06em] text-ink-3">Bulunan kaynaklar</h2>
           {sources.length === 0 ? (
             <p className="m-0 py-2 text-[13px] text-ink-3">Yazmaya başlayınca soruna en yakın slayt, özet ve çıkmış sorular burada görünür.</p>
@@ -486,7 +487,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       <a
         href={pathFor('questions')}
         onClick={linkClick(() => onNavigateTab('questions'))}
-        className="group bg-white border border-line rounded-[12px] px-4 py-3 flex items-center gap-3 hover:border-line-2"
+        className="group bg-white border border-line rounded-xl px-4 py-3 flex items-center gap-3 hover:border-line-2"
       >
         <span className="flex-1 min-w-0 flex flex-col gap-1.5">
           <span className="flex items-baseline gap-2 text-[14px] min-w-0">
@@ -498,7 +499,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           </span>
           <span role="img" aria-label={`${completed} doğrulandı, ${drafts} taslak`} className="flex h-1.5 rounded-full overflow-hidden gap-[2px] bg-line-soft">
             {completed > 0 && <span className="bg-ok-bright" style={{ width: `${pctNum(completed)}%` }} />}
-            {drafts > 0 && <span className="bg-[#F59E0B]" style={{ width: `${draftPct}%` }} />}
+            {drafts > 0 && <span className="bg-amber-600" style={{ width: `${draftPct}%` }} />}
           </span>
         </span>
         <span className="text-[13px] font-semibold text-accent inline-flex items-center gap-0.5 shrink-0">
