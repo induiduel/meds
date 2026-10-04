@@ -202,56 +202,143 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [smartAssistant, setSmartAssistant] = useState<SmartQuestionAssistantResult | null>(null);
   const [optimizingQuestion, setOptimizingQuestion] = useState<QuestionItem | null>(null);
   const [debouncedText, setDebouncedText] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
 
-  // 1. Yazarken gecikmeli metin (debouncedText) güncelleme (250ms)
+  // 1. Kelime-bazlı ve boşluk tetiklemeli (Space-delimited / Word-level) gecikmeli metin optimizasyonu:
+  // - Kullanıcı boşluk (' ') veya noktalama (. , ! ? \n) bastığı an, tamamlanan son kelimeye kadar olan
+  //   kısmı (yazılmakta olan eksik kelime hariç / 1 kelime öncesi) hemen işleme alır.
+  // - Kullanıcı boşluk basmadan duraklarsa fallback (500ms) devreye girerek mevcut metni tamamlar.
+  // - Bu sayede her harfte hesaplama yapmak yerine kelime bazlı tetiklenir, mobil ve masaüstünde donma engellenir.
   useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setDebouncedText(text.trim());
-    }, 250);
-    return () => window.clearTimeout(timer);
+    const raw = text || '';
+    if (!raw.trim()) {
+      setDebouncedText('');
+      setIsSearching(false);
+      return;
+    }
+
+    // Kullanıcı bir boşluk veya noktalama girdiyse, son tamamlanan kelimeye kadar olan kısmı al
+    const endsWithBoundary = /[\s.,;:!?\n]$/.test(raw);
+    if (endsWithBoundary) {
+      // Tamamlanmış kelimeler kümesi
+      const completedWords = raw.replace(/\S+$/, '').trim();
+      if (completedWords.length >= 6) {
+        setIsSearching(true);
+        // Doğrudan mikrogörev / kısa zamanlayıcı ile işle (UI thread'ini kilitlemez)
+        const t = window.setTimeout(() => {
+          setDebouncedText(completedWords);
+        }, 60);
+        return () => window.clearTimeout(t);
+      }
+    }
+
+    // Boşluk bırakılmadıysa veya henüz kelime tamamlanmadıysa (yazarken duraksama fallback'i):
+    // 500ms duraklama sonrası tam metni değerlendir
+    setIsSearching(true);
+    const idleTimer = window.setTimeout(() => {
+      setDebouncedText(raw.trim());
+    }, 500);
+
+    return () => window.clearTimeout(idleTimer);
   }, [text]);
 
-  // 2. Anlık taslak eşleme ve Kurul/Ders tahmin asistanı: debouncedText üzerinden çalışır
+  // 2. Havuz Chunking ve Ön Filtreleme:
+  // Mevcut soru listesini aranabilir hafif token indekslerine dönüştürür.
+  const indexedPool = useMemo(() => {
+    if (!questions || questions.length === 0) return [];
+    return questions.map((q) => {
+      const stem = (q.reconstruction?.stem || q.stem || q.rawStem || q.fragments?.[0]?.text || q.topic || '').toLowerCase();
+      const optionsText = (q.options || []).map((o) => o.text.toLowerCase()).join(' ');
+      const tokens = new Set([...stem.split(/\s+/), ...optionsText.split(/\s+/)].filter((w) => w.length > 2));
+      return {
+        question: q,
+        committeeId: q.committeeId,
+        discipline: (q.discipline || '').toLowerCase(),
+        stem,
+        tokens,
+      };
+    });
+  }, [questions]);
+
+  // 3. Anlık taslak eşleme ve Kurul/Ders tahmin asistanı:
+  // debouncedText üzerinden, requestAnimationFrame veya setTimeout chunking ile non-blocking çalışır.
   useEffect(() => {
     const q = debouncedText;
     if (mode === 'option' || q.length < 8 || !committee?.id) {
       setRealtimeMatches([]);
       setSelectedMatchIds(new Set());
       setSmartAssistant(null);
+      setIsSearching(false);
       return;
     }
 
+    let isCancelled = false;
+    setIsSearching(true);
+
     const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
 
-    // 1. Akıllı Asistan Analizi (Kurul, Ders, Tıbbi Kavram & Çapraz Kurul Tespiti)
-    const assistantRes = getSmartQuestionAssistant(q, optionsList, committee.id);
-    setSmartAssistant(assistantRes);
+    // Chunking: İşlemi bir sonraki frame'e bırakarak textarea render döngüsünü %100 akıcı tutar
+    const chunkTimer = window.setTimeout(() => {
+      if (isCancelled) return;
 
-    // 2. Taslak Eşleme (Çapraz Kurul Desteği ile)
-    const matches = findRealtimeMatchingDrafts(
-      {
-        committeeId: committee.id,
-        discipline,
-        topic: `${discipline} Hatırlanan Soru`,
-        text: q,
-        options: optionsList.length > 0 ? optionsList : undefined,
-      },
-      questions,
-      35, // En az %35 benzerlik
-      4,  // En fazla 4 aday göster
-      true // Çapraz kurul taslaklarını da göster
-    );
-    setRealtimeMatches(matches);
-    // Geçersiz kalan seçili id'leri temizle
-    setSelectedMatchIds((prev) => {
-      const validIds = new Set(matches.map((m) => m.question.id));
-      const next = new Set<string>();
-      prev.forEach((id) => {
-        if (validIds.has(id)) next.add(id);
-      });
-      return next;
-    });
-  }, [debouncedText, mode, committee?.id, discipline, options, questions]);
+      try {
+        // 1. Akıllı Asistan Analizi (Kurul, Ders, Tıbbi Kavram & Çapraz Kurul Tespiti)
+        const assistantRes = getSmartQuestionAssistant(q, optionsList, committee.id);
+        if (isCancelled) return;
+        setSmartAssistant(assistantRes);
+
+        // 2. Chunk / Hızlı Ön Filtreleme ile Aday Havuzu Daraltma
+        const qWords = q.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
+        // Sadece soru metninde veya şıklarında en az 1 ortak token içeren ya da aynı kurul/ders olanları al
+        const filteredCandidateQuestions = indexedPool.length > 0
+          ? indexedPool
+              .filter((item) => {
+                if (item.committeeId === committee.id) return true;
+                // Çapraz kurul için en az bir kelime benzerliği şartı
+                return qWords.some((w) => item.tokens.has(w) || item.stem.includes(w));
+              })
+              .map((item) => item.question)
+          : questions;
+
+        // 3. Taslak Eşleme (optimize edilmiş aday kümesi üzerinde)
+        const matches = findRealtimeMatchingDrafts(
+          {
+            committeeId: committee.id,
+            discipline,
+            topic: `${discipline} Hatırlanan Soru`,
+            text: q,
+            options: optionsList.length > 0 ? optionsList : undefined,
+          },
+          filteredCandidateQuestions,
+          35, // En az %35 benzerlik
+          4,  // En fazla 4 aday göster
+          true // Çapraz kurul taslaklarını da göster
+        );
+
+        if (isCancelled) return;
+        setRealtimeMatches(matches);
+
+        // Geçersiz kalan seçili id'leri temizle
+        setSelectedMatchIds((prev) => {
+          const validIds = new Set(matches.map((m) => m.question.id));
+          const next = new Set<string>();
+          prev.forEach((id) => {
+            if (validIds.has(id)) next.add(id);
+          });
+          return next;
+        });
+      } finally {
+        if (!isCancelled) {
+          setIsSearching(false);
+        }
+      }
+    }, 20);
+
+    return () => {
+      isCancelled = true;
+      window.clearTimeout(chunkTimer);
+    };
+  }, [debouncedText, mode, committee?.id, discipline, options, questions, indexedPool]);
 
   const toggleSelectMatch = (id: string) => {
     setSelectedMatchIds((prev) => {
@@ -541,6 +628,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 placeholder="Tek kelime bile işe yarar…"
                 className="resize-none rounded-2xl px-4 py-3.5 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-field border-0 outline-0 focus:bg-white focus:ring-2 focus:ring-accent transition-[background,box-shadow] min-h-[140px]"
               />
+              {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
+              {isSearching && text.trim().length >= 6 && (
+                <div className="ms-fade-in flex items-center gap-2 px-3 py-1.5 rounded-xl bg-accent-soft/60 border border-accent/20 text-accent text-[12px] font-medium w-fit">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
+                  <span className="flex items-center gap-1">
+                    <Sparkles className="w-3.5 h-3.5 animate-spin" />
+                    Benzer soru, kurul ve taslaklar taranıyor…
+                  </span>
+                </div>
+              )}
             </>
           )}
 
@@ -933,10 +1030,19 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               }}
               className={`resize-y rounded-[10px] px-3.5 py-3 text-[15px] leading-[1.6] text-ink placeholder:text-ink-3 min-h-[132px] sm:min-h-[150px] ${field}`}
             />
-            <div className="flex items-center gap-1.5 text-[12px] text-ink-3 -mt-1">
-              <span className="font-mono">{text.length} karakter</span>
-              <span aria-hidden="true">·</span>
-              <span className="truncate">Şıkları “Şıklar” sekmesinden ekleyebilirsin</span>
+            <div className="flex items-center justify-between gap-1.5 text-[12px] text-ink-3 -mt-1 flex-wrap">
+              <div className="flex items-center gap-1.5">
+                <span className="font-mono">{text.length} karakter</span>
+                <span aria-hidden="true">·</span>
+                <span className="truncate">Şıkları “Şıklar” sekmesinden ekleyebilirsin</span>
+              </div>
+              {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
+              {isSearching && text.trim().length >= 6 && (
+                <div className="ms-fade-in flex items-center gap-1.5 text-accent text-[11.5px] font-medium">
+                  <Sparkles className="w-3.5 h-3.5 animate-spin" />
+                  <span>Eşleşmeler taranıyor…</span>
+                </div>
+              )}
             </div>
           </>
         )}
