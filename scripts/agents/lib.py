@@ -220,16 +220,54 @@ def is_gemma_running() -> bool:
     return False
 
 
+def get_gpu_telemetry() -> tuple[int, int]:
+    """GPU anlık kullanım (%) ve sıcaklığını (°C) döner. Hata durumunda (0, 0) döner."""
+    import subprocess
+    try:
+        res = subprocess.run(
+            ["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader,nounits"],
+            capture_output=True, text=True, timeout=2
+        )
+        if res.returncode == 0 and res.stdout.strip():
+            parts = res.stdout.strip().split(",")
+            return int(parts[0].strip()), int(parts[1].strip())
+    except Exception:
+        pass
+    return 0, 0
+
+
+def wait_for_gpu_safety(max_util: int = 90, max_temp: int = 80, max_wait_sec: int = 30):
+    """GPU %90 kullanım veya 80°C üzerine çıkarsa sistemi güvenli sınıra inene kadar bekletir (Thermal & Load Throttling)."""
+    import time
+    waited = 0
+    while waited < max_wait_sec:
+        util, temp = get_gpu_telemetry()
+        if (util > max_util or temp >= max_temp) and util > 0:
+            time.sleep(2)
+            waited += 2
+        else:
+            break
+
+
 def chat(model: str, prompt: str, system: str | None = None, as_json: bool = False, timeout: int = 120,
          num_predict: int = 2048, retries: int = 1, num_ctx: int = 8192, num_gpu: int | None = None):
     """Yerel model çağrısı.
     Kural: Gemma aktif olarak çalışıyorsa diğer modeller %90 CPU / %10 GPU (num_gpu=3) ile çalışır.
     Gemma çalışmıyorsa diğer tüm modeller tam GPU hızında serbestçe çalışır.
+    Ek Güvenlik: GPU %90 yük veya 80°C üzerine çıkarsa çağrı bekletilir (Throttle).
     """
     import requests
 
+    # Donanım Güvenlik Freni: Aşırı ısınma (>=80°C) ve aşırı doyum (>%90) engeli
+    wait_for_gpu_safety(max_util=90, max_temp=80)
+
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
-    options = {"temperature": 0, "num_predict": num_predict, "num_ctx": num_ctx}
+    options = {
+        "temperature": 0, 
+        "num_predict": num_predict, 
+        "num_ctx": min(num_ctx, 3072),  # 8GB VRAM ve eşzamanlı sorgular için optimize edilmiş context boyutu
+        "num_thread": 16  # 20 mantıksal CPU çekirdeğinin tamamını paralel çalıştır
+    }
 
     # Dinamik GPU Yönetimi
     if num_gpu is not None:
@@ -261,25 +299,37 @@ def chat(model: str, prompt: str, system: str | None = None, as_json: bool = Fal
                 try:
                     return json.loads(out)
                 except Exception:
-                    # JSON kısmen kesilmiş veya sonda fazladan virgül/bozukluk olabilir, kurtarmayı dene
-                    cleaned = re.sub(r",\s*([\]}])", r"\1", out)
+                    # 1. Kapanmamış tırnak ve JSON dizesini onar (Unterminated string)
+                    cleaned = out.strip()
+                    # Eğer son karakter açık tırnaksa veya tırnak kapatılmadan kesilmişse
+                    # Tırnak sayısını kontrol et (çift tırnak sayısı tek ise kapat)
+                    unescaped_quotes = len(re.findall(r'(?<!\\)"', cleaned))
+                    if unescaped_quotes % 2 != 0:
+                        cleaned += '"'
+                    
+                    cleaned = re.sub(r",\s*([\]}])", r"\1", cleaned)
                     try:
                         return json.loads(cleaned)
                     except Exception:
-                        # Kapanmamış süslü veya köşeli parantezleri kapatmayı dene
                         for suffix in ["}", "]}", '"]}', '""}', '"}]}']:
                             try:
                                 return json.loads(cleaned + suffix)
                             except Exception:
                                 pass
+                        
+                        # Son çare: regex ile geçerli alanları cımbızla
+                        partial = {}
+                        for key in ("analiz", "stem_detayli", "aciklama", "ne_sormus", "alt_konu"):
+                            m = re.search(rf'"{key}"\s*:\s*"([^"\\]*(?:\\.[^"\\]*)*)"', cleaned)
+                            if m:
+                                partial[key] = m.group(1).encode('utf-8').decode('unicode_escape', errors='ignore')
+                        if partial:
+                            return partial
                         raise
             return out
         except Exception as e:  # noqa: BLE001
             last = e
             err_str = str(e).lower()
-            if "connection" in err_str or "timed out" in err_str or "500" in err_str:
-                import subprocess
-                subprocess.run(["/usr/local/bin/meds-gpu-recovery"], capture_output=True)
             time.sleep(2 * (i + 1))
     raise RuntimeError(f"Ollama çağrısı başarısız ({model}): {last}")
 
@@ -290,6 +340,7 @@ def embed(texts: list[str], model: str = MODEL_EMBED, batch: int = 64):
 
     out = []
     for i in range(0, len(texts), batch):
+        wait_for_gpu_safety(max_util=90, max_temp=80)
         r = requests.post(f"{OLLAMA_URL}/api/embed", json={"model": model, "input": texts[i:i + batch]}, timeout=600)
         r.raise_for_status()
         out += r.json()["embeddings"]

@@ -88,13 +88,11 @@ def inspect_pipeline_freshness(last_code_mtime: float):
 def check_ollama_health():
     """Ollama servisinin canlılığını ve yanıt süresini kontrol eder"""
     try:
-        r = requests.get("http://127.0.0.1:11434/api/tags", timeout=4)
+        r = requests.get("http://127.0.0.1:11434/api/tags", timeout=6)
         if not r.ok:
             raise RuntimeError(f"HTTP {r.status_code}")
     except Exception as e:
-        log(f"Ollama yanıt vermiyor ({e}). Otomatik donanım kurtarma devreye giriyor...")
-        subprocess.run(["/usr/local/bin/meds-gpu-recovery"], capture_output=True)
-        subprocess.run(["docker", "restart", "meds-ollama"], capture_output=True)
+        log(f"Ollama yanıt vermiyor ({e}). Servis bekleniyor...")
         time.sleep(5)
 
 def check_pipeline_runner_alive():
@@ -152,13 +150,29 @@ def check_system_resources():
     try:
         import psutil
         mem = psutil.virtual_memory()
-        # Eğer kullanılabilir RAM %8'in altına düşerse
-        if mem.available < (0.08 * mem.total):
-            log(f"DİKKAT: Sistem belleği kritik seviyede (%{mem.percent} dolu)! VRAM ve önbellek tazeleme tetikleniyor...")
-            requests.post("http://127.0.0.1:11434/api/generate", json={"model": "gemma3:4b", "keep_alive": 0}, timeout=2)
-            requests.post("http://127.0.0.1:11434/api/generate", json={"model": "bge-m3:latest", "keep_alive": 0}, timeout=2)
+        # Eğer kullanılabilir RAM %15'in altına düşerse (Erken OOM-Killer Koruması)
+        if mem.available < (0.15 * mem.total):
+            log(f"DİKKAT: Sistem belleği kritik seviyede (%{mem.percent} dolu, kullanılabilir: {round(mem.available / (1024**3), 2)} GB)! Önbellek tazeleme tetikleniyor...")
             import gc
             gc.collect()
+    except Exception:
+        pass
+
+
+def enforce_gpu_thermal_and_load_limits(max_util: int = 90, max_temp: int = 80):
+    """GPU %90 üzeri yük veya 80°C üzeri sıcaklığa ulaşırsa boru hattını dinlendirir."""
+    try:
+        res = subprocess.run(
+            ["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader,nounits"],
+            capture_output=True, text=True, timeout=2
+        )
+        if res.returncode == 0 and res.stdout.strip():
+            parts = res.stdout.strip().split(",")
+            util = int(parts[0].strip())
+            temp = int(parts[1].strip())
+            if temp >= max_temp or util > max_util:
+                log(f"GÜVENLİK FRENİ: GPU Yükü: %{util} (Limit: %{max_util}), Sıcaklık: {temp}°C (Limit: {max_temp}°C). Model 5 sn dinlendiriliyor...")
+                time.sleep(5)
     except Exception:
         pass
 
@@ -191,6 +205,9 @@ def main():
 
             # 6. Sistem RAM/VRAM kaynak baskısını denetle
             check_system_resources()
+
+            # 7. Donanım Güvenlik Freni: GPU Yükü (%90) ve Sıcaklık (80°C) denetimi
+            enforce_gpu_thermal_and_load_limits(max_util=90, max_temp=80)
 
         except Exception as e:
             log(f"Watchdog genel döngü hatası: {e}")

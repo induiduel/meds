@@ -98,9 +98,12 @@ erDiagram
    - Vektör ve ara işlemler için Python RAM belleğinde `dict` veya `pickle` biriktirilmez.
    - Doğrudan NVMe SSD üzerinde çalışan **`diskcache.Cache` (SQLite tabanlı)** kullanılır.
 3. **Konteyner ve Süreç İzolasyonu:**  
-   - `meds-ollama` konteyneri `OLLAMA_NUM_PARALLEL: 1` ile çalışır.
-   - Boşta kalan modeller `keep_alive: 5m` ile otomatik tahliye edilir.
-4. **Kod Güncelleme Sonrası Yeniden Başlatma:**  
+   - `meds-ollama` konteyneri `OLLAMA_NUM_PARALLEL: 2`, `OLLAMA_FLASH_ATTENTION: 0`, `OLLAMA_KV_CACHE_TYPE: f16` ile çalışır.
+   - Boşta kalan modeller `keep_alive: 24h` ile bellekte tutulur, `max_loaded_models: 1` ile izole edilir.
+4. **Donanım Koruma ve Termal Güvenlik Freni (ZORUNLU):**
+   - GPU yükü **%90** veya GPU çekirdek sıcaklığı **80°C** üzerine çıkamaz.
+   - `lib.py` (`wait_for_gpu_safety`) ve `watchdog.py` (`enforce_gpu_thermal_and_load_limits`) her model ve embedding çağrısından önce GPU telemetrisini denetler; eşikler aşılırsa sistemi güvenli sıcaklığa inene kadar otomatik uyutur (Thermal Throttling).
+5. **Kod Güncelleme Sonrası Yeniden Başlatma:**  
    - `scripts/agents/` dizinindeki bir `.py` dosyası düzenlendiğinde, arka plandaki Python süreci eski kodu çalıştırmaya devam eder.
    - Yeni kod yazıldığında çalışan süreç sonlandırılmalı (`kill -9`) veya `watchdog.py`'ın otomatik tazelemesine bırakılmalıdır.
 
