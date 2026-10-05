@@ -175,7 +175,7 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - Duraksama / kurtarma desteği ile her adım anında diske yazılır (`meds_database_v2/phase7_stories`).
 
 ### Faz 7.5 (Aşama 7.5): Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme (`reconstruct_slides_phase7_5.py`)
-- KBÜ Tıp Fakültesi Dönem 3 resmi kurul hedeflerini (`TIP320`, `TIP340`, `TIP350`, `TIP360`) haritalar.
+- KBÜ Tıp Fakültesi Dönem 3 resmi kurul hedeflerini (`TIP310`, `TIP320`, `TIP340`, `TIP350`, `TIP360`) haritalar.
 - Müfredat dışı sapmaları engeller; slaytları resmi konu başlığı, öğrenim hedefleri (tanım, patogenez, ayırıcı tanı, tedavi), anahtar kavramlar ve kancalanan çıkmış sorularla zenginleştirilmiş ders kartlarına dönüştürür (`meds_database_v2/slide_reconstructed`).
 
 ---
