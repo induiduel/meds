@@ -2156,6 +2156,24 @@ def get_stats():
     t2 = BASE_DIR / "meds_temp" / "temp2"
     t3 = BASE_DIR / "meds_temp" / "temp3"
     db = BASE_DIR / "meds_database"
+    phase65_dir = BASE_DIR / "meds_database_v2" / "medical_thesaurus"
+    phase65_state = {}
+    try:
+        phase65_state = json.loads((phase65_dir / "phase6_5_state.json").read_text())
+    except Exception:
+        pass
+    phase65_terms = int(phase65_state.get("thesaurus_terms") or 0)
+    phase65_anchors = int(phase65_state.get("total_anchors") or 0)
+    phase65_fmt = lambda value: f"{value:,}".replace(",", ".")
+    if not phase65_anchors:
+        anchor_file = phase65_dir / "phase6_5_question_slide_anchors.jsonl"
+        if anchor_file.exists():
+            phase65_anchors = sum(1 for line in anchor_file.open(encoding="utf-8") if line.strip())
+    if not phase65_terms:
+        thesaurus_file = phase65_dir / "medical_thesaurus.json"
+        if thesaurus_file.exists():
+            try: phase65_terms = len(json.loads(thesaurus_file.read_text()))
+            except Exception: pass
 
     # 4. Servis Durumları
     def srv(name):
@@ -2463,12 +2481,12 @@ def get_stats():
             "id": 65,
             "phase": "Faz 6.5",
             "name": "Faz 6.5: Tıbbi Sözlük (Thesaurus) & Co-occurrence Kanıt Motoru",
-            "desc": "Türkçe/Latince tıp ontolojisi, eşanlamlılar ve kavram kümeleri üzerinden en yüksek örtüşmeye sahip soru-ders köprülerinin (2.296 anchor) kurulması",
+            "desc": f"Türkçe/Latince tıp ontolojisi, eşanlamlılar ve kavram kümeleri üzerinden {phase65_fmt(phase65_anchors)} soru-ders köprüsünün kurulması",
             "status": "completed",
-            "status_tr": "Tamamlandı ✓ (2.296 Köprü Kancalandı)",
+            "status_tr": f"Tamamlandı ✓ ({phase65_fmt(phase65_anchors)} Köprü Kancalandı)",
             "progress_pct": 100,
-            "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/medical_thesaurus'), 'jsonl')} Köprü Dosyası",
-            "total": "2.296 Eşleşen Kanıt",
+            "processed": f"{phase65_fmt(phase65_terms)} Terim / Eşanlamlı · {phase65_fmt(phase65_anchors)} Soru-Slayt Köprüsü",
+            "total": f"{phase65_fmt(phase65_anchors)} Eşleşen Kanıt",
             "unit": "Sözlük Köprüsü",
             "created_files": "medical_thesaurus.json + anchors.jsonl",
             "pending": 0,
