@@ -466,15 +466,12 @@ async function callGeminiPool(
 // =========================================================================
 export function getTieredMuseSparkKeys(customKey?: string): { key: string; label: string }[] {
   const keys: { key: string; label: string }[] = [];
-  if (customKey && customKey.trim()) {
-    keys.push({ key: customKey.trim(), label: 'Özel Muse Spark Anahtarı' });
+  if (customKey && isRealKey(customKey)) {
+    keys.push({ key: customKey.trim(), label: 'Özel Muse Spark / OpenRouter Anahtarı' });
   }
   const envKey = (process.env.MUSE_SPARK_API_KEY || process.env.OPENCODE_API_KEY || process.env.OPENROUTER_API_KEY || '').trim();
-  if (envKey && !keys.some(x => x.key === envKey)) {
+  if (isRealKey(envKey) && !keys.some(x => x.key === envKey)) {
     keys.push({ key: envKey, label: 'Sunucu Muse Spark Anahtarı' });
-  }
-  if (keys.length === 0) {
-    keys.push({ key: 'public-free-tier', label: 'Muse Spark 1.3 Ücretsiz / Contributor Havuzu' });
   }
   return keys;
 }
@@ -533,6 +530,10 @@ export async function callMuseSpark(
         { role: 'user', content: prompt }
       ];
 
+  if (keys.length === 0) {
+    throw new Error('Muse Spark / OpenRouter API anahtarı tanımlı değil (MUSE_SPARK_API_KEY). Lütfen .env dosyasına ekleyin veya geçerli bir API anahtarı girin.');
+  }
+
   let lastErr: any = null;
 
   for (const baseUrl of baseUrls) {
@@ -552,7 +553,7 @@ export async function callMuseSpark(
           const headers: Record<string, string> = {
             'Content-Type': 'application/json'
           };
-          if (keyInfo.key && keyInfo.key !== 'public-free-tier') {
+          if (keyInfo.key) {
             headers['Authorization'] = `Bearer ${keyInfo.key}`;
           }
           if (baseUrl.includes('openrouter')) {
@@ -716,7 +717,9 @@ export async function generateResilientMedicalAi(options: {
   console.log(`[AI Multi-Provider] 🟢 1. DENEME: ${primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'} ile başlatılıyor...`);
   try {
     if (primaryProvider === 'groq') {
-      const groqModel = model && !model.startsWith('gemini') ? model : 'openai/gpt-oss-120b';
+      const groqModel = model && !model.startsWith('gemini') && !model.includes('muse') && !model.includes('spark')
+        ? model
+        : 'openai/gpt-oss-120b';
       const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
         systemPrompt: systemInstruction,
         isJson,
@@ -727,16 +730,17 @@ export async function generateResilientMedicalAi(options: {
         providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
         planUsed: `Groq Cloud (${groqRes.model})`,
         attemptsCount: 1,
-        fallbackUsed: false
+        fallbackUsed: isMuseExplicit
       };
     } else {
-      const geminiRes = await callGeminiPool(prompt, customGeminiKey, model, isJson, systemInstruction);
+      const geminiModel = model && model.startsWith('gemini') ? model : 'gemini-3.8-flash';
+      const geminiRes = await callGeminiPool(prompt, customGeminiKey, geminiModel, isJson, systemInstruction);
       return {
         text: geminiRes.text,
         providerUsed: geminiRes.providerUsed,
         planUsed: geminiRes.planUsed,
         attemptsCount: 1,
-        fallbackUsed: false
+        fallbackUsed: isMuseExplicit
       };
     }
   } catch (err: any) {
