@@ -983,14 +983,22 @@ export const SlideTermsPills: React.FC<{
   }, [textToScan, glossaryList]);
 
   if (foundTerms.length === 0) return null;
+  // Aynı terim iki kez görünmesin (ör. "Apoptoz" hem kısa hem uzun adıyla)
+  const seen = new Set<string>();
+  const uniqueTerms = foundTerms.filter((t) => {
+    const k = t.term.toLocaleLowerCase('tr').split(' (')[0];
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
 
   return (
-    <div className={`flex items-center gap-1.5 flex-wrap p-2 rounded-xl bg-teal-500/5 dark:bg-teal-500/10 border border-teal-500/15 ${className || ''}`}>
+    <div className={`ms-terms flex items-center gap-1.5 flex-wrap p-2 rounded-xl bg-teal-500/5 dark:bg-teal-500/10 border border-teal-500/15 ${className || ''}`}>
       <span className="text-[11px] font-semibold text-teal-800 dark:text-teal-300 flex items-center gap-1 shrink-0">
         <Sparkles className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
         <span>Slayt Tıbbi Terimleri:</span>
       </span>
-      {foundTerms.map((term, i) => (
+      {uniqueTerms.map((term, i) => (
         <button
           key={i}
           type="button"

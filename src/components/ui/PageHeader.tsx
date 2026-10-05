@@ -33,7 +33,7 @@ export const PageHeader: React.FC<{
         <h1 className="ms-page-title m-0 text-[24px] sm:text-[28px] text-ink">{title}</h1>
         {description && <p className="m-0 text-[14px] leading-relaxed text-ink-2">{description}</p>}
       </div>
-      {actions && <div className="flex flex-wrap items-center gap-2 shrink-0">{actions}</div>}
+      {actions && <div className="ms-ph-actions min-w-0 max-w-full flex flex-wrap items-center gap-2">{actions}</div>}
     </div>
     {stats && stats.length > 0 && (
       <dl className="ms-stats m-0 flex flex-wrap gap-2">

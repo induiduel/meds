@@ -280,7 +280,7 @@ export const Header: React.FC<HeaderProps> = ({
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const { theme, toggle: toggleTheme } = useTheme();
-  const { isV3, toggleUi } = useUiVersion();
+  const { ui, isV3, toggleUi } = useUiVersion();
   const [query, setQuery] = useState(searchQuery);
   const menuRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -463,8 +463,8 @@ export const Header: React.FC<HeaderProps> = ({
               <MenuItem icon={FileDown} label="PDF indir" onClick={onOpenPdfModal} />
               <MenuItem
                 icon={Palette}
-                label={isV3 ? 'Tasarım: v3 minimal' : 'Tasarım: v2 kompakt'}
-                hint={isV3 ? 'v2’ye geç' : 'v3’e geç'}
+                label={ui === 'v4' ? 'Tasarım: v4 sade okuma' : ui === 'v3' ? 'Tasarım: v3 minimal' : 'Tasarım: v2 kompakt'}
+                hint={ui === 'v4' ? 'v3’e geç' : ui === 'v3' ? 'v2’ye geç' : 'v4’e geç'}
                 onClick={toggleUi}
               />
 

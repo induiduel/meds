@@ -1109,7 +1109,7 @@ const DeckPlayer: React.FC<{
       role="dialog"
       aria-modal="true"
       aria-label={`${deck.title} sunumu`}
-      className="fixed inset-0 z-[60] h-[100dvh] w-screen bg-canvas text-ink flex flex-col outline-none"
+      className="ms-reader fixed inset-0 z-[60] h-[100dvh] w-full bg-canvas text-ink flex flex-col outline-none"
     >
       {/* Top bar */}
       <header className="shrink-0 h-14 bg-white border-b border-line px-1.5 sm:px-3 flex items-center gap-1 sm:gap-1.5 min-w-0 overflow-x-auto no-scrollbar">
@@ -2057,7 +2057,7 @@ const SlideCanvas: React.FC<{
   return (
     <article
       ref={containerRef}
-      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-2xl shadow-md flex flex-col min-h-0 custom-scrollbar relative`}
+      className={`w-full ${paged ? 'h-full overflow-y-auto overscroll-contain' : 'min-h-full'} max-w-[1280px] mx-auto bg-white border border-line rounded-2xl shadow-md flex flex-col min-h-0 custom-scrollbar relative ms-slide`}
     >
       <SlideDrawingCanvas scope={highlightScope || `slide:${slide.slideNumber}`} />
       <Highlightable
@@ -2065,9 +2065,9 @@ const SlideCanvas: React.FC<{
         className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 flex flex-col gap-4 sm:gap-6"
       >
         {/* Slide header */}
-        <header className="flex flex-col gap-2.5 pb-2 border-b border-line-soft">
+        <header className="ms-slide-head flex flex-col gap-2.5 pb-2 border-b border-line-soft">
           {/* Üst Başlık (Eyebrow & Metadata) */}
-          <div className="flex items-center gap-2 flex-wrap text-[12px]">
+          <div className="ms-slide-meta flex items-center gap-2 flex-wrap text-[12px]">
             <span className="font-mono font-bold text-accent bg-accent-soft px-2.5 py-1 rounded-lg border border-accent/20 flex items-center gap-1.5 shadow-2xs">
               <GraduationCap className="w-3.5 h-3.5" />
               <span>Slayt {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
@@ -2088,23 +2088,19 @@ const SlideCanvas: React.FC<{
               <span>Ders Notu: <strong>{slidePdfLoc.citation}</strong></span>
               <ArrowRight className="w-3 h-3 text-amber-500/70 group-hover:translate-x-0.5 transition-transform" />
             </button>
-            <span className="hidden sm:inline-flex items-center gap-1 text-ink-3 text-[12px] font-medium">
-              <span>•</span>
-              <span>Dönem 3 Kurul 1 Patoloji ve Klinik Müfredatı</span>
-            </span>
           </div>
 
           {/* Büyük Ana Başlık */}
-          <h2 className="m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-[20px] sm:text-[24px] lg:text-[27px] text-ink">
+          <h2 className="ms-slide-title m-0 font-display font-extrabold tracking-[-0.025em] leading-[1.18] text-[20px] sm:text-[24px] lg:text-[27px] text-ink">
             {slide.title}
           </h2>
 
           {/* Vurgulu Alt Başlık */}
           {slide.subtitle && (
-            <div className="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-accent-soft/30 via-white to-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
-              <span className="text-[14px] shrink-0 select-none mt-0.5">💡</span>
+            <div className="ms-slide-lead p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-accent-soft/30 via-white to-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
+              <span className="ms-slide-emoji text-[14px] shrink-0 select-none mt-0.5">💡</span>
               <div className="flex flex-col gap-0.5 min-w-0">
-                <span className="text-[10.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
+                <span className="ms-slide-eyebrow text-[10.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
                 <p className="m-0 text-[12.5px] sm:text-[13.5px] font-medium text-ink-2 leading-[1.55]">
                   {slide.subtitle}
                 </p>
@@ -2115,7 +2111,7 @@ const SlideCanvas: React.FC<{
 
         {/* 1. Clinical & Exam Critical Pearl */}
         {hl && emph && (
-          <figure className="m-0 rounded-2xl border-2 border-accent/20 bg-gradient-to-r from-accent-soft/30 via-white to-accent-soft/10 p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
+          <figure className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-gradient-to-r from-accent-soft/30 via-white to-accent-soft/10 p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
             <figcaption className="flex items-center gap-2">
               <span
                 className="h-6 px-2.5 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
@@ -2124,7 +2120,7 @@ const SlideCanvas: React.FC<{
                 <emph.icon className="w-3.5 h-3.5" />
                 {emph.label}
               </span>
-              <span className="text-[11.5px] font-semibold text-accent uppercase tracking-wider">
+              <span className="ms-slide-eyebrow text-[11.5px] font-semibold text-accent uppercase tracking-wider">
                 Klinik & Sınav Kritik Vurgusu
               </span>
               <button
@@ -2150,14 +2146,14 @@ const SlideCanvas: React.FC<{
 
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
         {narrative && (
-          <section className="rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
+          <section className="ms-slide-narr rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2.5">
               <div className="flex items-center gap-2.5 min-w-[min(100%,220px)] flex-1">
-                <span className="w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
+                <span className="ms-slide-badgeicon w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
                   <BookOpen className="w-4 h-4" />
                 </span>
                 <div className="min-w-0">
-                  <span className="text-[10.5px] font-bold uppercase tracking-wider text-accent block">
+                  <span className="ms-slide-eyebrow text-[10.5px] font-bold uppercase tracking-wider text-accent block">
                     Öğrenim Bölümü • Detaylı Müfredat Analizi
                   </span>
                   <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink">

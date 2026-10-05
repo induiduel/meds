@@ -791,3 +791,53 @@ html.ui-v3 header.sticky nav a { border-radius: 999px; }
 /* Tarayıcı ayrıntıları da tasarımın parçası: imleç vurgu renginde, sayılar hizalı */
 input, textarea, [contenteditable] { caret-color: var(--color-accent); }
 .font-mono, table, [class*="tabular"] { font-variant-numeric: tabular-nums; }
+
+/* =============================================================
+ * v4 · Sade okuma (html.ui-v4). Okuyucu bir belge gibi: kart çerçevesi,
+ * gradyan ve üst etiket yok; metin okunur ölçüde, vurgular yalnız anlam taşır.
+ * ============================================================= */
+html.ui-v4 .ms-reader { background: var(--color-white); }
+html.ui-v4 .ms-slide {
+  border-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  background: var(--color-white);
+}
+html.ui-v4 .ms-slide > * { max-width: 72ch; margin-inline: auto; width: 100%; }
+html.ui-v4 .ms-slide-eyebrow,
+html.ui-v4 .ms-slide-emoji,
+html.ui-v4 .ms-slide-badgeicon { display: none; }
+html.ui-v4 .ms-slide-head { border-bottom: 0; padding-bottom: 0; gap: 10px; }
+/* Slayt no ve kaynak: tek sessiz satır */
+html.ui-v4 .ms-slide-meta > * {
+  height: auto; padding: 0; border: 0; background: none !important; box-shadow: none;
+  font-weight: 500; font-size: 12.5px; color: var(--color-ink-3) !important;
+}
+html.ui-v4 .ms-slide-meta { column-gap: 14px; row-gap: 2px; }
+html.ui-v4 .ms-slide-meta svg { display: none; }
+html.ui-v4 .ms-slide-meta button:hover { color: var(--color-accent) !important; text-decoration: underline; text-underline-offset: 3px; }
+html.ui-v4 .ms-slide-title { font-weight: 700; font-size: clamp(22px, 4.2vw, 30px); letter-spacing: -0.025em; line-height: 1.2; }
+/* Özet: başlığın altındaki giriş paragrafı */
+html.ui-v4 .ms-slide-lead { background: none; border: 0; box-shadow: none; padding: 0; }
+html.ui-v4 .ms-slide-lead p { font-size: 16px; line-height: 1.6; color: var(--color-ink-2); font-weight: 400; }
+/* Kritik vurgu: tek sakin blok, çerçevesiz */
+html.ui-v4 .ms-slide-pearl { border: 0; background: var(--color-accent-soft); box-shadow: none; }
+/* Ders notu bölümü: kart değil, metnin devamı */
+html.ui-v4 .ms-slide-narr { border: 0; background: none; box-shadow: none; padding: 0; }
+html.ui-v4 .ms-slide-narr > div:first-child { border-bottom: 0; padding-bottom: 0; }
+html.ui-v4 .ms-slide-narr h3 { font-size: 17px; }
+html.ui-v4 .ms-slide :is(p, li) { font-size: 16px; line-height: 1.75; }
+html.ui-v4 .ms-slide :is(p, li) :is(strong, b) { color: var(--color-ink); font-weight: 650; }
+@media (max-width: 639px) {
+  html.ui-v4 .ms-slide :is(p, li) { font-size: 15.5px; line-height: 1.7; }
+}
+
+/* Terimler: kutusuz, tek satır, yana kayar; renk yalnız terim türünü gösterir */
+html.ui-v4 .ms-slide .ms-terms {
+  background: none; border: 0; padding: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+  mask-image: linear-gradient(90deg, #000 92%, transparent);
+}
+html.ui-v4 .ms-slide .ms-terms::-webkit-scrollbar { display: none; }
+html.ui-v4 .ms-slide .ms-terms > span:first-child { color: var(--color-ink-3); font-weight: 500; }
+html.ui-v4 .ms-slide .ms-terms > span:first-child svg { display: none; }
+html.ui-v4 .ms-slide .ms-terms > button { white-space: nowrap; flex: none; box-shadow: none; padding: 3px 10px; font-size: 12px; }
