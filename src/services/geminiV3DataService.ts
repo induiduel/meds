@@ -5,6 +5,8 @@ export const GEMINI_V3_DIR = process.env.MEDS_DATABASE_V3_EXPORT
   || '/home/indu/Masaüstü/MedSoru Project/meds_database_v3_export';
 const SOURCE_TAG = 'aistudio_curated_20261005';
 const SOURCE_LABEL = 'Gemini v3 · AI Studio küratörlü';
+const METADATA_DIR = process.env.MEDS_GEMINI_V3_METADATA_DIR
+  || '/home/indu/Masaüstü/MedSoru Project/meds_database/deepseek_meta_data';
 
 type V3Question = Record<string, any>;
 type V3Lecture = Record<string, any>;
@@ -81,6 +83,23 @@ export function getGeminiV3Status() {
     excludedReason: 'audit_rejected_questions.jsonl kayıtlarında zorunlu curation_provenance/source_tag bulunmuyor; mevcut veriye karıştırılmıyor.',
     immutable: true,
   };
+}
+
+function readApproved(name: string) {
+  const file = path.join(METADATA_DIR, name);
+  if (!fs.existsSync(file)) return { metadata: {}, items: [] };
+  return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
+
+export function getGeminiV3ApprovedRelations() {
+  return { ...readApproved('gemini_v3_question_curriculum_relations.json'), source: 'gemini_v3', sourceLabel: SOURCE_LABEL };
+}
+
+export function getGeminiV3ApprovedSynonyms(q?: string) {
+  const data = readApproved('gemini_v3_medical_synonyms.json');
+  const query = String(q || '').toLocaleLowerCase('tr-TR');
+  const items = Object.values(data.items || {}).filter((item: any) => !query || JSON.stringify(item).toLocaleLowerCase('tr-TR').includes(query));
+  return { metadata: data.metadata, items: items.slice(0, 200), total: items.length, source: 'gemini_v3', sourceLabel: SOURCE_LABEL };
 }
 
 export function getGeminiV3LectureMarkdown(sourceId: string) {

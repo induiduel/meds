@@ -80,6 +80,8 @@ import {
   getGeminiV3Thesaurus,
   getGeminiV3Status,
   getGeminiV3LectureMarkdown,
+  getGeminiV3ApprovedRelations,
+  getGeminiV3ApprovedSynonyms,
 } from './src/services/geminiV3DataService.ts';
 
 // @ts-ignore - dynamic ES module runner
@@ -4864,26 +4866,26 @@ app.get('/api/gemini-v3/status', (_req, res) => {
   catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
 });
 
-app.get('/api/gemini-v3/questions', (req, res) => {
-  try {
-    res.json({ success: true, ...getGeminiV3Questions({
-      q: String(req.query.q || ''), committeeId: String(req.query.committeeId || ''),
-      limit: Number(req.query.limit || 20), offset: Number(req.query.offset || 0),
-    }) });
-  } catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
-});
-
-app.get('/api/gemini-v3/lecture-notes', (req, res) => {
-  try { res.json({ success: true, ...getGeminiV3Lectures({ q: String(req.query.q || ''), committeeId: String(req.query.committeeId || ''), limit: Number(req.query.limit || 50) }) }); }
+app.get('/api/gemini-v3/metadata/relations', (_req, res) => {
+  try { res.json({ success: true, ...getGeminiV3ApprovedRelations() }); }
   catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
 });
 
+app.get('/api/gemini-v3/metadata/synonyms', (req, res) => {
+  try { res.json({ success: true, ...getGeminiV3ApprovedSynonyms(String(req.query.q || '')) }); }
+  catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
+});
+
+app.get('/api/gemini-v3/questions', (req, res) => {
+  res.status(403).json({ success: false, error: 'Ham Gemini v3 soru verisi kullanıcı erişimine kapalıdır.' });
+});
+
+app.get('/api/gemini-v3/lecture-notes', (req, res) => {
+  res.status(403).json({ success: false, error: 'Ham Gemini v3 ders notları kullanıcı erişimine kapalıdır.' });
+});
+
 app.get('/api/gemini-v3/lecture-notes/:sourceId', (req, res) => {
-  try {
-    const note = getGeminiV3LectureMarkdown(req.params.sourceId);
-    if (!note) return res.status(404).json({ success: false, error: 'Gemini v3 ders notu bulunamadı veya doğrulanmış değil.' });
-    res.json({ success: true, ...note });
-  } catch (err: any) { res.status(500).json({ success: false, error: err.message }); }
+  res.status(403).json({ success: false, error: 'Ham Gemini v3 ders notları kullanıcı erişimine kapalıdır.' });
 });
 
 app.get('/api/gemini-v3/thesaurus', (req, res) => {

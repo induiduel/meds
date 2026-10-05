@@ -43,7 +43,7 @@ import { ReportQuestionModal } from './ReportQuestionModal';
 import { SectionLoader } from './ui/Animations';
 import { QuestionItem, LectureNote, LectureNotePage, QuestionLectureMatch } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
-import { ApiService, safeJsonFetch } from '../services/api';
+import { ApiService } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
@@ -169,46 +169,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           const normDisc = normalizeDonem3Discipline(q.discipline);
           return normDisc ? { ...q, discipline: normDisc } : q;
         });
-      const v3Response = await safeJsonFetch<{ items?: any[] }>('/api/gemini-v3/questions?limit=3000');
-      const v3Questions: QuestionItem[] = (v3Response?.data?.items || []).map((item: any, index: number) => {
-        const options = Object.entries(item.options || {})
-          .filter(([, text]) => typeof text === 'string' && text.trim())
-          .slice(0, 5)
-          .map(([key, text]) => ({ key: key.toUpperCase() as any, text: String(text), upvotes: 0 }));
-        const answer = typeof item.answer === 'string' && /^[A-E]$/i.test(item.answer) ? item.answer.toUpperCase() as any : undefined;
-        const stem = String(item.stem || '').trim();
-        return {
-          id: `gemini-v3-${item.question_id || index}`,
-          committeeId: `donem3-kurul${item.kurul || 1}`,
-          questionNumber: Number(item.question_no || index + 1),
-          discipline: String(item.ders || 'Tıp'),
-          topic: String(item.konu || ''),
-          status: 'completed',
-          fragments: [],
-          options,
-          claimedAnswer: answer,
-          correctAnswer: answer,
-          reconstruction: {
-            stem,
-            options: options.map((option) => ({ ...option, isCorrect: option.key === answer })),
-            correctAnswer: answer || 'A',
-            explanation: String(item.explanation || ''),
-            confidenceScore: 100,
-            lastUpdated: item.curation_provenance?.curation_date || new Date().toISOString(),
-            reconstructionQuality: 'gemini_v3_curated',
-          },
-          tags: ['gemini_v3', 'aistudio_curated_20261005'],
-          examYear: 'Gemini v3',
-          sourceFile: String(item.source_file || 'Gemini v3'),
-          sourceNote: 'Gemini v3 · AI Studio küratörlü veri',
-          isPastExam: true,
-          isAmbiguous: options.length < 4 || !stem,
-          explanation: String(item.explanation || ''),
-          createdAt: item.curation_provenance?.curation_date || new Date().toISOString(),
-          updatedAt: item.curation_provenance?.curation_date || new Date().toISOString(),
-        } as QuestionItem;
-      });
-      setQuestions([...donem3Data, ...v3Questions]);
+      setQuestions(donem3Data);
     } catch (e) {
       console.warn('Could not load past questions:', e);
     } finally {

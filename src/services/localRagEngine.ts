@@ -1423,7 +1423,6 @@ export function initLocalRagEngine(): void {
 
   console.log('[LocalRagEngine] 🚀 Başlatılıyor...');
   loadLocalChunksFromFile();
-  loadGeminiV3RagChunks();
 
   // If local chunks are empty, trigger initial chunking in background
   if (memoryChunks.size === 0) {
