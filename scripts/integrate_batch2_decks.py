@@ -15,7 +15,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 DECKS_PATH = 'src/data/interactive_learning_decks.json'
-SCRATCH_DIR = r'C:\Users\indui\.gemini\antigravity\brain\386176b3-c821-4f99-a837-6f25ae2aca35\scratch'
+SCRATCH_DIR = (__import__('tempfile').gettempdir())
 
 with open(DECKS_PATH, 'r', encoding='utf-8') as f:
     decks = json.load(f)

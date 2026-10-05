@@ -16,6 +16,7 @@ import {
   ChevronRight,
   X,
   Layers,
+  BotMessageSquare,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -39,6 +40,7 @@ const TABS: { id: AppTab; label: string; icon: React.ElementType }[] = [
 ];
 
 const MORE: { id: AppTab; label: string; hint: string; icon: React.ElementType; tint: string }[] = [
+  { id: 'ai_chat', label: 'AI Tıp Asistanı', hint: 'Yerel ve bulut yapay zeka ile soru dedektifi', icon: BotMessageSquare, tint: '#4F46E5' },
   { id: 'glossary', label: 'Tıbbi Sözlük', hint: 'Hastalık & ilaç ansiklopedisi', icon: BookOpenText, tint: '#0F6E63' },
   { id: 'study', label: 'Çalış', hint: 'Soru çöz, kendini test et', icon: ListChecks, tint: '#11804A' },
   { id: 'questions', label: 'Soru havuzu', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#1E4FD8' },

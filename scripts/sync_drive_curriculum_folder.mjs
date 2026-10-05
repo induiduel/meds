@@ -19,7 +19,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
-const BASE_DB_DIR = 'C:\\Users\\indui\\Desktop\\meds_database';
+const BASE_DB_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
 const DERS_PDF_DIR = path.join(BASE_DB_DIR, 'ders_notlari_pdf');
 const DERS_TXT_DIR = path.join(BASE_DB_DIR, 'ders_notlari_txt');
 const K1_PDF_DIR = path.join(BASE_DB_DIR, 'kurul_ders_notlari', 'Kurul 1');
@@ -219,7 +219,7 @@ async function syncDriveCurriculum() {
   const redakteScript = path.join(BASE_DB_DIR, 'generate_redakte_ozet.py');
   if (fs.existsSync(redakteScript)) {
     try {
-      execSync(`python "${redakteScript}" --kurul 1`, { stdio: 'inherit', cwd: BASE_DB_DIR });
+      execSync(`${process.platform === "win32" ? "python" : "python3"} "${redakteScript}" --kurul 1`, { stdio: 'inherit', cwd: BASE_DB_DIR });
       console.log('✓ Kurul 1 redakte özetleri güncellendi.');
     } catch (e) {
       console.error('⚠️ Redakte özet üretimi uyarıyla tamamlandı:', e.message);

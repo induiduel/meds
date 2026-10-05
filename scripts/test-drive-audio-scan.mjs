@@ -5,7 +5,7 @@ const driveRoot = path.join('G:', "Drive'ım", 'Tıp Genel', 'Ses Kayıtları D�
 console.log('Target Drive Root:', driveRoot);
 console.log('Exists:', fs.existsSync(driveRoot));
 
-const manifestPath = 'C:\\Users\\indui\\Desktop\\meds_database\\transcriptions\\transcription_manifest.json';
+const manifestPath = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/transcriptions/transcription_manifest.json`;
 const manifest = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')) : {};
 
 function scanDir(dir) {

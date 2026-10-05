@@ -23,6 +23,7 @@ import { OptionsEditor } from './ui/OptionsEditor';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
+import { validateNamePolicy } from '../utils/namePolicy';
 import { useUiVersion } from '../utils/uiVersion';
 import { findRealtimeMatchingDrafts, RealtimeMatchItem, DraftCompatibilityResult } from '../services/draftClusteringService';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
@@ -543,6 +544,15 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       .filter(Boolean)
       .join('\n');
     const savedName = localStorage.getItem(SAVED_NAME_KEY) || '';
+    const authorCandidate = currentUser?.displayName || savedName;
+    if (authorCandidate) {
+      const nameCheck = validateNamePolicy(authorCandidate);
+      if (!nameCheck.isValid) {
+        setFormError(nameCheck.errorMessage || 'Geçersiz yazar / katkıcı adı.');
+        toast.error('İsim Kuralı Hatası', nameCheck.errorMessage || 'Geçersiz isim.');
+        return;
+      }
+    }
 
     setIsSubmitting(true);
     try {

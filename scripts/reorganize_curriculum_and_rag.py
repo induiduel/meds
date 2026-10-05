@@ -16,11 +16,11 @@ from datetime import datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT_DIR = r"C:\Users\indui\Desktop\meds"
+ROOT_DIR = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))))
 DATA_PAST_PATH = os.path.join(ROOT_DIR, "data", "pastQuestions.json")
 SRC_PAST_PATH = os.path.join(ROOT_DIR, "src", "data", "pastQuestions.json")
 LOCAL_RAG_PATH = os.path.join(ROOT_DIR, "data", "local_rag_chunks.json")
-TUM_SORULAR_JSON = r"C:\Users\indui\Desktop\meds_database\meds_sorular_txt\tüm sorular.questions.json"
+TUM_SORULAR_JSON = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/meds_sorular_txt/tüm sorular.questions.json")
 BACKUP_PATH = os.path.join(ROOT_DIR, "data", "pastQuestions.pre_curriculum_fix.backup.json")
 
 # -------------------------------------------------------------------------------------------------

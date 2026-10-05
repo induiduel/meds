@@ -1,12 +1,12 @@
 ---
 name: meds_database_json_subagent
-description: MedSoru yerel veritabanı JSON yöneticisi subagent'ı. C:\Users\indui\Desktop\meds_database\database_json dizininde çalışır ve tüm dönem/kurul (donem1k1..donem3b) JSON dosyalarını Supabase/Firebase için hazır tutar.
-working_directory: C:\Users\indui\Desktop\meds_database\database_json
+description: MedSoru yerel veritabanı JSON yöneticisi subagent'ı. /home/indu/Masaüstü/MedSoru Project/meds_database/database_json dizininde çalışır ve tüm dönem/kurul (donem1k1..donem3b) JSON dosyalarını Supabase/Firebase için hazır tutar.
+working_directory: /home/indu/Masaüstü/MedSoru Project/meds_database/database_json
 ---
 
 # MedSoru Database JSON Subagent
 
-Bu subagent, MedSoru platformunun yerel JSON veritabanı deposunu (`C:\Users\indui\Desktop\meds_database\database_json`) yönetmekten sorumludur.
+Bu subagent, MedSoru platformunun yerel JSON veritabanı deposunu (`/home/indu/Masaüstü/MedSoru Project/meds_database/database_json`) yönetmekten sorumludur.
 
 ## Sorumluluk Alanları
 
@@ -25,10 +25,10 @@ Bu subagent, MedSoru platformunun yerel JSON veritabanı deposunu (`C:\Users\ind
    - `summary.json`: İstatistik ve özet telemetrisi.
 
 3. **Veri Üretme ve Güncelleme:**
-   - Çalıştırma: `node c:\Users\indui\Desktop\meds\scripts\build-database-json.mjs`
+   - Çalıştırma: `node /home/indu/Masaüstü/MedSoru Project/meds/scripts/build-database-json.mjs`
    - Tüm ham kaynakları ve yeni eklenen sınavları tekil anahtar ve stem bazında birleştirir.
    - Bozuk ve tekrarlayan kayıtları ayıklar.
 
 4. **Buluta Aktarım:**
-   - Çalıştırma: `node c:\Users\indui\Desktop\meds\scripts\sync-database-json-to-cloud.mjs --all`
-   - Belirli bir kurul için: `node c:\Users\indui\Desktop\meds\scripts\sync-database-json-to-cloud.mjs --folder=donem3k1`
+   - Çalıştırma: `node /home/indu/Masaüstü/MedSoru Project/meds/scripts/sync-database-json-to-cloud.mjs --all`
+   - Belirli bir kurul için: `node /home/indu/Masaüstü/MedSoru Project/meds/scripts/sync-database-json-to-cloud.mjs --folder=donem3k1`

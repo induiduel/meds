@@ -57,7 +57,7 @@ class HybridSearchEngine:
         rrf_dense = 1.0 / (rrf_k + dense_ranks)
         rrf_scores = (1.0 - alpha) * rrf_bm25 + alpha * rrf_dense
 
-        # En yüksek RRF skorlu adaylar
+        # En yüksek RRF skorlu adaylar (Top-25 aday çekip Reranker ile Top-5'e indirme mimarisi)
         top_indices = np.argsort(-rrf_scores)[:top_k]
 
         results = []
@@ -72,9 +72,30 @@ class HybridSearchEngine:
         return results
 
     @staticmethod
+    def expand_medical_queries(question_stem: str) -> List[str]:
+        """
+        Multi-Query Expansion: Soru kökünden 3 odaklı klinik arama sorgusu türetir:
+        1. Klinik Tablo / Semptomlar
+        2. Etken / Patoloji
+        3. Tedavi / İlaç Grubu
+        """
+        # Hızlı kural tabanlı ve terim çıkarımlı tıbbi soru genişletme
+        queries = [question_stem]
+        tr_map = str.maketrans("çğıöşüâîû", "cgiosuaiu")
+        folded = question_stem.lower().translate(tr_map)
+        
+        # Soru kalıplarını temizle
+        clean_q = re.sub(r"hangisi|aşağıdakilerden|nedir|doğrudur|yanlıştır|değildir|belirtisidir|özelliğidir", "", folded).strip()
+        if clean_q:
+            queries.append(f"{clean_q} klinik tablo semptom")
+            queries.append(f"{clean_q} patoloji etken mekanizma")
+            queries.append(f"{clean_q} tedavi ilac farmakoloji")
+        return list(dict.fromkeys(queries))
+
+    @staticmethod
     def rerank_bge(query: str, candidates: List[Dict[str, Any]], top_k: int = 5) -> List[Dict[str, Any]]:
         """
-        Çapraz Dikkat (Cross-Encoder / Rerank) Benzetimi & Terim Ağırlıklı Sıralama
+        Cross-Encoder / Rerank Benzetimi & Top-25 -> Top-5 İndirgeme
         Tıbbi terminoloji örtüşmesi, soru kökü eşleşmesi ve slayt başlığı uyumu
         """
         q_toks = set(HybridSearchEngine._tokenize(query))
@@ -87,7 +108,7 @@ class HybridSearchEngine:
             
             # Yeniden sıralama skoru: RRF skoru (veya dense benzerlik) + Slayt başlığı örtüşmesi + Tıbbi terim örtüşmesi
             base_score = cand.get("score_rrf", cand.get("score_dense", 0.5))
-            rerank_score = base_score * 0.6 + overlap_heading * 0.25 + overlap_text * 0.15
+            rerank_score = base_score * 0.50 + overlap_heading * 0.30 + overlap_text * 0.20
             cand["rerank_score"] = float(round(rerank_score, 4))
 
         candidates.sort(key=lambda x: x["rerank_score"], reverse=True)

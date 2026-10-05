@@ -173,7 +173,9 @@ export function getScriptRunnerInfo(filename) {
     case '.ts':
       return { runtime: 'tsx', command: 'npx', prefixArgs: ['tsx'], isShell: process.platform === 'win32' };
     case '.py':
-      return { runtime: 'python', command: 'python', isShell: false };
+      return { runtime: 'python', command: process.platform === 'win32' ? 'python' : 'python3', isShell: false };
+    case '.sh':
+      return { runtime: 'bash', command: 'bash', isShell: false };
     case '.bat':
     case '.cmd':
       return { runtime: 'batch', command: 'cmd.exe', prefixArgs: ['/c'], isShell: true };

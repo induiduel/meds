@@ -18,8 +18,19 @@ Kullanım: stage3_merge.py [--no-llm] [--skip-enrich]
 """
 from __future__ import annotations
 
+import os
+
+# 20 çekirdeğin tamamını vektörel BLAS ve matris işlemlerine tahsis et (numpy importundan önce)
+os.environ["OMP_NUM_THREADS"] = "20"
+os.environ["MKL_NUM_THREADS"] = "20"
+os.environ["OPENBLAS_NUM_THREADS"] = "20"
+os.environ["VECLIB_MAXIMUM_THREADS"] = "20"
+os.environ["NUMEXPR_NUM_THREADS"] = "20"
+
 import argparse
+import concurrent.futures
 import hashlib
+import json
 import math
 import pickle
 import re
@@ -27,6 +38,11 @@ import sys
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
+
+try:
+    import orjson
+except ImportError:
+    orjson = None
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lib  # noqa: E402
@@ -41,6 +57,7 @@ EMB_CACHE = lib.STATE_DIR / "embcache.pkl"
 T_SCORE = float(__import__("os").environ.get("MEDS_MATCH_SCORE", "0.60"))
 T_MARGIN = float(__import__("os").environ.get("MEDS_MATCH_MARGIN", "0.03"))
 T_TERMS = int(__import__("os").environ.get("MEDS_MATCH_TERMS", "2"))
+NUM_GPU_WORKERS = int(os.environ.get("MEDS_GPU_WORKERS", "3"))  # RTX 4060 8GB VRAM eşzamanlı LLM sorgu limiti
 
 # Hakem Ajan (Judge Agent - DeepSeek-R1) Eşikleri:
 # support_ratio >= 0.85: Otomatik onayla (verified)
@@ -71,7 +88,7 @@ if EMB_CACHE.exists() and len(_disk_cache) == 0:
         log.warning("Önbellek taşıma uyarısı: %s", e)
 
 
-def embed_cached(texts: list[str]) -> np.ndarray:
+def embed_cached(texts: list[str], batch_size: int = 64) -> np.ndarray:
     if not texts:
         return np.zeros((0, 1024), dtype="float32")
 
@@ -79,11 +96,14 @@ def embed_cached(texts: list[str]) -> np.ndarray:
     miss = [i for i, k in enumerate(keys) if k not in _disk_cache]
 
     if miss:
-        # GPU RTX 4060 için toplu embedding
-        vecs = lib.embed([texts[i][:2000] for i in miss])
-        with _disk_cache.transact():
-            for i, v in zip(miss, vecs):
-                _disk_cache[keys[i]] = v
+        # RTX 4060 8GB VRAM için 64'lük mini-batch'ler halinde işle
+        for b_start in range(0, len(miss), batch_size):
+            batch_idx = miss[b_start : b_start + batch_size]
+            sub_texts = [texts[i][:2000] for i in batch_idx]
+            vecs = lib.embed(sub_texts)
+            with _disk_cache.transact():
+                for idx, v in zip(batch_idx, vecs):
+                    _disk_cache[keys[idx]] = v
 
     # Doğrudan diskcache'ten çekerek RAM sızıntısını ve swap baskısını engelle
     results = [_disk_cache[k] for k in keys]
@@ -99,22 +119,50 @@ def find_source_id(rel: str) -> tuple[str, str | None]:
     return lib.source_id_for(rel + ".pdf")
 
 
-def split_passages(text: str, target=900, overlap=120) -> list[str]:
-    paras = [p.strip() for p in re.split(r"\n\s*\n|\n(?=[•\-\u2022▪●])", text) if p.strip()]
-    out, buf = [], ""
-    for p in paras:
-        if len(buf) + len(p) + 1 > target and buf:
-            out.append(buf.strip())
-            buf = buf[-overlap:] if overlap and len(buf) > overlap else ""
-        buf += p + "\n"
-        while len(buf) > target * 1.6:  # çok uzun paragraf
-            cut = buf.rfind(". ", 0, target)
-            cut = cut + 1 if cut > 200 else target
-            out.append(buf[:cut].strip())
-            buf = buf[max(0, cut - overlap):]
+def layout_aware_chunk(text: str, target: int = 1000, overlap: int = 120) -> list[str]:
+    """
+    Layout-Aware & Slayt Tabanlı Akıllı Parçalama:
+    1. Slayt metni 1100 karakterin altındaysa bölmeden tek parça olarak korur.
+    2. Markdown tablolarını (| col | col |) ve madde işaretli klinik listeleri asla ortadan koparmaz.
+    3. Cümle sonlarını kontrol ederken tıbbi kısaltmaları korur.
+    """
+    text = text.strip()
+    if not text:
+        return []
+    
+    # Slayt zaten doğal bir semantik birimdir. 1100 karakterin altındaysa tek parça sakla
+    if len(text) <= 1100:
+        return [text]
+
+    lines = text.split("\n")
+    chunks, buf = [], ""
+    
+    for line in lines:
+        line_str = line.strip()
+        is_table_row = "|" in line_str
+        is_list_item = bool(re.match(r"^\s*([•\-\u2022▪●*]|\d+[\.\)])", line_str))
+        
+        # Eğer henüz hedef boyuta ulaşmadıysak veya tablo/liste içindeysek satırı ekle
+        if len(buf) + len(line) + 1 <= target:
+            buf += line + "\n"
+        else:
+            # Hedef boyut aşıldı: Eğer tablo veya liste bloğundaysak bütünlüğü bozmamak için esne
+            if (is_table_row or is_list_item) and len(buf) < target * 1.5:
+                buf += line + "\n"
+            else:
+                if buf.strip():
+                    chunks.append(buf.strip())
+                # Overlap: Son satırlardan veya karakterlerden örtüşme al
+                buf = (buf[-overlap:] if overlap and len(buf) > overlap else "") + line + "\n"
+
     if buf.strip():
-        out.append(buf.strip())
-    return [o for o in out if len(o) >= 40]
+        chunks.append(buf.strip())
+
+    return [c for c in chunks if len(c) >= 30]
+
+
+# Geriye dönük uyumluluk takma adı
+split_passages = layout_aware_chunk
 
 
 def curriculum_index():
@@ -210,12 +258,15 @@ def build_sources(use_llm: bool, state: lib.State) -> list[dict]:
         for p in d["pages"]:
             head = (p["text"].split("\n", 1)[0] or "").strip()[:120]
             context_prefix = f"[{kurul_str} | {ders_str} | Başlık: {head or konu_str}]\n"
+            slide_full_text = f"{context_prefix}{p['text']}"
             for ci, ps in enumerate(split_passages(p["text"])):
-                # Metnin başına statik bağlam bilgisini ekle (BGE-M3 ve LLM için öksüz kalmayı önler)
+                # Metnin başına statik bağlam bilgisini ekle (Child chunk)
                 enriched_text = f"{context_prefix}{ps}"
                 chunks.append({"chunk_id": f"{sid}:p{p['n']}:c{ci}", "source_id": sid, "page": p["n"],
                                "heading_path": [src["ders"] or "", head] if head else [src["ders"] or ""],
-                               "text": enriched_text, "raw_text": ps, "doc_type": "lecture_slide", "donem": meta["donem"], "kurul": meta["kurul"],
+                               "text": enriched_text, "raw_text": ps, 
+                               "parent_text": slide_full_text, # Parent-Child Mimarisi: Sayfanın tam bağlamı
+                               "doc_type": "lecture_slide", "donem": meta["donem"], "kurul": meta["kurul"],
                                "ders": src["ders"], "konu": src["konu"], "quality_score": p["quality"],
                                "hash": hashlib.sha1(enriched_text.encode()).hexdigest()[:16]})
         lib.write_json(SRC_DIR / f"{sid}.json", src)
@@ -271,28 +322,40 @@ def dedupe(qs: list[dict]) -> list[dict]:
             q["seen_in"] = [{"doc": q["doc_rel"], "no": q.get("no"), "year": q["year_hint"]}]
             groups[k] = q
     uniq = list(groups.values())
-    # anlamsal yakın tekrarlar (soru köküne göre) — yalnız aynı şık kümesi çoğunlukla örtüşüyorsa birleştir
+    # anlamsal yakın tekrarlar (soru köküne göre) — Hızlı vektör matris çarpımıyla tekilleştir
     if len(uniq) > 1 and lib.ollama_up():
         try:
             E = embed_cached([u["stem"] for u in uniq])
-            keep, merged = [], set()
-            for i, u in enumerate(uniq):
-                if i in merged:
-                    continue
-                sims = E[i + 1:] @ E[i] if i + 1 < len(uniq) else []
-                for off, s in enumerate(sims):
-                    j = i + 1 + off
-                    if j in merged or s < 0.95:
+            # E normalize edilmiş olduğu için dot product kosinüs benzerliğidir
+            # E (N, 1024) @ E.T (1024, N) yerine blok blok veya üst üçgen tarama
+            merged = set()
+            keep = []
+            
+            # Blok boyutlarıyla hızlı kosinüs benzerliği
+            chunk_size = 500
+            for start_i in range(0, len(uniq), chunk_size):
+                end_i = min(len(uniq), start_i + chunk_size)
+                # (chunk_size, 1024) @ (1024, N) -> (chunk_size, N)
+                sim_block = E[start_i:end_i] @ E.T
+                
+                for local_i, global_i in enumerate(range(start_i, end_i)):
+                    if global_i in merged:
                         continue
-                    a = set(lib.tokens(" ".join(u["options"].values())))
-                    b = set(lib.tokens(" ".join(uniq[j]["options"].values())))
-                    if a and b and len(a & b) / len(a | b) >= 0.7:
-                        u["seen_in"] += uniq[j]["seen_in"]
-                        u["dedupe_near"] = u.get("dedupe_near", 0) + 1
-                        if not u.get("answer") and uniq[j].get("answer"):
-                            u["answer"] = uniq[j]["answer"]
-                        merged.add(j)
-                keep.append(u)
+                    # Sadece kendisinden sonraki sorulara bak
+                    high_sims = np.where(sim_block[local_i, global_i + 1:] >= 0.95)[0]
+                    for off in high_sims:
+                        j = global_i + 1 + off
+                        if j in merged:
+                            continue
+                        a = set(lib.tokens(" ".join(uniq[global_i]["options"].values())))
+                        b = set(lib.tokens(" ".join(uniq[j]["options"].values())))
+                        if a and b and len(a & b) / len(a | b) >= 0.7:
+                            uniq[global_i]["seen_in"] += uniq[j]["seen_in"]
+                            uniq[global_i]["dedupe_near"] = uniq[global_i].get("dedupe_near", 0) + 1
+                            if not uniq[global_i].get("answer") and uniq[j].get("answer"):
+                                uniq[global_i]["answer"] = uniq[j]["answer"]
+                            merged.add(j)
+                    keep.append(uniq[global_i])
             uniq = keep
         except Exception as e:  # noqa: BLE001
             log.warning("anlamsal tekilleştirme atlandı: %s", e)
@@ -331,7 +394,12 @@ class Index:
         if not len(self.chunks):
             return []
         cos = self.V @ qvec
-        top = np.argsort(-cos)[:40]
+        k = min(40, len(cos))
+        if len(cos) > k:
+            part = np.argpartition(-cos, k)[:k]
+            top = part[np.argsort(-cos[part])]
+        else:
+            top = np.argsort(-cos)
         qt = set(lib.tokens(qtext(q))) - STOP
         qi = sum(self.idf.get(t, 1.0) for t in qt) or 1.0
         res = []
@@ -384,20 +452,25 @@ def decide(q: dict, hits: list[dict], idx: Index) -> dict:
 
 
 ENRICH_SYSTEM = (
-    "Sen uzman bir tıp fakültesi öğretim üyesi ve sınav komisyonu editörüsün.\n"
+    "Sen uzman bir tıp fakültesi öğretim üyesi ve sınav komisyonu başkanısın.\n"
     "DERS NOTUNDA OLMAYAN DIŞ BİLGİ EKLEME; SADECE SANA VERİLEN <SLAYT_KANITLARI> İÇERİĞİNDEKİ BİLGİLERİ KULLAN.\n\n"
-    "ZORUNLU DÜŞÜNCE ZİNCİRİ (CHAIN-OF-THOUGHT):\n"
-    "1. Aşama: Soru kökündeki anahtar klinik bulguyu ve patolojiyi tespit et.\n"
-    "2. Aşama: Bu bulguyu <SLAYT_KANITLARI> içindeki ilgili cümlelerle eşleştir.\n"
-    "3. Aşama: Şıkların doğruluğunu ve eksik çeldiricileri slayta göre doğrula.\n"
-    "4. Aşama: Soru kökünü akademik tıp diline genişletip sonucu JSON olarak bildir.\n\n"
+    "ZORUNLU KURALLAR:\n"
+    "1. ÇELDİRİCİ & NEGATİF KANIT ANALİZİ: Yalnızca doğru cevabı açıklamakla yetinme. Her şıkkı incele;\n"
+    "   - Doğru şık için: [Destekleniyor / Slayt Gerekçesi]\n"
+    "   - Çeldirici şıklar için: [Eleniyor / Neden yanlış olduğu ve Slayt Çelişkisi]\n"
+    "2. CITATION GROUNDING: Açıklamadaki her akademik cümlenin sonuna kanıt etiketini ekle: [Kaynak: {chunk_id}].\n"
+    "3. Soru kökünü eksik/hatırda kalan kısımları slayta dayandırarak akademik dille genişlet.\n\n"
     "JSON formatında döndür:\n"
     "{\n"
-    '  "analiz": "1-3. aşamaların adım adım klinik düşünce zinciri",\n'
+    '  "analiz": "Adım adım klinik ve patolojik akıl yürütme",\n'
     '  "stem_detayli": "Genişletilmiş ve tamamlanmış akademik soru kökü",\n'
-    '  "aciklama": "Slayttan kanıtlı doğru cevap gerekçesi (1-3 net akademik cümle)",\n'
+    '  "aciklama": "Slayttan kanıtlı doğru cevap gerekçesi [Kaynak: {chunk_id}]",\n'
+    '  "siklar_analizi": {\n'
+    '     "A": "[Destekleniyor / Eleniyor] Gerekçe...",\n'
+    '     "B": "[Destekleniyor / Eleniyor] Gerekçe..."\n'
+    '  },\n'
     '  "eksik_siklar": {"D": "çeldirici 1", "E": "çeldirici 2"},\n'
-    '  "ne_sormus": "Sorunun ölçtüğü temel bilgi veya patoloji",\n'
+    '  "ne_sormus": "Sorunun ölçtüğü temel klinik patoloji",\n'
     '  "alt_konu": "İlgili slayt alt başlığı",\n'
     '  "terimler": ["Hastalık1", "Belirti1", "Gen/İlaç1"]\n'
     "}"
@@ -407,20 +480,21 @@ ENRICH_SYSTEM = (
 def enrich(q: dict, chunk_text: str, chunk_id: str) -> dict | None:
     import json as _j
 
-    # XML Etiketleri ile Yapılandırılmış Prompt (Structured Context Injection)
+    system_prompt = ENRICH_SYSTEM.replace("{chunk_id}", chunk_id)
     structured_user_prompt = (
-        "Aşağıdaki <SLAYT_KANITLARI> içeriğine dayanarak <SORU>yu incele ve zenginleştir:\n\n"
-        f"<SLAYT_KANITLARI>\n{chunk_text[:2500]}\n</SLAYT_KANITLARI>\n\n"
+        "Aşağıdaki <SLAYT_KANITLARI> içeriğine dayanarak <SORU>yu incele, her şıkkı gerekçelendir ve zenginleştir:\n\n"
+        f"<SLAYT_KANITLARI>\n{chunk_text[:2200]}\n</SLAYT_KANITLARI>\n\n"
         f"<SORU>\n"
         f"Kök: {q['stem']}\n"
         f"Şıklar: {_j.dumps(q.get('options', {}), ensure_ascii=False)}\n"
         f"Doğru Cevap: {q.get('answer') or 'Bilinmiyor'}\n"
         f"</SORU>\n\n"
-        "Yukarıdaki adımlara uyarak sonucu geçerli bir JSON olarak döndür."
+        "Yukarıdaki negatif kanıt ve citation grounding kurallarına uyarak sonucu geçerli bir JSON olarak döndür."
     )
 
     try:
-        r = lib.chat(lib.MODEL_TEXT, structured_user_prompt, system=ENRICH_SYSTEM, as_json=True, num_predict=900)
+        # 900 token ve 45 saniye zaman aşımı: Modelin gereksiz asılı kalmasını önler
+        r = lib.chat(lib.MODEL_TEXT, structured_user_prompt, system=system_prompt, as_json=True, num_predict=900, timeout=45)
     except Exception as e:  # noqa: BLE001
         log.warning("zenginleştirme hatası: %s", e)
         return None
@@ -432,14 +506,18 @@ def enrich(q: dict, chunk_text: str, chunk_id: str) -> dict | None:
         return sum(t in src_t for t in tk) / len(tk) if tk else 1.0
 
     ac = r.get("aciklama")
-    if isinstance(ac, str) and ac.strip() and q.get("answer") and sup(ac) >= 0.80:
+    if isinstance(ac, str) and ac.strip() and q.get("answer") and sup(ac) >= 0.70:
         out["explanation"] = ac.strip()
     sd = r.get("stem_detayli")
     if isinstance(sd, str) and sd.strip():
-        # Yarım/hatırda kalan sorular kökten uzayabilir (örn 30 karakterden 150 karaktere)
-        # Dolayısıyla esnek üst sınır koyulur ve kelimelerin en az %75'i kaynakla desteklenir
-        if len(sd.strip()) > len(q["stem"]) and sup(sd) >= 0.75:
+        if len(sd.strip()) > len(q["stem"]) and sup(sd) >= 0.70:
             out["stem_detailed"] = sd.strip()
+    
+    # Negatif Kanıt / Çeldirici Analizi
+    sa = r.get("siklar_analizi")
+    if isinstance(sa, dict) and sa:
+        out["options_analysis"] = sa
+
     es = r.get("eksik_siklar")
     if isinstance(es, dict):
         added = {}
@@ -450,6 +528,7 @@ def enrich(q: dict, chunk_text: str, chunk_id: str) -> dict | None:
             if k in "ABCDE" and k not in q["options"] and v and lib.fold(v) not in existing and lib.fold(v) in lib.fold(chunk_text):
                 added[k] = v
         if added:
+            out["options_added"] = added
             out["options_added"] = added
 
     # Zengin Tıbbi Metadata & Taksonomi Havuzu
@@ -479,103 +558,183 @@ def build_questions(sources: list[dict], use_llm: bool, do_enrich: bool, state: 
         QV = None
     ch_by_id = {c["chunk_id"]: c for c in idx.chunks}
     total_u = len(uniq)
-    # Varsa önceki zenginleştirilmiş soruları al
+    # ---------------- Checkpoint & Kaldığı Yerden Devam Etme (Zero-Data-Loss) ----------------
+    checkpoint_q_path = lib.TEMP3 / "questions.jsonl"
+    checkpoint_r_path = lib.TEMP3 / "review_queue.jsonl"
     prev = {}
-    q_prev_path = lib.TEMP3 / "questions.jsonl"
-    if q_prev_path.exists():
+    
+    # Halihazırda işlenmiş soruları hızlıca hafızaya al
+    processed_qids = set()
+    if checkpoint_q_path.exists():
         try:
-            for item in lib.read_jsonl(q_prev_path):
+            for item in lib.read_jsonl(checkpoint_q_path):
                 if item.get("question_id"):
-                    prev[item["question_id"]] = item
-        except Exception:
-            pass
+                    qid = item["question_id"]
+                    out.append(item)
+                    processed_qids.add(qid)
+                    prev[qid] = item
+        except Exception as e:
+            log.warning("Önceki questions.jsonl okunurken hata: %s", e)
 
-    for i, u in enumerate(uniq):
-        qid = hashlib.sha1(qkey(u).encode()).hexdigest()[:12]
-        if i % 5 == 0:
-            state.set_progress("Sorular", i + 1, total_u, f"Soru Eşleştirme & Zenginleştirme ({i+1}/{total_u})")
-        base = {"question_id": qid, "donem": u["donem"], "kurul": u["kurul_hint"], "stem": u["stem"], "options": u["options"],
-                "answer": u.get("answer"), "explanation": None, "issues": list(u.get("issues", [])),
-                "seen_in": u["seen_in"][:12], "extraction": u.get("extraction"), "evidence": [], "ders": None,
-                "konu": None, "source_id": None, "status": "raw",
-                "pipeline_generation": "v2_local_pipeline_2026",
-                "tags": ["new_pipeline", "v2_verified", "local_ai_extracted"]}
-        if len(u["options"]) < 2 or len(u["stem"]) < 12:
-            base.update(status="rejected", issues=base["issues"] + ["yapı yetersiz"])
-            review.append(base)
-            continue
-        if QV is None:
-            base["status"] = "needs_fix"
-            base["issues"].append("anlamsal eşleştirme yapılamadı (Ollama/embedding yok)")
-            review.append(base)
-            continue
-        hits = idx.query(u, QV[i], u["kurul_hint"])
-        dec = decide(u, hits, idx)
-        base["match"] = dec
-        base["entities"] = dec.get("ortak_terimler", [])
+    if checkpoint_r_path.exists():
+        try:
+            for item in lib.read_jsonl(checkpoint_r_path):
+                if item.get("question_id"):
+                    qid = item["question_id"]
+                    review.append(item)
+                    processed_qids.add(qid)
+        except Exception as e:
+            log.warning("Önceki review_queue.jsonl okunurken hata: %s", e)
+
+    if processed_qids:
+        log.info("Checkpoint bulundu: %d soru zaten işlenmiş, doğrudan kaldığı yerden devam ediliyor ✓", len(processed_qids))
+
+    q_file_append = open(checkpoint_q_path, "a", encoding="utf-8")
+    r_file_append = open(checkpoint_r_path, "a", encoding="utf-8")
+
+    write_counter = 0
+    def write_record(record: dict, force_flush: bool = False):
+        nonlocal out, review, write_counter
+        row_str = (orjson.dumps(record).decode("utf-8") if orjson else json.dumps(record, ensure_ascii=False)) + "\n"
+        if record["status"] in ("verified", "fixed"):
+            out.append(record)
+            q_file_append.write(row_str)
+        else:
+            review.append(record)
+            r_file_append.write(row_str)
         
-        # Destek oranı (support_ratio) hesaplaması: Soru metninin amfi notundaki kelime karşılığı
-        cand_chunk_text = ch_by_id[dec["kanit_chunk"]]["text"] if dec.get("kanit_chunk") and dec["kanit_chunk"] in ch_by_id else ""
-        cand_tokens = set(lib.tokens(cand_chunk_text))
-        q_tokens = set(lib.tokens(qtext(u))) - STOP
-        support_ratio = (len(q_tokens & cand_tokens) / len(q_tokens)) if q_tokens else 0.0
-        base["support_ratio"] = round(float(support_ratio), 4)
+        write_counter += 1
+        if force_flush or write_counter % 10 == 0:
+            q_file_append.flush()
+            r_file_append.flush()
+        processed_qids.add(record["question_id"])
 
-        if dec["durum"] == "kesin":
-            base.update(source_id=dec["kaynak"], ders=dec["ders"], konu=dec["konu"], evidence=[dec["kanit_chunk"]])
-            if isinstance(dec.get("kurul"), int):
-                base["kurul"] = dec["kurul"] if base["kurul"] in (None, "final") else base["kurul"]
+    def enrich_worker(task):
+        u_obj, base_obj, dec_obj = task
+        try:
+            matched_c = ch_by_id[dec_obj["kanit_chunk"]]
+            context_for_llm = matched_c.get("parent_text") or matched_c["text"]
+            e = enrich(u_obj, context_for_llm, dec_obj["kanit_chunk"])
+            return task, e
+        except Exception as ex:  # noqa: BLE001
+            log.warning("enrich_worker hata: %s", ex)
+            return task, None
+
+    def process_enrichment_batch(batch_tasks):
+        if not batch_tasks:
+            return
+        with concurrent.futures.ThreadPoolExecutor(max_workers=NUM_GPU_WORKERS) as pool:
+            futures = [pool.submit(enrich_worker, t) for t in batch_tasks]
+            for fut in concurrent.futures.as_completed(futures):
+                (u_obj, base_obj, dec_obj), e = fut.result()
+                base_obj["enrichment_done"] = True
+                if e:
+                    base_obj["enrichment"] = e
+                    if "explanation" in e:
+                        base_obj["explanation"] = e["explanation"]
+                    if "stem_detailed" in e:
+                        base_obj["stem_detailed"] = e["stem_detailed"]
+                    if "options_added" in e:
+                        base_obj["options_added"] = e["options_added"]
+                    if "options_analysis" in e:
+                        base_obj["options_analysis"] = e["options_analysis"]
+                    if "taxonomy_metadata" in e:
+                        base_obj["taxonomy_metadata"] = e["taxonomy_metadata"]
+                    if base_obj["status"] == "verified":
+                        base_obj["status"] = "fixed"
+                    orig_sample = f"{u_obj['stem'][:150]} (Şıklar: {len(u_obj['options'])})"
+                    expl_str = base_obj.get("explanation") or ""
+                    new_sample = f"{base_obj.get('stem_detailed') or u_obj['stem'][:150]} (Açıklama: {expl_str[:100]}...)"
+                    state.add_transformation(
+                        f"Kurul {base_obj['kurul']} / Soru {u_obj.get('no', '')}",
+                        "Aşama 3 Soru Zenginleştirme",
+                        orig_sample,
+                        new_sample
+                    )
+                write_record(base_obj)
+
+    enrich_batch = []
+    ENRICH_BATCH_SIZE = NUM_GPU_WORKERS * 2
+
+    try:
+        for i, u in enumerate(uniq):
+            qid = hashlib.sha1(qkey(u).encode()).hexdigest()[:12]
             
-            # Hakem Ajan Kuralları:
-            # support_ratio >= 0.85: Otomatik onayla (verified)
-            # 0.65 <= support_ratio < 0.85: Hakem Ajan (DeepSeek-R1) kuyruğu (referee_queue)
-            # support_ratio < 0.65: Eksik slayt / inceleme (needs_fix)
-            if support_ratio >= T_VERIFIED_SUPPORT:
-                base["status"] = "verified"
-            elif support_ratio >= T_REFEREE_SUPPORT:
-                base["status"] = "referee_queue"
-                base["issues"].append(f"Hakem Ajan (DeepSeek-R1) incelemesi bekliyor (destek={support_ratio:.2f})")
+            # Soru zaten işlenmişse LLM/GPU çağırmadan anında atla
+            if qid in processed_qids:
+                continue
+
+            if (i + 1) % 5 == 0 or i == 0:
+                state.set_progress("Sorular", i + 1, total_u, f"Soru Eşleştirme & Zenginleştirme ({i+1}/{total_u})")
+            base = {"question_id": qid, "donem": u["donem"], "kurul": u["kurul_hint"], "stem": u["stem"], "options": u["options"],
+                    "answer": u.get("answer"), "explanation": None, "issues": list(u.get("issues", [])),
+                    "seen_in": u["seen_in"][:12], "extraction": u.get("extraction"), "evidence": [], "ders": None,
+                    "konu": None, "source_id": None, "status": "raw",
+                    "pipeline_generation": "v2_local_pipeline_2026",
+                    "tags": ["new_pipeline", "v2_verified", "local_ai_extracted"]}
+            if len(u["options"]) < 2 or len(u["stem"]) < 12:
+                base.update(status="rejected", issues=base["issues"] + ["yapı yetersiz"])
+                write_record(base)
+                continue
+            if QV is None:
+                base["status"] = "needs_fix"
+                base["issues"].append("anlamsal eşleştirme yapılamadı (Ollama/embedding yok)")
+                write_record(base)
+                continue
+            hits = idx.query(u, QV[i], u["kurul_hint"])
+            dec = decide(u, hits, idx)
+            base["match"] = dec
+            base["entities"] = dec.get("ortak_terimler", [])
+            
+            # Destek oranı (support_ratio) hesaplaması: Soru metninin amfi notundaki kelime karşılığı
+            cand_chunk_text = ch_by_id[dec["kanit_chunk"]]["text"] if dec.get("kanit_chunk") and dec["kanit_chunk"] in ch_by_id else ""
+            cand_tokens = set(lib.tokens(cand_chunk_text))
+            q_tokens = set(lib.tokens(qtext(u))) - STOP
+            support_ratio = (len(q_tokens & cand_tokens) / len(q_tokens)) if q_tokens else 0.0
+            base["support_ratio"] = round(float(support_ratio), 4)
+
+            if dec["durum"] == "kesin":
+                base.update(source_id=dec["kaynak"], ders=dec["ders"], konu=dec["konu"], evidence=[dec["kanit_chunk"]])
+                if isinstance(dec.get("kurul"), int):
+                    base["kurul"] = dec["kurul"] if base["kurul"] in (None, "final") else base["kurul"]
+                
+                # Hakem Ajan Kuralları:
+                if support_ratio >= T_VERIFIED_SUPPORT:
+                    base["status"] = "verified"
+                elif support_ratio >= T_REFEREE_SUPPORT:
+                    base["status"] = "referee_queue"
+                    base["issues"].append(f"Hakem Ajan (DeepSeek-R1) incelemesi bekliyor (destek={support_ratio:.2f})")
+                else:
+                    base["status"] = "needs_fix"
+                    base["issues"].append(f"Slayt desteği sınırda veya yetersiz ({support_ratio:.2f} < {T_REFEREE_SUPPORT})")
+
+                old = prev.get(qid)
+                if do_enrich and use_llm and old and old.get("enrichment_done"):
+                    for k in ("enrichment", "explanation", "stem_detailed", "options_added", "enrichment_done"):
+                        if k in old:
+                            base[k] = old[k]
+                    write_record(base)
+                elif do_enrich and use_llm and base["status"] in ("verified", "referee_queue"):
+                    enrich_batch.append((u, base, dec))
+                    if len(enrich_batch) >= ENRICH_BATCH_SIZE:
+                        process_enrichment_batch(enrich_batch)
+                        enrich_batch.clear()
+                else:
+                    write_record(base)
             else:
                 base["status"] = "needs_fix"
-                base["issues"].append(f"Slayt desteği sınırda veya yetersiz ({support_ratio:.2f} < {T_REFEREE_SUPPORT})")
+                base["issues"].append("kaynak kesinleşmedi: " + dec["neden"])
+                base["source_id"] = dec.get("kaynak")
+                write_record(base)
 
-            old = prev.get(qid)
-            if do_enrich and use_llm and old and old.get("enrichment_done"):
-                for k in ("enrichment", "explanation", "stem_detailed", "options_added", "enrichment_done"):
-                    if k in old:
-                        base[k] = old[k]
-            elif do_enrich and use_llm and base["status"] in ("verified", "referee_queue"):
-                e = enrich(u, ch_by_id[dec["kanit_chunk"]]["text"], dec["kanit_chunk"])
-                base["enrichment_done"] = True
-                if e:
-                    base["enrichment"] = e
-                    if "explanation" in e:
-                        base["explanation"] = e["explanation"]
-                    if "stem_detailed" in e:
-                        base["stem_detailed"] = e["stem_detailed"]
-                    if "options_added" in e:
-                        base["options_added"] = e["options_added"]
-                    if "taxonomy_metadata" in e:
-                        base["taxonomy_metadata"] = e["taxonomy_metadata"]
-                    if base["status"] == "verified":
-                        base["status"] = "fixed"
-                    # Dashboard canlı dönüşüm tablosuna bas
-                    orig_sample = f"{u['stem'][:150]} (Şıklar: {len(u['options'])})"
-                    expl_str = base.get("explanation") or ""
-                    new_sample = f"{base.get('stem_detailed') or u['stem'][:150]} (Açıklama: {expl_str[:100]}...)"
-                    state.add_transformation(f"Kurul {base['kurul']} / Soru {u.get('no', '')}", "Aşama 3 Soru Zenginleştirme", orig_sample, new_sample)
-            
-            if base["status"] in ("verified", "fixed"):
-                out.append(base)
-            else:
-                review.append(base)
-        else:
-            base["status"] = "needs_fix"
-            base["issues"].append("kaynak kesinleşmedi: " + dec["neden"])
-            base["source_id"] = dec.get("kaynak")
-            review.append(base)
-    lib.write_jsonl(lib.TEMP3 / "questions.jsonl", out)
-    lib.write_jsonl(lib.TEMP3 / "review_queue.jsonl", review)
+        # Kalan son zenginleştirme havuzunu temizle
+        if enrich_batch:
+            process_enrichment_batch(enrich_batch)
+            enrich_batch.clear()
+    finally:
+        q_file_append.close()
+        r_file_append.close()
+
     rep = {"ts": time.strftime("%Y-%m-%dT%H:%M:%S"), "ham_soru": len(qs), "tekil": len(uniq), "kaynak": len(sources),
            "chunk": len(idx.chunks), "verified": sum(1 for x in out if x["status"] == "verified"),
            "fixed": sum(1 for x in out if x["status"] == "fixed"), "incelemeye": len(review)}

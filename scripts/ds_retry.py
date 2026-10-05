@@ -2,13 +2,13 @@
 import json, os, re, glob, sys, hashlib
 from collections import Counter, defaultdict
 sys.stdout.reconfigure(encoding='utf-8')
-sys.path.insert(0, r"C:\Users\indui\Desktop\meds\scripts")
+sys.path.insert(0, (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/scripts"))
 import ds_batches as B
 
-W = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
-R = r"C:\Users\indui\Desktop\meds\.meds_ds"
-O = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
-O2 = r"C:\Users\indui\Desktop\meds\.meds_ds\out_retry"
+W = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work")
+R = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds")
+O = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/out")
+O2 = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/out_retry")
 RB = os.path.join(W, "batches_retry")
 
 LIGHT = B.LIGHT

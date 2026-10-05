@@ -11,7 +11,7 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-OUTPUT_PATH = r"C:\Users\indui\.gemini\antigravity\brain\386176b3-c821-4f99-a837-6f25ae2aca35\scratch\deck_uriner_epidemiyoloji.json"
+OUTPUT_PATH = (__import__('tempfile').gettempdir() + "/deck_uriner_epidemiyoloji.json")
 
 def make_slide(slide_num, title, subtitle, narrative, spot_onemli, spot_cikmis, practice_q):
     spots = [

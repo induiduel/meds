@@ -11,6 +11,7 @@ import {
   Trophy,
   BookOpen,
   ShieldCheck,
+  BotMessageSquare,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -18,10 +19,11 @@ import { pathFor, linkClick } from '../router';
 /** v3 rail: every page one tap away on tablet and desktop. Phones use MobileBottomNav. */
 export const RAIL: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'quick_add', label: 'Ekle', icon: SquarePen },
+  { id: 'ai_chat', label: 'Asistan', icon: BotMessageSquare },
   { id: 'learn', label: 'Öğren', icon: GraduationCap },
+  { id: 'past_exams', label: 'Çıkmış', icon: Archive },
   { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
   { id: 'flashcards', label: 'Kartlar', icon: Layers },
-  { id: 'past_exams', label: 'Çıkmış', icon: Archive },
   { id: 'questions', label: 'Havuz', icon: Library },
   { id: 'study', label: 'Çalış', icon: ListChecks },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },

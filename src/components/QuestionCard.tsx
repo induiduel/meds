@@ -28,6 +28,8 @@ const SOURCE_TYPE_LABELS: Record<string, string> = {
   transcript: 'Amfi kaydı',
 };
 import { StatusPill, questionStemText } from './QuickAddHero';
+import { toast } from './ui/Toast';
+import { validateNamePolicy } from '../utils/namePolicy';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
@@ -230,6 +232,13 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   const handleFragmentSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fragmentText.trim()) return;
+    if (fragmentAuthor.trim()) {
+      const nameCheck = validateNamePolicy(fragmentAuthor.trim());
+      if (!nameCheck.isValid) {
+        toast.error('İsim Kuralı Hatası', nameCheck.errorMessage || 'Geçersiz yazar adı.');
+        return;
+      }
+    }
     setIsSubmittingFragment(true);
     try {
       await onAddFragment(question.id, fragmentText.trim(), fragmentAuthor || 'Anonim Tıbbiyeli', fragmentType);
@@ -245,6 +254,13 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   const handleOptionSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!optionText.trim()) return;
+    if (optionAuthor.trim()) {
+      const nameCheck = validateNamePolicy(optionAuthor.trim());
+      if (!nameCheck.isValid) {
+        toast.error('İsim Kuralı Hatası', nameCheck.errorMessage || 'Geçersiz yazar adı.');
+        return;
+      }
+    }
     setIsSubmittingOption(true);
     try {
       await onAddOption(question.id, optionKey, optionText.trim(), optionAuthor || 'Anonim Tıbbiyeli');

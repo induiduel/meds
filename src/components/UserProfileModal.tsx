@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { AppUser, updateUserProfileData } from '../services/auth';
 import { QuestionItem } from '../types';
+import { validateNamePolicy } from '../utils/namePolicy';
 
 interface UserProfileModalProps {
   isOpen: boolean;
@@ -58,6 +59,14 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
     e.preventDefault();
     setError(null);
     setSuccess(null);
+
+    if (displayName.trim()) {
+      const nameCheck = validateNamePolicy(displayName.trim());
+      if (!nameCheck.isValid) {
+        setError(nameCheck.errorMessage || 'Geçersiz isim girdiniz.');
+        return;
+      }
+    }
 
     const cleanNum = studentNumber.replace(/\D/g, '');
 

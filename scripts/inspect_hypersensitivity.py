@@ -3,7 +3,7 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-with open('c:/Users/indui/Desktop/meds_database/kurul_ders_notlari_txt/Kurul 1/14)Aşırı duyarlılık ve otoimmünite.txt', encoding='utf-8') as f:
+with open(((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/kurul_ders_notlari_txt/Kurul 1/14)Aşırı duyarlılık ve otoimmünite.txt'), encoding='utf-8') as f:
     text = f.read()
 
 pages = re.split(r'--- \[SAYFA \d+\] ---', text)

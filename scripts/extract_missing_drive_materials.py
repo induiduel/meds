@@ -26,8 +26,8 @@ try:
 except ImportError:
     has_pptx = False
 
-SRC_DIR = r"c:\Users\indui\Desktop\meds_database\meds_sorular"
-DEST_DIR = r"c:\Users\indui\Desktop\meds_database\meds_sorular_txt"
+SRC_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/meds_sorular")
+DEST_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/meds_sorular_txt")
 os.makedirs(DEST_DIR, exist_ok=True)
 
 def extract_pdf(pdf_path):

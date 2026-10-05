@@ -15,6 +15,7 @@ Sürekli arka planda çalışarak sistemi denetler:
 import time
 import os
 import sys
+import shutil
 import subprocess
 import requests
 from pathlib import Path
@@ -141,9 +142,28 @@ def check_dashboard_alive():
     res = subprocess.run(["pgrep", "-f", "dashboard_server.py"], capture_output=True, text=True)
     if not res.stdout.strip():
         log("UYARI: dashboard_server.py (Port 8085) durmuş! Otomatik yeniden başlatılıyor...")
-        cmd = ["/usr/bin/python3", str(ROOT / "dashboard_server.py")]
+        venv_py = ROOT / ".venv-ocr" / "bin" / "python"
+        py_bin = str(venv_py) if venv_py.exists() else sys.executable
+        dash_script = ROOT / "dashboard_server.py"
+        if not dash_script.exists():
+            dash_script = ROOT.parent / "dashboard_server.py"
+        cmd = [py_bin, str(dash_script)]
         subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
         log("dashboard_server.py yeniden başlatıldı ✓")
+
+def check_web_server_alive():
+    """Web sunucusunun (server.ts / Port 3000) canlı kalmasını sağlar"""
+    try:
+        r = requests.get("http://127.0.0.1:3000/api/health", timeout=3)
+        if r.ok:
+            return
+    except Exception:
+        pass
+    log("UYARI: Web sunucusu (Port 3000) kapalı! Otomatik olarak başlatılıyor...")
+    npx_bin = shutil.which("npx") or "/home/indu/.nvm/versions/node/v24.21.0/bin/npx"
+    cmd = [npx_bin, "tsx", "server.ts"]
+    subprocess.Popen(cmd, cwd=str(ROOT), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+    log("Web sunucusu (server.ts) arka planda güvenle başlatıldı ✓")
 
 def check_system_resources():
     """Aşırı RAM ve Disk baskısını denetler, gerekirse önbellek temizler"""
@@ -202,6 +222,9 @@ def main():
 
             # 5. Dashboard kokpitinin canlılığını sağla
             check_dashboard_alive()
+
+            # 5b. Web sunucusunun (Port 3000 / server.ts) canlılığını sağla
+            check_web_server_alive()
 
             # 6. Sistem RAM/VRAM kaynak baskısını denetle
             check_system_resources()

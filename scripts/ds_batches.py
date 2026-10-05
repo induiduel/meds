@@ -7,7 +7,7 @@ import json, os, re, sys, glob, hashlib
 from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding='utf-8')
-sys.path.insert(0, r"C:\Users\indui\Desktop\meds\scripts")
+sys.path.insert(0, (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/scripts"))
 from ds_pipeline import (BASE, RS, WORK, RZ, COMMITTEE, EXAM_SETS,
                          clean_text, build_lecture_catalog)
 

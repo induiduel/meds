@@ -27,15 +27,22 @@ const __dirname = path.dirname(__filename);
 // Windows Masaüstü Bildirimi (Toast / Action Center) Gönderici
 function sendWindowsNotification(title, message) {
   try {
-    const psScript = path.join(__dirname, 'show-notification.ps1');
-    if (!fs.existsSync(psScript)) return;
-    const child = spawn('powershell.exe', [
-      '-NoProfile',
-      '-ExecutionPolicy', 'Bypass',
-      '-File', psScript,
-      '-Title', title,
-      '-Message', message,
-    ], { stdio: 'ignore', windowsHide: true, detached: true });
+    let child;
+    if (process.platform === 'win32') {
+      const psScript = path.join(__dirname, 'show-notification.ps1');
+      if (!fs.existsSync(psScript)) return;
+      child = spawn('powershell.exe', [
+        '-NoProfile',
+        '-ExecutionPolicy', 'Bypass',
+        '-File', psScript,
+        '-Title', title,
+        '-Message', message,
+      ], { stdio: 'ignore', windowsHide: true, detached: true });
+    } else {
+      // Linux: notify-send (libnotify-bin); yoksa sessizce atla
+      child = spawn('notify-send', [title, message], { stdio: 'ignore', detached: true });
+      child.on('error', () => {});
+    }
     child.unref();
   } catch (err) {
     console.warn('[Bildirim Hatası]:', err.message);
@@ -51,7 +58,7 @@ async function sendWorkerHeartbeat(status = 'online', lastAction = '16:00 - 18:0
     }
     await postServerJson('/api/worker/heartbeat', {
       source: 'meds_local_sync',
-      hostname: `${os.hostname()} (Windows 10/11)`,
+      hostname: `${os.hostname()} (${process.platform === 'win32' ? 'Windows 10/11' : 'Linux'})`,
       uptime: Math.round(process.uptime()),
       pid: process.pid,
       status,
@@ -66,7 +73,7 @@ async function sendWorkerHeartbeat(status = 'online', lastAction = '16:00 - 18:0
 }
 
 // --- YAPILANDIRMA ---
-const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
+const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
 const DIRS = {
   root: BASE_DATABASE_DIR,
   sorularPdf: path.join(BASE_DATABASE_DIR, 'meds_sorular'),

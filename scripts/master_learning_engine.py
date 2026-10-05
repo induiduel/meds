@@ -41,7 +41,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 # Directories
 WORKSPACE_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-MEDS_DB_DIR = r"C:\Users\indui\Desktop\meds_database"
+MEDS_DB_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
 DERS_NOTLARI_TXT = os.path.join(MEDS_DB_DIR, "ders_notlari_txt")
 KURUL_TXT_DIR = os.path.join(MEDS_DB_DIR, "kurul_ders_notlari_txt")
 REDAKTE_OZET_DIR = os.path.join(MEDS_DB_DIR, "redakte_ozet")

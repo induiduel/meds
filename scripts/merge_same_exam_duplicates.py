@@ -696,14 +696,14 @@ def main():
                         help="Yedek (.bak) dosyası oluşturmayı atlar.")
     parser.add_argument('--similarity', '-s', type=float, default=0.82,
                         help="Soru kökü benzerlik eşik değeri (varsayılan: 0.82).")
-    parser.add_argument('--report-dir', '-r', type=str, default=r"C:\Users\indui\Desktop\meds_database",
+    parser.add_argument('--report-dir', '-r', type=str, default=((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database'))),
                         help="Raporların kaydedileceği dizin.")
 
     args = parser.parse_args()
 
     default_targets = [
-        r"C:\Users\indui\Desktop\meds\src\data\pastQuestions.json",
-        r"C:\Users\indui\Desktop\meds\data\pastQuestions.json"
+        (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data/pastQuestions.json"),
+        (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/data/pastQuestions.json")
     ]
 
     import glob

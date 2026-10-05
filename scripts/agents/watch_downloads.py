@@ -2,6 +2,8 @@
 """
 meds_downloads izleyicisi: yeni/değişen PDF ve PPTX dosyalarını fark eder ve
 read_document.py ile temp1'e çevirir (PROJE_TANITIMI.md, 1. aşama).
+20 çekirdekli CPU için concurrent.futures.ThreadPoolExecutor(max_workers=8)
+ile paralel belge ve OCR işleme desteği içerir.
 
   watch_downloads.py            # sürekli izle
   watch_downloads.py --once     # bir kez tara ve çık
@@ -10,6 +12,7 @@ read_document.py ile temp1'e çevirir (PROJE_TANITIMI.md, 1. aşama).
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import sys
 import time
 from pathlib import Path
@@ -18,10 +21,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from read_document import DEFAULT_DOWNLOADS, DEFAULT_TEMP1, SUPPORTED, process_file  # noqa: E402
 
 STABLE_SECONDS = 8  # indirme bitmemiş dosyayı okumamak için son değişiklikten bu kadar bekle
+NUM_CPU_WORKERS = 8  # 20 çekirdeğin 8 tanesini OCR / Belge çıkarma süreçlerine tahsis et
 
 
 def scan(root: Path, seen: dict[Path, tuple[float, int]], vision: bool, docling: bool = False) -> int:
-    done = 0
+    pending = []
     for f in sorted(root.rglob("*")):
         if not f.is_file() or f.suffix.lower() not in SUPPORTED or f.name.startswith(("~$", ".")):
             continue
@@ -33,13 +37,28 @@ def scan(root: Path, seen: dict[Path, tuple[float, int]], vision: bool, docling:
             continue
         if time.time() - st.st_mtime < STABLE_SECONDS:
             continue  # hâlâ yazılıyor olabilir
+        pending.append((f, key))
+
+    if not pending:
+        return 0
+
+    def _worker(item):
+        f, key = item
         try:
             process_file(f, DEFAULT_TEMP1, root, force=False, use_ocr=True, use_vision=vision, use_docling=docling)
-            seen[f] = key
-            done += 1
+            return f, key, None
         except Exception as e:
-            print(f"✗ HATA {f.name}: {e}", file=sys.stderr)
-            seen[f] = key  # aynı hatayı döngüde tekrarlama; dosya değişirse yeniden denenir
+            return f, key, e
+
+    done = 0
+    # 20 çekirdekli CPU için paralel iş parçacığı havuzu
+    with concurrent.futures.ThreadPoolExecutor(max_workers=NUM_CPU_WORKERS) as executor:
+        for f, key, err in executor.map(_worker, pending):
+            seen[f] = key
+            if err:
+                print(f"✗ HATA {f.name}: {err}", file=sys.stderr)
+            else:
+                done += 1
     return done
 
 
@@ -54,7 +73,7 @@ def main():
 
     a.dir.mkdir(parents=True, exist_ok=True)
     seen: dict[Path, tuple[float, int]] = {}
-    print(f"İzleniyor: {a.dir}  ->  {DEFAULT_TEMP1}")
+    print(f"İzleniyor (Paralel {NUM_CPU_WORKERS} Worker): {a.dir}  ->  {DEFAULT_TEMP1}")
     while True:
         scan(a.dir, seen, a.vision, a.docling)
         if a.once:

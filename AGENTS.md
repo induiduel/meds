@@ -138,9 +138,13 @@ erDiagram
   - LLM girdi ve çıktıları `<SLAYT_KANITLARI>`, `<SORU>`, `<ANALİZ>` ve `<YANIT>` XML etiketleriyle sınırlandırılır.
   - Zenginleştirme ve çözümlerde 4 adımlı sıralı klinik akıl yürütme (Chain-of-Thought) zorunlu tutulur.
 
-### Aşama 4: Doğrulama ve Veritabanı Taşıma (`stage4_database.py`)
+### Aşama 4: Doğrulama ve Veritabanı Taşıma (`stage4_database.py` & `scripts/sync_to_supabase_v2.py`)
 - Sadece `status == "verified"` veya `status == "fixed"` olan sorular `meds_database/` dizinine ve Supabase tablolarına aktarılır.
 - Toplu aktarımda `execute_batch` (batch_size=1000) kullanılır, ardından HNSW ve GIN indeksleri tetiklenir.
+- **Supabase v2 Chunk-Build Senkronizasyonu (`scripts/sync_to_supabase_v2.py`):**
+  - Tüm 6.263 çıkmış soru `v2_local_pipeline_2026` sürümüyle çakışmasız (`resolution=merge-duplicates`) Supabase `past_questions` tablosuna aktarılır; mevcut öğrenci yorumları ve oyları korunur.
+  - 24.794 amfi ders slayt parçası `rag_chunks` tablosuna Tier 1 (kalite >= 0.85) ve Tier 2 kademeli inşa mantığıyla aktarılır.
+  - İstemci tarafında PostgREST 1000 satır sınırını aşan sayfalamalı (range pagination) yükleme mimarisi işletilir.
 
 ### Aşama 5: Gelişmiş AI Orkestratörü (`scripts/advanced_ai/orchestrator.py`)
 - Slayt ve sorular üzerinden **GraphRAG Tıbbi Bilgi Grafı** inşa eder (`medical_knowledge_graph.json`, ego-graph radius=2).
@@ -160,6 +164,7 @@ erDiagram
 - Ajan kodları güncellendiğinde bayat Python süreçlerini otomatik tazeler.
 - `meds-ollama` konteyneri durursa anında `docker start` yapar.
 - `dashboard_server.py` kapanırsa anında yeniden çalıştırır.
+- `server.ts` (Web Sunucusu - Port 3000) kapanır veya yanıt vermezse anında otonom olarak yeniden başlatır.
 - Sistem RAM'i %92'nin üzerine çıkarsa acil bellek ve VRAM tahliyesi yapar.
 
 ---
@@ -176,3 +181,38 @@ erDiagram
    - Bu `AGENTS.md` ve `PROJECT_INSTRUCTIONS.md` dosyalarını güncelleyin.
    - Yeni scripti `pipeline_runner.py` veya `watchdog.py` izleme listesine ekleyin.
    - Değişiklikleri Git `main` dalına commit ve push yapın.
+
+---
+
+## 7. Yerel QLoRA Fine-Tuned Model & Web Entegrasyonu (nofrostlife.com.tr)
+- **Model Adaptörü Konumu:** `meds/models/medsoru-d3-qlora`
+- **HuggingFace Yetkilendirmeleri:**
+  - `meds2` (Inference / Hub Okuma): `HF_TOKEN_MEDS2` (`.env`)
+  - `meds3` (Write Access / Model Yükleme): `HF_TOKEN_MEDS3_WRITE` (`.env`)
+- **Web Sohbet Ajanı Hedefi:** QLoRA eğitimi tamamlandığında Ollama'ya `medsoru-d3` adıyla entegre edilir ve `nofrostlife.com.tr` (localhost:3000) web arayüzünde Dönem 3 tıp soru-cevap asistanı olarak devreye alınır.
+
+---
+
+## 8. Arka Plan Soru Kalite Denetçisi ve Çoklu AI Sohbet Mimarisi
+
+### 8.1. Otonom Soru Kalite Denetçisi (`question_quality_inspector.py`)
+- **İşleyiş:** Arka planda donanımı (RTX 4060 GPU / CPU) yormadan yavaşça (throttled micro-sleep) 6.263 çıkmış soruyu tarar.
+- **Denetim Parametreleri:**
+  1. **Mükerrer & Tekrarlanan Soru:** Token Jaccard / Levenshtein benzerliği >= 0.88 olan mükerrer kopyaları tespit eder (`duplicates`).
+  2. **Bozuk Karakter & OCR Hataları:** Mojibake (UTF-8 çift kodlama), rakam-harf karışımı gürültüler (0->O, 1->I) ve tipografik ligatürleri bulup onarım önerir.
+  3. **Şık & Kök Bütünlüğü:** 4 veya 5 şıkkı olmayan, içeriği boş kalan şıkları ve 15 karakterden kısa anlamsız taslak kökleri belirler.
+  4. **Tıbbi Anabilim Dalı Uyuşmazlığı:** Soru metnindeki yoğun kavramları analiz ederek hatalı branş etiketlerini (`discipline mismatch`) tespit eder.
+- **Raporlama:** Çıktılar `meds_temp/state/quality_audit_suggestions.json` içine yapılandırılmış olarak yazılır ve `/api/audit/status` endpoint'i üzerinden web kokpitine sunulur.
+
+### 8.2. Web AI Tıp Asistanı & Soru Dedektifi (`/asistan` - `LocalAiChatView.tsx`)
+- **Yerel GPU (RTX 4060):** Ollama üzerinden `gemma3:4b`, `deepseek-r1:8b`, `qwen3:1.7b` ve eğitilen `qLoRA` modellerini sıfır maliyetle çalıştırır.
+- **İnternet & Bulut Modelleri:** Kota tükenmelerine karşı Google Gemini Flash, Groq Cloud (GPT-OSS 120B) ve sınırsız Muse Spark 1.3 Free katmanlarını otomatik devreye sokar.
+- **Özel Klinik Modlar:**
+  - **Soru Dedektifi (`find_question`):** Öğrencinin "50 yaş hasta, hiperkalsemi ve lityum vardı" gibi eksik hatırladığı soruları BM25 + BGE-M3 RAG ile veritabanından bulup şıkları ve açıklamasıyla getirir.
+  - **Soru Türetici (`generate_from_keywords`):** Verilen anahtar kelimelerden doğru kurul, ders ve konuyu saptayarak 5 şıklı orijinal kurul soruları yazar.
+  - **Klinik Mekanizma:** Tıbbi patofizyolojik ve farmakolojik derin açıklamalar sunar.
+
+### 8.3. Soru Yaşı ve Değerlendirme Sistemi
+- **Yeni Soru vs Arşiv:** 2026-2027 kurul soruları ile geçmiş yılların çıkmışları yeşil (`Yeni Soru`) ve gri (`Geçmiş Yıl`) rozetlerle ayrıştırılır; filtreleme paneline `new_only` ve `archived_only` seçenekleri eklenmiştir.
+- **Çift Yönlü Like / Dislike:** Her çıkmış soru için hem `upvotes` hem de `downvotes` sayaçları çalışır; oylar yerel veritabanı ile Supabase `past_questions` tablosunda anlık senkronize edilir.
+

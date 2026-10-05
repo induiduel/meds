@@ -12,7 +12,7 @@ print(f"Total candidates in missing_drive_pdfs.json: {len(missing_drive)}")
 
 # Check against all files in meds_database
 all_existing = set()
-for root, dirs, files in os.walk(r'c:\Users\indui\Desktop\meds_database'):
+for root, dirs, files in os.walk(((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))):
     for f in files:
         all_existing.add(f.lower().strip())
         base = os.path.splitext(f)[0].lower().strip()

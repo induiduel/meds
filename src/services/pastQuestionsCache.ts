@@ -488,7 +488,7 @@ class PastQuestionsCacheService {
 
       if (canTryLocalServer) {
         try {
-          const apiBase = customUrl || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+          const apiBase = customUrl || '';
           const syncUrl = `${apiBase}/api/past-exams/sync?since=${encodeURIComponent(lastSyncTime)}&count=${localCount}`;
           
           const controller = new AbortController();
@@ -571,24 +571,9 @@ class PastQuestionsCacheService {
             }
             options.onUpdate?.(deltaQuestions);
 
-            // Silinen soru kontrolü: Eğer veritabanındaki toplam sayı cihazdakinden azsa
-            if (remoteCount < this.memoryMap.size) {
-              try {
-                const remoteIds = await SupabaseDbService.getPastQuestionsIds();
-                if (remoteIds && remoteIds.length > 0) {
-                  const remoteIdSet = new Set(remoteIds);
-                  const toDelete: string[] = [];
-                  for (const localId of this.memoryMap.keys()) {
-                    if (!remoteIdSet.has(localId)) {
-                      toDelete.push(localId);
-                    }
-                  }
-                  if (toDelete.length > 0) {
-                    await this.removeQuestions(toDelete);
-                  }
-                }
-              } catch {}
-            }
+            // Silinen soru kontrolü: Yerel önbellekteki soruların Supabase senkronizasyonu eksikse
+            // kazara silinmesini önlemek için doğrudan toplu silme yapmıyoruz.
+            // Yerel doğrulanmış soru tabanı korunur.
 
             this.syncInProgress = false;
             this.currentStatus.isSyncing = false;
@@ -647,7 +632,7 @@ class PastQuestionsCacheService {
     // 1. Önce yerel Express REST API'yi dene
     try {
       const customUrl = getCustomApiUrl();
-      const apiBase = customUrl || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+      const apiBase = customUrl || '';
       const res = await fetch(`${apiBase}/api/past-exams`);
       if (res.ok) {
         const json = await res.json();

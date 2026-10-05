@@ -26,19 +26,21 @@ def acquire_lock():
 def ollama_up():
     try:
         import requests
-        requests.get(os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434") + "/api/tags", timeout=5).raise_for_status()
+        requests.get(os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434") + "/api/tags", timeout=10).raise_for_status()
         return True
-    except Exception:
-        log.warning("Ollama veya GPU yanıt vermiyor, otomatik GPU & ses uyandırma çalıştırılıyor...")
-        subprocess.run(["/usr/local/bin/meds-gpu-recovery"], capture_output=True)
-        subprocess.run(["sudo", "-n", "docker", "restart", "meds-ollama"], capture_output=True)
-        time.sleep(10)
+    except Exception as e:
+        log.warning("Ollama API geçici olarak yanıt vermedi (%s), bekleniyor...", e)
+        time.sleep(3)
         return False
 
 
 def run(stage):
     t = time.time()
-    r = subprocess.run([PY, str(HERE / stage)], capture_output=True, text=True, cwd=HERE)
+    env = dict(os.environ)
+    jemalloc_path = Path("/usr/lib/x86_64-linux-gnu/libjemalloc.so.2")
+    if jemalloc_path.exists():
+        env["LD_PRELOAD"] = str(jemalloc_path)
+    r = subprocess.run([PY, str(HERE / stage)], capture_output=True, text=True, cwd=HERE, env=env)
     return {"stage": stage, "rc": r.returncode, "sec": round(time.time() - t),
             "tail": (r.stdout + r.stderr)[-400:]}
 
@@ -49,7 +51,15 @@ def main():
         res = []
         try:
             ollama_up()
-            for s in ("stage2_clean.py", "stage3_merge.py", "stage4_database.py", "../advanced_ai/orchestrator.py"):
+            stages = [
+                ("stage2_clean.py", "Aşama 2: Türkçe Onarım & Soru Ayrıştırma"),
+                ("stage3_merge.py", "Aşama 3: RAG Eşleştirme & Zenginleştirme"),
+                ("stage4_database.py", "Aşama 4: Doğrulanmış Veritabanı Aktarımı"),
+                ("../advanced_ai/orchestrator.py", "Aşama 5: GraphRAG & Hibrit Arama & MemGPT")
+            ]
+            state = lib.State()
+            for s_idx, (s, s_desc) in enumerate(stages, 1):
+                state.set_progress("pipeline", s_idx, len(stages), f"{s_desc} (Çalışıyor...)")
                 out = run(s)
                 res.append(out)
                 log.error(f"{s} rc={out['rc']}: {out['tail']}") if out["rc"] else None
@@ -71,6 +81,7 @@ def main():
             res.append({"error": str(e)})
         STATUS.parent.mkdir(parents=True, exist_ok=True)
         STATUS.write_text(json.dumps({"time": time.strftime("%F %T"), "runs": res}, ensure_ascii=False, indent=1))
+        lib.State().set_progress("pipeline", 4, 4, f"Döngü Tamamlandı ✓ (Yeni dosyalar için {delay} sn bekleniyor...)")
         time.sleep(delay)
 
 

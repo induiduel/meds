@@ -3,7 +3,7 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-file_path = 'c:/Users/indui/Desktop/meds_database/kurul_ders_notlari_txt/Kurul 1/15)Genetik,pediatrik ve çevresel patoloji.txt'
+file_path = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/kurul_ders_notlari_txt/Kurul 1/15)Genetik,pediatrik ve çevresel patoloji.txt')
 with open(file_path, 'r', encoding='utf-8') as f:
     text = f.read()
 

@@ -3,8 +3,8 @@ import json, os, re, sys
 from collections import Counter, defaultdict
 sys.stdout.reconfigure(encoding='utf-8')
 
-W = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
-TARGET = r"C:\Users\indui\Desktop\meds_database\deepseek_data\meds_donem3_sorulari_duzeltilmis.jsonl"
+W = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work")
+TARGET = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/deepseek_data/meds_donem3_sorulari_duzeltilmis.jsonl")
 MOJI = re.compile(r'[ÃÄÅÂ]|&apos;|&quot;|&#\d+;')
 
 base = json.load(open(os.path.join(W, "questions_matched.json"), encoding='utf-8'))

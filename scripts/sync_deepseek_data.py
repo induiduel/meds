@@ -24,7 +24,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 # Search paths for deepseek data
 CANDIDATE_DIRS = [
-    r"c:\Users\indui\Desktop\meds_database\deepseek_data",
+    ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/deepseek_data"),
     os.path.join(os.path.dirname(__file__), "..", "deepseek_data"),
     os.path.join(os.getcwd(), "deepseek_data"),
 ]

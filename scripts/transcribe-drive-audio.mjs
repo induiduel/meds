@@ -38,7 +38,7 @@ process.on('unhandledRejection', (reason) => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
-const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
+const BASE_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
 
 // Klasör Yolları
 const DRIVE_ROOT_DIR = path.join('G:', "Drive'ım", 'Tıp Genel', 'Ses Kayıtları Dönem 3 (26-27)');
@@ -532,7 +532,7 @@ function syncDriveAudioToLocal() {
 
 // Yerel Ses Klasörünü Tara
 function scanLocalAudioFiles() {
-  const dirsToScan = [LOCAL_AUDIO_DIR, 'C:\\Users\\indui\\Desktop\\Quick'];
+  const dirsToScan = [LOCAL_AUDIO_DIR, path.join(process.env.HOME || process.env.USERPROFILE || '.', 'Desktop', 'Quick')];
   const foundMap = new Map();
 
   function scan(dir) {

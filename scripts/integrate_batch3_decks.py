@@ -3,8 +3,8 @@ import os
 import re
 import sys
 
-SCRATCH_DIR = r"C:\Users\indui\.gemini\antigravity\brain\386176b3-c821-4f99-a837-6f25ae2aca35\scratch"
-DECKS_JSON = r"c:\Users\indui\Desktop\meds\src\data\interactive_learning_decks.json"
+SCRATCH_DIR = (__import__('tempfile').gettempdir())
+DECKS_JSON = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data/interactive_learning_decks.json")
 
 FILES = [
     ("deck_patolojiye_giris.json", "learn-patolojiye-giris"),

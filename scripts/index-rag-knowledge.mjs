@@ -459,7 +459,7 @@ ${trimmed}`.trim();
     return;
   }
 
-  const BATCH_SIZE = 20;
+  const BATCH_SIZE = 100; // Supabase/PostgreSQL ve Gemini embed API için optimize edildi
   let successCount = 0;
 
   for (let i = 0; i < targetChunks.length; i += BATCH_SIZE) {

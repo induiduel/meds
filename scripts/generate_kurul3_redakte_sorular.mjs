@@ -21,7 +21,7 @@ import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
 
-const OUT_DIR = 'C:\\Users\\indui\\Desktop\\meds_database\\redakte_sorular';
+const OUT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/redakte_sorular`;
 if (!fs.existsSync(OUT_DIR)) {
   fs.mkdirSync(OUT_DIR, { recursive: true });
 }
@@ -2574,7 +2574,7 @@ async function run() {
   fs.writeFileSync(path.join(OUT_DIR, 'donem3_kurul3_tum_redakte_sorular.json'), JSON.stringify(all, null, 2), 'utf8');
 
   // Save to local database_json for Kurul 3
-  const dbJsonDir = 'C:\\Users\\indui\\Desktop\\meds\\database_json\\donem3k3';
+  const dbJsonDir = path.join(process.cwd(), 'database_json', 'donem3k3');
   if (!fs.existsSync(dbJsonDir)) {
     fs.mkdirSync(dbJsonDir, { recursive: true });
   }

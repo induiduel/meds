@@ -5,7 +5,7 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-pdf_dir = r'c:\Users\indui\Desktop\meds_database\ders_notlari_pdf'
+pdf_dir = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/ders_notlari_pdf')
 out_dir = 'data/extracted_lectures'
 os.makedirs(out_dir, exist_ok=True)
 

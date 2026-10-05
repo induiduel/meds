@@ -9,6 +9,7 @@ import { findRealtimeMatchingDraft, DraftCompatibilityResult } from '../services
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { ApiService, safeJsonFetch, type SimilarPastQuestion } from '../services/api';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
+import { validateNamePolicy } from '../utils/namePolicy';
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
 
@@ -286,6 +287,14 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
       const num = Number(questionNumber);
       if (!Number.isFinite(num) || num < 1 || num > maxTarget) {
         setFormError(`Soru numarası 1 ile ${maxTarget} arasında olmalı. Hatırlamıyorsan numarayı boş bırak.`);
+        return;
+      }
+    }
+
+    if (author.trim()) {
+      const nameCheck = validateNamePolicy(author.trim());
+      if (!nameCheck.isValid) {
+        setFormError(nameCheck.errorMessage || 'Geçersiz isim girdiniz.');
         return;
       }
     }

@@ -101,13 +101,14 @@ export function areWordsFuzzyEqual(w1: string, w2: string, maxDistance?: number)
     return damerauLevenshtein(f1, f2, 1) <= 1;
   }
 
-  // 5 harfli Türkçe gövde eşleşmesi ("sendrom" ve "sendromu")
-  if (minL >= 5 && f1.slice(0, 5) === f2.slice(0, 5)) {
+  // Türkçe çekim eki / gövde eşleşmesi (örn: "sendrom" ve "sendromu", "paratiroid" ve "paratiroidi")
+  // Yalnızca kelimelerden biri DİĞERİNİN tam bir uzantısı ise ve fark <= 3 harf ise geçerli sayılır.
+  if (minL >= 5 && (f1.startsWith(f2) || f2.startsWith(f1)) && (maxL - minL <= 3)) {
     return true;
   }
 
-  // Tolerans hesabı: kelime >= 6 ise mesafe 2'ye kadar izin verilir
-  const allowed = maxDistance !== undefined ? maxDistance : minL >= 6 ? 2 : 1;
+  // Tolerans hesabı: uzun kelimelerde (>= 8) en fazla 2, orta boyda (5-7) 1 harf farkı/yer değiştirmesi
+  const allowed = maxDistance !== undefined ? maxDistance : minL >= 8 ? 2 : 1;
   if (maxL - minL > allowed) return false;
 
   // Harf yer değiştirmesi veya eksikliği varsa Damerau-Levenshtein hesapla

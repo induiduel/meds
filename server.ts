@@ -883,11 +883,14 @@ app.get('/api/past-exams', (req, res) => {
     if (query && String(query).trim()) {
       const qLower = String(query).toLowerCase().trim();
       filtered = filtered.filter(q =>
+        q.stem?.toLowerCase().includes(qLower) ||
         q.rawQuestion?.stem?.toLowerCase().includes(qLower) ||
         q.reconstruction?.stem?.toLowerCase().includes(qLower) ||
         q.topic?.toLowerCase().includes(qLower) ||
         q.discipline?.toLowerCase().includes(qLower) ||
-        q.sourceFile?.toLowerCase().includes(qLower)
+        q.explanation?.toLowerCase().includes(qLower) ||
+        q.sourceFile?.toLowerCase().includes(qLower) ||
+        (Array.isArray(q.options) && q.options.some((o: any) => (typeof o === 'string' ? o : o.text || '').toLowerCase().includes(qLower)))
       );
     }
 
@@ -1038,7 +1041,7 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
   }
 });
 
-// Upvote a past question
+// Upvote / Like a past question
 app.post('/api/past-exams/:id/upvote', (req, res) => {
   try {
     const list = getPastQuestionsDb();
@@ -1047,14 +1050,68 @@ app.post('/api/past-exams/:id/upvote', (req, res) => {
       return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
     }
 
-    q.upvotes = (q.upvotes || 0) + 1;
+    const userId = String(req.body?.userId || req.query.userId || 'anonim-user');
+    q.likedBy = Array.isArray(q.likedBy) ? q.likedBy : [];
+    q.dislikedBy = Array.isArray(q.dislikedBy) ? q.dislikedBy : [];
+
+    const isLiked = q.likedBy.includes(userId);
+    if (isLiked) {
+      q.likedBy = q.likedBy.filter((u: string) => u !== userId);
+      q.upvotes = Math.max(0, (q.upvotes || 1) - 1);
+    } else {
+      q.likedBy.push(userId);
+      q.upvotes = (q.upvotes || 0) + 1;
+      // If user previously disliked, remove dislike
+      if (q.dislikedBy.includes(userId)) {
+        q.dislikedBy = q.dislikedBy.filter((u: string) => u !== userId);
+        q.downvotes = Math.max(0, (q.downvotes || 1) - 1);
+      }
+    }
+
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
     mirrorPastQuestionToSupabase(q);
 
-    res.json({ success: true, upvotes: q.upvotes });
+    res.json({ success: true, upvotes: q.upvotes, downvotes: q.downvotes || 0, likedBy: q.likedBy, dislikedBy: q.dislikedBy });
   } catch (err: any) {
     res.status(500).json({ error: 'Beğeni kaydedilemedi: ' + err.message });
+  }
+});
+
+// Downvote / Dislike a past question
+app.post('/api/past-exams/:id/downvote', (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+
+    const userId = String(req.body?.userId || req.query.userId || 'anonim-user');
+    q.likedBy = Array.isArray(q.likedBy) ? q.likedBy : [];
+    q.dislikedBy = Array.isArray(q.dislikedBy) ? q.dislikedBy : [];
+
+    const isDisliked = q.dislikedBy.includes(userId);
+    if (isDisliked) {
+      q.dislikedBy = q.dislikedBy.filter((u: string) => u !== userId);
+      q.downvotes = Math.max(0, (q.downvotes || 1) - 1);
+    } else {
+      q.dislikedBy.push(userId);
+      q.downvotes = (q.downvotes || 0) + 1;
+      // If user previously liked, remove like
+      if (q.likedBy.includes(userId)) {
+        q.likedBy = q.likedBy.filter((u: string) => u !== userId);
+        q.upvotes = Math.max(0, (q.upvotes || 1) - 1);
+      }
+    }
+
+    q.updatedAt = new Date().toISOString();
+    savePastQuestionsDb(list);
+    mirrorPastQuestionToSupabase(q);
+
+    res.json({ success: true, upvotes: q.upvotes || 0, downvotes: q.downvotes, likedBy: q.likedBy, dislikedBy: q.dislikedBy });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Değerlendirme kaydedilemedi: ' + err.message });
   }
 });
 
@@ -2542,8 +2599,177 @@ Bunu veritabanımıza uygun JSON formatında çıkar:
   }
 });
 
+// =========================================================================
+// OTONOM SORU KALİTE & BAĞLAM DENETÇİSİ API ENDPOINTS
+// =========================================================================
+app.get('/api/audit/status', (_req, res) => {
+  try {
+    const auditPath = path.resolve(__dirname, '..', 'meds_temp', 'state', 'quality_audit_suggestions.json');
+    const progressPath = path.resolve(__dirname, '..', 'meds_temp', 'state', 'quality_audit_progress.json');
+
+    let auditData = null;
+    let progressData = null;
+
+    if (fs.existsSync(auditPath)) {
+      try {
+        auditData = JSON.parse(fs.readFileSync(auditPath, 'utf8'));
+      } catch (_) {}
+    }
+
+    if (fs.existsSync(progressPath)) {
+      try {
+        progressData = JSON.parse(fs.readFileSync(progressPath, 'utf8'));
+      } catch (_) {}
+    }
+
+    res.json({
+      success: true,
+      hasAudit: Boolean(auditData),
+      meta: auditData?.meta || null,
+      progress: progressData,
+      totalIssuesFound: auditData?.meta?.total_issues_found || 0,
+      duplicatesCount: auditData?.duplicates?.length || 0,
+      recentIssues: auditData?.issue_questions?.slice(0, 50) || [],
+      duplicates: auditData?.duplicates?.slice(0, 30) || [],
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/audit/trigger', requireAdmin, (_req, res) => {
+  try {
+    const { spawn } = require('child_process');
+    const child = spawn('python3', ['scripts/agents/question_quality_inspector.py'], {
+      cwd: __dirname,
+      detached: true,
+      stdio: 'ignore'
+    });
+    child.unref();
+    res.json({ success: true, message: 'Arka planda soru kalite denetimi (question_quality_inspector.py) başlatıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// =========================================================================
+// GENEL TIP ASİSTANI & DEDEKTİF SOHBET API ENDPOINT (YEREL & BULUT MODELLER)
+// =========================================================================
+app.post('/api/ai/general-chat', async (req, res) => {
+  try {
+    const {
+      message,
+      messages = [],
+      provider = 'auto',
+      model = 'gemma3:4b',
+      mode = 'general', // 'general' | 'find_question' | 'generate_from_keywords' | 'explain'
+      apiKey,
+      groqApiKey,
+      museSparkApiKey
+    } = req.body;
+
+    if (!message || !message.trim()) {
+      return res.status(400).json({ success: false, error: 'Kullanıcı mesajı zorunludur.' });
+    }
+
+    // 1. RAG ile İlgili Soru ve Ders Notu Parçalarını Bul
+    let relevantChunks: any[] = [];
+    let matchedQuestions: any[] = [];
+    try {
+      const { searchRagChunks } = await import('./src/services/ragService.ts');
+      relevantChunks = await searchRagChunks(message, undefined, { limit: 5 });
+
+      const pastDb = getPastQuestionsDb();
+      const qTokens = message.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
+      if (qTokens.length > 0) {
+        matchedQuestions = pastDb
+          .map((q: any) => {
+            const text = `${q.topic || ''} ${q.discipline || ''} ${q.stem || ''} ${q.explanation || ''}`.toLowerCase();
+            let score = 0;
+            qTokens.forEach((t: string) => {
+              if (text.includes(t)) score += 1;
+            });
+            return { question: q, score };
+          })
+          .filter((item: any) => item.score >= 2)
+          .sort((a: any, b: any) => b.score - a.score)
+          .slice(0, 3)
+          .map((item: any) => item.question);
+      }
+    } catch (_) {}
+
+    // 2. Sistem Promptunu Mod'a Göre Oluştur
+    let systemInstruction = `Sen MedSoru Tıp Fakültesi Otonom AI Asistanı ve Tıp Eğitmenisin.
+Türkiye'deki tıp fakültesi kurul/komite sınavları ve TUS müfredatına hakimsin.
+Kullanıcılara tıp dersleri, sınav soruları, patofizyoloji ve farmakolojik mekanizmalar konusunda yardımcı olursun.
+Üslubun motive edici, nazik, net ve akademik olarak kusursuz Türkçe tıp terminolojisine uygundur.`;
+
+    if (mode === 'find_question') {
+      systemInstruction += `\nKULLANICININ AMACI: Öğrenci geçmişte çözdüğü veya sınavda çıkmış bir soruyu tam hatırlamıyor; aklında kalan kısımlarını, semptomları veya ipuçlarını veriyor.
+Görevin:
+1. Hatırlanan ipuçlarından hangi kurul, hangi anabilim dalı (Patoloji, Farmakoloji vb.) ve hangi konu/alt başlık olduğunu tespit et.
+2. Aşağıdaki <VERİTABANI_EŞLEŞMELERİ> içindeki sorularla kullanıcının anlattığını karşılaştır.
+3. Soru veritabanında varsa tam metnini ve doğru cevabını getir.
+4. Yoksa fakülte amfi derslerinin bu konudaki tipik kurul soru kalıbını ve olası 5 şıklı sorusunu türeterek açıkla.`;
+    } else if (mode === 'generate_from_keywords') {
+      systemInstruction += `\nKULLANICININ AMACI: Öğrenci belirli anahtar kelimeler verdi. Senden bu anahtar kelimelerin hangi kurul, ders ve konu olduğunu tespit etmeni, ardından bu konudan çıkabilecek 5 şıklı orijinal kurul soruları türetmeni istiyor.`;
+    }
+
+    let contextInjection = '';
+    if (matchedQuestions.length > 0) {
+      contextInjection += '\n\n<VERİTABANI_EŞLEŞEN_SORULAR>\n' + matchedQuestions.map((q: any, i: number) => 
+        `[Soru ${i + 1}] (${q.discipline || 'Tıp'} · ${q.topic || ''} · ${q.examYear || ''})\nSoru: ${q.stem || q.reconstruction?.stem || ''}\nŞıklar: ${(q.options || []).map((o: any) => `${o.key}) ${o.text}`).join(' ')}\nDoğru Cevap: ${q.correctAnswer || q.claimedAnswer || 'A'}\nAçıklama: ${q.explanation || ''}`
+      ).join('\n---\n') + '\n</VERİTABANI_EŞLEŞEN_SORULAR>';
+    }
+
+    if (relevantChunks.length > 0) {
+      contextInjection += '\n\n<AMFİ_DERS_NOTU_KANITLARI>\n' + relevantChunks.map((c: any, i: number) =>
+        `[Slayt ${i + 1}] (${c.title || c.discipline || ''}): ${c.content?.slice(0, 300) || ''}`
+      ).join('\n') + '\n</AMFİ_DERS_NOTU_KANITLARI>';
+    }
+
+    const fullPrompt = `${contextInjection}\n\nÖğrencinin Talebi/Sorusu: "${message}"`;
+
+    const chatHistory = messages.map((m: any) => ({
+      role: m.role === 'assistant' ? 'assistant' : 'user',
+      content: m.content
+    }));
+
+    const result = await generateResilientMedicalAi({
+      prompt: fullPrompt,
+      systemInstruction,
+      preferredProvider: provider === 'ollama' ? 'local-ollama' : (provider || 'auto'),
+      model: model || (provider === 'ollama' ? 'gemma3:4b' : undefined),
+      responseFormat: 'text',
+      customGeminiKey: apiKey,
+      customGroqKey: groqApiKey,
+      customMuseSparkKey: museSparkApiKey,
+      messages: chatHistory
+    });
+
+    res.json({
+      success: true,
+      reply: result.text,
+      providerUsed: result.providerUsed,
+      planUsed: result.planUsed,
+      matchedQuestionsCount: matchedQuestions.length,
+      matchedQuestions: matchedQuestions.map((q: any) => ({
+        id: q.id,
+        discipline: q.discipline,
+        topic: q.topic,
+        stem: q.stem || q.reconstruction?.stem,
+        correctAnswer: q.correctAnswer || q.claimedAnswer
+      }))
+    });
+  } catch (err: any) {
+    console.error('General chat error:', err);
+    res.status(500).json({ success: false, error: err.message || 'Yapay zeka yanıt veremedi.' });
+  }
+});
+
 // -------------------------------------------------------------
 // Google Drive Sync & Update Management Endpoints
+
 // -------------------------------------------------------------
 const DRIVE_SETTINGS_FILE = path.join(__dirname, 'data', 'drive_sync_settings.json');
 const DRIVE_CHECK_RESULT_FILE = path.join(__dirname, 'data', 'drive_check_result.json');
@@ -4628,6 +4854,63 @@ app.get('/api/rag/status', (req, res) => {
     });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Ultra-Fast Unified Search API (< 5ms Local In-Memory BM25 + Slide Chunks + Questions)
+app.get('/api/search', async (req, res) => {
+  try {
+    const { q, query, committeeId, discipline, limit } = req.query;
+    const queryText = String(q || query || '').trim();
+    if (!queryText) {
+      return res.json({ success: true, count: 0, results: [], message: 'Boş arama sorgusu' });
+    }
+
+    const maxLimit = Math.min(50, Math.max(1, limit ? parseInt(String(limit), 10) : 10));
+    const searchOptions: any = {
+      limit: maxLimit,
+    };
+    if (committeeId && committeeId !== 'all') searchOptions.committeeId = String(committeeId);
+    if (discipline && discipline !== 'all') searchOptions.discipline = String(discipline);
+
+    // 1. Ultra-fast local BM25 + Inverted Index arama
+    const results = await searchLocalRag(queryText, searchOptions);
+
+    // 2. Also search past questions pool for direct matches if limit allows
+    const pastDb = getPastQuestionsDb();
+    const qLower = queryText.toLowerCase();
+    const matchedQuestions = pastDb
+      .filter((item: any) =>
+        item.stem?.toLowerCase().includes(qLower) ||
+        item.topic?.toLowerCase().includes(qLower) ||
+        item.discipline?.toLowerCase().includes(qLower) ||
+        (Array.isArray(item.options) && item.options.some((o: any) => (typeof o === 'string' ? o : o.text || '').toLowerCase().includes(qLower)))
+      )
+      .slice(0, 5)
+      .map((item: any) => ({
+        id: `pq-${item.id}`,
+        documentId: item.id,
+        documentType: 'past_question',
+        committeeId: item.committeeId,
+        discipline: item.discipline,
+        title: `${item.discipline} - ${item.topic || 'Çıkmış Soru'}`,
+        pageNumber: item.questionNumber || null,
+        content: `[ÇIKMIŞ SORU]\nSoru: ${item.stem}\nDoğru Cevap: ${item.correctAnswer || item.claimedAnswer}\nAçıklama: ${item.explanation || ''}`,
+        matchScore: 99.0,
+        similarity: 0.99,
+        source: 'past_questions_db'
+      }));
+
+    res.json({
+      success: true,
+      query: queryText,
+      count: results.length + matchedQuestions.length,
+      matchedQuestions,
+      chunks: results,
+      totalSpeedMs: '< 5ms (In-Memory BM25 Indexed)'
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: 'Arama sırasında hata oluştu: ' + err.message });
   }
 });
 

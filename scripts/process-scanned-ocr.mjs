@@ -22,7 +22,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const BASE_DATABASE_DIR = 'C:\\Users\\indui\\Desktop\\meds_database';
+const BASE_DATABASE_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
 const IMAGES_DIR = path.join(BASE_DATABASE_DIR, 'meds_sorular_images');
 const TXT_DIR = path.join(BASE_DATABASE_DIR, 'meds_sorular_txt');
 
@@ -77,7 +77,7 @@ from PIL import Image
 im = Image.open(r'''${inputPath}''')
 im.rotate(${degrees}, expand=True).save(r'''${outPath}''')
 `;
-  spawnSync('python', ['-c', pyCode], { encoding: 'utf-8' });
+  spawnSync(process.platform === 'win32' ? 'python' : 'python3', ['-c', pyCode], { encoding: 'utf-8' });
   return outPath;
 }
 

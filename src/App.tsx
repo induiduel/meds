@@ -38,6 +38,7 @@ const LeaderboardView = React.lazy(() => import('./components/LeaderboardView').
 const LectureNotesView = React.lazy(() => import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView })));
 const PastExamsView = React.lazy(() => import('./components/PastExamsView').then(m => ({ default: m.PastExamsView })));
 const QuestionMatrix = React.lazy(() => import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix })));
+const LocalAiChatView = React.lazy(() => import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView })));
 
 // Lazy-loaded Modals (Only downloaded when opened)
 const AdminPanelModal = React.lazy(() => import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal })));
@@ -159,9 +160,20 @@ export default function App() {
   const [isAiQuotaModalOpen, setIsAiQuotaModalOpen] = useState(false);
   const [contributeDefaultNumber, setContributeDefaultNumber] = useState<number | undefined>(undefined);
 
-  // User Auth & Profile Modals
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authModalInitialMode, setAuthModalInitialMode] = useState<'login' | 'register' | 'admin'>('login');
+  // User Auth & Profile Modals - İlk girişte kayıt/tanıtım ekranını zorunlu tut
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(() => {
+    try {
+      const existingAdmin = getLocalAdminSession();
+      if (existingAdmin && existingAdmin.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+        return false;
+      }
+      const savedUser = safeStorage.getItem('medsoru_user_registered');
+      return !savedUser;
+    } catch {
+      return false;
+    }
+  });
+  const [authModalInitialMode, setAuthModalInitialMode] = useState<'login' | 'register' | 'admin'>('register');
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [isEditQuestionModalOpen, setIsEditQuestionModalOpen] = useState(false);
   const [selectedQuestionToEdit, setSelectedQuestionToEdit] = useState<QuestionItem | null>(null);
@@ -1411,6 +1423,19 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* /asistan — Local AI & Cloud Medical Assistant / Question Detective */}
+        {activeTab === 'ai_chat' && (
+          <Suspense fallback={<ViewFallback />}>
+            <LocalAiChatView
+              currentUser={currentUser}
+              onNavigateToQuestion={(qId) => {
+                setActiveTab('past_exams');
+                setSearchQuery(qId);
+              }}
+            />
+          </Suspense>
+        )}
+
         {/* /yonetim — admin panel as its own page */}
         {activeTab === 'admin' &&
           (isAdmin ? (
@@ -1614,9 +1639,11 @@ export default function App() {
             isOpen={isAuthModalOpen}
             onClose={() => setIsAuthModalOpen(false)}
             initialMode={authModalInitialMode}
+            mandatory={!currentUser}
             onAuthSuccess={(user, token) => {
               setCurrentUser(user);
               if (token) setAccessToken(token);
+              safeStorage.setItem('medsoru_user_registered', 'true');
               setIsAuthModalOpen(false);
               if (isAdminUser(user)) {
                 setActiveTab('admin');

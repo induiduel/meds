@@ -60,7 +60,7 @@ export async function renderSingleDriveSlide(
 ): Promise<{ note: LectureNote; matchedQuestions: { questionId: string; match: QuestionLectureMatch }[] }> {
   // 1. Call server endpoint if available
   let note: LectureNote | null = null;
-  const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+  const apiBase = getCustomApiUrl() || '';
 
   try {
     const res = await fetch(`${apiBase}/api/automation/render-slide`, {
@@ -96,7 +96,7 @@ export async function renderSingleDriveSlide(
   // 3. Server API fallback (on demand, prevents bundling 35MB in frontend)
   if (!note) {
     try {
-      const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+      const apiBase = getCustomApiUrl() || '';
       const res = await fetch(`${apiBase}/api/lecture-notes/${encodeURIComponent(meta.id)}`);
       if (res.ok) {
         const json = await res.json();

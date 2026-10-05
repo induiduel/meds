@@ -190,7 +190,7 @@ const MEDICAL_STOP_WORDS = new Set([
   'yanlistir', 'dogrudur', 'sorusu', 'hoca', 'slaytta', 'sinavda', 'cikmis',
   'soruldu', 'geldi', 'vardi', 'hasta', 'hastada', 'yasta', 'erkek', 'kadin',
   'ben', 'bence', 'sanki', 'diye', 'kismini', 'hatirliyorum', 'soruyordu',
-  'tibbi', 'hatirlanan', 'soru', 'dersi', 'kurul', 'bolum', 'anabilim', 'dali', 'ipucu', 'donem'
+  'tibbi', 'hatirlanan', 'soru', 'dersi', 'kurul', 'bolum', 'anabilim', 'dali', 'ipucu', 'donem', 'patoloji', 'farmakoloji', 'mikrobiyoloji', 'biyokimya', 'anatomi', 'fizyoloji', 'histoloji', 'genetik', 'dahiliye', 'pediatri'
 ]);
 
 export function extractMedicalEntities(text: string): string[] {

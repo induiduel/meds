@@ -36,3 +36,9 @@ supabase-server/local-supabase-keys.json
 supabase-server/backups/
 
 .venv-ocr/
+
+# Local Model Checkpoints & Large Training Datasets
+models/
+training_data/
+linux/
+\# raw DeepSeek exports to ingest/

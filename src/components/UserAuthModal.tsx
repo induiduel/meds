@@ -9,36 +9,43 @@ import {
   Mail, 
   Lock, 
   User, 
-  Hash,
-  Globe,
-  Copy,
-  Check,
-  ExternalLink,
-  ArrowRight,
-  RefreshCw
+  Hash, 
+  Globe, 
+  Copy, 
+  Check, 
+  ExternalLink, 
+  ArrowRight, 
+  RefreshCw,
+  Sparkles,
+  BookOpen,
+  GraduationCap,
+  KeyRound
 } from 'lucide-react';
 import { 
   registerWithEmailPassword, 
   loginWithEmailPassword, 
   googleSignIn, 
-  ADMIN_EMAIL,
-  FIREBASE_CONSOLE_URL,
-  FIREBASE_PROJECT_ID,
+  ADMIN_EMAIL, 
+  FIREBASE_CONSOLE_URL, 
+  FIREBASE_PROJECT_ID, 
   AppUser 
 } from '../services/auth';
+import { validateNamePolicy } from '../utils/namePolicy';
 
 interface UserAuthModalProps {
   isOpen: boolean;
   onClose: () => void;
   onAuthSuccess: (user: AppUser, token?: string | null) => void;
   initialMode?: 'login' | 'register' | 'admin';
+  mandatory?: boolean;
 }
 
 export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   isOpen,
   onClose,
   onAuthSuccess,
-  initialMode = 'login',
+  initialMode = 'register',
+  mandatory = false,
 }) => {
   const [mode, setMode] = useState<'login' | 'register' | 'admin'>(initialMode);
   
@@ -47,6 +54,11 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
   const [studentNumber, setStudentNumber] = useState('');
+  
+  // Verification code mock/future prep
+  const [verificationStep, setVerificationStep] = useState(false);
+  const [verificationCode, setVerificationCode] = useState('');
+  const [pendingUser, setPendingUser] = useState<AppUser | null>(null);
   
   // Admin form state
   const [adminAuthMethod, setAdminAuthMethod] = useState<'google' | 'password'>('google');
@@ -66,6 +78,9 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       setError(null);
       setSuccess(null);
       setDomainError(false);
+      setVerificationStep(false);
+      setVerificationCode('');
+      setPendingUser(null);
     }
   }, [isOpen, initialMode]);
 
@@ -113,25 +128,34 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     e.preventDefault();
     setError(null);
     setDomainError(false);
+
+    // 1. Ad Soyad Validasyonu (Dr House varyasyonları ve Fakülte hoca isimleri kontrolü)
+    const nameCheck = validateNamePolicy(displayName);
+    if (!nameCheck.isValid) {
+      setError(nameCheck.errorMessage || 'Geçersiz isim girdiniz.');
+      return;
+    }
+
+    // 2. Öğrenci Numarası Zorunluluğu Kontrolü
+    const cleanNum = studentNumber.replace(/\D/g, '');
+    if (!cleanNum || cleanNum.length < 5) {
+      setError('Lütfen geçerli bir öğrenci numarası giriniz (Öğrenci numarası zorunludur).');
+      return;
+    }
+
     setIsLoading(true);
     try {
-      if (!displayName.trim()) {
-        throw new Error('Lütfen adınızı ve soyadınızı giriniz.');
-      }
-      const cleanNum = studentNumber.replace(/\D/g, '');
-
       const user = await registerWithEmailPassword(
         email,
         password,
         displayName.trim(),
-        cleanNum || undefined
+        cleanNum
       );
 
-      setSuccess('Kayıt başarılı! Öğrenci hesabınız oluşturuldu.');
-      setTimeout(() => {
-        onAuthSuccess(user);
-        onClose();
-      }, 600);
+      // Simüle edilen e-posta doğrulama adımına geçiş
+      setPendingUser(user);
+      setVerificationStep(true);
+      setSuccess(`Kayıt oluşturuldu! ${email} adresine 6 haneli doğrulama kodu gönderildi (Simülasyon Kodu: 123456).`);
     } catch (err: any) {
       if (err.code === 'auth/email-already-in-use') {
         setError('Bu e-posta adresiyle kayıtlı bir hesap zaten var. Lütfen giriş sekmesinden giriş yapınız.');
@@ -143,6 +167,29 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     } finally {
       setIsLoading(false);
     }
+  };
+
+  // Doğrulama Kodu Onaylama
+  const handleVerifyCodeSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!verificationCode.trim()) {
+      setError('Lütfen e-postanıza gelen 6 haneli kodu giriniz.');
+      return;
+    }
+    // İleride backend API doğrulaması buraya bağlanacak
+    // Şu an simülasyon olarak 123456 veya 6 haneli herhangi bir sayı kabul ediliyor
+    if (verificationCode.trim().length < 4) {
+      setError('Doğrulama kodu en az 4-6 haneli olmalıdır.');
+      return;
+    }
+
+    setSuccess('E-posta başarıyla doğrulandı! Sisteme giriş yapılıyor...');
+    setTimeout(() => {
+      if (pendingUser) {
+        onAuthSuccess(pendingUser);
+      }
+      onClose();
+    }, 600);
   };
 
   // Student Google Login
@@ -400,111 +447,184 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
 
           {/* TAB 2: REGISTER */}
           {mode === 'register' && (
-            <form onSubmit={handleRegister} className="space-y-3.5">
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Ad Soyad <span className="text-rose-500">*</span>
-                </label>
-                <div className="relative">
-                  <User className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
-                  <input
-                    type="text"
-                    required
-                    value={displayName}
-                    onChange={(e) => setDisplayName(e.target.value)}
-                    placeholder="Örn: Dr. Adayı Ahmet Yılmaz"
-                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
-                  />
+            <div className="space-y-4">
+              {/* Tanıtım ve Bilgilendirme Ekranı / Kartı */}
+              <div className="bg-gradient-to-br from-teal-50 via-emerald-50 to-slate-50 border border-teal-200/80 rounded-xl p-3.5 shadow-2xs">
+                <div className="flex items-center gap-2 mb-1.5 text-teal-900 font-bold text-xs">
+                  <GraduationCap className="w-4 h-4 text-teal-700 shrink-0" />
+                  <span>MedSoru Öğrenci Portalı & Soru Bankası</span>
                 </div>
-                <p className="text-[10px] text-slate-500 mt-0.5">
-                  Bu isim soru eklerken otomatik hatırlanacaktır.
+                <p className="text-[11px] text-slate-600 leading-relaxed">
+                  MedSoru; Tıp Fakültesi amfi ders slaytları, kurul çıkmış soruları ve doğrulanmış soru hafızasını birleştiren otonom bir tıp çalışma ortamıdır. Soru ekleyebilir, sınav provası yapabilir ve ders slaytlarını doğrudan inceleyebilirsiniz.
                 </p>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
-                  <span>Öğrenci Numarası <span className="text-slate-400 font-normal">(İsteğe bağlı)</span></span>
-                  {studentNumber && (
-                    <span className={`text-[11px] font-bold px-2 py-0.5 rounded ${studentNumber.length === 11 ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-teal-50 text-teal-800 border border-teal-200'}`}>
-                      {studentNumber.length === 11 ? '✓ 11 Haneli Standart No (Geçerli)' : `${studentNumber.length} Hane Girildi (Kabul Edildi ✓)`}
-                    </span>
-                  )}
-                </label>
-                <div className="relative">
-                  <Hash className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    maxLength={16}
-                    value={studentNumber}
-                    onChange={(e) => handleStudentNumberChange(e.target.value)}
-                    placeholder="Örn: 20241054012"
-                    className="w-full pl-9 pr-3 py-2 text-sm font-mono border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
-                  />
-                </div>
-                <p className="text-[10px] text-slate-400 mt-0.5">
-                  Boşluklu veya tireli yapıştırsanız bile otomatik temizlenir.
-                </p>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">
-                  E-posta Adresi <span className="text-rose-500">*</span>
-                </label>
-                <div className="relative">
-                  <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Herhangi bir e-posta (üniversite veya kişisel)"
-                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
-                  />
-                </div>
-                <p className="text-[10px] text-emerald-700 mt-0.5 font-medium">
-                  🎉 İlk soru katkınızda bu adrese resmi teşekkür ve tebrik e-postası iletilecektir (Her kurulda 1 kez).
-                </p>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Şifre Belirleyin <span className="text-rose-500">*</span>
-                </label>
-                <div className="relative">
-                  <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
-                  <input
-                    type="password"
-                    required
-                    minLength={6}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Şifrenizi yazın (en az 6 karakter)"
-                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
-                  />
+                <div className="mt-2.5 pt-2 border-t border-teal-200/60 flex items-center justify-between text-[10px] text-teal-800 font-medium">
+                  <span className="flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal-600" />
+                    Ad Soyad, Öğrenci No & E-posta zorunludur
+                  </span>
+                  <span className="bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-bold">
+                    Dönem 3
+                  </span>
                 </div>
               </div>
 
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-2.5 rounded-lg text-sm transition-all shadow-sm cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 mt-2"
-              >
-                {isLoading ? <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <UserPlus className="w-4 h-4" />}
-                <span>Kayıt Ol ve Giriş Yap</span>
-              </button>
+              {verificationStep ? (
+                /* E-posta Doğrulama Adımı */
+                <form onSubmit={handleVerifyCodeSubmit} className="space-y-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200 animate-fadeIn">
+                  <div className="text-center space-y-1">
+                    <div className="w-10 h-10 bg-teal-100 text-teal-700 rounded-full mx-auto flex items-center justify-center">
+                      <KeyRound className="w-5 h-5" />
+                    </div>
+                    <h4 className="text-sm font-bold text-slate-800">E-posta Doğrulama Kodu</h4>
+                    <p className="text-xs text-slate-500">
+                      <strong>{email}</strong> adresinize gönderilen doğrulama kodunu giriniz:
+                    </p>
+                  </div>
 
-              <div className="text-center pt-1">
-                <span className="text-xs text-slate-500">Zaten hesabınız var mı? </span>
-                <button
-                  type="button"
-                  onClick={() => { setMode('login'); setError(null); setDomainError(false); }}
-                  className="text-xs font-bold text-teal-700 hover:underline cursor-pointer"
-                >
-                  Giriş Yapın
-                </button>
-              </div>
-            </form>
+                  <div>
+                    <input
+                      type="text"
+                      maxLength={6}
+                      value={verificationCode}
+                      onChange={(e) => setVerificationCode(e.target.value.replace(/\D/g, ''))}
+                      placeholder="Örn: 123456"
+                      className="w-full text-center text-xl tracking-widest font-mono py-2.5 bg-white border border-teal-500 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-teal-500/20"
+                      autoFocus
+                    />
+                    <p className="text-[10px] text-center text-slate-500 mt-1">
+                      (Geliştirme / Test aşamasında: <strong>123456</strong> kodunu girebilirsiniz)
+                    </p>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-2.5 rounded-lg text-sm transition-all shadow-sm cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    <Check className="w-4 h-4" />
+                    <span>Kodu Onayla ve Başla</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setVerificationStep(false);
+                      setError(null);
+                    }}
+                    className="w-full text-xs text-slate-500 hover:text-slate-800 py-1 text-center cursor-pointer"
+                  >
+                    ← Bilgileri Düzenle
+                  </button>
+                </form>
+              ) : (
+                /* Kayıt Formu */
+                <form onSubmit={handleRegister} className="space-y-3.5">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                      Ad Soyad <span className="text-rose-500">*</span>
+                    </label>
+                    <div className="relative">
+                      <User className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                      <input
+                        type="text"
+                        required
+                        value={displayName}
+                        onChange={(e) => setDisplayName(e.target.value)}
+                        placeholder="Örn: Ahmet Yılmaz"
+                        className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                      />
+                    </div>
+                    <p className="text-[10px] text-slate-500 mt-0.5">
+                      Lütfen kendi gerçek ad ve soyadınızı giriniz. Dr. House gibi dizi karakteri veya fakülte hoca isimleri yasaktır.
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
+                      <span>Öğrenci Numarası <span className="text-rose-500 font-bold">* (Zorunlu)</span></span>
+                      {studentNumber && (
+                        <span className={`text-[11px] font-bold px-2 py-0.5 rounded ${studentNumber.length === 11 ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-teal-50 text-teal-800 border border-teal-200'}`}>
+                          {studentNumber.length === 11 ? '✓ 11 Haneli Standart No' : `${studentNumber.length} Hane`}
+                        </span>
+                      )}
+                    </label>
+                    <div className="relative">
+                      <Hash className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                      <input
+                        type="text"
+                        required
+                        inputMode="numeric"
+                        maxLength={16}
+                        value={studentNumber}
+                        onChange={(e) => handleStudentNumberChange(e.target.value)}
+                        placeholder="Örn: 20241054012"
+                        className="w-full pl-9 pr-3 py-2 text-sm font-mono border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                      />
+                    </div>
+                    <p className="text-[10px] text-slate-400 mt-0.5">
+                      Tıp Fakültesi öğrenci numaranız zorunludur. Rakamlar otomatik filtrelenir.
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                      E-posta Adresi <span className="text-rose-500">* (Doğrulama Yapılacak)</span>
+                    </label>
+                    <div className="relative">
+                      <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                      <input
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Örn: ogrenci@ogr.karabuk.edu.tr veya gmail.com"
+                        className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                      />
+                    </div>
+                    <p className="text-[10px] text-emerald-700 mt-0.5 font-medium">
+                      🎉 Kayıt sonrası bu adrese aktivasyon kodu ve hoş geldiniz e-postası iletilecektir.
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                      Şifre Belirleyin <span className="text-rose-500">*</span>
+                    </label>
+                    <div className="relative">
+                      <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                      <input
+                        type="password"
+                        required
+                        minLength={6}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Şifrenizi yazın (en az 6 karakter)"
+                        className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-2.5 rounded-lg text-sm transition-all shadow-sm cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2 mt-2"
+                  >
+                    {isLoading ? <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <UserPlus className="w-4 h-4" />}
+                    <span>Kayıt Ol ve Doğrula</span>
+                  </button>
+
+                  <div className="text-center pt-1">
+                    <span className="text-xs text-slate-500">Zaten hesabınız var mı? </span>
+                    <button
+                      type="button"
+                      onClick={() => { setMode('login'); setError(null); setDomainError(false); }}
+                      className="text-xs font-bold text-teal-700 hover:underline cursor-pointer"
+                    >
+                      Giriş Yapın
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
           )}
 
           {/* TAB 3: ADMIN MULTI-PATH LOGIN */}

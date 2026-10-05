@@ -66,10 +66,10 @@ def verify_quote_fast(quote, hint_discipline=None, topk=6, thresh=0.5):
     QUOTE_CACHE[cache_key] = res
     return res
 
-BASE = r"C:\Users\indui\Desktop\meds_database"
-WORK = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
-R = r"C:\Users\indui\Desktop\meds\.meds_ds"
-OUT = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
+BASE = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
+WORK = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work")
+R = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds")
+OUT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/out")
 BAT = os.path.join(WORK, "batches")
 
 ALLOWED = {

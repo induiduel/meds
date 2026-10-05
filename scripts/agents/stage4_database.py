@@ -2,6 +2,10 @@
 """Aşama 4: temp3 -> meds_database. Yalnızca verified/fixed + kanıtlı sorular yazılır."""
 import json, shutil, sys, time
 from pathlib import Path
+try:
+    import orjson
+except ImportError:
+    orjson = None
 import lib
 
 DB = Path(lib.TEMP1).parent.parent / "meds_database"
@@ -42,21 +46,26 @@ def main():
     groups, rejected = {}, []
     qf = t3 / "questions.jsonl"
     if qf.exists():
-        for line in qf.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            q = json.loads(line)
-            # Yeni nesil ayırt edici etiketleri enjekte et
-            q["pipeline_generation"] = PIPELINE_GEN
-            q["tags"] = sorted(list(set(q.get("tags", []) + PIPELINE_TAGS)))
-            q["created_at"] = q.get("created_at") or now_iso
+        with open(qf, "r", encoding="utf-8") as fp:
+            for line in fp:
+                line_str = line.strip()
+                if not line_str:
+                    continue
+                try:
+                    q = orjson.loads(line_str) if orjson else json.loads(line_str)
+                except Exception:
+                    continue
+                # Yeni nesil ayırt edici etiketleri enjekte et
+                q["pipeline_generation"] = PIPELINE_GEN
+                q["tags"] = sorted(list(set(q.get("tags", []) + PIPELINE_TAGS)))
+                q["created_at"] = q.get("created_at") or now_iso
 
-            if q.get("status") in OK_STATUS and q.get("evidence") and valid(q, qs):
-                groups.setdefault(str(q.get("kurul") or q.get("donem") or "genel"), []).append(q)
-                stats["questions"] += 1
-            else:
-                rejected.append(q)
-                stats["rejected"] += 1
+                if q.get("status") in OK_STATUS and q.get("evidence") and valid(q, qs):
+                    groups.setdefault(str(q.get("kurul") or q.get("donem") or "genel"), []).append(q)
+                    stats["questions"] += 1
+                else:
+                    rejected.append(q)
+                    stats["rejected"] += 1
     for k, items in groups.items():
         jl(DB / "questions" / f"{lib.fold(k).replace(' ', '_')}.jsonl", items)
     if rejected:

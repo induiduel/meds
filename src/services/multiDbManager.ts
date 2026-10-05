@@ -293,19 +293,22 @@ class MultiDbManager {
     const mode = this.activeMode;
     let fetched: QuestionItem[] = [];
 
-    // 1. Explicit Supabase
-    if (mode === 'supabase') {
+    // 1. Önce Hızlı ve Eksiksiz Yerel / Cloudflare Express REST API'yi dene (Tüm 6.263 Doğrulanmış Soru)
+    try {
+      const local = await this.getLocalPastQuestions();
+      if (local && local.length > 0) {
+        fetched = local;
+      }
+    } catch (_) {}
+
+    // 2. Olmazsa Supabase'den çek
+    if (fetched.length === 0) {
       try {
-        const supa = await SupabaseDbService.getPastQuestions();
+        const supa = await SupabaseDbService.getAllPastQuestions();
         if (supa && supa.length > 0) fetched = supa;
       } catch (e) {
         console.warn('[MultiDbManager] Supabase getPastQuestions failed', e);
       }
-    }
-
-    // 2. Explicit Local PC
-    if (fetched.length === 0 && mode === 'local_pc') {
-      fetched = await this.getLocalPastQuestions();
     }
 
     // 3. Auto / Firebase mode

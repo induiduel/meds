@@ -11,6 +11,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ThumbsUp,
+  ThumbsDown,
   ExternalLink,
   BookMarked,
   X,
@@ -92,6 +93,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
+  const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [openExplanations, setOpenExplanations] = useState<Record<string, boolean>>({});
@@ -281,29 +283,73 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Upvote / Like toggle
   const handleToggleLike = async (q: QuestionItem) => {
-    const userUid = currentUser?.uid || 'anonim-std';
+    const userUid = currentUser?.uid || currentUser?.email || 'anonim-std';
     const isLiked = (q.likedBy || []).includes(userUid);
+    const isDisliked = (q.dislikedBy || []).includes(userUid);
+
     const newLikedBy = isLiked
       ? (q.likedBy || []).filter(u => u !== userUid)
       : [...(q.likedBy || []), userUid];
+    const newDislikedBy = isDisliked
+      ? (q.dislikedBy || []).filter(u => u !== userUid)
+      : (q.dislikedBy || []);
+
     const newUpvotes = isLiked
       ? Math.max(0, (q.upvotes || 1) - 1)
       : (q.upvotes || 0) + 1;
+    const newDownvotes = isDisliked
+      ? Math.max(0, (q.downvotes || 1) - 1)
+      : (q.downvotes || 0);
 
     // Optimistic UI update
     setQuestions(prev =>
       prev.map(item =>
         item.id === q.id
-          ? { ...item, upvotes: newUpvotes, likedBy: newLikedBy }
+          ? { ...item, upvotes: newUpvotes, downvotes: newDownvotes, likedBy: newLikedBy, dislikedBy: newDislikedBy }
           : item
       )
     );
 
     try {
-      await ApiService.upvoteQuestion(q.id, userUid);
+      await ApiService.upvotePastQuestion(q.id, userUid);
     } catch (err) {
-      // Revert if error
       console.warn('Like toggle error:', err);
+    }
+  };
+
+  // Downvote / Dislike toggle
+  const handleToggleDislike = async (q: QuestionItem) => {
+    const userUid = currentUser?.uid || currentUser?.email || 'anonim-std';
+    const isDisliked = (q.dislikedBy || []).includes(userUid);
+    const isLiked = (q.likedBy || []).includes(userUid);
+
+    const newDislikedBy = isDisliked
+      ? (q.dislikedBy || []).filter(u => u !== userUid)
+      : [...(q.dislikedBy || []), userUid];
+    const newLikedBy = isLiked
+      ? (q.likedBy || []).filter(u => u !== userUid)
+      : (q.likedBy || []);
+
+    const newDownvotes = isDisliked
+      ? Math.max(0, (q.downvotes || 1) - 1)
+      : (q.downvotes || 0) + 1;
+    const newUpvotes = isLiked
+      ? Math.max(0, (q.upvotes || 1) - 1)
+      : (q.upvotes || 0);
+
+    // Optimistic UI update
+    setQuestions(prev =>
+      prev.map(item =>
+        item.id === q.id
+          ? { ...item, upvotes: newUpvotes, downvotes: newDownvotes, likedBy: newLikedBy, dislikedBy: newDislikedBy }
+          : item
+      )
+    );
+
+    try {
+      await ApiService.downvotePastQuestion(q.id, userUid);
+    } catch (err) {
+      console.warn('Dislike toggle error:', err);
     }
   };
 
@@ -432,7 +478,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const ambiguousCount = questions.filter(q => q.isAmbiguous).length;
     const reportedCount = questions.filter(q => q.reports && q.reports.length > 0).length;
     const deepseekCount = questions.filter(isDeepSeekQuestion).length;
-    return { validCount, ambiguousCount, reportedCount, deepseekCount, totalCount: questions.length };
+    const isNew = (q: QuestionItem) => Boolean(
+      q.isNewQuestion ||
+      (q.examYear ? q.examYear.includes('2026') || q.examYear.includes('2027') : false) ||
+      (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false)
+    );
+    const newCount = questions.filter(isNew).length;
+    return { validCount, ambiguousCount, reportedCount, deepseekCount, newCount, totalCount: questions.length };
   }, [questions]);
 
   // Filtered Questions
@@ -488,9 +540,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       if (deepseekFilter === 'deepseek_only' && !isDeepSeekQuestion(q)) return false;
       if (deepseekFilter === 'standard_only' && isDeepSeekQuestion(q)) return false;
 
+      // 7. New vs Archived Question Filter
+      const isNew = Boolean(
+        q.isNewQuestion ||
+        (q.examYear ? q.examYear.includes('2026') || q.examYear.includes('2027') : false) ||
+        (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false)
+      );
+      if (newnessFilter === 'new_only' && !isNew) return false;
+      if (newnessFilter === 'archived_only' && isNew) return false;
+
       return true;
     });
-  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter]);
+  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter, newnessFilter]);
 
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
@@ -520,6 +581,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(deepseekFilter !== 'all'
       ? [{ label: deepseekFilter === 'deepseek_only' ? '⚡ Yalnızca DeepSeek' : 'Standart sorular', clear: () => setDeepseekFilter('all') }]
       : []),
+    ...(newnessFilter !== 'all'
+      ? [{ label: newnessFilter === 'new_only' ? '✨ Yeni Sorular' : '📁 Arşiv / Geçmiş Yıl', clear: () => setNewnessFilter('all') }]
+      : []),
     ...(selectedCommittee !== 'all'
       ? [{ label: formatCommitteeName(selectedCommittee).split(':')[0], clear: () => setSelectedCommittee('all') }]
       : []),
@@ -533,6 +597,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setSearchQuery('');
     setAmbiguityTab('valid');
     setDeepseekFilter('all');
+    setNewnessFilter('all');
     setSelectedCommittee('all');
     setSelectedYear('all');
     setSelectedDiscipline('all');
@@ -709,6 +774,36 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               </div>
             </div>
 
+            {/* Yeni / Arşiv Soru Filtresi */}
+            <div className="flex flex-col gap-1.5">
+              <span className="text-[12.5px] font-semibold text-emerald-700 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                Soru Yaşı & Arşiv Durumu
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {(
+                  [
+                    ['all', `Tümü · ${tabCounts.totalCount}`],
+                    ['new_only', `✨ Yalnızca Yeni Sorular · ${tabCounts.newCount}`],
+                    ['archived_only', `📁 Geçmiş Yıl / Arşiv · ${tabCounts.totalCount - tabCounts.newCount}`],
+                  ] as const
+                ).map(([id, label]) => (
+                  <button
+                    key={id}
+                    type="button"
+                    aria-pressed={newnessFilter === id}
+                    onClick={() => {
+                      setNewnessFilter(id as any);
+                      setCurrentPage(1);
+                    }}
+                    className={chipCls(newnessFilter === id)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <label className="flex flex-col gap-1.5">
                 <span className="text-[12.5px] font-semibold text-ink-3">Kurul / Sınav</span>
@@ -858,9 +953,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         <div className="flex flex-col gap-3">
           {paginatedQuestions.map((q) => {
             const effectiveMode: 'redacted' | 'raw' | 'split' = cardViewOverrides[q.id] || viewMode;
-            const learnMatch = learnMatcher.getMatch(q);
+            const userUid = currentUser?.uid || currentUser?.email || 'anonim-std';
+            const isLiked = (q.likedBy || []).includes(userUid);
+            const isDisliked = (q.dislikedBy || []).includes(userUid);
+            const isNewQuestion = q.isNewQuestion || (q.examYear ? q.examYear.includes('2026') || q.examYear.includes('2027') : false) || (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false);
+
             const slideMatch = getQuestionSlideMatch(q);
-            const isLiked = (q.likedBy || []).includes(currentUser?.uid || 'anonim-std');
+            const learnMatch = learnMatcher.getMatch(q);
 
             const stem = q.reconstruction?.stem || q.stem || q.fragments?.[0]?.text || q.topic;
             const options = q.reconstruction?.options || q.options || [];
@@ -907,6 +1006,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               <article key={q.id} className="bg-white rounded-2xl border border-line p-4 sm:p-5 flex flex-col gap-3.5">
                 <header className="flex items-center gap-2.5 min-w-0">
                   <span className="font-mono text-[13px] font-semibold text-ink shrink-0">#{q.questionNumber}</span>
+                  {isNewQuestion ? (
+                    <span className="h-[20px] px-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold inline-flex items-center shrink-0">
+                      Yeni Soru
+                    </span>
+                  ) : (
+                    <span className="h-[20px] px-2 rounded-full bg-slate-100 text-slate-600 text-[11px] font-medium inline-flex items-center shrink-0">
+                      Geçmiş Yıl
+                    </span>
+                  )}
                   <span className="text-[13px] text-ink-3 truncate min-w-0" title={formatCommitteeName(q.committeeId)}>
                     {meta}
                   </span>
@@ -1079,11 +1187,23 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                     aria-pressed={isLiked}
                     title={isLiked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
                     className={`h-8 px-2.5 rounded-lg border inline-flex items-center gap-1.5 cursor-pointer transition-colors ${
-                      isLiked ? 'bg-accent-soft border-accent/30 text-accent font-semibold' : 'bg-white border-line text-ink-2 hover:border-line-2'
+                      isLiked ? 'bg-accent-soft border-accent/40 text-accent font-semibold' : 'bg-white border-line text-ink-2 hover:border-line-2'
                     }`}
                   >
                     <ThumbsUp className={`w-3.5 h-3.5 ${isLiked ? 'fill-current' : ''}`} />
                     {q.upvotes || 0}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleToggleDislike(q)}
+                    aria-pressed={isDisliked}
+                    title={isDisliked ? 'Beğenmemeyi geri al' : 'Soruyu beğenme (Eksik / Hatalı)'}
+                    className={`h-8 px-2.5 rounded-lg border inline-flex items-center gap-1.5 cursor-pointer transition-colors ${
+                      isDisliked ? 'bg-rose-50 border-rose-300 text-rose-700 font-semibold' : 'bg-white border-line text-ink-2 hover:border-line-2'
+                    }`}
+                  >
+                    <ThumbsDown className={`w-3.5 h-3.5 ${isDisliked ? 'fill-current' : ''}`} />
+                    {q.downvotes || 0}
                   </button>
                   <button
                     type="button"

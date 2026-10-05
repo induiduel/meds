@@ -80,6 +80,84 @@ export function getTieredGroqKeys(customGroqKey?: string): { key: string; label:
   return keys;
 }
 
+// =========================================================================
+// Yerel GPU Ollama Entegrasyonu (RTX 4060 - Qwen2.5 / Gemma 3 / DeepSeek-R1 / qLoRA)
+// Sıfır Maliyet & Tamamen Yerel Donanım
+// =========================================================================
+export const OLLAMA_HOST = process.env.OLLAMA_HOST || process.env.OLLAMA_URL || 'http://127.0.0.1:11434';
+
+export async function callLocalOllama(
+  prompt: string,
+  model: string = 'gemma3:4b',
+  options?: {
+    systemPrompt?: string;
+    isJson?: boolean;
+    messages?: { role: string; content: string }[];
+  }
+): Promise<{ text: string; model: string; keyUsed: string; providerUsed: string }> {
+  const isJson = options?.isJson === true;
+  const sysMsg = options?.systemPrompt || (isJson
+    ? 'Sen Tıp Fakültesi komite ve TUS sınavları konusunda uzmanlaşmış kıdemli bir tıp akademisyenisin. İstenen sınav sorusunu harfiyen belirtilen geçerli JSON şemasında oluştur.'
+    : 'Sen Tıp Fakültesi öğrencilerine sınav sorularında rehberlik eden kıdemli bir tıp hocası ve eğitmenisin.');
+
+  const chatMessages: any[] = options?.messages && options.messages.length > 0
+    ? [
+        { role: 'system', content: sysMsg },
+        ...options.messages
+      ]
+    : [
+        { role: 'system', content: sysMsg },
+        { role: 'user', content: prompt }
+      ];
+
+  const payload: any = {
+    model: model || 'gemma3:4b',
+    messages: chatMessages,
+    stream: false,
+    options: {
+      temperature: isJson ? 0.2 : 0.4,
+      num_gpu: 99 // Zorunlu RTX 4060 GPU Offload kuralı (-ngl 99)
+    }
+  };
+
+  if (isJson) {
+    payload.format = 'json';
+  }
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 45000);
+
+  try {
+    const res = await fetch(`${OLLAMA_HOST}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      signal: controller.signal
+    });
+    clearTimeout(timeoutId);
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`Ollama Hatası (${res.status}): ${errText}`);
+    }
+
+    const data: any = await res.json();
+    let text = data.message?.content || (isJson ? '{}' : '');
+    if (isJson) {
+      text = text.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
+    }
+    return {
+      text,
+      model,
+      keyUsed: 'Yerel Donanım (RTX 4060 GPU)',
+      providerUsed: `Yerel Ollama (${model})`
+    };
+  } catch (err: any) {
+    clearTimeout(timeoutId);
+    throw err;
+  }
+}
+
 export async function callGroqCloud(
   prompt: string,
   model: string = 'openai/gpt-oss-120b',
@@ -380,7 +458,7 @@ export async function generateResilientMedicalAi(options: {
   customGroqKey?: string;
   customMuseSparkKey?: string;
   museSparkBaseUrl?: string;
-  preferredProvider?: 'gemini' | 'groq' | 'muse-spark' | 'auto';
+  preferredProvider?: 'gemini' | 'groq' | 'muse-spark' | 'local-ollama' | 'auto';
   model?: string;
   responseFormat?: 'json' | 'text';
   systemInstruction?: string;
@@ -400,6 +478,27 @@ export async function generateResilientMedicalAi(options: {
   } = options;
 
   const isJson = responseFormat === 'json';
+
+  // 0. ÖZEL DURUM: Kullanıcı Yerel Ollama (RTX 4060 GPU) seçtiyse doğrudan yerelde çalıştır
+  if (preferredProvider === 'local-ollama' || (model && (model.startsWith('gemma3') || model.startsWith('deepseek-r1') || model.startsWith('qwen3') || model.startsWith('medgemma')))) {
+    console.log(`[AI Multi-Provider] 🟢 Yerel GPU Ollama doğrudan seçildi (${model || 'gemma3:4b'})...`);
+    try {
+      const ollamaRes = await callLocalOllama(prompt, model || 'gemma3:4b', {
+        systemPrompt: systemInstruction,
+        isJson,
+        messages
+      });
+      return {
+        text: ollamaRes.text,
+        providerUsed: ollamaRes.providerUsed,
+        planUsed: `Yerel RTX 4060 GPU (${ollamaRes.model})`,
+        attemptsCount: 1,
+        fallbackUsed: false
+      };
+    } catch (e: any) {
+      console.warn('[AI Multi-Provider] ⚠️ Yerel Ollama başarısız, bulut sağlayıcılara düşülüyor:', e.message);
+    }
+  }
   const isMuseExplicit = preferredProvider === 'muse-spark' || Boolean(model && (model.includes('spark') || model.includes('muse')));
   const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
   const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;

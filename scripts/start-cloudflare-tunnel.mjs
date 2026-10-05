@@ -17,7 +17,7 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
-const DESKTOP_DIR = path.resolve(process.env.USERPROFILE || 'C:\\Users\\indui', 'Desktop');
+const DESKTOP_DIR = path.resolve(process.env.USERPROFILE || process.env.HOME, 'Desktop');
 
 let serverProcess = null;
 let tunnelProcess = null;

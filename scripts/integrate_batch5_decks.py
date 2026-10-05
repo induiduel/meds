@@ -4,8 +4,8 @@ import re
 import sys
 import shutil
 
-SCRATCH_DIR = r"C:\Users\indui\.gemini\antigravity\brain\386176b3-c821-4f99-a837-6f25ae2aca35\scratch"
-DECKS_JSON = r"c:\Users\indui\Desktop\meds\src\data\interactive_learning_decks.json"
+SCRATCH_DIR = (__import__('tempfile').gettempdir())
+DECKS_JSON = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data/interactive_learning_decks.json")
 
 FILES = [
     ("deck_genital_enfeksiyonlar.json", "learn-genital-enfeksiyonlar", "1e6198aa-321f-46ce-b6d7-7b6bda17f3be"),

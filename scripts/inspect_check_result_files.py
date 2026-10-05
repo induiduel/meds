@@ -11,7 +11,7 @@ with open('data/drive_check_result.json', encoding='utf-8') as f:
 new_files = check_res.get('newFiles', [])
 print(f"Total files in drive_check_result: {len(new_files)}")
 
-base_dir = r"c:\Users\indui\Desktop\meds_database"
+base_dir = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
 all_local = {}
 for root, dirs, files in os.walk(base_dir):
     for f in files:

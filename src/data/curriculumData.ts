@@ -292,11 +292,7 @@ export function normalizeDonem3Discipline(raw?: string): string | null {
 export function isDonem3Question(q: { committeeId?: string; discipline?: string }): boolean {
   if (!q) return false;
   const cid = (q.committeeId || '').toLowerCase().trim();
-  if (!cid.startsWith('donem3')) {
-    return false;
-  }
-  const norm = normalizeDonem3Discipline(q.discipline);
-  return Boolean(norm);
+  return cid.startsWith('donem3');
 }
 
 export function normalizeDisciplineName(name: string): string {

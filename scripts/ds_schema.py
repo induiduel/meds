@@ -1,11 +1,11 @@
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8')
-d = json.load(open(r"C:\Users\indui\Desktop\meds_database\database_json\donem3k1\pastquestions.json", encoding='utf-8'))
+d = json.load(open(((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/database_json/donem3k1/pastquestions.json"), encoding='utf-8'))
 print("örnek kayıt alanları:", list(d[0].keys()))
 print()
 print(json.dumps(d[0], ensure_ascii=False, indent=1))
 print("\n--- reconstruction olan mı? ---")
 print(json.dumps(d[1].get('reconstruction'), ensure_ascii=False, indent=1)[:900])
 print("\n--- realtimequestion.json ---")
-r = json.load(open(r"C:\Users\indui\Desktop\meds_database\database_json\donem3k1\realtimequestion.json", encoding='utf-8'))
+r = json.load(open(((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/database_json/donem3k1/realtimequestion.json"), encoding='utf-8'))
 print(json.dumps(r, ensure_ascii=False, indent=1)[:1500])

@@ -6,9 +6,9 @@ import json, os, sys, hashlib, glob, re
 from collections import Counter
 
 sys.stdout.reconfigure(encoding='utf-8')
-WORK = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
+WORK = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work")
 SRC = os.path.join(WORK, "meds_donem3_sorulari_duzeltilmis.jsonl")
-TARGET_DIR = r"C:\Users\indui\Desktop\meds_database\deepseek_data"
+TARGET_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/deepseek_data")
 TARGET = os.path.join(TARGET_DIR, "meds_donem3_sorulari_duzeltilmis.jsonl")
 
 MOJI = re.compile(r'[ÃÄÅÂ]|&apos;|&quot;|&#\d+;')

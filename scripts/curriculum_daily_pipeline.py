@@ -37,8 +37,8 @@ from datetime import datetime
 # Windows console UTF-8 output
 sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT_DIR = r"c:\Users\indui\Desktop\meds"
-MEDS_DB_DIR = r"c:\Users\indui\Desktop\meds_database"
+ROOT_DIR = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))))
+MEDS_DB_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
 
 DERS_NOTLARI_PDF = os.path.join(MEDS_DB_DIR, "ders_notlari_pdf")
 DERS_NOTLARI_TXT = os.path.join(MEDS_DB_DIR, "ders_notlari_txt")

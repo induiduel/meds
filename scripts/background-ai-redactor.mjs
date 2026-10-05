@@ -20,7 +20,7 @@ import { getFirestore, doc, setDoc, onSnapshot, collection, updateDoc, writeBatc
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_DIR = 'C:\\Users\\indui\\Desktop\\meds_database';
+const BASE_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}`;
 const EXAM_TXT_DIR = path.join(BASE_DIR, 'meds_sorular_txt');
 const NOTES_TXT_DIR = path.join(BASE_DIR, 'ders_notlari_txt');
 const ROOT_DIR = path.resolve(__dirname, '..');

@@ -7,7 +7,7 @@ Halk Sagligi Tarihcesi, Felsefesi ve Koruyucu Hekimlik Ilkeleri
 import json
 import os
 
-target_path = r"C:\Users\indui\.gemini\antigravity\brain\386176b3-c821-4f99-a837-6f25ae2aca35\scratch\deck_halk_sagligi_tarihcesi.json"
+target_path = (__import__('tempfile').gettempdir() + "/deck_halk_sagligi_tarihcesi.json")
 
 slides = [
     # 1

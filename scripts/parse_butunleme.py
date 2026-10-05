@@ -1,7 +1,7 @@
 import re
 import json
 
-with open(r'C:\Users\indui\Desktop\meds_database\meds_sorular_txt\butunleme_clean_extracted.txt', 'r', encoding='utf-8') as f:
+with open(((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/meds_sorular_txt/butunleme_clean_extracted.txt'), 'r', encoding='utf-8') as f:
     text = f.read()
 
 lines = [l.strip() for l in text.split('\n') if l.strip()]
@@ -52,6 +52,6 @@ while i < len(lines):
     i += 1
 
 print('Total Bütünleme questions parsed:', len(questions))
-with open(r'C:\Users\indui\Desktop\meds_database\meds_sorular_txt\parsed_butunleme_raw.json', 'w', encoding='utf-8') as f:
+with open(((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/meds_sorular_txt/parsed_butunleme_raw.json'), 'w', encoding='utf-8') as f:
     json.dump(questions, f, ensure_ascii=False, indent=2)
 print('Saved to parsed_butunleme_raw.json')

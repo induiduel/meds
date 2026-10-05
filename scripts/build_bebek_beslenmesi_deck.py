@@ -10,8 +10,8 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-SCRATCH_PATH = r"C:\Users\indui\.gemini\antigravity\brain\386176b3-c821-4f99-a837-6f25ae2aca35\scratch\deck_bebek_beslenmesi.json"
-DECKS_JSON_PATH = r"c:\Users\indui\Desktop\meds\src\data\interactive_learning_decks.json"
+SCRATCH_PATH = (__import__('tempfile').gettempdir() + "/deck_bebek_beslenmesi.json")
+DECKS_JSON_PATH = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data/interactive_learning_decks.json")
 
 def make_slide(slide_num, title, subtitle, narrative, spots, practice_q):
     return {

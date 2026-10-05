@@ -14,7 +14,7 @@ try:
 except Exception:
     pass
 
-BASE_DIR = r"C:\Users\indui\Desktop\meds_database"
+BASE_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
 SORULAR_DIR = os.path.join(BASE_DIR, "meds_sorular")
 IMAGES_DIR = os.path.join(BASE_DIR, "meds_sorular_images")
 

@@ -5,16 +5,16 @@ Ders notu kanıtları hızlı taranır ve açıklama/şık kalitesi standartlara
 """
 import sys, os, glob, json, re
 sys.stdout.reconfigure(encoding='utf-8')
-sys.path.insert(0, r"C:\Users\indui\Desktop\meds\scripts")
+sys.path.insert(0, (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/scripts"))
 from ds_assemble import verify_quote_fast, norm, clean
 
-WORK = r"C:\Users\indui\Desktop\meds\.meds_ds\work"
+WORK = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work")
 BAT = os.path.join(WORK, "batches")
-OUT = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
+OUT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/out")
 os.makedirs(OUT, exist_ok=True)
 
 # Redakte soru haritası
-REDAKTE_DIR = r"C:\Users\indui\Desktop\meds_database\redakte_sorular"
+REDAKTE_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/redakte_sorular")
 redakte_map = {}
 for rf in glob.glob(os.path.join(REDAKTE_DIR, "*_tum_redakte_sorular.json")):
     try:

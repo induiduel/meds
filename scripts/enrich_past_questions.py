@@ -9,10 +9,10 @@ from datetime import datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-DATA_DIR = r"C:\Users\indui\Desktop\meds\data"
-SRC_DATA_DIR = r"C:\Users\indui\Desktop\meds\src\data"
-JSONL_FILE = r"C:\Users\indui\Desktop\meds_database\deepseek_data\meds_donem3_sorulari_duzeltilmis.jsonl"
-WORK_JSONL = r"C:\Users\indui\Desktop\meds\.meds_ds\work\meds_donem3_sorulari_duzeltilmis.jsonl"
+DATA_DIR = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/data")
+SRC_DATA_DIR = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data")
+JSONL_FILE = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/deepseek_data/meds_donem3_sorulari_duzeltilmis.jsonl")
+WORK_JSONL = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work/meds_donem3_sorulari_duzeltilmis.jsonl")
 PAST_QUESTIONS_FILE = os.path.join(DATA_DIR, "pastQuestions.json")
 
 # Hangi jsonl güncel ise onu kullan

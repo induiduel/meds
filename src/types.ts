@@ -20,6 +20,17 @@ export interface QuestionOption {
   likedBy?: string[];
 }
 
+export interface AlternativeOption {
+  id: string;
+  text: string;
+  sourceQuestionId?: string;
+  suggestedBy?: string;
+  suggestedByUid?: string;
+  upvotes?: number;
+  likedBy?: string[];
+  reason?: string;
+}
+
 export interface ReconstructedQuestion {
   stem: string;
   options: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string; isAiFilled?: boolean; isCorrect?: boolean }[];
@@ -136,6 +147,9 @@ export interface QuestionItem {
   lectureReference?: QuestionLectureMatch;
   upvotes?: number;
   likedBy?: string[];
+  downvotes?: number;
+  dislikedBy?: string[];
+  isNewQuestion?: boolean;
   sourceFile?: string;
   sourceNote?: string;
   correctAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
@@ -145,6 +159,7 @@ export interface QuestionItem {
   isLocked?: boolean;
   author?: string;
   mergedSatellites?: QuestionItem[];
+  alternativeOptions?: AlternativeOption[];
   isMerged?: boolean;
   customRedactedBy?: string;
   customRedactedAt?: string;

@@ -14,10 +14,10 @@ pdf_items = [item for item in drive_items if not item.get('isFolder') and item.g
 print(f"Total PDF items in Drive crawler: {len(pdf_items)}")
 
 local_dirs = [
-    r'c:\Users\indui\Desktop\meds_database\ders_notlari_pdf',
-    r'c:\Users\indui\Desktop\meds_database\kurul_ders_notlari',
+    ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/ders_notlari_pdf'),
+    ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/kurul_ders_notlari'),
     r'c:\Users\indui\Desktop\Dönem 3 Notlar',
-    r'c:\Users\indui\Desktop\meds_database\cikmis_sorular_pdf'
+    ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/cikmis_sorular_pdf')
 ]
 
 local_files = set()

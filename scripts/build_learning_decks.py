@@ -26,7 +26,7 @@ import glob
 sys.stdout.reconfigure(encoding='utf-8')
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-MEDS_DB_ROOT = r'c:\Users\indui\Desktop\meds_database'
+MEDS_DB_ROOT = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
 TRANSCRIPTIONS_DIR = os.path.join(MEDS_DB_ROOT, 'transcriptions')
 OUTPUT_FILE = os.path.join(PROJECT_ROOT, 'src', 'data', 'interactive_learning_decks.json')
 OUTPUT_META_FILE = os.path.join(PROJECT_ROOT, 'src', 'data', 'learning_decks_meta.json')

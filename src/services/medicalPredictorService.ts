@@ -154,7 +154,7 @@ export function predictCommitteeAndDiscipline(
     .split(/\s+/)
     .filter((w) => w.length >= 3);
 
-  if (words.length < 2) {
+  if (words.length === 0 || (words.length < 2 && words[0].length < 5)) {
     return { isDifferentFromSelectedCommittee: false };
   }
 

@@ -29,6 +29,7 @@ export type AppRoute =
   | 'study'
   | 'summaries'
   | 'transcripts'
+  | 'ai_chat'
   | 'admin'
   | 'manage';
 
@@ -45,6 +46,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   notes: '/notlar',
   summaries: '/ozetler',
   transcripts: '/ses-kayitlari',
+  ai_chat: '/asistan',
   matrix: '/harita',
   booklet: '/kitapcik',
   admin: '/yonetim',
@@ -64,6 +66,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   notes: 'Ders notları',
   summaries: 'Ders özetleri',
   transcripts: 'Ses kayıtları',
+  ai_chat: 'AI Tıp Asistanı',
   matrix: 'Soru haritası',
   booklet: 'A4 kitapçık',
   admin: 'Yönetim',
@@ -99,6 +102,10 @@ const ALIASES: Record<string, AppRoute> = {
   study: 'study',
   summaries: 'summaries',
   transcripts: 'transcripts',
+  ai_chat: 'ai_chat',
+  asistan: 'ai_chat',
+  chat: 'ai_chat',
+  sohbet: 'ai_chat',
   admin: 'admin',
   manage: 'manage',
   yonetim: 'admin',

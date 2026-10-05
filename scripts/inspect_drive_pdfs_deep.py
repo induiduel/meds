@@ -7,7 +7,7 @@ import json
 sys.stdout.reconfigure(encoding='utf-8')
 
 catalog = json.load(open('data/user_drive_catalog.json', encoding='utf-8'))
-pdf_dir = 'c:/Users/indui/Desktop/meds_database/ders_notlari_pdf'
+pdf_dir = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/ders_notlari_pdf')
 
 print(f"{'No':2s} | {'Sayfa':5s} | {'Karakter':8s} | {'Drive Dosya Adı'}")
 print("-" * 80)

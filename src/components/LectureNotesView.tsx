@@ -145,7 +145,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
       // Fallback: Local Server API
       try {
-        const apiBase = localStorage.getItem('medsoru_custom_api_url') || (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+        const apiBase = localStorage.getItem('medsoru_custom_api_url') || '';
         const res = await fetch(`${apiBase}/api/lecture-notes`);
         if (res.ok) {
           const json = await res.json();

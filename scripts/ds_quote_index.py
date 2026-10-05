@@ -2,7 +2,7 @@
 import json, os, re, sys, glob
 from difflib import SequenceMatcher
 sys.stdout.reconfigure(encoding='utf-8')
-BASE = r"C:\Users\indui\Desktop\meds_database"
+BASE = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')))
 RZ = os.path.join(BASE, "redakte_ozet")
 
 def norm(s):
@@ -49,8 +49,8 @@ def verify_quote(quote, hint_discipline=None):
     return best
 
 if __name__ == "__main__":
-    OUT = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
-    BAT = r"C:\Users\indui\Desktop\meds\.meds_ds\work\batches"
+    OUT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/out")
+    BAT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work/batches")
     stats = {"tam": 0, "id_yanlis": 0, "uydurma": 0, "kisa": 0}
     for f in sorted(glob.glob(os.path.join(OUT, "*.json"))):
         bid = os.path.basename(f)[:-5]

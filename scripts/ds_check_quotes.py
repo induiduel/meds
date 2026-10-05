@@ -1,10 +1,10 @@
 import json, os, glob, re, sys
 sys.stdout.reconfigure(encoding='utf-8')
-OUT = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
-BAT = r"C:\Users\indui\Desktop\meds\.meds_ds\work\batches"
+OUT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/out")
+BAT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work/batches")
 CAT = {}
 import glob as g
-for f in g.glob(r"C:\Users\indui\Desktop\meds_database\redakte_ozet\Kurul *\*\*.md"):
+for f in g.glob(((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/redakte_ozet/Kurul */*/*.md")):
     CAT[f] = open(f, encoding='utf-8', errors='replace').read()
 
 def norm(s):

@@ -2,10 +2,10 @@ import os
 import json
 import re
 
-DECKS_JSON = r"c:\Users\indui\Desktop\meds\src\data\interactive_learning_decks.json"
-CATALOG_TS = r"c:\Users\indui\Desktop\meds\src\data\deckPdfCatalog.ts"
-TXT_DIR = r"c:\Users\indui\Desktop\meds_database\ders_notlari_txt"
-OUTPUT_MAPPING_JSON = r"c:\Users\indui\Desktop\meds\src\data\slidePdfMappings.json"
+DECKS_JSON = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data/interactive_learning_decks.json")
+CATALOG_TS = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data/deckPdfCatalog.ts")
+TXT_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + "/ders_notlari_txt")
+OUTPUT_MAPPING_JSON = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/src/data/slidePdfMappings.json")
 
 def clean_text(t):
     return re.sub(r'\s+', ' ', t).strip()

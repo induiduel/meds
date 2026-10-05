@@ -1,5 +1,52 @@
 [
   {
+    "id": "act-1791142506820-fsvol",
+    "questionId": "q-donem3-kurul1-unassigned-1790967524679",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Tıbbi Genetik",
+    "topic": "Kromozomal Hastalıklar ve Dismorfoloji (Down Sendromu)",
+    "interactionType": "refinement",
+    "userDisplayName": "Yönetici",
+    "prompt": "Öğrenci hafıza parçalarındaki 'simian çizgisi' ve 'ense saydamlığı' verileri, fakülte slaytlarındaki 'Dismorfolojide Genetik Terminoloji (Slayt #37/#39)' içeriğiyle (duodenal atrezi, konjenital kalp defekti, simian çizgisi, hipotoni) tam uyumlu bir klinik vaka formatına dönüştürüldü. Eksik olan 5 seçenek amfi ders notlarındaki kromozomal hastalıklar bağlamında oluşturuldu ve yazım hataları giderilerek saf bir kurul sorusu hazırlandı.",
+    "response": "Down Sendromu (Trizomi 21), canlı doğumlarda en sık görülen otozomal kromozom anomalisidir. Birinci trimester tarama ultrasonografisinde artmış ense saydamlığı (nukal translusens - NT) ve burun kemiği (nazal kemik) hipoplazisi/agenezisi en önemli belirteçlerdendir. Postnatal dönemde hipotoni, brakisefali, basık burun kökü, yukarı çekik palpebral fissürler, Brushfield lekeleri, avuç içinde tek transvers fleksiyon çizgisi (simian çizgisi) ve birinci-ikinci ayak parmakları arasında ayrıklık (sandal aralığı) tipik dismorfik bulgulardır. Kardiyovasküler sistemde en sık görülen defekt atriyoventriküler septal defekt (endokardiyal yastık defekti / AV kanal), gastrointestinal sistemde ise duodenal stenoz veya duodenal atrezi (radyolojide 'çift hava kabarcığı - double bubble' görünümü) ve Hirschsprung hastalığıdır. \n\nÇeldiricilerin Değerlendirilmesi:\n- Edwards sendromu (Trizomi 18): İntrauterin gelişme geriliği, mikrosefali, mikrognati, düşük yerleşimli ve malforme kulaklar, üst üste binen parmaklar (clenched hands - 2. ve 5. parmakların diğerlerinin üzerine binmesi), rocker-bottom (beşik taban) ayak ve sıklıkla VSD ile seyreder.\n- Patau sendromu (Trizomi 13): Holoprozensefali, mikrosefali, mikroftalmi, yarık dudak/damak, postaksiyel polidaktili, aplazia kutis ve skrotal anomaliler ile karakterizedir.\n- Turner sendromu (45,X): Genişlemiş kistik higroma, yele boyun, lenfödem, aort koarktasyonu ve biküspit aort kapağı ile karakterizedir.\n- Klinefelter sendromu (47,XXY): Yenidoğan döneminde belirgin majör malformasyon oluşturmaz; pubertede hipergonadotropik hipogonadizm, jinekomasti ve uzun boy ile klinik verir.",
+    "contextSnapshot": {
+      "stem": "Prenatal ultrasonografik incelemesinde birinci trimesterde artmış ense saydamlığı (NT) ve nazal kemik hipoplazisi saptanan; doğum sonrasında yapılan fizik muayenesinde kas hipotonisi, basık burun kökü, avuç içinde tek transvers palmar çizgi (simian çizgisi) ile birlikte ekokardiyografisinde atriyoventriküler septal defekt (endokardiyal yastık defekti) ve direkt batın grafisinde duodenal atrezi (çift kabarcık belirtisi) tespit edilen bir yenidoğan için en olası tanı aşağıdakilerden hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Down sendromu (Trizomi 21)",
+          "isAiFilled": false
+        },
+        {
+          "key": "B",
+          "text": "Edwards sendromu (Trizomi 18)",
+          "isAiFilled": false
+        },
+        {
+          "key": "C",
+          "text": "Patau sendromu (Trizomi 13)",
+          "isAiFilled": false
+        },
+        {
+          "key": "D",
+          "text": "Turner sendromu (45,X)",
+          "isAiFilled": false
+        },
+        {
+          "key": "E",
+          "text": "Klinefelter sendromu (47,XXY)",
+          "isAiFilled": false
+        }
+      ],
+      "correctAnswer": "A",
+      "confidenceScore": 96
+    },
+    "metadata": {},
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1791142506820-fsvol",
+    "createdAt": "2026-10-04T19:35:06.820Z"
+  },
+  {
     "id": "act-1791022798462-6zbxd",
     "questionId": "d3-k1-pat-001",
     "committeeId": "donem3-kurul1",

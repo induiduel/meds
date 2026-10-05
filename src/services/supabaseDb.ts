@@ -337,16 +337,41 @@ export const SupabaseDbService = {
     }
   },
 
-  // Past Questions
+  // Past Questions (PostgREST 1000 satır sınırını aşan chunk-build sayfalamalı yükleme)
   async getAllPastQuestions(): Promise<QuestionItem[]> {
     const client = getSupabaseClient();
     if (!client) return [];
 
     try {
-      const { data, error } = await client.from('past_questions').select('*').limit(5000);
-      if (error || !data) return [];
+      const allRows: any[] = [];
+      const PAGE_SIZE = 1000;
+      let from = 0;
+      let hasMore = true;
 
-      return data.map(mapRowToPastQuestion);
+      while (hasMore) {
+        const { data, error } = await client
+          .from('past_questions')
+          .select('*')
+          .range(from, from + PAGE_SIZE - 1);
+
+        if (error) {
+          console.warn('Supabase getAllPastQuestions page error:', error);
+          break;
+        }
+
+        if (!data || data.length === 0) {
+          hasMore = false;
+        } else {
+          allRows.push(...data);
+          if (data.length < PAGE_SIZE) {
+            hasMore = false;
+          } else {
+            from += PAGE_SIZE;
+          }
+        }
+      }
+
+      return allRows.map(mapRowToPastQuestion);
     } catch (err) {
       console.warn('Supabase getAllPastQuestions error:', err);
       return [];
@@ -384,33 +409,77 @@ export const SupabaseDbService = {
     const client = getSupabaseClient();
     if (!client) return [];
     try {
-      const { data, error } = await client
-        .from('past_questions')
-        .select('*')
-        .gt('updated_at', sinceIso)
-        .order('updated_at', { ascending: true })
-        .limit(2000);
+      const allRows: any[] = [];
+      const PAGE_SIZE = 1000;
+      let from = 0;
+      let hasMore = true;
 
-      if (error || !data) return [];
-      return data.map(mapRowToPastQuestion);
+      while (hasMore) {
+        const { data, error } = await client
+          .from('past_questions')
+          .select('*')
+          .gt('updated_at', sinceIso)
+          .order('updated_at', { ascending: true })
+          .range(from, from + PAGE_SIZE - 1);
+
+        if (error) {
+          console.warn('Supabase getPastQuestionsDelta page error:', error);
+          break;
+        }
+
+        if (!data || data.length === 0) {
+          hasMore = false;
+        } else {
+          allRows.push(...data);
+          if (data.length < PAGE_SIZE) {
+            hasMore = false;
+          } else {
+            from += PAGE_SIZE;
+          }
+        }
+      }
+
+      return allRows.map(mapRowToPastQuestion);
     } catch (err) {
       console.warn('Supabase getPastQuestionsDelta error:', err);
       return [];
     }
   },
 
-  // Past Questions IDs (Lightweight ~25KB check to detect deleted questions when count decreases)
+  // Past Questions IDs (Sayfalamalı tam ID listesi)
   async getPastQuestionsIds(): Promise<string[]> {
     const client = getSupabaseClient();
     if (!client) return [];
     try {
-      const { data, error } = await client
-        .from('past_questions')
-        .select('id')
-        .limit(10000);
+      const ids: string[] = [];
+      const PAGE_SIZE = 1000;
+      let from = 0;
+      let hasMore = true;
 
-      if (error || !data) return [];
-      return data.map((r: any) => r.id);
+      while (hasMore) {
+        const { data, error } = await client
+          .from('past_questions')
+          .select('id')
+          .range(from, from + PAGE_SIZE - 1);
+
+        if (error) {
+          console.warn('Supabase getPastQuestionsIds page error:', error);
+          break;
+        }
+
+        if (!data || data.length === 0) {
+          hasMore = false;
+        } else {
+          for (const r of data) ids.push(r.id);
+          if (data.length < PAGE_SIZE) {
+            hasMore = false;
+          } else {
+            from += PAGE_SIZE;
+          }
+        }
+      }
+
+      return ids;
     } catch (err) {
       console.warn('Supabase getPastQuestionsIds error:', err);
       return [];

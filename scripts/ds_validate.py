@@ -1,8 +1,8 @@
 import json, os, glob, re, sys
 from collections import Counter
 sys.stdout.reconfigure(encoding='utf-8')
-OUT = r"C:\Users\indui\Desktop\meds\.meds_ds\out"
-BAT = r"C:\Users\indui\Desktop\meds\.meds_ds\work\batches"
+OUT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/out")
+BAT = (__import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__))) + "/.meds_ds/work/batches")
 
 STATUS = {"onaylandi", "inceleme_gerekli", "kullanilamaz"}
 ANSWER = {"dogrulandi", "duzeltildi", "dogrulanamadi", "belirsiz"}

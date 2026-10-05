@@ -24,7 +24,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 DECKS_PATH = 'src/data/interactive_learning_decks.json'
-BASE_TXT_DIR = r'C:\Users\indui\Desktop\meds_database\kurul_ders_notlari_txt\Kurul 1'
+BASE_TXT_DIR = ((__import__('os').environ.get('MEDS_DATABASE_DIR') or __import__('os').path.expanduser('~/meds_database')) + '/kurul_ders_notlari_txt/Kurul 1')
 
 DECK_CONFIGS = [
     {

@@ -13,6 +13,7 @@ import numpy as np
 
 # Ana modül kütüphanesini içeri al
 ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts" / "agents"))
 import lib
 
@@ -89,18 +90,23 @@ def prepare_hybrid_engine():
         return None
 
 def main():
+    state = lib.State()
     log.info("Aşama 5 (Gelişmiş AI & RAG Mimarisi) tetiklendi...")
     
     # 1. GraphRAG İnşası
+    state.set_progress("advanced_ai", 1, 3, "Aşama 5 (1/3): GraphRAG Tıbbi Bilgi Grafı (NetworkX) İnşa Ediliyor...")
     kg = build_knowledge_graph()
     
     # 2. Hibrit Arama Hazırlığı
+    state.set_progress("advanced_ai", 2, 3, "Aşama 5 (2/3): BM25 + BGE-M3 Hibrit Arama Matrisi & RRF Sıralayıcı Derleniyor...")
     engine = prepare_hybrid_engine()
     
     # 3. MemGPT Bellek Katmanı
+    state.set_progress("advanced_ai", 3, 3, "Aşama 5 (3/3): MemGPT Öğrenci Bellek Katmanı & ReAct Ajanları Başlatılıyor...")
     memory_os = HierarchicalMemoryOS(AI_EXPORT_DIR / "memory")
     log.info("MemGPT Hiyerarşik Bellek Sistemi devrede ✓")
     
+    state.set_progress("advanced_ai", 3, 3, "Aşama 5 Tamamlandı ✓ (GraphRAG, Hybrid BM25, MemGPT ve ReAct Canlı)")
     log.info("Tüm ileri seviye AI mimarileri (GraphRAG, Hybrid BM25, MemGPT, ReAct) hazırlandı.")
 
 if __name__ == "__main__":

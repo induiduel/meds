@@ -2254,7 +2254,7 @@ export const ApiService = {
     // 2. Halen boşsa REST API fallback
     if (list.length === 0) {
       try {
-        const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+        const apiBase = getCustomApiUrl() || '';
         const res = await fetch(`${apiBase}/api/past-exams`);
         if (res.ok) {
           const json = await res.json();
@@ -2297,7 +2297,7 @@ export const ApiService = {
   },
 
   async commentPastQuestion(questionId: string, author: string, text: string): Promise<any> {
-    const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+    const apiBase = getCustomApiUrl() || '';
     
     // 1. Try local server
     try {
@@ -2343,7 +2343,7 @@ export const ApiService = {
   },
 
   async reportPastQuestion(questionId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
-    const apiBase = getCustomApiUrl() || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' ? 'http://localhost:3000' : '');
+    const apiBase = getCustomApiUrl() || '';
     const nowIso = new Date().toISOString();
     const reportObj = {
       id: `rep-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
@@ -2413,17 +2413,46 @@ export const ApiService = {
     return { success: true, report: reportObj };
   },
 
-  async upvotePastQuestion(questionId: string): Promise<number> {
+  async upvotePastQuestion(questionId: string, userId?: string): Promise<{ success: boolean; upvotes: number; downvotes: number; likedBy?: string[]; dislikedBy?: string[] }> {
     try {
       const res = await fetch(`/api/past-exams/${encodeURIComponent(questionId)}/upvote`, {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId }),
       });
       if (res.ok) {
         const data = await res.json();
-        return data.upvotes || 1;
+        return {
+          success: true,
+          upvotes: data.upvotes || 0,
+          downvotes: data.downvotes || 0,
+          likedBy: data.likedBy,
+          dislikedBy: data.dislikedBy,
+        };
       }
     } catch (e) {}
-    return 1;
+    return { success: false, upvotes: 0, downvotes: 0 };
+  },
+
+  async downvotePastQuestion(questionId: string, userId?: string): Promise<{ success: boolean; upvotes: number; downvotes: number; likedBy?: string[]; dislikedBy?: string[] }> {
+    try {
+      const res = await fetch(`/api/past-exams/${encodeURIComponent(questionId)}/downvote`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        return {
+          success: true,
+          upvotes: data.upvotes || 0,
+          downvotes: data.downvotes || 0,
+          likedBy: data.likedBy,
+          dislikedBy: data.dislikedBy,
+        };
+      }
+    } catch (e) {}
+    return { success: false, upvotes: 0, downvotes: 0 };
   },
 
   // AI: Generate similar exam question grounded in matched lecture note
@@ -3093,21 +3122,63 @@ export const ApiService = {
     }
   },
 
-  async reindexRag(syncToCloud: boolean = true): Promise<any> {
+  async getQualityAuditStatus(): Promise<any> {
     try {
       const customUrl = getCustomApiUrl();
-      const endpoint = customUrl ? `${customUrl}/api/rag/reindex` : `/api/rag/reindex`;
-      const res = await safeJsonFetch<any>(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ syncToCloud })
-      });
+      const endpoint = customUrl ? `${customUrl}/api/audit/status` : `/api/audit/status`;
+      const res = await safeJsonFetch<any>(endpoint);
       return res.ok && res.data?.success ? res.data : null;
     } catch (_) {
       return null;
     }
   },
+
+  async triggerQualityAudit(): Promise<any> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/audit/trigger` : `/api/audit/trigger`;
+      const res = await safeJsonFetch<any>(endpoint, { method: 'POST' });
+      return res.ok && res.data?.success ? res.data : null;
+    } catch (_) {
+      return null;
+    }
+  },
+
+  async sendGeneralAiChat(params: {
+    message: string;
+    messages?: { role: 'user' | 'assistant'; content: string }[];
+    provider?: string;
+    model?: string;
+    mode?: 'general' | 'find_question' | 'generate_from_keywords' | 'explain';
+    apiKey?: string;
+    groqApiKey?: string;
+    museSparkApiKey?: string;
+  }): Promise<{
+    success: boolean;
+    reply?: string;
+    error?: string;
+    providerUsed?: string;
+    planUsed?: string;
+    matchedQuestions?: any[];
+  }> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/ai/general-chat` : `/api/ai/general-chat`;
+      const res = await safeJsonFetch<any>(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params)
+      });
+      if (res.ok && res.data?.success) {
+        return res.data;
+      }
+      return { success: false, error: res.data?.error || 'Yapay zeka yanıt veremedi.' };
+    } catch (e: any) {
+      return { success: false, error: e.message || 'Bağlantı hatası oluştu.' };
+    }
+  },
 };
+
 
 export interface QuestionChatContext {
   id?: string;

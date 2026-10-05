@@ -18,8 +18,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const LOCAL_SORULAR_DIR = 'C:\\Users\\indui\\Desktop\\meds_database\\local_sorular';
-const LOCAL_TXT_DIR = 'C:\\Users\\indui\\Desktop\\meds_database\\local_sorular_txt';
+const LOCAL_SORULAR_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/local_sorular`;
+const LOCAL_TXT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/Masaüstü/MedSoru Project/meds_database'}/local_sorular_txt`;
 const ROOT_DIR = path.resolve(__dirname, '..');
 const PAST_DB_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
 const SRC_PAST_DB_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
