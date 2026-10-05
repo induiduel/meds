@@ -7,7 +7,6 @@
 
 import { QuestionItem, MemoryFragment, QuestionOption, QuestionRevision, AlternativeOption } from '../types';
 import { GoogleGenAI } from '@google/genai';
-import medicalConceptsRaw from '../data/medicalConcepts5000.json';
 import { areWordsFuzzyEqual, damerauLevenshtein, foldTurkish, toContextHashtag } from '../utils/fuzzyMatching.ts';
 
 // ==========================================
@@ -162,7 +161,23 @@ export interface MedicalConceptBank {
   terms: string[];
 }
 
-export const MEDICAL_CONCEPT_BANKS: MedicalConceptBank[] = (medicalConceptsRaw as any) || [];
+// 2,4 MB'lık kavram bankası ilk açılışı yavaşlatmasın diye ayrı parça olarak, boşta yüklenir.
+// Yüklenene kadar kavram tespiti boş döner; taslak eşleştirme metin benzerliğiyle çalışmaya devam eder.
+export let MEDICAL_CONCEPT_BANKS: MedicalConceptBank[] = [];
+let conceptsPromise: Promise<void> | null = null;
+export function loadMedicalConcepts(): Promise<void> {
+  if (!conceptsPromise) {
+    conceptsPromise = import('../data/medicalConcepts5000.json')
+      .then((m: any) => {
+        MEDICAL_CONCEPT_BANKS = (m.default || m) as MedicalConceptBank[];
+        termToConceptMap = null;
+        fuzzyBuckets = null;
+        fuzzyCache.clear();
+      })
+      .catch(() => { conceptsPromise = null; });
+  }
+  return conceptsPromise;
+}
 
 // ==========================================
 // METİN NORMALİZASYONU (TÜRKÇE DESTEKLİ)
@@ -237,6 +252,10 @@ let termToConceptMap: Map<string, MedicalConceptBank[]> | null = null;
 
 function getTermToConceptMap(): Map<string, MedicalConceptBank[]> {
   if (termToConceptMap) return termToConceptMap;
+  if (MEDICAL_CONCEPT_BANKS.length === 0) {
+    void loadMedicalConcepts();
+    return new Map();
+  }
   termToConceptMap = new Map();
 
   for (const concept of MEDICAL_CONCEPT_BANKS) {
@@ -255,6 +274,49 @@ function getTermToConceptMap(): Map<string, MedicalConceptBank[]> {
     }
   }
   return termToConceptMap;
+}
+
+// Bulanık arama için terimler uzunluk + ilk harfe göre gruplanır: her öbekte sözlüğün tamamını
+// taramak yerine yalnızca ±2 uzunluktaki ve aynı harfle başlayan terimlere bakılır (yazarken donmayı önler).
+let fuzzyBuckets: Map<string, string[]> | null = null;
+const fuzzyCache = new Map<string, string | null>();
+function fuzzyLookup(phrase: string): MedicalConceptBank[] | undefined {
+  const index = getTermToConceptMap();
+  if (!fuzzyBuckets) {
+    fuzzyBuckets = new Map();
+    for (const term of index.keys()) {
+      const key = `${term.length}:${term[0]}`;
+      const list = fuzzyBuckets.get(key);
+      if (list) list.push(term);
+      else fuzzyBuckets.set(key, [term]);
+    }
+  }
+  let found = fuzzyCache.get(phrase);
+  if (found === undefined) {
+    found = null;
+    outer: for (let d = 0; d <= 2; d++) {
+      for (const len of d === 0 ? [phrase.length] : [phrase.length - d, phrase.length + d]) {
+        for (const term of fuzzyBuckets.get(`${len}:${phrase[0]}`) || []) {
+          if (areWordsFuzzyEqual(phrase, term)) { found = term; break outer; }
+        }
+      }
+    }
+    if (fuzzyCache.size > 5000) fuzzyCache.clear();
+    fuzzyCache.set(phrase, found);
+  }
+  return found ? index.get(found) : undefined;
+}
+
+/** Sözlük indekslerini tarayıcı boştayken kurar; ilk tuş vuruşu bu maliyeti ödemez. */
+export function warmMedicalIndex(): void {
+  const run = () => {
+    loadMedicalConcepts().then(() => {
+      try { getTermToConceptMap(); fuzzyLookup('hiperkalsemi'); } catch { /* yok say */ }
+    });
+  };
+  const ric = (window as any).requestIdleCallback as undefined | ((cb: () => void, o?: { timeout: number }) => void);
+  if (ric) ric(run, { timeout: 4000 });
+  else setTimeout(run, 1500);
 }
 
 // Metinden eşleşen Tıbbi Kavram Bankalarını bulma (5,000+ kavram üzerinde anlık O(1) eşleşme)
@@ -280,13 +342,8 @@ export function detectMedicalConcepts(text: string, discipline?: string): Medica
   for (const phrase of phrases) {
     let hits = index.get(phrase);
     if (!hits && phrase.length >= 6) {
-      // Harf eksikliği ve yer değiştirmesi için terim bankasında bulanık arama
-      for (const [indexedTerm, concepts] of index.entries()) {
-        if (Math.abs(indexedTerm.length - phrase.length) <= 2 && areWordsFuzzyEqual(phrase, indexedTerm)) {
-          hits = concepts;
-          break;
-        }
-      }
+      // Harf eksikliği ve yer değiştirmesi için terim bankasında bulanık arama (gruplu + önbellekli)
+      hits = fuzzyLookup(phrase);
     }
     if (!hits) continue;
 

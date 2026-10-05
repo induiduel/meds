@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import dotenv from 'dotenv';
+import { splitLearningDecks } from './scripts/vite/splitLearningDecks';
 
 dotenv.config();
 
@@ -17,7 +18,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: process.env.VITE_BASE || '/',
-    plugins: [react(), tailwindcss()],
+    plugins: [splitLearningDecks(__dirname), react(), tailwindcss()],
     define: {
       'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co'),
       'process.env.SUPABASE_PUBLISHABLE_KEY': JSON.stringify(process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q'),
@@ -59,13 +60,8 @@ export default defineConfig(({ mode }) => {
               if (normalized.includes('/@google/genai/')) {
                 return 'vendor-genai';
               }
-              if (
-                normalized.includes('/jspdf/') ||
-                normalized.includes('/html2canvas/') ||
-                normalized.includes('/dompurify/')
-              ) {
-                return 'vendor-pdf';
-              }
+              // jspdf/html2canvas yalnızca PDF dışa aktarırken dinamik yüklenir; elle gruplanınca
+              // ortak yardımcılar bu parçaya düşüp her sayfada 600 KB yükleniyordu.
               if (normalized.includes('/motion/')) {
                 return 'vendor-motion';
               }
@@ -85,6 +81,9 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    preview: {
+      proxy: { '/api': { target: 'http://localhost:3000', changeOrigin: true } },
+    },
     server: {
       port: 5174,
       proxy: {
@@ -97,7 +96,7 @@ export default defineConfig(({ mode }) => {
       // dönüştürdüğü modülü önbellekte tutar ve yenilemede eski kod gelir.
       hmr: false,
       watch: {
-        ignored: ['**/data/**', '**/dist/**', '**/scripts/**', '**/.agents/**', '**/node_modules/**'],
+        ignored: ['**/.venv*/**', '**/__pycache__/**', '**/data/**', '**/dist/**', '**/scripts/**', '**/.agents/**', '**/node_modules/**'],
       },
       allowedHosts: true,
     },

@@ -66,7 +66,7 @@ export const InfoPopover: React.FC<InfoPopoverProps> = ({
         <Info className={iconClassName} />
         {buttonLabel && <span className="text-xs font-semibold">{buttonLabel}</span>}
         {badgeText && (
-          <span className="text-[10px] font-bold bg-teal-100 text-teal-800 px-1.5 py-0.2 rounded-full">
+          <span className="text-[11px] font-bold bg-teal-100 text-teal-800 px-1.5 py-0.2 rounded-full">
             {badgeText}
           </span>
         )}

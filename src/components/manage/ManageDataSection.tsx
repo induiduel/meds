@@ -119,17 +119,18 @@ export const ManageDataSection: React.FC<Props> = ({ adminEmail, questions, comm
         id: 'decks',
         label: 'Dersler',
         load: async () => {
-          const mod: any = await import('../../data/interactive_learning_decks.json');
-          return ((mod.default || mod) as Row[]).filter((d) => d && Array.isArray(d.slides));
+          // Tablo yalnızca özet bilgileri gösterir: hafif katalog yeterli
+          const { DECK_CATALOG } = await import('../../data/deckStore');
+          return DECK_CATALOG as unknown as Row[];
         },
         idOf: (r) => r.id,
         defaultSort: { key: 'title', dir: 1 },
         columns: [
           { key: 'title', label: 'Ders', width: 'minmax(0,1fr)', value: (r) => r.title || '' },
           { key: 'discipline', label: 'Branş', width: '160px', value: (r) => r.discipline || '' },
-          { key: 'slides', label: 'Slayt', width: '64px', mono: true, value: (r) => r.slides?.length || 0 },
-          { key: 'cards', label: 'Kart', width: '64px', mono: true, value: (r) => (r.slides || []).reduce((n: number, s: Row) => n + (s.flashcards?.length || 0), 0) },
-          { key: 'qs', label: 'Soru', width: '64px', mono: true, value: (r) => (r.slides || []).reduce((n: number, s: Row) => n + (s.relatedQuestions?.length || 0), 0) },
+          { key: 'slides', label: 'Slayt', width: '64px', mono: true, value: (r) => r.slideCount || 0 },
+          { key: 'cards', label: 'Kart', width: '64px', mono: true, value: (r) => r.cardCount || 0 },
+          { key: 'qs', label: 'Soru', width: '64px', mono: true, value: (r) => r.questionCount || 0 },
           { key: 'instructor', label: 'Hoca', width: '160px', value: (r) => r.instructor || '' },
         ],
       },

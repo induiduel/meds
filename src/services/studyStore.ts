@@ -61,6 +61,8 @@ const KEYS = {
   review: 'medsoru_study_review_v1',
   tests: 'medsoru_selftest_history_v1',
   notes: 'medsoru_notes_v1',
+  favorites: 'medsoru_study_favorites_v1',
+  cardFavorites: 'medsoru_flashcard_favorites_v1',
 };
 
 const read = <T,>(key: string, fallback: T): T => {
@@ -155,6 +157,7 @@ export const loadArchiveBank = (): Promise<StudyQuestion[]> => {
         const seen = new Set<string>();
         archiveCache = (list || [])
           .filter(isDonem3Question)
+          .filter((q: any) => !(q.hidden || q.data?.hidden))
           .map(normalizeArchive)
           .filter((q): q is StudyQuestion => !!q && !seen.has(q.id) && !!seen.add(q.id));
         return archiveCache;
@@ -207,6 +210,37 @@ export const setInReview = (id: string, on: boolean) => {
   else s.delete(id);
   write(KEYS.review, [...s]);
   return s;
+};
+
+// ---------------- Favoriler ----------------
+
+/** Favori sorular (soru kimlikleri) */
+export const getFavorites = () => new Set(read<string[]>(KEYS.favorites, []));
+export const setFavorite = (id: string, on: boolean) => {
+  const s = getFavorites();
+  if (on) s.add(id);
+  else s.delete(id);
+  write(KEYS.favorites, [...s]);
+  return s;
+};
+
+/** Favori ezber kartları: kart içeriği de saklanır ki listelerde gösterilebilsin */
+export interface FavoriteCard {
+  id: string;
+  front: string;
+  back: string;
+  group?: string;
+  at: string;
+}
+export const getFavoriteCards = () => read<FavoriteCard[]>(KEYS.cardFavorites, []);
+export const isFavoriteCard = (id: string) => getFavoriteCards().some((c) => c.id === id);
+export const toggleFavoriteCard = (card: Omit<FavoriteCard, 'at'>) => {
+  const all = getFavoriteCards();
+  const next = all.some((c) => c.id === card.id)
+    ? all.filter((c) => c.id !== card.id)
+    : [{ ...card, at: new Date().toISOString() }, ...all];
+  write(KEYS.cardFavorites, next);
+  return next;
 };
 
 // ---------------- Self-test history ----------------

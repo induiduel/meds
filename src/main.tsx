@@ -9,6 +9,26 @@ import { applyUiVersion } from './utils/uiVersion';
 applyTheme(readTheme());
 applyUiVersion();
 
+// Klavye açılıp kapanırken görsel alanı izle: katmanlar --vvh ile kısalır,
+// alt menü ve FAB klavye açıkken gizlenir; tasarım sıçramaz.
+(function trackVisualViewport() {
+  const vv = window.visualViewport;
+  const root = document.documentElement;
+  const update = () => {
+    const h = vv ? vv.height : window.innerHeight;
+    root.style.setProperty('--vvh', `${Math.round(h)}px`);
+    root.style.setProperty('--vvt', `${Math.round(vv ? vv.offsetTop : 0)}px`);
+    const typing = !!(document.activeElement as HTMLElement | null)?.closest?.('input,textarea,select,[contenteditable="true"]');
+    root.classList.toggle('kb-open', typing && h < window.innerHeight * 0.8 || (typing && !!vv && vv.height < screen.height * 0.6));
+  };
+  update();
+  vv?.addEventListener('resize', update);
+  vv?.addEventListener('scroll', update);
+  window.addEventListener('resize', update);
+  document.addEventListener('focusin', () => setTimeout(update, 250));
+  document.addEventListener('focusout', () => setTimeout(update, 250));
+})();
+
 // alert() and unhandled failures become friendly floating toasts
 installToastBridge();
 
@@ -74,7 +94,7 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
       const isChunkError = /Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg);
 
       return (
-        <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
+        <div className="min-h-dvh bg-slate-900 text-white flex flex-col items-center justify-center p-4">
           <div className="max-w-md w-full bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl text-center space-y-4">
             <div className="w-12 h-12 bg-rose-500/20 text-rose-400 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
               !

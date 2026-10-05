@@ -100,7 +100,7 @@ export const DriveSyncVisualizer: React.FC<{
   return (
     <div className={`bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden ${className}`}>
       {/* Header Bar */}
-      <div className="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 text-white p-4 sm:p-5">
+      <div className="bg-ink-surface text-white p-4 sm:p-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
@@ -155,11 +155,11 @@ export const DriveSyncVisualizer: React.FC<{
               </div>
               <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden">
                 <div 
-                  className="bg-gradient-to-r from-teal-500 to-emerald-400 h-full rounded-full transition-all duration-500"
+                  className="bg-accent h-full rounded-full transition-all duration-500"
                   style={{ width: `${summary.lecturesProgressPercent}%` }}
                 />
               </div>
-              <div className="flex justify-between text-[10px] text-slate-400 font-medium">
+              <div className="flex justify-between text-[11px] text-slate-400 font-medium">
                 <span>{summary.lecturesProgressPercent}% Tamamlandı</span>
                 <span>{summary.totalLecturesDownloaded === summary.totalLecturesTarget ? '✅ Hepsi Hazır' : '⏳ İndiriliyor...'}</span>
               </div>
@@ -178,11 +178,11 @@ export const DriveSyncVisualizer: React.FC<{
               </div>
               <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden">
                 <div 
-                  className="bg-gradient-to-r from-amber-500 to-yellow-400 h-full rounded-full transition-all duration-500"
+                  className="bg-accent h-full rounded-full transition-all duration-500"
                   style={{ width: `${summary.examsProgressPercent}%` }}
                 />
               </div>
-              <div className="flex justify-between text-[10px] text-slate-400 font-medium">
+              <div className="flex justify-between text-[11px] text-slate-400 font-medium">
                 <span>{summary.examsProgressPercent}% Tamamlandı</span>
                 <span>{summary.totalExamsDownloaded >= summary.totalExamsTarget ? '✅ Arşiv Tam' : '⏳ Sürüyor...'}</span>
               </div>
@@ -203,7 +203,7 @@ export const DriveSyncVisualizer: React.FC<{
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <span>CPU ile birebir (saf metin) olarak veritabanına aktarıldı</span>
               </div>
-              <div className="text-[10px] text-slate-400">Son güncelleme: {lastUpdated}</div>
+              <div className="text-[11px] text-slate-400">Son güncelleme: {lastUpdated}</div>
             </div>
           </div>
         )}
@@ -269,7 +269,7 @@ export const DriveSyncVisualizer: React.FC<{
             <div className="border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
               <div className="max-h-72 overflow-y-auto">
                 <table className="w-full text-left border-collapse text-xs">
-                  <thead className="sticky top-0 bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase text-[10px] tracking-wider z-10">
+                  <thead className="sticky top-0 bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase text-[11px] tracking-wider z-10">
                     <tr>
                       <th className="py-2.5 px-3">Ders Slayt Başlığı</th>
                       <th className="py-2.5 px-3">Branş</th>
@@ -290,10 +290,10 @@ export const DriveSyncVisualizer: React.FC<{
                         <tr key={l.fileId || idx} className="hover:bg-slate-50/80 transition-colors">
                           <td className="py-2 px-3 font-semibold text-slate-900">
                             <span className="block leading-snug">{l.title}</span>
-                            <span className="text-[10px] text-slate-400 font-mono block">Dosya: {l.localName}</span>
+                            <span className="text-[11px] text-slate-400 font-mono block">Dosya: {l.localName}</span>
                           </td>
                           <td className="py-2 px-3 text-slate-600">
-                            <span className="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-[10px] font-semibold">
+                            <span className="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-[11px] font-semibold">
                               {l.folderName}
                             </span>
                           </td>
@@ -336,7 +336,7 @@ export const DriveSyncVisualizer: React.FC<{
             <div className="border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
               <div className="max-h-72 overflow-y-auto">
                 <table className="w-full text-left border-collapse text-xs">
-                  <thead className="sticky top-0 bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase text-[10px] tracking-wider z-10">
+                  <thead className="sticky top-0 bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase text-[11px] tracking-wider z-10">
                     <tr>
                       <th className="py-2.5 px-3">Çıkmış Sınav Dosyası</th>
                       <th className="py-2.5 px-3">Boyut</th>

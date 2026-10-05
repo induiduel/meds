@@ -706,7 +706,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
-                  {d.name} <span className="opacity-70 text-[10px]">({d.count})</span>
+                  {d.name} <span className="opacity-70 text-[11px]">({d.count})</span>
                 </button>
               ))}
             </div>
@@ -732,10 +732,10 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                   <div className="flex items-start justify-between gap-3">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                        <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                           {slide.discipline}
                         </span>
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-100 text-teal-800">
+                        <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-teal-100 text-teal-800">
                           {slide.totalRealPages} Gerçek Sayfa
                         </span>
                       </div>
@@ -758,14 +758,14 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
                   {/* Key Topics */}
                   <div className="space-y-1">
-                    <span className="text-[10px] text-slate-400 font-semibold uppercase block">
+                    <span className="text-[11px] text-slate-400 font-semibold uppercase block">
                       Dersin Kapsadığı Konular:
                     </span>
                     <div className="flex flex-wrap gap-1">
                       {slide.keyTopics.map((topic, i) => (
                         <span
                           key={i}
-                          className="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded-md font-medium"
+                          className="bg-slate-100 text-slate-600 text-[11px] px-2 py-0.5 rounded-md font-medium"
                         >
                           {topic}
                         </span>
@@ -919,7 +919,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                               : 'bg-white border-slate-200 hover:border-slate-300'
                           }`}
                         >
-                          <div className="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                          <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1">
                             <span className="font-bold uppercase text-teal-700">{note.discipline}</span>
                             <span>{note.totalSlides} Sayfa</span>
                           </div>
@@ -942,7 +942,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
                       <div>
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="bg-teal-100 text-teal-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                          <span className="bg-teal-100 text-teal-800 text-[11px] font-bold px-2 py-0.5 rounded-full">
                             {activeNote.discipline}
                           </span>
                           <span className="text-slate-400 text-xs">
@@ -1013,11 +1013,11 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
                           {page.keywords && page.keywords.length > 0 && (
                             <div className="flex flex-wrap gap-1 items-center pt-1">
-                              <span className="text-[10px] text-slate-400 font-bold">Kavramlar:</span>
+                              <span className="text-[11px] text-slate-400 font-bold">Kavramlar:</span>
                               {page.keywords.map((kw, i) => (
                                 <span
                                   key={i}
-                                  className="bg-slate-200/70 text-slate-700 text-[10px] px-1.5 py-0.5 rounded"
+                                  className="bg-slate-200/70 text-slate-700 text-[11px] px-1.5 py-0.5 rounded"
                                 >
                                   {kw}
                                 </span>
@@ -1041,7 +1041,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
       {/* MODAL: ADD MANUAL / CUSTOM LECTURE NOTE */}
       {isAddingNote && (
-        <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+        <div className="ms-overlay fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-white rounded-2xl border border-slate-200 max-w-2xl w-full p-6 shadow-2xl space-y-4 my-8">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div className="flex items-center gap-2 text-slate-900 font-bold">
@@ -1067,7 +1067,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                     : 'border-transparent text-slate-500 hover:text-slate-800'
                 }`}
               >
-                ✍️ Metin Yapıştırarak Ekle
+                Metin Yapıştırarak Ekle
               </button>
               <button
                 type="button"
@@ -1078,7 +1078,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
                     : 'border-transparent text-slate-500 hover:text-slate-800'
                 }`}
               >
-                📄 PDF / DOCX Dosyası Yükle
+                PDF / DOCX Dosyası Yükle
               </button>
             </div>
 

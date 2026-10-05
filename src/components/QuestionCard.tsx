@@ -788,7 +788,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
 
                 {question.lectureReference.highlightedText && (
                   <div className="rounded-[10px] bg-amber-50/70 border border-amber-200 p-2.5 text-[12px] leading-relaxed text-amber-950">
-                    <span className="font-bold block text-amber-900 mb-0.5">📌 Slayttaki İlgili Bilgi & Metin:</span>
+                    <span className="font-bold block text-amber-900 mb-0.5">Slayttaki İlgili Bilgi & Metin:</span>
                     {renderHighlightedSnippet(question.lectureReference.highlightedText)}
                   </div>
                 )}
@@ -835,7 +835,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                           <span className="flex gap-2 items-center text-[12px] text-ink-2 flex-wrap">
                             <span className="font-semibold text-ink">{fragmentTypeLabel(frag.type)}</span>· <span className="truncate">{frag.author}</span>
                             {frag.isSatellite && (
-                              <span className="px-1.5 py-0.2 rounded bg-emerald-100/70 border border-emerald-300 text-emerald-900 text-[10.5px] font-semibold">
+                              <span className="px-1.5 py-0.2 rounded bg-emerald-100/70 border border-emerald-300 text-emerald-900 text-[11.5px] font-semibold">
                                 Birleştirilen Taslak
                               </span>
                             )}

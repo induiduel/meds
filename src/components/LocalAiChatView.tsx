@@ -41,20 +41,35 @@ interface ChatMessage {
 interface LocalAiChatViewProps {
   currentUser: AppUser | null;
   onNavigateToQuestion?: (questionId: string) => void;
+  /** Sağlayıcı seçimi, model, zaman aşımı ve hata kayıtları yalnızca yöneticiye görünür */
+  isAdmin?: boolean;
 }
 
 const DEFAULT_WELCOME_MESSAGE: ChatMessage = {
   id: 'msg-welcome',
   role: 'assistant',
-  content: `Merhaba! Ben **MedSoru AI Tıp Asistanı**.\n\nBilgisayarındaki yerel donanımı (**RTX 4060 GPU / Ollama**) ve ücretsiz internet yapay zekalarını kullanarak sana kurul sınavlarında rehberlik etmek için buradayım.\n\nNeler yapabilirim:\n- 🔍 **"Soru Dedektifi"**: Sınavda çıkmış ama tam hatırlayamadığın bir sorunun aklında kalan kısımlarını (hasta yaşı, ilaç, semptom) anlat, veri tabanımızdan bulup çıkarayım.\n- 💡 **"Anahtardan Soru Türetme"**: Aklındaki tıbbi terimleri ver, hangi kurul ve ders olduğunu söyleyip 5 şıklı orijinal kurul soruları yazayım.\n- 🧬 **"Mekanizma & Patofizyoloji"**: Anlamadığın tıbbi konuları ve şıkların elenme nedenlerini Robbins/Guyton derinliğinde açıklayayım.`,
+  content: `Merhaba! Ben **MeDSor Asistan**.\n\nKurul sınavlarında sana rehberlik etmek için buradayım.\n\nNeler yapabilirim:\n- **"Soru Dedektifi"**: Sınavda çıkmış ama tam hatırlayamadığın bir sorunun aklında kalan kısımlarını (hasta yaşı, ilaç, semptom) anlat, veri tabanımızdan bulup çıkarayım.\n- **"Anahtardan Soru Türetme"**: Aklındaki tıbbi terimleri ver, hangi kurul ve ders olduğunu söyleyip 5 şıklı orijinal kurul soruları yazayım.\n- **"Mekanizma & Patofizyoloji"**: Anlamadığın tıbbi konuları ve şıkların elenme nedenlerini Robbins/Guyton derinliğinde açıklayayım.`,
   timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
-  providerUsed: 'MedSoru AI Motoru'
+  providerUsed: 'MeDSor AI Motoru'
 };
 
 export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
   currentUser,
-  onNavigateToQuestion
+  onNavigateToQuestion,
+  isAdmin = false,
 }) => {
+  // Sohbet alanının sayfadaki gerçek üst konumunu ölç: yükseklik ekrana tam sığsın, sayfa kaymasın
+  const shellRef = React.useRef<HTMLDivElement>(null);
+  React.useLayoutEffect(() => {
+    const el = shellRef.current;
+    if (!el) return;
+    const measure = () => el.style.setProperty('--chat-top', `${Math.round(el.getBoundingClientRect().top + window.scrollY)}px`);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(document.body);
+    window.addEventListener('resize', measure);
+    return () => { ro.disconnect(); window.removeEventListener('resize', measure); };
+  }, []);
   const userStorageKey = `medsoru_ai_chat_history_${currentUser?.uid || currentUser?.email || 'guest_user'}`;
 
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
@@ -183,8 +198,8 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
         .filter(m => m.id !== 'msg-welcome')
         .map(m => ({ role: m.role, content: m.content }));
 
-      // Eğer kullanıcı yerel GPU seçtiyse ve forceCloudFallback verilmemişse bulut fallback'i ASLA otomatik yapılmaz!
-      const shouldAllowCloud = forceCloudFallback || providerMode !== 'ollama';
+      // Yerel GPU'ların hiçbiri yanıt vermezse otomatik fallback basamağı çalışır: yerel -> groq -> muse -> gemini
+      const shouldAllowCloud = true;
 
       const res = await ApiService.sendGeneralAiChat({
         message: query,
@@ -201,7 +216,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
           id: `ai-${Date.now()}`,
           role: 'assistant',
           content: res.reply,
-          providerUsed: res.providerUsed || (forceCloudFallback ? 'Google Gemini (Kullanıcı Onaylı Bulut)' : 'MedSoru AI'),
+          providerUsed: res.providerUsed || (forceCloudFallback ? 'Google Gemini (Yedek)' : 'MeDSor AI'),
           planUsed: res.planUsed,
           matchedQuestions: res.matchedQuestions,
           timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })
@@ -210,20 +225,11 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
         loadErrorLogs(); // Varsa çözümleri güncelle
       } else {
         const errDetail = res.error || 'Model yanıt veremedi veya zaman aşımına uğradı.';
-        
-        // Yerel model yanıt veremediğinde otomatik olarak buluta geçilmez, kullanıcıya onay sorulur:
-        if (providerMode === 'ollama' && !forceCloudFallback) {
-          setFallbackPromptDialog({
-            query,
-            originalModel: selectedModel,
-            errorMsg: errDetail
-          });
-        }
 
         const errorMsg: ChatMessage = {
           id: `err-${Date.now()}`,
           role: 'assistant',
-          content: `⚠️ **Yanıt Alınamadı (${selectedModel}):** ${errDetail}\n\n*Hata sistem loglarına işlendi. Model yanıt veremediğinde otomatik olarak bulut AI'ya geçilmez.*`,
+          content: `**Yanıt Alınamadı:** ${errDetail}\n\n*Hata sistem loglarına işlendi.*`,
           timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })
         };
         setMessages(prev => [...prev, errorMsg]);
@@ -231,18 +237,11 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
       }
     } catch (err: any) {
       const errDetail = err.message || 'Sunucuya ulaşılamadı.';
-      if (providerMode === 'ollama' && !forceCloudFallback) {
-        setFallbackPromptDialog({
-          query,
-          originalModel: selectedModel,
-          errorMsg: errDetail
-        });
-      }
 
       const errorMsg: ChatMessage = {
         id: `err-${Date.now()}`,
         role: 'assistant',
-        content: `⚠️ **Bağlantı/Çalışma Hatası:** ${errDetail}\n\n*Bu sorun sistem hata kayıtlarına kaydedildi.*`,
+        content: `**Bağlantı/Çalışma Hatası:** ${errDetail}\n\n*Bu sorun sistem hata kayıtlarına kaydedildi.*`,
         timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })
       };
       setMessages(prev => [...prev, errorMsg]);
@@ -392,23 +391,22 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-4 pb-12 min-w-0 w-full max-w-[960px] mx-auto">
+    <div ref={shellRef} className="ms-chat-shell flex flex-col gap-3 min-w-0 w-full">
       <PageHeader
-        eyebrow="Tıp Fakültesi AI OS"
-        title="AI Tıp Asistanı & Soru Dedektifi"
-        description="Yerel RTX 4060 GPU modelleri (qLoRA, Gemma 3, DeepSeek) ve internet erişimli tıp modelleriyle canlı klinik sohbet."
-        stats={[
+        title="Asistan"
+        description="Aklında kalanı anlat; soruyu bulur, açıklar ya da yeni soru türetir."
+        stats={isAdmin ? [
           { label: 'Sağlayıcı', value: providerMode === 'ollama' ? 'Yerel GPU (RTX 4060)' : 'Ücretsiz Web AI' },
           { label: 'Aktif Model', value: selectedModel },
           ...(auditSummary?.totalIssuesFound
             ? [{ label: 'Tespit Edilen Düzenleme', value: `${auditSummary.totalIssuesFound} Soru`, tone: 'warn' as const }]
             : [])
-        ]}
+        ] : undefined}
       />
 
       {/* Control Bar: Provider & Interaction Mode Switcher */}
-      <div className="bg-white rounded-2xl border border-line p-3.5 flex flex-wrap items-center justify-between gap-3 shadow-xs">
-        <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        {isAdmin && <div className="flex flex-wrap items-center gap-2">
           {/* Provider Selection */}
           <div className="flex items-center gap-1 bg-canvas p-1 rounded-xl">
             <button
@@ -434,27 +432,11 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
             </button>
           </div>
 
-          {/* Model Dropdown */}
-          <select
-            value={selectedModel}
-            onChange={(e) => setSelectedModel(e.target.value)}
-            className="h-9 px-3 rounded-xl bg-field border border-line text-[13px] text-ink font-medium cursor-pointer outline-0 focus:border-accent"
-          >
-            {providerMode === 'ollama' ? (
-              <>
-                <option value="gemma3:4b">Gemma 3 (4B - Hızlı & Yerel GPU)</option>
-                <option value="deepseek-r1:8b">DeepSeek-R1 (8B - Derin Mantık)</option>
-                <option value="qwen3:1.7b-q8_0">Qwen 3 (1.7B - Ultra Hafif)</option>
-                <option value="medgemma1.5:4b">MedGemma 1.5 (4B - Tıp Modeli)</option>
-              </>
-            ) : (
-              <>
-                <option value="gemini-3.8-flash">Google Gemini Flash (En Hızlı)</option>
-                <option value="openai/gpt-oss-120b">Groq Cloud (GPT-OSS 120B)</option>
-                <option value="muse-spark-1.3-contributor-free">Muse Spark 1.3 Free (Sınırsız)</option>
-              </>
-            )}
-          </select>
+          {/* Active Model Indicator Badge (Model seçimi devre dışı) */}
+          <span className="text-[12px] font-semibold text-ink-2 bg-canvas border border-line px-3 py-1.5 rounded-xl flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>{providerMode === 'ollama' ? 'Gemma 3 (Yerel GPU)' : 'Google Gemini Flash'}</span>
+          </span>
 
           {/* Model Timeout Badge */}
           <span className="text-[11px] font-mono text-ink-3 bg-canvas border border-line px-2 py-1 rounded-lg flex items-center gap-1" title="Bu model için izin verilen azami yanıt bekleme süresi">
@@ -476,28 +458,16 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
             <History className="w-3.5 h-3.5 text-amber-600" />
             <span>Hata Kayıtları</span>
             {unresolvedLogCount > 0 && (
-              <span className="px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[10px] font-bold">
+              <span className="px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[11px] font-bold">
                 {unresolvedLogCount}
               </span>
             )}
           </button>
 
-          {/* Clear History Button */}
-          {messages.length > 1 && (
-            <button
-              type="button"
-              onClick={handleClearHistory}
-              className="h-8 px-2.5 rounded-xl border border-line bg-white hover:bg-rose-50 hover:text-rose-700 hover:border-rose-200 text-ink-3 text-[12px] font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
-              title="Sohbet geçmişini sıfırla"
-            >
-              <Trash2 className="w-3.5 h-3.5 text-rose-500" />
-              <span>Temizle</span>
-            </button>
-          )}
-        </div>
+        </div>}
 
         {/* Mode Selector */}
-        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+        <div className="flex items-center gap-1 overflow-x-auto no-scrollbar min-w-0">
           {(
             [
               ['general', 'Tıbbi Sohbet', Lightbulb],
@@ -510,10 +480,10 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
               key={mId}
               type="button"
               onClick={() => setInteractionMode(mId)}
-              className={`h-8 px-2.5 rounded-lg text-[12.5px] font-semibold flex items-center gap-1.5 transition-colors cursor-pointer shrink-0 ${
+              className={`h-9 px-3.5 rounded-full text-[13.5px] font-medium flex items-center gap-1.5 transition-colors cursor-pointer shrink-0 ${
                 interactionMode === mId
-                  ? 'bg-ink text-white shadow-xs'
-                  : 'bg-field text-ink-2 hover:bg-canvas hover:text-ink'
+                  ? 'bg-ink text-white'
+                  : 'text-ink-2 hover:bg-field hover:text-ink'
               }`}
             >
               <Icon className="w-3.5 h-3.5" />
@@ -521,158 +491,145 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
             </button>
           ))}
         </div>
+        {/* Clear History Button */}
+          {messages.length > 1 && (
+            <button
+              type="button"
+              onClick={handleClearHistory}
+              className="h-8 px-3 rounded-full text-ink-3 hover:text-ink hover:bg-field text-[13px] font-medium flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              title="Sohbet geçmişini sıfırla"
+            >
+              <Trash2 className="w-3.5 h-3.5" />
+              <span>Temizle</span>
+            </button>
+          )}
       </div>
 
-      {/* Suggested Quick Prompts */}
-      <div className="flex flex-wrap gap-2">
+      {/* Suggested Quick Prompts — yalnızca boş sohbette, tek satır kaydırılabilir */}
+      {messages.length <= 1 && (
+      <div className="flex gap-2 overflow-x-auto no-scrollbar -mx-1 px-1 ms-pop-in">
         <button
           type="button"
           onClick={() => handleQuickPrompt('50 yaşında erkek hasta, hiperkalsemi ve lityum kullanımı öyküsü var. Bu hangi kurul sorusudur ve doğru cevabı nedir?', 'find_question')}
-          className="text-[12px] bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center gap-1.5 cursor-pointer transition-colors"
+          className="text-[12px] bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
         >
           <Search className="w-3 h-3 text-indigo-500" />
-          <span>🔍 "50 yaş hiperkalsemi lityum sorusunu bul"</span>
+          <span>"50 yaş hiperkalsemi lityum sorusunu bul"</span>
         </button>
 
         <button
           type="button"
           onClick={() => handleQuickPrompt('Mycobacterium tuberculosis, Ziehl-Neelsen, kazeöz nekroz anahtar kelimelerinden olası Dönem 3 kurul soruları üret.', 'generate_from_keywords')}
-          className="text-[12px] bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center gap-1.5 cursor-pointer transition-colors"
+          className="text-[12px] bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
         >
           <Sparkles className="w-3 h-3 text-amber-500" />
-          <span>✨ "Tüberküloz & kazeöz nekrozdan kurul sorusu türet"</span>
+          <span>"Tüberküloz & kazeöz nekrozdan kurul sorusu türet"</span>
         </button>
 
         <button
           type="button"
           onClick={() => handleQuickPrompt('Kardiyojenik şok ile hipovolemik şok arasındaki Swan-Ganz kateter hemodinami farklarını açıkla.', 'explain')}
-          className="text-[12px] bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center gap-1.5 cursor-pointer transition-colors"
+          className="text-[12px] bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
         >
           <BookOpen className="w-3 h-3 text-emerald-500" />
-          <span>🧬 "Kardiyojenik vs hipovolemik şok farkı"</span>
+          <span>"Kardiyojenik vs hipovolemik şok farkı"</span>
         </button>
       </div>
+      )}
 
-      {/* Chat Messages Log */}
-      <div className="bg-canvas border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-4 min-h-[420px] max-h-[640px] overflow-y-auto">
+      {/* Sohbet: kutusuz, sade akış. Asistan düz metin, kullanıcı sağda yumuşak baloncuk */}
+      <div className="ms-chat-log flex-1 min-h-0 flex flex-col gap-6 overflow-y-auto overscroll-contain px-1 py-2">
         {messages.map((m) => {
           const isUser = m.role === 'user';
           return (
-            <div
-              key={m.id}
-              className={`flex flex-col gap-1.5 max-w-[92%] ${isUser ? 'self-end items-end' : 'self-start items-start'}`}
-            >
-              <div className="flex items-center gap-2 text-[11px] text-ink-3 px-1">
-                <span>{isUser ? (currentUser?.displayName || 'Tıp Öğrencisi') : 'MedSoru AI'}</span>
-                <span>·</span>
-                <span>{m.timestamp}</span>
-                {m.providerUsed && (
-                  <>
-                    <span>·</span>
-                    <span className="font-mono text-[10px] text-indigo-600 bg-indigo-50 px-1.5 py-0.2 rounded font-semibold">
-                      {m.providerUsed}
-                    </span>
-                  </>
-                )}
-              </div>
+            <div key={m.id} className={`ms-pop-in flex flex-col gap-1 min-w-0 ${isUser ? 'self-end items-end max-w-[85%]' : 'self-stretch items-start'}`}>
+              {isUser ? (
+                <div className="px-4 py-2.5 rounded-2xl rounded-br-md bg-accent-soft text-ink text-[15px] leading-relaxed whitespace-pre-wrap [overflow-wrap:anywhere]">
+                  {m.content}
+                </div>
+              ) : (
+                <div className="w-full min-w-0 text-[15px] leading-[1.7] text-ink [overflow-wrap:anywhere]">
+                  {renderFormattedText(m.content)}
 
-              <div
-                className={`p-4 rounded-2xl text-[14.5px] leading-relaxed break-words ${
-                  isUser
-                    ? 'bg-accent text-white rounded-tr-xs shadow-xs font-medium whitespace-pre-wrap'
-                    : 'bg-white text-ink border border-line rounded-tl-xs shadow-2xs w-full'
-                }`}
-              >
-                {isUser ? m.content : renderFormattedText(m.content)}
-
-                {/* Matched Questions Cards if any */}
-                {m.matchedQuestions && m.matchedQuestions.length > 0 && (
-                  <div className="mt-3.5 pt-3 border-t border-line-soft flex flex-col gap-2">
-                    <span className="text-[12px] font-bold text-indigo-700 flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" />
-                      Arşivden Eşleşen Sorular ({m.matchedQuestions.length})
-                    </span>
-                    <div className="grid grid-cols-1 gap-2">
+                  {m.matchedQuestions && m.matchedQuestions.length > 0 && (
+                    <div className="mt-3 flex flex-col gap-1.5">
+                      <span className="text-[13px] font-semibold text-ink-2">Arşivde eşleşen sorular</span>
                       {m.matchedQuestions.map((mq: any) => (
-                        <div
+                        <button
                           key={mq.id}
-                          className="bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-[12.5px] text-slate-800 flex flex-col gap-1"
+                          type="button"
+                          onClick={() => onNavigateToQuestion?.(mq.id)}
+                          disabled={!onNavigateToQuestion}
+                          className="group text-left rounded-xl border border-line bg-white px-3.5 py-2.5 flex flex-col gap-0.5 min-w-0 cursor-pointer hover:border-line-2 transition-colors"
                         >
-                          <div className="flex items-center justify-between">
-                            <span className="font-bold text-indigo-800">{mq.discipline} · {mq.topic}</span>
-                            <span className="text-[11px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold">
-                              Cevap: {mq.correctAnswer}
-                            </span>
-                          </div>
-                          <p className="line-clamp-2 m-0 text-slate-600">{mq.stem}</p>
-                          {onNavigateToQuestion && (
-                            <button
-                              type="button"
-                              onClick={() => onNavigateToQuestion(mq.id)}
-                              className="self-end text-[11.5px] font-bold text-accent hover:underline flex items-center gap-1 mt-1 cursor-pointer"
-                            >
-                              Soruyu Görüntüle <ArrowRight className="w-3 h-3" />
-                            </button>
-                          )}
-                        </div>
+                          <span className="flex items-center gap-2 text-[12px] text-ink-3 min-w-0">
+                            <span className="truncate">{[mq.discipline, mq.topic].filter(Boolean).join(' · ')}</span>
+                            {mq.correctAnswer && <span className="shrink-0 font-semibold text-ok">Cevap {mq.correctAnswer}</span>}
+                            <ArrowRight className="ml-auto w-3.5 h-3.5 shrink-0 text-ink-3 group-hover:text-accent" />
+                          </span>
+                          <span className="line-clamp-2 text-[14px] text-ink-2">{mq.stem}</span>
+                        </button>
                       ))}
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
+              )}
+              {isAdmin && m.providerUsed && (
+                <span className="px-1 text-[11px] text-ink-3">{m.timestamp} · {m.providerUsed}</span>
+              )}
             </div>
           );
         })}
 
         {isLoading && (
-          <div className="self-start flex items-center gap-2.5 bg-white border border-line rounded-2xl px-4 py-3 text-[13.5px] text-ink-2 shadow-2xs">
-            <RefreshCw className="w-4 h-4 text-accent animate-spin" />
-            <span>
-              {providerMode === 'ollama'
-                ? `RTX 4060 GPU üzerinde ${selectedModel} düşünüyor...`
-                : 'Tıp veritabanı ve internet kaynakları taranıyor...'}
-            </span>
+          <div className="self-start flex items-center gap-1.5 px-1 py-2 text-ink-3" aria-live="polite">
+            <span className="w-1.5 h-1.5 rounded-full bg-current animate-[ms-dot_1.2s_ease-in-out_infinite]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-current animate-[ms-dot_1.2s_.15s_ease-in-out_infinite]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-current animate-[ms-dot_1.2s_.3s_ease-in-out_infinite]" />
+            <span className="sr-only">Yanıt hazırlanıyor</span>
           </div>
         )}
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Composer */}
+      {/* Yazma alanı: tek satır, gönder düğmesi alanın içinde */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
           handleSendMessage();
         }}
-        className="flex gap-2 items-center"
+        className="shrink-0"
       >
-        <input
-          type="text"
-          value={inputText}
-          onChange={(e) => setInputText(e.target.value)}
-          placeholder={
-            interactionMode === 'find_question'
-              ? 'Hatırladığın soru detaylarını yaz (örn: 50 yaş, hiperkalsemi, lityum kullanımı)...'
-              : interactionMode === 'generate_from_keywords'
-              ? 'Anahtar kelimeleri yaz (örn: staphylococcus aureus, katalaz pozitif, koagülaz)...'
-              : 'Tıp asistanına soru sor veya aklına takılan klinik mekanizmayı danış...'
-          }
-          disabled={isLoading}
-          className="flex-1 h-12 px-4 rounded-xl bg-white border border-line focus:border-accent outline-0 text-[15px] text-ink placeholder:text-slate-600 shadow-xs"
-        />
-
-        <button
-          type="submit"
-          disabled={!inputText.trim() || isLoading}
-          className="h-12 px-5 rounded-xl bg-accent hover:bg-accent-hover disabled:opacity-50 text-white font-semibold flex items-center gap-2 cursor-pointer shadow-xs transition-colors shrink-0"
-        >
-          <Send className="w-4 h-4" />
-          <span className="hidden sm:inline">Gönder</span>
-        </button>
+        <div className="flex items-center gap-2 h-14 pl-5 pr-2 rounded-full bg-white border border-line shadow-md focus-within:border-accent transition-colors">
+          <input
+            type="text"
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+            placeholder={
+              interactionMode === 'find_question'
+                ? 'Hatırladığın detayları yaz…'
+                : interactionMode === 'generate_from_keywords'
+                ? 'Anahtar kelimeleri yaz…'
+                : 'Bir şey sor…'
+            }
+            disabled={isLoading}
+            enterKeyHint="send"
+            className="ms-bare-input flex-1 min-w-0 h-full bg-transparent border-0 outline-0 text-[16px] text-ink placeholder:text-ink-3"
+          />
+          <button
+            type="submit"
+            disabled={!inputText.trim() || isLoading}
+            aria-label="Gönder"
+            className="w-10 h-10 rounded-full bg-accent hover:bg-accent-hover disabled:bg-line-2 text-white flex items-center justify-center cursor-pointer transition-colors shrink-0"
+          >
+            <Send className="w-4 h-4" />
+          </button>
+        </div>
       </form>
 
       {/* 1. Kullanıcı Onaylı Bulut Fallback Modalı (Otomatik Geçiş Kesinlikle Engellendi) */}
       {fallbackPromptDialog && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="ms-overlay fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl border border-line p-5 max-w-[500px] w-full shadow-xl flex flex-col gap-4">
             <div className="flex items-start gap-3">
               <div className="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 shrink-0">
@@ -690,7 +647,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
             </div>
 
             <div className="bg-amber-50/70 border border-amber-200/80 rounded-xl p-3 text-[12.5px] text-amber-900 leading-normal">
-              🛡️ <strong>Kullanıcı Gizliliği & Kontrol:</strong> MedSoru AI, onayınız olmadan sorgunuzu asla internet/bulut modellerine yönlendirmez. Bu soruyu ücretsiz bulut modeliyle (Google Gemini Flash) tekrar denemek ister misiniz?
+              <strong>Kullanıcı Gizliliği & Kontrol:</strong> MeDSor AI, onayınız olmadan sorgunuzu asla internet/bulut modellerine yönlendirmez. Bu soruyu ücretsiz bulut modeliyle (Google Gemini Flash) tekrar denemek ister misiniz?
             </div>
 
             <div className="flex items-center justify-end gap-2.5 pt-2">
@@ -716,8 +673,8 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
 
       {/* 2. Yapay Zeka Hata Kayıtları (Error Logs) Denetim Modalı */}
       {showErrorLogsModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl border border-line p-5 max-w-[700px] w-full max-h-[85vh] flex flex-col shadow-2xl">
+        <div className="ms-overlay fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl border border-line p-5 max-w-[700px] w-full max-h-[85dvh] flex flex-col shadow-2xl">
             <div className="flex items-center justify-between pb-3 border-b border-line">
               <div className="flex items-center gap-2">
                 <History className="w-5 h-5 text-amber-600" />
@@ -739,7 +696,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
             <div className="flex-1 overflow-y-auto space-y-2.5 pr-1 my-2">
               {errorLogs.length === 0 ? (
                 <div className="p-8 text-center text-ink-3 text-[13px] bg-canvas rounded-xl border border-line">
-                  🎉 Henüz kayıtlı yapay zeka hatası veya zaman aşımı bulunmuyor.
+                  Henüz kayıtlı yapay zeka hatası veya zaman aşımı bulunmuyor.
                 </div>
               ) : (
                 errorLogs.map((log: any) => (
@@ -761,11 +718,11 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
                           {log.provider} · {log.model}
                         </span>
                         {log.isTimeout && (
-                          <span className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-[10.5px] font-semibold flex items-center gap-1">
+                          <span className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-[11.5px] font-semibold flex items-center gap-1">
                             <Clock className="w-3 h-3" /> Zaman Aşımı
                           </span>
                         )}
-                        <span className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold ${
+                        <span className={`px-1.5 py-0.5 rounded text-[11.5px] font-semibold ${
                           log.status === 'resolved' ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
                         }`}>
                           {log.status === 'resolved' ? 'Çözüldü' : 'Açık / İncelenmeli'}

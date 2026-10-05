@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, NotebookPen, RotateCcw, Shuffle, Check, X as XIcon, SlidersHorizontal, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, Star, NotebookPen, RotateCcw, Shuffle, Check, X as XIcon, SlidersHorizontal, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import { Committee } from '../../types';
 import {
   StudyQuestion,
@@ -8,6 +8,8 @@ import {
   recordAttempt,
   getReview,
   setInReview,
+  getFavorites,
+  setFavorite,
   shuffle,
   getNotes,
   saveNotes,
@@ -41,6 +43,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(getProgress);
   const [review, setReview] = useState(getReview);
+  const [favorites, setFavorites] = useState(getFavorites);
   const [noteOpen, setNoteOpen] = useState(false);
   const [noteText, setNoteText] = useState('');
   const [noteSaved, setNoteSaved] = useState(false);
@@ -354,6 +357,18 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
               >
                 {review.has(q.id) ? <BookmarkCheck className="w-4 h-4" /> : <Bookmark className="w-4 h-4" />}
                 <span className="hidden sm:inline">{review.has(q.id) ? 'Tekrar listesinde' : 'Tekrar listesine ekle'}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setFavorites(new Set(setFavorite(q.id, !favorites.has(q.id))))}
+                aria-pressed={favorites.has(q.id)}
+                aria-label={favorites.has(q.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'}
+                className={`h-9 px-2.5 rounded-lg text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
+                  favorites.has(q.id) ? 'text-amber-600' : 'text-ink-2 hover:bg-canvas'
+                }`}
+              >
+                <Star className="w-4 h-4" fill={favorites.has(q.id) ? 'currentColor' : 'none'} />
+                <span className="hidden sm:inline">{favorites.has(q.id) ? 'Favoride' : 'Favori'}</span>
               </button>
               <button
                 type="button"

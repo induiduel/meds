@@ -34,15 +34,19 @@ import {
   Moon,
   Sun,
   ArrowLeft,
+  EyeOff,
+  Wand2,
+  FilePlus2,
 } from 'lucide-react';
 import type { QuestionItem, Committee, QuestionOption } from '../../types';
-import { ApiService } from '../../services/api';
+import { ApiService, safeJsonFetch } from '../../services/api';
 import { multiDbManager } from '../../services/multiDbManager';
 import { systemHealthMonitor, SystemOverallHealth } from '../../services/systemHealthMonitor';
 import { AdminScriptsTab } from '../AdminScriptsTab';
 import { AdminDriveSyncSettings } from '../AdminDriveSyncSettings';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 import { DraftStudio } from './DraftStudio';
+const AiQuestionOptimizerModal = React.lazy(() => import('../AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal })));
 import { useTheme } from '../../utils/theme';
 import { ManageDraftsSection } from './ManageDraftsSection';
 import { ManageDataSection } from './ManageDataSection';
@@ -171,6 +175,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const [modAnswer, setModAnswer] = useState('A');
   const [modExplanation, setModExplanation] = useState('');
   const [isSavingMod, setIsSavingMod] = useState(false);
+  const [modOptions, setModOptions] = useState<{ key: string; text: string }[]>([]);
+  const [modAiOpen, setModAiOpen] = useState(false);
+  const [confirmDeleteMod, setConfirmDeleteMod] = useState(false);
   const [editingDraft, setEditingDraft] = useState<QuestionItem | null>(null);
 
   // Users
@@ -306,6 +313,19 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     );
   }, [selectedReport, pastQuestions, questions]);
 
+  // Bulut listesinde olmayan (sayfalama/senkron farkı) şikâyetli soruyu yerel sunucudan kimliğiyle getir
+  const [modLookupDone, setModLookupDone] = useState<string | null>(null);
+  useEffect(() => {
+    const id = selectedReport?.questionId;
+    if (!id || moderatedQuestion || modLookupDone === id) return;
+    setModLookupDone(id);
+    safeJsonFetch<any>(`/api/past-exams?query=${encodeURIComponent(id)}`).then((res) => {
+      const list: QuestionItem[] = Array.isArray(res.data) ? res.data : res.data?.questions || res.data?.items || [];
+      const found = list.find((q) => q.id === id);
+      if (found) setPastQuestions((prev) => (prev.some((q) => q.id === id) ? prev : [...prev, { ...found, isPastExam: true } as QuestionItem]));
+    });
+  }, [selectedReport?.questionId, moderatedQuestion, modLookupDone]);
+
   useEffect(() => {
     if (moderatedQuestion) {
       setModStem(
@@ -318,6 +338,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         moderatedQuestion.reconstruction?.correctAnswer || moderatedQuestion.claimedAnswer || 'A'
       );
       setModExplanation(moderatedQuestion.reconstruction?.explanation || '');
+      const opts = (moderatedQuestion.reconstruction?.options || (moderatedQuestion.options || []).map((o: QuestionOption) => ({ key: o.key, text: o.text }))) as { key: string; text: string }[];
+      setModOptions(['A', 'B', 'C', 'D', 'E'].map((k) => ({ key: k, text: opts.find((o) => o.key === k)?.text || '' })));
+      setConfirmDeleteMod(false);
       if (!selectedReportId && selectedReport) setSelectedReportId(selectedReport.id);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -514,9 +537,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           ...moderatedQuestion,
           reconstruction: {
             stem: modStem.trim(),
-            options:
-              moderatedQuestion.reconstruction?.options ||
-              (moderatedQuestion.options || []).map((o: QuestionOption) => ({ key: o.key, text: o.text })),
+            options: modOptions.filter((o) => o.text.trim()).map((o) => ({ key: o.key as any, text: o.text.trim() })),
             correctAnswer: modAnswer as 'A' | 'B' | 'C' | 'D' | 'E',
             explanation: modExplanation.trim(),
             confidenceScore: moderatedQuestion.reconstruction?.confidenceScore ?? 90,
@@ -532,9 +553,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         const updated = await ApiService.adminUpdateQuestion(adminEmail, moderatedQuestion.id, {
           reconstruction: {
             stem: modStem.trim(),
-            options:
-              moderatedQuestion.reconstruction?.options ||
-              (moderatedQuestion.options || []).map((o: QuestionOption) => ({ key: o.key, text: o.text })),
+            options: modOptions.filter((o) => o.text.trim()).map((o) => ({ key: o.key as any, text: o.text.trim() })),
             correctAnswer: modAnswer as 'A' | 'B' | 'C' | 'D' | 'E',
             explanation: modExplanation.trim(),
             confidenceScore: moderatedQuestion.reconstruction?.confidenceScore ?? 90,
@@ -553,6 +572,78 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       setNotice(e instanceof Error ? e.message : 'Düzeltme kaydedilemedi.');
     } finally {
       setIsSavingMod(false);
+    }
+  };
+
+  const isPastModerated = !!moderatedQuestion && (moderatedQuestion.isPastExam || pastQuestions.some((q) => q.id === moderatedQuestion.id));
+  const modHidden = Boolean((moderatedQuestion as any)?.hidden);
+
+  /** Şikâyetten sonra sorunun akıbeti yöneticinin kararıdır: gizle / göster */
+  const handleToggleHideModerated = async () => {
+    if (!moderatedQuestion || !selectedReport || !isPastModerated) return;
+    setBusyAction('mod-hide');
+    try {
+      const updated = await ApiService.adminPatchPastQuestion(adminEmail, moderatedQuestion.id, { hidden: !modHidden });
+      setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
+      setNotice(modHidden ? 'Soru yeniden yayında.' : 'Soru gizlendi; öğrenciler artık görmüyor.');
+    } catch (e) {
+      setNotice(e instanceof Error ? e.message : 'İşlem yapılamadı.');
+    } finally {
+      setBusyAction(null);
+    }
+  };
+
+  const handleDeleteModerated = async () => {
+    if (!moderatedQuestion || !selectedReport) return;
+    if (!confirmDeleteMod) { setConfirmDeleteMod(true); return; }
+    setBusyAction('mod-delete');
+    try {
+      if (isPastModerated) {
+        await ApiService.adminDeletePastQuestion(adminEmail, moderatedQuestion.id);
+        setPastQuestions((prev) => prev.filter((q) => q.id !== moderatedQuestion.id));
+      } else {
+        await ApiService.deleteQuestion(moderatedQuestion.id, { email: adminEmail } as any);
+      }
+      await handleResolve(selectedReport);
+      setNotice('Soru silindi ve bildirim kapatıldı.');
+      setSelectedReportId('');
+      await onRefreshData();
+    } catch (e) {
+      setNotice(e instanceof Error ? e.message : 'Soru silinemedi.');
+    } finally {
+      setBusyAction(null);
+      setConfirmDeleteMod(false);
+    }
+  };
+
+  /** Çıkmış soruyu havuza taslak olarak kopyalar ve aslını gizler (topluluk yeniden kurar) */
+  const handleConvertToDraft = async () => {
+    if (!moderatedQuestion || !selectedReport) return;
+    setBusyAction('mod-draft');
+    try {
+      const committeeId = moderatedQuestion.committeeId || selectedCommitteeId;
+      const options = modOptions.filter((o) => o.text.trim()).map((o) => ({ key: o.key as 'A' | 'B' | 'C' | 'D' | 'E', text: o.text.trim() }));
+      await ApiService.addQuestionContribution({
+        committeeId,
+        isUnknownNumber: true,
+        discipline: moderatedQuestion.discipline || 'Belirtilmedi',
+        topic: moderatedQuestion.topic || `${moderatedQuestion.discipline || ''} Şikâyetten taslak`.trim(),
+        fragmentText: modStem.trim(),
+        author: 'Yönetici (şikâyetten taslak)',
+        claimedAnswer: (modAnswer || undefined) as any,
+        options: options.length ? options : undefined,
+      });
+      if (isPastModerated && !modHidden) {
+        const updated = await ApiService.adminPatchPastQuestion(adminEmail, moderatedQuestion.id, { hidden: true });
+        setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
+      }
+      await handleResolve(selectedReport);
+      setNotice('Soru taslak olarak havuza eklendi' + (isPastModerated ? ', aslı gizlendi.' : '.'));
+      await onRefreshData();
+    } catch (e) {
+      setNotice(e instanceof Error ? e.message : 'Taslağa çevrilemedi.');
+    } finally {
+      setBusyAction(null);
     }
   };
 
@@ -591,13 +682,13 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
   return (
     <div className={`ms-console w-full bg-canvas overflow-hidden flex flex-col text-ink ${
-      fullscreen ? 'h-dvh min-h-dvh' : 'rounded-2xl min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)]'
+      fullscreen ? 'h-[var(--vvh,100dvh)]' : 'rounded-2xl min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)]'
     }`}>
       {/* Üst çubuk: ana sayfalardaki gibi sade, yarı saydam */}
       <header className="shrink-0 h-[60px] flex items-center gap-2 px-3 sm:px-5 bg-canvas/85 backdrop-blur-md">
         <button type="button" onClick={onExit} className="flex items-center gap-2 cursor-pointer shrink-0 mr-1" title="Siteye dön" aria-label="Siteye dön">
           <span className="w-7 h-7 rounded-[9px] bg-accent text-white flex items-center justify-center font-bold">+</span>
-          <span className="hidden sm:inline font-display font-bold text-[17px] tracking-[-0.02em]">MedSoru</span>
+          <span className="hidden sm:inline font-display font-bold text-[17px] tracking-[-0.02em]">MeDSor</span>
         </button>
         <span className="h-7 px-3 rounded-full bg-ink text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 shrink-0">
           <ShieldCheck className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Yönetim</span>
@@ -717,7 +808,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           </div>
         )}
 
-        <main className="ms-console-body flex-1 min-h-0 overflow-y-auto px-4 sm:px-8 py-3 sm:py-4 flex flex-col" data-density={density} style={{ zoom: DENSITY_ZOOM[density] } as React.CSSProperties}>
+        <main key={section} className="ms-console-body ms-view-enter overscroll-contain flex-1 min-h-0 overflow-y-auto px-4 sm:px-8 py-3 sm:py-4 flex flex-col" data-density={density} style={{ zoom: DENSITY_ZOOM[density] } as React.CSSProperties}>
           {section === 'inbox' && (
             <div className="flex flex-col gap-3">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -874,62 +965,138 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           )}
 
           {section === 'moderation' && (
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-col sm:flex-row gap-2">
-                <label className="flex-1 min-w-0">
-                  <span className="sr-only">İncelenecek bildirim</span>
-                  <select value={selectedReport?.id || ''} onChange={(e) => setSelectedReportId(e.target.value)} className="w-full h-11 border border-line-2 rounded-[10px] px-3 text-[14px] bg-white cursor-pointer">
-                    {pendingReports.length === 0 && <option value="">Bekleyen bildirim yok</option>}
-                    {pendingReports.map((r) => (
-                      <option key={r.id} value={r.id}>{r.reason} · {r.questionTopic || r.questionId}</option>
-                    ))}
-                  </select>
-                </label>
-                {selectedReport && (
-                  <button type="button" onClick={() => { void handleResolve(selectedReport); }} className="h-11 px-4 rounded-[10px] border border-line-2 text-[14px] font-semibold cursor-pointer shrink-0">Hatasız — Kapat</button>
-                )}
-              </div>
-
-              {!selectedReport && (
-                <div className="rounded-xl border border-line px-4 py-10 text-center text-[14px] text-ink-2">İncelenecek bildirim seç.</div>
-              )}
-
-              {selectedReport && (
-                <div className="rounded-xl border border-line overflow-hidden">
-                  <div className="px-4 py-3 bg-rose-50 border-b border-line-soft">
-                    <div className="text-[15px] font-bold flex items-center gap-2"><Flag className="w-4 h-4 text-rose-700" /> {selectedReport.reason}</div>
-                    <p className="m-0 mt-1 text-[14px] text-ink-2">{selectedReport.details || 'Detay girilmemiş.'}</p>
-                    <div className="text-[12px] text-ink-3 mt-1">{selectedReport.reportedBy || 'Anonim'} · {selectedReport.createdAt ? new Date(selectedReport.createdAt).toLocaleString('tr-TR') : ''}</div>
-                  </div>
-                  {!moderatedQuestion ? (
-                    <p className="m-0 px-4 py-8 text-center text-[14px] text-ink-2">Bağlı soru bulunamadı (silinmiş olabilir).</p>
-                  ) : (
-                    <div className="p-4 flex flex-col gap-3">
-                      <div className="text-[13px] text-ink-2">{moderatedQuestion.discipline} · {moderatedQuestion.topic} · S.{moderatedQuestion.questionNumber || '?'}</div>
-                      <label className="flex flex-col gap-1.5">
-                        <span className="text-[13px] font-semibold">Soru kökü</span>
-                        <textarea value={modStem} onChange={(e) => setModStem(e.target.value)} rows={4} className="rounded-xl bg-field border border-transparent px-3.5 py-3 text-[15px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
-                      </label>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <label className="flex flex-col gap-1.5">
-                          <span className="text-[13px] font-semibold">Doğru cevap</span>
-                          <select value={modAnswer} onChange={(e) => setModAnswer(e.target.value)} className="h-11 border border-line-2 rounded-[10px] px-3 text-[14px] bg-white cursor-pointer">
-                            {['A', 'B', 'C', 'D', 'E'].map((k) => <option key={k} value={k}>{k}</option>)}
-                          </select>
-                        </label>
-                      </div>
-                      <label className="flex flex-col gap-1.5">
-                        <span className="text-[13px] font-semibold">Açıklama</span>
-                        <textarea value={modExplanation} onChange={(e) => setModExplanation(e.target.value)} rows={3} className="rounded-xl bg-field border border-transparent px-3.5 py-3 text-[14px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
-                      </label>
-                      <div className="flex gap-2">
-                        <button type="button" onClick={() => { void handleSaveModeration(); }} disabled={isSavingMod || !modStem.trim()} className="h-11 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] inline-flex items-center gap-2 cursor-pointer disabled:opacity-50">
-                          <Save className="w-4 h-4" /> {isSavingMod ? 'Kaydediliyor…' : 'Düzelt ve bildirimi kapat'}
-                        </button>
-                      </div>
-                    </div>
-                  )}
+            <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-3 min-w-0">
+              {/* Şikâyet listesi */}
+              <aside className="flex flex-col gap-2 min-w-0">
+                <div className="ms-f-seg" role="radiogroup" aria-label="Bildirim durumu">
+                  {([['pending', `Bekleyen ${pendingReports.length}`], ['resolved', `Çözülen ${resolvedReports.length}`], ['all', 'Tümü']] as const).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={reportStatus === id} onClick={() => setReportStatus(id)} className={reportStatus === id ? 'is-on' : ''}>{label}</button>
+                  ))}
                 </div>
+                <ul className="m-0 p-0 list-none flex flex-col gap-1.5 max-h-[38vh] lg:max-h-[calc(var(--vvh,100dvh)-220px)] overflow-y-auto overscroll-contain">
+                  {visibleReports.length === 0 && <li className="px-3 py-8 text-center text-[14px] text-ink-3">Bu filtrede bildirim yok.</li>}
+                  {visibleReports.map((r) => {
+                    const on = selectedReport?.id === r.id;
+                    const done = resolvedIds.has(r.id) || (r.status || 'pending') !== 'pending';
+                    return (
+                      <li key={r.id}>
+                        <button
+                          type="button"
+                          onClick={() => setSelectedReportId(r.id)}
+                          aria-current={on}
+                          className={`w-full text-left rounded-xl border px-3 py-2.5 flex flex-col gap-0.5 cursor-pointer transition-colors ${on ? 'border-accent bg-accent-soft' : 'border-line bg-white hover:border-line-2'}`}
+                        >
+                          <span className="flex items-center gap-1.5 text-[13.5px] font-semibold text-ink min-w-0">
+                            <Flag className={`w-3.5 h-3.5 shrink-0 ${done ? 'text-ink-3' : 'text-rose-600'}`} />
+                            <span className="truncate">{r.reason}</span>
+                          </span>
+                          <span className="text-[12.5px] text-ink-2 truncate">{r.questionTopic || r.questionId}</span>
+                          <span className="text-[11.5px] text-ink-3 truncate">{r.reportedBy || 'Anonim'} · {r.createdAt ? new Date(r.createdAt).toLocaleDateString('tr-TR') : ''}{done ? ' · çözüldü' : ''}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </aside>
+
+              {/* Seçili şikâyet: sorunun tamamı ve işlemler */}
+              <section className="min-w-0">
+                {!selectedReport ? (
+                  <div className="rounded-xl border border-line px-4 py-12 text-center text-[14px] text-ink-2">Soldan bir bildirim seç.</div>
+                ) : (
+                  <div className="rounded-xl border border-line bg-white [overflow:clip]">
+                    <div className="px-4 py-3 bg-rose-50 border-b border-line-soft">
+                      <div className="text-[15px] font-bold flex items-center gap-2"><Flag className="w-4 h-4 text-rose-700" /> {selectedReport.reason}</div>
+                      <p className="m-0 mt-1 text-[14px] text-ink-2 [overflow-wrap:anywhere]">{selectedReport.details || 'Detay girilmemiş.'}</p>
+                      <div className="text-[12px] text-ink-3 mt-1">{selectedReport.reportedBy || 'Anonim'} · {selectedReport.createdAt ? new Date(selectedReport.createdAt).toLocaleString('tr-TR') : ''}</div>
+                    </div>
+                    {!moderatedQuestion ? (
+                      <div className="px-4 py-8 text-center flex flex-col items-center gap-3">
+                        <p className="m-0 text-[14px] text-ink-2">Bağlı soru bulunamadı (silinmiş olabilir).</p>
+                        <button type="button" onClick={() => { void handleResolve(selectedReport); }} className="h-10 px-4 rounded-full border border-line-2 text-[14px] font-semibold cursor-pointer">Bildirimi kapat</button>
+                      </div>
+                    ) : (
+                      <div className="p-4 flex flex-col gap-3">
+                        <div className="flex flex-wrap items-center gap-2 text-[12.5px] text-ink-3">
+                          <span>{[moderatedQuestion.discipline, moderatedQuestion.topic, moderatedQuestion.examYear, `S.${moderatedQuestion.questionNumber || '?'}`].filter(Boolean).join(' · ')}</span>
+                          <span className="font-mono">{moderatedQuestion.id}</span>
+                          {modHidden && <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-semibold">Gizli</span>}
+                        </div>
+                        <label className="flex flex-col gap-1.5">
+                          <span className="text-[13px] font-semibold">Soru kökü</span>
+                          <textarea value={modStem} onChange={(e) => setModStem(e.target.value)} rows={4} className="rounded-xl bg-field border border-transparent px-3.5 py-3 text-[15px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
+                        </label>
+                        <div className="flex flex-col gap-1.5">
+                          <span className="text-[13px] font-semibold">Şıklar ve doğru cevap</span>
+                          {modOptions.map((o, i) => (
+                            <div key={o.key} className="flex items-center gap-2">
+                              <button
+                                type="button"
+                                onClick={() => setModAnswer(o.key)}
+                                aria-pressed={modAnswer === o.key}
+                                title="Doğru cevap olarak işaretle"
+                                className={`w-9 h-9 rounded-full shrink-0 font-mono text-[14px] font-semibold cursor-pointer ${modAnswer === o.key ? 'bg-ok text-white' : 'bg-field text-ink-2 hover:bg-line-soft'}`}
+                              >
+                                {o.key}
+                              </button>
+                              <input
+                                value={o.text}
+                                onChange={(e) => setModOptions((prev) => prev.map((x, j) => (j === i ? { ...x, text: e.target.value } : x)))}
+                                placeholder={`${o.key} şıkkı`}
+                                className="flex-1 min-w-0 h-10 rounded-[10px] bg-field border border-transparent px-3 text-[14px] outline-0 focus:border-accent focus:bg-white"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                        <label className="flex flex-col gap-1.5">
+                          <span className="text-[13px] font-semibold">Açıklama</span>
+                          <textarea value={modExplanation} onChange={(e) => setModExplanation(e.target.value)} rows={3} className="rounded-xl bg-field border border-transparent px-3.5 py-3 text-[14px] leading-relaxed outline-0 focus:border-accent focus:bg-white resize-y" />
+                        </label>
+
+                        {/* Kararlar yöneticinin: düzelt, AI, taslak, gizle, sil, kapat */}
+                        <div className="sticky bottom-0 z-10 -mx-4 -mb-4 px-4 py-3 bg-white/95 backdrop-blur border-t border-line-soft flex flex-wrap gap-2">
+                          <button type="button" onClick={() => { void handleSaveModeration(); }} disabled={isSavingMod || !modStem.trim()} className="h-10 px-4 rounded-full bg-accent hover:bg-accent-hover text-white font-semibold text-[14px] inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
+                            <Save className="w-4 h-4" /> {isSavingMod ? 'Kaydediliyor…' : 'Düzelt ve kapat'}
+                          </button>
+                          <button type="button" onClick={() => setModAiOpen(true)} className="h-10 px-4 rounded-full bg-accent-soft text-accent font-semibold text-[14px] inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent hover:text-white transition-colors">
+                            <Wand2 className="w-4 h-4" /> AI ile düzelt
+                          </button>
+                          <button type="button" onClick={() => { void handleConvertToDraft(); }} disabled={busyAction === 'mod-draft'} className="h-10 px-4 rounded-full border border-line-2 text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
+                            <FilePlus2 className="w-4 h-4" /> Taslağa çevir
+                          </button>
+                          {isPastModerated && (
+                            <button type="button" onClick={() => { void handleToggleHideModerated(); }} disabled={busyAction === 'mod-hide'} className="h-10 px-4 rounded-full border border-line-2 text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50">
+                              {modHidden ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />} {modHidden ? 'Yayına al' : 'Gizle'}
+                            </button>
+                          )}
+                          <button type="button" onClick={() => { void handleResolve(selectedReport); }} className="h-10 px-4 rounded-full border border-line-2 text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer">
+                            <Check className="w-4 h-4" /> Hatasız, kapat
+                          </button>
+                          <span className="flex-1" />
+                          <button type="button" onClick={() => { void handleDeleteModerated(); }} disabled={busyAction === 'mod-delete'} className={`h-10 px-4 rounded-full text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 ${confirmDeleteMod ? 'bg-rose-600 text-white' : 'border border-rose-300 text-rose-700 hover:bg-rose-50'}`}>
+                            <Trash2 className="w-4 h-4" /> {confirmDeleteMod ? 'Kalıcı silmeyi onayla' : 'Sil'}
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </section>
+
+              {modAiOpen && moderatedQuestion && (
+                <React.Suspense fallback={null}>
+                  <AiQuestionOptimizerModal
+                    question={moderatedQuestion}
+                    isOpen
+                    onClose={() => setModAiOpen(false)}
+                    onSaved={(updated) => {
+                      setModAiOpen(false);
+                      setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
+                      if (selectedReport) void handleResolve(selectedReport);
+                      setNotice('AI düzeltmesi kaydedildi ve bildirim kapatıldı.');
+                    }}
+                  />
+                </React.Suspense>
               )}
             </div>
           )}

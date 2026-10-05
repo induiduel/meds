@@ -72,6 +72,17 @@ export function setCustomSupabaseConfig(url: string, key: string) {
 
 let cachedClient: SupabaseClient | null = null;
 
+/** Şikâyet satırları iki kaynaktan (tablo / soru içi JSON) farklı adlarla gelir; tek biçime getir */
+function normalizeReportRow(r: any) {
+  return {
+    ...r,
+    questionId: r.questionId ?? r.question_id,
+    questionTopic: r.questionTopic ?? r.question_topic ?? r.topic,
+    reportedBy: r.reportedBy ?? r.reported_by,
+    createdAt: r.createdAt ?? r.created_at ?? r.timestamp,
+  };
+}
+
 export function getSupabaseClient(): SupabaseClient | null {
   if (cachedClient) return cachedClient;
 
@@ -624,7 +635,8 @@ export const SupabaseDbService = {
         .order('created_at', { ascending: false })
         .limit(limit);
       if (!error && Array.isArray(data) && data.length > 0) {
-        return data;
+        // Tablo satırları snake_case; yönetim ekranı camelCase alanlar bekler
+        return data.map(normalizeReportRow);
       }
     } catch (_) {}
 
@@ -641,7 +653,7 @@ export const SupabaseDbService = {
         for (const q of data) {
           if (Array.isArray(q.reports)) {
             for (const r of q.reports) {
-              flat.push({ ...r, question_id: q.id, discipline: q.discipline, topic: q.topic });
+              flat.push(normalizeReportRow({ ...r, question_id: q.id, discipline: q.discipline, topic: q.topic }));
             }
           }
         }

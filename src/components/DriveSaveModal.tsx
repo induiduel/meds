@@ -111,9 +111,9 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="ms-modal-panel bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden my-6 flex flex-col max-h-[90vh]">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden my-6 flex flex-col max-h-[90dvh]">
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-800 to-teal-900 text-white p-5 flex items-center justify-between shrink-0">
+        <div className="bg-ink-surface text-white p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white/10 text-white border border-white/20 flex items-center justify-center">
               <Cloud className="w-6 h-6 text-teal-300" />
@@ -142,7 +142,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                 <Sparkles className="w-4 h-4 text-amber-500" />
                 Otomatik Drive Eşiği Durumu
               </span>
-              <span className={`font-bold px-2 py-0.5 rounded text-[10px] ${
+              <span className={`font-bold px-2 py-0.5 rounded text-[11px] ${
                 threshold.isThresholdMet 
                   ? 'bg-emerald-100 text-emerald-800' 
                   : 'bg-amber-100 text-amber-800'
@@ -208,7 +208,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                 <Download className="w-4 h-4 text-teal-700" />
                 1. Seçenek: Cihazınıza PDF İndir (Anında & İnternetsiz)
               </h4>
-              <span className="bg-teal-50 text-teal-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-teal-200">
+              <span className="bg-teal-50 text-teal-700 text-[11px] font-bold px-2 py-0.5 rounded-full border border-teal-200">
                 1 Tıkla Hazır
               </span>
             </div>
@@ -231,7 +231,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                 <Cloud className="w-4 h-4 text-teal-700" />
                 2. Seçenek: Google Drive Klasörüne Kaydet
               </h4>
-              <span className="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded">
+              <span className="bg-slate-100 text-slate-700 text-[11px] font-medium px-2 py-0.5 rounded">
                 Bulut Arşiv
               </span>
             </div>
@@ -285,7 +285,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                   <span>Google ile Oturum Aç & Drive'a Yükle</span>
                 </button>
 
-                <p className="text-[10px] text-amber-800 bg-amber-50 p-2 rounded border border-amber-200 flex items-start gap-1.5">
+                <p className="text-[11px] text-amber-800 bg-amber-50 p-2 rounded border border-amber-200 flex items-start gap-1.5">
                   <ShieldAlert className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
                   <span>
                     GitHub Pages üzerinden Google Drive'a doğrudan yükleyebilmek için Firebase Console'da <strong>induiduel.github.io</strong> alan adının ekli olması gerekir.
@@ -299,7 +299,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
               <button
                 type="button"
                 onClick={() => setShowTokenInput(!showTokenInput)}
-                className="text-[10px] text-slate-500 hover:text-slate-800 underline flex items-center gap-1 cursor-pointer"
+                className="text-[11px] text-slate-500 hover:text-slate-800 underline flex items-center gap-1 cursor-pointer"
               >
                 <Key className="w-3 h-3" />
                 <span>{showTokenInput ? 'Belirteç alanını gizle' : 'Google OAuth Access Token ile yüklemek ister misiniz?'}</span>
@@ -312,9 +312,9 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                     placeholder="ya29.a0AfH6SM..."
                     value={tokenInput}
                     onChange={(e) => setTokenInput(e.target.value)}
-                    className="w-full bg-white border border-slate-300 rounded p-1.5 font-mono text-[10px]"
+                    className="w-full bg-white border border-slate-300 rounded p-1.5 font-mono text-[11px]"
                   />
-                  <div className="flex justify-between items-center text-[10px] text-slate-500">
+                  <div className="flex justify-between items-center text-[11px] text-slate-500">
                     <span>Google Drive scope içeren geçici belirteç</span>
                     <button
                       onClick={handleUploadDrive}

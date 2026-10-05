@@ -69,7 +69,7 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
   };
 
   const exportMd = () => {
-    const blob = new Blob([`# MedSoru notlarım\n\n${notesToMarkdown(visible)}`], { type: 'text/markdown;charset=utf-8' });
+    const blob = new Blob([`# MeDSor notlarım\n\n${notesToMarkdown(visible)}`], { type: 'text/markdown;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

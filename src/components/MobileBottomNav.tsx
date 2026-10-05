@@ -80,7 +80,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activeTab, set
     <>
       <nav
         aria-label="Alt menü"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t border-line pt-1.5 pb-[max(env(safe-area-inset-bottom),8px)] print:hidden"
+        className="ms-hide-on-kb md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t border-line pt-1.5 pb-[max(env(safe-area-inset-bottom),8px)] print:hidden"
       >
         <div className="max-w-[720px] mx-auto grid grid-cols-5 px-1">
           {TABS.map(({ id, label, icon: Icon }) => {

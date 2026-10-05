@@ -42,3 +42,6 @@ models/
 training_data/
 linux/
 \# raw DeepSeek exports to ingest/
+
+# Öğrenme desteleri derlemede bölünür (scripts/vite/splitLearningDecks.ts)
+src/data/decks/

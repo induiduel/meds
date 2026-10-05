@@ -242,7 +242,7 @@ export function extractSlideKnowledge(item: GlossaryItem, slideText?: string): s
       const cleaned = line
         .replace(/^[•\-\*]\s*/, '')
         .replace(/^>\s*/, '')
-        .replace(/^[💡⚠️🔴🚨✨]\s*/, '')
+        .replace(/^[]\s*/, '')
         .trim();
 
       if (cleaned.length > 15) {
@@ -399,7 +399,7 @@ export const FloatingGlossaryToast: React.FC = () => {
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 flex-wrap mb-1">
             <span
-              className={`text-[10.5px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border shadow-2xs ${getCategoryBadgeStyle(
+              className={`text-[11.5px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border shadow-2xs ${getCategoryBadgeStyle(
                 item.category,
                 item.badgeColor
               )}`}
@@ -447,7 +447,7 @@ export const FloatingGlossaryToast: React.FC = () => {
       {/* Dynamic Slide Clinical Synthesis / Slayt Patoloji Bilgisi */}
       {slideKnowledge && (
         <div className="p-2.5 rounded-xl bg-teal-500/10 dark:bg-teal-500/15 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2 animate-in fade-in duration-200 shadow-2xs">
-          <span className="text-[13px] select-none shrink-0 mt-0.5">✨</span>
+          <span className="text-[13px] select-none shrink-0 mt-0.5"></span>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 mb-1">
               <strong className="font-semibold text-teal-900 dark:text-teal-200 text-[11.5px]">
@@ -467,7 +467,7 @@ export const FloatingGlossaryToast: React.FC = () => {
       {/* Clinical Pearl Box */}
       {item.clinicalPearls && (
         <div className="p-2.5 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2">
-          <span className="text-[13px] select-none shrink-0 mt-0.5">💡</span>
+          <span className="text-[13px] select-none shrink-0 mt-0.5"></span>
           <div className="min-w-0 flex-1">
             <strong className="font-semibold text-amber-900 dark:text-amber-200 block mb-0.5">
               Spot Sınav & Hoca İncisi:
@@ -478,12 +478,8 @@ export const FloatingGlossaryToast: React.FC = () => {
       )}
 
       {/* Footer / Helper hint */}
-      <div className="pt-1 border-t border-line-soft flex items-center justify-between text-[11px] text-ink-3">
-        <span className="flex items-center gap-1">
-          <BookOpen className="w-3 h-3 text-accent" />
-          <span>Kurul 1 Tıbbi Terimler Sözlüğü</span>
-        </span>
-        <div className="flex items-center gap-2">
+      <div className="pt-2 border-t border-line-soft flex items-center justify-end gap-1 text-[13px] text-ink-3 min-w-0">
+        <div className="flex items-center gap-1 min-w-0">
           <a
             href={`/sozluk?id=${encodeURIComponent(item.term)}`}
             onClick={(e) => {
@@ -491,22 +487,21 @@ export const FloatingGlossaryToast: React.FC = () => {
               hideTerm(true);
               window.location.href = `/sozluk?id=${encodeURIComponent(item.term)}`;
             }}
-            className="text-accent hover:underline font-semibold flex items-center gap-0.5 cursor-pointer"
+            className="h-9 px-3 rounded-lg text-accent hover:bg-accent-soft font-semibold inline-flex items-center gap-1 cursor-pointer whitespace-nowrap"
           >
-            <span>Ansiklopedide Aç</span>
-            <ExternalLink className="w-2.5 h-2.5" />
+            <span>Sözlükte aç</span>
+            <ExternalLink className="w-3.5 h-3.5" />
           </a>
-          <span>•</span>
           <button
             type="button"
             onClick={() => {
               hideTerm(true);
               setIsDrawerOpen(true);
             }}
-            className="hover:text-accent font-medium transition-colors cursor-pointer flex items-center gap-0.5"
+            className="h-9 px-3 rounded-lg hover:bg-canvas hover:text-ink font-medium transition-colors cursor-pointer inline-flex items-center gap-1 whitespace-nowrap"
           >
-            <span>Tüm Liste</span>
-            <ChevronRight className="w-3 h-3" />
+            <span>Tüm terimler</span>
+            <ChevronRight className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>
@@ -566,7 +561,7 @@ export const GlossaryTermSpan: React.FC<{
       title={`${item.term} (${item.category}) - Dokunun veya üzerine gelin`}
     >
       <span>{text}</span>
-      <span className="text-[9px] text-teal-600 dark:text-teal-300 opacity-70 select-none">✦</span>
+      <span className="text-[11px] text-teal-600 dark:text-teal-300 opacity-70 select-none"></span>
     </span>
   );
 };
@@ -687,7 +682,7 @@ export const RenderWithGlossaryTerms: React.FC<{
                 className="bg-red-100/90 dark:bg-red-950/50 text-red-800 dark:text-red-200 underline decoration-2 underline-offset-[3px] decoration-red-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
                 title="Önemli / Kritik Vurgu"
               >
-                <span className="text-[10px] select-none text-red-500">🔴</span>
+                <span className="text-[11px] select-none text-red-500"></span>
                 <span>{renderedContent}</span>
               </mark>
             );
@@ -699,7 +694,7 @@ export const RenderWithGlossaryTerms: React.FC<{
                 className="bg-blue-100/90 dark:bg-blue-950/50 text-blue-800 dark:text-blue-200 underline decoration-2 underline-offset-[3px] decoration-blue-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
                 title="Sorulmuş / Çıkmış Sınav Sorusu"
               >
-                <span className="text-[10px] select-none text-blue-500">🔵</span>
+                <span className="text-[11px] select-none text-blue-500"></span>
                 <span>{renderedContent}</span>
               </mark>
             );
@@ -718,12 +713,12 @@ export const RenderWithGlossaryTerms: React.FC<{
         if (isBold) {
           const isRed =
             isTriple ||
-            /^(?:🔴|🚨|⚠️)/.test(rawContent.trim()) ||
+            /^(?:||)/.test(rawContent.trim()) ||
             /(?:ölümcül|asla|acil|hayati|kritik|dikkat!|sınav tuzağı|tuzak:|hayat kurtarır|kontrendike|önemli|\[kırmızı|\[red)/i.test(rawContent);
 
           const isBlue =
             !isRed &&
-            (/^(?:🔵|❓|❔)/.test(rawContent.trim()) ||
+            (/^(?:||)/.test(rawContent.trim()) ||
               /(?:çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|sınav sorusu|sınavda soruldu|\[mavi|\[blue|\[çıkmış)/i.test(rawContent));
 
           if (isRed) {
@@ -733,8 +728,8 @@ export const RenderWithGlossaryTerms: React.FC<{
                 className="font-bold text-red-600 dark:text-red-400 bg-red-500/10 dark:bg-red-500/20 border border-red-500/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
                 title="Önemli Bilgi"
               >
-                {!rawContent.includes('🔴') && !rawContent.includes('🚨') && !rawContent.includes('⚠️') && (
-                  <span className="text-[10px] select-none text-red-500">🔴</span>
+                {!rawContent.includes('') && !rawContent.includes('') && !rawContent.includes('') && (
+                  <span className="text-[11px] select-none text-red-500"></span>
                 )}
                 <span>{renderedContent}</span>
               </strong>
@@ -748,8 +743,8 @@ export const RenderWithGlossaryTerms: React.FC<{
                 className="font-bold text-blue-600 dark:text-blue-400 bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/30 px-1.5 py-0.5 rounded shadow-2xs inline-flex items-center gap-1 my-0.5"
                 title="Sorulmuş / Çıkmış Soru"
               >
-                {!rawContent.includes('🔵') && !rawContent.includes('❓') && !rawContent.includes('❔') && (
-                  <span className="text-[10px] select-none text-blue-500">🔵</span>
+                {!rawContent.includes('') && !rawContent.includes('') && !rawContent.includes('') && (
+                  <span className="text-[11px] select-none text-blue-500"></span>
                 )}
                 <span>{renderedContent}</span>
               </strong>
@@ -902,7 +897,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span
-                      className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${getCategoryBadgeStyle(
+                      className={`text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${getCategoryBadgeStyle(
                         item.category,
                         item.badgeColor
                       )}`}
@@ -940,7 +935,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
 
                 {item.clinicalPearls && (
                   <div className="p-2 rounded-lg bg-amber-500/10 text-[11.5px] text-ink-2 leading-snug flex items-start gap-1.5">
-                    <span className="text-[12px] select-none shrink-0">💡</span>
+                    <span className="text-[12px] select-none shrink-0"></span>
                     <span>{item.clinicalPearls}</span>
                   </div>
                 )}

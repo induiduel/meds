@@ -98,6 +98,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [answerFilter, setAnswerFilter] = useState<'all' | 'with' | 'without'>('all');
+  const [explanationFilter, setExplanationFilter] = useState<'all' | 'with' | 'without'>('all');
+  const [sortOrder, setSortOrder] = useState<'default' | 'newest' | 'oldest' | 'number'>('default');
   const [openExplanations, setOpenExplanations] = useState<Record<string, boolean>>({});
   const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'reported' | 'all'>('valid');
   
@@ -156,6 +159,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       const donem3Data = data
         .filter(q => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t)))
         .filter(isDonem3Question)
+        // Yöneticinin gizlediği (şikâyet sonrası) sorular yalnızca yöneticiye görünür
+        .filter(q => !((q as any).hidden || (q as any).data?.hidden) || currentUser?.email === ADMIN_EMAIL || !!currentUser?.isAdmin)
         .map(q => {
           const normDisc = normalizeDonem3Discipline(q.discipline);
           return normDisc ? { ...q, discipline: normDisc } : q;
@@ -243,8 +248,21 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     if (initialSearchQuery) {
       setSearchQuery(initialSearchQuery);
       setCurrentPage(1);
+      // Belirli bir soruya gelindi: süzgeçler onu gizlemesin
+      setAmbiguityTab('all');
+      setSelectedCommittee('all');
+      setSelectedDiscipline('all');
+      setDeepseekFilter('all');
     }
   }, [initialSearchQuery]);
+
+  // Slayt eşleştirme indeksi arka planda hazırlanır; hazır olunca kartlar yeniden çizilir
+  const [, setLearnReady] = useState(0);
+  useEffect(() => {
+    let alive = true;
+    learnMatcher.ensureLoaded().then(() => alive && setLearnReady((n) => n + 1));
+    return () => { alive = false; };
+  }, []);
 
   useEffect(() => {
     loadPastQuestions();
@@ -371,7 +389,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const answer = q.reconstruction?.correctAnswer || q.claimedAnswer ? `\nDoğru Cevap: ${q.reconstruction?.correctAnswer || q.claimedAnswer}` : '';
     const explanation = q.reconstruction?.explanation ? `\nAçıklama: ${q.reconstruction.explanation}` : '';
     
-    const fullText = `[MedSoru Çıkmış Soru - ${q.discipline} #${q.questionNumber}]\n\n${stem}\n\n${optionsText}${answer}${explanation}`;
+    const fullText = `[MeDSor Çıkmış Soru - ${q.discipline} #${q.questionNumber}]\n\n${stem}\n\n${optionsText}${answer}${explanation}`;
     navigator.clipboard.writeText(fullText);
     setCopiedId(q.id);
     setTimeout(() => setCopiedId(null), 2000);
@@ -498,7 +516,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Filtered Questions
   const filteredQuestions = useMemo(() => {
-    return questions.filter(q => {
+    const list = questions.filter(q => {
       // 1. Ambiguity & Report Filter
       if (ambiguityTab === 'valid' && q.isAmbiguous) return false;
       if (ambiguityTab === 'ambiguous' && !q.isAmbiguous) return false;
@@ -559,9 +577,26 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       if (newnessFilter === 'new_only' && !isNew) return false;
       if (newnessFilter === 'archived_only' && isNew) return false;
 
+      // 8. Cevap / açıklama durumu
+      if (answerFilter !== 'all') {
+        const has = Boolean(q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer);
+        if ((answerFilter === 'with') !== has) return false;
+      }
+      if (explanationFilter !== 'all') {
+        const has = Boolean(((q as any).explanation || q.reconstruction?.explanation || '').trim());
+        if ((explanationFilter === 'with') !== has) return false;
+      }
+
       return true;
     });
-  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter, newnessFilter]);
+    if (sortOrder === 'default') return list;
+    const yearOf = (q: QuestionItem) => parseInt((q.examYear || '').match(/\d{4}/)?.[0] || '0', 10);
+    const sorted = [...list];
+    if (sortOrder === 'newest') sorted.sort((a, b) => yearOf(b) - yearOf(a));
+    if (sortOrder === 'oldest') sorted.sort((a, b) => (yearOf(a) || 9999) - (yearOf(b) || 9999));
+    if (sortOrder === 'number') sorted.sort((a, b) => (a.questionNumber || 9999) - (b.questionNumber || 9999));
+    return sorted;
+  }, [questions, ambiguityTab, searchQuery, selectedCommittee, selectedYear, selectedDiscipline, deepseekFilter, newnessFilter, answerFilter, explanationFilter, sortOrder]);
 
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
@@ -586,13 +621,22 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   const activeFilterChips: { label: string; clear: () => void }[] = [
     ...(ambiguityTab !== 'valid'
-      ? [{ label: ambiguityTab === 'ambiguous' ? 'İnceleme bekleyen' : ambiguityTab === 'reported' ? '🚩 Hata bildirilenler' : 'Tüm havuz', clear: () => setAmbiguityTab('valid') }]
+      ? [{ label: ambiguityTab === 'ambiguous' ? 'İnceleme bekleyen' : ambiguityTab === 'reported' ? 'Hata bildirilenler' : 'Tüm havuz', clear: () => setAmbiguityTab('valid') }]
       : []),
     ...(deepseekFilter !== 'all'
-      ? [{ label: deepseekFilter === 'deepseek_only' ? '⚡ Yalnızca DeepSeek' : 'Standart sorular', clear: () => setDeepseekFilter('all') }]
+      ? [{ label: deepseekFilter === 'deepseek_only' ? 'Yalnızca DeepSeek' : 'Standart sorular', clear: () => setDeepseekFilter('all') }]
+      : []),
+    ...(answerFilter !== 'all'
+      ? [{ label: answerFilter === 'with' ? 'Cevaplı' : 'Cevapsız', clear: () => setAnswerFilter('all') }]
+      : []),
+    ...(explanationFilter !== 'all'
+      ? [{ label: explanationFilter === 'with' ? 'Açıklamalı' : 'Açıklamasız', clear: () => setExplanationFilter('all') }]
+      : []),
+    ...(sortOrder !== 'default'
+      ? [{ label: sortOrder === 'newest' ? 'Yeniden eskiye' : sortOrder === 'oldest' ? 'Eskiden yeniye' : 'Numaraya göre', clear: () => setSortOrder('default') }]
       : []),
     ...(newnessFilter !== 'all'
-      ? [{ label: newnessFilter === 'new_only' ? '✨ Yeni Sorular' : '📁 Arşiv / Geçmiş Yıl', clear: () => setNewnessFilter('all') }]
+      ? [{ label: newnessFilter === 'new_only' ? 'Yeni Sorular' : 'Arşiv / Geçmiş Yıl', clear: () => setNewnessFilter('all') }]
       : []),
     ...(selectedCommittee !== 'all'
       ? [{ label: formatCommitteeName(selectedCommittee).split(':')[0], clear: () => setSelectedCommittee('all') }]
@@ -612,6 +656,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setSelectedYear('all');
     setSelectedDiscipline('all');
     setViewMode('redacted');
+    setAnswerFilter('all');
+    setExplanationFilter('all');
+    setSortOrder('default');
     setCurrentPage(1);
   };
   const isAdminUser = currentUser?.email === ADMIN_EMAIL || !!currentUser?.isAdmin;
@@ -623,7 +670,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     'w-full h-11 sm:h-10 rounded-[10px] bg-field border border-line px-3 text-[14px] text-ink cursor-pointer outline-0 focus:border-accent';
 
   return (
-    <div className="flex flex-col gap-3 sm:gap-4 pb-12 min-w-0 w-full max-w-[960px] mx-auto">
+    <div className="flex flex-col gap-3 sm:gap-4 pb-12 min-w-0 w-full">
       <PageHeader
         eyebrow="Dönem 3"
         title="Çıkmış sorular"
@@ -679,7 +726,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           }}
           className={`h-11 px-3 sm:px-3.5 rounded-xl border text-[13.5px] font-semibold flex items-center gap-1.5 cursor-pointer shrink-0 transition-all ${
             deepseekFilter === 'deepseek_only'
-              ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white border-indigo-600 shadow-sm ring-2 ring-indigo-200'
+              ? 'bg-accent text-white border-indigo-600 shadow-sm ring-2 ring-indigo-200'
               : 'bg-white border-line text-ink hover:border-indigo-300 hover:text-indigo-600'
           }`}
           title="Yalnızca DeepSeek doğrulanmış soruları filtrele"
@@ -694,6 +741,22 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             {tabCounts.deepseekCount.toLocaleString('tr-TR')}
           </span>
         </button>
+
+        <label className="relative h-11 px-3 rounded-xl border bg-white border-line text-ink hover:border-line-2 text-[14px] font-semibold flex items-center gap-1.5 cursor-pointer shrink-0" title="Sırala">
+          <ArrowUpDown className="w-[17px] h-[17px]" />
+          <span className="hidden sm:inline">{sortOrder === 'default' ? 'Sırala' : sortOrder === 'newest' ? 'Yeni → eski' : sortOrder === 'oldest' ? 'Eski → yeni' : 'Numara'}</span>
+          <select
+            value={sortOrder}
+            onChange={(e) => { setSortOrder(e.target.value as any); setCurrentPage(1); }}
+            aria-label="Sırala"
+            className="absolute inset-0 opacity-0 cursor-pointer"
+          >
+            <option value="default">Varsayılan</option>
+            <option value="newest">Yeniden eskiye</option>
+            <option value="oldest">Eskiden yeniye</option>
+            <option value="number">Soru numarası</option>
+          </select>
+        </label>
 
         <button
           type="button"
@@ -714,211 +777,184 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </button>
       </div>
 
-      {/* Filter panel: inline on tablet/desktop, bottom sheet on phones */}
+      {/* Filtreler: kompakt popup (masaüstünde ortada, telefonda alttan açılır) */}
       {filtersOpen && (
-        <div className="fixed inset-0 z-[60] flex items-end sm:static sm:z-auto sm:block" role="dialog" aria-label="Filtreler">
-          <button type="button" aria-label="Kapat" onClick={() => setFiltersOpen(false)} className="sm:hidden absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
-          <div className="relative w-full max-h-[85dvh] overflow-y-auto sm:overflow-visible bg-white rounded-t-2xl sm:rounded-2xl sm:border sm:border-line px-4 pt-2 sm:pt-4 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-4 flex flex-col gap-4 shadow-lg sm:shadow-none">
-            <span className="sm:hidden self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
-            <div className="sm:hidden flex items-center">
-              <span className="flex-1 text-[18px] font-bold">Filtrele</span>
-              <button type="button" onClick={() => setFiltersOpen(false)} className="h-9 px-2 text-[15px] font-semibold text-accent cursor-pointer">
-                Bitti
+        <div className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.4)] flex items-end sm:items-center justify-center sm:p-6" onMouseDown={(e) => e.target === e.currentTarget && setFiltersOpen(false)}>
+          <div className="ms-modal-panel ms-filter-panel" role="dialog" aria-modal="true" aria-label="Filtreler">
+            <header className="flex items-center gap-2 px-5 pt-4 pb-2">
+              <span className="flex-1 font-display text-[18px] font-semibold">Filtrele</span>
+              <button type="button" onClick={clearAllFilters} className="h-9 px-3 rounded-full text-[14px] text-ink-2 hover:bg-field font-medium cursor-pointer">Sıfırla</button>
+              <button type="button" onClick={() => setFiltersOpen(false)} aria-label="Kapat" className="w-9 h-9 rounded-full flex items-center justify-center text-ink-2 hover:bg-field cursor-pointer">
+                <X className="w-5 h-5" />
               </button>
-            </div>
+            </header>
 
-            <div className="flex flex-col gap-1.5">
-              <span className="text-[12.5px] font-semibold text-ink-3">Havuz</span>
-              <div className="flex flex-wrap gap-1.5">
-                {(
-                  [
-                    ['valid', `Tam metin · ${tabCounts.validCount}`],
-                    ['ambiguous', `İnceleme bekleyen · ${tabCounts.ambiguousCount}`],
-                    ['reported', `Hata bildirilen · ${tabCounts.reportedCount}`],
-                    ['all', `Tümü · ${tabCounts.totalCount}`],
-                  ] as const
-                ).map(([id, label]) => (
-                  <button
-                    key={id}
-                    type="button"
-                    aria-pressed={ambiguityTab === id}
-                    onClick={() => {
-                      setAmbiguityTab(id);
+            <div className="ms-filter-body">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <label className="ms-f-select">
+                  <span>Kurul</span>
+                  <select
+                    value={selectedCommittee}
+                    onChange={(e) => {
+                      const newComm = e.target.value;
+                      setSelectedCommittee(newComm);
                       setCurrentPage(1);
-                    }}
-                    className={chipCls(ambiguityTab === id)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* DeepSeek Doğrulama Filtresi */}
-            <div className="flex flex-col gap-1.5">
-              <span className="text-[12.5px] font-semibold text-indigo-700 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
-                DeepSeek Doğrulaması
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {(
-                  [
-                    ['all', `Tümü · ${tabCounts.totalCount}`],
-                    ['deepseek_only', `⚡ Yalnızca DeepSeek Doğrulanmış · ${tabCounts.deepseekCount}`],
-                    ['standard_only', `Standart Çıkmışlar · ${tabCounts.totalCount - tabCounts.deepseekCount}`],
-                  ] as const
-                ).map(([id, label]) => (
-                  <button
-                    key={id}
-                    type="button"
-                    aria-pressed={deepseekFilter === id}
-                    onClick={() => {
-                      setDeepseekFilter(id as any);
-                      setCurrentPage(1);
-                    }}
-                    className={chipCls(deepseekFilter === id)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Yeni / Arşiv Soru Filtresi */}
-            <div className="flex flex-col gap-1.5">
-              <span className="text-[12.5px] font-semibold text-emerald-700 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-                Soru Yaşı & Arşiv Durumu
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {(
-                  [
-                    ['all', `Tümü · ${tabCounts.totalCount}`],
-                    ['new_only', `✨ Yalnızca Yeni Sorular · ${tabCounts.newCount}`],
-                    ['archived_only', `📁 Geçmiş Yıl / Arşiv · ${tabCounts.totalCount - tabCounts.newCount}`],
-                  ] as const
-                ).map(([id, label]) => (
-                  <button
-                    key={id}
-                    type="button"
-                    aria-pressed={newnessFilter === id}
-                    onClick={() => {
-                      setNewnessFilter(id as any);
-                      setCurrentPage(1);
-                    }}
-                    className={chipCls(newnessFilter === id)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Kurul / Sınav</span>
-                <select
-                  value={selectedCommittee}
-                  onChange={(e) => {
-                    const newComm = e.target.value;
-                    setSelectedCommittee(newComm);
-                    setCurrentPage(1);
-                    if (newComm !== 'all' && !newComm.includes('final') && !newComm.includes('butunleme')) {
-                      const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find(c => c.id === newComm);
-                      if (commObj && selectedDiscipline !== 'all') {
-                        const allowed = commObj.allDisciplineNames.map(d => normalizeDonem3Discipline(d) || d);
-                        if (!allowed.includes(selectedDiscipline)) {
-                          setSelectedDiscipline('all');
+                      if (newComm !== 'all' && !newComm.includes('final') && !newComm.includes('butunleme')) {
+                        const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find(c => c.id === newComm);
+                        if (commObj && selectedDiscipline !== 'all') {
+                          const allowed = commObj.allDisciplineNames.map(d => normalizeDonem3Discipline(d) || d);
+                          if (!allowed.includes(selectedDiscipline)) setSelectedDiscipline('all');
                         }
                       }
-                    }
-                  }}
-                  className={selectCls}
-                >
-                  <option value="all">Tüm Dönem 3 sınavları</option>
-                  {filterOptions.committees.map((cId) => (
-                    <option key={cId} value={cId}>
-                      {formatCommitteeName(cId)}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Yıl</span>
-                <select
-                  value={selectedYear}
-                  onChange={(e) => {
-                    setSelectedYear(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className={selectCls}
-                >
-                  <option value="all">Tüm yıllar</option>
-                  {filterOptions.years.map((yr) => (
-                    <option key={yr} value={yr}>
-                      {yr}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="flex flex-col gap-1.5">
-                <span className="text-[12.5px] font-semibold text-ink-3">Ders (Dönem 3 Müfredatı)</span>
-                <select
-                  value={selectedDiscipline}
-                  onChange={(e) => {
-                    setSelectedDiscipline(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className={selectCls}
-                >
-                  <option value="all">Tüm dersler ({filterOptions.disciplines.length})</option>
-                  {filterOptions.disciplines.map((d) => (
-                    <option key={d} value={d}>
-                      {d}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <span className="text-[12.5px] font-semibold text-ink-3">Görünüm</span>
-              <div role="radiogroup" aria-label="Görünüm" className="grid grid-cols-3 sm:inline-grid sm:w-[360px] gap-1 bg-canvas rounded-xl p-1">
-                {(
-                  [
-                    ['redacted', 'Düzenlenmiş'],
-                    ['raw', 'Ham'],
-                    ['split', 'Karşılaştır'],
-                  ] as const
-                ).map(([id, label]) => (
-                  <button
-                    key={id}
-                    type="button"
-                    role="radio"
-                    aria-checked={viewMode === id}
-                    onClick={() => setViewMode(id)}
-                    className={`h-9 rounded-lg text-[13.5px] cursor-pointer ${
-                      viewMode === id ? 'bg-white font-semibold text-ink shadow-xs' : 'text-ink-2'
-                    }`}
+                    }}
                   >
-                    {label}
-                  </button>
-                ))}
+                    <option value="all">Tümü</option>
+                    {filterOptions.committees.map((cId) => (
+                      <option key={cId} value={cId}>{formatCommitteeName(cId)}</option>
+                    ))}
+                  </select>
+                </label>
+                <label className="ms-f-select">
+                  <span>Ders</span>
+                  <select value={selectedDiscipline} onChange={(e) => { setSelectedDiscipline(e.target.value); setCurrentPage(1); }}>
+                    <option value="all">Tümü</option>
+                    {filterOptions.disciplines.map((d) => <option key={d} value={d}>{d}</option>)}
+                  </select>
+                </label>
+                <label className="ms-f-select">
+                  <span>Yıl</span>
+                  <select value={selectedYear} onChange={(e) => { setSelectedYear(e.target.value); setCurrentPage(1); }}>
+                    <option value="all">Tümü</option>
+                    {filterOptions.years.map((yr) => <option key={yr} value={yr}>{yr}</option>)}
+                  </select>
+                </label>
+              </div>
+
+              <div className="ms-f-row">
+                <span className="ms-f-label">Havuz</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Havuz">
+                  {(
+                    [
+                      ['valid', `Tam metin ${tabCounts.validCount}`],
+                      ['ambiguous', `İncelemede ${tabCounts.ambiguousCount}`],
+                      ['reported', `Bildirilen ${tabCounts.reportedCount}`],
+                      ['all', `Tümü ${tabCounts.totalCount}`],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={ambiguityTab === id} onClick={() => { setAmbiguityTab(id as any); setCurrentPage(1); }} className={ambiguityTab === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
+                <span className="ms-f-label">Cevap</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Cevap">
+                  {(
+                    [
+                      ['all', 'Tümü'],
+                      ['with', 'Cevaplı'],
+                      ['without', 'Cevapsız'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={answerFilter === id} onClick={() => { setAnswerFilter(id as any); setCurrentPage(1); }} className={answerFilter === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
+                <span className="ms-f-label">Açıklama</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Açıklama">
+                  {(
+                    [
+                      ['all', 'Tümü'],
+                      ['with', 'Var'],
+                      ['without', 'Yok'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={explanationFilter === id} onClick={() => { setExplanationFilter(id as any); setCurrentPage(1); }} className={explanationFilter === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
+                <span className="ms-f-label">Doğrulama</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Doğrulama">
+                  {(
+                    [
+                      ['all', 'Tümü'],
+                      ['deepseek_only', `Doğrulanmış ${tabCounts.deepseekCount}`],
+                      ['standard_only', 'Standart'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={deepseekFilter === id} onClick={() => { setDeepseekFilter(id as any); setCurrentPage(1); }} className={deepseekFilter === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
+                <span className="ms-f-label">Dönem</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Dönem">
+                  {(
+                    [
+                      ['all', 'Tümü'],
+                      ['new_only', `Yeni ${tabCounts.newCount}`],
+                      ['archived_only', 'Arşiv'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={newnessFilter === id} onClick={() => { setNewnessFilter(id as any); setCurrentPage(1); }} className={newnessFilter === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
+                <span className="ms-f-label">Sırala</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Sırala">
+                  {(
+                    [
+                      ['default', 'Varsayılan'],
+                      ['newest', 'Yeni → eski'],
+                      ['oldest', 'Eski → yeni'],
+                      ['number', 'Numara'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={sortOrder === id} onClick={() => { setSortOrder(id as any); setCurrentPage(1); }} className={sortOrder === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="ms-f-row">
+                <span className="ms-f-label">Görünüm</span>
+                <div className="ms-f-seg" role="radiogroup" aria-label="Görünüm">
+                  {(
+                    [
+                      ['redacted', 'Düzenlenmiş'],
+                      ['raw', 'Ham'],
+                      ['split', 'Karşılaştır'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button key={id} type="button" role="radio" aria-checked={viewMode === id} onClick={() => { setViewMode(id as any); setCurrentPage(1); }} className={viewMode === id ? 'is-on' : ''}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-between gap-2 pt-3 border-t border-line-soft">
-              <button type="button" onClick={clearAllFilters} className="h-10 px-2 text-[14px] text-ink-2 font-semibold cursor-pointer">
-                Temizle
-              </button>
+            <footer className="px-5 pt-3 pb-[max(env(safe-area-inset-bottom),16px)] border-t border-line-soft">
               <button
                 type="button"
                 onClick={() => setFiltersOpen(false)}
-                className="h-11 sm:h-10 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-[14.5px] font-semibold cursor-pointer"
+                className="w-full h-12 rounded-full bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold cursor-pointer"
               >
                 {filteredQuestions.length.toLocaleString('tr-TR')} soruyu göster
               </button>
-            </div>
+            </footer>
           </div>
         </div>
       )}
@@ -1031,11 +1067,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   {q.isAmbiguous ? (
                     <span className="h-[22px] px-2 rounded-full bg-warn-soft text-warn text-[12px] font-semibold inline-flex items-center shrink-0">Eksik</span>
                   ) : isDeepSeekQuestion(q) ? (
-                    <span className="inline-flex h-[24px] px-2.5 rounded-full bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 text-indigo-700 text-[11.5px] font-bold items-center gap-1.5 shrink-0 shadow-2xs">
+                    <span className="inline-flex h-[24px] px-2.5 rounded-full bg-canvas border border-indigo-200 text-indigo-700 text-[11.5px] font-bold items-center gap-1.5 shrink-0 shadow-2xs">
                       <Sparkles className="w-3.5 h-3.5 text-indigo-600 fill-indigo-100" />
                       <span>DeepSeek Doğrulanmış</span>
                       {q.verification?.qualityScore && (
-                        <span className="text-[10px] px-1.5 py-0.2 rounded bg-indigo-100 text-indigo-800 font-mono">
+                        <span className="text-[11px] px-1.5 py-0.2 rounded bg-indigo-100 text-indigo-800 font-mono">
                           %{q.verification.qualityScore}
                         </span>
                       )}
@@ -1315,10 +1351,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
       {/* Öğren Modülü / İnteraktif Amfi Slaytı Eşleşmesi Modal */}
       {selectedLearnMatch && (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[88vh]">
+        <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[88dvh]">
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-slate-900 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
+            <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
                   <GraduationCap className="w-5 h-5" />
@@ -1351,7 +1387,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   <strong className="block font-bold">
                     Çıkmış Soru: #{selectedLearnMatch.question.questionNumber} - {selectedLearnMatch.question.topic || selectedLearnMatch.question.discipline}
                   </strong>
-                  <span className="text-[10px] font-semibold bg-emerald-200/80 text-emerald-900 px-2 py-0.5 rounded">
+                  <span className="text-[11px] font-semibold bg-emerald-200/80 text-emerald-900 px-2 py-0.5 rounded">
                     {selectedLearnMatch.match.matchType === 'direct' ? '✓ Müfredat Eşleşmesi' : '%90+ Konu Eşleşmesi'}
                   </span>
                 </div>
@@ -1454,10 +1490,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
       {/* Ham Sorunun Bulunduğu Yer (Arşiv Konumu) Modal */}
       {selectedRawSourceQuestion && (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[85vh]">
+        <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[85dvh]">
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
+            <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-xl bg-slate-700 flex items-center justify-center text-slate-200">
                   <FileText className="w-5 h-5" />
@@ -1492,15 +1528,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 text-xs">
                   <div className="bg-white border border-slate-200 rounded-lg p-2.5">
-                    <span className="text-[10px] text-slate-400 font-semibold block">Sınav Yılı / Dönem</span>
+                    <span className="text-[11px] text-slate-400 font-semibold block">Sınav Yılı / Dönem</span>
                     <strong className="text-slate-800 font-bold">{selectedRawSourceQuestion.examYear || 'Arşiv'}</strong>
                   </div>
                   <div className="bg-white border border-slate-200 rounded-lg p-2.5">
-                    <span className="text-[10px] text-slate-400 font-semibold block">Soru Numarası</span>
+                    <span className="text-[11px] text-slate-400 font-semibold block">Soru Numarası</span>
                     <strong className="text-slate-800 font-bold">Soru #{selectedRawSourceQuestion.questionNumber}</strong>
                   </div>
                   <div className="bg-white border border-slate-200 rounded-lg p-2.5 col-span-2 sm:col-span-1">
-                    <span className="text-[10px] text-slate-400 font-semibold block">Belge İçi Sayfa</span>
+                    <span className="text-[11px] text-slate-400 font-semibold block">Belge İçi Sayfa</span>
                     <strong className="text-slate-800 font-bold">
                       {selectedRawSourceQuestion.matchedSlidePage ? `Sayfa #${selectedRawSourceQuestion.matchedSlidePage}` : 'Arşiv Kitapçığı'}
                     </strong>
@@ -1508,7 +1544,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 </div>
 
                 <p className="text-[11px] text-slate-500 italic pt-1">
-                  📌 Bu soru henüz doğrudan bir amfi slaytına bağlanmamıştır; tıp fakültesi geçmiş kurul sınav kitapçığından ve öğrenci hafıza parçalarından derlenmiştir. Orijinal sınav kitapçığındaki konumu gösterilmektedir.
+                  Bu soru henüz doğrudan bir amfi slaytına bağlanmamıştır; tıp fakültesi geçmiş kurul sınav kitapçığından ve öğrenci hafıza parçalarından derlenmiştir. Orijinal sınav kitapçığındaki konumu gösterilmektedir.
                 </p>
               </div>
 
@@ -1548,7 +1584,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         </span>
                         <span className="flex-1 leading-snug">{text}</span>
                         {isCorrect && (
-                          <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
+                          <span className="text-[11px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
                             Cevap
                           </span>
                         )}
@@ -1578,10 +1614,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
       {/* AI Generated Similar Practice Question Modal ("Ek Soru Sor") */}
       {similarModalQuestion && (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[90vh]">
+        <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-4 my-6 animate-fade-in flex flex-col max-h-[90dvh]">
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-teal-900 to-slate-900 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
+            <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-2.5">
                 <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 border border-teal-500/30 flex items-center justify-center">
                   <Sparkles className="w-5 h-5" />
@@ -1661,7 +1697,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                           <span>{opt.text}</span>
                         </div>
                         {isCorrect && (
-                          <span className="text-[10px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded font-extrabold uppercase shrink-0">
+                          <span className="text-[11px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded font-extrabold uppercase shrink-0">
                             ✓ Doğru Cevap
                           </span>
                         )}
@@ -1696,7 +1732,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
               <button
                 onClick={() => {
-                  const text = `[MedSoru Ek Pratik Sorusu - ${similarModalQuestion.discipline}]\n\n${similarModalQuestion.stem}\n\n${similarModalQuestion.options.map((o: any) => `${o.key}) ${o.text}`).join('\n')}\n\nDoğru Cevap: ${similarModalQuestion.correctAnswer}\n\nAçıklama: ${similarModalQuestion.explanation}`;
+                  const text = `[MeDSor Ek Pratik Sorusu - ${similarModalQuestion.discipline}]\n\n${similarModalQuestion.stem}\n\n${similarModalQuestion.options.map((o: any) => `${o.key}) ${o.text}`).join('\n')}\n\nDoğru Cevap: ${similarModalQuestion.correctAnswer}\n\nAçıklama: ${similarModalQuestion.explanation}`;
                   navigator.clipboard.writeText(text);
                   alert('Ek soru panoya kopyalandı!');
                 }}

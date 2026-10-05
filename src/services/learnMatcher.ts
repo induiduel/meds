@@ -1,4 +1,4 @@
-import interactiveDecksData from '../data/interactive_learning_decks.json';
+import { loadAllDecks } from '../data/deckStore';
 import { QuestionItem } from '../types';
 import { SlideFlashcard } from '../components/learn/InteractiveDeckView';
 
@@ -88,12 +88,23 @@ class LearnMatcherService {
   private slideIndex: Array<QuestionLearnMatch & { keywords: string[]; normDiscipline: string; rawDiscipline: string }> = [];
   private cache = new Map<string, QuestionLearnMatch | null>();
 
-  constructor() {
-    this.init();
+  private loading: Promise<void> | null = null;
+
+  /**
+   * Slayt indeksini arka planda kurar (desteler parça parça yüklenir). Hazır olana kadar
+   * getMatch null döner; çağıran taraf promise çözülünce yeniden çizer.
+   */
+  public ensureLoaded(): Promise<void> {
+    if (!this.loading) {
+      this.loading = loadAllDecks<any>().then((decks) => {
+        this.init(decks);
+        this.cache.clear();
+      });
+    }
+    return this.loading;
   }
 
-  private init() {
-    const decks = (interactiveDecksData as any[]) || [];
+  private init(decks: any[]) {
 
     for (const d of decks) {
       const deckTitle = d.shortTitle || d.title || 'Ders';

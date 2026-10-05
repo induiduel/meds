@@ -21,6 +21,8 @@ interface SlideReaderModalProps {
   onClose: () => void;
   note: LectureNote | null;
   onFilterByNote?: (noteTitle: string) => void;
+  /** Açılışta gösterilecek slayt numarası (aramadan gelince) */
+  initialPageNumber?: number;
 }
 
 export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
@@ -28,8 +30,12 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
   onClose,
   note,
   onFilterByNote,
+  initialPageNumber,
 }) => {
-  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const [currentPageIndex, setCurrentPageIndex] = useState(() => {
+    const i = initialPageNumber && note?.pages ? note.pages.findIndex((p) => p.pageNumber === initialPageNumber) : -1;
+    return i >= 0 ? i : 0;
+  });
   const [copied, setCopied] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -62,16 +68,16 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
     : note.pages;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-200">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-200">
       <div 
-        className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-4xl max-h-[92vh] flex flex-col overflow-hidden"
+        className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-4xl max-h-[92dvh] flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-cyan-900 text-white p-4 sm:p-5 flex items-start justify-between gap-3 shrink-0">
+        <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-start justify-between gap-3 shrink-0">
           <div className="space-y-1.5 min-w-0">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="bg-teal-700/80 text-teal-100 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-teal-500/30">
+              <span className="bg-teal-700/80 text-teal-100 text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-teal-500/30">
                 {note.discipline}
               </span>
               <span className="text-xs text-teal-200 font-semibold flex items-center gap-1">
@@ -219,7 +225,7 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-amber-600 shrink-0" />
                     <span>
-                      <strong>✨ Amfi Redakte Dersi ile Onarıldı:</strong> Bu slaytın okunamayan veya eksik kısımları <em>"{(activePage as any).repairedSource || (note as any).matchedSummaryTitle || 'Amfi Ders Özeti'}"</em> ile tamamlanmıştır.
+                      <strong>Amfi Redakte Dersi ile Onarıldı:</strong> Bu slaytın okunamayan veya eksik kısımları <em>"{(activePage as any).repairedSource || (note as any).matchedSummaryTitle || 'Amfi Ders Özeti'}"</em> ile tamamlanmıştır.
                     </span>
                   </div>
                 </div>
@@ -271,7 +277,7 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
         <div className="bg-slate-50 border-t border-slate-200 p-3.5 flex items-center justify-between gap-3 text-xs text-slate-500 shrink-0">
           <span className="flex items-center gap-1">
             <BookOpen className="w-3.5 h-3.5 text-teal-700" />
-            <span>MedSoru Slayt & Ders Notu Okuyucusu</span>
+            <span>MeDSor Slayt & Ders Notu Okuyucusu</span>
           </span>
 
           <div className="flex items-center gap-2">

@@ -270,8 +270,8 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
     const lines = headerBlock.split('\n');
     lines.forEach((l) => {
       const t = l.trim();
-      if (t.startsWith('📘')) {
-        dossier.rawTitle = t.replace(/^📘\s*/, '').replace(/:\s*Detaylı Çalışma Metni.*$/, '').trim();
+      if (t.startsWith('')) {
+        dossier.rawTitle = t.replace(/^\s*/, '').replace(/:\s*Detaylı Çalışma Metni.*$/, '').trim();
       } else if (t.includes('**Ders Kodu & Başlığı:**')) {
         dossier.courseCode = t.replace(/.*\*\*Ders Kodu & Başlığı:\*\*\s*/, '').trim();
       } else if (t.includes('**Öğretim Üyesi:**')) {
@@ -329,7 +329,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
       // Add to TOC
       tocItems.push({
         id: secId,
-        title: isSpotWall ? '⚡ Spot Bilgiler Duvarı' : (secNumber ? `${secNumber}. ${secTitle}` : secTitle),
+        title: isSpotWall ? 'Spot Bilgiler Duvarı' : (secNumber ? `${secNumber}. ${secTitle}` : secTitle),
         level: 2,
         type: isSpotWall ? 'spot' : 'section',
       });
@@ -598,7 +598,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
   // Copy spot notes
   const handleCopySpotWall = () => {
     if (spotWallItems.length === 0) return;
-    navigator.clipboard.writeText(spotWallItems.map((s, i) => `⚡ Spot ${i + 1}: ${s}`).join('\n\n'));
+    navigator.clipboard.writeText(spotWallItems.map((s, i) => `Spot ${i + 1}: ${s}`).join('\n\n'));
     setCopiedSpot(true);
     setTimeout(() => setCopiedSpot(false), 2000);
   };
@@ -706,13 +706,13 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
     widthMode === 'fullscreen'
       ? 'w-full h-full max-w-none rounded-none m-0'
       : widthMode === 'wide'
-      ? 'max-w-6xl w-full mx-auto my-3 sm:my-5 rounded-2xl max-h-[94vh]'
-      : 'max-w-5xl w-full mx-auto my-3 sm:my-5 rounded-2xl max-h-[94vh]';
+      ? 'max-w-6xl w-full mx-auto my-3 sm:my-5 rounded-2xl max-h-[94dvh]'
+      : 'max-w-5xl w-full mx-auto my-3 sm:my-5 rounded-2xl max-h-[94dvh]';
 
   return (
     <div
       ref={containerRef}
-      className={`fixed inset-0 z-50 bg-[rgba(14,26,38,0.45)] flex flex-col justify-center items-center p-0 sm:p-4 overflow-hidden select-text ${curTheme.container}`}
+      className={`ms-overlay fixed inset-0 z-50 bg-[rgba(14,26,38,0.45)] flex flex-col justify-center items-center p-0 sm:p-4 overflow-hidden select-text ${curTheme.container}`}
       onClick={(e) => e.stopPropagation()}
     >
       {/* ========================================================
@@ -905,7 +905,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                   <Compass className="w-3.5 h-3.5 text-teal-600" />
                   <span>Ders İçindekiler ({tocItems.length})</span>
                 </div>
-                <span className="text-[10px] font-mono font-bold text-teal-700 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/60 px-1.5 py-0.5 rounded border border-teal-200 dark:border-teal-800">
+                <span className="text-[11px] font-mono font-bold text-teal-700 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/60 px-1.5 py-0.5 rounded border border-teal-200 dark:border-teal-800">
                   %{scrollProgress}
                 </span>
               </div>
@@ -963,11 +963,11 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                     >
                       <span className="shrink-0 mt-0.5">
                         {isSpot ? (
-                          '⚡'
+                          ''
                         ) : isQ ? (
-                          '🎯'
+                          ''
                         ) : isTable ? (
-                          '📊'
+                          ''
                         ) : item.level === 2 ? (
                           <ChevronRight className="w-3 h-3" />
                         ) : (
@@ -1031,7 +1031,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
               {/* Dossier Meta Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-4 text-xs">
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
                     <Building className="w-3 h-3 text-teal-600" /> Ders & Kurul
                   </span>
                   <p className="font-bold text-slate-800 dark:text-slate-200 line-clamp-1">
@@ -1040,7 +1040,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                 </div>
 
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
                     <User className="w-3 h-3 text-teal-600" /> Öğretim Üyesi
                   </span>
                   <p className="font-bold text-slate-800 dark:text-slate-200 line-clamp-1">
@@ -1049,7 +1049,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                 </div>
 
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
                     <Calendar className="w-3 h-3 text-teal-600" /> Müfredat Yılı
                   </span>
                   <p className="font-bold text-slate-800 dark:text-slate-200 line-clamp-1">
@@ -1058,7 +1058,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                 </div>
 
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 space-y-1">
-                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
                     <BookMarked className="w-3 h-3 text-teal-600" /> Temel Kılavuzlar
                   </span>
                   <p className="font-bold text-slate-800 dark:text-slate-200 line-clamp-1">
@@ -1132,8 +1132,8 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                             key={spIdx}
                             className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-800/60 shadow-2xs space-y-1"
                           >
-                            <span className="font-bold text-[10px] text-amber-700 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1">
-                              ⚡ Spot #{spIdx + 1}
+                            <span className="font-bold text-[11px] text-amber-700 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1">
+                              Spot #{spIdx + 1}
                             </span>
                             <p className="text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
                               {renderHighlightedText(sp)}
@@ -1340,7 +1340,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                                 className="self-start text-xs font-bold px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950 hover:bg-indigo-100 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 flex items-center gap-1.5 transition-colors cursor-pointer"
                               >
                                 {isRevealed ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                                <span>{isRevealed ? 'Çözümü Gizle' : '👉 Çözümü ve Doğru Cevabı Göster'}</span>
+                                <span>{isRevealed ? 'Çözümü Gizle' : 'Çözümü ve Doğru Cevabı Göster'}</span>
                               </button>
 
                               {isRevealed && (
@@ -1371,7 +1371,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
                                   {q.explanation && (
                                     <div className="pt-2 border-t border-emerald-200 dark:border-emerald-800/60 text-slate-800 dark:text-slate-200 leading-relaxed">
                                       <span className="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">
-                                        💡 Klinik & Patofizyolojik Çözüm Notu:
+                                        Klinik & Patofizyolojik Çözüm Notu:
                                       </span>
                                       <p>{renderHighlightedText(q.explanation)}</p>
                                     </div>
@@ -1499,7 +1499,7 @@ export const SummaryArtifactReader: React.FC<SummaryArtifactReaderProps> = ({
             ======================================================== */}
         <footer className="p-3 bg-slate-900 border-t border-slate-800 text-slate-400 text-xs flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2 truncate">
-            <span className="font-semibold text-slate-300">MedSoru Artifact Reader</span>
+            <span className="font-semibold text-slate-300">MeDSor Artifact Reader</span>
             <span>•</span>
             <span className="truncate">{summary.title}</span>
           </div>

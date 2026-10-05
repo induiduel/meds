@@ -1211,7 +1211,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                     className={`absolute rounded-xl bg-white shadow-sm px-2.5 py-1.5 text-[12px] leading-snug cursor-move touch-none ${sel?.id === f.id ? 'ring-2 ring-accent' : ''}`}
                     style={{ left: p.x, top: p.y, width: NODE_W, height: FRAG_H }}
                   >
-                    <span className={`text-[10.5px] font-semibold px-1.5 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
+                    <span className={`text-[11.5px] font-semibold px-1.5 rounded-md ${KIND_STYLE[f.kind]}`}>{KIND_LABEL[f.kind]}</span>
                     <span className="block line-clamp-2 text-ink-2 mt-0.5">{f.text}</span>
                   </div>
                 );
@@ -1730,7 +1730,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
               <button type="button" aria-label="Seçimi temizle" onClick={() => setPicked([])} className="w-7 h-7 rounded-full hover:bg-white/15 flex items-center justify-center cursor-pointer"><X className="w-4 h-4" /></button>
             </div>
           )}
-          <div className={`${poolOpen ? 'flex' : 'hidden'} lg:flex flex-col gap-1.5 p-3 overflow-y-auto overscroll-contain min-h-0 max-h-[60vh] lg:max-h-none`}>
+          <div className={`${poolOpen ? 'flex' : 'hidden'} lg:flex flex-col gap-1.5 p-3 overflow-y-auto overscroll-contain min-h-0 max-h-[60dvh] lg:max-h-none`}>
             {pool.length === 0 && <span className="text-[13px] text-ink-3 py-6 text-center">{allFrags.length ? 'Bu süzgeçte parça yok.' : 'Bu kurulda taslak parça yok.'}</span>}
             {pool.slice(0, 400).map((f) => (
               <React.Fragment key={f.id}>{FragChip({ f: f })}</React.Fragment>

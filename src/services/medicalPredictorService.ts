@@ -221,7 +221,7 @@ export function predictCommitteeAndDiscipline(
       } else {
         // Kelime kelime bulanık kontrol
         for (const w of words) {
-          if (w.length >= 4 && areWordsFuzzyEqual(w, foldedKw)) {
+          if (w.length >= 4 && Math.abs(w.length - foldedKw.length) <= 2 && areWordsFuzzyEqual(w, foldedKw)) {
             entry.score += 5 * rule.weight;
             if (!entry.matchedWords.includes(kw)) entry.matchedWords.push(kw);
             break;

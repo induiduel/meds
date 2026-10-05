@@ -340,7 +340,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
 
         {/* Footer */}
         <div className="px-6 py-3 border-t border-line bg-canvas flex items-center justify-between text-[12px] text-ink-3">
-          <span>MedSoru Yapay Zeka Hata Kalkanı</span>
+          <span>MeDSor Yapay Zeka Hata Kalkanı</span>
           <div className="flex items-center gap-2">
             <button
               type="button"

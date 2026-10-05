@@ -238,8 +238,8 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
 
       {/* Reader Modal */}
       {selectedItem && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+        <div className="ms-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90dvh] shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
             {/* Modal Header */}
             <div className="p-5 border-b border-slate-200 bg-slate-50 flex items-start justify-between gap-4">
               <div className="space-y-1">
@@ -269,8 +269,7 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
                   onClick={() => setSelectedItem(null)}
                   className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200 transition-colors"
                 >
-                  ✕
-                </button>
+                                  </button>
               </div>
             </div>
 

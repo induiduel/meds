@@ -367,6 +367,8 @@ export interface SimilarPastQuestion {
   claimedAnswer?: string;
   stem: string;
   score?: number;
+  /** Çıkmış sorunun şıkları (chunk içinden ayrıştırılır) */
+  options?: { key: string; text: string }[];
 }
 
 // AI calls are proxied through the backend (/api/ai/generate). Provider keys live only in the
@@ -1477,6 +1479,15 @@ export const ApiService = {
   },
 
   /** Past exam questions resembling what a student remembers (retrieval only, no AI cost). */
+  /** "Bunu mu kastettiniz?" — derlem sözlüğüne göre yazım önerisi */
+  async suggestSpelling(text: string, signal?: AbortSignal): Promise<{ text: string | null; changes: { from: string; to: string }[] } | null> {
+    const res = await safeJsonFetch<{ success: boolean; text: string | null; changes: { from: string; to: string }[] }>(
+      `/api/search/spell?q=${encodeURIComponent(text)}`,
+      { signal }
+    );
+    return res.ok && res.data?.success ? { text: res.data.text, changes: res.data.changes } : null;
+  },
+
   async findSimilarPastQuestions(text: string, committeeId?: string): Promise<SimilarPastQuestion[]> {
     const res = await safeJsonFetch<{ results: SimilarPastQuestion[] }>('/api/past-questions/similar', {
       method: 'POST',
@@ -2501,6 +2512,28 @@ export const ApiService = {
   },
 
   // Save approved past exam question across all databases (Local Server PUT + Supabase + Firebase Spark)
+  /** Çıkmış soruda alan güncelle (gizleme vb.); yerel veritabanı + Supabase aynası */
+  async adminPatchPastQuestion(adminEmail: string, id: string, patch: Record<string, any>): Promise<QuestionItem> {
+    const res = await safeJsonFetch<{ success: boolean; question: QuestionItem; error?: string }>(`/api/past-exams/${encodeURIComponent(id)}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify(patch),
+    });
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Soru güncellenemedi.');
+    try { await pastQuestionsCache.saveQuestion(res.data.question); } catch { /* önbellek yoksa geç */ }
+    return res.data.question;
+  },
+
+  /** Çıkmış soruyu kalıcı siler */
+  async adminDeletePastQuestion(adminEmail: string, id: string): Promise<void> {
+    const res = await safeJsonFetch<{ success: boolean; error?: string }>(`/api/past-exams/${encodeURIComponent(id)}`, {
+      method: 'DELETE',
+      headers: { 'x-admin-email': adminEmail },
+    });
+    if (!res.ok || !res.data?.success) throw new Error(res.data?.error || res.error || 'Soru silinemedi.');
+    try { await pastQuestionsCache.removeQuestions([id]); } catch { /* önbellek yoksa geç */ }
+  },
+
   async saveApprovedPastQuestion(question: QuestionItem): Promise<QuestionItem> {
     const updated: QuestionItem = {
       ...question,

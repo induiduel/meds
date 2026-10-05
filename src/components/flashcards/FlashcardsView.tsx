@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { PageHeader } from '../ui/PageHeader';
-import { BookA, GraduationCap, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2 } from 'lucide-react';
+import { BookA, GraduationCap, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star } from 'lucide-react';
+import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
 import { GLOSSARY } from '../../data/glossary';
 import { SectionLoader, SuccessCheck } from '../ui/Animations';
 
@@ -84,8 +85,8 @@ const GLOSSARY_CARDS: StudyCard[] = GLOSSARY.map((g) => ({
 const deckGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
 
 const loadDeckCards = async (): Promise<StudyCard[]> => {
-  const mod: any = await import('../../data/interactive_learning_decks.json');
-  const decks: any[] = mod.default || mod;
+  const { loadAllDecks } = await import('../../data/deckStore');
+  const decks: any[] = await loadAllDecks();
   const out: StudyCard[] = [];
   decks.forEach((d) =>
     (d.slides || []).forEach((s: any) =>
@@ -127,6 +128,10 @@ export const FlashcardsView: React.FC = () => {
   const [deckCards, setDeckCards] = useState<StudyCard[] | null>(null);
   const [group, setGroup] = useState('all');
   const [query, setQuery] = useState('');
+  // Göz atma süzgeci: duruma göre ya da favoriler (favoriler kaynak/konu seçiminden bağımsız)
+  type View = 'all' | 'new' | 'due' | 'learning' | 'mastered' | 'fav';
+  const [view, setView] = useState<View>('all');
+  const [favCards, setFavCards] = useState(getFavoriteCards);
   const [store, setStore] = useState<Record<string, CardState>>(readStore);
   const [doShuffle, setDoShuffle] = useState(true);
   const [reverse, setReverse] = useState(false);
@@ -147,10 +152,15 @@ export const FlashcardsView: React.FC = () => {
   }, [all]);
 
   const inGroup = useMemo(() => all.filter((c) => group === 'all' || c.group === group), [all, group]);
+  const favAsCards = useMemo<StudyCard[]>(
+    () => favCards.map((f) => ({ id: f.id, group: f.group || 'Favori', front: f.front, back: f.back })),
+    [favCards]
+  );
   const visible = useMemo(() => {
     const q = query.trim().toLocaleLowerCase('tr-TR');
-    return q ? inGroup.filter((c) => `${c.front} ${c.back}`.toLocaleLowerCase('tr-TR').includes(q)) : inGroup;
-  }, [inGroup, query]);
+    const base = view === 'fav' ? favAsCards : view === 'all' ? inGroup : inGroup.filter((c) => statusOf(store[c.id], now) === view);
+    return q ? base.filter((c) => `${c.front} ${c.back}`.toLocaleLowerCase('tr-TR').includes(q)) : base;
+  }, [inGroup, query, view, favAsCards, store, now]);
 
   const counts = useMemo(() => {
     const c = { new: 0, due: 0, learning: 0, mastered: 0 } as Record<Status, number>;
@@ -185,6 +195,7 @@ export const FlashcardsView: React.FC = () => {
         onExit={() => {
           setSession(null);
           setNow(Date.now());
+          setFavCards(getFavoriteCards());
         }}
         onRestart={() => {
           setNow(Date.now());
@@ -198,135 +209,129 @@ export const FlashcardsView: React.FC = () => {
   const startCount = Math.min(limit > 0 ? limit : inGroup.length, counts.due + counts.new || inGroup.length);
 
   return (
-    <div className="w-full max-w-[880px] mx-auto flex flex-col gap-4 min-w-0">
-      <PageHeader
-        eyebrow="Aralıklı tekrar"
-        title="Ezber kartları"
-        description="Kartı çevir, bildiğini işaretle. Bildiklerin giderek daha seyrek gelir."
-        actions={
-        <div role="radiogroup" aria-label="Kaynak" className="grid grid-cols-2 gap-1 bg-white border border-line rounded-xl p-1 w-full sm:w-[360px]">
+    <div className="w-full flex flex-col gap-3 sm:gap-4 min-w-0">
+      <PageHeader title="Kartlar" description="Kartı çevir, bildiğini işaretle; bildiklerin giderek daha seyrek gelir." />
+
+      {/* Kaynak ve konu: tek satır, sade */}
+      <div className="flex flex-col sm:flex-row gap-2 min-w-0">
+        <div role="radiogroup" aria-label="Kaynak" className="ms-f-seg sm:flex-none">
           {(
             [
-              ['terms', BookA, `Tıbbi terimler · ${GLOSSARY_CARDS.length}`],
-              ['lessons', GraduationCap, `Ders kartları${deckCards ? ` · ${deckCards.length}` : ''}`],
+              ['terms', BookA, 'Terimler', GLOSSARY_CARDS.length],
+              ['lessons', GraduationCap, 'Ders kartları', deckCards?.length],
             ] as const
-          ).map(([id, Icon, label]) => (
-            <button
-              key={id}
-              type="button"
-              role="radio"
-              aria-checked={source === id}
-              onClick={() => setSource(id)}
-              className={`h-10 rounded-[11px] inline-flex items-center justify-center gap-1.5 text-[13.5px] cursor-pointer whitespace-nowrap ${
-                source === id ? 'bg-ink text-white font-semibold' : 'text-ink-2 hover:text-ink'
-              }`}
-            >
+          ).map(([id, Icon, label, n]) => (
+            <button key={id} type="button" role="radio" aria-checked={source === id} onClick={() => setSource(id)} className={`inline-flex items-center justify-center gap-1.5 ${source === id ? 'is-on' : ''}`}>
               <Icon className="w-4 h-4" />
               {label}
+              {n ? <span className="text-[12px] text-ink-3">{n}</span> : null}
             </button>
           ))}
         </div>
-        }
-      />
+        {!loading && (
+          <label className="ms-select-chip flex-1 sm:max-w-[320px]">
+            <span className="text-ink-3 shrink-0">{source === 'terms' ? 'Konu' : 'Ders'}</span>
+            <select value={group} onChange={(e) => setGroup(e.target.value)} aria-label={source === 'terms' ? 'Konu' : 'Ders'}>
+              <option value="all">Tümü · {all.length}</option>
+              {groups.map(([g, n]) => <option key={g} value={g}>{g} · {n}</option>)}
+            </select>
+            <ChevronDown className="w-4 h-4 text-ink-3 shrink-0 pointer-events-none" aria-hidden="true" />
+          </label>
+        )}
+      </div>
 
       {loading ? (
         <SectionLoader variant="book" label="Ders kartları yükleniyor…" />
       ) : (
         <>
-          {/* Groups */}
-          <div role="radiogroup" aria-label="Konu" className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0 sm:flex-wrap">
-            {[['all', all.length] as [string, number], ...groups].map(([g, n]) => {
-              const on = group === g;
-              return (
-                <button
-                  key={g}
-                  type="button"
-                  role="radio"
-                  aria-checked={on}
-                  onClick={() => setGroup(g)}
-                  className={`shrink-0 h-9 px-3.5 rounded-full text-[13.5px] whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5 transition-colors ${
-                    on ? 'bg-ink text-white font-semibold' : 'bg-white border border-line text-ink hover:border-line-2'
-                  }`}
-                >
-                  {g === 'all' ? 'Tümü' : g}
-                  <span className={`font-mono text-[12px] ${on ? 'text-white/70' : 'text-ink-3'}`}>{n}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Start panel */}
-          <section className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-4">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {/* Başlat paneli: durum tek satır, ayarlar tek satır, büyük başlat düğmesi */}
+          <section className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-ink-2">
               {(
                 [
-                  ['due', 'Tekrar zamanı', counts.due],
-                  ['new', 'Yeni', counts.new],
-                  ['learning', 'Öğreniliyor', counts.learning],
-                  ['mastered', 'Ezberlendi', counts.mastered],
+                  ['due', 'tekrar', counts.due],
+                  ['new', 'yeni', counts.new],
+                  ['learning', 'öğreniliyor', counts.learning],
+                  ['mastered', 'ezber', counts.mastered],
                 ] as const
               ).map(([k, label, n]) => (
-                <div key={k} className="rounded-xl bg-canvas px-3 py-2.5 flex flex-col gap-0.5">
-                  <span className="flex items-center gap-1.5 text-[12.5px] text-ink-2">
-                    <span className="w-2 h-2 rounded-full" style={{ background: STATUS_DOT[k] }} />
-                    {label}
-                  </span>
-                  <span className="font-mono text-[22px] font-semibold text-ink leading-tight">{n}</span>
-                </div>
+                <span key={k} className="inline-flex items-center gap-1.5 whitespace-nowrap">
+                  <span className="w-2 h-2 rounded-full" style={{ background: STATUS_DOT[k] }} />
+                  <span className="font-semibold text-ink tabular-nums">{n}</span> {label}
+                </span>
               ))}
             </div>
             {inGroup.length > 0 && (
-              <div className="h-2 rounded-full bg-line-soft overflow-hidden flex" aria-hidden="true">
+              <div className="h-1.5 rounded-full bg-line-soft overflow-hidden flex" aria-hidden="true">
                 <span style={{ width: `${(counts.mastered / inGroup.length) * 100}%`, background: STATUS_DOT.mastered }} />
                 <span style={{ width: `${(counts.learning / inGroup.length) * 100}%`, background: STATUS_DOT.learning }} />
                 <span style={{ width: `${(counts.due / inGroup.length) * 100}%`, background: STATUS_DOT.due }} />
               </div>
             )}
 
-            <div className="flex flex-wrap items-center gap-2">
-              <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
-              <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Tanımdan terime" />
-              <div role="radiogroup" aria-label="Kart sayısı" className="inline-grid grid-cols-4 gap-1 bg-canvas rounded-[11px] p-1 ml-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-[auto_auto_minmax(0,1fr)] items-center gap-2">
+              <div className="flex gap-2">
+                <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
+                <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Ters çevir" />
+              </div>
+              <span className="hidden sm:block" />
+              <div role="radiogroup" aria-label="Kart sayısı" className="ms-f-seg sm:justify-self-end sm:w-[260px]">
                 {[10, 20, 50, 0].map((n) => (
-                  <button
-                    key={n}
-                    type="button"
-                    role="radio"
-                    aria-checked={limit === n}
-                    onClick={() => setLimit(n)}
-                    className={`h-8 px-2.5 rounded-lg text-[13px] cursor-pointer ${limit === n ? 'bg-white font-semibold text-ink shadow-xs' : 'text-ink-2'}`}
-                  >
+                  <button key={n} type="button" role="radio" aria-checked={limit === n} onClick={() => setLimit(n)} className={limit === n ? 'is-on' : ''}>
                     {n === 0 ? 'Hepsi' : n}
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-2">
-              <button
-                type="button"
-                onClick={() => buildSession(false)}
-                disabled={inGroup.length === 0}
-                className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white text-[16px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-md"
-              >
-                <Play className="w-4 h-4 fill-current" />
-                {counts.due + counts.new > 0 ? `Çalışmaya başla · ${startCount} kart` : 'Hepsini tekrar et'}
+            <button
+              type="button"
+              onClick={() => buildSession(false)}
+              disabled={inGroup.length === 0}
+              className="w-full h-14 shrink-0 rounded-full bg-accent hover:bg-accent-hover text-white text-[16px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-colors"
+            >
+              <Play className="w-4 h-4 fill-current" />
+              {counts.due + counts.new > 0 ? `Başla · ${startCount} kart` : 'Hepsini tekrar et'}
+            </button>
+            {counts.due + counts.new > 0 && counts.learning + counts.mastered > 0 && (
+              <button type="button" onClick={() => buildSession(true)} className="self-center h-9 px-3 rounded-full text-[14px] font-medium text-ink-2 hover:text-ink hover:bg-field inline-flex items-center gap-1.5 cursor-pointer">
+                <Layers className="w-4 h-4" /> Tüm kartları çalış
               </button>
-              {counts.due + counts.new > 0 && counts.learning + counts.mastered > 0 && (
+            )}
+          </section>
+
+          {/* Göz at: durum ve favori süzgeci */}
+          <section className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <div role="tablist" aria-label="Kart süzgeci" className="ms-f-seg flex-1 min-w-0">
+                {(
+                  [
+                    ['all', 'Tümü', inGroup.length],
+                    ['due', 'Tekrar', counts.due],
+                    ['new', 'Yeni', counts.new],
+                    ['learning', 'Öğreniliyor', counts.learning],
+                    ['mastered', 'Ezber', counts.mastered],
+                    ['fav', 'Favoriler', favCards.length],
+                  ] as const
+                ).map(([id, label, n]) => (
+                  <button key={id} type="button" role="tab" aria-selected={view === id} onClick={() => setView(id)} className={`inline-flex items-center justify-center gap-1 ${view === id ? 'is-on' : ''}`}>
+                    {id === 'fav' && <Star className="w-3.5 h-3.5" fill={view === 'fav' ? 'currentColor' : 'none'} />}
+                    {label}
+                    <span className="text-[12px] text-ink-3 tabular-nums">{n}</span>
+                  </button>
+                ))}
+              </div>
+              {view !== 'all' && visible.length > 0 && (
                 <button
                   type="button"
-                  onClick={() => buildSession(true)}
-                  className="h-12 px-4 rounded-xl border border-line bg-white text-[15px] font-semibold text-ink inline-flex items-center justify-center gap-2 cursor-pointer hover:border-line-2"
+                  onClick={() => setSession(doShuffle ? shuffle(visible) : visible)}
+                  className="h-10 px-4 rounded-full bg-accent-soft text-accent text-[14px] font-semibold inline-flex items-center gap-1.5 cursor-pointer shrink-0 hover:bg-accent hover:text-white transition-colors"
+                  title="Yalnızca bu süzgeçteki kartları çalış"
                 >
-                  <Layers className="w-4 h-4" />
-                  Tüm kartlar
+                  <Play className="w-3.5 h-3.5 fill-current" /> <span className="hidden sm:inline">Bunları çalış</span>
                 </button>
               )}
             </div>
-          </section>
-
-          {/* Browse */}
-          <section className="flex flex-col gap-2">
             <label className="flex items-center gap-2 h-11 px-3.5 rounded-xl bg-white border border-line focus-within:border-accent">
               <Search className="w-4 h-4 text-ink-3 shrink-0" />
               <span className="sr-only">Kartlarda ara</span>
@@ -352,7 +357,7 @@ const ToggleChip: React.FC<{ on: boolean; onClick: () => void; icon: React.Eleme
     type="button"
     aria-pressed={on}
     onClick={onClick}
-    className={`h-9 px-3 rounded-full text-[13.5px] inline-flex items-center gap-1.5 cursor-pointer transition-colors ${
+    className={`h-10 px-3.5 rounded-full text-[14px] inline-flex items-center gap-1.5 cursor-pointer transition-colors whitespace-nowrap ${
       on ? 'bg-accent-soft text-accent font-semibold ring-1 ring-inset ring-accent/40' : 'bg-white border border-line text-ink-2 hover:border-line-2'
     }`}
   >
@@ -420,7 +425,24 @@ const StudySession: React.FC<{
   const [flipped, setFlipped] = useState(false);
   const [tally, setTally] = useState({ good: 0, hard: 0, again: 0 });
   const [leaving, setLeaving] = useState<Grade | null>(null);
+  const [favIds, setFavIds] = useState(() => new Set(getFavoriteCards().map((c) => c.id)));
   const touch = useRef<{ x: number; y: number } | null>(null);
+
+  // İleri/geri: puan vermeden kartlar arasında gezinme
+  const goPrev = useCallback(() => {
+    if (leaving) return;
+    setIdx((i) => Math.max(0, i - 1));
+    setFlipped(false);
+  }, [leaving]);
+  const goNext = useCallback(() => {
+    if (leaving) return;
+    setIdx((i) => Math.min(queue.length, i + 1));
+    setFlipped(false);
+  }, [leaving, queue.length]);
+  const toggleFav = useCallback((c: StudyCard) => {
+    const next = toggleFavoriteCard({ id: c.id, front: plain(c.front), back: plain(c.back), group: c.group });
+    setFavIds(new Set(next.map((x) => x.id)));
+  }, []);
 
   const card = queue[idx];
   const done = !card;
@@ -454,13 +476,16 @@ const StudySession: React.FC<{
         if (!done) setFlipped((f) => !f);
         return;
       }
+      if (e.key === 'ArrowLeft') return goPrev();
+      if (e.key === 'ArrowRight') return goNext();
+      if ((e.key === 'f' || e.key === 'F') && card) return toggleFav(card);
       if (e.key === '1') answer('again');
       if (e.key === '2') answer('hard');
       if (e.key === '3') answer('good');
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [answer, done, onExit]);
+  }, [answer, done, onExit, goPrev, goNext, toggleFav, card]);
 
   const speak = (text: string) => {
     if (!('speechSynthesis' in window)) return;
@@ -527,9 +552,17 @@ const StudySession: React.FC<{
         <div className="flex-1 h-2 rounded-full bg-white overflow-hidden" aria-hidden="true">
           <div className="h-full rounded-full bg-accent transition-[width] duration-300" style={{ width: `${pct}%` }} />
         </div>
-        <span className="font-mono text-[13px] text-ink-2 shrink-0">
-          {Math.min(answered + 1, total)}/{total}
-        </span>
+        <div className="flex items-center gap-0.5 shrink-0">
+          <button type="button" onClick={goPrev} disabled={idx === 0} aria-label="Önceki kart" className="w-9 h-9 rounded-full flex items-center justify-center text-ink-2 hover:bg-white disabled:opacity-30 cursor-pointer">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <span className="font-mono text-[13px] text-ink-2 min-w-[3.5ch] text-center tabular-nums">
+            {Math.min(idx + 1, queue.length)}/{queue.length}
+          </span>
+          <button type="button" onClick={goNext} aria-label="Sonraki kart" className="w-9 h-9 rounded-full flex items-center justify-center text-ink-2 hover:bg-white cursor-pointer">
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
       </div>
 
       {/* Card */}
@@ -559,7 +592,7 @@ const StudySession: React.FC<{
           >
             <span className="flex items-center gap-2">
               <span className="h-6 px-2.5 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center max-w-[70%] truncate">{card.group}</span>
-              <span className="ml-auto text-[12px] text-ink-3">{reverse ? 'Tanım' : 'Terim'}</span>
+              <span className="ml-auto mr-12 text-[12px] text-ink-3">{reverse ? 'Tanım' : 'Terim'}</span>
             </span>
             <span className="flex-1 flex flex-col items-center justify-center text-center gap-2 px-2">
               <span className={`font-display font-bold tracking-[-0.02em] text-ink ${reverse ? 'text-[18px] sm:text-[20px] leading-[1.45] font-medium' : 'text-[28px] sm:text-[34px] leading-[1.15]'}`}>
@@ -576,7 +609,7 @@ const StudySession: React.FC<{
             aria-hidden={!flipped}
           >
             <span className="flex items-center gap-2">
-              <span className="text-[15px] font-semibold text-accent truncate">{plain(reverse ? card.back : card.front).slice(0, 60)}</span>
+              <span className="text-[15px] font-semibold text-accent truncate pr-12">{plain(reverse ? card.back : card.front).slice(0, 60)}</span>
             </span>
             <span className="flex-1 flex flex-col justify-center gap-3 py-3">
               <span className={`text-ink ${reverse ? 'font-display font-bold text-[28px] leading-[1.15] text-center' : 'text-[17px] sm:text-[18px] leading-[1.6]'}`}>{plain(back)}</span>
@@ -588,6 +621,17 @@ const StudySession: React.FC<{
               )}
             </span>
           </span>
+        </button>
+        <button
+          type="button"
+          onClick={() => toggleFav(card)}
+          aria-pressed={favIds.has(card.id)}
+          aria-label={favIds.has(card.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'}
+          className={`absolute right-3 top-3 z-10 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors ${
+            favIds.has(card.id) ? 'text-amber-500 bg-amber-50' : 'text-ink-3 hover:text-ink bg-canvas'
+          }`}
+        >
+          <Star className="w-[18px] h-[18px]" fill={favIds.has(card.id) ? 'currentColor' : 'none'} />
         </button>
         {!reverse && (
           <button
@@ -636,7 +680,7 @@ const StudySession: React.FC<{
       )}
       <p className="m-0 text-center text-[12.5px] text-ink-3">
         <span className="md:hidden">Çevirdikten sonra sağa kaydır: biliyorum · sola: tekrar</span>
-        <span className="hidden md:inline">Boşluk: çevir · 1 tekrar · 2 zor · 3 biliyorum · Esc çık</span>
+        <span className="hidden md:inline">Boşluk: çevir · ← → gezin · F favori · 1 tekrar · 2 zor · 3 biliyorum</span>
       </p>
     </div>
   );

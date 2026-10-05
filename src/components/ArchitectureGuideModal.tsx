@@ -30,7 +30,7 @@ export const ArchitectureGuideModal: React.FC<ArchitectureGuideModalProps> = ({
     <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
       <div className="ms-modal-panel bg-white rounded-2xl max-w-3xl w-full shadow-2xl border border-slate-200 overflow-hidden my-6">
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-800 via-teal-900 to-cyan-950 text-white p-5 flex items-center justify-between">
+        <div className="bg-ink-surface text-white p-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-400/30 flex items-center justify-center">
               <Zap className="w-5 h-5 text-teal-300" />
@@ -53,7 +53,7 @@ export const ArchitectureGuideModal: React.FC<ArchitectureGuideModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-6 max-h-[75vh] overflow-y-auto text-xs leading-relaxed text-slate-700">
+        <div className="p-6 space-y-6 max-h-[75dvh] overflow-y-auto text-xs leading-relaxed text-slate-700">
           {/* Welcome note */}
           <div className="bg-teal-50/70 border border-teal-200 rounded-xl p-4">
             <h4 className="text-sm font-bold text-teal-900 mb-1 flex items-center gap-1.5">

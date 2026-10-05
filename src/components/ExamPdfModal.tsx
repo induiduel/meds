@@ -315,9 +315,9 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
   useEffect(() => {
     if (!isOpen || contentType !== 'slides' || decks.length) return;
     let alive = true;
-    import('../data/interactive_learning_decks.json').then((mod: any) => {
+    import('../data/deckStore').then((m) => m.loadAllDecks<InteractiveDeck>()).then((all) => {
       if (!alive) return;
-      const list = ((mod.default || mod) as InteractiveDeck[]).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0);
+      const list = all.filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0);
       setDecks(list);
       if (!list.some((d) => d.id === deckId) && list[0]) {
         setDeckId(list[0].id);
@@ -872,7 +872,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
           </aside>
 
           {/* Preview */}
-          <section aria-label="Önizleme" className="no-print bg-blue-100 flex flex-col min-w-0 min-h-[62vh] lg:min-h-0 p-3 sm:p-5 gap-3">
+          <section aria-label="Önizleme" className="no-print bg-blue-100 flex flex-col min-w-0 min-h-[62dvh] lg:min-h-0 p-3 sm:p-5 gap-3">
             <div className="flex items-center gap-2 px-1">
               <span className="text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-3">Önizleme</span>
               {pageCount && !isBuildingPreview && (
@@ -936,7 +936,7 @@ export const ExamPdfModal: React.FC<ExamPdfModalProps> = ({
           {!isSlides && (
             <div id="exam-printable-content" className="hidden print:block text-blue-950">
               <div className="header">
-                <div className="meta">MedSoru · Dönem {activeCommittee?.year || 3}</div>
+                <div className="meta">MeDSor · Dönem {activeCommittee?.year || 3}</div>
                 <h1>{displayTitle}</h1>
                 <div className="meta">
                   {displayTarget} soru

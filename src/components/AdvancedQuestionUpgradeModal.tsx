@@ -86,9 +86,9 @@ export const AdvancedQuestionUpgradeModal: React.FC<AdvancedQuestionUpgradeModal
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="ms-modal-panel bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-4xl w-full max-h-[92dvh] shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
         {/* Header */}
-        <div className="p-5 border-b border-slate-200 bg-gradient-to-r from-indigo-900 via-slate-900 to-indigo-950 text-white flex items-center justify-between">
+        <div className="p-5 border-b border-slate-200 bg-ink-surface text-white flex items-center justify-between">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[11px] font-bold flex items-center gap-1">
@@ -150,7 +150,7 @@ export const AdvancedQuestionUpgradeModal: React.FC<AdvancedQuestionUpgradeModal
                       <GraduationCap className="w-4 h-4 text-slate-400" />
                       Eski / Ham Soru (Öğrenci Hafızası)
                     </span>
-                    <span className="text-[10px] bg-slate-200 text-slate-700 px-2 py-0.5 rounded font-mono">
+                    <span className="text-[11px] bg-slate-200 text-slate-700 px-2 py-0.5 rounded font-mono">
                       {question.examYear || 'Çıkmış'}
                     </span>
                   </div>
@@ -174,7 +174,7 @@ export const AdvancedQuestionUpgradeModal: React.FC<AdvancedQuestionUpgradeModal
                       <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                       Redakte Edilmiş Kurul Sorusu
                     </span>
-                    <span className="text-[10px] bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-semibold">
+                    <span className="text-[11px] bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-semibold">
                       Doğru: {question.reconstruction?.correctAnswer || question.claimedAnswer || '?'}
                     </span>
                   </div>
@@ -197,7 +197,7 @@ export const AdvancedQuestionUpgradeModal: React.FC<AdvancedQuestionUpgradeModal
               </div>
 
               {/* Generation Controls */}
-              <div className="bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-xl p-5 space-y-4">
+              <div className="bg-ink-surface text-white rounded-xl p-5 space-y-4">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div className="space-y-1">
                     <h3 className="font-bold text-sm flex items-center gap-2">
@@ -305,7 +305,7 @@ export const AdvancedQuestionUpgradeModal: React.FC<AdvancedQuestionUpgradeModal
                               </span>
                             </div>
                             {isCorrect && (
-                              <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-200 text-emerald-900 shrink-0">
+                              <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-200 text-emerald-900 shrink-0">
                                 Doğru Cevap
                               </span>
                             )}

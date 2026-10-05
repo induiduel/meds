@@ -17,6 +17,8 @@ import {
   FileText,
   Copy,
   Lock,
+  Plus,
+  BookOpen,
 } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
@@ -28,7 +30,7 @@ import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
 import { validateNamePolicy } from '../utils/namePolicy';
 import { useUiVersion } from '../utils/uiVersion';
-import { findRealtimeMatchingDrafts, RealtimeMatchItem, DraftCompatibilityResult } from '../services/draftClusteringService';
+import { findRealtimeMatchingDrafts, RealtimeMatchItem, DraftCompatibilityResult, warmMedicalIndex } from '../services/draftClusteringService';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
@@ -233,6 +235,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [questionNumber, setQuestionNumber] = useState('');
   const [userManualDiscipline, setUserManualDiscipline] = useState(false);
   const [userManualNumber, setUserManualNumber] = useState(false);
+  // Alt şerit: değer otomatik mi geldi (eşleşen taslak/tahmin) — kullanıcıya "otomatik" diye gösterilir
+  const [autoDisc, setAutoDisc] = useState(false);
+  const [autoNum, setAutoNum] = useState(false);
+  const [discMenu, setDiscMenu] = useState(false);
+  const [discQuery, setDiscQuery] = useState('');
   const [linkedQuestion, setLinkedQuestion] = useState<QuestionItem | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -248,6 +255,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [optimizingQuestion, setOptimizingQuestion] = useState<QuestionItem | null>(null);
   const [debouncedText, setDebouncedText] = useState('');
   const [isSearching, setIsSearching] = useState(false);
+
+  // Tıbbi kavram sözlüğünü sayfa açılışında boşta kur (yazarken takılmasın)
+  useEffect(() => { warmMedicalIndex(); }, []);
 
   // Kurul kilitli mi kontrolü: Sınav tarihi gelmeden soru yazılamaz
   const isLocked = useMemo(() => {
@@ -342,6 +352,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           const predDisc = assistantRes.predictedDiscipline.discipline;
           if (disciplines.includes(predDisc)) {
             setDiscipline(predDisc);
+            setAutoDisc(true);
           }
         }
 
@@ -428,44 +439,37 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   // Çıkmış soruyu tamamen editöre aktarma (kök + şıklar + cevap)
   const handleTransferEntireQuestion = async (similarItem: SimilarPastQuestion) => {
-    // 1. Önce soru kökünü ve branşı aktar
     setTexts((prev) => ({ ...prev, stem: similarItem.stem.trim() }));
     if (mode === 'option') setMode('stem');
     if (similarItem.discipline && disciplines.includes(similarItem.discipline)) {
       setDiscipline(similarItem.discipline);
       setUserManualDiscipline(true);
     }
-    if (similarItem.claimedAnswer && ['A', 'B', 'C', 'D', 'E'].includes(similarItem.claimedAnswer)) {
-      setClaimedAnswer(similarItem.claimedAnswer as OptionKey);
+    // Şıklar benzer soru sonucuyla birlikte gelir; yoksa çıkmış soru listesinden tamamlanır
+    let sourceOptions: { key: string; text: string }[] = similarItem.options || [];
+    let ans = similarItem.claimedAnswer;
+    if (sourceOptions.length === 0) {
+      try {
+        const pastList = await ApiService.getPastQuestions({ query: similarItem.id, includeAmbiguous: true });
+        const fullQ = pastList.find((p) => String(p.id) === String(similarItem.id));
+        if (fullQ) {
+          sourceOptions = fullQ.reconstruction?.options || fullQ.options || [];
+          ans = fullQ.reconstruction?.correctAnswer || fullQ.correctAnswer || fullQ.claimedAnswer || ans;
+        }
+      } catch (_) {}
     }
+    if (sourceOptions.length > 0) {
+      const newOpts: Record<OptionKey, string> = { A: '', B: '', C: '', D: '', E: '' };
+      sourceOptions.forEach((o) => {
+        if (o.key && (KEYS as string[]).includes(o.key)) newOpts[o.key as OptionKey] = (o.text || '').trim();
+      });
+      setOptions(newOpts);
+      setOptionCount(KEYS.filter((k) => newOpts[k]).length || 5);
+    }
+    if (ans && (KEYS as string[]).includes(ans)) setClaimedAnswer(ans as OptionKey);
+    setSimOpen(false);
 
-    // 2. Varsa tam soru detayını pastQuestionsCache / API'den çekip şıkları doldur
-    try {
-      const pastList = await ApiService.getPastQuestions({ query: similarItem.id });
-      const fullQ = pastList.find((p) => String(p.id) === String(similarItem.id));
-      if (fullQ) {
-        if (fullQ.reconstruction?.stem || fullQ.stem) {
-          setTexts((prev) => ({ ...prev, stem: (fullQ.reconstruction?.stem || fullQ.stem).trim() }));
-        }
-        const sourceOptions = fullQ.reconstruction?.options || fullQ.options || [];
-        if (sourceOptions.length > 0) {
-          const newOpts: Record<OptionKey, string> = { A: '', B: '', C: '', D: '', E: '' };
-          sourceOptions.forEach((o: any) => {
-            if (o.key && ['A', 'B', 'C', 'D', 'E'].includes(o.key)) {
-              newOpts[o.key as OptionKey] = (o.text || '').trim();
-            }
-          });
-          setOptions(newOpts);
-          setOptionCount(KEYS.filter((k) => newOpts[k]).length || 5);
-        }
-        const ans = fullQ.reconstruction?.correctAnswer || fullQ.correctAnswer || fullQ.claimedAnswer || similarItem.claimedAnswer;
-        if (ans && ['A', 'B', 'C', 'D', 'E'].includes(ans)) {
-          setClaimedAnswer(ans as OptionKey);
-        }
-      }
-    } catch (_) {}
-
-    toast.success('Soru Aktarıldı', 'Çıkmış soru tüm bilgileriyle editöre aktarıldı.');
+    toast.success('Soru aktarıldı', sourceOptions.length ? `Kök, ${sourceOptions.length} şık ve cevap eklendi.` : 'Soru kökü eklendi.');
   };
 
   // Bir soruya doğrudan bağlama aksiyonu
@@ -713,10 +717,47 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const field = 'bg-field border border-transparent outline-0 focus:border-accent focus:bg-white';
 
   // v3 · minimal ana sayfa: tek alan, tek düğme. Benzerler ve şıklar yalnızca istenince.
+  // Kutudaki ders/numara overlay'leri 2+ kelimeden sonra (ya da değer girildiyse) görünür
+  const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const showMeta = mode !== 'option' && (wordCount >= 2 || userManualDiscipline || !!questionNumber);
+  const filledOptionCount = KEYS.filter((k) => options[k].trim()).length;
+
+  // Eşleşen taslak varsa ders ve numara otomatik dolar; elle girilen değer korunur
+  useEffect(() => {
+    const top = realtimeMatches[0];
+    if (!top || top.isCrossCommittee || top.compatibility.score < 60) return;
+    if (!userManualNumber && top.question.questionNumber) { setQuestionNumber(String(top.question.questionNumber)); setAutoNum(true); }
+    if (!userManualDiscipline && top.question.discipline && disciplines.includes(top.question.discipline)) {
+      setDiscipline(top.question.discipline);
+      setAutoDisc(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [realtimeMatches]);
+
+  // "Bunu mu kastettiniz?": derlem sözlüğüne göre yazım önerisi (2+ kelime)
+  const [spell, setSpell] = useState<{ text: string | null; changes: { from: string; to: string }[] } | null>(null);
+  const [dismissedSpell, setDismissedSpell] = useState<string | null>(null);
+  useEffect(() => {
+    const q = debouncedText;
+    if (mode === 'option' || q.split(/\s+/).length < 2) { setSpell(null); return; }
+    const ctrl = new AbortController();
+    const t = window.setTimeout(() => {
+      ApiService.suggestSpelling(q, ctrl.signal).then((r) => {
+        if (ctrl.signal.aborted || !r?.text) { if (!ctrl.signal.aborted) setSpell(null); return; }
+        // Öneri yazılmakta olan metne uygulanır: yalnızca değişen sözcükler değiştirilir
+        let next = text;
+        r.changes.forEach((c) => { next = next.replace(new RegExp(`(^|[^\\p{L}])${c.from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?=$|[^\\p{L}])`, 'u'), `$1${c.to}`); });
+        setSpell(next !== text ? { text: next, changes: r.changes } : null);
+      });
+    }, 350);
+    return () => { ctrl.abort(); window.clearTimeout(t); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedText, mode]);
+
   if (isV3) {
     return (
-      <div className="w-full max-w-[680px] mx-auto flex flex-col gap-5 pt-6 sm:pt-16">
-        <div className="flex flex-col items-center text-center gap-2">
+      <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-2">
           <label className="relative inline-flex items-center text-[13px] text-ink-3">
             <span className="sr-only">Kurul seç</span>
             <span className={`w-1.5 h-1.5 rounded-full mr-2 ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} aria-hidden="true" />
@@ -738,7 +779,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </select>
             <ChevronDown className="pointer-events-none absolute right-0 w-3 h-3" aria-hidden="true" />
           </label>
-          <h1 className="ms-page-title m-0 text-[30px] sm:text-[40px] text-ink">Aklında ne kaldı?</h1>
+          <h1 className="ms-page-title m-0 text-[30px] sm:text-[36px] text-ink">Aklında ne kaldı?</h1>
           {isLocked && (
             <div className="ms-pop-in flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-300/80 text-amber-900 text-[12.5px] font-medium mt-1">
               <Lock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
@@ -765,20 +806,103 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           ) : (
             <>
               <label htmlFor="hatira" className="sr-only">Hatırladığın kısım</label>
-              <textarea
-                id="hatira"
-                rows={4}
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
-                    e.preventDefault();
-                    e.currentTarget.form?.requestSubmit();
-                  }
-                }}
-                placeholder="Tek kelime bile işe yarar…"
-                className="resize-none rounded-2xl px-4 py-3.5 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-field border-0 outline-0 focus:bg-white focus:ring-2 focus:ring-accent transition-[background,box-shadow] min-h-[140px]"
-              />
+              <div className={`ms-composer ${showMeta ? 'has-meta' : ''}`}>
+                <textarea
+                  id="hatira"
+                  rows={4}
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                      e.preventDefault();
+                      e.currentTarget.form?.requestSubmit();
+                    }
+                  }}
+                  placeholder="Tek kelime bile işe yarar…"
+                  className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-[16px] leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
+                />
+                {/* Alt şerit: soru kimliği. Ders ve numara akıllı etiketler; otomatik dolanlar işaretli */}
+                {showMeta && (
+                  <div className="ms-meta" data-no-tip>
+                    <div className="relative min-w-0">
+                      <button
+                        type="button"
+                        className={`ms-meta-token ${autoDisc && !userManualDiscipline ? 'is-auto' : ''}`}
+                        onClick={() => { setDiscMenu((v) => !v); setDiscQuery(''); }}
+                        aria-haspopup="listbox"
+                        aria-expanded={discMenu}
+                      >
+                        <BookOpen className="w-3.5 h-3.5 shrink-0" />
+                        <span className="truncate">{discipline}</span>
+                        {autoDisc && !userManualDiscipline && <Sparkles className="ms-meta-auto w-3 h-3 shrink-0" aria-label="otomatik" />}
+                        <ChevronDown className="w-3.5 h-3.5 shrink-0 opacity-60" />
+                      </button>
+                      {discMenu && (
+                        <>
+                          <button type="button" aria-label="Kapat" className="fixed inset-0 z-20 cursor-default" onClick={() => setDiscMenu(false)} />
+                          <div className="ms-meta-menu" role="listbox" aria-label="Ders">
+                            {disciplines.length > 6 && (
+                              <input
+                                autoFocus
+                                value={discQuery}
+                                onChange={(e) => setDiscQuery(e.target.value)}
+                                onKeyDown={(e) => e.key === 'Escape' && setDiscMenu(false)}
+                                placeholder="Ders ara"
+                                className="ms-bare-input w-full h-9 px-3 mb-1 rounded-lg bg-field text-[14px] outline-0 border-0"
+                              />
+                            )}
+                            {disciplines
+                              .filter((d) => !discQuery || d.toLocaleLowerCase('tr').includes(discQuery.toLocaleLowerCase('tr')))
+                              .map((d) => (
+                                <button
+                                  key={d}
+                                  type="button"
+                                  role="option"
+                                  aria-selected={d === discipline}
+                                  onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); setDiscMenu(false); }}
+                                  className={d === discipline ? 'is-on' : ''}
+                                >
+                                  <span className="truncate">{d}</span>
+                                  {d === discipline && <Check className="w-4 h-4 shrink-0" />}
+                                </button>
+                              ))}
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    <label className={`ms-meta-token is-number ${autoNum && !userManualNumber ? 'is-auto' : ''}`} title="Soru numarası (bilmiyorsan boş bırak)">
+                      <span className="opacity-70">No</span>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        value={questionNumber}
+                        onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                        placeholder="—"
+                        aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                      />
+                      {autoNum && !userManualNumber && <Sparkles className="ms-meta-auto w-3 h-3 shrink-0" aria-label="otomatik" />}
+                    </label>
+                    {(autoDisc || autoNum) && !(userManualDiscipline && userManualNumber) && (
+                      <span className="hidden sm:inline ml-auto text-[12px] text-ink-3 truncate">Eşleşen taslaktan dolduruldu</span>
+                    )}
+                  </div>
+                )}
+              </div>
+              {spell?.text && spell.text !== dismissedSpell && (
+                <div className="ms-pop-in flex items-center gap-2 text-[14px] text-ink-2 min-w-0">
+                  <span className="shrink-0 text-ink-3">Bunu mu kastettiniz?</span>
+                  <button
+                    type="button"
+                    onClick={() => { setText(spell.text!); setSpell(null); }}
+                    className="min-w-0 truncate text-left text-accent font-medium hover:underline cursor-pointer"
+                  >
+                    {spell.changes.map((c) => c.to).join(', ')}
+                  </button>
+                  <button type="button" onClick={() => setDismissedSpell(spell.text)} aria-label="Öneriyi kapat" className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-ink-3 hover:bg-field cursor-pointer">
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
               {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
               {isSearching && text.trim().length >= 6 && (
                 <div className="ms-fade-in flex items-center gap-2 px-3 py-1.5 rounded-xl bg-accent-soft/60 border border-accent/20 text-accent text-[12px] font-medium w-fit">
@@ -1058,8 +1182,17 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   className="ms-pop-in p-3 rounded-xl bg-field/60 border border-line-soft hover:bg-field text-[14px] text-ink flex flex-col gap-2"
                   style={{ animationDelay: `${i * 60}ms` }}
                 >
-                  <div className="flex flex-col gap-0.5">
+                  <div className="flex flex-col gap-0.5 min-w-0">
                     <span className="line-clamp-2 text-ink-2 font-medium">{s.stem}</span>
+                    {s.options && s.options.length > 0 && (
+                      <ol className="m-0 mt-1 p-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 text-[13px] text-ink-2">
+                        {s.options.map((o) => (
+                          <li key={o.key} className={`min-w-0 truncate ${o.key === s.claimedAnswer ? 'text-ok font-semibold' : ''}`}>
+                            <span className="font-mono text-ink-3 mr-1">{o.key})</span>{o.text}
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                     <span className="text-[12px] text-ink-3">
                       {[s.discipline, s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış', s.claimedAnswer ? `Cevap: ${s.claimedAnswer}` : ''].filter(Boolean).join(' · ')}
                     </span>
@@ -1072,7 +1205,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
                     >
                       <FileText className="w-3.5 h-3.5" />
-                      Soruyu Aktar
+                      {s.options && s.options.length ? 'Kök + şıkları aktar' : 'Soruyu aktar'}
                     </button>
                     <button
                       type="button"
@@ -1089,45 +1222,27 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </ul>
           )}
 
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-[13px] text-ink-3">
-            <select
-              value={discipline}
-              onChange={(e) => {
-                setDiscipline(e.target.value);
-                setUserManualDiscipline(true);
-              }}
-              aria-label="Ders"
-              className="appearance-none bg-transparent border-0 outline-0 cursor-pointer max-w-[220px] truncate hover:text-ink [field-sizing:content]"
-            >
-              {disciplines.map((d) => (
-                <option key={d} value={d}>{d}</option>
-              ))}
-            </select>
-            <span aria-hidden="true">·</span>
-            <input
-              type="text"
-              inputMode="numeric"
-              value={questionNumber}
-              onChange={(e) => {
-                setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3));
-                setUserManualNumber(true);
-              }}
-              placeholder="numara?"
-              aria-label="Soru numarası (bilmiyorsan boş bırak)"
-              className="w-[70px] bg-transparent border-0 outline-0 placeholder:text-ink-3 text-ink"
-            />
+          <div className="flex items-center gap-2 text-[13px] text-ink-3">
+            <span className="flex-1" />
+            {/* Şık ekle: gönder düğmesinin solunda küçük baloncuk */}
             <button
               type="button"
               onClick={() => setMode(mode === 'option' ? 'stem' : 'option')}
-              className="h-8 px-3 rounded-full hover:bg-field text-accent font-semibold cursor-pointer"
+              aria-pressed={mode === 'option'}
+              className={`ms-opt-bubble ${mode === 'option' || filledOptionCount > 0 ? 'is-on' : ''}`}
             >
-              {mode === 'option' ? 'Soru köküne dön' : claimedAnswer ? `Şıklar · ${claimedAnswer}` : 'Şık ekle'}
+              {mode === 'option' ? (
+                <>Köke dön</>
+              ) : filledOptionCount > 0 ? (
+                <>{filledOptionCount} şık{claimedAnswer ? ` · ${claimedAnswer}` : ''}</>
+              ) : (
+                <><Plus className="w-3.5 h-3.5" strokeWidth={2.4} /> Şık</>
+              )}
             </button>
-            <span className="flex-1" />
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-[15px] sm:text-[14.5px] font-semibold cursor-pointer disabled:opacity-60 transition-colors"
+              className="h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-[15px] sm:text-[14.5px] font-semibold cursor-pointer disabled:opacity-60 transition-colors shrink-0"
             >
               {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
             </button>
@@ -1162,7 +1277,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-4 lg:gap-5 md:pt-2">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-4 lg:gap-5 md:pt-2">
       <div className="flex flex-col gap-3 min-w-0">
       {/* Başlık + kurul (tasarım: sola hizalı, kompakt) */}
       <div className="flex flex-wrap items-end justify-between gap-x-4 gap-y-2">

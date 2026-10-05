@@ -38,6 +38,7 @@ import { useTheme } from '../utils/theme';
 import { useUiVersion } from '../utils/uiVersion';
 import { Committee } from '../types';
 import { AppUser } from '../services/auth';
+import { SearchPalette } from './search/SearchPalette';
 import { AppRoute, pathFor, linkClick } from '../router';
 
 export type AppTab = AppRoute;
@@ -61,7 +62,7 @@ interface HeaderProps {
   targetCount: number;
   // Search
   searchQuery?: string;
-  onSearch?: (query: string) => void;
+  onSearch?: (query: string, focusId?: string) => void;
   // Auth & Drive Props
   currentUser: AppUser | null;
   isAdmin: boolean;
@@ -306,10 +307,10 @@ export const Header: React.FC<HeaderProps> = ({
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const t = e.target as HTMLElement;
-      if (e.key !== '/' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) || t.isContentEditable) return;
+      const isK = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k';
+      if (!isK && (e.key !== '/' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) || t.isContentEditable)) return;
       e.preventDefault();
       setMobileSearchOpen(true);
-      searchRef.current?.focus();
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
@@ -366,27 +367,19 @@ export const Header: React.FC<HeaderProps> = ({
   );
 
   return (
-    <header className="bg-white/85 backdrop-blur-md backdrop-saturate-150 border-b border-line sticky top-0 z-30 print:hidden">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-14 flex items-center gap-2 sm:gap-3">
-        {/* Phones: logo. Tablet/desktop: the rail carries the logo and menu, so show the page title */}
+    <header className="bg-white md:bg-canvas border-b border-line sticky top-0 z-30 print:hidden">
+      <div className="px-4 sm:px-6 lg:px-8 h-14 flex items-center gap-2 sm:gap-3">
+        {/* Telefon: logo. Tablet/masaüstü: logo ve menü kenar çubuğunda; burada sayfa başlığı */}
         <a
           href={pathFor('quick_add')}
           onClick={linkClick(() => setActiveTab('quick_add'))}
-          className="flex items-center gap-2 cursor-pointer shrink-0 lg:mr-3"
-          aria-label="MedSoru ana sayfa"
+          className="md:hidden flex items-center gap-2 cursor-pointer shrink-0"
+          aria-label="MeDSor ana sayfa"
         >
           <BrandMark size={28} />
-          <span className="font-display font-bold text-[18px] tracking-[-0.02em] text-ink">MedSoru</span>
+          <span className="font-display font-bold text-[18px] tracking-[-0.02em] text-ink">Me<span className="text-accent">DS</span>or</span>
         </a>
-        {/* Tablet: ray menü solda, burada sayfa başlığı. Masaüstü: tasarımdaki gibi üstte yazılı menü */}
-        <PriorityNav
-          items={isV3 ? V3_ORDER.map((id) => NAV.find((n) => n.id === id)!).filter(Boolean) : NAV.filter((n) => n.id !== 'matrix')}
-          max={isV3 ? 4 : NAV_PRIMARY}
-          active={activeTab}
-          onSelect={setActiveTab}
-        />
-
-        <span className="flex-1 lg:hidden" aria-hidden="true" />
+        <span className="flex-1" aria-hidden="true" />
 
         <button
           type="button"
@@ -403,7 +396,7 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={() => setMobileSearchOpen((v) => !v)}
           aria-label="Ara"
           aria-expanded={mobileSearchOpen}
-          title="Ara  ( / )"
+          title="Ara  ( / ya da Ctrl+K )"
           className={`w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer shrink-0 transition-colors ${
             mobileSearchOpen ? 'bg-accent-soft text-accent' : 'bg-canvas text-ink hover:bg-line-soft'
           }`}
@@ -461,12 +454,7 @@ export const Header: React.FC<HeaderProps> = ({
               <MenuItem icon={SquarePen} label="Soru katkısı yap" tone="accent" onClick={onOpenContributeModal} />
 
               <MenuItem icon={FileDown} label="PDF indir" onClick={onOpenPdfModal} />
-              <MenuItem
-                icon={Palette}
-                label={ui === 'v4' ? 'Tasarım: v4 sade okuma' : ui === 'v3' ? 'Tasarım: v3 minimal' : 'Tasarım: v2 kompakt'}
-                hint={ui === 'v4' ? 'v3’e geç' : ui === 'v3' ? 'v2’ye geç' : 'v4’e geç'}
-                onClick={toggleUi}
-              />
+
 
               {isAdmin && (
                 <>
@@ -510,25 +498,11 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {mobileSearchOpen && (
-        <form onSubmit={submitSearch} role="search" className="border-t border-line-soft">
-          <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-2.5 sm:py-3">
-            <div className="flex items-center gap-2 h-11 px-3 border border-line-2 rounded-xl bg-field focus-within:border-accent">
-              <Search className="w-4 h-4 text-ink-2 shrink-0" />
-              <input
-                ref={searchRef}
-                autoFocus
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={(e) => e.key === 'Escape' && setMobileSearchOpen(false)}
-                placeholder="Soru, konu, ders ara"
-                aria-label="Ara"
-                className="border-0 outline-0 bg-transparent text-[16px] sm:text-[15px] flex-1 min-w-0 placeholder:text-slate-600"
-              />
-              <span className="hidden sm:inline text-[12px] text-ink-3 whitespace-nowrap">Enter ile ara · Esc ile kapat</span>
-            </div>
-          </div>
-        </form>
+        <SearchPalette
+          initialQuery={query}
+          onClose={() => setMobileSearchOpen(false)}
+          onOpenResults={(q, focusId) => { setQuery(q); onSearch?.(q, focusId); }}
+        />
       )}
     </header>
   );

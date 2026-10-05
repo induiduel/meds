@@ -24,12 +24,14 @@ interface SelfTestViewProps {
   loading: boolean;
   initialCommitteeId?: string;
   onProgressChange?: () => void;
+  /** Her artışında hızlı test başlar: tüm bankadan (arşiv + havuz) karışık 20 soru */
+  quickStartNonce?: number;
 }
 
 type Phase = 'setup' | 'running' | 'result';
 type TimeMode = 'none' | '60' | '90';
 
-export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, loading, initialCommitteeId, onProgressChange }) => {
+export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, loading, initialCommitteeId, onProgressChange, quickStartNonce = 0 }) => {
   const [phase, setPhase] = useState<Phase>('setup');
   const [history, setHistory] = useState(getTestHistory);
 
@@ -80,8 +82,22 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
 
   const toggleDiscipline = (d: string) => setPicked((p) => (p.includes(d) ? p.filter((x) => x !== d) : [...p, d]));
 
-  const start = () => {
-    const chosen = shuffle(pool).slice(0, count);
+  const start = () => runTest(shuffle(pool).slice(0, count));
+
+  // Hızlı test: seçili kurulda en az 10 soru varsa oradan, yoksa tüm bankadan; daha önce
+  // çözülmemiş sorular önce gelir ki her seferinde aynı sorular çıkmasın
+  useEffect(() => {
+    if (!quickStartNonce || bank.length === 0) return;
+    const inCommittee = bank.filter((q) => q.committeeId === initialCommitteeId);
+    const source = inCommittee.length >= 10 ? inCommittee : bank;
+    const progress = getProgress();
+    const fresh = shuffle(source.filter((q) => !progress[q.id]));
+    const seen = shuffle(source.filter((q) => progress[q.id]));
+    runTest([...fresh, ...seen].slice(0, 20));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quickStartNonce, bank.length]);
+
+  function runTest(chosen: StudyQuestion[]) {
     if (chosen.length === 0) return;
     setItems(chosen);
     setAnswers({});
@@ -94,7 +110,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
     finishedRef.current = false;
     setPhase('running');
     window.scrollTo({ top: 0 });
-  };
+  }
 
   useEffect(() => {
     if (phase !== 'running') return;
@@ -421,7 +437,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                 <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-amber-600" />İşaretli</span>
               </span>
             </div>
-            <div className="grid grid-cols-8 sm:grid-cols-10 lg:grid-cols-6 gap-1.5 max-h-[50vh] overflow-y-auto">
+            <div className="grid grid-cols-8 sm:grid-cols-10 lg:grid-cols-6 gap-1.5 max-h-[50dvh] overflow-y-auto">
               {items.map((it, i) => {
                 const a = answers[it.id];
                 const isCur = i === cur;

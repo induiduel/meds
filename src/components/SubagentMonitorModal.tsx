@@ -186,10 +186,10 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
-      <div className="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[92vh] flex flex-col border border-slate-800 overflow-hidden">
+      <div className="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[92dvh] flex flex-col border border-slate-800 overflow-hidden">
         
         {/* Header */}
-        <div className="p-4 sm:p-5 bg-gradient-to-r from-slate-950 via-slate-900 to-indigo-950 border-b border-slate-800 flex items-center justify-between shrink-0">
+        <div className="p-4 sm:p-5 bg-ink-surface border-b border-slate-800 flex items-center justify-between shrink-0">
           <div className="space-y-1">
             <div className="flex items-center gap-2.5">
               <span className="p-2 bg-indigo-500/20 text-indigo-400 rounded-xl border border-indigo-500/30">
@@ -198,7 +198,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
               <div>
                 <h2 className="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
                   <span>AI Subagent & Arkaplan Süreçleri İzleme Paneli</span>
-                  <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-extrabold ${
+                  <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-extrabold ${
                     isPcOnline ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
                   }`}>
                     <span className={`w-2 h-2 rounded-full ${isPcOnline ? 'bg-emerald-400 animate-ping' : 'bg-amber-400'}`} />
@@ -286,7 +286,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
           {actionFeedback && (
             <div className="p-3 bg-indigo-950/60 border border-indigo-500/40 rounded-xl text-xs text-indigo-200 flex items-center justify-between">
               <span>{actionFeedback}</span>
-              <button onClick={() => setActionFeedback(null)} className="text-indigo-400 hover:text-white">✕</button>
+              <button onClick={() => setActionFeedback(null)} className="text-indigo-400 hover:text-white"></button>
             </div>
           )}
 
@@ -371,7 +371,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                       <div>
                         <h4 className="text-sm font-bold text-white flex items-center gap-2">
                           <span>Subagent 1: Yapay Zeka Redaksiyon & Kalite Denetim Subagenti</span>
-                          <span className="text-[10px] bg-teal-500/20 text-teal-300 font-extrabold px-2 py-0.5 rounded-full border border-teal-500/30">
+                          <span className="text-[11px] bg-teal-500/20 text-teal-300 font-extrabold px-2 py-0.5 rounded-full border border-teal-500/30">
                             background-ai-redactor.mjs
                           </span>
                         </h4>
@@ -402,19 +402,19 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
 
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-2 border-t border-slate-700/50">
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">Geçerli Soru:</span>
+                      <span className="text-[11px] text-slate-400 block">Geçerli Soru:</span>
                       <span className="text-sm font-bold text-emerald-400">{telemetry?.validQuestionsCount || 1342}</span>
                     </div>
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">Muallak / Eksik:</span>
+                      <span className="text-[11px] text-slate-400 block">Muallak / Eksik:</span>
                       <span className="text-sm font-bold text-amber-400">{telemetry?.suspectQuestionsCount || 23}</span>
                     </div>
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">%90+ Öğrenci Kilitli:</span>
+                      <span className="text-[11px] text-slate-400 block">%90+ Öğrenci Kilitli:</span>
                       <span className="text-sm font-bold text-indigo-400">{telemetry?.lockedQuestionsCount || 12}</span>
                     </div>
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">Çalışma Frekansı:</span>
+                      <span className="text-[11px] text-slate-400 block">Çalışma Frekansı:</span>
                       <span className="text-sm font-bold text-slate-200">Her 5 Dakikada 1</span>
                     </div>
                   </div>
@@ -430,7 +430,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                       <div>
                         <h4 className="text-sm font-bold text-white flex items-center gap-2">
                           <span>Subagent 2: Yerel Dosya & Google Drive Otomasyon Subagenti</span>
-                          <span className="text-[10px] bg-blue-500/20 text-blue-300 font-extrabold px-2 py-0.5 rounded-full border border-blue-500/30">
+                          <span className="text-[11px] bg-blue-500/20 text-blue-300 font-extrabold px-2 py-0.5 rounded-full border border-blue-500/30">
                             meds-local-sync.mjs
                           </span>
                         </h4>
@@ -461,19 +461,19 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
 
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-2 border-t border-slate-700/50">
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">Kurul Notları:</span>
+                      <span className="text-[11px] text-slate-400 block">Kurul Notları:</span>
                       <span className="text-sm font-bold text-blue-300">357 Belge (.txt)</span>
                     </div>
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">Yerel Soru Slaytları:</span>
+                      <span className="text-[11px] text-slate-400 block">Yerel Soru Slaytları:</span>
                       <span className="text-sm font-bold text-blue-300">8 Dosya (1,375 Soru)</span>
                     </div>
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">OCR Motoru:</span>
+                      <span className="text-[11px] text-slate-400 block">OCR Motoru:</span>
                       <span className="text-sm font-bold text-emerald-400">Yerel CPU (Birebir)</span>
                     </div>
                     <div className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
-                      <span className="text-[10px] text-slate-400 block">Zamanlama Aralığı:</span>
+                      <span className="text-[11px] text-slate-400 block">Zamanlama Aralığı:</span>
                       <span className="text-sm font-bold text-amber-300">16:00 - 18:00 (Otomatik)</span>
                     </div>
                   </div>
@@ -527,7 +527,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
             <div className="space-y-5">
               
               {/* Concept Banner */}
-              <div className="p-4 sm:p-5 bg-gradient-to-r from-amber-950/40 via-slate-900 to-indigo-950/40 border border-amber-500/30 rounded-2xl space-y-2">
+              <div className="p-4 sm:p-5 bg-ink-surface border border-amber-500/30 rounded-2xl space-y-2">
                 <div className="flex items-center gap-2 text-amber-300 font-bold text-sm">
                   <ShieldCheck className="w-5 h-5 text-amber-400" />
                   <span>Hibrit Mimari: Ücretsiz Yerel PC Sunucusu & Firebase Kotasız Çalışma</span>
@@ -547,7 +547,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                       <Cloud className="w-4 h-4 text-blue-400" />
                       Bulut: Firebase Firestore
                     </span>
-                    <span className="text-[10px] bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    <span className="text-[11px] bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
                       Çevrimiçi
                     </span>
                   </div>
@@ -565,7 +565,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                       <HardDrive className="w-4 h-4 text-indigo-400" />
                       Yerel PC Sunucusu & Veritabanı
                     </span>
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                    <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full border ${
                       isPcOnline ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-slate-700 text-slate-400 border-slate-600'
                     }`}>
                       {isPcOnline ? 'Port 3000 Aktif' : 'Arka Plan Servisi Bekleniyor'}
@@ -629,7 +629,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                 {logs.map((log) => (
                   <div key={log.id} className="flex items-start gap-2 leading-relaxed">
                     <span className="text-slate-500 shrink-0">[{log.time}]</span>
-                    <span className={`font-bold px-1.5 py-0.2 rounded text-[10px] shrink-0 ${
+                    <span className={`font-bold px-1.5 py-0.2 rounded text-[11px] shrink-0 ${
                       log.type === 'success' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
                       log.type === 'warn' ? 'bg-amber-950 text-amber-400 border border-amber-800' :
                       'bg-slate-800 text-slate-300'

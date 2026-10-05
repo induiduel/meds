@@ -1418,3 +1418,98 @@ export function initLocalRagEngine(): void {
       watcher.unref(); // Allows node process to exit naturally when tasks complete
   }
 }
+
+/**
+ * Kimlikle arama (ör. "q-kurul4birc__km_s_-3", "note-2b4764e6f3"): chunk id ve documentId,
+ * harf/rakam dışındaki karakterler yok sayılarak karşılaştırılır; tam eşleşme önce gelir.
+ * BM25 sıralamasına dokunmaz.
+ */
+export function findChunksById(term: string, limit = 50): RagChunk[] {
+  if (memoryChunks.size === 0) loadLocalChunksFromFile();
+  const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
+  const needle = norm(term);
+  if (needle.length < 4) return [];
+  const exact: RagChunk[] = [];
+  const partial: RagChunk[] = [];
+  for (const c of memoryChunks.values()) {
+    const doc = norm(c.documentId || '');
+    const id = norm(c.id || '');
+    if (doc === needle || id === needle) exact.push(c);
+    else if (doc.includes(needle) || id.includes(needle)) partial.push(c);
+    if (exact.length >= limit) break;
+  }
+  return [...exact, ...partial].slice(0, limit);
+}
+
+// ------------------------------------------------------------------
+// "Bunu mu kastettiniz?": indeks sözlüğünden yazım önerisi.
+// Sözlük katlanmış (aksansız) tutulur; öneri gösterilirken her terimin
+// derlemde en sık geçen Türkçe yazımı kullanılır (tumoru → tümörü).
+// ------------------------------------------------------------------
+let surfaceForms: Map<string, string> | null = null;
+
+function buildSurfaceForms(): Map<string, string> {
+  const counts = new Map<string, Map<string, number>>();
+  for (const c of memoryChunks.values()) {
+    const words = c.content.match(/[\p{L}]{4,}/gu);
+    if (!words) continue;
+    for (const raw of words) {
+      const w = raw.toLocaleLowerCase('tr');
+      const f = foldTurkish(w);
+      let m = counts.get(f);
+      if (!m) { m = new Map(); counts.set(f, m); }
+      m.set(w, (m.get(w) || 0) + 1);
+    }
+  }
+  const out = new Map<string, string>();
+  for (const [f, m] of counts) {
+    let best = '';
+    let n = 0;
+    for (const [w, k] of m) if (k > n) { best = w; n = k; }
+    out.set(f, best);
+  }
+  return out;
+}
+
+/** Sunucu açıldıktan sonra arka planda yüzey biçimlerini hazırlar (ilk öneri beklemesin) */
+export function warmSpellIndex(): void {
+  setTimeout(() => { try { suggestSpelling('ısınma'); } catch { /* yok say */ } }, 15000);
+}
+
+export interface SpellSuggestion {
+  /** Düzeltilmiş tam metin; değişiklik yoksa null */
+  text: string | null;
+  changes: Array<{ from: string; to: string }>;
+}
+
+export function suggestSpelling(text: string): SpellSuggestion {
+  if (memoryChunks.size === 0) loadLocalChunksFromFile();
+  if (!surfaceForms) surfaceForms = buildSurfaceForms();
+  const changes: Array<{ from: string; to: string }> = [];
+  const df = (t: string) => invertedIndex.get(t)?.size || 0;
+  const prefix = (x: string, y: string) => { let i = 0; while (i < x.length && i < y.length && x[i] === y[i]) i++; return i; };
+  const fixed = text.replace(/[\p{L}]{4,}/gu, (word) => {
+    const f = foldTurkish(word);
+    if (FOLDED_STOPWORDS.has(f)) return word;
+    const own = df(f);
+    let target = f;
+    // Bilinmeyen ya da derlemde nadir (muhtemelen yazım hatası) sözcük: yakın ve çok daha yaygın terim ara
+    if (own < 20) {
+      const best = fuzzyVocab.findMatches(f, 2)
+        .filter((h) => h.term !== f && h.dist <= (f.length >= 7 ? 2 : 1) && df(h.term) >= Math.max(3, own * 25))
+        .sort((x, y) => x.dist - y.dist || prefix(f, y.term) - prefix(f, x.term) || df(y.term) - df(x.term))[0];
+      if (best) target = best.term;
+      else if (own === 0) return word;
+    }
+    // Türkçe karakter geri kazanımı: "tumoru" → "tümörü" (yalnızca kullanıcı Türkçe harf yazmadıysa)
+    let to = surfaceForms!.get(target) || target;
+    if (target === f && /[çğıöşü]/i.test(word)) return word;
+    if (word[0] === word[0].toLocaleUpperCase('tr') && word[0] !== word[0].toLocaleLowerCase('tr')) {
+      to = to.charAt(0).toLocaleUpperCase('tr') + to.slice(1);
+    }
+    if (to === word || to.toLocaleLowerCase('tr') === word.toLocaleLowerCase('tr')) return word;
+    changes.push({ from: word, to });
+    return to;
+  });
+  return { text: changes.length ? fixed : null, changes };
+}

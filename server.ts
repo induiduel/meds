@@ -33,6 +33,7 @@ import {
 
 import {
   initLocalRagEngine,
+  warmSpellIndex,
   searchLocalRag,
   runAutoChunking,
   recordAiInteraction,
@@ -883,6 +884,7 @@ app.get('/api/past-exams', (req, res) => {
     if (query && String(query).trim()) {
       const qLower = String(query).toLowerCase().trim();
       filtered = filtered.filter(q =>
+        String(q.id || '').toLowerCase() === qLower ||
         q.stem?.toLowerCase().includes(qLower) ||
         q.rawQuestion?.stem?.toLowerCase().includes(qLower) ||
         q.reconstruction?.stem?.toLowerCase().includes(qLower) ||
@@ -1138,6 +1140,23 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
     res.json({ success: true, question: list[idx] });
   } catch (err: any) {
     res.status(500).json({ error: 'Çıkmış soru güncellenemedi: ' + err.message });
+  }
+});
+
+// Şikâyet edilen çıkmış soruyu kalıcı sil (yalnızca yönetici). Yerel kayıt + Supabase satırı.
+app.delete('/api/past-exams/:id', requireAdmin, async (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const idx = list.findIndex((item) => item.id === req.params.id);
+    if (idx === -1) return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    const [removed] = list.splice(idx, 1);
+    savePastQuestionsDb(list);
+    for (const client of [localSupabase, cloudSupabase]) {
+      try { if (client) await client.from('past_questions').delete().eq('id', removed.id); } catch (_) {}
+    }
+    res.json({ success: true, id: removed.id });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Çıkmış soru silinemedi: ' + err.message });
   }
 });
 
@@ -2702,7 +2721,7 @@ app.post('/api/ai/general-chat', async (req, res) => {
       apiKey,
       groqApiKey,
       museSparkApiKey,
-      allowCloudFallback = false, // Yerel GPU seçiliyse otomatik buluta sorma ENGELİ (Kullanıcı onayı zorunludur)
+      allowCloudFallback = true, // Yerel GPU yanıt vermezse otomatik groq -> muse -> gemini basamağına geç
       timeoutMs
     } = req.body;
 
@@ -4920,6 +4939,33 @@ app.get('/api/rag/status', (req, res) => {
 });
 
 // Ultra-Fast Unified Search API (< 5ms Local In-Memory BM25 + Slide Chunks + Questions)
+// "Bunu mu kastettiniz?": ?q=metin → { text, changes }
+app.get('/api/search/spell', async (req, res) => {
+  try {
+    const { suggestSpelling } = await import('./src/services/localRagEngine.ts');
+    res.json({ success: true, ...suggestSpelling(String(req.query.q || '').slice(0, 2000)) });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Genel arama: tüm veri setlerinde BM25, sayfalı. ?q=&types=a,b&offset=&limit=
+app.get('/api/search/all', async (req, res) => {
+  try {
+    const { searchEverything } = await import('./src/services/ragService.ts');
+    const types = String(req.query.types || '').split(',').map((t) => t.trim()).filter(Boolean) as any[];
+    const result = await searchEverything(String(req.query.q || ''), {
+      types,
+      committeeId: req.query.committeeId && req.query.committeeId !== 'all' ? String(req.query.committeeId) : undefined,
+      offset: parseInt(String(req.query.offset || '0'), 10) || 0,
+      limit: parseInt(String(req.query.limit || '5'), 10) || 5,
+    });
+    res.json({ success: true, ...result });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: 'Arama sırasında hata oluştu: ' + err.message });
+  }
+});
+
 app.get('/api/search', async (req, res) => {
   try {
     const { q, query, committeeId, discipline, limit } = req.query;
@@ -5582,6 +5628,7 @@ async function startServer() {
     startSupabaseCommandPoller();
     // Initialize Local & Hybrid RAG Engine (49,000+ medical chunks)
     initLocalRagEngine();
+    warmSpellIndex();
     // Initialize DeepSeek Data Watcher
     initDeepSeekWatcher(() => {
       runAutoChunking({ syncToCloud: false }).catch(() => {});

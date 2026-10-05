@@ -253,7 +253,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
   const TARGET_DRIVE_FOLDER_URL = `https://drive.google.com/drive/folders/${TARGET_DRIVE_FOLDER_ID}`;
 
   return (
-    <div className="bg-gradient-to-br from-teal-50/90 via-cyan-50/70 to-white border border-teal-200/90 rounded-2xl p-4 sm:p-6 shadow-sm space-y-5 text-slate-800">
+    <div className="bg-canvas border border-teal-200/90 rounded-2xl p-4 sm:p-6 shadow-sm space-y-5 text-slate-800">
       {/* 1. Header with Status Badges */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-teal-200/80">
         <div className="flex items-center gap-3">
@@ -265,16 +265,16 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
               <h4 className="font-bold text-sm sm:text-base text-slate-900">
                 Google Drive Dosya Güncelleme & Manuel Senkronizasyon Ayarları
               </h4>
-              <span className="bg-teal-700 text-white font-bold text-[10px] px-2 py-0.5 rounded-full">
+              <span className="bg-teal-700 text-white font-bold text-[11px] px-2 py-0.5 rounded-full">
                 Yönetici Ayarı
               </span>
               {checkResult?.hasUpdates ? (
-                <span className="bg-amber-100 text-amber-900 border border-amber-300 font-bold text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1 animate-pulse">
+                <span className="bg-amber-100 text-amber-900 border border-amber-300 font-bold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1 animate-pulse">
                   <Sparkles className="w-3 h-3 text-amber-600" />
                   Drive'da {checkResult.newCount} Yeni Dosya Var!
                 </span>
               ) : checkResult ? (
-                <span className="bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                <span className="bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
                   <Check className="w-3 h-3 text-emerald-600" />
                   Drive İle %100 Güncel
                 </span>
@@ -298,30 +298,30 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
       {/* 2. Overview Stats & Last Run */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
         <div className="bg-white/80 border border-teal-100 p-3 rounded-xl space-y-1 shadow-2xs">
-          <span className="text-[10px] font-bold text-slate-500 block uppercase tracking-wider">Son Drive Denetimi:</span>
+          <span className="text-[11px] font-bold text-slate-500 block uppercase tracking-wider">Son Drive Denetimi:</span>
           <div className="font-bold text-slate-800 flex items-center gap-1.5">
             <Search className="w-3.5 h-3.5 text-teal-600 shrink-0" />
             <span>{settings.lastCheckedAt ? formatDateTime(settings.lastCheckedAt) : 'Henüz yapılmadı'}</span>
           </div>
-          <span className="text-[10px] text-slate-500 block">
+          <span className="text-[11px] text-slate-500 block">
             {checkResult ? `${checkResult.totalScanned} dosya tarandı (${checkResult.newCount} yeni)` : 'Durum tespiti için denetleyin'}
           </span>
         </div>
 
         <div className="bg-white/80 border border-teal-100 p-3 rounded-xl space-y-1 shadow-2xs">
-          <span className="text-[10px] font-bold text-slate-500 block uppercase tracking-wider">Son Senkronizasyon:</span>
+          <span className="text-[11px] font-bold text-slate-500 block uppercase tracking-wider">Son Senkronizasyon:</span>
           <div className="font-bold text-slate-800 flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 text-teal-600 shrink-0" />
             <span>{settings.lastSyncedAt ? formatDateTime(settings.lastSyncedAt) : 'Henüz senkronize edilmedi'}</span>
           </div>
-          <span className="text-[10px] text-slate-500 block truncate" title={settings.lastSyncedSummary}>
+          <span className="text-[11px] text-slate-500 block truncate" title={settings.lastSyncedSummary}>
             {settings.lastSyncedSummary || 'Geçmiş kayıt bulunamadı'}
           </span>
         </div>
 
         <div className="bg-white/80 border border-teal-100 p-3 rounded-xl space-y-1 shadow-2xs flex flex-col justify-between">
           <div>
-            <span className="text-[10px] font-bold text-slate-500 block uppercase tracking-wider">Hedef Google Drive Klasörü:</span>
+            <span className="text-[11px] font-bold text-slate-500 block uppercase tracking-wider">Hedef Google Drive Klasörü:</span>
             <div className="font-bold text-teal-900 truncate">
               {settings.preferredScope === 'custom' && settings.customFolderId ? settings.customFolderId : 'Kurul 1-6 & Dönem 3 Çıkmışlar'}
             </div>
@@ -381,7 +381,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
               <option value="exams">📝 Yalnızca Çıkmış Sorular & Arşiv Sınavları</option>
               <option value="custom">🔗 Özel Google Drive Klasörü (ID veya Bağlantı)</option>
             </select>
-            <p className="text-[10px] text-slate-500">
+            <p className="text-[11px] text-slate-500">
               Hangi Drive klasörlerindeki güncellemelerin aranacağını belirler.
             </p>
           </div>
@@ -403,7 +403,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
               <option value="15m">⚡ Her 15 Dakikada Bir (Sınav Haftası Yoğun Mod)</option>
               <option value="manual">🛑 Yalnızca Manuel (Ben Butona Bastığımda)</option>
             </select>
-            <p className="text-[10px] text-slate-500">
+            <p className="text-[11px] text-slate-500">
               Sistem arka planda çalışırken Drive'ı hangi periyotta denetleyecek.
             </p>
           </div>
@@ -428,7 +428,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
                 placeholder="Örn: 1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W veya https://drive.google.com/drive/folders/..."
                 className="w-full p-2.5 rounded-xl bg-slate-50 border border-slate-300 font-mono text-xs focus:border-teal-500 focus:bg-white outline-none transition-all"
               />
-              <p className="text-[10px] text-slate-500">
+              <p className="text-[11px] text-slate-500">
                 Google Drive klasörünüzün adresindeki <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">/folders/ID</code> kısmını veya doğrudan URL'yi yapıştırabilirsiniz.
               </p>
             </div>
@@ -488,7 +488,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
             type="button"
             onClick={() => handleTriggerSync(forceReSync)}
             disabled={isSyncing || isChecking}
-            className="bg-gradient-to-r from-teal-700 to-emerald-700 hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-black px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-md cursor-pointer transition-all active:scale-95"
+            className="bg-accent hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-black px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-md cursor-pointer transition-all active:scale-95"
             title="Tüm güncellenen dosyaları indirir, sayfa sayfa metne döker ve soru havuzuna işler"
           >
             <FolderSync className={`w-4 h-4 ${isSyncing ? 'animate-spin' : ''}`} />
@@ -541,12 +541,12 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
                       </span>
                     </div>
                     <div className="flex items-center gap-1.5 shrink-0">
-                      <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
+                      <span className={`text-[11px] font-bold px-1.5 py-0.5 rounded ${
                         file.type === 'exam' ? 'bg-indigo-100 text-indigo-800' : 'bg-emerald-100 text-emerald-800'
                       }`}>
                         {file.type === 'exam' ? 'Çıkmış Sınav' : 'Ders Slaytı'}
                       </span>
-                      <span className="text-[9px] font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">
+                      <span className="text-[11px] font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">
                         {file.status}
                       </span>
                     </div>
@@ -605,7 +605,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
                 Drive Senkronizasyon Konsolu {activeJobId ? `(Görev ID: ${activeJobId})` : ''}
               </span>
               {isSyncing && (
-                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
                   Çalışıyor
                 </span>
@@ -613,7 +613,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
             </div>
 
             <div className="flex items-center gap-2">
-              <label className="text-[10px] text-slate-400 flex items-center gap-1 cursor-pointer">
+              <label className="text-[11px] text-slate-400 flex items-center gap-1 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={autoScroll}

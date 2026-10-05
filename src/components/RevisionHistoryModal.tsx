@@ -29,11 +29,11 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
   return (
     <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
       <div 
-        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden relative"
+        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 p-5 text-white flex items-center justify-between shrink-0">
+        <div className="bg-ink-surface p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-xl bg-white/10 text-teal-300">
               <History className="w-5 h-5" />
@@ -122,7 +122,7 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
                   {/* Soru Kökü */}
                   {rev.stem && (
                     <div className="mt-3">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
                         Bu Versiyondaki Soru Metni:
                       </span>
                       <p className="text-xs text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100 leading-relaxed font-sans whitespace-pre-wrap">
@@ -134,7 +134,7 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
                   {/* Options if recorded */}
                   {rev.options && rev.options.length > 0 && (
                     <div className="mt-2.5 space-y-1">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
                         Şıklar:
                       </span>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-1">

@@ -50,7 +50,7 @@ import { PageHeader } from '../ui/PageHeader';
 import { useUiVersion } from '../../utils/uiVersion';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
 import { getSlidePdfLocation, SlidePdfLocation } from '../../services/slidePdfMappingService';
-import interactiveDecksData from '../../data/interactive_learning_decks.json';
+import { DECK_CATALOG, loadDeck, type DeckCatalogEntry } from '../../data/deckStore';
 import {
   GlossaryProvider,
   RenderWithGlossaryTerms,
@@ -263,32 +263,32 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           );
         }
 
-        // Callout (> veya 💡 veya ⚠️ veya 🔴 veya 🚨)
+        // Callout (> veya veya veya veya )
         if (
           line.startsWith('> ') ||
-          line.startsWith('💡 ') ||
-          line.startsWith('⚠️ ') ||
-          line.startsWith('🔴 ') ||
-          line.startsWith('🚨 ')
+          line.startsWith('') ||
+          line.startsWith('') ||
+          line.startsWith('') ||
+          line.startsWith('')
         ) {
           const isRed =
-            line.startsWith('🔴') ||
-            line.startsWith('🚨') ||
-            line.startsWith('⚠️') ||
+            line.startsWith('') ||
+            line.startsWith('') ||
+            line.startsWith('') ||
             /(?:ölümcül|asla|acil|hayati|kritik|kontrendike|sınav tuzağı)/i.test(line);
 
-          const icon = line.startsWith('🚨')
-            ? '🚨'
-            : line.startsWith('🔴')
-              ? '🔴'
-              : line.startsWith('⚠️')
-                ? '⚠️'
+          const icon = line.startsWith('')
+            ? ''
+            : line.startsWith('')
+              ? ''
+              : line.startsWith('')
+                ? ''
                 : isRed
-                  ? '🔴'
-                  : '💡';
+                  ? ''
+                  : '';
 
           const content = (line.startsWith('> ') ? line.slice(2) : line).replace(
-            /^\s*(💡|⚠️|🔴|🚨)\s*/u,
+            /^\s*(|||)\s*/u,
             ''
           );
 
@@ -335,7 +335,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
               key={idx}
               className="flex items-start gap-2.5 my-1 text-[12.5px] sm:text-[13px] text-ink-2 leading-[1.68]"
             >
-              <span className="shrink-0 w-4.5 h-4.5 rounded-full bg-accent-soft text-accent text-[10.5px] font-bold flex items-center justify-center mt-0.5 border border-accent/20 shadow-2xs">
+              <span className="shrink-0 w-4.5 h-4.5 rounded-full bg-accent-soft text-accent text-[11.5px] font-bold flex items-center justify-center mt-0.5 border border-accent/20 shadow-2xs">
                 {numMatch[1]}
               </span>
               <div className="min-w-0 flex-1">
@@ -490,7 +490,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       >
         {/* FRONT FACE */}
         <div
-          className={`[grid-area:1/1] min-w-0 select-none rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-white via-white to-amber-50/20 shadow-xs hover:border-accent/40 transition-colors ${
+          className={`[grid-area:1/1] min-w-0 select-none rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-canvas shadow-xs hover:border-accent/40 transition-colors ${
             isFlipped ? 'pointer-events-none' : ''
           }`}
           style={{
@@ -516,7 +516,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
               <div className="mt-2.5">
                 {showHint ? (
                   <p className="m-0 text-[12px] text-amber-950 bg-amber-50 border border-amber-200 rounded-xl p-2.5 leading-relaxed shadow-2xs">
-                    💡 <strong>İpucu:</strong> {card.hint}
+                    <strong>İpucu:</strong> {card.hint}
                   </p>
                 ) : (
                   <button
@@ -527,7 +527,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
                     }}
                     className="text-[11.5px] font-semibold text-accent hover:text-accent-hover hover:underline cursor-pointer inline-flex items-center gap-1"
                   >
-                    <span>💡 İpucunu Göster</span>
+                    <span>İpucunu Göster</span>
                   </button>
                 )}
               </div>
@@ -538,7 +538,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 
         {/* BACK FACE */}
         <div
-          className={`[grid-area:1/1] min-w-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-emerald-50/95 via-teal-50/30 to-white border-emerald-300 shadow-sm ${
+          className={`[grid-area:1/1] min-w-0 rounded-2xl border p-4 sm:p-5 flex flex-col justify-between bg-canvas border-emerald-300 shadow-sm ${
             !isFlipped ? 'pointer-events-none' : ''
           }`}
           style={{
@@ -647,10 +647,8 @@ const ScrollRow: React.FC<{ label: string; children: React.ReactNode }> = ({ lab
 };
 
 export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal }) => {
-  const allDecks = useMemo(() => {
-    const raw = ((interactiveDecksData as any)?.default || interactiveDecksData) as InteractiveDeck[];
-    return (Array.isArray(raw) ? raw : []).filter((d) => d && Array.isArray(d.slides) && d.slides.length > 0);
-  }, []);
+  // Liste hafif katalogdan gelir; slaytlar yalnızca açılan deste için yüklenir (12 MB tek parça yerine)
+  const allDecks = DECK_CATALOG;
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
   const [playerViewMode, setPlayerViewMode] = useState<DeckViewMode>('interactive');
 
@@ -683,9 +681,21 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     });
   }, [allDecks, discipline, query]);
 
-  const activeDeck = (allDecks || []).find((d) => d.id === deckId) || null;
+  const [activeDeck, setActiveDeck] = useState<InteractiveDeck | null>(null);
+  const [deckLoading, setDeckLoading] = useState(false);
+  useEffect(() => {
+    if (!deckId) { setActiveDeck(null); return; }
+    let alive = true;
+    setDeckLoading(true);
+    loadDeck<InteractiveDeck>(deckId).then((d) => {
+      if (!alive) return;
+      setActiveDeck(d && Array.isArray(d.slides) && d.slides.length > 0 ? d : null);
+      setDeckLoading(false);
+    });
+    return () => { alive = false; };
+  }, [deckId]);
   const { isV3 } = useUiVersion();
-  const totalSlides = (allDecks || []).reduce((n, d) => n + (d.slides?.length || 0), 0);
+  const totalSlides = (allDecks || []).reduce((n, d) => n + (d.slideCount || 0), 0);
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
@@ -755,11 +765,11 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
           {visible.map((d) => {
             const pr = progress[d.id];
             const seen = pr?.seen?.length || 0;
-            const pct = Math.round((seen / d.slides.length) * 100);
-            const qCount = d.slides.reduce((n, s) => n + (s.relatedQuestions?.length || 0), 0);
-            const cardCount = d.slides.reduce((n, s) => n + (s.flashcards?.length || 0), 0);
+            const pct = Math.round((seen / d.slideCount) * 100);
+            const qCount = d.questionCount;
+            const cardCount = d.cardCount;
             const started = seen > 0;
-            const done = seen >= d.slides.length;
+            const done = seen >= d.slideCount;
             const group = disciplineGroup(d.discipline);
             return (
               <li key={d.id} className="min-w-0">
@@ -775,7 +785,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                   <span className="flex items-center gap-2 min-w-0 text-[12.5px] text-ink-3">
                     <span className="w-2 h-2 rounded-full shrink-0" style={{ background: groupDot(group) }} aria-hidden="true" />
                     <span className="truncate" title={d.discipline}>{group}</span>
-                    <span className="shrink-0 ml-auto font-mono text-[12px]">{d.slides.length} slayt</span>
+                    <span className="shrink-0 ml-auto font-mono text-[12px]">{d.slideCount} slayt</span>
                   </span>
                   <span className="text-[16.5px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2 min-h-[2.6em]">{d.title}</span>
                   <span className="flex flex-wrap gap-1.5">
@@ -795,7 +805,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
                   <span className="mt-auto pt-2.5 border-t border-line-soft flex items-center gap-3">
                     <span className="flex-1 min-w-0 flex flex-col gap-1">
                       <span className="text-[12px] text-ink-3">
-                        {done ? 'Tamamlandı' : started ? `${(pr?.last ?? 0) + 1} / ${d.slides.length} slayt` : 'Başlanmadı'}
+                        {done ? 'Tamamlandı' : started ? `${(pr?.last ?? 0) + 1} / ${d.slideCount} slayt` : 'Başlanmadı'}
                       </span>
                       <span className="h-[5px] rounded-full bg-line-soft overflow-hidden" aria-hidden="true">
                         <span className="block h-full bg-accent rounded-full" style={{ width: `${pct}%` }} />
@@ -832,7 +842,16 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         </ul>
       )}
 
-      {activeDeck && (
+      {deckId && deckLoading && !activeDeck && (
+        <div className="fixed inset-0 z-[60] bg-canvas flex items-center justify-center" role="status" aria-live="polite">
+          <span className="flex items-center gap-3 text-[15px] text-ink-2">
+            <span className="w-5 h-5 rounded-full border-2 border-accent border-t-transparent animate-spin" aria-hidden="true" />
+            Ders açılıyor…
+          </span>
+        </div>
+      )}
+
+      {activeDeck && activeDeck.id === deckId && (
         <DeckPlayer
           deck={activeDeck}
           initialViewMode={playerViewMode}
@@ -1114,7 +1133,7 @@ const DeckPlayer: React.FC<{
       role="dialog"
       aria-modal="true"
       aria-label={`${deck.title} sunumu`}
-      className={`ms-reader ${recall ? 'ms-recall' : ''} fixed inset-0 z-[60] h-[100dvh] w-full bg-canvas text-ink flex flex-col outline-none`}
+      className={`ms-reader ${recall ? 'ms-recall' : ''} fixed inset-0 z-[60] h-[var(--vvh,100dvh)] w-full bg-canvas text-ink flex flex-col outline-none`}
       onClickCapture={(e) => {
         if (!recall) return;
         const t = (e.target as HTMLElement).closest('.ms-slide strong, .ms-slide b');
@@ -1158,7 +1177,7 @@ const DeckPlayer: React.FC<{
         >
           <Search className="w-4 h-4 text-accent" />
           <span className="hidden xl:inline">Ara</span>
-          <kbd className="hidden lg:inline text-[10px] font-mono text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">Ctrl+K</kbd>
+          <kbd className="hidden lg:inline text-[11px] font-mono text-ink-3 bg-white px-1.5 py-0.5 rounded border border-line">Ctrl+K</kbd>
         </button>
 
         {/* Medical Glossary Dictionary trigger */}
@@ -1170,7 +1189,7 @@ const DeckPlayer: React.FC<{
         >
           <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
           <span className="hidden xl:inline">Sözlük</span>
-          <span className="hidden sm:inline text-[10.5px] font-bold bg-teal-500/10 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-full border border-teal-500/20">
+          <span className="hidden sm:inline text-[11.5px] font-bold bg-teal-500/10 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-full border border-teal-500/20">
             {glossaryList.length}
           </span>
         </button>
@@ -1686,7 +1705,7 @@ const GlobalTopicSearchModal: React.FC<{
   }, [deck, q]);
 
   return (
-    <div className="fixed inset-0 z-[70] bg-[rgba(14,26,38,0.5)] backdrop-blur-xs flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
+    <div className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.5)] backdrop-blur-xs flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
       <div className="w-full max-w-2xl bg-white border border-line rounded-2xl shadow-2xl flex flex-col max-h-[85dvh] overflow-hidden animate-in fade-in duration-200">
         {/* Modal Search Header */}
         <div className="p-3.5 sm:p-4 border-b border-line flex items-center gap-2.5">
@@ -1860,13 +1879,13 @@ export const EnhancedDifferentialTable: React.FC<{
   return (
     <div className={`rounded-xl border border-line overflow-hidden bg-white shadow-2xs ${compact ? 'mt-1' : 'mt-2.5'}`}>
       {/* Table Header Banner */}
-      <div className="px-3.5 py-2 bg-gradient-to-r from-canvas via-white to-canvas text-[12px] font-bold border-b border-line text-ink flex items-center justify-between gap-2">
+      <div className="px-3.5 py-2 bg-canvas text-[12px] font-bold border-b border-line text-ink flex items-center justify-between gap-2">
         <div className="flex items-center gap-2 min-w-0">
           <span className="w-2 h-2 rounded-full bg-accent shrink-0 shadow-2xs" />
           <span className="truncate">{table.title || 'Klinik & Patolojik Karşılaştırma Tablosu'}</span>
         </div>
         {isDiffDiagnosis && (
-          <span className="shrink-0 text-[10px] font-bold uppercase tracking-wider bg-accent-soft text-accent border border-accent/20 px-2 py-0.5 rounded-full shadow-2xs">
+          <span className="shrink-0 text-[11px] font-bold uppercase tracking-wider bg-accent-soft text-accent border border-accent/20 px-2 py-0.5 rounded-full shadow-2xs">
             Ayırıcı Tanı & Sınıflama
           </span>
         )}
@@ -1886,7 +1905,7 @@ export const EnhancedDifferentialTable: React.FC<{
                 >
                   <div className="flex items-center gap-1.5">
                     {i === 0 ? (
-                      <span className="text-accent text-[11px]">✦</span>
+                      <span className="text-accent text-[11px]"></span>
                     ) : (
                       <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                     )}
@@ -1954,21 +1973,21 @@ export const KeyBulletsRenderer: React.FC<{
 
           // 1. Red: Dikkat / Sınav Tuzağı / Kritik / Ölümcül / Kontrendike / Hayati
           const isRed =
-            /^(?:🔴|🚨|⚠️)/.test(b.title) ||
+            /^(?:||)/.test(b.title) ||
             /\b(dikkat|tuzak|sınav tuzağı|kritik|ölümcül|acil|hayati|kontrendike|yanılgı|hata|sakın)\b/i.test(t) ||
             /\b(asla|ölümcül|kontrendike)\b/i.test(d);
 
           // 2. Amber: Spot Bilgi / Hoca İncisi / Sınav Sorusu / Püf Nokta
           const isAmber =
             !isRed &&
-            (/(?:💡|⚡|🎯)/.test(b.title) ||
+            (/(?:||)/.test(b.title) ||
               /\b(spot|hoca incisi|sınav spotu|püf nokta|ipucu|çıkmış soru|komite|tus)\b/i.test(t));
 
           // 3. Blue: Ayırt Edici Özellikler / Ayırıcı Tanı / Karşılaştırma / Kriter
           const isBlue =
             !isRed &&
             !isAmber &&
-            (/(?:🔍|⚖️|⚡)/.test(b.title) ||
+            (/(?:||)/.test(b.title) ||
               /\b(ayırt edici|ayırıcı tanı|fark|karşılaştırma|kriter|altın standart|patognomonik|spesifik)\b/i.test(t));
 
           // 4. Purple: Özet / Tekrar / Sentez / Hatırlatma
@@ -1976,7 +1995,7 @@ export const KeyBulletsRenderer: React.FC<{
             !isRed &&
             !isAmber &&
             !isBlue &&
-            (/(?:🔄|✨|🧬)/.test(b.title) ||
+            (/(?:||)/.test(b.title) ||
               /\b(özet|tekrar|sentez|hatırlatma|yaklaşım|prognoz|sonuç)\b/i.test(t));
 
           let badgeCls = 'bg-teal-500/10 text-teal-800 dark:text-teal-300 border-teal-500/20';
@@ -2010,7 +2029,7 @@ export const KeyBulletsRenderer: React.FC<{
                 <span className="w-6 h-6 rounded-lg bg-white/90 dark:bg-panel shadow-2xs border border-line flex items-center justify-center">
                   {icon}
                 </span>
-                <span className="text-[10px] font-mono font-bold text-ink-3">
+                <span className="text-[11px] font-mono font-bold text-ink-3">
                   #{i + 1}
                 </span>
               </div>
@@ -2122,10 +2141,10 @@ const SlideCanvas: React.FC<{
 
           {/* Vurgulu Alt Başlık */}
           {slide.subtitle && (
-            <div className="ms-slide-lead p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-accent-soft/30 via-white to-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
-              <span className="ms-slide-emoji text-[14px] shrink-0 select-none mt-0.5">💡</span>
+            <div className="ms-slide-lead p-2.5 sm:p-3 rounded-xl bg-canvas border border-accent/20 flex items-start gap-2.5 shadow-2xs">
+              <span className="ms-slide-emoji text-[14px] shrink-0 select-none mt-0.5"></span>
               <div className="flex flex-col gap-0.5 min-w-0">
-                <span className="ms-slide-eyebrow text-[10.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
+                <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent">Kavram & Odak Özeti</span>
                 <p className="m-0 text-[12.5px] sm:text-[13.5px] font-medium text-ink-2 leading-[1.55]">
                   {slide.subtitle}
                 </p>
@@ -2136,7 +2155,7 @@ const SlideCanvas: React.FC<{
 
         {/* 1. Clinical & Exam Critical Pearl */}
         {hl && emph && (
-          <figure className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-gradient-to-r from-accent-soft/30 via-white to-accent-soft/10 p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
+          <figure className="ms-slide-pearl m-0 rounded-2xl border-2 border-accent/20 bg-canvas p-3.5 sm:p-4.5 flex flex-col gap-2 shadow-xs">
             <figcaption className="flex items-center gap-2">
               <span
                 className="h-6 px-2.5 rounded-full text-[11.5px] font-semibold inline-flex items-center gap-1.5 shadow-2xs"
@@ -2163,7 +2182,7 @@ const SlideCanvas: React.FC<{
             </blockquote>
             {hl.note && (
               <p className="m-0 text-[12px] sm:text-[12.5px] text-ink-2 leading-[1.55] bg-white/60 p-2 sm:p-2.5 rounded-xl border border-line-soft">
-                💡 <strong>Klinik Yaklaşım:</strong> {hl.note}
+                <strong>Klinik Yaklaşım:</strong> {hl.note}
               </p>
             )}
           </figure>
@@ -2171,14 +2190,14 @@ const SlideCanvas: React.FC<{
 
         {/* 2. Fluid Synthesized Narrative (Kapsamlı Ders Notu Sentezi) */}
         {narrative && (
-          <section className="ms-slide-narr rounded-2xl border border-line bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/20 p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
+          <section className="ms-slide-narr rounded-2xl border border-line bg-canvas p-3.5 sm:p-5 shadow-xs flex flex-col gap-2.5">
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2.5">
               <div className="flex items-center gap-2.5 min-w-[min(100%,220px)] flex-1">
                 <span className="ms-slide-badgeicon w-7 h-7 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
                   <BookOpen className="w-4 h-4" />
                 </span>
                 <div className="min-w-0">
-                  <span className="ms-slide-eyebrow text-[10.5px] font-bold uppercase tracking-wider text-accent block">
+                  <span className="ms-slide-eyebrow text-[11.5px] font-bold uppercase tracking-wider text-accent block">
                     Öğrenim Bölümü • Detaylı Müfredat Analizi
                   </span>
                   <h3 className="m-0 text-[14.5px] sm:text-[15.5px] font-bold text-ink">
@@ -2330,12 +2349,12 @@ const SlideCanvas: React.FC<{
                 {c.infographic.items.map((it, i) => {
                   const t = tone(it.color);
                   return (
-                    <div key={i} className="rounded-xl border border-line p-3 flex flex-col gap-0.5" style={{ background: t.bg }}>
+                    <div key={i} className="rounded-xl border border-line p-3 flex flex-col gap-1 min-w-0" style={{ background: t.bg }}>
                       <span className="text-[12px] font-semibold" style={{ color: t.fg }}>
                         {it.label}
                       </span>
-                      <span className="font-mono text-[18px] sm:text-[20px] font-semibold text-ink leading-tight">{it.value}</span>
-                      {it.detail && <span className="text-[12px] text-ink-2 leading-snug">{it.detail}</span>}
+                      <span className="font-display text-[17px] sm:text-[18px] font-semibold text-ink leading-snug [overflow-wrap:anywhere] [hyphens:auto]" lang="tr">{it.value}</span>
+                      {it.detail && <span className="text-[13px] text-ink-2 leading-snug [overflow-wrap:anywhere]">{it.detail}</span>}
                     </div>
                   );
                 })}
@@ -2409,8 +2428,8 @@ const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: st
         const pType: string = isObj ? (p.type || '') : '';
         const pColor: string = isObj ? (p.color || '') : '';
 
-        const isRed = pType === 'warning' || pColor === 'rose' || pBadge.includes('🔴') || /(?:🔴|🚨|⚠️|ölümcül|asla|acil|hayati|kritik|kontrendike|\[kırmızı|\[red|önemli)/i.test(pText);
-        const isBlue = !isRed && (pType === 'exam' || pColor === 'sky' || pBadge.includes('🔵') || /(?:🔵|❓|❔|çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|\[mavi|\[blue|\[çıkmış|soru:)/i.test(pText));
+        const isRed = pType === 'warning' || pColor === 'rose' || pBadge.includes('') || /(?:|||ölümcül|asla|acil|hayati|kritik|kontrendike|\[kırmızı|\[red|önemli)/i.test(pText);
+        const isBlue = !isRed && (pType === 'exam' || pColor === 'sky' || pBadge.includes('') || /(?:|||çıkmış soru|çıkmış|komite sorusu|tus sorusu|soruldu|ösym|\[mavi|\[blue|\[çıkmış|soru:)/i.test(pText));
 
         // Split multi-line spot pearls to support main bullets and sub-bullets
         const rawLines = pText.split('\n');
@@ -2430,16 +2449,16 @@ const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: st
             <div className="flex items-center justify-between gap-2 mb-1.5 pb-1 border-b border-inherit/20">
               <span className="inline-flex items-center gap-1.5">
                 {isRed ? (
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-bold bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-200">
-                    <AlertCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🔴🚨⚠️]\s*/, '') : 'ÖNEMLİ'}
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11.5px] font-bold bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-200">
+                    <AlertCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[]\s*/, '') : 'ÖNEMLİ'}
                   </span>
                 ) : isBlue ? (
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200">
-                    <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🔵❓❔]\s*/, '') : 'ÇIKMIŞ SORU'}
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200">
+                    <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[]\s*/, '') : 'ÇIKMIŞ SORU'}
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10.5px] font-semibold bg-amber-100/70 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300">
-                    ⚡ {pBadge ? pBadge.replace(/^[⚡]\s*/, '') : 'SPOT BİLGİ'}
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11.5px] font-semibold bg-amber-100/70 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300">
+                    {pBadge ? pBadge.replace(/^[]\s*/, '') : 'SPOT BİLGİ'}
                   </span>
                 )}
               </span>
@@ -2477,7 +2496,7 @@ const SpotList: React.FC<{ items: Array<string | any>; title?: string; note?: st
                       key={lIdx}
                       className="ml-3.5 pl-2.5 py-0.5 border-l-2 border-inherit/40 text-[13px] flex items-start gap-1.5"
                     >
-                      <span className="text-[10px] opacity-70 mt-1 select-none">▫</span>
+                      <span className="text-[11px] opacity-70 mt-1 select-none">▫</span>
                       <span className="min-w-0 flex-1">
                         <Rich text={cleanText} />
                       </span>
@@ -2598,7 +2617,7 @@ const SlideNotesTab: React.FC<{ slide: SlideItem }> = ({ slide }) => {
     <div className="flex flex-col gap-3.5">
       {/* Narrative block */}
       {narrative && (
-        <div className="rounded-xl border border-line bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/20 p-3.5 flex flex-col gap-2.5">
+        <div className="rounded-xl border border-line bg-canvas p-3.5 flex flex-col gap-2.5">
           <div className="flex items-center gap-2 pb-1.5 border-b border-line-soft">
             <BookOpen className="w-4 h-4 text-accent" />
             <span className="text-[13px] font-bold text-ink">Kapsamlı Ders Notu Sentezi</span>
@@ -2648,7 +2667,7 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
             </span>
             <span className="truncate font-medium text-ink-2">Klinik Tartışma & Muhakeme</span>
           </div>
-          <span className="shrink-0 px-2 py-0.5 rounded-full text-[10.5px] font-bold bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-700 flex items-center gap-1 shadow-2xs">
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-[11.5px] font-bold bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-700 flex items-center gap-1 shadow-2xs">
             <Sparkles className="w-3 h-3 text-amber-600 dark:text-amber-400" />
             Öz Değerlendirme
           </span>
@@ -2688,12 +2707,12 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
           <span className="truncate font-medium text-ink-2">{[q?.examYear, q?.topic].filter(Boolean).join(' · ')}</span>
         </div>
         {isPractice ? (
-          <span className="shrink-0 px-2 py-0.5 rounded-full text-[10.5px] font-bold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700 flex items-center gap-1 shadow-2xs">
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-[11.5px] font-bold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700 flex items-center gap-1 shadow-2xs">
             <Sparkles className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
             Özgün Çalışma Sorusu
           </span>
         ) : (
-          <span className="shrink-0 px-2 py-0.5 rounded-full text-[10.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 border border-blue-300 dark:border-blue-700 flex items-center gap-1 shadow-2xs">
+          <span className="shrink-0 px-2 py-0.5 rounded-full text-[11.5px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 border border-blue-300 dark:border-blue-700 flex items-center gap-1 shadow-2xs">
             <GraduationCap className="w-3 h-3 text-blue-600 dark:text-blue-400" />
             Çıkmış Sınav Sorusu
           </span>
@@ -2734,7 +2753,7 @@ const QuizCard: React.FC<{ q: SlideRelatedQuestion | string | any; n: number }> 
       {done && (
         <div className={`rounded-lg px-2.5 py-2 text-[13px] ${right ? 'bg-ok-soft dark:bg-ok/20 border border-ok/30' : 'bg-bad-soft dark:bg-bad/20 border border-bad/30'}`}>
           <div className="flex items-center justify-between gap-2">
-            <strong className={right ? 'text-ok dark:text-emerald-400' : 'text-bad-text dark:text-rose-400'}>{right ? '✓ Tebrikler, Doğru Yanıt!' : `✕ Yanlış. Doğru cevap ${answer}`}</strong>
+            <strong className={right ? 'text-ok dark:text-emerald-400' : 'text-bad-text dark:text-rose-400'}>{right ? '✓ Tebrikler, Doğru Yanıt!' : `Yanlış. Doğru cevap ${answer}`}</strong>
             <span className="flex gap-1">
               {q?.explanation && (
                 <button type="button" onClick={() => setShowExp((v) => !v)} className="h-7 px-2 rounded-md text-[12px] font-semibold text-ink-2 hover:bg-white/70 dark:hover:bg-white/10 cursor-pointer">
@@ -2990,13 +3009,13 @@ const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ deck, sl
 // v3 · minimal katalog: "Kaldığın yer" kartı + sade ders listesi
 // ---------------------------------------------------------------------------
 const V3DeckList: React.FC<{
-  decks: InteractiveDeck[];
+  decks: DeckCatalogEntry[];
   progress: Record<string, { seen?: number[]; last?: number } | undefined>;
   onOpen: (id: string, pdf?: boolean) => void;
 }> = ({ decks, progress, onOpen }) => {
   const resume = decks.find((d) => {
     const seen = progress[d.id]?.seen?.length || 0;
-    return seen > 0 && seen < d.slides.length;
+    return seen > 0 && seen < d.slideCount;
   });
   return (
     <div className="flex flex-col gap-4 max-w-[760px] w-full">
@@ -3012,7 +3031,7 @@ const V3DeckList: React.FC<{
             <span className="h-1 rounded-full bg-line overflow-hidden">
               <span
                 className="block h-full bg-accent rounded-full"
-                style={{ width: `${Math.round(((progress[resume.id]?.seen?.length || 0) / resume.slides.length) * 100)}%` }}
+                style={{ width: `${Math.round(((progress[resume.id]?.seen?.length || 0) / resume.slideCount) * 100)}%` }}
               />
             </span>
           </span>
@@ -3022,8 +3041,8 @@ const V3DeckList: React.FC<{
       <ul className="list-none m-0 p-0 flex flex-col">
         {decks.map((d, i) => {
           const seen = progress[d.id]?.seen?.length || 0;
-          const done = seen >= d.slides.length;
-          const qCount = d.slides.reduce((n, s) => n + (s.relatedQuestions?.length || 0), 0);
+          const done = seen >= d.slideCount;
+          const qCount = d.questionCount;
           return (
             <li key={d.id} className="ms-pop-in" style={{ animationDelay: `${Math.min(i, 12) * 30}ms` }}>
               <button
@@ -3034,7 +3053,7 @@ const V3DeckList: React.FC<{
                 <span className="flex-1 min-w-0">
                   <span className="block text-[15px] font-medium text-ink truncate" title={d.title}>{d.title}</span>
                   <span className="block text-[12.5px] text-ink-3 truncate">
-                    {disciplineGroup(d.discipline)} · {d.slides.length} slayt{qCount ? ` · ${qCount} soru` : ''}
+                    {disciplineGroup(d.discipline)} · {d.slideCount} slayt{qCount ? ` · ${qCount} soru` : ''}
                   </span>
                 </span>
                 <span
@@ -3042,7 +3061,7 @@ const V3DeckList: React.FC<{
                     done ? 'bg-ok-soft text-ok' : seen ? 'bg-accent-soft text-accent' : 'bg-field text-ink-3'
                   }`}
                 >
-                  {done ? 'Bitti' : seen ? `%${Math.round((seen / d.slides.length) * 100)}` : 'Yeni'}
+                  {done ? 'Bitti' : seen ? `%${Math.round((seen / d.slideCount) * 100)}` : 'Yeni'}
                 </span>
               </button>
             </li>

@@ -96,7 +96,7 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 p-5 text-white flex items-center justify-between">
+        <div className="bg-ink-surface p-5 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-400/30 flex items-center justify-center text-teal-300 font-bold text-lg">
               {(currentUser.displayName || currentUser.email || 'Ö')[0].toUpperCase()}
@@ -167,8 +167,7 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
                 }}
                 className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs cursor-pointer shadow-xs transition-all active:scale-95 shrink-0"
               >
-                Yönetici Panelini Aç ➔
-              </button>
+                Yönetici Panelini Aç               </button>
             </div>
           )}
 
@@ -245,7 +244,7 @@ const UserProfileModalContent: React.FC<UserProfileModalProps & { currentUser: N
                   className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 bg-slate-50 text-slate-500 rounded-lg cursor-not-allowed"
                 />
               </div>
-              <p className="text-[10px] text-teal-700 mt-1 font-medium">
+              <p className="text-[11px] text-teal-700 mt-1 font-medium">
                 Her kurulda ilk soru katkınız için teşekkür e-postası bu adrese otomatik iletilir.
               </p>
             </div>

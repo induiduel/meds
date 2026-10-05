@@ -75,12 +75,12 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
     }
 
     const { discipline, topic, correctAnswer, userAnswer } = questionContext;
-    let welcome = `Merhaba! 👋 Ben senin **AI Tıp Asistanınım**.\n\n`;
+    let welcome = `Merhaba! Ben senin **AI Tıp Asistanınım**.\n\n`;
     welcome += `Şu an **${discipline || 'Tıp Fakültesi'}** dersinden **${topic || 'Kurul Sorusu'}** sorusunu inceliyoruz.`;
 
     if (userAnswer && correctAnswer) {
       if (userAnswer === correctAnswer) {
-        welcome += ` Tebrikler, **${userAnswer}** şıkkını işaretleyerek soruyu **doğru** çözdün! 🎉 İstersen altında yatan mekanizmayı, sınav tuzaklarını veya aklında tutman için özel bir mnemonik konuşabiliriz.`;
+        welcome += ` Tebrikler, **${userAnswer}** şıkkını işaretleyerek soruyu **doğru** çözdün! İstersen altında yatan mekanizmayı, sınav tuzaklarını veya aklında tutman için özel bir mnemonik konuşabiliriz.`;
       } else {
         welcome += ` **${userAnswer}** şıkkını işaretledin, ancak doğru cevap **${correctAnswer}**. Neden bu şıkkın doğru olduğunu veya işaretlediğin şıkkın hangi durumda geçerli olabileceğini hemen açıklayabilirim.`;
       }
@@ -174,8 +174,8 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         const errorMsg: QuestionChatMessage = {
           role: 'assistant',
           content: isMulti
-            ? `⚠️ **TÜM YAPAY ZEKA SAĞLAYICILARI DENENDİ VE BAŞARISIZ OLDU**\n\n${res.error || 'Google Gemini, Groq Cloud ve Muse Spark 1.3 Free sağlayıcılarının kotaları tükendi veya yanıt veremediler.'}\n\n💡 *Aşağıdaki **Tekrar Dene** butonuna basabilir veya üstteki **Ayarlar** menüsünden farklı bir model ya da API anahtarı seçebilirsiniz.*`
-            : `⚠️ **Üzgünüm, bir sorun oluştu:** ${res.error || 'Yapay zeka yanıt üretemedi. Lütfen tekrar deneyin.'}`,
+            ? `**TÜM YAPAY ZEKA SAĞLAYICILARI DENENDİ VE BAŞARISIZ OLDU**\n\n${res.error || 'Google Gemini, Groq Cloud ve Muse Spark 1.3 Free sağlayıcılarının kotaları tükendi veya yanıt veremediler.'}\n\n*Aşağıdaki **Tekrar Dene** butonuna basabilir veya üstteki **Ayarlar** menüsünden farklı bir model ya da API anahtarı seçebilirsiniz.*`
+            : `**Üzgünüm, bir sorun oluştu:** ${res.error || 'Yapay zeka yanıt üretemedi. Lütfen tekrar deneyin.'}`,
           timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
         };
         setMessages((prev) => [...prev, errorMsg]);
@@ -188,7 +188,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
       }
       const errorMsg: QuestionChatMessage = {
         role: 'assistant',
-        content: `⚠️ **Bağlantı hatası (2 deneme yapıldı):** ${err.message || 'Yapay zekaya ulaşılamadı.'}`,
+        content: `**Bağlantı hatası (2 deneme yapıldı):** ${err.message || 'Yapay zekaya ulaşılamadı.'}`,
         timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages((prev) => [...prev, errorMsg]);
@@ -345,13 +345,13 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
         {/* Header */}
         <header className="px-4 py-3.5 border-b border-line bg-white/95 backdrop-blur-md flex items-center justify-between gap-3 shrink-0">
           <div className="flex items-center gap-2.5 min-w-0">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-accent to-indigo-500 text-white flex items-center justify-center shrink-0 shadow-xs">
+            <div className="w-9 h-9 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-xs">
               <Sparkles className="w-4 h-4 animate-pulse" />
             </div>
             <div className="flex flex-col min-w-0 leading-tight">
               <div className="flex items-center gap-1.5">
                 <span className="font-semibold text-ink text-[15px] truncate">AI Tıp Asistanı</span>
-                <span className="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-1.5 py-0.5 rounded border border-emerald-200 uppercase tracking-wider shrink-0">
+                <span className="bg-emerald-50 text-emerald-700 text-[11px] font-bold px-1.5 py-0.5 rounded border border-emerald-200 uppercase tracking-wider shrink-0">
                   Canlı
                 </span>
               </div>
@@ -505,7 +505,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                   <div>
                     <h4 className="font-semibold text-[13px] text-indigo-950 flex items-center gap-1.5 m-0">
                       <span>Bu Soru İçin Kayıtlı AI Soru-Cevapları</span>
-                      <span className="text-[10px] font-bold bg-indigo-200/70 text-indigo-800 px-1.5 py-0.5 rounded">RAG Arşivi</span>
+                      <span className="text-[11px] font-bold bg-indigo-200/70 text-indigo-800 px-1.5 py-0.5 rounded">RAG Arşivi</span>
                     </h4>
                     <p className="text-[11px] text-indigo-800/80 m-0">Daha önce sorulan sorular ve açıklamalar tek tıkla incelenebilir.</p>
                   </div>
@@ -518,14 +518,14 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                   {pastInteractions.map((item, pIdx) => (
                     <div key={item.id || pIdx} className="bg-white p-3 rounded-lg border border-indigo-100 text-[13px] space-y-2 shadow-2xs">
                       <div className="font-medium text-indigo-950 flex items-start gap-1.5">
-                        <span className="text-indigo-600 font-bold shrink-0">❓ Soru:</span>
+                        <span className="text-indigo-600 font-bold shrink-0">Soru:</span>
                         <span className="text-ink font-semibold">"{item.prompt}"</span>
                       </div>
                       <div className="text-ink-2 bg-slate-50 p-2.5 rounded-md text-[12px] max-h-40 overflow-y-auto border border-slate-100">
                         {renderFormattedText(item.response)}
                       </div>
                       <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-slate-100">
-                        <span className="text-ink-3 text-[10px]">
+                        <span className="text-ink-3 text-[11px]">
                           {item.userDisplayName || 'Öğrenci'} · {new Date(item.createdAt).toLocaleDateString('tr-TR')}
                         </span>
                         <div className="flex items-center gap-2">
@@ -590,12 +590,12 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                     <span>{msg.timestamp || ''}</span>
                     {!isMe && (
                       <div className="flex items-center gap-2">
-                        <span className="inline-flex items-center gap-1 text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-medium">
+                        <span className="inline-flex items-center gap-1 text-[11px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-medium">
                           <Database className="w-2.5 h-2.5" />
                           RAG Kütüphanesinde
                         </span>
                         {(msg.planUsed || msg.providerUsed) && (
-                          <span className="font-mono text-[10px] opacity-75">{msg.planUsed || msg.providerUsed}</span>
+                          <span className="font-mono text-[11px] opacity-75">{msg.planUsed || msg.providerUsed}</span>
                         )}
                         <button
                           type="button"
@@ -662,7 +662,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
                   <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
                   <span>Yapay Zeka Kotaları Doldu</span>
                 </div>
-                <span className="text-[10px] bg-amber-200/90 text-amber-950 font-mono px-2 py-0.5 rounded-full font-bold">
+                <span className="text-[11px] bg-amber-200/90 text-amber-950 font-mono px-2 py-0.5 rounded-full font-bold">
                   Gemini, Groq &amp; Muse Spark
                 </span>
               </div>
@@ -744,8 +744,8 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
           <div className="flex items-center justify-between text-[11px] text-ink-3 px-1 pt-2">
             <span>Enter: Gönder · Shift+Enter: Yeni satır</span>
             {lastUsedProvider && (
-              <span className="font-mono text-[10px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
-                ⚡ {lastUsedProvider}
+              <span className="font-mono text-[11px] text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+                {lastUsedProvider}
               </span>
             )}
           </div>

@@ -638,7 +638,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       const cfg = await ApiService.getSmtpConfig();
       setSmtpConfig(cfg);
       setSmtpUser(cfg.user || 'nofrostlife@gmail.com');
-      setSmtpFrom(cfg.from || `MedSoru Tıp Fakültesi <${cfg.user || 'nofrostlife@gmail.com'}>`);
+      setSmtpFrom(cfg.from || `MeDSor Tıp Fakültesi <${cfg.user || 'nofrostlife@gmail.com'}>`);
     } catch (e) {
       console.warn('Could not load SMTP config:', e);
     } finally {
@@ -716,7 +716,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       if (welcomeRes.success) {
         setUserSyncMessage(`✓ Kullanıcı ${created.email} eklendi ve hoş geldiniz e-postası başarıyla iletildi.`);
       } else {
-        setUserSyncMessage(`⚠️ Kullanıcı ${created.email} eklendi fakat hoş geldiniz maili gönderilemedi: ${welcomeRes.error || ''}`);
+        setUserSyncMessage(`Kullanıcı ${created.email} eklendi fakat hoş geldiniz maili gönderilemedi: ${welcomeRes.error || ''}`);
       }
 
       setIsCreatingUser(false);
@@ -762,9 +762,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         setUserSyncMessage(`✓ Hoş geldiniz e-postası ${u.email} adresine iletildi.`);
         await loadUsersData();
       } else {
-        const hintText = res.hint ? `\n\n📌 Çözüm: ${res.hint}` : '';
+        const hintText = res.hint ? `\n\nÇözüm: ${res.hint}` : '';
         const instruct = res.instructions?.length ? `\n\nAdımlar:\n${res.instructions.join('\n')}` : '';
-        alert(`❌ E-posta Gönderilemedi:\n${res.error || 'Bilinmeyen hata'}${hintText}${instruct}`);
+        alert(`E-posta Gönderilemedi:\n${res.error || 'Bilinmeyen hata'}${hintText}${instruct}`);
       }
     } catch (e: any) {
       alert('Hata: ' + e.message);
@@ -850,7 +850,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setIsSendingWindowsNotify(true);
     try {
       const res = await ApiService.sendWindowsTestNotification(
-        'MedSoru Test Bildirimi 🔔',
+        'MeDSor Test Bildirimi ',
         'Yönetici panelinden Windows masaüstü bildirimi başarıyla iletildi! Sisteminiz hazır.'
       );
       setWindowsServiceFeedback(`✓ ${res.message} (Ekranınızın sağ alt köşesine bakın)`);
@@ -875,7 +875,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         setSystemServices([
           {
             id: 'core_api_server',
-            name: 'MedSoru Çekirdek API & Web Sunucusu (Express & Brotli/Gzip)',
+            name: 'MeDSor Çekirdek API & Web Sunucusu (Express & Brotli/Gzip)',
             category: 'core',
             status: 'active',
             statusLabel: 'Çalışıyor',
@@ -1154,7 +1154,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <button
                   type="button"
                   onClick={() => setIsDraftDeduplicationOpen(true)}
-                  className="hidden sm:inline-flex h-10 px-3.5 rounded-[10px] bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white text-[14px] font-semibold items-center gap-2 cursor-pointer shadow-sm"
+                  className="hidden sm:inline-flex h-10 px-3.5 rounded-[10px] bg-accent hover:from-indigo-700 hover:to-violet-700 text-white text-[14px] font-semibold items-center gap-2 cursor-pointer shadow-sm"
                 >
                   <GitMerge className="w-4 h-4" /> Taslakları Kümele & Birleştir
                 </button>
@@ -1382,7 +1382,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   <div>
                     <h3 className="font-bold text-sm sm:text-base text-white flex items-center gap-2 flex-wrap">
                       <span>Arka Plan & Sistem Servisleri Yönetimi</span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">
+                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">
                         Ağ Koruması Aktif
                       </span>
                     </h3>
@@ -1399,7 +1399,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       onClick={onOpenSubagentMonitor}
                       className="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-xs"
                     >
-                      <span>🤖 Subagent Paneli</span>
+                      <span>Subagent Paneli</span>
                     </button>
                   )}
                   <button
@@ -1421,7 +1421,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <CheckCircle2 className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-400 block font-medium">İnternet & Ağ Yükü:</span>
+                    <span className="text-[11px] text-slate-400 block font-medium">İnternet & Ağ Yükü:</span>
                     <strong className="text-emerald-300 text-xs font-semibold">Hafif (Upload Tıkanıklığı Yok)</strong>
                   </div>
                 </div>
@@ -1431,7 +1431,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <Zap className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-400 block font-medium">HTTP Sıkıştırma:</span>
+                    <span className="text-[11px] text-slate-400 block font-medium">HTTP Sıkıştırma:</span>
                     <strong className="text-teal-300 text-xs font-semibold">Brotli/Gzip Devrede (%73 Tasarruf)</strong>
                   </div>
                 </div>
@@ -1441,7 +1441,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <Layers className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-400 block font-medium">Servis Dağılımı:</span>
+                    <span className="text-[11px] text-slate-400 block font-medium">Servis Dağılımı:</span>
                     <strong className="text-indigo-300 text-xs font-semibold">
                       {systemServices.filter(s => s.status === 'active').length} Aktif / {systemServices.filter(s => s.status === 'stopped').length} Kapatıldı (Manuel)
                     </strong>
@@ -1455,7 +1455,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <Sparkles className="w-4 h-4 text-teal-400 shrink-0" />
                     <span>{serviceActionFeedback}</span>
                   </div>
-                  <button type="button" onClick={() => setServiceActionFeedback(null)} className="text-slate-400 hover:text-white text-xs cursor-pointer">✕</button>
+                  <button type="button" onClick={() => setServiceActionFeedback(null)} className="text-slate-400 hover:text-white text-xs cursor-pointer"></button>
                 </div>
               )}
 
@@ -1463,7 +1463,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               <div className="space-y-3 pt-1">
                 <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
                   <span>Tüm Sistem Servisleri ve Arka Plan Görevleri</span>
-                  <span className="text-[10px] text-slate-500 font-normal">({systemServices.length} Servis)</span>
+                  <span className="text-[11px] text-slate-500 font-normal">({systemServices.length} Servis)</span>
                 </h4>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -1484,12 +1484,12 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                               <div className={`w-2.5 h-2.5 rounded-full shrink-0 ${isActive ? 'bg-emerald-400 animate-pulse' : 'bg-slate-500'}`} />
                               <h5 className="font-bold text-xs text-white leading-tight">{service.name}</h5>
                             </div>
-                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 ${
+                            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full shrink-0 ${
                               isActive
                                 ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
                                 : 'bg-slate-700/60 text-slate-400 border border-slate-600/40'
                             }`}>
-                              {isActive ? '🟢 ÇALIŞIYOR' : '🔴 KAPATILDI (MANUEL)'}
+                              {isActive ? 'ÇALIŞIYOR' : 'KAPATILDI (MANUEL)'}
                             </span>
                           </div>
 
@@ -1498,7 +1498,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                             {service.description}
                           </div>
 
-                          <div className="flex items-center justify-between text-[10px] text-slate-400 px-1">
+                          <div className="flex items-center justify-between text-[11px] text-slate-400 px-1">
                             <span>Kaynak Tüketimi:</span>
                             <span className={`font-mono font-semibold ${
                               service.resourceTier === 'high' ? 'text-amber-400' : service.resourceTier === 'negligible' ? 'text-emerald-400' : 'text-slate-300'
@@ -1556,7 +1556,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             {/* Windows Desktop Shortcut & Daily 16:00 - 18:00 Automation Card */}
-            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white rounded-2xl p-5 border border-teal-600/40 shadow-xl space-y-4">
+            <div className="bg-ink-surface text-white rounded-2xl p-5 border border-teal-600/40 shadow-xl space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-700/80">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center shrink-0">
@@ -1566,12 +1566,12 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <h4 className="font-bold text-sm sm:text-base text-white flex items-center gap-2 flex-wrap">
                       <span>Windows Masaüstü Kısayolu & Otomatik Başlangıç</span>
                       {windowsServiceStatus?.isRunning ? (
-                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                           <Check className="w-3 h-3 text-emerald-400" />
                           Servis Aktif (PID: {windowsServiceStatus.pids?.join(', ') || 'Aktif'})
                         </span>
                       ) : (
-                        <span className="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                        <span className="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                           <AlertTriangle className="w-3 h-3 text-amber-400" />
                           Servis Beklemede
                         </span>
@@ -1623,40 +1623,39 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               {/* Status Badges Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
                 <div className="bg-slate-950/70 border border-slate-700/60 p-3 rounded-xl space-y-1">
-                  <span className="text-[10px] text-slate-400 block font-semibold">Masaüstü Kısayolu:</span>
+                  <span className="text-[11px] text-slate-400 block font-semibold">Masaüstü Kısayolu:</span>
                   <div className="flex items-center gap-2">
                     <span className={`w-2 h-2 rounded-full ${windowsServiceStatus?.isInstalledOnDesktop ? 'bg-emerald-400' : 'bg-amber-400'}`} />
                     <strong className="text-white text-xs truncate">
-                      {windowsServiceStatus?.isInstalledOnDesktop ? '✓ Masaüstünde Mevcut' : '⚠️ Kısayol Eksik'}
+                      {windowsServiceStatus?.isInstalledOnDesktop ? '✓ Masaüstünde Mevcut' : 'Kısayol Eksik'}
                     </strong>
                   </div>
-                  <span className="text-[10px] text-slate-500 font-mono block truncate">
-                    MedSoru Otomasyon Servisi.lnk
+                  <span className="text-[11px] text-slate-500 font-mono block truncate">
+                    MeDSor Otomasyon Servisi.lnk
                   </span>
                 </div>
 
                 <div className="bg-slate-950/70 border border-slate-700/60 p-3 rounded-xl space-y-1">
-                  <span className="text-[10px] text-slate-400 block font-semibold">Windows Başlangıç (Startup):</span>
+                  <span className="text-[11px] text-slate-400 block font-semibold">Windows Başlangıç (Startup):</span>
                   <div className="flex items-center gap-2">
                     <span className={`w-2 h-2 rounded-full ${windowsServiceStatus?.isRegisteredInStartup ? 'bg-emerald-400' : 'bg-amber-400'}`} />
                     <strong className="text-white text-xs truncate">
-                      {windowsServiceStatus?.isRegisteredInStartup ? '✓ Başlangıca Kayıtlı' : '⚠️ Başlangıçta Yok'}
+                      {windowsServiceStatus?.isRegisteredInStartup ? '✓ Başlangıca Kayıtlı' : 'Başlangıçta Yok'}
                     </strong>
                   </div>
-                  <span className="text-[10px] text-slate-500 font-mono block truncate">
+                  <span className="text-[11px] text-slate-500 font-mono block truncate">
                     shell:startup (Otomatik Açılış)
                   </span>
                 </div>
 
                 <div className="bg-slate-950/70 border border-slate-700/60 p-3 rounded-xl space-y-1">
-                  <span className="text-[10px] text-slate-400 block font-semibold">Çalışma Aralığı & Bildirim:</span>
+                  <span className="text-[11px] text-slate-400 block font-semibold">Çalışma Aralığı & Bildirim:</span>
                   <div className="flex items-center gap-2">
                     <Clock className="w-3.5 h-3.5 text-teal-400 shrink-0" />
                     <strong className="text-emerald-300 text-xs">16:00 - 18:00 Arası Günlük</strong>
                   </div>
-                  <span className="text-[10px] text-teal-400/90 block">
-                    Windows Bildirim Alanı Aktif 🔔
-                  </span>
+                  <span className="text-[11px] text-teal-400/90 block">
+                    Windows Bildirim Alanı Aktif                   </span>
                 </div>
               </div>
 
@@ -1667,9 +1666,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   <span>Tek Tıkla Otomatik Çalışma Mantığı:</span>
                 </div>
                 <p>
-                  Masaüstünüzde yer alan <strong className="text-white">"MedSoru Otomasyon Servisi"</strong> kısayoluna çift tıkladığınızda; servis kendisini otomatik olarak Windows başlangıç klasörüne kaydeder, ekranınızın sağ altına Windows bildirimi yollar ve arka planda çalışmaya başlar.
+                  Masaüstünüzde yer alan <strong className="text-white">"MeDSor Otomasyon Servisi"</strong> kısayoluna çift tıkladığınızda; servis kendisini otomatik olarak Windows başlangıç klasörüne kaydeder, ekranınızın sağ altına Windows bildirimi yollar ve arka planda çalışmaya başlar.
                 </p>
-                <p className="text-slate-400 text-[10px]">
+                <p className="text-slate-400 text-[11px]">
                   Bilgisayarınız her açıldığında ve her gün saat <strong className="text-teal-300">16:00 - 18:00</strong> arasında Drive çıkmış soruları ve ders slaytları <code className="bg-slate-800 text-teal-300 px-1 py-0.5 rounded">C:\Users\indui\Desktop\meds_database</code> klasörünüze indirilir, CPU ile sayfa sayfa birebir okunarak soru havuzuna ve Firebase'e işlenir.
                 </p>
               </div>
@@ -1705,13 +1704,13 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className="flex items-center gap-2">
                   <Terminal className="w-5 h-5 text-emerald-400" />
                   <h4 className="font-bold text-sm text-white">Yerel Drive İndirici & CPU Metin/Soru Çıkarıcı</h4>
-                  <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                  <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold px-2 py-0.5 rounded-full">
                     Yerel CPU / Sıfır AI Hatası / Verbatim
                   </span>
                 </div>
                 <div className="text-right">
-                  <span className="text-[10px] text-emerald-400 font-bold bg-emerald-950/80 border border-emerald-700/60 px-2 py-1 rounded">
-                    🕒 Hedef Saat: 16:00 - 18:00
+                  <span className="text-[11px] text-emerald-400 font-bold bg-emerald-950/80 border border-emerald-700/60 px-2 py-1 rounded">
+                    Hedef Saat: 16:00 - 18:00
                   </span>
                 </div>
               </div>
@@ -1767,7 +1766,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className="flex items-center gap-2">
                   <GitBranch className="w-5 h-5 text-slate-800" />
                   <h4 className="font-bold text-sm text-slate-900">GitHub Senkronizasyonu & Push</h4>
-                  <span className="bg-slate-100 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                  <span className="bg-slate-100 text-slate-800 text-[11px] font-bold px-2 py-0.5 rounded-full">
                     induiduel/meds
                   </span>
                 </div>
@@ -1785,7 +1784,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
               <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg space-y-2">
                 <div className="text-xs font-semibold text-slate-800">
-                  📦 Proje Kaynak Kodları ve Veritabanı Dışa Aktarma
+                  Proje Kaynak Kodları ve Veritabanı Dışa Aktarma
                 </div>
                 <div className="text-[11px] text-slate-600">
                   Tüm güncel ders notları, soru havuzu ve sunucu kodlarını içeren arşivi tek tıkla indirip bilgisayarınızdaki Git deposuna aktarabilirsiniz.
@@ -1807,7 +1806,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         {activeTab === 'database' && (
           <div className="p-4 sm:p-6 space-y-5 overflow-y-auto flex-1 text-xs">
             {/* Multi-Database Active Mode & Cloud Failover Card */}
-            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white rounded-2xl p-5 border border-indigo-700/50 shadow-lg space-y-4">
+            <div className="bg-ink-surface text-white rounded-2xl p-5 border border-indigo-700/50 shadow-lg space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-700/70">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
@@ -1842,9 +1841,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
-                      🔥 Firebase Spark
+                      Firebase Spark
                     </span>
-                    <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                    <span className={`text-[11px] font-extrabold px-2 py-0.5 rounded-full ${
                       dbStatuses?.firebase.status === 'quota_exceeded'
                         ? 'bg-amber-500/30 text-amber-300 border border-amber-500/50'
                         : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
@@ -1852,7 +1851,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       {dbStatuses?.firebase.status === 'quota_exceeded' ? 'Kota Doldu' : 'Aktif'}
                     </span>
                   </div>
-                  <span className="text-[10px] opacity-80">
+                  <span className="text-[11px] opacity-80">
                     {dbStatuses?.firebase.details || '50K günlük okuma sınırı'}
                   </span>
                 </div>
@@ -1865,9 +1864,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
-                      🐘 Supabase (Postgres)
+                      Supabase (Postgres)
                     </span>
-                    <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                    <span className={`text-[11px] font-extrabold px-2 py-0.5 rounded-full ${
                       dbStatuses?.supabase.status === 'online'
                         ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-500/50'
                         : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/40'
@@ -1875,7 +1874,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       {dbStatuses?.supabase.status === 'online' ? 'Bağlı' : 'Yapılandırıldı'}
                     </span>
                   </div>
-                  <span className="text-[10px] opacity-80">
+                  <span className="text-[11px] opacity-80">
                     {dbStatuses?.supabase.details || 'PostgreSQL Bulut Veritabanı'}
                   </span>
                 </div>
@@ -1888,9 +1887,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
-                      💻 Yerel PC Sunucusu
+                      Yerel PC Sunucusu
                     </span>
-                    <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                    <span className={`text-[11px] font-extrabold px-2 py-0.5 rounded-full ${
                       dbStatuses?.localPc.status === 'online'
                         ? 'bg-teal-500/30 text-teal-300 border border-teal-500/50'
                         : 'bg-rose-500/20 text-rose-300 border border-rose-500/40'
@@ -1898,7 +1897,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       {dbStatuses?.localPc.status === 'online' ? 'Online' : 'Offline'}
                     </span>
                   </div>
-                  <span className="text-[10px] opacity-80">
+                  <span className="text-[11px] opacity-80">
                     {dbStatuses?.localPc.details || 'Port 3000 / meds_database'}
                   </span>
                 </div>
@@ -1919,9 +1918,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
                       <Zap className="w-3.5 h-3.5 text-amber-400" />
-                      <span>⚡ Otomatik (Önerilen)</span>
+                      <span>Otomatik (Önerilen)</span>
                     </div>
-                    <p className="text-[10px] opacity-85 mt-1">
+                    <p className="text-[11px] opacity-85 mt-1">
                       Spark kotası dolunca Supabase ve Yerel PC otomatik devralır.
                     </p>
                   </button>
@@ -1936,9 +1935,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
-                      <span>🐘 Supabase</span>
+                      <span>Supabase</span>
                     </div>
-                    <p className="text-[10px] opacity-85 mt-1">
+                    <p className="text-[11px] opacity-85 mt-1">
                       Öncelikli olarak Supabase PostgreSQL sorgularını kullanır.
                     </p>
                   </button>
@@ -1953,9 +1952,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
-                      <span>🔥 Firebase Spark</span>
+                      <span>Firebase Spark</span>
                     </div>
-                    <p className="text-[10px] opacity-85 mt-1">
+                    <p className="text-[11px] opacity-85 mt-1">
                       Doğrudan Cloud Firestore NoSQL veritabanını kullanır.
                     </p>
                   </button>
@@ -1970,9 +1969,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
-                      <span>💻 Yerel PC Sunucusu</span>
+                      <span>Yerel PC Sunucusu</span>
                     </div>
-                    <p className="text-[10px] opacity-85 mt-1">
+                    <p className="text-[11px] opacity-85 mt-1">
                       Bilgisayarınızdaki Express + JSON motorunu kullanır.
                     </p>
                   </button>
@@ -1988,7 +1987,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50 shadow-sm"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isSyncingMultiDb ? 'animate-spin' : ''}`} />
-                  <span>{isSyncingMultiDb ? 'Senkronize Ediliyor...' : '🔄 Tüm Verileri Supabase & Spark\'a Eşitle'}</span>
+                  <span>{isSyncingMultiDb ? 'Senkronize Ediliyor...' : 'Tüm Verileri Supabase & Spark\'a Eşitle'}</span>
                 </button>
 
                 <button
@@ -1997,7 +1996,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   className="bg-slate-800 hover:bg-slate-700 text-indigo-300 border border-indigo-700/50 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
                 >
                   <Terminal className="w-3.5 h-3.5" />
-                  <span>📋 Supabase SQL Şemasını Göster</span>
+                  <span>Supabase SQL Şemasını Göster</span>
                 </button>
               </div>
 
@@ -2022,7 +2021,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <Key className="w-3.5 h-3.5 text-amber-400" />
                     <span>Google Gemini AI (Kademeli Havuz & Özel Anahtar)</span>
                   </div>
-                  <span className="text-[10px] text-emerald-400 font-semibold">1. ve 2. Sıra: Ücretsiz | 4. Sıra: Faturalı Yedek</span>
+                  <span className="text-[11px] text-emerald-400 font-semibold">1. ve 2. Sıra: Ücretsiz | 4. Sıra: Faturalı Yedek</span>
                 </div>
                 <div className="flex gap-2">
                   <input
@@ -2052,7 +2051,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <Sparkles className="w-3.5 h-3.5 text-orange-400" />
                     <span>Groq Cloud API Anahtarları (3. Sıra: Ücretsiz Llama 3.3 70B & DeepSeek R1)</span>
                   </div>
-                  <span className="text-[10px] text-orange-400 font-semibold">3. Sırada Devreye Girer (Ücretli Plandan Önce)</span>
+                  <span className="text-[11px] text-orange-400 font-semibold">3. Sırada Devreye Girer (Ücretli Plandan Önce)</span>
                 </div>
                 <div className="flex gap-2">
                   <input
@@ -2086,17 +2085,17 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             {/* DeepSeek Data Pool & RAG Ingestion Card */}
-            <div className="bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950 text-white rounded-2xl p-5 border border-indigo-500/40 shadow-lg space-y-4">
+            <div className="bg-ink-surface text-white rounded-2xl p-5 border border-indigo-500/40 shadow-lg space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-indigo-800/60">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="p-1.5 bg-indigo-500/20 text-indigo-300 rounded-lg border border-indigo-500/30">
                       <Sparkles className="w-4 h-4 text-indigo-300" />
                     </span>
-                    <h3 className="text-sm font-bold text-white">🤖 DeepSeek Veri Havuzu & RAG Zeminleme Entegrasyonu</h3>
+                    <h3 className="text-sm font-bold text-white">DeepSeek Veri Havuzu & RAG Zeminleme Entegrasyonu</h3>
                   </div>
                   <p className="text-[11px] text-slate-300">
-                    DeepSeek tarafından düzenlenmiş soru, özet ve ders verilerini <code className="bg-black/40 px-1.5 py-0.5 rounded text-indigo-300 font-mono text-[10px]">{deepseekStatus?.directory || 'C:\\Users\\indui\\Desktop\\meds_database\\deepseek_data'}</code> klasöründen otomatik olarak içeri aktarır ve RAG vektör sistemine katar.
+                    DeepSeek tarafından düzenlenmiş soru, özet ve ders verilerini <code className="bg-black/40 px-1.5 py-0.5 rounded text-indigo-300 font-mono text-[11px]">{deepseekStatus?.directory || 'C:\\Users\\indui\\Desktop\\meds_database\\deepseek_data'}</code> klasöründen otomatik olarak içeri aktarır ve RAG vektör sistemine katar.
                   </p>
                 </div>
 
@@ -2107,26 +2106,26 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50 shrink-0 shadow-sm"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isSyncingDeepseek ? 'animate-spin' : ''}`} />
-                  <span>{isSyncingDeepseek ? 'Taranıyor...' : '📂 Klasörü Tara & RAG\'e Ekle'}</span>
+                  <span>{isSyncingDeepseek ? 'Taranıyor...' : 'Klasörü Tara & RAG\'e Ekle'}</span>
                 </button>
               </div>
 
               {/* Status metrics */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
                 <div className="bg-slate-900/80 border border-indigo-900/60 p-2.5 rounded-xl">
-                  <span className="text-[10px] text-slate-400 block">Klasördeki Dosyalar</span>
+                  <span className="text-[11px] text-slate-400 block">Klasördeki Dosyalar</span>
                   <span className="text-sm font-extrabold text-white">{deepseekStatus?.filesCount || 0} Dosya</span>
                 </div>
                 <div className="bg-slate-900/80 border border-indigo-900/60 p-2.5 rounded-xl">
-                  <span className="text-[10px] text-slate-400 block">İşlenen Katkı Verisi</span>
+                  <span className="text-[11px] text-slate-400 block">İşlenen Katkı Verisi</span>
                   <span className="text-sm font-extrabold text-indigo-300">{deepseekStatus?.itemsCount || 0} Kayıt</span>
                 </div>
                 <div className="bg-slate-900/80 border border-indigo-900/60 p-2.5 rounded-xl">
-                  <span className="text-[10px] text-slate-400 block">Kaynak Statüsü</span>
+                  <span className="text-[11px] text-slate-400 block">Kaynak Statüsü</span>
                   <span className="text-sm font-extrabold text-emerald-400">DeepSeek Katkısı</span>
                 </div>
                 <div className="bg-slate-900/80 border border-indigo-900/60 p-2.5 rounded-xl">
-                  <span className="text-[10px] text-slate-400 block">RAG Arama Önceliği</span>
+                  <span className="text-[11px] text-slate-400 block">RAG Arama Önceliği</span>
                   <span className="text-sm font-extrabold text-amber-300">Birincil Zemin (1. Sıra)</span>
                 </div>
               </div>
@@ -2140,14 +2139,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             {/* Lecture Notes Repair & Cross-Enrichment Card */}
-            <div className="bg-gradient-to-br from-teal-950 via-slate-900 to-slate-950 text-white rounded-2xl p-5 border border-teal-500/40 shadow-lg space-y-4">
+            <div className="bg-ink-surface text-white rounded-2xl p-5 border border-teal-500/40 shadow-lg space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-teal-800/60">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="p-1.5 bg-teal-500/20 text-teal-300 rounded-lg border border-teal-500/30">
                       <BookOpen className="w-4 h-4 text-teal-300" />
                     </span>
-                    <h3 className="text-sm font-bold text-white">✨ Slayt Onarım & Redakte Zenginleştirme Motoru</h3>
+                    <h3 className="text-sm font-bold text-white">Slayt Onarım & Redakte Zenginleştirme Motoru</h3>
                   </div>
                   <p className="text-[11px] text-slate-300">
                     Orijinal ders sunumlarındaki boş, eksik veya okunamamış slaytları 347 adet doğrulanmış amfi redakte ders özetiyle otomatik çapraz eşleştirir, tamamlar ve RAG sistemine katar.
@@ -2161,7 +2160,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   className="bg-teal-600 hover:bg-teal-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer disabled:opacity-50 shrink-0 shadow-sm"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isRepairingNotes ? 'animate-spin' : ''}`} />
-                  <span>{isRepairingNotes ? 'Onarılıyor...' : '✨ Slaytları Redakte Notlarla Onar'}</span>
+                  <span>{isRepairingNotes ? 'Onarılıyor...' : 'Slaytları Redakte Notlarla Onar'}</span>
                 </button>
               </div>
 
@@ -2213,7 +2212,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             {/* Cloud Firestore Sync Card */}
-            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white border border-teal-700/50 rounded-xl p-4 sm:p-5 space-y-3 shadow-md">
+            <div className="bg-ink-surface text-white border border-teal-700/50 rounded-xl p-4 sm:p-5 space-y-3 shadow-md">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center">
@@ -2222,7 +2221,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   <div>
                     <h4 className="font-bold text-sm text-white flex items-center gap-2">
                       <span>Firebase Firestore Bulut Senkronizasyonu</span>
-                      <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                      <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold px-2 py-0.5 rounded-full">
                         Canlı Bulut
                       </span>
                     </h4>
@@ -2273,7 +2272,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         {activeTab === 'users' && (
           <div className="p-4 sm:p-6 overflow-y-auto space-y-5">
             {/* Top Status & Sync Banner */}
-            <div className="bg-gradient-to-r from-teal-900 via-slate-900 to-teal-950 text-white p-4 sm:p-5 rounded-2xl border border-teal-800 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="bg-ink-surface text-white p-4 sm:p-5 rounded-2xl border border-teal-800 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -2358,7 +2357,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
             {/* SMTP E-posta Sunucu Yapılandırması Kartı */}
             {showSmtpSettings && (
-              <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 text-white rounded-2xl p-5 border border-teal-700/50 shadow-xl space-y-4 animate-fade-in">
+              <div className="bg-ink-surface text-white rounded-2xl p-5 border border-teal-700/50 shadow-xl space-y-4 animate-fade-in">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-700">
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center">
@@ -2368,12 +2367,12 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       <h4 className="font-bold text-sm text-white flex items-center gap-2">
                         <span>E-posta & SMTP Sunucu Yapılandırması (Gmail Canlı İletim)</span>
                         {smtpConfig?.hasPass ? (
-                          <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                             <Check className="w-3 h-3 text-emerald-400" />
                             Hazır & Yapılandırıldı
                           </span>
                         ) : (
-                          <span className="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <span className="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                             <AlertTriangle className="w-3 h-3 text-amber-400" />
                             Şifre Eksik (Mail Gönderilemez)
                           </span>
@@ -2414,7 +2413,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       <label className="block text-[11px] font-bold text-teal-300 mb-1 flex items-center justify-between">
                         <span>16 Haneli Google Uygulama Şifresi *</span>
                         {smtpConfig?.hasPass && (
-                          <span className="text-[10px] text-emerald-400 font-normal">Kayıtlı: {smtpConfig.passMasked}</span>
+                          <span className="text-[11px] text-emerald-400 font-normal">Kayıtlı: {smtpConfig.passMasked}</span>
                         )}
                       </label>
                       <div className="relative">
@@ -2436,7 +2435,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                         type="text"
                         value={smtpFrom}
                         onChange={(e) => setSmtpFrom(e.target.value)}
-                        placeholder="MedSoru Tıp Fakültesi <nofrostlife@gmail.com>"
+                        placeholder="MeDSor Tıp Fakültesi <nofrostlife@gmail.com>"
                         className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:border-teal-400 focus:ring-1 focus:ring-teal-400"
                       />
                     </div>
@@ -2467,7 +2466,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                         sayfasına gidin.
                       </li>
                       <li>
-                        Uygulama adı olarak <strong className="text-teal-300">MedSoru</strong> yazın ve <strong className="text-white">Oluştur</strong> butonuna tıklayın.
+                        Uygulama adı olarak <strong className="text-teal-300">MeDSor</strong> yazın ve <strong className="text-white">Oluştur</strong> butonuna tıklayın.
                       </li>
                       <li>
                         Google'ın size ekranda gösterdiği 16 haneli sarı kod bloğunu (örnek: <span className="font-mono text-amber-300">abcd efgh ijkl mnop</span>) kopyalayıp yukarıdaki alana yapıştırın ve <strong>Ayarları Kaydet</strong>'e basınız.
@@ -2524,7 +2523,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                         <strong className="block">{smtpTestResult.message}</strong>
                         {smtpTestResult.hint && (
                           <p className="text-[11px] text-slate-300 mt-1">
-                            📌 <strong>İpucu:</strong> {smtpTestResult.hint}
+                            <strong>İpucu:</strong> {smtpTestResult.hint}
                           </p>
                         )}
                       </div>
@@ -2674,7 +2673,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse text-xs">
                   <thead>
-                    <tr className="bg-slate-50/80 border-b border-slate-200 text-slate-700 font-bold uppercase text-[10px] tracking-wider">
+                    <tr className="bg-slate-50/80 border-b border-slate-200 text-slate-700 font-bold uppercase text-[11px] tracking-wider">
                       <th className="py-3 px-3.5">Öğrenci / Kullanıcı</th>
                       <th className="py-3 px-3.5">E-posta Adresi</th>
                       <th className="py-3 px-3.5">Öğrenci No</th>
@@ -2733,7 +2732,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                                     <span className="font-bold text-slate-900 block leading-tight">
                                       {u.displayName || 'İsimsiz Öğrenci'}
                                     </span>
-                                    <span className="text-[10px] text-slate-400 font-mono block">
+                                    <span className="text-[11px] text-slate-400 font-mono block">
                                       ID: {u.uid?.slice(0, 14)}...
                                     </span>
                                   </div>
@@ -2761,12 +2760,12 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                               {/* Role */}
                               <td className="py-3 px-3.5">
                                 {isAdminUser ? (
-                                  <span className="inline-flex items-center gap-1 bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                                  <span className="inline-flex items-center gap-1 bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-bold px-2 py-0.5 rounded-full">
                                     <ShieldCheck className="w-3 h-3 text-amber-700" />
                                     Yönetici
                                   </span>
                                 ) : (
-                                  <span className="inline-flex items-center gap-1 bg-teal-50 text-teal-800 border border-teal-200 text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                                  <span className="inline-flex items-center gap-1 bg-teal-50 text-teal-800 border border-teal-200 text-[11px] font-semibold px-2 py-0.5 rounded-full">
                                     <User className="w-3 h-3 text-teal-600" />
                                     Öğrenci
                                   </span>
@@ -2781,7 +2780,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                               {/* Welcome Email Status */}
                               <td className="py-3 px-3.5">
                                 {u.welcomeEmailSent ? (
-                                  <span className="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md text-[10px]">
+                                  <span className="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md text-[11px]">
                                     <Check className="w-3 h-3 text-emerald-600" />
                                     ✓ İletildi
                                   </span>
@@ -2789,7 +2788,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                                   <button
                                     onClick={() => handleSendWelcomeEmail(u)}
                                     disabled={isWelcomeSending}
-                                    className="inline-flex items-center gap-1 text-slate-700 hover:text-teal-900 bg-slate-100 hover:bg-teal-50 border border-slate-300 px-2 py-0.5 rounded-md text-[10px] font-semibold transition-colors cursor-pointer"
+                                    className="inline-flex items-center gap-1 text-slate-700 hover:text-teal-900 bg-slate-100 hover:bg-teal-50 border border-slate-300 px-2 py-0.5 rounded-md text-[11px] font-semibold transition-colors cursor-pointer"
                                     title="Öğrenciye hoş geldiniz bilgilendirme maili gönder"
                                   >
                                     <Mail className="w-3 h-3 text-teal-600" />
@@ -2887,7 +2886,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       {/* Supabase SQL Schema Viewer Modal */}
       {showSqlSchemaModal && (
         <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-xs animate-fadeIn">
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden text-white">
+          <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-3xl w-full max-h-[85dvh] flex flex-col shadow-2xl overflow-hidden text-white">
             <div className="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Terminal className="w-5 h-5 text-indigo-400" />
@@ -2907,7 +2906,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 Supabase Dashboard &gt; <strong>SQL Editor</strong> bölümüne aşağıdaki kodu yapıştırıp <strong>RUN</strong> butonuna basınız. Bu komutlar gerekli tüm tabloları (committees, questions, past_questions, lecture_notes, users, system_status), indeksleri ve RLS politikalarını oluşturur:
               </p>
 
-              <pre className="p-3 bg-slate-950 rounded-xl border border-slate-800 font-mono text-[11px] text-teal-300 overflow-x-auto select-all max-h-[50vh]">
+              <pre className="p-3 bg-slate-950 rounded-xl border border-slate-800 font-mono text-[11px] text-teal-300 overflow-x-auto select-all max-h-[50dvh]">
 {`-- 1. Kurullar Tablosu
 CREATE TABLE IF NOT EXISTS public.committees (
   id TEXT PRIMARY KEY,
@@ -3067,7 +3066,7 @@ ALTER TABLE public.system_status REPLICA IDENTITY FULL;`}
                   className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 cursor-pointer shadow-sm transition-all"
                 >
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>{copiedSql ? '✓ Kopyalandı!' : '📋 SQL Kopyala'}</span>
+                  <span>{copiedSql ? '✓ Kopyalandı!' : 'SQL Kopyala'}</span>
                 </button>
                 <button
                   type="button"

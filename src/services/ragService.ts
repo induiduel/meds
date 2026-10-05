@@ -5,7 +5,7 @@
 // finds nothing). AI-generated chunks are excluded so model output never becomes a "source".
 import { GoogleGenAI } from '@google/genai';
 import { supabase } from './supabaseClient.ts';
-import { searchLocalRag, type RagDocumentType } from './localRagEngine.ts';
+import { searchLocalRag, foldTurkish, findChunksById, type RagDocumentType } from './localRagEngine.ts';
 import { generateResilientMedicalAi, getTieredGeminiKeys } from './aiProvider.ts';
 import { getCachedLectureNotes } from '../serverLectureNotes.ts';
 
@@ -380,15 +380,148 @@ export async function findSimilarPastQuestions(text: string, committeeId?: strin
   const results = await searchRagChunks(text, undefined, { committeeId, documentType: 'past_question', limit });
   return results.map((r) => {
     const stemMatch = r.content.match(/Soru Kökü:\n([\s\S]*?)\n\nSeçenekler:/);
+    // "Seçenekler:\nA) …\nB) …" bloğu: şıkları aktarabilmek için ayrıştır
+    const optBlock = r.content.match(/Seçenekler:\s*\n([\s\S]*?)(?:\n\s*\n|$)/)?.[1] || '';
+    const options = Array.from(optBlock.matchAll(/^\s*([A-E])\s*[).:-]\s*(.+)$/gm)).map((m) => ({ key: m[1], text: m[2].trim() }));
+    const answer = r.content.match(/(?:Doğru[^:\n]*Cevap|Cevap)\s*:\s*([A-E])\b/i)?.[1];
     return {
+      options,
       id: r.documentId,
       title: r.title,
       discipline: r.discipline,
       committeeId: r.committeeId,
       examYear: r.metadata?.examYear,
-      claimedAnswer: r.metadata?.claimedAnswer,
+      claimedAnswer: r.metadata?.claimedAnswer || answer,
       stem: (stemMatch?.[1] || r.content).trim().slice(0, 400),
       score: r.combinedScore,
     };
   });
+}
+
+// ------------------------------------------------------------------
+// Uygulama içi genel arama: tüm veri setleri (chunk'lar) üzerinde BM25.
+// Sonuçlar tekilleştirilir, eşleşmenin çevresinden kesit çıkarılır ve
+// türe göre sayılır; arayüz ilk 5'i gösterir, "Tümünü gör" sayfalar.
+// ------------------------------------------------------------------
+export interface SearchHit {
+  id: string;
+  documentId: string;
+  documentType: RagDocumentType;
+  committeeId?: string;
+  discipline?: string;
+  title: string;
+  pageNumber?: number;
+  snippet: string;
+  content: string;
+  score: number;
+}
+
+export interface SearchEverythingResult {
+  query: string;
+  total: number;
+  /** Havuz sınırına ulaşıldı: gerçek sonuç sayısı daha fazla olabilir */
+  capped: boolean;
+  byType: Partial<Record<RagDocumentType, number>>;
+  results: SearchHit[];
+}
+
+const SEARCH_POOL = 400;
+
+/** Sorgu köklerinin en yoğun geçtiği pencereden okunabilir bir kesit çıkarır. */
+export function makeSnippet(content: string, query: string, size = 240): string {
+  const text = content.replace(/^\s*\[[^\]]{2,60}\]\s*/, '').replace(/\s+/g, ' ').trim();
+  if (text.length <= size) return text;
+  // foldTurkish uzunluğu korur: katlanmış metindeki konumlar asıl metne denk gelir
+  const folded = foldTurkish(text);
+  const stems = Array.from(new Set(foldTurkish(query).split(/[^a-z0-9]+/).filter((w) => w.length >= 3).map((w) => w.slice(0, w.length >= 8 ? 7 : 5))));
+  const hits: Array<{ at: number; stem: number }> = [];
+  stems.forEach((st, i) => {
+    for (let at = folded.indexOf(st); at >= 0 && hits.length < 400; at = folded.indexOf(st, at + 1)) hits.push({ at, stem: i });
+  });
+  if (hits.length === 0) return text.slice(0, size).trimEnd() + '…';
+  hits.sort((x, y) => x.at - y.at);
+  let best = hits[0].at;
+  let bestScore = 0;
+  for (let i = 0; i < hits.length; i++) {
+    const seenStems = new Set<number>();
+    for (let j = i; j < hits.length && hits[j].at - hits[i].at < size * 0.7; j++) seenStems.add(hits[j].stem);
+    if (seenStems.size > bestScore) { bestScore = seenStems.size; best = hits[i].at; }
+  }
+  let start = Math.max(0, best - Math.floor(size / 4));
+  const sp = text.lastIndexOf(' ', start);
+  if (start > 0 && sp > start - 20) start = sp + 1;
+  const end = Math.min(text.length, start + size);
+  return (start > 0 ? '…' : '') + text.slice(start, end).trim() + (end < text.length ? '…' : '');
+}
+
+const cleanTitle = (t: string) => t.replace(/\s*\[[^\]]*\]?\s*$/, '').replace(/\s+/g, ' ').trim() || t;
+
+export async function searchEverything(
+  query: string,
+  options: { types?: RagDocumentType[]; committeeId?: string; offset?: number; limit?: number } = {}
+): Promise<SearchEverythingResult> {
+  const q = query.trim();
+  const offset = Math.max(0, options.offset || 0);
+  const limit = Math.min(50, Math.max(1, options.limit || 5));
+  if (!q) return { query: q, total: 0, capped: false, byType: {}, results: [] };
+
+  // AI üretimi kayıtlar kaynak değildir (bkz. GROUNDING_DOC_TYPES): aramada gösterilmez
+  const pooled = (await searchLocalRag(q, { committeeId: options.committeeId, limit: SEARCH_POOL }))
+    .filter((r) => r.documentType !== 'ai_qa' && r.documentType !== 'ai_refinement');
+  // Yeniden sıralama: BM25 puanı tür bonusları içerir (soru bankası öne çıkar). Genel aramada
+  // önce sorgu köklerinin kaçının geçtiğine (kapsama), sonra başlıkta geçmesine, en son BM25'e bakılır.
+  // Uzun tıbbi terimlerde 5 harf kök fazla geniş (tromboksan ≠ trombosit): 8+ harfte 7 harf kullanılır
+  const stems = Array.from(new Set(foldTurkish(q).split(/[^a-z0-9]+/).filter((w) => w.length >= 3).map((w) => w.slice(0, w.length >= 8 ? 7 : 5))));
+  const rank = (r: (typeof pooled)[number]) => {
+    if (stems.length === 0) return r.matchScore;
+    const body = foldTurkish(r.content);
+    const title = foldTurkish(r.title);
+    const cover = stems.filter((st) => body.includes(st) || title.includes(st)).length / stems.length;
+    const inTitle = stems.filter((st) => title.includes(st)).length / stems.length;
+    return cover * 100 + inTitle * 30 + Math.min(r.matchScore, 120) * 0.25;
+  };
+  const ranked = pooled
+    .map((r) => ({ r, k: rank(r) }))
+    .sort((a, b) => b.k - a.k)
+    .map(({ r }) => r);
+  // Kimliğe benzeyen sorgu (boşluksuz, rakam ve -/_ içeren): önce kimlik eşleşmeleri
+  const looksLikeId = !/\s/.test(q) && /\d/.test(q) && /[-_]/.test(q);
+  const idHits = looksLikeId
+    ? findChunksById(q)
+        .filter((c) => c.documentType !== 'ai_qa' && c.documentType !== 'ai_refinement')
+        .map((c) => ({ ...c, similarity: 1, matchScore: 999, snippet: '', source: 'local' as const }))
+    : [];
+  // Kimlik bulunduysa yalnızca onlar gösterilir; bulunamadıysa normal metin araması
+  const raw = idHits.length > 0 ? idHits : ranked;
+  const examDumps = getExamDumpNoteIds();
+  const seen = new Set<string>();
+  const pool: SearchHit[] = [];
+  const byType: Partial<Record<RagDocumentType, number>> = {};
+  for (const r of raw) {
+    if (r.documentType === 'lecture_slide' && examDumps.has(r.documentId)) continue;
+    const keys = dedupeKeys(r);
+    const snippet = makeSnippet(r.content, q);
+    const sig = foldTurkish(snippet).replace(/[^a-z0-9]+/g, '');
+    keys.push(`snip:${sig.slice(10, 110)}`);
+    // Aynı soru farklı dosyalarda tekrar indekslenmiş olabilir: soru kökü ile de tekilleştir
+    const stemPart = r.content.split(/Seçenekler\s*:/i)[0];
+    if (stemPart.length < r.content.length) keys.push(`stem:${foldTurkish(stemPart).replace(/[^a-z0-9]+/g, '').slice(-70)}`);
+    if (keys.some((k) => seen.has(k))) continue;
+    keys.forEach((k) => seen.add(k));
+    byType[r.documentType] = (byType[r.documentType] || 0) + 1;
+    if (options.types?.length && !options.types.includes(r.documentType)) continue;
+    pool.push({
+      id: r.id,
+      documentId: r.documentId,
+      documentType: r.documentType,
+      committeeId: r.committeeId,
+      discipline: r.discipline,
+      title: cleanTitle(r.title),
+      pageNumber: r.pageNumber,
+      snippet,
+      content: r.content.length > 4000 ? r.content.slice(0, 4000) + '…' : r.content,
+      score: Math.round(r.matchScore * 10) / 10,
+    });
+  }
+  return { query: q, total: pool.length, capped: raw.length >= SEARCH_POOL, byType, results: pool.slice(offset, offset + limit) };
 }

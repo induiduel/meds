@@ -242,37 +242,37 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
       case 'batch':
         return { label: 'CMD / Batch', bg: 'bg-orange-500/20 text-orange-300 border-orange-500/30' };
       case 'powershell':
-        return { label: 'PowerShell', bg: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30' };
+        return { label: 'PowerShell', bg: 'bg-accent-soft text-accent border-accent/30' };
       default:
-        return { label: runtime, bg: 'bg-slate-700 text-slate-300 border-slate-600' };
+        return { label: runtime, bg: 'bg-line-soft text-ink border-line' };
     }
   };
 
   return (
-    <div className="flex flex-col h-full overflow-hidden bg-slate-950 text-slate-100 text-xs">
+    <div className="flex flex-col h-full overflow-hidden bg-white text-ink text-xs">
       {/* 1. Header Banner & Dynamic Auto-Discovery Info */}
-      <div className="p-4 sm:p-5 border-b border-slate-800 bg-gradient-to-r from-slate-900 via-slate-900 to-indigo-950 shrink-0">
+      <div className="p-4 sm:p-5 border-b border-line bg-white shrink-0">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-indigo-600/30 border border-indigo-500/50 flex items-center justify-center text-indigo-400">
+              <div className="w-8 h-8 rounded-xl bg-accent-soft border border-accent/30 flex items-center justify-center text-accent">
                 <Terminal className="w-4 h-4" />
               </div>
-              <h3 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
+              <h3 className="text-base sm:text-lg font-black text-ink flex items-center gap-2">
                 <span>Script & Görev Otomasyon Merkezi</span>
-                <span className="bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 text-[11px] font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-accent-soft text-accent border border-accent/30 text-[11px] font-bold px-2 py-0.5 rounded-full">
                   {scripts.length} Script Hazır
                 </span>
                 {Object.keys(activeJobs).length > 0 && (
-                  <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-1 animate-pulse">
+                  <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-1 animate-pulse">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                     {Object.keys(activeJobs).length} Süreç Çalışıyor
                   </span>
                 )}
               </h3>
             </div>
-            <p className="text-[11px] text-slate-300 max-w-3xl leading-relaxed">
-              Bu panel; <code className="bg-slate-800 text-indigo-300 px-1 py-0.5 rounded font-mono">scripts/</code> klasöründeki mevcut tüm betikleri ve <strong>ileride oluşturacağınız her yeni scripti</strong> otomatik olarak tanır. İstediğiniz argümanlarla anlık çalıştırabilir, toplu otomasyon zincirleri (pipelines) tetikleyebilir ve canlı çıktıları konsoldan izleyebilirsiniz.
+            <p className="text-[11px] text-ink max-w-3xl leading-relaxed">
+              Bu panel; <code className="bg-canvas text-accent px-1 py-0.5 rounded font-mono">scripts/</code> klasöründeki mevcut tüm betikleri ve <strong>ileride oluşturacağınız her yeni scripti</strong> otomatik olarak tanır. İstediğiniz argümanlarla anlık çalıştırabilir, toplu otomasyon zincirleri (pipelines) tetikleyebilir ve canlı çıktıları konsoldan izleyebilirsiniz.
             </p>
           </div>
 
@@ -281,8 +281,8 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
               onClick={() => setIsTerminalOpen(!isTerminalOpen)}
               className={`px-3 py-2 rounded-xl font-bold flex items-center gap-1.5 transition-all cursor-pointer text-xs border ${
                 isTerminalOpen
-                  ? 'bg-indigo-600 text-white border-indigo-500 shadow-md'
-                  : 'bg-slate-800 hover:bg-slate-700 text-indigo-300 border-slate-700'
+                  ? 'bg-accent text-white border-accent/30 shadow-md'
+                  : 'bg-canvas hover:bg-line-soft text-accent border-line'
               }`}
               title="Canlı terminal ve log konsolunu açar/kapatır"
             >
@@ -296,7 +296,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
             <button
               onClick={() => loadScriptsData()}
               disabled={isLoading}
-              className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow-sm transition-all cursor-pointer text-xs"
+              className="bg-accent hover:bg-accent disabled:opacity-50 text-white font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow-sm transition-all cursor-pointer text-xs"
               title="scripts/ klasörünü yeniden dinamik tarar"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin' : ''}`} />
@@ -313,7 +313,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                 ? 'bg-emerald-950/80 border-emerald-500/50 text-emerald-200'
                 : feedback.type === 'error'
                 ? 'bg-rose-950/80 border-rose-500/50 text-rose-200'
-                : 'bg-indigo-950/80 border-indigo-500/50 text-indigo-200'
+                : 'bg-accent-soft border-accent/30 text-accent'
             }`}
           >
             <div className="flex items-center gap-2">
@@ -326,7 +326,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
             </div>
             <button
               onClick={() => setFeedback(null)}
-              className="text-slate-400 hover:text-white p-1 cursor-pointer"
+              className="text-ink-3 hover:text-ink p-1 cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
             </button>
@@ -339,11 +339,11 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
         {/* Predefined Automation Pipelines (Chains) */}
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <h4 className="font-bold text-sm text-white flex items-center gap-2">
+            <h4 className="font-bold text-sm text-ink flex items-center gap-2">
               <Zap className="w-4 h-4 text-amber-400" />
               <span>Tek Tıkla Zincirleme Otomasyonlar (Pipelines)</span>
             </h4>
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-ink-3">
               Birden fazla scripti sıralı ve hatasız icra eder
             </span>
           </div>
@@ -358,36 +358,36 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
               return (
                 <div
                   key={pipe.id}
-                  className="bg-slate-900/90 border border-slate-800 hover:border-indigo-600/50 rounded-2xl p-4 flex flex-col justify-between transition-all shadow-sm"
+                  className="bg-white border border-line hover:border-accent/30 rounded-2xl p-4 flex flex-col justify-between transition-all shadow-sm"
                 >
                   <div className="space-y-2">
                     <div className="flex items-start justify-between gap-2">
-                      <h5 className="font-bold text-xs text-white leading-snug">{pipe.title}</h5>
-                      <span className="text-[10px] bg-slate-800 text-slate-400 font-mono px-1.5 py-0.5 rounded shrink-0">
+                      <h5 className="font-bold text-xs text-ink leading-snug">{pipe.title}</h5>
+                      <span className="text-[11px] bg-canvas text-ink-3 font-mono px-1.5 py-0.5 rounded shrink-0">
                         {pipe.steps.length} Adım
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-300 leading-relaxed">{pipe.description}</p>
+                    <p className="text-[11px] text-ink leading-relaxed">{pipe.description}</p>
 
-                    <div className="bg-slate-950/60 p-2 rounded-xl border border-slate-800/80 space-y-1 text-[10px] font-mono text-slate-400">
+                    <div className="bg-white p-2 rounded-xl border border-line space-y-1 text-[11px] font-mono text-ink-3">
                       {pipe.steps.map((st, idx) => (
                         <div key={idx} className="flex items-center gap-1.5 truncate">
-                          <span className="text-indigo-400 shrink-0 font-bold">{idx + 1}.</span>
-                          <span className="truncate text-slate-300">{st.title || st.script}</span>
+                          <span className="text-accent shrink-0 font-bold">{idx + 1}.</span>
+                          <span className="truncate text-ink">{st.title || st.script}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="pt-3 mt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
-                    <span className="text-[10px] text-slate-400">Arka Plan Süreci</span>
+                  <div className="pt-3 mt-3 border-t border-line flex items-center justify-between gap-2">
+                    <span className="text-[11px] text-ink-3">Arka Plan Süreci</span>
                     <button
                       onClick={() => handleRunPipeline(pipe.id)}
                       disabled={isPipeRunning}
                       className={`px-3 py-1.5 rounded-xl font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer ${
                         isPipeRunning
                           ? 'bg-amber-600 text-white animate-pulse'
-                          : 'bg-indigo-600 hover:bg-indigo-500 text-white active:scale-95'
+                          : 'bg-accent hover:bg-accent text-white active:scale-95'
                       }`}
                     >
                       {isPipeRunning ? (
@@ -413,25 +413,25 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
         <div className="space-y-3 pt-2">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div className="relative flex-1 max-w-md">
-              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+              <Search className="w-4 h-4 text-ink-3 absolute left-3 top-2.5" />
               <input
                 type="text"
                 placeholder="Script adı, açıklama veya etiket ara (örn: slide, supabase, verify)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                className="w-full bg-white border border-line rounded-xl pl-9 pr-3 py-2 text-xs text-ink placeholder-slate-500 focus:outline-none focus:border-accent/30"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-2.5 text-slate-400 hover:text-white"
+                  className="absolute right-2.5 top-2.5 text-ink-3 hover:text-ink"
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
               )}
             </div>
 
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-ink-3">
               Gösterilen: <strong>{filteredScripts.length}</strong> / Toplam: {scripts.length} script
             </span>
           </div>
@@ -444,12 +444,12 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3 py-1 rounded-xl font-bold whitespace-nowrap transition-all cursor-pointer shrink-0 ${
                   selectedCategory === cat
-                    ? 'bg-indigo-600 text-white shadow-sm'
-                    : 'bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800'
+                    ? 'bg-accent text-white shadow-sm'
+                    : 'bg-white hover:bg-canvas text-ink-3 hover:text-ink border border-line'
                 }`}
               >
                 {cat}
-                <span className="ml-1 opacity-70 text-[10px]">
+                <span className="ml-1 opacity-70 text-[11px]">
                   (
                   {cat === 'Tümü'
                     ? scripts.length
@@ -472,29 +472,29 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
             return (
               <div
                 key={script.name}
-                className={`bg-slate-900/80 rounded-2xl p-4 border transition-all flex flex-col justify-between ${
+                className={`bg-white rounded-2xl p-4 border transition-all flex flex-col justify-between ${
                   isCurrentlyRunning
-                    ? 'border-indigo-500 bg-indigo-950/20 shadow-lg'
-                    : 'border-slate-800/90 hover:border-slate-700'
+                    ? 'border-accent/30 bg-accent-soft shadow-lg'
+                    : 'border-line hover:border-line'
                 }`}
               >
                 <div className="space-y-2">
                   <div className="flex items-start justify-between gap-2 flex-wrap">
                     <div className="space-y-0.5">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <h5 className="font-black text-xs sm:text-sm text-white">{script.title}</h5>
+                        <h5 className="font-black text-xs sm:text-sm text-ink">{script.title}</h5>
                         {script.isCustom && (
-                          <span className="bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30 text-[9px] font-bold px-1.5 py-0.2 rounded-full">
+                          <span className="bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30 text-[11px] font-bold px-1.5 py-0.2 rounded-full">
                             ✨ Yeni Eklenen
                           </span>
                         )}
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <code className="text-[10px] text-indigo-300 font-mono bg-slate-950 px-1.5 py-0.5 rounded border border-slate-800">
+                        <code className="text-[11px] text-accent font-mono bg-white px-1.5 py-0.5 rounded border border-line">
                           {script.name}
                         </code>
                         {script.sizeBytes ? (
-                          <span className="text-[10px] text-slate-500">
+                          <span className="text-[11px] text-ink-3">
                             ({(script.sizeBytes / 1024).toFixed(1)} KB)
                           </span>
                         ) : null}
@@ -502,13 +502,13 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                     </div>
 
                     <div className="flex items-center gap-1.5 shrink-0">
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${badge.bg}`}>
+                      <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full border ${badge.bg}`}>
                         {badge.label}
                       </span>
                     </div>
                   </div>
 
-                  <p className="text-[11px] text-slate-300 leading-relaxed">{script.description}</p>
+                  <p className="text-[11px] text-ink leading-relaxed">{script.description}</p>
 
                   {/* Tags */}
                   {script.tags && script.tags.length > 0 && (
@@ -516,7 +516,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                       {script.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[9px] bg-slate-950 text-slate-400 border border-slate-800 px-1.5 py-0.2 rounded"
+                          className="text-[11px] bg-white text-ink-3 border border-line px-1.5 py-0.2 rounded"
                         >
                           #{tag}
                         </span>
@@ -526,14 +526,14 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
 
                   {/* Custom Parameter / Arg Input */}
                   <div className="pt-2">
-                    <label className="text-[10px] text-slate-400 block mb-1 font-semibold flex items-center justify-between">
+                    <label className="text-[11px] text-ink-3 block mb-1 font-semibold flex items-center justify-between">
                       <span>Çalıştırma Argümanları (Opsiyonel):</span>
                       {script.defaultArgs && (
                         <button
                           onClick={() =>
                             setCustomArgs((prev) => ({ ...prev, [script.name]: script.defaultArgs || '' }))
                           }
-                          className="text-indigo-400 hover:text-indigo-300 text-[9px] cursor-pointer"
+                          className="text-accent hover:text-accent text-[11px] cursor-pointer"
                         >
                           Varsayılana Dön ({script.defaultArgs})
                         </button>
@@ -546,13 +546,13 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                       onChange={(e) =>
                         setCustomArgs((prev) => ({ ...prev, [script.name]: e.target.value }))
                       }
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-1.5 text-[11px] font-mono text-indigo-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500"
+                      className="w-full bg-white border border-line rounded-xl px-2.5 py-1.5 text-[11px] font-mono text-accent placeholder-slate-600 focus:outline-none focus:border-accent/30"
                     />
                   </div>
                 </div>
 
                 {/* Card Footer Actions */}
-                <div className="pt-3 mt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
+                <div className="pt-3 mt-3 border-t border-line flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
                     {isCurrentlyRunning ? (
                       <span className="text-[11px] font-bold text-emerald-400 flex items-center gap-1.5 animate-pulse">
@@ -560,7 +560,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                         Çalışıyor...
                       </span>
                     ) : (
-                      <span className="text-[10px] text-slate-500">Hazır</span>
+                      <span className="text-[11px] text-ink-3">Hazır</span>
                     )}
                   </div>
 
@@ -585,7 +585,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                           setIsTerminalOpen(true);
                         }
                       }}
-                      className="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1 cursor-pointer transition-all"
+                      className="bg-canvas hover:bg-line-soft text-ink px-2.5 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1 cursor-pointer transition-all"
                       title="Bu betiğin son loglarını inceler"
                     >
                       <Eye className="w-3.5 h-3.5" />
@@ -607,7 +607,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                         type="button"
                         onClick={() => handleRunScript(script.name)}
                         disabled={isCurrentlyRunning}
-                        className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-black px-3.5 py-1.5 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
+                        className="bg-accent hover:bg-accent disabled:opacity-50 text-white font-black px-3.5 py-1.5 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
                       >
                         <Play className="w-3.5 h-3.5 fill-current" />
                         <span>Çalıştır</span>
@@ -623,18 +623,18 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
 
       {/* 3. Interactive Live Terminal Drawer */}
       {isTerminalOpen && (
-        <div className="border-t border-slate-700 bg-slate-950 flex flex-col h-72 sm:h-80 shadow-2xl shrink-0 animate-slideUp">
+        <div className="border-t border-line bg-white flex flex-col h-72 sm:h-80 shadow-2xl shrink-0 animate-slideUp">
           {/* Terminal Header */}
-          <div className="p-2.5 sm:px-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between gap-3 text-xs">
+          <div className="p-2.5 sm:px-4 bg-white border-b border-line flex items-center justify-between gap-3 text-xs">
             <div className="flex items-center gap-2 overflow-hidden">
               <Terminal className="w-4 h-4 text-emerald-400 shrink-0" />
               <div className="truncate">
-                <span className="font-bold text-white truncate">
+                <span className="font-bold text-ink truncate">
                   {terminalJob?.title || terminalJob?.name || 'Canlı Betik Konsolu'}
                 </span>
                 {terminalJob?.status && (
                   <span
-                    className={`ml-2 text-[10px] font-extrabold px-1.5 py-0.2 rounded ${
+                    className={`ml-2 text-[11px] font-extrabold px-1.5 py-0.2 rounded ${
                       terminalJob.status === 'running'
                         ? 'bg-amber-500/20 text-amber-300 animate-pulse'
                         : terminalJob.status === 'completed'
@@ -646,7 +646,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                   </span>
                 )}
                 {terminalJob?.durationMs ? (
-                  <span className="text-[10px] text-slate-400 ml-2">
+                  <span className="text-[11px] text-ink-3 ml-2">
                     ({(terminalJob.durationMs / 1000).toFixed(1)} sn)
                   </span>
                 ) : null}
@@ -654,12 +654,12 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
             </div>
 
             <div className="flex items-center gap-2 shrink-0">
-              <label className="hidden sm:flex items-center gap-1 text-[11px] text-slate-400 cursor-pointer select-none">
+              <label className="hidden sm:flex items-center gap-1 text-[11px] text-ink-3 cursor-pointer select-none">
                 <input
                   type="checkbox"
                   checked={autoScroll}
                   onChange={(e) => setAutoScroll(e.target.checked)}
-                  className="rounded w-3.5 h-3.5 text-indigo-600 bg-slate-800"
+                  className="rounded w-3.5 h-3.5 text-indigo-600 bg-canvas"
                 />
                 <span>Oto-Kaydır</span>
               </label>
@@ -680,7 +680,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                   setCopied(true);
                   setTimeout(() => setCopied(false), 2000);
                 }}
-                className="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg text-[11px] flex items-center gap-1 cursor-pointer"
+                className="bg-canvas hover:bg-line-soft text-ink px-2.5 py-1 rounded-lg text-[11px] flex items-center gap-1 cursor-pointer"
                 title="Tüm logları panoya kopyalar"
               >
                 <Copy className="w-3 h-3" />
@@ -689,7 +689,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
 
               <button
                 onClick={() => setTerminalLogs([])}
-                className="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg text-[11px] cursor-pointer"
+                className="bg-canvas hover:bg-line-soft text-ink px-2.5 py-1 rounded-lg text-[11px] cursor-pointer"
                 title="Konsol ekranını temizler"
               >
                 Temizle
@@ -697,7 +697,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
 
               <button
                 onClick={() => setIsTerminalOpen(false)}
-                className="bg-slate-800 hover:bg-slate-700 text-slate-300 p-1.5 rounded-lg text-[11px] cursor-pointer"
+                className="bg-canvas hover:bg-line-soft text-ink p-1.5 rounded-lg text-[11px] cursor-pointer"
                 title="Terminali Kapat"
               >
                 <X className="w-3.5 h-3.5" />
@@ -706,14 +706,14 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
           </div>
 
           {/* Terminal Logs View */}
-          <div className="flex-1 p-3 font-mono text-[11px] overflow-y-auto leading-relaxed bg-slate-950 text-slate-200 select-text">
+          <div className="flex-1 p-3 font-mono text-[11px] overflow-y-auto leading-relaxed bg-white text-ink select-text">
             {terminalLogs.length === 0 ? (
-              <div className="text-slate-500 py-6 text-center font-sans">
+              <div className="text-ink-3 py-6 text-center font-sans">
                 Henüz konsol çıktısı yok. Yukarıdan bir script veya otomasyon başlatın...
               </div>
             ) : (
               terminalLogs.map((log, index) => {
-                let colorClass = 'text-slate-300';
+                let colorClass = 'text-ink';
                 if (log.includes('[HATA]') || log.includes('[STDERR]') || log.includes('error') || log.includes('Error')) {
                   colorClass = 'text-rose-400 font-semibold';
                 } else if (log.includes('[BAŞARILI]') || log.includes('✓') || log.includes('BAŞARIYLA')) {
@@ -721,7 +721,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                 } else if (log.includes('[UYARI]') || log.includes('WARN')) {
                   colorClass = 'text-amber-400';
                 } else if (log.includes('🚀') || log.includes('▶️') || log.includes('BAŞLADI')) {
-                  colorClass = 'text-indigo-300 font-bold';
+                  colorClass = 'text-accent font-bold';
                 }
 
                 return (

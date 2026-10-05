@@ -184,10 +184,10 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
-      <div className="ms-modal-panel bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col border border-slate-200 overflow-hidden">
+      <div className="ms-modal-panel bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92dvh] flex flex-col border border-slate-200 overflow-hidden">
         
         {/* Header */}
-        <div className="p-4 sm:p-5 bg-gradient-to-r from-teal-800 to-indigo-900 text-white flex items-center justify-between shrink-0">
+        <div className="p-4 sm:p-5 bg-ink-surface text-white flex items-center justify-between shrink-0">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="p-1.5 bg-teal-700/60 rounded-lg">
@@ -204,7 +204,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
               <span>•</span>
               <span>Konu: <strong>{question.topic}</strong></span>
               {isStudentLocked && (
-                <span className="inline-flex items-center gap-1 bg-amber-400 text-amber-950 font-extrabold px-2 py-0.5 rounded-full text-[10px]">
+                <span className="inline-flex items-center gap-1 bg-amber-400 text-amber-950 font-extrabold px-2 py-0.5 rounded-full text-[11px]">
                   <Lock className="w-3 h-3" />
                   %90+ Öğrenci Onaylı Soru (Yalnızca Admin Değiştirebilir)
                 </span>
@@ -230,7 +230,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                   <FileText className="w-3.5 h-3.5 text-slate-500" />
                   Orijinal Ham Soru Metni
                 </span>
-                <span className="text-[10px] text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">
+                <span className="text-[11px] text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">
                   {question.sourceFile || 'PDF Kaynağı'}
                 </span>
               </div>
@@ -324,7 +324,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                 type="button"
                 onClick={handleGenerate}
                 disabled={isGenerating || !customPrompt.trim()}
-                className="bg-gradient-to-r from-teal-700 to-indigo-800 hover:from-teal-800 hover:to-indigo-900 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
+                className="bg-accent hover:from-teal-800 hover:to-indigo-900 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
               >
                 {isGenerating ? (
                   <>
@@ -417,7 +417,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
                     />
 
                     {draftCorrectAnswer === opt.key && (
-                      <span className="text-[10px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded font-extrabold shrink-0">
+                      <span className="text-[11px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded font-extrabold shrink-0">
                         Doğru Cevap
                       </span>
                     )}

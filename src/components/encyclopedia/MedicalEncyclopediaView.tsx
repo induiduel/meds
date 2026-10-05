@@ -112,6 +112,9 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Tümü');
   const [onlyAiVerified, setOnlyAiVerified] = useState(false);
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
+  // Kaydedilenler görünümü ve sıralama
+  const [onlySaved, setOnlySaved] = useState(false);
+  const [sortMode, setSortMode] = useState<'default' | 'az' | 'za' | 'kurul'>('default');
 
   // Detail Modal State
   const [activeEntry, setActiveEntry] = useState<EncyclopediaEntry | null>(() => {
@@ -167,7 +170,8 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const filteredEntries = useMemo(() => {
     const q = searchQuery.trim().toLocaleLowerCase('tr-TR');
 
-    return entries.filter((e) => {
+    const list = entries.filter((e) => {
+      if (onlySaved && !bookmarkedIds.includes(e.id)) return false;
       // Category
       if (selectedCategory !== 'all' && e.category !== selectedCategory) return false;
 
@@ -202,7 +206,13 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
 
       return true;
     });
-  }, [entries, searchQuery, selectedCategory, selectedKurul, selectedDiscipline, onlyAiVerified, selectedLetter]);
+    if (sortMode === 'default') return list;
+    const sorted = [...list];
+    if (sortMode === 'az') sorted.sort((a, b) => a.term.localeCompare(b.term, 'tr'));
+    if (sortMode === 'za') sorted.sort((a, b) => b.term.localeCompare(a.term, 'tr'));
+    if (sortMode === 'kurul') sorted.sort((a, b) => String(a.kurul).localeCompare(String(b.kurul), 'tr') || a.term.localeCompare(b.term, 'tr'));
+    return sorted;
+  }, [entries, searchQuery, selectedCategory, selectedKurul, selectedDiscipline, onlyAiVerified, selectedLetter, onlySaved, bookmarkedIds, sortMode]);
 
   // Statistics
   const stats = useMemo(() => {
@@ -239,7 +249,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   "enhancedMorphology": "Ders slaytlarındaki histopatolojik/farmakolojik kilit noktalar",
   "differentialDiagnosis": "Ayırıcı tanıda en çok karışan hastalık/ilaç ve kesin ayrım kriteri",
   "examSpotPearls": "Komite ve TUS için en kilit soru ipucu",
-  "pitfallsAndWarnings": "🔴 Sınavda en çok düşülen tuzak veya kontrendikasyon",
+  "pitfallsAndWarnings": "Sınavda en çok düşülen tuzak veya kontrendikasyon",
   "sampleExamQuestion": "Bu konuyla ilgili komite/TUS tarzı 5 şıklı soru ve cevabı"
 }
 `;
@@ -282,11 +292,11 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
         console.error('LocalStorage write error:', err);
       }
 
-      setAuditMessage('✅ Yapay zeka denetimi tamamlandı! Ders notları ve sınav spotları güncellendi.');
+      setAuditMessage('Yapay zeka denetimi tamamlandı! Ders notları ve sınav spotları güncellendi.');
       setTimeout(() => setAuditMessage(null), 4000);
     } catch (err: any) {
       console.error('AI Audit error:', err);
-      setAuditMessage(`⚠️ Denetim sırasında hata oluştu: ${err.message || 'Bilinmeyen hata'}`);
+      setAuditMessage(`Denetim sırasında hata oluştu: ${err.message || 'Bilinmeyen hata'}`);
       setTimeout(() => setAuditMessage(null), 5000);
     } finally {
       setIsAiAuditing(false);
@@ -304,17 +314,17 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   const getCategoryBadge = (cat: string) => {
     switch (cat) {
       case 'hastalik':
-        return { label: 'Hastalık', cls: 'bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/20' };
+        return { label: 'Hastalık', dot: 'bg-rose-500', cls: 'bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/20' };
       case 'ilac':
-        return { label: 'İlaç & Tedavi', cls: 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20' };
+        return { label: 'İlaç & Tedavi', dot: 'bg-blue-500', cls: 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20' };
       case 'patoloji':
-        return { label: 'Patoloji', cls: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20' };
+        return { label: 'Patoloji', dot: 'bg-emerald-500', cls: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20' };
       case 'patojen':
-        return { label: 'Patojen', cls: 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20' };
+        return { label: 'Patojen', dot: 'bg-amber-500', cls: 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20' };
       case 'genetik':
-        return { label: 'Genetik', cls: 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/20' };
+        return { label: 'Genetik', dot: 'bg-purple-500', cls: 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/20' };
       default:
-        return { label: 'Tıbbi Kavram', cls: 'bg-teal-500/10 text-teal-700 dark:text-teal-300 border-teal-500/20' };
+        return { label: 'Tıbbi Kavram', dot: 'bg-teal-500', cls: 'bg-teal-500/10 text-teal-700 dark:text-teal-300 border-teal-500/20' };
     }
   };
 
@@ -394,6 +404,33 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
               <ShieldCheck className="w-4 h-4" />
               <span className="hidden md:inline">Doğrulanmış</span>
             </button>
+
+            <button
+              type="button"
+              onClick={() => setOnlySaved((v) => !v)}
+              aria-pressed={onlySaved}
+              className={`px-3 py-2.5 text-[12.5px] font-semibold rounded-xl border transition-all flex items-center gap-1.5 cursor-pointer shrink-0 ${
+                onlySaved ? 'bg-amber-500 text-white border-amber-600' : 'bg-canvas text-ink-2 border-line hover:border-accent/40'
+              }`}
+              title="Yalnızca kaydettiğin terimleri göster"
+            >
+              <Bookmark className="w-4 h-4" fill={onlySaved ? 'currentColor' : 'none'} />
+              <span>Kaydedilenler</span>
+              <span className="tabular-nums opacity-80">{bookmarkedIds.length}</span>
+            </button>
+
+            <select
+              value={sortMode}
+              onChange={(e) => setSortMode(e.target.value as any)}
+              aria-label="Sırala"
+              title="Sırala"
+              className="px-3 py-2.5 text-[13px] font-medium bg-canvas border border-line rounded-xl outline-none text-ink cursor-pointer hover:border-accent/40"
+            >
+              <option value="default">Sıralama: önerilen</option>
+              <option value="az">A → Z</option>
+              <option value="za">Z → A</option>
+              <option value="kurul">Kurula göre</option>
+            </select>
           </div>
         </div>
 
@@ -515,85 +552,33 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
               <div
                 key={entry.id}
                 onClick={() => setActiveEntry(entry)}
-                className="group rounded-2xl border border-line hover:border-accent bg-white dark:bg-panel p-4 flex flex-col justify-between transition-all duration-150 hover:shadow-md cursor-pointer relative overflow-hidden"
+                className="group rounded-2xl border border-line hover:border-line-2 bg-white p-4 flex flex-col transition-colors cursor-pointer min-w-0"
               >
-                {/* Top Badges Bar */}
-                <div>
-                  <div className="flex items-center justify-between gap-1.5 mb-2.5">
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      <span className={`text-[11px] font-bold px-2 py-0.5 rounded-md border ${badge.cls}`}>
-                        {badge.label}
-                      </span>
-                      <span className="text-[10.5px] font-semibold px-1.5 py-0.5 rounded bg-canvas text-ink-3 border border-line">
-                        {entry.kurul}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-1">
-                      {entry.aiAudit?.verified && (
-                        <span
-                          title="Yapay zeka tarafından ders notlarıyla %100 doğrulanmıştır"
-                          className="inline-flex items-center gap-0.5 text-[10.5px] font-bold text-emerald-600 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20"
-                        >
-                          <ShieldCheck className="w-3 h-3" />
-                          <span>AI %{entry.aiAudit.accuracyScore || 99}</span>
-                        </span>
-                      )}
-
-                      <button
-                        type="button"
-                        onClick={(e) => toggleBookmark(entry.id, e)}
-                        className={`p-1 rounded-md hover:bg-canvas transition-colors cursor-pointer ${
-                          isBookmarked ? 'text-amber-500' : 'text-ink-3 hover:text-ink'
-                        }`}
-                        title={isBookmarked ? 'Yer işaretlerinden kaldır' : 'Yer işaretlerine ekle'}
-                      >
-                        <Bookmark className="w-3.5 h-3.5" fill={isBookmarked ? 'currentColor' : 'none'} />
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Title & Latin Name */}
-                  <h3 className="text-[15.5px] font-bold text-ink group-hover:text-accent transition-colors leading-snug">
-                    {entry.term}
-                  </h3>
-                  {entry.latinName && (
-                    <p className="text-[12px] text-ink-3 italic mt-0.5 font-serif line-clamp-1">
-                      {entry.latinName}
-                    </p>
+                <div className="flex items-center gap-2 text-[12px] text-ink-3 min-w-0">
+                  <span className={`shrink-0 w-1.5 h-1.5 rounded-full ${badge.dot}`} aria-hidden="true" />
+                  <span className="truncate">{badge.label} · {entry.kurul}</span>
+                  {entry.aiAudit?.verified && (
+                    <ShieldCheck className="w-3.5 h-3.5 text-ok shrink-0" aria-label="Doğrulanmış" />
                   )}
-
-                  {/* Definition Snippet */}
-                  <p className="text-[13px] text-ink-2 line-clamp-2 mt-2 leading-[1.6]">
-                    {entry.definition}
-                  </p>
-
-                  {/* Slayt Notu İpucu */}
-                  {entry.lectureContextNotes && (
-                    <div className="mt-2.5 p-2 rounded-lg bg-teal-500/5 dark:bg-teal-950/20 border border-teal-500/20 text-[11.5px] text-teal-900 dark:text-teal-200 line-clamp-2 leading-[1.5]">
-                      <span className="font-bold text-teal-700 dark:text-teal-300">📌 Ders Notu:</span> {entry.lectureContextNotes}
-                    </div>
-                  )}
-
-                  {/* Spot İncisi */}
-                  {entry.examSpotPearls && (
-                    <div className="mt-2 text-[11.5px] text-amber-800 dark:text-amber-300 flex items-start gap-1 line-clamp-1">
-                      <Lightbulb className="w-3 h-3 text-amber-600 shrink-0 mt-0.5" />
-                      <span className="truncate">{entry.examSpotPearls}</span>
-                    </div>
-                  )}
+                  <span className="flex-1" />
+                  <button
+                    type="button"
+                    onClick={(e) => toggleBookmark(entry.id, e)}
+                    className={`-m-1.5 w-8 h-8 shrink-0 rounded-lg flex items-center justify-center hover:bg-canvas transition-colors cursor-pointer ${
+                      isBookmarked ? 'text-amber-500' : 'text-ink-3 hover:text-ink'
+                    }`}
+                    aria-label={isBookmarked ? 'Yer işaretlerinden kaldır' : 'Yer işaretlerine ekle'}
+                  >
+                    <Bookmark className="w-4 h-4" fill={isBookmarked ? 'currentColor' : 'none'} />
+                  </button>
                 </div>
-
-                {/* Footer Info */}
-                <div className="pt-3 mt-3 border-t border-line/60 flex items-center justify-between text-[11.5px] text-ink-3">
-                  <span className="truncate max-w-[190px]">
-                    {entry.instructorAndSource ? entry.instructorAndSource.split('•')[0] : entry.discipline}
-                  </span>
-                  <span className="font-semibold text-accent flex items-center gap-0.5 group-hover:translate-x-0.5 transition-transform">
-                    <span>İncele</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
+                <h3 className="m-0 mt-2 text-[16px] font-semibold text-ink group-hover:text-accent transition-colors leading-snug">
+                  {entry.term}
+                </h3>
+                {entry.latinName && (
+                  <p className="m-0 text-[12.5px] text-ink-3 italic truncate">{entry.latinName}</p>
+                )}
+                <p className="m-0 mt-2 text-[14px] text-ink-2 line-clamp-3 leading-[1.6]">{entry.definition}</p>
               </div>
             );
           })}
@@ -605,7 +590,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
       {/* ========================================================= */}
       {activeEntry && (
         <div
-          className="fixed inset-0 z-[70] bg-[rgba(14,26,38,0.6)] backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 md:p-6"
+          className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.6)] backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 md:p-6"
           role="dialog"
           aria-modal="true"
         >
@@ -682,15 +667,15 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 1. Orijinal Ders Notu Bağlamı (Prof/Slayt Notu) */}
               {activeEntry.lectureContextNotes && (
-                <div className="rounded-xl p-3.5 sm:p-4 bg-teal-500/10 dark:bg-teal-950/20 border-l-4 border-l-teal-600 border border-teal-500/30 flex flex-col gap-1.5">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11.5px] font-bold uppercase tracking-wider text-teal-800 dark:text-teal-300 flex items-center gap-1.5">
-                      <GraduationCap className="w-4 h-4 text-teal-600" />
-                      <span>Fakülte Ders Notu & Slayt Bağlamı</span>
+                <div className="rounded-xl p-3.5 sm:p-4 bg-teal-500/10 dark:bg-teal-950/20 flex flex-col gap-2 min-w-0">
+                  <div className="flex flex-col gap-0.5 min-w-0">
+                    <span className="text-[13px] font-semibold text-teal-800 dark:text-teal-300 flex items-center gap-1.5">
+                      <GraduationCap className="w-4 h-4 text-teal-600 shrink-0" />
+                      <span>Ders notu</span>
                     </span>
                     {activeEntry.instructorAndSource && (
-                      <span className="text-[11px] font-mono text-teal-700 dark:text-teal-300 bg-white/60 dark:bg-panel px-2 py-0.5 rounded border border-teal-500/20">
-                        {activeEntry.instructorAndSource}
+                      <span className="text-[12.5px] text-ink-3 [overflow-wrap:anywhere]">
+                        {activeEntry.instructorAndSource.replace(/\.txt\b/gi, '').replace(/^\d+\)\s*/, '')}
                       </span>
                     )}
                   </div>
@@ -734,12 +719,12 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                 </div>
               )}
 
-              {/* 5. 🔴 Sınav Tuzağı & Dikkat Edilmesi Gerekenler */}
+              {/* 5. Sınav Tuzağı & Dikkat Edilmesi Gerekenler */}
               {activeEntry.pitfallsAndWarnings && (
                 <div className="rounded-xl p-3.5 sm:p-4 bg-rose-500/10 dark:bg-rose-950/30 border-l-4 border-l-rose-600 border border-rose-500/20 flex flex-col gap-1.5">
                   <span className="text-[11.5px] font-bold uppercase tracking-wider text-rose-900 dark:text-rose-300 flex items-center gap-1.5">
                     <AlertTriangle className="w-4 h-4 text-rose-600" />
-                    <span>🔴 Sınav Tuzağı & Dikkat Edilmesi Gerekenler</span>
+                    <span>Sınav Tuzağı & Dikkat Edilmesi Gerekenler</span>
                   </span>
                   <p className="m-0 text-[13px] sm:text-[13.5px] text-rose-950 dark:text-rose-100 leading-relaxed font-medium">
                     {activeEntry.pitfallsAndWarnings}
@@ -747,12 +732,12 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                 </div>
               )}
 
-              {/* 6. 💡 Hoca İncisi & Sınav Spotları */}
+              {/* 6. Hoca İncisi & Sınav Spotları */}
               {activeEntry.examSpotPearls && (
                 <div className="rounded-xl p-3.5 sm:p-4 bg-amber-500/10 dark:bg-amber-950/30 border-l-4 border-l-amber-600 border border-amber-500/20 flex flex-col gap-1.5">
                   <span className="text-[11.5px] font-bold uppercase tracking-wider text-amber-900 dark:text-amber-300 flex items-center gap-1.5">
                     <Lightbulb className="w-4 h-4 text-amber-600" />
-                    <span>💡 Hoca İncisi & Sınav Spotu</span>
+                    <span>Hoca İncisi & Sınav Spotu</span>
                   </span>
                   <p className="m-0 text-[13px] sm:text-[13.5px] text-amber-950 dark:text-amber-100 leading-relaxed font-medium">
                     {activeEntry.examSpotPearls}

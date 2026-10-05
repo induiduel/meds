@@ -20,6 +20,9 @@ import {
   Layers
 } from 'lucide-react';
 import summariesMetaData from '../data/summaries_meta.json';
+// Resmi ders programı + kaynak PDF eşleşmesi: scripts/pipeline/10-enrich-summaries.mjs üretir
+import summariesEnrichment from '../data/summaries_enrichment.json';
+import curriculumDisciplines from '../data/curriculum_disciplines.json';
 import { SummaryArtifactReader } from './SummaryArtifactReader';
 
 export interface SummaryMeta {
@@ -33,7 +36,24 @@ export interface SummaryMeta {
   keyPoints: string[];
   charCount: number;
   readingTimeMinutes: number;
+  /** Kaynak PDF'in oluşturulma yılı (biliniyorsa) */
+  sourceYear?: number;
+  sourceDate?: string;
+  pdfName?: string;
 }
+
+type Enrichment = { lessonTitle?: string; discipline?: string; instructor?: string; sourceYear?: number; sourceDate?: string; pdfName?: string };
+const ENRICH = summariesEnrichment as Record<string, Enrichment>;
+const KURUL_DISCIPLINES = curriculumDisciplines as Record<string, string[]>;
+
+/** Dosya adından türemiş başlıkları toparlar: baştaki sıra numarası, "D3", alt çizgi vb. */
+const cleanTitle = (t: string) =>
+  t
+    .replace(/^\s*\d+\s*[).\-]?\s*/, '')
+    .replace(/\b(d\d+|son|kopya|\(\d+\))\b/gi, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+    .replace(/^\p{Ll}/u, (c) => c.toLocaleUpperCase('tr')) || t;
 
 export interface SummaryDetail extends SummaryMeta {
   content?: string;
@@ -41,6 +61,8 @@ export interface SummaryDetail extends SummaryMeta {
 
 interface LectureSummariesViewProps {
   onOpenPdfModal?: () => void;
+  /** Aramadan gelince doğrudan açılacak özet */
+  initialSummaryId?: string;
 }
 
 const KURUL_LABELS: Record<number, string> = {
@@ -62,7 +84,7 @@ const DISCIPLINE_COLORS: Record<string, { bg: string; text: string; border: stri
   'İç Hastalıkları': { bg: 'bg-blue-50', text: 'text-blue-800', border: 'border-blue-200' },
 };
 
-export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal }) => {
+export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal, initialSummaryId }) => {
   const [selectedKurul, setSelectedKurul] = useState<number | 'all'>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -73,14 +95,36 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   const [copied, setCopied] = useState(false);
 
   // All metadata list
-  const summaries: SummaryMeta[] = summariesMetaData as SummaryMeta[];
+  // Ders programından gelen gerçek ders adı, branş ve öğretim üyesi; kaynak PDF yılı
+  const summaries: SummaryMeta[] = useMemo(
+    () =>
+      (summariesMetaData as SummaryMeta[]).map((s) => {
+        const e = ENRICH[s.id] || {};
+        return {
+          ...s,
+          title: e.lessonTitle || cleanTitle(s.title),
+          discipline: e.discipline || s.discipline,
+          instructor: e.instructor || s.instructor,
+          sourceYear: e.sourceYear,
+          sourceDate: e.sourceDate,
+          pdfName: e.pdfName,
+        };
+      }),
+    []
+  );
 
-  // Unique disciplines
+  // Kurul seçiliyse yalnızca o kurulda verilen dersler (resmi programdan; özeti olanlar)
   const disciplines = useMemo(() => {
-    const set = new Set<string>();
-    summaries.forEach((s) => s.discipline && set.add(s.discipline));
-    return Array.from(set).sort();
-  }, [summaries]);
+    const have = new Set(summaries.filter((s) => selectedKurul === 'all' || s.kurul === selectedKurul).map((s) => s.discipline).filter(Boolean));
+    const program = selectedKurul === 'all' ? null : KURUL_DISCIPLINES[String(selectedKurul)];
+    const list = program ? program.filter((d) => have.has(d)) : Array.from(have);
+    return list.sort((a, b) => a.localeCompare(b, 'tr'));
+  }, [summaries, selectedKurul]);
+
+  useEffect(() => {
+    if (selectedDiscipline !== 'all' && !disciplines.includes(selectedDiscipline)) setSelectedDiscipline('all');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [disciplines]);
 
   // Filtered summaries
   const filteredSummaries = useMemo(() => {
@@ -153,6 +197,13 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       setIsLoadingContent(false);
     }
   };
+  useEffect(() => {
+    if (!initialSummaryId) return;
+    const meta = summaries.find((x) => x.id === initialSummaryId);
+    if (meta) handleOpenSummary(meta);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialSummaryId]);
+
 
   const handleCopyMarkdown = () => {
     if (!activeSummary?.content) return;
@@ -237,7 +288,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
             onChange={(e) => setSelectedDiscipline(e.target.value)}
             className="h-10 border border-line-2 rounded-[10px] px-3 text-[14px] bg-white cursor-pointer sm:w-[220px] min-w-0"
           >
-            <option value="all">Tüm branşlar ({disciplines.length})</option>
+            <option value="all">{selectedKurul === 'all' ? 'Tüm dersler' : `Kurul ${selectedKurul} dersleri`} ({disciplines.length})</option>
             {disciplines.map((d) => (
               <option key={d} value={d}>
                 {d}
@@ -269,6 +320,11 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
                 <span className="flex items-center gap-1.5 min-w-0">
                   <span className="shrink-0 h-6 px-2 rounded-full bg-canvas text-ink-2 text-[12px] font-semibold inline-flex items-center">Kurul {s.kurul}</span>
                   <span className="min-w-0 h-6 px-2 rounded-full bg-accent-soft text-accent text-[12px] font-semibold inline-flex items-center truncate">{s.discipline}</span>
+                  {s.sourceYear && (
+                    <span className="ml-auto shrink-0 text-[12px] text-ink-3 tabular-nums" title={s.pdfName ? `${s.pdfName} · ${s.sourceDate}` : s.sourceDate}>
+                      {s.sourceYear}
+                    </span>
+                  )}
                 </span>
                 <span className="text-[16px] font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{s.title}</span>
                 {s.instructor && (

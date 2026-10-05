@@ -38,6 +38,8 @@ interface UserAuthModalProps {
   onAuthSuccess: (user: AppUser, token?: string | null) => void;
   initialMode?: 'login' | 'register' | 'admin';
   mandatory?: boolean;
+  /** Tanıtım akışının içinde, katmansız ve başlıksız çizilir */
+  embedded?: boolean;
 }
 
 export const UserAuthModal: React.FC<UserAuthModalProps> = ({
@@ -46,6 +48,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   onAuthSuccess,
   initialMode = 'register',
   mandatory = false,
+  embedded = false,
 }) => {
   const [mode, setMode] = useState<'login' | 'register' | 'admin'>(initialMode);
   
@@ -282,13 +285,15 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
 
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
+    <div className={embedded ? 'w-full' : 'ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn'}>
       <div 
-        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden relative max-h-[92vh] flex flex-col"
+        className={embedded
+          ? 'bg-white rounded-2xl border border-line w-full overflow-hidden relative flex flex-col'
+          : 'ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden relative max-h-[92dvh] flex flex-col'}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 p-5 text-white flex items-center justify-between shrink-0">
+        {!embedded && <div className="bg-ink-surface p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="p-2 rounded-xl bg-white/10 text-teal-300">
               {mode === 'admin' ? <ShieldCheck className="w-5 h-5" /> : <User className="w-5 h-5" />}
@@ -308,7 +313,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
           >
             <X className="w-5 h-5" />
           </button>
-        </div>
+        </div>}
 
         {/* Tab switchers */}
         <div className="flex border-b border-slate-200 bg-slate-50 text-xs font-semibold shrink-0">
@@ -449,15 +454,15 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
           {mode === 'register' && (
             <div className="space-y-4">
               {/* Tanıtım ve Bilgilendirme Ekranı / Kartı */}
-              <div className="bg-gradient-to-br from-teal-50 via-emerald-50 to-slate-50 border border-teal-200/80 rounded-xl p-3.5 shadow-2xs">
+              {!embedded && <div className="bg-canvas border border-teal-200/80 rounded-xl p-3.5 shadow-2xs">
                 <div className="flex items-center gap-2 mb-1.5 text-teal-900 font-bold text-xs">
                   <GraduationCap className="w-4 h-4 text-teal-700 shrink-0" />
-                  <span>MedSoru Öğrenci Portalı & Soru Bankası</span>
+                  <span>MeDSor Öğrenci Portalı & Soru Bankası</span>
                 </div>
                 <p className="text-[11px] text-slate-600 leading-relaxed">
-                  MedSoru; Tıp Fakültesi amfi ders slaytları, kurul çıkmış soruları ve doğrulanmış soru hafızasını birleştiren otonom bir tıp çalışma ortamıdır. Soru ekleyebilir, sınav provası yapabilir ve ders slaytlarını doğrudan inceleyebilirsiniz.
+                  MeDSor; Tıp Fakültesi amfi ders slaytları, kurul çıkmış soruları ve doğrulanmış soru hafızasını birleştiren otonom bir tıp çalışma ortamıdır. Soru ekleyebilir, sınav provası yapabilir ve ders slaytlarını doğrudan inceleyebilirsiniz.
                 </p>
-                <div className="mt-2.5 pt-2 border-t border-teal-200/60 flex items-center justify-between text-[10px] text-teal-800 font-medium">
+                <div className="mt-2.5 pt-2 border-t border-teal-200/60 flex items-center justify-between text-[11px] text-teal-800 font-medium">
                   <span className="flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-teal-600" />
                     Ad Soyad, Öğrenci No & E-posta zorunludur
@@ -466,7 +471,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                     Dönem 3
                   </span>
                 </div>
-              </div>
+              </div>}
 
               {verificationStep ? (
                 /* E-posta Doğrulama Adımı */
@@ -491,7 +496,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                       className="w-full text-center text-xl tracking-widest font-mono py-2.5 bg-white border border-teal-500 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-teal-500/20"
                       autoFocus
                     />
-                    <p className="text-[10px] text-center text-slate-500 mt-1">
+                    <p className="text-[11px] text-center text-slate-500 mt-1">
                       (Geliştirme / Test aşamasında: <strong>123456</strong> kodunu girebilirsiniz)
                     </p>
                   </div>
@@ -533,7 +538,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                         className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
                       />
                     </div>
-                    <p className="text-[10px] text-slate-500 mt-0.5">
+                    <p className="text-[11px] text-slate-500 mt-0.5">
                       Lütfen kendi gerçek ad ve soyadınızı giriniz. Dr. House gibi dizi karakteri veya fakülte hoca isimleri yasaktır.
                     </p>
                   </div>
@@ -560,7 +565,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                         className="w-full pl-9 pr-3 py-2 text-sm font-mono border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
                       />
                     </div>
-                    <p className="text-[10px] text-slate-400 mt-0.5">
+                    <p className="text-[11px] text-slate-400 mt-0.5">
                       Tıp Fakültesi öğrenci numaranız zorunludur. Rakamlar otomatik filtrelenir.
                     </p>
                   </div>
@@ -580,8 +585,8 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                         className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-hidden focus:border-teal-600"
                       />
                     </div>
-                    <p className="text-[10px] text-emerald-700 mt-0.5 font-medium">
-                      🎉 Kayıt sonrası bu adrese aktivasyon kodu ve hoş geldiniz e-postası iletilecektir.
+                    <p className="text-[11px] text-emerald-700 mt-0.5 font-medium">
+                      Kayıt sonrası bu adrese aktivasyon kodu ve hoş geldiniz e-postası iletilecektir.
                     </p>
                   </div>
 
@@ -658,7 +663,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                     <button
                       type="button"
                       onClick={copyDomain}
-                      className="px-2 py-1 rounded bg-rose-100 hover:bg-rose-200 text-rose-800 font-sans text-[10px] font-semibold flex items-center gap-1 cursor-pointer shrink-0"
+                      className="px-2 py-1 rounded bg-rose-100 hover:bg-rose-200 text-rose-800 font-sans text-[11px] font-semibold flex items-center gap-1 cursor-pointer shrink-0"
                     >
                       {copiedDomain ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
                       <span>{copiedDomain ? 'Kopyalandı' : 'Kopyala'}</span>
@@ -733,7 +738,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
                     <span>Popup engelleniyorsa: Yönlendirme (Redirect) ile Aç</span>
                   </button>
 
-                  <p className="text-[10px] text-slate-400 text-center">
+                  <p className="text-[11px] text-slate-400 text-center">
                     Giriş hesabı mutlaka <strong className="text-slate-600 font-mono">{ADMIN_EMAIL}</strong> olmalıdır.
                   </p>
                 </div>

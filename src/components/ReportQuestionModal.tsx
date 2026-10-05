@@ -73,7 +73,7 @@ export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ questi
         role="dialog"
         aria-modal="true"
         aria-labelledby="report-title"
-        className="relative w-full sm:max-w-[540px] max-h-[94dvh] sm:max-h-[90vh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
+        className="relative w-full sm:max-w-[540px] max-h-[94dvh] sm:max-h-[90dvh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
       >
         <header className="relative flex items-center gap-3 px-5 pt-4 pb-3">
           <span className="sm:hidden absolute left-1/2 -translate-x-1/2 top-1.5 w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />

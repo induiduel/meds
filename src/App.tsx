@@ -27,8 +27,11 @@ import { QuickAddHero, committeeShortLabel, questionStemText } from './component
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { AppRail } from './components/AppRail';
 import { PageHeader } from './components/ui/PageHeader';
+import { LearnFab } from './components/learn/LearnFab';
+import { SplashScreen, Onboarding } from './components/onboarding/Onboarding';
 import { SectionLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
+import { TooltipHost } from './components/ui/TooltipHost';
 
 // Lazy-loaded Views (Split into separate on-demand chunks)
 const PracticeMode = React.lazy(() => import('./components/PracticeMode').then(m => ({ default: m.PracticeMode })));
@@ -61,6 +64,7 @@ const AiQuotaAlertModal = React.lazy(() => import('./components/AiQuotaAlertModa
 const LectureSummariesView = React.lazy(() => import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView })));
 const TranscriptionsView = React.lazy(() => import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView })));
 const FlashcardsView = React.lazy(() => import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView })));
+const SearchView = React.lazy(() => import('./components/search/SearchView').then(m => ({ default: m.SearchView })));
 const InteractiveDeckView = React.lazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
 const MedicalEncyclopediaView = React.lazy(() => import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView })));
 const ManageConsole = React.lazy(() => import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole })));
@@ -174,6 +178,20 @@ export default function App() {
       return false;
     }
   });
+  // İlk açılış: splash her açılışta kısa sürer; kayıtsız kullanıcıya tanıtım + kayıt gösterilir
+  const [showSplash, setShowSplash] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(() => isAuthModalOpen);
+  const [justAddedId, setJustAddedId] = useState<string | null>(null);
+  const [searchPageQuery, setSearchPageQuery] = useState<string>(() => (initialRoute.route === 'search' ? initialRoute.param || '' : ''));
+  const [openSummaryId, setOpenSummaryId] = useState<string | undefined>(undefined);
+  const [searchFocusId, setSearchFocusId] = useState<string | undefined>(undefined);
+  const openSearchPage = useCallback((q: string, focusId?: string) => {
+    setSearchPageQuery(q);
+    setSearchFocusId(focusId);
+    setActiveTabState('search');
+    writeLocation('search', q || undefined);
+    window.scrollTo({ top: 0 });
+  }, []);
   const [authModalInitialMode, setAuthModalInitialMode] = useState<'login' | 'register' | 'admin'>('register');
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [isEditQuestionModalOpen, setIsEditQuestionModalOpen] = useState(false);
@@ -241,6 +259,7 @@ export default function App() {
     const onPop = () => {
       const { route, param } = parseLocation();
       setActiveTabState(route);
+      if (route === 'search') setSearchPageQuery(param || '');
       if (route === 'learn') {
         setSelectedLearnDeckId(param);
         setSelectedLearnSlideNumber(undefined);
@@ -252,7 +271,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    document.title = activeTab === 'quick_add' ? 'MedSoru · Soru ekle' : `${ROUTE_TITLES[activeTab]} · MedSoru`;
+    document.title = activeTab === 'quick_add' ? 'MeDSor · Soru ekle' : `${ROUTE_TITLES[activeTab]} · MeDSor`;
   }, [activeTab]);
 
   // Save selectedCommitteeId
@@ -732,6 +751,7 @@ export default function App() {
 
       // Anında arayüze yansıt (0ms Optimistic UI)
       if (savedQuestion) {
+        setJustAddedId(savedQuestion.id);
         setQuestions((prev) => {
           const idx = prev.findIndex((q) => q.id === savedQuestion.id);
           if (idx >= 0) {
@@ -939,10 +959,42 @@ export default function App() {
     }
   };
 
+  const handleAuthSuccess = (user: AppUser, token?: string | null) => {
+    setCurrentUser(user);
+    if (token) setAccessToken(token);
+    safeStorage.setItem('medsoru_user_registered', 'true');
+    setIsAuthModalOpen(false);
+    setShowOnboarding(false);
+    if (isAdminUser(user)) {
+      setActiveTab('admin');
+    }
+  };
+
+  // Yeni soru eklenince: listede soruya (yoksa sayfa başına) kaydır ve kısa vurgula
+  useEffect(() => {
+    if (!justAddedId) return;
+    const t = window.setTimeout(() => {
+      const el = document.querySelector<HTMLElement>(`[data-qid="${CSS.escape(justAddedId)}"]`);
+      const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+      if (el) {
+        el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        el.classList.add('ms-just-added');
+        window.setTimeout(() => el.classList.remove('ms-just-added'), 1900);
+      } else {
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      }
+      setJustAddedId(null);
+    }, 120);
+    return () => window.clearTimeout(t);
+  }, [justAddedId, questions]);
+
   return (
     <GlossaryProvider>
-      <div className="min-h-screen bg-canvas text-ink flex flex-col font-sans antialiased">
+      {showSplash && <SplashScreen onDone={() => setShowSplash(false)} />}
+      {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} />}
+      <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
+      <TooltipHost />
       {activeTab === 'practice' ? (
         <Suspense fallback={<ViewFallback />}>
           <PracticeMode
@@ -1005,14 +1057,11 @@ export default function App() {
       <>
       {/* v3 shell: icon rail on tablet/desktop, bottom tabs on phones */}
       <AppRail activeTab={activeTab} setActiveTab={setActiveTab} isAdmin={isAdmin} />
-      <div className="md:pl-[76px] lg:pl-0 flex-1 flex flex-col min-w-0">
+      <div className="ms-shell md:pl-[76px] lg:pl-[232px] flex-1 flex flex-col min-w-0">
       {/* Navigation Header with Google Auth & Drive */}
       <Header
         searchQuery={searchQuery}
-        onSearch={(q) => {
-          setSearchQuery(q);
-          setActiveTab('questions');
-        }}
+        onSearch={(q, focusId) => openSearchPage(q, focusId)}
         committees={committees}
         selectedCommitteeId={selectedCommitteeId}
         onSelectCommittee={(id) => setSelectedCommitteeId(id)}
@@ -1051,7 +1100,7 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-[1280px] w-full mx-auto px-3 sm:px-8 pt-4 sm:pt-6 flex flex-col gap-4 sm:gap-5 pb-28 md:pb-12">
+      <main key={activeTab} className={`ms-view-enter min-w-0 flex-1 max-w-[1240px] w-full mx-auto px-4 sm:px-6 lg:px-10 pt-4 sm:pt-6 flex flex-col gap-4 sm:gap-5 ${activeTab === 'ai_chat' ? 'ms-chat-main pb-[84px] md:pb-4' : 'pb-28 md:pb-12'}`}>
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
@@ -1130,6 +1179,10 @@ export default function App() {
         {/* TAB: Learn / İnteraktif Ses & Slayt Hub'ı */}
         {activeTab === 'learn' && (
           <Suspense fallback={<ViewFallback />}>
+            <LearnFab
+              onOpenGlossary={() => setActiveTab('glossary')}
+              onOpenPdf={() => { setPdfSlideTarget(null); setIsPdfModalOpen(true); }}
+            >
             <InteractiveDeckView
               initialDeckId={selectedLearnDeckId}
               initialSlideNumber={selectedLearnSlideNumber}
@@ -1143,6 +1196,34 @@ export default function App() {
                 setIsPdfModalOpen(true);
               }}
               onSelectCommittee={(id) => setSelectedCommitteeId(id)}
+            />
+            </LearnFab>
+          </Suspense>
+        )}
+
+        {activeTab === 'search' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SearchView
+              initialQuery={searchPageQuery}
+              focusId={searchFocusId}
+              committeeId={selectedCommitteeId}
+              onQueryChange={(q) => { setSearchPageQuery(q); writeLocation('search', q || undefined, true); }}
+              onOpenSource={(hit) => {
+                if (hit.documentType === 'past_question' || hit.documentType === 'deepseek_contribution') {
+                  setPastExamsSearchQuery(hit.documentId);
+                  setActiveTab('past_exams');
+                } else if (hit.documentType === 'summary') {
+                  setOpenSummaryId(hit.documentId);
+                  setActiveTab('summaries');
+                } else if (hit.documentType === 'transcript') {
+                  setActiveTab('transcripts');
+                } else {
+                  // Havuz sorusu ve öğrenci katkısı chunk'larında documentId soru kimliğidir
+                  const target = questions.find((q) => q.id === hit.documentId);
+                  if (target) openQuestion(target);
+                  else { setSearchQuery(''); setActiveTab('questions'); }
+                }
+              }}
             />
           </Suspense>
         )}
@@ -1271,6 +1352,7 @@ export default function App() {
             ) : (
               <div className="flex flex-col gap-3 sm:gap-5">
                 {displayedQuestions.map((q) => (
+                  <div key={q.id} data-qid={q.id} className="scroll-mt-20 min-w-0">
                   <QuestionCard
                     key={q.id}
                     question={q}
@@ -1295,6 +1377,7 @@ export default function App() {
                     onSetClaimedAnswer={handleSetClaimedAnswer}
                     isReconstructing={!!reconstructingMap[q.id]}
                   />
+                  </div>
                 ))}
                 {poolQuestions.length > visibleCount && (
                   <div className="text-center py-4">
@@ -1407,7 +1490,7 @@ export default function App() {
         {/* TAB 7: Amfi Ders Özetleri & Spot Bilgiler */}
         {activeTab === 'summaries' && (
           <Suspense fallback={<ViewFallback />}>
-            <LectureSummariesView onOpenPdfModal={() => setIsPdfModalOpen(true)} />
+            <LectureSummariesView onOpenPdfModal={() => setIsPdfModalOpen(true)} initialSummaryId={openSummaryId} />
           </Suspense>
         )}
 
@@ -1430,6 +1513,7 @@ export default function App() {
           <Suspense fallback={<ViewFallback />}>
             <LocalAiChatView
               currentUser={currentUser}
+              isAdmin={isAdmin}
               onNavigateToQuestion={(qId) => {
                 setPastExamsSearchQuery(qId);
                 setActiveTab('past_exams');
@@ -1486,10 +1570,10 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="hidden lg:block border-t border-line bg-white print:hidden">
+      <footer className="hidden border-t border-line bg-white print:hidden">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-5 flex flex-col sm:flex-row sm:justify-between gap-3 text-[13px] text-ink-3">
           <span>
-            MedSoru · Tıp Dönem 3 kurul soru havuzu
+            MeDSor · Tıp Dönem 3 kurul soru havuzu
             {currentUser ? ` · ${currentUser.email}${isAdmin ? ' (yönetici)' : ''}` : ''}
           </span>
           <span className="flex flex-wrap gap-5">
@@ -1635,22 +1719,14 @@ export default function App() {
       )}
 
       {/* User Login/Register Modal */}
-      {isAuthModalOpen && (
+      {isAuthModalOpen && !showOnboarding && (
         <Suspense fallback={null}>
           <UserAuthModal
             isOpen={isAuthModalOpen}
             onClose={() => setIsAuthModalOpen(false)}
             initialMode={authModalInitialMode}
             mandatory={!currentUser}
-            onAuthSuccess={(user, token) => {
-              setCurrentUser(user);
-              if (token) setAccessToken(token);
-              safeStorage.setItem('medsoru_user_registered', 'true');
-              setIsAuthModalOpen(false);
-              if (isAdminUser(user)) {
-                setActiveTab('admin');
-              }
-            }}
+            onAuthSuccess={handleAuthSuccess}
           />
         </Suspense>
       )}

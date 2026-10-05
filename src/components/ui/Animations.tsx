@@ -2,7 +2,7 @@ import React from 'react';
 
 /**
  * Small hand-drawn SVG animations (no external assets). Keyframes live in index.css
- * under "MedSoru animations" and are disabled for prefers-reduced-motion.
+ * under "MeDSor animations" and are disabled for prefers-reduced-motion.
  */
 
 /** Two-tone capsule mascot that bounces and blinks. The default "please wait". */

@@ -217,7 +217,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               <span className="font-semibold text-white truncate max-w-[200px] sm:max-w-xs md:max-w-md" title={displayName}>
                 {displayName}
               </span>
-              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 shrink-0">
+              <span className="text-[11px] font-mono px-1.5 py-0.2 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 shrink-0">
                 PDF
               </span>
             </div>
@@ -305,7 +305,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               >
                 <ZoomOut className="w-3 h-3" />
               </button>
-              <span className="px-1 text-[10px] font-mono text-slate-300">{zoom}%</span>
+              <span className="px-1 text-[11px] font-mono text-slate-300">{zoom}%</span>
               <button
                 type="button"
                 onClick={() => setZoom((z) => Math.min(200, z + 15))}
@@ -429,7 +429,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
 
           {/* Direct Page Input */}
           <form onSubmit={handlePageInputSubmit} className="flex items-center gap-1 ml-1">
-            <span className="text-slate-500 font-mono text-[10px]">S:</span>
+            <span className="text-slate-500 font-mono text-[11px]">S:</span>
             <input
               type="number"
               min="1"

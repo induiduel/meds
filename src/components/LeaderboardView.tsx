@@ -215,7 +215,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
       .toLocaleUpperCase('tr-TR') || '?';
 
   return (
-    <div className="w-full max-w-[880px] mx-auto flex flex-col gap-3 sm:gap-4 min-w-0">
+    <div className="w-full flex flex-col gap-3 sm:gap-4 min-w-0">
       <PageHeader
         eyebrow="Topluluk"
         title="Sıralama"

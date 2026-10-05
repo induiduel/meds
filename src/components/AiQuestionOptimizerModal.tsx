@@ -268,12 +268,12 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
-      <div className="ms-modal-panel relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-teal-200/80 flex flex-col max-h-[92vh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+      <div className="ms-modal-panel relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-teal-200/80 flex flex-col max-h-[92dvh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
         
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-cyan-900 px-5 py-4 text-white flex items-center justify-between shrink-0 shadow-sm border-b border-teal-700/50">
+        <div className="bg-ink-surface px-5 py-4 text-white flex items-center justify-between shrink-0 shadow-sm border-b border-teal-700/50">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-400 to-cyan-300 text-teal-950 flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 rounded-xl bg-accent text-teal-950 flex items-center justify-center shadow-md">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
@@ -305,7 +305,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
           <div className="lg:col-span-5 flex flex-col gap-4">
             
             {/* Matched Lecture Note Card */}
-            <div className="bg-gradient-to-br from-emerald-50/70 to-teal-50/50 border border-emerald-200/80 rounded-xl p-3.5 shadow-2xs">
+            <div className="bg-canvas border border-emerald-200/80 rounded-xl p-3.5 shadow-2xs">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-900">
                   <BookMarked className="w-4 h-4 text-emerald-600" />
@@ -396,7 +396,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                   <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
                   <span>Öğrenci / Kullanıcı Ek Yönlendirmesi (İsteğe Bağlı):</span>
                 </label>
-                <span className="text-[10px] text-slate-400">İpucu veya Hoca Vurgusu</span>
+                <span className="text-[11px] text-slate-400">İpucu veya Hoca Vurgusu</span>
               </div>
               <textarea
                 value={studentNotes}
@@ -413,7 +413,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                     key={idx}
                     type="button"
                     onClick={() => handleApplyQuickPrompt(qp)}
-                    className="text-[10px] bg-slate-100 hover:bg-teal-50 hover:text-teal-700 text-slate-600 border border-slate-200 px-2 py-1 rounded-md transition-all text-left cursor-pointer"
+                    className="text-[11px] bg-slate-100 hover:bg-teal-50 hover:text-teal-700 text-slate-600 border border-slate-200 px-2 py-1 rounded-md transition-all text-left cursor-pointer"
                   >
                     + {qp.slice(0, 42)}...
                   </button>
@@ -465,7 +465,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                       placeholder="Boş bırakılırsa sunucudaki anahtar havuzu çalışır"
                       className="w-full text-xs p-2 border border-slate-300 rounded-lg"
                     />
-                    <p className="text-[10px] text-slate-400 mt-0.5">
+                    <p className="text-[11px] text-slate-400 mt-0.5">
                       Boş bırakırsanız sistemdeki otomatik havuz (Ücretsiz + Yedek) kullanılır.
                     </p>
                   </div>
@@ -481,7 +481,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
               className={`w-full py-3 px-4 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer ${
                 isOptimizing
                   ? 'bg-teal-700 opacity-90 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-teal-600 to-cyan-700 hover:from-teal-700 hover:to-cyan-800 active:scale-[0.99]'
+                  : 'bg-accent hover:from-teal-700 hover:to-cyan-800 active:scale-[0.99]'
               }`}
             >
               {isOptimizing ? (
@@ -590,7 +590,7 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                   <FileText className="w-3.5 h-3.5 text-teal-600" />
                   <span>Resmi Sınav Soru Kökü:</span>
                 </label>
-                <span className="text-[10px] text-slate-400">Saf ve temiz sınav metni</span>
+                <span className="text-[11px] text-slate-400">Saf ve temiz sınav metni</span>
               </div>
               <textarea
                 value={draftStem}
@@ -643,12 +643,12 @@ const AiQuestionOptimizerContent: React.FC<AiQuestionOptimizerModalProps & { que
                         placeholder={`${opt.key} şıkkı metni...`}
                       />
                       {opt.isAiFilled && (
-                        <span className="text-[10px] bg-cyan-100 text-cyan-800 px-1.5 py-0.5 rounded font-semibold shrink-0">
+                        <span className="text-[11px] bg-cyan-100 text-cyan-800 px-1.5 py-0.5 rounded font-semibold shrink-0">
                           AI Çeldirici
                         </span>
                       )}
                       {isCorrect && (
-                        <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold shrink-0 flex items-center gap-1">
+                        <span className="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold shrink-0 flex items-center gap-1">
                           <Check className="w-3 h-3" /> Doğru
                         </span>
                       )}

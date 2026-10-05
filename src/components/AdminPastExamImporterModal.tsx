@@ -264,9 +264,9 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-      <div className="ms-modal-panel bg-white rounded-2xl w-full max-w-5xl shadow-2xl border border-slate-200 overflow-hidden my-auto flex flex-col max-h-[92vh]">
+      <div className="ms-modal-panel bg-white rounded-2xl w-full max-w-5xl shadow-2xl border border-slate-200 overflow-hidden my-auto flex flex-col max-h-[92dvh]">
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-950 via-teal-900 to-slate-900 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
+        <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 border border-teal-400/30 flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-teal-300" />
@@ -276,7 +276,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
                 <h3 className="font-bold text-sm sm:text-base">
                   Çıkmış Soru Yükleme & Yapay Zeka Ayrıştırıcı
                 </h3>
-                <span className="bg-teal-500/20 text-teal-200 border border-teal-400/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-teal-500/20 text-teal-200 border border-teal-400/30 text-[11px] font-bold px-2 py-0.5 rounded-full">
                   Admin Aracı
                 </span>
               </div>
@@ -464,7 +464,7 @@ Cevap: A
             <button
               onClick={handleParseQuestions}
               disabled={isParsing || isImporting || (!rawText.trim() && !uploadedFileBase64)}
-              className="bg-gradient-to-r from-teal-700 to-emerald-700 hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer active:scale-95"
+              className="bg-accent hover:from-teal-800 hover:to-emerald-800 disabled:opacity-50 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer active:scale-95"
             >
               {isParsing ? (
                 <>
@@ -488,14 +488,14 @@ Cevap: A
           {/* Staging / Parsed Questions List */}
           {parsedQuestions.length > 0 && (
             <div className="space-y-4 pt-4 border-t border-slate-200">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-gradient-to-r from-teal-50 to-emerald-50 p-3.5 rounded-xl border border-teal-300 shadow-2xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-canvas p-3.5 rounded-xl border border-teal-300 shadow-2xs">
                 <div className="space-y-0.5">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700" />
                     <span className="font-bold text-teal-950 text-xs">
                       {parsedQuestions.length} Soru Tespit Edildi ({examYear})
                     </span>
-                    <span className="bg-teal-700 text-white font-mono text-[10px] font-bold px-2 py-0.5 rounded-full">
+                    <span className="bg-teal-700 text-white font-mono text-[11px] font-bold px-2 py-0.5 rounded-full">
                       Beğeniler: 0
                     </span>
                   </div>
@@ -532,7 +532,7 @@ Cevap: A
                   >
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <div className="flex items-center gap-2">
-                        <span className="bg-slate-900 text-white font-black px-2 py-0.5 rounded text-[10px]">
+                        <span className="bg-slate-900 text-white font-black px-2 py-0.5 rounded text-[11px]">
                           Soru #{q.questionNumber || idx + 1}
                         </span>
                         <input
@@ -553,7 +553,7 @@ Cevap: A
 
                       <div className="flex items-center gap-2">
                         <div className="flex items-center gap-1">
-                          <span className="text-[10px] font-bold text-slate-600">Doğru Yanıt:</span>
+                          <span className="text-[11px] font-bold text-slate-600">Doğru Yanıt:</span>
                           <select
                             value={q.claimedAnswer || 'C'}
                             onChange={(e) => handleUpdateParsedField(idx, 'claimedAnswer', e.target.value)}
@@ -579,7 +579,7 @@ Cevap: A
 
                     {/* Question Stem */}
                     <div>
-                      <label className="block text-[10px] font-bold text-slate-500 mb-0.5">Soru Kökü</label>
+                      <label className="block text-[11px] font-bold text-slate-500 mb-0.5">Soru Kökü</label>
                       <textarea
                         value={q.stem || ''}
                         onChange={(e) => handleUpdateParsedField(idx, 'stem', e.target.value)}
@@ -593,7 +593,7 @@ Cevap: A
                       {(q.options || []).map((opt: any) => (
                         <div key={opt.key} className="flex items-center gap-1.5 bg-white p-1.5 rounded-lg border border-slate-200">
                           <span
-                            className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 ${
+                            className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[11px] shrink-0 ${
                               q.claimedAnswer === opt.key
                                 ? 'bg-emerald-600 text-white'
                                 : 'bg-slate-100 text-slate-700'
@@ -628,7 +628,7 @@ Cevap: A
         {/* Footer */}
         <div className="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-between shrink-0">
           <span className="text-[11px] text-slate-500">
-            MedSoru Admin Motoru • Sorular eklendikten sonra soru havuzunda anında listelenir.
+            MeDSor Admin Motoru • Sorular eklendikten sonra soru havuzunda anında listelenir.
           </span>
 
           <button

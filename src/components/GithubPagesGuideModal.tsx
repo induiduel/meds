@@ -45,7 +45,7 @@ export const GithubPagesGuideModal: React.FC<GithubPagesGuideModalProps> = ({
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="ms-modal-panel bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-6 flex flex-col max-h-[90vh]">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-6 flex flex-col max-h-[90dvh]">
         {/* Header */}
         <div className="bg-slate-900 text-white p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
@@ -89,7 +89,7 @@ export const GithubPagesGuideModal: React.FC<GithubPagesGuideModalProps> = ({
 
             {/* Method 1: Change Source to GitHub Actions */}
             <div className="bg-teal-50/60 border border-teal-200 rounded-xl p-4 space-y-2">
-              <span className="bg-teal-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="bg-teal-700 text-white text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
                 Yöntem 1 (Önerilen) • GitHub Ayarından "GitHub Actions"ı Seçmek
               </span>
               <ol className="space-y-1.5 text-[11px] text-teal-950 list-decimal list-inside">
@@ -97,13 +97,13 @@ export const GithubPagesGuideModal: React.FC<GithubPagesGuideModalProps> = ({
                   GitHub'da <strong>https://github.com/induiduel/meds</strong> sayfanıza gidin.
                 </li>
                 <li>
-                  Üst sekmelerden <strong>Settings</strong> (Ayarlar) ➔ Sol menüden <strong>Pages</strong> seçeneğine tıklayın.
+                  Üst sekmelerden <strong>Settings</strong> (Ayarlar) Sol menüden <strong>Pages</strong> seçeneğine tıklayın.
                 </li>
                 <li>
                   <strong>Build and deployment</strong> bölümündeki <strong>Source</strong> açılır kutusunu bulun:
                   <div className="mt-1 p-2 bg-white rounded border border-teal-200 font-semibold text-slate-800">
-                    ❌ Şu anki: "Deploy from a branch"<br />
-                    👉 <strong>Bunu Seçin: "GitHub Actions"</strong>
+                    Şu anki: "Deploy from a branch"<br />
+                    <strong>Bunu Seçin: "GitHub Actions"</strong>
                   </div>
                 </li>
                 <li>
@@ -114,7 +114,7 @@ export const GithubPagesGuideModal: React.FC<GithubPagesGuideModalProps> = ({
 
             {/* Method 2: One command npm run deploy */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2">
-              <span className="bg-slate-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="bg-slate-800 text-white text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
                 Yöntem 2 (Terminalden Tek Komutla Canlıya Alma)
               </span>
               <p className="text-[11px] text-slate-600">
@@ -129,7 +129,7 @@ export const GithubPagesGuideModal: React.FC<GithubPagesGuideModalProps> = ({
                   {copiedIndex === 1 ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
               </div>
-              <p className="text-[10px] text-slate-500">
+              <p className="text-[11px] text-slate-500">
                 Bu komut Vite ile projeyi derler ve derlenmiş dosyaları otomatik olarak GitHub'daki <strong>gh-pages</strong> dalına yükler.
               </p>
             </div>

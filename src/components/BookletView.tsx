@@ -166,7 +166,7 @@ export const BookletView: React.FC<BookletViewProps> = ({
                 .filter((q) => q.reconstruction)
                 .map((q) => (
                   <div key={q.id} className="p-1.5 border border-slate-200 rounded bg-slate-50">
-                    <span className="block text-[10px] text-slate-500">#{q.questionNumber}</span>
+                    <span className="block text-[11px] text-slate-500">#{q.questionNumber}</span>
                     <span className="font-bold text-slate-900">
                       {q.reconstruction!.correctAnswer}
                     </span>

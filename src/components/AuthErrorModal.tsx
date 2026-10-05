@@ -54,7 +54,7 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="ms-modal-panel bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden my-6 flex flex-col max-h-[90vh]">
+      <div className="ms-modal-panel bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden my-6 flex flex-col max-h-[90dvh]">
         {/* Header */}
         <div className="bg-amber-600 text-white p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
@@ -129,7 +129,7 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
                             setCopied(true);
                             setTimeout(() => setCopied(false), 2000);
                           }}
-                          className="px-2 py-0.5 rounded bg-amber-100 hover:bg-amber-200 text-amber-800 font-sans text-[10px] font-semibold flex items-center gap-1 cursor-pointer"
+                          className="px-2 py-0.5 rounded bg-amber-100 hover:bg-amber-200 text-amber-800 font-sans text-[11px] font-semibold flex items-center gap-1 cursor-pointer"
                         >
                           <Copy className="w-3 h-3" />
                           <span>Kopyala</span>
@@ -148,7 +148,7 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
                 <ShieldCheck className="w-4 h-4 text-teal-700" />
                 2. Beklemeden Devam Et: Yönetici Girişi Yap
               </h4>
-              <span className="bg-teal-200/60 text-teal-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
+              <span className="bg-teal-200/60 text-teal-800 text-[11px] font-bold px-2 py-0.5 rounded-full">
                 Hemen Kullan
               </span>
             </div>
@@ -182,9 +182,9 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
                     placeholder="ya29.a0AfH6SM..."
                     value={tokenInput}
                     onChange={(e) => setTokenInput(e.target.value)}
-                    className="w-full bg-white border border-teal-300 rounded p-1.5 font-mono text-[10px]"
+                    className="w-full bg-white border border-teal-300 rounded p-1.5 font-mono text-[11px]"
                   />
-                  <p className="text-[10px] text-teal-700">
+                  <p className="text-[11px] text-teal-700">
                     Google OAuth token girerseniz Drive yüklemelerini doğrudan yapabilirsiniz.
                   </p>
                 </div>

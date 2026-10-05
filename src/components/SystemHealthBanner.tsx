@@ -60,7 +60,7 @@ export const SystemHealthBanner: React.FC<SystemHealthBannerProps> = ({
               <AlertOctagon className="w-4 h-4" />
             </span>
             <div>
-              <span className="font-bold text-rose-800 mr-1.5">🚨 Kritik Veritabanı Hatası:</span>
+              <span className="font-bold text-rose-800 mr-1.5">Kritik Veritabanı Hatası:</span>
               <span>Online sitede Firebase ve Supabase bulut veritabanlarına ulaşılamıyor. Soru havuzu ve senkronizasyon çalışmayabilir!</span>
             </div>
           </div>

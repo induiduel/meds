@@ -135,7 +135,7 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `MedSoru_NotebookLM_${committee?.id || 'kaynak'}.md`;
+    link.download = `MeDSor_NotebookLM_${committee?.id || 'kaynak'}.md`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -211,11 +211,11 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
   return (
     <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn overflow-y-auto">
       <div 
-        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden relative"
+        className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 p-4 sm:p-5 text-white flex items-center justify-between shrink-0">
+        <div className="bg-ink-surface p-4 sm:p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="p-2 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-400/30">
               <Brain className="w-5 h-5" />
@@ -225,7 +225,7 @@ export const NotebookLMSyncModal: React.FC<NotebookLMSyncModalProps> = ({
                 <h3 className="font-bold text-sm sm:text-base leading-tight">
                   NotebookLM & Gemini Bağlantı Merkezi
                 </h3>
-                <span className="text-[10px] bg-purple-400/20 text-purple-200 border border-purple-400/40 px-2 py-0.5 rounded-full font-bold uppercase">
+                <span className="text-[11px] bg-purple-400/20 text-purple-200 border border-purple-400/40 px-2 py-0.5 rounded-full font-bold uppercase">
                   Canlı Entegrasyon
                 </span>
               </div>

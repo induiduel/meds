@@ -7,6 +7,7 @@ import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { findRealtimeMatchingDraft, DraftCompatibilityResult } from '../services/draftClusteringService';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
+import { Collapsible } from './ui/Collapsible';
 import { ApiService, safeJsonFetch, type SimilarPastQuestion } from '../services/api';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { validateNamePolicy } from '../utils/namePolicy';
@@ -345,7 +346,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
         role="dialog"
         aria-modal="true"
         aria-labelledby="contribute-title"
-        className="relative w-full sm:max-w-[600px] max-h-[94dvh] sm:max-h-[92vh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
+        className="relative w-full sm:max-w-[600px] max-h-[calc(var(--vvh,100dvh)-12px)] sm:max-h-[92dvh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
       >
         {/* Header */}
         <header className="flex items-center gap-3 px-5 pt-3 sm:pt-4 pb-3 border-b border-line-soft">
@@ -570,10 +571,8 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 )}
 
                 {similarPast.length > 0 && (
+                  <Collapsible bubble title="Benzer sorular" count={similarPast.length} className="ms-pop-in self-start w-full">
                   <div className="flex flex-col gap-1" aria-live="polite">
-                    <span className="text-[11.5px] font-semibold uppercase tracking-[.06em] text-ink-3">
-                      Benzer sorular · {similarPast.length}
-                    </span>
                     {similarPast.map((pq, i) => (
                       <details
                         key={pq.id}
@@ -593,6 +592,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                       </details>
                     ))}
                   </div>
+                  </Collapsible>
                 )}
 
                 {aiSuggestion?.suggestedStem && (

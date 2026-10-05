@@ -147,7 +147,7 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
   };
 
   const copySupabaseSql = () => {
-    const sql = `-- MedSoru Supabase PostgreSQL Tablo Şeması
+    const sql = `-- MeDSor Supabase PostgreSQL Tablo Şeması
 CREATE TABLE IF NOT EXISTS committees (
   id TEXT PRIMARY KEY,
   name TEXT NOT NULL,
@@ -345,7 +345,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
       <div 
         role="dialog"
         aria-labelledby="diagnostics-modal-title"
-        className="ms-modal-panel w-full max-w-4xl bg-white rounded-2xl shadow-2xl border border-line flex flex-col max-h-[92vh] overflow-hidden"
+        className="ms-modal-panel w-full max-w-4xl bg-white rounded-2xl shadow-2xl border border-line flex flex-col max-h-[92dvh] overflow-hidden"
       >
         {/* Header */}
         <div className="px-5 sm:px-6 py-4 border-b border-line bg-canvas flex items-center justify-between shrink-0">
@@ -465,7 +465,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                   <div className="flex items-start gap-3">
                     <AlertOctagon className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="font-bold text-[15px] m-0">🚨 Online Veritabanı Kesintisi Tespit Edildi!</h4>
+                      <h4 className="font-bold text-[15px] m-0">Online Veritabanı Kesintisi Tespit Edildi!</h4>
                       <p className="text-[13px] mt-1 m-0 text-rose-800">
                         Online sitede hem Firebase Spark kotası dolmuş hem de Supabase bağlantısı sağlanamıyor.
                         Öğrenciler soru ekleyemez veya soruları yükleyemez. Lütfen <strong>Ayarlar</strong> sekmesinden Supabase bağlantınızı kontrol edin.
@@ -482,7 +482,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     <div>
                       <h4 className="font-bold text-[15px] m-0">✓ Otomatik Veritabanı Devri Başarılı</h4>
                       <p className="text-[13px] mt-1 m-0 text-amber-900">
-                        Firebase Spark günlük ücretsiz 50.000 okuma kotası doldu. MedSoru otomatik failover sistemi sayesinde tüm veri trafiği kesintisiz olarak <strong>Supabase PostgreSQL</strong> bulut veritabanına aktarıldı.
+                        Firebase Spark günlük ücretsiz 50.000 okuma kotası doldu. MeDSor otomatik failover sistemi sayesinde tüm veri trafiği kesintisiz olarak <strong>Supabase PostgreSQL</strong> bulut veritabanına aktarıldı.
                       </p>
                     </div>
                   </div>
@@ -676,7 +676,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                           className="h-8 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-[12px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer disabled:opacity-50 shrink-0"
                         >
                           <RefreshCw className={`w-3.5 h-3.5 ${realtimeTest.running ? 'animate-spin' : ''}`} />
-                          {realtimeTest.running ? 'Test Ediliyor…' : '⚡ Realtime Canlı Test Et'}
+                          {realtimeTest.running ? 'Test Ediliyor…' : 'Realtime Canlı Test Et'}
                         </button>
                       </div>
 
@@ -753,7 +753,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                                   className="h-8 px-3 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-semibold text-[12px] inline-flex items-center gap-1.5 shadow-xs cursor-pointer"
                                 >
                                   {copiedRealtimeSql ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
-                                  {copiedRealtimeSql ? 'Realtime SQL Kopyalandı!' : '⚡ 1 Tıkla Realtime SQL Kopyala'}
+                                  {copiedRealtimeSql ? 'Realtime SQL Kopyalandı!' : '1 Tıkla Realtime SQL Kopyala'}
                                 </button>
 
                                 <a
@@ -1037,7 +1037,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
         <div className="px-6 py-3.5 border-t border-line bg-canvas flex items-center justify-between text-[12px] text-ink-3 shrink-0">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-700" />
-            <span>MedSoru Dayanıklılık & Kota İzleme Sistemi Aktif</span>
+            <span>MeDSor Dayanıklılık & Kota İzleme Sistemi Aktif</span>
           </div>
           <button
             type="button"
