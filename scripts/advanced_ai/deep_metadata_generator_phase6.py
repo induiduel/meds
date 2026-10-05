@@ -44,6 +44,10 @@ OUT_METADATA = PROJECT_ROOT.parent / "meds_database_v2" / "deep_metadata"
 OUT_METADATA.mkdir(parents=True, exist_ok=True)
 
 STATE_FILE = OUT_METADATA / "phase6_metadata_state.json"
+QUESTION_BATCH_SIZE = 10
+QUESTION_SLEEP_MIN = 60
+QUESTION_SLEEP_MAX = 120
+LECTURE_INTERVAL_SECONDS = 1800
 
 # API Anahtarlarını Yükle
 def get_env_keys():
@@ -102,7 +106,7 @@ class Phase6Scheduler:
         """2 saatte bir ders notu kontrolü."""
         now = time.time()
         last_t = self.data.get("last_lecture_processed_time", 0.0)
-        return (now - last_t) >= 7200  # 2 saat = 7200 saniye
+        return (now - last_t) >= LECTURE_INTERVAL_SECONDS
 
     def record_question(self, qid: str, provider: str = "unknown"):
         if qid not in self.data["processed_question_ids"]:
@@ -360,8 +364,8 @@ Lütfen bu amfi ders notu için aşağıdaki JSON şemasında kapsamlı hiper-me
     }
 
 
-def process_question_batch(scheduler: Phase6Scheduler, batch_size: int = 5) -> int:
-    """Tek seferde 5 adet soruyu derin analizden geçirir."""
+def process_question_batch(scheduler: Phase6Scheduler, batch_size: int = QUESTION_BATCH_SIZE) -> int:
+    """Dengeli tempoda tek seferde 10 soruyu işler."""
     search_dirs = [SRC_DB / "questions", PROJECT_ROOT.parent / "meds_database" / "questions"]
     q_files = []
     for sdir in search_dirs:
@@ -453,8 +457,8 @@ def process_single_lecture(scheduler: Phase6Scheduler) -> bool:
 def main():
     print("=" * 75)
     print("🏥 FAZ 6: ÇOKLU AI DESTEKLİ DERİN METADATA & DİNAMİK ZAMANLAYICI")
-    print("• Soru Havuzu     : 5 ila 10 dakikada bir 5 soru (Batch: 5)")
-    print("• Ders Notu Havuzu: Her 2 saatte bir 1 tam amfi slayt destesi")
+    print(f"• Soru Havuzu     : {QUESTION_SLEEP_MIN}-{QUESTION_SLEEP_MAX} saniyede bir {QUESTION_BATCH_SIZE} soru (Dengeli tempo)")
+    print(f"• Ders Notu Havuzu: Her {LECTURE_INTERVAL_SECONDS // 60} dakikada bir 1 tam amfi slayt destesi")
     print("• AI Sağlayıcılar : RTX 4060 GPU (Gemma 3) + OpenRouter + Groq + Gemini")
     print(f"• Çıktı Dizini    : {OUT_METADATA}")
     print("=" * 75)
@@ -470,15 +474,15 @@ def main():
         if scheduler.should_process_lecture():
             process_single_lecture(scheduler)
 
-        # 2. Soru Havuzundan 5 Soru İşle
-        q_count = process_question_batch(scheduler, batch_size=5)
+        # 2. Soru havuzundan dengeli batch işle
+        q_count = process_question_batch(scheduler, batch_size=QUESTION_BATCH_SIZE)
         print(f"[Faz 6 Batch Tamamlandı] Bu periyotta {q_count} soru işlendi.")
 
         if run_once:
             break
 
-        # 5 ila 10 dakika bekleme (300 ile 600 saniye arası rastgele dinamik bekleme)
-        sleep_sec = random.randint(300, 600)
+        # 60-120 saniye bekleme: GPU/API darboğazını sınırlayan dengeli tempo
+        sleep_sec = random.randint(QUESTION_SLEEP_MIN, QUESTION_SLEEP_MAX)
         print(f"\n⏳ Bir sonraki soru batch'i için {sleep_sec // 60} dakika {sleep_sec % 60} saniye bekleniyor...\n")
         time.sleep(sleep_sec)
 

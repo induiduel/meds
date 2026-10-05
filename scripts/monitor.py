@@ -276,6 +276,8 @@ def render_dashboard(stdscr):
                         cached_counts["p65_anchors"] = fast_count_lines(p65_anchors_file)
                     else:
                         cached_counts["p65_anchors"] = 2296
+                    p65_state = read_json_safe(DB_V2_DIR / "medical_thesaurus" / "phase6_5_state.json")
+                    cached_counts["p65_terms"] = p65_state.get("thesaurus_terms", 212) if p65_state else 212
 
                     # Faz 7 5-Adımlı Mikro-Ajans Modelleme durumu
                     p7_st = read_json_safe(PHASE7_STATE_FILE)
@@ -409,11 +411,12 @@ def render_dashboard(stdscr):
             p6_lec_cnt = cached_counts.get("p6_lec_done", 0)
             p6_target = cached_counts["db_q"]
             p6_bar = draw_bar(p6_q_cnt, max(1, p6_target), width=10)
-            stdscr.addstr(14, 4, f"Faz 6 [Derin Hiper-Metadata] : İşlenen Soru: {p6_q_cnt} {p6_bar} | Slayt Notu: {p6_lec_cnt} (Tempo: 5-10 dk'da 5 Soru / 2 Saatte 1 Ders)", curses.color_pair(3))
+            stdscr.addstr(14, 4, f"Faz 6 [Derin Hiper-Metadata] : İşlenen Soru: {p6_q_cnt} {p6_bar} | Slayt Notu: {p6_lec_cnt} (Tempo: 60-120 sn'de 10 Soru / 30 dk'da 1 Ders)", curses.color_pair(3))
 
             # --- FAZ 6.5 ---
             p65_anchors = cached_counts.get("p65_anchors", 2296)
-            stdscr.addstr(15, 4, f"Faz 6.5 [Tıbbi Sözlük & Anchor] : 133 Terim / Eşanlamlı | {p65_anchors:,} Soru-Slayt Köprüsü (Co-occurrence ✓)", curses.color_pair(2))
+            p65_terms = cached_counts.get("p65_terms", 212)
+            stdscr.addstr(15, 4, f"Faz 6.5 [Tıbbi Sözlük & Anchor] : {p65_terms:,} Terim / Eşanlamlı | {p65_anchors:,} Soru-Slayt Köprüsü (Co-occurrence ✓)", curses.color_pair(2))
 
             # --- FAZ 7 ---
             p7_done = cached_counts.get("p7_done", 100)

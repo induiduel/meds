@@ -34,13 +34,13 @@ def ollama_up():
         return False
 
 
-def run(stage):
+def run(stage, args=None):
     t = time.time()
     env = dict(os.environ)
     jemalloc_path = Path("/usr/lib/x86_64-linux-gnu/libjemalloc.so.2")
     if jemalloc_path.exists():
         env["LD_PRELOAD"] = str(jemalloc_path)
-    r = subprocess.run([PY, str(HERE / stage)], capture_output=True, text=True, cwd=HERE, env=env)
+    r = subprocess.run([PY, str(HERE / stage), *(args or [])], capture_output=True, text=True, cwd=HERE, env=env)
     return {"stage": stage, "rc": r.returncode, "sec": round(time.time() - t),
             "tail": (r.stdout + r.stderr)[-400:]}
 
@@ -57,15 +57,16 @@ def main():
                 ("stage4_database.py", "Aşama 4 (Faz 4): Doğrulanmış Veritabanı Aktarımı"),
                 ("../advanced_ai/orchestrator.py", "Aşama 5: GraphRAG & Hibrit Arama & MemGPT"),
                 ("../advanced_ai/multi_ai_consensus_phase5.py", "Aşama 6 (Faz 5): Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti"),
-                ("../advanced_ai/deep_metadata_generator_phase6.py", "Aşama 7 (Faz 6): Derin Tıbbi Hiper-Metadata Motoru"),
+                ("../advanced_ai/deep_metadata_generator_phase6.py", "Aşama 7 (Faz 6): Derin Tıbbi Hiper-Metadata Motoru", ["--once"]),
                 ("../advanced_ai/thesaurus_anchor_phase6_5.py", "Aşama 8 (Faz 6.5): Tıbbi Sözlük (Thesaurus) & Co-occurrence Kanıt Motoru"),
                 ("../advanced_ai/microagent_storyteller_phase7.py", "Aşama 9 (Faz 7): 5 Adımlı Mikro-Ajans Soru Modelleme & Hikaye Motoru"),
                 ("../advanced_ai/reconstruct_slides_phase7_5.py", "Aşama 10 (Faz 7.5): Amfi Ders Slaytlarını Resmi Müfredatla Düzenleme")
             ]
             state = lib.State()
-            for s_idx, (s, s_desc) in enumerate(stages, 1):
+            for s_idx, stage_info in enumerate(stages, 1):
+                s, s_desc, *stage_args = stage_info
                 state.set_progress("pipeline", s_idx, len(stages), f"{s_desc} (Çalışıyor...)")
-                out = run(s)
+                out = run(s, stage_args[0] if stage_args else [])
                 res.append(out)
                 log.error(f"{s} rc={out['rc']}: {out['tail']}") if out["rc"] else None
 

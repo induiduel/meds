@@ -339,6 +339,10 @@ _next_phase_index = 0
 def check_phase5_and_phase6_workers():
     """Faz 5, 6, 7 ve 7.5 motorlarını SIRAYLA çalıştırır (aynı anda en fazla bir tane)."""
     global _next_phase_index
+    # pipeline_runner zaten fazları bağımlılık sırasıyla yürütüyorsa ikinci bir
+    # scheduler açılmaz; böylece GPU üzerinde aynı faz çift çalışmaz.
+    if subprocess.run(["pgrep", "-f", "pipeline_runner.py"], capture_output=True, text=True).stdout.strip():
+        return
     running = [
         name for name, _ in PHASE_SEQUENCE
         if subprocess.run(["pgrep", "-f", name], capture_output=True, text=True).stdout.strip()
@@ -362,4 +366,3 @@ def check_phase5_and_phase6_workers():
 
 if __name__ == "__main__":
     main()
-
