@@ -841,3 +841,16 @@ html.ui-v4 .ms-slide .ms-terms::-webkit-scrollbar { display: none; }
 html.ui-v4 .ms-slide .ms-terms > span:first-child { color: var(--color-ink-3); font-weight: 500; }
 html.ui-v4 .ms-slide .ms-terms > span:first-child svg { display: none; }
 html.ui-v4 .ms-slide .ms-terms > button { white-space: nowrap; flex: none; box-shadow: none; padding: 3px 10px; font-size: 12px; }
+
+/* Hatırlama modu: kalın anahtar ifadeler örtülür; dokununca açılır */
+.ms-recall .ms-slide :is(strong, b):not(.ms-shown):not(.ms-slide-meta *) {
+  color: transparent !important;
+  background: var(--color-line-soft);
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s ease, color .25s ease;
+}
+.ms-recall .ms-slide :is(strong, b):not(.ms-shown):not(.ms-slide-meta *):hover { background: var(--color-accent-soft); }
+.ms-recall .ms-slide :is(strong, b):not(.ms-shown):not(.ms-slide-meta *) * { visibility: hidden; }
+.ms-recall .ms-slide .ms-shown { background: var(--color-accent-soft); border-radius: 6px; }

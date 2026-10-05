@@ -887,6 +887,11 @@ const DeckPlayer: React.FC<{
   const [isFs, setIsFs] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   // Tasarımdaki sol içindekiler: geniş ekranda açık başlar, tercih hatırlanır
+  // Hatırlama modu: kalın anahtar ifadeler örtülür, dokununca açılır (aktif hatırlama)
+  const [recall, setRecall] = useState(false);
+  useEffect(() => {
+    rootRef.current?.querySelectorAll('.ms-shown').forEach((el) => el.classList.remove('ms-shown'));
+  }, [index, recall]);
   const [tocOpen, setTocOpen] = useState(() => {
     try {
       const v = localStorage.getItem('medsoru_learn_toc');
@@ -1109,7 +1114,15 @@ const DeckPlayer: React.FC<{
       role="dialog"
       aria-modal="true"
       aria-label={`${deck.title} sunumu`}
-      className="ms-reader fixed inset-0 z-[60] h-[100dvh] w-full bg-canvas text-ink flex flex-col outline-none"
+      className={`ms-reader ${recall ? 'ms-recall' : ''} fixed inset-0 z-[60] h-[100dvh] w-full bg-canvas text-ink flex flex-col outline-none`}
+      onClickCapture={(e) => {
+        if (!recall) return;
+        const t = (e.target as HTMLElement).closest('.ms-slide strong, .ms-slide b');
+        if (t && !t.closest('.ms-slide-meta') && !t.classList.contains('ms-shown')) {
+          t.classList.add('ms-shown');
+          e.stopPropagation();
+        }
+      }}
     >
       {/* Top bar */}
       <header className="shrink-0 h-14 bg-white border-b border-line px-1.5 sm:px-3 flex items-center gap-1 sm:gap-1.5 min-w-0 overflow-x-auto no-scrollbar">
@@ -1249,6 +1262,18 @@ const DeckPlayer: React.FC<{
 
         {viewMode !== 'pdf' && (
           <>
+            <button
+              type="button"
+              onClick={() => setRecall((v) => !v)}
+              aria-pressed={recall}
+              title="Hatırlama modu: kalın anahtar ifadeleri ört, önce hatırla, sonra dokunup aç"
+              className={`h-9 px-3 rounded-full text-[13px] font-medium inline-flex items-center gap-1.5 cursor-pointer shrink-0 transition-colors ${
+                recall ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
+              }`}
+            >
+              <EyeOff className="w-4 h-4" />
+              <span className="hidden md:inline">Hatırla</span>
+            </button>
             <HighlighterToolbar />
             <DrawingModeToolbarTrigger />
           </>
