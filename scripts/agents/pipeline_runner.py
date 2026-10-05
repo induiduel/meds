@@ -58,7 +58,9 @@ def main():
                 ("../advanced_ai/orchestrator.py", "Aşama 5: GraphRAG & Hibrit Arama & MemGPT"),
                 ("../advanced_ai/multi_ai_consensus_phase5.py", "Aşama 6 (Faz 5): Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti"),
                 ("../advanced_ai/deep_metadata_generator_phase6.py", "Aşama 7 (Faz 6): Derin Tıbbi Hiper-Metadata Motoru"),
-                ("../advanced_ai/microagent_storyteller_phase7.py", "Aşama 8 (Faz 7): 5 Adımlı Mikro-Ajans Tıbbi Modelleme & Hikaye Motoru")
+                ("../advanced_ai/thesaurus_anchor_phase6_5.py", "Aşama 8 (Faz 6.5): Tıbbi Sözlük (Thesaurus) & Co-occurrence Kanıt Motoru"),
+                ("../advanced_ai/microagent_storyteller_phase7.py", "Aşama 9 (Faz 7): 5 Adımlı Mikro-Ajans Soru Modelleme & Hikaye Motoru"),
+                ("../advanced_ai/reconstruct_slides_phase7_5.py", "Aşama 10 (Faz 7.5): Amfi Ders Slaytlarını Resmi Müfredatla Düzenleme")
             ]
             state = lib.State()
             for s_idx, (s, s_desc) in enumerate(stages, 1):

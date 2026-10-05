@@ -2194,20 +2194,52 @@ def get_stats():
             "order": 6
         },
         {
+            "id": 65,
+            "phase": "Faz 6.5",
+            "name": "Faz 6.5: Tıbbi Sözlük (Thesaurus) & Co-occurrence Kanıt Motoru",
+            "desc": "Türkçe/Latince tıp ontolojisi, eşanlamlılar ve kavram kümeleri üzerinden en yüksek örtüşmeye sahip soru-ders köprülerinin (2.296 anchor) kurulması",
+            "status": "completed",
+            "status_tr": "Tamamlandı ✓ (2.296 Köprü Kancalandı)",
+            "progress_pct": 100,
+            "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/medical_thesaurus'), 'jsonl')} Köprü Dosyası",
+            "total": "2.296 Eşleşen Kanıt",
+            "unit": "Sözlük Köprüsü",
+            "created_files": "medical_thesaurus.json + anchors.jsonl",
+            "pending": 0,
+            "eta": "Bitti ✓",
+            "order": 6.5
+        },
+        {
             "id": 7,
             "phase": "Faz 7",
-            "name": "Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Tıbbi Hikaye & Modelleme",
+            "name": "Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Soru Hikaye & Modelleme",
             "desc": "Kısıtlı parametreli yerel modeller için 5 adımlı mikro-ajan (Varlık Çıkarımı -> RAG Doğrulama -> Çeldirici Otopsisi -> Sebep-Sonuç -> Klinik Hikaye Sentezi) mimarisi ve 100 altın soru modellemesi",
-            "status": "running",
-            "status_tr": "Mikro-Ajan İşleyişinde (100 Altın Örnek & Otonom)",
-            "progress_pct": 92,
+            "status": "completed",
+            "status_tr": "Tamamlandı ✓ (100 Altın Soru Modeli)",
+            "progress_pct": 100,
             "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/phase7_stories'), 'json')} Hikaye Üretildi",
             "total": "100 Altın Modelleme / Tüm Sorular",
             "unit": "Klinik Hikaye Havuzu",
             "created_files": "meds_database_v2/phase7_stories/*.json",
             "pending": 0,
-            "eta": "Otonom / Kesintisiz",
+            "eta": "Bitti ✓",
             "order": 7
+        },
+        {
+            "id": 75,
+            "phase": "Faz 7.5",
+            "name": "Faz 7.5: Amfi Ders Slaytlarını Resmi Müfredatla Düzenleme",
+            "desc": "KBÜ Tıp Fakültesi Dönem 3 (TIP320, TIP340, TIP350, TIP360) resmi müfredat hedefleriyle 410 amfi ders slaytının yapılandırılması ve çıkmış sorularla kancalanması",
+            "status": "completed",
+            "status_tr": "Tamamlandı ✓ (410 Slayt Müfredatla Eşlendi)",
+            "progress_pct": 100,
+            "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/slide_reconstructed'), 'json')} Slayt Düzenlendi",
+            "total": "410 Amfi Dersi",
+            "unit": "Müfredat Slayt Kartı",
+            "created_files": "meds_database_v2/slide_reconstructed/*.json",
+            "pending": 0,
+            "eta": "Bitti ✓",
+            "order": 7.5
         }
     ]
 

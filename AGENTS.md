@@ -121,7 +121,9 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 | **Faz 4 (Aşama 4)** | `stage4_database.py` & `sync_to_supabase_v2` | Doğrulanmış Soru & Slaytların `meds_database`'e Aktarımı | `pipeline_runner` |
 | **Faz 5 (Aşama 5)** | `multi_ai_consensus_phase5.py` | Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti (`meds_database_v2`) | `pipeline_runner` + `watchdog` |
 | **Faz 6 (Aşama 6)** | `deep_metadata_generator_phase6.py` | Derin Tıbbi Hiper-Metadata (ICD-10, Ayırıcı Tanı - Dinamik Hız) | `pipeline_runner` + `watchdog` |
-| **Faz 7 (Aşama 7)** | `microagent_storyteller_phase7.py` | 5 Adımlı Mikro-Ajans Tıbbi Modelleme & Pedagojik Hikaye | `pipeline_runner` + `watchdog` |
+| **Faz 6.5 (Aşama 6.5)** | `thesaurus_anchor_phase6_5.py` | Tıbbi Terimler Sözlüğü (Thesaurus) & Co-occurrence Kanıt Motoru | `pipeline_runner` + `watchdog` |
+| **Faz 7 (Aşama 7)** | `microagent_storyteller_phase7.py` | 5 Adımlı Mikro-Ajans Soru Modelleme & Hikaye Motoru | `pipeline_runner` + `watchdog` |
+| **Faz 7.5 (Aşama 7.5)** | `reconstruct_slides_phase7_5.py` | Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme | `pipeline_runner` + `watchdog` |
 
 ---
 
@@ -157,7 +159,12 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - Dinamik Hız Kontrolü: 5 ila 10 dakikada 5 soru, her 2 saatte bir 1 tam amfi ders notu işleme temposuyla arka planda otonom çalışır.
 - ICD-10 kodları, ayırıcı tanı, multidisipliner tıp bağları ve hiper-arama etiketleri üretir.
 
-### Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Tıbbi Modelleme & Hikaye Motoru (`microagent_storyteller_phase7.py`)
+### Faz 6.5 (Aşama 6.5): Tıbbi Terimler Sözlüğü (Thesaurus) & Co-occurrence Kanıt Motoru (`thesaurus_anchor_phase6_5.py`)
+- Türkçe tıp terminolojisi, Latince karşılıklar ve hekim jargonunu içeren çok katmanlı ontoloji (`medical_thesaurus.json`) oluşturur.
+- Çıkmış sorular ile ders slaytları arasındaki ortak tıbbi terimleri tarar.
+- **Çoklu Ders Eşleşme Çözümü:** Birden fazla slaytta geçen terimler için `Co-occurrence Skoru = (Ortak Terim Sayısı) * (Özgüllük Ağırlığı) * (Yoğunluk) + (Jaccard * 10)` formülünü kullanarak en yüksek örtüşmeye sahip slaytı kesin kanıt (`phase6_5_question_slide_anchors.jsonl`) olarak kancalar.
+
+### Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Soru Hikaye & Modelleme (`microagent_storyteller_phase7.py`)
 - Kısıtlı parametreli yerel modellerin bilişsel yükünü 5 atomik mikro-adıma böler:
   1. *İzole Varlık Çıkarımı:* Soru kökündeki hedef yapı ve sistemi sert JSON olarak çıkarır.
   2. *RAG Destekli Doğrulama:* Amfi slayt chunk'ından kanıtı doğrular, halüsinasyonu sıfırlar.
@@ -166,6 +173,10 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
   5. *Sentez & Hikayeleştirme:* Akıcı Türkçe, hekimlik nosyonu ve klinik analojiyle öğrencinin aklında kalıcı hikaye üretir.
 - 100 altın standart soruluk rehber veri seti (`training_data/phase7_microagent_100_exemplars.jsonl`) üretir.
 - Duraksama / kurtarma desteği ile her adım anında diske yazılır (`meds_database_v2/phase7_stories`).
+
+### Faz 7.5 (Aşama 7.5): Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme (`reconstruct_slides_phase7_5.py`)
+- KBÜ Tıp Fakültesi Dönem 3 resmi kurul hedeflerini (`TIP320`, `TIP340`, `TIP350`, `TIP360`) haritalar.
+- Müfredat dışı sapmaları engeller; slaytları resmi konu başlığı, öğrenim hedefleri (tanım, patogenez, ayırıcı tanı, tedavi), anahtar kavramlar ve kancalanan çıkmış sorularla zenginleştirilmiş ders kartlarına dönüştürür (`meds_database_v2/slide_reconstructed`).
 
 ---
 

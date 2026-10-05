@@ -154,12 +154,30 @@ export const AUTOMATION_PIPELINES = [
     ],
   },
   {
+    id: 'phase6-5-thesaurus-anchor',
+    title: '🔬 Faz 6.5: Tıbbi Sözlük (Thesaurus) & Co-occurrence Kanıt Motoru',
+    description: 'Tıbbi terimler, eş anlamlılar ve Latin/Türkçe jargonu haritalayarak en yüksek birlikte görünme oranına sahip soru-ders köprülerini kurar.',
+    category: 'Otomasyon & Pipeline',
+    steps: [
+      { script: 'advanced_ai/thesaurus_anchor_phase6_5.py', args: '', title: '1. Tıbbi Sözlük & Soru-Slayt Kancalama' },
+    ],
+  },
+  {
     id: 'phase7-microagent-storyteller',
     title: '📖 Faz 7: 5 Adımlı Mikro-Ajans Tıbbi Hikaye & Modelleme',
     description: 'Yerel GPU bilişsel yükünü 5 atomik mikro-adıma bölerek halüsinasyonsuz, çeldirici otopsili ve pedagojik klinik hikayeler üretir.',
     category: 'Otomasyon & Pipeline',
     steps: [
       { script: 'advanced_ai/microagent_storyteller_phase7.py', args: '', title: '1. 5 Adımlı Mikro-Ajans Modelleme ve 100 Altın Örnek' },
+    ],
+  },
+  {
+    id: 'phase7-5-reconstruct-slides',
+    title: '📚 Faz 7.5: Amfi Ders Slaytlarını Resmi Müfredatla Düzenleme',
+    description: 'KBÜ TIP Dönem 3 (TIP320, TIP340, TIP350, TIP360) resmi müfredat hedefleriyle amfi slaytlarını yapılandırır ve çıkmış sorularla kancalar.',
+    category: 'Otomasyon & Pipeline',
+    steps: [
+      { script: 'advanced_ai/reconstruct_slides_phase7_5.py', args: '', title: '1. Ders Slaytlarını Müfredatla Yapılandır' },
     ],
   },
 ];

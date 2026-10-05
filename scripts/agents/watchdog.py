@@ -297,6 +297,14 @@ def check_phase5_and_phase6_workers():
             subprocess.Popen([py_bin, str(p7_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
             log("microagent_storyteller_phase7.py (Faz 7 Mikro-Ajans Hikaye Motoru) arka planda başlatıldı ✓")
 
+    # Faz 7.5 Amfi Ders Slaytlarını Düzenleme Motoru Denetimi
+    res_p75 = subprocess.run(["pgrep", "-f", "reconstruct_slides_phase7_5.py"], capture_output=True, text=True)
+    if not res_p75.stdout.strip():
+        p75_script = ROOT / "scripts" / "advanced_ai" / "reconstruct_slides_phase7_5.py"
+        if p75_script.exists():
+            subprocess.Popen([py_bin, str(p75_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+            log("reconstruct_slides_phase7_5.py (Faz 7.5 Müfredat Slayt Motoru) arka planda başlatıldı ✓")
+
 if __name__ == "__main__":
     main()
 
