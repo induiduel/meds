@@ -221,6 +221,7 @@ export async function callLocalOllama(
     stream: false,
     options: {
       temperature: isJson ? 0.2 : 0.4,
+      num_ctx: 2048, // Optimize context size to prevent CUDA OOM on 8GB VRAM
       num_gpu: 99 // Zorunlu RTX 4060 GPU Offload kuralı (-ngl 99)
     }
   };

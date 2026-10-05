@@ -1051,11 +1051,39 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </button>
           )}
           {simOpen && similar.length > 0 && mode !== 'option' && (
-            <ul className="list-none m-0 p-0 flex flex-col">
+            <ul className="list-none m-0 p-0 flex flex-col gap-2">
               {similar.map((s, i) => (
-                <li key={s.id} className="ms-pop-in px-4 py-2.5 rounded-xl hover:bg-field text-[14px] text-ink-2" style={{ animationDelay: `${i * 60}ms` }} title={s.stem}>
-                  <span className="line-clamp-2">{s.stem}</span>
-                  <span className="block text-[12px] text-ink-3 mt-0.5">{[s.discipline, s.examYear].filter(Boolean).join(' · ')}</span>
+                <li
+                  key={s.id}
+                  className="ms-pop-in p-3 rounded-xl bg-field/60 border border-line-soft hover:bg-field text-[14px] text-ink flex flex-col gap-2"
+                  style={{ animationDelay: `${i * 60}ms` }}
+                >
+                  <div className="flex flex-col gap-0.5">
+                    <span className="line-clamp-2 text-ink-2 font-medium">{s.stem}</span>
+                    <span className="text-[12px] text-ink-3">
+                      {[s.discipline, s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış', s.claimedAnswer ? `Cevap: ${s.claimedAnswer}` : ''].filter(Boolean).join(' · ')}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 pt-1 border-t border-line-soft">
+                    <button
+                      type="button"
+                      onClick={() => handleTransferEntireQuestion(s)}
+                      className="h-7 px-2.5 rounded-lg bg-accent text-white text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
+                      title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
+                    >
+                      <FileText className="w-3.5 h-3.5" />
+                      Soruyu Aktar
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleCopyQuestionStem(s.stem)}
+                      className="h-7 px-2.5 rounded-lg bg-white text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
+                      title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
+                    >
+                      <Copy className="w-3.5 h-3.5 text-accent" />
+                      Yalnızca Kökü Al
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -1064,7 +1092,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-[13px] text-ink-3">
             <select
               value={discipline}
-              onChange={(e) => setDiscipline(e.target.value)}
+              onChange={(e) => {
+                setDiscipline(e.target.value);
+                setUserManualDiscipline(true);
+              }}
               aria-label="Ders"
               className="appearance-none bg-transparent border-0 outline-0 cursor-pointer max-w-[220px] truncate hover:text-ink [field-sizing:content]"
             >
@@ -1077,7 +1108,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               type="text"
               inputMode="numeric"
               value={questionNumber}
-              onChange={(e) => setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
+              onChange={(e) => {
+                setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3));
+                setUserManualNumber(true);
+              }}
               placeholder="numara?"
               aria-label="Soru numarası (bilmiyorsan boş bırak)"
               className="w-[70px] bg-transparent border-0 outline-0 placeholder:text-ink-3 text-ink"
@@ -1462,9 +1496,31 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       {s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış'}
                     </span>
                   </summary>
-                  <div className="px-2.5 pb-2 text-[12px] text-ink-3">
-                    {[s.discipline, s.title].filter(Boolean).join(' · ')}
-                    {s.claimedAnswer ? ` · Cevap: ${s.claimedAnswer}` : ''}
+                  <div className="px-2.5 pb-2.5 flex flex-col gap-2 border-t border-line-soft pt-1.5">
+                    <div className="text-[12px] text-ink-3">
+                      {[s.discipline, s.title].filter(Boolean).join(' · ')}
+                      {s.claimedAnswer ? ` · Cevap: ${s.claimedAnswer}` : ''}
+                    </div>
+                    <div className="flex items-center gap-2 pt-0.5">
+                      <button
+                        type="button"
+                        onClick={() => handleTransferEntireQuestion(s)}
+                        className="h-7 px-2.5 rounded-lg bg-accent text-white text-[12px] font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
+                        title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        Soruyu Aktar
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => handleCopyQuestionStem(s.stem)}
+                        className="h-7 px-2.5 rounded-lg bg-white text-ink text-[12px] font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
+                        title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
+                      >
+                        <Copy className="w-3.5 h-3.5 text-accent" />
+                        Yalnızca Kökü Al
+                      </button>
+                    </div>
                   </div>
                 </details>
               );
@@ -1477,7 +1533,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             <span className="sr-only">Ders</span>
             <select
               value={discipline}
-              onChange={(e) => setDiscipline(e.target.value)}
+              onChange={(e) => {
+                setDiscipline(e.target.value);
+                setUserManualDiscipline(true);
+              }}
               className={`appearance-none w-full h-11 rounded-xl pl-3 pr-8 text-[14px] text-ink cursor-pointer truncate ${field}`}
             >
               {disciplines.map((d) => (
@@ -1494,7 +1553,10 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               type="text"
               inputMode="numeric"
               value={questionNumber}
-              onChange={(e) => setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
+              onChange={(e) => {
+                setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3));
+                setUserManualNumber(true);
+              }}
               placeholder="?"
               aria-label="Soru numarası (bilmiyorsan boş bırak)"
               className="w-full min-w-0 bg-transparent border-0 outline-0 text-[15px] font-mono placeholder:text-slate-600"
