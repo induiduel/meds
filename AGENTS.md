@@ -109,51 +109,53 @@ erDiagram
 
 ---
 
-## 4. Boru Hattı Aşamaları (Execution Pipeline)
+## 4. Boru Hattı ve 6 Faz Mimarisi (6-Phase Execution Pipeline)
 
-### Aşama 1: Ham Çıkarım (`read_document.py` / `stage1_extract`)
+MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir aynı süreci temsil eden **6 Adımlı Otonom Bir Mimariye** standardize edilmiştir:
+
+| Faz / Aşama | Modül / Betik | Temel Görev ve Çıktı | Otomasyon Katmanı |
+| :--- | :--- | :--- | :--- |
+| **Faz 1 (Aşama 1)** | `read_document.py` (`stage1_extract`) | PDF/PPTX Ham Metin & OCR Çıkarımı (`temp1/`) | `pipeline_runner` |
+| **Faz 2 (Aşama 2)** | `stage2_clean.py` | Türkçe Onarım & A-E Soru Ayrıştırma (`temp2/`) | `pipeline_runner` |
+| **Faz 3 (Aşama 3)** | `stage3_merge.py` | RAG Chunking (900 Karakter) & BGE-M3 Vektörleme | `pipeline_runner` |
+| **Faz 4 (Aşama 4)** | `stage4_database.py` & `sync_to_supabase_v2` | Doğrulanmış Soru & Slaytların `meds_database`'e Aktarımı | `pipeline_runner` |
+| **Faz 5 (Aşama 5)** | `multi_ai_consensus_phase5.py` | Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti (`meds_database_v2`) | `pipeline_runner` + `watchdog` |
+| **Faz 6 (Aşama 6)** | `deep_metadata_generator_phase6.py` | Derin Tıbbi Hiper-Metadata (ICD-10, Ayırıcı Tanı - 200 İstek/Gün) | `pipeline_runner` + `watchdog` |
+
+---
+
+### Faz 1 (Aşama 1): Ham Çıkarım (`read_document.py` / `stage1_extract`)
 - `downloads/` altındaki PDF ve PPTX dosyalarını PyMuPDF, EasyOCR/Tesseract ve Qwen3-VL ile tarar. Metinleri `temp1/` altına JSON formatında yazar.
-- **İleri Seviye OCR İyileştirme Mimarisi (Faz 3 Sonrası Geri Dönüş Standardı):**
-  1. **Görüntü Ön İşleme (Pre-Processing):** Görseller Lanczos algoritmasıyla 2x büyütülür (300 DPI eşdeğeri), gri tonlama ve kontrast adaptasyonu uygulanır.
-  2. **Görüntü Dilimleme (Image Tiling / Slicing):** Yoğun ve çok sütunlu slaytlar 2x2 kadrana (quadrants) bölünerek Qwen-VL downsampling kaybı önlenir.
-  3. **VLM İçin Katı OCR Promptu:** Modele yorum yapmayan ve tıbbi tabloları Markdown formatında aktaran katı sistem promptu dayatılır.
-  4. **Hibrit OCR Hiyerarşisi:** Önce PyMuPDF dijital metin, ardından GPU EasyOCR / Tesseract, yetersiz kalınırsa Qwen3-VL devreye girer.
+- **İleri Seviye OCR İyileştirme Mimarisi:** Lanczos 2x büyütme, 2x2 kadrana bölme (tiling) ve Markdown tablo aktarımı.
 
-### Aşama 2: Türkçe Onarım ve Soru Ayrıştırma (`stage2_clean.py`)
+### Faz 2 (Aşama 2): Türkçe Onarım ve Soru Ayrıştırma (`stage2_clean.py`)
 - OCR gürültülerini temizler, kırık hece ve Türkçe karakterleri düzeltir.
-- **LLM ile Post-OCR Tıbbi Onarım (Gemma 3 / Qwen):** OCR motorunun karıştırdığı harf/rakam hataları (0->O, 1->I) ve tıbbi terimler (`5taf11ococus` -> `Staphylococcus`) tıbbi bağlam bozulmadan onarılır.
-- Çıkmış sorulardan `no`, `stem` ve `A-E` seçeneklerini ayıklar (`temp2/`).
-- **Destek Oranı:** Soru içeriği amfi metninde en az %80 doğrulanmalıdır (`support_ratio >= 0.80`).
+- LLM ile Post-OCR Tıbbi Onarım (`Gemma 3` / `Qwen`) yaparak harf/rakam karışıklıklarını giderir.
+- Çıkmış sorulardan `no`, `stem` ve `A-E` seçeneklerini ayıklar (`temp2/`). Destek oranı `>= 0.80` olmalıdır.
 
-### Aşama 3: RAG Bölümleme, Vektörleme & Zenginleştirme (`stage3_merge.py`)
+### Faz 3 (Aşama 3): RAG Bölümleme, Vektörleme & Zenginleştirme (`stage3_merge.py`)
 - Slaytları 900 karakter hedef ve 120 karakter overlap ile doğal paragraf sınırlarından böler (`split_passages`).
-- **Öksüz Veri Çözümü (Metadata Injection):** Her 900 karakterlik bloğun en başına `[Komite X | Ders | Başlık: ...]` öneki statik olarak gömülür; BGE-M3 vektörlemesi ve LLM bağlamı hiçbir zaman kaybolmaz.
-- Her chunk `bge-m3` ile 1024 boyutlu vektöre dönüştürülüp SSD `diskcache`'e kaydedilir.
-- Çıkmış sorular amfi slaytlarıyla kosinüs benzerliği + IDF terim örtüşmesiyle eşleştirilir.
-- **Hakem Ajan (Judge Agent) Kuralları:**
-  - `support_ratio >= 0.85`: Otomatik onayla (`verified`), zenginleştirmeye al (`fixed`).
-  - `0.65 <= support_ratio < 0.85`: Sınır vaka; `referee_queue` kuyruğuna atılarak DeepSeek-R1 Hakem Ajan incelemesine yönlendirilir.
-  - `support_ratio < 0.65`: Eksik slayt / inceleme (`needs_fix` / `rejected`).
-- **Gemma 3 Düşünce Zinciri (CoT) & XML Yapılandırılmış Prompt:**
-  - LLM girdi ve çıktıları `<SLAYT_KANITLARI>`, `<SORU>`, `<ANALİZ>` ve `<YANIT>` XML etiketleriyle sınırlandırılır.
-  - Zenginleştirme ve çözümlerde 4 adımlı sıralı klinik akıl yürütme (Chain-of-Thought) zorunlu tutulur.
+- Her chunk'a `[Komite X | Ders | Başlık: ...]` metadata prefix'i enjekte edilir.
+- `bge-m3` ile 1024 boyutlu vektöre dönüştürülüp SSD `diskcache`'e kaydedilir.
+- Hakem Ajan kuralları: `>= 0.85` verified/fixed; `0.65-0.85` review queue; `< 0.65` needs_fix.
 
-### Aşama 4: Doğrulama ve Veritabanı Taşıma (`stage4_database.py` & `scripts/sync_to_supabase_v2.py`)
+### Faz 4 (Aşama 4): Doğrulama ve Veritabanı Taşıma (`stage4_database.py` & `scripts/sync_to_supabase_v2.py`)
 - Sadece `status == "verified"` veya `status == "fixed"` olan sorular `meds_database/` dizinine ve Supabase tablolarına aktarılır.
 - Toplu aktarımda `execute_batch` (batch_size=1000) kullanılır, ardından HNSW ve GIN indeksleri tetiklenir.
-- **Supabase v2 Chunk-Build Senkronizasyonu (`scripts/sync_to_supabase_v2.py`):**
-  - Tüm 6.263 çıkmış soru `v2_local_pipeline_2026` sürümüyle çakışmasız (`resolution=merge-duplicates`) Supabase `past_questions` tablosuna aktarılır; mevcut öğrenci yorumları ve oyları korunur.
-  - 24.794 amfi ders slayt parçası `rag_chunks` tablosuna Tier 1 (kalite >= 0.85) ve Tier 2 kademeli inşa mantığıyla aktarılır.
-  - İstemci tarafında PostgREST 1000 satır sınırını aşan sayfalamalı (range pagination) yükleme mimarisi işletilir.
+- Mevcut öğrenci yorumları ve like/dislike oyları korunur.
 
-### Aşama 5: Gelişmiş AI Orkestratörü (`scripts/advanced_ai/orchestrator.py`)
-- Slayt ve sorular üzerinden **GraphRAG Tıbbi Bilgi Grafı** inşa eder (`medical_knowledge_graph.json`, ego-graph radius=2).
-  - **Graph Triples Formatı:** DiGraph ilişkileri LLM'e ham JSON yerine `[Varlık] --> (İlişki) --> [Varlık]` biçiminde metinsel üçlüler halinde beslenir.
-- `rank-bm25` indekslerini BGE-M3 matrisleriyle birleştirerek **Hibrit Arama Motorunu** ayağa kaldırır.
-  - Sıralama standardı: **Reciprocal Rank Fusion (RRF)**:
-    $$RRF\_Score(d) = \frac{1}{60 + rank_{dense}(d)} + \frac{1}{60 + rank_{sparse}(d)}$$
-  - Çapraz Dikkat benzetimli hafif **Reranker** ile Top-20 aday Top-5'e indirgenerek LLM prompt yükü hafifletilir.
-- **Bağlam Kanamasını (Context Bleeding) Engelleme:** Soru çözerken Ollama mesaj geçmişi her soruda sıfırlanır, MemGPT belleği sadece tekil sistem talimatı olarak enjekte edilir.
+### Faz 5 (Aşama 5): Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti (`multi_ai_consensus_phase5.py`)
+- Soru ve slaytlar yerel RTX 4060 GPU (`gemma3:4b`) ve Bulut AI (`gpt-oss-120b` / `qwen` / `gemini-3.8-flash`) tarafından ortak konsensüse alınır.
+- Pedagojik amaç ve tıbbi varlıklar (hastalık, ilaç, patojen, semptom vb.) çıkarılır.
+- Hangi slayt dosyasının hangi sayfasındaki hangi metin parçasıyla (chunk) örtüştüğü kesin olarak teyit edilir.
+- Yanlış kurul, yanlış ders atanan sorular denetlenir (`classification_audit`); geçersizler `blacklist/` altına izole edilir.
+- Çıktılar mevcut veritabanını bozmadan `meds_database_v2/` altına parça parça (JSONL) yazılır.
+
+### Faz 6 (Aşama 6): Derin Tıbbi Hiper-Metadata Motoru (`deep_metadata_generator_phase6.py`)
+- Çoklu Yapay Zeka Katmanı (RTX 4060 GPU Gemma 3, OpenRouter / Muse Spark, Groq Cloud, Gemini Flash) kullanır.
+- Dinamik Hız Kontrolü: 5 ila 10 dakikada 5 soru, her 2 saatte bir 1 tam amfi ders notu işleme temposuyla arka planda otonom çalışır.
+- ICD-10 kodları, ayırıcı tanı, multidisipliner tıp bağları ve hiper-arama etiketleri üretir.
+
 
 ---
 
@@ -184,12 +186,12 @@ erDiagram
 
 ---
 
-## 7. Yerel QLoRA Fine-Tuned Model & Web Entegrasyonu (nofrostlife.com.tr)
-- **Model Adaptörü Konumu:** `meds/models/medsoru-d3-qlora`
+## 7. Yerel QLoRA Fine-Tuned Model & Yetkilendirmeler
+- **Model Adaptörü Konumu:** `meds/models/medsoru-d3-qlora` (Çevrimdışı / Bağımsız model)
 - **HuggingFace Yetkilendirmeleri:**
   - `meds2` (Inference / Hub Okuma): `HF_TOKEN_MEDS2` (`.env`)
   - `meds3` (Write Access / Model Yükleme): `HF_TOKEN_MEDS3_WRITE` (`.env`)
-- **Web Sohbet Ajanı Hedefi:** QLoRA eğitimi tamamlandığında Ollama'ya `medsoru-d3` adıyla entegre edilir ve `nofrostlife.com.tr` (localhost:3000) web arayüzünde Dönem 3 tıp soru-cevap asistanı olarak devreye alınır.
+- **Web Sohbet Kuralı (ZORUNLU):** QLoRA modeli web arayüzünde (`nofrostlife.com.tr` / localhost:3000) sohbet ajanı olarak **asla kullanılmaz**. Web sohbetinde model seçimi devre dışı bırakılmıştır; yerel modda sabit olarak `gemma3:4b`, bulut modunda sabit olarak `gemini-3.8-flash` çalışır. QLoRA ağırlıkları bağımsız araştırma ve çevrimdışı tıp modeli olarak korunur.
 
 ---
 
@@ -215,4 +217,46 @@ erDiagram
 ### 8.3. Soru Yaşı ve Değerlendirme Sistemi
 - **Yeni Soru vs Arşiv:** 2026-2027 kurul soruları ile geçmiş yılların çıkmışları yeşil (`Yeni Soru`) ve gri (`Geçmiş Yıl`) rozetlerle ayrıştırılır; filtreleme paneline `new_only` ve `archived_only` seçenekleri eklenmiştir.
 - **Çift Yönlü Like / Dislike:** Her çıkmış soru için hem `upvotes` hem de `downvotes` sayaçları çalışır; oylar yerel veritabanı ile Supabase `past_questions` tablosunda anlık senkronize edilir.
+
+---
+
+## 9. Faz 5 & Faz 6: Çoklu AI Konsensüsü ve Derin Hiper-Metadata Mimarisi
+
+### 9.1. Faz 5: Ortak Çoklu AI Konsensüs & Soru Analiz Motoru (`scripts/advanced_ai/multi_ai_consensus_phase5.py`)
+- **Hibrit AI Konsensüsü:** Her çıkmış tıp sorusu eşzamanlı olarak yerel RTX 4060 GPU (`gemma3:4b` / `medgemma`) ve Bulut AI (Groq `gpt-oss-120b` / `qwen` / Gemini 3.8 Flash) tarafından ortak işleme alınır.
+- **Tıbbi Mantık & Pedagojik Kazanım:** Sorunun ölçtüğü temel klinik/patolojik mekanizma ortaya çıkarılır.
+- **Amfi Slayt İğne-Delik Tespiti:** Sorunun doğrudan hangi dersin hangi slayt sayfasındaki metin parçasıyla (chunk) örtüştüğü BM25 + anahtar terim eşleşmesiyle doğrulanır.
+- **Tıbbi Varlık Çıkarımı:** Soruya ait *hastalık, ilaç, patojen, gen, belirti, semptom, etiyoloji, tedavi, ölçüm* bileşenleri yapılandırılmış JSON olarak çıkarılır.
+- **Hatalı Sınıflandırma ve Karantina:**
+  - Yanlış kurula, derse veya konuya atanmış sorular tespit edilip düzeltilmiş etiketler önerilir (`classification_audit`).
+  - Yazım hatalı veya eksik soru kökleri onarılır; geçersiz (stem < 15 karakter, eksik şıklı) sorular `blacklist/` altına izole edilir.
+- **Veritabanı İzolasyonu:** Mevcut `meds_database` korunur; tüm çıktılar `meds_database_v2/questions` ve `blacklist/` altına parça parça (chunked JSONL) yazılır.
+
+### 9.2. Faz 6: Derin Tıbbi Hiper-Metadata Motoru (`scripts/advanced_ai/deep_metadata_generator_phase6.py`)
+- **Çoklu AI Katmanı:** Yerel RTX 4060 GPU (`gemma3:4b`), OpenRouter / Muse Spark 1.3 Free, Groq Cloud (`llama-3.3-70b` / `qwen`) ve Google Gemini Flash ortak havuzundan beslenir.
+- **Dinamik Hız & Kota Koruması:** 5 ila 10 dakikada bir 5 soru, 2 saatte bir 1 tam ders notu işleme temposuyla donanımı ve API kotalarını yormadan arka planda otonom çalışır.
+- **Üretilen Derin Boyutlar:**
+  - ICD-10 kodları ve klinik protokoller.
+  - Ayırıcı tanı (diferansiyel tanı) eşleşmeleri ve klinik farklar.
+  - Multidisipliner entegrasyon (Patoloji + Farmakoloji + Klinik branş kesişimleri).
+  - Tıbbi hiper-arama etiketleri (BM25 ve BGE-M3 arama motorunu güçlendiren hekim jargonu ve Latince/İngilizce terimler).
+  - Amfi ders notları için klinik özetler, tuzak sınav noktaları ve vaka senaryoları.
+- **Otonom Kurtarma & Watchdog:** Hem Faz 5 hem de Faz 6 motorları `watchdog.py` tarafından kesintisiz olarak izlenir ve arka planda güvenle yürütülür.
+
+---
+
+## 10. Sıfır Komutlu Docker ve Web Otomasyon Mimarisi (Zero-Command Automation)
+
+### 10.1. Otonom Konteyner Başlatıcı (`Dockerfile` & `docker/entrypoint.sh`)
+- Sistem açıldığında veya `docker compose up -d` komutu verildiğinde hiçbir manuel betik çalıştırmaya gerek kalmadan:
+  1. `dashboard_server.py` (Port 8085 Analiz Kokpiti) otomatik başlar.
+  2. `watchdog.py` devreye girerek arka planda Faz 5 (`multi_ai_consensus_phase5.py`) ve Faz 6 (`deep_metadata_generator_phase6.py`) motorlarını otonom yürütür.
+  3. `pipeline_runner.py` Aşama 1 -> 2 -> 3 -> 4 -> 5 döngüsünü sürekli çalıştırır.
+  4. Web arayüzü ve API sunucusu (`server.ts` - Port 3000) canlıya geçer.
+
+### 10.2. Web Otomasyon Kokpiti & Dashboard Entegrasyonu
+- **Merkezi Runner:** [`scripts/automation-runner.mjs`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/scripts/automation-runner.mjs) içine `phase5-multi-ai-consensus` ve `phase6-deep-metadata-generator` boru hatları eklenmiştir; web UI üzerinden tek tıkla tetiklenebilir ve logları izlenebilir.
+- **Canlı Telemetri:** [`dashboard_server.py`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/dashboard_server.py) Port 8085 üzerinde Aşama 6 (Konsensüs) ve Aşama 7 (Hiper-Metadata) ilerlemelerini, günlük kota durumunu ve karantinaya alınan soruları canlı olarak gösterir.
+
+
 
