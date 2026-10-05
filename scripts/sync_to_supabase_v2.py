@@ -326,7 +326,16 @@ def verify_sync_counts():
 
 if __name__ == "__main__":
     t_start = time.time()
-    sync_past_questions()
-    sync_rag_chunks()
+    questions_only = "--questions-only" in sys.argv
+    chunks_only = "--chunks-only" in sys.argv
+
+    if chunks_only:
+        sync_rag_chunks()
+    elif questions_only:
+        sync_past_questions()
+    else:
+        sync_past_questions()
+        sync_rag_chunks()
+
     verify_sync_counts()
-    print(f"\n🎉 TÜM SENKRONİZASYON BAŞARIYLA TAMAMLANDI! Toplam Süre: {time.time() - t_start:.2f}s")
+    print(f"\n🎉 SENKRONİZASYON BAŞARIYLA TAMAMLANDI! Toplam Süre: {time.time() - t_start:.2f}s")

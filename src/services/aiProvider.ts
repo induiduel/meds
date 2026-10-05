@@ -506,13 +506,16 @@ export async function callMuseSpark(
   const baseUrls = getMuseSparkBaseUrls(options?.baseUrl);
 
   const candidateModels = [
-    model && (model.includes('spark') || model.includes('muse')) ? model : null,
+    model && (model.includes('spark') || model.includes('muse') || model.includes('openrouter')) ? model : null,
     'muse-spark-1.3-contributor-free',
     'muse-spark-1.3-free',
     'muse-spark-1.3',
+    'liquid/lfm-2.5-2.6b:free',
+    'qwen/qwen3.8-27b:free',
+    'google/gemma-4-31b-it:free',
+    'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free',
     'meta/muse-spark-1.3:free',
-    'meta/muse-spark-1.3',
-    'meta/muse-spark-1.3-contributor'
+    'meta/muse-spark-1.3'
   ].filter(Boolean) as string[];
 
   const isJson = options?.isJson !== false;

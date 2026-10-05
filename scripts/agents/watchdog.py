@@ -196,6 +196,30 @@ def enforce_gpu_thermal_and_load_limits(max_util: int = 90, max_temp: int = 80):
     except Exception:
         pass
 
+
+lora_was_running = False
+
+def check_post_lora_training_trigger():
+    """QLoRA eğitimi sonlandığı an otomatik veri denetleme ve iyileştirme motorunu devreye alır."""
+    global lora_was_running
+    res = subprocess.run(["pgrep", "-f", "train_lora.py"], capture_output=True, text=True)
+    is_currently_running = bool(res.stdout.strip())
+
+    if is_currently_running:
+        lora_was_running = True
+        return
+
+    # Eğer daha önce çalışıyordu ve şimdi kapandıysa -> Eğitim BİTTİ
+    if lora_was_running and not is_currently_running:
+        lora_was_running = False
+        log("🎉 [OTOMASYON] QLoRA eğitimi tamamlandı! Veri denetleme ve iyileştirme motoru (post_lora_auto_refiner.py) devreye alınıyor...")
+        refiner_script = SCRIPTS_DIR / "agents" / "post_lora_auto_refiner.py"
+        if refiner_script.exists():
+            py_bin = sys.executable
+            cmd = [py_bin, str(refiner_script), "--sync-supabase"]
+            subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+            log("post_lora_auto_refiner.py arka planda otomatik olarak başlatıldı ✓")
+
 def main():
     log("MedSoru Gelişmiş Otonom Sistem & Docker Watchdog Başlatıldı.")
     last_known_code_mtime = get_code_mtime()
@@ -231,6 +255,9 @@ def main():
 
             # 7. Donanım Güvenlik Freni: GPU Yükü (%90) ve Sıcaklık (80°C) denetimi
             enforce_gpu_thermal_and_load_limits(max_util=90, max_temp=80)
+
+            # 8. QLoRA Eğitim Sonrası Otomatik Veri Denetleme & İyileştirme Tetikleyicisi
+            check_post_lora_training_trigger()
 
         except Exception as e:
             log(f"Watchdog genel döngü hatası: {e}")
