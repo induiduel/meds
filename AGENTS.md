@@ -38,6 +38,8 @@ MedSoru Project/
 │   │   └── training/                       # Yerel Tıp Modeli Eğitimi (Fine-Tuning)
 │   │       ├── prepare_dataset.py          # Alpaca formatında eğitim çifti üretici
 │   │       └── train_lora.py               # 4-bit QLoRA RTX 4060 eğitim betiği
+│   ├── curriculum/                         # KBÜ Tıp Dönem 3 Resmi Müfredatı
+│   │   └── kbu_tip_donem3_curriculum.json  # TIP310, TIP320, TIP340, TIP350, TIP360 ders hedefleri
 │   ├── supabase/
 │   │   └── migrations/                     # PostgreSQL, pgvector & GraphRAG Şemaları
 │   │       ├── 20261001_initial_schema.sql
@@ -54,6 +56,10 @@ MedSoru Project/
 ├── meds_database/                          # Doğrulanmış Nihai Tıp Veritabanı
 │   ├── questions/                          # Sadece verified / fixed sorular
 │   └── chunks/                             # Kanıtlanmış ders slayt parçaları
+├── meds_database_v2/                       # Faz 5/6/6.5/7.5 Zenginleştirilmiş Tıp Ekosistemi
+│   ├── medical_thesaurus/                  # Faz 6.5: Tıbbi sözlük (ontoloji) & soru-slayt kanıt kancaları
+│   ├── slide_reconstructed/                # Faz 7.5: Resmi müfredat formatında düzenlenmiş slaytlar
+│   └── phase7_stories/                     # Faz 7: 5 adımlı mikro-ajan pedagojik klinik hikayeleri
 └── dashboard_server.py                     # Port 8085 Canlı Telemetri & DiGraph Kokpiti
 ```
 
@@ -175,8 +181,11 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - Duraksama / kurtarma desteği ile her adım anında diske yazılır (`meds_database_v2/phase7_stories`).
 
 ### Faz 7.5 (Aşama 7.5): Amfi Ders Slaytlarını Resmi Müfredat Standartlarında Düzenleme (`reconstruct_slides_phase7_5.py`)
-- KBÜ Tıp Fakültesi Dönem 3 resmi kurul hedeflerini (`TIP310`, `TIP320`, `TIP340`, `TIP350`, `TIP360`) haritalar.
-- Müfredat dışı sapmaları engeller; slaytları resmi konu başlığı, öğrenim hedefleri (tanım, patogenez, ayırıcı tanı, tedavi), anahtar kavramlar ve kancalanan çıkmış sorularla zenginleştirilmiş ders kartlarına dönüştürür (`meds_database_v2/slide_reconstructed`).
+- **Resmi Müfredat Konumu:** [`curriculum/kbu_tip_donem3_curriculum.json`](file:///home/indu/Masaüstü/MedSoru%20Project/meds/curriculum/kbu_tip_donem3_curriculum.json)
+  - Karabük Üniversitesi Tıp Fakültesi Dönem 3'e ait 5 resmi kurulun tamamı (`TIP310`, `TIP320`, `TIP340`, `TIP350`, `TIP360`) AKTS, teorik ders saati, ilgili ana bilim dalları ve çekirdek konu başlıklarıyla (core_topics) bu dosyada saklanır.
+- **Müfredat Sınırları ve İzolasyon:**
+  - Yapay zeka ve orkestratörler müfredat dışına çıkamaz; slayt düzenleme ve soru eşleştirme işlemlerinde yalnızca bu resmi ders başlıkları referans alınır.
+  - Slaytlar resmi konu başlığı, öğrenim hedefleri (tanım, patogenez, ayırıcı tanı, tedavi), anahtar kavramlar ve kancalanan çıkmış sorularla zenginleştirilmiş ders kartlarına dönüştürülüp `meds_database_v2/slide_reconstructed/` dizinine JSON olarak yazılır.
 
 ---
 
