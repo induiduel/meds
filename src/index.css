@@ -560,7 +560,7 @@ body {
 .ms-page { transform-box: view-box; transform-origin: 48px 38px; animation: ms-page 1.6s cubic-bezier(.6,.05,.3,1) infinite; }
 .ms-sheet { animation: ms-sheet 1.6s ease-in infinite; }
 .ms-sheet-2 { animation-delay: .8s; }
-.ms-ring { transform-box: fill-box; transform-origin: center; animation: ms-ring .35s cubic-bezier(.2,.9,.3,1.3) backwards; }
+.ms-ring { transform-box: fill-box; transform-origin: center; animation: ms-ring .35s cubic-bezier(.16, 1, .3, 1) backwards; }
 .ms-check { stroke-dasharray: 40; animation: ms-check .4s .25s ease-out backwards; }
 .ms-confetti { transform-box: view-box; transform-origin: 40px 40px; animation: ms-confetti .9s .2s ease-out backwards; }
 .ms-fade-in { animation: ms-fade-in .2s ease-out backwards; }
@@ -588,7 +588,7 @@ body {
 
 .ms-wobble { transform-origin: 50% 90%; animation: ms-wobble 1.1s ease-in-out .15s backwards, ms-float 2.4s ease-in-out 1.3s infinite; }
 .ms-drop { transform-box: fill-box; animation: ms-drop 1.8s ease-in infinite; }
-.ms-toast-in { animation: ms-toast-in .28s cubic-bezier(.2,.9,.3,1.2) backwards; }
+.ms-toast-in { animation: ms-toast-in .28s cubic-bezier(.16, 1, .3, 1) backwards; }
 .ms-toast-timer { animation: ms-toast-timer linear forwards; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -638,7 +638,7 @@ details > summary::-webkit-details-marker { display: none; }
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  animation: ms-pop-in .24s cubic-bezier(.2,.9,.3,1.1) backwards;
+  animation: ms-pop-in .24s cubic-bezier(.16, 1, .3, 1) backwards;
 }
 @media (max-width: 639px) {
   .ms-overlay { align-items: flex-end !important; padding: 0 !important; }
@@ -787,3 +787,7 @@ html.ui-v3 header.sticky nav a { border-radius: 999px; }
 .ms-console-body :is(input, select, textarea).border { background-color: var(--color-field); border-color: transparent; }
 .ms-console-body :is(input, select, textarea):focus { background-color: var(--color-white); border-color: var(--color-accent); }
 .ms-console-body table { border-radius: 16px; }
+
+/* Tarayıcı ayrıntıları da tasarımın parçası: imleç vurgu renginde, sayılar hizalı */
+input, textarea, [contenteditable] { caret-color: var(--color-accent); }
+.font-mono, table, [class*="tabular"] { font-variant-numeric: tabular-nums; }

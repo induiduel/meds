@@ -1,0 +1,27 @@
+{
+  "hook": {
+    "enabled": true,
+    "limits": {
+      "maxFindings": 5,
+      "maxChars": 8000
+    }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "bounce-easing",
+        "value": "ms-bounce",
+        "createdAt": "2026-10-05T10:17:29.703Z",
+        "reason": "Claude: yükleme maskotunun ms-bounce hareketi bilinçli karakter animasyonu"
+      },
+      {
+        "rule": "bounce-easing",
+        "value": "ms-wobble",
+        "createdAt": "2026-10-05T10:17:29.713Z",
+        "reason": "Claude: yükleme maskotunun ms-wobble hareketi bilinçli karakter animasyonu"
+      }
+    ]
+  }
+}

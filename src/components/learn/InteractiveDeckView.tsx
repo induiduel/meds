@@ -295,7 +295,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           return (
             <div
               key={idx}
-              className={`p-2.5 sm:p-3 my-1 rounded-xl border-l-4 text-[12px] sm:text-[12.5px] leading-relaxed flex items-center gap-2.5 shadow-2xs ${
+              className={`p-2.5 sm:p-3 my-1 rounded-xl border text-[12px] sm:text-[12.5px] leading-relaxed flex items-center gap-2.5 shadow-2xs ${
                 isRed
                   ? 'bg-red-500/10 dark:bg-red-500/20 border-red-500 text-red-950 dark:text-red-200'
                   : 'bg-accent-soft/30 border-accent text-ink'
@@ -1955,24 +1955,24 @@ export const KeyBulletsRenderer: React.FC<{
               /\b(özet|tekrar|sentez|hatırlatma|yaklaşım|prognoz|sonuç)\b/i.test(t));
 
           let badgeCls = 'bg-teal-500/10 text-teal-800 dark:text-teal-300 border-teal-500/20';
-          let borderCls = 'border-l-4 border-l-teal-500 bg-teal-50/20 dark:bg-teal-950/20 border-line-soft';
+          let borderCls = 'bg-teal-50/20 dark:bg-teal-950/20 border-line-soft';
           let icon = <BookOpen className="w-3.5 h-3.5 text-teal-600 shrink-0" />;
 
           if (isRed) {
             badgeCls = 'bg-rose-500/10 text-rose-800 dark:text-rose-300 border-rose-500/30';
-            borderCls = 'border-l-4 border-l-rose-500 bg-rose-50/40 dark:bg-rose-950/30 border-rose-500/20';
+            borderCls = 'bg-rose-50/40 dark:bg-rose-950/30 border-rose-500/20';
             icon = <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />;
           } else if (isAmber) {
             badgeCls = 'bg-amber-500/10 text-amber-900 dark:text-amber-300 border-amber-500/30';
-            borderCls = 'border-l-4 border-l-amber-500 bg-amber-50/40 dark:bg-amber-950/30 border-amber-500/20';
+            borderCls = 'bg-amber-50/40 dark:bg-amber-950/30 border-amber-500/20';
             icon = <Lightbulb className="w-3.5 h-3.5 text-amber-600 shrink-0" />;
           } else if (isBlue) {
             badgeCls = 'bg-blue-500/10 text-blue-900 dark:text-blue-300 border-blue-500/30';
-            borderCls = 'border-l-4 border-l-blue-500 bg-blue-50/40 dark:bg-blue-950/30 border-blue-500/20';
+            borderCls = 'bg-blue-50/40 dark:bg-blue-950/30 border-blue-500/20';
             icon = <ArrowLeftRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />;
           } else if (isPurple) {
             badgeCls = 'bg-purple-500/10 text-purple-900 dark:text-purple-300 border-purple-500/30';
-            borderCls = 'border-l-4 border-l-purple-500 bg-purple-50/40 dark:bg-purple-950/30 border-purple-500/20';
+            borderCls = 'bg-purple-50/40 dark:bg-purple-950/30 border-purple-500/20';
             icon = <RotateCcw className="w-3.5 h-3.5 text-purple-600 shrink-0" />;
           }
 
