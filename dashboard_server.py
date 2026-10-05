@@ -53,12 +53,14 @@ HTML_PAGE = """<!DOCTYPE html>
                     </div>
                 </div>
             </div>
-            <div class="flex items-center gap-3">
-                <a href="http://localhost:3000" target="_blank" class="px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white rounded-lg text-sm font-medium shadow-lg transition flex items-center gap-2">
-                    <i class="fa-solid fa-graduation-cap"></i> MedSoru App (Port 3000)
+                <a href="http://localhost:3000" target="_blank" class="px-3.5 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white rounded-lg text-xs font-semibold shadow-lg transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap"></i> App (3000)
                 </a>
-                <a href="http://localhost:8080" target="_blank" class="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-lg text-sm font-medium shadow-lg transition flex items-center gap-2">
-                    <i class="fa-solid fa-comments"></i> Open WebUI (Port 8080)
+                <a href="http://localhost:8000" target="_blank" class="px-3.5 py-1.5 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-lg text-xs font-semibold shadow-lg transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-bolt"></i> Hibrit API (8000)
+                </a>
+                <a href="http://localhost:8085" target="_blank" class="px-3.5 py-1.5 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-lg text-xs font-semibold shadow-lg transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-gauge-high"></i> Kokpit (8085)
                 </a>
                 <div class="px-3 py-2 glass rounded-lg text-xs text-slate-400 flex items-center gap-2">
                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 pulse-dot"></span> Canlı İzleme (2s / 5s)
@@ -79,9 +81,9 @@ HTML_PAGE = """<!DOCTYPE html>
                 <i class="fa-solid fa-filter-circle-xmark text-amber-400"></i> Elenen & İnceleme Dosyaları
                 <span id="nav-rejected-badge" class="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">0</span>
             </button>
-            <button id="nav-btn-phase45" onclick="switchTab('phase45')" class="tab-btn px-4 py-2.5 rounded-xl font-medium text-sm flex items-center gap-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition whitespace-nowrap">
-                <i class="fa-solid fa-brain text-purple-400"></i> Aşama 4 & 5 Bilgi Merkezi (Faz 2 & 3)
-                <span class="px-2 py-0.5 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">RAG & AI</span>
+            <button id="nav-btn-master" onclick="switchTab('master')" class="tab-btn px-4 py-2.5 rounded-xl font-medium text-sm flex items-center gap-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition whitespace-nowrap">
+                <i class="fa-solid fa-sliders text-amber-400"></i> Master Süreç & Mod Yöneticisi
+                <span id="nav-master-mode-badge" class="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">Normal</span>
             </button>
         </nav>
 
@@ -919,6 +921,132 @@ HTML_PAGE = """<!DOCTYPE html>
                     </div>
                 </div>
             </div>
+        <!-- SEKME 4: MASTER SÜREÇ & MOD YÖNETİCİSİ -->
+        <div id="tab-master" class="tab-content hidden space-y-6">
+            <!-- Mod Seçim Bannerı -->
+            <div class="glass p-6 rounded-2xl border-l-4 border-amber-500 space-y-4">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">Orkestrasyon & Güç Yönetimi</span>
+                            <span id="master-active-mode-label" class="text-xs font-mono text-cyan-400">Aktif Mod: Normal</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white mt-1">Master Sistem & Süreç Denetim Masası</h2>
+                        <p class="text-xs text-slate-300 mt-1 max-w-2xl leading-relaxed">
+                            Arka plandaki tüm yapay zeka, arama ve senkronizasyon scriptlerini tek merkezden açıp kapatabilir, sistem gücünü ve çalışma takvimini anlık olarak yapılandırabilirsiniz.
+                        </p>
+                    </div>
+                    <!-- 3 Mod Seçim Buton Grubu -->
+                    <div class="flex flex-wrap items-center gap-2 bg-slate-900/80 p-2 rounded-xl border border-slate-800">
+                        <button onclick="changeMasterMode('normal')" id="btn-mode-normal" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-blue-600 text-white shadow-md">
+                            <i class="fa-solid fa-gauge"></i> 1 - Normal (1-3GB GPU)
+                        </button>
+                        <button onclick="changeMasterMode('safe')" id="btn-mode-safe" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-slate-800 text-slate-300 hover:bg-slate-700">
+                            <i class="fa-solid fa-shield-halved text-emerald-400"></i> 2 - Güvenli (Zero GPU)
+                        </button>
+                        <button onclick="changeMasterMode('extreme')" id="btn-mode-extreme" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-slate-800 text-slate-300 hover:bg-slate-700">
+                            <i class="fa-solid fa-bolt text-rose-400"></i> 3 - Aşırı Güç (Max GPU)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hızlı Bağlantılar & Servis Portları -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="http://localhost:3000" target="_blank" class="glass p-4 rounded-xl hover:border-emerald-500/50 transition flex items-center justify-between group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-lg group-hover:scale-110 transition">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">MedSoru Web Uygulaması</div>
+                            <div class="text-xs text-slate-400 font-mono">http://localhost:3000</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-emerald-400 transition"></i>
+                </a>
+
+                <a href="http://localhost:8000" target="_blank" class="glass p-4 rounded-xl hover:border-cyan-500/50 transition flex items-center justify-between group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-3 bg-cyan-500/20 text-cyan-400 rounded-lg group-hover:scale-110 transition">
+                            <i class="fa-solid fa-bolt text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Hibrit Arama & Supabase REST</div>
+                            <div class="text-xs text-slate-400 font-mono">http://localhost:8000</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-cyan-400 transition"></i>
+                </a>
+
+                <a href="http://localhost:8085" target="_blank" class="glass p-4 rounded-xl hover:border-purple-500/50 transition flex items-center justify-between group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-3 bg-purple-500/20 text-purple-400 rounded-lg group-hover:scale-110 transition">
+                            <i class="fa-solid fa-gauge-high text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Canlı Analiz Kokpiti (Bu Panel)</div>
+                            <div class="text-xs text-slate-400 font-mono">http://localhost:8085</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-purple-400 transition"></i>
+                </a>
+            </div>
+
+            <!-- Çalışma Takvimi & Saat Koşulları (Scheduler) -->
+            <div class="glass p-5 rounded-2xl space-y-3">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-business-time text-cyan-400"></i>
+                        <h3 class="text-sm font-bold text-white">Otomasyon Çalışma Saatleri & Koşulları</h3>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <label class="inline-flex items-center gap-2 cursor-pointer text-xs text-slate-300">
+                            <input type="checkbox" id="sched-enabled" onchange="updateScheduleSettings()" class="rounded bg-slate-800 border-slate-700 text-indigo-500 focus:ring-0">
+                            <span>Zamanlayıcı Aktif</span>
+                        </label>
+                        <div class="flex items-center gap-1 text-xs text-slate-400 font-mono">
+                            <span>Başlangıç:</span>
+                            <input type="number" id="sched-start" min="0" max="23" value="8" onchange="updateScheduleSettings()" class="w-14 bg-slate-900 border border-slate-700 rounded px-2 py-0.5 text-center text-white">
+                            <span>Bitiş:</span>
+                            <input type="number" id="sched-end" min="0" max="23" value="23" onchange="updateScheduleSettings()" class="w-14 bg-slate-900 border border-slate-700 rounded px-2 py-0.5 text-center text-white">
+                        </div>
+                        <span id="sched-status-badge" class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300">Çalışma Saati İçi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scriptler Yönetim Masası (Tablo & Kontroller) -->
+            <div class="glass p-6 rounded-2xl space-y-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-base font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-indigo-400"></i> Yönetilen Arka Plan Scriptleri & Görev Envanteri
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Her scriptin amacını görüntüleyebilir, tek tıkla başlatıp durdurabilirsiniz.</p>
+                    </div>
+                    <button onclick="updateMasterStatus()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 rounded-lg border border-slate-700 flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate text-cyan-400"></i> Yenile
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-800/60 text-slate-400 uppercase text-[10px] tracking-wider border-b border-slate-700/50">
+                            <tr>
+                                <th class="p-3 w-56">Script & Servis</th>
+                                <th class="p-3">Görevi ve Açıklaması</th>
+                                <th class="p-3 w-28">Durum</th>
+                                <th class="p-3 w-28">Çalışma Süresi</th>
+                                <th class="p-3 text-right w-32">Kontrol</th>
+                            </tr>
+                        </thead>
+                        <tbody id="master-scripts-table-body" class="divide-y divide-slate-800/60 font-sans text-slate-300">
+                            <tr><td colspan="5" class="p-4 text-center text-slate-500">Script bilgileri alınıyor...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
     <script>
@@ -1012,16 +1140,19 @@ HTML_PAGE = """<!DOCTYPE html>
                 updateRejectedPage();
             } else if (tabId === 'phase45') {
                 updatePhase45Page();
+            } else if (tabId === 'master') {
+                updateMasterStatus();
             }
 
             // Otomatik polling: Görüntülenen sayfa her 5 saniyede bir güncellensin
             if (tabIntervalId) clearInterval(tabIntervalId);
-            const refreshTime = (tabId === 'overview' || tabId === 'stages') ? 2000 : 5000;
+            const refreshTime = (tabId === 'overview' || tabId === 'stages' || tabId === 'master') ? 2000 : 5000;
             tabIntervalId = setInterval(() => {
                 if (currentTab === 'overview') updateDashboard();
                 else if (currentTab === 'stages') updateStagesPage();
                 else if (currentTab === 'rejected') updateRejectedPage();
                 else if (currentTab === 'phase45') updatePhase45Page();
+                else if (currentTab === 'master') updateMasterStatus();
             }, refreshTime);
         }
 
@@ -1776,14 +1907,149 @@ HTML_PAGE = """<!DOCTYPE html>
             }
         }
 
+        // ==========================================
+        // SEKME 4: MASTER SÜREÇ & MOD YÖNETİCİSİ JS
+        // ==========================================
+        async function updateMasterStatus() {
+            try {
+                const res = await fetch('/api/master/status');
+                const d = await res.json();
+
+                // 1. Mod Göstergeleri
+                const curMode = d.mode || 'normal';
+                const modeLabel = document.getElementById('master-active-mode-label');
+                const navBadge = document.getElementById('nav-master-mode-badge');
+                if (modeLabel) modeLabel.innerText = "Aktif Mod: " + (curMode === 'normal' ? 'Normal (1-3GB GPU)' : (curMode === 'safe' ? 'Güvenli (Zero GPU)' : 'Aşırı Güç (Max GPU)'));
+                if (navBadge) {
+                    navBadge.innerText = curMode.toUpperCase();
+                    navBadge.className = curMode === 'safe' ? "px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" : (curMode === 'extreme' ? "px-2 py-0.5 rounded-full text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30" : "px-2 py-0.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30");
+                }
+
+                // Buton stillerini güncelle
+                ['normal', 'safe', 'extreme'].forEach(m => {
+                    const btn = document.getElementById('btn-mode-' + m);
+                    if (btn) {
+                        if (m === curMode) {
+                            btn.className = (m === 'normal' ? 'bg-blue-600' : (m === 'safe' ? 'bg-emerald-600' : 'bg-rose-600')) + " px-3.5 py-2 rounded-lg text-xs font-bold text-white shadow-md transition flex items-center gap-1.5";
+                        } else {
+                            btn.className = "bg-slate-800 text-slate-300 hover:bg-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5";
+                        }
+                    }
+                });
+
+                // 2. Zamanlayıcı Bilgileri
+                const sched = d.schedule || {};
+                const schedChk = document.getElementById('sched-enabled');
+                const schedStart = document.getElementById('sched-start');
+                const schedEnd = document.getElementById('sched-end');
+                const schedBadge = document.getElementById('sched-status-badge');
+                if (schedChk) schedChk.checked = sched.enabled || false;
+                if (schedStart) schedStart.value = sched.start_hour ?? 8;
+                if (schedEnd) schedEnd.value = sched.end_hour ?? 23;
+                if (schedBadge) {
+                    if (d.within_schedule) {
+                        schedBadge.innerText = "Çalışma Saati İçi (Aktif)";
+                        schedBadge.className = "px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+                    } else {
+                        schedBadge.innerText = "Zamanlama Dışı (Beklemede)";
+                        schedBadge.className = "px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30";
+                    }
+                }
+
+                // 3. Scriptler Tablosu
+                const tbody = document.getElementById('master-scripts-table-body');
+                const scripts = d.scripts || {};
+                const sKeys = Object.keys(scripts);
+                if (tbody && sKeys.length > 0) {
+                    tbody.innerHTML = '';
+                    sKeys.forEach(k => {
+                        const s = scripts[k];
+                        const isRun = s.running;
+                        const tr = document.createElement('tr');
+                        tr.className = "hover:bg-slate-800/40 transition";
+                        tr.innerHTML = `
+                            <td class="p-3 font-semibold text-white">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full ${isRun ? 'bg-emerald-400 pulse-dot' : 'bg-slate-600'}"></span>
+                                    <span>${s.name}</span>
+                                </div>
+                            </td>
+                            <td class="p-3 text-slate-300 text-xs">${s.desc}</td>
+                            <td class="p-3">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold ${isRun ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-slate-800 text-slate-400 border border-slate-700'}">
+                                    ${isRun ? '● ÇALIŞIYOR' : '○ DURDURULDU'}
+                                </span>
+                            </td>
+                            <td class="p-3 font-mono text-xs ${isRun ? 'text-cyan-300 font-bold' : 'text-slate-500'}">
+                                ${s.uptime_formatted}
+                            </td>
+                            <td class="p-3 text-right">
+                                <button onclick="toggleScriptAction('${k}', ${isRun})" class="px-3 py-1 rounded text-xs font-bold transition shadow-sm ${isRun ? 'bg-rose-600 hover:bg-rose-500 text-white' : 'bg-emerald-600 hover:bg-emerald-500 text-white'}">
+                                    ${isRun ? 'Durdur' : 'Başlat'}
+                                </button>
+                            </td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+            } catch (err) {
+                console.error("Master durum verisi çekilemedi:", err);
+            }
+        }
+
+        async function changeMasterMode(modeKey) {
+            try {
+                await fetch('/api/master/mode', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mode: modeKey })
+                });
+                updateMasterStatus();
+            } catch (e) {
+                alert('Mod değiştirilemedi: ' + e);
+            }
+        }
+
+        async function toggleScriptAction(scriptKey, currentlyRunning) {
+            const act = currentlyRunning ? 'stop' : 'start';
+            try {
+                await fetch('/api/master/action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: act, script: scriptKey })
+                });
+                updateMasterStatus();
+            } catch (e) {
+                alert('İşlem başarısız: ' + e);
+            }
+        }
+
+        async function updateScheduleSettings() {
+            const en = document.getElementById('sched-enabled')?.checked || false;
+            const sh = parseInt(document.getElementById('sched-start')?.value || 8);
+            const eh = parseInt(document.getElementById('sched-end')?.value || 23);
+            try {
+                await fetch('/api/master/schedule', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ enabled: en, start_hour: sh, end_hour: eh })
+                });
+                updateMasterStatus();
+            } catch (e) {
+                console.error('Schedule hatası:', e);
+            }
+        }
+
         // Başlangıç: İlk yüklemede ve 2 saniyede bir overview çek
         updateDashboard();
         updateRejectedPage(); // rozet sayısını almak için arka planda çağır
+        updateMasterStatus(); // Master durumunu ilk anda al
         tabIntervalId = setInterval(() => {
             if (currentTab === 'overview') updateDashboard();
             else if (currentTab === 'stages') updateStagesPage();
             else if (currentTab === 'rejected') updateRejectedPage();
             else if (currentTab === 'phase45') updatePhase45Page();
+            else if (currentTab === 'master') updateMasterStatus();
         }, 2000);
     </script>
 </body>
@@ -2381,6 +2647,44 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             self.wfile.write(json.dumps(get_rejected_data(), ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/master/status":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps(get_master_status(), ensure_ascii=False).encode("utf-8"))
+        else:
+            self.send_error(404)
+
+    def do_POST(self):
+        length = int(self.headers.get("Content-Length", 0))
+        body = self.rfile.read(length).decode("utf-8") if length > 0 else "{}"
+        try:
+            payload = json.loads(body)
+        except Exception:
+            payload = {}
+
+        if self.path == "/api/master/mode":
+            res = handle_master_mode(payload.get("mode", "normal"))
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/master/action":
+            res = handle_master_action(payload.get("action", ""), payload.get("script", ""))
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
+        elif self.path == "/api/master/schedule":
+            res = handle_master_schedule(payload)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
         else:
             self.send_error(404)
 
@@ -2463,6 +2767,64 @@ def get_rejected_data():
         },
         "items": items
     }
+
+def get_master_status():
+    master_state_file = BASE_DIR.parent / "meds_temp" / "state" / "master_controller_state.json"
+    if master_state_file.exists():
+        try:
+            return json.loads(master_state_file.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+
+    # Eğer master state dosyası henüz yoksa doğrudan master_controller'dan derle
+    try:
+        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        import master_controller
+        ctrl = master_controller.MasterController()
+        return ctrl.get_all_status()
+    except Exception as e:
+        return {"error": str(e), "mode": "normal", "scripts": {}, "telemetry": {}}
+
+def handle_master_mode(mode_key: str):
+    try:
+        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        import master_controller
+        ctrl = master_controller.MasterController()
+        ctrl.set_mode(mode_key)
+        ctrl.write_state_file()
+        return {"success": True, "mode": mode_key}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+def handle_master_action(action: str, script_key: str):
+    try:
+        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        import master_controller
+        ctrl = master_controller.MasterController()
+        if action == "start":
+            res = ctrl.start_script(script_key)
+        elif action == "stop":
+            res = ctrl.stop_script(script_key)
+        else:
+            res = False
+        ctrl.write_state_file()
+        return {"success": res, "script": script_key, "action": action}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+def handle_master_schedule(payload: dict):
+    try:
+        sys.path.insert(0, str(BASE_DIR / "scripts"))
+        import master_controller
+        ctrl = master_controller.MasterController()
+        ctrl.schedule_config["enabled"] = bool(payload.get("enabled", False))
+        ctrl.schedule_config["start_hour"] = int(payload.get("start_hour", 8))
+        ctrl.schedule_config["end_hour"] = int(payload.get("end_hour", 23))
+        ctrl.save_config()
+        ctrl.write_state_file()
+        return {"success": True, "schedule": ctrl.schedule_config}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
 
 def run():
     socketserver.TCPServer.allow_reuse_address = True

@@ -193,8 +193,301 @@ BASE_THESAURUS = {
         "kurul": "TIP360",
         "brans": "Acil Tıp / Ortopedi",
         "ozgulluk_agirligi": 4.6
+    },
+    # Gastroenteroloji & Karaciğer (TIP310)
+    "helikobakter pilori": {
+        "turkce": "Helikobakter pilori enfeksiyonu",
+        "latin": "Helicobacter pylori",
+        "esanlamlilar": ["h. pylori", "hp", "gastrik helikobakter"],
+        "anahtar_bilesenler": ["üreaz testi", "maltoma", "malt lenfoma", "kronik gastrit", "peptik ülser", "cagA", "vacA"],
+        "kurul": "TIP310",
+        "brans": "Tıbbi Mikrobiyoloji / Patoloji",
+        "ozgulluk_agirligi": 4.5
+    },
+    "crohn hastalıgı": {
+        "turkce": "Crohn Hastalığı",
+        "latin": "Morbus Crohn",
+        "esanlamlilar": ["regional enterit", "granülomatöz kolit", "terminal ileit"],
+        "anahtar_bilesenler": ["skip lezyon", "atlayan lezyon", "kaldırım taşı manzarası", "transmural inflamasyon", "non-kazeifiye granülom", "fistül"],
+        "kurul": "TIP310",
+        "brans": "İç Hastalıkları (Gastroenteroloji) / Patoloji",
+        "ozgulluk_agirligi": 4.8
+    },
+    "ülseratif kolit": {
+        "turkce": "Ülseratif Kolit",
+        "latin": "Colitis ulcerosa",
+        "esanlamlilar": ["ük", "idiyopatik proktokolit"],
+        "anahtar_bilesenler": ["kript apsesi", "psödopolip", "yalancı polip", "kurşun boru manzarası", "toksik megakolon", "kanlı mukuslu diyare", "p-anca"],
+        "kurul": "TIP310",
+        "brans": "İç Hastalıkları (Gastroenteroloji) / Patoloji",
+        "ozgulluk_agirligi": 4.8
+    },
+    "barrett özofagus": {
+        "turkce": "Barrett Özofagusu",
+        "latin": "Oesophagus Barrett",
+        "esanlamlilar": ["intestinal metaplazi", "özofagus metaplazisi"],
+        "anahtar_bilesenler": ["goblet hücreleri", "adeno karsinom riski", "görh", "reflü", "kolumnar metaplazi"],
+        "kurul": "TIP310",
+        "brans": "Tıbbi Patoloji / Gastroenteroloji",
+        "ozgulluk_agirligi": 4.6
+    },
+    "budd-chiari sendromu": {
+        "turkce": "Budd-Chiari Sendromu",
+        "latin": "Syndroma Budd-Chiari",
+        "esanlamlilar": ["hepatik ven obstrüksiyonu", "posthepatik portal hipertansiyon"],
+        "anahtar_bilesenler": ["hepatomegali", "asit", "hepatik ven trombozu", "polisitemia vera", "sentrilobüler konjesyon"],
+        "kurul": "TIP310",
+        "brans": "Patoloji / Gastroenteroloji",
+        "ozgulluk_agirligi": 4.7
+    },
+    "wilson hastalıgı": {
+        "turkce": "Wilson Hastalığı (Hepatoletiküler Dejenerasyon)",
+        "latin": "Morbus Wilson",
+        "esanlamlilar": ["hepatolentiküler dejenerasyon", "bakır depolanma hastalığı"],
+        "anahtar_bilesenler": ["kayser-fleischer halkası", "seruloplazmin düşüklüğü", "atp7b geni", "idrar bakırı", "bazal ganglion tutulumu"],
+        "kurul": "TIP310",
+        "brans": "Tıbbi Genetik / Patoloji",
+        "ozgulluk_agirligi": 4.9
+    },
+    "hemokromatozis": {
+        "turkce": "Hemokromatozis / Bronz Diyabet",
+        "latin": "Haemochromatosis",
+        "esanlamlilar": ["primer hemokromatoz", "demir depolanma hastalığı", "bronz diyabet"],
+        "anahtar_bilesenler": ["hfe geni", "c282y", "ferritin yüksekliği", "transferrin satürasyonu", "prussian blue", "hemosiderozis"],
+        "kurul": "TIP310",
+        "brans": "Patoloji / Genetik",
+        "ozgulluk_agirligi": 4.6
+    },
+    "çölyak hastalıgı": {
+        "turkce": "Çölyak Hastalığı / Gluten Enteropatisi",
+        "latin": "Morbus coeliacus",
+        "esanlamlilar": ["gluten duyarlı enteropati", "çölyak sprue"],
+        "anahtar_bilesenler": ["anti-ttg", "doku transglutaminaz", "intraepitelyal lenfosit", "villöz atrofi", "kript hiperplazisi", "dermatitis herpetiformis", "hla-dq2"],
+        "kurul": "TIP310",
+        "brans": "Gastroenteroloji / Patoloji",
+        "ozgulluk_agirligi": 4.7
+    },
+    "akut pankreatit": {
+        "turkce": "Akut Pankreatit",
+        "latin": "Pancreatitis acuta",
+        "esanlamlilar": ["akut nekrotizan pankreatit"],
+        "anahtar_bilesenler": ["lipaz", "amilaz", "ranson kriterleri", "enzimatik yağ nekrozu", "kalsiyum sabunlaşması", "safra taşı", "alkol"],
+        "kurul": "TIP310",
+        "brans": "Gastroenteroloji / Patoloji",
+        "ozgulluk_agirligi": 4.4
+    },
+    "kist hidatik": {
+        "turkce": "Kist Hidatik / Ekinokokkoz",
+        "latin": "Echinococcosis hepatis",
+        "esanlamlilar": ["hidatidoz", "köpek tenyası kisti"],
+        "anahtar_bilesenler": ["echinococcus granulosus", "kutiküler membran", "germinal tabaka", "hidatik kum", "anafilaksi", "albendazol"],
+        "kurul": "TIP310",
+        "brans": "Tıbbi Mikrobiyoloji / Parazitoloji",
+        "ozgulluk_agirligi": 4.7
+    },
+    # Endokrin & Metabolizma (TIP320)
+    "hashimoto tiroiditi": {
+        "turkce": "Hashimoto Tiroiditi (Kronik Lenfositik Tiroidit)",
+        "latin": "Thyroiditis lymphocytica chronica",
+        "esanlamlilar": ["otoimmün tiroidit", "struma lymphomatosa"],
+        "anahtar_bilesenler": ["anti-tpo", "anti-tiroglobulin", "hürthle hücreleri", "onkositik metaplazi", "lenfoid foliküller", "germinal merkez"],
+        "kurul": "TIP320",
+        "brans": "Tıbbi Patoloji / Endokrinoloji",
+        "ozgulluk_agirligi": 4.7
+    },
+    "cushing sendromu": {
+        "turkce": "Cushing Sendromu / Hiperkortizolizm",
+        "latin": "Syndroma Cushing",
+        "esanlamlilar": ["hiperkortizolizm"],
+        "anahtar_bilesenler": ["ay dede yüzü", "bufalo hörgücü", "mor strialar", "kortizol yüksekliği", "deksametazon baskılama", "acth"],
+        "kurul": "TIP320",
+        "brans": "Endokrinoloji / Patoloji",
+        "ozgulluk_agirligi": 4.5
+    },
+    "addison hastalıgı": {
+        "turkce": "Addison Hastalığı (Primer Kronik Adrenokortikal Yetmezlik)",
+        "latin": "Morbus Addison",
+        "esanlamlilar": ["adrenal yetmezlik", "hipokortizolizm"],
+        "anahtar_bilesenler": ["ciltte hiperpigmentasyon", "acth yüksekliği", "hiponatremi", "hiperkalemi", "hipotansiyon", "otoimmün adrenalit"],
+        "kurul": "TIP320",
+        "brans": "Endokrinoloji",
+        "ozgulluk_agirligi": 4.6
+    },
+    "papiller tiroid karsinomu": {
+        "turkce": "Papiller Tiroid Karsinomu",
+        "latin": "Carcinoma papillare thyroideae",
+        "esanlamlilar": ["ptc", "tiroid papiller ca"],
+        "anahtar_bilesenler": ["orphan annie gözü", "buzlu cam nükleus", "nükleer psödoinklüzyon", "psammom cisimciği", "lenfatik metastaz", "braf v600e"],
+        "kurul": "TIP320",
+        "brans": "Tıbbi Patoloji",
+        "ozgulluk_agirligi": 4.9
+    },
+    # Nöropsikiyatri (TIP340)
+    "alzheimer hastalıgı": {
+        "turkce": "Alzheimer Hastalığı",
+        "latin": "Morbus Alzheimer",
+        "esanlamlilar": ["senil demans", "alzheimer tipi demans"],
+        "anahtar_bilesenler": ["senil plak", "amiloid beta", "nörofibriler yumak", "hiperfosforile tau", "kolinerjik kayıp", "apo e4", "asetilkolinesteraz"],
+        "kurul": "TIP340",
+        "brans": "Nöroloji / Tıbbi Patoloji",
+        "ozgulluk_agirligi": 4.8
+    },
+    "parkinson hastalıgı": {
+        "turkce": "Parkinson Hastalığı",
+        "latin": "Morbus Parkinson",
+        "esanlamlilar": ["paralizis agitans", "parkinsonizm"],
+        "anahtar_bilesenler": ["lewy cisimciği", "alfa-sinüklein", "substantia nigra", "dopaminerjik nöron kaybı", "istirahat tremoru", "rijidite", "bradikinezi", "l-dopa"],
+        "kurul": "TIP340",
+        "brans": "Nöroloji / Patoloji / Farmakoloji",
+        "ozgulluk_agirligi": 4.8
+    },
+    "multipl skleroz": {
+        "turkce": "Multipl Skleroz (MS)",
+        "latin": "Sclerosis multiplex",
+        "esanlamlilar": ["ms", "yaygın skleroz"],
+        "anahtar_bilesenler": ["demiyelinizasyon", "oligoklonal bant", "bos igg indeksi", "periventriküler plak", "lhermitte belirtisi", "optik nörit", "dawson parmakları"],
+        "kurul": "TIP340",
+        "brans": "Nöroloji / Patoloji",
+        "ozgulluk_agirligi": 4.8
+    },
+    "guillain-barre sendromu": {
+        "turkce": "Guillain-Barré Sendromu (GBS)",
+        "latin": "Syndroma Guillain-Barre",
+        "esanlamlilar": ["akut inflamatuar demiyelinizan polinöropati", "aidp"],
+        "anahtar_bilesenler": ["asendan paralizi", "albüminositolojik disosiasyon", "campylobacter jejuni", "arefleksi", "ivig", "plazmaferez"],
+        "kurul": "TIP340",
+        "brans": "Nöroloji",
+        "ozgulluk_agirligi": 4.8
+    },
+    # Kardiyovasküler & Solunum (TIP350)
+    "akut miyokard enfarktüsü": {
+        "turkce": "Akut Miyokard Enfarktüsü (AMİ)",
+        "latin": "Infarctus myocardii acutus",
+        "esanlamlilar": ["stemi", "nstemi", "kalp krizi"],
+        "anahtar_bilesenler": ["troponin i", "troponin t", "ck-mb", "st elevasyonu", "koagülasyon nekrozu", "dal blokları", "koroner aterotromboz"],
+        "kurul": "TIP350",
+        "brans": "Kardiyoloji / Patoloji",
+        "ozgulluk_agirligi": 4.6
+    },
+    "infektif endokardit": {
+        "turkce": "İnfektif Endokardit",
+        "latin": "Endocarditis infectiosa",
+        "esanlamlilar": ["bakteriyel endokardit", "vejetatif endokardit"],
+        "anahtar_bilesenler": ["duke kriterleri", "osler nodülleri", "janeway lezyonları", "roth lekeleri", "vejetasyon", "streptococcus viridans", "staphylococcus aureus"],
+        "kurul": "TIP350",
+        "brans": "Kardiyoloji / Enfeksiyon Hastalıkları",
+        "ozgulluk_agirligi": 4.9
+    },
+    "pulmoner tromboemboli": {
+        "turkce": "Pulmoner Tromboemboli (PTE)",
+        "latin": "Thromboembolismus pulmonalis",
+        "esanlamlilar": ["akciğer embolisi", "pte", "derin ven trombozu komplikasyonu"],
+        "anahtar_bilesenler": ["d-dimer", "bt pulmoner anjiyografi", "hamptom hörgücü", "westermark işareti", "sağ ventrikül yüklenmesi", "s1q3t3", "antikoagülasyon"],
+        "kurul": "TIP350",
+        "brans": "Göğüs Hastalıkları / Kardiyoloji",
+        "ozgulluk_agirligi": 4.7
+    },
+    # Ortopedi, Hematoloji & Onkoloji (TIP360)
+    "multipl miyelom": {
+        "turkce": "Multipl Miyelom (Plazma Hücre Diskrazisi)",
+        "latin": "Myeloma multiplex",
+        "esanlamlilar": ["kahler hastalığı", "plazmositoma"],
+        "anahtar_bilesenler": ["crab kriterleri", "hiperkalsemi", "bence jones proteini", "m proteini", "litik kemik lezyonları", "zımba deliği manzarası", "rouleaux formasyonu"],
+        "kurul": "TIP360",
+        "brans": "Hematoloji / Patoloji",
+        "ozgulluk_agirligi": 4.9
+    },
+    "demir eksikligi anemisi": {
+        "turkce": "Demir Eksikliği Anemisi (DEA)",
+        "latin": "Anaemia ferripriva",
+        "esanlamlilar": ["mikrositer hipokrom anemi", "demir azlığı anemisi"],
+        "anahtar_bilesenler": ["ferritin düşüklüğü", "sdbk artışı", "rdw artışı", "anizositoz", "poikilositoz", "kalem hücreleri", "koilonişi"],
+        "kurul": "TIP360",
+        "brans": "Hematoloji / İç Hastalıkları",
+        "ozgulluk_agirligi": 4.4
+    },
+    "megaloblastik anemi": {
+        "turkce": "Megaloblastik Anemi",
+        "latin": "Anaemia megaloblastica",
+        "esanlamlilar": ["b12 veya folat eksikliği anemisi", "pernisiyöz anemi"],
+        "anahtar_bilesenler": ["hipersegmente nötrofil", "howell-jolly cisimciği", "makrositoz", "homosistein", "metilmalonik asit", "subakut kombine dejenerasyon"],
+        "kurul": "TIP360",
+        "brans": "Hematoloji / Biyokimya",
+        "ozgulluk_agirligi": 4.6
+    },
+    "orak hücreli anemi": {
+        "turkce": "Orak Hücreli Anemi (HbS)",
+        "latin": "Drepanocytosis",
+        "esanlamlilar": ["sickle cell anaemia", "hbs hemoglobinopatisi"],
+        "anahtar_bilesenler": ["glutamik asit valin mutasyonu", "vazo-oklüzif kriz", "dalak enfarktı", "otospelenektomi", "howell-jolly", "salmonella osteomiyeliti"],
+        "kurul": "TIP360",
+        "brans": "Hematoloji / Genetik",
+        "ozgulluk_agirligi": 4.9
+    },
+    "osteosarkom": {
+        "turkce": "Osteosarkom / Osteojenik Sarkom",
+        "latin": "Osteosarcoma",
+        "esanlamlilar": ["kemik kanseri", "malign osteojenik tümör"],
+        "anahtar_bilesenler": ["osteoid üretimi", "codman üçgeni", "güneş ışını manzarası", "metafiz tutulumu", "rb1 geni", "tp53 geni", "paget zemininde"],
+        "kurul": "TIP360",
+        "brans": "Tıbbi Patoloji / Ortopedi",
+        "ozgulluk_agirligi": 4.8
+    },
+    "miyastenia gravis": {
+        "turkce": "Miyastenia Gravis (MG)",
+        "latin": "Myasthenia gravis",
+        "esanlamlilar": ["nöromüsküler kavşak hastalığı"],
+        "anahtar_bilesenler": ["anti-achr", "asetilkolin reseptör antikoru", "timoma", "timus hiperplazisi", "ptozis", "diplopi", "yorulabilir kas güçsüzlüğü", "edrofonyum", "piridostigmin"],
+        "kurul": "TIP360",
+        "brans": "Nöroloji / Göğüs Cerrahisi / Patoloji",
+        "ozgulluk_agirligi": 4.8
     }
 }
+
+
+def enrich_thesaurus_with_ai(thesaurus: Dict[str, dict], max_terms_to_enrich: int = 15) -> Dict[str, dict]:
+    """
+    Yerel (Gemma 3 / Qwen) ve Bulut AI API'leri kullanarak mevcut terimlere
+    yeni eş anlamlılar, Latince hekim jargonu ve ayırıcı tanı anahtarları katar.
+    """
+    try:
+        sys.path.insert(0, str(ROOT / "scripts" / "agents"))
+        import lib
+        
+        # Henüz zenginleştirilmemiş veya az bileşeni olan terimleri seç
+        candidates = [k for k, v in thesaurus.items() if len(v.get("anahtar_bilesenler", [])) <= 5]
+        selected = candidates[:max_terms_to_enrich]
+        
+        if not selected:
+            return thesaurus
+
+        print(f"[AI Zenginleştirme] {len(selected)} tıbbi terim hafif AI ile genişletiliyor...")
+        for idx, term in enumerate(selected, 1):
+            print(f"  [{idx}/{len(selected)}] Genişletiliyor: {term}...", flush=True)
+            prompt = (
+                f"Tıbbi terim: '{term}'. Bu terimin tıp fakültesi sınavlarında geçen:\n"
+                f"1. En yaygın 2 Latince/İngilizce eşanlamlısı\n"
+                f"2. En kritik 3 patolojik/klinik belirteci (anahtar kelime)\n"
+                f"Sadece virgülle ayrılmış kelime listesi yaz (Açıklama yapma)."
+            )
+            # Hafif yerel model veya fallback
+            resp = lib.chat(
+                model=lib.MODEL_FAST,
+                prompt=prompt,
+                num_predict=60,
+                timeout=20
+            )
+            if resp:
+                new_tokens = [tok.strip().lower() for tok in re.split(r'[,;\n]+', resp) if len(tok.strip()) > 3]
+                existing_comps = set(thesaurus[term].get("anahtar_bilesenler", []))
+                for nt in new_tokens[:3]:
+                    existing_comps.add(nt)
+                thesaurus[term]["anahtar_bilesenler"] = list(existing_comps)
+                print(f"    + Yeni anahtarlar: {new_tokens[:3]}", flush=True)
+    except Exception as e:
+        print(f"[AI Zenginleştirme Atlandı]: {e}", flush=True)
+    
+    return thesaurus
 
 
 def build_full_thesaurus():
@@ -215,6 +508,10 @@ def build_full_thesaurus():
                         "brans": cinfo.get("departments", ["Tıp Fakültesi"])[0],
                         "ozgulluk_agirligi": 3.0
                     }
+    
+    # Hafif AI zenginleştirmesi (kullanılabilir olduğunda genişletir)
+    thesaurus = enrich_thesaurus_with_ai(thesaurus, max_terms_to_enrich=10)
+    
     THESAURUS_FILE.write_text(json.dumps(thesaurus, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[Thesaurus ✓] {len(thesaurus)} terim ve eş anlamlı kümesi {THESAURUS_FILE.name} dosyasına yazıldı.")
     return thesaurus

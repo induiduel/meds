@@ -650,152 +650,79 @@ export async function generateResilientMedicalAi(options: {
 
   const isJson = responseFormat === 'json';
 
-  // 0. ÖZEL DURUM: Kullanıcı Yerel Ollama (RTX 4060 GPU) seçtiyse doğrudan yerelde çalıştır
-  if (preferredProvider === 'local-ollama' || (model && (model.startsWith('gemma3') || model.startsWith('deepseek-r1') || model.startsWith('qwen3') || model.startsWith('medgemma') || model.startsWith('medsoru')))) {
-    console.log(`[AI Multi-Provider] 🟢 Yerel GPU Ollama doğrudan seçildi (${model || 'gemma3:4b'})...`);
-    try {
-      const ollamaRes = await callLocalOllama(prompt, model || 'gemma3:4b', {
-        systemPrompt: systemInstruction,
-        isJson,
-        messages,
-        timeoutMs
-      });
-      return {
-        text: ollamaRes.text,
-        providerUsed: ollamaRes.providerUsed,
-        planUsed: `Yerel RTX 4060 GPU (${ollamaRes.model})`,
-        attemptsCount: 1,
-        fallbackUsed: false
-      };
-    } catch (e: any) {
-      if (!allowCloudFallback) {
-        console.warn(`[AI Multi-Provider] ⛔ Yerel model (${model}) hata verdi ve bulut fallback'i kapalı:`, e.message);
-        throw e;
-      }
-      console.warn('[AI Multi-Provider] ⚠️ Yerel Ollama başarısız, bulut sağlayıcılara düşülüyor:', e.message);
-    }
-  }
-  const isMuseExplicit = preferredProvider === 'muse-spark' || Boolean(model && (model.includes('spark') || model.includes('muse')));
-  const isGroqExplicit = preferredProvider === 'groq' || Boolean(model && (model.includes('llama') || model.includes('deepseek') || model.includes('gpt-oss') || model.includes('qwen')));
-  const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
+  // =========================================================================
+  // 1. BASAMAK: YEREL GPU MODELLERİ (RTX 4060)
+  // Kullanıcı yerel moddaysa veya model yerel ise, sırasıyla yerel modelleri dene.
+  // =========================================================================
+  const isLocalPreferred = preferredProvider === 'local-ollama' || preferredProvider === 'ollama' ||
+    Boolean(model && (model.startsWith('gemma3') || model.startsWith('deepseek-r1') || model.startsWith('qwen3') || model.startsWith('medgemma')));
 
-  // 1. ÖZEL DURUM: Kullanıcı doğrudan Muse Spark 1.3 seçtiyse doğrudan 1. sırada çalıştır
-  if (isMuseExplicit) {
-    console.log(`[AI Multi-Provider] 🟢 1. DENEME: Muse Spark 1.3 Free doğrudan seçildi...`);
-    try {
-      const sparkRes = await callMuseSpark(
-        prompt,
-        model || 'muse-spark-1.3-contributor-free',
-        customMuseSparkKey,
-        {
+  if (isLocalPreferred) {
+    // Sırayla denenecek yerel modeller havuzu
+    const requestedModel = model || 'gemma3:4b';
+    const candidateLocalModels = [requestedModel, 'gemma3:4b', 'deepseek-r1:8b', 'qwen3:1.7b-q8_0', 'medgemma1.5:4b']
+      .filter((m, idx, arr) => arr.indexOf(m) === idx);
+
+    for (const localCandidate of candidateLocalModels) {
+      console.log(`[AI Multi-Provider] 🟢 1. BASAMAK: Yerel RTX 4060 GPU deneniyor (${localCandidate})...`);
+      try {
+        const ollamaRes = await callLocalOllama(prompt, localCandidate, {
           systemPrompt: systemInstruction,
           isJson,
           messages,
-          baseUrl: museSparkBaseUrl
-        }
-      );
-      return {
-        text: sparkRes.text,
-        providerUsed: sparkRes.providerUsed,
-        planUsed: `Muse Spark (${sparkRes.model})`,
-        attemptsCount: 1,
-        fallbackUsed: false
-      };
-    } catch (e: any) {
-      console.warn('[AI Multi-Provider] ⚠️ Doğrudan Muse Spark çağrısı başarısız, Gemini/Groq havuzuna düşülüyor:', e.message);
+          timeoutMs: timeoutMs || 30000 // Hızlı fallback için 30sn
+        });
+        return {
+          text: ollamaRes.text,
+          providerUsed: ollamaRes.providerUsed,
+          planUsed: `Yerel RTX 4060 GPU (${ollamaRes.model})`,
+          attemptsCount: 1,
+          fallbackUsed: localCandidate !== requestedModel
+        };
+      } catch (localErr: any) {
+        console.warn(`[AI Multi-Provider] ⚠️ Yerel model (${localCandidate}) başarısız:`, localErr.message);
+      }
     }
+
+    if (!allowCloudFallback) {
+      throw new Error(`Yerel RTX 4060 GPU modelleri yanıt veremedi ve bulut fallback'i devre dışı.`);
+    }
+    console.warn('[AI Multi-Provider] ⚠️ Yerel GPU modellerinin HİÇBİRİ yanıt vermedi! Otomatik bulut basamağına geçiliyor: yerel -> groq -> muse -> gemini');
   }
 
-  // Birincil ve İkincil (Yedek) Sağlayıcı Belirleme
-  const primaryProvider: 'groq' | 'gemini' = (isGroqExplicit || (isGeminiInCooldown && preferredProvider !== 'gemini')) ? 'groq' : (preferredProvider === 'gemini' ? 'gemini' : 'gemini');
-  const secondaryProvider: 'groq' | 'gemini' = primaryProvider === 'groq' ? 'gemini' : 'groq';
-
-  let attempt1Err: any = null;
-  let attempt2Err: any = null;
-  let attempt3Err: any = null;
-
   // =========================================================================
-  // 1. DENEME: BİRİNCİL SAĞLAYICI (PRIMARY ATTEMPT)
+  // 2. BASAMAK: GROQ CLOUD (GPT-OSS 120B / Llama 3)
+  // Yerel çalışmadığında İLK BULUT SEÇENEĞİ her zaman Groq'tur.
   // =========================================================================
-  console.log(`[AI Multi-Provider] 🟢 1. DENEME: ${primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'} ile başlatılıyor...`);
+  console.log(`[AI Multi-Provider] 🟢 2. BASAMAK: Groq Cloud (openai/gpt-oss-120b) devreye alınıyor...`);
   try {
-    if (primaryProvider === 'groq') {
-      const groqModel = model && !model.startsWith('gemini') && !model.includes('muse') && !model.includes('spark')
-        ? model
-        : 'openai/gpt-oss-120b';
-      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
-        systemPrompt: systemInstruction,
-        isJson,
-        messages
-      });
-      return {
-        text: groqRes.text,
-        providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
-        planUsed: `Groq Cloud (${groqRes.model})`,
-        attemptsCount: 1,
-        fallbackUsed: isMuseExplicit
-      };
-    } else {
-      const geminiModel = model && model.startsWith('gemini') ? model : 'gemini-3.8-flash';
-      const geminiRes = await callGeminiPool(prompt, customGeminiKey, geminiModel, isJson, systemInstruction);
-      return {
-        text: geminiRes.text,
-        providerUsed: geminiRes.providerUsed,
-        planUsed: geminiRes.planUsed,
-        attemptsCount: 1,
-        fallbackUsed: isMuseExplicit
-      };
-    }
-  } catch (err: any) {
-    console.warn(`[AI Multi-Provider] ⚠️ 1. DENEME (${primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'}) BAŞARISIZ:`, err.message);
-    attempt1Err = err;
+    const groqModel = 'openai/gpt-oss-120b';
+    const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
+      systemPrompt: systemInstruction,
+      isJson,
+      messages
+    });
+    console.log(`[AI Multi-Provider] ✓ 2. BASAMAK (Groq Cloud ${groqRes.model}) başarıyla yanıt verdi!`);
+    return {
+      text: groqRes.text,
+      providerUsed: `Groq Cloud (${groqRes.keyUsed})`,
+      planUsed: `Groq Cloud (${groqRes.model})`,
+      attemptsCount: isLocalPreferred ? 2 : 1,
+      fallbackUsed: isLocalPreferred
+    };
+  } catch (groqErr: any) {
+    console.warn(`[AI Multi-Provider] ⚠️ 2. BASAMAK (Groq Cloud) başarısız oldu:`, groqErr.message);
   }
 
   // =========================================================================
-  // 2. DENEME: OTOMATİK YEDEK SAĞLAYICI (SECONDARY / FALLBACK ATTEMPT)
+  // 3. BASAMAK: MUSE SPARK 1.3 FREE (SINIRSIZ / ÜCRETSİZ KATMAN)
+  // Groq yanıt vermezse devreye giren 2. bulut alternatifi
   // =========================================================================
-  console.log(`[AI Multi-Provider] 🔄 2. DENEME: 1. sağlayıcı yanıt vermedi. Yedek sağlayıcı ${secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'} deneniyor...`);
-  try {
-    if (secondaryProvider === 'groq') {
-      const groqModel = 'openai/gpt-oss-120b';
-      const groqRes = await callGroqCloud(prompt, groqModel, customGroqKey, {
-        systemPrompt: systemInstruction,
-        isJson,
-        messages
-      });
-      console.log(`[AI Multi-Provider] ✓ 2. DENEME (Yedek Groq Cloud ${groqRes.model}) başarıyla tamamlandı!`);
-      return {
-        text: groqRes.text,
-        providerUsed: `Groq Cloud (${groqRes.keyUsed}) [2. Deneme Yedek]`,
-        planUsed: `Groq Cloud (${groqRes.model})`,
-        attemptsCount: 2,
-        fallbackUsed: true
-      };
-    } else {
-      const geminiRes = await callGeminiPool(prompt, customGeminiKey, 'gemini-3.8-flash', isJson, systemInstruction);
-      console.log(`[AI Multi-Provider] ✓ 2. DENEME (Yedek Google Gemini) başarıyla tamamlandı!`);
-      return {
-        text: geminiRes.text,
-        providerUsed: `${geminiRes.providerUsed} [2. Deneme Yedek]`,
-        planUsed: geminiRes.planUsed,
-        attemptsCount: 2,
-        fallbackUsed: true
-      };
-    }
-  } catch (err: any) {
-    console.error(`[AI Multi-Provider] ❌ 2. DENEME (${secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini'}) DE BAŞARISIZ OLDU:`, err.message);
-    attempt2Err = err;
-  }
-
-  // =========================================================================
-  // 3. DENEME: TÜM AI'LAR LİMİT DOLDURDUYSA DEVREYE GİREN MUSE SPARK 1.3 FREE
-  // (SON ÇARE KOTA KURTARMA FAZI)
-  // =========================================================================
-  console.log(`[AI Multi-Provider] ⚡ 3. DENEME (KOTA KURTARMA): Tüm AI'lar limit doldurdu! Muse Spark 1.3 Free devreye alınıyor...`);
+  console.log(`[AI Multi-Provider] ⚡ 3. BASAMAK: Muse Spark 1.3 Free devreye alınıyor...`);
   try {
     const sparkRes = await callMuseSpark(
       prompt,
-      model && model.includes('spark') ? model : 'muse-spark-1.3-contributor-free',
+      'muse-spark-1.3-contributor-free',
       customMuseSparkKey,
       {
         systemPrompt: systemInstruction,
@@ -804,32 +731,45 @@ export async function generateResilientMedicalAi(options: {
         baseUrl: museSparkBaseUrl
       }
     );
-    console.log(`[AI Multi-Provider] ✓ 3. DENEME (Kurtarıcı Muse Spark 1.3 Free ${sparkRes.model}) başarıyla yanıt verdi!`);
+    console.log(`[AI Multi-Provider] ✓ 3. BASAMAK (Muse Spark 1.3 Free ${sparkRes.model}) başarıyla yanıt verdi!`);
     return {
       text: sparkRes.text,
-      providerUsed: `Muse Spark 1.3 Free [Kota Kurtarıcı]`,
+      providerUsed: `Muse Spark 1.3 Free [Yedek]`,
       planUsed: `Muse Spark (${sparkRes.model})`,
-      attemptsCount: 3,
+      attemptsCount: isLocalPreferred ? 3 : 2,
       fallbackUsed: true
     };
   } catch (sparkErr: any) {
-    console.error(`[AI Multi-Provider] ❌ 3. DENEME (Muse Spark 1.3 Free) DE BAŞARISIZ OLDU:`, sparkErr.message);
-    attempt3Err = sparkErr;
+    console.warn(`[AI Multi-Provider] ⚠️ 3. BASAMAK (Muse Spark 1.3 Free) başarısız oldu:`, sparkErr.message);
   }
 
   // =========================================================================
-  // 3 KEZ DENENDİ VE ÜÇ SAĞLAYICI DA YANIT VERMEDİ -> UYARI VER
+  // 4. BASAMAK: GOOGLE GEMINI FLASH (EN SON SEÇENEK)
+  // Yerel, Groq ve Muse başarısız olduğunda en son çare olarak Gemini denenir.
   // =========================================================================
-  const primaryName = primaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
-  const secondaryName = secondaryProvider === 'groq' ? 'Groq Cloud' : 'Google Gemini';
+  console.log(`[AI Multi-Provider] 🛡️ 4. BASAMAK (EN SON SEÇENEK): Google Gemini Flash deneniyor...`);
+  try {
+    const geminiModel = 'gemini-3.8-flash';
+    const geminiRes = await callGeminiPool(prompt, customGeminiKey, geminiModel, isJson, systemInstruction);
+    console.log(`[AI Multi-Provider] ✓ 4. BASAMAK (Google Gemini Flash ${geminiRes.model}) başarıyla yanıt verdi!`);
+    return {
+      text: geminiRes.text,
+      providerUsed: `${geminiRes.providerUsed} [Son Çare Yedek]`,
+      planUsed: geminiRes.planUsed,
+      attemptsCount: isLocalPreferred ? 4 : 3,
+      fallbackUsed: true
+    };
+  } catch (geminiErr: any) {
+    console.error(`[AI Multi-Provider] ❌ 4. BASAMAK (Google Gemini Flash) DA BAŞARISIZ OLDU:`, geminiErr.message);
+  }
+
+  // =========================================================================
+  // TÜM BASAMAKLAR BAŞARISIZ OLDUĞUNDA HATA FIRLAT
+  // =========================================================================
   const failureError: any = new Error(
-    `3 kez denendi: Hem Google Gemini hem Groq Cloud hem de Muse Spark 1.3 Free sağlayıcılarının kotaları tükendi veya yanıt veremediler. Lütfen API kotalarınızı veya internet bağlantınızı kontrol edin.`
+    `Tüm yapay zeka basamakları denendi ve hiçbiri yanıt veremedi (Sıra: Yerel GPU RTX 4060 -> Groq Cloud -> Muse Spark -> Google Gemini). Lütfen internet bağlantınızı veya API durumunuzu kontrol edin.`
   );
-  failureError.attemptsCount = 3;
-  failureError.isTwoAttemptsFailed = true;
-  failureError.isThreeAttemptsFailed = true;
-  failureError.primaryError = attempt1Err?.message || 'Bilinmeyen hata';
-  failureError.secondaryError = attempt2Err?.message || 'Bilinmeyen hata';
-  failureError.tertiaryError = attempt3Err?.message || 'Bilinmeyen hata';
+  failureError.attemptsCount = 4;
+  failureError.isAllFailed = true;
   throw failureError;
 }

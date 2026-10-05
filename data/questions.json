@@ -919,14 +919,8 @@
         },
         {
           "id": "rev-1791142506210",
-          "version": 7,
-          "editedAt": "2026-10-04T19:35:06.210Z",
-          "editorName": "Yönetici",
-          "changeSummary": "Öğrenci hafıza parçalarındaki 'simian çizgisi' ve 'ense saydamlığı' verileri, fakülte slaytlarındaki 'Dismorfolojide Genetik Terminoloji (Slayt #37/#39)' içeriğiyle (duodenal atrezi, konjenital kalp defekti, simian çizgisi, hipotoni) tam uyumlu bir klinik vaka formatına dönüştürüldü. Eksik olan 5 seçenek amfi ders notlarındaki kromozomal hastalıklar bağlamında oluşturuldu ve yazım hataları giderilerek saf bir kurul sorusu hazırlandı.",
           "stem": "Prenatal ultrasonografik incelemesinde birinci trimesterde artmış ense saydamlığı (NT) ve nazal kemik hipoplazisi saptanan; doğum sonrasında yapılan fizik muayenesinde kas hipotonisi, basık burun kökü, avuç içinde tek transvers palmar çizgi (simian çizgisi) ile birlikte ekokardiyografisinde atriyoventriküler septal defekt (endokardiyal yastık defekti) ve direkt batın grafisinde duodenal atrezi (çift kabarcık belirtisi) tespit edilen bir yenidoğan için en olası tanı aşağıdakilerden hangisidir?",
-          "discipline": "Tıbbi Genetik",
           "topic": "Kromozomal Hastalıklar ve Dismorfoloji (Down Sendromu)",
-          "claimedAnswer": "A",
           "options": [
             {
               "key": "A",
@@ -954,13 +948,33 @@
               "isAiFilled": false
             }
           ],
-          "explanation": "Down Sendromu (Trizomi 21), canlı doğumlarda en sık görülen otozomal kromozom anomalisidir. Birinci trimester tarama ultrasonografisinde artmış ense saydamlığı (nukal translusens - NT) ve burun kemiği (nazal kemik) hipoplazisi/agenezisi en önemli belirteçlerdendir. Postnatal dönemde hipotoni, brakisefali, basık burun kökü, yukarı çekik palpebral fissürler, Brushfield lekeleri, avuç içinde tek transvers fleksiyon çizgisi (simian çizgisi) ve birinci-ikinci ayak parmakları arasında ayrıklık (sandal aralığı) tipik dismorfik bulgulardır. Kardiyovasküler sistemde en sık görülen defekt atriyoventriküler septal defekt (endokardiyal yastık defekti / AV kanal), gastrointestinal sistemde ise duodenal stenoz veya duodenal atrezi (radyolojide 'çift hava kabarcığı - double bubble' görünümü) ve Hirschsprung hastalığıdır. \n\nÇeldiricilerin Değerlendirilmesi:\n- Edwards sendromu (Trizomi 18): İntrauterin gelişme geriliği, mikrosefali, mikrognati, düşük yerleşimli ve malforme kulaklar, üst üste binen parmaklar (clenched hands - 2. ve 5. parmakların diğerlerinin üzerine binmesi), rocker-bottom (beşik taban) ayak ve sıklıkla VSD ile seyreder.\n- Patau sendromu (Trizomi 13): Holoprozensefali, mikrosefali, mikroftalmi, yarık dudak/damak, postaksiyel polidaktili, aplazia kutis ve skrotal anomaliler ile karakterizedir.\n- Turner sendromu (45,X): Genişlemiş kistik higroma, yele boyun, lenfödem, aort koarktasyonu ve biküspit aort kapağı ile karakterizedir.\n- Klinefelter sendromu (47,XXY): Yenidoğan döneminde belirgin majör malformasyon oluşturmaz; pubertede hipergonadotropik hipogonadizm, jinekomasti ve uzun boy ile klinik verir."
+          "version": 7,
+          "editedAt": "2026-10-04T19:35:06.210Z",
+          "discipline": "Tıbbi Genetik",
+          "editorName": "Yönetici",
+          "explanation": "Down Sendromu (Trizomi 21), canlı doğumlarda en sık görülen otozomal kromozom anomalisidir. Birinci trimester tarama ultrasonografisinde artmış ense saydamlığı (nukal translusens - NT) ve burun kemiği (nazal kemik) hipoplazisi/agenezisi en önemli belirteçlerdendir. Postnatal dönemde hipotoni, brakisefali, basık burun kökü, yukarı çekik palpebral fissürler, Brushfield lekeleri, avuç içinde tek transvers fleksiyon çizgisi (simian çizgisi) ve birinci-ikinci ayak parmakları arasında ayrıklık (sandal aralığı) tipik dismorfik bulgulardır. Kardiyovasküler sistemde en sık görülen defekt atriyoventriküler septal defekt (endokardiyal yastık defekti / AV kanal), gastrointestinal sistemde ise duodenal stenoz veya duodenal atrezi (radyolojide 'çift hava kabarcığı - double bubble' görünümü) ve Hirschsprung hastalığıdır. \n\nÇeldiricilerin Değerlendirilmesi:\n- Edwards sendromu (Trizomi 18): İntrauterin gelişme geriliği, mikrosefali, mikrognati, düşük yerleşimli ve malforme kulaklar, üst üste binen parmaklar (clenched hands - 2. ve 5. parmakların diğerlerinin üzerine binmesi), rocker-bottom (beşik taban) ayak ve sıklıkla VSD ile seyreder.\n- Patau sendromu (Trizomi 13): Holoprozensefali, mikrosefali, mikroftalmi, yarık dudak/damak, postaksiyel polidaktili, aplazia kutis ve skrotal anomaliler ile karakterizedir.\n- Turner sendromu (45,X): Genişlemiş kistik higroma, yele boyun, lenfödem, aort koarktasyonu ve biküspit aort kapağı ile karakterizedir.\n- Klinefelter sendromu (47,XXY): Yenidoğan döneminde belirgin majör malformasyon oluşturmaz; pubertede hipergonadotropik hipogonadizm, jinekomasti ve uzun boy ile klinik verir.",
+          "changeSummary": "Öğrenci hafıza parçalarındaki 'simian çizgisi' ve 'ense saydamlığı' verileri, fakülte slaytlarındaki 'Dismorfolojide Genetik Terminoloji (Slayt #37/#39)' içeriğiyle (duodenal atrezi, konjenital kalp defekti, simian çizgisi, hipotoni) tam uyumlu bir klinik vaka formatına dönüştürüldü. Eksik olan 5 seçenek amfi ders notlarındaki kromozomal hastalıklar bağlamında oluşturuldu ve yazım hataları giderilerek saf bir kurul sorusu hazırlandı.",
+          "claimedAnswer": "A"
+        },
+        {
+          "id": "rev-merge-1791223258566",
+          "version": 8,
+          "editedAt": "2026-10-05T18:00:58.566Z",
+          "editorName": "Yönetici",
+          "changeSummary": "1 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-merge-1791223267585",
+          "version": 9,
+          "editedAt": "2026-10-05T18:01:07.585Z",
+          "editorName": "Yönetici",
+          "changeSummary": "1 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-04T19:35:07.635Z",
+      "updatedAt": "2026-10-05T18:01:08.135Z",
       "discipline": "Tıbbi Genetik",
       "committeeId": "donem3-kurul1",
-      "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi. [03.10.2026]: 3 taslak ile iç içe geçirildi. [04.10.2026]: 1 taslak ile iç içe geçirildi. [04.10.2026]: 1 taslak ile iç içe geçirildi.",
+      "placementNotes": "[02.10.2026]: 2 taslak ile iç içe geçirildi. [03.10.2026]: 3 taslak ile iç içe geçirildi. [04.10.2026]: 1 taslak ile iç içe geçirildi. [04.10.2026]: 1 taslak ile iç içe geçirildi. [05.10.2026]: 1 taslak ile iç içe geçirildi. [05.10.2026]: 1 taslak ile iç içe geçirildi.",
       "questionNumber": 0,
       "reconstruction": {
         "stem": "Prenatal ultrasonografik incelemesinde birinci trimesterde artmış ense saydamlığı (NT) ve nazal kemik hipoplazisi saptanan; doğum sonrasında yapılan fizik muayenesinde kas hipotonisi, basık burun kökü, avuç içinde tek transvers palmar çizgi (simian çizgisi) ile birlikte ekokardiyografisinde atriyoventriküler septal defekt (endokardiyal yastık defekti) ve direkt batın grafisinde duodenal atrezi (çift kabarcık belirtisi) tespit edilen bir yenidoğan için en olası tanı aşağıdakilerden hangisidir?",
@@ -991,11 +1005,11 @@
             "isAiFilled": false
           }
         ],
-        "correctAnswer": "A",
         "explanation": "Down Sendromu (Trizomi 21), canlı doğumlarda en sık görülen otozomal kromozom anomalisidir. Birinci trimester tarama ultrasonografisinde artmış ense saydamlığı (nukal translusens - NT) ve burun kemiği (nazal kemik) hipoplazisi/agenezisi en önemli belirteçlerdendir. Postnatal dönemde hipotoni, brakisefali, basık burun kökü, yukarı çekik palpebral fissürler, Brushfield lekeleri, avuç içinde tek transvers fleksiyon çizgisi (simian çizgisi) ve birinci-ikinci ayak parmakları arasında ayrıklık (sandal aralığı) tipik dismorfik bulgulardır. Kardiyovasküler sistemde en sık görülen defekt atriyoventriküler septal defekt (endokardiyal yastık defekti / AV kanal), gastrointestinal sistemde ise duodenal stenoz veya duodenal atrezi (radyolojide 'çift hava kabarcığı - double bubble' görünümü) ve Hirschsprung hastalığıdır. \n\nÇeldiricilerin Değerlendirilmesi:\n- Edwards sendromu (Trizomi 18): İntrauterin gelişme geriliği, mikrosefali, mikrognati, düşük yerleşimli ve malforme kulaklar, üst üste binen parmaklar (clenched hands - 2. ve 5. parmakların diğerlerinin üzerine binmesi), rocker-bottom (beşik taban) ayak ve sıklıkla VSD ile seyreder.\n- Patau sendromu (Trizomi 13): Holoprozensefali, mikrosefali, mikroftalmi, yarık dudak/damak, postaksiyel polidaktili, aplazia kutis ve skrotal anomaliler ile karakterizedir.\n- Turner sendromu (45,X): Genişlemiş kistik higroma, yele boyun, lenfödem, aort koarktasyonu ve biküspit aort kapağı ile karakterizedir.\n- Klinefelter sendromu (47,XXY): Yenidoğan döneminde belirgin majör malformasyon oluşturmaz; pubertede hipergonadotropik hipogonadizm, jinekomasti ve uzun boy ile klinik verir.",
+        "lastUpdated": "2026-10-04T19:35:06.210Z",
+        "correctAnswer": "A",
         "confidenceScore": 96,
-        "notesAndDiscrepancies": "Öğrenci hafıza parçalarındaki 'simian çizgisi' ve 'ense saydamlığı' verileri, fakülte slaytlarındaki 'Dismorfolojide Genetik Terminoloji (Slayt #37/#39)' içeriğiyle (duodenal atrezi, konjenital kalp defekti, simian çizgisi, hipotoni) tam uyumlu bir klinik vaka formatına dönüştürüldü. Eksik olan 5 seçenek amfi ders notlarındaki kromozomal hastalıklar bağlamında oluşturuldu ve yazım hataları giderilerek saf bir kurul sorusu hazırlandı.",
-        "lastUpdated": "2026-10-04T19:35:06.210Z"
+        "notesAndDiscrepancies": "Öğrenci hafıza parçalarındaki 'simian çizgisi' ve 'ense saydamlığı' verileri, fakülte slaytlarındaki 'Dismorfolojide Genetik Terminoloji (Slayt #37/#39)' içeriğiyle (duodenal atrezi, konjenital kalp defekti, simian çizgisi, hipotoni) tam uyumlu bir klinik vaka formatına dönüştürüldü. Eksik olan 5 seçenek amfi ders notlarındaki kromozomal hastalıklar bağlamında oluşturuldu ve yazım hataları giderilerek saf bir kurul sorusu hazırlandı."
       },
       "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
       "mergedSatellites": [
@@ -1339,6 +1353,147 @@
           "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
           "contributedByName": "Dr House",
           "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1791141887444",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan",
+            "taslak-eslesme-adayi"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-04T19:24:47.997672+00:00",
+          "fragments": [
+            {
+              "id": "f-1791141886565-uwma",
+              "text": "down sendromu simian çizgisi endse saydamlığı",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-04T19:24:46.565Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1791141887445",
+              "stem": "down sendromu simian çizgisi endse saydamlığı",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-04T19:24:47.445Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-04T19:24:47.445+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "Olası Taslak Eşleşmesi: Soru #Belirsiz ile %65 benzerlik.",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1791141887444",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan",
+            "taslak-eslesme-adayi"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [],
+          "upvotes": 0,
+          "createdAt": "2026-10-04T19:24:47.997672+00:00",
+          "fragments": [
+            {
+              "id": "f-1791141886565-uwma",
+              "text": "down sendromu simian çizgisi endse saydamlığı",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-04T19:24:46.565Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1791141887445",
+              "stem": "down sendromu simian çizgisi endse saydamlığı",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-04T19:24:47.445Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-04T19:24:47.445+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "Olası Taslak Eşleşmesi: Soru #Belirsiz ile %65 benzerlik.",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true
+        },
+        {
+          "id": "q-donem3-kurul1-unassigned-1791141887444",
+          "tags": [
+            "Tıbbi Genetik",
+            "numarasız-hatırlanan",
+            "taslak-eslesme-adayi"
+          ],
+          "topic": "Tıbbi Genetik Hatırlanan Soru",
+          "status": "gathering",
+          "options": [],
+          "createdAt": "2026-10-04T19:24:47.997672+00:00",
+          "fragments": [
+            {
+              "id": "f-1791141886565-uwma",
+              "text": "down sendromu simian çizgisi endse saydamlığı",
+              "type": "stem",
+              "author": "Dr House",
+              "upvotes": 1,
+              "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "timestamp": "2026-10-04T19:24:46.565Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1791141887445",
+              "stem": "down sendromu simian çizgisi endse saydamlığı",
+              "topic": "Tıbbi Genetik Hatırlanan Soru",
+              "options": [],
+              "version": 1,
+              "editedAt": "2026-10-04T19:24:47.445Z",
+              "editorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+              "discipline": "Tıbbi Genetik",
+              "editorName": "Dr House",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-04T19:24:47.445+00:00",
+          "discipline": "Tıbbi Genetik",
+          "committeeId": "donem3-kurul1",
+          "placementNotes": "Olası Taslak Eşleşmesi: Soru #Belirsiz ile %65 benzerlik.",
+          "questionNumber": 0,
+          "contributedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "contributedByName": "Dr House",
+          "isUnassignedNumber": true,
+          "upvotes": 0,
+          "reconstruction": null
         }
       ],
       "contributedByName": "Dr House",
@@ -1348,12 +1503,12 @@
       "lectureReference": {
         "noteId": "sum-k1-kromozomal_hastaliklar_ve_geneti_k_danis_ma_md",
         "noteTitle": "Kromozomal Hastalıklar ve Genetik Danışma (Özet #6)",
+        "reasoning": "RAG kaynağı (summary)",
         "discipline": "Tıbbi Genetik",
         "pageNumber": 6,
         "totalSlides": 0,
         "matchedSnippet": "[DERS ÖZETİ & SPOT BİLGİ] Ders / Branş: Tıbbi Genetik Konu / Başlık: Kromozomal Hastalıklar ve Genetik Danışma Kurul: donem3-kurul1 Bölüm: #6 Özet Metin: ## 5. Down Sendromu-fenoti̇p Yenidoğan Döneminde Hipotoni Karakte",
-        "confidenceScore": 100,
-        "reasoning": "RAG kaynağı (summary)"
+        "confidenceScore": 100
       }
     },
     {
@@ -1524,6 +1679,315 @@
       },
       "rawStem": "Hirschsprung sorusu",
       "claimedAnswer": "E"
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791222885038",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Biyoloji ve Genetik",
+      "topic": "Morfogenetik Anomaliler – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı",
+      "status": "completed",
+      "fragments": [
+        {
+          "id": "f-1791222885024-pcyi",
+          "text": "Oligohidramniyosa bağlı mekanik bası sonucu fetüste gelişen yumru ayak (pes ekinovarus) hangi morfolojik defekttir?",
+          "type": "stem",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:54:45.024Z"
+        },
+        {
+          "id": "f-opt-1791222885038-A",
+          "text": "A) Disrupsiyon",
+          "type": "option",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:54:45.038Z"
+        },
+        {
+          "id": "f-1791222946030-yhrj",
+          "text": "Embriyonik yapısı baştan normal olan bir organda, mekanik bası etkisiyle oluşan şekil bozukluğu hangisidir?",
+          "type": "stem",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:55:46.030Z"
+        },
+        {
+          "id": "f-opt-1791222946045-A",
+          "text": "A) Agenezi",
+          "type": "option",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:55:46.045Z"
+        },
+        {
+          "id": "f-opt-1791222946045-B",
+          "text": "B) Deformasyon",
+          "type": "option",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:55:46.045Z"
+        },
+        {
+          "id": "f-merged-1791223176989-j9px",
+          "text": "[Birleştirilen Taslak #Belirsiz]: Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirmesine ne ad verilir?",
+          "type": "stem",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:59:36.989Z"
+        },
+        {
+          "id": "f-1791222829196-sbwv",
+          "text": "Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirmesine ne ad verilir?",
+          "type": "stem",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:53:49.196Z"
+        },
+        {
+          "id": "f-opt-1791222829197-A",
+          "text": "A) Malformasyon",
+          "type": "option",
+          "author": "Tahir Kahrama",
+          "upvotes": 1,
+          "timestamp": "2026-10-05T17:53:49.197Z"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Disrupsiyon",
+          "upvotes": 2,
+          "suggestedBy": "Tahir Kahrama"
+        },
+        {
+          "key": "B",
+          "text": "Deformasyon",
+          "upvotes": 1,
+          "suggestedBy": "Tahir Kahrama"
+        }
+      ],
+      "tags": [
+        "Tıbbi Biyoloji ve Genetik",
+        "numarasız-hatırlanan",
+        "taslak-eslesme-adayi",
+        "normal",
+        "gelişen",
+        "dokunun",
+        "rahim",
+        "mekanik",
+        "baskıyla",
+        "şekil",
+        "değiştirmesine",
+        "taslak-birlestirildi"
+      ],
+      "placementNotes": "Olası Taslak Eşleşmesi: Soru #Belirsiz ile %50 benzerlik. [05.10.2026]: 1 taslak ile iç içe geçirildi.",
+      "contributedByName": "Tahir Kahrama",
+      "revisions": [
+        {
+          "id": "rev-1791222885038",
+          "stem": "Oligohidramniyosa bağlı mekanik bası sonucu fetüste gelişen yumru ayak (pes ekinovarus) hangi morfolojik defekttir?",
+          "topic": "Tıbbi Biyoloji ve Genetik Hatırlanan Soru",
+          "options": [
+            {
+              "key": "A",
+              "text": "Disrupsiyon",
+              "upvotes": 1
+            }
+          ],
+          "version": 1,
+          "editedAt": "2026-10-05T17:54:45.038Z",
+          "discipline": "Tıbbi Biyoloji ve Genetik",
+          "editorName": "Tahir Kahrama",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+        },
+        {
+          "id": "rev-merge-1791223176989",
+          "version": 2,
+          "editedAt": "2026-10-05T17:59:36.989Z",
+          "editorName": "Yönetici",
+          "changeSummary": "1 adet benzer taslak bu ana soru altında birleştirildi."
+        },
+        {
+          "id": "rev-1791223209920",
+          "stem": "Oligohidramniyosa bağlı mekanik bası sonucu fetüste gelişen pes ekinovarus (yumru ayak) hangi morfolojik defekttir?",
+          "topic": "Morfogenetik Anomaliler – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı",
+          "options": [
+            {
+              "key": "A",
+              "text": "Deformasyon",
+              "isAiFilled": false
+            },
+            {
+              "key": "B",
+              "text": "Disrupsiyon",
+              "isAiFilled": false
+            },
+            {
+              "key": "C",
+              "text": "Malformasyon",
+              "isAiFilled": false
+            },
+            {
+              "key": "D",
+              "text": "Agenesi",
+              "isAiFilled": false
+            },
+            {
+              "key": "E",
+              "text": "Sekans (ikincil anomali)",
+              "isAiFilled": false
+            }
+          ],
+          "version": 3,
+          "editedAt": "2026-10-05T18:00:09.920Z",
+          "discipline": "Tıbbi Biyoloji ve Genetik",
+          "editorName": "Yönetici",
+          "explanation": "Deformasyon, embriyonik olarak normal gelişen bir organın intrauterin dönemde dış mekanik güçlere (örneğin oligohidramniyoda artan basınç) maruz kalmasıyla şeklinin bozulmasıdır. Bu durumda doku yapısı ve histolojisi normal kalır; dolayısıyla doğum sonrası çoğu zaman geri dönüşümlüdür. Pes ekinovarus, oligohidramniyoya bağlı mekanik baskının bir sonucu olarak ortaya çıkan tipik bir deformasyondur. Disrupsiyon, organın normal gelişim sürecinde bir bölünme ya da ayrışma ile oluşur (ör. amniyotik bant sendromu). Malformasyon, organın gelişim aşamasında primer bir yapısal bozuklukla ortaya çıkar (ör. konjenital kalp defekti). Agenesi, bir organın tamamen yokluğu anlamına gelir ve sekans, primer bir malformasyonun ikincil olarak ortaya çıkan bir dizi anomaliyi tanımlar. Bu nedenlerle doğru cevap \"Deformasyon\"dur.",
+          "changeSummary": "Öğrenci fragmentlerindeki \"Disrupsiyon\" ve \"Deformasyon\" seçenekleri temel alınarak sorunun morfolojik sınıflandırması netleştirildi. Slayt #33'deki genetik terminoloji ve çıkmış soru #1'deki deformasyon tanımıyla uyumlu hâle getirildi. 5 şıklı, yüksek ayırt edici güçte seçenek oluşturuldu; doğru cevap A olarak belirlendi ve akademik açıklama Robbins ve Guyton seviyesinde detaylandırıldı.",
+          "claimedAnswer": "A"
+        }
+      ],
+      "createdAt": "2026-10-05T17:54:45.306724+00:00",
+      "updatedAt": "2026-10-05T18:00:52.830Z",
+      "upvotes": 0,
+      "reconstruction": {
+        "stem": "Oligohidramniyosa bağlı mekanik bası sonucu fetüste gelişen yumru ayak (pes ekinovarus) hangi morfolojik defekttir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Disrupsiyon",
+            "isAiFilled": false
+          },
+          {
+            "key": "B",
+            "text": "Deformasyon",
+            "isAiFilled": false
+          },
+          {
+            "key": "C",
+            "text": "Malformasyon",
+            "isAiFilled": true
+          },
+          {
+            "key": "D",
+            "text": "Agenesia",
+            "isAiFilled": true
+          },
+          {
+            "key": "E",
+            "text": "Hipoplazi",
+            "isAiFilled": true
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "Deformasyon, embriyonik olarak normal gelişmiş bir yapının intrauterin dönemde dış mekanik güçlere (ör. oligohidramniyoda artan basınç) maruz kalmasıyla şeklinin bozulmasıdır. Oligohidramniyoya bağlı talipes ekinovarus (pes ekinovarus) tipik bir deformasyon örneğidir. Bu tanım ve örnek, Kaynak 1'deki açıklamaya doğrudan uygundur. Diğer şıklar (disrupsiyon, malformasyon, agenesi, hipoplazi) farklı patogenezleri ifade eder ve bu durumda doğru değildir.",
+        "confidenceScore": 92,
+        "notesAndDiscrepancies": "Öğrenciler A şıkkını (Disrupsiyon) doğru yanıt olarak işaretlemiş, ancak kaynaklara göre doğru yanıt B şıkkı (Deformasyon)dır. Öğrencilerin hatırladığı iki şık (A ve B) korunmuş, geri kalan üç şık yapay olarak eklenmiştir.",
+        "sources": [
+          {
+            "documentId": "d3-k1-tbg-001",
+            "documentType": "past_question",
+            "title": "Tıbbi Biyoloji ve Genetik - Dismorfolojide Genetik Terminoloji – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı (2025-2026)",
+            "discipline": "Tıbbi Biyoloji ve Genetik",
+            "pageNumber": 1,
+            "snippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Biyoloji ve Genetik Kurul: donem3-kurul1 Sınav Yılı: 2025-2026 Konu: Dismorfolojide Genetik Terminoloji – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı Soru Kökü: Aşağıdaki kon"
+          }
+        ],
+        "lastUpdated": "2026-10-05T18:00:52.290Z"
+      },
+      "mergedSatellites": [
+        {
+          "id": "q-donem3-kurul1-unassigned-1791222829197",
+          "tags": [
+            "normal",
+            "gelişen",
+            "dokunun",
+            "rahim",
+            "mekanik",
+            "baskıyla",
+            "şekil",
+            "değiştirmesine"
+          ],
+          "topic": "Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirme",
+          "status": "gathering",
+          "options": [],
+          "rawStem": "Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirmesine ne ad verilir?",
+          "upvotes": 0,
+          "createdAt": "2026-10-05T17:53:50.300151+00:00",
+          "fragments": [
+            {
+              "id": "f-1791222829196-sbwv",
+              "text": "Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirmesine ne ad verilir?",
+              "type": "stem",
+              "author": "Tahir Kahrama",
+              "upvotes": 1,
+              "timestamp": "2026-10-05T17:53:49.196Z"
+            },
+            {
+              "id": "f-opt-1791222829197-A",
+              "text": "A) Malformasyon",
+              "type": "option",
+              "author": "Tahir Kahrama",
+              "upvotes": 1,
+              "timestamp": "2026-10-05T17:53:49.197Z"
+            },
+            {
+              "id": "f-opt-1791222829197-B",
+              "text": "B) Deformasyon",
+              "type": "option",
+              "author": "Tahir Kahrama",
+              "upvotes": 1,
+              "timestamp": "2026-10-05T17:53:49.197Z"
+            }
+          ],
+          "revisions": [
+            {
+              "id": "rev-1791222829197",
+              "stem": "Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirmesine ne ad verilir?",
+              "topic": "Genetik Hatırlanan Soru",
+              "options": [
+                {
+                  "key": "A",
+                  "text": "Malformasyon",
+                  "upvotes": 1
+                },
+                {
+                  "key": "B",
+                  "text": "Deformasyon",
+                  "upvotes": 1
+                }
+              ],
+              "version": 1,
+              "editedAt": "2026-10-05T17:53:49.197Z",
+              "discipline": "Genetik",
+              "editorName": "Tahir Kahrama",
+              "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)"
+            }
+          ],
+          "updatedAt": "2026-10-05T17:58:27.171+00:00",
+          "discipline": "Genetik",
+          "committeeId": "donem3-kurul1",
+          "questionNumber": 0,
+          "reconstruction": null,
+          "contributedByName": "Tahir Kahrama",
+          "isUnassignedNumber": true
+        }
+      ],
+      "isMerged": true,
+      "examYear": "2026-2027",
+      "claimedAnswer": "B",
+      "lectureReference": {
+        "noteId": "d3-k1-tbg-001",
+        "noteTitle": "Tıbbi Biyoloji ve Genetik - Dismorfolojide Genetik Terminoloji – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı (2025-2026)",
+        "reasoning": "RAG kaynağı (past_question)",
+        "discipline": "Tıbbi Biyoloji ve Genetik",
+        "pageNumber": 1,
+        "totalSlides": 0,
+        "matchedSnippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Biyoloji ve Genetik Kurul: donem3-kurul1 Sınav Yılı: 2025-2026 Konu: Dismorfolojide Genetik Terminoloji – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı Soru Kökü: Aşağıdaki kon",
+        "confidenceScore": 100
+      }
     }
   ]
 }

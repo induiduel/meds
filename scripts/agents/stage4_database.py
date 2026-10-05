@@ -33,6 +33,8 @@ def valid(obj, schema):
 
 
 def main():
+    state = lib.State()
+    state.set_progress("stage4", 1, 4, "Aşama 4: meds_database Dizin Yapısı ve Şemalar Hazırlanıyor...")
     t3 = Path(lib.TEMP3)
     qs = load_schema("question")
     stats = {"questions": 0, "rejected": 0, "sources": 0, "chunks": 0}
@@ -46,6 +48,7 @@ def main():
     groups, rejected = {}, []
     qf = t3 / "questions.jsonl"
     if qf.exists():
+        state.set_progress("stage4", 2, 4, "Aşama 4: Doğrulanmış ve Kanıtlı Sorular meds_database'e Aktarılıyor...")
         with open(qf, "r", encoding="utf-8") as fp:
             for line in fp:
                 line_str = line.strip()
@@ -73,6 +76,7 @@ def main():
         jl(Path(lib.REVIEW_DIR) / "db_rejected.jsonl", rejected)
 
     # Kaynakları ve Chunk'ları etiketleyerek DB'ye kopyala
+    state.set_progress("stage4", 3, 4, "Aşama 4: Kaynak Notları, Chunk'lar ve Vektörler Kopyalanıyor...")
     for sub, key in (("sources", "sources"), ("chunks", "chunks")):
         if (t3 / sub).exists():
             for f in (t3 / sub).glob("*.json*"):
@@ -100,6 +104,7 @@ def main():
         (DB / "taxonomy" / "donem3_ders_programi.json").write_text(
             json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
     (DB / "reports" / "stage4.json").write_text(json.dumps(stats, indent=1))
+    state.set_progress("stage4", 4, 4, f"Aşama 4 Tamamlandı ✓ ({stats['questions']} soru, {stats['chunks']} chunk)")
     print(stats)
 
 

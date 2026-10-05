@@ -1,5 +1,52 @@
 [
   {
+    "id": "act-1791223210043-womkl",
+    "questionId": "q-donem3-kurul1-unassigned-1791222885038",
+    "committeeId": "donem3-kurul1",
+    "discipline": "Tıbbi Biyoloji ve Genetik",
+    "topic": "Morfogenetik Anomaliler – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı",
+    "interactionType": "refinement",
+    "userDisplayName": "Yönetici",
+    "prompt": "Öğrenci fragmentlerindeki \"Disrupsiyon\" ve \"Deformasyon\" seçenekleri temel alınarak sorunun morfolojik sınıflandırması netleştirildi. Slayt #33'deki genetik terminoloji ve çıkmış soru #1'deki deformasyon tanımıyla uyumlu hâle getirildi. 5 şıklı, yüksek ayırt edici güçte seçenek oluşturuldu; doğru cevap A olarak belirlendi ve akademik açıklama Robbins ve Guyton seviyesinde detaylandırıldı.",
+    "response": "Deformasyon, embriyonik olarak normal gelişen bir organın intrauterin dönemde dış mekanik güçlere (örneğin oligohidramniyoda artan basınç) maruz kalmasıyla şeklinin bozulmasıdır. Bu durumda doku yapısı ve histolojisi normal kalır; dolayısıyla doğum sonrası çoğu zaman geri dönüşümlüdür. Pes ekinovarus, oligohidramniyoya bağlı mekanik baskının bir sonucu olarak ortaya çıkan tipik bir deformasyondur. Disrupsiyon, organın normal gelişim sürecinde bir bölünme ya da ayrışma ile oluşur (ör. amniyotik bant sendromu). Malformasyon, organın gelişim aşamasında primer bir yapısal bozuklukla ortaya çıkar (ör. konjenital kalp defekti). Agenesi, bir organın tamamen yokluğu anlamına gelir ve sekans, primer bir malformasyonun ikincil olarak ortaya çıkan bir dizi anomaliyi tanımlar. Bu nedenlerle doğru cevap \"Deformasyon\"dur.",
+    "contextSnapshot": {
+      "stem": "Oligohidramniyosa bağlı mekanik bası sonucu fetüste gelişen pes ekinovarus (yumru ayak) hangi morfolojik defekttir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Deformasyon",
+          "isAiFilled": false
+        },
+        {
+          "key": "B",
+          "text": "Disrupsiyon",
+          "isAiFilled": false
+        },
+        {
+          "key": "C",
+          "text": "Malformasyon",
+          "isAiFilled": false
+        },
+        {
+          "key": "D",
+          "text": "Agenesi",
+          "isAiFilled": false
+        },
+        {
+          "key": "E",
+          "text": "Sekans (ikincil anomali)",
+          "isAiFilled": false
+        }
+      ],
+      "correctAnswer": "A",
+      "confidenceScore": 96
+    },
+    "metadata": {},
+    "upvotes": 0,
+    "ragChunkId": "chunk-aiqa-act-1791223210043-womkl",
+    "createdAt": "2026-10-05T18:00:10.043Z"
+  },
+  {
     "id": "act-1791142506820-fsvol",
     "questionId": "q-donem3-kurul1-unassigned-1790967524679",
     "committeeId": "donem3-kurul1",
