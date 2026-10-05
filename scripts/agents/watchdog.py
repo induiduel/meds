@@ -259,10 +259,44 @@ def main():
             # 8. QLoRA Eğitim Sonrası Otomatik Veri Denetleme & İyileştirme Tetikleyicisi
             check_post_lora_training_trigger()
 
+            # 9. Faz 5 (Çoklu AI Konsensüs) ve Faz 6 (Derin Tıbbi Metadata) Motorlarını Canlı Tut
+            check_phase5_and_phase6_workers()
+
         except Exception as e:
             log(f"Watchdog genel döngü hatası: {e}")
 
         time.sleep(10)
 
+
+def check_phase5_and_phase6_workers():
+    """Faz 5 (Çoklu AI Konsensüs) ve Faz 6 (Derin Tıbbi Metadata) motorlarının arka planda çalışmasını sağlar"""
+    venv_py = ROOT / ".venv-ocr" / "bin" / "python"
+    py_bin = str(venv_py) if venv_py.exists() else sys.executable
+
+    # Faz 5 Konsensüs Motoru Denetimi
+    res_p5 = subprocess.run(["pgrep", "-f", "multi_ai_consensus_phase5.py"], capture_output=True, text=True)
+    if not res_p5.stdout.strip():
+        p5_script = ROOT / "scripts" / "advanced_ai" / "multi_ai_consensus_phase5.py"
+        if p5_script.exists():
+            subprocess.Popen([py_bin, str(p5_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+            log("multi_ai_consensus_phase5.py (Faz 5 Çoklu AI Konsensüsü) arka planda başlatıldı ✓")
+
+    # Faz 6 Derin Metadata Motoru Denetimi
+    res_p6 = subprocess.run(["pgrep", "-f", "deep_metadata_generator_phase6.py"], capture_output=True, text=True)
+    if not res_p6.stdout.strip():
+        p6_script = ROOT / "scripts" / "advanced_ai" / "deep_metadata_generator_phase6.py"
+        if p6_script.exists():
+            subprocess.Popen([py_bin, str(p6_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+            log("deep_metadata_generator_phase6.py (Faz 6 Hiper-Metadata Motoru) arka planda başlatıldı ✓")
+
+    # Faz 7 5-Adımlı Mikro-Ajans Modelleme & Hikaye Motoru Denetimi
+    res_p7 = subprocess.run(["pgrep", "-f", "microagent_storyteller_phase7.py"], capture_output=True, text=True)
+    if not res_p7.stdout.strip():
+        p7_script = ROOT / "scripts" / "advanced_ai" / "microagent_storyteller_phase7.py"
+        if p7_script.exists():
+            subprocess.Popen([py_bin, str(p7_script)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+            log("microagent_storyteller_phase7.py (Faz 7 Mikro-Ajans Hikaye Motoru) arka planda başlatıldı ✓")
+
 if __name__ == "__main__":
     main()
+

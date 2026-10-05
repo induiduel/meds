@@ -52,10 +52,13 @@ def main():
         try:
             ollama_up()
             stages = [
-                ("stage2_clean.py", "Aşama 2: Türkçe Onarım & Soru Ayrıştırma"),
-                ("stage3_merge.py", "Aşama 3: RAG Eşleştirme & Zenginleştirme"),
-                ("stage4_database.py", "Aşama 4: Doğrulanmış Veritabanı Aktarımı"),
-                ("../advanced_ai/orchestrator.py", "Aşama 5: GraphRAG & Hibrit Arama & MemGPT")
+                ("stage2_clean.py", "Aşama 2 (Faz 2): Türkçe Onarım & Soru Ayrıştırma"),
+                ("stage3_merge.py", "Aşama 3 (Faz 3): RAG Eşleştirme & Zenginleştirme"),
+                ("stage4_database.py", "Aşama 4 (Faz 4): Doğrulanmış Veritabanı Aktarımı"),
+                ("../advanced_ai/orchestrator.py", "Aşama 5: GraphRAG & Hibrit Arama & MemGPT"),
+                ("../advanced_ai/multi_ai_consensus_phase5.py", "Aşama 6 (Faz 5): Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti"),
+                ("../advanced_ai/deep_metadata_generator_phase6.py", "Aşama 7 (Faz 6): Derin Tıbbi Hiper-Metadata Motoru"),
+                ("../advanced_ai/microagent_storyteller_phase7.py", "Aşama 8 (Faz 7): 5 Adımlı Mikro-Ajans Tıbbi Modelleme & Hikaye Motoru")
             ]
             state = lib.State()
             for s_idx, (s, s_desc) in enumerate(stages, 1):
@@ -63,6 +66,7 @@ def main():
                 out = run(s)
                 res.append(out)
                 log.error(f"{s} rc={out['rc']}: {out['tail']}") if out["rc"] else None
+
                 # Aşama geçişlerinde RAM ve VRAM önbelleğini tazele
                 try:
                     import requests, gc
@@ -81,7 +85,7 @@ def main():
             res.append({"error": str(e)})
         STATUS.parent.mkdir(parents=True, exist_ok=True)
         STATUS.write_text(json.dumps({"time": time.strftime("%F %T"), "runs": res}, ensure_ascii=False, indent=1))
-        lib.State().set_progress("pipeline", 4, 4, f"Döngü Tamamlandı ✓ (Yeni dosyalar için {delay} sn bekleniyor...)")
+        lib.State().set_progress("pipeline", len(stages), len(stages), f"Döngü Tamamlandı ✓ (Yeni dosyalar için {delay} sn bekleniyor...)")
         time.sleep(delay)
 
 

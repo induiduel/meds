@@ -109,9 +109,9 @@ erDiagram
 
 ---
 
-## 4. Boru Hattı ve 6 Faz Mimarisi (6-Phase Execution Pipeline)
+## 4. Boru Hattı ve 7 Faz Mimarisi (7-Phase Execution Pipeline)
 
-MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir aynı süreci temsil eden **6 Adımlı Otonom Bir Mimariye** standardize edilmiştir:
+MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir aynı süreci temsil eden **7 Adımlı Otonom Bir Mimariye** standardize edilmiştir:
 
 | Faz / Aşama | Modül / Betik | Temel Görev ve Çıktı | Otomasyon Katmanı |
 | :--- | :--- | :--- | :--- |
@@ -120,7 +120,8 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 | **Faz 3 (Aşama 3)** | `stage3_merge.py` | RAG Chunking (900 Karakter) & BGE-M3 Vektörleme | `pipeline_runner` |
 | **Faz 4 (Aşama 4)** | `stage4_database.py` & `sync_to_supabase_v2` | Doğrulanmış Soru & Slaytların `meds_database`'e Aktarımı | `pipeline_runner` |
 | **Faz 5 (Aşama 5)** | `multi_ai_consensus_phase5.py` | Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti (`meds_database_v2`) | `pipeline_runner` + `watchdog` |
-| **Faz 6 (Aşama 6)** | `deep_metadata_generator_phase6.py` | Derin Tıbbi Hiper-Metadata (ICD-10, Ayırıcı Tanı - 200 İstek/Gün) | `pipeline_runner` + `watchdog` |
+| **Faz 6 (Aşama 6)** | `deep_metadata_generator_phase6.py` | Derin Tıbbi Hiper-Metadata (ICD-10, Ayırıcı Tanı - Dinamik Hız) | `pipeline_runner` + `watchdog` |
+| **Faz 7 (Aşama 7)** | `microagent_storyteller_phase7.py` | 5 Adımlı Mikro-Ajans Tıbbi Modelleme & Pedagojik Hikaye | `pipeline_runner` + `watchdog` |
 
 ---
 
@@ -156,6 +157,15 @@ MedSoru ekosisteminde **Aşama (Stage)** ve **Faz (Phase)** kavramları birebir 
 - Dinamik Hız Kontrolü: 5 ila 10 dakikada 5 soru, her 2 saatte bir 1 tam amfi ders notu işleme temposuyla arka planda otonom çalışır.
 - ICD-10 kodları, ayırıcı tanı, multidisipliner tıp bağları ve hiper-arama etiketleri üretir.
 
+### Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Tıbbi Modelleme & Hikaye Motoru (`microagent_storyteller_phase7.py`)
+- Kısıtlı parametreli yerel modellerin bilişsel yükünü 5 atomik mikro-adıma böler:
+  1. *İzole Varlık Çıkarımı:* Soru kökündeki hedef yapı ve sistemi sert JSON olarak çıkarır.
+  2. *RAG Destekli Doğrulama:* Amfi slayt chunk'ından kanıtı doğrular, halüsinasyonu sıfırlar.
+  3. *Çeldirici Otopsisi:* Her yanlış seçeneği döngüsel olarak tek tek inceleyip hocanın tuzağını ve asıl tıp tanımını saptar.
+  4. *Kavramsal Çerçeve:* Neden-sonuç ilişkisini 2 maddelik mantık köprüsüne oturtur.
+  5. *Sentez & Hikayeleştirme:* Akıcı Türkçe, hekimlik nosyonu ve klinik analojiyle öğrencinin aklında kalıcı hikaye üretir.
+- 100 altın standart soruluk rehber veri seti (`training_data/phase7_microagent_100_exemplars.jsonl`) üretir.
+- Duraksama / kurtarma desteği ile her adım anında diske yazılır (`meds_database_v2/phase7_stories`).
 
 ---
 

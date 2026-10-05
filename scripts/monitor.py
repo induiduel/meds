@@ -41,6 +41,7 @@ DB_V2_DIR = PROJECT_PARENT / "meds_database_v2"
 GRAPH_FILE = TEMP3_DIR / "advanced_ai" / "medical_knowledge_graph.json"
 PHASE5_STATE_FILE = DB_V2_DIR / "phase5_consensus_state.json"
 PHASE6_STATE_FILE = DB_V2_DIR / "deep_metadata" / "phase6_metadata_state.json"
+PHASE7_STATE_FILE = DB_V2_DIR / "phase7_stories" / "phase7_state.json"
 
 
 def get_gpu_telemetry():
@@ -150,6 +151,8 @@ def get_process_statuses():
                 found["active_stage"] = "Faz 5 (Konsensüs)"
             elif "deep_metadata_generator_phase6.py" in cmd:
                 found["active_stage"] = "Faz 6 (Hiper-Metadata)"
+            elif "microagent_storyteller_phase7.py" in cmd:
+                found["active_stage"] = "Faz 7 (Mikro-Ajans Hikaye)"
     except Exception:
         pass
     return found
@@ -266,6 +269,15 @@ def render_dashboard(stdscr):
                         cached_counts["p6_q_done"] = p6_q_done
                         cached_counts["p6_lec_done"] = p6_lec_done
                         cached_counts["p6_total"] = p6_q_done
+
+                    # Faz 7 5-Adımlı Mikro-Ajans Modelleme durumu
+                    p7_st = read_json_safe(PHASE7_STATE_FILE)
+                    if p7_st:
+                        cached_counts["p7_done"] = p7_st.get("total_stories_generated", len(p7_st.get("processed_qids", [])))
+                    else:
+                        p7_stories_dir = DB_V2_DIR / "phase7_stories"
+                        if p7_stories_dir.exists():
+                            cached_counts["p7_done"] = len(list(p7_stories_dir.glob("*.json")))
                 except Exception:
                     pass
 
@@ -385,12 +397,18 @@ def render_dashboard(stdscr):
             p6_bar = draw_bar(p6_q_cnt, max(1, p6_target), width=10)
             stdscr.addstr(14, 4, f"Faz 6 [Derin Hiper-Metadata] : İşlenen Soru: {p6_q_cnt} {p6_bar} | Slayt Notu: {p6_lec_cnt} (Tempo: 5-10 dk'da 5 Soru / 2 Saatte 1 Ders)", curses.color_pair(3))
 
-            stdscr.addstr(15, 2, "─" * (w - 4), curses.A_DIM)
+            # --- FAZ 7 ---
+            p7_done = cached_counts.get("p7_done", 0)
+            p7_bar = draw_bar(p7_done, 100, width=10)
+            p7_st = "✓ 100 Altın Örnek Tamam" if p7_done >= 100 else f"{p7_done}/100 Modelleniyor"
+            stdscr.addstr(15, 4, f"Faz 7 [5-Adım Mikro-Ajans]   : Altın Örnek: {p7_done}/100 {p7_bar} | ({p7_st} - Halüsinasyonsuz Klinik Hikaye)", curses.color_pair(2) if p7_done >= 100 else curses.color_pair(5))
+
+            stdscr.addstr(16, 2, "─" * (w - 4), curses.A_DIM)
 
             # ==========================================================
             # 4. AKTİF İŞLEM, İŞLEME HIZI VE TAHMİNİ BİTİŞ (ETA)
             # ==========================================================
-            stdscr.addstr(16, 2, "⚡ AKTİF SÜREÇ, HIZ & TAHMİNİ BİTİŞ (ETA):", curses.color_pair(5) | curses.A_BOLD)
+            stdscr.addstr(17, 2, "⚡ AKTİF SÜREÇ, HIZ & TAHMİNİ BİTİŞ (ETA):", curses.color_pair(5) | curses.A_BOLD)
 
             cur_desc = cur_prog.get("desc")
             if not cur_desc:
@@ -400,31 +418,31 @@ def render_dashboard(stdscr):
             cur_step = cur_prog.get("current", 0)
             cur_tot = cur_prog.get("total", 0)
 
-            stdscr.addstr(17, 4, f"• Aktif Görev : {cur_desc}"[:w - 6], curses.color_pair(3) | curses.A_BOLD)
+            stdscr.addstr(18, 4, f"• Aktif Görev : {cur_desc}"[:w - 6], curses.color_pair(3) | curses.A_BOLD)
             if cur_tot > 0:
                 p_bar = draw_bar(cur_step, cur_tot, width=max(10, w - 50))
-                stdscr.addstr(18, 4, f"• Canlı Adım  : {cur_step}/{cur_tot} {p_bar}  |  Hız: {last_speed_str}  |  Kalan Süre (ETA): {last_eta_str}", curses.color_pair(2) | curses.A_BOLD)
+                stdscr.addstr(19, 4, f"• Canlı Adım  : {cur_step}/{cur_tot} {p_bar}  |  Hız: {last_speed_str}  |  Kalan Süre (ETA): {last_eta_str}", curses.color_pair(2) | curses.A_BOLD)
             else:
-                stdscr.addstr(18, 4, f"• Canlı Hız   : {last_speed_str}  |  Tahmini Kalan Süre (ETA): {last_eta_str}", curses.color_pair(2) | curses.A_BOLD)
+                stdscr.addstr(19, 4, f"• Canlı Hız   : {last_speed_str}  |  Tahmini Kalan Süre (ETA): {last_eta_str}", curses.color_pair(2) | curses.A_BOLD)
 
-            stdscr.addstr(19, 2, "─" * (w - 4), curses.A_DIM)
+            stdscr.addstr(20, 2, "─" * (w - 4), curses.A_DIM)
 
             # ==========================================================
             # 5. İLERİ AI & BİLGİ GRAFI KATMANI (GRAPHRAG & HYBRID SEARCH)
             # ==========================================================
-            stdscr.addstr(20, 2, "🧠 İLERİ DÜZEY AI KATMANI (GraphRAG & Hibrit Arama):", curses.color_pair(1) | curses.A_BOLD)
+            stdscr.addstr(21, 2, "🧠 İLERİ DÜZEY AI KATMANI (GraphRAG & Hibrit Arama):", curses.color_pair(1) | curses.A_BOLD)
             kg_info = f"• GraphRAG Tıbbi Bilgi Grafı : {cached_counts['kg_nodes']:,} Düğüm | {cached_counts['kg_edges']:,} Kenar (Hastalık-İlaç-Semptom Ağı)"
             search_info = f"• Hibrit Arama & Bellek      : BM25 + Dense BGE-M3 (24.657 Chunk İndeksli) ✓ | MemGPT Hiyerarşik Bellek: Devrede ✓"
-            stdscr.addstr(21, 4, kg_info[:w - 6], curses.color_pair(6))
-            stdscr.addstr(22, 4, search_info[:w - 6], curses.color_pair(2))
+            stdscr.addstr(22, 4, kg_info[:w - 6], curses.color_pair(6))
+            stdscr.addstr(23, 4, search_info[:w - 6], curses.color_pair(2))
 
-            stdscr.addstr(23, 2, "─" * (w - 4), curses.A_DIM)
+            stdscr.addstr(24, 2, "─" * (w - 4), curses.A_DIM)
 
             # ==========================================================
             # 6. CANLI BORU HATTI LOGLARI
             # ==========================================================
-            stdscr.addstr(24, 2, "📜 BORU HATTI CANLI LOG AKIŞI:", curses.color_pair(5) | curses.A_BOLD)
-            line_y = 25
+            stdscr.addstr(25, 2, "📜 BORU HATTI CANLI LOG AKIŞI:", curses.color_pair(5) | curses.A_BOLD)
+            line_y = 26
             for l in logs[-5:]:
                 if line_y >= h - 2:
                     break

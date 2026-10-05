@@ -137,7 +137,33 @@ export const AUTOMATION_PIPELINES = [
       { script: 'sync-all-to-firestore.mjs', args: '', title: '2. Firestore NoSQL Eşitle' },
     ],
   },
+  {
+    id: 'phase5-multi-ai-consensus',
+    title: '🧠 Faz 5: Çoklu AI Konsensüsü & Slayt İğne-Delik Tespiti',
+    description: 'Yerel RTX 4060 GPU (Gemma3) ve Bulut AI eşzamanlı konsensüsü ile pedagojik analiz, tıbbi varlık çıkarımı ve slayt eşleştirmesi.',
+    category: 'Otomasyon & Pipeline',
+    steps: [
+      { script: 'advanced_ai/multi_ai_consensus_phase5.py', args: '', title: '1. Çoklu AI Konsensüsü Yürüt' },
+    ],
+  },
+  {
+    id: 'phase6-deep-metadata-generator',
+    title: '🏷️ Faz 6: Derin Tıbbi Metadata & Hiper-Etiket Motoru',
+    steps: [
+      { script: 'advanced_ai/deep_metadata_generator_phase6.py', args: '', title: '1. Çoklu AI Dinamik Metadata Üretimi' },
+    ],
+  },
+  {
+    id: 'phase7-microagent-storyteller',
+    title: '📖 Faz 7: 5 Adımlı Mikro-Ajans Tıbbi Hikaye & Modelleme',
+    description: 'Yerel GPU bilişsel yükünü 5 atomik mikro-adıma bölerek halüsinasyonsuz, çeldirici otopsili ve pedagojik klinik hikayeler üretir.',
+    category: 'Otomasyon & Pipeline',
+    steps: [
+      { script: 'advanced_ai/microagent_storyteller_phase7.py', args: '', title: '1. 5 Adımlı Mikro-Ajans Modelleme ve 100 Altın Örnek' },
+    ],
+  },
 ];
+
 
 /**
  * Read known metadata from scripts-meta.json

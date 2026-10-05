@@ -2192,6 +2192,22 @@ def get_stats():
             "pending": 0,
             "eta": "Sürekli Aktif",
             "order": 6
+        },
+        {
+            "id": 7,
+            "phase": "Faz 7",
+            "name": "Faz 7 (Aşama 7): 5 Adımlı Mikro-Ajans Tıbbi Hikaye & Modelleme",
+            "desc": "Kısıtlı parametreli yerel modeller için 5 adımlı mikro-ajan (Varlık Çıkarımı -> RAG Doğrulama -> Çeldirici Otopsisi -> Sebep-Sonuç -> Klinik Hikaye Sentezi) mimarisi ve 100 altın soru modellemesi",
+            "status": "running",
+            "status_tr": "Mikro-Ajan İşleyişinde (100 Altın Örnek & Otonom)",
+            "progress_pct": 92,
+            "processed": f"{c(Path('/home/indu/Masaüstü/MedSoru Project/meds_database_v2/phase7_stories'), 'json')} Hikaye Üretildi",
+            "total": "100 Altın Modelleme / Tüm Sorular",
+            "unit": "Klinik Hikaye Havuzu",
+            "created_files": "meds_database_v2/phase7_stories/*.json",
+            "pending": 0,
+            "eta": "Otonom / Kesintisiz",
+            "order": 7
         }
     ]
 
