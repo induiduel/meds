@@ -446,7 +446,7 @@ export const FloatingGlossaryToast: React.FC = () => {
 
       {/* Dynamic Slide Clinical Synthesis / Slayt Patoloji Bilgisi */}
       {slideKnowledge && (
-        <div className="p-2.5 rounded-xl bg-teal-500/10 dark:bg-teal-500/15 border-l-3 border-teal-500 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2 animate-in fade-in duration-200 shadow-2xs">
+        <div className="p-2.5 rounded-xl bg-teal-500/10 dark:bg-teal-500/15 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2 animate-in fade-in duration-200 shadow-2xs">
           <span className="text-[13px] select-none shrink-0 mt-0.5">✨</span>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 mb-1">
@@ -466,7 +466,7 @@ export const FloatingGlossaryToast: React.FC = () => {
 
       {/* Clinical Pearl Box */}
       {item.clinicalPearls && (
-        <div className="p-2.5 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 border-l-3 border-amber-500 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2">
+        <div className="p-2.5 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 text-[11.5px] sm:text-[12px] text-ink-2 leading-snug flex items-start gap-2">
           <span className="text-[13px] select-none shrink-0 mt-0.5">💡</span>
           <div className="min-w-0 flex-1">
             <strong className="font-semibold text-amber-900 dark:text-amber-200 block mb-0.5">
@@ -562,7 +562,7 @@ export const GlossaryTermSpan: React.FC<{
       }}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
-      className="cursor-pointer font-semibold text-teal-800 dark:text-teal-200 bg-teal-500/15 dark:bg-teal-400/20 hover:bg-teal-500/25 dark:hover:bg-teal-400/30 border-b-2 border-teal-500/70 dark:border-teal-400/90 px-1 py-0.5 rounded transition-all duration-150 inline-flex items-baseline gap-0.5 select-text"
+      className="cursor-pointer font-semibold text-teal-800 dark:text-teal-200 bg-teal-500/15 dark:bg-teal-400/20 hover:bg-teal-500/25 dark:hover:bg-teal-400/30 underline decoration-2 underline-offset-[3px] decoration-teal-500/70 dark:decoration-teal-400/90 px-1 py-0.5 rounded transition-all duration-150 inline-flex items-baseline gap-0.5 select-text"
       title={`${item.term} (${item.category}) - Dokunun veya üzerine gelin`}
     >
       <span>{text}</span>
@@ -684,7 +684,7 @@ export const RenderWithGlossaryTerms: React.FC<{
             return (
               <mark
                 key={pIdx}
-                className="bg-red-100/90 dark:bg-red-950/50 text-red-800 dark:text-red-200 border-b-2 border-red-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
+                className="bg-red-100/90 dark:bg-red-950/50 text-red-800 dark:text-red-200 underline decoration-2 underline-offset-[3px] decoration-red-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
                 title="Önemli / Kritik Vurgu"
               >
                 <span className="text-[10px] select-none text-red-500">🔴</span>
@@ -696,7 +696,7 @@ export const RenderWithGlossaryTerms: React.FC<{
             return (
               <mark
                 key={pIdx}
-                className="bg-blue-100/90 dark:bg-blue-950/50 text-blue-800 dark:text-blue-200 border-b-2 border-blue-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
+                className="bg-blue-100/90 dark:bg-blue-950/50 text-blue-800 dark:text-blue-200 underline decoration-2 underline-offset-[3px] decoration-blue-500 px-1.5 py-0.5 rounded font-semibold not-italic inline-flex items-center gap-1 shadow-2xs"
                 title="Sorulmuş / Çıkmış Sınav Sorusu"
               >
                 <span className="text-[10px] select-none text-blue-500">🔵</span>
@@ -707,7 +707,7 @@ export const RenderWithGlossaryTerms: React.FC<{
           return (
             <mark
               key={pIdx}
-              className="bg-amber-200/80 dark:bg-amber-400/30 text-amber-950 dark:text-amber-100 px-1.5 py-0.5 rounded font-medium not-italic border-b-2 border-amber-400/80 shadow-2xs"
+              className="bg-amber-200/80 dark:bg-amber-400/30 text-amber-950 dark:text-amber-100 px-1.5 py-0.5 rounded font-medium not-italic underline decoration-2 underline-offset-[3px] decoration-amber-400/80 shadow-2xs"
             >
               {renderedContent}
             </mark>
@@ -939,7 +939,7 @@ export const MedicalGlossaryDrawer: React.FC = () => {
                 </p>
 
                 {item.clinicalPearls && (
-                  <div className="p-2 rounded-lg bg-amber-500/10 border-l-2 border-amber-500 text-[11.5px] text-ink-2 leading-snug flex items-start gap-1.5">
+                  <div className="p-2 rounded-lg bg-amber-500/10 text-[11.5px] text-ink-2 leading-snug flex items-start gap-1.5">
                     <span className="text-[12px] select-none shrink-0">💡</span>
                     <span>{item.clinicalPearls}</span>
                   </div>
