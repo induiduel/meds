@@ -1,6 +1,110 @@
 // Shared AI provider layer (server-only).
 // Gemini key pool -> Groq fallback. Keys come exclusively from the server .env.
+import fs from 'fs';
+import path from 'path';
 import { GoogleGenAI } from '@google/genai';
+
+// Her model ailesi ve sağlayıcı için özelleştirilmiş zaman aşımı süreleri (milisaniye)
+export const MODEL_TIMEOUTS_MS: Record<string, number> = {
+  // Yerel GPU Modelleri (RTX 4060)
+  'gemma3:4b': 45000,           // 45 saniye
+  'medgemma1.5:4b': 45000,      // 45 saniye
+  'qwen3:1.7b-q8_0': 30000,     // 30 saniye (ultra hafif)
+  'deepseek-r1:8b': 120000,     // 120 saniye (2 dakika - derin CoT mantık yürütme)
+  'medsoru-d3': 60000,          // 60 saniye (özel eğitilmiş QLoRA)
+  'local-default': 60000,       // 60 saniye varsayılan yerel
+
+  // Bulut Modelleri
+  'gemini-3.8-flash': 25000,    // 25 saniye (hızlı bulut API)
+  'gemini-flash-latest': 25000,
+  'openai/gpt-oss-120b': 45000, // 45 saniye (Groq ultra hızlı inference)
+  'qwen/qwen3.8-27b': 40000,
+  'openai/gpt-oss-20b': 30000,
+  'muse-spark-1.3-contributor-free': 35000, // 35 saniye
+  'cloud-default': 35000
+};
+
+export function getModelTimeoutMs(modelName?: string, isLocal: boolean = false): number {
+  if (modelName && MODEL_TIMEOUTS_MS[modelName]) {
+    return MODEL_TIMEOUTS_MS[modelName];
+  }
+  if (modelName) {
+    if (modelName.includes('deepseek-r1')) return 120000;
+    if (modelName.includes('gpt-oss-120b')) return 45000;
+    if (modelName.includes('flash')) return 25000;
+    if (modelName.includes('qwen3:1.7b')) return 30000;
+  }
+  return isLocal ? MODEL_TIMEOUTS_MS['local-default'] : MODEL_TIMEOUTS_MS['cloud-default'];
+}
+
+// Kalıcı Yapay Zeka Hata Kayıt Sistemi (Log Recording)
+const AI_ERROR_LOG_PATH = path.join(process.cwd(), 'data', 'ai_error_logs.json');
+
+export interface AiErrorRecord {
+  id: string;
+  timestamp: string;
+  provider: string;
+  model: string;
+  promptSnippet: string;
+  errorMessage: string;
+  errorStack?: string;
+  isTimeout: boolean;
+  status: 'unresolved' | 'investigating' | 'resolved';
+}
+
+export function logAiExecutionError(entry: {
+  provider: string;
+  model: string;
+  prompt: string;
+  error: any;
+}): void {
+  try {
+    const isTimeout = /abort|timeout|timed out|zaman aşımı/i.test(entry.error?.message || '');
+    const newRecord: AiErrorRecord = {
+      id: `err-log-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      timestamp: new Date().toISOString(),
+      provider: entry.provider,
+      model: entry.model,
+      promptSnippet: (entry.prompt || '').slice(0, 250),
+      errorMessage: entry.error?.message || String(entry.error),
+      errorStack: entry.error?.stack ? entry.error.stack.slice(0, 500) : undefined,
+      isTimeout,
+      status: 'unresolved'
+    };
+
+    let logs: AiErrorRecord[] = [];
+    if (fs.existsSync(AI_ERROR_LOG_PATH)) {
+      try {
+        const raw = fs.readFileSync(AI_ERROR_LOG_PATH, 'utf8');
+        logs = JSON.parse(raw);
+        if (!Array.isArray(logs)) logs = [];
+      } catch (_) {
+        logs = [];
+      }
+    }
+
+    logs.unshift(newRecord);
+    // Maksimum 200 en güncel hata kaydını tut
+    if (logs.length > 200) {
+      logs = logs.slice(0, 200);
+    }
+
+    fs.writeFileSync(AI_ERROR_LOG_PATH, JSON.stringify(logs, null, 2), 'utf8');
+    console.error(`[AI Error Logger] 📝 Hata kaydedildi: [${entry.provider} - ${entry.model}] -> ${newRecord.errorMessage}`);
+  } catch (err: any) {
+    console.warn('[AI Error Logger] ⚠️ Hata loglanırken dosya yazma sorunu:', err.message);
+  }
+}
+
+export function getAiErrorLogs(): AiErrorRecord[] {
+  try {
+    if (fs.existsSync(AI_ERROR_LOG_PATH)) {
+      const raw = fs.readFileSync(AI_ERROR_LOG_PATH, 'utf8');
+      return JSON.parse(raw);
+    }
+  } catch (_) {}
+  return [];
+}
 
 // Multi-Tier Gemini Key Pool & Groq Cloud Engine
 export interface KeyInfo {
@@ -93,6 +197,7 @@ export async function callLocalOllama(
     systemPrompt?: string;
     isJson?: boolean;
     messages?: { role: string; content: string }[];
+    timeoutMs?: number;
   }
 ): Promise<{ text: string; model: string; keyUsed: string; providerUsed: string }> {
   const isJson = options?.isJson === true;
@@ -124,8 +229,10 @@ export async function callLocalOllama(
     payload.format = 'json';
   }
 
+  // Model bazlı dinamik zaman aşımı süresi
+  const effectiveTimeout = options?.timeoutMs || getModelTimeoutMs(model, true);
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 45000);
+  const timeoutId = setTimeout(() => controller.abort(), effectiveTimeout);
 
   try {
     const res = await fetch(`${OLLAMA_HOST}/api/chat`, {
@@ -154,7 +261,17 @@ export async function callLocalOllama(
     };
   } catch (err: any) {
     clearTimeout(timeoutId);
-    throw err;
+    const isTimeout = /abort|timeout|timed out/i.test(err.message || '') || controller.signal.aborted;
+    const finalErr = isTimeout
+      ? new Error(`Yerel model (${model}) ${Math.round(effectiveTimeout / 1000)} saniye içinde yanıt veremedi (Zaman Aşımı).`)
+      : err;
+    logAiExecutionError({
+      provider: 'ollama',
+      model,
+      prompt,
+      error: finalErr
+    });
+    throw finalErr;
   }
 }
 
@@ -166,6 +283,7 @@ export async function callGroqCloud(
     systemPrompt?: string;
     isJson?: boolean;
     messages?: { role: string; content: string }[];
+    timeoutMs?: number;
   }
 ): Promise<{ text: string; model: string; keyUsed: string }> {
   const keys = getTieredGroqKeys(customGroqKey);
@@ -199,6 +317,10 @@ export async function callGroqCloud(
   for (let ki = 0; ki < keys.length; ki++) {
     const currentKey = keys[ki];
     for (const m of candidateModels) {
+      const effectiveTimeout = options?.timeoutMs || getModelTimeoutMs(m, false);
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), effectiveTimeout);
+
       try {
         const bodyPayload: any = {
           model: m,
@@ -215,8 +337,10 @@ export async function callGroqCloud(
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${currentKey.key}`,
           },
-          body: JSON.stringify(bodyPayload)
+          body: JSON.stringify(bodyPayload),
+          signal: controller.signal
         });
+        clearTimeout(timeoutId);
 
         if (!res.ok) {
           const errText = await res.text();
@@ -234,12 +358,23 @@ export async function callGroqCloud(
         const text = data.choices?.[0]?.message?.content || (isJson ? '{}' : '');
         return { text, model: m, keyUsed: currentKey.label };
       } catch (err: any) {
-        lastErr = err;
+        clearTimeout(timeoutId);
+        const isTimeout = /abort|timeout|timed out/i.test(err.message || '') || controller.signal.aborted;
+        lastErr = isTimeout
+          ? new Error(`Groq modeli (${m}) ${Math.round(effectiveTimeout / 1000)} saniye içinde yanıt veremedi (Zaman Aşımı).`)
+          : err;
       }
     }
   }
 
-  throw lastErr || new Error('Groq Cloud modelleri yanıt vermedi.');
+  const finalError = lastErr || new Error('Groq Cloud modelleri yanıt vermedi.');
+  logAiExecutionError({
+    provider: 'groq',
+    model,
+    prompt,
+    error: finalError
+  });
+  throw finalError;
 }
 
 // In-memory cooldown cache when Gemini free tier hits 429 quota exhaustion (prevents 4-second delays per request)
@@ -251,7 +386,8 @@ async function callGeminiPool(
   customGeminiKey?: string,
   model?: string,
   isJson: boolean = false,
-  systemInstruction?: string
+  systemInstruction?: string,
+  timeoutMs?: number
 ): Promise<{ text: string; providerUsed: string; planUsed: string }> {
   const isGeminiInCooldown = Date.now() < serverGeminiQuotaCooldownUntil;
   if (isGeminiInCooldown) {
@@ -271,6 +407,7 @@ async function callGeminiPool(
       : ['gemini-3.8-flash'];
 
     for (const m of candidateModels) {
+      const effectiveTimeout = timeoutMs || getModelTimeoutMs(m, false);
       try {
         console.log(`[Gemini Engine] ${keyInfo.label} (${m}) deneniyor... (Sıra: ${i + 1}/${allGeminiKeys.length})`);
         const clientAi = new GoogleGenAI({ apiKey: keyInfo.key });
@@ -282,11 +419,17 @@ async function callGeminiPool(
           configPayload.systemInstruction = systemInstruction;
         }
 
-        const geminiRes = await clientAi.models.generateContent({
+        const callPromise = clientAi.models.generateContent({
           model: m,
           contents: prompt,
           config: configPayload,
         });
+
+        const timeoutPromise = new Promise<never>((_, reject) => {
+          setTimeout(() => reject(new Error(`Gemini modeli (${m}) ${Math.round(effectiveTimeout / 1000)} saniye içinde yanıt veremedi (Zaman Aşımı).`)), effectiveTimeout);
+        });
+
+        const geminiRes: any = await Promise.race([callPromise, timeoutPromise]);
         const text = geminiRes.text || (isJson ? '{}' : '');
         serverGeminiQuotaCooldownUntil = 0;
         return {
@@ -306,7 +449,14 @@ async function callGeminiPool(
     }
   }
 
-  throw lastErr || new Error('Google Gemini modelleri yanıt vermedi.');
+  const finalError = lastErr || new Error('Google Gemini modelleri yanıt vermedi.');
+  logAiExecutionError({
+    provider: 'gemini',
+    model: model || 'gemini-3.8-flash',
+    prompt,
+    error: finalError
+  });
+  throw finalError;
 }
 
 // =========================================================================
@@ -351,6 +501,7 @@ export async function callMuseSpark(
     isJson?: boolean;
     messages?: { role: string; content: string }[];
     baseUrl?: string;
+    timeoutMs?: number;
   }
 ): Promise<{ text: string; model: string; keyUsed: string; providerUsed: string }> {
   const keys = getTieredMuseSparkKeys(customKey);
@@ -386,6 +537,7 @@ export async function callMuseSpark(
   for (const baseUrl of baseUrls) {
     for (const keyInfo of keys) {
       for (const m of candidateModels) {
+        const effectiveTimeout = options?.timeoutMs || getModelTimeoutMs(m, false);
         try {
           const bodyPayload: any = {
             model: m,
@@ -410,7 +562,7 @@ export async function callMuseSpark(
           console.log(`[Muse Spark 1.3] Deneniyor: ${baseUrl} (${m}) [${keyInfo.label}]...`);
 
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 20000);
+          const timeoutId = setTimeout(() => controller.abort(), effectiveTimeout);
 
           const res = await fetch(`${baseUrl}/chat/completions`, {
             method: 'POST',
@@ -439,13 +591,23 @@ export async function callMuseSpark(
             providerUsed: `Muse Spark 1.3 Free (${keyInfo.label})`
           };
         } catch (err: any) {
-          lastErr = err;
+          const isTimeout = /abort|timeout|timed out/i.test(err.message || '');
+          lastErr = isTimeout
+            ? new Error(`Muse Spark modeli (${m}) ${Math.round(effectiveTimeout / 1000)} saniye içinde yanıt veremedi (Zaman Aşımı).`)
+            : err;
         }
       }
     }
   }
 
-  throw lastErr || new Error('Muse Spark 1.3 modelleri yanıt vermedi.');
+  const finalError = lastErr || new Error('Muse Spark 1.3 modelleri yanıt vermedi.');
+  logAiExecutionError({
+    provider: 'muse-spark',
+    model,
+    prompt,
+    error: finalError
+  });
+  throw finalError;
 }
 
 // Resilient Multi-Provider AI Caller with Automated 3-Phase Failover
@@ -463,6 +625,8 @@ export async function generateResilientMedicalAi(options: {
   responseFormat?: 'json' | 'text';
   systemInstruction?: string;
   messages?: { role: string; content: string }[];
+  allowCloudFallback?: boolean;
+  timeoutMs?: number;
 }): Promise<{ text: string; providerUsed: string; planUsed: string; attemptsCount: number; fallbackUsed?: boolean }> {
   const {
     prompt,
@@ -474,19 +638,22 @@ export async function generateResilientMedicalAi(options: {
     model,
     responseFormat = 'json',
     systemInstruction,
-    messages
+    messages,
+    allowCloudFallback = true,
+    timeoutMs
   } = options;
 
   const isJson = responseFormat === 'json';
 
   // 0. ÖZEL DURUM: Kullanıcı Yerel Ollama (RTX 4060 GPU) seçtiyse doğrudan yerelde çalıştır
-  if (preferredProvider === 'local-ollama' || (model && (model.startsWith('gemma3') || model.startsWith('deepseek-r1') || model.startsWith('qwen3') || model.startsWith('medgemma')))) {
+  if (preferredProvider === 'local-ollama' || (model && (model.startsWith('gemma3') || model.startsWith('deepseek-r1') || model.startsWith('qwen3') || model.startsWith('medgemma') || model.startsWith('medsoru')))) {
     console.log(`[AI Multi-Provider] 🟢 Yerel GPU Ollama doğrudan seçildi (${model || 'gemma3:4b'})...`);
     try {
       const ollamaRes = await callLocalOllama(prompt, model || 'gemma3:4b', {
         systemPrompt: systemInstruction,
         isJson,
-        messages
+        messages,
+        timeoutMs
       });
       return {
         text: ollamaRes.text,
@@ -496,6 +663,10 @@ export async function generateResilientMedicalAi(options: {
         fallbackUsed: false
       };
     } catch (e: any) {
+      if (!allowCloudFallback) {
+        console.warn(`[AI Multi-Provider] ⛔ Yerel model (${model}) hata verdi ve bulut fallback'i kapalı:`, e.message);
+        throw e;
+      }
       console.warn('[AI Multi-Provider] ⚠️ Yerel Ollama başarısız, bulut sağlayıcılara düşülüyor:', e.message);
     }
   }

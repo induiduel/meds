@@ -445,6 +445,41 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                 <p className="m-0 text-[14px] text-ink-2 bg-canvas rounded-xl px-4 py-3">Henüz şık girilmedi. Hatırladığın bir şık varsa ekle.</p>
               )}
 
+              {/* Alternatif Şıklar (Birleştirmelerde farklı hatırlanan varyasyonlar) */}
+              {question.alternativeOptions && question.alternativeOptions.length > 0 && (
+                <div className="ms-pop-in rounded-xl border border-violet-200/80 bg-violet-50/40 p-3 sm:p-4 flex flex-col gap-2.5">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="flex items-center gap-1.5 text-[12px] font-bold text-violet-900 uppercase tracking-wider">
+                      <Layers className="w-3.5 h-3.5 text-violet-600" />
+                      Alternatif Şıklar ({question.alternativeOptions.length})
+                    </span>
+                    <span className="text-[11.5px] text-violet-700">
+                      Farklı hatırlanan şık varyasyonları
+                    </span>
+                  </div>
+                  <ul className="list-none m-0 p-0 flex flex-col gap-2">
+                    {question.alternativeOptions.map((alt, idx) => (
+                      <li
+                        key={alt.id || idx}
+                        className="flex items-start justify-between gap-3 p-2.5 rounded-lg bg-white border border-violet-100 text-[13.5px] text-ink"
+                      >
+                        <div className="flex flex-col gap-0.5 min-w-0">
+                          <span className="font-medium text-ink-1 break-words">{alt.text}</span>
+                          <span className="text-[11.5px] text-ink-3">
+                            {[alt.suggestedBy && `Ekleyen: ${alt.suggestedBy}`, alt.reason].filter(Boolean).join(' · ')}
+                          </span>
+                        </div>
+                        {typeof alt.upvotes === 'number' && alt.upvotes > 0 && (
+                          <span className="shrink-0 text-[11.5px] font-mono font-semibold px-2 py-0.5 rounded-md bg-violet-100/70 text-violet-800">
+                            +{alt.upvotes}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {/* Inline forms */}
               {showAddFragment && (
                 <form onSubmit={handleFragmentSubmit} className="flex flex-col gap-3 bg-canvas rounded-xl p-4">

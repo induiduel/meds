@@ -14,6 +14,9 @@ import {
   X,
   Wand2,
   Link2,
+  FileText,
+  Copy,
+  Lock,
 } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
@@ -122,10 +125,10 @@ const PLACEHOLDERS: Record<Mode, string> = {
 
 export const committeeShortLabel = (c: Committee) => {
   const m = c.name.match(/Kurul\s*(\d+)/i);
-  if (m) return `KURUL ${m[1]}`;
-  if (/bütünleme/i.test(c.name)) return 'BÜTÜNLEME';
-  if (/final/i.test(c.name)) return 'FİNAL';
-  return (c.code || c.name).toLocaleUpperCase('tr-TR');
+  if (m) return `Kurul ${m[1]}`;
+  if (/bütünleme/i.test(c.name) || /bütünleme/i.test(c.id)) return 'Bütünleme';
+  if (/final/i.test(c.name) || /final/i.test(c.id)) return 'Final';
+  return c.code || c.name;
 };
 
 export const questionStemText = (q: QuestionItem) =>
@@ -156,8 +159,43 @@ export const StatusPill: React.FC<{ status: QuestionItem['status']; hasFragments
 };
 
 const titleCase = (c: Committee) => {
-  const short = committeeShortLabel(c);
-  return short.charAt(0) + short.slice(1).toLocaleLowerCase('tr-TR');
+  return committeeShortLabel(c);
+};
+
+/**
+ * Resmi ders programına göre bir kurulun soru girişine açılıp açılmadığını kontrol eder.
+ * Kural: Önceki kurulun sınav tarihi tamamlanmadan bir sonraki kurula soru yazılamaz.
+ * (Kurul 1 daima açıktır; Kurul 2 için Kurul 1 sınavı bitmiş olmalıdır; vb.)
+ */
+export const COMMITTEE_EXAM_DATES: Record<string, string> = {
+  'donem3-kurul1': '2026-10-23T23:59:59',
+  'donem3-kurul2': '2026-12-04T23:59:59',
+  'donem3-kurul3': '2027-01-22T23:59:59',
+  'donem3-kurul4': '2027-03-05T23:59:59',
+  'donem3-kurul5': '2027-04-22T23:59:59',
+  'donem3-kurul6': '2027-06-11T23:59:59',
+  'donem3-final': '2027-06-28T23:59:59',
+  'donem3-butunleme': '2027-07-16T23:59:59',
+};
+
+const COMMITTEE_SEQUENCE = [
+  'donem3-kurul1',
+  'donem3-kurul2',
+  'donem3-kurul3',
+  'donem3-kurul4',
+  'donem3-kurul5',
+  'donem3-kurul6',
+  'donem3-final',
+  'donem3-butunleme',
+];
+
+export const isCommitteeLocked = (committeeId: string): boolean => {
+  const idx = COMMITTEE_SEQUENCE.indexOf(committeeId);
+  if (idx <= 0) return false; // Kurul 1 her zaman açıktır
+  const prevCommitteeId = COMMITTEE_SEQUENCE[idx - 1];
+  const prevDateStr = COMMITTEE_EXAM_DATES[prevCommitteeId];
+  if (!prevDateStr) return false;
+  return new Date() < new Date(prevDateStr);
 };
 
 /**
@@ -193,6 +231,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [claimedAnswer, setClaimedAnswer] = useState<OptionKey | undefined>(undefined);
   const [discipline, setDiscipline] = useState(disciplines[0]);
   const [questionNumber, setQuestionNumber] = useState('');
+  const [userManualDiscipline, setUserManualDiscipline] = useState(false);
+  const [userManualNumber, setUserManualNumber] = useState(false);
   const [linkedQuestion, setLinkedQuestion] = useState<QuestionItem | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -208,6 +248,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [optimizingQuestion, setOptimizingQuestion] = useState<QuestionItem | null>(null);
   const [debouncedText, setDebouncedText] = useState('');
   const [isSearching, setIsSearching] = useState(false);
+
+  // Kurul kilitli mi kontrolü: Sınav tarihi gelmeden soru yazılamaz
+  const isLocked = useMemo(() => {
+    return committee ? isCommitteeLocked(committee.id) : false;
+  }, [committee]);
 
   // 1. Kelime-bazlı ve boşluk tetiklemeli (Space-delimited / Word-level) gecikmeli metin optimizasyonu:
   // - Kullanıcı boşluk (' ') veya noktalama (. , ! ? \n) bastığı an, tamamlanan son kelimeye kadar olan
@@ -292,6 +337,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         if (isCancelled) return;
         setSmartAssistant(assistantRes);
 
+        // Kullanıcı elle ders seçmediyse ve tahmin edilen ders bu kurula aitse otomatik uygula
+        if (!userManualDiscipline && assistantRes.predictedDiscipline) {
+          const predDisc = assistantRes.predictedDiscipline.discipline;
+          if (disciplines.includes(predDisc)) {
+            setDiscipline(predDisc);
+          }
+        }
+
         // 2. Chunk / Hızlı Ön Filtreleme ile Aday Havuzu Daraltma
         const qWords = q.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
         // Sadece soru metninde veya şıklarında en az 1 ortak token içeren ya da aynı kurul/ders olanları al
@@ -365,14 +418,66 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     setSelectedMatchIds(new Set());
   };
 
+  // Çıkmış sorudan yalnızca soru kökünü editöre kopyalama
+  const handleCopyQuestionStem = (stemText: string) => {
+    setTexts((prev) => ({ ...prev, stem: stemText.trim() }));
+    if (mode === 'option') setMode('stem');
+    navigator.clipboard?.writeText(stemText.trim()).catch(() => {});
+    toast.success('Kök Kopyalandı', 'Soru kökü editöre aktarıldı ve panoya kopyalandı.');
+  };
+
+  // Çıkmış soruyu tamamen editöre aktarma (kök + şıklar + cevap)
+  const handleTransferEntireQuestion = async (similarItem: SimilarPastQuestion) => {
+    // 1. Önce soru kökünü ve branşı aktar
+    setTexts((prev) => ({ ...prev, stem: similarItem.stem.trim() }));
+    if (mode === 'option') setMode('stem');
+    if (similarItem.discipline && disciplines.includes(similarItem.discipline)) {
+      setDiscipline(similarItem.discipline);
+      setUserManualDiscipline(true);
+    }
+    if (similarItem.claimedAnswer && ['A', 'B', 'C', 'D', 'E'].includes(similarItem.claimedAnswer)) {
+      setClaimedAnswer(similarItem.claimedAnswer as OptionKey);
+    }
+
+    // 2. Varsa tam soru detayını pastQuestionsCache / API'den çekip şıkları doldur
+    try {
+      const pastList = await ApiService.getPastQuestions({ query: similarItem.id });
+      const fullQ = pastList.find((p) => String(p.id) === String(similarItem.id));
+      if (fullQ) {
+        if (fullQ.reconstruction?.stem || fullQ.stem) {
+          setTexts((prev) => ({ ...prev, stem: (fullQ.reconstruction?.stem || fullQ.stem).trim() }));
+        }
+        const sourceOptions = fullQ.reconstruction?.options || fullQ.options || [];
+        if (sourceOptions.length > 0) {
+          const newOpts: Record<OptionKey, string> = { A: '', B: '', C: '', D: '', E: '' };
+          sourceOptions.forEach((o: any) => {
+            if (o.key && ['A', 'B', 'C', 'D', 'E'].includes(o.key)) {
+              newOpts[o.key as OptionKey] = (o.text || '').trim();
+            }
+          });
+          setOptions(newOpts);
+          setOptionCount(KEYS.filter((k) => newOpts[k]).length || 5);
+        }
+        const ans = fullQ.reconstruction?.correctAnswer || fullQ.correctAnswer || fullQ.claimedAnswer || similarItem.claimedAnswer;
+        if (ans && ['A', 'B', 'C', 'D', 'E'].includes(ans)) {
+          setClaimedAnswer(ans as OptionKey);
+        }
+      }
+    } catch (_) {}
+
+    toast.success('Soru Aktarıldı', 'Çıkmış soru tüm bilgileriyle editöre aktarıldı.');
+  };
+
   // Bir soruya doğrudan bağlama aksiyonu
   const handleLinkToQuestion = (targetQ: QuestionItem) => {
     setLinkedQuestion(targetQ);
     if (targetQ.questionNumber) {
       setQuestionNumber(String(targetQ.questionNumber));
+      setUserManualNumber(true);
     }
     if (targetQ.discipline && targetQ.discipline !== 'Belirtilmedi') {
       setDiscipline(targetQ.discipline);
+      setUserManualDiscipline(true);
     }
     toast.success(
       'Soruya bağlandı',
@@ -527,6 +632,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       return;
     }
 
+    if (isCommitteeLocked(targetCommittee.id)) {
+      const msg = 'Ders programına göre bu kurulun sınav tarihi henüz gelmedi. Önceki kurul sınavı tamamlanmadan sonraki kurula soru yazılamaz.';
+      setFormError(msg);
+      toast.error('Kurul Henüz Açılmadı', msg);
+      return;
+    }
+
     const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
     if (!hasAnyText && optionsList.length === 0 && !claimedAnswer) {
       setFormError('Sorudan aklında kalan en az bir kelime, şık ya da cevap yaz.');
@@ -576,6 +688,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       setAnswerReason('');
       setClaimedAnswer(undefined);
       setQuestionNumber('');
+      setUserManualDiscipline(false);
+      setUserManualNumber(false);
       setLinkedQuestion(null);
       setSuccessMessage(
         linkedQuestion
@@ -611,16 +725,26 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               onChange={(e) => onSelectCommittee(e.target.value)}
               className="appearance-none bg-transparent border-0 outline-0 cursor-pointer pr-4 text-ink-3 hover:text-ink [field-sizing:content]"
             >
-              {sortedCommittees.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {titleCase(c)}
-                  {c.id === activeCommitteeId ? ' · toplama açık' : ''}
-                </option>
-              ))}
+              {sortedCommittees.map((c) => {
+                const locked = isCommitteeLocked(c.id);
+                return (
+                  <option key={c.id} value={c.id} disabled={locked}>
+                    {titleCase(c)}
+                    {c.id === activeCommitteeId ? ' · toplama açık' : ''}
+                    {locked ? ' · (Henüz Açılmadı)' : ''}
+                  </option>
+                );
+              })}
             </select>
             <ChevronDown className="pointer-events-none absolute right-0 w-3 h-3" aria-hidden="true" />
           </label>
           <h1 className="ms-page-title m-0 text-[30px] sm:text-[40px] text-ink">Aklında ne kaldı?</h1>
+          {isLocked && (
+            <div className="ms-pop-in flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-300/80 text-amber-900 text-[12.5px] font-medium mt-1">
+              <Lock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <span>Ders programına göre sınav tamamlanmadan bu kurula soru yazılamaz.</span>
+            </div>
+          )}
         </div>
 
         <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="relative flex flex-col gap-3">
@@ -1022,15 +1146,25 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               isCollecting ? 'bg-ok-soft text-ok' : 'bg-white text-ink-2 ring-1 ring-inset ring-line'
             }`}
           >
-            {sortedCommittees.map((c) => (
-              <option key={c.id} value={c.id}>
-                {titleCase(c)}
-                {c.id === activeCommitteeId ? ' · toplama açık' : ''}
-              </option>
-            ))}
+            {sortedCommittees.map((c) => {
+              const locked = isCommitteeLocked(c.id);
+              return (
+                <option key={c.id} value={c.id} disabled={locked}>
+                  {titleCase(c)}
+                  {c.id === activeCommitteeId ? ' · toplama açık' : ''}
+                  {locked ? ' · (Henüz Açılmadı)' : ''}
+                </option>
+              );
+            })}
           </select>
           <ChevronDown className="pointer-events-none absolute right-2.5 w-3.5 h-3.5 opacity-70" aria-hidden="true" />
         </label>
+        {isLocked && (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-300 text-amber-900 text-[12px] font-semibold">
+            <Lock className="w-3 h-3 text-amber-600" />
+            Sınav tamamlanmadan bu kurula soru eklenemez
+          </span>
+        )}
         <span className="ms-eyebrow">Soru ekle</span>
         <h1 className="ms-page-title m-0 text-[24px] sm:text-[28px] text-ink">Hatırladığın soruyu yaz</h1>
         </div>

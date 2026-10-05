@@ -132,6 +132,51 @@ const COMMITTEE_RULES: CommitteeKeywordRule[] = [
   }
 ];
 
+const DISCIPLINE_RULES: { discipline: string; keywords: string[]; weight: number }[] = [
+  {
+    discipline: 'Tıbbi Genetik',
+    keywords: [
+      'down sendromu', 'down sendrom', 'trizomi 21', 'trizomi 18', 'trizomi 13', 'edwards', 'patau',
+      'turner', 'klinefelter', 'karyotip', 'translokasyon', 'robertsonian', 'delesyon', 'duplikasyon',
+      'mikrodelesyon', 'genetik', 'kalitim', 'otozomal', 'x e bagli', 'mitokondriyal', 'mendel',
+      'fragil x', 'prader willi', 'angelman', 'imprinting', 'dismorfoloji', 'genom', 'kromozom'
+    ],
+    weight: 2.0
+  },
+  {
+    discipline: 'Tıbbi Patoloji',
+    keywords: [
+      'patoloji', 'biyopsi', 'histopatoloji', 'nekroz', 'apoptoz', 'karsinom', 'adenokarsinom',
+      'sarkom', 'displazi', 'metaplazi', 'anaplazisi', 'granulom', 'enflamasyon', 'malign', 'benign'
+    ],
+    weight: 1.5
+  },
+  {
+    discipline: 'Tıbbi Farmakoloji',
+    keywords: [
+      'farmakoloji', 'ilac', 'reseptor', 'agonist', 'antagonist', 'toksisite', 'yan etki',
+      'kontrendikasyon', 'yari omur', 'klerens', 'biyoyararlanim', 'etki mekanizmasi', 'antidot'
+    ],
+    weight: 1.5
+  },
+  {
+    discipline: 'Tıbbi Biyokimya',
+    keywords: [
+      'biyokimya', 'enzim', 'koenzim', 'glikoliz', 'krebs', 'lipid', 'kolesterol', 'protein',
+      'aminoasit', 'ure', 'kreatinin', 'glukoz', 'metabolizma', 'elektroforez'
+    ],
+    weight: 1.5
+  },
+  {
+    discipline: 'Halk Sağlığı',
+    keywords: [
+      'halk sagligi', 'epidemiyoloji', 'insidans', 'prevalans', 'surveyans', 'mortalite',
+      'morbidite', 'bagisiklama', 'asi', 'taramasi', 'saglik yonetimi'
+    ],
+    weight: 1.5
+  }
+];
+
 // ==========================================
 // YAZILAN METİNDEN KURUL & DERS TAHMİNİ
 // ==========================================
@@ -186,9 +231,19 @@ export function predictCommitteeAndDiscipline(
     }
   }
 
-  // 2. Tıbbi Kavram Bankası ile Kurul/Ders Zenginleştirme
-  const detectedConcepts = detectMedicalConcepts(text);
+  // 2. Doğrudan Anabilim Dalı Kuralları ile Ders Puanlama
   const disciplineFreq: Record<string, number> = {};
+  for (const rule of DISCIPLINE_RULES) {
+    for (const kw of rule.keywords) {
+      const foldedKw = foldTurkish(kw);
+      if (norm.includes(foldedKw)) {
+        disciplineFreq[rule.discipline] = (disciplineFreq[rule.discipline] || 0) + 25 * rule.weight;
+      }
+    }
+  }
+
+  // 3. Tıbbi Kavram Bankası ile Kurul/Ders Zenginleştirme
+  const detectedConcepts = detectMedicalConcepts(text);
 
   for (const concept of detectedConcepts.slice(0, 5)) {
     if (concept.disciplines && concept.disciplines.length > 0) {

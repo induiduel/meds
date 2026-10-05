@@ -2652,6 +2652,42 @@ app.post('/api/audit/trigger', requireAdmin, (_req, res) => {
   }
 });
 
+app.get('/api/ai/error-logs', (_req, res) => {
+  try {
+    const { getAiErrorLogs } = require('./src/services/aiProvider');
+    const logs = getAiErrorLogs();
+    res.json({
+      success: true,
+      logs,
+      unresolvedCount: logs.filter((l: any) => l.status === 'unresolved').length
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/ai/error-logs/resolve', requireAdmin, (req, res) => {
+  try {
+    const { id, status = 'resolved' } = req.body;
+    const logPath = path.join(process.cwd(), 'data', 'ai_error_logs.json');
+    if (fs.existsSync(logPath)) {
+      const raw = fs.readFileSync(logPath, 'utf8');
+      let logs = JSON.parse(raw);
+      if (Array.isArray(logs)) {
+        if (id === 'all') {
+          logs = logs.map((l: any) => ({ ...l, status }));
+        } else {
+          logs = logs.map((l: any) => l.id === id ? { ...l, status } : l);
+        }
+        fs.writeFileSync(logPath, JSON.stringify(logs, null, 2), 'utf8');
+      }
+    }
+    res.json({ success: true, message: 'Hata kaydı güncellendi.' });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 // =========================================================================
 // GENEL TIP ASİSTANI & DEDEKTİF SOHBET API ENDPOINT (YEREL & BULUT MODELLER)
 // =========================================================================
@@ -2665,7 +2701,9 @@ app.post('/api/ai/general-chat', async (req, res) => {
       mode = 'general', // 'general' | 'find_question' | 'generate_from_keywords' | 'explain'
       apiKey,
       groqApiKey,
-      museSparkApiKey
+      museSparkApiKey,
+      allowCloudFallback = false, // Yerel GPU seçiliyse otomatik buluta sorma ENGELİ (Kullanıcı onayı zorunludur)
+      timeoutMs
     } = req.body;
 
     if (!message || !message.trim()) {
@@ -2680,12 +2718,28 @@ app.post('/api/ai/general-chat', async (req, res) => {
       relevantChunks = await searchRagChunks(message, undefined, { limit: 5 });
 
       const pastDb = getPastQuestionsDb();
-      const qTokens = message.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
+      const lowerMsg = message.toLowerCase();
+      // Çoklu kelime veya tıbbi terim eşleştirmesi
+      const qTokens = lowerMsg
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, ' ')
+        .split(/\s+/)
+        .filter((w: string) => w.length >= 3 && !['hangi', 'nedir', 'neler', 'olan', 'olarak', 'göre', 'için', 'veya', 'biri'].includes(w));
+
       if (qTokens.length > 0) {
         matchedQuestions = pastDb
           .map((q: any) => {
-            const text = `${q.topic || ''} ${q.discipline || ''} ${q.stem || ''} ${q.explanation || ''}`.toLowerCase();
+            const rawStem = q.stem || q.reconstruction?.stem || '';
+            const rawExp = q.explanation || q.reconstruction?.explanation || '';
+            const rawOpts = (q.options || q.reconstruction?.options || []).map((o: any) => o.text || '').join(' ');
+            const text = `${q.topic || ''} ${q.discipline || ''} ${rawStem} ${rawOpts} ${rawExp}`.toLowerCase();
             let score = 0;
+            
+            // Tam kalıp kontrolü (Örn: "down sendromu", "trizomi 21", "artmış ense")
+            if (lowerMsg.includes('down') && text.includes('down')) score += 3;
+            if (lowerMsg.includes('trizomi 21') && text.includes('trizomi 21')) score += 4;
+            if (lowerMsg.includes('abortus') && text.includes('abortus')) score += 2;
+            if (lowerMsg.includes('kistik higroma') && text.includes('kistik higroma')) score += 3;
+            
             qTokens.forEach((t: string) => {
               if (text.includes(t)) score += 1;
             });
@@ -2693,16 +2747,22 @@ app.post('/api/ai/general-chat', async (req, res) => {
           })
           .filter((item: any) => item.score >= 2)
           .sort((a: any, b: any) => b.score - a.score)
-          .slice(0, 3)
+          .slice(0, 5)
           .map((item: any) => item.question);
       }
     } catch (_) {}
 
-    // 2. Sistem Promptunu Mod'a Göre Oluştur
-    let systemInstruction = `Sen MedSoru Tıp Fakültesi Otonom AI Asistanı ve Tıp Eğitmenisin.
-Türkiye'deki tıp fakültesi kurul/komite sınavları ve TUS müfredatına hakimsin.
+    // 2. Sistem Promptunu Mod'a Göre Oluştur (Tıbbi Doğruluk ve Halüsinasyon Önleyici Katı Kurallar)
+    let systemInstruction = `Sen MedSoru Tıp Fakültesi Otonom AI Asistanı ve Baş Tıp Eğitmenisin.
+Türkiye'deki tıp fakültesi kurul/komite sınavları ve TUS müfredatına tam hakimsin.
 Kullanıcılara tıp dersleri, sınav soruları, patofizyoloji ve farmakolojik mekanizmalar konusunda yardımcı olursun.
-Üslubun motive edici, nazik, net ve akademik olarak kusursuz Türkçe tıp terminolojisine uygundur.`;
+Üslubun motive edici, nazik, net ve akademik olarak kusursuz Türkçe tıp terminolojisine uygundur.
+
+KRİTİK TIBBİ DOĞRULUK VE HALÜSİNASYON ENGELLEYİCİ KURALLAR:
+1. Kesinlikle yanlış bilgi uydurma. Bir soru veya şık hakkında konuşurken tıp literatürü gerçeklerini bozma (Örneğin: Fetal faktörlere bağlı ilk trimester abortuslarında en sık kromozomal anomali grubu %50-60 ile "Otozomal Trizomiler"dir (en sık Trizomi 16). Tekil olarak ise Turner sendromu / Monozomi X en sıktır. Yapısal anomaliler veya tetraploidi en sık değildir!).
+2. Eğer sistem sana <VERİTABANI_EŞLEŞEN_SORULAR> vermişse, bu soruların şıklarını, doğru cevap harfini ve açıklamasını tahrif etme. Soru numarasını ve doğruluğunu bu kanıtlardan al.
+3. Bir soru kökünde veya şıkta Down sendromu geçtiğinde, sorunun asıl doğru cevabının Down sendromu mu yoksa başka bir hastalık mı (örneğin Turner sendromu veya Klinefelter) olduğunu net açıkla, öğrencinin aklını karıştırma.
+4. Çıktılarında Markdown formatını temiz kullan (Başlıklar, tablolar, madde işaretleri, kalın vurgular).`;
 
     if (mode === 'find_question') {
       systemInstruction += `\nKULLANICININ AMACI: Öğrenci geçmişte çözdüğü veya sınavda çıkmış bir soruyu tam hatırlamıyor; aklında kalan kısımlarını, semptomları veya ipuçlarını veriyor.
@@ -2744,7 +2804,9 @@ Görevin:
       customGeminiKey: apiKey,
       customGroqKey: groqApiKey,
       customMuseSparkKey: museSparkApiKey,
-      messages: chatHistory
+      messages: chatHistory,
+      allowCloudFallback: Boolean(allowCloudFallback),
+      timeoutMs: typeof timeoutMs === 'number' ? timeoutMs : undefined
     });
 
     res.json({

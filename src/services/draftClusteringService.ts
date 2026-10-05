@@ -5,7 +5,7 @@
  * ==============================================================================
  */
 
-import { QuestionItem, MemoryFragment, QuestionOption, QuestionRevision } from '../types';
+import { QuestionItem, MemoryFragment, QuestionOption, QuestionRevision, AlternativeOption } from '../types';
 import { GoogleGenAI } from '@google/genai';
 import medicalConceptsRaw from '../data/medicalConcepts5000.json';
 import { areWordsFuzzyEqual, damerauLevenshtein, foldTurkish, toContextHashtag } from '../utils/fuzzyMatching.ts';
@@ -783,6 +783,7 @@ export function mergeDrafts(
 
   const consolidatedFragments: MemoryFragment[] = [...(anchorQuestion.fragments || [])];
   const consolidatedOptions: QuestionOption[] = [...(anchorQuestion.options || [])];
+  const consolidatedAlternativeOptions: AlternativeOption[] = [...(anchorQuestion.alternativeOptions || [])];
 
   for (const sat of satelliteQuestions) {
     const satStem = sat.reconstruction?.stem || sat.stem || sat.rawStem || '';
@@ -811,8 +812,9 @@ export function mergeDrafts(
       for (const satOpt of sat.options) {
         if (!satOpt.text || !satOpt.text.trim()) continue;
 
+        // Birebir veya yüksek benzerlik kontrolü (>= 0.65 benzerlikte eş kabul et ve oyları birleştir)
         const existingOpt = consolidatedOptions.find((ao) =>
-          calculateLevenshteinSimilarity(ao.text, satOpt.text) >= 0.75
+          calculateLevenshteinSimilarity(ao.text, satOpt.text) >= 0.65
         );
 
         if (existingOpt) {
@@ -821,7 +823,7 @@ export function mergeDrafts(
           const usedKeys = new Set(consolidatedOptions.map((o) => o.key));
           const availableKey = (['A', 'B', 'C', 'D', 'E'] as const).find((k) => !usedKeys.has(k));
 
-          if (availableKey) {
+          if (availableKey && consolidatedOptions.length < 5) {
             consolidatedOptions.push({
               key: availableKey,
               text: satOpt.text.trim(),
@@ -829,7 +831,48 @@ export function mergeDrafts(
               suggestedByUid: satOpt.suggestedByUid || sat.contributedByUid,
               upvotes: satOpt.upvotes || 1
             });
+          } else {
+            // 5'ten fazla şık varsa: Mevcut alternatif şıklarla benzerlik kontrolü yap
+            const existingAlt = consolidatedAlternativeOptions.find((alt) =>
+              calculateLevenshteinSimilarity(alt.text, satOpt.text) >= 0.65
+            );
+            if (existingAlt) {
+              existingAlt.upvotes = (existingAlt.upvotes || 1) + (satOpt.upvotes || 1);
+            } else {
+              // Bambaşka farklı bir şık -> Alternatif Şık olarak kaydet
+              consolidatedAlternativeOptions.push({
+                id: `alt-opt-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+                text: satOpt.text.trim(),
+                sourceQuestionId: sat.id,
+                suggestedBy: satOpt.suggestedBy || sat.contributedByName || 'Taslak Birleştirme',
+                suggestedByUid: satOpt.suggestedByUid || sat.contributedByUid,
+                upvotes: satOpt.upvotes || 1,
+                reason: `Birleştirilen Soru #${sat.questionNumber || 'Taslak'} alternatifi`
+              });
+            }
           }
+        }
+      }
+    }
+
+    // Ayrıca uydunun mevcut alternatif şıkları varsa onları da konsolide et
+    if (sat.alternativeOptions && sat.alternativeOptions.length > 0) {
+      for (const satAlt of sat.alternativeOptions) {
+        if (!satAlt.text || !satAlt.text.trim()) continue;
+        const matchingInMain = consolidatedOptions.find((ao) =>
+          calculateLevenshteinSimilarity(ao.text, satAlt.text) >= 0.65
+        );
+        if (matchingInMain) {
+          matchingInMain.upvotes = (matchingInMain.upvotes || 1) + (satAlt.upvotes || 1);
+          continue;
+        }
+        const matchingInAlt = consolidatedAlternativeOptions.find((ao) =>
+          calculateLevenshteinSimilarity(ao.text, satAlt.text) >= 0.65
+        );
+        if (matchingInAlt) {
+          matchingInAlt.upvotes = (matchingInAlt.upvotes || 1) + (satAlt.upvotes || 1);
+        } else {
+          consolidatedAlternativeOptions.push(satAlt);
         }
       }
     }
@@ -857,6 +900,7 @@ export function mergeDrafts(
     ...anchorQuestion,
     fragments: consolidatedFragments,
     options: consolidatedOptions.sort((a, b) => a.key.localeCompare(b.key)),
+    alternativeOptions: consolidatedAlternativeOptions.length > 0 ? consolidatedAlternativeOptions : undefined,
     tags: Array.from(allTags),
     status: consolidatedOptions.length >= 4 && consolidatedFragments.length >= 2 ? 'gathering' : anchorQuestion.status,
     mergedSatellites: [
@@ -963,6 +1007,7 @@ export function unmergeQuestion(
     fragments: cleanedFragments,
     tags: cleanedTags,
     mergedSatellites: [],
+    alternativeOptions: undefined,
     isMerged: false,
     revisions,
     updatedAt: now

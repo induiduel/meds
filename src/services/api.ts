@@ -3153,6 +3153,8 @@ export const ApiService = {
     apiKey?: string;
     groqApiKey?: string;
     museSparkApiKey?: string;
+    allowCloudFallback?: boolean;
+    timeoutMs?: number;
   }): Promise<{
     success: boolean;
     reply?: string;
@@ -3175,6 +3177,35 @@ export const ApiService = {
       return { success: false, error: res.data?.error || 'Yapay zeka yanıt veremedi.' };
     } catch (e: any) {
       return { success: false, error: e.message || 'Bağlantı hatası oluştu.' };
+    }
+  },
+
+  async getAiErrorLogs(): Promise<{ success: boolean; logs: any[]; unresolvedCount: number }> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/ai/error-logs` : `/api/ai/error-logs`;
+      const res = await safeJsonFetch<any>(endpoint);
+      if (res.ok && res.data?.success) {
+        return res.data;
+      }
+      return { success: false, logs: [], unresolvedCount: 0 };
+    } catch (_) {
+      return { success: false, logs: [], unresolvedCount: 0 };
+    }
+  },
+
+  async resolveAiErrorLog(id: string, status: 'resolved' | 'investigating' = 'resolved'): Promise<{ success: boolean; message?: string }> {
+    try {
+      const customUrl = getCustomApiUrl();
+      const endpoint = customUrl ? `${customUrl}/api/ai/error-logs/resolve` : `/api/ai/error-logs/resolve`;
+      const res = await safeJsonFetch<any>(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, status })
+      });
+      return res.data || { success: false };
+    } catch (_) {
+      return { success: false };
     }
   },
 };
